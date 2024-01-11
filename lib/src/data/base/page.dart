@@ -77,6 +77,8 @@ abstract class AbstractPageText extends AbstractPageContent {
 class PageText with _$PageText implements AbstractPageText {
   const factory PageText({
     required String id,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     PageContentType? type,
     required String text,
   }) = _PageText;
@@ -94,6 +96,8 @@ abstract class AbstractPageSection extends AbstractPageContent {
 class PageSection with _$PageSection implements AbstractPageSection {
   const factory PageSection({
     required String id,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     PageContentType? type,
     String? title,
     @ListPageContentConverter() @Default([]) List<AbstractPageContent> children,
@@ -111,6 +115,8 @@ abstract class AbstractPageImage extends AbstractPageContent {
 class PageImage with _$PageImage implements AbstractPageImage {
   const factory PageImage({
     required String id,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     PageContentType? type,
     required String fileId,
   }) = _PageImage;
@@ -128,6 +134,8 @@ abstract class AbstractPageNote extends AbstractPageContent {
 class PageNote with _$PageNote implements AbstractPageNote {
   const factory PageNote({
     required String id,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     PageContentType? type,
     required String note,
     @Default(false) bool detailed,
@@ -143,6 +151,8 @@ abstract class AbstractPageUnknown extends AbstractPageContent {}
 class PageUnknown with _$PageUnknown implements AbstractPageUnknown {
   const factory PageUnknown({
     required String id,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     PageContentType? type,
   }) = _PageUnknown;
 

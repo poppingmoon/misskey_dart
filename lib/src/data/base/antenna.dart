@@ -13,7 +13,9 @@ class Antenna with _$Antenna {
     required String name,
     required List<List<String>> keywords,
     required List<List<String>> excludeKeywords,
-    required AntennaSource src,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    AntennaSource? src,
     String? userListId,
     required List<String> users,
     required bool caseSensitive,

@@ -18,9 +18,11 @@ _$AnnouncementsResponseImpl _$$AnnouncementsResponseImplFromJson(
       title: json['title'] as String,
       imageUrl: _$JsonConverterFromJson<String, Uri>(
           json['imageUrl'], const UriConverter().fromJson),
-      icon: $enumDecodeNullable(_$AnnouncementIconTypeEnumMap, json['icon']),
+      icon: $enumDecodeNullable(_$AnnouncementIconTypeEnumMap, json['icon'],
+          unknownValue: JsonKey.nullForUndefinedEnumValue),
       display: $enumDecodeNullable(
-          _$AnnouncementDisplayTypeEnumMap, json['display']),
+          _$AnnouncementDisplayTypeEnumMap, json['display'],
+          unknownValue: JsonKey.nullForUndefinedEnumValue),
       needConfirmationToRead: json['needConfirmationToRead'] as bool?,
       forYou: json['forYou'] as bool?,
       isRead: json['isRead'] as bool?,

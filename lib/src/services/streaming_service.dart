@@ -103,18 +103,29 @@ class StreamingService {
         switch (response.type) {
           case StreamingResponseType.channel:
             final event = ChannelEvent.fromJson(response.body);
-            await onChannelEventReceived(event.id, event.type, event.body);
+            final eventType = event.type;
+            if (eventType != null) {
+              await onChannelEventReceived(event.id, eventType, event.body);
+            }
             break;
           case StreamingResponseType.noteUpdated:
             final event = NoteUpdatedEvent.fromJson(response.body);
-            await onNoteUpdatedEventReceived(event.id, event.type, event.body);
+            final eventType = event.type;
+            if (eventType != null) {
+              await onNoteUpdatedEventReceived(event.id, eventType, event.body);
+            }
             break;
           case StreamingResponseType.emojiAdded:
           case StreamingResponseType.emojiUpdated:
           case StreamingResponseType.emojiDeleted:
           case StreamingResponseType.announcementCreated:
             final event = BroadcastEvent.fromJson(responseJson);
-            await onBroadcastEventReceived(event.type, event.body);
+            final eventType = event.type;
+            if (eventType != null) {
+              await onBroadcastEventReceived(eventType, event.body);
+            }
+            break;
+          case null:
             break;
         }
       },

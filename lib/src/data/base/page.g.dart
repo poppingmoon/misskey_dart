@@ -64,7 +64,8 @@ Map<String, dynamic> _$$PageImplToJson(_$PageImpl instance) =>
 _$PageTextImpl _$$PageTextImplFromJson(Map<String, dynamic> json) =>
     _$PageTextImpl(
       id: json['id'] as String,
-      type: $enumDecodeNullable(_$PageContentTypeEnumMap, json['type']),
+      type: $enumDecodeNullable(_$PageContentTypeEnumMap, json['type'],
+          unknownValue: JsonKey.nullForUndefinedEnumValue),
       text: json['text'] as String,
     );
 
@@ -96,7 +97,8 @@ const _$PageContentTypeEnumMap = {
 _$PageSectionImpl _$$PageSectionImplFromJson(Map<String, dynamic> json) =>
     _$PageSectionImpl(
       id: json['id'] as String,
-      type: $enumDecodeNullable(_$PageContentTypeEnumMap, json['type']),
+      type: $enumDecodeNullable(_$PageContentTypeEnumMap, json['type'],
+          unknownValue: JsonKey.nullForUndefinedEnumValue),
       title: json['title'] as String?,
       children: json['children'] == null
           ? const []
@@ -115,7 +117,8 @@ Map<String, dynamic> _$$PageSectionImplToJson(_$PageSectionImpl instance) =>
 _$PageImageImpl _$$PageImageImplFromJson(Map<String, dynamic> json) =>
     _$PageImageImpl(
       id: json['id'] as String,
-      type: $enumDecodeNullable(_$PageContentTypeEnumMap, json['type']),
+      type: $enumDecodeNullable(_$PageContentTypeEnumMap, json['type'],
+          unknownValue: JsonKey.nullForUndefinedEnumValue),
       fileId: json['fileId'] as String,
     );
 
@@ -129,7 +132,8 @@ Map<String, dynamic> _$$PageImageImplToJson(_$PageImageImpl instance) =>
 _$PageNoteImpl _$$PageNoteImplFromJson(Map<String, dynamic> json) =>
     _$PageNoteImpl(
       id: json['id'] as String,
-      type: $enumDecodeNullable(_$PageContentTypeEnumMap, json['type']),
+      type: $enumDecodeNullable(_$PageContentTypeEnumMap, json['type'],
+          unknownValue: JsonKey.nullForUndefinedEnumValue),
       note: json['note'] as String,
       detailed: json['detailed'] as bool? ?? false,
     );
@@ -145,7 +149,8 @@ Map<String, dynamic> _$$PageNoteImplToJson(_$PageNoteImpl instance) =>
 _$PageUnknownImpl _$$PageUnknownImplFromJson(Map<String, dynamic> json) =>
     _$PageUnknownImpl(
       id: json['id'] as String,
-      type: $enumDecodeNullable(_$PageContentTypeEnumMap, json['type']),
+      type: $enumDecodeNullable(_$PageContentTypeEnumMap, json['type'],
+          unknownValue: JsonKey.nullForUndefinedEnumValue),
     );
 
 Map<String, dynamic> _$$PageUnknownImplToJson(_$PageUnknownImpl instance) =>

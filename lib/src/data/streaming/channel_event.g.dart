@@ -9,14 +9,15 @@ part of 'channel_event.dart';
 _$ChannelEventImpl _$$ChannelEventImplFromJson(Map<String, dynamic> json) =>
     _$ChannelEventImpl(
       id: json['id'] as String,
-      type: $enumDecode(_$ChannelEventTypeEnumMap, json['type']),
+      type: $enumDecodeNullable(_$ChannelEventTypeEnumMap, json['type'],
+          unknownValue: JsonKey.nullForUndefinedEnumValue),
       body: json['body'],
     );
 
 Map<String, dynamic> _$$ChannelEventImplToJson(_$ChannelEventImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'type': _$ChannelEventTypeEnumMap[instance.type]!,
+      'type': _$ChannelEventTypeEnumMap[instance.type],
       'body': instance.body,
     };
 

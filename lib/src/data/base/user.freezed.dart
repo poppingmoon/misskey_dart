@@ -519,10 +519,16 @@ mixin _$UserDetailedNotMe {
   List<Note>? get pinnedNotes => throw _privateConstructorUsedError;
   String? get pinnedPageId => throw _privateConstructorUsedError;
   Map<String, dynamic>? get pinnedPage => throw _privateConstructorUsedError;
-  bool get publicReactions => throw _privateConstructorUsedError;
+  bool get publicReactions =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   @Deprecated("removed at 2023.12.0")
-  FFVisibility? get ffVisibility => throw _privateConstructorUsedError;
-  FFVisibility? get followersVisibility => throw _privateConstructorUsedError;
+  FFVisibility? get ffVisibility =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  FFVisibility? get followersVisibility =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FFVisibility? get followingVisibility => throw _privateConstructorUsedError;
   bool get twoFactorEnabled => throw _privateConstructorUsedError;
   bool get usePasswordLessLogin => throw _privateConstructorUsedError;
@@ -579,8 +585,12 @@ abstract class $UserDetailedNotMeCopyWith<$Res> {
       String? pinnedPageId,
       Map<String, dynamic>? pinnedPage,
       bool publicReactions,
-      @Deprecated("removed at 2023.12.0") FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      @Deprecated("removed at 2023.12.0")
+      FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       FFVisibility? followersVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       FFVisibility? followingVisibility,
       bool twoFactorEnabled,
       bool usePasswordLessLogin,
@@ -887,8 +897,12 @@ abstract class _$$UserDetailedNotMeImplCopyWith<$Res>
       String? pinnedPageId,
       Map<String, dynamic>? pinnedPage,
       bool publicReactions,
-      @Deprecated("removed at 2023.12.0") FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      @Deprecated("removed at 2023.12.0")
+      FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       FFVisibility? followersVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       FFVisibility? followingVisibility,
       bool twoFactorEnabled,
       bool usePasswordLessLogin,
@@ -1177,8 +1191,12 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
       this.pinnedPageId,
       final Map<String, dynamic>? pinnedPage,
       required this.publicReactions,
-      @Deprecated("removed at 2023.12.0") this.ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      @Deprecated("removed at 2023.12.0")
+      this.ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.followersVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.followingVisibility,
       required this.twoFactorEnabled,
       required this.usePasswordLessLogin,
@@ -1333,12 +1351,18 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
 
   @override
   final bool publicReactions;
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   @Deprecated("removed at 2023.12.0")
   final FFVisibility? ffVisibility;
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final FFVisibility? followersVisibility;
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final FFVisibility? followingVisibility;
   @override
   final bool twoFactorEnabled;
@@ -1550,8 +1574,12 @@ abstract class _UserDetailedNotMe implements UserDetailedNotMe {
       final String? pinnedPageId,
       final Map<String, dynamic>? pinnedPage,
       required final bool publicReactions,
-      @Deprecated("removed at 2023.12.0") final FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      @Deprecated("removed at 2023.12.0")
+      final FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final FFVisibility? followersVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final FFVisibility? followingVisibility,
       required final bool twoFactorEnabled,
       required final bool usePasswordLessLogin,
@@ -1644,12 +1672,15 @@ abstract class _UserDetailedNotMe implements UserDetailedNotMe {
   Map<String, dynamic>? get pinnedPage;
   @override
   bool get publicReactions;
-  @override
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   @Deprecated("removed at 2023.12.0")
   FFVisibility? get ffVisibility;
-  @override
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FFVisibility? get followersVisibility;
-  @override
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FFVisibility? get followingVisibility;
   @override
   bool get twoFactorEnabled;
@@ -1720,10 +1751,16 @@ mixin _$UserDetailedNotMeWithRelations {
   List<Note>? get pinnedNotes => throw _privateConstructorUsedError;
   String? get pinnedPageId => throw _privateConstructorUsedError;
   Map<String, dynamic>? get pinnedPage => throw _privateConstructorUsedError;
-  bool get publicReactions => throw _privateConstructorUsedError;
+  bool get publicReactions =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   @Deprecated("removed at 2023.12.0")
-  FFVisibility? get ffVisibility => throw _privateConstructorUsedError;
-  FFVisibility? get followersVisibility => throw _privateConstructorUsedError;
+  FFVisibility? get ffVisibility =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  FFVisibility? get followersVisibility =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FFVisibility? get followingVisibility => throw _privateConstructorUsedError;
   bool get twoFactorEnabled => throw _privateConstructorUsedError;
   bool get usePasswordLessLogin => throw _privateConstructorUsedError;
@@ -1790,8 +1827,12 @@ abstract class $UserDetailedNotMeWithRelationsCopyWith<$Res> {
       String? pinnedPageId,
       Map<String, dynamic>? pinnedPage,
       bool publicReactions,
-      @Deprecated("removed at 2023.12.0") FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      @Deprecated("removed at 2023.12.0")
+      FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       FFVisibility? followersVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       FFVisibility? followingVisibility,
       bool twoFactorEnabled,
       bool usePasswordLessLogin,
@@ -2148,8 +2189,12 @@ abstract class _$$UserDetailedNotMeWithRelationsImplCopyWith<$Res>
       String? pinnedPageId,
       Map<String, dynamic>? pinnedPage,
       bool publicReactions,
-      @Deprecated("removed at 2023.12.0") FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      @Deprecated("removed at 2023.12.0")
+      FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       FFVisibility? followersVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       FFVisibility? followingVisibility,
       bool twoFactorEnabled,
       bool usePasswordLessLogin,
@@ -2489,8 +2534,12 @@ class _$UserDetailedNotMeWithRelationsImpl
       this.pinnedPageId,
       final Map<String, dynamic>? pinnedPage,
       required this.publicReactions,
-      @Deprecated("removed at 2023.12.0") this.ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      @Deprecated("removed at 2023.12.0")
+      this.ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.followersVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.followingVisibility,
       required this.twoFactorEnabled,
       required this.usePasswordLessLogin,
@@ -2654,12 +2703,18 @@ class _$UserDetailedNotMeWithRelationsImpl
 
   @override
   final bool publicReactions;
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   @Deprecated("removed at 2023.12.0")
   final FFVisibility? ffVisibility;
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final FFVisibility? followersVisibility;
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final FFVisibility? followingVisibility;
   @override
   final bool twoFactorEnabled;
@@ -2914,8 +2969,12 @@ abstract class _UserDetailedNotMeWithRelations
           final String? pinnedPageId,
           final Map<String, dynamic>? pinnedPage,
           required final bool publicReactions,
-          @Deprecated("removed at 2023.12.0") final FFVisibility? ffVisibility,
+          @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+          @Deprecated("removed at 2023.12.0")
+          final FFVisibility? ffVisibility,
+          @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
           final FFVisibility? followersVisibility,
+          @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
           final FFVisibility? followingVisibility,
           required final bool twoFactorEnabled,
           required final bool usePasswordLessLogin,
@@ -3017,12 +3076,15 @@ abstract class _UserDetailedNotMeWithRelations
   Map<String, dynamic>? get pinnedPage;
   @override
   bool get publicReactions;
-  @override
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   @Deprecated("removed at 2023.12.0")
   FFVisibility? get ffVisibility;
-  @override
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FFVisibility? get followersVisibility;
-  @override
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FFVisibility? get followingVisibility;
   @override
   bool get twoFactorEnabled;
@@ -3109,10 +3171,16 @@ mixin _$MeDetailed {
   List<Note>? get pinnedNotes => throw _privateConstructorUsedError;
   String? get pinnedPageId => throw _privateConstructorUsedError;
   Map<String, dynamic>? get pinnedPage => throw _privateConstructorUsedError;
-  bool get publicReactions => throw _privateConstructorUsedError;
+  bool get publicReactions =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   @Deprecated("removed at 2023.12.0")
-  FFVisibility? get ffVisibility => throw _privateConstructorUsedError;
-  FFVisibility? get followersVisibility => throw _privateConstructorUsedError;
+  FFVisibility? get ffVisibility =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  FFVisibility? get followersVisibility =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FFVisibility? get followingVisibility => throw _privateConstructorUsedError;
   bool get twoFactorEnabled => throw _privateConstructorUsedError;
   bool get usePasswordLessLogin => throw _privateConstructorUsedError;
@@ -3207,8 +3275,12 @@ abstract class $MeDetailedCopyWith<$Res> {
       String? pinnedPageId,
       Map<String, dynamic>? pinnedPage,
       bool publicReactions,
-      @Deprecated("removed at 2023.12.0") FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      @Deprecated("removed at 2023.12.0")
+      FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       FFVisibility? followersVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       FFVisibility? followingVisibility,
       bool twoFactorEnabled,
       bool usePasswordLessLogin,
@@ -3717,8 +3789,12 @@ abstract class _$$MeDetailedImplCopyWith<$Res>
       String? pinnedPageId,
       Map<String, dynamic>? pinnedPage,
       bool publicReactions,
-      @Deprecated("removed at 2023.12.0") FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      @Deprecated("removed at 2023.12.0")
+      FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       FFVisibility? followersVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       FFVisibility? followingVisibility,
       bool twoFactorEnabled,
       bool usePasswordLessLogin,
@@ -4202,8 +4278,12 @@ class _$MeDetailedImpl implements _MeDetailed {
       this.pinnedPageId,
       final Map<String, dynamic>? pinnedPage,
       required this.publicReactions,
-      @Deprecated("removed at 2023.12.0") this.ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      @Deprecated("removed at 2023.12.0")
+      this.ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.followersVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.followingVisibility,
       required this.twoFactorEnabled,
       required this.usePasswordLessLogin,
@@ -4398,12 +4478,18 @@ class _$MeDetailedImpl implements _MeDetailed {
 
   @override
   final bool publicReactions;
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   @Deprecated("removed at 2023.12.0")
   final FFVisibility? ffVisibility;
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final FFVisibility? followersVisibility;
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final FFVisibility? followingVisibility;
   @override
   final bool twoFactorEnabled;
@@ -4804,8 +4890,12 @@ abstract class _MeDetailed implements MeDetailed {
       final String? pinnedPageId,
       final Map<String, dynamic>? pinnedPage,
       required final bool publicReactions,
-      @Deprecated("removed at 2023.12.0") final FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      @Deprecated("removed at 2023.12.0")
+      final FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final FFVisibility? followersVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final FFVisibility? followingVisibility,
       required final bool twoFactorEnabled,
       required final bool usePasswordLessLogin,
@@ -4931,12 +5021,15 @@ abstract class _MeDetailed implements MeDetailed {
   Map<String, dynamic>? get pinnedPage;
   @override
   bool get publicReactions;
-  @override
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   @Deprecated("removed at 2023.12.0")
   FFVisibility? get ffVisibility;
-  @override
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FFVisibility? get followersVisibility;
-  @override
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FFVisibility? get followingVisibility;
   @override
   bool get twoFactorEnabled;

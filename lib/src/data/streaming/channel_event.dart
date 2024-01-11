@@ -8,7 +8,9 @@ part 'channel_event.g.dart';
 class ChannelEvent with _$ChannelEvent {
   const factory ChannelEvent({
     required String id,
-    @ChannelEventTypeJsonConverter() required ChannelEventType type,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    ChannelEventType? type,
     required dynamic body,
   }) = _ChannelEvent;
 

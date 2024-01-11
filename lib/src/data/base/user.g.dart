@@ -118,12 +118,15 @@ _$UserDetailedNotMeImpl _$$UserDetailedNotMeImplFromJson(
       pinnedPageId: json['pinnedPageId'] as String?,
       pinnedPage: json['pinnedPage'] as Map<String, dynamic>?,
       publicReactions: json['publicReactions'] as bool,
-      ffVisibility:
-          $enumDecodeNullable(_$FFVisibilityEnumMap, json['ffVisibility']),
+      ffVisibility: $enumDecodeNullable(
+          _$FFVisibilityEnumMap, json['ffVisibility'],
+          unknownValue: JsonKey.nullForUndefinedEnumValue),
       followersVisibility: $enumDecodeNullable(
-          _$FFVisibilityEnumMap, json['followersVisibility']),
+          _$FFVisibilityEnumMap, json['followersVisibility'],
+          unknownValue: JsonKey.nullForUndefinedEnumValue),
       followingVisibility: $enumDecodeNullable(
-          _$FFVisibilityEnumMap, json['followingVisibility']),
+          _$FFVisibilityEnumMap, json['followingVisibility'],
+          unknownValue: JsonKey.nullForUndefinedEnumValue),
       twoFactorEnabled: json['twoFactorEnabled'] as bool,
       usePasswordLessLogin: json['usePasswordLessLogin'] as bool,
       securityKeys: json['securityKeys'] as bool,
@@ -266,12 +269,15 @@ _$UserDetailedNotMeWithRelationsImpl
           pinnedPageId: json['pinnedPageId'] as String?,
           pinnedPage: json['pinnedPage'] as Map<String, dynamic>?,
           publicReactions: json['publicReactions'] as bool,
-          ffVisibility:
-              $enumDecodeNullable(_$FFVisibilityEnumMap, json['ffVisibility']),
+          ffVisibility: $enumDecodeNullable(
+              _$FFVisibilityEnumMap, json['ffVisibility'],
+              unknownValue: JsonKey.nullForUndefinedEnumValue),
           followersVisibility: $enumDecodeNullable(
-              _$FFVisibilityEnumMap, json['followersVisibility']),
+              _$FFVisibilityEnumMap, json['followersVisibility'],
+              unknownValue: JsonKey.nullForUndefinedEnumValue),
           followingVisibility: $enumDecodeNullable(
-              _$FFVisibilityEnumMap, json['followingVisibility']),
+              _$FFVisibilityEnumMap, json['followingVisibility'],
+              unknownValue: JsonKey.nullForUndefinedEnumValue),
           twoFactorEnabled: json['twoFactorEnabled'] as bool,
           usePasswordLessLogin: json['usePasswordLessLogin'] as bool,
           securityKeys: json['securityKeys'] as bool,
@@ -416,12 +422,15 @@ _$MeDetailedImpl _$$MeDetailedImplFromJson(Map<String, dynamic> json) =>
       pinnedPageId: json['pinnedPageId'] as String?,
       pinnedPage: json['pinnedPage'] as Map<String, dynamic>?,
       publicReactions: json['publicReactions'] as bool,
-      ffVisibility:
-          $enumDecodeNullable(_$FFVisibilityEnumMap, json['ffVisibility']),
+      ffVisibility: $enumDecodeNullable(
+          _$FFVisibilityEnumMap, json['ffVisibility'],
+          unknownValue: JsonKey.nullForUndefinedEnumValue),
       followersVisibility: $enumDecodeNullable(
-          _$FFVisibilityEnumMap, json['followersVisibility']),
+          _$FFVisibilityEnumMap, json['followersVisibility'],
+          unknownValue: JsonKey.nullForUndefinedEnumValue),
       followingVisibility: $enumDecodeNullable(
-          _$FFVisibilityEnumMap, json['followingVisibility']),
+          _$FFVisibilityEnumMap, json['followingVisibility'],
+          unknownValue: JsonKey.nullForUndefinedEnumValue),
       twoFactorEnabled: json['twoFactorEnabled'] as bool,
       usePasswordLessLogin: json['usePasswordLessLogin'] as bool,
       securityKeys: json['securityKeys'] as bool,

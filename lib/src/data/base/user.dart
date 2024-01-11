@@ -147,8 +147,15 @@ class UserDetailedNotMe with _$UserDetailedNotMe implements UserDetailed {
     String? pinnedPageId,
     Map<String, dynamic>? pinnedPage,
     required bool publicReactions,
-    @Deprecated("removed at 2023.12.0") FFVisibility? ffVisibility,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    @Deprecated("removed at 2023.12.0")
+    FFVisibility? ffVisibility,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     FFVisibility? followersVisibility,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     FFVisibility? followingVisibility,
     required bool twoFactorEnabled,
     required bool usePasswordLessLogin,
@@ -202,8 +209,15 @@ class UserDetailedNotMeWithRelations
     String? pinnedPageId,
     Map<String, dynamic>? pinnedPage,
     required bool publicReactions,
-    @Deprecated("removed at 2023.12.0") FFVisibility? ffVisibility,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    @Deprecated("removed at 2023.12.0")
+    FFVisibility? ffVisibility,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     FFVisibility? followersVisibility,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     FFVisibility? followingVisibility,
     required bool twoFactorEnabled,
     required bool usePasswordLessLogin,
@@ -263,8 +277,15 @@ class MeDetailed with _$MeDetailed implements UserDetailed {
     String? pinnedPageId,
     Map<String, dynamic>? pinnedPage,
     required bool publicReactions,
-    @Deprecated("removed at 2023.12.0") FFVisibility? ffVisibility,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    @Deprecated("removed at 2023.12.0")
+    FFVisibility? ffVisibility,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     FFVisibility? followersVisibility,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     FFVisibility? followingVisibility,
     required bool twoFactorEnabled,
     required bool usePasswordLessLogin,

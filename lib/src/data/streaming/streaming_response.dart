@@ -7,7 +7,7 @@ part 'streaming_response.g.dart';
 @freezed
 class StreamingResponse with _$StreamingResponse {
   const factory StreamingResponse({
-    @StreamingResponseTypeJsonConverter() required StreamingResponseType type,
+    StreamingResponseType? type,
     required Map<String, dynamic> body,
   }) = _StreamingResponse;
 

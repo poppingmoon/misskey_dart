@@ -29,8 +29,12 @@ mixin _$AnnouncementsResponse {
   String get text => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   @UriConverter()
-  Uri? get imageUrl => throw _privateConstructorUsedError;
-  AnnouncementIconType? get icon => throw _privateConstructorUsedError;
+  Uri? get imageUrl =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  AnnouncementIconType? get icon =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   AnnouncementDisplayType? get display => throw _privateConstructorUsedError;
   bool? get needConfirmationToRead => throw _privateConstructorUsedError;
   bool? get forYou => throw _privateConstructorUsedError;
@@ -58,7 +62,9 @@ abstract class $AnnouncementsResponseCopyWith<$Res> {
       String text,
       String title,
       @UriConverter() Uri? imageUrl,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       AnnouncementIconType? icon,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       AnnouncementDisplayType? display,
       bool? needConfirmationToRead,
       bool? forYou,
@@ -174,7 +180,9 @@ abstract class _$$AnnouncementsResponseImplCopyWith<$Res>
       String text,
       String title,
       @UriConverter() Uri? imageUrl,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       AnnouncementIconType? icon,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       AnnouncementDisplayType? display,
       bool? needConfirmationToRead,
       bool? forYou,
@@ -282,7 +290,8 @@ class _$AnnouncementsResponseImpl implements _AnnouncementsResponse {
       required this.text,
       required this.title,
       @UriConverter() this.imageUrl,
-      this.icon,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.icon,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.display,
       this.needConfirmationToRead,
       this.forYou,
@@ -309,9 +318,13 @@ class _$AnnouncementsResponseImpl implements _AnnouncementsResponse {
   @override
   @UriConverter()
   final Uri? imageUrl;
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final AnnouncementIconType? icon;
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final AnnouncementDisplayType? display;
   @override
   final bool? needConfirmationToRead;
@@ -401,7 +414,9 @@ abstract class _AnnouncementsResponse implements AnnouncementsResponse {
       required final String text,
       required final String title,
       @UriConverter() final Uri? imageUrl,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final AnnouncementIconType? icon,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final AnnouncementDisplayType? display,
       final bool? needConfirmationToRead,
       final bool? forYou,
@@ -428,9 +443,11 @@ abstract class _AnnouncementsResponse implements AnnouncementsResponse {
   @override
   @UriConverter()
   Uri? get imageUrl;
-  @override
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   AnnouncementIconType? get icon;
-  @override
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   AnnouncementDisplayType? get display;
   @override
   bool? get needConfirmationToRead;

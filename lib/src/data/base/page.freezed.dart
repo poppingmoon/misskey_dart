@@ -606,7 +606,9 @@ PageText _$PageTextFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PageText {
-  String get id => throw _privateConstructorUsedError;
+  String get id =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   PageContentType? get type => throw _privateConstructorUsedError;
   String get text => throw _privateConstructorUsedError;
 
@@ -621,7 +623,11 @@ abstract class $PageTextCopyWith<$Res> {
   factory $PageTextCopyWith(PageText value, $Res Function(PageText) then) =
       _$PageTextCopyWithImpl<$Res, PageText>;
   @useResult
-  $Res call({String id, PageContentType? type, String text});
+  $Res call(
+      {String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      PageContentType? type,
+      String text});
 }
 
 /// @nodoc
@@ -666,7 +672,11 @@ abstract class _$$PageTextImplCopyWith<$Res>
       __$$PageTextImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String id, PageContentType? type, String text});
+  $Res call(
+      {String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      PageContentType? type,
+      String text});
 }
 
 /// @nodoc
@@ -704,14 +714,19 @@ class __$$PageTextImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$PageTextImpl implements _PageText {
-  const _$PageTextImpl({required this.id, this.type, required this.text});
+  const _$PageTextImpl(
+      {required this.id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type,
+      required this.text});
 
   factory _$PageTextImpl.fromJson(Map<String, dynamic> json) =>
       _$$PageTextImplFromJson(json);
 
   @override
   final String id;
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final PageContentType? type;
   @override
   final String text;
@@ -752,6 +767,7 @@ class _$PageTextImpl implements _PageText {
 abstract class _PageText implements PageText {
   const factory _PageText(
       {required final String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final PageContentType? type,
       required final String text}) = _$PageTextImpl;
 
@@ -760,7 +776,8 @@ abstract class _PageText implements PageText {
 
   @override
   String get id;
-  @override
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   PageContentType? get type;
   @override
   String get text;
@@ -776,7 +793,9 @@ PageSection _$PageSectionFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PageSection {
-  String get id => throw _privateConstructorUsedError;
+  String get id =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   PageContentType? get type => throw _privateConstructorUsedError;
   String? get title => throw _privateConstructorUsedError;
   @ListPageContentConverter()
@@ -796,6 +815,7 @@ abstract class $PageSectionCopyWith<$Res> {
   @useResult
   $Res call(
       {String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       PageContentType? type,
       String? title,
       @ListPageContentConverter() List<AbstractPageContent> children});
@@ -850,6 +870,7 @@ abstract class _$$PageSectionImplCopyWith<$Res>
   @useResult
   $Res call(
       {String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       PageContentType? type,
       String? title,
       @ListPageContentConverter() List<AbstractPageContent> children});
@@ -897,7 +918,7 @@ class __$$PageSectionImplCopyWithImpl<$Res>
 class _$PageSectionImpl implements _PageSection {
   const _$PageSectionImpl(
       {required this.id,
-      this.type,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type,
       this.title,
       @ListPageContentConverter()
       final List<AbstractPageContent> children = const []})
@@ -908,7 +929,9 @@ class _$PageSectionImpl implements _PageSection {
 
   @override
   final String id;
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final PageContentType? type;
   @override
   final String? title;
@@ -960,6 +983,7 @@ class _$PageSectionImpl implements _PageSection {
 abstract class _PageSection implements PageSection {
   const factory _PageSection(
       {required final String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final PageContentType? type,
       final String? title,
       @ListPageContentConverter()
@@ -970,7 +994,8 @@ abstract class _PageSection implements PageSection {
 
   @override
   String get id;
-  @override
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   PageContentType? get type;
   @override
   String? get title;
@@ -989,7 +1014,9 @@ PageImage _$PageImageFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PageImage {
-  String get id => throw _privateConstructorUsedError;
+  String get id =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   PageContentType? get type => throw _privateConstructorUsedError;
   String get fileId => throw _privateConstructorUsedError;
 
@@ -1004,7 +1031,11 @@ abstract class $PageImageCopyWith<$Res> {
   factory $PageImageCopyWith(PageImage value, $Res Function(PageImage) then) =
       _$PageImageCopyWithImpl<$Res, PageImage>;
   @useResult
-  $Res call({String id, PageContentType? type, String fileId});
+  $Res call(
+      {String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      PageContentType? type,
+      String fileId});
 }
 
 /// @nodoc
@@ -1049,7 +1080,11 @@ abstract class _$$PageImageImplCopyWith<$Res>
       __$$PageImageImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String id, PageContentType? type, String fileId});
+  $Res call(
+      {String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      PageContentType? type,
+      String fileId});
 }
 
 /// @nodoc
@@ -1087,14 +1122,19 @@ class __$$PageImageImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$PageImageImpl implements _PageImage {
-  const _$PageImageImpl({required this.id, this.type, required this.fileId});
+  const _$PageImageImpl(
+      {required this.id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type,
+      required this.fileId});
 
   factory _$PageImageImpl.fromJson(Map<String, dynamic> json) =>
       _$$PageImageImplFromJson(json);
 
   @override
   final String id;
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final PageContentType? type;
   @override
   final String fileId;
@@ -1135,6 +1175,7 @@ class _$PageImageImpl implements _PageImage {
 abstract class _PageImage implements PageImage {
   const factory _PageImage(
       {required final String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final PageContentType? type,
       required final String fileId}) = _$PageImageImpl;
 
@@ -1143,7 +1184,8 @@ abstract class _PageImage implements PageImage {
 
   @override
   String get id;
-  @override
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   PageContentType? get type;
   @override
   String get fileId;
@@ -1159,7 +1201,9 @@ PageNote _$PageNoteFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PageNote {
-  String get id => throw _privateConstructorUsedError;
+  String get id =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   PageContentType? get type => throw _privateConstructorUsedError;
   String get note => throw _privateConstructorUsedError;
   bool get detailed => throw _privateConstructorUsedError;
@@ -1175,7 +1219,12 @@ abstract class $PageNoteCopyWith<$Res> {
   factory $PageNoteCopyWith(PageNote value, $Res Function(PageNote) then) =
       _$PageNoteCopyWithImpl<$Res, PageNote>;
   @useResult
-  $Res call({String id, PageContentType? type, String note, bool detailed});
+  $Res call(
+      {String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      PageContentType? type,
+      String note,
+      bool detailed});
 }
 
 /// @nodoc
@@ -1225,7 +1274,12 @@ abstract class _$$PageNoteImplCopyWith<$Res>
       __$$PageNoteImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String id, PageContentType? type, String note, bool detailed});
+  $Res call(
+      {String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      PageContentType? type,
+      String note,
+      bool detailed});
 }
 
 /// @nodoc
@@ -1269,14 +1323,19 @@ class __$$PageNoteImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$PageNoteImpl implements _PageNote {
   const _$PageNoteImpl(
-      {required this.id, this.type, required this.note, this.detailed = false});
+      {required this.id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type,
+      required this.note,
+      this.detailed = false});
 
   factory _$PageNoteImpl.fromJson(Map<String, dynamic> json) =>
       _$$PageNoteImplFromJson(json);
 
   @override
   final String id;
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final PageContentType? type;
   @override
   final String note;
@@ -1322,6 +1381,7 @@ class _$PageNoteImpl implements _PageNote {
 abstract class _PageNote implements PageNote {
   const factory _PageNote(
       {required final String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final PageContentType? type,
       required final String note,
       final bool detailed}) = _$PageNoteImpl;
@@ -1331,7 +1391,8 @@ abstract class _PageNote implements PageNote {
 
   @override
   String get id;
-  @override
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   PageContentType? get type;
   @override
   String get note;
@@ -1349,7 +1410,9 @@ PageUnknown _$PageUnknownFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PageUnknown {
-  String get id => throw _privateConstructorUsedError;
+  String get id =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   PageContentType? get type => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1364,7 +1427,10 @@ abstract class $PageUnknownCopyWith<$Res> {
           PageUnknown value, $Res Function(PageUnknown) then) =
       _$PageUnknownCopyWithImpl<$Res, PageUnknown>;
   @useResult
-  $Res call({String id, PageContentType? type});
+  $Res call(
+      {String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      PageContentType? type});
 }
 
 /// @nodoc
@@ -1404,7 +1470,10 @@ abstract class _$$PageUnknownImplCopyWith<$Res>
       __$$PageUnknownImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String id, PageContentType? type});
+  $Res call(
+      {String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      PageContentType? type});
 }
 
 /// @nodoc
@@ -1437,14 +1506,18 @@ class __$$PageUnknownImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$PageUnknownImpl implements _PageUnknown {
-  const _$PageUnknownImpl({required this.id, this.type});
+  const _$PageUnknownImpl(
+      {required this.id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type});
 
   factory _$PageUnknownImpl.fromJson(Map<String, dynamic> json) =>
       _$$PageUnknownImplFromJson(json);
 
   @override
   final String id;
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final PageContentType? type;
 
   @override
@@ -1482,6 +1555,7 @@ class _$PageUnknownImpl implements _PageUnknown {
 abstract class _PageUnknown implements PageUnknown {
   const factory _PageUnknown(
       {required final String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final PageContentType? type}) = _$PageUnknownImpl;
 
   factory _PageUnknown.fromJson(Map<String, dynamic> json) =
@@ -1489,7 +1563,8 @@ abstract class _PageUnknown implements PageUnknown {
 
   @override
   String get id;
-  @override
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   PageContentType? get type;
   @override
   @JsonKey(ignore: true)

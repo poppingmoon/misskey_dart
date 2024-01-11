@@ -35,7 +35,8 @@ _$NoteImpl _$$NoteImplFromJson(Map<String, dynamic> json) => _$NoteImpl(
       renoteId: json['renoteId'] as String?,
       channelId: json['channelId'] as String?,
       reactionAcceptance: $enumDecodeNullable(
-          _$ReactionAcceptanceEnumMap, json['reactionAcceptance']),
+          _$ReactionAcceptanceEnumMap, json['reactionAcceptance'],
+          unknownValue: JsonKey.nullForUndefinedEnumValue),
       renote: json['renote'] == null
           ? null
           : Note.fromJson(json['renote'] as Map<String, dynamic>),

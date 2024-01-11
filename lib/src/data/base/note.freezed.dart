@@ -43,7 +43,9 @@ mixin _$Note {
   List<DriveFile> get files => throw _privateConstructorUsedError;
   String? get replyId => throw _privateConstructorUsedError;
   String? get renoteId => throw _privateConstructorUsedError;
-  String? get channelId => throw _privateConstructorUsedError;
+  String? get channelId =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   ReactionAcceptance? get reactionAcceptance =>
       throw _privateConstructorUsedError;
   Note? get renote => throw _privateConstructorUsedError;
@@ -91,6 +93,7 @@ abstract class $NoteCopyWith<$Res> {
       String? replyId,
       String? renoteId,
       String? channelId,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       ReactionAcceptance? reactionAcceptance,
       Note? renote,
       Note? reply,
@@ -368,6 +371,7 @@ abstract class _$$NoteImplCopyWith<$Res> implements $NoteCopyWith<$Res> {
       String? replyId,
       String? renoteId,
       String? channelId,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       ReactionAcceptance? reactionAcceptance,
       Note? renote,
       Note? reply,
@@ -587,6 +591,7 @@ class _$NoteImpl implements _Note {
       this.replyId,
       this.renoteId,
       this.channelId,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.reactionAcceptance,
       this.renote,
       this.reply,
@@ -685,7 +690,9 @@ class _$NoteImpl implements _Note {
   final String? renoteId;
   @override
   final String? channelId;
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final ReactionAcceptance? reactionAcceptance;
   @override
   final Note? renote;
@@ -864,6 +871,7 @@ abstract class _Note implements Note {
       final String? replyId,
       final String? renoteId,
       final String? channelId,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final ReactionAcceptance? reactionAcceptance,
       final Note? renote,
       final Note? reply,
@@ -922,7 +930,8 @@ abstract class _Note implements Note {
   String? get renoteId;
   @override
   String? get channelId;
-  @override
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   ReactionAcceptance? get reactionAcceptance;
   @override
   Note? get renote;

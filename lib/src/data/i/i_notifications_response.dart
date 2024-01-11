@@ -11,7 +11,9 @@ class INotificationsResponse with _$INotificationsResponse {
   const factory INotificationsResponse({
     required String id,
     @DateTimeConverter() required DateTime createdAt,
-    required NotificationType type,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    NotificationType? type,
     String? noteId,
     String? followRequestId,
     String? reaction,

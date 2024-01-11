@@ -30,6 +30,8 @@ class Note with _$Note {
     String? replyId,
     String? renoteId,
     String? channelId,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     ReactionAcceptance? reactionAcceptance,
     Note? renote,
     Note? reply,

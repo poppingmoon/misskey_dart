@@ -20,9 +20,10 @@ NoteUpdatedEvent _$NoteUpdatedEventFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$NoteUpdatedEvent {
-  String get id => throw _privateConstructorUsedError;
-  @NoteUpdatedEventTypeJsonConverter()
-  NoteUpdatedEventType get type => throw _privateConstructorUsedError;
+  String get id =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  NoteUpdatedEventType? get type => throw _privateConstructorUsedError;
   Map<String, dynamic> get body => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -39,7 +40,8 @@ abstract class $NoteUpdatedEventCopyWith<$Res> {
   @useResult
   $Res call(
       {String id,
-      @NoteUpdatedEventTypeJsonConverter() NoteUpdatedEventType type,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      NoteUpdatedEventType? type,
       Map<String, dynamic> body});
 }
 
@@ -57,7 +59,7 @@ class _$NoteUpdatedEventCopyWithImpl<$Res, $Val extends NoteUpdatedEvent>
   @override
   $Res call({
     Object? id = null,
-    Object? type = null,
+    Object? type = freezed,
     Object? body = null,
   }) {
     return _then(_value.copyWith(
@@ -65,10 +67,10 @@ class _$NoteUpdatedEventCopyWithImpl<$Res, $Val extends NoteUpdatedEvent>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      type: null == type
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as NoteUpdatedEventType,
+              as NoteUpdatedEventType?,
       body: null == body
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
@@ -87,7 +89,8 @@ abstract class _$$NoteUpdatedEventImplCopyWith<$Res>
   @useResult
   $Res call(
       {String id,
-      @NoteUpdatedEventTypeJsonConverter() NoteUpdatedEventType type,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      NoteUpdatedEventType? type,
       Map<String, dynamic> body});
 }
 
@@ -103,7 +106,7 @@ class __$$NoteUpdatedEventImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = null,
-    Object? type = null,
+    Object? type = freezed,
     Object? body = null,
   }) {
     return _then(_$NoteUpdatedEventImpl(
@@ -111,10 +114,10 @@ class __$$NoteUpdatedEventImplCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      type: null == type
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as NoteUpdatedEventType,
+              as NoteUpdatedEventType?,
       body: null == body
           ? _value._body
           : body // ignore: cast_nullable_to_non_nullable
@@ -128,7 +131,7 @@ class __$$NoteUpdatedEventImplCopyWithImpl<$Res>
 class _$NoteUpdatedEventImpl implements _NoteUpdatedEvent {
   const _$NoteUpdatedEventImpl(
       {required this.id,
-      @NoteUpdatedEventTypeJsonConverter() required this.type,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type,
       required final Map<String, dynamic> body})
       : _body = body;
 
@@ -137,9 +140,10 @@ class _$NoteUpdatedEventImpl implements _NoteUpdatedEvent {
 
   @override
   final String id;
+// ignore: invalid_annotation_target
   @override
-  @NoteUpdatedEventTypeJsonConverter()
-  final NoteUpdatedEventType type;
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final NoteUpdatedEventType? type;
   final Map<String, dynamic> _body;
   @override
   Map<String, dynamic> get body {
@@ -186,8 +190,8 @@ class _$NoteUpdatedEventImpl implements _NoteUpdatedEvent {
 abstract class _NoteUpdatedEvent implements NoteUpdatedEvent {
   const factory _NoteUpdatedEvent(
       {required final String id,
-      @NoteUpdatedEventTypeJsonConverter()
-      required final NoteUpdatedEventType type,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      final NoteUpdatedEventType? type,
       required final Map<String, dynamic> body}) = _$NoteUpdatedEventImpl;
 
   factory _NoteUpdatedEvent.fromJson(Map<String, dynamic> json) =
@@ -195,9 +199,9 @@ abstract class _NoteUpdatedEvent implements NoteUpdatedEvent {
 
   @override
   String get id;
-  @override
-  @NoteUpdatedEventTypeJsonConverter()
-  NoteUpdatedEventType get type;
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  NoteUpdatedEventType? get type;
   @override
   Map<String, dynamic> get body;
   @override
