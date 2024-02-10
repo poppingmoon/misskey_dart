@@ -10,7 +10,7 @@ part 'notes_create_request.g.dart';
 class NotesCreateRequest with _$NotesCreateRequest {
   const factory NotesCreateRequest({
     /// ノートの公開範囲。
-    @NoteVisibilityJsonConverter() NoteVisibility? visibility,
+    NoteVisibility? visibility,
 
     /// ノートを閲覧可能なユーザーのidのリスト。visibilityがspecifiedの場合のみ適用されます。
     List<String>? visibleUserIds,

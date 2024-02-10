@@ -9,8 +9,8 @@ part of 'notes_create_request.dart';
 _$NotesCreateRequestImpl _$$NotesCreateRequestImplFromJson(
         Map<String, dynamic> json) =>
     _$NotesCreateRequestImpl(
-      visibility: _$JsonConverterFromJson<String, NoteVisibility>(
-          json['visibility'], const NoteVisibilityJsonConverter().fromJson),
+      visibility:
+          $enumDecodeNullable(_$NoteVisibilityEnumMap, json['visibility']),
       visibleUserIds: (json['visibleUserIds'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
@@ -39,8 +39,7 @@ _$NotesCreateRequestImpl _$$NotesCreateRequestImplFromJson(
 Map<String, dynamic> _$$NotesCreateRequestImplToJson(
         _$NotesCreateRequestImpl instance) =>
     <String, dynamic>{
-      'visibility': _$JsonConverterToJson<String, NoteVisibility>(
-          instance.visibility, const NoteVisibilityJsonConverter().toJson),
+      'visibility': _$NoteVisibilityEnumMap[instance.visibility],
       'visibleUserIds': instance.visibleUserIds,
       'text': instance.text,
       'cw': instance.cw,
@@ -58,11 +57,12 @@ Map<String, dynamic> _$$NotesCreateRequestImplToJson(
       'poll': instance.poll?.toJson(),
     };
 
-Value? _$JsonConverterFromJson<Json, Value>(
-  Object? json,
-  Value? Function(Json json) fromJson,
-) =>
-    json == null ? null : fromJson(json as Json);
+const _$NoteVisibilityEnumMap = {
+  NoteVisibility.public: 'public',
+  NoteVisibility.home: 'home',
+  NoteVisibility.followers: 'followers',
+  NoteVisibility.specified: 'specified',
+};
 
 const _$ReactionAcceptanceEnumMap = {
   ReactionAcceptance.likeOnlyForRemote: 'likeOnlyForRemote',
@@ -71,9 +71,3 @@ const _$ReactionAcceptanceEnumMap = {
       'nonSensitiveOnlyForLocalLikeOnlyForRemote',
   ReactionAcceptance.likeOnly: 'likeOnly',
 };
-
-Json? _$JsonConverterToJson<Json, Value>(
-  Value? value,
-  Json? Function(Value value) toJson,
-) =>
-    value == null ? null : toJson(value);

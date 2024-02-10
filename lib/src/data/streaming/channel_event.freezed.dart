@@ -20,9 +20,10 @@ ChannelEvent _$ChannelEventFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ChannelEvent {
-  String get id => throw _privateConstructorUsedError;
-  @ChannelEventTypeJsonConverter()
-  ChannelEventType get type => throw _privateConstructorUsedError;
+  String get id =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  ChannelEventType? get type => throw _privateConstructorUsedError;
   dynamic get body => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -39,7 +40,8 @@ abstract class $ChannelEventCopyWith<$Res> {
   @useResult
   $Res call(
       {String id,
-      @ChannelEventTypeJsonConverter() ChannelEventType type,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
       dynamic body});
 }
 
@@ -57,7 +59,7 @@ class _$ChannelEventCopyWithImpl<$Res, $Val extends ChannelEvent>
   @override
   $Res call({
     Object? id = null,
-    Object? type = null,
+    Object? type = freezed,
     Object? body = freezed,
   }) {
     return _then(_value.copyWith(
@@ -65,10 +67,10 @@ class _$ChannelEventCopyWithImpl<$Res, $Val extends ChannelEvent>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      type: null == type
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as ChannelEventType,
+              as ChannelEventType?,
       body: freezed == body
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
@@ -87,7 +89,8 @@ abstract class _$$ChannelEventImplCopyWith<$Res>
   @useResult
   $Res call(
       {String id,
-      @ChannelEventTypeJsonConverter() ChannelEventType type,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
       dynamic body});
 }
 
@@ -103,7 +106,7 @@ class __$$ChannelEventImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = null,
-    Object? type = null,
+    Object? type = freezed,
     Object? body = freezed,
   }) {
     return _then(_$ChannelEventImpl(
@@ -111,10 +114,10 @@ class __$$ChannelEventImplCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      type: null == type
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as ChannelEventType,
+              as ChannelEventType?,
       body: freezed == body
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
@@ -128,7 +131,7 @@ class __$$ChannelEventImplCopyWithImpl<$Res>
 class _$ChannelEventImpl implements _ChannelEvent {
   const _$ChannelEventImpl(
       {required this.id,
-      @ChannelEventTypeJsonConverter() required this.type,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type,
       required this.body});
 
   factory _$ChannelEventImpl.fromJson(Map<String, dynamic> json) =>
@@ -136,9 +139,10 @@ class _$ChannelEventImpl implements _ChannelEvent {
 
   @override
   final String id;
+// ignore: invalid_annotation_target
   @override
-  @ChannelEventTypeJsonConverter()
-  final ChannelEventType type;
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final ChannelEventType? type;
   @override
   final dynamic body;
 
@@ -179,7 +183,8 @@ class _$ChannelEventImpl implements _ChannelEvent {
 abstract class _ChannelEvent implements ChannelEvent {
   const factory _ChannelEvent(
       {required final String id,
-      @ChannelEventTypeJsonConverter() required final ChannelEventType type,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      final ChannelEventType? type,
       required final dynamic body}) = _$ChannelEventImpl;
 
   factory _ChannelEvent.fromJson(Map<String, dynamic> json) =
@@ -187,9 +192,9 @@ abstract class _ChannelEvent implements ChannelEvent {
 
   @override
   String get id;
-  @override
-  @ChannelEventTypeJsonConverter()
-  ChannelEventType get type;
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  ChannelEventType? get type;
   @override
   dynamic get body;
   @override

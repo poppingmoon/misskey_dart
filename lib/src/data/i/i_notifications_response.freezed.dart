@@ -23,8 +23,10 @@ INotificationsResponse _$INotificationsResponseFromJson(
 mixin _$INotificationsResponse {
   String get id => throw _privateConstructorUsedError;
   @DateTimeConverter()
-  DateTime get createdAt => throw _privateConstructorUsedError;
-  NotificationType get type => throw _privateConstructorUsedError;
+  DateTime get createdAt =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  NotificationType? get type => throw _privateConstructorUsedError;
   String? get noteId => throw _privateConstructorUsedError;
   String? get followRequestId => throw _privateConstructorUsedError;
   String? get reaction => throw _privateConstructorUsedError;
@@ -55,7 +57,8 @@ abstract class $INotificationsResponseCopyWith<$Res> {
   $Res call(
       {String id,
       @DateTimeConverter() DateTime createdAt,
-      NotificationType type,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      NotificationType? type,
       String? noteId,
       String? followRequestId,
       String? reaction,
@@ -91,7 +94,7 @@ class _$INotificationsResponseCopyWithImpl<$Res,
   $Res call({
     Object? id = null,
     Object? createdAt = null,
-    Object? type = null,
+    Object? type = freezed,
     Object? noteId = freezed,
     Object? followRequestId = freezed,
     Object? reaction = freezed,
@@ -115,10 +118,10 @@ class _$INotificationsResponseCopyWithImpl<$Res,
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      type: null == type
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as NotificationType,
+              as NotificationType?,
       noteId: freezed == noteId
           ? _value.noteId
           : noteId // ignore: cast_nullable_to_non_nullable
@@ -223,7 +226,8 @@ abstract class _$$INotificationsResponseImplCopyWith<$Res>
   $Res call(
       {String id,
       @DateTimeConverter() DateTime createdAt,
-      NotificationType type,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      NotificationType? type,
       String? noteId,
       String? followRequestId,
       String? reaction,
@@ -261,7 +265,7 @@ class __$$INotificationsResponseImplCopyWithImpl<$Res>
   $Res call({
     Object? id = null,
     Object? createdAt = null,
-    Object? type = null,
+    Object? type = freezed,
     Object? noteId = freezed,
     Object? followRequestId = freezed,
     Object? reaction = freezed,
@@ -285,10 +289,10 @@ class __$$INotificationsResponseImplCopyWithImpl<$Res>
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      type: null == type
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as NotificationType,
+              as NotificationType?,
       noteId: freezed == noteId
           ? _value.noteId
           : noteId // ignore: cast_nullable_to_non_nullable
@@ -351,7 +355,7 @@ class _$INotificationsResponseImpl implements _INotificationsResponse {
   const _$INotificationsResponseImpl(
       {required this.id,
       @DateTimeConverter() required this.createdAt,
-      required this.type,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type,
       this.noteId,
       this.followRequestId,
       this.reaction,
@@ -374,8 +378,10 @@ class _$INotificationsResponseImpl implements _INotificationsResponse {
   @override
   @DateTimeConverter()
   final DateTime createdAt;
+// ignore: invalid_annotation_target
   @override
-  final NotificationType type;
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final NotificationType? type;
   @override
   final String? noteId;
   @override
@@ -480,7 +486,8 @@ abstract class _INotificationsResponse implements INotificationsResponse {
   const factory _INotificationsResponse(
       {required final String id,
       @DateTimeConverter() required final DateTime createdAt,
-      required final NotificationType type,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      final NotificationType? type,
       final String? noteId,
       final String? followRequestId,
       final String? reaction,
@@ -503,8 +510,9 @@ abstract class _INotificationsResponse implements INotificationsResponse {
   @override
   @DateTimeConverter()
   DateTime get createdAt;
-  @override
-  NotificationType get type;
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  NotificationType? get type;
   @override
   String? get noteId;
   @override

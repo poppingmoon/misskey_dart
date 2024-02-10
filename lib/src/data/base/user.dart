@@ -100,7 +100,9 @@ class UserLite with _$UserLite implements User {
     @Default(false) bool isCat,
     UserInstanceInfo? instance,
     @EmojisConverter() @Default({}) Map<String, String> emojis,
-    @OnlineStatusJsonConverter() OnlineStatus? onlineStatus,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    OnlineStatus? onlineStatus,
     @Default([]) List<UserBadgeRole> badgeRoles,
   }) = _UserLite;
 
@@ -122,7 +124,9 @@ class UserDetailedNotMe with _$UserDetailedNotMe implements UserDetailed {
     required bool isCat,
     UserInstanceInfo? instance,
     @EmojisConverter() @Default({}) Map<String, String> emojis,
-    @OnlineStatusJsonConverter() OnlineStatus? onlineStatus,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    OnlineStatus? onlineStatus,
     @Default([]) List<UserBadgeRole> badgeRoles,
     @NullableUriConverter() Uri? url,
     @NullableUriConverter() Uri? uri,
@@ -147,8 +151,15 @@ class UserDetailedNotMe with _$UserDetailedNotMe implements UserDetailed {
     String? pinnedPageId,
     Map<String, dynamic>? pinnedPage,
     required bool publicReactions,
-    @Deprecated("removed at 2023.12.0") FFVisibility? ffVisibility,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    @Deprecated("removed at 2023.12.0")
+    FFVisibility? ffVisibility,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     FFVisibility? followersVisibility,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     FFVisibility? followingVisibility,
     required bool twoFactorEnabled,
     required bool usePasswordLessLogin,
@@ -177,7 +188,9 @@ class UserDetailedNotMeWithRelations
     required bool isCat,
     UserInstanceInfo? instance,
     @EmojisConverter() @Default({}) Map<String, String> emojis,
-    @OnlineStatusJsonConverter() OnlineStatus? onlineStatus,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    OnlineStatus? onlineStatus,
     @Default([]) List<UserBadgeRole> badgeRoles,
     @NullableUriConverter() Uri? url,
     @NullableUriConverter() Uri? uri,
@@ -202,8 +215,15 @@ class UserDetailedNotMeWithRelations
     String? pinnedPageId,
     Map<String, dynamic>? pinnedPage,
     required bool publicReactions,
-    @Deprecated("removed at 2023.12.0") FFVisibility? ffVisibility,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    @Deprecated("removed at 2023.12.0")
+    FFVisibility? ffVisibility,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     FFVisibility? followersVisibility,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     FFVisibility? followingVisibility,
     required bool twoFactorEnabled,
     required bool usePasswordLessLogin,
@@ -238,7 +258,9 @@ class MeDetailed with _$MeDetailed implements UserDetailed {
     required bool isCat,
     UserInstanceInfo? instance,
     @EmojisConverter() @Default({}) Map<String, String> emojis,
-    @OnlineStatusJsonConverter() OnlineStatus? onlineStatus,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    OnlineStatus? onlineStatus,
     @Default([]) List<UserBadgeRole> badgeRoles,
     @NullableUriConverter() Uri? url,
     @NullableUriConverter() Uri? uri,
@@ -263,8 +285,15 @@ class MeDetailed with _$MeDetailed implements UserDetailed {
     String? pinnedPageId,
     Map<String, dynamic>? pinnedPage,
     required bool publicReactions,
-    @Deprecated("removed at 2023.12.0") FFVisibility? ffVisibility,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    @Deprecated("removed at 2023.12.0")
+    FFVisibility? ffVisibility,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     FFVisibility? followersVisibility,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     FFVisibility? followingVisibility,
     required bool twoFactorEnabled,
     required bool usePasswordLessLogin,

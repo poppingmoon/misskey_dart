@@ -21,7 +21,6 @@ NotesCreateRequest _$NotesCreateRequestFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$NotesCreateRequest {
   /// ノートの公開範囲。
-  @NoteVisibilityJsonConverter()
   NoteVisibility? get visibility => throw _privateConstructorUsedError;
 
   /// ノートを閲覧可能なユーザーのidのリスト。visibilityがspecifiedの場合のみ適用されます。
@@ -70,7 +69,7 @@ abstract class $NotesCreateRequestCopyWith<$Res> {
       _$NotesCreateRequestCopyWithImpl<$Res, NotesCreateRequest>;
   @useResult
   $Res call(
-      {@NoteVisibilityJsonConverter() NoteVisibility? visibility,
+      {NoteVisibility? visibility,
       List<String>? visibleUserIds,
       String? text,
       String? cw,
@@ -204,7 +203,7 @@ abstract class _$$NotesCreateRequestImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@NoteVisibilityJsonConverter() NoteVisibility? visibility,
+      {NoteVisibility? visibility,
       List<String>? visibleUserIds,
       String? text,
       String? cw,
@@ -320,7 +319,7 @@ class __$$NotesCreateRequestImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$NotesCreateRequestImpl implements _NotesCreateRequest {
   const _$NotesCreateRequestImpl(
-      {@NoteVisibilityJsonConverter() this.visibility,
+      {this.visibility,
       final List<String>? visibleUserIds,
       this.text,
       this.cw,
@@ -344,7 +343,6 @@ class _$NotesCreateRequestImpl implements _NotesCreateRequest {
 
   /// ノートの公開範囲。
   @override
-  @NoteVisibilityJsonConverter()
   final NoteVisibility? visibility;
 
   /// ノートを閲覧可能なユーザーのidのリスト。visibilityがspecifiedの場合のみ適用されます。
@@ -494,7 +492,7 @@ class _$NotesCreateRequestImpl implements _NotesCreateRequest {
 
 abstract class _NotesCreateRequest implements NotesCreateRequest {
   const factory _NotesCreateRequest(
-      {@NoteVisibilityJsonConverter() final NoteVisibility? visibility,
+      {final NoteVisibility? visibility,
       final List<String>? visibleUserIds,
       final String? text,
       final String? cw,
@@ -516,7 +514,6 @@ abstract class _NotesCreateRequest implements NotesCreateRequest {
   @override
 
   /// ノートの公開範囲。
-  @NoteVisibilityJsonConverter()
   NoteVisibility? get visibility;
   @override
 
