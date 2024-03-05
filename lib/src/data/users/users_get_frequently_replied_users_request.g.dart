@@ -9,9 +9,16 @@ part of 'users_get_frequently_replied_users_request.dart';
 _$UsersGetFrequentlyRepliedUsersRequestImpl
     _$$UsersGetFrequentlyRepliedUsersRequestImplFromJson(
             Map<String, dynamic> json) =>
-        _$UsersGetFrequentlyRepliedUsersRequestImpl(
-          userId: json['userId'] as String,
-          limit: json['limit'] as int?,
+        $checkedCreate(
+          r'_$UsersGetFrequentlyRepliedUsersRequestImpl',
+          json,
+          ($checkedConvert) {
+            final val = _$UsersGetFrequentlyRepliedUsersRequestImpl(
+              userId: $checkedConvert('userId', (v) => v as String),
+              limit: $checkedConvert('limit', (v) => v as int?),
+            );
+            return val;
+          },
         );
 
 Map<String, dynamic> _$$UsersGetFrequentlyRepliedUsersRequestImplToJson(

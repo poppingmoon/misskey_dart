@@ -8,10 +8,18 @@ part of 'i_registry_remove_request.dart';
 
 _$IRegistryRemoveRequestImpl _$$IRegistryRemoveRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$IRegistryRemoveRequestImpl(
-      key: json['key'] as String,
-      scope: (json['scope'] as List<dynamic>).map((e) => e as String).toList(),
-      domain: json['domain'] as String?,
+    $checkedCreate(
+      r'_$IRegistryRemoveRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$IRegistryRemoveRequestImpl(
+          key: $checkedConvert('key', (v) => v as String),
+          scope: $checkedConvert('scope',
+              (v) => (v as List<dynamic>).map((e) => e as String).toList()),
+          domain: $checkedConvert('domain', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$IRegistryRemoveRequestImplToJson(

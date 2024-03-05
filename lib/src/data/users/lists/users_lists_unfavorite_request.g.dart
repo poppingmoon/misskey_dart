@@ -8,8 +8,15 @@ part of 'users_lists_unfavorite_request.dart';
 
 _$UsersListsUnfavoriteRequestImpl _$$UsersListsUnfavoriteRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$UsersListsUnfavoriteRequestImpl(
-      listId: json['listId'] as String,
+    $checkedCreate(
+      r'_$UsersListsUnfavoriteRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$UsersListsUnfavoriteRequestImpl(
+          listId: $checkedConvert('listId', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$UsersListsUnfavoriteRequestImplToJson(

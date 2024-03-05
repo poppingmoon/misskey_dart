@@ -8,26 +8,38 @@ part of 'users_notes_request.dart';
 
 _$UsersNotesRequestImpl _$$UsersNotesRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$UsersNotesRequestImpl(
-      userId: json['userId'] as String,
-      includeReplies: json['includeReplies'] as bool?,
-      withReplies: json['withReplies'] as bool?,
-      withRenotes: json['withRenotes'] as bool?,
-      withChannelNotes: json['withChannelNotes'] as bool?,
-      limit: json['limit'] as int?,
-      sinceId: json['sinceId'] as String?,
-      untilId: json['untilId'] as String?,
-      sinceDate: _$JsonConverterFromJson<int, DateTime>(json['sinceDate'],
-          const EpocTimeDateTimeConverter.withMilliSeconds().fromJson),
-      untilDate: _$JsonConverterFromJson<int, DateTime>(json['untilDate'],
-          const EpocTimeDateTimeConverter.withMilliSeconds().fromJson),
-      includeMyRenotes: json['includeMyRenotes'] as bool?,
-      withFiles: json['withFiles'] as bool?,
-      fileType: (json['fileType'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-      allowPartial: json['allowPartial'] as bool?,
-      excludeNsfw: json['excludeNsfw'] as bool?,
+    $checkedCreate(
+      r'_$UsersNotesRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$UsersNotesRequestImpl(
+          userId: $checkedConvert('userId', (v) => v as String),
+          includeReplies: $checkedConvert('includeReplies', (v) => v as bool?),
+          withReplies: $checkedConvert('withReplies', (v) => v as bool?),
+          withRenotes: $checkedConvert('withRenotes', (v) => v as bool?),
+          withChannelNotes:
+              $checkedConvert('withChannelNotes', (v) => v as bool?),
+          limit: $checkedConvert('limit', (v) => v as int?),
+          sinceId: $checkedConvert('sinceId', (v) => v as String?),
+          untilId: $checkedConvert('untilId', (v) => v as String?),
+          sinceDate: $checkedConvert(
+              'sinceDate',
+              (v) => _$JsonConverterFromJson<int, DateTime>(v,
+                  const EpocTimeDateTimeConverter.withMilliSeconds().fromJson)),
+          untilDate: $checkedConvert(
+              'untilDate',
+              (v) => _$JsonConverterFromJson<int, DateTime>(v,
+                  const EpocTimeDateTimeConverter.withMilliSeconds().fromJson)),
+          includeMyRenotes:
+              $checkedConvert('includeMyRenotes', (v) => v as bool?),
+          withFiles: $checkedConvert('withFiles', (v) => v as bool?),
+          fileType: $checkedConvert('fileType',
+              (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
+          allowPartial: $checkedConvert('allowPartial', (v) => v as bool?),
+          excludeNsfw: $checkedConvert('excludeNsfw', (v) => v as bool?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$UsersNotesRequestImplToJson(

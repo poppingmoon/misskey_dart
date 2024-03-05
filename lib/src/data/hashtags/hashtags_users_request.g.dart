@@ -8,12 +8,22 @@ part of 'hashtags_users_request.dart';
 
 _$HashtagsUsersRequestImpl _$$HashtagsUsersRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$HashtagsUsersRequestImpl(
-      tag: json['tag'] as String,
-      limit: json['limit'] as int?,
-      sort: const UsersSortConverter().fromJson(json['sort'] as String),
-      state: $enumDecodeNullable(_$UsersStateEnumMap, json['state']),
-      origin: $enumDecodeNullable(_$OriginEnumMap, json['origin']),
+    $checkedCreate(
+      r'_$HashtagsUsersRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$HashtagsUsersRequestImpl(
+          tag: $checkedConvert('tag', (v) => v as String),
+          limit: $checkedConvert('limit', (v) => v as int?),
+          sort: $checkedConvert(
+              'sort', (v) => const UsersSortConverter().fromJson(v as String)),
+          state: $checkedConvert(
+              'state', (v) => $enumDecodeNullable(_$UsersStateEnumMap, v)),
+          origin: $checkedConvert(
+              'origin', (v) => $enumDecodeNullable(_$OriginEnumMap, v)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$HashtagsUsersRequestImplToJson(

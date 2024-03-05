@@ -8,8 +8,15 @@ part of 'roles_show_request.dart';
 
 _$RolesShowRequestImpl _$$RolesShowRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$RolesShowRequestImpl(
-      roleId: json['roleId'] as String,
+    $checkedCreate(
+      r'_$RolesShowRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$RolesShowRequestImpl(
+          roleId: $checkedConvert('roleId', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$RolesShowRequestImplToJson(

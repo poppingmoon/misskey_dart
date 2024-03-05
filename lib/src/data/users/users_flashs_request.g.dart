@@ -8,11 +8,18 @@ part of 'users_flashs_request.dart';
 
 _$UsersFlashsRequestImpl _$$UsersFlashsRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$UsersFlashsRequestImpl(
-      userId: json['userId'] as String,
-      limit: json['limit'] as int?,
-      sinceId: json['sinceId'] as String?,
-      untilId: json['untilId'] as String?,
+    $checkedCreate(
+      r'_$UsersFlashsRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$UsersFlashsRequestImpl(
+          userId: $checkedConvert('userId', (v) => v as String),
+          limit: $checkedConvert('limit', (v) => v as int?),
+          sinceId: $checkedConvert('sinceId', (v) => v as String?),
+          untilId: $checkedConvert('untilId', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$UsersFlashsRequestImplToJson(

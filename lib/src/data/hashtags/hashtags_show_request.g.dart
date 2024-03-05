@@ -8,8 +8,15 @@ part of 'hashtags_show_request.dart';
 
 _$HashtagsShowRequestImpl _$$HashtagsShowRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$HashtagsShowRequestImpl(
-      tag: json['tag'] as String,
+    $checkedCreate(
+      r'_$HashtagsShowRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$HashtagsShowRequestImpl(
+          tag: $checkedConvert('tag', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$HashtagsShowRequestImplToJson(

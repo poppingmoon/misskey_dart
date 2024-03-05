@@ -8,22 +8,37 @@ part of 'antennas_create_request.dart';
 
 _$AntennasCreateRequestImpl _$$AntennasCreateRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$AntennasCreateRequestImpl(
-      name: json['name'] as String,
-      src: $enumDecode(_$AntennaSourceEnumMap, json['src']),
-      userListId: json['userListId'] as String?,
-      keywords: (json['keywords'] as List<dynamic>)
-          .map((e) => (e as List<dynamic>).map((e) => e as String).toList())
-          .toList(),
-      excludeKeywords: (json['excludeKeywords'] as List<dynamic>)
-          .map((e) => (e as List<dynamic>).map((e) => e as String).toList())
-          .toList(),
-      users: (json['users'] as List<dynamic>).map((e) => e as String).toList(),
-      caseSensitive: json['caseSensitive'] as bool,
-      withReplies: json['withReplies'] as bool,
-      withFile: json['withFile'] as bool,
-      notify: json['notify'] as bool,
-      localOnly: json['localOnly'] as bool?,
+    $checkedCreate(
+      r'_$AntennasCreateRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$AntennasCreateRequestImpl(
+          name: $checkedConvert('name', (v) => v as String),
+          src: $checkedConvert(
+              'src', (v) => $enumDecode(_$AntennaSourceEnumMap, v)),
+          userListId: $checkedConvert('userListId', (v) => v as String?),
+          keywords: $checkedConvert(
+              'keywords',
+              (v) => (v as List<dynamic>)
+                  .map((e) =>
+                      (e as List<dynamic>).map((e) => e as String).toList())
+                  .toList()),
+          excludeKeywords: $checkedConvert(
+              'excludeKeywords',
+              (v) => (v as List<dynamic>)
+                  .map((e) =>
+                      (e as List<dynamic>).map((e) => e as String).toList())
+                  .toList()),
+          users: $checkedConvert('users',
+              (v) => (v as List<dynamic>).map((e) => e as String).toList()),
+          caseSensitive: $checkedConvert('caseSensitive', (v) => v as bool),
+          withReplies: $checkedConvert('withReplies', (v) => v as bool),
+          withFile: $checkedConvert('withFile', (v) => v as bool),
+          notify: $checkedConvert('notify', (v) => v as bool),
+          localOnly: $checkedConvert('localOnly', (v) => v as bool?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$AntennasCreateRequestImplToJson(

@@ -8,10 +8,17 @@ part of 'local_timeline_parameter.dart';
 
 _$LocalTimelineParameterImpl _$$LocalTimelineParameterImplFromJson(
         Map<String, dynamic> json) =>
-    _$LocalTimelineParameterImpl(
-      withRenotes: json['withRenotes'] as bool?,
-      withReplies: json['withReplies'] as bool?,
-      withFiles: json['withFiles'] as bool?,
+    $checkedCreate(
+      r'_$LocalTimelineParameterImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$LocalTimelineParameterImpl(
+          withRenotes: $checkedConvert('withRenotes', (v) => v as bool?),
+          withReplies: $checkedConvert('withReplies', (v) => v as bool?),
+          withFiles: $checkedConvert('withFiles', (v) => v as bool?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$LocalTimelineParameterImplToJson(

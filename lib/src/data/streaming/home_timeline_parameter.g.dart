@@ -8,9 +8,16 @@ part of 'home_timeline_parameter.dart';
 
 _$HomeTimelineParameterImpl _$$HomeTimelineParameterImplFromJson(
         Map<String, dynamic> json) =>
-    _$HomeTimelineParameterImpl(
-      withRenotes: json['withRenotes'] as bool?,
-      withFiles: json['withFiles'] as bool?,
+    $checkedCreate(
+      r'_$HomeTimelineParameterImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$HomeTimelineParameterImpl(
+          withRenotes: $checkedConvert('withRenotes', (v) => v as bool?),
+          withFiles: $checkedConvert('withFiles', (v) => v as bool?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$HomeTimelineParameterImplToJson(

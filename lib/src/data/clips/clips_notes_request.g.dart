@@ -8,11 +8,18 @@ part of 'clips_notes_request.dart';
 
 _$ClipsNotesRequestImpl _$$ClipsNotesRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$ClipsNotesRequestImpl(
-      limit: json['limit'] as int?,
-      clipId: json['clipId'] as String,
-      sinceId: json['sinceId'] as String?,
-      untilId: json['untilId'] as String?,
+    $checkedCreate(
+      r'_$ClipsNotesRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$ClipsNotesRequestImpl(
+          limit: $checkedConvert('limit', (v) => v as int?),
+          clipId: $checkedConvert('clipId', (v) => v as String),
+          sinceId: $checkedConvert('sinceId', (v) => v as String?),
+          untilId: $checkedConvert('untilId', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$ClipsNotesRequestImplToJson(

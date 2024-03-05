@@ -8,9 +8,16 @@ part of 'notes_polls_recommendation_request.dart';
 
 _$NotesPollsRecommendationRequestImpl
     _$$NotesPollsRecommendationRequestImplFromJson(Map<String, dynamic> json) =>
-        _$NotesPollsRecommendationRequestImpl(
-          limit: json['limit'] as int?,
-          offset: json['offset'] as int?,
+        $checkedCreate(
+          r'_$NotesPollsRecommendationRequestImpl',
+          json,
+          ($checkedConvert) {
+            final val = _$NotesPollsRecommendationRequestImpl(
+              limit: $checkedConvert('limit', (v) => v as int?),
+              offset: $checkedConvert('offset', (v) => v as int?),
+            );
+            return val;
+          },
         );
 
 Map<String, dynamic> _$$NotesPollsRecommendationRequestImplToJson(

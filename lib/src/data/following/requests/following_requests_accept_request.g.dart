@@ -8,8 +8,15 @@ part of 'following_requests_accept_request.dart';
 
 _$FollowingRequestsAcceptRequestImpl
     _$$FollowingRequestsAcceptRequestImplFromJson(Map<String, dynamic> json) =>
-        _$FollowingRequestsAcceptRequestImpl(
-          userId: json['userId'] as String,
+        $checkedCreate(
+          r'_$FollowingRequestsAcceptRequestImpl',
+          json,
+          ($checkedConvert) {
+            final val = _$FollowingRequestsAcceptRequestImpl(
+              userId: $checkedConvert('userId', (v) => v as String),
+            );
+            return val;
+          },
         );
 
 Map<String, dynamic> _$$FollowingRequestsAcceptRequestImplToJson(

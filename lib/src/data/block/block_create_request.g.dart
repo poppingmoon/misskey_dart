@@ -8,8 +8,15 @@ part of 'block_create_request.dart';
 
 _$BlockCreateRequestImpl _$$BlockCreateRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$BlockCreateRequestImpl(
-      userId: json['userId'] as String,
+    $checkedCreate(
+      r'_$BlockCreateRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$BlockCreateRequestImpl(
+          userId: $checkedConvert('userId', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$BlockCreateRequestImplToJson(

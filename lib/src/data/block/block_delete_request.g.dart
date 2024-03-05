@@ -8,8 +8,15 @@ part of 'block_delete_request.dart';
 
 _$BlockDeleteRequestImpl _$$BlockDeleteRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$BlockDeleteRequestImpl(
-      userId: json['userId'] as String,
+    $checkedCreate(
+      r'_$BlockDeleteRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$BlockDeleteRequestImpl(
+          userId: $checkedConvert('userId', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$BlockDeleteRequestImplToJson(

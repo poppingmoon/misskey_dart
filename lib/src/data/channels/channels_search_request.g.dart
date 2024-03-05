@@ -8,12 +8,20 @@ part of 'channels_search_request.dart';
 
 _$ChannelsSearchRequestImpl _$$ChannelsSearchRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$ChannelsSearchRequestImpl(
-      query: json['query'] as String,
-      type: $enumDecodeNullable(_$ChannelSearchTypeEnumMap, json['type']),
-      sinceId: json['sinceId'] as String?,
-      untilId: json['untilId'] as String?,
-      limit: json['limit'] as int?,
+    $checkedCreate(
+      r'_$ChannelsSearchRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$ChannelsSearchRequestImpl(
+          query: $checkedConvert('query', (v) => v as String),
+          type: $checkedConvert('type',
+              (v) => $enumDecodeNullable(_$ChannelSearchTypeEnumMap, v)),
+          sinceId: $checkedConvert('sinceId', (v) => v as String?),
+          untilId: $checkedConvert('untilId', (v) => v as String?),
+          limit: $checkedConvert('limit', (v) => v as int?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$ChannelsSearchRequestImplToJson(

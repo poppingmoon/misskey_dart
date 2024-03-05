@@ -8,9 +8,16 @@ part of 'users_report_abuse_request.dart';
 
 _$UsersReportAbuseImpl _$$UsersReportAbuseImplFromJson(
         Map<String, dynamic> json) =>
-    _$UsersReportAbuseImpl(
-      userId: json['userId'] as String,
-      comment: json['comment'] as String,
+    $checkedCreate(
+      r'_$UsersReportAbuseImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$UsersReportAbuseImpl(
+          userId: $checkedConvert('userId', (v) => v as String),
+          comment: $checkedConvert('comment', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$UsersReportAbuseImplToJson(

@@ -8,8 +8,15 @@ part of 'drive_files_check_existence_request.dart';
 
 _$DriveFilesCheckExistenceRequestImpl
     _$$DriveFilesCheckExistenceRequestImplFromJson(Map<String, dynamic> json) =>
-        _$DriveFilesCheckExistenceRequestImpl(
-          md5: json['md5'] as String,
+        $checkedCreate(
+          r'_$DriveFilesCheckExistenceRequestImpl',
+          json,
+          ($checkedConvert) {
+            final val = _$DriveFilesCheckExistenceRequestImpl(
+              md5: $checkedConvert('md5', (v) => v as String),
+            );
+            return val;
+          },
         );
 
 Map<String, dynamic> _$$DriveFilesCheckExistenceRequestImplToJson(

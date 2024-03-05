@@ -7,9 +7,16 @@ part of 'ap_show_response.dart';
 // **************************************************************************
 
 _$ApShowResponseImpl _$$ApShowResponseImplFromJson(Map<String, dynamic> json) =>
-    _$ApShowResponseImpl(
-      type: json['type'] as String,
-      object: json['object'] as Map<String, dynamic>,
+    $checkedCreate(
+      r'_$ApShowResponseImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$ApShowResponseImpl(
+          type: $checkedConvert('type', (v) => v as String),
+          object: $checkedConvert('object', (v) => v as Map<String, dynamic>),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$ApShowResponseImplToJson(

@@ -8,10 +8,17 @@ part of 'notes_conversation_request.dart';
 
 _$NotesConversationRequestImpl _$$NotesConversationRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$NotesConversationRequestImpl(
-      noteId: json['noteId'] as String,
-      limit: json['limit'] as int?,
-      offset: json['offset'] as int?,
+    $checkedCreate(
+      r'_$NotesConversationRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$NotesConversationRequestImpl(
+          noteId: $checkedConvert('noteId', (v) => v as String),
+          limit: $checkedConvert('limit', (v) => v as int?),
+          offset: $checkedConvert('offset', (v) => v as int?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$NotesConversationRequestImplToJson(

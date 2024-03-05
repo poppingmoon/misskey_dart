@@ -8,9 +8,17 @@ part of 'roles_users_response.dart';
 
 _$RolesUsersResponseImpl _$$RolesUsersResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$RolesUsersResponseImpl(
-      id: json['id'] as String,
-      user: UserDetailed.fromJson(json['user'] as Map<String, dynamic>),
+    $checkedCreate(
+      r'_$RolesUsersResponseImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$RolesUsersResponseImpl(
+          id: $checkedConvert('id', (v) => v as String),
+          user: $checkedConvert(
+              'user', (v) => UserDetailed.fromJson(v as Map<String, dynamic>)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$RolesUsersResponseImplToJson(

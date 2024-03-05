@@ -8,8 +8,15 @@ part of 'following_requests_cancel_request.dart';
 
 _$FollowingRequestsCancelRequestImpl
     _$$FollowingRequestsCancelRequestImplFromJson(Map<String, dynamic> json) =>
-        _$FollowingRequestsCancelRequestImpl(
-          userId: json['userId'] as String,
+        $checkedCreate(
+          r'_$FollowingRequestsCancelRequestImpl',
+          json,
+          ($checkedConvert) {
+            final val = _$FollowingRequestsCancelRequestImpl(
+              userId: $checkedConvert('userId', (v) => v as String),
+            );
+            return val;
+          },
         );
 
 Map<String, dynamic> _$$FollowingRequestsCancelRequestImplToJson(

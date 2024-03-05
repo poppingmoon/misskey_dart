@@ -8,10 +8,17 @@ part of 'hashtags_search_request.dart';
 
 _$HashtagsSearchRequestImpl _$$HashtagsSearchRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$HashtagsSearchRequestImpl(
-      limit: json['limit'] as int?,
-      query: json['query'] as String,
-      offset: json['offset'] as int?,
+    $checkedCreate(
+      r'_$HashtagsSearchRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$HashtagsSearchRequestImpl(
+          limit: $checkedConvert('limit', (v) => v as int?),
+          query: $checkedConvert('query', (v) => v as String),
+          offset: $checkedConvert('offset', (v) => v as int?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$HashtagsSearchRequestImplToJson(

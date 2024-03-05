@@ -8,8 +8,15 @@ part of 'antennas_show_request.dart';
 
 _$AntennasShowRequestImpl _$$AntennasShowRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$AntennasShowRequestImpl(
-      antennaId: json['antennaId'] as String,
+    $checkedCreate(
+      r'_$AntennasShowRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$AntennasShowRequestImpl(
+          antennaId: $checkedConvert('antennaId', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$AntennasShowRequestImplToJson(

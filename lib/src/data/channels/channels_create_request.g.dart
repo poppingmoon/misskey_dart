@@ -8,11 +8,18 @@ part of 'channels_create_request.dart';
 
 _$ChannelsCreateRequestImpl _$$ChannelsCreateRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$ChannelsCreateRequestImpl(
-      name: json['name'] as String,
-      description: json['description'] as String?,
-      bannerId: json['bannerId'] as String?,
-      color: json['color'] as String?,
+    $checkedCreate(
+      r'_$ChannelsCreateRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$ChannelsCreateRequestImpl(
+          name: $checkedConvert('name', (v) => v as String),
+          description: $checkedConvert('description', (v) => v as String?),
+          bannerId: $checkedConvert('bannerId', (v) => v as String?),
+          color: $checkedConvert('color', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$ChannelsCreateRequestImplToJson(

@@ -8,8 +8,15 @@ part of 'clips_delete_request.dart';
 
 _$ClipsDeleteRequestImpl _$$ClipsDeleteRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$ClipsDeleteRequestImpl(
-      clipId: json['clipId'] as String,
+    $checkedCreate(
+      r'_$ClipsDeleteRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$ClipsDeleteRequestImpl(
+          clipId: $checkedConvert('clipId', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$ClipsDeleteRequestImplToJson(

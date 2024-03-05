@@ -8,9 +8,16 @@ part of 'global_timeline_parameter.dart';
 
 _$GlobalTimelineParameterImpl _$$GlobalTimelineParameterImplFromJson(
         Map<String, dynamic> json) =>
-    _$GlobalTimelineParameterImpl(
-      withRenotes: json['withRenotes'] as bool?,
-      withFiles: json['withFiles'] as bool?,
+    $checkedCreate(
+      r'_$GlobalTimelineParameterImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$GlobalTimelineParameterImpl(
+          withRenotes: $checkedConvert('withRenotes', (v) => v as bool?),
+          withFiles: $checkedConvert('withFiles', (v) => v as bool?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$GlobalTimelineParameterImplToJson(

@@ -8,10 +8,17 @@ part of 'i_favorites_request.dart';
 
 _$IFavoritesRequestImpl _$$IFavoritesRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$IFavoritesRequestImpl(
-      limit: json['limit'] as int?,
-      sinceId: json['sinceId'] as String?,
-      untilId: json['untilId'] as String?,
+    $checkedCreate(
+      r'_$IFavoritesRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$IFavoritesRequestImpl(
+          limit: $checkedConvert('limit', (v) => v as int?),
+          sinceId: $checkedConvert('sinceId', (v) => v as String?),
+          untilId: $checkedConvert('untilId', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$IFavoritesRequestImplToJson(

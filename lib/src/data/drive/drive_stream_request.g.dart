@@ -8,11 +8,18 @@ part of 'drive_stream_request.dart';
 
 _$DriveStreamRequestImpl _$$DriveStreamRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$DriveStreamRequestImpl(
-      limit: json['limit'] as int?,
-      sinceId: json['sinceId'] as String?,
-      untilId: json['untilId'] as String?,
-      type: json['type'] as String?,
+    $checkedCreate(
+      r'_$DriveStreamRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$DriveStreamRequestImpl(
+          limit: $checkedConvert('limit', (v) => v as int?),
+          sinceId: $checkedConvert('sinceId', (v) => v as String?),
+          untilId: $checkedConvert('untilId', (v) => v as String?),
+          type: $checkedConvert('type', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$DriveStreamRequestImplToJson(

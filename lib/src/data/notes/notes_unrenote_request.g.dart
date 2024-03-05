@@ -8,8 +8,15 @@ part of 'notes_unrenote_request.dart';
 
 _$NotesUnrenoteRequestImpl _$$NotesUnrenoteRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$NotesUnrenoteRequestImpl(
-      noteId: json['noteId'] as String,
+    $checkedCreate(
+      r'_$NotesUnrenoteRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$NotesUnrenoteRequestImpl(
+          noteId: $checkedConvert('noteId', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$NotesUnrenoteRequestImplToJson(

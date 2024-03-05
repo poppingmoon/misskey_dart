@@ -8,17 +8,28 @@ part of 'notes_global_timeline_request.dart';
 
 _$NotesGlobalTimelineRequestImpl _$$NotesGlobalTimelineRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$NotesGlobalTimelineRequestImpl(
-      limit: json['limit'] as int?,
-      sinceId: json['sinceId'] as String?,
-      untilId: json['untilId'] as String?,
-      sinceDate: _$JsonConverterFromJson<int, DateTime>(json['sinceDate'],
-          const EpocTimeDateTimeConverter.withMilliSeconds().fromJson),
-      untilDate: _$JsonConverterFromJson<int, DateTime>(json['untilDate'],
-          const EpocTimeDateTimeConverter.withMilliSeconds().fromJson),
-      withFiles: json['withFiles'] as bool?,
-      withRenotes: json['withRenotes'] as bool?,
-      withReplies: json['withReplies'] as bool?,
+    $checkedCreate(
+      r'_$NotesGlobalTimelineRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$NotesGlobalTimelineRequestImpl(
+          limit: $checkedConvert('limit', (v) => v as int?),
+          sinceId: $checkedConvert('sinceId', (v) => v as String?),
+          untilId: $checkedConvert('untilId', (v) => v as String?),
+          sinceDate: $checkedConvert(
+              'sinceDate',
+              (v) => _$JsonConverterFromJson<int, DateTime>(v,
+                  const EpocTimeDateTimeConverter.withMilliSeconds().fromJson)),
+          untilDate: $checkedConvert(
+              'untilDate',
+              (v) => _$JsonConverterFromJson<int, DateTime>(v,
+                  const EpocTimeDateTimeConverter.withMilliSeconds().fromJson)),
+          withFiles: $checkedConvert('withFiles', (v) => v as bool?),
+          withRenotes: $checkedConvert('withRenotes', (v) => v as bool?),
+          withReplies: $checkedConvert('withReplies', (v) => v as bool?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$NotesGlobalTimelineRequestImplToJson(

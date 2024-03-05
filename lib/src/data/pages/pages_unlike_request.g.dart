@@ -8,8 +8,15 @@ part of 'pages_unlike_request.dart';
 
 _$PagesUnlikeRequestImpl _$$PagesUnlikeRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$PagesUnlikeRequestImpl(
-      pageId: json['pageId'] as String,
+    $checkedCreate(
+      r'_$PagesUnlikeRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$PagesUnlikeRequestImpl(
+          pageId: $checkedConvert('pageId', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$PagesUnlikeRequestImplToJson(

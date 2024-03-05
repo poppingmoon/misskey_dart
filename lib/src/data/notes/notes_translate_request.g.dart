@@ -8,9 +8,16 @@ part of 'notes_translate_request.dart';
 
 _$NotesTranslateRequestImpl _$$NotesTranslateRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$NotesTranslateRequestImpl(
-      noteId: json['noteId'] as String,
-      targetLang: json['targetLang'] as String,
+    $checkedCreate(
+      r'_$NotesTranslateRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$NotesTranslateRequestImpl(
+          noteId: $checkedConvert('noteId', (v) => v as String),
+          targetLang: $checkedConvert('targetLang', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$NotesTranslateRequestImplToJson(

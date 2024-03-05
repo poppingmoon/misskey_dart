@@ -8,14 +8,23 @@ part of 'users_users_request.dart';
 
 _$UsersUsersRequestImpl _$$UsersUsersRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$UsersUsersRequestImpl(
-      limit: json['limit'] as int?,
-      offset: json['offset'] as int?,
-      sort:
-          const NullableUsersSortConverter().fromJson(json['sort'] as String?),
-      state: $enumDecodeNullable(_$UsersStateEnumMap, json['state']),
-      origin: $enumDecodeNullable(_$OriginEnumMap, json['origin']),
-      hostname: json['hostname'] as String?,
+    $checkedCreate(
+      r'_$UsersUsersRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$UsersUsersRequestImpl(
+          limit: $checkedConvert('limit', (v) => v as int?),
+          offset: $checkedConvert('offset', (v) => v as int?),
+          sort: $checkedConvert('sort',
+              (v) => const NullableUsersSortConverter().fromJson(v as String?)),
+          state: $checkedConvert(
+              'state', (v) => $enumDecodeNullable(_$UsersStateEnumMap, v)),
+          origin: $checkedConvert(
+              'origin', (v) => $enumDecodeNullable(_$OriginEnumMap, v)),
+          hostname: $checkedConvert('hostname', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$UsersUsersRequestImplToJson(

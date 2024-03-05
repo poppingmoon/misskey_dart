@@ -8,9 +8,16 @@ part of 'clips_remove_note_request.dart';
 
 _$ClipsRemoveNoteRequestImpl _$$ClipsRemoveNoteRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$ClipsRemoveNoteRequestImpl(
-      clipId: json['clipId'] as String,
-      noteId: json['noteId'] as String,
+    $checkedCreate(
+      r'_$ClipsRemoveNoteRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$ClipsRemoveNoteRequestImpl(
+          clipId: $checkedConvert('clipId', (v) => v as String),
+          noteId: $checkedConvert('noteId', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$ClipsRemoveNoteRequestImplToJson(

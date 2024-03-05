@@ -9,9 +9,16 @@ part of 'users_lists_create_from_public_request.dart';
 _$UsersListsCreateFromPublicRequestImpl
     _$$UsersListsCreateFromPublicRequestImplFromJson(
             Map<String, dynamic> json) =>
-        _$UsersListsCreateFromPublicRequestImpl(
-          name: json['name'] as String,
-          listId: json['listId'] as String,
+        $checkedCreate(
+          r'_$UsersListsCreateFromPublicRequestImpl',
+          json,
+          ($checkedConvert) {
+            final val = _$UsersListsCreateFromPublicRequestImpl(
+              name: $checkedConvert('name', (v) => v as String),
+              listId: $checkedConvert('listId', (v) => v as String),
+            );
+            return val;
+          },
         );
 
 Map<String, dynamic> _$$UsersListsCreateFromPublicRequestImplToJson(

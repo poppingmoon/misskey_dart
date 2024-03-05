@@ -8,8 +8,15 @@ part of 'get_online_users_count_response.dart';
 
 _$GetOnlineUsersCountResponseImpl _$$GetOnlineUsersCountResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$GetOnlineUsersCountResponseImpl(
-      count: json['count'] as int,
+    $checkedCreate(
+      r'_$GetOnlineUsersCountResponseImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$GetOnlineUsersCountResponseImpl(
+          count: $checkedConvert('count', (v) => v as int),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$GetOnlineUsersCountResponseImplToJson(

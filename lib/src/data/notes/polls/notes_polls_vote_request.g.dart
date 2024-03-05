@@ -8,9 +8,16 @@ part of 'notes_polls_vote_request.dart';
 
 _$NotesPollsVoteRequestImpl _$$NotesPollsVoteRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$NotesPollsVoteRequestImpl(
-      noteId: json['noteId'] as String,
-      choice: json['choice'] as int,
+    $checkedCreate(
+      r'_$NotesPollsVoteRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$NotesPollsVoteRequestImpl(
+          noteId: $checkedConvert('noteId', (v) => v as String),
+          choice: $checkedConvert('choice', (v) => v as int),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$NotesPollsVoteRequestImplToJson(

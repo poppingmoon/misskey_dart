@@ -8,11 +8,18 @@ part of 'notes_renotes_request.dart';
 
 _$NotesRenoteRequestImpl _$$NotesRenoteRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$NotesRenoteRequestImpl(
-      noteId: json['noteId'] as String,
-      limit: json['limit'] as int?,
-      sinceId: json['sinceId'] as String?,
-      untilId: json['untilId'] as String?,
+    $checkedCreate(
+      r'_$NotesRenoteRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$NotesRenoteRequestImpl(
+          noteId: $checkedConvert('noteId', (v) => v as String),
+          limit: $checkedConvert('limit', (v) => v as int?),
+          sinceId: $checkedConvert('sinceId', (v) => v as String?),
+          untilId: $checkedConvert('untilId', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$NotesRenoteRequestImplToJson(

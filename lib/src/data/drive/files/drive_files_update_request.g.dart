@@ -8,12 +8,19 @@ part of 'drive_files_update_request.dart';
 
 _$DriveFilesUpdateRequestImpl _$$DriveFilesUpdateRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$DriveFilesUpdateRequestImpl(
-      fileId: json['fileId'] as String,
-      folderId: json['folderId'] as String?,
-      name: json['name'] as String?,
-      isSensitive: json['isSensitive'] as bool?,
-      comment: json['comment'] as String?,
+    $checkedCreate(
+      r'_$DriveFilesUpdateRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$DriveFilesUpdateRequestImpl(
+          fileId: $checkedConvert('fileId', (v) => v as String),
+          folderId: $checkedConvert('folderId', (v) => v as String?),
+          name: $checkedConvert('name', (v) => v as String?),
+          isSensitive: $checkedConvert('isSensitive', (v) => v as bool?),
+          comment: $checkedConvert('comment', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$DriveFilesUpdateRequestImplToJson(

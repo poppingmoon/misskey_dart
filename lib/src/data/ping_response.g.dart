@@ -7,8 +7,15 @@ part of 'ping_response.dart';
 // **************************************************************************
 
 _$PingResponseImpl _$$PingResponseImplFromJson(Map<String, dynamic> json) =>
-    _$PingResponseImpl(
-      pong: json['pong'] as int,
+    $checkedCreate(
+      r'_$PingResponseImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$PingResponseImpl(
+          pong: $checkedConvert('pong', (v) => v as int),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$PingResponseImplToJson(_$PingResponseImpl instance) =>

@@ -8,9 +8,16 @@ part of 'channels_my_favorite_request.dart';
 
 _$ChannelsMyFavoriteRequestImpl _$$ChannelsMyFavoriteRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$ChannelsMyFavoriteRequestImpl(
-      limit: json['limit'] as int?,
-      noPaging: json['noPaging'] as bool?,
+    $checkedCreate(
+      r'_$ChannelsMyFavoriteRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$ChannelsMyFavoriteRequestImpl(
+          limit: $checkedConvert('limit', (v) => v as int?),
+          noPaging: $checkedConvert('noPaging', (v) => v as bool?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$ChannelsMyFavoriteRequestImplToJson(

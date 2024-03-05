@@ -8,35 +8,54 @@ part of 'reversi_show_game_response.dart';
 
 _$ReversiShowGameResponseImpl _$$ReversiShowGameResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$ReversiShowGameResponseImpl(
-      id: json['id'] as String,
-      createdAt: DateTime.parse(json['createdAt'] as String),
-      startedAt: _$JsonConverterFromJson<String, DateTime?>(
-          json['startedAt'], const NullableDateTimeConverter().fromJson),
-      endedAt: _$JsonConverterFromJson<String, DateTime?>(
-          json['endedAt'], const NullableDateTimeConverter().fromJson),
-      isStarted: json['isStarted'] as bool,
-      isEnded: json['isEnded'] as bool,
-      form1: json['form1'],
-      form2: json['form2'],
-      user1Ready: json['user1Ready'] as bool,
-      user2Ready: json['user2Ready'] as bool,
-      user1Id: json['user1Id'] as String,
-      user2Id: json['user2Id'] as String,
-      user1: UserLite.fromJson(json['user1'] as Map<String, dynamic>),
-      user2: UserLite.fromJson(json['user2'] as Map<String, dynamic>),
-      winnerId: json['winnerId'] as String?,
-      surrenderedUserId: json['surrenderedUserId'] as String?,
-      timeoutUserId: json['timeoutUserId'] as String?,
-      black: json['black'] as int?,
-      bw: json['bw'] as String,
-      noIrregularRules: json['noIrregularRules'] as bool,
-      isLlotheo: json['isLlotheo'] as bool,
-      canPutEverywhere: json['canPutEverywhere'] as bool,
-      loopedBoard: json['loopedBoard'] as bool,
-      timeLimitForEachTurn: json['timeLimitForEachTurn'] as int,
-      logs: json['logs'] as List<dynamic>,
-      map: (json['map'] as List<dynamic>).map((e) => e as String).toList(),
+    $checkedCreate(
+      r'_$ReversiShowGameResponseImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$ReversiShowGameResponseImpl(
+          id: $checkedConvert('id', (v) => v as String),
+          createdAt:
+              $checkedConvert('createdAt', (v) => DateTime.parse(v as String)),
+          startedAt: $checkedConvert(
+              'startedAt',
+              (v) => _$JsonConverterFromJson<String, DateTime?>(
+                  v, const NullableDateTimeConverter().fromJson)),
+          endedAt: $checkedConvert(
+              'endedAt',
+              (v) => _$JsonConverterFromJson<String, DateTime?>(
+                  v, const NullableDateTimeConverter().fromJson)),
+          isStarted: $checkedConvert('isStarted', (v) => v as bool),
+          isEnded: $checkedConvert('isEnded', (v) => v as bool),
+          form1: $checkedConvert('form1', (v) => v),
+          form2: $checkedConvert('form2', (v) => v),
+          user1Ready: $checkedConvert('user1Ready', (v) => v as bool),
+          user2Ready: $checkedConvert('user2Ready', (v) => v as bool),
+          user1Id: $checkedConvert('user1Id', (v) => v as String),
+          user2Id: $checkedConvert('user2Id', (v) => v as String),
+          user1: $checkedConvert(
+              'user1', (v) => UserLite.fromJson(v as Map<String, dynamic>)),
+          user2: $checkedConvert(
+              'user2', (v) => UserLite.fromJson(v as Map<String, dynamic>)),
+          winnerId: $checkedConvert('winnerId', (v) => v as String?),
+          surrenderedUserId:
+              $checkedConvert('surrenderedUserId', (v) => v as String?),
+          timeoutUserId: $checkedConvert('timeoutUserId', (v) => v as String?),
+          black: $checkedConvert('black', (v) => v as int?),
+          bw: $checkedConvert('bw', (v) => v as String),
+          noIrregularRules:
+              $checkedConvert('noIrregularRules', (v) => v as bool),
+          isLlotheo: $checkedConvert('isLlotheo', (v) => v as bool),
+          canPutEverywhere:
+              $checkedConvert('canPutEverywhere', (v) => v as bool),
+          loopedBoard: $checkedConvert('loopedBoard', (v) => v as bool),
+          timeLimitForEachTurn:
+              $checkedConvert('timeLimitForEachTurn', (v) => v as int),
+          logs: $checkedConvert('logs', (v) => v as List<dynamic>),
+          map: $checkedConvert('map',
+              (v) => (v as List<dynamic>).map((e) => e as String).toList()),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$ReversiShowGameResponseImplToJson(

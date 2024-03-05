@@ -8,8 +8,15 @@ part of 'drive_files_find_by_hash_request.dart';
 
 _$DriveFilesFindByHashRequestImpl _$$DriveFilesFindByHashRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$DriveFilesFindByHashRequestImpl(
-      md5: json['md5'] as String,
+    $checkedCreate(
+      r'_$DriveFilesFindByHashRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$DriveFilesFindByHashRequestImpl(
+          md5: $checkedConvert('md5', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$DriveFilesFindByHashRequestImplToJson(

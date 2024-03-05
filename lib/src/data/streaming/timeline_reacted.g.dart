@@ -8,13 +8,22 @@ part of 'timeline_reacted.dart';
 
 _$TimelineReactedImpl _$$TimelineReactedImplFromJson(
         Map<String, dynamic> json) =>
-    _$TimelineReactedImpl(
-      reaction: json['reaction'] as String,
-      emoji: json['emoji'] == null
-          ? null
-          : TimelineReactedEmojiData.fromJson(
-              json['emoji'] as Map<String, dynamic>),
-      userId: json['userId'] as String,
+    $checkedCreate(
+      r'_$TimelineReactedImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$TimelineReactedImpl(
+          reaction: $checkedConvert('reaction', (v) => v as String),
+          emoji: $checkedConvert(
+              'emoji',
+              (v) => v == null
+                  ? null
+                  : TimelineReactedEmojiData.fromJson(
+                      v as Map<String, dynamic>)),
+          userId: $checkedConvert('userId', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$TimelineReactedImplToJson(
@@ -27,9 +36,16 @@ Map<String, dynamic> _$$TimelineReactedImplToJson(
 
 _$TimelineReactedEmojiDataImpl _$$TimelineReactedEmojiDataImplFromJson(
         Map<String, dynamic> json) =>
-    _$TimelineReactedEmojiDataImpl(
-      name: json['name'] as String,
-      url: json['url'] as String,
+    $checkedCreate(
+      r'_$TimelineReactedEmojiDataImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$TimelineReactedEmojiDataImpl(
+          name: $checkedConvert('name', (v) => v as String),
+          url: $checkedConvert('url', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$TimelineReactedEmojiDataImplToJson(

@@ -8,11 +8,22 @@ part of 'queue_stats_log_response.dart';
 
 _$QueueStatsLogResponseImpl _$$QueueStatsLogResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$QueueStatsLogResponseImpl(
-      inbox: QueueStatsLogResponseData.fromJson(
-          json['inbox'] as Map<String, dynamic>),
-      deliver: QueueStatsLogResponseData.fromJson(
-          json['deliver'] as Map<String, dynamic>),
+    $checkedCreate(
+      r'_$QueueStatsLogResponseImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$QueueStatsLogResponseImpl(
+          inbox: $checkedConvert(
+              'inbox',
+              (v) => QueueStatsLogResponseData.fromJson(
+                  v as Map<String, dynamic>)),
+          deliver: $checkedConvert(
+              'deliver',
+              (v) => QueueStatsLogResponseData.fromJson(
+                  v as Map<String, dynamic>)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$QueueStatsLogResponseImplToJson(
@@ -24,11 +35,19 @@ Map<String, dynamic> _$$QueueStatsLogResponseImplToJson(
 
 _$QueueStatsLogResponseDataImpl _$$QueueStatsLogResponseDataImplFromJson(
         Map<String, dynamic> json) =>
-    _$QueueStatsLogResponseDataImpl(
-      activeSincePrevTick: json['activeSincePrevTick'] as int,
-      active: json['active'] as int,
-      waiting: json['waiting'] as int,
-      delayed: json['delayed'] as int,
+    $checkedCreate(
+      r'_$QueueStatsLogResponseDataImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$QueueStatsLogResponseDataImpl(
+          activeSincePrevTick:
+              $checkedConvert('activeSincePrevTick', (v) => v as int),
+          active: $checkedConvert('active', (v) => v as int),
+          waiting: $checkedConvert('waiting', (v) => v as int),
+          delayed: $checkedConvert('delayed', (v) => v as int),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$QueueStatsLogResponseDataImplToJson(

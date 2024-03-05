@@ -8,10 +8,17 @@ part of 'channels_followed_request.dart';
 
 _$ChannelsFollowedRequestImpl _$$ChannelsFollowedRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$ChannelsFollowedRequestImpl(
-      sinceId: json['sinceId'] as String?,
-      untilId: json['untilId'] as String?,
-      limit: json['limit'] as int?,
+    $checkedCreate(
+      r'_$ChannelsFollowedRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$ChannelsFollowedRequestImpl(
+          sinceId: $checkedConvert('sinceId', (v) => v as String?),
+          untilId: $checkedConvert('untilId', (v) => v as String?),
+          limit: $checkedConvert('limit', (v) => v as int?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$ChannelsFollowedRequestImplToJson(

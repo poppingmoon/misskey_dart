@@ -7,65 +7,83 @@ part of 'i_update_request.dart';
 // **************************************************************************
 
 _$IUpdateRequestImpl _$$IUpdateRequestImplFromJson(Map<String, dynamic> json) =>
-    _$IUpdateRequestImpl(
-      name: json['name'] as String?,
-      description: json['description'] as String?,
-      location: json['location'] as String?,
-      birthday: json['birthday'],
-      lang: json['lang'] as String?,
-      avatarId: json['avatarId'] as String?,
-      avatarDecorations: (json['avatarDecorations'] as List<dynamic>?)
-          ?.map((e) =>
-              IUpdateAvatarDecoration.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      bannerId: json['bannerId'] as String?,
-      fields: (json['fields'] as List<dynamic>?)
-          ?.map((e) => UserField.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      isLocked: json['isLocked'] as bool?,
-      isExplorable: json['isExplorable'] as bool?,
-      hideOnlineStatus: json['hideOnlineStatus'] as bool?,
-      publicReactions: json['publicReactions'] as bool?,
-      carefulBot: json['carefulBot'] as bool?,
-      autoAcceptFollowed: json['autoAcceptFollowed'] as bool?,
-      noCrawle: json['noCrawle'] as bool?,
-      preventAiLearning: json['preventAiLearning'] as bool?,
-      isBot: json['isBot'] as bool?,
-      isCat: json['isCat'] as bool?,
-      injectFeaturedNote: json['injectFeaturedNote'] as bool?,
-      receiveAnnouncementEmail: json['receiveAnnouncementEmail'] as bool?,
-      alwaysMarkNsfw: json['alwaysMarkNsfw'] as bool?,
-      autoSensitive: json['autoSensitive'] as bool?,
-      ffVisibility:
-          $enumDecodeNullable(_$FFVisibilityEnumMap, json['ffVisibility']),
-      followingVisibility: $enumDecodeNullable(
-          _$FFVisibilityEnumMap, json['followingVisibility']),
-      followersVisibility: $enumDecodeNullable(
-          _$FFVisibilityEnumMap, json['followersVisibility']),
-      pinnedPageId: json['pinnedPageId'] as String?,
-      mutingNotificationTypes:
-          (json['mutingNotificationTypes'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList(),
-      mutedWords: (json['mutedWords'] as List<dynamic>?)
-          ?.map(const MuteWordsConverter().fromJson)
-          .toList(),
-      hardMutedWords: (json['hardMutedWords'] as List<dynamic>?)
-          ?.map(const MuteWordsConverter().fromJson)
-          .toList(),
-      mutedInstances: (json['mutedInstances'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-      notificationRecieveConfig: json['notificationRecieveConfig'] == null
-          ? null
-          : NotificationRecieveConfigs.fromJson(
-              json['notificationRecieveConfig'] as Map<String, dynamic>),
-      emailNotificationTypes: (json['emailNotificationTypes'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-      alsoKnownAs: (json['alsoKnownAs'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
+    $checkedCreate(
+      r'_$IUpdateRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$IUpdateRequestImpl(
+          name: $checkedConvert('name', (v) => v as String?),
+          description: $checkedConvert('description', (v) => v as String?),
+          location: $checkedConvert('location', (v) => v as String?),
+          birthday: $checkedConvert('birthday', (v) => v),
+          lang: $checkedConvert('lang', (v) => v as String?),
+          avatarId: $checkedConvert('avatarId', (v) => v as String?),
+          avatarDecorations: $checkedConvert(
+              'avatarDecorations',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => IUpdateAvatarDecoration.fromJson(
+                      e as Map<String, dynamic>))
+                  .toList()),
+          bannerId: $checkedConvert('bannerId', (v) => v as String?),
+          fields: $checkedConvert(
+              'fields',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => UserField.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          isLocked: $checkedConvert('isLocked', (v) => v as bool?),
+          isExplorable: $checkedConvert('isExplorable', (v) => v as bool?),
+          hideOnlineStatus:
+              $checkedConvert('hideOnlineStatus', (v) => v as bool?),
+          publicReactions:
+              $checkedConvert('publicReactions', (v) => v as bool?),
+          carefulBot: $checkedConvert('carefulBot', (v) => v as bool?),
+          autoAcceptFollowed:
+              $checkedConvert('autoAcceptFollowed', (v) => v as bool?),
+          noCrawle: $checkedConvert('noCrawle', (v) => v as bool?),
+          preventAiLearning:
+              $checkedConvert('preventAiLearning', (v) => v as bool?),
+          isBot: $checkedConvert('isBot', (v) => v as bool?),
+          isCat: $checkedConvert('isCat', (v) => v as bool?),
+          injectFeaturedNote:
+              $checkedConvert('injectFeaturedNote', (v) => v as bool?),
+          receiveAnnouncementEmail:
+              $checkedConvert('receiveAnnouncementEmail', (v) => v as bool?),
+          alwaysMarkNsfw: $checkedConvert('alwaysMarkNsfw', (v) => v as bool?),
+          autoSensitive: $checkedConvert('autoSensitive', (v) => v as bool?),
+          ffVisibility: $checkedConvert('ffVisibility',
+              (v) => $enumDecodeNullable(_$FFVisibilityEnumMap, v)),
+          followingVisibility: $checkedConvert('followingVisibility',
+              (v) => $enumDecodeNullable(_$FFVisibilityEnumMap, v)),
+          followersVisibility: $checkedConvert('followersVisibility',
+              (v) => $enumDecodeNullable(_$FFVisibilityEnumMap, v)),
+          pinnedPageId: $checkedConvert('pinnedPageId', (v) => v as String?),
+          mutingNotificationTypes: $checkedConvert('mutingNotificationTypes',
+              (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
+          mutedWords: $checkedConvert(
+              'mutedWords',
+              (v) => (v as List<dynamic>?)
+                  ?.map(const MuteWordsConverter().fromJson)
+                  .toList()),
+          hardMutedWords: $checkedConvert(
+              'hardMutedWords',
+              (v) => (v as List<dynamic>?)
+                  ?.map(const MuteWordsConverter().fromJson)
+                  .toList()),
+          mutedInstances: $checkedConvert('mutedInstances',
+              (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
+          notificationRecieveConfig: $checkedConvert(
+              'notificationRecieveConfig',
+              (v) => v == null
+                  ? null
+                  : NotificationRecieveConfigs.fromJson(
+                      v as Map<String, dynamic>)),
+          emailNotificationTypes: $checkedConvert('emailNotificationTypes',
+              (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
+          alsoKnownAs: $checkedConvert('alsoKnownAs',
+              (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$IUpdateRequestImplToJson(
@@ -121,12 +139,21 @@ const _$FFVisibilityEnumMap = {
 
 _$IUpdateAvatarDecorationImpl _$$IUpdateAvatarDecorationImplFromJson(
         Map<String, dynamic> json) =>
-    _$IUpdateAvatarDecorationImpl(
-      id: json['id'] as String,
-      angle: (json['angle'] as num?)?.toDouble(),
-      flipH: json['flipH'] as bool? ?? false,
-      offsetX: (json['offsetX'] as num?)?.toDouble() ?? 0.0,
-      offsetY: (json['offsetY'] as num?)?.toDouble() ?? 0.0,
+    $checkedCreate(
+      r'_$IUpdateAvatarDecorationImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$IUpdateAvatarDecorationImpl(
+          id: $checkedConvert('id', (v) => v as String),
+          angle: $checkedConvert('angle', (v) => (v as num?)?.toDouble()),
+          flipH: $checkedConvert('flipH', (v) => v as bool? ?? false),
+          offsetX:
+              $checkedConvert('offsetX', (v) => (v as num?)?.toDouble() ?? 0.0),
+          offsetY:
+              $checkedConvert('offsetY', (v) => (v as num?)?.toDouble() ?? 0.0),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$IUpdateAvatarDecorationImplToJson(

@@ -8,12 +8,23 @@ part of 'hashtags_list_request.dart';
 
 _$HashtagsListRequestImpl _$$HashtagsListRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$HashtagsListRequestImpl(
-      limit: json['limit'] as int?,
-      attachedToUserOnly: json['attachedToUserOnly'] as bool?,
-      attachedToLocalUserOnly: json['attachedToLocalUserOnly'] as bool?,
-      attachedToRemoteUserOnly: json['attachedToRemoteUserOnly'] as bool?,
-      sort: const HashtagsListSortConverter().fromJson(json['sort'] as String),
+    $checkedCreate(
+      r'_$HashtagsListRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$HashtagsListRequestImpl(
+          limit: $checkedConvert('limit', (v) => v as int?),
+          attachedToUserOnly:
+              $checkedConvert('attachedToUserOnly', (v) => v as bool?),
+          attachedToLocalUserOnly:
+              $checkedConvert('attachedToLocalUserOnly', (v) => v as bool?),
+          attachedToRemoteUserOnly:
+              $checkedConvert('attachedToRemoteUserOnly', (v) => v as bool?),
+          sort: $checkedConvert('sort',
+              (v) => const HashtagsListSortConverter().fromJson(v as String)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$HashtagsListRequestImplToJson(

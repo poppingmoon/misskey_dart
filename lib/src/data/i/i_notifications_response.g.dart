@@ -8,39 +8,61 @@ part of 'i_notifications_response.dart';
 
 _$INotificationsResponseImpl _$$INotificationsResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$INotificationsResponseImpl(
-      id: json['id'] as String,
-      createdAt:
-          const DateTimeConverter().fromJson(json['createdAt'] as String),
-      type: $enumDecodeNullable(_$NotificationTypeEnumMap, json['type'],
-          unknownValue: JsonKey.nullForUndefinedEnumValue),
-      noteId: json['noteId'] as String?,
-      followRequestId: json['followRequestId'] as String?,
-      reaction: json['reaction'] as String?,
-      choice: json['choice'] as int?,
-      achievement: json['achievement'] as String?,
-      customBody: json['customBody'] as String?,
-      customHeader: json['customHeader'] as String?,
-      customIcon: _$JsonConverterFromJson<String, Uri?>(
-          json['customIcon'], const NullableUriConverter().fromJson),
-      appAccessTokenId: json['appAccessTokenId'] as String?,
-      userId: json['userId'] as String?,
-      user: json['user'] == null
-          ? null
-          : UserLite.fromJson(json['user'] as Map<String, dynamic>),
-      note: json['note'] == null
-          ? null
-          : Note.fromJson(json['note'] as Map<String, dynamic>),
-      role: json['role'] == null
-          ? null
-          : RolesListResponse.fromJson(json['role'] as Map<String, dynamic>),
-      reactions: (json['reactions'] as List<dynamic>?)
-          ?.map(
-              (e) => INotificationsReaction.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      users: (json['users'] as List<dynamic>?)
-          ?.map((e) => UserLite.fromJson(e as Map<String, dynamic>))
-          .toList(),
+    $checkedCreate(
+      r'_$INotificationsResponseImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$INotificationsResponseImpl(
+          id: $checkedConvert('id', (v) => v as String),
+          createdAt: $checkedConvert('createdAt',
+              (v) => const DateTimeConverter().fromJson(v as String)),
+          type: $checkedConvert(
+              'type',
+              (v) => $enumDecodeNullable(_$NotificationTypeEnumMap, v,
+                  unknownValue: JsonKey.nullForUndefinedEnumValue)),
+          noteId: $checkedConvert('noteId', (v) => v as String?),
+          followRequestId:
+              $checkedConvert('followRequestId', (v) => v as String?),
+          reaction: $checkedConvert('reaction', (v) => v as String?),
+          choice: $checkedConvert('choice', (v) => v as int?),
+          achievement: $checkedConvert('achievement', (v) => v as String?),
+          customBody: $checkedConvert('customBody', (v) => v as String?),
+          customHeader: $checkedConvert('customHeader', (v) => v as String?),
+          customIcon: $checkedConvert(
+              'customIcon',
+              (v) => _$JsonConverterFromJson<String, Uri?>(
+                  v, const NullableUriConverter().fromJson)),
+          appAccessTokenId:
+              $checkedConvert('appAccessTokenId', (v) => v as String?),
+          userId: $checkedConvert('userId', (v) => v as String?),
+          user: $checkedConvert(
+              'user',
+              (v) => v == null
+                  ? null
+                  : UserLite.fromJson(v as Map<String, dynamic>)),
+          note: $checkedConvert(
+              'note',
+              (v) =>
+                  v == null ? null : Note.fromJson(v as Map<String, dynamic>)),
+          role: $checkedConvert(
+              'role',
+              (v) => v == null
+                  ? null
+                  : RolesListResponse.fromJson(v as Map<String, dynamic>)),
+          reactions: $checkedConvert(
+              'reactions',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => INotificationsReaction.fromJson(
+                      e as Map<String, dynamic>))
+                  .toList()),
+          users: $checkedConvert(
+              'users',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => UserLite.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$INotificationsResponseImplToJson(
@@ -95,9 +117,17 @@ Value? _$JsonConverterFromJson<Json, Value>(
 
 _$INotificationsReactionImpl _$$INotificationsReactionImplFromJson(
         Map<String, dynamic> json) =>
-    _$INotificationsReactionImpl(
-      user: UserLite.fromJson(json['user'] as Map<String, dynamic>),
-      reaction: json['reaction'] as String,
+    $checkedCreate(
+      r'_$INotificationsReactionImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$INotificationsReactionImpl(
+          user: $checkedConvert(
+              'user', (v) => UserLite.fromJson(v as Map<String, dynamic>)),
+          reaction: $checkedConvert('reaction', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$INotificationsReactionImplToJson(

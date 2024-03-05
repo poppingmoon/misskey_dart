@@ -7,33 +7,53 @@ part of 'user.dart';
 // **************************************************************************
 
 _$UserLiteImpl _$$UserLiteImplFromJson(Map<String, dynamic> json) =>
-    _$UserLiteImpl(
-      id: json['id'] as String,
-      name: json['name'] as String?,
-      username: json['username'] as String,
-      host: json['host'] as String?,
-      avatarUrl: const UriConverter().fromJson(json['avatarUrl'] as String),
-      avatarBlurhash: json['avatarBlurhash'] as String?,
-      avatarDecorations: (json['avatarDecorations'] as List<dynamic>?)
-              ?.map((e) =>
-                  UserAvatarDecoration.fromJson(e as Map<String, dynamic>))
-              .toList() ??
-          const [],
-      isBot: json['isBot'] as bool? ?? false,
-      isCat: json['isCat'] as bool? ?? false,
-      instance: json['instance'] == null
-          ? null
-          : UserInstanceInfo.fromJson(json['instance'] as Map<String, dynamic>),
-      emojis: json['emojis'] == null
-          ? const {}
-          : const EmojisConverter().fromJson(json['emojis']),
-      onlineStatus: $enumDecodeNullable(
-          _$OnlineStatusEnumMap, json['onlineStatus'],
-          unknownValue: JsonKey.nullForUndefinedEnumValue),
-      badgeRoles: (json['badgeRoles'] as List<dynamic>?)
-              ?.map((e) => UserBadgeRole.fromJson(e as Map<String, dynamic>))
-              .toList() ??
-          const [],
+    $checkedCreate(
+      r'_$UserLiteImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$UserLiteImpl(
+          id: $checkedConvert('id', (v) => v as String),
+          name: $checkedConvert('name', (v) => v as String?),
+          username: $checkedConvert('username', (v) => v as String),
+          host: $checkedConvert('host', (v) => v as String?),
+          avatarUrl: $checkedConvert(
+              'avatarUrl', (v) => const UriConverter().fromJson(v as String)),
+          avatarBlurhash:
+              $checkedConvert('avatarBlurhash', (v) => v as String?),
+          avatarDecorations: $checkedConvert(
+              'avatarDecorations',
+              (v) =>
+                  (v as List<dynamic>?)
+                      ?.map((e) => UserAvatarDecoration.fromJson(
+                          e as Map<String, dynamic>))
+                      .toList() ??
+                  const []),
+          isBot: $checkedConvert('isBot', (v) => v as bool? ?? false),
+          isCat: $checkedConvert('isCat', (v) => v as bool? ?? false),
+          instance: $checkedConvert(
+              'instance',
+              (v) => v == null
+                  ? null
+                  : UserInstanceInfo.fromJson(v as Map<String, dynamic>)),
+          emojis: $checkedConvert(
+              'emojis',
+              (v) =>
+                  v == null ? const {} : const EmojisConverter().fromJson(v)),
+          onlineStatus: $checkedConvert(
+              'onlineStatus',
+              (v) => $enumDecodeNullable(_$OnlineStatusEnumMap, v,
+                  unknownValue: JsonKey.nullForUndefinedEnumValue)),
+          badgeRoles: $checkedConvert(
+              'badgeRoles',
+              (v) =>
+                  (v as List<dynamic>?)
+                      ?.map((e) =>
+                          UserBadgeRole.fromJson(e as Map<String, dynamic>))
+                      .toList() ??
+                  const []),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$UserLiteImplToJson(_$UserLiteImpl instance) =>
@@ -63,95 +83,142 @@ const _$OnlineStatusEnumMap = {
 
 _$UserDetailedNotMeImpl _$$UserDetailedNotMeImplFromJson(
         Map<String, dynamic> json) =>
-    _$UserDetailedNotMeImpl(
-      id: json['id'] as String,
-      name: json['name'] as String?,
-      username: json['username'] as String,
-      host: json['host'] as String?,
-      avatarUrl: const UriConverter().fromJson(json['avatarUrl'] as String),
-      avatarBlurhash: json['avatarBlurhash'] as String?,
-      avatarDecorations: (json['avatarDecorations'] as List<dynamic>?)
-              ?.map((e) =>
-                  UserAvatarDecoration.fromJson(e as Map<String, dynamic>))
-              .toList() ??
-          const [],
-      isBot: json['isBot'] as bool,
-      isCat: json['isCat'] as bool,
-      instance: json['instance'] == null
-          ? null
-          : UserInstanceInfo.fromJson(json['instance'] as Map<String, dynamic>),
-      emojis: json['emojis'] == null
-          ? const {}
-          : const EmojisConverter().fromJson(json['emojis']),
-      onlineStatus: $enumDecodeNullable(
-          _$OnlineStatusEnumMap, json['onlineStatus'],
-          unknownValue: JsonKey.nullForUndefinedEnumValue),
-      badgeRoles: (json['badgeRoles'] as List<dynamic>?)
-              ?.map((e) => UserBadgeRole.fromJson(e as Map<String, dynamic>))
-              .toList() ??
-          const [],
-      url: _$JsonConverterFromJson<String, Uri?>(
-          json['url'], const NullableUriConverter().fromJson),
-      uri: _$JsonConverterFromJson<String, Uri?>(
-          json['uri'], const NullableUriConverter().fromJson),
-      movedTo: _$JsonConverterFromJson<String, Uri?>(
-          json['movedTo'], const NullableUriConverter().fromJson),
-      alsoKnownAs: (json['alsoKnownAs'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-      createdAt:
-          const DateTimeConverter().fromJson(json['createdAt'] as String),
-      updatedAt: _$JsonConverterFromJson<String, DateTime?>(
-          json['updatedAt'], const NullableDateTimeConverter().fromJson),
-      lastFetchedAt: _$JsonConverterFromJson<String, DateTime?>(
-          json['lastFetchedAt'], const NullableDateTimeConverter().fromJson),
-      bannerUrl: _$JsonConverterFromJson<String, Uri?>(
-          json['bannerUrl'], const NullableUriConverter().fromJson),
-      bannerBlurhash: json['bannerBlurhash'] as String?,
-      isLocked: json['isLocked'] as bool,
-      isSilenced: json['isSilenced'] as bool,
-      isSuspended: json['isSuspended'] as bool,
-      description: json['description'] as String?,
-      location: json['location'] as String?,
-      birthday: _$JsonConverterFromJson<String, DateTime?>(
-          json['birthday'], const NullableDateTimeConverter().fromJson),
-      lang: json['lang'] as String?,
-      fields: (json['fields'] as List<dynamic>?)
-          ?.map((e) => UserField.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      verifiedLinks: (json['verifiedLinks'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList() ??
-          const [],
-      followersCount: json['followersCount'] as int,
-      followingCount: json['followingCount'] as int,
-      notesCount: json['notesCount'] as int,
-      pinnedNoteIds: (json['pinnedNoteIds'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-      pinnedNotes: (json['pinnedNotes'] as List<dynamic>?)
-          ?.map((e) => Note.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      pinnedPageId: json['pinnedPageId'] as String?,
-      pinnedPage: json['pinnedPage'] as Map<String, dynamic>?,
-      publicReactions: json['publicReactions'] as bool,
-      ffVisibility: $enumDecodeNullable(
-          _$FFVisibilityEnumMap, json['ffVisibility'],
-          unknownValue: JsonKey.nullForUndefinedEnumValue),
-      followersVisibility: $enumDecodeNullable(
-          _$FFVisibilityEnumMap, json['followersVisibility'],
-          unknownValue: JsonKey.nullForUndefinedEnumValue),
-      followingVisibility: $enumDecodeNullable(
-          _$FFVisibilityEnumMap, json['followingVisibility'],
-          unknownValue: JsonKey.nullForUndefinedEnumValue),
-      twoFactorEnabled: json['twoFactorEnabled'] as bool,
-      usePasswordLessLogin: json['usePasswordLessLogin'] as bool,
-      securityKeys: json['securityKeys'] as bool,
-      roles: (json['roles'] as List<dynamic>?)
-          ?.map((e) => UserRole.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      memo: json['memo'] as String?,
-      moderationNote: json['moderationNote'] as String?,
+    $checkedCreate(
+      r'_$UserDetailedNotMeImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$UserDetailedNotMeImpl(
+          id: $checkedConvert('id', (v) => v as String),
+          name: $checkedConvert('name', (v) => v as String?),
+          username: $checkedConvert('username', (v) => v as String),
+          host: $checkedConvert('host', (v) => v as String?),
+          avatarUrl: $checkedConvert(
+              'avatarUrl', (v) => const UriConverter().fromJson(v as String)),
+          avatarBlurhash:
+              $checkedConvert('avatarBlurhash', (v) => v as String?),
+          avatarDecorations: $checkedConvert(
+              'avatarDecorations',
+              (v) =>
+                  (v as List<dynamic>?)
+                      ?.map((e) => UserAvatarDecoration.fromJson(
+                          e as Map<String, dynamic>))
+                      .toList() ??
+                  const []),
+          isBot: $checkedConvert('isBot', (v) => v as bool),
+          isCat: $checkedConvert('isCat', (v) => v as bool),
+          instance: $checkedConvert(
+              'instance',
+              (v) => v == null
+                  ? null
+                  : UserInstanceInfo.fromJson(v as Map<String, dynamic>)),
+          emojis: $checkedConvert(
+              'emojis',
+              (v) =>
+                  v == null ? const {} : const EmojisConverter().fromJson(v)),
+          onlineStatus: $checkedConvert(
+              'onlineStatus',
+              (v) => $enumDecodeNullable(_$OnlineStatusEnumMap, v,
+                  unknownValue: JsonKey.nullForUndefinedEnumValue)),
+          badgeRoles: $checkedConvert(
+              'badgeRoles',
+              (v) =>
+                  (v as List<dynamic>?)
+                      ?.map((e) =>
+                          UserBadgeRole.fromJson(e as Map<String, dynamic>))
+                      .toList() ??
+                  const []),
+          url: $checkedConvert(
+              'url',
+              (v) => _$JsonConverterFromJson<String, Uri?>(
+                  v, const NullableUriConverter().fromJson)),
+          uri: $checkedConvert(
+              'uri',
+              (v) => _$JsonConverterFromJson<String, Uri?>(
+                  v, const NullableUriConverter().fromJson)),
+          movedTo: $checkedConvert(
+              'movedTo',
+              (v) => _$JsonConverterFromJson<String, Uri?>(
+                  v, const NullableUriConverter().fromJson)),
+          alsoKnownAs: $checkedConvert('alsoKnownAs',
+              (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
+          createdAt: $checkedConvert('createdAt',
+              (v) => const DateTimeConverter().fromJson(v as String)),
+          updatedAt: $checkedConvert(
+              'updatedAt',
+              (v) => _$JsonConverterFromJson<String, DateTime?>(
+                  v, const NullableDateTimeConverter().fromJson)),
+          lastFetchedAt: $checkedConvert(
+              'lastFetchedAt',
+              (v) => _$JsonConverterFromJson<String, DateTime?>(
+                  v, const NullableDateTimeConverter().fromJson)),
+          bannerUrl: $checkedConvert(
+              'bannerUrl',
+              (v) => _$JsonConverterFromJson<String, Uri?>(
+                  v, const NullableUriConverter().fromJson)),
+          bannerBlurhash:
+              $checkedConvert('bannerBlurhash', (v) => v as String?),
+          isLocked: $checkedConvert('isLocked', (v) => v as bool),
+          isSilenced: $checkedConvert('isSilenced', (v) => v as bool),
+          isSuspended: $checkedConvert('isSuspended', (v) => v as bool),
+          description: $checkedConvert('description', (v) => v as String?),
+          location: $checkedConvert('location', (v) => v as String?),
+          birthday: $checkedConvert(
+              'birthday',
+              (v) => _$JsonConverterFromJson<String, DateTime?>(
+                  v, const NullableDateTimeConverter().fromJson)),
+          lang: $checkedConvert('lang', (v) => v as String?),
+          fields: $checkedConvert(
+              'fields',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => UserField.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          verifiedLinks: $checkedConvert(
+              'verifiedLinks',
+              (v) =>
+                  (v as List<dynamic>?)?.map((e) => e as String).toList() ??
+                  const []),
+          followersCount: $checkedConvert('followersCount', (v) => v as int),
+          followingCount: $checkedConvert('followingCount', (v) => v as int),
+          notesCount: $checkedConvert('notesCount', (v) => v as int),
+          pinnedNoteIds: $checkedConvert('pinnedNoteIds',
+              (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
+          pinnedNotes: $checkedConvert(
+              'pinnedNotes',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => Note.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          pinnedPageId: $checkedConvert('pinnedPageId', (v) => v as String?),
+          pinnedPage:
+              $checkedConvert('pinnedPage', (v) => v as Map<String, dynamic>?),
+          publicReactions: $checkedConvert('publicReactions', (v) => v as bool),
+          ffVisibility: $checkedConvert(
+              'ffVisibility',
+              (v) => $enumDecodeNullable(_$FFVisibilityEnumMap, v,
+                  unknownValue: JsonKey.nullForUndefinedEnumValue)),
+          followersVisibility: $checkedConvert(
+              'followersVisibility',
+              (v) => $enumDecodeNullable(_$FFVisibilityEnumMap, v,
+                  unknownValue: JsonKey.nullForUndefinedEnumValue)),
+          followingVisibility: $checkedConvert(
+              'followingVisibility',
+              (v) => $enumDecodeNullable(_$FFVisibilityEnumMap, v,
+                  unknownValue: JsonKey.nullForUndefinedEnumValue)),
+          twoFactorEnabled:
+              $checkedConvert('twoFactorEnabled', (v) => v as bool),
+          usePasswordLessLogin:
+              $checkedConvert('usePasswordLessLogin', (v) => v as bool),
+          securityKeys: $checkedConvert('securityKeys', (v) => v as bool),
+          roles: $checkedConvert(
+              'roles',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => UserRole.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          memo: $checkedConvert('memo', (v) => v as String?),
+          moderationNote:
+              $checkedConvert('moderationNote', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$UserDetailedNotMeImplToJson(
@@ -225,110 +292,165 @@ const _$FFVisibilityEnumMap = {
 
 _$UserDetailedNotMeWithRelationsImpl
     _$$UserDetailedNotMeWithRelationsImplFromJson(Map<String, dynamic> json) =>
-        _$UserDetailedNotMeWithRelationsImpl(
-          id: json['id'] as String,
-          name: json['name'] as String?,
-          username: json['username'] as String,
-          host: json['host'] as String?,
-          avatarUrl: const UriConverter().fromJson(json['avatarUrl'] as String),
-          avatarBlurhash: json['avatarBlurhash'] as String?,
-          avatarDecorations: (json['avatarDecorations'] as List<dynamic>?)
-                  ?.map((e) =>
-                      UserAvatarDecoration.fromJson(e as Map<String, dynamic>))
-                  .toList() ??
-              const [],
-          isBot: json['isBot'] as bool,
-          isCat: json['isCat'] as bool,
-          instance: json['instance'] == null
-              ? null
-              : UserInstanceInfo.fromJson(
-                  json['instance'] as Map<String, dynamic>),
-          emojis: json['emojis'] == null
-              ? const {}
-              : const EmojisConverter().fromJson(json['emojis']),
-          onlineStatus: $enumDecodeNullable(
-              _$OnlineStatusEnumMap, json['onlineStatus'],
-              unknownValue: JsonKey.nullForUndefinedEnumValue),
-          badgeRoles: (json['badgeRoles'] as List<dynamic>?)
-                  ?.map(
-                      (e) => UserBadgeRole.fromJson(e as Map<String, dynamic>))
-                  .toList() ??
-              const [],
-          url: _$JsonConverterFromJson<String, Uri?>(
-              json['url'], const NullableUriConverter().fromJson),
-          uri: _$JsonConverterFromJson<String, Uri?>(
-              json['uri'], const NullableUriConverter().fromJson),
-          movedTo: _$JsonConverterFromJson<String, Uri?>(
-              json['movedTo'], const NullableUriConverter().fromJson),
-          alsoKnownAs: (json['alsoKnownAs'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList(),
-          createdAt:
-              const DateTimeConverter().fromJson(json['createdAt'] as String),
-          updatedAt: _$JsonConverterFromJson<String, DateTime?>(
-              json['updatedAt'], const NullableDateTimeConverter().fromJson),
-          lastFetchedAt: _$JsonConverterFromJson<String, DateTime?>(
-              json['lastFetchedAt'],
-              const NullableDateTimeConverter().fromJson),
-          bannerUrl: _$JsonConverterFromJson<String, Uri?>(
-              json['bannerUrl'], const NullableUriConverter().fromJson),
-          bannerBlurhash: json['bannerBlurhash'] as String?,
-          isLocked: json['isLocked'] as bool,
-          isSilenced: json['isSilenced'] as bool,
-          isSuspended: json['isSuspended'] as bool,
-          description: json['description'] as String?,
-          location: json['location'] as String?,
-          birthday: _$JsonConverterFromJson<String, DateTime?>(
-              json['birthday'], const NullableDateTimeConverter().fromJson),
-          lang: json['lang'] as String?,
-          fields: (json['fields'] as List<dynamic>?)
-              ?.map((e) => UserField.fromJson(e as Map<String, dynamic>))
-              .toList(),
-          verifiedLinks: (json['verifiedLinks'] as List<dynamic>?)
-                  ?.map((e) => e as String)
-                  .toList() ??
-              const [],
-          followersCount: json['followersCount'] as int,
-          followingCount: json['followingCount'] as int,
-          notesCount: json['notesCount'] as int,
-          pinnedNoteIds: (json['pinnedNoteIds'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList(),
-          pinnedNotes: (json['pinnedNotes'] as List<dynamic>?)
-              ?.map((e) => Note.fromJson(e as Map<String, dynamic>))
-              .toList(),
-          pinnedPageId: json['pinnedPageId'] as String?,
-          pinnedPage: json['pinnedPage'] as Map<String, dynamic>?,
-          publicReactions: json['publicReactions'] as bool,
-          ffVisibility: $enumDecodeNullable(
-              _$FFVisibilityEnumMap, json['ffVisibility'],
-              unknownValue: JsonKey.nullForUndefinedEnumValue),
-          followersVisibility: $enumDecodeNullable(
-              _$FFVisibilityEnumMap, json['followersVisibility'],
-              unknownValue: JsonKey.nullForUndefinedEnumValue),
-          followingVisibility: $enumDecodeNullable(
-              _$FFVisibilityEnumMap, json['followingVisibility'],
-              unknownValue: JsonKey.nullForUndefinedEnumValue),
-          twoFactorEnabled: json['twoFactorEnabled'] as bool,
-          usePasswordLessLogin: json['usePasswordLessLogin'] as bool,
-          securityKeys: json['securityKeys'] as bool,
-          roles: (json['roles'] as List<dynamic>?)
-              ?.map((e) => UserRole.fromJson(e as Map<String, dynamic>))
-              .toList(),
-          memo: json['memo'] as String?,
-          moderationNote: json['moderationNote'] as String?,
-          isFollowing: json['isFollowing'] as bool,
-          isFollowed: json['isFollowed'] as bool,
-          hasPendingFollowRequestFromYou:
-              json['hasPendingFollowRequestFromYou'] as bool,
-          hasPendingFollowRequestToYou:
-              json['hasPendingFollowRequestToYou'] as bool,
-          isBlocking: json['isBlocking'] as bool,
-          isBlocked: json['isBlocked'] as bool,
-          isMuted: json['isMuted'] as bool,
-          isRenoteMuted: json['isRenoteMuted'] as bool,
-          notify: $enumDecodeNullable(_$NotifyEnumMap, json['notify']),
-          withReplies: json['withReplies'] as bool?,
+        $checkedCreate(
+          r'_$UserDetailedNotMeWithRelationsImpl',
+          json,
+          ($checkedConvert) {
+            final val = _$UserDetailedNotMeWithRelationsImpl(
+              id: $checkedConvert('id', (v) => v as String),
+              name: $checkedConvert('name', (v) => v as String?),
+              username: $checkedConvert('username', (v) => v as String),
+              host: $checkedConvert('host', (v) => v as String?),
+              avatarUrl: $checkedConvert('avatarUrl',
+                  (v) => const UriConverter().fromJson(v as String)),
+              avatarBlurhash:
+                  $checkedConvert('avatarBlurhash', (v) => v as String?),
+              avatarDecorations: $checkedConvert(
+                  'avatarDecorations',
+                  (v) =>
+                      (v as List<dynamic>?)
+                          ?.map((e) => UserAvatarDecoration.fromJson(
+                              e as Map<String, dynamic>))
+                          .toList() ??
+                      const []),
+              isBot: $checkedConvert('isBot', (v) => v as bool),
+              isCat: $checkedConvert('isCat', (v) => v as bool),
+              instance: $checkedConvert(
+                  'instance',
+                  (v) => v == null
+                      ? null
+                      : UserInstanceInfo.fromJson(v as Map<String, dynamic>)),
+              emojis: $checkedConvert(
+                  'emojis',
+                  (v) => v == null
+                      ? const {}
+                      : const EmojisConverter().fromJson(v)),
+              onlineStatus: $checkedConvert(
+                  'onlineStatus',
+                  (v) => $enumDecodeNullable(_$OnlineStatusEnumMap, v,
+                      unknownValue: JsonKey.nullForUndefinedEnumValue)),
+              badgeRoles: $checkedConvert(
+                  'badgeRoles',
+                  (v) =>
+                      (v as List<dynamic>?)
+                          ?.map((e) =>
+                              UserBadgeRole.fromJson(e as Map<String, dynamic>))
+                          .toList() ??
+                      const []),
+              url: $checkedConvert(
+                  'url',
+                  (v) => _$JsonConverterFromJson<String, Uri?>(
+                      v, const NullableUriConverter().fromJson)),
+              uri: $checkedConvert(
+                  'uri',
+                  (v) => _$JsonConverterFromJson<String, Uri?>(
+                      v, const NullableUriConverter().fromJson)),
+              movedTo: $checkedConvert(
+                  'movedTo',
+                  (v) => _$JsonConverterFromJson<String, Uri?>(
+                      v, const NullableUriConverter().fromJson)),
+              alsoKnownAs: $checkedConvert(
+                  'alsoKnownAs',
+                  (v) =>
+                      (v as List<dynamic>?)?.map((e) => e as String).toList()),
+              createdAt: $checkedConvert('createdAt',
+                  (v) => const DateTimeConverter().fromJson(v as String)),
+              updatedAt: $checkedConvert(
+                  'updatedAt',
+                  (v) => _$JsonConverterFromJson<String, DateTime?>(
+                      v, const NullableDateTimeConverter().fromJson)),
+              lastFetchedAt: $checkedConvert(
+                  'lastFetchedAt',
+                  (v) => _$JsonConverterFromJson<String, DateTime?>(
+                      v, const NullableDateTimeConverter().fromJson)),
+              bannerUrl: $checkedConvert(
+                  'bannerUrl',
+                  (v) => _$JsonConverterFromJson<String, Uri?>(
+                      v, const NullableUriConverter().fromJson)),
+              bannerBlurhash:
+                  $checkedConvert('bannerBlurhash', (v) => v as String?),
+              isLocked: $checkedConvert('isLocked', (v) => v as bool),
+              isSilenced: $checkedConvert('isSilenced', (v) => v as bool),
+              isSuspended: $checkedConvert('isSuspended', (v) => v as bool),
+              description: $checkedConvert('description', (v) => v as String?),
+              location: $checkedConvert('location', (v) => v as String?),
+              birthday: $checkedConvert(
+                  'birthday',
+                  (v) => _$JsonConverterFromJson<String, DateTime?>(
+                      v, const NullableDateTimeConverter().fromJson)),
+              lang: $checkedConvert('lang', (v) => v as String?),
+              fields: $checkedConvert(
+                  'fields',
+                  (v) => (v as List<dynamic>?)
+                      ?.map(
+                          (e) => UserField.fromJson(e as Map<String, dynamic>))
+                      .toList()),
+              verifiedLinks: $checkedConvert(
+                  'verifiedLinks',
+                  (v) =>
+                      (v as List<dynamic>?)?.map((e) => e as String).toList() ??
+                      const []),
+              followersCount:
+                  $checkedConvert('followersCount', (v) => v as int),
+              followingCount:
+                  $checkedConvert('followingCount', (v) => v as int),
+              notesCount: $checkedConvert('notesCount', (v) => v as int),
+              pinnedNoteIds: $checkedConvert(
+                  'pinnedNoteIds',
+                  (v) =>
+                      (v as List<dynamic>?)?.map((e) => e as String).toList()),
+              pinnedNotes: $checkedConvert(
+                  'pinnedNotes',
+                  (v) => (v as List<dynamic>?)
+                      ?.map((e) => Note.fromJson(e as Map<String, dynamic>))
+                      .toList()),
+              pinnedPageId:
+                  $checkedConvert('pinnedPageId', (v) => v as String?),
+              pinnedPage: $checkedConvert(
+                  'pinnedPage', (v) => v as Map<String, dynamic>?),
+              publicReactions:
+                  $checkedConvert('publicReactions', (v) => v as bool),
+              ffVisibility: $checkedConvert(
+                  'ffVisibility',
+                  (v) => $enumDecodeNullable(_$FFVisibilityEnumMap, v,
+                      unknownValue: JsonKey.nullForUndefinedEnumValue)),
+              followersVisibility: $checkedConvert(
+                  'followersVisibility',
+                  (v) => $enumDecodeNullable(_$FFVisibilityEnumMap, v,
+                      unknownValue: JsonKey.nullForUndefinedEnumValue)),
+              followingVisibility: $checkedConvert(
+                  'followingVisibility',
+                  (v) => $enumDecodeNullable(_$FFVisibilityEnumMap, v,
+                      unknownValue: JsonKey.nullForUndefinedEnumValue)),
+              twoFactorEnabled:
+                  $checkedConvert('twoFactorEnabled', (v) => v as bool),
+              usePasswordLessLogin:
+                  $checkedConvert('usePasswordLessLogin', (v) => v as bool),
+              securityKeys: $checkedConvert('securityKeys', (v) => v as bool),
+              roles: $checkedConvert(
+                  'roles',
+                  (v) => (v as List<dynamic>?)
+                      ?.map((e) => UserRole.fromJson(e as Map<String, dynamic>))
+                      .toList()),
+              memo: $checkedConvert('memo', (v) => v as String?),
+              moderationNote:
+                  $checkedConvert('moderationNote', (v) => v as String?),
+              isFollowing: $checkedConvert('isFollowing', (v) => v as bool),
+              isFollowed: $checkedConvert('isFollowed', (v) => v as bool),
+              hasPendingFollowRequestFromYou: $checkedConvert(
+                  'hasPendingFollowRequestFromYou', (v) => v as bool),
+              hasPendingFollowRequestToYou: $checkedConvert(
+                  'hasPendingFollowRequestToYou', (v) => v as bool),
+              isBlocking: $checkedConvert('isBlocking', (v) => v as bool),
+              isBlocked: $checkedConvert('isBlocked', (v) => v as bool),
+              isMuted: $checkedConvert('isMuted', (v) => v as bool),
+              isRenoteMuted: $checkedConvert('isRenoteMuted', (v) => v as bool),
+              notify: $checkedConvert(
+                  'notify', (v) => $enumDecodeNullable(_$NotifyEnumMap, v)),
+              withReplies: $checkedConvert('withReplies', (v) => v as bool?),
+            );
+            return val;
+          },
         );
 
 Map<String, dynamic> _$$UserDetailedNotMeWithRelationsImplToJson(
@@ -404,153 +526,223 @@ const _$NotifyEnumMap = {
 };
 
 _$MeDetailedImpl _$$MeDetailedImplFromJson(Map<String, dynamic> json) =>
-    _$MeDetailedImpl(
-      id: json['id'] as String,
-      name: json['name'] as String?,
-      username: json['username'] as String,
-      host: json['host'] as String?,
-      avatarUrl: const UriConverter().fromJson(json['avatarUrl'] as String),
-      avatarBlurhash: json['avatarBlurhash'] as String?,
-      avatarDecorations: (json['avatarDecorations'] as List<dynamic>?)
-              ?.map((e) =>
-                  UserAvatarDecoration.fromJson(e as Map<String, dynamic>))
-              .toList() ??
-          const [],
-      isBot: json['isBot'] as bool,
-      isCat: json['isCat'] as bool,
-      instance: json['instance'] == null
-          ? null
-          : UserInstanceInfo.fromJson(json['instance'] as Map<String, dynamic>),
-      emojis: json['emojis'] == null
-          ? const {}
-          : const EmojisConverter().fromJson(json['emojis']),
-      onlineStatus: $enumDecodeNullable(
-          _$OnlineStatusEnumMap, json['onlineStatus'],
-          unknownValue: JsonKey.nullForUndefinedEnumValue),
-      badgeRoles: (json['badgeRoles'] as List<dynamic>?)
-              ?.map((e) => UserBadgeRole.fromJson(e as Map<String, dynamic>))
-              .toList() ??
-          const [],
-      url: _$JsonConverterFromJson<String, Uri?>(
-          json['url'], const NullableUriConverter().fromJson),
-      uri: _$JsonConverterFromJson<String, Uri?>(
-          json['uri'], const NullableUriConverter().fromJson),
-      movedTo: _$JsonConverterFromJson<String, Uri?>(
-          json['movedTo'], const NullableUriConverter().fromJson),
-      alsoKnownAs: (json['alsoKnownAs'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-      createdAt:
-          const DateTimeConverter().fromJson(json['createdAt'] as String),
-      updatedAt: _$JsonConverterFromJson<String, DateTime?>(
-          json['updatedAt'], const NullableDateTimeConverter().fromJson),
-      lastFetchedAt: _$JsonConverterFromJson<String, DateTime?>(
-          json['lastFetchedAt'], const NullableDateTimeConverter().fromJson),
-      bannerUrl: _$JsonConverterFromJson<String, Uri?>(
-          json['bannerUrl'], const NullableUriConverter().fromJson),
-      bannerBlurhash: json['bannerBlurhash'] as String?,
-      isLocked: json['isLocked'] as bool,
-      isSilenced: json['isSilenced'] as bool,
-      isSuspended: json['isSuspended'] as bool,
-      description: json['description'] as String?,
-      location: json['location'] as String?,
-      birthday: _$JsonConverterFromJson<String, DateTime?>(
-          json['birthday'], const NullableDateTimeConverter().fromJson),
-      lang: json['lang'] as String?,
-      fields: (json['fields'] as List<dynamic>?)
-          ?.map((e) => UserField.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      verifiedLinks: (json['verifiedLinks'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList() ??
-          const [],
-      followersCount: json['followersCount'] as int,
-      followingCount: json['followingCount'] as int,
-      notesCount: json['notesCount'] as int,
-      pinnedNoteIds: (json['pinnedNoteIds'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-      pinnedNotes: (json['pinnedNotes'] as List<dynamic>?)
-          ?.map((e) => Note.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      pinnedPageId: json['pinnedPageId'] as String?,
-      pinnedPage: json['pinnedPage'] as Map<String, dynamic>?,
-      publicReactions: json['publicReactions'] as bool,
-      ffVisibility: $enumDecodeNullable(
-          _$FFVisibilityEnumMap, json['ffVisibility'],
-          unknownValue: JsonKey.nullForUndefinedEnumValue),
-      followersVisibility: $enumDecodeNullable(
-          _$FFVisibilityEnumMap, json['followersVisibility'],
-          unknownValue: JsonKey.nullForUndefinedEnumValue),
-      followingVisibility: $enumDecodeNullable(
-          _$FFVisibilityEnumMap, json['followingVisibility'],
-          unknownValue: JsonKey.nullForUndefinedEnumValue),
-      twoFactorEnabled: json['twoFactorEnabled'] as bool,
-      usePasswordLessLogin: json['usePasswordLessLogin'] as bool,
-      securityKeys: json['securityKeys'] as bool,
-      roles: (json['roles'] as List<dynamic>?)
-          ?.map((e) => UserRole.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      memo: json['memo'] as String?,
-      moderationNote: json['moderationNote'] as String?,
-      avatarId: json['avatarId'] as String?,
-      bannerId: json['bannerId'] as String?,
-      isModerator: json['isModerator'] as bool,
-      isAdmin: json['isAdmin'] as bool,
-      injectFeaturedNote: json['injectFeaturedNote'] as bool,
-      receiveAnnouncementEmail: json['receiveAnnouncementEmail'] as bool,
-      alwaysMarkNsfw: json['alwaysMarkNsfw'] as bool,
-      autoSensitive: json['autoSensitive'] as bool,
-      carefulBot: json['carefulBot'] as bool,
-      autoAcceptFollowed: json['autoAcceptFollowed'] as bool,
-      preventAiLearning: json['preventAiLearning'] as bool?,
-      noCrawle: json['noCrawle'] as bool,
-      isExplorable: json['isExplorable'] as bool,
-      isDeleted: json['isDeleted'] as bool,
-      twoFactorBackupCodesStock: $enumDecodeNullable(
-          _$TwoFactorBackupCodesStockEnumMap,
-          json['twoFactorBackupCodesStock']),
-      hideOnlineStatus: json['hideOnlineStatus'] as bool,
-      hasUnreadSpecifiedNotes: json['hasUnreadSpecifiedNotes'] as bool,
-      hasUnreadMentions: json['hasUnreadMentions'] as bool,
-      hasUnreadAnnouncement: json['hasUnreadAnnouncement'] as bool,
-      hasUnreadAntenna: json['hasUnreadAntenna'] as bool,
-      hasUnreadChannel: json['hasUnreadChannel'] as bool,
-      hasUnreadNotification: json['hasUnreadNotification'] as bool,
-      hasPendingReceivedFollowRequest:
-          json['hasPendingReceivedFollowRequest'] as bool,
-      unreadNotificationsCount: json['unreadNotificationsCount'] as int?,
-      unreadAnnouncements: (json['unreadAnnouncements'] as List<dynamic>?)
-              ?.map((e) =>
-                  AnnouncementsResponse.fromJson(e as Map<String, dynamic>))
-              .toList() ??
-          const [],
-      mutedWords: (json['mutedWords'] as List<dynamic>)
-          .map(const MuteWordsConverter().fromJson)
-          .toList(),
-      hardMutedWords: (json['hardMutedWords'] as List<dynamic>?)
-              ?.map(const MuteWordsConverter().fromJson)
-              .toList() ??
-          const [],
-      mutedInstances: (json['mutedInstances'] as List<dynamic>)
-          .map((e) => e as String)
-          .toList(),
-      mutingNotificationTypes:
-          (json['mutingNotificationTypes'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList(),
-      notificationRecieveConfig: json['notificationRecieveConfig'] == null
-          ? const NotificationRecieveConfigs()
-          : NotificationRecieveConfigs.fromJson(
-              json['notificationRecieveConfig'] as Map<String, dynamic>),
-      emailNotificationTypes: (json['emailNotificationTypes'] as List<dynamic>)
-          .map((e) => e as String)
-          .toList(),
-      achievements: (json['achievements'] as List<dynamic>)
-          .map((e) => UserAchievement.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      loggedInDays: json['loggedInDays'] as int,
-      policies: UserPolicies.fromJson(json['policies'] as Map<String, dynamic>),
+    $checkedCreate(
+      r'_$MeDetailedImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$MeDetailedImpl(
+          id: $checkedConvert('id', (v) => v as String),
+          name: $checkedConvert('name', (v) => v as String?),
+          username: $checkedConvert('username', (v) => v as String),
+          host: $checkedConvert('host', (v) => v as String?),
+          avatarUrl: $checkedConvert(
+              'avatarUrl', (v) => const UriConverter().fromJson(v as String)),
+          avatarBlurhash:
+              $checkedConvert('avatarBlurhash', (v) => v as String?),
+          avatarDecorations: $checkedConvert(
+              'avatarDecorations',
+              (v) =>
+                  (v as List<dynamic>?)
+                      ?.map((e) => UserAvatarDecoration.fromJson(
+                          e as Map<String, dynamic>))
+                      .toList() ??
+                  const []),
+          isBot: $checkedConvert('isBot', (v) => v as bool),
+          isCat: $checkedConvert('isCat', (v) => v as bool),
+          instance: $checkedConvert(
+              'instance',
+              (v) => v == null
+                  ? null
+                  : UserInstanceInfo.fromJson(v as Map<String, dynamic>)),
+          emojis: $checkedConvert(
+              'emojis',
+              (v) =>
+                  v == null ? const {} : const EmojisConverter().fromJson(v)),
+          onlineStatus: $checkedConvert(
+              'onlineStatus',
+              (v) => $enumDecodeNullable(_$OnlineStatusEnumMap, v,
+                  unknownValue: JsonKey.nullForUndefinedEnumValue)),
+          badgeRoles: $checkedConvert(
+              'badgeRoles',
+              (v) =>
+                  (v as List<dynamic>?)
+                      ?.map((e) =>
+                          UserBadgeRole.fromJson(e as Map<String, dynamic>))
+                      .toList() ??
+                  const []),
+          url: $checkedConvert(
+              'url',
+              (v) => _$JsonConverterFromJson<String, Uri?>(
+                  v, const NullableUriConverter().fromJson)),
+          uri: $checkedConvert(
+              'uri',
+              (v) => _$JsonConverterFromJson<String, Uri?>(
+                  v, const NullableUriConverter().fromJson)),
+          movedTo: $checkedConvert(
+              'movedTo',
+              (v) => _$JsonConverterFromJson<String, Uri?>(
+                  v, const NullableUriConverter().fromJson)),
+          alsoKnownAs: $checkedConvert('alsoKnownAs',
+              (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
+          createdAt: $checkedConvert('createdAt',
+              (v) => const DateTimeConverter().fromJson(v as String)),
+          updatedAt: $checkedConvert(
+              'updatedAt',
+              (v) => _$JsonConverterFromJson<String, DateTime?>(
+                  v, const NullableDateTimeConverter().fromJson)),
+          lastFetchedAt: $checkedConvert(
+              'lastFetchedAt',
+              (v) => _$JsonConverterFromJson<String, DateTime?>(
+                  v, const NullableDateTimeConverter().fromJson)),
+          bannerUrl: $checkedConvert(
+              'bannerUrl',
+              (v) => _$JsonConverterFromJson<String, Uri?>(
+                  v, const NullableUriConverter().fromJson)),
+          bannerBlurhash:
+              $checkedConvert('bannerBlurhash', (v) => v as String?),
+          isLocked: $checkedConvert('isLocked', (v) => v as bool),
+          isSilenced: $checkedConvert('isSilenced', (v) => v as bool),
+          isSuspended: $checkedConvert('isSuspended', (v) => v as bool),
+          description: $checkedConvert('description', (v) => v as String?),
+          location: $checkedConvert('location', (v) => v as String?),
+          birthday: $checkedConvert(
+              'birthday',
+              (v) => _$JsonConverterFromJson<String, DateTime?>(
+                  v, const NullableDateTimeConverter().fromJson)),
+          lang: $checkedConvert('lang', (v) => v as String?),
+          fields: $checkedConvert(
+              'fields',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => UserField.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          verifiedLinks: $checkedConvert(
+              'verifiedLinks',
+              (v) =>
+                  (v as List<dynamic>?)?.map((e) => e as String).toList() ??
+                  const []),
+          followersCount: $checkedConvert('followersCount', (v) => v as int),
+          followingCount: $checkedConvert('followingCount', (v) => v as int),
+          notesCount: $checkedConvert('notesCount', (v) => v as int),
+          pinnedNoteIds: $checkedConvert('pinnedNoteIds',
+              (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
+          pinnedNotes: $checkedConvert(
+              'pinnedNotes',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => Note.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          pinnedPageId: $checkedConvert('pinnedPageId', (v) => v as String?),
+          pinnedPage:
+              $checkedConvert('pinnedPage', (v) => v as Map<String, dynamic>?),
+          publicReactions: $checkedConvert('publicReactions', (v) => v as bool),
+          ffVisibility: $checkedConvert(
+              'ffVisibility',
+              (v) => $enumDecodeNullable(_$FFVisibilityEnumMap, v,
+                  unknownValue: JsonKey.nullForUndefinedEnumValue)),
+          followersVisibility: $checkedConvert(
+              'followersVisibility',
+              (v) => $enumDecodeNullable(_$FFVisibilityEnumMap, v,
+                  unknownValue: JsonKey.nullForUndefinedEnumValue)),
+          followingVisibility: $checkedConvert(
+              'followingVisibility',
+              (v) => $enumDecodeNullable(_$FFVisibilityEnumMap, v,
+                  unknownValue: JsonKey.nullForUndefinedEnumValue)),
+          twoFactorEnabled:
+              $checkedConvert('twoFactorEnabled', (v) => v as bool),
+          usePasswordLessLogin:
+              $checkedConvert('usePasswordLessLogin', (v) => v as bool),
+          securityKeys: $checkedConvert('securityKeys', (v) => v as bool),
+          roles: $checkedConvert(
+              'roles',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => UserRole.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          memo: $checkedConvert('memo', (v) => v as String?),
+          moderationNote:
+              $checkedConvert('moderationNote', (v) => v as String?),
+          avatarId: $checkedConvert('avatarId', (v) => v as String?),
+          bannerId: $checkedConvert('bannerId', (v) => v as String?),
+          isModerator: $checkedConvert('isModerator', (v) => v as bool),
+          isAdmin: $checkedConvert('isAdmin', (v) => v as bool),
+          injectFeaturedNote:
+              $checkedConvert('injectFeaturedNote', (v) => v as bool),
+          receiveAnnouncementEmail:
+              $checkedConvert('receiveAnnouncementEmail', (v) => v as bool),
+          alwaysMarkNsfw: $checkedConvert('alwaysMarkNsfw', (v) => v as bool),
+          autoSensitive: $checkedConvert('autoSensitive', (v) => v as bool),
+          carefulBot: $checkedConvert('carefulBot', (v) => v as bool),
+          autoAcceptFollowed:
+              $checkedConvert('autoAcceptFollowed', (v) => v as bool),
+          preventAiLearning:
+              $checkedConvert('preventAiLearning', (v) => v as bool?),
+          noCrawle: $checkedConvert('noCrawle', (v) => v as bool),
+          isExplorable: $checkedConvert('isExplorable', (v) => v as bool),
+          isDeleted: $checkedConvert('isDeleted', (v) => v as bool),
+          twoFactorBackupCodesStock: $checkedConvert(
+              'twoFactorBackupCodesStock',
+              (v) =>
+                  $enumDecodeNullable(_$TwoFactorBackupCodesStockEnumMap, v)),
+          hideOnlineStatus:
+              $checkedConvert('hideOnlineStatus', (v) => v as bool),
+          hasUnreadSpecifiedNotes:
+              $checkedConvert('hasUnreadSpecifiedNotes', (v) => v as bool),
+          hasUnreadMentions:
+              $checkedConvert('hasUnreadMentions', (v) => v as bool),
+          hasUnreadAnnouncement:
+              $checkedConvert('hasUnreadAnnouncement', (v) => v as bool),
+          hasUnreadAntenna:
+              $checkedConvert('hasUnreadAntenna', (v) => v as bool),
+          hasUnreadChannel:
+              $checkedConvert('hasUnreadChannel', (v) => v as bool),
+          hasUnreadNotification:
+              $checkedConvert('hasUnreadNotification', (v) => v as bool),
+          hasPendingReceivedFollowRequest: $checkedConvert(
+              'hasPendingReceivedFollowRequest', (v) => v as bool),
+          unreadNotificationsCount:
+              $checkedConvert('unreadNotificationsCount', (v) => v as int?),
+          unreadAnnouncements: $checkedConvert(
+              'unreadAnnouncements',
+              (v) =>
+                  (v as List<dynamic>?)
+                      ?.map((e) => AnnouncementsResponse.fromJson(
+                          e as Map<String, dynamic>))
+                      .toList() ??
+                  const []),
+          mutedWords: $checkedConvert(
+              'mutedWords',
+              (v) => (v as List<dynamic>)
+                  .map(const MuteWordsConverter().fromJson)
+                  .toList()),
+          hardMutedWords: $checkedConvert(
+              'hardMutedWords',
+              (v) =>
+                  (v as List<dynamic>?)
+                      ?.map(const MuteWordsConverter().fromJson)
+                      .toList() ??
+                  const []),
+          mutedInstances: $checkedConvert('mutedInstances',
+              (v) => (v as List<dynamic>).map((e) => e as String).toList()),
+          mutingNotificationTypes: $checkedConvert('mutingNotificationTypes',
+              (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
+          notificationRecieveConfig: $checkedConvert(
+              'notificationRecieveConfig',
+              (v) => v == null
+                  ? const NotificationRecieveConfigs()
+                  : NotificationRecieveConfigs.fromJson(
+                      v as Map<String, dynamic>)),
+          emailNotificationTypes: $checkedConvert('emailNotificationTypes',
+              (v) => (v as List<dynamic>).map((e) => e as String).toList()),
+          achievements: $checkedConvert(
+              'achievements',
+              (v) => (v as List<dynamic>)
+                  .map((e) =>
+                      UserAchievement.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          loggedInDays: $checkedConvert('loggedInDays', (v) => v as int),
+          policies: $checkedConvert('policies',
+              (v) => UserPolicies.fromJson(v as Map<String, dynamic>)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$MeDetailedImplToJson(_$MeDetailedImpl instance) =>
@@ -657,13 +849,22 @@ const _$TwoFactorBackupCodesStockEnumMap = {
 
 _$UserAvatarDecorationImpl _$$UserAvatarDecorationImplFromJson(
         Map<String, dynamic> json) =>
-    _$UserAvatarDecorationImpl(
-      id: json['id'] as String,
-      angle: (json['angle'] as num?)?.toDouble(),
-      flipH: json['flipH'] as bool? ?? false,
-      url: json['url'] as String,
-      offsetX: (json['offsetX'] as num?)?.toDouble() ?? 0.0,
-      offsetY: (json['offsetY'] as num?)?.toDouble() ?? 0.0,
+    $checkedCreate(
+      r'_$UserAvatarDecorationImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$UserAvatarDecorationImpl(
+          id: $checkedConvert('id', (v) => v as String),
+          angle: $checkedConvert('angle', (v) => (v as num?)?.toDouble()),
+          flipH: $checkedConvert('flipH', (v) => v as bool? ?? false),
+          url: $checkedConvert('url', (v) => v as String),
+          offsetX:
+              $checkedConvert('offsetX', (v) => (v as num?)?.toDouble() ?? 0.0),
+          offsetY:
+              $checkedConvert('offsetY', (v) => (v as num?)?.toDouble() ?? 0.0),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$UserAvatarDecorationImplToJson(
@@ -679,15 +880,27 @@ Map<String, dynamic> _$$UserAvatarDecorationImplToJson(
 
 _$UserInstanceInfoImpl _$$UserInstanceInfoImplFromJson(
         Map<String, dynamic> json) =>
-    _$UserInstanceInfoImpl(
-      name: json['name'] as String?,
-      softwareVersion: json['softwareVersion'] as String?,
-      softwareName: json['softwareName'] as String?,
-      iconUrl: _$JsonConverterFromJson<String, Uri?>(
-          json['iconUrl'], const NullableUriConverter().fromJson),
-      faviconUrl: _$JsonConverterFromJson<String, Uri?>(
-          json['faviconUrl'], const NullableUriConverter().fromJson),
-      themeColor: json['themeColor'] as String?,
+    $checkedCreate(
+      r'_$UserInstanceInfoImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$UserInstanceInfoImpl(
+          name: $checkedConvert('name', (v) => v as String?),
+          softwareVersion:
+              $checkedConvert('softwareVersion', (v) => v as String?),
+          softwareName: $checkedConvert('softwareName', (v) => v as String?),
+          iconUrl: $checkedConvert(
+              'iconUrl',
+              (v) => _$JsonConverterFromJson<String, Uri?>(
+                  v, const NullableUriConverter().fromJson)),
+          faviconUrl: $checkedConvert(
+              'faviconUrl',
+              (v) => _$JsonConverterFromJson<String, Uri?>(
+                  v, const NullableUriConverter().fromJson)),
+          themeColor: $checkedConvert('themeColor', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$UserInstanceInfoImplToJson(
@@ -702,10 +915,19 @@ Map<String, dynamic> _$$UserInstanceInfoImplToJson(
     };
 
 _$UserBadgeRoleImpl _$$UserBadgeRoleImplFromJson(Map<String, dynamic> json) =>
-    _$UserBadgeRoleImpl(
-      name: json['name'] as String,
-      iconUrl: _$JsonConverterFromJson<String, Uri?>(
-          json['iconUrl'], const NullableUriConverter().fromJson),
+    $checkedCreate(
+      r'_$UserBadgeRoleImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$UserBadgeRoleImpl(
+          name: $checkedConvert('name', (v) => v as String),
+          iconUrl: $checkedConvert(
+              'iconUrl',
+              (v) => _$JsonConverterFromJson<String, Uri?>(
+                  v, const NullableUriConverter().fromJson)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$UserBadgeRoleImplToJson(_$UserBadgeRoleImpl instance) =>
@@ -715,15 +937,24 @@ Map<String, dynamic> _$$UserBadgeRoleImplToJson(_$UserBadgeRoleImpl instance) =>
     };
 
 _$UserRoleImpl _$$UserRoleImplFromJson(Map<String, dynamic> json) =>
-    _$UserRoleImpl(
-      id: json['id'] as String,
-      name: json['name'] as String,
-      color: json['color'] as String?,
-      iconUrl: _$JsonConverterFromJson<String, Uri?>(
-          json['iconUrl'], const NullableUriConverter().fromJson),
-      description: json['description'] as String?,
-      isModerator: json['isModerator'] as bool,
-      isAdministrator: json['isAdministrator'] as bool,
+    $checkedCreate(
+      r'_$UserRoleImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$UserRoleImpl(
+          id: $checkedConvert('id', (v) => v as String),
+          name: $checkedConvert('name', (v) => v as String),
+          color: $checkedConvert('color', (v) => v as String?),
+          iconUrl: $checkedConvert(
+              'iconUrl',
+              (v) => _$JsonConverterFromJson<String, Uri?>(
+                  v, const NullableUriConverter().fromJson)),
+          description: $checkedConvert('description', (v) => v as String?),
+          isModerator: $checkedConvert('isModerator', (v) => v as bool),
+          isAdministrator: $checkedConvert('isAdministrator', (v) => v as bool),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$UserRoleImplToJson(_$UserRoleImpl instance) =>
@@ -739,10 +970,19 @@ Map<String, dynamic> _$$UserRoleImplToJson(_$UserRoleImpl instance) =>
 
 _$UserAchievementImpl _$$UserAchievementImplFromJson(
         Map<String, dynamic> json) =>
-    _$UserAchievementImpl(
-      name: json['name'] as String,
-      unlockedAt: const EpocTimeDateTimeConverter.withMilliSeconds()
-          .fromJson(json['unlockedAt'] as int),
+    $checkedCreate(
+      r'_$UserAchievementImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$UserAchievementImpl(
+          name: $checkedConvert('name', (v) => v as String),
+          unlockedAt: $checkedConvert(
+              'unlockedAt',
+              (v) => const EpocTimeDateTimeConverter.withMilliSeconds()
+                  .fromJson(v as int)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$UserAchievementImplToJson(
@@ -754,31 +994,51 @@ Map<String, dynamic> _$$UserAchievementImplToJson(
     };
 
 _$UserPoliciesImpl _$$UserPoliciesImplFromJson(Map<String, dynamic> json) =>
-    _$UserPoliciesImpl(
-      gtlAvailable: json['gtlAvailable'] as bool,
-      ltlAvailable: json['ltlAvailable'] as bool,
-      canPublicNote: json['canPublicNote'] as bool,
-      canEditNote: json['canEditNote'] as bool? ?? false,
-      canInvite: json['canInvite'] as bool,
-      canManageCustomEmojis: json['canManageCustomEmojis'] as bool,
-      canHideAds: json['canHideAds'] as bool,
-      inviteLimit: (json['inviteLimit'] as num?)?.toDouble(),
-      inviteLimitCycle: (json['inviteLimitCycle'] as num?)?.toDouble(),
-      canSearchNotes: json['canSearchNotes'] as bool? ?? false,
-      canUseTranslator: json['canUseTranslator'] as bool? ?? false,
-      driveCapacityMb: (json['driveCapacityMb'] as num).toDouble(),
-      pinLimit: (json['pinLimit'] as num).toDouble(),
-      antennaLimit: (json['antennaLimit'] as num).toDouble(),
-      wordMuteLimit: (json['wordMuteLimit'] as num).toDouble(),
-      webhookLimit: (json['webhookLimit'] as num).toDouble(),
-      clipLimit: (json['clipLimit'] as num).toDouble(),
-      noteEachClipsLimit: (json['noteEachClipsLimit'] as num).toDouble(),
-      userListLimit: (json['userListLimit'] as num).toDouble(),
-      userEachUserListsLimit:
-          (json['userEachUserListsLimit'] as num).toDouble(),
-      rateLimitFactor: (json['rateLimitFactor'] as num).toDouble(),
-      avatarDecorationLimit:
-          (json['avatarDecorationLimit'] as num?)?.toDouble() ?? 1.0,
+    $checkedCreate(
+      r'_$UserPoliciesImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$UserPoliciesImpl(
+          gtlAvailable: $checkedConvert('gtlAvailable', (v) => v as bool),
+          ltlAvailable: $checkedConvert('ltlAvailable', (v) => v as bool),
+          canPublicNote: $checkedConvert('canPublicNote', (v) => v as bool),
+          canEditNote:
+              $checkedConvert('canEditNote', (v) => v as bool? ?? false),
+          canInvite: $checkedConvert('canInvite', (v) => v as bool),
+          canManageCustomEmojis:
+              $checkedConvert('canManageCustomEmojis', (v) => v as bool),
+          canHideAds: $checkedConvert('canHideAds', (v) => v as bool),
+          inviteLimit:
+              $checkedConvert('inviteLimit', (v) => (v as num?)?.toDouble()),
+          inviteLimitCycle: $checkedConvert(
+              'inviteLimitCycle', (v) => (v as num?)?.toDouble()),
+          canSearchNotes:
+              $checkedConvert('canSearchNotes', (v) => v as bool? ?? false),
+          canUseTranslator:
+              $checkedConvert('canUseTranslator', (v) => v as bool? ?? false),
+          driveCapacityMb:
+              $checkedConvert('driveCapacityMb', (v) => (v as num).toDouble()),
+          pinLimit: $checkedConvert('pinLimit', (v) => (v as num).toDouble()),
+          antennaLimit:
+              $checkedConvert('antennaLimit', (v) => (v as num).toDouble()),
+          wordMuteLimit:
+              $checkedConvert('wordMuteLimit', (v) => (v as num).toDouble()),
+          webhookLimit:
+              $checkedConvert('webhookLimit', (v) => (v as num).toDouble()),
+          clipLimit: $checkedConvert('clipLimit', (v) => (v as num).toDouble()),
+          noteEachClipsLimit: $checkedConvert(
+              'noteEachClipsLimit', (v) => (v as num).toDouble()),
+          userListLimit:
+              $checkedConvert('userListLimit', (v) => (v as num).toDouble()),
+          userEachUserListsLimit: $checkedConvert(
+              'userEachUserListsLimit', (v) => (v as num).toDouble()),
+          rateLimitFactor:
+              $checkedConvert('rateLimitFactor', (v) => (v as num).toDouble()),
+          avatarDecorationLimit: $checkedConvert(
+              'avatarDecorationLimit', (v) => (v as num?)?.toDouble() ?? 1.0),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$UserPoliciesImplToJson(_$UserPoliciesImpl instance) =>
@@ -808,9 +1068,16 @@ Map<String, dynamic> _$$UserPoliciesImplToJson(_$UserPoliciesImpl instance) =>
     };
 
 _$UserFieldImpl _$$UserFieldImplFromJson(Map<String, dynamic> json) =>
-    _$UserFieldImpl(
-      name: json['name'] as String,
-      value: json['value'] as String,
+    $checkedCreate(
+      r'_$UserFieldImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$UserFieldImpl(
+          name: $checkedConvert('name', (v) => v as String),
+          value: $checkedConvert('value', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$UserFieldImplToJson(_$UserFieldImpl instance) =>
@@ -821,63 +1088,98 @@ Map<String, dynamic> _$$UserFieldImplToJson(_$UserFieldImpl instance) =>
 
 _$NotificationRecieveConfigsImpl _$$NotificationRecieveConfigsImplFromJson(
         Map<String, dynamic> json) =>
-    _$NotificationRecieveConfigsImpl(
-      note: json['note'] == null
-          ? null
-          : NotificationRecieveConfig.fromJson(
-              json['note'] as Map<String, dynamic>),
-      follow: json['follow'] == null
-          ? null
-          : NotificationRecieveConfig.fromJson(
-              json['follow'] as Map<String, dynamic>),
-      mention: json['mention'] == null
-          ? null
-          : NotificationRecieveConfig.fromJson(
-              json['mention'] as Map<String, dynamic>),
-      reply: json['reply'] == null
-          ? null
-          : NotificationRecieveConfig.fromJson(
-              json['reply'] as Map<String, dynamic>),
-      renote: json['renote'] == null
-          ? null
-          : NotificationRecieveConfig.fromJson(
-              json['renote'] as Map<String, dynamic>),
-      quote: json['quote'] == null
-          ? null
-          : NotificationRecieveConfig.fromJson(
-              json['quote'] as Map<String, dynamic>),
-      reaction: json['reaction'] == null
-          ? null
-          : NotificationRecieveConfig.fromJson(
-              json['reaction'] as Map<String, dynamic>),
-      pollEnded: json['pollEnded'] == null
-          ? null
-          : NotificationRecieveConfig.fromJson(
-              json['pollEnded'] as Map<String, dynamic>),
-      receiveFollowRequest: json['receiveFollowRequest'] == null
-          ? null
-          : NotificationRecieveConfig.fromJson(
-              json['receiveFollowRequest'] as Map<String, dynamic>),
-      followRequestAccepted: json['followRequestAccepted'] == null
-          ? null
-          : NotificationRecieveConfig.fromJson(
-              json['followRequestAccepted'] as Map<String, dynamic>),
-      roleAssigned: json['roleAssigned'] == null
-          ? null
-          : NotificationRecieveConfig.fromJson(
-              json['roleAssigned'] as Map<String, dynamic>),
-      achievementEarned: json['achievementEarned'] == null
-          ? null
-          : NotificationRecieveConfig.fromJson(
-              json['achievementEarned'] as Map<String, dynamic>),
-      app: json['app'] == null
-          ? null
-          : NotificationRecieveConfig.fromJson(
-              json['app'] as Map<String, dynamic>),
-      test: json['test'] == null
-          ? null
-          : NotificationRecieveConfig.fromJson(
-              json['test'] as Map<String, dynamic>),
+    $checkedCreate(
+      r'_$NotificationRecieveConfigsImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$NotificationRecieveConfigsImpl(
+          note: $checkedConvert(
+              'note',
+              (v) => v == null
+                  ? null
+                  : NotificationRecieveConfig.fromJson(
+                      v as Map<String, dynamic>)),
+          follow: $checkedConvert(
+              'follow',
+              (v) => v == null
+                  ? null
+                  : NotificationRecieveConfig.fromJson(
+                      v as Map<String, dynamic>)),
+          mention: $checkedConvert(
+              'mention',
+              (v) => v == null
+                  ? null
+                  : NotificationRecieveConfig.fromJson(
+                      v as Map<String, dynamic>)),
+          reply: $checkedConvert(
+              'reply',
+              (v) => v == null
+                  ? null
+                  : NotificationRecieveConfig.fromJson(
+                      v as Map<String, dynamic>)),
+          renote: $checkedConvert(
+              'renote',
+              (v) => v == null
+                  ? null
+                  : NotificationRecieveConfig.fromJson(
+                      v as Map<String, dynamic>)),
+          quote: $checkedConvert(
+              'quote',
+              (v) => v == null
+                  ? null
+                  : NotificationRecieveConfig.fromJson(
+                      v as Map<String, dynamic>)),
+          reaction: $checkedConvert(
+              'reaction',
+              (v) => v == null
+                  ? null
+                  : NotificationRecieveConfig.fromJson(
+                      v as Map<String, dynamic>)),
+          pollEnded: $checkedConvert(
+              'pollEnded',
+              (v) => v == null
+                  ? null
+                  : NotificationRecieveConfig.fromJson(
+                      v as Map<String, dynamic>)),
+          receiveFollowRequest: $checkedConvert(
+              'receiveFollowRequest',
+              (v) => v == null
+                  ? null
+                  : NotificationRecieveConfig.fromJson(
+                      v as Map<String, dynamic>)),
+          followRequestAccepted: $checkedConvert(
+              'followRequestAccepted',
+              (v) => v == null
+                  ? null
+                  : NotificationRecieveConfig.fromJson(
+                      v as Map<String, dynamic>)),
+          roleAssigned: $checkedConvert(
+              'roleAssigned',
+              (v) => v == null
+                  ? null
+                  : NotificationRecieveConfig.fromJson(
+                      v as Map<String, dynamic>)),
+          achievementEarned: $checkedConvert(
+              'achievementEarned',
+              (v) => v == null
+                  ? null
+                  : NotificationRecieveConfig.fromJson(
+                      v as Map<String, dynamic>)),
+          app: $checkedConvert(
+              'app',
+              (v) => v == null
+                  ? null
+                  : NotificationRecieveConfig.fromJson(
+                      v as Map<String, dynamic>)),
+          test: $checkedConvert(
+              'test',
+              (v) => v == null
+                  ? null
+                  : NotificationRecieveConfig.fromJson(
+                      v as Map<String, dynamic>)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$NotificationRecieveConfigsImplToJson(
@@ -901,9 +1203,16 @@ Map<String, dynamic> _$$NotificationRecieveConfigsImplToJson(
 
 _$NotificationRecieveConfigImpl _$$NotificationRecieveConfigImplFromJson(
         Map<String, dynamic> json) =>
-    _$NotificationRecieveConfigImpl(
-      type: json['type'] as String,
-      userListId: json['userListId'] as String?,
+    $checkedCreate(
+      r'_$NotificationRecieveConfigImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$NotificationRecieveConfigImpl(
+          type: $checkedConvert('type', (v) => v as String),
+          userListId: $checkedConvert('userListId', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$NotificationRecieveConfigImplToJson(

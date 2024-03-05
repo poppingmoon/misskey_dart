@@ -8,11 +8,20 @@ part of 'note_updated_event.dart';
 
 _$NoteUpdatedEventImpl _$$NoteUpdatedEventImplFromJson(
         Map<String, dynamic> json) =>
-    _$NoteUpdatedEventImpl(
-      id: json['id'] as String,
-      type: $enumDecodeNullable(_$NoteUpdatedEventTypeEnumMap, json['type'],
-          unknownValue: JsonKey.nullForUndefinedEnumValue),
-      body: json['body'] as Map<String, dynamic>,
+    $checkedCreate(
+      r'_$NoteUpdatedEventImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$NoteUpdatedEventImpl(
+          id: $checkedConvert('id', (v) => v as String),
+          type: $checkedConvert(
+              'type',
+              (v) => $enumDecodeNullable(_$NoteUpdatedEventTypeEnumMap, v,
+                  unknownValue: JsonKey.nullForUndefinedEnumValue)),
+          body: $checkedConvert('body', (v) => v as Map<String, dynamic>),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$NoteUpdatedEventImplToJson(

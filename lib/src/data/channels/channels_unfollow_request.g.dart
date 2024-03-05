@@ -8,8 +8,15 @@ part of 'channels_unfollow_request.dart';
 
 _$ChannelsUnfollowRequestImpl _$$ChannelsUnfollowRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$ChannelsUnfollowRequestImpl(
-      channelId: json['channelId'] as String,
+    $checkedCreate(
+      r'_$ChannelsUnfollowRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$ChannelsUnfollowRequestImpl(
+          channelId: $checkedConvert('channelId', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$ChannelsUnfollowRequestImplToJson(

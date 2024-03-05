@@ -8,8 +8,15 @@ part of 'clips_favorite_request.dart';
 
 _$ClipsFavoriteRequestImpl _$$ClipsFavoriteRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$ClipsFavoriteRequestImpl(
-      clipId: json['clipId'] as String,
+    $checkedCreate(
+      r'_$ClipsFavoriteRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$ClipsFavoriteRequestImpl(
+          clipId: $checkedConvert('clipId', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$ClipsFavoriteRequestImplToJson(

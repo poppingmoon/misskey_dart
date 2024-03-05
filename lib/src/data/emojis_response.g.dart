@@ -7,10 +7,19 @@ part of 'emojis_response.dart';
 // **************************************************************************
 
 _$EmojisResponseImpl _$$EmojisResponseImplFromJson(Map<String, dynamic> json) =>
-    _$EmojisResponseImpl(
-      emojis: (json['emojis'] as List<dynamic>)
-          .map((e) => Emoji.fromJson(e as Map<String, dynamic>))
-          .toList(),
+    $checkedCreate(
+      r'_$EmojisResponseImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$EmojisResponseImpl(
+          emojis: $checkedConvert(
+              'emojis',
+              (v) => (v as List<dynamic>)
+                  .map((e) => Emoji.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$EmojisResponseImplToJson(
@@ -19,18 +28,26 @@ Map<String, dynamic> _$$EmojisResponseImplToJson(
       'emojis': instance.emojis.map((e) => e.toJson()).toList(),
     };
 
-_$EmojiImpl _$$EmojiImplFromJson(Map<String, dynamic> json) => _$EmojiImpl(
-      aliases:
-          (json['aliases'] as List<dynamic>).map((e) => e as String).toList(),
-      name: json['name'] as String,
-      category: json['category'] as String?,
-      url: const UriConverter().fromJson(json['url'] as String),
-      localOnly: json['localOnly'] as bool?,
-      isSensitive: json['isSensitive'] as bool? ?? false,
-      roleIdsThatCanBeUsedThisEmojiAsReaction:
-          (json['roleIdsThatCanBeUsedThisEmojiAsReaction'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList(),
+_$EmojiImpl _$$EmojiImplFromJson(Map<String, dynamic> json) => $checkedCreate(
+      r'_$EmojiImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$EmojiImpl(
+          aliases: $checkedConvert('aliases',
+              (v) => (v as List<dynamic>).map((e) => e as String).toList()),
+          name: $checkedConvert('name', (v) => v as String),
+          category: $checkedConvert('category', (v) => v as String?),
+          url: $checkedConvert(
+              'url', (v) => const UriConverter().fromJson(v as String)),
+          localOnly: $checkedConvert('localOnly', (v) => v as bool?),
+          isSensitive:
+              $checkedConvert('isSensitive', (v) => v as bool? ?? false),
+          roleIdsThatCanBeUsedThisEmojiAsReaction: $checkedConvert(
+              'roleIdsThatCanBeUsedThisEmojiAsReaction',
+              (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$EmojiImplToJson(_$EmojiImpl instance) =>

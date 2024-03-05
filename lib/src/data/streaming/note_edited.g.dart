@@ -7,9 +7,16 @@ part of 'note_edited.dart';
 // **************************************************************************
 
 _$NoteEditedImpl _$$NoteEditedImplFromJson(Map<String, dynamic> json) =>
-    _$NoteEditedImpl(
-      cw: json['cw'] as String?,
-      text: json['text'] as String?,
+    $checkedCreate(
+      r'_$NoteEditedImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$NoteEditedImpl(
+          cw: $checkedConvert('cw', (v) => v as String?),
+          text: $checkedConvert('text', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$NoteEditedImplToJson(_$NoteEditedImpl instance) =>

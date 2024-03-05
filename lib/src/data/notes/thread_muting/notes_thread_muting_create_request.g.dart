@@ -8,8 +8,15 @@ part of 'notes_thread_muting_create_request.dart';
 
 _$NotesThreadMutingCreateRequestImpl
     _$$NotesThreadMutingCreateRequestImplFromJson(Map<String, dynamic> json) =>
-        _$NotesThreadMutingCreateRequestImpl(
-          noteId: json['noteId'] as String,
+        $checkedCreate(
+          r'_$NotesThreadMutingCreateRequestImpl',
+          json,
+          ($checkedConvert) {
+            final val = _$NotesThreadMutingCreateRequestImpl(
+              noteId: $checkedConvert('noteId', (v) => v as String),
+            );
+            return val;
+          },
         );
 
 Map<String, dynamic> _$$NotesThreadMutingCreateRequestImplToJson(

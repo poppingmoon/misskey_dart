@@ -8,10 +8,17 @@ part of 'pages_show_request.dart';
 
 _$PagesShowRequestImpl _$$PagesShowRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$PagesShowRequestImpl(
-      pageId: json['pageId'] as String?,
-      name: json['name'] as String?,
-      username: json['username'] as String?,
+    $checkedCreate(
+      r'_$PagesShowRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$PagesShowRequestImpl(
+          pageId: $checkedConvert('pageId', (v) => v as String?),
+          name: $checkedConvert('name', (v) => v as String?),
+          username: $checkedConvert('username', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$PagesShowRequestImplToJson(

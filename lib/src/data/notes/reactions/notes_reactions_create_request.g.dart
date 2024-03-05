@@ -8,9 +8,16 @@ part of 'notes_reactions_create_request.dart';
 
 _$NotesReactionsCreateRequestImpl _$$NotesReactionsCreateRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$NotesReactionsCreateRequestImpl(
-      noteId: json['noteId'] as String,
-      reaction: json['reaction'] as String,
+    $checkedCreate(
+      r'_$NotesReactionsCreateRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$NotesReactionsCreateRequestImpl(
+          noteId: $checkedConvert('noteId', (v) => v as String),
+          reaction: $checkedConvert('reaction', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$NotesReactionsCreateRequestImplToJson(

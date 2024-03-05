@@ -8,12 +8,19 @@ part of 'drive_files_create_request.dart';
 
 _$DriveFilesCreateRequestImpl _$$DriveFilesCreateRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$DriveFilesCreateRequestImpl(
-      folderId: json['folderId'] as String?,
-      name: json['name'] as String?,
-      comment: json['comment'] as String?,
-      isSensitive: json['isSensitive'] as bool?,
-      force: json['force'] as bool?,
+    $checkedCreate(
+      r'_$DriveFilesCreateRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$DriveFilesCreateRequestImpl(
+          folderId: $checkedConvert('folderId', (v) => v as String?),
+          name: $checkedConvert('name', (v) => v as String?),
+          comment: $checkedConvert('comment', (v) => v as String?),
+          isSensitive: $checkedConvert('isSensitive', (v) => v as bool?),
+          force: $checkedConvert('force', (v) => v as bool?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$DriveFilesCreateRequestImplToJson(

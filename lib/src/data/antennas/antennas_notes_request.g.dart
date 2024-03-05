@@ -8,15 +8,26 @@ part of 'antennas_notes_request.dart';
 
 _$AntennasNotesRequestImpl _$$AntennasNotesRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$AntennasNotesRequestImpl(
-      antennaId: json['antennaId'] as String,
-      limit: json['limit'] as int?,
-      sinceId: json['sinceId'] as String?,
-      untilId: json['untilId'] as String?,
-      sinceDate: _$JsonConverterFromJson<String, DateTime>(
-          json['sinceDate'], const DateTimeConverter().fromJson),
-      untilDate: _$JsonConverterFromJson<String, DateTime>(
-          json['untilDate'], const DateTimeConverter().fromJson),
+    $checkedCreate(
+      r'_$AntennasNotesRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$AntennasNotesRequestImpl(
+          antennaId: $checkedConvert('antennaId', (v) => v as String),
+          limit: $checkedConvert('limit', (v) => v as int?),
+          sinceId: $checkedConvert('sinceId', (v) => v as String?),
+          untilId: $checkedConvert('untilId', (v) => v as String?),
+          sinceDate: $checkedConvert(
+              'sinceDate',
+              (v) => _$JsonConverterFromJson<String, DateTime>(
+                  v, const DateTimeConverter().fromJson)),
+          untilDate: $checkedConvert(
+              'untilDate',
+              (v) => _$JsonConverterFromJson<String, DateTime>(
+                  v, const DateTimeConverter().fromJson)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$AntennasNotesRequestImplToJson(

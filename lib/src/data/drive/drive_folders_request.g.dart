@@ -8,11 +8,18 @@ part of 'drive_folders_request.dart';
 
 _$DriveFoldersRequestImpl _$$DriveFoldersRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$DriveFoldersRequestImpl(
-      limit: json['limit'] as int?,
-      sinceId: json['sinceId'] as String?,
-      untilId: json['untilId'] as String?,
-      folderId: json['folderId'] as String?,
+    $checkedCreate(
+      r'_$DriveFoldersRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$DriveFoldersRequestImpl(
+          limit: $checkedConvert('limit', (v) => v as int?),
+          sinceId: $checkedConvert('sinceId', (v) => v as String?),
+          untilId: $checkedConvert('untilId', (v) => v as String?),
+          folderId: $checkedConvert('folderId', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$DriveFoldersRequestImplToJson(

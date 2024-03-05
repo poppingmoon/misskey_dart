@@ -8,8 +8,15 @@ part of 'users_lists_delete_request.dart';
 
 _$UsersListsDeleteRequestImpl _$$UsersListsDeleteRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$UsersListsDeleteRequestImpl(
-      listId: json['listId'] as String,
+    $checkedCreate(
+      r'_$UsersListsDeleteRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$UsersListsDeleteRequestImpl(
+          listId: $checkedConvert('listId', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$UsersListsDeleteRequestImplToJson(

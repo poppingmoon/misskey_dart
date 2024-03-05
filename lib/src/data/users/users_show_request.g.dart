@@ -8,8 +8,15 @@ part of 'users_show_request.dart';
 
 _$UsersShowRequestImpl _$$UsersShowRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$UsersShowRequestImpl(
-      userId: json['userId'] as String,
+    $checkedCreate(
+      r'_$UsersShowRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$UsersShowRequestImpl(
+          userId: $checkedConvert('userId', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$UsersShowRequestImplToJson(
@@ -20,9 +27,16 @@ Map<String, dynamic> _$$UsersShowRequestImplToJson(
 
 _$UsersShowByIdsRequestImpl _$$UsersShowByIdsRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$UsersShowByIdsRequestImpl(
-      userIds:
-          (json['userIds'] as List<dynamic>).map((e) => e as String).toList(),
+    $checkedCreate(
+      r'_$UsersShowByIdsRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$UsersShowByIdsRequestImpl(
+          userIds: $checkedConvert('userIds',
+              (v) => (v as List<dynamic>).map((e) => e as String).toList()),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$UsersShowByIdsRequestImplToJson(
@@ -33,9 +47,17 @@ Map<String, dynamic> _$$UsersShowByIdsRequestImplToJson(
 
 _$UsersShowByUserNameRequestImpl _$$UsersShowByUserNameRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$UsersShowByUserNameRequestImpl(
-      userName: json['username'] as String,
-      host: json['host'] as String?,
+    $checkedCreate(
+      r'_$UsersShowByUserNameRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$UsersShowByUserNameRequestImpl(
+          userName: $checkedConvert('username', (v) => v as String),
+          host: $checkedConvert('host', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {'userName': 'username'},
     );
 
 Map<String, dynamic> _$$UsersShowByUserNameRequestImplToJson(

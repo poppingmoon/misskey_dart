@@ -8,8 +8,15 @@ part of 'following_invalidate_request.dart';
 
 _$FollowingInvalidateRequestImpl _$$FollowingInvalidateRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$FollowingInvalidateRequestImpl(
-      userId: json['userId'] as String,
+    $checkedCreate(
+      r'_$FollowingInvalidateRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$FollowingInvalidateRequestImpl(
+          userId: $checkedConvert('userId', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$FollowingInvalidateRequestImplToJson(

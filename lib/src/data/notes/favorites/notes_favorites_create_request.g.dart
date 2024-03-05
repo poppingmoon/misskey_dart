@@ -8,8 +8,15 @@ part of 'notes_favorites_create_request.dart';
 
 _$NotesFavoritesCreateRequestImpl _$$NotesFavoritesCreateRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$NotesFavoritesCreateRequestImpl(
-      noteId: json['noteId'] as String,
+    $checkedCreate(
+      r'_$NotesFavoritesCreateRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$NotesFavoritesCreateRequestImpl(
+          noteId: $checkedConvert('noteId', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$NotesFavoritesCreateRequestImplToJson(

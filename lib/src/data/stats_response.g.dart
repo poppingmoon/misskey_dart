@@ -7,15 +7,25 @@ part of 'stats_response.dart';
 // **************************************************************************
 
 _$StatsResponseImpl _$$StatsResponseImplFromJson(Map<String, dynamic> json) =>
-    _$StatsResponseImpl(
-      notesCount: json['notesCount'] as int,
-      originalNotesCount: json['originalNotesCount'] as int,
-      usersCount: json['usersCount'] as int,
-      originalUsersCount: json['originalUsersCount'] as int,
-      reactionsCount: json['reactionsCount'] as int,
-      instances: json['instances'] as int,
-      driveUsageLocal: json['driveUsageLocal'] as int,
-      driveUsageRemote: json['driveUsageRemote'] as int,
+    $checkedCreate(
+      r'_$StatsResponseImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$StatsResponseImpl(
+          notesCount: $checkedConvert('notesCount', (v) => v as int),
+          originalNotesCount:
+              $checkedConvert('originalNotesCount', (v) => v as int),
+          usersCount: $checkedConvert('usersCount', (v) => v as int),
+          originalUsersCount:
+              $checkedConvert('originalUsersCount', (v) => v as int),
+          reactionsCount: $checkedConvert('reactionsCount', (v) => v as int),
+          instances: $checkedConvert('instances', (v) => v as int),
+          driveUsageLocal: $checkedConvert('driveUsageLocal', (v) => v as int),
+          driveUsageRemote:
+              $checkedConvert('driveUsageRemote', (v) => v as int),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$StatsResponseImplToJson(_$StatsResponseImpl instance) =>

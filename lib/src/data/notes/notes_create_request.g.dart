@@ -8,32 +8,41 @@ part of 'notes_create_request.dart';
 
 _$NotesCreateRequestImpl _$$NotesCreateRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$NotesCreateRequestImpl(
-      visibility:
-          $enumDecodeNullable(_$NoteVisibilityEnumMap, json['visibility']),
-      visibleUserIds: (json['visibleUserIds'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-      text: json['text'] as String?,
-      cw: json['cw'] as String?,
-      localOnly: json['localOnly'] as bool?,
-      reactionAcceptance: $enumDecodeNullable(
-          _$ReactionAcceptanceEnumMap, json['reactionAcceptance']),
-      noExtractMentions: json['noExtractMentions'] as bool?,
-      noExtractHashtags: json['noExtractHashtags'] as bool?,
-      noExtractEmojis: json['noExtractEmojis'] as bool?,
-      fileIds:
-          (json['fileIds'] as List<dynamic>?)?.map((e) => e as String).toList(),
-      mediaIds: (json['mediaIds'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-      replyId: json['replyId'] as String?,
-      renoteId: json['renoteId'] as String?,
-      channelId: json['channelId'] as String?,
-      poll: json['poll'] == null
-          ? null
-          : NotesCreatePollRequest.fromJson(
-              json['poll'] as Map<String, dynamic>),
+    $checkedCreate(
+      r'_$NotesCreateRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$NotesCreateRequestImpl(
+          visibility: $checkedConvert('visibility',
+              (v) => $enumDecodeNullable(_$NoteVisibilityEnumMap, v)),
+          visibleUserIds: $checkedConvert('visibleUserIds',
+              (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
+          text: $checkedConvert('text', (v) => v as String?),
+          cw: $checkedConvert('cw', (v) => v as String?),
+          localOnly: $checkedConvert('localOnly', (v) => v as bool?),
+          reactionAcceptance: $checkedConvert('reactionAcceptance',
+              (v) => $enumDecodeNullable(_$ReactionAcceptanceEnumMap, v)),
+          noExtractMentions:
+              $checkedConvert('noExtractMentions', (v) => v as bool?),
+          noExtractHashtags:
+              $checkedConvert('noExtractHashtags', (v) => v as bool?),
+          noExtractEmojis:
+              $checkedConvert('noExtractEmojis', (v) => v as bool?),
+          fileIds: $checkedConvert('fileIds',
+              (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
+          mediaIds: $checkedConvert('mediaIds',
+              (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
+          replyId: $checkedConvert('replyId', (v) => v as String?),
+          renoteId: $checkedConvert('renoteId', (v) => v as String?),
+          channelId: $checkedConvert('channelId', (v) => v as String?),
+          poll: $checkedConvert(
+              'poll',
+              (v) => v == null
+                  ? null
+                  : NotesCreatePollRequest.fromJson(v as Map<String, dynamic>)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$NotesCreateRequestImplToJson(

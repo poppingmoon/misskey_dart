@@ -8,13 +8,22 @@ part of 'users_reactions_response.dart';
 
 _$UsersReactionsResponseImpl _$$UsersReactionsResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$UsersReactionsResponseImpl(
-      id: json['id'] as String,
-      createdAt:
-          const DateTimeConverter().fromJson(json['createdAt'] as String),
-      user: UserLite.fromJson(json['user'] as Map<String, dynamic>),
-      type: json['type'] as String,
-      note: Note.fromJson(json['note'] as Map<String, dynamic>),
+    $checkedCreate(
+      r'_$UsersReactionsResponseImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$UsersReactionsResponseImpl(
+          id: $checkedConvert('id', (v) => v as String),
+          createdAt: $checkedConvert('createdAt',
+              (v) => const DateTimeConverter().fromJson(v as String)),
+          user: $checkedConvert(
+              'user', (v) => UserLite.fromJson(v as Map<String, dynamic>)),
+          type: $checkedConvert('type', (v) => v as String),
+          note: $checkedConvert(
+              'note', (v) => Note.fromJson(v as Map<String, dynamic>)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$UsersReactionsResponseImplToJson(

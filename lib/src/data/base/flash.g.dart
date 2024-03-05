@@ -6,19 +6,27 @@ part of 'flash.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$FlashImpl _$$FlashImplFromJson(Map<String, dynamic> json) => _$FlashImpl(
-      id: json['id'] as String,
-      createdAt:
-          const DateTimeConverter().fromJson(json['createdAt'] as String),
-      updatedAt:
-          const DateTimeConverter().fromJson(json['updatedAt'] as String),
-      title: json['title'] as String,
-      summary: json['summary'] as String,
-      script: json['script'] as String,
-      userId: json['userId'] as String,
-      user: UserLite.fromJson(json['user'] as Map<String, dynamic>),
-      likedCount: json['likedCount'] as int?,
-      isLiked: json['isLiked'] as bool? ?? false,
+_$FlashImpl _$$FlashImplFromJson(Map<String, dynamic> json) => $checkedCreate(
+      r'_$FlashImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$FlashImpl(
+          id: $checkedConvert('id', (v) => v as String),
+          createdAt: $checkedConvert('createdAt',
+              (v) => const DateTimeConverter().fromJson(v as String)),
+          updatedAt: $checkedConvert('updatedAt',
+              (v) => const DateTimeConverter().fromJson(v as String)),
+          title: $checkedConvert('title', (v) => v as String),
+          summary: $checkedConvert('summary', (v) => v as String),
+          script: $checkedConvert('script', (v) => v as String),
+          userId: $checkedConvert('userId', (v) => v as String),
+          user: $checkedConvert(
+              'user', (v) => UserLite.fromJson(v as Map<String, dynamic>)),
+          likedCount: $checkedConvert('likedCount', (v) => v as int?),
+          isLiked: $checkedConvert('isLiked', (v) => v as bool? ?? false),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$FlashImplToJson(_$FlashImpl instance) =>

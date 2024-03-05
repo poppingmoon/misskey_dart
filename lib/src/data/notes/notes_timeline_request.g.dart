@@ -8,21 +8,35 @@ part of 'notes_timeline_request.dart';
 
 _$NotesTimelineRequestImpl _$$NotesTimelineRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$NotesTimelineRequestImpl(
-      limit: json['limit'] as int?,
-      sinceId: json['sinceId'] as String?,
-      untilId: json['untilId'] as String?,
-      sinceDate: _$JsonConverterFromJson<int, DateTime>(json['sinceDate'],
-          const EpocTimeDateTimeConverter.withMilliSeconds().fromJson),
-      untilDate: _$JsonConverterFromJson<int, DateTime>(json['untilDate'],
-          const EpocTimeDateTimeConverter.withMilliSeconds().fromJson),
-      includeMyRenotes: json['includeMyRenotes'] as bool?,
-      includeRenotedMyNotes: json['includeRenotedMyNotes'] as bool?,
-      includeLocalRenotes: json['includeLocalRenotes'] as bool?,
-      withFiles: json['withFiles'] as bool?,
-      withRenotes: json['withRenotes'] as bool?,
-      excludeNsfw: json['excludeNsfw'] as bool?,
-      allowPartial: json['allowPartial'] as bool?,
+    $checkedCreate(
+      r'_$NotesTimelineRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$NotesTimelineRequestImpl(
+          limit: $checkedConvert('limit', (v) => v as int?),
+          sinceId: $checkedConvert('sinceId', (v) => v as String?),
+          untilId: $checkedConvert('untilId', (v) => v as String?),
+          sinceDate: $checkedConvert(
+              'sinceDate',
+              (v) => _$JsonConverterFromJson<int, DateTime>(v,
+                  const EpocTimeDateTimeConverter.withMilliSeconds().fromJson)),
+          untilDate: $checkedConvert(
+              'untilDate',
+              (v) => _$JsonConverterFromJson<int, DateTime>(v,
+                  const EpocTimeDateTimeConverter.withMilliSeconds().fromJson)),
+          includeMyRenotes:
+              $checkedConvert('includeMyRenotes', (v) => v as bool?),
+          includeRenotedMyNotes:
+              $checkedConvert('includeRenotedMyNotes', (v) => v as bool?),
+          includeLocalRenotes:
+              $checkedConvert('includeLocalRenotes', (v) => v as bool?),
+          withFiles: $checkedConvert('withFiles', (v) => v as bool?),
+          withRenotes: $checkedConvert('withRenotes', (v) => v as bool?),
+          excludeNsfw: $checkedConvert('excludeNsfw', (v) => v as bool?),
+          allowPartial: $checkedConvert('allowPartial', (v) => v as bool?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$NotesTimelineRequestImplToJson(

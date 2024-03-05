@@ -7,14 +7,27 @@ part of 'hashtag.dart';
 // **************************************************************************
 
 _$HashtagImpl _$$HashtagImplFromJson(Map<String, dynamic> json) =>
-    _$HashtagImpl(
-      tag: json['tag'] as String,
-      mentionedUsersCount: json['mentionedUsersCount'] as int,
-      mentionedLocalUsersCount: json['mentionedLocalUsersCount'] as int,
-      mentionedRemoteUsersCount: json['mentionedRemoteUsersCount'] as int,
-      attachedUsersCount: json['attachedUsersCount'] as int,
-      attachedLocalUsersCount: json['attachedLocalUsersCount'] as int,
-      attachedRemoteUsersCount: json['attachedRemoteUsersCount'] as int,
+    $checkedCreate(
+      r'_$HashtagImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$HashtagImpl(
+          tag: $checkedConvert('tag', (v) => v as String),
+          mentionedUsersCount:
+              $checkedConvert('mentionedUsersCount', (v) => v as int),
+          mentionedLocalUsersCount:
+              $checkedConvert('mentionedLocalUsersCount', (v) => v as int),
+          mentionedRemoteUsersCount:
+              $checkedConvert('mentionedRemoteUsersCount', (v) => v as int),
+          attachedUsersCount:
+              $checkedConvert('attachedUsersCount', (v) => v as int),
+          attachedLocalUsersCount:
+              $checkedConvert('attachedLocalUsersCount', (v) => v as int),
+          attachedRemoteUsersCount:
+              $checkedConvert('attachedRemoteUsersCount', (v) => v as int),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$HashtagImplToJson(_$HashtagImpl instance) =>

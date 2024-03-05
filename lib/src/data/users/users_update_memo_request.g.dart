@@ -8,9 +8,16 @@ part of 'users_update_memo_request.dart';
 
 _$UsersUpdateMemoRequestImpl _$$UsersUpdateMemoRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$UsersUpdateMemoRequestImpl(
-      userId: json['userId'] as String,
-      memo: json['memo'] as String,
+    $checkedCreate(
+      r'_$UsersUpdateMemoRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$UsersUpdateMemoRequestImpl(
+          userId: $checkedConvert('userId', (v) => v as String),
+          memo: $checkedConvert('memo', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$UsersUpdateMemoRequestImplToJson(

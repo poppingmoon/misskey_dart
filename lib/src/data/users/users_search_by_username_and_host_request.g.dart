@@ -9,11 +9,18 @@ part of 'users_search_by_username_and_host_request.dart';
 _$UsersSearchByUsernameAndHostRequestImpl
     _$$UsersSearchByUsernameAndHostRequestImplFromJson(
             Map<String, dynamic> json) =>
-        _$UsersSearchByUsernameAndHostRequestImpl(
-          limit: json['limit'] as int?,
-          detail: json['detail'] as bool?,
-          username: json['username'] as String?,
-          host: json['host'] as String?,
+        $checkedCreate(
+          r'_$UsersSearchByUsernameAndHostRequestImpl',
+          json,
+          ($checkedConvert) {
+            final val = _$UsersSearchByUsernameAndHostRequestImpl(
+              limit: $checkedConvert('limit', (v) => v as int?),
+              detail: $checkedConvert('detail', (v) => v as bool?),
+              username: $checkedConvert('username', (v) => v as String?),
+              host: $checkedConvert('host', (v) => v as String?),
+            );
+            return val;
+          },
         );
 
 Map<String, dynamic> _$$UsersSearchByUsernameAndHostRequestImplToJson(

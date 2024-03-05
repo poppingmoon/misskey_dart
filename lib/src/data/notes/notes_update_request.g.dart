@@ -8,10 +8,17 @@ part of 'notes_update_request.dart';
 
 _$NotesUpdateRequestImpl _$$NotesUpdateRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$NotesUpdateRequestImpl(
-      noteId: json['noteId'] as String,
-      text: json['text'] as String,
-      cw: json['cw'] as String?,
+    $checkedCreate(
+      r'_$NotesUpdateRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$NotesUpdateRequestImpl(
+          noteId: $checkedConvert('noteId', (v) => v as String),
+          text: $checkedConvert('text', (v) => v as String),
+          cw: $checkedConvert('cw', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$NotesUpdateRequestImplToJson(

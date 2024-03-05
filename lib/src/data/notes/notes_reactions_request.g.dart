@@ -8,13 +8,20 @@ part of 'notes_reactions_request.dart';
 
 _$NotesReactionsRequestImpl _$$NotesReactionsRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$NotesReactionsRequestImpl(
-      noteId: json['noteId'] as String,
-      type: json['type'] as String?,
-      limit: json['limit'] as int?,
-      offset: json['offset'] as int?,
-      sinceId: json['sinceId'] as String?,
-      untilId: json['untilId'] as String?,
+    $checkedCreate(
+      r'_$NotesReactionsRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$NotesReactionsRequestImpl(
+          noteId: $checkedConvert('noteId', (v) => v as String),
+          type: $checkedConvert('type', (v) => v as String?),
+          limit: $checkedConvert('limit', (v) => v as int?),
+          offset: $checkedConvert('offset', (v) => v as int?),
+          sinceId: $checkedConvert('sinceId', (v) => v as String?),
+          untilId: $checkedConvert('untilId', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$NotesReactionsRequestImplToJson(

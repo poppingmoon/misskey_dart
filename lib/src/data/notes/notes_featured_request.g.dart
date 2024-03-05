@@ -8,11 +8,18 @@ part of 'notes_featured_request.dart';
 
 _$NotesFeaturedRequestImpl _$$NotesFeaturedRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$NotesFeaturedRequestImpl(
-      limit: json['limit'] as int?,
-      offset: json['offset'] as int?,
-      untilId: json['untilId'] as String?,
-      channelId: json['channelId'] as String?,
+    $checkedCreate(
+      r'_$NotesFeaturedRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$NotesFeaturedRequestImpl(
+          limit: $checkedConvert('limit', (v) => v as int?),
+          offset: $checkedConvert('offset', (v) => v as int?),
+          untilId: $checkedConvert('untilId', (v) => v as String?),
+          channelId: $checkedConvert('channelId', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$NotesFeaturedRequestImplToJson(

@@ -6,4 +6,5 @@ targets:
           include:
             - "lib/**/*.dart"
         options:
+          checked: true
           explicit_to_json: true

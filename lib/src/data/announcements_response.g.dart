@@ -8,27 +8,43 @@ part of 'announcements_response.dart';
 
 _$AnnouncementsResponseImpl _$$AnnouncementsResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$AnnouncementsResponseImpl(
-      id: json['id'] as String,
-      createdAt:
-          const DateTimeConverter().fromJson(json['createdAt'] as String),
-      updatedAt: _$JsonConverterFromJson<String, DateTime?>(
-          json['updatedAt'], const NullableDateTimeConverter().fromJson),
-      text: json['text'] as String,
-      title: json['title'] as String,
-      imageUrl: _$JsonConverterFromJson<String, Uri>(
-          json['imageUrl'], const UriConverter().fromJson),
-      icon: $enumDecodeNullable(_$AnnouncementIconTypeEnumMap, json['icon'],
-          unknownValue: JsonKey.nullForUndefinedEnumValue),
-      display: $enumDecodeNullable(
-          _$AnnouncementDisplayTypeEnumMap, json['display'],
-          unknownValue: JsonKey.nullForUndefinedEnumValue),
-      needConfirmationToRead: json['needConfirmationToRead'] as bool?,
-      forYou: json['forYou'] as bool?,
-      isRead: json['isRead'] as bool?,
-      forExistingUsers: json['forExistingUsers'] as bool? ?? false,
-      userId: json['userId'] as String?,
-      silence: json['silence'] as bool? ?? false,
+    $checkedCreate(
+      r'_$AnnouncementsResponseImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$AnnouncementsResponseImpl(
+          id: $checkedConvert('id', (v) => v as String),
+          createdAt: $checkedConvert('createdAt',
+              (v) => const DateTimeConverter().fromJson(v as String)),
+          updatedAt: $checkedConvert(
+              'updatedAt',
+              (v) => _$JsonConverterFromJson<String, DateTime?>(
+                  v, const NullableDateTimeConverter().fromJson)),
+          text: $checkedConvert('text', (v) => v as String),
+          title: $checkedConvert('title', (v) => v as String),
+          imageUrl: $checkedConvert(
+              'imageUrl',
+              (v) => _$JsonConverterFromJson<String, Uri>(
+                  v, const UriConverter().fromJson)),
+          icon: $checkedConvert(
+              'icon',
+              (v) => $enumDecodeNullable(_$AnnouncementIconTypeEnumMap, v,
+                  unknownValue: JsonKey.nullForUndefinedEnumValue)),
+          display: $checkedConvert(
+              'display',
+              (v) => $enumDecodeNullable(_$AnnouncementDisplayTypeEnumMap, v,
+                  unknownValue: JsonKey.nullForUndefinedEnumValue)),
+          needConfirmationToRead:
+              $checkedConvert('needConfirmationToRead', (v) => v as bool?),
+          forYou: $checkedConvert('forYou', (v) => v as bool?),
+          isRead: $checkedConvert('isRead', (v) => v as bool?),
+          forExistingUsers:
+              $checkedConvert('forExistingUsers', (v) => v as bool? ?? false),
+          userId: $checkedConvert('userId', (v) => v as String?),
+          silence: $checkedConvert('silence', (v) => v as bool? ?? false),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$AnnouncementsResponseImplToJson(

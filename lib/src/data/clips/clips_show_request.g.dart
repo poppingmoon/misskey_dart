@@ -8,8 +8,15 @@ part of 'clips_show_request.dart';
 
 _$ClipsShowRequestImpl _$$ClipsShowRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$ClipsShowRequestImpl(
-      clipId: json['clipId'] as String,
+    $checkedCreate(
+      r'_$ClipsShowRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$ClipsShowRequestImpl(
+          clipId: $checkedConvert('clipId', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$ClipsShowRequestImplToJson(

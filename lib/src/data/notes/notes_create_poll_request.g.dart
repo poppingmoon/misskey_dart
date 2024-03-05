@@ -8,14 +8,23 @@ part of 'notes_create_poll_request.dart';
 
 _$NotesCreatePollRequestImpl _$$NotesCreatePollRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$NotesCreatePollRequestImpl(
-      choices:
-          (json['choices'] as List<dynamic>).map((e) => e as String).toList(),
-      multiple: json['multiple'] as bool?,
-      expiresAt: const NullableEpocTimeDateTimeConverter.withMilliSeconds()
-          .fromJson(json['expiresAt'] as int?),
-      expiredAfter: const NullableDurationConverter()
-          .fromJson(json['expiredAfter'] as int?),
+    $checkedCreate(
+      r'_$NotesCreatePollRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$NotesCreatePollRequestImpl(
+          choices: $checkedConvert('choices',
+              (v) => (v as List<dynamic>).map((e) => e as String).toList()),
+          multiple: $checkedConvert('multiple', (v) => v as bool?),
+          expiresAt: $checkedConvert(
+              'expiresAt',
+              (v) => const NullableEpocTimeDateTimeConverter.withMilliSeconds()
+                  .fromJson(v as int?)),
+          expiredAfter: $checkedConvert('expiredAfter',
+              (v) => const NullableDurationConverter().fromJson(v as int?)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$NotesCreatePollRequestImplToJson(

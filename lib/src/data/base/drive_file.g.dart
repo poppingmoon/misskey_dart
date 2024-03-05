@@ -7,29 +7,40 @@ part of 'drive_file.dart';
 // **************************************************************************
 
 _$DriveFileImpl _$$DriveFileImplFromJson(Map<String, dynamic> json) =>
-    _$DriveFileImpl(
-      id: json['id'] as String,
-      createdAt:
-          const DateTimeConverter().fromJson(json['createdAt'] as String),
-      name: json['name'] as String,
-      type: json['type'] as String,
-      md5: json['md5'] as String,
-      size: json['size'] as int,
-      isSensitive: json['isSensitive'] as bool,
-      blurhash: json['blurhash'] as String?,
-      properties: DriveFileProperties.fromJson(
-          json['properties'] as Map<String, dynamic>),
-      url: json['url'] as String,
-      thumbnailUrl: json['thumbnailUrl'] as String?,
-      comment: json['comment'] as String?,
-      folderId: json['folderId'] as String?,
-      folder: json['folder'] == null
-          ? null
-          : DriveFolder.fromJson(json['folder'] as Map<String, dynamic>),
-      userId: json['userId'] as String?,
-      user: json['user'] == null
-          ? null
-          : UserLite.fromJson(json['user'] as Map<String, dynamic>),
+    $checkedCreate(
+      r'_$DriveFileImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$DriveFileImpl(
+          id: $checkedConvert('id', (v) => v as String),
+          createdAt: $checkedConvert('createdAt',
+              (v) => const DateTimeConverter().fromJson(v as String)),
+          name: $checkedConvert('name', (v) => v as String),
+          type: $checkedConvert('type', (v) => v as String),
+          md5: $checkedConvert('md5', (v) => v as String),
+          size: $checkedConvert('size', (v) => v as int),
+          isSensitive: $checkedConvert('isSensitive', (v) => v as bool),
+          blurhash: $checkedConvert('blurhash', (v) => v as String?),
+          properties: $checkedConvert('properties',
+              (v) => DriveFileProperties.fromJson(v as Map<String, dynamic>)),
+          url: $checkedConvert('url', (v) => v as String),
+          thumbnailUrl: $checkedConvert('thumbnailUrl', (v) => v as String?),
+          comment: $checkedConvert('comment', (v) => v as String?),
+          folderId: $checkedConvert('folderId', (v) => v as String?),
+          folder: $checkedConvert(
+              'folder',
+              (v) => v == null
+                  ? null
+                  : DriveFolder.fromJson(v as Map<String, dynamic>)),
+          userId: $checkedConvert('userId', (v) => v as String?),
+          user: $checkedConvert(
+              'user',
+              (v) => v == null
+                  ? null
+                  : UserLite.fromJson(v as Map<String, dynamic>)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$DriveFileImplToJson(_$DriveFileImpl instance) =>
@@ -54,11 +65,18 @@ Map<String, dynamic> _$$DriveFileImplToJson(_$DriveFileImpl instance) =>
 
 _$DriveFilePropertiesImpl _$$DriveFilePropertiesImplFromJson(
         Map<String, dynamic> json) =>
-    _$DriveFilePropertiesImpl(
-      width: json['width'] as int?,
-      height: json['height'] as int?,
-      orientation: json['orientation'] as int?,
-      avgColor: json['avgColor'] as String?,
+    $checkedCreate(
+      r'_$DriveFilePropertiesImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$DriveFilePropertiesImpl(
+          width: $checkedConvert('width', (v) => v as int?),
+          height: $checkedConvert('height', (v) => v as int?),
+          orientation: $checkedConvert('orientation', (v) => v as int?),
+          avgColor: $checkedConvert('avgColor', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$DriveFilePropertiesImplToJson(

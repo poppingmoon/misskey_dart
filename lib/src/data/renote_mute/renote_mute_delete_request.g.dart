@@ -8,8 +8,15 @@ part of 'renote_mute_delete_request.dart';
 
 _$RenoteMuteDeleteRequestImpl _$$RenoteMuteDeleteRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$RenoteMuteDeleteRequestImpl(
-      userId: json['userId'] as String,
+    $checkedCreate(
+      r'_$RenoteMuteDeleteRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$RenoteMuteDeleteRequestImpl(
+          userId: $checkedConvert('userId', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$RenoteMuteDeleteRequestImplToJson(

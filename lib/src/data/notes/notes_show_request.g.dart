@@ -8,8 +8,15 @@ part of 'notes_show_request.dart';
 
 _$NotesShowRequestImpl _$$NotesShowRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$NotesShowRequestImpl(
-      noteId: json['noteId'] as String,
+    $checkedCreate(
+      r'_$NotesShowRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$NotesShowRequestImpl(
+          noteId: $checkedConvert('noteId', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$NotesShowRequestImplToJson(

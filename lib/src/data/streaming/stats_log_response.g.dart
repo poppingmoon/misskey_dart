@@ -8,11 +8,21 @@ part of 'stats_log_response.dart';
 
 _$StatsLogResponseImpl _$$StatsLogResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$StatsLogResponseImpl(
-      cpu: (json['cpu'] as num).toDouble(),
-      fs: StatsLogFs.fromJson(json['fs'] as Map<String, dynamic>),
-      mem: StatsLogMem.fromJson(json['mem'] as Map<String, dynamic>),
-      net: StatsLogNet.fromJson(json['net'] as Map<String, dynamic>),
+    $checkedCreate(
+      r'_$StatsLogResponseImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$StatsLogResponseImpl(
+          cpu: $checkedConvert('cpu', (v) => (v as num).toDouble()),
+          fs: $checkedConvert(
+              'fs', (v) => StatsLogFs.fromJson(v as Map<String, dynamic>)),
+          mem: $checkedConvert(
+              'mem', (v) => StatsLogMem.fromJson(v as Map<String, dynamic>)),
+          net: $checkedConvert(
+              'net', (v) => StatsLogNet.fromJson(v as Map<String, dynamic>)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$StatsLogResponseImplToJson(
@@ -25,9 +35,16 @@ Map<String, dynamic> _$$StatsLogResponseImplToJson(
     };
 
 _$StatsLogFsImpl _$$StatsLogFsImplFromJson(Map<String, dynamic> json) =>
-    _$StatsLogFsImpl(
-      r: (json['r'] as num).toDouble(),
-      w: (json['w'] as num).toDouble(),
+    $checkedCreate(
+      r'_$StatsLogFsImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$StatsLogFsImpl(
+          r: $checkedConvert('r', (v) => (v as num).toDouble()),
+          w: $checkedConvert('w', (v) => (v as num).toDouble()),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$StatsLogFsImplToJson(_$StatsLogFsImpl instance) =>
@@ -37,9 +54,16 @@ Map<String, dynamic> _$$StatsLogFsImplToJson(_$StatsLogFsImpl instance) =>
     };
 
 _$StatsLogMemImpl _$$StatsLogMemImplFromJson(Map<String, dynamic> json) =>
-    _$StatsLogMemImpl(
-      used: (json['used'] as num).toDouble(),
-      active: (json['active'] as num).toDouble(),
+    $checkedCreate(
+      r'_$StatsLogMemImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$StatsLogMemImpl(
+          used: $checkedConvert('used', (v) => (v as num).toDouble()),
+          active: $checkedConvert('active', (v) => (v as num).toDouble()),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$StatsLogMemImplToJson(_$StatsLogMemImpl instance) =>
@@ -49,9 +73,16 @@ Map<String, dynamic> _$$StatsLogMemImplToJson(_$StatsLogMemImpl instance) =>
     };
 
 _$StatsLogNetImpl _$$StatsLogNetImplFromJson(Map<String, dynamic> json) =>
-    _$StatsLogNetImpl(
-      rx: (json['rx'] as num).toDouble(),
-      tx: (json['tx'] as num).toDouble(),
+    $checkedCreate(
+      r'_$StatsLogNetImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$StatsLogNetImpl(
+          rx: $checkedConvert('rx', (v) => (v as num).toDouble()),
+          tx: $checkedConvert('tx', (v) => (v as num).toDouble()),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$StatsLogNetImplToJson(_$StatsLogNetImpl instance) =>

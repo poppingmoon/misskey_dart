@@ -8,13 +8,23 @@ part of 'join_misskey_instances.dart';
 
 _$JoinMisskeyInstancesImpl _$$JoinMisskeyInstancesImplFromJson(
         Map<String, dynamic> json) =>
-    _$JoinMisskeyInstancesImpl(
-      date: DateTime.parse(json['date'] as String),
-      stats: JoinMisskeyStats.fromJson(json['stats'] as Map<String, dynamic>),
-      instancesInfos: (json['instancesInfos'] as List<dynamic>)
-          .map((e) =>
-              JoinMisskeyInstanceInfo.fromJson(e as Map<String, dynamic>))
-          .toList(),
+    $checkedCreate(
+      r'_$JoinMisskeyInstancesImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$JoinMisskeyInstancesImpl(
+          date: $checkedConvert('date', (v) => DateTime.parse(v as String)),
+          stats: $checkedConvert('stats',
+              (v) => JoinMisskeyStats.fromJson(v as Map<String, dynamic>)),
+          instancesInfos: $checkedConvert(
+              'instancesInfos',
+              (v) => (v as List<dynamic>)
+                  .map((e) => JoinMisskeyInstanceInfo.fromJson(
+                      e as Map<String, dynamic>))
+                  .toList()),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$JoinMisskeyInstancesImplToJson(
@@ -27,11 +37,18 @@ Map<String, dynamic> _$$JoinMisskeyInstancesImplToJson(
 
 _$JoinMisskeyStatsImpl _$$JoinMisskeyStatsImplFromJson(
         Map<String, dynamic> json) =>
-    _$JoinMisskeyStatsImpl(
-      notesCount: json['notesCount'] as int,
-      usersCount: json['usersCount'] as int,
-      mau: json['mau'] as int,
-      instancesCount: json['instancesCount'] as int,
+    $checkedCreate(
+      r'_$JoinMisskeyStatsImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$JoinMisskeyStatsImpl(
+          notesCount: $checkedConvert('notesCount', (v) => v as int),
+          usersCount: $checkedConvert('usersCount', (v) => v as int),
+          mau: $checkedConvert('mau', (v) => v as int),
+          instancesCount: $checkedConvert('instancesCount', (v) => v as int),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$JoinMisskeyStatsImplToJson(
@@ -45,21 +62,31 @@ Map<String, dynamic> _$$JoinMisskeyStatsImplToJson(
 
 _$JoinMisskeyInstanceInfoImpl _$$JoinMisskeyInstanceInfoImplFromJson(
         Map<String, dynamic> json) =>
-    _$JoinMisskeyInstanceInfoImpl(
-      url: json['url'] as String,
-      name: json['name'] as String,
-      langs: (json['langs'] as List<dynamic>).map((e) => e as String).toList(),
-      description: json['description'] as String?,
-      isAlive: json['isAlive'] as bool,
-      value: (json['value'] as num).toDouble(),
-      banner: json['banner'] as bool? ?? false,
-      background: json['background'] as bool? ?? false,
-      icon: json['icon'] as bool? ?? false,
-      nodeInfo: json['nodeinfo'] == null
-          ? null
-          : JoinMisskeyNodeInfo.fromJson(
-              json['nodeinfo'] as Map<String, dynamic>),
-      meta: json['meta'] as Map<String, dynamic>?,
+    $checkedCreate(
+      r'_$JoinMisskeyInstanceInfoImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$JoinMisskeyInstanceInfoImpl(
+          url: $checkedConvert('url', (v) => v as String),
+          name: $checkedConvert('name', (v) => v as String),
+          langs: $checkedConvert('langs',
+              (v) => (v as List<dynamic>).map((e) => e as String).toList()),
+          description: $checkedConvert('description', (v) => v as String?),
+          isAlive: $checkedConvert('isAlive', (v) => v as bool),
+          value: $checkedConvert('value', (v) => (v as num).toDouble()),
+          banner: $checkedConvert('banner', (v) => v as bool? ?? false),
+          background: $checkedConvert('background', (v) => v as bool? ?? false),
+          icon: $checkedConvert('icon', (v) => v as bool? ?? false),
+          nodeInfo: $checkedConvert(
+              'nodeinfo',
+              (v) => v == null
+                  ? null
+                  : JoinMisskeyNodeInfo.fromJson(v as Map<String, dynamic>)),
+          meta: $checkedConvert('meta', (v) => v as Map<String, dynamic>?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {'nodeInfo': 'nodeinfo'},
     );
 
 Map<String, dynamic> _$$JoinMisskeyInstanceInfoImplToJson(
@@ -80,16 +107,27 @@ Map<String, dynamic> _$$JoinMisskeyInstanceInfoImplToJson(
 
 _$JoinMisskeyNodeInfoImpl _$$JoinMisskeyNodeInfoImplFromJson(
         Map<String, dynamic> json) =>
-    _$JoinMisskeyNodeInfoImpl(
-      version: json['version'] as String?,
-      software: json['software'] == null
-          ? null
-          : JoinMisskeyNodeInfoSoftware.fromJson(
-              json['software'] as Map<String, dynamic>),
-      usage: json['usage'] == null
-          ? null
-          : JoinMisskeyNodeInfoUsage.fromJson(
-              json['usage'] as Map<String, dynamic>),
+    $checkedCreate(
+      r'_$JoinMisskeyNodeInfoImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$JoinMisskeyNodeInfoImpl(
+          version: $checkedConvert('version', (v) => v as String?),
+          software: $checkedConvert(
+              'software',
+              (v) => v == null
+                  ? null
+                  : JoinMisskeyNodeInfoSoftware.fromJson(
+                      v as Map<String, dynamic>)),
+          usage: $checkedConvert(
+              'usage',
+              (v) => v == null
+                  ? null
+                  : JoinMisskeyNodeInfoUsage.fromJson(
+                      v as Map<String, dynamic>)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$JoinMisskeyNodeInfoImplToJson(
@@ -102,9 +140,16 @@ Map<String, dynamic> _$$JoinMisskeyNodeInfoImplToJson(
 
 _$JoinMisskeyNodeInfoSoftwareImpl _$$JoinMisskeyNodeInfoSoftwareImplFromJson(
         Map<String, dynamic> json) =>
-    _$JoinMisskeyNodeInfoSoftwareImpl(
-      name: json['name'] as String?,
-      version: json['version'] as String?,
+    $checkedCreate(
+      r'_$JoinMisskeyNodeInfoSoftwareImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$JoinMisskeyNodeInfoSoftwareImpl(
+          name: $checkedConvert('name', (v) => v as String?),
+          version: $checkedConvert('version', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$JoinMisskeyNodeInfoSoftwareImplToJson(
@@ -116,13 +161,22 @@ Map<String, dynamic> _$$JoinMisskeyNodeInfoSoftwareImplToJson(
 
 _$JoinMisskeyNodeInfoUsageImpl _$$JoinMisskeyNodeInfoUsageImplFromJson(
         Map<String, dynamic> json) =>
-    _$JoinMisskeyNodeInfoUsageImpl(
-      users: json['users'] == null
-          ? null
-          : JoinMisskeyNodeInfoUsageUsers.fromJson(
-              json['users'] as Map<String, dynamic>),
-      localPosts: json['localPosts'] as int?,
-      localComments: json['localComments'] as int?,
+    $checkedCreate(
+      r'_$JoinMisskeyNodeInfoUsageImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$JoinMisskeyNodeInfoUsageImpl(
+          users: $checkedConvert(
+              'users',
+              (v) => v == null
+                  ? null
+                  : JoinMisskeyNodeInfoUsageUsers.fromJson(
+                      v as Map<String, dynamic>)),
+          localPosts: $checkedConvert('localPosts', (v) => v as int?),
+          localComments: $checkedConvert('localComments', (v) => v as int?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$JoinMisskeyNodeInfoUsageImplToJson(
@@ -135,8 +189,15 @@ Map<String, dynamic> _$$JoinMisskeyNodeInfoUsageImplToJson(
 
 _$JoinMisskeyNodeInfoUsageUsersImpl
     _$$JoinMisskeyNodeInfoUsageUsersImplFromJson(Map<String, dynamic> json) =>
-        _$JoinMisskeyNodeInfoUsageUsersImpl(
-          total: json['total'] as int?,
+        $checkedCreate(
+          r'_$JoinMisskeyNodeInfoUsageUsersImpl',
+          json,
+          ($checkedConvert) {
+            final val = _$JoinMisskeyNodeInfoUsageUsersImpl(
+              total: $checkedConvert('total', (v) => v as int?),
+            );
+            return val;
+          },
         );
 
 Map<String, dynamic> _$$JoinMisskeyNodeInfoUsageUsersImplToJson(

@@ -8,8 +8,15 @@ part of 'drive_folders_show_request.dart';
 
 _$DriveFoldersShowRequestImpl _$$DriveFoldersShowRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$DriveFoldersShowRequestImpl(
-      folderId: json['folderId'] as String,
+    $checkedCreate(
+      r'_$DriveFoldersShowRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$DriveFoldersShowRequestImpl(
+          folderId: $checkedConvert('folderId', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$DriveFoldersShowRequestImplToJson(

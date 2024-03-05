@@ -8,11 +8,18 @@ part of 'roles_users_request.dart';
 
 _$RolesUsersRequestImpl _$$RolesUsersRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$RolesUsersRequestImpl(
-      roleId: json['roleId'] as String,
-      sinceId: json['sinceId'] as String?,
-      untilId: json['untilId'] as String?,
-      limit: json['limit'] as int?,
+    $checkedCreate(
+      r'_$RolesUsersRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$RolesUsersRequestImpl(
+          roleId: $checkedConvert('roleId', (v) => v as String),
+          sinceId: $checkedConvert('sinceId', (v) => v as String?),
+          untilId: $checkedConvert('untilId', (v) => v as String?),
+          limit: $checkedConvert('limit', (v) => v as int?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$RolesUsersRequestImplToJson(

@@ -8,8 +8,15 @@ part of 'i_read_announcement_request.dart';
 
 _$IReadAnnouncementRequestImpl _$$IReadAnnouncementRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$IReadAnnouncementRequestImpl(
-      announcementId: json['announcementId'] as String,
+    $checkedCreate(
+      r'_$IReadAnnouncementRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$IReadAnnouncementRequestImpl(
+          announcementId: $checkedConvert('announcementId', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$IReadAnnouncementRequestImplToJson(

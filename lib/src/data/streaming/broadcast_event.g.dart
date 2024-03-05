@@ -8,10 +8,19 @@ part of 'broadcast_event.dart';
 
 _$BroadcastResponseImpl _$$BroadcastResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$BroadcastResponseImpl(
-      type: $enumDecodeNullable(_$BroadcastEventTypeEnumMap, json['type'],
-          unknownValue: JsonKey.nullForUndefinedEnumValue),
-      body: json['body'] as Map<String, dynamic>,
+    $checkedCreate(
+      r'_$BroadcastResponseImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$BroadcastResponseImpl(
+          type: $checkedConvert(
+              'type',
+              (v) => $enumDecodeNullable(_$BroadcastEventTypeEnumMap, v,
+                  unknownValue: JsonKey.nullForUndefinedEnumValue)),
+          body: $checkedConvert('body', (v) => v as Map<String, dynamic>),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$BroadcastResponseImplToJson(

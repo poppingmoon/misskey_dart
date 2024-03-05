@@ -8,8 +8,15 @@ part of 'antennas_delete_request.dart';
 
 _$AntennasDeleteRequestImpl _$$AntennasDeleteRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$AntennasDeleteRequestImpl(
-      antennaId: json['antennaId'] as String,
+    $checkedCreate(
+      r'_$AntennasDeleteRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$AntennasDeleteRequestImpl(
+          antennaId: $checkedConvert('antennaId', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$AntennasDeleteRequestImplToJson(

@@ -9,9 +9,17 @@ part of 'users_get_frequently_replied_users_response.dart';
 _$UsersGetFrequentlyRepliedUsersResponseImpl
     _$$UsersGetFrequentlyRepliedUsersResponseImplFromJson(
             Map<String, dynamic> json) =>
-        _$UsersGetFrequentlyRepliedUsersResponseImpl(
-          user: User.fromJson(json['user'] as Map<String, dynamic>),
-          weight: (json['weight'] as num).toDouble(),
+        $checkedCreate(
+          r'_$UsersGetFrequentlyRepliedUsersResponseImpl',
+          json,
+          ($checkedConvert) {
+            final val = _$UsersGetFrequentlyRepliedUsersResponseImpl(
+              user: $checkedConvert(
+                  'user', (v) => User.fromJson(v as Map<String, dynamic>)),
+              weight: $checkedConvert('weight', (v) => (v as num).toDouble()),
+            );
+            return val;
+          },
         );
 
 Map<String, dynamic> _$$UsersGetFrequentlyRepliedUsersResponseImplToJson(

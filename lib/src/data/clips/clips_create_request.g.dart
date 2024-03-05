@@ -8,10 +8,17 @@ part of 'clips_create_request.dart';
 
 _$ClipsCreateRequestImpl _$$ClipsCreateRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$ClipsCreateRequestImpl(
-      name: json['name'] as String,
-      isPublic: json['isPublic'] as bool?,
-      description: json['description'] as String?,
+    $checkedCreate(
+      r'_$ClipsCreateRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$ClipsCreateRequestImpl(
+          name: $checkedConvert('name', (v) => v as String),
+          isPublic: $checkedConvert('isPublic', (v) => v as bool?),
+          description: $checkedConvert('description', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$ClipsCreateRequestImplToJson(

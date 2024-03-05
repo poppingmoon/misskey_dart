@@ -8,8 +8,15 @@ part of 'notes_delete_request.dart';
 
 _$NotesDeleteRequestImpl _$$NotesDeleteRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$NotesDeleteRequestImpl(
-      noteId: json['noteId'] as String,
+    $checkedCreate(
+      r'_$NotesDeleteRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$NotesDeleteRequestImpl(
+          noteId: $checkedConvert('noteId', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$NotesDeleteRequestImplToJson(

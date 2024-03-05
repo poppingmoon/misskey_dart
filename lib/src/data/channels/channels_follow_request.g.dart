@@ -8,8 +8,15 @@ part of 'channels_follow_request.dart';
 
 _$ChannelsFollowRequestImpl _$$ChannelsFollowRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$ChannelsFollowRequestImpl(
-      channelId: json['channelId'] as String,
+    $checkedCreate(
+      r'_$ChannelsFollowRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$ChannelsFollowRequestImpl(
+          channelId: $checkedConvert('channelId', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$ChannelsFollowRequestImplToJson(

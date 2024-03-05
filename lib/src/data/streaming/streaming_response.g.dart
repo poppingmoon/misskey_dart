@@ -8,10 +8,19 @@ part of 'streaming_response.dart';
 
 _$StreamingResponseImpl _$$StreamingResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$StreamingResponseImpl(
-      type: $enumDecodeNullable(_$StreamingResponseTypeEnumMap, json['type'],
-          unknownValue: JsonKey.nullForUndefinedEnumValue),
-      body: json['body'] as Map<String, dynamic>,
+    $checkedCreate(
+      r'_$StreamingResponseImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$StreamingResponseImpl(
+          type: $checkedConvert(
+              'type',
+              (v) => $enumDecodeNullable(_$StreamingResponseTypeEnumMap, v,
+                  unknownValue: JsonKey.nullForUndefinedEnumValue)),
+          body: $checkedConvert('body', (v) => v as Map<String, dynamic>),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$StreamingResponseImplToJson(

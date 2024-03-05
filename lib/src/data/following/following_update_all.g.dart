@@ -8,10 +8,19 @@ part of 'following_update_all.dart';
 
 _$FollowingUpdateAllRequestImpl _$$FollowingUpdateAllRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$FollowingUpdateAllRequestImpl(
-      notify: $enumDecodeNullable(
-          _$FollowingUpdateAllNotifyTypeEnumMap, json['notify']),
-      withReplies: json['withReplies'] as bool?,
+    $checkedCreate(
+      r'_$FollowingUpdateAllRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$FollowingUpdateAllRequestImpl(
+          notify: $checkedConvert(
+              'notify',
+              (v) => $enumDecodeNullable(
+                  _$FollowingUpdateAllNotifyTypeEnumMap, v)),
+          withReplies: $checkedConvert('withReplies', (v) => v as bool?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$FollowingUpdateAllRequestImplToJson(

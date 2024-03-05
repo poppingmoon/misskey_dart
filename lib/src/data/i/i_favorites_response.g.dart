@@ -8,12 +8,20 @@ part of 'i_favorites_response.dart';
 
 _$IFavoritesResponseImpl _$$IFavoritesResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$IFavoritesResponseImpl(
-      id: json['id'] as String,
-      createdAt:
-          const DateTimeConverter().fromJson(json['createdAt'] as String),
-      noteId: json['noteId'] as String,
-      note: Note.fromJson(json['note'] as Map<String, dynamic>),
+    $checkedCreate(
+      r'_$IFavoritesResponseImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$IFavoritesResponseImpl(
+          id: $checkedConvert('id', (v) => v as String),
+          createdAt: $checkedConvert('createdAt',
+              (v) => const DateTimeConverter().fromJson(v as String)),
+          noteId: $checkedConvert('noteId', (v) => v as String),
+          note: $checkedConvert(
+              'note', (v) => Note.fromJson(v as Map<String, dynamic>)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$IFavoritesResponseImplToJson(

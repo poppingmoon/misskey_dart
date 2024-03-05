@@ -8,15 +8,22 @@ part of 'notes_search_request.dart';
 
 _$NotesSearchRequestImpl _$$NotesSearchRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$NotesSearchRequestImpl(
-      query: json['query'] as String,
-      sinceId: json['sinceId'] as String?,
-      untilId: json['untilId'] as String?,
-      limit: json['limit'] as int?,
-      offset: json['offset'] as int?,
-      host: json['host'] as String?,
-      userId: json['userId'] as String?,
-      channelId: json['channelId'] as String?,
+    $checkedCreate(
+      r'_$NotesSearchRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$NotesSearchRequestImpl(
+          query: $checkedConvert('query', (v) => v as String),
+          sinceId: $checkedConvert('sinceId', (v) => v as String?),
+          untilId: $checkedConvert('untilId', (v) => v as String?),
+          limit: $checkedConvert('limit', (v) => v as int?),
+          offset: $checkedConvert('offset', (v) => v as int?),
+          host: $checkedConvert('host', (v) => v as String?),
+          userId: $checkedConvert('userId', (v) => v as String?),
+          channelId: $checkedConvert('channelId', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$NotesSearchRequestImplToJson(

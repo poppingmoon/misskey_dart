@@ -8,11 +8,18 @@ part of 'clips_update_request.dart';
 
 _$ClipsUpdateRequestImpl _$$ClipsUpdateRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$ClipsUpdateRequestImpl(
-      clipId: json['clipId'] as String,
-      name: json['name'] as String,
-      isPublic: json['isPublic'] as bool?,
-      description: json['description'] as String?,
+    $checkedCreate(
+      r'_$ClipsUpdateRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$ClipsUpdateRequestImpl(
+          clipId: $checkedConvert('clipId', (v) => v as String),
+          name: $checkedConvert('name', (v) => v as String),
+          isPublic: $checkedConvert('isPublic', (v) => v as bool?),
+          description: $checkedConvert('description', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$ClipsUpdateRequestImplToJson(

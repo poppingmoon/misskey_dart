@@ -8,11 +8,21 @@ part of 'server_info_response.dart';
 
 _$ServerInfoResponseImpl _$$ServerInfoResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$ServerInfoResponseImpl(
-      machine: json['machine'] as String,
-      cpu: ServerInfoCpu.fromJson(json['cpu'] as Map<String, dynamic>),
-      mem: ServerInfoMem.fromJson(json['mem'] as Map<String, dynamic>),
-      fs: ServerInfoFs.fromJson(json['fs'] as Map<String, dynamic>),
+    $checkedCreate(
+      r'_$ServerInfoResponseImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$ServerInfoResponseImpl(
+          machine: $checkedConvert('machine', (v) => v as String),
+          cpu: $checkedConvert(
+              'cpu', (v) => ServerInfoCpu.fromJson(v as Map<String, dynamic>)),
+          mem: $checkedConvert(
+              'mem', (v) => ServerInfoMem.fromJson(v as Map<String, dynamic>)),
+          fs: $checkedConvert(
+              'fs', (v) => ServerInfoFs.fromJson(v as Map<String, dynamic>)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$ServerInfoResponseImplToJson(
@@ -25,9 +35,16 @@ Map<String, dynamic> _$$ServerInfoResponseImplToJson(
     };
 
 _$ServerInfoCpuImpl _$$ServerInfoCpuImplFromJson(Map<String, dynamic> json) =>
-    _$ServerInfoCpuImpl(
-      model: json['model'] as String,
-      cores: json['cores'] as int,
+    $checkedCreate(
+      r'_$ServerInfoCpuImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$ServerInfoCpuImpl(
+          model: $checkedConvert('model', (v) => v as String),
+          cores: $checkedConvert('cores', (v) => v as int),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$ServerInfoCpuImplToJson(_$ServerInfoCpuImpl instance) =>
@@ -37,8 +54,15 @@ Map<String, dynamic> _$$ServerInfoCpuImplToJson(_$ServerInfoCpuImpl instance) =>
     };
 
 _$ServerInfoMemImpl _$$ServerInfoMemImplFromJson(Map<String, dynamic> json) =>
-    _$ServerInfoMemImpl(
-      total: json['total'] as int,
+    $checkedCreate(
+      r'_$ServerInfoMemImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$ServerInfoMemImpl(
+          total: $checkedConvert('total', (v) => v as int),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$ServerInfoMemImplToJson(_$ServerInfoMemImpl instance) =>
@@ -47,9 +71,16 @@ Map<String, dynamic> _$$ServerInfoMemImplToJson(_$ServerInfoMemImpl instance) =>
     };
 
 _$ServerInfoFsImpl _$$ServerInfoFsImplFromJson(Map<String, dynamic> json) =>
-    _$ServerInfoFsImpl(
-      total: json['total'] as int,
-      used: json['used'] as int,
+    $checkedCreate(
+      r'_$ServerInfoFsImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$ServerInfoFsImpl(
+          total: $checkedConvert('total', (v) => v as int),
+          used: $checkedConvert('used', (v) => v as int),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$ServerInfoFsImplToJson(_$ServerInfoFsImpl instance) =>

@@ -8,18 +8,26 @@ part of 'federation_show_instance_request.dart';
 
 _$FederationShowInstanceRequestImpl
     _$$FederationShowInstanceRequestImplFromJson(Map<String, dynamic> json) =>
-        _$FederationShowInstanceRequestImpl(
-          host: json['host'] as String,
-          blocked: json['blocked'] as bool?,
-          notResponding: json['notResponding'] as bool?,
-          suspended: json['suspended'] as bool?,
-          silenced: json['silenced'] as bool?,
-          federating: json['federating'] as bool?,
-          subscribing: json['subscribing'] as bool?,
-          publishing: json['publishing'] as bool?,
-          limit: json['limit'] as int?,
-          offset: json['offset'] as int?,
-          sort: json['sort'] as String?,
+        $checkedCreate(
+          r'_$FederationShowInstanceRequestImpl',
+          json,
+          ($checkedConvert) {
+            final val = _$FederationShowInstanceRequestImpl(
+              host: $checkedConvert('host', (v) => v as String),
+              blocked: $checkedConvert('blocked', (v) => v as bool?),
+              notResponding:
+                  $checkedConvert('notResponding', (v) => v as bool?),
+              suspended: $checkedConvert('suspended', (v) => v as bool?),
+              silenced: $checkedConvert('silenced', (v) => v as bool?),
+              federating: $checkedConvert('federating', (v) => v as bool?),
+              subscribing: $checkedConvert('subscribing', (v) => v as bool?),
+              publishing: $checkedConvert('publishing', (v) => v as bool?),
+              limit: $checkedConvert('limit', (v) => v as int?),
+              offset: $checkedConvert('offset', (v) => v as int?),
+              sort: $checkedConvert('sort', (v) => v as String?),
+            );
+            return val;
+          },
         );
 
 Map<String, dynamic> _$$FederationShowInstanceRequestImplToJson(

@@ -8,12 +8,20 @@ part of 'users_search_request.dart';
 
 _$UsersSearchRequestImpl _$$UsersSearchRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$UsersSearchRequestImpl(
-      query: json['query'] as String,
-      offset: json['offset'] as int?,
-      limit: json['limit'] as int?,
-      origin: $enumDecodeNullable(_$OriginEnumMap, json['origin']),
-      detail: json['detail'] as bool?,
+    $checkedCreate(
+      r'_$UsersSearchRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$UsersSearchRequestImpl(
+          query: $checkedConvert('query', (v) => v as String),
+          offset: $checkedConvert('offset', (v) => v as int?),
+          limit: $checkedConvert('limit', (v) => v as int?),
+          origin: $checkedConvert(
+              'origin', (v) => $enumDecodeNullable(_$OriginEnumMap, v)),
+          detail: $checkedConvert('detail', (v) => v as bool?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$UsersSearchRequestImplToJson(

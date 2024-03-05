@@ -8,8 +8,15 @@ part of 'channels_favorite_request.dart';
 
 _$ChannelsFavoriteRequestImpl _$$ChannelsFavoriteRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$ChannelsFavoriteRequestImpl(
-      channelId: json['channelId'] as String,
+    $checkedCreate(
+      r'_$ChannelsFavoriteRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$ChannelsFavoriteRequestImpl(
+          channelId: $checkedConvert('channelId', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$ChannelsFavoriteRequestImplToJson(

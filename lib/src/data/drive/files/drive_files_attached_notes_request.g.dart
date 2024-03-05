@@ -8,11 +8,18 @@ part of 'drive_files_attached_notes_request.dart';
 
 _$DriveFilesAttachedNotesRequestImpl
     _$$DriveFilesAttachedNotesRequestImplFromJson(Map<String, dynamic> json) =>
-        _$DriveFilesAttachedNotesRequestImpl(
-          fileId: json['fileId'] as String,
-          limit: json['limit'] as int?,
-          sinceId: json['sinceId'] as String?,
-          untilId: json['untilId'] as String?,
+        $checkedCreate(
+          r'_$DriveFilesAttachedNotesRequestImpl',
+          json,
+          ($checkedConvert) {
+            final val = _$DriveFilesAttachedNotesRequestImpl(
+              fileId: $checkedConvert('fileId', (v) => v as String),
+              limit: $checkedConvert('limit', (v) => v as int?),
+              sinceId: $checkedConvert('sinceId', (v) => v as String?),
+              untilId: $checkedConvert('untilId', (v) => v as String?),
+            );
+            return val;
+          },
         );
 
 Map<String, dynamic> _$$DriveFilesAttachedNotesRequestImplToJson(

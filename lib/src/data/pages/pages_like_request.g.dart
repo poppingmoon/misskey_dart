@@ -8,8 +8,15 @@ part of 'pages_like_request.dart';
 
 _$PagesLikeRequestImpl _$$PagesLikeRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$PagesLikeRequestImpl(
-      pageId: json['pageId'] as String,
+    $checkedCreate(
+      r'_$PagesLikeRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$PagesLikeRequestImpl(
+          pageId: $checkedConvert('pageId', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$PagesLikeRequestImplToJson(

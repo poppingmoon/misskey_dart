@@ -8,11 +8,18 @@ part of 'reversi_games_request.dart';
 
 _$ReversiGamesRequestImpl _$$ReversiGamesRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$ReversiGamesRequestImpl(
-      limit: json['limit'] as int?,
-      sinceId: json['sinceId'] as String?,
-      untilId: json['untilId'] as String?,
-      my: json['my'] as bool?,
+    $checkedCreate(
+      r'_$ReversiGamesRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$ReversiGamesRequestImpl(
+          limit: $checkedConvert('limit', (v) => v as int?),
+          sinceId: $checkedConvert('sinceId', (v) => v as String?),
+          untilId: $checkedConvert('untilId', (v) => v as String?),
+          my: $checkedConvert('my', (v) => v as bool?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$ReversiGamesRequestImplToJson(

@@ -8,8 +8,15 @@ part of 'channels_unfavorite_request.dart';
 
 _$ChannelsUnfavoriteRequestImpl _$$ChannelsUnfavoriteRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$ChannelsUnfavoriteRequestImpl(
-      channelId: json['channelId'] as String,
+    $checkedCreate(
+      r'_$ChannelsUnfavoriteRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$ChannelsUnfavoriteRequestImpl(
+          channelId: $checkedConvert('channelId', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$ChannelsUnfavoriteRequestImplToJson(
