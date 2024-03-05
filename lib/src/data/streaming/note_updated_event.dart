@@ -8,7 +8,9 @@ part 'note_updated_event.g.dart';
 class NoteUpdatedEvent with _$NoteUpdatedEvent {
   const factory NoteUpdatedEvent({
     required String id,
-    @NoteUpdatedEventTypeJsonConverter() required NoteUpdatedEventType type,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    NoteUpdatedEventType? type,
     required Map<String, dynamic> body,
   }) = _NoteUpdatedEvent;
 

@@ -28,9 +28,10 @@ mixin _$Note {
   String? get text => throw _privateConstructorUsedError;
   String? get cw => throw _privateConstructorUsedError;
   UserLite get user => throw _privateConstructorUsedError;
-  String get userId => throw _privateConstructorUsedError;
-  @NoteVisibilityJsonConverter()
-  NoteVisibility get visibility => throw _privateConstructorUsedError;
+  String get userId =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  NoteVisibility? get visibility => throw _privateConstructorUsedError;
   bool get localOnly => throw _privateConstructorUsedError;
   int get renoteCount => throw _privateConstructorUsedError;
   int get repliesCount => throw _privateConstructorUsedError;
@@ -43,7 +44,9 @@ mixin _$Note {
   List<DriveFile> get files => throw _privateConstructorUsedError;
   String? get replyId => throw _privateConstructorUsedError;
   String? get renoteId => throw _privateConstructorUsedError;
-  String? get channelId => throw _privateConstructorUsedError;
+  String? get channelId =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   ReactionAcceptance? get reactionAcceptance =>
       throw _privateConstructorUsedError;
   Note? get renote => throw _privateConstructorUsedError;
@@ -79,7 +82,8 @@ abstract class $NoteCopyWith<$Res> {
       String? cw,
       UserLite user,
       String userId,
-      @NoteVisibilityJsonConverter() NoteVisibility visibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      NoteVisibility? visibility,
       bool localOnly,
       int renoteCount,
       int repliesCount,
@@ -91,6 +95,7 @@ abstract class $NoteCopyWith<$Res> {
       String? replyId,
       String? renoteId,
       String? channelId,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       ReactionAcceptance? reactionAcceptance,
       Note? renote,
       Note? reply,
@@ -131,7 +136,7 @@ class _$NoteCopyWithImpl<$Res, $Val extends Note>
     Object? cw = freezed,
     Object? user = null,
     Object? userId = null,
-    Object? visibility = null,
+    Object? visibility = freezed,
     Object? localOnly = null,
     Object? renoteCount = null,
     Object? repliesCount = null,
@@ -185,10 +190,10 @@ class _$NoteCopyWithImpl<$Res, $Val extends Note>
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
               as String,
-      visibility: null == visibility
+      visibility: freezed == visibility
           ? _value.visibility
           : visibility // ignore: cast_nullable_to_non_nullable
-              as NoteVisibility,
+              as NoteVisibility?,
       localOnly: null == localOnly
           ? _value.localOnly
           : localOnly // ignore: cast_nullable_to_non_nullable
@@ -356,7 +361,8 @@ abstract class _$$NoteImplCopyWith<$Res> implements $NoteCopyWith<$Res> {
       String? cw,
       UserLite user,
       String userId,
-      @NoteVisibilityJsonConverter() NoteVisibility visibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      NoteVisibility? visibility,
       bool localOnly,
       int renoteCount,
       int repliesCount,
@@ -368,6 +374,7 @@ abstract class _$$NoteImplCopyWith<$Res> implements $NoteCopyWith<$Res> {
       String? replyId,
       String? renoteId,
       String? channelId,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       ReactionAcceptance? reactionAcceptance,
       Note? renote,
       Note? reply,
@@ -410,7 +417,7 @@ class __$$NoteImplCopyWithImpl<$Res>
     Object? cw = freezed,
     Object? user = null,
     Object? userId = null,
-    Object? visibility = null,
+    Object? visibility = freezed,
     Object? localOnly = null,
     Object? renoteCount = null,
     Object? repliesCount = null,
@@ -464,10 +471,10 @@ class __$$NoteImplCopyWithImpl<$Res>
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
               as String,
-      visibility: null == visibility
+      visibility: freezed == visibility
           ? _value.visibility
           : visibility // ignore: cast_nullable_to_non_nullable
-              as NoteVisibility,
+              as NoteVisibility?,
       localOnly: null == localOnly
           ? _value.localOnly
           : localOnly // ignore: cast_nullable_to_non_nullable
@@ -575,7 +582,8 @@ class _$NoteImpl implements _Note {
       this.cw,
       required this.user,
       required this.userId,
-      @NoteVisibilityJsonConverter() required this.visibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      this.visibility,
       required this.localOnly,
       required this.renoteCount,
       required this.repliesCount,
@@ -587,6 +595,7 @@ class _$NoteImpl implements _Note {
       this.replyId,
       this.renoteId,
       this.channelId,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.reactionAcceptance,
       this.renote,
       this.reply,
@@ -627,9 +636,10 @@ class _$NoteImpl implements _Note {
   final UserLite user;
   @override
   final String userId;
+// ignore: invalid_annotation_target
   @override
-  @NoteVisibilityJsonConverter()
-  final NoteVisibility visibility;
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final NoteVisibility? visibility;
   @override
   final bool localOnly;
   @override
@@ -685,7 +695,9 @@ class _$NoteImpl implements _Note {
   final String? renoteId;
   @override
   final String? channelId;
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final ReactionAcceptance? reactionAcceptance;
   @override
   final Note? renote;
@@ -852,7 +864,8 @@ abstract class _Note implements Note {
       final String? cw,
       required final UserLite user,
       required final String userId,
-      @NoteVisibilityJsonConverter() required final NoteVisibility visibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      final NoteVisibility? visibility,
       required final bool localOnly,
       required final int renoteCount,
       required final int repliesCount,
@@ -864,6 +877,7 @@ abstract class _Note implements Note {
       final String? replyId,
       final String? renoteId,
       final String? channelId,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final ReactionAcceptance? reactionAcceptance,
       final Note? renote,
       final Note? reply,
@@ -895,9 +909,9 @@ abstract class _Note implements Note {
   UserLite get user;
   @override
   String get userId;
-  @override
-  @NoteVisibilityJsonConverter()
-  NoteVisibility get visibility;
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  NoteVisibility? get visibility;
   @override
   bool get localOnly;
   @override
@@ -922,7 +936,8 @@ abstract class _Note implements Note {
   String? get renoteId;
   @override
   String? get channelId;
-  @override
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   ReactionAcceptance? get reactionAcceptance;
   @override
   Note? get renote;

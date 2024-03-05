@@ -9,14 +9,15 @@ part of 'broadcast_event.dart';
 _$BroadcastResponseImpl _$$BroadcastResponseImplFromJson(
         Map<String, dynamic> json) =>
     _$BroadcastResponseImpl(
-      type: $enumDecode(_$BroadcastEventTypeEnumMap, json['type']),
+      type: $enumDecodeNullable(_$BroadcastEventTypeEnumMap, json['type'],
+          unknownValue: JsonKey.nullForUndefinedEnumValue),
       body: json['body'] as Map<String, dynamic>,
     );
 
 Map<String, dynamic> _$$BroadcastResponseImplToJson(
         _$BroadcastResponseImpl instance) =>
     <String, dynamic>{
-      'type': _$BroadcastEventTypeEnumMap[instance.type]!,
+      'type': _$BroadcastEventTypeEnumMap[instance.type],
       'body': instance.body,
     };
 

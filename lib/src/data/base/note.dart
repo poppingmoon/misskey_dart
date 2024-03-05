@@ -18,7 +18,9 @@ class Note with _$Note {
     String? cw,
     required UserLite user,
     required String userId,
-    @NoteVisibilityJsonConverter() required NoteVisibility visibility,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    NoteVisibility? visibility,
     required bool localOnly,
     required int renoteCount,
     required int repliesCount,
@@ -30,6 +32,8 @@ class Note with _$Note {
     String? replyId,
     String? renoteId,
     String? channelId,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     ReactionAcceptance? reactionAcceptance,
     Note? renote,
     Note? reply,

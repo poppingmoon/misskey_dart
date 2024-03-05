@@ -27,8 +27,9 @@ _$UserLiteImpl _$$UserLiteImplFromJson(Map<String, dynamic> json) =>
       emojis: json['emojis'] == null
           ? const {}
           : const EmojisConverter().fromJson(json['emojis']),
-      onlineStatus: const OnlineStatusJsonConverter()
-          .fromJson(json['onlineStatus'] as String?),
+      onlineStatus: $enumDecodeNullable(
+          _$OnlineStatusEnumMap, json['onlineStatus'],
+          unknownValue: JsonKey.nullForUndefinedEnumValue),
       badgeRoles: (json['badgeRoles'] as List<dynamic>?)
               ?.map((e) => UserBadgeRole.fromJson(e as Map<String, dynamic>))
               .toList() ??
@@ -49,10 +50,16 @@ Map<String, dynamic> _$$UserLiteImplToJson(_$UserLiteImpl instance) =>
       'isCat': instance.isCat,
       'instance': instance.instance?.toJson(),
       'emojis': const EmojisConverter().toJson(instance.emojis),
-      'onlineStatus':
-          const OnlineStatusJsonConverter().toJson(instance.onlineStatus),
+      'onlineStatus': _$OnlineStatusEnumMap[instance.onlineStatus],
       'badgeRoles': instance.badgeRoles.map((e) => e.toJson()).toList(),
     };
+
+const _$OnlineStatusEnumMap = {
+  OnlineStatus.online: 'online',
+  OnlineStatus.active: 'active',
+  OnlineStatus.offline: 'offline',
+  OnlineStatus.unknown: 'unknown',
+};
 
 _$UserDetailedNotMeImpl _$$UserDetailedNotMeImplFromJson(
         Map<String, dynamic> json) =>
@@ -76,8 +83,9 @@ _$UserDetailedNotMeImpl _$$UserDetailedNotMeImplFromJson(
       emojis: json['emojis'] == null
           ? const {}
           : const EmojisConverter().fromJson(json['emojis']),
-      onlineStatus: const OnlineStatusJsonConverter()
-          .fromJson(json['onlineStatus'] as String?),
+      onlineStatus: $enumDecodeNullable(
+          _$OnlineStatusEnumMap, json['onlineStatus'],
+          unknownValue: JsonKey.nullForUndefinedEnumValue),
       badgeRoles: (json['badgeRoles'] as List<dynamic>?)
               ?.map((e) => UserBadgeRole.fromJson(e as Map<String, dynamic>))
               .toList() ??
@@ -127,12 +135,15 @@ _$UserDetailedNotMeImpl _$$UserDetailedNotMeImplFromJson(
       pinnedPageId: json['pinnedPageId'] as String?,
       pinnedPage: json['pinnedPage'] as Map<String, dynamic>?,
       publicReactions: json['publicReactions'] as bool,
-      ffVisibility:
-          $enumDecodeNullable(_$FFVisibilityEnumMap, json['ffVisibility']),
+      ffVisibility: $enumDecodeNullable(
+          _$FFVisibilityEnumMap, json['ffVisibility'],
+          unknownValue: JsonKey.nullForUndefinedEnumValue),
       followersVisibility: $enumDecodeNullable(
-          _$FFVisibilityEnumMap, json['followersVisibility']),
+          _$FFVisibilityEnumMap, json['followersVisibility'],
+          unknownValue: JsonKey.nullForUndefinedEnumValue),
       followingVisibility: $enumDecodeNullable(
-          _$FFVisibilityEnumMap, json['followingVisibility']),
+          _$FFVisibilityEnumMap, json['followingVisibility'],
+          unknownValue: JsonKey.nullForUndefinedEnumValue),
       twoFactorEnabled: json['twoFactorEnabled'] as bool,
       usePasswordLessLogin: json['usePasswordLessLogin'] as bool,
       securityKeys: json['securityKeys'] as bool,
@@ -158,8 +169,7 @@ Map<String, dynamic> _$$UserDetailedNotMeImplToJson(
       'isCat': instance.isCat,
       'instance': instance.instance?.toJson(),
       'emojis': const EmojisConverter().toJson(instance.emojis),
-      'onlineStatus':
-          const OnlineStatusJsonConverter().toJson(instance.onlineStatus),
+      'onlineStatus': _$OnlineStatusEnumMap[instance.onlineStatus],
       'badgeRoles': instance.badgeRoles.map((e) => e.toJson()).toList(),
       'url': const NullableUriConverter().toJson(instance.url),
       'uri': const NullableUriConverter().toJson(instance.uri),
@@ -236,8 +246,9 @@ _$UserDetailedNotMeWithRelationsImpl
           emojis: json['emojis'] == null
               ? const {}
               : const EmojisConverter().fromJson(json['emojis']),
-          onlineStatus: const OnlineStatusJsonConverter()
-              .fromJson(json['onlineStatus'] as String?),
+          onlineStatus: $enumDecodeNullable(
+              _$OnlineStatusEnumMap, json['onlineStatus'],
+              unknownValue: JsonKey.nullForUndefinedEnumValue),
           badgeRoles: (json['badgeRoles'] as List<dynamic>?)
                   ?.map(
                       (e) => UserBadgeRole.fromJson(e as Map<String, dynamic>))
@@ -289,12 +300,15 @@ _$UserDetailedNotMeWithRelationsImpl
           pinnedPageId: json['pinnedPageId'] as String?,
           pinnedPage: json['pinnedPage'] as Map<String, dynamic>?,
           publicReactions: json['publicReactions'] as bool,
-          ffVisibility:
-              $enumDecodeNullable(_$FFVisibilityEnumMap, json['ffVisibility']),
+          ffVisibility: $enumDecodeNullable(
+              _$FFVisibilityEnumMap, json['ffVisibility'],
+              unknownValue: JsonKey.nullForUndefinedEnumValue),
           followersVisibility: $enumDecodeNullable(
-              _$FFVisibilityEnumMap, json['followersVisibility']),
+              _$FFVisibilityEnumMap, json['followersVisibility'],
+              unknownValue: JsonKey.nullForUndefinedEnumValue),
           followingVisibility: $enumDecodeNullable(
-              _$FFVisibilityEnumMap, json['followingVisibility']),
+              _$FFVisibilityEnumMap, json['followingVisibility'],
+              unknownValue: JsonKey.nullForUndefinedEnumValue),
           twoFactorEnabled: json['twoFactorEnabled'] as bool,
           usePasswordLessLogin: json['usePasswordLessLogin'] as bool,
           securityKeys: json['securityKeys'] as bool,
@@ -332,8 +346,7 @@ Map<String, dynamic> _$$UserDetailedNotMeWithRelationsImplToJson(
       'isCat': instance.isCat,
       'instance': instance.instance?.toJson(),
       'emojis': const EmojisConverter().toJson(instance.emojis),
-      'onlineStatus':
-          const OnlineStatusJsonConverter().toJson(instance.onlineStatus),
+      'onlineStatus': _$OnlineStatusEnumMap[instance.onlineStatus],
       'badgeRoles': instance.badgeRoles.map((e) => e.toJson()).toList(),
       'url': const NullableUriConverter().toJson(instance.url),
       'uri': const NullableUriConverter().toJson(instance.uri),
@@ -411,8 +424,9 @@ _$MeDetailedImpl _$$MeDetailedImplFromJson(Map<String, dynamic> json) =>
       emojis: json['emojis'] == null
           ? const {}
           : const EmojisConverter().fromJson(json['emojis']),
-      onlineStatus: const OnlineStatusJsonConverter()
-          .fromJson(json['onlineStatus'] as String?),
+      onlineStatus: $enumDecodeNullable(
+          _$OnlineStatusEnumMap, json['onlineStatus'],
+          unknownValue: JsonKey.nullForUndefinedEnumValue),
       badgeRoles: (json['badgeRoles'] as List<dynamic>?)
               ?.map((e) => UserBadgeRole.fromJson(e as Map<String, dynamic>))
               .toList() ??
@@ -462,12 +476,15 @@ _$MeDetailedImpl _$$MeDetailedImplFromJson(Map<String, dynamic> json) =>
       pinnedPageId: json['pinnedPageId'] as String?,
       pinnedPage: json['pinnedPage'] as Map<String, dynamic>?,
       publicReactions: json['publicReactions'] as bool,
-      ffVisibility:
-          $enumDecodeNullable(_$FFVisibilityEnumMap, json['ffVisibility']),
+      ffVisibility: $enumDecodeNullable(
+          _$FFVisibilityEnumMap, json['ffVisibility'],
+          unknownValue: JsonKey.nullForUndefinedEnumValue),
       followersVisibility: $enumDecodeNullable(
-          _$FFVisibilityEnumMap, json['followersVisibility']),
+          _$FFVisibilityEnumMap, json['followersVisibility'],
+          unknownValue: JsonKey.nullForUndefinedEnumValue),
       followingVisibility: $enumDecodeNullable(
-          _$FFVisibilityEnumMap, json['followingVisibility']),
+          _$FFVisibilityEnumMap, json['followingVisibility'],
+          unknownValue: JsonKey.nullForUndefinedEnumValue),
       twoFactorEnabled: json['twoFactorEnabled'] as bool,
       usePasswordLessLogin: json['usePasswordLessLogin'] as bool,
       securityKeys: json['securityKeys'] as bool,
@@ -550,8 +567,7 @@ Map<String, dynamic> _$$MeDetailedImplToJson(_$MeDetailedImpl instance) =>
       'isCat': instance.isCat,
       'instance': instance.instance?.toJson(),
       'emojis': const EmojisConverter().toJson(instance.emojis),
-      'onlineStatus':
-          const OnlineStatusJsonConverter().toJson(instance.onlineStatus),
+      'onlineStatus': _$OnlineStatusEnumMap[instance.onlineStatus],
       'badgeRoles': instance.badgeRoles.map((e) => e.toJson()).toList(),
       'url': const NullableUriConverter().toJson(instance.url),
       'uri': const NullableUriConverter().toJson(instance.uri),

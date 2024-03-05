@@ -33,8 +33,9 @@ mixin _$UserLite {
   bool get isCat => throw _privateConstructorUsedError;
   UserInstanceInfo? get instance => throw _privateConstructorUsedError;
   @EmojisConverter()
-  Map<String, String> get emojis => throw _privateConstructorUsedError;
-  @OnlineStatusJsonConverter()
+  Map<String, String> get emojis =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   OnlineStatus? get onlineStatus => throw _privateConstructorUsedError;
   List<UserBadgeRole> get badgeRoles => throw _privateConstructorUsedError;
 
@@ -61,7 +62,8 @@ abstract class $UserLiteCopyWith<$Res> {
       bool isCat,
       UserInstanceInfo? instance,
       @EmojisConverter() Map<String, String> emojis,
-      @OnlineStatusJsonConverter() OnlineStatus? onlineStatus,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      OnlineStatus? onlineStatus,
       List<UserBadgeRole> badgeRoles});
 
   $UserInstanceInfoCopyWith<$Res>? get instance;
@@ -183,7 +185,8 @@ abstract class _$$UserLiteImplCopyWith<$Res>
       bool isCat,
       UserInstanceInfo? instance,
       @EmojisConverter() Map<String, String> emojis,
-      @OnlineStatusJsonConverter() OnlineStatus? onlineStatus,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      OnlineStatus? onlineStatus,
       List<UserBadgeRole> badgeRoles});
 
   @override
@@ -287,7 +290,8 @@ class _$UserLiteImpl implements _UserLite {
       this.isCat = false,
       this.instance,
       @EmojisConverter() final Map<String, String> emojis = const {},
-      @OnlineStatusJsonConverter() this.onlineStatus,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      this.onlineStatus,
       final List<UserBadgeRole> badgeRoles = const []})
       : _avatarDecorations = avatarDecorations,
         _emojis = emojis,
@@ -337,8 +341,9 @@ class _$UserLiteImpl implements _UserLite {
     return EqualUnmodifiableMapView(_emojis);
   }
 
+// ignore: invalid_annotation_target
   @override
-  @OnlineStatusJsonConverter()
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final OnlineStatus? onlineStatus;
   final List<UserBadgeRole> _badgeRoles;
   @override
@@ -426,7 +431,8 @@ abstract class _UserLite implements UserLite {
       final bool isCat,
       final UserInstanceInfo? instance,
       @EmojisConverter() final Map<String, String> emojis,
-      @OnlineStatusJsonConverter() final OnlineStatus? onlineStatus,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      final OnlineStatus? onlineStatus,
       final List<UserBadgeRole> badgeRoles}) = _$UserLiteImpl;
 
   factory _UserLite.fromJson(Map<String, dynamic> json) =
@@ -456,8 +462,8 @@ abstract class _UserLite implements UserLite {
   @override
   @EmojisConverter()
   Map<String, String> get emojis;
-  @override
-  @OnlineStatusJsonConverter()
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   OnlineStatus? get onlineStatus;
   @override
   List<UserBadgeRole> get badgeRoles;
@@ -486,8 +492,9 @@ mixin _$UserDetailedNotMe {
   bool get isCat => throw _privateConstructorUsedError;
   UserInstanceInfo? get instance => throw _privateConstructorUsedError;
   @EmojisConverter()
-  Map<String, String> get emojis => throw _privateConstructorUsedError;
-  @OnlineStatusJsonConverter()
+  Map<String, String> get emojis =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   OnlineStatus? get onlineStatus => throw _privateConstructorUsedError;
   List<UserBadgeRole> get badgeRoles => throw _privateConstructorUsedError;
   @NullableUriConverter()
@@ -523,10 +530,16 @@ mixin _$UserDetailedNotMe {
   List<Note>? get pinnedNotes => throw _privateConstructorUsedError;
   String? get pinnedPageId => throw _privateConstructorUsedError;
   Map<String, dynamic>? get pinnedPage => throw _privateConstructorUsedError;
-  bool get publicReactions => throw _privateConstructorUsedError;
+  bool get publicReactions =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   @Deprecated("removed at 2023.12.0")
-  FFVisibility? get ffVisibility => throw _privateConstructorUsedError;
-  FFVisibility? get followersVisibility => throw _privateConstructorUsedError;
+  FFVisibility? get ffVisibility =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  FFVisibility? get followersVisibility =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FFVisibility? get followingVisibility => throw _privateConstructorUsedError;
   bool get twoFactorEnabled => throw _privateConstructorUsedError;
   bool get usePasswordLessLogin => throw _privateConstructorUsedError;
@@ -559,7 +572,8 @@ abstract class $UserDetailedNotMeCopyWith<$Res> {
       bool isCat,
       UserInstanceInfo? instance,
       @EmojisConverter() Map<String, String> emojis,
-      @OnlineStatusJsonConverter() OnlineStatus? onlineStatus,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      OnlineStatus? onlineStatus,
       List<UserBadgeRole> badgeRoles,
       @NullableUriConverter() Uri? url,
       @NullableUriConverter() Uri? uri,
@@ -587,8 +601,12 @@ abstract class $UserDetailedNotMeCopyWith<$Res> {
       String? pinnedPageId,
       Map<String, dynamic>? pinnedPage,
       bool publicReactions,
-      @Deprecated("removed at 2023.12.0") FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      @Deprecated("removed at 2023.12.0")
+      FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       FFVisibility? followersVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       FFVisibility? followingVisibility,
       bool twoFactorEnabled,
       bool usePasswordLessLogin,
@@ -891,7 +909,8 @@ abstract class _$$UserDetailedNotMeImplCopyWith<$Res>
       bool isCat,
       UserInstanceInfo? instance,
       @EmojisConverter() Map<String, String> emojis,
-      @OnlineStatusJsonConverter() OnlineStatus? onlineStatus,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      OnlineStatus? onlineStatus,
       List<UserBadgeRole> badgeRoles,
       @NullableUriConverter() Uri? url,
       @NullableUriConverter() Uri? uri,
@@ -919,8 +938,12 @@ abstract class _$$UserDetailedNotMeImplCopyWith<$Res>
       String? pinnedPageId,
       Map<String, dynamic>? pinnedPage,
       bool publicReactions,
-      @Deprecated("removed at 2023.12.0") FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      @Deprecated("removed at 2023.12.0")
+      FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       FFVisibility? followersVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       FFVisibility? followingVisibility,
       bool twoFactorEnabled,
       bool usePasswordLessLogin,
@@ -1205,7 +1228,8 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
       required this.isCat,
       this.instance,
       @EmojisConverter() final Map<String, String> emojis = const {},
-      @OnlineStatusJsonConverter() this.onlineStatus,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      this.onlineStatus,
       final List<UserBadgeRole> badgeRoles = const [],
       @NullableUriConverter() this.url,
       @NullableUriConverter() this.uri,
@@ -1233,8 +1257,12 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
       this.pinnedPageId,
       final Map<String, dynamic>? pinnedPage,
       required this.publicReactions,
-      @Deprecated("removed at 2023.12.0") this.ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      @Deprecated("removed at 2023.12.0")
+      this.ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.followersVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.followingVisibility,
       required this.twoFactorEnabled,
       required this.usePasswordLessLogin,
@@ -1295,8 +1323,9 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
     return EqualUnmodifiableMapView(_emojis);
   }
 
+// ignore: invalid_annotation_target
   @override
-  @OnlineStatusJsonConverter()
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final OnlineStatus? onlineStatus;
   final List<UserBadgeRole> _badgeRoles;
   @override
@@ -1414,12 +1443,18 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
 
   @override
   final bool publicReactions;
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   @Deprecated("removed at 2023.12.0")
   final FFVisibility? ffVisibility;
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final FFVisibility? followersVisibility;
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final FFVisibility? followingVisibility;
   @override
   final bool twoFactorEnabled;
@@ -1619,7 +1654,8 @@ abstract class _UserDetailedNotMe implements UserDetailedNotMe {
       required final bool isCat,
       final UserInstanceInfo? instance,
       @EmojisConverter() final Map<String, String> emojis,
-      @OnlineStatusJsonConverter() final OnlineStatus? onlineStatus,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      final OnlineStatus? onlineStatus,
       final List<UserBadgeRole> badgeRoles,
       @NullableUriConverter() final Uri? url,
       @NullableUriConverter() final Uri? uri,
@@ -1647,8 +1683,12 @@ abstract class _UserDetailedNotMe implements UserDetailedNotMe {
       final String? pinnedPageId,
       final Map<String, dynamic>? pinnedPage,
       required final bool publicReactions,
-      @Deprecated("removed at 2023.12.0") final FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      @Deprecated("removed at 2023.12.0")
+      final FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final FFVisibility? followersVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final FFVisibility? followingVisibility,
       required final bool twoFactorEnabled,
       required final bool usePasswordLessLogin,
@@ -1684,8 +1724,8 @@ abstract class _UserDetailedNotMe implements UserDetailedNotMe {
   @override
   @EmojisConverter()
   Map<String, String> get emojis;
-  @override
-  @OnlineStatusJsonConverter()
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   OnlineStatus? get onlineStatus;
   @override
   List<UserBadgeRole> get badgeRoles;
@@ -1749,12 +1789,15 @@ abstract class _UserDetailedNotMe implements UserDetailedNotMe {
   Map<String, dynamic>? get pinnedPage;
   @override
   bool get publicReactions;
-  @override
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   @Deprecated("removed at 2023.12.0")
   FFVisibility? get ffVisibility;
-  @override
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FFVisibility? get followersVisibility;
-  @override
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FFVisibility? get followingVisibility;
   @override
   bool get twoFactorEnabled;
@@ -1794,8 +1837,9 @@ mixin _$UserDetailedNotMeWithRelations {
   bool get isCat => throw _privateConstructorUsedError;
   UserInstanceInfo? get instance => throw _privateConstructorUsedError;
   @EmojisConverter()
-  Map<String, String> get emojis => throw _privateConstructorUsedError;
-  @OnlineStatusJsonConverter()
+  Map<String, String> get emojis =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   OnlineStatus? get onlineStatus => throw _privateConstructorUsedError;
   List<UserBadgeRole> get badgeRoles => throw _privateConstructorUsedError;
   @NullableUriConverter()
@@ -1831,10 +1875,16 @@ mixin _$UserDetailedNotMeWithRelations {
   List<Note>? get pinnedNotes => throw _privateConstructorUsedError;
   String? get pinnedPageId => throw _privateConstructorUsedError;
   Map<String, dynamic>? get pinnedPage => throw _privateConstructorUsedError;
-  bool get publicReactions => throw _privateConstructorUsedError;
+  bool get publicReactions =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   @Deprecated("removed at 2023.12.0")
-  FFVisibility? get ffVisibility => throw _privateConstructorUsedError;
-  FFVisibility? get followersVisibility => throw _privateConstructorUsedError;
+  FFVisibility? get ffVisibility =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  FFVisibility? get followersVisibility =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FFVisibility? get followingVisibility => throw _privateConstructorUsedError;
   bool get twoFactorEnabled => throw _privateConstructorUsedError;
   bool get usePasswordLessLogin => throw _privateConstructorUsedError;
@@ -1879,7 +1929,8 @@ abstract class $UserDetailedNotMeWithRelationsCopyWith<$Res> {
       bool isCat,
       UserInstanceInfo? instance,
       @EmojisConverter() Map<String, String> emojis,
-      @OnlineStatusJsonConverter() OnlineStatus? onlineStatus,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      OnlineStatus? onlineStatus,
       List<UserBadgeRole> badgeRoles,
       @NullableUriConverter() Uri? url,
       @NullableUriConverter() Uri? uri,
@@ -1907,8 +1958,12 @@ abstract class $UserDetailedNotMeWithRelationsCopyWith<$Res> {
       String? pinnedPageId,
       Map<String, dynamic>? pinnedPage,
       bool publicReactions,
-      @Deprecated("removed at 2023.12.0") FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      @Deprecated("removed at 2023.12.0")
+      FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       FFVisibility? followersVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       FFVisibility? followingVisibility,
       bool twoFactorEnabled,
       bool usePasswordLessLogin,
@@ -2273,7 +2328,8 @@ abstract class _$$UserDetailedNotMeWithRelationsImplCopyWith<$Res>
       bool isCat,
       UserInstanceInfo? instance,
       @EmojisConverter() Map<String, String> emojis,
-      @OnlineStatusJsonConverter() OnlineStatus? onlineStatus,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      OnlineStatus? onlineStatus,
       List<UserBadgeRole> badgeRoles,
       @NullableUriConverter() Uri? url,
       @NullableUriConverter() Uri? uri,
@@ -2301,8 +2357,12 @@ abstract class _$$UserDetailedNotMeWithRelationsImplCopyWith<$Res>
       String? pinnedPageId,
       Map<String, dynamic>? pinnedPage,
       bool publicReactions,
-      @Deprecated("removed at 2023.12.0") FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      @Deprecated("removed at 2023.12.0")
+      FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       FFVisibility? followersVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       FFVisibility? followingVisibility,
       bool twoFactorEnabled,
       bool usePasswordLessLogin,
@@ -2650,7 +2710,8 @@ class _$UserDetailedNotMeWithRelationsImpl
       required this.isCat,
       this.instance,
       @EmojisConverter() final Map<String, String> emojis = const {},
-      @OnlineStatusJsonConverter() this.onlineStatus,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      this.onlineStatus,
       final List<UserBadgeRole> badgeRoles = const [],
       @NullableUriConverter() this.url,
       @NullableUriConverter() this.uri,
@@ -2678,8 +2739,12 @@ class _$UserDetailedNotMeWithRelationsImpl
       this.pinnedPageId,
       final Map<String, dynamic>? pinnedPage,
       required this.publicReactions,
-      @Deprecated("removed at 2023.12.0") this.ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      @Deprecated("removed at 2023.12.0")
+      this.ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.followersVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.followingVisibility,
       required this.twoFactorEnabled,
       required this.usePasswordLessLogin,
@@ -2751,8 +2816,9 @@ class _$UserDetailedNotMeWithRelationsImpl
     return EqualUnmodifiableMapView(_emojis);
   }
 
+// ignore: invalid_annotation_target
   @override
-  @OnlineStatusJsonConverter()
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final OnlineStatus? onlineStatus;
   final List<UserBadgeRole> _badgeRoles;
   @override
@@ -2870,12 +2936,18 @@ class _$UserDetailedNotMeWithRelationsImpl
 
   @override
   final bool publicReactions;
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   @Deprecated("removed at 2023.12.0")
   final FFVisibility? ffVisibility;
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final FFVisibility? followersVisibility;
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final FFVisibility? followingVisibility;
   @override
   final bool twoFactorEnabled;
@@ -3125,7 +3197,8 @@ abstract class _UserDetailedNotMeWithRelations
       required final bool isCat,
       final UserInstanceInfo? instance,
       @EmojisConverter() final Map<String, String> emojis,
-      @OnlineStatusJsonConverter() final OnlineStatus? onlineStatus,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      final OnlineStatus? onlineStatus,
       final List<UserBadgeRole> badgeRoles,
       @NullableUriConverter() final Uri? url,
       @NullableUriConverter() final Uri? uri,
@@ -3153,8 +3226,12 @@ abstract class _UserDetailedNotMeWithRelations
       final String? pinnedPageId,
       final Map<String, dynamic>? pinnedPage,
       required final bool publicReactions,
-      @Deprecated("removed at 2023.12.0") final FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      @Deprecated("removed at 2023.12.0")
+      final FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final FFVisibility? followersVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final FFVisibility? followingVisibility,
       required final bool twoFactorEnabled,
       required final bool usePasswordLessLogin,
@@ -3200,8 +3277,8 @@ abstract class _UserDetailedNotMeWithRelations
   @override
   @EmojisConverter()
   Map<String, String> get emojis;
-  @override
-  @OnlineStatusJsonConverter()
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   OnlineStatus? get onlineStatus;
   @override
   List<UserBadgeRole> get badgeRoles;
@@ -3265,12 +3342,15 @@ abstract class _UserDetailedNotMeWithRelations
   Map<String, dynamic>? get pinnedPage;
   @override
   bool get publicReactions;
-  @override
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   @Deprecated("removed at 2023.12.0")
   FFVisibility? get ffVisibility;
-  @override
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FFVisibility? get followersVisibility;
-  @override
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FFVisibility? get followingVisibility;
   @override
   bool get twoFactorEnabled;
@@ -3330,8 +3410,9 @@ mixin _$MeDetailed {
   bool get isCat => throw _privateConstructorUsedError;
   UserInstanceInfo? get instance => throw _privateConstructorUsedError;
   @EmojisConverter()
-  Map<String, String> get emojis => throw _privateConstructorUsedError;
-  @OnlineStatusJsonConverter()
+  Map<String, String> get emojis =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   OnlineStatus? get onlineStatus => throw _privateConstructorUsedError;
   List<UserBadgeRole> get badgeRoles => throw _privateConstructorUsedError;
   @NullableUriConverter()
@@ -3367,10 +3448,16 @@ mixin _$MeDetailed {
   List<Note>? get pinnedNotes => throw _privateConstructorUsedError;
   String? get pinnedPageId => throw _privateConstructorUsedError;
   Map<String, dynamic>? get pinnedPage => throw _privateConstructorUsedError;
-  bool get publicReactions => throw _privateConstructorUsedError;
+  bool get publicReactions =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   @Deprecated("removed at 2023.12.0")
-  FFVisibility? get ffVisibility => throw _privateConstructorUsedError;
-  FFVisibility? get followersVisibility => throw _privateConstructorUsedError;
+  FFVisibility? get ffVisibility =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  FFVisibility? get followersVisibility =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FFVisibility? get followingVisibility => throw _privateConstructorUsedError;
   bool get twoFactorEnabled => throw _privateConstructorUsedError;
   bool get usePasswordLessLogin => throw _privateConstructorUsedError;
@@ -3445,7 +3532,8 @@ abstract class $MeDetailedCopyWith<$Res> {
       bool isCat,
       UserInstanceInfo? instance,
       @EmojisConverter() Map<String, String> emojis,
-      @OnlineStatusJsonConverter() OnlineStatus? onlineStatus,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      OnlineStatus? onlineStatus,
       List<UserBadgeRole> badgeRoles,
       @NullableUriConverter() Uri? url,
       @NullableUriConverter() Uri? uri,
@@ -3473,8 +3561,12 @@ abstract class $MeDetailedCopyWith<$Res> {
       String? pinnedPageId,
       Map<String, dynamic>? pinnedPage,
       bool publicReactions,
-      @Deprecated("removed at 2023.12.0") FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      @Deprecated("removed at 2023.12.0")
+      FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       FFVisibility? followersVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       FFVisibility? followingVisibility,
       bool twoFactorEnabled,
       bool usePasswordLessLogin,
@@ -4001,7 +4093,8 @@ abstract class _$$MeDetailedImplCopyWith<$Res>
       bool isCat,
       UserInstanceInfo? instance,
       @EmojisConverter() Map<String, String> emojis,
-      @OnlineStatusJsonConverter() OnlineStatus? onlineStatus,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      OnlineStatus? onlineStatus,
       List<UserBadgeRole> badgeRoles,
       @NullableUriConverter() Uri? url,
       @NullableUriConverter() Uri? uri,
@@ -4029,8 +4122,12 @@ abstract class _$$MeDetailedImplCopyWith<$Res>
       String? pinnedPageId,
       Map<String, dynamic>? pinnedPage,
       bool publicReactions,
-      @Deprecated("removed at 2023.12.0") FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      @Deprecated("removed at 2023.12.0")
+      FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       FFVisibility? followersVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       FFVisibility? followingVisibility,
       bool twoFactorEnabled,
       bool usePasswordLessLogin,
@@ -4524,7 +4621,8 @@ class _$MeDetailedImpl implements _MeDetailed {
       required this.isCat,
       this.instance,
       @EmojisConverter() final Map<String, String> emojis = const {},
-      @OnlineStatusJsonConverter() this.onlineStatus,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      this.onlineStatus,
       final List<UserBadgeRole> badgeRoles = const [],
       @NullableUriConverter() this.url,
       @NullableUriConverter() this.uri,
@@ -4552,8 +4650,12 @@ class _$MeDetailedImpl implements _MeDetailed {
       this.pinnedPageId,
       final Map<String, dynamic>? pinnedPage,
       required this.publicReactions,
-      @Deprecated("removed at 2023.12.0") this.ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      @Deprecated("removed at 2023.12.0")
+      this.ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.followersVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.followingVisibility,
       required this.twoFactorEnabled,
       required this.usePasswordLessLogin,
@@ -4656,8 +4758,9 @@ class _$MeDetailedImpl implements _MeDetailed {
     return EqualUnmodifiableMapView(_emojis);
   }
 
+// ignore: invalid_annotation_target
   @override
-  @OnlineStatusJsonConverter()
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final OnlineStatus? onlineStatus;
   final List<UserBadgeRole> _badgeRoles;
   @override
@@ -4775,12 +4878,18 @@ class _$MeDetailedImpl implements _MeDetailed {
 
   @override
   final bool publicReactions;
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   @Deprecated("removed at 2023.12.0")
   final FFVisibility? ffVisibility;
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final FFVisibility? followersVisibility;
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final FFVisibility? followingVisibility;
   @override
   final bool twoFactorEnabled;
@@ -5176,7 +5285,8 @@ abstract class _MeDetailed implements MeDetailed {
       required final bool isCat,
       final UserInstanceInfo? instance,
       @EmojisConverter() final Map<String, String> emojis,
-      @OnlineStatusJsonConverter() final OnlineStatus? onlineStatus,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      final OnlineStatus? onlineStatus,
       final List<UserBadgeRole> badgeRoles,
       @NullableUriConverter() final Uri? url,
       @NullableUriConverter() final Uri? uri,
@@ -5204,8 +5314,12 @@ abstract class _MeDetailed implements MeDetailed {
       final String? pinnedPageId,
       final Map<String, dynamic>? pinnedPage,
       required final bool publicReactions,
-      @Deprecated("removed at 2023.12.0") final FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      @Deprecated("removed at 2023.12.0")
+      final FFVisibility? ffVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final FFVisibility? followersVisibility,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final FFVisibility? followingVisibility,
       required final bool twoFactorEnabled,
       required final bool usePasswordLessLogin,
@@ -5276,8 +5390,8 @@ abstract class _MeDetailed implements MeDetailed {
   @override
   @EmojisConverter()
   Map<String, String> get emojis;
-  @override
-  @OnlineStatusJsonConverter()
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   OnlineStatus? get onlineStatus;
   @override
   List<UserBadgeRole> get badgeRoles;
@@ -5341,12 +5455,15 @@ abstract class _MeDetailed implements MeDetailed {
   Map<String, dynamic>? get pinnedPage;
   @override
   bool get publicReactions;
-  @override
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   @Deprecated("removed at 2023.12.0")
   FFVisibility? get ffVisibility;
-  @override
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FFVisibility? get followersVisibility;
-  @override
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FFVisibility? get followingVisibility;
   @override
   bool get twoFactorEnabled;

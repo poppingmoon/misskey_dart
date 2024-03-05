@@ -18,7 +18,8 @@ _$AntennaImpl _$$AntennaImplFromJson(Map<String, dynamic> json) =>
       excludeKeywords: (json['excludeKeywords'] as List<dynamic>)
           .map((e) => (e as List<dynamic>).map((e) => e as String).toList())
           .toList(),
-      src: $enumDecode(_$AntennaSourceEnumMap, json['src']),
+      src: $enumDecodeNullable(_$AntennaSourceEnumMap, json['src'],
+          unknownValue: JsonKey.nullForUndefinedEnumValue),
       userListId: json['userListId'] as String?,
       users: (json['users'] as List<dynamic>).map((e) => e as String).toList(),
       caseSensitive: json['caseSensitive'] as bool,
@@ -37,7 +38,7 @@ Map<String, dynamic> _$$AntennaImplToJson(_$AntennaImpl instance) =>
       'name': instance.name,
       'keywords': instance.keywords,
       'excludeKeywords': instance.excludeKeywords,
-      'src': _$AntennaSourceEnumMap[instance.src]!,
+      'src': _$AntennaSourceEnumMap[instance.src],
       'userListId': instance.userListId,
       'users': instance.users,
       'caseSensitive': instance.caseSensitive,

@@ -16,8 +16,9 @@ _$NoteImpl _$$NoteImplFromJson(Map<String, dynamic> json) => _$NoteImpl(
       cw: json['cw'] as String?,
       user: UserLite.fromJson(json['user'] as Map<String, dynamic>),
       userId: json['userId'] as String,
-      visibility: const NoteVisibilityJsonConverter()
-          .fromJson(json['visibility'] as String),
+      visibility: $enumDecodeNullable(
+          _$NoteVisibilityEnumMap, json['visibility'],
+          unknownValue: JsonKey.nullForUndefinedEnumValue),
       localOnly: json['localOnly'] as bool,
       renoteCount: json['renoteCount'] as int,
       repliesCount: json['repliesCount'] as int,
@@ -35,7 +36,8 @@ _$NoteImpl _$$NoteImplFromJson(Map<String, dynamic> json) => _$NoteImpl(
       renoteId: json['renoteId'] as String?,
       channelId: json['channelId'] as String?,
       reactionAcceptance: $enumDecodeNullable(
-          _$ReactionAcceptanceEnumMap, json['reactionAcceptance']),
+          _$ReactionAcceptanceEnumMap, json['reactionAcceptance'],
+          unknownValue: JsonKey.nullForUndefinedEnumValue),
       renote: json['renote'] == null
           ? null
           : Note.fromJson(json['renote'] as Map<String, dynamic>),
@@ -78,8 +80,7 @@ Map<String, dynamic> _$$NoteImplToJson(_$NoteImpl instance) =>
       'cw': instance.cw,
       'user': instance.user.toJson(),
       'userId': instance.userId,
-      'visibility':
-          const NoteVisibilityJsonConverter().toJson(instance.visibility),
+      'visibility': _$NoteVisibilityEnumMap[instance.visibility],
       'localOnly': instance.localOnly,
       'renoteCount': instance.renoteCount,
       'repliesCount': instance.repliesCount,
@@ -111,6 +112,13 @@ Value? _$JsonConverterFromJson<Json, Value>(
   Value? Function(Json json) fromJson,
 ) =>
     json == null ? null : fromJson(json as Json);
+
+const _$NoteVisibilityEnumMap = {
+  NoteVisibility.public: 'public',
+  NoteVisibility.home: 'home',
+  NoteVisibility.followers: 'followers',
+  NoteVisibility.specified: 'specified',
+};
 
 const _$ReactionAcceptanceEnumMap = {
   ReactionAcceptance.likeOnlyForRemote: 'likeOnlyForRemote',

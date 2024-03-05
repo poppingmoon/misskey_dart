@@ -10,7 +10,8 @@ _$NoteUpdatedEventImpl _$$NoteUpdatedEventImplFromJson(
         Map<String, dynamic> json) =>
     _$NoteUpdatedEventImpl(
       id: json['id'] as String,
-      type: $enumDecode(_$NoteUpdatedEventTypeEnumMap, json['type']),
+      type: $enumDecodeNullable(_$NoteUpdatedEventTypeEnumMap, json['type'],
+          unknownValue: JsonKey.nullForUndefinedEnumValue),
       body: json['body'] as Map<String, dynamic>,
     );
 
@@ -18,7 +19,7 @@ Map<String, dynamic> _$$NoteUpdatedEventImplToJson(
         _$NoteUpdatedEventImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'type': _$NoteUpdatedEventTypeEnumMap[instance.type]!,
+      'type': _$NoteUpdatedEventTypeEnumMap[instance.type],
       'body': instance.body,
     };
 

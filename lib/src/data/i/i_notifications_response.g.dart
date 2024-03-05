@@ -12,7 +12,8 @@ _$INotificationsResponseImpl _$$INotificationsResponseImplFromJson(
       id: json['id'] as String,
       createdAt:
           const DateTimeConverter().fromJson(json['createdAt'] as String),
-      type: $enumDecode(_$NotificationTypeEnumMap, json['type']),
+      type: $enumDecodeNullable(_$NotificationTypeEnumMap, json['type'],
+          unknownValue: JsonKey.nullForUndefinedEnumValue),
       noteId: json['noteId'] as String?,
       followRequestId: json['followRequestId'] as String?,
       reaction: json['reaction'] as String?,
@@ -47,7 +48,7 @@ Map<String, dynamic> _$$INotificationsResponseImplToJson(
     <String, dynamic>{
       'id': instance.id,
       'createdAt': const DateTimeConverter().toJson(instance.createdAt),
-      'type': _$NotificationTypeEnumMap[instance.type]!,
+      'type': _$NotificationTypeEnumMap[instance.type],
       'noteId': instance.noteId,
       'followRequestId': instance.followRequestId,
       'reaction': instance.reaction,

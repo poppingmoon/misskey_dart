@@ -25,8 +25,10 @@ mixin _$Antenna {
   DateTime get createdAt => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   List<List<String>> get keywords => throw _privateConstructorUsedError;
-  List<List<String>> get excludeKeywords => throw _privateConstructorUsedError;
-  AntennaSource get src => throw _privateConstructorUsedError;
+  List<List<String>> get excludeKeywords =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  AntennaSource? get src => throw _privateConstructorUsedError;
   String? get userListId => throw _privateConstructorUsedError;
   List<String> get users => throw _privateConstructorUsedError;
   bool get caseSensitive => throw _privateConstructorUsedError;
@@ -53,7 +55,8 @@ abstract class $AntennaCopyWith<$Res> {
       String name,
       List<List<String>> keywords,
       List<List<String>> excludeKeywords,
-      AntennaSource src,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      AntennaSource? src,
       String? userListId,
       List<String> users,
       bool caseSensitive,
@@ -83,7 +86,7 @@ class _$AntennaCopyWithImpl<$Res, $Val extends Antenna>
     Object? name = null,
     Object? keywords = null,
     Object? excludeKeywords = null,
-    Object? src = null,
+    Object? src = freezed,
     Object? userListId = freezed,
     Object? users = null,
     Object? caseSensitive = null,
@@ -115,10 +118,10 @@ class _$AntennaCopyWithImpl<$Res, $Val extends Antenna>
           ? _value.excludeKeywords
           : excludeKeywords // ignore: cast_nullable_to_non_nullable
               as List<List<String>>,
-      src: null == src
+      src: freezed == src
           ? _value.src
           : src // ignore: cast_nullable_to_non_nullable
-              as AntennaSource,
+              as AntennaSource?,
       userListId: freezed == userListId
           ? _value.userListId
           : userListId // ignore: cast_nullable_to_non_nullable
@@ -172,7 +175,8 @@ abstract class _$$AntennaImplCopyWith<$Res> implements $AntennaCopyWith<$Res> {
       String name,
       List<List<String>> keywords,
       List<List<String>> excludeKeywords,
-      AntennaSource src,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      AntennaSource? src,
       String? userListId,
       List<String> users,
       bool caseSensitive,
@@ -200,7 +204,7 @@ class __$$AntennaImplCopyWithImpl<$Res>
     Object? name = null,
     Object? keywords = null,
     Object? excludeKeywords = null,
-    Object? src = null,
+    Object? src = freezed,
     Object? userListId = freezed,
     Object? users = null,
     Object? caseSensitive = null,
@@ -232,10 +236,10 @@ class __$$AntennaImplCopyWithImpl<$Res>
           ? _value._excludeKeywords
           : excludeKeywords // ignore: cast_nullable_to_non_nullable
               as List<List<String>>,
-      src: null == src
+      src: freezed == src
           ? _value.src
           : src // ignore: cast_nullable_to_non_nullable
-              as AntennaSource,
+              as AntennaSource?,
       userListId: freezed == userListId
           ? _value.userListId
           : userListId // ignore: cast_nullable_to_non_nullable
@@ -285,7 +289,7 @@ class _$AntennaImpl implements _Antenna {
       required this.name,
       required final List<List<String>> keywords,
       required final List<List<String>> excludeKeywords,
-      required this.src,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.src,
       this.userListId,
       required final List<String> users,
       required this.caseSensitive,
@@ -325,8 +329,10 @@ class _$AntennaImpl implements _Antenna {
     return EqualUnmodifiableListView(_excludeKeywords);
   }
 
+// ignore: invalid_annotation_target
   @override
-  final AntennaSource src;
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final AntennaSource? src;
   @override
   final String? userListId;
   final List<String> _users;
@@ -429,7 +435,8 @@ abstract class _Antenna implements Antenna {
       required final String name,
       required final List<List<String>> keywords,
       required final List<List<String>> excludeKeywords,
-      required final AntennaSource src,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      final AntennaSource? src,
       final String? userListId,
       required final List<String> users,
       required final bool caseSensitive,
@@ -453,8 +460,9 @@ abstract class _Antenna implements Antenna {
   List<List<String>> get keywords;
   @override
   List<List<String>> get excludeKeywords;
-  @override
-  AntennaSource get src;
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  AntennaSource? get src;
   @override
   String? get userListId;
   @override

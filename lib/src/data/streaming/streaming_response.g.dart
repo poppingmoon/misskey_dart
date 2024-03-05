@@ -9,14 +9,15 @@ part of 'streaming_response.dart';
 _$StreamingResponseImpl _$$StreamingResponseImplFromJson(
         Map<String, dynamic> json) =>
     _$StreamingResponseImpl(
-      type: $enumDecode(_$StreamingResponseTypeEnumMap, json['type']),
+      type: $enumDecodeNullable(_$StreamingResponseTypeEnumMap, json['type'],
+          unknownValue: JsonKey.nullForUndefinedEnumValue),
       body: json['body'] as Map<String, dynamic>,
     );
 
 Map<String, dynamic> _$$StreamingResponseImplToJson(
         _$StreamingResponseImpl instance) =>
     <String, dynamic>{
-      'type': _$StreamingResponseTypeEnumMap[instance.type]!,
+      'type': _$StreamingResponseTypeEnumMap[instance.type],
       'body': instance.body,
     };
 

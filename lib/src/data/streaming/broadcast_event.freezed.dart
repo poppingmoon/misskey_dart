@@ -20,8 +20,9 @@ BroadcastEvent _$BroadcastEventFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$BroadcastEvent {
-  @BroadcastEventTypeJsonConverter()
-  BroadcastEventType get type => throw _privateConstructorUsedError;
+// ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  BroadcastEventType? get type => throw _privateConstructorUsedError;
   Map<String, dynamic> get body => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -37,7 +38,8 @@ abstract class $BroadcastEventCopyWith<$Res> {
       _$BroadcastEventCopyWithImpl<$Res, BroadcastEvent>;
   @useResult
   $Res call(
-      {@BroadcastEventTypeJsonConverter() BroadcastEventType type,
+      {@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      BroadcastEventType? type,
       Map<String, dynamic> body});
 }
 
@@ -54,14 +56,14 @@ class _$BroadcastEventCopyWithImpl<$Res, $Val extends BroadcastEvent>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? type = null,
+    Object? type = freezed,
     Object? body = null,
   }) {
     return _then(_value.copyWith(
-      type: null == type
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as BroadcastEventType,
+              as BroadcastEventType?,
       body: null == body
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
@@ -79,7 +81,8 @@ abstract class _$$BroadcastResponseImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@BroadcastEventTypeJsonConverter() BroadcastEventType type,
+      {@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      BroadcastEventType? type,
       Map<String, dynamic> body});
 }
 
@@ -94,14 +97,14 @@ class __$$BroadcastResponseImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? type = null,
+    Object? type = freezed,
     Object? body = null,
   }) {
     return _then(_$BroadcastResponseImpl(
-      type: null == type
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as BroadcastEventType,
+              as BroadcastEventType?,
       body: null == body
           ? _value._body
           : body // ignore: cast_nullable_to_non_nullable
@@ -114,16 +117,17 @@ class __$$BroadcastResponseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$BroadcastResponseImpl implements _BroadcastResponse {
   const _$BroadcastResponseImpl(
-      {@BroadcastEventTypeJsonConverter() required this.type,
+      {@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type,
       required final Map<String, dynamic> body})
       : _body = body;
 
   factory _$BroadcastResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$BroadcastResponseImplFromJson(json);
 
+// ignore: invalid_annotation_target
   @override
-  @BroadcastEventTypeJsonConverter()
-  final BroadcastEventType type;
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final BroadcastEventType? type;
   final Map<String, dynamic> _body;
   @override
   Map<String, dynamic> get body {
@@ -168,16 +172,16 @@ class _$BroadcastResponseImpl implements _BroadcastResponse {
 
 abstract class _BroadcastResponse implements BroadcastEvent {
   const factory _BroadcastResponse(
-      {@BroadcastEventTypeJsonConverter()
-      required final BroadcastEventType type,
+      {@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      final BroadcastEventType? type,
       required final Map<String, dynamic> body}) = _$BroadcastResponseImpl;
 
   factory _BroadcastResponse.fromJson(Map<String, dynamic> json) =
       _$BroadcastResponseImpl.fromJson;
 
-  @override
-  @BroadcastEventTypeJsonConverter()
-  BroadcastEventType get type;
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  BroadcastEventType? get type;
   @override
   Map<String, dynamic> get body;
   @override

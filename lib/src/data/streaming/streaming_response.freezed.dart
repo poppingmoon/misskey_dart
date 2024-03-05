@@ -20,8 +20,9 @@ StreamingResponse _$StreamingResponseFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$StreamingResponse {
-  @StreamingResponseTypeJsonConverter()
-  StreamingResponseType get type => throw _privateConstructorUsedError;
+// ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  StreamingResponseType? get type => throw _privateConstructorUsedError;
   Map<String, dynamic> get body => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -37,7 +38,8 @@ abstract class $StreamingResponseCopyWith<$Res> {
       _$StreamingResponseCopyWithImpl<$Res, StreamingResponse>;
   @useResult
   $Res call(
-      {@StreamingResponseTypeJsonConverter() StreamingResponseType type,
+      {@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      StreamingResponseType? type,
       Map<String, dynamic> body});
 }
 
@@ -54,14 +56,14 @@ class _$StreamingResponseCopyWithImpl<$Res, $Val extends StreamingResponse>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? type = null,
+    Object? type = freezed,
     Object? body = null,
   }) {
     return _then(_value.copyWith(
-      type: null == type
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as StreamingResponseType,
+              as StreamingResponseType?,
       body: null == body
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
@@ -79,7 +81,8 @@ abstract class _$$StreamingResponseImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@StreamingResponseTypeJsonConverter() StreamingResponseType type,
+      {@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      StreamingResponseType? type,
       Map<String, dynamic> body});
 }
 
@@ -94,14 +97,14 @@ class __$$StreamingResponseImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? type = null,
+    Object? type = freezed,
     Object? body = null,
   }) {
     return _then(_$StreamingResponseImpl(
-      type: null == type
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as StreamingResponseType,
+              as StreamingResponseType?,
       body: null == body
           ? _value._body
           : body // ignore: cast_nullable_to_non_nullable
@@ -114,16 +117,17 @@ class __$$StreamingResponseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$StreamingResponseImpl implements _StreamingResponse {
   const _$StreamingResponseImpl(
-      {@StreamingResponseTypeJsonConverter() required this.type,
+      {@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type,
       required final Map<String, dynamic> body})
       : _body = body;
 
   factory _$StreamingResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$StreamingResponseImplFromJson(json);
 
+// ignore: invalid_annotation_target
   @override
-  @StreamingResponseTypeJsonConverter()
-  final StreamingResponseType type;
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final StreamingResponseType? type;
   final Map<String, dynamic> _body;
   @override
   Map<String, dynamic> get body {
@@ -168,16 +172,16 @@ class _$StreamingResponseImpl implements _StreamingResponse {
 
 abstract class _StreamingResponse implements StreamingResponse {
   const factory _StreamingResponse(
-      {@StreamingResponseTypeJsonConverter()
-      required final StreamingResponseType type,
+      {@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      final StreamingResponseType? type,
       required final Map<String, dynamic> body}) = _$StreamingResponseImpl;
 
   factory _StreamingResponse.fromJson(Map<String, dynamic> json) =
       _$StreamingResponseImpl.fromJson;
 
-  @override
-  @StreamingResponseTypeJsonConverter()
-  StreamingResponseType get type;
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  StreamingResponseType? get type;
   @override
   Map<String, dynamic> get body;
   @override

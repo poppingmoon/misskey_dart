@@ -16,7 +16,11 @@ class AnnouncementsResponse with _$AnnouncementsResponse {
     required String text,
     required String title,
     @UriConverter() Uri? imageUrl,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     AnnouncementIconType? icon,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     AnnouncementDisplayType? display,
     bool? needConfirmationToRead,
     bool? forYou,
