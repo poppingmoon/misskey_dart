@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:developer';
 
+import 'package:dio/dio.dart';
 import 'package:misskey_dart/misskey_dart.dart';
 import 'package:misskey_dart/src/data/ping_response.dart';
 import 'package:misskey_dart/src/data/stats_response.dart';
@@ -40,16 +41,18 @@ class Misskey {
   late final MisskeyBubbleGame bubbleGame;
 
   Misskey({
-    required this.token,
+    this.token,
     required this.host,
     String? apiUrl,
     String? streamingUrl,
+    Dio? dio,
     this.socketConnectionTimeout,
   }) {
     apiService = ApiService(
       token: token,
       host: host,
       apiUrl: apiUrl,
+      dio: dio,
     );
     streamingService = StreamingService(
       token: token,

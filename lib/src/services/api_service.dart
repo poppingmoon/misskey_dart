@@ -5,23 +5,24 @@ import 'dart:typed_data';
 import 'package:dio/dio.dart';
 
 class ApiService {
-  final Dio dio = Dio();
+  final Dio dio;
   final String? token;
   final String host;
   final String? apiUrl;
 
   ApiService({
-    required this.token,
+    this.token,
     required this.host,
     this.apiUrl,
-  }) {
-    dio.options = BaseOptions(
-      method: "post",
-      baseUrl: apiUrl ?? "${Uri.https(host)}/api/",
-      contentType: "application/json",
-    );
-    dio.interceptors.add(LogInterceptor(requestBody: true, responseBody: true));
-  }
+    Dio? dio,
+  }) : dio = (dio ?? Dio())
+          ..options = BaseOptions(
+            method: "post",
+            baseUrl: apiUrl ?? "${Uri.https(host)}/api/",
+            contentType: "application/json",
+          )
+          ..interceptors
+              .add(LogInterceptor(requestBody: true, responseBody: true));
 
   Future<T> post<T>(
     String path,
