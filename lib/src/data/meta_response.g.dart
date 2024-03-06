@@ -30,7 +30,7 @@ _$MetaResponseImpl _$$MetaResponseImplFromJson(Map<String, dynamic> json) =>
                   v, const NullableUriConverter().fromJson)),
           repositoryUrl: $checkedConvert('repositoryUrl',
               (v) => const UriConverter().fromJson(v as String)),
-          feedbackUrl: $checkedConvert('feedbackUrl', (v) => v as String),
+          feedbackUrl: $checkedConvert('feedbackUrl', (v) => v as String?),
           defaultDarkTheme:
               $checkedConvert('defaultDarkTheme', (v) => v as String?),
           defaultLightTheme:
@@ -38,8 +38,8 @@ _$MetaResponseImpl _$$MetaResponseImplFromJson(Map<String, dynamic> json) =>
           disableRegistration:
               $checkedConvert('disableRegistration', (v) => v as bool),
           emailRequiredForSignup:
-              $checkedConvert('emailRequiredForSignup', (v) => v as bool),
-          enableHcaptcha: $checkedConvert('enableHcaptcha', (v) => v as bool),
+              $checkedConvert('emailRequiredForSignup', (v) => v as bool?),
+          enableHcaptcha: $checkedConvert('enableHcaptcha', (v) => v as bool?),
           hcaptchaSiteKey:
               $checkedConvert('hcaptchaSiteKey', (v) => v as String?),
           enableRecaptcha:
@@ -88,9 +88,11 @@ _$MetaResponseImpl _$$MetaResponseImplFromJson(Map<String, dynamic> json) =>
               $checkedConvert('maxNoteTextLength', (v) => v as int),
           ads: $checkedConvert(
               'ads',
-              (v) => (v as List<dynamic>)
-                  .map((e) => MetaAd.fromJson(e as Map<String, dynamic>))
-                  .toList()),
+              (v) =>
+                  (v as List<dynamic>?)
+                      ?.map((e) => MetaAd.fromJson(e as Map<String, dynamic>))
+                      .toList() ??
+                  const []),
           serverRules: $checkedConvert(
               'serverRules',
               (v) =>
@@ -213,15 +215,15 @@ _$MetaFeatureImpl _$$MetaFeatureImplFromJson(Map<String, dynamic> json) =>
       json,
       ($checkedConvert) {
         final val = _$MetaFeatureImpl(
-          registration: $checkedConvert('registration', (v) => v as bool),
+          registration: $checkedConvert('registration', (v) => v as bool?),
           emailRequiredForSignup:
-              $checkedConvert('emailRequiredForSignup', (v) => v as bool),
-          hcaptcha: $checkedConvert('hcaptcha', (v) => v as bool),
-          recaptcha: $checkedConvert('recaptcha', (v) => v as bool),
-          turnstile: $checkedConvert('turnstile', (v) => v as bool),
-          objectStorage: $checkedConvert('objectStorage', (v) => v as bool),
-          serviceWorker: $checkedConvert('serviceWorker', (v) => v as bool),
-          miauth: $checkedConvert('miauth', (v) => v as bool),
+              $checkedConvert('emailRequiredForSignup', (v) => v as bool?),
+          hcaptcha: $checkedConvert('hcaptcha', (v) => v as bool?),
+          recaptcha: $checkedConvert('recaptcha', (v) => v as bool?),
+          turnstile: $checkedConvert('turnstile', (v) => v as bool?),
+          objectStorage: $checkedConvert('objectStorage', (v) => v as bool?),
+          serviceWorker: $checkedConvert('serviceWorker', (v) => v as bool?),
+          miauth: $checkedConvert('miauth', (v) => v as bool?),
         );
         return val;
       },

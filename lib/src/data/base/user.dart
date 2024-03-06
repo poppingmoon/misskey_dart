@@ -2,6 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:misskey_dart/misskey_dart.dart';
 import 'package:misskey_dart/src/converters/date_time_converter.dart';
 import 'package:misskey_dart/src/converters/emojis_converter.dart';
+import 'package:misskey_dart/src/converters/int_converter.dart';
 import 'package:misskey_dart/src/converters/mute_words_converter.dart';
 import 'package:misskey_dart/src/converters/uri_converter.dart';
 
@@ -150,14 +151,17 @@ class UserDetailedNotMe with _$UserDetailedNotMe implements UserDetailed {
     String? lang,
     List<UserField>? fields,
     @Default([]) List<String> verifiedLinks,
-    required int followersCount,
-    required int followingCount,
+    // CherryPick 4.3.0 or newer returns String if the count count is not visible
+    @IntConverter() required int followersCount,
+    // CherryPick 4.3.0 or newer returns String if the count count is not visible
+    @IntConverter() required int followingCount,
     required int notesCount,
     List<String>? pinnedNoteIds,
     List<Note>? pinnedNotes,
     String? pinnedPageId,
     Map<String, dynamic>? pinnedPage,
-    required bool publicReactions,
+    // Added in Misskey 12.93.0
+    @Default(false) bool publicReactions,
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     @Deprecated("removed at 2023.12.0")
@@ -169,8 +173,10 @@ class UserDetailedNotMe with _$UserDetailedNotMe implements UserDetailed {
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     FFVisibility? followingVisibility,
     required bool twoFactorEnabled,
-    required bool usePasswordLessLogin,
-    required bool securityKeys,
+    // Added in Misskey 11.25.0
+    @Default(false) bool usePasswordLessLogin,
+    // Added in Misskey 11.24.0
+    @Default(false) bool securityKeys,
     List<UserRole>? roles,
     String? memo,
     String? moderationNote,
@@ -218,14 +224,17 @@ class UserDetailedNotMeWithRelations
     String? lang,
     List<UserField>? fields,
     @Default([]) List<String> verifiedLinks,
-    required int followersCount,
-    required int followingCount,
+    // CherryPick 4.3.0 or newer returns String if the count is not visible
+    @IntConverter() required int followersCount,
+    // CherryPick 4.3.0 or newer returns String if the count is not visible
+    @IntConverter() required int followingCount,
     required int notesCount,
     List<String>? pinnedNoteIds,
     List<Note>? pinnedNotes,
     String? pinnedPageId,
     Map<String, dynamic>? pinnedPage,
-    required bool publicReactions,
+    // Added in Misskey 12.93.0
+    @Default(false) bool publicReactions,
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     @Deprecated("removed at 2023.12.0")
@@ -237,8 +246,10 @@ class UserDetailedNotMeWithRelations
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     FFVisibility? followingVisibility,
     required bool twoFactorEnabled,
-    required bool usePasswordLessLogin,
-    required bool securityKeys,
+    // Added in Misskey 11.25.0
+    @Default(false) bool usePasswordLessLogin,
+    // Added in Misskey 11.24.0
+    @Default(false) bool securityKeys,
     List<UserRole>? roles,
     String? memo,
     String? moderationNote,
@@ -249,7 +260,8 @@ class UserDetailedNotMeWithRelations
     required bool isBlocking,
     required bool isBlocked,
     required bool isMuted,
-    required bool isRenoteMuted,
+    // Added in Misskey 13.10.0
+    @Default(false) bool isRenoteMuted,
     Notify? notify,
     bool? withReplies,
   }) = _UserDetailedNotMeWithRelations;
@@ -294,14 +306,17 @@ class MeDetailed with _$MeDetailed implements UserDetailed {
     String? lang,
     List<UserField>? fields,
     @Default([]) List<String> verifiedLinks,
-    required int followersCount,
-    required int followingCount,
+    // CherryPick 4.3.0 or newer returns String if the count is not visible
+    @IntConverter() required int followersCount,
+    // CherryPick 4.3.0 or newer returns String if the count is not visible
+    @IntConverter() required int followingCount,
     required int notesCount,
     List<String>? pinnedNoteIds,
     List<Note>? pinnedNotes,
     String? pinnedPageId,
     Map<String, dynamic>? pinnedPage,
-    required bool publicReactions,
+    // Added in Misskey 12.93.0
+    @Default(false) bool publicReactions,
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     @Deprecated("removed at 2023.12.0")
@@ -313,8 +328,10 @@ class MeDetailed with _$MeDetailed implements UserDetailed {
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     FFVisibility? followingVisibility,
     required bool twoFactorEnabled,
-    required bool usePasswordLessLogin,
-    required bool securityKeys,
+    // Added in Misskey 11.25.0
+    @Default(false) bool usePasswordLessLogin,
+    // Added in Misskey 11.24.0
+    @Default(false) bool securityKeys,
     List<UserRole>? roles,
     String? memo,
     String? moderationNote,
@@ -322,38 +339,56 @@ class MeDetailed with _$MeDetailed implements UserDetailed {
     String? bannerId,
     required bool isModerator,
     required bool isAdmin,
-    required bool injectFeaturedNote,
-    required bool receiveAnnouncementEmail,
+    // Added in Misskey 12.13.0
+    @Default(false) bool injectFeaturedNote,
+    // Added in Misskey 12.69.0
+    @Default(false) bool receiveAnnouncementEmail,
     required bool alwaysMarkNsfw,
-    required bool autoSensitive,
+    // Added in Misskey 12.112.0
+    @Default(false) bool autoSensitive,
     required bool carefulBot,
     required bool autoAcceptFollowed,
     bool? preventAiLearning,
-    required bool noCrawle,
-    required bool isExplorable,
-    required bool isDeleted,
+    // Added in Misskey 12.60.0
+    @Default(false) bool noCrawle,
+    // Added in Misskey 12.63.0
+    @Default(false) bool isExplorable,
+    // Added in Misskey 12.89.0
+    @Default(false) bool isDeleted,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     TwoFactorBackupCodesStock? twoFactorBackupCodesStock,
-    required bool hideOnlineStatus,
+    // Added in Misskey 12.77.0
+    @Default(false) bool hideOnlineStatus,
     required bool hasUnreadSpecifiedNotes,
     required bool hasUnreadMentions,
-    required bool hasUnreadAnnouncement,
-    required bool hasUnreadAntenna,
-    required bool hasUnreadChannel,
+    // Added in Misskey 12.0.0
+    @Default(false) bool hasUnreadAnnouncement,
+    // Added in Misskey 12.0.0
+    @Default(false) bool hasUnreadAntenna,
+    // Added in Misskey 12.47.0
+    @Default(false) bool hasUnreadChannel,
     required bool hasUnreadNotification,
-    required bool hasPendingReceivedFollowRequest,
+    // Added in Misskey 12.11.0
+    @Default(false) bool hasPendingReceivedFollowRequest,
     int? unreadNotificationsCount,
     @Default([]) List<AnnouncementsResponse> unreadAnnouncements,
-    @MuteWordsConverter() required List<MuteWord> mutedWords,
+    @MuteWordsConverter() @Default([]) List<MuteWord> mutedWords,
     @MuteWordsConverter() @Default([]) List<MuteWord> hardMutedWords,
-    required List<String> mutedInstances,
+    // Added in Misskey 12.99.0
+    @Default([]) List<String> mutedInstances,
     @Deprecated("Deprecated in Misskey 2023.9.2")
     List<String>? mutingNotificationTypes,
     @Default(NotificationRecieveConfigs())
     NotificationRecieveConfigs notificationRecieveConfig,
-    required List<String> emailNotificationTypes,
-    required List<UserAchievement> achievements,
-    required int loggedInDays,
-    required UserPolicies policies,
+    // Added in Misskey 12.70.0
+    @Default([]) List<String> emailNotificationTypes,
+    // Added in Misskey 13.1.0
+    @Default([]) List<UserAchievement> achievements,
+    // Added in Misskey 13.1.0
+    int? loggedInDays,
+    // Added in Misskey 13.0.0
+    UserPolicies? policies,
   }) = _MeDetailed;
 
   factory MeDetailed.fromJson(Map<String, Object?> json) =>

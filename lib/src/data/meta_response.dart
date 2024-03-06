@@ -18,16 +18,12 @@ class MetaResponse with _$MetaResponse {
     required List<String> langs,
     @NullableUriConverter() Uri? tosUrl,
     @UriConverter() required Uri repositoryUrl,
-    required String feedbackUrl,
+    String? feedbackUrl,
     String? defaultDarkTheme,
     String? defaultLightTheme,
     required bool disableRegistration,
-    //required bool disableLocalTimeline,
-    //required bool disableGlobalTimeline,
-    //required int driveCapacityPerLocalUserMb,
-    //required int driveCapacityPerRemoteUserMb,
-    required bool emailRequiredForSignup,
-    required bool enableHcaptcha,
+    bool? emailRequiredForSignup,
+    bool? enableHcaptcha,
     String? hcaptchaSiteKey,
     bool? enableRecaptcha,
     String? recaptchaSiteKey,
@@ -45,14 +41,11 @@ class MetaResponse with _$MetaResponse {
     @NullableUriConverter() Uri? privacyPolicyUrl,
     required int maxNoteTextLength,
     //required List<MetaEmoji> emojis,
-    required List<MetaAd> ads,
+    @Default([]) List<MetaAd> ads,
     @Default([]) List<String> serverRules,
     UserPolicies? policies,
     bool? requireSetup,
     bool? enableEmail,
-    //required bool enableTwitterIntegration,
-    //required bool enableGithubIntegration,
-    //required bool enableDiscordIntegration,
     bool? enableServiceWorker,
     bool? translatorAvailable,
     String? proxyAccountName,
@@ -64,20 +57,6 @@ class MetaResponse with _$MetaResponse {
   factory MetaResponse.fromJson(Map<String, Object?> json) =>
       _$MetaResponseFromJson(json);
 }
-
-/*@freezed
-class MetaEmoji with _$MetaEmoji {
-  const factory MetaEmoji({
-    required String id,
-    required List<String> aliases,
-    String? category,
-    String? host,
-    @UriConverter()
-    required Uri url,
-  }) = _MetaEmoji;
-  factory MetaEmoji.fromJson(Map<String, Object?> json)
-      => _$MetaEmojiFromJson(json);
-}*/
 
 @freezed
 class MetaAd with _$MetaAd {
@@ -94,20 +73,14 @@ class MetaAd with _$MetaAd {
 @freezed
 class MetaFeature with _$MetaFeature {
   const factory MetaFeature({
-    required bool registration,
-    //required bool localTimeLine,
-    //required bool globalTimeLine,
-    required bool emailRequiredForSignup,
-    // required bool elasticsearch,
-    required bool hcaptcha,
-    required bool recaptcha,
-    required bool turnstile,
-    required bool objectStorage,
-    //required bool twitter,
-    //required bool github,
-    //required bool discord,
-    required bool serviceWorker,
-    required bool miauth,
+    bool? registration,
+    bool? emailRequiredForSignup,
+    bool? hcaptcha,
+    bool? recaptcha,
+    bool? turnstile,
+    bool? objectStorage,
+    bool? serviceWorker,
+    bool? miauth,
   }) = _MetaFeature;
   factory MetaFeature.fromJson(Map<String, Object?> json) =>
       _$MetaFeatureFromJson(json);

@@ -33,16 +33,12 @@ mixin _$MetaResponse {
   Uri? get tosUrl => throw _privateConstructorUsedError;
   @UriConverter()
   Uri get repositoryUrl => throw _privateConstructorUsedError;
-  String get feedbackUrl => throw _privateConstructorUsedError;
+  String? get feedbackUrl => throw _privateConstructorUsedError;
   String? get defaultDarkTheme => throw _privateConstructorUsedError;
   String? get defaultLightTheme => throw _privateConstructorUsedError;
-  bool get disableRegistration =>
-      throw _privateConstructorUsedError; //required bool disableLocalTimeline,
-//required bool disableGlobalTimeline,
-//required int driveCapacityPerLocalUserMb,
-//required int driveCapacityPerRemoteUserMb,
-  bool get emailRequiredForSignup => throw _privateConstructorUsedError;
-  bool get enableHcaptcha => throw _privateConstructorUsedError;
+  bool get disableRegistration => throw _privateConstructorUsedError;
+  bool? get emailRequiredForSignup => throw _privateConstructorUsedError;
+  bool? get enableHcaptcha => throw _privateConstructorUsedError;
   String? get hcaptchaSiteKey => throw _privateConstructorUsedError;
   bool? get enableRecaptcha => throw _privateConstructorUsedError;
   String? get recaptchaSiteKey => throw _privateConstructorUsedError;
@@ -72,10 +68,7 @@ mixin _$MetaResponse {
   List<String> get serverRules => throw _privateConstructorUsedError;
   UserPolicies? get policies => throw _privateConstructorUsedError;
   bool? get requireSetup => throw _privateConstructorUsedError;
-  bool? get enableEmail =>
-      throw _privateConstructorUsedError; //required bool enableTwitterIntegration,
-//required bool enableGithubIntegration,
-//required bool enableDiscordIntegration,
+  bool? get enableEmail => throw _privateConstructorUsedError;
   bool? get enableServiceWorker => throw _privateConstructorUsedError;
   bool? get translatorAvailable => throw _privateConstructorUsedError;
   String? get proxyAccountName => throw _privateConstructorUsedError;
@@ -106,12 +99,12 @@ abstract class $MetaResponseCopyWith<$Res> {
       List<String> langs,
       @NullableUriConverter() Uri? tosUrl,
       @UriConverter() Uri repositoryUrl,
-      String feedbackUrl,
+      String? feedbackUrl,
       String? defaultDarkTheme,
       String? defaultLightTheme,
       bool disableRegistration,
-      bool emailRequiredForSignup,
-      bool enableHcaptcha,
+      bool? emailRequiredForSignup,
+      bool? enableHcaptcha,
       String? hcaptchaSiteKey,
       bool? enableRecaptcha,
       String? recaptchaSiteKey,
@@ -167,12 +160,12 @@ class _$MetaResponseCopyWithImpl<$Res, $Val extends MetaResponse>
     Object? langs = null,
     Object? tosUrl = freezed,
     Object? repositoryUrl = null,
-    Object? feedbackUrl = null,
+    Object? feedbackUrl = freezed,
     Object? defaultDarkTheme = freezed,
     Object? defaultLightTheme = freezed,
     Object? disableRegistration = null,
-    Object? emailRequiredForSignup = null,
-    Object? enableHcaptcha = null,
+    Object? emailRequiredForSignup = freezed,
+    Object? enableHcaptcha = freezed,
     Object? hcaptchaSiteKey = freezed,
     Object? enableRecaptcha = freezed,
     Object? recaptchaSiteKey = freezed,
@@ -242,10 +235,10 @@ class _$MetaResponseCopyWithImpl<$Res, $Val extends MetaResponse>
           ? _value.repositoryUrl
           : repositoryUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      feedbackUrl: null == feedbackUrl
+      feedbackUrl: freezed == feedbackUrl
           ? _value.feedbackUrl
           : feedbackUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       defaultDarkTheme: freezed == defaultDarkTheme
           ? _value.defaultDarkTheme
           : defaultDarkTheme // ignore: cast_nullable_to_non_nullable
@@ -258,14 +251,14 @@ class _$MetaResponseCopyWithImpl<$Res, $Val extends MetaResponse>
           ? _value.disableRegistration
           : disableRegistration // ignore: cast_nullable_to_non_nullable
               as bool,
-      emailRequiredForSignup: null == emailRequiredForSignup
+      emailRequiredForSignup: freezed == emailRequiredForSignup
           ? _value.emailRequiredForSignup
           : emailRequiredForSignup // ignore: cast_nullable_to_non_nullable
-              as bool,
-      enableHcaptcha: null == enableHcaptcha
+              as bool?,
+      enableHcaptcha: freezed == enableHcaptcha
           ? _value.enableHcaptcha
           : enableHcaptcha // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       hcaptchaSiteKey: freezed == hcaptchaSiteKey
           ? _value.hcaptchaSiteKey
           : hcaptchaSiteKey // ignore: cast_nullable_to_non_nullable
@@ -421,12 +414,12 @@ abstract class _$$MetaResponseImplCopyWith<$Res>
       List<String> langs,
       @NullableUriConverter() Uri? tosUrl,
       @UriConverter() Uri repositoryUrl,
-      String feedbackUrl,
+      String? feedbackUrl,
       String? defaultDarkTheme,
       String? defaultLightTheme,
       bool disableRegistration,
-      bool emailRequiredForSignup,
-      bool enableHcaptcha,
+      bool? emailRequiredForSignup,
+      bool? enableHcaptcha,
       String? hcaptchaSiteKey,
       bool? enableRecaptcha,
       String? recaptchaSiteKey,
@@ -482,12 +475,12 @@ class __$$MetaResponseImplCopyWithImpl<$Res>
     Object? langs = null,
     Object? tosUrl = freezed,
     Object? repositoryUrl = null,
-    Object? feedbackUrl = null,
+    Object? feedbackUrl = freezed,
     Object? defaultDarkTheme = freezed,
     Object? defaultLightTheme = freezed,
     Object? disableRegistration = null,
-    Object? emailRequiredForSignup = null,
-    Object? enableHcaptcha = null,
+    Object? emailRequiredForSignup = freezed,
+    Object? enableHcaptcha = freezed,
     Object? hcaptchaSiteKey = freezed,
     Object? enableRecaptcha = freezed,
     Object? recaptchaSiteKey = freezed,
@@ -557,10 +550,10 @@ class __$$MetaResponseImplCopyWithImpl<$Res>
           ? _value.repositoryUrl
           : repositoryUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      feedbackUrl: null == feedbackUrl
+      feedbackUrl: freezed == feedbackUrl
           ? _value.feedbackUrl
           : feedbackUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       defaultDarkTheme: freezed == defaultDarkTheme
           ? _value.defaultDarkTheme
           : defaultDarkTheme // ignore: cast_nullable_to_non_nullable
@@ -573,14 +566,14 @@ class __$$MetaResponseImplCopyWithImpl<$Res>
           ? _value.disableRegistration
           : disableRegistration // ignore: cast_nullable_to_non_nullable
               as bool,
-      emailRequiredForSignup: null == emailRequiredForSignup
+      emailRequiredForSignup: freezed == emailRequiredForSignup
           ? _value.emailRequiredForSignup
           : emailRequiredForSignup // ignore: cast_nullable_to_non_nullable
-              as bool,
-      enableHcaptcha: null == enableHcaptcha
+              as bool?,
+      enableHcaptcha: freezed == enableHcaptcha
           ? _value.enableHcaptcha
           : enableHcaptcha // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       hcaptchaSiteKey: freezed == hcaptchaSiteKey
           ? _value.hcaptchaSiteKey
           : hcaptchaSiteKey // ignore: cast_nullable_to_non_nullable
@@ -707,12 +700,12 @@ class _$MetaResponseImpl implements _MetaResponse {
       required final List<String> langs,
       @NullableUriConverter() this.tosUrl,
       @UriConverter() required this.repositoryUrl,
-      required this.feedbackUrl,
+      this.feedbackUrl,
       this.defaultDarkTheme,
       this.defaultLightTheme,
       required this.disableRegistration,
-      required this.emailRequiredForSignup,
-      required this.enableHcaptcha,
+      this.emailRequiredForSignup,
+      this.enableHcaptcha,
       this.hcaptchaSiteKey,
       this.enableRecaptcha,
       this.recaptchaSiteKey,
@@ -729,7 +722,7 @@ class _$MetaResponseImpl implements _MetaResponse {
       @NullableUriConverter() this.impressumUrl,
       @NullableUriConverter() this.privacyPolicyUrl,
       required this.maxNoteTextLength,
-      required final List<MetaAd> ads,
+      final List<MetaAd> ads = const [],
       final List<String> serverRules = const [],
       this.policies,
       this.requireSetup,
@@ -777,21 +770,17 @@ class _$MetaResponseImpl implements _MetaResponse {
   @UriConverter()
   final Uri repositoryUrl;
   @override
-  final String feedbackUrl;
+  final String? feedbackUrl;
   @override
   final String? defaultDarkTheme;
   @override
   final String? defaultLightTheme;
   @override
   final bool disableRegistration;
-//required bool disableLocalTimeline,
-//required bool disableGlobalTimeline,
-//required int driveCapacityPerLocalUserMb,
-//required int driveCapacityPerRemoteUserMb,
   @override
-  final bool emailRequiredForSignup;
+  final bool? emailRequiredForSignup;
   @override
-  final bool enableHcaptcha;
+  final bool? enableHcaptcha;
   @override
   final String? hcaptchaSiteKey;
   @override
@@ -836,6 +825,7 @@ class _$MetaResponseImpl implements _MetaResponse {
   final List<MetaAd> _ads;
 //required List<MetaEmoji> emojis,
   @override
+  @JsonKey()
   List<MetaAd> get ads {
     if (_ads is EqualUnmodifiableListView) return _ads;
     // ignore: implicit_dynamic_type
@@ -857,9 +847,6 @@ class _$MetaResponseImpl implements _MetaResponse {
   final bool? requireSetup;
   @override
   final bool? enableEmail;
-//required bool enableTwitterIntegration,
-//required bool enableGithubIntegration,
-//required bool enableDiscordIntegration,
   @override
   final bool? enableServiceWorker;
   @override
@@ -1039,12 +1026,12 @@ abstract class _MetaResponse implements MetaResponse {
       required final List<String> langs,
       @NullableUriConverter() final Uri? tosUrl,
       @UriConverter() required final Uri repositoryUrl,
-      required final String feedbackUrl,
+      final String? feedbackUrl,
       final String? defaultDarkTheme,
       final String? defaultLightTheme,
       required final bool disableRegistration,
-      required final bool emailRequiredForSignup,
-      required final bool enableHcaptcha,
+      final bool? emailRequiredForSignup,
+      final bool? enableHcaptcha,
       final String? hcaptchaSiteKey,
       final bool? enableRecaptcha,
       final String? recaptchaSiteKey,
@@ -1061,7 +1048,7 @@ abstract class _MetaResponse implements MetaResponse {
       @NullableUriConverter() final Uri? impressumUrl,
       @NullableUriConverter() final Uri? privacyPolicyUrl,
       required final int maxNoteTextLength,
-      required final List<MetaAd> ads,
+      final List<MetaAd> ads,
       final List<String> serverRules,
       final UserPolicies? policies,
       final bool? requireSetup,
@@ -1100,20 +1087,17 @@ abstract class _MetaResponse implements MetaResponse {
   @UriConverter()
   Uri get repositoryUrl;
   @override
-  String get feedbackUrl;
+  String? get feedbackUrl;
   @override
   String? get defaultDarkTheme;
   @override
   String? get defaultLightTheme;
   @override
   bool get disableRegistration;
-  @override //required bool disableLocalTimeline,
-//required bool disableGlobalTimeline,
-//required int driveCapacityPerLocalUserMb,
-//required int driveCapacityPerRemoteUserMb,
-  bool get emailRequiredForSignup;
   @override
-  bool get enableHcaptcha;
+  bool? get emailRequiredForSignup;
+  @override
+  bool? get enableHcaptcha;
   @override
   String? get hcaptchaSiteKey;
   @override
@@ -1164,9 +1148,7 @@ abstract class _MetaResponse implements MetaResponse {
   bool? get requireSetup;
   @override
   bool? get enableEmail;
-  @override //required bool enableTwitterIntegration,
-//required bool enableGithubIntegration,
-//required bool enableDiscordIntegration,
+  @override
   bool? get enableServiceWorker;
   @override
   bool? get translatorAvailable;
@@ -1413,20 +1395,14 @@ MetaFeature _$MetaFeatureFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MetaFeature {
-  bool get registration =>
-      throw _privateConstructorUsedError; //required bool localTimeLine,
-//required bool globalTimeLine,
-  bool get emailRequiredForSignup =>
-      throw _privateConstructorUsedError; // required bool elasticsearch,
-  bool get hcaptcha => throw _privateConstructorUsedError;
-  bool get recaptcha => throw _privateConstructorUsedError;
-  bool get turnstile => throw _privateConstructorUsedError;
-  bool get objectStorage =>
-      throw _privateConstructorUsedError; //required bool twitter,
-//required bool github,
-//required bool discord,
-  bool get serviceWorker => throw _privateConstructorUsedError;
-  bool get miauth => throw _privateConstructorUsedError;
+  bool? get registration => throw _privateConstructorUsedError;
+  bool? get emailRequiredForSignup => throw _privateConstructorUsedError;
+  bool? get hcaptcha => throw _privateConstructorUsedError;
+  bool? get recaptcha => throw _privateConstructorUsedError;
+  bool? get turnstile => throw _privateConstructorUsedError;
+  bool? get objectStorage => throw _privateConstructorUsedError;
+  bool? get serviceWorker => throw _privateConstructorUsedError;
+  bool? get miauth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1441,14 +1417,14 @@ abstract class $MetaFeatureCopyWith<$Res> {
       _$MetaFeatureCopyWithImpl<$Res, MetaFeature>;
   @useResult
   $Res call(
-      {bool registration,
-      bool emailRequiredForSignup,
-      bool hcaptcha,
-      bool recaptcha,
-      bool turnstile,
-      bool objectStorage,
-      bool serviceWorker,
-      bool miauth});
+      {bool? registration,
+      bool? emailRequiredForSignup,
+      bool? hcaptcha,
+      bool? recaptcha,
+      bool? turnstile,
+      bool? objectStorage,
+      bool? serviceWorker,
+      bool? miauth});
 }
 
 /// @nodoc
@@ -1464,48 +1440,48 @@ class _$MetaFeatureCopyWithImpl<$Res, $Val extends MetaFeature>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? registration = null,
-    Object? emailRequiredForSignup = null,
-    Object? hcaptcha = null,
-    Object? recaptcha = null,
-    Object? turnstile = null,
-    Object? objectStorage = null,
-    Object? serviceWorker = null,
-    Object? miauth = null,
+    Object? registration = freezed,
+    Object? emailRequiredForSignup = freezed,
+    Object? hcaptcha = freezed,
+    Object? recaptcha = freezed,
+    Object? turnstile = freezed,
+    Object? objectStorage = freezed,
+    Object? serviceWorker = freezed,
+    Object? miauth = freezed,
   }) {
     return _then(_value.copyWith(
-      registration: null == registration
+      registration: freezed == registration
           ? _value.registration
           : registration // ignore: cast_nullable_to_non_nullable
-              as bool,
-      emailRequiredForSignup: null == emailRequiredForSignup
+              as bool?,
+      emailRequiredForSignup: freezed == emailRequiredForSignup
           ? _value.emailRequiredForSignup
           : emailRequiredForSignup // ignore: cast_nullable_to_non_nullable
-              as bool,
-      hcaptcha: null == hcaptcha
+              as bool?,
+      hcaptcha: freezed == hcaptcha
           ? _value.hcaptcha
           : hcaptcha // ignore: cast_nullable_to_non_nullable
-              as bool,
-      recaptcha: null == recaptcha
+              as bool?,
+      recaptcha: freezed == recaptcha
           ? _value.recaptcha
           : recaptcha // ignore: cast_nullable_to_non_nullable
-              as bool,
-      turnstile: null == turnstile
+              as bool?,
+      turnstile: freezed == turnstile
           ? _value.turnstile
           : turnstile // ignore: cast_nullable_to_non_nullable
-              as bool,
-      objectStorage: null == objectStorage
+              as bool?,
+      objectStorage: freezed == objectStorage
           ? _value.objectStorage
           : objectStorage // ignore: cast_nullable_to_non_nullable
-              as bool,
-      serviceWorker: null == serviceWorker
+              as bool?,
+      serviceWorker: freezed == serviceWorker
           ? _value.serviceWorker
           : serviceWorker // ignore: cast_nullable_to_non_nullable
-              as bool,
-      miauth: null == miauth
+              as bool?,
+      miauth: freezed == miauth
           ? _value.miauth
           : miauth // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ) as $Val);
   }
 }
@@ -1519,14 +1495,14 @@ abstract class _$$MetaFeatureImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {bool registration,
-      bool emailRequiredForSignup,
-      bool hcaptcha,
-      bool recaptcha,
-      bool turnstile,
-      bool objectStorage,
-      bool serviceWorker,
-      bool miauth});
+      {bool? registration,
+      bool? emailRequiredForSignup,
+      bool? hcaptcha,
+      bool? recaptcha,
+      bool? turnstile,
+      bool? objectStorage,
+      bool? serviceWorker,
+      bool? miauth});
 }
 
 /// @nodoc
@@ -1540,48 +1516,48 @@ class __$$MetaFeatureImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? registration = null,
-    Object? emailRequiredForSignup = null,
-    Object? hcaptcha = null,
-    Object? recaptcha = null,
-    Object? turnstile = null,
-    Object? objectStorage = null,
-    Object? serviceWorker = null,
-    Object? miauth = null,
+    Object? registration = freezed,
+    Object? emailRequiredForSignup = freezed,
+    Object? hcaptcha = freezed,
+    Object? recaptcha = freezed,
+    Object? turnstile = freezed,
+    Object? objectStorage = freezed,
+    Object? serviceWorker = freezed,
+    Object? miauth = freezed,
   }) {
     return _then(_$MetaFeatureImpl(
-      registration: null == registration
+      registration: freezed == registration
           ? _value.registration
           : registration // ignore: cast_nullable_to_non_nullable
-              as bool,
-      emailRequiredForSignup: null == emailRequiredForSignup
+              as bool?,
+      emailRequiredForSignup: freezed == emailRequiredForSignup
           ? _value.emailRequiredForSignup
           : emailRequiredForSignup // ignore: cast_nullable_to_non_nullable
-              as bool,
-      hcaptcha: null == hcaptcha
+              as bool?,
+      hcaptcha: freezed == hcaptcha
           ? _value.hcaptcha
           : hcaptcha // ignore: cast_nullable_to_non_nullable
-              as bool,
-      recaptcha: null == recaptcha
+              as bool?,
+      recaptcha: freezed == recaptcha
           ? _value.recaptcha
           : recaptcha // ignore: cast_nullable_to_non_nullable
-              as bool,
-      turnstile: null == turnstile
+              as bool?,
+      turnstile: freezed == turnstile
           ? _value.turnstile
           : turnstile // ignore: cast_nullable_to_non_nullable
-              as bool,
-      objectStorage: null == objectStorage
+              as bool?,
+      objectStorage: freezed == objectStorage
           ? _value.objectStorage
           : objectStorage // ignore: cast_nullable_to_non_nullable
-              as bool,
-      serviceWorker: null == serviceWorker
+              as bool?,
+      serviceWorker: freezed == serviceWorker
           ? _value.serviceWorker
           : serviceWorker // ignore: cast_nullable_to_non_nullable
-              as bool,
-      miauth: null == miauth
+              as bool?,
+      miauth: freezed == miauth
           ? _value.miauth
           : miauth // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ));
   }
 }
@@ -1590,40 +1566,34 @@ class __$$MetaFeatureImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$MetaFeatureImpl implements _MetaFeature {
   const _$MetaFeatureImpl(
-      {required this.registration,
-      required this.emailRequiredForSignup,
-      required this.hcaptcha,
-      required this.recaptcha,
-      required this.turnstile,
-      required this.objectStorage,
-      required this.serviceWorker,
-      required this.miauth});
+      {this.registration,
+      this.emailRequiredForSignup,
+      this.hcaptcha,
+      this.recaptcha,
+      this.turnstile,
+      this.objectStorage,
+      this.serviceWorker,
+      this.miauth});
 
   factory _$MetaFeatureImpl.fromJson(Map<String, dynamic> json) =>
       _$$MetaFeatureImplFromJson(json);
 
   @override
-  final bool registration;
-//required bool localTimeLine,
-//required bool globalTimeLine,
+  final bool? registration;
   @override
-  final bool emailRequiredForSignup;
-// required bool elasticsearch,
+  final bool? emailRequiredForSignup;
   @override
-  final bool hcaptcha;
+  final bool? hcaptcha;
   @override
-  final bool recaptcha;
+  final bool? recaptcha;
   @override
-  final bool turnstile;
+  final bool? turnstile;
   @override
-  final bool objectStorage;
-//required bool twitter,
-//required bool github,
-//required bool discord,
+  final bool? objectStorage;
   @override
-  final bool serviceWorker;
+  final bool? serviceWorker;
   @override
-  final bool miauth;
+  final bool? miauth;
 
   @override
   String toString() {
@@ -1681,37 +1651,34 @@ class _$MetaFeatureImpl implements _MetaFeature {
 
 abstract class _MetaFeature implements MetaFeature {
   const factory _MetaFeature(
-      {required final bool registration,
-      required final bool emailRequiredForSignup,
-      required final bool hcaptcha,
-      required final bool recaptcha,
-      required final bool turnstile,
-      required final bool objectStorage,
-      required final bool serviceWorker,
-      required final bool miauth}) = _$MetaFeatureImpl;
+      {final bool? registration,
+      final bool? emailRequiredForSignup,
+      final bool? hcaptcha,
+      final bool? recaptcha,
+      final bool? turnstile,
+      final bool? objectStorage,
+      final bool? serviceWorker,
+      final bool? miauth}) = _$MetaFeatureImpl;
 
   factory _MetaFeature.fromJson(Map<String, dynamic> json) =
       _$MetaFeatureImpl.fromJson;
 
   @override
-  bool get registration;
-  @override //required bool localTimeLine,
-//required bool globalTimeLine,
-  bool get emailRequiredForSignup;
-  @override // required bool elasticsearch,
-  bool get hcaptcha;
+  bool? get registration;
   @override
-  bool get recaptcha;
+  bool? get emailRequiredForSignup;
   @override
-  bool get turnstile;
+  bool? get hcaptcha;
   @override
-  bool get objectStorage;
-  @override //required bool twitter,
-//required bool github,
-//required bool discord,
-  bool get serviceWorker;
+  bool? get recaptcha;
   @override
-  bool get miauth;
+  bool? get turnstile;
+  @override
+  bool? get objectStorage;
+  @override
+  bool? get serviceWorker;
+  @override
+  bool? get miauth;
   @override
   @JsonKey(ignore: true)
   _$$MetaFeatureImplCopyWith<_$MetaFeatureImpl> get copyWith =>

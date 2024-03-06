@@ -70,7 +70,7 @@ abstract class AbstractPageContent {
 }
 
 abstract class AbstractPageText extends AbstractPageContent {
-  String get text;
+  String? get text;
 }
 
 @freezed
@@ -78,7 +78,7 @@ class PageText with _$PageText implements AbstractPageText {
   const factory PageText({
     required String id,
     PageContentType? type,
-    required String text,
+    String? text,
   }) = _PageText;
 
   factory PageText.fromJson(Map<String, dynamic> json) =>

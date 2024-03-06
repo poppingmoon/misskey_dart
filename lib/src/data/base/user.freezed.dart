@@ -522,14 +522,19 @@ mixin _$UserDetailedNotMe {
   DateTime? get birthday => throw _privateConstructorUsedError;
   String? get lang => throw _privateConstructorUsedError;
   List<UserField>? get fields => throw _privateConstructorUsedError;
-  List<String> get verifiedLinks => throw _privateConstructorUsedError;
-  int get followersCount => throw _privateConstructorUsedError;
+  List<String> get verifiedLinks =>
+      throw _privateConstructorUsedError; // CherryPick 4.3.0 or newer returns String if the count count is not visible
+  @IntConverter()
+  int get followersCount =>
+      throw _privateConstructorUsedError; // CherryPick 4.3.0 or newer returns String if the count count is not visible
+  @IntConverter()
   int get followingCount => throw _privateConstructorUsedError;
   int get notesCount => throw _privateConstructorUsedError;
   List<String>? get pinnedNoteIds => throw _privateConstructorUsedError;
   List<Note>? get pinnedNotes => throw _privateConstructorUsedError;
   String? get pinnedPageId => throw _privateConstructorUsedError;
-  Map<String, dynamic>? get pinnedPage => throw _privateConstructorUsedError;
+  Map<String, dynamic>? get pinnedPage =>
+      throw _privateConstructorUsedError; // Added in Misskey 12.93.0
   bool get publicReactions =>
       throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
@@ -541,8 +546,10 @@ mixin _$UserDetailedNotMe {
       throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FFVisibility? get followingVisibility => throw _privateConstructorUsedError;
-  bool get twoFactorEnabled => throw _privateConstructorUsedError;
-  bool get usePasswordLessLogin => throw _privateConstructorUsedError;
+  bool get twoFactorEnabled =>
+      throw _privateConstructorUsedError; // Added in Misskey 11.25.0
+  bool get usePasswordLessLogin =>
+      throw _privateConstructorUsedError; // Added in Misskey 11.24.0
   bool get securityKeys => throw _privateConstructorUsedError;
   List<UserRole>? get roles => throw _privateConstructorUsedError;
   String? get memo => throw _privateConstructorUsedError;
@@ -593,8 +600,8 @@ abstract class $UserDetailedNotMeCopyWith<$Res> {
       String? lang,
       List<UserField>? fields,
       List<String> verifiedLinks,
-      int followersCount,
-      int followingCount,
+      @IntConverter() int followersCount,
+      @IntConverter() int followingCount,
       int notesCount,
       List<String>? pinnedNoteIds,
       List<Note>? pinnedNotes,
@@ -930,8 +937,8 @@ abstract class _$$UserDetailedNotMeImplCopyWith<$Res>
       String? lang,
       List<UserField>? fields,
       List<String> verifiedLinks,
-      int followersCount,
-      int followingCount,
+      @IntConverter() int followersCount,
+      @IntConverter() int followingCount,
       int notesCount,
       List<String>? pinnedNoteIds,
       List<Note>? pinnedNotes,
@@ -1249,14 +1256,14 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
       this.lang,
       final List<UserField>? fields,
       final List<String> verifiedLinks = const [],
-      required this.followersCount,
-      required this.followingCount,
+      @IntConverter() required this.followersCount,
+      @IntConverter() required this.followingCount,
       required this.notesCount,
       final List<String>? pinnedNoteIds,
       final List<Note>? pinnedNotes,
       this.pinnedPageId,
       final Map<String, dynamic>? pinnedPage,
-      required this.publicReactions,
+      this.publicReactions = false,
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       @Deprecated("removed at 2023.12.0")
       this.ffVisibility,
@@ -1265,8 +1272,8 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.followingVisibility,
       required this.twoFactorEnabled,
-      required this.usePasswordLessLogin,
-      required this.securityKeys,
+      this.usePasswordLessLogin = false,
+      this.securityKeys = false,
       final List<UserRole>? roles,
       this.memo,
       this.moderationNote})
@@ -1403,9 +1410,13 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
     return EqualUnmodifiableListView(_verifiedLinks);
   }
 
+// CherryPick 4.3.0 or newer returns String if the count count is not visible
   @override
+  @IntConverter()
   final int followersCount;
+// CherryPick 4.3.0 or newer returns String if the count count is not visible
   @override
+  @IntConverter()
   final int followingCount;
   @override
   final int notesCount;
@@ -1441,7 +1452,9 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
     return EqualUnmodifiableMapView(value);
   }
 
+// Added in Misskey 12.93.0
   @override
+  @JsonKey()
   final bool publicReactions;
 // ignore: invalid_annotation_target
   @override
@@ -1458,9 +1471,13 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
   final FFVisibility? followingVisibility;
   @override
   final bool twoFactorEnabled;
+// Added in Misskey 11.25.0
   @override
+  @JsonKey()
   final bool usePasswordLessLogin;
+// Added in Misskey 11.24.0
   @override
+  @JsonKey()
   final bool securityKeys;
   final List<UserRole>? _roles;
   @override
@@ -1675,14 +1692,14 @@ abstract class _UserDetailedNotMe implements UserDetailedNotMe {
       final String? lang,
       final List<UserField>? fields,
       final List<String> verifiedLinks,
-      required final int followersCount,
-      required final int followingCount,
+      @IntConverter() required final int followersCount,
+      @IntConverter() required final int followingCount,
       required final int notesCount,
       final List<String>? pinnedNoteIds,
       final List<Note>? pinnedNotes,
       final String? pinnedPageId,
       final Map<String, dynamic>? pinnedPage,
-      required final bool publicReactions,
+      final bool publicReactions,
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       @Deprecated("removed at 2023.12.0")
       final FFVisibility? ffVisibility,
@@ -1691,8 +1708,8 @@ abstract class _UserDetailedNotMe implements UserDetailedNotMe {
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final FFVisibility? followingVisibility,
       required final bool twoFactorEnabled,
-      required final bool usePasswordLessLogin,
-      required final bool securityKeys,
+      final bool usePasswordLessLogin,
+      final bool securityKeys,
       final List<UserRole>? roles,
       final String? memo,
       final String? moderationNote}) = _$UserDetailedNotMeImpl;
@@ -1773,9 +1790,11 @@ abstract class _UserDetailedNotMe implements UserDetailedNotMe {
   List<UserField>? get fields;
   @override
   List<String> get verifiedLinks;
-  @override
+  @override // CherryPick 4.3.0 or newer returns String if the count count is not visible
+  @IntConverter()
   int get followersCount;
-  @override
+  @override // CherryPick 4.3.0 or newer returns String if the count count is not visible
+  @IntConverter()
   int get followingCount;
   @override
   int get notesCount;
@@ -1787,7 +1806,7 @@ abstract class _UserDetailedNotMe implements UserDetailedNotMe {
   String? get pinnedPageId;
   @override
   Map<String, dynamic>? get pinnedPage;
-  @override
+  @override // Added in Misskey 12.93.0
   bool get publicReactions;
   @override // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
@@ -1801,9 +1820,9 @@ abstract class _UserDetailedNotMe implements UserDetailedNotMe {
   FFVisibility? get followingVisibility;
   @override
   bool get twoFactorEnabled;
-  @override
+  @override // Added in Misskey 11.25.0
   bool get usePasswordLessLogin;
-  @override
+  @override // Added in Misskey 11.24.0
   bool get securityKeys;
   @override
   List<UserRole>? get roles;
@@ -1867,14 +1886,19 @@ mixin _$UserDetailedNotMeWithRelations {
   DateTime? get birthday => throw _privateConstructorUsedError;
   String? get lang => throw _privateConstructorUsedError;
   List<UserField>? get fields => throw _privateConstructorUsedError;
-  List<String> get verifiedLinks => throw _privateConstructorUsedError;
-  int get followersCount => throw _privateConstructorUsedError;
+  List<String> get verifiedLinks =>
+      throw _privateConstructorUsedError; // CherryPick 4.3.0 or newer returns String if the count is not visible
+  @IntConverter()
+  int get followersCount =>
+      throw _privateConstructorUsedError; // CherryPick 4.3.0 or newer returns String if the count is not visible
+  @IntConverter()
   int get followingCount => throw _privateConstructorUsedError;
   int get notesCount => throw _privateConstructorUsedError;
   List<String>? get pinnedNoteIds => throw _privateConstructorUsedError;
   List<Note>? get pinnedNotes => throw _privateConstructorUsedError;
   String? get pinnedPageId => throw _privateConstructorUsedError;
-  Map<String, dynamic>? get pinnedPage => throw _privateConstructorUsedError;
+  Map<String, dynamic>? get pinnedPage =>
+      throw _privateConstructorUsedError; // Added in Misskey 12.93.0
   bool get publicReactions =>
       throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
@@ -1886,8 +1910,10 @@ mixin _$UserDetailedNotMeWithRelations {
       throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FFVisibility? get followingVisibility => throw _privateConstructorUsedError;
-  bool get twoFactorEnabled => throw _privateConstructorUsedError;
-  bool get usePasswordLessLogin => throw _privateConstructorUsedError;
+  bool get twoFactorEnabled =>
+      throw _privateConstructorUsedError; // Added in Misskey 11.25.0
+  bool get usePasswordLessLogin =>
+      throw _privateConstructorUsedError; // Added in Misskey 11.24.0
   bool get securityKeys => throw _privateConstructorUsedError;
   List<UserRole>? get roles => throw _privateConstructorUsedError;
   String? get memo => throw _privateConstructorUsedError;
@@ -1898,7 +1924,8 @@ mixin _$UserDetailedNotMeWithRelations {
   bool get hasPendingFollowRequestToYou => throw _privateConstructorUsedError;
   bool get isBlocking => throw _privateConstructorUsedError;
   bool get isBlocked => throw _privateConstructorUsedError;
-  bool get isMuted => throw _privateConstructorUsedError;
+  bool get isMuted =>
+      throw _privateConstructorUsedError; // Added in Misskey 13.10.0
   bool get isRenoteMuted => throw _privateConstructorUsedError;
   Notify? get notify => throw _privateConstructorUsedError;
   bool? get withReplies => throw _privateConstructorUsedError;
@@ -1950,8 +1977,8 @@ abstract class $UserDetailedNotMeWithRelationsCopyWith<$Res> {
       String? lang,
       List<UserField>? fields,
       List<String> verifiedLinks,
-      int followersCount,
-      int followingCount,
+      @IntConverter() int followersCount,
+      @IntConverter() int followingCount,
       int notesCount,
       List<String>? pinnedNoteIds,
       List<Note>? pinnedNotes,
@@ -2349,8 +2376,8 @@ abstract class _$$UserDetailedNotMeWithRelationsImplCopyWith<$Res>
       String? lang,
       List<UserField>? fields,
       List<String> verifiedLinks,
-      int followersCount,
-      int followingCount,
+      @IntConverter() int followersCount,
+      @IntConverter() int followingCount,
       int notesCount,
       List<String>? pinnedNoteIds,
       List<Note>? pinnedNotes,
@@ -2731,14 +2758,14 @@ class _$UserDetailedNotMeWithRelationsImpl
       this.lang,
       final List<UserField>? fields,
       final List<String> verifiedLinks = const [],
-      required this.followersCount,
-      required this.followingCount,
+      @IntConverter() required this.followersCount,
+      @IntConverter() required this.followingCount,
       required this.notesCount,
       final List<String>? pinnedNoteIds,
       final List<Note>? pinnedNotes,
       this.pinnedPageId,
       final Map<String, dynamic>? pinnedPage,
-      required this.publicReactions,
+      this.publicReactions = false,
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       @Deprecated("removed at 2023.12.0")
       this.ffVisibility,
@@ -2747,8 +2774,8 @@ class _$UserDetailedNotMeWithRelationsImpl
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.followingVisibility,
       required this.twoFactorEnabled,
-      required this.usePasswordLessLogin,
-      required this.securityKeys,
+      this.usePasswordLessLogin = false,
+      this.securityKeys = false,
       final List<UserRole>? roles,
       this.memo,
       this.moderationNote,
@@ -2759,7 +2786,7 @@ class _$UserDetailedNotMeWithRelationsImpl
       required this.isBlocking,
       required this.isBlocked,
       required this.isMuted,
-      required this.isRenoteMuted,
+      this.isRenoteMuted = false,
       this.notify,
       this.withReplies})
       : _avatarDecorations = avatarDecorations,
@@ -2896,9 +2923,13 @@ class _$UserDetailedNotMeWithRelationsImpl
     return EqualUnmodifiableListView(_verifiedLinks);
   }
 
+// CherryPick 4.3.0 or newer returns String if the count is not visible
   @override
+  @IntConverter()
   final int followersCount;
+// CherryPick 4.3.0 or newer returns String if the count is not visible
   @override
+  @IntConverter()
   final int followingCount;
   @override
   final int notesCount;
@@ -2934,7 +2965,9 @@ class _$UserDetailedNotMeWithRelationsImpl
     return EqualUnmodifiableMapView(value);
   }
 
+// Added in Misskey 12.93.0
   @override
+  @JsonKey()
   final bool publicReactions;
 // ignore: invalid_annotation_target
   @override
@@ -2951,9 +2984,13 @@ class _$UserDetailedNotMeWithRelationsImpl
   final FFVisibility? followingVisibility;
   @override
   final bool twoFactorEnabled;
+// Added in Misskey 11.25.0
   @override
+  @JsonKey()
   final bool usePasswordLessLogin;
+// Added in Misskey 11.24.0
   @override
+  @JsonKey()
   final bool securityKeys;
   final List<UserRole>? _roles;
   @override
@@ -2983,7 +3020,9 @@ class _$UserDetailedNotMeWithRelationsImpl
   final bool isBlocked;
   @override
   final bool isMuted;
+// Added in Misskey 13.10.0
   @override
+  @JsonKey()
   final bool isRenoteMuted;
   @override
   final Notify? notify;
@@ -3218,14 +3257,14 @@ abstract class _UserDetailedNotMeWithRelations
       final String? lang,
       final List<UserField>? fields,
       final List<String> verifiedLinks,
-      required final int followersCount,
-      required final int followingCount,
+      @IntConverter() required final int followersCount,
+      @IntConverter() required final int followingCount,
       required final int notesCount,
       final List<String>? pinnedNoteIds,
       final List<Note>? pinnedNotes,
       final String? pinnedPageId,
       final Map<String, dynamic>? pinnedPage,
-      required final bool publicReactions,
+      final bool publicReactions,
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       @Deprecated("removed at 2023.12.0")
       final FFVisibility? ffVisibility,
@@ -3234,8 +3273,8 @@ abstract class _UserDetailedNotMeWithRelations
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final FFVisibility? followingVisibility,
       required final bool twoFactorEnabled,
-      required final bool usePasswordLessLogin,
-      required final bool securityKeys,
+      final bool usePasswordLessLogin,
+      final bool securityKeys,
       final List<UserRole>? roles,
       final String? memo,
       final String? moderationNote,
@@ -3246,7 +3285,7 @@ abstract class _UserDetailedNotMeWithRelations
       required final bool isBlocking,
       required final bool isBlocked,
       required final bool isMuted,
-      required final bool isRenoteMuted,
+      final bool isRenoteMuted,
       final Notify? notify,
       final bool? withReplies}) = _$UserDetailedNotMeWithRelationsImpl;
 
@@ -3326,9 +3365,11 @@ abstract class _UserDetailedNotMeWithRelations
   List<UserField>? get fields;
   @override
   List<String> get verifiedLinks;
-  @override
+  @override // CherryPick 4.3.0 or newer returns String if the count is not visible
+  @IntConverter()
   int get followersCount;
-  @override
+  @override // CherryPick 4.3.0 or newer returns String if the count is not visible
+  @IntConverter()
   int get followingCount;
   @override
   int get notesCount;
@@ -3340,7 +3381,7 @@ abstract class _UserDetailedNotMeWithRelations
   String? get pinnedPageId;
   @override
   Map<String, dynamic>? get pinnedPage;
-  @override
+  @override // Added in Misskey 12.93.0
   bool get publicReactions;
   @override // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
@@ -3354,9 +3395,9 @@ abstract class _UserDetailedNotMeWithRelations
   FFVisibility? get followingVisibility;
   @override
   bool get twoFactorEnabled;
-  @override
+  @override // Added in Misskey 11.25.0
   bool get usePasswordLessLogin;
-  @override
+  @override // Added in Misskey 11.24.0
   bool get securityKeys;
   @override
   List<UserRole>? get roles;
@@ -3378,7 +3419,7 @@ abstract class _UserDetailedNotMeWithRelations
   bool get isBlocked;
   @override
   bool get isMuted;
-  @override
+  @override // Added in Misskey 13.10.0
   bool get isRenoteMuted;
   @override
   Notify? get notify;
@@ -3440,14 +3481,19 @@ mixin _$MeDetailed {
   DateTime? get birthday => throw _privateConstructorUsedError;
   String? get lang => throw _privateConstructorUsedError;
   List<UserField>? get fields => throw _privateConstructorUsedError;
-  List<String> get verifiedLinks => throw _privateConstructorUsedError;
-  int get followersCount => throw _privateConstructorUsedError;
+  List<String> get verifiedLinks =>
+      throw _privateConstructorUsedError; // CherryPick 4.3.0 or newer returns String if the count is not visible
+  @IntConverter()
+  int get followersCount =>
+      throw _privateConstructorUsedError; // CherryPick 4.3.0 or newer returns String if the count is not visible
+  @IntConverter()
   int get followingCount => throw _privateConstructorUsedError;
   int get notesCount => throw _privateConstructorUsedError;
   List<String>? get pinnedNoteIds => throw _privateConstructorUsedError;
   List<Note>? get pinnedNotes => throw _privateConstructorUsedError;
   String? get pinnedPageId => throw _privateConstructorUsedError;
-  Map<String, dynamic>? get pinnedPage => throw _privateConstructorUsedError;
+  Map<String, dynamic>? get pinnedPage =>
+      throw _privateConstructorUsedError; // Added in Misskey 12.93.0
   bool get publicReactions =>
       throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
@@ -3459,8 +3505,10 @@ mixin _$MeDetailed {
       throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FFVisibility? get followingVisibility => throw _privateConstructorUsedError;
-  bool get twoFactorEnabled => throw _privateConstructorUsedError;
-  bool get usePasswordLessLogin => throw _privateConstructorUsedError;
+  bool get twoFactorEnabled =>
+      throw _privateConstructorUsedError; // Added in Misskey 11.25.0
+  bool get usePasswordLessLogin =>
+      throw _privateConstructorUsedError; // Added in Misskey 11.24.0
   bool get securityKeys => throw _privateConstructorUsedError;
   List<UserRole>? get roles => throw _privateConstructorUsedError;
   String? get memo => throw _privateConstructorUsedError;
@@ -3468,26 +3516,38 @@ mixin _$MeDetailed {
   String? get avatarId => throw _privateConstructorUsedError;
   String? get bannerId => throw _privateConstructorUsedError;
   bool get isModerator => throw _privateConstructorUsedError;
-  bool get isAdmin => throw _privateConstructorUsedError;
-  bool get injectFeaturedNote => throw _privateConstructorUsedError;
+  bool get isAdmin =>
+      throw _privateConstructorUsedError; // Added in Misskey 12.13.0
+  bool get injectFeaturedNote =>
+      throw _privateConstructorUsedError; // Added in Misskey 12.69.0
   bool get receiveAnnouncementEmail => throw _privateConstructorUsedError;
-  bool get alwaysMarkNsfw => throw _privateConstructorUsedError;
+  bool get alwaysMarkNsfw =>
+      throw _privateConstructorUsedError; // Added in Misskey 12.112.0
   bool get autoSensitive => throw _privateConstructorUsedError;
   bool get carefulBot => throw _privateConstructorUsedError;
   bool get autoAcceptFollowed => throw _privateConstructorUsedError;
-  bool? get preventAiLearning => throw _privateConstructorUsedError;
-  bool get noCrawle => throw _privateConstructorUsedError;
-  bool get isExplorable => throw _privateConstructorUsedError;
-  bool get isDeleted => throw _privateConstructorUsedError;
+  bool? get preventAiLearning =>
+      throw _privateConstructorUsedError; // Added in Misskey 12.60.0
+  bool get noCrawle =>
+      throw _privateConstructorUsedError; // Added in Misskey 12.63.0
+  bool get isExplorable =>
+      throw _privateConstructorUsedError; // Added in Misskey 12.89.0
+  bool get isDeleted =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   TwoFactorBackupCodesStock? get twoFactorBackupCodesStock =>
-      throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // Added in Misskey 12.77.0
   bool get hideOnlineStatus => throw _privateConstructorUsedError;
   bool get hasUnreadSpecifiedNotes => throw _privateConstructorUsedError;
-  bool get hasUnreadMentions => throw _privateConstructorUsedError;
-  bool get hasUnreadAnnouncement => throw _privateConstructorUsedError;
-  bool get hasUnreadAntenna => throw _privateConstructorUsedError;
+  bool get hasUnreadMentions =>
+      throw _privateConstructorUsedError; // Added in Misskey 12.0.0
+  bool get hasUnreadAnnouncement =>
+      throw _privateConstructorUsedError; // Added in Misskey 12.0.0
+  bool get hasUnreadAntenna =>
+      throw _privateConstructorUsedError; // Added in Misskey 12.47.0
   bool get hasUnreadChannel => throw _privateConstructorUsedError;
-  bool get hasUnreadNotification => throw _privateConstructorUsedError;
+  bool get hasUnreadNotification =>
+      throw _privateConstructorUsedError; // Added in Misskey 12.11.0
   bool get hasPendingReceivedFollowRequest =>
       throw _privateConstructorUsedError;
   int? get unreadNotificationsCount => throw _privateConstructorUsedError;
@@ -3496,17 +3556,21 @@ mixin _$MeDetailed {
   @MuteWordsConverter()
   List<MuteWord> get mutedWords => throw _privateConstructorUsedError;
   @MuteWordsConverter()
-  List<MuteWord> get hardMutedWords => throw _privateConstructorUsedError;
+  List<MuteWord> get hardMutedWords =>
+      throw _privateConstructorUsedError; // Added in Misskey 12.99.0
   List<String> get mutedInstances => throw _privateConstructorUsedError;
   @Deprecated("Deprecated in Misskey 2023.9.2")
   List<String>? get mutingNotificationTypes =>
       throw _privateConstructorUsedError;
   NotificationRecieveConfigs get notificationRecieveConfig =>
-      throw _privateConstructorUsedError;
-  List<String> get emailNotificationTypes => throw _privateConstructorUsedError;
-  List<UserAchievement> get achievements => throw _privateConstructorUsedError;
-  int get loggedInDays => throw _privateConstructorUsedError;
-  UserPolicies get policies => throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // Added in Misskey 12.70.0
+  List<String> get emailNotificationTypes =>
+      throw _privateConstructorUsedError; // Added in Misskey 13.1.0
+  List<UserAchievement> get achievements =>
+      throw _privateConstructorUsedError; // Added in Misskey 13.1.0
+  int? get loggedInDays =>
+      throw _privateConstructorUsedError; // Added in Misskey 13.0.0
+  UserPolicies? get policies => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -3553,8 +3617,8 @@ abstract class $MeDetailedCopyWith<$Res> {
       String? lang,
       List<UserField>? fields,
       List<String> verifiedLinks,
-      int followersCount,
-      int followingCount,
+      @IntConverter() int followersCount,
+      @IntConverter() int followingCount,
       int notesCount,
       List<String>? pinnedNoteIds,
       List<Note>? pinnedNotes,
@@ -3588,6 +3652,7 @@ abstract class $MeDetailedCopyWith<$Res> {
       bool noCrawle,
       bool isExplorable,
       bool isDeleted,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       TwoFactorBackupCodesStock? twoFactorBackupCodesStock,
       bool hideOnlineStatus,
       bool hasUnreadSpecifiedNotes,
@@ -3607,12 +3672,12 @@ abstract class $MeDetailedCopyWith<$Res> {
       NotificationRecieveConfigs notificationRecieveConfig,
       List<String> emailNotificationTypes,
       List<UserAchievement> achievements,
-      int loggedInDays,
-      UserPolicies policies});
+      int? loggedInDays,
+      UserPolicies? policies});
 
   $UserInstanceInfoCopyWith<$Res>? get instance;
   $NotificationRecieveConfigsCopyWith<$Res> get notificationRecieveConfig;
-  $UserPoliciesCopyWith<$Res> get policies;
+  $UserPoliciesCopyWith<$Res>? get policies;
 }
 
 /// @nodoc
@@ -3708,8 +3773,8 @@ class _$MeDetailedCopyWithImpl<$Res, $Val extends MeDetailed>
     Object? notificationRecieveConfig = null,
     Object? emailNotificationTypes = null,
     Object? achievements = null,
-    Object? loggedInDays = null,
-    Object? policies = null,
+    Object? loggedInDays = freezed,
+    Object? policies = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -4032,14 +4097,14 @@ class _$MeDetailedCopyWithImpl<$Res, $Val extends MeDetailed>
           ? _value.achievements
           : achievements // ignore: cast_nullable_to_non_nullable
               as List<UserAchievement>,
-      loggedInDays: null == loggedInDays
+      loggedInDays: freezed == loggedInDays
           ? _value.loggedInDays
           : loggedInDays // ignore: cast_nullable_to_non_nullable
-              as int,
-      policies: null == policies
+              as int?,
+      policies: freezed == policies
           ? _value.policies
           : policies // ignore: cast_nullable_to_non_nullable
-              as UserPolicies,
+              as UserPolicies?,
     ) as $Val);
   }
 
@@ -4066,8 +4131,12 @@ class _$MeDetailedCopyWithImpl<$Res, $Val extends MeDetailed>
 
   @override
   @pragma('vm:prefer-inline')
-  $UserPoliciesCopyWith<$Res> get policies {
-    return $UserPoliciesCopyWith<$Res>(_value.policies, (value) {
+  $UserPoliciesCopyWith<$Res>? get policies {
+    if (_value.policies == null) {
+      return null;
+    }
+
+    return $UserPoliciesCopyWith<$Res>(_value.policies!, (value) {
       return _then(_value.copyWith(policies: value) as $Val);
     });
   }
@@ -4114,8 +4183,8 @@ abstract class _$$MeDetailedImplCopyWith<$Res>
       String? lang,
       List<UserField>? fields,
       List<String> verifiedLinks,
-      int followersCount,
-      int followingCount,
+      @IntConverter() int followersCount,
+      @IntConverter() int followingCount,
       int notesCount,
       List<String>? pinnedNoteIds,
       List<Note>? pinnedNotes,
@@ -4149,6 +4218,7 @@ abstract class _$$MeDetailedImplCopyWith<$Res>
       bool noCrawle,
       bool isExplorable,
       bool isDeleted,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       TwoFactorBackupCodesStock? twoFactorBackupCodesStock,
       bool hideOnlineStatus,
       bool hasUnreadSpecifiedNotes,
@@ -4168,15 +4238,15 @@ abstract class _$$MeDetailedImplCopyWith<$Res>
       NotificationRecieveConfigs notificationRecieveConfig,
       List<String> emailNotificationTypes,
       List<UserAchievement> achievements,
-      int loggedInDays,
-      UserPolicies policies});
+      int? loggedInDays,
+      UserPolicies? policies});
 
   @override
   $UserInstanceInfoCopyWith<$Res>? get instance;
   @override
   $NotificationRecieveConfigsCopyWith<$Res> get notificationRecieveConfig;
   @override
-  $UserPoliciesCopyWith<$Res> get policies;
+  $UserPoliciesCopyWith<$Res>? get policies;
 }
 
 /// @nodoc
@@ -4270,8 +4340,8 @@ class __$$MeDetailedImplCopyWithImpl<$Res>
     Object? notificationRecieveConfig = null,
     Object? emailNotificationTypes = null,
     Object? achievements = null,
-    Object? loggedInDays = null,
-    Object? policies = null,
+    Object? loggedInDays = freezed,
+    Object? policies = freezed,
   }) {
     return _then(_$MeDetailedImpl(
       id: null == id
@@ -4594,14 +4664,14 @@ class __$$MeDetailedImplCopyWithImpl<$Res>
           ? _value._achievements
           : achievements // ignore: cast_nullable_to_non_nullable
               as List<UserAchievement>,
-      loggedInDays: null == loggedInDays
+      loggedInDays: freezed == loggedInDays
           ? _value.loggedInDays
           : loggedInDays // ignore: cast_nullable_to_non_nullable
-              as int,
-      policies: null == policies
+              as int?,
+      policies: freezed == policies
           ? _value.policies
           : policies // ignore: cast_nullable_to_non_nullable
-              as UserPolicies,
+              as UserPolicies?,
     ));
   }
 }
@@ -4642,14 +4712,14 @@ class _$MeDetailedImpl implements _MeDetailed {
       this.lang,
       final List<UserField>? fields,
       final List<String> verifiedLinks = const [],
-      required this.followersCount,
-      required this.followingCount,
+      @IntConverter() required this.followersCount,
+      @IntConverter() required this.followingCount,
       required this.notesCount,
       final List<String>? pinnedNoteIds,
       final List<Note>? pinnedNotes,
       this.pinnedPageId,
       final Map<String, dynamic>? pinnedPage,
-      required this.publicReactions,
+      this.publicReactions = false,
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       @Deprecated("removed at 2023.12.0")
       this.ffVisibility,
@@ -4658,8 +4728,8 @@ class _$MeDetailedImpl implements _MeDetailed {
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.followingVisibility,
       required this.twoFactorEnabled,
-      required this.usePasswordLessLogin,
-      required this.securityKeys,
+      this.usePasswordLessLogin = false,
+      this.securityKeys = false,
       final List<UserRole>? roles,
       this.memo,
       this.moderationNote,
@@ -4667,37 +4737,38 @@ class _$MeDetailedImpl implements _MeDetailed {
       this.bannerId,
       required this.isModerator,
       required this.isAdmin,
-      required this.injectFeaturedNote,
-      required this.receiveAnnouncementEmail,
+      this.injectFeaturedNote = false,
+      this.receiveAnnouncementEmail = false,
       required this.alwaysMarkNsfw,
-      required this.autoSensitive,
+      this.autoSensitive = false,
       required this.carefulBot,
       required this.autoAcceptFollowed,
       this.preventAiLearning,
-      required this.noCrawle,
-      required this.isExplorable,
-      required this.isDeleted,
+      this.noCrawle = false,
+      this.isExplorable = false,
+      this.isDeleted = false,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.twoFactorBackupCodesStock,
-      required this.hideOnlineStatus,
+      this.hideOnlineStatus = false,
       required this.hasUnreadSpecifiedNotes,
       required this.hasUnreadMentions,
-      required this.hasUnreadAnnouncement,
-      required this.hasUnreadAntenna,
-      required this.hasUnreadChannel,
+      this.hasUnreadAnnouncement = false,
+      this.hasUnreadAntenna = false,
+      this.hasUnreadChannel = false,
       required this.hasUnreadNotification,
-      required this.hasPendingReceivedFollowRequest,
+      this.hasPendingReceivedFollowRequest = false,
       this.unreadNotificationsCount,
       final List<AnnouncementsResponse> unreadAnnouncements = const [],
-      @MuteWordsConverter() required final List<MuteWord> mutedWords,
+      @MuteWordsConverter() final List<MuteWord> mutedWords = const [],
       @MuteWordsConverter() final List<MuteWord> hardMutedWords = const [],
-      required final List<String> mutedInstances,
+      final List<String> mutedInstances = const [],
       @Deprecated("Deprecated in Misskey 2023.9.2")
       final List<String>? mutingNotificationTypes,
       this.notificationRecieveConfig = const NotificationRecieveConfigs(),
-      required final List<String> emailNotificationTypes,
-      required final List<UserAchievement> achievements,
-      required this.loggedInDays,
-      required this.policies})
+      final List<String> emailNotificationTypes = const [],
+      final List<UserAchievement> achievements = const [],
+      this.loggedInDays,
+      this.policies})
       : _avatarDecorations = avatarDecorations,
         _emojis = emojis,
         _badgeRoles = badgeRoles,
@@ -4838,9 +4909,13 @@ class _$MeDetailedImpl implements _MeDetailed {
     return EqualUnmodifiableListView(_verifiedLinks);
   }
 
+// CherryPick 4.3.0 or newer returns String if the count is not visible
   @override
+  @IntConverter()
   final int followersCount;
+// CherryPick 4.3.0 or newer returns String if the count is not visible
   @override
+  @IntConverter()
   final int followingCount;
   @override
   final int notesCount;
@@ -4876,7 +4951,9 @@ class _$MeDetailedImpl implements _MeDetailed {
     return EqualUnmodifiableMapView(value);
   }
 
+// Added in Misskey 12.93.0
   @override
+  @JsonKey()
   final bool publicReactions;
 // ignore: invalid_annotation_target
   @override
@@ -4893,9 +4970,13 @@ class _$MeDetailedImpl implements _MeDetailed {
   final FFVisibility? followingVisibility;
   @override
   final bool twoFactorEnabled;
+// Added in Misskey 11.25.0
   @override
+  @JsonKey()
   final bool usePasswordLessLogin;
+// Added in Misskey 11.24.0
   @override
+  @JsonKey()
   final bool securityKeys;
   final List<UserRole>? _roles;
   @override
@@ -4919,13 +5000,19 @@ class _$MeDetailedImpl implements _MeDetailed {
   final bool isModerator;
   @override
   final bool isAdmin;
+// Added in Misskey 12.13.0
   @override
+  @JsonKey()
   final bool injectFeaturedNote;
+// Added in Misskey 12.69.0
   @override
+  @JsonKey()
   final bool receiveAnnouncementEmail;
   @override
   final bool alwaysMarkNsfw;
+// Added in Misskey 12.112.0
   @override
+  @JsonKey()
   final bool autoSensitive;
   @override
   final bool carefulBot;
@@ -4933,29 +5020,47 @@ class _$MeDetailedImpl implements _MeDetailed {
   final bool autoAcceptFollowed;
   @override
   final bool? preventAiLearning;
+// Added in Misskey 12.60.0
   @override
+  @JsonKey()
   final bool noCrawle;
+// Added in Misskey 12.63.0
   @override
+  @JsonKey()
   final bool isExplorable;
+// Added in Misskey 12.89.0
   @override
+  @JsonKey()
   final bool isDeleted;
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final TwoFactorBackupCodesStock? twoFactorBackupCodesStock;
+// Added in Misskey 12.77.0
   @override
+  @JsonKey()
   final bool hideOnlineStatus;
   @override
   final bool hasUnreadSpecifiedNotes;
   @override
   final bool hasUnreadMentions;
+// Added in Misskey 12.0.0
   @override
+  @JsonKey()
   final bool hasUnreadAnnouncement;
+// Added in Misskey 12.0.0
   @override
+  @JsonKey()
   final bool hasUnreadAntenna;
+// Added in Misskey 12.47.0
   @override
+  @JsonKey()
   final bool hasUnreadChannel;
   @override
   final bool hasUnreadNotification;
+// Added in Misskey 12.11.0
   @override
+  @JsonKey()
   final bool hasPendingReceivedFollowRequest;
   @override
   final int? unreadNotificationsCount;
@@ -4971,6 +5076,7 @@ class _$MeDetailedImpl implements _MeDetailed {
 
   final List<MuteWord> _mutedWords;
   @override
+  @JsonKey()
   @MuteWordsConverter()
   List<MuteWord> get mutedWords {
     if (_mutedWords is EqualUnmodifiableListView) return _mutedWords;
@@ -4988,8 +5094,11 @@ class _$MeDetailedImpl implements _MeDetailed {
     return EqualUnmodifiableListView(_hardMutedWords);
   }
 
+// Added in Misskey 12.99.0
   final List<String> _mutedInstances;
+// Added in Misskey 12.99.0
   @override
+  @JsonKey()
   List<String> get mutedInstances {
     if (_mutedInstances is EqualUnmodifiableListView) return _mutedInstances;
     // ignore: implicit_dynamic_type
@@ -5011,8 +5120,11 @@ class _$MeDetailedImpl implements _MeDetailed {
   @override
   @JsonKey()
   final NotificationRecieveConfigs notificationRecieveConfig;
+// Added in Misskey 12.70.0
   final List<String> _emailNotificationTypes;
+// Added in Misskey 12.70.0
   @override
+  @JsonKey()
   List<String> get emailNotificationTypes {
     if (_emailNotificationTypes is EqualUnmodifiableListView)
       return _emailNotificationTypes;
@@ -5020,18 +5132,23 @@ class _$MeDetailedImpl implements _MeDetailed {
     return EqualUnmodifiableListView(_emailNotificationTypes);
   }
 
+// Added in Misskey 13.1.0
   final List<UserAchievement> _achievements;
+// Added in Misskey 13.1.0
   @override
+  @JsonKey()
   List<UserAchievement> get achievements {
     if (_achievements is EqualUnmodifiableListView) return _achievements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_achievements);
   }
 
+// Added in Misskey 13.1.0
   @override
-  final int loggedInDays;
+  final int? loggedInDays;
+// Added in Misskey 13.0.0
   @override
-  final UserPolicies policies;
+  final UserPolicies? policies;
 
   @override
   String toString() {
@@ -5306,14 +5423,14 @@ abstract class _MeDetailed implements MeDetailed {
       final String? lang,
       final List<UserField>? fields,
       final List<String> verifiedLinks,
-      required final int followersCount,
-      required final int followingCount,
+      @IntConverter() required final int followersCount,
+      @IntConverter() required final int followingCount,
       required final int notesCount,
       final List<String>? pinnedNoteIds,
       final List<Note>? pinnedNotes,
       final String? pinnedPageId,
       final Map<String, dynamic>? pinnedPage,
-      required final bool publicReactions,
+      final bool publicReactions,
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       @Deprecated("removed at 2023.12.0")
       final FFVisibility? ffVisibility,
@@ -5322,8 +5439,8 @@ abstract class _MeDetailed implements MeDetailed {
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final FFVisibility? followingVisibility,
       required final bool twoFactorEnabled,
-      required final bool usePasswordLessLogin,
-      required final bool securityKeys,
+      final bool usePasswordLessLogin,
+      final bool securityKeys,
       final List<UserRole>? roles,
       final String? memo,
       final String? moderationNote,
@@ -5331,37 +5448,38 @@ abstract class _MeDetailed implements MeDetailed {
       final String? bannerId,
       required final bool isModerator,
       required final bool isAdmin,
-      required final bool injectFeaturedNote,
-      required final bool receiveAnnouncementEmail,
+      final bool injectFeaturedNote,
+      final bool receiveAnnouncementEmail,
       required final bool alwaysMarkNsfw,
-      required final bool autoSensitive,
+      final bool autoSensitive,
       required final bool carefulBot,
       required final bool autoAcceptFollowed,
       final bool? preventAiLearning,
-      required final bool noCrawle,
-      required final bool isExplorable,
-      required final bool isDeleted,
+      final bool noCrawle,
+      final bool isExplorable,
+      final bool isDeleted,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final TwoFactorBackupCodesStock? twoFactorBackupCodesStock,
-      required final bool hideOnlineStatus,
+      final bool hideOnlineStatus,
       required final bool hasUnreadSpecifiedNotes,
       required final bool hasUnreadMentions,
-      required final bool hasUnreadAnnouncement,
-      required final bool hasUnreadAntenna,
-      required final bool hasUnreadChannel,
+      final bool hasUnreadAnnouncement,
+      final bool hasUnreadAntenna,
+      final bool hasUnreadChannel,
       required final bool hasUnreadNotification,
-      required final bool hasPendingReceivedFollowRequest,
+      final bool hasPendingReceivedFollowRequest,
       final int? unreadNotificationsCount,
       final List<AnnouncementsResponse> unreadAnnouncements,
-      @MuteWordsConverter() required final List<MuteWord> mutedWords,
+      @MuteWordsConverter() final List<MuteWord> mutedWords,
       @MuteWordsConverter() final List<MuteWord> hardMutedWords,
-      required final List<String> mutedInstances,
+      final List<String> mutedInstances,
       @Deprecated("Deprecated in Misskey 2023.9.2")
       final List<String>? mutingNotificationTypes,
       final NotificationRecieveConfigs notificationRecieveConfig,
-      required final List<String> emailNotificationTypes,
-      required final List<UserAchievement> achievements,
-      required final int loggedInDays,
-      required final UserPolicies policies}) = _$MeDetailedImpl;
+      final List<String> emailNotificationTypes,
+      final List<UserAchievement> achievements,
+      final int? loggedInDays,
+      final UserPolicies? policies}) = _$MeDetailedImpl;
 
   factory _MeDetailed.fromJson(Map<String, dynamic> json) =
       _$MeDetailedImpl.fromJson;
@@ -5439,9 +5557,11 @@ abstract class _MeDetailed implements MeDetailed {
   List<UserField>? get fields;
   @override
   List<String> get verifiedLinks;
-  @override
+  @override // CherryPick 4.3.0 or newer returns String if the count is not visible
+  @IntConverter()
   int get followersCount;
-  @override
+  @override // CherryPick 4.3.0 or newer returns String if the count is not visible
+  @IntConverter()
   int get followingCount;
   @override
   int get notesCount;
@@ -5453,7 +5573,7 @@ abstract class _MeDetailed implements MeDetailed {
   String? get pinnedPageId;
   @override
   Map<String, dynamic>? get pinnedPage;
-  @override
+  @override // Added in Misskey 12.93.0
   bool get publicReactions;
   @override // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
@@ -5467,9 +5587,9 @@ abstract class _MeDetailed implements MeDetailed {
   FFVisibility? get followingVisibility;
   @override
   bool get twoFactorEnabled;
-  @override
+  @override // Added in Misskey 11.25.0
   bool get usePasswordLessLogin;
-  @override
+  @override // Added in Misskey 11.24.0
   bool get securityKeys;
   @override
   List<UserRole>? get roles;
@@ -5485,13 +5605,13 @@ abstract class _MeDetailed implements MeDetailed {
   bool get isModerator;
   @override
   bool get isAdmin;
-  @override
+  @override // Added in Misskey 12.13.0
   bool get injectFeaturedNote;
-  @override
+  @override // Added in Misskey 12.69.0
   bool get receiveAnnouncementEmail;
   @override
   bool get alwaysMarkNsfw;
-  @override
+  @override // Added in Misskey 12.112.0
   bool get autoSensitive;
   @override
   bool get carefulBot;
@@ -5499,29 +5619,30 @@ abstract class _MeDetailed implements MeDetailed {
   bool get autoAcceptFollowed;
   @override
   bool? get preventAiLearning;
-  @override
+  @override // Added in Misskey 12.60.0
   bool get noCrawle;
-  @override
+  @override // Added in Misskey 12.63.0
   bool get isExplorable;
-  @override
+  @override // Added in Misskey 12.89.0
   bool get isDeleted;
-  @override
+  @override // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   TwoFactorBackupCodesStock? get twoFactorBackupCodesStock;
-  @override
+  @override // Added in Misskey 12.77.0
   bool get hideOnlineStatus;
   @override
   bool get hasUnreadSpecifiedNotes;
   @override
   bool get hasUnreadMentions;
-  @override
+  @override // Added in Misskey 12.0.0
   bool get hasUnreadAnnouncement;
-  @override
+  @override // Added in Misskey 12.0.0
   bool get hasUnreadAntenna;
-  @override
+  @override // Added in Misskey 12.47.0
   bool get hasUnreadChannel;
   @override
   bool get hasUnreadNotification;
-  @override
+  @override // Added in Misskey 12.11.0
   bool get hasPendingReceivedFollowRequest;
   @override
   int? get unreadNotificationsCount;
@@ -5533,21 +5654,21 @@ abstract class _MeDetailed implements MeDetailed {
   @override
   @MuteWordsConverter()
   List<MuteWord> get hardMutedWords;
-  @override
+  @override // Added in Misskey 12.99.0
   List<String> get mutedInstances;
   @override
   @Deprecated("Deprecated in Misskey 2023.9.2")
   List<String>? get mutingNotificationTypes;
   @override
   NotificationRecieveConfigs get notificationRecieveConfig;
-  @override
+  @override // Added in Misskey 12.70.0
   List<String> get emailNotificationTypes;
-  @override
+  @override // Added in Misskey 13.1.0
   List<UserAchievement> get achievements;
-  @override
-  int get loggedInDays;
-  @override
-  UserPolicies get policies;
+  @override // Added in Misskey 13.1.0
+  int? get loggedInDays;
+  @override // Added in Misskey 13.0.0
+  UserPolicies? get policies;
   @override
   @JsonKey(ignore: true)
   _$$MeDetailedImplCopyWith<_$MeDetailedImpl> get copyWith =>

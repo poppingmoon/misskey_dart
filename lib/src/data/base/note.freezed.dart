@@ -584,11 +584,11 @@ class _$NoteImpl implements _Note {
       required this.userId,
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.visibility,
-      required this.localOnly,
+      this.localOnly = false,
       required this.renoteCount,
       required this.repliesCount,
       required final Map<String, int> reactions,
-      @EmojisConverter() required final Map<String, String> reactionEmojis,
+      @EmojisConverter() final Map<String, String> reactionEmojis = const {},
       @EmojisConverter() final Map<String, String> emojis = const {},
       required final List<String> fileIds,
       required final List<DriveFile> files,
@@ -641,6 +641,7 @@ class _$NoteImpl implements _Note {
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final NoteVisibility? visibility;
   @override
+  @JsonKey()
   final bool localOnly;
   @override
   final int renoteCount;
@@ -656,6 +657,7 @@ class _$NoteImpl implements _Note {
 
   final Map<String, String> _reactionEmojis;
   @override
+  @JsonKey()
   @EmojisConverter()
   Map<String, String> get reactionEmojis {
     if (_reactionEmojis is EqualUnmodifiableMapView) return _reactionEmojis;
@@ -866,11 +868,11 @@ abstract class _Note implements Note {
       required final String userId,
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final NoteVisibility? visibility,
-      required final bool localOnly,
+      final bool localOnly,
       required final int renoteCount,
       required final int repliesCount,
       required final Map<String, int> reactions,
-      @EmojisConverter() required final Map<String, String> reactionEmojis,
+      @EmojisConverter() final Map<String, String> reactionEmojis,
       @EmojisConverter() final Map<String, String> emojis,
       required final List<String> fileIds,
       required final List<DriveFile> files,
@@ -1396,7 +1398,8 @@ NotePollChoice _$NotePollChoiceFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$NotePollChoice {
   String get text => throw _privateConstructorUsedError;
-  int get votes => throw _privateConstructorUsedError;
+  int get votes =>
+      throw _privateConstructorUsedError; // Changed to non-nullable in Misskey 11.0.0
   bool get isVoted => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1495,7 +1498,7 @@ class __$$NotePollChoiceImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$NotePollChoiceImpl implements _NotePollChoice {
   const _$NotePollChoiceImpl(
-      {required this.text, required this.votes, required this.isVoted});
+      {required this.text, required this.votes, this.isVoted = false});
 
   factory _$NotePollChoiceImpl.fromJson(Map<String, dynamic> json) =>
       _$$NotePollChoiceImplFromJson(json);
@@ -1504,7 +1507,9 @@ class _$NotePollChoiceImpl implements _NotePollChoice {
   final String text;
   @override
   final int votes;
+// Changed to non-nullable in Misskey 11.0.0
   @override
+  @JsonKey()
   final bool isVoted;
 
   @override
@@ -1545,7 +1550,7 @@ abstract class _NotePollChoice implements NotePollChoice {
   const factory _NotePollChoice(
       {required final String text,
       required final int votes,
-      required final bool isVoted}) = _$NotePollChoiceImpl;
+      final bool isVoted}) = _$NotePollChoiceImpl;
 
   factory _NotePollChoice.fromJson(Map<String, dynamic> json) =
       _$NotePollChoiceImpl.fromJson;
@@ -1554,7 +1559,7 @@ abstract class _NotePollChoice implements NotePollChoice {
   String get text;
   @override
   int get votes;
-  @override
+  @override // Changed to non-nullable in Misskey 11.0.0
   bool get isVoted;
   @override
   @JsonKey(ignore: true)

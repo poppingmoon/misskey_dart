@@ -177,8 +177,10 @@ _$UserDetailedNotMeImpl _$$UserDetailedNotMeImplFromJson(
               (v) =>
                   (v as List<dynamic>?)?.map((e) => e as String).toList() ??
                   const []),
-          followersCount: $checkedConvert('followersCount', (v) => v as int),
-          followingCount: $checkedConvert('followingCount', (v) => v as int),
+          followersCount: $checkedConvert(
+              'followersCount', (v) => const IntConverter().fromJson(v)),
+          followingCount: $checkedConvert(
+              'followingCount', (v) => const IntConverter().fromJson(v)),
           notesCount: $checkedConvert('notesCount', (v) => v as int),
           pinnedNoteIds: $checkedConvert('pinnedNoteIds',
               (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
@@ -190,7 +192,8 @@ _$UserDetailedNotMeImpl _$$UserDetailedNotMeImplFromJson(
           pinnedPageId: $checkedConvert('pinnedPageId', (v) => v as String?),
           pinnedPage:
               $checkedConvert('pinnedPage', (v) => v as Map<String, dynamic>?),
-          publicReactions: $checkedConvert('publicReactions', (v) => v as bool),
+          publicReactions:
+              $checkedConvert('publicReactions', (v) => v as bool? ?? false),
           ffVisibility: $checkedConvert(
               'ffVisibility',
               (v) => $enumDecodeNullable(_$FFVisibilityEnumMap, v,
@@ -205,9 +208,10 @@ _$UserDetailedNotMeImpl _$$UserDetailedNotMeImplFromJson(
                   unknownValue: JsonKey.nullForUndefinedEnumValue)),
           twoFactorEnabled:
               $checkedConvert('twoFactorEnabled', (v) => v as bool),
-          usePasswordLessLogin:
-              $checkedConvert('usePasswordLessLogin', (v) => v as bool),
-          securityKeys: $checkedConvert('securityKeys', (v) => v as bool),
+          usePasswordLessLogin: $checkedConvert(
+              'usePasswordLessLogin', (v) => v as bool? ?? false),
+          securityKeys:
+              $checkedConvert('securityKeys', (v) => v as bool? ?? false),
           roles: $checkedConvert(
               'roles',
               (v) => (v as List<dynamic>?)
@@ -257,8 +261,8 @@ Map<String, dynamic> _$$UserDetailedNotMeImplToJson(
       'lang': instance.lang,
       'fields': instance.fields?.map((e) => e.toJson()).toList(),
       'verifiedLinks': instance.verifiedLinks,
-      'followersCount': instance.followersCount,
-      'followingCount': instance.followingCount,
+      'followersCount': const IntConverter().toJson(instance.followersCount),
+      'followingCount': const IntConverter().toJson(instance.followingCount),
       'notesCount': instance.notesCount,
       'pinnedNoteIds': instance.pinnedNoteIds,
       'pinnedNotes': instance.pinnedNotes?.map((e) => e.toJson()).toList(),
@@ -390,10 +394,10 @@ _$UserDetailedNotMeWithRelationsImpl
                   (v) =>
                       (v as List<dynamic>?)?.map((e) => e as String).toList() ??
                       const []),
-              followersCount:
-                  $checkedConvert('followersCount', (v) => v as int),
-              followingCount:
-                  $checkedConvert('followingCount', (v) => v as int),
+              followersCount: $checkedConvert(
+                  'followersCount', (v) => const IntConverter().fromJson(v)),
+              followingCount: $checkedConvert(
+                  'followingCount', (v) => const IntConverter().fromJson(v)),
               notesCount: $checkedConvert('notesCount', (v) => v as int),
               pinnedNoteIds: $checkedConvert(
                   'pinnedNoteIds',
@@ -408,8 +412,8 @@ _$UserDetailedNotMeWithRelationsImpl
                   $checkedConvert('pinnedPageId', (v) => v as String?),
               pinnedPage: $checkedConvert(
                   'pinnedPage', (v) => v as Map<String, dynamic>?),
-              publicReactions:
-                  $checkedConvert('publicReactions', (v) => v as bool),
+              publicReactions: $checkedConvert(
+                  'publicReactions', (v) => v as bool? ?? false),
               ffVisibility: $checkedConvert(
                   'ffVisibility',
                   (v) => $enumDecodeNullable(_$FFVisibilityEnumMap, v,
@@ -424,9 +428,10 @@ _$UserDetailedNotMeWithRelationsImpl
                       unknownValue: JsonKey.nullForUndefinedEnumValue)),
               twoFactorEnabled:
                   $checkedConvert('twoFactorEnabled', (v) => v as bool),
-              usePasswordLessLogin:
-                  $checkedConvert('usePasswordLessLogin', (v) => v as bool),
-              securityKeys: $checkedConvert('securityKeys', (v) => v as bool),
+              usePasswordLessLogin: $checkedConvert(
+                  'usePasswordLessLogin', (v) => v as bool? ?? false),
+              securityKeys:
+                  $checkedConvert('securityKeys', (v) => v as bool? ?? false),
               roles: $checkedConvert(
                   'roles',
                   (v) => (v as List<dynamic>?)
@@ -444,7 +449,8 @@ _$UserDetailedNotMeWithRelationsImpl
               isBlocking: $checkedConvert('isBlocking', (v) => v as bool),
               isBlocked: $checkedConvert('isBlocked', (v) => v as bool),
               isMuted: $checkedConvert('isMuted', (v) => v as bool),
-              isRenoteMuted: $checkedConvert('isRenoteMuted', (v) => v as bool),
+              isRenoteMuted:
+                  $checkedConvert('isRenoteMuted', (v) => v as bool? ?? false),
               notify: $checkedConvert(
                   'notify', (v) => $enumDecodeNullable(_$NotifyEnumMap, v)),
               withReplies: $checkedConvert('withReplies', (v) => v as bool?),
@@ -489,8 +495,8 @@ Map<String, dynamic> _$$UserDetailedNotMeWithRelationsImplToJson(
       'lang': instance.lang,
       'fields': instance.fields?.map((e) => e.toJson()).toList(),
       'verifiedLinks': instance.verifiedLinks,
-      'followersCount': instance.followersCount,
-      'followingCount': instance.followingCount,
+      'followersCount': const IntConverter().toJson(instance.followersCount),
+      'followingCount': const IntConverter().toJson(instance.followingCount),
       'notesCount': instance.notesCount,
       'pinnedNoteIds': instance.pinnedNoteIds,
       'pinnedNotes': instance.pinnedNotes?.map((e) => e.toJson()).toList(),
@@ -620,8 +626,10 @@ _$MeDetailedImpl _$$MeDetailedImplFromJson(Map<String, dynamic> json) =>
               (v) =>
                   (v as List<dynamic>?)?.map((e) => e as String).toList() ??
                   const []),
-          followersCount: $checkedConvert('followersCount', (v) => v as int),
-          followingCount: $checkedConvert('followingCount', (v) => v as int),
+          followersCount: $checkedConvert(
+              'followersCount', (v) => const IntConverter().fromJson(v)),
+          followingCount: $checkedConvert(
+              'followingCount', (v) => const IntConverter().fromJson(v)),
           notesCount: $checkedConvert('notesCount', (v) => v as int),
           pinnedNoteIds: $checkedConvert('pinnedNoteIds',
               (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
@@ -633,7 +641,8 @@ _$MeDetailedImpl _$$MeDetailedImplFromJson(Map<String, dynamic> json) =>
           pinnedPageId: $checkedConvert('pinnedPageId', (v) => v as String?),
           pinnedPage:
               $checkedConvert('pinnedPage', (v) => v as Map<String, dynamic>?),
-          publicReactions: $checkedConvert('publicReactions', (v) => v as bool),
+          publicReactions:
+              $checkedConvert('publicReactions', (v) => v as bool? ?? false),
           ffVisibility: $checkedConvert(
               'ffVisibility',
               (v) => $enumDecodeNullable(_$FFVisibilityEnumMap, v,
@@ -648,9 +657,10 @@ _$MeDetailedImpl _$$MeDetailedImplFromJson(Map<String, dynamic> json) =>
                   unknownValue: JsonKey.nullForUndefinedEnumValue)),
           twoFactorEnabled:
               $checkedConvert('twoFactorEnabled', (v) => v as bool),
-          usePasswordLessLogin:
-              $checkedConvert('usePasswordLessLogin', (v) => v as bool),
-          securityKeys: $checkedConvert('securityKeys', (v) => v as bool),
+          usePasswordLessLogin: $checkedConvert(
+              'usePasswordLessLogin', (v) => v as bool? ?? false),
+          securityKeys:
+              $checkedConvert('securityKeys', (v) => v as bool? ?? false),
           roles: $checkedConvert(
               'roles',
               (v) => (v as List<dynamic>?)
@@ -664,39 +674,41 @@ _$MeDetailedImpl _$$MeDetailedImplFromJson(Map<String, dynamic> json) =>
           isModerator: $checkedConvert('isModerator', (v) => v as bool),
           isAdmin: $checkedConvert('isAdmin', (v) => v as bool),
           injectFeaturedNote:
-              $checkedConvert('injectFeaturedNote', (v) => v as bool),
-          receiveAnnouncementEmail:
-              $checkedConvert('receiveAnnouncementEmail', (v) => v as bool),
+              $checkedConvert('injectFeaturedNote', (v) => v as bool? ?? false),
+          receiveAnnouncementEmail: $checkedConvert(
+              'receiveAnnouncementEmail', (v) => v as bool? ?? false),
           alwaysMarkNsfw: $checkedConvert('alwaysMarkNsfw', (v) => v as bool),
-          autoSensitive: $checkedConvert('autoSensitive', (v) => v as bool),
+          autoSensitive:
+              $checkedConvert('autoSensitive', (v) => v as bool? ?? false),
           carefulBot: $checkedConvert('carefulBot', (v) => v as bool),
           autoAcceptFollowed:
               $checkedConvert('autoAcceptFollowed', (v) => v as bool),
           preventAiLearning:
               $checkedConvert('preventAiLearning', (v) => v as bool?),
-          noCrawle: $checkedConvert('noCrawle', (v) => v as bool),
-          isExplorable: $checkedConvert('isExplorable', (v) => v as bool),
-          isDeleted: $checkedConvert('isDeleted', (v) => v as bool),
+          noCrawle: $checkedConvert('noCrawle', (v) => v as bool? ?? false),
+          isExplorable:
+              $checkedConvert('isExplorable', (v) => v as bool? ?? false),
+          isDeleted: $checkedConvert('isDeleted', (v) => v as bool? ?? false),
           twoFactorBackupCodesStock: $checkedConvert(
               'twoFactorBackupCodesStock',
-              (v) =>
-                  $enumDecodeNullable(_$TwoFactorBackupCodesStockEnumMap, v)),
+              (v) => $enumDecodeNullable(_$TwoFactorBackupCodesStockEnumMap, v,
+                  unknownValue: JsonKey.nullForUndefinedEnumValue)),
           hideOnlineStatus:
-              $checkedConvert('hideOnlineStatus', (v) => v as bool),
+              $checkedConvert('hideOnlineStatus', (v) => v as bool? ?? false),
           hasUnreadSpecifiedNotes:
               $checkedConvert('hasUnreadSpecifiedNotes', (v) => v as bool),
           hasUnreadMentions:
               $checkedConvert('hasUnreadMentions', (v) => v as bool),
-          hasUnreadAnnouncement:
-              $checkedConvert('hasUnreadAnnouncement', (v) => v as bool),
+          hasUnreadAnnouncement: $checkedConvert(
+              'hasUnreadAnnouncement', (v) => v as bool? ?? false),
           hasUnreadAntenna:
-              $checkedConvert('hasUnreadAntenna', (v) => v as bool),
+              $checkedConvert('hasUnreadAntenna', (v) => v as bool? ?? false),
           hasUnreadChannel:
-              $checkedConvert('hasUnreadChannel', (v) => v as bool),
+              $checkedConvert('hasUnreadChannel', (v) => v as bool? ?? false),
           hasUnreadNotification:
               $checkedConvert('hasUnreadNotification', (v) => v as bool),
           hasPendingReceivedFollowRequest: $checkedConvert(
-              'hasPendingReceivedFollowRequest', (v) => v as bool),
+              'hasPendingReceivedFollowRequest', (v) => v as bool? ?? false),
           unreadNotificationsCount:
               $checkedConvert('unreadNotificationsCount', (v) => v as int?),
           unreadAnnouncements: $checkedConvert(
@@ -709,9 +721,11 @@ _$MeDetailedImpl _$$MeDetailedImplFromJson(Map<String, dynamic> json) =>
                   const []),
           mutedWords: $checkedConvert(
               'mutedWords',
-              (v) => (v as List<dynamic>)
-                  .map(const MuteWordsConverter().fromJson)
-                  .toList()),
+              (v) =>
+                  (v as List<dynamic>?)
+                      ?.map(const MuteWordsConverter().fromJson)
+                      .toList() ??
+                  const []),
           hardMutedWords: $checkedConvert(
               'hardMutedWords',
               (v) =>
@@ -719,8 +733,11 @@ _$MeDetailedImpl _$$MeDetailedImplFromJson(Map<String, dynamic> json) =>
                       ?.map(const MuteWordsConverter().fromJson)
                       .toList() ??
                   const []),
-          mutedInstances: $checkedConvert('mutedInstances',
-              (v) => (v as List<dynamic>).map((e) => e as String).toList()),
+          mutedInstances: $checkedConvert(
+              'mutedInstances',
+              (v) =>
+                  (v as List<dynamic>?)?.map((e) => e as String).toList() ??
+                  const []),
           mutingNotificationTypes: $checkedConvert('mutingNotificationTypes',
               (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
           notificationRecieveConfig: $checkedConvert(
@@ -729,17 +746,25 @@ _$MeDetailedImpl _$$MeDetailedImplFromJson(Map<String, dynamic> json) =>
                   ? const NotificationRecieveConfigs()
                   : NotificationRecieveConfigs.fromJson(
                       v as Map<String, dynamic>)),
-          emailNotificationTypes: $checkedConvert('emailNotificationTypes',
-              (v) => (v as List<dynamic>).map((e) => e as String).toList()),
+          emailNotificationTypes: $checkedConvert(
+              'emailNotificationTypes',
+              (v) =>
+                  (v as List<dynamic>?)?.map((e) => e as String).toList() ??
+                  const []),
           achievements: $checkedConvert(
               'achievements',
-              (v) => (v as List<dynamic>)
-                  .map((e) =>
-                      UserAchievement.fromJson(e as Map<String, dynamic>))
-                  .toList()),
-          loggedInDays: $checkedConvert('loggedInDays', (v) => v as int),
-          policies: $checkedConvert('policies',
-              (v) => UserPolicies.fromJson(v as Map<String, dynamic>)),
+              (v) =>
+                  (v as List<dynamic>?)
+                      ?.map((e) =>
+                          UserAchievement.fromJson(e as Map<String, dynamic>))
+                      .toList() ??
+                  const []),
+          loggedInDays: $checkedConvert('loggedInDays', (v) => v as int?),
+          policies: $checkedConvert(
+              'policies',
+              (v) => v == null
+                  ? null
+                  : UserPolicies.fromJson(v as Map<String, dynamic>)),
         );
         return val;
       },
@@ -780,8 +805,8 @@ Map<String, dynamic> _$$MeDetailedImplToJson(_$MeDetailedImpl instance) =>
       'lang': instance.lang,
       'fields': instance.fields?.map((e) => e.toJson()).toList(),
       'verifiedLinks': instance.verifiedLinks,
-      'followersCount': instance.followersCount,
-      'followingCount': instance.followingCount,
+      'followersCount': const IntConverter().toJson(instance.followersCount),
+      'followingCount': const IntConverter().toJson(instance.followingCount),
       'notesCount': instance.notesCount,
       'pinnedNoteIds': instance.pinnedNoteIds,
       'pinnedNotes': instance.pinnedNotes?.map((e) => e.toJson()).toList(),
@@ -838,7 +863,7 @@ Map<String, dynamic> _$$MeDetailedImplToJson(_$MeDetailedImpl instance) =>
       'emailNotificationTypes': instance.emailNotificationTypes,
       'achievements': instance.achievements.map((e) => e.toJson()).toList(),
       'loggedInDays': instance.loggedInDays,
-      'policies': instance.policies.toJson(),
+      'policies': instance.policies?.toJson(),
     };
 
 const _$TwoFactorBackupCodesStockEnumMap = {

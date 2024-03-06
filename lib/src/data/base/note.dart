@@ -21,11 +21,11 @@ class Note with _$Note {
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     NoteVisibility? visibility,
-    required bool localOnly,
+    @Default(false) bool localOnly,
     required int renoteCount,
     required int repliesCount,
     required Map<String, int> reactions,
-    @EmojisConverter() required Map<String, String> reactionEmojis,
+    @EmojisConverter() @Default({}) Map<String, String> reactionEmojis,
     @EmojisConverter() @Default({}) Map<String, String> emojis,
     required List<String> fileIds,
     required List<DriveFile> files,
@@ -82,7 +82,8 @@ class NotePollChoice with _$NotePollChoice {
   const factory NotePollChoice({
     required String text,
     required int votes,
-    required bool isVoted,
+    // Changed to non-nullable in Misskey 11.0.0
+    @Default(false) bool isVoted,
   }) = _NotePollChoice;
 
   factory NotePollChoice.fromJson(Map<String, dynamic> json) =>

@@ -85,7 +85,7 @@ _$PageTextImpl _$$PageTextImplFromJson(Map<String, dynamic> json) =>
           id: $checkedConvert('id', (v) => v as String),
           type: $checkedConvert(
               'type', (v) => $enumDecodeNullable(_$PageContentTypeEnumMap, v)),
-          text: $checkedConvert('text', (v) => v as String),
+          text: $checkedConvert('text', (v) => v as String?),
         );
         return val;
       },
