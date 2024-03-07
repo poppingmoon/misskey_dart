@@ -8,10 +8,17 @@ part of 'mute_list_request.dart';
 
 _$MuteListRequestImpl _$$MuteListRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$MuteListRequestImpl(
-      limit: json['limit'] as int?,
-      sinceId: json['sinceId'] as String?,
-      untilId: json['untilId'] as String?,
+    $checkedCreate(
+      r'_$MuteListRequestImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$MuteListRequestImpl(
+          limit: $checkedConvert('limit', (v) => v as int?),
+          sinceId: $checkedConvert('sinceId', (v) => v as String?),
+          untilId: $checkedConvert('untilId', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$MuteListRequestImplToJson(

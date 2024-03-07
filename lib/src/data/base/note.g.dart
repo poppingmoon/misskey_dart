@@ -30,6 +30,7 @@ _$NoteImpl _$$NoteImplFromJson(Map<String, dynamic> json) => $checkedCreate(
           localOnly: $checkedConvert('localOnly', (v) => v as bool? ?? false),
           renoteCount: $checkedConvert('renoteCount', (v) => v as int),
           repliesCount: $checkedConvert('repliesCount', (v) => v as int),
+          reactionCount: $checkedConvert('reactionCount', (v) => v as int?),
           reactions: $checkedConvert(
               'reactions', (v) => Map<String, int>.from(v as Map)),
           reactionEmojis: $checkedConvert(
@@ -115,6 +116,7 @@ Map<String, dynamic> _$$NoteImplToJson(_$NoteImpl instance) =>
       'localOnly': instance.localOnly,
       'renoteCount': instance.renoteCount,
       'repliesCount': instance.repliesCount,
+      'reactionCount': instance.reactionCount,
       'reactions': instance.reactions,
       'reactionEmojis': const EmojisConverter().toJson(instance.reactionEmojis),
       'emojis': const EmojisConverter().toJson(instance.emojis),

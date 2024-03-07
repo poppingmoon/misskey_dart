@@ -24,6 +24,7 @@ class Note with _$Note {
     @Default(false) bool localOnly,
     required int renoteCount,
     required int repliesCount,
+    int? reactionCount,
     required Map<String, int> reactions,
     @EmojisConverter() @Default({}) Map<String, String> reactionEmojis,
     @EmojisConverter() @Default({}) Map<String, String> emojis,

@@ -35,6 +35,7 @@ mixin _$Note {
   bool get localOnly => throw _privateConstructorUsedError;
   int get renoteCount => throw _privateConstructorUsedError;
   int get repliesCount => throw _privateConstructorUsedError;
+  int? get reactionCount => throw _privateConstructorUsedError;
   Map<String, int> get reactions => throw _privateConstructorUsedError;
   @EmojisConverter()
   Map<String, String> get reactionEmojis => throw _privateConstructorUsedError;
@@ -87,6 +88,7 @@ abstract class $NoteCopyWith<$Res> {
       bool localOnly,
       int renoteCount,
       int repliesCount,
+      int? reactionCount,
       Map<String, int> reactions,
       @EmojisConverter() Map<String, String> reactionEmojis,
       @EmojisConverter() Map<String, String> emojis,
@@ -140,6 +142,7 @@ class _$NoteCopyWithImpl<$Res, $Val extends Note>
     Object? localOnly = null,
     Object? renoteCount = null,
     Object? repliesCount = null,
+    Object? reactionCount = freezed,
     Object? reactions = null,
     Object? reactionEmojis = null,
     Object? emojis = null,
@@ -206,6 +209,10 @@ class _$NoteCopyWithImpl<$Res, $Val extends Note>
           ? _value.repliesCount
           : repliesCount // ignore: cast_nullable_to_non_nullable
               as int,
+      reactionCount: freezed == reactionCount
+          ? _value.reactionCount
+          : reactionCount // ignore: cast_nullable_to_non_nullable
+              as int?,
       reactions: null == reactions
           ? _value.reactions
           : reactions // ignore: cast_nullable_to_non_nullable
@@ -366,6 +373,7 @@ abstract class _$$NoteImplCopyWith<$Res> implements $NoteCopyWith<$Res> {
       bool localOnly,
       int renoteCount,
       int repliesCount,
+      int? reactionCount,
       Map<String, int> reactions,
       @EmojisConverter() Map<String, String> reactionEmojis,
       @EmojisConverter() Map<String, String> emojis,
@@ -421,6 +429,7 @@ class __$$NoteImplCopyWithImpl<$Res>
     Object? localOnly = null,
     Object? renoteCount = null,
     Object? repliesCount = null,
+    Object? reactionCount = freezed,
     Object? reactions = null,
     Object? reactionEmojis = null,
     Object? emojis = null,
@@ -487,6 +496,10 @@ class __$$NoteImplCopyWithImpl<$Res>
           ? _value.repliesCount
           : repliesCount // ignore: cast_nullable_to_non_nullable
               as int,
+      reactionCount: freezed == reactionCount
+          ? _value.reactionCount
+          : reactionCount // ignore: cast_nullable_to_non_nullable
+              as int?,
       reactions: null == reactions
           ? _value._reactions
           : reactions // ignore: cast_nullable_to_non_nullable
@@ -587,6 +600,7 @@ class _$NoteImpl implements _Note {
       this.localOnly = false,
       required this.renoteCount,
       required this.repliesCount,
+      this.reactionCount,
       required final Map<String, int> reactions,
       @EmojisConverter() final Map<String, String> reactionEmojis = const {},
       @EmojisConverter() final Map<String, String> emojis = const {},
@@ -647,6 +661,8 @@ class _$NoteImpl implements _Note {
   final int renoteCount;
   @override
   final int repliesCount;
+  @override
+  final int? reactionCount;
   final Map<String, int> _reactions;
   @override
   Map<String, int> get reactions {
@@ -750,7 +766,7 @@ class _$NoteImpl implements _Note {
 
   @override
   String toString() {
-    return 'Note(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, text: $text, cw: $cw, user: $user, userId: $userId, visibility: $visibility, localOnly: $localOnly, renoteCount: $renoteCount, repliesCount: $repliesCount, reactions: $reactions, reactionEmojis: $reactionEmojis, emojis: $emojis, fileIds: $fileIds, files: $files, replyId: $replyId, renoteId: $renoteId, channelId: $channelId, reactionAcceptance: $reactionAcceptance, renote: $renote, reply: $reply, visibleUserIds: $visibleUserIds, mentions: $mentions, myReaction: $myReaction, channel: $channel, uri: $uri, url: $url, reactionAndUserPairCache: $reactionAndUserPairCache, poll: $poll, clippedCount: $clippedCount)';
+    return 'Note(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, text: $text, cw: $cw, user: $user, userId: $userId, visibility: $visibility, localOnly: $localOnly, renoteCount: $renoteCount, repliesCount: $repliesCount, reactionCount: $reactionCount, reactions: $reactions, reactionEmojis: $reactionEmojis, emojis: $emojis, fileIds: $fileIds, files: $files, replyId: $replyId, renoteId: $renoteId, channelId: $channelId, reactionAcceptance: $reactionAcceptance, renote: $renote, reply: $reply, visibleUserIds: $visibleUserIds, mentions: $mentions, myReaction: $myReaction, channel: $channel, uri: $uri, url: $url, reactionAndUserPairCache: $reactionAndUserPairCache, poll: $poll, clippedCount: $clippedCount)';
   }
 
   @override
@@ -775,6 +791,8 @@ class _$NoteImpl implements _Note {
                 other.renoteCount == renoteCount) &&
             (identical(other.repliesCount, repliesCount) ||
                 other.repliesCount == repliesCount) &&
+            (identical(other.reactionCount, reactionCount) ||
+                other.reactionCount == reactionCount) &&
             const DeepCollectionEquality()
                 .equals(other._reactions, _reactions) &&
             const DeepCollectionEquality()
@@ -821,6 +839,7 @@ class _$NoteImpl implements _Note {
         localOnly,
         renoteCount,
         repliesCount,
+        reactionCount,
         const DeepCollectionEquality().hash(_reactions),
         const DeepCollectionEquality().hash(_reactionEmojis),
         const DeepCollectionEquality().hash(_emojis),
@@ -871,6 +890,7 @@ abstract class _Note implements Note {
       final bool localOnly,
       required final int renoteCount,
       required final int repliesCount,
+      final int? reactionCount,
       required final Map<String, int> reactions,
       @EmojisConverter() final Map<String, String> reactionEmojis,
       @EmojisConverter() final Map<String, String> emojis,
@@ -920,6 +940,8 @@ abstract class _Note implements Note {
   int get renoteCount;
   @override
   int get repliesCount;
+  @override
+  int? get reactionCount;
   @override
   Map<String, int> get reactions;
   @override

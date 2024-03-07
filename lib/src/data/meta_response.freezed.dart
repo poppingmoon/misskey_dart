@@ -62,8 +62,7 @@ mixin _$MetaResponse {
   Uri? get impressumUrl => throw _privateConstructorUsedError;
   @NullableUriConverter()
   Uri? get privacyPolicyUrl => throw _privateConstructorUsedError;
-  int? get maxNoteTextLength =>
-      throw _privateConstructorUsedError; //required List<MetaEmoji> emojis,
+  int? get maxNoteTextLength => throw _privateConstructorUsedError;
   List<MetaAd> get ads => throw _privateConstructorUsedError;
   List<String> get serverRules => throw _privateConstructorUsedError;
   UserPolicies? get policies => throw _privateConstructorUsedError;
@@ -822,9 +821,7 @@ class _$MetaResponseImpl implements _MetaResponse {
   final Uri? privacyPolicyUrl;
   @override
   final int? maxNoteTextLength;
-//required List<MetaEmoji> emojis,
   final List<MetaAd> _ads;
-//required List<MetaEmoji> emojis,
   @override
   @JsonKey()
   List<MetaAd> get ads {
@@ -1139,7 +1136,7 @@ abstract class _MetaResponse implements MetaResponse {
   Uri? get privacyPolicyUrl;
   @override
   int? get maxNoteTextLength;
-  @override //required List<MetaEmoji> emojis,
+  @override
   List<MetaAd> get ads;
   @override
   List<String> get serverRules;
