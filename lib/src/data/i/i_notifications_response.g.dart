@@ -26,10 +26,10 @@ _$INotificationsResponseImpl _$$INotificationsResponseImplFromJson(
           reaction: $checkedConvert('reaction', (v) => v as String?),
           choice: $checkedConvert('choice', (v) => v as int?),
           achievement: $checkedConvert('achievement', (v) => v as String?),
-          customBody: $checkedConvert('customBody', (v) => v as String?),
-          customHeader: $checkedConvert('customHeader', (v) => v as String?),
-          customIcon: $checkedConvert(
-              'customIcon',
+          body: $checkedConvert('body', (v) => v as String?),
+          header: $checkedConvert('header', (v) => v as String?),
+          icon: $checkedConvert(
+              'icon',
               (v) => _$JsonConverterFromJson<String, Uri?>(
                   v, const NullableUriConverter().fromJson)),
           appAccessTokenId:
@@ -76,9 +76,9 @@ Map<String, dynamic> _$$INotificationsResponseImplToJson(
       'reaction': instance.reaction,
       'choice': instance.choice,
       'achievement': instance.achievement,
-      'customBody': instance.customBody,
-      'customHeader': instance.customHeader,
-      'customIcon': const NullableUriConverter().toJson(instance.customIcon),
+      'body': instance.body,
+      'header': instance.header,
+      'icon': const NullableUriConverter().toJson(instance.icon),
       'appAccessTokenId': instance.appAccessTokenId,
       'userId': instance.userId,
       'user': instance.user?.toJson(),
