@@ -16,27 +16,34 @@ _$MetaResponseImpl _$$MetaResponseImplFromJson(Map<String, dynamic> json) =>
               $checkedConvert('maintainerName', (v) => v as String?),
           maintainerEmail:
               $checkedConvert('maintainerEmail', (v) => v as String?),
-          version: $checkedConvert('version', (v) => v as String),
+          version: $checkedConvert('version', (v) => v as String?),
           name: $checkedConvert('name', (v) => v as String?),
           shortName: $checkedConvert('shortName', (v) => v as String?),
           uri: $checkedConvert(
-              'uri', (v) => const UriConverter().fromJson(v as String)),
+              'uri',
+              (v) => _$JsonConverterFromJson<String, Uri?>(
+                  v, const NullableUriConverter().fromJson)),
           description: $checkedConvert('description', (v) => v as String?),
-          langs: $checkedConvert('langs',
-              (v) => (v as List<dynamic>).map((e) => e as String).toList()),
+          langs: $checkedConvert(
+              'langs',
+              (v) =>
+                  (v as List<dynamic>?)?.map((e) => e as String).toList() ??
+                  const []),
           tosUrl: $checkedConvert(
               'tosUrl',
               (v) => _$JsonConverterFromJson<String, Uri?>(
                   v, const NullableUriConverter().fromJson)),
-          repositoryUrl: $checkedConvert('repositoryUrl',
-              (v) => const UriConverter().fromJson(v as String)),
+          repositoryUrl: $checkedConvert(
+              'repositoryUrl',
+              (v) => _$JsonConverterFromJson<String, Uri?>(
+                  v, const NullableUriConverter().fromJson)),
           feedbackUrl: $checkedConvert('feedbackUrl', (v) => v as String?),
           defaultDarkTheme:
               $checkedConvert('defaultDarkTheme', (v) => v as String?),
           defaultLightTheme:
               $checkedConvert('defaultLightTheme', (v) => v as String?),
           disableRegistration:
-              $checkedConvert('disableRegistration', (v) => v as bool),
+              $checkedConvert('disableRegistration', (v) => v as bool?),
           emailRequiredForSignup:
               $checkedConvert('emailRequiredForSignup', (v) => v as bool?),
           enableHcaptcha: $checkedConvert('enableHcaptcha', (v) => v as bool?),
@@ -85,7 +92,7 @@ _$MetaResponseImpl _$$MetaResponseImplFromJson(Map<String, dynamic> json) =>
               (v) => _$JsonConverterFromJson<String, Uri?>(
                   v, const NullableUriConverter().fromJson)),
           maxNoteTextLength:
-              $checkedConvert('maxNoteTextLength', (v) => v as int),
+              $checkedConvert('maxNoteTextLength', (v) => v as int?),
           ads: $checkedConvert(
               'ads',
               (v) =>
@@ -131,11 +138,12 @@ Map<String, dynamic> _$$MetaResponseImplToJson(_$MetaResponseImpl instance) =>
       'version': instance.version,
       'name': instance.name,
       'shortName': instance.shortName,
-      'uri': const UriConverter().toJson(instance.uri),
+      'uri': const NullableUriConverter().toJson(instance.uri),
       'description': instance.description,
       'langs': instance.langs,
       'tosUrl': const NullableUriConverter().toJson(instance.tosUrl),
-      'repositoryUrl': const UriConverter().toJson(instance.repositoryUrl),
+      'repositoryUrl':
+          const NullableUriConverter().toJson(instance.repositoryUrl),
       'feedbackUrl': instance.feedbackUrl,
       'defaultDarkTheme': instance.defaultDarkTheme,
       'defaultLightTheme': instance.defaultLightTheme,

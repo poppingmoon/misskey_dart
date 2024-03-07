@@ -22,21 +22,21 @@ MetaResponse _$MetaResponseFromJson(Map<String, dynamic> json) {
 mixin _$MetaResponse {
   String? get maintainerName => throw _privateConstructorUsedError;
   String? get maintainerEmail => throw _privateConstructorUsedError;
-  String get version => throw _privateConstructorUsedError;
+  String? get version => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
   String? get shortName => throw _privateConstructorUsedError;
-  @UriConverter()
-  Uri get uri => throw _privateConstructorUsedError;
+  @NullableUriConverter()
+  Uri? get uri => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
   List<String> get langs => throw _privateConstructorUsedError;
   @NullableUriConverter()
   Uri? get tosUrl => throw _privateConstructorUsedError;
-  @UriConverter()
-  Uri get repositoryUrl => throw _privateConstructorUsedError;
+  @NullableUriConverter()
+  Uri? get repositoryUrl => throw _privateConstructorUsedError;
   String? get feedbackUrl => throw _privateConstructorUsedError;
   String? get defaultDarkTheme => throw _privateConstructorUsedError;
   String? get defaultLightTheme => throw _privateConstructorUsedError;
-  bool get disableRegistration => throw _privateConstructorUsedError;
+  bool? get disableRegistration => throw _privateConstructorUsedError;
   bool? get emailRequiredForSignup => throw _privateConstructorUsedError;
   bool? get enableHcaptcha => throw _privateConstructorUsedError;
   String? get hcaptchaSiteKey => throw _privateConstructorUsedError;
@@ -62,7 +62,7 @@ mixin _$MetaResponse {
   Uri? get impressumUrl => throw _privateConstructorUsedError;
   @NullableUriConverter()
   Uri? get privacyPolicyUrl => throw _privateConstructorUsedError;
-  int get maxNoteTextLength =>
+  int? get maxNoteTextLength =>
       throw _privateConstructorUsedError; //required List<MetaEmoji> emojis,
   List<MetaAd> get ads => throw _privateConstructorUsedError;
   List<String> get serverRules => throw _privateConstructorUsedError;
@@ -91,18 +91,18 @@ abstract class $MetaResponseCopyWith<$Res> {
   $Res call(
       {String? maintainerName,
       String? maintainerEmail,
-      String version,
+      String? version,
       String? name,
       String? shortName,
-      @UriConverter() Uri uri,
+      @NullableUriConverter() Uri? uri,
       String? description,
       List<String> langs,
       @NullableUriConverter() Uri? tosUrl,
-      @UriConverter() Uri repositoryUrl,
+      @NullableUriConverter() Uri? repositoryUrl,
       String? feedbackUrl,
       String? defaultDarkTheme,
       String? defaultLightTheme,
-      bool disableRegistration,
+      bool? disableRegistration,
       bool? emailRequiredForSignup,
       bool? enableHcaptcha,
       String? hcaptchaSiteKey,
@@ -120,7 +120,7 @@ abstract class $MetaResponseCopyWith<$Res> {
       @NullableUriConverter() Uri? logoImageUrl,
       @NullableUriConverter() Uri? impressumUrl,
       @NullableUriConverter() Uri? privacyPolicyUrl,
-      int maxNoteTextLength,
+      int? maxNoteTextLength,
       List<MetaAd> ads,
       List<String> serverRules,
       UserPolicies? policies,
@@ -152,18 +152,18 @@ class _$MetaResponseCopyWithImpl<$Res, $Val extends MetaResponse>
   $Res call({
     Object? maintainerName = freezed,
     Object? maintainerEmail = freezed,
-    Object? version = null,
+    Object? version = freezed,
     Object? name = freezed,
     Object? shortName = freezed,
-    Object? uri = null,
+    Object? uri = freezed,
     Object? description = freezed,
     Object? langs = null,
     Object? tosUrl = freezed,
-    Object? repositoryUrl = null,
+    Object? repositoryUrl = freezed,
     Object? feedbackUrl = freezed,
     Object? defaultDarkTheme = freezed,
     Object? defaultLightTheme = freezed,
-    Object? disableRegistration = null,
+    Object? disableRegistration = freezed,
     Object? emailRequiredForSignup = freezed,
     Object? enableHcaptcha = freezed,
     Object? hcaptchaSiteKey = freezed,
@@ -181,7 +181,7 @@ class _$MetaResponseCopyWithImpl<$Res, $Val extends MetaResponse>
     Object? logoImageUrl = freezed,
     Object? impressumUrl = freezed,
     Object? privacyPolicyUrl = freezed,
-    Object? maxNoteTextLength = null,
+    Object? maxNoteTextLength = freezed,
     Object? ads = null,
     Object? serverRules = null,
     Object? policies = freezed,
@@ -203,10 +203,10 @@ class _$MetaResponseCopyWithImpl<$Res, $Val extends MetaResponse>
           ? _value.maintainerEmail
           : maintainerEmail // ignore: cast_nullable_to_non_nullable
               as String?,
-      version: null == version
+      version: freezed == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -215,10 +215,10 @@ class _$MetaResponseCopyWithImpl<$Res, $Val extends MetaResponse>
           ? _value.shortName
           : shortName // ignore: cast_nullable_to_non_nullable
               as String?,
-      uri: null == uri
+      uri: freezed == uri
           ? _value.uri
           : uri // ignore: cast_nullable_to_non_nullable
-              as Uri,
+              as Uri?,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -231,10 +231,10 @@ class _$MetaResponseCopyWithImpl<$Res, $Val extends MetaResponse>
           ? _value.tosUrl
           : tosUrl // ignore: cast_nullable_to_non_nullable
               as Uri?,
-      repositoryUrl: null == repositoryUrl
+      repositoryUrl: freezed == repositoryUrl
           ? _value.repositoryUrl
           : repositoryUrl // ignore: cast_nullable_to_non_nullable
-              as Uri,
+              as Uri?,
       feedbackUrl: freezed == feedbackUrl
           ? _value.feedbackUrl
           : feedbackUrl // ignore: cast_nullable_to_non_nullable
@@ -247,10 +247,10 @@ class _$MetaResponseCopyWithImpl<$Res, $Val extends MetaResponse>
           ? _value.defaultLightTheme
           : defaultLightTheme // ignore: cast_nullable_to_non_nullable
               as String?,
-      disableRegistration: null == disableRegistration
+      disableRegistration: freezed == disableRegistration
           ? _value.disableRegistration
           : disableRegistration // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       emailRequiredForSignup: freezed == emailRequiredForSignup
           ? _value.emailRequiredForSignup
           : emailRequiredForSignup // ignore: cast_nullable_to_non_nullable
@@ -319,10 +319,10 @@ class _$MetaResponseCopyWithImpl<$Res, $Val extends MetaResponse>
           ? _value.privacyPolicyUrl
           : privacyPolicyUrl // ignore: cast_nullable_to_non_nullable
               as Uri?,
-      maxNoteTextLength: null == maxNoteTextLength
+      maxNoteTextLength: freezed == maxNoteTextLength
           ? _value.maxNoteTextLength
           : maxNoteTextLength // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       ads: null == ads
           ? _value.ads
           : ads // ignore: cast_nullable_to_non_nullable
@@ -406,18 +406,18 @@ abstract class _$$MetaResponseImplCopyWith<$Res>
   $Res call(
       {String? maintainerName,
       String? maintainerEmail,
-      String version,
+      String? version,
       String? name,
       String? shortName,
-      @UriConverter() Uri uri,
+      @NullableUriConverter() Uri? uri,
       String? description,
       List<String> langs,
       @NullableUriConverter() Uri? tosUrl,
-      @UriConverter() Uri repositoryUrl,
+      @NullableUriConverter() Uri? repositoryUrl,
       String? feedbackUrl,
       String? defaultDarkTheme,
       String? defaultLightTheme,
-      bool disableRegistration,
+      bool? disableRegistration,
       bool? emailRequiredForSignup,
       bool? enableHcaptcha,
       String? hcaptchaSiteKey,
@@ -435,7 +435,7 @@ abstract class _$$MetaResponseImplCopyWith<$Res>
       @NullableUriConverter() Uri? logoImageUrl,
       @NullableUriConverter() Uri? impressumUrl,
       @NullableUriConverter() Uri? privacyPolicyUrl,
-      int maxNoteTextLength,
+      int? maxNoteTextLength,
       List<MetaAd> ads,
       List<String> serverRules,
       UserPolicies? policies,
@@ -467,18 +467,18 @@ class __$$MetaResponseImplCopyWithImpl<$Res>
   $Res call({
     Object? maintainerName = freezed,
     Object? maintainerEmail = freezed,
-    Object? version = null,
+    Object? version = freezed,
     Object? name = freezed,
     Object? shortName = freezed,
-    Object? uri = null,
+    Object? uri = freezed,
     Object? description = freezed,
     Object? langs = null,
     Object? tosUrl = freezed,
-    Object? repositoryUrl = null,
+    Object? repositoryUrl = freezed,
     Object? feedbackUrl = freezed,
     Object? defaultDarkTheme = freezed,
     Object? defaultLightTheme = freezed,
-    Object? disableRegistration = null,
+    Object? disableRegistration = freezed,
     Object? emailRequiredForSignup = freezed,
     Object? enableHcaptcha = freezed,
     Object? hcaptchaSiteKey = freezed,
@@ -496,7 +496,7 @@ class __$$MetaResponseImplCopyWithImpl<$Res>
     Object? logoImageUrl = freezed,
     Object? impressumUrl = freezed,
     Object? privacyPolicyUrl = freezed,
-    Object? maxNoteTextLength = null,
+    Object? maxNoteTextLength = freezed,
     Object? ads = null,
     Object? serverRules = null,
     Object? policies = freezed,
@@ -518,10 +518,10 @@ class __$$MetaResponseImplCopyWithImpl<$Res>
           ? _value.maintainerEmail
           : maintainerEmail // ignore: cast_nullable_to_non_nullable
               as String?,
-      version: null == version
+      version: freezed == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -530,10 +530,10 @@ class __$$MetaResponseImplCopyWithImpl<$Res>
           ? _value.shortName
           : shortName // ignore: cast_nullable_to_non_nullable
               as String?,
-      uri: null == uri
+      uri: freezed == uri
           ? _value.uri
           : uri // ignore: cast_nullable_to_non_nullable
-              as Uri,
+              as Uri?,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -546,10 +546,10 @@ class __$$MetaResponseImplCopyWithImpl<$Res>
           ? _value.tosUrl
           : tosUrl // ignore: cast_nullable_to_non_nullable
               as Uri?,
-      repositoryUrl: null == repositoryUrl
+      repositoryUrl: freezed == repositoryUrl
           ? _value.repositoryUrl
           : repositoryUrl // ignore: cast_nullable_to_non_nullable
-              as Uri,
+              as Uri?,
       feedbackUrl: freezed == feedbackUrl
           ? _value.feedbackUrl
           : feedbackUrl // ignore: cast_nullable_to_non_nullable
@@ -562,10 +562,10 @@ class __$$MetaResponseImplCopyWithImpl<$Res>
           ? _value.defaultLightTheme
           : defaultLightTheme // ignore: cast_nullable_to_non_nullable
               as String?,
-      disableRegistration: null == disableRegistration
+      disableRegistration: freezed == disableRegistration
           ? _value.disableRegistration
           : disableRegistration // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       emailRequiredForSignup: freezed == emailRequiredForSignup
           ? _value.emailRequiredForSignup
           : emailRequiredForSignup // ignore: cast_nullable_to_non_nullable
@@ -634,10 +634,10 @@ class __$$MetaResponseImplCopyWithImpl<$Res>
           ? _value.privacyPolicyUrl
           : privacyPolicyUrl // ignore: cast_nullable_to_non_nullable
               as Uri?,
-      maxNoteTextLength: null == maxNoteTextLength
+      maxNoteTextLength: freezed == maxNoteTextLength
           ? _value.maxNoteTextLength
           : maxNoteTextLength // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       ads: null == ads
           ? _value._ads
           : ads // ignore: cast_nullable_to_non_nullable
@@ -692,18 +692,18 @@ class _$MetaResponseImpl implements _MetaResponse {
   const _$MetaResponseImpl(
       {this.maintainerName,
       this.maintainerEmail,
-      required this.version,
+      this.version,
       this.name,
       this.shortName,
-      @UriConverter() required this.uri,
+      @NullableUriConverter() this.uri,
       this.description,
-      required final List<String> langs,
+      final List<String> langs = const [],
       @NullableUriConverter() this.tosUrl,
-      @UriConverter() required this.repositoryUrl,
+      @NullableUriConverter() this.repositoryUrl,
       this.feedbackUrl,
       this.defaultDarkTheme,
       this.defaultLightTheme,
-      required this.disableRegistration,
+      this.disableRegistration,
       this.emailRequiredForSignup,
       this.enableHcaptcha,
       this.hcaptchaSiteKey,
@@ -721,7 +721,7 @@ class _$MetaResponseImpl implements _MetaResponse {
       @NullableUriConverter() this.logoImageUrl,
       @NullableUriConverter() this.impressumUrl,
       @NullableUriConverter() this.privacyPolicyUrl,
-      required this.maxNoteTextLength,
+      this.maxNoteTextLength,
       final List<MetaAd> ads = const [],
       final List<String> serverRules = const [],
       this.policies,
@@ -745,18 +745,19 @@ class _$MetaResponseImpl implements _MetaResponse {
   @override
   final String? maintainerEmail;
   @override
-  final String version;
+  final String? version;
   @override
   final String? name;
   @override
   final String? shortName;
   @override
-  @UriConverter()
-  final Uri uri;
+  @NullableUriConverter()
+  final Uri? uri;
   @override
   final String? description;
   final List<String> _langs;
   @override
+  @JsonKey()
   List<String> get langs {
     if (_langs is EqualUnmodifiableListView) return _langs;
     // ignore: implicit_dynamic_type
@@ -767,8 +768,8 @@ class _$MetaResponseImpl implements _MetaResponse {
   @NullableUriConverter()
   final Uri? tosUrl;
   @override
-  @UriConverter()
-  final Uri repositoryUrl;
+  @NullableUriConverter()
+  final Uri? repositoryUrl;
   @override
   final String? feedbackUrl;
   @override
@@ -776,7 +777,7 @@ class _$MetaResponseImpl implements _MetaResponse {
   @override
   final String? defaultLightTheme;
   @override
-  final bool disableRegistration;
+  final bool? disableRegistration;
   @override
   final bool? emailRequiredForSignup;
   @override
@@ -820,7 +821,7 @@ class _$MetaResponseImpl implements _MetaResponse {
   @NullableUriConverter()
   final Uri? privacyPolicyUrl;
   @override
-  final int maxNoteTextLength;
+  final int? maxNoteTextLength;
 //required List<MetaEmoji> emojis,
   final List<MetaAd> _ads;
 //required List<MetaEmoji> emojis,
@@ -1018,18 +1019,18 @@ abstract class _MetaResponse implements MetaResponse {
   const factory _MetaResponse(
       {final String? maintainerName,
       final String? maintainerEmail,
-      required final String version,
+      final String? version,
       final String? name,
       final String? shortName,
-      @UriConverter() required final Uri uri,
+      @NullableUriConverter() final Uri? uri,
       final String? description,
-      required final List<String> langs,
+      final List<String> langs,
       @NullableUriConverter() final Uri? tosUrl,
-      @UriConverter() required final Uri repositoryUrl,
+      @NullableUriConverter() final Uri? repositoryUrl,
       final String? feedbackUrl,
       final String? defaultDarkTheme,
       final String? defaultLightTheme,
-      required final bool disableRegistration,
+      final bool? disableRegistration,
       final bool? emailRequiredForSignup,
       final bool? enableHcaptcha,
       final String? hcaptchaSiteKey,
@@ -1047,7 +1048,7 @@ abstract class _MetaResponse implements MetaResponse {
       @NullableUriConverter() final Uri? logoImageUrl,
       @NullableUriConverter() final Uri? impressumUrl,
       @NullableUriConverter() final Uri? privacyPolicyUrl,
-      required final int maxNoteTextLength,
+      final int? maxNoteTextLength,
       final List<MetaAd> ads,
       final List<String> serverRules,
       final UserPolicies? policies,
@@ -1068,14 +1069,14 @@ abstract class _MetaResponse implements MetaResponse {
   @override
   String? get maintainerEmail;
   @override
-  String get version;
+  String? get version;
   @override
   String? get name;
   @override
   String? get shortName;
   @override
-  @UriConverter()
-  Uri get uri;
+  @NullableUriConverter()
+  Uri? get uri;
   @override
   String? get description;
   @override
@@ -1084,8 +1085,8 @@ abstract class _MetaResponse implements MetaResponse {
   @NullableUriConverter()
   Uri? get tosUrl;
   @override
-  @UriConverter()
-  Uri get repositoryUrl;
+  @NullableUriConverter()
+  Uri? get repositoryUrl;
   @override
   String? get feedbackUrl;
   @override
@@ -1093,7 +1094,7 @@ abstract class _MetaResponse implements MetaResponse {
   @override
   String? get defaultLightTheme;
   @override
-  bool get disableRegistration;
+  bool? get disableRegistration;
   @override
   bool? get emailRequiredForSignup;
   @override
@@ -1137,7 +1138,7 @@ abstract class _MetaResponse implements MetaResponse {
   @NullableUriConverter()
   Uri? get privacyPolicyUrl;
   @override
-  int get maxNoteTextLength;
+  int? get maxNoteTextLength;
   @override //required List<MetaEmoji> emojis,
   List<MetaAd> get ads;
   @override
