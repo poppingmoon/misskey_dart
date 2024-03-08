@@ -17,6 +17,8 @@ _$MetaResponseImpl _$$MetaResponseImplFromJson(Map<String, dynamic> json) =>
           maintainerEmail:
               $checkedConvert('maintainerEmail', (v) => v as String?),
           version: $checkedConvert('version', (v) => v as String?),
+          providesTarball:
+              $checkedConvert('providesTarball', (v) => v as bool?),
           name: $checkedConvert('name', (v) => v as String?),
           shortName: $checkedConvert('shortName', (v) => v as String?),
           uri: $checkedConvert(
@@ -49,6 +51,13 @@ _$MetaResponseImpl _$$MetaResponseImplFromJson(Map<String, dynamic> json) =>
           enableHcaptcha: $checkedConvert('enableHcaptcha', (v) => v as bool?),
           hcaptchaSiteKey:
               $checkedConvert('hcaptchaSiteKey', (v) => v as String?),
+          enableMcaptcha: $checkedConvert('enableMcaptcha', (v) => v as bool?),
+          mcaptchaSiteKey:
+              $checkedConvert('mcaptchaSiteKey', (v) => v as String?),
+          mcaptchaInstanceUrl: $checkedConvert(
+              'mcaptchaInstanceUrl',
+              (v) => _$JsonConverterFromJson<String, Uri?>(
+                  v, const NullableUriConverter().fromJson)),
           enableRecaptcha:
               $checkedConvert('enableRecaptcha', (v) => v as bool?),
           recaptchaSiteKey:
@@ -67,8 +76,20 @@ _$MetaResponseImpl _$$MetaResponseImplFromJson(Map<String, dynamic> json) =>
               'bannerUrl',
               (v) => _$JsonConverterFromJson<String, Uri?>(
                   v, const NullableUriConverter().fromJson)),
+          infoImageUrl: $checkedConvert(
+              'infoImageUrl',
+              (v) => _$JsonConverterFromJson<String, Uri?>(
+                  v, const NullableUriConverter().fromJson)),
           errorImageUrl: $checkedConvert(
               'errorImageUrl',
+              (v) => _$JsonConverterFromJson<String, Uri?>(
+                  v, const NullableUriConverter().fromJson)),
+          serverErrorImageUrl: $checkedConvert(
+              'serverErrorImageUrl',
+              (v) => _$JsonConverterFromJson<String, Uri?>(
+                  v, const NullableUriConverter().fromJson)),
+          notFountImageUrl: $checkedConvert(
+              'notFountImageUrl',
               (v) => _$JsonConverterFromJson<String, Uri?>(
                   v, const NullableUriConverter().fromJson)),
           iconUrl: $checkedConvert(
@@ -100,6 +121,7 @@ _$MetaResponseImpl _$$MetaResponseImplFromJson(Map<String, dynamic> json) =>
                       ?.map((e) => MetaAd.fromJson(e as Map<String, dynamic>))
                       .toList() ??
                   const []),
+          notesPerOneAd: $checkedConvert('notesPerOneAd', (v) => v as int?),
           serverRules: $checkedConvert(
               'serverRules',
               (v) =>
@@ -121,6 +143,8 @@ _$MetaResponseImpl _$$MetaResponseImplFromJson(Map<String, dynamic> json) =>
           mediaProxy: $checkedConvert('mediaProxy', (v) => v as String?),
           cacheRemoteFiles:
               $checkedConvert('cacheRemoteFiles', (v) => v as bool?),
+          cacheRemoteSensitiveFiles:
+              $checkedConvert('cacheRemoteSensitiveFiles', (v) => v as bool?),
           features: $checkedConvert(
               'features',
               (v) => v == null
@@ -136,6 +160,7 @@ Map<String, dynamic> _$$MetaResponseImplToJson(_$MetaResponseImpl instance) =>
       'maintainerName': instance.maintainerName,
       'maintainerEmail': instance.maintainerEmail,
       'version': instance.version,
+      'providesTarball': instance.providesTarball,
       'name': instance.name,
       'shortName': instance.shortName,
       'uri': const NullableUriConverter().toJson(instance.uri),
@@ -151,6 +176,10 @@ Map<String, dynamic> _$$MetaResponseImplToJson(_$MetaResponseImpl instance) =>
       'emailRequiredForSignup': instance.emailRequiredForSignup,
       'enableHcaptcha': instance.enableHcaptcha,
       'hcaptchaSiteKey': instance.hcaptchaSiteKey,
+      'enableMcaptcha': instance.enableMcaptcha,
+      'mcaptchaSiteKey': instance.mcaptchaSiteKey,
+      'mcaptchaInstanceUrl':
+          const NullableUriConverter().toJson(instance.mcaptchaInstanceUrl),
       'enableRecaptcha': instance.enableRecaptcha,
       'recaptchaSiteKey': instance.recaptchaSiteKey,
       'enableTurnstile': instance.enableTurnstile,
@@ -160,8 +189,14 @@ Map<String, dynamic> _$$MetaResponseImplToJson(_$MetaResponseImpl instance) =>
       'mascotImageUrl':
           const NullableUriConverter().toJson(instance.mascotImageUrl),
       'bannerUrl': const NullableUriConverter().toJson(instance.bannerUrl),
+      'infoImageUrl':
+          const NullableUriConverter().toJson(instance.infoImageUrl),
       'errorImageUrl':
           const NullableUriConverter().toJson(instance.errorImageUrl),
+      'serverErrorImageUrl':
+          const NullableUriConverter().toJson(instance.serverErrorImageUrl),
+      'notFountImageUrl':
+          const NullableUriConverter().toJson(instance.notFountImageUrl),
       'iconUrl': const NullableUriConverter().toJson(instance.iconUrl),
       'backgroundImageUrl':
           const NullableUriConverter().toJson(instance.backgroundImageUrl),
@@ -173,6 +208,7 @@ Map<String, dynamic> _$$MetaResponseImplToJson(_$MetaResponseImpl instance) =>
           const NullableUriConverter().toJson(instance.privacyPolicyUrl),
       'maxNoteTextLength': instance.maxNoteTextLength,
       'ads': instance.ads.map((e) => e.toJson()).toList(),
+      'notesPerOneAd': instance.notesPerOneAd,
       'serverRules': instance.serverRules,
       'policies': instance.policies?.toJson(),
       'requireSetup': instance.requireSetup,
@@ -182,6 +218,7 @@ Map<String, dynamic> _$$MetaResponseImplToJson(_$MetaResponseImpl instance) =>
       'proxyAccountName': instance.proxyAccountName,
       'mediaProxy': instance.mediaProxy,
       'cacheRemoteFiles': instance.cacheRemoteFiles,
+      'cacheRemoteSensitiveFiles': instance.cacheRemoteSensitiveFiles,
       'features': instance.features?.toJson(),
     };
 
