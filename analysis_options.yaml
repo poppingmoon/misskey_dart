@@ -3,3 +3,6 @@ analyzer:
   exclude:
     - "**/*.freezed.dart"
     - "**/*.g.dart"
+linter:
+  rules:
+    - directives_ordering
