@@ -61,4 +61,16 @@ void main() async {
     final response = await userClient.i.pages(IPagesRequest());
     expect(response.map((e) => e.id), contains(page["id"]));
   });
+
+  test("pin", () async {
+    final note = await userClient.createNote();
+    final response = await userClient.i.pin(IPinRequest(noteId: note.id));
+    expect(response.pinnedNoteIds, contains(note.id));
+  });
+
+  test("unpin", () async {
+    final note = await userClient.createNote();
+    await userClient.i.pin(IPinRequest(noteId: note.id));
+    await userClient.i.unpin(IUnpinRequest(noteId: note.id));
+  });
 }
