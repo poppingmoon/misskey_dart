@@ -6,14 +6,14 @@ part 'stats_response.g.dart';
 @freezed
 class StatsResponse with _$StatsResponse {
   const factory StatsResponse({
-    required int notesCount,
-    required int originalNotesCount,
-    required int usersCount,
-    required int originalUsersCount,
-    required int reactionsCount,
-    required int instances,
-    required int driveUsageLocal,
-    required int driveUsageRemote,
+    int? notesCount,
+    int? originalNotesCount,
+    int? usersCount,
+    int? originalUsersCount,
+    int? reactionsCount,
+    int? instances,
+    int? driveUsageLocal,
+    int? driveUsageRemote,
   }) = _StatsResponse;
 
   factory StatsResponse.fromJson(Map<String, dynamic> json) =>

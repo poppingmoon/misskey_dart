@@ -20,14 +20,14 @@ StatsResponse _$StatsResponseFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$StatsResponse {
-  int get notesCount => throw _privateConstructorUsedError;
-  int get originalNotesCount => throw _privateConstructorUsedError;
-  int get usersCount => throw _privateConstructorUsedError;
-  int get originalUsersCount => throw _privateConstructorUsedError;
-  int get reactionsCount => throw _privateConstructorUsedError;
-  int get instances => throw _privateConstructorUsedError;
-  int get driveUsageLocal => throw _privateConstructorUsedError;
-  int get driveUsageRemote => throw _privateConstructorUsedError;
+  int? get notesCount => throw _privateConstructorUsedError;
+  int? get originalNotesCount => throw _privateConstructorUsedError;
+  int? get usersCount => throw _privateConstructorUsedError;
+  int? get originalUsersCount => throw _privateConstructorUsedError;
+  int? get reactionsCount => throw _privateConstructorUsedError;
+  int? get instances => throw _privateConstructorUsedError;
+  int? get driveUsageLocal => throw _privateConstructorUsedError;
+  int? get driveUsageRemote => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -42,14 +42,14 @@ abstract class $StatsResponseCopyWith<$Res> {
       _$StatsResponseCopyWithImpl<$Res, StatsResponse>;
   @useResult
   $Res call(
-      {int notesCount,
-      int originalNotesCount,
-      int usersCount,
-      int originalUsersCount,
-      int reactionsCount,
-      int instances,
-      int driveUsageLocal,
-      int driveUsageRemote});
+      {int? notesCount,
+      int? originalNotesCount,
+      int? usersCount,
+      int? originalUsersCount,
+      int? reactionsCount,
+      int? instances,
+      int? driveUsageLocal,
+      int? driveUsageRemote});
 }
 
 /// @nodoc
@@ -65,48 +65,48 @@ class _$StatsResponseCopyWithImpl<$Res, $Val extends StatsResponse>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? notesCount = null,
-    Object? originalNotesCount = null,
-    Object? usersCount = null,
-    Object? originalUsersCount = null,
-    Object? reactionsCount = null,
-    Object? instances = null,
-    Object? driveUsageLocal = null,
-    Object? driveUsageRemote = null,
+    Object? notesCount = freezed,
+    Object? originalNotesCount = freezed,
+    Object? usersCount = freezed,
+    Object? originalUsersCount = freezed,
+    Object? reactionsCount = freezed,
+    Object? instances = freezed,
+    Object? driveUsageLocal = freezed,
+    Object? driveUsageRemote = freezed,
   }) {
     return _then(_value.copyWith(
-      notesCount: null == notesCount
+      notesCount: freezed == notesCount
           ? _value.notesCount
           : notesCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      originalNotesCount: null == originalNotesCount
+              as int?,
+      originalNotesCount: freezed == originalNotesCount
           ? _value.originalNotesCount
           : originalNotesCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      usersCount: null == usersCount
+              as int?,
+      usersCount: freezed == usersCount
           ? _value.usersCount
           : usersCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      originalUsersCount: null == originalUsersCount
+              as int?,
+      originalUsersCount: freezed == originalUsersCount
           ? _value.originalUsersCount
           : originalUsersCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      reactionsCount: null == reactionsCount
+              as int?,
+      reactionsCount: freezed == reactionsCount
           ? _value.reactionsCount
           : reactionsCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      instances: null == instances
+              as int?,
+      instances: freezed == instances
           ? _value.instances
           : instances // ignore: cast_nullable_to_non_nullable
-              as int,
-      driveUsageLocal: null == driveUsageLocal
+              as int?,
+      driveUsageLocal: freezed == driveUsageLocal
           ? _value.driveUsageLocal
           : driveUsageLocal // ignore: cast_nullable_to_non_nullable
-              as int,
-      driveUsageRemote: null == driveUsageRemote
+              as int?,
+      driveUsageRemote: freezed == driveUsageRemote
           ? _value.driveUsageRemote
           : driveUsageRemote // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ) as $Val);
   }
 }
@@ -120,14 +120,14 @@ abstract class _$$StatsResponseImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int notesCount,
-      int originalNotesCount,
-      int usersCount,
-      int originalUsersCount,
-      int reactionsCount,
-      int instances,
-      int driveUsageLocal,
-      int driveUsageRemote});
+      {int? notesCount,
+      int? originalNotesCount,
+      int? usersCount,
+      int? originalUsersCount,
+      int? reactionsCount,
+      int? instances,
+      int? driveUsageLocal,
+      int? driveUsageRemote});
 }
 
 /// @nodoc
@@ -141,48 +141,48 @@ class __$$StatsResponseImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? notesCount = null,
-    Object? originalNotesCount = null,
-    Object? usersCount = null,
-    Object? originalUsersCount = null,
-    Object? reactionsCount = null,
-    Object? instances = null,
-    Object? driveUsageLocal = null,
-    Object? driveUsageRemote = null,
+    Object? notesCount = freezed,
+    Object? originalNotesCount = freezed,
+    Object? usersCount = freezed,
+    Object? originalUsersCount = freezed,
+    Object? reactionsCount = freezed,
+    Object? instances = freezed,
+    Object? driveUsageLocal = freezed,
+    Object? driveUsageRemote = freezed,
   }) {
     return _then(_$StatsResponseImpl(
-      notesCount: null == notesCount
+      notesCount: freezed == notesCount
           ? _value.notesCount
           : notesCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      originalNotesCount: null == originalNotesCount
+              as int?,
+      originalNotesCount: freezed == originalNotesCount
           ? _value.originalNotesCount
           : originalNotesCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      usersCount: null == usersCount
+              as int?,
+      usersCount: freezed == usersCount
           ? _value.usersCount
           : usersCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      originalUsersCount: null == originalUsersCount
+              as int?,
+      originalUsersCount: freezed == originalUsersCount
           ? _value.originalUsersCount
           : originalUsersCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      reactionsCount: null == reactionsCount
+              as int?,
+      reactionsCount: freezed == reactionsCount
           ? _value.reactionsCount
           : reactionsCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      instances: null == instances
+              as int?,
+      instances: freezed == instances
           ? _value.instances
           : instances // ignore: cast_nullable_to_non_nullable
-              as int,
-      driveUsageLocal: null == driveUsageLocal
+              as int?,
+      driveUsageLocal: freezed == driveUsageLocal
           ? _value.driveUsageLocal
           : driveUsageLocal // ignore: cast_nullable_to_non_nullable
-              as int,
-      driveUsageRemote: null == driveUsageRemote
+              as int?,
+      driveUsageRemote: freezed == driveUsageRemote
           ? _value.driveUsageRemote
           : driveUsageRemote // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ));
   }
 }
@@ -191,34 +191,34 @@ class __$$StatsResponseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$StatsResponseImpl implements _StatsResponse {
   const _$StatsResponseImpl(
-      {required this.notesCount,
-      required this.originalNotesCount,
-      required this.usersCount,
-      required this.originalUsersCount,
-      required this.reactionsCount,
-      required this.instances,
-      required this.driveUsageLocal,
-      required this.driveUsageRemote});
+      {this.notesCount,
+      this.originalNotesCount,
+      this.usersCount,
+      this.originalUsersCount,
+      this.reactionsCount,
+      this.instances,
+      this.driveUsageLocal,
+      this.driveUsageRemote});
 
   factory _$StatsResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$StatsResponseImplFromJson(json);
 
   @override
-  final int notesCount;
+  final int? notesCount;
   @override
-  final int originalNotesCount;
+  final int? originalNotesCount;
   @override
-  final int usersCount;
+  final int? usersCount;
   @override
-  final int originalUsersCount;
+  final int? originalUsersCount;
   @override
-  final int reactionsCount;
+  final int? reactionsCount;
   @override
-  final int instances;
+  final int? instances;
   @override
-  final int driveUsageLocal;
+  final int? driveUsageLocal;
   @override
-  final int driveUsageRemote;
+  final int? driveUsageRemote;
 
   @override
   String toString() {
@@ -277,34 +277,34 @@ class _$StatsResponseImpl implements _StatsResponse {
 
 abstract class _StatsResponse implements StatsResponse {
   const factory _StatsResponse(
-      {required final int notesCount,
-      required final int originalNotesCount,
-      required final int usersCount,
-      required final int originalUsersCount,
-      required final int reactionsCount,
-      required final int instances,
-      required final int driveUsageLocal,
-      required final int driveUsageRemote}) = _$StatsResponseImpl;
+      {final int? notesCount,
+      final int? originalNotesCount,
+      final int? usersCount,
+      final int? originalUsersCount,
+      final int? reactionsCount,
+      final int? instances,
+      final int? driveUsageLocal,
+      final int? driveUsageRemote}) = _$StatsResponseImpl;
 
   factory _StatsResponse.fromJson(Map<String, dynamic> json) =
       _$StatsResponseImpl.fromJson;
 
   @override
-  int get notesCount;
+  int? get notesCount;
   @override
-  int get originalNotesCount;
+  int? get originalNotesCount;
   @override
-  int get usersCount;
+  int? get usersCount;
   @override
-  int get originalUsersCount;
+  int? get originalUsersCount;
   @override
-  int get reactionsCount;
+  int? get reactionsCount;
   @override
-  int get instances;
+  int? get instances;
   @override
-  int get driveUsageLocal;
+  int? get driveUsageLocal;
   @override
-  int get driveUsageRemote;
+  int? get driveUsageRemote;
   @override
   @JsonKey(ignore: true)
   _$$StatsResponseImplCopyWith<_$StatsResponseImpl> get copyWith =>
