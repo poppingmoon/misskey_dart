@@ -1382,10 +1382,10 @@ MetaAd _$MetaAdFromJson(Map<String, dynamic> json) {
 mixin _$MetaAd {
   String get id => throw _privateConstructorUsedError;
   String get place => throw _privateConstructorUsedError;
-  @UriConverter()
-  Uri get url => throw _privateConstructorUsedError;
-  @UriConverter()
-  Uri get imageUrl => throw _privateConstructorUsedError;
+  @NullableUriConverter()
+  Uri? get url => throw _privateConstructorUsedError;
+  @NullableUriConverter()
+  Uri? get imageUrl => throw _privateConstructorUsedError;
   int get ratio => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1401,8 +1401,8 @@ abstract class $MetaAdCopyWith<$Res> {
   $Res call(
       {String id,
       String place,
-      @UriConverter() Uri url,
-      @UriConverter() Uri imageUrl,
+      @NullableUriConverter() Uri? url,
+      @NullableUriConverter() Uri? imageUrl,
       int ratio});
 }
 
@@ -1421,8 +1421,8 @@ class _$MetaAdCopyWithImpl<$Res, $Val extends MetaAd>
   $Res call({
     Object? id = null,
     Object? place = null,
-    Object? url = null,
-    Object? imageUrl = null,
+    Object? url = freezed,
+    Object? imageUrl = freezed,
     Object? ratio = null,
   }) {
     return _then(_value.copyWith(
@@ -1434,14 +1434,14 @@ class _$MetaAdCopyWithImpl<$Res, $Val extends MetaAd>
           ? _value.place
           : place // ignore: cast_nullable_to_non_nullable
               as String,
-      url: null == url
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as Uri,
-      imageUrl: null == imageUrl
+              as Uri?,
+      imageUrl: freezed == imageUrl
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
-              as Uri,
+              as Uri?,
       ratio: null == ratio
           ? _value.ratio
           : ratio // ignore: cast_nullable_to_non_nullable
@@ -1460,8 +1460,8 @@ abstract class _$$MetaAdImplCopyWith<$Res> implements $MetaAdCopyWith<$Res> {
   $Res call(
       {String id,
       String place,
-      @UriConverter() Uri url,
-      @UriConverter() Uri imageUrl,
+      @NullableUriConverter() Uri? url,
+      @NullableUriConverter() Uri? imageUrl,
       int ratio});
 }
 
@@ -1478,8 +1478,8 @@ class __$$MetaAdImplCopyWithImpl<$Res>
   $Res call({
     Object? id = null,
     Object? place = null,
-    Object? url = null,
-    Object? imageUrl = null,
+    Object? url = freezed,
+    Object? imageUrl = freezed,
     Object? ratio = null,
   }) {
     return _then(_$MetaAdImpl(
@@ -1491,14 +1491,14 @@ class __$$MetaAdImplCopyWithImpl<$Res>
           ? _value.place
           : place // ignore: cast_nullable_to_non_nullable
               as String,
-      url: null == url
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as Uri,
-      imageUrl: null == imageUrl
+              as Uri?,
+      imageUrl: freezed == imageUrl
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
-              as Uri,
+              as Uri?,
       ratio: null == ratio
           ? _value.ratio
           : ratio // ignore: cast_nullable_to_non_nullable
@@ -1513,8 +1513,8 @@ class _$MetaAdImpl implements _MetaAd {
   const _$MetaAdImpl(
       {required this.id,
       required this.place,
-      @UriConverter() required this.url,
-      @UriConverter() required this.imageUrl,
+      @NullableUriConverter() this.url,
+      @NullableUriConverter() this.imageUrl,
       required this.ratio});
 
   factory _$MetaAdImpl.fromJson(Map<String, dynamic> json) =>
@@ -1525,11 +1525,11 @@ class _$MetaAdImpl implements _MetaAd {
   @override
   final String place;
   @override
-  @UriConverter()
-  final Uri url;
+  @NullableUriConverter()
+  final Uri? url;
   @override
-  @UriConverter()
-  final Uri imageUrl;
+  @NullableUriConverter()
+  final Uri? imageUrl;
   @override
   final int ratio;
 
@@ -1573,8 +1573,8 @@ abstract class _MetaAd implements MetaAd {
   const factory _MetaAd(
       {required final String id,
       required final String place,
-      @UriConverter() required final Uri url,
-      @UriConverter() required final Uri imageUrl,
+      @NullableUriConverter() final Uri? url,
+      @NullableUriConverter() final Uri? imageUrl,
       required final int ratio}) = _$MetaAdImpl;
 
   factory _MetaAd.fromJson(Map<String, dynamic> json) = _$MetaAdImpl.fromJson;
@@ -1584,11 +1584,11 @@ abstract class _MetaAd implements MetaAd {
   @override
   String get place;
   @override
-  @UriConverter()
-  Uri get url;
+  @NullableUriConverter()
+  Uri? get url;
   @override
-  @UriConverter()
-  Uri get imageUrl;
+  @NullableUriConverter()
+  Uri? get imageUrl;
   @override
   int get ratio;
   @override

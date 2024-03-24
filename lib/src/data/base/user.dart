@@ -16,7 +16,7 @@ abstract class User {
   String? get name;
   OnlineStatus? get onlineStatus;
   List<UserBadgeRole> get badgeRoles;
-  Uri get avatarUrl;
+  Uri? get avatarUrl;
   String? get avatarBlurhash;
   List<UserAvatarDecoration> get avatarDecorations;
   UserInstanceInfo? get instance;
@@ -98,7 +98,7 @@ class UserLite with _$UserLite implements User {
     String? name,
     required String username,
     String? host,
-    @UriConverter() required Uri avatarUrl,
+    @NullableUriConverter() Uri? avatarUrl,
     String? avatarBlurhash,
     @Default([]) List<UserAvatarDecoration> avatarDecorations,
     @Default(false) bool isBot,
@@ -122,7 +122,7 @@ class UserDetailedNotMe with _$UserDetailedNotMe implements UserDetailed {
     String? name,
     required String username,
     String? host,
-    @UriConverter() required Uri avatarUrl,
+    @NullableUriConverter() Uri? avatarUrl,
     String? avatarBlurhash,
     @Default([]) List<UserAvatarDecoration> avatarDecorations,
     required bool isBot,
@@ -195,7 +195,7 @@ class UserDetailedNotMeWithRelations
     String? name,
     required String username,
     String? host,
-    @UriConverter() required Uri avatarUrl,
+    @NullableUriConverter() Uri? avatarUrl,
     String? avatarBlurhash,
     @Default([]) List<UserAvatarDecoration> avatarDecorations,
     required bool isBot,
@@ -277,7 +277,7 @@ class MeDetailed with _$MeDetailed implements UserDetailed {
     String? name,
     required String username,
     String? host,
-    @UriConverter() required Uri avatarUrl,
+    @NullableUriConverter() Uri? avatarUrl,
     String? avatarBlurhash,
     @Default([]) List<UserAvatarDecoration> avatarDecorations,
     required bool isBot,

@@ -38,7 +38,9 @@ _$EmojiImpl _$$EmojiImplFromJson(Map<String, dynamic> json) => $checkedCreate(
           name: $checkedConvert('name', (v) => v as String),
           category: $checkedConvert('category', (v) => v as String?),
           url: $checkedConvert(
-              'url', (v) => const UriConverter().fromJson(v as String)),
+              'url',
+              (v) => _$JsonConverterFromJson<String, Uri?>(
+                  v, const NullableUriConverter().fromJson)),
           localOnly: $checkedConvert('localOnly', (v) => v as bool?),
           isSensitive:
               $checkedConvert('isSensitive', (v) => v as bool? ?? false),
@@ -55,9 +57,15 @@ Map<String, dynamic> _$$EmojiImplToJson(_$EmojiImpl instance) =>
       'aliases': instance.aliases,
       'name': instance.name,
       'category': instance.category,
-      'url': const UriConverter().toJson(instance.url),
+      'url': const NullableUriConverter().toJson(instance.url),
       'localOnly': instance.localOnly,
       'isSensitive': instance.isSensitive,
       'roleIdsThatCanBeUsedThisEmojiAsReaction':
           instance.roleIdsThatCanBeUsedThisEmojiAsReaction,
     };
+
+Value? _$JsonConverterFromJson<Json, Value>(
+  Object? json,
+  Value? Function(Json json) fromJson,
+) =>
+    json == null ? null : fromJson(json as Json);

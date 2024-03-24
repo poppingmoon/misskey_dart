@@ -10,8 +10,8 @@ class GetAvatarDecorationsResponse with _$GetAvatarDecorationsResponse {
     required String id,
     required String name,
     required String description,
-    @UriConverter() required Uri url,
-    required List<String> roleIdsThatCanBeUsedThisDecoration,
+    @NullableUriConverter() Uri? url,
+    @Default([]) List<String> roleIdsThatCanBeUsedThisDecoration,
   }) = _GetAvatarDecorationsResponse;
 
   factory GetAvatarDecorationsResponse.fromJson(Map<String, dynamic> json) =>

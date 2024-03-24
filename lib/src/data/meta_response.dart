@@ -71,8 +71,8 @@ class MetaAd with _$MetaAd {
   const factory MetaAd({
     required String id,
     required String place,
-    @UriConverter() required Uri url,
-    @UriConverter() required Uri imageUrl,
+    @NullableUriConverter() Uri? url,
+    @NullableUriConverter() Uri? imageUrl,
     required int ratio,
   }) = _MetaAd;
   factory MetaAd.fromJson(Map<String, Object?> json) => _$MetaAdFromJson(json);

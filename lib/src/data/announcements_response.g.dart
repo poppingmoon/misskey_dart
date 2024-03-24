@@ -24,8 +24,8 @@ _$AnnouncementsResponseImpl _$$AnnouncementsResponseImplFromJson(
           title: $checkedConvert('title', (v) => v as String),
           imageUrl: $checkedConvert(
               'imageUrl',
-              (v) => _$JsonConverterFromJson<String, Uri>(
-                  v, const UriConverter().fromJson)),
+              (v) => _$JsonConverterFromJson<String, Uri?>(
+                  v, const NullableUriConverter().fromJson)),
           icon: $checkedConvert(
               'icon',
               (v) => $enumDecodeNullable(_$AnnouncementIconTypeEnumMap, v,
@@ -55,8 +55,7 @@ Map<String, dynamic> _$$AnnouncementsResponseImplToJson(
       'updatedAt': const NullableDateTimeConverter().toJson(instance.updatedAt),
       'text': instance.text,
       'title': instance.title,
-      'imageUrl': _$JsonConverterToJson<String, Uri>(
-          instance.imageUrl, const UriConverter().toJson),
+      'imageUrl': const NullableUriConverter().toJson(instance.imageUrl),
       'icon': _$AnnouncementIconTypeEnumMap[instance.icon],
       'display': _$AnnouncementDisplayTypeEnumMap[instance.display],
       'needConfirmationToRead': instance.needConfirmationToRead,
@@ -85,9 +84,3 @@ const _$AnnouncementDisplayTypeEnumMap = {
   AnnouncementDisplayType.dialog: 'dialog',
   AnnouncementDisplayType.normal: 'normal',
 };
-
-Json? _$JsonConverterToJson<Json, Value>(
-  Value? value,
-  Json? Function(Value value) toJson,
-) =>
-    value == null ? null : toJson(value);

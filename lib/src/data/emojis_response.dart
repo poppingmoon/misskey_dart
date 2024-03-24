@@ -20,7 +20,7 @@ class Emoji with _$Emoji {
     required List<String> aliases,
     required String name,
     String? category,
-    @UriConverter() required Uri url,
+    @NullableUriConverter() Uri? url,
     bool? localOnly,
     @Default(false) bool isSensitive,
     List<String>? roleIdsThatCanBeUsedThisEmojiAsReaction,

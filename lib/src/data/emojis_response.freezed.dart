@@ -168,8 +168,8 @@ mixin _$Emoji {
   List<String> get aliases => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String? get category => throw _privateConstructorUsedError;
-  @UriConverter()
-  Uri get url => throw _privateConstructorUsedError;
+  @NullableUriConverter()
+  Uri? get url => throw _privateConstructorUsedError;
   bool? get localOnly => throw _privateConstructorUsedError;
   bool get isSensitive => throw _privateConstructorUsedError;
   List<String>? get roleIdsThatCanBeUsedThisEmojiAsReaction =>
@@ -189,7 +189,7 @@ abstract class $EmojiCopyWith<$Res> {
       {List<String> aliases,
       String name,
       String? category,
-      @UriConverter() Uri url,
+      @NullableUriConverter() Uri? url,
       bool? localOnly,
       bool isSensitive,
       List<String>? roleIdsThatCanBeUsedThisEmojiAsReaction});
@@ -211,7 +211,7 @@ class _$EmojiCopyWithImpl<$Res, $Val extends Emoji>
     Object? aliases = null,
     Object? name = null,
     Object? category = freezed,
-    Object? url = null,
+    Object? url = freezed,
     Object? localOnly = freezed,
     Object? isSensitive = null,
     Object? roleIdsThatCanBeUsedThisEmojiAsReaction = freezed,
@@ -229,10 +229,10 @@ class _$EmojiCopyWithImpl<$Res, $Val extends Emoji>
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
               as String?,
-      url: null == url
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as Uri,
+              as Uri?,
       localOnly: freezed == localOnly
           ? _value.localOnly
           : localOnly // ignore: cast_nullable_to_non_nullable
@@ -261,7 +261,7 @@ abstract class _$$EmojiImplCopyWith<$Res> implements $EmojiCopyWith<$Res> {
       {List<String> aliases,
       String name,
       String? category,
-      @UriConverter() Uri url,
+      @NullableUriConverter() Uri? url,
       bool? localOnly,
       bool isSensitive,
       List<String>? roleIdsThatCanBeUsedThisEmojiAsReaction});
@@ -281,7 +281,7 @@ class __$$EmojiImplCopyWithImpl<$Res>
     Object? aliases = null,
     Object? name = null,
     Object? category = freezed,
-    Object? url = null,
+    Object? url = freezed,
     Object? localOnly = freezed,
     Object? isSensitive = null,
     Object? roleIdsThatCanBeUsedThisEmojiAsReaction = freezed,
@@ -299,10 +299,10 @@ class __$$EmojiImplCopyWithImpl<$Res>
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
               as String?,
-      url: null == url
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as Uri,
+              as Uri?,
       localOnly: freezed == localOnly
           ? _value.localOnly
           : localOnly // ignore: cast_nullable_to_non_nullable
@@ -327,7 +327,7 @@ class _$EmojiImpl implements _Emoji {
       {required final List<String> aliases,
       required this.name,
       this.category,
-      @UriConverter() required this.url,
+      @NullableUriConverter() this.url,
       this.localOnly,
       this.isSensitive = false,
       final List<String>? roleIdsThatCanBeUsedThisEmojiAsReaction})
@@ -351,8 +351,8 @@ class _$EmojiImpl implements _Emoji {
   @override
   final String? category;
   @override
-  @UriConverter()
-  final Uri url;
+  @NullableUriConverter()
+  final Uri? url;
   @override
   final bool? localOnly;
   @override
@@ -425,7 +425,7 @@ abstract class _Emoji implements Emoji {
           {required final List<String> aliases,
           required final String name,
           final String? category,
-          @UriConverter() required final Uri url,
+          @NullableUriConverter() final Uri? url,
           final bool? localOnly,
           final bool isSensitive,
           final List<String>? roleIdsThatCanBeUsedThisEmojiAsReaction}) =
@@ -440,8 +440,8 @@ abstract class _Emoji implements Emoji {
   @override
   String? get category;
   @override
-  @UriConverter()
-  Uri get url;
+  @NullableUriConverter()
+  Uri? get url;
   @override
   bool? get localOnly;
   @override

@@ -15,7 +15,7 @@ class AnnouncementsResponse with _$AnnouncementsResponse {
     @NullableDateTimeConverter() DateTime? updatedAt,
     required String text,
     required String title,
-    @UriConverter() Uri? imageUrl,
+    @NullableUriConverter() Uri? imageUrl,
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     AnnouncementIconType? icon,

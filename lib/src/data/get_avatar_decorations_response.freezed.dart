@@ -24,8 +24,8 @@ mixin _$GetAvatarDecorationsResponse {
   String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
-  @UriConverter()
-  Uri get url => throw _privateConstructorUsedError;
+  @NullableUriConverter()
+  Uri? get url => throw _privateConstructorUsedError;
   List<String> get roleIdsThatCanBeUsedThisDecoration =>
       throw _privateConstructorUsedError;
 
@@ -47,7 +47,7 @@ abstract class $GetAvatarDecorationsResponseCopyWith<$Res> {
       {String id,
       String name,
       String description,
-      @UriConverter() Uri url,
+      @NullableUriConverter() Uri? url,
       List<String> roleIdsThatCanBeUsedThisDecoration});
 }
 
@@ -68,7 +68,7 @@ class _$GetAvatarDecorationsResponseCopyWithImpl<$Res,
     Object? id = null,
     Object? name = null,
     Object? description = null,
-    Object? url = null,
+    Object? url = freezed,
     Object? roleIdsThatCanBeUsedThisDecoration = null,
   }) {
     return _then(_value.copyWith(
@@ -84,10 +84,10 @@ class _$GetAvatarDecorationsResponseCopyWithImpl<$Res,
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
-      url: null == url
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as Uri,
+              as Uri?,
       roleIdsThatCanBeUsedThisDecoration: null ==
               roleIdsThatCanBeUsedThisDecoration
           ? _value.roleIdsThatCanBeUsedThisDecoration
@@ -110,7 +110,7 @@ abstract class _$$GetAvatarDecorationsResponseImplCopyWith<$Res>
       {String id,
       String name,
       String description,
-      @UriConverter() Uri url,
+      @NullableUriConverter() Uri? url,
       List<String> roleIdsThatCanBeUsedThisDecoration});
 }
 
@@ -130,7 +130,7 @@ class __$$GetAvatarDecorationsResponseImplCopyWithImpl<$Res>
     Object? id = null,
     Object? name = null,
     Object? description = null,
-    Object? url = null,
+    Object? url = freezed,
     Object? roleIdsThatCanBeUsedThisDecoration = null,
   }) {
     return _then(_$GetAvatarDecorationsResponseImpl(
@@ -146,10 +146,10 @@ class __$$GetAvatarDecorationsResponseImplCopyWithImpl<$Res>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
-      url: null == url
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as Uri,
+              as Uri?,
       roleIdsThatCanBeUsedThisDecoration: null ==
               roleIdsThatCanBeUsedThisDecoration
           ? _value._roleIdsThatCanBeUsedThisDecoration
@@ -167,8 +167,8 @@ class _$GetAvatarDecorationsResponseImpl
       {required this.id,
       required this.name,
       required this.description,
-      @UriConverter() required this.url,
-      required final List<String> roleIdsThatCanBeUsedThisDecoration})
+      @NullableUriConverter() this.url,
+      final List<String> roleIdsThatCanBeUsedThisDecoration = const []})
       : _roleIdsThatCanBeUsedThisDecoration =
             roleIdsThatCanBeUsedThisDecoration;
 
@@ -183,10 +183,11 @@ class _$GetAvatarDecorationsResponseImpl
   @override
   final String description;
   @override
-  @UriConverter()
-  final Uri url;
+  @NullableUriConverter()
+  final Uri? url;
   final List<String> _roleIdsThatCanBeUsedThisDecoration;
   @override
+  @JsonKey()
   List<String> get roleIdsThatCanBeUsedThisDecoration {
     if (_roleIdsThatCanBeUsedThisDecoration is EqualUnmodifiableListView)
       return _roleIdsThatCanBeUsedThisDecoration;
@@ -241,8 +242,8 @@ abstract class _GetAvatarDecorationsResponse
           {required final String id,
           required final String name,
           required final String description,
-          @UriConverter() required final Uri url,
-          required final List<String> roleIdsThatCanBeUsedThisDecoration}) =
+          @NullableUriConverter() final Uri? url,
+          final List<String> roleIdsThatCanBeUsedThisDecoration}) =
       _$GetAvatarDecorationsResponseImpl;
 
   factory _GetAvatarDecorationsResponse.fromJson(Map<String, dynamic> json) =
@@ -255,8 +256,8 @@ abstract class _GetAvatarDecorationsResponse
   @override
   String get description;
   @override
-  @UriConverter()
-  Uri get url;
+  @NullableUriConverter()
+  Uri? get url;
   @override
   List<String> get roleIdsThatCanBeUsedThisDecoration;
   @override

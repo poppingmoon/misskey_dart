@@ -17,7 +17,9 @@ _$UserLiteImpl _$$UserLiteImplFromJson(Map<String, dynamic> json) =>
           username: $checkedConvert('username', (v) => v as String),
           host: $checkedConvert('host', (v) => v as String?),
           avatarUrl: $checkedConvert(
-              'avatarUrl', (v) => const UriConverter().fromJson(v as String)),
+              'avatarUrl',
+              (v) => _$JsonConverterFromJson<String, Uri?>(
+                  v, const NullableUriConverter().fromJson)),
           avatarBlurhash:
               $checkedConvert('avatarBlurhash', (v) => v as String?),
           avatarDecorations: $checkedConvert(
@@ -62,7 +64,7 @@ Map<String, dynamic> _$$UserLiteImplToJson(_$UserLiteImpl instance) =>
       'name': instance.name,
       'username': instance.username,
       'host': instance.host,
-      'avatarUrl': const UriConverter().toJson(instance.avatarUrl),
+      'avatarUrl': const NullableUriConverter().toJson(instance.avatarUrl),
       'avatarBlurhash': instance.avatarBlurhash,
       'avatarDecorations':
           instance.avatarDecorations.map((e) => e.toJson()).toList(),
@@ -73,6 +75,12 @@ Map<String, dynamic> _$$UserLiteImplToJson(_$UserLiteImpl instance) =>
       'onlineStatus': _$OnlineStatusEnumMap[instance.onlineStatus],
       'badgeRoles': instance.badgeRoles.map((e) => e.toJson()).toList(),
     };
+
+Value? _$JsonConverterFromJson<Json, Value>(
+  Object? json,
+  Value? Function(Json json) fromJson,
+) =>
+    json == null ? null : fromJson(json as Json);
 
 const _$OnlineStatusEnumMap = {
   OnlineStatus.online: 'online',
@@ -93,7 +101,9 @@ _$UserDetailedNotMeImpl _$$UserDetailedNotMeImplFromJson(
           username: $checkedConvert('username', (v) => v as String),
           host: $checkedConvert('host', (v) => v as String?),
           avatarUrl: $checkedConvert(
-              'avatarUrl', (v) => const UriConverter().fromJson(v as String)),
+              'avatarUrl',
+              (v) => _$JsonConverterFromJson<String, Uri?>(
+                  v, const NullableUriConverter().fromJson)),
           avatarBlurhash:
               $checkedConvert('avatarBlurhash', (v) => v as String?),
           avatarDecorations: $checkedConvert(
@@ -232,7 +242,7 @@ Map<String, dynamic> _$$UserDetailedNotMeImplToJson(
       'name': instance.name,
       'username': instance.username,
       'host': instance.host,
-      'avatarUrl': const UriConverter().toJson(instance.avatarUrl),
+      'avatarUrl': const NullableUriConverter().toJson(instance.avatarUrl),
       'avatarBlurhash': instance.avatarBlurhash,
       'avatarDecorations':
           instance.avatarDecorations.map((e) => e.toJson()).toList(),
@@ -282,12 +292,6 @@ Map<String, dynamic> _$$UserDetailedNotMeImplToJson(
       'moderationNote': instance.moderationNote,
     };
 
-Value? _$JsonConverterFromJson<Json, Value>(
-  Object? json,
-  Value? Function(Json json) fromJson,
-) =>
-    json == null ? null : fromJson(json as Json);
-
 const _$FFVisibilityEnumMap = {
   FFVisibility.public: 'public',
   FFVisibility.followers: 'followers',
@@ -305,8 +309,10 @@ _$UserDetailedNotMeWithRelationsImpl
               name: $checkedConvert('name', (v) => v as String?),
               username: $checkedConvert('username', (v) => v as String),
               host: $checkedConvert('host', (v) => v as String?),
-              avatarUrl: $checkedConvert('avatarUrl',
-                  (v) => const UriConverter().fromJson(v as String)),
+              avatarUrl: $checkedConvert(
+                  'avatarUrl',
+                  (v) => _$JsonConverterFromJson<String, Uri?>(
+                      v, const NullableUriConverter().fromJson)),
               avatarBlurhash:
                   $checkedConvert('avatarBlurhash', (v) => v as String?),
               avatarDecorations: $checkedConvert(
@@ -466,7 +472,7 @@ Map<String, dynamic> _$$UserDetailedNotMeWithRelationsImplToJson(
       'name': instance.name,
       'username': instance.username,
       'host': instance.host,
-      'avatarUrl': const UriConverter().toJson(instance.avatarUrl),
+      'avatarUrl': const NullableUriConverter().toJson(instance.avatarUrl),
       'avatarBlurhash': instance.avatarBlurhash,
       'avatarDecorations':
           instance.avatarDecorations.map((e) => e.toJson()).toList(),
@@ -542,7 +548,9 @@ _$MeDetailedImpl _$$MeDetailedImplFromJson(Map<String, dynamic> json) =>
           username: $checkedConvert('username', (v) => v as String),
           host: $checkedConvert('host', (v) => v as String?),
           avatarUrl: $checkedConvert(
-              'avatarUrl', (v) => const UriConverter().fromJson(v as String)),
+              'avatarUrl',
+              (v) => _$JsonConverterFromJson<String, Uri?>(
+                  v, const NullableUriConverter().fromJson)),
           avatarBlurhash:
               $checkedConvert('avatarBlurhash', (v) => v as String?),
           avatarDecorations: $checkedConvert(
@@ -776,7 +784,7 @@ Map<String, dynamic> _$$MeDetailedImplToJson(_$MeDetailedImpl instance) =>
       'name': instance.name,
       'username': instance.username,
       'host': instance.host,
-      'avatarUrl': const UriConverter().toJson(instance.avatarUrl),
+      'avatarUrl': const NullableUriConverter().toJson(instance.avatarUrl),
       'avatarBlurhash': instance.avatarBlurhash,
       'avatarDecorations':
           instance.avatarDecorations.map((e) => e.toJson()).toList(),

@@ -24,8 +24,8 @@ mixin _$UserLite {
   String? get name => throw _privateConstructorUsedError;
   String get username => throw _privateConstructorUsedError;
   String? get host => throw _privateConstructorUsedError;
-  @UriConverter()
-  Uri get avatarUrl => throw _privateConstructorUsedError;
+  @NullableUriConverter()
+  Uri? get avatarUrl => throw _privateConstructorUsedError;
   String? get avatarBlurhash => throw _privateConstructorUsedError;
   List<UserAvatarDecoration> get avatarDecorations =>
       throw _privateConstructorUsedError;
@@ -55,7 +55,7 @@ abstract class $UserLiteCopyWith<$Res> {
       String? name,
       String username,
       String? host,
-      @UriConverter() Uri avatarUrl,
+      @NullableUriConverter() Uri? avatarUrl,
       String? avatarBlurhash,
       List<UserAvatarDecoration> avatarDecorations,
       bool isBot,
@@ -86,7 +86,7 @@ class _$UserLiteCopyWithImpl<$Res, $Val extends UserLite>
     Object? name = freezed,
     Object? username = null,
     Object? host = freezed,
-    Object? avatarUrl = null,
+    Object? avatarUrl = freezed,
     Object? avatarBlurhash = freezed,
     Object? avatarDecorations = null,
     Object? isBot = null,
@@ -113,10 +113,10 @@ class _$UserLiteCopyWithImpl<$Res, $Val extends UserLite>
           ? _value.host
           : host // ignore: cast_nullable_to_non_nullable
               as String?,
-      avatarUrl: null == avatarUrl
+      avatarUrl: freezed == avatarUrl
           ? _value.avatarUrl
           : avatarUrl // ignore: cast_nullable_to_non_nullable
-              as Uri,
+              as Uri?,
       avatarBlurhash: freezed == avatarBlurhash
           ? _value.avatarBlurhash
           : avatarBlurhash // ignore: cast_nullable_to_non_nullable
@@ -178,7 +178,7 @@ abstract class _$$UserLiteImplCopyWith<$Res>
       String? name,
       String username,
       String? host,
-      @UriConverter() Uri avatarUrl,
+      @NullableUriConverter() Uri? avatarUrl,
       String? avatarBlurhash,
       List<UserAvatarDecoration> avatarDecorations,
       bool isBot,
@@ -208,7 +208,7 @@ class __$$UserLiteImplCopyWithImpl<$Res>
     Object? name = freezed,
     Object? username = null,
     Object? host = freezed,
-    Object? avatarUrl = null,
+    Object? avatarUrl = freezed,
     Object? avatarBlurhash = freezed,
     Object? avatarDecorations = null,
     Object? isBot = null,
@@ -235,10 +235,10 @@ class __$$UserLiteImplCopyWithImpl<$Res>
           ? _value.host
           : host // ignore: cast_nullable_to_non_nullable
               as String?,
-      avatarUrl: null == avatarUrl
+      avatarUrl: freezed == avatarUrl
           ? _value.avatarUrl
           : avatarUrl // ignore: cast_nullable_to_non_nullable
-              as Uri,
+              as Uri?,
       avatarBlurhash: freezed == avatarBlurhash
           ? _value.avatarBlurhash
           : avatarBlurhash // ignore: cast_nullable_to_non_nullable
@@ -283,7 +283,7 @@ class _$UserLiteImpl implements _UserLite {
       this.name,
       required this.username,
       this.host,
-      @UriConverter() required this.avatarUrl,
+      @NullableUriConverter() this.avatarUrl,
       this.avatarBlurhash,
       final List<UserAvatarDecoration> avatarDecorations = const [],
       this.isBot = false,
@@ -309,8 +309,8 @@ class _$UserLiteImpl implements _UserLite {
   @override
   final String? host;
   @override
-  @UriConverter()
-  final Uri avatarUrl;
+  @NullableUriConverter()
+  final Uri? avatarUrl;
   @override
   final String? avatarBlurhash;
   final List<UserAvatarDecoration> _avatarDecorations;
@@ -424,7 +424,7 @@ abstract class _UserLite implements UserLite {
       final String? name,
       required final String username,
       final String? host,
-      @UriConverter() required final Uri avatarUrl,
+      @NullableUriConverter() final Uri? avatarUrl,
       final String? avatarBlurhash,
       final List<UserAvatarDecoration> avatarDecorations,
       final bool isBot,
@@ -447,8 +447,8 @@ abstract class _UserLite implements UserLite {
   @override
   String? get host;
   @override
-  @UriConverter()
-  Uri get avatarUrl;
+  @NullableUriConverter()
+  Uri? get avatarUrl;
   @override
   String? get avatarBlurhash;
   @override
@@ -483,8 +483,8 @@ mixin _$UserDetailedNotMe {
   String? get name => throw _privateConstructorUsedError;
   String get username => throw _privateConstructorUsedError;
   String? get host => throw _privateConstructorUsedError;
-  @UriConverter()
-  Uri get avatarUrl => throw _privateConstructorUsedError;
+  @NullableUriConverter()
+  Uri? get avatarUrl => throw _privateConstructorUsedError;
   String? get avatarBlurhash => throw _privateConstructorUsedError;
   List<UserAvatarDecoration> get avatarDecorations =>
       throw _privateConstructorUsedError;
@@ -572,7 +572,7 @@ abstract class $UserDetailedNotMeCopyWith<$Res> {
       String? name,
       String username,
       String? host,
-      @UriConverter() Uri avatarUrl,
+      @NullableUriConverter() Uri? avatarUrl,
       String? avatarBlurhash,
       List<UserAvatarDecoration> avatarDecorations,
       bool isBot,
@@ -642,7 +642,7 @@ class _$UserDetailedNotMeCopyWithImpl<$Res, $Val extends UserDetailedNotMe>
     Object? name = freezed,
     Object? username = null,
     Object? host = freezed,
-    Object? avatarUrl = null,
+    Object? avatarUrl = freezed,
     Object? avatarBlurhash = freezed,
     Object? avatarDecorations = null,
     Object? isBot = null,
@@ -704,10 +704,10 @@ class _$UserDetailedNotMeCopyWithImpl<$Res, $Val extends UserDetailedNotMe>
           ? _value.host
           : host // ignore: cast_nullable_to_non_nullable
               as String?,
-      avatarUrl: null == avatarUrl
+      avatarUrl: freezed == avatarUrl
           ? _value.avatarUrl
           : avatarUrl // ignore: cast_nullable_to_non_nullable
-              as Uri,
+              as Uri?,
       avatarBlurhash: freezed == avatarBlurhash
           ? _value.avatarBlurhash
           : avatarBlurhash // ignore: cast_nullable_to_non_nullable
@@ -909,7 +909,7 @@ abstract class _$$UserDetailedNotMeImplCopyWith<$Res>
       String? name,
       String username,
       String? host,
-      @UriConverter() Uri avatarUrl,
+      @NullableUriConverter() Uri? avatarUrl,
       String? avatarBlurhash,
       List<UserAvatarDecoration> avatarDecorations,
       bool isBot,
@@ -978,7 +978,7 @@ class __$$UserDetailedNotMeImplCopyWithImpl<$Res>
     Object? name = freezed,
     Object? username = null,
     Object? host = freezed,
-    Object? avatarUrl = null,
+    Object? avatarUrl = freezed,
     Object? avatarBlurhash = freezed,
     Object? avatarDecorations = null,
     Object? isBot = null,
@@ -1040,10 +1040,10 @@ class __$$UserDetailedNotMeImplCopyWithImpl<$Res>
           ? _value.host
           : host // ignore: cast_nullable_to_non_nullable
               as String?,
-      avatarUrl: null == avatarUrl
+      avatarUrl: freezed == avatarUrl
           ? _value.avatarUrl
           : avatarUrl // ignore: cast_nullable_to_non_nullable
-              as Uri,
+              as Uri?,
       avatarBlurhash: freezed == avatarBlurhash
           ? _value.avatarBlurhash
           : avatarBlurhash // ignore: cast_nullable_to_non_nullable
@@ -1228,7 +1228,7 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
       this.name,
       required this.username,
       this.host,
-      @UriConverter() required this.avatarUrl,
+      @NullableUriConverter() this.avatarUrl,
       this.avatarBlurhash,
       final List<UserAvatarDecoration> avatarDecorations = const [],
       required this.isBot,
@@ -1300,8 +1300,8 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
   @override
   final String? host;
   @override
-  @UriConverter()
-  final Uri avatarUrl;
+  @NullableUriConverter()
+  final Uri? avatarUrl;
   @override
   final String? avatarBlurhash;
   final List<UserAvatarDecoration> _avatarDecorations;
@@ -1664,7 +1664,7 @@ abstract class _UserDetailedNotMe implements UserDetailedNotMe {
       final String? name,
       required final String username,
       final String? host,
-      @UriConverter() required final Uri avatarUrl,
+      @NullableUriConverter() final Uri? avatarUrl,
       final String? avatarBlurhash,
       final List<UserAvatarDecoration> avatarDecorations,
       required final bool isBot,
@@ -1726,8 +1726,8 @@ abstract class _UserDetailedNotMe implements UserDetailedNotMe {
   @override
   String? get host;
   @override
-  @UriConverter()
-  Uri get avatarUrl;
+  @NullableUriConverter()
+  Uri? get avatarUrl;
   @override
   String? get avatarBlurhash;
   @override
@@ -1847,8 +1847,8 @@ mixin _$UserDetailedNotMeWithRelations {
   String? get name => throw _privateConstructorUsedError;
   String get username => throw _privateConstructorUsedError;
   String? get host => throw _privateConstructorUsedError;
-  @UriConverter()
-  Uri get avatarUrl => throw _privateConstructorUsedError;
+  @NullableUriConverter()
+  Uri? get avatarUrl => throw _privateConstructorUsedError;
   String? get avatarBlurhash => throw _privateConstructorUsedError;
   List<UserAvatarDecoration> get avatarDecorations =>
       throw _privateConstructorUsedError;
@@ -1949,7 +1949,7 @@ abstract class $UserDetailedNotMeWithRelationsCopyWith<$Res> {
       String? name,
       String username,
       String? host,
-      @UriConverter() Uri avatarUrl,
+      @NullableUriConverter() Uri? avatarUrl,
       String? avatarBlurhash,
       List<UserAvatarDecoration> avatarDecorations,
       bool isBot,
@@ -2030,7 +2030,7 @@ class _$UserDetailedNotMeWithRelationsCopyWithImpl<$Res,
     Object? name = freezed,
     Object? username = null,
     Object? host = freezed,
-    Object? avatarUrl = null,
+    Object? avatarUrl = freezed,
     Object? avatarBlurhash = freezed,
     Object? avatarDecorations = null,
     Object? isBot = null,
@@ -2102,10 +2102,10 @@ class _$UserDetailedNotMeWithRelationsCopyWithImpl<$Res,
           ? _value.host
           : host // ignore: cast_nullable_to_non_nullable
               as String?,
-      avatarUrl: null == avatarUrl
+      avatarUrl: freezed == avatarUrl
           ? _value.avatarUrl
           : avatarUrl // ignore: cast_nullable_to_non_nullable
-              as Uri,
+              as Uri?,
       avatarBlurhash: freezed == avatarBlurhash
           ? _value.avatarBlurhash
           : avatarBlurhash // ignore: cast_nullable_to_non_nullable
@@ -2348,7 +2348,7 @@ abstract class _$$UserDetailedNotMeWithRelationsImplCopyWith<$Res>
       String? name,
       String username,
       String? host,
-      @UriConverter() Uri avatarUrl,
+      @NullableUriConverter() Uri? avatarUrl,
       String? avatarBlurhash,
       List<UserAvatarDecoration> avatarDecorations,
       bool isBot,
@@ -2429,7 +2429,7 @@ class __$$UserDetailedNotMeWithRelationsImplCopyWithImpl<$Res>
     Object? name = freezed,
     Object? username = null,
     Object? host = freezed,
-    Object? avatarUrl = null,
+    Object? avatarUrl = freezed,
     Object? avatarBlurhash = freezed,
     Object? avatarDecorations = null,
     Object? isBot = null,
@@ -2501,10 +2501,10 @@ class __$$UserDetailedNotMeWithRelationsImplCopyWithImpl<$Res>
           ? _value.host
           : host // ignore: cast_nullable_to_non_nullable
               as String?,
-      avatarUrl: null == avatarUrl
+      avatarUrl: freezed == avatarUrl
           ? _value.avatarUrl
           : avatarUrl // ignore: cast_nullable_to_non_nullable
-              as Uri,
+              as Uri?,
       avatarBlurhash: freezed == avatarBlurhash
           ? _value.avatarBlurhash
           : avatarBlurhash // ignore: cast_nullable_to_non_nullable
@@ -2730,7 +2730,7 @@ class _$UserDetailedNotMeWithRelationsImpl
       this.name,
       required this.username,
       this.host,
-      @UriConverter() required this.avatarUrl,
+      @NullableUriConverter() this.avatarUrl,
       this.avatarBlurhash,
       final List<UserAvatarDecoration> avatarDecorations = const [],
       required this.isBot,
@@ -2813,8 +2813,8 @@ class _$UserDetailedNotMeWithRelationsImpl
   @override
   final String? host;
   @override
-  @UriConverter()
-  final Uri avatarUrl;
+  @NullableUriConverter()
+  final Uri? avatarUrl;
   @override
   final String? avatarBlurhash;
   final List<UserAvatarDecoration> _avatarDecorations;
@@ -3229,7 +3229,7 @@ abstract class _UserDetailedNotMeWithRelations
       final String? name,
       required final String username,
       final String? host,
-      @UriConverter() required final Uri avatarUrl,
+      @NullableUriConverter() final Uri? avatarUrl,
       final String? avatarBlurhash,
       final List<UserAvatarDecoration> avatarDecorations,
       required final bool isBot,
@@ -3301,8 +3301,8 @@ abstract class _UserDetailedNotMeWithRelations
   @override
   String? get host;
   @override
-  @UriConverter()
-  Uri get avatarUrl;
+  @NullableUriConverter()
+  Uri? get avatarUrl;
   @override
   String? get avatarBlurhash;
   @override
@@ -3442,8 +3442,8 @@ mixin _$MeDetailed {
   String? get name => throw _privateConstructorUsedError;
   String get username => throw _privateConstructorUsedError;
   String? get host => throw _privateConstructorUsedError;
-  @UriConverter()
-  Uri get avatarUrl => throw _privateConstructorUsedError;
+  @NullableUriConverter()
+  Uri? get avatarUrl => throw _privateConstructorUsedError;
   String? get avatarBlurhash => throw _privateConstructorUsedError;
   List<UserAvatarDecoration> get avatarDecorations =>
       throw _privateConstructorUsedError;
@@ -3589,7 +3589,7 @@ abstract class $MeDetailedCopyWith<$Res> {
       String? name,
       String username,
       String? host,
-      @UriConverter() Uri avatarUrl,
+      @NullableUriConverter() Uri? avatarUrl,
       String? avatarBlurhash,
       List<UserAvatarDecoration> avatarDecorations,
       bool isBot,
@@ -3697,7 +3697,7 @@ class _$MeDetailedCopyWithImpl<$Res, $Val extends MeDetailed>
     Object? name = freezed,
     Object? username = null,
     Object? host = freezed,
-    Object? avatarUrl = null,
+    Object? avatarUrl = freezed,
     Object? avatarBlurhash = freezed,
     Object? avatarDecorations = null,
     Object? isBot = null,
@@ -3793,10 +3793,10 @@ class _$MeDetailedCopyWithImpl<$Res, $Val extends MeDetailed>
           ? _value.host
           : host // ignore: cast_nullable_to_non_nullable
               as String?,
-      avatarUrl: null == avatarUrl
+      avatarUrl: freezed == avatarUrl
           ? _value.avatarUrl
           : avatarUrl // ignore: cast_nullable_to_non_nullable
-              as Uri,
+              as Uri?,
       avatarBlurhash: freezed == avatarBlurhash
           ? _value.avatarBlurhash
           : avatarBlurhash // ignore: cast_nullable_to_non_nullable
@@ -4155,7 +4155,7 @@ abstract class _$$MeDetailedImplCopyWith<$Res>
       String? name,
       String username,
       String? host,
-      @UriConverter() Uri avatarUrl,
+      @NullableUriConverter() Uri? avatarUrl,
       String? avatarBlurhash,
       List<UserAvatarDecoration> avatarDecorations,
       bool isBot,
@@ -4264,7 +4264,7 @@ class __$$MeDetailedImplCopyWithImpl<$Res>
     Object? name = freezed,
     Object? username = null,
     Object? host = freezed,
-    Object? avatarUrl = null,
+    Object? avatarUrl = freezed,
     Object? avatarBlurhash = freezed,
     Object? avatarDecorations = null,
     Object? isBot = null,
@@ -4360,10 +4360,10 @@ class __$$MeDetailedImplCopyWithImpl<$Res>
           ? _value.host
           : host // ignore: cast_nullable_to_non_nullable
               as String?,
-      avatarUrl: null == avatarUrl
+      avatarUrl: freezed == avatarUrl
           ? _value.avatarUrl
           : avatarUrl // ignore: cast_nullable_to_non_nullable
-              as Uri,
+              as Uri?,
       avatarBlurhash: freezed == avatarBlurhash
           ? _value.avatarBlurhash
           : avatarBlurhash // ignore: cast_nullable_to_non_nullable
@@ -4684,7 +4684,7 @@ class _$MeDetailedImpl implements _MeDetailed {
       this.name,
       required this.username,
       this.host,
-      @UriConverter() required this.avatarUrl,
+      @NullableUriConverter() this.avatarUrl,
       this.avatarBlurhash,
       final List<UserAvatarDecoration> avatarDecorations = const [],
       required this.isBot,
@@ -4799,8 +4799,8 @@ class _$MeDetailedImpl implements _MeDetailed {
   @override
   final String? host;
   @override
-  @UriConverter()
-  final Uri avatarUrl;
+  @NullableUriConverter()
+  final Uri? avatarUrl;
   @override
   final String? avatarBlurhash;
   final List<UserAvatarDecoration> _avatarDecorations;
@@ -5395,7 +5395,7 @@ abstract class _MeDetailed implements MeDetailed {
       final String? name,
       required final String username,
       final String? host,
-      @UriConverter() required final Uri avatarUrl,
+      @NullableUriConverter() final Uri? avatarUrl,
       final String? avatarBlurhash,
       final List<UserAvatarDecoration> avatarDecorations,
       required final bool isBot,
@@ -5493,8 +5493,8 @@ abstract class _MeDetailed implements MeDetailed {
   @override
   String? get host;
   @override
-  @UriConverter()
-  Uri get avatarUrl;
+  @NullableUriConverter()
+  Uri? get avatarUrl;
   @override
   String? get avatarBlurhash;
   @override

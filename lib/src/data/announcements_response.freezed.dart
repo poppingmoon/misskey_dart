@@ -28,7 +28,7 @@ mixin _$AnnouncementsResponse {
   DateTime? get updatedAt => throw _privateConstructorUsedError;
   String get text => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
-  @UriConverter()
+  @NullableUriConverter()
   Uri? get imageUrl =>
       throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
@@ -61,7 +61,7 @@ abstract class $AnnouncementsResponseCopyWith<$Res> {
       @NullableDateTimeConverter() DateTime? updatedAt,
       String text,
       String title,
-      @UriConverter() Uri? imageUrl,
+      @NullableUriConverter() Uri? imageUrl,
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       AnnouncementIconType? icon,
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
@@ -179,7 +179,7 @@ abstract class _$$AnnouncementsResponseImplCopyWith<$Res>
       @NullableDateTimeConverter() DateTime? updatedAt,
       String text,
       String title,
-      @UriConverter() Uri? imageUrl,
+      @NullableUriConverter() Uri? imageUrl,
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       AnnouncementIconType? icon,
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
@@ -289,7 +289,7 @@ class _$AnnouncementsResponseImpl implements _AnnouncementsResponse {
       @NullableDateTimeConverter() this.updatedAt,
       required this.text,
       required this.title,
-      @UriConverter() this.imageUrl,
+      @NullableUriConverter() this.imageUrl,
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.icon,
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.display,
@@ -316,7 +316,7 @@ class _$AnnouncementsResponseImpl implements _AnnouncementsResponse {
   @override
   final String title;
   @override
-  @UriConverter()
+  @NullableUriConverter()
   final Uri? imageUrl;
 // ignore: invalid_annotation_target
   @override
@@ -413,7 +413,7 @@ abstract class _AnnouncementsResponse implements AnnouncementsResponse {
       @NullableDateTimeConverter() final DateTime? updatedAt,
       required final String text,
       required final String title,
-      @UriConverter() final Uri? imageUrl,
+      @NullableUriConverter() final Uri? imageUrl,
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final AnnouncementIconType? icon,
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
@@ -441,7 +441,7 @@ abstract class _AnnouncementsResponse implements AnnouncementsResponse {
   @override
   String get title;
   @override
-  @UriConverter()
+  @NullableUriConverter()
   Uri? get imageUrl;
   @override // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)

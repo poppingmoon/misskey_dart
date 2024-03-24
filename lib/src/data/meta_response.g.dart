@@ -236,9 +236,13 @@ _$MetaAdImpl _$$MetaAdImplFromJson(Map<String, dynamic> json) => $checkedCreate(
           id: $checkedConvert('id', (v) => v as String),
           place: $checkedConvert('place', (v) => v as String),
           url: $checkedConvert(
-              'url', (v) => const UriConverter().fromJson(v as String)),
+              'url',
+              (v) => _$JsonConverterFromJson<String, Uri?>(
+                  v, const NullableUriConverter().fromJson)),
           imageUrl: $checkedConvert(
-              'imageUrl', (v) => const UriConverter().fromJson(v as String)),
+              'imageUrl',
+              (v) => _$JsonConverterFromJson<String, Uri?>(
+                  v, const NullableUriConverter().fromJson)),
           ratio: $checkedConvert('ratio', (v) => v as int),
         );
         return val;
@@ -249,8 +253,8 @@ Map<String, dynamic> _$$MetaAdImplToJson(_$MetaAdImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'place': instance.place,
-      'url': const UriConverter().toJson(instance.url),
-      'imageUrl': const UriConverter().toJson(instance.imageUrl),
+      'url': const NullableUriConverter().toJson(instance.url),
+      'imageUrl': const NullableUriConverter().toJson(instance.imageUrl),
       'ratio': instance.ratio,
     };
 
