@@ -703,18 +703,18 @@ _$MeDetailedImpl _$$MeDetailedImplFromJson(Map<String, dynamic> json) =>
                   unknownValue: JsonKey.nullForUndefinedEnumValue)),
           hideOnlineStatus:
               $checkedConvert('hideOnlineStatus', (v) => v as bool? ?? false),
-          hasUnreadSpecifiedNotes:
-              $checkedConvert('hasUnreadSpecifiedNotes', (v) => v as bool),
+          hasUnreadSpecifiedNotes: $checkedConvert(
+              'hasUnreadSpecifiedNotes', (v) => v as bool? ?? false),
           hasUnreadMentions:
-              $checkedConvert('hasUnreadMentions', (v) => v as bool),
+              $checkedConvert('hasUnreadMentions', (v) => v as bool? ?? false),
           hasUnreadAnnouncement: $checkedConvert(
               'hasUnreadAnnouncement', (v) => v as bool? ?? false),
           hasUnreadAntenna:
               $checkedConvert('hasUnreadAntenna', (v) => v as bool? ?? false),
           hasUnreadChannel:
               $checkedConvert('hasUnreadChannel', (v) => v as bool? ?? false),
-          hasUnreadNotification:
-              $checkedConvert('hasUnreadNotification', (v) => v as bool),
+          hasUnreadNotification: $checkedConvert(
+              'hasUnreadNotification', (v) => v as bool? ?? false),
           hasPendingReceivedFollowRequest: $checkedConvert(
               'hasPendingReceivedFollowRequest', (v) => v as bool? ?? false),
           unreadNotificationsCount:

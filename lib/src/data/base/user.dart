@@ -360,15 +360,15 @@ class MeDetailed with _$MeDetailed implements UserDetailed {
     TwoFactorBackupCodesStock? twoFactorBackupCodesStock,
     // Added in Misskey 12.77.0
     @Default(false) bool hideOnlineStatus,
-    required bool hasUnreadSpecifiedNotes,
-    required bool hasUnreadMentions,
+    @Default(false) bool hasUnreadSpecifiedNotes,
+    @Default(false) bool hasUnreadMentions,
     // Added in Misskey 12.0.0
     @Default(false) bool hasUnreadAnnouncement,
     // Added in Misskey 12.0.0
     @Default(false) bool hasUnreadAntenna,
     // Added in Misskey 12.47.0
     @Default(false) bool hasUnreadChannel,
-    required bool hasUnreadNotification,
+    @Default(false) bool hasUnreadNotification,
     // Added in Misskey 12.11.0
     @Default(false) bool hasPendingReceivedFollowRequest,
     int? unreadNotificationsCount,

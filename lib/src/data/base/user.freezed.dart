@@ -4750,12 +4750,12 @@ class _$MeDetailedImpl implements _MeDetailed {
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.twoFactorBackupCodesStock,
       this.hideOnlineStatus = false,
-      required this.hasUnreadSpecifiedNotes,
-      required this.hasUnreadMentions,
+      this.hasUnreadSpecifiedNotes = false,
+      this.hasUnreadMentions = false,
       this.hasUnreadAnnouncement = false,
       this.hasUnreadAntenna = false,
       this.hasUnreadChannel = false,
-      required this.hasUnreadNotification,
+      this.hasUnreadNotification = false,
       this.hasPendingReceivedFollowRequest = false,
       this.unreadNotificationsCount,
       final List<AnnouncementsResponse> unreadAnnouncements = const [],
@@ -5041,8 +5041,10 @@ class _$MeDetailedImpl implements _MeDetailed {
   @JsonKey()
   final bool hideOnlineStatus;
   @override
+  @JsonKey()
   final bool hasUnreadSpecifiedNotes;
   @override
+  @JsonKey()
   final bool hasUnreadMentions;
 // Added in Misskey 12.0.0
   @override
@@ -5057,6 +5059,7 @@ class _$MeDetailedImpl implements _MeDetailed {
   @JsonKey()
   final bool hasUnreadChannel;
   @override
+  @JsonKey()
   final bool hasUnreadNotification;
 // Added in Misskey 12.11.0
   @override
@@ -5461,12 +5464,12 @@ abstract class _MeDetailed implements MeDetailed {
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final TwoFactorBackupCodesStock? twoFactorBackupCodesStock,
       final bool hideOnlineStatus,
-      required final bool hasUnreadSpecifiedNotes,
-      required final bool hasUnreadMentions,
+      final bool hasUnreadSpecifiedNotes,
+      final bool hasUnreadMentions,
       final bool hasUnreadAnnouncement,
       final bool hasUnreadAntenna,
       final bool hasUnreadChannel,
-      required final bool hasUnreadNotification,
+      final bool hasUnreadNotification,
       final bool hasPendingReceivedFollowRequest,
       final int? unreadNotificationsCount,
       final List<AnnouncementsResponse> unreadAnnouncements,
