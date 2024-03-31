@@ -141,6 +141,10 @@ _$MetaResponseImpl _$$MetaResponseImplFromJson(Map<String, dynamic> json) =>
           proxyAccountName:
               $checkedConvert('proxyAccountName', (v) => v as String?),
           mediaProxy: $checkedConvert('mediaProxy', (v) => v as String?),
+          enableUrlPreview:
+              $checkedConvert('enableUrlPreview', (v) => v as bool?),
+          enableSkebStatus:
+              $checkedConvert('enableSkebStatus', (v) => v as bool?),
           cacheRemoteFiles:
               $checkedConvert('cacheRemoteFiles', (v) => v as bool?),
           cacheRemoteSensitiveFiles:
@@ -217,6 +221,8 @@ Map<String, dynamic> _$$MetaResponseImplToJson(_$MetaResponseImpl instance) =>
       'translatorAvailable': instance.translatorAvailable,
       'proxyAccountName': instance.proxyAccountName,
       'mediaProxy': instance.mediaProxy,
+      'enableUrlPreview': instance.enableUrlPreview,
+      'enableSkebStatus': instance.enableSkebStatus,
       'cacheRemoteFiles': instance.cacheRemoteFiles,
       'cacheRemoteSensitiveFiles': instance.cacheRemoteSensitiveFiles,
       'features': instance.features?.toJson(),

@@ -85,6 +85,8 @@ mixin _$MetaResponse {
   bool? get translatorAvailable => throw _privateConstructorUsedError;
   String? get proxyAccountName => throw _privateConstructorUsedError;
   String? get mediaProxy => throw _privateConstructorUsedError;
+  bool? get enableUrlPreview => throw _privateConstructorUsedError;
+  bool? get enableSkebStatus => throw _privateConstructorUsedError;
   bool? get cacheRemoteFiles => throw _privateConstructorUsedError;
   bool? get cacheRemoteSensitiveFiles => throw _privateConstructorUsedError;
   MetaFeature? get features => throw _privateConstructorUsedError;
@@ -151,6 +153,8 @@ abstract class $MetaResponseCopyWith<$Res> {
       bool? translatorAvailable,
       String? proxyAccountName,
       String? mediaProxy,
+      bool? enableUrlPreview,
+      bool? enableSkebStatus,
       bool? cacheRemoteFiles,
       bool? cacheRemoteSensitiveFiles,
       MetaFeature? features});
@@ -221,6 +225,8 @@ class _$MetaResponseCopyWithImpl<$Res, $Val extends MetaResponse>
     Object? translatorAvailable = freezed,
     Object? proxyAccountName = freezed,
     Object? mediaProxy = freezed,
+    Object? enableUrlPreview = freezed,
+    Object? enableSkebStatus = freezed,
     Object? cacheRemoteFiles = freezed,
     Object? cacheRemoteSensitiveFiles = freezed,
     Object? features = freezed,
@@ -422,6 +428,14 @@ class _$MetaResponseCopyWithImpl<$Res, $Val extends MetaResponse>
           ? _value.mediaProxy
           : mediaProxy // ignore: cast_nullable_to_non_nullable
               as String?,
+      enableUrlPreview: freezed == enableUrlPreview
+          ? _value.enableUrlPreview
+          : enableUrlPreview // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      enableSkebStatus: freezed == enableSkebStatus
+          ? _value.enableSkebStatus
+          : enableSkebStatus // ignore: cast_nullable_to_non_nullable
+              as bool?,
       cacheRemoteFiles: freezed == cacheRemoteFiles
           ? _value.cacheRemoteFiles
           : cacheRemoteFiles // ignore: cast_nullable_to_non_nullable
@@ -520,6 +534,8 @@ abstract class _$$MetaResponseImplCopyWith<$Res>
       bool? translatorAvailable,
       String? proxyAccountName,
       String? mediaProxy,
+      bool? enableUrlPreview,
+      bool? enableSkebStatus,
       bool? cacheRemoteFiles,
       bool? cacheRemoteSensitiveFiles,
       MetaFeature? features});
@@ -590,6 +606,8 @@ class __$$MetaResponseImplCopyWithImpl<$Res>
     Object? translatorAvailable = freezed,
     Object? proxyAccountName = freezed,
     Object? mediaProxy = freezed,
+    Object? enableUrlPreview = freezed,
+    Object? enableSkebStatus = freezed,
     Object? cacheRemoteFiles = freezed,
     Object? cacheRemoteSensitiveFiles = freezed,
     Object? features = freezed,
@@ -791,6 +809,14 @@ class __$$MetaResponseImplCopyWithImpl<$Res>
           ? _value.mediaProxy
           : mediaProxy // ignore: cast_nullable_to_non_nullable
               as String?,
+      enableUrlPreview: freezed == enableUrlPreview
+          ? _value.enableUrlPreview
+          : enableUrlPreview // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      enableSkebStatus: freezed == enableSkebStatus
+          ? _value.enableSkebStatus
+          : enableSkebStatus // ignore: cast_nullable_to_non_nullable
+              as bool?,
       cacheRemoteFiles: freezed == cacheRemoteFiles
           ? _value.cacheRemoteFiles
           : cacheRemoteFiles // ignore: cast_nullable_to_non_nullable
@@ -860,6 +886,8 @@ class _$MetaResponseImpl implements _MetaResponse {
       this.translatorAvailable,
       this.proxyAccountName,
       this.mediaProxy,
+      this.enableUrlPreview,
+      this.enableSkebStatus,
       this.cacheRemoteFiles,
       this.cacheRemoteSensitiveFiles,
       this.features})
@@ -1006,6 +1034,10 @@ class _$MetaResponseImpl implements _MetaResponse {
   @override
   final String? mediaProxy;
   @override
+  final bool? enableUrlPreview;
+  @override
+  final bool? enableSkebStatus;
+  @override
   final bool? cacheRemoteFiles;
   @override
   final bool? cacheRemoteSensitiveFiles;
@@ -1014,7 +1046,7 @@ class _$MetaResponseImpl implements _MetaResponse {
 
   @override
   String toString() {
-    return 'MetaResponse(maintainerName: $maintainerName, maintainerEmail: $maintainerEmail, version: $version, providesTarball: $providesTarball, name: $name, shortName: $shortName, uri: $uri, description: $description, langs: $langs, tosUrl: $tosUrl, repositoryUrl: $repositoryUrl, feedbackUrl: $feedbackUrl, defaultDarkTheme: $defaultDarkTheme, defaultLightTheme: $defaultLightTheme, disableRegistration: $disableRegistration, emailRequiredForSignup: $emailRequiredForSignup, enableHcaptcha: $enableHcaptcha, hcaptchaSiteKey: $hcaptchaSiteKey, enableMcaptcha: $enableMcaptcha, mcaptchaSiteKey: $mcaptchaSiteKey, mcaptchaInstanceUrl: $mcaptchaInstanceUrl, enableRecaptcha: $enableRecaptcha, recaptchaSiteKey: $recaptchaSiteKey, enableTurnstile: $enableTurnstile, turnstileSiteKey: $turnstileSiteKey, swPublickey: $swPublickey, themeColor: $themeColor, mascotImageUrl: $mascotImageUrl, bannerUrl: $bannerUrl, infoImageUrl: $infoImageUrl, errorImageUrl: $errorImageUrl, serverErrorImageUrl: $serverErrorImageUrl, notFountImageUrl: $notFountImageUrl, iconUrl: $iconUrl, backgroundImageUrl: $backgroundImageUrl, logoImageUrl: $logoImageUrl, impressumUrl: $impressumUrl, privacyPolicyUrl: $privacyPolicyUrl, maxNoteTextLength: $maxNoteTextLength, ads: $ads, notesPerOneAd: $notesPerOneAd, serverRules: $serverRules, policies: $policies, requireSetup: $requireSetup, enableEmail: $enableEmail, enableServiceWorker: $enableServiceWorker, translatorAvailable: $translatorAvailable, proxyAccountName: $proxyAccountName, mediaProxy: $mediaProxy, cacheRemoteFiles: $cacheRemoteFiles, cacheRemoteSensitiveFiles: $cacheRemoteSensitiveFiles, features: $features)';
+    return 'MetaResponse(maintainerName: $maintainerName, maintainerEmail: $maintainerEmail, version: $version, providesTarball: $providesTarball, name: $name, shortName: $shortName, uri: $uri, description: $description, langs: $langs, tosUrl: $tosUrl, repositoryUrl: $repositoryUrl, feedbackUrl: $feedbackUrl, defaultDarkTheme: $defaultDarkTheme, defaultLightTheme: $defaultLightTheme, disableRegistration: $disableRegistration, emailRequiredForSignup: $emailRequiredForSignup, enableHcaptcha: $enableHcaptcha, hcaptchaSiteKey: $hcaptchaSiteKey, enableMcaptcha: $enableMcaptcha, mcaptchaSiteKey: $mcaptchaSiteKey, mcaptchaInstanceUrl: $mcaptchaInstanceUrl, enableRecaptcha: $enableRecaptcha, recaptchaSiteKey: $recaptchaSiteKey, enableTurnstile: $enableTurnstile, turnstileSiteKey: $turnstileSiteKey, swPublickey: $swPublickey, themeColor: $themeColor, mascotImageUrl: $mascotImageUrl, bannerUrl: $bannerUrl, infoImageUrl: $infoImageUrl, errorImageUrl: $errorImageUrl, serverErrorImageUrl: $serverErrorImageUrl, notFountImageUrl: $notFountImageUrl, iconUrl: $iconUrl, backgroundImageUrl: $backgroundImageUrl, logoImageUrl: $logoImageUrl, impressumUrl: $impressumUrl, privacyPolicyUrl: $privacyPolicyUrl, maxNoteTextLength: $maxNoteTextLength, ads: $ads, notesPerOneAd: $notesPerOneAd, serverRules: $serverRules, policies: $policies, requireSetup: $requireSetup, enableEmail: $enableEmail, enableServiceWorker: $enableServiceWorker, translatorAvailable: $translatorAvailable, proxyAccountName: $proxyAccountName, mediaProxy: $mediaProxy, enableUrlPreview: $enableUrlPreview, enableSkebStatus: $enableSkebStatus, cacheRemoteFiles: $cacheRemoteFiles, cacheRemoteSensitiveFiles: $cacheRemoteSensitiveFiles, features: $features)';
   }
 
   @override
@@ -1113,8 +1145,10 @@ class _$MetaResponseImpl implements _MetaResponse {
                 other.proxyAccountName == proxyAccountName) &&
             (identical(other.mediaProxy, mediaProxy) ||
                 other.mediaProxy == mediaProxy) &&
-            (identical(other.cacheRemoteFiles, cacheRemoteFiles) ||
-                other.cacheRemoteFiles == cacheRemoteFiles) &&
+            (identical(other.enableUrlPreview, enableUrlPreview) ||
+                other.enableUrlPreview == enableUrlPreview) &&
+            (identical(other.enableSkebStatus, enableSkebStatus) || other.enableSkebStatus == enableSkebStatus) &&
+            (identical(other.cacheRemoteFiles, cacheRemoteFiles) || other.cacheRemoteFiles == cacheRemoteFiles) &&
             (identical(other.cacheRemoteSensitiveFiles, cacheRemoteSensitiveFiles) || other.cacheRemoteSensitiveFiles == cacheRemoteSensitiveFiles) &&
             (identical(other.features, features) || other.features == features));
   }
@@ -1172,6 +1206,8 @@ class _$MetaResponseImpl implements _MetaResponse {
         translatorAvailable,
         proxyAccountName,
         mediaProxy,
+        enableUrlPreview,
+        enableSkebStatus,
         cacheRemoteFiles,
         cacheRemoteSensitiveFiles,
         features
@@ -1242,6 +1278,8 @@ abstract class _MetaResponse implements MetaResponse {
       final bool? translatorAvailable,
       final String? proxyAccountName,
       final String? mediaProxy,
+      final bool? enableUrlPreview,
+      final bool? enableSkebStatus,
       final bool? cacheRemoteFiles,
       final bool? cacheRemoteSensitiveFiles,
       final MetaFeature? features}) = _$MetaResponseImpl;
@@ -1362,6 +1400,10 @@ abstract class _MetaResponse implements MetaResponse {
   String? get proxyAccountName;
   @override
   String? get mediaProxy;
+  @override
+  bool? get enableUrlPreview;
+  @override
+  bool? get enableSkebStatus;
   @override
   bool? get cacheRemoteFiles;
   @override

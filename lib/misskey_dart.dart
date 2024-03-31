@@ -208,6 +208,8 @@ export 'src/data/users/users_followeres_request.dart';
 export 'src/data/users/users_following_request.dart';
 export 'src/data/users/users_get_frequently_replied_users_request.dart';
 export 'src/data/users/users_get_frequently_replied_users_response.dart';
+export 'src/data/users/users_get_skeb_status_request.dart';
+export 'src/data/users/users_get_skeb_status_response.dart';
 export 'src/data/users/users_notes_request.dart';
 export 'src/data/users/users_pages_request.dart';
 export 'src/data/users/users_reactions_request.dart';

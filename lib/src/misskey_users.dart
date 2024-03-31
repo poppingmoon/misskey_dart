@@ -147,6 +147,16 @@ class MisskeyUsers {
         await _apiService.post<List>("users/pages", request.toJson());
     return response.map((e) => Page.fromJson(e));
   }
+
+  Future<UsersGetSkebStatusResponse> getSkebStatus(
+    UsersGetSkebStatusRequest request,
+  ) async {
+    final response = await _apiService.post<Map<String, dynamic>>(
+      "users/get-skeb-status",
+      request.toJson(),
+    );
+    return UsersGetSkebStatusResponse.fromJson(response);
+  }
 }
 
 class MisskeyUsersLists {

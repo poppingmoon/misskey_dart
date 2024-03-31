@@ -57,6 +57,8 @@ class MetaResponse with _$MetaResponse {
     bool? translatorAvailable,
     String? proxyAccountName,
     String? mediaProxy,
+    bool? enableUrlPreview,
+    bool? enableSkebStatus,
     bool? cacheRemoteFiles,
     bool? cacheRemoteSensitiveFiles,
     MetaFeature? features,
