@@ -25,6 +25,7 @@ mixin _$UsersGetSkebStatusResponse {
   bool get isCreator => throw _privateConstructorUsedError;
   bool get isAcceptable => throw _privateConstructorUsedError;
   int get creatorRequestCount => throw _privateConstructorUsedError;
+  int get clientRequestCount => throw _privateConstructorUsedError;
   List<SkebStatusSkill> get skills => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -45,6 +46,7 @@ abstract class $UsersGetSkebStatusResponseCopyWith<$Res> {
       bool isCreator,
       bool isAcceptable,
       int creatorRequestCount,
+      int clientRequestCount,
       List<SkebStatusSkill> skills});
 }
 
@@ -66,6 +68,7 @@ class _$UsersGetSkebStatusResponseCopyWithImpl<$Res,
     Object? isCreator = null,
     Object? isAcceptable = null,
     Object? creatorRequestCount = null,
+    Object? clientRequestCount = null,
     Object? skills = null,
   }) {
     return _then(_value.copyWith(
@@ -84,6 +87,10 @@ class _$UsersGetSkebStatusResponseCopyWithImpl<$Res,
       creatorRequestCount: null == creatorRequestCount
           ? _value.creatorRequestCount
           : creatorRequestCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      clientRequestCount: null == clientRequestCount
+          ? _value.clientRequestCount
+          : clientRequestCount // ignore: cast_nullable_to_non_nullable
               as int,
       skills: null == skills
           ? _value.skills
@@ -107,6 +114,7 @@ abstract class _$$UsersGetSkebStatusResponseImplCopyWith<$Res>
       bool isCreator,
       bool isAcceptable,
       int creatorRequestCount,
+      int clientRequestCount,
       List<SkebStatusSkill> skills});
 }
 
@@ -127,6 +135,7 @@ class __$$UsersGetSkebStatusResponseImplCopyWithImpl<$Res>
     Object? isCreator = null,
     Object? isAcceptable = null,
     Object? creatorRequestCount = null,
+    Object? clientRequestCount = null,
     Object? skills = null,
   }) {
     return _then(_$UsersGetSkebStatusResponseImpl(
@@ -146,6 +155,10 @@ class __$$UsersGetSkebStatusResponseImplCopyWithImpl<$Res>
           ? _value.creatorRequestCount
           : creatorRequestCount // ignore: cast_nullable_to_non_nullable
               as int,
+      clientRequestCount: null == clientRequestCount
+          ? _value.clientRequestCount
+          : clientRequestCount // ignore: cast_nullable_to_non_nullable
+              as int,
       skills: null == skills
           ? _value._skills
           : skills // ignore: cast_nullable_to_non_nullable
@@ -162,6 +175,7 @@ class _$UsersGetSkebStatusResponseImpl implements _UsersGetSkebStatusResponse {
       required this.isCreator,
       required this.isAcceptable,
       required this.creatorRequestCount,
+      required this.clientRequestCount,
       required final List<SkebStatusSkill> skills})
       : _skills = skills;
 
@@ -177,6 +191,8 @@ class _$UsersGetSkebStatusResponseImpl implements _UsersGetSkebStatusResponse {
   final bool isAcceptable;
   @override
   final int creatorRequestCount;
+  @override
+  final int clientRequestCount;
   final List<SkebStatusSkill> _skills;
   @override
   List<SkebStatusSkill> get skills {
@@ -187,7 +203,7 @@ class _$UsersGetSkebStatusResponseImpl implements _UsersGetSkebStatusResponse {
 
   @override
   String toString() {
-    return 'UsersGetSkebStatusResponse(screenName: $screenName, isCreator: $isCreator, isAcceptable: $isAcceptable, creatorRequestCount: $creatorRequestCount, skills: $skills)';
+    return 'UsersGetSkebStatusResponse(screenName: $screenName, isCreator: $isCreator, isAcceptable: $isAcceptable, creatorRequestCount: $creatorRequestCount, clientRequestCount: $clientRequestCount, skills: $skills)';
   }
 
   @override
@@ -203,6 +219,8 @@ class _$UsersGetSkebStatusResponseImpl implements _UsersGetSkebStatusResponse {
                 other.isAcceptable == isAcceptable) &&
             (identical(other.creatorRequestCount, creatorRequestCount) ||
                 other.creatorRequestCount == creatorRequestCount) &&
+            (identical(other.clientRequestCount, clientRequestCount) ||
+                other.clientRequestCount == clientRequestCount) &&
             const DeepCollectionEquality().equals(other._skills, _skills));
   }
 
@@ -214,6 +232,7 @@ class _$UsersGetSkebStatusResponseImpl implements _UsersGetSkebStatusResponse {
       isCreator,
       isAcceptable,
       creatorRequestCount,
+      clientRequestCount,
       const DeepCollectionEquality().hash(_skills));
 
   @JsonKey(ignore: true)
@@ -238,6 +257,7 @@ abstract class _UsersGetSkebStatusResponse
           required final bool isCreator,
           required final bool isAcceptable,
           required final int creatorRequestCount,
+          required final int clientRequestCount,
           required final List<SkebStatusSkill> skills}) =
       _$UsersGetSkebStatusResponseImpl;
 
@@ -253,6 +273,8 @@ abstract class _UsersGetSkebStatusResponse
   @override
   int get creatorRequestCount;
   @override
+  int get clientRequestCount;
+  @override
   List<SkebStatusSkill> get skills;
   @override
   @JsonKey(ignore: true)
@@ -266,7 +288,8 @@ SkebStatusSkill _$SkebStatusSkillFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SkebStatusSkill {
-  int get amount => throw _privateConstructorUsedError;
+  int get amount =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   SkebStatusSkillGenre? get genre => throw _privateConstructorUsedError;
 
@@ -371,6 +394,7 @@ class _$SkebStatusSkillImpl implements _SkebStatusSkill {
 
   @override
   final int amount;
+// ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final SkebStatusSkillGenre? genre;
@@ -419,7 +443,7 @@ abstract class _SkebStatusSkill implements SkebStatusSkill {
 
   @override
   int get amount;
-  @override
+  @override // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   SkebStatusSkillGenre? get genre;
   @override

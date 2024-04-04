@@ -10,6 +10,7 @@ class UsersGetSkebStatusResponse with _$UsersGetSkebStatusResponse {
     required bool isCreator,
     required bool isAcceptable,
     required int creatorRequestCount,
+    required int clientRequestCount,
     required List<SkebStatusSkill> skills,
   }) = _UsersGetSkebStatusResponse;
 

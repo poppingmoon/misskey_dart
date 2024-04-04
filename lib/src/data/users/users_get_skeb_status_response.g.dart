@@ -18,6 +18,8 @@ _$UsersGetSkebStatusResponseImpl _$$UsersGetSkebStatusResponseImplFromJson(
           isAcceptable: $checkedConvert('isAcceptable', (v) => v as bool),
           creatorRequestCount:
               $checkedConvert('creatorRequestCount', (v) => v as int),
+          clientRequestCount:
+              $checkedConvert('clientRequestCount', (v) => v as int),
           skills: $checkedConvert(
               'skills',
               (v) => (v as List<dynamic>)
@@ -36,6 +38,7 @@ Map<String, dynamic> _$$UsersGetSkebStatusResponseImplToJson(
       'isCreator': instance.isCreator,
       'isAcceptable': instance.isAcceptable,
       'creatorRequestCount': instance.creatorRequestCount,
+      'clientRequestCount': instance.clientRequestCount,
       'skills': instance.skills.map((e) => e.toJson()).toList(),
     };
 
