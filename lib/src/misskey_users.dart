@@ -3,10 +3,12 @@ import 'package:misskey_dart/src/services/api_service.dart';
 
 class MisskeyUsers {
   final ApiService _apiService;
+  final MisskeyUsersGallery gallery;
   final MisskeyUsersLists list;
 
   MisskeyUsers({required ApiService apiService})
       : _apiService = apiService,
+        gallery = MisskeyUsersGallery(apiService: apiService),
         list = MisskeyUsersLists(apiService: apiService);
 
   /// ユーザー情報をIDから取得します。
@@ -156,6 +158,20 @@ class MisskeyUsers {
       request.toJson(),
     );
     return UsersGetSkebStatusResponse.fromJson(response);
+  }
+}
+
+class MisskeyUsersGallery {
+  final ApiService _apiService;
+
+  MisskeyUsersGallery({required ApiService apiService})
+      : _apiService = apiService;
+
+  /// ユーザーが作成したギャラリーの投稿を取得します。
+  Future<Iterable<GalleryPost>> posts(UsersGalleryPostsRequest request) async {
+    final response =
+        await _apiService.post<List>("users/gallery/posts", request.toJson());
+    return response.map((e) => GalleryPost.fromJson(e));
   }
 }
 
