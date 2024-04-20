@@ -18,7 +18,7 @@ _$NotesReactionsResponseImpl _$$NotesReactionsResponseImplFromJson(
               (v) => const DateTimeConverter().fromJson(v as String)),
           user: $checkedConvert(
               'user', (v) => UserLite.fromJson(v as Map<String, dynamic>)),
-          type: $checkedConvert('type', (v) => v as String),
+          type: $checkedConvert('type', (v) => v as String?),
         );
         return val;
       },

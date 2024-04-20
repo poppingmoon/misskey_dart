@@ -25,7 +25,7 @@ mixin _$NotesReactionsResponse {
   @DateTimeConverter()
   DateTime get createdAt => throw _privateConstructorUsedError;
   UserLite get user => throw _privateConstructorUsedError;
-  String get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -43,7 +43,7 @@ abstract class $NotesReactionsResponseCopyWith<$Res> {
       {String id,
       @DateTimeConverter() DateTime createdAt,
       UserLite user,
-      String type});
+      String? type});
 
   $UserLiteCopyWith<$Res> get user;
 }
@@ -65,7 +65,7 @@ class _$NotesReactionsResponseCopyWithImpl<$Res,
     Object? id = null,
     Object? createdAt = null,
     Object? user = null,
-    Object? type = null,
+    Object? type = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -80,10 +80,10 @@ class _$NotesReactionsResponseCopyWithImpl<$Res,
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
               as UserLite,
-      type: null == type
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 
@@ -109,7 +109,7 @@ abstract class _$$NotesReactionsResponseImplCopyWith<$Res>
       {String id,
       @DateTimeConverter() DateTime createdAt,
       UserLite user,
-      String type});
+      String? type});
 
   @override
   $UserLiteCopyWith<$Res> get user;
@@ -131,7 +131,7 @@ class __$$NotesReactionsResponseImplCopyWithImpl<$Res>
     Object? id = null,
     Object? createdAt = null,
     Object? user = null,
-    Object? type = null,
+    Object? type = freezed,
   }) {
     return _then(_$NotesReactionsResponseImpl(
       id: null == id
@@ -146,10 +146,10 @@ class __$$NotesReactionsResponseImplCopyWithImpl<$Res>
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
               as UserLite,
-      type: null == type
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -161,7 +161,7 @@ class _$NotesReactionsResponseImpl implements _NotesReactionsResponse {
       {required this.id,
       @DateTimeConverter() required this.createdAt,
       required this.user,
-      required this.type});
+      this.type});
 
   factory _$NotesReactionsResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$NotesReactionsResponseImplFromJson(json);
@@ -174,7 +174,7 @@ class _$NotesReactionsResponseImpl implements _NotesReactionsResponse {
   @override
   final UserLite user;
   @override
-  final String type;
+  final String? type;
 
   @override
   String toString() {
@@ -217,7 +217,7 @@ abstract class _NotesReactionsResponse implements NotesReactionsResponse {
       {required final String id,
       @DateTimeConverter() required final DateTime createdAt,
       required final UserLite user,
-      required final String type}) = _$NotesReactionsResponseImpl;
+      final String? type}) = _$NotesReactionsResponseImpl;
 
   factory _NotesReactionsResponse.fromJson(Map<String, dynamic> json) =
       _$NotesReactionsResponseImpl.fromJson;
@@ -230,7 +230,7 @@ abstract class _NotesReactionsResponse implements NotesReactionsResponse {
   @override
   UserLite get user;
   @override
-  String get type;
+  String? get type;
   @override
   @JsonKey(ignore: true)
   _$$NotesReactionsResponseImplCopyWith<_$NotesReactionsResponseImpl>

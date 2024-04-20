@@ -11,7 +11,7 @@ class NotesReactionsResponse with _$NotesReactionsResponse {
     required String id,
     @DateTimeConverter() required DateTime createdAt,
     required UserLite user,
-    required String type,
+    String? type,
   }) = _NotesReactionsResponse;
 
   factory NotesReactionsResponse.fromJson(Map<String, dynamic> json) =>
