@@ -25,8 +25,11 @@ _$CommunityChannelImpl _$$CommunityChannelImplFromJson(
               'bannerUrl',
               (v) => _$JsonConverterFromJson<String, Uri?>(
                   v, const NullableUriConverter().fromJson)),
-          pinnedNoteIds: $checkedConvert('pinnedNoteIds',
-              (v) => (v as List<dynamic>).map((e) => e as String).toList()),
+          pinnedNoteIds: $checkedConvert(
+              'pinnedNoteIds',
+              (v) =>
+                  (v as List<dynamic>?)?.map((e) => e as String).toList() ??
+                  const []),
           usersCount: $checkedConvert('usersCount', (v) => v as int),
           notesCount: $checkedConvert('notesCount', (v) => v as int),
           isSensitive:
@@ -39,9 +42,11 @@ _$CommunityChannelImpl _$$CommunityChannelImplFromJson(
           hasUnreadNote: $checkedConvert('hasUnreadNote', (v) => v as bool?),
           pinnedNotes: $checkedConvert(
               'pinnedNotes',
-              (v) => (v as List<dynamic>?)
-                  ?.map((e) => Note.fromJson(e as Map<String, dynamic>))
-                  .toList()),
+              (v) =>
+                  (v as List<dynamic>?)
+                      ?.map((e) => Note.fromJson(e as Map<String, dynamic>))
+                      .toList() ??
+                  const []),
           allowRenoteToExternal: $checkedConvert(
               'allowRenoteToExternal', (v) => v as bool? ?? true),
         );

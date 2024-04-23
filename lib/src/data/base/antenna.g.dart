@@ -39,8 +39,8 @@ _$AntennaImpl _$$AntennaImplFromJson(Map<String, dynamic> json) =>
           notify: $checkedConvert('notify', (v) => v as bool),
           withReplies: $checkedConvert('withReplies', (v) => v as bool),
           withFile: $checkedConvert('withFile', (v) => v as bool),
-          isActive: $checkedConvert('isActive', (v) => v as bool),
-          hasUnreadNote: $checkedConvert('hasUnreadNote', (v) => v as bool),
+          isActive: $checkedConvert('isActive', (v) => v as bool?),
+          hasUnreadNote: $checkedConvert('hasUnreadNote', (v) => v as bool?),
           localOnly: $checkedConvert('localOnly', (v) => v as bool?),
         );
         return val;

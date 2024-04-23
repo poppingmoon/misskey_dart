@@ -16,7 +16,7 @@ class Clip with _$Clip {
     String? name,
     String? description,
     required bool isPublic,
-    required int favoritedCount,
+    int? favoritedCount,
     bool? isFavorited,
   }) = _Clip;
 

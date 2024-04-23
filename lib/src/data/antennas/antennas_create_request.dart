@@ -13,6 +13,7 @@ class AntennasCreateRequest with _$AntennasCreateRequest {
     required List<List<String>> keywords,
     required List<List<String>> excludeKeywords,
     required List<String> users,
+    @Default([]) List<String> instances,
     required bool caseSensitive,
     required bool withReplies,
     required bool withFile,

@@ -24,7 +24,7 @@ _$ClipImpl _$$ClipImplFromJson(Map<String, dynamic> json) => $checkedCreate(
           name: $checkedConvert('name', (v) => v as String?),
           description: $checkedConvert('description', (v) => v as String?),
           isPublic: $checkedConvert('isPublic', (v) => v as bool),
-          favoritedCount: $checkedConvert('favoritedCount', (v) => v as int),
+          favoritedCount: $checkedConvert('favoritedCount', (v) => v as int?),
           isFavorited: $checkedConvert('isFavorited', (v) => v as bool?),
         );
         return val;

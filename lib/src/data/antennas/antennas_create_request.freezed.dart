@@ -27,6 +27,7 @@ mixin _$AntennasCreateRequest {
   List<List<String>> get keywords => throw _privateConstructorUsedError;
   List<List<String>> get excludeKeywords => throw _privateConstructorUsedError;
   List<String> get users => throw _privateConstructorUsedError;
+  List<String> get instances => throw _privateConstructorUsedError;
   bool get caseSensitive => throw _privateConstructorUsedError;
   bool get withReplies => throw _privateConstructorUsedError;
   bool get withFile => throw _privateConstructorUsedError;
@@ -52,6 +53,7 @@ abstract class $AntennasCreateRequestCopyWith<$Res> {
       List<List<String>> keywords,
       List<List<String>> excludeKeywords,
       List<String> users,
+      List<String> instances,
       bool caseSensitive,
       bool withReplies,
       bool withFile,
@@ -79,6 +81,7 @@ class _$AntennasCreateRequestCopyWithImpl<$Res,
     Object? keywords = null,
     Object? excludeKeywords = null,
     Object? users = null,
+    Object? instances = null,
     Object? caseSensitive = null,
     Object? withReplies = null,
     Object? withFile = null,
@@ -109,6 +112,10 @@ class _$AntennasCreateRequestCopyWithImpl<$Res,
       users: null == users
           ? _value.users
           : users // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      instances: null == instances
+          ? _value.instances
+          : instances // ignore: cast_nullable_to_non_nullable
               as List<String>,
       caseSensitive: null == caseSensitive
           ? _value.caseSensitive
@@ -150,6 +157,7 @@ abstract class _$$AntennasCreateRequestImplCopyWith<$Res>
       List<List<String>> keywords,
       List<List<String>> excludeKeywords,
       List<String> users,
+      List<String> instances,
       bool caseSensitive,
       bool withReplies,
       bool withFile,
@@ -175,6 +183,7 @@ class __$$AntennasCreateRequestImplCopyWithImpl<$Res>
     Object? keywords = null,
     Object? excludeKeywords = null,
     Object? users = null,
+    Object? instances = null,
     Object? caseSensitive = null,
     Object? withReplies = null,
     Object? withFile = null,
@@ -205,6 +214,10 @@ class __$$AntennasCreateRequestImplCopyWithImpl<$Res>
       users: null == users
           ? _value._users
           : users // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      instances: null == instances
+          ? _value._instances
+          : instances // ignore: cast_nullable_to_non_nullable
               as List<String>,
       caseSensitive: null == caseSensitive
           ? _value.caseSensitive
@@ -240,6 +253,7 @@ class _$AntennasCreateRequestImpl implements _AntennasCreateRequest {
       required final List<List<String>> keywords,
       required final List<List<String>> excludeKeywords,
       required final List<String> users,
+      final List<String> instances = const [],
       required this.caseSensitive,
       required this.withReplies,
       required this.withFile,
@@ -247,7 +261,8 @@ class _$AntennasCreateRequestImpl implements _AntennasCreateRequest {
       this.localOnly})
       : _keywords = keywords,
         _excludeKeywords = excludeKeywords,
-        _users = users;
+        _users = users,
+        _instances = instances;
 
   factory _$AntennasCreateRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$AntennasCreateRequestImplFromJson(json);
@@ -282,6 +297,15 @@ class _$AntennasCreateRequestImpl implements _AntennasCreateRequest {
     return EqualUnmodifiableListView(_users);
   }
 
+  final List<String> _instances;
+  @override
+  @JsonKey()
+  List<String> get instances {
+    if (_instances is EqualUnmodifiableListView) return _instances;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_instances);
+  }
+
   @override
   final bool caseSensitive;
   @override
@@ -295,7 +319,7 @@ class _$AntennasCreateRequestImpl implements _AntennasCreateRequest {
 
   @override
   String toString() {
-    return 'AntennasCreateRequest(name: $name, src: $src, userListId: $userListId, keywords: $keywords, excludeKeywords: $excludeKeywords, users: $users, caseSensitive: $caseSensitive, withReplies: $withReplies, withFile: $withFile, notify: $notify, localOnly: $localOnly)';
+    return 'AntennasCreateRequest(name: $name, src: $src, userListId: $userListId, keywords: $keywords, excludeKeywords: $excludeKeywords, users: $users, instances: $instances, caseSensitive: $caseSensitive, withReplies: $withReplies, withFile: $withFile, notify: $notify, localOnly: $localOnly)';
   }
 
   @override
@@ -311,6 +335,8 @@ class _$AntennasCreateRequestImpl implements _AntennasCreateRequest {
             const DeepCollectionEquality()
                 .equals(other._excludeKeywords, _excludeKeywords) &&
             const DeepCollectionEquality().equals(other._users, _users) &&
+            const DeepCollectionEquality()
+                .equals(other._instances, _instances) &&
             (identical(other.caseSensitive, caseSensitive) ||
                 other.caseSensitive == caseSensitive) &&
             (identical(other.withReplies, withReplies) ||
@@ -332,6 +358,7 @@ class _$AntennasCreateRequestImpl implements _AntennasCreateRequest {
       const DeepCollectionEquality().hash(_keywords),
       const DeepCollectionEquality().hash(_excludeKeywords),
       const DeepCollectionEquality().hash(_users),
+      const DeepCollectionEquality().hash(_instances),
       caseSensitive,
       withReplies,
       withFile,
@@ -361,6 +388,7 @@ abstract class _AntennasCreateRequest implements AntennasCreateRequest {
       required final List<List<String>> keywords,
       required final List<List<String>> excludeKeywords,
       required final List<String> users,
+      final List<String> instances,
       required final bool caseSensitive,
       required final bool withReplies,
       required final bool withFile,
@@ -382,6 +410,8 @@ abstract class _AntennasCreateRequest implements AntennasCreateRequest {
   List<List<String>> get excludeKeywords;
   @override
   List<String> get users;
+  @override
+  List<String> get instances;
   @override
   bool get caseSensitive;
   @override

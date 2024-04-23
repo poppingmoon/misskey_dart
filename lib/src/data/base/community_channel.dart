@@ -17,7 +17,7 @@ class CommunityChannel with _$CommunityChannel {
     String? description,
     String? userId,
     @NullableUriConverter() Uri? bannerUrl,
-    required List<String> pinnedNoteIds,
+    @Default([]) List<String> pinnedNoteIds,
     required int usersCount,
     required int notesCount,
     @Default(false) bool isSensitive,
@@ -26,7 +26,7 @@ class CommunityChannel with _$CommunityChannel {
     bool? isFollowing,
     bool? isFavorited,
     bool? hasUnreadNote,
-    required List<Note>? pinnedNotes,
+    @Default([]) List<Note>? pinnedNotes,
     @Default(true) bool allowRenoteToExternal,
   }) = _CommunityChannel;
 

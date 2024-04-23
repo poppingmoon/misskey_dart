@@ -22,8 +22,8 @@ class Antenna with _$Antenna {
     required bool notify,
     required bool withReplies,
     required bool withFile,
-    required bool isActive,
-    required bool hasUnreadNote,
+    bool? isActive,
+    bool? hasUnreadNote,
     bool? localOnly,
   }) = _Antenna;
 

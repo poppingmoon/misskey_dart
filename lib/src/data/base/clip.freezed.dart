@@ -30,7 +30,7 @@ mixin _$Clip {
   String? get name => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
   bool get isPublic => throw _privateConstructorUsedError;
-  int get favoritedCount => throw _privateConstructorUsedError;
+  int? get favoritedCount => throw _privateConstructorUsedError;
   bool? get isFavorited => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -52,7 +52,7 @@ abstract class $ClipCopyWith<$Res> {
       String? name,
       String? description,
       bool isPublic,
-      int favoritedCount,
+      int? favoritedCount,
       bool? isFavorited});
 
   $UserLiteCopyWith<$Res> get user;
@@ -79,7 +79,7 @@ class _$ClipCopyWithImpl<$Res, $Val extends Clip>
     Object? name = freezed,
     Object? description = freezed,
     Object? isPublic = null,
-    Object? favoritedCount = null,
+    Object? favoritedCount = freezed,
     Object? isFavorited = freezed,
   }) {
     return _then(_value.copyWith(
@@ -115,10 +115,10 @@ class _$ClipCopyWithImpl<$Res, $Val extends Clip>
           ? _value.isPublic
           : isPublic // ignore: cast_nullable_to_non_nullable
               as bool,
-      favoritedCount: null == favoritedCount
+      favoritedCount: freezed == favoritedCount
           ? _value.favoritedCount
           : favoritedCount // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       isFavorited: freezed == isFavorited
           ? _value.isFavorited
           : isFavorited // ignore: cast_nullable_to_non_nullable
@@ -151,7 +151,7 @@ abstract class _$$ClipImplCopyWith<$Res> implements $ClipCopyWith<$Res> {
       String? name,
       String? description,
       bool isPublic,
-      int favoritedCount,
+      int? favoritedCount,
       bool? isFavorited});
 
   @override
@@ -176,7 +176,7 @@ class __$$ClipImplCopyWithImpl<$Res>
     Object? name = freezed,
     Object? description = freezed,
     Object? isPublic = null,
-    Object? favoritedCount = null,
+    Object? favoritedCount = freezed,
     Object? isFavorited = freezed,
   }) {
     return _then(_$ClipImpl(
@@ -212,10 +212,10 @@ class __$$ClipImplCopyWithImpl<$Res>
           ? _value.isPublic
           : isPublic // ignore: cast_nullable_to_non_nullable
               as bool,
-      favoritedCount: null == favoritedCount
+      favoritedCount: freezed == favoritedCount
           ? _value.favoritedCount
           : favoritedCount // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       isFavorited: freezed == isFavorited
           ? _value.isFavorited
           : isFavorited // ignore: cast_nullable_to_non_nullable
@@ -236,7 +236,7 @@ class _$ClipImpl implements _Clip {
       this.name,
       this.description,
       required this.isPublic,
-      required this.favoritedCount,
+      this.favoritedCount,
       this.isFavorited});
 
   factory _$ClipImpl.fromJson(Map<String, dynamic> json) =>
@@ -261,7 +261,7 @@ class _$ClipImpl implements _Clip {
   @override
   final bool isPublic;
   @override
-  final int favoritedCount;
+  final int? favoritedCount;
   @override
   final bool? isFavorited;
 
@@ -322,7 +322,7 @@ abstract class _Clip implements Clip {
       final String? name,
       final String? description,
       required final bool isPublic,
-      required final int favoritedCount,
+      final int? favoritedCount,
       final bool? isFavorited}) = _$ClipImpl;
 
   factory _Clip.fromJson(Map<String, dynamic> json) = _$ClipImpl.fromJson;
@@ -346,7 +346,7 @@ abstract class _Clip implements Clip {
   @override
   bool get isPublic;
   @override
-  int get favoritedCount;
+  int? get favoritedCount;
   @override
   bool? get isFavorited;
   @override

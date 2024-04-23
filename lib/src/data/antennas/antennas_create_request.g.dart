@@ -31,6 +31,11 @@ _$AntennasCreateRequestImpl _$$AntennasCreateRequestImplFromJson(
                   .toList()),
           users: $checkedConvert('users',
               (v) => (v as List<dynamic>).map((e) => e as String).toList()),
+          instances: $checkedConvert(
+              'instances',
+              (v) =>
+                  (v as List<dynamic>?)?.map((e) => e as String).toList() ??
+                  const []),
           caseSensitive: $checkedConvert('caseSensitive', (v) => v as bool),
           withReplies: $checkedConvert('withReplies', (v) => v as bool),
           withFile: $checkedConvert('withFile', (v) => v as bool),
@@ -50,6 +55,7 @@ Map<String, dynamic> _$$AntennasCreateRequestImplToJson(
       'keywords': instance.keywords,
       'excludeKeywords': instance.excludeKeywords,
       'users': instance.users,
+      'instances': instance.instances,
       'caseSensitive': instance.caseSensitive,
       'withReplies': instance.withReplies,
       'withFile': instance.withFile,

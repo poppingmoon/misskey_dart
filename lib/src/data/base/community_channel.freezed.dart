@@ -332,7 +332,7 @@ class _$CommunityChannelImpl implements _CommunityChannel {
       this.description,
       this.userId,
       @NullableUriConverter() this.bannerUrl,
-      required final List<String> pinnedNoteIds,
+      final List<String> pinnedNoteIds = const [],
       required this.usersCount,
       required this.notesCount,
       this.isSensitive = false,
@@ -341,7 +341,7 @@ class _$CommunityChannelImpl implements _CommunityChannel {
       this.isFollowing,
       this.isFavorited,
       this.hasUnreadNote,
-      required final List<Note>? pinnedNotes,
+      final List<Note>? pinnedNotes = const [],
       this.allowRenoteToExternal = true})
       : _pinnedNoteIds = pinnedNoteIds,
         _pinnedNotes = pinnedNotes;
@@ -368,6 +368,7 @@ class _$CommunityChannelImpl implements _CommunityChannel {
   final Uri? bannerUrl;
   final List<String> _pinnedNoteIds;
   @override
+  @JsonKey()
   List<String> get pinnedNoteIds {
     if (_pinnedNoteIds is EqualUnmodifiableListView) return _pinnedNoteIds;
     // ignore: implicit_dynamic_type
@@ -395,6 +396,7 @@ class _$CommunityChannelImpl implements _CommunityChannel {
   final bool? hasUnreadNote;
   final List<Note>? _pinnedNotes;
   @override
+  @JsonKey()
   List<Note>? get pinnedNotes {
     final value = _pinnedNotes;
     if (value == null) return null;
@@ -498,7 +500,7 @@ abstract class _CommunityChannel implements CommunityChannel {
       final String? description,
       final String? userId,
       @NullableUriConverter() final Uri? bannerUrl,
-      required final List<String> pinnedNoteIds,
+      final List<String> pinnedNoteIds,
       required final int usersCount,
       required final int notesCount,
       final bool isSensitive,
@@ -507,7 +509,7 @@ abstract class _CommunityChannel implements CommunityChannel {
       final bool? isFollowing,
       final bool? isFavorited,
       final bool? hasUnreadNote,
-      required final List<Note>? pinnedNotes,
+      final List<Note>? pinnedNotes,
       final bool allowRenoteToExternal}) = _$CommunityChannelImpl;
 
   factory _CommunityChannel.fromJson(Map<String, dynamic> json) =
