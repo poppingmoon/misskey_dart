@@ -138,6 +138,7 @@ export 'src/data/i/registry/i_registry_scopes_with_domain_response.dart';
 export 'src/data/i/registry/i_registry_set_request.dart';
 export 'src/data/join_misskey_instances.dart';
 export 'src/data/meta_response.dart';
+export 'src/data/misskey_exception.dart';
 export 'src/data/mute/mute_create_request.dart';
 export 'src/data/mute/mute_delete_request.dart';
 export 'src/data/mute/mute_list_request.dart';
