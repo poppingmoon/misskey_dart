@@ -531,6 +531,7 @@ mixin _$DriveFileProperties {
   int? get width => throw _privateConstructorUsedError;
   int? get height => throw _privateConstructorUsedError;
   int? get orientation => throw _privateConstructorUsedError;
+  @AvgColorConverter()
   String? get avgColor => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -545,7 +546,11 @@ abstract class $DriveFilePropertiesCopyWith<$Res> {
           DriveFileProperties value, $Res Function(DriveFileProperties) then) =
       _$DriveFilePropertiesCopyWithImpl<$Res, DriveFileProperties>;
   @useResult
-  $Res call({int? width, int? height, int? orientation, String? avgColor});
+  $Res call(
+      {int? width,
+      int? height,
+      int? orientation,
+      @AvgColorConverter() String? avgColor});
 }
 
 /// @nodoc
@@ -595,7 +600,11 @@ abstract class _$$DriveFilePropertiesImplCopyWith<$Res>
       __$$DriveFilePropertiesImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int? width, int? height, int? orientation, String? avgColor});
+  $Res call(
+      {int? width,
+      int? height,
+      int? orientation,
+      @AvgColorConverter() String? avgColor});
 }
 
 /// @nodoc
@@ -639,7 +648,10 @@ class __$$DriveFilePropertiesImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$DriveFilePropertiesImpl implements _DriveFileProperties {
   const _$DriveFilePropertiesImpl(
-      {this.width, this.height, this.orientation, this.avgColor});
+      {this.width,
+      this.height,
+      this.orientation,
+      @AvgColorConverter() this.avgColor});
 
   factory _$DriveFilePropertiesImpl.fromJson(Map<String, dynamic> json) =>
       _$$DriveFilePropertiesImplFromJson(json);
@@ -651,6 +663,7 @@ class _$DriveFilePropertiesImpl implements _DriveFileProperties {
   @override
   final int? orientation;
   @override
+  @AvgColorConverter()
   final String? avgColor;
 
   @override
@@ -696,7 +709,7 @@ abstract class _DriveFileProperties implements DriveFileProperties {
       {final int? width,
       final int? height,
       final int? orientation,
-      final String? avgColor}) = _$DriveFilePropertiesImpl;
+      @AvgColorConverter() final String? avgColor}) = _$DriveFilePropertiesImpl;
 
   factory _DriveFileProperties.fromJson(Map<String, dynamic> json) =
       _$DriveFilePropertiesImpl.fromJson;
@@ -708,6 +721,7 @@ abstract class _DriveFileProperties implements DriveFileProperties {
   @override
   int? get orientation;
   @override
+  @AvgColorConverter()
   String? get avgColor;
   @override
   @JsonKey(ignore: true)

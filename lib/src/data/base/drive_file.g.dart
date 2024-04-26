@@ -73,7 +73,8 @@ _$DriveFilePropertiesImpl _$$DriveFilePropertiesImplFromJson(
           width: $checkedConvert('width', (v) => v as int?),
           height: $checkedConvert('height', (v) => v as int?),
           orientation: $checkedConvert('orientation', (v) => v as int?),
-          avgColor: $checkedConvert('avgColor', (v) => v as String?),
+          avgColor: $checkedConvert(
+              'avgColor', (v) => const AvgColorConverter().fromJson(v)),
         );
         return val;
       },
@@ -85,5 +86,5 @@ Map<String, dynamic> _$$DriveFilePropertiesImplToJson(
       'width': instance.width,
       'height': instance.height,
       'orientation': instance.orientation,
-      'avgColor': instance.avgColor,
+      'avgColor': const AvgColorConverter().toJson(instance.avgColor),
     };

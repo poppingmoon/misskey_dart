@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:misskey_dart/misskey_dart.dart';
+import 'package:misskey_dart/src/converters/avg_color_converter.dart';
 import 'package:misskey_dart/src/converters/date_time_converter.dart';
 
 part 'drive_file.freezed.dart';
@@ -36,7 +37,7 @@ class DriveFileProperties with _$DriveFileProperties {
     int? width,
     int? height,
     int? orientation,
-    String? avgColor,
+    @AvgColorConverter() String? avgColor,
   }) = _DriveFileProperties;
 
   factory DriveFileProperties.fromJson(Map<String, dynamic> json) =>
