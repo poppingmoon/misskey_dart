@@ -22,8 +22,8 @@ _$FederationShowInstanceRequestImpl
               federating: $checkedConvert('federating', (v) => v as bool?),
               subscribing: $checkedConvert('subscribing', (v) => v as bool?),
               publishing: $checkedConvert('publishing', (v) => v as bool?),
-              limit: $checkedConvert('limit', (v) => v as int?),
-              offset: $checkedConvert('offset', (v) => v as int?),
+              limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
+              offset: $checkedConvert('offset', (v) => (v as num?)?.toInt()),
               sort: $checkedConvert('sort', (v) => v as String?),
             );
             return val;

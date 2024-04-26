@@ -12,7 +12,7 @@ _$TimelineVotedImpl _$$TimelineVotedImplFromJson(Map<String, dynamic> json) =>
       json,
       ($checkedConvert) {
         final val = _$TimelineVotedImpl(
-          choice: $checkedConvert('choice', (v) => v as int),
+          choice: $checkedConvert('choice', (v) => (v as num).toInt()),
           userId: $checkedConvert('userId', (v) => v as String),
         );
         return val;

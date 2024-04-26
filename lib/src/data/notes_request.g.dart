@@ -17,7 +17,7 @@ _$NotesRequestImpl _$$NotesRequestImplFromJson(Map<String, dynamic> json) =>
           renote: $checkedConvert('renote', (v) => v as bool?),
           withFiles: $checkedConvert('withFiles', (v) => v as bool?),
           poll: $checkedConvert('poll', (v) => v as bool?),
-          limit: $checkedConvert('limit', (v) => v as int?),
+          limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
           sinceId: $checkedConvert('sinceId', (v) => v as String?),
           untilId: $checkedConvert('untilId', (v) => v as String?),
         );

@@ -22,8 +22,10 @@ _$DriveFolderImpl _$$DriveFolderImplFromJson(Map<String, dynamic> json) =>
               (v) => v == null
                   ? null
                   : DriveFolder.fromJson(v as Map<String, dynamic>)),
-          foldersCount: $checkedConvert('foldersCount', (v) => v as int?),
-          filesCount: $checkedConvert('filesCount', (v) => v as int?),
+          foldersCount:
+              $checkedConvert('foldersCount', (v) => (v as num?)?.toInt()),
+          filesCount:
+              $checkedConvert('filesCount', (v) => (v as num?)?.toInt()),
         );
         return val;
       },

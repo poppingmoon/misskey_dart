@@ -19,7 +19,7 @@ _$NotesLocalTimelineRequestImpl _$$NotesLocalTimelineRequestImplFromJson(
           fileType: $checkedConvert('fileType',
               (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
           excludeNsfw: $checkedConvert('excludeNsfw', (v) => v as bool?),
-          limit: $checkedConvert('limit', (v) => v as int?),
+          limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
           sinceId: $checkedConvert('sinceId', (v) => v as String?),
           untilId: $checkedConvert('untilId', (v) => v as String?),
           sinceDate: $checkedConvert(

@@ -14,7 +14,7 @@ _$HashtagsUsersRequestImpl _$$HashtagsUsersRequestImplFromJson(
       ($checkedConvert) {
         final val = _$HashtagsUsersRequestImpl(
           tag: $checkedConvert('tag', (v) => v as String),
-          limit: $checkedConvert('limit', (v) => v as int?),
+          limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
           sort: $checkedConvert(
               'sort', (v) => const UsersSortConverter().fromJson(v as String)),
           state: $checkedConvert(

@@ -14,7 +14,7 @@ _$BubbleGameRankingResponseImpl _$$BubbleGameRankingResponseImplFromJson(
       ($checkedConvert) {
         final val = _$BubbleGameRankingResponseImpl(
           id: $checkedConvert('id', (v) => v as String),
-          score: $checkedConvert('score', (v) => v as int),
+          score: $checkedConvert('score', (v) => (v as num).toInt()),
           user: $checkedConvert(
               'user', (v) => UserLite.fromJson(v as Map<String, dynamic>)),
         );

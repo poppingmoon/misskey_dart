@@ -14,17 +14,17 @@ _$HashtagImpl _$$HashtagImplFromJson(Map<String, dynamic> json) =>
         final val = _$HashtagImpl(
           tag: $checkedConvert('tag', (v) => v as String),
           mentionedUsersCount:
-              $checkedConvert('mentionedUsersCount', (v) => v as int),
-          mentionedLocalUsersCount:
-              $checkedConvert('mentionedLocalUsersCount', (v) => v as int),
-          mentionedRemoteUsersCount:
-              $checkedConvert('mentionedRemoteUsersCount', (v) => v as int),
+              $checkedConvert('mentionedUsersCount', (v) => (v as num).toInt()),
+          mentionedLocalUsersCount: $checkedConvert(
+              'mentionedLocalUsersCount', (v) => (v as num).toInt()),
+          mentionedRemoteUsersCount: $checkedConvert(
+              'mentionedRemoteUsersCount', (v) => (v as num).toInt()),
           attachedUsersCount:
-              $checkedConvert('attachedUsersCount', (v) => v as int),
-          attachedLocalUsersCount:
-              $checkedConvert('attachedLocalUsersCount', (v) => v as int),
-          attachedRemoteUsersCount:
-              $checkedConvert('attachedRemoteUsersCount', (v) => v as int),
+              $checkedConvert('attachedUsersCount', (v) => (v as num).toInt()),
+          attachedLocalUsersCount: $checkedConvert(
+              'attachedLocalUsersCount', (v) => (v as num).toInt()),
+          attachedRemoteUsersCount: $checkedConvert(
+              'attachedRemoteUsersCount', (v) => (v as num).toInt()),
         );
         return val;
       },

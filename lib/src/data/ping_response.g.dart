@@ -12,7 +12,7 @@ _$PingResponseImpl _$$PingResponseImplFromJson(Map<String, dynamic> json) =>
       json,
       ($checkedConvert) {
         final val = _$PingResponseImpl(
-          pong: $checkedConvert('pong', (v) => v as int),
+          pong: $checkedConvert('pong', (v) => (v as num).toInt()),
         );
         return val;
       },

@@ -8,12 +8,20 @@ part of 'misskey_exception.dart';
 
 _$MisskeyExceptionImpl _$$MisskeyExceptionImplFromJson(
         Map<String, dynamic> json) =>
-    _$MisskeyExceptionImpl(
-      id: json['id'] as String,
-      code: json['code'] as String,
-      message: json['message'] as String,
-      kind: $enumDecode(_$MisskeyExceptionKindEnumMap, json['kind']),
-      info: json['info'] as Map<String, dynamic>?,
+    $checkedCreate(
+      r'_$MisskeyExceptionImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$MisskeyExceptionImpl(
+          id: $checkedConvert('id', (v) => v as String),
+          code: $checkedConvert('code', (v) => v as String),
+          message: $checkedConvert('message', (v) => v as String),
+          kind: $checkedConvert(
+              'kind', (v) => $enumDecode(_$MisskeyExceptionKindEnumMap, v)),
+          info: $checkedConvert('info', (v) => v as Map<String, dynamic>?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$MisskeyExceptionImplToJson(

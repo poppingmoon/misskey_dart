@@ -34,8 +34,9 @@ _$RolesListResponseImpl _$$RolesListResponseImplFromJson(
           asBadge: $checkedConvert('asBadge', (v) => v as bool),
           canEditMembersByModerator:
               $checkedConvert('canEditMembersByModerator', (v) => v as bool),
-          displayOrder: $checkedConvert('displayOrder', (v) => v as int),
-          usersCount: $checkedConvert('usersCount', (v) => v as int),
+          displayOrder:
+              $checkedConvert('displayOrder', (v) => (v as num).toInt()),
+          usersCount: $checkedConvert('usersCount', (v) => (v as num).toInt()),
         );
         return val;
       },

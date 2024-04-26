@@ -14,8 +14,8 @@ _$UsersSearchRequestImpl _$$UsersSearchRequestImplFromJson(
       ($checkedConvert) {
         final val = _$UsersSearchRequestImpl(
           query: $checkedConvert('query', (v) => v as String),
-          offset: $checkedConvert('offset', (v) => v as int?),
-          limit: $checkedConvert('limit', (v) => v as int?),
+          offset: $checkedConvert('offset', (v) => (v as num?)?.toInt()),
+          limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
           origin: $checkedConvert(
               'origin', (v) => $enumDecodeNullable(_$OriginEnumMap, v)),
           detail: $checkedConvert('detail', (v) => v as bool?),

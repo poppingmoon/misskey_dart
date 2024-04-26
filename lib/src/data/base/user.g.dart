@@ -191,7 +191,7 @@ _$UserDetailedNotMeImpl _$$UserDetailedNotMeImplFromJson(
               'followersCount', (v) => const IntConverter().fromJson(v)),
           followingCount: $checkedConvert(
               'followingCount', (v) => const IntConverter().fromJson(v)),
-          notesCount: $checkedConvert('notesCount', (v) => v as int),
+          notesCount: $checkedConvert('notesCount', (v) => (v as num).toInt()),
           pinnedNoteIds: $checkedConvert('pinnedNoteIds',
               (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
           pinnedNotes: $checkedConvert(
@@ -404,7 +404,8 @@ _$UserDetailedNotMeWithRelationsImpl
                   'followersCount', (v) => const IntConverter().fromJson(v)),
               followingCount: $checkedConvert(
                   'followingCount', (v) => const IntConverter().fromJson(v)),
-              notesCount: $checkedConvert('notesCount', (v) => v as int),
+              notesCount:
+                  $checkedConvert('notesCount', (v) => (v as num).toInt()),
               pinnedNoteIds: $checkedConvert(
                   'pinnedNoteIds',
                   (v) =>
@@ -638,7 +639,7 @@ _$MeDetailedImpl _$$MeDetailedImplFromJson(Map<String, dynamic> json) =>
               'followersCount', (v) => const IntConverter().fromJson(v)),
           followingCount: $checkedConvert(
               'followingCount', (v) => const IntConverter().fromJson(v)),
-          notesCount: $checkedConvert('notesCount', (v) => v as int),
+          notesCount: $checkedConvert('notesCount', (v) => (v as num).toInt()),
           pinnedNoteIds: $checkedConvert('pinnedNoteIds',
               (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
           pinnedNotes: $checkedConvert(
@@ -717,8 +718,8 @@ _$MeDetailedImpl _$$MeDetailedImplFromJson(Map<String, dynamic> json) =>
               'hasUnreadNotification', (v) => v as bool? ?? false),
           hasPendingReceivedFollowRequest: $checkedConvert(
               'hasPendingReceivedFollowRequest', (v) => v as bool? ?? false),
-          unreadNotificationsCount:
-              $checkedConvert('unreadNotificationsCount', (v) => v as int?),
+          unreadNotificationsCount: $checkedConvert(
+              'unreadNotificationsCount', (v) => (v as num?)?.toInt()),
           unreadAnnouncements: $checkedConvert(
               'unreadAnnouncements',
               (v) =>
@@ -767,7 +768,8 @@ _$MeDetailedImpl _$$MeDetailedImplFromJson(Map<String, dynamic> json) =>
                           UserAchievement.fromJson(e as Map<String, dynamic>))
                       .toList() ??
                   const []),
-          loggedInDays: $checkedConvert('loggedInDays', (v) => v as int?),
+          loggedInDays:
+              $checkedConvert('loggedInDays', (v) => (v as num?)?.toInt()),
           policies: $checkedConvert(
               'policies',
               (v) => v == null
@@ -1012,7 +1014,7 @@ _$UserAchievementImpl _$$UserAchievementImplFromJson(
           unlockedAt: $checkedConvert(
               'unlockedAt',
               (v) => const EpocTimeDateTimeConverter.withMilliSeconds()
-                  .fromJson(v as int)),
+                  .fromJson((v as num).toInt())),
         );
         return val;
       },

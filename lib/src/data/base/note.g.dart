@@ -28,9 +28,12 @@ _$NoteImpl _$$NoteImplFromJson(Map<String, dynamic> json) => $checkedCreate(
               (v) => $enumDecodeNullable(_$NoteVisibilityEnumMap, v,
                   unknownValue: JsonKey.nullForUndefinedEnumValue)),
           localOnly: $checkedConvert('localOnly', (v) => v as bool? ?? false),
-          renoteCount: $checkedConvert('renoteCount', (v) => v as int),
-          repliesCount: $checkedConvert('repliesCount', (v) => v as int),
-          reactionCount: $checkedConvert('reactionCount', (v) => v as int?),
+          renoteCount:
+              $checkedConvert('renoteCount', (v) => (v as num).toInt()),
+          repliesCount:
+              $checkedConvert('repliesCount', (v) => (v as num).toInt()),
+          reactionCount:
+              $checkedConvert('reactionCount', (v) => (v as num?)?.toInt()),
           reactions: $checkedConvert(
               'reactions', (v) => Map<String, int>.from(v as Map)),
           reactionEmojis: $checkedConvert(
@@ -97,7 +100,8 @@ _$NoteImpl _$$NoteImplFromJson(Map<String, dynamic> json) => $checkedCreate(
               (v) => v == null
                   ? null
                   : NotePoll.fromJson(v as Map<String, dynamic>)),
-          clippedCount: $checkedConvert('clippedCount', (v) => v as int?),
+          clippedCount:
+              $checkedConvert('clippedCount', (v) => (v as num?)?.toInt()),
         );
         return val;
       },
@@ -234,7 +238,7 @@ _$NotePollChoiceImpl _$$NotePollChoiceImplFromJson(Map<String, dynamic> json) =>
       ($checkedConvert) {
         final val = _$NotePollChoiceImpl(
           text: $checkedConvert('text', (v) => v as String),
-          votes: $checkedConvert('votes', (v) => v as int),
+          votes: $checkedConvert('votes', (v) => (v as num).toInt()),
           isVoted: $checkedConvert('isVoted', (v) => v as bool? ?? false),
         );
         return val;

@@ -40,7 +40,7 @@ _$ReversiGamesResponseImpl _$$ReversiGamesResponseImplFromJson(
           surrenderedUserId:
               $checkedConvert('surrenderedUserId', (v) => v as String?),
           timeoutUserId: $checkedConvert('timeoutUserId', (v) => v as String?),
-          black: $checkedConvert('black', (v) => v as int?),
+          black: $checkedConvert('black', (v) => (v as num?)?.toInt()),
           bw: $checkedConvert('bw', (v) => v as String),
           noIrregularRules:
               $checkedConvert('noIrregularRules', (v) => v as bool),
@@ -48,8 +48,8 @@ _$ReversiGamesResponseImpl _$$ReversiGamesResponseImplFromJson(
           canPutEveryWhere:
               $checkedConvert('canPutEveryWhere', (v) => v as bool),
           loopedBoard: $checkedConvert('loopedBoard', (v) => v as bool),
-          timeLimitForEachTurn:
-              $checkedConvert('timeLimitForEachTurn', (v) => v as int),
+          timeLimitForEachTurn: $checkedConvert(
+              'timeLimitForEachTurn', (v) => (v as num).toInt()),
         );
         return val;
       },

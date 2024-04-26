@@ -19,9 +19,11 @@ _$NotesCreatePollRequestImpl _$$NotesCreatePollRequestImplFromJson(
           expiresAt: $checkedConvert(
               'expiresAt',
               (v) => const NullableEpocTimeDateTimeConverter.withMilliSeconds()
-                  .fromJson(v as int?)),
-          expiredAfter: $checkedConvert('expiredAfter',
-              (v) => const NullableDurationConverter().fromJson(v as int?)),
+                  .fromJson((v as num?)?.toInt())),
+          expiredAfter: $checkedConvert(
+              'expiredAfter',
+              (v) => const NullableDurationConverter()
+                  .fromJson((v as num?)?.toInt())),
         );
         return val;
       },

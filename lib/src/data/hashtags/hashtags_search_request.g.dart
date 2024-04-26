@@ -13,9 +13,9 @@ _$HashtagsSearchRequestImpl _$$HashtagsSearchRequestImplFromJson(
       json,
       ($checkedConvert) {
         final val = _$HashtagsSearchRequestImpl(
-          limit: $checkedConvert('limit', (v) => v as int?),
+          limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
           query: $checkedConvert('query', (v) => v as String),
-          offset: $checkedConvert('offset', (v) => v as int?),
+          offset: $checkedConvert('offset', (v) => (v as num?)?.toInt()),
         );
         return val;
       },

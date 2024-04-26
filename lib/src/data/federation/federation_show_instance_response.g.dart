@@ -17,12 +17,14 @@ _$FederationShowInstanceResponseImpl
               firstRetrievedAt: $checkedConvert('firstRetrievedAt',
                   (v) => const DateTimeConverter().fromJson(v as String)),
               host: $checkedConvert('host', (v) => v as String),
-              usersCount: $checkedConvert('usersCount', (v) => v as int?),
-              notesCount: $checkedConvert('notesCount', (v) => v as int?),
-              followingCount:
-                  $checkedConvert('followingCount', (v) => v as int?),
-              followersCount:
-                  $checkedConvert('followersCount', (v) => v as int?),
+              usersCount:
+                  $checkedConvert('usersCount', (v) => (v as num?)?.toInt()),
+              notesCount:
+                  $checkedConvert('notesCount', (v) => (v as num?)?.toInt()),
+              followingCount: $checkedConvert(
+                  'followingCount', (v) => (v as num?)?.toInt()),
+              followersCount: $checkedConvert(
+                  'followersCount', (v) => (v as num?)?.toInt()),
               isNotResponding:
                   $checkedConvert('isNotResponding', (v) => v as bool),
               isSuspended: $checkedConvert('isSuspended', (v) => v as bool),

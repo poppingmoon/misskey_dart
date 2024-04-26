@@ -13,7 +13,7 @@ _$ChannelsMyFavoriteRequestImpl _$$ChannelsMyFavoriteRequestImplFromJson(
       json,
       ($checkedConvert) {
         final val = _$ChannelsMyFavoriteRequestImpl(
-          limit: $checkedConvert('limit', (v) => v as int?),
+          limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
           noPaging: $checkedConvert('noPaging', (v) => v as bool?),
         );
         return val;

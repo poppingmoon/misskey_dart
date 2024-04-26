@@ -13,12 +13,12 @@ _$AnnouncementsRequestImpl _$$AnnouncementsRequestImplFromJson(
       json,
       ($checkedConvert) {
         final val = _$AnnouncementsRequestImpl(
-          limit: $checkedConvert('limit', (v) => v as int?),
+          limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
           withUnreads: $checkedConvert('withUnreads', (v) => v as bool?),
           isActive: $checkedConvert('isActive', (v) => v as bool?),
           sinceId: $checkedConvert('sinceId', (v) => v as String?),
           untilId: $checkedConvert('untilId', (v) => v as String?),
-          offset: $checkedConvert('offset', (v) => v as int?),
+          offset: $checkedConvert('offset', (v) => (v as num?)?.toInt()),
         );
         return val;
       },

@@ -12,8 +12,8 @@ _$DriveResponseImpl _$$DriveResponseImplFromJson(Map<String, dynamic> json) =>
       json,
       ($checkedConvert) {
         final val = _$DriveResponseImpl(
-          capacity: $checkedConvert('capacity', (v) => v as int),
-          usage: $checkedConvert('usage', (v) => v as int),
+          capacity: $checkedConvert('capacity', (v) => (v as num).toInt()),
+          usage: $checkedConvert('usage', (v) => (v as num).toInt()),
         );
         return val;
       },

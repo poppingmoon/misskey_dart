@@ -41,10 +41,10 @@ _$QueueStatsLogResponseDataImpl _$$QueueStatsLogResponseDataImplFromJson(
       ($checkedConvert) {
         final val = _$QueueStatsLogResponseDataImpl(
           activeSincePrevTick:
-              $checkedConvert('activeSincePrevTick', (v) => v as int),
-          active: $checkedConvert('active', (v) => v as int),
-          waiting: $checkedConvert('waiting', (v) => v as int),
-          delayed: $checkedConvert('delayed', (v) => v as int),
+              $checkedConvert('activeSincePrevTick', (v) => (v as num).toInt()),
+          active: $checkedConvert('active', (v) => (v as num).toInt()),
+          waiting: $checkedConvert('waiting', (v) => (v as num).toInt()),
+          delayed: $checkedConvert('delayed', (v) => (v as num).toInt()),
         );
         return val;
       },

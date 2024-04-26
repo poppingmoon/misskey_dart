@@ -13,7 +13,7 @@ _$GalleryFeaturedRequestImpl _$$GalleryFeaturedRequestImplFromJson(
       json,
       ($checkedConvert) {
         final val = _$GalleryFeaturedRequestImpl(
-          limit: $checkedConvert('limit', (v) => v as int?),
+          limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
           untilId: $checkedConvert('untilId', (v) => v as String?),
         );
         return val;

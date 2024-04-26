@@ -13,8 +13,8 @@ _$NotesFeaturedRequestImpl _$$NotesFeaturedRequestImplFromJson(
       json,
       ($checkedConvert) {
         final val = _$NotesFeaturedRequestImpl(
-          limit: $checkedConvert('limit', (v) => v as int?),
-          offset: $checkedConvert('offset', (v) => v as int?),
+          limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
+          offset: $checkedConvert('offset', (v) => (v as num?)?.toInt()),
           untilId: $checkedConvert('untilId', (v) => v as String?),
           channelId: $checkedConvert('channelId', (v) => v as String?),
         );

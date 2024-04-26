@@ -41,7 +41,7 @@ _$ServerInfoCpuImpl _$$ServerInfoCpuImplFromJson(Map<String, dynamic> json) =>
       ($checkedConvert) {
         final val = _$ServerInfoCpuImpl(
           model: $checkedConvert('model', (v) => v as String),
-          cores: $checkedConvert('cores', (v) => v as int),
+          cores: $checkedConvert('cores', (v) => (v as num).toInt()),
         );
         return val;
       },
@@ -59,7 +59,7 @@ _$ServerInfoMemImpl _$$ServerInfoMemImplFromJson(Map<String, dynamic> json) =>
       json,
       ($checkedConvert) {
         final val = _$ServerInfoMemImpl(
-          total: $checkedConvert('total', (v) => v as int),
+          total: $checkedConvert('total', (v) => (v as num).toInt()),
         );
         return val;
       },
@@ -76,8 +76,8 @@ _$ServerInfoFsImpl _$$ServerInfoFsImplFromJson(Map<String, dynamic> json) =>
       json,
       ($checkedConvert) {
         final val = _$ServerInfoFsImpl(
-          total: $checkedConvert('total', (v) => v as int),
-          used: $checkedConvert('used', (v) => v as int),
+          total: $checkedConvert('total', (v) => (v as num).toInt()),
+          used: $checkedConvert('used', (v) => (v as num).toInt()),
         );
         return val;
       },

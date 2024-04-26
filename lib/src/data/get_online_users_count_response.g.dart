@@ -13,7 +13,7 @@ _$GetOnlineUsersCountResponseImpl _$$GetOnlineUsersCountResponseImplFromJson(
       json,
       ($checkedConvert) {
         final val = _$GetOnlineUsersCountResponseImpl(
-          count: $checkedConvert('count', (v) => v as int),
+          count: $checkedConvert('count', (v) => (v as num).toInt()),
         );
         return val;
       },

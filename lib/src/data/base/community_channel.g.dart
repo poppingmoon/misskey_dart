@@ -30,8 +30,8 @@ _$CommunityChannelImpl _$$CommunityChannelImplFromJson(
               (v) =>
                   (v as List<dynamic>?)?.map((e) => e as String).toList() ??
                   const []),
-          usersCount: $checkedConvert('usersCount', (v) => v as int),
-          notesCount: $checkedConvert('notesCount', (v) => v as int),
+          usersCount: $checkedConvert('usersCount', (v) => (v as num).toInt()),
+          notesCount: $checkedConvert('notesCount', (v) => (v as num).toInt()),
           isSensitive:
               $checkedConvert('isSensitive', (v) => v as bool? ?? false),
           isArchived: $checkedConvert('isArchived', (v) => v as bool? ?? false),

@@ -46,7 +46,7 @@ _$PageImpl _$$PageImplFromJson(Map<String, dynamic> json) => $checkedCreate(
               (v) => (v as List<dynamic>)
                   .map((e) => DriveFile.fromJson(e as Map<String, dynamic>))
                   .toList()),
-          likedCount: $checkedConvert('likedCount', (v) => v as int),
+          likedCount: $checkedConvert('likedCount', (v) => (v as num).toInt()),
           isLiked: $checkedConvert('isLiked', (v) => v as bool?),
         );
         return val;

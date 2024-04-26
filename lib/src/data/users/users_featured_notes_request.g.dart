@@ -13,7 +13,7 @@ _$UsersFeaturedNotesRequestImpl _$$UsersFeaturedNotesRequestImplFromJson(
       json,
       ($checkedConvert) {
         final val = _$UsersFeaturedNotesRequestImpl(
-          limit: $checkedConvert('limit', (v) => v as int?),
+          limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
           untilId: $checkedConvert('untilId', (v) => v as String?),
           userId: $checkedConvert('userId', (v) => v as String),
         );

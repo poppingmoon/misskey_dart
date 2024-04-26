@@ -24,7 +24,7 @@ _$INotificationsResponseImpl _$$INotificationsResponseImplFromJson(
           followRequestId:
               $checkedConvert('followRequestId', (v) => v as String?),
           reaction: $checkedConvert('reaction', (v) => v as String?),
-          choice: $checkedConvert('choice', (v) => v as int?),
+          choice: $checkedConvert('choice', (v) => (v as num?)?.toInt()),
           achievement: $checkedConvert('achievement', (v) => v as String?),
           body: $checkedConvert('body', (v) => v as String?),
           header: $checkedConvert('header', (v) => v as String?),

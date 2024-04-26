@@ -14,9 +14,11 @@ _$HashtagsTrendResponseImpl _$$HashtagsTrendResponseImplFromJson(
       ($checkedConvert) {
         final val = _$HashtagsTrendResponseImpl(
           tag: $checkedConvert('tag', (v) => v as String),
-          chart: $checkedConvert('chart',
-              (v) => (v as List<dynamic>).map((e) => e as int).toList()),
-          usersCount: $checkedConvert('usersCount', (v) => v as int),
+          chart: $checkedConvert(
+              'chart',
+              (v) =>
+                  (v as List<dynamic>).map((e) => (e as num).toInt()).toList()),
+          usersCount: $checkedConvert('usersCount', (v) => (v as num).toInt()),
         );
         return val;
       },

@@ -18,7 +18,7 @@ _$DriveFileImpl _$$DriveFileImplFromJson(Map<String, dynamic> json) =>
           name: $checkedConvert('name', (v) => v as String),
           type: $checkedConvert('type', (v) => v as String),
           md5: $checkedConvert('md5', (v) => v as String),
-          size: $checkedConvert('size', (v) => v as int),
+          size: $checkedConvert('size', (v) => (v as num).toInt()),
           isSensitive: $checkedConvert('isSensitive', (v) => v as bool),
           blurhash: $checkedConvert('blurhash', (v) => v as String?),
           properties: $checkedConvert('properties',
@@ -70,9 +70,10 @@ _$DriveFilePropertiesImpl _$$DriveFilePropertiesImplFromJson(
       json,
       ($checkedConvert) {
         final val = _$DriveFilePropertiesImpl(
-          width: $checkedConvert('width', (v) => v as int?),
-          height: $checkedConvert('height', (v) => v as int?),
-          orientation: $checkedConvert('orientation', (v) => v as int?),
+          width: $checkedConvert('width', (v) => (v as num?)?.toInt()),
+          height: $checkedConvert('height', (v) => (v as num?)?.toInt()),
+          orientation:
+              $checkedConvert('orientation', (v) => (v as num?)?.toInt()),
           avgColor: $checkedConvert(
               'avgColor', (v) => const AvgColorConverter().fromJson(v)),
         );

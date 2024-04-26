@@ -32,7 +32,7 @@ _$GalleryPostImpl _$$GalleryPostImplFromJson(Map<String, dynamic> json) =>
           tags: $checkedConvert('tags',
               (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
           isSensitive: $checkedConvert('isSensitive', (v) => v as bool),
-          likedCount: $checkedConvert('likedCount', (v) => v as int),
+          likedCount: $checkedConvert('likedCount', (v) => (v as num).toInt()),
           isLiked: $checkedConvert('isLiked', (v) => v as bool?),
         );
         return val;

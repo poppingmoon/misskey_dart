@@ -14,7 +14,7 @@ _$NotesPollsVoteRequestImpl _$$NotesPollsVoteRequestImplFromJson(
       ($checkedConvert) {
         final val = _$NotesPollsVoteRequestImpl(
           noteId: $checkedConvert('noteId', (v) => v as String),
-          choice: $checkedConvert('choice', (v) => v as int),
+          choice: $checkedConvert('choice', (v) => (v as num).toInt()),
         );
         return val;
       },

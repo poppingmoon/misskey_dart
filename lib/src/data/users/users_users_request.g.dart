@@ -13,8 +13,8 @@ _$UsersUsersRequestImpl _$$UsersUsersRequestImplFromJson(
       json,
       ($checkedConvert) {
         final val = _$UsersUsersRequestImpl(
-          limit: $checkedConvert('limit', (v) => v as int?),
-          offset: $checkedConvert('offset', (v) => v as int?),
+          limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
+          offset: $checkedConvert('offset', (v) => (v as num?)?.toInt()),
           sort: $checkedConvert('sort',
               (v) => const NullableUsersSortConverter().fromJson(v as String?)),
           state: $checkedConvert(

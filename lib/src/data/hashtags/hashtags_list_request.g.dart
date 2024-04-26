@@ -13,7 +13,7 @@ _$HashtagsListRequestImpl _$$HashtagsListRequestImplFromJson(
       json,
       ($checkedConvert) {
         final val = _$HashtagsListRequestImpl(
-          limit: $checkedConvert('limit', (v) => v as int?),
+          limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
           attachedToUserOnly:
               $checkedConvert('attachedToUserOnly', (v) => v as bool?),
           attachedToLocalUserOnly:

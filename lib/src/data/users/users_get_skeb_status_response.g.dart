@@ -17,9 +17,9 @@ _$UsersGetSkebStatusResponseImpl _$$UsersGetSkebStatusResponseImplFromJson(
           isCreator: $checkedConvert('isCreator', (v) => v as bool),
           isAcceptable: $checkedConvert('isAcceptable', (v) => v as bool),
           creatorRequestCount:
-              $checkedConvert('creatorRequestCount', (v) => v as int),
+              $checkedConvert('creatorRequestCount', (v) => (v as num).toInt()),
           clientRequestCount:
-              $checkedConvert('clientRequestCount', (v) => v as int),
+              $checkedConvert('clientRequestCount', (v) => (v as num).toInt()),
           skills: $checkedConvert(
               'skills',
               (v) => (v as List<dynamic>)
@@ -49,7 +49,7 @@ _$SkebStatusSkillImpl _$$SkebStatusSkillImplFromJson(
       json,
       ($checkedConvert) {
         final val = _$SkebStatusSkillImpl(
-          amount: $checkedConvert('amount', (v) => v as int),
+          amount: $checkedConvert('amount', (v) => (v as num).toInt()),
           genre: $checkedConvert(
               'genre',
               (v) => $enumDecodeNullable(_$SkebStatusSkillGenreEnumMap, v,

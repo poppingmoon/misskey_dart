@@ -22,7 +22,8 @@ _$FlashImpl _$$FlashImplFromJson(Map<String, dynamic> json) => $checkedCreate(
           userId: $checkedConvert('userId', (v) => v as String),
           user: $checkedConvert(
               'user', (v) => UserLite.fromJson(v as Map<String, dynamic>)),
-          likedCount: $checkedConvert('likedCount', (v) => v as int?),
+          likedCount:
+              $checkedConvert('likedCount', (v) => (v as num?)?.toInt()),
           isLiked: $checkedConvert('isLiked', (v) => v as bool? ?? false),
         );
         return val;

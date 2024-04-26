@@ -14,7 +14,7 @@ _$UsersSearchByUsernameAndHostRequestImpl
           json,
           ($checkedConvert) {
             final val = _$UsersSearchByUsernameAndHostRequestImpl(
-              limit: $checkedConvert('limit', (v) => v as int?),
+              limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
               detail: $checkedConvert('detail', (v) => v as bool?),
               username: $checkedConvert('username', (v) => v as String?),
               host: $checkedConvert('host', (v) => v as String?),

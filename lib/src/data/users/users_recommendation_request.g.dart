@@ -13,8 +13,8 @@ _$UsersRecommendationRequestImpl _$$UsersRecommendationRequestImplFromJson(
       json,
       ($checkedConvert) {
         final val = _$UsersRecommendationRequestImpl(
-          limit: $checkedConvert('limit', (v) => v as int?),
-          offset: $checkedConvert('offset', (v) => v as int?),
+          limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
+          offset: $checkedConvert('offset', (v) => (v as num?)?.toInt()),
         );
         return val;
       },

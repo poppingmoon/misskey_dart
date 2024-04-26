@@ -42,10 +42,11 @@ _$JoinMisskeyStatsImpl _$$JoinMisskeyStatsImplFromJson(
       json,
       ($checkedConvert) {
         final val = _$JoinMisskeyStatsImpl(
-          notesCount: $checkedConvert('notesCount', (v) => v as int),
-          usersCount: $checkedConvert('usersCount', (v) => v as int),
-          mau: $checkedConvert('mau', (v) => v as int),
-          instancesCount: $checkedConvert('instancesCount', (v) => v as int),
+          notesCount: $checkedConvert('notesCount', (v) => (v as num).toInt()),
+          usersCount: $checkedConvert('usersCount', (v) => (v as num).toInt()),
+          mau: $checkedConvert('mau', (v) => (v as num).toInt()),
+          instancesCount:
+              $checkedConvert('instancesCount', (v) => (v as num).toInt()),
         );
         return val;
       },
@@ -172,8 +173,10 @@ _$JoinMisskeyNodeInfoUsageImpl _$$JoinMisskeyNodeInfoUsageImplFromJson(
                   ? null
                   : JoinMisskeyNodeInfoUsageUsers.fromJson(
                       v as Map<String, dynamic>)),
-          localPosts: $checkedConvert('localPosts', (v) => v as int?),
-          localComments: $checkedConvert('localComments', (v) => v as int?),
+          localPosts:
+              $checkedConvert('localPosts', (v) => (v as num?)?.toInt()),
+          localComments:
+              $checkedConvert('localComments', (v) => (v as num?)?.toInt()),
         );
         return val;
       },
@@ -194,7 +197,7 @@ _$JoinMisskeyNodeInfoUsageUsersImpl
           json,
           ($checkedConvert) {
             final val = _$JoinMisskeyNodeInfoUsageUsersImpl(
-              total: $checkedConvert('total', (v) => v as int?),
+              total: $checkedConvert('total', (v) => (v as num?)?.toInt()),
             );
             return val;
           },

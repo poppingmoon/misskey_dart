@@ -13,7 +13,7 @@ _$FlashMyLikesRequestImpl _$$FlashMyLikesRequestImplFromJson(
       json,
       ($checkedConvert) {
         final val = _$FlashMyLikesRequestImpl(
-          limit: $checkedConvert('limit', (v) => v as int?),
+          limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
           sinceId: $checkedConvert('sinceId', (v) => v as String?),
           untilId: $checkedConvert('untilId', (v) => v as String?),
         );

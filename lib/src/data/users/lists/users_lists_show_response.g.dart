@@ -20,7 +20,8 @@ _$UsersListsShowResponseImpl _$$UsersListsShowResponseImplFromJson(
           userIds: $checkedConvert('userIds',
               (v) => (v as List<dynamic>).map((e) => e as String).toList()),
           isPublic: $checkedConvert('isPublic', (v) => v as bool?),
-          likedCount: $checkedConvert('likedCount', (v) => v as int?),
+          likedCount:
+              $checkedConvert('likedCount', (v) => (v as num?)?.toInt()),
           isLiked: $checkedConvert('isLiked', (v) => v as bool?),
         );
         return val;

@@ -113,7 +113,7 @@ _$MetaResponseImpl _$$MetaResponseImplFromJson(Map<String, dynamic> json) =>
               (v) => _$JsonConverterFromJson<String, Uri?>(
                   v, const NullableUriConverter().fromJson)),
           maxNoteTextLength:
-              $checkedConvert('maxNoteTextLength', (v) => v as int?),
+              $checkedConvert('maxNoteTextLength', (v) => (v as num?)?.toInt()),
           ads: $checkedConvert(
               'ads',
               (v) =>
@@ -121,7 +121,8 @@ _$MetaResponseImpl _$$MetaResponseImplFromJson(Map<String, dynamic> json) =>
                       ?.map((e) => MetaAd.fromJson(e as Map<String, dynamic>))
                       .toList() ??
                   const []),
-          notesPerOneAd: $checkedConvert('notesPerOneAd', (v) => v as int?),
+          notesPerOneAd:
+              $checkedConvert('notesPerOneAd', (v) => (v as num?)?.toInt()),
           serverRules: $checkedConvert(
               'serverRules',
               (v) =>
@@ -249,7 +250,7 @@ _$MetaAdImpl _$$MetaAdImplFromJson(Map<String, dynamic> json) => $checkedCreate(
               'imageUrl',
               (v) => _$JsonConverterFromJson<String, Uri?>(
                   v, const NullableUriConverter().fromJson)),
-          ratio: $checkedConvert('ratio', (v) => v as int),
+          ratio: $checkedConvert('ratio', (v) => (v as num).toInt()),
         );
         return val;
       },

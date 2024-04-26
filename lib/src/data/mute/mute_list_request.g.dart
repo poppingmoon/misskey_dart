@@ -13,7 +13,7 @@ _$MuteListRequestImpl _$$MuteListRequestImplFromJson(
       json,
       ($checkedConvert) {
         final val = _$MuteListRequestImpl(
-          limit: $checkedConvert('limit', (v) => v as int?),
+          limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
           sinceId: $checkedConvert('sinceId', (v) => v as String?),
           untilId: $checkedConvert('untilId', (v) => v as String?),
         );

@@ -17,7 +17,7 @@ _$MuteCreateRequestImpl _$$MuteCreateRequestImplFromJson(
           expiresAt: $checkedConvert(
               'expiresAt',
               (v) => const NullableEpocTimeDateTimeConverter.withMilliSeconds()
-                  .fromJson(v as int?)),
+                  .fromJson((v as num?)?.toInt())),
         );
         return val;
       },

@@ -16,7 +16,7 @@ _$UsersFollowersRequestImpl _$$UsersFollowersRequestImplFromJson(
           userId: $checkedConvert('userId', (v) => v as String),
           sinceId: $checkedConvert('sinceId', (v) => v as String?),
           untilId: $checkedConvert('untilId', (v) => v as String?),
-          limit: $checkedConvert('limit', (v) => v as int?),
+          limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
         );
         return val;
       },
