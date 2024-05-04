@@ -27,6 +27,8 @@ _$ClipImpl _$$ClipImplFromJson(Map<String, dynamic> json) => $checkedCreate(
           favoritedCount:
               $checkedConvert('favoritedCount', (v) => (v as num?)?.toInt()),
           isFavorited: $checkedConvert('isFavorited', (v) => v as bool?),
+          notesCount:
+              $checkedConvert('notesCount', (v) => (v as num?)?.toInt()),
         );
         return val;
       },
@@ -45,6 +47,7 @@ Map<String, dynamic> _$$ClipImplToJson(_$ClipImpl instance) =>
       'isPublic': instance.isPublic,
       'favoritedCount': instance.favoritedCount,
       'isFavorited': instance.isFavorited,
+      'notesCount': instance.notesCount,
     };
 
 Value? _$JsonConverterFromJson<Json, Value>(
