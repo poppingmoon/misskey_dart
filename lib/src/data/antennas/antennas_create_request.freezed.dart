@@ -33,6 +33,7 @@ mixin _$AntennasCreateRequest {
   bool get withFile => throw _privateConstructorUsedError;
   bool? get notify => throw _privateConstructorUsedError;
   bool? get localOnly => throw _privateConstructorUsedError;
+  bool? get excludeBots => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -58,7 +59,8 @@ abstract class $AntennasCreateRequestCopyWith<$Res> {
       bool withReplies,
       bool withFile,
       bool? notify,
-      bool? localOnly});
+      bool? localOnly,
+      bool? excludeBots});
 }
 
 /// @nodoc
@@ -87,6 +89,7 @@ class _$AntennasCreateRequestCopyWithImpl<$Res,
     Object? withFile = null,
     Object? notify = freezed,
     Object? localOnly = freezed,
+    Object? excludeBots = freezed,
   }) {
     return _then(_value.copyWith(
       name: null == name
@@ -137,6 +140,10 @@ class _$AntennasCreateRequestCopyWithImpl<$Res,
           ? _value.localOnly
           : localOnly // ignore: cast_nullable_to_non_nullable
               as bool?,
+      excludeBots: freezed == excludeBots
+          ? _value.excludeBots
+          : excludeBots // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ) as $Val);
   }
 }
@@ -162,7 +169,8 @@ abstract class _$$AntennasCreateRequestImplCopyWith<$Res>
       bool withReplies,
       bool withFile,
       bool? notify,
-      bool? localOnly});
+      bool? localOnly,
+      bool? excludeBots});
 }
 
 /// @nodoc
@@ -189,6 +197,7 @@ class __$$AntennasCreateRequestImplCopyWithImpl<$Res>
     Object? withFile = null,
     Object? notify = freezed,
     Object? localOnly = freezed,
+    Object? excludeBots = freezed,
   }) {
     return _then(_$AntennasCreateRequestImpl(
       name: null == name
@@ -239,6 +248,10 @@ class __$$AntennasCreateRequestImplCopyWithImpl<$Res>
           ? _value.localOnly
           : localOnly // ignore: cast_nullable_to_non_nullable
               as bool?,
+      excludeBots: freezed == excludeBots
+          ? _value.excludeBots
+          : excludeBots // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ));
   }
 }
@@ -258,7 +271,8 @@ class _$AntennasCreateRequestImpl implements _AntennasCreateRequest {
       required this.withReplies,
       required this.withFile,
       this.notify,
-      this.localOnly})
+      this.localOnly,
+      this.excludeBots})
       : _keywords = keywords,
         _excludeKeywords = excludeKeywords,
         _users = users,
@@ -316,10 +330,12 @@ class _$AntennasCreateRequestImpl implements _AntennasCreateRequest {
   final bool? notify;
   @override
   final bool? localOnly;
+  @override
+  final bool? excludeBots;
 
   @override
   String toString() {
-    return 'AntennasCreateRequest(name: $name, src: $src, userListId: $userListId, keywords: $keywords, excludeKeywords: $excludeKeywords, users: $users, instances: $instances, caseSensitive: $caseSensitive, withReplies: $withReplies, withFile: $withFile, notify: $notify, localOnly: $localOnly)';
+    return 'AntennasCreateRequest(name: $name, src: $src, userListId: $userListId, keywords: $keywords, excludeKeywords: $excludeKeywords, users: $users, instances: $instances, caseSensitive: $caseSensitive, withReplies: $withReplies, withFile: $withFile, notify: $notify, localOnly: $localOnly, excludeBots: $excludeBots)';
   }
 
   @override
@@ -345,7 +361,9 @@ class _$AntennasCreateRequestImpl implements _AntennasCreateRequest {
                 other.withFile == withFile) &&
             (identical(other.notify, notify) || other.notify == notify) &&
             (identical(other.localOnly, localOnly) ||
-                other.localOnly == localOnly));
+                other.localOnly == localOnly) &&
+            (identical(other.excludeBots, excludeBots) ||
+                other.excludeBots == excludeBots));
   }
 
   @JsonKey(ignore: true)
@@ -363,7 +381,8 @@ class _$AntennasCreateRequestImpl implements _AntennasCreateRequest {
       withReplies,
       withFile,
       notify,
-      localOnly);
+      localOnly,
+      excludeBots);
 
   @JsonKey(ignore: true)
   @override
@@ -393,7 +412,8 @@ abstract class _AntennasCreateRequest implements AntennasCreateRequest {
       required final bool withReplies,
       required final bool withFile,
       final bool? notify,
-      final bool? localOnly}) = _$AntennasCreateRequestImpl;
+      final bool? localOnly,
+      final bool? excludeBots}) = _$AntennasCreateRequestImpl;
 
   factory _AntennasCreateRequest.fromJson(Map<String, dynamic> json) =
       _$AntennasCreateRequestImpl.fromJson;
@@ -422,6 +442,8 @@ abstract class _AntennasCreateRequest implements AntennasCreateRequest {
   bool? get notify;
   @override
   bool? get localOnly;
+  @override
+  bool? get excludeBots;
   @override
   @JsonKey(ignore: true)
   _$$AntennasCreateRequestImplCopyWith<_$AntennasCreateRequestImpl>

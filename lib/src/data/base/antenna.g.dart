@@ -45,6 +45,7 @@ _$AntennaImpl _$$AntennaImplFromJson(Map<String, dynamic> json) =>
           isActive: $checkedConvert('isActive', (v) => v as bool?),
           hasUnreadNote: $checkedConvert('hasUnreadNote', (v) => v as bool?),
           localOnly: $checkedConvert('localOnly', (v) => v as bool?),
+          excludeBots: $checkedConvert('excludeBots', (v) => v as bool?),
         );
         return val;
       },
@@ -67,6 +68,7 @@ Map<String, dynamic> _$$AntennaImplToJson(_$AntennaImpl instance) =>
       'isActive': instance.isActive,
       'hasUnreadNote': instance.hasUnreadNote,
       'localOnly': instance.localOnly,
+      'excludeBots': instance.excludeBots,
     };
 
 const _$AntennaSourceEnumMap = {

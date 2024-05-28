@@ -38,6 +38,7 @@ mixin _$Antenna {
   bool? get isActive => throw _privateConstructorUsedError;
   bool? get hasUnreadNote => throw _privateConstructorUsedError;
   bool? get localOnly => throw _privateConstructorUsedError;
+  bool? get excludeBots => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -65,7 +66,8 @@ abstract class $AntennaCopyWith<$Res> {
       bool? withFile,
       bool? isActive,
       bool? hasUnreadNote,
-      bool? localOnly});
+      bool? localOnly,
+      bool? excludeBots});
 }
 
 /// @nodoc
@@ -96,6 +98,7 @@ class _$AntennaCopyWithImpl<$Res, $Val extends Antenna>
     Object? isActive = freezed,
     Object? hasUnreadNote = freezed,
     Object? localOnly = freezed,
+    Object? excludeBots = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -158,6 +161,10 @@ class _$AntennaCopyWithImpl<$Res, $Val extends Antenna>
           ? _value.localOnly
           : localOnly // ignore: cast_nullable_to_non_nullable
               as bool?,
+      excludeBots: freezed == excludeBots
+          ? _value.excludeBots
+          : excludeBots // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ) as $Val);
   }
 }
@@ -185,7 +192,8 @@ abstract class _$$AntennaImplCopyWith<$Res> implements $AntennaCopyWith<$Res> {
       bool? withFile,
       bool? isActive,
       bool? hasUnreadNote,
-      bool? localOnly});
+      bool? localOnly,
+      bool? excludeBots});
 }
 
 /// @nodoc
@@ -214,6 +222,7 @@ class __$$AntennaImplCopyWithImpl<$Res>
     Object? isActive = freezed,
     Object? hasUnreadNote = freezed,
     Object? localOnly = freezed,
+    Object? excludeBots = freezed,
   }) {
     return _then(_$AntennaImpl(
       id: null == id
@@ -276,6 +285,10 @@ class __$$AntennaImplCopyWithImpl<$Res>
           ? _value.localOnly
           : localOnly // ignore: cast_nullable_to_non_nullable
               as bool?,
+      excludeBots: freezed == excludeBots
+          ? _value.excludeBots
+          : excludeBots // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ));
   }
 }
@@ -298,7 +311,8 @@ class _$AntennaImpl implements _Antenna {
       this.withFile,
       this.isActive,
       this.hasUnreadNote,
-      this.localOnly})
+      this.localOnly,
+      this.excludeBots})
       : _keywords = keywords,
         _excludeKeywords = excludeKeywords,
         _users = users;
@@ -358,10 +372,12 @@ class _$AntennaImpl implements _Antenna {
   final bool? hasUnreadNote;
   @override
   final bool? localOnly;
+  @override
+  final bool? excludeBots;
 
   @override
   String toString() {
-    return 'Antenna(id: $id, createdAt: $createdAt, name: $name, keywords: $keywords, excludeKeywords: $excludeKeywords, src: $src, userListId: $userListId, users: $users, caseSensitive: $caseSensitive, notify: $notify, withReplies: $withReplies, withFile: $withFile, isActive: $isActive, hasUnreadNote: $hasUnreadNote, localOnly: $localOnly)';
+    return 'Antenna(id: $id, createdAt: $createdAt, name: $name, keywords: $keywords, excludeKeywords: $excludeKeywords, src: $src, userListId: $userListId, users: $users, caseSensitive: $caseSensitive, notify: $notify, withReplies: $withReplies, withFile: $withFile, isActive: $isActive, hasUnreadNote: $hasUnreadNote, localOnly: $localOnly, excludeBots: $excludeBots)';
   }
 
   @override
@@ -392,7 +408,9 @@ class _$AntennaImpl implements _Antenna {
             (identical(other.hasUnreadNote, hasUnreadNote) ||
                 other.hasUnreadNote == hasUnreadNote) &&
             (identical(other.localOnly, localOnly) ||
-                other.localOnly == localOnly));
+                other.localOnly == localOnly) &&
+            (identical(other.excludeBots, excludeBots) ||
+                other.excludeBots == excludeBots));
   }
 
   @JsonKey(ignore: true)
@@ -413,7 +431,8 @@ class _$AntennaImpl implements _Antenna {
       withFile,
       isActive,
       hasUnreadNote,
-      localOnly);
+      localOnly,
+      excludeBots);
 
   @JsonKey(ignore: true)
   @override
@@ -446,7 +465,8 @@ abstract class _Antenna implements Antenna {
       final bool? withFile,
       final bool? isActive,
       final bool? hasUnreadNote,
-      final bool? localOnly}) = _$AntennaImpl;
+      final bool? localOnly,
+      final bool? excludeBots}) = _$AntennaImpl;
 
   factory _Antenna.fromJson(Map<String, dynamic> json) = _$AntennaImpl.fromJson;
 
@@ -482,6 +502,8 @@ abstract class _Antenna implements Antenna {
   bool? get hasUnreadNote;
   @override
   bool? get localOnly;
+  @override
+  bool? get excludeBots;
   @override
   @JsonKey(ignore: true)
   _$$AntennaImplCopyWith<_$AntennaImpl> get copyWith =>
