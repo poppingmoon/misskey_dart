@@ -30,7 +30,7 @@ mixin _$Antenna {
   String? get userListId => throw _privateConstructorUsedError;
   List<String> get users => throw _privateConstructorUsedError;
   bool get caseSensitive => throw _privateConstructorUsedError;
-  bool get notify => throw _privateConstructorUsedError;
+  bool? get notify => throw _privateConstructorUsedError;
   bool get withReplies => throw _privateConstructorUsedError;
   bool get withFile => throw _privateConstructorUsedError;
   bool get isActive => throw _privateConstructorUsedError;
@@ -57,7 +57,7 @@ abstract class $AntennaCopyWith<$Res> {
       String? userListId,
       List<String> users,
       bool caseSensitive,
-      bool notify,
+      bool? notify,
       bool withReplies,
       bool withFile,
       bool isActive,
@@ -87,7 +87,7 @@ class _$AntennaCopyWithImpl<$Res, $Val extends Antenna>
     Object? userListId = freezed,
     Object? users = null,
     Object? caseSensitive = null,
-    Object? notify = null,
+    Object? notify = freezed,
     Object? withReplies = null,
     Object? withFile = null,
     Object? isActive = null,
@@ -131,10 +131,10 @@ class _$AntennaCopyWithImpl<$Res, $Val extends Antenna>
           ? _value.caseSensitive
           : caseSensitive // ignore: cast_nullable_to_non_nullable
               as bool,
-      notify: null == notify
+      notify: freezed == notify
           ? _value.notify
           : notify // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       withReplies: null == withReplies
           ? _value.withReplies
           : withReplies // ignore: cast_nullable_to_non_nullable
@@ -176,7 +176,7 @@ abstract class _$$AntennaImplCopyWith<$Res> implements $AntennaCopyWith<$Res> {
       String? userListId,
       List<String> users,
       bool caseSensitive,
-      bool notify,
+      bool? notify,
       bool withReplies,
       bool withFile,
       bool isActive,
@@ -204,7 +204,7 @@ class __$$AntennaImplCopyWithImpl<$Res>
     Object? userListId = freezed,
     Object? users = null,
     Object? caseSensitive = null,
-    Object? notify = null,
+    Object? notify = freezed,
     Object? withReplies = null,
     Object? withFile = null,
     Object? isActive = null,
@@ -248,10 +248,10 @@ class __$$AntennaImplCopyWithImpl<$Res>
           ? _value.caseSensitive
           : caseSensitive // ignore: cast_nullable_to_non_nullable
               as bool,
-      notify: null == notify
+      notify: freezed == notify
           ? _value.notify
           : notify // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       withReplies: null == withReplies
           ? _value.withReplies
           : withReplies // ignore: cast_nullable_to_non_nullable
@@ -289,7 +289,7 @@ class _$AntennaImpl implements _Antenna {
       this.userListId,
       required final List<String> users,
       required this.caseSensitive,
-      required this.notify,
+      this.notify,
       required this.withReplies,
       required this.withFile,
       required this.isActive,
@@ -340,7 +340,7 @@ class _$AntennaImpl implements _Antenna {
   @override
   final bool caseSensitive;
   @override
-  final bool notify;
+  final bool? notify;
   @override
   final bool withReplies;
   @override
@@ -433,7 +433,7 @@ abstract class _Antenna implements Antenna {
       final String? userListId,
       required final List<String> users,
       required final bool caseSensitive,
-      required final bool notify,
+      final bool? notify,
       required final bool withReplies,
       required final bool withFile,
       required final bool isActive,
@@ -462,7 +462,7 @@ abstract class _Antenna implements Antenna {
   @override
   bool get caseSensitive;
   @override
-  bool get notify;
+  bool? get notify;
   @override
   bool get withReplies;
   @override

@@ -17,7 +17,7 @@ class AntennasUpdateRequest with _$AntennasUpdateRequest {
     required bool caseSensitive,
     required bool withReplies,
     required bool withFile,
-    required bool notify,
+    bool? notify,
     bool? localOnly,
   }) = _AntennasUpdateRequest;
 

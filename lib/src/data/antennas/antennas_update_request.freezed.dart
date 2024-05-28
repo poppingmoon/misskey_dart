@@ -31,7 +31,7 @@ mixin _$AntennasUpdateRequest {
   bool get caseSensitive => throw _privateConstructorUsedError;
   bool get withReplies => throw _privateConstructorUsedError;
   bool get withFile => throw _privateConstructorUsedError;
-  bool get notify => throw _privateConstructorUsedError;
+  bool? get notify => throw _privateConstructorUsedError;
   bool? get localOnly => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -57,7 +57,7 @@ abstract class $AntennasUpdateRequestCopyWith<$Res> {
       bool caseSensitive,
       bool withReplies,
       bool withFile,
-      bool notify,
+      bool? notify,
       bool? localOnly});
 }
 
@@ -85,7 +85,7 @@ class _$AntennasUpdateRequestCopyWithImpl<$Res,
     Object? caseSensitive = null,
     Object? withReplies = null,
     Object? withFile = null,
-    Object? notify = null,
+    Object? notify = freezed,
     Object? localOnly = freezed,
   }) {
     return _then(_value.copyWith(
@@ -129,10 +129,10 @@ class _$AntennasUpdateRequestCopyWithImpl<$Res,
           ? _value.withFile
           : withFile // ignore: cast_nullable_to_non_nullable
               as bool,
-      notify: null == notify
+      notify: freezed == notify
           ? _value.notify
           : notify // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       localOnly: freezed == localOnly
           ? _value.localOnly
           : localOnly // ignore: cast_nullable_to_non_nullable
@@ -161,7 +161,7 @@ abstract class _$$AntennasUpdateRequestImplCopyWith<$Res>
       bool caseSensitive,
       bool withReplies,
       bool withFile,
-      bool notify,
+      bool? notify,
       bool? localOnly});
 }
 
@@ -187,7 +187,7 @@ class __$$AntennasUpdateRequestImplCopyWithImpl<$Res>
     Object? caseSensitive = null,
     Object? withReplies = null,
     Object? withFile = null,
-    Object? notify = null,
+    Object? notify = freezed,
     Object? localOnly = freezed,
   }) {
     return _then(_$AntennasUpdateRequestImpl(
@@ -231,10 +231,10 @@ class __$$AntennasUpdateRequestImplCopyWithImpl<$Res>
           ? _value.withFile
           : withFile // ignore: cast_nullable_to_non_nullable
               as bool,
-      notify: null == notify
+      notify: freezed == notify
           ? _value.notify
           : notify // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       localOnly: freezed == localOnly
           ? _value.localOnly
           : localOnly // ignore: cast_nullable_to_non_nullable
@@ -257,7 +257,7 @@ class _$AntennasUpdateRequestImpl implements _AntennasUpdateRequest {
       required this.caseSensitive,
       required this.withReplies,
       required this.withFile,
-      required this.notify,
+      this.notify,
       this.localOnly})
       : _keywords = keywords,
         _excludeKeywords = excludeKeywords,
@@ -305,7 +305,7 @@ class _$AntennasUpdateRequestImpl implements _AntennasUpdateRequest {
   @override
   final bool withFile;
   @override
-  final bool notify;
+  final bool? notify;
   @override
   final bool? localOnly;
 
@@ -384,7 +384,7 @@ abstract class _AntennasUpdateRequest implements AntennasUpdateRequest {
       required final bool caseSensitive,
       required final bool withReplies,
       required final bool withFile,
-      required final bool notify,
+      final bool? notify,
       final bool? localOnly}) = _$AntennasUpdateRequestImpl;
 
   factory _AntennasUpdateRequest.fromJson(Map<String, dynamic> json) =
@@ -411,7 +411,7 @@ abstract class _AntennasUpdateRequest implements AntennasUpdateRequest {
   @override
   bool get withFile;
   @override
-  bool get notify;
+  bool? get notify;
   @override
   bool? get localOnly;
   @override

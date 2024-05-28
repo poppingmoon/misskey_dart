@@ -16,7 +16,7 @@ class AntennasCreateRequest with _$AntennasCreateRequest {
     required bool caseSensitive,
     required bool withReplies,
     required bool withFile,
-    required bool notify,
+    bool? notify,
     bool? localOnly,
   }) = _AntennasCreateRequest;
 
