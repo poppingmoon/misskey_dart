@@ -33,12 +33,15 @@ _$AntennaImpl _$$AntennaImplFromJson(Map<String, dynamic> json) =>
               (v) => $enumDecodeNullable(_$AntennaSourceEnumMap, v,
                   unknownValue: JsonKey.nullForUndefinedEnumValue)),
           userListId: $checkedConvert('userListId', (v) => v as String?),
-          users: $checkedConvert('users',
-              (v) => (v as List<dynamic>).map((e) => e as String).toList()),
-          caseSensitive: $checkedConvert('caseSensitive', (v) => v as bool),
-          notify: $checkedConvert('notify', (v) => v as bool),
-          withReplies: $checkedConvert('withReplies', (v) => v as bool),
-          withFile: $checkedConvert('withFile', (v) => v as bool),
+          users: $checkedConvert(
+              'users',
+              (v) =>
+                  (v as List<dynamic>?)?.map((e) => e as String).toList() ??
+                  const []),
+          caseSensitive: $checkedConvert('caseSensitive', (v) => v as bool?),
+          notify: $checkedConvert('notify', (v) => v as bool?),
+          withReplies: $checkedConvert('withReplies', (v) => v as bool?),
+          withFile: $checkedConvert('withFile', (v) => v as bool?),
           isActive: $checkedConvert('isActive', (v) => v as bool?),
           hasUnreadNote: $checkedConvert('hasUnreadNote', (v) => v as bool?),
           localOnly: $checkedConvert('localOnly', (v) => v as bool?),

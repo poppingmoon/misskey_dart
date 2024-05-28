@@ -40,7 +40,7 @@ _$AntennasUpdateRequestImpl _$$AntennasUpdateRequestImplFromJson(
           caseSensitive: $checkedConvert('caseSensitive', (v) => v as bool),
           withReplies: $checkedConvert('withReplies', (v) => v as bool),
           withFile: $checkedConvert('withFile', (v) => v as bool),
-          notify: $checkedConvert('notify', (v) => v as bool),
+          notify: $checkedConvert('notify', (v) => v as bool?),
           localOnly: $checkedConvert('localOnly', (v) => v as bool?),
         );
         return val;

@@ -31,10 +31,10 @@ mixin _$Antenna {
   AntennaSource? get src => throw _privateConstructorUsedError;
   String? get userListId => throw _privateConstructorUsedError;
   List<String> get users => throw _privateConstructorUsedError;
-  bool get caseSensitive => throw _privateConstructorUsedError;
-  bool get notify => throw _privateConstructorUsedError;
-  bool get withReplies => throw _privateConstructorUsedError;
-  bool get withFile => throw _privateConstructorUsedError;
+  bool? get caseSensitive => throw _privateConstructorUsedError;
+  bool? get notify => throw _privateConstructorUsedError;
+  bool? get withReplies => throw _privateConstructorUsedError;
+  bool? get withFile => throw _privateConstructorUsedError;
   bool? get isActive => throw _privateConstructorUsedError;
   bool? get hasUnreadNote => throw _privateConstructorUsedError;
   bool? get localOnly => throw _privateConstructorUsedError;
@@ -59,10 +59,10 @@ abstract class $AntennaCopyWith<$Res> {
       AntennaSource? src,
       String? userListId,
       List<String> users,
-      bool caseSensitive,
-      bool notify,
-      bool withReplies,
-      bool withFile,
+      bool? caseSensitive,
+      bool? notify,
+      bool? withReplies,
+      bool? withFile,
       bool? isActive,
       bool? hasUnreadNote,
       bool? localOnly});
@@ -89,10 +89,10 @@ class _$AntennaCopyWithImpl<$Res, $Val extends Antenna>
     Object? src = freezed,
     Object? userListId = freezed,
     Object? users = null,
-    Object? caseSensitive = null,
-    Object? notify = null,
-    Object? withReplies = null,
-    Object? withFile = null,
+    Object? caseSensitive = freezed,
+    Object? notify = freezed,
+    Object? withReplies = freezed,
+    Object? withFile = freezed,
     Object? isActive = freezed,
     Object? hasUnreadNote = freezed,
     Object? localOnly = freezed,
@@ -130,22 +130,22 @@ class _$AntennaCopyWithImpl<$Res, $Val extends Antenna>
           ? _value.users
           : users // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      caseSensitive: null == caseSensitive
+      caseSensitive: freezed == caseSensitive
           ? _value.caseSensitive
           : caseSensitive // ignore: cast_nullable_to_non_nullable
-              as bool,
-      notify: null == notify
+              as bool?,
+      notify: freezed == notify
           ? _value.notify
           : notify // ignore: cast_nullable_to_non_nullable
-              as bool,
-      withReplies: null == withReplies
+              as bool?,
+      withReplies: freezed == withReplies
           ? _value.withReplies
           : withReplies // ignore: cast_nullable_to_non_nullable
-              as bool,
-      withFile: null == withFile
+              as bool?,
+      withFile: freezed == withFile
           ? _value.withFile
           : withFile // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       isActive: freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
@@ -179,10 +179,10 @@ abstract class _$$AntennaImplCopyWith<$Res> implements $AntennaCopyWith<$Res> {
       AntennaSource? src,
       String? userListId,
       List<String> users,
-      bool caseSensitive,
-      bool notify,
-      bool withReplies,
-      bool withFile,
+      bool? caseSensitive,
+      bool? notify,
+      bool? withReplies,
+      bool? withFile,
       bool? isActive,
       bool? hasUnreadNote,
       bool? localOnly});
@@ -207,10 +207,10 @@ class __$$AntennaImplCopyWithImpl<$Res>
     Object? src = freezed,
     Object? userListId = freezed,
     Object? users = null,
-    Object? caseSensitive = null,
-    Object? notify = null,
-    Object? withReplies = null,
-    Object? withFile = null,
+    Object? caseSensitive = freezed,
+    Object? notify = freezed,
+    Object? withReplies = freezed,
+    Object? withFile = freezed,
     Object? isActive = freezed,
     Object? hasUnreadNote = freezed,
     Object? localOnly = freezed,
@@ -248,22 +248,22 @@ class __$$AntennaImplCopyWithImpl<$Res>
           ? _value._users
           : users // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      caseSensitive: null == caseSensitive
+      caseSensitive: freezed == caseSensitive
           ? _value.caseSensitive
           : caseSensitive // ignore: cast_nullable_to_non_nullable
-              as bool,
-      notify: null == notify
+              as bool?,
+      notify: freezed == notify
           ? _value.notify
           : notify // ignore: cast_nullable_to_non_nullable
-              as bool,
-      withReplies: null == withReplies
+              as bool?,
+      withReplies: freezed == withReplies
           ? _value.withReplies
           : withReplies // ignore: cast_nullable_to_non_nullable
-              as bool,
-      withFile: null == withFile
+              as bool?,
+      withFile: freezed == withFile
           ? _value.withFile
           : withFile // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       isActive: freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
@@ -291,11 +291,11 @@ class _$AntennaImpl implements _Antenna {
       required final List<List<String>> excludeKeywords,
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.src,
       this.userListId,
-      required final List<String> users,
-      required this.caseSensitive,
-      required this.notify,
-      required this.withReplies,
-      required this.withFile,
+      final List<String> users = const [],
+      this.caseSensitive,
+      this.notify,
+      this.withReplies,
+      this.withFile,
       this.isActive,
       this.hasUnreadNote,
       this.localOnly})
@@ -337,6 +337,7 @@ class _$AntennaImpl implements _Antenna {
   final String? userListId;
   final List<String> _users;
   @override
+  @JsonKey()
   List<String> get users {
     if (_users is EqualUnmodifiableListView) return _users;
     // ignore: implicit_dynamic_type
@@ -344,13 +345,13 @@ class _$AntennaImpl implements _Antenna {
   }
 
   @override
-  final bool caseSensitive;
+  final bool? caseSensitive;
   @override
-  final bool notify;
+  final bool? notify;
   @override
-  final bool withReplies;
+  final bool? withReplies;
   @override
-  final bool withFile;
+  final bool? withFile;
   @override
   final bool? isActive;
   @override
@@ -438,11 +439,11 @@ abstract class _Antenna implements Antenna {
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final AntennaSource? src,
       final String? userListId,
-      required final List<String> users,
-      required final bool caseSensitive,
-      required final bool notify,
-      required final bool withReplies,
-      required final bool withFile,
+      final List<String> users,
+      final bool? caseSensitive,
+      final bool? notify,
+      final bool? withReplies,
+      final bool? withFile,
       final bool? isActive,
       final bool? hasUnreadNote,
       final bool? localOnly}) = _$AntennaImpl;
@@ -468,13 +469,13 @@ abstract class _Antenna implements Antenna {
   @override
   List<String> get users;
   @override
-  bool get caseSensitive;
+  bool? get caseSensitive;
   @override
-  bool get notify;
+  bool? get notify;
   @override
-  bool get withReplies;
+  bool? get withReplies;
   @override
-  bool get withFile;
+  bool? get withFile;
   @override
   bool? get isActive;
   @override
