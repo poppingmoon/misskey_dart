@@ -18,6 +18,8 @@ _$FlashCreateRequestImpl _$$FlashCreateRequestImplFromJson(
           script: $checkedConvert('script', (v) => v as String),
           permissions: $checkedConvert('permissions',
               (v) => (v as List<dynamic>).map((e) => e as String).toList()),
+          visibility: $checkedConvert('visibility',
+              (v) => $enumDecodeNullable(_$FlashVisibilityEnumMap, v)),
         );
         return val;
       },
@@ -30,4 +32,10 @@ Map<String, dynamic> _$$FlashCreateRequestImplToJson(
       'summary': instance.summary,
       'script': instance.script,
       'permissions': instance.permissions,
+      'visibility': _$FlashVisibilityEnumMap[instance.visibility],
     };
+
+const _$FlashVisibilityEnumMap = {
+  FlashVisibility.public: 'public',
+  FlashVisibility.private: 'private',
+};
