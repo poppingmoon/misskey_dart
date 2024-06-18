@@ -18,9 +18,12 @@ class MisskeyNotes {
         threadMuting = MisskeyNotesThreadMuting(apiService: apiService);
 
   /// ノートを投稿します。
-  Future<void> create(NotesCreateRequest request) async {
-    await _apiService.post<Map<String, dynamic>>(
-        "notes/create", request.toJson());
+  Future<Note> create(NotesCreateRequest request) async {
+    final response = await _apiService.post<Map<String, dynamic>>(
+      "notes/create",
+      request.toJson(),
+    );
+    return Note.fromJson(response["createdNote"]);
   }
 
   /// ノートを更新します。
@@ -175,6 +178,15 @@ class MisskeyNotes {
       request.toJson(),
     );
     return NotesTranslateResponse.fromJson(response);
+  }
+
+  Future<Note> edit(NotesEditRequest request) async {
+    final response = await _apiService.post<Map<String, dynamic>>(
+      "notes/edit",
+      request.toJson(),
+      excludeRemoveNullPredicate: (key, __) => key == "text" || key == "cw",
+    );
+    return Note.fromJson(response["createdNote"] ?? response);
   }
 }
 

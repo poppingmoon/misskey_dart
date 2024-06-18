@@ -150,6 +150,7 @@ export 'src/data/notes/notes_conversation_request.dart';
 export 'src/data/notes/notes_create_poll_request.dart';
 export 'src/data/notes/notes_create_request.dart';
 export 'src/data/notes/notes_delete_request.dart';
+export 'src/data/notes/notes_edit_request.dart';
 export 'src/data/notes/notes_featured_request.dart';
 export 'src/data/notes/notes_global_timeline_request.dart';
 export 'src/data/notes/notes_hybrid_timeline_request.dart';
