@@ -14,8 +14,15 @@ _$NotesUpdateRequestImpl _$$NotesUpdateRequestImplFromJson(
       ($checkedConvert) {
         final val = _$NotesUpdateRequestImpl(
           noteId: $checkedConvert('noteId', (v) => v as String),
-          text: $checkedConvert('text', (v) => v as String),
+          text: $checkedConvert('text', (v) => v as String?),
           cw: $checkedConvert('cw', (v) => v as String?),
+          fileIds: $checkedConvert('fileIds',
+              (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
+          poll: $checkedConvert(
+              'poll',
+              (v) => v == null
+                  ? null
+                  : NotesCreatePollRequest.fromJson(v as Map<String, dynamic>)),
         );
         return val;
       },
@@ -27,4 +34,6 @@ Map<String, dynamic> _$$NotesUpdateRequestImplToJson(
       'noteId': instance.noteId,
       'text': instance.text,
       'cw': instance.cw,
+      'fileIds': instance.fileIds,
+      'poll': instance.poll?.toJson(),
     };

@@ -20,9 +20,11 @@ NotesUpdateRequest _$NotesUpdateRequestFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$NotesUpdateRequest {
-  String get noteId => throw _privateConstructorUsedError; // ここが必須なのはバグな気がする
-  String get text => throw _privateConstructorUsedError;
+  String get noteId => throw _privateConstructorUsedError;
+  String? get text => throw _privateConstructorUsedError;
   String? get cw => throw _privateConstructorUsedError;
+  List<String>? get fileIds => throw _privateConstructorUsedError;
+  NotesCreatePollRequest? get poll => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -36,7 +38,14 @@ abstract class $NotesUpdateRequestCopyWith<$Res> {
           NotesUpdateRequest value, $Res Function(NotesUpdateRequest) then) =
       _$NotesUpdateRequestCopyWithImpl<$Res, NotesUpdateRequest>;
   @useResult
-  $Res call({String noteId, String text, String? cw});
+  $Res call(
+      {String noteId,
+      String? text,
+      String? cw,
+      List<String>? fileIds,
+      NotesCreatePollRequest? poll});
+
+  $NotesCreatePollRequestCopyWith<$Res>? get poll;
 }
 
 /// @nodoc
@@ -53,23 +62,45 @@ class _$NotesUpdateRequestCopyWithImpl<$Res, $Val extends NotesUpdateRequest>
   @override
   $Res call({
     Object? noteId = null,
-    Object? text = null,
+    Object? text = freezed,
     Object? cw = freezed,
+    Object? fileIds = freezed,
+    Object? poll = freezed,
   }) {
     return _then(_value.copyWith(
       noteId: null == noteId
           ? _value.noteId
           : noteId // ignore: cast_nullable_to_non_nullable
               as String,
-      text: null == text
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       cw: freezed == cw
           ? _value.cw
           : cw // ignore: cast_nullable_to_non_nullable
               as String?,
+      fileIds: freezed == fileIds
+          ? _value.fileIds
+          : fileIds // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      poll: freezed == poll
+          ? _value.poll
+          : poll // ignore: cast_nullable_to_non_nullable
+              as NotesCreatePollRequest?,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $NotesCreatePollRequestCopyWith<$Res>? get poll {
+    if (_value.poll == null) {
+      return null;
+    }
+
+    return $NotesCreatePollRequestCopyWith<$Res>(_value.poll!, (value) {
+      return _then(_value.copyWith(poll: value) as $Val);
+    });
   }
 }
 
@@ -81,7 +112,15 @@ abstract class _$$NotesUpdateRequestImplCopyWith<$Res>
       __$$NotesUpdateRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String noteId, String text, String? cw});
+  $Res call(
+      {String noteId,
+      String? text,
+      String? cw,
+      List<String>? fileIds,
+      NotesCreatePollRequest? poll});
+
+  @override
+  $NotesCreatePollRequestCopyWith<$Res>? get poll;
 }
 
 /// @nodoc
@@ -96,22 +135,32 @@ class __$$NotesUpdateRequestImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? noteId = null,
-    Object? text = null,
+    Object? text = freezed,
     Object? cw = freezed,
+    Object? fileIds = freezed,
+    Object? poll = freezed,
   }) {
     return _then(_$NotesUpdateRequestImpl(
       noteId: null == noteId
           ? _value.noteId
           : noteId // ignore: cast_nullable_to_non_nullable
               as String,
-      text: null == text
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       cw: freezed == cw
           ? _value.cw
           : cw // ignore: cast_nullable_to_non_nullable
               as String?,
+      fileIds: freezed == fileIds
+          ? _value._fileIds
+          : fileIds // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      poll: freezed == poll
+          ? _value.poll
+          : poll // ignore: cast_nullable_to_non_nullable
+              as NotesCreatePollRequest?,
     ));
   }
 }
@@ -120,22 +169,38 @@ class __$$NotesUpdateRequestImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$NotesUpdateRequestImpl implements _NotesUpdateRequest {
   const _$NotesUpdateRequestImpl(
-      {required this.noteId, required this.text, this.cw});
+      {required this.noteId,
+      this.text,
+      this.cw,
+      final List<String>? fileIds,
+      this.poll})
+      : _fileIds = fileIds;
 
   factory _$NotesUpdateRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$NotesUpdateRequestImplFromJson(json);
 
   @override
   final String noteId;
-// ここが必須なのはバグな気がする
   @override
-  final String text;
+  final String? text;
   @override
   final String? cw;
+  final List<String>? _fileIds;
+  @override
+  List<String>? get fileIds {
+    final value = _fileIds;
+    if (value == null) return null;
+    if (_fileIds is EqualUnmodifiableListView) return _fileIds;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final NotesCreatePollRequest? poll;
 
   @override
   String toString() {
-    return 'NotesUpdateRequest(noteId: $noteId, text: $text, cw: $cw)';
+    return 'NotesUpdateRequest(noteId: $noteId, text: $text, cw: $cw, fileIds: $fileIds, poll: $poll)';
   }
 
   @override
@@ -145,12 +210,15 @@ class _$NotesUpdateRequestImpl implements _NotesUpdateRequest {
             other is _$NotesUpdateRequestImpl &&
             (identical(other.noteId, noteId) || other.noteId == noteId) &&
             (identical(other.text, text) || other.text == text) &&
-            (identical(other.cw, cw) || other.cw == cw));
+            (identical(other.cw, cw) || other.cw == cw) &&
+            const DeepCollectionEquality().equals(other._fileIds, _fileIds) &&
+            (identical(other.poll, poll) || other.poll == poll));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, noteId, text, cw);
+  int get hashCode => Object.hash(runtimeType, noteId, text, cw,
+      const DeepCollectionEquality().hash(_fileIds), poll);
 
   @JsonKey(ignore: true)
   @override
@@ -170,18 +238,24 @@ class _$NotesUpdateRequestImpl implements _NotesUpdateRequest {
 abstract class _NotesUpdateRequest implements NotesUpdateRequest {
   const factory _NotesUpdateRequest(
       {required final String noteId,
-      required final String text,
-      final String? cw}) = _$NotesUpdateRequestImpl;
+      final String? text,
+      final String? cw,
+      final List<String>? fileIds,
+      final NotesCreatePollRequest? poll}) = _$NotesUpdateRequestImpl;
 
   factory _NotesUpdateRequest.fromJson(Map<String, dynamic> json) =
       _$NotesUpdateRequestImpl.fromJson;
 
   @override
   String get noteId;
-  @override // ここが必須なのはバグな気がする
-  String get text;
+  @override
+  String? get text;
   @override
   String? get cw;
+  @override
+  List<String>? get fileIds;
+  @override
+  NotesCreatePollRequest? get poll;
   @override
   @JsonKey(ignore: true)
   _$$NotesUpdateRequestImplCopyWith<_$NotesUpdateRequestImpl> get copyWith =>
