@@ -3,7 +3,6 @@ import 'dart:collection';
 import 'dart:convert';
 import 'dart:developer';
 
-import 'package:collection/collection.dart';
 import 'package:misskey_dart/src/data/streaming/broadcast_event.dart';
 import 'package:misskey_dart/src/data/streaming/channel_event.dart';
 import 'package:misskey_dart/src/data/streaming/note_updated_event.dart';
@@ -70,7 +69,7 @@ class StreamingService {
       streamingChannelControllers.values
           .where((controller) => !controller.isDisconnected)
           .map((controller) => controller.onNoteUpdatedEventReceived)
-          .whereNotNull()
+          .nonNulls
           .map(
             (onNoteUpdatedEventReceived) =>
                 onNoteUpdatedEventReceived(id, type, body),
@@ -86,7 +85,7 @@ class StreamingService {
       streamingChannelControllers.values
           .where((controller) => !controller.isDisconnected)
           .map((controller) => controller.onBroadcastEventReceived)
-          .whereNotNull()
+          .nonNulls
           .map(
             (onBroadcastEventReceived) => onBroadcastEventReceived(type, body),
           ),
