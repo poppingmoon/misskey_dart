@@ -33,7 +33,7 @@ _$PageImpl _$$PageImplFromJson(Map<String, dynamic> json) => $checkedCreate(
               $checkedConvert('hideTitleWhenPinned', (v) => v as bool),
           alignCenter: $checkedConvert('alignCenter', (v) => v as bool),
           font: $checkedConvert('font', (v) => v as String),
-          script: $checkedConvert('script', (v) => v as String),
+          script: $checkedConvert('script', (v) => v as String?),
           eyeCatchingImageId:
               $checkedConvert('eyeCatchingImageId', (v) => v as String?),
           eyeCatchingImage: $checkedConvert(

@@ -37,7 +37,7 @@ mixin _$Page {
   bool get hideTitleWhenPinned => throw _privateConstructorUsedError;
   bool get alignCenter => throw _privateConstructorUsedError;
   String get font => throw _privateConstructorUsedError;
-  String get script => throw _privateConstructorUsedError;
+  String? get script => throw _privateConstructorUsedError;
   String? get eyeCatchingImageId => throw _privateConstructorUsedError;
   DriveFile? get eyeCatchingImage => throw _privateConstructorUsedError;
   List<DriveFile> get attachedFiles => throw _privateConstructorUsedError;
@@ -68,7 +68,7 @@ abstract class $PageCopyWith<$Res> {
       bool hideTitleWhenPinned,
       bool alignCenter,
       String font,
-      String script,
+      String? script,
       String? eyeCatchingImageId,
       DriveFile? eyeCatchingImage,
       List<DriveFile> attachedFiles,
@@ -105,7 +105,7 @@ class _$PageCopyWithImpl<$Res, $Val extends Page>
     Object? hideTitleWhenPinned = null,
     Object? alignCenter = null,
     Object? font = null,
-    Object? script = null,
+    Object? script = freezed,
     Object? eyeCatchingImageId = freezed,
     Object? eyeCatchingImage = freezed,
     Object? attachedFiles = null,
@@ -165,10 +165,10 @@ class _$PageCopyWithImpl<$Res, $Val extends Page>
           ? _value.font
           : font // ignore: cast_nullable_to_non_nullable
               as String,
-      script: null == script
+      script: freezed == script
           ? _value.script
           : script // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       eyeCatchingImageId: freezed == eyeCatchingImageId
           ? _value.eyeCatchingImageId
           : eyeCatchingImageId // ignore: cast_nullable_to_non_nullable
@@ -234,7 +234,7 @@ abstract class _$$PageImplCopyWith<$Res> implements $PageCopyWith<$Res> {
       bool hideTitleWhenPinned,
       bool alignCenter,
       String font,
-      String script,
+      String? script,
       String? eyeCatchingImageId,
       DriveFile? eyeCatchingImage,
       List<DriveFile> attachedFiles,
@@ -270,7 +270,7 @@ class __$$PageImplCopyWithImpl<$Res>
     Object? hideTitleWhenPinned = null,
     Object? alignCenter = null,
     Object? font = null,
-    Object? script = null,
+    Object? script = freezed,
     Object? eyeCatchingImageId = freezed,
     Object? eyeCatchingImage = freezed,
     Object? attachedFiles = null,
@@ -330,10 +330,10 @@ class __$$PageImplCopyWithImpl<$Res>
           ? _value.font
           : font // ignore: cast_nullable_to_non_nullable
               as String,
-      script: null == script
+      script: freezed == script
           ? _value.script
           : script // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       eyeCatchingImageId: freezed == eyeCatchingImageId
           ? _value.eyeCatchingImageId
           : eyeCatchingImageId // ignore: cast_nullable_to_non_nullable
@@ -376,7 +376,7 @@ class _$PageImpl implements _Page {
       required this.hideTitleWhenPinned,
       required this.alignCenter,
       required this.font,
-      required this.script,
+      this.script,
       this.eyeCatchingImageId,
       this.eyeCatchingImage,
       required final List<DriveFile> attachedFiles,
@@ -431,7 +431,7 @@ class _$PageImpl implements _Page {
   @override
   final String font;
   @override
-  final String script;
+  final String? script;
   @override
   final String? eyeCatchingImageId;
   @override
@@ -544,7 +544,7 @@ abstract class _Page implements Page {
       required final bool hideTitleWhenPinned,
       required final bool alignCenter,
       required final String font,
-      required final String script,
+      final String? script,
       final String? eyeCatchingImageId,
       final DriveFile? eyeCatchingImage,
       required final List<DriveFile> attachedFiles,
@@ -583,7 +583,7 @@ abstract class _Page implements Page {
   @override
   String get font;
   @override
-  String get script;
+  String? get script;
   @override
   String? get eyeCatchingImageId;
   @override

@@ -22,7 +22,7 @@ class Page with _$Page {
     required bool hideTitleWhenPinned,
     required bool alignCenter,
     required String font,
-    required String script,
+    String? script,
     String? eyeCatchingImageId,
     DriveFile? eyeCatchingImage,
     required List<DriveFile> attachedFiles,
