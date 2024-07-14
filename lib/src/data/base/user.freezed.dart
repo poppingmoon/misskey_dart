@@ -6774,28 +6774,28 @@ UserPolicies _$UserPoliciesFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$UserPolicies {
-  bool get gtlAvailable => throw _privateConstructorUsedError;
-  bool get ltlAvailable => throw _privateConstructorUsedError;
-  bool get canPublicNote => throw _privateConstructorUsedError;
-  bool get canEditNote => throw _privateConstructorUsedError;
-  bool get canInvite => throw _privateConstructorUsedError;
-  bool get canManageCustomEmojis => throw _privateConstructorUsedError;
-  bool get canHideAds => throw _privateConstructorUsedError;
+  bool? get gtlAvailable => throw _privateConstructorUsedError;
+  bool? get ltlAvailable => throw _privateConstructorUsedError;
+  bool? get canPublicNote => throw _privateConstructorUsedError;
+  bool? get canEditNote => throw _privateConstructorUsedError;
+  bool? get canInvite => throw _privateConstructorUsedError;
+  bool? get canManageCustomEmojis => throw _privateConstructorUsedError;
+  bool? get canHideAds => throw _privateConstructorUsedError;
   double? get inviteLimit => throw _privateConstructorUsedError;
   double? get inviteLimitCycle => throw _privateConstructorUsedError;
-  bool get canSearchNotes => throw _privateConstructorUsedError;
-  bool get canUseTranslator => throw _privateConstructorUsedError;
-  double get driveCapacityMb => throw _privateConstructorUsedError;
-  double get pinLimit => throw _privateConstructorUsedError;
-  double get antennaLimit => throw _privateConstructorUsedError;
-  double get wordMuteLimit => throw _privateConstructorUsedError;
-  double get webhookLimit => throw _privateConstructorUsedError;
-  double get clipLimit => throw _privateConstructorUsedError;
-  double get noteEachClipsLimit => throw _privateConstructorUsedError;
-  double get userListLimit => throw _privateConstructorUsedError;
-  double get userEachUserListsLimit => throw _privateConstructorUsedError;
-  double get rateLimitFactor => throw _privateConstructorUsedError;
-  double get avatarDecorationLimit => throw _privateConstructorUsedError;
+  bool? get canSearchNotes => throw _privateConstructorUsedError;
+  bool? get canUseTranslator => throw _privateConstructorUsedError;
+  double? get driveCapacityMb => throw _privateConstructorUsedError;
+  double? get pinLimit => throw _privateConstructorUsedError;
+  double? get antennaLimit => throw _privateConstructorUsedError;
+  double? get wordMuteLimit => throw _privateConstructorUsedError;
+  double? get webhookLimit => throw _privateConstructorUsedError;
+  double? get clipLimit => throw _privateConstructorUsedError;
+  double? get noteEachClipsLimit => throw _privateConstructorUsedError;
+  double? get userListLimit => throw _privateConstructorUsedError;
+  double? get userEachUserListsLimit => throw _privateConstructorUsedError;
+  double? get rateLimitFactor => throw _privateConstructorUsedError;
+  double? get avatarDecorationLimit => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -6810,28 +6810,28 @@ abstract class $UserPoliciesCopyWith<$Res> {
       _$UserPoliciesCopyWithImpl<$Res, UserPolicies>;
   @useResult
   $Res call(
-      {bool gtlAvailable,
-      bool ltlAvailable,
-      bool canPublicNote,
-      bool canEditNote,
-      bool canInvite,
-      bool canManageCustomEmojis,
-      bool canHideAds,
+      {bool? gtlAvailable,
+      bool? ltlAvailable,
+      bool? canPublicNote,
+      bool? canEditNote,
+      bool? canInvite,
+      bool? canManageCustomEmojis,
+      bool? canHideAds,
       double? inviteLimit,
       double? inviteLimitCycle,
-      bool canSearchNotes,
-      bool canUseTranslator,
-      double driveCapacityMb,
-      double pinLimit,
-      double antennaLimit,
-      double wordMuteLimit,
-      double webhookLimit,
-      double clipLimit,
-      double noteEachClipsLimit,
-      double userListLimit,
-      double userEachUserListsLimit,
-      double rateLimitFactor,
-      double avatarDecorationLimit});
+      bool? canSearchNotes,
+      bool? canUseTranslator,
+      double? driveCapacityMb,
+      double? pinLimit,
+      double? antennaLimit,
+      double? wordMuteLimit,
+      double? webhookLimit,
+      double? clipLimit,
+      double? noteEachClipsLimit,
+      double? userListLimit,
+      double? userEachUserListsLimit,
+      double? rateLimitFactor,
+      double? avatarDecorationLimit});
 }
 
 /// @nodoc
@@ -6847,58 +6847,58 @@ class _$UserPoliciesCopyWithImpl<$Res, $Val extends UserPolicies>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? gtlAvailable = null,
-    Object? ltlAvailable = null,
-    Object? canPublicNote = null,
-    Object? canEditNote = null,
-    Object? canInvite = null,
-    Object? canManageCustomEmojis = null,
-    Object? canHideAds = null,
+    Object? gtlAvailable = freezed,
+    Object? ltlAvailable = freezed,
+    Object? canPublicNote = freezed,
+    Object? canEditNote = freezed,
+    Object? canInvite = freezed,
+    Object? canManageCustomEmojis = freezed,
+    Object? canHideAds = freezed,
     Object? inviteLimit = freezed,
     Object? inviteLimitCycle = freezed,
-    Object? canSearchNotes = null,
-    Object? canUseTranslator = null,
-    Object? driveCapacityMb = null,
-    Object? pinLimit = null,
-    Object? antennaLimit = null,
-    Object? wordMuteLimit = null,
-    Object? webhookLimit = null,
-    Object? clipLimit = null,
-    Object? noteEachClipsLimit = null,
-    Object? userListLimit = null,
-    Object? userEachUserListsLimit = null,
-    Object? rateLimitFactor = null,
-    Object? avatarDecorationLimit = null,
+    Object? canSearchNotes = freezed,
+    Object? canUseTranslator = freezed,
+    Object? driveCapacityMb = freezed,
+    Object? pinLimit = freezed,
+    Object? antennaLimit = freezed,
+    Object? wordMuteLimit = freezed,
+    Object? webhookLimit = freezed,
+    Object? clipLimit = freezed,
+    Object? noteEachClipsLimit = freezed,
+    Object? userListLimit = freezed,
+    Object? userEachUserListsLimit = freezed,
+    Object? rateLimitFactor = freezed,
+    Object? avatarDecorationLimit = freezed,
   }) {
     return _then(_value.copyWith(
-      gtlAvailable: null == gtlAvailable
+      gtlAvailable: freezed == gtlAvailable
           ? _value.gtlAvailable
           : gtlAvailable // ignore: cast_nullable_to_non_nullable
-              as bool,
-      ltlAvailable: null == ltlAvailable
+              as bool?,
+      ltlAvailable: freezed == ltlAvailable
           ? _value.ltlAvailable
           : ltlAvailable // ignore: cast_nullable_to_non_nullable
-              as bool,
-      canPublicNote: null == canPublicNote
+              as bool?,
+      canPublicNote: freezed == canPublicNote
           ? _value.canPublicNote
           : canPublicNote // ignore: cast_nullable_to_non_nullable
-              as bool,
-      canEditNote: null == canEditNote
+              as bool?,
+      canEditNote: freezed == canEditNote
           ? _value.canEditNote
           : canEditNote // ignore: cast_nullable_to_non_nullable
-              as bool,
-      canInvite: null == canInvite
+              as bool?,
+      canInvite: freezed == canInvite
           ? _value.canInvite
           : canInvite // ignore: cast_nullable_to_non_nullable
-              as bool,
-      canManageCustomEmojis: null == canManageCustomEmojis
+              as bool?,
+      canManageCustomEmojis: freezed == canManageCustomEmojis
           ? _value.canManageCustomEmojis
           : canManageCustomEmojis // ignore: cast_nullable_to_non_nullable
-              as bool,
-      canHideAds: null == canHideAds
+              as bool?,
+      canHideAds: freezed == canHideAds
           ? _value.canHideAds
           : canHideAds // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       inviteLimit: freezed == inviteLimit
           ? _value.inviteLimit
           : inviteLimit // ignore: cast_nullable_to_non_nullable
@@ -6907,58 +6907,58 @@ class _$UserPoliciesCopyWithImpl<$Res, $Val extends UserPolicies>
           ? _value.inviteLimitCycle
           : inviteLimitCycle // ignore: cast_nullable_to_non_nullable
               as double?,
-      canSearchNotes: null == canSearchNotes
+      canSearchNotes: freezed == canSearchNotes
           ? _value.canSearchNotes
           : canSearchNotes // ignore: cast_nullable_to_non_nullable
-              as bool,
-      canUseTranslator: null == canUseTranslator
+              as bool?,
+      canUseTranslator: freezed == canUseTranslator
           ? _value.canUseTranslator
           : canUseTranslator // ignore: cast_nullable_to_non_nullable
-              as bool,
-      driveCapacityMb: null == driveCapacityMb
+              as bool?,
+      driveCapacityMb: freezed == driveCapacityMb
           ? _value.driveCapacityMb
           : driveCapacityMb // ignore: cast_nullable_to_non_nullable
-              as double,
-      pinLimit: null == pinLimit
+              as double?,
+      pinLimit: freezed == pinLimit
           ? _value.pinLimit
           : pinLimit // ignore: cast_nullable_to_non_nullable
-              as double,
-      antennaLimit: null == antennaLimit
+              as double?,
+      antennaLimit: freezed == antennaLimit
           ? _value.antennaLimit
           : antennaLimit // ignore: cast_nullable_to_non_nullable
-              as double,
-      wordMuteLimit: null == wordMuteLimit
+              as double?,
+      wordMuteLimit: freezed == wordMuteLimit
           ? _value.wordMuteLimit
           : wordMuteLimit // ignore: cast_nullable_to_non_nullable
-              as double,
-      webhookLimit: null == webhookLimit
+              as double?,
+      webhookLimit: freezed == webhookLimit
           ? _value.webhookLimit
           : webhookLimit // ignore: cast_nullable_to_non_nullable
-              as double,
-      clipLimit: null == clipLimit
+              as double?,
+      clipLimit: freezed == clipLimit
           ? _value.clipLimit
           : clipLimit // ignore: cast_nullable_to_non_nullable
-              as double,
-      noteEachClipsLimit: null == noteEachClipsLimit
+              as double?,
+      noteEachClipsLimit: freezed == noteEachClipsLimit
           ? _value.noteEachClipsLimit
           : noteEachClipsLimit // ignore: cast_nullable_to_non_nullable
-              as double,
-      userListLimit: null == userListLimit
+              as double?,
+      userListLimit: freezed == userListLimit
           ? _value.userListLimit
           : userListLimit // ignore: cast_nullable_to_non_nullable
-              as double,
-      userEachUserListsLimit: null == userEachUserListsLimit
+              as double?,
+      userEachUserListsLimit: freezed == userEachUserListsLimit
           ? _value.userEachUserListsLimit
           : userEachUserListsLimit // ignore: cast_nullable_to_non_nullable
-              as double,
-      rateLimitFactor: null == rateLimitFactor
+              as double?,
+      rateLimitFactor: freezed == rateLimitFactor
           ? _value.rateLimitFactor
           : rateLimitFactor // ignore: cast_nullable_to_non_nullable
-              as double,
-      avatarDecorationLimit: null == avatarDecorationLimit
+              as double?,
+      avatarDecorationLimit: freezed == avatarDecorationLimit
           ? _value.avatarDecorationLimit
           : avatarDecorationLimit // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
     ) as $Val);
   }
 }
@@ -6972,28 +6972,28 @@ abstract class _$$UserPoliciesImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {bool gtlAvailable,
-      bool ltlAvailable,
-      bool canPublicNote,
-      bool canEditNote,
-      bool canInvite,
-      bool canManageCustomEmojis,
-      bool canHideAds,
+      {bool? gtlAvailable,
+      bool? ltlAvailable,
+      bool? canPublicNote,
+      bool? canEditNote,
+      bool? canInvite,
+      bool? canManageCustomEmojis,
+      bool? canHideAds,
       double? inviteLimit,
       double? inviteLimitCycle,
-      bool canSearchNotes,
-      bool canUseTranslator,
-      double driveCapacityMb,
-      double pinLimit,
-      double antennaLimit,
-      double wordMuteLimit,
-      double webhookLimit,
-      double clipLimit,
-      double noteEachClipsLimit,
-      double userListLimit,
-      double userEachUserListsLimit,
-      double rateLimitFactor,
-      double avatarDecorationLimit});
+      bool? canSearchNotes,
+      bool? canUseTranslator,
+      double? driveCapacityMb,
+      double? pinLimit,
+      double? antennaLimit,
+      double? wordMuteLimit,
+      double? webhookLimit,
+      double? clipLimit,
+      double? noteEachClipsLimit,
+      double? userListLimit,
+      double? userEachUserListsLimit,
+      double? rateLimitFactor,
+      double? avatarDecorationLimit});
 }
 
 /// @nodoc
@@ -7007,58 +7007,58 @@ class __$$UserPoliciesImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? gtlAvailable = null,
-    Object? ltlAvailable = null,
-    Object? canPublicNote = null,
-    Object? canEditNote = null,
-    Object? canInvite = null,
-    Object? canManageCustomEmojis = null,
-    Object? canHideAds = null,
+    Object? gtlAvailable = freezed,
+    Object? ltlAvailable = freezed,
+    Object? canPublicNote = freezed,
+    Object? canEditNote = freezed,
+    Object? canInvite = freezed,
+    Object? canManageCustomEmojis = freezed,
+    Object? canHideAds = freezed,
     Object? inviteLimit = freezed,
     Object? inviteLimitCycle = freezed,
-    Object? canSearchNotes = null,
-    Object? canUseTranslator = null,
-    Object? driveCapacityMb = null,
-    Object? pinLimit = null,
-    Object? antennaLimit = null,
-    Object? wordMuteLimit = null,
-    Object? webhookLimit = null,
-    Object? clipLimit = null,
-    Object? noteEachClipsLimit = null,
-    Object? userListLimit = null,
-    Object? userEachUserListsLimit = null,
-    Object? rateLimitFactor = null,
-    Object? avatarDecorationLimit = null,
+    Object? canSearchNotes = freezed,
+    Object? canUseTranslator = freezed,
+    Object? driveCapacityMb = freezed,
+    Object? pinLimit = freezed,
+    Object? antennaLimit = freezed,
+    Object? wordMuteLimit = freezed,
+    Object? webhookLimit = freezed,
+    Object? clipLimit = freezed,
+    Object? noteEachClipsLimit = freezed,
+    Object? userListLimit = freezed,
+    Object? userEachUserListsLimit = freezed,
+    Object? rateLimitFactor = freezed,
+    Object? avatarDecorationLimit = freezed,
   }) {
     return _then(_$UserPoliciesImpl(
-      gtlAvailable: null == gtlAvailable
+      gtlAvailable: freezed == gtlAvailable
           ? _value.gtlAvailable
           : gtlAvailable // ignore: cast_nullable_to_non_nullable
-              as bool,
-      ltlAvailable: null == ltlAvailable
+              as bool?,
+      ltlAvailable: freezed == ltlAvailable
           ? _value.ltlAvailable
           : ltlAvailable // ignore: cast_nullable_to_non_nullable
-              as bool,
-      canPublicNote: null == canPublicNote
+              as bool?,
+      canPublicNote: freezed == canPublicNote
           ? _value.canPublicNote
           : canPublicNote // ignore: cast_nullable_to_non_nullable
-              as bool,
-      canEditNote: null == canEditNote
+              as bool?,
+      canEditNote: freezed == canEditNote
           ? _value.canEditNote
           : canEditNote // ignore: cast_nullable_to_non_nullable
-              as bool,
-      canInvite: null == canInvite
+              as bool?,
+      canInvite: freezed == canInvite
           ? _value.canInvite
           : canInvite // ignore: cast_nullable_to_non_nullable
-              as bool,
-      canManageCustomEmojis: null == canManageCustomEmojis
+              as bool?,
+      canManageCustomEmojis: freezed == canManageCustomEmojis
           ? _value.canManageCustomEmojis
           : canManageCustomEmojis // ignore: cast_nullable_to_non_nullable
-              as bool,
-      canHideAds: null == canHideAds
+              as bool?,
+      canHideAds: freezed == canHideAds
           ? _value.canHideAds
           : canHideAds // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       inviteLimit: freezed == inviteLimit
           ? _value.inviteLimit
           : inviteLimit // ignore: cast_nullable_to_non_nullable
@@ -7067,58 +7067,58 @@ class __$$UserPoliciesImplCopyWithImpl<$Res>
           ? _value.inviteLimitCycle
           : inviteLimitCycle // ignore: cast_nullable_to_non_nullable
               as double?,
-      canSearchNotes: null == canSearchNotes
+      canSearchNotes: freezed == canSearchNotes
           ? _value.canSearchNotes
           : canSearchNotes // ignore: cast_nullable_to_non_nullable
-              as bool,
-      canUseTranslator: null == canUseTranslator
+              as bool?,
+      canUseTranslator: freezed == canUseTranslator
           ? _value.canUseTranslator
           : canUseTranslator // ignore: cast_nullable_to_non_nullable
-              as bool,
-      driveCapacityMb: null == driveCapacityMb
+              as bool?,
+      driveCapacityMb: freezed == driveCapacityMb
           ? _value.driveCapacityMb
           : driveCapacityMb // ignore: cast_nullable_to_non_nullable
-              as double,
-      pinLimit: null == pinLimit
+              as double?,
+      pinLimit: freezed == pinLimit
           ? _value.pinLimit
           : pinLimit // ignore: cast_nullable_to_non_nullable
-              as double,
-      antennaLimit: null == antennaLimit
+              as double?,
+      antennaLimit: freezed == antennaLimit
           ? _value.antennaLimit
           : antennaLimit // ignore: cast_nullable_to_non_nullable
-              as double,
-      wordMuteLimit: null == wordMuteLimit
+              as double?,
+      wordMuteLimit: freezed == wordMuteLimit
           ? _value.wordMuteLimit
           : wordMuteLimit // ignore: cast_nullable_to_non_nullable
-              as double,
-      webhookLimit: null == webhookLimit
+              as double?,
+      webhookLimit: freezed == webhookLimit
           ? _value.webhookLimit
           : webhookLimit // ignore: cast_nullable_to_non_nullable
-              as double,
-      clipLimit: null == clipLimit
+              as double?,
+      clipLimit: freezed == clipLimit
           ? _value.clipLimit
           : clipLimit // ignore: cast_nullable_to_non_nullable
-              as double,
-      noteEachClipsLimit: null == noteEachClipsLimit
+              as double?,
+      noteEachClipsLimit: freezed == noteEachClipsLimit
           ? _value.noteEachClipsLimit
           : noteEachClipsLimit // ignore: cast_nullable_to_non_nullable
-              as double,
-      userListLimit: null == userListLimit
+              as double?,
+      userListLimit: freezed == userListLimit
           ? _value.userListLimit
           : userListLimit // ignore: cast_nullable_to_non_nullable
-              as double,
-      userEachUserListsLimit: null == userEachUserListsLimit
+              as double?,
+      userEachUserListsLimit: freezed == userEachUserListsLimit
           ? _value.userEachUserListsLimit
           : userEachUserListsLimit // ignore: cast_nullable_to_non_nullable
-              as double,
-      rateLimitFactor: null == rateLimitFactor
+              as double?,
+      rateLimitFactor: freezed == rateLimitFactor
           ? _value.rateLimitFactor
           : rateLimitFactor // ignore: cast_nullable_to_non_nullable
-              as double,
-      avatarDecorationLimit: null == avatarDecorationLimit
+              as double?,
+      avatarDecorationLimit: freezed == avatarDecorationLimit
           ? _value.avatarDecorationLimit
           : avatarDecorationLimit // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
     ));
   }
 }
@@ -7127,80 +7127,76 @@ class __$$UserPoliciesImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$UserPoliciesImpl implements _UserPolicies {
   const _$UserPoliciesImpl(
-      {required this.gtlAvailable,
-      required this.ltlAvailable,
-      required this.canPublicNote,
-      this.canEditNote = false,
-      required this.canInvite,
-      required this.canManageCustomEmojis,
-      required this.canHideAds,
+      {this.gtlAvailable,
+      this.ltlAvailable,
+      this.canPublicNote,
+      this.canEditNote,
+      this.canInvite,
+      this.canManageCustomEmojis,
+      this.canHideAds,
       this.inviteLimit,
       this.inviteLimitCycle,
-      this.canSearchNotes = false,
-      this.canUseTranslator = false,
-      required this.driveCapacityMb,
-      required this.pinLimit,
-      required this.antennaLimit,
-      required this.wordMuteLimit,
-      required this.webhookLimit,
-      required this.clipLimit,
-      required this.noteEachClipsLimit,
-      required this.userListLimit,
-      required this.userEachUserListsLimit,
-      required this.rateLimitFactor,
-      this.avatarDecorationLimit = 1.0});
+      this.canSearchNotes,
+      this.canUseTranslator,
+      this.driveCapacityMb,
+      this.pinLimit,
+      this.antennaLimit,
+      this.wordMuteLimit,
+      this.webhookLimit,
+      this.clipLimit,
+      this.noteEachClipsLimit,
+      this.userListLimit,
+      this.userEachUserListsLimit,
+      this.rateLimitFactor,
+      this.avatarDecorationLimit});
 
   factory _$UserPoliciesImpl.fromJson(Map<String, dynamic> json) =>
       _$$UserPoliciesImplFromJson(json);
 
   @override
-  final bool gtlAvailable;
+  final bool? gtlAvailable;
   @override
-  final bool ltlAvailable;
+  final bool? ltlAvailable;
   @override
-  final bool canPublicNote;
+  final bool? canPublicNote;
   @override
-  @JsonKey()
-  final bool canEditNote;
+  final bool? canEditNote;
   @override
-  final bool canInvite;
+  final bool? canInvite;
   @override
-  final bool canManageCustomEmojis;
+  final bool? canManageCustomEmojis;
   @override
-  final bool canHideAds;
+  final bool? canHideAds;
   @override
   final double? inviteLimit;
   @override
   final double? inviteLimitCycle;
   @override
-  @JsonKey()
-  final bool canSearchNotes;
+  final bool? canSearchNotes;
   @override
-  @JsonKey()
-  final bool canUseTranslator;
+  final bool? canUseTranslator;
   @override
-  final double driveCapacityMb;
+  final double? driveCapacityMb;
   @override
-  final double pinLimit;
+  final double? pinLimit;
   @override
-  final double antennaLimit;
+  final double? antennaLimit;
   @override
-  final double wordMuteLimit;
+  final double? wordMuteLimit;
   @override
-  final double webhookLimit;
+  final double? webhookLimit;
   @override
-  final double clipLimit;
+  final double? clipLimit;
   @override
-  final double noteEachClipsLimit;
+  final double? noteEachClipsLimit;
   @override
-  final double userListLimit;
+  final double? userListLimit;
   @override
-  final double userEachUserListsLimit;
+  final double? userEachUserListsLimit;
   @override
-  final double rateLimitFactor;
+  final double? rateLimitFactor;
   @override
-  @JsonKey()
-  final double avatarDecorationLimit;
+  final double? avatarDecorationLimit;
 
   @override
   String toString() {
@@ -7302,76 +7298,76 @@ class _$UserPoliciesImpl implements _UserPolicies {
 
 abstract class _UserPolicies implements UserPolicies {
   const factory _UserPolicies(
-      {required final bool gtlAvailable,
-      required final bool ltlAvailable,
-      required final bool canPublicNote,
-      final bool canEditNote,
-      required final bool canInvite,
-      required final bool canManageCustomEmojis,
-      required final bool canHideAds,
+      {final bool? gtlAvailable,
+      final bool? ltlAvailable,
+      final bool? canPublicNote,
+      final bool? canEditNote,
+      final bool? canInvite,
+      final bool? canManageCustomEmojis,
+      final bool? canHideAds,
       final double? inviteLimit,
       final double? inviteLimitCycle,
-      final bool canSearchNotes,
-      final bool canUseTranslator,
-      required final double driveCapacityMb,
-      required final double pinLimit,
-      required final double antennaLimit,
-      required final double wordMuteLimit,
-      required final double webhookLimit,
-      required final double clipLimit,
-      required final double noteEachClipsLimit,
-      required final double userListLimit,
-      required final double userEachUserListsLimit,
-      required final double rateLimitFactor,
-      final double avatarDecorationLimit}) = _$UserPoliciesImpl;
+      final bool? canSearchNotes,
+      final bool? canUseTranslator,
+      final double? driveCapacityMb,
+      final double? pinLimit,
+      final double? antennaLimit,
+      final double? wordMuteLimit,
+      final double? webhookLimit,
+      final double? clipLimit,
+      final double? noteEachClipsLimit,
+      final double? userListLimit,
+      final double? userEachUserListsLimit,
+      final double? rateLimitFactor,
+      final double? avatarDecorationLimit}) = _$UserPoliciesImpl;
 
   factory _UserPolicies.fromJson(Map<String, dynamic> json) =
       _$UserPoliciesImpl.fromJson;
 
   @override
-  bool get gtlAvailable;
+  bool? get gtlAvailable;
   @override
-  bool get ltlAvailable;
+  bool? get ltlAvailable;
   @override
-  bool get canPublicNote;
+  bool? get canPublicNote;
   @override
-  bool get canEditNote;
+  bool? get canEditNote;
   @override
-  bool get canInvite;
+  bool? get canInvite;
   @override
-  bool get canManageCustomEmojis;
+  bool? get canManageCustomEmojis;
   @override
-  bool get canHideAds;
+  bool? get canHideAds;
   @override
   double? get inviteLimit;
   @override
   double? get inviteLimitCycle;
   @override
-  bool get canSearchNotes;
+  bool? get canSearchNotes;
   @override
-  bool get canUseTranslator;
+  bool? get canUseTranslator;
   @override
-  double get driveCapacityMb;
+  double? get driveCapacityMb;
   @override
-  double get pinLimit;
+  double? get pinLimit;
   @override
-  double get antennaLimit;
+  double? get antennaLimit;
   @override
-  double get wordMuteLimit;
+  double? get wordMuteLimit;
   @override
-  double get webhookLimit;
+  double? get webhookLimit;
   @override
-  double get clipLimit;
+  double? get clipLimit;
   @override
-  double get noteEachClipsLimit;
+  double? get noteEachClipsLimit;
   @override
-  double get userListLimit;
+  double? get userListLimit;
   @override
-  double get userEachUserListsLimit;
+  double? get userEachUserListsLimit;
   @override
-  double get rateLimitFactor;
+  double? get rateLimitFactor;
   @override
-  double get avatarDecorationLimit;
+  double? get avatarDecorationLimit;
   @override
   @JsonKey(ignore: true)
   _$$UserPoliciesImplCopyWith<_$UserPoliciesImpl> get copyWith =>

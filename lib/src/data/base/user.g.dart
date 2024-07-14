@@ -1034,43 +1034,42 @@ _$UserPoliciesImpl _$$UserPoliciesImplFromJson(Map<String, dynamic> json) =>
       json,
       ($checkedConvert) {
         final val = _$UserPoliciesImpl(
-          gtlAvailable: $checkedConvert('gtlAvailable', (v) => v as bool),
-          ltlAvailable: $checkedConvert('ltlAvailable', (v) => v as bool),
-          canPublicNote: $checkedConvert('canPublicNote', (v) => v as bool),
-          canEditNote:
-              $checkedConvert('canEditNote', (v) => v as bool? ?? false),
-          canInvite: $checkedConvert('canInvite', (v) => v as bool),
+          gtlAvailable: $checkedConvert('gtlAvailable', (v) => v as bool?),
+          ltlAvailable: $checkedConvert('ltlAvailable', (v) => v as bool?),
+          canPublicNote: $checkedConvert('canPublicNote', (v) => v as bool?),
+          canEditNote: $checkedConvert('canEditNote', (v) => v as bool?),
+          canInvite: $checkedConvert('canInvite', (v) => v as bool?),
           canManageCustomEmojis:
-              $checkedConvert('canManageCustomEmojis', (v) => v as bool),
-          canHideAds: $checkedConvert('canHideAds', (v) => v as bool),
+              $checkedConvert('canManageCustomEmojis', (v) => v as bool?),
+          canHideAds: $checkedConvert('canHideAds', (v) => v as bool?),
           inviteLimit:
               $checkedConvert('inviteLimit', (v) => (v as num?)?.toDouble()),
           inviteLimitCycle: $checkedConvert(
               'inviteLimitCycle', (v) => (v as num?)?.toDouble()),
-          canSearchNotes:
-              $checkedConvert('canSearchNotes', (v) => v as bool? ?? false),
+          canSearchNotes: $checkedConvert('canSearchNotes', (v) => v as bool?),
           canUseTranslator:
-              $checkedConvert('canUseTranslator', (v) => v as bool? ?? false),
-          driveCapacityMb:
-              $checkedConvert('driveCapacityMb', (v) => (v as num).toDouble()),
-          pinLimit: $checkedConvert('pinLimit', (v) => (v as num).toDouble()),
+              $checkedConvert('canUseTranslator', (v) => v as bool?),
+          driveCapacityMb: $checkedConvert(
+              'driveCapacityMb', (v) => (v as num?)?.toDouble()),
+          pinLimit: $checkedConvert('pinLimit', (v) => (v as num?)?.toDouble()),
           antennaLimit:
-              $checkedConvert('antennaLimit', (v) => (v as num).toDouble()),
+              $checkedConvert('antennaLimit', (v) => (v as num?)?.toDouble()),
           wordMuteLimit:
-              $checkedConvert('wordMuteLimit', (v) => (v as num).toDouble()),
+              $checkedConvert('wordMuteLimit', (v) => (v as num?)?.toDouble()),
           webhookLimit:
-              $checkedConvert('webhookLimit', (v) => (v as num).toDouble()),
-          clipLimit: $checkedConvert('clipLimit', (v) => (v as num).toDouble()),
+              $checkedConvert('webhookLimit', (v) => (v as num?)?.toDouble()),
+          clipLimit:
+              $checkedConvert('clipLimit', (v) => (v as num?)?.toDouble()),
           noteEachClipsLimit: $checkedConvert(
-              'noteEachClipsLimit', (v) => (v as num).toDouble()),
+              'noteEachClipsLimit', (v) => (v as num?)?.toDouble()),
           userListLimit:
-              $checkedConvert('userListLimit', (v) => (v as num).toDouble()),
+              $checkedConvert('userListLimit', (v) => (v as num?)?.toDouble()),
           userEachUserListsLimit: $checkedConvert(
-              'userEachUserListsLimit', (v) => (v as num).toDouble()),
-          rateLimitFactor:
-              $checkedConvert('rateLimitFactor', (v) => (v as num).toDouble()),
+              'userEachUserListsLimit', (v) => (v as num?)?.toDouble()),
+          rateLimitFactor: $checkedConvert(
+              'rateLimitFactor', (v) => (v as num?)?.toDouble()),
           avatarDecorationLimit: $checkedConvert(
-              'avatarDecorationLimit', (v) => (v as num?)?.toDouble() ?? 1.0),
+              'avatarDecorationLimit', (v) => (v as num?)?.toDouble()),
         );
         return val;
       },
