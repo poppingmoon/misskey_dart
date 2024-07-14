@@ -29,9 +29,9 @@ _$NoteImpl _$$NoteImplFromJson(Map<String, dynamic> json) => $checkedCreate(
                   unknownValue: JsonKey.nullForUndefinedEnumValue)),
           localOnly: $checkedConvert('localOnly', (v) => v as bool? ?? false),
           renoteCount:
-              $checkedConvert('renoteCount', (v) => (v as num).toInt()),
+              $checkedConvert('renoteCount', (v) => (v as num?)?.toInt() ?? 0),
           repliesCount:
-              $checkedConvert('repliesCount', (v) => (v as num).toInt()),
+              $checkedConvert('repliesCount', (v) => (v as num?)?.toInt() ?? 0),
           reactionCount:
               $checkedConvert('reactionCount', (v) => (v as num?)?.toInt()),
           reactions: $checkedConvert(

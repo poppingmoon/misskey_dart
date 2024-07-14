@@ -22,8 +22,8 @@ class Note with _$Note {
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     NoteVisibility? visibility,
     @Default(false) bool localOnly,
-    required int renoteCount,
-    required int repliesCount,
+    @Default(0) int renoteCount,
+    @Default(0) int repliesCount,
     int? reactionCount,
     required Map<String, int> reactions,
     @EmojisConverter() @Default({}) Map<String, String> reactionEmojis,

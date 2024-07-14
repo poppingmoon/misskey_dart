@@ -598,8 +598,8 @@ class _$NoteImpl implements _Note {
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.visibility,
       this.localOnly = false,
-      required this.renoteCount,
-      required this.repliesCount,
+      this.renoteCount = 0,
+      this.repliesCount = 0,
       this.reactionCount,
       required final Map<String, int> reactions,
       @EmojisConverter() final Map<String, String> reactionEmojis = const {},
@@ -658,8 +658,10 @@ class _$NoteImpl implements _Note {
   @JsonKey()
   final bool localOnly;
   @override
+  @JsonKey()
   final int renoteCount;
   @override
+  @JsonKey()
   final int repliesCount;
   @override
   final int? reactionCount;
@@ -888,8 +890,8 @@ abstract class _Note implements Note {
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final NoteVisibility? visibility,
       final bool localOnly,
-      required final int renoteCount,
-      required final int repliesCount,
+      final int renoteCount,
+      final int repliesCount,
       final int? reactionCount,
       required final Map<String, int> reactions,
       @EmojisConverter() final Map<String, String> reactionEmojis,
