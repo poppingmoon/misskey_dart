@@ -1,0 +1,14 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+
+part 'sw_unregister_request.freezed.dart';
+part 'sw_unregister_request.g.dart';
+
+@freezed
+class SwUnregisterRequest with _$SwUnregisterRequest {
+  const factory SwUnregisterRequest({
+    required String endpoint,
+  }) = _SwUnregisterRequest;
+
+  factory SwUnregisterRequest.fromJson(Map<String, Object?> json) =>
+      _$SwUnregisterRequestFromJson(json);
+}

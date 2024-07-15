@@ -7,6 +7,7 @@ import 'package:misskey_dart/src/enums/broadcast_event_type.dart';
 import 'package:misskey_dart/src/enums/channel.dart';
 import 'package:misskey_dart/src/enums/channel_event_type.dart';
 import 'package:misskey_dart/src/enums/note_updated_event_type.dart';
+import 'package:misskey_dart/src/misskey_sw.dart';
 import 'package:misskey_dart/src/services/api_service.dart';
 
 class Misskey {
@@ -37,6 +38,7 @@ class Misskey {
   late final MisskeyFlash flash;
   late final MisskeyReversi reversi;
   late final MisskeyBubbleGame bubbleGame;
+  late final MisskeySw sw;
 
   Misskey({
     this.token,
@@ -79,6 +81,7 @@ class Misskey {
     flash = MisskeyFlash(apiService: apiService);
     bubbleGame = MisskeyBubbleGame(apiService: apiService);
     reversi = MisskeyReversi(apiService: apiService);
+    sw = MisskeySw(apiService: apiService);
   }
 
   /// サーバーからのお知らせを取得します。
