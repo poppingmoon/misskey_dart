@@ -22,7 +22,6 @@ Misskey getTestClient(String? token) {
     token: token,
     host: env["TEST_HOST"]!,
     apiUrl: env["TEST_API_URL"],
-    streamingUrl: env["TEST_STREAMING_URL"],
   );
 }
 
