@@ -373,8 +373,8 @@ class MeDetailed with _$MeDetailed implements UserDetailed {
     @Default(false) bool hasPendingReceivedFollowRequest,
     int? unreadNotificationsCount,
     @Default([]) List<AnnouncementsResponse> unreadAnnouncements,
-    @MuteWordsConverter() @Default([]) List<MuteWord> mutedWords,
-    @MuteWordsConverter() @Default([]) List<MuteWord> hardMutedWords,
+    @MuteWordsConverter() List<MuteWord>? mutedWords,
+    @MuteWordsConverter() List<MuteWord>? hardMutedWords,
     // Added in Misskey 12.99.0
     @Default([]) List<String> mutedInstances,
     @Deprecated("Deprecated in Misskey 2023.9.2")
@@ -512,11 +512,15 @@ enum TwoFactorBackupCodesStock {
   none,
 }
 
-class MuteWord {
-  final String? regExp;
-  final List<String>? content;
+@freezed
+class MuteWord with _$MuteWord {
+  const factory MuteWord({
+    String? regExp,
+    List<String>? content,
+  }) = _MuteWord;
 
-  const MuteWord({this.regExp, this.content});
+  factory MuteWord.fromJson(Map<String, Object?> json) =>
+      _$MuteWordFromJson(json);
 }
 
 @freezed

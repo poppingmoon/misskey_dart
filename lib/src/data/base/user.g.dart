@@ -730,18 +730,14 @@ _$MeDetailedImpl _$$MeDetailedImplFromJson(Map<String, dynamic> json) =>
                   const []),
           mutedWords: $checkedConvert(
               'mutedWords',
-              (v) =>
-                  (v as List<dynamic>?)
-                      ?.map(const MuteWordsConverter().fromJson)
-                      .toList() ??
-                  const []),
+              (v) => (v as List<dynamic>?)
+                  ?.map(const MuteWordsConverter().fromJson)
+                  .toList()),
           hardMutedWords: $checkedConvert(
               'hardMutedWords',
-              (v) =>
-                  (v as List<dynamic>?)
-                      ?.map(const MuteWordsConverter().fromJson)
-                      .toList() ??
-                  const []),
+              (v) => (v as List<dynamic>?)
+                  ?.map(const MuteWordsConverter().fromJson)
+                  .toList()),
           mutedInstances: $checkedConvert(
               'mutedInstances',
               (v) =>
@@ -863,9 +859,9 @@ Map<String, dynamic> _$$MeDetailedImplToJson(_$MeDetailedImpl instance) =>
       'unreadAnnouncements':
           instance.unreadAnnouncements.map((e) => e.toJson()).toList(),
       'mutedWords':
-          instance.mutedWords.map(const MuteWordsConverter().toJson).toList(),
+          instance.mutedWords?.map(const MuteWordsConverter().toJson).toList(),
       'hardMutedWords': instance.hardMutedWords
-          .map(const MuteWordsConverter().toJson)
+          ?.map(const MuteWordsConverter().toJson)
           .toList(),
       'mutedInstances': instance.mutedInstances,
       'mutingNotificationTypes': instance.mutingNotificationTypes,
@@ -1118,6 +1114,26 @@ Map<String, dynamic> _$$UserFieldImplToJson(_$UserFieldImpl instance) =>
     <String, dynamic>{
       'name': instance.name,
       'value': instance.value,
+    };
+
+_$MuteWordImpl _$$MuteWordImplFromJson(Map<String, dynamic> json) =>
+    $checkedCreate(
+      r'_$MuteWordImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$MuteWordImpl(
+          regExp: $checkedConvert('regExp', (v) => v as String?),
+          content: $checkedConvert('content',
+              (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
+        );
+        return val;
+      },
+    );
+
+Map<String, dynamic> _$$MuteWordImplToJson(_$MuteWordImpl instance) =>
+    <String, dynamic>{
+      'regExp': instance.regExp,
+      'content': instance.content,
     };
 
 _$NotificationRecieveConfigsImpl _$$NotificationRecieveConfigsImplFromJson(

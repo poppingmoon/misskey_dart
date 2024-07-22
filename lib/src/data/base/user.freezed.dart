@@ -3554,9 +3554,9 @@ mixin _$MeDetailed {
   List<AnnouncementsResponse> get unreadAnnouncements =>
       throw _privateConstructorUsedError;
   @MuteWordsConverter()
-  List<MuteWord> get mutedWords => throw _privateConstructorUsedError;
+  List<MuteWord>? get mutedWords => throw _privateConstructorUsedError;
   @MuteWordsConverter()
-  List<MuteWord> get hardMutedWords =>
+  List<MuteWord>? get hardMutedWords =>
       throw _privateConstructorUsedError; // Added in Misskey 12.99.0
   List<String> get mutedInstances => throw _privateConstructorUsedError;
   @Deprecated("Deprecated in Misskey 2023.9.2")
@@ -3664,8 +3664,8 @@ abstract class $MeDetailedCopyWith<$Res> {
       bool hasPendingReceivedFollowRequest,
       int? unreadNotificationsCount,
       List<AnnouncementsResponse> unreadAnnouncements,
-      @MuteWordsConverter() List<MuteWord> mutedWords,
-      @MuteWordsConverter() List<MuteWord> hardMutedWords,
+      @MuteWordsConverter() List<MuteWord>? mutedWords,
+      @MuteWordsConverter() List<MuteWord>? hardMutedWords,
       List<String> mutedInstances,
       @Deprecated("Deprecated in Misskey 2023.9.2")
       List<String>? mutingNotificationTypes,
@@ -3766,8 +3766,8 @@ class _$MeDetailedCopyWithImpl<$Res, $Val extends MeDetailed>
     Object? hasPendingReceivedFollowRequest = null,
     Object? unreadNotificationsCount = freezed,
     Object? unreadAnnouncements = null,
-    Object? mutedWords = null,
-    Object? hardMutedWords = null,
+    Object? mutedWords = freezed,
+    Object? hardMutedWords = freezed,
     Object? mutedInstances = null,
     Object? mutingNotificationTypes = freezed,
     Object? notificationRecieveConfig = null,
@@ -4069,14 +4069,14 @@ class _$MeDetailedCopyWithImpl<$Res, $Val extends MeDetailed>
           ? _value.unreadAnnouncements
           : unreadAnnouncements // ignore: cast_nullable_to_non_nullable
               as List<AnnouncementsResponse>,
-      mutedWords: null == mutedWords
+      mutedWords: freezed == mutedWords
           ? _value.mutedWords
           : mutedWords // ignore: cast_nullable_to_non_nullable
-              as List<MuteWord>,
-      hardMutedWords: null == hardMutedWords
+              as List<MuteWord>?,
+      hardMutedWords: freezed == hardMutedWords
           ? _value.hardMutedWords
           : hardMutedWords // ignore: cast_nullable_to_non_nullable
-              as List<MuteWord>,
+              as List<MuteWord>?,
       mutedInstances: null == mutedInstances
           ? _value.mutedInstances
           : mutedInstances // ignore: cast_nullable_to_non_nullable
@@ -4230,8 +4230,8 @@ abstract class _$$MeDetailedImplCopyWith<$Res>
       bool hasPendingReceivedFollowRequest,
       int? unreadNotificationsCount,
       List<AnnouncementsResponse> unreadAnnouncements,
-      @MuteWordsConverter() List<MuteWord> mutedWords,
-      @MuteWordsConverter() List<MuteWord> hardMutedWords,
+      @MuteWordsConverter() List<MuteWord>? mutedWords,
+      @MuteWordsConverter() List<MuteWord>? hardMutedWords,
       List<String> mutedInstances,
       @Deprecated("Deprecated in Misskey 2023.9.2")
       List<String>? mutingNotificationTypes,
@@ -4333,8 +4333,8 @@ class __$$MeDetailedImplCopyWithImpl<$Res>
     Object? hasPendingReceivedFollowRequest = null,
     Object? unreadNotificationsCount = freezed,
     Object? unreadAnnouncements = null,
-    Object? mutedWords = null,
-    Object? hardMutedWords = null,
+    Object? mutedWords = freezed,
+    Object? hardMutedWords = freezed,
     Object? mutedInstances = null,
     Object? mutingNotificationTypes = freezed,
     Object? notificationRecieveConfig = null,
@@ -4636,14 +4636,14 @@ class __$$MeDetailedImplCopyWithImpl<$Res>
           ? _value._unreadAnnouncements
           : unreadAnnouncements // ignore: cast_nullable_to_non_nullable
               as List<AnnouncementsResponse>,
-      mutedWords: null == mutedWords
+      mutedWords: freezed == mutedWords
           ? _value._mutedWords
           : mutedWords // ignore: cast_nullable_to_non_nullable
-              as List<MuteWord>,
-      hardMutedWords: null == hardMutedWords
+              as List<MuteWord>?,
+      hardMutedWords: freezed == hardMutedWords
           ? _value._hardMutedWords
           : hardMutedWords // ignore: cast_nullable_to_non_nullable
-              as List<MuteWord>,
+              as List<MuteWord>?,
       mutedInstances: null == mutedInstances
           ? _value._mutedInstances
           : mutedInstances // ignore: cast_nullable_to_non_nullable
@@ -4759,8 +4759,8 @@ class _$MeDetailedImpl implements _MeDetailed {
       this.hasPendingReceivedFollowRequest = false,
       this.unreadNotificationsCount,
       final List<AnnouncementsResponse> unreadAnnouncements = const [],
-      @MuteWordsConverter() final List<MuteWord> mutedWords = const [],
-      @MuteWordsConverter() final List<MuteWord> hardMutedWords = const [],
+      @MuteWordsConverter() final List<MuteWord>? mutedWords,
+      @MuteWordsConverter() final List<MuteWord>? hardMutedWords,
       final List<String> mutedInstances = const [],
       @Deprecated("Deprecated in Misskey 2023.9.2")
       final List<String>? mutingNotificationTypes,
@@ -5077,24 +5077,26 @@ class _$MeDetailedImpl implements _MeDetailed {
     return EqualUnmodifiableListView(_unreadAnnouncements);
   }
 
-  final List<MuteWord> _mutedWords;
+  final List<MuteWord>? _mutedWords;
   @override
-  @JsonKey()
   @MuteWordsConverter()
-  List<MuteWord> get mutedWords {
+  List<MuteWord>? get mutedWords {
+    final value = _mutedWords;
+    if (value == null) return null;
     if (_mutedWords is EqualUnmodifiableListView) return _mutedWords;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_mutedWords);
+    return EqualUnmodifiableListView(value);
   }
 
-  final List<MuteWord> _hardMutedWords;
+  final List<MuteWord>? _hardMutedWords;
   @override
-  @JsonKey()
   @MuteWordsConverter()
-  List<MuteWord> get hardMutedWords {
+  List<MuteWord>? get hardMutedWords {
+    final value = _hardMutedWords;
+    if (value == null) return null;
     if (_hardMutedWords is EqualUnmodifiableListView) return _hardMutedWords;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_hardMutedWords);
+    return EqualUnmodifiableListView(value);
   }
 
 // Added in Misskey 12.99.0
@@ -5473,8 +5475,8 @@ abstract class _MeDetailed implements MeDetailed {
       final bool hasPendingReceivedFollowRequest,
       final int? unreadNotificationsCount,
       final List<AnnouncementsResponse> unreadAnnouncements,
-      @MuteWordsConverter() final List<MuteWord> mutedWords,
-      @MuteWordsConverter() final List<MuteWord> hardMutedWords,
+      @MuteWordsConverter() final List<MuteWord>? mutedWords,
+      @MuteWordsConverter() final List<MuteWord>? hardMutedWords,
       final List<String> mutedInstances,
       @Deprecated("Deprecated in Misskey 2023.9.2")
       final List<String>? mutingNotificationTypes,
@@ -5653,10 +5655,10 @@ abstract class _MeDetailed implements MeDetailed {
   List<AnnouncementsResponse> get unreadAnnouncements;
   @override
   @MuteWordsConverter()
-  List<MuteWord> get mutedWords;
+  List<MuteWord>? get mutedWords;
   @override
   @MuteWordsConverter()
-  List<MuteWord> get hardMutedWords;
+  List<MuteWord>? get hardMutedWords;
   @override // Added in Misskey 12.99.0
   List<String> get mutedInstances;
   @override
@@ -7524,6 +7526,167 @@ abstract class _UserField implements UserField {
   @override
   @JsonKey(ignore: true)
   _$$UserFieldImplCopyWith<_$UserFieldImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+MuteWord _$MuteWordFromJson(Map<String, dynamic> json) {
+  return _MuteWord.fromJson(json);
+}
+
+/// @nodoc
+mixin _$MuteWord {
+  String? get regExp => throw _privateConstructorUsedError;
+  List<String>? get content => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $MuteWordCopyWith<MuteWord> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $MuteWordCopyWith<$Res> {
+  factory $MuteWordCopyWith(MuteWord value, $Res Function(MuteWord) then) =
+      _$MuteWordCopyWithImpl<$Res, MuteWord>;
+  @useResult
+  $Res call({String? regExp, List<String>? content});
+}
+
+/// @nodoc
+class _$MuteWordCopyWithImpl<$Res, $Val extends MuteWord>
+    implements $MuteWordCopyWith<$Res> {
+  _$MuteWordCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? regExp = freezed,
+    Object? content = freezed,
+  }) {
+    return _then(_value.copyWith(
+      regExp: freezed == regExp
+          ? _value.regExp
+          : regExp // ignore: cast_nullable_to_non_nullable
+              as String?,
+      content: freezed == content
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$MuteWordImplCopyWith<$Res>
+    implements $MuteWordCopyWith<$Res> {
+  factory _$$MuteWordImplCopyWith(
+          _$MuteWordImpl value, $Res Function(_$MuteWordImpl) then) =
+      __$$MuteWordImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String? regExp, List<String>? content});
+}
+
+/// @nodoc
+class __$$MuteWordImplCopyWithImpl<$Res>
+    extends _$MuteWordCopyWithImpl<$Res, _$MuteWordImpl>
+    implements _$$MuteWordImplCopyWith<$Res> {
+  __$$MuteWordImplCopyWithImpl(
+      _$MuteWordImpl _value, $Res Function(_$MuteWordImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? regExp = freezed,
+    Object? content = freezed,
+  }) {
+    return _then(_$MuteWordImpl(
+      regExp: freezed == regExp
+          ? _value.regExp
+          : regExp // ignore: cast_nullable_to_non_nullable
+              as String?,
+      content: freezed == content
+          ? _value._content
+          : content // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$MuteWordImpl implements _MuteWord {
+  const _$MuteWordImpl({this.regExp, final List<String>? content})
+      : _content = content;
+
+  factory _$MuteWordImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MuteWordImplFromJson(json);
+
+  @override
+  final String? regExp;
+  final List<String>? _content;
+  @override
+  List<String>? get content {
+    final value = _content;
+    if (value == null) return null;
+    if (_content is EqualUnmodifiableListView) return _content;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'MuteWord(regExp: $regExp, content: $content)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$MuteWordImpl &&
+            (identical(other.regExp, regExp) || other.regExp == regExp) &&
+            const DeepCollectionEquality().equals(other._content, _content));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, regExp, const DeepCollectionEquality().hash(_content));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$MuteWordImplCopyWith<_$MuteWordImpl> get copyWith =>
+      __$$MuteWordImplCopyWithImpl<_$MuteWordImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$MuteWordImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _MuteWord implements MuteWord {
+  const factory _MuteWord({final String? regExp, final List<String>? content}) =
+      _$MuteWordImpl;
+
+  factory _MuteWord.fromJson(Map<String, dynamic> json) =
+      _$MuteWordImpl.fromJson;
+
+  @override
+  String? get regExp;
+  @override
+  List<String>? get content;
+  @override
+  @JsonKey(ignore: true)
+  _$$MuteWordImplCopyWith<_$MuteWordImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
