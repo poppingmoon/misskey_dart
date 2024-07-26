@@ -45,6 +45,7 @@ void main() async {
     final channel =
         await userClient.channels.create(ChannelsCreateRequest(name: "test"));
     await adminClient.createNote(channelId: channel.id);
+    await Future.delayed(Duration(seconds: 1));
     final response = await userClient.channels.featured();
     expect(response.map((e) => e.id), contains(channel.id));
   });
