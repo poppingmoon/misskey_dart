@@ -25,8 +25,12 @@ mixin _$FollowingUpdateAllRequest {
       throw _privateConstructorUsedError;
   bool? get withReplies => throw _privateConstructorUsedError;
 
+  /// Serializes this FollowingUpdateAllRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FollowingUpdateAllRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FollowingUpdateAllRequestCopyWith<FollowingUpdateAllRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$FollowingUpdateAllRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FollowingUpdateAllRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -92,6 +98,8 @@ class __$$FollowingUpdateAllRequestImplCopyWithImpl<$Res>
       $Res Function(_$FollowingUpdateAllRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FollowingUpdateAllRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -139,11 +147,13 @@ class _$FollowingUpdateAllRequestImpl implements _FollowingUpdateAllRequest {
                 other.withReplies == withReplies));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, notify, withReplies);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FollowingUpdateAllRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FollowingUpdateAllRequestImplCopyWith<_$FollowingUpdateAllRequestImpl>
@@ -170,8 +180,11 @@ abstract class _FollowingUpdateAllRequest implements FollowingUpdateAllRequest {
   FollowingUpdateAllNotifyType? get notify;
   @override
   bool? get withReplies;
+
+  /// Create a copy of FollowingUpdateAllRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FollowingUpdateAllRequestImplCopyWith<_$FollowingUpdateAllRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

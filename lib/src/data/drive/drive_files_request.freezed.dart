@@ -26,8 +26,12 @@ mixin _$DriveFilesRequest {
   String? get folderId => throw _privateConstructorUsedError;
   String? get type => throw _privateConstructorUsedError;
 
+  /// Serializes this DriveFilesRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DriveFilesRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DriveFilesRequestCopyWith<DriveFilesRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -56,6 +60,8 @@ class _$DriveFilesRequestCopyWithImpl<$Res, $Val extends DriveFilesRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DriveFilesRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -114,6 +120,8 @@ class __$$DriveFilesRequestImplCopyWithImpl<$Res>
       $Res Function(_$DriveFilesRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DriveFilesRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -186,12 +194,14 @@ class _$DriveFilesRequestImpl implements _DriveFilesRequest {
             (identical(other.type, type) || other.type == type));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, limit, sinceId, untilId, folderId, type);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DriveFilesRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DriveFilesRequestImplCopyWith<_$DriveFilesRequestImpl> get copyWith =>
@@ -227,8 +237,11 @@ abstract class _DriveFilesRequest implements DriveFilesRequest {
   String? get folderId;
   @override
   String? get type;
+
+  /// Create a copy of DriveFilesRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DriveFilesRequestImplCopyWith<_$DriveFilesRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

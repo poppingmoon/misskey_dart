@@ -30,8 +30,12 @@ mixin _$NotesSearchByTagRequest {
   String? get untilId => throw _privateConstructorUsedError;
   int? get limit => throw _privateConstructorUsedError;
 
+  /// Serializes this NotesSearchByTagRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotesSearchByTagRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesSearchByTagRequestCopyWith<NotesSearchByTagRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -64,6 +68,8 @@ class _$NotesSearchByTagRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotesSearchByTagRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -143,6 +149,8 @@ class __$$NotesSearchByTagRequestImplCopyWithImpl<$Res>
       $Res Function(_$NotesSearchByTagRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotesSearchByTagRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -246,12 +254,14 @@ class _$NotesSearchByTagRequestImpl implements _NotesSearchByTagRequest {
             (identical(other.limit, limit) || other.limit == limit));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, tag, reply, renote, withFiles,
       poll, sinceId, untilId, limit);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotesSearchByTagRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotesSearchByTagRequestImplCopyWith<_$NotesSearchByTagRequestImpl>
@@ -296,8 +306,11 @@ abstract class _NotesSearchByTagRequest implements NotesSearchByTagRequest {
   String? get untilId;
   @override
   int? get limit;
+
+  /// Create a copy of NotesSearchByTagRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesSearchByTagRequestImplCopyWith<_$NotesSearchByTagRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

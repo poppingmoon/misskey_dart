@@ -24,8 +24,12 @@ mixin _$IGalleryLikesResponse {
   String get id => throw _privateConstructorUsedError;
   GalleryPost get post => throw _privateConstructorUsedError;
 
+  /// Serializes this IGalleryLikesResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of IGalleryLikesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $IGalleryLikesResponseCopyWith<IGalleryLikesResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$IGalleryLikesResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of IGalleryLikesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -70,6 +76,8 @@ class _$IGalleryLikesResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of IGalleryLikesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $GalleryPostCopyWith<$Res> get post {
@@ -103,6 +111,8 @@ class __$$IGalleryLikesResponseImplCopyWithImpl<$Res>
       $Res Function(_$IGalleryLikesResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of IGalleryLikesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -149,11 +159,13 @@ class _$IGalleryLikesResponseImpl implements _IGalleryLikesResponse {
             (identical(other.post, post) || other.post == post));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, post);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of IGalleryLikesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IGalleryLikesResponseImplCopyWith<_$IGalleryLikesResponseImpl>
@@ -180,8 +192,11 @@ abstract class _IGalleryLikesResponse implements IGalleryLikesResponse {
   String get id;
   @override
   GalleryPost get post;
+
+  /// Create a copy of IGalleryLikesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IGalleryLikesResponseImplCopyWith<_$IGalleryLikesResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

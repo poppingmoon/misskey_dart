@@ -27,8 +27,12 @@ mixin _$ChannelsFollowedRequest {
   /// minimum: 1, maximum: 100, default: 5 [misskey-dev/misskey:58c3fc6]
   int? get limit => throw _privateConstructorUsedError;
 
+  /// Serializes this ChannelsFollowedRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ChannelsFollowedRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ChannelsFollowedRequestCopyWith<ChannelsFollowedRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -53,6 +57,8 @@ class _$ChannelsFollowedRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ChannelsFollowedRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -99,6 +105,8 @@ class __$$ChannelsFollowedRequestImplCopyWithImpl<$Res>
       $Res Function(_$ChannelsFollowedRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ChannelsFollowedRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -155,11 +163,13 @@ class _$ChannelsFollowedRequestImpl implements _ChannelsFollowedRequest {
             (identical(other.limit, limit) || other.limit == limit));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, sinceId, untilId, limit);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ChannelsFollowedRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ChannelsFollowedRequestImplCopyWith<_$ChannelsFollowedRequestImpl>
@@ -187,12 +197,15 @@ abstract class _ChannelsFollowedRequest implements ChannelsFollowedRequest {
   String? get sinceId;
   @override
   String? get untilId;
-  @override
 
   /// minimum: 1, maximum: 100, default: 5 [misskey-dev/misskey:58c3fc6]
-  int? get limit;
   @override
-  @JsonKey(ignore: true)
+  int? get limit;
+
+  /// Create a copy of ChannelsFollowedRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ChannelsFollowedRequestImplCopyWith<_$ChannelsFollowedRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

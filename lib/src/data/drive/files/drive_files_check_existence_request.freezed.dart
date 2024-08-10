@@ -23,8 +23,12 @@ DriveFilesCheckExistenceRequest _$DriveFilesCheckExistenceRequestFromJson(
 mixin _$DriveFilesCheckExistenceRequest {
   String get md5 => throw _privateConstructorUsedError;
 
+  /// Serializes this DriveFilesCheckExistenceRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DriveFilesCheckExistenceRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DriveFilesCheckExistenceRequestCopyWith<DriveFilesCheckExistenceRequest>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$DriveFilesCheckExistenceRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DriveFilesCheckExistenceRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -87,6 +93,8 @@ class __$$DriveFilesCheckExistenceRequestImplCopyWithImpl<$Res>
       $Res Function(_$DriveFilesCheckExistenceRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DriveFilesCheckExistenceRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -127,11 +135,13 @@ class _$DriveFilesCheckExistenceRequestImpl
             (identical(other.md5, md5) || other.md5 == md5));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, md5);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DriveFilesCheckExistenceRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DriveFilesCheckExistenceRequestImplCopyWith<
@@ -157,8 +167,11 @@ abstract class _DriveFilesCheckExistenceRequest
 
   @override
   String get md5;
+
+  /// Create a copy of DriveFilesCheckExistenceRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DriveFilesCheckExistenceRequestImplCopyWith<
           _$DriveFilesCheckExistenceRequestImpl>
       get copyWith => throw _privateConstructorUsedError;

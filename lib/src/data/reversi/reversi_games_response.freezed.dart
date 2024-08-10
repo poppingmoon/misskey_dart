@@ -45,8 +45,12 @@ mixin _$ReversiGamesResponse {
   bool get loopedBoard => throw _privateConstructorUsedError;
   int get timeLimitForEachTurn => throw _privateConstructorUsedError;
 
+  /// Serializes this ReversiGamesResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ReversiGamesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ReversiGamesResponseCopyWith<ReversiGamesResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -95,6 +99,8 @@ class _$ReversiGamesResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ReversiGamesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -208,6 +214,8 @@ class _$ReversiGamesResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of ReversiGamesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserLiteCopyWith<$Res> get user1 {
@@ -216,6 +224,8 @@ class _$ReversiGamesResponseCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ReversiGamesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserLiteCopyWith<$Res> get user2 {
@@ -270,6 +280,8 @@ class __$$ReversiGamesResponseImplCopyWithImpl<$Res>
       $Res Function(_$ReversiGamesResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ReversiGamesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -503,7 +515,7 @@ class _$ReversiGamesResponseImpl implements _ReversiGamesResponse {
                 other.timeLimitForEachTurn == timeLimitForEachTurn));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -530,7 +542,9 @@ class _$ReversiGamesResponseImpl implements _ReversiGamesResponse {
         timeLimitForEachTurn
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ReversiGamesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ReversiGamesResponseImplCopyWith<_$ReversiGamesResponseImpl>
@@ -618,8 +632,11 @@ abstract class _ReversiGamesResponse implements ReversiGamesResponse {
   bool get loopedBoard;
   @override
   int get timeLimitForEachTurn;
+
+  /// Create a copy of ReversiGamesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReversiGamesResponseImplCopyWith<_$ReversiGamesResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

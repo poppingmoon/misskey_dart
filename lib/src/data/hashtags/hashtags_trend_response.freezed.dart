@@ -25,8 +25,12 @@ mixin _$HashtagsTrendResponse {
   List<int> get chart => throw _privateConstructorUsedError;
   int get usersCount => throw _privateConstructorUsedError;
 
+  /// Serializes this HashtagsTrendResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HashtagsTrendResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $HashtagsTrendResponseCopyWith<HashtagsTrendResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$HashtagsTrendResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of HashtagsTrendResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -96,6 +102,8 @@ class __$$HashtagsTrendResponseImplCopyWithImpl<$Res>
       $Res Function(_$HashtagsTrendResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HashtagsTrendResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -161,12 +169,14 @@ class _$HashtagsTrendResponseImpl implements _HashtagsTrendResponse {
                 other.usersCount == usersCount));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, tag,
       const DeepCollectionEquality().hash(_chart), usersCount);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HashtagsTrendResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$HashtagsTrendResponseImplCopyWith<_$HashtagsTrendResponseImpl>
@@ -196,8 +206,11 @@ abstract class _HashtagsTrendResponse implements HashtagsTrendResponse {
   List<int> get chart;
   @override
   int get usersCount;
+
+  /// Create a copy of HashtagsTrendResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$HashtagsTrendResponseImplCopyWith<_$HashtagsTrendResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

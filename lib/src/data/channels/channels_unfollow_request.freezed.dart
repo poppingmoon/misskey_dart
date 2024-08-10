@@ -23,8 +23,12 @@ ChannelsUnfollowRequest _$ChannelsUnfollowRequestFromJson(
 mixin _$ChannelsUnfollowRequest {
   String get channelId => throw _privateConstructorUsedError;
 
+  /// Serializes this ChannelsUnfollowRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ChannelsUnfollowRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ChannelsUnfollowRequestCopyWith<ChannelsUnfollowRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$ChannelsUnfollowRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ChannelsUnfollowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -85,6 +91,8 @@ class __$$ChannelsUnfollowRequestImplCopyWithImpl<$Res>
       $Res Function(_$ChannelsUnfollowRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ChannelsUnfollowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -124,11 +132,13 @@ class _$ChannelsUnfollowRequestImpl implements _ChannelsUnfollowRequest {
                 other.channelId == channelId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, channelId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ChannelsUnfollowRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ChannelsUnfollowRequestImplCopyWith<_$ChannelsUnfollowRequestImpl>
@@ -152,8 +162,11 @@ abstract class _ChannelsUnfollowRequest implements ChannelsUnfollowRequest {
 
   @override
   String get channelId;
+
+  /// Create a copy of ChannelsUnfollowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ChannelsUnfollowRequestImplCopyWith<_$ChannelsUnfollowRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

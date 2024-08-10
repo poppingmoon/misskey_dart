@@ -28,8 +28,12 @@ mixin _$AnnouncementsRequest {
   String? get untilId => throw _privateConstructorUsedError; // ioはこれで動く
   int? get offset => throw _privateConstructorUsedError;
 
+  /// Serializes this AnnouncementsRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AnnouncementsRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AnnouncementsRequestCopyWith<AnnouncementsRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -60,6 +64,8 @@ class _$AnnouncementsRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AnnouncementsRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -124,6 +130,8 @@ class __$$AnnouncementsRequestImplCopyWithImpl<$Res>
       $Res Function(_$AnnouncementsRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AnnouncementsRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -212,12 +220,14 @@ class _$AnnouncementsRequestImpl implements _AnnouncementsRequest {
             (identical(other.offset, offset) || other.offset == offset));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, limit, withUnreads, isActive, sinceId, untilId, offset);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AnnouncementsRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AnnouncementsRequestImplCopyWith<_$AnnouncementsRequestImpl>
@@ -255,11 +265,14 @@ abstract class _AnnouncementsRequest implements AnnouncementsRequest {
   @override
   String? get sinceId;
   @override
-  String? get untilId;
-  @override // ioはこれで動く
-  int? get offset;
+  String? get untilId; // ioはこれで動く
   @override
-  @JsonKey(ignore: true)
+  int? get offset;
+
+  /// Create a copy of AnnouncementsRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AnnouncementsRequestImplCopyWith<_$AnnouncementsRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

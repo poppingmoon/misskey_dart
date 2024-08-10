@@ -22,8 +22,12 @@ NotesDeleteRequest _$NotesDeleteRequestFromJson(Map<String, dynamic> json) {
 mixin _$NotesDeleteRequest {
   String get noteId => throw _privateConstructorUsedError;
 
+  /// Serializes this NotesDeleteRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotesDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesDeleteRequestCopyWith<NotesDeleteRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$NotesDeleteRequestCopyWithImpl<$Res, $Val extends NotesDeleteRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotesDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$NotesDeleteRequestImplCopyWithImpl<$Res>
       $Res Function(_$NotesDeleteRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotesDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -118,11 +126,13 @@ class _$NotesDeleteRequestImpl implements _NotesDeleteRequest {
             (identical(other.noteId, noteId) || other.noteId == noteId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, noteId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotesDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotesDeleteRequestImplCopyWith<_$NotesDeleteRequestImpl> get copyWith =>
@@ -146,8 +156,11 @@ abstract class _NotesDeleteRequest implements NotesDeleteRequest {
 
   @override
   String get noteId;
+
+  /// Create a copy of NotesDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesDeleteRequestImplCopyWith<_$NotesDeleteRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

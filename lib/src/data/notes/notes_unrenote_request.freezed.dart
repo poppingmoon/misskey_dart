@@ -22,8 +22,12 @@ NotesUnrenoteRequest _$NotesUnrenoteRequestFromJson(Map<String, dynamic> json) {
 mixin _$NotesUnrenoteRequest {
   String get noteId => throw _privateConstructorUsedError;
 
+  /// Serializes this NotesUnrenoteRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotesUnrenoteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesUnrenoteRequestCopyWith<NotesUnrenoteRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$NotesUnrenoteRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotesUnrenoteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -81,6 +87,8 @@ class __$$NotesUnrenoteRequestImplCopyWithImpl<$Res>
       $Res Function(_$NotesUnrenoteRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotesUnrenoteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -119,11 +127,13 @@ class _$NotesUnrenoteRequestImpl implements _NotesUnrenoteRequest {
             (identical(other.noteId, noteId) || other.noteId == noteId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, noteId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotesUnrenoteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotesUnrenoteRequestImplCopyWith<_$NotesUnrenoteRequestImpl>
@@ -148,8 +158,11 @@ abstract class _NotesUnrenoteRequest implements NotesUnrenoteRequest {
 
   @override
   String get noteId;
+
+  /// Create a copy of NotesUnrenoteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesUnrenoteRequestImplCopyWith<_$NotesUnrenoteRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

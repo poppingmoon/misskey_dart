@@ -39,8 +39,12 @@ mixin _$UserLite {
   OnlineStatus? get onlineStatus => throw _privateConstructorUsedError;
   List<UserBadgeRole> get badgeRoles => throw _privateConstructorUsedError;
 
+  /// Serializes this UserLite to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UserLite
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UserLiteCopyWith<UserLite> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -79,6 +83,8 @@ class _$UserLiteCopyWithImpl<$Res, $Val extends UserLite>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UserLite
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -152,6 +158,8 @@ class _$UserLiteCopyWithImpl<$Res, $Val extends UserLite>
     ) as $Val);
   }
 
+  /// Create a copy of UserLite
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserInstanceInfoCopyWith<$Res>? get instance {
@@ -201,6 +209,8 @@ class __$$UserLiteImplCopyWithImpl<$Res>
       _$UserLiteImpl _value, $Res Function(_$UserLiteImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UserLite
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -386,7 +396,7 @@ class _$UserLiteImpl implements _UserLite {
                 .equals(other._badgeRoles, _badgeRoles));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -404,7 +414,9 @@ class _$UserLiteImpl implements _UserLite {
       onlineStatus,
       const DeepCollectionEquality().hash(_badgeRoles));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UserLite
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UserLiteImplCopyWith<_$UserLiteImpl> get copyWith =>
@@ -461,14 +473,17 @@ abstract class _UserLite implements UserLite {
   UserInstanceInfo? get instance;
   @override
   @EmojisConverter()
-  Map<String, String> get emojis;
-  @override // ignore: invalid_annotation_target
+  Map<String, String> get emojis; // ignore: invalid_annotation_target
+  @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   OnlineStatus? get onlineStatus;
   @override
   List<UserBadgeRole> get badgeRoles;
+
+  /// Create a copy of UserLite
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UserLiteImplCopyWith<_$UserLiteImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -555,8 +570,12 @@ mixin _$UserDetailedNotMe {
   String? get memo => throw _privateConstructorUsedError;
   String? get moderationNote => throw _privateConstructorUsedError;
 
+  /// Serializes this UserDetailedNotMe to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UserDetailedNotMe
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UserDetailedNotMeCopyWith<UserDetailedNotMe> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -635,6 +654,8 @@ class _$UserDetailedNotMeCopyWithImpl<$Res, $Val extends UserDetailedNotMe>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UserDetailedNotMe
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -883,6 +904,8 @@ class _$UserDetailedNotMeCopyWithImpl<$Res, $Val extends UserDetailedNotMe>
     ) as $Val);
   }
 
+  /// Create a copy of UserDetailedNotMe
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserInstanceInfoCopyWith<$Res>? get instance {
@@ -971,6 +994,8 @@ class __$$UserDetailedNotMeImplCopyWithImpl<$Res>
       $Res Function(_$UserDetailedNotMeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UserDetailedNotMe
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1589,7 +1614,7 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
                 other.moderationNote == moderationNote));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -1643,7 +1668,9 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
         moderationNote
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UserDetailedNotMe
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UserDetailedNotMeImplCopyWith<_$UserDetailedNotMeImpl> get copyWith =>
@@ -1740,8 +1767,8 @@ abstract class _UserDetailedNotMe implements UserDetailedNotMe {
   UserInstanceInfo? get instance;
   @override
   @EmojisConverter()
-  Map<String, String> get emojis;
-  @override // ignore: invalid_annotation_target
+  Map<String, String> get emojis; // ignore: invalid_annotation_target
+  @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   OnlineStatus? get onlineStatus;
   @override
@@ -1789,11 +1816,12 @@ abstract class _UserDetailedNotMe implements UserDetailedNotMe {
   @override
   List<UserField>? get fields;
   @override
-  List<String> get verifiedLinks;
-  @override // CherryPick 4.3.0 or newer returns String if the count count is not visible
+  List<String>
+      get verifiedLinks; // CherryPick 4.3.0 or newer returns String if the count count is not visible
+  @override
   @IntConverter()
-  int get followersCount;
-  @override // CherryPick 4.3.0 or newer returns String if the count count is not visible
+  int get followersCount; // CherryPick 4.3.0 or newer returns String if the count count is not visible
+  @override
   @IntConverter()
   int get followingCount;
   @override
@@ -1805,24 +1833,24 @@ abstract class _UserDetailedNotMe implements UserDetailedNotMe {
   @override
   String? get pinnedPageId;
   @override
-  Map<String, dynamic>? get pinnedPage;
-  @override // Added in Misskey 12.93.0
-  bool get publicReactions;
-  @override // ignore: invalid_annotation_target
+  Map<String, dynamic>? get pinnedPage; // Added in Misskey 12.93.0
+  @override
+  bool get publicReactions; // ignore: invalid_annotation_target
+  @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   @Deprecated("removed at 2023.12.0")
-  FFVisibility? get ffVisibility;
-  @override // ignore: invalid_annotation_target
+  FFVisibility? get ffVisibility; // ignore: invalid_annotation_target
+  @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-  FFVisibility? get followersVisibility;
-  @override // ignore: invalid_annotation_target
+  FFVisibility? get followersVisibility; // ignore: invalid_annotation_target
+  @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FFVisibility? get followingVisibility;
   @override
-  bool get twoFactorEnabled;
-  @override // Added in Misskey 11.25.0
-  bool get usePasswordLessLogin;
-  @override // Added in Misskey 11.24.0
+  bool get twoFactorEnabled; // Added in Misskey 11.25.0
+  @override
+  bool get usePasswordLessLogin; // Added in Misskey 11.24.0
+  @override
   bool get securityKeys;
   @override
   List<UserRole>? get roles;
@@ -1830,8 +1858,11 @@ abstract class _UserDetailedNotMe implements UserDetailedNotMe {
   String? get memo;
   @override
   String? get moderationNote;
+
+  /// Create a copy of UserDetailedNotMe
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UserDetailedNotMeImplCopyWith<_$UserDetailedNotMeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1930,8 +1961,12 @@ mixin _$UserDetailedNotMeWithRelations {
   Notify? get notify => throw _privateConstructorUsedError;
   bool? get withReplies => throw _privateConstructorUsedError;
 
+  /// Serializes this UserDetailedNotMeWithRelations to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UserDetailedNotMeWithRelations
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UserDetailedNotMeWithRelationsCopyWith<UserDetailedNotMeWithRelations>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2023,6 +2058,8 @@ class _$UserDetailedNotMeWithRelationsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UserDetailedNotMeWithRelations
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2321,6 +2358,8 @@ class _$UserDetailedNotMeWithRelationsCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of UserDetailedNotMeWithRelations
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserInstanceInfoCopyWith<$Res>? get instance {
@@ -2422,6 +2461,8 @@ class __$$UserDetailedNotMeWithRelationsImplCopyWithImpl<$Res>
       $Res Function(_$UserDetailedNotMeWithRelationsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UserDetailedNotMeWithRelations
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3142,7 +3183,7 @@ class _$UserDetailedNotMeWithRelationsImpl
             (identical(other.withReplies, withReplies) || other.withReplies == withReplies));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -3206,7 +3247,9 @@ class _$UserDetailedNotMeWithRelationsImpl
         withReplies
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UserDetailedNotMeWithRelations
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UserDetailedNotMeWithRelationsImplCopyWith<
@@ -3315,8 +3358,8 @@ abstract class _UserDetailedNotMeWithRelations
   UserInstanceInfo? get instance;
   @override
   @EmojisConverter()
-  Map<String, String> get emojis;
-  @override // ignore: invalid_annotation_target
+  Map<String, String> get emojis; // ignore: invalid_annotation_target
+  @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   OnlineStatus? get onlineStatus;
   @override
@@ -3364,11 +3407,12 @@ abstract class _UserDetailedNotMeWithRelations
   @override
   List<UserField>? get fields;
   @override
-  List<String> get verifiedLinks;
-  @override // CherryPick 4.3.0 or newer returns String if the count is not visible
+  List<String>
+      get verifiedLinks; // CherryPick 4.3.0 or newer returns String if the count is not visible
+  @override
   @IntConverter()
-  int get followersCount;
-  @override // CherryPick 4.3.0 or newer returns String if the count is not visible
+  int get followersCount; // CherryPick 4.3.0 or newer returns String if the count is not visible
+  @override
   @IntConverter()
   int get followingCount;
   @override
@@ -3380,24 +3424,24 @@ abstract class _UserDetailedNotMeWithRelations
   @override
   String? get pinnedPageId;
   @override
-  Map<String, dynamic>? get pinnedPage;
-  @override // Added in Misskey 12.93.0
-  bool get publicReactions;
-  @override // ignore: invalid_annotation_target
+  Map<String, dynamic>? get pinnedPage; // Added in Misskey 12.93.0
+  @override
+  bool get publicReactions; // ignore: invalid_annotation_target
+  @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   @Deprecated("removed at 2023.12.0")
-  FFVisibility? get ffVisibility;
-  @override // ignore: invalid_annotation_target
+  FFVisibility? get ffVisibility; // ignore: invalid_annotation_target
+  @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-  FFVisibility? get followersVisibility;
-  @override // ignore: invalid_annotation_target
+  FFVisibility? get followersVisibility; // ignore: invalid_annotation_target
+  @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FFVisibility? get followingVisibility;
   @override
-  bool get twoFactorEnabled;
-  @override // Added in Misskey 11.25.0
-  bool get usePasswordLessLogin;
-  @override // Added in Misskey 11.24.0
+  bool get twoFactorEnabled; // Added in Misskey 11.25.0
+  @override
+  bool get usePasswordLessLogin; // Added in Misskey 11.24.0
+  @override
   bool get securityKeys;
   @override
   List<UserRole>? get roles;
@@ -3418,15 +3462,18 @@ abstract class _UserDetailedNotMeWithRelations
   @override
   bool get isBlocked;
   @override
-  bool get isMuted;
-  @override // Added in Misskey 13.10.0
+  bool get isMuted; // Added in Misskey 13.10.0
+  @override
   bool get isRenoteMuted;
   @override
   Notify? get notify;
   @override
   bool? get withReplies;
+
+  /// Create a copy of UserDetailedNotMeWithRelations
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UserDetailedNotMeWithRelationsImplCopyWith<
           _$UserDetailedNotMeWithRelationsImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -3572,8 +3619,12 @@ mixin _$MeDetailed {
       throw _privateConstructorUsedError; // Added in Misskey 13.0.0
   UserPolicies? get policies => throw _privateConstructorUsedError;
 
+  /// Serializes this MeDetailed to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MeDetailed
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MeDetailedCopyWith<MeDetailed> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3690,6 +3741,8 @@ class _$MeDetailedCopyWithImpl<$Res, $Val extends MeDetailed>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MeDetailed
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4108,6 +4161,8 @@ class _$MeDetailedCopyWithImpl<$Res, $Val extends MeDetailed>
     ) as $Val);
   }
 
+  /// Create a copy of MeDetailed
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserInstanceInfoCopyWith<$Res>? get instance {
@@ -4120,6 +4175,8 @@ class _$MeDetailedCopyWithImpl<$Res, $Val extends MeDetailed>
     });
   }
 
+  /// Create a copy of MeDetailed
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NotificationRecieveConfigsCopyWith<$Res> get notificationRecieveConfig {
@@ -4129,6 +4186,8 @@ class _$MeDetailedCopyWithImpl<$Res, $Val extends MeDetailed>
     });
   }
 
+  /// Create a copy of MeDetailed
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserPoliciesCopyWith<$Res>? get policies {
@@ -4257,6 +4316,8 @@ class __$$MeDetailedImplCopyWithImpl<$Res>
       _$MeDetailedImpl _value, $Res Function(_$MeDetailedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MeDetailed
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5292,7 +5353,7 @@ class _$MeDetailedImpl implements _MeDetailed {
             (identical(other.policies, policies) || other.policies == policies));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -5380,7 +5441,9 @@ class _$MeDetailedImpl implements _MeDetailed {
         policies
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MeDetailed
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MeDetailedImplCopyWith<_$MeDetailedImpl> get copyWith =>
@@ -5512,8 +5575,8 @@ abstract class _MeDetailed implements MeDetailed {
   UserInstanceInfo? get instance;
   @override
   @EmojisConverter()
-  Map<String, String> get emojis;
-  @override // ignore: invalid_annotation_target
+  Map<String, String> get emojis; // ignore: invalid_annotation_target
+  @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   OnlineStatus? get onlineStatus;
   @override
@@ -5561,11 +5624,12 @@ abstract class _MeDetailed implements MeDetailed {
   @override
   List<UserField>? get fields;
   @override
-  List<String> get verifiedLinks;
-  @override // CherryPick 4.3.0 or newer returns String if the count is not visible
+  List<String>
+      get verifiedLinks; // CherryPick 4.3.0 or newer returns String if the count is not visible
+  @override
   @IntConverter()
-  int get followersCount;
-  @override // CherryPick 4.3.0 or newer returns String if the count is not visible
+  int get followersCount; // CherryPick 4.3.0 or newer returns String if the count is not visible
+  @override
   @IntConverter()
   int get followingCount;
   @override
@@ -5577,24 +5641,24 @@ abstract class _MeDetailed implements MeDetailed {
   @override
   String? get pinnedPageId;
   @override
-  Map<String, dynamic>? get pinnedPage;
-  @override // Added in Misskey 12.93.0
-  bool get publicReactions;
-  @override // ignore: invalid_annotation_target
+  Map<String, dynamic>? get pinnedPage; // Added in Misskey 12.93.0
+  @override
+  bool get publicReactions; // ignore: invalid_annotation_target
+  @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   @Deprecated("removed at 2023.12.0")
-  FFVisibility? get ffVisibility;
-  @override // ignore: invalid_annotation_target
+  FFVisibility? get ffVisibility; // ignore: invalid_annotation_target
+  @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-  FFVisibility? get followersVisibility;
-  @override // ignore: invalid_annotation_target
+  FFVisibility? get followersVisibility; // ignore: invalid_annotation_target
+  @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FFVisibility? get followingVisibility;
   @override
-  bool get twoFactorEnabled;
-  @override // Added in Misskey 11.25.0
-  bool get usePasswordLessLogin;
-  @override // Added in Misskey 11.24.0
+  bool get twoFactorEnabled; // Added in Misskey 11.25.0
+  @override
+  bool get usePasswordLessLogin; // Added in Misskey 11.24.0
+  @override
   bool get securityKeys;
   @override
   List<UserRole>? get roles;
@@ -5609,45 +5673,46 @@ abstract class _MeDetailed implements MeDetailed {
   @override
   bool get isModerator;
   @override
-  bool get isAdmin;
-  @override // Added in Misskey 12.13.0
-  bool get injectFeaturedNote;
-  @override // Added in Misskey 12.69.0
+  bool get isAdmin; // Added in Misskey 12.13.0
+  @override
+  bool get injectFeaturedNote; // Added in Misskey 12.69.0
+  @override
   bool get receiveAnnouncementEmail;
   @override
-  bool get alwaysMarkNsfw;
-  @override // Added in Misskey 12.112.0
+  bool get alwaysMarkNsfw; // Added in Misskey 12.112.0
+  @override
   bool get autoSensitive;
   @override
   bool get carefulBot;
   @override
   bool get autoAcceptFollowed;
   @override
-  bool? get preventAiLearning;
-  @override // Added in Misskey 12.60.0
-  bool get noCrawle;
-  @override // Added in Misskey 12.63.0
-  bool get isExplorable;
-  @override // Added in Misskey 12.89.0
-  bool get isDeleted;
-  @override // ignore: invalid_annotation_target
+  bool? get preventAiLearning; // Added in Misskey 12.60.0
+  @override
+  bool get noCrawle; // Added in Misskey 12.63.0
+  @override
+  bool get isExplorable; // Added in Misskey 12.89.0
+  @override
+  bool get isDeleted; // ignore: invalid_annotation_target
+  @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-  TwoFactorBackupCodesStock? get twoFactorBackupCodesStock;
-  @override // Added in Misskey 12.77.0
+  TwoFactorBackupCodesStock?
+      get twoFactorBackupCodesStock; // Added in Misskey 12.77.0
+  @override
   bool get hideOnlineStatus;
   @override
   bool get hasUnreadSpecifiedNotes;
   @override
-  bool get hasUnreadMentions;
-  @override // Added in Misskey 12.0.0
-  bool get hasUnreadAnnouncement;
-  @override // Added in Misskey 12.0.0
-  bool get hasUnreadAntenna;
-  @override // Added in Misskey 12.47.0
+  bool get hasUnreadMentions; // Added in Misskey 12.0.0
+  @override
+  bool get hasUnreadAnnouncement; // Added in Misskey 12.0.0
+  @override
+  bool get hasUnreadAntenna; // Added in Misskey 12.47.0
+  @override
   bool get hasUnreadChannel;
   @override
-  bool get hasUnreadNotification;
-  @override // Added in Misskey 12.11.0
+  bool get hasUnreadNotification; // Added in Misskey 12.11.0
+  @override
   bool get hasPendingReceivedFollowRequest;
   @override
   int? get unreadNotificationsCount;
@@ -5658,24 +5723,28 @@ abstract class _MeDetailed implements MeDetailed {
   List<MuteWord>? get mutedWords;
   @override
   @MuteWordsConverter()
-  List<MuteWord>? get hardMutedWords;
-  @override // Added in Misskey 12.99.0
+  List<MuteWord>? get hardMutedWords; // Added in Misskey 12.99.0
+  @override
   List<String> get mutedInstances;
   @override
   @Deprecated("Deprecated in Misskey 2023.9.2")
   List<String>? get mutingNotificationTypes;
   @override
-  NotificationRecieveConfigs get notificationRecieveConfig;
-  @override // Added in Misskey 12.70.0
-  List<String> get emailNotificationTypes;
-  @override // Added in Misskey 13.1.0
-  List<UserAchievement> get achievements;
-  @override // Added in Misskey 13.1.0
-  int? get loggedInDays;
-  @override // Added in Misskey 13.0.0
-  UserPolicies? get policies;
+  NotificationRecieveConfigs
+      get notificationRecieveConfig; // Added in Misskey 12.70.0
   @override
-  @JsonKey(ignore: true)
+  List<String> get emailNotificationTypes; // Added in Misskey 13.1.0
+  @override
+  List<UserAchievement> get achievements; // Added in Misskey 13.1.0
+  @override
+  int? get loggedInDays; // Added in Misskey 13.0.0
+  @override
+  UserPolicies? get policies;
+
+  /// Create a copy of MeDetailed
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MeDetailedImplCopyWith<_$MeDetailedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -5693,8 +5762,12 @@ mixin _$UserAvatarDecoration {
   double get offsetX => throw _privateConstructorUsedError;
   double get offsetY => throw _privateConstructorUsedError;
 
+  /// Serializes this UserAvatarDecoration to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UserAvatarDecoration
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UserAvatarDecorationCopyWith<UserAvatarDecoration> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -5725,6 +5798,8 @@ class _$UserAvatarDecorationCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UserAvatarDecoration
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5789,6 +5864,8 @@ class __$$UserAvatarDecorationImplCopyWithImpl<$Res>
       $Res Function(_$UserAvatarDecorationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UserAvatarDecoration
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5876,12 +5953,14 @@ class _$UserAvatarDecorationImpl implements _UserAvatarDecoration {
             (identical(other.offsetY, offsetY) || other.offsetY == offsetY));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, angle, flipH, url, offsetX, offsetY);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UserAvatarDecoration
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UserAvatarDecorationImplCopyWith<_$UserAvatarDecorationImpl>
@@ -5921,8 +6000,11 @@ abstract class _UserAvatarDecoration implements UserAvatarDecoration {
   double get offsetX;
   @override
   double get offsetY;
+
+  /// Create a copy of UserAvatarDecoration
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UserAvatarDecorationImplCopyWith<_$UserAvatarDecorationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -5942,8 +6024,12 @@ mixin _$UserInstanceInfo {
   Uri? get faviconUrl => throw _privateConstructorUsedError;
   String? get themeColor => throw _privateConstructorUsedError;
 
+  /// Serializes this UserInstanceInfo to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UserInstanceInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UserInstanceInfoCopyWith<UserInstanceInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -5973,6 +6059,8 @@ class _$UserInstanceInfoCopyWithImpl<$Res, $Val extends UserInstanceInfo>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UserInstanceInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6037,6 +6125,8 @@ class __$$UserInstanceInfoImplCopyWithImpl<$Res>
       $Res Function(_$UserInstanceInfoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UserInstanceInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6127,12 +6217,14 @@ class _$UserInstanceInfoImpl implements _UserInstanceInfo {
                 other.themeColor == themeColor));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, softwareVersion,
       softwareName, iconUrl, faviconUrl, themeColor);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UserInstanceInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UserInstanceInfoImplCopyWith<_$UserInstanceInfoImpl> get copyWith =>
@@ -6173,8 +6265,11 @@ abstract class _UserInstanceInfo implements UserInstanceInfo {
   Uri? get faviconUrl;
   @override
   String? get themeColor;
+
+  /// Create a copy of UserInstanceInfo
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UserInstanceInfoImplCopyWith<_$UserInstanceInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -6189,8 +6284,12 @@ mixin _$UserBadgeRole {
   @NullableUriConverter()
   Uri? get iconUrl => throw _privateConstructorUsedError;
 
+  /// Serializes this UserBadgeRole to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UserBadgeRole
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UserBadgeRoleCopyWith<UserBadgeRole> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -6214,6 +6313,8 @@ class _$UserBadgeRoleCopyWithImpl<$Res, $Val extends UserBadgeRole>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UserBadgeRole
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6252,6 +6353,8 @@ class __$$UserBadgeRoleImplCopyWithImpl<$Res>
       _$UserBadgeRoleImpl _value, $Res Function(_$UserBadgeRoleImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UserBadgeRole
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6300,11 +6403,13 @@ class _$UserBadgeRoleImpl implements _UserBadgeRole {
             (identical(other.iconUrl, iconUrl) || other.iconUrl == iconUrl));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, iconUrl);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UserBadgeRole
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UserBadgeRoleImplCopyWith<_$UserBadgeRoleImpl> get copyWith =>
@@ -6332,8 +6437,11 @@ abstract class _UserBadgeRole implements UserBadgeRole {
   @override
   @NullableUriConverter()
   Uri? get iconUrl;
+
+  /// Create a copy of UserBadgeRole
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UserBadgeRoleImplCopyWith<_$UserBadgeRoleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -6353,8 +6461,12 @@ mixin _$UserRole {
   bool get isModerator => throw _privateConstructorUsedError;
   bool get isAdministrator => throw _privateConstructorUsedError;
 
+  /// Serializes this UserRole to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UserRole
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UserRoleCopyWith<UserRole> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -6384,6 +6496,8 @@ class _$UserRoleCopyWithImpl<$Res, $Val extends UserRole>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UserRole
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6454,6 +6568,8 @@ class __$$UserRoleImplCopyWithImpl<$Res>
       _$UserRoleImpl _value, $Res Function(_$UserRoleImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UserRole
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6551,12 +6667,14 @@ class _$UserRoleImpl implements _UserRole {
                 other.isAdministrator == isAdministrator));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, name, color, iconUrl,
       description, isModerator, isAdministrator);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UserRole
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UserRoleImplCopyWith<_$UserRoleImpl> get copyWith =>
@@ -6598,8 +6716,11 @@ abstract class _UserRole implements UserRole {
   bool get isModerator;
   @override
   bool get isAdministrator;
+
+  /// Create a copy of UserRole
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UserRoleImplCopyWith<_$UserRoleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -6614,8 +6735,12 @@ mixin _$UserAchievement {
   @EpocTimeDateTimeConverter.withMilliSeconds()
   DateTime get unlockedAt => throw _privateConstructorUsedError;
 
+  /// Serializes this UserAchievement to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UserAchievement
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UserAchievementCopyWith<UserAchievement> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -6641,6 +6766,8 @@ class _$UserAchievementCopyWithImpl<$Res, $Val extends UserAchievement>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UserAchievement
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6681,6 +6808,8 @@ class __$$UserAchievementImplCopyWithImpl<$Res>
       _$UserAchievementImpl _value, $Res Function(_$UserAchievementImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UserAchievement
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6731,11 +6860,13 @@ class _$UserAchievementImpl implements _UserAchievement {
                 other.unlockedAt == unlockedAt));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, unlockedAt);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UserAchievement
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UserAchievementImplCopyWith<_$UserAchievementImpl> get copyWith =>
@@ -6764,8 +6895,11 @@ abstract class _UserAchievement implements UserAchievement {
   @override
   @EpocTimeDateTimeConverter.withMilliSeconds()
   DateTime get unlockedAt;
+
+  /// Create a copy of UserAchievement
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UserAchievementImplCopyWith<_$UserAchievementImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -6799,8 +6933,12 @@ mixin _$UserPolicies {
   double? get rateLimitFactor => throw _privateConstructorUsedError;
   double? get avatarDecorationLimit => throw _privateConstructorUsedError;
 
+  /// Serializes this UserPolicies to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UserPolicies
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UserPoliciesCopyWith<UserPolicies> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -6846,6 +6984,8 @@ class _$UserPoliciesCopyWithImpl<$Res, $Val extends UserPolicies>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UserPolicies
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7006,6 +7146,8 @@ class __$$UserPoliciesImplCopyWithImpl<$Res>
       _$UserPoliciesImpl _value, $Res Function(_$UserPoliciesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UserPolicies
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7256,7 +7398,7 @@ class _$UserPoliciesImpl implements _UserPolicies {
                 other.avatarDecorationLimit == avatarDecorationLimit));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -7284,7 +7426,9 @@ class _$UserPoliciesImpl implements _UserPolicies {
         avatarDecorationLimit
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UserPolicies
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UserPoliciesImplCopyWith<_$UserPoliciesImpl> get copyWith =>
@@ -7370,8 +7514,11 @@ abstract class _UserPolicies implements UserPolicies {
   double? get rateLimitFactor;
   @override
   double? get avatarDecorationLimit;
+
+  /// Create a copy of UserPolicies
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UserPoliciesImplCopyWith<_$UserPoliciesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -7385,8 +7532,12 @@ mixin _$UserField {
   String get name => throw _privateConstructorUsedError;
   String get value => throw _privateConstructorUsedError;
 
+  /// Serializes this UserField to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UserField
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UserFieldCopyWith<UserField> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -7409,6 +7560,8 @@ class _$UserFieldCopyWithImpl<$Res, $Val extends UserField>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UserField
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7447,6 +7600,8 @@ class __$$UserFieldImplCopyWithImpl<$Res>
       _$UserFieldImpl _value, $Res Function(_$UserFieldImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UserField
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7493,11 +7648,13 @@ class _$UserFieldImpl implements _UserField {
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UserField
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UserFieldImplCopyWith<_$UserFieldImpl> get copyWith =>
@@ -7523,8 +7680,11 @@ abstract class _UserField implements UserField {
   String get name;
   @override
   String get value;
+
+  /// Create a copy of UserField
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UserFieldImplCopyWith<_$UserFieldImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -7538,8 +7698,12 @@ mixin _$MuteWord {
   String? get regExp => throw _privateConstructorUsedError;
   List<String>? get content => throw _privateConstructorUsedError;
 
+  /// Serializes this MuteWord to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MuteWord
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MuteWordCopyWith<MuteWord> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -7562,6 +7726,8 @@ class _$MuteWordCopyWithImpl<$Res, $Val extends MuteWord>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MuteWord
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7600,6 +7766,8 @@ class __$$MuteWordImplCopyWithImpl<$Res>
       _$MuteWordImpl _value, $Res Function(_$MuteWordImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MuteWord
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7654,12 +7822,14 @@ class _$MuteWordImpl implements _MuteWord {
             const DeepCollectionEquality().equals(other._content, _content));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, regExp, const DeepCollectionEquality().hash(_content));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MuteWord
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MuteWordImplCopyWith<_$MuteWordImpl> get copyWith =>
@@ -7684,8 +7854,11 @@ abstract class _MuteWord implements MuteWord {
   String? get regExp;
   @override
   List<String>? get content;
+
+  /// Create a copy of MuteWord
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MuteWordImplCopyWith<_$MuteWordImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -7717,8 +7890,12 @@ mixin _$NotificationRecieveConfigs {
   NotificationRecieveConfig? get app => throw _privateConstructorUsedError;
   NotificationRecieveConfig? get test => throw _privateConstructorUsedError;
 
+  /// Serializes this NotificationRecieveConfigs to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotificationRecieveConfigs
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotificationRecieveConfigsCopyWith<NotificationRecieveConfigs>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -7773,6 +7950,8 @@ class _$NotificationRecieveConfigsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotificationRecieveConfigs
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7851,6 +8030,8 @@ class _$NotificationRecieveConfigsCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of NotificationRecieveConfigs
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NotificationRecieveConfigCopyWith<$Res>? get note {
@@ -7863,6 +8044,8 @@ class _$NotificationRecieveConfigsCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of NotificationRecieveConfigs
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NotificationRecieveConfigCopyWith<$Res>? get follow {
@@ -7875,6 +8058,8 @@ class _$NotificationRecieveConfigsCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of NotificationRecieveConfigs
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NotificationRecieveConfigCopyWith<$Res>? get mention {
@@ -7887,6 +8072,8 @@ class _$NotificationRecieveConfigsCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of NotificationRecieveConfigs
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NotificationRecieveConfigCopyWith<$Res>? get reply {
@@ -7899,6 +8086,8 @@ class _$NotificationRecieveConfigsCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of NotificationRecieveConfigs
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NotificationRecieveConfigCopyWith<$Res>? get renote {
@@ -7911,6 +8100,8 @@ class _$NotificationRecieveConfigsCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of NotificationRecieveConfigs
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NotificationRecieveConfigCopyWith<$Res>? get quote {
@@ -7923,6 +8114,8 @@ class _$NotificationRecieveConfigsCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of NotificationRecieveConfigs
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NotificationRecieveConfigCopyWith<$Res>? get reaction {
@@ -7935,6 +8128,8 @@ class _$NotificationRecieveConfigsCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of NotificationRecieveConfigs
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NotificationRecieveConfigCopyWith<$Res>? get pollEnded {
@@ -7947,6 +8142,8 @@ class _$NotificationRecieveConfigsCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of NotificationRecieveConfigs
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NotificationRecieveConfigCopyWith<$Res>? get receiveFollowRequest {
@@ -7960,6 +8157,8 @@ class _$NotificationRecieveConfigsCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of NotificationRecieveConfigs
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NotificationRecieveConfigCopyWith<$Res>? get followRequestAccepted {
@@ -7973,6 +8172,8 @@ class _$NotificationRecieveConfigsCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of NotificationRecieveConfigs
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NotificationRecieveConfigCopyWith<$Res>? get roleAssigned {
@@ -7986,6 +8187,8 @@ class _$NotificationRecieveConfigsCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of NotificationRecieveConfigs
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NotificationRecieveConfigCopyWith<$Res>? get achievementEarned {
@@ -7999,6 +8202,8 @@ class _$NotificationRecieveConfigsCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of NotificationRecieveConfigs
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NotificationRecieveConfigCopyWith<$Res>? get app {
@@ -8011,6 +8216,8 @@ class _$NotificationRecieveConfigsCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of NotificationRecieveConfigs
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NotificationRecieveConfigCopyWith<$Res>? get test {
@@ -8089,6 +8296,8 @@ class __$$NotificationRecieveConfigsImplCopyWithImpl<$Res>
       $Res Function(_$NotificationRecieveConfigsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotificationRecieveConfigs
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -8252,7 +8461,7 @@ class _$NotificationRecieveConfigsImpl implements _NotificationRecieveConfigs {
             (identical(other.test, test) || other.test == test));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -8271,7 +8480,9 @@ class _$NotificationRecieveConfigsImpl implements _NotificationRecieveConfigs {
       app,
       test);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotificationRecieveConfigs
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotificationRecieveConfigsImplCopyWith<_$NotificationRecieveConfigsImpl>
@@ -8336,8 +8547,11 @@ abstract class _NotificationRecieveConfigs
   NotificationRecieveConfig? get app;
   @override
   NotificationRecieveConfig? get test;
+
+  /// Create a copy of NotificationRecieveConfigs
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotificationRecieveConfigsImplCopyWith<_$NotificationRecieveConfigsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -8352,8 +8566,12 @@ mixin _$NotificationRecieveConfig {
   String get type => throw _privateConstructorUsedError;
   String? get userListId => throw _privateConstructorUsedError;
 
+  /// Serializes this NotificationRecieveConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotificationRecieveConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotificationRecieveConfigCopyWith<NotificationRecieveConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -8378,6 +8596,8 @@ class _$NotificationRecieveConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotificationRecieveConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -8419,6 +8639,8 @@ class __$$NotificationRecieveConfigImplCopyWithImpl<$Res>
       $Res Function(_$NotificationRecieveConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotificationRecieveConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -8466,11 +8688,13 @@ class _$NotificationRecieveConfigImpl implements _NotificationRecieveConfig {
                 other.userListId == userListId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, type, userListId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotificationRecieveConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotificationRecieveConfigImplCopyWith<_$NotificationRecieveConfigImpl>
@@ -8497,8 +8721,11 @@ abstract class _NotificationRecieveConfig implements NotificationRecieveConfig {
   String get type;
   @override
   String? get userListId;
+
+  /// Create a copy of NotificationRecieveConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotificationRecieveConfigImplCopyWith<_$NotificationRecieveConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

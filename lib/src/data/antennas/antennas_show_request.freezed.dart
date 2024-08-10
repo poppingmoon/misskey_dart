@@ -22,8 +22,12 @@ AntennasShowRequest _$AntennasShowRequestFromJson(Map<String, dynamic> json) {
 mixin _$AntennasShowRequest {
   String get antennaId => throw _privateConstructorUsedError;
 
+  /// Serializes this AntennasShowRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AntennasShowRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AntennasShowRequestCopyWith<AntennasShowRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$AntennasShowRequestCopyWithImpl<$Res, $Val extends AntennasShowRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AntennasShowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$AntennasShowRequestImplCopyWithImpl<$Res>
       $Res Function(_$AntennasShowRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AntennasShowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -119,11 +127,13 @@ class _$AntennasShowRequestImpl implements _AntennasShowRequest {
                 other.antennaId == antennaId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, antennaId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AntennasShowRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AntennasShowRequestImplCopyWith<_$AntennasShowRequestImpl> get copyWith =>
@@ -147,8 +157,11 @@ abstract class _AntennasShowRequest implements AntennasShowRequest {
 
   @override
   String get antennaId;
+
+  /// Create a copy of AntennasShowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AntennasShowRequestImplCopyWith<_$AntennasShowRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

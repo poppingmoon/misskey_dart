@@ -33,8 +33,12 @@ mixin _$NotesGlobalTimelineRequest {
   @Deprecated("removed at 2023.10.0")
   bool? get withReplies => throw _privateConstructorUsedError;
 
+  /// Serializes this NotesGlobalTimelineRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotesGlobalTimelineRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesGlobalTimelineRequestCopyWith<NotesGlobalTimelineRequest>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -68,6 +72,8 @@ class _$NotesGlobalTimelineRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotesGlobalTimelineRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -147,6 +153,8 @@ class __$$NotesGlobalTimelineRequestImplCopyWithImpl<$Res>
       $Res Function(_$NotesGlobalTimelineRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotesGlobalTimelineRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -258,12 +266,14 @@ class _$NotesGlobalTimelineRequestImpl implements _NotesGlobalTimelineRequest {
                 other.withReplies == withReplies));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, limit, sinceId, untilId,
       sinceDate, untilDate, withFiles, withRenotes, withReplies);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotesGlobalTimelineRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotesGlobalTimelineRequestImplCopyWith<_$NotesGlobalTimelineRequestImpl>
@@ -313,8 +323,11 @@ abstract class _NotesGlobalTimelineRequest
   @override
   @Deprecated("removed at 2023.10.0")
   bool? get withReplies;
+
+  /// Create a copy of NotesGlobalTimelineRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesGlobalTimelineRequestImplCopyWith<_$NotesGlobalTimelineRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

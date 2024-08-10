@@ -29,8 +29,12 @@ mixin _$ChannelsUpdateRequest {
   List<String>? get pinnedNoteIds => throw _privateConstructorUsedError;
   String? get color => throw _privateConstructorUsedError;
 
+  /// Serializes this ChannelsUpdateRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ChannelsUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ChannelsUpdateRequestCopyWith<ChannelsUpdateRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -62,6 +66,8 @@ class _$ChannelsUpdateRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ChannelsUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -134,6 +140,8 @@ class __$$ChannelsUpdateRequestImplCopyWithImpl<$Res>
       $Res Function(_$ChannelsUpdateRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ChannelsUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -241,7 +249,7 @@ class _$ChannelsUpdateRequestImpl implements _ChannelsUpdateRequest {
             (identical(other.color, color) || other.color == color));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -253,7 +261,9 @@ class _$ChannelsUpdateRequestImpl implements _ChannelsUpdateRequest {
       const DeepCollectionEquality().hash(_pinnedNoteIds),
       color);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ChannelsUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ChannelsUpdateRequestImplCopyWith<_$ChannelsUpdateRequestImpl>
@@ -295,8 +305,11 @@ abstract class _ChannelsUpdateRequest implements ChannelsUpdateRequest {
   List<String>? get pinnedNoteIds;
   @override
   String? get color;
+
+  /// Create a copy of ChannelsUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ChannelsUpdateRequestImplCopyWith<_$ChannelsUpdateRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -30,8 +30,12 @@ mixin _$INotificationsGroupedRequest {
   List<NotificationType>? get excludeTypes =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this INotificationsGroupedRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of INotificationsGroupedRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $INotificationsGroupedRequestCopyWith<INotificationsGroupedRequest>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -64,6 +68,8 @@ class _$INotificationsGroupedRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of INotificationsGroupedRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -129,6 +135,8 @@ class __$$INotificationRequestImplCopyWithImpl<$Res>
       $Res Function(_$INotificationRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of INotificationsGroupedRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -233,7 +241,7 @@ class _$INotificationRequestImpl implements _INotificationRequest {
                 .equals(other._excludeTypes, _excludeTypes));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -244,7 +252,9 @@ class _$INotificationRequestImpl implements _INotificationRequest {
       const DeepCollectionEquality().hash(_includeTypes),
       const DeepCollectionEquality().hash(_excludeTypes));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of INotificationsGroupedRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$INotificationRequestImplCopyWith<_$INotificationRequestImpl>
@@ -284,8 +294,11 @@ abstract class _INotificationRequest implements INotificationsGroupedRequest {
   List<NotificationType>? get includeTypes;
   @override
   List<NotificationType>? get excludeTypes;
+
+  /// Create a copy of INotificationsGroupedRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$INotificationRequestImplCopyWith<_$INotificationRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

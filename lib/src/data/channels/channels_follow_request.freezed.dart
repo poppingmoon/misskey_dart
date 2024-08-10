@@ -23,8 +23,12 @@ ChannelsFollowRequest _$ChannelsFollowRequestFromJson(
 mixin _$ChannelsFollowRequest {
   String get channelId => throw _privateConstructorUsedError;
 
+  /// Serializes this ChannelsFollowRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ChannelsFollowRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ChannelsFollowRequestCopyWith<ChannelsFollowRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$ChannelsFollowRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ChannelsFollowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -84,6 +90,8 @@ class __$$ChannelsFollowRequestImplCopyWithImpl<$Res>
       $Res Function(_$ChannelsFollowRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ChannelsFollowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -123,11 +131,13 @@ class _$ChannelsFollowRequestImpl implements _ChannelsFollowRequest {
                 other.channelId == channelId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, channelId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ChannelsFollowRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ChannelsFollowRequestImplCopyWith<_$ChannelsFollowRequestImpl>
@@ -151,8 +161,11 @@ abstract class _ChannelsFollowRequest implements ChannelsFollowRequest {
 
   @override
   String get channelId;
+
+  /// Create a copy of ChannelsFollowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ChannelsFollowRequestImplCopyWith<_$ChannelsFollowRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

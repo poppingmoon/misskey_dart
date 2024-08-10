@@ -22,8 +22,12 @@ FlashLikeRequest _$FlashLikeRequestFromJson(Map<String, dynamic> json) {
 mixin _$FlashLikeRequest {
   String get flashId => throw _privateConstructorUsedError;
 
+  /// Serializes this FlashLikeRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FlashLikeRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FlashLikeRequestCopyWith<FlashLikeRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$FlashLikeRequestCopyWithImpl<$Res, $Val extends FlashLikeRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FlashLikeRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$FlashLikeRequestImplCopyWithImpl<$Res>
       $Res Function(_$FlashLikeRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FlashLikeRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -118,11 +126,13 @@ class _$FlashLikeRequestImpl implements _FlashLikeRequest {
             (identical(other.flashId, flashId) || other.flashId == flashId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, flashId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FlashLikeRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FlashLikeRequestImplCopyWith<_$FlashLikeRequestImpl> get copyWith =>
@@ -146,8 +156,11 @@ abstract class _FlashLikeRequest implements FlashLikeRequest {
 
   @override
   String get flashId;
+
+  /// Create a copy of FlashLikeRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FlashLikeRequestImplCopyWith<_$FlashLikeRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

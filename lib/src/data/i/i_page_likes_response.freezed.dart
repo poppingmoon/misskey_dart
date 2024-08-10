@@ -23,8 +23,12 @@ mixin _$IPageLikesResponse {
   String get id => throw _privateConstructorUsedError;
   Page get page => throw _privateConstructorUsedError;
 
+  /// Serializes this IPageLikesResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of IPageLikesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $IPageLikesResponseCopyWith<IPageLikesResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$IPageLikesResponseCopyWithImpl<$Res, $Val extends IPageLikesResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of IPageLikesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -68,6 +74,8 @@ class _$IPageLikesResponseCopyWithImpl<$Res, $Val extends IPageLikesResponse>
     ) as $Val);
   }
 
+  /// Create a copy of IPageLikesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PageCopyWith<$Res> get page {
@@ -99,6 +107,8 @@ class __$$IPageLikesResponseImplCopyWithImpl<$Res>
       $Res Function(_$IPageLikesResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of IPageLikesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -145,11 +155,13 @@ class _$IPageLikesResponseImpl implements _IPageLikesResponse {
             (identical(other.page, page) || other.page == page));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, page);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of IPageLikesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IPageLikesResponseImplCopyWith<_$IPageLikesResponseImpl> get copyWith =>
@@ -176,8 +188,11 @@ abstract class _IPageLikesResponse implements IPageLikesResponse {
   String get id;
   @override
   Page get page;
+
+  /// Create a copy of IPageLikesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IPageLikesResponseImplCopyWith<_$IPageLikesResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

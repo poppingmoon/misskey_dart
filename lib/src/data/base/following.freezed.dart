@@ -38,8 +38,12 @@ mixin _$Following {
   /// - [MisskeyUsers.followers]
   UserDetailed? get follower => throw _privateConstructorUsedError;
 
+  /// Serializes this Following to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Following
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FollowingCopyWith<Following> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -68,6 +72,8 @@ class _$FollowingCopyWithImpl<$Res, $Val extends Following>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Following
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -132,6 +138,8 @@ class __$$FollowingImplCopyWithImpl<$Res>
       _$FollowingImpl _value, $Res Function(_$FollowingImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Following
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -232,12 +240,14 @@ class _$FollowingImpl implements _Following {
                 other.follower == follower));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, createdAt, followeeId, followerId, followee, follower);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Following
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FollowingImplCopyWith<_$FollowingImpl> get copyWith =>
@@ -272,22 +282,25 @@ abstract class _Following implements Following {
   String get followeeId;
   @override
   String get followerId;
-  @override
 
   /// 以下のエンドポイントでnon-null
   ///
 // - [MisskeyFederation.followers]
 // - [MisskeyFederation.following]
   /// - [MisskeyUsers.following]
-  UserDetailed? get followee;
   @override
+  UserDetailed? get followee;
 
   /// 以下のエンドポイントでnon-null
   ///
   /// - [MisskeyUsers.followers]
-  UserDetailed? get follower;
   @override
-  @JsonKey(ignore: true)
+  UserDetailed? get follower;
+
+  /// Create a copy of Following
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FollowingImplCopyWith<_$FollowingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

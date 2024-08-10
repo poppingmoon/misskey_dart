@@ -30,8 +30,12 @@ mixin _$UsersReactionsRequest {
   @EpocTimeDateTimeConverter.withMilliSeconds()
   DateTime? get untilDate => throw _privateConstructorUsedError;
 
+  /// Serializes this UsersReactionsRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UsersReactionsRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UsersReactionsRequestCopyWith<UsersReactionsRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -62,6 +66,8 @@ class _$UsersReactionsRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UsersReactionsRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -128,6 +134,8 @@ class __$$UsersReactionsRequestImplCopyWithImpl<$Res>
       $Res Function(_$UsersReactionsRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UsersReactionsRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -216,12 +224,14 @@ class _$UsersReactionsRequestImpl implements _UsersReactionsRequest {
                 other.untilDate == untilDate));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, userId, limit, sinceId, untilId, sinceDate, untilDate);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UsersReactionsRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UsersReactionsRequestImplCopyWith<_$UsersReactionsRequestImpl>
@@ -263,8 +273,11 @@ abstract class _UsersReactionsRequest implements UsersReactionsRequest {
   @override
   @EpocTimeDateTimeConverter.withMilliSeconds()
   DateTime? get untilDate;
+
+  /// Create a copy of UsersReactionsRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersReactionsRequestImplCopyWith<_$UsersReactionsRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

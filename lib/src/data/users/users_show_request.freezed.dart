@@ -22,8 +22,12 @@ UsersShowRequest _$UsersShowRequestFromJson(Map<String, dynamic> json) {
 mixin _$UsersShowRequest {
   String get userId => throw _privateConstructorUsedError;
 
+  /// Serializes this UsersShowRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UsersShowRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UsersShowRequestCopyWith<UsersShowRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$UsersShowRequestCopyWithImpl<$Res, $Val extends UsersShowRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UsersShowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$UsersShowRequestImplCopyWithImpl<$Res>
       $Res Function(_$UsersShowRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UsersShowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -118,11 +126,13 @@ class _$UsersShowRequestImpl implements _UsersShowRequest {
             (identical(other.userId, userId) || other.userId == userId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, userId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UsersShowRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UsersShowRequestImplCopyWith<_$UsersShowRequestImpl> get copyWith =>
@@ -146,8 +156,11 @@ abstract class _UsersShowRequest implements UsersShowRequest {
 
   @override
   String get userId;
+
+  /// Create a copy of UsersShowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersShowRequestImplCopyWith<_$UsersShowRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -161,8 +174,12 @@ UsersShowByIdsRequest _$UsersShowByIdsRequestFromJson(
 mixin _$UsersShowByIdsRequest {
   List<String> get userIds => throw _privateConstructorUsedError;
 
+  /// Serializes this UsersShowByIdsRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UsersShowByIdsRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UsersShowByIdsRequestCopyWith<UsersShowByIdsRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -187,6 +204,8 @@ class _$UsersShowByIdsRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UsersShowByIdsRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -222,6 +241,8 @@ class __$$UsersShowByIdsRequestImplCopyWithImpl<$Res>
       $Res Function(_$UsersShowByIdsRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UsersShowByIdsRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -266,12 +287,14 @@ class _$UsersShowByIdsRequestImpl implements _UsersShowByIdsRequest {
             const DeepCollectionEquality().equals(other._userIds, _userIds));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_userIds));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UsersShowByIdsRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UsersShowByIdsRequestImplCopyWith<_$UsersShowByIdsRequestImpl>
@@ -295,8 +318,11 @@ abstract class _UsersShowByIdsRequest implements UsersShowByIdsRequest {
 
   @override
   List<String> get userIds;
+
+  /// Create a copy of UsersShowByIdsRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersShowByIdsRequestImplCopyWith<_$UsersShowByIdsRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -313,8 +339,12 @@ mixin _$UsersShowByUserNameRequest {
   String get userName => throw _privateConstructorUsedError;
   String? get host => throw _privateConstructorUsedError;
 
+  /// Serializes this UsersShowByUserNameRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UsersShowByUserNameRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UsersShowByUserNameRequestCopyWith<UsersShowByUserNameRequest>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -340,6 +370,8 @@ class _$UsersShowByUserNameRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UsersShowByUserNameRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -381,6 +413,8 @@ class __$$UsersShowByUserNameRequestImplCopyWithImpl<$Res>
       $Res Function(_$UsersShowByUserNameRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UsersShowByUserNameRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -432,11 +466,13 @@ class _$UsersShowByUserNameRequestImpl implements _UsersShowByUserNameRequest {
             (identical(other.host, host) || other.host == host));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, userName, host);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UsersShowByUserNameRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UsersShowByUserNameRequestImplCopyWith<_$UsersShowByUserNameRequestImpl>
@@ -460,13 +496,17 @@ abstract class _UsersShowByUserNameRequest
   factory _UsersShowByUserNameRequest.fromJson(Map<String, dynamic> json) =
       _$UsersShowByUserNameRequestImpl.fromJson;
 
-  @override // ignore: invalid_annotation_target
+// ignore: invalid_annotation_target
+  @override
   @JsonKey(name: "username")
   String get userName;
   @override
   String? get host;
+
+  /// Create a copy of UsersShowByUserNameRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersShowByUserNameRequestImplCopyWith<_$UsersShowByUserNameRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

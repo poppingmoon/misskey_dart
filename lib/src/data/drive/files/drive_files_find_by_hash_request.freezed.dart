@@ -23,8 +23,12 @@ DriveFilesFindByHashRequest _$DriveFilesFindByHashRequestFromJson(
 mixin _$DriveFilesFindByHashRequest {
   String get md5 => throw _privateConstructorUsedError;
 
+  /// Serializes this DriveFilesFindByHashRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DriveFilesFindByHashRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DriveFilesFindByHashRequestCopyWith<DriveFilesFindByHashRequest>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$DriveFilesFindByHashRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DriveFilesFindByHashRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -87,6 +93,8 @@ class __$$DriveFilesFindByHashRequestImplCopyWithImpl<$Res>
       $Res Function(_$DriveFilesFindByHashRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DriveFilesFindByHashRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -127,11 +135,13 @@ class _$DriveFilesFindByHashRequestImpl
             (identical(other.md5, md5) || other.md5 == md5));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, md5);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DriveFilesFindByHashRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DriveFilesFindByHashRequestImplCopyWith<_$DriveFilesFindByHashRequestImpl>
@@ -156,8 +166,11 @@ abstract class _DriveFilesFindByHashRequest
 
   @override
   String get md5;
+
+  /// Create a copy of DriveFilesFindByHashRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DriveFilesFindByHashRequestImplCopyWith<_$DriveFilesFindByHashRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

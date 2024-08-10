@@ -23,8 +23,12 @@ UsersListsUnfavoriteRequest _$UsersListsUnfavoriteRequestFromJson(
 mixin _$UsersListsUnfavoriteRequest {
   String get listId => throw _privateConstructorUsedError;
 
+  /// Serializes this UsersListsUnfavoriteRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UsersListsUnfavoriteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UsersListsUnfavoriteRequestCopyWith<UsersListsUnfavoriteRequest>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$UsersListsUnfavoriteRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UsersListsUnfavoriteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -87,6 +93,8 @@ class __$$UsersListsUnfavoriteRequestImplCopyWithImpl<$Res>
       $Res Function(_$UsersListsUnfavoriteRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UsersListsUnfavoriteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -127,11 +135,13 @@ class _$UsersListsUnfavoriteRequestImpl
             (identical(other.listId, listId) || other.listId == listId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, listId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UsersListsUnfavoriteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UsersListsUnfavoriteRequestImplCopyWith<_$UsersListsUnfavoriteRequestImpl>
@@ -156,8 +166,11 @@ abstract class _UsersListsUnfavoriteRequest
 
   @override
   String get listId;
+
+  /// Create a copy of UsersListsUnfavoriteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersListsUnfavoriteRequestImplCopyWith<_$UsersListsUnfavoriteRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

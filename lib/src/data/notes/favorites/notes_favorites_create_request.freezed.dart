@@ -23,8 +23,12 @@ NotesFavoritesCreateRequest _$NotesFavoritesCreateRequestFromJson(
 mixin _$NotesFavoritesCreateRequest {
   String get noteId => throw _privateConstructorUsedError;
 
+  /// Serializes this NotesFavoritesCreateRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotesFavoritesCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesFavoritesCreateRequestCopyWith<NotesFavoritesCreateRequest>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$NotesFavoritesCreateRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotesFavoritesCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -87,6 +93,8 @@ class __$$NotesFavoritesCreateRequestImplCopyWithImpl<$Res>
       $Res Function(_$NotesFavoritesCreateRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotesFavoritesCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -127,11 +135,13 @@ class _$NotesFavoritesCreateRequestImpl
             (identical(other.noteId, noteId) || other.noteId == noteId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, noteId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotesFavoritesCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotesFavoritesCreateRequestImplCopyWith<_$NotesFavoritesCreateRequestImpl>
@@ -156,8 +166,11 @@ abstract class _NotesFavoritesCreateRequest
 
   @override
   String get noteId;
+
+  /// Create a copy of NotesFavoritesCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesFavoritesCreateRequestImplCopyWith<_$NotesFavoritesCreateRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

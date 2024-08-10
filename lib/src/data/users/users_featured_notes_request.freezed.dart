@@ -25,8 +25,12 @@ mixin _$UsersFeaturedNotesRequest {
   String? get untilId => throw _privateConstructorUsedError;
   String get userId => throw _privateConstructorUsedError;
 
+  /// Serializes this UsersFeaturedNotesRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UsersFeaturedNotesRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UsersFeaturedNotesRequestCopyWith<UsersFeaturedNotesRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$UsersFeaturedNotesRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UsersFeaturedNotesRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -97,6 +103,8 @@ class __$$UsersFeaturedNotesRequestImplCopyWithImpl<$Res>
       $Res Function(_$UsersFeaturedNotesRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UsersFeaturedNotesRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -152,11 +160,13 @@ class _$UsersFeaturedNotesRequestImpl implements _UsersFeaturedNotesRequest {
             (identical(other.userId, userId) || other.userId == userId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, limit, untilId, userId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UsersFeaturedNotesRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UsersFeaturedNotesRequestImplCopyWith<_$UsersFeaturedNotesRequestImpl>
@@ -186,8 +196,11 @@ abstract class _UsersFeaturedNotesRequest implements UsersFeaturedNotesRequest {
   String? get untilId;
   @override
   String get userId;
+
+  /// Create a copy of UsersFeaturedNotesRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersFeaturedNotesRequestImplCopyWith<_$UsersFeaturedNotesRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

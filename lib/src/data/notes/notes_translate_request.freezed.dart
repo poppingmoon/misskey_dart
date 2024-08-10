@@ -24,8 +24,12 @@ mixin _$NotesTranslateRequest {
   String get noteId => throw _privateConstructorUsedError;
   String get targetLang => throw _privateConstructorUsedError;
 
+  /// Serializes this NotesTranslateRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotesTranslateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesTranslateRequestCopyWith<NotesTranslateRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$NotesTranslateRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotesTranslateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -90,6 +96,8 @@ class __$$NotesTranslateRequestImplCopyWithImpl<$Res>
       $Res Function(_$NotesTranslateRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotesTranslateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -138,11 +146,13 @@ class _$NotesTranslateRequestImpl implements _NotesTranslateRequest {
                 other.targetLang == targetLang));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, noteId, targetLang);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotesTranslateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotesTranslateRequestImplCopyWith<_$NotesTranslateRequestImpl>
@@ -169,8 +179,11 @@ abstract class _NotesTranslateRequest implements NotesTranslateRequest {
   String get noteId;
   @override
   String get targetLang;
+
+  /// Create a copy of NotesTranslateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesTranslateRequestImplCopyWith<_$NotesTranslateRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

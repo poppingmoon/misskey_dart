@@ -24,8 +24,12 @@ mixin _$FlashMyRequest {
   String? get sinceId => throw _privateConstructorUsedError;
   String? get untilId => throw _privateConstructorUsedError;
 
+  /// Serializes this FlashMyRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FlashMyRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FlashMyRequestCopyWith<FlashMyRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$FlashMyRequestCopyWithImpl<$Res, $Val extends FlashMyRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FlashMyRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -92,6 +98,8 @@ class __$$FlashMyRequestImplCopyWithImpl<$Res>
       _$FlashMyRequestImpl _value, $Res Function(_$FlashMyRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FlashMyRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -146,11 +154,13 @@ class _$FlashMyRequestImpl implements _FlashMyRequest {
             (identical(other.untilId, untilId) || other.untilId == untilId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, limit, sinceId, untilId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FlashMyRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FlashMyRequestImplCopyWith<_$FlashMyRequestImpl> get copyWith =>
@@ -180,8 +190,11 @@ abstract class _FlashMyRequest implements FlashMyRequest {
   String? get sinceId;
   @override
   String? get untilId;
+
+  /// Create a copy of FlashMyRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FlashMyRequestImplCopyWith<_$FlashMyRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

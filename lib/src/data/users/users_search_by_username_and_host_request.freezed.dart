@@ -26,8 +26,12 @@ mixin _$UsersSearchByUsernameAndHostRequest {
   String? get username => throw _privateConstructorUsedError;
   String? get host => throw _privateConstructorUsedError;
 
+  /// Serializes this UsersSearchByUsernameAndHostRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UsersSearchByUsernameAndHostRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UsersSearchByUsernameAndHostRequestCopyWith<
           UsersSearchByUsernameAndHostRequest>
       get copyWith => throw _privateConstructorUsedError;
@@ -55,6 +59,8 @@ class _$UsersSearchByUsernameAndHostRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UsersSearchByUsernameAndHostRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -106,6 +112,8 @@ class __$$UsersSearchByUsernameAndHostRequestImplCopyWithImpl<$Res>
       $Res Function(_$UsersSearchByUsernameAndHostRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UsersSearchByUsernameAndHostRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -172,11 +180,13 @@ class _$UsersSearchByUsernameAndHostRequestImpl
             (identical(other.host, host) || other.host == host));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, limit, detail, username, host);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UsersSearchByUsernameAndHostRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UsersSearchByUsernameAndHostRequestImplCopyWith<
@@ -212,8 +222,11 @@ abstract class _UsersSearchByUsernameAndHostRequest
   String? get username;
   @override
   String? get host;
+
+  /// Create a copy of UsersSearchByUsernameAndHostRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersSearchByUsernameAndHostRequestImplCopyWith<
           _$UsersSearchByUsernameAndHostRequestImpl>
       get copyWith => throw _privateConstructorUsedError;

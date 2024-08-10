@@ -29,8 +29,12 @@ mixin _$RolesNotesRequest {
   @EpocTimeDateTimeConverter.withMilliSeconds()
   DateTime? get untilDate => throw _privateConstructorUsedError;
 
+  /// Serializes this RolesNotesRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RolesNotesRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RolesNotesRequestCopyWith<RolesNotesRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -60,6 +64,8 @@ class _$RolesNotesRequestCopyWithImpl<$Res, $Val extends RolesNotesRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RolesNotesRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -124,6 +130,8 @@ class __$$RolesNotesRequestImplCopyWithImpl<$Res>
       $Res Function(_$RolesNotesRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RolesNotesRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -212,12 +220,14 @@ class _$RolesNotesRequestImpl implements _RolesNotesRequest {
                 other.untilDate == untilDate));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, roleId, limit, sinceId, untilId, sinceDate, untilDate);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RolesNotesRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RolesNotesRequestImplCopyWith<_$RolesNotesRequestImpl> get copyWith =>
@@ -259,8 +269,11 @@ abstract class _RolesNotesRequest implements RolesNotesRequest {
   @override
   @EpocTimeDateTimeConverter.withMilliSeconds()
   DateTime? get untilDate;
+
+  /// Create a copy of RolesNotesRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RolesNotesRequestImplCopyWith<_$RolesNotesRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

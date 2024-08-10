@@ -63,8 +63,12 @@ mixin _$IUpdateRequest {
       throw _privateConstructorUsedError;
   List<String>? get alsoKnownAs => throw _privateConstructorUsedError;
 
+  /// Serializes this IUpdateRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of IUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $IUpdateRequestCopyWith<IUpdateRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -124,6 +128,8 @@ class _$IUpdateRequestCopyWithImpl<$Res, $Val extends IUpdateRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of IUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -302,6 +308,8 @@ class _$IUpdateRequestCopyWithImpl<$Res, $Val extends IUpdateRequest>
     ) as $Val);
   }
 
+  /// Create a copy of IUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NotificationRecieveConfigsCopyWith<$Res>? get notificationRecieveConfig {
@@ -372,6 +380,8 @@ class __$$IUpdateRequestImplCopyWithImpl<$Res>
       _$IUpdateRequestImpl _value, $Res Function(_$IUpdateRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of IUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -813,7 +823,7 @@ class _$IUpdateRequestImpl implements _IUpdateRequest {
                 .equals(other._alsoKnownAs, _alsoKnownAs));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -853,7 +863,9 @@ class _$IUpdateRequestImpl implements _IUpdateRequest {
         const DeepCollectionEquality().hash(_alsoKnownAs)
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of IUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IUpdateRequestImplCopyWith<_$IUpdateRequestImpl> get copyWith =>
@@ -980,8 +992,11 @@ abstract class _IUpdateRequest implements IUpdateRequest {
   List<String>? get emailNotificationTypes;
   @override
   List<String>? get alsoKnownAs;
+
+  /// Create a copy of IUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IUpdateRequestImplCopyWith<_$IUpdateRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -999,8 +1014,12 @@ mixin _$IUpdateAvatarDecoration {
   double get offsetX => throw _privateConstructorUsedError;
   double get offsetY => throw _privateConstructorUsedError;
 
+  /// Serializes this IUpdateAvatarDecoration to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of IUpdateAvatarDecoration
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $IUpdateAvatarDecorationCopyWith<IUpdateAvatarDecoration> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1026,6 +1045,8 @@ class _$IUpdateAvatarDecorationCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of IUpdateAvatarDecoration
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1083,6 +1104,8 @@ class __$$IUpdateAvatarDecorationImplCopyWithImpl<$Res>
       $Res Function(_$IUpdateAvatarDecorationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of IUpdateAvatarDecoration
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1161,12 +1184,14 @@ class _$IUpdateAvatarDecorationImpl implements _IUpdateAvatarDecoration {
             (identical(other.offsetY, offsetY) || other.offsetY == offsetY));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, angle, flipH, offsetX, offsetY);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of IUpdateAvatarDecoration
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IUpdateAvatarDecorationImplCopyWith<_$IUpdateAvatarDecorationImpl>
@@ -1202,8 +1227,11 @@ abstract class _IUpdateAvatarDecoration implements IUpdateAvatarDecoration {
   double get offsetX;
   @override
   double get offsetY;
+
+  /// Create a copy of IUpdateAvatarDecoration
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IUpdateAvatarDecorationImplCopyWith<_$IUpdateAvatarDecorationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -49,8 +49,12 @@ mixin _$FederationShowInstanceResponse {
   @DateTimeConverter()
   DateTime get infoUpdatedAt => throw _privateConstructorUsedError;
 
+  /// Serializes this FederationShowInstanceResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FederationShowInstanceResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FederationShowInstanceResponseCopyWith<FederationShowInstanceResponse>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -99,6 +103,8 @@ class _$FederationShowInstanceResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FederationShowInstanceResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -262,6 +268,8 @@ class __$$FederationShowInstanceResponseImplCopyWithImpl<$Res>
       $Res Function(_$FederationShowInstanceResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FederationShowInstanceResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -515,7 +523,7 @@ class _$FederationShowInstanceResponseImpl
                 other.infoUpdatedAt == infoUpdatedAt));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -543,7 +551,9 @@ class _$FederationShowInstanceResponseImpl
         infoUpdatedAt
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FederationShowInstanceResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FederationShowInstanceResponseImplCopyWith<
@@ -638,8 +648,11 @@ abstract class _FederationShowInstanceResponse
   @override
   @DateTimeConverter()
   DateTime get infoUpdatedAt;
+
+  /// Create a copy of FederationShowInstanceResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FederationShowInstanceResponseImplCopyWith<
           _$FederationShowInstanceResponseImpl>
       get copyWith => throw _privateConstructorUsedError;

@@ -23,8 +23,12 @@ FollowingDeleteRequest _$FollowingDeleteRequestFromJson(
 mixin _$FollowingDeleteRequest {
   String get userId => throw _privateConstructorUsedError;
 
+  /// Serializes this FollowingDeleteRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FollowingDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FollowingDeleteRequestCopyWith<FollowingDeleteRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$FollowingDeleteRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FollowingDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -85,6 +91,8 @@ class __$$FollowingDeleteRequestImplCopyWithImpl<$Res>
       $Res Function(_$FollowingDeleteRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FollowingDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -123,11 +131,13 @@ class _$FollowingDeleteRequestImpl implements _FollowingDeleteRequest {
             (identical(other.userId, userId) || other.userId == userId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, userId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FollowingDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FollowingDeleteRequestImplCopyWith<_$FollowingDeleteRequestImpl>
@@ -151,8 +161,11 @@ abstract class _FollowingDeleteRequest implements FollowingDeleteRequest {
 
   @override
   String get userId;
+
+  /// Create a copy of FollowingDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FollowingDeleteRequestImplCopyWith<_$FollowingDeleteRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

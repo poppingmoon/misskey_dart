@@ -25,8 +25,12 @@ mixin _$JoinMisskeyInstances {
   List<JoinMisskeyInstanceInfo> get instancesInfos =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this JoinMisskeyInstances to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of JoinMisskeyInstances
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $JoinMisskeyInstancesCopyWith<JoinMisskeyInstances> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -56,6 +60,8 @@ class _$JoinMisskeyInstancesCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of JoinMisskeyInstances
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -79,6 +85,8 @@ class _$JoinMisskeyInstancesCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of JoinMisskeyInstances
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $JoinMisskeyStatsCopyWith<$Res> get stats {
@@ -113,6 +121,8 @@ class __$$JoinMisskeyInstancesImplCopyWithImpl<$Res>
       $Res Function(_$JoinMisskeyInstancesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of JoinMisskeyInstances
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -177,12 +187,14 @@ class _$JoinMisskeyInstancesImpl implements _JoinMisskeyInstances {
                 .equals(other._instancesInfos, _instancesInfos));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, date, stats,
       const DeepCollectionEquality().hash(_instancesInfos));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of JoinMisskeyInstances
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$JoinMisskeyInstancesImplCopyWith<_$JoinMisskeyInstancesImpl>
@@ -214,8 +226,11 @@ abstract class _JoinMisskeyInstances implements JoinMisskeyInstances {
   JoinMisskeyStats get stats;
   @override
   List<JoinMisskeyInstanceInfo> get instancesInfos;
+
+  /// Create a copy of JoinMisskeyInstances
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$JoinMisskeyInstancesImplCopyWith<_$JoinMisskeyInstancesImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -231,8 +246,12 @@ mixin _$JoinMisskeyStats {
   int get mau => throw _privateConstructorUsedError;
   int get instancesCount => throw _privateConstructorUsedError;
 
+  /// Serializes this JoinMisskeyStats to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of JoinMisskeyStats
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $JoinMisskeyStatsCopyWith<JoinMisskeyStats> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -256,6 +275,8 @@ class _$JoinMisskeyStatsCopyWithImpl<$Res, $Val extends JoinMisskeyStats>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of JoinMisskeyStats
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -304,6 +325,8 @@ class __$$JoinMisskeyStatsImplCopyWithImpl<$Res>
       $Res Function(_$JoinMisskeyStatsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of JoinMisskeyStats
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -373,12 +396,14 @@ class _$JoinMisskeyStatsImpl implements _JoinMisskeyStats {
                 other.instancesCount == instancesCount));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, notesCount, usersCount, mau, instancesCount);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of JoinMisskeyStats
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$JoinMisskeyStatsImplCopyWith<_$JoinMisskeyStatsImpl> get copyWith =>
@@ -411,8 +436,11 @@ abstract class _JoinMisskeyStats implements JoinMisskeyStats {
   int get mau;
   @override
   int get instancesCount;
+
+  /// Create a copy of JoinMisskeyStats
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$JoinMisskeyStatsImplCopyWith<_$JoinMisskeyStatsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -438,8 +466,12 @@ mixin _$JoinMisskeyInstanceInfo {
   JoinMisskeyNodeInfo? get nodeInfo => throw _privateConstructorUsedError;
   Map<String, dynamic>? get meta => throw _privateConstructorUsedError;
 
+  /// Serializes this JoinMisskeyInstanceInfo to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of JoinMisskeyInstanceInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $JoinMisskeyInstanceInfoCopyWith<JoinMisskeyInstanceInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -477,6 +509,8 @@ class _$JoinMisskeyInstanceInfoCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of JoinMisskeyInstanceInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -540,6 +574,8 @@ class _$JoinMisskeyInstanceInfoCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of JoinMisskeyInstanceInfo
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $JoinMisskeyNodeInfoCopyWith<$Res>? get nodeInfo {
@@ -589,6 +625,8 @@ class __$$JoinMisskeyInstanceInfoImplCopyWithImpl<$Res>
       $Res Function(_$JoinMisskeyInstanceInfoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of JoinMisskeyInstanceInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -741,7 +779,7 @@ class _$JoinMisskeyInstanceInfoImpl implements _JoinMisskeyInstanceInfo {
             const DeepCollectionEquality().equals(other._meta, _meta));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -757,7 +795,9 @@ class _$JoinMisskeyInstanceInfoImpl implements _JoinMisskeyInstanceInfo {
       nodeInfo,
       const DeepCollectionEquality().hash(_meta));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of JoinMisskeyInstanceInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$JoinMisskeyInstanceInfoImplCopyWith<_$JoinMisskeyInstanceInfoImpl>
@@ -806,14 +846,17 @@ abstract class _JoinMisskeyInstanceInfo implements JoinMisskeyInstanceInfo {
   @override
   bool get background;
   @override
-  bool get icon;
-  @override // ignore: invalid_annotation_target
+  bool get icon; // ignore: invalid_annotation_target
+  @override
   @JsonKey(name: "nodeinfo")
   JoinMisskeyNodeInfo? get nodeInfo;
   @override
   Map<String, dynamic>? get meta;
+
+  /// Create a copy of JoinMisskeyInstanceInfo
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$JoinMisskeyInstanceInfoImplCopyWith<_$JoinMisskeyInstanceInfoImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -829,8 +872,12 @@ mixin _$JoinMisskeyNodeInfo {
       throw _privateConstructorUsedError;
   JoinMisskeyNodeInfoUsage? get usage => throw _privateConstructorUsedError;
 
+  /// Serializes this JoinMisskeyNodeInfo to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of JoinMisskeyNodeInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $JoinMisskeyNodeInfoCopyWith<JoinMisskeyNodeInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -860,6 +907,8 @@ class _$JoinMisskeyNodeInfoCopyWithImpl<$Res, $Val extends JoinMisskeyNodeInfo>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of JoinMisskeyNodeInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -883,6 +932,8 @@ class _$JoinMisskeyNodeInfoCopyWithImpl<$Res, $Val extends JoinMisskeyNodeInfo>
     ) as $Val);
   }
 
+  /// Create a copy of JoinMisskeyNodeInfo
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $JoinMisskeyNodeInfoSoftwareCopyWith<$Res>? get software {
@@ -896,6 +947,8 @@ class _$JoinMisskeyNodeInfoCopyWithImpl<$Res, $Val extends JoinMisskeyNodeInfo>
     });
   }
 
+  /// Create a copy of JoinMisskeyNodeInfo
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $JoinMisskeyNodeInfoUsageCopyWith<$Res>? get usage {
@@ -936,6 +989,8 @@ class __$$JoinMisskeyNodeInfoImplCopyWithImpl<$Res>
       $Res Function(_$JoinMisskeyNodeInfoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of JoinMisskeyNodeInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -991,11 +1046,13 @@ class _$JoinMisskeyNodeInfoImpl implements _JoinMisskeyNodeInfo {
             (identical(other.usage, usage) || other.usage == usage));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, version, software, usage);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of JoinMisskeyNodeInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$JoinMisskeyNodeInfoImplCopyWith<_$JoinMisskeyNodeInfoImpl> get copyWith =>
@@ -1025,8 +1082,11 @@ abstract class _JoinMisskeyNodeInfo implements JoinMisskeyNodeInfo {
   JoinMisskeyNodeInfoSoftware? get software;
   @override
   JoinMisskeyNodeInfoUsage? get usage;
+
+  /// Create a copy of JoinMisskeyNodeInfo
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$JoinMisskeyNodeInfoImplCopyWith<_$JoinMisskeyNodeInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1041,8 +1101,12 @@ mixin _$JoinMisskeyNodeInfoSoftware {
   String? get name => throw _privateConstructorUsedError;
   String? get version => throw _privateConstructorUsedError;
 
+  /// Serializes this JoinMisskeyNodeInfoSoftware to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of JoinMisskeyNodeInfoSoftware
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $JoinMisskeyNodeInfoSoftwareCopyWith<JoinMisskeyNodeInfoSoftware>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1069,6 +1133,8 @@ class _$JoinMisskeyNodeInfoSoftwareCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of JoinMisskeyNodeInfoSoftware
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1110,6 +1176,8 @@ class __$$JoinMisskeyNodeInfoSoftwareImplCopyWithImpl<$Res>
       $Res Function(_$JoinMisskeyNodeInfoSoftwareImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of JoinMisskeyNodeInfoSoftware
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1158,11 +1226,13 @@ class _$JoinMisskeyNodeInfoSoftwareImpl
             (identical(other.version, version) || other.version == version));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, version);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of JoinMisskeyNodeInfoSoftware
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$JoinMisskeyNodeInfoSoftwareImplCopyWith<_$JoinMisskeyNodeInfoSoftwareImpl>
@@ -1190,8 +1260,11 @@ abstract class _JoinMisskeyNodeInfoSoftware
   String? get name;
   @override
   String? get version;
+
+  /// Create a copy of JoinMisskeyNodeInfoSoftware
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$JoinMisskeyNodeInfoSoftwareImplCopyWith<_$JoinMisskeyNodeInfoSoftwareImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1208,8 +1281,12 @@ mixin _$JoinMisskeyNodeInfoUsage {
   int? get localPosts => throw _privateConstructorUsedError;
   int? get localComments => throw _privateConstructorUsedError;
 
+  /// Serializes this JoinMisskeyNodeInfoUsage to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of JoinMisskeyNodeInfoUsage
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $JoinMisskeyNodeInfoUsageCopyWith<JoinMisskeyNodeInfoUsage> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1239,6 +1316,8 @@ class _$JoinMisskeyNodeInfoUsageCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of JoinMisskeyNodeInfoUsage
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1262,6 +1341,8 @@ class _$JoinMisskeyNodeInfoUsageCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of JoinMisskeyNodeInfoUsage
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $JoinMisskeyNodeInfoUsageUsersCopyWith<$Res>? get users {
@@ -1303,6 +1384,8 @@ class __$$JoinMisskeyNodeInfoUsageImplCopyWithImpl<$Res>
       $Res Function(_$JoinMisskeyNodeInfoUsageImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of JoinMisskeyNodeInfoUsage
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1360,12 +1443,14 @@ class _$JoinMisskeyNodeInfoUsageImpl implements _JoinMisskeyNodeInfoUsage {
                 other.localComments == localComments));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, users, localPosts, localComments);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of JoinMisskeyNodeInfoUsage
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$JoinMisskeyNodeInfoUsageImplCopyWith<_$JoinMisskeyNodeInfoUsageImpl>
@@ -1395,8 +1480,11 @@ abstract class _JoinMisskeyNodeInfoUsage implements JoinMisskeyNodeInfoUsage {
   int? get localPosts;
   @override
   int? get localComments;
+
+  /// Create a copy of JoinMisskeyNodeInfoUsage
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$JoinMisskeyNodeInfoUsageImplCopyWith<_$JoinMisskeyNodeInfoUsageImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1410,8 +1498,12 @@ JoinMisskeyNodeInfoUsageUsers _$JoinMisskeyNodeInfoUsageUsersFromJson(
 mixin _$JoinMisskeyNodeInfoUsageUsers {
   int? get total => throw _privateConstructorUsedError;
 
+  /// Serializes this JoinMisskeyNodeInfoUsageUsers to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of JoinMisskeyNodeInfoUsageUsers
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $JoinMisskeyNodeInfoUsageUsersCopyWith<JoinMisskeyNodeInfoUsageUsers>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1438,6 +1530,8 @@ class _$JoinMisskeyNodeInfoUsageUsersCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of JoinMisskeyNodeInfoUsageUsers
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1474,6 +1568,8 @@ class __$$JoinMisskeyNodeInfoUsageUsersImplCopyWithImpl<$Res>
       $Res Function(_$JoinMisskeyNodeInfoUsageUsersImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of JoinMisskeyNodeInfoUsageUsers
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1514,11 +1610,13 @@ class _$JoinMisskeyNodeInfoUsageUsersImpl
             (identical(other.total, total) || other.total == total));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, total);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of JoinMisskeyNodeInfoUsageUsers
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$JoinMisskeyNodeInfoUsageUsersImplCopyWith<
@@ -1544,8 +1642,11 @@ abstract class _JoinMisskeyNodeInfoUsageUsers
 
   @override
   int? get total;
+
+  /// Create a copy of JoinMisskeyNodeInfoUsageUsers
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$JoinMisskeyNodeInfoUsageUsersImplCopyWith<
           _$JoinMisskeyNodeInfoUsageUsersImpl>
       get copyWith => throw _privateConstructorUsedError;

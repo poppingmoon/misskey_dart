@@ -40,8 +40,12 @@ mixin _$Antenna {
   bool? get localOnly => throw _privateConstructorUsedError;
   bool? get excludeBots => throw _privateConstructorUsedError;
 
+  /// Serializes this Antenna to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Antenna
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AntennaCopyWith<Antenna> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -80,6 +84,8 @@ class _$AntennaCopyWithImpl<$Res, $Val extends Antenna>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Antenna
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -204,6 +210,8 @@ class __$$AntennaImplCopyWithImpl<$Res>
       _$AntennaImpl _value, $Res Function(_$AntennaImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Antenna
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -413,7 +421,7 @@ class _$AntennaImpl implements _Antenna {
                 other.excludeBots == excludeBots));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -434,7 +442,9 @@ class _$AntennaImpl implements _Antenna {
       localOnly,
       excludeBots);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Antenna
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AntennaImplCopyWith<_$AntennaImpl> get copyWith =>
@@ -480,8 +490,8 @@ abstract class _Antenna implements Antenna {
   @override
   List<List<String>> get keywords;
   @override
-  List<List<String>> get excludeKeywords;
-  @override // ignore: invalid_annotation_target
+  List<List<String>> get excludeKeywords; // ignore: invalid_annotation_target
+  @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   AntennaSource? get src;
   @override
@@ -504,8 +514,11 @@ abstract class _Antenna implements Antenna {
   bool? get localOnly;
   @override
   bool? get excludeBots;
+
+  /// Create a copy of Antenna
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AntennaImplCopyWith<_$AntennaImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

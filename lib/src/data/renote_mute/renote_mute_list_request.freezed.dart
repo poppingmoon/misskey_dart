@@ -25,8 +25,12 @@ mixin _$RenoteMuteListRequest {
   String? get sinceId => throw _privateConstructorUsedError;
   String? get untilId => throw _privateConstructorUsedError;
 
+  /// Serializes this RenoteMuteListRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RenoteMuteListRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RenoteMuteListRequestCopyWith<RenoteMuteListRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$RenoteMuteListRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RenoteMuteListRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -96,6 +102,8 @@ class __$$RenoteMuteListRequestImplCopyWithImpl<$Res>
       $Res Function(_$RenoteMuteListRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RenoteMuteListRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -150,11 +158,13 @@ class _$RenoteMuteListRequestImpl implements _RenoteMuteListRequest {
             (identical(other.untilId, untilId) || other.untilId == untilId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, limit, sinceId, untilId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RenoteMuteListRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RenoteMuteListRequestImplCopyWith<_$RenoteMuteListRequestImpl>
@@ -184,8 +194,11 @@ abstract class _RenoteMuteListRequest implements RenoteMuteListRequest {
   String? get sinceId;
   @override
   String? get untilId;
+
+  /// Create a copy of RenoteMuteListRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RenoteMuteListRequestImplCopyWith<_$RenoteMuteListRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

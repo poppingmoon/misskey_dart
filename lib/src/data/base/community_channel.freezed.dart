@@ -43,8 +43,12 @@ mixin _$CommunityChannel {
   List<Note>? get pinnedNotes => throw _privateConstructorUsedError;
   bool get allowRenoteToExternal => throw _privateConstructorUsedError;
 
+  /// Serializes this CommunityChannel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CommunityChannel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CommunityChannelCopyWith<CommunityChannel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -86,6 +90,8 @@ class _$CommunityChannelCopyWithImpl<$Res, $Val extends CommunityChannel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CommunityChannel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -222,6 +228,8 @@ class __$$CommunityChannelImplCopyWithImpl<$Res>
       $Res Function(_$CommunityChannelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CommunityChannel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -453,7 +461,7 @@ class _$CommunityChannelImpl implements _CommunityChannel {
                 other.allowRenoteToExternal == allowRenoteToExternal));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -476,7 +484,9 @@ class _$CommunityChannelImpl implements _CommunityChannel {
       const DeepCollectionEquality().hash(_pinnedNotes),
       allowRenoteToExternal);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CommunityChannel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CommunityChannelImplCopyWith<_$CommunityChannelImpl> get copyWith =>
@@ -555,8 +565,11 @@ abstract class _CommunityChannel implements CommunityChannel {
   List<Note>? get pinnedNotes;
   @override
   bool get allowRenoteToExternal;
+
+  /// Create a copy of CommunityChannel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CommunityChannelImplCopyWith<_$CommunityChannelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

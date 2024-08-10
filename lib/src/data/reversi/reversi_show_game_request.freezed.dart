@@ -23,8 +23,12 @@ ReversiShowGameRequest _$ReversiShowGameRequestFromJson(
 mixin _$ReversiShowGameRequest {
   String get gameId => throw _privateConstructorUsedError;
 
+  /// Serializes this ReversiShowGameRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ReversiShowGameRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ReversiShowGameRequestCopyWith<ReversiShowGameRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$ReversiShowGameRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ReversiShowGameRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -85,6 +91,8 @@ class __$$ReversiShowGameRequestImplCopyWithImpl<$Res>
       $Res Function(_$ReversiShowGameRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ReversiShowGameRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -123,11 +131,13 @@ class _$ReversiShowGameRequestImpl implements _ReversiShowGameRequest {
             (identical(other.gameId, gameId) || other.gameId == gameId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, gameId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ReversiShowGameRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ReversiShowGameRequestImplCopyWith<_$ReversiShowGameRequestImpl>
@@ -151,8 +161,11 @@ abstract class _ReversiShowGameRequest implements ReversiShowGameRequest {
 
   @override
   String get gameId;
+
+  /// Create a copy of ReversiShowGameRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReversiShowGameRequestImplCopyWith<_$ReversiShowGameRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

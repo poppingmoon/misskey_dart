@@ -32,8 +32,12 @@ mixin _$NotesEditRequest {
   String? get channelId => throw _privateConstructorUsedError;
   NotesCreatePollRequest? get poll => throw _privateConstructorUsedError;
 
+  /// Serializes this NotesEditRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotesEditRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesEditRequestCopyWith<NotesEditRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -70,6 +74,8 @@ class _$NotesEditRequestCopyWithImpl<$Res, $Val extends NotesEditRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotesEditRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -133,6 +139,8 @@ class _$NotesEditRequestCopyWithImpl<$Res, $Val extends NotesEditRequest>
     ) as $Val);
   }
 
+  /// Create a copy of NotesEditRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NotesCreatePollRequestCopyWith<$Res>? get poll {
@@ -179,6 +187,8 @@ class __$$NotesEditRequestImplCopyWithImpl<$Res>
       $Res Function(_$NotesEditRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotesEditRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -331,7 +341,7 @@ class _$NotesEditRequestImpl implements _NotesEditRequest {
             (identical(other.poll, poll) || other.poll == poll));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -347,7 +357,9 @@ class _$NotesEditRequestImpl implements _NotesEditRequest {
       channelId,
       poll);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotesEditRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotesEditRequestImplCopyWith<_$NotesEditRequestImpl> get copyWith =>
@@ -401,8 +413,11 @@ abstract class _NotesEditRequest implements NotesEditRequest {
   String? get channelId;
   @override
   NotesCreatePollRequest? get poll;
+
+  /// Create a copy of NotesEditRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesEditRequestImplCopyWith<_$NotesEditRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

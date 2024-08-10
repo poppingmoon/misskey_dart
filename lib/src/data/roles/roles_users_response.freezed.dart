@@ -23,8 +23,12 @@ mixin _$RolesUsersResponse {
   String get id => throw _privateConstructorUsedError;
   UserDetailed get user => throw _privateConstructorUsedError;
 
+  /// Serializes this RolesUsersResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RolesUsersResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RolesUsersResponseCopyWith<RolesUsersResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$RolesUsersResponseCopyWithImpl<$Res, $Val extends RolesUsersResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RolesUsersResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -86,6 +92,8 @@ class __$$RolesUsersResponseImplCopyWithImpl<$Res>
       $Res Function(_$RolesUsersResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RolesUsersResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -132,11 +140,13 @@ class _$RolesUsersResponseImpl implements _RolesUsersResponse {
             (identical(other.user, user) || other.user == user));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, user);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RolesUsersResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RolesUsersResponseImplCopyWith<_$RolesUsersResponseImpl> get copyWith =>
@@ -163,8 +173,11 @@ abstract class _RolesUsersResponse implements RolesUsersResponse {
   String get id;
   @override
   UserDetailed get user;
+
+  /// Create a copy of RolesUsersResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RolesUsersResponseImplCopyWith<_$RolesUsersResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

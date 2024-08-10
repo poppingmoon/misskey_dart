@@ -43,8 +43,12 @@ mixin _$AnnouncementsResponse {
   String? get userId => throw _privateConstructorUsedError;
   bool get silence => throw _privateConstructorUsedError;
 
+  /// Serializes this AnnouncementsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AnnouncementsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AnnouncementsResponseCopyWith<AnnouncementsResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -85,6 +89,8 @@ class _$AnnouncementsResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AnnouncementsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -201,6 +207,8 @@ class __$$AnnouncementsResponseImplCopyWithImpl<$Res>
       $Res Function(_$AnnouncementsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AnnouncementsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -372,7 +380,7 @@ class _$AnnouncementsResponseImpl implements _AnnouncementsResponse {
             (identical(other.silence, silence) || other.silence == silence));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -391,7 +399,9 @@ class _$AnnouncementsResponseImpl implements _AnnouncementsResponse {
       userId,
       silence);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AnnouncementsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AnnouncementsResponseImplCopyWith<_$AnnouncementsResponseImpl>
@@ -442,11 +452,11 @@ abstract class _AnnouncementsResponse implements AnnouncementsResponse {
   String get title;
   @override
   @NullableUriConverter()
-  Uri? get imageUrl;
-  @override // ignore: invalid_annotation_target
+  Uri? get imageUrl; // ignore: invalid_annotation_target
+  @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-  AnnouncementIconType? get icon;
-  @override // ignore: invalid_annotation_target
+  AnnouncementIconType? get icon; // ignore: invalid_annotation_target
+  @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   AnnouncementDisplayType? get display;
   @override
@@ -461,8 +471,11 @@ abstract class _AnnouncementsResponse implements AnnouncementsResponse {
   String? get userId;
   @override
   bool get silence;
+
+  /// Create a copy of AnnouncementsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AnnouncementsResponseImplCopyWith<_$AnnouncementsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

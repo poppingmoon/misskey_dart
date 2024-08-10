@@ -25,8 +25,12 @@ mixin _$DriveFoldersUpdateRequest {
   String? get name => throw _privateConstructorUsedError;
   String? get parentId => throw _privateConstructorUsedError;
 
+  /// Serializes this DriveFoldersUpdateRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DriveFoldersUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DriveFoldersUpdateRequestCopyWith<DriveFoldersUpdateRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$DriveFoldersUpdateRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DriveFoldersUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -97,6 +103,8 @@ class __$$DriveFoldersUpdateRequestImplCopyWithImpl<$Res>
       $Res Function(_$DriveFoldersUpdateRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DriveFoldersUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -154,11 +162,13 @@ class _$DriveFoldersUpdateRequestImpl implements _DriveFoldersUpdateRequest {
                 other.parentId == parentId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, folderId, name, parentId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DriveFoldersUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DriveFoldersUpdateRequestImplCopyWith<_$DriveFoldersUpdateRequestImpl>
@@ -188,8 +198,11 @@ abstract class _DriveFoldersUpdateRequest implements DriveFoldersUpdateRequest {
   String? get name;
   @override
   String? get parentId;
+
+  /// Create a copy of DriveFoldersUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DriveFoldersUpdateRequestImplCopyWith<_$DriveFoldersUpdateRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

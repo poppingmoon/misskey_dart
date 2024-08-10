@@ -22,8 +22,12 @@ NotesShowRequest _$NotesShowRequestFromJson(Map<String, dynamic> json) {
 mixin _$NotesShowRequest {
   String get noteId => throw _privateConstructorUsedError;
 
+  /// Serializes this NotesShowRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotesShowRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesShowRequestCopyWith<NotesShowRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$NotesShowRequestCopyWithImpl<$Res, $Val extends NotesShowRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotesShowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$NotesShowRequestImplCopyWithImpl<$Res>
       $Res Function(_$NotesShowRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotesShowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -118,11 +126,13 @@ class _$NotesShowRequestImpl implements _NotesShowRequest {
             (identical(other.noteId, noteId) || other.noteId == noteId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, noteId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotesShowRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotesShowRequestImplCopyWith<_$NotesShowRequestImpl> get copyWith =>
@@ -146,8 +156,11 @@ abstract class _NotesShowRequest implements NotesShowRequest {
 
   @override
   String get noteId;
+
+  /// Create a copy of NotesShowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesShowRequestImplCopyWith<_$NotesShowRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

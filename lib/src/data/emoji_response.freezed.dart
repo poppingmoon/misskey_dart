@@ -33,8 +33,12 @@ mixin _$EmojiResponse {
   List<String>? get roleIdsThatCanBeUsedThisEmojiAsReaction =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this EmojiResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of EmojiResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $EmojiResponseCopyWith<EmojiResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -68,6 +72,8 @@ class _$EmojiResponseCopyWithImpl<$Res, $Val extends EmojiResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of EmojiResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -157,6 +163,8 @@ class __$$EmojiResponseImplCopyWithImpl<$Res>
       _$EmojiResponseImpl _value, $Res Function(_$EmojiResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of EmojiResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -304,7 +312,7 @@ class _$EmojiResponseImpl implements _EmojiResponse {
                 _roleIdsThatCanBeUsedThisEmojiAsReaction));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -320,7 +328,9 @@ class _$EmojiResponseImpl implements _EmojiResponse {
       const DeepCollectionEquality()
           .hash(_roleIdsThatCanBeUsedThisEmojiAsReaction));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of EmojiResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EmojiResponseImplCopyWith<_$EmojiResponseImpl> get copyWith =>
@@ -372,8 +382,11 @@ abstract class _EmojiResponse implements EmojiResponse {
   bool get localOnly;
   @override
   List<String>? get roleIdsThatCanBeUsedThisEmojiAsReaction;
+
+  /// Create a copy of EmojiResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EmojiResponseImplCopyWith<_$EmojiResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

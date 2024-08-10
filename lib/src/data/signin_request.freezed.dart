@@ -24,8 +24,12 @@ mixin _$SigninRequest {
   String get password => throw _privateConstructorUsedError;
   String? get token => throw _privateConstructorUsedError;
 
+  /// Serializes this SigninRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SigninRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SigninRequestCopyWith<SigninRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$SigninRequestCopyWithImpl<$Res, $Val extends SigninRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SigninRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -92,6 +98,8 @@ class __$$SigninRequestImplCopyWithImpl<$Res>
       _$SigninRequestImpl _value, $Res Function(_$SigninRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SigninRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -149,11 +157,13 @@ class _$SigninRequestImpl implements _SigninRequest {
             (identical(other.token, token) || other.token == token));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, username, password, token);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SigninRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SigninRequestImplCopyWith<_$SigninRequestImpl> get copyWith =>
@@ -182,8 +192,11 @@ abstract class _SigninRequest implements SigninRequest {
   String get password;
   @override
   String? get token;
+
+  /// Create a copy of SigninRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SigninRequestImplCopyWith<_$SigninRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

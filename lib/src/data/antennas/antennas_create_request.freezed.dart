@@ -35,8 +35,12 @@ mixin _$AntennasCreateRequest {
   bool? get localOnly => throw _privateConstructorUsedError;
   bool? get excludeBots => throw _privateConstructorUsedError;
 
+  /// Serializes this AntennasCreateRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AntennasCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AntennasCreateRequestCopyWith<AntennasCreateRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -74,6 +78,8 @@ class _$AntennasCreateRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AntennasCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -182,6 +188,8 @@ class __$$AntennasCreateRequestImplCopyWithImpl<$Res>
       $Res Function(_$AntennasCreateRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AntennasCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -366,7 +374,7 @@ class _$AntennasCreateRequestImpl implements _AntennasCreateRequest {
                 other.excludeBots == excludeBots));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -384,7 +392,9 @@ class _$AntennasCreateRequestImpl implements _AntennasCreateRequest {
       localOnly,
       excludeBots);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AntennasCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AntennasCreateRequestImplCopyWith<_$AntennasCreateRequestImpl>
@@ -444,8 +454,11 @@ abstract class _AntennasCreateRequest implements AntennasCreateRequest {
   bool? get localOnly;
   @override
   bool? get excludeBots;
+
+  /// Create a copy of AntennasCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AntennasCreateRequestImplCopyWith<_$AntennasCreateRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

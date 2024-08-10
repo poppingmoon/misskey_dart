@@ -39,8 +39,12 @@ mixin _$UserListTimelineRequest {
   bool? get withFiles => throw _privateConstructorUsedError;
   bool? get allowPartial => throw _privateConstructorUsedError;
 
+  /// Serializes this UserListTimelineRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UserListTimelineRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UserListTimelineRequestCopyWith<UserListTimelineRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -77,6 +81,8 @@ class _$UserListTimelineRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UserListTimelineRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -180,6 +186,8 @@ class __$$UserListTimelineRequestImplCopyWithImpl<$Res>
       $Res Function(_$UserListTimelineRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UserListTimelineRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -331,7 +339,7 @@ class _$UserListTimelineRequestImpl implements _UserListTimelineRequest {
                 other.allowPartial == allowPartial));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -348,7 +356,9 @@ class _$UserListTimelineRequestImpl implements _UserListTimelineRequest {
       withFiles,
       allowPartial);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UserListTimelineRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UserListTimelineRequestImplCopyWith<_$UserListTimelineRequestImpl>
@@ -404,14 +414,17 @@ abstract class _UserListTimelineRequest implements UserListTimelineRequest {
   bool? get includeLocalRenotes;
   @override
   bool? get withRenotes;
-  @override
 
   /// Only show notes that have attached files.
+  @override
   bool? get withFiles;
   @override
   bool? get allowPartial;
+
+  /// Create a copy of UserListTimelineRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UserListTimelineRequestImplCopyWith<_$UserListTimelineRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

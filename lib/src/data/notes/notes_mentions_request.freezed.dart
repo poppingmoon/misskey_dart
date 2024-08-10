@@ -26,8 +26,12 @@ mixin _$NotesMentionsRequest {
   String? get untilId => throw _privateConstructorUsedError;
   NoteVisibility? get visibility => throw _privateConstructorUsedError;
 
+  /// Serializes this NotesMentionsRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotesMentionsRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesMentionsRequestCopyWith<NotesMentionsRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -57,6 +61,8 @@ class _$NotesMentionsRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotesMentionsRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -115,6 +121,8 @@ class __$$NotesMentionsRequestImplCopyWithImpl<$Res>
       $Res Function(_$NotesMentionsRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotesMentionsRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -192,12 +200,14 @@ class _$NotesMentionsRequestImpl implements _NotesMentionsRequest {
                 other.visibility == visibility));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, following, limit, sinceId, untilId, visibility);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotesMentionsRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotesMentionsRequestImplCopyWith<_$NotesMentionsRequestImpl>
@@ -234,8 +244,11 @@ abstract class _NotesMentionsRequest implements NotesMentionsRequest {
   String? get untilId;
   @override
   NoteVisibility? get visibility;
+
+  /// Create a copy of NotesMentionsRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesMentionsRequestImplCopyWith<_$NotesMentionsRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

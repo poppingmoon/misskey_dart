@@ -24,8 +24,12 @@ mixin _$NotesPollsRecommendationRequest {
   int? get limit => throw _privateConstructorUsedError;
   int? get offset => throw _privateConstructorUsedError;
 
+  /// Serializes this NotesPollsRecommendationRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotesPollsRecommendationRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesPollsRecommendationRequestCopyWith<NotesPollsRecommendationRequest>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$NotesPollsRecommendationRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotesPollsRecommendationRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -93,6 +99,8 @@ class __$$NotesPollsRecommendationRequestImplCopyWithImpl<$Res>
       $Res Function(_$NotesPollsRecommendationRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotesPollsRecommendationRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -141,11 +149,13 @@ class _$NotesPollsRecommendationRequestImpl
             (identical(other.offset, offset) || other.offset == offset));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, limit, offset);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotesPollsRecommendationRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotesPollsRecommendationRequestImplCopyWith<
@@ -174,8 +184,11 @@ abstract class _NotesPollsRecommendationRequest
   int? get limit;
   @override
   int? get offset;
+
+  /// Create a copy of NotesPollsRecommendationRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesPollsRecommendationRequestImplCopyWith<
           _$NotesPollsRecommendationRequestImpl>
       get copyWith => throw _privateConstructorUsedError;

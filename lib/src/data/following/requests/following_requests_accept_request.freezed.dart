@@ -23,8 +23,12 @@ FollowingRequestsAcceptRequest _$FollowingRequestsAcceptRequestFromJson(
 mixin _$FollowingRequestsAcceptRequest {
   String get userId => throw _privateConstructorUsedError;
 
+  /// Serializes this FollowingRequestsAcceptRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FollowingRequestsAcceptRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FollowingRequestsAcceptRequestCopyWith<FollowingRequestsAcceptRequest>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$FollowingRequestsAcceptRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FollowingRequestsAcceptRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -87,6 +93,8 @@ class __$$FollowingRequestsAcceptRequestImplCopyWithImpl<$Res>
       $Res Function(_$FollowingRequestsAcceptRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FollowingRequestsAcceptRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -127,11 +135,13 @@ class _$FollowingRequestsAcceptRequestImpl
             (identical(other.userId, userId) || other.userId == userId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, userId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FollowingRequestsAcceptRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FollowingRequestsAcceptRequestImplCopyWith<
@@ -157,8 +167,11 @@ abstract class _FollowingRequestsAcceptRequest
 
   @override
   String get userId;
+
+  /// Create a copy of FollowingRequestsAcceptRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FollowingRequestsAcceptRequestImplCopyWith<
           _$FollowingRequestsAcceptRequestImpl>
       get copyWith => throw _privateConstructorUsedError;

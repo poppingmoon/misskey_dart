@@ -22,8 +22,12 @@ MuteDeleteRequest _$MuteDeleteRequestFromJson(Map<String, dynamic> json) {
 mixin _$MuteDeleteRequest {
   String get userId => throw _privateConstructorUsedError;
 
+  /// Serializes this MuteDeleteRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MuteDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MuteDeleteRequestCopyWith<MuteDeleteRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$MuteDeleteRequestCopyWithImpl<$Res, $Val extends MuteDeleteRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MuteDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$MuteDeleteRequestImplCopyWithImpl<$Res>
       $Res Function(_$MuteDeleteRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MuteDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -118,11 +126,13 @@ class _$MuteDeleteRequestImpl implements _MuteDeleteRequest {
             (identical(other.userId, userId) || other.userId == userId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, userId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MuteDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MuteDeleteRequestImplCopyWith<_$MuteDeleteRequestImpl> get copyWith =>
@@ -146,8 +156,11 @@ abstract class _MuteDeleteRequest implements MuteDeleteRequest {
 
   @override
   String get userId;
+
+  /// Create a copy of MuteDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MuteDeleteRequestImplCopyWith<_$MuteDeleteRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

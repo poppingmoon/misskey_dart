@@ -23,8 +23,12 @@ RenoteMuteDeleteRequest _$RenoteMuteDeleteRequestFromJson(
 mixin _$RenoteMuteDeleteRequest {
   String get userId => throw _privateConstructorUsedError;
 
+  /// Serializes this RenoteMuteDeleteRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RenoteMuteDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RenoteMuteDeleteRequestCopyWith<RenoteMuteDeleteRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$RenoteMuteDeleteRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RenoteMuteDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -85,6 +91,8 @@ class __$$RenoteMuteDeleteRequestImplCopyWithImpl<$Res>
       $Res Function(_$RenoteMuteDeleteRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RenoteMuteDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -123,11 +131,13 @@ class _$RenoteMuteDeleteRequestImpl implements _RenoteMuteDeleteRequest {
             (identical(other.userId, userId) || other.userId == userId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, userId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RenoteMuteDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RenoteMuteDeleteRequestImplCopyWith<_$RenoteMuteDeleteRequestImpl>
@@ -151,8 +161,11 @@ abstract class _RenoteMuteDeleteRequest implements RenoteMuteDeleteRequest {
 
   @override
   String get userId;
+
+  /// Create a copy of RenoteMuteDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RenoteMuteDeleteRequestImplCopyWith<_$RenoteMuteDeleteRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

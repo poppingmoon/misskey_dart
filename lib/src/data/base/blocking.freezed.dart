@@ -26,8 +26,12 @@ mixin _$Blocking {
   String get blockeeId => throw _privateConstructorUsedError;
   UserDetailedNotMe get blockee => throw _privateConstructorUsedError;
 
+  /// Serializes this Blocking to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Blocking
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $BlockingCopyWith<Blocking> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -56,6 +60,8 @@ class _$BlockingCopyWithImpl<$Res, $Val extends Blocking>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Blocking
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -84,6 +90,8 @@ class _$BlockingCopyWithImpl<$Res, $Val extends Blocking>
     ) as $Val);
   }
 
+  /// Create a copy of Blocking
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserDetailedNotMeCopyWith<$Res> get blockee {
@@ -119,6 +127,8 @@ class __$$BlockingImplCopyWithImpl<$Res>
       _$BlockingImpl _value, $Res Function(_$BlockingImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Blocking
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -188,12 +198,14 @@ class _$BlockingImpl implements _Blocking {
             (identical(other.blockee, blockee) || other.blockee == blockee));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, createdAt, blockeeId, blockee);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Blocking
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BlockingImplCopyWith<_$BlockingImpl> get copyWith =>
@@ -226,8 +238,11 @@ abstract class _Blocking implements Blocking {
   String get blockeeId;
   @override
   UserDetailedNotMe get blockee;
+
+  /// Create a copy of Blocking
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BlockingImplCopyWith<_$BlockingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

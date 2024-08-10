@@ -28,8 +28,12 @@ mixin _$Muting {
   String get muteeId => throw _privateConstructorUsedError;
   UserDetailedNotMe get mutee => throw _privateConstructorUsedError;
 
+  /// Serializes this Muting to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Muting
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MutingCopyWith<Muting> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -58,6 +62,8 @@ class _$MutingCopyWithImpl<$Res, $Val extends Muting>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Muting
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -91,6 +97,8 @@ class _$MutingCopyWithImpl<$Res, $Val extends Muting>
     ) as $Val);
   }
 
+  /// Create a copy of Muting
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserDetailedNotMeCopyWith<$Res> get mutee {
@@ -126,6 +134,8 @@ class __$$MutingImplCopyWithImpl<$Res>
       _$MutingImpl _value, $Res Function(_$MutingImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Muting
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -205,12 +215,14 @@ class _$MutingImpl implements _Muting {
             (identical(other.mutee, mutee) || other.mutee == mutee));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, createdAt, expiresAt, muteeId, mutee);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Muting
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MutingImplCopyWith<_$MutingImpl> get copyWith =>
@@ -246,8 +258,11 @@ abstract class _Muting implements Muting {
   String get muteeId;
   @override
   UserDetailedNotMe get mutee;
+
+  /// Create a copy of Muting
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MutingImplCopyWith<_$MutingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

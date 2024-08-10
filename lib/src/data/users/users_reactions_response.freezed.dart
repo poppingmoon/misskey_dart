@@ -28,8 +28,12 @@ mixin _$UsersReactionsResponse {
   String get type => throw _privateConstructorUsedError;
   Note get note => throw _privateConstructorUsedError;
 
+  /// Serializes this UsersReactionsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UsersReactionsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UsersReactionsResponseCopyWith<UsersReactionsResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -62,6 +66,8 @@ class _$UsersReactionsResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UsersReactionsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -95,6 +101,8 @@ class _$UsersReactionsResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of UsersReactionsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserLiteCopyWith<$Res> get user {
@@ -103,6 +111,8 @@ class _$UsersReactionsResponseCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of UsersReactionsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NoteCopyWith<$Res> get note {
@@ -144,6 +154,8 @@ class __$$UsersReactionsResponseImplCopyWithImpl<$Res>
       $Res Function(_$UsersReactionsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UsersReactionsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -221,11 +233,13 @@ class _$UsersReactionsResponseImpl implements _UsersReactionsResponse {
             (identical(other.note, note) || other.note == note));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, createdAt, user, type, note);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UsersReactionsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UsersReactionsResponseImplCopyWith<_$UsersReactionsResponseImpl>
@@ -262,8 +276,11 @@ abstract class _UsersReactionsResponse implements UsersReactionsResponse {
   String get type;
   @override
   Note get note;
+
+  /// Create a copy of UsersReactionsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersReactionsResponseImplCopyWith<_$UsersReactionsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

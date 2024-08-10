@@ -22,8 +22,12 @@ FlashDeleteRequest _$FlashDeleteRequestFromJson(Map<String, dynamic> json) {
 mixin _$FlashDeleteRequest {
   String get flashId => throw _privateConstructorUsedError;
 
+  /// Serializes this FlashDeleteRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FlashDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FlashDeleteRequestCopyWith<FlashDeleteRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$FlashDeleteRequestCopyWithImpl<$Res, $Val extends FlashDeleteRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FlashDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$FlashDeleteRequestImplCopyWithImpl<$Res>
       $Res Function(_$FlashDeleteRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FlashDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -118,11 +126,13 @@ class _$FlashDeleteRequestImpl implements _FlashDeleteRequest {
             (identical(other.flashId, flashId) || other.flashId == flashId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, flashId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FlashDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FlashDeleteRequestImplCopyWith<_$FlashDeleteRequestImpl> get copyWith =>
@@ -146,8 +156,11 @@ abstract class _FlashDeleteRequest implements FlashDeleteRequest {
 
   @override
   String get flashId;
+
+  /// Create a copy of FlashDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FlashDeleteRequestImplCopyWith<_$FlashDeleteRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

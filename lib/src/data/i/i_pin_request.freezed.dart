@@ -22,8 +22,12 @@ IPinRequest _$IPinRequestFromJson(Map<String, dynamic> json) {
 mixin _$IPinRequest {
   String get noteId => throw _privateConstructorUsedError;
 
+  /// Serializes this IPinRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of IPinRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $IPinRequestCopyWith<IPinRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$IPinRequestCopyWithImpl<$Res, $Val extends IPinRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of IPinRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$IPinRequestImplCopyWithImpl<$Res>
       _$IPinRequestImpl _value, $Res Function(_$IPinRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of IPinRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -118,11 +126,13 @@ class _$IPinRequestImpl implements _IPinRequest {
             (identical(other.noteId, noteId) || other.noteId == noteId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, noteId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of IPinRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IPinRequestImplCopyWith<_$IPinRequestImpl> get copyWith =>
@@ -145,8 +155,11 @@ abstract class _IPinRequest implements IPinRequest {
 
   @override
   String get noteId;
+
+  /// Create a copy of IPinRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IPinRequestImplCopyWith<_$IPinRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

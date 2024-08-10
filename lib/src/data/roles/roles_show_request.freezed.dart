@@ -22,8 +22,12 @@ RolesShowRequest _$RolesShowRequestFromJson(Map<String, dynamic> json) {
 mixin _$RolesShowRequest {
   String get roleId => throw _privateConstructorUsedError;
 
+  /// Serializes this RolesShowRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RolesShowRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RolesShowRequestCopyWith<RolesShowRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$RolesShowRequestCopyWithImpl<$Res, $Val extends RolesShowRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RolesShowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$RolesShowRequestImplCopyWithImpl<$Res>
       $Res Function(_$RolesShowRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RolesShowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -118,11 +126,13 @@ class _$RolesShowRequestImpl implements _RolesShowRequest {
             (identical(other.roleId, roleId) || other.roleId == roleId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, roleId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RolesShowRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RolesShowRequestImplCopyWith<_$RolesShowRequestImpl> get copyWith =>
@@ -146,8 +156,11 @@ abstract class _RolesShowRequest implements RolesShowRequest {
 
   @override
   String get roleId;
+
+  /// Create a copy of RolesShowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RolesShowRequestImplCopyWith<_$RolesShowRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

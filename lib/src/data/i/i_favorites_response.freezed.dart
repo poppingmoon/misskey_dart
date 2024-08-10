@@ -26,8 +26,12 @@ mixin _$IFavoritesResponse {
   String get noteId => throw _privateConstructorUsedError;
   Note get note => throw _privateConstructorUsedError;
 
+  /// Serializes this IFavoritesResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of IFavoritesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $IFavoritesResponseCopyWith<IFavoritesResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -57,6 +61,8 @@ class _$IFavoritesResponseCopyWithImpl<$Res, $Val extends IFavoritesResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of IFavoritesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -85,6 +91,8 @@ class _$IFavoritesResponseCopyWithImpl<$Res, $Val extends IFavoritesResponse>
     ) as $Val);
   }
 
+  /// Create a copy of IFavoritesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NoteCopyWith<$Res> get note {
@@ -120,6 +128,8 @@ class __$$IFavoritesResponseImplCopyWithImpl<$Res>
       $Res Function(_$IFavoritesResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of IFavoritesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -188,11 +198,13 @@ class _$IFavoritesResponseImpl implements _IFavoritesResponse {
             (identical(other.note, note) || other.note == note));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, createdAt, noteId, note);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of IFavoritesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IFavoritesResponseImplCopyWith<_$IFavoritesResponseImpl> get copyWith =>
@@ -226,8 +238,11 @@ abstract class _IFavoritesResponse implements IFavoritesResponse {
   String get noteId;
   @override
   Note get note;
+
+  /// Create a copy of IFavoritesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IFavoritesResponseImplCopyWith<_$IFavoritesResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

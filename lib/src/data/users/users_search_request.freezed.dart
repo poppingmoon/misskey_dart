@@ -26,8 +26,12 @@ mixin _$UsersSearchRequest {
   Origin? get origin => throw _privateConstructorUsedError;
   bool? get detail => throw _privateConstructorUsedError;
 
+  /// Serializes this UsersSearchRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UsersSearchRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UsersSearchRequestCopyWith<UsersSearchRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$UsersSearchRequestCopyWithImpl<$Res, $Val extends UsersSearchRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UsersSearchRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -106,6 +112,8 @@ class __$$UsersSearchRequestImplCopyWithImpl<$Res>
       $Res Function(_$UsersSearchRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UsersSearchRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -177,12 +185,14 @@ class _$UsersSearchRequestImpl implements _UsersSearchRequest {
             (identical(other.detail, detail) || other.detail == detail));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, query, offset, limit, origin, detail);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UsersSearchRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UsersSearchRequestImplCopyWith<_$UsersSearchRequestImpl> get copyWith =>
@@ -218,8 +228,11 @@ abstract class _UsersSearchRequest implements UsersSearchRequest {
   Origin? get origin;
   @override
   bool? get detail;
+
+  /// Create a copy of UsersSearchRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersSearchRequestImplCopyWith<_$UsersSearchRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

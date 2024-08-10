@@ -22,8 +22,12 @@ ClipsShowRequest _$ClipsShowRequestFromJson(Map<String, dynamic> json) {
 mixin _$ClipsShowRequest {
   String get clipId => throw _privateConstructorUsedError;
 
+  /// Serializes this ClipsShowRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ClipsShowRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ClipsShowRequestCopyWith<ClipsShowRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$ClipsShowRequestCopyWithImpl<$Res, $Val extends ClipsShowRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ClipsShowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$ClipsShowRequestImplCopyWithImpl<$Res>
       $Res Function(_$ClipsShowRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ClipsShowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -118,11 +126,13 @@ class _$ClipsShowRequestImpl implements _ClipsShowRequest {
             (identical(other.clipId, clipId) || other.clipId == clipId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, clipId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ClipsShowRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ClipsShowRequestImplCopyWith<_$ClipsShowRequestImpl> get copyWith =>
@@ -146,8 +156,11 @@ abstract class _ClipsShowRequest implements ClipsShowRequest {
 
   @override
   String get clipId;
+
+  /// Create a copy of ClipsShowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ClipsShowRequestImplCopyWith<_$ClipsShowRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -29,8 +29,12 @@ mixin _$DriveFolder {
   int? get foldersCount => throw _privateConstructorUsedError;
   int? get filesCount => throw _privateConstructorUsedError;
 
+  /// Serializes this DriveFolder to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DriveFolder
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DriveFolderCopyWith<DriveFolder> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -63,6 +67,8 @@ class _$DriveFolderCopyWithImpl<$Res, $Val extends DriveFolder>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DriveFolder
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -106,6 +112,8 @@ class _$DriveFolderCopyWithImpl<$Res, $Val extends DriveFolder>
     ) as $Val);
   }
 
+  /// Create a copy of DriveFolder
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $DriveFolderCopyWith<$Res>? get parent {
@@ -148,6 +156,8 @@ class __$$DriveFolderImplCopyWithImpl<$Res>
       _$DriveFolderImpl _value, $Res Function(_$DriveFolderImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DriveFolder
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -246,12 +256,14 @@ class _$DriveFolderImpl implements _DriveFolder {
                 other.filesCount == filesCount));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, createdAt, name, parentId,
       parent, foldersCount, filesCount);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DriveFolder
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DriveFolderImplCopyWith<_$DriveFolderImpl> get copyWith =>
@@ -293,8 +305,11 @@ abstract class _DriveFolder implements DriveFolder {
   int? get foldersCount;
   @override
   int? get filesCount;
+
+  /// Create a copy of DriveFolder
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DriveFolderImplCopyWith<_$DriveFolderImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

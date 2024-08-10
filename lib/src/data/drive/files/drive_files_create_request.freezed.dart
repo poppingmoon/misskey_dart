@@ -27,8 +27,12 @@ mixin _$DriveFilesCreateRequest {
   bool? get isSensitive => throw _privateConstructorUsedError;
   bool? get force => throw _privateConstructorUsedError;
 
+  /// Serializes this DriveFilesCreateRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DriveFilesCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DriveFilesCreateRequestCopyWith<DriveFilesCreateRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -58,6 +62,8 @@ class _$DriveFilesCreateRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DriveFilesCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -119,6 +125,8 @@ class __$$DriveFilesCreateRequestImplCopyWithImpl<$Res>
       $Res Function(_$DriveFilesCreateRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DriveFilesCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -192,12 +200,14 @@ class _$DriveFilesCreateRequestImpl implements _DriveFilesCreateRequest {
             (identical(other.force, force) || other.force == force));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, folderId, name, comment, isSensitive, force);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DriveFilesCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DriveFilesCreateRequestImplCopyWith<_$DriveFilesCreateRequestImpl>
@@ -233,8 +243,11 @@ abstract class _DriveFilesCreateRequest implements DriveFilesCreateRequest {
   bool? get isSensitive;
   @override
   bool? get force;
+
+  /// Create a copy of DriveFilesCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DriveFilesCreateRequestImplCopyWith<_$DriveFilesCreateRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

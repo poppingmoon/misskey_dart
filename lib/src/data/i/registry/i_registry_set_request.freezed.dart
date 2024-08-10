@@ -25,8 +25,12 @@ mixin _$IRegistrySetRequest {
   List<String> get scope => throw _privateConstructorUsedError;
   String? get domain => throw _privateConstructorUsedError;
 
+  /// Serializes this IRegistrySetRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of IRegistrySetRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $IRegistrySetRequestCopyWith<IRegistrySetRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$IRegistrySetRequestCopyWithImpl<$Res, $Val extends IRegistrySetRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of IRegistrySetRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -98,6 +104,8 @@ class __$$IRegistrySetRequestImplCopyWithImpl<$Res>
       $Res Function(_$IRegistrySetRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of IRegistrySetRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -171,7 +179,7 @@ class _$IRegistrySetRequestImpl implements _IRegistrySetRequest {
             (identical(other.domain, domain) || other.domain == domain));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -180,7 +188,9 @@ class _$IRegistrySetRequestImpl implements _IRegistrySetRequest {
       const DeepCollectionEquality().hash(_scope),
       domain);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of IRegistrySetRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IRegistrySetRequestImplCopyWith<_$IRegistrySetRequestImpl> get copyWith =>
@@ -213,8 +223,11 @@ abstract class _IRegistrySetRequest implements IRegistrySetRequest {
   List<String> get scope;
   @override
   String? get domain;
+
+  /// Create a copy of IRegistrySetRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IRegistrySetRequestImplCopyWith<_$IRegistrySetRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -26,8 +26,12 @@ mixin _$SwRegisterResponse {
   String get endpoint => throw _privateConstructorUsedError;
   bool get sendReadMessage => throw _privateConstructorUsedError;
 
+  /// Serializes this SwRegisterResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SwRegisterResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SwRegisterResponseCopyWith<SwRegisterResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -56,6 +60,8 @@ class _$SwRegisterResponseCopyWithImpl<$Res, $Val extends SwRegisterResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SwRegisterResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -114,6 +120,8 @@ class __$$SwRegisterResponseImplCopyWithImpl<$Res>
       $Res Function(_$SwRegisterResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SwRegisterResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -191,12 +199,14 @@ class _$SwRegisterResponseImpl implements _SwRegisterResponse {
                 other.sendReadMessage == sendReadMessage));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, state, key, userId, endpoint, sendReadMessage);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SwRegisterResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SwRegisterResponseImplCopyWith<_$SwRegisterResponseImpl> get copyWith =>
@@ -232,8 +242,11 @@ abstract class _SwRegisterResponse implements SwRegisterResponse {
   String get endpoint;
   @override
   bool get sendReadMessage;
+
+  /// Create a copy of SwRegisterResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SwRegisterResponseImplCopyWith<_$SwRegisterResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

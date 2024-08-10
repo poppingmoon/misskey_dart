@@ -24,8 +24,12 @@ mixin _$IRegistryScopesWithDomainResponse {
   List<List<String>> get scopes => throw _privateConstructorUsedError;
   String? get domain => throw _privateConstructorUsedError;
 
+  /// Serializes this IRegistryScopesWithDomainResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of IRegistryScopesWithDomainResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $IRegistryScopesWithDomainResponseCopyWith<IRegistryScopesWithDomainResponse>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$IRegistryScopesWithDomainResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of IRegistryScopesWithDomainResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -93,6 +99,8 @@ class __$$IRegistryScopesWithDomainResponseImplCopyWithImpl<$Res>
       $Res Function(_$IRegistryScopesWithDomainResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of IRegistryScopesWithDomainResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -149,12 +157,14 @@ class _$IRegistryScopesWithDomainResponseImpl
             (identical(other.domain, domain) || other.domain == domain));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_scopes), domain);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of IRegistryScopesWithDomainResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IRegistryScopesWithDomainResponseImplCopyWith<
@@ -184,8 +194,11 @@ abstract class _IRegistryScopesWithDomainResponse
   List<List<String>> get scopes;
   @override
   String? get domain;
+
+  /// Create a copy of IRegistryScopesWithDomainResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IRegistryScopesWithDomainResponseImplCopyWith<
           _$IRegistryScopesWithDomainResponseImpl>
       get copyWith => throw _privateConstructorUsedError;

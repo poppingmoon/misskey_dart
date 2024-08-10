@@ -22,8 +22,12 @@ PagesUnlikeRequest _$PagesUnlikeRequestFromJson(Map<String, dynamic> json) {
 mixin _$PagesUnlikeRequest {
   String get pageId => throw _privateConstructorUsedError;
 
+  /// Serializes this PagesUnlikeRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PagesUnlikeRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PagesUnlikeRequestCopyWith<PagesUnlikeRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$PagesUnlikeRequestCopyWithImpl<$Res, $Val extends PagesUnlikeRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PagesUnlikeRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$PagesUnlikeRequestImplCopyWithImpl<$Res>
       $Res Function(_$PagesUnlikeRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PagesUnlikeRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -118,11 +126,13 @@ class _$PagesUnlikeRequestImpl implements _PagesUnlikeRequest {
             (identical(other.pageId, pageId) || other.pageId == pageId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, pageId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PagesUnlikeRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PagesUnlikeRequestImplCopyWith<_$PagesUnlikeRequestImpl> get copyWith =>
@@ -146,8 +156,11 @@ abstract class _PagesUnlikeRequest implements PagesUnlikeRequest {
 
   @override
   String get pageId;
+
+  /// Create a copy of PagesUnlikeRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PagesUnlikeRequestImplCopyWith<_$PagesUnlikeRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

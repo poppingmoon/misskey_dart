@@ -25,8 +25,12 @@ mixin _$HashtagsSearchRequest {
   String get query => throw _privateConstructorUsedError;
   int? get offset => throw _privateConstructorUsedError;
 
+  /// Serializes this HashtagsSearchRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HashtagsSearchRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $HashtagsSearchRequestCopyWith<HashtagsSearchRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$HashtagsSearchRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of HashtagsSearchRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -96,6 +102,8 @@ class __$$HashtagsSearchRequestImplCopyWithImpl<$Res>
       $Res Function(_$HashtagsSearchRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HashtagsSearchRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -151,11 +159,13 @@ class _$HashtagsSearchRequestImpl implements _HashtagsSearchRequest {
             (identical(other.offset, offset) || other.offset == offset));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, limit, query, offset);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HashtagsSearchRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$HashtagsSearchRequestImplCopyWith<_$HashtagsSearchRequestImpl>
@@ -185,8 +195,11 @@ abstract class _HashtagsSearchRequest implements HashtagsSearchRequest {
   String get query;
   @override
   int? get offset;
+
+  /// Create a copy of HashtagsSearchRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$HashtagsSearchRequestImplCopyWith<_$HashtagsSearchRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -23,8 +23,12 @@ FollowingRequestsCancelRequest _$FollowingRequestsCancelRequestFromJson(
 mixin _$FollowingRequestsCancelRequest {
   String get userId => throw _privateConstructorUsedError;
 
+  /// Serializes this FollowingRequestsCancelRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FollowingRequestsCancelRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FollowingRequestsCancelRequestCopyWith<FollowingRequestsCancelRequest>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$FollowingRequestsCancelRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FollowingRequestsCancelRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -87,6 +93,8 @@ class __$$FollowingRequestsCancelRequestImplCopyWithImpl<$Res>
       $Res Function(_$FollowingRequestsCancelRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FollowingRequestsCancelRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -127,11 +135,13 @@ class _$FollowingRequestsCancelRequestImpl
             (identical(other.userId, userId) || other.userId == userId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, userId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FollowingRequestsCancelRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FollowingRequestsCancelRequestImplCopyWith<
@@ -157,8 +167,11 @@ abstract class _FollowingRequestsCancelRequest
 
   @override
   String get userId;
+
+  /// Create a copy of FollowingRequestsCancelRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FollowingRequestsCancelRequestImplCopyWith<
           _$FollowingRequestsCancelRequestImpl>
       get copyWith => throw _privateConstructorUsedError;

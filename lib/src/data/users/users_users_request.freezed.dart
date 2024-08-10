@@ -28,8 +28,12 @@ mixin _$UsersUsersRequest {
   Origin? get origin => throw _privateConstructorUsedError;
   String? get hostname => throw _privateConstructorUsedError;
 
+  /// Serializes this UsersUsersRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UsersUsersRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UsersUsersRequestCopyWith<UsersUsersRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -59,6 +63,8 @@ class _$UsersUsersRequestCopyWithImpl<$Res, $Val extends UsersUsersRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UsersUsersRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -123,6 +129,8 @@ class __$$UsersUsersRequestImplCopyWithImpl<$Res>
       $Res Function(_$UsersUsersRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UsersUsersRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -209,12 +217,14 @@ class _$UsersUsersRequestImpl implements _UsersUsersRequest {
                 other.hostname == hostname));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, limit, offset, sort, state, origin, hostname);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UsersUsersRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UsersUsersRequestImplCopyWith<_$UsersUsersRequestImpl> get copyWith =>
@@ -254,8 +264,11 @@ abstract class _UsersUsersRequest implements UsersUsersRequest {
   Origin? get origin;
   @override
   String? get hostname;
+
+  /// Create a copy of UsersUsersRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersUsersRequestImplCopyWith<_$UsersUsersRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

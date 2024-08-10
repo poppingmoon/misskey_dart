@@ -24,8 +24,12 @@ mixin _$UsersListsCreateFromPublicRequest {
   String get name => throw _privateConstructorUsedError;
   String get listId => throw _privateConstructorUsedError;
 
+  /// Serializes this UsersListsCreateFromPublicRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UsersListsCreateFromPublicRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UsersListsCreateFromPublicRequestCopyWith<UsersListsCreateFromPublicRequest>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$UsersListsCreateFromPublicRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UsersListsCreateFromPublicRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -93,6 +99,8 @@ class __$$UsersListsCreateFromPublicRequestImplCopyWithImpl<$Res>
       $Res Function(_$UsersListsCreateFromPublicRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UsersListsCreateFromPublicRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -142,11 +150,13 @@ class _$UsersListsCreateFromPublicRequestImpl
             (identical(other.listId, listId) || other.listId == listId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, listId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UsersListsCreateFromPublicRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UsersListsCreateFromPublicRequestImplCopyWith<
@@ -176,8 +186,11 @@ abstract class _UsersListsCreateFromPublicRequest
   String get name;
   @override
   String get listId;
+
+  /// Create a copy of UsersListsCreateFromPublicRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersListsCreateFromPublicRequestImplCopyWith<
           _$UsersListsCreateFromPublicRequestImpl>
       get copyWith => throw _privateConstructorUsedError;

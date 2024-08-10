@@ -28,8 +28,12 @@ mixin _$NotesReactionsRequest {
   String? get sinceId => throw _privateConstructorUsedError;
   String? get untilId => throw _privateConstructorUsedError;
 
+  /// Serializes this NotesReactionsRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotesReactionsRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesReactionsRequestCopyWith<NotesReactionsRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -60,6 +64,8 @@ class _$NotesReactionsRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotesReactionsRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -126,6 +132,8 @@ class __$$NotesReactionsRequestImplCopyWithImpl<$Res>
       $Res Function(_$NotesReactionsRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotesReactionsRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -210,12 +218,14 @@ class _$NotesReactionsRequestImpl implements _NotesReactionsRequest {
             (identical(other.untilId, untilId) || other.untilId == untilId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, noteId, type, limit, offset, sinceId, untilId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotesReactionsRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotesReactionsRequestImplCopyWith<_$NotesReactionsRequestImpl>
@@ -254,8 +264,11 @@ abstract class _NotesReactionsRequest implements NotesReactionsRequest {
   String? get sinceId;
   @override
   String? get untilId;
+
+  /// Create a copy of NotesReactionsRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesReactionsRequestImplCopyWith<_$NotesReactionsRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

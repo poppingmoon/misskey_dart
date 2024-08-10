@@ -24,8 +24,12 @@ mixin _$MuteCreateRequest {
   @NullableEpocTimeDateTimeConverter.withMilliSeconds()
   DateTime? get expiresAt => throw _privateConstructorUsedError;
 
+  /// Serializes this MuteCreateRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MuteCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MuteCreateRequestCopyWith<MuteCreateRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$MuteCreateRequestCopyWithImpl<$Res, $Val extends MuteCreateRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MuteCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -93,6 +99,8 @@ class __$$MuteCreateRequestImplCopyWithImpl<$Res>
       $Res Function(_$MuteCreateRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MuteCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -143,11 +151,13 @@ class _$MuteCreateRequestImpl implements _MuteCreateRequest {
                 other.expiresAt == expiresAt));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, userId, expiresAt);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MuteCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MuteCreateRequestImplCopyWith<_$MuteCreateRequestImpl> get copyWith =>
@@ -176,8 +186,11 @@ abstract class _MuteCreateRequest implements MuteCreateRequest {
   @override
   @NullableEpocTimeDateTimeConverter.withMilliSeconds()
   DateTime? get expiresAt;
+
+  /// Create a copy of MuteCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MuteCreateRequestImplCopyWith<_$MuteCreateRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

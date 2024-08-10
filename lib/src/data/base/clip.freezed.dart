@@ -34,8 +34,12 @@ mixin _$Clip {
   bool? get isFavorited => throw _privateConstructorUsedError;
   int? get notesCount => throw _privateConstructorUsedError;
 
+  /// Serializes this Clip to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Clip
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ClipCopyWith<Clip> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -70,6 +74,8 @@ class _$ClipCopyWithImpl<$Res, $Val extends Clip>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Clip
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -133,6 +139,8 @@ class _$ClipCopyWithImpl<$Res, $Val extends Clip>
     ) as $Val);
   }
 
+  /// Create a copy of Clip
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserLiteCopyWith<$Res> get user {
@@ -173,6 +181,8 @@ class __$$ClipImplCopyWithImpl<$Res>
   __$$ClipImplCopyWithImpl(_$ClipImpl _value, $Res Function(_$ClipImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Clip
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -311,7 +321,7 @@ class _$ClipImpl implements _Clip {
                 other.notesCount == notesCount));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -327,7 +337,9 @@ class _$ClipImpl implements _Clip {
       isFavorited,
       notesCount);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Clip
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ClipImplCopyWith<_$ClipImpl> get copyWith =>
@@ -381,8 +393,11 @@ abstract class _Clip implements Clip {
   bool? get isFavorited;
   @override
   int? get notesCount;
+
+  /// Create a copy of Clip
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ClipImplCopyWith<_$ClipImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

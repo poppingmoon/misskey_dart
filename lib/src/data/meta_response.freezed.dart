@@ -91,8 +91,12 @@ mixin _$MetaResponse {
   bool? get cacheRemoteSensitiveFiles => throw _privateConstructorUsedError;
   MetaFeature? get features => throw _privateConstructorUsedError;
 
+  /// Serializes this MetaResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MetaResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MetaResponseCopyWith<MetaResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -173,6 +177,8 @@ class _$MetaResponseCopyWithImpl<$Res, $Val extends MetaResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MetaResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -451,6 +457,8 @@ class _$MetaResponseCopyWithImpl<$Res, $Val extends MetaResponse>
     ) as $Val);
   }
 
+  /// Create a copy of MetaResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserPoliciesCopyWith<$Res>? get policies {
@@ -463,6 +471,8 @@ class _$MetaResponseCopyWithImpl<$Res, $Val extends MetaResponse>
     });
   }
 
+  /// Create a copy of MetaResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MetaFeatureCopyWith<$Res>? get features {
@@ -554,6 +564,8 @@ class __$$MetaResponseImplCopyWithImpl<$Res>
       _$MetaResponseImpl _value, $Res Function(_$MetaResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MetaResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1153,7 +1165,7 @@ class _$MetaResponseImpl implements _MetaResponse {
             (identical(other.features, features) || other.features == features));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -1213,7 +1225,9 @@ class _$MetaResponseImpl implements _MetaResponse {
         features
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MetaResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MetaResponseImplCopyWith<_$MetaResponseImpl> get copyWith =>
@@ -1356,8 +1370,8 @@ abstract class _MetaResponse implements MetaResponse {
   Uri? get infoImageUrl;
   @override
   @NullableUriConverter()
-  Uri? get errorImageUrl;
-  @override // Removed in Misskey 13.13.2
+  Uri? get errorImageUrl; // Removed in Misskey 13.13.2
+  @override
   @NullableUriConverter()
   Uri? get serverErrorImageUrl;
   @override
@@ -1410,8 +1424,11 @@ abstract class _MetaResponse implements MetaResponse {
   bool? get cacheRemoteSensitiveFiles;
   @override
   MetaFeature? get features;
+
+  /// Create a copy of MetaResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MetaResponseImplCopyWith<_$MetaResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1430,8 +1447,12 @@ mixin _$MetaAd {
   Uri? get imageUrl => throw _privateConstructorUsedError;
   int get ratio => throw _privateConstructorUsedError;
 
+  /// Serializes this MetaAd to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MetaAd
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MetaAdCopyWith<MetaAd> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -1458,6 +1479,8 @@ class _$MetaAdCopyWithImpl<$Res, $Val extends MetaAd>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MetaAd
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1515,6 +1538,8 @@ class __$$MetaAdImplCopyWithImpl<$Res>
       _$MetaAdImpl _value, $Res Function(_$MetaAdImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MetaAd
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1593,11 +1618,13 @@ class _$MetaAdImpl implements _MetaAd {
             (identical(other.ratio, ratio) || other.ratio == ratio));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, place, url, imageUrl, ratio);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MetaAd
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MetaAdImplCopyWith<_$MetaAdImpl> get copyWith =>
@@ -1633,8 +1660,11 @@ abstract class _MetaAd implements MetaAd {
   Uri? get imageUrl;
   @override
   int get ratio;
+
+  /// Create a copy of MetaAd
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MetaAdImplCopyWith<_$MetaAdImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1654,8 +1684,12 @@ mixin _$MetaFeature {
   bool? get serviceWorker => throw _privateConstructorUsedError;
   bool? get miauth => throw _privateConstructorUsedError;
 
+  /// Serializes this MetaFeature to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MetaFeature
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MetaFeatureCopyWith<MetaFeature> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1687,6 +1721,8 @@ class _$MetaFeatureCopyWithImpl<$Res, $Val extends MetaFeature>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MetaFeature
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1763,6 +1799,8 @@ class __$$MetaFeatureImplCopyWithImpl<$Res>
       _$MetaFeatureImpl _value, $Res Function(_$MetaFeatureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MetaFeature
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1872,7 +1910,7 @@ class _$MetaFeatureImpl implements _MetaFeature {
             (identical(other.miauth, miauth) || other.miauth == miauth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1885,7 +1923,9 @@ class _$MetaFeatureImpl implements _MetaFeature {
       serviceWorker,
       miauth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MetaFeature
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MetaFeatureImplCopyWith<_$MetaFeatureImpl> get copyWith =>
@@ -1929,8 +1969,11 @@ abstract class _MetaFeature implements MetaFeature {
   bool? get serviceWorker;
   @override
   bool? get miauth;
+
+  /// Create a copy of MetaFeature
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MetaFeatureImplCopyWith<_$MetaFeatureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -25,8 +25,12 @@ mixin _$UsersGetFrequentlyRepliedUsersResponse {
   User get user => throw _privateConstructorUsedError;
   double get weight => throw _privateConstructorUsedError;
 
+  /// Serializes this UsersGetFrequentlyRepliedUsersResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UsersGetFrequentlyRepliedUsersResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UsersGetFrequentlyRepliedUsersResponseCopyWith<
           UsersGetFrequentlyRepliedUsersResponse>
       get copyWith => throw _privateConstructorUsedError;
@@ -54,6 +58,8 @@ class _$UsersGetFrequentlyRepliedUsersResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UsersGetFrequentlyRepliedUsersResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -95,6 +101,8 @@ class __$$UsersGetFrequentlyRepliedUsersResponseImplCopyWithImpl<$Res>
       $Res Function(_$UsersGetFrequentlyRepliedUsersResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UsersGetFrequentlyRepliedUsersResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -144,11 +152,13 @@ class _$UsersGetFrequentlyRepliedUsersResponseImpl
             (identical(other.weight, weight) || other.weight == weight));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, user, weight);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UsersGetFrequentlyRepliedUsersResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UsersGetFrequentlyRepliedUsersResponseImplCopyWith<
@@ -179,8 +189,11 @@ abstract class _UsersGetFrequentlyRepliedUsersResponse
   User get user;
   @override
   double get weight;
+
+  /// Create a copy of UsersGetFrequentlyRepliedUsersResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersGetFrequentlyRepliedUsersResponseImplCopyWith<
           _$UsersGetFrequentlyRepliedUsersResponseImpl>
       get copyWith => throw _privateConstructorUsedError;

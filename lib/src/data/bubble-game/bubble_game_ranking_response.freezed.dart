@@ -25,8 +25,12 @@ mixin _$BubbleGameRankingResponse {
   int get score => throw _privateConstructorUsedError;
   UserLite get user => throw _privateConstructorUsedError;
 
+  /// Serializes this BubbleGameRankingResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BubbleGameRankingResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $BubbleGameRankingResponseCopyWith<BubbleGameRankingResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -53,6 +57,8 @@ class _$BubbleGameRankingResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of BubbleGameRankingResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -76,6 +82,8 @@ class _$BubbleGameRankingResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of BubbleGameRankingResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserLiteCopyWith<$Res> get user {
@@ -110,6 +118,8 @@ class __$$BubbleGameRankingResponseImplCopyWithImpl<$Res>
       $Res Function(_$BubbleGameRankingResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BubbleGameRankingResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -165,11 +175,13 @@ class _$BubbleGameRankingResponseImpl implements _BubbleGameRankingResponse {
             (identical(other.user, user) || other.user == user));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, score, user);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BubbleGameRankingResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BubbleGameRankingResponseImplCopyWith<_$BubbleGameRankingResponseImpl>
@@ -199,8 +211,11 @@ abstract class _BubbleGameRankingResponse implements BubbleGameRankingResponse {
   int get score;
   @override
   UserLite get user;
+
+  /// Create a copy of BubbleGameRankingResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BubbleGameRankingResponseImplCopyWith<_$BubbleGameRankingResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

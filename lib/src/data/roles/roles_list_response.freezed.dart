@@ -41,8 +41,12 @@ mixin _$RolesListResponse {
   int get displayOrder => throw _privateConstructorUsedError;
   int get usersCount => throw _privateConstructorUsedError;
 
+  /// Serializes this RolesListResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RolesListResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RolesListResponseCopyWith<RolesListResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -82,6 +86,8 @@ class _$RolesListResponseCopyWithImpl<$Res, $Val extends RolesListResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RolesListResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -206,6 +212,8 @@ class __$$RolesListResponseImplCopyWithImpl<$Res>
       $Res Function(_$RolesListResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RolesListResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -395,7 +403,7 @@ class _$RolesListResponseImpl implements _RolesListResponse {
                 other.usersCount == usersCount));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -416,7 +424,9 @@ class _$RolesListResponseImpl implements _RolesListResponse {
       displayOrder,
       usersCount);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RolesListResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RolesListResponseImplCopyWith<_$RolesListResponseImpl> get copyWith =>
@@ -489,8 +499,11 @@ abstract class _RolesListResponse implements RolesListResponse {
   int get displayOrder;
   @override
   int get usersCount;
+
+  /// Create a copy of RolesListResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RolesListResponseImplCopyWith<_$RolesListResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

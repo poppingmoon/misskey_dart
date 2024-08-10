@@ -34,8 +34,12 @@ mixin _$GalleryPost {
   int get likedCount => throw _privateConstructorUsedError;
   bool? get isLiked => throw _privateConstructorUsedError;
 
+  /// Serializes this GalleryPost to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GalleryPost
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GalleryPostCopyWith<GalleryPost> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -74,6 +78,8 @@ class _$GalleryPostCopyWithImpl<$Res, $Val extends GalleryPost>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GalleryPost
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -147,6 +153,8 @@ class _$GalleryPostCopyWithImpl<$Res, $Val extends GalleryPost>
     ) as $Val);
   }
 
+  /// Create a copy of GalleryPost
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserLiteCopyWith<$Res> get user {
@@ -191,6 +199,8 @@ class __$$GalleryPostImplCopyWithImpl<$Res>
       _$GalleryPostImpl _value, $Res Function(_$GalleryPostImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GalleryPost
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -366,7 +376,7 @@ class _$GalleryPostImpl implements _GalleryPost {
             (identical(other.isLiked, isLiked) || other.isLiked == isLiked));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -384,7 +394,9 @@ class _$GalleryPostImpl implements _GalleryPost {
       likedCount,
       isLiked);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GalleryPost
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GalleryPostImplCopyWith<_$GalleryPostImpl> get copyWith =>
@@ -443,8 +455,11 @@ abstract class _GalleryPost implements GalleryPost {
   int get likedCount;
   @override
   bool? get isLiked;
+
+  /// Create a copy of GalleryPost
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GalleryPostImplCopyWith<_$GalleryPostImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

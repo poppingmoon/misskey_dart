@@ -22,8 +22,12 @@ IUnpinRequest _$IUnpinRequestFromJson(Map<String, dynamic> json) {
 mixin _$IUnpinRequest {
   String get noteId => throw _privateConstructorUsedError;
 
+  /// Serializes this IUnpinRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of IUnpinRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $IUnpinRequestCopyWith<IUnpinRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$IUnpinRequestCopyWithImpl<$Res, $Val extends IUnpinRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of IUnpinRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$IUnpinRequestImplCopyWithImpl<$Res>
       _$IUnpinRequestImpl _value, $Res Function(_$IUnpinRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of IUnpinRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -118,11 +126,13 @@ class _$IUnpinRequestImpl implements _IUnpinRequest {
             (identical(other.noteId, noteId) || other.noteId == noteId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, noteId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of IUnpinRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IUnpinRequestImplCopyWith<_$IUnpinRequestImpl> get copyWith =>
@@ -145,8 +155,11 @@ abstract class _IUnpinRequest implements IUnpinRequest {
 
   @override
   String get noteId;
+
+  /// Create a copy of IUnpinRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IUnpinRequestImplCopyWith<_$IUnpinRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

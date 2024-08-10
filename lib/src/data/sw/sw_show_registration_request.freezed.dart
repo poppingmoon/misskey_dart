@@ -23,8 +23,12 @@ SwShowRegistrationRequest _$SwShowRegistrationRequestFromJson(
 mixin _$SwShowRegistrationRequest {
   String get endpoint => throw _privateConstructorUsedError;
 
+  /// Serializes this SwShowRegistrationRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SwShowRegistrationRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SwShowRegistrationRequestCopyWith<SwShowRegistrationRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$SwShowRegistrationRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SwShowRegistrationRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -85,6 +91,8 @@ class __$$SwShowRegistrationRequestImplCopyWithImpl<$Res>
       $Res Function(_$SwShowRegistrationRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SwShowRegistrationRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -124,11 +132,13 @@ class _$SwShowRegistrationRequestImpl implements _SwShowRegistrationRequest {
                 other.endpoint == endpoint));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, endpoint);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SwShowRegistrationRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SwShowRegistrationRequestImplCopyWith<_$SwShowRegistrationRequestImpl>
@@ -152,8 +162,11 @@ abstract class _SwShowRegistrationRequest implements SwShowRegistrationRequest {
 
   @override
   String get endpoint;
+
+  /// Create a copy of SwShowRegistrationRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SwShowRegistrationRequestImplCopyWith<_$SwShowRegistrationRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

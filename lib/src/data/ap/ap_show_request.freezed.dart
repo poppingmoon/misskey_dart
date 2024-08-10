@@ -23,8 +23,12 @@ mixin _$ApShowRequest {
   @UriConverter()
   Uri get uri => throw _privateConstructorUsedError;
 
+  /// Serializes this ApShowRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ApShowRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ApShowRequestCopyWith<ApShowRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$ApShowRequestCopyWithImpl<$Res, $Val extends ApShowRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ApShowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -81,6 +87,8 @@ class __$$ApShowRequestImplCopyWithImpl<$Res>
       _$ApShowRequestImpl _value, $Res Function(_$ApShowRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ApShowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -120,11 +128,13 @@ class _$ApShowRequestImpl implements _ApShowRequest {
             (identical(other.uri, uri) || other.uri == uri));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, uri);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ApShowRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ApShowRequestImplCopyWith<_$ApShowRequestImpl> get copyWith =>
@@ -148,8 +158,11 @@ abstract class _ApShowRequest implements ApShowRequest {
   @override
   @UriConverter()
   Uri get uri;
+
+  /// Create a copy of ApShowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ApShowRequestImplCopyWith<_$ApShowRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

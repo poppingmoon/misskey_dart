@@ -22,8 +22,12 @@ FlashShowRequest _$FlashShowRequestFromJson(Map<String, dynamic> json) {
 mixin _$FlashShowRequest {
   String get flashId => throw _privateConstructorUsedError;
 
+  /// Serializes this FlashShowRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FlashShowRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FlashShowRequestCopyWith<FlashShowRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$FlashShowRequestCopyWithImpl<$Res, $Val extends FlashShowRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FlashShowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$FlashShowRequestImplCopyWithImpl<$Res>
       $Res Function(_$FlashShowRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FlashShowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -118,11 +126,13 @@ class _$FlashShowRequestImpl implements _FlashShowRequest {
             (identical(other.flashId, flashId) || other.flashId == flashId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, flashId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FlashShowRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FlashShowRequestImplCopyWith<_$FlashShowRequestImpl> get copyWith =>
@@ -146,8 +156,11 @@ abstract class _FlashShowRequest implements FlashShowRequest {
 
   @override
   String get flashId;
+
+  /// Create a copy of FlashShowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FlashShowRequestImplCopyWith<_$FlashShowRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

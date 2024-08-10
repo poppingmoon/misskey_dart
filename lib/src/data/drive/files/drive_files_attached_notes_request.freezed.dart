@@ -27,8 +27,12 @@ mixin _$DriveFilesAttachedNotesRequest {
   String? get sinceId => throw _privateConstructorUsedError;
   String? get untilId => throw _privateConstructorUsedError;
 
+  /// Serializes this DriveFilesAttachedNotesRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DriveFilesAttachedNotesRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DriveFilesAttachedNotesRequestCopyWith<DriveFilesAttachedNotesRequest>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -55,6 +59,8 @@ class _$DriveFilesAttachedNotesRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DriveFilesAttachedNotesRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -106,6 +112,8 @@ class __$$DriveFilesAttachedNotesRequestImplCopyWithImpl<$Res>
       $Res Function(_$DriveFilesAttachedNotesRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DriveFilesAttachedNotesRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -172,11 +180,13 @@ class _$DriveFilesAttachedNotesRequestImpl
             (identical(other.untilId, untilId) || other.untilId == untilId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, fileId, limit, sinceId, untilId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DriveFilesAttachedNotesRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DriveFilesAttachedNotesRequestImplCopyWith<
@@ -204,15 +214,18 @@ abstract class _DriveFilesAttachedNotesRequest
       _$DriveFilesAttachedNotesRequestImpl.fromJson;
 
   @override
-  String get fileId;
-  @override // 以下 Misskey 2023.10.0 で追加
+  String get fileId; // 以下 Misskey 2023.10.0 で追加
+  @override
   int? get limit;
   @override
   String? get sinceId;
   @override
   String? get untilId;
+
+  /// Create a copy of DriveFilesAttachedNotesRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DriveFilesAttachedNotesRequestImplCopyWith<
           _$DriveFilesAttachedNotesRequestImpl>
       get copyWith => throw _privateConstructorUsedError;

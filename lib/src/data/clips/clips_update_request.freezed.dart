@@ -25,8 +25,12 @@ mixin _$ClipsUpdateRequest {
   bool? get isPublic => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
 
+  /// Serializes this ClipsUpdateRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ClipsUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ClipsUpdateRequestCopyWith<ClipsUpdateRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$ClipsUpdateRequestCopyWithImpl<$Res, $Val extends ClipsUpdateRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ClipsUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -98,6 +104,8 @@ class __$$ClipsUpdateRequestImplCopyWithImpl<$Res>
       $Res Function(_$ClipsUpdateRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ClipsUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -166,12 +174,14 @@ class _$ClipsUpdateRequestImpl implements _ClipsUpdateRequest {
                 other.description == description));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, clipId, name, isPublic, description);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ClipsUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ClipsUpdateRequestImplCopyWith<_$ClipsUpdateRequestImpl> get copyWith =>
@@ -204,8 +214,11 @@ abstract class _ClipsUpdateRequest implements ClipsUpdateRequest {
   bool? get isPublic;
   @override
   String? get description;
+
+  /// Create a copy of ClipsUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ClipsUpdateRequestImplCopyWith<_$ClipsUpdateRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

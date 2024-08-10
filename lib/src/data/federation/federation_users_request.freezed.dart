@@ -26,8 +26,12 @@ mixin _$FederationUsersRequest {
   String? get untilId => throw _privateConstructorUsedError;
   int? get limit => throw _privateConstructorUsedError;
 
+  /// Serializes this FederationUsersRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FederationUsersRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FederationUsersRequestCopyWith<FederationUsersRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$FederationUsersRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FederationUsersRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -103,6 +109,8 @@ class __$$FederationUsersRequestImplCopyWithImpl<$Res>
       $Res Function(_$FederationUsersRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FederationUsersRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -166,11 +174,13 @@ class _$FederationUsersRequestImpl implements _FederationUsersRequest {
             (identical(other.limit, limit) || other.limit == limit));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, host, sinceId, untilId, limit);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FederationUsersRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FederationUsersRequestImplCopyWith<_$FederationUsersRequestImpl>
@@ -203,8 +213,11 @@ abstract class _FederationUsersRequest implements FederationUsersRequest {
   String? get untilId;
   @override
   int? get limit;
+
+  /// Create a copy of FederationUsersRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FederationUsersRequestImplCopyWith<_$FederationUsersRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

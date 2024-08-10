@@ -25,8 +25,12 @@ mixin _$IRegistryGetDetailRequest {
   List<String> get scope => throw _privateConstructorUsedError;
   String? get domain => throw _privateConstructorUsedError;
 
+  /// Serializes this IRegistryGetDetailRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of IRegistryGetDetailRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $IRegistryGetDetailRequestCopyWith<IRegistryGetDetailRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$IRegistryGetDetailRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of IRegistryGetDetailRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -97,6 +103,8 @@ class __$$IRegistryGetDetailRequestImplCopyWithImpl<$Res>
       $Res Function(_$IRegistryGetDetailRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of IRegistryGetDetailRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -159,12 +167,14 @@ class _$IRegistryGetDetailRequestImpl implements _IRegistryGetDetailRequest {
             (identical(other.domain, domain) || other.domain == domain));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, key, const DeepCollectionEquality().hash(_scope), domain);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of IRegistryGetDetailRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IRegistryGetDetailRequestImplCopyWith<_$IRegistryGetDetailRequestImpl>
@@ -194,8 +204,11 @@ abstract class _IRegistryGetDetailRequest implements IRegistryGetDetailRequest {
   List<String> get scope;
   @override
   String? get domain;
+
+  /// Create a copy of IRegistryGetDetailRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IRegistryGetDetailRequestImplCopyWith<_$IRegistryGetDetailRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

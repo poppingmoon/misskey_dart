@@ -28,8 +28,12 @@ mixin _$UsersList {
       throw _privateConstructorUsedError; // Misskey 13.13.0 で追加. 後方互換性のためnullable
   bool? get isPublic => throw _privateConstructorUsedError;
 
+  /// Serializes this UsersList to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UsersList
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UsersListCopyWith<UsersList> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -57,6 +61,8 @@ class _$UsersListCopyWithImpl<$Res, $Val extends UsersList>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UsersList
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -115,6 +121,8 @@ class __$$UsersListImplCopyWithImpl<$Res>
       _$UsersListImpl _value, $Res Function(_$UsersListImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UsersList
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -201,12 +209,14 @@ class _$UsersListImpl implements _UsersList {
                 other.isPublic == isPublic));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, createdAt, name,
       const DeepCollectionEquality().hash(_userIds), isPublic);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UsersList
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UsersListImplCopyWith<_$UsersListImpl> get copyWith =>
@@ -239,11 +249,14 @@ abstract class _UsersList implements UsersList {
   @override
   String? get name;
   @override
-  List<String> get userIds;
-  @override // Misskey 13.13.0 で追加. 後方互換性のためnullable
-  bool? get isPublic;
+  List<String> get userIds; // Misskey 13.13.0 で追加. 後方互換性のためnullable
   @override
-  @JsonKey(ignore: true)
+  bool? get isPublic;
+
+  /// Create a copy of UsersList
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersListImplCopyWith<_$UsersListImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

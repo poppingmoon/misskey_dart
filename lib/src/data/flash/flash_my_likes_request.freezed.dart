@@ -24,8 +24,12 @@ mixin _$FlashMyLikesRequest {
   String? get sinceId => throw _privateConstructorUsedError;
   String? get untilId => throw _privateConstructorUsedError;
 
+  /// Serializes this FlashMyLikesRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FlashMyLikesRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FlashMyLikesRequestCopyWith<FlashMyLikesRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$FlashMyLikesRequestCopyWithImpl<$Res, $Val extends FlashMyLikesRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FlashMyLikesRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -92,6 +98,8 @@ class __$$FlashMyLikesRequestImplCopyWithImpl<$Res>
       $Res Function(_$FlashMyLikesRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FlashMyLikesRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -146,11 +154,13 @@ class _$FlashMyLikesRequestImpl implements _FlashMyLikesRequest {
             (identical(other.untilId, untilId) || other.untilId == untilId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, limit, sinceId, untilId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FlashMyLikesRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FlashMyLikesRequestImplCopyWith<_$FlashMyLikesRequestImpl> get copyWith =>
@@ -180,8 +190,11 @@ abstract class _FlashMyLikesRequest implements FlashMyLikesRequest {
   String? get sinceId;
   @override
   String? get untilId;
+
+  /// Create a copy of FlashMyLikesRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FlashMyLikesRequestImplCopyWith<_$FlashMyLikesRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

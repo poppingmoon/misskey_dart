@@ -25,8 +25,12 @@ mixin _$UsersListsUpdateRequest {
   String? get name => throw _privateConstructorUsedError;
   bool? get isPublic => throw _privateConstructorUsedError;
 
+  /// Serializes this UsersListsUpdateRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UsersListsUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UsersListsUpdateRequestCopyWith<UsersListsUpdateRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$UsersListsUpdateRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UsersListsUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -97,6 +103,8 @@ class __$$UsersListsUpdateRequestImplCopyWithImpl<$Res>
       $Res Function(_$UsersListsUpdateRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UsersListsUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -153,11 +161,13 @@ class _$UsersListsUpdateRequestImpl implements _UsersListsUpdateRequest {
                 other.isPublic == isPublic));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, listId, name, isPublic);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UsersListsUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UsersListsUpdateRequestImplCopyWith<_$UsersListsUpdateRequestImpl>
@@ -187,8 +197,11 @@ abstract class _UsersListsUpdateRequest implements UsersListsUpdateRequest {
   String? get name;
   @override
   bool? get isPublic;
+
+  /// Create a copy of UsersListsUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersListsUpdateRequestImplCopyWith<_$UsersListsUpdateRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

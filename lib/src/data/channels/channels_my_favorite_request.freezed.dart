@@ -24,8 +24,12 @@ mixin _$ChannelsMyFavoriteRequest {
   int? get limit => throw _privateConstructorUsedError;
   bool? get noPaging => throw _privateConstructorUsedError;
 
+  /// Serializes this ChannelsMyFavoriteRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ChannelsMyFavoriteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ChannelsMyFavoriteRequestCopyWith<ChannelsMyFavoriteRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$ChannelsMyFavoriteRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ChannelsMyFavoriteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -91,6 +97,8 @@ class __$$ChannelsMyFavoriteRequestImplCopyWithImpl<$Res>
       $Res Function(_$ChannelsMyFavoriteRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ChannelsMyFavoriteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -138,11 +146,13 @@ class _$ChannelsMyFavoriteRequestImpl implements _ChannelsMyFavoriteRequest {
                 other.noPaging == noPaging));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, limit, noPaging);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ChannelsMyFavoriteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ChannelsMyFavoriteRequestImplCopyWith<_$ChannelsMyFavoriteRequestImpl>
@@ -169,8 +179,11 @@ abstract class _ChannelsMyFavoriteRequest implements ChannelsMyFavoriteRequest {
   int? get limit;
   @override
   bool? get noPaging;
+
+  /// Create a copy of ChannelsMyFavoriteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ChannelsMyFavoriteRequestImplCopyWith<_$ChannelsMyFavoriteRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

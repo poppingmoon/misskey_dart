@@ -26,8 +26,12 @@ mixin _$UsersGalleryPostsRequest {
   String? get sinceId => throw _privateConstructorUsedError;
   String? get untilId => throw _privateConstructorUsedError;
 
+  /// Serializes this UsersGalleryPostsRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UsersGalleryPostsRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UsersGalleryPostsRequestCopyWith<UsersGalleryPostsRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$UsersGalleryPostsRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UsersGalleryPostsRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -103,6 +109,8 @@ class __$$UsersGalleryPostsRequestImplCopyWithImpl<$Res>
       $Res Function(_$UsersGalleryPostsRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UsersGalleryPostsRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -166,11 +174,13 @@ class _$UsersGalleryPostsRequestImpl implements _UsersGalleryPostsRequest {
             (identical(other.untilId, untilId) || other.untilId == untilId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, userId, limit, sinceId, untilId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UsersGalleryPostsRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UsersGalleryPostsRequestImplCopyWith<_$UsersGalleryPostsRequestImpl>
@@ -203,8 +213,11 @@ abstract class _UsersGalleryPostsRequest implements UsersGalleryPostsRequest {
   String? get sinceId;
   @override
   String? get untilId;
+
+  /// Create a copy of UsersGalleryPostsRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersGalleryPostsRequestImplCopyWith<_$UsersGalleryPostsRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

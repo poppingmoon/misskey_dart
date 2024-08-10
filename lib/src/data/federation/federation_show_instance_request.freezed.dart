@@ -33,8 +33,12 @@ mixin _$FederationShowInstanceRequest {
   int? get offset => throw _privateConstructorUsedError;
   String? get sort => throw _privateConstructorUsedError;
 
+  /// Serializes this FederationShowInstanceRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FederationShowInstanceRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FederationShowInstanceRequestCopyWith<FederationShowInstanceRequest>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -72,6 +76,8 @@ class _$FederationShowInstanceRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FederationShowInstanceRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -169,6 +175,8 @@ class __$$FederationShowInstanceRequestImplCopyWithImpl<$Res>
       $Res Function(_$FederationShowInstanceRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FederationShowInstanceRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -306,7 +314,7 @@ class _$FederationShowInstanceRequestImpl
             (identical(other.sort, sort) || other.sort == sort));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -322,7 +330,9 @@ class _$FederationShowInstanceRequestImpl
       offset,
       sort);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FederationShowInstanceRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FederationShowInstanceRequestImplCopyWith<
@@ -378,8 +388,11 @@ abstract class _FederationShowInstanceRequest
   int? get offset;
   @override
   String? get sort;
+
+  /// Create a copy of FederationShowInstanceRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FederationShowInstanceRequestImplCopyWith<
           _$FederationShowInstanceRequestImpl>
       get copyWith => throw _privateConstructorUsedError;

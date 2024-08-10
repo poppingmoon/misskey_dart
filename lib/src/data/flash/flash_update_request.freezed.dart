@@ -27,8 +27,12 @@ mixin _$FlashUpdateRequest {
   List<String>? get permissions => throw _privateConstructorUsedError;
   FlashVisibility? get visibility => throw _privateConstructorUsedError;
 
+  /// Serializes this FlashUpdateRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FlashUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FlashUpdateRequestCopyWith<FlashUpdateRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -58,6 +62,8 @@ class _$FlashUpdateRequestCopyWithImpl<$Res, $Val extends FlashUpdateRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FlashUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -122,6 +128,8 @@ class __$$FlashUpdateRequestImplCopyWithImpl<$Res>
       $Res Function(_$FlashUpdateRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FlashUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -217,12 +225,14 @@ class _$FlashUpdateRequestImpl implements _FlashUpdateRequest {
                 other.visibility == visibility));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, flashId, title, summary, script,
       const DeepCollectionEquality().hash(_permissions), visibility);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FlashUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FlashUpdateRequestImplCopyWith<_$FlashUpdateRequestImpl> get copyWith =>
@@ -261,8 +271,11 @@ abstract class _FlashUpdateRequest implements FlashUpdateRequest {
   List<String>? get permissions;
   @override
   FlashVisibility? get visibility;
+
+  /// Create a copy of FlashUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FlashUpdateRequestImplCopyWith<_$FlashUpdateRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -29,8 +29,12 @@ mixin _$AntennasNotesRequest {
   @DateTimeConverter()
   DateTime? get untilDate => throw _privateConstructorUsedError;
 
+  /// Serializes this AntennasNotesRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AntennasNotesRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AntennasNotesRequestCopyWith<AntennasNotesRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -61,6 +65,8 @@ class _$AntennasNotesRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AntennasNotesRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -125,6 +131,8 @@ class __$$AntennasNotesRequestImplCopyWithImpl<$Res>
       $Res Function(_$AntennasNotesRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AntennasNotesRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -214,12 +222,14 @@ class _$AntennasNotesRequestImpl implements _AntennasNotesRequest {
                 other.untilDate == untilDate));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, antennaId, limit, sinceId, untilId, sinceDate, untilDate);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AntennasNotesRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AntennasNotesRequestImplCopyWith<_$AntennasNotesRequestImpl>
@@ -262,8 +272,11 @@ abstract class _AntennasNotesRequest implements AntennasNotesRequest {
   @override
   @DateTimeConverter()
   DateTime? get untilDate;
+
+  /// Create a copy of AntennasNotesRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AntennasNotesRequestImplCopyWith<_$AntennasNotesRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -23,8 +23,12 @@ GetOnlineUsersCountResponse _$GetOnlineUsersCountResponseFromJson(
 mixin _$GetOnlineUsersCountResponse {
   int get count => throw _privateConstructorUsedError;
 
+  /// Serializes this GetOnlineUsersCountResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetOnlineUsersCountResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetOnlineUsersCountResponseCopyWith<GetOnlineUsersCountResponse>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$GetOnlineUsersCountResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetOnlineUsersCountResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -87,6 +93,8 @@ class __$$GetOnlineUsersCountResponseImplCopyWithImpl<$Res>
       $Res Function(_$GetOnlineUsersCountResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetOnlineUsersCountResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -127,11 +135,13 @@ class _$GetOnlineUsersCountResponseImpl
             (identical(other.count, count) || other.count == count));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, count);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetOnlineUsersCountResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetOnlineUsersCountResponseImplCopyWith<_$GetOnlineUsersCountResponseImpl>
@@ -156,8 +166,11 @@ abstract class _GetOnlineUsersCountResponse
 
   @override
   int get count;
+
+  /// Create a copy of GetOnlineUsersCountResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetOnlineUsersCountResponseImplCopyWith<_$GetOnlineUsersCountResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

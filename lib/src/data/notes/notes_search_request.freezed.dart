@@ -44,8 +44,12 @@ mixin _$NotesSearchRequest {
   /// 指定すると、そのチャンネルに属するノートを検索します。userIdと併せて指定した場合、channelIdは無視されます。
   String? get channelId => throw _privateConstructorUsedError;
 
+  /// Serializes this NotesSearchRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotesSearchRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesSearchRequestCopyWith<NotesSearchRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -77,6 +81,8 @@ class _$NotesSearchRequestCopyWithImpl<$Res, $Val extends NotesSearchRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotesSearchRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -153,6 +159,8 @@ class __$$NotesSearchRequestImplCopyWithImpl<$Res>
       $Res Function(_$NotesSearchRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotesSearchRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -271,12 +279,14 @@ class _$NotesSearchRequestImpl implements _NotesSearchRequest {
                 other.channelId == channelId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, query, sinceId, untilId, limit,
       offset, host, userId, channelId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotesSearchRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotesSearchRequestImplCopyWith<_$NotesSearchRequestImpl> get copyWith =>
@@ -305,40 +315,42 @@ abstract class _NotesSearchRequest implements NotesSearchRequest {
   factory _NotesSearchRequest.fromJson(Map<String, dynamic> json) =
       _$NotesSearchRequestImpl.fromJson;
 
-  @override
-
   /// 検索クエリ。クエリが本文に含まれるノートを検索します。
-  String get query;
   @override
+  String get query;
 
   /// 指定すると、idがその値よりも大きいノートを返します。
-  String? get sinceId;
   @override
+  String? get sinceId;
 
   /// 指定すると、idがその値よりも小さいノートを返します。
-  String? get untilId;
   @override
+  String? get untilId;
 
   /// 取得するノートの最大数。
-  int? get limit;
   @override
+  int? get limit;
 
   /// 検索結果の先頭offset個をスキップします。
-  int? get offset;
   @override
+  int? get offset;
 
   /// The local host is represented with `null`.
-  String? get host;
   @override
+  String? get host;
 
   /// 指定すると、そのユーザが作成したノートを検索します。
-  String? get userId;
   @override
+  String? get userId;
 
   /// 指定すると、そのチャンネルに属するノートを検索します。userIdと併せて指定した場合、channelIdは無視されます。
-  String? get channelId;
   @override
-  @JsonKey(ignore: true)
+  String? get channelId;
+
+  /// Create a copy of NotesSearchRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesSearchRequestImplCopyWith<_$NotesSearchRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

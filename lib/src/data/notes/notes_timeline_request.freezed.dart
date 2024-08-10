@@ -36,8 +36,12 @@ mixin _$NotesTimelineRequest {
   bool? get excludeNsfw => throw _privateConstructorUsedError;
   bool? get allowPartial => throw _privateConstructorUsedError;
 
+  /// Serializes this NotesTimelineRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotesTimelineRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesTimelineRequestCopyWith<NotesTimelineRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -74,6 +78,8 @@ class _$NotesTimelineRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotesTimelineRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -174,6 +180,8 @@ class __$$NotesTimelineRequestImplCopyWithImpl<$Res>
       $Res Function(_$NotesTimelineRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotesTimelineRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -324,7 +332,7 @@ class _$NotesTimelineRequestImpl implements _NotesTimelineRequest {
                 other.allowPartial == allowPartial));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -341,7 +349,9 @@ class _$NotesTimelineRequestImpl implements _NotesTimelineRequest {
       excludeNsfw,
       allowPartial);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotesTimelineRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotesTimelineRequestImplCopyWith<_$NotesTimelineRequestImpl>
@@ -402,8 +412,11 @@ abstract class _NotesTimelineRequest implements NotesTimelineRequest {
   bool? get excludeNsfw;
   @override
   bool? get allowPartial;
+
+  /// Create a copy of NotesTimelineRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesTimelineRequestImplCopyWith<_$NotesTimelineRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

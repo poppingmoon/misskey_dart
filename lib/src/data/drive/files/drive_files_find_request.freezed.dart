@@ -24,8 +24,12 @@ mixin _$DriveFilesFindRequest {
   String get name => throw _privateConstructorUsedError;
   String? get folderId => throw _privateConstructorUsedError;
 
+  /// Serializes this DriveFilesFindRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DriveFilesFindRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DriveFilesFindRequestCopyWith<DriveFilesFindRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$DriveFilesFindRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DriveFilesFindRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -90,6 +96,8 @@ class __$$DriveFilesFindRequestImplCopyWithImpl<$Res>
       $Res Function(_$DriveFilesFindRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DriveFilesFindRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -137,11 +145,13 @@ class _$DriveFilesFindRequestImpl implements _DriveFilesFindRequest {
                 other.folderId == folderId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, folderId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DriveFilesFindRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DriveFilesFindRequestImplCopyWith<_$DriveFilesFindRequestImpl>
@@ -168,8 +178,11 @@ abstract class _DriveFilesFindRequest implements DriveFilesFindRequest {
   String get name;
   @override
   String? get folderId;
+
+  /// Create a copy of DriveFilesFindRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DriveFilesFindRequestImplCopyWith<_$DriveFilesFindRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

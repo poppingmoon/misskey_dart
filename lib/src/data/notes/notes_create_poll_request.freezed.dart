@@ -28,8 +28,12 @@ mixin _$NotesCreatePollRequest {
   @NullableDurationConverter()
   Duration? get expiredAfter => throw _privateConstructorUsedError;
 
+  /// Serializes this NotesCreatePollRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotesCreatePollRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesCreatePollRequestCopyWith<NotesCreatePollRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -58,6 +62,8 @@ class _$NotesCreatePollRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotesCreatePollRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -113,6 +119,8 @@ class __$$NotesCreatePollRequestImplCopyWithImpl<$Res>
       $Res Function(_$NotesCreatePollRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotesCreatePollRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -192,7 +200,7 @@ class _$NotesCreatePollRequestImpl implements _NotesCreatePollRequest {
                 other.expiredAfter == expiredAfter));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -201,7 +209,9 @@ class _$NotesCreatePollRequestImpl implements _NotesCreatePollRequest {
       expiresAt,
       expiredAfter);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotesCreatePollRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotesCreatePollRequestImplCopyWith<_$NotesCreatePollRequestImpl>
@@ -238,8 +248,11 @@ abstract class _NotesCreatePollRequest implements NotesCreatePollRequest {
   @override
   @NullableDurationConverter()
   Duration? get expiredAfter;
+
+  /// Create a copy of NotesCreatePollRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesCreatePollRequestImplCopyWith<_$NotesCreatePollRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

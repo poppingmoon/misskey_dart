@@ -23,8 +23,12 @@ FollowingInvalidateRequest _$FollowingInvalidateRequestFromJson(
 mixin _$FollowingInvalidateRequest {
   String get userId => throw _privateConstructorUsedError;
 
+  /// Serializes this FollowingInvalidateRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FollowingInvalidateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FollowingInvalidateRequestCopyWith<FollowingInvalidateRequest>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$FollowingInvalidateRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FollowingInvalidateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -86,6 +92,8 @@ class __$$FollowingInvalidateRequestImplCopyWithImpl<$Res>
       $Res Function(_$FollowingInvalidateRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FollowingInvalidateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -125,11 +133,13 @@ class _$FollowingInvalidateRequestImpl implements _FollowingInvalidateRequest {
             (identical(other.userId, userId) || other.userId == userId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, userId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FollowingInvalidateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FollowingInvalidateRequestImplCopyWith<_$FollowingInvalidateRequestImpl>
@@ -154,8 +164,11 @@ abstract class _FollowingInvalidateRequest
 
   @override
   String get userId;
+
+  /// Create a copy of FollowingInvalidateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FollowingInvalidateRequestImplCopyWith<_$FollowingInvalidateRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

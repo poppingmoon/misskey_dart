@@ -24,8 +24,12 @@ mixin _$SwUpdateRegistrationRequest {
   String get endpoint => throw _privateConstructorUsedError;
   bool? get sendReadMessage => throw _privateConstructorUsedError;
 
+  /// Serializes this SwUpdateRegistrationRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SwUpdateRegistrationRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SwUpdateRegistrationRequestCopyWith<SwUpdateRegistrationRequest>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$SwUpdateRegistrationRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SwUpdateRegistrationRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -93,6 +99,8 @@ class __$$SwUpdateRegistrationRequestImplCopyWithImpl<$Res>
       $Res Function(_$SwUpdateRegistrationRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SwUpdateRegistrationRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -144,11 +152,13 @@ class _$SwUpdateRegistrationRequestImpl
                 other.sendReadMessage == sendReadMessage));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, endpoint, sendReadMessage);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SwUpdateRegistrationRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SwUpdateRegistrationRequestImplCopyWith<_$SwUpdateRegistrationRequestImpl>
@@ -176,8 +186,11 @@ abstract class _SwUpdateRegistrationRequest
   String get endpoint;
   @override
   bool? get sendReadMessage;
+
+  /// Create a copy of SwUpdateRegistrationRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SwUpdateRegistrationRequestImplCopyWith<_$SwUpdateRegistrationRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

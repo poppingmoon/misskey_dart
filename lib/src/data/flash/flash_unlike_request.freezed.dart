@@ -22,8 +22,12 @@ FlashUnlikeRequest _$FlashUnlikeRequestFromJson(Map<String, dynamic> json) {
 mixin _$FlashUnlikeRequest {
   String get flashId => throw _privateConstructorUsedError;
 
+  /// Serializes this FlashUnlikeRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FlashUnlikeRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FlashUnlikeRequestCopyWith<FlashUnlikeRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$FlashUnlikeRequestCopyWithImpl<$Res, $Val extends FlashUnlikeRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FlashUnlikeRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$FlashUnlikeRequestImplCopyWithImpl<$Res>
       $Res Function(_$FlashUnlikeRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FlashUnlikeRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -118,11 +126,13 @@ class _$FlashUnlikeRequestImpl implements _FlashUnlikeRequest {
             (identical(other.flashId, flashId) || other.flashId == flashId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, flashId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FlashUnlikeRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FlashUnlikeRequestImplCopyWith<_$FlashUnlikeRequestImpl> get copyWith =>
@@ -146,8 +156,11 @@ abstract class _FlashUnlikeRequest implements FlashUnlikeRequest {
 
   @override
   String get flashId;
+
+  /// Create a copy of FlashUnlikeRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FlashUnlikeRequestImplCopyWith<_$FlashUnlikeRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

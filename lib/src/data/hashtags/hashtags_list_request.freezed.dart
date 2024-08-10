@@ -27,8 +27,12 @@ mixin _$HashtagsListRequest {
   @HashtagsListSortConverter()
   HashtagsListSortType get sort => throw _privateConstructorUsedError;
 
+  /// Serializes this HashtagsListRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HashtagsListRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $HashtagsListRequestCopyWith<HashtagsListRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -57,6 +61,8 @@ class _$HashtagsListRequestCopyWithImpl<$Res, $Val extends HashtagsListRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of HashtagsListRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -115,6 +121,8 @@ class __$$HashtagsListRequestImplCopyWithImpl<$Res>
       $Res Function(_$HashtagsListRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HashtagsListRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -196,12 +204,14 @@ class _$HashtagsListRequestImpl implements _HashtagsListRequest {
             (identical(other.sort, sort) || other.sort == sort));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, limit, attachedToUserOnly,
       attachedToLocalUserOnly, attachedToRemoteUserOnly, sort);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HashtagsListRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$HashtagsListRequestImplCopyWith<_$HashtagsListRequestImpl> get copyWith =>
@@ -239,8 +249,11 @@ abstract class _HashtagsListRequest implements HashtagsListRequest {
   @override
   @HashtagsListSortConverter()
   HashtagsListSortType get sort;
+
+  /// Create a copy of HashtagsListRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$HashtagsListRequestImplCopyWith<_$HashtagsListRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

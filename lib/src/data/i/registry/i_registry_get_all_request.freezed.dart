@@ -24,8 +24,12 @@ mixin _$IRegistryGetAllRequest {
   List<String> get scope => throw _privateConstructorUsedError;
   String? get domain => throw _privateConstructorUsedError;
 
+  /// Serializes this IRegistryGetAllRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of IRegistryGetAllRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $IRegistryGetAllRequestCopyWith<IRegistryGetAllRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$IRegistryGetAllRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of IRegistryGetAllRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -91,6 +97,8 @@ class __$$IRegistryGetAllRequestImplCopyWithImpl<$Res>
       $Res Function(_$IRegistryGetAllRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of IRegistryGetAllRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -145,12 +153,14 @@ class _$IRegistryGetAllRequestImpl implements _IRegistryGetAllRequest {
             (identical(other.domain, domain) || other.domain == domain));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_scope), domain);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of IRegistryGetAllRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IRegistryGetAllRequestImplCopyWith<_$IRegistryGetAllRequestImpl>
@@ -177,8 +187,11 @@ abstract class _IRegistryGetAllRequest implements IRegistryGetAllRequest {
   List<String> get scope;
   @override
   String? get domain;
+
+  /// Create a copy of IRegistryGetAllRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IRegistryGetAllRequestImplCopyWith<_$IRegistryGetAllRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

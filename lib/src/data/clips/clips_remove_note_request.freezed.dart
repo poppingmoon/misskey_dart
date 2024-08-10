@@ -24,8 +24,12 @@ mixin _$ClipsRemoveNoteRequest {
   String get clipId => throw _privateConstructorUsedError;
   String get noteId => throw _privateConstructorUsedError;
 
+  /// Serializes this ClipsRemoveNoteRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ClipsRemoveNoteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ClipsRemoveNoteRequestCopyWith<ClipsRemoveNoteRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$ClipsRemoveNoteRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ClipsRemoveNoteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -91,6 +97,8 @@ class __$$ClipsRemoveNoteRequestImplCopyWithImpl<$Res>
       $Res Function(_$ClipsRemoveNoteRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ClipsRemoveNoteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -138,11 +146,13 @@ class _$ClipsRemoveNoteRequestImpl implements _ClipsRemoveNoteRequest {
             (identical(other.noteId, noteId) || other.noteId == noteId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, clipId, noteId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ClipsRemoveNoteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ClipsRemoveNoteRequestImplCopyWith<_$ClipsRemoveNoteRequestImpl>
@@ -169,8 +179,11 @@ abstract class _ClipsRemoveNoteRequest implements ClipsRemoveNoteRequest {
   String get clipId;
   @override
   String get noteId;
+
+  /// Create a copy of ClipsRemoveNoteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ClipsRemoveNoteRequestImplCopyWith<_$ClipsRemoveNoteRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

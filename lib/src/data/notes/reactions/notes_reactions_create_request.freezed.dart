@@ -24,8 +24,12 @@ mixin _$NotesReactionsCreateRequest {
   String get noteId => throw _privateConstructorUsedError;
   String get reaction => throw _privateConstructorUsedError;
 
+  /// Serializes this NotesReactionsCreateRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotesReactionsCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesReactionsCreateRequestCopyWith<NotesReactionsCreateRequest>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$NotesReactionsCreateRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotesReactionsCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -93,6 +99,8 @@ class __$$NotesReactionsCreateRequestImplCopyWithImpl<$Res>
       $Res Function(_$NotesReactionsCreateRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotesReactionsCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -143,11 +151,13 @@ class _$NotesReactionsCreateRequestImpl
                 other.reaction == reaction));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, noteId, reaction);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotesReactionsCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotesReactionsCreateRequestImplCopyWith<_$NotesReactionsCreateRequestImpl>
@@ -175,8 +185,11 @@ abstract class _NotesReactionsCreateRequest
   String get noteId;
   @override
   String get reaction;
+
+  /// Create a copy of NotesReactionsCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesReactionsCreateRequestImplCopyWith<_$NotesReactionsCreateRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

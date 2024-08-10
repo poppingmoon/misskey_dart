@@ -24,8 +24,12 @@ mixin _$ChannelsOwnedRequest {
   String? get untilId => throw _privateConstructorUsedError;
   int? get limit => throw _privateConstructorUsedError;
 
+  /// Serializes this ChannelsOwnedRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ChannelsOwnedRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ChannelsOwnedRequestCopyWith<ChannelsOwnedRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$ChannelsOwnedRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ChannelsOwnedRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -93,6 +99,8 @@ class __$$ChannelsOwnedRequestImplCopyWithImpl<$Res>
       $Res Function(_$ChannelsOwnedRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ChannelsOwnedRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -147,11 +155,13 @@ class _$ChannelsOwnedRequestImpl implements _ChannelsOwnedRequest {
             (identical(other.limit, limit) || other.limit == limit));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, sinceId, untilId, limit);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ChannelsOwnedRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ChannelsOwnedRequestImplCopyWith<_$ChannelsOwnedRequestImpl>
@@ -182,8 +192,11 @@ abstract class _ChannelsOwnedRequest implements ChannelsOwnedRequest {
   String? get untilId;
   @override
   int? get limit;
+
+  /// Create a copy of ChannelsOwnedRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ChannelsOwnedRequestImplCopyWith<_$ChannelsOwnedRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

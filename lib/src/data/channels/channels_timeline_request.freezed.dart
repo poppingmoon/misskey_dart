@@ -32,8 +32,12 @@ mixin _$ChannelsTimelineRequest {
   DateTime? get untilDate => throw _privateConstructorUsedError;
   bool? get allowPartial => throw _privateConstructorUsedError;
 
+  /// Serializes this ChannelsTimelineRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ChannelsTimelineRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ChannelsTimelineRequestCopyWith<ChannelsTimelineRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -65,6 +69,8 @@ class _$ChannelsTimelineRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ChannelsTimelineRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -138,6 +144,8 @@ class __$$ChannelsTimelineRequestImplCopyWithImpl<$Res>
       $Res Function(_$ChannelsTimelineRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ChannelsTimelineRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -238,12 +246,14 @@ class _$ChannelsTimelineRequestImpl implements _ChannelsTimelineRequest {
                 other.allowPartial == allowPartial));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, channelId, limit, sinceId,
       untilId, sinceDate, untilDate, allowPartial);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ChannelsTimelineRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ChannelsTimelineRequestImplCopyWith<_$ChannelsTimelineRequestImpl>
@@ -288,8 +298,11 @@ abstract class _ChannelsTimelineRequest implements ChannelsTimelineRequest {
   DateTime? get untilDate;
   @override
   bool? get allowPartial;
+
+  /// Create a copy of ChannelsTimelineRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ChannelsTimelineRequestImplCopyWith<_$ChannelsTimelineRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

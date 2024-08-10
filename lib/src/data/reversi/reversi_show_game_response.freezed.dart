@@ -50,8 +50,12 @@ mixin _$ReversiShowGameResponse {
   List<dynamic> get logs => throw _privateConstructorUsedError;
   List<String> get map => throw _privateConstructorUsedError;
 
+  /// Serializes this ReversiShowGameResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ReversiShowGameResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ReversiShowGameResponseCopyWith<ReversiShowGameResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -105,6 +109,8 @@ class _$ReversiShowGameResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ReversiShowGameResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -237,6 +243,8 @@ class _$ReversiShowGameResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of ReversiShowGameResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserLiteCopyWith<$Res> get user1 {
@@ -245,6 +253,8 @@ class _$ReversiShowGameResponseCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ReversiShowGameResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserLiteCopyWith<$Res> get user2 {
@@ -307,6 +317,8 @@ class __$$ReversiShowGameResponseImplCopyWithImpl<$Res>
       $Res Function(_$ReversiShowGameResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ReversiShowGameResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -593,7 +605,7 @@ class _$ReversiShowGameResponseImpl implements _ReversiShowGameResponse {
             const DeepCollectionEquality().equals(other._map, _map));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -625,7 +637,9 @@ class _$ReversiShowGameResponseImpl implements _ReversiShowGameResponse {
         const DeepCollectionEquality().hash(_map)
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ReversiShowGameResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ReversiShowGameResponseImplCopyWith<_$ReversiShowGameResponseImpl>
@@ -726,8 +740,11 @@ abstract class _ReversiShowGameResponse implements ReversiShowGameResponse {
   List<dynamic> get logs;
   @override
   List<String> get map;
+
+  /// Create a copy of ReversiShowGameResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReversiShowGameResponseImplCopyWith<_$ReversiShowGameResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

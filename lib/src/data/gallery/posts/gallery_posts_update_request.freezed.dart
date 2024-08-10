@@ -27,8 +27,12 @@ mixin _$GalleryPostsUpdateRequest {
   List<String> get fileIds => throw _privateConstructorUsedError;
   bool? get isSensitive => throw _privateConstructorUsedError;
 
+  /// Serializes this GalleryPostsUpdateRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GalleryPostsUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GalleryPostsUpdateRequestCopyWith<GalleryPostsUpdateRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -58,6 +62,8 @@ class _$GalleryPostsUpdateRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GalleryPostsUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -119,6 +125,8 @@ class __$$GalleryPostsUpdateRequestImplCopyWithImpl<$Res>
       $Res Function(_$GalleryPostsUpdateRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GalleryPostsUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -203,12 +211,14 @@ class _$GalleryPostsUpdateRequestImpl implements _GalleryPostsUpdateRequest {
                 other.isSensitive == isSensitive));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, postId, title, description,
       const DeepCollectionEquality().hash(_fileIds), isSensitive);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GalleryPostsUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GalleryPostsUpdateRequestImplCopyWith<_$GalleryPostsUpdateRequestImpl>
@@ -244,8 +254,11 @@ abstract class _GalleryPostsUpdateRequest implements GalleryPostsUpdateRequest {
   List<String> get fileIds;
   @override
   bool? get isSensitive;
+
+  /// Create a copy of GalleryPostsUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GalleryPostsUpdateRequestImplCopyWith<_$GalleryPostsUpdateRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

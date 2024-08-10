@@ -27,8 +27,12 @@ mixin _$HashtagsUsersRequest {
   UsersState? get state => throw _privateConstructorUsedError;
   Origin? get origin => throw _privateConstructorUsedError;
 
+  /// Serializes this HashtagsUsersRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HashtagsUsersRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $HashtagsUsersRequestCopyWith<HashtagsUsersRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -58,6 +62,8 @@ class _$HashtagsUsersRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of HashtagsUsersRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -116,6 +122,8 @@ class __$$HashtagsUsersRequestImplCopyWithImpl<$Res>
       $Res Function(_$HashtagsUsersRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HashtagsUsersRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -192,11 +200,13 @@ class _$HashtagsUsersRequestImpl implements _HashtagsUsersRequest {
             (identical(other.origin, origin) || other.origin == origin));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, tag, limit, sort, state, origin);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HashtagsUsersRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$HashtagsUsersRequestImplCopyWith<_$HashtagsUsersRequestImpl>
@@ -234,8 +244,11 @@ abstract class _HashtagsUsersRequest implements HashtagsUsersRequest {
   UsersState? get state;
   @override
   Origin? get origin;
+
+  /// Create a copy of HashtagsUsersRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$HashtagsUsersRequestImplCopyWith<_$HashtagsUsersRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

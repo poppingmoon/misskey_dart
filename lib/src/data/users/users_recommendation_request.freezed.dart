@@ -24,8 +24,12 @@ mixin _$UsersRecommendationRequest {
   int? get limit => throw _privateConstructorUsedError;
   int? get offset => throw _privateConstructorUsedError;
 
+  /// Serializes this UsersRecommendationRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UsersRecommendationRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UsersRecommendationRequestCopyWith<UsersRecommendationRequest>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$UsersRecommendationRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UsersRecommendationRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -92,6 +98,8 @@ class __$$UsersRecommendationRequestImplCopyWithImpl<$Res>
       $Res Function(_$UsersRecommendationRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UsersRecommendationRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -139,11 +147,13 @@ class _$UsersRecommendationRequestImpl implements _UsersRecommendationRequest {
             (identical(other.offset, offset) || other.offset == offset));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, limit, offset);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UsersRecommendationRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UsersRecommendationRequestImplCopyWith<_$UsersRecommendationRequestImpl>
@@ -170,8 +180,11 @@ abstract class _UsersRecommendationRequest
   int? get limit;
   @override
   int? get offset;
+
+  /// Create a copy of UsersRecommendationRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersRecommendationRequestImplCopyWith<_$UsersRecommendationRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

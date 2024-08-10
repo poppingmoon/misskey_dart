@@ -23,8 +23,12 @@ IReadAnnouncementRequest _$IReadAnnouncementRequestFromJson(
 mixin _$IReadAnnouncementRequest {
   String get announcementId => throw _privateConstructorUsedError;
 
+  /// Serializes this IReadAnnouncementRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of IReadAnnouncementRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $IReadAnnouncementRequestCopyWith<IReadAnnouncementRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$IReadAnnouncementRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of IReadAnnouncementRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -85,6 +91,8 @@ class __$$IReadAnnouncementRequestImplCopyWithImpl<$Res>
       $Res Function(_$IReadAnnouncementRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of IReadAnnouncementRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -124,11 +132,13 @@ class _$IReadAnnouncementRequestImpl implements _IReadAnnouncementRequest {
                 other.announcementId == announcementId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, announcementId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of IReadAnnouncementRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IReadAnnouncementRequestImplCopyWith<_$IReadAnnouncementRequestImpl>
@@ -152,8 +162,11 @@ abstract class _IReadAnnouncementRequest implements IReadAnnouncementRequest {
 
   @override
   String get announcementId;
+
+  /// Create a copy of IReadAnnouncementRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IReadAnnouncementRequestImplCopyWith<_$IReadAnnouncementRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

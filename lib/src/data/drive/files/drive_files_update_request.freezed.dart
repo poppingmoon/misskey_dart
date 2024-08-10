@@ -27,8 +27,12 @@ mixin _$DriveFilesUpdateRequest {
   bool? get isSensitive => throw _privateConstructorUsedError;
   String? get comment => throw _privateConstructorUsedError;
 
+  /// Serializes this DriveFilesUpdateRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DriveFilesUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DriveFilesUpdateRequestCopyWith<DriveFilesUpdateRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -58,6 +62,8 @@ class _$DriveFilesUpdateRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DriveFilesUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -119,6 +125,8 @@ class __$$DriveFilesUpdateRequestImplCopyWithImpl<$Res>
       $Res Function(_$DriveFilesUpdateRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DriveFilesUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -196,12 +204,14 @@ class _$DriveFilesUpdateRequestImpl implements _DriveFilesUpdateRequest {
             (identical(other.comment, comment) || other.comment == comment));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, fileId, folderId, name, isSensitive, comment);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DriveFilesUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DriveFilesUpdateRequestImplCopyWith<_$DriveFilesUpdateRequestImpl>
@@ -237,8 +247,11 @@ abstract class _DriveFilesUpdateRequest implements DriveFilesUpdateRequest {
   bool? get isSensitive;
   @override
   String? get comment;
+
+  /// Create a copy of DriveFilesUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DriveFilesUpdateRequestImplCopyWith<_$DriveFilesUpdateRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -23,8 +23,12 @@ mixin _$SigninResponse {
   String get id => throw _privateConstructorUsedError;
   String get i => throw _privateConstructorUsedError;
 
+  /// Serializes this SigninResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SigninResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SigninResponseCopyWith<SigninResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$SigninResponseCopyWithImpl<$Res, $Val extends SigninResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SigninResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -86,6 +92,8 @@ class __$$SigninResponseImplCopyWithImpl<$Res>
       _$SigninResponseImpl _value, $Res Function(_$SigninResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SigninResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -132,11 +140,13 @@ class _$SigninResponseImpl implements _SigninResponse {
             (identical(other.i, i) || other.i == i));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, i);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SigninResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SigninResponseImplCopyWith<_$SigninResponseImpl> get copyWith =>
@@ -163,8 +173,11 @@ abstract class _SigninResponse implements SigninResponse {
   String get id;
   @override
   String get i;
+
+  /// Create a copy of SigninResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SigninResponseImplCopyWith<_$SigninResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

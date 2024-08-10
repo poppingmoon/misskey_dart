@@ -23,8 +23,12 @@ mixin _$FlashMyLikesResponse {
   String get id => throw _privateConstructorUsedError;
   Flash get flash => throw _privateConstructorUsedError;
 
+  /// Serializes this FlashMyLikesResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FlashMyLikesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FlashMyLikesResponseCopyWith<FlashMyLikesResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$FlashMyLikesResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FlashMyLikesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -69,6 +75,8 @@ class _$FlashMyLikesResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of FlashMyLikesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $FlashCopyWith<$Res> get flash {
@@ -100,6 +108,8 @@ class __$$FlashMyLikesResponseImplCopyWithImpl<$Res>
       $Res Function(_$FlashMyLikesResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FlashMyLikesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -146,11 +156,13 @@ class _$FlashMyLikesResponseImpl implements _FlashMyLikesResponse {
             (identical(other.flash, flash) || other.flash == flash));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, flash);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FlashMyLikesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FlashMyLikesResponseImplCopyWith<_$FlashMyLikesResponseImpl>
@@ -178,8 +190,11 @@ abstract class _FlashMyLikesResponse implements FlashMyLikesResponse {
   String get id;
   @override
   Flash get flash;
+
+  /// Create a copy of FlashMyLikesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FlashMyLikesResponseImplCopyWith<_$FlashMyLikesResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

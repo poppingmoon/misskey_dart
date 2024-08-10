@@ -28,8 +28,12 @@ mixin _$ChannelsSearchRequest {
   @Assert('limit > 0')
   int? get limit => throw _privateConstructorUsedError;
 
+  /// Serializes this ChannelsSearchRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ChannelsSearchRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ChannelsSearchRequestCopyWith<ChannelsSearchRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -59,6 +63,8 @@ class _$ChannelsSearchRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ChannelsSearchRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -119,6 +125,8 @@ class __$$ChannelsSearchRequestImplCopyWithImpl<$Res>
       $Res Function(_$ChannelsSearchRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ChannelsSearchRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -195,12 +203,14 @@ class _$ChannelsSearchRequestImpl implements _ChannelsSearchRequest {
             (identical(other.limit, limit) || other.limit == limit));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, query, type, sinceId, untilId, limit);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ChannelsSearchRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ChannelsSearchRequestImplCopyWith<_$ChannelsSearchRequestImpl>
@@ -237,8 +247,11 @@ abstract class _ChannelsSearchRequest implements ChannelsSearchRequest {
   @override
   @Assert('limit > 0')
   int? get limit;
+
+  /// Create a copy of ChannelsSearchRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ChannelsSearchRequestImplCopyWith<_$ChannelsSearchRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

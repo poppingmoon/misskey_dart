@@ -25,8 +25,12 @@ mixin _$ServerInfoResponse {
   ServerInfoMem get mem => throw _privateConstructorUsedError;
   ServerInfoFs get fs => throw _privateConstructorUsedError;
 
+  /// Serializes this ServerInfoResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ServerInfoResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ServerInfoResponseCopyWith<ServerInfoResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -55,6 +59,8 @@ class _$ServerInfoResponseCopyWithImpl<$Res, $Val extends ServerInfoResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ServerInfoResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -83,6 +89,8 @@ class _$ServerInfoResponseCopyWithImpl<$Res, $Val extends ServerInfoResponse>
     ) as $Val);
   }
 
+  /// Create a copy of ServerInfoResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ServerInfoCpuCopyWith<$Res> get cpu {
@@ -91,6 +99,8 @@ class _$ServerInfoResponseCopyWithImpl<$Res, $Val extends ServerInfoResponse>
     });
   }
 
+  /// Create a copy of ServerInfoResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ServerInfoMemCopyWith<$Res> get mem {
@@ -99,6 +109,8 @@ class _$ServerInfoResponseCopyWithImpl<$Res, $Val extends ServerInfoResponse>
     });
   }
 
+  /// Create a copy of ServerInfoResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ServerInfoFsCopyWith<$Res> get fs {
@@ -135,6 +147,8 @@ class __$$ServerInfoResponseImplCopyWithImpl<$Res>
       $Res Function(_$ServerInfoResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ServerInfoResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -201,11 +215,13 @@ class _$ServerInfoResponseImpl implements _ServerInfoResponse {
             (identical(other.fs, fs) || other.fs == fs));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, machine, cpu, mem, fs);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ServerInfoResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ServerInfoResponseImplCopyWith<_$ServerInfoResponseImpl> get copyWith =>
@@ -238,8 +254,11 @@ abstract class _ServerInfoResponse implements ServerInfoResponse {
   ServerInfoMem get mem;
   @override
   ServerInfoFs get fs;
+
+  /// Create a copy of ServerInfoResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ServerInfoResponseImplCopyWith<_$ServerInfoResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -253,8 +272,12 @@ mixin _$ServerInfoCpu {
   String get model => throw _privateConstructorUsedError;
   int get cores => throw _privateConstructorUsedError;
 
+  /// Serializes this ServerInfoCpu to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ServerInfoCpu
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ServerInfoCpuCopyWith<ServerInfoCpu> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -278,6 +301,8 @@ class _$ServerInfoCpuCopyWithImpl<$Res, $Val extends ServerInfoCpu>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ServerInfoCpu
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -316,6 +341,8 @@ class __$$ServerInfoCpuImplCopyWithImpl<$Res>
       _$ServerInfoCpuImpl _value, $Res Function(_$ServerInfoCpuImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ServerInfoCpu
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -362,11 +389,13 @@ class _$ServerInfoCpuImpl implements _ServerInfoCpu {
             (identical(other.cores, cores) || other.cores == cores));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, model, cores);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ServerInfoCpu
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ServerInfoCpuImplCopyWith<_$ServerInfoCpuImpl> get copyWith =>
@@ -392,8 +421,11 @@ abstract class _ServerInfoCpu implements ServerInfoCpu {
   String get model;
   @override
   int get cores;
+
+  /// Create a copy of ServerInfoCpu
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ServerInfoCpuImplCopyWith<_$ServerInfoCpuImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -406,8 +438,12 @@ ServerInfoMem _$ServerInfoMemFromJson(Map<String, dynamic> json) {
 mixin _$ServerInfoMem {
   int get total => throw _privateConstructorUsedError;
 
+  /// Serializes this ServerInfoMem to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ServerInfoMem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ServerInfoMemCopyWith<ServerInfoMem> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -431,6 +467,8 @@ class _$ServerInfoMemCopyWithImpl<$Res, $Val extends ServerInfoMem>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ServerInfoMem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -464,6 +502,8 @@ class __$$ServerInfoMemImplCopyWithImpl<$Res>
       _$ServerInfoMemImpl _value, $Res Function(_$ServerInfoMemImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ServerInfoMem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -502,11 +542,13 @@ class _$ServerInfoMemImpl implements _ServerInfoMem {
             (identical(other.total, total) || other.total == total));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, total);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ServerInfoMem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ServerInfoMemImplCopyWith<_$ServerInfoMemImpl> get copyWith =>
@@ -529,8 +571,11 @@ abstract class _ServerInfoMem implements ServerInfoMem {
 
   @override
   int get total;
+
+  /// Create a copy of ServerInfoMem
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ServerInfoMemImplCopyWith<_$ServerInfoMemImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -544,8 +589,12 @@ mixin _$ServerInfoFs {
   int get total => throw _privateConstructorUsedError;
   int get used => throw _privateConstructorUsedError;
 
+  /// Serializes this ServerInfoFs to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ServerInfoFs
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ServerInfoFsCopyWith<ServerInfoFs> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -569,6 +618,8 @@ class _$ServerInfoFsCopyWithImpl<$Res, $Val extends ServerInfoFs>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ServerInfoFs
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -607,6 +658,8 @@ class __$$ServerInfoFsImplCopyWithImpl<$Res>
       _$ServerInfoFsImpl _value, $Res Function(_$ServerInfoFsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ServerInfoFs
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -653,11 +706,13 @@ class _$ServerInfoFsImpl implements _ServerInfoFs {
             (identical(other.used, used) || other.used == used));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, total, used);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ServerInfoFs
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ServerInfoFsImplCopyWith<_$ServerInfoFsImpl> get copyWith =>
@@ -682,8 +737,11 @@ abstract class _ServerInfoFs implements ServerInfoFs {
   int get total;
   @override
   int get used;
+
+  /// Create a copy of ServerInfoFs
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ServerInfoFsImplCopyWith<_$ServerInfoFsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

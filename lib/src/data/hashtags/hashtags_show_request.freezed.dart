@@ -22,8 +22,12 @@ HashtagsShowRequest _$HashtagsShowRequestFromJson(Map<String, dynamic> json) {
 mixin _$HashtagsShowRequest {
   String get tag => throw _privateConstructorUsedError;
 
+  /// Serializes this HashtagsShowRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HashtagsShowRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $HashtagsShowRequestCopyWith<HashtagsShowRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$HashtagsShowRequestCopyWithImpl<$Res, $Val extends HashtagsShowRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of HashtagsShowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$HashtagsShowRequestImplCopyWithImpl<$Res>
       $Res Function(_$HashtagsShowRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HashtagsShowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -118,11 +126,13 @@ class _$HashtagsShowRequestImpl implements _HashtagsShowRequest {
             (identical(other.tag, tag) || other.tag == tag));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, tag);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HashtagsShowRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$HashtagsShowRequestImplCopyWith<_$HashtagsShowRequestImpl> get copyWith =>
@@ -146,8 +156,11 @@ abstract class _HashtagsShowRequest implements HashtagsShowRequest {
 
   @override
   String get tag;
+
+  /// Create a copy of HashtagsShowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$HashtagsShowRequestImplCopyWith<_$HashtagsShowRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

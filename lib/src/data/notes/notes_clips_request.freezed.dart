@@ -22,8 +22,12 @@ NotesClipsRequest _$NotesClipsRequestFromJson(Map<String, dynamic> json) {
 mixin _$NotesClipsRequest {
   String get noteId => throw _privateConstructorUsedError;
 
+  /// Serializes this NotesClipsRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotesClipsRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesClipsRequestCopyWith<NotesClipsRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$NotesClipsRequestCopyWithImpl<$Res, $Val extends NotesClipsRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotesClipsRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$NotesClipsRequestImplCopyWithImpl<$Res>
       $Res Function(_$NotesClipsRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotesClipsRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -118,11 +126,13 @@ class _$NotesClipsRequestImpl implements _NotesClipsRequest {
             (identical(other.noteId, noteId) || other.noteId == noteId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, noteId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotesClipsRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotesClipsRequestImplCopyWith<_$NotesClipsRequestImpl> get copyWith =>
@@ -146,8 +156,11 @@ abstract class _NotesClipsRequest implements NotesClipsRequest {
 
   @override
   String get noteId;
+
+  /// Create a copy of NotesClipsRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesClipsRequestImplCopyWith<_$NotesClipsRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

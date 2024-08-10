@@ -24,8 +24,12 @@ mixin _$UsersReportAbuseRequest {
   String get userId => throw _privateConstructorUsedError;
   String get comment => throw _privateConstructorUsedError;
 
+  /// Serializes this UsersReportAbuseRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UsersReportAbuseRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UsersReportAbuseRequestCopyWith<UsersReportAbuseRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$UsersReportAbuseRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UsersReportAbuseRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -88,6 +94,8 @@ class __$$UsersReportAbuseImplCopyWithImpl<$Res>
       $Res Function(_$UsersReportAbuseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UsersReportAbuseRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -134,11 +142,13 @@ class _$UsersReportAbuseImpl implements _UsersReportAbuse {
             (identical(other.comment, comment) || other.comment == comment));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, userId, comment);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UsersReportAbuseRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UsersReportAbuseImplCopyWith<_$UsersReportAbuseImpl> get copyWith =>
@@ -165,8 +175,11 @@ abstract class _UsersReportAbuse implements UsersReportAbuseRequest {
   String get userId;
   @override
   String get comment;
+
+  /// Create a copy of UsersReportAbuseRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersReportAbuseImplCopyWith<_$UsersReportAbuseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

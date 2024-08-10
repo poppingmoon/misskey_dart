@@ -36,8 +36,12 @@ mixin _$NotesHybridTimelineRequest {
   bool? get withRenotes => throw _privateConstructorUsedError;
   bool? get allowPartial => throw _privateConstructorUsedError;
 
+  /// Serializes this NotesHybridTimelineRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotesHybridTimelineRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesHybridTimelineRequestCopyWith<NotesHybridTimelineRequest>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -75,6 +79,8 @@ class _$NotesHybridTimelineRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotesHybridTimelineRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -178,6 +184,8 @@ class __$$NotesHybridTimelineRequestImplCopyWithImpl<$Res>
       $Res Function(_$NotesHybridTimelineRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotesHybridTimelineRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -328,7 +336,7 @@ class _$NotesHybridTimelineRequestImpl implements _NotesHybridTimelineRequest {
                 other.allowPartial == allowPartial));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -345,7 +353,9 @@ class _$NotesHybridTimelineRequestImpl implements _NotesHybridTimelineRequest {
       withRenotes,
       allowPartial);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotesHybridTimelineRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotesHybridTimelineRequestImplCopyWith<_$NotesHybridTimelineRequestImpl>
@@ -405,8 +415,11 @@ abstract class _NotesHybridTimelineRequest
   bool? get withRenotes;
   @override
   bool? get allowPartial;
+
+  /// Create a copy of NotesHybridTimelineRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesHybridTimelineRequestImplCopyWith<_$NotesHybridTimelineRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

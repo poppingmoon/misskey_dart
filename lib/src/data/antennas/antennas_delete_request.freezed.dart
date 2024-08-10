@@ -23,8 +23,12 @@ AntennasDeleteRequest _$AntennasDeleteRequestFromJson(
 mixin _$AntennasDeleteRequest {
   String get antennaId => throw _privateConstructorUsedError;
 
+  /// Serializes this AntennasDeleteRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AntennasDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AntennasDeleteRequestCopyWith<AntennasDeleteRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$AntennasDeleteRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AntennasDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -84,6 +90,8 @@ class __$$AntennasDeleteRequestImplCopyWithImpl<$Res>
       $Res Function(_$AntennasDeleteRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AntennasDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -123,11 +131,13 @@ class _$AntennasDeleteRequestImpl implements _AntennasDeleteRequest {
                 other.antennaId == antennaId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, antennaId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AntennasDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AntennasDeleteRequestImplCopyWith<_$AntennasDeleteRequestImpl>
@@ -151,8 +161,11 @@ abstract class _AntennasDeleteRequest implements AntennasDeleteRequest {
 
   @override
   String get antennaId;
+
+  /// Create a copy of AntennasDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AntennasDeleteRequestImplCopyWith<_$AntennasDeleteRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

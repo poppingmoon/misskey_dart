@@ -22,8 +22,12 @@ SwUnregisterRequest _$SwUnregisterRequestFromJson(Map<String, dynamic> json) {
 mixin _$SwUnregisterRequest {
   String get endpoint => throw _privateConstructorUsedError;
 
+  /// Serializes this SwUnregisterRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SwUnregisterRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SwUnregisterRequestCopyWith<SwUnregisterRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$SwUnregisterRequestCopyWithImpl<$Res, $Val extends SwUnregisterRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SwUnregisterRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$SwUnregisterRequestImplCopyWithImpl<$Res>
       $Res Function(_$SwUnregisterRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SwUnregisterRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -119,11 +127,13 @@ class _$SwUnregisterRequestImpl implements _SwUnregisterRequest {
                 other.endpoint == endpoint));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, endpoint);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SwUnregisterRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SwUnregisterRequestImplCopyWith<_$SwUnregisterRequestImpl> get copyWith =>
@@ -147,8 +157,11 @@ abstract class _SwUnregisterRequest implements SwUnregisterRequest {
 
   @override
   String get endpoint;
+
+  /// Create a copy of SwUnregisterRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SwUnregisterRequestImplCopyWith<_$SwUnregisterRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

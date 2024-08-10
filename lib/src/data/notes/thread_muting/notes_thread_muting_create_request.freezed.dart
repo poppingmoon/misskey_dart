@@ -23,8 +23,12 @@ NotesThreadMutingCreateRequest _$NotesThreadMutingCreateRequestFromJson(
 mixin _$NotesThreadMutingCreateRequest {
   String get noteId => throw _privateConstructorUsedError;
 
+  /// Serializes this NotesThreadMutingCreateRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotesThreadMutingCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesThreadMutingCreateRequestCopyWith<NotesThreadMutingCreateRequest>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$NotesThreadMutingCreateRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotesThreadMutingCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -87,6 +93,8 @@ class __$$NotesThreadMutingCreateRequestImplCopyWithImpl<$Res>
       $Res Function(_$NotesThreadMutingCreateRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotesThreadMutingCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -127,11 +135,13 @@ class _$NotesThreadMutingCreateRequestImpl
             (identical(other.noteId, noteId) || other.noteId == noteId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, noteId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotesThreadMutingCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotesThreadMutingCreateRequestImplCopyWith<
@@ -157,8 +167,11 @@ abstract class _NotesThreadMutingCreateRequest
 
   @override
   String get noteId;
+
+  /// Create a copy of NotesThreadMutingCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesThreadMutingCreateRequestImplCopyWith<
           _$NotesThreadMutingCreateRequestImpl>
       get copyWith => throw _privateConstructorUsedError;

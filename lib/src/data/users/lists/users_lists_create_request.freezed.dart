@@ -23,8 +23,12 @@ UsersListsCreateRequest _$UsersListsCreateRequestFromJson(
 mixin _$UsersListsCreateRequest {
   String get name => throw _privateConstructorUsedError;
 
+  /// Serializes this UsersListsCreateRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UsersListsCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UsersListsCreateRequestCopyWith<UsersListsCreateRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$UsersListsCreateRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UsersListsCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -85,6 +91,8 @@ class __$$UsersListsCreateRequestImplCopyWithImpl<$Res>
       $Res Function(_$UsersListsCreateRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UsersListsCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -123,11 +131,13 @@ class _$UsersListsCreateRequestImpl implements _UsersListsCreateRequest {
             (identical(other.name, name) || other.name == name));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UsersListsCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UsersListsCreateRequestImplCopyWith<_$UsersListsCreateRequestImpl>
@@ -151,8 +161,11 @@ abstract class _UsersListsCreateRequest implements UsersListsCreateRequest {
 
   @override
   String get name;
+
+  /// Create a copy of UsersListsCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersListsCreateRequestImplCopyWith<_$UsersListsCreateRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

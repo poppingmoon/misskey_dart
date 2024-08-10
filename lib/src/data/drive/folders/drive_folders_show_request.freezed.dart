@@ -23,8 +23,12 @@ DriveFoldersShowRequest _$DriveFoldersShowRequestFromJson(
 mixin _$DriveFoldersShowRequest {
   String get folderId => throw _privateConstructorUsedError;
 
+  /// Serializes this DriveFoldersShowRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DriveFoldersShowRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DriveFoldersShowRequestCopyWith<DriveFoldersShowRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$DriveFoldersShowRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DriveFoldersShowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -85,6 +91,8 @@ class __$$DriveFoldersShowRequestImplCopyWithImpl<$Res>
       $Res Function(_$DriveFoldersShowRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DriveFoldersShowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -124,11 +132,13 @@ class _$DriveFoldersShowRequestImpl implements _DriveFoldersShowRequest {
                 other.folderId == folderId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, folderId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DriveFoldersShowRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DriveFoldersShowRequestImplCopyWith<_$DriveFoldersShowRequestImpl>
@@ -152,8 +162,11 @@ abstract class _DriveFoldersShowRequest implements DriveFoldersShowRequest {
 
   @override
   String get folderId;
+
+  /// Create a copy of DriveFoldersShowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DriveFoldersShowRequestImplCopyWith<_$DriveFoldersShowRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

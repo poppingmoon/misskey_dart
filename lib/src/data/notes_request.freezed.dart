@@ -29,8 +29,12 @@ mixin _$NotesRequest {
   String? get sinceId => throw _privateConstructorUsedError;
   String? get untilId => throw _privateConstructorUsedError;
 
+  /// Serializes this NotesRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotesRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesRequestCopyWith<NotesRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -62,6 +66,8 @@ class _$NotesRequestCopyWithImpl<$Res, $Val extends NotesRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotesRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -138,6 +144,8 @@ class __$$NotesRequestImplCopyWithImpl<$Res>
       _$NotesRequestImpl _value, $Res Function(_$NotesRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotesRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -241,12 +249,14 @@ class _$NotesRequestImpl implements _NotesRequest {
             (identical(other.untilId, untilId) || other.untilId == untilId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, local, reply, renote, withFiles,
       poll, limit, sinceId, untilId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotesRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotesRequestImplCopyWith<_$NotesRequestImpl> get copyWith =>
@@ -290,8 +300,11 @@ abstract class _NotesRequest implements NotesRequest {
   String? get sinceId;
   @override
   String? get untilId;
+
+  /// Create a copy of NotesRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesRequestImplCopyWith<_$NotesRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

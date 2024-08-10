@@ -25,8 +25,12 @@ mixin _$DriveFilesShowRequest {
   String? get fileId => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
 
+  /// Serializes this DriveFilesShowRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DriveFilesShowRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DriveFilesShowRequestCopyWith<DriveFilesShowRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$DriveFilesShowRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DriveFilesShowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -91,6 +97,8 @@ class __$$DriveFilesShowRequestImplCopyWithImpl<$Res>
       $Res Function(_$DriveFilesShowRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DriveFilesShowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -138,11 +146,13 @@ class _$DriveFilesShowRequestImpl implements _DriveFilesShowRequest {
             (identical(other.url, url) || other.url == url));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, fileId, url);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DriveFilesShowRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DriveFilesShowRequestImplCopyWith<_$DriveFilesShowRequestImpl>
@@ -164,12 +174,16 @@ abstract class _DriveFilesShowRequest implements DriveFilesShowRequest {
   factory _DriveFilesShowRequest.fromJson(Map<String, dynamic> json) =
       _$DriveFilesShowRequestImpl.fromJson;
 
-  @override // どちらか必須
+// どちらか必須
+  @override
   String? get fileId;
   @override
   String? get url;
+
+  /// Create a copy of DriveFilesShowRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DriveFilesShowRequestImplCopyWith<_$DriveFilesShowRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

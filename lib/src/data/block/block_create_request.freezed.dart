@@ -22,8 +22,12 @@ BlockCreateRequest _$BlockCreateRequestFromJson(Map<String, dynamic> json) {
 mixin _$BlockCreateRequest {
   String get userId => throw _privateConstructorUsedError;
 
+  /// Serializes this BlockCreateRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BlockCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $BlockCreateRequestCopyWith<BlockCreateRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$BlockCreateRequestCopyWithImpl<$Res, $Val extends BlockCreateRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of BlockCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$BlockCreateRequestImplCopyWithImpl<$Res>
       $Res Function(_$BlockCreateRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BlockCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -118,11 +126,13 @@ class _$BlockCreateRequestImpl implements _BlockCreateRequest {
             (identical(other.userId, userId) || other.userId == userId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, userId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BlockCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BlockCreateRequestImplCopyWith<_$BlockCreateRequestImpl> get copyWith =>
@@ -146,8 +156,11 @@ abstract class _BlockCreateRequest implements BlockCreateRequest {
 
   @override
   String get userId;
+
+  /// Create a copy of BlockCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BlockCreateRequestImplCopyWith<_$BlockCreateRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

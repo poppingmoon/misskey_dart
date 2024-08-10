@@ -45,8 +45,12 @@ mixin _$INotificationsResponse {
       throw _privateConstructorUsedError;
   List<UserLite>? get users => throw _privateConstructorUsedError;
 
+  /// Serializes this INotificationsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of INotificationsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $INotificationsResponseCopyWith<INotificationsResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -94,6 +98,8 @@ class _$INotificationsResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of INotificationsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -192,6 +198,8 @@ class _$INotificationsResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of INotificationsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserLiteCopyWith<$Res>? get user {
@@ -204,6 +212,8 @@ class _$INotificationsResponseCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of INotificationsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NoteCopyWith<$Res>? get note {
@@ -216,6 +226,8 @@ class _$INotificationsResponseCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of INotificationsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RolesListResponseCopyWith<$Res>? get role {
@@ -277,6 +289,8 @@ class __$$INotificationsResponseImplCopyWithImpl<$Res>
       $Res Function(_$INotificationsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of INotificationsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -496,7 +510,7 @@ class _$INotificationsResponseImpl implements _INotificationsResponse {
             const DeepCollectionEquality().equals(other._users, _users));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -519,7 +533,9 @@ class _$INotificationsResponseImpl implements _INotificationsResponse {
       const DeepCollectionEquality().hash(_reactions),
       const DeepCollectionEquality().hash(_users));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of INotificationsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$INotificationsResponseImplCopyWith<_$INotificationsResponseImpl>
@@ -563,8 +579,8 @@ abstract class _INotificationsResponse implements INotificationsResponse {
   String get id;
   @override
   @DateTimeConverter()
-  DateTime get createdAt;
-  @override // ignore: invalid_annotation_target
+  DateTime get createdAt; // ignore: invalid_annotation_target
+  @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   NotificationType? get type;
   @override
@@ -598,8 +614,11 @@ abstract class _INotificationsResponse implements INotificationsResponse {
   List<INotificationsReaction>? get reactions;
   @override
   List<UserLite>? get users;
+
+  /// Create a copy of INotificationsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$INotificationsResponseImplCopyWith<_$INotificationsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -614,8 +633,12 @@ mixin _$INotificationsReaction {
   UserLite get user => throw _privateConstructorUsedError;
   String get reaction => throw _privateConstructorUsedError;
 
+  /// Serializes this INotificationsReaction to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of INotificationsReaction
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $INotificationsReactionCopyWith<INotificationsReaction> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -642,6 +665,8 @@ class _$INotificationsReactionCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of INotificationsReaction
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -660,6 +685,8 @@ class _$INotificationsReactionCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of INotificationsReaction
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserLiteCopyWith<$Res> get user {
@@ -694,6 +721,8 @@ class __$$INotificationsReactionImplCopyWithImpl<$Res>
       $Res Function(_$INotificationsReactionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of INotificationsReaction
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -742,11 +771,13 @@ class _$INotificationsReactionImpl implements _INotificationsReaction {
                 other.reaction == reaction));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, user, reaction);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of INotificationsReaction
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$INotificationsReactionImplCopyWith<_$INotificationsReactionImpl>
@@ -773,8 +804,11 @@ abstract class _INotificationsReaction implements INotificationsReaction {
   UserLite get user;
   @override
   String get reaction;
+
+  /// Create a copy of INotificationsReaction
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$INotificationsReactionImplCopyWith<_$INotificationsReactionImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

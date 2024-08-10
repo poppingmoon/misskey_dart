@@ -26,8 +26,12 @@ mixin _$FlashCreateRequest {
   List<String> get permissions => throw _privateConstructorUsedError;
   FlashVisibility? get visibility => throw _privateConstructorUsedError;
 
+  /// Serializes this FlashCreateRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FlashCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FlashCreateRequestCopyWith<FlashCreateRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -56,6 +60,8 @@ class _$FlashCreateRequestCopyWithImpl<$Res, $Val extends FlashCreateRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FlashCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -114,6 +120,8 @@ class __$$FlashCreateRequestImplCopyWithImpl<$Res>
       $Res Function(_$FlashCreateRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FlashCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -198,12 +206,14 @@ class _$FlashCreateRequestImpl implements _FlashCreateRequest {
                 other.visibility == visibility));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, title, summary, script,
       const DeepCollectionEquality().hash(_permissions), visibility);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FlashCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FlashCreateRequestImplCopyWith<_$FlashCreateRequestImpl> get copyWith =>
@@ -239,8 +249,11 @@ abstract class _FlashCreateRequest implements FlashCreateRequest {
   List<String> get permissions;
   @override
   FlashVisibility? get visibility;
+
+  /// Create a copy of FlashCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FlashCreateRequestImplCopyWith<_$FlashCreateRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

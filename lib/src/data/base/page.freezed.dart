@@ -44,8 +44,12 @@ mixin _$Page {
   int get likedCount => throw _privateConstructorUsedError;
   bool? get isLiked => throw _privateConstructorUsedError;
 
+  /// Serializes this Page to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Page
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PageCopyWith<Page> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -89,6 +93,8 @@ class _$PageCopyWithImpl<$Res, $Val extends Page>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Page
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -192,6 +198,8 @@ class _$PageCopyWithImpl<$Res, $Val extends Page>
     ) as $Val);
   }
 
+  /// Create a copy of Page
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserLiteCopyWith<$Res> get user {
@@ -200,6 +208,8 @@ class _$PageCopyWithImpl<$Res, $Val extends Page>
     });
   }
 
+  /// Create a copy of Page
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $DriveFileCopyWith<$Res>? get eyeCatchingImage {
@@ -254,6 +264,8 @@ class __$$PageImplCopyWithImpl<$Res>
   __$$PageImplCopyWithImpl(_$PageImpl _value, $Res Function(_$PageImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Page
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -489,7 +501,7 @@ class _$PageImpl implements _Page {
             (identical(other.isLiked, isLiked) || other.isLiked == isLiked));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -514,7 +526,9 @@ class _$PageImpl implements _Page {
         isLiked
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Page
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PageImplCopyWith<_$PageImpl> get copyWith =>
@@ -594,8 +608,11 @@ abstract class _Page implements Page {
   int get likedCount;
   @override
   bool? get isLiked;
+
+  /// Create a copy of Page
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PageImplCopyWith<_$PageImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -610,8 +627,12 @@ mixin _$PageText {
   PageContentType? get type => throw _privateConstructorUsedError;
   String? get text => throw _privateConstructorUsedError;
 
+  /// Serializes this PageText to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PageText
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PageTextCopyWith<PageText> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -634,6 +655,8 @@ class _$PageTextCopyWithImpl<$Res, $Val extends PageText>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PageText
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -677,6 +700,8 @@ class __$$PageTextImplCopyWithImpl<$Res>
       _$PageTextImpl _value, $Res Function(_$PageTextImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PageText
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -731,11 +756,13 @@ class _$PageTextImpl implements _PageText {
             (identical(other.text, text) || other.text == text));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, type, text);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PageText
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PageTextImplCopyWith<_$PageTextImpl> get copyWith =>
@@ -764,8 +791,11 @@ abstract class _PageText implements PageText {
   PageContentType? get type;
   @override
   String? get text;
+
+  /// Create a copy of PageText
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PageTextImplCopyWith<_$PageTextImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -782,8 +812,12 @@ mixin _$PageSection {
   @ListPageContentConverter()
   List<AbstractPageContent> get children => throw _privateConstructorUsedError;
 
+  /// Serializes this PageSection to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PageSection
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PageSectionCopyWith<PageSection> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -811,6 +845,8 @@ class _$PageSectionCopyWithImpl<$Res, $Val extends PageSection>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PageSection
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -863,6 +899,8 @@ class __$$PageSectionImplCopyWithImpl<$Res>
       _$PageSectionImpl _value, $Res Function(_$PageSectionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PageSection
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -938,12 +976,14 @@ class _$PageSectionImpl implements _PageSection {
             const DeepCollectionEquality().equals(other._children, _children));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, type, title,
       const DeepCollectionEquality().hash(_children));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PageSection
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PageSectionImplCopyWith<_$PageSectionImpl> get copyWith =>
@@ -977,8 +1017,11 @@ abstract class _PageSection implements PageSection {
   @override
   @ListPageContentConverter()
   List<AbstractPageContent> get children;
+
+  /// Create a copy of PageSection
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PageSectionImplCopyWith<_$PageSectionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -993,8 +1036,12 @@ mixin _$PageImage {
   PageContentType? get type => throw _privateConstructorUsedError;
   String get fileId => throw _privateConstructorUsedError;
 
+  /// Serializes this PageImage to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PageImage
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PageImageCopyWith<PageImage> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1017,6 +1064,8 @@ class _$PageImageCopyWithImpl<$Res, $Val extends PageImage>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PageImage
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1060,6 +1109,8 @@ class __$$PageImageImplCopyWithImpl<$Res>
       _$PageImageImpl _value, $Res Function(_$PageImageImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PageImage
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1114,11 +1165,13 @@ class _$PageImageImpl implements _PageImage {
             (identical(other.fileId, fileId) || other.fileId == fileId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, type, fileId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PageImage
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PageImageImplCopyWith<_$PageImageImpl> get copyWith =>
@@ -1147,8 +1200,11 @@ abstract class _PageImage implements PageImage {
   PageContentType? get type;
   @override
   String get fileId;
+
+  /// Create a copy of PageImage
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PageImageImplCopyWith<_$PageImageImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1164,8 +1220,12 @@ mixin _$PageNote {
   String get note => throw _privateConstructorUsedError;
   bool get detailed => throw _privateConstructorUsedError;
 
+  /// Serializes this PageNote to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PageNote
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PageNoteCopyWith<PageNote> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1188,6 +1248,8 @@ class _$PageNoteCopyWithImpl<$Res, $Val extends PageNote>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PageNote
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1236,6 +1298,8 @@ class __$$PageNoteImplCopyWithImpl<$Res>
       _$PageNoteImpl _value, $Res Function(_$PageNoteImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PageNote
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1301,11 +1365,13 @@ class _$PageNoteImpl implements _PageNote {
                 other.detailed == detailed));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, type, note, detailed);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PageNote
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PageNoteImplCopyWith<_$PageNoteImpl> get copyWith =>
@@ -1337,8 +1403,11 @@ abstract class _PageNote implements PageNote {
   String get note;
   @override
   bool get detailed;
+
+  /// Create a copy of PageNote
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PageNoteImplCopyWith<_$PageNoteImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1352,8 +1421,12 @@ mixin _$PageUnknown {
   String get id => throw _privateConstructorUsedError;
   PageContentType? get type => throw _privateConstructorUsedError;
 
+  /// Serializes this PageUnknown to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PageUnknown
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PageUnknownCopyWith<PageUnknown> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1377,6 +1450,8 @@ class _$PageUnknownCopyWithImpl<$Res, $Val extends PageUnknown>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PageUnknown
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1415,6 +1490,8 @@ class __$$PageUnknownImplCopyWithImpl<$Res>
       _$PageUnknownImpl _value, $Res Function(_$PageUnknownImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PageUnknown
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1461,11 +1538,13 @@ class _$PageUnknownImpl implements _PageUnknown {
             (identical(other.type, type) || other.type == type));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, type);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PageUnknown
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PageUnknownImplCopyWith<_$PageUnknownImpl> get copyWith =>
@@ -1491,8 +1570,11 @@ abstract class _PageUnknown implements PageUnknown {
   String get id;
   @override
   PageContentType? get type;
+
+  /// Create a copy of PageUnknown
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PageUnknownImplCopyWith<_$PageUnknownImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

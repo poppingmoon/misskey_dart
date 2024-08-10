@@ -23,8 +23,12 @@ NotesReactionsDeleteRequest _$NotesReactionsDeleteRequestFromJson(
 mixin _$NotesReactionsDeleteRequest {
   String get noteId => throw _privateConstructorUsedError;
 
+  /// Serializes this NotesReactionsDeleteRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotesReactionsDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesReactionsDeleteRequestCopyWith<NotesReactionsDeleteRequest>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$NotesReactionsDeleteRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotesReactionsDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -87,6 +93,8 @@ class __$$NotesReactionsDeleteRequestImplCopyWithImpl<$Res>
       $Res Function(_$NotesReactionsDeleteRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotesReactionsDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -127,11 +135,13 @@ class _$NotesReactionsDeleteRequestImpl
             (identical(other.noteId, noteId) || other.noteId == noteId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, noteId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotesReactionsDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotesReactionsDeleteRequestImplCopyWith<_$NotesReactionsDeleteRequestImpl>
@@ -156,8 +166,11 @@ abstract class _NotesReactionsDeleteRequest
 
   @override
   String get noteId;
+
+  /// Create a copy of NotesReactionsDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesReactionsDeleteRequestImplCopyWith<_$NotesReactionsDeleteRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

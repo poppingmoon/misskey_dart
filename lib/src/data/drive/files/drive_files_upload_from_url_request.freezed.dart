@@ -28,8 +28,12 @@ mixin _$DriveFilesUploadFromUrlRequest {
   String? get marker => throw _privateConstructorUsedError;
   bool? get force => throw _privateConstructorUsedError;
 
+  /// Serializes this DriveFilesUploadFromUrlRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DriveFilesUploadFromUrlRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DriveFilesUploadFromUrlRequestCopyWith<DriveFilesUploadFromUrlRequest>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -62,6 +66,8 @@ class _$DriveFilesUploadFromUrlRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DriveFilesUploadFromUrlRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -129,6 +135,8 @@ class __$$DriveFilesUploadFromUrlRequestImplCopyWithImpl<$Res>
       $Res Function(_$DriveFilesUploadFromUrlRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DriveFilesUploadFromUrlRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -217,12 +225,14 @@ class _$DriveFilesUploadFromUrlRequestImpl
             (identical(other.force, force) || other.force == force));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, url, folderId, isSensitive, comment, marker, force);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DriveFilesUploadFromUrlRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DriveFilesUploadFromUrlRequestImplCopyWith<
@@ -263,8 +273,11 @@ abstract class _DriveFilesUploadFromUrlRequest
   String? get marker;
   @override
   bool? get force;
+
+  /// Create a copy of DriveFilesUploadFromUrlRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DriveFilesUploadFromUrlRequestImplCopyWith<
           _$DriveFilesUploadFromUrlRequestImpl>
       get copyWith => throw _privateConstructorUsedError;

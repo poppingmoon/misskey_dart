@@ -24,8 +24,12 @@ mixin _$UsersListsPushRequest {
   String get listId => throw _privateConstructorUsedError;
   String get userId => throw _privateConstructorUsedError;
 
+  /// Serializes this UsersListsPushRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UsersListsPushRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UsersListsPushRequestCopyWith<UsersListsPushRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$UsersListsPushRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UsersListsPushRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -90,6 +96,8 @@ class __$$UsersListsPushRequestImplCopyWithImpl<$Res>
       $Res Function(_$UsersListsPushRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UsersListsPushRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -137,11 +145,13 @@ class _$UsersListsPushRequestImpl implements _UsersListsPushRequest {
             (identical(other.userId, userId) || other.userId == userId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, listId, userId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UsersListsPushRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UsersListsPushRequestImplCopyWith<_$UsersListsPushRequestImpl>
@@ -168,8 +178,11 @@ abstract class _UsersListsPushRequest implements UsersListsPushRequest {
   String get listId;
   @override
   String get userId;
+
+  /// Create a copy of UsersListsPushRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersListsPushRequestImplCopyWith<_$UsersListsPushRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

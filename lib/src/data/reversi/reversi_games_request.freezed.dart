@@ -25,8 +25,12 @@ mixin _$ReversiGamesRequest {
   String? get untilId => throw _privateConstructorUsedError;
   bool? get my => throw _privateConstructorUsedError;
 
+  /// Serializes this ReversiGamesRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ReversiGamesRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ReversiGamesRequestCopyWith<ReversiGamesRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$ReversiGamesRequestCopyWithImpl<$Res, $Val extends ReversiGamesRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ReversiGamesRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -98,6 +104,8 @@ class __$$ReversiGamesRequestImplCopyWithImpl<$Res>
       $Res Function(_$ReversiGamesRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ReversiGamesRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -161,11 +169,13 @@ class _$ReversiGamesRequestImpl implements _ReversiGamesRequest {
             (identical(other.my, my) || other.my == my));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, limit, sinceId, untilId, my);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ReversiGamesRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ReversiGamesRequestImplCopyWith<_$ReversiGamesRequestImpl> get copyWith =>
@@ -198,8 +208,11 @@ abstract class _ReversiGamesRequest implements ReversiGamesRequest {
   String? get untilId;
   @override
   bool? get my;
+
+  /// Create a copy of ReversiGamesRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReversiGamesRequestImplCopyWith<_$ReversiGamesRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -24,8 +24,12 @@ mixin _$IRegistryGetDetailResponse {
   DateTime get updatedAt => throw _privateConstructorUsedError;
   dynamic get value => throw _privateConstructorUsedError;
 
+  /// Serializes this IRegistryGetDetailResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of IRegistryGetDetailResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $IRegistryGetDetailResponseCopyWith<IRegistryGetDetailResponse>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$IRegistryGetDetailResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of IRegistryGetDetailResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -92,6 +98,8 @@ class __$$IRegistryGetDetailResponseImplCopyWithImpl<$Res>
       $Res Function(_$IRegistryGetDetailResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of IRegistryGetDetailResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -141,12 +149,14 @@ class _$IRegistryGetDetailResponseImpl implements _IRegistryGetDetailResponse {
             const DeepCollectionEquality().equals(other.value, value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, updatedAt, const DeepCollectionEquality().hash(value));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of IRegistryGetDetailResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IRegistryGetDetailResponseImplCopyWith<_$IRegistryGetDetailResponseImpl>
@@ -174,8 +184,11 @@ abstract class _IRegistryGetDetailResponse
   DateTime get updatedAt;
   @override
   dynamic get value;
+
+  /// Create a copy of IRegistryGetDetailResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IRegistryGetDetailResponseImplCopyWith<_$IRegistryGetDetailResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

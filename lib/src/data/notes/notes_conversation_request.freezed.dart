@@ -25,8 +25,12 @@ mixin _$NotesConversationRequest {
   int? get limit => throw _privateConstructorUsedError;
   int? get offset => throw _privateConstructorUsedError;
 
+  /// Serializes this NotesConversationRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotesConversationRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesConversationRequestCopyWith<NotesConversationRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$NotesConversationRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotesConversationRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -97,6 +103,8 @@ class __$$NotesConversationRequestImplCopyWithImpl<$Res>
       $Res Function(_$NotesConversationRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotesConversationRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -152,11 +160,13 @@ class _$NotesConversationRequestImpl implements _NotesConversationRequest {
             (identical(other.offset, offset) || other.offset == offset));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, noteId, limit, offset);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotesConversationRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotesConversationRequestImplCopyWith<_$NotesConversationRequestImpl>
@@ -186,8 +196,11 @@ abstract class _NotesConversationRequest implements NotesConversationRequest {
   int? get limit;
   @override
   int? get offset;
+
+  /// Create a copy of NotesConversationRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesConversationRequestImplCopyWith<_$NotesConversationRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -28,8 +28,12 @@ mixin _$UsersFollowingRequest {
   @DateTimeConverter()
   DateTime? get birthday => throw _privateConstructorUsedError;
 
+  /// Serializes this UsersFollowingRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UsersFollowingRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UsersFollowingRequestCopyWith<UsersFollowingRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -59,6 +63,8 @@ class _$UsersFollowingRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UsersFollowingRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -119,6 +125,8 @@ class __$$UsersFollowingRequestImplCopyWithImpl<$Res>
       $Res Function(_$UsersFollowingRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UsersFollowingRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -196,12 +204,14 @@ class _$UsersFollowingRequestImpl implements _UsersFollowingRequest {
                 other.birthday == birthday));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, userId, sinceId, untilId, limit, birthday);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UsersFollowingRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UsersFollowingRequestImplCopyWith<_$UsersFollowingRequestImpl>
@@ -239,8 +249,11 @@ abstract class _UsersFollowingRequest implements UsersFollowingRequest {
   @override
   @DateTimeConverter()
   DateTime? get birthday;
+
+  /// Create a copy of UsersFollowingRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersFollowingRequestImplCopyWith<_$UsersFollowingRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -38,8 +38,12 @@ mixin _$DriveFile {
   String? get userId => throw _privateConstructorUsedError;
   UserLite? get user => throw _privateConstructorUsedError;
 
+  /// Serializes this DriveFile to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DriveFile
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DriveFileCopyWith<DriveFile> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -82,6 +86,8 @@ class _$DriveFileCopyWithImpl<$Res, $Val extends DriveFile>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DriveFile
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -170,6 +176,8 @@ class _$DriveFileCopyWithImpl<$Res, $Val extends DriveFile>
     ) as $Val);
   }
 
+  /// Create a copy of DriveFile
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $DriveFilePropertiesCopyWith<$Res> get properties {
@@ -178,6 +186,8 @@ class _$DriveFileCopyWithImpl<$Res, $Val extends DriveFile>
     });
   }
 
+  /// Create a copy of DriveFile
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $DriveFolderCopyWith<$Res>? get folder {
@@ -190,6 +200,8 @@ class _$DriveFileCopyWithImpl<$Res, $Val extends DriveFile>
     });
   }
 
+  /// Create a copy of DriveFile
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserLiteCopyWith<$Res>? get user {
@@ -245,6 +257,8 @@ class __$$DriveFileImplCopyWithImpl<$Res>
       _$DriveFileImpl _value, $Res Function(_$DriveFileImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DriveFile
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -426,7 +440,7 @@ class _$DriveFileImpl implements _DriveFile {
             (identical(other.user, user) || other.user == user));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -447,7 +461,9 @@ class _$DriveFileImpl implements _DriveFile {
       userId,
       user);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DriveFile
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DriveFileImplCopyWith<_$DriveFileImpl> get copyWith =>
@@ -516,8 +532,11 @@ abstract class _DriveFile implements DriveFile {
   String? get userId;
   @override
   UserLite? get user;
+
+  /// Create a copy of DriveFile
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DriveFileImplCopyWith<_$DriveFileImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -534,8 +553,12 @@ mixin _$DriveFileProperties {
   @AvgColorConverter()
   String? get avgColor => throw _privateConstructorUsedError;
 
+  /// Serializes this DriveFileProperties to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DriveFileProperties
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DriveFilePropertiesCopyWith<DriveFileProperties> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -563,6 +586,8 @@ class _$DriveFilePropertiesCopyWithImpl<$Res, $Val extends DriveFileProperties>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DriveFileProperties
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -615,6 +640,8 @@ class __$$DriveFilePropertiesImplCopyWithImpl<$Res>
       $Res Function(_$DriveFilePropertiesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DriveFileProperties
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -684,12 +711,14 @@ class _$DriveFilePropertiesImpl implements _DriveFileProperties {
                 other.avgColor == avgColor));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, width, height, orientation, avgColor);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DriveFileProperties
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DriveFilePropertiesImplCopyWith<_$DriveFilePropertiesImpl> get copyWith =>
@@ -723,8 +752,11 @@ abstract class _DriveFileProperties implements DriveFileProperties {
   @override
   @AvgColorConverter()
   String? get avgColor;
+
+  /// Create a copy of DriveFileProperties
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DriveFilePropertiesImplCopyWith<_$DriveFilePropertiesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

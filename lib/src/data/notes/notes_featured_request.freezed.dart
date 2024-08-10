@@ -26,8 +26,12 @@ mixin _$NotesFeaturedRequest {
   String? get untilId => throw _privateConstructorUsedError;
   String? get channelId => throw _privateConstructorUsedError;
 
+  /// Serializes this NotesFeaturedRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotesFeaturedRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesFeaturedRequestCopyWith<NotesFeaturedRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -56,6 +60,8 @@ class _$NotesFeaturedRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotesFeaturedRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -108,6 +114,8 @@ class __$$NotesFeaturedRequestImplCopyWithImpl<$Res>
       $Res Function(_$NotesFeaturedRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotesFeaturedRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -176,12 +184,14 @@ class _$NotesFeaturedRequestImpl implements _NotesFeaturedRequest {
                 other.channelId == channelId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, limit, offset, untilId, channelId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotesFeaturedRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotesFeaturedRequestImplCopyWith<_$NotesFeaturedRequestImpl>
@@ -216,8 +226,11 @@ abstract class _NotesFeaturedRequest implements NotesFeaturedRequest {
   String? get untilId;
   @override
   String? get channelId;
+
+  /// Create a copy of NotesFeaturedRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesFeaturedRequestImplCopyWith<_$NotesFeaturedRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

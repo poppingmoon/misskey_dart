@@ -36,8 +36,12 @@ mixin _$AntennasUpdateRequest {
   bool? get localOnly => throw _privateConstructorUsedError;
   bool? get excludeBots => throw _privateConstructorUsedError;
 
+  /// Serializes this AntennasUpdateRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AntennasUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AntennasUpdateRequestCopyWith<AntennasUpdateRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -76,6 +80,8 @@ class _$AntennasUpdateRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AntennasUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -190,6 +196,8 @@ class __$$AntennasUpdateRequestImplCopyWithImpl<$Res>
       $Res Function(_$AntennasUpdateRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AntennasUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -384,7 +392,7 @@ class _$AntennasUpdateRequestImpl implements _AntennasUpdateRequest {
                 other.excludeBots == excludeBots));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -403,7 +411,9 @@ class _$AntennasUpdateRequestImpl implements _AntennasUpdateRequest {
       localOnly,
       excludeBots);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AntennasUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AntennasUpdateRequestImplCopyWith<_$AntennasUpdateRequestImpl>
@@ -466,8 +476,11 @@ abstract class _AntennasUpdateRequest implements AntennasUpdateRequest {
   bool? get localOnly;
   @override
   bool? get excludeBots;
+
+  /// Create a copy of AntennasUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AntennasUpdateRequestImplCopyWith<_$AntennasUpdateRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -33,8 +33,12 @@ mixin _$Flash {
   int? get likedCount => throw _privateConstructorUsedError;
   bool get isLiked => throw _privateConstructorUsedError;
 
+  /// Serializes this Flash to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Flash
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FlashCopyWith<Flash> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -68,6 +72,8 @@ class _$FlashCopyWithImpl<$Res, $Val extends Flash>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Flash
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -126,6 +132,8 @@ class _$FlashCopyWithImpl<$Res, $Val extends Flash>
     ) as $Val);
   }
 
+  /// Create a copy of Flash
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserLiteCopyWith<$Res> get user {
@@ -166,6 +174,8 @@ class __$$FlashImplCopyWithImpl<$Res>
       _$FlashImpl _value, $Res Function(_$FlashImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Flash
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -292,12 +302,14 @@ class _$FlashImpl implements _Flash {
             (identical(other.isLiked, isLiked) || other.isLiked == isLiked));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, createdAt, updatedAt, title,
       summary, script, userId, user, likedCount, isLiked);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Flash
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FlashImplCopyWith<_$FlashImpl> get copyWith =>
@@ -348,8 +360,11 @@ abstract class _Flash implements Flash {
   int? get likedCount;
   @override
   bool get isLiked;
+
+  /// Create a copy of Flash
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FlashImplCopyWith<_$FlashImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

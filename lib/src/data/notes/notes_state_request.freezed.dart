@@ -22,8 +22,12 @@ NotesStateRequest _$NotesStateRequestFromJson(Map<String, dynamic> json) {
 mixin _$NotesStateRequest {
   String get noteId => throw _privateConstructorUsedError;
 
+  /// Serializes this NotesStateRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotesStateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesStateRequestCopyWith<NotesStateRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$NotesStateRequestCopyWithImpl<$Res, $Val extends NotesStateRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotesStateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$NotesStateRequestImplCopyWithImpl<$Res>
       $Res Function(_$NotesStateRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotesStateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -118,11 +126,13 @@ class _$NotesStateRequestImpl implements _NotesStateRequest {
             (identical(other.noteId, noteId) || other.noteId == noteId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, noteId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotesStateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotesStateRequestImplCopyWith<_$NotesStateRequestImpl> get copyWith =>
@@ -146,8 +156,11 @@ abstract class _NotesStateRequest implements NotesStateRequest {
 
   @override
   String get noteId;
+
+  /// Create a copy of NotesStateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesStateRequestImplCopyWith<_$NotesStateRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

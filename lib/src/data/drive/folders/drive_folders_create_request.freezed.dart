@@ -24,8 +24,12 @@ mixin _$DriveFoldersCreateRequest {
   String? get name => throw _privateConstructorUsedError;
   String? get parentId => throw _privateConstructorUsedError;
 
+  /// Serializes this DriveFoldersCreateRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DriveFoldersCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DriveFoldersCreateRequestCopyWith<DriveFoldersCreateRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$DriveFoldersCreateRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DriveFoldersCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -91,6 +97,8 @@ class __$$DriveFoldersCreateRequestImplCopyWithImpl<$Res>
       $Res Function(_$DriveFoldersCreateRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DriveFoldersCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -138,11 +146,13 @@ class _$DriveFoldersCreateRequestImpl implements _DriveFoldersCreateRequest {
                 other.parentId == parentId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, parentId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DriveFoldersCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DriveFoldersCreateRequestImplCopyWith<_$DriveFoldersCreateRequestImpl>
@@ -169,8 +179,11 @@ abstract class _DriveFoldersCreateRequest implements DriveFoldersCreateRequest {
   String? get name;
   @override
   String? get parentId;
+
+  /// Create a copy of DriveFoldersCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DriveFoldersCreateRequestImplCopyWith<_$DriveFoldersCreateRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

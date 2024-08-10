@@ -24,8 +24,12 @@ mixin _$IRegistryKeysWithTypeRequest {
   List<String> get scope => throw _privateConstructorUsedError;
   String? get domain => throw _privateConstructorUsedError;
 
+  /// Serializes this IRegistryKeysWithTypeRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of IRegistryKeysWithTypeRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $IRegistryKeysWithTypeRequestCopyWith<IRegistryKeysWithTypeRequest>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$IRegistryKeysWithTypeRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of IRegistryKeysWithTypeRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -93,6 +99,8 @@ class __$$IRegistryKeysWithTypeRequestImplCopyWithImpl<$Res>
       $Res Function(_$IRegistryKeysWithTypeRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of IRegistryKeysWithTypeRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -149,12 +157,14 @@ class _$IRegistryKeysWithTypeRequestImpl
             (identical(other.domain, domain) || other.domain == domain));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_scope), domain);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of IRegistryKeysWithTypeRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IRegistryKeysWithTypeRequestImplCopyWith<
@@ -183,8 +193,11 @@ abstract class _IRegistryKeysWithTypeRequest
   List<String> get scope;
   @override
   String? get domain;
+
+  /// Create a copy of IRegistryKeysWithTypeRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IRegistryKeysWithTypeRequestImplCopyWith<
           _$IRegistryKeysWithTypeRequestImpl>
       get copyWith => throw _privateConstructorUsedError;

@@ -23,8 +23,12 @@ DriveFoldersDeleteRequest _$DriveFoldersDeleteRequestFromJson(
 mixin _$DriveFoldersDeleteRequest {
   String get folderId => throw _privateConstructorUsedError;
 
+  /// Serializes this DriveFoldersDeleteRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DriveFoldersDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DriveFoldersDeleteRequestCopyWith<DriveFoldersDeleteRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$DriveFoldersDeleteRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DriveFoldersDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -85,6 +91,8 @@ class __$$DriveFoldersDeleteRequestImplCopyWithImpl<$Res>
       $Res Function(_$DriveFoldersDeleteRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DriveFoldersDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -124,11 +132,13 @@ class _$DriveFoldersDeleteRequestImpl implements _DriveFoldersDeleteRequest {
                 other.folderId == folderId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, folderId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DriveFoldersDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DriveFoldersDeleteRequestImplCopyWith<_$DriveFoldersDeleteRequestImpl>
@@ -152,8 +162,11 @@ abstract class _DriveFoldersDeleteRequest implements DriveFoldersDeleteRequest {
 
   @override
   String get folderId;
+
+  /// Create a copy of DriveFoldersDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DriveFoldersDeleteRequestImplCopyWith<_$DriveFoldersDeleteRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

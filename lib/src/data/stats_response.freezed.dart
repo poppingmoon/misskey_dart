@@ -29,8 +29,12 @@ mixin _$StatsResponse {
   int? get driveUsageLocal => throw _privateConstructorUsedError;
   int? get driveUsageRemote => throw _privateConstructorUsedError;
 
+  /// Serializes this StatsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of StatsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $StatsResponseCopyWith<StatsResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -62,6 +66,8 @@ class _$StatsResponseCopyWithImpl<$Res, $Val extends StatsResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of StatsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -138,6 +144,8 @@ class __$$StatsResponseImplCopyWithImpl<$Res>
       _$StatsResponseImpl _value, $Res Function(_$StatsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of StatsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -248,7 +256,7 @@ class _$StatsResponseImpl implements _StatsResponse {
                 other.driveUsageRemote == driveUsageRemote));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -261,7 +269,9 @@ class _$StatsResponseImpl implements _StatsResponse {
       driveUsageLocal,
       driveUsageRemote);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of StatsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$StatsResponseImplCopyWith<_$StatsResponseImpl> get copyWith =>
@@ -305,8 +315,11 @@ abstract class _StatsResponse implements StatsResponse {
   int? get driveUsageLocal;
   @override
   int? get driveUsageRemote;
+
+  /// Create a copy of StatsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StatsResponseImplCopyWith<_$StatsResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

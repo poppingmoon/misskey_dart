@@ -37,8 +37,12 @@ mixin _$NotesLocalTimelineRequest {
   DateTime? get untilDate => throw _privateConstructorUsedError;
   bool? get allowPartial => throw _privateConstructorUsedError;
 
+  /// Serializes this NotesLocalTimelineRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotesLocalTimelineRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesLocalTimelineRequestCopyWith<NotesLocalTimelineRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -74,6 +78,8 @@ class _$NotesLocalTimelineRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotesLocalTimelineRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -171,6 +177,8 @@ class __$$NotesLocalTimelineRequestImplCopyWithImpl<$Res>
       $Res Function(_$NotesLocalTimelineRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotesLocalTimelineRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -320,7 +328,7 @@ class _$NotesLocalTimelineRequestImpl implements _NotesLocalTimelineRequest {
                 other.allowPartial == allowPartial));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -336,7 +344,9 @@ class _$NotesLocalTimelineRequestImpl implements _NotesLocalTimelineRequest {
       untilDate,
       allowPartial);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotesLocalTimelineRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotesLocalTimelineRequestImplCopyWith<_$NotesLocalTimelineRequestImpl>
@@ -394,8 +404,11 @@ abstract class _NotesLocalTimelineRequest implements NotesLocalTimelineRequest {
   DateTime? get untilDate;
   @override
   bool? get allowPartial;
+
+  /// Create a copy of NotesLocalTimelineRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesLocalTimelineRequestImplCopyWith<_$NotesLocalTimelineRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

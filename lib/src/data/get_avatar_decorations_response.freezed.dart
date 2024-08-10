@@ -29,8 +29,12 @@ mixin _$GetAvatarDecorationsResponse {
   List<String> get roleIdsThatCanBeUsedThisDecoration =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this GetAvatarDecorationsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetAvatarDecorationsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetAvatarDecorationsResponseCopyWith<GetAvatarDecorationsResponse>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -62,6 +66,8 @@ class _$GetAvatarDecorationsResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetAvatarDecorationsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -124,6 +130,8 @@ class __$$GetAvatarDecorationsResponseImplCopyWithImpl<$Res>
       $Res Function(_$GetAvatarDecorationsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetAvatarDecorationsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -215,12 +223,14 @@ class _$GetAvatarDecorationsResponseImpl
                 _roleIdsThatCanBeUsedThisDecoration));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, name, description, url,
       const DeepCollectionEquality().hash(_roleIdsThatCanBeUsedThisDecoration));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetAvatarDecorationsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetAvatarDecorationsResponseImplCopyWith<
@@ -260,8 +270,11 @@ abstract class _GetAvatarDecorationsResponse
   Uri? get url;
   @override
   List<String> get roleIdsThatCanBeUsedThisDecoration;
+
+  /// Create a copy of GetAvatarDecorationsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetAvatarDecorationsResponseImplCopyWith<
           _$GetAvatarDecorationsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;

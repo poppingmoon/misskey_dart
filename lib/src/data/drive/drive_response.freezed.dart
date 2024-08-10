@@ -23,8 +23,12 @@ mixin _$DriveResponse {
   int get capacity => throw _privateConstructorUsedError;
   int get usage => throw _privateConstructorUsedError;
 
+  /// Serializes this DriveResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DriveResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DriveResponseCopyWith<DriveResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$DriveResponseCopyWithImpl<$Res, $Val extends DriveResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DriveResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -86,6 +92,8 @@ class __$$DriveResponseImplCopyWithImpl<$Res>
       _$DriveResponseImpl _value, $Res Function(_$DriveResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DriveResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -133,11 +141,13 @@ class _$DriveResponseImpl implements _DriveResponse {
             (identical(other.usage, usage) || other.usage == usage));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, capacity, usage);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DriveResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DriveResponseImplCopyWith<_$DriveResponseImpl> get copyWith =>
@@ -163,8 +173,11 @@ abstract class _DriveResponse implements DriveResponse {
   int get capacity;
   @override
   int get usage;
+
+  /// Create a copy of DriveResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DriveResponseImplCopyWith<_$DriveResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

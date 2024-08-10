@@ -25,8 +25,12 @@ mixin _$IRegistryRemoveRequest {
   List<String> get scope => throw _privateConstructorUsedError;
   String? get domain => throw _privateConstructorUsedError;
 
+  /// Serializes this IRegistryRemoveRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of IRegistryRemoveRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $IRegistryRemoveRequestCopyWith<IRegistryRemoveRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$IRegistryRemoveRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of IRegistryRemoveRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -97,6 +103,8 @@ class __$$IRegistryRemoveRequestImplCopyWithImpl<$Res>
       $Res Function(_$IRegistryRemoveRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of IRegistryRemoveRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -159,12 +167,14 @@ class _$IRegistryRemoveRequestImpl implements _IRegistryRemoveRequest {
             (identical(other.domain, domain) || other.domain == domain));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, key, const DeepCollectionEquality().hash(_scope), domain);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of IRegistryRemoveRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IRegistryRemoveRequestImplCopyWith<_$IRegistryRemoveRequestImpl>
@@ -194,8 +204,11 @@ abstract class _IRegistryRemoveRequest implements IRegistryRemoveRequest {
   List<String> get scope;
   @override
   String? get domain;
+
+  /// Create a copy of IRegistryRemoveRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IRegistryRemoveRequestImplCopyWith<_$IRegistryRemoveRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

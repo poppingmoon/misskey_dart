@@ -24,8 +24,12 @@ mixin _$UsersGetFrequentlyRepliedUsersRequest {
   String get userId => throw _privateConstructorUsedError;
   int? get limit => throw _privateConstructorUsedError;
 
+  /// Serializes this UsersGetFrequentlyRepliedUsersRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UsersGetFrequentlyRepliedUsersRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UsersGetFrequentlyRepliedUsersRequestCopyWith<
           UsersGetFrequentlyRepliedUsersRequest>
       get copyWith => throw _privateConstructorUsedError;
@@ -53,6 +57,8 @@ class _$UsersGetFrequentlyRepliedUsersRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UsersGetFrequentlyRepliedUsersRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -94,6 +100,8 @@ class __$$UsersGetFrequentlyRepliedUsersRequestImplCopyWithImpl<$Res>
       $Res Function(_$UsersGetFrequentlyRepliedUsersRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UsersGetFrequentlyRepliedUsersRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -143,11 +151,13 @@ class _$UsersGetFrequentlyRepliedUsersRequestImpl
             (identical(other.limit, limit) || other.limit == limit));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, userId, limit);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UsersGetFrequentlyRepliedUsersRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UsersGetFrequentlyRepliedUsersRequestImplCopyWith<
@@ -177,8 +187,11 @@ abstract class _UsersGetFrequentlyRepliedUsersRequest
   String get userId;
   @override
   int? get limit;
+
+  /// Create a copy of UsersGetFrequentlyRepliedUsersRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersGetFrequentlyRepliedUsersRequestImplCopyWith<
           _$UsersGetFrequentlyRepliedUsersRequestImpl>
       get copyWith => throw _privateConstructorUsedError;

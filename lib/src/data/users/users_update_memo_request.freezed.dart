@@ -24,8 +24,12 @@ mixin _$UsersUpdateMemoRequest {
   String get userId => throw _privateConstructorUsedError;
   String get memo => throw _privateConstructorUsedError;
 
+  /// Serializes this UsersUpdateMemoRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UsersUpdateMemoRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UsersUpdateMemoRequestCopyWith<UsersUpdateMemoRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$UsersUpdateMemoRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UsersUpdateMemoRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -91,6 +97,8 @@ class __$$UsersUpdateMemoRequestImplCopyWithImpl<$Res>
       $Res Function(_$UsersUpdateMemoRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UsersUpdateMemoRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -138,11 +146,13 @@ class _$UsersUpdateMemoRequestImpl implements _UsersUpdateMemoRequest {
             (identical(other.memo, memo) || other.memo == memo));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, userId, memo);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UsersUpdateMemoRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UsersUpdateMemoRequestImplCopyWith<_$UsersUpdateMemoRequestImpl>
@@ -169,8 +179,11 @@ abstract class _UsersUpdateMemoRequest implements UsersUpdateMemoRequest {
   String get userId;
   @override
   String get memo;
+
+  /// Create a copy of UsersUpdateMemoRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersUpdateMemoRequestImplCopyWith<_$UsersUpdateMemoRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

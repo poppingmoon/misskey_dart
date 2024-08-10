@@ -26,8 +26,12 @@ mixin _$MisskeyException {
   MisskeyExceptionKind get kind => throw _privateConstructorUsedError;
   Map<String, dynamic>? get info => throw _privateConstructorUsedError;
 
+  /// Serializes this MisskeyException to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MisskeyException
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MisskeyExceptionCopyWith<MisskeyException> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -56,6 +60,8 @@ class _$MisskeyExceptionCopyWithImpl<$Res, $Val extends MisskeyException>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MisskeyException
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -114,6 +120,8 @@ class __$$MisskeyExceptionImplCopyWithImpl<$Res>
       $Res Function(_$MisskeyExceptionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MisskeyException
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -197,12 +205,14 @@ class _$MisskeyExceptionImpl implements _MisskeyException {
             const DeepCollectionEquality().equals(other._info, _info));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, code, message, kind,
       const DeepCollectionEquality().hash(_info));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MisskeyException
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MisskeyExceptionImplCopyWith<_$MisskeyExceptionImpl> get copyWith =>
@@ -238,8 +248,11 @@ abstract class _MisskeyException implements MisskeyException {
   MisskeyExceptionKind get kind;
   @override
   Map<String, dynamic>? get info;
+
+  /// Create a copy of MisskeyException
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MisskeyExceptionImplCopyWith<_$MisskeyExceptionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

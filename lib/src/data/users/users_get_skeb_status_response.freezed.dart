@@ -28,8 +28,12 @@ mixin _$UsersGetSkebStatusResponse {
   int get clientRequestCount => throw _privateConstructorUsedError;
   List<SkebStatusSkill> get skills => throw _privateConstructorUsedError;
 
+  /// Serializes this UsersGetSkebStatusResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UsersGetSkebStatusResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UsersGetSkebStatusResponseCopyWith<UsersGetSkebStatusResponse>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -61,6 +65,8 @@ class _$UsersGetSkebStatusResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UsersGetSkebStatusResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -128,6 +134,8 @@ class __$$UsersGetSkebStatusResponseImplCopyWithImpl<$Res>
       $Res Function(_$UsersGetSkebStatusResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UsersGetSkebStatusResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -224,7 +232,7 @@ class _$UsersGetSkebStatusResponseImpl implements _UsersGetSkebStatusResponse {
             const DeepCollectionEquality().equals(other._skills, _skills));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -235,7 +243,9 @@ class _$UsersGetSkebStatusResponseImpl implements _UsersGetSkebStatusResponse {
       clientRequestCount,
       const DeepCollectionEquality().hash(_skills));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UsersGetSkebStatusResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UsersGetSkebStatusResponseImplCopyWith<_$UsersGetSkebStatusResponseImpl>
@@ -276,8 +286,11 @@ abstract class _UsersGetSkebStatusResponse
   int get clientRequestCount;
   @override
   List<SkebStatusSkill> get skills;
+
+  /// Create a copy of UsersGetSkebStatusResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersGetSkebStatusResponseImplCopyWith<_$UsersGetSkebStatusResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -293,8 +306,12 @@ mixin _$SkebStatusSkill {
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   SkebStatusSkillGenre? get genre => throw _privateConstructorUsedError;
 
+  /// Serializes this SkebStatusSkill to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SkebStatusSkill
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SkebStatusSkillCopyWith<SkebStatusSkill> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -321,6 +338,8 @@ class _$SkebStatusSkillCopyWithImpl<$Res, $Val extends SkebStatusSkill>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SkebStatusSkill
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -362,6 +381,8 @@ class __$$SkebStatusSkillImplCopyWithImpl<$Res>
       _$SkebStatusSkillImpl _value, $Res Function(_$SkebStatusSkillImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SkebStatusSkill
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -413,11 +434,13 @@ class _$SkebStatusSkillImpl implements _SkebStatusSkill {
             (identical(other.genre, genre) || other.genre == genre));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, amount, genre);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SkebStatusSkill
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SkebStatusSkillImplCopyWith<_$SkebStatusSkillImpl> get copyWith =>
@@ -442,12 +465,15 @@ abstract class _SkebStatusSkill implements SkebStatusSkill {
       _$SkebStatusSkillImpl.fromJson;
 
   @override
-  int get amount;
-  @override // ignore: invalid_annotation_target
+  int get amount; // ignore: invalid_annotation_target
+  @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   SkebStatusSkillGenre? get genre;
+
+  /// Create a copy of SkebStatusSkill
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SkebStatusSkillImplCopyWith<_$SkebStatusSkillImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

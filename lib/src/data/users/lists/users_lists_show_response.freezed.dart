@@ -31,8 +31,12 @@ mixin _$UsersListsShowResponse {
   int? get likedCount => throw _privateConstructorUsedError;
   bool? get isLiked => throw _privateConstructorUsedError;
 
+  /// Serializes this UsersListsShowResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UsersListsShowResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UsersListsShowResponseCopyWith<UsersListsShowResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -64,6 +68,8 @@ class _$UsersListsShowResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UsersListsShowResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -137,6 +143,8 @@ class __$$UsersListsShowResponseImplCopyWithImpl<$Res>
       $Res Function(_$UsersListsShowResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UsersListsShowResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -242,7 +250,7 @@ class _$UsersListsShowResponseImpl implements _UsersListsShowResponse {
             (identical(other.isLiked, isLiked) || other.isLiked == isLiked));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -254,7 +262,9 @@ class _$UsersListsShowResponseImpl implements _UsersListsShowResponse {
       likedCount,
       isLiked);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UsersListsShowResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UsersListsShowResponseImplCopyWith<_$UsersListsShowResponseImpl>
@@ -290,15 +300,18 @@ abstract class _UsersListsShowResponse implements UsersListsShowResponse {
   @override
   String get name;
   @override
-  List<String> get userIds;
-  @override // Misskey 13.13.0 で追加. 後方互換性のためnullable
+  List<String> get userIds; // Misskey 13.13.0 で追加. 後方互換性のためnullable
+  @override
   bool? get isPublic;
   @override
   int? get likedCount;
   @override
   bool? get isLiked;
+
+  /// Create a copy of UsersListsShowResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersListsShowResponseImplCopyWith<_$UsersListsShowResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

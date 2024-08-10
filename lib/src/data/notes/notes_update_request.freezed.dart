@@ -26,8 +26,12 @@ mixin _$NotesUpdateRequest {
   List<String>? get fileIds => throw _privateConstructorUsedError;
   NotesCreatePollRequest? get poll => throw _privateConstructorUsedError;
 
+  /// Serializes this NotesUpdateRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotesUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesUpdateRequestCopyWith<NotesUpdateRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -58,6 +62,8 @@ class _$NotesUpdateRequestCopyWithImpl<$Res, $Val extends NotesUpdateRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotesUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -91,6 +97,8 @@ class _$NotesUpdateRequestCopyWithImpl<$Res, $Val extends NotesUpdateRequest>
     ) as $Val);
   }
 
+  /// Create a copy of NotesUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NotesCreatePollRequestCopyWith<$Res>? get poll {
@@ -131,6 +139,8 @@ class __$$NotesUpdateRequestImplCopyWithImpl<$Res>
       $Res Function(_$NotesUpdateRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotesUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -215,12 +225,14 @@ class _$NotesUpdateRequestImpl implements _NotesUpdateRequest {
             (identical(other.poll, poll) || other.poll == poll));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, noteId, text, cw,
       const DeepCollectionEquality().hash(_fileIds), poll);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotesUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotesUpdateRequestImplCopyWith<_$NotesUpdateRequestImpl> get copyWith =>
@@ -256,8 +268,11 @@ abstract class _NotesUpdateRequest implements NotesUpdateRequest {
   List<String>? get fileIds;
   @override
   NotesCreatePollRequest? get poll;
+
+  /// Create a copy of NotesUpdateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesUpdateRequestImplCopyWith<_$NotesUpdateRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

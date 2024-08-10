@@ -24,8 +24,12 @@ mixin _$NotesPollsVoteRequest {
   String get noteId => throw _privateConstructorUsedError;
   int get choice => throw _privateConstructorUsedError;
 
+  /// Serializes this NotesPollsVoteRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotesPollsVoteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesPollsVoteRequestCopyWith<NotesPollsVoteRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$NotesPollsVoteRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotesPollsVoteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -90,6 +96,8 @@ class __$$NotesPollsVoteRequestImplCopyWithImpl<$Res>
       $Res Function(_$NotesPollsVoteRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotesPollsVoteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -137,11 +145,13 @@ class _$NotesPollsVoteRequestImpl implements _NotesPollsVoteRequest {
             (identical(other.choice, choice) || other.choice == choice));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, noteId, choice);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotesPollsVoteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotesPollsVoteRequestImplCopyWith<_$NotesPollsVoteRequestImpl>
@@ -168,8 +178,11 @@ abstract class _NotesPollsVoteRequest implements NotesPollsVoteRequest {
   String get noteId;
   @override
   int get choice;
+
+  /// Create a copy of NotesPollsVoteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesPollsVoteRequestImplCopyWith<_$NotesPollsVoteRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

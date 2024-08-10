@@ -22,8 +22,12 @@ ClipsFavoriteRequest _$ClipsFavoriteRequestFromJson(Map<String, dynamic> json) {
 mixin _$ClipsFavoriteRequest {
   String get clipId => throw _privateConstructorUsedError;
 
+  /// Serializes this ClipsFavoriteRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ClipsFavoriteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ClipsFavoriteRequestCopyWith<ClipsFavoriteRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$ClipsFavoriteRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ClipsFavoriteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -81,6 +87,8 @@ class __$$ClipsFavoriteRequestImplCopyWithImpl<$Res>
       $Res Function(_$ClipsFavoriteRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ClipsFavoriteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -119,11 +127,13 @@ class _$ClipsFavoriteRequestImpl implements _ClipsFavoriteRequest {
             (identical(other.clipId, clipId) || other.clipId == clipId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, clipId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ClipsFavoriteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ClipsFavoriteRequestImplCopyWith<_$ClipsFavoriteRequestImpl>
@@ -148,8 +158,11 @@ abstract class _ClipsFavoriteRequest implements ClipsFavoriteRequest {
 
   @override
   String get clipId;
+
+  /// Create a copy of ClipsFavoriteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ClipsFavoriteRequestImplCopyWith<_$ClipsFavoriteRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

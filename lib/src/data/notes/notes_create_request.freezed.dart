@@ -56,8 +56,12 @@ mixin _$NotesCreateRequest {
   String? get channelId => throw _privateConstructorUsedError;
   NotesCreatePollRequest? get poll => throw _privateConstructorUsedError;
 
+  /// Serializes this NotesCreateRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotesCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesCreateRequestCopyWith<NotesCreateRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -98,6 +102,8 @@ class _$NotesCreateRequestCopyWithImpl<$Res, $Val extends NotesCreateRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotesCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -181,6 +187,8 @@ class _$NotesCreateRequestCopyWithImpl<$Res, $Val extends NotesCreateRequest>
     ) as $Val);
   }
 
+  /// Create a copy of NotesCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NotesCreatePollRequestCopyWith<$Res>? get poll {
@@ -231,6 +239,8 @@ class __$$NotesCreateRequestImplCopyWithImpl<$Res>
       $Res Function(_$NotesCreateRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotesCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -455,7 +465,7 @@ class _$NotesCreateRequestImpl implements _NotesCreateRequest {
             (identical(other.poll, poll) || other.poll == poll));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -475,7 +485,9 @@ class _$NotesCreateRequestImpl implements _NotesCreateRequest {
       channelId,
       poll);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotesCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotesCreateRequestImplCopyWith<_$NotesCreateRequestImpl> get copyWith =>
@@ -511,47 +523,46 @@ abstract class _NotesCreateRequest implements NotesCreateRequest {
   factory _NotesCreateRequest.fromJson(Map<String, dynamic> json) =
       _$NotesCreateRequestImpl.fromJson;
 
-  @override
-
   /// ノートの公開範囲。
-  NoteVisibility? get visibility;
   @override
+  NoteVisibility? get visibility;
 
   /// ノートを閲覧可能なユーザーのidのリスト。visibilityがspecifiedの場合のみ適用されます。
-  List<String>? get visibleUserIds;
   @override
+  List<String>? get visibleUserIds;
 
   /// ノートの本文。
-  String? get text;
   @override
+  String? get text;
 
   /// ノートのCW。
-  String? get cw;
   @override
+  String? get cw;
 
   /// trueにすると、ローカルのみに投稿されます。
+  @override
   bool? get localOnly;
   @override
   ReactionAcceptance? get reactionAcceptance;
-  @override
 
   /// trueにすると、本文からメンションを展開しません。
-  bool? get noExtractMentions;
   @override
+  bool? get noExtractMentions;
 
   /// trueにすると、本文からハッシュタグを展開しません。
-  bool? get noExtractHashtags;
   @override
+  bool? get noExtractHashtags;
 
   /// trueにすると、本文から絵文字を展開しません。
-  bool? get noExtractEmojis;
   @override
+  bool? get noExtractEmojis;
 
   /// 添付するファイルのid。
-  List<String>? get fileIds;
   @override
+  List<String>? get fileIds;
 
   /// fileIds を使用してください。fileIds と mediaIds が指定された場合、 mediaIds は無視されます。
+  @override
   List<String>? get mediaIds;
   @override
   String? get replyId;
@@ -561,8 +572,11 @@ abstract class _NotesCreateRequest implements NotesCreateRequest {
   String? get channelId;
   @override
   NotesCreatePollRequest? get poll;
+
+  /// Create a copy of NotesCreateRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesCreateRequestImplCopyWith<_$NotesCreateRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

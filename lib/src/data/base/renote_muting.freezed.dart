@@ -26,8 +26,12 @@ mixin _$RenoteMuting {
   String get muteeId => throw _privateConstructorUsedError;
   UserDetailedNotMe get mutee => throw _privateConstructorUsedError;
 
+  /// Serializes this RenoteMuting to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RenoteMuting
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RenoteMutingCopyWith<RenoteMuting> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -57,6 +61,8 @@ class _$RenoteMutingCopyWithImpl<$Res, $Val extends RenoteMuting>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RenoteMuting
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -85,6 +91,8 @@ class _$RenoteMutingCopyWithImpl<$Res, $Val extends RenoteMuting>
     ) as $Val);
   }
 
+  /// Create a copy of RenoteMuting
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserDetailedNotMeCopyWith<$Res> get mutee {
@@ -120,6 +128,8 @@ class __$$RenoteMutingImplCopyWithImpl<$Res>
       _$RenoteMutingImpl _value, $Res Function(_$RenoteMutingImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RenoteMuting
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -188,11 +198,13 @@ class _$RenoteMutingImpl implements _RenoteMuting {
             (identical(other.mutee, mutee) || other.mutee == mutee));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, createdAt, muteeId, mutee);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RenoteMuting
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RenoteMutingImplCopyWith<_$RenoteMutingImpl> get copyWith =>
@@ -225,8 +237,11 @@ abstract class _RenoteMuting implements RenoteMuting {
   String get muteeId;
   @override
   UserDetailedNotMe get mutee;
+
+  /// Create a copy of RenoteMuting
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RenoteMutingImplCopyWith<_$RenoteMutingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

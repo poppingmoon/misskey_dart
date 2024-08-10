@@ -23,8 +23,12 @@ NotesFavoritesDeleteRequest _$NotesFavoritesDeleteRequestFromJson(
 mixin _$NotesFavoritesDeleteRequest {
   String get noteId => throw _privateConstructorUsedError;
 
+  /// Serializes this NotesFavoritesDeleteRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotesFavoritesDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesFavoritesDeleteRequestCopyWith<NotesFavoritesDeleteRequest>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$NotesFavoritesDeleteRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotesFavoritesDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -87,6 +93,8 @@ class __$$NotesFavoritesDeleteRequestImplCopyWithImpl<$Res>
       $Res Function(_$NotesFavoritesDeleteRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotesFavoritesDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -127,11 +135,13 @@ class _$NotesFavoritesDeleteRequestImpl
             (identical(other.noteId, noteId) || other.noteId == noteId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, noteId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotesFavoritesDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotesFavoritesDeleteRequestImplCopyWith<_$NotesFavoritesDeleteRequestImpl>
@@ -156,8 +166,11 @@ abstract class _NotesFavoritesDeleteRequest
 
   @override
   String get noteId;
+
+  /// Create a copy of NotesFavoritesDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesFavoritesDeleteRequestImplCopyWith<_$NotesFavoritesDeleteRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

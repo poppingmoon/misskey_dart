@@ -24,8 +24,12 @@ mixin _$IRegistryGetRequest {
   List<String> get scope => throw _privateConstructorUsedError;
   String? get domain => throw _privateConstructorUsedError;
 
+  /// Serializes this IRegistryGetRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of IRegistryGetRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $IRegistryGetRequestCopyWith<IRegistryGetRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$IRegistryGetRequestCopyWithImpl<$Res, $Val extends IRegistryGetRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of IRegistryGetRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -92,6 +98,8 @@ class __$$IRegistryGetRequestImplCopyWithImpl<$Res>
       $Res Function(_$IRegistryGetRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of IRegistryGetRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -154,12 +162,14 @@ class _$IRegistryGetRequestImpl implements _IRegistryGetRequest {
             (identical(other.domain, domain) || other.domain == domain));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, key, const DeepCollectionEquality().hash(_scope), domain);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of IRegistryGetRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IRegistryGetRequestImplCopyWith<_$IRegistryGetRequestImpl> get copyWith =>
@@ -189,8 +199,11 @@ abstract class _IRegistryGetRequest implements IRegistryGetRequest {
   List<String> get scope;
   @override
   String? get domain;
+
+  /// Create a copy of IRegistryGetRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IRegistryGetRequestImplCopyWith<_$IRegistryGetRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

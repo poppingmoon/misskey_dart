@@ -23,8 +23,12 @@ ChannelsFavoriteRequest _$ChannelsFavoriteRequestFromJson(
 mixin _$ChannelsFavoriteRequest {
   String get channelId => throw _privateConstructorUsedError;
 
+  /// Serializes this ChannelsFavoriteRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ChannelsFavoriteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ChannelsFavoriteRequestCopyWith<ChannelsFavoriteRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$ChannelsFavoriteRequestCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ChannelsFavoriteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -85,6 +91,8 @@ class __$$ChannelsFavoriteRequestImplCopyWithImpl<$Res>
       $Res Function(_$ChannelsFavoriteRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ChannelsFavoriteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -124,11 +132,13 @@ class _$ChannelsFavoriteRequestImpl implements _ChannelsFavoriteRequest {
                 other.channelId == channelId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, channelId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ChannelsFavoriteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ChannelsFavoriteRequestImplCopyWith<_$ChannelsFavoriteRequestImpl>
@@ -152,8 +162,11 @@ abstract class _ChannelsFavoriteRequest implements ChannelsFavoriteRequest {
 
   @override
   String get channelId;
+
+  /// Create a copy of ChannelsFavoriteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ChannelsFavoriteRequestImplCopyWith<_$ChannelsFavoriteRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

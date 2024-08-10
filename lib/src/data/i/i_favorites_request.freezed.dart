@@ -25,8 +25,12 @@ mixin _$IFavoritesRequest {
   String? get sinceId => throw _privateConstructorUsedError;
   String? get untilId => throw _privateConstructorUsedError;
 
+  /// Serializes this IFavoritesRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of IFavoritesRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $IFavoritesRequestCopyWith<IFavoritesRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$IFavoritesRequestCopyWithImpl<$Res, $Val extends IFavoritesRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of IFavoritesRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -95,6 +101,8 @@ class __$$IFavoritesRequestImplCopyWithImpl<$Res>
       $Res Function(_$IFavoritesRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of IFavoritesRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -151,11 +159,13 @@ class _$IFavoritesRequestImpl implements _IFavoritesRequest {
             (identical(other.untilId, untilId) || other.untilId == untilId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, limit, sinceId, untilId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of IFavoritesRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IFavoritesRequestImplCopyWith<_$IFavoritesRequestImpl> get copyWith =>
@@ -186,8 +196,11 @@ abstract class _IFavoritesRequest implements IFavoritesRequest {
   String? get sinceId;
   @override
   String? get untilId;
+
+  /// Create a copy of IFavoritesRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IFavoritesRequestImplCopyWith<_$IFavoritesRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

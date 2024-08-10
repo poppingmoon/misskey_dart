@@ -25,8 +25,12 @@ mixin _$UsersFlashsRequest {
   String? get sinceId => throw _privateConstructorUsedError;
   String? get untilId => throw _privateConstructorUsedError;
 
+  /// Serializes this UsersFlashsRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UsersFlashsRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UsersFlashsRequestCopyWith<UsersFlashsRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$UsersFlashsRequestCopyWithImpl<$Res, $Val extends UsersFlashsRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UsersFlashsRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -98,6 +104,8 @@ class __$$UsersFlashsRequestImplCopyWithImpl<$Res>
       $Res Function(_$UsersFlashsRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UsersFlashsRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -161,11 +169,13 @@ class _$UsersFlashsRequestImpl implements _UsersFlashsRequest {
             (identical(other.untilId, untilId) || other.untilId == untilId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, userId, limit, sinceId, untilId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UsersFlashsRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UsersFlashsRequestImplCopyWith<_$UsersFlashsRequestImpl> get copyWith =>
@@ -198,8 +208,11 @@ abstract class _UsersFlashsRequest implements UsersFlashsRequest {
   String? get sinceId;
   @override
   String? get untilId;
+
+  /// Create a copy of UsersFlashsRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersFlashsRequestImplCopyWith<_$UsersFlashsRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

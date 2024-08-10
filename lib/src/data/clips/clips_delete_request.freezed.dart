@@ -22,8 +22,12 @@ ClipsDeleteRequest _$ClipsDeleteRequestFromJson(Map<String, dynamic> json) {
 mixin _$ClipsDeleteRequest {
   String get clipId => throw _privateConstructorUsedError;
 
+  /// Serializes this ClipsDeleteRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ClipsDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ClipsDeleteRequestCopyWith<ClipsDeleteRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$ClipsDeleteRequestCopyWithImpl<$Res, $Val extends ClipsDeleteRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ClipsDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$ClipsDeleteRequestImplCopyWithImpl<$Res>
       $Res Function(_$ClipsDeleteRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ClipsDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -118,11 +126,13 @@ class _$ClipsDeleteRequestImpl implements _ClipsDeleteRequest {
             (identical(other.clipId, clipId) || other.clipId == clipId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, clipId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ClipsDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ClipsDeleteRequestImplCopyWith<_$ClipsDeleteRequestImpl> get copyWith =>
@@ -146,8 +156,11 @@ abstract class _ClipsDeleteRequest implements ClipsDeleteRequest {
 
   @override
   String get clipId;
+
+  /// Create a copy of ClipsDeleteRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ClipsDeleteRequestImplCopyWith<_$ClipsDeleteRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -22,8 +22,12 @@ PingResponse _$PingResponseFromJson(Map<String, dynamic> json) {
 mixin _$PingResponse {
   int get pong => throw _privateConstructorUsedError;
 
+  /// Serializes this PingResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PingResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PingResponseCopyWith<PingResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$PingResponseCopyWithImpl<$Res, $Val extends PingResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PingResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$PingResponseImplCopyWithImpl<$Res>
       _$PingResponseImpl _value, $Res Function(_$PingResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PingResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -118,11 +126,13 @@ class _$PingResponseImpl implements _PingResponse {
             (identical(other.pong, pong) || other.pong == pong));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, pong);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PingResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PingResponseImplCopyWith<_$PingResponseImpl> get copyWith =>
@@ -144,8 +154,11 @@ abstract class _PingResponse implements PingResponse {
 
   @override
   int get pong;
+
+  /// Create a copy of PingResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PingResponseImplCopyWith<_$PingResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

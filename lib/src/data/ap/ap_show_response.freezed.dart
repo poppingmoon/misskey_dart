@@ -23,8 +23,12 @@ mixin _$ApShowResponse {
   String get type => throw _privateConstructorUsedError;
   Map<String, dynamic> get object => throw _privateConstructorUsedError;
 
+  /// Serializes this ApShowResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ApShowResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ApShowResponseCopyWith<ApShowResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$ApShowResponseCopyWithImpl<$Res, $Val extends ApShowResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ApShowResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -86,6 +92,8 @@ class __$$ApShowResponseImplCopyWithImpl<$Res>
       _$ApShowResponseImpl _value, $Res Function(_$ApShowResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ApShowResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -139,12 +147,14 @@ class _$ApShowResponseImpl implements _ApShowResponse {
             const DeepCollectionEquality().equals(other._object, _object));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, type, const DeepCollectionEquality().hash(_object));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ApShowResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ApShowResponseImplCopyWith<_$ApShowResponseImpl> get copyWith =>
@@ -171,8 +181,11 @@ abstract class _ApShowResponse implements ApShowResponse {
   String get type;
   @override
   Map<String, dynamic> get object;
+
+  /// Create a copy of ApShowResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ApShowResponseImplCopyWith<_$ApShowResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
