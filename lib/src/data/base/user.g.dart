@@ -187,6 +187,12 @@ _$UserDetailedNotMeImpl _$$UserDetailedNotMeImplFromJson(
               (v) =>
                   (v as List<dynamic>?)?.map((e) => e as String).toList() ??
                   const []),
+          mutualLinkSections: $checkedConvert(
+              'mutualLinkSections',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) =>
+                      MutualLinkSection.fromJson(e as Map<String, dynamic>))
+                  .toList()),
           followersCount: $checkedConvert(
               'followersCount', (v) => const IntConverter().fromJson(v)),
           followingCount: $checkedConvert(
@@ -271,6 +277,8 @@ Map<String, dynamic> _$$UserDetailedNotMeImplToJson(
       'lang': instance.lang,
       'fields': instance.fields?.map((e) => e.toJson()).toList(),
       'verifiedLinks': instance.verifiedLinks,
+      'mutualLinkSections':
+          instance.mutualLinkSections?.map((e) => e.toJson()).toList(),
       'followersCount': const IntConverter().toJson(instance.followersCount),
       'followingCount': const IntConverter().toJson(instance.followingCount),
       'notesCount': instance.notesCount,
@@ -400,6 +408,12 @@ _$UserDetailedNotMeWithRelationsImpl
                   (v) =>
                       (v as List<dynamic>?)?.map((e) => e as String).toList() ??
                       const []),
+              mutualLinkSections: $checkedConvert(
+                  'mutualLinkSections',
+                  (v) => (v as List<dynamic>?)
+                      ?.map((e) =>
+                          MutualLinkSection.fromJson(e as Map<String, dynamic>))
+                      .toList()),
               followersCount: $checkedConvert(
                   'followersCount', (v) => const IntConverter().fromJson(v)),
               followingCount: $checkedConvert(
@@ -502,6 +516,8 @@ Map<String, dynamic> _$$UserDetailedNotMeWithRelationsImplToJson(
       'lang': instance.lang,
       'fields': instance.fields?.map((e) => e.toJson()).toList(),
       'verifiedLinks': instance.verifiedLinks,
+      'mutualLinkSections':
+          instance.mutualLinkSections?.map((e) => e.toJson()).toList(),
       'followersCount': const IntConverter().toJson(instance.followersCount),
       'followingCount': const IntConverter().toJson(instance.followingCount),
       'notesCount': instance.notesCount,
@@ -635,6 +651,12 @@ _$MeDetailedImpl _$$MeDetailedImplFromJson(Map<String, dynamic> json) =>
               (v) =>
                   (v as List<dynamic>?)?.map((e) => e as String).toList() ??
                   const []),
+          mutualLinkSections: $checkedConvert(
+              'mutualLinkSections',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) =>
+                      MutualLinkSection.fromJson(e as Map<String, dynamic>))
+                  .toList()),
           followersCount: $checkedConvert(
               'followersCount', (v) => const IntConverter().fromJson(v)),
           followingCount: $checkedConvert(
@@ -811,6 +833,8 @@ Map<String, dynamic> _$$MeDetailedImplToJson(_$MeDetailedImpl instance) =>
       'lang': instance.lang,
       'fields': instance.fields?.map((e) => e.toJson()).toList(),
       'verifiedLinks': instance.verifiedLinks,
+      'mutualLinkSections':
+          instance.mutualLinkSections?.map((e) => e.toJson()).toList(),
       'followersCount': const IntConverter().toJson(instance.followersCount),
       'followingCount': const IntConverter().toJson(instance.followingCount),
       'notesCount': instance.notesCount,
@@ -1039,33 +1063,36 @@ _$UserPoliciesImpl _$$UserPoliciesImplFromJson(Map<String, dynamic> json) =>
               $checkedConvert('canManageCustomEmojis', (v) => v as bool?),
           canHideAds: $checkedConvert('canHideAds', (v) => v as bool?),
           inviteLimit:
-              $checkedConvert('inviteLimit', (v) => (v as num?)?.toDouble()),
-          inviteLimitCycle: $checkedConvert(
-              'inviteLimitCycle', (v) => (v as num?)?.toDouble()),
+              $checkedConvert('inviteLimit', (v) => (v as num?)?.toInt()),
+          inviteLimitCycle:
+              $checkedConvert('inviteLimitCycle', (v) => (v as num?)?.toInt()),
           canSearchNotes: $checkedConvert('canSearchNotes', (v) => v as bool?),
           canUseTranslator:
               $checkedConvert('canUseTranslator', (v) => v as bool?),
-          driveCapacityMb: $checkedConvert(
-              'driveCapacityMb', (v) => (v as num?)?.toDouble()),
-          pinLimit: $checkedConvert('pinLimit', (v) => (v as num?)?.toDouble()),
+          driveCapacityMb:
+              $checkedConvert('driveCapacityMb', (v) => (v as num?)?.toInt()),
+          pinLimit: $checkedConvert('pinLimit', (v) => (v as num?)?.toInt()),
           antennaLimit:
-              $checkedConvert('antennaLimit', (v) => (v as num?)?.toDouble()),
+              $checkedConvert('antennaLimit', (v) => (v as num?)?.toInt()),
           wordMuteLimit:
-              $checkedConvert('wordMuteLimit', (v) => (v as num?)?.toDouble()),
+              $checkedConvert('wordMuteLimit', (v) => (v as num?)?.toInt()),
           webhookLimit:
-              $checkedConvert('webhookLimit', (v) => (v as num?)?.toDouble()),
-          clipLimit:
-              $checkedConvert('clipLimit', (v) => (v as num?)?.toDouble()),
+              $checkedConvert('webhookLimit', (v) => (v as num?)?.toInt()),
+          clipLimit: $checkedConvert('clipLimit', (v) => (v as num?)?.toInt()),
           noteEachClipsLimit: $checkedConvert(
-              'noteEachClipsLimit', (v) => (v as num?)?.toDouble()),
+              'noteEachClipsLimit', (v) => (v as num?)?.toInt()),
           userListLimit:
-              $checkedConvert('userListLimit', (v) => (v as num?)?.toDouble()),
+              $checkedConvert('userListLimit', (v) => (v as num?)?.toInt()),
           userEachUserListsLimit: $checkedConvert(
-              'userEachUserListsLimit', (v) => (v as num?)?.toDouble()),
-          rateLimitFactor: $checkedConvert(
-              'rateLimitFactor', (v) => (v as num?)?.toDouble()),
+              'userEachUserListsLimit', (v) => (v as num?)?.toInt()),
+          rateLimitFactor:
+              $checkedConvert('rateLimitFactor', (v) => (v as num?)?.toInt()),
           avatarDecorationLimit: $checkedConvert(
-              'avatarDecorationLimit', (v) => (v as num?)?.toDouble()),
+              'avatarDecorationLimit', (v) => (v as num?)?.toInt()),
+          mutualLinkSectionLimit: $checkedConvert(
+              'mutualLinkSectionLimit', (v) => (v as num?)?.toInt()),
+          mutualLinkLimit:
+              $checkedConvert('mutualLinkLimit', (v) => (v as num?)?.toInt()),
         );
         return val;
       },
@@ -1095,6 +1122,8 @@ Map<String, dynamic> _$$UserPoliciesImplToJson(_$UserPoliciesImpl instance) =>
       'userEachUserListsLimit': instance.userEachUserListsLimit,
       'rateLimitFactor': instance.rateLimitFactor,
       'avatarDecorationLimit': instance.avatarDecorationLimit,
+      'mutualLinkSectionLimit': instance.mutualLinkSectionLimit,
+      'mutualLinkLimit': instance.mutualLinkLimit,
     };
 
 _$UserFieldImpl _$$UserFieldImplFromJson(Map<String, dynamic> json) =>
@@ -1114,6 +1143,56 @@ Map<String, dynamic> _$$UserFieldImplToJson(_$UserFieldImpl instance) =>
     <String, dynamic>{
       'name': instance.name,
       'value': instance.value,
+    };
+
+_$MutualLinkSectionImpl _$$MutualLinkSectionImplFromJson(
+        Map<String, dynamic> json) =>
+    $checkedCreate(
+      r'_$MutualLinkSectionImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$MutualLinkSectionImpl(
+          name: $checkedConvert('name', (v) => v as String?),
+          mutualLinks: $checkedConvert(
+              'mutualLinks',
+              (v) => (v as List<dynamic>)
+                  .map((e) => MutualLink.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+        );
+        return val;
+      },
+    );
+
+Map<String, dynamic> _$$MutualLinkSectionImplToJson(
+        _$MutualLinkSectionImpl instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'mutualLinks': instance.mutualLinks.map((e) => e.toJson()).toList(),
+    };
+
+_$MutualLinkImpl _$$MutualLinkImplFromJson(Map<String, dynamic> json) =>
+    $checkedCreate(
+      r'_$MutualLinkImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$MutualLinkImpl(
+          id: $checkedConvert('id', (v) => v as String),
+          url: $checkedConvert('url', (v) => v as String),
+          fileId: $checkedConvert('fileId', (v) => v as String),
+          description: $checkedConvert('description', (v) => v as String?),
+          imgSrc: $checkedConvert('imgSrc', (v) => v as String?),
+        );
+        return val;
+      },
+    );
+
+Map<String, dynamic> _$$MutualLinkImplToJson(_$MutualLinkImpl instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'url': instance.url,
+      'fileId': instance.fileId,
+      'description': instance.description,
+      'imgSrc': instance.imgSrc,
     };
 
 _$MuteWordImpl _$$MuteWordImplFromJson(Map<String, dynamic> json) =>

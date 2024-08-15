@@ -56,6 +56,7 @@ abstract class UserDetailed implements User {
   String? get lang;
   List<UserField>? get fields;
   List<String> get verifiedLinks;
+  List<MutualLinkSection>? get mutualLinkSections;
   int get followersCount;
   int get followingCount;
   int get notesCount;
@@ -151,6 +152,7 @@ class UserDetailedNotMe with _$UserDetailedNotMe implements UserDetailed {
     String? lang,
     List<UserField>? fields,
     @Default([]) List<String> verifiedLinks,
+    List<MutualLinkSection>? mutualLinkSections,
     // CherryPick 4.3.0 or newer returns String if the count count is not visible
     @IntConverter() required int followersCount,
     // CherryPick 4.3.0 or newer returns String if the count count is not visible
@@ -224,6 +226,7 @@ class UserDetailedNotMeWithRelations
     String? lang,
     List<UserField>? fields,
     @Default([]) List<String> verifiedLinks,
+    List<MutualLinkSection>? mutualLinkSections,
     // CherryPick 4.3.0 or newer returns String if the count is not visible
     @IntConverter() required int followersCount,
     // CherryPick 4.3.0 or newer returns String if the count is not visible
@@ -306,6 +309,7 @@ class MeDetailed with _$MeDetailed implements UserDetailed {
     String? lang,
     List<UserField>? fields,
     @Default([]) List<String> verifiedLinks,
+    List<MutualLinkSection>? mutualLinkSections,
     // CherryPick 4.3.0 or newer returns String if the count is not visible
     @IntConverter() required int followersCount,
     // CherryPick 4.3.0 or newer returns String if the count is not visible
@@ -471,21 +475,23 @@ class UserPolicies with _$UserPolicies {
     bool? canInvite,
     bool? canManageCustomEmojis,
     bool? canHideAds,
-    double? inviteLimit,
-    double? inviteLimitCycle,
+    int? inviteLimit,
+    int? inviteLimitCycle,
     bool? canSearchNotes,
     bool? canUseTranslator,
-    double? driveCapacityMb,
-    double? pinLimit,
-    double? antennaLimit,
-    double? wordMuteLimit,
-    double? webhookLimit,
-    double? clipLimit,
-    double? noteEachClipsLimit,
-    double? userListLimit,
-    double? userEachUserListsLimit,
-    double? rateLimitFactor,
-    double? avatarDecorationLimit,
+    int? driveCapacityMb,
+    int? pinLimit,
+    int? antennaLimit,
+    int? wordMuteLimit,
+    int? webhookLimit,
+    int? clipLimit,
+    int? noteEachClipsLimit,
+    int? userListLimit,
+    int? userEachUserListsLimit,
+    int? rateLimitFactor,
+    int? avatarDecorationLimit,
+    int? mutualLinkSectionLimit,
+    int? mutualLinkLimit,
   }) = _UserPolicies;
 
   factory UserPolicies.fromJson(Map<String, Object?> json) =>
@@ -499,6 +505,31 @@ class UserField with _$UserField {
 
   factory UserField.fromJson(Map<String, Object?> json) =>
       _$UserFieldFromJson(json);
+}
+
+@freezed
+class MutualLinkSection with _$MutualLinkSection {
+  const factory MutualLinkSection({
+    String? name,
+    required List<MutualLink> mutualLinks,
+  }) = _MutualLinkSection;
+
+  factory MutualLinkSection.fromJson(Map<String, Object?> json) =>
+      _$MutualLinkSectionFromJson(json);
+}
+
+@freezed
+class MutualLink with _$MutualLink {
+  const factory MutualLink({
+    required String id,
+    required String url,
+    required String fileId,
+    String? description,
+    String? imgSrc,
+  }) = _MutualLink;
+
+  factory MutualLink.fromJson(Map<String, Object?> json) =>
+      _$MutualLinkFromJson(json);
 }
 
 enum Notify {

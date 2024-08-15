@@ -62,6 +62,8 @@ mixin _$IUpdateRequest {
   List<String>? get emailNotificationTypes =>
       throw _privateConstructorUsedError;
   List<String>? get alsoKnownAs => throw _privateConstructorUsedError;
+  List<IUpdateMutualLinkSection>? get mutualLinkSections =>
+      throw _privateConstructorUsedError;
 
   /// Serializes this IUpdateRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -113,7 +115,8 @@ abstract class $IUpdateRequestCopyWith<$Res> {
       List<String>? mutedInstances,
       NotificationRecieveConfigs? notificationRecieveConfig,
       List<String>? emailNotificationTypes,
-      List<String>? alsoKnownAs});
+      List<String>? alsoKnownAs,
+      List<IUpdateMutualLinkSection>? mutualLinkSections});
 
   $NotificationRecieveConfigsCopyWith<$Res>? get notificationRecieveConfig;
 }
@@ -167,6 +170,7 @@ class _$IUpdateRequestCopyWithImpl<$Res, $Val extends IUpdateRequest>
     Object? notificationRecieveConfig = freezed,
     Object? emailNotificationTypes = freezed,
     Object? alsoKnownAs = freezed,
+    Object? mutualLinkSections = freezed,
   }) {
     return _then(_value.copyWith(
       name: freezed == name
@@ -305,6 +309,10 @@ class _$IUpdateRequestCopyWithImpl<$Res, $Val extends IUpdateRequest>
           ? _value.alsoKnownAs
           : alsoKnownAs // ignore: cast_nullable_to_non_nullable
               as List<String>?,
+      mutualLinkSections: freezed == mutualLinkSections
+          ? _value.mutualLinkSections
+          : mutualLinkSections // ignore: cast_nullable_to_non_nullable
+              as List<IUpdateMutualLinkSection>?,
     ) as $Val);
   }
 
@@ -366,7 +374,8 @@ abstract class _$$IUpdateRequestImplCopyWith<$Res>
       List<String>? mutedInstances,
       NotificationRecieveConfigs? notificationRecieveConfig,
       List<String>? emailNotificationTypes,
-      List<String>? alsoKnownAs});
+      List<String>? alsoKnownAs,
+      List<IUpdateMutualLinkSection>? mutualLinkSections});
 
   @override
   $NotificationRecieveConfigsCopyWith<$Res>? get notificationRecieveConfig;
@@ -419,6 +428,7 @@ class __$$IUpdateRequestImplCopyWithImpl<$Res>
     Object? notificationRecieveConfig = freezed,
     Object? emailNotificationTypes = freezed,
     Object? alsoKnownAs = freezed,
+    Object? mutualLinkSections = freezed,
   }) {
     return _then(_$IUpdateRequestImpl(
       name: freezed == name
@@ -554,6 +564,10 @@ class __$$IUpdateRequestImplCopyWithImpl<$Res>
           ? _value._alsoKnownAs
           : alsoKnownAs // ignore: cast_nullable_to_non_nullable
               as List<String>?,
+      mutualLinkSections: freezed == mutualLinkSections
+          ? _value._mutualLinkSections
+          : mutualLinkSections // ignore: cast_nullable_to_non_nullable
+              as List<IUpdateMutualLinkSection>?,
     ));
   }
 }
@@ -595,7 +609,8 @@ class _$IUpdateRequestImpl implements _IUpdateRequest {
       final List<String>? mutedInstances,
       this.notificationRecieveConfig,
       final List<String>? emailNotificationTypes,
-      final List<String>? alsoKnownAs})
+      final List<String>? alsoKnownAs,
+      final List<IUpdateMutualLinkSection>? mutualLinkSections})
       : _avatarDecorations = avatarDecorations,
         _fields = fields,
         _mutingNotificationTypes = mutingNotificationTypes,
@@ -603,7 +618,8 @@ class _$IUpdateRequestImpl implements _IUpdateRequest {
         _hardMutedWords = hardMutedWords,
         _mutedInstances = mutedInstances,
         _emailNotificationTypes = emailNotificationTypes,
-        _alsoKnownAs = alsoKnownAs;
+        _alsoKnownAs = alsoKnownAs,
+        _mutualLinkSections = mutualLinkSections;
 
   factory _$IUpdateRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$IUpdateRequestImplFromJson(json);
@@ -747,9 +763,20 @@ class _$IUpdateRequestImpl implements _IUpdateRequest {
     return EqualUnmodifiableListView(value);
   }
 
+  final List<IUpdateMutualLinkSection>? _mutualLinkSections;
+  @override
+  List<IUpdateMutualLinkSection>? get mutualLinkSections {
+    final value = _mutualLinkSections;
+    if (value == null) return null;
+    if (_mutualLinkSections is EqualUnmodifiableListView)
+      return _mutualLinkSections;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   String toString() {
-    return 'IUpdateRequest(name: $name, description: $description, location: $location, birthday: $birthday, lang: $lang, avatarId: $avatarId, avatarDecorations: $avatarDecorations, bannerId: $bannerId, fields: $fields, isLocked: $isLocked, isExplorable: $isExplorable, hideOnlineStatus: $hideOnlineStatus, publicReactions: $publicReactions, carefulBot: $carefulBot, autoAcceptFollowed: $autoAcceptFollowed, noCrawle: $noCrawle, preventAiLearning: $preventAiLearning, isBot: $isBot, isCat: $isCat, injectFeaturedNote: $injectFeaturedNote, receiveAnnouncementEmail: $receiveAnnouncementEmail, alwaysMarkNsfw: $alwaysMarkNsfw, autoSensitive: $autoSensitive, ffVisibility: $ffVisibility, followingVisibility: $followingVisibility, followersVisibility: $followersVisibility, pinnedPageId: $pinnedPageId, mutingNotificationTypes: $mutingNotificationTypes, mutedWords: $mutedWords, hardMutedWords: $hardMutedWords, mutedInstances: $mutedInstances, notificationRecieveConfig: $notificationRecieveConfig, emailNotificationTypes: $emailNotificationTypes, alsoKnownAs: $alsoKnownAs)';
+    return 'IUpdateRequest(name: $name, description: $description, location: $location, birthday: $birthday, lang: $lang, avatarId: $avatarId, avatarDecorations: $avatarDecorations, bannerId: $bannerId, fields: $fields, isLocked: $isLocked, isExplorable: $isExplorable, hideOnlineStatus: $hideOnlineStatus, publicReactions: $publicReactions, carefulBot: $carefulBot, autoAcceptFollowed: $autoAcceptFollowed, noCrawle: $noCrawle, preventAiLearning: $preventAiLearning, isBot: $isBot, isCat: $isCat, injectFeaturedNote: $injectFeaturedNote, receiveAnnouncementEmail: $receiveAnnouncementEmail, alwaysMarkNsfw: $alwaysMarkNsfw, autoSensitive: $autoSensitive, ffVisibility: $ffVisibility, followingVisibility: $followingVisibility, followersVisibility: $followersVisibility, pinnedPageId: $pinnedPageId, mutingNotificationTypes: $mutingNotificationTypes, mutedWords: $mutedWords, hardMutedWords: $hardMutedWords, mutedInstances: $mutedInstances, notificationRecieveConfig: $notificationRecieveConfig, emailNotificationTypes: $emailNotificationTypes, alsoKnownAs: $alsoKnownAs, mutualLinkSections: $mutualLinkSections)';
   }
 
   @override
@@ -820,7 +847,9 @@ class _$IUpdateRequestImpl implements _IUpdateRequest {
             const DeepCollectionEquality().equals(
                 other._emailNotificationTypes, _emailNotificationTypes) &&
             const DeepCollectionEquality()
-                .equals(other._alsoKnownAs, _alsoKnownAs));
+                .equals(other._alsoKnownAs, _alsoKnownAs) &&
+            const DeepCollectionEquality()
+                .equals(other._mutualLinkSections, _mutualLinkSections));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -860,7 +889,8 @@ class _$IUpdateRequestImpl implements _IUpdateRequest {
         const DeepCollectionEquality().hash(_mutedInstances),
         notificationRecieveConfig,
         const DeepCollectionEquality().hash(_emailNotificationTypes),
-        const DeepCollectionEquality().hash(_alsoKnownAs)
+        const DeepCollectionEquality().hash(_alsoKnownAs),
+        const DeepCollectionEquality().hash(_mutualLinkSections)
       ]);
 
   /// Create a copy of IUpdateRequest
@@ -882,40 +912,42 @@ class _$IUpdateRequestImpl implements _IUpdateRequest {
 
 abstract class _IUpdateRequest implements IUpdateRequest {
   const factory _IUpdateRequest(
-      {final String? name,
-      final String? description,
-      final String? location,
-      @DateTimeConverter() final dynamic birthday,
-      final String? lang,
-      final String? avatarId,
-      final List<IUpdateAvatarDecoration>? avatarDecorations,
-      final String? bannerId,
-      final List<UserField>? fields,
-      final bool? isLocked,
-      final bool? isExplorable,
-      final bool? hideOnlineStatus,
-      final bool? publicReactions,
-      final bool? carefulBot,
-      final bool? autoAcceptFollowed,
-      final bool? noCrawle,
-      final bool? preventAiLearning,
-      final bool? isBot,
-      final bool? isCat,
-      final bool? injectFeaturedNote,
-      final bool? receiveAnnouncementEmail,
-      final bool? alwaysMarkNsfw,
-      final bool? autoSensitive,
-      @Deprecated("removed at 2023.12.0") final FFVisibility? ffVisibility,
-      final FFVisibility? followingVisibility,
-      final FFVisibility? followersVisibility,
-      final String? pinnedPageId,
-      final List<String>? mutingNotificationTypes,
-      @MuteWordsConverter() final List<MuteWord>? mutedWords,
-      @MuteWordsConverter() final List<MuteWord>? hardMutedWords,
-      final List<String>? mutedInstances,
-      final NotificationRecieveConfigs? notificationRecieveConfig,
-      final List<String>? emailNotificationTypes,
-      final List<String>? alsoKnownAs}) = _$IUpdateRequestImpl;
+          {final String? name,
+          final String? description,
+          final String? location,
+          @DateTimeConverter() final dynamic birthday,
+          final String? lang,
+          final String? avatarId,
+          final List<IUpdateAvatarDecoration>? avatarDecorations,
+          final String? bannerId,
+          final List<UserField>? fields,
+          final bool? isLocked,
+          final bool? isExplorable,
+          final bool? hideOnlineStatus,
+          final bool? publicReactions,
+          final bool? carefulBot,
+          final bool? autoAcceptFollowed,
+          final bool? noCrawle,
+          final bool? preventAiLearning,
+          final bool? isBot,
+          final bool? isCat,
+          final bool? injectFeaturedNote,
+          final bool? receiveAnnouncementEmail,
+          final bool? alwaysMarkNsfw,
+          final bool? autoSensitive,
+          @Deprecated("removed at 2023.12.0") final FFVisibility? ffVisibility,
+          final FFVisibility? followingVisibility,
+          final FFVisibility? followersVisibility,
+          final String? pinnedPageId,
+          final List<String>? mutingNotificationTypes,
+          @MuteWordsConverter() final List<MuteWord>? mutedWords,
+          @MuteWordsConverter() final List<MuteWord>? hardMutedWords,
+          final List<String>? mutedInstances,
+          final NotificationRecieveConfigs? notificationRecieveConfig,
+          final List<String>? emailNotificationTypes,
+          final List<String>? alsoKnownAs,
+          final List<IUpdateMutualLinkSection>? mutualLinkSections}) =
+      _$IUpdateRequestImpl;
 
   factory _IUpdateRequest.fromJson(Map<String, dynamic> json) =
       _$IUpdateRequestImpl.fromJson;
@@ -992,6 +1024,8 @@ abstract class _IUpdateRequest implements IUpdateRequest {
   List<String>? get emailNotificationTypes;
   @override
   List<String>? get alsoKnownAs;
+  @override
+  List<IUpdateMutualLinkSection>? get mutualLinkSections;
 
   /// Create a copy of IUpdateRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -1234,4 +1268,374 @@ abstract class _IUpdateAvatarDecoration implements IUpdateAvatarDecoration {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IUpdateAvatarDecorationImplCopyWith<_$IUpdateAvatarDecorationImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+IUpdateMutualLinkSection _$IUpdateMutualLinkSectionFromJson(
+    Map<String, dynamic> json) {
+  return _IUpdateMutualLinkSection.fromJson(json);
+}
+
+/// @nodoc
+mixin _$IUpdateMutualLinkSection {
+  String? get name => throw _privateConstructorUsedError;
+  List<IUpdateMutualLink> get mutualLinks => throw _privateConstructorUsedError;
+
+  /// Serializes this IUpdateMutualLinkSection to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of IUpdateMutualLinkSection
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $IUpdateMutualLinkSectionCopyWith<IUpdateMutualLinkSection> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $IUpdateMutualLinkSectionCopyWith<$Res> {
+  factory $IUpdateMutualLinkSectionCopyWith(IUpdateMutualLinkSection value,
+          $Res Function(IUpdateMutualLinkSection) then) =
+      _$IUpdateMutualLinkSectionCopyWithImpl<$Res, IUpdateMutualLinkSection>;
+  @useResult
+  $Res call({String? name, List<IUpdateMutualLink> mutualLinks});
+}
+
+/// @nodoc
+class _$IUpdateMutualLinkSectionCopyWithImpl<$Res,
+        $Val extends IUpdateMutualLinkSection>
+    implements $IUpdateMutualLinkSectionCopyWith<$Res> {
+  _$IUpdateMutualLinkSectionCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of IUpdateMutualLinkSection
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = freezed,
+    Object? mutualLinks = null,
+  }) {
+    return _then(_value.copyWith(
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      mutualLinks: null == mutualLinks
+          ? _value.mutualLinks
+          : mutualLinks // ignore: cast_nullable_to_non_nullable
+              as List<IUpdateMutualLink>,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$IUpdateMutualLinkSectionImplCopyWith<$Res>
+    implements $IUpdateMutualLinkSectionCopyWith<$Res> {
+  factory _$$IUpdateMutualLinkSectionImplCopyWith(
+          _$IUpdateMutualLinkSectionImpl value,
+          $Res Function(_$IUpdateMutualLinkSectionImpl) then) =
+      __$$IUpdateMutualLinkSectionImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String? name, List<IUpdateMutualLink> mutualLinks});
+}
+
+/// @nodoc
+class __$$IUpdateMutualLinkSectionImplCopyWithImpl<$Res>
+    extends _$IUpdateMutualLinkSectionCopyWithImpl<$Res,
+        _$IUpdateMutualLinkSectionImpl>
+    implements _$$IUpdateMutualLinkSectionImplCopyWith<$Res> {
+  __$$IUpdateMutualLinkSectionImplCopyWithImpl(
+      _$IUpdateMutualLinkSectionImpl _value,
+      $Res Function(_$IUpdateMutualLinkSectionImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of IUpdateMutualLinkSection
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = freezed,
+    Object? mutualLinks = null,
+  }) {
+    return _then(_$IUpdateMutualLinkSectionImpl(
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      mutualLinks: null == mutualLinks
+          ? _value._mutualLinks
+          : mutualLinks // ignore: cast_nullable_to_non_nullable
+              as List<IUpdateMutualLink>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$IUpdateMutualLinkSectionImpl implements _IUpdateMutualLinkSection {
+  const _$IUpdateMutualLinkSectionImpl(
+      {this.name, required final List<IUpdateMutualLink> mutualLinks})
+      : _mutualLinks = mutualLinks;
+
+  factory _$IUpdateMutualLinkSectionImpl.fromJson(Map<String, dynamic> json) =>
+      _$$IUpdateMutualLinkSectionImplFromJson(json);
+
+  @override
+  final String? name;
+  final List<IUpdateMutualLink> _mutualLinks;
+  @override
+  List<IUpdateMutualLink> get mutualLinks {
+    if (_mutualLinks is EqualUnmodifiableListView) return _mutualLinks;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_mutualLinks);
+  }
+
+  @override
+  String toString() {
+    return 'IUpdateMutualLinkSection(name: $name, mutualLinks: $mutualLinks)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$IUpdateMutualLinkSectionImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            const DeepCollectionEquality()
+                .equals(other._mutualLinks, _mutualLinks));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, name, const DeepCollectionEquality().hash(_mutualLinks));
+
+  /// Create a copy of IUpdateMutualLinkSection
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$IUpdateMutualLinkSectionImplCopyWith<_$IUpdateMutualLinkSectionImpl>
+      get copyWith => __$$IUpdateMutualLinkSectionImplCopyWithImpl<
+          _$IUpdateMutualLinkSectionImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$IUpdateMutualLinkSectionImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _IUpdateMutualLinkSection implements IUpdateMutualLinkSection {
+  const factory _IUpdateMutualLinkSection(
+          {final String? name,
+          required final List<IUpdateMutualLink> mutualLinks}) =
+      _$IUpdateMutualLinkSectionImpl;
+
+  factory _IUpdateMutualLinkSection.fromJson(Map<String, dynamic> json) =
+      _$IUpdateMutualLinkSectionImpl.fromJson;
+
+  @override
+  String? get name;
+  @override
+  List<IUpdateMutualLink> get mutualLinks;
+
+  /// Create a copy of IUpdateMutualLinkSection
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$IUpdateMutualLinkSectionImplCopyWith<_$IUpdateMutualLinkSectionImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+IUpdateMutualLink _$IUpdateMutualLinkFromJson(Map<String, dynamic> json) {
+  return _IUpdateMutualLink.fromJson(json);
+}
+
+/// @nodoc
+mixin _$IUpdateMutualLink {
+  String get url => throw _privateConstructorUsedError;
+  String get fileId => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
+
+  /// Serializes this IUpdateMutualLink to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of IUpdateMutualLink
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $IUpdateMutualLinkCopyWith<IUpdateMutualLink> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $IUpdateMutualLinkCopyWith<$Res> {
+  factory $IUpdateMutualLinkCopyWith(
+          IUpdateMutualLink value, $Res Function(IUpdateMutualLink) then) =
+      _$IUpdateMutualLinkCopyWithImpl<$Res, IUpdateMutualLink>;
+  @useResult
+  $Res call({String url, String fileId, String? description});
+}
+
+/// @nodoc
+class _$IUpdateMutualLinkCopyWithImpl<$Res, $Val extends IUpdateMutualLink>
+    implements $IUpdateMutualLinkCopyWith<$Res> {
+  _$IUpdateMutualLinkCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of IUpdateMutualLink
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? url = null,
+    Object? fileId = null,
+    Object? description = freezed,
+  }) {
+    return _then(_value.copyWith(
+      url: null == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
+      fileId: null == fileId
+          ? _value.fileId
+          : fileId // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$IUpdateMutualLinkImplCopyWith<$Res>
+    implements $IUpdateMutualLinkCopyWith<$Res> {
+  factory _$$IUpdateMutualLinkImplCopyWith(_$IUpdateMutualLinkImpl value,
+          $Res Function(_$IUpdateMutualLinkImpl) then) =
+      __$$IUpdateMutualLinkImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String url, String fileId, String? description});
+}
+
+/// @nodoc
+class __$$IUpdateMutualLinkImplCopyWithImpl<$Res>
+    extends _$IUpdateMutualLinkCopyWithImpl<$Res, _$IUpdateMutualLinkImpl>
+    implements _$$IUpdateMutualLinkImplCopyWith<$Res> {
+  __$$IUpdateMutualLinkImplCopyWithImpl(_$IUpdateMutualLinkImpl _value,
+      $Res Function(_$IUpdateMutualLinkImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of IUpdateMutualLink
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? url = null,
+    Object? fileId = null,
+    Object? description = freezed,
+  }) {
+    return _then(_$IUpdateMutualLinkImpl(
+      url: null == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
+      fileId: null == fileId
+          ? _value.fileId
+          : fileId // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$IUpdateMutualLinkImpl implements _IUpdateMutualLink {
+  const _$IUpdateMutualLinkImpl(
+      {required this.url, required this.fileId, this.description});
+
+  factory _$IUpdateMutualLinkImpl.fromJson(Map<String, dynamic> json) =>
+      _$$IUpdateMutualLinkImplFromJson(json);
+
+  @override
+  final String url;
+  @override
+  final String fileId;
+  @override
+  final String? description;
+
+  @override
+  String toString() {
+    return 'IUpdateMutualLink(url: $url, fileId: $fileId, description: $description)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$IUpdateMutualLinkImpl &&
+            (identical(other.url, url) || other.url == url) &&
+            (identical(other.fileId, fileId) || other.fileId == fileId) &&
+            (identical(other.description, description) ||
+                other.description == description));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, url, fileId, description);
+
+  /// Create a copy of IUpdateMutualLink
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$IUpdateMutualLinkImplCopyWith<_$IUpdateMutualLinkImpl> get copyWith =>
+      __$$IUpdateMutualLinkImplCopyWithImpl<_$IUpdateMutualLinkImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$IUpdateMutualLinkImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _IUpdateMutualLink implements IUpdateMutualLink {
+  const factory _IUpdateMutualLink(
+      {required final String url,
+      required final String fileId,
+      final String? description}) = _$IUpdateMutualLinkImpl;
+
+  factory _IUpdateMutualLink.fromJson(Map<String, dynamic> json) =
+      _$IUpdateMutualLinkImpl.fromJson;
+
+  @override
+  String get url;
+  @override
+  String get fileId;
+  @override
+  String? get description;
+
+  /// Create a copy of IUpdateMutualLink
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$IUpdateMutualLinkImplCopyWith<_$IUpdateMutualLinkImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

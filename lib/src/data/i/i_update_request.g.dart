@@ -81,6 +81,12 @@ _$IUpdateRequestImpl _$$IUpdateRequestImplFromJson(Map<String, dynamic> json) =>
               (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
           alsoKnownAs: $checkedConvert('alsoKnownAs',
               (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
+          mutualLinkSections: $checkedConvert(
+              'mutualLinkSections',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => IUpdateMutualLinkSection.fromJson(
+                      e as Map<String, dynamic>))
+                  .toList()),
         );
         return val;
       },
@@ -129,6 +135,8 @@ Map<String, dynamic> _$$IUpdateRequestImplToJson(
       'notificationRecieveConfig': instance.notificationRecieveConfig?.toJson(),
       'emailNotificationTypes': instance.emailNotificationTypes,
       'alsoKnownAs': instance.alsoKnownAs,
+      'mutualLinkSections':
+          instance.mutualLinkSections?.map((e) => e.toJson()).toList(),
     };
 
 const _$FFVisibilityEnumMap = {
@@ -164,4 +172,53 @@ Map<String, dynamic> _$$IUpdateAvatarDecorationImplToJson(
       'flipH': instance.flipH,
       'offsetX': instance.offsetX,
       'offsetY': instance.offsetY,
+    };
+
+_$IUpdateMutualLinkSectionImpl _$$IUpdateMutualLinkSectionImplFromJson(
+        Map<String, dynamic> json) =>
+    $checkedCreate(
+      r'_$IUpdateMutualLinkSectionImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$IUpdateMutualLinkSectionImpl(
+          name: $checkedConvert('name', (v) => v as String?),
+          mutualLinks: $checkedConvert(
+              'mutualLinks',
+              (v) => (v as List<dynamic>)
+                  .map((e) =>
+                      IUpdateMutualLink.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+        );
+        return val;
+      },
+    );
+
+Map<String, dynamic> _$$IUpdateMutualLinkSectionImplToJson(
+        _$IUpdateMutualLinkSectionImpl instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'mutualLinks': instance.mutualLinks.map((e) => e.toJson()).toList(),
+    };
+
+_$IUpdateMutualLinkImpl _$$IUpdateMutualLinkImplFromJson(
+        Map<String, dynamic> json) =>
+    $checkedCreate(
+      r'_$IUpdateMutualLinkImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$IUpdateMutualLinkImpl(
+          url: $checkedConvert('url', (v) => v as String),
+          fileId: $checkedConvert('fileId', (v) => v as String),
+          description: $checkedConvert('description', (v) => v as String?),
+        );
+        return val;
+      },
+    );
+
+Map<String, dynamic> _$$IUpdateMutualLinkImplToJson(
+        _$IUpdateMutualLinkImpl instance) =>
+    <String, dynamic>{
+      'url': instance.url,
+      'fileId': instance.fileId,
+      'description': instance.description,
     };

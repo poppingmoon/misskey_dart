@@ -537,7 +537,8 @@ mixin _$UserDetailedNotMe {
   DateTime? get birthday => throw _privateConstructorUsedError;
   String? get lang => throw _privateConstructorUsedError;
   List<UserField>? get fields => throw _privateConstructorUsedError;
-  List<String> get verifiedLinks =>
+  List<String> get verifiedLinks => throw _privateConstructorUsedError;
+  List<MutualLinkSection>? get mutualLinkSections =>
       throw _privateConstructorUsedError; // CherryPick 4.3.0 or newer returns String if the count count is not visible
   @IntConverter()
   int get followersCount =>
@@ -619,6 +620,7 @@ abstract class $UserDetailedNotMeCopyWith<$Res> {
       String? lang,
       List<UserField>? fields,
       List<String> verifiedLinks,
+      List<MutualLinkSection>? mutualLinkSections,
       @IntConverter() int followersCount,
       @IntConverter() int followingCount,
       int notesCount,
@@ -690,6 +692,7 @@ class _$UserDetailedNotMeCopyWithImpl<$Res, $Val extends UserDetailedNotMe>
     Object? lang = freezed,
     Object? fields = freezed,
     Object? verifiedLinks = null,
+    Object? mutualLinkSections = freezed,
     Object? followersCount = null,
     Object? followingCount = null,
     Object? notesCount = null,
@@ -833,6 +836,10 @@ class _$UserDetailedNotMeCopyWithImpl<$Res, $Val extends UserDetailedNotMe>
           ? _value.verifiedLinks
           : verifiedLinks // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      mutualLinkSections: freezed == mutualLinkSections
+          ? _value.mutualLinkSections
+          : mutualLinkSections // ignore: cast_nullable_to_non_nullable
+              as List<MutualLinkSection>?,
       followersCount: null == followersCount
           ? _value.followersCount
           : followersCount // ignore: cast_nullable_to_non_nullable
@@ -960,6 +967,7 @@ abstract class _$$UserDetailedNotMeImplCopyWith<$Res>
       String? lang,
       List<UserField>? fields,
       List<String> verifiedLinks,
+      List<MutualLinkSection>? mutualLinkSections,
       @IntConverter() int followersCount,
       @IntConverter() int followingCount,
       int notesCount,
@@ -1030,6 +1038,7 @@ class __$$UserDetailedNotMeImplCopyWithImpl<$Res>
     Object? lang = freezed,
     Object? fields = freezed,
     Object? verifiedLinks = null,
+    Object? mutualLinkSections = freezed,
     Object? followersCount = null,
     Object? followingCount = null,
     Object? notesCount = null,
@@ -1173,6 +1182,10 @@ class __$$UserDetailedNotMeImplCopyWithImpl<$Res>
           ? _value._verifiedLinks
           : verifiedLinks // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      mutualLinkSections: freezed == mutualLinkSections
+          ? _value._mutualLinkSections
+          : mutualLinkSections // ignore: cast_nullable_to_non_nullable
+              as List<MutualLinkSection>?,
       followersCount: null == followersCount
           ? _value.followersCount
           : followersCount // ignore: cast_nullable_to_non_nullable
@@ -1281,6 +1294,7 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
       this.lang,
       final List<UserField>? fields,
       final List<String> verifiedLinks = const [],
+      final List<MutualLinkSection>? mutualLinkSections,
       @IntConverter() required this.followersCount,
       @IntConverter() required this.followingCount,
       required this.notesCount,
@@ -1308,6 +1322,7 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
         _alsoKnownAs = alsoKnownAs,
         _fields = fields,
         _verifiedLinks = verifiedLinks,
+        _mutualLinkSections = mutualLinkSections,
         _pinnedNoteIds = pinnedNoteIds,
         _pinnedNotes = pinnedNotes,
         _pinnedPage = pinnedPage,
@@ -1435,6 +1450,17 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
     return EqualUnmodifiableListView(_verifiedLinks);
   }
 
+  final List<MutualLinkSection>? _mutualLinkSections;
+  @override
+  List<MutualLinkSection>? get mutualLinkSections {
+    final value = _mutualLinkSections;
+    if (value == null) return null;
+    if (_mutualLinkSections is EqualUnmodifiableListView)
+      return _mutualLinkSections;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
 // CherryPick 4.3.0 or newer returns String if the count count is not visible
   @override
   @IntConverter()
@@ -1521,7 +1547,7 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
 
   @override
   String toString() {
-    return 'UserDetailedNotMe(id: $id, name: $name, username: $username, host: $host, avatarUrl: $avatarUrl, avatarBlurhash: $avatarBlurhash, avatarDecorations: $avatarDecorations, isBot: $isBot, isCat: $isCat, instance: $instance, emojis: $emojis, onlineStatus: $onlineStatus, badgeRoles: $badgeRoles, url: $url, uri: $uri, movedTo: $movedTo, alsoKnownAs: $alsoKnownAs, createdAt: $createdAt, updatedAt: $updatedAt, lastFetchedAt: $lastFetchedAt, bannerUrl: $bannerUrl, bannerBlurhash: $bannerBlurhash, isLocked: $isLocked, isSilenced: $isSilenced, isSuspended: $isSuspended, description: $description, location: $location, birthday: $birthday, lang: $lang, fields: $fields, verifiedLinks: $verifiedLinks, followersCount: $followersCount, followingCount: $followingCount, notesCount: $notesCount, pinnedNoteIds: $pinnedNoteIds, pinnedNotes: $pinnedNotes, pinnedPageId: $pinnedPageId, pinnedPage: $pinnedPage, publicReactions: $publicReactions, ffVisibility: $ffVisibility, followersVisibility: $followersVisibility, followingVisibility: $followingVisibility, twoFactorEnabled: $twoFactorEnabled, usePasswordLessLogin: $usePasswordLessLogin, securityKeys: $securityKeys, roles: $roles, memo: $memo, moderationNote: $moderationNote)';
+    return 'UserDetailedNotMe(id: $id, name: $name, username: $username, host: $host, avatarUrl: $avatarUrl, avatarBlurhash: $avatarBlurhash, avatarDecorations: $avatarDecorations, isBot: $isBot, isCat: $isCat, instance: $instance, emojis: $emojis, onlineStatus: $onlineStatus, badgeRoles: $badgeRoles, url: $url, uri: $uri, movedTo: $movedTo, alsoKnownAs: $alsoKnownAs, createdAt: $createdAt, updatedAt: $updatedAt, lastFetchedAt: $lastFetchedAt, bannerUrl: $bannerUrl, bannerBlurhash: $bannerBlurhash, isLocked: $isLocked, isSilenced: $isSilenced, isSuspended: $isSuspended, description: $description, location: $location, birthday: $birthday, lang: $lang, fields: $fields, verifiedLinks: $verifiedLinks, mutualLinkSections: $mutualLinkSections, followersCount: $followersCount, followingCount: $followingCount, notesCount: $notesCount, pinnedNoteIds: $pinnedNoteIds, pinnedNotes: $pinnedNotes, pinnedPageId: $pinnedPageId, pinnedPage: $pinnedPage, publicReactions: $publicReactions, ffVisibility: $ffVisibility, followersVisibility: $followersVisibility, followingVisibility: $followingVisibility, twoFactorEnabled: $twoFactorEnabled, usePasswordLessLogin: $usePasswordLessLogin, securityKeys: $securityKeys, roles: $roles, memo: $memo, moderationNote: $moderationNote)';
   }
 
   @override
@@ -1580,6 +1606,8 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
             const DeepCollectionEquality().equals(other._fields, _fields) &&
             const DeepCollectionEquality()
                 .equals(other._verifiedLinks, _verifiedLinks) &&
+            const DeepCollectionEquality()
+                .equals(other._mutualLinkSections, _mutualLinkSections) &&
             (identical(other.followersCount, followersCount) ||
                 other.followersCount == followersCount) &&
             (identical(other.followingCount, followingCount) ||
@@ -1649,6 +1677,7 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
         lang,
         const DeepCollectionEquality().hash(_fields),
         const DeepCollectionEquality().hash(_verifiedLinks),
+        const DeepCollectionEquality().hash(_mutualLinkSections),
         followersCount,
         followingCount,
         notesCount,
@@ -1719,6 +1748,7 @@ abstract class _UserDetailedNotMe implements UserDetailedNotMe {
       final String? lang,
       final List<UserField>? fields,
       final List<String> verifiedLinks,
+      final List<MutualLinkSection>? mutualLinkSections,
       @IntConverter() required final int followersCount,
       @IntConverter() required final int followingCount,
       required final int notesCount,
@@ -1816,8 +1846,10 @@ abstract class _UserDetailedNotMe implements UserDetailedNotMe {
   @override
   List<UserField>? get fields;
   @override
-  List<String>
-      get verifiedLinks; // CherryPick 4.3.0 or newer returns String if the count count is not visible
+  List<String> get verifiedLinks;
+  @override
+  List<MutualLinkSection>?
+      get mutualLinkSections; // CherryPick 4.3.0 or newer returns String if the count count is not visible
   @override
   @IntConverter()
   int get followersCount; // CherryPick 4.3.0 or newer returns String if the count count is not visible
@@ -1917,7 +1949,8 @@ mixin _$UserDetailedNotMeWithRelations {
   DateTime? get birthday => throw _privateConstructorUsedError;
   String? get lang => throw _privateConstructorUsedError;
   List<UserField>? get fields => throw _privateConstructorUsedError;
-  List<String> get verifiedLinks =>
+  List<String> get verifiedLinks => throw _privateConstructorUsedError;
+  List<MutualLinkSection>? get mutualLinkSections =>
       throw _privateConstructorUsedError; // CherryPick 4.3.0 or newer returns String if the count is not visible
   @IntConverter()
   int get followersCount =>
@@ -2012,6 +2045,7 @@ abstract class $UserDetailedNotMeWithRelationsCopyWith<$Res> {
       String? lang,
       List<UserField>? fields,
       List<String> verifiedLinks,
+      List<MutualLinkSection>? mutualLinkSections,
       @IntConverter() int followersCount,
       @IntConverter() int followingCount,
       int notesCount,
@@ -2094,6 +2128,7 @@ class _$UserDetailedNotMeWithRelationsCopyWithImpl<$Res,
     Object? lang = freezed,
     Object? fields = freezed,
     Object? verifiedLinks = null,
+    Object? mutualLinkSections = freezed,
     Object? followersCount = null,
     Object? followingCount = null,
     Object? notesCount = null,
@@ -2247,6 +2282,10 @@ class _$UserDetailedNotMeWithRelationsCopyWithImpl<$Res,
           ? _value.verifiedLinks
           : verifiedLinks // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      mutualLinkSections: freezed == mutualLinkSections
+          ? _value.mutualLinkSections
+          : mutualLinkSections // ignore: cast_nullable_to_non_nullable
+              as List<MutualLinkSection>?,
       followersCount: null == followersCount
           ? _value.followersCount
           : followersCount // ignore: cast_nullable_to_non_nullable
@@ -2415,6 +2454,7 @@ abstract class _$$UserDetailedNotMeWithRelationsImplCopyWith<$Res>
       String? lang,
       List<UserField>? fields,
       List<String> verifiedLinks,
+      List<MutualLinkSection>? mutualLinkSections,
       @IntConverter() int followersCount,
       @IntConverter() int followingCount,
       int notesCount,
@@ -2497,6 +2537,7 @@ class __$$UserDetailedNotMeWithRelationsImplCopyWithImpl<$Res>
     Object? lang = freezed,
     Object? fields = freezed,
     Object? verifiedLinks = null,
+    Object? mutualLinkSections = freezed,
     Object? followersCount = null,
     Object? followingCount = null,
     Object? notesCount = null,
@@ -2650,6 +2691,10 @@ class __$$UserDetailedNotMeWithRelationsImplCopyWithImpl<$Res>
           ? _value._verifiedLinks
           : verifiedLinks // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      mutualLinkSections: freezed == mutualLinkSections
+          ? _value._mutualLinkSections
+          : mutualLinkSections // ignore: cast_nullable_to_non_nullable
+              as List<MutualLinkSection>?,
       followersCount: null == followersCount
           ? _value.followersCount
           : followersCount // ignore: cast_nullable_to_non_nullable
@@ -2799,6 +2844,7 @@ class _$UserDetailedNotMeWithRelationsImpl
       this.lang,
       final List<UserField>? fields,
       final List<String> verifiedLinks = const [],
+      final List<MutualLinkSection>? mutualLinkSections,
       @IntConverter() required this.followersCount,
       @IntConverter() required this.followingCount,
       required this.notesCount,
@@ -2836,6 +2882,7 @@ class _$UserDetailedNotMeWithRelationsImpl
         _alsoKnownAs = alsoKnownAs,
         _fields = fields,
         _verifiedLinks = verifiedLinks,
+        _mutualLinkSections = mutualLinkSections,
         _pinnedNoteIds = pinnedNoteIds,
         _pinnedNotes = pinnedNotes,
         _pinnedPage = pinnedPage,
@@ -2964,6 +3011,17 @@ class _$UserDetailedNotMeWithRelationsImpl
     return EqualUnmodifiableListView(_verifiedLinks);
   }
 
+  final List<MutualLinkSection>? _mutualLinkSections;
+  @override
+  List<MutualLinkSection>? get mutualLinkSections {
+    final value = _mutualLinkSections;
+    if (value == null) return null;
+    if (_mutualLinkSections is EqualUnmodifiableListView)
+      return _mutualLinkSections;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
 // CherryPick 4.3.0 or newer returns String if the count is not visible
   @override
   @IntConverter()
@@ -3072,7 +3130,7 @@ class _$UserDetailedNotMeWithRelationsImpl
 
   @override
   String toString() {
-    return 'UserDetailedNotMeWithRelations(id: $id, name: $name, username: $username, host: $host, avatarUrl: $avatarUrl, avatarBlurhash: $avatarBlurhash, avatarDecorations: $avatarDecorations, isBot: $isBot, isCat: $isCat, instance: $instance, emojis: $emojis, onlineStatus: $onlineStatus, badgeRoles: $badgeRoles, url: $url, uri: $uri, movedTo: $movedTo, alsoKnownAs: $alsoKnownAs, createdAt: $createdAt, updatedAt: $updatedAt, lastFetchedAt: $lastFetchedAt, bannerUrl: $bannerUrl, bannerBlurhash: $bannerBlurhash, isLocked: $isLocked, isSilenced: $isSilenced, isSuspended: $isSuspended, description: $description, location: $location, birthday: $birthday, lang: $lang, fields: $fields, verifiedLinks: $verifiedLinks, followersCount: $followersCount, followingCount: $followingCount, notesCount: $notesCount, pinnedNoteIds: $pinnedNoteIds, pinnedNotes: $pinnedNotes, pinnedPageId: $pinnedPageId, pinnedPage: $pinnedPage, publicReactions: $publicReactions, ffVisibility: $ffVisibility, followersVisibility: $followersVisibility, followingVisibility: $followingVisibility, twoFactorEnabled: $twoFactorEnabled, usePasswordLessLogin: $usePasswordLessLogin, securityKeys: $securityKeys, roles: $roles, memo: $memo, moderationNote: $moderationNote, isFollowing: $isFollowing, isFollowed: $isFollowed, hasPendingFollowRequestFromYou: $hasPendingFollowRequestFromYou, hasPendingFollowRequestToYou: $hasPendingFollowRequestToYou, isBlocking: $isBlocking, isBlocked: $isBlocked, isMuted: $isMuted, isRenoteMuted: $isRenoteMuted, notify: $notify, withReplies: $withReplies)';
+    return 'UserDetailedNotMeWithRelations(id: $id, name: $name, username: $username, host: $host, avatarUrl: $avatarUrl, avatarBlurhash: $avatarBlurhash, avatarDecorations: $avatarDecorations, isBot: $isBot, isCat: $isCat, instance: $instance, emojis: $emojis, onlineStatus: $onlineStatus, badgeRoles: $badgeRoles, url: $url, uri: $uri, movedTo: $movedTo, alsoKnownAs: $alsoKnownAs, createdAt: $createdAt, updatedAt: $updatedAt, lastFetchedAt: $lastFetchedAt, bannerUrl: $bannerUrl, bannerBlurhash: $bannerBlurhash, isLocked: $isLocked, isSilenced: $isSilenced, isSuspended: $isSuspended, description: $description, location: $location, birthday: $birthday, lang: $lang, fields: $fields, verifiedLinks: $verifiedLinks, mutualLinkSections: $mutualLinkSections, followersCount: $followersCount, followingCount: $followingCount, notesCount: $notesCount, pinnedNoteIds: $pinnedNoteIds, pinnedNotes: $pinnedNotes, pinnedPageId: $pinnedPageId, pinnedPage: $pinnedPage, publicReactions: $publicReactions, ffVisibility: $ffVisibility, followersVisibility: $followersVisibility, followingVisibility: $followingVisibility, twoFactorEnabled: $twoFactorEnabled, usePasswordLessLogin: $usePasswordLessLogin, securityKeys: $securityKeys, roles: $roles, memo: $memo, moderationNote: $moderationNote, isFollowing: $isFollowing, isFollowed: $isFollowed, hasPendingFollowRequestFromYou: $hasPendingFollowRequestFromYou, hasPendingFollowRequestToYou: $hasPendingFollowRequestToYou, isBlocking: $isBlocking, isBlocked: $isBlocked, isMuted: $isMuted, isRenoteMuted: $isRenoteMuted, notify: $notify, withReplies: $withReplies)';
   }
 
   @override
@@ -3131,6 +3189,8 @@ class _$UserDetailedNotMeWithRelationsImpl
             const DeepCollectionEquality().equals(other._fields, _fields) &&
             const DeepCollectionEquality()
                 .equals(other._verifiedLinks, _verifiedLinks) &&
+            const DeepCollectionEquality()
+                .equals(other._mutualLinkSections, _mutualLinkSections) &&
             (identical(other.followersCount, followersCount) ||
                 other.followersCount == followersCount) &&
             (identical(other.followingCount, followingCount) ||
@@ -3175,8 +3235,7 @@ class _$UserDetailedNotMeWithRelationsImpl
                     hasPendingFollowRequestToYou) &&
             (identical(other.isBlocking, isBlocking) ||
                 other.isBlocking == isBlocking) &&
-            (identical(other.isBlocked, isBlocked) ||
-                other.isBlocked == isBlocked) &&
+            (identical(other.isBlocked, isBlocked) || other.isBlocked == isBlocked) &&
             (identical(other.isMuted, isMuted) || other.isMuted == isMuted) &&
             (identical(other.isRenoteMuted, isRenoteMuted) || other.isRenoteMuted == isRenoteMuted) &&
             (identical(other.notify, notify) || other.notify == notify) &&
@@ -3218,6 +3277,7 @@ class _$UserDetailedNotMeWithRelationsImpl
         lang,
         const DeepCollectionEquality().hash(_fields),
         const DeepCollectionEquality().hash(_verifiedLinks),
+        const DeepCollectionEquality().hash(_mutualLinkSections),
         followersCount,
         followingCount,
         notesCount,
@@ -3300,6 +3360,7 @@ abstract class _UserDetailedNotMeWithRelations
       final String? lang,
       final List<UserField>? fields,
       final List<String> verifiedLinks,
+      final List<MutualLinkSection>? mutualLinkSections,
       @IntConverter() required final int followersCount,
       @IntConverter() required final int followingCount,
       required final int notesCount,
@@ -3407,8 +3468,10 @@ abstract class _UserDetailedNotMeWithRelations
   @override
   List<UserField>? get fields;
   @override
-  List<String>
-      get verifiedLinks; // CherryPick 4.3.0 or newer returns String if the count is not visible
+  List<String> get verifiedLinks;
+  @override
+  List<MutualLinkSection>?
+      get mutualLinkSections; // CherryPick 4.3.0 or newer returns String if the count is not visible
   @override
   @IntConverter()
   int get followersCount; // CherryPick 4.3.0 or newer returns String if the count is not visible
@@ -3528,7 +3591,8 @@ mixin _$MeDetailed {
   DateTime? get birthday => throw _privateConstructorUsedError;
   String? get lang => throw _privateConstructorUsedError;
   List<UserField>? get fields => throw _privateConstructorUsedError;
-  List<String> get verifiedLinks =>
+  List<String> get verifiedLinks => throw _privateConstructorUsedError;
+  List<MutualLinkSection>? get mutualLinkSections =>
       throw _privateConstructorUsedError; // CherryPick 4.3.0 or newer returns String if the count is not visible
   @IntConverter()
   int get followersCount =>
@@ -3668,6 +3732,7 @@ abstract class $MeDetailedCopyWith<$Res> {
       String? lang,
       List<UserField>? fields,
       List<String> verifiedLinks,
+      List<MutualLinkSection>? mutualLinkSections,
       @IntConverter() int followersCount,
       @IntConverter() int followingCount,
       int notesCount,
@@ -3777,6 +3842,7 @@ class _$MeDetailedCopyWithImpl<$Res, $Val extends MeDetailed>
     Object? lang = freezed,
     Object? fields = freezed,
     Object? verifiedLinks = null,
+    Object? mutualLinkSections = freezed,
     Object? followersCount = null,
     Object? followingCount = null,
     Object? notesCount = null,
@@ -3954,6 +4020,10 @@ class _$MeDetailedCopyWithImpl<$Res, $Val extends MeDetailed>
           ? _value.verifiedLinks
           : verifiedLinks // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      mutualLinkSections: freezed == mutualLinkSections
+          ? _value.mutualLinkSections
+          : mutualLinkSections // ignore: cast_nullable_to_non_nullable
+              as List<MutualLinkSection>?,
       followersCount: null == followersCount
           ? _value.followersCount
           : followersCount // ignore: cast_nullable_to_non_nullable
@@ -4242,6 +4312,7 @@ abstract class _$$MeDetailedImplCopyWith<$Res>
       String? lang,
       List<UserField>? fields,
       List<String> verifiedLinks,
+      List<MutualLinkSection>? mutualLinkSections,
       @IntConverter() int followersCount,
       @IntConverter() int followingCount,
       int notesCount,
@@ -4352,6 +4423,7 @@ class __$$MeDetailedImplCopyWithImpl<$Res>
     Object? lang = freezed,
     Object? fields = freezed,
     Object? verifiedLinks = null,
+    Object? mutualLinkSections = freezed,
     Object? followersCount = null,
     Object? followingCount = null,
     Object? notesCount = null,
@@ -4529,6 +4601,10 @@ class __$$MeDetailedImplCopyWithImpl<$Res>
           ? _value._verifiedLinks
           : verifiedLinks // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      mutualLinkSections: freezed == mutualLinkSections
+          ? _value._mutualLinkSections
+          : mutualLinkSections // ignore: cast_nullable_to_non_nullable
+              as List<MutualLinkSection>?,
       followersCount: null == followersCount
           ? _value.followersCount
           : followersCount // ignore: cast_nullable_to_non_nullable
@@ -4773,6 +4849,7 @@ class _$MeDetailedImpl implements _MeDetailed {
       this.lang,
       final List<UserField>? fields,
       final List<String> verifiedLinks = const [],
+      final List<MutualLinkSection>? mutualLinkSections,
       @IntConverter() required this.followersCount,
       @IntConverter() required this.followingCount,
       required this.notesCount,
@@ -4836,6 +4913,7 @@ class _$MeDetailedImpl implements _MeDetailed {
         _alsoKnownAs = alsoKnownAs,
         _fields = fields,
         _verifiedLinks = verifiedLinks,
+        _mutualLinkSections = mutualLinkSections,
         _pinnedNoteIds = pinnedNoteIds,
         _pinnedNotes = pinnedNotes,
         _pinnedPage = pinnedPage,
@@ -4968,6 +5046,17 @@ class _$MeDetailedImpl implements _MeDetailed {
     if (_verifiedLinks is EqualUnmodifiableListView) return _verifiedLinks;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_verifiedLinks);
+  }
+
+  final List<MutualLinkSection>? _mutualLinkSections;
+  @override
+  List<MutualLinkSection>? get mutualLinkSections {
+    final value = _mutualLinkSections;
+    if (value == null) return null;
+    if (_mutualLinkSections is EqualUnmodifiableListView)
+      return _mutualLinkSections;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
   }
 
 // CherryPick 4.3.0 or newer returns String if the count is not visible
@@ -5218,7 +5307,7 @@ class _$MeDetailedImpl implements _MeDetailed {
 
   @override
   String toString() {
-    return 'MeDetailed(id: $id, name: $name, username: $username, host: $host, avatarUrl: $avatarUrl, avatarBlurhash: $avatarBlurhash, avatarDecorations: $avatarDecorations, isBot: $isBot, isCat: $isCat, instance: $instance, emojis: $emojis, onlineStatus: $onlineStatus, badgeRoles: $badgeRoles, url: $url, uri: $uri, movedTo: $movedTo, alsoKnownAs: $alsoKnownAs, createdAt: $createdAt, updatedAt: $updatedAt, lastFetchedAt: $lastFetchedAt, bannerUrl: $bannerUrl, bannerBlurhash: $bannerBlurhash, isLocked: $isLocked, isSilenced: $isSilenced, isSuspended: $isSuspended, description: $description, location: $location, birthday: $birthday, lang: $lang, fields: $fields, verifiedLinks: $verifiedLinks, followersCount: $followersCount, followingCount: $followingCount, notesCount: $notesCount, pinnedNoteIds: $pinnedNoteIds, pinnedNotes: $pinnedNotes, pinnedPageId: $pinnedPageId, pinnedPage: $pinnedPage, publicReactions: $publicReactions, ffVisibility: $ffVisibility, followersVisibility: $followersVisibility, followingVisibility: $followingVisibility, twoFactorEnabled: $twoFactorEnabled, usePasswordLessLogin: $usePasswordLessLogin, securityKeys: $securityKeys, roles: $roles, memo: $memo, moderationNote: $moderationNote, avatarId: $avatarId, bannerId: $bannerId, isModerator: $isModerator, isAdmin: $isAdmin, injectFeaturedNote: $injectFeaturedNote, receiveAnnouncementEmail: $receiveAnnouncementEmail, alwaysMarkNsfw: $alwaysMarkNsfw, autoSensitive: $autoSensitive, carefulBot: $carefulBot, autoAcceptFollowed: $autoAcceptFollowed, preventAiLearning: $preventAiLearning, noCrawle: $noCrawle, isExplorable: $isExplorable, isDeleted: $isDeleted, twoFactorBackupCodesStock: $twoFactorBackupCodesStock, hideOnlineStatus: $hideOnlineStatus, hasUnreadSpecifiedNotes: $hasUnreadSpecifiedNotes, hasUnreadMentions: $hasUnreadMentions, hasUnreadAnnouncement: $hasUnreadAnnouncement, hasUnreadAntenna: $hasUnreadAntenna, hasUnreadChannel: $hasUnreadChannel, hasUnreadNotification: $hasUnreadNotification, hasPendingReceivedFollowRequest: $hasPendingReceivedFollowRequest, unreadNotificationsCount: $unreadNotificationsCount, unreadAnnouncements: $unreadAnnouncements, mutedWords: $mutedWords, hardMutedWords: $hardMutedWords, mutedInstances: $mutedInstances, mutingNotificationTypes: $mutingNotificationTypes, notificationRecieveConfig: $notificationRecieveConfig, emailNotificationTypes: $emailNotificationTypes, achievements: $achievements, loggedInDays: $loggedInDays, policies: $policies)';
+    return 'MeDetailed(id: $id, name: $name, username: $username, host: $host, avatarUrl: $avatarUrl, avatarBlurhash: $avatarBlurhash, avatarDecorations: $avatarDecorations, isBot: $isBot, isCat: $isCat, instance: $instance, emojis: $emojis, onlineStatus: $onlineStatus, badgeRoles: $badgeRoles, url: $url, uri: $uri, movedTo: $movedTo, alsoKnownAs: $alsoKnownAs, createdAt: $createdAt, updatedAt: $updatedAt, lastFetchedAt: $lastFetchedAt, bannerUrl: $bannerUrl, bannerBlurhash: $bannerBlurhash, isLocked: $isLocked, isSilenced: $isSilenced, isSuspended: $isSuspended, description: $description, location: $location, birthday: $birthday, lang: $lang, fields: $fields, verifiedLinks: $verifiedLinks, mutualLinkSections: $mutualLinkSections, followersCount: $followersCount, followingCount: $followingCount, notesCount: $notesCount, pinnedNoteIds: $pinnedNoteIds, pinnedNotes: $pinnedNotes, pinnedPageId: $pinnedPageId, pinnedPage: $pinnedPage, publicReactions: $publicReactions, ffVisibility: $ffVisibility, followersVisibility: $followersVisibility, followingVisibility: $followingVisibility, twoFactorEnabled: $twoFactorEnabled, usePasswordLessLogin: $usePasswordLessLogin, securityKeys: $securityKeys, roles: $roles, memo: $memo, moderationNote: $moderationNote, avatarId: $avatarId, bannerId: $bannerId, isModerator: $isModerator, isAdmin: $isAdmin, injectFeaturedNote: $injectFeaturedNote, receiveAnnouncementEmail: $receiveAnnouncementEmail, alwaysMarkNsfw: $alwaysMarkNsfw, autoSensitive: $autoSensitive, carefulBot: $carefulBot, autoAcceptFollowed: $autoAcceptFollowed, preventAiLearning: $preventAiLearning, noCrawle: $noCrawle, isExplorable: $isExplorable, isDeleted: $isDeleted, twoFactorBackupCodesStock: $twoFactorBackupCodesStock, hideOnlineStatus: $hideOnlineStatus, hasUnreadSpecifiedNotes: $hasUnreadSpecifiedNotes, hasUnreadMentions: $hasUnreadMentions, hasUnreadAnnouncement: $hasUnreadAnnouncement, hasUnreadAntenna: $hasUnreadAntenna, hasUnreadChannel: $hasUnreadChannel, hasUnreadNotification: $hasUnreadNotification, hasPendingReceivedFollowRequest: $hasPendingReceivedFollowRequest, unreadNotificationsCount: $unreadNotificationsCount, unreadAnnouncements: $unreadAnnouncements, mutedWords: $mutedWords, hardMutedWords: $hardMutedWords, mutedInstances: $mutedInstances, mutingNotificationTypes: $mutingNotificationTypes, notificationRecieveConfig: $notificationRecieveConfig, emailNotificationTypes: $emailNotificationTypes, achievements: $achievements, loggedInDays: $loggedInDays, policies: $policies)';
   }
 
   @override
@@ -5277,6 +5366,8 @@ class _$MeDetailedImpl implements _MeDetailed {
             const DeepCollectionEquality().equals(other._fields, _fields) &&
             const DeepCollectionEquality()
                 .equals(other._verifiedLinks, _verifiedLinks) &&
+            const DeepCollectionEquality()
+                .equals(other._mutualLinkSections, _mutualLinkSections) &&
             (identical(other.followersCount, followersCount) ||
                 other.followersCount == followersCount) &&
             (identical(other.followingCount, followingCount) ||
@@ -5324,8 +5415,7 @@ class _$MeDetailedImpl implements _MeDetailed {
                 other.alwaysMarkNsfw == alwaysMarkNsfw) &&
             (identical(other.autoSensitive, autoSensitive) ||
                 other.autoSensitive == autoSensitive) &&
-            (identical(other.carefulBot, carefulBot) ||
-                other.carefulBot == carefulBot) &&
+            (identical(other.carefulBot, carefulBot) || other.carefulBot == carefulBot) &&
             (identical(other.autoAcceptFollowed, autoAcceptFollowed) || other.autoAcceptFollowed == autoAcceptFollowed) &&
             (identical(other.preventAiLearning, preventAiLearning) || other.preventAiLearning == preventAiLearning) &&
             (identical(other.noCrawle, noCrawle) || other.noCrawle == noCrawle) &&
@@ -5388,6 +5478,7 @@ class _$MeDetailedImpl implements _MeDetailed {
         lang,
         const DeepCollectionEquality().hash(_fields),
         const DeepCollectionEquality().hash(_verifiedLinks),
+        const DeepCollectionEquality().hash(_mutualLinkSections),
         followersCount,
         followingCount,
         notesCount,
@@ -5491,6 +5582,7 @@ abstract class _MeDetailed implements MeDetailed {
       final String? lang,
       final List<UserField>? fields,
       final List<String> verifiedLinks,
+      final List<MutualLinkSection>? mutualLinkSections,
       @IntConverter() required final int followersCount,
       @IntConverter() required final int followingCount,
       required final int notesCount,
@@ -5624,8 +5716,10 @@ abstract class _MeDetailed implements MeDetailed {
   @override
   List<UserField>? get fields;
   @override
-  List<String>
-      get verifiedLinks; // CherryPick 4.3.0 or newer returns String if the count is not visible
+  List<String> get verifiedLinks;
+  @override
+  List<MutualLinkSection>?
+      get mutualLinkSections; // CherryPick 4.3.0 or newer returns String if the count is not visible
   @override
   @IntConverter()
   int get followersCount; // CherryPick 4.3.0 or newer returns String if the count is not visible
@@ -6917,21 +7011,23 @@ mixin _$UserPolicies {
   bool? get canInvite => throw _privateConstructorUsedError;
   bool? get canManageCustomEmojis => throw _privateConstructorUsedError;
   bool? get canHideAds => throw _privateConstructorUsedError;
-  double? get inviteLimit => throw _privateConstructorUsedError;
-  double? get inviteLimitCycle => throw _privateConstructorUsedError;
+  int? get inviteLimit => throw _privateConstructorUsedError;
+  int? get inviteLimitCycle => throw _privateConstructorUsedError;
   bool? get canSearchNotes => throw _privateConstructorUsedError;
   bool? get canUseTranslator => throw _privateConstructorUsedError;
-  double? get driveCapacityMb => throw _privateConstructorUsedError;
-  double? get pinLimit => throw _privateConstructorUsedError;
-  double? get antennaLimit => throw _privateConstructorUsedError;
-  double? get wordMuteLimit => throw _privateConstructorUsedError;
-  double? get webhookLimit => throw _privateConstructorUsedError;
-  double? get clipLimit => throw _privateConstructorUsedError;
-  double? get noteEachClipsLimit => throw _privateConstructorUsedError;
-  double? get userListLimit => throw _privateConstructorUsedError;
-  double? get userEachUserListsLimit => throw _privateConstructorUsedError;
-  double? get rateLimitFactor => throw _privateConstructorUsedError;
-  double? get avatarDecorationLimit => throw _privateConstructorUsedError;
+  int? get driveCapacityMb => throw _privateConstructorUsedError;
+  int? get pinLimit => throw _privateConstructorUsedError;
+  int? get antennaLimit => throw _privateConstructorUsedError;
+  int? get wordMuteLimit => throw _privateConstructorUsedError;
+  int? get webhookLimit => throw _privateConstructorUsedError;
+  int? get clipLimit => throw _privateConstructorUsedError;
+  int? get noteEachClipsLimit => throw _privateConstructorUsedError;
+  int? get userListLimit => throw _privateConstructorUsedError;
+  int? get userEachUserListsLimit => throw _privateConstructorUsedError;
+  int? get rateLimitFactor => throw _privateConstructorUsedError;
+  int? get avatarDecorationLimit => throw _privateConstructorUsedError;
+  int? get mutualLinkSectionLimit => throw _privateConstructorUsedError;
+  int? get mutualLinkLimit => throw _privateConstructorUsedError;
 
   /// Serializes this UserPolicies to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -6957,21 +7053,23 @@ abstract class $UserPoliciesCopyWith<$Res> {
       bool? canInvite,
       bool? canManageCustomEmojis,
       bool? canHideAds,
-      double? inviteLimit,
-      double? inviteLimitCycle,
+      int? inviteLimit,
+      int? inviteLimitCycle,
       bool? canSearchNotes,
       bool? canUseTranslator,
-      double? driveCapacityMb,
-      double? pinLimit,
-      double? antennaLimit,
-      double? wordMuteLimit,
-      double? webhookLimit,
-      double? clipLimit,
-      double? noteEachClipsLimit,
-      double? userListLimit,
-      double? userEachUserListsLimit,
-      double? rateLimitFactor,
-      double? avatarDecorationLimit});
+      int? driveCapacityMb,
+      int? pinLimit,
+      int? antennaLimit,
+      int? wordMuteLimit,
+      int? webhookLimit,
+      int? clipLimit,
+      int? noteEachClipsLimit,
+      int? userListLimit,
+      int? userEachUserListsLimit,
+      int? rateLimitFactor,
+      int? avatarDecorationLimit,
+      int? mutualLinkSectionLimit,
+      int? mutualLinkLimit});
 }
 
 /// @nodoc
@@ -7011,6 +7109,8 @@ class _$UserPoliciesCopyWithImpl<$Res, $Val extends UserPolicies>
     Object? userEachUserListsLimit = freezed,
     Object? rateLimitFactor = freezed,
     Object? avatarDecorationLimit = freezed,
+    Object? mutualLinkSectionLimit = freezed,
+    Object? mutualLinkLimit = freezed,
   }) {
     return _then(_value.copyWith(
       gtlAvailable: freezed == gtlAvailable
@@ -7044,11 +7144,11 @@ class _$UserPoliciesCopyWithImpl<$Res, $Val extends UserPolicies>
       inviteLimit: freezed == inviteLimit
           ? _value.inviteLimit
           : inviteLimit // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
       inviteLimitCycle: freezed == inviteLimitCycle
           ? _value.inviteLimitCycle
           : inviteLimitCycle // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
       canSearchNotes: freezed == canSearchNotes
           ? _value.canSearchNotes
           : canSearchNotes // ignore: cast_nullable_to_non_nullable
@@ -7060,47 +7160,55 @@ class _$UserPoliciesCopyWithImpl<$Res, $Val extends UserPolicies>
       driveCapacityMb: freezed == driveCapacityMb
           ? _value.driveCapacityMb
           : driveCapacityMb // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
       pinLimit: freezed == pinLimit
           ? _value.pinLimit
           : pinLimit // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
       antennaLimit: freezed == antennaLimit
           ? _value.antennaLimit
           : antennaLimit // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
       wordMuteLimit: freezed == wordMuteLimit
           ? _value.wordMuteLimit
           : wordMuteLimit // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
       webhookLimit: freezed == webhookLimit
           ? _value.webhookLimit
           : webhookLimit // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
       clipLimit: freezed == clipLimit
           ? _value.clipLimit
           : clipLimit // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
       noteEachClipsLimit: freezed == noteEachClipsLimit
           ? _value.noteEachClipsLimit
           : noteEachClipsLimit // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
       userListLimit: freezed == userListLimit
           ? _value.userListLimit
           : userListLimit // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
       userEachUserListsLimit: freezed == userEachUserListsLimit
           ? _value.userEachUserListsLimit
           : userEachUserListsLimit // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
       rateLimitFactor: freezed == rateLimitFactor
           ? _value.rateLimitFactor
           : rateLimitFactor // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
       avatarDecorationLimit: freezed == avatarDecorationLimit
           ? _value.avatarDecorationLimit
           : avatarDecorationLimit // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
+      mutualLinkSectionLimit: freezed == mutualLinkSectionLimit
+          ? _value.mutualLinkSectionLimit
+          : mutualLinkSectionLimit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      mutualLinkLimit: freezed == mutualLinkLimit
+          ? _value.mutualLinkLimit
+          : mutualLinkLimit // ignore: cast_nullable_to_non_nullable
+              as int?,
     ) as $Val);
   }
 }
@@ -7121,21 +7229,23 @@ abstract class _$$UserPoliciesImplCopyWith<$Res>
       bool? canInvite,
       bool? canManageCustomEmojis,
       bool? canHideAds,
-      double? inviteLimit,
-      double? inviteLimitCycle,
+      int? inviteLimit,
+      int? inviteLimitCycle,
       bool? canSearchNotes,
       bool? canUseTranslator,
-      double? driveCapacityMb,
-      double? pinLimit,
-      double? antennaLimit,
-      double? wordMuteLimit,
-      double? webhookLimit,
-      double? clipLimit,
-      double? noteEachClipsLimit,
-      double? userListLimit,
-      double? userEachUserListsLimit,
-      double? rateLimitFactor,
-      double? avatarDecorationLimit});
+      int? driveCapacityMb,
+      int? pinLimit,
+      int? antennaLimit,
+      int? wordMuteLimit,
+      int? webhookLimit,
+      int? clipLimit,
+      int? noteEachClipsLimit,
+      int? userListLimit,
+      int? userEachUserListsLimit,
+      int? rateLimitFactor,
+      int? avatarDecorationLimit,
+      int? mutualLinkSectionLimit,
+      int? mutualLinkLimit});
 }
 
 /// @nodoc
@@ -7173,6 +7283,8 @@ class __$$UserPoliciesImplCopyWithImpl<$Res>
     Object? userEachUserListsLimit = freezed,
     Object? rateLimitFactor = freezed,
     Object? avatarDecorationLimit = freezed,
+    Object? mutualLinkSectionLimit = freezed,
+    Object? mutualLinkLimit = freezed,
   }) {
     return _then(_$UserPoliciesImpl(
       gtlAvailable: freezed == gtlAvailable
@@ -7206,11 +7318,11 @@ class __$$UserPoliciesImplCopyWithImpl<$Res>
       inviteLimit: freezed == inviteLimit
           ? _value.inviteLimit
           : inviteLimit // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
       inviteLimitCycle: freezed == inviteLimitCycle
           ? _value.inviteLimitCycle
           : inviteLimitCycle // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
       canSearchNotes: freezed == canSearchNotes
           ? _value.canSearchNotes
           : canSearchNotes // ignore: cast_nullable_to_non_nullable
@@ -7222,47 +7334,55 @@ class __$$UserPoliciesImplCopyWithImpl<$Res>
       driveCapacityMb: freezed == driveCapacityMb
           ? _value.driveCapacityMb
           : driveCapacityMb // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
       pinLimit: freezed == pinLimit
           ? _value.pinLimit
           : pinLimit // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
       antennaLimit: freezed == antennaLimit
           ? _value.antennaLimit
           : antennaLimit // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
       wordMuteLimit: freezed == wordMuteLimit
           ? _value.wordMuteLimit
           : wordMuteLimit // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
       webhookLimit: freezed == webhookLimit
           ? _value.webhookLimit
           : webhookLimit // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
       clipLimit: freezed == clipLimit
           ? _value.clipLimit
           : clipLimit // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
       noteEachClipsLimit: freezed == noteEachClipsLimit
           ? _value.noteEachClipsLimit
           : noteEachClipsLimit // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
       userListLimit: freezed == userListLimit
           ? _value.userListLimit
           : userListLimit // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
       userEachUserListsLimit: freezed == userEachUserListsLimit
           ? _value.userEachUserListsLimit
           : userEachUserListsLimit // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
       rateLimitFactor: freezed == rateLimitFactor
           ? _value.rateLimitFactor
           : rateLimitFactor // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
       avatarDecorationLimit: freezed == avatarDecorationLimit
           ? _value.avatarDecorationLimit
           : avatarDecorationLimit // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
+      mutualLinkSectionLimit: freezed == mutualLinkSectionLimit
+          ? _value.mutualLinkSectionLimit
+          : mutualLinkSectionLimit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      mutualLinkLimit: freezed == mutualLinkLimit
+          ? _value.mutualLinkLimit
+          : mutualLinkLimit // ignore: cast_nullable_to_non_nullable
+              as int?,
     ));
   }
 }
@@ -7292,7 +7412,9 @@ class _$UserPoliciesImpl implements _UserPolicies {
       this.userListLimit,
       this.userEachUserListsLimit,
       this.rateLimitFactor,
-      this.avatarDecorationLimit});
+      this.avatarDecorationLimit,
+      this.mutualLinkSectionLimit,
+      this.mutualLinkLimit});
 
   factory _$UserPoliciesImpl.fromJson(Map<String, dynamic> json) =>
       _$$UserPoliciesImplFromJson(json);
@@ -7312,39 +7434,43 @@ class _$UserPoliciesImpl implements _UserPolicies {
   @override
   final bool? canHideAds;
   @override
-  final double? inviteLimit;
+  final int? inviteLimit;
   @override
-  final double? inviteLimitCycle;
+  final int? inviteLimitCycle;
   @override
   final bool? canSearchNotes;
   @override
   final bool? canUseTranslator;
   @override
-  final double? driveCapacityMb;
+  final int? driveCapacityMb;
   @override
-  final double? pinLimit;
+  final int? pinLimit;
   @override
-  final double? antennaLimit;
+  final int? antennaLimit;
   @override
-  final double? wordMuteLimit;
+  final int? wordMuteLimit;
   @override
-  final double? webhookLimit;
+  final int? webhookLimit;
   @override
-  final double? clipLimit;
+  final int? clipLimit;
   @override
-  final double? noteEachClipsLimit;
+  final int? noteEachClipsLimit;
   @override
-  final double? userListLimit;
+  final int? userListLimit;
   @override
-  final double? userEachUserListsLimit;
+  final int? userEachUserListsLimit;
   @override
-  final double? rateLimitFactor;
+  final int? rateLimitFactor;
   @override
-  final double? avatarDecorationLimit;
+  final int? avatarDecorationLimit;
+  @override
+  final int? mutualLinkSectionLimit;
+  @override
+  final int? mutualLinkLimit;
 
   @override
   String toString() {
-    return 'UserPolicies(gtlAvailable: $gtlAvailable, ltlAvailable: $ltlAvailable, canPublicNote: $canPublicNote, canEditNote: $canEditNote, canInvite: $canInvite, canManageCustomEmojis: $canManageCustomEmojis, canHideAds: $canHideAds, inviteLimit: $inviteLimit, inviteLimitCycle: $inviteLimitCycle, canSearchNotes: $canSearchNotes, canUseTranslator: $canUseTranslator, driveCapacityMb: $driveCapacityMb, pinLimit: $pinLimit, antennaLimit: $antennaLimit, wordMuteLimit: $wordMuteLimit, webhookLimit: $webhookLimit, clipLimit: $clipLimit, noteEachClipsLimit: $noteEachClipsLimit, userListLimit: $userListLimit, userEachUserListsLimit: $userEachUserListsLimit, rateLimitFactor: $rateLimitFactor, avatarDecorationLimit: $avatarDecorationLimit)';
+    return 'UserPolicies(gtlAvailable: $gtlAvailable, ltlAvailable: $ltlAvailable, canPublicNote: $canPublicNote, canEditNote: $canEditNote, canInvite: $canInvite, canManageCustomEmojis: $canManageCustomEmojis, canHideAds: $canHideAds, inviteLimit: $inviteLimit, inviteLimitCycle: $inviteLimitCycle, canSearchNotes: $canSearchNotes, canUseTranslator: $canUseTranslator, driveCapacityMb: $driveCapacityMb, pinLimit: $pinLimit, antennaLimit: $antennaLimit, wordMuteLimit: $wordMuteLimit, webhookLimit: $webhookLimit, clipLimit: $clipLimit, noteEachClipsLimit: $noteEachClipsLimit, userListLimit: $userListLimit, userEachUserListsLimit: $userEachUserListsLimit, rateLimitFactor: $rateLimitFactor, avatarDecorationLimit: $avatarDecorationLimit, mutualLinkSectionLimit: $mutualLinkSectionLimit, mutualLinkLimit: $mutualLinkLimit)';
   }
 
   @override
@@ -7395,7 +7521,11 @@ class _$UserPoliciesImpl implements _UserPolicies {
             (identical(other.rateLimitFactor, rateLimitFactor) ||
                 other.rateLimitFactor == rateLimitFactor) &&
             (identical(other.avatarDecorationLimit, avatarDecorationLimit) ||
-                other.avatarDecorationLimit == avatarDecorationLimit));
+                other.avatarDecorationLimit == avatarDecorationLimit) &&
+            (identical(other.mutualLinkSectionLimit, mutualLinkSectionLimit) ||
+                other.mutualLinkSectionLimit == mutualLinkSectionLimit) &&
+            (identical(other.mutualLinkLimit, mutualLinkLimit) ||
+                other.mutualLinkLimit == mutualLinkLimit));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -7423,7 +7553,9 @@ class _$UserPoliciesImpl implements _UserPolicies {
         userListLimit,
         userEachUserListsLimit,
         rateLimitFactor,
-        avatarDecorationLimit
+        avatarDecorationLimit,
+        mutualLinkSectionLimit,
+        mutualLinkLimit
       ]);
 
   /// Create a copy of UserPolicies
@@ -7451,21 +7583,23 @@ abstract class _UserPolicies implements UserPolicies {
       final bool? canInvite,
       final bool? canManageCustomEmojis,
       final bool? canHideAds,
-      final double? inviteLimit,
-      final double? inviteLimitCycle,
+      final int? inviteLimit,
+      final int? inviteLimitCycle,
       final bool? canSearchNotes,
       final bool? canUseTranslator,
-      final double? driveCapacityMb,
-      final double? pinLimit,
-      final double? antennaLimit,
-      final double? wordMuteLimit,
-      final double? webhookLimit,
-      final double? clipLimit,
-      final double? noteEachClipsLimit,
-      final double? userListLimit,
-      final double? userEachUserListsLimit,
-      final double? rateLimitFactor,
-      final double? avatarDecorationLimit}) = _$UserPoliciesImpl;
+      final int? driveCapacityMb,
+      final int? pinLimit,
+      final int? antennaLimit,
+      final int? wordMuteLimit,
+      final int? webhookLimit,
+      final int? clipLimit,
+      final int? noteEachClipsLimit,
+      final int? userListLimit,
+      final int? userEachUserListsLimit,
+      final int? rateLimitFactor,
+      final int? avatarDecorationLimit,
+      final int? mutualLinkSectionLimit,
+      final int? mutualLinkLimit}) = _$UserPoliciesImpl;
 
   factory _UserPolicies.fromJson(Map<String, dynamic> json) =
       _$UserPoliciesImpl.fromJson;
@@ -7485,35 +7619,39 @@ abstract class _UserPolicies implements UserPolicies {
   @override
   bool? get canHideAds;
   @override
-  double? get inviteLimit;
+  int? get inviteLimit;
   @override
-  double? get inviteLimitCycle;
+  int? get inviteLimitCycle;
   @override
   bool? get canSearchNotes;
   @override
   bool? get canUseTranslator;
   @override
-  double? get driveCapacityMb;
+  int? get driveCapacityMb;
   @override
-  double? get pinLimit;
+  int? get pinLimit;
   @override
-  double? get antennaLimit;
+  int? get antennaLimit;
   @override
-  double? get wordMuteLimit;
+  int? get wordMuteLimit;
   @override
-  double? get webhookLimit;
+  int? get webhookLimit;
   @override
-  double? get clipLimit;
+  int? get clipLimit;
   @override
-  double? get noteEachClipsLimit;
+  int? get noteEachClipsLimit;
   @override
-  double? get userListLimit;
+  int? get userListLimit;
   @override
-  double? get userEachUserListsLimit;
+  int? get userEachUserListsLimit;
   @override
-  double? get rateLimitFactor;
+  int? get rateLimitFactor;
   @override
-  double? get avatarDecorationLimit;
+  int? get avatarDecorationLimit;
+  @override
+  int? get mutualLinkSectionLimit;
+  @override
+  int? get mutualLinkLimit;
 
   /// Create a copy of UserPolicies
   /// with the given fields replaced by the non-null parameter values.
@@ -7686,6 +7824,418 @@ abstract class _UserField implements UserField {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UserFieldImplCopyWith<_$UserFieldImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+MutualLinkSection _$MutualLinkSectionFromJson(Map<String, dynamic> json) {
+  return _MutualLinkSection.fromJson(json);
+}
+
+/// @nodoc
+mixin _$MutualLinkSection {
+  String? get name => throw _privateConstructorUsedError;
+  List<MutualLink> get mutualLinks => throw _privateConstructorUsedError;
+
+  /// Serializes this MutualLinkSection to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of MutualLinkSection
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $MutualLinkSectionCopyWith<MutualLinkSection> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $MutualLinkSectionCopyWith<$Res> {
+  factory $MutualLinkSectionCopyWith(
+          MutualLinkSection value, $Res Function(MutualLinkSection) then) =
+      _$MutualLinkSectionCopyWithImpl<$Res, MutualLinkSection>;
+  @useResult
+  $Res call({String? name, List<MutualLink> mutualLinks});
+}
+
+/// @nodoc
+class _$MutualLinkSectionCopyWithImpl<$Res, $Val extends MutualLinkSection>
+    implements $MutualLinkSectionCopyWith<$Res> {
+  _$MutualLinkSectionCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of MutualLinkSection
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = freezed,
+    Object? mutualLinks = null,
+  }) {
+    return _then(_value.copyWith(
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      mutualLinks: null == mutualLinks
+          ? _value.mutualLinks
+          : mutualLinks // ignore: cast_nullable_to_non_nullable
+              as List<MutualLink>,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$MutualLinkSectionImplCopyWith<$Res>
+    implements $MutualLinkSectionCopyWith<$Res> {
+  factory _$$MutualLinkSectionImplCopyWith(_$MutualLinkSectionImpl value,
+          $Res Function(_$MutualLinkSectionImpl) then) =
+      __$$MutualLinkSectionImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String? name, List<MutualLink> mutualLinks});
+}
+
+/// @nodoc
+class __$$MutualLinkSectionImplCopyWithImpl<$Res>
+    extends _$MutualLinkSectionCopyWithImpl<$Res, _$MutualLinkSectionImpl>
+    implements _$$MutualLinkSectionImplCopyWith<$Res> {
+  __$$MutualLinkSectionImplCopyWithImpl(_$MutualLinkSectionImpl _value,
+      $Res Function(_$MutualLinkSectionImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of MutualLinkSection
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = freezed,
+    Object? mutualLinks = null,
+  }) {
+    return _then(_$MutualLinkSectionImpl(
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      mutualLinks: null == mutualLinks
+          ? _value._mutualLinks
+          : mutualLinks // ignore: cast_nullable_to_non_nullable
+              as List<MutualLink>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$MutualLinkSectionImpl implements _MutualLinkSection {
+  const _$MutualLinkSectionImpl(
+      {this.name, required final List<MutualLink> mutualLinks})
+      : _mutualLinks = mutualLinks;
+
+  factory _$MutualLinkSectionImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MutualLinkSectionImplFromJson(json);
+
+  @override
+  final String? name;
+  final List<MutualLink> _mutualLinks;
+  @override
+  List<MutualLink> get mutualLinks {
+    if (_mutualLinks is EqualUnmodifiableListView) return _mutualLinks;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_mutualLinks);
+  }
+
+  @override
+  String toString() {
+    return 'MutualLinkSection(name: $name, mutualLinks: $mutualLinks)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$MutualLinkSectionImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            const DeepCollectionEquality()
+                .equals(other._mutualLinks, _mutualLinks));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, name, const DeepCollectionEquality().hash(_mutualLinks));
+
+  /// Create a copy of MutualLinkSection
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$MutualLinkSectionImplCopyWith<_$MutualLinkSectionImpl> get copyWith =>
+      __$$MutualLinkSectionImplCopyWithImpl<_$MutualLinkSectionImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$MutualLinkSectionImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _MutualLinkSection implements MutualLinkSection {
+  const factory _MutualLinkSection(
+      {final String? name,
+      required final List<MutualLink> mutualLinks}) = _$MutualLinkSectionImpl;
+
+  factory _MutualLinkSection.fromJson(Map<String, dynamic> json) =
+      _$MutualLinkSectionImpl.fromJson;
+
+  @override
+  String? get name;
+  @override
+  List<MutualLink> get mutualLinks;
+
+  /// Create a copy of MutualLinkSection
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$MutualLinkSectionImplCopyWith<_$MutualLinkSectionImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+MutualLink _$MutualLinkFromJson(Map<String, dynamic> json) {
+  return _MutualLink.fromJson(json);
+}
+
+/// @nodoc
+mixin _$MutualLink {
+  String get id => throw _privateConstructorUsedError;
+  String get url => throw _privateConstructorUsedError;
+  String get fileId => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
+  String? get imgSrc => throw _privateConstructorUsedError;
+
+  /// Serializes this MutualLink to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of MutualLink
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $MutualLinkCopyWith<MutualLink> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $MutualLinkCopyWith<$Res> {
+  factory $MutualLinkCopyWith(
+          MutualLink value, $Res Function(MutualLink) then) =
+      _$MutualLinkCopyWithImpl<$Res, MutualLink>;
+  @useResult
+  $Res call(
+      {String id,
+      String url,
+      String fileId,
+      String? description,
+      String? imgSrc});
+}
+
+/// @nodoc
+class _$MutualLinkCopyWithImpl<$Res, $Val extends MutualLink>
+    implements $MutualLinkCopyWith<$Res> {
+  _$MutualLinkCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of MutualLink
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? url = null,
+    Object? fileId = null,
+    Object? description = freezed,
+    Object? imgSrc = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      url: null == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
+      fileId: null == fileId
+          ? _value.fileId
+          : fileId // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      imgSrc: freezed == imgSrc
+          ? _value.imgSrc
+          : imgSrc // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$MutualLinkImplCopyWith<$Res>
+    implements $MutualLinkCopyWith<$Res> {
+  factory _$$MutualLinkImplCopyWith(
+          _$MutualLinkImpl value, $Res Function(_$MutualLinkImpl) then) =
+      __$$MutualLinkImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String id,
+      String url,
+      String fileId,
+      String? description,
+      String? imgSrc});
+}
+
+/// @nodoc
+class __$$MutualLinkImplCopyWithImpl<$Res>
+    extends _$MutualLinkCopyWithImpl<$Res, _$MutualLinkImpl>
+    implements _$$MutualLinkImplCopyWith<$Res> {
+  __$$MutualLinkImplCopyWithImpl(
+      _$MutualLinkImpl _value, $Res Function(_$MutualLinkImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of MutualLink
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? url = null,
+    Object? fileId = null,
+    Object? description = freezed,
+    Object? imgSrc = freezed,
+  }) {
+    return _then(_$MutualLinkImpl(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      url: null == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
+      fileId: null == fileId
+          ? _value.fileId
+          : fileId // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      imgSrc: freezed == imgSrc
+          ? _value.imgSrc
+          : imgSrc // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$MutualLinkImpl implements _MutualLink {
+  const _$MutualLinkImpl(
+      {required this.id,
+      required this.url,
+      required this.fileId,
+      this.description,
+      this.imgSrc});
+
+  factory _$MutualLinkImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MutualLinkImplFromJson(json);
+
+  @override
+  final String id;
+  @override
+  final String url;
+  @override
+  final String fileId;
+  @override
+  final String? description;
+  @override
+  final String? imgSrc;
+
+  @override
+  String toString() {
+    return 'MutualLink(id: $id, url: $url, fileId: $fileId, description: $description, imgSrc: $imgSrc)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$MutualLinkImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.url, url) || other.url == url) &&
+            (identical(other.fileId, fileId) || other.fileId == fileId) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.imgSrc, imgSrc) || other.imgSrc == imgSrc));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, id, url, fileId, description, imgSrc);
+
+  /// Create a copy of MutualLink
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$MutualLinkImplCopyWith<_$MutualLinkImpl> get copyWith =>
+      __$$MutualLinkImplCopyWithImpl<_$MutualLinkImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$MutualLinkImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _MutualLink implements MutualLink {
+  const factory _MutualLink(
+      {required final String id,
+      required final String url,
+      required final String fileId,
+      final String? description,
+      final String? imgSrc}) = _$MutualLinkImpl;
+
+  factory _MutualLink.fromJson(Map<String, dynamic> json) =
+      _$MutualLinkImpl.fromJson;
+
+  @override
+  String get id;
+  @override
+  String get url;
+  @override
+  String get fileId;
+  @override
+  String? get description;
+  @override
+  String? get imgSrc;
+
+  /// Create a copy of MutualLink
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$MutualLinkImplCopyWith<_$MutualLinkImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

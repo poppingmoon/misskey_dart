@@ -43,6 +43,7 @@ class IUpdateRequest with _$IUpdateRequest {
     NotificationRecieveConfigs? notificationRecieveConfig,
     List<String>? emailNotificationTypes,
     List<String>? alsoKnownAs,
+    List<IUpdateMutualLinkSection>? mutualLinkSections,
   }) = _IUpdateRequest;
 
   factory IUpdateRequest.fromJson(Map<String, dynamic> json) =>
@@ -61,4 +62,27 @@ class IUpdateAvatarDecoration with _$IUpdateAvatarDecoration {
 
   factory IUpdateAvatarDecoration.fromJson(Map<String, Object?> json) =>
       _$IUpdateAvatarDecorationFromJson(json);
+}
+
+@freezed
+class IUpdateMutualLinkSection with _$IUpdateMutualLinkSection {
+  const factory IUpdateMutualLinkSection({
+    String? name,
+    required List<IUpdateMutualLink> mutualLinks,
+  }) = _IUpdateMutualLinkSection;
+
+  factory IUpdateMutualLinkSection.fromJson(Map<String, Object?> json) =>
+      _$IUpdateMutualLinkSectionFromJson(json);
+}
+
+@freezed
+class IUpdateMutualLink with _$IUpdateMutualLink {
+  const factory IUpdateMutualLink({
+    required String url,
+    required String fileId,
+    String? description,
+  }) = _IUpdateMutualLink;
+
+  factory IUpdateMutualLink.fromJson(Map<String, Object?> json) =>
+      _$IUpdateMutualLinkFromJson(json);
 }
