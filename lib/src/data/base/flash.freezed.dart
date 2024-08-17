@@ -28,6 +28,7 @@ mixin _$Flash {
   String get title => throw _privateConstructorUsedError;
   String get summary => throw _privateConstructorUsedError;
   String get script => throw _privateConstructorUsedError;
+  FlashVisibility? get visibility => throw _privateConstructorUsedError;
   String get userId => throw _privateConstructorUsedError;
   UserLite get user => throw _privateConstructorUsedError;
   int? get likedCount => throw _privateConstructorUsedError;
@@ -54,6 +55,7 @@ abstract class $FlashCopyWith<$Res> {
       String title,
       String summary,
       String script,
+      FlashVisibility? visibility,
       String userId,
       UserLite user,
       int? likedCount,
@@ -83,6 +85,7 @@ class _$FlashCopyWithImpl<$Res, $Val extends Flash>
     Object? title = null,
     Object? summary = null,
     Object? script = null,
+    Object? visibility = freezed,
     Object? userId = null,
     Object? user = null,
     Object? likedCount = freezed,
@@ -113,6 +116,10 @@ class _$FlashCopyWithImpl<$Res, $Val extends Flash>
           ? _value.script
           : script // ignore: cast_nullable_to_non_nullable
               as String,
+      visibility: freezed == visibility
+          ? _value.visibility
+          : visibility // ignore: cast_nullable_to_non_nullable
+              as FlashVisibility?,
       userId: null == userId
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
@@ -157,6 +164,7 @@ abstract class _$$FlashImplCopyWith<$Res> implements $FlashCopyWith<$Res> {
       String title,
       String summary,
       String script,
+      FlashVisibility? visibility,
       String userId,
       UserLite user,
       int? likedCount,
@@ -185,6 +193,7 @@ class __$$FlashImplCopyWithImpl<$Res>
     Object? title = null,
     Object? summary = null,
     Object? script = null,
+    Object? visibility = freezed,
     Object? userId = null,
     Object? user = null,
     Object? likedCount = freezed,
@@ -215,6 +224,10 @@ class __$$FlashImplCopyWithImpl<$Res>
           ? _value.script
           : script // ignore: cast_nullable_to_non_nullable
               as String,
+      visibility: freezed == visibility
+          ? _value.visibility
+          : visibility // ignore: cast_nullable_to_non_nullable
+              as FlashVisibility?,
       userId: null == userId
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
@@ -245,6 +258,7 @@ class _$FlashImpl implements _Flash {
       required this.title,
       required this.summary,
       required this.script,
+      this.visibility,
       required this.userId,
       required this.user,
       this.likedCount,
@@ -268,6 +282,8 @@ class _$FlashImpl implements _Flash {
   @override
   final String script;
   @override
+  final FlashVisibility? visibility;
+  @override
   final String userId;
   @override
   final UserLite user;
@@ -279,7 +295,7 @@ class _$FlashImpl implements _Flash {
 
   @override
   String toString() {
-    return 'Flash(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, title: $title, summary: $summary, script: $script, userId: $userId, user: $user, likedCount: $likedCount, isLiked: $isLiked)';
+    return 'Flash(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, title: $title, summary: $summary, script: $script, visibility: $visibility, userId: $userId, user: $user, likedCount: $likedCount, isLiked: $isLiked)';
   }
 
   @override
@@ -295,6 +311,8 @@ class _$FlashImpl implements _Flash {
             (identical(other.title, title) || other.title == title) &&
             (identical(other.summary, summary) || other.summary == summary) &&
             (identical(other.script, script) || other.script == script) &&
+            (identical(other.visibility, visibility) ||
+                other.visibility == visibility) &&
             (identical(other.userId, userId) || other.userId == userId) &&
             (identical(other.user, user) || other.user == user) &&
             (identical(other.likedCount, likedCount) ||
@@ -305,7 +323,7 @@ class _$FlashImpl implements _Flash {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, createdAt, updatedAt, title,
-      summary, script, userId, user, likedCount, isLiked);
+      summary, script, visibility, userId, user, likedCount, isLiked);
 
   /// Create a copy of Flash
   /// with the given fields replaced by the non-null parameter values.
@@ -331,6 +349,7 @@ abstract class _Flash implements Flash {
       required final String title,
       required final String summary,
       required final String script,
+      final FlashVisibility? visibility,
       required final String userId,
       required final UserLite user,
       final int? likedCount,
@@ -352,6 +371,8 @@ abstract class _Flash implements Flash {
   String get summary;
   @override
   String get script;
+  @override
+  FlashVisibility? get visibility;
   @override
   String get userId;
   @override

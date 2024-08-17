@@ -19,6 +19,8 @@ _$FlashImpl _$$FlashImplFromJson(Map<String, dynamic> json) => $checkedCreate(
           title: $checkedConvert('title', (v) => v as String),
           summary: $checkedConvert('summary', (v) => v as String),
           script: $checkedConvert('script', (v) => v as String),
+          visibility: $checkedConvert('visibility',
+              (v) => $enumDecodeNullable(_$FlashVisibilityEnumMap, v)),
           userId: $checkedConvert('userId', (v) => v as String),
           user: $checkedConvert(
               'user', (v) => UserLite.fromJson(v as Map<String, dynamic>)),
@@ -38,8 +40,14 @@ Map<String, dynamic> _$$FlashImplToJson(_$FlashImpl instance) =>
       'title': instance.title,
       'summary': instance.summary,
       'script': instance.script,
+      'visibility': _$FlashVisibilityEnumMap[instance.visibility],
       'userId': instance.userId,
       'user': instance.user.toJson(),
       'likedCount': instance.likedCount,
       'isLiked': instance.isLiked,
     };
+
+const _$FlashVisibilityEnumMap = {
+  FlashVisibility.public: 'public',
+  FlashVisibility.private: 'private',
+};
