@@ -28,6 +28,7 @@ mixin _$AntennasNotesRequest {
   DateTime? get sinceDate => throw _privateConstructorUsedError;
   @DateTimeConverter()
   DateTime? get untilDate => throw _privateConstructorUsedError;
+  String? get pagination => throw _privateConstructorUsedError;
 
   /// Serializes this AntennasNotesRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -51,7 +52,8 @@ abstract class $AntennasNotesRequestCopyWith<$Res> {
       String? sinceId,
       String? untilId,
       @DateTimeConverter() DateTime? sinceDate,
-      @DateTimeConverter() DateTime? untilDate});
+      @DateTimeConverter() DateTime? untilDate,
+      String? pagination});
 }
 
 /// @nodoc
@@ -76,6 +78,7 @@ class _$AntennasNotesRequestCopyWithImpl<$Res,
     Object? untilId = freezed,
     Object? sinceDate = freezed,
     Object? untilDate = freezed,
+    Object? pagination = freezed,
   }) {
     return _then(_value.copyWith(
       antennaId: null == antennaId
@@ -102,6 +105,10 @@ class _$AntennasNotesRequestCopyWithImpl<$Res,
           ? _value.untilDate
           : untilDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      pagination: freezed == pagination
+          ? _value.pagination
+          : pagination // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -120,7 +127,8 @@ abstract class _$$AntennasNotesRequestImplCopyWith<$Res>
       String? sinceId,
       String? untilId,
       @DateTimeConverter() DateTime? sinceDate,
-      @DateTimeConverter() DateTime? untilDate});
+      @DateTimeConverter() DateTime? untilDate,
+      String? pagination});
 }
 
 /// @nodoc
@@ -142,6 +150,7 @@ class __$$AntennasNotesRequestImplCopyWithImpl<$Res>
     Object? untilId = freezed,
     Object? sinceDate = freezed,
     Object? untilDate = freezed,
+    Object? pagination = freezed,
   }) {
     return _then(_$AntennasNotesRequestImpl(
       antennaId: null == antennaId
@@ -168,6 +177,10 @@ class __$$AntennasNotesRequestImplCopyWithImpl<$Res>
           ? _value.untilDate
           : untilDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      pagination: freezed == pagination
+          ? _value.pagination
+          : pagination // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -181,7 +194,8 @@ class _$AntennasNotesRequestImpl implements _AntennasNotesRequest {
       this.sinceId,
       this.untilId,
       @DateTimeConverter() this.sinceDate,
-      @DateTimeConverter() this.untilDate});
+      @DateTimeConverter() this.untilDate,
+      this.pagination});
 
   factory _$AntennasNotesRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$AntennasNotesRequestImplFromJson(json);
@@ -200,10 +214,12 @@ class _$AntennasNotesRequestImpl implements _AntennasNotesRequest {
   @override
   @DateTimeConverter()
   final DateTime? untilDate;
+  @override
+  final String? pagination;
 
   @override
   String toString() {
-    return 'AntennasNotesRequest(antennaId: $antennaId, limit: $limit, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate)';
+    return 'AntennasNotesRequest(antennaId: $antennaId, limit: $limit, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, pagination: $pagination)';
   }
 
   @override
@@ -219,13 +235,15 @@ class _$AntennasNotesRequestImpl implements _AntennasNotesRequest {
             (identical(other.sinceDate, sinceDate) ||
                 other.sinceDate == sinceDate) &&
             (identical(other.untilDate, untilDate) ||
-                other.untilDate == untilDate));
+                other.untilDate == untilDate) &&
+            (identical(other.pagination, pagination) ||
+                other.pagination == pagination));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, antennaId, limit, sinceId, untilId, sinceDate, untilDate);
+  int get hashCode => Object.hash(runtimeType, antennaId, limit, sinceId,
+      untilId, sinceDate, untilDate, pagination);
 
   /// Create a copy of AntennasNotesRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -247,13 +265,13 @@ class _$AntennasNotesRequestImpl implements _AntennasNotesRequest {
 
 abstract class _AntennasNotesRequest implements AntennasNotesRequest {
   const factory _AntennasNotesRequest(
-          {required final String antennaId,
-          final int? limit,
-          final String? sinceId,
-          final String? untilId,
-          @DateTimeConverter() final DateTime? sinceDate,
-          @DateTimeConverter() final DateTime? untilDate}) =
-      _$AntennasNotesRequestImpl;
+      {required final String antennaId,
+      final int? limit,
+      final String? sinceId,
+      final String? untilId,
+      @DateTimeConverter() final DateTime? sinceDate,
+      @DateTimeConverter() final DateTime? untilDate,
+      final String? pagination}) = _$AntennasNotesRequestImpl;
 
   factory _AntennasNotesRequest.fromJson(Map<String, dynamic> json) =
       _$AntennasNotesRequestImpl.fromJson;
@@ -272,6 +290,8 @@ abstract class _AntennasNotesRequest implements AntennasNotesRequest {
   @override
   @DateTimeConverter()
   DateTime? get untilDate;
+  @override
+  String? get pagination;
 
   /// Create a copy of AntennasNotesRequest
   /// with the given fields replaced by the non-null parameter values.

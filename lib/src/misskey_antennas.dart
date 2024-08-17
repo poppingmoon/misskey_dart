@@ -27,8 +27,13 @@ class MisskeyAntenna {
   /// アンテナに引っかかったノートを返します。
   Future<Iterable<Note>> notes(AntennasNotesRequest request) async {
     final response =
-        await _apiService.post<List>("antennas/notes", request.toJson());
-    return response.map((e) => Note.fromJson(e));
+        await _apiService.post<dynamic>("antennas/notes", request.toJson());
+    if (response is List<dynamic>) {
+      return response.map((e) => Note.fromJson(e));
+    } else {
+      final notes = (response as Map<String, dynamic>)["notes"];
+      return (notes as List<dynamic>).map((e) => Note.fromJson(e));
+    }
   }
 
   /// アンテナ情報をIDから取得します。

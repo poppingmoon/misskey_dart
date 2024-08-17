@@ -13,6 +13,7 @@ class AntennasNotesRequest with _$AntennasNotesRequest {
     String? untilId,
     @DateTimeConverter() DateTime? sinceDate,
     @DateTimeConverter() DateTime? untilDate,
+    String? pagination,
   }) = _AntennasNotesRequest;
 
   factory AntennasNotesRequest.fromJson(Map<String, dynamic> json) =>

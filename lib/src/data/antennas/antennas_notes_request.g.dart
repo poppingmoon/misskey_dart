@@ -25,6 +25,7 @@ _$AntennasNotesRequestImpl _$$AntennasNotesRequestImplFromJson(
               'untilDate',
               (v) => _$JsonConverterFromJson<String, DateTime>(
                   v, const DateTimeConverter().fromJson)),
+          pagination: $checkedConvert('pagination', (v) => v as String?),
         );
         return val;
       },
@@ -41,6 +42,7 @@ Map<String, dynamic> _$$AntennasNotesRequestImplToJson(
           instance.sinceDate, const DateTimeConverter().toJson),
       'untilDate': _$JsonConverterToJson<String, DateTime>(
           instance.untilDate, const DateTimeConverter().toJson),
+      'pagination': instance.pagination,
     };
 
 Value? _$JsonConverterFromJson<Json, Value>(
