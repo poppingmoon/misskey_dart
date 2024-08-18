@@ -19,8 +19,10 @@ _$FlashImpl _$$FlashImplFromJson(Map<String, dynamic> json) => $checkedCreate(
           title: $checkedConvert('title', (v) => v as String),
           summary: $checkedConvert('summary', (v) => v as String),
           script: $checkedConvert('script', (v) => v as String),
-          visibility: $checkedConvert('visibility',
-              (v) => $enumDecodeNullable(_$FlashVisibilityEnumMap, v)),
+          visibility: $checkedConvert(
+              'visibility',
+              (v) => $enumDecodeNullable(_$FlashVisibilityEnumMap, v,
+                  unknownValue: JsonKey.nullForUndefinedEnumValue)),
           userId: $checkedConvert('userId', (v) => v as String),
           user: $checkedConvert(
               'user', (v) => UserLite.fromJson(v as Map<String, dynamic>)),

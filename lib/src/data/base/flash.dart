@@ -16,6 +16,8 @@ class Flash with _$Flash {
     required String title,
     required String summary,
     required String script,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     FlashVisibility? visibility,
     required String userId,
     required UserLite user,

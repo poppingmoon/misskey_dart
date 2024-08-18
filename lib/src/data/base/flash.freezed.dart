@@ -27,7 +27,9 @@ mixin _$Flash {
   DateTime get updatedAt => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   String get summary => throw _privateConstructorUsedError;
-  String get script => throw _privateConstructorUsedError;
+  String get script =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FlashVisibility? get visibility => throw _privateConstructorUsedError;
   String get userId => throw _privateConstructorUsedError;
   UserLite get user => throw _privateConstructorUsedError;
@@ -55,6 +57,7 @@ abstract class $FlashCopyWith<$Res> {
       String title,
       String summary,
       String script,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       FlashVisibility? visibility,
       String userId,
       UserLite user,
@@ -164,6 +167,7 @@ abstract class _$$FlashImplCopyWith<$Res> implements $FlashCopyWith<$Res> {
       String title,
       String summary,
       String script,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       FlashVisibility? visibility,
       String userId,
       UserLite user,
@@ -258,6 +262,7 @@ class _$FlashImpl implements _Flash {
       required this.title,
       required this.summary,
       required this.script,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.visibility,
       required this.userId,
       required this.user,
@@ -281,7 +286,9 @@ class _$FlashImpl implements _Flash {
   final String summary;
   @override
   final String script;
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final FlashVisibility? visibility;
   @override
   final String userId;
@@ -349,6 +356,7 @@ abstract class _Flash implements Flash {
       required final String title,
       required final String summary,
       required final String script,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final FlashVisibility? visibility,
       required final String userId,
       required final UserLite user,
@@ -370,8 +378,9 @@ abstract class _Flash implements Flash {
   @override
   String get summary;
   @override
-  String get script;
+  String get script; // ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FlashVisibility? get visibility;
   @override
   String get userId;
