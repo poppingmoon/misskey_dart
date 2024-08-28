@@ -29,19 +29,19 @@ mixin _$Page {
   UserLite get user => throw _privateConstructorUsedError;
   @ListPageContentConverter()
   List<AbstractPageContent> get content => throw _privateConstructorUsedError;
-  List<Map<String, dynamic>> get variables =>
+  List<Map<String, dynamic>>? get variables =>
       throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String? get summary => throw _privateConstructorUsedError;
-  bool get hideTitleWhenPinned => throw _privateConstructorUsedError;
-  bool get alignCenter => throw _privateConstructorUsedError;
-  String get font => throw _privateConstructorUsedError;
+  bool? get hideTitleWhenPinned => throw _privateConstructorUsedError;
+  bool? get alignCenter => throw _privateConstructorUsedError;
+  String? get font => throw _privateConstructorUsedError;
   String? get script => throw _privateConstructorUsedError;
   String? get eyeCatchingImageId => throw _privateConstructorUsedError;
   DriveFile? get eyeCatchingImage => throw _privateConstructorUsedError;
-  List<DriveFile> get attachedFiles => throw _privateConstructorUsedError;
-  int get likedCount => throw _privateConstructorUsedError;
+  List<DriveFile>? get attachedFiles => throw _privateConstructorUsedError;
+  int? get likedCount => throw _privateConstructorUsedError;
   bool? get isLiked => throw _privateConstructorUsedError;
 
   /// Serializes this Page to a JSON map.
@@ -65,18 +65,18 @@ abstract class $PageCopyWith<$Res> {
       String userId,
       UserLite user,
       @ListPageContentConverter() List<AbstractPageContent> content,
-      List<Map<String, dynamic>> variables,
+      List<Map<String, dynamic>>? variables,
       String title,
       String name,
       String? summary,
-      bool hideTitleWhenPinned,
-      bool alignCenter,
-      String font,
+      bool? hideTitleWhenPinned,
+      bool? alignCenter,
+      String? font,
       String? script,
       String? eyeCatchingImageId,
       DriveFile? eyeCatchingImage,
-      List<DriveFile> attachedFiles,
-      int likedCount,
+      List<DriveFile>? attachedFiles,
+      int? likedCount,
       bool? isLiked});
 
   $UserLiteCopyWith<$Res> get user;
@@ -104,18 +104,18 @@ class _$PageCopyWithImpl<$Res, $Val extends Page>
     Object? userId = null,
     Object? user = null,
     Object? content = null,
-    Object? variables = null,
+    Object? variables = freezed,
     Object? title = null,
     Object? name = null,
     Object? summary = freezed,
-    Object? hideTitleWhenPinned = null,
-    Object? alignCenter = null,
-    Object? font = null,
+    Object? hideTitleWhenPinned = freezed,
+    Object? alignCenter = freezed,
+    Object? font = freezed,
     Object? script = freezed,
     Object? eyeCatchingImageId = freezed,
     Object? eyeCatchingImage = freezed,
-    Object? attachedFiles = null,
-    Object? likedCount = null,
+    Object? attachedFiles = freezed,
+    Object? likedCount = freezed,
     Object? isLiked = freezed,
   }) {
     return _then(_value.copyWith(
@@ -143,10 +143,10 @@ class _$PageCopyWithImpl<$Res, $Val extends Page>
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
               as List<AbstractPageContent>,
-      variables: null == variables
+      variables: freezed == variables
           ? _value.variables
           : variables // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>,
+              as List<Map<String, dynamic>>?,
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -159,18 +159,18 @@ class _$PageCopyWithImpl<$Res, $Val extends Page>
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as String?,
-      hideTitleWhenPinned: null == hideTitleWhenPinned
+      hideTitleWhenPinned: freezed == hideTitleWhenPinned
           ? _value.hideTitleWhenPinned
           : hideTitleWhenPinned // ignore: cast_nullable_to_non_nullable
-              as bool,
-      alignCenter: null == alignCenter
+              as bool?,
+      alignCenter: freezed == alignCenter
           ? _value.alignCenter
           : alignCenter // ignore: cast_nullable_to_non_nullable
-              as bool,
-      font: null == font
+              as bool?,
+      font: freezed == font
           ? _value.font
           : font // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       script: freezed == script
           ? _value.script
           : script // ignore: cast_nullable_to_non_nullable
@@ -183,14 +183,14 @@ class _$PageCopyWithImpl<$Res, $Val extends Page>
           ? _value.eyeCatchingImage
           : eyeCatchingImage // ignore: cast_nullable_to_non_nullable
               as DriveFile?,
-      attachedFiles: null == attachedFiles
+      attachedFiles: freezed == attachedFiles
           ? _value.attachedFiles
           : attachedFiles // ignore: cast_nullable_to_non_nullable
-              as List<DriveFile>,
-      likedCount: null == likedCount
+              as List<DriveFile>?,
+      likedCount: freezed == likedCount
           ? _value.likedCount
           : likedCount // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       isLiked: freezed == isLiked
           ? _value.isLiked
           : isLiked // ignore: cast_nullable_to_non_nullable
@@ -237,18 +237,18 @@ abstract class _$$PageImplCopyWith<$Res> implements $PageCopyWith<$Res> {
       String userId,
       UserLite user,
       @ListPageContentConverter() List<AbstractPageContent> content,
-      List<Map<String, dynamic>> variables,
+      List<Map<String, dynamic>>? variables,
       String title,
       String name,
       String? summary,
-      bool hideTitleWhenPinned,
-      bool alignCenter,
-      String font,
+      bool? hideTitleWhenPinned,
+      bool? alignCenter,
+      String? font,
       String? script,
       String? eyeCatchingImageId,
       DriveFile? eyeCatchingImage,
-      List<DriveFile> attachedFiles,
-      int likedCount,
+      List<DriveFile>? attachedFiles,
+      int? likedCount,
       bool? isLiked});
 
   @override
@@ -275,18 +275,18 @@ class __$$PageImplCopyWithImpl<$Res>
     Object? userId = null,
     Object? user = null,
     Object? content = null,
-    Object? variables = null,
+    Object? variables = freezed,
     Object? title = null,
     Object? name = null,
     Object? summary = freezed,
-    Object? hideTitleWhenPinned = null,
-    Object? alignCenter = null,
-    Object? font = null,
+    Object? hideTitleWhenPinned = freezed,
+    Object? alignCenter = freezed,
+    Object? font = freezed,
     Object? script = freezed,
     Object? eyeCatchingImageId = freezed,
     Object? eyeCatchingImage = freezed,
-    Object? attachedFiles = null,
-    Object? likedCount = null,
+    Object? attachedFiles = freezed,
+    Object? likedCount = freezed,
     Object? isLiked = freezed,
   }) {
     return _then(_$PageImpl(
@@ -314,10 +314,10 @@ class __$$PageImplCopyWithImpl<$Res>
           ? _value._content
           : content // ignore: cast_nullable_to_non_nullable
               as List<AbstractPageContent>,
-      variables: null == variables
+      variables: freezed == variables
           ? _value._variables
           : variables // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>,
+              as List<Map<String, dynamic>>?,
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -330,18 +330,18 @@ class __$$PageImplCopyWithImpl<$Res>
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as String?,
-      hideTitleWhenPinned: null == hideTitleWhenPinned
+      hideTitleWhenPinned: freezed == hideTitleWhenPinned
           ? _value.hideTitleWhenPinned
           : hideTitleWhenPinned // ignore: cast_nullable_to_non_nullable
-              as bool,
-      alignCenter: null == alignCenter
+              as bool?,
+      alignCenter: freezed == alignCenter
           ? _value.alignCenter
           : alignCenter // ignore: cast_nullable_to_non_nullable
-              as bool,
-      font: null == font
+              as bool?,
+      font: freezed == font
           ? _value.font
           : font // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       script: freezed == script
           ? _value.script
           : script // ignore: cast_nullable_to_non_nullable
@@ -354,14 +354,14 @@ class __$$PageImplCopyWithImpl<$Res>
           ? _value.eyeCatchingImage
           : eyeCatchingImage // ignore: cast_nullable_to_non_nullable
               as DriveFile?,
-      attachedFiles: null == attachedFiles
+      attachedFiles: freezed == attachedFiles
           ? _value._attachedFiles
           : attachedFiles // ignore: cast_nullable_to_non_nullable
-              as List<DriveFile>,
-      likedCount: null == likedCount
+              as List<DriveFile>?,
+      likedCount: freezed == likedCount
           ? _value.likedCount
           : likedCount // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       isLiked: freezed == isLiked
           ? _value.isLiked
           : isLiked // ignore: cast_nullable_to_non_nullable
@@ -381,18 +381,18 @@ class _$PageImpl implements _Page {
       required this.user,
       @ListPageContentConverter()
       required final List<AbstractPageContent> content,
-      required final List<Map<String, dynamic>> variables,
+      final List<Map<String, dynamic>>? variables,
       required this.title,
       required this.name,
       this.summary,
-      required this.hideTitleWhenPinned,
-      required this.alignCenter,
-      required this.font,
+      this.hideTitleWhenPinned,
+      this.alignCenter,
+      this.font,
       this.script,
       this.eyeCatchingImageId,
       this.eyeCatchingImage,
-      required final List<DriveFile> attachedFiles,
-      required this.likedCount,
+      final List<DriveFile>? attachedFiles,
+      this.likedCount,
       this.isLiked})
       : _content = content,
         _variables = variables,
@@ -422,12 +422,14 @@ class _$PageImpl implements _Page {
     return EqualUnmodifiableListView(_content);
   }
 
-  final List<Map<String, dynamic>> _variables;
+  final List<Map<String, dynamic>>? _variables;
   @override
-  List<Map<String, dynamic>> get variables {
+  List<Map<String, dynamic>>? get variables {
+    final value = _variables;
+    if (value == null) return null;
     if (_variables is EqualUnmodifiableListView) return _variables;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_variables);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
@@ -437,27 +439,29 @@ class _$PageImpl implements _Page {
   @override
   final String? summary;
   @override
-  final bool hideTitleWhenPinned;
+  final bool? hideTitleWhenPinned;
   @override
-  final bool alignCenter;
+  final bool? alignCenter;
   @override
-  final String font;
+  final String? font;
   @override
   final String? script;
   @override
   final String? eyeCatchingImageId;
   @override
   final DriveFile? eyeCatchingImage;
-  final List<DriveFile> _attachedFiles;
+  final List<DriveFile>? _attachedFiles;
   @override
-  List<DriveFile> get attachedFiles {
+  List<DriveFile>? get attachedFiles {
+    final value = _attachedFiles;
+    if (value == null) return null;
     if (_attachedFiles is EqualUnmodifiableListView) return _attachedFiles;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_attachedFiles);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
-  final int likedCount;
+  final int? likedCount;
   @override
   final bool? isLiked;
 
@@ -551,18 +555,18 @@ abstract class _Page implements Page {
       required final UserLite user,
       @ListPageContentConverter()
       required final List<AbstractPageContent> content,
-      required final List<Map<String, dynamic>> variables,
+      final List<Map<String, dynamic>>? variables,
       required final String title,
       required final String name,
       final String? summary,
-      required final bool hideTitleWhenPinned,
-      required final bool alignCenter,
-      required final String font,
+      final bool? hideTitleWhenPinned,
+      final bool? alignCenter,
+      final String? font,
       final String? script,
       final String? eyeCatchingImageId,
       final DriveFile? eyeCatchingImage,
-      required final List<DriveFile> attachedFiles,
-      required final int likedCount,
+      final List<DriveFile>? attachedFiles,
+      final int? likedCount,
       final bool? isLiked}) = _$PageImpl;
 
   factory _Page.fromJson(Map<String, dynamic> json) = _$PageImpl.fromJson;
@@ -583,7 +587,7 @@ abstract class _Page implements Page {
   @ListPageContentConverter()
   List<AbstractPageContent> get content;
   @override
-  List<Map<String, dynamic>> get variables;
+  List<Map<String, dynamic>>? get variables;
   @override
   String get title;
   @override
@@ -591,11 +595,11 @@ abstract class _Page implements Page {
   @override
   String? get summary;
   @override
-  bool get hideTitleWhenPinned;
+  bool? get hideTitleWhenPinned;
   @override
-  bool get alignCenter;
+  bool? get alignCenter;
   @override
-  String get font;
+  String? get font;
   @override
   String? get script;
   @override
@@ -603,9 +607,9 @@ abstract class _Page implements Page {
   @override
   DriveFile? get eyeCatchingImage;
   @override
-  List<DriveFile> get attachedFiles;
+  List<DriveFile>? get attachedFiles;
   @override
-  int get likedCount;
+  int? get likedCount;
   @override
   bool? get isLiked;
 
@@ -810,7 +814,7 @@ mixin _$PageSection {
   PageContentType? get type => throw _privateConstructorUsedError;
   String? get title => throw _privateConstructorUsedError;
   @ListPageContentConverter()
-  List<AbstractPageContent> get children => throw _privateConstructorUsedError;
+  List<AbstractPageContent>? get children => throw _privateConstructorUsedError;
 
   /// Serializes this PageSection to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -832,7 +836,7 @@ abstract class $PageSectionCopyWith<$Res> {
       {String id,
       PageContentType? type,
       String? title,
-      @ListPageContentConverter() List<AbstractPageContent> children});
+      @ListPageContentConverter() List<AbstractPageContent>? children});
 }
 
 /// @nodoc
@@ -853,7 +857,7 @@ class _$PageSectionCopyWithImpl<$Res, $Val extends PageSection>
     Object? id = null,
     Object? type = freezed,
     Object? title = freezed,
-    Object? children = null,
+    Object? children = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -868,10 +872,10 @@ class _$PageSectionCopyWithImpl<$Res, $Val extends PageSection>
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      children: null == children
+      children: freezed == children
           ? _value.children
           : children // ignore: cast_nullable_to_non_nullable
-              as List<AbstractPageContent>,
+              as List<AbstractPageContent>?,
     ) as $Val);
   }
 }
@@ -888,7 +892,7 @@ abstract class _$$PageSectionImplCopyWith<$Res>
       {String id,
       PageContentType? type,
       String? title,
-      @ListPageContentConverter() List<AbstractPageContent> children});
+      @ListPageContentConverter() List<AbstractPageContent>? children});
 }
 
 /// @nodoc
@@ -907,7 +911,7 @@ class __$$PageSectionImplCopyWithImpl<$Res>
     Object? id = null,
     Object? type = freezed,
     Object? title = freezed,
-    Object? children = null,
+    Object? children = freezed,
   }) {
     return _then(_$PageSectionImpl(
       id: null == id
@@ -922,10 +926,10 @@ class __$$PageSectionImplCopyWithImpl<$Res>
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      children: null == children
+      children: freezed == children
           ? _value._children
           : children // ignore: cast_nullable_to_non_nullable
-              as List<AbstractPageContent>,
+              as List<AbstractPageContent>?,
     ));
   }
 }
@@ -937,8 +941,7 @@ class _$PageSectionImpl implements _PageSection {
       {required this.id,
       this.type,
       this.title,
-      @ListPageContentConverter()
-      final List<AbstractPageContent> children = const []})
+      @ListPageContentConverter() final List<AbstractPageContent>? children})
       : _children = children;
 
   factory _$PageSectionImpl.fromJson(Map<String, dynamic> json) =>
@@ -950,14 +953,15 @@ class _$PageSectionImpl implements _PageSection {
   final PageContentType? type;
   @override
   final String? title;
-  final List<AbstractPageContent> _children;
+  final List<AbstractPageContent>? _children;
   @override
-  @JsonKey()
   @ListPageContentConverter()
-  List<AbstractPageContent> get children {
+  List<AbstractPageContent>? get children {
+    final value = _children;
+    if (value == null) return null;
     if (_children is EqualUnmodifiableListView) return _children;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_children);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
@@ -1003,7 +1007,7 @@ abstract class _PageSection implements PageSection {
       final PageContentType? type,
       final String? title,
       @ListPageContentConverter()
-      final List<AbstractPageContent> children}) = _$PageSectionImpl;
+      final List<AbstractPageContent>? children}) = _$PageSectionImpl;
 
   factory _PageSection.fromJson(Map<String, dynamic> json) =
       _$PageSectionImpl.fromJson;
@@ -1016,7 +1020,7 @@ abstract class _PageSection implements PageSection {
   String? get title;
   @override
   @ListPageContentConverter()
-  List<AbstractPageContent> get children;
+  List<AbstractPageContent>? get children;
 
   /// Create a copy of PageSection
   /// with the given fields replaced by the non-null parameter values.
@@ -1034,7 +1038,7 @@ PageImage _$PageImageFromJson(Map<String, dynamic> json) {
 mixin _$PageImage {
   String get id => throw _privateConstructorUsedError;
   PageContentType? get type => throw _privateConstructorUsedError;
-  String get fileId => throw _privateConstructorUsedError;
+  String? get fileId => throw _privateConstructorUsedError;
 
   /// Serializes this PageImage to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1051,7 +1055,7 @@ abstract class $PageImageCopyWith<$Res> {
   factory $PageImageCopyWith(PageImage value, $Res Function(PageImage) then) =
       _$PageImageCopyWithImpl<$Res, PageImage>;
   @useResult
-  $Res call({String id, PageContentType? type, String fileId});
+  $Res call({String id, PageContentType? type, String? fileId});
 }
 
 /// @nodoc
@@ -1071,7 +1075,7 @@ class _$PageImageCopyWithImpl<$Res, $Val extends PageImage>
   $Res call({
     Object? id = null,
     Object? type = freezed,
-    Object? fileId = null,
+    Object? fileId = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -1082,10 +1086,10 @@ class _$PageImageCopyWithImpl<$Res, $Val extends PageImage>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as PageContentType?,
-      fileId: null == fileId
+      fileId: freezed == fileId
           ? _value.fileId
           : fileId // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -1098,7 +1102,7 @@ abstract class _$$PageImageImplCopyWith<$Res>
       __$$PageImageImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String id, PageContentType? type, String fileId});
+  $Res call({String id, PageContentType? type, String? fileId});
 }
 
 /// @nodoc
@@ -1116,7 +1120,7 @@ class __$$PageImageImplCopyWithImpl<$Res>
   $Res call({
     Object? id = null,
     Object? type = freezed,
-    Object? fileId = null,
+    Object? fileId = freezed,
   }) {
     return _then(_$PageImageImpl(
       id: null == id
@@ -1127,10 +1131,10 @@ class __$$PageImageImplCopyWithImpl<$Res>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as PageContentType?,
-      fileId: null == fileId
+      fileId: freezed == fileId
           ? _value.fileId
           : fileId // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -1138,7 +1142,7 @@ class __$$PageImageImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$PageImageImpl implements _PageImage {
-  const _$PageImageImpl({required this.id, this.type, required this.fileId});
+  const _$PageImageImpl({required this.id, this.type, this.fileId});
 
   factory _$PageImageImpl.fromJson(Map<String, dynamic> json) =>
       _$$PageImageImplFromJson(json);
@@ -1148,7 +1152,7 @@ class _$PageImageImpl implements _PageImage {
   @override
   final PageContentType? type;
   @override
-  final String fileId;
+  final String? fileId;
 
   @override
   String toString() {
@@ -1189,7 +1193,7 @@ abstract class _PageImage implements PageImage {
   const factory _PageImage(
       {required final String id,
       final PageContentType? type,
-      required final String fileId}) = _$PageImageImpl;
+      final String? fileId}) = _$PageImageImpl;
 
   factory _PageImage.fromJson(Map<String, dynamic> json) =
       _$PageImageImpl.fromJson;
@@ -1199,7 +1203,7 @@ abstract class _PageImage implements PageImage {
   @override
   PageContentType? get type;
   @override
-  String get fileId;
+  String? get fileId;
 
   /// Create a copy of PageImage
   /// with the given fields replaced by the non-null parameter values.
@@ -1217,8 +1221,8 @@ PageNote _$PageNoteFromJson(Map<String, dynamic> json) {
 mixin _$PageNote {
   String get id => throw _privateConstructorUsedError;
   PageContentType? get type => throw _privateConstructorUsedError;
-  String get note => throw _privateConstructorUsedError;
-  bool get detailed => throw _privateConstructorUsedError;
+  String? get note => throw _privateConstructorUsedError;
+  bool? get detailed => throw _privateConstructorUsedError;
 
   /// Serializes this PageNote to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1235,7 +1239,7 @@ abstract class $PageNoteCopyWith<$Res> {
   factory $PageNoteCopyWith(PageNote value, $Res Function(PageNote) then) =
       _$PageNoteCopyWithImpl<$Res, PageNote>;
   @useResult
-  $Res call({String id, PageContentType? type, String note, bool detailed});
+  $Res call({String id, PageContentType? type, String? note, bool? detailed});
 }
 
 /// @nodoc
@@ -1255,8 +1259,8 @@ class _$PageNoteCopyWithImpl<$Res, $Val extends PageNote>
   $Res call({
     Object? id = null,
     Object? type = freezed,
-    Object? note = null,
-    Object? detailed = null,
+    Object? note = freezed,
+    Object? detailed = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -1267,14 +1271,14 @@ class _$PageNoteCopyWithImpl<$Res, $Val extends PageNote>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as PageContentType?,
-      note: null == note
+      note: freezed == note
           ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
-              as String,
-      detailed: null == detailed
+              as String?,
+      detailed: freezed == detailed
           ? _value.detailed
           : detailed // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ) as $Val);
   }
 }
@@ -1287,7 +1291,7 @@ abstract class _$$PageNoteImplCopyWith<$Res>
       __$$PageNoteImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String id, PageContentType? type, String note, bool detailed});
+  $Res call({String id, PageContentType? type, String? note, bool? detailed});
 }
 
 /// @nodoc
@@ -1305,8 +1309,8 @@ class __$$PageNoteImplCopyWithImpl<$Res>
   $Res call({
     Object? id = null,
     Object? type = freezed,
-    Object? note = null,
-    Object? detailed = null,
+    Object? note = freezed,
+    Object? detailed = freezed,
   }) {
     return _then(_$PageNoteImpl(
       id: null == id
@@ -1317,14 +1321,14 @@ class __$$PageNoteImplCopyWithImpl<$Res>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as PageContentType?,
-      note: null == note
+      note: freezed == note
           ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
-              as String,
-      detailed: null == detailed
+              as String?,
+      detailed: freezed == detailed
           ? _value.detailed
           : detailed // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ));
   }
 }
@@ -1332,8 +1336,7 @@ class __$$PageNoteImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$PageNoteImpl implements _PageNote {
-  const _$PageNoteImpl(
-      {required this.id, this.type, required this.note, this.detailed = false});
+  const _$PageNoteImpl({required this.id, this.type, this.note, this.detailed});
 
   factory _$PageNoteImpl.fromJson(Map<String, dynamic> json) =>
       _$$PageNoteImplFromJson(json);
@@ -1343,10 +1346,9 @@ class _$PageNoteImpl implements _PageNote {
   @override
   final PageContentType? type;
   @override
-  final String note;
+  final String? note;
   @override
-  @JsonKey()
-  final bool detailed;
+  final bool? detailed;
 
   @override
   String toString() {
@@ -1389,8 +1391,8 @@ abstract class _PageNote implements PageNote {
   const factory _PageNote(
       {required final String id,
       final PageContentType? type,
-      required final String note,
-      final bool detailed}) = _$PageNoteImpl;
+      final String? note,
+      final bool? detailed}) = _$PageNoteImpl;
 
   factory _PageNote.fromJson(Map<String, dynamic> json) =
       _$PageNoteImpl.fromJson;
@@ -1400,9 +1402,9 @@ abstract class _PageNote implements PageNote {
   @override
   PageContentType? get type;
   @override
-  String get note;
+  String? get note;
   @override
-  bool get detailed;
+  bool? get detailed;
 
   /// Create a copy of PageNote
   /// with the given fields replaced by the non-null parameter values.
@@ -1418,7 +1420,9 @@ PageUnknown _$PageUnknownFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PageUnknown {
-  String get id => throw _privateConstructorUsedError;
+  String get id =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   PageContentType? get type => throw _privateConstructorUsedError;
 
   /// Serializes this PageUnknown to a JSON map.
@@ -1437,7 +1441,10 @@ abstract class $PageUnknownCopyWith<$Res> {
           PageUnknown value, $Res Function(PageUnknown) then) =
       _$PageUnknownCopyWithImpl<$Res, PageUnknown>;
   @useResult
-  $Res call({String id, PageContentType? type});
+  $Res call(
+      {String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      PageContentType? type});
 }
 
 /// @nodoc
@@ -1479,7 +1486,10 @@ abstract class _$$PageUnknownImplCopyWith<$Res>
       __$$PageUnknownImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String id, PageContentType? type});
+  $Res call(
+      {String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      PageContentType? type});
 }
 
 /// @nodoc
@@ -1514,14 +1524,18 @@ class __$$PageUnknownImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$PageUnknownImpl implements _PageUnknown {
-  const _$PageUnknownImpl({required this.id, this.type});
+  const _$PageUnknownImpl(
+      {required this.id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type});
 
   factory _$PageUnknownImpl.fromJson(Map<String, dynamic> json) =>
       _$$PageUnknownImplFromJson(json);
 
   @override
   final String id;
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final PageContentType? type;
 
   @override
@@ -1561,14 +1575,16 @@ class _$PageUnknownImpl implements _PageUnknown {
 abstract class _PageUnknown implements PageUnknown {
   const factory _PageUnknown(
       {required final String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final PageContentType? type}) = _$PageUnknownImpl;
 
   factory _PageUnknown.fromJson(Map<String, dynamic> json) =
       _$PageUnknownImpl.fromJson;
 
   @override
-  String get id;
+  String get id; // ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   PageContentType? get type;
 
   /// Create a copy of PageUnknown

@@ -23,16 +23,16 @@ _$PageImpl _$$PageImplFromJson(Map<String, dynamic> json) => $checkedCreate(
               (v) => const ListPageContentConverter().fromJson(v as List?)),
           variables: $checkedConvert(
               'variables',
-              (v) => (v as List<dynamic>)
-                  .map((e) => e as Map<String, dynamic>)
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => e as Map<String, dynamic>)
                   .toList()),
           title: $checkedConvert('title', (v) => v as String),
           name: $checkedConvert('name', (v) => v as String),
           summary: $checkedConvert('summary', (v) => v as String?),
           hideTitleWhenPinned:
-              $checkedConvert('hideTitleWhenPinned', (v) => v as bool),
-          alignCenter: $checkedConvert('alignCenter', (v) => v as bool),
-          font: $checkedConvert('font', (v) => v as String),
+              $checkedConvert('hideTitleWhenPinned', (v) => v as bool?),
+          alignCenter: $checkedConvert('alignCenter', (v) => v as bool?),
+          font: $checkedConvert('font', (v) => v as String?),
           script: $checkedConvert('script', (v) => v as String?),
           eyeCatchingImageId:
               $checkedConvert('eyeCatchingImageId', (v) => v as String?),
@@ -43,10 +43,11 @@ _$PageImpl _$$PageImplFromJson(Map<String, dynamic> json) => $checkedCreate(
                   : DriveFile.fromJson(v as Map<String, dynamic>)),
           attachedFiles: $checkedConvert(
               'attachedFiles',
-              (v) => (v as List<dynamic>)
-                  .map((e) => DriveFile.fromJson(e as Map<String, dynamic>))
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => DriveFile.fromJson(e as Map<String, dynamic>))
                   .toList()),
-          likedCount: $checkedConvert('likedCount', (v) => (v as num).toInt()),
+          likedCount:
+              $checkedConvert('likedCount', (v) => (v as num?)?.toInt()),
           isLiked: $checkedConvert('isLiked', (v) => v as bool?),
         );
         return val;
@@ -71,7 +72,7 @@ Map<String, dynamic> _$$PageImplToJson(_$PageImpl instance) =>
       'script': instance.script,
       'eyeCatchingImageId': instance.eyeCatchingImageId,
       'eyeCatchingImage': instance.eyeCatchingImage?.toJson(),
-      'attachedFiles': instance.attachedFiles.map((e) => e.toJson()).toList(),
+      'attachedFiles': instance.attachedFiles?.map((e) => e.toJson()).toList(),
       'likedCount': instance.likedCount,
       'isLiked': instance.isLiked,
     };
@@ -126,11 +127,8 @@ _$PageSectionImpl _$$PageSectionImplFromJson(Map<String, dynamic> json) =>
           type: $checkedConvert(
               'type', (v) => $enumDecodeNullable(_$PageContentTypeEnumMap, v)),
           title: $checkedConvert('title', (v) => v as String?),
-          children: $checkedConvert(
-              'children',
-              (v) => v == null
-                  ? const []
-                  : const ListPageContentConverter().fromJson(v as List?)),
+          children: $checkedConvert('children',
+              (v) => const ListPageContentConverter().fromJson(v as List?)),
         );
         return val;
       },
@@ -141,8 +139,16 @@ Map<String, dynamic> _$$PageSectionImplToJson(_$PageSectionImpl instance) =>
       'id': instance.id,
       'type': _$PageContentTypeEnumMap[instance.type],
       'title': instance.title,
-      'children': const ListPageContentConverter().toJson(instance.children),
+      'children':
+          _$JsonConverterToJson<List<dynamic>?, List<AbstractPageContent>>(
+              instance.children, const ListPageContentConverter().toJson),
     };
+
+Json? _$JsonConverterToJson<Json, Value>(
+  Value? value,
+  Json? Function(Value value) toJson,
+) =>
+    value == null ? null : toJson(value);
 
 _$PageImageImpl _$$PageImageImplFromJson(Map<String, dynamic> json) =>
     $checkedCreate(
@@ -153,7 +159,7 @@ _$PageImageImpl _$$PageImageImplFromJson(Map<String, dynamic> json) =>
           id: $checkedConvert('id', (v) => v as String),
           type: $checkedConvert(
               'type', (v) => $enumDecodeNullable(_$PageContentTypeEnumMap, v)),
-          fileId: $checkedConvert('fileId', (v) => v as String),
+          fileId: $checkedConvert('fileId', (v) => v as String?),
         );
         return val;
       },
@@ -175,8 +181,8 @@ _$PageNoteImpl _$$PageNoteImplFromJson(Map<String, dynamic> json) =>
           id: $checkedConvert('id', (v) => v as String),
           type: $checkedConvert(
               'type', (v) => $enumDecodeNullable(_$PageContentTypeEnumMap, v)),
-          note: $checkedConvert('note', (v) => v as String),
-          detailed: $checkedConvert('detailed', (v) => v as bool? ?? false),
+          note: $checkedConvert('note', (v) => v as String?),
+          detailed: $checkedConvert('detailed', (v) => v as bool?),
         );
         return val;
       },
@@ -198,7 +204,9 @@ _$PageUnknownImpl _$$PageUnknownImplFromJson(Map<String, dynamic> json) =>
         final val = _$PageUnknownImpl(
           id: $checkedConvert('id', (v) => v as String),
           type: $checkedConvert(
-              'type', (v) => $enumDecodeNullable(_$PageContentTypeEnumMap, v)),
+              'type',
+              (v) => $enumDecodeNullable(_$PageContentTypeEnumMap, v,
+                  unknownValue: JsonKey.nullForUndefinedEnumValue)),
         );
         return val;
       },

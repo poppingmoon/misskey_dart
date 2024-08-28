@@ -15,18 +15,18 @@ class Page with _$Page {
     required String userId,
     required UserLite user,
     @ListPageContentConverter() required List<AbstractPageContent> content,
-    required List<Map<String, dynamic>> variables,
+    List<Map<String, dynamic>>? variables,
     required String title,
     required String name,
     String? summary,
-    required bool hideTitleWhenPinned,
-    required bool alignCenter,
-    required String font,
+    bool? hideTitleWhenPinned,
+    bool? alignCenter,
+    String? font,
     String? script,
     String? eyeCatchingImageId,
     DriveFile? eyeCatchingImage,
-    required List<DriveFile> attachedFiles,
-    required int likedCount,
+    List<DriveFile>? attachedFiles,
+    int? likedCount,
     bool? isLiked,
   }) = _Page;
 
@@ -87,7 +87,7 @@ class PageText with _$PageText implements AbstractPageText {
 
 abstract class AbstractPageSection extends AbstractPageContent {
   String? get title;
-  List<AbstractPageContent> get children;
+  List<AbstractPageContent>? get children;
 }
 
 @freezed
@@ -96,7 +96,7 @@ class PageSection with _$PageSection implements AbstractPageSection {
     required String id,
     PageContentType? type,
     String? title,
-    @ListPageContentConverter() @Default([]) List<AbstractPageContent> children,
+    @ListPageContentConverter() List<AbstractPageContent>? children,
   }) = _PageSection;
 
   factory PageSection.fromJson(Map<String, dynamic> json) =>
@@ -104,7 +104,7 @@ class PageSection with _$PageSection implements AbstractPageSection {
 }
 
 abstract class AbstractPageImage extends AbstractPageContent {
-  String get fileId;
+  String? get fileId;
 }
 
 @freezed
@@ -112,7 +112,7 @@ class PageImage with _$PageImage implements AbstractPageImage {
   const factory PageImage({
     required String id,
     PageContentType? type,
-    required String fileId,
+    String? fileId,
   }) = _PageImage;
 
   factory PageImage.fromJson(Map<String, dynamic> json) =>
@@ -120,8 +120,8 @@ class PageImage with _$PageImage implements AbstractPageImage {
 }
 
 abstract class AbstractPageNote extends AbstractPageContent {
-  String get note;
-  bool get detailed;
+  String? get note;
+  bool? get detailed;
 }
 
 @freezed
@@ -129,8 +129,8 @@ class PageNote with _$PageNote implements AbstractPageNote {
   const factory PageNote({
     required String id,
     PageContentType? type,
-    required String note,
-    @Default(false) bool detailed,
+    String? note,
+    bool? detailed,
   }) = _PageNote;
 
   factory PageNote.fromJson(Map<String, dynamic> json) =>
@@ -143,6 +143,8 @@ abstract class AbstractPageUnknown extends AbstractPageContent {}
 class PageUnknown with _$PageUnknown implements AbstractPageUnknown {
   const factory PageUnknown({
     required String id,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     PageContentType? type,
   }) = _PageUnknown;
 
