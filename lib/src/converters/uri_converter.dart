@@ -5,7 +5,7 @@ class NullableUriConverter extends JsonConverter<Uri?, String> {
 
   @override
   Uri? fromJson(String json) {
-    return json.isEmpty ? null : Uri.tryParse(json);
+    return json.isEmpty ? null : Uri.tryParse(json.trim());
   }
 
   @override
@@ -19,7 +19,7 @@ class UriConverter extends JsonConverter<Uri, String> {
 
   @override
   Uri fromJson(String json) {
-    return Uri.parse(json);
+    return Uri.parse(json.trim());
   }
 
   @override
