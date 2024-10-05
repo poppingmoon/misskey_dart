@@ -69,9 +69,9 @@ abstract class UserDetailed implements User {
   FFVisibility? get ffVisibility;
   FFVisibility? get followersVisibility;
   FFVisibility? get followingVisibility;
-  bool get twoFactorEnabled;
-  bool get usePasswordLessLogin;
-  bool get securityKeys;
+  bool? get twoFactorEnabled;
+  bool? get usePasswordLessLogin;
+  bool? get securityKeys;
   List<UserRole>? get roles;
   String? get memo;
   String? get moderationNote;
@@ -174,11 +174,12 @@ class UserDetailedNotMe with _$UserDetailedNotMe implements UserDetailed {
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     FFVisibility? followingVisibility,
-    required bool twoFactorEnabled,
-    // Added in Misskey 11.25.0
-    @Default(false) bool usePasswordLessLogin,
-    // Added in Misskey 11.24.0
-    @Default(false) bool securityKeys,
+    // Removed in Misskey 2024.10.0
+    bool? twoFactorEnabled,
+    // Added in Misskey 11.25.0, Removed in Misskey 2024.10.0
+    bool? usePasswordLessLogin,
+    // Added in Misskey 11.24.0, Removed in Misskey 2024.10.0
+    bool? securityKeys,
     List<UserRole>? roles,
     String? memo,
     String? moderationNote,
@@ -248,11 +249,12 @@ class UserDetailedNotMeWithRelations
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     FFVisibility? followingVisibility,
-    required bool twoFactorEnabled,
-    // Added in Misskey 11.25.0
-    @Default(false) bool usePasswordLessLogin,
-    // Added in Misskey 11.24.0
-    @Default(false) bool securityKeys,
+    // Removed in Misskey 2024.10.0
+    bool? twoFactorEnabled,
+    // Added in Misskey 11.25.0, Removed in Misskey 2024.10.0
+    bool? usePasswordLessLogin,
+    // Added in Misskey 11.24.0, Removed in Misskey 2024.10.0
+    bool? securityKeys,
     List<UserRole>? roles,
     String? memo,
     String? moderationNote,
@@ -331,11 +333,13 @@ class MeDetailed with _$MeDetailed implements UserDetailed {
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     FFVisibility? followingVisibility,
-    required bool twoFactorEnabled,
+    bool? twoFactorEnabled,
     // Added in Misskey 11.25.0
-    @Default(false) bool usePasswordLessLogin,
+    // Removed in Misskey 2024.10.0
+    bool? usePasswordLessLogin,
     // Added in Misskey 11.24.0
-    @Default(false) bool securityKeys,
+    // Removed in Misskey 2024.10.0
+    bool? securityKeys,
     List<UserRole>? roles,
     String? memo,
     String? moderationNote,

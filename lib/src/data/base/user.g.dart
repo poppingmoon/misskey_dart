@@ -223,11 +223,10 @@ _$UserDetailedNotMeImpl _$$UserDetailedNotMeImplFromJson(
               (v) => $enumDecodeNullable(_$FFVisibilityEnumMap, v,
                   unknownValue: JsonKey.nullForUndefinedEnumValue)),
           twoFactorEnabled:
-              $checkedConvert('twoFactorEnabled', (v) => v as bool),
-          usePasswordLessLogin: $checkedConvert(
-              'usePasswordLessLogin', (v) => v as bool? ?? false),
-          securityKeys:
-              $checkedConvert('securityKeys', (v) => v as bool? ?? false),
+              $checkedConvert('twoFactorEnabled', (v) => v as bool?),
+          usePasswordLessLogin:
+              $checkedConvert('usePasswordLessLogin', (v) => v as bool?),
+          securityKeys: $checkedConvert('securityKeys', (v) => v as bool?),
           roles: $checkedConvert(
               'roles',
               (v) => (v as List<dynamic>?)
@@ -448,11 +447,10 @@ _$UserDetailedNotMeWithRelationsImpl
                   (v) => $enumDecodeNullable(_$FFVisibilityEnumMap, v,
                       unknownValue: JsonKey.nullForUndefinedEnumValue)),
               twoFactorEnabled:
-                  $checkedConvert('twoFactorEnabled', (v) => v as bool),
-              usePasswordLessLogin: $checkedConvert(
-                  'usePasswordLessLogin', (v) => v as bool? ?? false),
-              securityKeys:
-                  $checkedConvert('securityKeys', (v) => v as bool? ?? false),
+                  $checkedConvert('twoFactorEnabled', (v) => v as bool?),
+              usePasswordLessLogin:
+                  $checkedConvert('usePasswordLessLogin', (v) => v as bool?),
+              securityKeys: $checkedConvert('securityKeys', (v) => v as bool?),
               roles: $checkedConvert(
                   'roles',
                   (v) => (v as List<dynamic>?)
@@ -687,11 +685,10 @@ _$MeDetailedImpl _$$MeDetailedImplFromJson(Map<String, dynamic> json) =>
               (v) => $enumDecodeNullable(_$FFVisibilityEnumMap, v,
                   unknownValue: JsonKey.nullForUndefinedEnumValue)),
           twoFactorEnabled:
-              $checkedConvert('twoFactorEnabled', (v) => v as bool),
-          usePasswordLessLogin: $checkedConvert(
-              'usePasswordLessLogin', (v) => v as bool? ?? false),
-          securityKeys:
-              $checkedConvert('securityKeys', (v) => v as bool? ?? false),
+              $checkedConvert('twoFactorEnabled', (v) => v as bool?),
+          usePasswordLessLogin:
+              $checkedConvert('usePasswordLessLogin', (v) => v as bool?),
+          securityKeys: $checkedConvert('securityKeys', (v) => v as bool?),
           roles: $checkedConvert(
               'roles',
               (v) => (v as List<dynamic>?)

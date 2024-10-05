@@ -561,12 +561,13 @@ mixin _$UserDetailedNotMe {
   FFVisibility? get followersVisibility =>
       throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-  FFVisibility? get followingVisibility => throw _privateConstructorUsedError;
-  bool get twoFactorEnabled =>
-      throw _privateConstructorUsedError; // Added in Misskey 11.25.0
-  bool get usePasswordLessLogin =>
-      throw _privateConstructorUsedError; // Added in Misskey 11.24.0
-  bool get securityKeys => throw _privateConstructorUsedError;
+  FFVisibility? get followingVisibility =>
+      throw _privateConstructorUsedError; // Removed in Misskey 2024.10.0
+  bool? get twoFactorEnabled =>
+      throw _privateConstructorUsedError; // Added in Misskey 11.25.0, Removed in Misskey 2024.10.0
+  bool? get usePasswordLessLogin =>
+      throw _privateConstructorUsedError; // Added in Misskey 11.24.0, Removed in Misskey 2024.10.0
+  bool? get securityKeys => throw _privateConstructorUsedError;
   List<UserRole>? get roles => throw _privateConstructorUsedError;
   String? get memo => throw _privateConstructorUsedError;
   String? get moderationNote => throw _privateConstructorUsedError;
@@ -636,9 +637,9 @@ abstract class $UserDetailedNotMeCopyWith<$Res> {
       FFVisibility? followersVisibility,
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       FFVisibility? followingVisibility,
-      bool twoFactorEnabled,
-      bool usePasswordLessLogin,
-      bool securityKeys,
+      bool? twoFactorEnabled,
+      bool? usePasswordLessLogin,
+      bool? securityKeys,
       List<UserRole>? roles,
       String? memo,
       String? moderationNote});
@@ -704,9 +705,9 @@ class _$UserDetailedNotMeCopyWithImpl<$Res, $Val extends UserDetailedNotMe>
     Object? ffVisibility = freezed,
     Object? followersVisibility = freezed,
     Object? followingVisibility = freezed,
-    Object? twoFactorEnabled = null,
-    Object? usePasswordLessLogin = null,
-    Object? securityKeys = null,
+    Object? twoFactorEnabled = freezed,
+    Object? usePasswordLessLogin = freezed,
+    Object? securityKeys = freezed,
     Object? roles = freezed,
     Object? memo = freezed,
     Object? moderationNote = freezed,
@@ -884,18 +885,18 @@ class _$UserDetailedNotMeCopyWithImpl<$Res, $Val extends UserDetailedNotMe>
           ? _value.followingVisibility
           : followingVisibility // ignore: cast_nullable_to_non_nullable
               as FFVisibility?,
-      twoFactorEnabled: null == twoFactorEnabled
+      twoFactorEnabled: freezed == twoFactorEnabled
           ? _value.twoFactorEnabled
           : twoFactorEnabled // ignore: cast_nullable_to_non_nullable
-              as bool,
-      usePasswordLessLogin: null == usePasswordLessLogin
+              as bool?,
+      usePasswordLessLogin: freezed == usePasswordLessLogin
           ? _value.usePasswordLessLogin
           : usePasswordLessLogin // ignore: cast_nullable_to_non_nullable
-              as bool,
-      securityKeys: null == securityKeys
+              as bool?,
+      securityKeys: freezed == securityKeys
           ? _value.securityKeys
           : securityKeys // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       roles: freezed == roles
           ? _value.roles
           : roles // ignore: cast_nullable_to_non_nullable
@@ -983,9 +984,9 @@ abstract class _$$UserDetailedNotMeImplCopyWith<$Res>
       FFVisibility? followersVisibility,
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       FFVisibility? followingVisibility,
-      bool twoFactorEnabled,
-      bool usePasswordLessLogin,
-      bool securityKeys,
+      bool? twoFactorEnabled,
+      bool? usePasswordLessLogin,
+      bool? securityKeys,
       List<UserRole>? roles,
       String? memo,
       String? moderationNote});
@@ -1050,9 +1051,9 @@ class __$$UserDetailedNotMeImplCopyWithImpl<$Res>
     Object? ffVisibility = freezed,
     Object? followersVisibility = freezed,
     Object? followingVisibility = freezed,
-    Object? twoFactorEnabled = null,
-    Object? usePasswordLessLogin = null,
-    Object? securityKeys = null,
+    Object? twoFactorEnabled = freezed,
+    Object? usePasswordLessLogin = freezed,
+    Object? securityKeys = freezed,
     Object? roles = freezed,
     Object? memo = freezed,
     Object? moderationNote = freezed,
@@ -1230,18 +1231,18 @@ class __$$UserDetailedNotMeImplCopyWithImpl<$Res>
           ? _value.followingVisibility
           : followingVisibility // ignore: cast_nullable_to_non_nullable
               as FFVisibility?,
-      twoFactorEnabled: null == twoFactorEnabled
+      twoFactorEnabled: freezed == twoFactorEnabled
           ? _value.twoFactorEnabled
           : twoFactorEnabled // ignore: cast_nullable_to_non_nullable
-              as bool,
-      usePasswordLessLogin: null == usePasswordLessLogin
+              as bool?,
+      usePasswordLessLogin: freezed == usePasswordLessLogin
           ? _value.usePasswordLessLogin
           : usePasswordLessLogin // ignore: cast_nullable_to_non_nullable
-              as bool,
-      securityKeys: null == securityKeys
+              as bool?,
+      securityKeys: freezed == securityKeys
           ? _value.securityKeys
           : securityKeys // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       roles: freezed == roles
           ? _value._roles
           : roles // ignore: cast_nullable_to_non_nullable
@@ -1310,9 +1311,9 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
       this.followersVisibility,
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.followingVisibility,
-      required this.twoFactorEnabled,
-      this.usePasswordLessLogin = false,
-      this.securityKeys = false,
+      this.twoFactorEnabled,
+      this.usePasswordLessLogin,
+      this.securityKeys,
       final List<UserRole>? roles,
       this.memo,
       this.moderationNote})
@@ -1520,16 +1521,15 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final FFVisibility? followingVisibility;
+// Removed in Misskey 2024.10.0
   @override
-  final bool twoFactorEnabled;
-// Added in Misskey 11.25.0
+  final bool? twoFactorEnabled;
+// Added in Misskey 11.25.0, Removed in Misskey 2024.10.0
   @override
-  @JsonKey()
-  final bool usePasswordLessLogin;
-// Added in Misskey 11.24.0
+  final bool? usePasswordLessLogin;
+// Added in Misskey 11.24.0, Removed in Misskey 2024.10.0
   @override
-  @JsonKey()
-  final bool securityKeys;
+  final bool? securityKeys;
   final List<UserRole>? _roles;
   @override
   List<UserRole>? get roles {
@@ -1764,9 +1764,9 @@ abstract class _UserDetailedNotMe implements UserDetailedNotMe {
       final FFVisibility? followersVisibility,
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final FFVisibility? followingVisibility,
-      required final bool twoFactorEnabled,
-      final bool usePasswordLessLogin,
-      final bool securityKeys,
+      final bool? twoFactorEnabled,
+      final bool? usePasswordLessLogin,
+      final bool? securityKeys,
       final List<UserRole>? roles,
       final String? memo,
       final String? moderationNote}) = _$UserDetailedNotMeImpl;
@@ -1877,13 +1877,15 @@ abstract class _UserDetailedNotMe implements UserDetailedNotMe {
   FFVisibility? get followersVisibility; // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-  FFVisibility? get followingVisibility;
+  FFVisibility? get followingVisibility; // Removed in Misskey 2024.10.0
   @override
-  bool get twoFactorEnabled; // Added in Misskey 11.25.0
+  bool?
+      get twoFactorEnabled; // Added in Misskey 11.25.0, Removed in Misskey 2024.10.0
   @override
-  bool get usePasswordLessLogin; // Added in Misskey 11.24.0
+  bool?
+      get usePasswordLessLogin; // Added in Misskey 11.24.0, Removed in Misskey 2024.10.0
   @override
-  bool get securityKeys;
+  bool? get securityKeys;
   @override
   List<UserRole>? get roles;
   @override
@@ -1973,12 +1975,13 @@ mixin _$UserDetailedNotMeWithRelations {
   FFVisibility? get followersVisibility =>
       throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-  FFVisibility? get followingVisibility => throw _privateConstructorUsedError;
-  bool get twoFactorEnabled =>
-      throw _privateConstructorUsedError; // Added in Misskey 11.25.0
-  bool get usePasswordLessLogin =>
-      throw _privateConstructorUsedError; // Added in Misskey 11.24.0
-  bool get securityKeys => throw _privateConstructorUsedError;
+  FFVisibility? get followingVisibility =>
+      throw _privateConstructorUsedError; // Removed in Misskey 2024.10.0
+  bool? get twoFactorEnabled =>
+      throw _privateConstructorUsedError; // Added in Misskey 11.25.0, Removed in Misskey 2024.10.0
+  bool? get usePasswordLessLogin =>
+      throw _privateConstructorUsedError; // Added in Misskey 11.24.0, Removed in Misskey 2024.10.0
+  bool? get securityKeys => throw _privateConstructorUsedError;
   List<UserRole>? get roles => throw _privateConstructorUsedError;
   String? get memo => throw _privateConstructorUsedError;
   String? get moderationNote => throw _privateConstructorUsedError;
@@ -2061,9 +2064,9 @@ abstract class $UserDetailedNotMeWithRelationsCopyWith<$Res> {
       FFVisibility? followersVisibility,
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       FFVisibility? followingVisibility,
-      bool twoFactorEnabled,
-      bool usePasswordLessLogin,
-      bool securityKeys,
+      bool? twoFactorEnabled,
+      bool? usePasswordLessLogin,
+      bool? securityKeys,
       List<UserRole>? roles,
       String? memo,
       String? moderationNote,
@@ -2140,9 +2143,9 @@ class _$UserDetailedNotMeWithRelationsCopyWithImpl<$Res,
     Object? ffVisibility = freezed,
     Object? followersVisibility = freezed,
     Object? followingVisibility = freezed,
-    Object? twoFactorEnabled = null,
-    Object? usePasswordLessLogin = null,
-    Object? securityKeys = null,
+    Object? twoFactorEnabled = freezed,
+    Object? usePasswordLessLogin = freezed,
+    Object? securityKeys = freezed,
     Object? roles = freezed,
     Object? memo = freezed,
     Object? moderationNote = freezed,
@@ -2330,18 +2333,18 @@ class _$UserDetailedNotMeWithRelationsCopyWithImpl<$Res,
           ? _value.followingVisibility
           : followingVisibility // ignore: cast_nullable_to_non_nullable
               as FFVisibility?,
-      twoFactorEnabled: null == twoFactorEnabled
+      twoFactorEnabled: freezed == twoFactorEnabled
           ? _value.twoFactorEnabled
           : twoFactorEnabled // ignore: cast_nullable_to_non_nullable
-              as bool,
-      usePasswordLessLogin: null == usePasswordLessLogin
+              as bool?,
+      usePasswordLessLogin: freezed == usePasswordLessLogin
           ? _value.usePasswordLessLogin
           : usePasswordLessLogin // ignore: cast_nullable_to_non_nullable
-              as bool,
-      securityKeys: null == securityKeys
+              as bool?,
+      securityKeys: freezed == securityKeys
           ? _value.securityKeys
           : securityKeys // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       roles: freezed == roles
           ? _value.roles
           : roles // ignore: cast_nullable_to_non_nullable
@@ -2470,9 +2473,9 @@ abstract class _$$UserDetailedNotMeWithRelationsImplCopyWith<$Res>
       FFVisibility? followersVisibility,
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       FFVisibility? followingVisibility,
-      bool twoFactorEnabled,
-      bool usePasswordLessLogin,
-      bool securityKeys,
+      bool? twoFactorEnabled,
+      bool? usePasswordLessLogin,
+      bool? securityKeys,
       List<UserRole>? roles,
       String? memo,
       String? moderationNote,
@@ -2549,9 +2552,9 @@ class __$$UserDetailedNotMeWithRelationsImplCopyWithImpl<$Res>
     Object? ffVisibility = freezed,
     Object? followersVisibility = freezed,
     Object? followingVisibility = freezed,
-    Object? twoFactorEnabled = null,
-    Object? usePasswordLessLogin = null,
-    Object? securityKeys = null,
+    Object? twoFactorEnabled = freezed,
+    Object? usePasswordLessLogin = freezed,
+    Object? securityKeys = freezed,
     Object? roles = freezed,
     Object? memo = freezed,
     Object? moderationNote = freezed,
@@ -2739,18 +2742,18 @@ class __$$UserDetailedNotMeWithRelationsImplCopyWithImpl<$Res>
           ? _value.followingVisibility
           : followingVisibility // ignore: cast_nullable_to_non_nullable
               as FFVisibility?,
-      twoFactorEnabled: null == twoFactorEnabled
+      twoFactorEnabled: freezed == twoFactorEnabled
           ? _value.twoFactorEnabled
           : twoFactorEnabled // ignore: cast_nullable_to_non_nullable
-              as bool,
-      usePasswordLessLogin: null == usePasswordLessLogin
+              as bool?,
+      usePasswordLessLogin: freezed == usePasswordLessLogin
           ? _value.usePasswordLessLogin
           : usePasswordLessLogin // ignore: cast_nullable_to_non_nullable
-              as bool,
-      securityKeys: null == securityKeys
+              as bool?,
+      securityKeys: freezed == securityKeys
           ? _value.securityKeys
           : securityKeys // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       roles: freezed == roles
           ? _value._roles
           : roles // ignore: cast_nullable_to_non_nullable
@@ -2860,9 +2863,9 @@ class _$UserDetailedNotMeWithRelationsImpl
       this.followersVisibility,
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.followingVisibility,
-      required this.twoFactorEnabled,
-      this.usePasswordLessLogin = false,
-      this.securityKeys = false,
+      this.twoFactorEnabled,
+      this.usePasswordLessLogin,
+      this.securityKeys,
       final List<UserRole>? roles,
       this.memo,
       this.moderationNote,
@@ -3081,16 +3084,15 @@ class _$UserDetailedNotMeWithRelationsImpl
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final FFVisibility? followingVisibility;
+// Removed in Misskey 2024.10.0
   @override
-  final bool twoFactorEnabled;
-// Added in Misskey 11.25.0
+  final bool? twoFactorEnabled;
+// Added in Misskey 11.25.0, Removed in Misskey 2024.10.0
   @override
-  @JsonKey()
-  final bool usePasswordLessLogin;
-// Added in Misskey 11.24.0
+  final bool? usePasswordLessLogin;
+// Added in Misskey 11.24.0, Removed in Misskey 2024.10.0
   @override
-  @JsonKey()
-  final bool securityKeys;
+  final bool? securityKeys;
   final List<UserRole>? _roles;
   @override
   List<UserRole>? get roles {
@@ -3376,9 +3378,9 @@ abstract class _UserDetailedNotMeWithRelations
       final FFVisibility? followersVisibility,
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final FFVisibility? followingVisibility,
-      required final bool twoFactorEnabled,
-      final bool usePasswordLessLogin,
-      final bool securityKeys,
+      final bool? twoFactorEnabled,
+      final bool? usePasswordLessLogin,
+      final bool? securityKeys,
       final List<UserRole>? roles,
       final String? memo,
       final String? moderationNote,
@@ -3499,13 +3501,15 @@ abstract class _UserDetailedNotMeWithRelations
   FFVisibility? get followersVisibility; // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-  FFVisibility? get followingVisibility;
+  FFVisibility? get followingVisibility; // Removed in Misskey 2024.10.0
   @override
-  bool get twoFactorEnabled; // Added in Misskey 11.25.0
+  bool?
+      get twoFactorEnabled; // Added in Misskey 11.25.0, Removed in Misskey 2024.10.0
   @override
-  bool get usePasswordLessLogin; // Added in Misskey 11.24.0
+  bool?
+      get usePasswordLessLogin; // Added in Misskey 11.24.0, Removed in Misskey 2024.10.0
   @override
-  bool get securityKeys;
+  bool? get securityKeys;
   @override
   List<UserRole>? get roles;
   @override
@@ -3616,11 +3620,13 @@ mixin _$MeDetailed {
       throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FFVisibility? get followingVisibility => throw _privateConstructorUsedError;
-  bool get twoFactorEnabled =>
+  bool? get twoFactorEnabled =>
       throw _privateConstructorUsedError; // Added in Misskey 11.25.0
-  bool get usePasswordLessLogin =>
+// Removed in Misskey 2024.10.0
+  bool? get usePasswordLessLogin =>
       throw _privateConstructorUsedError; // Added in Misskey 11.24.0
-  bool get securityKeys => throw _privateConstructorUsedError;
+// Removed in Misskey 2024.10.0
+  bool? get securityKeys => throw _privateConstructorUsedError;
   List<UserRole>? get roles => throw _privateConstructorUsedError;
   String? get memo => throw _privateConstructorUsedError;
   String? get moderationNote => throw _privateConstructorUsedError;
@@ -3748,9 +3754,9 @@ abstract class $MeDetailedCopyWith<$Res> {
       FFVisibility? followersVisibility,
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       FFVisibility? followingVisibility,
-      bool twoFactorEnabled,
-      bool usePasswordLessLogin,
-      bool securityKeys,
+      bool? twoFactorEnabled,
+      bool? usePasswordLessLogin,
+      bool? securityKeys,
       List<UserRole>? roles,
       String? memo,
       String? moderationNote,
@@ -3854,9 +3860,9 @@ class _$MeDetailedCopyWithImpl<$Res, $Val extends MeDetailed>
     Object? ffVisibility = freezed,
     Object? followersVisibility = freezed,
     Object? followingVisibility = freezed,
-    Object? twoFactorEnabled = null,
-    Object? usePasswordLessLogin = null,
-    Object? securityKeys = null,
+    Object? twoFactorEnabled = freezed,
+    Object? usePasswordLessLogin = freezed,
+    Object? securityKeys = freezed,
     Object? roles = freezed,
     Object? memo = freezed,
     Object? moderationNote = freezed,
@@ -4068,18 +4074,18 @@ class _$MeDetailedCopyWithImpl<$Res, $Val extends MeDetailed>
           ? _value.followingVisibility
           : followingVisibility // ignore: cast_nullable_to_non_nullable
               as FFVisibility?,
-      twoFactorEnabled: null == twoFactorEnabled
+      twoFactorEnabled: freezed == twoFactorEnabled
           ? _value.twoFactorEnabled
           : twoFactorEnabled // ignore: cast_nullable_to_non_nullable
-              as bool,
-      usePasswordLessLogin: null == usePasswordLessLogin
+              as bool?,
+      usePasswordLessLogin: freezed == usePasswordLessLogin
           ? _value.usePasswordLessLogin
           : usePasswordLessLogin // ignore: cast_nullable_to_non_nullable
-              as bool,
-      securityKeys: null == securityKeys
+              as bool?,
+      securityKeys: freezed == securityKeys
           ? _value.securityKeys
           : securityKeys // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       roles: freezed == roles
           ? _value.roles
           : roles // ignore: cast_nullable_to_non_nullable
@@ -4328,9 +4334,9 @@ abstract class _$$MeDetailedImplCopyWith<$Res>
       FFVisibility? followersVisibility,
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       FFVisibility? followingVisibility,
-      bool twoFactorEnabled,
-      bool usePasswordLessLogin,
-      bool securityKeys,
+      bool? twoFactorEnabled,
+      bool? usePasswordLessLogin,
+      bool? securityKeys,
       List<UserRole>? roles,
       String? memo,
       String? moderationNote,
@@ -4435,9 +4441,9 @@ class __$$MeDetailedImplCopyWithImpl<$Res>
     Object? ffVisibility = freezed,
     Object? followersVisibility = freezed,
     Object? followingVisibility = freezed,
-    Object? twoFactorEnabled = null,
-    Object? usePasswordLessLogin = null,
-    Object? securityKeys = null,
+    Object? twoFactorEnabled = freezed,
+    Object? usePasswordLessLogin = freezed,
+    Object? securityKeys = freezed,
     Object? roles = freezed,
     Object? memo = freezed,
     Object? moderationNote = freezed,
@@ -4649,18 +4655,18 @@ class __$$MeDetailedImplCopyWithImpl<$Res>
           ? _value.followingVisibility
           : followingVisibility // ignore: cast_nullable_to_non_nullable
               as FFVisibility?,
-      twoFactorEnabled: null == twoFactorEnabled
+      twoFactorEnabled: freezed == twoFactorEnabled
           ? _value.twoFactorEnabled
           : twoFactorEnabled // ignore: cast_nullable_to_non_nullable
-              as bool,
-      usePasswordLessLogin: null == usePasswordLessLogin
+              as bool?,
+      usePasswordLessLogin: freezed == usePasswordLessLogin
           ? _value.usePasswordLessLogin
           : usePasswordLessLogin // ignore: cast_nullable_to_non_nullable
-              as bool,
-      securityKeys: null == securityKeys
+              as bool?,
+      securityKeys: freezed == securityKeys
           ? _value.securityKeys
           : securityKeys // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       roles: freezed == roles
           ? _value._roles
           : roles // ignore: cast_nullable_to_non_nullable
@@ -4865,9 +4871,9 @@ class _$MeDetailedImpl implements _MeDetailed {
       this.followersVisibility,
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.followingVisibility,
-      required this.twoFactorEnabled,
-      this.usePasswordLessLogin = false,
-      this.securityKeys = false,
+      this.twoFactorEnabled,
+      this.usePasswordLessLogin,
+      this.securityKeys,
       final List<UserRole>? roles,
       this.memo,
       this.moderationNote,
@@ -5119,15 +5125,15 @@ class _$MeDetailedImpl implements _MeDetailed {
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final FFVisibility? followingVisibility;
   @override
-  final bool twoFactorEnabled;
+  final bool? twoFactorEnabled;
 // Added in Misskey 11.25.0
+// Removed in Misskey 2024.10.0
   @override
-  @JsonKey()
-  final bool usePasswordLessLogin;
+  final bool? usePasswordLessLogin;
 // Added in Misskey 11.24.0
+// Removed in Misskey 2024.10.0
   @override
-  @JsonKey()
-  final bool securityKeys;
+  final bool? securityKeys;
   final List<UserRole>? _roles;
   @override
   List<UserRole>? get roles {
@@ -5598,9 +5604,9 @@ abstract class _MeDetailed implements MeDetailed {
       final FFVisibility? followersVisibility,
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final FFVisibility? followingVisibility,
-      required final bool twoFactorEnabled,
-      final bool usePasswordLessLogin,
-      final bool securityKeys,
+      final bool? twoFactorEnabled,
+      final bool? usePasswordLessLogin,
+      final bool? securityKeys,
       final List<UserRole>? roles,
       final String? memo,
       final String? moderationNote,
@@ -5749,11 +5755,13 @@ abstract class _MeDetailed implements MeDetailed {
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FFVisibility? get followingVisibility;
   @override
-  bool get twoFactorEnabled; // Added in Misskey 11.25.0
+  bool? get twoFactorEnabled; // Added in Misskey 11.25.0
+// Removed in Misskey 2024.10.0
   @override
-  bool get usePasswordLessLogin; // Added in Misskey 11.24.0
+  bool? get usePasswordLessLogin; // Added in Misskey 11.24.0
+// Removed in Misskey 2024.10.0
   @override
-  bool get securityKeys;
+  bool? get securityKeys;
   @override
   List<UserRole>? get roles;
   @override
