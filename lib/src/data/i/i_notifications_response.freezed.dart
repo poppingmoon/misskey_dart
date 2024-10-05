@@ -43,7 +43,13 @@ mixin _$INotificationsResponse {
   RolesListResponse? get role => throw _privateConstructorUsedError;
   List<INotificationsReaction>? get reactions =>
       throw _privateConstructorUsedError;
-  List<UserLite>? get users => throw _privateConstructorUsedError;
+  List<UserLite>? get users =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  UserExportableEntities? get exportedEntity =>
+      throw _privateConstructorUsedError;
+  String? get fileId => throw _privateConstructorUsedError;
+  String? get message => throw _privateConstructorUsedError;
 
   /// Serializes this INotificationsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -80,7 +86,11 @@ abstract class $INotificationsResponseCopyWith<$Res> {
       Note? note,
       RolesListResponse? role,
       List<INotificationsReaction>? reactions,
-      List<UserLite>? users});
+      List<UserLite>? users,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      UserExportableEntities? exportedEntity,
+      String? fileId,
+      String? message});
 
   $UserLiteCopyWith<$Res>? get user;
   $NoteCopyWith<$Res>? get note;
@@ -121,6 +131,9 @@ class _$INotificationsResponseCopyWithImpl<$Res,
     Object? role = freezed,
     Object? reactions = freezed,
     Object? users = freezed,
+    Object? exportedEntity = freezed,
+    Object? fileId = freezed,
+    Object? message = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -195,6 +208,18 @@ class _$INotificationsResponseCopyWithImpl<$Res,
           ? _value.users
           : users // ignore: cast_nullable_to_non_nullable
               as List<UserLite>?,
+      exportedEntity: freezed == exportedEntity
+          ? _value.exportedEntity
+          : exportedEntity // ignore: cast_nullable_to_non_nullable
+              as UserExportableEntities?,
+      fileId: freezed == fileId
+          ? _value.fileId
+          : fileId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      message: freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 
@@ -269,7 +294,11 @@ abstract class _$$INotificationsResponseImplCopyWith<$Res>
       Note? note,
       RolesListResponse? role,
       List<INotificationsReaction>? reactions,
-      List<UserLite>? users});
+      List<UserLite>? users,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      UserExportableEntities? exportedEntity,
+      String? fileId,
+      String? message});
 
   @override
   $UserLiteCopyWith<$Res>? get user;
@@ -312,6 +341,9 @@ class __$$INotificationsResponseImplCopyWithImpl<$Res>
     Object? role = freezed,
     Object? reactions = freezed,
     Object? users = freezed,
+    Object? exportedEntity = freezed,
+    Object? fileId = freezed,
+    Object? message = freezed,
   }) {
     return _then(_$INotificationsResponseImpl(
       id: null == id
@@ -386,6 +418,18 @@ class __$$INotificationsResponseImplCopyWithImpl<$Res>
           ? _value._users
           : users // ignore: cast_nullable_to_non_nullable
               as List<UserLite>?,
+      exportedEntity: freezed == exportedEntity
+          ? _value.exportedEntity
+          : exportedEntity // ignore: cast_nullable_to_non_nullable
+              as UserExportableEntities?,
+      fileId: freezed == fileId
+          ? _value.fileId
+          : fileId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      message: freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -411,7 +455,11 @@ class _$INotificationsResponseImpl implements _INotificationsResponse {
       this.note,
       this.role,
       final List<INotificationsReaction>? reactions,
-      final List<UserLite>? users})
+      final List<UserLite>? users,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      this.exportedEntity,
+      this.fileId,
+      this.message})
       : _reactions = reactions,
         _users = users;
 
@@ -474,9 +522,18 @@ class _$INotificationsResponseImpl implements _INotificationsResponse {
     return EqualUnmodifiableListView(value);
   }
 
+// ignore: invalid_annotation_target
+  @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final UserExportableEntities? exportedEntity;
+  @override
+  final String? fileId;
+  @override
+  final String? message;
+
   @override
   String toString() {
-    return 'INotificationsResponse(id: $id, createdAt: $createdAt, type: $type, noteId: $noteId, followRequestId: $followRequestId, reaction: $reaction, choice: $choice, achievement: $achievement, body: $body, header: $header, icon: $icon, appAccessTokenId: $appAccessTokenId, userId: $userId, user: $user, note: $note, role: $role, reactions: $reactions, users: $users)';
+    return 'INotificationsResponse(id: $id, createdAt: $createdAt, type: $type, noteId: $noteId, followRequestId: $followRequestId, reaction: $reaction, choice: $choice, achievement: $achievement, body: $body, header: $header, icon: $icon, appAccessTokenId: $appAccessTokenId, userId: $userId, user: $user, note: $note, role: $role, reactions: $reactions, users: $users, exportedEntity: $exportedEntity, fileId: $fileId, message: $message)';
   }
 
   @override
@@ -507,31 +564,39 @@ class _$INotificationsResponseImpl implements _INotificationsResponse {
             (identical(other.role, role) || other.role == role) &&
             const DeepCollectionEquality()
                 .equals(other._reactions, _reactions) &&
-            const DeepCollectionEquality().equals(other._users, _users));
+            const DeepCollectionEquality().equals(other._users, _users) &&
+            (identical(other.exportedEntity, exportedEntity) ||
+                other.exportedEntity == exportedEntity) &&
+            (identical(other.fileId, fileId) || other.fileId == fileId) &&
+            (identical(other.message, message) || other.message == message));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      createdAt,
-      type,
-      noteId,
-      followRequestId,
-      reaction,
-      choice,
-      achievement,
-      body,
-      header,
-      icon,
-      appAccessTokenId,
-      userId,
-      user,
-      note,
-      role,
-      const DeepCollectionEquality().hash(_reactions),
-      const DeepCollectionEquality().hash(_users));
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        id,
+        createdAt,
+        type,
+        noteId,
+        followRequestId,
+        reaction,
+        choice,
+        achievement,
+        body,
+        header,
+        icon,
+        appAccessTokenId,
+        userId,
+        user,
+        note,
+        role,
+        const DeepCollectionEquality().hash(_reactions),
+        const DeepCollectionEquality().hash(_users),
+        exportedEntity,
+        fileId,
+        message
+      ]);
 
   /// Create a copy of INotificationsResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -570,7 +635,11 @@ abstract class _INotificationsResponse implements INotificationsResponse {
       final Note? note,
       final RolesListResponse? role,
       final List<INotificationsReaction>? reactions,
-      final List<UserLite>? users}) = _$INotificationsResponseImpl;
+      final List<UserLite>? users,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      final UserExportableEntities? exportedEntity,
+      final String? fileId,
+      final String? message}) = _$INotificationsResponseImpl;
 
   factory _INotificationsResponse.fromJson(Map<String, dynamic> json) =
       _$INotificationsResponseImpl.fromJson;
@@ -613,7 +682,14 @@ abstract class _INotificationsResponse implements INotificationsResponse {
   @override
   List<INotificationsReaction>? get reactions;
   @override
-  List<UserLite>? get users;
+  List<UserLite>? get users; // ignore: invalid_annotation_target
+  @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  UserExportableEntities? get exportedEntity;
+  @override
+  String? get fileId;
+  @override
+  String? get message;
 
   /// Create a copy of INotificationsResponse
   /// with the given fields replaced by the non-null parameter values.

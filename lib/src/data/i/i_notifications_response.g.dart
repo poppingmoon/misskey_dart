@@ -60,6 +60,12 @@ _$INotificationsResponseImpl _$$INotificationsResponseImplFromJson(
               (v) => (v as List<dynamic>?)
                   ?.map((e) => UserLite.fromJson(e as Map<String, dynamic>))
                   .toList()),
+          exportedEntity: $checkedConvert(
+              'exportedEntity',
+              (v) => $enumDecodeNullable(_$UserExportableEntitiesEnumMap, v,
+                  unknownValue: JsonKey.nullForUndefinedEnumValue)),
+          fileId: $checkedConvert('fileId', (v) => v as String?),
+          message: $checkedConvert('message', (v) => v as String?),
         );
         return val;
       },
@@ -86,6 +92,10 @@ Map<String, dynamic> _$$INotificationsResponseImplToJson(
       'role': instance.role?.toJson(),
       'reactions': instance.reactions?.map((e) => e.toJson()).toList(),
       'users': instance.users?.map((e) => e.toJson()).toList(),
+      'exportedEntity':
+          _$UserExportableEntitiesEnumMap[instance.exportedEntity],
+      'fileId': instance.fileId,
+      'message': instance.message,
     };
 
 const _$NotificationTypeEnumMap = {
@@ -107,6 +117,8 @@ const _$NotificationTypeEnumMap = {
   NotificationType.reactionGrouped: 'reaction:grouped',
   NotificationType.renoteGrouped: 'renote:grouped',
   NotificationType.roleAssigned: 'roleAssigned',
+  NotificationType.exportCompleted: 'exportCompleted',
+  NotificationType.login: 'login',
 };
 
 Value? _$JsonConverterFromJson<Json, Value>(
@@ -114,6 +126,18 @@ Value? _$JsonConverterFromJson<Json, Value>(
   Value? Function(Json json) fromJson,
 ) =>
     json == null ? null : fromJson(json as Json);
+
+const _$UserExportableEntitiesEnumMap = {
+  UserExportableEntities.note: 'note',
+  UserExportableEntities.antenna: 'antenna',
+  UserExportableEntities.blocking: 'blocking',
+  UserExportableEntities.clip: 'clip',
+  UserExportableEntities.customEmoji: 'customEmoji',
+  UserExportableEntities.favorite: 'favorite',
+  UserExportableEntities.following: 'following',
+  UserExportableEntities.muting: 'muting',
+  UserExportableEntities.userList: 'userList',
+};
 
 _$INotificationsReactionImpl _$$INotificationsReactionImplFromJson(
         Map<String, dynamic> json) =>

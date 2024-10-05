@@ -29,6 +29,11 @@ class INotificationsResponse with _$INotificationsResponse {
     RolesListResponse? role,
     List<INotificationsReaction>? reactions,
     List<UserLite>? users,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    UserExportableEntities? exportedEntity,
+    String? fileId,
+    String? message,
   }) = _INotificationsResponse;
 
   factory INotificationsResponse.fromJson(Map<String, Object?> json) =>
@@ -44,4 +49,16 @@ class INotificationsReaction with _$INotificationsReaction {
 
   factory INotificationsReaction.fromJson(Map<String, Object?> json) =>
       _$INotificationsReactionFromJson(json);
+}
+
+enum UserExportableEntities {
+  note,
+  antenna,
+  blocking,
+  clip,
+  customEmoji,
+  favorite,
+  following,
+  muting,
+  userList
 }
