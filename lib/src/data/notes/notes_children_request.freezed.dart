@@ -22,6 +22,7 @@ NotesChildrenRequest _$NotesChildrenRequestFromJson(Map<String, dynamic> json) {
 mixin _$NotesChildrenRequest {
   String get noteId => throw _privateConstructorUsedError;
   int? get limit => throw _privateConstructorUsedError;
+  int? get depth => throw _privateConstructorUsedError;
   String? get sinceId => throw _privateConstructorUsedError;
   String? get untilId => throw _privateConstructorUsedError;
 
@@ -41,7 +42,12 @@ abstract class $NotesChildrenRequestCopyWith<$Res> {
           $Res Function(NotesChildrenRequest) then) =
       _$NotesChildrenRequestCopyWithImpl<$Res, NotesChildrenRequest>;
   @useResult
-  $Res call({String noteId, int? limit, String? sinceId, String? untilId});
+  $Res call(
+      {String noteId,
+      int? limit,
+      int? depth,
+      String? sinceId,
+      String? untilId});
 }
 
 /// @nodoc
@@ -62,6 +68,7 @@ class _$NotesChildrenRequestCopyWithImpl<$Res,
   $Res call({
     Object? noteId = null,
     Object? limit = freezed,
+    Object? depth = freezed,
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
@@ -73,6 +80,10 @@ class _$NotesChildrenRequestCopyWithImpl<$Res,
       limit: freezed == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      depth: freezed == depth
+          ? _value.depth
+          : depth // ignore: cast_nullable_to_non_nullable
               as int?,
       sinceId: freezed == sinceId
           ? _value.sinceId
@@ -94,7 +105,12 @@ abstract class _$$NotesChildrenRequestImplCopyWith<$Res>
       __$$NotesChildrenRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String noteId, int? limit, String? sinceId, String? untilId});
+  $Res call(
+      {String noteId,
+      int? limit,
+      int? depth,
+      String? sinceId,
+      String? untilId});
 }
 
 /// @nodoc
@@ -112,6 +128,7 @@ class __$$NotesChildrenRequestImplCopyWithImpl<$Res>
   $Res call({
     Object? noteId = null,
     Object? limit = freezed,
+    Object? depth = freezed,
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
@@ -123,6 +140,10 @@ class __$$NotesChildrenRequestImplCopyWithImpl<$Res>
       limit: freezed == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      depth: freezed == depth
+          ? _value.depth
+          : depth // ignore: cast_nullable_to_non_nullable
               as int?,
       sinceId: freezed == sinceId
           ? _value.sinceId
@@ -140,7 +161,11 @@ class __$$NotesChildrenRequestImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$NotesChildrenRequestImpl implements _NotesChildrenRequest {
   const _$NotesChildrenRequestImpl(
-      {required this.noteId, this.limit, this.sinceId, this.untilId});
+      {required this.noteId,
+      this.limit,
+      this.depth,
+      this.sinceId,
+      this.untilId});
 
   factory _$NotesChildrenRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$NotesChildrenRequestImplFromJson(json);
@@ -150,13 +175,15 @@ class _$NotesChildrenRequestImpl implements _NotesChildrenRequest {
   @override
   final int? limit;
   @override
+  final int? depth;
+  @override
   final String? sinceId;
   @override
   final String? untilId;
 
   @override
   String toString() {
-    return 'NotesChildrenRequest(noteId: $noteId, limit: $limit, sinceId: $sinceId, untilId: $untilId)';
+    return 'NotesChildrenRequest(noteId: $noteId, limit: $limit, depth: $depth, sinceId: $sinceId, untilId: $untilId)';
   }
 
   @override
@@ -166,13 +193,15 @@ class _$NotesChildrenRequestImpl implements _NotesChildrenRequest {
             other is _$NotesChildrenRequestImpl &&
             (identical(other.noteId, noteId) || other.noteId == noteId) &&
             (identical(other.limit, limit) || other.limit == limit) &&
+            (identical(other.depth, depth) || other.depth == depth) &&
             (identical(other.sinceId, sinceId) || other.sinceId == sinceId) &&
             (identical(other.untilId, untilId) || other.untilId == untilId));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, noteId, limit, sinceId, untilId);
+  int get hashCode =>
+      Object.hash(runtimeType, noteId, limit, depth, sinceId, untilId);
 
   /// Create a copy of NotesChildrenRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -196,6 +225,7 @@ abstract class _NotesChildrenRequest implements NotesChildrenRequest {
   const factory _NotesChildrenRequest(
       {required final String noteId,
       final int? limit,
+      final int? depth,
       final String? sinceId,
       final String? untilId}) = _$NotesChildrenRequestImpl;
 
@@ -206,6 +236,8 @@ abstract class _NotesChildrenRequest implements NotesChildrenRequest {
   String get noteId;
   @override
   int? get limit;
+  @override
+  int? get depth;
   @override
   String? get sinceId;
   @override
