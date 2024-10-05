@@ -14,6 +14,8 @@ _$IUpdateRequestImpl _$$IUpdateRequestImplFromJson(Map<String, dynamic> json) =>
         final val = _$IUpdateRequestImpl(
           name: $checkedConvert('name', (v) => v as String?),
           description: $checkedConvert('description', (v) => v as String?),
+          followedMessage:
+              $checkedConvert('followedMessage', (v) => v as String?),
           location: $checkedConvert('location', (v) => v as String?),
           birthday: $checkedConvert('birthday', (v) => v),
           lang: $checkedConvert('lang', (v) => v as String?),
@@ -97,6 +99,7 @@ Map<String, dynamic> _$$IUpdateRequestImplToJson(
     <String, dynamic>{
       'name': instance.name,
       'description': instance.description,
+      'followedMessage': instance.followedMessage,
       'location': instance.location,
       'birthday': instance.birthday,
       'lang': instance.lang,

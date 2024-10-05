@@ -269,6 +269,7 @@ class UserDetailedNotMeWithRelations
     @Default(false) bool isRenoteMuted,
     Notify? notify,
     bool? withReplies,
+    String? followedMessage,
   }) = _UserDetailedNotMeWithRelations;
 
   factory UserDetailedNotMeWithRelations.fromJson(Map<String, Object?> json) =>
@@ -345,6 +346,7 @@ class MeDetailed with _$MeDetailed implements UserDetailed {
     String? moderationNote,
     String? avatarId,
     String? bannerId,
+    String? followedMessage,
     required bool isModerator,
     required bool isAdmin,
     // Added in Misskey 12.13.0

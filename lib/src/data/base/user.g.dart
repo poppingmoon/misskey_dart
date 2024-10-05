@@ -473,6 +473,8 @@ _$UserDetailedNotMeWithRelationsImpl
               notify: $checkedConvert(
                   'notify', (v) => $enumDecodeNullable(_$NotifyEnumMap, v)),
               withReplies: $checkedConvert('withReplies', (v) => v as bool?),
+              followedMessage:
+                  $checkedConvert('followedMessage', (v) => v as String?),
             );
             return val;
           },
@@ -545,6 +547,7 @@ Map<String, dynamic> _$$UserDetailedNotMeWithRelationsImplToJson(
       'isRenoteMuted': instance.isRenoteMuted,
       'notify': _$NotifyEnumMap[instance.notify],
       'withReplies': instance.withReplies,
+      'followedMessage': instance.followedMessage,
     };
 
 const _$NotifyEnumMap = {
@@ -699,6 +702,8 @@ _$MeDetailedImpl _$$MeDetailedImplFromJson(Map<String, dynamic> json) =>
               $checkedConvert('moderationNote', (v) => v as String?),
           avatarId: $checkedConvert('avatarId', (v) => v as String?),
           bannerId: $checkedConvert('bannerId', (v) => v as String?),
+          followedMessage:
+              $checkedConvert('followedMessage', (v) => v as String?),
           isModerator: $checkedConvert('isModerator', (v) => v as bool),
           isAdmin: $checkedConvert('isAdmin', (v) => v as bool),
           injectFeaturedNote:
@@ -853,6 +858,7 @@ Map<String, dynamic> _$$MeDetailedImplToJson(_$MeDetailedImpl instance) =>
       'moderationNote': instance.moderationNote,
       'avatarId': instance.avatarId,
       'bannerId': instance.bannerId,
+      'followedMessage': instance.followedMessage,
       'isModerator': instance.isModerator,
       'isAdmin': instance.isAdmin,
       'injectFeaturedNote': instance.injectFeaturedNote,
