@@ -196,8 +196,6 @@ export 'src/data/roles/roles_show_request.dart';
 export 'src/data/roles/roles_users_request.dart';
 export 'src/data/roles/roles_users_response.dart';
 export 'src/data/server_info_response.dart';
-export 'src/data/signin_request.dart';
-export 'src/data/signin_response.dart';
 export 'src/data/stats_response.dart';
 export 'src/data/sw/sw_register_request.dart';
 export 'src/data/sw/sw_register_response.dart';

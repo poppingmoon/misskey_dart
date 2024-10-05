@@ -139,10 +139,4 @@ class Misskey {
     final response = await apiService.post<List>("pinned-users", {});
     return response.map((e) => UserDetailed.fromJson(e));
   }
-
-  Future<SigninResponse> signin(SigninRequest request) async {
-    final response =
-        await apiService.post<Map<String, dynamic>>("signin", request.toJson());
-    return SigninResponse.fromJson(response);
-  }
 }

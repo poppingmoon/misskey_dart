@@ -1,6 +1,5 @@
 import 'package:misskey_dart/misskey_dart.dart';
 import 'package:test/test.dart';
-import 'package:uuid/uuid.dart';
 
 import 'util/misskey_dart_test_util.dart';
 
@@ -61,20 +60,6 @@ void main() async {
       });
       final response = await userClient.pinnedUsers();
       expect(response.map((e) => e.id), contains(newUser.id));
-    });
-
-    test("signin", () async {
-      final username = Uuid().v4().replaceAll("-", "").substring(0, 20);
-      final user = await adminClient.apiService.post<Map<String, dynamic>>(
-        "admin/accounts/create",
-        {
-          "username": username,
-          "password": "test",
-        },
-      );
-      final response = await userClient
-          .signin(SigninRequest(username: username, password: "test"));
-      expect(response.id, equals(user["id"]));
     });
   });
 }
