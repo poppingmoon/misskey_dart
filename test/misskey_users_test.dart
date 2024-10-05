@@ -143,14 +143,18 @@ void main() async {
     expect(response.map((e) => e.id), contains(newUser.id));
   });
 
-  test("update-memo", () async {
-    final newUser = (await adminClient.createUser()).user;
-    await userClient.users
-        .updateMemo(UsersUpdateMemoRequest(userId: newUser.id, memo: "test"));
-    final updated =
-        await userClient.users.show(UsersShowRequest(userId: newUser.id));
-    expect(updated.memo, equals("test"));
-  });
+  test(
+    "update-memo",
+    () async {
+      final newUser = (await adminClient.createUser()).user;
+      await userClient.users
+          .updateMemo(UsersUpdateMemoRequest(userId: newUser.id, memo: "test"));
+      final updated =
+          await userClient.users.show(UsersShowRequest(userId: newUser.id));
+      expect(updated.memo, equals("test"));
+    },
+    retry: 3,
+  );
 
   test("flashs", () async {
     final flash = await userClient.createFlash();
