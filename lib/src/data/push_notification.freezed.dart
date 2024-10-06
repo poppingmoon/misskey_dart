@@ -291,7 +291,13 @@ mixin _$PushNotificationBody {
   RolesListResponse? get role => throw _privateConstructorUsedError;
   List<INotificationsReaction>? get reactions =>
       throw _privateConstructorUsedError;
-  List<UserLite>? get users => throw _privateConstructorUsedError;
+  List<UserLite>? get users =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  UserExportableEntities? get exportedEntity =>
+      throw _privateConstructorUsedError;
+  String? get fileId => throw _privateConstructorUsedError;
+  String? get message => throw _privateConstructorUsedError;
 
   /// Serializes this PushNotificationBody to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -328,7 +334,11 @@ abstract class $PushNotificationBodyCopyWith<$Res> {
       PushNotificationNote? note,
       RolesListResponse? role,
       List<INotificationsReaction>? reactions,
-      List<UserLite>? users});
+      List<UserLite>? users,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      UserExportableEntities? exportedEntity,
+      String? fileId,
+      String? message});
 
   $UserLiteCopyWith<$Res>? get user;
   $PushNotificationNoteCopyWith<$Res>? get note;
@@ -369,6 +379,9 @@ class _$PushNotificationBodyCopyWithImpl<$Res,
     Object? role = freezed,
     Object? reactions = freezed,
     Object? users = freezed,
+    Object? exportedEntity = freezed,
+    Object? fileId = freezed,
+    Object? message = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -443,6 +456,18 @@ class _$PushNotificationBodyCopyWithImpl<$Res,
           ? _value.users
           : users // ignore: cast_nullable_to_non_nullable
               as List<UserLite>?,
+      exportedEntity: freezed == exportedEntity
+          ? _value.exportedEntity
+          : exportedEntity // ignore: cast_nullable_to_non_nullable
+              as UserExportableEntities?,
+      fileId: freezed == fileId
+          ? _value.fileId
+          : fileId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      message: freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 
@@ -516,7 +541,11 @@ abstract class _$$PushNotificationBodyImplCopyWith<$Res>
       PushNotificationNote? note,
       RolesListResponse? role,
       List<INotificationsReaction>? reactions,
-      List<UserLite>? users});
+      List<UserLite>? users,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      UserExportableEntities? exportedEntity,
+      String? fileId,
+      String? message});
 
   @override
   $UserLiteCopyWith<$Res>? get user;
@@ -557,6 +586,9 @@ class __$$PushNotificationBodyImplCopyWithImpl<$Res>
     Object? role = freezed,
     Object? reactions = freezed,
     Object? users = freezed,
+    Object? exportedEntity = freezed,
+    Object? fileId = freezed,
+    Object? message = freezed,
   }) {
     return _then(_$PushNotificationBodyImpl(
       id: null == id
@@ -631,6 +663,18 @@ class __$$PushNotificationBodyImplCopyWithImpl<$Res>
           ? _value._users
           : users // ignore: cast_nullable_to_non_nullable
               as List<UserLite>?,
+      exportedEntity: freezed == exportedEntity
+          ? _value.exportedEntity
+          : exportedEntity // ignore: cast_nullable_to_non_nullable
+              as UserExportableEntities?,
+      fileId: freezed == fileId
+          ? _value.fileId
+          : fileId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      message: freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -656,7 +700,11 @@ class _$PushNotificationBodyImpl implements _PushNotificationBody {
       this.note,
       this.role,
       final List<INotificationsReaction>? reactions,
-      final List<UserLite>? users})
+      final List<UserLite>? users,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      this.exportedEntity,
+      this.fileId,
+      this.message})
       : _reactions = reactions,
         _users = users;
 
@@ -719,9 +767,18 @@ class _$PushNotificationBodyImpl implements _PushNotificationBody {
     return EqualUnmodifiableListView(value);
   }
 
+// ignore: invalid_annotation_target
+  @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final UserExportableEntities? exportedEntity;
+  @override
+  final String? fileId;
+  @override
+  final String? message;
+
   @override
   String toString() {
-    return 'PushNotificationBody(id: $id, createdAt: $createdAt, type: $type, noteId: $noteId, followRequestId: $followRequestId, reaction: $reaction, choice: $choice, achievement: $achievement, body: $body, header: $header, icon: $icon, appAccessTokenId: $appAccessTokenId, userId: $userId, user: $user, note: $note, role: $role, reactions: $reactions, users: $users)';
+    return 'PushNotificationBody(id: $id, createdAt: $createdAt, type: $type, noteId: $noteId, followRequestId: $followRequestId, reaction: $reaction, choice: $choice, achievement: $achievement, body: $body, header: $header, icon: $icon, appAccessTokenId: $appAccessTokenId, userId: $userId, user: $user, note: $note, role: $role, reactions: $reactions, users: $users, exportedEntity: $exportedEntity, fileId: $fileId, message: $message)';
   }
 
   @override
@@ -752,31 +809,39 @@ class _$PushNotificationBodyImpl implements _PushNotificationBody {
             (identical(other.role, role) || other.role == role) &&
             const DeepCollectionEquality()
                 .equals(other._reactions, _reactions) &&
-            const DeepCollectionEquality().equals(other._users, _users));
+            const DeepCollectionEquality().equals(other._users, _users) &&
+            (identical(other.exportedEntity, exportedEntity) ||
+                other.exportedEntity == exportedEntity) &&
+            (identical(other.fileId, fileId) || other.fileId == fileId) &&
+            (identical(other.message, message) || other.message == message));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      createdAt,
-      type,
-      noteId,
-      followRequestId,
-      reaction,
-      choice,
-      achievement,
-      body,
-      header,
-      icon,
-      appAccessTokenId,
-      userId,
-      user,
-      note,
-      role,
-      const DeepCollectionEquality().hash(_reactions),
-      const DeepCollectionEquality().hash(_users));
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        id,
+        createdAt,
+        type,
+        noteId,
+        followRequestId,
+        reaction,
+        choice,
+        achievement,
+        body,
+        header,
+        icon,
+        appAccessTokenId,
+        userId,
+        user,
+        note,
+        role,
+        const DeepCollectionEquality().hash(_reactions),
+        const DeepCollectionEquality().hash(_users),
+        exportedEntity,
+        fileId,
+        message
+      ]);
 
   /// Create a copy of PushNotificationBody
   /// with the given fields replaced by the non-null parameter values.
@@ -816,7 +881,11 @@ abstract class _PushNotificationBody implements PushNotificationBody {
       final PushNotificationNote? note,
       final RolesListResponse? role,
       final List<INotificationsReaction>? reactions,
-      final List<UserLite>? users}) = _$PushNotificationBodyImpl;
+      final List<UserLite>? users,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      final UserExportableEntities? exportedEntity,
+      final String? fileId,
+      final String? message}) = _$PushNotificationBodyImpl;
 
   factory _PushNotificationBody.fromJson(Map<String, dynamic> json) =
       _$PushNotificationBodyImpl.fromJson;
@@ -859,7 +928,14 @@ abstract class _PushNotificationBody implements PushNotificationBody {
   @override
   List<INotificationsReaction>? get reactions;
   @override
-  List<UserLite>? get users;
+  List<UserLite>? get users; // ignore: invalid_annotation_target
+  @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  UserExportableEntities? get exportedEntity;
+  @override
+  String? get fileId;
+  @override
+  String? get message;
 
   /// Create a copy of PushNotificationBody
   /// with the given fields replaced by the non-null parameter values.

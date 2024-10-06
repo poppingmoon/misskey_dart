@@ -50,6 +50,11 @@ class PushNotificationBody with _$PushNotificationBody {
     RolesListResponse? role,
     List<INotificationsReaction>? reactions,
     List<UserLite>? users,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    UserExportableEntities? exportedEntity,
+    String? fileId,
+    String? message,
   }) = _PushNotificationBody;
 
   factory PushNotificationBody.fromJson(Map<String, Object?> json) =>
