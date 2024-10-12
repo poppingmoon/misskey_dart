@@ -118,6 +118,7 @@ void main() async {
   test(
     "search-by-username-and-host",
     () async {
+      await userClient.createNote();
       final response = await userClient.users.searchByUsernameAndHost(
         UsersSearchByUsernameAndHostRequest(username: user.username, host: "."),
       );
