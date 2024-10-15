@@ -6,6 +6,8 @@ part 'sw_register_response.g.dart';
 @freezed
 class SwRegisterResponse with _$SwRegisterResponse {
   const factory SwRegisterResponse({
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     SwRegisterResponseState? state,
     String? key,
     required String userId,
@@ -17,7 +19,8 @@ class SwRegisterResponse with _$SwRegisterResponse {
       _$SwRegisterResponseFromJson(json);
 }
 
+@JsonEnum(fieldRename: FieldRename.kebab)
 enum SwRegisterResponseState {
-  alreadySubscibed,
+  alreadySubscribed,
   subscribed,
 }

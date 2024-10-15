@@ -13,8 +13,10 @@ _$SwRegisterResponseImpl _$$SwRegisterResponseImplFromJson(
       json,
       ($checkedConvert) {
         final val = _$SwRegisterResponseImpl(
-          state: $checkedConvert('state',
-              (v) => $enumDecodeNullable(_$SwRegisterResponseStateEnumMap, v)),
+          state: $checkedConvert(
+              'state',
+              (v) => $enumDecodeNullable(_$SwRegisterResponseStateEnumMap, v,
+                  unknownValue: JsonKey.nullForUndefinedEnumValue)),
           key: $checkedConvert('key', (v) => v as String?),
           userId: $checkedConvert('userId', (v) => v as String),
           endpoint: $checkedConvert('endpoint', (v) => v as String),
@@ -35,6 +37,6 @@ Map<String, dynamic> _$$SwRegisterResponseImplToJson(
     };
 
 const _$SwRegisterResponseStateEnumMap = {
-  SwRegisterResponseState.alreadySubscibed: 'alreadySubscibed',
+  SwRegisterResponseState.alreadySubscribed: 'already-subscribed',
   SwRegisterResponseState.subscribed: 'subscribed',
 };

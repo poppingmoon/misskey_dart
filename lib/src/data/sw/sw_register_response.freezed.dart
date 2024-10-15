@@ -20,6 +20,8 @@ SwRegisterResponse _$SwRegisterResponseFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SwRegisterResponse {
+// ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   SwRegisterResponseState? get state => throw _privateConstructorUsedError;
   String? get key => throw _privateConstructorUsedError;
   String get userId => throw _privateConstructorUsedError;
@@ -43,7 +45,8 @@ abstract class $SwRegisterResponseCopyWith<$Res> {
       _$SwRegisterResponseCopyWithImpl<$Res, SwRegisterResponse>;
   @useResult
   $Res call(
-      {SwRegisterResponseState? state,
+      {@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      SwRegisterResponseState? state,
       String? key,
       String userId,
       String endpoint,
@@ -105,7 +108,8 @@ abstract class _$$SwRegisterResponseImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {SwRegisterResponseState? state,
+      {@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      SwRegisterResponseState? state,
       String? key,
       String userId,
       String endpoint,
@@ -160,7 +164,7 @@ class __$$SwRegisterResponseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$SwRegisterResponseImpl implements _SwRegisterResponse {
   const _$SwRegisterResponseImpl(
-      {this.state,
+      {@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.state,
       this.key,
       required this.userId,
       required this.endpoint,
@@ -169,7 +173,9 @@ class _$SwRegisterResponseImpl implements _SwRegisterResponse {
   factory _$SwRegisterResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$SwRegisterResponseImplFromJson(json);
 
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final SwRegisterResponseState? state;
   @override
   final String? key;
@@ -223,7 +229,8 @@ class _$SwRegisterResponseImpl implements _SwRegisterResponse {
 
 abstract class _SwRegisterResponse implements SwRegisterResponse {
   const factory _SwRegisterResponse(
-      {final SwRegisterResponseState? state,
+      {@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      final SwRegisterResponseState? state,
       final String? key,
       required final String userId,
       required final String endpoint,
@@ -232,7 +239,9 @@ abstract class _SwRegisterResponse implements SwRegisterResponse {
   factory _SwRegisterResponse.fromJson(Map<String, dynamic> json) =
       _$SwRegisterResponseImpl.fromJson;
 
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   SwRegisterResponseState? get state;
   @override
   String? get key;
