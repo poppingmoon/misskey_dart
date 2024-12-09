@@ -26,8 +26,12 @@ mixin _$NoteUpdatedEvent {
   NoteUpdatedEventType? get type => throw _privateConstructorUsedError;
   Map<String, dynamic> get body => throw _privateConstructorUsedError;
 
+  /// Serializes this NoteUpdatedEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NoteUpdatedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NoteUpdatedEventCopyWith<NoteUpdatedEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -55,6 +59,8 @@ class _$NoteUpdatedEventCopyWithImpl<$Res, $Val extends NoteUpdatedEvent>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NoteUpdatedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -102,6 +108,8 @@ class __$$NoteUpdatedEventImplCopyWithImpl<$Res>
       $Res Function(_$NoteUpdatedEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NoteUpdatedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -167,12 +175,14 @@ class _$NoteUpdatedEventImpl implements _NoteUpdatedEvent {
             const DeepCollectionEquality().equals(other._body, _body));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, type, const DeepCollectionEquality().hash(_body));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NoteUpdatedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NoteUpdatedEventImplCopyWith<_$NoteUpdatedEventImpl> get copyWith =>
@@ -198,14 +208,17 @@ abstract class _NoteUpdatedEvent implements NoteUpdatedEvent {
       _$NoteUpdatedEventImpl.fromJson;
 
   @override
-  String get id;
-  @override // ignore: invalid_annotation_target
+  String get id; // ignore: invalid_annotation_target
+  @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   NoteUpdatedEventType? get type;
   @override
   Map<String, dynamic> get body;
+
+  /// Create a copy of NoteUpdatedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NoteUpdatedEventImplCopyWith<_$NoteUpdatedEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

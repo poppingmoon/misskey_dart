@@ -35,4 +35,5 @@ const _$BroadcastEventTypeEnumMap = {
   BroadcastEventType.emojiUpdated: 'emojiUpdated',
   BroadcastEventType.emojiDeleted: 'emojiDeleted',
   BroadcastEventType.announcementCreated: 'announcementCreated',
+  BroadcastEventType.unknown: 'unknown',
 };

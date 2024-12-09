@@ -23,8 +23,12 @@ mixin _$NoteEdited {
   String? get cw => throw _privateConstructorUsedError;
   String? get text => throw _privateConstructorUsedError;
 
+  /// Serializes this NoteEdited to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NoteEdited
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NoteEditedCopyWith<NoteEdited> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$NoteEditedCopyWithImpl<$Res, $Val extends NoteEdited>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NoteEdited
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -86,6 +92,8 @@ class __$$NoteEditedImplCopyWithImpl<$Res>
       _$NoteEditedImpl _value, $Res Function(_$NoteEditedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NoteEdited
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -132,11 +140,13 @@ class _$NoteEditedImpl implements _NoteEdited {
             (identical(other.text, text) || other.text == text));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, cw, text);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NoteEdited
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NoteEditedImplCopyWith<_$NoteEditedImpl> get copyWith =>
@@ -161,8 +171,11 @@ abstract class _NoteEdited implements NoteEdited {
   String? get cw;
   @override
   String? get text;
+
+  /// Create a copy of NoteEdited
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NoteEditedImplCopyWith<_$NoteEditedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

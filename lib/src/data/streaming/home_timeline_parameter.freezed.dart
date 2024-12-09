@@ -24,8 +24,12 @@ mixin _$HomeTimelineParameter {
   bool? get withRenotes => throw _privateConstructorUsedError;
   bool? get withFiles => throw _privateConstructorUsedError;
 
+  /// Serializes this HomeTimelineParameter to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HomeTimelineParameter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $HomeTimelineParameterCopyWith<HomeTimelineParameter> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$HomeTimelineParameterCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of HomeTimelineParameter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -90,6 +96,8 @@ class __$$HomeTimelineParameterImplCopyWithImpl<$Res>
       $Res Function(_$HomeTimelineParameterImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HomeTimelineParameter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -138,11 +146,13 @@ class _$HomeTimelineParameterImpl implements _HomeTimelineParameter {
                 other.withFiles == withFiles));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, withRenotes, withFiles);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HomeTimelineParameter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$HomeTimelineParameterImplCopyWith<_$HomeTimelineParameterImpl>
@@ -169,8 +179,11 @@ abstract class _HomeTimelineParameter implements HomeTimelineParameter {
   bool? get withRenotes;
   @override
   bool? get withFiles;
+
+  /// Create a copy of HomeTimelineParameter
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$HomeTimelineParameterImplCopyWith<_$HomeTimelineParameterImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

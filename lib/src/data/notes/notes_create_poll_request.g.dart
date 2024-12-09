@@ -30,23 +30,15 @@ _$NotesCreatePollRequestImpl _$$NotesCreatePollRequestImplFromJson(
     );
 
 Map<String, dynamic> _$$NotesCreatePollRequestImplToJson(
-    _$NotesCreatePollRequestImpl instance) {
-  final val = <String, dynamic>{
-    'choices': instance.choices,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('multiple', instance.multiple);
-  writeNotNull(
-      'expiresAt',
-      const NullableEpocTimeDateTimeConverter.withMilliSeconds()
-          .toJson(instance.expiresAt));
-  writeNotNull('expiredAfter',
-      const NullableDurationConverter().toJson(instance.expiredAfter));
-  return val;
-}
+        _$NotesCreatePollRequestImpl instance) =>
+    <String, dynamic>{
+      'choices': instance.choices,
+      if (instance.multiple case final value?) 'multiple': value,
+      if (const NullableEpocTimeDateTimeConverter.withMilliSeconds()
+              .toJson(instance.expiresAt)
+          case final value?)
+        'expiresAt': value,
+      if (const NullableDurationConverter().toJson(instance.expiredAfter)
+          case final value?)
+        'expiredAfter': value,
+    };

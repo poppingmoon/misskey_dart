@@ -24,8 +24,12 @@ mixin _$GlobalTimelineParameter {
   bool? get withRenotes => throw _privateConstructorUsedError;
   bool? get withFiles => throw _privateConstructorUsedError;
 
+  /// Serializes this GlobalTimelineParameter to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GlobalTimelineParameter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GlobalTimelineParameterCopyWith<GlobalTimelineParameter> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$GlobalTimelineParameterCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GlobalTimelineParameter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -91,6 +97,8 @@ class __$$GlobalTimelineParameterImplCopyWithImpl<$Res>
       $Res Function(_$GlobalTimelineParameterImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GlobalTimelineParameter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -139,11 +147,13 @@ class _$GlobalTimelineParameterImpl implements _GlobalTimelineParameter {
                 other.withFiles == withFiles));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, withRenotes, withFiles);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GlobalTimelineParameter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GlobalTimelineParameterImplCopyWith<_$GlobalTimelineParameterImpl>
@@ -170,8 +180,11 @@ abstract class _GlobalTimelineParameter implements GlobalTimelineParameter {
   bool? get withRenotes;
   @override
   bool? get withFiles;
+
+  /// Create a copy of GlobalTimelineParameter
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GlobalTimelineParameterImplCopyWith<_$GlobalTimelineParameterImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

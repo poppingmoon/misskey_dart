@@ -53,6 +53,16 @@ _$UserLiteImpl _$$UserLiteImplFromJson(Map<String, dynamic> json) =>
                           UserBadgeRole.fromJson(e as Map<String, dynamic>))
                       .toList() ??
                   const []),
+          requireSigninToViewContents:
+              $checkedConvert('requireSigninToViewContents', (v) => v as bool?),
+          makeNotesFollowersOnlyBefore: $checkedConvert(
+              'makeNotesFollowersOnlyBefore',
+              (v) => _$JsonConverterFromJson<int, HideBefore>(
+                  v, const HideBeforeConverter().fromJson)),
+          makeNotesHiddenBefore: $checkedConvert(
+              'makeNotesHiddenBefore',
+              (v) => _$JsonConverterFromJson<int, HideBefore>(
+                  v, const HideBeforeConverter().fromJson)),
         );
         return val;
       },
@@ -74,6 +84,12 @@ Map<String, dynamic> _$$UserLiteImplToJson(_$UserLiteImpl instance) =>
       'emojis': const EmojisConverter().toJson(instance.emojis),
       'onlineStatus': _$OnlineStatusEnumMap[instance.onlineStatus],
       'badgeRoles': instance.badgeRoles.map((e) => e.toJson()).toList(),
+      'requireSigninToViewContents': instance.requireSigninToViewContents,
+      'makeNotesFollowersOnlyBefore': _$JsonConverterToJson<int, HideBefore>(
+          instance.makeNotesFollowersOnlyBefore,
+          const HideBeforeConverter().toJson),
+      'makeNotesHiddenBefore': _$JsonConverterToJson<int, HideBefore>(
+          instance.makeNotesHiddenBefore, const HideBeforeConverter().toJson),
     };
 
 Value? _$JsonConverterFromJson<Json, Value>(
@@ -88,6 +104,12 @@ const _$OnlineStatusEnumMap = {
   OnlineStatus.offline: 'offline',
   OnlineStatus.unknown: 'unknown',
 };
+
+Json? _$JsonConverterToJson<Json, Value>(
+  Value? value,
+  Json? Function(Value value) toJson,
+) =>
+    value == null ? null : toJson(value);
 
 _$UserDetailedNotMeImpl _$$UserDetailedNotMeImplFromJson(
         Map<String, dynamic> json) =>
@@ -137,6 +159,16 @@ _$UserDetailedNotMeImpl _$$UserDetailedNotMeImplFromJson(
                           UserBadgeRole.fromJson(e as Map<String, dynamic>))
                       .toList() ??
                   const []),
+          requireSigninToViewContents:
+              $checkedConvert('requireSigninToViewContents', (v) => v as bool?),
+          makeNotesFollowersOnlyBefore: $checkedConvert(
+              'makeNotesFollowersOnlyBefore',
+              (v) => _$JsonConverterFromJson<int, HideBefore>(
+                  v, const HideBeforeConverter().fromJson)),
+          makeNotesHiddenBefore: $checkedConvert(
+              'makeNotesHiddenBefore',
+              (v) => _$JsonConverterFromJson<int, HideBefore>(
+                  v, const HideBeforeConverter().fromJson)),
           url: $checkedConvert(
               'url',
               (v) => _$JsonConverterFromJson<String, Uri?>(
@@ -257,6 +289,12 @@ Map<String, dynamic> _$$UserDetailedNotMeImplToJson(
       'emojis': const EmojisConverter().toJson(instance.emojis),
       'onlineStatus': _$OnlineStatusEnumMap[instance.onlineStatus],
       'badgeRoles': instance.badgeRoles.map((e) => e.toJson()).toList(),
+      'requireSigninToViewContents': instance.requireSigninToViewContents,
+      'makeNotesFollowersOnlyBefore': _$JsonConverterToJson<int, HideBefore>(
+          instance.makeNotesFollowersOnlyBefore,
+          const HideBeforeConverter().toJson),
+      'makeNotesHiddenBefore': _$JsonConverterToJson<int, HideBefore>(
+          instance.makeNotesHiddenBefore, const HideBeforeConverter().toJson),
       'url': const NullableUriConverter().toJson(instance.url),
       'uri': const NullableUriConverter().toJson(instance.uri),
       'movedTo': const NullableUriConverter().toJson(instance.movedTo),
@@ -354,6 +392,16 @@ _$UserDetailedNotMeWithRelationsImpl
                               UserBadgeRole.fromJson(e as Map<String, dynamic>))
                           .toList() ??
                       const []),
+              requireSigninToViewContents: $checkedConvert(
+                  'requireSigninToViewContents', (v) => v as bool?),
+              makeNotesFollowersOnlyBefore: $checkedConvert(
+                  'makeNotesFollowersOnlyBefore',
+                  (v) => _$JsonConverterFromJson<int, HideBefore>(
+                      v, const HideBeforeConverter().fromJson)),
+              makeNotesHiddenBefore: $checkedConvert(
+                  'makeNotesHiddenBefore',
+                  (v) => _$JsonConverterFromJson<int, HideBefore>(
+                      v, const HideBeforeConverter().fromJson)),
               url: $checkedConvert(
                   'url',
                   (v) => _$JsonConverterFromJson<String, Uri?>(
@@ -497,6 +545,12 @@ Map<String, dynamic> _$$UserDetailedNotMeWithRelationsImplToJson(
       'emojis': const EmojisConverter().toJson(instance.emojis),
       'onlineStatus': _$OnlineStatusEnumMap[instance.onlineStatus],
       'badgeRoles': instance.badgeRoles.map((e) => e.toJson()).toList(),
+      'requireSigninToViewContents': instance.requireSigninToViewContents,
+      'makeNotesFollowersOnlyBefore': _$JsonConverterToJson<int, HideBefore>(
+          instance.makeNotesFollowersOnlyBefore,
+          const HideBeforeConverter().toJson),
+      'makeNotesHiddenBefore': _$JsonConverterToJson<int, HideBefore>(
+          instance.makeNotesHiddenBefore, const HideBeforeConverter().toJson),
       'url': const NullableUriConverter().toJson(instance.url),
       'uri': const NullableUriConverter().toJson(instance.uri),
       'movedTo': const NullableUriConverter().toJson(instance.movedTo),
@@ -602,6 +656,16 @@ _$MeDetailedImpl _$$MeDetailedImplFromJson(Map<String, dynamic> json) =>
                           UserBadgeRole.fromJson(e as Map<String, dynamic>))
                       .toList() ??
                   const []),
+          requireSigninToViewContents:
+              $checkedConvert('requireSigninToViewContents', (v) => v as bool?),
+          makeNotesFollowersOnlyBefore: $checkedConvert(
+              'makeNotesFollowersOnlyBefore',
+              (v) => _$JsonConverterFromJson<int, HideBefore>(
+                  v, const HideBeforeConverter().fromJson)),
+          makeNotesHiddenBefore: $checkedConvert(
+              'makeNotesHiddenBefore',
+              (v) => _$JsonConverterFromJson<int, HideBefore>(
+                  v, const HideBeforeConverter().fromJson)),
           url: $checkedConvert(
               'url',
               (v) => _$JsonConverterFromJson<String, Uri?>(
@@ -816,6 +880,12 @@ Map<String, dynamic> _$$MeDetailedImplToJson(_$MeDetailedImpl instance) =>
       'emojis': const EmojisConverter().toJson(instance.emojis),
       'onlineStatus': _$OnlineStatusEnumMap[instance.onlineStatus],
       'badgeRoles': instance.badgeRoles.map((e) => e.toJson()).toList(),
+      'requireSigninToViewContents': instance.requireSigninToViewContents,
+      'makeNotesFollowersOnlyBefore': _$JsonConverterToJson<int, HideBefore>(
+          instance.makeNotesFollowersOnlyBefore,
+          const HideBeforeConverter().toJson),
+      'makeNotesHiddenBefore': _$JsonConverterToJson<int, HideBefore>(
+          instance.makeNotesHiddenBefore, const HideBeforeConverter().toJson),
       'url': const NullableUriConverter().toJson(instance.url),
       'uri': const NullableUriConverter().toJson(instance.uri),
       'movedTo': const NullableUriConverter().toJson(instance.movedTo),

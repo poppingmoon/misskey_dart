@@ -36,4 +36,6 @@ enum ChannelEventType {
   driveFileCreated,
   readAntenna,
   receiveFollowRequest,
+
+  unknown,
 }

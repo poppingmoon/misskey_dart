@@ -5,4 +5,5 @@ enum StreamingResponseType {
   emojiUpdated,
   emojiDeleted,
   announcementCreated,
+  unknown,
 }

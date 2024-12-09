@@ -18,6 +18,7 @@ class AntennasUpdateRequest with _$AntennasUpdateRequest {
     required bool caseSensitive,
     required bool withReplies,
     required bool withFile,
+    // Removed in Misskey 2024.5.0
     bool? notify,
     bool? localOnly,
     bool? excludeBots,

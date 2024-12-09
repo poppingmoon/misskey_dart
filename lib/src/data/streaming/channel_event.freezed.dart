@@ -26,8 +26,12 @@ mixin _$ChannelEvent {
   ChannelEventType? get type => throw _privateConstructorUsedError;
   dynamic get body => throw _privateConstructorUsedError;
 
+  /// Serializes this ChannelEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ChannelEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ChannelEventCopyWith<ChannelEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -55,6 +59,8 @@ class _$ChannelEventCopyWithImpl<$Res, $Val extends ChannelEvent>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ChannelEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -102,6 +108,8 @@ class __$$ChannelEventImplCopyWithImpl<$Res>
       _$ChannelEventImpl _value, $Res Function(_$ChannelEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ChannelEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -161,12 +169,14 @@ class _$ChannelEventImpl implements _ChannelEvent {
             const DeepCollectionEquality().equals(other.body, body));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, type, const DeepCollectionEquality().hash(body));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ChannelEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ChannelEventImplCopyWith<_$ChannelEventImpl> get copyWith =>
@@ -191,14 +201,17 @@ abstract class _ChannelEvent implements ChannelEvent {
       _$ChannelEventImpl.fromJson;
 
   @override
-  String get id;
-  @override // ignore: invalid_annotation_target
+  String get id; // ignore: invalid_annotation_target
+  @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   ChannelEventType? get type;
   @override
   dynamic get body;
+
+  /// Create a copy of ChannelEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ChannelEventImplCopyWith<_$ChannelEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

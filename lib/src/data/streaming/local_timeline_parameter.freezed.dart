@@ -25,8 +25,12 @@ mixin _$LocalTimelineParameter {
   bool? get withReplies => throw _privateConstructorUsedError;
   bool? get withFiles => throw _privateConstructorUsedError;
 
+  /// Serializes this LocalTimelineParameter to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LocalTimelineParameter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LocalTimelineParameterCopyWith<LocalTimelineParameter> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$LocalTimelineParameterCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of LocalTimelineParameter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -97,6 +103,8 @@ class __$$LocalTimelineParameterImplCopyWithImpl<$Res>
       $Res Function(_$LocalTimelineParameterImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LocalTimelineParameter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -155,12 +163,14 @@ class _$LocalTimelineParameterImpl implements _LocalTimelineParameter {
                 other.withFiles == withFiles));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, withRenotes, withReplies, withFiles);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LocalTimelineParameter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LocalTimelineParameterImplCopyWith<_$LocalTimelineParameterImpl>
@@ -190,8 +200,11 @@ abstract class _LocalTimelineParameter implements LocalTimelineParameter {
   bool? get withReplies;
   @override
   bool? get withFiles;
+
+  /// Create a copy of LocalTimelineParameter
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LocalTimelineParameterImplCopyWith<_$LocalTimelineParameterImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

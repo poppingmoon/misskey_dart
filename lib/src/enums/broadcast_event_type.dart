@@ -3,4 +3,5 @@ enum BroadcastEventType {
   emojiUpdated,
   emojiDeleted,
   announcementCreated,
+  unknown,
 }

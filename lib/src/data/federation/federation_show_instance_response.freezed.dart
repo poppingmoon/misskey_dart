@@ -37,7 +37,7 @@ mixin _$FederationShowInstanceResponse {
   String? get softwareVersion => throw _privateConstructorUsedError;
   bool? get openRegistrations => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  String get description => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
   String? get maintainerName => throw _privateConstructorUsedError;
   String? get maintainerEmail => throw _privateConstructorUsedError;
   @NullableUriConverter()
@@ -83,7 +83,7 @@ abstract class $FederationShowInstanceResponseCopyWith<$Res> {
       String? softwareVersion,
       bool? openRegistrations,
       String name,
-      String description,
+      String? description,
       String? maintainerName,
       String? maintainerEmail,
       @NullableUriConverter() Uri? iconUrl,
@@ -123,7 +123,7 @@ class _$FederationShowInstanceResponseCopyWithImpl<$Res,
     Object? softwareVersion = freezed,
     Object? openRegistrations = freezed,
     Object? name = null,
-    Object? description = null,
+    Object? description = freezed,
     Object? maintainerName = freezed,
     Object? maintainerEmail = freezed,
     Object? iconUrl = freezed,
@@ -192,10 +192,10 @@ class _$FederationShowInstanceResponseCopyWithImpl<$Res,
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      description: null == description
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       maintainerName: freezed == maintainerName
           ? _value.maintainerName
           : maintainerName // ignore: cast_nullable_to_non_nullable
@@ -249,7 +249,7 @@ abstract class _$$FederationShowInstanceResponseImplCopyWith<$Res>
       String? softwareVersion,
       bool? openRegistrations,
       String name,
-      String description,
+      String? description,
       String? maintainerName,
       String? maintainerEmail,
       @NullableUriConverter() Uri? iconUrl,
@@ -288,7 +288,7 @@ class __$$FederationShowInstanceResponseImplCopyWithImpl<$Res>
     Object? softwareVersion = freezed,
     Object? openRegistrations = freezed,
     Object? name = null,
-    Object? description = null,
+    Object? description = freezed,
     Object? maintainerName = freezed,
     Object? maintainerEmail = freezed,
     Object? iconUrl = freezed,
@@ -357,10 +357,10 @@ class __$$FederationShowInstanceResponseImplCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      description: null == description
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       maintainerName: freezed == maintainerName
           ? _value.maintainerName
           : maintainerName // ignore: cast_nullable_to_non_nullable
@@ -409,7 +409,7 @@ class _$FederationShowInstanceResponseImpl
       this.softwareVersion,
       this.openRegistrations,
       required this.name,
-      required this.description,
+      this.description,
       this.maintainerName,
       this.maintainerEmail,
       @NullableUriConverter() this.iconUrl,
@@ -453,7 +453,7 @@ class _$FederationShowInstanceResponseImpl
   @override
   final String name;
   @override
-  final String description;
+  final String? description;
   @override
   final String? maintainerName;
   @override
@@ -587,7 +587,7 @@ abstract class _FederationShowInstanceResponse
           final String? softwareVersion,
           final bool? openRegistrations,
           required final String name,
-          required final String description,
+          final String? description,
           final String? maintainerName,
           final String? maintainerEmail,
           @NullableUriConverter() final Uri? iconUrl,
@@ -631,7 +631,7 @@ abstract class _FederationShowInstanceResponse
   @override
   String get name;
   @override
-  String get description;
+  String? get description;
   @override
   String? get maintainerName;
   @override

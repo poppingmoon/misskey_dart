@@ -44,6 +44,16 @@ _$IUpdateRequestImpl _$$IUpdateRequestImplFromJson(Map<String, dynamic> json) =>
           noCrawle: $checkedConvert('noCrawle', (v) => v as bool?),
           preventAiLearning:
               $checkedConvert('preventAiLearning', (v) => v as bool?),
+          requireSigninToViewContents:
+              $checkedConvert('requireSigninToViewContents', (v) => v as bool?),
+          makeNotesFollowersOnlyBefore: $checkedConvert(
+              'makeNotesFollowersOnlyBefore',
+              (v) => _$JsonConverterFromJson<int, HideBefore>(
+                  v, const HideBeforeConverter().fromJson)),
+          makeNotesHiddenBefore: $checkedConvert(
+              'makeNotesHiddenBefore',
+              (v) => _$JsonConverterFromJson<int, HideBefore>(
+                  v, const HideBeforeConverter().fromJson)),
           isBot: $checkedConvert('isBot', (v) => v as bool?),
           isCat: $checkedConvert('isCat', (v) => v as bool?),
           injectFeaturedNote:
@@ -116,6 +126,12 @@ Map<String, dynamic> _$$IUpdateRequestImplToJson(
       'autoAcceptFollowed': instance.autoAcceptFollowed,
       'noCrawle': instance.noCrawle,
       'preventAiLearning': instance.preventAiLearning,
+      'requireSigninToViewContents': instance.requireSigninToViewContents,
+      'makeNotesFollowersOnlyBefore': _$JsonConverterToJson<int, HideBefore>(
+          instance.makeNotesFollowersOnlyBefore,
+          const HideBeforeConverter().toJson),
+      'makeNotesHiddenBefore': _$JsonConverterToJson<int, HideBefore>(
+          instance.makeNotesHiddenBefore, const HideBeforeConverter().toJson),
       'isBot': instance.isBot,
       'isCat': instance.isCat,
       'injectFeaturedNote': instance.injectFeaturedNote,
@@ -142,11 +158,23 @@ Map<String, dynamic> _$$IUpdateRequestImplToJson(
           instance.mutualLinkSections?.map((e) => e.toJson()).toList(),
     };
 
+Value? _$JsonConverterFromJson<Json, Value>(
+  Object? json,
+  Value? Function(Json json) fromJson,
+) =>
+    json == null ? null : fromJson(json as Json);
+
 const _$FFVisibilityEnumMap = {
   FFVisibility.public: 'public',
   FFVisibility.followers: 'followers',
   FFVisibility.private: 'private',
 };
+
+Json? _$JsonConverterToJson<Json, Value>(
+  Value? value,
+  Json? Function(Value value) toJson,
+) =>
+    value == null ? null : toJson(value);
 
 _$IUpdateAvatarDecorationImpl _$$IUpdateAvatarDecorationImplFromJson(
         Map<String, dynamic> json) =>

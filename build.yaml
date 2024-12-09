@@ -8,3 +8,6 @@ targets:
         options:
           checked: true
           explicit_to_json: true
+    sources:
+          exclude:
+            - example/**

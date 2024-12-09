@@ -25,8 +25,12 @@ mixin _$HybridTimelineParameter {
   bool? get withReplies => throw _privateConstructorUsedError;
   bool? get withFiles => throw _privateConstructorUsedError;
 
+  /// Serializes this HybridTimelineParameter to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HybridTimelineParameter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $HybridTimelineParameterCopyWith<HybridTimelineParameter> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$HybridTimelineParameterCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of HybridTimelineParameter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -97,6 +103,8 @@ class __$$HybridTimelineParameterImplCopyWithImpl<$Res>
       $Res Function(_$HybridTimelineParameterImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HybridTimelineParameter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -155,12 +163,14 @@ class _$HybridTimelineParameterImpl implements _HybridTimelineParameter {
                 other.withFiles == withFiles));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, withRenotes, withReplies, withFiles);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HybridTimelineParameter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$HybridTimelineParameterImplCopyWith<_$HybridTimelineParameterImpl>
@@ -190,8 +200,11 @@ abstract class _HybridTimelineParameter implements HybridTimelineParameter {
   bool? get withReplies;
   @override
   bool? get withFiles;
+
+  /// Create a copy of HybridTimelineParameter
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$HybridTimelineParameterImplCopyWith<_$HybridTimelineParameterImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

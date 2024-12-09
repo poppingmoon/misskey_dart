@@ -3,6 +3,7 @@ analyzer:
   exclude:
     - "**/*.freezed.dart"
     - "**/*.g.dart"
+    - "example/misskey_dart_flutter_app_example/**"
 linter:
   rules:
     - directives_ordering

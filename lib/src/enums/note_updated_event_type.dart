@@ -4,4 +4,5 @@ enum NoteUpdatedEventType {
   deleted,
   pollVoted,
   updated,
+  unknown,
 }

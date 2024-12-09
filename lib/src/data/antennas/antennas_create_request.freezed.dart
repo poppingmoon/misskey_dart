@@ -30,7 +30,8 @@ mixin _$AntennasCreateRequest {
   List<String> get instances => throw _privateConstructorUsedError;
   bool get caseSensitive => throw _privateConstructorUsedError;
   bool get withReplies => throw _privateConstructorUsedError;
-  bool get withFile => throw _privateConstructorUsedError;
+  bool get withFile =>
+      throw _privateConstructorUsedError; // Removed in Misskey 2024.5.0
   bool? get notify => throw _privateConstructorUsedError;
   bool? get localOnly => throw _privateConstructorUsedError;
   bool? get excludeBots => throw _privateConstructorUsedError;
@@ -334,6 +335,7 @@ class _$AntennasCreateRequestImpl implements _AntennasCreateRequest {
   final bool withReplies;
   @override
   final bool withFile;
+// Removed in Misskey 2024.5.0
   @override
   final bool? notify;
   @override
@@ -447,7 +449,7 @@ abstract class _AntennasCreateRequest implements AntennasCreateRequest {
   @override
   bool get withReplies;
   @override
-  bool get withFile;
+  bool get withFile; // Removed in Misskey 2024.5.0
   @override
   bool? get notify;
   @override

@@ -37,7 +37,7 @@ _$FederationShowInstanceResponseImpl
               openRegistrations:
                   $checkedConvert('openRegistrations', (v) => v as bool?),
               name: $checkedConvert('name', (v) => v as String),
-              description: $checkedConvert('description', (v) => v as String),
+              description: $checkedConvert('description', (v) => v as String?),
               maintainerName:
                   $checkedConvert('maintainerName', (v) => v as String?),
               maintainerEmail:

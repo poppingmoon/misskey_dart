@@ -25,8 +25,12 @@ mixin _$BroadcastEvent {
   BroadcastEventType? get type => throw _privateConstructorUsedError;
   Map<String, dynamic> get body => throw _privateConstructorUsedError;
 
+  /// Serializes this BroadcastEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BroadcastEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $BroadcastEventCopyWith<BroadcastEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -53,6 +57,8 @@ class _$BroadcastEventCopyWithImpl<$Res, $Val extends BroadcastEvent>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of BroadcastEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -94,6 +100,8 @@ class __$$BroadcastResponseImplCopyWithImpl<$Res>
       $Res Function(_$BroadcastResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BroadcastEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -150,12 +158,14 @@ class _$BroadcastResponseImpl implements _BroadcastResponse {
             const DeepCollectionEquality().equals(other._body, _body));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, type, const DeepCollectionEquality().hash(_body));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BroadcastEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BroadcastResponseImplCopyWith<_$BroadcastResponseImpl> get copyWith =>
@@ -179,13 +189,17 @@ abstract class _BroadcastResponse implements BroadcastEvent {
   factory _BroadcastResponse.fromJson(Map<String, dynamic> json) =
       _$BroadcastResponseImpl.fromJson;
 
-  @override // ignore: invalid_annotation_target
+// ignore: invalid_annotation_target
+  @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   BroadcastEventType? get type;
   @override
   Map<String, dynamic> get body;
+
+  /// Create a copy of BroadcastEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BroadcastResponseImplCopyWith<_$BroadcastResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

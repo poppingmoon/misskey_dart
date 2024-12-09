@@ -38,6 +38,12 @@ mixin _$UserLite {
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   OnlineStatus? get onlineStatus => throw _privateConstructorUsedError;
   List<UserBadgeRole> get badgeRoles => throw _privateConstructorUsedError;
+  bool? get requireSigninToViewContents => throw _privateConstructorUsedError;
+  @HideBeforeConverter()
+  HideBefore? get makeNotesFollowersOnlyBefore =>
+      throw _privateConstructorUsedError;
+  @HideBeforeConverter()
+  HideBefore? get makeNotesHiddenBefore => throw _privateConstructorUsedError;
 
   /// Serializes this UserLite to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -68,7 +74,10 @@ abstract class $UserLiteCopyWith<$Res> {
       @EmojisConverter() Map<String, String> emojis,
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       OnlineStatus? onlineStatus,
-      List<UserBadgeRole> badgeRoles});
+      List<UserBadgeRole> badgeRoles,
+      bool? requireSigninToViewContents,
+      @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
+      @HideBeforeConverter() HideBefore? makeNotesHiddenBefore});
 
   $UserInstanceInfoCopyWith<$Res>? get instance;
 }
@@ -101,6 +110,9 @@ class _$UserLiteCopyWithImpl<$Res, $Val extends UserLite>
     Object? emojis = null,
     Object? onlineStatus = freezed,
     Object? badgeRoles = null,
+    Object? requireSigninToViewContents = freezed,
+    Object? makeNotesFollowersOnlyBefore = freezed,
+    Object? makeNotesHiddenBefore = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -155,6 +167,18 @@ class _$UserLiteCopyWithImpl<$Res, $Val extends UserLite>
           ? _value.badgeRoles
           : badgeRoles // ignore: cast_nullable_to_non_nullable
               as List<UserBadgeRole>,
+      requireSigninToViewContents: freezed == requireSigninToViewContents
+          ? _value.requireSigninToViewContents
+          : requireSigninToViewContents // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      makeNotesFollowersOnlyBefore: freezed == makeNotesFollowersOnlyBefore
+          ? _value.makeNotesFollowersOnlyBefore
+          : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
+              as HideBefore?,
+      makeNotesHiddenBefore: freezed == makeNotesHiddenBefore
+          ? _value.makeNotesHiddenBefore
+          : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
+              as HideBefore?,
     ) as $Val);
   }
 
@@ -195,7 +219,10 @@ abstract class _$$UserLiteImplCopyWith<$Res>
       @EmojisConverter() Map<String, String> emojis,
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       OnlineStatus? onlineStatus,
-      List<UserBadgeRole> badgeRoles});
+      List<UserBadgeRole> badgeRoles,
+      bool? requireSigninToViewContents,
+      @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
+      @HideBeforeConverter() HideBefore? makeNotesHiddenBefore});
 
   @override
   $UserInstanceInfoCopyWith<$Res>? get instance;
@@ -227,6 +254,9 @@ class __$$UserLiteImplCopyWithImpl<$Res>
     Object? emojis = null,
     Object? onlineStatus = freezed,
     Object? badgeRoles = null,
+    Object? requireSigninToViewContents = freezed,
+    Object? makeNotesFollowersOnlyBefore = freezed,
+    Object? makeNotesHiddenBefore = freezed,
   }) {
     return _then(_$UserLiteImpl(
       id: null == id
@@ -281,6 +311,18 @@ class __$$UserLiteImplCopyWithImpl<$Res>
           ? _value._badgeRoles
           : badgeRoles // ignore: cast_nullable_to_non_nullable
               as List<UserBadgeRole>,
+      requireSigninToViewContents: freezed == requireSigninToViewContents
+          ? _value.requireSigninToViewContents
+          : requireSigninToViewContents // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      makeNotesFollowersOnlyBefore: freezed == makeNotesFollowersOnlyBefore
+          ? _value.makeNotesFollowersOnlyBefore
+          : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
+              as HideBefore?,
+      makeNotesHiddenBefore: freezed == makeNotesHiddenBefore
+          ? _value.makeNotesHiddenBefore
+          : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
+              as HideBefore?,
     ));
   }
 }
@@ -302,7 +344,10 @@ class _$UserLiteImpl implements _UserLite {
       @EmojisConverter() final Map<String, String> emojis = const {},
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.onlineStatus,
-      final List<UserBadgeRole> badgeRoles = const []})
+      final List<UserBadgeRole> badgeRoles = const [],
+      this.requireSigninToViewContents,
+      @HideBeforeConverter() this.makeNotesFollowersOnlyBefore,
+      @HideBeforeConverter() this.makeNotesHiddenBefore})
       : _avatarDecorations = avatarDecorations,
         _emojis = emojis,
         _badgeRoles = badgeRoles;
@@ -365,8 +410,17 @@ class _$UserLiteImpl implements _UserLite {
   }
 
   @override
+  final bool? requireSigninToViewContents;
+  @override
+  @HideBeforeConverter()
+  final HideBefore? makeNotesFollowersOnlyBefore;
+  @override
+  @HideBeforeConverter()
+  final HideBefore? makeNotesHiddenBefore;
+
+  @override
   String toString() {
-    return 'UserLite(id: $id, name: $name, username: $username, host: $host, avatarUrl: $avatarUrl, avatarBlurhash: $avatarBlurhash, avatarDecorations: $avatarDecorations, isBot: $isBot, isCat: $isCat, instance: $instance, emojis: $emojis, onlineStatus: $onlineStatus, badgeRoles: $badgeRoles)';
+    return 'UserLite(id: $id, name: $name, username: $username, host: $host, avatarUrl: $avatarUrl, avatarBlurhash: $avatarBlurhash, avatarDecorations: $avatarDecorations, isBot: $isBot, isCat: $isCat, instance: $instance, emojis: $emojis, onlineStatus: $onlineStatus, badgeRoles: $badgeRoles, requireSigninToViewContents: $requireSigninToViewContents, makeNotesFollowersOnlyBefore: $makeNotesFollowersOnlyBefore, makeNotesHiddenBefore: $makeNotesHiddenBefore)';
   }
 
   @override
@@ -393,7 +447,17 @@ class _$UserLiteImpl implements _UserLite {
             (identical(other.onlineStatus, onlineStatus) ||
                 other.onlineStatus == onlineStatus) &&
             const DeepCollectionEquality()
-                .equals(other._badgeRoles, _badgeRoles));
+                .equals(other._badgeRoles, _badgeRoles) &&
+            (identical(other.requireSigninToViewContents,
+                    requireSigninToViewContents) ||
+                other.requireSigninToViewContents ==
+                    requireSigninToViewContents) &&
+            (identical(other.makeNotesFollowersOnlyBefore,
+                    makeNotesFollowersOnlyBefore) ||
+                other.makeNotesFollowersOnlyBefore ==
+                    makeNotesFollowersOnlyBefore) &&
+            (identical(other.makeNotesHiddenBefore, makeNotesHiddenBefore) ||
+                other.makeNotesHiddenBefore == makeNotesHiddenBefore));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -412,7 +476,10 @@ class _$UserLiteImpl implements _UserLite {
       instance,
       const DeepCollectionEquality().hash(_emojis),
       onlineStatus,
-      const DeepCollectionEquality().hash(_badgeRoles));
+      const DeepCollectionEquality().hash(_badgeRoles),
+      requireSigninToViewContents,
+      makeNotesFollowersOnlyBefore,
+      makeNotesHiddenBefore);
 
   /// Create a copy of UserLite
   /// with the given fields replaced by the non-null parameter values.
@@ -432,20 +499,24 @@ class _$UserLiteImpl implements _UserLite {
 
 abstract class _UserLite implements UserLite {
   const factory _UserLite(
-      {required final String id,
-      final String? name,
-      required final String username,
-      final String? host,
-      @NullableUriConverter() final Uri? avatarUrl,
-      final String? avatarBlurhash,
-      final List<UserAvatarDecoration> avatarDecorations,
-      final bool isBot,
-      final bool isCat,
-      final UserInstanceInfo? instance,
-      @EmojisConverter() final Map<String, String> emojis,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      final OnlineStatus? onlineStatus,
-      final List<UserBadgeRole> badgeRoles}) = _$UserLiteImpl;
+          {required final String id,
+          final String? name,
+          required final String username,
+          final String? host,
+          @NullableUriConverter() final Uri? avatarUrl,
+          final String? avatarBlurhash,
+          final List<UserAvatarDecoration> avatarDecorations,
+          final bool isBot,
+          final bool isCat,
+          final UserInstanceInfo? instance,
+          @EmojisConverter() final Map<String, String> emojis,
+          @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+          final OnlineStatus? onlineStatus,
+          final List<UserBadgeRole> badgeRoles,
+          final bool? requireSigninToViewContents,
+          @HideBeforeConverter() final HideBefore? makeNotesFollowersOnlyBefore,
+          @HideBeforeConverter() final HideBefore? makeNotesHiddenBefore}) =
+      _$UserLiteImpl;
 
   factory _UserLite.fromJson(Map<String, dynamic> json) =
       _$UserLiteImpl.fromJson;
@@ -479,6 +550,14 @@ abstract class _UserLite implements UserLite {
   OnlineStatus? get onlineStatus;
   @override
   List<UserBadgeRole> get badgeRoles;
+  @override
+  bool? get requireSigninToViewContents;
+  @override
+  @HideBeforeConverter()
+  HideBefore? get makeNotesFollowersOnlyBefore;
+  @override
+  @HideBeforeConverter()
+  HideBefore? get makeNotesHiddenBefore;
 
   /// Create a copy of UserLite
   /// with the given fields replaced by the non-null parameter values.
@@ -512,6 +591,12 @@ mixin _$UserDetailedNotMe {
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   OnlineStatus? get onlineStatus => throw _privateConstructorUsedError;
   List<UserBadgeRole> get badgeRoles => throw _privateConstructorUsedError;
+  bool? get requireSigninToViewContents => throw _privateConstructorUsedError;
+  @HideBeforeConverter()
+  HideBefore? get makeNotesFollowersOnlyBefore =>
+      throw _privateConstructorUsedError;
+  @HideBeforeConverter()
+  HideBefore? get makeNotesHiddenBefore => throw _privateConstructorUsedError;
   @NullableUriConverter()
   Uri? get url => throw _privateConstructorUsedError;
   @NullableUriConverter()
@@ -603,6 +688,9 @@ abstract class $UserDetailedNotMeCopyWith<$Res> {
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       OnlineStatus? onlineStatus,
       List<UserBadgeRole> badgeRoles,
+      bool? requireSigninToViewContents,
+      @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
+      @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
       @NullableUriConverter() Uri? url,
       @NullableUriConverter() Uri? uri,
       @NullableUriConverter() Uri? movedTo,
@@ -675,6 +763,9 @@ class _$UserDetailedNotMeCopyWithImpl<$Res, $Val extends UserDetailedNotMe>
     Object? emojis = null,
     Object? onlineStatus = freezed,
     Object? badgeRoles = null,
+    Object? requireSigninToViewContents = freezed,
+    Object? makeNotesFollowersOnlyBefore = freezed,
+    Object? makeNotesHiddenBefore = freezed,
     Object? url = freezed,
     Object? uri = freezed,
     Object? movedTo = freezed,
@@ -765,6 +856,18 @@ class _$UserDetailedNotMeCopyWithImpl<$Res, $Val extends UserDetailedNotMe>
           ? _value.badgeRoles
           : badgeRoles // ignore: cast_nullable_to_non_nullable
               as List<UserBadgeRole>,
+      requireSigninToViewContents: freezed == requireSigninToViewContents
+          ? _value.requireSigninToViewContents
+          : requireSigninToViewContents // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      makeNotesFollowersOnlyBefore: freezed == makeNotesFollowersOnlyBefore
+          ? _value.makeNotesFollowersOnlyBefore
+          : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
+              as HideBefore?,
+      makeNotesHiddenBefore: freezed == makeNotesHiddenBefore
+          ? _value.makeNotesHiddenBefore
+          : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
+              as HideBefore?,
       url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -950,6 +1053,9 @@ abstract class _$$UserDetailedNotMeImplCopyWith<$Res>
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       OnlineStatus? onlineStatus,
       List<UserBadgeRole> badgeRoles,
+      bool? requireSigninToViewContents,
+      @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
+      @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
       @NullableUriConverter() Uri? url,
       @NullableUriConverter() Uri? uri,
       @NullableUriConverter() Uri? movedTo,
@@ -1021,6 +1127,9 @@ class __$$UserDetailedNotMeImplCopyWithImpl<$Res>
     Object? emojis = null,
     Object? onlineStatus = freezed,
     Object? badgeRoles = null,
+    Object? requireSigninToViewContents = freezed,
+    Object? makeNotesFollowersOnlyBefore = freezed,
+    Object? makeNotesHiddenBefore = freezed,
     Object? url = freezed,
     Object? uri = freezed,
     Object? movedTo = freezed,
@@ -1111,6 +1220,18 @@ class __$$UserDetailedNotMeImplCopyWithImpl<$Res>
           ? _value._badgeRoles
           : badgeRoles // ignore: cast_nullable_to_non_nullable
               as List<UserBadgeRole>,
+      requireSigninToViewContents: freezed == requireSigninToViewContents
+          ? _value.requireSigninToViewContents
+          : requireSigninToViewContents // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      makeNotesFollowersOnlyBefore: freezed == makeNotesFollowersOnlyBefore
+          ? _value.makeNotesFollowersOnlyBefore
+          : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
+              as HideBefore?,
+      makeNotesHiddenBefore: freezed == makeNotesHiddenBefore
+          ? _value.makeNotesHiddenBefore
+          : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
+              as HideBefore?,
       url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -1277,6 +1398,9 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.onlineStatus,
       final List<UserBadgeRole> badgeRoles = const [],
+      this.requireSigninToViewContents,
+      @HideBeforeConverter() this.makeNotesFollowersOnlyBefore,
+      @HideBeforeConverter() this.makeNotesHiddenBefore,
       @NullableUriConverter() this.url,
       @NullableUriConverter() this.uri,
       @NullableUriConverter() this.movedTo,
@@ -1384,6 +1508,14 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
     return EqualUnmodifiableListView(_badgeRoles);
   }
 
+  @override
+  final bool? requireSigninToViewContents;
+  @override
+  @HideBeforeConverter()
+  final HideBefore? makeNotesFollowersOnlyBefore;
+  @override
+  @HideBeforeConverter()
+  final HideBefore? makeNotesHiddenBefore;
   @override
   @NullableUriConverter()
   final Uri? url;
@@ -1547,7 +1679,7 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
 
   @override
   String toString() {
-    return 'UserDetailedNotMe(id: $id, name: $name, username: $username, host: $host, avatarUrl: $avatarUrl, avatarBlurhash: $avatarBlurhash, avatarDecorations: $avatarDecorations, isBot: $isBot, isCat: $isCat, instance: $instance, emojis: $emojis, onlineStatus: $onlineStatus, badgeRoles: $badgeRoles, url: $url, uri: $uri, movedTo: $movedTo, alsoKnownAs: $alsoKnownAs, createdAt: $createdAt, updatedAt: $updatedAt, lastFetchedAt: $lastFetchedAt, bannerUrl: $bannerUrl, bannerBlurhash: $bannerBlurhash, isLocked: $isLocked, isSilenced: $isSilenced, isSuspended: $isSuspended, description: $description, location: $location, birthday: $birthday, lang: $lang, fields: $fields, verifiedLinks: $verifiedLinks, mutualLinkSections: $mutualLinkSections, followersCount: $followersCount, followingCount: $followingCount, notesCount: $notesCount, pinnedNoteIds: $pinnedNoteIds, pinnedNotes: $pinnedNotes, pinnedPageId: $pinnedPageId, pinnedPage: $pinnedPage, publicReactions: $publicReactions, ffVisibility: $ffVisibility, followersVisibility: $followersVisibility, followingVisibility: $followingVisibility, twoFactorEnabled: $twoFactorEnabled, usePasswordLessLogin: $usePasswordLessLogin, securityKeys: $securityKeys, roles: $roles, memo: $memo, moderationNote: $moderationNote)';
+    return 'UserDetailedNotMe(id: $id, name: $name, username: $username, host: $host, avatarUrl: $avatarUrl, avatarBlurhash: $avatarBlurhash, avatarDecorations: $avatarDecorations, isBot: $isBot, isCat: $isCat, instance: $instance, emojis: $emojis, onlineStatus: $onlineStatus, badgeRoles: $badgeRoles, requireSigninToViewContents: $requireSigninToViewContents, makeNotesFollowersOnlyBefore: $makeNotesFollowersOnlyBefore, makeNotesHiddenBefore: $makeNotesHiddenBefore, url: $url, uri: $uri, movedTo: $movedTo, alsoKnownAs: $alsoKnownAs, createdAt: $createdAt, updatedAt: $updatedAt, lastFetchedAt: $lastFetchedAt, bannerUrl: $bannerUrl, bannerBlurhash: $bannerBlurhash, isLocked: $isLocked, isSilenced: $isSilenced, isSuspended: $isSuspended, description: $description, location: $location, birthday: $birthday, lang: $lang, fields: $fields, verifiedLinks: $verifiedLinks, mutualLinkSections: $mutualLinkSections, followersCount: $followersCount, followingCount: $followingCount, notesCount: $notesCount, pinnedNoteIds: $pinnedNoteIds, pinnedNotes: $pinnedNotes, pinnedPageId: $pinnedPageId, pinnedPage: $pinnedPage, publicReactions: $publicReactions, ffVisibility: $ffVisibility, followersVisibility: $followersVisibility, followingVisibility: $followingVisibility, twoFactorEnabled: $twoFactorEnabled, usePasswordLessLogin: $usePasswordLessLogin, securityKeys: $securityKeys, roles: $roles, memo: $memo, moderationNote: $moderationNote)';
   }
 
   @override
@@ -1575,6 +1707,14 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
                 other.onlineStatus == onlineStatus) &&
             const DeepCollectionEquality()
                 .equals(other._badgeRoles, _badgeRoles) &&
+            (identical(other.requireSigninToViewContents, requireSigninToViewContents) ||
+                other.requireSigninToViewContents ==
+                    requireSigninToViewContents) &&
+            (identical(other.makeNotesFollowersOnlyBefore, makeNotesFollowersOnlyBefore) ||
+                other.makeNotesFollowersOnlyBefore ==
+                    makeNotesFollowersOnlyBefore) &&
+            (identical(other.makeNotesHiddenBefore, makeNotesHiddenBefore) ||
+                other.makeNotesHiddenBefore == makeNotesHiddenBefore) &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.uri, uri) || other.uri == uri) &&
             (identical(other.movedTo, movedTo) || other.movedTo == movedTo) &&
@@ -1616,30 +1756,19 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
                 other.notesCount == notesCount) &&
             const DeepCollectionEquality()
                 .equals(other._pinnedNoteIds, _pinnedNoteIds) &&
-            const DeepCollectionEquality()
-                .equals(other._pinnedNotes, _pinnedNotes) &&
-            (identical(other.pinnedPageId, pinnedPageId) ||
-                other.pinnedPageId == pinnedPageId) &&
-            const DeepCollectionEquality()
-                .equals(other._pinnedPage, _pinnedPage) &&
-            (identical(other.publicReactions, publicReactions) ||
-                other.publicReactions == publicReactions) &&
-            (identical(other.ffVisibility, ffVisibility) ||
-                other.ffVisibility == ffVisibility) &&
-            (identical(other.followersVisibility, followersVisibility) ||
-                other.followersVisibility == followersVisibility) &&
-            (identical(other.followingVisibility, followingVisibility) ||
-                other.followingVisibility == followingVisibility) &&
-            (identical(other.twoFactorEnabled, twoFactorEnabled) ||
-                other.twoFactorEnabled == twoFactorEnabled) &&
-            (identical(other.usePasswordLessLogin, usePasswordLessLogin) ||
-                other.usePasswordLessLogin == usePasswordLessLogin) &&
-            (identical(other.securityKeys, securityKeys) ||
-                other.securityKeys == securityKeys) &&
+            const DeepCollectionEquality().equals(other._pinnedNotes, _pinnedNotes) &&
+            (identical(other.pinnedPageId, pinnedPageId) || other.pinnedPageId == pinnedPageId) &&
+            const DeepCollectionEquality().equals(other._pinnedPage, _pinnedPage) &&
+            (identical(other.publicReactions, publicReactions) || other.publicReactions == publicReactions) &&
+            (identical(other.ffVisibility, ffVisibility) || other.ffVisibility == ffVisibility) &&
+            (identical(other.followersVisibility, followersVisibility) || other.followersVisibility == followersVisibility) &&
+            (identical(other.followingVisibility, followingVisibility) || other.followingVisibility == followingVisibility) &&
+            (identical(other.twoFactorEnabled, twoFactorEnabled) || other.twoFactorEnabled == twoFactorEnabled) &&
+            (identical(other.usePasswordLessLogin, usePasswordLessLogin) || other.usePasswordLessLogin == usePasswordLessLogin) &&
+            (identical(other.securityKeys, securityKeys) || other.securityKeys == securityKeys) &&
             const DeepCollectionEquality().equals(other._roles, _roles) &&
             (identical(other.memo, memo) || other.memo == memo) &&
-            (identical(other.moderationNote, moderationNote) ||
-                other.moderationNote == moderationNote));
+            (identical(other.moderationNote, moderationNote) || other.moderationNote == moderationNote));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -1659,6 +1788,9 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
         const DeepCollectionEquality().hash(_emojis),
         onlineStatus,
         const DeepCollectionEquality().hash(_badgeRoles),
+        requireSigninToViewContents,
+        makeNotesFollowersOnlyBefore,
+        makeNotesHiddenBefore,
         url,
         uri,
         movedTo,
@@ -1730,6 +1862,9 @@ abstract class _UserDetailedNotMe implements UserDetailedNotMe {
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final OnlineStatus? onlineStatus,
       final List<UserBadgeRole> badgeRoles,
+      final bool? requireSigninToViewContents,
+      @HideBeforeConverter() final HideBefore? makeNotesFollowersOnlyBefore,
+      @HideBeforeConverter() final HideBefore? makeNotesHiddenBefore,
       @NullableUriConverter() final Uri? url,
       @NullableUriConverter() final Uri? uri,
       @NullableUriConverter() final Uri? movedTo,
@@ -1803,6 +1938,14 @@ abstract class _UserDetailedNotMe implements UserDetailedNotMe {
   OnlineStatus? get onlineStatus;
   @override
   List<UserBadgeRole> get badgeRoles;
+  @override
+  bool? get requireSigninToViewContents;
+  @override
+  @HideBeforeConverter()
+  HideBefore? get makeNotesFollowersOnlyBefore;
+  @override
+  @HideBeforeConverter()
+  HideBefore? get makeNotesHiddenBefore;
   @override
   @NullableUriConverter()
   Uri? get url;
@@ -1926,6 +2069,12 @@ mixin _$UserDetailedNotMeWithRelations {
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   OnlineStatus? get onlineStatus => throw _privateConstructorUsedError;
   List<UserBadgeRole> get badgeRoles => throw _privateConstructorUsedError;
+  bool? get requireSigninToViewContents => throw _privateConstructorUsedError;
+  @HideBeforeConverter()
+  HideBefore? get makeNotesFollowersOnlyBefore =>
+      throw _privateConstructorUsedError;
+  @HideBeforeConverter()
+  HideBefore? get makeNotesHiddenBefore => throw _privateConstructorUsedError;
   @NullableUriConverter()
   Uri? get url => throw _privateConstructorUsedError;
   @NullableUriConverter()
@@ -2031,6 +2180,9 @@ abstract class $UserDetailedNotMeWithRelationsCopyWith<$Res> {
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       OnlineStatus? onlineStatus,
       List<UserBadgeRole> badgeRoles,
+      bool? requireSigninToViewContents,
+      @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
+      @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
       @NullableUriConverter() Uri? url,
       @NullableUriConverter() Uri? uri,
       @NullableUriConverter() Uri? movedTo,
@@ -2115,6 +2267,9 @@ class _$UserDetailedNotMeWithRelationsCopyWithImpl<$Res,
     Object? emojis = null,
     Object? onlineStatus = freezed,
     Object? badgeRoles = null,
+    Object? requireSigninToViewContents = freezed,
+    Object? makeNotesFollowersOnlyBefore = freezed,
+    Object? makeNotesHiddenBefore = freezed,
     Object? url = freezed,
     Object? uri = freezed,
     Object? movedTo = freezed,
@@ -2216,6 +2371,18 @@ class _$UserDetailedNotMeWithRelationsCopyWithImpl<$Res,
           ? _value.badgeRoles
           : badgeRoles // ignore: cast_nullable_to_non_nullable
               as List<UserBadgeRole>,
+      requireSigninToViewContents: freezed == requireSigninToViewContents
+          ? _value.requireSigninToViewContents
+          : requireSigninToViewContents // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      makeNotesFollowersOnlyBefore: freezed == makeNotesFollowersOnlyBefore
+          ? _value.makeNotesFollowersOnlyBefore
+          : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
+              as HideBefore?,
+      makeNotesHiddenBefore: freezed == makeNotesHiddenBefore
+          ? _value.makeNotesHiddenBefore
+          : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
+              as HideBefore?,
       url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -2446,6 +2613,9 @@ abstract class _$$UserDetailedNotMeWithRelationsImplCopyWith<$Res>
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       OnlineStatus? onlineStatus,
       List<UserBadgeRole> badgeRoles,
+      bool? requireSigninToViewContents,
+      @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
+      @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
       @NullableUriConverter() Uri? url,
       @NullableUriConverter() Uri? uri,
       @NullableUriConverter() Uri? movedTo,
@@ -2530,6 +2700,9 @@ class __$$UserDetailedNotMeWithRelationsImplCopyWithImpl<$Res>
     Object? emojis = null,
     Object? onlineStatus = freezed,
     Object? badgeRoles = null,
+    Object? requireSigninToViewContents = freezed,
+    Object? makeNotesFollowersOnlyBefore = freezed,
+    Object? makeNotesHiddenBefore = freezed,
     Object? url = freezed,
     Object? uri = freezed,
     Object? movedTo = freezed,
@@ -2631,6 +2804,18 @@ class __$$UserDetailedNotMeWithRelationsImplCopyWithImpl<$Res>
           ? _value._badgeRoles
           : badgeRoles // ignore: cast_nullable_to_non_nullable
               as List<UserBadgeRole>,
+      requireSigninToViewContents: freezed == requireSigninToViewContents
+          ? _value.requireSigninToViewContents
+          : requireSigninToViewContents // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      makeNotesFollowersOnlyBefore: freezed == makeNotesFollowersOnlyBefore
+          ? _value.makeNotesFollowersOnlyBefore
+          : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
+              as HideBefore?,
+      makeNotesHiddenBefore: freezed == makeNotesHiddenBefore
+          ? _value.makeNotesHiddenBefore
+          : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
+              as HideBefore?,
       url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -2842,6 +3027,9 @@ class _$UserDetailedNotMeWithRelationsImpl
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.onlineStatus,
       final List<UserBadgeRole> badgeRoles = const [],
+      this.requireSigninToViewContents,
+      @HideBeforeConverter() this.makeNotesFollowersOnlyBefore,
+      @HideBeforeConverter() this.makeNotesHiddenBefore,
       @NullableUriConverter() this.url,
       @NullableUriConverter() this.uri,
       @NullableUriConverter() this.movedTo,
@@ -2961,6 +3149,14 @@ class _$UserDetailedNotMeWithRelationsImpl
     return EqualUnmodifiableListView(_badgeRoles);
   }
 
+  @override
+  final bool? requireSigninToViewContents;
+  @override
+  @HideBeforeConverter()
+  final HideBefore? makeNotesFollowersOnlyBefore;
+  @override
+  @HideBeforeConverter()
+  final HideBefore? makeNotesHiddenBefore;
   @override
   @NullableUriConverter()
   final Uri? url;
@@ -3148,7 +3344,7 @@ class _$UserDetailedNotMeWithRelationsImpl
 
   @override
   String toString() {
-    return 'UserDetailedNotMeWithRelations(id: $id, name: $name, username: $username, host: $host, avatarUrl: $avatarUrl, avatarBlurhash: $avatarBlurhash, avatarDecorations: $avatarDecorations, isBot: $isBot, isCat: $isCat, instance: $instance, emojis: $emojis, onlineStatus: $onlineStatus, badgeRoles: $badgeRoles, url: $url, uri: $uri, movedTo: $movedTo, alsoKnownAs: $alsoKnownAs, createdAt: $createdAt, updatedAt: $updatedAt, lastFetchedAt: $lastFetchedAt, bannerUrl: $bannerUrl, bannerBlurhash: $bannerBlurhash, isLocked: $isLocked, isSilenced: $isSilenced, isSuspended: $isSuspended, description: $description, location: $location, birthday: $birthday, lang: $lang, fields: $fields, verifiedLinks: $verifiedLinks, mutualLinkSections: $mutualLinkSections, followersCount: $followersCount, followingCount: $followingCount, notesCount: $notesCount, pinnedNoteIds: $pinnedNoteIds, pinnedNotes: $pinnedNotes, pinnedPageId: $pinnedPageId, pinnedPage: $pinnedPage, publicReactions: $publicReactions, ffVisibility: $ffVisibility, followersVisibility: $followersVisibility, followingVisibility: $followingVisibility, twoFactorEnabled: $twoFactorEnabled, usePasswordLessLogin: $usePasswordLessLogin, securityKeys: $securityKeys, roles: $roles, memo: $memo, moderationNote: $moderationNote, isFollowing: $isFollowing, isFollowed: $isFollowed, hasPendingFollowRequestFromYou: $hasPendingFollowRequestFromYou, hasPendingFollowRequestToYou: $hasPendingFollowRequestToYou, isBlocking: $isBlocking, isBlocked: $isBlocked, isMuted: $isMuted, isRenoteMuted: $isRenoteMuted, notify: $notify, withReplies: $withReplies, followedMessage: $followedMessage)';
+    return 'UserDetailedNotMeWithRelations(id: $id, name: $name, username: $username, host: $host, avatarUrl: $avatarUrl, avatarBlurhash: $avatarBlurhash, avatarDecorations: $avatarDecorations, isBot: $isBot, isCat: $isCat, instance: $instance, emojis: $emojis, onlineStatus: $onlineStatus, badgeRoles: $badgeRoles, requireSigninToViewContents: $requireSigninToViewContents, makeNotesFollowersOnlyBefore: $makeNotesFollowersOnlyBefore, makeNotesHiddenBefore: $makeNotesHiddenBefore, url: $url, uri: $uri, movedTo: $movedTo, alsoKnownAs: $alsoKnownAs, createdAt: $createdAt, updatedAt: $updatedAt, lastFetchedAt: $lastFetchedAt, bannerUrl: $bannerUrl, bannerBlurhash: $bannerBlurhash, isLocked: $isLocked, isSilenced: $isSilenced, isSuspended: $isSuspended, description: $description, location: $location, birthday: $birthday, lang: $lang, fields: $fields, verifiedLinks: $verifiedLinks, mutualLinkSections: $mutualLinkSections, followersCount: $followersCount, followingCount: $followingCount, notesCount: $notesCount, pinnedNoteIds: $pinnedNoteIds, pinnedNotes: $pinnedNotes, pinnedPageId: $pinnedPageId, pinnedPage: $pinnedPage, publicReactions: $publicReactions, ffVisibility: $ffVisibility, followersVisibility: $followersVisibility, followingVisibility: $followingVisibility, twoFactorEnabled: $twoFactorEnabled, usePasswordLessLogin: $usePasswordLessLogin, securityKeys: $securityKeys, roles: $roles, memo: $memo, moderationNote: $moderationNote, isFollowing: $isFollowing, isFollowed: $isFollowed, hasPendingFollowRequestFromYou: $hasPendingFollowRequestFromYou, hasPendingFollowRequestToYou: $hasPendingFollowRequestToYou, isBlocking: $isBlocking, isBlocked: $isBlocked, isMuted: $isMuted, isRenoteMuted: $isRenoteMuted, notify: $notify, withReplies: $withReplies, followedMessage: $followedMessage)';
   }
 
   @override
@@ -3176,6 +3372,14 @@ class _$UserDetailedNotMeWithRelationsImpl
                 other.onlineStatus == onlineStatus) &&
             const DeepCollectionEquality()
                 .equals(other._badgeRoles, _badgeRoles) &&
+            (identical(other.requireSigninToViewContents, requireSigninToViewContents) ||
+                other.requireSigninToViewContents ==
+                    requireSigninToViewContents) &&
+            (identical(other.makeNotesFollowersOnlyBefore, makeNotesFollowersOnlyBefore) ||
+                other.makeNotesFollowersOnlyBefore ==
+                    makeNotesFollowersOnlyBefore) &&
+            (identical(other.makeNotesHiddenBefore, makeNotesHiddenBefore) ||
+                other.makeNotesHiddenBefore == makeNotesHiddenBefore) &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.uri, uri) || other.uri == uri) &&
             (identical(other.movedTo, movedTo) || other.movedTo == movedTo) &&
@@ -3217,42 +3421,24 @@ class _$UserDetailedNotMeWithRelationsImpl
                 other.notesCount == notesCount) &&
             const DeepCollectionEquality()
                 .equals(other._pinnedNoteIds, _pinnedNoteIds) &&
-            const DeepCollectionEquality()
-                .equals(other._pinnedNotes, _pinnedNotes) &&
-            (identical(other.pinnedPageId, pinnedPageId) ||
-                other.pinnedPageId == pinnedPageId) &&
-            const DeepCollectionEquality()
-                .equals(other._pinnedPage, _pinnedPage) &&
-            (identical(other.publicReactions, publicReactions) ||
-                other.publicReactions == publicReactions) &&
-            (identical(other.ffVisibility, ffVisibility) ||
-                other.ffVisibility == ffVisibility) &&
-            (identical(other.followersVisibility, followersVisibility) ||
-                other.followersVisibility == followersVisibility) &&
-            (identical(other.followingVisibility, followingVisibility) ||
-                other.followingVisibility == followingVisibility) &&
-            (identical(other.twoFactorEnabled, twoFactorEnabled) ||
-                other.twoFactorEnabled == twoFactorEnabled) &&
-            (identical(other.usePasswordLessLogin, usePasswordLessLogin) ||
-                other.usePasswordLessLogin == usePasswordLessLogin) &&
-            (identical(other.securityKeys, securityKeys) ||
-                other.securityKeys == securityKeys) &&
+            const DeepCollectionEquality().equals(other._pinnedNotes, _pinnedNotes) &&
+            (identical(other.pinnedPageId, pinnedPageId) || other.pinnedPageId == pinnedPageId) &&
+            const DeepCollectionEquality().equals(other._pinnedPage, _pinnedPage) &&
+            (identical(other.publicReactions, publicReactions) || other.publicReactions == publicReactions) &&
+            (identical(other.ffVisibility, ffVisibility) || other.ffVisibility == ffVisibility) &&
+            (identical(other.followersVisibility, followersVisibility) || other.followersVisibility == followersVisibility) &&
+            (identical(other.followingVisibility, followingVisibility) || other.followingVisibility == followingVisibility) &&
+            (identical(other.twoFactorEnabled, twoFactorEnabled) || other.twoFactorEnabled == twoFactorEnabled) &&
+            (identical(other.usePasswordLessLogin, usePasswordLessLogin) || other.usePasswordLessLogin == usePasswordLessLogin) &&
+            (identical(other.securityKeys, securityKeys) || other.securityKeys == securityKeys) &&
             const DeepCollectionEquality().equals(other._roles, _roles) &&
             (identical(other.memo, memo) || other.memo == memo) &&
-            (identical(other.moderationNote, moderationNote) ||
-                other.moderationNote == moderationNote) &&
-            (identical(other.isFollowing, isFollowing) ||
-                other.isFollowing == isFollowing) &&
-            (identical(other.isFollowed, isFollowed) ||
-                other.isFollowed == isFollowed) &&
-            (identical(other.hasPendingFollowRequestFromYou, hasPendingFollowRequestFromYou) ||
-                other.hasPendingFollowRequestFromYou ==
-                    hasPendingFollowRequestFromYou) &&
-            (identical(other.hasPendingFollowRequestToYou, hasPendingFollowRequestToYou) ||
-                other.hasPendingFollowRequestToYou ==
-                    hasPendingFollowRequestToYou) &&
-            (identical(other.isBlocking, isBlocking) ||
-                other.isBlocking == isBlocking) &&
+            (identical(other.moderationNote, moderationNote) || other.moderationNote == moderationNote) &&
+            (identical(other.isFollowing, isFollowing) || other.isFollowing == isFollowing) &&
+            (identical(other.isFollowed, isFollowed) || other.isFollowed == isFollowed) &&
+            (identical(other.hasPendingFollowRequestFromYou, hasPendingFollowRequestFromYou) || other.hasPendingFollowRequestFromYou == hasPendingFollowRequestFromYou) &&
+            (identical(other.hasPendingFollowRequestToYou, hasPendingFollowRequestToYou) || other.hasPendingFollowRequestToYou == hasPendingFollowRequestToYou) &&
+            (identical(other.isBlocking, isBlocking) || other.isBlocking == isBlocking) &&
             (identical(other.isBlocked, isBlocked) || other.isBlocked == isBlocked) &&
             (identical(other.isMuted, isMuted) || other.isMuted == isMuted) &&
             (identical(other.isRenoteMuted, isRenoteMuted) || other.isRenoteMuted == isRenoteMuted) &&
@@ -3278,6 +3464,9 @@ class _$UserDetailedNotMeWithRelationsImpl
         const DeepCollectionEquality().hash(_emojis),
         onlineStatus,
         const DeepCollectionEquality().hash(_badgeRoles),
+        requireSigninToViewContents,
+        makeNotesFollowersOnlyBefore,
+        makeNotesHiddenBefore,
         url,
         uri,
         movedTo,
@@ -3362,6 +3551,9 @@ abstract class _UserDetailedNotMeWithRelations
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final OnlineStatus? onlineStatus,
       final List<UserBadgeRole> badgeRoles,
+      final bool? requireSigninToViewContents,
+      @HideBeforeConverter() final HideBefore? makeNotesFollowersOnlyBefore,
+      @HideBeforeConverter() final HideBefore? makeNotesHiddenBefore,
       @NullableUriConverter() final Uri? url,
       @NullableUriConverter() final Uri? uri,
       @NullableUriConverter() final Uri? movedTo,
@@ -3446,6 +3638,14 @@ abstract class _UserDetailedNotMeWithRelations
   OnlineStatus? get onlineStatus;
   @override
   List<UserBadgeRole> get badgeRoles;
+  @override
+  bool? get requireSigninToViewContents;
+  @override
+  @HideBeforeConverter()
+  HideBefore? get makeNotesFollowersOnlyBefore;
+  @override
+  @HideBeforeConverter()
+  HideBefore? get makeNotesHiddenBefore;
   @override
   @NullableUriConverter()
   Uri? get url;
@@ -3591,6 +3791,12 @@ mixin _$MeDetailed {
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   OnlineStatus? get onlineStatus => throw _privateConstructorUsedError;
   List<UserBadgeRole> get badgeRoles => throw _privateConstructorUsedError;
+  bool? get requireSigninToViewContents => throw _privateConstructorUsedError;
+  @HideBeforeConverter()
+  HideBefore? get makeNotesFollowersOnlyBefore =>
+      throw _privateConstructorUsedError;
+  @HideBeforeConverter()
+  HideBefore? get makeNotesHiddenBefore => throw _privateConstructorUsedError;
   @NullableUriConverter()
   Uri? get url => throw _privateConstructorUsedError;
   @NullableUriConverter()
@@ -3742,6 +3948,9 @@ abstract class $MeDetailedCopyWith<$Res> {
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       OnlineStatus? onlineStatus,
       List<UserBadgeRole> badgeRoles,
+      bool? requireSigninToViewContents,
+      @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
+      @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
       @NullableUriConverter() Uri? url,
       @NullableUriConverter() Uri? uri,
       @NullableUriConverter() Uri? movedTo,
@@ -3853,6 +4062,9 @@ class _$MeDetailedCopyWithImpl<$Res, $Val extends MeDetailed>
     Object? emojis = null,
     Object? onlineStatus = freezed,
     Object? badgeRoles = null,
+    Object? requireSigninToViewContents = freezed,
+    Object? makeNotesFollowersOnlyBefore = freezed,
+    Object? makeNotesHiddenBefore = freezed,
     Object? url = freezed,
     Object? uri = freezed,
     Object? movedTo = freezed,
@@ -3978,6 +4190,18 @@ class _$MeDetailedCopyWithImpl<$Res, $Val extends MeDetailed>
           ? _value.badgeRoles
           : badgeRoles // ignore: cast_nullable_to_non_nullable
               as List<UserBadgeRole>,
+      requireSigninToViewContents: freezed == requireSigninToViewContents
+          ? _value.requireSigninToViewContents
+          : requireSigninToViewContents // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      makeNotesFollowersOnlyBefore: freezed == makeNotesFollowersOnlyBefore
+          ? _value.makeNotesFollowersOnlyBefore
+          : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
+              as HideBefore?,
+      makeNotesHiddenBefore: freezed == makeNotesHiddenBefore
+          ? _value.makeNotesHiddenBefore
+          : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
+              as HideBefore?,
       url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -4328,6 +4552,9 @@ abstract class _$$MeDetailedImplCopyWith<$Res>
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       OnlineStatus? onlineStatus,
       List<UserBadgeRole> badgeRoles,
+      bool? requireSigninToViewContents,
+      @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
+      @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
       @NullableUriConverter() Uri? url,
       @NullableUriConverter() Uri? uri,
       @NullableUriConverter() Uri? movedTo,
@@ -4440,6 +4667,9 @@ class __$$MeDetailedImplCopyWithImpl<$Res>
     Object? emojis = null,
     Object? onlineStatus = freezed,
     Object? badgeRoles = null,
+    Object? requireSigninToViewContents = freezed,
+    Object? makeNotesFollowersOnlyBefore = freezed,
+    Object? makeNotesHiddenBefore = freezed,
     Object? url = freezed,
     Object? uri = freezed,
     Object? movedTo = freezed,
@@ -4565,6 +4795,18 @@ class __$$MeDetailedImplCopyWithImpl<$Res>
           ? _value._badgeRoles
           : badgeRoles // ignore: cast_nullable_to_non_nullable
               as List<UserBadgeRole>,
+      requireSigninToViewContents: freezed == requireSigninToViewContents
+          ? _value.requireSigninToViewContents
+          : requireSigninToViewContents // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      makeNotesFollowersOnlyBefore: freezed == makeNotesFollowersOnlyBefore
+          ? _value.makeNotesFollowersOnlyBefore
+          : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
+              as HideBefore?,
+      makeNotesHiddenBefore: freezed == makeNotesHiddenBefore
+          ? _value.makeNotesHiddenBefore
+          : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
+              as HideBefore?,
       url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -4871,6 +5113,9 @@ class _$MeDetailedImpl implements _MeDetailed {
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.onlineStatus,
       final List<UserBadgeRole> badgeRoles = const [],
+      this.requireSigninToViewContents,
+      @HideBeforeConverter() this.makeNotesFollowersOnlyBefore,
+      @HideBeforeConverter() this.makeNotesHiddenBefore,
       @NullableUriConverter() this.url,
       @NullableUriConverter() this.uri,
       @NullableUriConverter() this.movedTo,
@@ -5022,6 +5267,14 @@ class _$MeDetailedImpl implements _MeDetailed {
     return EqualUnmodifiableListView(_badgeRoles);
   }
 
+  @override
+  final bool? requireSigninToViewContents;
+  @override
+  @HideBeforeConverter()
+  final HideBefore? makeNotesFollowersOnlyBefore;
+  @override
+  @HideBeforeConverter()
+  final HideBefore? makeNotesHiddenBefore;
   @override
   @NullableUriConverter()
   final Uri? url;
@@ -5350,7 +5603,7 @@ class _$MeDetailedImpl implements _MeDetailed {
 
   @override
   String toString() {
-    return 'MeDetailed(id: $id, name: $name, username: $username, host: $host, avatarUrl: $avatarUrl, avatarBlurhash: $avatarBlurhash, avatarDecorations: $avatarDecorations, isBot: $isBot, isCat: $isCat, instance: $instance, emojis: $emojis, onlineStatus: $onlineStatus, badgeRoles: $badgeRoles, url: $url, uri: $uri, movedTo: $movedTo, alsoKnownAs: $alsoKnownAs, createdAt: $createdAt, updatedAt: $updatedAt, lastFetchedAt: $lastFetchedAt, bannerUrl: $bannerUrl, bannerBlurhash: $bannerBlurhash, isLocked: $isLocked, isSilenced: $isSilenced, isSuspended: $isSuspended, description: $description, location: $location, birthday: $birthday, lang: $lang, fields: $fields, verifiedLinks: $verifiedLinks, mutualLinkSections: $mutualLinkSections, followersCount: $followersCount, followingCount: $followingCount, notesCount: $notesCount, pinnedNoteIds: $pinnedNoteIds, pinnedNotes: $pinnedNotes, pinnedPageId: $pinnedPageId, pinnedPage: $pinnedPage, publicReactions: $publicReactions, ffVisibility: $ffVisibility, followersVisibility: $followersVisibility, followingVisibility: $followingVisibility, twoFactorEnabled: $twoFactorEnabled, usePasswordLessLogin: $usePasswordLessLogin, securityKeys: $securityKeys, roles: $roles, memo: $memo, moderationNote: $moderationNote, avatarId: $avatarId, bannerId: $bannerId, followedMessage: $followedMessage, isModerator: $isModerator, isAdmin: $isAdmin, injectFeaturedNote: $injectFeaturedNote, receiveAnnouncementEmail: $receiveAnnouncementEmail, alwaysMarkNsfw: $alwaysMarkNsfw, autoSensitive: $autoSensitive, carefulBot: $carefulBot, autoAcceptFollowed: $autoAcceptFollowed, preventAiLearning: $preventAiLearning, noCrawle: $noCrawle, isExplorable: $isExplorable, isDeleted: $isDeleted, twoFactorBackupCodesStock: $twoFactorBackupCodesStock, hideOnlineStatus: $hideOnlineStatus, hasUnreadSpecifiedNotes: $hasUnreadSpecifiedNotes, hasUnreadMentions: $hasUnreadMentions, hasUnreadAnnouncement: $hasUnreadAnnouncement, hasUnreadAntenna: $hasUnreadAntenna, hasUnreadChannel: $hasUnreadChannel, hasUnreadNotification: $hasUnreadNotification, hasPendingReceivedFollowRequest: $hasPendingReceivedFollowRequest, unreadNotificationsCount: $unreadNotificationsCount, unreadAnnouncements: $unreadAnnouncements, mutedWords: $mutedWords, hardMutedWords: $hardMutedWords, mutedInstances: $mutedInstances, mutingNotificationTypes: $mutingNotificationTypes, notificationRecieveConfig: $notificationRecieveConfig, emailNotificationTypes: $emailNotificationTypes, achievements: $achievements, loggedInDays: $loggedInDays, policies: $policies)';
+    return 'MeDetailed(id: $id, name: $name, username: $username, host: $host, avatarUrl: $avatarUrl, avatarBlurhash: $avatarBlurhash, avatarDecorations: $avatarDecorations, isBot: $isBot, isCat: $isCat, instance: $instance, emojis: $emojis, onlineStatus: $onlineStatus, badgeRoles: $badgeRoles, requireSigninToViewContents: $requireSigninToViewContents, makeNotesFollowersOnlyBefore: $makeNotesFollowersOnlyBefore, makeNotesHiddenBefore: $makeNotesHiddenBefore, url: $url, uri: $uri, movedTo: $movedTo, alsoKnownAs: $alsoKnownAs, createdAt: $createdAt, updatedAt: $updatedAt, lastFetchedAt: $lastFetchedAt, bannerUrl: $bannerUrl, bannerBlurhash: $bannerBlurhash, isLocked: $isLocked, isSilenced: $isSilenced, isSuspended: $isSuspended, description: $description, location: $location, birthday: $birthday, lang: $lang, fields: $fields, verifiedLinks: $verifiedLinks, mutualLinkSections: $mutualLinkSections, followersCount: $followersCount, followingCount: $followingCount, notesCount: $notesCount, pinnedNoteIds: $pinnedNoteIds, pinnedNotes: $pinnedNotes, pinnedPageId: $pinnedPageId, pinnedPage: $pinnedPage, publicReactions: $publicReactions, ffVisibility: $ffVisibility, followersVisibility: $followersVisibility, followingVisibility: $followingVisibility, twoFactorEnabled: $twoFactorEnabled, usePasswordLessLogin: $usePasswordLessLogin, securityKeys: $securityKeys, roles: $roles, memo: $memo, moderationNote: $moderationNote, avatarId: $avatarId, bannerId: $bannerId, followedMessage: $followedMessage, isModerator: $isModerator, isAdmin: $isAdmin, injectFeaturedNote: $injectFeaturedNote, receiveAnnouncementEmail: $receiveAnnouncementEmail, alwaysMarkNsfw: $alwaysMarkNsfw, autoSensitive: $autoSensitive, carefulBot: $carefulBot, autoAcceptFollowed: $autoAcceptFollowed, preventAiLearning: $preventAiLearning, noCrawle: $noCrawle, isExplorable: $isExplorable, isDeleted: $isDeleted, twoFactorBackupCodesStock: $twoFactorBackupCodesStock, hideOnlineStatus: $hideOnlineStatus, hasUnreadSpecifiedNotes: $hasUnreadSpecifiedNotes, hasUnreadMentions: $hasUnreadMentions, hasUnreadAnnouncement: $hasUnreadAnnouncement, hasUnreadAntenna: $hasUnreadAntenna, hasUnreadChannel: $hasUnreadChannel, hasUnreadNotification: $hasUnreadNotification, hasPendingReceivedFollowRequest: $hasPendingReceivedFollowRequest, unreadNotificationsCount: $unreadNotificationsCount, unreadAnnouncements: $unreadAnnouncements, mutedWords: $mutedWords, hardMutedWords: $hardMutedWords, mutedInstances: $mutedInstances, mutingNotificationTypes: $mutingNotificationTypes, notificationRecieveConfig: $notificationRecieveConfig, emailNotificationTypes: $emailNotificationTypes, achievements: $achievements, loggedInDays: $loggedInDays, policies: $policies)';
   }
 
   @override
@@ -5378,6 +5631,14 @@ class _$MeDetailedImpl implements _MeDetailed {
                 other.onlineStatus == onlineStatus) &&
             const DeepCollectionEquality()
                 .equals(other._badgeRoles, _badgeRoles) &&
+            (identical(other.requireSigninToViewContents, requireSigninToViewContents) ||
+                other.requireSigninToViewContents ==
+                    requireSigninToViewContents) &&
+            (identical(other.makeNotesFollowersOnlyBefore, makeNotesFollowersOnlyBefore) ||
+                other.makeNotesFollowersOnlyBefore ==
+                    makeNotesFollowersOnlyBefore) &&
+            (identical(other.makeNotesHiddenBefore, makeNotesHiddenBefore) ||
+                other.makeNotesHiddenBefore == makeNotesHiddenBefore) &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.uri, uri) || other.uri == uri) &&
             (identical(other.movedTo, movedTo) || other.movedTo == movedTo) &&
@@ -5419,45 +5680,27 @@ class _$MeDetailedImpl implements _MeDetailed {
                 other.notesCount == notesCount) &&
             const DeepCollectionEquality()
                 .equals(other._pinnedNoteIds, _pinnedNoteIds) &&
-            const DeepCollectionEquality()
-                .equals(other._pinnedNotes, _pinnedNotes) &&
-            (identical(other.pinnedPageId, pinnedPageId) ||
-                other.pinnedPageId == pinnedPageId) &&
-            const DeepCollectionEquality()
-                .equals(other._pinnedPage, _pinnedPage) &&
-            (identical(other.publicReactions, publicReactions) ||
-                other.publicReactions == publicReactions) &&
-            (identical(other.ffVisibility, ffVisibility) ||
-                other.ffVisibility == ffVisibility) &&
-            (identical(other.followersVisibility, followersVisibility) ||
-                other.followersVisibility == followersVisibility) &&
-            (identical(other.followingVisibility, followingVisibility) ||
-                other.followingVisibility == followingVisibility) &&
-            (identical(other.twoFactorEnabled, twoFactorEnabled) ||
-                other.twoFactorEnabled == twoFactorEnabled) &&
-            (identical(other.usePasswordLessLogin, usePasswordLessLogin) ||
-                other.usePasswordLessLogin == usePasswordLessLogin) &&
-            (identical(other.securityKeys, securityKeys) ||
-                other.securityKeys == securityKeys) &&
+            const DeepCollectionEquality().equals(other._pinnedNotes, _pinnedNotes) &&
+            (identical(other.pinnedPageId, pinnedPageId) || other.pinnedPageId == pinnedPageId) &&
+            const DeepCollectionEquality().equals(other._pinnedPage, _pinnedPage) &&
+            (identical(other.publicReactions, publicReactions) || other.publicReactions == publicReactions) &&
+            (identical(other.ffVisibility, ffVisibility) || other.ffVisibility == ffVisibility) &&
+            (identical(other.followersVisibility, followersVisibility) || other.followersVisibility == followersVisibility) &&
+            (identical(other.followingVisibility, followingVisibility) || other.followingVisibility == followingVisibility) &&
+            (identical(other.twoFactorEnabled, twoFactorEnabled) || other.twoFactorEnabled == twoFactorEnabled) &&
+            (identical(other.usePasswordLessLogin, usePasswordLessLogin) || other.usePasswordLessLogin == usePasswordLessLogin) &&
+            (identical(other.securityKeys, securityKeys) || other.securityKeys == securityKeys) &&
             const DeepCollectionEquality().equals(other._roles, _roles) &&
             (identical(other.memo, memo) || other.memo == memo) &&
-            (identical(other.moderationNote, moderationNote) ||
-                other.moderationNote == moderationNote) &&
-            (identical(other.avatarId, avatarId) ||
-                other.avatarId == avatarId) &&
-            (identical(other.bannerId, bannerId) ||
-                other.bannerId == bannerId) &&
-            (identical(other.followedMessage, followedMessage) ||
-                other.followedMessage == followedMessage) &&
-            (identical(other.isModerator, isModerator) ||
-                other.isModerator == isModerator) &&
+            (identical(other.moderationNote, moderationNote) || other.moderationNote == moderationNote) &&
+            (identical(other.avatarId, avatarId) || other.avatarId == avatarId) &&
+            (identical(other.bannerId, bannerId) || other.bannerId == bannerId) &&
+            (identical(other.followedMessage, followedMessage) || other.followedMessage == followedMessage) &&
+            (identical(other.isModerator, isModerator) || other.isModerator == isModerator) &&
             (identical(other.isAdmin, isAdmin) || other.isAdmin == isAdmin) &&
-            (identical(other.injectFeaturedNote, injectFeaturedNote) ||
-                other.injectFeaturedNote == injectFeaturedNote) &&
-            (identical(other.receiveAnnouncementEmail, receiveAnnouncementEmail) ||
-                other.receiveAnnouncementEmail == receiveAnnouncementEmail) &&
-            (identical(other.alwaysMarkNsfw, alwaysMarkNsfw) ||
-                other.alwaysMarkNsfw == alwaysMarkNsfw) &&
+            (identical(other.injectFeaturedNote, injectFeaturedNote) || other.injectFeaturedNote == injectFeaturedNote) &&
+            (identical(other.receiveAnnouncementEmail, receiveAnnouncementEmail) || other.receiveAnnouncementEmail == receiveAnnouncementEmail) &&
+            (identical(other.alwaysMarkNsfw, alwaysMarkNsfw) || other.alwaysMarkNsfw == alwaysMarkNsfw) &&
             (identical(other.autoSensitive, autoSensitive) || other.autoSensitive == autoSensitive) &&
             (identical(other.carefulBot, carefulBot) || other.carefulBot == carefulBot) &&
             (identical(other.autoAcceptFollowed, autoAcceptFollowed) || other.autoAcceptFollowed == autoAcceptFollowed) &&
@@ -5504,6 +5747,9 @@ class _$MeDetailedImpl implements _MeDetailed {
         const DeepCollectionEquality().hash(_emojis),
         onlineStatus,
         const DeepCollectionEquality().hash(_badgeRoles),
+        requireSigninToViewContents,
+        makeNotesFollowersOnlyBefore,
+        makeNotesHiddenBefore,
         url,
         uri,
         movedTo,
@@ -5609,6 +5855,9 @@ abstract class _MeDetailed implements MeDetailed {
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final OnlineStatus? onlineStatus,
       final List<UserBadgeRole> badgeRoles,
+      final bool? requireSigninToViewContents,
+      @HideBeforeConverter() final HideBefore? makeNotesFollowersOnlyBefore,
+      @HideBeforeConverter() final HideBefore? makeNotesHiddenBefore,
       @NullableUriConverter() final Uri? url,
       @NullableUriConverter() final Uri? uri,
       @NullableUriConverter() final Uri? movedTo,
@@ -5719,6 +5968,14 @@ abstract class _MeDetailed implements MeDetailed {
   OnlineStatus? get onlineStatus;
   @override
   List<UserBadgeRole> get badgeRoles;
+  @override
+  bool? get requireSigninToViewContents;
+  @override
+  @HideBeforeConverter()
+  HideBefore? get makeNotesFollowersOnlyBefore;
+  @override
+  @HideBeforeConverter()
+  HideBefore? get makeNotesHiddenBefore;
   @override
   @NullableUriConverter()
   Uri? get url;

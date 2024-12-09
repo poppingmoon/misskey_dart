@@ -62,4 +62,5 @@ const _$ChannelEventTypeEnumMap = {
   ChannelEventType.driveFileCreated: 'driveFileCreated',
   ChannelEventType.readAntenna: 'readAntenna',
   ChannelEventType.receiveFollowRequest: 'receiveFollowRequest',
+  ChannelEventType.unknown: 'unknown',
 };
