@@ -28,20 +28,26 @@ _$FederationShowInstanceResponseImpl
               isNotResponding:
                   $checkedConvert('isNotResponding', (v) => v as bool),
               isSuspended: $checkedConvert('isSuspended', (v) => v as bool),
+              suspensionState: $checkedConvert(
+                  'suspensionState',
+                  (v) => $enumDecodeNullable(_$SuspensionStateEnumMap, v,
+                      unknownValue: JsonKey.nullForUndefinedEnumValue)),
               isBlocked: $checkedConvert('isBlocked', (v) => v as bool),
-              isSilenced: $checkedConvert('isSilenced', (v) => v as bool?),
               softwareName:
                   $checkedConvert('softwareName', (v) => v as String?),
               softwareVersion:
                   $checkedConvert('softwareVersion', (v) => v as String?),
               openRegistrations:
                   $checkedConvert('openRegistrations', (v) => v as bool?),
-              name: $checkedConvert('name', (v) => v as String),
+              name: $checkedConvert('name', (v) => v as String?),
               description: $checkedConvert('description', (v) => v as String?),
               maintainerName:
                   $checkedConvert('maintainerName', (v) => v as String?),
               maintainerEmail:
                   $checkedConvert('maintainerEmail', (v) => v as String?),
+              isSilenced: $checkedConvert('isSilenced', (v) => v as bool?),
+              isMediaSilenced:
+                  $checkedConvert('isMediaSilenced', (v) => v as bool?),
               iconUrl: $checkedConvert(
                   'iconUrl',
                   (v) => _$JsonConverterFromJson<String, Uri?>(
@@ -52,8 +58,16 @@ _$FederationShowInstanceResponseImpl
                       v, const NullableUriConverter().fromJson)),
               themeColor: $checkedConvert('themeColor',
                   (v) => const NullableColorConverter().fromJson(v as String?)),
-              infoUpdatedAt: $checkedConvert('infoUpdatedAt',
-                  (v) => const DateTimeConverter().fromJson(v as String)),
+              infoUpdatedAt: $checkedConvert(
+                  'infoUpdatedAt',
+                  (v) => _$JsonConverterFromJson<String, DateTime>(
+                      v, const DateTimeConverter().fromJson)),
+              latestRequestReceivedAt: $checkedConvert(
+                  'latestRequestReceivedAt',
+                  (v) => _$JsonConverterFromJson<String, DateTime>(
+                      v, const DateTimeConverter().fromJson)),
+              moderationNote:
+                  $checkedConvert('moderationNote', (v) => v as String?),
             );
             return val;
           },
@@ -72,8 +86,8 @@ Map<String, dynamic> _$$FederationShowInstanceResponseImplToJson(
       'followersCount': instance.followersCount,
       'isNotResponding': instance.isNotResponding,
       'isSuspended': instance.isSuspended,
+      'suspensionState': _$SuspensionStateEnumMap[instance.suspensionState],
       'isBlocked': instance.isBlocked,
-      'isSilenced': instance.isSilenced,
       'softwareName': instance.softwareName,
       'softwareVersion': instance.softwareVersion,
       'openRegistrations': instance.openRegistrations,
@@ -81,14 +95,34 @@ Map<String, dynamic> _$$FederationShowInstanceResponseImplToJson(
       'description': instance.description,
       'maintainerName': instance.maintainerName,
       'maintainerEmail': instance.maintainerEmail,
+      'isSilenced': instance.isSilenced,
+      'isMediaSilenced': instance.isMediaSilenced,
       'iconUrl': const NullableUriConverter().toJson(instance.iconUrl),
       'faviconUrl': const NullableUriConverter().toJson(instance.faviconUrl),
       'themeColor': const NullableColorConverter().toJson(instance.themeColor),
-      'infoUpdatedAt': const DateTimeConverter().toJson(instance.infoUpdatedAt),
+      'infoUpdatedAt': _$JsonConverterToJson<String, DateTime>(
+          instance.infoUpdatedAt, const DateTimeConverter().toJson),
+      'latestRequestReceivedAt': _$JsonConverterToJson<String, DateTime>(
+          instance.latestRequestReceivedAt, const DateTimeConverter().toJson),
+      'moderationNote': instance.moderationNote,
     };
+
+const _$SuspensionStateEnumMap = {
+  SuspensionState.none: 'none',
+  SuspensionState.manuallySuspended: 'manuallySuspended',
+  SuspensionState.goneSuspended: 'goneSuspended',
+  SuspensionState.autoSuspendedForNotResponding:
+      'autoSuspendedForNotResponding',
+};
 
 Value? _$JsonConverterFromJson<Json, Value>(
   Object? json,
   Value? Function(Json json) fromJson,
 ) =>
     json == null ? null : fromJson(json as Json);
+
+Json? _$JsonConverterToJson<Json, Value>(
+  Value? value,
+  Json? Function(Value value) toJson,
+) =>
+    value == null ? null : toJson(value);
