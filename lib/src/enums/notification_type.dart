@@ -1,26 +1,30 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 enum NotificationType {
+  note,
   follow,
   mention,
   reply,
   renote,
   quote,
   reaction,
-  pollVote,
   pollEnded,
+  edited, // Sharkey
   receiveFollowRequest,
   followRequestAccepted,
-  groupInvited,
-  app,
+  roleAssigned,
   achievementEarned,
+  exportCompleted,
+  login,
+  scheduleNote, // CherryPick
+  app,
   test,
-  note,
   @JsonValue("reaction:grouped")
   reactionGrouped,
   @JsonValue("renote:grouped")
   renoteGrouped,
-  roleAssigned,
-  exportCompleted,
-  login,
+  @JsonValue("note:grouped")
+  noteGrouped, // CherryPick
+  pollVote,
+  groupInvited,
 }

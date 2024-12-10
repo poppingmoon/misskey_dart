@@ -66,6 +66,8 @@ _$INotificationsResponseImpl _$$INotificationsResponseImplFromJson(
                   unknownValue: JsonKey.nullForUndefinedEnumValue)),
           fileId: $checkedConvert('fileId', (v) => v as String?),
           message: $checkedConvert('message', (v) => v as String?),
+          noteIds: $checkedConvert('noteIds',
+              (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
         );
         return val;
       },
@@ -96,29 +98,33 @@ Map<String, dynamic> _$$INotificationsResponseImplToJson(
           _$UserExportableEntitiesEnumMap[instance.exportedEntity],
       'fileId': instance.fileId,
       'message': instance.message,
+      'noteIds': instance.noteIds,
     };
 
 const _$NotificationTypeEnumMap = {
+  NotificationType.note: 'note',
   NotificationType.follow: 'follow',
   NotificationType.mention: 'mention',
   NotificationType.reply: 'reply',
   NotificationType.renote: 'renote',
   NotificationType.quote: 'quote',
   NotificationType.reaction: 'reaction',
-  NotificationType.pollVote: 'pollVote',
   NotificationType.pollEnded: 'pollEnded',
+  NotificationType.edited: 'edited',
   NotificationType.receiveFollowRequest: 'receiveFollowRequest',
   NotificationType.followRequestAccepted: 'followRequestAccepted',
-  NotificationType.groupInvited: 'groupInvited',
-  NotificationType.app: 'app',
-  NotificationType.achievementEarned: 'achievementEarned',
-  NotificationType.test: 'test',
-  NotificationType.note: 'note',
-  NotificationType.reactionGrouped: 'reaction:grouped',
-  NotificationType.renoteGrouped: 'renote:grouped',
   NotificationType.roleAssigned: 'roleAssigned',
+  NotificationType.achievementEarned: 'achievementEarned',
   NotificationType.exportCompleted: 'exportCompleted',
   NotificationType.login: 'login',
+  NotificationType.scheduleNote: 'scheduleNote',
+  NotificationType.app: 'app',
+  NotificationType.test: 'test',
+  NotificationType.reactionGrouped: 'reaction:grouped',
+  NotificationType.renoteGrouped: 'renote:grouped',
+  NotificationType.noteGrouped: 'note:grouped',
+  NotificationType.pollVote: 'pollVote',
+  NotificationType.groupInvited: 'groupInvited',
 };
 
 Value? _$JsonConverterFromJson<Json, Value>(

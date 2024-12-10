@@ -50,6 +50,7 @@ mixin _$INotificationsResponse {
       throw _privateConstructorUsedError;
   String? get fileId => throw _privateConstructorUsedError;
   String? get message => throw _privateConstructorUsedError;
+  List<String>? get noteIds => throw _privateConstructorUsedError;
 
   /// Serializes this INotificationsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -90,7 +91,8 @@ abstract class $INotificationsResponseCopyWith<$Res> {
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       UserExportableEntities? exportedEntity,
       String? fileId,
-      String? message});
+      String? message,
+      List<String>? noteIds});
 
   $UserLiteCopyWith<$Res>? get user;
   $NoteCopyWith<$Res>? get note;
@@ -134,6 +136,7 @@ class _$INotificationsResponseCopyWithImpl<$Res,
     Object? exportedEntity = freezed,
     Object? fileId = freezed,
     Object? message = freezed,
+    Object? noteIds = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -220,6 +223,10 @@ class _$INotificationsResponseCopyWithImpl<$Res,
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String?,
+      noteIds: freezed == noteIds
+          ? _value.noteIds
+          : noteIds // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
     ) as $Val);
   }
 
@@ -298,7 +305,8 @@ abstract class _$$INotificationsResponseImplCopyWith<$Res>
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       UserExportableEntities? exportedEntity,
       String? fileId,
-      String? message});
+      String? message,
+      List<String>? noteIds});
 
   @override
   $UserLiteCopyWith<$Res>? get user;
@@ -344,6 +352,7 @@ class __$$INotificationsResponseImplCopyWithImpl<$Res>
     Object? exportedEntity = freezed,
     Object? fileId = freezed,
     Object? message = freezed,
+    Object? noteIds = freezed,
   }) {
     return _then(_$INotificationsResponseImpl(
       id: null == id
@@ -430,6 +439,10 @@ class __$$INotificationsResponseImplCopyWithImpl<$Res>
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String?,
+      noteIds: freezed == noteIds
+          ? _value._noteIds
+          : noteIds // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
     ));
   }
 }
@@ -459,9 +472,11 @@ class _$INotificationsResponseImpl implements _INotificationsResponse {
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.exportedEntity,
       this.fileId,
-      this.message})
+      this.message,
+      final List<String>? noteIds})
       : _reactions = reactions,
-        _users = users;
+        _users = users,
+        _noteIds = noteIds;
 
   factory _$INotificationsResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$INotificationsResponseImplFromJson(json);
@@ -530,10 +545,19 @@ class _$INotificationsResponseImpl implements _INotificationsResponse {
   final String? fileId;
   @override
   final String? message;
+  final List<String>? _noteIds;
+  @override
+  List<String>? get noteIds {
+    final value = _noteIds;
+    if (value == null) return null;
+    if (_noteIds is EqualUnmodifiableListView) return _noteIds;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
-    return 'INotificationsResponse(id: $id, createdAt: $createdAt, type: $type, noteId: $noteId, followRequestId: $followRequestId, reaction: $reaction, choice: $choice, achievement: $achievement, body: $body, header: $header, icon: $icon, appAccessTokenId: $appAccessTokenId, userId: $userId, user: $user, note: $note, role: $role, reactions: $reactions, users: $users, exportedEntity: $exportedEntity, fileId: $fileId, message: $message)';
+    return 'INotificationsResponse(id: $id, createdAt: $createdAt, type: $type, noteId: $noteId, followRequestId: $followRequestId, reaction: $reaction, choice: $choice, achievement: $achievement, body: $body, header: $header, icon: $icon, appAccessTokenId: $appAccessTokenId, userId: $userId, user: $user, note: $note, role: $role, reactions: $reactions, users: $users, exportedEntity: $exportedEntity, fileId: $fileId, message: $message, noteIds: $noteIds)';
   }
 
   @override
@@ -568,7 +592,8 @@ class _$INotificationsResponseImpl implements _INotificationsResponse {
             (identical(other.exportedEntity, exportedEntity) ||
                 other.exportedEntity == exportedEntity) &&
             (identical(other.fileId, fileId) || other.fileId == fileId) &&
-            (identical(other.message, message) || other.message == message));
+            (identical(other.message, message) || other.message == message) &&
+            const DeepCollectionEquality().equals(other._noteIds, _noteIds));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -595,7 +620,8 @@ class _$INotificationsResponseImpl implements _INotificationsResponse {
         const DeepCollectionEquality().hash(_users),
         exportedEntity,
         fileId,
-        message
+        message,
+        const DeepCollectionEquality().hash(_noteIds)
       ]);
 
   /// Create a copy of INotificationsResponse
@@ -639,7 +665,8 @@ abstract class _INotificationsResponse implements INotificationsResponse {
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final UserExportableEntities? exportedEntity,
       final String? fileId,
-      final String? message}) = _$INotificationsResponseImpl;
+      final String? message,
+      final List<String>? noteIds}) = _$INotificationsResponseImpl;
 
   factory _INotificationsResponse.fromJson(Map<String, dynamic> json) =
       _$INotificationsResponseImpl.fromJson;
@@ -690,6 +717,8 @@ abstract class _INotificationsResponse implements INotificationsResponse {
   String? get fileId;
   @override
   String? get message;
+  @override
+  List<String>? get noteIds;
 
   /// Create a copy of INotificationsResponse
   /// with the given fields replaced by the non-null parameter values.

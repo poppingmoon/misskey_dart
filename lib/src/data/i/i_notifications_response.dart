@@ -34,6 +34,7 @@ class INotificationsResponse with _$INotificationsResponse {
     UserExportableEntities? exportedEntity,
     String? fileId,
     String? message,
+    List<String>? noteIds,
   }) = _INotificationsResponse;
 
   factory INotificationsResponse.fromJson(Map<String, Object?> json) =>
