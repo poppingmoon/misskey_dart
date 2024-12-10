@@ -2467,8 +2467,7 @@ mixin _$ChannelStreamEvent {
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -2517,7 +2516,7 @@ mixin _$ChannelStreamEvent {
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -2564,7 +2563,7 @@ mixin _$ChannelStreamEvent {
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -2913,8 +2912,7 @@ class _$NoteChannelEventImpl implements NoteChannelEvent {
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -2966,7 +2964,7 @@ class _$NoteChannelEventImpl implements NoteChannelEvent {
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -3016,7 +3014,7 @@ class _$NoteChannelEventImpl implements NoteChannelEvent {
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -3355,8 +3353,7 @@ class _$StatsLogChannelEventImpl implements StatsLogChannelEvent {
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -3408,7 +3405,7 @@ class _$StatsLogChannelEventImpl implements StatsLogChannelEvent {
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -3458,7 +3455,7 @@ class _$StatsLogChannelEventImpl implements StatsLogChannelEvent {
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -3799,8 +3796,7 @@ class _$StatsChannelEventImpl implements StatsChannelEvent {
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -3852,7 +3848,7 @@ class _$StatsChannelEventImpl implements StatsChannelEvent {
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -3902,7 +3898,7 @@ class _$StatsChannelEventImpl implements StatsChannelEvent {
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -4241,8 +4237,7 @@ class _$UserAddedChannelEventImpl implements UserAddedChannelEvent {
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -4294,7 +4289,7 @@ class _$UserAddedChannelEventImpl implements UserAddedChannelEvent {
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -4344,7 +4339,7 @@ class _$UserAddedChannelEventImpl implements UserAddedChannelEvent {
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -4683,8 +4678,7 @@ class _$UserRemovedChannelEventImpl implements UserRemovedChannelEvent {
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -4736,7 +4730,7 @@ class _$UserRemovedChannelEventImpl implements UserRemovedChannelEvent {
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -4786,7 +4780,7 @@ class _$UserRemovedChannelEventImpl implements UserRemovedChannelEvent {
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -5125,8 +5119,7 @@ class _$NotificationChannelEventImpl implements NotificationChannelEvent {
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -5178,7 +5171,7 @@ class _$NotificationChannelEventImpl implements NotificationChannelEvent {
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -5228,7 +5221,7 @@ class _$NotificationChannelEventImpl implements NotificationChannelEvent {
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -5565,8 +5558,7 @@ class _$MentionChannelEventImpl implements MentionChannelEvent {
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -5618,7 +5610,7 @@ class _$MentionChannelEventImpl implements MentionChannelEvent {
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -5668,7 +5660,7 @@ class _$MentionChannelEventImpl implements MentionChannelEvent {
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -6004,8 +5996,7 @@ class _$ReplyChannelEventImpl implements ReplyChannelEvent {
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -6057,7 +6048,7 @@ class _$ReplyChannelEventImpl implements ReplyChannelEvent {
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -6107,7 +6098,7 @@ class _$ReplyChannelEventImpl implements ReplyChannelEvent {
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -6443,8 +6434,7 @@ class _$RenoteChannelEventImpl implements RenoteChannelEvent {
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -6496,7 +6486,7 @@ class _$RenoteChannelEventImpl implements RenoteChannelEvent {
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -6546,7 +6536,7 @@ class _$RenoteChannelEventImpl implements RenoteChannelEvent {
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -6882,8 +6872,7 @@ class _$FollowChannelEventImpl implements FollowChannelEvent {
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -6935,7 +6924,7 @@ class _$FollowChannelEventImpl implements FollowChannelEvent {
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -6985,7 +6974,7 @@ class _$FollowChannelEventImpl implements FollowChannelEvent {
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -7322,8 +7311,7 @@ class _$FollowedChannelEventImpl implements FollowedChannelEvent {
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -7375,7 +7363,7 @@ class _$FollowedChannelEventImpl implements FollowedChannelEvent {
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -7425,7 +7413,7 @@ class _$FollowedChannelEventImpl implements FollowedChannelEvent {
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -7762,8 +7750,7 @@ class _$UnfollowChannelEventImpl implements UnfollowChannelEvent {
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -7815,7 +7802,7 @@ class _$UnfollowChannelEventImpl implements UnfollowChannelEvent {
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -7865,7 +7852,7 @@ class _$UnfollowChannelEventImpl implements UnfollowChannelEvent {
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -8202,8 +8189,7 @@ class _$MeUpdatedChannelEventImpl implements MeUpdatedChannelEvent {
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -8255,7 +8241,7 @@ class _$MeUpdatedChannelEventImpl implements MeUpdatedChannelEvent {
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -8305,7 +8291,7 @@ class _$MeUpdatedChannelEventImpl implements MeUpdatedChannelEvent {
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -8642,8 +8628,7 @@ class _$PageEventChannelEventImpl implements PageEventChannelEvent {
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -8695,7 +8680,7 @@ class _$PageEventChannelEventImpl implements PageEventChannelEvent {
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -8745,7 +8730,7 @@ class _$PageEventChannelEventImpl implements PageEventChannelEvent {
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -9087,8 +9072,7 @@ class _$UrlUploadFinishedChannelEventImpl
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -9140,7 +9124,7 @@ class _$UrlUploadFinishedChannelEventImpl
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -9190,7 +9174,7 @@ class _$UrlUploadFinishedChannelEventImpl
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -9514,8 +9498,7 @@ class _$ReadAllNotificationsChannelEventImpl
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -9567,7 +9550,7 @@ class _$ReadAllNotificationsChannelEventImpl
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -9617,7 +9600,7 @@ class _$ReadAllNotificationsChannelEventImpl
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -9958,8 +9941,7 @@ class _$UnreadNotificationChannelEventImpl
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -10011,7 +9993,7 @@ class _$UnreadNotificationChannelEventImpl
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -10061,7 +10043,7 @@ class _$UnreadNotificationChannelEventImpl
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -10390,8 +10372,7 @@ class _$UnreadMentionChannelEventImpl implements UnreadMentionChannelEvent {
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -10443,7 +10424,7 @@ class _$UnreadMentionChannelEventImpl implements UnreadMentionChannelEvent {
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -10493,7 +10474,7 @@ class _$UnreadMentionChannelEventImpl implements UnreadMentionChannelEvent {
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -10815,8 +10796,7 @@ class _$ReadAllUnreadMentionsChannelEventImpl
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -10868,7 +10848,7 @@ class _$ReadAllUnreadMentionsChannelEventImpl
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -10918,7 +10898,7 @@ class _$ReadAllUnreadMentionsChannelEventImpl
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -11240,8 +11220,7 @@ class _$NotificationFlushedChannelEventImpl
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -11293,7 +11272,7 @@ class _$NotificationFlushedChannelEventImpl
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -11343,7 +11322,7 @@ class _$NotificationFlushedChannelEventImpl
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -11672,8 +11651,7 @@ class _$UnreadSpecifiedNoteChannelEventImpl
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -11725,7 +11703,7 @@ class _$UnreadSpecifiedNoteChannelEventImpl
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -11775,7 +11753,7 @@ class _$UnreadSpecifiedNoteChannelEventImpl
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -12099,8 +12077,7 @@ class _$ReadAllUnreadSpecifiedNotesChannelEventImpl
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -12152,7 +12129,7 @@ class _$ReadAllUnreadSpecifiedNotesChannelEventImpl
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -12202,7 +12179,7 @@ class _$ReadAllUnreadSpecifiedNotesChannelEventImpl
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -12524,8 +12501,7 @@ class _$ReadAllAntennasChannelEventImpl implements ReadAllAntennasChannelEvent {
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -12577,7 +12553,7 @@ class _$ReadAllAntennasChannelEventImpl implements ReadAllAntennasChannelEvent {
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -12627,7 +12603,7 @@ class _$ReadAllAntennasChannelEventImpl implements ReadAllAntennasChannelEvent {
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -12964,8 +12940,7 @@ class _$UnreadAntennaChannelEventImpl implements UnreadAntennaChannelEvent {
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -13017,7 +12992,7 @@ class _$UnreadAntennaChannelEventImpl implements UnreadAntennaChannelEvent {
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -13067,7 +13042,7 @@ class _$UnreadAntennaChannelEventImpl implements UnreadAntennaChannelEvent {
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -13389,8 +13364,7 @@ class _$ReadAllAnnouncementsChannelEventImpl
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -13442,7 +13416,7 @@ class _$ReadAllAnnouncementsChannelEventImpl
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -13492,7 +13466,7 @@ class _$ReadAllAnnouncementsChannelEventImpl
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -13813,8 +13787,7 @@ class _$MyTokenRegeneratedChannelEventImpl
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -13866,7 +13839,7 @@ class _$MyTokenRegeneratedChannelEventImpl
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -13916,7 +13889,7 @@ class _$MyTokenRegeneratedChannelEventImpl
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -14251,8 +14224,7 @@ class _$SigninChannelEventImpl implements SigninChannelEvent {
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -14304,7 +14276,7 @@ class _$SigninChannelEventImpl implements SigninChannelEvent {
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -14354,7 +14326,7 @@ class _$SigninChannelEventImpl implements SigninChannelEvent {
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -14694,8 +14666,7 @@ class _$RegistryUpdatedChannelEventImpl implements RegistryUpdatedChannelEvent {
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -14747,7 +14718,7 @@ class _$RegistryUpdatedChannelEventImpl implements RegistryUpdatedChannelEvent {
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -14797,7 +14768,7 @@ class _$RegistryUpdatedChannelEventImpl implements RegistryUpdatedChannelEvent {
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -15002,9 +14973,9 @@ abstract class _$$DriveFileCreatedChannelEventImplCopyWith<$Res>
       __$$DriveFileCreatedChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String id, DriveFile driveFileCreated});
+  $Res call({String id, DriveFile body});
 
-  $DriveFileCopyWith<$Res> get driveFileCreated;
+  $DriveFileCopyWith<$Res> get body;
 }
 
 /// @nodoc
@@ -15023,16 +14994,16 @@ class __$$DriveFileCreatedChannelEventImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = null,
-    Object? driveFileCreated = null,
+    Object? body = null,
   }) {
     return _then(_$DriveFileCreatedChannelEventImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      driveFileCreated: null == driveFileCreated
-          ? _value.driveFileCreated
-          : driveFileCreated // ignore: cast_nullable_to_non_nullable
+      body: null == body
+          ? _value.body
+          : body // ignore: cast_nullable_to_non_nullable
               as DriveFile,
     ));
   }
@@ -15041,9 +15012,9 @@ class __$$DriveFileCreatedChannelEventImplCopyWithImpl<$Res>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $DriveFileCopyWith<$Res> get driveFileCreated {
-    return $DriveFileCopyWith<$Res>(_value.driveFileCreated, (value) {
-      return _then(_value.copyWith(driveFileCreated: value));
+  $DriveFileCopyWith<$Res> get body {
+    return $DriveFileCopyWith<$Res>(_value.body, (value) {
+      return _then(_value.copyWith(body: value));
     });
   }
 }
@@ -15053,7 +15024,7 @@ class __$$DriveFileCreatedChannelEventImplCopyWithImpl<$Res>
 class _$DriveFileCreatedChannelEventImpl
     implements DriveFileCreatedChannelEvent {
   const _$DriveFileCreatedChannelEventImpl(
-      {required this.id, required this.driveFileCreated, final String? $type})
+      {required this.id, required this.body, final String? $type})
       : $type = $type ?? 'driveFileCreated';
 
   factory _$DriveFileCreatedChannelEventImpl.fromJson(
@@ -15063,14 +15034,14 @@ class _$DriveFileCreatedChannelEventImpl
   @override
   final String id;
   @override
-  final DriveFile driveFileCreated;
+  final DriveFile body;
 
   @JsonKey(name: 'type')
   final String $type;
 
   @override
   String toString() {
-    return 'ChannelStreamEvent.driveFileCreated(id: $id, driveFileCreated: $driveFileCreated)';
+    return 'ChannelStreamEvent.driveFileCreated(id: $id, body: $body)';
   }
 
   @override
@@ -15079,13 +15050,12 @@ class _$DriveFileCreatedChannelEventImpl
         (other.runtimeType == runtimeType &&
             other is _$DriveFileCreatedChannelEventImpl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.driveFileCreated, driveFileCreated) ||
-                other.driveFileCreated == driveFileCreated));
+            (identical(other.body, body) || other.body == body));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, driveFileCreated);
+  int get hashCode => Object.hash(runtimeType, id, body);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -15140,15 +15110,14 @@ class _$DriveFileCreatedChannelEventImpl
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
         announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
-    return driveFileCreated(id, this.driveFileCreated);
+    return driveFileCreated(id, body);
   }
 
   @override
@@ -15193,14 +15162,14 @@ class _$DriveFileCreatedChannelEventImpl
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
         announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
-    return driveFileCreated?.call(id, this.driveFileCreated);
+    return driveFileCreated?.call(id, body);
   }
 
   @override
@@ -15243,7 +15212,7 @@ class _$DriveFileCreatedChannelEventImpl
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -15252,7 +15221,7 @@ class _$DriveFileCreatedChannelEventImpl
     required TResult orElse(),
   }) {
     if (driveFileCreated != null) {
-      return driveFileCreated(id, this.driveFileCreated);
+      return driveFileCreated(id, body);
     }
     return orElse();
   }
@@ -15421,16 +15390,15 @@ class _$DriveFileCreatedChannelEventImpl
 
 abstract class DriveFileCreatedChannelEvent implements ChannelStreamEvent {
   const factory DriveFileCreatedChannelEvent(
-          {required final String id,
-          required final DriveFile driveFileCreated}) =
-      _$DriveFileCreatedChannelEventImpl;
+      {required final String id,
+      required final DriveFile body}) = _$DriveFileCreatedChannelEventImpl;
 
   factory DriveFileCreatedChannelEvent.fromJson(Map<String, dynamic> json) =
       _$DriveFileCreatedChannelEventImpl.fromJson;
 
   @override
   String get id;
-  DriveFile get driveFileCreated;
+  DriveFile get body;
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -15584,8 +15552,7 @@ class _$ReadAntennaChannelEventImpl implements ReadAntennaChannelEvent {
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -15637,7 +15604,7 @@ class _$ReadAntennaChannelEventImpl implements ReadAntennaChannelEvent {
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -15687,7 +15654,7 @@ class _$ReadAntennaChannelEventImpl implements ReadAntennaChannelEvent {
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -16029,8 +15996,7 @@ class _$ReceiveFollowRequestChannelEventImpl
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -16082,7 +16048,7 @@ class _$ReceiveFollowRequestChannelEventImpl
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -16132,7 +16098,7 @@ class _$ReceiveFollowRequestChannelEventImpl
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -16475,8 +16441,7 @@ class _$AnnouncementCreatedChannelEventImpl
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -16528,7 +16493,7 @@ class _$AnnouncementCreatedChannelEventImpl
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -16578,7 +16543,7 @@ class _$AnnouncementCreatedChannelEventImpl
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -16903,8 +16868,7 @@ class _$FallbackChannelEventImpl implements FallbackChannelEvent {
     required TResult Function(String id) myTokenRegenerated,
     required TResult Function(String id, Signin body) signin,
     required TResult Function(String id, RegistryUpdated body) registryUpdated,
-    required TResult Function(String id, DriveFile driveFileCreated)
-        driveFileCreated,
+    required TResult Function(String id, DriveFile body) driveFileCreated,
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
@@ -16956,7 +16920,7 @@ class _$FallbackChannelEventImpl implements FallbackChannelEvent {
     TResult? Function(String id)? myTokenRegenerated,
     TResult? Function(String id, Signin body)? signin,
     TResult? Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult? Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult? Function(String id, DriveFile body)? driveFileCreated,
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
@@ -17006,7 +16970,7 @@ class _$FallbackChannelEventImpl implements FallbackChannelEvent {
     TResult Function(String id)? myTokenRegenerated,
     TResult Function(String id, Signin body)? signin,
     TResult Function(String id, RegistryUpdated body)? registryUpdated,
-    TResult Function(String id, DriveFile driveFileCreated)? driveFileCreated,
+    TResult Function(String id, DriveFile body)? driveFileCreated,
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?

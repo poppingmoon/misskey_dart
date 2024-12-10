@@ -1008,8 +1008,8 @@ _$DriveFileCreatedChannelEventImpl _$$DriveFileCreatedChannelEventImplFromJson(
       ($checkedConvert) {
         final val = _$DriveFileCreatedChannelEventImpl(
           id: $checkedConvert('id', (v) => v as String),
-          driveFileCreated: $checkedConvert('driveFileCreated',
-              (v) => DriveFile.fromJson(v as Map<String, dynamic>)),
+          body: $checkedConvert(
+              'body', (v) => DriveFile.fromJson(v as Map<String, dynamic>)),
           $type: $checkedConvert('type', (v) => v as String?),
         );
         return val;
@@ -1021,7 +1021,7 @@ Map<String, dynamic> _$$DriveFileCreatedChannelEventImplToJson(
         _$DriveFileCreatedChannelEventImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'driveFileCreated': instance.driveFileCreated.toJson(),
+      'body': instance.body.toJson(),
       'type': instance.$type,
     };
 
