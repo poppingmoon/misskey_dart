@@ -83,7 +83,7 @@ _$PageTextImpl _$$PageTextImplFromJson(Map<String, dynamic> json) =>
       json,
       ($checkedConvert) {
         final val = _$PageTextImpl(
-          id: $checkedConvert('id', (v) => v as String),
+          id: $checkedConvert('id', (v) => v as String?),
           type: $checkedConvert(
               'type', (v) => $enumDecodeNullable(_$PageContentTypeEnumMap, v)),
           text: $checkedConvert('text', (v) => v as String?),
@@ -123,7 +123,7 @@ _$PageSectionImpl _$$PageSectionImplFromJson(Map<String, dynamic> json) =>
       json,
       ($checkedConvert) {
         final val = _$PageSectionImpl(
-          id: $checkedConvert('id', (v) => v as String),
+          id: $checkedConvert('id', (v) => v as String?),
           type: $checkedConvert(
               'type', (v) => $enumDecodeNullable(_$PageContentTypeEnumMap, v)),
           title: $checkedConvert('title', (v) => v as String?),
@@ -156,7 +156,7 @@ _$PageImageImpl _$$PageImageImplFromJson(Map<String, dynamic> json) =>
       json,
       ($checkedConvert) {
         final val = _$PageImageImpl(
-          id: $checkedConvert('id', (v) => v as String),
+          id: $checkedConvert('id', (v) => v as String?),
           type: $checkedConvert(
               'type', (v) => $enumDecodeNullable(_$PageContentTypeEnumMap, v)),
           fileId: $checkedConvert('fileId', (v) => v as String?),
@@ -178,7 +178,7 @@ _$PageNoteImpl _$$PageNoteImplFromJson(Map<String, dynamic> json) =>
       json,
       ($checkedConvert) {
         final val = _$PageNoteImpl(
-          id: $checkedConvert('id', (v) => v as String),
+          id: $checkedConvert('id', (v) => v as String?),
           type: $checkedConvert(
               'type', (v) => $enumDecodeNullable(_$PageContentTypeEnumMap, v)),
           note: $checkedConvert('note', (v) => v as String?),
@@ -202,7 +202,7 @@ _$PageUnknownImpl _$$PageUnknownImplFromJson(Map<String, dynamic> json) =>
       json,
       ($checkedConvert) {
         final val = _$PageUnknownImpl(
-          id: $checkedConvert('id', (v) => v as String),
+          id: $checkedConvert('id', (v) => v as String?),
           type: $checkedConvert(
               'type',
               (v) => $enumDecodeNullable(_$PageContentTypeEnumMap, v,

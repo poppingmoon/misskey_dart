@@ -65,7 +65,7 @@ enum PageContentType {
 }
 
 abstract class AbstractPageContent {
-  String get id;
+  String? get id;
   PageContentType? get type;
 }
 
@@ -76,7 +76,7 @@ abstract class AbstractPageText extends AbstractPageContent {
 @freezed
 class PageText with _$PageText implements AbstractPageText {
   const factory PageText({
-    required String id,
+    String? id,
     PageContentType? type,
     String? text,
   }) = _PageText;
@@ -93,7 +93,7 @@ abstract class AbstractPageSection extends AbstractPageContent {
 @freezed
 class PageSection with _$PageSection implements AbstractPageSection {
   const factory PageSection({
-    required String id,
+    String? id,
     PageContentType? type,
     String? title,
     @ListPageContentConverter() List<AbstractPageContent>? children,
@@ -110,7 +110,7 @@ abstract class AbstractPageImage extends AbstractPageContent {
 @freezed
 class PageImage with _$PageImage implements AbstractPageImage {
   const factory PageImage({
-    required String id,
+    String? id,
     PageContentType? type,
     String? fileId,
   }) = _PageImage;
@@ -127,7 +127,7 @@ abstract class AbstractPageNote extends AbstractPageContent {
 @freezed
 class PageNote with _$PageNote implements AbstractPageNote {
   const factory PageNote({
-    required String id,
+    String? id,
     PageContentType? type,
     String? note,
     bool? detailed,
@@ -142,7 +142,7 @@ abstract class AbstractPageUnknown extends AbstractPageContent {}
 @freezed
 class PageUnknown with _$PageUnknown implements AbstractPageUnknown {
   const factory PageUnknown({
-    required String id,
+    String? id,
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     PageContentType? type,
