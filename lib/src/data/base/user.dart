@@ -27,6 +27,7 @@ abstract class User {
   bool? get requireSigninToViewContents;
   HideBefore? get makeNotesFollowersOnlyBefore;
   HideBefore? get makeNotesHiddenBefore;
+  bool? get speakAsCat; // Firefish
 
   factory User.fromJson(Map<String, Object?> json) {
     if (json.containsKey("url")) {
@@ -117,6 +118,7 @@ class UserLite with _$UserLite implements User {
     bool? requireSigninToViewContents,
     @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
     @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
+    bool? speakAsCat,
   }) = _UserLite;
 
   factory UserLite.fromJson(Map<String, Object?> json) =>
@@ -144,6 +146,7 @@ class UserDetailedNotMe with _$UserDetailedNotMe implements UserDetailed {
     bool? requireSigninToViewContents,
     @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
     @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
+    bool? speakAsCat,
     @NullableUriConverter() Uri? url,
     @NullableUriConverter() Uri? uri,
     @NullableUriConverter() Uri? movedTo,
@@ -222,6 +225,7 @@ class UserDetailedNotMeWithRelations
     bool? requireSigninToViewContents,
     @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
     @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
+    bool? speakAsCat,
     @NullableUriConverter() Uri? url,
     @NullableUriConverter() Uri? uri,
     @NullableUriConverter() Uri? movedTo,
@@ -310,6 +314,7 @@ class MeDetailed with _$MeDetailed implements UserDetailed {
     bool? requireSigninToViewContents,
     @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
     @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
+    bool? speakAsCat,
     @NullableUriConverter() Uri? url,
     @NullableUriConverter() Uri? uri,
     @NullableUriConverter() Uri? movedTo,

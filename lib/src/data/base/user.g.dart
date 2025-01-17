@@ -63,6 +63,7 @@ _$UserLiteImpl _$$UserLiteImplFromJson(Map<String, dynamic> json) =>
               'makeNotesHiddenBefore',
               (v) => _$JsonConverterFromJson<int, HideBefore>(
                   v, const HideBeforeConverter().fromJson)),
+          speakAsCat: $checkedConvert('speakAsCat', (v) => v as bool?),
         );
         return val;
       },
@@ -90,6 +91,7 @@ Map<String, dynamic> _$$UserLiteImplToJson(_$UserLiteImpl instance) =>
           const HideBeforeConverter().toJson),
       'makeNotesHiddenBefore': _$JsonConverterToJson<int, HideBefore>(
           instance.makeNotesHiddenBefore, const HideBeforeConverter().toJson),
+      'speakAsCat': instance.speakAsCat,
     };
 
 Value? _$JsonConverterFromJson<Json, Value>(
@@ -169,6 +171,7 @@ _$UserDetailedNotMeImpl _$$UserDetailedNotMeImplFromJson(
               'makeNotesHiddenBefore',
               (v) => _$JsonConverterFromJson<int, HideBefore>(
                   v, const HideBeforeConverter().fromJson)),
+          speakAsCat: $checkedConvert('speakAsCat', (v) => v as bool?),
           url: $checkedConvert(
               'url',
               (v) => _$JsonConverterFromJson<String, Uri?>(
@@ -295,6 +298,7 @@ Map<String, dynamic> _$$UserDetailedNotMeImplToJson(
           const HideBeforeConverter().toJson),
       'makeNotesHiddenBefore': _$JsonConverterToJson<int, HideBefore>(
           instance.makeNotesHiddenBefore, const HideBeforeConverter().toJson),
+      'speakAsCat': instance.speakAsCat,
       'url': const NullableUriConverter().toJson(instance.url),
       'uri': const NullableUriConverter().toJson(instance.uri),
       'movedTo': const NullableUriConverter().toJson(instance.movedTo),
@@ -402,6 +406,7 @@ _$UserDetailedNotMeWithRelationsImpl
                   'makeNotesHiddenBefore',
                   (v) => _$JsonConverterFromJson<int, HideBefore>(
                       v, const HideBeforeConverter().fromJson)),
+              speakAsCat: $checkedConvert('speakAsCat', (v) => v as bool?),
               url: $checkedConvert(
                   'url',
                   (v) => _$JsonConverterFromJson<String, Uri?>(
@@ -551,6 +556,7 @@ Map<String, dynamic> _$$UserDetailedNotMeWithRelationsImplToJson(
           const HideBeforeConverter().toJson),
       'makeNotesHiddenBefore': _$JsonConverterToJson<int, HideBefore>(
           instance.makeNotesHiddenBefore, const HideBeforeConverter().toJson),
+      'speakAsCat': instance.speakAsCat,
       'url': const NullableUriConverter().toJson(instance.url),
       'uri': const NullableUriConverter().toJson(instance.uri),
       'movedTo': const NullableUriConverter().toJson(instance.movedTo),
@@ -666,6 +672,7 @@ _$MeDetailedImpl _$$MeDetailedImplFromJson(Map<String, dynamic> json) =>
               'makeNotesHiddenBefore',
               (v) => _$JsonConverterFromJson<int, HideBefore>(
                   v, const HideBeforeConverter().fromJson)),
+          speakAsCat: $checkedConvert('speakAsCat', (v) => v as bool?),
           url: $checkedConvert(
               'url',
               (v) => _$JsonConverterFromJson<String, Uri?>(
@@ -886,6 +893,7 @@ Map<String, dynamic> _$$MeDetailedImplToJson(_$MeDetailedImpl instance) =>
           const HideBeforeConverter().toJson),
       'makeNotesHiddenBefore': _$JsonConverterToJson<int, HideBefore>(
           instance.makeNotesHiddenBefore, const HideBeforeConverter().toJson),
+      'speakAsCat': instance.speakAsCat,
       'url': const NullableUriConverter().toJson(instance.url),
       'uri': const NullableUriConverter().toJson(instance.uri),
       'movedTo': const NullableUriConverter().toJson(instance.movedTo),

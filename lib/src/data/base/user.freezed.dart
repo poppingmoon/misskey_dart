@@ -44,6 +44,7 @@ mixin _$UserLite {
       throw _privateConstructorUsedError;
   @HideBeforeConverter()
   HideBefore? get makeNotesHiddenBefore => throw _privateConstructorUsedError;
+  bool? get speakAsCat => throw _privateConstructorUsedError;
 
   /// Serializes this UserLite to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -77,7 +78,8 @@ abstract class $UserLiteCopyWith<$Res> {
       List<UserBadgeRole> badgeRoles,
       bool? requireSigninToViewContents,
       @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
-      @HideBeforeConverter() HideBefore? makeNotesHiddenBefore});
+      @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
+      bool? speakAsCat});
 
   $UserInstanceInfoCopyWith<$Res>? get instance;
 }
@@ -113,6 +115,7 @@ class _$UserLiteCopyWithImpl<$Res, $Val extends UserLite>
     Object? requireSigninToViewContents = freezed,
     Object? makeNotesFollowersOnlyBefore = freezed,
     Object? makeNotesHiddenBefore = freezed,
+    Object? speakAsCat = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -179,6 +182,10 @@ class _$UserLiteCopyWithImpl<$Res, $Val extends UserLite>
           ? _value.makeNotesHiddenBefore
           : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
               as HideBefore?,
+      speakAsCat: freezed == speakAsCat
+          ? _value.speakAsCat
+          : speakAsCat // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ) as $Val);
   }
 
@@ -222,7 +229,8 @@ abstract class _$$UserLiteImplCopyWith<$Res>
       List<UserBadgeRole> badgeRoles,
       bool? requireSigninToViewContents,
       @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
-      @HideBeforeConverter() HideBefore? makeNotesHiddenBefore});
+      @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
+      bool? speakAsCat});
 
   @override
   $UserInstanceInfoCopyWith<$Res>? get instance;
@@ -257,6 +265,7 @@ class __$$UserLiteImplCopyWithImpl<$Res>
     Object? requireSigninToViewContents = freezed,
     Object? makeNotesFollowersOnlyBefore = freezed,
     Object? makeNotesHiddenBefore = freezed,
+    Object? speakAsCat = freezed,
   }) {
     return _then(_$UserLiteImpl(
       id: null == id
@@ -323,6 +332,10 @@ class __$$UserLiteImplCopyWithImpl<$Res>
           ? _value.makeNotesHiddenBefore
           : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
               as HideBefore?,
+      speakAsCat: freezed == speakAsCat
+          ? _value.speakAsCat
+          : speakAsCat // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ));
   }
 }
@@ -347,7 +360,8 @@ class _$UserLiteImpl implements _UserLite {
       final List<UserBadgeRole> badgeRoles = const [],
       this.requireSigninToViewContents,
       @HideBeforeConverter() this.makeNotesFollowersOnlyBefore,
-      @HideBeforeConverter() this.makeNotesHiddenBefore})
+      @HideBeforeConverter() this.makeNotesHiddenBefore,
+      this.speakAsCat})
       : _avatarDecorations = avatarDecorations,
         _emojis = emojis,
         _badgeRoles = badgeRoles;
@@ -417,10 +431,12 @@ class _$UserLiteImpl implements _UserLite {
   @override
   @HideBeforeConverter()
   final HideBefore? makeNotesHiddenBefore;
+  @override
+  final bool? speakAsCat;
 
   @override
   String toString() {
-    return 'UserLite(id: $id, name: $name, username: $username, host: $host, avatarUrl: $avatarUrl, avatarBlurhash: $avatarBlurhash, avatarDecorations: $avatarDecorations, isBot: $isBot, isCat: $isCat, instance: $instance, emojis: $emojis, onlineStatus: $onlineStatus, badgeRoles: $badgeRoles, requireSigninToViewContents: $requireSigninToViewContents, makeNotesFollowersOnlyBefore: $makeNotesFollowersOnlyBefore, makeNotesHiddenBefore: $makeNotesHiddenBefore)';
+    return 'UserLite(id: $id, name: $name, username: $username, host: $host, avatarUrl: $avatarUrl, avatarBlurhash: $avatarBlurhash, avatarDecorations: $avatarDecorations, isBot: $isBot, isCat: $isCat, instance: $instance, emojis: $emojis, onlineStatus: $onlineStatus, badgeRoles: $badgeRoles, requireSigninToViewContents: $requireSigninToViewContents, makeNotesFollowersOnlyBefore: $makeNotesFollowersOnlyBefore, makeNotesHiddenBefore: $makeNotesHiddenBefore, speakAsCat: $speakAsCat)';
   }
 
   @override
@@ -457,7 +473,9 @@ class _$UserLiteImpl implements _UserLite {
                 other.makeNotesFollowersOnlyBefore ==
                     makeNotesFollowersOnlyBefore) &&
             (identical(other.makeNotesHiddenBefore, makeNotesHiddenBefore) ||
-                other.makeNotesHiddenBefore == makeNotesHiddenBefore));
+                other.makeNotesHiddenBefore == makeNotesHiddenBefore) &&
+            (identical(other.speakAsCat, speakAsCat) ||
+                other.speakAsCat == speakAsCat));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -479,7 +497,8 @@ class _$UserLiteImpl implements _UserLite {
       const DeepCollectionEquality().hash(_badgeRoles),
       requireSigninToViewContents,
       makeNotesFollowersOnlyBefore,
-      makeNotesHiddenBefore);
+      makeNotesHiddenBefore,
+      speakAsCat);
 
   /// Create a copy of UserLite
   /// with the given fields replaced by the non-null parameter values.
@@ -499,24 +518,24 @@ class _$UserLiteImpl implements _UserLite {
 
 abstract class _UserLite implements UserLite {
   const factory _UserLite(
-          {required final String id,
-          final String? name,
-          required final String username,
-          final String? host,
-          @NullableUriConverter() final Uri? avatarUrl,
-          final String? avatarBlurhash,
-          final List<UserAvatarDecoration> avatarDecorations,
-          final bool isBot,
-          final bool isCat,
-          final UserInstanceInfo? instance,
-          @EmojisConverter() final Map<String, String> emojis,
-          @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-          final OnlineStatus? onlineStatus,
-          final List<UserBadgeRole> badgeRoles,
-          final bool? requireSigninToViewContents,
-          @HideBeforeConverter() final HideBefore? makeNotesFollowersOnlyBefore,
-          @HideBeforeConverter() final HideBefore? makeNotesHiddenBefore}) =
-      _$UserLiteImpl;
+      {required final String id,
+      final String? name,
+      required final String username,
+      final String? host,
+      @NullableUriConverter() final Uri? avatarUrl,
+      final String? avatarBlurhash,
+      final List<UserAvatarDecoration> avatarDecorations,
+      final bool isBot,
+      final bool isCat,
+      final UserInstanceInfo? instance,
+      @EmojisConverter() final Map<String, String> emojis,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      final OnlineStatus? onlineStatus,
+      final List<UserBadgeRole> badgeRoles,
+      final bool? requireSigninToViewContents,
+      @HideBeforeConverter() final HideBefore? makeNotesFollowersOnlyBefore,
+      @HideBeforeConverter() final HideBefore? makeNotesHiddenBefore,
+      final bool? speakAsCat}) = _$UserLiteImpl;
 
   factory _UserLite.fromJson(Map<String, dynamic> json) =
       _$UserLiteImpl.fromJson;
@@ -558,6 +577,8 @@ abstract class _UserLite implements UserLite {
   @override
   @HideBeforeConverter()
   HideBefore? get makeNotesHiddenBefore;
+  @override
+  bool? get speakAsCat;
 
   /// Create a copy of UserLite
   /// with the given fields replaced by the non-null parameter values.
@@ -597,6 +618,7 @@ mixin _$UserDetailedNotMe {
       throw _privateConstructorUsedError;
   @HideBeforeConverter()
   HideBefore? get makeNotesHiddenBefore => throw _privateConstructorUsedError;
+  bool? get speakAsCat => throw _privateConstructorUsedError;
   @NullableUriConverter()
   Uri? get url => throw _privateConstructorUsedError;
   @NullableUriConverter()
@@ -691,6 +713,7 @@ abstract class $UserDetailedNotMeCopyWith<$Res> {
       bool? requireSigninToViewContents,
       @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
       @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
+      bool? speakAsCat,
       @NullableUriConverter() Uri? url,
       @NullableUriConverter() Uri? uri,
       @NullableUriConverter() Uri? movedTo,
@@ -766,6 +789,7 @@ class _$UserDetailedNotMeCopyWithImpl<$Res, $Val extends UserDetailedNotMe>
     Object? requireSigninToViewContents = freezed,
     Object? makeNotesFollowersOnlyBefore = freezed,
     Object? makeNotesHiddenBefore = freezed,
+    Object? speakAsCat = freezed,
     Object? url = freezed,
     Object? uri = freezed,
     Object? movedTo = freezed,
@@ -868,6 +892,10 @@ class _$UserDetailedNotMeCopyWithImpl<$Res, $Val extends UserDetailedNotMe>
           ? _value.makeNotesHiddenBefore
           : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
               as HideBefore?,
+      speakAsCat: freezed == speakAsCat
+          ? _value.speakAsCat
+          : speakAsCat // ignore: cast_nullable_to_non_nullable
+              as bool?,
       url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -1056,6 +1084,7 @@ abstract class _$$UserDetailedNotMeImplCopyWith<$Res>
       bool? requireSigninToViewContents,
       @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
       @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
+      bool? speakAsCat,
       @NullableUriConverter() Uri? url,
       @NullableUriConverter() Uri? uri,
       @NullableUriConverter() Uri? movedTo,
@@ -1130,6 +1159,7 @@ class __$$UserDetailedNotMeImplCopyWithImpl<$Res>
     Object? requireSigninToViewContents = freezed,
     Object? makeNotesFollowersOnlyBefore = freezed,
     Object? makeNotesHiddenBefore = freezed,
+    Object? speakAsCat = freezed,
     Object? url = freezed,
     Object? uri = freezed,
     Object? movedTo = freezed,
@@ -1232,6 +1262,10 @@ class __$$UserDetailedNotMeImplCopyWithImpl<$Res>
           ? _value.makeNotesHiddenBefore
           : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
               as HideBefore?,
+      speakAsCat: freezed == speakAsCat
+          ? _value.speakAsCat
+          : speakAsCat // ignore: cast_nullable_to_non_nullable
+              as bool?,
       url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -1401,6 +1435,7 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
       this.requireSigninToViewContents,
       @HideBeforeConverter() this.makeNotesFollowersOnlyBefore,
       @HideBeforeConverter() this.makeNotesHiddenBefore,
+      this.speakAsCat,
       @NullableUriConverter() this.url,
       @NullableUriConverter() this.uri,
       @NullableUriConverter() this.movedTo,
@@ -1516,6 +1551,8 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
   @override
   @HideBeforeConverter()
   final HideBefore? makeNotesHiddenBefore;
+  @override
+  final bool? speakAsCat;
   @override
   @NullableUriConverter()
   final Uri? url;
@@ -1679,7 +1716,7 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
 
   @override
   String toString() {
-    return 'UserDetailedNotMe(id: $id, name: $name, username: $username, host: $host, avatarUrl: $avatarUrl, avatarBlurhash: $avatarBlurhash, avatarDecorations: $avatarDecorations, isBot: $isBot, isCat: $isCat, instance: $instance, emojis: $emojis, onlineStatus: $onlineStatus, badgeRoles: $badgeRoles, requireSigninToViewContents: $requireSigninToViewContents, makeNotesFollowersOnlyBefore: $makeNotesFollowersOnlyBefore, makeNotesHiddenBefore: $makeNotesHiddenBefore, url: $url, uri: $uri, movedTo: $movedTo, alsoKnownAs: $alsoKnownAs, createdAt: $createdAt, updatedAt: $updatedAt, lastFetchedAt: $lastFetchedAt, bannerUrl: $bannerUrl, bannerBlurhash: $bannerBlurhash, isLocked: $isLocked, isSilenced: $isSilenced, isSuspended: $isSuspended, description: $description, location: $location, birthday: $birthday, lang: $lang, fields: $fields, verifiedLinks: $verifiedLinks, mutualLinkSections: $mutualLinkSections, followersCount: $followersCount, followingCount: $followingCount, notesCount: $notesCount, pinnedNoteIds: $pinnedNoteIds, pinnedNotes: $pinnedNotes, pinnedPageId: $pinnedPageId, pinnedPage: $pinnedPage, publicReactions: $publicReactions, ffVisibility: $ffVisibility, followersVisibility: $followersVisibility, followingVisibility: $followingVisibility, twoFactorEnabled: $twoFactorEnabled, usePasswordLessLogin: $usePasswordLessLogin, securityKeys: $securityKeys, roles: $roles, memo: $memo, moderationNote: $moderationNote)';
+    return 'UserDetailedNotMe(id: $id, name: $name, username: $username, host: $host, avatarUrl: $avatarUrl, avatarBlurhash: $avatarBlurhash, avatarDecorations: $avatarDecorations, isBot: $isBot, isCat: $isCat, instance: $instance, emojis: $emojis, onlineStatus: $onlineStatus, badgeRoles: $badgeRoles, requireSigninToViewContents: $requireSigninToViewContents, makeNotesFollowersOnlyBefore: $makeNotesFollowersOnlyBefore, makeNotesHiddenBefore: $makeNotesHiddenBefore, speakAsCat: $speakAsCat, url: $url, uri: $uri, movedTo: $movedTo, alsoKnownAs: $alsoKnownAs, createdAt: $createdAt, updatedAt: $updatedAt, lastFetchedAt: $lastFetchedAt, bannerUrl: $bannerUrl, bannerBlurhash: $bannerBlurhash, isLocked: $isLocked, isSilenced: $isSilenced, isSuspended: $isSuspended, description: $description, location: $location, birthday: $birthday, lang: $lang, fields: $fields, verifiedLinks: $verifiedLinks, mutualLinkSections: $mutualLinkSections, followersCount: $followersCount, followingCount: $followingCount, notesCount: $notesCount, pinnedNoteIds: $pinnedNoteIds, pinnedNotes: $pinnedNotes, pinnedPageId: $pinnedPageId, pinnedPage: $pinnedPage, publicReactions: $publicReactions, ffVisibility: $ffVisibility, followersVisibility: $followersVisibility, followingVisibility: $followingVisibility, twoFactorEnabled: $twoFactorEnabled, usePasswordLessLogin: $usePasswordLessLogin, securityKeys: $securityKeys, roles: $roles, memo: $memo, moderationNote: $moderationNote)';
   }
 
   @override
@@ -1715,6 +1752,8 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
                     makeNotesFollowersOnlyBefore) &&
             (identical(other.makeNotesHiddenBefore, makeNotesHiddenBefore) ||
                 other.makeNotesHiddenBefore == makeNotesHiddenBefore) &&
+            (identical(other.speakAsCat, speakAsCat) ||
+                other.speakAsCat == speakAsCat) &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.uri, uri) || other.uri == uri) &&
             (identical(other.movedTo, movedTo) || other.movedTo == movedTo) &&
@@ -1754,8 +1793,7 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
                 other.followingCount == followingCount) &&
             (identical(other.notesCount, notesCount) ||
                 other.notesCount == notesCount) &&
-            const DeepCollectionEquality()
-                .equals(other._pinnedNoteIds, _pinnedNoteIds) &&
+            const DeepCollectionEquality().equals(other._pinnedNoteIds, _pinnedNoteIds) &&
             const DeepCollectionEquality().equals(other._pinnedNotes, _pinnedNotes) &&
             (identical(other.pinnedPageId, pinnedPageId) || other.pinnedPageId == pinnedPageId) &&
             const DeepCollectionEquality().equals(other._pinnedPage, _pinnedPage) &&
@@ -1791,6 +1829,7 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
         requireSigninToViewContents,
         makeNotesFollowersOnlyBefore,
         makeNotesHiddenBefore,
+        speakAsCat,
         url,
         uri,
         movedTo,
@@ -1865,6 +1904,7 @@ abstract class _UserDetailedNotMe implements UserDetailedNotMe {
       final bool? requireSigninToViewContents,
       @HideBeforeConverter() final HideBefore? makeNotesFollowersOnlyBefore,
       @HideBeforeConverter() final HideBefore? makeNotesHiddenBefore,
+      final bool? speakAsCat,
       @NullableUriConverter() final Uri? url,
       @NullableUriConverter() final Uri? uri,
       @NullableUriConverter() final Uri? movedTo,
@@ -1946,6 +1986,8 @@ abstract class _UserDetailedNotMe implements UserDetailedNotMe {
   @override
   @HideBeforeConverter()
   HideBefore? get makeNotesHiddenBefore;
+  @override
+  bool? get speakAsCat;
   @override
   @NullableUriConverter()
   Uri? get url;
@@ -2075,6 +2117,7 @@ mixin _$UserDetailedNotMeWithRelations {
       throw _privateConstructorUsedError;
   @HideBeforeConverter()
   HideBefore? get makeNotesHiddenBefore => throw _privateConstructorUsedError;
+  bool? get speakAsCat => throw _privateConstructorUsedError;
   @NullableUriConverter()
   Uri? get url => throw _privateConstructorUsedError;
   @NullableUriConverter()
@@ -2183,6 +2226,7 @@ abstract class $UserDetailedNotMeWithRelationsCopyWith<$Res> {
       bool? requireSigninToViewContents,
       @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
       @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
+      bool? speakAsCat,
       @NullableUriConverter() Uri? url,
       @NullableUriConverter() Uri? uri,
       @NullableUriConverter() Uri? movedTo,
@@ -2270,6 +2314,7 @@ class _$UserDetailedNotMeWithRelationsCopyWithImpl<$Res,
     Object? requireSigninToViewContents = freezed,
     Object? makeNotesFollowersOnlyBefore = freezed,
     Object? makeNotesHiddenBefore = freezed,
+    Object? speakAsCat = freezed,
     Object? url = freezed,
     Object? uri = freezed,
     Object? movedTo = freezed,
@@ -2383,6 +2428,10 @@ class _$UserDetailedNotMeWithRelationsCopyWithImpl<$Res,
           ? _value.makeNotesHiddenBefore
           : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
               as HideBefore?,
+      speakAsCat: freezed == speakAsCat
+          ? _value.speakAsCat
+          : speakAsCat // ignore: cast_nullable_to_non_nullable
+              as bool?,
       url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -2616,6 +2665,7 @@ abstract class _$$UserDetailedNotMeWithRelationsImplCopyWith<$Res>
       bool? requireSigninToViewContents,
       @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
       @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
+      bool? speakAsCat,
       @NullableUriConverter() Uri? url,
       @NullableUriConverter() Uri? uri,
       @NullableUriConverter() Uri? movedTo,
@@ -2703,6 +2753,7 @@ class __$$UserDetailedNotMeWithRelationsImplCopyWithImpl<$Res>
     Object? requireSigninToViewContents = freezed,
     Object? makeNotesFollowersOnlyBefore = freezed,
     Object? makeNotesHiddenBefore = freezed,
+    Object? speakAsCat = freezed,
     Object? url = freezed,
     Object? uri = freezed,
     Object? movedTo = freezed,
@@ -2816,6 +2867,10 @@ class __$$UserDetailedNotMeWithRelationsImplCopyWithImpl<$Res>
           ? _value.makeNotesHiddenBefore
           : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
               as HideBefore?,
+      speakAsCat: freezed == speakAsCat
+          ? _value.speakAsCat
+          : speakAsCat // ignore: cast_nullable_to_non_nullable
+              as bool?,
       url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -3030,6 +3085,7 @@ class _$UserDetailedNotMeWithRelationsImpl
       this.requireSigninToViewContents,
       @HideBeforeConverter() this.makeNotesFollowersOnlyBefore,
       @HideBeforeConverter() this.makeNotesHiddenBefore,
+      this.speakAsCat,
       @NullableUriConverter() this.url,
       @NullableUriConverter() this.uri,
       @NullableUriConverter() this.movedTo,
@@ -3157,6 +3213,8 @@ class _$UserDetailedNotMeWithRelationsImpl
   @override
   @HideBeforeConverter()
   final HideBefore? makeNotesHiddenBefore;
+  @override
+  final bool? speakAsCat;
   @override
   @NullableUriConverter()
   final Uri? url;
@@ -3344,7 +3402,7 @@ class _$UserDetailedNotMeWithRelationsImpl
 
   @override
   String toString() {
-    return 'UserDetailedNotMeWithRelations(id: $id, name: $name, username: $username, host: $host, avatarUrl: $avatarUrl, avatarBlurhash: $avatarBlurhash, avatarDecorations: $avatarDecorations, isBot: $isBot, isCat: $isCat, instance: $instance, emojis: $emojis, onlineStatus: $onlineStatus, badgeRoles: $badgeRoles, requireSigninToViewContents: $requireSigninToViewContents, makeNotesFollowersOnlyBefore: $makeNotesFollowersOnlyBefore, makeNotesHiddenBefore: $makeNotesHiddenBefore, url: $url, uri: $uri, movedTo: $movedTo, alsoKnownAs: $alsoKnownAs, createdAt: $createdAt, updatedAt: $updatedAt, lastFetchedAt: $lastFetchedAt, bannerUrl: $bannerUrl, bannerBlurhash: $bannerBlurhash, isLocked: $isLocked, isSilenced: $isSilenced, isSuspended: $isSuspended, description: $description, location: $location, birthday: $birthday, lang: $lang, fields: $fields, verifiedLinks: $verifiedLinks, mutualLinkSections: $mutualLinkSections, followersCount: $followersCount, followingCount: $followingCount, notesCount: $notesCount, pinnedNoteIds: $pinnedNoteIds, pinnedNotes: $pinnedNotes, pinnedPageId: $pinnedPageId, pinnedPage: $pinnedPage, publicReactions: $publicReactions, ffVisibility: $ffVisibility, followersVisibility: $followersVisibility, followingVisibility: $followingVisibility, twoFactorEnabled: $twoFactorEnabled, usePasswordLessLogin: $usePasswordLessLogin, securityKeys: $securityKeys, roles: $roles, memo: $memo, moderationNote: $moderationNote, isFollowing: $isFollowing, isFollowed: $isFollowed, hasPendingFollowRequestFromYou: $hasPendingFollowRequestFromYou, hasPendingFollowRequestToYou: $hasPendingFollowRequestToYou, isBlocking: $isBlocking, isBlocked: $isBlocked, isMuted: $isMuted, isRenoteMuted: $isRenoteMuted, notify: $notify, withReplies: $withReplies, followedMessage: $followedMessage)';
+    return 'UserDetailedNotMeWithRelations(id: $id, name: $name, username: $username, host: $host, avatarUrl: $avatarUrl, avatarBlurhash: $avatarBlurhash, avatarDecorations: $avatarDecorations, isBot: $isBot, isCat: $isCat, instance: $instance, emojis: $emojis, onlineStatus: $onlineStatus, badgeRoles: $badgeRoles, requireSigninToViewContents: $requireSigninToViewContents, makeNotesFollowersOnlyBefore: $makeNotesFollowersOnlyBefore, makeNotesHiddenBefore: $makeNotesHiddenBefore, speakAsCat: $speakAsCat, url: $url, uri: $uri, movedTo: $movedTo, alsoKnownAs: $alsoKnownAs, createdAt: $createdAt, updatedAt: $updatedAt, lastFetchedAt: $lastFetchedAt, bannerUrl: $bannerUrl, bannerBlurhash: $bannerBlurhash, isLocked: $isLocked, isSilenced: $isSilenced, isSuspended: $isSuspended, description: $description, location: $location, birthday: $birthday, lang: $lang, fields: $fields, verifiedLinks: $verifiedLinks, mutualLinkSections: $mutualLinkSections, followersCount: $followersCount, followingCount: $followingCount, notesCount: $notesCount, pinnedNoteIds: $pinnedNoteIds, pinnedNotes: $pinnedNotes, pinnedPageId: $pinnedPageId, pinnedPage: $pinnedPage, publicReactions: $publicReactions, ffVisibility: $ffVisibility, followersVisibility: $followersVisibility, followingVisibility: $followingVisibility, twoFactorEnabled: $twoFactorEnabled, usePasswordLessLogin: $usePasswordLessLogin, securityKeys: $securityKeys, roles: $roles, memo: $memo, moderationNote: $moderationNote, isFollowing: $isFollowing, isFollowed: $isFollowed, hasPendingFollowRequestFromYou: $hasPendingFollowRequestFromYou, hasPendingFollowRequestToYou: $hasPendingFollowRequestToYou, isBlocking: $isBlocking, isBlocked: $isBlocked, isMuted: $isMuted, isRenoteMuted: $isRenoteMuted, notify: $notify, withReplies: $withReplies, followedMessage: $followedMessage)';
   }
 
   @override
@@ -3380,6 +3438,8 @@ class _$UserDetailedNotMeWithRelationsImpl
                     makeNotesFollowersOnlyBefore) &&
             (identical(other.makeNotesHiddenBefore, makeNotesHiddenBefore) ||
                 other.makeNotesHiddenBefore == makeNotesHiddenBefore) &&
+            (identical(other.speakAsCat, speakAsCat) ||
+                other.speakAsCat == speakAsCat) &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.uri, uri) || other.uri == uri) &&
             (identical(other.movedTo, movedTo) || other.movedTo == movedTo) &&
@@ -3419,8 +3479,7 @@ class _$UserDetailedNotMeWithRelationsImpl
                 other.followingCount == followingCount) &&
             (identical(other.notesCount, notesCount) ||
                 other.notesCount == notesCount) &&
-            const DeepCollectionEquality()
-                .equals(other._pinnedNoteIds, _pinnedNoteIds) &&
+            const DeepCollectionEquality().equals(other._pinnedNoteIds, _pinnedNoteIds) &&
             const DeepCollectionEquality().equals(other._pinnedNotes, _pinnedNotes) &&
             (identical(other.pinnedPageId, pinnedPageId) || other.pinnedPageId == pinnedPageId) &&
             const DeepCollectionEquality().equals(other._pinnedPage, _pinnedPage) &&
@@ -3467,6 +3526,7 @@ class _$UserDetailedNotMeWithRelationsImpl
         requireSigninToViewContents,
         makeNotesFollowersOnlyBefore,
         makeNotesHiddenBefore,
+        speakAsCat,
         url,
         uri,
         movedTo,
@@ -3554,6 +3614,7 @@ abstract class _UserDetailedNotMeWithRelations
       final bool? requireSigninToViewContents,
       @HideBeforeConverter() final HideBefore? makeNotesFollowersOnlyBefore,
       @HideBeforeConverter() final HideBefore? makeNotesHiddenBefore,
+      final bool? speakAsCat,
       @NullableUriConverter() final Uri? url,
       @NullableUriConverter() final Uri? uri,
       @NullableUriConverter() final Uri? movedTo,
@@ -3646,6 +3707,8 @@ abstract class _UserDetailedNotMeWithRelations
   @override
   @HideBeforeConverter()
   HideBefore? get makeNotesHiddenBefore;
+  @override
+  bool? get speakAsCat;
   @override
   @NullableUriConverter()
   Uri? get url;
@@ -3797,6 +3860,7 @@ mixin _$MeDetailed {
       throw _privateConstructorUsedError;
   @HideBeforeConverter()
   HideBefore? get makeNotesHiddenBefore => throw _privateConstructorUsedError;
+  bool? get speakAsCat => throw _privateConstructorUsedError;
   @NullableUriConverter()
   Uri? get url => throw _privateConstructorUsedError;
   @NullableUriConverter()
@@ -3951,6 +4015,7 @@ abstract class $MeDetailedCopyWith<$Res> {
       bool? requireSigninToViewContents,
       @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
       @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
+      bool? speakAsCat,
       @NullableUriConverter() Uri? url,
       @NullableUriConverter() Uri? uri,
       @NullableUriConverter() Uri? movedTo,
@@ -4065,6 +4130,7 @@ class _$MeDetailedCopyWithImpl<$Res, $Val extends MeDetailed>
     Object? requireSigninToViewContents = freezed,
     Object? makeNotesFollowersOnlyBefore = freezed,
     Object? makeNotesHiddenBefore = freezed,
+    Object? speakAsCat = freezed,
     Object? url = freezed,
     Object? uri = freezed,
     Object? movedTo = freezed,
@@ -4202,6 +4268,10 @@ class _$MeDetailedCopyWithImpl<$Res, $Val extends MeDetailed>
           ? _value.makeNotesHiddenBefore
           : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
               as HideBefore?,
+      speakAsCat: freezed == speakAsCat
+          ? _value.speakAsCat
+          : speakAsCat // ignore: cast_nullable_to_non_nullable
+              as bool?,
       url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -4555,6 +4625,7 @@ abstract class _$$MeDetailedImplCopyWith<$Res>
       bool? requireSigninToViewContents,
       @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
       @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
+      bool? speakAsCat,
       @NullableUriConverter() Uri? url,
       @NullableUriConverter() Uri? uri,
       @NullableUriConverter() Uri? movedTo,
@@ -4670,6 +4741,7 @@ class __$$MeDetailedImplCopyWithImpl<$Res>
     Object? requireSigninToViewContents = freezed,
     Object? makeNotesFollowersOnlyBefore = freezed,
     Object? makeNotesHiddenBefore = freezed,
+    Object? speakAsCat = freezed,
     Object? url = freezed,
     Object? uri = freezed,
     Object? movedTo = freezed,
@@ -4807,6 +4879,10 @@ class __$$MeDetailedImplCopyWithImpl<$Res>
           ? _value.makeNotesHiddenBefore
           : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
               as HideBefore?,
+      speakAsCat: freezed == speakAsCat
+          ? _value.speakAsCat
+          : speakAsCat // ignore: cast_nullable_to_non_nullable
+              as bool?,
       url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -5116,6 +5192,7 @@ class _$MeDetailedImpl implements _MeDetailed {
       this.requireSigninToViewContents,
       @HideBeforeConverter() this.makeNotesFollowersOnlyBefore,
       @HideBeforeConverter() this.makeNotesHiddenBefore,
+      this.speakAsCat,
       @NullableUriConverter() this.url,
       @NullableUriConverter() this.uri,
       @NullableUriConverter() this.movedTo,
@@ -5275,6 +5352,8 @@ class _$MeDetailedImpl implements _MeDetailed {
   @override
   @HideBeforeConverter()
   final HideBefore? makeNotesHiddenBefore;
+  @override
+  final bool? speakAsCat;
   @override
   @NullableUriConverter()
   final Uri? url;
@@ -5603,7 +5682,7 @@ class _$MeDetailedImpl implements _MeDetailed {
 
   @override
   String toString() {
-    return 'MeDetailed(id: $id, name: $name, username: $username, host: $host, avatarUrl: $avatarUrl, avatarBlurhash: $avatarBlurhash, avatarDecorations: $avatarDecorations, isBot: $isBot, isCat: $isCat, instance: $instance, emojis: $emojis, onlineStatus: $onlineStatus, badgeRoles: $badgeRoles, requireSigninToViewContents: $requireSigninToViewContents, makeNotesFollowersOnlyBefore: $makeNotesFollowersOnlyBefore, makeNotesHiddenBefore: $makeNotesHiddenBefore, url: $url, uri: $uri, movedTo: $movedTo, alsoKnownAs: $alsoKnownAs, createdAt: $createdAt, updatedAt: $updatedAt, lastFetchedAt: $lastFetchedAt, bannerUrl: $bannerUrl, bannerBlurhash: $bannerBlurhash, isLocked: $isLocked, isSilenced: $isSilenced, isSuspended: $isSuspended, description: $description, location: $location, birthday: $birthday, lang: $lang, fields: $fields, verifiedLinks: $verifiedLinks, mutualLinkSections: $mutualLinkSections, followersCount: $followersCount, followingCount: $followingCount, notesCount: $notesCount, pinnedNoteIds: $pinnedNoteIds, pinnedNotes: $pinnedNotes, pinnedPageId: $pinnedPageId, pinnedPage: $pinnedPage, publicReactions: $publicReactions, ffVisibility: $ffVisibility, followersVisibility: $followersVisibility, followingVisibility: $followingVisibility, twoFactorEnabled: $twoFactorEnabled, usePasswordLessLogin: $usePasswordLessLogin, securityKeys: $securityKeys, roles: $roles, memo: $memo, moderationNote: $moderationNote, avatarId: $avatarId, bannerId: $bannerId, followedMessage: $followedMessage, isModerator: $isModerator, isAdmin: $isAdmin, injectFeaturedNote: $injectFeaturedNote, receiveAnnouncementEmail: $receiveAnnouncementEmail, alwaysMarkNsfw: $alwaysMarkNsfw, autoSensitive: $autoSensitive, carefulBot: $carefulBot, autoAcceptFollowed: $autoAcceptFollowed, preventAiLearning: $preventAiLearning, noCrawle: $noCrawle, isExplorable: $isExplorable, isDeleted: $isDeleted, twoFactorBackupCodesStock: $twoFactorBackupCodesStock, hideOnlineStatus: $hideOnlineStatus, hasUnreadSpecifiedNotes: $hasUnreadSpecifiedNotes, hasUnreadMentions: $hasUnreadMentions, hasUnreadAnnouncement: $hasUnreadAnnouncement, hasUnreadAntenna: $hasUnreadAntenna, hasUnreadChannel: $hasUnreadChannel, hasUnreadNotification: $hasUnreadNotification, hasPendingReceivedFollowRequest: $hasPendingReceivedFollowRequest, unreadNotificationsCount: $unreadNotificationsCount, unreadAnnouncements: $unreadAnnouncements, mutedWords: $mutedWords, hardMutedWords: $hardMutedWords, mutedInstances: $mutedInstances, mutingNotificationTypes: $mutingNotificationTypes, notificationRecieveConfig: $notificationRecieveConfig, emailNotificationTypes: $emailNotificationTypes, achievements: $achievements, loggedInDays: $loggedInDays, policies: $policies)';
+    return 'MeDetailed(id: $id, name: $name, username: $username, host: $host, avatarUrl: $avatarUrl, avatarBlurhash: $avatarBlurhash, avatarDecorations: $avatarDecorations, isBot: $isBot, isCat: $isCat, instance: $instance, emojis: $emojis, onlineStatus: $onlineStatus, badgeRoles: $badgeRoles, requireSigninToViewContents: $requireSigninToViewContents, makeNotesFollowersOnlyBefore: $makeNotesFollowersOnlyBefore, makeNotesHiddenBefore: $makeNotesHiddenBefore, speakAsCat: $speakAsCat, url: $url, uri: $uri, movedTo: $movedTo, alsoKnownAs: $alsoKnownAs, createdAt: $createdAt, updatedAt: $updatedAt, lastFetchedAt: $lastFetchedAt, bannerUrl: $bannerUrl, bannerBlurhash: $bannerBlurhash, isLocked: $isLocked, isSilenced: $isSilenced, isSuspended: $isSuspended, description: $description, location: $location, birthday: $birthday, lang: $lang, fields: $fields, verifiedLinks: $verifiedLinks, mutualLinkSections: $mutualLinkSections, followersCount: $followersCount, followingCount: $followingCount, notesCount: $notesCount, pinnedNoteIds: $pinnedNoteIds, pinnedNotes: $pinnedNotes, pinnedPageId: $pinnedPageId, pinnedPage: $pinnedPage, publicReactions: $publicReactions, ffVisibility: $ffVisibility, followersVisibility: $followersVisibility, followingVisibility: $followingVisibility, twoFactorEnabled: $twoFactorEnabled, usePasswordLessLogin: $usePasswordLessLogin, securityKeys: $securityKeys, roles: $roles, memo: $memo, moderationNote: $moderationNote, avatarId: $avatarId, bannerId: $bannerId, followedMessage: $followedMessage, isModerator: $isModerator, isAdmin: $isAdmin, injectFeaturedNote: $injectFeaturedNote, receiveAnnouncementEmail: $receiveAnnouncementEmail, alwaysMarkNsfw: $alwaysMarkNsfw, autoSensitive: $autoSensitive, carefulBot: $carefulBot, autoAcceptFollowed: $autoAcceptFollowed, preventAiLearning: $preventAiLearning, noCrawle: $noCrawle, isExplorable: $isExplorable, isDeleted: $isDeleted, twoFactorBackupCodesStock: $twoFactorBackupCodesStock, hideOnlineStatus: $hideOnlineStatus, hasUnreadSpecifiedNotes: $hasUnreadSpecifiedNotes, hasUnreadMentions: $hasUnreadMentions, hasUnreadAnnouncement: $hasUnreadAnnouncement, hasUnreadAntenna: $hasUnreadAntenna, hasUnreadChannel: $hasUnreadChannel, hasUnreadNotification: $hasUnreadNotification, hasPendingReceivedFollowRequest: $hasPendingReceivedFollowRequest, unreadNotificationsCount: $unreadNotificationsCount, unreadAnnouncements: $unreadAnnouncements, mutedWords: $mutedWords, hardMutedWords: $hardMutedWords, mutedInstances: $mutedInstances, mutingNotificationTypes: $mutingNotificationTypes, notificationRecieveConfig: $notificationRecieveConfig, emailNotificationTypes: $emailNotificationTypes, achievements: $achievements, loggedInDays: $loggedInDays, policies: $policies)';
   }
 
   @override
@@ -5639,6 +5718,8 @@ class _$MeDetailedImpl implements _MeDetailed {
                     makeNotesFollowersOnlyBefore) &&
             (identical(other.makeNotesHiddenBefore, makeNotesHiddenBefore) ||
                 other.makeNotesHiddenBefore == makeNotesHiddenBefore) &&
+            (identical(other.speakAsCat, speakAsCat) ||
+                other.speakAsCat == speakAsCat) &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.uri, uri) || other.uri == uri) &&
             (identical(other.movedTo, movedTo) || other.movedTo == movedTo) &&
@@ -5678,8 +5759,7 @@ class _$MeDetailedImpl implements _MeDetailed {
                 other.followingCount == followingCount) &&
             (identical(other.notesCount, notesCount) ||
                 other.notesCount == notesCount) &&
-            const DeepCollectionEquality()
-                .equals(other._pinnedNoteIds, _pinnedNoteIds) &&
+            const DeepCollectionEquality().equals(other._pinnedNoteIds, _pinnedNoteIds) &&
             const DeepCollectionEquality().equals(other._pinnedNotes, _pinnedNotes) &&
             (identical(other.pinnedPageId, pinnedPageId) || other.pinnedPageId == pinnedPageId) &&
             const DeepCollectionEquality().equals(other._pinnedPage, _pinnedPage) &&
@@ -5750,6 +5830,7 @@ class _$MeDetailedImpl implements _MeDetailed {
         requireSigninToViewContents,
         makeNotesFollowersOnlyBefore,
         makeNotesHiddenBefore,
+        speakAsCat,
         url,
         uri,
         movedTo,
@@ -5858,6 +5939,7 @@ abstract class _MeDetailed implements MeDetailed {
       final bool? requireSigninToViewContents,
       @HideBeforeConverter() final HideBefore? makeNotesFollowersOnlyBefore,
       @HideBeforeConverter() final HideBefore? makeNotesHiddenBefore,
+      final bool? speakAsCat,
       @NullableUriConverter() final Uri? url,
       @NullableUriConverter() final Uri? uri,
       @NullableUriConverter() final Uri? movedTo,
@@ -5976,6 +6058,8 @@ abstract class _MeDetailed implements MeDetailed {
   @override
   @HideBeforeConverter()
   HideBefore? get makeNotesHiddenBefore;
+  @override
+  bool? get speakAsCat;
   @override
   @NullableUriConverter()
   Uri? get url;
