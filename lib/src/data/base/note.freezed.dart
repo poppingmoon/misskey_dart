@@ -619,11 +619,11 @@ class _$NoteImpl implements _Note {
       this.renoteCount = 0,
       this.repliesCount = 0,
       this.reactionCount,
-      required final Map<String, int> reactions,
+      final Map<String, int> reactions = const {},
       @EmojisConverter() final Map<String, String> reactionEmojis = const {},
       @EmojisConverter() final Map<String, String> emojis = const {},
-      required final List<String> fileIds,
-      required final List<DriveFile> files,
+      final List<String> fileIds = const [],
+      final List<DriveFile> files = const [],
       this.replyId,
       this.renoteId,
       this.channelId,
@@ -685,6 +685,7 @@ class _$NoteImpl implements _Note {
   final int? reactionCount;
   final Map<String, int> _reactions;
   @override
+  @JsonKey()
   Map<String, int> get reactions {
     if (_reactions is EqualUnmodifiableMapView) return _reactions;
     // ignore: implicit_dynamic_type
@@ -713,6 +714,7 @@ class _$NoteImpl implements _Note {
 
   final List<String> _fileIds;
   @override
+  @JsonKey()
   List<String> get fileIds {
     if (_fileIds is EqualUnmodifiableListView) return _fileIds;
     // ignore: implicit_dynamic_type
@@ -721,6 +723,7 @@ class _$NoteImpl implements _Note {
 
   final List<DriveFile> _files;
   @override
+  @JsonKey()
   List<DriveFile> get files {
     if (_files is EqualUnmodifiableListView) return _files;
     // ignore: implicit_dynamic_type
@@ -913,11 +916,11 @@ abstract class _Note implements Note {
       final int renoteCount,
       final int repliesCount,
       final int? reactionCount,
-      required final Map<String, int> reactions,
+      final Map<String, int> reactions,
       @EmojisConverter() final Map<String, String> reactionEmojis,
       @EmojisConverter() final Map<String, String> emojis,
-      required final List<String> fileIds,
-      required final List<DriveFile> files,
+      final List<String> fileIds,
+      final List<DriveFile> files,
       final String? replyId,
       final String? renoteId,
       final String? channelId,

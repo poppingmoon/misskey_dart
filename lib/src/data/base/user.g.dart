@@ -1099,6 +1099,12 @@ _$UserPoliciesImpl _$$UserPoliciesImplFromJson(Map<String, dynamic> json) =>
           ltlAvailable: $checkedConvert('ltlAvailable', (v) => v as bool?),
           canPublicNote: $checkedConvert('canPublicNote', (v) => v as bool?),
           canEditNote: $checkedConvert('canEditNote', (v) => v as bool?),
+          canScheduleNote:
+              $checkedConvert('canScheduleNote', (v) => v as bool?),
+          scheduleNoteLimit:
+              $checkedConvert('scheduleNoteLimit', (v) => (v as num?)?.toInt()),
+          scheduleNoteMaxDays: $checkedConvert(
+              'scheduleNoteMaxDays', (v) => (v as num?)?.toInt()),
           canInvite: $checkedConvert('canInvite', (v) => v as bool?),
           canManageCustomEmojis:
               $checkedConvert('canManageCustomEmojis', (v) => v as bool?),
@@ -1134,6 +1140,8 @@ _$UserPoliciesImpl _$$UserPoliciesImplFromJson(Map<String, dynamic> json) =>
               'mutualLinkSectionLimit', (v) => (v as num?)?.toInt()),
           mutualLinkLimit:
               $checkedConvert('mutualLinkLimit', (v) => (v as num?)?.toInt()),
+          scheduleNoteMax:
+              $checkedConvert('scheduleNoteMax', (v) => (v as num?)?.toInt()),
         );
         return val;
       },
@@ -1145,6 +1153,9 @@ Map<String, dynamic> _$$UserPoliciesImplToJson(_$UserPoliciesImpl instance) =>
       'ltlAvailable': instance.ltlAvailable,
       'canPublicNote': instance.canPublicNote,
       'canEditNote': instance.canEditNote,
+      'canScheduleNote': instance.canScheduleNote,
+      'scheduleNoteLimit': instance.scheduleNoteLimit,
+      'scheduleNoteMaxDays': instance.scheduleNoteMaxDays,
       'canInvite': instance.canInvite,
       'canManageCustomEmojis': instance.canManageCustomEmojis,
       'canHideAds': instance.canHideAds,
@@ -1165,6 +1176,7 @@ Map<String, dynamic> _$$UserPoliciesImplToJson(_$UserPoliciesImpl instance) =>
       'avatarDecorationLimit': instance.avatarDecorationLimit,
       'mutualLinkSectionLimit': instance.mutualLinkSectionLimit,
       'mutualLinkLimit': instance.mutualLinkLimit,
+      'scheduleNoteMax': instance.scheduleNoteMax,
     };
 
 _$UserFieldImpl _$$UserFieldImplFromJson(Map<String, dynamic> json) =>

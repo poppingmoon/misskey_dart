@@ -35,7 +35,12 @@ _$NoteImpl _$$NoteImplFromJson(Map<String, dynamic> json) => $checkedCreate(
           reactionCount:
               $checkedConvert('reactionCount', (v) => (v as num?)?.toInt()),
           reactions: $checkedConvert(
-              'reactions', (v) => Map<String, int>.from(v as Map)),
+              'reactions',
+              (v) =>
+                  (v as Map<String, dynamic>?)?.map(
+                    (k, e) => MapEntry(k, (e as num).toInt()),
+                  ) ??
+                  const {}),
           reactionEmojis: $checkedConvert(
               'reactionEmojis',
               (v) =>
@@ -44,13 +49,19 @@ _$NoteImpl _$$NoteImplFromJson(Map<String, dynamic> json) => $checkedCreate(
               'emojis',
               (v) =>
                   v == null ? const {} : const EmojisConverter().fromJson(v)),
-          fileIds: $checkedConvert('fileIds',
-              (v) => (v as List<dynamic>).map((e) => e as String).toList()),
+          fileIds: $checkedConvert(
+              'fileIds',
+              (v) =>
+                  (v as List<dynamic>?)?.map((e) => e as String).toList() ??
+                  const []),
           files: $checkedConvert(
               'files',
-              (v) => (v as List<dynamic>)
-                  .map((e) => DriveFile.fromJson(e as Map<String, dynamic>))
-                  .toList()),
+              (v) =>
+                  (v as List<dynamic>?)
+                      ?.map(
+                          (e) => DriveFile.fromJson(e as Map<String, dynamic>))
+                      .toList() ??
+                  const []),
           replyId: $checkedConvert('replyId', (v) => v as String?),
           renoteId: $checkedConvert('renoteId', (v) => v as String?),
           channelId: $checkedConvert('channelId', (v) => v as String?),

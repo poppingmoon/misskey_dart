@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:misskey_dart/src/converters/date_time_converter.dart';
 import 'package:misskey_dart/src/data/notes/notes_create_poll_request.dart';
 import 'package:misskey_dart/src/enums/note_visibility.dart';
 import 'package:misskey_dart/src/enums/reaction_acceptance.dart';
@@ -43,6 +44,7 @@ class NotesCreateRequest with _$NotesCreateRequest {
     String? renoteId,
     String? channelId,
     NotesCreatePollRequest? poll,
+    @EpocTimeDateTimeConverter() DateTime? scheduledAt,
   }) = _NotesCreateRequest;
 
   factory NotesCreateRequest.fromJson(Map<String, Object?> json) =>

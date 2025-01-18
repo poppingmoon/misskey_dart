@@ -9,7 +9,9 @@ class MisskeyException with _$MisskeyException implements Exception {
     required String id,
     required String code,
     required String message,
-    required MisskeyExceptionKind kind,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    MisskeyExceptionKind? kind,
     Map<String, dynamic>? info,
   }) = _MisskeyException;
 
@@ -17,4 +19,4 @@ class MisskeyException with _$MisskeyException implements Exception {
       _$MisskeyExceptionFromJson(json);
 }
 
-enum MisskeyExceptionKind { client, server }
+enum MisskeyExceptionKind { client, server, permission }

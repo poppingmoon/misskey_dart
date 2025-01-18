@@ -7395,6 +7395,10 @@ mixin _$UserPolicies {
   bool? get ltlAvailable => throw _privateConstructorUsedError;
   bool? get canPublicNote => throw _privateConstructorUsedError;
   bool? get canEditNote => throw _privateConstructorUsedError;
+  bool? get canScheduleNote => throw _privateConstructorUsedError; // MisskeyIO
+  int? get scheduleNoteLimit => throw _privateConstructorUsedError; // MisskeyIO
+  int? get scheduleNoteMaxDays =>
+      throw _privateConstructorUsedError; // MisskeyIO
   bool? get canInvite => throw _privateConstructorUsedError;
   bool? get canManageCustomEmojis => throw _privateConstructorUsedError;
   bool? get canHideAds => throw _privateConstructorUsedError;
@@ -7413,8 +7417,10 @@ mixin _$UserPolicies {
   int? get userEachUserListsLimit => throw _privateConstructorUsedError;
   int? get rateLimitFactor => throw _privateConstructorUsedError;
   int? get avatarDecorationLimit => throw _privateConstructorUsedError;
-  int? get mutualLinkSectionLimit => throw _privateConstructorUsedError;
-  int? get mutualLinkLimit => throw _privateConstructorUsedError;
+  int? get mutualLinkSectionLimit =>
+      throw _privateConstructorUsedError; // MisskeyIO
+  int? get mutualLinkLimit => throw _privateConstructorUsedError; // MisskeyIO
+  int? get scheduleNoteMax => throw _privateConstructorUsedError;
 
   /// Serializes this UserPolicies to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -7437,6 +7443,9 @@ abstract class $UserPoliciesCopyWith<$Res> {
       bool? ltlAvailable,
       bool? canPublicNote,
       bool? canEditNote,
+      bool? canScheduleNote,
+      int? scheduleNoteLimit,
+      int? scheduleNoteMaxDays,
       bool? canInvite,
       bool? canManageCustomEmojis,
       bool? canHideAds,
@@ -7456,7 +7465,8 @@ abstract class $UserPoliciesCopyWith<$Res> {
       int? rateLimitFactor,
       int? avatarDecorationLimit,
       int? mutualLinkSectionLimit,
-      int? mutualLinkLimit});
+      int? mutualLinkLimit,
+      int? scheduleNoteMax});
 }
 
 /// @nodoc
@@ -7478,6 +7488,9 @@ class _$UserPoliciesCopyWithImpl<$Res, $Val extends UserPolicies>
     Object? ltlAvailable = freezed,
     Object? canPublicNote = freezed,
     Object? canEditNote = freezed,
+    Object? canScheduleNote = freezed,
+    Object? scheduleNoteLimit = freezed,
+    Object? scheduleNoteMaxDays = freezed,
     Object? canInvite = freezed,
     Object? canManageCustomEmojis = freezed,
     Object? canHideAds = freezed,
@@ -7498,6 +7511,7 @@ class _$UserPoliciesCopyWithImpl<$Res, $Val extends UserPolicies>
     Object? avatarDecorationLimit = freezed,
     Object? mutualLinkSectionLimit = freezed,
     Object? mutualLinkLimit = freezed,
+    Object? scheduleNoteMax = freezed,
   }) {
     return _then(_value.copyWith(
       gtlAvailable: freezed == gtlAvailable
@@ -7516,6 +7530,18 @@ class _$UserPoliciesCopyWithImpl<$Res, $Val extends UserPolicies>
           ? _value.canEditNote
           : canEditNote // ignore: cast_nullable_to_non_nullable
               as bool?,
+      canScheduleNote: freezed == canScheduleNote
+          ? _value.canScheduleNote
+          : canScheduleNote // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      scheduleNoteLimit: freezed == scheduleNoteLimit
+          ? _value.scheduleNoteLimit
+          : scheduleNoteLimit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      scheduleNoteMaxDays: freezed == scheduleNoteMaxDays
+          ? _value.scheduleNoteMaxDays
+          : scheduleNoteMaxDays // ignore: cast_nullable_to_non_nullable
+              as int?,
       canInvite: freezed == canInvite
           ? _value.canInvite
           : canInvite // ignore: cast_nullable_to_non_nullable
@@ -7596,6 +7622,10 @@ class _$UserPoliciesCopyWithImpl<$Res, $Val extends UserPolicies>
           ? _value.mutualLinkLimit
           : mutualLinkLimit // ignore: cast_nullable_to_non_nullable
               as int?,
+      scheduleNoteMax: freezed == scheduleNoteMax
+          ? _value.scheduleNoteMax
+          : scheduleNoteMax // ignore: cast_nullable_to_non_nullable
+              as int?,
     ) as $Val);
   }
 }
@@ -7613,6 +7643,9 @@ abstract class _$$UserPoliciesImplCopyWith<$Res>
       bool? ltlAvailable,
       bool? canPublicNote,
       bool? canEditNote,
+      bool? canScheduleNote,
+      int? scheduleNoteLimit,
+      int? scheduleNoteMaxDays,
       bool? canInvite,
       bool? canManageCustomEmojis,
       bool? canHideAds,
@@ -7632,7 +7665,8 @@ abstract class _$$UserPoliciesImplCopyWith<$Res>
       int? rateLimitFactor,
       int? avatarDecorationLimit,
       int? mutualLinkSectionLimit,
-      int? mutualLinkLimit});
+      int? mutualLinkLimit,
+      int? scheduleNoteMax});
 }
 
 /// @nodoc
@@ -7652,6 +7686,9 @@ class __$$UserPoliciesImplCopyWithImpl<$Res>
     Object? ltlAvailable = freezed,
     Object? canPublicNote = freezed,
     Object? canEditNote = freezed,
+    Object? canScheduleNote = freezed,
+    Object? scheduleNoteLimit = freezed,
+    Object? scheduleNoteMaxDays = freezed,
     Object? canInvite = freezed,
     Object? canManageCustomEmojis = freezed,
     Object? canHideAds = freezed,
@@ -7672,6 +7709,7 @@ class __$$UserPoliciesImplCopyWithImpl<$Res>
     Object? avatarDecorationLimit = freezed,
     Object? mutualLinkSectionLimit = freezed,
     Object? mutualLinkLimit = freezed,
+    Object? scheduleNoteMax = freezed,
   }) {
     return _then(_$UserPoliciesImpl(
       gtlAvailable: freezed == gtlAvailable
@@ -7690,6 +7728,18 @@ class __$$UserPoliciesImplCopyWithImpl<$Res>
           ? _value.canEditNote
           : canEditNote // ignore: cast_nullable_to_non_nullable
               as bool?,
+      canScheduleNote: freezed == canScheduleNote
+          ? _value.canScheduleNote
+          : canScheduleNote // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      scheduleNoteLimit: freezed == scheduleNoteLimit
+          ? _value.scheduleNoteLimit
+          : scheduleNoteLimit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      scheduleNoteMaxDays: freezed == scheduleNoteMaxDays
+          ? _value.scheduleNoteMaxDays
+          : scheduleNoteMaxDays // ignore: cast_nullable_to_non_nullable
+              as int?,
       canInvite: freezed == canInvite
           ? _value.canInvite
           : canInvite // ignore: cast_nullable_to_non_nullable
@@ -7770,6 +7820,10 @@ class __$$UserPoliciesImplCopyWithImpl<$Res>
           ? _value.mutualLinkLimit
           : mutualLinkLimit // ignore: cast_nullable_to_non_nullable
               as int?,
+      scheduleNoteMax: freezed == scheduleNoteMax
+          ? _value.scheduleNoteMax
+          : scheduleNoteMax // ignore: cast_nullable_to_non_nullable
+              as int?,
     ));
   }
 }
@@ -7782,6 +7836,9 @@ class _$UserPoliciesImpl implements _UserPolicies {
       this.ltlAvailable,
       this.canPublicNote,
       this.canEditNote,
+      this.canScheduleNote,
+      this.scheduleNoteLimit,
+      this.scheduleNoteMaxDays,
       this.canInvite,
       this.canManageCustomEmojis,
       this.canHideAds,
@@ -7801,7 +7858,8 @@ class _$UserPoliciesImpl implements _UserPolicies {
       this.rateLimitFactor,
       this.avatarDecorationLimit,
       this.mutualLinkSectionLimit,
-      this.mutualLinkLimit});
+      this.mutualLinkLimit,
+      this.scheduleNoteMax});
 
   factory _$UserPoliciesImpl.fromJson(Map<String, dynamic> json) =>
       _$$UserPoliciesImplFromJson(json);
@@ -7814,6 +7872,15 @@ class _$UserPoliciesImpl implements _UserPolicies {
   final bool? canPublicNote;
   @override
   final bool? canEditNote;
+  @override
+  final bool? canScheduleNote;
+// MisskeyIO
+  @override
+  final int? scheduleNoteLimit;
+// MisskeyIO
+  @override
+  final int? scheduleNoteMaxDays;
+// MisskeyIO
   @override
   final bool? canInvite;
   @override
@@ -7852,12 +7919,16 @@ class _$UserPoliciesImpl implements _UserPolicies {
   final int? avatarDecorationLimit;
   @override
   final int? mutualLinkSectionLimit;
+// MisskeyIO
   @override
   final int? mutualLinkLimit;
+// MisskeyIO
+  @override
+  final int? scheduleNoteMax;
 
   @override
   String toString() {
-    return 'UserPolicies(gtlAvailable: $gtlAvailable, ltlAvailable: $ltlAvailable, canPublicNote: $canPublicNote, canEditNote: $canEditNote, canInvite: $canInvite, canManageCustomEmojis: $canManageCustomEmojis, canHideAds: $canHideAds, inviteLimit: $inviteLimit, inviteLimitCycle: $inviteLimitCycle, canSearchNotes: $canSearchNotes, canUseTranslator: $canUseTranslator, driveCapacityMb: $driveCapacityMb, pinLimit: $pinLimit, antennaLimit: $antennaLimit, wordMuteLimit: $wordMuteLimit, webhookLimit: $webhookLimit, clipLimit: $clipLimit, noteEachClipsLimit: $noteEachClipsLimit, userListLimit: $userListLimit, userEachUserListsLimit: $userEachUserListsLimit, rateLimitFactor: $rateLimitFactor, avatarDecorationLimit: $avatarDecorationLimit, mutualLinkSectionLimit: $mutualLinkSectionLimit, mutualLinkLimit: $mutualLinkLimit)';
+    return 'UserPolicies(gtlAvailable: $gtlAvailable, ltlAvailable: $ltlAvailable, canPublicNote: $canPublicNote, canEditNote: $canEditNote, canScheduleNote: $canScheduleNote, scheduleNoteLimit: $scheduleNoteLimit, scheduleNoteMaxDays: $scheduleNoteMaxDays, canInvite: $canInvite, canManageCustomEmojis: $canManageCustomEmojis, canHideAds: $canHideAds, inviteLimit: $inviteLimit, inviteLimitCycle: $inviteLimitCycle, canSearchNotes: $canSearchNotes, canUseTranslator: $canUseTranslator, driveCapacityMb: $driveCapacityMb, pinLimit: $pinLimit, antennaLimit: $antennaLimit, wordMuteLimit: $wordMuteLimit, webhookLimit: $webhookLimit, clipLimit: $clipLimit, noteEachClipsLimit: $noteEachClipsLimit, userListLimit: $userListLimit, userEachUserListsLimit: $userEachUserListsLimit, rateLimitFactor: $rateLimitFactor, avatarDecorationLimit: $avatarDecorationLimit, mutualLinkSectionLimit: $mutualLinkSectionLimit, mutualLinkLimit: $mutualLinkLimit, scheduleNoteMax: $scheduleNoteMax)';
   }
 
   @override
@@ -7873,6 +7944,12 @@ class _$UserPoliciesImpl implements _UserPolicies {
                 other.canPublicNote == canPublicNote) &&
             (identical(other.canEditNote, canEditNote) ||
                 other.canEditNote == canEditNote) &&
+            (identical(other.canScheduleNote, canScheduleNote) ||
+                other.canScheduleNote == canScheduleNote) &&
+            (identical(other.scheduleNoteLimit, scheduleNoteLimit) ||
+                other.scheduleNoteLimit == scheduleNoteLimit) &&
+            (identical(other.scheduleNoteMaxDays, scheduleNoteMaxDays) ||
+                other.scheduleNoteMaxDays == scheduleNoteMaxDays) &&
             (identical(other.canInvite, canInvite) ||
                 other.canInvite == canInvite) &&
             (identical(other.canManageCustomEmojis, canManageCustomEmojis) ||
@@ -7912,7 +7989,9 @@ class _$UserPoliciesImpl implements _UserPolicies {
             (identical(other.mutualLinkSectionLimit, mutualLinkSectionLimit) ||
                 other.mutualLinkSectionLimit == mutualLinkSectionLimit) &&
             (identical(other.mutualLinkLimit, mutualLinkLimit) ||
-                other.mutualLinkLimit == mutualLinkLimit));
+                other.mutualLinkLimit == mutualLinkLimit) &&
+            (identical(other.scheduleNoteMax, scheduleNoteMax) ||
+                other.scheduleNoteMax == scheduleNoteMax));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -7923,6 +8002,9 @@ class _$UserPoliciesImpl implements _UserPolicies {
         ltlAvailable,
         canPublicNote,
         canEditNote,
+        canScheduleNote,
+        scheduleNoteLimit,
+        scheduleNoteMaxDays,
         canInvite,
         canManageCustomEmojis,
         canHideAds,
@@ -7942,7 +8024,8 @@ class _$UserPoliciesImpl implements _UserPolicies {
         rateLimitFactor,
         avatarDecorationLimit,
         mutualLinkSectionLimit,
-        mutualLinkLimit
+        mutualLinkLimit,
+        scheduleNoteMax
       ]);
 
   /// Create a copy of UserPolicies
@@ -7967,6 +8050,9 @@ abstract class _UserPolicies implements UserPolicies {
       final bool? ltlAvailable,
       final bool? canPublicNote,
       final bool? canEditNote,
+      final bool? canScheduleNote,
+      final int? scheduleNoteLimit,
+      final int? scheduleNoteMaxDays,
       final bool? canInvite,
       final bool? canManageCustomEmojis,
       final bool? canHideAds,
@@ -7986,7 +8072,8 @@ abstract class _UserPolicies implements UserPolicies {
       final int? rateLimitFactor,
       final int? avatarDecorationLimit,
       final int? mutualLinkSectionLimit,
-      final int? mutualLinkLimit}) = _$UserPoliciesImpl;
+      final int? mutualLinkLimit,
+      final int? scheduleNoteMax}) = _$UserPoliciesImpl;
 
   factory _UserPolicies.fromJson(Map<String, dynamic> json) =
       _$UserPoliciesImpl.fromJson;
@@ -7999,6 +8086,12 @@ abstract class _UserPolicies implements UserPolicies {
   bool? get canPublicNote;
   @override
   bool? get canEditNote;
+  @override
+  bool? get canScheduleNote; // MisskeyIO
+  @override
+  int? get scheduleNoteLimit; // MisskeyIO
+  @override
+  int? get scheduleNoteMaxDays; // MisskeyIO
   @override
   bool? get canInvite;
   @override
@@ -8036,9 +8129,11 @@ abstract class _UserPolicies implements UserPolicies {
   @override
   int? get avatarDecorationLimit;
   @override
-  int? get mutualLinkSectionLimit;
+  int? get mutualLinkSectionLimit; // MisskeyIO
   @override
-  int? get mutualLinkLimit;
+  int? get mutualLinkLimit; // MisskeyIO
+  @override
+  int? get scheduleNoteMax;
 
   /// Create a copy of UserPolicies
   /// with the given fields replaced by the non-null parameter values.

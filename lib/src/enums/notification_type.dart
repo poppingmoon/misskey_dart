@@ -17,6 +17,9 @@ enum NotificationType {
   exportCompleted,
   login,
   scheduleNote, // CherryPick
+  noteScheduled, // MisskeyIO
+  scheduledNotePosted, // MisskeyIO
+  scheduledNoteError, // MisskeyIO
   app,
   test,
   @JsonValue("reaction:grouped")
@@ -25,6 +28,6 @@ enum NotificationType {
   renoteGrouped,
   @JsonValue("note:grouped")
   noteGrouped, // CherryPick
-  pollVote,
-  groupInvited,
+  pollVote, // v12
+  groupInvited, // v12
 }

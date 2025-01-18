@@ -50,7 +50,9 @@ mixin _$INotificationsResponse {
       throw _privateConstructorUsedError;
   String? get fileId => throw _privateConstructorUsedError;
   String? get message => throw _privateConstructorUsedError;
-  List<String>? get noteIds => throw _privateConstructorUsedError;
+  List<String>? get noteIds => throw _privateConstructorUsedError; // CherryPick
+  String? get errorType => throw _privateConstructorUsedError; // CherryPick
+  ScheduledNote? get draft => throw _privateConstructorUsedError;
 
   /// Serializes this INotificationsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -92,11 +94,14 @@ abstract class $INotificationsResponseCopyWith<$Res> {
       UserExportableEntities? exportedEntity,
       String? fileId,
       String? message,
-      List<String>? noteIds});
+      List<String>? noteIds,
+      String? errorType,
+      ScheduledNote? draft});
 
   $UserLiteCopyWith<$Res>? get user;
   $NoteCopyWith<$Res>? get note;
   $RolesListResponseCopyWith<$Res>? get role;
+  $ScheduledNoteCopyWith<$Res>? get draft;
 }
 
 /// @nodoc
@@ -137,6 +142,8 @@ class _$INotificationsResponseCopyWithImpl<$Res,
     Object? fileId = freezed,
     Object? message = freezed,
     Object? noteIds = freezed,
+    Object? errorType = freezed,
+    Object? draft = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -227,6 +234,14 @@ class _$INotificationsResponseCopyWithImpl<$Res,
           ? _value.noteIds
           : noteIds // ignore: cast_nullable_to_non_nullable
               as List<String>?,
+      errorType: freezed == errorType
+          ? _value.errorType
+          : errorType // ignore: cast_nullable_to_non_nullable
+              as String?,
+      draft: freezed == draft
+          ? _value.draft
+          : draft // ignore: cast_nullable_to_non_nullable
+              as ScheduledNote?,
     ) as $Val);
   }
 
@@ -271,6 +286,20 @@ class _$INotificationsResponseCopyWithImpl<$Res,
       return _then(_value.copyWith(role: value) as $Val);
     });
   }
+
+  /// Create a copy of INotificationsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $ScheduledNoteCopyWith<$Res>? get draft {
+    if (_value.draft == null) {
+      return null;
+    }
+
+    return $ScheduledNoteCopyWith<$Res>(_value.draft!, (value) {
+      return _then(_value.copyWith(draft: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -306,7 +335,9 @@ abstract class _$$INotificationsResponseImplCopyWith<$Res>
       UserExportableEntities? exportedEntity,
       String? fileId,
       String? message,
-      List<String>? noteIds});
+      List<String>? noteIds,
+      String? errorType,
+      ScheduledNote? draft});
 
   @override
   $UserLiteCopyWith<$Res>? get user;
@@ -314,6 +345,8 @@ abstract class _$$INotificationsResponseImplCopyWith<$Res>
   $NoteCopyWith<$Res>? get note;
   @override
   $RolesListResponseCopyWith<$Res>? get role;
+  @override
+  $ScheduledNoteCopyWith<$Res>? get draft;
 }
 
 /// @nodoc
@@ -353,6 +386,8 @@ class __$$INotificationsResponseImplCopyWithImpl<$Res>
     Object? fileId = freezed,
     Object? message = freezed,
     Object? noteIds = freezed,
+    Object? errorType = freezed,
+    Object? draft = freezed,
   }) {
     return _then(_$INotificationsResponseImpl(
       id: null == id
@@ -443,6 +478,14 @@ class __$$INotificationsResponseImplCopyWithImpl<$Res>
           ? _value._noteIds
           : noteIds // ignore: cast_nullable_to_non_nullable
               as List<String>?,
+      errorType: freezed == errorType
+          ? _value.errorType
+          : errorType // ignore: cast_nullable_to_non_nullable
+              as String?,
+      draft: freezed == draft
+          ? _value.draft
+          : draft // ignore: cast_nullable_to_non_nullable
+              as ScheduledNote?,
     ));
   }
 }
@@ -473,7 +516,9 @@ class _$INotificationsResponseImpl implements _INotificationsResponse {
       this.exportedEntity,
       this.fileId,
       this.message,
-      final List<String>? noteIds})
+      final List<String>? noteIds,
+      this.errorType,
+      this.draft})
       : _reactions = reactions,
         _users = users,
         _noteIds = noteIds;
@@ -555,9 +600,16 @@ class _$INotificationsResponseImpl implements _INotificationsResponse {
     return EqualUnmodifiableListView(value);
   }
 
+// CherryPick
+  @override
+  final String? errorType;
+// CherryPick
+  @override
+  final ScheduledNote? draft;
+
   @override
   String toString() {
-    return 'INotificationsResponse(id: $id, createdAt: $createdAt, type: $type, noteId: $noteId, followRequestId: $followRequestId, reaction: $reaction, choice: $choice, achievement: $achievement, body: $body, header: $header, icon: $icon, appAccessTokenId: $appAccessTokenId, userId: $userId, user: $user, note: $note, role: $role, reactions: $reactions, users: $users, exportedEntity: $exportedEntity, fileId: $fileId, message: $message, noteIds: $noteIds)';
+    return 'INotificationsResponse(id: $id, createdAt: $createdAt, type: $type, noteId: $noteId, followRequestId: $followRequestId, reaction: $reaction, choice: $choice, achievement: $achievement, body: $body, header: $header, icon: $icon, appAccessTokenId: $appAccessTokenId, userId: $userId, user: $user, note: $note, role: $role, reactions: $reactions, users: $users, exportedEntity: $exportedEntity, fileId: $fileId, message: $message, noteIds: $noteIds, errorType: $errorType, draft: $draft)';
   }
 
   @override
@@ -593,7 +645,10 @@ class _$INotificationsResponseImpl implements _INotificationsResponse {
                 other.exportedEntity == exportedEntity) &&
             (identical(other.fileId, fileId) || other.fileId == fileId) &&
             (identical(other.message, message) || other.message == message) &&
-            const DeepCollectionEquality().equals(other._noteIds, _noteIds));
+            const DeepCollectionEquality().equals(other._noteIds, _noteIds) &&
+            (identical(other.errorType, errorType) ||
+                other.errorType == errorType) &&
+            (identical(other.draft, draft) || other.draft == draft));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -621,7 +676,9 @@ class _$INotificationsResponseImpl implements _INotificationsResponse {
         exportedEntity,
         fileId,
         message,
-        const DeepCollectionEquality().hash(_noteIds)
+        const DeepCollectionEquality().hash(_noteIds),
+        errorType,
+        draft
       ]);
 
   /// Create a copy of INotificationsResponse
@@ -666,7 +723,9 @@ abstract class _INotificationsResponse implements INotificationsResponse {
       final UserExportableEntities? exportedEntity,
       final String? fileId,
       final String? message,
-      final List<String>? noteIds}) = _$INotificationsResponseImpl;
+      final List<String>? noteIds,
+      final String? errorType,
+      final ScheduledNote? draft}) = _$INotificationsResponseImpl;
 
   factory _INotificationsResponse.fromJson(Map<String, dynamic> json) =
       _$INotificationsResponseImpl.fromJson;
@@ -718,7 +777,11 @@ abstract class _INotificationsResponse implements INotificationsResponse {
   @override
   String? get message;
   @override
-  List<String>? get noteIds;
+  List<String>? get noteIds; // CherryPick
+  @override
+  String? get errorType; // CherryPick
+  @override
+  ScheduledNote? get draft;
 
   /// Create a copy of INotificationsResponse
   /// with the given fields replaced by the non-null parameter values.

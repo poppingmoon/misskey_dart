@@ -118,6 +118,12 @@ _$PushNotificationBodyImpl _$$PushNotificationBodyImplFromJson(
                   unknownValue: JsonKey.nullForUndefinedEnumValue)),
           fileId: $checkedConvert('fileId', (v) => v as String?),
           message: $checkedConvert('message', (v) => v as String?),
+          errorType: $checkedConvert('errorType', (v) => v as String?),
+          draft: $checkedConvert(
+              'draft',
+              (v) => v == null
+                  ? null
+                  : ScheduledNote.fromJson(v as Map<String, dynamic>)),
         );
         return val;
       },
@@ -148,6 +154,8 @@ Map<String, dynamic> _$$PushNotificationBodyImplToJson(
           _$UserExportableEntitiesEnumMap[instance.exportedEntity],
       'fileId': instance.fileId,
       'message': instance.message,
+      'errorType': instance.errorType,
+      'draft': instance.draft?.toJson(),
     };
 
 const _$NotificationTypeEnumMap = {
@@ -167,6 +175,9 @@ const _$NotificationTypeEnumMap = {
   NotificationType.exportCompleted: 'exportCompleted',
   NotificationType.login: 'login',
   NotificationType.scheduleNote: 'scheduleNote',
+  NotificationType.noteScheduled: 'noteScheduled',
+  NotificationType.scheduledNotePosted: 'scheduledNotePosted',
+  NotificationType.scheduledNoteError: 'scheduledNoteError',
   NotificationType.app: 'app',
   NotificationType.test: 'test',
   NotificationType.reactionGrouped: 'reaction:grouped',

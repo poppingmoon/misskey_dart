@@ -513,6 +513,9 @@ class UserPolicies with _$UserPolicies {
     bool? ltlAvailable,
     bool? canPublicNote,
     bool? canEditNote,
+    bool? canScheduleNote, // MisskeyIO
+    int? scheduleNoteLimit, // MisskeyIO
+    int? scheduleNoteMaxDays, // MisskeyIO
     bool? canInvite,
     bool? canManageCustomEmojis,
     bool? canHideAds,
@@ -531,8 +534,9 @@ class UserPolicies with _$UserPolicies {
     int? userEachUserListsLimit,
     int? rateLimitFactor,
     int? avatarDecorationLimit,
-    int? mutualLinkSectionLimit,
-    int? mutualLinkLimit,
+    int? mutualLinkSectionLimit, // MisskeyIO
+    int? mutualLinkLimit, // MisskeyIO
+    int? scheduleNoteMax, // CherryPick
   }) = _UserPolicies;
 
   factory UserPolicies.fromJson(Map<String, Object?> json) =>

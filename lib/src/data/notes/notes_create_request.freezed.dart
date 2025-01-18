@@ -55,6 +55,8 @@ mixin _$NotesCreateRequest {
   String? get renoteId => throw _privateConstructorUsedError;
   String? get channelId => throw _privateConstructorUsedError;
   NotesCreatePollRequest? get poll => throw _privateConstructorUsedError;
+  @EpocTimeDateTimeConverter()
+  DateTime? get scheduledAt => throw _privateConstructorUsedError;
 
   /// Serializes this NotesCreateRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -87,7 +89,8 @@ abstract class $NotesCreateRequestCopyWith<$Res> {
       String? replyId,
       String? renoteId,
       String? channelId,
-      NotesCreatePollRequest? poll});
+      NotesCreatePollRequest? poll,
+      @EpocTimeDateTimeConverter() DateTime? scheduledAt});
 
   $NotesCreatePollRequestCopyWith<$Res>? get poll;
 }
@@ -122,6 +125,7 @@ class _$NotesCreateRequestCopyWithImpl<$Res, $Val extends NotesCreateRequest>
     Object? renoteId = freezed,
     Object? channelId = freezed,
     Object? poll = freezed,
+    Object? scheduledAt = freezed,
   }) {
     return _then(_value.copyWith(
       visibility: freezed == visibility
@@ -184,6 +188,10 @@ class _$NotesCreateRequestCopyWithImpl<$Res, $Val extends NotesCreateRequest>
           ? _value.poll
           : poll // ignore: cast_nullable_to_non_nullable
               as NotesCreatePollRequest?,
+      scheduledAt: freezed == scheduledAt
+          ? _value.scheduledAt
+          : scheduledAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ) as $Val);
   }
 
@@ -225,7 +233,8 @@ abstract class _$$NotesCreateRequestImplCopyWith<$Res>
       String? replyId,
       String? renoteId,
       String? channelId,
-      NotesCreatePollRequest? poll});
+      NotesCreatePollRequest? poll,
+      @EpocTimeDateTimeConverter() DateTime? scheduledAt});
 
   @override
   $NotesCreatePollRequestCopyWith<$Res>? get poll;
@@ -259,6 +268,7 @@ class __$$NotesCreateRequestImplCopyWithImpl<$Res>
     Object? renoteId = freezed,
     Object? channelId = freezed,
     Object? poll = freezed,
+    Object? scheduledAt = freezed,
   }) {
     return _then(_$NotesCreateRequestImpl(
       visibility: freezed == visibility
@@ -321,6 +331,10 @@ class __$$NotesCreateRequestImplCopyWithImpl<$Res>
           ? _value.poll
           : poll // ignore: cast_nullable_to_non_nullable
               as NotesCreatePollRequest?,
+      scheduledAt: freezed == scheduledAt
+          ? _value.scheduledAt
+          : scheduledAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 }
@@ -343,7 +357,8 @@ class _$NotesCreateRequestImpl implements _NotesCreateRequest {
       this.replyId,
       this.renoteId,
       this.channelId,
-      this.poll})
+      this.poll,
+      @EpocTimeDateTimeConverter() this.scheduledAt})
       : _visibleUserIds = visibleUserIds,
         _fileIds = fileIds,
         _mediaIds = mediaIds;
@@ -428,10 +443,13 @@ class _$NotesCreateRequestImpl implements _NotesCreateRequest {
   final String? channelId;
   @override
   final NotesCreatePollRequest? poll;
+  @override
+  @EpocTimeDateTimeConverter()
+  final DateTime? scheduledAt;
 
   @override
   String toString() {
-    return 'NotesCreateRequest(visibility: $visibility, visibleUserIds: $visibleUserIds, text: $text, cw: $cw, localOnly: $localOnly, reactionAcceptance: $reactionAcceptance, noExtractMentions: $noExtractMentions, noExtractHashtags: $noExtractHashtags, noExtractEmojis: $noExtractEmojis, fileIds: $fileIds, mediaIds: $mediaIds, replyId: $replyId, renoteId: $renoteId, channelId: $channelId, poll: $poll)';
+    return 'NotesCreateRequest(visibility: $visibility, visibleUserIds: $visibleUserIds, text: $text, cw: $cw, localOnly: $localOnly, reactionAcceptance: $reactionAcceptance, noExtractMentions: $noExtractMentions, noExtractHashtags: $noExtractHashtags, noExtractEmojis: $noExtractEmojis, fileIds: $fileIds, mediaIds: $mediaIds, replyId: $replyId, renoteId: $renoteId, channelId: $channelId, poll: $poll, scheduledAt: $scheduledAt)';
   }
 
   @override
@@ -462,7 +480,9 @@ class _$NotesCreateRequestImpl implements _NotesCreateRequest {
                 other.renoteId == renoteId) &&
             (identical(other.channelId, channelId) ||
                 other.channelId == channelId) &&
-            (identical(other.poll, poll) || other.poll == poll));
+            (identical(other.poll, poll) || other.poll == poll) &&
+            (identical(other.scheduledAt, scheduledAt) ||
+                other.scheduledAt == scheduledAt));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -483,7 +503,8 @@ class _$NotesCreateRequestImpl implements _NotesCreateRequest {
       replyId,
       renoteId,
       channelId,
-      poll);
+      poll,
+      scheduledAt);
 
   /// Create a copy of NotesCreateRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -504,21 +525,23 @@ class _$NotesCreateRequestImpl implements _NotesCreateRequest {
 
 abstract class _NotesCreateRequest implements NotesCreateRequest {
   const factory _NotesCreateRequest(
-      {final NoteVisibility? visibility,
-      final List<String>? visibleUserIds,
-      final String? text,
-      final String? cw,
-      final bool? localOnly,
-      final ReactionAcceptance? reactionAcceptance,
-      final bool? noExtractMentions,
-      final bool? noExtractHashtags,
-      final bool? noExtractEmojis,
-      final List<String>? fileIds,
-      final List<String>? mediaIds,
-      final String? replyId,
-      final String? renoteId,
-      final String? channelId,
-      final NotesCreatePollRequest? poll}) = _$NotesCreateRequestImpl;
+          {final NoteVisibility? visibility,
+          final List<String>? visibleUserIds,
+          final String? text,
+          final String? cw,
+          final bool? localOnly,
+          final ReactionAcceptance? reactionAcceptance,
+          final bool? noExtractMentions,
+          final bool? noExtractHashtags,
+          final bool? noExtractEmojis,
+          final List<String>? fileIds,
+          final List<String>? mediaIds,
+          final String? replyId,
+          final String? renoteId,
+          final String? channelId,
+          final NotesCreatePollRequest? poll,
+          @EpocTimeDateTimeConverter() final DateTime? scheduledAt}) =
+      _$NotesCreateRequestImpl;
 
   factory _NotesCreateRequest.fromJson(Map<String, dynamic> json) =
       _$NotesCreateRequestImpl.fromJson;
@@ -572,6 +595,9 @@ abstract class _NotesCreateRequest implements NotesCreateRequest {
   String? get channelId;
   @override
   NotesCreatePollRequest? get poll;
+  @override
+  @EpocTimeDateTimeConverter()
+  DateTime? get scheduledAt;
 
   /// Create a copy of NotesCreateRequest
   /// with the given fields replaced by the non-null parameter values.

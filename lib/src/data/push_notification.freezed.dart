@@ -296,6 +296,8 @@ mixin _$PushNotificationBody {
       throw _privateConstructorUsedError;
   String? get fileId => throw _privateConstructorUsedError;
   String? get message => throw _privateConstructorUsedError;
+  String? get errorType => throw _privateConstructorUsedError; // CherryPick
+  ScheduledNote? get draft => throw _privateConstructorUsedError;
 
   /// Serializes this PushNotificationBody to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -336,11 +338,14 @@ abstract class $PushNotificationBodyCopyWith<$Res> {
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       UserExportableEntities? exportedEntity,
       String? fileId,
-      String? message});
+      String? message,
+      String? errorType,
+      ScheduledNote? draft});
 
   $UserLiteCopyWith<$Res>? get user;
   $PushNotificationNoteCopyWith<$Res>? get note;
   $RolesListResponseCopyWith<$Res>? get role;
+  $ScheduledNoteCopyWith<$Res>? get draft;
 }
 
 /// @nodoc
@@ -380,6 +385,8 @@ class _$PushNotificationBodyCopyWithImpl<$Res,
     Object? exportedEntity = freezed,
     Object? fileId = freezed,
     Object? message = freezed,
+    Object? errorType = freezed,
+    Object? draft = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -466,6 +473,14 @@ class _$PushNotificationBodyCopyWithImpl<$Res,
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String?,
+      errorType: freezed == errorType
+          ? _value.errorType
+          : errorType // ignore: cast_nullable_to_non_nullable
+              as String?,
+      draft: freezed == draft
+          ? _value.draft
+          : draft // ignore: cast_nullable_to_non_nullable
+              as ScheduledNote?,
     ) as $Val);
   }
 
@@ -510,6 +525,20 @@ class _$PushNotificationBodyCopyWithImpl<$Res,
       return _then(_value.copyWith(role: value) as $Val);
     });
   }
+
+  /// Create a copy of PushNotificationBody
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $ScheduledNoteCopyWith<$Res>? get draft {
+    if (_value.draft == null) {
+      return null;
+    }
+
+    return $ScheduledNoteCopyWith<$Res>(_value.draft!, (value) {
+      return _then(_value.copyWith(draft: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -543,7 +572,9 @@ abstract class _$$PushNotificationBodyImplCopyWith<$Res>
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       UserExportableEntities? exportedEntity,
       String? fileId,
-      String? message});
+      String? message,
+      String? errorType,
+      ScheduledNote? draft});
 
   @override
   $UserLiteCopyWith<$Res>? get user;
@@ -551,6 +582,8 @@ abstract class _$$PushNotificationBodyImplCopyWith<$Res>
   $PushNotificationNoteCopyWith<$Res>? get note;
   @override
   $RolesListResponseCopyWith<$Res>? get role;
+  @override
+  $ScheduledNoteCopyWith<$Res>? get draft;
 }
 
 /// @nodoc
@@ -587,6 +620,8 @@ class __$$PushNotificationBodyImplCopyWithImpl<$Res>
     Object? exportedEntity = freezed,
     Object? fileId = freezed,
     Object? message = freezed,
+    Object? errorType = freezed,
+    Object? draft = freezed,
   }) {
     return _then(_$PushNotificationBodyImpl(
       id: null == id
@@ -673,6 +708,14 @@ class __$$PushNotificationBodyImplCopyWithImpl<$Res>
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String?,
+      errorType: freezed == errorType
+          ? _value.errorType
+          : errorType // ignore: cast_nullable_to_non_nullable
+              as String?,
+      draft: freezed == draft
+          ? _value.draft
+          : draft // ignore: cast_nullable_to_non_nullable
+              as ScheduledNote?,
     ));
   }
 }
@@ -702,7 +745,9 @@ class _$PushNotificationBodyImpl implements _PushNotificationBody {
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       this.exportedEntity,
       this.fileId,
-      this.message})
+      this.message,
+      this.errorType,
+      this.draft})
       : _reactions = reactions,
         _users = users;
 
@@ -773,10 +818,15 @@ class _$PushNotificationBodyImpl implements _PushNotificationBody {
   final String? fileId;
   @override
   final String? message;
+  @override
+  final String? errorType;
+// CherryPick
+  @override
+  final ScheduledNote? draft;
 
   @override
   String toString() {
-    return 'PushNotificationBody(id: $id, createdAt: $createdAt, type: $type, noteId: $noteId, followRequestId: $followRequestId, reaction: $reaction, choice: $choice, achievement: $achievement, body: $body, header: $header, icon: $icon, appAccessTokenId: $appAccessTokenId, userId: $userId, user: $user, note: $note, role: $role, reactions: $reactions, users: $users, exportedEntity: $exportedEntity, fileId: $fileId, message: $message)';
+    return 'PushNotificationBody(id: $id, createdAt: $createdAt, type: $type, noteId: $noteId, followRequestId: $followRequestId, reaction: $reaction, choice: $choice, achievement: $achievement, body: $body, header: $header, icon: $icon, appAccessTokenId: $appAccessTokenId, userId: $userId, user: $user, note: $note, role: $role, reactions: $reactions, users: $users, exportedEntity: $exportedEntity, fileId: $fileId, message: $message, errorType: $errorType, draft: $draft)';
   }
 
   @override
@@ -811,7 +861,10 @@ class _$PushNotificationBodyImpl implements _PushNotificationBody {
             (identical(other.exportedEntity, exportedEntity) ||
                 other.exportedEntity == exportedEntity) &&
             (identical(other.fileId, fileId) || other.fileId == fileId) &&
-            (identical(other.message, message) || other.message == message));
+            (identical(other.message, message) || other.message == message) &&
+            (identical(other.errorType, errorType) ||
+                other.errorType == errorType) &&
+            (identical(other.draft, draft) || other.draft == draft));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -838,7 +891,9 @@ class _$PushNotificationBodyImpl implements _PushNotificationBody {
         const DeepCollectionEquality().hash(_users),
         exportedEntity,
         fileId,
-        message
+        message,
+        errorType,
+        draft
       ]);
 
   /// Create a copy of PushNotificationBody
@@ -883,7 +938,9 @@ abstract class _PushNotificationBody implements PushNotificationBody {
       @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
       final UserExportableEntities? exportedEntity,
       final String? fileId,
-      final String? message}) = _$PushNotificationBodyImpl;
+      final String? message,
+      final String? errorType,
+      final ScheduledNote? draft}) = _$PushNotificationBodyImpl;
 
   factory _PushNotificationBody.fromJson(Map<String, dynamic> json) =
       _$PushNotificationBodyImpl.fromJson;
@@ -934,6 +991,10 @@ abstract class _PushNotificationBody implements PushNotificationBody {
   String? get fileId;
   @override
   String? get message;
+  @override
+  String? get errorType; // CherryPick
+  @override
+  ScheduledNote? get draft;
 
   /// Create a copy of PushNotificationBody
   /// with the given fields replaced by the non-null parameter values.

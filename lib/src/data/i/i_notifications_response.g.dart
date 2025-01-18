@@ -66,6 +66,12 @@ _$INotificationsResponseImpl _$$INotificationsResponseImplFromJson(
           message: $checkedConvert('message', (v) => v as String?),
           noteIds: $checkedConvert('noteIds',
               (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
+          errorType: $checkedConvert('errorType', (v) => v as String?),
+          draft: $checkedConvert(
+              'draft',
+              (v) => v == null
+                  ? null
+                  : ScheduledNote.fromJson(v as Map<String, dynamic>)),
         );
         return val;
       },
@@ -97,6 +103,8 @@ Map<String, dynamic> _$$INotificationsResponseImplToJson(
       'fileId': instance.fileId,
       'message': instance.message,
       'noteIds': instance.noteIds,
+      'errorType': instance.errorType,
+      'draft': instance.draft?.toJson(),
     };
 
 const _$NotificationTypeEnumMap = {
@@ -116,6 +124,9 @@ const _$NotificationTypeEnumMap = {
   NotificationType.exportCompleted: 'exportCompleted',
   NotificationType.login: 'login',
   NotificationType.scheduleNote: 'scheduleNote',
+  NotificationType.noteScheduled: 'noteScheduled',
+  NotificationType.scheduledNotePosted: 'scheduledNotePosted',
+  NotificationType.scheduledNoteError: 'scheduledNoteError',
   NotificationType.app: 'app',
   NotificationType.test: 'test',
   NotificationType.reactionGrouped: 'reaction:grouped',

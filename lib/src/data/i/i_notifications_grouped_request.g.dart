@@ -65,6 +65,8 @@ const _$NotificationTypeEnumMap = {
   NotificationType.login: 'login',
   NotificationType.scheduleNote: 'scheduleNote',
   NotificationType.noteScheduled: 'noteScheduled',
+  NotificationType.scheduledNotePosted: 'scheduledNotePosted',
+  NotificationType.scheduledNoteError: 'scheduledNoteError',
   NotificationType.app: 'app',
   NotificationType.test: 'test',
   NotificationType.reactionGrouped: 'reaction:grouped',

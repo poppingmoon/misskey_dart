@@ -16,6 +16,8 @@ enum Permission {
   readMutes("read:mutes"),
   writeMutes("write:mutes"),
   writeNotes("write:notes"),
+  readNotesSchedule("read:notes-schedule"), // CherryPick
+  writeNotesSchedule("write:notes-schedule"), // CherryPick
   readNotifications("read:notifications"),
   writeNotifications("write:notifications"),
   readReactions("read:reactions"),

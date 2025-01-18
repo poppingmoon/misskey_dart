@@ -22,8 +22,10 @@ MisskeyException _$MisskeyExceptionFromJson(Map<String, dynamic> json) {
 mixin _$MisskeyException {
   String get id => throw _privateConstructorUsedError;
   String get code => throw _privateConstructorUsedError;
-  String get message => throw _privateConstructorUsedError;
-  MisskeyExceptionKind get kind => throw _privateConstructorUsedError;
+  String get message =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  MisskeyExceptionKind? get kind => throw _privateConstructorUsedError;
   Map<String, dynamic>? get info => throw _privateConstructorUsedError;
 
   /// Serializes this MisskeyException to a JSON map.
@@ -46,7 +48,8 @@ abstract class $MisskeyExceptionCopyWith<$Res> {
       {String id,
       String code,
       String message,
-      MisskeyExceptionKind kind,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      MisskeyExceptionKind? kind,
       Map<String, dynamic>? info});
 }
 
@@ -68,7 +71,7 @@ class _$MisskeyExceptionCopyWithImpl<$Res, $Val extends MisskeyException>
     Object? id = null,
     Object? code = null,
     Object? message = null,
-    Object? kind = null,
+    Object? kind = freezed,
     Object? info = freezed,
   }) {
     return _then(_value.copyWith(
@@ -84,10 +87,10 @@ class _$MisskeyExceptionCopyWithImpl<$Res, $Val extends MisskeyException>
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
-      kind: null == kind
+      kind: freezed == kind
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
-              as MisskeyExceptionKind,
+              as MisskeyExceptionKind?,
       info: freezed == info
           ? _value.info
           : info // ignore: cast_nullable_to_non_nullable
@@ -108,7 +111,8 @@ abstract class _$$MisskeyExceptionImplCopyWith<$Res>
       {String id,
       String code,
       String message,
-      MisskeyExceptionKind kind,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      MisskeyExceptionKind? kind,
       Map<String, dynamic>? info});
 }
 
@@ -128,7 +132,7 @@ class __$$MisskeyExceptionImplCopyWithImpl<$Res>
     Object? id = null,
     Object? code = null,
     Object? message = null,
-    Object? kind = null,
+    Object? kind = freezed,
     Object? info = freezed,
   }) {
     return _then(_$MisskeyExceptionImpl(
@@ -144,10 +148,10 @@ class __$$MisskeyExceptionImplCopyWithImpl<$Res>
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
-      kind: null == kind
+      kind: freezed == kind
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
-              as MisskeyExceptionKind,
+              as MisskeyExceptionKind?,
       info: freezed == info
           ? _value._info
           : info // ignore: cast_nullable_to_non_nullable
@@ -163,7 +167,7 @@ class _$MisskeyExceptionImpl implements _MisskeyException {
       {required this.id,
       required this.code,
       required this.message,
-      required this.kind,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.kind,
       final Map<String, dynamic>? info})
       : _info = info;
 
@@ -176,8 +180,10 @@ class _$MisskeyExceptionImpl implements _MisskeyException {
   final String code;
   @override
   final String message;
+// ignore: invalid_annotation_target
   @override
-  final MisskeyExceptionKind kind;
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final MisskeyExceptionKind? kind;
   final Map<String, dynamic>? _info;
   @override
   Map<String, dynamic>? get info {
@@ -232,7 +238,8 @@ abstract class _MisskeyException implements MisskeyException {
       {required final String id,
       required final String code,
       required final String message,
-      required final MisskeyExceptionKind kind,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      final MisskeyExceptionKind? kind,
       final Map<String, dynamic>? info}) = _$MisskeyExceptionImpl;
 
   factory _MisskeyException.fromJson(Map<String, dynamic> json) =
@@ -243,9 +250,10 @@ abstract class _MisskeyException implements MisskeyException {
   @override
   String get code;
   @override
-  String get message;
+  String get message; // ignore: invalid_annotation_target
   @override
-  MisskeyExceptionKind get kind;
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  MisskeyExceptionKind? get kind;
   @override
   Map<String, dynamic>? get info;
 

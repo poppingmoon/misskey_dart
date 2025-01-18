@@ -55,6 +55,8 @@ class PushNotificationBody with _$PushNotificationBody {
     UserExportableEntities? exportedEntity,
     String? fileId,
     String? message,
+    String? errorType, // CherryPick
+    ScheduledNote? draft, // MisskeyIO
   }) = _PushNotificationBody;
 
   factory PushNotificationBody.fromJson(Map<String, Object?> json) =>

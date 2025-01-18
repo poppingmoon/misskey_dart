@@ -5,6 +5,8 @@ import 'package:misskey_dart/src/services/api_service.dart';
 class MisskeyNotes {
   final MisskeyNotesReactions reactions;
   final MisskeyNotesFavorites favorites;
+  final MisskeyNotesSchedule schedule;
+  final MisskeyNotesScheduled scheduled;
   final MisskeyNotesPolls polls;
   final MisskeyNotesThreadMuting threadMuting;
 
@@ -14,16 +16,22 @@ class MisskeyNotes {
       : _apiService = apiService,
         reactions = MisskeyNotesReactions(apiService: apiService),
         favorites = MisskeyNotesFavorites(apiService: apiService),
+        schedule = MisskeyNotesSchedule(apiService: apiService),
+        scheduled = MisskeyNotesScheduled(apiService: apiService),
         polls = MisskeyNotesPolls(apiService: apiService),
         threadMuting = MisskeyNotesThreadMuting(apiService: apiService);
 
   /// ノートを投稿します。
-  Future<Note> create(NotesCreateRequest request) async {
-    final response = await _apiService.post<Map<String, dynamic>>(
+  Future<Note?> create(NotesCreateRequest request) async {
+    final response = await _apiService.post(
       "notes/create",
       request.toJson(),
     );
-    return Note.fromJson(response["createdNote"]);
+    if (response case {"createdNote": final createdNote}) {
+      return Note.fromJson(createdNote);
+    } else {
+      return null;
+    }
   }
 
   /// ノートを更新します。
@@ -229,6 +237,46 @@ class MisskeyNotesFavorites {
   /// ノートのお気に入りを解除します。
   Future<void> delete(NotesFavoritesDeleteRequest request) async {
     await _apiService.post<void>("notes/favorites/delete", request.toJson());
+  }
+}
+
+class MisskeyNotesSchedule {
+  final ApiService _apiService;
+
+  MisskeyNotesSchedule({required ApiService apiService})
+      : _apiService = apiService;
+
+  Future<void> create(NotesScheduleCreateRequest request) async {
+    await _apiService.post<void>("notes/schedule/create", request.toJson());
+  }
+
+  Future<void> delete(NotesScheduleDeleteRequest request) async {
+    await _apiService.post<void>("notes/schedule/delete", request.toJson());
+  }
+
+  Future<Iterable<NoteSchedule>> list(NotesScheduleListRequest request) async {
+    final response =
+        await _apiService.post<List>("notes/schedule/list", request.toJson());
+    return response.map((e) => NoteSchedule.fromJson(e));
+  }
+}
+
+class MisskeyNotesScheduled {
+  final ApiService _apiService;
+
+  MisskeyNotesScheduled({required ApiService apiService})
+      : _apiService = apiService;
+
+  Future<void> cancel(NotesScheduledCancelRequest request) async {
+    await _apiService.post<void>("notes/scheduled/cancel", request.toJson());
+  }
+
+  Future<Iterable<ScheduledNote>> list(
+    NotesScheduledListRequest request,
+  ) async {
+    final response =
+        await _apiService.post<List>("notes/scheduled/list", request.toJson());
+    return response.map((e) => ScheduledNote.fromJson(e));
   }
 }
 
