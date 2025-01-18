@@ -21,24 +21,18 @@ _$MetaResponseImpl _$$MetaResponseImplFromJson(Map<String, dynamic> json) =>
               $checkedConvert('providesTarball', (v) => v as bool?),
           name: $checkedConvert('name', (v) => v as String?),
           shortName: $checkedConvert('shortName', (v) => v as String?),
-          uri: $checkedConvert(
-              'uri',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
+          uri: $checkedConvert('uri',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
           description: $checkedConvert('description', (v) => v as String?),
           langs: $checkedConvert(
               'langs',
               (v) =>
                   (v as List<dynamic>?)?.map((e) => e as String).toList() ??
                   const []),
-          tosUrl: $checkedConvert(
-              'tosUrl',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
-          repositoryUrl: $checkedConvert(
-              'repositoryUrl',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
+          tosUrl: $checkedConvert('tosUrl',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
+          repositoryUrl: $checkedConvert('repositoryUrl',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
           feedbackUrl: $checkedConvert('feedbackUrl', (v) => v as String?),
           defaultDarkTheme:
               $checkedConvert('defaultDarkTheme', (v) => v as String?),
@@ -54,10 +48,8 @@ _$MetaResponseImpl _$$MetaResponseImplFromJson(Map<String, dynamic> json) =>
           enableMcaptcha: $checkedConvert('enableMcaptcha', (v) => v as bool?),
           mcaptchaSiteKey:
               $checkedConvert('mcaptchaSiteKey', (v) => v as String?),
-          mcaptchaInstanceUrl: $checkedConvert(
-              'mcaptchaInstanceUrl',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
+          mcaptchaInstanceUrl: $checkedConvert('mcaptchaInstanceUrl',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
           enableRecaptcha:
               $checkedConvert('enableRecaptcha', (v) => v as bool?),
           recaptchaSiteKey:
@@ -68,50 +60,28 @@ _$MetaResponseImpl _$$MetaResponseImplFromJson(Map<String, dynamic> json) =>
               $checkedConvert('turnstileSiteKey', (v) => v as String?),
           swPublickey: $checkedConvert('swPublickey', (v) => v as String?),
           themeColor: $checkedConvert('themeColor', (v) => v as String?),
-          mascotImageUrl: $checkedConvert(
-              'mascotImageUrl',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
-          bannerUrl: $checkedConvert(
-              'bannerUrl',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
-          infoImageUrl: $checkedConvert(
-              'infoImageUrl',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
-          errorImageUrl: $checkedConvert(
-              'errorImageUrl',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
-          serverErrorImageUrl: $checkedConvert(
-              'serverErrorImageUrl',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
-          notFountImageUrl: $checkedConvert(
-              'notFountImageUrl',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
-          iconUrl: $checkedConvert(
-              'iconUrl',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
-          backgroundImageUrl: $checkedConvert(
-              'backgroundImageUrl',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
-          logoImageUrl: $checkedConvert(
-              'logoImageUrl',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
-          impressumUrl: $checkedConvert(
-              'impressumUrl',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
-          privacyPolicyUrl: $checkedConvert(
-              'privacyPolicyUrl',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
+          mascotImageUrl: $checkedConvert('mascotImageUrl',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
+          bannerUrl: $checkedConvert('bannerUrl',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
+          infoImageUrl: $checkedConvert('infoImageUrl',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
+          errorImageUrl: $checkedConvert('errorImageUrl',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
+          serverErrorImageUrl: $checkedConvert('serverErrorImageUrl',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
+          notFountImageUrl: $checkedConvert('notFountImageUrl',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
+          iconUrl: $checkedConvert('iconUrl',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
+          backgroundImageUrl: $checkedConvert('backgroundImageUrl',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
+          logoImageUrl: $checkedConvert('logoImageUrl',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
+          impressumUrl: $checkedConvert('impressumUrl',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
+          privacyPolicyUrl: $checkedConvert('privacyPolicyUrl',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
           maxNoteTextLength:
               $checkedConvert('maxNoteTextLength', (v) => (v as num?)?.toInt()),
           ads: $checkedConvert(
@@ -229,12 +199,6 @@ Map<String, dynamic> _$$MetaResponseImplToJson(_$MetaResponseImpl instance) =>
       'features': instance.features?.toJson(),
     };
 
-Value? _$JsonConverterFromJson<Json, Value>(
-  Object? json,
-  Value? Function(Json json) fromJson,
-) =>
-    json == null ? null : fromJson(json as Json);
-
 _$MetaAdImpl _$$MetaAdImplFromJson(Map<String, dynamic> json) => $checkedCreate(
       r'_$MetaAdImpl',
       json,
@@ -242,14 +206,10 @@ _$MetaAdImpl _$$MetaAdImplFromJson(Map<String, dynamic> json) => $checkedCreate(
         final val = _$MetaAdImpl(
           id: $checkedConvert('id', (v) => v as String),
           place: $checkedConvert('place', (v) => v as String),
-          url: $checkedConvert(
-              'url',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
-          imageUrl: $checkedConvert(
-              'imageUrl',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
+          url: $checkedConvert('url',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
+          imageUrl: $checkedConvert('imageUrl',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
           ratio: $checkedConvert('ratio', (v) => (v as num).toInt()),
         );
         return val;

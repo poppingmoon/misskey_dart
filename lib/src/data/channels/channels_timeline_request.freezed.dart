@@ -26,9 +26,9 @@ mixin _$ChannelsTimelineRequest {
   int? get limit => throw _privateConstructorUsedError;
   String? get sinceId => throw _privateConstructorUsedError;
   String? get untilId => throw _privateConstructorUsedError;
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get sinceDate => throw _privateConstructorUsedError;
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get untilDate => throw _privateConstructorUsedError;
   bool? get allowPartial => throw _privateConstructorUsedError;
 
@@ -53,8 +53,8 @@ abstract class $ChannelsTimelineRequestCopyWith<$Res> {
       @Assert('limit > 0') int? limit,
       String? sinceId,
       String? untilId,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? sinceDate,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? untilDate,
+      @EpocTimeDateTimeConverter() DateTime? sinceDate,
+      @EpocTimeDateTimeConverter() DateTime? untilDate,
       bool? allowPartial});
 }
 
@@ -129,8 +129,8 @@ abstract class _$$ChannelsTimelineRequestImplCopyWith<$Res>
       @Assert('limit > 0') int? limit,
       String? sinceId,
       String? untilId,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? sinceDate,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? untilDate,
+      @EpocTimeDateTimeConverter() DateTime? sinceDate,
+      @EpocTimeDateTimeConverter() DateTime? untilDate,
       bool? allowPartial});
 }
 
@@ -198,8 +198,8 @@ class _$ChannelsTimelineRequestImpl implements _ChannelsTimelineRequest {
       @Assert('limit > 0') this.limit,
       this.sinceId,
       this.untilId,
-      @EpocTimeDateTimeConverter.withMilliSeconds() this.sinceDate,
-      @EpocTimeDateTimeConverter.withMilliSeconds() this.untilDate,
+      @EpocTimeDateTimeConverter() this.sinceDate,
+      @EpocTimeDateTimeConverter() this.untilDate,
       this.allowPartial});
 
   factory _$ChannelsTimelineRequestImpl.fromJson(Map<String, dynamic> json) =>
@@ -215,10 +215,10 @@ class _$ChannelsTimelineRequestImpl implements _ChannelsTimelineRequest {
   @override
   final String? untilId;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   final DateTime? sinceDate;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   final DateTime? untilDate;
   @override
   final bool? allowPartial;
@@ -274,8 +274,8 @@ abstract class _ChannelsTimelineRequest implements ChannelsTimelineRequest {
       @Assert('limit > 0') final int? limit,
       final String? sinceId,
       final String? untilId,
-      @EpocTimeDateTimeConverter.withMilliSeconds() final DateTime? sinceDate,
-      @EpocTimeDateTimeConverter.withMilliSeconds() final DateTime? untilDate,
+      @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+      @EpocTimeDateTimeConverter() final DateTime? untilDate,
       final bool? allowPartial}) = _$ChannelsTimelineRequestImpl;
 
   factory _ChannelsTimelineRequest.fromJson(Map<String, dynamic> json) =
@@ -291,10 +291,10 @@ abstract class _ChannelsTimelineRequest implements ChannelsTimelineRequest {
   @override
   String? get untilId;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get sinceDate;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get untilDate;
   @override
   bool? get allowPartial;

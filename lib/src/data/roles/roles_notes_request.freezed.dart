@@ -24,9 +24,9 @@ mixin _$RolesNotesRequest {
   int? get limit => throw _privateConstructorUsedError;
   String? get sinceId => throw _privateConstructorUsedError;
   String? get untilId => throw _privateConstructorUsedError;
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get sinceDate => throw _privateConstructorUsedError;
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get untilDate => throw _privateConstructorUsedError;
 
   /// Serializes this RolesNotesRequest to a JSON map.
@@ -50,8 +50,8 @@ abstract class $RolesNotesRequestCopyWith<$Res> {
       int? limit,
       String? sinceId,
       String? untilId,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? sinceDate,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? untilDate});
+      @EpocTimeDateTimeConverter() DateTime? sinceDate,
+      @EpocTimeDateTimeConverter() DateTime? untilDate});
 }
 
 /// @nodoc
@@ -118,8 +118,8 @@ abstract class _$$RolesNotesRequestImplCopyWith<$Res>
       int? limit,
       String? sinceId,
       String? untilId,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? sinceDate,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? untilDate});
+      @EpocTimeDateTimeConverter() DateTime? sinceDate,
+      @EpocTimeDateTimeConverter() DateTime? untilDate});
 }
 
 /// @nodoc
@@ -179,8 +179,8 @@ class _$RolesNotesRequestImpl implements _RolesNotesRequest {
       this.limit,
       this.sinceId,
       this.untilId,
-      @EpocTimeDateTimeConverter.withMilliSeconds() this.sinceDate,
-      @EpocTimeDateTimeConverter.withMilliSeconds() this.untilDate});
+      @EpocTimeDateTimeConverter() this.sinceDate,
+      @EpocTimeDateTimeConverter() this.untilDate});
 
   factory _$RolesNotesRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$RolesNotesRequestImplFromJson(json);
@@ -194,10 +194,10 @@ class _$RolesNotesRequestImpl implements _RolesNotesRequest {
   @override
   final String? untilId;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   final DateTime? sinceDate;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   final DateTime? untilDate;
 
   @override
@@ -244,13 +244,13 @@ class _$RolesNotesRequestImpl implements _RolesNotesRequest {
 
 abstract class _RolesNotesRequest implements RolesNotesRequest {
   const factory _RolesNotesRequest(
-      {required final String roleId,
-      final int? limit,
-      final String? sinceId,
-      final String? untilId,
-      @EpocTimeDateTimeConverter.withMilliSeconds() final DateTime? sinceDate,
-      @EpocTimeDateTimeConverter.withMilliSeconds()
-      final DateTime? untilDate}) = _$RolesNotesRequestImpl;
+          {required final String roleId,
+          final int? limit,
+          final String? sinceId,
+          final String? untilId,
+          @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+          @EpocTimeDateTimeConverter() final DateTime? untilDate}) =
+      _$RolesNotesRequestImpl;
 
   factory _RolesNotesRequest.fromJson(Map<String, dynamic> json) =
       _$RolesNotesRequestImpl.fromJson;
@@ -264,10 +264,10 @@ abstract class _RolesNotesRequest implements RolesNotesRequest {
   @override
   String? get untilId;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get sinceDate;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get untilDate;
 
   /// Create a copy of RolesNotesRequest

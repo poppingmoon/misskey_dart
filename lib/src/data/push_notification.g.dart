@@ -25,8 +25,8 @@ _$PushNotificationImpl _$$PushNotificationImplFromJson(
           userId: $checkedConvert('userId', (v) => v as String?),
           dateTime: $checkedConvert(
               'dateTime',
-              (v) => const NullableEpocTimeDateTimeConverter.withMilliSeconds()
-                  .fromJson(v)),
+              (v) => _$JsonConverterFromJson<int, DateTime>(
+                  v, const EpocTimeDateTimeConverter().fromJson)),
         );
         return val;
       },
@@ -38,14 +38,26 @@ Map<String, dynamic> _$$PushNotificationImplToJson(
       'type': _$PushNotificationTypesEnumMap[instance.type],
       'body': instance.body?.toJson(),
       'userId': instance.userId,
-      'dateTime': const NullableEpocTimeDateTimeConverter.withMilliSeconds()
-          .toJson(instance.dateTime),
+      'dateTime': _$JsonConverterToJson<int, DateTime>(
+          instance.dateTime, const EpocTimeDateTimeConverter().toJson),
     };
 
 const _$PushNotificationTypesEnumMap = {
   PushNotificationTypes.notification: 'notification',
   PushNotificationTypes.readAllNotifications: 'readAllNotifications',
 };
+
+Value? _$JsonConverterFromJson<Json, Value>(
+  Object? json,
+  Value? Function(Json json) fromJson,
+) =>
+    json == null ? null : fromJson(json as Json);
+
+Json? _$JsonConverterToJson<Json, Value>(
+  Value? value,
+  Json? Function(Value value) toJson,
+) =>
+    value == null ? null : toJson(value);
 
 _$PushNotificationBodyImpl _$$PushNotificationBodyImplFromJson(
         Map<String, dynamic> json) =>
@@ -69,10 +81,8 @@ _$PushNotificationBodyImpl _$$PushNotificationBodyImplFromJson(
           achievement: $checkedConvert('achievement', (v) => v as String?),
           body: $checkedConvert('body', (v) => v as String?),
           header: $checkedConvert('header', (v) => v as String?),
-          icon: $checkedConvert(
-              'icon',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
+          icon: $checkedConvert('icon',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
           appAccessTokenId:
               $checkedConvert('appAccessTokenId', (v) => v as String?),
           userId: $checkedConvert('userId', (v) => v as String?),
@@ -166,12 +176,6 @@ const _$NotificationTypeEnumMap = {
   NotificationType.groupInvited: 'groupInvited',
 };
 
-Value? _$JsonConverterFromJson<Json, Value>(
-  Object? json,
-  Value? Function(Json json) fromJson,
-) =>
-    json == null ? null : fromJson(json as Json);
-
 const _$UserExportableEntitiesEnumMap = {
   UserExportableEntities.note: 'note',
   UserExportableEntities.antenna: 'antenna',
@@ -251,14 +255,10 @@ _$PushNotificationNoteImpl _$$PushNotificationNoteImplFromJson(
               (v) => v == null
                   ? null
                   : NoteChannelInfo.fromJson(v as Map<String, dynamic>)),
-          uri: $checkedConvert(
-              'uri',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
-          url: $checkedConvert(
-              'url',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
+          uri: $checkedConvert('uri',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
+          url: $checkedConvert('url',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
           reactionAndUserPairCache: $checkedConvert(
               'reactionAndUserPairCache',
               (v) =>

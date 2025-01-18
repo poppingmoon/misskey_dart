@@ -16,10 +16,8 @@ _$GetAvatarDecorationsResponseImpl _$$GetAvatarDecorationsResponseImplFromJson(
           id: $checkedConvert('id', (v) => v as String),
           name: $checkedConvert('name', (v) => v as String),
           description: $checkedConvert('description', (v) => v as String),
-          url: $checkedConvert(
-              'url',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
+          url: $checkedConvert('url',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
           roleIdsThatCanBeUsedThisDecoration: $checkedConvert(
               'roleIdsThatCanBeUsedThisDecoration',
               (v) =>
@@ -40,9 +38,3 @@ Map<String, dynamic> _$$GetAvatarDecorationsResponseImplToJson(
       'roleIdsThatCanBeUsedThisDecoration':
           instance.roleIdsThatCanBeUsedThisDecoration,
     };
-
-Value? _$JsonConverterFromJson<Json, Value>(
-  Object? json,
-  Value? Function(Json json) fromJson,
-) =>
-    json == null ? null : fromJson(json as Json);

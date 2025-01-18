@@ -19,12 +19,12 @@ _$ChannelsTimelineRequestImpl _$$ChannelsTimelineRequestImplFromJson(
           untilId: $checkedConvert('untilId', (v) => v as String?),
           sinceDate: $checkedConvert(
               'sinceDate',
-              (v) => _$JsonConverterFromJson<int, DateTime>(v,
-                  const EpocTimeDateTimeConverter.withMilliSeconds().fromJson)),
+              (v) => _$JsonConverterFromJson<int, DateTime>(
+                  v, const EpocTimeDateTimeConverter().fromJson)),
           untilDate: $checkedConvert(
               'untilDate',
-              (v) => _$JsonConverterFromJson<int, DateTime>(v,
-                  const EpocTimeDateTimeConverter.withMilliSeconds().fromJson)),
+              (v) => _$JsonConverterFromJson<int, DateTime>(
+                  v, const EpocTimeDateTimeConverter().fromJson)),
           allowPartial: $checkedConvert('allowPartial', (v) => v as bool?),
         );
         return val;
@@ -38,10 +38,10 @@ Map<String, dynamic> _$$ChannelsTimelineRequestImplToJson(
       'limit': instance.limit,
       'sinceId': instance.sinceId,
       'untilId': instance.untilId,
-      'sinceDate': _$JsonConverterToJson<int, DateTime>(instance.sinceDate,
-          const EpocTimeDateTimeConverter.withMilliSeconds().toJson),
-      'untilDate': _$JsonConverterToJson<int, DateTime>(instance.untilDate,
-          const EpocTimeDateTimeConverter.withMilliSeconds().toJson),
+      'sinceDate': _$JsonConverterToJson<int, DateTime>(
+          instance.sinceDate, const EpocTimeDateTimeConverter().toJson),
+      'untilDate': _$JsonConverterToJson<int, DateTime>(
+          instance.untilDate, const EpocTimeDateTimeConverter().toJson),
       'allowPartial': instance.allowPartial,
     };
 

@@ -21,7 +21,7 @@ MuteCreateRequest _$MuteCreateRequestFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$MuteCreateRequest {
   String get userId => throw _privateConstructorUsedError;
-  @NullableEpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get expiresAt => throw _privateConstructorUsedError;
 
   /// Serializes this MuteCreateRequest to a JSON map.
@@ -40,10 +40,7 @@ abstract class $MuteCreateRequestCopyWith<$Res> {
           MuteCreateRequest value, $Res Function(MuteCreateRequest) then) =
       _$MuteCreateRequestCopyWithImpl<$Res, MuteCreateRequest>;
   @useResult
-  $Res call(
-      {String userId,
-      @NullableEpocTimeDateTimeConverter.withMilliSeconds()
-      DateTime? expiresAt});
+  $Res call({String userId, @EpocTimeDateTimeConverter() DateTime? expiresAt});
 }
 
 /// @nodoc
@@ -85,10 +82,7 @@ abstract class _$$MuteCreateRequestImplCopyWith<$Res>
       __$$MuteCreateRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String userId,
-      @NullableEpocTimeDateTimeConverter.withMilliSeconds()
-      DateTime? expiresAt});
+  $Res call({String userId, @EpocTimeDateTimeConverter() DateTime? expiresAt});
 }
 
 /// @nodoc
@@ -124,8 +118,7 @@ class __$$MuteCreateRequestImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$MuteCreateRequestImpl implements _MuteCreateRequest {
   const _$MuteCreateRequestImpl(
-      {required this.userId,
-      @NullableEpocTimeDateTimeConverter.withMilliSeconds() this.expiresAt});
+      {required this.userId, @EpocTimeDateTimeConverter() this.expiresAt});
 
   factory _$MuteCreateRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$MuteCreateRequestImplFromJson(json);
@@ -133,7 +126,7 @@ class _$MuteCreateRequestImpl implements _MuteCreateRequest {
   @override
   final String userId;
   @override
-  @NullableEpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   final DateTime? expiresAt;
 
   @override
@@ -174,9 +167,9 @@ class _$MuteCreateRequestImpl implements _MuteCreateRequest {
 
 abstract class _MuteCreateRequest implements MuteCreateRequest {
   const factory _MuteCreateRequest(
-      {required final String userId,
-      @NullableEpocTimeDateTimeConverter.withMilliSeconds()
-      final DateTime? expiresAt}) = _$MuteCreateRequestImpl;
+          {required final String userId,
+          @EpocTimeDateTimeConverter() final DateTime? expiresAt}) =
+      _$MuteCreateRequestImpl;
 
   factory _MuteCreateRequest.fromJson(Map<String, dynamic> json) =
       _$MuteCreateRequestImpl.fromJson;
@@ -184,7 +177,7 @@ abstract class _MuteCreateRequest implements MuteCreateRequest {
   @override
   String get userId;
   @override
-  @NullableEpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get expiresAt;
 
   /// Create a copy of MuteCreateRequest

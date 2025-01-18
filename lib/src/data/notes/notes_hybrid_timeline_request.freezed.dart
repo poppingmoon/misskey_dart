@@ -24,9 +24,9 @@ mixin _$NotesHybridTimelineRequest {
   int? get limit => throw _privateConstructorUsedError;
   String? get sinceId => throw _privateConstructorUsedError;
   String? get untilId => throw _privateConstructorUsedError;
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get sinceDate => throw _privateConstructorUsedError;
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get untilDate => throw _privateConstructorUsedError;
   bool? get includeMyRenotes => throw _privateConstructorUsedError;
   bool? get includeRenotedMyNotes => throw _privateConstructorUsedError;
@@ -57,8 +57,8 @@ abstract class $NotesHybridTimelineRequestCopyWith<$Res> {
       {int? limit,
       String? sinceId,
       String? untilId,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? sinceDate,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? untilDate,
+      @EpocTimeDateTimeConverter() DateTime? sinceDate,
+      @EpocTimeDateTimeConverter() DateTime? untilDate,
       bool? includeMyRenotes,
       bool? includeRenotedMyNotes,
       bool? includeLocalRenotes,
@@ -163,8 +163,8 @@ abstract class _$$NotesHybridTimelineRequestImplCopyWith<$Res>
       {int? limit,
       String? sinceId,
       String? untilId,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? sinceDate,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? untilDate,
+      @EpocTimeDateTimeConverter() DateTime? sinceDate,
+      @EpocTimeDateTimeConverter() DateTime? untilDate,
       bool? includeMyRenotes,
       bool? includeRenotedMyNotes,
       bool? includeLocalRenotes,
@@ -262,8 +262,8 @@ class _$NotesHybridTimelineRequestImpl implements _NotesHybridTimelineRequest {
       {this.limit,
       this.sinceId,
       this.untilId,
-      @EpocTimeDateTimeConverter.withMilliSeconds() this.sinceDate,
-      @EpocTimeDateTimeConverter.withMilliSeconds() this.untilDate,
+      @EpocTimeDateTimeConverter() this.sinceDate,
+      @EpocTimeDateTimeConverter() this.untilDate,
       this.includeMyRenotes,
       this.includeRenotedMyNotes,
       this.includeLocalRenotes,
@@ -283,10 +283,10 @@ class _$NotesHybridTimelineRequestImpl implements _NotesHybridTimelineRequest {
   @override
   final String? untilId;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   final DateTime? sinceDate;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   final DateTime? untilDate;
   @override
   final bool? includeMyRenotes;
@@ -376,8 +376,8 @@ abstract class _NotesHybridTimelineRequest
       {final int? limit,
       final String? sinceId,
       final String? untilId,
-      @EpocTimeDateTimeConverter.withMilliSeconds() final DateTime? sinceDate,
-      @EpocTimeDateTimeConverter.withMilliSeconds() final DateTime? untilDate,
+      @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+      @EpocTimeDateTimeConverter() final DateTime? untilDate,
       final bool? includeMyRenotes,
       final bool? includeRenotedMyNotes,
       final bool? includeLocalRenotes,
@@ -396,10 +396,10 @@ abstract class _NotesHybridTimelineRequest
   @override
   String? get untilId;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get sinceDate;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get untilDate;
   @override
   bool? get includeMyRenotes;

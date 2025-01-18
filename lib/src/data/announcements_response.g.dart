@@ -22,10 +22,8 @@ _$AnnouncementsResponseImpl _$$AnnouncementsResponseImplFromJson(
                   v, const NullableDateTimeConverter().fromJson)),
           text: $checkedConvert('text', (v) => v as String),
           title: $checkedConvert('title', (v) => v as String),
-          imageUrl: $checkedConvert(
-              'imageUrl',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
+          imageUrl: $checkedConvert('imageUrl',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
           icon: $checkedConvert(
               'icon',
               (v) => $enumDecodeNullable(_$AnnouncementIconTypeEnumMap, v,

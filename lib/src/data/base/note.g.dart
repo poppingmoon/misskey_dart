@@ -82,14 +82,10 @@ _$NoteImpl _$$NoteImplFromJson(Map<String, dynamic> json) => $checkedCreate(
               (v) => v == null
                   ? null
                   : NoteChannelInfo.fromJson(v as Map<String, dynamic>)),
-          uri: $checkedConvert(
-              'uri',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
-          url: $checkedConvert(
-              'url',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
+          uri: $checkedConvert('uri',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
+          url: $checkedConvert('url',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
           reactionAndUserPairCache: $checkedConvert(
               'reactionAndUserPairCache',
               (v) =>

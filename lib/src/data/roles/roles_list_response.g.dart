@@ -22,10 +22,8 @@ _$RolesListResponseImpl _$$RolesListResponseImplFromJson(
           description: $checkedConvert('description', (v) => v as String?),
           color: $checkedConvert('color',
               (v) => const NullableColorConverter().fromJson(v as String?)),
-          iconUrl: $checkedConvert(
-              'iconUrl',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
+          iconUrl: $checkedConvert('iconUrl',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
           target: $checkedConvert('target', (v) => v as String?),
           isPublic: $checkedConvert('isPublic', (v) => v as bool),
           isAdministrator: $checkedConvert('isAdministrator', (v) => v as bool),
@@ -62,9 +60,3 @@ Map<String, dynamic> _$$RolesListResponseImplToJson(
       'displayOrder': instance.displayOrder,
       'usersCount': instance.usersCount,
     };
-
-Value? _$JsonConverterFromJson<Json, Value>(
-  Object? json,
-  Value? Function(Json json) fromJson,
-) =>
-    json == null ? null : fromJson(json as Json);

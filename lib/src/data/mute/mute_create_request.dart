@@ -8,7 +8,7 @@ part 'mute_create_request.g.dart';
 class MuteCreateRequest with _$MuteCreateRequest {
   const factory MuteCreateRequest({
     required String userId,
-    @NullableEpocTimeDateTimeConverter.withMilliSeconds() DateTime? expiresAt,
+    @EpocTimeDateTimeConverter() DateTime? expiresAt,
   }) = _MuteCreateRequest;
 
   factory MuteCreateRequest.fromJson(Map<String, dynamic> json) =>

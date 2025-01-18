@@ -15,8 +15,8 @@ class NotesLocalTimelineRequest with _$NotesLocalTimelineRequest {
     int? limit,
     String? sinceId,
     String? untilId,
-    @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? untilDate,
+    @EpocTimeDateTimeConverter() DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() DateTime? untilDate,
     bool? allowPartial,
   }) = _NotesLocalTimelineRequest;
 

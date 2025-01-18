@@ -18,12 +18,12 @@ _$NotesCreatePollRequestImpl _$$NotesCreatePollRequestImplFromJson(
           multiple: $checkedConvert('multiple', (v) => v as bool?),
           expiresAt: $checkedConvert(
               'expiresAt',
-              (v) => const NullableEpocTimeDateTimeConverter.withMilliSeconds()
-                  .fromJson(v)),
+              (v) => _$JsonConverterFromJson<int, DateTime>(
+                  v, const EpocTimeDateTimeConverter().fromJson)),
           expiredAfter: $checkedConvert(
               'expiredAfter',
-              (v) => const NullableDurationConverter()
-                  .fromJson((v as num?)?.toInt())),
+              (v) => _$JsonConverterFromJson<int, Duration>(
+                  v, const DurationConverter().fromJson)),
         );
         return val;
       },
@@ -34,11 +34,24 @@ Map<String, dynamic> _$$NotesCreatePollRequestImplToJson(
     <String, dynamic>{
       'choices': instance.choices,
       if (instance.multiple case final value?) 'multiple': value,
-      if (const NullableEpocTimeDateTimeConverter.withMilliSeconds()
-              .toJson(instance.expiresAt)
+      if (_$JsonConverterToJson<int, DateTime>(
+              instance.expiresAt, const EpocTimeDateTimeConverter().toJson)
           case final value?)
         'expiresAt': value,
-      if (const NullableDurationConverter().toJson(instance.expiredAfter)
+      if (_$JsonConverterToJson<int, Duration>(
+              instance.expiredAfter, const DurationConverter().toJson)
           case final value?)
         'expiredAfter': value,
     };
+
+Value? _$JsonConverterFromJson<Json, Value>(
+  Object? json,
+  Value? Function(Json json) fromJson,
+) =>
+    json == null ? null : fromJson(json as Json);
+
+Json? _$JsonConverterToJson<Json, Value>(
+  Value? value,
+  Json? Function(Value value) toJson,
+) =>
+    value == null ? null : toJson(value);

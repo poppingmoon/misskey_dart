@@ -23,9 +23,9 @@ NotesCreatePollRequest _$NotesCreatePollRequestFromJson(
 mixin _$NotesCreatePollRequest {
   List<String> get choices => throw _privateConstructorUsedError;
   bool? get multiple => throw _privateConstructorUsedError;
-  @NullableEpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get expiresAt => throw _privateConstructorUsedError;
-  @NullableDurationConverter()
+  @DurationConverter()
   Duration? get expiredAfter => throw _privateConstructorUsedError;
 
   /// Serializes this NotesCreatePollRequest to a JSON map.
@@ -47,8 +47,8 @@ abstract class $NotesCreatePollRequestCopyWith<$Res> {
   $Res call(
       {List<String> choices,
       bool? multiple,
-      @NullableEpocTimeDateTimeConverter.withMilliSeconds() DateTime? expiresAt,
-      @NullableDurationConverter() Duration? expiredAfter});
+      @EpocTimeDateTimeConverter() DateTime? expiresAt,
+      @DurationConverter() Duration? expiredAfter});
 }
 
 /// @nodoc
@@ -105,8 +105,8 @@ abstract class _$$NotesCreatePollRequestImplCopyWith<$Res>
   $Res call(
       {List<String> choices,
       bool? multiple,
-      @NullableEpocTimeDateTimeConverter.withMilliSeconds() DateTime? expiresAt,
-      @NullableDurationConverter() Duration? expiredAfter});
+      @EpocTimeDateTimeConverter() DateTime? expiresAt,
+      @DurationConverter() Duration? expiredAfter});
 }
 
 /// @nodoc
@@ -157,8 +157,8 @@ class _$NotesCreatePollRequestImpl implements _NotesCreatePollRequest {
   const _$NotesCreatePollRequestImpl(
       {required final List<String> choices,
       this.multiple,
-      @NullableEpocTimeDateTimeConverter.withMilliSeconds() this.expiresAt,
-      @NullableDurationConverter() this.expiredAfter})
+      @EpocTimeDateTimeConverter() this.expiresAt,
+      @DurationConverter() this.expiredAfter})
       : _choices = choices;
 
   factory _$NotesCreatePollRequestImpl.fromJson(Map<String, dynamic> json) =>
@@ -175,10 +175,10 @@ class _$NotesCreatePollRequestImpl implements _NotesCreatePollRequest {
   @override
   final bool? multiple;
   @override
-  @NullableEpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   final DateTime? expiresAt;
   @override
-  @NullableDurationConverter()
+  @DurationConverter()
   final Duration? expiredAfter;
 
   @override
@@ -230,9 +230,8 @@ abstract class _NotesCreatePollRequest implements NotesCreatePollRequest {
   const factory _NotesCreatePollRequest(
           {required final List<String> choices,
           final bool? multiple,
-          @NullableEpocTimeDateTimeConverter.withMilliSeconds()
-          final DateTime? expiresAt,
-          @NullableDurationConverter() final Duration? expiredAfter}) =
+          @EpocTimeDateTimeConverter() final DateTime? expiresAt,
+          @DurationConverter() final Duration? expiredAfter}) =
       _$NotesCreatePollRequestImpl;
 
   factory _NotesCreatePollRequest.fromJson(Map<String, dynamic> json) =
@@ -243,10 +242,10 @@ abstract class _NotesCreatePollRequest implements NotesCreatePollRequest {
   @override
   bool? get multiple;
   @override
-  @NullableEpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get expiresAt;
   @override
-  @NullableDurationConverter()
+  @DurationConverter()
   Duration? get expiredAfter;
 
   /// Create a copy of NotesCreatePollRequest

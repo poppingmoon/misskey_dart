@@ -15,7 +15,7 @@ class PushNotification with _$PushNotification {
     PushNotificationTypes? type,
     PushNotificationBody? body,
     String? userId,
-    @NullableEpocTimeDateTimeConverter.withMilliSeconds() DateTime? dateTime,
+    @EpocTimeDateTimeConverter() DateTime? dateTime,
   }) = _PushNotification;
 
   factory PushNotification.fromJson(Map<String, Object?> json) =>

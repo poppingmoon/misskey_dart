@@ -48,14 +48,10 @@ _$FederationShowInstanceResponseImpl
               isSilenced: $checkedConvert('isSilenced', (v) => v as bool?),
               isMediaSilenced:
                   $checkedConvert('isMediaSilenced', (v) => v as bool?),
-              iconUrl: $checkedConvert(
-                  'iconUrl',
-                  (v) => _$JsonConverterFromJson<String, Uri?>(
-                      v, const NullableUriConverter().fromJson)),
-              faviconUrl: $checkedConvert(
-                  'faviconUrl',
-                  (v) => _$JsonConverterFromJson<String, Uri?>(
-                      v, const NullableUriConverter().fromJson)),
+              iconUrl: $checkedConvert('iconUrl',
+                  (v) => const NullableUriConverter().fromJson(v as String?)),
+              faviconUrl: $checkedConvert('faviconUrl',
+                  (v) => const NullableUriConverter().fromJson(v as String?)),
               themeColor: $checkedConvert('themeColor',
                   (v) => const NullableColorConverter().fromJson(v as String?)),
               infoUpdatedAt: $checkedConvert(

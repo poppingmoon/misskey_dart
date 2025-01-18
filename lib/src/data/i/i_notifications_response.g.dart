@@ -28,10 +28,8 @@ _$INotificationsResponseImpl _$$INotificationsResponseImplFromJson(
           achievement: $checkedConvert('achievement', (v) => v as String?),
           body: $checkedConvert('body', (v) => v as String?),
           header: $checkedConvert('header', (v) => v as String?),
-          icon: $checkedConvert(
-              'icon',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
+          icon: $checkedConvert('icon',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
           appAccessTokenId:
               $checkedConvert('appAccessTokenId', (v) => v as String?),
           userId: $checkedConvert('userId', (v) => v as String?),
@@ -126,12 +124,6 @@ const _$NotificationTypeEnumMap = {
   NotificationType.pollVote: 'pollVote',
   NotificationType.groupInvited: 'groupInvited',
 };
-
-Value? _$JsonConverterFromJson<Json, Value>(
-  Object? json,
-  Value? Function(Json json) fromJson,
-) =>
-    json == null ? null : fromJson(json as Json);
 
 const _$UserExportableEntitiesEnumMap = {
   UserExportableEntities.note: 'note',

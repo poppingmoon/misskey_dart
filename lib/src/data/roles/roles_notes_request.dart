@@ -11,8 +11,8 @@ class RolesNotesRequest with _$RolesNotesRequest {
     int? limit,
     String? sinceId,
     String? untilId,
-    @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? untilDate,
+    @EpocTimeDateTimeConverter() DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() DateTime? untilDate,
   }) = _RolesNotesRequest;
 
   factory RolesNotesRequest.fromJson(Map<String, Object?> json) =>

@@ -25,9 +25,9 @@ mixin _$UsersReactionsRequest {
   int? get limit => throw _privateConstructorUsedError;
   String? get sinceId => throw _privateConstructorUsedError;
   String? get untilId => throw _privateConstructorUsedError;
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get sinceDate => throw _privateConstructorUsedError;
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get untilDate => throw _privateConstructorUsedError;
 
   /// Serializes this UsersReactionsRequest to a JSON map.
@@ -51,8 +51,8 @@ abstract class $UsersReactionsRequestCopyWith<$Res> {
       int? limit,
       String? sinceId,
       String? untilId,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? sinceDate,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? untilDate});
+      @EpocTimeDateTimeConverter() DateTime? sinceDate,
+      @EpocTimeDateTimeConverter() DateTime? untilDate});
 }
 
 /// @nodoc
@@ -121,8 +121,8 @@ abstract class _$$UsersReactionsRequestImplCopyWith<$Res>
       int? limit,
       String? sinceId,
       String? untilId,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? sinceDate,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? untilDate});
+      @EpocTimeDateTimeConverter() DateTime? sinceDate,
+      @EpocTimeDateTimeConverter() DateTime? untilDate});
 }
 
 /// @nodoc
@@ -183,8 +183,8 @@ class _$UsersReactionsRequestImpl implements _UsersReactionsRequest {
       this.limit,
       this.sinceId,
       this.untilId,
-      @EpocTimeDateTimeConverter.withMilliSeconds() this.sinceDate,
-      @EpocTimeDateTimeConverter.withMilliSeconds() this.untilDate});
+      @EpocTimeDateTimeConverter() this.sinceDate,
+      @EpocTimeDateTimeConverter() this.untilDate});
 
   factory _$UsersReactionsRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$UsersReactionsRequestImplFromJson(json);
@@ -198,10 +198,10 @@ class _$UsersReactionsRequestImpl implements _UsersReactionsRequest {
   @override
   final String? untilId;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   final DateTime? sinceDate;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   final DateTime? untilDate;
 
   @override
@@ -248,13 +248,13 @@ class _$UsersReactionsRequestImpl implements _UsersReactionsRequest {
 
 abstract class _UsersReactionsRequest implements UsersReactionsRequest {
   const factory _UsersReactionsRequest(
-      {required final String userId,
-      final int? limit,
-      final String? sinceId,
-      final String? untilId,
-      @EpocTimeDateTimeConverter.withMilliSeconds() final DateTime? sinceDate,
-      @EpocTimeDateTimeConverter.withMilliSeconds()
-      final DateTime? untilDate}) = _$UsersReactionsRequestImpl;
+          {required final String userId,
+          final int? limit,
+          final String? sinceId,
+          final String? untilId,
+          @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+          @EpocTimeDateTimeConverter() final DateTime? untilDate}) =
+      _$UsersReactionsRequestImpl;
 
   factory _UsersReactionsRequest.fromJson(Map<String, dynamic> json) =
       _$UsersReactionsRequestImpl.fromJson;
@@ -268,10 +268,10 @@ abstract class _UsersReactionsRequest implements UsersReactionsRequest {
   @override
   String? get untilId;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get sinceDate;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get untilDate;
 
   /// Create a copy of UsersReactionsRequest

@@ -499,7 +499,7 @@ class UserRole with _$UserRole {
 class UserAchievement with _$UserAchievement {
   const factory UserAchievement({
     required String name,
-    @EpocTimeDateTimeConverter.withMilliSeconds() required DateTime unlockedAt,
+    @EpocTimeDateTimeConverter() required DateTime unlockedAt,
   }) = _UserAchievement;
 
   factory UserAchievement.fromJson(Map<String, Object?> json) =>

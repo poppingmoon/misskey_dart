@@ -26,9 +26,9 @@ mixin _$UserListTimelineRequest {
   int? get limit => throw _privateConstructorUsedError;
   String? get sinceId => throw _privateConstructorUsedError;
   String? get untilId => throw _privateConstructorUsedError;
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get sinceDate => throw _privateConstructorUsedError;
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get untilDate => throw _privateConstructorUsedError;
   bool? get includeMyRenotes => throw _privateConstructorUsedError;
   bool? get includeRenotedMyNotes => throw _privateConstructorUsedError;
@@ -60,8 +60,8 @@ abstract class $UserListTimelineRequestCopyWith<$Res> {
       @Assert('limit > 0') int? limit,
       String? sinceId,
       String? untilId,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? sinceDate,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? untilDate,
+      @EpocTimeDateTimeConverter() DateTime? sinceDate,
+      @EpocTimeDateTimeConverter() DateTime? untilDate,
       bool? includeMyRenotes,
       bool? includeRenotedMyNotes,
       bool? includeLocalRenotes,
@@ -166,8 +166,8 @@ abstract class _$$UserListTimelineRequestImplCopyWith<$Res>
       @Assert('limit > 0') int? limit,
       String? sinceId,
       String? untilId,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? sinceDate,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? untilDate,
+      @EpocTimeDateTimeConverter() DateTime? sinceDate,
+      @EpocTimeDateTimeConverter() DateTime? untilDate,
       bool? includeMyRenotes,
       bool? includeRenotedMyNotes,
       bool? includeLocalRenotes,
@@ -265,8 +265,8 @@ class _$UserListTimelineRequestImpl implements _UserListTimelineRequest {
       @Assert('limit > 0') this.limit,
       this.sinceId,
       this.untilId,
-      @EpocTimeDateTimeConverter.withMilliSeconds() this.sinceDate,
-      @EpocTimeDateTimeConverter.withMilliSeconds() this.untilDate,
+      @EpocTimeDateTimeConverter() this.sinceDate,
+      @EpocTimeDateTimeConverter() this.untilDate,
       this.includeMyRenotes,
       this.includeRenotedMyNotes,
       this.includeLocalRenotes,
@@ -287,10 +287,10 @@ class _$UserListTimelineRequestImpl implements _UserListTimelineRequest {
   @override
   final String? untilId;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   final DateTime? sinceDate;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   final DateTime? untilDate;
   @override
   final bool? includeMyRenotes;
@@ -379,8 +379,8 @@ abstract class _UserListTimelineRequest implements UserListTimelineRequest {
       @Assert('limit > 0') final int? limit,
       final String? sinceId,
       final String? untilId,
-      @EpocTimeDateTimeConverter.withMilliSeconds() final DateTime? sinceDate,
-      @EpocTimeDateTimeConverter.withMilliSeconds() final DateTime? untilDate,
+      @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+      @EpocTimeDateTimeConverter() final DateTime? untilDate,
       final bool? includeMyRenotes,
       final bool? includeRenotedMyNotes,
       final bool? includeLocalRenotes,
@@ -401,10 +401,10 @@ abstract class _UserListTimelineRequest implements UserListTimelineRequest {
   @override
   String? get untilId;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get sinceDate;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get untilDate;
   @override
   bool? get includeMyRenotes;

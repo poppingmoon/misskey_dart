@@ -11,8 +11,8 @@ class UsersReactionsRequest with _$UsersReactionsRequest {
     int? limit,
     String? sinceId,
     String? untilId,
-    @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? untilDate,
+    @EpocTimeDateTimeConverter() DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() DateTime? untilDate,
   }) = _UsersReactionsRequest;
 
   factory UsersReactionsRequest.fromJson(Map<String, dynamic> json) =>

@@ -12,7 +12,7 @@ class UsersUsersRequest with _$UsersUsersRequest {
   const factory UsersUsersRequest({
     int? limit,
     int? offset,
-    @NullableUsersSortConverter() UsersSortType? sort,
+    @UsersSortConverter() UsersSortType? sort,
     UsersState? state,
     Origin? origin,
     String? hostname,

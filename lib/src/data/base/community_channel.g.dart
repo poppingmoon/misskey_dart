@@ -21,10 +21,8 @@ _$CommunityChannelImpl _$$CommunityChannelImplFromJson(
           name: $checkedConvert('name', (v) => v as String),
           description: $checkedConvert('description', (v) => v as String?),
           userId: $checkedConvert('userId', (v) => v as String?),
-          bannerUrl: $checkedConvert(
-              'bannerUrl',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
+          bannerUrl: $checkedConvert('bannerUrl',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
           pinnedNoteIds: $checkedConvert(
               'pinnedNoteIds',
               (v) =>
@@ -76,9 +74,3 @@ Map<String, dynamic> _$$CommunityChannelImplToJson(
       'pinnedNotes': instance.pinnedNotes?.map((e) => e.toJson()).toList(),
       'allowRenoteToExternal': instance.allowRenoteToExternal,
     };
-
-Value? _$JsonConverterFromJson<Json, Value>(
-  Object? json,
-  Value? Function(Json json) fromJson,
-) =>
-    json == null ? null : fromJson(json as Json);

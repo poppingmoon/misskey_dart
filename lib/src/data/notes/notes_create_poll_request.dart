@@ -11,8 +11,8 @@ class NotesCreatePollRequest with _$NotesCreatePollRequest {
   const factory NotesCreatePollRequest({
     required List<String> choices,
     bool? multiple,
-    @NullableEpocTimeDateTimeConverter.withMilliSeconds() DateTime? expiresAt,
-    @NullableDurationConverter() Duration? expiredAfter,
+    @EpocTimeDateTimeConverter() DateTime? expiresAt,
+    @DurationConverter() Duration? expiredAfter,
   }) = _NotesCreatePollRequest;
 
   factory NotesCreatePollRequest.fromJson(Map<String, Object?> json) =>

@@ -24,9 +24,9 @@ mixin _$NotesGlobalTimelineRequest {
   int? get limit => throw _privateConstructorUsedError;
   String? get sinceId => throw _privateConstructorUsedError;
   String? get untilId => throw _privateConstructorUsedError;
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get sinceDate => throw _privateConstructorUsedError;
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get untilDate => throw _privateConstructorUsedError;
   bool? get withFiles => throw _privateConstructorUsedError;
   bool? get withRenotes => throw _privateConstructorUsedError;
@@ -54,8 +54,8 @@ abstract class $NotesGlobalTimelineRequestCopyWith<$Res> {
       {int? limit,
       String? sinceId,
       String? untilId,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? sinceDate,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? untilDate,
+      @EpocTimeDateTimeConverter() DateTime? sinceDate,
+      @EpocTimeDateTimeConverter() DateTime? untilDate,
       bool? withFiles,
       bool? withRenotes,
       @Deprecated("removed at 2023.10.0") bool? withReplies});
@@ -136,8 +136,8 @@ abstract class _$$NotesGlobalTimelineRequestImplCopyWith<$Res>
       {int? limit,
       String? sinceId,
       String? untilId,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? sinceDate,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? untilDate,
+      @EpocTimeDateTimeConverter() DateTime? sinceDate,
+      @EpocTimeDateTimeConverter() DateTime? untilDate,
       bool? withFiles,
       bool? withRenotes,
       @Deprecated("removed at 2023.10.0") bool? withReplies});
@@ -211,8 +211,8 @@ class _$NotesGlobalTimelineRequestImpl implements _NotesGlobalTimelineRequest {
       {this.limit,
       this.sinceId,
       this.untilId,
-      @EpocTimeDateTimeConverter.withMilliSeconds() this.sinceDate,
-      @EpocTimeDateTimeConverter.withMilliSeconds() this.untilDate,
+      @EpocTimeDateTimeConverter() this.sinceDate,
+      @EpocTimeDateTimeConverter() this.untilDate,
       this.withFiles,
       this.withRenotes,
       @Deprecated("removed at 2023.10.0") this.withReplies});
@@ -228,10 +228,10 @@ class _$NotesGlobalTimelineRequestImpl implements _NotesGlobalTimelineRequest {
   @override
   final String? untilId;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   final DateTime? sinceDate;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   final DateTime? untilDate;
   @override
   final bool? withFiles;
@@ -291,15 +291,15 @@ class _$NotesGlobalTimelineRequestImpl implements _NotesGlobalTimelineRequest {
 abstract class _NotesGlobalTimelineRequest
     implements NotesGlobalTimelineRequest {
   const factory _NotesGlobalTimelineRequest(
-      {final int? limit,
-      final String? sinceId,
-      final String? untilId,
-      @EpocTimeDateTimeConverter.withMilliSeconds() final DateTime? sinceDate,
-      @EpocTimeDateTimeConverter.withMilliSeconds() final DateTime? untilDate,
-      final bool? withFiles,
-      final bool? withRenotes,
-      @Deprecated("removed at 2023.10.0")
-      final bool? withReplies}) = _$NotesGlobalTimelineRequestImpl;
+          {final int? limit,
+          final String? sinceId,
+          final String? untilId,
+          @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+          @EpocTimeDateTimeConverter() final DateTime? untilDate,
+          final bool? withFiles,
+          final bool? withRenotes,
+          @Deprecated("removed at 2023.10.0") final bool? withReplies}) =
+      _$NotesGlobalTimelineRequestImpl;
 
   factory _NotesGlobalTimelineRequest.fromJson(Map<String, dynamic> json) =
       _$NotesGlobalTimelineRequestImpl.fromJson;
@@ -311,10 +311,10 @@ abstract class _NotesGlobalTimelineRequest
   @override
   String? get untilId;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get sinceDate;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get untilDate;
   @override
   bool? get withFiles;

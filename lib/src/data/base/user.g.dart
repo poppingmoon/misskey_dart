@@ -16,10 +16,8 @@ _$UserLiteImpl _$$UserLiteImplFromJson(Map<String, dynamic> json) =>
           name: $checkedConvert('name', (v) => v as String?),
           username: $checkedConvert('username', (v) => v as String),
           host: $checkedConvert('host', (v) => v as String?),
-          avatarUrl: $checkedConvert(
-              'avatarUrl',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
+          avatarUrl: $checkedConvert('avatarUrl',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
           avatarBlurhash:
               $checkedConvert('avatarBlurhash', (v) => v as String?),
           avatarDecorations: $checkedConvert(
@@ -94,18 +92,18 @@ Map<String, dynamic> _$$UserLiteImplToJson(_$UserLiteImpl instance) =>
       'speakAsCat': instance.speakAsCat,
     };
 
-Value? _$JsonConverterFromJson<Json, Value>(
-  Object? json,
-  Value? Function(Json json) fromJson,
-) =>
-    json == null ? null : fromJson(json as Json);
-
 const _$OnlineStatusEnumMap = {
   OnlineStatus.online: 'online',
   OnlineStatus.active: 'active',
   OnlineStatus.offline: 'offline',
   OnlineStatus.unknown: 'unknown',
 };
+
+Value? _$JsonConverterFromJson<Json, Value>(
+  Object? json,
+  Value? Function(Json json) fromJson,
+) =>
+    json == null ? null : fromJson(json as Json);
 
 Json? _$JsonConverterToJson<Json, Value>(
   Value? value,
@@ -124,10 +122,8 @@ _$UserDetailedNotMeImpl _$$UserDetailedNotMeImplFromJson(
           name: $checkedConvert('name', (v) => v as String?),
           username: $checkedConvert('username', (v) => v as String),
           host: $checkedConvert('host', (v) => v as String?),
-          avatarUrl: $checkedConvert(
-              'avatarUrl',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
+          avatarUrl: $checkedConvert('avatarUrl',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
           avatarBlurhash:
               $checkedConvert('avatarBlurhash', (v) => v as String?),
           avatarDecorations: $checkedConvert(
@@ -172,18 +168,12 @@ _$UserDetailedNotMeImpl _$$UserDetailedNotMeImplFromJson(
               (v) => _$JsonConverterFromJson<int, HideBefore>(
                   v, const HideBeforeConverter().fromJson)),
           speakAsCat: $checkedConvert('speakAsCat', (v) => v as bool?),
-          url: $checkedConvert(
-              'url',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
-          uri: $checkedConvert(
-              'uri',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
-          movedTo: $checkedConvert(
-              'movedTo',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
+          url: $checkedConvert('url',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
+          uri: $checkedConvert('uri',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
+          movedTo: $checkedConvert('movedTo',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
           alsoKnownAs: $checkedConvert('alsoKnownAs',
               (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
           createdAt: $checkedConvert('createdAt',
@@ -196,10 +186,8 @@ _$UserDetailedNotMeImpl _$$UserDetailedNotMeImplFromJson(
               'lastFetchedAt',
               (v) => _$JsonConverterFromJson<String, DateTime?>(
                   v, const NullableDateTimeConverter().fromJson)),
-          bannerUrl: $checkedConvert(
-              'bannerUrl',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
+          bannerUrl: $checkedConvert('bannerUrl',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
           bannerBlurhash:
               $checkedConvert('bannerBlurhash', (v) => v as String?),
           isLocked: $checkedConvert('isLocked', (v) => v as bool),
@@ -358,10 +346,8 @@ _$UserDetailedNotMeWithRelationsImpl
               name: $checkedConvert('name', (v) => v as String?),
               username: $checkedConvert('username', (v) => v as String),
               host: $checkedConvert('host', (v) => v as String?),
-              avatarUrl: $checkedConvert(
-                  'avatarUrl',
-                  (v) => _$JsonConverterFromJson<String, Uri?>(
-                      v, const NullableUriConverter().fromJson)),
+              avatarUrl: $checkedConvert('avatarUrl',
+                  (v) => const NullableUriConverter().fromJson(v as String?)),
               avatarBlurhash:
                   $checkedConvert('avatarBlurhash', (v) => v as String?),
               avatarDecorations: $checkedConvert(
@@ -407,18 +393,12 @@ _$UserDetailedNotMeWithRelationsImpl
                   (v) => _$JsonConverterFromJson<int, HideBefore>(
                       v, const HideBeforeConverter().fromJson)),
               speakAsCat: $checkedConvert('speakAsCat', (v) => v as bool?),
-              url: $checkedConvert(
-                  'url',
-                  (v) => _$JsonConverterFromJson<String, Uri?>(
-                      v, const NullableUriConverter().fromJson)),
-              uri: $checkedConvert(
-                  'uri',
-                  (v) => _$JsonConverterFromJson<String, Uri?>(
-                      v, const NullableUriConverter().fromJson)),
-              movedTo: $checkedConvert(
-                  'movedTo',
-                  (v) => _$JsonConverterFromJson<String, Uri?>(
-                      v, const NullableUriConverter().fromJson)),
+              url: $checkedConvert('url',
+                  (v) => const NullableUriConverter().fromJson(v as String?)),
+              uri: $checkedConvert('uri',
+                  (v) => const NullableUriConverter().fromJson(v as String?)),
+              movedTo: $checkedConvert('movedTo',
+                  (v) => const NullableUriConverter().fromJson(v as String?)),
               alsoKnownAs: $checkedConvert(
                   'alsoKnownAs',
                   (v) =>
@@ -433,10 +413,8 @@ _$UserDetailedNotMeWithRelationsImpl
                   'lastFetchedAt',
                   (v) => _$JsonConverterFromJson<String, DateTime?>(
                       v, const NullableDateTimeConverter().fromJson)),
-              bannerUrl: $checkedConvert(
-                  'bannerUrl',
-                  (v) => _$JsonConverterFromJson<String, Uri?>(
-                      v, const NullableUriConverter().fromJson)),
+              bannerUrl: $checkedConvert('bannerUrl',
+                  (v) => const NullableUriConverter().fromJson(v as String?)),
               bannerBlurhash:
                   $checkedConvert('bannerBlurhash', (v) => v as String?),
               isLocked: $checkedConvert('isLocked', (v) => v as bool),
@@ -625,10 +603,8 @@ _$MeDetailedImpl _$$MeDetailedImplFromJson(Map<String, dynamic> json) =>
           name: $checkedConvert('name', (v) => v as String?),
           username: $checkedConvert('username', (v) => v as String),
           host: $checkedConvert('host', (v) => v as String?),
-          avatarUrl: $checkedConvert(
-              'avatarUrl',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
+          avatarUrl: $checkedConvert('avatarUrl',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
           avatarBlurhash:
               $checkedConvert('avatarBlurhash', (v) => v as String?),
           avatarDecorations: $checkedConvert(
@@ -673,18 +649,12 @@ _$MeDetailedImpl _$$MeDetailedImplFromJson(Map<String, dynamic> json) =>
               (v) => _$JsonConverterFromJson<int, HideBefore>(
                   v, const HideBeforeConverter().fromJson)),
           speakAsCat: $checkedConvert('speakAsCat', (v) => v as bool?),
-          url: $checkedConvert(
-              'url',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
-          uri: $checkedConvert(
-              'uri',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
-          movedTo: $checkedConvert(
-              'movedTo',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
+          url: $checkedConvert('url',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
+          uri: $checkedConvert('uri',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
+          movedTo: $checkedConvert('movedTo',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
           alsoKnownAs: $checkedConvert('alsoKnownAs',
               (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
           createdAt: $checkedConvert('createdAt',
@@ -697,10 +667,8 @@ _$MeDetailedImpl _$$MeDetailedImplFromJson(Map<String, dynamic> json) =>
               'lastFetchedAt',
               (v) => _$JsonConverterFromJson<String, DateTime?>(
                   v, const NullableDateTimeConverter().fromJson)),
-          bannerUrl: $checkedConvert(
-              'bannerUrl',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
+          bannerUrl: $checkedConvert('bannerUrl',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
           bannerBlurhash:
               $checkedConvert('bannerBlurhash', (v) => v as String?),
           isLocked: $checkedConvert('isLocked', (v) => v as bool),
@@ -1025,14 +993,10 @@ _$UserInstanceInfoImpl _$$UserInstanceInfoImplFromJson(
           softwareVersion:
               $checkedConvert('softwareVersion', (v) => v as String?),
           softwareName: $checkedConvert('softwareName', (v) => v as String?),
-          iconUrl: $checkedConvert(
-              'iconUrl',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
-          faviconUrl: $checkedConvert(
-              'faviconUrl',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
+          iconUrl: $checkedConvert('iconUrl',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
+          faviconUrl: $checkedConvert('faviconUrl',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
           themeColor: $checkedConvert('themeColor', (v) => v as String?),
         );
         return val;
@@ -1057,10 +1021,8 @@ _$UserBadgeRoleImpl _$$UserBadgeRoleImplFromJson(Map<String, dynamic> json) =>
       ($checkedConvert) {
         final val = _$UserBadgeRoleImpl(
           name: $checkedConvert('name', (v) => v as String),
-          iconUrl: $checkedConvert(
-              'iconUrl',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
+          iconUrl: $checkedConvert('iconUrl',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
         );
         return val;
       },
@@ -1081,10 +1043,8 @@ _$UserRoleImpl _$$UserRoleImplFromJson(Map<String, dynamic> json) =>
           id: $checkedConvert('id', (v) => v as String),
           name: $checkedConvert('name', (v) => v as String),
           color: $checkedConvert('color', (v) => v as String?),
-          iconUrl: $checkedConvert(
-              'iconUrl',
-              (v) => _$JsonConverterFromJson<String, Uri?>(
-                  v, const NullableUriConverter().fromJson)),
+          iconUrl: $checkedConvert('iconUrl',
+              (v) => const NullableUriConverter().fromJson(v as String?)),
           description: $checkedConvert('description', (v) => v as String?),
           isModerator: $checkedConvert('isModerator', (v) => v as bool),
           isAdministrator: $checkedConvert('isAdministrator', (v) => v as bool),
@@ -1114,7 +1074,7 @@ _$UserAchievementImpl _$$UserAchievementImplFromJson(
           name: $checkedConvert('name', (v) => v as String),
           unlockedAt: $checkedConvert(
               'unlockedAt',
-              (v) => const EpocTimeDateTimeConverter.withMilliSeconds()
+              (v) => const EpocTimeDateTimeConverter()
                   .fromJson((v as num).toInt())),
         );
         return val;
@@ -1125,8 +1085,8 @@ Map<String, dynamic> _$$UserAchievementImplToJson(
         _$UserAchievementImpl instance) =>
     <String, dynamic>{
       'name': instance.name,
-      'unlockedAt': const EpocTimeDateTimeConverter.withMilliSeconds()
-          .toJson(instance.unlockedAt),
+      'unlockedAt':
+          const EpocTimeDateTimeConverter().toJson(instance.unlockedAt),
     };
 
 _$UserPoliciesImpl _$$UserPoliciesImplFromJson(Map<String, dynamic> json) =>

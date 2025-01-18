@@ -25,7 +25,7 @@ mixin _$PushNotification {
   PushNotificationTypes? get type => throw _privateConstructorUsedError;
   PushNotificationBody? get body => throw _privateConstructorUsedError;
   String? get userId => throw _privateConstructorUsedError;
-  @NullableEpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get dateTime => throw _privateConstructorUsedError;
 
   /// Serializes this PushNotification to a JSON map.
@@ -49,8 +49,7 @@ abstract class $PushNotificationCopyWith<$Res> {
       PushNotificationTypes? type,
       PushNotificationBody? body,
       String? userId,
-      @NullableEpocTimeDateTimeConverter.withMilliSeconds()
-      DateTime? dateTime});
+      @EpocTimeDateTimeConverter() DateTime? dateTime});
 
   $PushNotificationBodyCopyWith<$Res>? get body;
 }
@@ -123,8 +122,7 @@ abstract class _$$PushNotificationImplCopyWith<$Res>
       PushNotificationTypes? type,
       PushNotificationBody? body,
       String? userId,
-      @NullableEpocTimeDateTimeConverter.withMilliSeconds()
-      DateTime? dateTime});
+      @EpocTimeDateTimeConverter() DateTime? dateTime});
 
   @override
   $PushNotificationBodyCopyWith<$Res>? get body;
@@ -176,7 +174,7 @@ class _$PushNotificationImpl implements _PushNotification {
       {@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type,
       this.body,
       this.userId,
-      @NullableEpocTimeDateTimeConverter.withMilliSeconds() this.dateTime});
+      @EpocTimeDateTimeConverter() this.dateTime});
 
   factory _$PushNotificationImpl.fromJson(Map<String, dynamic> json) =>
       _$$PushNotificationImplFromJson(json);
@@ -190,7 +188,7 @@ class _$PushNotificationImpl implements _PushNotification {
   @override
   final String? userId;
   @override
-  @NullableEpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   final DateTime? dateTime;
 
   @override
@@ -233,12 +231,12 @@ class _$PushNotificationImpl implements _PushNotification {
 
 abstract class _PushNotification implements PushNotification {
   const factory _PushNotification(
-      {@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      final PushNotificationTypes? type,
-      final PushNotificationBody? body,
-      final String? userId,
-      @NullableEpocTimeDateTimeConverter.withMilliSeconds()
-      final DateTime? dateTime}) = _$PushNotificationImpl;
+          {@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+          final PushNotificationTypes? type,
+          final PushNotificationBody? body,
+          final String? userId,
+          @EpocTimeDateTimeConverter() final DateTime? dateTime}) =
+      _$PushNotificationImpl;
 
   factory _PushNotification.fromJson(Map<String, dynamic> json) =
       _$PushNotificationImpl.fromJson;
@@ -252,7 +250,7 @@ abstract class _PushNotification implements PushNotification {
   @override
   String? get userId;
   @override
-  @NullableEpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get dateTime;
 
   /// Create a copy of PushNotification

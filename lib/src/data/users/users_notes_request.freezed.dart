@@ -29,9 +29,9 @@ mixin _$UsersNotesRequest {
   int? get limit => throw _privateConstructorUsedError;
   String? get sinceId => throw _privateConstructorUsedError;
   String? get untilId => throw _privateConstructorUsedError;
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get sinceDate => throw _privateConstructorUsedError;
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get untilDate => throw _privateConstructorUsedError;
   @Deprecated("removed at 2023.11.1")
   bool? get includeMyRenotes => throw _privateConstructorUsedError;
@@ -66,8 +66,8 @@ abstract class $UsersNotesRequestCopyWith<$Res> {
       int? limit,
       String? sinceId,
       String? untilId,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? sinceDate,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? untilDate,
+      @EpocTimeDateTimeConverter() DateTime? sinceDate,
+      @EpocTimeDateTimeConverter() DateTime? untilDate,
       @Deprecated("removed at 2023.11.1") bool? includeMyRenotes,
       bool? withFiles,
       List<String>? fileType,
@@ -188,8 +188,8 @@ abstract class _$$UsersNotesRequestImplCopyWith<$Res>
       int? limit,
       String? sinceId,
       String? untilId,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? sinceDate,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? untilDate,
+      @EpocTimeDateTimeConverter() DateTime? sinceDate,
+      @EpocTimeDateTimeConverter() DateTime? untilDate,
       @Deprecated("removed at 2023.11.1") bool? includeMyRenotes,
       bool? withFiles,
       List<String>? fileType,
@@ -303,8 +303,8 @@ class _$UsersNotesRequestImpl implements _UsersNotesRequest {
       this.limit,
       this.sinceId,
       this.untilId,
-      @EpocTimeDateTimeConverter.withMilliSeconds() this.sinceDate,
-      @EpocTimeDateTimeConverter.withMilliSeconds() this.untilDate,
+      @EpocTimeDateTimeConverter() this.sinceDate,
+      @EpocTimeDateTimeConverter() this.untilDate,
       @Deprecated("removed at 2023.11.1") this.includeMyRenotes,
       this.withFiles,
       final List<String>? fileType,
@@ -333,10 +333,10 @@ class _$UsersNotesRequestImpl implements _UsersNotesRequest {
   @override
   final String? untilId;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   final DateTime? sinceDate;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   final DateTime? untilDate;
   @override
   @Deprecated("removed at 2023.11.1")
@@ -435,22 +435,22 @@ class _$UsersNotesRequestImpl implements _UsersNotesRequest {
 
 abstract class _UsersNotesRequest implements UsersNotesRequest {
   const factory _UsersNotesRequest(
-      {required final String userId,
-      @Deprecated("removed at 2023.9.2") final bool? includeReplies,
-      final bool? withReplies,
-      final bool? withRenotes,
-      final bool? withChannelNotes,
-      final int? limit,
-      final String? sinceId,
-      final String? untilId,
-      @EpocTimeDateTimeConverter.withMilliSeconds() final DateTime? sinceDate,
-      @EpocTimeDateTimeConverter.withMilliSeconds() final DateTime? untilDate,
-      @Deprecated("removed at 2023.11.1") final bool? includeMyRenotes,
-      final bool? withFiles,
-      final List<String>? fileType,
-      final bool? allowPartial,
-      @Deprecated("removed at 2023.12.0")
-      final bool? excludeNsfw}) = _$UsersNotesRequestImpl;
+          {required final String userId,
+          @Deprecated("removed at 2023.9.2") final bool? includeReplies,
+          final bool? withReplies,
+          final bool? withRenotes,
+          final bool? withChannelNotes,
+          final int? limit,
+          final String? sinceId,
+          final String? untilId,
+          @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+          @EpocTimeDateTimeConverter() final DateTime? untilDate,
+          @Deprecated("removed at 2023.11.1") final bool? includeMyRenotes,
+          final bool? withFiles,
+          final List<String>? fileType,
+          final bool? allowPartial,
+          @Deprecated("removed at 2023.12.0") final bool? excludeNsfw}) =
+      _$UsersNotesRequestImpl;
 
   factory _UsersNotesRequest.fromJson(Map<String, dynamic> json) =
       _$UsersNotesRequestImpl.fromJson;
@@ -473,10 +473,10 @@ abstract class _UsersNotesRequest implements UsersNotesRequest {
   @override
   String? get untilId;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get sinceDate;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get untilDate;
   @override
   @Deprecated("removed at 2023.11.1")

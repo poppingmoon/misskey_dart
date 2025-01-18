@@ -31,9 +31,9 @@ mixin _$NotesLocalTimelineRequest {
   int? get limit => throw _privateConstructorUsedError;
   String? get sinceId => throw _privateConstructorUsedError;
   String? get untilId => throw _privateConstructorUsedError;
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get sinceDate => throw _privateConstructorUsedError;
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get untilDate => throw _privateConstructorUsedError;
   bool? get allowPartial => throw _privateConstructorUsedError;
 
@@ -62,8 +62,8 @@ abstract class $NotesLocalTimelineRequestCopyWith<$Res> {
       int? limit,
       String? sinceId,
       String? untilId,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? sinceDate,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? untilDate,
+      @EpocTimeDateTimeConverter() DateTime? sinceDate,
+      @EpocTimeDateTimeConverter() DateTime? untilDate,
       bool? allowPartial});
 }
 
@@ -162,8 +162,8 @@ abstract class _$$NotesLocalTimelineRequestImplCopyWith<$Res>
       int? limit,
       String? sinceId,
       String? untilId,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? sinceDate,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? untilDate,
+      @EpocTimeDateTimeConverter() DateTime? sinceDate,
+      @EpocTimeDateTimeConverter() DateTime? untilDate,
       bool? allowPartial});
 }
 
@@ -255,8 +255,8 @@ class _$NotesLocalTimelineRequestImpl implements _NotesLocalTimelineRequest {
       this.limit,
       this.sinceId,
       this.untilId,
-      @EpocTimeDateTimeConverter.withMilliSeconds() this.sinceDate,
-      @EpocTimeDateTimeConverter.withMilliSeconds() this.untilDate,
+      @EpocTimeDateTimeConverter() this.sinceDate,
+      @EpocTimeDateTimeConverter() this.untilDate,
       this.allowPartial})
       : _fileType = fileType;
 
@@ -290,10 +290,10 @@ class _$NotesLocalTimelineRequestImpl implements _NotesLocalTimelineRequest {
   @override
   final String? untilId;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   final DateTime? sinceDate;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   final DateTime? untilDate;
   @override
   final bool? allowPartial;
@@ -371,8 +371,8 @@ abstract class _NotesLocalTimelineRequest implements NotesLocalTimelineRequest {
       final int? limit,
       final String? sinceId,
       final String? untilId,
-      @EpocTimeDateTimeConverter.withMilliSeconds() final DateTime? sinceDate,
-      @EpocTimeDateTimeConverter.withMilliSeconds() final DateTime? untilDate,
+      @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+      @EpocTimeDateTimeConverter() final DateTime? untilDate,
       final bool? allowPartial}) = _$NotesLocalTimelineRequestImpl;
 
   factory _NotesLocalTimelineRequest.fromJson(Map<String, dynamic> json) =
@@ -397,10 +397,10 @@ abstract class _NotesLocalTimelineRequest implements NotesLocalTimelineRequest {
   @override
   String? get untilId;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get sinceDate;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime? get untilDate;
   @override
   bool? get allowPartial;

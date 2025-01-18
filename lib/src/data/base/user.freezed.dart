@@ -7217,7 +7217,7 @@ UserAchievement _$UserAchievementFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$UserAchievement {
   String get name => throw _privateConstructorUsedError;
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime get unlockedAt => throw _privateConstructorUsedError;
 
   /// Serializes this UserAchievement to a JSON map.
@@ -7236,9 +7236,7 @@ abstract class $UserAchievementCopyWith<$Res> {
           UserAchievement value, $Res Function(UserAchievement) then) =
       _$UserAchievementCopyWithImpl<$Res, UserAchievement>;
   @useResult
-  $Res call(
-      {String name,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime unlockedAt});
+  $Res call({String name, @EpocTimeDateTimeConverter() DateTime unlockedAt});
 }
 
 /// @nodoc
@@ -7280,9 +7278,7 @@ abstract class _$$UserAchievementImplCopyWith<$Res>
       __$$UserAchievementImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String name,
-      @EpocTimeDateTimeConverter.withMilliSeconds() DateTime unlockedAt});
+  $Res call({String name, @EpocTimeDateTimeConverter() DateTime unlockedAt});
 }
 
 /// @nodoc
@@ -7319,7 +7315,7 @@ class __$$UserAchievementImplCopyWithImpl<$Res>
 class _$UserAchievementImpl implements _UserAchievement {
   const _$UserAchievementImpl(
       {required this.name,
-      @EpocTimeDateTimeConverter.withMilliSeconds() required this.unlockedAt});
+      @EpocTimeDateTimeConverter() required this.unlockedAt});
 
   factory _$UserAchievementImpl.fromJson(Map<String, dynamic> json) =>
       _$$UserAchievementImplFromJson(json);
@@ -7327,7 +7323,7 @@ class _$UserAchievementImpl implements _UserAchievement {
   @override
   final String name;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   final DateTime unlockedAt;
 
   @override
@@ -7368,9 +7364,9 @@ class _$UserAchievementImpl implements _UserAchievement {
 
 abstract class _UserAchievement implements UserAchievement {
   const factory _UserAchievement(
-      {required final String name,
-      @EpocTimeDateTimeConverter.withMilliSeconds()
-      required final DateTime unlockedAt}) = _$UserAchievementImpl;
+          {required final String name,
+          @EpocTimeDateTimeConverter() required final DateTime unlockedAt}) =
+      _$UserAchievementImpl;
 
   factory _UserAchievement.fromJson(Map<String, dynamic> json) =
       _$UserAchievementImpl.fromJson;
@@ -7378,7 +7374,7 @@ abstract class _UserAchievement implements UserAchievement {
   @override
   String get name;
   @override
-  @EpocTimeDateTimeConverter.withMilliSeconds()
+  @EpocTimeDateTimeConverter()
   DateTime get unlockedAt;
 
   /// Create a copy of UserAchievement

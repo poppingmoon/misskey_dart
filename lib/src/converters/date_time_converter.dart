@@ -21,45 +21,11 @@ class DateTimeConverter extends JsonConverter<DateTime, String> {
 }
 
 class EpocTimeDateTimeConverter extends JsonConverter<DateTime, int> {
-  final bool hasMicroSeconds;
-
-  const EpocTimeDateTimeConverter.withMilliSeconds() : hasMicroSeconds = false;
-
-  /// ソース見る限り多分いらない
-  const EpocTimeDateTimeConverter.withMicroSeconds() : hasMicroSeconds = true;
+  const EpocTimeDateTimeConverter();
 
   @override
-  DateTime fromJson(int json) => hasMicroSeconds
-      ? DateTime.fromMicrosecondsSinceEpoch(json)
-      : DateTime.fromMillisecondsSinceEpoch(json);
+  DateTime fromJson(int json) => DateTime.fromMillisecondsSinceEpoch(json);
 
   @override
-  int toJson(DateTime object) => hasMicroSeconds
-      ? object.microsecondsSinceEpoch
-      : object.millisecondsSinceEpoch;
-}
-
-class NullableEpocTimeDateTimeConverter
-    extends JsonConverter<DateTime?, dynamic> {
-  final bool hasMicroSeconds;
-
-  const NullableEpocTimeDateTimeConverter.withMilliSeconds()
-      : hasMicroSeconds = false;
-
-  const NullableEpocTimeDateTimeConverter.withMicroSeconds()
-      : hasMicroSeconds = true;
-
-  @override
-  DateTime? fromJson(dynamic json) => json is int
-      ? hasMicroSeconds
-          ? DateTime.fromMicrosecondsSinceEpoch(json)
-          : DateTime.fromMillisecondsSinceEpoch(json)
-      : null;
-
-  @override
-  int? toJson(DateTime? object) => object == null
-      ? null
-      : hasMicroSeconds
-          ? object.microsecondsSinceEpoch
-          : object.millisecondsSinceEpoch;
+  int toJson(DateTime object) => object.millisecondsSinceEpoch;
 }

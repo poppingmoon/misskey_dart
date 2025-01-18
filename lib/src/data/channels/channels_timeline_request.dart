@@ -11,8 +11,8 @@ class ChannelsTimelineRequest with _$ChannelsTimelineRequest {
     @Assert('limit > 0') int? limit,
     String? sinceId,
     String? untilId,
-    @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter.withMilliSeconds() DateTime? untilDate,
+    @EpocTimeDateTimeConverter() DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() DateTime? untilDate,
     bool? allowPartial,
   }) = _ChannelsTimelineRequest;
 
