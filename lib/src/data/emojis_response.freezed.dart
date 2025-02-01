@@ -345,7 +345,7 @@ class __$$EmojiImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$EmojiImpl implements _Emoji {
   const _$EmojiImpl(
-      {required final List<String> aliases,
+      {final List<String> aliases = const [],
       required this.name,
       this.category,
       @NullableUriConverter() this.url,
@@ -361,6 +361,7 @@ class _$EmojiImpl implements _Emoji {
 
   final List<String> _aliases;
   @override
+  @JsonKey()
   List<String> get aliases {
     if (_aliases is EqualUnmodifiableListView) return _aliases;
     // ignore: implicit_dynamic_type
@@ -445,7 +446,7 @@ class _$EmojiImpl implements _Emoji {
 
 abstract class _Emoji implements Emoji {
   const factory _Emoji(
-          {required final List<String> aliases,
+          {final List<String> aliases,
           required final String name,
           final String? category,
           @NullableUriConverter() final Uri? url,

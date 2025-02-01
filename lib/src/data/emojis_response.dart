@@ -17,7 +17,7 @@ class EmojisResponse with _$EmojisResponse {
 @freezed
 class Emoji with _$Emoji {
   const factory Emoji({
-    required List<String> aliases,
+    @Default([]) List<String> aliases,
     required String name,
     String? category,
     @NullableUriConverter() Uri? url,

@@ -33,8 +33,11 @@ _$EmojiImpl _$$EmojiImplFromJson(Map<String, dynamic> json) => $checkedCreate(
       json,
       ($checkedConvert) {
         final val = _$EmojiImpl(
-          aliases: $checkedConvert('aliases',
-              (v) => (v as List<dynamic>).map((e) => e as String).toList()),
+          aliases: $checkedConvert(
+              'aliases',
+              (v) =>
+                  (v as List<dynamic>?)?.map((e) => e as String).toList() ??
+                  const []),
           name: $checkedConvert('name', (v) => v as String),
           category: $checkedConvert('category', (v) => v as String?),
           url: $checkedConvert('url',
