@@ -12,7 +12,8 @@ part of 'users_clips_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 UsersClipsRequest _$UsersClipsRequestFromJson(Map<String, dynamic> json) {
   return _UsersClipsRequest.fromJson(json);
@@ -38,8 +39,9 @@ mixin _$UsersClipsRequest {
 /// @nodoc
 abstract class $UsersClipsRequestCopyWith<$Res> {
   factory $UsersClipsRequestCopyWith(
-          UsersClipsRequest value, $Res Function(UsersClipsRequest) then) =
-      _$UsersClipsRequestCopyWithImpl<$Res, UsersClipsRequest>;
+    UsersClipsRequest value,
+    $Res Function(UsersClipsRequest) then,
+  ) = _$UsersClipsRequestCopyWithImpl<$Res, UsersClipsRequest>;
   @useResult
   $Res call({String userId, int? limit, String? sinceId, String? untilId});
 }
@@ -64,33 +66,41 @@ class _$UsersClipsRequestCopyWithImpl<$Res, $Val extends UsersClipsRequest>
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_value.copyWith(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            userId:
+                null == userId
+                    ? _value.userId
+                    : userId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$UsersClipsRequestImplCopyWith<$Res>
     implements $UsersClipsRequestCopyWith<$Res> {
-  factory _$$UsersClipsRequestImplCopyWith(_$UsersClipsRequestImpl value,
-          $Res Function(_$UsersClipsRequestImpl) then) =
-      __$$UsersClipsRequestImplCopyWithImpl<$Res>;
+  factory _$$UsersClipsRequestImplCopyWith(
+    _$UsersClipsRequestImpl value,
+    $Res Function(_$UsersClipsRequestImpl) then,
+  ) = __$$UsersClipsRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String userId, int? limit, String? sinceId, String? untilId});
@@ -100,9 +110,10 @@ abstract class _$$UsersClipsRequestImplCopyWith<$Res>
 class __$$UsersClipsRequestImplCopyWithImpl<$Res>
     extends _$UsersClipsRequestCopyWithImpl<$Res, _$UsersClipsRequestImpl>
     implements _$$UsersClipsRequestImplCopyWith<$Res> {
-  __$$UsersClipsRequestImplCopyWithImpl(_$UsersClipsRequestImpl _value,
-      $Res Function(_$UsersClipsRequestImpl) _then)
-      : super(_value, _then);
+  __$$UsersClipsRequestImplCopyWithImpl(
+    _$UsersClipsRequestImpl _value,
+    $Res Function(_$UsersClipsRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UsersClipsRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -114,32 +125,42 @@ class __$$UsersClipsRequestImplCopyWithImpl<$Res>
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_$UsersClipsRequestImpl(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$UsersClipsRequestImpl(
+        userId:
+            null == userId
+                ? _value.userId
+                : userId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$UsersClipsRequestImpl implements _UsersClipsRequest {
-  const _$UsersClipsRequestImpl(
-      {required this.userId, this.limit, this.sinceId, this.untilId});
+  const _$UsersClipsRequestImpl({
+    required this.userId,
+    this.limit,
+    this.sinceId,
+    this.untilId,
+  });
 
   factory _$UsersClipsRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$UsersClipsRequestImplFromJson(json);
@@ -180,22 +201,23 @@ class _$UsersClipsRequestImpl implements _UsersClipsRequest {
   @pragma('vm:prefer-inline')
   _$$UsersClipsRequestImplCopyWith<_$UsersClipsRequestImpl> get copyWith =>
       __$$UsersClipsRequestImplCopyWithImpl<_$UsersClipsRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UsersClipsRequestImplToJson(
-      this,
-    );
+    return _$$UsersClipsRequestImplToJson(this);
   }
 }
 
 abstract class _UsersClipsRequest implements UsersClipsRequest {
-  const factory _UsersClipsRequest(
-      {required final String userId,
-      final int? limit,
-      final String? sinceId,
-      final String? untilId}) = _$UsersClipsRequestImpl;
+  const factory _UsersClipsRequest({
+    required final String userId,
+    final int? limit,
+    final String? sinceId,
+    final String? untilId,
+  }) = _$UsersClipsRequestImpl;
 
   factory _UsersClipsRequest.fromJson(Map<String, dynamic> json) =
       _$UsersClipsRequestImpl.fromJson;

@@ -12,7 +12,8 @@ part of 'mute_create_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 MuteCreateRequest _$MuteCreateRequestFromJson(Map<String, dynamic> json) {
   return _MuteCreateRequest.fromJson(json);
@@ -37,8 +38,9 @@ mixin _$MuteCreateRequest {
 /// @nodoc
 abstract class $MuteCreateRequestCopyWith<$Res> {
   factory $MuteCreateRequestCopyWith(
-          MuteCreateRequest value, $Res Function(MuteCreateRequest) then) =
-      _$MuteCreateRequestCopyWithImpl<$Res, MuteCreateRequest>;
+    MuteCreateRequest value,
+    $Res Function(MuteCreateRequest) then,
+  ) = _$MuteCreateRequestCopyWithImpl<$Res, MuteCreateRequest>;
   @useResult
   $Res call({String userId, @EpocTimeDateTimeConverter() DateTime? expiresAt});
 }
@@ -57,29 +59,32 @@ class _$MuteCreateRequestCopyWithImpl<$Res, $Val extends MuteCreateRequest>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? userId = null,
-    Object? expiresAt = freezed,
-  }) {
-    return _then(_value.copyWith(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      expiresAt: freezed == expiresAt
-          ? _value.expiresAt
-          : expiresAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-    ) as $Val);
+  $Res call({Object? userId = null, Object? expiresAt = freezed}) {
+    return _then(
+      _value.copyWith(
+            userId:
+                null == userId
+                    ? _value.userId
+                    : userId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            expiresAt:
+                freezed == expiresAt
+                    ? _value.expiresAt
+                    : expiresAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$MuteCreateRequestImplCopyWith<$Res>
     implements $MuteCreateRequestCopyWith<$Res> {
-  factory _$$MuteCreateRequestImplCopyWith(_$MuteCreateRequestImpl value,
-          $Res Function(_$MuteCreateRequestImpl) then) =
-      __$$MuteCreateRequestImplCopyWithImpl<$Res>;
+  factory _$$MuteCreateRequestImplCopyWith(
+    _$MuteCreateRequestImpl value,
+    $Res Function(_$MuteCreateRequestImpl) then,
+  ) = __$$MuteCreateRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String userId, @EpocTimeDateTimeConverter() DateTime? expiresAt});
@@ -89,36 +94,40 @@ abstract class _$$MuteCreateRequestImplCopyWith<$Res>
 class __$$MuteCreateRequestImplCopyWithImpl<$Res>
     extends _$MuteCreateRequestCopyWithImpl<$Res, _$MuteCreateRequestImpl>
     implements _$$MuteCreateRequestImplCopyWith<$Res> {
-  __$$MuteCreateRequestImplCopyWithImpl(_$MuteCreateRequestImpl _value,
-      $Res Function(_$MuteCreateRequestImpl) _then)
-      : super(_value, _then);
+  __$$MuteCreateRequestImplCopyWithImpl(
+    _$MuteCreateRequestImpl _value,
+    $Res Function(_$MuteCreateRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of MuteCreateRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? userId = null,
-    Object? expiresAt = freezed,
-  }) {
-    return _then(_$MuteCreateRequestImpl(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      expiresAt: freezed == expiresAt
-          ? _value.expiresAt
-          : expiresAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-    ));
+  $Res call({Object? userId = null, Object? expiresAt = freezed}) {
+    return _then(
+      _$MuteCreateRequestImpl(
+        userId:
+            null == userId
+                ? _value.userId
+                : userId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        expiresAt:
+            freezed == expiresAt
+                ? _value.expiresAt
+                : expiresAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$MuteCreateRequestImpl implements _MuteCreateRequest {
-  const _$MuteCreateRequestImpl(
-      {required this.userId, @EpocTimeDateTimeConverter() this.expiresAt});
+  const _$MuteCreateRequestImpl({
+    required this.userId,
+    @EpocTimeDateTimeConverter() this.expiresAt,
+  });
 
   factory _$MuteCreateRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$MuteCreateRequestImplFromJson(json);
@@ -155,21 +164,21 @@ class _$MuteCreateRequestImpl implements _MuteCreateRequest {
   @pragma('vm:prefer-inline')
   _$$MuteCreateRequestImplCopyWith<_$MuteCreateRequestImpl> get copyWith =>
       __$$MuteCreateRequestImplCopyWithImpl<_$MuteCreateRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MuteCreateRequestImplToJson(
-      this,
-    );
+    return _$$MuteCreateRequestImplToJson(this);
   }
 }
 
 abstract class _MuteCreateRequest implements MuteCreateRequest {
-  const factory _MuteCreateRequest(
-          {required final String userId,
-          @EpocTimeDateTimeConverter() final DateTime? expiresAt}) =
-      _$MuteCreateRequestImpl;
+  const factory _MuteCreateRequest({
+    required final String userId,
+    @EpocTimeDateTimeConverter() final DateTime? expiresAt,
+  }) = _$MuteCreateRequestImpl;
 
   factory _MuteCreateRequest.fromJson(Map<String, dynamic> json) =
       _$MuteCreateRequestImpl.fromJson;

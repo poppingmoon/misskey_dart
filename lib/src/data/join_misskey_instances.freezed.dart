@@ -12,7 +12,8 @@ part of 'join_misskey_instances.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 JoinMisskeyInstances _$JoinMisskeyInstancesFromJson(Map<String, dynamic> json) {
   return _JoinMisskeyInstances.fromJson(json);
@@ -37,21 +38,25 @@ mixin _$JoinMisskeyInstances {
 
 /// @nodoc
 abstract class $JoinMisskeyInstancesCopyWith<$Res> {
-  factory $JoinMisskeyInstancesCopyWith(JoinMisskeyInstances value,
-          $Res Function(JoinMisskeyInstances) then) =
-      _$JoinMisskeyInstancesCopyWithImpl<$Res, JoinMisskeyInstances>;
+  factory $JoinMisskeyInstancesCopyWith(
+    JoinMisskeyInstances value,
+    $Res Function(JoinMisskeyInstances) then,
+  ) = _$JoinMisskeyInstancesCopyWithImpl<$Res, JoinMisskeyInstances>;
   @useResult
-  $Res call(
-      {DateTime date,
-      JoinMisskeyStats stats,
-      List<JoinMisskeyInstanceInfo> instancesInfos});
+  $Res call({
+    DateTime date,
+    JoinMisskeyStats stats,
+    List<JoinMisskeyInstanceInfo> instancesInfos,
+  });
 
   $JoinMisskeyStatsCopyWith<$Res> get stats;
 }
 
 /// @nodoc
-class _$JoinMisskeyInstancesCopyWithImpl<$Res,
-        $Val extends JoinMisskeyInstances>
+class _$JoinMisskeyInstancesCopyWithImpl<
+  $Res,
+  $Val extends JoinMisskeyInstances
+>
     implements $JoinMisskeyInstancesCopyWith<$Res> {
   _$JoinMisskeyInstancesCopyWithImpl(this._value, this._then);
 
@@ -69,20 +74,26 @@ class _$JoinMisskeyInstancesCopyWithImpl<$Res,
     Object? stats = null,
     Object? instancesInfos = null,
   }) {
-    return _then(_value.copyWith(
-      date: null == date
-          ? _value.date
-          : date // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      stats: null == stats
-          ? _value.stats
-          : stats // ignore: cast_nullable_to_non_nullable
-              as JoinMisskeyStats,
-      instancesInfos: null == instancesInfos
-          ? _value.instancesInfos
-          : instancesInfos // ignore: cast_nullable_to_non_nullable
-              as List<JoinMisskeyInstanceInfo>,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            date:
+                null == date
+                    ? _value.date
+                    : date // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            stats:
+                null == stats
+                    ? _value.stats
+                    : stats // ignore: cast_nullable_to_non_nullable
+                        as JoinMisskeyStats,
+            instancesInfos:
+                null == instancesInfos
+                    ? _value.instancesInfos
+                    : instancesInfos // ignore: cast_nullable_to_non_nullable
+                        as List<JoinMisskeyInstanceInfo>,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of JoinMisskeyInstances
@@ -99,15 +110,17 @@ class _$JoinMisskeyInstancesCopyWithImpl<$Res,
 /// @nodoc
 abstract class _$$JoinMisskeyInstancesImplCopyWith<$Res>
     implements $JoinMisskeyInstancesCopyWith<$Res> {
-  factory _$$JoinMisskeyInstancesImplCopyWith(_$JoinMisskeyInstancesImpl value,
-          $Res Function(_$JoinMisskeyInstancesImpl) then) =
-      __$$JoinMisskeyInstancesImplCopyWithImpl<$Res>;
+  factory _$$JoinMisskeyInstancesImplCopyWith(
+    _$JoinMisskeyInstancesImpl value,
+    $Res Function(_$JoinMisskeyInstancesImpl) then,
+  ) = __$$JoinMisskeyInstancesImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {DateTime date,
-      JoinMisskeyStats stats,
-      List<JoinMisskeyInstanceInfo> instancesInfos});
+  $Res call({
+    DateTime date,
+    JoinMisskeyStats stats,
+    List<JoinMisskeyInstanceInfo> instancesInfos,
+  });
 
   @override
   $JoinMisskeyStatsCopyWith<$Res> get stats;
@@ -117,9 +130,10 @@ abstract class _$$JoinMisskeyInstancesImplCopyWith<$Res>
 class __$$JoinMisskeyInstancesImplCopyWithImpl<$Res>
     extends _$JoinMisskeyInstancesCopyWithImpl<$Res, _$JoinMisskeyInstancesImpl>
     implements _$$JoinMisskeyInstancesImplCopyWith<$Res> {
-  __$$JoinMisskeyInstancesImplCopyWithImpl(_$JoinMisskeyInstancesImpl _value,
-      $Res Function(_$JoinMisskeyInstancesImpl) _then)
-      : super(_value, _then);
+  __$$JoinMisskeyInstancesImplCopyWithImpl(
+    _$JoinMisskeyInstancesImpl _value,
+    $Res Function(_$JoinMisskeyInstancesImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of JoinMisskeyInstances
   /// with the given fields replaced by the non-null parameter values.
@@ -130,31 +144,36 @@ class __$$JoinMisskeyInstancesImplCopyWithImpl<$Res>
     Object? stats = null,
     Object? instancesInfos = null,
   }) {
-    return _then(_$JoinMisskeyInstancesImpl(
-      date: null == date
-          ? _value.date
-          : date // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      stats: null == stats
-          ? _value.stats
-          : stats // ignore: cast_nullable_to_non_nullable
-              as JoinMisskeyStats,
-      instancesInfos: null == instancesInfos
-          ? _value._instancesInfos
-          : instancesInfos // ignore: cast_nullable_to_non_nullable
-              as List<JoinMisskeyInstanceInfo>,
-    ));
+    return _then(
+      _$JoinMisskeyInstancesImpl(
+        date:
+            null == date
+                ? _value.date
+                : date // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        stats:
+            null == stats
+                ? _value.stats
+                : stats // ignore: cast_nullable_to_non_nullable
+                    as JoinMisskeyStats,
+        instancesInfos:
+            null == instancesInfos
+                ? _value._instancesInfos
+                : instancesInfos // ignore: cast_nullable_to_non_nullable
+                    as List<JoinMisskeyInstanceInfo>,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$JoinMisskeyInstancesImpl implements _JoinMisskeyInstances {
-  const _$JoinMisskeyInstancesImpl(
-      {required this.date,
-      required this.stats,
-      required final List<JoinMisskeyInstanceInfo> instancesInfos})
-      : _instancesInfos = instancesInfos;
+  const _$JoinMisskeyInstancesImpl({
+    required this.date,
+    required this.stats,
+    required final List<JoinMisskeyInstanceInfo> instancesInfos,
+  }) : _instancesInfos = instancesInfos;
 
   factory _$JoinMisskeyInstancesImpl.fromJson(Map<String, dynamic> json) =>
       _$$JoinMisskeyInstancesImplFromJson(json);
@@ -183,14 +202,20 @@ class _$JoinMisskeyInstancesImpl implements _JoinMisskeyInstances {
             other is _$JoinMisskeyInstancesImpl &&
             (identical(other.date, date) || other.date == date) &&
             (identical(other.stats, stats) || other.stats == stats) &&
-            const DeepCollectionEquality()
-                .equals(other._instancesInfos, _instancesInfos));
+            const DeepCollectionEquality().equals(
+              other._instancesInfos,
+              _instancesInfos,
+            ));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, date, stats,
-      const DeepCollectionEquality().hash(_instancesInfos));
+  int get hashCode => Object.hash(
+    runtimeType,
+    date,
+    stats,
+    const DeepCollectionEquality().hash(_instancesInfos),
+  );
 
   /// Create a copy of JoinMisskeyInstances
   /// with the given fields replaced by the non-null parameter values.
@@ -198,24 +223,24 @@ class _$JoinMisskeyInstancesImpl implements _JoinMisskeyInstances {
   @override
   @pragma('vm:prefer-inline')
   _$$JoinMisskeyInstancesImplCopyWith<_$JoinMisskeyInstancesImpl>
-      get copyWith =>
-          __$$JoinMisskeyInstancesImplCopyWithImpl<_$JoinMisskeyInstancesImpl>(
-              this, _$identity);
+  get copyWith =>
+      __$$JoinMisskeyInstancesImplCopyWithImpl<_$JoinMisskeyInstancesImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$JoinMisskeyInstancesImplToJson(
-      this,
-    );
+    return _$$JoinMisskeyInstancesImplToJson(this);
   }
 }
 
 abstract class _JoinMisskeyInstances implements JoinMisskeyInstances {
-  const factory _JoinMisskeyInstances(
-          {required final DateTime date,
-          required final JoinMisskeyStats stats,
-          required final List<JoinMisskeyInstanceInfo> instancesInfos}) =
-      _$JoinMisskeyInstancesImpl;
+  const factory _JoinMisskeyInstances({
+    required final DateTime date,
+    required final JoinMisskeyStats stats,
+    required final List<JoinMisskeyInstanceInfo> instancesInfos,
+  }) = _$JoinMisskeyInstancesImpl;
 
   factory _JoinMisskeyInstances.fromJson(Map<String, dynamic> json) =
       _$JoinMisskeyInstancesImpl.fromJson;
@@ -232,7 +257,7 @@ abstract class _JoinMisskeyInstances implements JoinMisskeyInstances {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$JoinMisskeyInstancesImplCopyWith<_$JoinMisskeyInstancesImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 JoinMisskeyStats _$JoinMisskeyStatsFromJson(Map<String, dynamic> json) {
@@ -259,8 +284,9 @@ mixin _$JoinMisskeyStats {
 /// @nodoc
 abstract class $JoinMisskeyStatsCopyWith<$Res> {
   factory $JoinMisskeyStatsCopyWith(
-          JoinMisskeyStats value, $Res Function(JoinMisskeyStats) then) =
-      _$JoinMisskeyStatsCopyWithImpl<$Res, JoinMisskeyStats>;
+    JoinMisskeyStats value,
+    $Res Function(JoinMisskeyStats) then,
+  ) = _$JoinMisskeyStatsCopyWithImpl<$Res, JoinMisskeyStats>;
   @useResult
   $Res call({int notesCount, int usersCount, int mau, int instancesCount});
 }
@@ -285,33 +311,41 @@ class _$JoinMisskeyStatsCopyWithImpl<$Res, $Val extends JoinMisskeyStats>
     Object? mau = null,
     Object? instancesCount = null,
   }) {
-    return _then(_value.copyWith(
-      notesCount: null == notesCount
-          ? _value.notesCount
-          : notesCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      usersCount: null == usersCount
-          ? _value.usersCount
-          : usersCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      mau: null == mau
-          ? _value.mau
-          : mau // ignore: cast_nullable_to_non_nullable
-              as int,
-      instancesCount: null == instancesCount
-          ? _value.instancesCount
-          : instancesCount // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            notesCount:
+                null == notesCount
+                    ? _value.notesCount
+                    : notesCount // ignore: cast_nullable_to_non_nullable
+                        as int,
+            usersCount:
+                null == usersCount
+                    ? _value.usersCount
+                    : usersCount // ignore: cast_nullable_to_non_nullable
+                        as int,
+            mau:
+                null == mau
+                    ? _value.mau
+                    : mau // ignore: cast_nullable_to_non_nullable
+                        as int,
+            instancesCount:
+                null == instancesCount
+                    ? _value.instancesCount
+                    : instancesCount // ignore: cast_nullable_to_non_nullable
+                        as int,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$JoinMisskeyStatsImplCopyWith<$Res>
     implements $JoinMisskeyStatsCopyWith<$Res> {
-  factory _$$JoinMisskeyStatsImplCopyWith(_$JoinMisskeyStatsImpl value,
-          $Res Function(_$JoinMisskeyStatsImpl) then) =
-      __$$JoinMisskeyStatsImplCopyWithImpl<$Res>;
+  factory _$$JoinMisskeyStatsImplCopyWith(
+    _$JoinMisskeyStatsImpl value,
+    $Res Function(_$JoinMisskeyStatsImpl) then,
+  ) = __$$JoinMisskeyStatsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int notesCount, int usersCount, int mau, int instancesCount});
@@ -321,9 +355,10 @@ abstract class _$$JoinMisskeyStatsImplCopyWith<$Res>
 class __$$JoinMisskeyStatsImplCopyWithImpl<$Res>
     extends _$JoinMisskeyStatsCopyWithImpl<$Res, _$JoinMisskeyStatsImpl>
     implements _$$JoinMisskeyStatsImplCopyWith<$Res> {
-  __$$JoinMisskeyStatsImplCopyWithImpl(_$JoinMisskeyStatsImpl _value,
-      $Res Function(_$JoinMisskeyStatsImpl) _then)
-      : super(_value, _then);
+  __$$JoinMisskeyStatsImplCopyWithImpl(
+    _$JoinMisskeyStatsImpl _value,
+    $Res Function(_$JoinMisskeyStatsImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of JoinMisskeyStats
   /// with the given fields replaced by the non-null parameter values.
@@ -335,35 +370,42 @@ class __$$JoinMisskeyStatsImplCopyWithImpl<$Res>
     Object? mau = null,
     Object? instancesCount = null,
   }) {
-    return _then(_$JoinMisskeyStatsImpl(
-      notesCount: null == notesCount
-          ? _value.notesCount
-          : notesCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      usersCount: null == usersCount
-          ? _value.usersCount
-          : usersCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      mau: null == mau
-          ? _value.mau
-          : mau // ignore: cast_nullable_to_non_nullable
-              as int,
-      instancesCount: null == instancesCount
-          ? _value.instancesCount
-          : instancesCount // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
+    return _then(
+      _$JoinMisskeyStatsImpl(
+        notesCount:
+            null == notesCount
+                ? _value.notesCount
+                : notesCount // ignore: cast_nullable_to_non_nullable
+                    as int,
+        usersCount:
+            null == usersCount
+                ? _value.usersCount
+                : usersCount // ignore: cast_nullable_to_non_nullable
+                    as int,
+        mau:
+            null == mau
+                ? _value.mau
+                : mau // ignore: cast_nullable_to_non_nullable
+                    as int,
+        instancesCount:
+            null == instancesCount
+                ? _value.instancesCount
+                : instancesCount // ignore: cast_nullable_to_non_nullable
+                    as int,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$JoinMisskeyStatsImpl implements _JoinMisskeyStats {
-  const _$JoinMisskeyStatsImpl(
-      {required this.notesCount,
-      required this.usersCount,
-      required this.mau,
-      required this.instancesCount});
+  const _$JoinMisskeyStatsImpl({
+    required this.notesCount,
+    required this.usersCount,
+    required this.mau,
+    required this.instancesCount,
+  });
 
   factory _$JoinMisskeyStatsImpl.fromJson(Map<String, dynamic> json) =>
       _$$JoinMisskeyStatsImplFromJson(json);
@@ -408,22 +450,23 @@ class _$JoinMisskeyStatsImpl implements _JoinMisskeyStats {
   @pragma('vm:prefer-inline')
   _$$JoinMisskeyStatsImplCopyWith<_$JoinMisskeyStatsImpl> get copyWith =>
       __$$JoinMisskeyStatsImplCopyWithImpl<_$JoinMisskeyStatsImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$JoinMisskeyStatsImplToJson(
-      this,
-    );
+    return _$$JoinMisskeyStatsImplToJson(this);
   }
 }
 
 abstract class _JoinMisskeyStats implements JoinMisskeyStats {
-  const factory _JoinMisskeyStats(
-      {required final int notesCount,
-      required final int usersCount,
-      required final int mau,
-      required final int instancesCount}) = _$JoinMisskeyStatsImpl;
+  const factory _JoinMisskeyStats({
+    required final int notesCount,
+    required final int usersCount,
+    required final int mau,
+    required final int instancesCount,
+  }) = _$JoinMisskeyStatsImpl;
 
   factory _JoinMisskeyStats.fromJson(Map<String, dynamic> json) =
       _$JoinMisskeyStatsImpl.fromJson;
@@ -446,7 +489,8 @@ abstract class _JoinMisskeyStats implements JoinMisskeyStats {
 }
 
 JoinMisskeyInstanceInfo _$JoinMisskeyInstanceInfoFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _JoinMisskeyInstanceInfo.fromJson(json);
 }
 
@@ -478,29 +522,33 @@ mixin _$JoinMisskeyInstanceInfo {
 
 /// @nodoc
 abstract class $JoinMisskeyInstanceInfoCopyWith<$Res> {
-  factory $JoinMisskeyInstanceInfoCopyWith(JoinMisskeyInstanceInfo value,
-          $Res Function(JoinMisskeyInstanceInfo) then) =
-      _$JoinMisskeyInstanceInfoCopyWithImpl<$Res, JoinMisskeyInstanceInfo>;
+  factory $JoinMisskeyInstanceInfoCopyWith(
+    JoinMisskeyInstanceInfo value,
+    $Res Function(JoinMisskeyInstanceInfo) then,
+  ) = _$JoinMisskeyInstanceInfoCopyWithImpl<$Res, JoinMisskeyInstanceInfo>;
   @useResult
-  $Res call(
-      {String url,
-      String name,
-      List<String> langs,
-      String? description,
-      bool isAlive,
-      double value,
-      bool banner,
-      bool background,
-      bool icon,
-      @JsonKey(name: "nodeinfo") JoinMisskeyNodeInfo? nodeInfo,
-      Map<String, dynamic>? meta});
+  $Res call({
+    String url,
+    String name,
+    List<String> langs,
+    String? description,
+    bool isAlive,
+    double value,
+    bool banner,
+    bool background,
+    bool icon,
+    @JsonKey(name: "nodeinfo") JoinMisskeyNodeInfo? nodeInfo,
+    Map<String, dynamic>? meta,
+  });
 
   $JoinMisskeyNodeInfoCopyWith<$Res>? get nodeInfo;
 }
 
 /// @nodoc
-class _$JoinMisskeyInstanceInfoCopyWithImpl<$Res,
-        $Val extends JoinMisskeyInstanceInfo>
+class _$JoinMisskeyInstanceInfoCopyWithImpl<
+  $Res,
+  $Val extends JoinMisskeyInstanceInfo
+>
     implements $JoinMisskeyInstanceInfoCopyWith<$Res> {
   _$JoinMisskeyInstanceInfoCopyWithImpl(this._value, this._then);
 
@@ -526,52 +574,66 @@ class _$JoinMisskeyInstanceInfoCopyWithImpl<$Res,
     Object? nodeInfo = freezed,
     Object? meta = freezed,
   }) {
-    return _then(_value.copyWith(
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      langs: null == langs
-          ? _value.langs
-          : langs // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isAlive: null == isAlive
-          ? _value.isAlive
-          : isAlive // ignore: cast_nullable_to_non_nullable
-              as bool,
-      value: null == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as double,
-      banner: null == banner
-          ? _value.banner
-          : banner // ignore: cast_nullable_to_non_nullable
-              as bool,
-      background: null == background
-          ? _value.background
-          : background // ignore: cast_nullable_to_non_nullable
-              as bool,
-      icon: null == icon
-          ? _value.icon
-          : icon // ignore: cast_nullable_to_non_nullable
-              as bool,
-      nodeInfo: freezed == nodeInfo
-          ? _value.nodeInfo
-          : nodeInfo // ignore: cast_nullable_to_non_nullable
-              as JoinMisskeyNodeInfo?,
-      meta: freezed == meta
-          ? _value.meta
-          : meta // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            url:
+                null == url
+                    ? _value.url
+                    : url // ignore: cast_nullable_to_non_nullable
+                        as String,
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            langs:
+                null == langs
+                    ? _value.langs
+                    : langs // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+            description:
+                freezed == description
+                    ? _value.description
+                    : description // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            isAlive:
+                null == isAlive
+                    ? _value.isAlive
+                    : isAlive // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            value:
+                null == value
+                    ? _value.value
+                    : value // ignore: cast_nullable_to_non_nullable
+                        as double,
+            banner:
+                null == banner
+                    ? _value.banner
+                    : banner // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            background:
+                null == background
+                    ? _value.background
+                    : background // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            icon:
+                null == icon
+                    ? _value.icon
+                    : icon // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            nodeInfo:
+                freezed == nodeInfo
+                    ? _value.nodeInfo
+                    : nodeInfo // ignore: cast_nullable_to_non_nullable
+                        as JoinMisskeyNodeInfo?,
+            meta:
+                freezed == meta
+                    ? _value.meta
+                    : meta // ignore: cast_nullable_to_non_nullable
+                        as Map<String, dynamic>?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of JoinMisskeyInstanceInfo
@@ -593,23 +655,24 @@ class _$JoinMisskeyInstanceInfoCopyWithImpl<$Res,
 abstract class _$$JoinMisskeyInstanceInfoImplCopyWith<$Res>
     implements $JoinMisskeyInstanceInfoCopyWith<$Res> {
   factory _$$JoinMisskeyInstanceInfoImplCopyWith(
-          _$JoinMisskeyInstanceInfoImpl value,
-          $Res Function(_$JoinMisskeyInstanceInfoImpl) then) =
-      __$$JoinMisskeyInstanceInfoImplCopyWithImpl<$Res>;
+    _$JoinMisskeyInstanceInfoImpl value,
+    $Res Function(_$JoinMisskeyInstanceInfoImpl) then,
+  ) = __$$JoinMisskeyInstanceInfoImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String url,
-      String name,
-      List<String> langs,
-      String? description,
-      bool isAlive,
-      double value,
-      bool banner,
-      bool background,
-      bool icon,
-      @JsonKey(name: "nodeinfo") JoinMisskeyNodeInfo? nodeInfo,
-      Map<String, dynamic>? meta});
+  $Res call({
+    String url,
+    String name,
+    List<String> langs,
+    String? description,
+    bool isAlive,
+    double value,
+    bool banner,
+    bool background,
+    bool icon,
+    @JsonKey(name: "nodeinfo") JoinMisskeyNodeInfo? nodeInfo,
+    Map<String, dynamic>? meta,
+  });
 
   @override
   $JoinMisskeyNodeInfoCopyWith<$Res>? get nodeInfo;
@@ -617,13 +680,16 @@ abstract class _$$JoinMisskeyInstanceInfoImplCopyWith<$Res>
 
 /// @nodoc
 class __$$JoinMisskeyInstanceInfoImplCopyWithImpl<$Res>
-    extends _$JoinMisskeyInstanceInfoCopyWithImpl<$Res,
-        _$JoinMisskeyInstanceInfoImpl>
+    extends
+        _$JoinMisskeyInstanceInfoCopyWithImpl<
+          $Res,
+          _$JoinMisskeyInstanceInfoImpl
+        >
     implements _$$JoinMisskeyInstanceInfoImplCopyWith<$Res> {
   __$$JoinMisskeyInstanceInfoImplCopyWithImpl(
-      _$JoinMisskeyInstanceInfoImpl _value,
-      $Res Function(_$JoinMisskeyInstanceInfoImpl) _then)
-      : super(_value, _then);
+    _$JoinMisskeyInstanceInfoImpl _value,
+    $Res Function(_$JoinMisskeyInstanceInfoImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of JoinMisskeyInstanceInfo
   /// with the given fields replaced by the non-null parameter values.
@@ -642,72 +708,85 @@ class __$$JoinMisskeyInstanceInfoImplCopyWithImpl<$Res>
     Object? nodeInfo = freezed,
     Object? meta = freezed,
   }) {
-    return _then(_$JoinMisskeyInstanceInfoImpl(
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      langs: null == langs
-          ? _value._langs
-          : langs // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isAlive: null == isAlive
-          ? _value.isAlive
-          : isAlive // ignore: cast_nullable_to_non_nullable
-              as bool,
-      value: null == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as double,
-      banner: null == banner
-          ? _value.banner
-          : banner // ignore: cast_nullable_to_non_nullable
-              as bool,
-      background: null == background
-          ? _value.background
-          : background // ignore: cast_nullable_to_non_nullable
-              as bool,
-      icon: null == icon
-          ? _value.icon
-          : icon // ignore: cast_nullable_to_non_nullable
-              as bool,
-      nodeInfo: freezed == nodeInfo
-          ? _value.nodeInfo
-          : nodeInfo // ignore: cast_nullable_to_non_nullable
-              as JoinMisskeyNodeInfo?,
-      meta: freezed == meta
-          ? _value._meta
-          : meta // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
-    ));
+    return _then(
+      _$JoinMisskeyInstanceInfoImpl(
+        url:
+            null == url
+                ? _value.url
+                : url // ignore: cast_nullable_to_non_nullable
+                    as String,
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        langs:
+            null == langs
+                ? _value._langs
+                : langs // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+        description:
+            freezed == description
+                ? _value.description
+                : description // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        isAlive:
+            null == isAlive
+                ? _value.isAlive
+                : isAlive // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        value:
+            null == value
+                ? _value.value
+                : value // ignore: cast_nullable_to_non_nullable
+                    as double,
+        banner:
+            null == banner
+                ? _value.banner
+                : banner // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        background:
+            null == background
+                ? _value.background
+                : background // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        icon:
+            null == icon
+                ? _value.icon
+                : icon // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        nodeInfo:
+            freezed == nodeInfo
+                ? _value.nodeInfo
+                : nodeInfo // ignore: cast_nullable_to_non_nullable
+                    as JoinMisskeyNodeInfo?,
+        meta:
+            freezed == meta
+                ? _value._meta
+                : meta // ignore: cast_nullable_to_non_nullable
+                    as Map<String, dynamic>?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$JoinMisskeyInstanceInfoImpl implements _JoinMisskeyInstanceInfo {
-  const _$JoinMisskeyInstanceInfoImpl(
-      {required this.url,
-      required this.name,
-      required final List<String> langs,
-      required this.description,
-      required this.isAlive,
-      required this.value,
-      this.banner = false,
-      this.background = false,
-      this.icon = false,
-      @JsonKey(name: "nodeinfo") this.nodeInfo,
-      final Map<String, dynamic>? meta})
-      : _langs = langs,
-        _meta = meta;
+  const _$JoinMisskeyInstanceInfoImpl({
+    required this.url,
+    required this.name,
+    required final List<String> langs,
+    required this.description,
+    required this.isAlive,
+    required this.value,
+    this.banner = false,
+    this.background = false,
+    this.icon = false,
+    @JsonKey(name: "nodeinfo") this.nodeInfo,
+    final Map<String, dynamic>? meta,
+  }) : _langs = langs,
+       _meta = meta;
 
   factory _$JoinMisskeyInstanceInfoImpl.fromJson(Map<String, dynamic> json) =>
       _$$JoinMisskeyInstanceInfoImplFromJson(json);
@@ -739,7 +818,7 @@ class _$JoinMisskeyInstanceInfoImpl implements _JoinMisskeyInstanceInfo {
   @override
   @JsonKey()
   final bool icon;
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(name: "nodeinfo")
   final JoinMisskeyNodeInfo? nodeInfo;
@@ -782,18 +861,19 @@ class _$JoinMisskeyInstanceInfoImpl implements _JoinMisskeyInstanceInfo {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      url,
-      name,
-      const DeepCollectionEquality().hash(_langs),
-      description,
-      isAlive,
-      value,
-      banner,
-      background,
-      icon,
-      nodeInfo,
-      const DeepCollectionEquality().hash(_meta));
+    runtimeType,
+    url,
+    name,
+    const DeepCollectionEquality().hash(_langs),
+    description,
+    isAlive,
+    value,
+    banner,
+    background,
+    icon,
+    nodeInfo,
+    const DeepCollectionEquality().hash(_meta),
+  );
 
   /// Create a copy of JoinMisskeyInstanceInfo
   /// with the given fields replaced by the non-null parameter values.
@@ -801,30 +881,30 @@ class _$JoinMisskeyInstanceInfoImpl implements _JoinMisskeyInstanceInfo {
   @override
   @pragma('vm:prefer-inline')
   _$$JoinMisskeyInstanceInfoImplCopyWith<_$JoinMisskeyInstanceInfoImpl>
-      get copyWith => __$$JoinMisskeyInstanceInfoImplCopyWithImpl<
-          _$JoinMisskeyInstanceInfoImpl>(this, _$identity);
+  get copyWith => __$$JoinMisskeyInstanceInfoImplCopyWithImpl<
+    _$JoinMisskeyInstanceInfoImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$JoinMisskeyInstanceInfoImplToJson(
-      this,
-    );
+    return _$$JoinMisskeyInstanceInfoImplToJson(this);
   }
 }
 
 abstract class _JoinMisskeyInstanceInfo implements JoinMisskeyInstanceInfo {
-  const factory _JoinMisskeyInstanceInfo(
-      {required final String url,
-      required final String name,
-      required final List<String> langs,
-      required final String? description,
-      required final bool isAlive,
-      required final double value,
-      final bool banner,
-      final bool background,
-      final bool icon,
-      @JsonKey(name: "nodeinfo") final JoinMisskeyNodeInfo? nodeInfo,
-      final Map<String, dynamic>? meta}) = _$JoinMisskeyInstanceInfoImpl;
+  const factory _JoinMisskeyInstanceInfo({
+    required final String url,
+    required final String name,
+    required final List<String> langs,
+    required final String? description,
+    required final bool isAlive,
+    required final double value,
+    final bool banner,
+    final bool background,
+    final bool icon,
+    @JsonKey(name: "nodeinfo") final JoinMisskeyNodeInfo? nodeInfo,
+    final Map<String, dynamic>? meta,
+  }) = _$JoinMisskeyInstanceInfoImpl;
 
   factory _JoinMisskeyInstanceInfo.fromJson(Map<String, dynamic> json) =
       _$JoinMisskeyInstanceInfoImpl.fromJson;
@@ -858,7 +938,7 @@ abstract class _JoinMisskeyInstanceInfo implements JoinMisskeyInstanceInfo {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$JoinMisskeyInstanceInfoImplCopyWith<_$JoinMisskeyInstanceInfoImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 JoinMisskeyNodeInfo _$JoinMisskeyNodeInfoFromJson(Map<String, dynamic> json) {
@@ -885,13 +965,15 @@ mixin _$JoinMisskeyNodeInfo {
 /// @nodoc
 abstract class $JoinMisskeyNodeInfoCopyWith<$Res> {
   factory $JoinMisskeyNodeInfoCopyWith(
-          JoinMisskeyNodeInfo value, $Res Function(JoinMisskeyNodeInfo) then) =
-      _$JoinMisskeyNodeInfoCopyWithImpl<$Res, JoinMisskeyNodeInfo>;
+    JoinMisskeyNodeInfo value,
+    $Res Function(JoinMisskeyNodeInfo) then,
+  ) = _$JoinMisskeyNodeInfoCopyWithImpl<$Res, JoinMisskeyNodeInfo>;
   @useResult
-  $Res call(
-      {String? version,
-      JoinMisskeyNodeInfoSoftware? software,
-      JoinMisskeyNodeInfoUsage? usage});
+  $Res call({
+    String? version,
+    JoinMisskeyNodeInfoSoftware? software,
+    JoinMisskeyNodeInfoUsage? usage,
+  });
 
   $JoinMisskeyNodeInfoSoftwareCopyWith<$Res>? get software;
   $JoinMisskeyNodeInfoUsageCopyWith<$Res>? get usage;
@@ -916,20 +998,26 @@ class _$JoinMisskeyNodeInfoCopyWithImpl<$Res, $Val extends JoinMisskeyNodeInfo>
     Object? software = freezed,
     Object? usage = freezed,
   }) {
-    return _then(_value.copyWith(
-      version: freezed == version
-          ? _value.version
-          : version // ignore: cast_nullable_to_non_nullable
-              as String?,
-      software: freezed == software
-          ? _value.software
-          : software // ignore: cast_nullable_to_non_nullable
-              as JoinMisskeyNodeInfoSoftware?,
-      usage: freezed == usage
-          ? _value.usage
-          : usage // ignore: cast_nullable_to_non_nullable
-              as JoinMisskeyNodeInfoUsage?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            version:
+                freezed == version
+                    ? _value.version
+                    : version // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            software:
+                freezed == software
+                    ? _value.software
+                    : software // ignore: cast_nullable_to_non_nullable
+                        as JoinMisskeyNodeInfoSoftware?,
+            usage:
+                freezed == usage
+                    ? _value.usage
+                    : usage // ignore: cast_nullable_to_non_nullable
+                        as JoinMisskeyNodeInfoUsage?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of JoinMisskeyNodeInfo
@@ -941,8 +1029,9 @@ class _$JoinMisskeyNodeInfoCopyWithImpl<$Res, $Val extends JoinMisskeyNodeInfo>
       return null;
     }
 
-    return $JoinMisskeyNodeInfoSoftwareCopyWith<$Res>(_value.software!,
-        (value) {
+    return $JoinMisskeyNodeInfoSoftwareCopyWith<$Res>(_value.software!, (
+      value,
+    ) {
       return _then(_value.copyWith(software: value) as $Val);
     });
   }
@@ -965,15 +1054,17 @@ class _$JoinMisskeyNodeInfoCopyWithImpl<$Res, $Val extends JoinMisskeyNodeInfo>
 /// @nodoc
 abstract class _$$JoinMisskeyNodeInfoImplCopyWith<$Res>
     implements $JoinMisskeyNodeInfoCopyWith<$Res> {
-  factory _$$JoinMisskeyNodeInfoImplCopyWith(_$JoinMisskeyNodeInfoImpl value,
-          $Res Function(_$JoinMisskeyNodeInfoImpl) then) =
-      __$$JoinMisskeyNodeInfoImplCopyWithImpl<$Res>;
+  factory _$$JoinMisskeyNodeInfoImplCopyWith(
+    _$JoinMisskeyNodeInfoImpl value,
+    $Res Function(_$JoinMisskeyNodeInfoImpl) then,
+  ) = __$$JoinMisskeyNodeInfoImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String? version,
-      JoinMisskeyNodeInfoSoftware? software,
-      JoinMisskeyNodeInfoUsage? usage});
+  $Res call({
+    String? version,
+    JoinMisskeyNodeInfoSoftware? software,
+    JoinMisskeyNodeInfoUsage? usage,
+  });
 
   @override
   $JoinMisskeyNodeInfoSoftwareCopyWith<$Res>? get software;
@@ -985,9 +1076,10 @@ abstract class _$$JoinMisskeyNodeInfoImplCopyWith<$Res>
 class __$$JoinMisskeyNodeInfoImplCopyWithImpl<$Res>
     extends _$JoinMisskeyNodeInfoCopyWithImpl<$Res, _$JoinMisskeyNodeInfoImpl>
     implements _$$JoinMisskeyNodeInfoImplCopyWith<$Res> {
-  __$$JoinMisskeyNodeInfoImplCopyWithImpl(_$JoinMisskeyNodeInfoImpl _value,
-      $Res Function(_$JoinMisskeyNodeInfoImpl) _then)
-      : super(_value, _then);
+  __$$JoinMisskeyNodeInfoImplCopyWithImpl(
+    _$JoinMisskeyNodeInfoImpl _value,
+    $Res Function(_$JoinMisskeyNodeInfoImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of JoinMisskeyNodeInfo
   /// with the given fields replaced by the non-null parameter values.
@@ -998,20 +1090,25 @@ class __$$JoinMisskeyNodeInfoImplCopyWithImpl<$Res>
     Object? software = freezed,
     Object? usage = freezed,
   }) {
-    return _then(_$JoinMisskeyNodeInfoImpl(
-      version: freezed == version
-          ? _value.version
-          : version // ignore: cast_nullable_to_non_nullable
-              as String?,
-      software: freezed == software
-          ? _value.software
-          : software // ignore: cast_nullable_to_non_nullable
-              as JoinMisskeyNodeInfoSoftware?,
-      usage: freezed == usage
-          ? _value.usage
-          : usage // ignore: cast_nullable_to_non_nullable
-              as JoinMisskeyNodeInfoUsage?,
-    ));
+    return _then(
+      _$JoinMisskeyNodeInfoImpl(
+        version:
+            freezed == version
+                ? _value.version
+                : version // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        software:
+            freezed == software
+                ? _value.software
+                : software // ignore: cast_nullable_to_non_nullable
+                    as JoinMisskeyNodeInfoSoftware?,
+        usage:
+            freezed == usage
+                ? _value.usage
+                : usage // ignore: cast_nullable_to_non_nullable
+                    as JoinMisskeyNodeInfoUsage?,
+      ),
+    );
   }
 }
 
@@ -1057,21 +1154,22 @@ class _$JoinMisskeyNodeInfoImpl implements _JoinMisskeyNodeInfo {
   @pragma('vm:prefer-inline')
   _$$JoinMisskeyNodeInfoImplCopyWith<_$JoinMisskeyNodeInfoImpl> get copyWith =>
       __$$JoinMisskeyNodeInfoImplCopyWithImpl<_$JoinMisskeyNodeInfoImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$JoinMisskeyNodeInfoImplToJson(
-      this,
-    );
+    return _$$JoinMisskeyNodeInfoImplToJson(this);
   }
 }
 
 abstract class _JoinMisskeyNodeInfo implements JoinMisskeyNodeInfo {
-  const factory _JoinMisskeyNodeInfo(
-      {final String? version,
-      final JoinMisskeyNodeInfoSoftware? software,
-      final JoinMisskeyNodeInfoUsage? usage}) = _$JoinMisskeyNodeInfoImpl;
+  const factory _JoinMisskeyNodeInfo({
+    final String? version,
+    final JoinMisskeyNodeInfoSoftware? software,
+    final JoinMisskeyNodeInfoUsage? usage,
+  }) = _$JoinMisskeyNodeInfoImpl;
 
   factory _JoinMisskeyNodeInfo.fromJson(Map<String, dynamic> json) =
       _$JoinMisskeyNodeInfoImpl.fromJson;
@@ -1092,7 +1190,8 @@ abstract class _JoinMisskeyNodeInfo implements JoinMisskeyNodeInfo {
 }
 
 JoinMisskeyNodeInfoSoftware _$JoinMisskeyNodeInfoSoftwareFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _JoinMisskeyNodeInfoSoftware.fromJson(json);
 }
 
@@ -1108,23 +1207,28 @@ mixin _$JoinMisskeyNodeInfoSoftware {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $JoinMisskeyNodeInfoSoftwareCopyWith<JoinMisskeyNodeInfoSoftware>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $JoinMisskeyNodeInfoSoftwareCopyWith<$Res> {
   factory $JoinMisskeyNodeInfoSoftwareCopyWith(
-          JoinMisskeyNodeInfoSoftware value,
-          $Res Function(JoinMisskeyNodeInfoSoftware) then) =
-      _$JoinMisskeyNodeInfoSoftwareCopyWithImpl<$Res,
-          JoinMisskeyNodeInfoSoftware>;
+    JoinMisskeyNodeInfoSoftware value,
+    $Res Function(JoinMisskeyNodeInfoSoftware) then,
+  ) =
+      _$JoinMisskeyNodeInfoSoftwareCopyWithImpl<
+        $Res,
+        JoinMisskeyNodeInfoSoftware
+      >;
   @useResult
   $Res call({String? name, String? version});
 }
 
 /// @nodoc
-class _$JoinMisskeyNodeInfoSoftwareCopyWithImpl<$Res,
-        $Val extends JoinMisskeyNodeInfoSoftware>
+class _$JoinMisskeyNodeInfoSoftwareCopyWithImpl<
+  $Res,
+  $Val extends JoinMisskeyNodeInfoSoftware
+>
     implements $JoinMisskeyNodeInfoSoftwareCopyWith<$Res> {
   _$JoinMisskeyNodeInfoSoftwareCopyWithImpl(this._value, this._then);
 
@@ -1137,20 +1241,22 @@ class _$JoinMisskeyNodeInfoSoftwareCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? name = freezed,
-    Object? version = freezed,
-  }) {
-    return _then(_value.copyWith(
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      version: freezed == version
-          ? _value.version
-          : version // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  $Res call({Object? name = freezed, Object? version = freezed}) {
+    return _then(
+      _value.copyWith(
+            name:
+                freezed == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            version:
+                freezed == version
+                    ? _value.version
+                    : version // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -1158,9 +1264,9 @@ class _$JoinMisskeyNodeInfoSoftwareCopyWithImpl<$Res,
 abstract class _$$JoinMisskeyNodeInfoSoftwareImplCopyWith<$Res>
     implements $JoinMisskeyNodeInfoSoftwareCopyWith<$Res> {
   factory _$$JoinMisskeyNodeInfoSoftwareImplCopyWith(
-          _$JoinMisskeyNodeInfoSoftwareImpl value,
-          $Res Function(_$JoinMisskeyNodeInfoSoftwareImpl) then) =
-      __$$JoinMisskeyNodeInfoSoftwareImplCopyWithImpl<$Res>;
+    _$JoinMisskeyNodeInfoSoftwareImpl value,
+    $Res Function(_$JoinMisskeyNodeInfoSoftwareImpl) then,
+  ) = __$$JoinMisskeyNodeInfoSoftwareImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? name, String? version});
@@ -1168,32 +1274,36 @@ abstract class _$$JoinMisskeyNodeInfoSoftwareImplCopyWith<$Res>
 
 /// @nodoc
 class __$$JoinMisskeyNodeInfoSoftwareImplCopyWithImpl<$Res>
-    extends _$JoinMisskeyNodeInfoSoftwareCopyWithImpl<$Res,
-        _$JoinMisskeyNodeInfoSoftwareImpl>
+    extends
+        _$JoinMisskeyNodeInfoSoftwareCopyWithImpl<
+          $Res,
+          _$JoinMisskeyNodeInfoSoftwareImpl
+        >
     implements _$$JoinMisskeyNodeInfoSoftwareImplCopyWith<$Res> {
   __$$JoinMisskeyNodeInfoSoftwareImplCopyWithImpl(
-      _$JoinMisskeyNodeInfoSoftwareImpl _value,
-      $Res Function(_$JoinMisskeyNodeInfoSoftwareImpl) _then)
-      : super(_value, _then);
+    _$JoinMisskeyNodeInfoSoftwareImpl _value,
+    $Res Function(_$JoinMisskeyNodeInfoSoftwareImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of JoinMisskeyNodeInfoSoftware
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? name = freezed,
-    Object? version = freezed,
-  }) {
-    return _then(_$JoinMisskeyNodeInfoSoftwareImpl(
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      version: freezed == version
-          ? _value.version
-          : version // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+  $Res call({Object? name = freezed, Object? version = freezed}) {
+    return _then(
+      _$JoinMisskeyNodeInfoSoftwareImpl(
+        name:
+            freezed == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        version:
+            freezed == version
+                ? _value.version
+                : version // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -1204,8 +1314,8 @@ class _$JoinMisskeyNodeInfoSoftwareImpl
   const _$JoinMisskeyNodeInfoSoftwareImpl({this.name, this.version});
 
   factory _$JoinMisskeyNodeInfoSoftwareImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$JoinMisskeyNodeInfoSoftwareImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$JoinMisskeyNodeInfoSoftwareImplFromJson(json);
 
   @override
   final String? name;
@@ -1236,22 +1346,22 @@ class _$JoinMisskeyNodeInfoSoftwareImpl
   @override
   @pragma('vm:prefer-inline')
   _$$JoinMisskeyNodeInfoSoftwareImplCopyWith<_$JoinMisskeyNodeInfoSoftwareImpl>
-      get copyWith => __$$JoinMisskeyNodeInfoSoftwareImplCopyWithImpl<
-          _$JoinMisskeyNodeInfoSoftwareImpl>(this, _$identity);
+  get copyWith => __$$JoinMisskeyNodeInfoSoftwareImplCopyWithImpl<
+    _$JoinMisskeyNodeInfoSoftwareImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$JoinMisskeyNodeInfoSoftwareImplToJson(
-      this,
-    );
+    return _$$JoinMisskeyNodeInfoSoftwareImplToJson(this);
   }
 }
 
 abstract class _JoinMisskeyNodeInfoSoftware
     implements JoinMisskeyNodeInfoSoftware {
-  const factory _JoinMisskeyNodeInfoSoftware(
-      {final String? name,
-      final String? version}) = _$JoinMisskeyNodeInfoSoftwareImpl;
+  const factory _JoinMisskeyNodeInfoSoftware({
+    final String? name,
+    final String? version,
+  }) = _$JoinMisskeyNodeInfoSoftwareImpl;
 
   factory _JoinMisskeyNodeInfoSoftware.fromJson(Map<String, dynamic> json) =
       _$JoinMisskeyNodeInfoSoftwareImpl.fromJson;
@@ -1266,11 +1376,12 @@ abstract class _JoinMisskeyNodeInfoSoftware
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$JoinMisskeyNodeInfoSoftwareImplCopyWith<_$JoinMisskeyNodeInfoSoftwareImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 JoinMisskeyNodeInfoUsage _$JoinMisskeyNodeInfoUsageFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _JoinMisskeyNodeInfoUsage.fromJson(json);
 }
 
@@ -1293,21 +1404,25 @@ mixin _$JoinMisskeyNodeInfoUsage {
 
 /// @nodoc
 abstract class $JoinMisskeyNodeInfoUsageCopyWith<$Res> {
-  factory $JoinMisskeyNodeInfoUsageCopyWith(JoinMisskeyNodeInfoUsage value,
-          $Res Function(JoinMisskeyNodeInfoUsage) then) =
-      _$JoinMisskeyNodeInfoUsageCopyWithImpl<$Res, JoinMisskeyNodeInfoUsage>;
+  factory $JoinMisskeyNodeInfoUsageCopyWith(
+    JoinMisskeyNodeInfoUsage value,
+    $Res Function(JoinMisskeyNodeInfoUsage) then,
+  ) = _$JoinMisskeyNodeInfoUsageCopyWithImpl<$Res, JoinMisskeyNodeInfoUsage>;
   @useResult
-  $Res call(
-      {JoinMisskeyNodeInfoUsageUsers? users,
-      int? localPosts,
-      int? localComments});
+  $Res call({
+    JoinMisskeyNodeInfoUsageUsers? users,
+    int? localPosts,
+    int? localComments,
+  });
 
   $JoinMisskeyNodeInfoUsageUsersCopyWith<$Res>? get users;
 }
 
 /// @nodoc
-class _$JoinMisskeyNodeInfoUsageCopyWithImpl<$Res,
-        $Val extends JoinMisskeyNodeInfoUsage>
+class _$JoinMisskeyNodeInfoUsageCopyWithImpl<
+  $Res,
+  $Val extends JoinMisskeyNodeInfoUsage
+>
     implements $JoinMisskeyNodeInfoUsageCopyWith<$Res> {
   _$JoinMisskeyNodeInfoUsageCopyWithImpl(this._value, this._then);
 
@@ -1325,20 +1440,26 @@ class _$JoinMisskeyNodeInfoUsageCopyWithImpl<$Res,
     Object? localPosts = freezed,
     Object? localComments = freezed,
   }) {
-    return _then(_value.copyWith(
-      users: freezed == users
-          ? _value.users
-          : users // ignore: cast_nullable_to_non_nullable
-              as JoinMisskeyNodeInfoUsageUsers?,
-      localPosts: freezed == localPosts
-          ? _value.localPosts
-          : localPosts // ignore: cast_nullable_to_non_nullable
-              as int?,
-      localComments: freezed == localComments
-          ? _value.localComments
-          : localComments // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            users:
+                freezed == users
+                    ? _value.users
+                    : users // ignore: cast_nullable_to_non_nullable
+                        as JoinMisskeyNodeInfoUsageUsers?,
+            localPosts:
+                freezed == localPosts
+                    ? _value.localPosts
+                    : localPosts // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            localComments:
+                freezed == localComments
+                    ? _value.localComments
+                    : localComments // ignore: cast_nullable_to_non_nullable
+                        as int?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of JoinMisskeyNodeInfoUsage
@@ -1360,15 +1481,16 @@ class _$JoinMisskeyNodeInfoUsageCopyWithImpl<$Res,
 abstract class _$$JoinMisskeyNodeInfoUsageImplCopyWith<$Res>
     implements $JoinMisskeyNodeInfoUsageCopyWith<$Res> {
   factory _$$JoinMisskeyNodeInfoUsageImplCopyWith(
-          _$JoinMisskeyNodeInfoUsageImpl value,
-          $Res Function(_$JoinMisskeyNodeInfoUsageImpl) then) =
-      __$$JoinMisskeyNodeInfoUsageImplCopyWithImpl<$Res>;
+    _$JoinMisskeyNodeInfoUsageImpl value,
+    $Res Function(_$JoinMisskeyNodeInfoUsageImpl) then,
+  ) = __$$JoinMisskeyNodeInfoUsageImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {JoinMisskeyNodeInfoUsageUsers? users,
-      int? localPosts,
-      int? localComments});
+  $Res call({
+    JoinMisskeyNodeInfoUsageUsers? users,
+    int? localPosts,
+    int? localComments,
+  });
 
   @override
   $JoinMisskeyNodeInfoUsageUsersCopyWith<$Res>? get users;
@@ -1376,13 +1498,16 @@ abstract class _$$JoinMisskeyNodeInfoUsageImplCopyWith<$Res>
 
 /// @nodoc
 class __$$JoinMisskeyNodeInfoUsageImplCopyWithImpl<$Res>
-    extends _$JoinMisskeyNodeInfoUsageCopyWithImpl<$Res,
-        _$JoinMisskeyNodeInfoUsageImpl>
+    extends
+        _$JoinMisskeyNodeInfoUsageCopyWithImpl<
+          $Res,
+          _$JoinMisskeyNodeInfoUsageImpl
+        >
     implements _$$JoinMisskeyNodeInfoUsageImplCopyWith<$Res> {
   __$$JoinMisskeyNodeInfoUsageImplCopyWithImpl(
-      _$JoinMisskeyNodeInfoUsageImpl _value,
-      $Res Function(_$JoinMisskeyNodeInfoUsageImpl) _then)
-      : super(_value, _then);
+    _$JoinMisskeyNodeInfoUsageImpl _value,
+    $Res Function(_$JoinMisskeyNodeInfoUsageImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of JoinMisskeyNodeInfoUsage
   /// with the given fields replaced by the non-null parameter values.
@@ -1393,28 +1518,36 @@ class __$$JoinMisskeyNodeInfoUsageImplCopyWithImpl<$Res>
     Object? localPosts = freezed,
     Object? localComments = freezed,
   }) {
-    return _then(_$JoinMisskeyNodeInfoUsageImpl(
-      users: freezed == users
-          ? _value.users
-          : users // ignore: cast_nullable_to_non_nullable
-              as JoinMisskeyNodeInfoUsageUsers?,
-      localPosts: freezed == localPosts
-          ? _value.localPosts
-          : localPosts // ignore: cast_nullable_to_non_nullable
-              as int?,
-      localComments: freezed == localComments
-          ? _value.localComments
-          : localComments // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ));
+    return _then(
+      _$JoinMisskeyNodeInfoUsageImpl(
+        users:
+            freezed == users
+                ? _value.users
+                : users // ignore: cast_nullable_to_non_nullable
+                    as JoinMisskeyNodeInfoUsageUsers?,
+        localPosts:
+            freezed == localPosts
+                ? _value.localPosts
+                : localPosts // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        localComments:
+            freezed == localComments
+                ? _value.localComments
+                : localComments // ignore: cast_nullable_to_non_nullable
+                    as int?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$JoinMisskeyNodeInfoUsageImpl implements _JoinMisskeyNodeInfoUsage {
-  const _$JoinMisskeyNodeInfoUsageImpl(
-      {this.users, this.localPosts, this.localComments});
+  const _$JoinMisskeyNodeInfoUsageImpl({
+    this.users,
+    this.localPosts,
+    this.localComments,
+  });
 
   factory _$JoinMisskeyNodeInfoUsageImpl.fromJson(Map<String, dynamic> json) =>
       _$$JoinMisskeyNodeInfoUsageImplFromJson(json);
@@ -1454,22 +1587,22 @@ class _$JoinMisskeyNodeInfoUsageImpl implements _JoinMisskeyNodeInfoUsage {
   @override
   @pragma('vm:prefer-inline')
   _$$JoinMisskeyNodeInfoUsageImplCopyWith<_$JoinMisskeyNodeInfoUsageImpl>
-      get copyWith => __$$JoinMisskeyNodeInfoUsageImplCopyWithImpl<
-          _$JoinMisskeyNodeInfoUsageImpl>(this, _$identity);
+  get copyWith => __$$JoinMisskeyNodeInfoUsageImplCopyWithImpl<
+    _$JoinMisskeyNodeInfoUsageImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$JoinMisskeyNodeInfoUsageImplToJson(
-      this,
-    );
+    return _$$JoinMisskeyNodeInfoUsageImplToJson(this);
   }
 }
 
 abstract class _JoinMisskeyNodeInfoUsage implements JoinMisskeyNodeInfoUsage {
-  const factory _JoinMisskeyNodeInfoUsage(
-      {final JoinMisskeyNodeInfoUsageUsers? users,
-      final int? localPosts,
-      final int? localComments}) = _$JoinMisskeyNodeInfoUsageImpl;
+  const factory _JoinMisskeyNodeInfoUsage({
+    final JoinMisskeyNodeInfoUsageUsers? users,
+    final int? localPosts,
+    final int? localComments,
+  }) = _$JoinMisskeyNodeInfoUsageImpl;
 
   factory _JoinMisskeyNodeInfoUsage.fromJson(Map<String, dynamic> json) =
       _$JoinMisskeyNodeInfoUsageImpl.fromJson;
@@ -1486,11 +1619,12 @@ abstract class _JoinMisskeyNodeInfoUsage implements JoinMisskeyNodeInfoUsage {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$JoinMisskeyNodeInfoUsageImplCopyWith<_$JoinMisskeyNodeInfoUsageImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 JoinMisskeyNodeInfoUsageUsers _$JoinMisskeyNodeInfoUsageUsersFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _JoinMisskeyNodeInfoUsageUsers.fromJson(json);
 }
 
@@ -1505,23 +1639,28 @@ mixin _$JoinMisskeyNodeInfoUsageUsers {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $JoinMisskeyNodeInfoUsageUsersCopyWith<JoinMisskeyNodeInfoUsageUsers>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $JoinMisskeyNodeInfoUsageUsersCopyWith<$Res> {
   factory $JoinMisskeyNodeInfoUsageUsersCopyWith(
-          JoinMisskeyNodeInfoUsageUsers value,
-          $Res Function(JoinMisskeyNodeInfoUsageUsers) then) =
-      _$JoinMisskeyNodeInfoUsageUsersCopyWithImpl<$Res,
-          JoinMisskeyNodeInfoUsageUsers>;
+    JoinMisskeyNodeInfoUsageUsers value,
+    $Res Function(JoinMisskeyNodeInfoUsageUsers) then,
+  ) =
+      _$JoinMisskeyNodeInfoUsageUsersCopyWithImpl<
+        $Res,
+        JoinMisskeyNodeInfoUsageUsers
+      >;
   @useResult
   $Res call({int? total});
 }
 
 /// @nodoc
-class _$JoinMisskeyNodeInfoUsageUsersCopyWithImpl<$Res,
-        $Val extends JoinMisskeyNodeInfoUsageUsers>
+class _$JoinMisskeyNodeInfoUsageUsersCopyWithImpl<
+  $Res,
+  $Val extends JoinMisskeyNodeInfoUsageUsers
+>
     implements $JoinMisskeyNodeInfoUsageUsersCopyWith<$Res> {
   _$JoinMisskeyNodeInfoUsageUsersCopyWithImpl(this._value, this._then);
 
@@ -1534,15 +1673,17 @@ class _$JoinMisskeyNodeInfoUsageUsersCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? total = freezed,
-  }) {
-    return _then(_value.copyWith(
-      total: freezed == total
-          ? _value.total
-          : total // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ) as $Val);
+  $Res call({Object? total = freezed}) {
+    return _then(
+      _value.copyWith(
+            total:
+                freezed == total
+                    ? _value.total
+                    : total // ignore: cast_nullable_to_non_nullable
+                        as int?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -1550,9 +1691,9 @@ class _$JoinMisskeyNodeInfoUsageUsersCopyWithImpl<$Res,
 abstract class _$$JoinMisskeyNodeInfoUsageUsersImplCopyWith<$Res>
     implements $JoinMisskeyNodeInfoUsageUsersCopyWith<$Res> {
   factory _$$JoinMisskeyNodeInfoUsageUsersImplCopyWith(
-          _$JoinMisskeyNodeInfoUsageUsersImpl value,
-          $Res Function(_$JoinMisskeyNodeInfoUsageUsersImpl) then) =
-      __$$JoinMisskeyNodeInfoUsageUsersImplCopyWithImpl<$Res>;
+    _$JoinMisskeyNodeInfoUsageUsersImpl value,
+    $Res Function(_$JoinMisskeyNodeInfoUsageUsersImpl) then,
+  ) = __$$JoinMisskeyNodeInfoUsageUsersImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? total});
@@ -1560,27 +1701,31 @@ abstract class _$$JoinMisskeyNodeInfoUsageUsersImplCopyWith<$Res>
 
 /// @nodoc
 class __$$JoinMisskeyNodeInfoUsageUsersImplCopyWithImpl<$Res>
-    extends _$JoinMisskeyNodeInfoUsageUsersCopyWithImpl<$Res,
-        _$JoinMisskeyNodeInfoUsageUsersImpl>
+    extends
+        _$JoinMisskeyNodeInfoUsageUsersCopyWithImpl<
+          $Res,
+          _$JoinMisskeyNodeInfoUsageUsersImpl
+        >
     implements _$$JoinMisskeyNodeInfoUsageUsersImplCopyWith<$Res> {
   __$$JoinMisskeyNodeInfoUsageUsersImplCopyWithImpl(
-      _$JoinMisskeyNodeInfoUsageUsersImpl _value,
-      $Res Function(_$JoinMisskeyNodeInfoUsageUsersImpl) _then)
-      : super(_value, _then);
+    _$JoinMisskeyNodeInfoUsageUsersImpl _value,
+    $Res Function(_$JoinMisskeyNodeInfoUsageUsersImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of JoinMisskeyNodeInfoUsageUsers
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? total = freezed,
-  }) {
-    return _then(_$JoinMisskeyNodeInfoUsageUsersImpl(
-      total: freezed == total
-          ? _value.total
-          : total // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ));
+  $Res call({Object? total = freezed}) {
+    return _then(
+      _$JoinMisskeyNodeInfoUsageUsersImpl(
+        total:
+            freezed == total
+                ? _value.total
+                : total // ignore: cast_nullable_to_non_nullable
+                    as int?,
+      ),
+    );
   }
 }
 
@@ -1591,8 +1736,8 @@ class _$JoinMisskeyNodeInfoUsageUsersImpl
   const _$JoinMisskeyNodeInfoUsageUsersImpl({this.total});
 
   factory _$JoinMisskeyNodeInfoUsageUsersImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$JoinMisskeyNodeInfoUsageUsersImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$JoinMisskeyNodeInfoUsageUsersImplFromJson(json);
 
   @override
   final int? total;
@@ -1620,15 +1765,15 @@ class _$JoinMisskeyNodeInfoUsageUsersImpl
   @override
   @pragma('vm:prefer-inline')
   _$$JoinMisskeyNodeInfoUsageUsersImplCopyWith<
-          _$JoinMisskeyNodeInfoUsageUsersImpl>
-      get copyWith => __$$JoinMisskeyNodeInfoUsageUsersImplCopyWithImpl<
-          _$JoinMisskeyNodeInfoUsageUsersImpl>(this, _$identity);
+    _$JoinMisskeyNodeInfoUsageUsersImpl
+  >
+  get copyWith => __$$JoinMisskeyNodeInfoUsageUsersImplCopyWithImpl<
+    _$JoinMisskeyNodeInfoUsageUsersImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$JoinMisskeyNodeInfoUsageUsersImplToJson(
-      this,
-    );
+    return _$$JoinMisskeyNodeInfoUsageUsersImplToJson(this);
   }
 }
 
@@ -1648,6 +1793,7 @@ abstract class _JoinMisskeyNodeInfoUsageUsers
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$JoinMisskeyNodeInfoUsageUsersImplCopyWith<
-          _$JoinMisskeyNodeInfoUsageUsersImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$JoinMisskeyNodeInfoUsageUsersImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }

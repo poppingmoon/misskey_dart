@@ -12,7 +12,8 @@ part of 'user.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 UserLite _$UserLiteFromJson(Map<String, dynamic> json) {
   return _UserLite.fromJson(json);
@@ -33,8 +34,7 @@ mixin _$UserLite {
   bool get isCat => throw _privateConstructorUsedError;
   UserInstanceInfo? get instance => throw _privateConstructorUsedError;
   @EmojisConverter()
-  Map<String, String> get emojis =>
-      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  Map<String, String> get emojis => throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   OnlineStatus? get onlineStatus => throw _privateConstructorUsedError;
   List<UserBadgeRole> get badgeRoles => throw _privateConstructorUsedError;
@@ -61,25 +61,26 @@ abstract class $UserLiteCopyWith<$Res> {
   factory $UserLiteCopyWith(UserLite value, $Res Function(UserLite) then) =
       _$UserLiteCopyWithImpl<$Res, UserLite>;
   @useResult
-  $Res call(
-      {String id,
-      String? name,
-      String username,
-      String? host,
-      @NullableUriConverter() Uri? avatarUrl,
-      String? avatarBlurhash,
-      List<UserAvatarDecoration> avatarDecorations,
-      bool isBot,
-      bool isCat,
-      UserInstanceInfo? instance,
-      @EmojisConverter() Map<String, String> emojis,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      OnlineStatus? onlineStatus,
-      List<UserBadgeRole> badgeRoles,
-      bool? requireSigninToViewContents,
-      @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
-      @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
-      bool? speakAsCat});
+  $Res call({
+    String id,
+    String? name,
+    String username,
+    String? host,
+    @NullableUriConverter() Uri? avatarUrl,
+    String? avatarBlurhash,
+    List<UserAvatarDecoration> avatarDecorations,
+    bool isBot,
+    bool isCat,
+    UserInstanceInfo? instance,
+    @EmojisConverter() Map<String, String> emojis,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    OnlineStatus? onlineStatus,
+    List<UserBadgeRole> badgeRoles,
+    bool? requireSigninToViewContents,
+    @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
+    @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
+    bool? speakAsCat,
+  });
 
   $UserInstanceInfoCopyWith<$Res>? get instance;
 }
@@ -117,76 +118,96 @@ class _$UserLiteCopyWithImpl<$Res, $Val extends UserLite>
     Object? makeNotesHiddenBefore = freezed,
     Object? speakAsCat = freezed,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      username: null == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String,
-      host: freezed == host
-          ? _value.host
-          : host // ignore: cast_nullable_to_non_nullable
-              as String?,
-      avatarUrl: freezed == avatarUrl
-          ? _value.avatarUrl
-          : avatarUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      avatarBlurhash: freezed == avatarBlurhash
-          ? _value.avatarBlurhash
-          : avatarBlurhash // ignore: cast_nullable_to_non_nullable
-              as String?,
-      avatarDecorations: null == avatarDecorations
-          ? _value.avatarDecorations
-          : avatarDecorations // ignore: cast_nullable_to_non_nullable
-              as List<UserAvatarDecoration>,
-      isBot: null == isBot
-          ? _value.isBot
-          : isBot // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isCat: null == isCat
-          ? _value.isCat
-          : isCat // ignore: cast_nullable_to_non_nullable
-              as bool,
-      instance: freezed == instance
-          ? _value.instance
-          : instance // ignore: cast_nullable_to_non_nullable
-              as UserInstanceInfo?,
-      emojis: null == emojis
-          ? _value.emojis
-          : emojis // ignore: cast_nullable_to_non_nullable
-              as Map<String, String>,
-      onlineStatus: freezed == onlineStatus
-          ? _value.onlineStatus
-          : onlineStatus // ignore: cast_nullable_to_non_nullable
-              as OnlineStatus?,
-      badgeRoles: null == badgeRoles
-          ? _value.badgeRoles
-          : badgeRoles // ignore: cast_nullable_to_non_nullable
-              as List<UserBadgeRole>,
-      requireSigninToViewContents: freezed == requireSigninToViewContents
-          ? _value.requireSigninToViewContents
-          : requireSigninToViewContents // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      makeNotesFollowersOnlyBefore: freezed == makeNotesFollowersOnlyBefore
-          ? _value.makeNotesFollowersOnlyBefore
-          : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
-              as HideBefore?,
-      makeNotesHiddenBefore: freezed == makeNotesHiddenBefore
-          ? _value.makeNotesHiddenBefore
-          : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
-              as HideBefore?,
-      speakAsCat: freezed == speakAsCat
-          ? _value.speakAsCat
-          : speakAsCat // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            name:
+                freezed == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            username:
+                null == username
+                    ? _value.username
+                    : username // ignore: cast_nullable_to_non_nullable
+                        as String,
+            host:
+                freezed == host
+                    ? _value.host
+                    : host // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            avatarUrl:
+                freezed == avatarUrl
+                    ? _value.avatarUrl
+                    : avatarUrl // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            avatarBlurhash:
+                freezed == avatarBlurhash
+                    ? _value.avatarBlurhash
+                    : avatarBlurhash // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            avatarDecorations:
+                null == avatarDecorations
+                    ? _value.avatarDecorations
+                    : avatarDecorations // ignore: cast_nullable_to_non_nullable
+                        as List<UserAvatarDecoration>,
+            isBot:
+                null == isBot
+                    ? _value.isBot
+                    : isBot // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            isCat:
+                null == isCat
+                    ? _value.isCat
+                    : isCat // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            instance:
+                freezed == instance
+                    ? _value.instance
+                    : instance // ignore: cast_nullable_to_non_nullable
+                        as UserInstanceInfo?,
+            emojis:
+                null == emojis
+                    ? _value.emojis
+                    : emojis // ignore: cast_nullable_to_non_nullable
+                        as Map<String, String>,
+            onlineStatus:
+                freezed == onlineStatus
+                    ? _value.onlineStatus
+                    : onlineStatus // ignore: cast_nullable_to_non_nullable
+                        as OnlineStatus?,
+            badgeRoles:
+                null == badgeRoles
+                    ? _value.badgeRoles
+                    : badgeRoles // ignore: cast_nullable_to_non_nullable
+                        as List<UserBadgeRole>,
+            requireSigninToViewContents:
+                freezed == requireSigninToViewContents
+                    ? _value.requireSigninToViewContents
+                    : requireSigninToViewContents // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            makeNotesFollowersOnlyBefore:
+                freezed == makeNotesFollowersOnlyBefore
+                    ? _value.makeNotesFollowersOnlyBefore
+                    : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
+                        as HideBefore?,
+            makeNotesHiddenBefore:
+                freezed == makeNotesHiddenBefore
+                    ? _value.makeNotesHiddenBefore
+                    : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
+                        as HideBefore?,
+            speakAsCat:
+                freezed == speakAsCat
+                    ? _value.speakAsCat
+                    : speakAsCat // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of UserLite
@@ -208,29 +229,31 @@ class _$UserLiteCopyWithImpl<$Res, $Val extends UserLite>
 abstract class _$$UserLiteImplCopyWith<$Res>
     implements $UserLiteCopyWith<$Res> {
   factory _$$UserLiteImplCopyWith(
-          _$UserLiteImpl value, $Res Function(_$UserLiteImpl) then) =
-      __$$UserLiteImplCopyWithImpl<$Res>;
+    _$UserLiteImpl value,
+    $Res Function(_$UserLiteImpl) then,
+  ) = __$$UserLiteImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      String? name,
-      String username,
-      String? host,
-      @NullableUriConverter() Uri? avatarUrl,
-      String? avatarBlurhash,
-      List<UserAvatarDecoration> avatarDecorations,
-      bool isBot,
-      bool isCat,
-      UserInstanceInfo? instance,
-      @EmojisConverter() Map<String, String> emojis,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      OnlineStatus? onlineStatus,
-      List<UserBadgeRole> badgeRoles,
-      bool? requireSigninToViewContents,
-      @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
-      @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
-      bool? speakAsCat});
+  $Res call({
+    String id,
+    String? name,
+    String username,
+    String? host,
+    @NullableUriConverter() Uri? avatarUrl,
+    String? avatarBlurhash,
+    List<UserAvatarDecoration> avatarDecorations,
+    bool isBot,
+    bool isCat,
+    UserInstanceInfo? instance,
+    @EmojisConverter() Map<String, String> emojis,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    OnlineStatus? onlineStatus,
+    List<UserBadgeRole> badgeRoles,
+    bool? requireSigninToViewContents,
+    @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
+    @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
+    bool? speakAsCat,
+  });
 
   @override
   $UserInstanceInfoCopyWith<$Res>? get instance;
@@ -241,8 +264,9 @@ class __$$UserLiteImplCopyWithImpl<$Res>
     extends _$UserLiteCopyWithImpl<$Res, _$UserLiteImpl>
     implements _$$UserLiteImplCopyWith<$Res> {
   __$$UserLiteImplCopyWithImpl(
-      _$UserLiteImpl _value, $Res Function(_$UserLiteImpl) _then)
-      : super(_value, _then);
+    _$UserLiteImpl _value,
+    $Res Function(_$UserLiteImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UserLite
   /// with the given fields replaced by the non-null parameter values.
@@ -267,104 +291,123 @@ class __$$UserLiteImplCopyWithImpl<$Res>
     Object? makeNotesHiddenBefore = freezed,
     Object? speakAsCat = freezed,
   }) {
-    return _then(_$UserLiteImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      username: null == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String,
-      host: freezed == host
-          ? _value.host
-          : host // ignore: cast_nullable_to_non_nullable
-              as String?,
-      avatarUrl: freezed == avatarUrl
-          ? _value.avatarUrl
-          : avatarUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      avatarBlurhash: freezed == avatarBlurhash
-          ? _value.avatarBlurhash
-          : avatarBlurhash // ignore: cast_nullable_to_non_nullable
-              as String?,
-      avatarDecorations: null == avatarDecorations
-          ? _value._avatarDecorations
-          : avatarDecorations // ignore: cast_nullable_to_non_nullable
-              as List<UserAvatarDecoration>,
-      isBot: null == isBot
-          ? _value.isBot
-          : isBot // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isCat: null == isCat
-          ? _value.isCat
-          : isCat // ignore: cast_nullable_to_non_nullable
-              as bool,
-      instance: freezed == instance
-          ? _value.instance
-          : instance // ignore: cast_nullable_to_non_nullable
-              as UserInstanceInfo?,
-      emojis: null == emojis
-          ? _value._emojis
-          : emojis // ignore: cast_nullable_to_non_nullable
-              as Map<String, String>,
-      onlineStatus: freezed == onlineStatus
-          ? _value.onlineStatus
-          : onlineStatus // ignore: cast_nullable_to_non_nullable
-              as OnlineStatus?,
-      badgeRoles: null == badgeRoles
-          ? _value._badgeRoles
-          : badgeRoles // ignore: cast_nullable_to_non_nullable
-              as List<UserBadgeRole>,
-      requireSigninToViewContents: freezed == requireSigninToViewContents
-          ? _value.requireSigninToViewContents
-          : requireSigninToViewContents // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      makeNotesFollowersOnlyBefore: freezed == makeNotesFollowersOnlyBefore
-          ? _value.makeNotesFollowersOnlyBefore
-          : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
-              as HideBefore?,
-      makeNotesHiddenBefore: freezed == makeNotesHiddenBefore
-          ? _value.makeNotesHiddenBefore
-          : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
-              as HideBefore?,
-      speakAsCat: freezed == speakAsCat
-          ? _value.speakAsCat
-          : speakAsCat // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+    return _then(
+      _$UserLiteImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        name:
+            freezed == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        username:
+            null == username
+                ? _value.username
+                : username // ignore: cast_nullable_to_non_nullable
+                    as String,
+        host:
+            freezed == host
+                ? _value.host
+                : host // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        avatarUrl:
+            freezed == avatarUrl
+                ? _value.avatarUrl
+                : avatarUrl // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        avatarBlurhash:
+            freezed == avatarBlurhash
+                ? _value.avatarBlurhash
+                : avatarBlurhash // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        avatarDecorations:
+            null == avatarDecorations
+                ? _value._avatarDecorations
+                : avatarDecorations // ignore: cast_nullable_to_non_nullable
+                    as List<UserAvatarDecoration>,
+        isBot:
+            null == isBot
+                ? _value.isBot
+                : isBot // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        isCat:
+            null == isCat
+                ? _value.isCat
+                : isCat // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        instance:
+            freezed == instance
+                ? _value.instance
+                : instance // ignore: cast_nullable_to_non_nullable
+                    as UserInstanceInfo?,
+        emojis:
+            null == emojis
+                ? _value._emojis
+                : emojis // ignore: cast_nullable_to_non_nullable
+                    as Map<String, String>,
+        onlineStatus:
+            freezed == onlineStatus
+                ? _value.onlineStatus
+                : onlineStatus // ignore: cast_nullable_to_non_nullable
+                    as OnlineStatus?,
+        badgeRoles:
+            null == badgeRoles
+                ? _value._badgeRoles
+                : badgeRoles // ignore: cast_nullable_to_non_nullable
+                    as List<UserBadgeRole>,
+        requireSigninToViewContents:
+            freezed == requireSigninToViewContents
+                ? _value.requireSigninToViewContents
+                : requireSigninToViewContents // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        makeNotesFollowersOnlyBefore:
+            freezed == makeNotesFollowersOnlyBefore
+                ? _value.makeNotesFollowersOnlyBefore
+                : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
+                    as HideBefore?,
+        makeNotesHiddenBefore:
+            freezed == makeNotesHiddenBefore
+                ? _value.makeNotesHiddenBefore
+                : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
+                    as HideBefore?,
+        speakAsCat:
+            freezed == speakAsCat
+                ? _value.speakAsCat
+                : speakAsCat // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$UserLiteImpl implements _UserLite {
-  const _$UserLiteImpl(
-      {required this.id,
-      this.name,
-      required this.username,
-      this.host,
-      @NullableUriConverter() this.avatarUrl,
-      this.avatarBlurhash,
-      final List<UserAvatarDecoration> avatarDecorations = const [],
-      this.isBot = false,
-      this.isCat = false,
-      this.instance,
-      @EmojisConverter() final Map<String, String> emojis = const {},
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      this.onlineStatus,
-      final List<UserBadgeRole> badgeRoles = const [],
-      this.requireSigninToViewContents,
-      @HideBeforeConverter() this.makeNotesFollowersOnlyBefore,
-      @HideBeforeConverter() this.makeNotesHiddenBefore,
-      this.speakAsCat})
-      : _avatarDecorations = avatarDecorations,
-        _emojis = emojis,
-        _badgeRoles = badgeRoles;
+  const _$UserLiteImpl({
+    required this.id,
+    this.name,
+    required this.username,
+    this.host,
+    @NullableUriConverter() this.avatarUrl,
+    this.avatarBlurhash,
+    final List<UserAvatarDecoration> avatarDecorations = const [],
+    this.isBot = false,
+    this.isCat = false,
+    this.instance,
+    @EmojisConverter() final Map<String, String> emojis = const {},
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    this.onlineStatus,
+    final List<UserBadgeRole> badgeRoles = const [],
+    this.requireSigninToViewContents,
+    @HideBeforeConverter() this.makeNotesFollowersOnlyBefore,
+    @HideBeforeConverter() this.makeNotesHiddenBefore,
+    this.speakAsCat,
+  }) : _avatarDecorations = avatarDecorations,
+       _emojis = emojis,
+       _badgeRoles = badgeRoles;
 
   factory _$UserLiteImpl.fromJson(Map<String, dynamic> json) =>
       _$$UserLiteImplFromJson(json);
@@ -410,7 +453,7 @@ class _$UserLiteImpl implements _UserLite {
     return EqualUnmodifiableMapView(_emojis);
   }
 
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final OnlineStatus? onlineStatus;
@@ -453,8 +496,10 @@ class _$UserLiteImpl implements _UserLite {
                 other.avatarUrl == avatarUrl) &&
             (identical(other.avatarBlurhash, avatarBlurhash) ||
                 other.avatarBlurhash == avatarBlurhash) &&
-            const DeepCollectionEquality()
-                .equals(other._avatarDecorations, _avatarDecorations) &&
+            const DeepCollectionEquality().equals(
+              other._avatarDecorations,
+              _avatarDecorations,
+            ) &&
             (identical(other.isBot, isBot) || other.isBot == isBot) &&
             (identical(other.isCat, isCat) || other.isCat == isCat) &&
             (identical(other.instance, instance) ||
@@ -462,14 +507,20 @@ class _$UserLiteImpl implements _UserLite {
             const DeepCollectionEquality().equals(other._emojis, _emojis) &&
             (identical(other.onlineStatus, onlineStatus) ||
                 other.onlineStatus == onlineStatus) &&
-            const DeepCollectionEquality()
-                .equals(other._badgeRoles, _badgeRoles) &&
-            (identical(other.requireSigninToViewContents,
-                    requireSigninToViewContents) ||
+            const DeepCollectionEquality().equals(
+              other._badgeRoles,
+              _badgeRoles,
+            ) &&
+            (identical(
+                  other.requireSigninToViewContents,
+                  requireSigninToViewContents,
+                ) ||
                 other.requireSigninToViewContents ==
                     requireSigninToViewContents) &&
-            (identical(other.makeNotesFollowersOnlyBefore,
-                    makeNotesFollowersOnlyBefore) ||
+            (identical(
+                  other.makeNotesFollowersOnlyBefore,
+                  makeNotesFollowersOnlyBefore,
+                ) ||
                 other.makeNotesFollowersOnlyBefore ==
                     makeNotesFollowersOnlyBefore) &&
             (identical(other.makeNotesHiddenBefore, makeNotesHiddenBefore) ||
@@ -481,24 +532,25 @@ class _$UserLiteImpl implements _UserLite {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      name,
-      username,
-      host,
-      avatarUrl,
-      avatarBlurhash,
-      const DeepCollectionEquality().hash(_avatarDecorations),
-      isBot,
-      isCat,
-      instance,
-      const DeepCollectionEquality().hash(_emojis),
-      onlineStatus,
-      const DeepCollectionEquality().hash(_badgeRoles),
-      requireSigninToViewContents,
-      makeNotesFollowersOnlyBefore,
-      makeNotesHiddenBefore,
-      speakAsCat);
+    runtimeType,
+    id,
+    name,
+    username,
+    host,
+    avatarUrl,
+    avatarBlurhash,
+    const DeepCollectionEquality().hash(_avatarDecorations),
+    isBot,
+    isCat,
+    instance,
+    const DeepCollectionEquality().hash(_emojis),
+    onlineStatus,
+    const DeepCollectionEquality().hash(_badgeRoles),
+    requireSigninToViewContents,
+    makeNotesFollowersOnlyBefore,
+    makeNotesHiddenBefore,
+    speakAsCat,
+  );
 
   /// Create a copy of UserLite
   /// with the given fields replaced by the non-null parameter values.
@@ -510,32 +562,31 @@ class _$UserLiteImpl implements _UserLite {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UserLiteImplToJson(
-      this,
-    );
+    return _$$UserLiteImplToJson(this);
   }
 }
 
 abstract class _UserLite implements UserLite {
-  const factory _UserLite(
-      {required final String id,
-      final String? name,
-      required final String username,
-      final String? host,
-      @NullableUriConverter() final Uri? avatarUrl,
-      final String? avatarBlurhash,
-      final List<UserAvatarDecoration> avatarDecorations,
-      final bool isBot,
-      final bool isCat,
-      final UserInstanceInfo? instance,
-      @EmojisConverter() final Map<String, String> emojis,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      final OnlineStatus? onlineStatus,
-      final List<UserBadgeRole> badgeRoles,
-      final bool? requireSigninToViewContents,
-      @HideBeforeConverter() final HideBefore? makeNotesFollowersOnlyBefore,
-      @HideBeforeConverter() final HideBefore? makeNotesHiddenBefore,
-      final bool? speakAsCat}) = _$UserLiteImpl;
+  const factory _UserLite({
+    required final String id,
+    final String? name,
+    required final String username,
+    final String? host,
+    @NullableUriConverter() final Uri? avatarUrl,
+    final String? avatarBlurhash,
+    final List<UserAvatarDecoration> avatarDecorations,
+    final bool isBot,
+    final bool isCat,
+    final UserInstanceInfo? instance,
+    @EmojisConverter() final Map<String, String> emojis,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    final OnlineStatus? onlineStatus,
+    final List<UserBadgeRole> badgeRoles,
+    final bool? requireSigninToViewContents,
+    @HideBeforeConverter() final HideBefore? makeNotesFollowersOnlyBefore,
+    @HideBeforeConverter() final HideBefore? makeNotesHiddenBefore,
+    final bool? speakAsCat,
+  }) = _$UserLiteImpl;
 
   factory _UserLite.fromJson(Map<String, dynamic> json) =
       _$UserLiteImpl.fromJson;
@@ -607,8 +658,7 @@ mixin _$UserDetailedNotMe {
   bool get isCat => throw _privateConstructorUsedError;
   UserInstanceInfo? get instance => throw _privateConstructorUsedError;
   @EmojisConverter()
-  Map<String, String> get emojis =>
-      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  Map<String, String> get emojis => throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   OnlineStatus? get onlineStatus => throw _privateConstructorUsedError;
   List<UserBadgeRole> get badgeRoles => throw _privateConstructorUsedError;
@@ -648,8 +698,7 @@ mixin _$UserDetailedNotMe {
   List<MutualLinkSection>? get mutualLinkSections =>
       throw _privateConstructorUsedError; // CherryPick 4.3.0 or newer returns String if the count count is not visible
   @IntConverter()
-  int get followersCount =>
-      throw _privateConstructorUsedError; // CherryPick 4.3.0 or newer returns String if the count count is not visible
+  int get followersCount => throw _privateConstructorUsedError; // CherryPick 4.3.0 or newer returns String if the count count is not visible
   @IntConverter()
   int get followingCount => throw _privateConstructorUsedError;
   int get notesCount => throw _privateConstructorUsedError;
@@ -662,14 +711,11 @@ mixin _$UserDetailedNotMe {
       throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   @Deprecated("removed at 2023.12.0")
-  FFVisibility? get ffVisibility =>
-      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  FFVisibility? get ffVisibility => throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-  FFVisibility? get followersVisibility =>
-      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  FFVisibility? get followersVisibility => throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-  FFVisibility? get followingVisibility =>
-      throw _privateConstructorUsedError; // Removed in Misskey 2024.10.0
+  FFVisibility? get followingVisibility => throw _privateConstructorUsedError; // Removed in Misskey 2024.10.0
   bool? get twoFactorEnabled =>
       throw _privateConstructorUsedError; // Added in Misskey 11.25.0, Removed in Misskey 2024.10.0
   bool? get usePasswordLessLogin =>
@@ -692,68 +738,70 @@ mixin _$UserDetailedNotMe {
 /// @nodoc
 abstract class $UserDetailedNotMeCopyWith<$Res> {
   factory $UserDetailedNotMeCopyWith(
-          UserDetailedNotMe value, $Res Function(UserDetailedNotMe) then) =
-      _$UserDetailedNotMeCopyWithImpl<$Res, UserDetailedNotMe>;
+    UserDetailedNotMe value,
+    $Res Function(UserDetailedNotMe) then,
+  ) = _$UserDetailedNotMeCopyWithImpl<$Res, UserDetailedNotMe>;
   @useResult
-  $Res call(
-      {String id,
-      String? name,
-      String username,
-      String? host,
-      @NullableUriConverter() Uri? avatarUrl,
-      String? avatarBlurhash,
-      List<UserAvatarDecoration> avatarDecorations,
-      bool isBot,
-      bool isCat,
-      UserInstanceInfo? instance,
-      @EmojisConverter() Map<String, String> emojis,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      OnlineStatus? onlineStatus,
-      List<UserBadgeRole> badgeRoles,
-      bool? requireSigninToViewContents,
-      @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
-      @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
-      bool? speakAsCat,
-      @NullableUriConverter() Uri? url,
-      @NullableUriConverter() Uri? uri,
-      @NullableUriConverter() Uri? movedTo,
-      List<String>? alsoKnownAs,
-      @DateTimeConverter() DateTime createdAt,
-      @NullableDateTimeConverter() DateTime? updatedAt,
-      @NullableDateTimeConverter() DateTime? lastFetchedAt,
-      @NullableUriConverter() Uri? bannerUrl,
-      String? bannerBlurhash,
-      bool isLocked,
-      bool isSilenced,
-      bool isSuspended,
-      String? description,
-      String? location,
-      @NullableDateTimeConverter() DateTime? birthday,
-      String? lang,
-      List<UserField>? fields,
-      List<String> verifiedLinks,
-      List<MutualLinkSection>? mutualLinkSections,
-      @IntConverter() int followersCount,
-      @IntConverter() int followingCount,
-      int notesCount,
-      List<String>? pinnedNoteIds,
-      List<Note>? pinnedNotes,
-      String? pinnedPageId,
-      Map<String, dynamic>? pinnedPage,
-      bool publicReactions,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      @Deprecated("removed at 2023.12.0")
-      FFVisibility? ffVisibility,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      FFVisibility? followersVisibility,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      FFVisibility? followingVisibility,
-      bool? twoFactorEnabled,
-      bool? usePasswordLessLogin,
-      bool? securityKeys,
-      List<UserRole>? roles,
-      String? memo,
-      String? moderationNote});
+  $Res call({
+    String id,
+    String? name,
+    String username,
+    String? host,
+    @NullableUriConverter() Uri? avatarUrl,
+    String? avatarBlurhash,
+    List<UserAvatarDecoration> avatarDecorations,
+    bool isBot,
+    bool isCat,
+    UserInstanceInfo? instance,
+    @EmojisConverter() Map<String, String> emojis,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    OnlineStatus? onlineStatus,
+    List<UserBadgeRole> badgeRoles,
+    bool? requireSigninToViewContents,
+    @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
+    @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
+    bool? speakAsCat,
+    @NullableUriConverter() Uri? url,
+    @NullableUriConverter() Uri? uri,
+    @NullableUriConverter() Uri? movedTo,
+    List<String>? alsoKnownAs,
+    @DateTimeConverter() DateTime createdAt,
+    @NullableDateTimeConverter() DateTime? updatedAt,
+    @NullableDateTimeConverter() DateTime? lastFetchedAt,
+    @NullableUriConverter() Uri? bannerUrl,
+    String? bannerBlurhash,
+    bool isLocked,
+    bool isSilenced,
+    bool isSuspended,
+    String? description,
+    String? location,
+    @NullableDateTimeConverter() DateTime? birthday,
+    String? lang,
+    List<UserField>? fields,
+    List<String> verifiedLinks,
+    List<MutualLinkSection>? mutualLinkSections,
+    @IntConverter() int followersCount,
+    @IntConverter() int followingCount,
+    int notesCount,
+    List<String>? pinnedNoteIds,
+    List<Note>? pinnedNotes,
+    String? pinnedPageId,
+    Map<String, dynamic>? pinnedPage,
+    bool publicReactions,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    @Deprecated("removed at 2023.12.0")
+    FFVisibility? ffVisibility,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    FFVisibility? followersVisibility,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    FFVisibility? followingVisibility,
+    bool? twoFactorEnabled,
+    bool? usePasswordLessLogin,
+    bool? securityKeys,
+    List<UserRole>? roles,
+    String? memo,
+    String? moderationNote,
+  });
 
   $UserInstanceInfoCopyWith<$Res>? get instance;
 }
@@ -827,220 +875,276 @@ class _$UserDetailedNotMeCopyWithImpl<$Res, $Val extends UserDetailedNotMe>
     Object? memo = freezed,
     Object? moderationNote = freezed,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      username: null == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String,
-      host: freezed == host
-          ? _value.host
-          : host // ignore: cast_nullable_to_non_nullable
-              as String?,
-      avatarUrl: freezed == avatarUrl
-          ? _value.avatarUrl
-          : avatarUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      avatarBlurhash: freezed == avatarBlurhash
-          ? _value.avatarBlurhash
-          : avatarBlurhash // ignore: cast_nullable_to_non_nullable
-              as String?,
-      avatarDecorations: null == avatarDecorations
-          ? _value.avatarDecorations
-          : avatarDecorations // ignore: cast_nullable_to_non_nullable
-              as List<UserAvatarDecoration>,
-      isBot: null == isBot
-          ? _value.isBot
-          : isBot // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isCat: null == isCat
-          ? _value.isCat
-          : isCat // ignore: cast_nullable_to_non_nullable
-              as bool,
-      instance: freezed == instance
-          ? _value.instance
-          : instance // ignore: cast_nullable_to_non_nullable
-              as UserInstanceInfo?,
-      emojis: null == emojis
-          ? _value.emojis
-          : emojis // ignore: cast_nullable_to_non_nullable
-              as Map<String, String>,
-      onlineStatus: freezed == onlineStatus
-          ? _value.onlineStatus
-          : onlineStatus // ignore: cast_nullable_to_non_nullable
-              as OnlineStatus?,
-      badgeRoles: null == badgeRoles
-          ? _value.badgeRoles
-          : badgeRoles // ignore: cast_nullable_to_non_nullable
-              as List<UserBadgeRole>,
-      requireSigninToViewContents: freezed == requireSigninToViewContents
-          ? _value.requireSigninToViewContents
-          : requireSigninToViewContents // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      makeNotesFollowersOnlyBefore: freezed == makeNotesFollowersOnlyBefore
-          ? _value.makeNotesFollowersOnlyBefore
-          : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
-              as HideBefore?,
-      makeNotesHiddenBefore: freezed == makeNotesHiddenBefore
-          ? _value.makeNotesHiddenBefore
-          : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
-              as HideBefore?,
-      speakAsCat: freezed == speakAsCat
-          ? _value.speakAsCat
-          : speakAsCat // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      uri: freezed == uri
-          ? _value.uri
-          : uri // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      movedTo: freezed == movedTo
-          ? _value.movedTo
-          : movedTo // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      alsoKnownAs: freezed == alsoKnownAs
-          ? _value.alsoKnownAs
-          : alsoKnownAs // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedAt: freezed == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      lastFetchedAt: freezed == lastFetchedAt
-          ? _value.lastFetchedAt
-          : lastFetchedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      bannerUrl: freezed == bannerUrl
-          ? _value.bannerUrl
-          : bannerUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      bannerBlurhash: freezed == bannerBlurhash
-          ? _value.bannerBlurhash
-          : bannerBlurhash // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isLocked: null == isLocked
-          ? _value.isLocked
-          : isLocked // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isSilenced: null == isSilenced
-          ? _value.isSilenced
-          : isSilenced // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isSuspended: null == isSuspended
-          ? _value.isSuspended
-          : isSuspended // ignore: cast_nullable_to_non_nullable
-              as bool,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      location: freezed == location
-          ? _value.location
-          : location // ignore: cast_nullable_to_non_nullable
-              as String?,
-      birthday: freezed == birthday
-          ? _value.birthday
-          : birthday // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      lang: freezed == lang
-          ? _value.lang
-          : lang // ignore: cast_nullable_to_non_nullable
-              as String?,
-      fields: freezed == fields
-          ? _value.fields
-          : fields // ignore: cast_nullable_to_non_nullable
-              as List<UserField>?,
-      verifiedLinks: null == verifiedLinks
-          ? _value.verifiedLinks
-          : verifiedLinks // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      mutualLinkSections: freezed == mutualLinkSections
-          ? _value.mutualLinkSections
-          : mutualLinkSections // ignore: cast_nullable_to_non_nullable
-              as List<MutualLinkSection>?,
-      followersCount: null == followersCount
-          ? _value.followersCount
-          : followersCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      followingCount: null == followingCount
-          ? _value.followingCount
-          : followingCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      notesCount: null == notesCount
-          ? _value.notesCount
-          : notesCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      pinnedNoteIds: freezed == pinnedNoteIds
-          ? _value.pinnedNoteIds
-          : pinnedNoteIds // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      pinnedNotes: freezed == pinnedNotes
-          ? _value.pinnedNotes
-          : pinnedNotes // ignore: cast_nullable_to_non_nullable
-              as List<Note>?,
-      pinnedPageId: freezed == pinnedPageId
-          ? _value.pinnedPageId
-          : pinnedPageId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      pinnedPage: freezed == pinnedPage
-          ? _value.pinnedPage
-          : pinnedPage // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
-      publicReactions: null == publicReactions
-          ? _value.publicReactions
-          : publicReactions // ignore: cast_nullable_to_non_nullable
-              as bool,
-      ffVisibility: freezed == ffVisibility
-          ? _value.ffVisibility
-          : ffVisibility // ignore: cast_nullable_to_non_nullable
-              as FFVisibility?,
-      followersVisibility: freezed == followersVisibility
-          ? _value.followersVisibility
-          : followersVisibility // ignore: cast_nullable_to_non_nullable
-              as FFVisibility?,
-      followingVisibility: freezed == followingVisibility
-          ? _value.followingVisibility
-          : followingVisibility // ignore: cast_nullable_to_non_nullable
-              as FFVisibility?,
-      twoFactorEnabled: freezed == twoFactorEnabled
-          ? _value.twoFactorEnabled
-          : twoFactorEnabled // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      usePasswordLessLogin: freezed == usePasswordLessLogin
-          ? _value.usePasswordLessLogin
-          : usePasswordLessLogin // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      securityKeys: freezed == securityKeys
-          ? _value.securityKeys
-          : securityKeys // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      roles: freezed == roles
-          ? _value.roles
-          : roles // ignore: cast_nullable_to_non_nullable
-              as List<UserRole>?,
-      memo: freezed == memo
-          ? _value.memo
-          : memo // ignore: cast_nullable_to_non_nullable
-              as String?,
-      moderationNote: freezed == moderationNote
-          ? _value.moderationNote
-          : moderationNote // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            name:
+                freezed == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            username:
+                null == username
+                    ? _value.username
+                    : username // ignore: cast_nullable_to_non_nullable
+                        as String,
+            host:
+                freezed == host
+                    ? _value.host
+                    : host // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            avatarUrl:
+                freezed == avatarUrl
+                    ? _value.avatarUrl
+                    : avatarUrl // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            avatarBlurhash:
+                freezed == avatarBlurhash
+                    ? _value.avatarBlurhash
+                    : avatarBlurhash // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            avatarDecorations:
+                null == avatarDecorations
+                    ? _value.avatarDecorations
+                    : avatarDecorations // ignore: cast_nullable_to_non_nullable
+                        as List<UserAvatarDecoration>,
+            isBot:
+                null == isBot
+                    ? _value.isBot
+                    : isBot // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            isCat:
+                null == isCat
+                    ? _value.isCat
+                    : isCat // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            instance:
+                freezed == instance
+                    ? _value.instance
+                    : instance // ignore: cast_nullable_to_non_nullable
+                        as UserInstanceInfo?,
+            emojis:
+                null == emojis
+                    ? _value.emojis
+                    : emojis // ignore: cast_nullable_to_non_nullable
+                        as Map<String, String>,
+            onlineStatus:
+                freezed == onlineStatus
+                    ? _value.onlineStatus
+                    : onlineStatus // ignore: cast_nullable_to_non_nullable
+                        as OnlineStatus?,
+            badgeRoles:
+                null == badgeRoles
+                    ? _value.badgeRoles
+                    : badgeRoles // ignore: cast_nullable_to_non_nullable
+                        as List<UserBadgeRole>,
+            requireSigninToViewContents:
+                freezed == requireSigninToViewContents
+                    ? _value.requireSigninToViewContents
+                    : requireSigninToViewContents // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            makeNotesFollowersOnlyBefore:
+                freezed == makeNotesFollowersOnlyBefore
+                    ? _value.makeNotesFollowersOnlyBefore
+                    : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
+                        as HideBefore?,
+            makeNotesHiddenBefore:
+                freezed == makeNotesHiddenBefore
+                    ? _value.makeNotesHiddenBefore
+                    : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
+                        as HideBefore?,
+            speakAsCat:
+                freezed == speakAsCat
+                    ? _value.speakAsCat
+                    : speakAsCat // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            url:
+                freezed == url
+                    ? _value.url
+                    : url // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            uri:
+                freezed == uri
+                    ? _value.uri
+                    : uri // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            movedTo:
+                freezed == movedTo
+                    ? _value.movedTo
+                    : movedTo // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            alsoKnownAs:
+                freezed == alsoKnownAs
+                    ? _value.alsoKnownAs
+                    : alsoKnownAs // ignore: cast_nullable_to_non_nullable
+                        as List<String>?,
+            createdAt:
+                null == createdAt
+                    ? _value.createdAt
+                    : createdAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            updatedAt:
+                freezed == updatedAt
+                    ? _value.updatedAt
+                    : updatedAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            lastFetchedAt:
+                freezed == lastFetchedAt
+                    ? _value.lastFetchedAt
+                    : lastFetchedAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            bannerUrl:
+                freezed == bannerUrl
+                    ? _value.bannerUrl
+                    : bannerUrl // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            bannerBlurhash:
+                freezed == bannerBlurhash
+                    ? _value.bannerBlurhash
+                    : bannerBlurhash // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            isLocked:
+                null == isLocked
+                    ? _value.isLocked
+                    : isLocked // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            isSilenced:
+                null == isSilenced
+                    ? _value.isSilenced
+                    : isSilenced // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            isSuspended:
+                null == isSuspended
+                    ? _value.isSuspended
+                    : isSuspended // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            description:
+                freezed == description
+                    ? _value.description
+                    : description // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            location:
+                freezed == location
+                    ? _value.location
+                    : location // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            birthday:
+                freezed == birthday
+                    ? _value.birthday
+                    : birthday // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            lang:
+                freezed == lang
+                    ? _value.lang
+                    : lang // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            fields:
+                freezed == fields
+                    ? _value.fields
+                    : fields // ignore: cast_nullable_to_non_nullable
+                        as List<UserField>?,
+            verifiedLinks:
+                null == verifiedLinks
+                    ? _value.verifiedLinks
+                    : verifiedLinks // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+            mutualLinkSections:
+                freezed == mutualLinkSections
+                    ? _value.mutualLinkSections
+                    : mutualLinkSections // ignore: cast_nullable_to_non_nullable
+                        as List<MutualLinkSection>?,
+            followersCount:
+                null == followersCount
+                    ? _value.followersCount
+                    : followersCount // ignore: cast_nullable_to_non_nullable
+                        as int,
+            followingCount:
+                null == followingCount
+                    ? _value.followingCount
+                    : followingCount // ignore: cast_nullable_to_non_nullable
+                        as int,
+            notesCount:
+                null == notesCount
+                    ? _value.notesCount
+                    : notesCount // ignore: cast_nullable_to_non_nullable
+                        as int,
+            pinnedNoteIds:
+                freezed == pinnedNoteIds
+                    ? _value.pinnedNoteIds
+                    : pinnedNoteIds // ignore: cast_nullable_to_non_nullable
+                        as List<String>?,
+            pinnedNotes:
+                freezed == pinnedNotes
+                    ? _value.pinnedNotes
+                    : pinnedNotes // ignore: cast_nullable_to_non_nullable
+                        as List<Note>?,
+            pinnedPageId:
+                freezed == pinnedPageId
+                    ? _value.pinnedPageId
+                    : pinnedPageId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            pinnedPage:
+                freezed == pinnedPage
+                    ? _value.pinnedPage
+                    : pinnedPage // ignore: cast_nullable_to_non_nullable
+                        as Map<String, dynamic>?,
+            publicReactions:
+                null == publicReactions
+                    ? _value.publicReactions
+                    : publicReactions // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            ffVisibility:
+                freezed == ffVisibility
+                    ? _value.ffVisibility
+                    : ffVisibility // ignore: cast_nullable_to_non_nullable
+                        as FFVisibility?,
+            followersVisibility:
+                freezed == followersVisibility
+                    ? _value.followersVisibility
+                    : followersVisibility // ignore: cast_nullable_to_non_nullable
+                        as FFVisibility?,
+            followingVisibility:
+                freezed == followingVisibility
+                    ? _value.followingVisibility
+                    : followingVisibility // ignore: cast_nullable_to_non_nullable
+                        as FFVisibility?,
+            twoFactorEnabled:
+                freezed == twoFactorEnabled
+                    ? _value.twoFactorEnabled
+                    : twoFactorEnabled // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            usePasswordLessLogin:
+                freezed == usePasswordLessLogin
+                    ? _value.usePasswordLessLogin
+                    : usePasswordLessLogin // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            securityKeys:
+                freezed == securityKeys
+                    ? _value.securityKeys
+                    : securityKeys // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            roles:
+                freezed == roles
+                    ? _value.roles
+                    : roles // ignore: cast_nullable_to_non_nullable
+                        as List<UserRole>?,
+            memo:
+                freezed == memo
+                    ? _value.memo
+                    : memo // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            moderationNote:
+                freezed == moderationNote
+                    ? _value.moderationNote
+                    : moderationNote // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of UserDetailedNotMe
@@ -1061,70 +1165,72 @@ class _$UserDetailedNotMeCopyWithImpl<$Res, $Val extends UserDetailedNotMe>
 /// @nodoc
 abstract class _$$UserDetailedNotMeImplCopyWith<$Res>
     implements $UserDetailedNotMeCopyWith<$Res> {
-  factory _$$UserDetailedNotMeImplCopyWith(_$UserDetailedNotMeImpl value,
-          $Res Function(_$UserDetailedNotMeImpl) then) =
-      __$$UserDetailedNotMeImplCopyWithImpl<$Res>;
+  factory _$$UserDetailedNotMeImplCopyWith(
+    _$UserDetailedNotMeImpl value,
+    $Res Function(_$UserDetailedNotMeImpl) then,
+  ) = __$$UserDetailedNotMeImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      String? name,
-      String username,
-      String? host,
-      @NullableUriConverter() Uri? avatarUrl,
-      String? avatarBlurhash,
-      List<UserAvatarDecoration> avatarDecorations,
-      bool isBot,
-      bool isCat,
-      UserInstanceInfo? instance,
-      @EmojisConverter() Map<String, String> emojis,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      OnlineStatus? onlineStatus,
-      List<UserBadgeRole> badgeRoles,
-      bool? requireSigninToViewContents,
-      @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
-      @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
-      bool? speakAsCat,
-      @NullableUriConverter() Uri? url,
-      @NullableUriConverter() Uri? uri,
-      @NullableUriConverter() Uri? movedTo,
-      List<String>? alsoKnownAs,
-      @DateTimeConverter() DateTime createdAt,
-      @NullableDateTimeConverter() DateTime? updatedAt,
-      @NullableDateTimeConverter() DateTime? lastFetchedAt,
-      @NullableUriConverter() Uri? bannerUrl,
-      String? bannerBlurhash,
-      bool isLocked,
-      bool isSilenced,
-      bool isSuspended,
-      String? description,
-      String? location,
-      @NullableDateTimeConverter() DateTime? birthday,
-      String? lang,
-      List<UserField>? fields,
-      List<String> verifiedLinks,
-      List<MutualLinkSection>? mutualLinkSections,
-      @IntConverter() int followersCount,
-      @IntConverter() int followingCount,
-      int notesCount,
-      List<String>? pinnedNoteIds,
-      List<Note>? pinnedNotes,
-      String? pinnedPageId,
-      Map<String, dynamic>? pinnedPage,
-      bool publicReactions,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      @Deprecated("removed at 2023.12.0")
-      FFVisibility? ffVisibility,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      FFVisibility? followersVisibility,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      FFVisibility? followingVisibility,
-      bool? twoFactorEnabled,
-      bool? usePasswordLessLogin,
-      bool? securityKeys,
-      List<UserRole>? roles,
-      String? memo,
-      String? moderationNote});
+  $Res call({
+    String id,
+    String? name,
+    String username,
+    String? host,
+    @NullableUriConverter() Uri? avatarUrl,
+    String? avatarBlurhash,
+    List<UserAvatarDecoration> avatarDecorations,
+    bool isBot,
+    bool isCat,
+    UserInstanceInfo? instance,
+    @EmojisConverter() Map<String, String> emojis,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    OnlineStatus? onlineStatus,
+    List<UserBadgeRole> badgeRoles,
+    bool? requireSigninToViewContents,
+    @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
+    @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
+    bool? speakAsCat,
+    @NullableUriConverter() Uri? url,
+    @NullableUriConverter() Uri? uri,
+    @NullableUriConverter() Uri? movedTo,
+    List<String>? alsoKnownAs,
+    @DateTimeConverter() DateTime createdAt,
+    @NullableDateTimeConverter() DateTime? updatedAt,
+    @NullableDateTimeConverter() DateTime? lastFetchedAt,
+    @NullableUriConverter() Uri? bannerUrl,
+    String? bannerBlurhash,
+    bool isLocked,
+    bool isSilenced,
+    bool isSuspended,
+    String? description,
+    String? location,
+    @NullableDateTimeConverter() DateTime? birthday,
+    String? lang,
+    List<UserField>? fields,
+    List<String> verifiedLinks,
+    List<MutualLinkSection>? mutualLinkSections,
+    @IntConverter() int followersCount,
+    @IntConverter() int followingCount,
+    int notesCount,
+    List<String>? pinnedNoteIds,
+    List<Note>? pinnedNotes,
+    String? pinnedPageId,
+    Map<String, dynamic>? pinnedPage,
+    bool publicReactions,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    @Deprecated("removed at 2023.12.0")
+    FFVisibility? ffVisibility,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    FFVisibility? followersVisibility,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    FFVisibility? followingVisibility,
+    bool? twoFactorEnabled,
+    bool? usePasswordLessLogin,
+    bool? securityKeys,
+    List<UserRole>? roles,
+    String? memo,
+    String? moderationNote,
+  });
 
   @override
   $UserInstanceInfoCopyWith<$Res>? get instance;
@@ -1134,9 +1240,10 @@ abstract class _$$UserDetailedNotMeImplCopyWith<$Res>
 class __$$UserDetailedNotMeImplCopyWithImpl<$Res>
     extends _$UserDetailedNotMeCopyWithImpl<$Res, _$UserDetailedNotMeImpl>
     implements _$$UserDetailedNotMeImplCopyWith<$Res> {
-  __$$UserDetailedNotMeImplCopyWithImpl(_$UserDetailedNotMeImpl _value,
-      $Res Function(_$UserDetailedNotMeImpl) _then)
-      : super(_value, _then);
+  __$$UserDetailedNotMeImplCopyWithImpl(
+    _$UserDetailedNotMeImpl _value,
+    $Res Function(_$UserDetailedNotMeImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UserDetailedNotMe
   /// with the given fields replaced by the non-null parameter values.
@@ -1197,296 +1304,351 @@ class __$$UserDetailedNotMeImplCopyWithImpl<$Res>
     Object? memo = freezed,
     Object? moderationNote = freezed,
   }) {
-    return _then(_$UserDetailedNotMeImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      username: null == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String,
-      host: freezed == host
-          ? _value.host
-          : host // ignore: cast_nullable_to_non_nullable
-              as String?,
-      avatarUrl: freezed == avatarUrl
-          ? _value.avatarUrl
-          : avatarUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      avatarBlurhash: freezed == avatarBlurhash
-          ? _value.avatarBlurhash
-          : avatarBlurhash // ignore: cast_nullable_to_non_nullable
-              as String?,
-      avatarDecorations: null == avatarDecorations
-          ? _value._avatarDecorations
-          : avatarDecorations // ignore: cast_nullable_to_non_nullable
-              as List<UserAvatarDecoration>,
-      isBot: null == isBot
-          ? _value.isBot
-          : isBot // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isCat: null == isCat
-          ? _value.isCat
-          : isCat // ignore: cast_nullable_to_non_nullable
-              as bool,
-      instance: freezed == instance
-          ? _value.instance
-          : instance // ignore: cast_nullable_to_non_nullable
-              as UserInstanceInfo?,
-      emojis: null == emojis
-          ? _value._emojis
-          : emojis // ignore: cast_nullable_to_non_nullable
-              as Map<String, String>,
-      onlineStatus: freezed == onlineStatus
-          ? _value.onlineStatus
-          : onlineStatus // ignore: cast_nullable_to_non_nullable
-              as OnlineStatus?,
-      badgeRoles: null == badgeRoles
-          ? _value._badgeRoles
-          : badgeRoles // ignore: cast_nullable_to_non_nullable
-              as List<UserBadgeRole>,
-      requireSigninToViewContents: freezed == requireSigninToViewContents
-          ? _value.requireSigninToViewContents
-          : requireSigninToViewContents // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      makeNotesFollowersOnlyBefore: freezed == makeNotesFollowersOnlyBefore
-          ? _value.makeNotesFollowersOnlyBefore
-          : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
-              as HideBefore?,
-      makeNotesHiddenBefore: freezed == makeNotesHiddenBefore
-          ? _value.makeNotesHiddenBefore
-          : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
-              as HideBefore?,
-      speakAsCat: freezed == speakAsCat
-          ? _value.speakAsCat
-          : speakAsCat // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      uri: freezed == uri
-          ? _value.uri
-          : uri // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      movedTo: freezed == movedTo
-          ? _value.movedTo
-          : movedTo // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      alsoKnownAs: freezed == alsoKnownAs
-          ? _value._alsoKnownAs
-          : alsoKnownAs // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedAt: freezed == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      lastFetchedAt: freezed == lastFetchedAt
-          ? _value.lastFetchedAt
-          : lastFetchedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      bannerUrl: freezed == bannerUrl
-          ? _value.bannerUrl
-          : bannerUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      bannerBlurhash: freezed == bannerBlurhash
-          ? _value.bannerBlurhash
-          : bannerBlurhash // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isLocked: null == isLocked
-          ? _value.isLocked
-          : isLocked // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isSilenced: null == isSilenced
-          ? _value.isSilenced
-          : isSilenced // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isSuspended: null == isSuspended
-          ? _value.isSuspended
-          : isSuspended // ignore: cast_nullable_to_non_nullable
-              as bool,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      location: freezed == location
-          ? _value.location
-          : location // ignore: cast_nullable_to_non_nullable
-              as String?,
-      birthday: freezed == birthday
-          ? _value.birthday
-          : birthday // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      lang: freezed == lang
-          ? _value.lang
-          : lang // ignore: cast_nullable_to_non_nullable
-              as String?,
-      fields: freezed == fields
-          ? _value._fields
-          : fields // ignore: cast_nullable_to_non_nullable
-              as List<UserField>?,
-      verifiedLinks: null == verifiedLinks
-          ? _value._verifiedLinks
-          : verifiedLinks // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      mutualLinkSections: freezed == mutualLinkSections
-          ? _value._mutualLinkSections
-          : mutualLinkSections // ignore: cast_nullable_to_non_nullable
-              as List<MutualLinkSection>?,
-      followersCount: null == followersCount
-          ? _value.followersCount
-          : followersCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      followingCount: null == followingCount
-          ? _value.followingCount
-          : followingCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      notesCount: null == notesCount
-          ? _value.notesCount
-          : notesCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      pinnedNoteIds: freezed == pinnedNoteIds
-          ? _value._pinnedNoteIds
-          : pinnedNoteIds // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      pinnedNotes: freezed == pinnedNotes
-          ? _value._pinnedNotes
-          : pinnedNotes // ignore: cast_nullable_to_non_nullable
-              as List<Note>?,
-      pinnedPageId: freezed == pinnedPageId
-          ? _value.pinnedPageId
-          : pinnedPageId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      pinnedPage: freezed == pinnedPage
-          ? _value._pinnedPage
-          : pinnedPage // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
-      publicReactions: null == publicReactions
-          ? _value.publicReactions
-          : publicReactions // ignore: cast_nullable_to_non_nullable
-              as bool,
-      ffVisibility: freezed == ffVisibility
-          ? _value.ffVisibility
-          : ffVisibility // ignore: cast_nullable_to_non_nullable
-              as FFVisibility?,
-      followersVisibility: freezed == followersVisibility
-          ? _value.followersVisibility
-          : followersVisibility // ignore: cast_nullable_to_non_nullable
-              as FFVisibility?,
-      followingVisibility: freezed == followingVisibility
-          ? _value.followingVisibility
-          : followingVisibility // ignore: cast_nullable_to_non_nullable
-              as FFVisibility?,
-      twoFactorEnabled: freezed == twoFactorEnabled
-          ? _value.twoFactorEnabled
-          : twoFactorEnabled // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      usePasswordLessLogin: freezed == usePasswordLessLogin
-          ? _value.usePasswordLessLogin
-          : usePasswordLessLogin // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      securityKeys: freezed == securityKeys
-          ? _value.securityKeys
-          : securityKeys // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      roles: freezed == roles
-          ? _value._roles
-          : roles // ignore: cast_nullable_to_non_nullable
-              as List<UserRole>?,
-      memo: freezed == memo
-          ? _value.memo
-          : memo // ignore: cast_nullable_to_non_nullable
-              as String?,
-      moderationNote: freezed == moderationNote
-          ? _value.moderationNote
-          : moderationNote // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$UserDetailedNotMeImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        name:
+            freezed == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        username:
+            null == username
+                ? _value.username
+                : username // ignore: cast_nullable_to_non_nullable
+                    as String,
+        host:
+            freezed == host
+                ? _value.host
+                : host // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        avatarUrl:
+            freezed == avatarUrl
+                ? _value.avatarUrl
+                : avatarUrl // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        avatarBlurhash:
+            freezed == avatarBlurhash
+                ? _value.avatarBlurhash
+                : avatarBlurhash // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        avatarDecorations:
+            null == avatarDecorations
+                ? _value._avatarDecorations
+                : avatarDecorations // ignore: cast_nullable_to_non_nullable
+                    as List<UserAvatarDecoration>,
+        isBot:
+            null == isBot
+                ? _value.isBot
+                : isBot // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        isCat:
+            null == isCat
+                ? _value.isCat
+                : isCat // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        instance:
+            freezed == instance
+                ? _value.instance
+                : instance // ignore: cast_nullable_to_non_nullable
+                    as UserInstanceInfo?,
+        emojis:
+            null == emojis
+                ? _value._emojis
+                : emojis // ignore: cast_nullable_to_non_nullable
+                    as Map<String, String>,
+        onlineStatus:
+            freezed == onlineStatus
+                ? _value.onlineStatus
+                : onlineStatus // ignore: cast_nullable_to_non_nullable
+                    as OnlineStatus?,
+        badgeRoles:
+            null == badgeRoles
+                ? _value._badgeRoles
+                : badgeRoles // ignore: cast_nullable_to_non_nullable
+                    as List<UserBadgeRole>,
+        requireSigninToViewContents:
+            freezed == requireSigninToViewContents
+                ? _value.requireSigninToViewContents
+                : requireSigninToViewContents // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        makeNotesFollowersOnlyBefore:
+            freezed == makeNotesFollowersOnlyBefore
+                ? _value.makeNotesFollowersOnlyBefore
+                : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
+                    as HideBefore?,
+        makeNotesHiddenBefore:
+            freezed == makeNotesHiddenBefore
+                ? _value.makeNotesHiddenBefore
+                : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
+                    as HideBefore?,
+        speakAsCat:
+            freezed == speakAsCat
+                ? _value.speakAsCat
+                : speakAsCat // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        url:
+            freezed == url
+                ? _value.url
+                : url // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        uri:
+            freezed == uri
+                ? _value.uri
+                : uri // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        movedTo:
+            freezed == movedTo
+                ? _value.movedTo
+                : movedTo // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        alsoKnownAs:
+            freezed == alsoKnownAs
+                ? _value._alsoKnownAs
+                : alsoKnownAs // ignore: cast_nullable_to_non_nullable
+                    as List<String>?,
+        createdAt:
+            null == createdAt
+                ? _value.createdAt
+                : createdAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        updatedAt:
+            freezed == updatedAt
+                ? _value.updatedAt
+                : updatedAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        lastFetchedAt:
+            freezed == lastFetchedAt
+                ? _value.lastFetchedAt
+                : lastFetchedAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        bannerUrl:
+            freezed == bannerUrl
+                ? _value.bannerUrl
+                : bannerUrl // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        bannerBlurhash:
+            freezed == bannerBlurhash
+                ? _value.bannerBlurhash
+                : bannerBlurhash // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        isLocked:
+            null == isLocked
+                ? _value.isLocked
+                : isLocked // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        isSilenced:
+            null == isSilenced
+                ? _value.isSilenced
+                : isSilenced // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        isSuspended:
+            null == isSuspended
+                ? _value.isSuspended
+                : isSuspended // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        description:
+            freezed == description
+                ? _value.description
+                : description // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        location:
+            freezed == location
+                ? _value.location
+                : location // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        birthday:
+            freezed == birthday
+                ? _value.birthday
+                : birthday // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        lang:
+            freezed == lang
+                ? _value.lang
+                : lang // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        fields:
+            freezed == fields
+                ? _value._fields
+                : fields // ignore: cast_nullable_to_non_nullable
+                    as List<UserField>?,
+        verifiedLinks:
+            null == verifiedLinks
+                ? _value._verifiedLinks
+                : verifiedLinks // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+        mutualLinkSections:
+            freezed == mutualLinkSections
+                ? _value._mutualLinkSections
+                : mutualLinkSections // ignore: cast_nullable_to_non_nullable
+                    as List<MutualLinkSection>?,
+        followersCount:
+            null == followersCount
+                ? _value.followersCount
+                : followersCount // ignore: cast_nullable_to_non_nullable
+                    as int,
+        followingCount:
+            null == followingCount
+                ? _value.followingCount
+                : followingCount // ignore: cast_nullable_to_non_nullable
+                    as int,
+        notesCount:
+            null == notesCount
+                ? _value.notesCount
+                : notesCount // ignore: cast_nullable_to_non_nullable
+                    as int,
+        pinnedNoteIds:
+            freezed == pinnedNoteIds
+                ? _value._pinnedNoteIds
+                : pinnedNoteIds // ignore: cast_nullable_to_non_nullable
+                    as List<String>?,
+        pinnedNotes:
+            freezed == pinnedNotes
+                ? _value._pinnedNotes
+                : pinnedNotes // ignore: cast_nullable_to_non_nullable
+                    as List<Note>?,
+        pinnedPageId:
+            freezed == pinnedPageId
+                ? _value.pinnedPageId
+                : pinnedPageId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        pinnedPage:
+            freezed == pinnedPage
+                ? _value._pinnedPage
+                : pinnedPage // ignore: cast_nullable_to_non_nullable
+                    as Map<String, dynamic>?,
+        publicReactions:
+            null == publicReactions
+                ? _value.publicReactions
+                : publicReactions // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        ffVisibility:
+            freezed == ffVisibility
+                ? _value.ffVisibility
+                : ffVisibility // ignore: cast_nullable_to_non_nullable
+                    as FFVisibility?,
+        followersVisibility:
+            freezed == followersVisibility
+                ? _value.followersVisibility
+                : followersVisibility // ignore: cast_nullable_to_non_nullable
+                    as FFVisibility?,
+        followingVisibility:
+            freezed == followingVisibility
+                ? _value.followingVisibility
+                : followingVisibility // ignore: cast_nullable_to_non_nullable
+                    as FFVisibility?,
+        twoFactorEnabled:
+            freezed == twoFactorEnabled
+                ? _value.twoFactorEnabled
+                : twoFactorEnabled // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        usePasswordLessLogin:
+            freezed == usePasswordLessLogin
+                ? _value.usePasswordLessLogin
+                : usePasswordLessLogin // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        securityKeys:
+            freezed == securityKeys
+                ? _value.securityKeys
+                : securityKeys // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        roles:
+            freezed == roles
+                ? _value._roles
+                : roles // ignore: cast_nullable_to_non_nullable
+                    as List<UserRole>?,
+        memo:
+            freezed == memo
+                ? _value.memo
+                : memo // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        moderationNote:
+            freezed == moderationNote
+                ? _value.moderationNote
+                : moderationNote // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
-  const _$UserDetailedNotMeImpl(
-      {required this.id,
-      this.name,
-      required this.username,
-      this.host,
-      @NullableUriConverter() this.avatarUrl,
-      this.avatarBlurhash,
-      final List<UserAvatarDecoration> avatarDecorations = const [],
-      required this.isBot,
-      required this.isCat,
-      this.instance,
-      @EmojisConverter() final Map<String, String> emojis = const {},
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      this.onlineStatus,
-      final List<UserBadgeRole> badgeRoles = const [],
-      this.requireSigninToViewContents,
-      @HideBeforeConverter() this.makeNotesFollowersOnlyBefore,
-      @HideBeforeConverter() this.makeNotesHiddenBefore,
-      this.speakAsCat,
-      @NullableUriConverter() this.url,
-      @NullableUriConverter() this.uri,
-      @NullableUriConverter() this.movedTo,
-      final List<String>? alsoKnownAs,
-      @DateTimeConverter() required this.createdAt,
-      @NullableDateTimeConverter() this.updatedAt,
-      @NullableDateTimeConverter() this.lastFetchedAt,
-      @NullableUriConverter() this.bannerUrl,
-      this.bannerBlurhash,
-      required this.isLocked,
-      required this.isSilenced,
-      required this.isSuspended,
-      this.description,
-      this.location,
-      @NullableDateTimeConverter() this.birthday,
-      this.lang,
-      final List<UserField>? fields,
-      final List<String> verifiedLinks = const [],
-      final List<MutualLinkSection>? mutualLinkSections,
-      @IntConverter() required this.followersCount,
-      @IntConverter() required this.followingCount,
-      required this.notesCount,
-      final List<String>? pinnedNoteIds,
-      final List<Note>? pinnedNotes,
-      this.pinnedPageId,
-      final Map<String, dynamic>? pinnedPage,
-      this.publicReactions = false,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      @Deprecated("removed at 2023.12.0")
-      this.ffVisibility,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      this.followersVisibility,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      this.followingVisibility,
-      this.twoFactorEnabled,
-      this.usePasswordLessLogin,
-      this.securityKeys,
-      final List<UserRole>? roles,
-      this.memo,
-      this.moderationNote})
-      : _avatarDecorations = avatarDecorations,
-        _emojis = emojis,
-        _badgeRoles = badgeRoles,
-        _alsoKnownAs = alsoKnownAs,
-        _fields = fields,
-        _verifiedLinks = verifiedLinks,
-        _mutualLinkSections = mutualLinkSections,
-        _pinnedNoteIds = pinnedNoteIds,
-        _pinnedNotes = pinnedNotes,
-        _pinnedPage = pinnedPage,
-        _roles = roles;
+  const _$UserDetailedNotMeImpl({
+    required this.id,
+    this.name,
+    required this.username,
+    this.host,
+    @NullableUriConverter() this.avatarUrl,
+    this.avatarBlurhash,
+    final List<UserAvatarDecoration> avatarDecorations = const [],
+    required this.isBot,
+    required this.isCat,
+    this.instance,
+    @EmojisConverter() final Map<String, String> emojis = const {},
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    this.onlineStatus,
+    final List<UserBadgeRole> badgeRoles = const [],
+    this.requireSigninToViewContents,
+    @HideBeforeConverter() this.makeNotesFollowersOnlyBefore,
+    @HideBeforeConverter() this.makeNotesHiddenBefore,
+    this.speakAsCat,
+    @NullableUriConverter() this.url,
+    @NullableUriConverter() this.uri,
+    @NullableUriConverter() this.movedTo,
+    final List<String>? alsoKnownAs,
+    @DateTimeConverter() required this.createdAt,
+    @NullableDateTimeConverter() this.updatedAt,
+    @NullableDateTimeConverter() this.lastFetchedAt,
+    @NullableUriConverter() this.bannerUrl,
+    this.bannerBlurhash,
+    required this.isLocked,
+    required this.isSilenced,
+    required this.isSuspended,
+    this.description,
+    this.location,
+    @NullableDateTimeConverter() this.birthday,
+    this.lang,
+    final List<UserField>? fields,
+    final List<String> verifiedLinks = const [],
+    final List<MutualLinkSection>? mutualLinkSections,
+    @IntConverter() required this.followersCount,
+    @IntConverter() required this.followingCount,
+    required this.notesCount,
+    final List<String>? pinnedNoteIds,
+    final List<Note>? pinnedNotes,
+    this.pinnedPageId,
+    final Map<String, dynamic>? pinnedPage,
+    this.publicReactions = false,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    @Deprecated("removed at 2023.12.0")
+    this.ffVisibility,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    this.followersVisibility,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    this.followingVisibility,
+    this.twoFactorEnabled,
+    this.usePasswordLessLogin,
+    this.securityKeys,
+    final List<UserRole>? roles,
+    this.memo,
+    this.moderationNote,
+  }) : _avatarDecorations = avatarDecorations,
+       _emojis = emojis,
+       _badgeRoles = badgeRoles,
+       _alsoKnownAs = alsoKnownAs,
+       _fields = fields,
+       _verifiedLinks = verifiedLinks,
+       _mutualLinkSections = mutualLinkSections,
+       _pinnedNoteIds = pinnedNoteIds,
+       _pinnedNotes = pinnedNotes,
+       _pinnedPage = pinnedPage,
+       _roles = roles;
 
   factory _$UserDetailedNotMeImpl.fromJson(Map<String, dynamic> json) =>
       _$$UserDetailedNotMeImplFromJson(json);
@@ -1530,7 +1692,7 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
     return EqualUnmodifiableMapView(_emojis);
   }
 
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final OnlineStatus? onlineStatus;
@@ -1631,11 +1793,11 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
     return EqualUnmodifiableListView(value);
   }
 
-// CherryPick 4.3.0 or newer returns String if the count count is not visible
+  // CherryPick 4.3.0 or newer returns String if the count count is not visible
   @override
   @IntConverter()
   final int followersCount;
-// CherryPick 4.3.0 or newer returns String if the count count is not visible
+  // CherryPick 4.3.0 or newer returns String if the count count is not visible
   @override
   @IntConverter()
   final int followingCount;
@@ -1673,30 +1835,30 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
     return EqualUnmodifiableMapView(value);
   }
 
-// Added in Misskey 12.93.0
+  // Added in Misskey 12.93.0
   @override
   @JsonKey()
   final bool publicReactions;
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   @Deprecated("removed at 2023.12.0")
   final FFVisibility? ffVisibility;
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final FFVisibility? followersVisibility;
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final FFVisibility? followingVisibility;
-// Removed in Misskey 2024.10.0
+  // Removed in Misskey 2024.10.0
   @override
   final bool? twoFactorEnabled;
-// Added in Misskey 11.25.0, Removed in Misskey 2024.10.0
+  // Added in Misskey 11.25.0, Removed in Misskey 2024.10.0
   @override
   final bool? usePasswordLessLogin;
-// Added in Misskey 11.24.0, Removed in Misskey 2024.10.0
+  // Added in Misskey 11.24.0, Removed in Misskey 2024.10.0
   @override
   final bool? securityKeys;
   final List<UserRole>? _roles;
@@ -1733,8 +1895,10 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
                 other.avatarUrl == avatarUrl) &&
             (identical(other.avatarBlurhash, avatarBlurhash) ||
                 other.avatarBlurhash == avatarBlurhash) &&
-            const DeepCollectionEquality()
-                .equals(other._avatarDecorations, _avatarDecorations) &&
+            const DeepCollectionEquality().equals(
+              other._avatarDecorations,
+              _avatarDecorations,
+            ) &&
             (identical(other.isBot, isBot) || other.isBot == isBot) &&
             (identical(other.isCat, isCat) || other.isCat == isCat) &&
             (identical(other.instance, instance) ||
@@ -1742,12 +1906,20 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
             const DeepCollectionEquality().equals(other._emojis, _emojis) &&
             (identical(other.onlineStatus, onlineStatus) ||
                 other.onlineStatus == onlineStatus) &&
-            const DeepCollectionEquality()
-                .equals(other._badgeRoles, _badgeRoles) &&
-            (identical(other.requireSigninToViewContents, requireSigninToViewContents) ||
+            const DeepCollectionEquality().equals(
+              other._badgeRoles,
+              _badgeRoles,
+            ) &&
+            (identical(
+                  other.requireSigninToViewContents,
+                  requireSigninToViewContents,
+                ) ||
                 other.requireSigninToViewContents ==
                     requireSigninToViewContents) &&
-            (identical(other.makeNotesFollowersOnlyBefore, makeNotesFollowersOnlyBefore) ||
+            (identical(
+                  other.makeNotesFollowersOnlyBefore,
+                  makeNotesFollowersOnlyBefore,
+                ) ||
                 other.makeNotesFollowersOnlyBefore ==
                     makeNotesFollowersOnlyBefore) &&
             (identical(other.makeNotesHiddenBefore, makeNotesHiddenBefore) ||
@@ -1757,8 +1929,10 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
             (identical(other.url, url) || other.url == url) &&
             (identical(other.uri, uri) || other.uri == uri) &&
             (identical(other.movedTo, movedTo) || other.movedTo == movedTo) &&
-            const DeepCollectionEquality()
-                .equals(other._alsoKnownAs, _alsoKnownAs) &&
+            const DeepCollectionEquality().equals(
+              other._alsoKnownAs,
+              _alsoKnownAs,
+            ) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
             (identical(other.updatedAt, updatedAt) ||
@@ -1783,90 +1957,112 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
                 other.birthday == birthday) &&
             (identical(other.lang, lang) || other.lang == lang) &&
             const DeepCollectionEquality().equals(other._fields, _fields) &&
-            const DeepCollectionEquality()
-                .equals(other._verifiedLinks, _verifiedLinks) &&
-            const DeepCollectionEquality()
-                .equals(other._mutualLinkSections, _mutualLinkSections) &&
+            const DeepCollectionEquality().equals(
+              other._verifiedLinks,
+              _verifiedLinks,
+            ) &&
+            const DeepCollectionEquality().equals(
+              other._mutualLinkSections,
+              _mutualLinkSections,
+            ) &&
             (identical(other.followersCount, followersCount) ||
                 other.followersCount == followersCount) &&
             (identical(other.followingCount, followingCount) ||
                 other.followingCount == followingCount) &&
             (identical(other.notesCount, notesCount) ||
                 other.notesCount == notesCount) &&
-            const DeepCollectionEquality().equals(other._pinnedNoteIds, _pinnedNoteIds) &&
-            const DeepCollectionEquality().equals(other._pinnedNotes, _pinnedNotes) &&
-            (identical(other.pinnedPageId, pinnedPageId) || other.pinnedPageId == pinnedPageId) &&
-            const DeepCollectionEquality().equals(other._pinnedPage, _pinnedPage) &&
-            (identical(other.publicReactions, publicReactions) || other.publicReactions == publicReactions) &&
-            (identical(other.ffVisibility, ffVisibility) || other.ffVisibility == ffVisibility) &&
-            (identical(other.followersVisibility, followersVisibility) || other.followersVisibility == followersVisibility) &&
-            (identical(other.followingVisibility, followingVisibility) || other.followingVisibility == followingVisibility) &&
-            (identical(other.twoFactorEnabled, twoFactorEnabled) || other.twoFactorEnabled == twoFactorEnabled) &&
-            (identical(other.usePasswordLessLogin, usePasswordLessLogin) || other.usePasswordLessLogin == usePasswordLessLogin) &&
-            (identical(other.securityKeys, securityKeys) || other.securityKeys == securityKeys) &&
+            const DeepCollectionEquality().equals(
+              other._pinnedNoteIds,
+              _pinnedNoteIds,
+            ) &&
+            const DeepCollectionEquality().equals(
+              other._pinnedNotes,
+              _pinnedNotes,
+            ) &&
+            (identical(other.pinnedPageId, pinnedPageId) ||
+                other.pinnedPageId == pinnedPageId) &&
+            const DeepCollectionEquality().equals(
+              other._pinnedPage,
+              _pinnedPage,
+            ) &&
+            (identical(other.publicReactions, publicReactions) ||
+                other.publicReactions == publicReactions) &&
+            (identical(other.ffVisibility, ffVisibility) ||
+                other.ffVisibility == ffVisibility) &&
+            (identical(other.followersVisibility, followersVisibility) ||
+                other.followersVisibility == followersVisibility) &&
+            (identical(other.followingVisibility, followingVisibility) ||
+                other.followingVisibility == followingVisibility) &&
+            (identical(other.twoFactorEnabled, twoFactorEnabled) ||
+                other.twoFactorEnabled == twoFactorEnabled) &&
+            (identical(other.usePasswordLessLogin, usePasswordLessLogin) ||
+                other.usePasswordLessLogin == usePasswordLessLogin) &&
+            (identical(other.securityKeys, securityKeys) ||
+                other.securityKeys == securityKeys) &&
             const DeepCollectionEquality().equals(other._roles, _roles) &&
             (identical(other.memo, memo) || other.memo == memo) &&
-            (identical(other.moderationNote, moderationNote) || other.moderationNote == moderationNote));
+            (identical(other.moderationNote, moderationNote) ||
+                other.moderationNote == moderationNote));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
-        runtimeType,
-        id,
-        name,
-        username,
-        host,
-        avatarUrl,
-        avatarBlurhash,
-        const DeepCollectionEquality().hash(_avatarDecorations),
-        isBot,
-        isCat,
-        instance,
-        const DeepCollectionEquality().hash(_emojis),
-        onlineStatus,
-        const DeepCollectionEquality().hash(_badgeRoles),
-        requireSigninToViewContents,
-        makeNotesFollowersOnlyBefore,
-        makeNotesHiddenBefore,
-        speakAsCat,
-        url,
-        uri,
-        movedTo,
-        const DeepCollectionEquality().hash(_alsoKnownAs),
-        createdAt,
-        updatedAt,
-        lastFetchedAt,
-        bannerUrl,
-        bannerBlurhash,
-        isLocked,
-        isSilenced,
-        isSuspended,
-        description,
-        location,
-        birthday,
-        lang,
-        const DeepCollectionEquality().hash(_fields),
-        const DeepCollectionEquality().hash(_verifiedLinks),
-        const DeepCollectionEquality().hash(_mutualLinkSections),
-        followersCount,
-        followingCount,
-        notesCount,
-        const DeepCollectionEquality().hash(_pinnedNoteIds),
-        const DeepCollectionEquality().hash(_pinnedNotes),
-        pinnedPageId,
-        const DeepCollectionEquality().hash(_pinnedPage),
-        publicReactions,
-        ffVisibility,
-        followersVisibility,
-        followingVisibility,
-        twoFactorEnabled,
-        usePasswordLessLogin,
-        securityKeys,
-        const DeepCollectionEquality().hash(_roles),
-        memo,
-        moderationNote
-      ]);
+    runtimeType,
+    id,
+    name,
+    username,
+    host,
+    avatarUrl,
+    avatarBlurhash,
+    const DeepCollectionEquality().hash(_avatarDecorations),
+    isBot,
+    isCat,
+    instance,
+    const DeepCollectionEquality().hash(_emojis),
+    onlineStatus,
+    const DeepCollectionEquality().hash(_badgeRoles),
+    requireSigninToViewContents,
+    makeNotesFollowersOnlyBefore,
+    makeNotesHiddenBefore,
+    speakAsCat,
+    url,
+    uri,
+    movedTo,
+    const DeepCollectionEquality().hash(_alsoKnownAs),
+    createdAt,
+    updatedAt,
+    lastFetchedAt,
+    bannerUrl,
+    bannerBlurhash,
+    isLocked,
+    isSilenced,
+    isSuspended,
+    description,
+    location,
+    birthday,
+    lang,
+    const DeepCollectionEquality().hash(_fields),
+    const DeepCollectionEquality().hash(_verifiedLinks),
+    const DeepCollectionEquality().hash(_mutualLinkSections),
+    followersCount,
+    followingCount,
+    notesCount,
+    const DeepCollectionEquality().hash(_pinnedNoteIds),
+    const DeepCollectionEquality().hash(_pinnedNotes),
+    pinnedPageId,
+    const DeepCollectionEquality().hash(_pinnedPage),
+    publicReactions,
+    ffVisibility,
+    followersVisibility,
+    followingVisibility,
+    twoFactorEnabled,
+    usePasswordLessLogin,
+    securityKeys,
+    const DeepCollectionEquality().hash(_roles),
+    memo,
+    moderationNote,
+  ]);
 
   /// Create a copy of UserDetailedNotMe
   /// with the given fields replaced by the non-null parameter values.
@@ -1875,76 +2071,77 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
   @pragma('vm:prefer-inline')
   _$$UserDetailedNotMeImplCopyWith<_$UserDetailedNotMeImpl> get copyWith =>
       __$$UserDetailedNotMeImplCopyWithImpl<_$UserDetailedNotMeImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UserDetailedNotMeImplToJson(
-      this,
-    );
+    return _$$UserDetailedNotMeImplToJson(this);
   }
 }
 
 abstract class _UserDetailedNotMe implements UserDetailedNotMe {
-  const factory _UserDetailedNotMe(
-      {required final String id,
-      final String? name,
-      required final String username,
-      final String? host,
-      @NullableUriConverter() final Uri? avatarUrl,
-      final String? avatarBlurhash,
-      final List<UserAvatarDecoration> avatarDecorations,
-      required final bool isBot,
-      required final bool isCat,
-      final UserInstanceInfo? instance,
-      @EmojisConverter() final Map<String, String> emojis,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      final OnlineStatus? onlineStatus,
-      final List<UserBadgeRole> badgeRoles,
-      final bool? requireSigninToViewContents,
-      @HideBeforeConverter() final HideBefore? makeNotesFollowersOnlyBefore,
-      @HideBeforeConverter() final HideBefore? makeNotesHiddenBefore,
-      final bool? speakAsCat,
-      @NullableUriConverter() final Uri? url,
-      @NullableUriConverter() final Uri? uri,
-      @NullableUriConverter() final Uri? movedTo,
-      final List<String>? alsoKnownAs,
-      @DateTimeConverter() required final DateTime createdAt,
-      @NullableDateTimeConverter() final DateTime? updatedAt,
-      @NullableDateTimeConverter() final DateTime? lastFetchedAt,
-      @NullableUriConverter() final Uri? bannerUrl,
-      final String? bannerBlurhash,
-      required final bool isLocked,
-      required final bool isSilenced,
-      required final bool isSuspended,
-      final String? description,
-      final String? location,
-      @NullableDateTimeConverter() final DateTime? birthday,
-      final String? lang,
-      final List<UserField>? fields,
-      final List<String> verifiedLinks,
-      final List<MutualLinkSection>? mutualLinkSections,
-      @IntConverter() required final int followersCount,
-      @IntConverter() required final int followingCount,
-      required final int notesCount,
-      final List<String>? pinnedNoteIds,
-      final List<Note>? pinnedNotes,
-      final String? pinnedPageId,
-      final Map<String, dynamic>? pinnedPage,
-      final bool publicReactions,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      @Deprecated("removed at 2023.12.0")
-      final FFVisibility? ffVisibility,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      final FFVisibility? followersVisibility,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      final FFVisibility? followingVisibility,
-      final bool? twoFactorEnabled,
-      final bool? usePasswordLessLogin,
-      final bool? securityKeys,
-      final List<UserRole>? roles,
-      final String? memo,
-      final String? moderationNote}) = _$UserDetailedNotMeImpl;
+  const factory _UserDetailedNotMe({
+    required final String id,
+    final String? name,
+    required final String username,
+    final String? host,
+    @NullableUriConverter() final Uri? avatarUrl,
+    final String? avatarBlurhash,
+    final List<UserAvatarDecoration> avatarDecorations,
+    required final bool isBot,
+    required final bool isCat,
+    final UserInstanceInfo? instance,
+    @EmojisConverter() final Map<String, String> emojis,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    final OnlineStatus? onlineStatus,
+    final List<UserBadgeRole> badgeRoles,
+    final bool? requireSigninToViewContents,
+    @HideBeforeConverter() final HideBefore? makeNotesFollowersOnlyBefore,
+    @HideBeforeConverter() final HideBefore? makeNotesHiddenBefore,
+    final bool? speakAsCat,
+    @NullableUriConverter() final Uri? url,
+    @NullableUriConverter() final Uri? uri,
+    @NullableUriConverter() final Uri? movedTo,
+    final List<String>? alsoKnownAs,
+    @DateTimeConverter() required final DateTime createdAt,
+    @NullableDateTimeConverter() final DateTime? updatedAt,
+    @NullableDateTimeConverter() final DateTime? lastFetchedAt,
+    @NullableUriConverter() final Uri? bannerUrl,
+    final String? bannerBlurhash,
+    required final bool isLocked,
+    required final bool isSilenced,
+    required final bool isSuspended,
+    final String? description,
+    final String? location,
+    @NullableDateTimeConverter() final DateTime? birthday,
+    final String? lang,
+    final List<UserField>? fields,
+    final List<String> verifiedLinks,
+    final List<MutualLinkSection>? mutualLinkSections,
+    @IntConverter() required final int followersCount,
+    @IntConverter() required final int followingCount,
+    required final int notesCount,
+    final List<String>? pinnedNoteIds,
+    final List<Note>? pinnedNotes,
+    final String? pinnedPageId,
+    final Map<String, dynamic>? pinnedPage,
+    final bool publicReactions,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    @Deprecated("removed at 2023.12.0")
+    final FFVisibility? ffVisibility,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    final FFVisibility? followersVisibility,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    final FFVisibility? followingVisibility,
+    final bool? twoFactorEnabled,
+    final bool? usePasswordLessLogin,
+    final bool? securityKeys,
+    final List<UserRole>? roles,
+    final String? memo,
+    final String? moderationNote,
+  }) = _$UserDetailedNotMeImpl;
 
   factory _UserDetailedNotMe.fromJson(Map<String, dynamic> json) =
       _$UserDetailedNotMeImpl.fromJson;
@@ -2033,8 +2230,7 @@ abstract class _UserDetailedNotMe implements UserDetailedNotMe {
   @override
   List<String> get verifiedLinks;
   @override
-  List<MutualLinkSection>?
-      get mutualLinkSections; // CherryPick 4.3.0 or newer returns String if the count count is not visible
+  List<MutualLinkSection>? get mutualLinkSections; // CherryPick 4.3.0 or newer returns String if the count count is not visible
   @override
   @IntConverter()
   int get followersCount; // CherryPick 4.3.0 or newer returns String if the count count is not visible
@@ -2064,11 +2260,9 @@ abstract class _UserDetailedNotMe implements UserDetailedNotMe {
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FFVisibility? get followingVisibility; // Removed in Misskey 2024.10.0
   @override
-  bool?
-      get twoFactorEnabled; // Added in Misskey 11.25.0, Removed in Misskey 2024.10.0
+  bool? get twoFactorEnabled; // Added in Misskey 11.25.0, Removed in Misskey 2024.10.0
   @override
-  bool?
-      get usePasswordLessLogin; // Added in Misskey 11.24.0, Removed in Misskey 2024.10.0
+  bool? get usePasswordLessLogin; // Added in Misskey 11.24.0, Removed in Misskey 2024.10.0
   @override
   bool? get securityKeys;
   @override
@@ -2087,7 +2281,8 @@ abstract class _UserDetailedNotMe implements UserDetailedNotMe {
 }
 
 UserDetailedNotMeWithRelations _$UserDetailedNotMeWithRelationsFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _UserDetailedNotMeWithRelations.fromJson(json);
 }
 
@@ -2106,8 +2301,7 @@ mixin _$UserDetailedNotMeWithRelations {
   bool get isCat => throw _privateConstructorUsedError;
   UserInstanceInfo? get instance => throw _privateConstructorUsedError;
   @EmojisConverter()
-  Map<String, String> get emojis =>
-      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  Map<String, String> get emojis => throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   OnlineStatus? get onlineStatus => throw _privateConstructorUsedError;
   List<UserBadgeRole> get badgeRoles => throw _privateConstructorUsedError;
@@ -2147,8 +2341,7 @@ mixin _$UserDetailedNotMeWithRelations {
   List<MutualLinkSection>? get mutualLinkSections =>
       throw _privateConstructorUsedError; // CherryPick 4.3.0 or newer returns String if the count is not visible
   @IntConverter()
-  int get followersCount =>
-      throw _privateConstructorUsedError; // CherryPick 4.3.0 or newer returns String if the count is not visible
+  int get followersCount => throw _privateConstructorUsedError; // CherryPick 4.3.0 or newer returns String if the count is not visible
   @IntConverter()
   int get followingCount => throw _privateConstructorUsedError;
   int get notesCount => throw _privateConstructorUsedError;
@@ -2161,14 +2354,11 @@ mixin _$UserDetailedNotMeWithRelations {
       throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   @Deprecated("removed at 2023.12.0")
-  FFVisibility? get ffVisibility =>
-      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  FFVisibility? get ffVisibility => throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-  FFVisibility? get followersVisibility =>
-      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  FFVisibility? get followersVisibility => throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-  FFVisibility? get followingVisibility =>
-      throw _privateConstructorUsedError; // Removed in Misskey 2024.10.0
+  FFVisibility? get followingVisibility => throw _privateConstructorUsedError; // Removed in Misskey 2024.10.0
   bool? get twoFactorEnabled =>
       throw _privateConstructorUsedError; // Added in Misskey 11.25.0, Removed in Misskey 2024.10.0
   bool? get usePasswordLessLogin =>
@@ -2197,94 +2387,100 @@ mixin _$UserDetailedNotMeWithRelations {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $UserDetailedNotMeWithRelationsCopyWith<UserDetailedNotMeWithRelations>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $UserDetailedNotMeWithRelationsCopyWith<$Res> {
   factory $UserDetailedNotMeWithRelationsCopyWith(
-          UserDetailedNotMeWithRelations value,
-          $Res Function(UserDetailedNotMeWithRelations) then) =
-      _$UserDetailedNotMeWithRelationsCopyWithImpl<$Res,
-          UserDetailedNotMeWithRelations>;
+    UserDetailedNotMeWithRelations value,
+    $Res Function(UserDetailedNotMeWithRelations) then,
+  ) =
+      _$UserDetailedNotMeWithRelationsCopyWithImpl<
+        $Res,
+        UserDetailedNotMeWithRelations
+      >;
   @useResult
-  $Res call(
-      {String id,
-      String? name,
-      String username,
-      String? host,
-      @NullableUriConverter() Uri? avatarUrl,
-      String? avatarBlurhash,
-      List<UserAvatarDecoration> avatarDecorations,
-      bool isBot,
-      bool isCat,
-      UserInstanceInfo? instance,
-      @EmojisConverter() Map<String, String> emojis,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      OnlineStatus? onlineStatus,
-      List<UserBadgeRole> badgeRoles,
-      bool? requireSigninToViewContents,
-      @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
-      @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
-      bool? speakAsCat,
-      @NullableUriConverter() Uri? url,
-      @NullableUriConverter() Uri? uri,
-      @NullableUriConverter() Uri? movedTo,
-      List<String>? alsoKnownAs,
-      @DateTimeConverter() DateTime createdAt,
-      @NullableDateTimeConverter() DateTime? updatedAt,
-      @NullableDateTimeConverter() DateTime? lastFetchedAt,
-      @NullableUriConverter() Uri? bannerUrl,
-      String? bannerBlurhash,
-      bool isLocked,
-      bool isSilenced,
-      bool isSuspended,
-      String? description,
-      String? location,
-      @NullableDateTimeConverter() DateTime? birthday,
-      String? lang,
-      List<UserField>? fields,
-      List<String> verifiedLinks,
-      List<MutualLinkSection>? mutualLinkSections,
-      @IntConverter() int followersCount,
-      @IntConverter() int followingCount,
-      int notesCount,
-      List<String>? pinnedNoteIds,
-      List<Note>? pinnedNotes,
-      String? pinnedPageId,
-      Map<String, dynamic>? pinnedPage,
-      bool publicReactions,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      @Deprecated("removed at 2023.12.0")
-      FFVisibility? ffVisibility,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      FFVisibility? followersVisibility,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      FFVisibility? followingVisibility,
-      bool? twoFactorEnabled,
-      bool? usePasswordLessLogin,
-      bool? securityKeys,
-      List<UserRole>? roles,
-      String? memo,
-      String? moderationNote,
-      bool isFollowing,
-      bool isFollowed,
-      bool hasPendingFollowRequestFromYou,
-      bool hasPendingFollowRequestToYou,
-      bool isBlocking,
-      bool isBlocked,
-      bool isMuted,
-      bool isRenoteMuted,
-      Notify? notify,
-      bool? withReplies,
-      String? followedMessage});
+  $Res call({
+    String id,
+    String? name,
+    String username,
+    String? host,
+    @NullableUriConverter() Uri? avatarUrl,
+    String? avatarBlurhash,
+    List<UserAvatarDecoration> avatarDecorations,
+    bool isBot,
+    bool isCat,
+    UserInstanceInfo? instance,
+    @EmojisConverter() Map<String, String> emojis,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    OnlineStatus? onlineStatus,
+    List<UserBadgeRole> badgeRoles,
+    bool? requireSigninToViewContents,
+    @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
+    @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
+    bool? speakAsCat,
+    @NullableUriConverter() Uri? url,
+    @NullableUriConverter() Uri? uri,
+    @NullableUriConverter() Uri? movedTo,
+    List<String>? alsoKnownAs,
+    @DateTimeConverter() DateTime createdAt,
+    @NullableDateTimeConverter() DateTime? updatedAt,
+    @NullableDateTimeConverter() DateTime? lastFetchedAt,
+    @NullableUriConverter() Uri? bannerUrl,
+    String? bannerBlurhash,
+    bool isLocked,
+    bool isSilenced,
+    bool isSuspended,
+    String? description,
+    String? location,
+    @NullableDateTimeConverter() DateTime? birthday,
+    String? lang,
+    List<UserField>? fields,
+    List<String> verifiedLinks,
+    List<MutualLinkSection>? mutualLinkSections,
+    @IntConverter() int followersCount,
+    @IntConverter() int followingCount,
+    int notesCount,
+    List<String>? pinnedNoteIds,
+    List<Note>? pinnedNotes,
+    String? pinnedPageId,
+    Map<String, dynamic>? pinnedPage,
+    bool publicReactions,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    @Deprecated("removed at 2023.12.0")
+    FFVisibility? ffVisibility,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    FFVisibility? followersVisibility,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    FFVisibility? followingVisibility,
+    bool? twoFactorEnabled,
+    bool? usePasswordLessLogin,
+    bool? securityKeys,
+    List<UserRole>? roles,
+    String? memo,
+    String? moderationNote,
+    bool isFollowing,
+    bool isFollowed,
+    bool hasPendingFollowRequestFromYou,
+    bool hasPendingFollowRequestToYou,
+    bool isBlocking,
+    bool isBlocked,
+    bool isMuted,
+    bool isRenoteMuted,
+    Notify? notify,
+    bool? withReplies,
+    String? followedMessage,
+  });
 
   $UserInstanceInfoCopyWith<$Res>? get instance;
 }
 
 /// @nodoc
-class _$UserDetailedNotMeWithRelationsCopyWithImpl<$Res,
-        $Val extends UserDetailedNotMeWithRelations>
+class _$UserDetailedNotMeWithRelationsCopyWithImpl<
+  $Res,
+  $Val extends UserDetailedNotMeWithRelations
+>
     implements $UserDetailedNotMeWithRelationsCopyWith<$Res> {
   _$UserDetailedNotMeWithRelationsCopyWithImpl(this._value, this._then);
 
@@ -2363,264 +2559,331 @@ class _$UserDetailedNotMeWithRelationsCopyWithImpl<$Res,
     Object? withReplies = freezed,
     Object? followedMessage = freezed,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      username: null == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String,
-      host: freezed == host
-          ? _value.host
-          : host // ignore: cast_nullable_to_non_nullable
-              as String?,
-      avatarUrl: freezed == avatarUrl
-          ? _value.avatarUrl
-          : avatarUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      avatarBlurhash: freezed == avatarBlurhash
-          ? _value.avatarBlurhash
-          : avatarBlurhash // ignore: cast_nullable_to_non_nullable
-              as String?,
-      avatarDecorations: null == avatarDecorations
-          ? _value.avatarDecorations
-          : avatarDecorations // ignore: cast_nullable_to_non_nullable
-              as List<UserAvatarDecoration>,
-      isBot: null == isBot
-          ? _value.isBot
-          : isBot // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isCat: null == isCat
-          ? _value.isCat
-          : isCat // ignore: cast_nullable_to_non_nullable
-              as bool,
-      instance: freezed == instance
-          ? _value.instance
-          : instance // ignore: cast_nullable_to_non_nullable
-              as UserInstanceInfo?,
-      emojis: null == emojis
-          ? _value.emojis
-          : emojis // ignore: cast_nullable_to_non_nullable
-              as Map<String, String>,
-      onlineStatus: freezed == onlineStatus
-          ? _value.onlineStatus
-          : onlineStatus // ignore: cast_nullable_to_non_nullable
-              as OnlineStatus?,
-      badgeRoles: null == badgeRoles
-          ? _value.badgeRoles
-          : badgeRoles // ignore: cast_nullable_to_non_nullable
-              as List<UserBadgeRole>,
-      requireSigninToViewContents: freezed == requireSigninToViewContents
-          ? _value.requireSigninToViewContents
-          : requireSigninToViewContents // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      makeNotesFollowersOnlyBefore: freezed == makeNotesFollowersOnlyBefore
-          ? _value.makeNotesFollowersOnlyBefore
-          : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
-              as HideBefore?,
-      makeNotesHiddenBefore: freezed == makeNotesHiddenBefore
-          ? _value.makeNotesHiddenBefore
-          : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
-              as HideBefore?,
-      speakAsCat: freezed == speakAsCat
-          ? _value.speakAsCat
-          : speakAsCat // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      uri: freezed == uri
-          ? _value.uri
-          : uri // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      movedTo: freezed == movedTo
-          ? _value.movedTo
-          : movedTo // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      alsoKnownAs: freezed == alsoKnownAs
-          ? _value.alsoKnownAs
-          : alsoKnownAs // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedAt: freezed == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      lastFetchedAt: freezed == lastFetchedAt
-          ? _value.lastFetchedAt
-          : lastFetchedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      bannerUrl: freezed == bannerUrl
-          ? _value.bannerUrl
-          : bannerUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      bannerBlurhash: freezed == bannerBlurhash
-          ? _value.bannerBlurhash
-          : bannerBlurhash // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isLocked: null == isLocked
-          ? _value.isLocked
-          : isLocked // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isSilenced: null == isSilenced
-          ? _value.isSilenced
-          : isSilenced // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isSuspended: null == isSuspended
-          ? _value.isSuspended
-          : isSuspended // ignore: cast_nullable_to_non_nullable
-              as bool,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      location: freezed == location
-          ? _value.location
-          : location // ignore: cast_nullable_to_non_nullable
-              as String?,
-      birthday: freezed == birthday
-          ? _value.birthday
-          : birthday // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      lang: freezed == lang
-          ? _value.lang
-          : lang // ignore: cast_nullable_to_non_nullable
-              as String?,
-      fields: freezed == fields
-          ? _value.fields
-          : fields // ignore: cast_nullable_to_non_nullable
-              as List<UserField>?,
-      verifiedLinks: null == verifiedLinks
-          ? _value.verifiedLinks
-          : verifiedLinks // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      mutualLinkSections: freezed == mutualLinkSections
-          ? _value.mutualLinkSections
-          : mutualLinkSections // ignore: cast_nullable_to_non_nullable
-              as List<MutualLinkSection>?,
-      followersCount: null == followersCount
-          ? _value.followersCount
-          : followersCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      followingCount: null == followingCount
-          ? _value.followingCount
-          : followingCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      notesCount: null == notesCount
-          ? _value.notesCount
-          : notesCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      pinnedNoteIds: freezed == pinnedNoteIds
-          ? _value.pinnedNoteIds
-          : pinnedNoteIds // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      pinnedNotes: freezed == pinnedNotes
-          ? _value.pinnedNotes
-          : pinnedNotes // ignore: cast_nullable_to_non_nullable
-              as List<Note>?,
-      pinnedPageId: freezed == pinnedPageId
-          ? _value.pinnedPageId
-          : pinnedPageId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      pinnedPage: freezed == pinnedPage
-          ? _value.pinnedPage
-          : pinnedPage // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
-      publicReactions: null == publicReactions
-          ? _value.publicReactions
-          : publicReactions // ignore: cast_nullable_to_non_nullable
-              as bool,
-      ffVisibility: freezed == ffVisibility
-          ? _value.ffVisibility
-          : ffVisibility // ignore: cast_nullable_to_non_nullable
-              as FFVisibility?,
-      followersVisibility: freezed == followersVisibility
-          ? _value.followersVisibility
-          : followersVisibility // ignore: cast_nullable_to_non_nullable
-              as FFVisibility?,
-      followingVisibility: freezed == followingVisibility
-          ? _value.followingVisibility
-          : followingVisibility // ignore: cast_nullable_to_non_nullable
-              as FFVisibility?,
-      twoFactorEnabled: freezed == twoFactorEnabled
-          ? _value.twoFactorEnabled
-          : twoFactorEnabled // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      usePasswordLessLogin: freezed == usePasswordLessLogin
-          ? _value.usePasswordLessLogin
-          : usePasswordLessLogin // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      securityKeys: freezed == securityKeys
-          ? _value.securityKeys
-          : securityKeys // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      roles: freezed == roles
-          ? _value.roles
-          : roles // ignore: cast_nullable_to_non_nullable
-              as List<UserRole>?,
-      memo: freezed == memo
-          ? _value.memo
-          : memo // ignore: cast_nullable_to_non_nullable
-              as String?,
-      moderationNote: freezed == moderationNote
-          ? _value.moderationNote
-          : moderationNote // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isFollowing: null == isFollowing
-          ? _value.isFollowing
-          : isFollowing // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isFollowed: null == isFollowed
-          ? _value.isFollowed
-          : isFollowed // ignore: cast_nullable_to_non_nullable
-              as bool,
-      hasPendingFollowRequestFromYou: null == hasPendingFollowRequestFromYou
-          ? _value.hasPendingFollowRequestFromYou
-          : hasPendingFollowRequestFromYou // ignore: cast_nullable_to_non_nullable
-              as bool,
-      hasPendingFollowRequestToYou: null == hasPendingFollowRequestToYou
-          ? _value.hasPendingFollowRequestToYou
-          : hasPendingFollowRequestToYou // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isBlocking: null == isBlocking
-          ? _value.isBlocking
-          : isBlocking // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isBlocked: null == isBlocked
-          ? _value.isBlocked
-          : isBlocked // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isMuted: null == isMuted
-          ? _value.isMuted
-          : isMuted // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isRenoteMuted: null == isRenoteMuted
-          ? _value.isRenoteMuted
-          : isRenoteMuted // ignore: cast_nullable_to_non_nullable
-              as bool,
-      notify: freezed == notify
-          ? _value.notify
-          : notify // ignore: cast_nullable_to_non_nullable
-              as Notify?,
-      withReplies: freezed == withReplies
-          ? _value.withReplies
-          : withReplies // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      followedMessage: freezed == followedMessage
-          ? _value.followedMessage
-          : followedMessage // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            name:
+                freezed == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            username:
+                null == username
+                    ? _value.username
+                    : username // ignore: cast_nullable_to_non_nullable
+                        as String,
+            host:
+                freezed == host
+                    ? _value.host
+                    : host // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            avatarUrl:
+                freezed == avatarUrl
+                    ? _value.avatarUrl
+                    : avatarUrl // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            avatarBlurhash:
+                freezed == avatarBlurhash
+                    ? _value.avatarBlurhash
+                    : avatarBlurhash // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            avatarDecorations:
+                null == avatarDecorations
+                    ? _value.avatarDecorations
+                    : avatarDecorations // ignore: cast_nullable_to_non_nullable
+                        as List<UserAvatarDecoration>,
+            isBot:
+                null == isBot
+                    ? _value.isBot
+                    : isBot // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            isCat:
+                null == isCat
+                    ? _value.isCat
+                    : isCat // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            instance:
+                freezed == instance
+                    ? _value.instance
+                    : instance // ignore: cast_nullable_to_non_nullable
+                        as UserInstanceInfo?,
+            emojis:
+                null == emojis
+                    ? _value.emojis
+                    : emojis // ignore: cast_nullable_to_non_nullable
+                        as Map<String, String>,
+            onlineStatus:
+                freezed == onlineStatus
+                    ? _value.onlineStatus
+                    : onlineStatus // ignore: cast_nullable_to_non_nullable
+                        as OnlineStatus?,
+            badgeRoles:
+                null == badgeRoles
+                    ? _value.badgeRoles
+                    : badgeRoles // ignore: cast_nullable_to_non_nullable
+                        as List<UserBadgeRole>,
+            requireSigninToViewContents:
+                freezed == requireSigninToViewContents
+                    ? _value.requireSigninToViewContents
+                    : requireSigninToViewContents // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            makeNotesFollowersOnlyBefore:
+                freezed == makeNotesFollowersOnlyBefore
+                    ? _value.makeNotesFollowersOnlyBefore
+                    : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
+                        as HideBefore?,
+            makeNotesHiddenBefore:
+                freezed == makeNotesHiddenBefore
+                    ? _value.makeNotesHiddenBefore
+                    : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
+                        as HideBefore?,
+            speakAsCat:
+                freezed == speakAsCat
+                    ? _value.speakAsCat
+                    : speakAsCat // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            url:
+                freezed == url
+                    ? _value.url
+                    : url // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            uri:
+                freezed == uri
+                    ? _value.uri
+                    : uri // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            movedTo:
+                freezed == movedTo
+                    ? _value.movedTo
+                    : movedTo // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            alsoKnownAs:
+                freezed == alsoKnownAs
+                    ? _value.alsoKnownAs
+                    : alsoKnownAs // ignore: cast_nullable_to_non_nullable
+                        as List<String>?,
+            createdAt:
+                null == createdAt
+                    ? _value.createdAt
+                    : createdAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            updatedAt:
+                freezed == updatedAt
+                    ? _value.updatedAt
+                    : updatedAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            lastFetchedAt:
+                freezed == lastFetchedAt
+                    ? _value.lastFetchedAt
+                    : lastFetchedAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            bannerUrl:
+                freezed == bannerUrl
+                    ? _value.bannerUrl
+                    : bannerUrl // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            bannerBlurhash:
+                freezed == bannerBlurhash
+                    ? _value.bannerBlurhash
+                    : bannerBlurhash // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            isLocked:
+                null == isLocked
+                    ? _value.isLocked
+                    : isLocked // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            isSilenced:
+                null == isSilenced
+                    ? _value.isSilenced
+                    : isSilenced // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            isSuspended:
+                null == isSuspended
+                    ? _value.isSuspended
+                    : isSuspended // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            description:
+                freezed == description
+                    ? _value.description
+                    : description // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            location:
+                freezed == location
+                    ? _value.location
+                    : location // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            birthday:
+                freezed == birthday
+                    ? _value.birthday
+                    : birthday // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            lang:
+                freezed == lang
+                    ? _value.lang
+                    : lang // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            fields:
+                freezed == fields
+                    ? _value.fields
+                    : fields // ignore: cast_nullable_to_non_nullable
+                        as List<UserField>?,
+            verifiedLinks:
+                null == verifiedLinks
+                    ? _value.verifiedLinks
+                    : verifiedLinks // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+            mutualLinkSections:
+                freezed == mutualLinkSections
+                    ? _value.mutualLinkSections
+                    : mutualLinkSections // ignore: cast_nullable_to_non_nullable
+                        as List<MutualLinkSection>?,
+            followersCount:
+                null == followersCount
+                    ? _value.followersCount
+                    : followersCount // ignore: cast_nullable_to_non_nullable
+                        as int,
+            followingCount:
+                null == followingCount
+                    ? _value.followingCount
+                    : followingCount // ignore: cast_nullable_to_non_nullable
+                        as int,
+            notesCount:
+                null == notesCount
+                    ? _value.notesCount
+                    : notesCount // ignore: cast_nullable_to_non_nullable
+                        as int,
+            pinnedNoteIds:
+                freezed == pinnedNoteIds
+                    ? _value.pinnedNoteIds
+                    : pinnedNoteIds // ignore: cast_nullable_to_non_nullable
+                        as List<String>?,
+            pinnedNotes:
+                freezed == pinnedNotes
+                    ? _value.pinnedNotes
+                    : pinnedNotes // ignore: cast_nullable_to_non_nullable
+                        as List<Note>?,
+            pinnedPageId:
+                freezed == pinnedPageId
+                    ? _value.pinnedPageId
+                    : pinnedPageId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            pinnedPage:
+                freezed == pinnedPage
+                    ? _value.pinnedPage
+                    : pinnedPage // ignore: cast_nullable_to_non_nullable
+                        as Map<String, dynamic>?,
+            publicReactions:
+                null == publicReactions
+                    ? _value.publicReactions
+                    : publicReactions // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            ffVisibility:
+                freezed == ffVisibility
+                    ? _value.ffVisibility
+                    : ffVisibility // ignore: cast_nullable_to_non_nullable
+                        as FFVisibility?,
+            followersVisibility:
+                freezed == followersVisibility
+                    ? _value.followersVisibility
+                    : followersVisibility // ignore: cast_nullable_to_non_nullable
+                        as FFVisibility?,
+            followingVisibility:
+                freezed == followingVisibility
+                    ? _value.followingVisibility
+                    : followingVisibility // ignore: cast_nullable_to_non_nullable
+                        as FFVisibility?,
+            twoFactorEnabled:
+                freezed == twoFactorEnabled
+                    ? _value.twoFactorEnabled
+                    : twoFactorEnabled // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            usePasswordLessLogin:
+                freezed == usePasswordLessLogin
+                    ? _value.usePasswordLessLogin
+                    : usePasswordLessLogin // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            securityKeys:
+                freezed == securityKeys
+                    ? _value.securityKeys
+                    : securityKeys // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            roles:
+                freezed == roles
+                    ? _value.roles
+                    : roles // ignore: cast_nullable_to_non_nullable
+                        as List<UserRole>?,
+            memo:
+                freezed == memo
+                    ? _value.memo
+                    : memo // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            moderationNote:
+                freezed == moderationNote
+                    ? _value.moderationNote
+                    : moderationNote // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            isFollowing:
+                null == isFollowing
+                    ? _value.isFollowing
+                    : isFollowing // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            isFollowed:
+                null == isFollowed
+                    ? _value.isFollowed
+                    : isFollowed // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            hasPendingFollowRequestFromYou:
+                null == hasPendingFollowRequestFromYou
+                    ? _value.hasPendingFollowRequestFromYou
+                    : hasPendingFollowRequestFromYou // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            hasPendingFollowRequestToYou:
+                null == hasPendingFollowRequestToYou
+                    ? _value.hasPendingFollowRequestToYou
+                    : hasPendingFollowRequestToYou // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            isBlocking:
+                null == isBlocking
+                    ? _value.isBlocking
+                    : isBlocking // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            isBlocked:
+                null == isBlocked
+                    ? _value.isBlocked
+                    : isBlocked // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            isMuted:
+                null == isMuted
+                    ? _value.isMuted
+                    : isMuted // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            isRenoteMuted:
+                null == isRenoteMuted
+                    ? _value.isRenoteMuted
+                    : isRenoteMuted // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            notify:
+                freezed == notify
+                    ? _value.notify
+                    : notify // ignore: cast_nullable_to_non_nullable
+                        as Notify?,
+            withReplies:
+                freezed == withReplies
+                    ? _value.withReplies
+                    : withReplies // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            followedMessage:
+                freezed == followedMessage
+                    ? _value.followedMessage
+                    : followedMessage // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of UserDetailedNotMeWithRelations
@@ -2642,81 +2905,82 @@ class _$UserDetailedNotMeWithRelationsCopyWithImpl<$Res,
 abstract class _$$UserDetailedNotMeWithRelationsImplCopyWith<$Res>
     implements $UserDetailedNotMeWithRelationsCopyWith<$Res> {
   factory _$$UserDetailedNotMeWithRelationsImplCopyWith(
-          _$UserDetailedNotMeWithRelationsImpl value,
-          $Res Function(_$UserDetailedNotMeWithRelationsImpl) then) =
-      __$$UserDetailedNotMeWithRelationsImplCopyWithImpl<$Res>;
+    _$UserDetailedNotMeWithRelationsImpl value,
+    $Res Function(_$UserDetailedNotMeWithRelationsImpl) then,
+  ) = __$$UserDetailedNotMeWithRelationsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      String? name,
-      String username,
-      String? host,
-      @NullableUriConverter() Uri? avatarUrl,
-      String? avatarBlurhash,
-      List<UserAvatarDecoration> avatarDecorations,
-      bool isBot,
-      bool isCat,
-      UserInstanceInfo? instance,
-      @EmojisConverter() Map<String, String> emojis,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      OnlineStatus? onlineStatus,
-      List<UserBadgeRole> badgeRoles,
-      bool? requireSigninToViewContents,
-      @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
-      @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
-      bool? speakAsCat,
-      @NullableUriConverter() Uri? url,
-      @NullableUriConverter() Uri? uri,
-      @NullableUriConverter() Uri? movedTo,
-      List<String>? alsoKnownAs,
-      @DateTimeConverter() DateTime createdAt,
-      @NullableDateTimeConverter() DateTime? updatedAt,
-      @NullableDateTimeConverter() DateTime? lastFetchedAt,
-      @NullableUriConverter() Uri? bannerUrl,
-      String? bannerBlurhash,
-      bool isLocked,
-      bool isSilenced,
-      bool isSuspended,
-      String? description,
-      String? location,
-      @NullableDateTimeConverter() DateTime? birthday,
-      String? lang,
-      List<UserField>? fields,
-      List<String> verifiedLinks,
-      List<MutualLinkSection>? mutualLinkSections,
-      @IntConverter() int followersCount,
-      @IntConverter() int followingCount,
-      int notesCount,
-      List<String>? pinnedNoteIds,
-      List<Note>? pinnedNotes,
-      String? pinnedPageId,
-      Map<String, dynamic>? pinnedPage,
-      bool publicReactions,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      @Deprecated("removed at 2023.12.0")
-      FFVisibility? ffVisibility,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      FFVisibility? followersVisibility,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      FFVisibility? followingVisibility,
-      bool? twoFactorEnabled,
-      bool? usePasswordLessLogin,
-      bool? securityKeys,
-      List<UserRole>? roles,
-      String? memo,
-      String? moderationNote,
-      bool isFollowing,
-      bool isFollowed,
-      bool hasPendingFollowRequestFromYou,
-      bool hasPendingFollowRequestToYou,
-      bool isBlocking,
-      bool isBlocked,
-      bool isMuted,
-      bool isRenoteMuted,
-      Notify? notify,
-      bool? withReplies,
-      String? followedMessage});
+  $Res call({
+    String id,
+    String? name,
+    String username,
+    String? host,
+    @NullableUriConverter() Uri? avatarUrl,
+    String? avatarBlurhash,
+    List<UserAvatarDecoration> avatarDecorations,
+    bool isBot,
+    bool isCat,
+    UserInstanceInfo? instance,
+    @EmojisConverter() Map<String, String> emojis,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    OnlineStatus? onlineStatus,
+    List<UserBadgeRole> badgeRoles,
+    bool? requireSigninToViewContents,
+    @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
+    @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
+    bool? speakAsCat,
+    @NullableUriConverter() Uri? url,
+    @NullableUriConverter() Uri? uri,
+    @NullableUriConverter() Uri? movedTo,
+    List<String>? alsoKnownAs,
+    @DateTimeConverter() DateTime createdAt,
+    @NullableDateTimeConverter() DateTime? updatedAt,
+    @NullableDateTimeConverter() DateTime? lastFetchedAt,
+    @NullableUriConverter() Uri? bannerUrl,
+    String? bannerBlurhash,
+    bool isLocked,
+    bool isSilenced,
+    bool isSuspended,
+    String? description,
+    String? location,
+    @NullableDateTimeConverter() DateTime? birthday,
+    String? lang,
+    List<UserField>? fields,
+    List<String> verifiedLinks,
+    List<MutualLinkSection>? mutualLinkSections,
+    @IntConverter() int followersCount,
+    @IntConverter() int followingCount,
+    int notesCount,
+    List<String>? pinnedNoteIds,
+    List<Note>? pinnedNotes,
+    String? pinnedPageId,
+    Map<String, dynamic>? pinnedPage,
+    bool publicReactions,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    @Deprecated("removed at 2023.12.0")
+    FFVisibility? ffVisibility,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    FFVisibility? followersVisibility,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    FFVisibility? followingVisibility,
+    bool? twoFactorEnabled,
+    bool? usePasswordLessLogin,
+    bool? securityKeys,
+    List<UserRole>? roles,
+    String? memo,
+    String? moderationNote,
+    bool isFollowing,
+    bool isFollowed,
+    bool hasPendingFollowRequestFromYou,
+    bool hasPendingFollowRequestToYou,
+    bool isBlocking,
+    bool isBlocked,
+    bool isMuted,
+    bool isRenoteMuted,
+    Notify? notify,
+    bool? withReplies,
+    String? followedMessage,
+  });
 
   @override
   $UserInstanceInfoCopyWith<$Res>? get instance;
@@ -2724,13 +2988,16 @@ abstract class _$$UserDetailedNotMeWithRelationsImplCopyWith<$Res>
 
 /// @nodoc
 class __$$UserDetailedNotMeWithRelationsImplCopyWithImpl<$Res>
-    extends _$UserDetailedNotMeWithRelationsCopyWithImpl<$Res,
-        _$UserDetailedNotMeWithRelationsImpl>
+    extends
+        _$UserDetailedNotMeWithRelationsCopyWithImpl<
+          $Res,
+          _$UserDetailedNotMeWithRelationsImpl
+        >
     implements _$$UserDetailedNotMeWithRelationsImplCopyWith<$Res> {
   __$$UserDetailedNotMeWithRelationsImplCopyWithImpl(
-      _$UserDetailedNotMeWithRelationsImpl _value,
-      $Res Function(_$UserDetailedNotMeWithRelationsImpl) _then)
-      : super(_value, _then);
+    _$UserDetailedNotMeWithRelationsImpl _value,
+    $Res Function(_$UserDetailedNotMeWithRelationsImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UserDetailedNotMeWithRelations
   /// with the given fields replaced by the non-null parameter values.
@@ -2802,264 +3069,330 @@ class __$$UserDetailedNotMeWithRelationsImplCopyWithImpl<$Res>
     Object? withReplies = freezed,
     Object? followedMessage = freezed,
   }) {
-    return _then(_$UserDetailedNotMeWithRelationsImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      username: null == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String,
-      host: freezed == host
-          ? _value.host
-          : host // ignore: cast_nullable_to_non_nullable
-              as String?,
-      avatarUrl: freezed == avatarUrl
-          ? _value.avatarUrl
-          : avatarUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      avatarBlurhash: freezed == avatarBlurhash
-          ? _value.avatarBlurhash
-          : avatarBlurhash // ignore: cast_nullable_to_non_nullable
-              as String?,
-      avatarDecorations: null == avatarDecorations
-          ? _value._avatarDecorations
-          : avatarDecorations // ignore: cast_nullable_to_non_nullable
-              as List<UserAvatarDecoration>,
-      isBot: null == isBot
-          ? _value.isBot
-          : isBot // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isCat: null == isCat
-          ? _value.isCat
-          : isCat // ignore: cast_nullable_to_non_nullable
-              as bool,
-      instance: freezed == instance
-          ? _value.instance
-          : instance // ignore: cast_nullable_to_non_nullable
-              as UserInstanceInfo?,
-      emojis: null == emojis
-          ? _value._emojis
-          : emojis // ignore: cast_nullable_to_non_nullable
-              as Map<String, String>,
-      onlineStatus: freezed == onlineStatus
-          ? _value.onlineStatus
-          : onlineStatus // ignore: cast_nullable_to_non_nullable
-              as OnlineStatus?,
-      badgeRoles: null == badgeRoles
-          ? _value._badgeRoles
-          : badgeRoles // ignore: cast_nullable_to_non_nullable
-              as List<UserBadgeRole>,
-      requireSigninToViewContents: freezed == requireSigninToViewContents
-          ? _value.requireSigninToViewContents
-          : requireSigninToViewContents // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      makeNotesFollowersOnlyBefore: freezed == makeNotesFollowersOnlyBefore
-          ? _value.makeNotesFollowersOnlyBefore
-          : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
-              as HideBefore?,
-      makeNotesHiddenBefore: freezed == makeNotesHiddenBefore
-          ? _value.makeNotesHiddenBefore
-          : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
-              as HideBefore?,
-      speakAsCat: freezed == speakAsCat
-          ? _value.speakAsCat
-          : speakAsCat // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      uri: freezed == uri
-          ? _value.uri
-          : uri // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      movedTo: freezed == movedTo
-          ? _value.movedTo
-          : movedTo // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      alsoKnownAs: freezed == alsoKnownAs
-          ? _value._alsoKnownAs
-          : alsoKnownAs // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedAt: freezed == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      lastFetchedAt: freezed == lastFetchedAt
-          ? _value.lastFetchedAt
-          : lastFetchedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      bannerUrl: freezed == bannerUrl
-          ? _value.bannerUrl
-          : bannerUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      bannerBlurhash: freezed == bannerBlurhash
-          ? _value.bannerBlurhash
-          : bannerBlurhash // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isLocked: null == isLocked
-          ? _value.isLocked
-          : isLocked // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isSilenced: null == isSilenced
-          ? _value.isSilenced
-          : isSilenced // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isSuspended: null == isSuspended
-          ? _value.isSuspended
-          : isSuspended // ignore: cast_nullable_to_non_nullable
-              as bool,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      location: freezed == location
-          ? _value.location
-          : location // ignore: cast_nullable_to_non_nullable
-              as String?,
-      birthday: freezed == birthday
-          ? _value.birthday
-          : birthday // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      lang: freezed == lang
-          ? _value.lang
-          : lang // ignore: cast_nullable_to_non_nullable
-              as String?,
-      fields: freezed == fields
-          ? _value._fields
-          : fields // ignore: cast_nullable_to_non_nullable
-              as List<UserField>?,
-      verifiedLinks: null == verifiedLinks
-          ? _value._verifiedLinks
-          : verifiedLinks // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      mutualLinkSections: freezed == mutualLinkSections
-          ? _value._mutualLinkSections
-          : mutualLinkSections // ignore: cast_nullable_to_non_nullable
-              as List<MutualLinkSection>?,
-      followersCount: null == followersCount
-          ? _value.followersCount
-          : followersCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      followingCount: null == followingCount
-          ? _value.followingCount
-          : followingCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      notesCount: null == notesCount
-          ? _value.notesCount
-          : notesCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      pinnedNoteIds: freezed == pinnedNoteIds
-          ? _value._pinnedNoteIds
-          : pinnedNoteIds // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      pinnedNotes: freezed == pinnedNotes
-          ? _value._pinnedNotes
-          : pinnedNotes // ignore: cast_nullable_to_non_nullable
-              as List<Note>?,
-      pinnedPageId: freezed == pinnedPageId
-          ? _value.pinnedPageId
-          : pinnedPageId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      pinnedPage: freezed == pinnedPage
-          ? _value._pinnedPage
-          : pinnedPage // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
-      publicReactions: null == publicReactions
-          ? _value.publicReactions
-          : publicReactions // ignore: cast_nullable_to_non_nullable
-              as bool,
-      ffVisibility: freezed == ffVisibility
-          ? _value.ffVisibility
-          : ffVisibility // ignore: cast_nullable_to_non_nullable
-              as FFVisibility?,
-      followersVisibility: freezed == followersVisibility
-          ? _value.followersVisibility
-          : followersVisibility // ignore: cast_nullable_to_non_nullable
-              as FFVisibility?,
-      followingVisibility: freezed == followingVisibility
-          ? _value.followingVisibility
-          : followingVisibility // ignore: cast_nullable_to_non_nullable
-              as FFVisibility?,
-      twoFactorEnabled: freezed == twoFactorEnabled
-          ? _value.twoFactorEnabled
-          : twoFactorEnabled // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      usePasswordLessLogin: freezed == usePasswordLessLogin
-          ? _value.usePasswordLessLogin
-          : usePasswordLessLogin // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      securityKeys: freezed == securityKeys
-          ? _value.securityKeys
-          : securityKeys // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      roles: freezed == roles
-          ? _value._roles
-          : roles // ignore: cast_nullable_to_non_nullable
-              as List<UserRole>?,
-      memo: freezed == memo
-          ? _value.memo
-          : memo // ignore: cast_nullable_to_non_nullable
-              as String?,
-      moderationNote: freezed == moderationNote
-          ? _value.moderationNote
-          : moderationNote // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isFollowing: null == isFollowing
-          ? _value.isFollowing
-          : isFollowing // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isFollowed: null == isFollowed
-          ? _value.isFollowed
-          : isFollowed // ignore: cast_nullable_to_non_nullable
-              as bool,
-      hasPendingFollowRequestFromYou: null == hasPendingFollowRequestFromYou
-          ? _value.hasPendingFollowRequestFromYou
-          : hasPendingFollowRequestFromYou // ignore: cast_nullable_to_non_nullable
-              as bool,
-      hasPendingFollowRequestToYou: null == hasPendingFollowRequestToYou
-          ? _value.hasPendingFollowRequestToYou
-          : hasPendingFollowRequestToYou // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isBlocking: null == isBlocking
-          ? _value.isBlocking
-          : isBlocking // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isBlocked: null == isBlocked
-          ? _value.isBlocked
-          : isBlocked // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isMuted: null == isMuted
-          ? _value.isMuted
-          : isMuted // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isRenoteMuted: null == isRenoteMuted
-          ? _value.isRenoteMuted
-          : isRenoteMuted // ignore: cast_nullable_to_non_nullable
-              as bool,
-      notify: freezed == notify
-          ? _value.notify
-          : notify // ignore: cast_nullable_to_non_nullable
-              as Notify?,
-      withReplies: freezed == withReplies
-          ? _value.withReplies
-          : withReplies // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      followedMessage: freezed == followedMessage
-          ? _value.followedMessage
-          : followedMessage // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$UserDetailedNotMeWithRelationsImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        name:
+            freezed == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        username:
+            null == username
+                ? _value.username
+                : username // ignore: cast_nullable_to_non_nullable
+                    as String,
+        host:
+            freezed == host
+                ? _value.host
+                : host // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        avatarUrl:
+            freezed == avatarUrl
+                ? _value.avatarUrl
+                : avatarUrl // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        avatarBlurhash:
+            freezed == avatarBlurhash
+                ? _value.avatarBlurhash
+                : avatarBlurhash // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        avatarDecorations:
+            null == avatarDecorations
+                ? _value._avatarDecorations
+                : avatarDecorations // ignore: cast_nullable_to_non_nullable
+                    as List<UserAvatarDecoration>,
+        isBot:
+            null == isBot
+                ? _value.isBot
+                : isBot // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        isCat:
+            null == isCat
+                ? _value.isCat
+                : isCat // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        instance:
+            freezed == instance
+                ? _value.instance
+                : instance // ignore: cast_nullable_to_non_nullable
+                    as UserInstanceInfo?,
+        emojis:
+            null == emojis
+                ? _value._emojis
+                : emojis // ignore: cast_nullable_to_non_nullable
+                    as Map<String, String>,
+        onlineStatus:
+            freezed == onlineStatus
+                ? _value.onlineStatus
+                : onlineStatus // ignore: cast_nullable_to_non_nullable
+                    as OnlineStatus?,
+        badgeRoles:
+            null == badgeRoles
+                ? _value._badgeRoles
+                : badgeRoles // ignore: cast_nullable_to_non_nullable
+                    as List<UserBadgeRole>,
+        requireSigninToViewContents:
+            freezed == requireSigninToViewContents
+                ? _value.requireSigninToViewContents
+                : requireSigninToViewContents // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        makeNotesFollowersOnlyBefore:
+            freezed == makeNotesFollowersOnlyBefore
+                ? _value.makeNotesFollowersOnlyBefore
+                : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
+                    as HideBefore?,
+        makeNotesHiddenBefore:
+            freezed == makeNotesHiddenBefore
+                ? _value.makeNotesHiddenBefore
+                : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
+                    as HideBefore?,
+        speakAsCat:
+            freezed == speakAsCat
+                ? _value.speakAsCat
+                : speakAsCat // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        url:
+            freezed == url
+                ? _value.url
+                : url // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        uri:
+            freezed == uri
+                ? _value.uri
+                : uri // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        movedTo:
+            freezed == movedTo
+                ? _value.movedTo
+                : movedTo // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        alsoKnownAs:
+            freezed == alsoKnownAs
+                ? _value._alsoKnownAs
+                : alsoKnownAs // ignore: cast_nullable_to_non_nullable
+                    as List<String>?,
+        createdAt:
+            null == createdAt
+                ? _value.createdAt
+                : createdAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        updatedAt:
+            freezed == updatedAt
+                ? _value.updatedAt
+                : updatedAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        lastFetchedAt:
+            freezed == lastFetchedAt
+                ? _value.lastFetchedAt
+                : lastFetchedAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        bannerUrl:
+            freezed == bannerUrl
+                ? _value.bannerUrl
+                : bannerUrl // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        bannerBlurhash:
+            freezed == bannerBlurhash
+                ? _value.bannerBlurhash
+                : bannerBlurhash // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        isLocked:
+            null == isLocked
+                ? _value.isLocked
+                : isLocked // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        isSilenced:
+            null == isSilenced
+                ? _value.isSilenced
+                : isSilenced // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        isSuspended:
+            null == isSuspended
+                ? _value.isSuspended
+                : isSuspended // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        description:
+            freezed == description
+                ? _value.description
+                : description // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        location:
+            freezed == location
+                ? _value.location
+                : location // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        birthday:
+            freezed == birthday
+                ? _value.birthday
+                : birthday // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        lang:
+            freezed == lang
+                ? _value.lang
+                : lang // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        fields:
+            freezed == fields
+                ? _value._fields
+                : fields // ignore: cast_nullable_to_non_nullable
+                    as List<UserField>?,
+        verifiedLinks:
+            null == verifiedLinks
+                ? _value._verifiedLinks
+                : verifiedLinks // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+        mutualLinkSections:
+            freezed == mutualLinkSections
+                ? _value._mutualLinkSections
+                : mutualLinkSections // ignore: cast_nullable_to_non_nullable
+                    as List<MutualLinkSection>?,
+        followersCount:
+            null == followersCount
+                ? _value.followersCount
+                : followersCount // ignore: cast_nullable_to_non_nullable
+                    as int,
+        followingCount:
+            null == followingCount
+                ? _value.followingCount
+                : followingCount // ignore: cast_nullable_to_non_nullable
+                    as int,
+        notesCount:
+            null == notesCount
+                ? _value.notesCount
+                : notesCount // ignore: cast_nullable_to_non_nullable
+                    as int,
+        pinnedNoteIds:
+            freezed == pinnedNoteIds
+                ? _value._pinnedNoteIds
+                : pinnedNoteIds // ignore: cast_nullable_to_non_nullable
+                    as List<String>?,
+        pinnedNotes:
+            freezed == pinnedNotes
+                ? _value._pinnedNotes
+                : pinnedNotes // ignore: cast_nullable_to_non_nullable
+                    as List<Note>?,
+        pinnedPageId:
+            freezed == pinnedPageId
+                ? _value.pinnedPageId
+                : pinnedPageId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        pinnedPage:
+            freezed == pinnedPage
+                ? _value._pinnedPage
+                : pinnedPage // ignore: cast_nullable_to_non_nullable
+                    as Map<String, dynamic>?,
+        publicReactions:
+            null == publicReactions
+                ? _value.publicReactions
+                : publicReactions // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        ffVisibility:
+            freezed == ffVisibility
+                ? _value.ffVisibility
+                : ffVisibility // ignore: cast_nullable_to_non_nullable
+                    as FFVisibility?,
+        followersVisibility:
+            freezed == followersVisibility
+                ? _value.followersVisibility
+                : followersVisibility // ignore: cast_nullable_to_non_nullable
+                    as FFVisibility?,
+        followingVisibility:
+            freezed == followingVisibility
+                ? _value.followingVisibility
+                : followingVisibility // ignore: cast_nullable_to_non_nullable
+                    as FFVisibility?,
+        twoFactorEnabled:
+            freezed == twoFactorEnabled
+                ? _value.twoFactorEnabled
+                : twoFactorEnabled // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        usePasswordLessLogin:
+            freezed == usePasswordLessLogin
+                ? _value.usePasswordLessLogin
+                : usePasswordLessLogin // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        securityKeys:
+            freezed == securityKeys
+                ? _value.securityKeys
+                : securityKeys // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        roles:
+            freezed == roles
+                ? _value._roles
+                : roles // ignore: cast_nullable_to_non_nullable
+                    as List<UserRole>?,
+        memo:
+            freezed == memo
+                ? _value.memo
+                : memo // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        moderationNote:
+            freezed == moderationNote
+                ? _value.moderationNote
+                : moderationNote // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        isFollowing:
+            null == isFollowing
+                ? _value.isFollowing
+                : isFollowing // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        isFollowed:
+            null == isFollowed
+                ? _value.isFollowed
+                : isFollowed // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        hasPendingFollowRequestFromYou:
+            null == hasPendingFollowRequestFromYou
+                ? _value.hasPendingFollowRequestFromYou
+                : hasPendingFollowRequestFromYou // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        hasPendingFollowRequestToYou:
+            null == hasPendingFollowRequestToYou
+                ? _value.hasPendingFollowRequestToYou
+                : hasPendingFollowRequestToYou // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        isBlocking:
+            null == isBlocking
+                ? _value.isBlocking
+                : isBlocking // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        isBlocked:
+            null == isBlocked
+                ? _value.isBlocked
+                : isBlocked // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        isMuted:
+            null == isMuted
+                ? _value.isMuted
+                : isMuted // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        isRenoteMuted:
+            null == isRenoteMuted
+                ? _value.isRenoteMuted
+                : isRenoteMuted // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        notify:
+            freezed == notify
+                ? _value.notify
+                : notify // ignore: cast_nullable_to_non_nullable
+                    as Notify?,
+        withReplies:
+            freezed == withReplies
+                ? _value.withReplies
+                : withReplies // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        followedMessage:
+            freezed == followedMessage
+                ? _value.followedMessage
+                : followedMessage // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -3067,91 +3400,91 @@ class __$$UserDetailedNotMeWithRelationsImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$UserDetailedNotMeWithRelationsImpl
     implements _UserDetailedNotMeWithRelations {
-  const _$UserDetailedNotMeWithRelationsImpl(
-      {required this.id,
-      this.name,
-      required this.username,
-      this.host,
-      @NullableUriConverter() this.avatarUrl,
-      this.avatarBlurhash,
-      final List<UserAvatarDecoration> avatarDecorations = const [],
-      required this.isBot,
-      required this.isCat,
-      this.instance,
-      @EmojisConverter() final Map<String, String> emojis = const {},
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      this.onlineStatus,
-      final List<UserBadgeRole> badgeRoles = const [],
-      this.requireSigninToViewContents,
-      @HideBeforeConverter() this.makeNotesFollowersOnlyBefore,
-      @HideBeforeConverter() this.makeNotesHiddenBefore,
-      this.speakAsCat,
-      @NullableUriConverter() this.url,
-      @NullableUriConverter() this.uri,
-      @NullableUriConverter() this.movedTo,
-      final List<String>? alsoKnownAs,
-      @DateTimeConverter() required this.createdAt,
-      @NullableDateTimeConverter() this.updatedAt,
-      @NullableDateTimeConverter() this.lastFetchedAt,
-      @NullableUriConverter() this.bannerUrl,
-      this.bannerBlurhash,
-      required this.isLocked,
-      required this.isSilenced,
-      required this.isSuspended,
-      this.description,
-      this.location,
-      @NullableDateTimeConverter() this.birthday,
-      this.lang,
-      final List<UserField>? fields,
-      final List<String> verifiedLinks = const [],
-      final List<MutualLinkSection>? mutualLinkSections,
-      @IntConverter() required this.followersCount,
-      @IntConverter() required this.followingCount,
-      required this.notesCount,
-      final List<String>? pinnedNoteIds,
-      final List<Note>? pinnedNotes,
-      this.pinnedPageId,
-      final Map<String, dynamic>? pinnedPage,
-      this.publicReactions = false,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      @Deprecated("removed at 2023.12.0")
-      this.ffVisibility,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      this.followersVisibility,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      this.followingVisibility,
-      this.twoFactorEnabled,
-      this.usePasswordLessLogin,
-      this.securityKeys,
-      final List<UserRole>? roles,
-      this.memo,
-      this.moderationNote,
-      required this.isFollowing,
-      required this.isFollowed,
-      required this.hasPendingFollowRequestFromYou,
-      required this.hasPendingFollowRequestToYou,
-      required this.isBlocking,
-      required this.isBlocked,
-      required this.isMuted,
-      this.isRenoteMuted = false,
-      this.notify,
-      this.withReplies,
-      this.followedMessage})
-      : _avatarDecorations = avatarDecorations,
-        _emojis = emojis,
-        _badgeRoles = badgeRoles,
-        _alsoKnownAs = alsoKnownAs,
-        _fields = fields,
-        _verifiedLinks = verifiedLinks,
-        _mutualLinkSections = mutualLinkSections,
-        _pinnedNoteIds = pinnedNoteIds,
-        _pinnedNotes = pinnedNotes,
-        _pinnedPage = pinnedPage,
-        _roles = roles;
+  const _$UserDetailedNotMeWithRelationsImpl({
+    required this.id,
+    this.name,
+    required this.username,
+    this.host,
+    @NullableUriConverter() this.avatarUrl,
+    this.avatarBlurhash,
+    final List<UserAvatarDecoration> avatarDecorations = const [],
+    required this.isBot,
+    required this.isCat,
+    this.instance,
+    @EmojisConverter() final Map<String, String> emojis = const {},
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    this.onlineStatus,
+    final List<UserBadgeRole> badgeRoles = const [],
+    this.requireSigninToViewContents,
+    @HideBeforeConverter() this.makeNotesFollowersOnlyBefore,
+    @HideBeforeConverter() this.makeNotesHiddenBefore,
+    this.speakAsCat,
+    @NullableUriConverter() this.url,
+    @NullableUriConverter() this.uri,
+    @NullableUriConverter() this.movedTo,
+    final List<String>? alsoKnownAs,
+    @DateTimeConverter() required this.createdAt,
+    @NullableDateTimeConverter() this.updatedAt,
+    @NullableDateTimeConverter() this.lastFetchedAt,
+    @NullableUriConverter() this.bannerUrl,
+    this.bannerBlurhash,
+    required this.isLocked,
+    required this.isSilenced,
+    required this.isSuspended,
+    this.description,
+    this.location,
+    @NullableDateTimeConverter() this.birthday,
+    this.lang,
+    final List<UserField>? fields,
+    final List<String> verifiedLinks = const [],
+    final List<MutualLinkSection>? mutualLinkSections,
+    @IntConverter() required this.followersCount,
+    @IntConverter() required this.followingCount,
+    required this.notesCount,
+    final List<String>? pinnedNoteIds,
+    final List<Note>? pinnedNotes,
+    this.pinnedPageId,
+    final Map<String, dynamic>? pinnedPage,
+    this.publicReactions = false,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    @Deprecated("removed at 2023.12.0")
+    this.ffVisibility,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    this.followersVisibility,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    this.followingVisibility,
+    this.twoFactorEnabled,
+    this.usePasswordLessLogin,
+    this.securityKeys,
+    final List<UserRole>? roles,
+    this.memo,
+    this.moderationNote,
+    required this.isFollowing,
+    required this.isFollowed,
+    required this.hasPendingFollowRequestFromYou,
+    required this.hasPendingFollowRequestToYou,
+    required this.isBlocking,
+    required this.isBlocked,
+    required this.isMuted,
+    this.isRenoteMuted = false,
+    this.notify,
+    this.withReplies,
+    this.followedMessage,
+  }) : _avatarDecorations = avatarDecorations,
+       _emojis = emojis,
+       _badgeRoles = badgeRoles,
+       _alsoKnownAs = alsoKnownAs,
+       _fields = fields,
+       _verifiedLinks = verifiedLinks,
+       _mutualLinkSections = mutualLinkSections,
+       _pinnedNoteIds = pinnedNoteIds,
+       _pinnedNotes = pinnedNotes,
+       _pinnedPage = pinnedPage,
+       _roles = roles;
 
   factory _$UserDetailedNotMeWithRelationsImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$UserDetailedNotMeWithRelationsImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$UserDetailedNotMeWithRelationsImplFromJson(json);
 
   @override
   final String id;
@@ -3192,7 +3525,7 @@ class _$UserDetailedNotMeWithRelationsImpl
     return EqualUnmodifiableMapView(_emojis);
   }
 
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final OnlineStatus? onlineStatus;
@@ -3293,11 +3626,11 @@ class _$UserDetailedNotMeWithRelationsImpl
     return EqualUnmodifiableListView(value);
   }
 
-// CherryPick 4.3.0 or newer returns String if the count is not visible
+  // CherryPick 4.3.0 or newer returns String if the count is not visible
   @override
   @IntConverter()
   final int followersCount;
-// CherryPick 4.3.0 or newer returns String if the count is not visible
+  // CherryPick 4.3.0 or newer returns String if the count is not visible
   @override
   @IntConverter()
   final int followingCount;
@@ -3335,30 +3668,30 @@ class _$UserDetailedNotMeWithRelationsImpl
     return EqualUnmodifiableMapView(value);
   }
 
-// Added in Misskey 12.93.0
+  // Added in Misskey 12.93.0
   @override
   @JsonKey()
   final bool publicReactions;
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   @Deprecated("removed at 2023.12.0")
   final FFVisibility? ffVisibility;
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final FFVisibility? followersVisibility;
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final FFVisibility? followingVisibility;
-// Removed in Misskey 2024.10.0
+  // Removed in Misskey 2024.10.0
   @override
   final bool? twoFactorEnabled;
-// Added in Misskey 11.25.0, Removed in Misskey 2024.10.0
+  // Added in Misskey 11.25.0, Removed in Misskey 2024.10.0
   @override
   final bool? usePasswordLessLogin;
-// Added in Misskey 11.24.0, Removed in Misskey 2024.10.0
+  // Added in Misskey 11.24.0, Removed in Misskey 2024.10.0
   @override
   final bool? securityKeys;
   final List<UserRole>? _roles;
@@ -3389,7 +3722,7 @@ class _$UserDetailedNotMeWithRelationsImpl
   final bool isBlocked;
   @override
   final bool isMuted;
-// Added in Misskey 13.10.0
+  // Added in Misskey 13.10.0
   @override
   @JsonKey()
   final bool isRenoteMuted;
@@ -3419,8 +3752,10 @@ class _$UserDetailedNotMeWithRelationsImpl
                 other.avatarUrl == avatarUrl) &&
             (identical(other.avatarBlurhash, avatarBlurhash) ||
                 other.avatarBlurhash == avatarBlurhash) &&
-            const DeepCollectionEquality()
-                .equals(other._avatarDecorations, _avatarDecorations) &&
+            const DeepCollectionEquality().equals(
+              other._avatarDecorations,
+              _avatarDecorations,
+            ) &&
             (identical(other.isBot, isBot) || other.isBot == isBot) &&
             (identical(other.isCat, isCat) || other.isCat == isCat) &&
             (identical(other.instance, instance) ||
@@ -3428,12 +3763,20 @@ class _$UserDetailedNotMeWithRelationsImpl
             const DeepCollectionEquality().equals(other._emojis, _emojis) &&
             (identical(other.onlineStatus, onlineStatus) ||
                 other.onlineStatus == onlineStatus) &&
-            const DeepCollectionEquality()
-                .equals(other._badgeRoles, _badgeRoles) &&
-            (identical(other.requireSigninToViewContents, requireSigninToViewContents) ||
+            const DeepCollectionEquality().equals(
+              other._badgeRoles,
+              _badgeRoles,
+            ) &&
+            (identical(
+                  other.requireSigninToViewContents,
+                  requireSigninToViewContents,
+                ) ||
                 other.requireSigninToViewContents ==
                     requireSigninToViewContents) &&
-            (identical(other.makeNotesFollowersOnlyBefore, makeNotesFollowersOnlyBefore) ||
+            (identical(
+                  other.makeNotesFollowersOnlyBefore,
+                  makeNotesFollowersOnlyBefore,
+                ) ||
                 other.makeNotesFollowersOnlyBefore ==
                     makeNotesFollowersOnlyBefore) &&
             (identical(other.makeNotesHiddenBefore, makeNotesHiddenBefore) ||
@@ -3443,8 +3786,10 @@ class _$UserDetailedNotMeWithRelationsImpl
             (identical(other.url, url) || other.url == url) &&
             (identical(other.uri, uri) || other.uri == uri) &&
             (identical(other.movedTo, movedTo) || other.movedTo == movedTo) &&
-            const DeepCollectionEquality()
-                .equals(other._alsoKnownAs, _alsoKnownAs) &&
+            const DeepCollectionEquality().equals(
+              other._alsoKnownAs,
+              _alsoKnownAs,
+            ) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
             (identical(other.updatedAt, updatedAt) ||
@@ -3469,112 +3814,151 @@ class _$UserDetailedNotMeWithRelationsImpl
                 other.birthday == birthday) &&
             (identical(other.lang, lang) || other.lang == lang) &&
             const DeepCollectionEquality().equals(other._fields, _fields) &&
-            const DeepCollectionEquality()
-                .equals(other._verifiedLinks, _verifiedLinks) &&
-            const DeepCollectionEquality()
-                .equals(other._mutualLinkSections, _mutualLinkSections) &&
+            const DeepCollectionEquality().equals(
+              other._verifiedLinks,
+              _verifiedLinks,
+            ) &&
+            const DeepCollectionEquality().equals(
+              other._mutualLinkSections,
+              _mutualLinkSections,
+            ) &&
             (identical(other.followersCount, followersCount) ||
                 other.followersCount == followersCount) &&
             (identical(other.followingCount, followingCount) ||
                 other.followingCount == followingCount) &&
             (identical(other.notesCount, notesCount) ||
                 other.notesCount == notesCount) &&
-            const DeepCollectionEquality().equals(other._pinnedNoteIds, _pinnedNoteIds) &&
-            const DeepCollectionEquality().equals(other._pinnedNotes, _pinnedNotes) &&
-            (identical(other.pinnedPageId, pinnedPageId) || other.pinnedPageId == pinnedPageId) &&
-            const DeepCollectionEquality().equals(other._pinnedPage, _pinnedPage) &&
-            (identical(other.publicReactions, publicReactions) || other.publicReactions == publicReactions) &&
-            (identical(other.ffVisibility, ffVisibility) || other.ffVisibility == ffVisibility) &&
-            (identical(other.followersVisibility, followersVisibility) || other.followersVisibility == followersVisibility) &&
-            (identical(other.followingVisibility, followingVisibility) || other.followingVisibility == followingVisibility) &&
-            (identical(other.twoFactorEnabled, twoFactorEnabled) || other.twoFactorEnabled == twoFactorEnabled) &&
-            (identical(other.usePasswordLessLogin, usePasswordLessLogin) || other.usePasswordLessLogin == usePasswordLessLogin) &&
-            (identical(other.securityKeys, securityKeys) || other.securityKeys == securityKeys) &&
+            const DeepCollectionEquality().equals(
+              other._pinnedNoteIds,
+              _pinnedNoteIds,
+            ) &&
+            const DeepCollectionEquality().equals(
+              other._pinnedNotes,
+              _pinnedNotes,
+            ) &&
+            (identical(other.pinnedPageId, pinnedPageId) ||
+                other.pinnedPageId == pinnedPageId) &&
+            const DeepCollectionEquality().equals(
+              other._pinnedPage,
+              _pinnedPage,
+            ) &&
+            (identical(other.publicReactions, publicReactions) ||
+                other.publicReactions == publicReactions) &&
+            (identical(other.ffVisibility, ffVisibility) ||
+                other.ffVisibility == ffVisibility) &&
+            (identical(other.followersVisibility, followersVisibility) ||
+                other.followersVisibility == followersVisibility) &&
+            (identical(other.followingVisibility, followingVisibility) ||
+                other.followingVisibility == followingVisibility) &&
+            (identical(other.twoFactorEnabled, twoFactorEnabled) ||
+                other.twoFactorEnabled == twoFactorEnabled) &&
+            (identical(other.usePasswordLessLogin, usePasswordLessLogin) ||
+                other.usePasswordLessLogin == usePasswordLessLogin) &&
+            (identical(other.securityKeys, securityKeys) ||
+                other.securityKeys == securityKeys) &&
             const DeepCollectionEquality().equals(other._roles, _roles) &&
             (identical(other.memo, memo) || other.memo == memo) &&
-            (identical(other.moderationNote, moderationNote) || other.moderationNote == moderationNote) &&
-            (identical(other.isFollowing, isFollowing) || other.isFollowing == isFollowing) &&
-            (identical(other.isFollowed, isFollowed) || other.isFollowed == isFollowed) &&
-            (identical(other.hasPendingFollowRequestFromYou, hasPendingFollowRequestFromYou) || other.hasPendingFollowRequestFromYou == hasPendingFollowRequestFromYou) &&
-            (identical(other.hasPendingFollowRequestToYou, hasPendingFollowRequestToYou) || other.hasPendingFollowRequestToYou == hasPendingFollowRequestToYou) &&
-            (identical(other.isBlocking, isBlocking) || other.isBlocking == isBlocking) &&
-            (identical(other.isBlocked, isBlocked) || other.isBlocked == isBlocked) &&
+            (identical(other.moderationNote, moderationNote) ||
+                other.moderationNote == moderationNote) &&
+            (identical(other.isFollowing, isFollowing) ||
+                other.isFollowing == isFollowing) &&
+            (identical(other.isFollowed, isFollowed) ||
+                other.isFollowed == isFollowed) &&
+            (identical(
+                  other.hasPendingFollowRequestFromYou,
+                  hasPendingFollowRequestFromYou,
+                ) ||
+                other.hasPendingFollowRequestFromYou ==
+                    hasPendingFollowRequestFromYou) &&
+            (identical(
+                  other.hasPendingFollowRequestToYou,
+                  hasPendingFollowRequestToYou,
+                ) ||
+                other.hasPendingFollowRequestToYou ==
+                    hasPendingFollowRequestToYou) &&
+            (identical(other.isBlocking, isBlocking) ||
+                other.isBlocking == isBlocking) &&
+            (identical(other.isBlocked, isBlocked) ||
+                other.isBlocked == isBlocked) &&
             (identical(other.isMuted, isMuted) || other.isMuted == isMuted) &&
-            (identical(other.isRenoteMuted, isRenoteMuted) || other.isRenoteMuted == isRenoteMuted) &&
+            (identical(other.isRenoteMuted, isRenoteMuted) ||
+                other.isRenoteMuted == isRenoteMuted) &&
             (identical(other.notify, notify) || other.notify == notify) &&
-            (identical(other.withReplies, withReplies) || other.withReplies == withReplies) &&
-            (identical(other.followedMessage, followedMessage) || other.followedMessage == followedMessage));
+            (identical(other.withReplies, withReplies) ||
+                other.withReplies == withReplies) &&
+            (identical(other.followedMessage, followedMessage) ||
+                other.followedMessage == followedMessage));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
-        runtimeType,
-        id,
-        name,
-        username,
-        host,
-        avatarUrl,
-        avatarBlurhash,
-        const DeepCollectionEquality().hash(_avatarDecorations),
-        isBot,
-        isCat,
-        instance,
-        const DeepCollectionEquality().hash(_emojis),
-        onlineStatus,
-        const DeepCollectionEquality().hash(_badgeRoles),
-        requireSigninToViewContents,
-        makeNotesFollowersOnlyBefore,
-        makeNotesHiddenBefore,
-        speakAsCat,
-        url,
-        uri,
-        movedTo,
-        const DeepCollectionEquality().hash(_alsoKnownAs),
-        createdAt,
-        updatedAt,
-        lastFetchedAt,
-        bannerUrl,
-        bannerBlurhash,
-        isLocked,
-        isSilenced,
-        isSuspended,
-        description,
-        location,
-        birthday,
-        lang,
-        const DeepCollectionEquality().hash(_fields),
-        const DeepCollectionEquality().hash(_verifiedLinks),
-        const DeepCollectionEquality().hash(_mutualLinkSections),
-        followersCount,
-        followingCount,
-        notesCount,
-        const DeepCollectionEquality().hash(_pinnedNoteIds),
-        const DeepCollectionEquality().hash(_pinnedNotes),
-        pinnedPageId,
-        const DeepCollectionEquality().hash(_pinnedPage),
-        publicReactions,
-        ffVisibility,
-        followersVisibility,
-        followingVisibility,
-        twoFactorEnabled,
-        usePasswordLessLogin,
-        securityKeys,
-        const DeepCollectionEquality().hash(_roles),
-        memo,
-        moderationNote,
-        isFollowing,
-        isFollowed,
-        hasPendingFollowRequestFromYou,
-        hasPendingFollowRequestToYou,
-        isBlocking,
-        isBlocked,
-        isMuted,
-        isRenoteMuted,
-        notify,
-        withReplies,
-        followedMessage
-      ]);
+    runtimeType,
+    id,
+    name,
+    username,
+    host,
+    avatarUrl,
+    avatarBlurhash,
+    const DeepCollectionEquality().hash(_avatarDecorations),
+    isBot,
+    isCat,
+    instance,
+    const DeepCollectionEquality().hash(_emojis),
+    onlineStatus,
+    const DeepCollectionEquality().hash(_badgeRoles),
+    requireSigninToViewContents,
+    makeNotesFollowersOnlyBefore,
+    makeNotesHiddenBefore,
+    speakAsCat,
+    url,
+    uri,
+    movedTo,
+    const DeepCollectionEquality().hash(_alsoKnownAs),
+    createdAt,
+    updatedAt,
+    lastFetchedAt,
+    bannerUrl,
+    bannerBlurhash,
+    isLocked,
+    isSilenced,
+    isSuspended,
+    description,
+    location,
+    birthday,
+    lang,
+    const DeepCollectionEquality().hash(_fields),
+    const DeepCollectionEquality().hash(_verifiedLinks),
+    const DeepCollectionEquality().hash(_mutualLinkSections),
+    followersCount,
+    followingCount,
+    notesCount,
+    const DeepCollectionEquality().hash(_pinnedNoteIds),
+    const DeepCollectionEquality().hash(_pinnedNotes),
+    pinnedPageId,
+    const DeepCollectionEquality().hash(_pinnedPage),
+    publicReactions,
+    ffVisibility,
+    followersVisibility,
+    followingVisibility,
+    twoFactorEnabled,
+    usePasswordLessLogin,
+    securityKeys,
+    const DeepCollectionEquality().hash(_roles),
+    memo,
+    moderationNote,
+    isFollowing,
+    isFollowed,
+    hasPendingFollowRequestFromYou,
+    hasPendingFollowRequestToYou,
+    isBlocking,
+    isBlocked,
+    isMuted,
+    isRenoteMuted,
+    notify,
+    withReplies,
+    followedMessage,
+  ]);
 
   /// Create a copy of UserDetailedNotMeWithRelations
   /// with the given fields replaced by the non-null parameter values.
@@ -3582,90 +3966,91 @@ class _$UserDetailedNotMeWithRelationsImpl
   @override
   @pragma('vm:prefer-inline')
   _$$UserDetailedNotMeWithRelationsImplCopyWith<
-          _$UserDetailedNotMeWithRelationsImpl>
-      get copyWith => __$$UserDetailedNotMeWithRelationsImplCopyWithImpl<
-          _$UserDetailedNotMeWithRelationsImpl>(this, _$identity);
+    _$UserDetailedNotMeWithRelationsImpl
+  >
+  get copyWith => __$$UserDetailedNotMeWithRelationsImplCopyWithImpl<
+    _$UserDetailedNotMeWithRelationsImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UserDetailedNotMeWithRelationsImplToJson(
-      this,
-    );
+    return _$$UserDetailedNotMeWithRelationsImplToJson(this);
   }
 }
 
 abstract class _UserDetailedNotMeWithRelations
     implements UserDetailedNotMeWithRelations {
-  const factory _UserDetailedNotMeWithRelations(
-      {required final String id,
-      final String? name,
-      required final String username,
-      final String? host,
-      @NullableUriConverter() final Uri? avatarUrl,
-      final String? avatarBlurhash,
-      final List<UserAvatarDecoration> avatarDecorations,
-      required final bool isBot,
-      required final bool isCat,
-      final UserInstanceInfo? instance,
-      @EmojisConverter() final Map<String, String> emojis,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      final OnlineStatus? onlineStatus,
-      final List<UserBadgeRole> badgeRoles,
-      final bool? requireSigninToViewContents,
-      @HideBeforeConverter() final HideBefore? makeNotesFollowersOnlyBefore,
-      @HideBeforeConverter() final HideBefore? makeNotesHiddenBefore,
-      final bool? speakAsCat,
-      @NullableUriConverter() final Uri? url,
-      @NullableUriConverter() final Uri? uri,
-      @NullableUriConverter() final Uri? movedTo,
-      final List<String>? alsoKnownAs,
-      @DateTimeConverter() required final DateTime createdAt,
-      @NullableDateTimeConverter() final DateTime? updatedAt,
-      @NullableDateTimeConverter() final DateTime? lastFetchedAt,
-      @NullableUriConverter() final Uri? bannerUrl,
-      final String? bannerBlurhash,
-      required final bool isLocked,
-      required final bool isSilenced,
-      required final bool isSuspended,
-      final String? description,
-      final String? location,
-      @NullableDateTimeConverter() final DateTime? birthday,
-      final String? lang,
-      final List<UserField>? fields,
-      final List<String> verifiedLinks,
-      final List<MutualLinkSection>? mutualLinkSections,
-      @IntConverter() required final int followersCount,
-      @IntConverter() required final int followingCount,
-      required final int notesCount,
-      final List<String>? pinnedNoteIds,
-      final List<Note>? pinnedNotes,
-      final String? pinnedPageId,
-      final Map<String, dynamic>? pinnedPage,
-      final bool publicReactions,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      @Deprecated("removed at 2023.12.0")
-      final FFVisibility? ffVisibility,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      final FFVisibility? followersVisibility,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      final FFVisibility? followingVisibility,
-      final bool? twoFactorEnabled,
-      final bool? usePasswordLessLogin,
-      final bool? securityKeys,
-      final List<UserRole>? roles,
-      final String? memo,
-      final String? moderationNote,
-      required final bool isFollowing,
-      required final bool isFollowed,
-      required final bool hasPendingFollowRequestFromYou,
-      required final bool hasPendingFollowRequestToYou,
-      required final bool isBlocking,
-      required final bool isBlocked,
-      required final bool isMuted,
-      final bool isRenoteMuted,
-      final Notify? notify,
-      final bool? withReplies,
-      final String? followedMessage}) = _$UserDetailedNotMeWithRelationsImpl;
+  const factory _UserDetailedNotMeWithRelations({
+    required final String id,
+    final String? name,
+    required final String username,
+    final String? host,
+    @NullableUriConverter() final Uri? avatarUrl,
+    final String? avatarBlurhash,
+    final List<UserAvatarDecoration> avatarDecorations,
+    required final bool isBot,
+    required final bool isCat,
+    final UserInstanceInfo? instance,
+    @EmojisConverter() final Map<String, String> emojis,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    final OnlineStatus? onlineStatus,
+    final List<UserBadgeRole> badgeRoles,
+    final bool? requireSigninToViewContents,
+    @HideBeforeConverter() final HideBefore? makeNotesFollowersOnlyBefore,
+    @HideBeforeConverter() final HideBefore? makeNotesHiddenBefore,
+    final bool? speakAsCat,
+    @NullableUriConverter() final Uri? url,
+    @NullableUriConverter() final Uri? uri,
+    @NullableUriConverter() final Uri? movedTo,
+    final List<String>? alsoKnownAs,
+    @DateTimeConverter() required final DateTime createdAt,
+    @NullableDateTimeConverter() final DateTime? updatedAt,
+    @NullableDateTimeConverter() final DateTime? lastFetchedAt,
+    @NullableUriConverter() final Uri? bannerUrl,
+    final String? bannerBlurhash,
+    required final bool isLocked,
+    required final bool isSilenced,
+    required final bool isSuspended,
+    final String? description,
+    final String? location,
+    @NullableDateTimeConverter() final DateTime? birthday,
+    final String? lang,
+    final List<UserField>? fields,
+    final List<String> verifiedLinks,
+    final List<MutualLinkSection>? mutualLinkSections,
+    @IntConverter() required final int followersCount,
+    @IntConverter() required final int followingCount,
+    required final int notesCount,
+    final List<String>? pinnedNoteIds,
+    final List<Note>? pinnedNotes,
+    final String? pinnedPageId,
+    final Map<String, dynamic>? pinnedPage,
+    final bool publicReactions,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    @Deprecated("removed at 2023.12.0")
+    final FFVisibility? ffVisibility,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    final FFVisibility? followersVisibility,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    final FFVisibility? followingVisibility,
+    final bool? twoFactorEnabled,
+    final bool? usePasswordLessLogin,
+    final bool? securityKeys,
+    final List<UserRole>? roles,
+    final String? memo,
+    final String? moderationNote,
+    required final bool isFollowing,
+    required final bool isFollowed,
+    required final bool hasPendingFollowRequestFromYou,
+    required final bool hasPendingFollowRequestToYou,
+    required final bool isBlocking,
+    required final bool isBlocked,
+    required final bool isMuted,
+    final bool isRenoteMuted,
+    final Notify? notify,
+    final bool? withReplies,
+    final String? followedMessage,
+  }) = _$UserDetailedNotMeWithRelationsImpl;
 
   factory _UserDetailedNotMeWithRelations.fromJson(Map<String, dynamic> json) =
       _$UserDetailedNotMeWithRelationsImpl.fromJson;
@@ -3754,8 +4139,7 @@ abstract class _UserDetailedNotMeWithRelations
   @override
   List<String> get verifiedLinks;
   @override
-  List<MutualLinkSection>?
-      get mutualLinkSections; // CherryPick 4.3.0 or newer returns String if the count is not visible
+  List<MutualLinkSection>? get mutualLinkSections; // CherryPick 4.3.0 or newer returns String if the count is not visible
   @override
   @IntConverter()
   int get followersCount; // CherryPick 4.3.0 or newer returns String if the count is not visible
@@ -3785,11 +4169,9 @@ abstract class _UserDetailedNotMeWithRelations
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FFVisibility? get followingVisibility; // Removed in Misskey 2024.10.0
   @override
-  bool?
-      get twoFactorEnabled; // Added in Misskey 11.25.0, Removed in Misskey 2024.10.0
+  bool? get twoFactorEnabled; // Added in Misskey 11.25.0, Removed in Misskey 2024.10.0
   @override
-  bool?
-      get usePasswordLessLogin; // Added in Misskey 11.24.0, Removed in Misskey 2024.10.0
+  bool? get usePasswordLessLogin; // Added in Misskey 11.24.0, Removed in Misskey 2024.10.0
   @override
   bool? get securityKeys;
   @override
@@ -3826,8 +4208,9 @@ abstract class _UserDetailedNotMeWithRelations
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UserDetailedNotMeWithRelationsImplCopyWith<
-          _$UserDetailedNotMeWithRelationsImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$UserDetailedNotMeWithRelationsImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 MeDetailed _$MeDetailedFromJson(Map<String, dynamic> json) {
@@ -3849,8 +4232,7 @@ mixin _$MeDetailed {
   bool get isCat => throw _privateConstructorUsedError;
   UserInstanceInfo? get instance => throw _privateConstructorUsedError;
   @EmojisConverter()
-  Map<String, String> get emojis =>
-      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  Map<String, String> get emojis => throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   OnlineStatus? get onlineStatus => throw _privateConstructorUsedError;
   List<UserBadgeRole> get badgeRoles => throw _privateConstructorUsedError;
@@ -3890,8 +4272,7 @@ mixin _$MeDetailed {
   List<MutualLinkSection>? get mutualLinkSections =>
       throw _privateConstructorUsedError; // CherryPick 4.3.0 or newer returns String if the count is not visible
   @IntConverter()
-  int get followersCount =>
-      throw _privateConstructorUsedError; // CherryPick 4.3.0 or newer returns String if the count is not visible
+  int get followersCount => throw _privateConstructorUsedError; // CherryPick 4.3.0 or newer returns String if the count is not visible
   @IntConverter()
   int get followingCount => throw _privateConstructorUsedError;
   int get notesCount => throw _privateConstructorUsedError;
@@ -3904,19 +4285,17 @@ mixin _$MeDetailed {
       throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   @Deprecated("removed at 2023.12.0")
-  FFVisibility? get ffVisibility =>
-      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  FFVisibility? get ffVisibility => throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-  FFVisibility? get followersVisibility =>
-      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  FFVisibility? get followersVisibility => throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FFVisibility? get followingVisibility => throw _privateConstructorUsedError;
   bool? get twoFactorEnabled =>
       throw _privateConstructorUsedError; // Added in Misskey 11.25.0
-// Removed in Misskey 2024.10.0
+  // Removed in Misskey 2024.10.0
   bool? get usePasswordLessLogin =>
       throw _privateConstructorUsedError; // Added in Misskey 11.24.0
-// Removed in Misskey 2024.10.0
+  // Removed in Misskey 2024.10.0
   bool? get securityKeys => throw _privateConstructorUsedError;
   List<UserRole>? get roles => throw _privateConstructorUsedError;
   String? get memo => throw _privateConstructorUsedError;
@@ -3965,8 +4344,7 @@ mixin _$MeDetailed {
   @MuteWordsConverter()
   List<MuteWord>? get mutedWords => throw _privateConstructorUsedError;
   @MuteWordsConverter()
-  List<MuteWord>? get hardMutedWords =>
-      throw _privateConstructorUsedError; // Added in Misskey 12.99.0
+  List<MuteWord>? get hardMutedWords => throw _privateConstructorUsedError; // Added in Misskey 12.99.0
   List<String> get mutedInstances => throw _privateConstructorUsedError;
   @Deprecated("Deprecated in Misskey 2023.9.2")
   List<String>? get mutingNotificationTypes =>
@@ -3994,105 +4372,107 @@ mixin _$MeDetailed {
 /// @nodoc
 abstract class $MeDetailedCopyWith<$Res> {
   factory $MeDetailedCopyWith(
-          MeDetailed value, $Res Function(MeDetailed) then) =
-      _$MeDetailedCopyWithImpl<$Res, MeDetailed>;
+    MeDetailed value,
+    $Res Function(MeDetailed) then,
+  ) = _$MeDetailedCopyWithImpl<$Res, MeDetailed>;
   @useResult
-  $Res call(
-      {String id,
-      String? name,
-      String username,
-      String? host,
-      @NullableUriConverter() Uri? avatarUrl,
-      String? avatarBlurhash,
-      List<UserAvatarDecoration> avatarDecorations,
-      bool isBot,
-      bool isCat,
-      UserInstanceInfo? instance,
-      @EmojisConverter() Map<String, String> emojis,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      OnlineStatus? onlineStatus,
-      List<UserBadgeRole> badgeRoles,
-      bool? requireSigninToViewContents,
-      @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
-      @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
-      bool? speakAsCat,
-      @NullableUriConverter() Uri? url,
-      @NullableUriConverter() Uri? uri,
-      @NullableUriConverter() Uri? movedTo,
-      List<String>? alsoKnownAs,
-      @DateTimeConverter() DateTime createdAt,
-      @NullableDateTimeConverter() DateTime? updatedAt,
-      @NullableDateTimeConverter() DateTime? lastFetchedAt,
-      @NullableUriConverter() Uri? bannerUrl,
-      String? bannerBlurhash,
-      bool isLocked,
-      bool isSilenced,
-      bool isSuspended,
-      String? description,
-      String? location,
-      @NullableDateTimeConverter() DateTime? birthday,
-      String? lang,
-      List<UserField>? fields,
-      List<String> verifiedLinks,
-      List<MutualLinkSection>? mutualLinkSections,
-      @IntConverter() int followersCount,
-      @IntConverter() int followingCount,
-      int notesCount,
-      List<String>? pinnedNoteIds,
-      List<Note>? pinnedNotes,
-      String? pinnedPageId,
-      Map<String, dynamic>? pinnedPage,
-      bool publicReactions,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      @Deprecated("removed at 2023.12.0")
-      FFVisibility? ffVisibility,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      FFVisibility? followersVisibility,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      FFVisibility? followingVisibility,
-      bool? twoFactorEnabled,
-      bool? usePasswordLessLogin,
-      bool? securityKeys,
-      List<UserRole>? roles,
-      String? memo,
-      String? moderationNote,
-      String? avatarId,
-      String? bannerId,
-      String? followedMessage,
-      bool isModerator,
-      bool isAdmin,
-      bool injectFeaturedNote,
-      bool receiveAnnouncementEmail,
-      bool alwaysMarkNsfw,
-      bool autoSensitive,
-      bool carefulBot,
-      bool autoAcceptFollowed,
-      bool? preventAiLearning,
-      bool noCrawle,
-      bool isExplorable,
-      bool isDeleted,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      TwoFactorBackupCodesStock? twoFactorBackupCodesStock,
-      bool hideOnlineStatus,
-      bool hasUnreadSpecifiedNotes,
-      bool hasUnreadMentions,
-      bool hasUnreadAnnouncement,
-      bool hasUnreadAntenna,
-      bool hasUnreadChannel,
-      bool hasUnreadNotification,
-      bool hasPendingReceivedFollowRequest,
-      int? unreadNotificationsCount,
-      List<AnnouncementsResponse> unreadAnnouncements,
-      @MuteWordsConverter() List<MuteWord>? mutedWords,
-      @MuteWordsConverter() List<MuteWord>? hardMutedWords,
-      List<String> mutedInstances,
-      @Deprecated("Deprecated in Misskey 2023.9.2")
-      List<String>? mutingNotificationTypes,
-      NotificationRecieveConfigs notificationRecieveConfig,
-      List<String> emailNotificationTypes,
-      List<UserAchievement> achievements,
-      int? loggedInDays,
-      UserPolicies? policies});
+  $Res call({
+    String id,
+    String? name,
+    String username,
+    String? host,
+    @NullableUriConverter() Uri? avatarUrl,
+    String? avatarBlurhash,
+    List<UserAvatarDecoration> avatarDecorations,
+    bool isBot,
+    bool isCat,
+    UserInstanceInfo? instance,
+    @EmojisConverter() Map<String, String> emojis,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    OnlineStatus? onlineStatus,
+    List<UserBadgeRole> badgeRoles,
+    bool? requireSigninToViewContents,
+    @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
+    @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
+    bool? speakAsCat,
+    @NullableUriConverter() Uri? url,
+    @NullableUriConverter() Uri? uri,
+    @NullableUriConverter() Uri? movedTo,
+    List<String>? alsoKnownAs,
+    @DateTimeConverter() DateTime createdAt,
+    @NullableDateTimeConverter() DateTime? updatedAt,
+    @NullableDateTimeConverter() DateTime? lastFetchedAt,
+    @NullableUriConverter() Uri? bannerUrl,
+    String? bannerBlurhash,
+    bool isLocked,
+    bool isSilenced,
+    bool isSuspended,
+    String? description,
+    String? location,
+    @NullableDateTimeConverter() DateTime? birthday,
+    String? lang,
+    List<UserField>? fields,
+    List<String> verifiedLinks,
+    List<MutualLinkSection>? mutualLinkSections,
+    @IntConverter() int followersCount,
+    @IntConverter() int followingCount,
+    int notesCount,
+    List<String>? pinnedNoteIds,
+    List<Note>? pinnedNotes,
+    String? pinnedPageId,
+    Map<String, dynamic>? pinnedPage,
+    bool publicReactions,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    @Deprecated("removed at 2023.12.0")
+    FFVisibility? ffVisibility,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    FFVisibility? followersVisibility,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    FFVisibility? followingVisibility,
+    bool? twoFactorEnabled,
+    bool? usePasswordLessLogin,
+    bool? securityKeys,
+    List<UserRole>? roles,
+    String? memo,
+    String? moderationNote,
+    String? avatarId,
+    String? bannerId,
+    String? followedMessage,
+    bool isModerator,
+    bool isAdmin,
+    bool injectFeaturedNote,
+    bool receiveAnnouncementEmail,
+    bool alwaysMarkNsfw,
+    bool autoSensitive,
+    bool carefulBot,
+    bool autoAcceptFollowed,
+    bool? preventAiLearning,
+    bool noCrawle,
+    bool isExplorable,
+    bool isDeleted,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    TwoFactorBackupCodesStock? twoFactorBackupCodesStock,
+    bool hideOnlineStatus,
+    bool hasUnreadSpecifiedNotes,
+    bool hasUnreadMentions,
+    bool hasUnreadAnnouncement,
+    bool hasUnreadAntenna,
+    bool hasUnreadChannel,
+    bool hasUnreadNotification,
+    bool hasPendingReceivedFollowRequest,
+    int? unreadNotificationsCount,
+    List<AnnouncementsResponse> unreadAnnouncements,
+    @MuteWordsConverter() List<MuteWord>? mutedWords,
+    @MuteWordsConverter() List<MuteWord>? hardMutedWords,
+    List<String> mutedInstances,
+    @Deprecated("Deprecated in Misskey 2023.9.2")
+    List<String>? mutingNotificationTypes,
+    NotificationRecieveConfigs notificationRecieveConfig,
+    List<String> emailNotificationTypes,
+    List<UserAchievement> achievements,
+    int? loggedInDays,
+    UserPolicies? policies,
+  });
 
   $UserInstanceInfoCopyWith<$Res>? get instance;
   $NotificationRecieveConfigsCopyWith<$Res> get notificationRecieveConfig;
@@ -4203,360 +4583,451 @@ class _$MeDetailedCopyWithImpl<$Res, $Val extends MeDetailed>
     Object? loggedInDays = freezed,
     Object? policies = freezed,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      username: null == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String,
-      host: freezed == host
-          ? _value.host
-          : host // ignore: cast_nullable_to_non_nullable
-              as String?,
-      avatarUrl: freezed == avatarUrl
-          ? _value.avatarUrl
-          : avatarUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      avatarBlurhash: freezed == avatarBlurhash
-          ? _value.avatarBlurhash
-          : avatarBlurhash // ignore: cast_nullable_to_non_nullable
-              as String?,
-      avatarDecorations: null == avatarDecorations
-          ? _value.avatarDecorations
-          : avatarDecorations // ignore: cast_nullable_to_non_nullable
-              as List<UserAvatarDecoration>,
-      isBot: null == isBot
-          ? _value.isBot
-          : isBot // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isCat: null == isCat
-          ? _value.isCat
-          : isCat // ignore: cast_nullable_to_non_nullable
-              as bool,
-      instance: freezed == instance
-          ? _value.instance
-          : instance // ignore: cast_nullable_to_non_nullable
-              as UserInstanceInfo?,
-      emojis: null == emojis
-          ? _value.emojis
-          : emojis // ignore: cast_nullable_to_non_nullable
-              as Map<String, String>,
-      onlineStatus: freezed == onlineStatus
-          ? _value.onlineStatus
-          : onlineStatus // ignore: cast_nullable_to_non_nullable
-              as OnlineStatus?,
-      badgeRoles: null == badgeRoles
-          ? _value.badgeRoles
-          : badgeRoles // ignore: cast_nullable_to_non_nullable
-              as List<UserBadgeRole>,
-      requireSigninToViewContents: freezed == requireSigninToViewContents
-          ? _value.requireSigninToViewContents
-          : requireSigninToViewContents // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      makeNotesFollowersOnlyBefore: freezed == makeNotesFollowersOnlyBefore
-          ? _value.makeNotesFollowersOnlyBefore
-          : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
-              as HideBefore?,
-      makeNotesHiddenBefore: freezed == makeNotesHiddenBefore
-          ? _value.makeNotesHiddenBefore
-          : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
-              as HideBefore?,
-      speakAsCat: freezed == speakAsCat
-          ? _value.speakAsCat
-          : speakAsCat // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      uri: freezed == uri
-          ? _value.uri
-          : uri // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      movedTo: freezed == movedTo
-          ? _value.movedTo
-          : movedTo // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      alsoKnownAs: freezed == alsoKnownAs
-          ? _value.alsoKnownAs
-          : alsoKnownAs // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedAt: freezed == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      lastFetchedAt: freezed == lastFetchedAt
-          ? _value.lastFetchedAt
-          : lastFetchedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      bannerUrl: freezed == bannerUrl
-          ? _value.bannerUrl
-          : bannerUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      bannerBlurhash: freezed == bannerBlurhash
-          ? _value.bannerBlurhash
-          : bannerBlurhash // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isLocked: null == isLocked
-          ? _value.isLocked
-          : isLocked // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isSilenced: null == isSilenced
-          ? _value.isSilenced
-          : isSilenced // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isSuspended: null == isSuspended
-          ? _value.isSuspended
-          : isSuspended // ignore: cast_nullable_to_non_nullable
-              as bool,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      location: freezed == location
-          ? _value.location
-          : location // ignore: cast_nullable_to_non_nullable
-              as String?,
-      birthday: freezed == birthday
-          ? _value.birthday
-          : birthday // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      lang: freezed == lang
-          ? _value.lang
-          : lang // ignore: cast_nullable_to_non_nullable
-              as String?,
-      fields: freezed == fields
-          ? _value.fields
-          : fields // ignore: cast_nullable_to_non_nullable
-              as List<UserField>?,
-      verifiedLinks: null == verifiedLinks
-          ? _value.verifiedLinks
-          : verifiedLinks // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      mutualLinkSections: freezed == mutualLinkSections
-          ? _value.mutualLinkSections
-          : mutualLinkSections // ignore: cast_nullable_to_non_nullable
-              as List<MutualLinkSection>?,
-      followersCount: null == followersCount
-          ? _value.followersCount
-          : followersCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      followingCount: null == followingCount
-          ? _value.followingCount
-          : followingCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      notesCount: null == notesCount
-          ? _value.notesCount
-          : notesCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      pinnedNoteIds: freezed == pinnedNoteIds
-          ? _value.pinnedNoteIds
-          : pinnedNoteIds // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      pinnedNotes: freezed == pinnedNotes
-          ? _value.pinnedNotes
-          : pinnedNotes // ignore: cast_nullable_to_non_nullable
-              as List<Note>?,
-      pinnedPageId: freezed == pinnedPageId
-          ? _value.pinnedPageId
-          : pinnedPageId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      pinnedPage: freezed == pinnedPage
-          ? _value.pinnedPage
-          : pinnedPage // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
-      publicReactions: null == publicReactions
-          ? _value.publicReactions
-          : publicReactions // ignore: cast_nullable_to_non_nullable
-              as bool,
-      ffVisibility: freezed == ffVisibility
-          ? _value.ffVisibility
-          : ffVisibility // ignore: cast_nullable_to_non_nullable
-              as FFVisibility?,
-      followersVisibility: freezed == followersVisibility
-          ? _value.followersVisibility
-          : followersVisibility // ignore: cast_nullable_to_non_nullable
-              as FFVisibility?,
-      followingVisibility: freezed == followingVisibility
-          ? _value.followingVisibility
-          : followingVisibility // ignore: cast_nullable_to_non_nullable
-              as FFVisibility?,
-      twoFactorEnabled: freezed == twoFactorEnabled
-          ? _value.twoFactorEnabled
-          : twoFactorEnabled // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      usePasswordLessLogin: freezed == usePasswordLessLogin
-          ? _value.usePasswordLessLogin
-          : usePasswordLessLogin // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      securityKeys: freezed == securityKeys
-          ? _value.securityKeys
-          : securityKeys // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      roles: freezed == roles
-          ? _value.roles
-          : roles // ignore: cast_nullable_to_non_nullable
-              as List<UserRole>?,
-      memo: freezed == memo
-          ? _value.memo
-          : memo // ignore: cast_nullable_to_non_nullable
-              as String?,
-      moderationNote: freezed == moderationNote
-          ? _value.moderationNote
-          : moderationNote // ignore: cast_nullable_to_non_nullable
-              as String?,
-      avatarId: freezed == avatarId
-          ? _value.avatarId
-          : avatarId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      bannerId: freezed == bannerId
-          ? _value.bannerId
-          : bannerId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      followedMessage: freezed == followedMessage
-          ? _value.followedMessage
-          : followedMessage // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isModerator: null == isModerator
-          ? _value.isModerator
-          : isModerator // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isAdmin: null == isAdmin
-          ? _value.isAdmin
-          : isAdmin // ignore: cast_nullable_to_non_nullable
-              as bool,
-      injectFeaturedNote: null == injectFeaturedNote
-          ? _value.injectFeaturedNote
-          : injectFeaturedNote // ignore: cast_nullable_to_non_nullable
-              as bool,
-      receiveAnnouncementEmail: null == receiveAnnouncementEmail
-          ? _value.receiveAnnouncementEmail
-          : receiveAnnouncementEmail // ignore: cast_nullable_to_non_nullable
-              as bool,
-      alwaysMarkNsfw: null == alwaysMarkNsfw
-          ? _value.alwaysMarkNsfw
-          : alwaysMarkNsfw // ignore: cast_nullable_to_non_nullable
-              as bool,
-      autoSensitive: null == autoSensitive
-          ? _value.autoSensitive
-          : autoSensitive // ignore: cast_nullable_to_non_nullable
-              as bool,
-      carefulBot: null == carefulBot
-          ? _value.carefulBot
-          : carefulBot // ignore: cast_nullable_to_non_nullable
-              as bool,
-      autoAcceptFollowed: null == autoAcceptFollowed
-          ? _value.autoAcceptFollowed
-          : autoAcceptFollowed // ignore: cast_nullable_to_non_nullable
-              as bool,
-      preventAiLearning: freezed == preventAiLearning
-          ? _value.preventAiLearning
-          : preventAiLearning // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      noCrawle: null == noCrawle
-          ? _value.noCrawle
-          : noCrawle // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isExplorable: null == isExplorable
-          ? _value.isExplorable
-          : isExplorable // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isDeleted: null == isDeleted
-          ? _value.isDeleted
-          : isDeleted // ignore: cast_nullable_to_non_nullable
-              as bool,
-      twoFactorBackupCodesStock: freezed == twoFactorBackupCodesStock
-          ? _value.twoFactorBackupCodesStock
-          : twoFactorBackupCodesStock // ignore: cast_nullable_to_non_nullable
-              as TwoFactorBackupCodesStock?,
-      hideOnlineStatus: null == hideOnlineStatus
-          ? _value.hideOnlineStatus
-          : hideOnlineStatus // ignore: cast_nullable_to_non_nullable
-              as bool,
-      hasUnreadSpecifiedNotes: null == hasUnreadSpecifiedNotes
-          ? _value.hasUnreadSpecifiedNotes
-          : hasUnreadSpecifiedNotes // ignore: cast_nullable_to_non_nullable
-              as bool,
-      hasUnreadMentions: null == hasUnreadMentions
-          ? _value.hasUnreadMentions
-          : hasUnreadMentions // ignore: cast_nullable_to_non_nullable
-              as bool,
-      hasUnreadAnnouncement: null == hasUnreadAnnouncement
-          ? _value.hasUnreadAnnouncement
-          : hasUnreadAnnouncement // ignore: cast_nullable_to_non_nullable
-              as bool,
-      hasUnreadAntenna: null == hasUnreadAntenna
-          ? _value.hasUnreadAntenna
-          : hasUnreadAntenna // ignore: cast_nullable_to_non_nullable
-              as bool,
-      hasUnreadChannel: null == hasUnreadChannel
-          ? _value.hasUnreadChannel
-          : hasUnreadChannel // ignore: cast_nullable_to_non_nullable
-              as bool,
-      hasUnreadNotification: null == hasUnreadNotification
-          ? _value.hasUnreadNotification
-          : hasUnreadNotification // ignore: cast_nullable_to_non_nullable
-              as bool,
-      hasPendingReceivedFollowRequest: null == hasPendingReceivedFollowRequest
-          ? _value.hasPendingReceivedFollowRequest
-          : hasPendingReceivedFollowRequest // ignore: cast_nullable_to_non_nullable
-              as bool,
-      unreadNotificationsCount: freezed == unreadNotificationsCount
-          ? _value.unreadNotificationsCount
-          : unreadNotificationsCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      unreadAnnouncements: null == unreadAnnouncements
-          ? _value.unreadAnnouncements
-          : unreadAnnouncements // ignore: cast_nullable_to_non_nullable
-              as List<AnnouncementsResponse>,
-      mutedWords: freezed == mutedWords
-          ? _value.mutedWords
-          : mutedWords // ignore: cast_nullable_to_non_nullable
-              as List<MuteWord>?,
-      hardMutedWords: freezed == hardMutedWords
-          ? _value.hardMutedWords
-          : hardMutedWords // ignore: cast_nullable_to_non_nullable
-              as List<MuteWord>?,
-      mutedInstances: null == mutedInstances
-          ? _value.mutedInstances
-          : mutedInstances // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      mutingNotificationTypes: freezed == mutingNotificationTypes
-          ? _value.mutingNotificationTypes
-          : mutingNotificationTypes // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      notificationRecieveConfig: null == notificationRecieveConfig
-          ? _value.notificationRecieveConfig
-          : notificationRecieveConfig // ignore: cast_nullable_to_non_nullable
-              as NotificationRecieveConfigs,
-      emailNotificationTypes: null == emailNotificationTypes
-          ? _value.emailNotificationTypes
-          : emailNotificationTypes // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      achievements: null == achievements
-          ? _value.achievements
-          : achievements // ignore: cast_nullable_to_non_nullable
-              as List<UserAchievement>,
-      loggedInDays: freezed == loggedInDays
-          ? _value.loggedInDays
-          : loggedInDays // ignore: cast_nullable_to_non_nullable
-              as int?,
-      policies: freezed == policies
-          ? _value.policies
-          : policies // ignore: cast_nullable_to_non_nullable
-              as UserPolicies?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            name:
+                freezed == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            username:
+                null == username
+                    ? _value.username
+                    : username // ignore: cast_nullable_to_non_nullable
+                        as String,
+            host:
+                freezed == host
+                    ? _value.host
+                    : host // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            avatarUrl:
+                freezed == avatarUrl
+                    ? _value.avatarUrl
+                    : avatarUrl // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            avatarBlurhash:
+                freezed == avatarBlurhash
+                    ? _value.avatarBlurhash
+                    : avatarBlurhash // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            avatarDecorations:
+                null == avatarDecorations
+                    ? _value.avatarDecorations
+                    : avatarDecorations // ignore: cast_nullable_to_non_nullable
+                        as List<UserAvatarDecoration>,
+            isBot:
+                null == isBot
+                    ? _value.isBot
+                    : isBot // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            isCat:
+                null == isCat
+                    ? _value.isCat
+                    : isCat // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            instance:
+                freezed == instance
+                    ? _value.instance
+                    : instance // ignore: cast_nullable_to_non_nullable
+                        as UserInstanceInfo?,
+            emojis:
+                null == emojis
+                    ? _value.emojis
+                    : emojis // ignore: cast_nullable_to_non_nullable
+                        as Map<String, String>,
+            onlineStatus:
+                freezed == onlineStatus
+                    ? _value.onlineStatus
+                    : onlineStatus // ignore: cast_nullable_to_non_nullable
+                        as OnlineStatus?,
+            badgeRoles:
+                null == badgeRoles
+                    ? _value.badgeRoles
+                    : badgeRoles // ignore: cast_nullable_to_non_nullable
+                        as List<UserBadgeRole>,
+            requireSigninToViewContents:
+                freezed == requireSigninToViewContents
+                    ? _value.requireSigninToViewContents
+                    : requireSigninToViewContents // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            makeNotesFollowersOnlyBefore:
+                freezed == makeNotesFollowersOnlyBefore
+                    ? _value.makeNotesFollowersOnlyBefore
+                    : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
+                        as HideBefore?,
+            makeNotesHiddenBefore:
+                freezed == makeNotesHiddenBefore
+                    ? _value.makeNotesHiddenBefore
+                    : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
+                        as HideBefore?,
+            speakAsCat:
+                freezed == speakAsCat
+                    ? _value.speakAsCat
+                    : speakAsCat // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            url:
+                freezed == url
+                    ? _value.url
+                    : url // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            uri:
+                freezed == uri
+                    ? _value.uri
+                    : uri // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            movedTo:
+                freezed == movedTo
+                    ? _value.movedTo
+                    : movedTo // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            alsoKnownAs:
+                freezed == alsoKnownAs
+                    ? _value.alsoKnownAs
+                    : alsoKnownAs // ignore: cast_nullable_to_non_nullable
+                        as List<String>?,
+            createdAt:
+                null == createdAt
+                    ? _value.createdAt
+                    : createdAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            updatedAt:
+                freezed == updatedAt
+                    ? _value.updatedAt
+                    : updatedAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            lastFetchedAt:
+                freezed == lastFetchedAt
+                    ? _value.lastFetchedAt
+                    : lastFetchedAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            bannerUrl:
+                freezed == bannerUrl
+                    ? _value.bannerUrl
+                    : bannerUrl // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            bannerBlurhash:
+                freezed == bannerBlurhash
+                    ? _value.bannerBlurhash
+                    : bannerBlurhash // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            isLocked:
+                null == isLocked
+                    ? _value.isLocked
+                    : isLocked // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            isSilenced:
+                null == isSilenced
+                    ? _value.isSilenced
+                    : isSilenced // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            isSuspended:
+                null == isSuspended
+                    ? _value.isSuspended
+                    : isSuspended // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            description:
+                freezed == description
+                    ? _value.description
+                    : description // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            location:
+                freezed == location
+                    ? _value.location
+                    : location // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            birthday:
+                freezed == birthday
+                    ? _value.birthday
+                    : birthday // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            lang:
+                freezed == lang
+                    ? _value.lang
+                    : lang // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            fields:
+                freezed == fields
+                    ? _value.fields
+                    : fields // ignore: cast_nullable_to_non_nullable
+                        as List<UserField>?,
+            verifiedLinks:
+                null == verifiedLinks
+                    ? _value.verifiedLinks
+                    : verifiedLinks // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+            mutualLinkSections:
+                freezed == mutualLinkSections
+                    ? _value.mutualLinkSections
+                    : mutualLinkSections // ignore: cast_nullable_to_non_nullable
+                        as List<MutualLinkSection>?,
+            followersCount:
+                null == followersCount
+                    ? _value.followersCount
+                    : followersCount // ignore: cast_nullable_to_non_nullable
+                        as int,
+            followingCount:
+                null == followingCount
+                    ? _value.followingCount
+                    : followingCount // ignore: cast_nullable_to_non_nullable
+                        as int,
+            notesCount:
+                null == notesCount
+                    ? _value.notesCount
+                    : notesCount // ignore: cast_nullable_to_non_nullable
+                        as int,
+            pinnedNoteIds:
+                freezed == pinnedNoteIds
+                    ? _value.pinnedNoteIds
+                    : pinnedNoteIds // ignore: cast_nullable_to_non_nullable
+                        as List<String>?,
+            pinnedNotes:
+                freezed == pinnedNotes
+                    ? _value.pinnedNotes
+                    : pinnedNotes // ignore: cast_nullable_to_non_nullable
+                        as List<Note>?,
+            pinnedPageId:
+                freezed == pinnedPageId
+                    ? _value.pinnedPageId
+                    : pinnedPageId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            pinnedPage:
+                freezed == pinnedPage
+                    ? _value.pinnedPage
+                    : pinnedPage // ignore: cast_nullable_to_non_nullable
+                        as Map<String, dynamic>?,
+            publicReactions:
+                null == publicReactions
+                    ? _value.publicReactions
+                    : publicReactions // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            ffVisibility:
+                freezed == ffVisibility
+                    ? _value.ffVisibility
+                    : ffVisibility // ignore: cast_nullable_to_non_nullable
+                        as FFVisibility?,
+            followersVisibility:
+                freezed == followersVisibility
+                    ? _value.followersVisibility
+                    : followersVisibility // ignore: cast_nullable_to_non_nullable
+                        as FFVisibility?,
+            followingVisibility:
+                freezed == followingVisibility
+                    ? _value.followingVisibility
+                    : followingVisibility // ignore: cast_nullable_to_non_nullable
+                        as FFVisibility?,
+            twoFactorEnabled:
+                freezed == twoFactorEnabled
+                    ? _value.twoFactorEnabled
+                    : twoFactorEnabled // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            usePasswordLessLogin:
+                freezed == usePasswordLessLogin
+                    ? _value.usePasswordLessLogin
+                    : usePasswordLessLogin // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            securityKeys:
+                freezed == securityKeys
+                    ? _value.securityKeys
+                    : securityKeys // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            roles:
+                freezed == roles
+                    ? _value.roles
+                    : roles // ignore: cast_nullable_to_non_nullable
+                        as List<UserRole>?,
+            memo:
+                freezed == memo
+                    ? _value.memo
+                    : memo // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            moderationNote:
+                freezed == moderationNote
+                    ? _value.moderationNote
+                    : moderationNote // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            avatarId:
+                freezed == avatarId
+                    ? _value.avatarId
+                    : avatarId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            bannerId:
+                freezed == bannerId
+                    ? _value.bannerId
+                    : bannerId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            followedMessage:
+                freezed == followedMessage
+                    ? _value.followedMessage
+                    : followedMessage // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            isModerator:
+                null == isModerator
+                    ? _value.isModerator
+                    : isModerator // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            isAdmin:
+                null == isAdmin
+                    ? _value.isAdmin
+                    : isAdmin // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            injectFeaturedNote:
+                null == injectFeaturedNote
+                    ? _value.injectFeaturedNote
+                    : injectFeaturedNote // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            receiveAnnouncementEmail:
+                null == receiveAnnouncementEmail
+                    ? _value.receiveAnnouncementEmail
+                    : receiveAnnouncementEmail // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            alwaysMarkNsfw:
+                null == alwaysMarkNsfw
+                    ? _value.alwaysMarkNsfw
+                    : alwaysMarkNsfw // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            autoSensitive:
+                null == autoSensitive
+                    ? _value.autoSensitive
+                    : autoSensitive // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            carefulBot:
+                null == carefulBot
+                    ? _value.carefulBot
+                    : carefulBot // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            autoAcceptFollowed:
+                null == autoAcceptFollowed
+                    ? _value.autoAcceptFollowed
+                    : autoAcceptFollowed // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            preventAiLearning:
+                freezed == preventAiLearning
+                    ? _value.preventAiLearning
+                    : preventAiLearning // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            noCrawle:
+                null == noCrawle
+                    ? _value.noCrawle
+                    : noCrawle // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            isExplorable:
+                null == isExplorable
+                    ? _value.isExplorable
+                    : isExplorable // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            isDeleted:
+                null == isDeleted
+                    ? _value.isDeleted
+                    : isDeleted // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            twoFactorBackupCodesStock:
+                freezed == twoFactorBackupCodesStock
+                    ? _value.twoFactorBackupCodesStock
+                    : twoFactorBackupCodesStock // ignore: cast_nullable_to_non_nullable
+                        as TwoFactorBackupCodesStock?,
+            hideOnlineStatus:
+                null == hideOnlineStatus
+                    ? _value.hideOnlineStatus
+                    : hideOnlineStatus // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            hasUnreadSpecifiedNotes:
+                null == hasUnreadSpecifiedNotes
+                    ? _value.hasUnreadSpecifiedNotes
+                    : hasUnreadSpecifiedNotes // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            hasUnreadMentions:
+                null == hasUnreadMentions
+                    ? _value.hasUnreadMentions
+                    : hasUnreadMentions // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            hasUnreadAnnouncement:
+                null == hasUnreadAnnouncement
+                    ? _value.hasUnreadAnnouncement
+                    : hasUnreadAnnouncement // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            hasUnreadAntenna:
+                null == hasUnreadAntenna
+                    ? _value.hasUnreadAntenna
+                    : hasUnreadAntenna // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            hasUnreadChannel:
+                null == hasUnreadChannel
+                    ? _value.hasUnreadChannel
+                    : hasUnreadChannel // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            hasUnreadNotification:
+                null == hasUnreadNotification
+                    ? _value.hasUnreadNotification
+                    : hasUnreadNotification // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            hasPendingReceivedFollowRequest:
+                null == hasPendingReceivedFollowRequest
+                    ? _value.hasPendingReceivedFollowRequest
+                    : hasPendingReceivedFollowRequest // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            unreadNotificationsCount:
+                freezed == unreadNotificationsCount
+                    ? _value.unreadNotificationsCount
+                    : unreadNotificationsCount // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            unreadAnnouncements:
+                null == unreadAnnouncements
+                    ? _value.unreadAnnouncements
+                    : unreadAnnouncements // ignore: cast_nullable_to_non_nullable
+                        as List<AnnouncementsResponse>,
+            mutedWords:
+                freezed == mutedWords
+                    ? _value.mutedWords
+                    : mutedWords // ignore: cast_nullable_to_non_nullable
+                        as List<MuteWord>?,
+            hardMutedWords:
+                freezed == hardMutedWords
+                    ? _value.hardMutedWords
+                    : hardMutedWords // ignore: cast_nullable_to_non_nullable
+                        as List<MuteWord>?,
+            mutedInstances:
+                null == mutedInstances
+                    ? _value.mutedInstances
+                    : mutedInstances // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+            mutingNotificationTypes:
+                freezed == mutingNotificationTypes
+                    ? _value.mutingNotificationTypes
+                    : mutingNotificationTypes // ignore: cast_nullable_to_non_nullable
+                        as List<String>?,
+            notificationRecieveConfig:
+                null == notificationRecieveConfig
+                    ? _value.notificationRecieveConfig
+                    : notificationRecieveConfig // ignore: cast_nullable_to_non_nullable
+                        as NotificationRecieveConfigs,
+            emailNotificationTypes:
+                null == emailNotificationTypes
+                    ? _value.emailNotificationTypes
+                    : emailNotificationTypes // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+            achievements:
+                null == achievements
+                    ? _value.achievements
+                    : achievements // ignore: cast_nullable_to_non_nullable
+                        as List<UserAchievement>,
+            loggedInDays:
+                freezed == loggedInDays
+                    ? _value.loggedInDays
+                    : loggedInDays // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            policies:
+                freezed == policies
+                    ? _value.policies
+                    : policies // ignore: cast_nullable_to_non_nullable
+                        as UserPolicies?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of MeDetailed
@@ -4579,9 +5050,11 @@ class _$MeDetailedCopyWithImpl<$Res, $Val extends MeDetailed>
   @pragma('vm:prefer-inline')
   $NotificationRecieveConfigsCopyWith<$Res> get notificationRecieveConfig {
     return $NotificationRecieveConfigsCopyWith<$Res>(
-        _value.notificationRecieveConfig, (value) {
-      return _then(_value.copyWith(notificationRecieveConfig: value) as $Val);
-    });
+      _value.notificationRecieveConfig,
+      (value) {
+        return _then(_value.copyWith(notificationRecieveConfig: value) as $Val);
+      },
+    );
   }
 
   /// Create a copy of MeDetailed
@@ -4603,106 +5076,108 @@ class _$MeDetailedCopyWithImpl<$Res, $Val extends MeDetailed>
 abstract class _$$MeDetailedImplCopyWith<$Res>
     implements $MeDetailedCopyWith<$Res> {
   factory _$$MeDetailedImplCopyWith(
-          _$MeDetailedImpl value, $Res Function(_$MeDetailedImpl) then) =
-      __$$MeDetailedImplCopyWithImpl<$Res>;
+    _$MeDetailedImpl value,
+    $Res Function(_$MeDetailedImpl) then,
+  ) = __$$MeDetailedImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      String? name,
-      String username,
-      String? host,
-      @NullableUriConverter() Uri? avatarUrl,
-      String? avatarBlurhash,
-      List<UserAvatarDecoration> avatarDecorations,
-      bool isBot,
-      bool isCat,
-      UserInstanceInfo? instance,
-      @EmojisConverter() Map<String, String> emojis,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      OnlineStatus? onlineStatus,
-      List<UserBadgeRole> badgeRoles,
-      bool? requireSigninToViewContents,
-      @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
-      @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
-      bool? speakAsCat,
-      @NullableUriConverter() Uri? url,
-      @NullableUriConverter() Uri? uri,
-      @NullableUriConverter() Uri? movedTo,
-      List<String>? alsoKnownAs,
-      @DateTimeConverter() DateTime createdAt,
-      @NullableDateTimeConverter() DateTime? updatedAt,
-      @NullableDateTimeConverter() DateTime? lastFetchedAt,
-      @NullableUriConverter() Uri? bannerUrl,
-      String? bannerBlurhash,
-      bool isLocked,
-      bool isSilenced,
-      bool isSuspended,
-      String? description,
-      String? location,
-      @NullableDateTimeConverter() DateTime? birthday,
-      String? lang,
-      List<UserField>? fields,
-      List<String> verifiedLinks,
-      List<MutualLinkSection>? mutualLinkSections,
-      @IntConverter() int followersCount,
-      @IntConverter() int followingCount,
-      int notesCount,
-      List<String>? pinnedNoteIds,
-      List<Note>? pinnedNotes,
-      String? pinnedPageId,
-      Map<String, dynamic>? pinnedPage,
-      bool publicReactions,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      @Deprecated("removed at 2023.12.0")
-      FFVisibility? ffVisibility,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      FFVisibility? followersVisibility,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      FFVisibility? followingVisibility,
-      bool? twoFactorEnabled,
-      bool? usePasswordLessLogin,
-      bool? securityKeys,
-      List<UserRole>? roles,
-      String? memo,
-      String? moderationNote,
-      String? avatarId,
-      String? bannerId,
-      String? followedMessage,
-      bool isModerator,
-      bool isAdmin,
-      bool injectFeaturedNote,
-      bool receiveAnnouncementEmail,
-      bool alwaysMarkNsfw,
-      bool autoSensitive,
-      bool carefulBot,
-      bool autoAcceptFollowed,
-      bool? preventAiLearning,
-      bool noCrawle,
-      bool isExplorable,
-      bool isDeleted,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      TwoFactorBackupCodesStock? twoFactorBackupCodesStock,
-      bool hideOnlineStatus,
-      bool hasUnreadSpecifiedNotes,
-      bool hasUnreadMentions,
-      bool hasUnreadAnnouncement,
-      bool hasUnreadAntenna,
-      bool hasUnreadChannel,
-      bool hasUnreadNotification,
-      bool hasPendingReceivedFollowRequest,
-      int? unreadNotificationsCount,
-      List<AnnouncementsResponse> unreadAnnouncements,
-      @MuteWordsConverter() List<MuteWord>? mutedWords,
-      @MuteWordsConverter() List<MuteWord>? hardMutedWords,
-      List<String> mutedInstances,
-      @Deprecated("Deprecated in Misskey 2023.9.2")
-      List<String>? mutingNotificationTypes,
-      NotificationRecieveConfigs notificationRecieveConfig,
-      List<String> emailNotificationTypes,
-      List<UserAchievement> achievements,
-      int? loggedInDays,
-      UserPolicies? policies});
+  $Res call({
+    String id,
+    String? name,
+    String username,
+    String? host,
+    @NullableUriConverter() Uri? avatarUrl,
+    String? avatarBlurhash,
+    List<UserAvatarDecoration> avatarDecorations,
+    bool isBot,
+    bool isCat,
+    UserInstanceInfo? instance,
+    @EmojisConverter() Map<String, String> emojis,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    OnlineStatus? onlineStatus,
+    List<UserBadgeRole> badgeRoles,
+    bool? requireSigninToViewContents,
+    @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
+    @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
+    bool? speakAsCat,
+    @NullableUriConverter() Uri? url,
+    @NullableUriConverter() Uri? uri,
+    @NullableUriConverter() Uri? movedTo,
+    List<String>? alsoKnownAs,
+    @DateTimeConverter() DateTime createdAt,
+    @NullableDateTimeConverter() DateTime? updatedAt,
+    @NullableDateTimeConverter() DateTime? lastFetchedAt,
+    @NullableUriConverter() Uri? bannerUrl,
+    String? bannerBlurhash,
+    bool isLocked,
+    bool isSilenced,
+    bool isSuspended,
+    String? description,
+    String? location,
+    @NullableDateTimeConverter() DateTime? birthday,
+    String? lang,
+    List<UserField>? fields,
+    List<String> verifiedLinks,
+    List<MutualLinkSection>? mutualLinkSections,
+    @IntConverter() int followersCount,
+    @IntConverter() int followingCount,
+    int notesCount,
+    List<String>? pinnedNoteIds,
+    List<Note>? pinnedNotes,
+    String? pinnedPageId,
+    Map<String, dynamic>? pinnedPage,
+    bool publicReactions,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    @Deprecated("removed at 2023.12.0")
+    FFVisibility? ffVisibility,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    FFVisibility? followersVisibility,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    FFVisibility? followingVisibility,
+    bool? twoFactorEnabled,
+    bool? usePasswordLessLogin,
+    bool? securityKeys,
+    List<UserRole>? roles,
+    String? memo,
+    String? moderationNote,
+    String? avatarId,
+    String? bannerId,
+    String? followedMessage,
+    bool isModerator,
+    bool isAdmin,
+    bool injectFeaturedNote,
+    bool receiveAnnouncementEmail,
+    bool alwaysMarkNsfw,
+    bool autoSensitive,
+    bool carefulBot,
+    bool autoAcceptFollowed,
+    bool? preventAiLearning,
+    bool noCrawle,
+    bool isExplorable,
+    bool isDeleted,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    TwoFactorBackupCodesStock? twoFactorBackupCodesStock,
+    bool hideOnlineStatus,
+    bool hasUnreadSpecifiedNotes,
+    bool hasUnreadMentions,
+    bool hasUnreadAnnouncement,
+    bool hasUnreadAntenna,
+    bool hasUnreadChannel,
+    bool hasUnreadNotification,
+    bool hasPendingReceivedFollowRequest,
+    int? unreadNotificationsCount,
+    List<AnnouncementsResponse> unreadAnnouncements,
+    @MuteWordsConverter() List<MuteWord>? mutedWords,
+    @MuteWordsConverter() List<MuteWord>? hardMutedWords,
+    List<String> mutedInstances,
+    @Deprecated("Deprecated in Misskey 2023.9.2")
+    List<String>? mutingNotificationTypes,
+    NotificationRecieveConfigs notificationRecieveConfig,
+    List<String> emailNotificationTypes,
+    List<UserAchievement> achievements,
+    int? loggedInDays,
+    UserPolicies? policies,
+  });
 
   @override
   $UserInstanceInfoCopyWith<$Res>? get instance;
@@ -4717,8 +5192,9 @@ class __$$MeDetailedImplCopyWithImpl<$Res>
     extends _$MeDetailedCopyWithImpl<$Res, _$MeDetailedImpl>
     implements _$$MeDetailedImplCopyWith<$Res> {
   __$$MeDetailedImplCopyWithImpl(
-      _$MeDetailedImpl _value, $Res Function(_$MeDetailedImpl) _then)
-      : super(_value, _then);
+    _$MeDetailedImpl _value,
+    $Res Function(_$MeDetailedImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of MeDetailed
   /// with the given fields replaced by the non-null parameter values.
@@ -4814,480 +5290,570 @@ class __$$MeDetailedImplCopyWithImpl<$Res>
     Object? loggedInDays = freezed,
     Object? policies = freezed,
   }) {
-    return _then(_$MeDetailedImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      username: null == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String,
-      host: freezed == host
-          ? _value.host
-          : host // ignore: cast_nullable_to_non_nullable
-              as String?,
-      avatarUrl: freezed == avatarUrl
-          ? _value.avatarUrl
-          : avatarUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      avatarBlurhash: freezed == avatarBlurhash
-          ? _value.avatarBlurhash
-          : avatarBlurhash // ignore: cast_nullable_to_non_nullable
-              as String?,
-      avatarDecorations: null == avatarDecorations
-          ? _value._avatarDecorations
-          : avatarDecorations // ignore: cast_nullable_to_non_nullable
-              as List<UserAvatarDecoration>,
-      isBot: null == isBot
-          ? _value.isBot
-          : isBot // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isCat: null == isCat
-          ? _value.isCat
-          : isCat // ignore: cast_nullable_to_non_nullable
-              as bool,
-      instance: freezed == instance
-          ? _value.instance
-          : instance // ignore: cast_nullable_to_non_nullable
-              as UserInstanceInfo?,
-      emojis: null == emojis
-          ? _value._emojis
-          : emojis // ignore: cast_nullable_to_non_nullable
-              as Map<String, String>,
-      onlineStatus: freezed == onlineStatus
-          ? _value.onlineStatus
-          : onlineStatus // ignore: cast_nullable_to_non_nullable
-              as OnlineStatus?,
-      badgeRoles: null == badgeRoles
-          ? _value._badgeRoles
-          : badgeRoles // ignore: cast_nullable_to_non_nullable
-              as List<UserBadgeRole>,
-      requireSigninToViewContents: freezed == requireSigninToViewContents
-          ? _value.requireSigninToViewContents
-          : requireSigninToViewContents // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      makeNotesFollowersOnlyBefore: freezed == makeNotesFollowersOnlyBefore
-          ? _value.makeNotesFollowersOnlyBefore
-          : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
-              as HideBefore?,
-      makeNotesHiddenBefore: freezed == makeNotesHiddenBefore
-          ? _value.makeNotesHiddenBefore
-          : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
-              as HideBefore?,
-      speakAsCat: freezed == speakAsCat
-          ? _value.speakAsCat
-          : speakAsCat // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      uri: freezed == uri
-          ? _value.uri
-          : uri // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      movedTo: freezed == movedTo
-          ? _value.movedTo
-          : movedTo // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      alsoKnownAs: freezed == alsoKnownAs
-          ? _value._alsoKnownAs
-          : alsoKnownAs // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedAt: freezed == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      lastFetchedAt: freezed == lastFetchedAt
-          ? _value.lastFetchedAt
-          : lastFetchedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      bannerUrl: freezed == bannerUrl
-          ? _value.bannerUrl
-          : bannerUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      bannerBlurhash: freezed == bannerBlurhash
-          ? _value.bannerBlurhash
-          : bannerBlurhash // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isLocked: null == isLocked
-          ? _value.isLocked
-          : isLocked // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isSilenced: null == isSilenced
-          ? _value.isSilenced
-          : isSilenced // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isSuspended: null == isSuspended
-          ? _value.isSuspended
-          : isSuspended // ignore: cast_nullable_to_non_nullable
-              as bool,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      location: freezed == location
-          ? _value.location
-          : location // ignore: cast_nullable_to_non_nullable
-              as String?,
-      birthday: freezed == birthday
-          ? _value.birthday
-          : birthday // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      lang: freezed == lang
-          ? _value.lang
-          : lang // ignore: cast_nullable_to_non_nullable
-              as String?,
-      fields: freezed == fields
-          ? _value._fields
-          : fields // ignore: cast_nullable_to_non_nullable
-              as List<UserField>?,
-      verifiedLinks: null == verifiedLinks
-          ? _value._verifiedLinks
-          : verifiedLinks // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      mutualLinkSections: freezed == mutualLinkSections
-          ? _value._mutualLinkSections
-          : mutualLinkSections // ignore: cast_nullable_to_non_nullable
-              as List<MutualLinkSection>?,
-      followersCount: null == followersCount
-          ? _value.followersCount
-          : followersCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      followingCount: null == followingCount
-          ? _value.followingCount
-          : followingCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      notesCount: null == notesCount
-          ? _value.notesCount
-          : notesCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      pinnedNoteIds: freezed == pinnedNoteIds
-          ? _value._pinnedNoteIds
-          : pinnedNoteIds // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      pinnedNotes: freezed == pinnedNotes
-          ? _value._pinnedNotes
-          : pinnedNotes // ignore: cast_nullable_to_non_nullable
-              as List<Note>?,
-      pinnedPageId: freezed == pinnedPageId
-          ? _value.pinnedPageId
-          : pinnedPageId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      pinnedPage: freezed == pinnedPage
-          ? _value._pinnedPage
-          : pinnedPage // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
-      publicReactions: null == publicReactions
-          ? _value.publicReactions
-          : publicReactions // ignore: cast_nullable_to_non_nullable
-              as bool,
-      ffVisibility: freezed == ffVisibility
-          ? _value.ffVisibility
-          : ffVisibility // ignore: cast_nullable_to_non_nullable
-              as FFVisibility?,
-      followersVisibility: freezed == followersVisibility
-          ? _value.followersVisibility
-          : followersVisibility // ignore: cast_nullable_to_non_nullable
-              as FFVisibility?,
-      followingVisibility: freezed == followingVisibility
-          ? _value.followingVisibility
-          : followingVisibility // ignore: cast_nullable_to_non_nullable
-              as FFVisibility?,
-      twoFactorEnabled: freezed == twoFactorEnabled
-          ? _value.twoFactorEnabled
-          : twoFactorEnabled // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      usePasswordLessLogin: freezed == usePasswordLessLogin
-          ? _value.usePasswordLessLogin
-          : usePasswordLessLogin // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      securityKeys: freezed == securityKeys
-          ? _value.securityKeys
-          : securityKeys // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      roles: freezed == roles
-          ? _value._roles
-          : roles // ignore: cast_nullable_to_non_nullable
-              as List<UserRole>?,
-      memo: freezed == memo
-          ? _value.memo
-          : memo // ignore: cast_nullable_to_non_nullable
-              as String?,
-      moderationNote: freezed == moderationNote
-          ? _value.moderationNote
-          : moderationNote // ignore: cast_nullable_to_non_nullable
-              as String?,
-      avatarId: freezed == avatarId
-          ? _value.avatarId
-          : avatarId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      bannerId: freezed == bannerId
-          ? _value.bannerId
-          : bannerId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      followedMessage: freezed == followedMessage
-          ? _value.followedMessage
-          : followedMessage // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isModerator: null == isModerator
-          ? _value.isModerator
-          : isModerator // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isAdmin: null == isAdmin
-          ? _value.isAdmin
-          : isAdmin // ignore: cast_nullable_to_non_nullable
-              as bool,
-      injectFeaturedNote: null == injectFeaturedNote
-          ? _value.injectFeaturedNote
-          : injectFeaturedNote // ignore: cast_nullable_to_non_nullable
-              as bool,
-      receiveAnnouncementEmail: null == receiveAnnouncementEmail
-          ? _value.receiveAnnouncementEmail
-          : receiveAnnouncementEmail // ignore: cast_nullable_to_non_nullable
-              as bool,
-      alwaysMarkNsfw: null == alwaysMarkNsfw
-          ? _value.alwaysMarkNsfw
-          : alwaysMarkNsfw // ignore: cast_nullable_to_non_nullable
-              as bool,
-      autoSensitive: null == autoSensitive
-          ? _value.autoSensitive
-          : autoSensitive // ignore: cast_nullable_to_non_nullable
-              as bool,
-      carefulBot: null == carefulBot
-          ? _value.carefulBot
-          : carefulBot // ignore: cast_nullable_to_non_nullable
-              as bool,
-      autoAcceptFollowed: null == autoAcceptFollowed
-          ? _value.autoAcceptFollowed
-          : autoAcceptFollowed // ignore: cast_nullable_to_non_nullable
-              as bool,
-      preventAiLearning: freezed == preventAiLearning
-          ? _value.preventAiLearning
-          : preventAiLearning // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      noCrawle: null == noCrawle
-          ? _value.noCrawle
-          : noCrawle // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isExplorable: null == isExplorable
-          ? _value.isExplorable
-          : isExplorable // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isDeleted: null == isDeleted
-          ? _value.isDeleted
-          : isDeleted // ignore: cast_nullable_to_non_nullable
-              as bool,
-      twoFactorBackupCodesStock: freezed == twoFactorBackupCodesStock
-          ? _value.twoFactorBackupCodesStock
-          : twoFactorBackupCodesStock // ignore: cast_nullable_to_non_nullable
-              as TwoFactorBackupCodesStock?,
-      hideOnlineStatus: null == hideOnlineStatus
-          ? _value.hideOnlineStatus
-          : hideOnlineStatus // ignore: cast_nullable_to_non_nullable
-              as bool,
-      hasUnreadSpecifiedNotes: null == hasUnreadSpecifiedNotes
-          ? _value.hasUnreadSpecifiedNotes
-          : hasUnreadSpecifiedNotes // ignore: cast_nullable_to_non_nullable
-              as bool,
-      hasUnreadMentions: null == hasUnreadMentions
-          ? _value.hasUnreadMentions
-          : hasUnreadMentions // ignore: cast_nullable_to_non_nullable
-              as bool,
-      hasUnreadAnnouncement: null == hasUnreadAnnouncement
-          ? _value.hasUnreadAnnouncement
-          : hasUnreadAnnouncement // ignore: cast_nullable_to_non_nullable
-              as bool,
-      hasUnreadAntenna: null == hasUnreadAntenna
-          ? _value.hasUnreadAntenna
-          : hasUnreadAntenna // ignore: cast_nullable_to_non_nullable
-              as bool,
-      hasUnreadChannel: null == hasUnreadChannel
-          ? _value.hasUnreadChannel
-          : hasUnreadChannel // ignore: cast_nullable_to_non_nullable
-              as bool,
-      hasUnreadNotification: null == hasUnreadNotification
-          ? _value.hasUnreadNotification
-          : hasUnreadNotification // ignore: cast_nullable_to_non_nullable
-              as bool,
-      hasPendingReceivedFollowRequest: null == hasPendingReceivedFollowRequest
-          ? _value.hasPendingReceivedFollowRequest
-          : hasPendingReceivedFollowRequest // ignore: cast_nullable_to_non_nullable
-              as bool,
-      unreadNotificationsCount: freezed == unreadNotificationsCount
-          ? _value.unreadNotificationsCount
-          : unreadNotificationsCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      unreadAnnouncements: null == unreadAnnouncements
-          ? _value._unreadAnnouncements
-          : unreadAnnouncements // ignore: cast_nullable_to_non_nullable
-              as List<AnnouncementsResponse>,
-      mutedWords: freezed == mutedWords
-          ? _value._mutedWords
-          : mutedWords // ignore: cast_nullable_to_non_nullable
-              as List<MuteWord>?,
-      hardMutedWords: freezed == hardMutedWords
-          ? _value._hardMutedWords
-          : hardMutedWords // ignore: cast_nullable_to_non_nullable
-              as List<MuteWord>?,
-      mutedInstances: null == mutedInstances
-          ? _value._mutedInstances
-          : mutedInstances // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      mutingNotificationTypes: freezed == mutingNotificationTypes
-          ? _value._mutingNotificationTypes
-          : mutingNotificationTypes // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      notificationRecieveConfig: null == notificationRecieveConfig
-          ? _value.notificationRecieveConfig
-          : notificationRecieveConfig // ignore: cast_nullable_to_non_nullable
-              as NotificationRecieveConfigs,
-      emailNotificationTypes: null == emailNotificationTypes
-          ? _value._emailNotificationTypes
-          : emailNotificationTypes // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      achievements: null == achievements
-          ? _value._achievements
-          : achievements // ignore: cast_nullable_to_non_nullable
-              as List<UserAchievement>,
-      loggedInDays: freezed == loggedInDays
-          ? _value.loggedInDays
-          : loggedInDays // ignore: cast_nullable_to_non_nullable
-              as int?,
-      policies: freezed == policies
-          ? _value.policies
-          : policies // ignore: cast_nullable_to_non_nullable
-              as UserPolicies?,
-    ));
+    return _then(
+      _$MeDetailedImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        name:
+            freezed == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        username:
+            null == username
+                ? _value.username
+                : username // ignore: cast_nullable_to_non_nullable
+                    as String,
+        host:
+            freezed == host
+                ? _value.host
+                : host // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        avatarUrl:
+            freezed == avatarUrl
+                ? _value.avatarUrl
+                : avatarUrl // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        avatarBlurhash:
+            freezed == avatarBlurhash
+                ? _value.avatarBlurhash
+                : avatarBlurhash // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        avatarDecorations:
+            null == avatarDecorations
+                ? _value._avatarDecorations
+                : avatarDecorations // ignore: cast_nullable_to_non_nullable
+                    as List<UserAvatarDecoration>,
+        isBot:
+            null == isBot
+                ? _value.isBot
+                : isBot // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        isCat:
+            null == isCat
+                ? _value.isCat
+                : isCat // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        instance:
+            freezed == instance
+                ? _value.instance
+                : instance // ignore: cast_nullable_to_non_nullable
+                    as UserInstanceInfo?,
+        emojis:
+            null == emojis
+                ? _value._emojis
+                : emojis // ignore: cast_nullable_to_non_nullable
+                    as Map<String, String>,
+        onlineStatus:
+            freezed == onlineStatus
+                ? _value.onlineStatus
+                : onlineStatus // ignore: cast_nullable_to_non_nullable
+                    as OnlineStatus?,
+        badgeRoles:
+            null == badgeRoles
+                ? _value._badgeRoles
+                : badgeRoles // ignore: cast_nullable_to_non_nullable
+                    as List<UserBadgeRole>,
+        requireSigninToViewContents:
+            freezed == requireSigninToViewContents
+                ? _value.requireSigninToViewContents
+                : requireSigninToViewContents // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        makeNotesFollowersOnlyBefore:
+            freezed == makeNotesFollowersOnlyBefore
+                ? _value.makeNotesFollowersOnlyBefore
+                : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
+                    as HideBefore?,
+        makeNotesHiddenBefore:
+            freezed == makeNotesHiddenBefore
+                ? _value.makeNotesHiddenBefore
+                : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
+                    as HideBefore?,
+        speakAsCat:
+            freezed == speakAsCat
+                ? _value.speakAsCat
+                : speakAsCat // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        url:
+            freezed == url
+                ? _value.url
+                : url // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        uri:
+            freezed == uri
+                ? _value.uri
+                : uri // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        movedTo:
+            freezed == movedTo
+                ? _value.movedTo
+                : movedTo // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        alsoKnownAs:
+            freezed == alsoKnownAs
+                ? _value._alsoKnownAs
+                : alsoKnownAs // ignore: cast_nullable_to_non_nullable
+                    as List<String>?,
+        createdAt:
+            null == createdAt
+                ? _value.createdAt
+                : createdAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        updatedAt:
+            freezed == updatedAt
+                ? _value.updatedAt
+                : updatedAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        lastFetchedAt:
+            freezed == lastFetchedAt
+                ? _value.lastFetchedAt
+                : lastFetchedAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        bannerUrl:
+            freezed == bannerUrl
+                ? _value.bannerUrl
+                : bannerUrl // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        bannerBlurhash:
+            freezed == bannerBlurhash
+                ? _value.bannerBlurhash
+                : bannerBlurhash // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        isLocked:
+            null == isLocked
+                ? _value.isLocked
+                : isLocked // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        isSilenced:
+            null == isSilenced
+                ? _value.isSilenced
+                : isSilenced // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        isSuspended:
+            null == isSuspended
+                ? _value.isSuspended
+                : isSuspended // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        description:
+            freezed == description
+                ? _value.description
+                : description // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        location:
+            freezed == location
+                ? _value.location
+                : location // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        birthday:
+            freezed == birthday
+                ? _value.birthday
+                : birthday // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        lang:
+            freezed == lang
+                ? _value.lang
+                : lang // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        fields:
+            freezed == fields
+                ? _value._fields
+                : fields // ignore: cast_nullable_to_non_nullable
+                    as List<UserField>?,
+        verifiedLinks:
+            null == verifiedLinks
+                ? _value._verifiedLinks
+                : verifiedLinks // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+        mutualLinkSections:
+            freezed == mutualLinkSections
+                ? _value._mutualLinkSections
+                : mutualLinkSections // ignore: cast_nullable_to_non_nullable
+                    as List<MutualLinkSection>?,
+        followersCount:
+            null == followersCount
+                ? _value.followersCount
+                : followersCount // ignore: cast_nullable_to_non_nullable
+                    as int,
+        followingCount:
+            null == followingCount
+                ? _value.followingCount
+                : followingCount // ignore: cast_nullable_to_non_nullable
+                    as int,
+        notesCount:
+            null == notesCount
+                ? _value.notesCount
+                : notesCount // ignore: cast_nullable_to_non_nullable
+                    as int,
+        pinnedNoteIds:
+            freezed == pinnedNoteIds
+                ? _value._pinnedNoteIds
+                : pinnedNoteIds // ignore: cast_nullable_to_non_nullable
+                    as List<String>?,
+        pinnedNotes:
+            freezed == pinnedNotes
+                ? _value._pinnedNotes
+                : pinnedNotes // ignore: cast_nullable_to_non_nullable
+                    as List<Note>?,
+        pinnedPageId:
+            freezed == pinnedPageId
+                ? _value.pinnedPageId
+                : pinnedPageId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        pinnedPage:
+            freezed == pinnedPage
+                ? _value._pinnedPage
+                : pinnedPage // ignore: cast_nullable_to_non_nullable
+                    as Map<String, dynamic>?,
+        publicReactions:
+            null == publicReactions
+                ? _value.publicReactions
+                : publicReactions // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        ffVisibility:
+            freezed == ffVisibility
+                ? _value.ffVisibility
+                : ffVisibility // ignore: cast_nullable_to_non_nullable
+                    as FFVisibility?,
+        followersVisibility:
+            freezed == followersVisibility
+                ? _value.followersVisibility
+                : followersVisibility // ignore: cast_nullable_to_non_nullable
+                    as FFVisibility?,
+        followingVisibility:
+            freezed == followingVisibility
+                ? _value.followingVisibility
+                : followingVisibility // ignore: cast_nullable_to_non_nullable
+                    as FFVisibility?,
+        twoFactorEnabled:
+            freezed == twoFactorEnabled
+                ? _value.twoFactorEnabled
+                : twoFactorEnabled // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        usePasswordLessLogin:
+            freezed == usePasswordLessLogin
+                ? _value.usePasswordLessLogin
+                : usePasswordLessLogin // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        securityKeys:
+            freezed == securityKeys
+                ? _value.securityKeys
+                : securityKeys // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        roles:
+            freezed == roles
+                ? _value._roles
+                : roles // ignore: cast_nullable_to_non_nullable
+                    as List<UserRole>?,
+        memo:
+            freezed == memo
+                ? _value.memo
+                : memo // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        moderationNote:
+            freezed == moderationNote
+                ? _value.moderationNote
+                : moderationNote // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        avatarId:
+            freezed == avatarId
+                ? _value.avatarId
+                : avatarId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        bannerId:
+            freezed == bannerId
+                ? _value.bannerId
+                : bannerId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        followedMessage:
+            freezed == followedMessage
+                ? _value.followedMessage
+                : followedMessage // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        isModerator:
+            null == isModerator
+                ? _value.isModerator
+                : isModerator // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        isAdmin:
+            null == isAdmin
+                ? _value.isAdmin
+                : isAdmin // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        injectFeaturedNote:
+            null == injectFeaturedNote
+                ? _value.injectFeaturedNote
+                : injectFeaturedNote // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        receiveAnnouncementEmail:
+            null == receiveAnnouncementEmail
+                ? _value.receiveAnnouncementEmail
+                : receiveAnnouncementEmail // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        alwaysMarkNsfw:
+            null == alwaysMarkNsfw
+                ? _value.alwaysMarkNsfw
+                : alwaysMarkNsfw // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        autoSensitive:
+            null == autoSensitive
+                ? _value.autoSensitive
+                : autoSensitive // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        carefulBot:
+            null == carefulBot
+                ? _value.carefulBot
+                : carefulBot // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        autoAcceptFollowed:
+            null == autoAcceptFollowed
+                ? _value.autoAcceptFollowed
+                : autoAcceptFollowed // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        preventAiLearning:
+            freezed == preventAiLearning
+                ? _value.preventAiLearning
+                : preventAiLearning // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        noCrawle:
+            null == noCrawle
+                ? _value.noCrawle
+                : noCrawle // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        isExplorable:
+            null == isExplorable
+                ? _value.isExplorable
+                : isExplorable // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        isDeleted:
+            null == isDeleted
+                ? _value.isDeleted
+                : isDeleted // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        twoFactorBackupCodesStock:
+            freezed == twoFactorBackupCodesStock
+                ? _value.twoFactorBackupCodesStock
+                : twoFactorBackupCodesStock // ignore: cast_nullable_to_non_nullable
+                    as TwoFactorBackupCodesStock?,
+        hideOnlineStatus:
+            null == hideOnlineStatus
+                ? _value.hideOnlineStatus
+                : hideOnlineStatus // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        hasUnreadSpecifiedNotes:
+            null == hasUnreadSpecifiedNotes
+                ? _value.hasUnreadSpecifiedNotes
+                : hasUnreadSpecifiedNotes // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        hasUnreadMentions:
+            null == hasUnreadMentions
+                ? _value.hasUnreadMentions
+                : hasUnreadMentions // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        hasUnreadAnnouncement:
+            null == hasUnreadAnnouncement
+                ? _value.hasUnreadAnnouncement
+                : hasUnreadAnnouncement // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        hasUnreadAntenna:
+            null == hasUnreadAntenna
+                ? _value.hasUnreadAntenna
+                : hasUnreadAntenna // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        hasUnreadChannel:
+            null == hasUnreadChannel
+                ? _value.hasUnreadChannel
+                : hasUnreadChannel // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        hasUnreadNotification:
+            null == hasUnreadNotification
+                ? _value.hasUnreadNotification
+                : hasUnreadNotification // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        hasPendingReceivedFollowRequest:
+            null == hasPendingReceivedFollowRequest
+                ? _value.hasPendingReceivedFollowRequest
+                : hasPendingReceivedFollowRequest // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        unreadNotificationsCount:
+            freezed == unreadNotificationsCount
+                ? _value.unreadNotificationsCount
+                : unreadNotificationsCount // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        unreadAnnouncements:
+            null == unreadAnnouncements
+                ? _value._unreadAnnouncements
+                : unreadAnnouncements // ignore: cast_nullable_to_non_nullable
+                    as List<AnnouncementsResponse>,
+        mutedWords:
+            freezed == mutedWords
+                ? _value._mutedWords
+                : mutedWords // ignore: cast_nullable_to_non_nullable
+                    as List<MuteWord>?,
+        hardMutedWords:
+            freezed == hardMutedWords
+                ? _value._hardMutedWords
+                : hardMutedWords // ignore: cast_nullable_to_non_nullable
+                    as List<MuteWord>?,
+        mutedInstances:
+            null == mutedInstances
+                ? _value._mutedInstances
+                : mutedInstances // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+        mutingNotificationTypes:
+            freezed == mutingNotificationTypes
+                ? _value._mutingNotificationTypes
+                : mutingNotificationTypes // ignore: cast_nullable_to_non_nullable
+                    as List<String>?,
+        notificationRecieveConfig:
+            null == notificationRecieveConfig
+                ? _value.notificationRecieveConfig
+                : notificationRecieveConfig // ignore: cast_nullable_to_non_nullable
+                    as NotificationRecieveConfigs,
+        emailNotificationTypes:
+            null == emailNotificationTypes
+                ? _value._emailNotificationTypes
+                : emailNotificationTypes // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+        achievements:
+            null == achievements
+                ? _value._achievements
+                : achievements // ignore: cast_nullable_to_non_nullable
+                    as List<UserAchievement>,
+        loggedInDays:
+            freezed == loggedInDays
+                ? _value.loggedInDays
+                : loggedInDays // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        policies:
+            freezed == policies
+                ? _value.policies
+                : policies // ignore: cast_nullable_to_non_nullable
+                    as UserPolicies?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$MeDetailedImpl implements _MeDetailed {
-  const _$MeDetailedImpl(
-      {required this.id,
-      this.name,
-      required this.username,
-      this.host,
-      @NullableUriConverter() this.avatarUrl,
-      this.avatarBlurhash,
-      final List<UserAvatarDecoration> avatarDecorations = const [],
-      required this.isBot,
-      required this.isCat,
-      this.instance,
-      @EmojisConverter() final Map<String, String> emojis = const {},
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      this.onlineStatus,
-      final List<UserBadgeRole> badgeRoles = const [],
-      this.requireSigninToViewContents,
-      @HideBeforeConverter() this.makeNotesFollowersOnlyBefore,
-      @HideBeforeConverter() this.makeNotesHiddenBefore,
-      this.speakAsCat,
-      @NullableUriConverter() this.url,
-      @NullableUriConverter() this.uri,
-      @NullableUriConverter() this.movedTo,
-      final List<String>? alsoKnownAs,
-      @DateTimeConverter() required this.createdAt,
-      @NullableDateTimeConverter() this.updatedAt,
-      @NullableDateTimeConverter() this.lastFetchedAt,
-      @NullableUriConverter() this.bannerUrl,
-      this.bannerBlurhash,
-      required this.isLocked,
-      required this.isSilenced,
-      required this.isSuspended,
-      this.description,
-      this.location,
-      @NullableDateTimeConverter() this.birthday,
-      this.lang,
-      final List<UserField>? fields,
-      final List<String> verifiedLinks = const [],
-      final List<MutualLinkSection>? mutualLinkSections,
-      @IntConverter() required this.followersCount,
-      @IntConverter() required this.followingCount,
-      required this.notesCount,
-      final List<String>? pinnedNoteIds,
-      final List<Note>? pinnedNotes,
-      this.pinnedPageId,
-      final Map<String, dynamic>? pinnedPage,
-      this.publicReactions = false,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      @Deprecated("removed at 2023.12.0")
-      this.ffVisibility,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      this.followersVisibility,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      this.followingVisibility,
-      this.twoFactorEnabled,
-      this.usePasswordLessLogin,
-      this.securityKeys,
-      final List<UserRole>? roles,
-      this.memo,
-      this.moderationNote,
-      this.avatarId,
-      this.bannerId,
-      this.followedMessage,
-      required this.isModerator,
-      required this.isAdmin,
-      this.injectFeaturedNote = false,
-      this.receiveAnnouncementEmail = false,
-      required this.alwaysMarkNsfw,
-      this.autoSensitive = false,
-      required this.carefulBot,
-      required this.autoAcceptFollowed,
-      this.preventAiLearning,
-      this.noCrawle = false,
-      this.isExplorable = false,
-      this.isDeleted = false,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      this.twoFactorBackupCodesStock,
-      this.hideOnlineStatus = false,
-      this.hasUnreadSpecifiedNotes = false,
-      this.hasUnreadMentions = false,
-      this.hasUnreadAnnouncement = false,
-      this.hasUnreadAntenna = false,
-      this.hasUnreadChannel = false,
-      this.hasUnreadNotification = false,
-      this.hasPendingReceivedFollowRequest = false,
-      this.unreadNotificationsCount,
-      final List<AnnouncementsResponse> unreadAnnouncements = const [],
-      @MuteWordsConverter() final List<MuteWord>? mutedWords,
-      @MuteWordsConverter() final List<MuteWord>? hardMutedWords,
-      final List<String> mutedInstances = const [],
-      @Deprecated("Deprecated in Misskey 2023.9.2")
-      final List<String>? mutingNotificationTypes,
-      this.notificationRecieveConfig = const NotificationRecieveConfigs(),
-      final List<String> emailNotificationTypes = const [],
-      final List<UserAchievement> achievements = const [],
-      this.loggedInDays,
-      this.policies})
-      : _avatarDecorations = avatarDecorations,
-        _emojis = emojis,
-        _badgeRoles = badgeRoles,
-        _alsoKnownAs = alsoKnownAs,
-        _fields = fields,
-        _verifiedLinks = verifiedLinks,
-        _mutualLinkSections = mutualLinkSections,
-        _pinnedNoteIds = pinnedNoteIds,
-        _pinnedNotes = pinnedNotes,
-        _pinnedPage = pinnedPage,
-        _roles = roles,
-        _unreadAnnouncements = unreadAnnouncements,
-        _mutedWords = mutedWords,
-        _hardMutedWords = hardMutedWords,
-        _mutedInstances = mutedInstances,
-        _mutingNotificationTypes = mutingNotificationTypes,
-        _emailNotificationTypes = emailNotificationTypes,
-        _achievements = achievements;
+  const _$MeDetailedImpl({
+    required this.id,
+    this.name,
+    required this.username,
+    this.host,
+    @NullableUriConverter() this.avatarUrl,
+    this.avatarBlurhash,
+    final List<UserAvatarDecoration> avatarDecorations = const [],
+    required this.isBot,
+    required this.isCat,
+    this.instance,
+    @EmojisConverter() final Map<String, String> emojis = const {},
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    this.onlineStatus,
+    final List<UserBadgeRole> badgeRoles = const [],
+    this.requireSigninToViewContents,
+    @HideBeforeConverter() this.makeNotesFollowersOnlyBefore,
+    @HideBeforeConverter() this.makeNotesHiddenBefore,
+    this.speakAsCat,
+    @NullableUriConverter() this.url,
+    @NullableUriConverter() this.uri,
+    @NullableUriConverter() this.movedTo,
+    final List<String>? alsoKnownAs,
+    @DateTimeConverter() required this.createdAt,
+    @NullableDateTimeConverter() this.updatedAt,
+    @NullableDateTimeConverter() this.lastFetchedAt,
+    @NullableUriConverter() this.bannerUrl,
+    this.bannerBlurhash,
+    required this.isLocked,
+    required this.isSilenced,
+    required this.isSuspended,
+    this.description,
+    this.location,
+    @NullableDateTimeConverter() this.birthday,
+    this.lang,
+    final List<UserField>? fields,
+    final List<String> verifiedLinks = const [],
+    final List<MutualLinkSection>? mutualLinkSections,
+    @IntConverter() required this.followersCount,
+    @IntConverter() required this.followingCount,
+    required this.notesCount,
+    final List<String>? pinnedNoteIds,
+    final List<Note>? pinnedNotes,
+    this.pinnedPageId,
+    final Map<String, dynamic>? pinnedPage,
+    this.publicReactions = false,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    @Deprecated("removed at 2023.12.0")
+    this.ffVisibility,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    this.followersVisibility,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    this.followingVisibility,
+    this.twoFactorEnabled,
+    this.usePasswordLessLogin,
+    this.securityKeys,
+    final List<UserRole>? roles,
+    this.memo,
+    this.moderationNote,
+    this.avatarId,
+    this.bannerId,
+    this.followedMessage,
+    required this.isModerator,
+    required this.isAdmin,
+    this.injectFeaturedNote = false,
+    this.receiveAnnouncementEmail = false,
+    required this.alwaysMarkNsfw,
+    this.autoSensitive = false,
+    required this.carefulBot,
+    required this.autoAcceptFollowed,
+    this.preventAiLearning,
+    this.noCrawle = false,
+    this.isExplorable = false,
+    this.isDeleted = false,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    this.twoFactorBackupCodesStock,
+    this.hideOnlineStatus = false,
+    this.hasUnreadSpecifiedNotes = false,
+    this.hasUnreadMentions = false,
+    this.hasUnreadAnnouncement = false,
+    this.hasUnreadAntenna = false,
+    this.hasUnreadChannel = false,
+    this.hasUnreadNotification = false,
+    this.hasPendingReceivedFollowRequest = false,
+    this.unreadNotificationsCount,
+    final List<AnnouncementsResponse> unreadAnnouncements = const [],
+    @MuteWordsConverter() final List<MuteWord>? mutedWords,
+    @MuteWordsConverter() final List<MuteWord>? hardMutedWords,
+    final List<String> mutedInstances = const [],
+    @Deprecated("Deprecated in Misskey 2023.9.2")
+    final List<String>? mutingNotificationTypes,
+    this.notificationRecieveConfig = const NotificationRecieveConfigs(),
+    final List<String> emailNotificationTypes = const [],
+    final List<UserAchievement> achievements = const [],
+    this.loggedInDays,
+    this.policies,
+  }) : _avatarDecorations = avatarDecorations,
+       _emojis = emojis,
+       _badgeRoles = badgeRoles,
+       _alsoKnownAs = alsoKnownAs,
+       _fields = fields,
+       _verifiedLinks = verifiedLinks,
+       _mutualLinkSections = mutualLinkSections,
+       _pinnedNoteIds = pinnedNoteIds,
+       _pinnedNotes = pinnedNotes,
+       _pinnedPage = pinnedPage,
+       _roles = roles,
+       _unreadAnnouncements = unreadAnnouncements,
+       _mutedWords = mutedWords,
+       _hardMutedWords = hardMutedWords,
+       _mutedInstances = mutedInstances,
+       _mutingNotificationTypes = mutingNotificationTypes,
+       _emailNotificationTypes = emailNotificationTypes,
+       _achievements = achievements;
 
   factory _$MeDetailedImpl.fromJson(Map<String, dynamic> json) =>
       _$$MeDetailedImplFromJson(json);
@@ -5331,7 +5897,7 @@ class _$MeDetailedImpl implements _MeDetailed {
     return EqualUnmodifiableMapView(_emojis);
   }
 
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final OnlineStatus? onlineStatus;
@@ -5432,11 +5998,11 @@ class _$MeDetailedImpl implements _MeDetailed {
     return EqualUnmodifiableListView(value);
   }
 
-// CherryPick 4.3.0 or newer returns String if the count is not visible
+  // CherryPick 4.3.0 or newer returns String if the count is not visible
   @override
   @IntConverter()
   final int followersCount;
-// CherryPick 4.3.0 or newer returns String if the count is not visible
+  // CherryPick 4.3.0 or newer returns String if the count is not visible
   @override
   @IntConverter()
   final int followingCount;
@@ -5474,31 +6040,31 @@ class _$MeDetailedImpl implements _MeDetailed {
     return EqualUnmodifiableMapView(value);
   }
 
-// Added in Misskey 12.93.0
+  // Added in Misskey 12.93.0
   @override
   @JsonKey()
   final bool publicReactions;
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   @Deprecated("removed at 2023.12.0")
   final FFVisibility? ffVisibility;
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final FFVisibility? followersVisibility;
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final FFVisibility? followingVisibility;
   @override
   final bool? twoFactorEnabled;
-// Added in Misskey 11.25.0
-// Removed in Misskey 2024.10.0
+  // Added in Misskey 11.25.0
+  // Removed in Misskey 2024.10.0
   @override
   final bool? usePasswordLessLogin;
-// Added in Misskey 11.24.0
-// Removed in Misskey 2024.10.0
+  // Added in Misskey 11.24.0
+  // Removed in Misskey 2024.10.0
   @override
   final bool? securityKeys;
   final List<UserRole>? _roles;
@@ -5525,17 +6091,17 @@ class _$MeDetailedImpl implements _MeDetailed {
   final bool isModerator;
   @override
   final bool isAdmin;
-// Added in Misskey 12.13.0
+  // Added in Misskey 12.13.0
   @override
   @JsonKey()
   final bool injectFeaturedNote;
-// Added in Misskey 12.69.0
+  // Added in Misskey 12.69.0
   @override
   @JsonKey()
   final bool receiveAnnouncementEmail;
   @override
   final bool alwaysMarkNsfw;
-// Added in Misskey 12.112.0
+  // Added in Misskey 12.112.0
   @override
   @JsonKey()
   final bool autoSensitive;
@@ -5545,23 +6111,23 @@ class _$MeDetailedImpl implements _MeDetailed {
   final bool autoAcceptFollowed;
   @override
   final bool? preventAiLearning;
-// Added in Misskey 12.60.0
+  // Added in Misskey 12.60.0
   @override
   @JsonKey()
   final bool noCrawle;
-// Added in Misskey 12.63.0
+  // Added in Misskey 12.63.0
   @override
   @JsonKey()
   final bool isExplorable;
-// Added in Misskey 12.89.0
+  // Added in Misskey 12.89.0
   @override
   @JsonKey()
   final bool isDeleted;
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final TwoFactorBackupCodesStock? twoFactorBackupCodesStock;
-// Added in Misskey 12.77.0
+  // Added in Misskey 12.77.0
   @override
   @JsonKey()
   final bool hideOnlineStatus;
@@ -5571,22 +6137,22 @@ class _$MeDetailedImpl implements _MeDetailed {
   @override
   @JsonKey()
   final bool hasUnreadMentions;
-// Added in Misskey 12.0.0
+  // Added in Misskey 12.0.0
   @override
   @JsonKey()
   final bool hasUnreadAnnouncement;
-// Added in Misskey 12.0.0
+  // Added in Misskey 12.0.0
   @override
   @JsonKey()
   final bool hasUnreadAntenna;
-// Added in Misskey 12.47.0
+  // Added in Misskey 12.47.0
   @override
   @JsonKey()
   final bool hasUnreadChannel;
   @override
   @JsonKey()
   final bool hasUnreadNotification;
-// Added in Misskey 12.11.0
+  // Added in Misskey 12.11.0
   @override
   @JsonKey()
   final bool hasPendingReceivedFollowRequest;
@@ -5624,9 +6190,9 @@ class _$MeDetailedImpl implements _MeDetailed {
     return EqualUnmodifiableListView(value);
   }
 
-// Added in Misskey 12.99.0
+  // Added in Misskey 12.99.0
   final List<String> _mutedInstances;
-// Added in Misskey 12.99.0
+  // Added in Misskey 12.99.0
   @override
   @JsonKey()
   List<String> get mutedInstances {
@@ -5650,9 +6216,9 @@ class _$MeDetailedImpl implements _MeDetailed {
   @override
   @JsonKey()
   final NotificationRecieveConfigs notificationRecieveConfig;
-// Added in Misskey 12.70.0
+  // Added in Misskey 12.70.0
   final List<String> _emailNotificationTypes;
-// Added in Misskey 12.70.0
+  // Added in Misskey 12.70.0
   @override
   @JsonKey()
   List<String> get emailNotificationTypes {
@@ -5662,9 +6228,9 @@ class _$MeDetailedImpl implements _MeDetailed {
     return EqualUnmodifiableListView(_emailNotificationTypes);
   }
 
-// Added in Misskey 13.1.0
+  // Added in Misskey 13.1.0
   final List<UserAchievement> _achievements;
-// Added in Misskey 13.1.0
+  // Added in Misskey 13.1.0
   @override
   @JsonKey()
   List<UserAchievement> get achievements {
@@ -5673,10 +6239,10 @@ class _$MeDetailedImpl implements _MeDetailed {
     return EqualUnmodifiableListView(_achievements);
   }
 
-// Added in Misskey 13.1.0
+  // Added in Misskey 13.1.0
   @override
   final int? loggedInDays;
-// Added in Misskey 13.0.0
+  // Added in Misskey 13.0.0
   @override
   final UserPolicies? policies;
 
@@ -5699,8 +6265,10 @@ class _$MeDetailedImpl implements _MeDetailed {
                 other.avatarUrl == avatarUrl) &&
             (identical(other.avatarBlurhash, avatarBlurhash) ||
                 other.avatarBlurhash == avatarBlurhash) &&
-            const DeepCollectionEquality()
-                .equals(other._avatarDecorations, _avatarDecorations) &&
+            const DeepCollectionEquality().equals(
+              other._avatarDecorations,
+              _avatarDecorations,
+            ) &&
             (identical(other.isBot, isBot) || other.isBot == isBot) &&
             (identical(other.isCat, isCat) || other.isCat == isCat) &&
             (identical(other.instance, instance) ||
@@ -5708,12 +6276,20 @@ class _$MeDetailedImpl implements _MeDetailed {
             const DeepCollectionEquality().equals(other._emojis, _emojis) &&
             (identical(other.onlineStatus, onlineStatus) ||
                 other.onlineStatus == onlineStatus) &&
-            const DeepCollectionEquality()
-                .equals(other._badgeRoles, _badgeRoles) &&
-            (identical(other.requireSigninToViewContents, requireSigninToViewContents) ||
+            const DeepCollectionEquality().equals(
+              other._badgeRoles,
+              _badgeRoles,
+            ) &&
+            (identical(
+                  other.requireSigninToViewContents,
+                  requireSigninToViewContents,
+                ) ||
                 other.requireSigninToViewContents ==
                     requireSigninToViewContents) &&
-            (identical(other.makeNotesFollowersOnlyBefore, makeNotesFollowersOnlyBefore) ||
+            (identical(
+                  other.makeNotesFollowersOnlyBefore,
+                  makeNotesFollowersOnlyBefore,
+                ) ||
                 other.makeNotesFollowersOnlyBefore ==
                     makeNotesFollowersOnlyBefore) &&
             (identical(other.makeNotesHiddenBefore, makeNotesHiddenBefore) ||
@@ -5723,8 +6299,10 @@ class _$MeDetailedImpl implements _MeDetailed {
             (identical(other.url, url) || other.url == url) &&
             (identical(other.uri, uri) || other.uri == uri) &&
             (identical(other.movedTo, movedTo) || other.movedTo == movedTo) &&
-            const DeepCollectionEquality()
-                .equals(other._alsoKnownAs, _alsoKnownAs) &&
+            const DeepCollectionEquality().equals(
+              other._alsoKnownAs,
+              _alsoKnownAs,
+            ) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
             (identical(other.updatedAt, updatedAt) ||
@@ -5749,160 +6327,249 @@ class _$MeDetailedImpl implements _MeDetailed {
                 other.birthday == birthday) &&
             (identical(other.lang, lang) || other.lang == lang) &&
             const DeepCollectionEquality().equals(other._fields, _fields) &&
-            const DeepCollectionEquality()
-                .equals(other._verifiedLinks, _verifiedLinks) &&
-            const DeepCollectionEquality()
-                .equals(other._mutualLinkSections, _mutualLinkSections) &&
+            const DeepCollectionEquality().equals(
+              other._verifiedLinks,
+              _verifiedLinks,
+            ) &&
+            const DeepCollectionEquality().equals(
+              other._mutualLinkSections,
+              _mutualLinkSections,
+            ) &&
             (identical(other.followersCount, followersCount) ||
                 other.followersCount == followersCount) &&
             (identical(other.followingCount, followingCount) ||
                 other.followingCount == followingCount) &&
             (identical(other.notesCount, notesCount) ||
                 other.notesCount == notesCount) &&
-            const DeepCollectionEquality().equals(other._pinnedNoteIds, _pinnedNoteIds) &&
-            const DeepCollectionEquality().equals(other._pinnedNotes, _pinnedNotes) &&
-            (identical(other.pinnedPageId, pinnedPageId) || other.pinnedPageId == pinnedPageId) &&
-            const DeepCollectionEquality().equals(other._pinnedPage, _pinnedPage) &&
-            (identical(other.publicReactions, publicReactions) || other.publicReactions == publicReactions) &&
-            (identical(other.ffVisibility, ffVisibility) || other.ffVisibility == ffVisibility) &&
-            (identical(other.followersVisibility, followersVisibility) || other.followersVisibility == followersVisibility) &&
-            (identical(other.followingVisibility, followingVisibility) || other.followingVisibility == followingVisibility) &&
-            (identical(other.twoFactorEnabled, twoFactorEnabled) || other.twoFactorEnabled == twoFactorEnabled) &&
-            (identical(other.usePasswordLessLogin, usePasswordLessLogin) || other.usePasswordLessLogin == usePasswordLessLogin) &&
-            (identical(other.securityKeys, securityKeys) || other.securityKeys == securityKeys) &&
+            const DeepCollectionEquality().equals(
+              other._pinnedNoteIds,
+              _pinnedNoteIds,
+            ) &&
+            const DeepCollectionEquality().equals(
+              other._pinnedNotes,
+              _pinnedNotes,
+            ) &&
+            (identical(other.pinnedPageId, pinnedPageId) ||
+                other.pinnedPageId == pinnedPageId) &&
+            const DeepCollectionEquality().equals(
+              other._pinnedPage,
+              _pinnedPage,
+            ) &&
+            (identical(other.publicReactions, publicReactions) ||
+                other.publicReactions == publicReactions) &&
+            (identical(other.ffVisibility, ffVisibility) ||
+                other.ffVisibility == ffVisibility) &&
+            (identical(other.followersVisibility, followersVisibility) ||
+                other.followersVisibility == followersVisibility) &&
+            (identical(other.followingVisibility, followingVisibility) ||
+                other.followingVisibility == followingVisibility) &&
+            (identical(other.twoFactorEnabled, twoFactorEnabled) ||
+                other.twoFactorEnabled == twoFactorEnabled) &&
+            (identical(other.usePasswordLessLogin, usePasswordLessLogin) ||
+                other.usePasswordLessLogin == usePasswordLessLogin) &&
+            (identical(other.securityKeys, securityKeys) ||
+                other.securityKeys == securityKeys) &&
             const DeepCollectionEquality().equals(other._roles, _roles) &&
             (identical(other.memo, memo) || other.memo == memo) &&
-            (identical(other.moderationNote, moderationNote) || other.moderationNote == moderationNote) &&
-            (identical(other.avatarId, avatarId) || other.avatarId == avatarId) &&
-            (identical(other.bannerId, bannerId) || other.bannerId == bannerId) &&
-            (identical(other.followedMessage, followedMessage) || other.followedMessage == followedMessage) &&
-            (identical(other.isModerator, isModerator) || other.isModerator == isModerator) &&
+            (identical(other.moderationNote, moderationNote) ||
+                other.moderationNote == moderationNote) &&
+            (identical(other.avatarId, avatarId) ||
+                other.avatarId == avatarId) &&
+            (identical(other.bannerId, bannerId) ||
+                other.bannerId == bannerId) &&
+            (identical(other.followedMessage, followedMessage) ||
+                other.followedMessage == followedMessage) &&
+            (identical(other.isModerator, isModerator) ||
+                other.isModerator == isModerator) &&
             (identical(other.isAdmin, isAdmin) || other.isAdmin == isAdmin) &&
-            (identical(other.injectFeaturedNote, injectFeaturedNote) || other.injectFeaturedNote == injectFeaturedNote) &&
-            (identical(other.receiveAnnouncementEmail, receiveAnnouncementEmail) || other.receiveAnnouncementEmail == receiveAnnouncementEmail) &&
-            (identical(other.alwaysMarkNsfw, alwaysMarkNsfw) || other.alwaysMarkNsfw == alwaysMarkNsfw) &&
-            (identical(other.autoSensitive, autoSensitive) || other.autoSensitive == autoSensitive) &&
-            (identical(other.carefulBot, carefulBot) || other.carefulBot == carefulBot) &&
-            (identical(other.autoAcceptFollowed, autoAcceptFollowed) || other.autoAcceptFollowed == autoAcceptFollowed) &&
-            (identical(other.preventAiLearning, preventAiLearning) || other.preventAiLearning == preventAiLearning) &&
-            (identical(other.noCrawle, noCrawle) || other.noCrawle == noCrawle) &&
-            (identical(other.isExplorable, isExplorable) || other.isExplorable == isExplorable) &&
-            (identical(other.isDeleted, isDeleted) || other.isDeleted == isDeleted) &&
-            (identical(other.twoFactorBackupCodesStock, twoFactorBackupCodesStock) || other.twoFactorBackupCodesStock == twoFactorBackupCodesStock) &&
-            (identical(other.hideOnlineStatus, hideOnlineStatus) || other.hideOnlineStatus == hideOnlineStatus) &&
-            (identical(other.hasUnreadSpecifiedNotes, hasUnreadSpecifiedNotes) || other.hasUnreadSpecifiedNotes == hasUnreadSpecifiedNotes) &&
-            (identical(other.hasUnreadMentions, hasUnreadMentions) || other.hasUnreadMentions == hasUnreadMentions) &&
-            (identical(other.hasUnreadAnnouncement, hasUnreadAnnouncement) || other.hasUnreadAnnouncement == hasUnreadAnnouncement) &&
-            (identical(other.hasUnreadAntenna, hasUnreadAntenna) || other.hasUnreadAntenna == hasUnreadAntenna) &&
-            (identical(other.hasUnreadChannel, hasUnreadChannel) || other.hasUnreadChannel == hasUnreadChannel) &&
-            (identical(other.hasUnreadNotification, hasUnreadNotification) || other.hasUnreadNotification == hasUnreadNotification) &&
-            (identical(other.hasPendingReceivedFollowRequest, hasPendingReceivedFollowRequest) || other.hasPendingReceivedFollowRequest == hasPendingReceivedFollowRequest) &&
-            (identical(other.unreadNotificationsCount, unreadNotificationsCount) || other.unreadNotificationsCount == unreadNotificationsCount) &&
-            const DeepCollectionEquality().equals(other._unreadAnnouncements, _unreadAnnouncements) &&
-            const DeepCollectionEquality().equals(other._mutedWords, _mutedWords) &&
-            const DeepCollectionEquality().equals(other._hardMutedWords, _hardMutedWords) &&
-            const DeepCollectionEquality().equals(other._mutedInstances, _mutedInstances) &&
-            const DeepCollectionEquality().equals(other._mutingNotificationTypes, _mutingNotificationTypes) &&
-            (identical(other.notificationRecieveConfig, notificationRecieveConfig) || other.notificationRecieveConfig == notificationRecieveConfig) &&
-            const DeepCollectionEquality().equals(other._emailNotificationTypes, _emailNotificationTypes) &&
-            const DeepCollectionEquality().equals(other._achievements, _achievements) &&
-            (identical(other.loggedInDays, loggedInDays) || other.loggedInDays == loggedInDays) &&
-            (identical(other.policies, policies) || other.policies == policies));
+            (identical(other.injectFeaturedNote, injectFeaturedNote) ||
+                other.injectFeaturedNote == injectFeaturedNote) &&
+            (identical(
+                  other.receiveAnnouncementEmail,
+                  receiveAnnouncementEmail,
+                ) ||
+                other.receiveAnnouncementEmail == receiveAnnouncementEmail) &&
+            (identical(other.alwaysMarkNsfw, alwaysMarkNsfw) ||
+                other.alwaysMarkNsfw == alwaysMarkNsfw) &&
+            (identical(other.autoSensitive, autoSensitive) ||
+                other.autoSensitive == autoSensitive) &&
+            (identical(other.carefulBot, carefulBot) ||
+                other.carefulBot == carefulBot) &&
+            (identical(other.autoAcceptFollowed, autoAcceptFollowed) ||
+                other.autoAcceptFollowed == autoAcceptFollowed) &&
+            (identical(other.preventAiLearning, preventAiLearning) ||
+                other.preventAiLearning == preventAiLearning) &&
+            (identical(other.noCrawle, noCrawle) ||
+                other.noCrawle == noCrawle) &&
+            (identical(other.isExplorable, isExplorable) ||
+                other.isExplorable == isExplorable) &&
+            (identical(other.isDeleted, isDeleted) ||
+                other.isDeleted == isDeleted) &&
+            (identical(
+                  other.twoFactorBackupCodesStock,
+                  twoFactorBackupCodesStock,
+                ) ||
+                other.twoFactorBackupCodesStock == twoFactorBackupCodesStock) &&
+            (identical(other.hideOnlineStatus, hideOnlineStatus) ||
+                other.hideOnlineStatus == hideOnlineStatus) &&
+            (identical(
+                  other.hasUnreadSpecifiedNotes,
+                  hasUnreadSpecifiedNotes,
+                ) ||
+                other.hasUnreadSpecifiedNotes == hasUnreadSpecifiedNotes) &&
+            (identical(other.hasUnreadMentions, hasUnreadMentions) ||
+                other.hasUnreadMentions == hasUnreadMentions) &&
+            (identical(other.hasUnreadAnnouncement, hasUnreadAnnouncement) ||
+                other.hasUnreadAnnouncement == hasUnreadAnnouncement) &&
+            (identical(other.hasUnreadAntenna, hasUnreadAntenna) ||
+                other.hasUnreadAntenna == hasUnreadAntenna) &&
+            (identical(other.hasUnreadChannel, hasUnreadChannel) ||
+                other.hasUnreadChannel == hasUnreadChannel) &&
+            (identical(other.hasUnreadNotification, hasUnreadNotification) ||
+                other.hasUnreadNotification == hasUnreadNotification) &&
+            (identical(
+                  other.hasPendingReceivedFollowRequest,
+                  hasPendingReceivedFollowRequest,
+                ) ||
+                other.hasPendingReceivedFollowRequest ==
+                    hasPendingReceivedFollowRequest) &&
+            (identical(
+                  other.unreadNotificationsCount,
+                  unreadNotificationsCount,
+                ) ||
+                other.unreadNotificationsCount == unreadNotificationsCount) &&
+            const DeepCollectionEquality().equals(
+              other._unreadAnnouncements,
+              _unreadAnnouncements,
+            ) &&
+            const DeepCollectionEquality().equals(
+              other._mutedWords,
+              _mutedWords,
+            ) &&
+            const DeepCollectionEquality().equals(
+              other._hardMutedWords,
+              _hardMutedWords,
+            ) &&
+            const DeepCollectionEquality().equals(
+              other._mutedInstances,
+              _mutedInstances,
+            ) &&
+            const DeepCollectionEquality().equals(
+              other._mutingNotificationTypes,
+              _mutingNotificationTypes,
+            ) &&
+            (identical(
+                  other.notificationRecieveConfig,
+                  notificationRecieveConfig,
+                ) ||
+                other.notificationRecieveConfig == notificationRecieveConfig) &&
+            const DeepCollectionEquality().equals(
+              other._emailNotificationTypes,
+              _emailNotificationTypes,
+            ) &&
+            const DeepCollectionEquality().equals(
+              other._achievements,
+              _achievements,
+            ) &&
+            (identical(other.loggedInDays, loggedInDays) ||
+                other.loggedInDays == loggedInDays) &&
+            (identical(other.policies, policies) ||
+                other.policies == policies));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
-        runtimeType,
-        id,
-        name,
-        username,
-        host,
-        avatarUrl,
-        avatarBlurhash,
-        const DeepCollectionEquality().hash(_avatarDecorations),
-        isBot,
-        isCat,
-        instance,
-        const DeepCollectionEquality().hash(_emojis),
-        onlineStatus,
-        const DeepCollectionEquality().hash(_badgeRoles),
-        requireSigninToViewContents,
-        makeNotesFollowersOnlyBefore,
-        makeNotesHiddenBefore,
-        speakAsCat,
-        url,
-        uri,
-        movedTo,
-        const DeepCollectionEquality().hash(_alsoKnownAs),
-        createdAt,
-        updatedAt,
-        lastFetchedAt,
-        bannerUrl,
-        bannerBlurhash,
-        isLocked,
-        isSilenced,
-        isSuspended,
-        description,
-        location,
-        birthday,
-        lang,
-        const DeepCollectionEquality().hash(_fields),
-        const DeepCollectionEquality().hash(_verifiedLinks),
-        const DeepCollectionEquality().hash(_mutualLinkSections),
-        followersCount,
-        followingCount,
-        notesCount,
-        const DeepCollectionEquality().hash(_pinnedNoteIds),
-        const DeepCollectionEquality().hash(_pinnedNotes),
-        pinnedPageId,
-        const DeepCollectionEquality().hash(_pinnedPage),
-        publicReactions,
-        ffVisibility,
-        followersVisibility,
-        followingVisibility,
-        twoFactorEnabled,
-        usePasswordLessLogin,
-        securityKeys,
-        const DeepCollectionEquality().hash(_roles),
-        memo,
-        moderationNote,
-        avatarId,
-        bannerId,
-        followedMessage,
-        isModerator,
-        isAdmin,
-        injectFeaturedNote,
-        receiveAnnouncementEmail,
-        alwaysMarkNsfw,
-        autoSensitive,
-        carefulBot,
-        autoAcceptFollowed,
-        preventAiLearning,
-        noCrawle,
-        isExplorable,
-        isDeleted,
-        twoFactorBackupCodesStock,
-        hideOnlineStatus,
-        hasUnreadSpecifiedNotes,
-        hasUnreadMentions,
-        hasUnreadAnnouncement,
-        hasUnreadAntenna,
-        hasUnreadChannel,
-        hasUnreadNotification,
-        hasPendingReceivedFollowRequest,
-        unreadNotificationsCount,
-        const DeepCollectionEquality().hash(_unreadAnnouncements),
-        const DeepCollectionEquality().hash(_mutedWords),
-        const DeepCollectionEquality().hash(_hardMutedWords),
-        const DeepCollectionEquality().hash(_mutedInstances),
-        const DeepCollectionEquality().hash(_mutingNotificationTypes),
-        notificationRecieveConfig,
-        const DeepCollectionEquality().hash(_emailNotificationTypes),
-        const DeepCollectionEquality().hash(_achievements),
-        loggedInDays,
-        policies
-      ]);
+    runtimeType,
+    id,
+    name,
+    username,
+    host,
+    avatarUrl,
+    avatarBlurhash,
+    const DeepCollectionEquality().hash(_avatarDecorations),
+    isBot,
+    isCat,
+    instance,
+    const DeepCollectionEquality().hash(_emojis),
+    onlineStatus,
+    const DeepCollectionEquality().hash(_badgeRoles),
+    requireSigninToViewContents,
+    makeNotesFollowersOnlyBefore,
+    makeNotesHiddenBefore,
+    speakAsCat,
+    url,
+    uri,
+    movedTo,
+    const DeepCollectionEquality().hash(_alsoKnownAs),
+    createdAt,
+    updatedAt,
+    lastFetchedAt,
+    bannerUrl,
+    bannerBlurhash,
+    isLocked,
+    isSilenced,
+    isSuspended,
+    description,
+    location,
+    birthday,
+    lang,
+    const DeepCollectionEquality().hash(_fields),
+    const DeepCollectionEquality().hash(_verifiedLinks),
+    const DeepCollectionEquality().hash(_mutualLinkSections),
+    followersCount,
+    followingCount,
+    notesCount,
+    const DeepCollectionEquality().hash(_pinnedNoteIds),
+    const DeepCollectionEquality().hash(_pinnedNotes),
+    pinnedPageId,
+    const DeepCollectionEquality().hash(_pinnedPage),
+    publicReactions,
+    ffVisibility,
+    followersVisibility,
+    followingVisibility,
+    twoFactorEnabled,
+    usePasswordLessLogin,
+    securityKeys,
+    const DeepCollectionEquality().hash(_roles),
+    memo,
+    moderationNote,
+    avatarId,
+    bannerId,
+    followedMessage,
+    isModerator,
+    isAdmin,
+    injectFeaturedNote,
+    receiveAnnouncementEmail,
+    alwaysMarkNsfw,
+    autoSensitive,
+    carefulBot,
+    autoAcceptFollowed,
+    preventAiLearning,
+    noCrawle,
+    isExplorable,
+    isDeleted,
+    twoFactorBackupCodesStock,
+    hideOnlineStatus,
+    hasUnreadSpecifiedNotes,
+    hasUnreadMentions,
+    hasUnreadAnnouncement,
+    hasUnreadAntenna,
+    hasUnreadChannel,
+    hasUnreadNotification,
+    hasPendingReceivedFollowRequest,
+    unreadNotificationsCount,
+    const DeepCollectionEquality().hash(_unreadAnnouncements),
+    const DeepCollectionEquality().hash(_mutedWords),
+    const DeepCollectionEquality().hash(_hardMutedWords),
+    const DeepCollectionEquality().hash(_mutedInstances),
+    const DeepCollectionEquality().hash(_mutingNotificationTypes),
+    notificationRecieveConfig,
+    const DeepCollectionEquality().hash(_emailNotificationTypes),
+    const DeepCollectionEquality().hash(_achievements),
+    loggedInDays,
+    policies,
+  ]);
 
   /// Create a copy of MeDetailed
   /// with the given fields replaced by the non-null parameter values.
@@ -5914,109 +6581,108 @@ class _$MeDetailedImpl implements _MeDetailed {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MeDetailedImplToJson(
-      this,
-    );
+    return _$$MeDetailedImplToJson(this);
   }
 }
 
 abstract class _MeDetailed implements MeDetailed {
-  const factory _MeDetailed(
-      {required final String id,
-      final String? name,
-      required final String username,
-      final String? host,
-      @NullableUriConverter() final Uri? avatarUrl,
-      final String? avatarBlurhash,
-      final List<UserAvatarDecoration> avatarDecorations,
-      required final bool isBot,
-      required final bool isCat,
-      final UserInstanceInfo? instance,
-      @EmojisConverter() final Map<String, String> emojis,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      final OnlineStatus? onlineStatus,
-      final List<UserBadgeRole> badgeRoles,
-      final bool? requireSigninToViewContents,
-      @HideBeforeConverter() final HideBefore? makeNotesFollowersOnlyBefore,
-      @HideBeforeConverter() final HideBefore? makeNotesHiddenBefore,
-      final bool? speakAsCat,
-      @NullableUriConverter() final Uri? url,
-      @NullableUriConverter() final Uri? uri,
-      @NullableUriConverter() final Uri? movedTo,
-      final List<String>? alsoKnownAs,
-      @DateTimeConverter() required final DateTime createdAt,
-      @NullableDateTimeConverter() final DateTime? updatedAt,
-      @NullableDateTimeConverter() final DateTime? lastFetchedAt,
-      @NullableUriConverter() final Uri? bannerUrl,
-      final String? bannerBlurhash,
-      required final bool isLocked,
-      required final bool isSilenced,
-      required final bool isSuspended,
-      final String? description,
-      final String? location,
-      @NullableDateTimeConverter() final DateTime? birthday,
-      final String? lang,
-      final List<UserField>? fields,
-      final List<String> verifiedLinks,
-      final List<MutualLinkSection>? mutualLinkSections,
-      @IntConverter() required final int followersCount,
-      @IntConverter() required final int followingCount,
-      required final int notesCount,
-      final List<String>? pinnedNoteIds,
-      final List<Note>? pinnedNotes,
-      final String? pinnedPageId,
-      final Map<String, dynamic>? pinnedPage,
-      final bool publicReactions,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      @Deprecated("removed at 2023.12.0")
-      final FFVisibility? ffVisibility,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      final FFVisibility? followersVisibility,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      final FFVisibility? followingVisibility,
-      final bool? twoFactorEnabled,
-      final bool? usePasswordLessLogin,
-      final bool? securityKeys,
-      final List<UserRole>? roles,
-      final String? memo,
-      final String? moderationNote,
-      final String? avatarId,
-      final String? bannerId,
-      final String? followedMessage,
-      required final bool isModerator,
-      required final bool isAdmin,
-      final bool injectFeaturedNote,
-      final bool receiveAnnouncementEmail,
-      required final bool alwaysMarkNsfw,
-      final bool autoSensitive,
-      required final bool carefulBot,
-      required final bool autoAcceptFollowed,
-      final bool? preventAiLearning,
-      final bool noCrawle,
-      final bool isExplorable,
-      final bool isDeleted,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      final TwoFactorBackupCodesStock? twoFactorBackupCodesStock,
-      final bool hideOnlineStatus,
-      final bool hasUnreadSpecifiedNotes,
-      final bool hasUnreadMentions,
-      final bool hasUnreadAnnouncement,
-      final bool hasUnreadAntenna,
-      final bool hasUnreadChannel,
-      final bool hasUnreadNotification,
-      final bool hasPendingReceivedFollowRequest,
-      final int? unreadNotificationsCount,
-      final List<AnnouncementsResponse> unreadAnnouncements,
-      @MuteWordsConverter() final List<MuteWord>? mutedWords,
-      @MuteWordsConverter() final List<MuteWord>? hardMutedWords,
-      final List<String> mutedInstances,
-      @Deprecated("Deprecated in Misskey 2023.9.2")
-      final List<String>? mutingNotificationTypes,
-      final NotificationRecieveConfigs notificationRecieveConfig,
-      final List<String> emailNotificationTypes,
-      final List<UserAchievement> achievements,
-      final int? loggedInDays,
-      final UserPolicies? policies}) = _$MeDetailedImpl;
+  const factory _MeDetailed({
+    required final String id,
+    final String? name,
+    required final String username,
+    final String? host,
+    @NullableUriConverter() final Uri? avatarUrl,
+    final String? avatarBlurhash,
+    final List<UserAvatarDecoration> avatarDecorations,
+    required final bool isBot,
+    required final bool isCat,
+    final UserInstanceInfo? instance,
+    @EmojisConverter() final Map<String, String> emojis,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    final OnlineStatus? onlineStatus,
+    final List<UserBadgeRole> badgeRoles,
+    final bool? requireSigninToViewContents,
+    @HideBeforeConverter() final HideBefore? makeNotesFollowersOnlyBefore,
+    @HideBeforeConverter() final HideBefore? makeNotesHiddenBefore,
+    final bool? speakAsCat,
+    @NullableUriConverter() final Uri? url,
+    @NullableUriConverter() final Uri? uri,
+    @NullableUriConverter() final Uri? movedTo,
+    final List<String>? alsoKnownAs,
+    @DateTimeConverter() required final DateTime createdAt,
+    @NullableDateTimeConverter() final DateTime? updatedAt,
+    @NullableDateTimeConverter() final DateTime? lastFetchedAt,
+    @NullableUriConverter() final Uri? bannerUrl,
+    final String? bannerBlurhash,
+    required final bool isLocked,
+    required final bool isSilenced,
+    required final bool isSuspended,
+    final String? description,
+    final String? location,
+    @NullableDateTimeConverter() final DateTime? birthday,
+    final String? lang,
+    final List<UserField>? fields,
+    final List<String> verifiedLinks,
+    final List<MutualLinkSection>? mutualLinkSections,
+    @IntConverter() required final int followersCount,
+    @IntConverter() required final int followingCount,
+    required final int notesCount,
+    final List<String>? pinnedNoteIds,
+    final List<Note>? pinnedNotes,
+    final String? pinnedPageId,
+    final Map<String, dynamic>? pinnedPage,
+    final bool publicReactions,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    @Deprecated("removed at 2023.12.0")
+    final FFVisibility? ffVisibility,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    final FFVisibility? followersVisibility,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    final FFVisibility? followingVisibility,
+    final bool? twoFactorEnabled,
+    final bool? usePasswordLessLogin,
+    final bool? securityKeys,
+    final List<UserRole>? roles,
+    final String? memo,
+    final String? moderationNote,
+    final String? avatarId,
+    final String? bannerId,
+    final String? followedMessage,
+    required final bool isModerator,
+    required final bool isAdmin,
+    final bool injectFeaturedNote,
+    final bool receiveAnnouncementEmail,
+    required final bool alwaysMarkNsfw,
+    final bool autoSensitive,
+    required final bool carefulBot,
+    required final bool autoAcceptFollowed,
+    final bool? preventAiLearning,
+    final bool noCrawle,
+    final bool isExplorable,
+    final bool isDeleted,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    final TwoFactorBackupCodesStock? twoFactorBackupCodesStock,
+    final bool hideOnlineStatus,
+    final bool hasUnreadSpecifiedNotes,
+    final bool hasUnreadMentions,
+    final bool hasUnreadAnnouncement,
+    final bool hasUnreadAntenna,
+    final bool hasUnreadChannel,
+    final bool hasUnreadNotification,
+    final bool hasPendingReceivedFollowRequest,
+    final int? unreadNotificationsCount,
+    final List<AnnouncementsResponse> unreadAnnouncements,
+    @MuteWordsConverter() final List<MuteWord>? mutedWords,
+    @MuteWordsConverter() final List<MuteWord>? hardMutedWords,
+    final List<String> mutedInstances,
+    @Deprecated("Deprecated in Misskey 2023.9.2")
+    final List<String>? mutingNotificationTypes,
+    final NotificationRecieveConfigs notificationRecieveConfig,
+    final List<String> emailNotificationTypes,
+    final List<UserAchievement> achievements,
+    final int? loggedInDays,
+    final UserPolicies? policies,
+  }) = _$MeDetailedImpl;
 
   factory _MeDetailed.fromJson(Map<String, dynamic> json) =
       _$MeDetailedImpl.fromJson;
@@ -6105,8 +6771,7 @@ abstract class _MeDetailed implements MeDetailed {
   @override
   List<String> get verifiedLinks;
   @override
-  List<MutualLinkSection>?
-      get mutualLinkSections; // CherryPick 4.3.0 or newer returns String if the count is not visible
+  List<MutualLinkSection>? get mutualLinkSections; // CherryPick 4.3.0 or newer returns String if the count is not visible
   @override
   @IntConverter()
   int get followersCount; // CherryPick 4.3.0 or newer returns String if the count is not visible
@@ -6137,10 +6802,10 @@ abstract class _MeDetailed implements MeDetailed {
   FFVisibility? get followingVisibility;
   @override
   bool? get twoFactorEnabled; // Added in Misskey 11.25.0
-// Removed in Misskey 2024.10.0
+  // Removed in Misskey 2024.10.0
   @override
   bool? get usePasswordLessLogin; // Added in Misskey 11.24.0
-// Removed in Misskey 2024.10.0
+  // Removed in Misskey 2024.10.0
   @override
   bool? get securityKeys;
   @override
@@ -6181,8 +6846,7 @@ abstract class _MeDetailed implements MeDetailed {
   bool get isDeleted; // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-  TwoFactorBackupCodesStock?
-      get twoFactorBackupCodesStock; // Added in Misskey 12.77.0
+  TwoFactorBackupCodesStock? get twoFactorBackupCodesStock; // Added in Misskey 12.77.0
   @override
   bool get hideOnlineStatus;
   @override
@@ -6215,8 +6879,7 @@ abstract class _MeDetailed implements MeDetailed {
   @Deprecated("Deprecated in Misskey 2023.9.2")
   List<String>? get mutingNotificationTypes;
   @override
-  NotificationRecieveConfigs
-      get notificationRecieveConfig; // Added in Misskey 12.70.0
+  NotificationRecieveConfigs get notificationRecieveConfig; // Added in Misskey 12.70.0
   @override
   List<String> get emailNotificationTypes; // Added in Misskey 13.1.0
   @override
@@ -6259,22 +6922,26 @@ mixin _$UserAvatarDecoration {
 
 /// @nodoc
 abstract class $UserAvatarDecorationCopyWith<$Res> {
-  factory $UserAvatarDecorationCopyWith(UserAvatarDecoration value,
-          $Res Function(UserAvatarDecoration) then) =
-      _$UserAvatarDecorationCopyWithImpl<$Res, UserAvatarDecoration>;
+  factory $UserAvatarDecorationCopyWith(
+    UserAvatarDecoration value,
+    $Res Function(UserAvatarDecoration) then,
+  ) = _$UserAvatarDecorationCopyWithImpl<$Res, UserAvatarDecoration>;
   @useResult
-  $Res call(
-      {String id,
-      double? angle,
-      bool flipH,
-      String url,
-      double offsetX,
-      double offsetY});
+  $Res call({
+    String id,
+    double? angle,
+    bool flipH,
+    String url,
+    double offsetX,
+    double offsetY,
+  });
 }
 
 /// @nodoc
-class _$UserAvatarDecorationCopyWithImpl<$Res,
-        $Val extends UserAvatarDecoration>
+class _$UserAvatarDecorationCopyWithImpl<
+  $Res,
+  $Val extends UserAvatarDecoration
+>
     implements $UserAvatarDecorationCopyWith<$Res> {
   _$UserAvatarDecorationCopyWithImpl(this._value, this._then);
 
@@ -6295,59 +6962,71 @@ class _$UserAvatarDecorationCopyWithImpl<$Res,
     Object? offsetX = null,
     Object? offsetY = null,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      angle: freezed == angle
-          ? _value.angle
-          : angle // ignore: cast_nullable_to_non_nullable
-              as double?,
-      flipH: null == flipH
-          ? _value.flipH
-          : flipH // ignore: cast_nullable_to_non_nullable
-              as bool,
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      offsetX: null == offsetX
-          ? _value.offsetX
-          : offsetX // ignore: cast_nullable_to_non_nullable
-              as double,
-      offsetY: null == offsetY
-          ? _value.offsetY
-          : offsetY // ignore: cast_nullable_to_non_nullable
-              as double,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            angle:
+                freezed == angle
+                    ? _value.angle
+                    : angle // ignore: cast_nullable_to_non_nullable
+                        as double?,
+            flipH:
+                null == flipH
+                    ? _value.flipH
+                    : flipH // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            url:
+                null == url
+                    ? _value.url
+                    : url // ignore: cast_nullable_to_non_nullable
+                        as String,
+            offsetX:
+                null == offsetX
+                    ? _value.offsetX
+                    : offsetX // ignore: cast_nullable_to_non_nullable
+                        as double,
+            offsetY:
+                null == offsetY
+                    ? _value.offsetY
+                    : offsetY // ignore: cast_nullable_to_non_nullable
+                        as double,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$UserAvatarDecorationImplCopyWith<$Res>
     implements $UserAvatarDecorationCopyWith<$Res> {
-  factory _$$UserAvatarDecorationImplCopyWith(_$UserAvatarDecorationImpl value,
-          $Res Function(_$UserAvatarDecorationImpl) then) =
-      __$$UserAvatarDecorationImplCopyWithImpl<$Res>;
+  factory _$$UserAvatarDecorationImplCopyWith(
+    _$UserAvatarDecorationImpl value,
+    $Res Function(_$UserAvatarDecorationImpl) then,
+  ) = __$$UserAvatarDecorationImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      double? angle,
-      bool flipH,
-      String url,
-      double offsetX,
-      double offsetY});
+  $Res call({
+    String id,
+    double? angle,
+    bool flipH,
+    String url,
+    double offsetX,
+    double offsetY,
+  });
 }
 
 /// @nodoc
 class __$$UserAvatarDecorationImplCopyWithImpl<$Res>
     extends _$UserAvatarDecorationCopyWithImpl<$Res, _$UserAvatarDecorationImpl>
     implements _$$UserAvatarDecorationImplCopyWith<$Res> {
-  __$$UserAvatarDecorationImplCopyWithImpl(_$UserAvatarDecorationImpl _value,
-      $Res Function(_$UserAvatarDecorationImpl) _then)
-      : super(_value, _then);
+  __$$UserAvatarDecorationImplCopyWithImpl(
+    _$UserAvatarDecorationImpl _value,
+    $Res Function(_$UserAvatarDecorationImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UserAvatarDecoration
   /// with the given fields replaced by the non-null parameter values.
@@ -6361,45 +7040,54 @@ class __$$UserAvatarDecorationImplCopyWithImpl<$Res>
     Object? offsetX = null,
     Object? offsetY = null,
   }) {
-    return _then(_$UserAvatarDecorationImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      angle: freezed == angle
-          ? _value.angle
-          : angle // ignore: cast_nullable_to_non_nullable
-              as double?,
-      flipH: null == flipH
-          ? _value.flipH
-          : flipH // ignore: cast_nullable_to_non_nullable
-              as bool,
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      offsetX: null == offsetX
-          ? _value.offsetX
-          : offsetX // ignore: cast_nullable_to_non_nullable
-              as double,
-      offsetY: null == offsetY
-          ? _value.offsetY
-          : offsetY // ignore: cast_nullable_to_non_nullable
-              as double,
-    ));
+    return _then(
+      _$UserAvatarDecorationImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        angle:
+            freezed == angle
+                ? _value.angle
+                : angle // ignore: cast_nullable_to_non_nullable
+                    as double?,
+        flipH:
+            null == flipH
+                ? _value.flipH
+                : flipH // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        url:
+            null == url
+                ? _value.url
+                : url // ignore: cast_nullable_to_non_nullable
+                    as String,
+        offsetX:
+            null == offsetX
+                ? _value.offsetX
+                : offsetX // ignore: cast_nullable_to_non_nullable
+                    as double,
+        offsetY:
+            null == offsetY
+                ? _value.offsetY
+                : offsetY // ignore: cast_nullable_to_non_nullable
+                    as double,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$UserAvatarDecorationImpl implements _UserAvatarDecoration {
-  const _$UserAvatarDecorationImpl(
-      {required this.id,
-      this.angle,
-      this.flipH = false,
-      required this.url,
-      this.offsetX = 0.0,
-      this.offsetY = 0.0});
+  const _$UserAvatarDecorationImpl({
+    required this.id,
+    this.angle,
+    this.flipH = false,
+    required this.url,
+    this.offsetX = 0.0,
+    this.offsetY = 0.0,
+  });
 
   factory _$UserAvatarDecorationImpl.fromJson(Map<String, dynamic> json) =>
       _$$UserAvatarDecorationImplFromJson(json);
@@ -6449,26 +7137,27 @@ class _$UserAvatarDecorationImpl implements _UserAvatarDecoration {
   @override
   @pragma('vm:prefer-inline')
   _$$UserAvatarDecorationImplCopyWith<_$UserAvatarDecorationImpl>
-      get copyWith =>
-          __$$UserAvatarDecorationImplCopyWithImpl<_$UserAvatarDecorationImpl>(
-              this, _$identity);
+  get copyWith =>
+      __$$UserAvatarDecorationImplCopyWithImpl<_$UserAvatarDecorationImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UserAvatarDecorationImplToJson(
-      this,
-    );
+    return _$$UserAvatarDecorationImplToJson(this);
   }
 }
 
 abstract class _UserAvatarDecoration implements UserAvatarDecoration {
-  const factory _UserAvatarDecoration(
-      {required final String id,
-      final double? angle,
-      final bool flipH,
-      required final String url,
-      final double offsetX,
-      final double offsetY}) = _$UserAvatarDecorationImpl;
+  const factory _UserAvatarDecoration({
+    required final String id,
+    final double? angle,
+    final bool flipH,
+    required final String url,
+    final double offsetX,
+    final double offsetY,
+  }) = _$UserAvatarDecorationImpl;
 
   factory _UserAvatarDecoration.fromJson(Map<String, dynamic> json) =
       _$UserAvatarDecorationImpl.fromJson;
@@ -6491,7 +7180,7 @@ abstract class _UserAvatarDecoration implements UserAvatarDecoration {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UserAvatarDecorationImplCopyWith<_$UserAvatarDecorationImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 UserInstanceInfo _$UserInstanceInfoFromJson(Map<String, dynamic> json) {
@@ -6522,16 +7211,18 @@ mixin _$UserInstanceInfo {
 /// @nodoc
 abstract class $UserInstanceInfoCopyWith<$Res> {
   factory $UserInstanceInfoCopyWith(
-          UserInstanceInfo value, $Res Function(UserInstanceInfo) then) =
-      _$UserInstanceInfoCopyWithImpl<$Res, UserInstanceInfo>;
+    UserInstanceInfo value,
+    $Res Function(UserInstanceInfo) then,
+  ) = _$UserInstanceInfoCopyWithImpl<$Res, UserInstanceInfo>;
   @useResult
-  $Res call(
-      {String? name,
-      String? softwareVersion,
-      String? softwareName,
-      @NullableUriConverter() Uri? iconUrl,
-      @NullableUriConverter() Uri? faviconUrl,
-      String? themeColor});
+  $Res call({
+    String? name,
+    String? softwareVersion,
+    String? softwareName,
+    @NullableUriConverter() Uri? iconUrl,
+    @NullableUriConverter() Uri? faviconUrl,
+    String? themeColor,
+  });
 }
 
 /// @nodoc
@@ -6556,59 +7247,71 @@ class _$UserInstanceInfoCopyWithImpl<$Res, $Val extends UserInstanceInfo>
     Object? faviconUrl = freezed,
     Object? themeColor = freezed,
   }) {
-    return _then(_value.copyWith(
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      softwareVersion: freezed == softwareVersion
-          ? _value.softwareVersion
-          : softwareVersion // ignore: cast_nullable_to_non_nullable
-              as String?,
-      softwareName: freezed == softwareName
-          ? _value.softwareName
-          : softwareName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      iconUrl: freezed == iconUrl
-          ? _value.iconUrl
-          : iconUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      faviconUrl: freezed == faviconUrl
-          ? _value.faviconUrl
-          : faviconUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      themeColor: freezed == themeColor
-          ? _value.themeColor
-          : themeColor // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            name:
+                freezed == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            softwareVersion:
+                freezed == softwareVersion
+                    ? _value.softwareVersion
+                    : softwareVersion // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            softwareName:
+                freezed == softwareName
+                    ? _value.softwareName
+                    : softwareName // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            iconUrl:
+                freezed == iconUrl
+                    ? _value.iconUrl
+                    : iconUrl // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            faviconUrl:
+                freezed == faviconUrl
+                    ? _value.faviconUrl
+                    : faviconUrl // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            themeColor:
+                freezed == themeColor
+                    ? _value.themeColor
+                    : themeColor // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$UserInstanceInfoImplCopyWith<$Res>
     implements $UserInstanceInfoCopyWith<$Res> {
-  factory _$$UserInstanceInfoImplCopyWith(_$UserInstanceInfoImpl value,
-          $Res Function(_$UserInstanceInfoImpl) then) =
-      __$$UserInstanceInfoImplCopyWithImpl<$Res>;
+  factory _$$UserInstanceInfoImplCopyWith(
+    _$UserInstanceInfoImpl value,
+    $Res Function(_$UserInstanceInfoImpl) then,
+  ) = __$$UserInstanceInfoImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String? name,
-      String? softwareVersion,
-      String? softwareName,
-      @NullableUriConverter() Uri? iconUrl,
-      @NullableUriConverter() Uri? faviconUrl,
-      String? themeColor});
+  $Res call({
+    String? name,
+    String? softwareVersion,
+    String? softwareName,
+    @NullableUriConverter() Uri? iconUrl,
+    @NullableUriConverter() Uri? faviconUrl,
+    String? themeColor,
+  });
 }
 
 /// @nodoc
 class __$$UserInstanceInfoImplCopyWithImpl<$Res>
     extends _$UserInstanceInfoCopyWithImpl<$Res, _$UserInstanceInfoImpl>
     implements _$$UserInstanceInfoImplCopyWith<$Res> {
-  __$$UserInstanceInfoImplCopyWithImpl(_$UserInstanceInfoImpl _value,
-      $Res Function(_$UserInstanceInfoImpl) _then)
-      : super(_value, _then);
+  __$$UserInstanceInfoImplCopyWithImpl(
+    _$UserInstanceInfoImpl _value,
+    $Res Function(_$UserInstanceInfoImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UserInstanceInfo
   /// with the given fields replaced by the non-null parameter values.
@@ -6622,45 +7325,54 @@ class __$$UserInstanceInfoImplCopyWithImpl<$Res>
     Object? faviconUrl = freezed,
     Object? themeColor = freezed,
   }) {
-    return _then(_$UserInstanceInfoImpl(
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      softwareVersion: freezed == softwareVersion
-          ? _value.softwareVersion
-          : softwareVersion // ignore: cast_nullable_to_non_nullable
-              as String?,
-      softwareName: freezed == softwareName
-          ? _value.softwareName
-          : softwareName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      iconUrl: freezed == iconUrl
-          ? _value.iconUrl
-          : iconUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      faviconUrl: freezed == faviconUrl
-          ? _value.faviconUrl
-          : faviconUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      themeColor: freezed == themeColor
-          ? _value.themeColor
-          : themeColor // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$UserInstanceInfoImpl(
+        name:
+            freezed == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        softwareVersion:
+            freezed == softwareVersion
+                ? _value.softwareVersion
+                : softwareVersion // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        softwareName:
+            freezed == softwareName
+                ? _value.softwareName
+                : softwareName // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        iconUrl:
+            freezed == iconUrl
+                ? _value.iconUrl
+                : iconUrl // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        faviconUrl:
+            freezed == faviconUrl
+                ? _value.faviconUrl
+                : faviconUrl // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        themeColor:
+            freezed == themeColor
+                ? _value.themeColor
+                : themeColor // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$UserInstanceInfoImpl implements _UserInstanceInfo {
-  const _$UserInstanceInfoImpl(
-      {this.name,
-      this.softwareVersion,
-      this.softwareName,
-      @NullableUriConverter() this.iconUrl,
-      @NullableUriConverter() this.faviconUrl,
-      this.themeColor});
+  const _$UserInstanceInfoImpl({
+    this.name,
+    this.softwareVersion,
+    this.softwareName,
+    @NullableUriConverter() this.iconUrl,
+    @NullableUriConverter() this.faviconUrl,
+    this.themeColor,
+  });
 
   factory _$UserInstanceInfoImpl.fromJson(Map<String, dynamic> json) =>
       _$$UserInstanceInfoImplFromJson(json);
@@ -6704,8 +7416,15 @@ class _$UserInstanceInfoImpl implements _UserInstanceInfo {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, name, softwareVersion,
-      softwareName, iconUrl, faviconUrl, themeColor);
+  int get hashCode => Object.hash(
+    runtimeType,
+    name,
+    softwareVersion,
+    softwareName,
+    iconUrl,
+    faviconUrl,
+    themeColor,
+  );
 
   /// Create a copy of UserInstanceInfo
   /// with the given fields replaced by the non-null parameter values.
@@ -6714,24 +7433,25 @@ class _$UserInstanceInfoImpl implements _UserInstanceInfo {
   @pragma('vm:prefer-inline')
   _$$UserInstanceInfoImplCopyWith<_$UserInstanceInfoImpl> get copyWith =>
       __$$UserInstanceInfoImplCopyWithImpl<_$UserInstanceInfoImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UserInstanceInfoImplToJson(
-      this,
-    );
+    return _$$UserInstanceInfoImplToJson(this);
   }
 }
 
 abstract class _UserInstanceInfo implements UserInstanceInfo {
-  const factory _UserInstanceInfo(
-      {final String? name,
-      final String? softwareVersion,
-      final String? softwareName,
-      @NullableUriConverter() final Uri? iconUrl,
-      @NullableUriConverter() final Uri? faviconUrl,
-      final String? themeColor}) = _$UserInstanceInfoImpl;
+  const factory _UserInstanceInfo({
+    final String? name,
+    final String? softwareVersion,
+    final String? softwareName,
+    @NullableUriConverter() final Uri? iconUrl,
+    @NullableUriConverter() final Uri? faviconUrl,
+    final String? themeColor,
+  }) = _$UserInstanceInfoImpl;
 
   factory _UserInstanceInfo.fromJson(Map<String, dynamic> json) =
       _$UserInstanceInfoImpl.fromJson;
@@ -6782,8 +7502,9 @@ mixin _$UserBadgeRole {
 /// @nodoc
 abstract class $UserBadgeRoleCopyWith<$Res> {
   factory $UserBadgeRoleCopyWith(
-          UserBadgeRole value, $Res Function(UserBadgeRole) then) =
-      _$UserBadgeRoleCopyWithImpl<$Res, UserBadgeRole>;
+    UserBadgeRole value,
+    $Res Function(UserBadgeRole) then,
+  ) = _$UserBadgeRoleCopyWithImpl<$Res, UserBadgeRole>;
   @useResult
   $Res call({String name, @NullableUriConverter() Uri? iconUrl});
 }
@@ -6802,20 +7523,22 @@ class _$UserBadgeRoleCopyWithImpl<$Res, $Val extends UserBadgeRole>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? name = null,
-    Object? iconUrl = freezed,
-  }) {
-    return _then(_value.copyWith(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      iconUrl: freezed == iconUrl
-          ? _value.iconUrl
-          : iconUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-    ) as $Val);
+  $Res call({Object? name = null, Object? iconUrl = freezed}) {
+    return _then(
+      _value.copyWith(
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            iconUrl:
+                freezed == iconUrl
+                    ? _value.iconUrl
+                    : iconUrl // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -6823,8 +7546,9 @@ class _$UserBadgeRoleCopyWithImpl<$Res, $Val extends UserBadgeRole>
 abstract class _$$UserBadgeRoleImplCopyWith<$Res>
     implements $UserBadgeRoleCopyWith<$Res> {
   factory _$$UserBadgeRoleImplCopyWith(
-          _$UserBadgeRoleImpl value, $Res Function(_$UserBadgeRoleImpl) then) =
-      __$$UserBadgeRoleImplCopyWithImpl<$Res>;
+    _$UserBadgeRoleImpl value,
+    $Res Function(_$UserBadgeRoleImpl) then,
+  ) = __$$UserBadgeRoleImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String name, @NullableUriConverter() Uri? iconUrl});
@@ -6835,35 +7559,39 @@ class __$$UserBadgeRoleImplCopyWithImpl<$Res>
     extends _$UserBadgeRoleCopyWithImpl<$Res, _$UserBadgeRoleImpl>
     implements _$$UserBadgeRoleImplCopyWith<$Res> {
   __$$UserBadgeRoleImplCopyWithImpl(
-      _$UserBadgeRoleImpl _value, $Res Function(_$UserBadgeRoleImpl) _then)
-      : super(_value, _then);
+    _$UserBadgeRoleImpl _value,
+    $Res Function(_$UserBadgeRoleImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UserBadgeRole
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? name = null,
-    Object? iconUrl = freezed,
-  }) {
-    return _then(_$UserBadgeRoleImpl(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      iconUrl: freezed == iconUrl
-          ? _value.iconUrl
-          : iconUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-    ));
+  $Res call({Object? name = null, Object? iconUrl = freezed}) {
+    return _then(
+      _$UserBadgeRoleImpl(
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        iconUrl:
+            freezed == iconUrl
+                ? _value.iconUrl
+                : iconUrl // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$UserBadgeRoleImpl implements _UserBadgeRole {
-  const _$UserBadgeRoleImpl(
-      {required this.name, @NullableUriConverter() required this.iconUrl});
+  const _$UserBadgeRoleImpl({
+    required this.name,
+    @NullableUriConverter() required this.iconUrl,
+  });
 
   factory _$UserBadgeRoleImpl.fromJson(Map<String, dynamic> json) =>
       _$$UserBadgeRoleImplFromJson(json);
@@ -6902,17 +7630,15 @@ class _$UserBadgeRoleImpl implements _UserBadgeRole {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UserBadgeRoleImplToJson(
-      this,
-    );
+    return _$$UserBadgeRoleImplToJson(this);
   }
 }
 
 abstract class _UserBadgeRole implements UserBadgeRole {
-  const factory _UserBadgeRole(
-          {required final String name,
-          @NullableUriConverter() required final Uri? iconUrl}) =
-      _$UserBadgeRoleImpl;
+  const factory _UserBadgeRole({
+    required final String name,
+    @NullableUriConverter() required final Uri? iconUrl,
+  }) = _$UserBadgeRoleImpl;
 
   factory _UserBadgeRole.fromJson(Map<String, dynamic> json) =
       _$UserBadgeRoleImpl.fromJson;
@@ -6961,14 +7687,15 @@ abstract class $UserRoleCopyWith<$Res> {
   factory $UserRoleCopyWith(UserRole value, $Res Function(UserRole) then) =
       _$UserRoleCopyWithImpl<$Res, UserRole>;
   @useResult
-  $Res call(
-      {String id,
-      String name,
-      String? color,
-      @NullableUriConverter() Uri? iconUrl,
-      String? description,
-      bool isModerator,
-      bool isAdministrator});
+  $Res call({
+    String id,
+    String name,
+    String? color,
+    @NullableUriConverter() Uri? iconUrl,
+    String? description,
+    bool isModerator,
+    bool isAdministrator,
+  });
 }
 
 /// @nodoc
@@ -6994,36 +7721,46 @@ class _$UserRoleCopyWithImpl<$Res, $Val extends UserRole>
     Object? isModerator = null,
     Object? isAdministrator = null,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      color: freezed == color
-          ? _value.color
-          : color // ignore: cast_nullable_to_non_nullable
-              as String?,
-      iconUrl: freezed == iconUrl
-          ? _value.iconUrl
-          : iconUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isModerator: null == isModerator
-          ? _value.isModerator
-          : isModerator // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isAdministrator: null == isAdministrator
-          ? _value.isAdministrator
-          : isAdministrator // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            color:
+                freezed == color
+                    ? _value.color
+                    : color // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            iconUrl:
+                freezed == iconUrl
+                    ? _value.iconUrl
+                    : iconUrl // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            description:
+                freezed == description
+                    ? _value.description
+                    : description // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            isModerator:
+                null == isModerator
+                    ? _value.isModerator
+                    : isModerator // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            isAdministrator:
+                null == isAdministrator
+                    ? _value.isAdministrator
+                    : isAdministrator // ignore: cast_nullable_to_non_nullable
+                        as bool,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -7031,18 +7768,20 @@ class _$UserRoleCopyWithImpl<$Res, $Val extends UserRole>
 abstract class _$$UserRoleImplCopyWith<$Res>
     implements $UserRoleCopyWith<$Res> {
   factory _$$UserRoleImplCopyWith(
-          _$UserRoleImpl value, $Res Function(_$UserRoleImpl) then) =
-      __$$UserRoleImplCopyWithImpl<$Res>;
+    _$UserRoleImpl value,
+    $Res Function(_$UserRoleImpl) then,
+  ) = __$$UserRoleImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      String name,
-      String? color,
-      @NullableUriConverter() Uri? iconUrl,
-      String? description,
-      bool isModerator,
-      bool isAdministrator});
+  $Res call({
+    String id,
+    String name,
+    String? color,
+    @NullableUriConverter() Uri? iconUrl,
+    String? description,
+    bool isModerator,
+    bool isAdministrator,
+  });
 }
 
 /// @nodoc
@@ -7050,8 +7789,9 @@ class __$$UserRoleImplCopyWithImpl<$Res>
     extends _$UserRoleCopyWithImpl<$Res, _$UserRoleImpl>
     implements _$$UserRoleImplCopyWith<$Res> {
   __$$UserRoleImplCopyWithImpl(
-      _$UserRoleImpl _value, $Res Function(_$UserRoleImpl) _then)
-      : super(_value, _then);
+    _$UserRoleImpl _value,
+    $Res Function(_$UserRoleImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UserRole
   /// with the given fields replaced by the non-null parameter values.
@@ -7066,50 +7806,60 @@ class __$$UserRoleImplCopyWithImpl<$Res>
     Object? isModerator = null,
     Object? isAdministrator = null,
   }) {
-    return _then(_$UserRoleImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      color: freezed == color
-          ? _value.color
-          : color // ignore: cast_nullable_to_non_nullable
-              as String?,
-      iconUrl: freezed == iconUrl
-          ? _value.iconUrl
-          : iconUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isModerator: null == isModerator
-          ? _value.isModerator
-          : isModerator // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isAdministrator: null == isAdministrator
-          ? _value.isAdministrator
-          : isAdministrator // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ));
+    return _then(
+      _$UserRoleImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        color:
+            freezed == color
+                ? _value.color
+                : color // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        iconUrl:
+            freezed == iconUrl
+                ? _value.iconUrl
+                : iconUrl // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        description:
+            freezed == description
+                ? _value.description
+                : description // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        isModerator:
+            null == isModerator
+                ? _value.isModerator
+                : isModerator // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        isAdministrator:
+            null == isAdministrator
+                ? _value.isAdministrator
+                : isAdministrator // ignore: cast_nullable_to_non_nullable
+                    as bool,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$UserRoleImpl implements _UserRole {
-  const _$UserRoleImpl(
-      {required this.id,
-      required this.name,
-      this.color,
-      @NullableUriConverter() this.iconUrl,
-      this.description,
-      required this.isModerator,
-      required this.isAdministrator});
+  const _$UserRoleImpl({
+    required this.id,
+    required this.name,
+    this.color,
+    @NullableUriConverter() this.iconUrl,
+    this.description,
+    required this.isModerator,
+    required this.isAdministrator,
+  });
 
   factory _$UserRoleImpl.fromJson(Map<String, dynamic> json) =>
       _$$UserRoleImplFromJson(json);
@@ -7154,8 +7904,16 @@ class _$UserRoleImpl implements _UserRole {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, name, color, iconUrl,
-      description, isModerator, isAdministrator);
+  int get hashCode => Object.hash(
+    runtimeType,
+    id,
+    name,
+    color,
+    iconUrl,
+    description,
+    isModerator,
+    isAdministrator,
+  );
 
   /// Create a copy of UserRole
   /// with the given fields replaced by the non-null parameter values.
@@ -7167,21 +7925,20 @@ class _$UserRoleImpl implements _UserRole {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UserRoleImplToJson(
-      this,
-    );
+    return _$$UserRoleImplToJson(this);
   }
 }
 
 abstract class _UserRole implements UserRole {
-  const factory _UserRole(
-      {required final String id,
-      required final String name,
-      final String? color,
-      @NullableUriConverter() final Uri? iconUrl,
-      final String? description,
-      required final bool isModerator,
-      required final bool isAdministrator}) = _$UserRoleImpl;
+  const factory _UserRole({
+    required final String id,
+    required final String name,
+    final String? color,
+    @NullableUriConverter() final Uri? iconUrl,
+    final String? description,
+    required final bool isModerator,
+    required final bool isAdministrator,
+  }) = _$UserRoleImpl;
 
   factory _UserRole.fromJson(Map<String, dynamic> json) =
       _$UserRoleImpl.fromJson;
@@ -7233,8 +7990,9 @@ mixin _$UserAchievement {
 /// @nodoc
 abstract class $UserAchievementCopyWith<$Res> {
   factory $UserAchievementCopyWith(
-          UserAchievement value, $Res Function(UserAchievement) then) =
-      _$UserAchievementCopyWithImpl<$Res, UserAchievement>;
+    UserAchievement value,
+    $Res Function(UserAchievement) then,
+  ) = _$UserAchievementCopyWithImpl<$Res, UserAchievement>;
   @useResult
   $Res call({String name, @EpocTimeDateTimeConverter() DateTime unlockedAt});
 }
@@ -7253,29 +8011,32 @@ class _$UserAchievementCopyWithImpl<$Res, $Val extends UserAchievement>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? name = null,
-    Object? unlockedAt = null,
-  }) {
-    return _then(_value.copyWith(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      unlockedAt: null == unlockedAt
-          ? _value.unlockedAt
-          : unlockedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-    ) as $Val);
+  $Res call({Object? name = null, Object? unlockedAt = null}) {
+    return _then(
+      _value.copyWith(
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            unlockedAt:
+                null == unlockedAt
+                    ? _value.unlockedAt
+                    : unlockedAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$UserAchievementImplCopyWith<$Res>
     implements $UserAchievementCopyWith<$Res> {
-  factory _$$UserAchievementImplCopyWith(_$UserAchievementImpl value,
-          $Res Function(_$UserAchievementImpl) then) =
-      __$$UserAchievementImplCopyWithImpl<$Res>;
+  factory _$$UserAchievementImplCopyWith(
+    _$UserAchievementImpl value,
+    $Res Function(_$UserAchievementImpl) then,
+  ) = __$$UserAchievementImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String name, @EpocTimeDateTimeConverter() DateTime unlockedAt});
@@ -7286,36 +8047,39 @@ class __$$UserAchievementImplCopyWithImpl<$Res>
     extends _$UserAchievementCopyWithImpl<$Res, _$UserAchievementImpl>
     implements _$$UserAchievementImplCopyWith<$Res> {
   __$$UserAchievementImplCopyWithImpl(
-      _$UserAchievementImpl _value, $Res Function(_$UserAchievementImpl) _then)
-      : super(_value, _then);
+    _$UserAchievementImpl _value,
+    $Res Function(_$UserAchievementImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UserAchievement
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? name = null,
-    Object? unlockedAt = null,
-  }) {
-    return _then(_$UserAchievementImpl(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      unlockedAt: null == unlockedAt
-          ? _value.unlockedAt
-          : unlockedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-    ));
+  $Res call({Object? name = null, Object? unlockedAt = null}) {
+    return _then(
+      _$UserAchievementImpl(
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        unlockedAt:
+            null == unlockedAt
+                ? _value.unlockedAt
+                : unlockedAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$UserAchievementImpl implements _UserAchievement {
-  const _$UserAchievementImpl(
-      {required this.name,
-      @EpocTimeDateTimeConverter() required this.unlockedAt});
+  const _$UserAchievementImpl({
+    required this.name,
+    @EpocTimeDateTimeConverter() required this.unlockedAt,
+  });
 
   factory _$UserAchievementImpl.fromJson(Map<String, dynamic> json) =>
       _$$UserAchievementImplFromJson(json);
@@ -7352,21 +8116,21 @@ class _$UserAchievementImpl implements _UserAchievement {
   @pragma('vm:prefer-inline')
   _$$UserAchievementImplCopyWith<_$UserAchievementImpl> get copyWith =>
       __$$UserAchievementImplCopyWithImpl<_$UserAchievementImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UserAchievementImplToJson(
-      this,
-    );
+    return _$$UserAchievementImplToJson(this);
   }
 }
 
 abstract class _UserAchievement implements UserAchievement {
-  const factory _UserAchievement(
-          {required final String name,
-          @EpocTimeDateTimeConverter() required final DateTime unlockedAt}) =
-      _$UserAchievementImpl;
+  const factory _UserAchievement({
+    required final String name,
+    @EpocTimeDateTimeConverter() required final DateTime unlockedAt,
+  }) = _$UserAchievementImpl;
 
   factory _UserAchievement.fromJson(Map<String, dynamic> json) =
       _$UserAchievementImpl.fromJson;
@@ -7435,38 +8199,40 @@ mixin _$UserPolicies {
 /// @nodoc
 abstract class $UserPoliciesCopyWith<$Res> {
   factory $UserPoliciesCopyWith(
-          UserPolicies value, $Res Function(UserPolicies) then) =
-      _$UserPoliciesCopyWithImpl<$Res, UserPolicies>;
+    UserPolicies value,
+    $Res Function(UserPolicies) then,
+  ) = _$UserPoliciesCopyWithImpl<$Res, UserPolicies>;
   @useResult
-  $Res call(
-      {bool? gtlAvailable,
-      bool? ltlAvailable,
-      bool? canPublicNote,
-      bool? canEditNote,
-      bool? canScheduleNote,
-      int? scheduleNoteLimit,
-      int? scheduleNoteMaxDays,
-      bool? canInvite,
-      bool? canManageCustomEmojis,
-      bool? canHideAds,
-      int? inviteLimit,
-      int? inviteLimitCycle,
-      bool? canSearchNotes,
-      bool? canUseTranslator,
-      int? driveCapacityMb,
-      int? pinLimit,
-      int? antennaLimit,
-      int? wordMuteLimit,
-      int? webhookLimit,
-      int? clipLimit,
-      int? noteEachClipsLimit,
-      int? userListLimit,
-      int? userEachUserListsLimit,
-      int? rateLimitFactor,
-      int? avatarDecorationLimit,
-      int? mutualLinkSectionLimit,
-      int? mutualLinkLimit,
-      int? scheduleNoteMax});
+  $Res call({
+    bool? gtlAvailable,
+    bool? ltlAvailable,
+    bool? canPublicNote,
+    bool? canEditNote,
+    bool? canScheduleNote,
+    int? scheduleNoteLimit,
+    int? scheduleNoteMaxDays,
+    bool? canInvite,
+    bool? canManageCustomEmojis,
+    bool? canHideAds,
+    int? inviteLimit,
+    int? inviteLimitCycle,
+    bool? canSearchNotes,
+    bool? canUseTranslator,
+    int? driveCapacityMb,
+    int? pinLimit,
+    int? antennaLimit,
+    int? wordMuteLimit,
+    int? webhookLimit,
+    int? clipLimit,
+    int? noteEachClipsLimit,
+    int? userListLimit,
+    int? userEachUserListsLimit,
+    int? rateLimitFactor,
+    int? avatarDecorationLimit,
+    int? mutualLinkSectionLimit,
+    int? mutualLinkLimit,
+    int? scheduleNoteMax,
+  });
 }
 
 /// @nodoc
@@ -7513,120 +8279,151 @@ class _$UserPoliciesCopyWithImpl<$Res, $Val extends UserPolicies>
     Object? mutualLinkLimit = freezed,
     Object? scheduleNoteMax = freezed,
   }) {
-    return _then(_value.copyWith(
-      gtlAvailable: freezed == gtlAvailable
-          ? _value.gtlAvailable
-          : gtlAvailable // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      ltlAvailable: freezed == ltlAvailable
-          ? _value.ltlAvailable
-          : ltlAvailable // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      canPublicNote: freezed == canPublicNote
-          ? _value.canPublicNote
-          : canPublicNote // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      canEditNote: freezed == canEditNote
-          ? _value.canEditNote
-          : canEditNote // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      canScheduleNote: freezed == canScheduleNote
-          ? _value.canScheduleNote
-          : canScheduleNote // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      scheduleNoteLimit: freezed == scheduleNoteLimit
-          ? _value.scheduleNoteLimit
-          : scheduleNoteLimit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      scheduleNoteMaxDays: freezed == scheduleNoteMaxDays
-          ? _value.scheduleNoteMaxDays
-          : scheduleNoteMaxDays // ignore: cast_nullable_to_non_nullable
-              as int?,
-      canInvite: freezed == canInvite
-          ? _value.canInvite
-          : canInvite // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      canManageCustomEmojis: freezed == canManageCustomEmojis
-          ? _value.canManageCustomEmojis
-          : canManageCustomEmojis // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      canHideAds: freezed == canHideAds
-          ? _value.canHideAds
-          : canHideAds // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      inviteLimit: freezed == inviteLimit
-          ? _value.inviteLimit
-          : inviteLimit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      inviteLimitCycle: freezed == inviteLimitCycle
-          ? _value.inviteLimitCycle
-          : inviteLimitCycle // ignore: cast_nullable_to_non_nullable
-              as int?,
-      canSearchNotes: freezed == canSearchNotes
-          ? _value.canSearchNotes
-          : canSearchNotes // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      canUseTranslator: freezed == canUseTranslator
-          ? _value.canUseTranslator
-          : canUseTranslator // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      driveCapacityMb: freezed == driveCapacityMb
-          ? _value.driveCapacityMb
-          : driveCapacityMb // ignore: cast_nullable_to_non_nullable
-              as int?,
-      pinLimit: freezed == pinLimit
-          ? _value.pinLimit
-          : pinLimit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      antennaLimit: freezed == antennaLimit
-          ? _value.antennaLimit
-          : antennaLimit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      wordMuteLimit: freezed == wordMuteLimit
-          ? _value.wordMuteLimit
-          : wordMuteLimit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      webhookLimit: freezed == webhookLimit
-          ? _value.webhookLimit
-          : webhookLimit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      clipLimit: freezed == clipLimit
-          ? _value.clipLimit
-          : clipLimit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      noteEachClipsLimit: freezed == noteEachClipsLimit
-          ? _value.noteEachClipsLimit
-          : noteEachClipsLimit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      userListLimit: freezed == userListLimit
-          ? _value.userListLimit
-          : userListLimit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      userEachUserListsLimit: freezed == userEachUserListsLimit
-          ? _value.userEachUserListsLimit
-          : userEachUserListsLimit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      rateLimitFactor: freezed == rateLimitFactor
-          ? _value.rateLimitFactor
-          : rateLimitFactor // ignore: cast_nullable_to_non_nullable
-              as int?,
-      avatarDecorationLimit: freezed == avatarDecorationLimit
-          ? _value.avatarDecorationLimit
-          : avatarDecorationLimit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      mutualLinkSectionLimit: freezed == mutualLinkSectionLimit
-          ? _value.mutualLinkSectionLimit
-          : mutualLinkSectionLimit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      mutualLinkLimit: freezed == mutualLinkLimit
-          ? _value.mutualLinkLimit
-          : mutualLinkLimit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      scheduleNoteMax: freezed == scheduleNoteMax
-          ? _value.scheduleNoteMax
-          : scheduleNoteMax // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            gtlAvailable:
+                freezed == gtlAvailable
+                    ? _value.gtlAvailable
+                    : gtlAvailable // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            ltlAvailable:
+                freezed == ltlAvailable
+                    ? _value.ltlAvailable
+                    : ltlAvailable // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            canPublicNote:
+                freezed == canPublicNote
+                    ? _value.canPublicNote
+                    : canPublicNote // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            canEditNote:
+                freezed == canEditNote
+                    ? _value.canEditNote
+                    : canEditNote // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            canScheduleNote:
+                freezed == canScheduleNote
+                    ? _value.canScheduleNote
+                    : canScheduleNote // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            scheduleNoteLimit:
+                freezed == scheduleNoteLimit
+                    ? _value.scheduleNoteLimit
+                    : scheduleNoteLimit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            scheduleNoteMaxDays:
+                freezed == scheduleNoteMaxDays
+                    ? _value.scheduleNoteMaxDays
+                    : scheduleNoteMaxDays // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            canInvite:
+                freezed == canInvite
+                    ? _value.canInvite
+                    : canInvite // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            canManageCustomEmojis:
+                freezed == canManageCustomEmojis
+                    ? _value.canManageCustomEmojis
+                    : canManageCustomEmojis // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            canHideAds:
+                freezed == canHideAds
+                    ? _value.canHideAds
+                    : canHideAds // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            inviteLimit:
+                freezed == inviteLimit
+                    ? _value.inviteLimit
+                    : inviteLimit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            inviteLimitCycle:
+                freezed == inviteLimitCycle
+                    ? _value.inviteLimitCycle
+                    : inviteLimitCycle // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            canSearchNotes:
+                freezed == canSearchNotes
+                    ? _value.canSearchNotes
+                    : canSearchNotes // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            canUseTranslator:
+                freezed == canUseTranslator
+                    ? _value.canUseTranslator
+                    : canUseTranslator // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            driveCapacityMb:
+                freezed == driveCapacityMb
+                    ? _value.driveCapacityMb
+                    : driveCapacityMb // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            pinLimit:
+                freezed == pinLimit
+                    ? _value.pinLimit
+                    : pinLimit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            antennaLimit:
+                freezed == antennaLimit
+                    ? _value.antennaLimit
+                    : antennaLimit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            wordMuteLimit:
+                freezed == wordMuteLimit
+                    ? _value.wordMuteLimit
+                    : wordMuteLimit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            webhookLimit:
+                freezed == webhookLimit
+                    ? _value.webhookLimit
+                    : webhookLimit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            clipLimit:
+                freezed == clipLimit
+                    ? _value.clipLimit
+                    : clipLimit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            noteEachClipsLimit:
+                freezed == noteEachClipsLimit
+                    ? _value.noteEachClipsLimit
+                    : noteEachClipsLimit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            userListLimit:
+                freezed == userListLimit
+                    ? _value.userListLimit
+                    : userListLimit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            userEachUserListsLimit:
+                freezed == userEachUserListsLimit
+                    ? _value.userEachUserListsLimit
+                    : userEachUserListsLimit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            rateLimitFactor:
+                freezed == rateLimitFactor
+                    ? _value.rateLimitFactor
+                    : rateLimitFactor // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            avatarDecorationLimit:
+                freezed == avatarDecorationLimit
+                    ? _value.avatarDecorationLimit
+                    : avatarDecorationLimit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            mutualLinkSectionLimit:
+                freezed == mutualLinkSectionLimit
+                    ? _value.mutualLinkSectionLimit
+                    : mutualLinkSectionLimit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            mutualLinkLimit:
+                freezed == mutualLinkLimit
+                    ? _value.mutualLinkLimit
+                    : mutualLinkLimit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            scheduleNoteMax:
+                freezed == scheduleNoteMax
+                    ? _value.scheduleNoteMax
+                    : scheduleNoteMax // ignore: cast_nullable_to_non_nullable
+                        as int?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -7634,39 +8431,41 @@ class _$UserPoliciesCopyWithImpl<$Res, $Val extends UserPolicies>
 abstract class _$$UserPoliciesImplCopyWith<$Res>
     implements $UserPoliciesCopyWith<$Res> {
   factory _$$UserPoliciesImplCopyWith(
-          _$UserPoliciesImpl value, $Res Function(_$UserPoliciesImpl) then) =
-      __$$UserPoliciesImplCopyWithImpl<$Res>;
+    _$UserPoliciesImpl value,
+    $Res Function(_$UserPoliciesImpl) then,
+  ) = __$$UserPoliciesImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {bool? gtlAvailable,
-      bool? ltlAvailable,
-      bool? canPublicNote,
-      bool? canEditNote,
-      bool? canScheduleNote,
-      int? scheduleNoteLimit,
-      int? scheduleNoteMaxDays,
-      bool? canInvite,
-      bool? canManageCustomEmojis,
-      bool? canHideAds,
-      int? inviteLimit,
-      int? inviteLimitCycle,
-      bool? canSearchNotes,
-      bool? canUseTranslator,
-      int? driveCapacityMb,
-      int? pinLimit,
-      int? antennaLimit,
-      int? wordMuteLimit,
-      int? webhookLimit,
-      int? clipLimit,
-      int? noteEachClipsLimit,
-      int? userListLimit,
-      int? userEachUserListsLimit,
-      int? rateLimitFactor,
-      int? avatarDecorationLimit,
-      int? mutualLinkSectionLimit,
-      int? mutualLinkLimit,
-      int? scheduleNoteMax});
+  $Res call({
+    bool? gtlAvailable,
+    bool? ltlAvailable,
+    bool? canPublicNote,
+    bool? canEditNote,
+    bool? canScheduleNote,
+    int? scheduleNoteLimit,
+    int? scheduleNoteMaxDays,
+    bool? canInvite,
+    bool? canManageCustomEmojis,
+    bool? canHideAds,
+    int? inviteLimit,
+    int? inviteLimitCycle,
+    bool? canSearchNotes,
+    bool? canUseTranslator,
+    int? driveCapacityMb,
+    int? pinLimit,
+    int? antennaLimit,
+    int? wordMuteLimit,
+    int? webhookLimit,
+    int? clipLimit,
+    int? noteEachClipsLimit,
+    int? userListLimit,
+    int? userEachUserListsLimit,
+    int? rateLimitFactor,
+    int? avatarDecorationLimit,
+    int? mutualLinkSectionLimit,
+    int? mutualLinkLimit,
+    int? scheduleNoteMax,
+  });
 }
 
 /// @nodoc
@@ -7674,8 +8473,9 @@ class __$$UserPoliciesImplCopyWithImpl<$Res>
     extends _$UserPoliciesCopyWithImpl<$Res, _$UserPoliciesImpl>
     implements _$$UserPoliciesImplCopyWith<$Res> {
   __$$UserPoliciesImplCopyWithImpl(
-      _$UserPoliciesImpl _value, $Res Function(_$UserPoliciesImpl) _then)
-      : super(_value, _then);
+    _$UserPoliciesImpl _value,
+    $Res Function(_$UserPoliciesImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UserPolicies
   /// with the given fields replaced by the non-null parameter values.
@@ -7711,155 +8511,186 @@ class __$$UserPoliciesImplCopyWithImpl<$Res>
     Object? mutualLinkLimit = freezed,
     Object? scheduleNoteMax = freezed,
   }) {
-    return _then(_$UserPoliciesImpl(
-      gtlAvailable: freezed == gtlAvailable
-          ? _value.gtlAvailable
-          : gtlAvailable // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      ltlAvailable: freezed == ltlAvailable
-          ? _value.ltlAvailable
-          : ltlAvailable // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      canPublicNote: freezed == canPublicNote
-          ? _value.canPublicNote
-          : canPublicNote // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      canEditNote: freezed == canEditNote
-          ? _value.canEditNote
-          : canEditNote // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      canScheduleNote: freezed == canScheduleNote
-          ? _value.canScheduleNote
-          : canScheduleNote // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      scheduleNoteLimit: freezed == scheduleNoteLimit
-          ? _value.scheduleNoteLimit
-          : scheduleNoteLimit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      scheduleNoteMaxDays: freezed == scheduleNoteMaxDays
-          ? _value.scheduleNoteMaxDays
-          : scheduleNoteMaxDays // ignore: cast_nullable_to_non_nullable
-              as int?,
-      canInvite: freezed == canInvite
-          ? _value.canInvite
-          : canInvite // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      canManageCustomEmojis: freezed == canManageCustomEmojis
-          ? _value.canManageCustomEmojis
-          : canManageCustomEmojis // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      canHideAds: freezed == canHideAds
-          ? _value.canHideAds
-          : canHideAds // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      inviteLimit: freezed == inviteLimit
-          ? _value.inviteLimit
-          : inviteLimit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      inviteLimitCycle: freezed == inviteLimitCycle
-          ? _value.inviteLimitCycle
-          : inviteLimitCycle // ignore: cast_nullable_to_non_nullable
-              as int?,
-      canSearchNotes: freezed == canSearchNotes
-          ? _value.canSearchNotes
-          : canSearchNotes // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      canUseTranslator: freezed == canUseTranslator
-          ? _value.canUseTranslator
-          : canUseTranslator // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      driveCapacityMb: freezed == driveCapacityMb
-          ? _value.driveCapacityMb
-          : driveCapacityMb // ignore: cast_nullable_to_non_nullable
-              as int?,
-      pinLimit: freezed == pinLimit
-          ? _value.pinLimit
-          : pinLimit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      antennaLimit: freezed == antennaLimit
-          ? _value.antennaLimit
-          : antennaLimit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      wordMuteLimit: freezed == wordMuteLimit
-          ? _value.wordMuteLimit
-          : wordMuteLimit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      webhookLimit: freezed == webhookLimit
-          ? _value.webhookLimit
-          : webhookLimit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      clipLimit: freezed == clipLimit
-          ? _value.clipLimit
-          : clipLimit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      noteEachClipsLimit: freezed == noteEachClipsLimit
-          ? _value.noteEachClipsLimit
-          : noteEachClipsLimit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      userListLimit: freezed == userListLimit
-          ? _value.userListLimit
-          : userListLimit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      userEachUserListsLimit: freezed == userEachUserListsLimit
-          ? _value.userEachUserListsLimit
-          : userEachUserListsLimit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      rateLimitFactor: freezed == rateLimitFactor
-          ? _value.rateLimitFactor
-          : rateLimitFactor // ignore: cast_nullable_to_non_nullable
-              as int?,
-      avatarDecorationLimit: freezed == avatarDecorationLimit
-          ? _value.avatarDecorationLimit
-          : avatarDecorationLimit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      mutualLinkSectionLimit: freezed == mutualLinkSectionLimit
-          ? _value.mutualLinkSectionLimit
-          : mutualLinkSectionLimit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      mutualLinkLimit: freezed == mutualLinkLimit
-          ? _value.mutualLinkLimit
-          : mutualLinkLimit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      scheduleNoteMax: freezed == scheduleNoteMax
-          ? _value.scheduleNoteMax
-          : scheduleNoteMax // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ));
+    return _then(
+      _$UserPoliciesImpl(
+        gtlAvailable:
+            freezed == gtlAvailable
+                ? _value.gtlAvailable
+                : gtlAvailable // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        ltlAvailable:
+            freezed == ltlAvailable
+                ? _value.ltlAvailable
+                : ltlAvailable // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        canPublicNote:
+            freezed == canPublicNote
+                ? _value.canPublicNote
+                : canPublicNote // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        canEditNote:
+            freezed == canEditNote
+                ? _value.canEditNote
+                : canEditNote // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        canScheduleNote:
+            freezed == canScheduleNote
+                ? _value.canScheduleNote
+                : canScheduleNote // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        scheduleNoteLimit:
+            freezed == scheduleNoteLimit
+                ? _value.scheduleNoteLimit
+                : scheduleNoteLimit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        scheduleNoteMaxDays:
+            freezed == scheduleNoteMaxDays
+                ? _value.scheduleNoteMaxDays
+                : scheduleNoteMaxDays // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        canInvite:
+            freezed == canInvite
+                ? _value.canInvite
+                : canInvite // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        canManageCustomEmojis:
+            freezed == canManageCustomEmojis
+                ? _value.canManageCustomEmojis
+                : canManageCustomEmojis // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        canHideAds:
+            freezed == canHideAds
+                ? _value.canHideAds
+                : canHideAds // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        inviteLimit:
+            freezed == inviteLimit
+                ? _value.inviteLimit
+                : inviteLimit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        inviteLimitCycle:
+            freezed == inviteLimitCycle
+                ? _value.inviteLimitCycle
+                : inviteLimitCycle // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        canSearchNotes:
+            freezed == canSearchNotes
+                ? _value.canSearchNotes
+                : canSearchNotes // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        canUseTranslator:
+            freezed == canUseTranslator
+                ? _value.canUseTranslator
+                : canUseTranslator // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        driveCapacityMb:
+            freezed == driveCapacityMb
+                ? _value.driveCapacityMb
+                : driveCapacityMb // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        pinLimit:
+            freezed == pinLimit
+                ? _value.pinLimit
+                : pinLimit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        antennaLimit:
+            freezed == antennaLimit
+                ? _value.antennaLimit
+                : antennaLimit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        wordMuteLimit:
+            freezed == wordMuteLimit
+                ? _value.wordMuteLimit
+                : wordMuteLimit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        webhookLimit:
+            freezed == webhookLimit
+                ? _value.webhookLimit
+                : webhookLimit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        clipLimit:
+            freezed == clipLimit
+                ? _value.clipLimit
+                : clipLimit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        noteEachClipsLimit:
+            freezed == noteEachClipsLimit
+                ? _value.noteEachClipsLimit
+                : noteEachClipsLimit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        userListLimit:
+            freezed == userListLimit
+                ? _value.userListLimit
+                : userListLimit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        userEachUserListsLimit:
+            freezed == userEachUserListsLimit
+                ? _value.userEachUserListsLimit
+                : userEachUserListsLimit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        rateLimitFactor:
+            freezed == rateLimitFactor
+                ? _value.rateLimitFactor
+                : rateLimitFactor // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        avatarDecorationLimit:
+            freezed == avatarDecorationLimit
+                ? _value.avatarDecorationLimit
+                : avatarDecorationLimit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        mutualLinkSectionLimit:
+            freezed == mutualLinkSectionLimit
+                ? _value.mutualLinkSectionLimit
+                : mutualLinkSectionLimit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        mutualLinkLimit:
+            freezed == mutualLinkLimit
+                ? _value.mutualLinkLimit
+                : mutualLinkLimit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        scheduleNoteMax:
+            freezed == scheduleNoteMax
+                ? _value.scheduleNoteMax
+                : scheduleNoteMax // ignore: cast_nullable_to_non_nullable
+                    as int?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$UserPoliciesImpl implements _UserPolicies {
-  const _$UserPoliciesImpl(
-      {this.gtlAvailable,
-      this.ltlAvailable,
-      this.canPublicNote,
-      this.canEditNote,
-      this.canScheduleNote,
-      this.scheduleNoteLimit,
-      this.scheduleNoteMaxDays,
-      this.canInvite,
-      this.canManageCustomEmojis,
-      this.canHideAds,
-      this.inviteLimit,
-      this.inviteLimitCycle,
-      this.canSearchNotes,
-      this.canUseTranslator,
-      this.driveCapacityMb,
-      this.pinLimit,
-      this.antennaLimit,
-      this.wordMuteLimit,
-      this.webhookLimit,
-      this.clipLimit,
-      this.noteEachClipsLimit,
-      this.userListLimit,
-      this.userEachUserListsLimit,
-      this.rateLimitFactor,
-      this.avatarDecorationLimit,
-      this.mutualLinkSectionLimit,
-      this.mutualLinkLimit,
-      this.scheduleNoteMax});
+  const _$UserPoliciesImpl({
+    this.gtlAvailable,
+    this.ltlAvailable,
+    this.canPublicNote,
+    this.canEditNote,
+    this.canScheduleNote,
+    this.scheduleNoteLimit,
+    this.scheduleNoteMaxDays,
+    this.canInvite,
+    this.canManageCustomEmojis,
+    this.canHideAds,
+    this.inviteLimit,
+    this.inviteLimitCycle,
+    this.canSearchNotes,
+    this.canUseTranslator,
+    this.driveCapacityMb,
+    this.pinLimit,
+    this.antennaLimit,
+    this.wordMuteLimit,
+    this.webhookLimit,
+    this.clipLimit,
+    this.noteEachClipsLimit,
+    this.userListLimit,
+    this.userEachUserListsLimit,
+    this.rateLimitFactor,
+    this.avatarDecorationLimit,
+    this.mutualLinkSectionLimit,
+    this.mutualLinkLimit,
+    this.scheduleNoteMax,
+  });
 
   factory _$UserPoliciesImpl.fromJson(Map<String, dynamic> json) =>
       _$$UserPoliciesImplFromJson(json);
@@ -7874,13 +8705,13 @@ class _$UserPoliciesImpl implements _UserPolicies {
   final bool? canEditNote;
   @override
   final bool? canScheduleNote;
-// MisskeyIO
+  // MisskeyIO
   @override
   final int? scheduleNoteLimit;
-// MisskeyIO
+  // MisskeyIO
   @override
   final int? scheduleNoteMaxDays;
-// MisskeyIO
+  // MisskeyIO
   @override
   final bool? canInvite;
   @override
@@ -7919,10 +8750,10 @@ class _$UserPoliciesImpl implements _UserPolicies {
   final int? avatarDecorationLimit;
   @override
   final int? mutualLinkSectionLimit;
-// MisskeyIO
+  // MisskeyIO
   @override
   final int? mutualLinkLimit;
-// MisskeyIO
+  // MisskeyIO
   @override
   final int? scheduleNoteMax;
 
@@ -7997,36 +8828,36 @@ class _$UserPoliciesImpl implements _UserPolicies {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
-        runtimeType,
-        gtlAvailable,
-        ltlAvailable,
-        canPublicNote,
-        canEditNote,
-        canScheduleNote,
-        scheduleNoteLimit,
-        scheduleNoteMaxDays,
-        canInvite,
-        canManageCustomEmojis,
-        canHideAds,
-        inviteLimit,
-        inviteLimitCycle,
-        canSearchNotes,
-        canUseTranslator,
-        driveCapacityMb,
-        pinLimit,
-        antennaLimit,
-        wordMuteLimit,
-        webhookLimit,
-        clipLimit,
-        noteEachClipsLimit,
-        userListLimit,
-        userEachUserListsLimit,
-        rateLimitFactor,
-        avatarDecorationLimit,
-        mutualLinkSectionLimit,
-        mutualLinkLimit,
-        scheduleNoteMax
-      ]);
+    runtimeType,
+    gtlAvailable,
+    ltlAvailable,
+    canPublicNote,
+    canEditNote,
+    canScheduleNote,
+    scheduleNoteLimit,
+    scheduleNoteMaxDays,
+    canInvite,
+    canManageCustomEmojis,
+    canHideAds,
+    inviteLimit,
+    inviteLimitCycle,
+    canSearchNotes,
+    canUseTranslator,
+    driveCapacityMb,
+    pinLimit,
+    antennaLimit,
+    wordMuteLimit,
+    webhookLimit,
+    clipLimit,
+    noteEachClipsLimit,
+    userListLimit,
+    userEachUserListsLimit,
+    rateLimitFactor,
+    avatarDecorationLimit,
+    mutualLinkSectionLimit,
+    mutualLinkLimit,
+    scheduleNoteMax,
+  ]);
 
   /// Create a copy of UserPolicies
   /// with the given fields replaced by the non-null parameter values.
@@ -8038,42 +8869,41 @@ class _$UserPoliciesImpl implements _UserPolicies {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UserPoliciesImplToJson(
-      this,
-    );
+    return _$$UserPoliciesImplToJson(this);
   }
 }
 
 abstract class _UserPolicies implements UserPolicies {
-  const factory _UserPolicies(
-      {final bool? gtlAvailable,
-      final bool? ltlAvailable,
-      final bool? canPublicNote,
-      final bool? canEditNote,
-      final bool? canScheduleNote,
-      final int? scheduleNoteLimit,
-      final int? scheduleNoteMaxDays,
-      final bool? canInvite,
-      final bool? canManageCustomEmojis,
-      final bool? canHideAds,
-      final int? inviteLimit,
-      final int? inviteLimitCycle,
-      final bool? canSearchNotes,
-      final bool? canUseTranslator,
-      final int? driveCapacityMb,
-      final int? pinLimit,
-      final int? antennaLimit,
-      final int? wordMuteLimit,
-      final int? webhookLimit,
-      final int? clipLimit,
-      final int? noteEachClipsLimit,
-      final int? userListLimit,
-      final int? userEachUserListsLimit,
-      final int? rateLimitFactor,
-      final int? avatarDecorationLimit,
-      final int? mutualLinkSectionLimit,
-      final int? mutualLinkLimit,
-      final int? scheduleNoteMax}) = _$UserPoliciesImpl;
+  const factory _UserPolicies({
+    final bool? gtlAvailable,
+    final bool? ltlAvailable,
+    final bool? canPublicNote,
+    final bool? canEditNote,
+    final bool? canScheduleNote,
+    final int? scheduleNoteLimit,
+    final int? scheduleNoteMaxDays,
+    final bool? canInvite,
+    final bool? canManageCustomEmojis,
+    final bool? canHideAds,
+    final int? inviteLimit,
+    final int? inviteLimitCycle,
+    final bool? canSearchNotes,
+    final bool? canUseTranslator,
+    final int? driveCapacityMb,
+    final int? pinLimit,
+    final int? antennaLimit,
+    final int? wordMuteLimit,
+    final int? webhookLimit,
+    final int? clipLimit,
+    final int? noteEachClipsLimit,
+    final int? userListLimit,
+    final int? userEachUserListsLimit,
+    final int? rateLimitFactor,
+    final int? avatarDecorationLimit,
+    final int? mutualLinkSectionLimit,
+    final int? mutualLinkLimit,
+    final int? scheduleNoteMax,
+  }) = _$UserPoliciesImpl;
 
   factory _UserPolicies.fromJson(Map<String, dynamic> json) =
       _$UserPoliciesImpl.fromJson;
@@ -8184,20 +9014,22 @@ class _$UserFieldCopyWithImpl<$Res, $Val extends UserField>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? name = null,
-    Object? value = null,
-  }) {
-    return _then(_value.copyWith(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      value: null == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? name = null, Object? value = null}) {
+    return _then(
+      _value.copyWith(
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            value:
+                null == value
+                    ? _value.value
+                    : value // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -8205,8 +9037,9 @@ class _$UserFieldCopyWithImpl<$Res, $Val extends UserField>
 abstract class _$$UserFieldImplCopyWith<$Res>
     implements $UserFieldCopyWith<$Res> {
   factory _$$UserFieldImplCopyWith(
-          _$UserFieldImpl value, $Res Function(_$UserFieldImpl) then) =
-      __$$UserFieldImplCopyWithImpl<$Res>;
+    _$UserFieldImpl value,
+    $Res Function(_$UserFieldImpl) then,
+  ) = __$$UserFieldImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String name, String value});
@@ -8217,27 +9050,29 @@ class __$$UserFieldImplCopyWithImpl<$Res>
     extends _$UserFieldCopyWithImpl<$Res, _$UserFieldImpl>
     implements _$$UserFieldImplCopyWith<$Res> {
   __$$UserFieldImplCopyWithImpl(
-      _$UserFieldImpl _value, $Res Function(_$UserFieldImpl) _then)
-      : super(_value, _then);
+    _$UserFieldImpl _value,
+    $Res Function(_$UserFieldImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UserField
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? name = null,
-    Object? value = null,
-  }) {
-    return _then(_$UserFieldImpl(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      value: null == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? name = null, Object? value = null}) {
+    return _then(
+      _$UserFieldImpl(
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        value:
+            null == value
+                ? _value.value
+                : value // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -8282,16 +9117,15 @@ class _$UserFieldImpl implements _UserField {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UserFieldImplToJson(
-      this,
-    );
+    return _$$UserFieldImplToJson(this);
   }
 }
 
 abstract class _UserField implements UserField {
-  const factory _UserField(
-      {required final String name,
-      required final String value}) = _$UserFieldImpl;
+  const factory _UserField({
+    required final String name,
+    required final String value,
+  }) = _$UserFieldImpl;
 
   factory _UserField.fromJson(Map<String, dynamic> json) =
       _$UserFieldImpl.fromJson;
@@ -8331,8 +9165,9 @@ mixin _$MutualLinkSection {
 /// @nodoc
 abstract class $MutualLinkSectionCopyWith<$Res> {
   factory $MutualLinkSectionCopyWith(
-          MutualLinkSection value, $Res Function(MutualLinkSection) then) =
-      _$MutualLinkSectionCopyWithImpl<$Res, MutualLinkSection>;
+    MutualLinkSection value,
+    $Res Function(MutualLinkSection) then,
+  ) = _$MutualLinkSectionCopyWithImpl<$Res, MutualLinkSection>;
   @useResult
   $Res call({String? name, List<MutualLink> mutualLinks});
 }
@@ -8351,29 +9186,32 @@ class _$MutualLinkSectionCopyWithImpl<$Res, $Val extends MutualLinkSection>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? name = freezed,
-    Object? mutualLinks = null,
-  }) {
-    return _then(_value.copyWith(
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      mutualLinks: null == mutualLinks
-          ? _value.mutualLinks
-          : mutualLinks // ignore: cast_nullable_to_non_nullable
-              as List<MutualLink>,
-    ) as $Val);
+  $Res call({Object? name = freezed, Object? mutualLinks = null}) {
+    return _then(
+      _value.copyWith(
+            name:
+                freezed == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            mutualLinks:
+                null == mutualLinks
+                    ? _value.mutualLinks
+                    : mutualLinks // ignore: cast_nullable_to_non_nullable
+                        as List<MutualLink>,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$MutualLinkSectionImplCopyWith<$Res>
     implements $MutualLinkSectionCopyWith<$Res> {
-  factory _$$MutualLinkSectionImplCopyWith(_$MutualLinkSectionImpl value,
-          $Res Function(_$MutualLinkSectionImpl) then) =
-      __$$MutualLinkSectionImplCopyWithImpl<$Res>;
+  factory _$$MutualLinkSectionImplCopyWith(
+    _$MutualLinkSectionImpl value,
+    $Res Function(_$MutualLinkSectionImpl) then,
+  ) = __$$MutualLinkSectionImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? name, List<MutualLink> mutualLinks});
@@ -8383,37 +9221,40 @@ abstract class _$$MutualLinkSectionImplCopyWith<$Res>
 class __$$MutualLinkSectionImplCopyWithImpl<$Res>
     extends _$MutualLinkSectionCopyWithImpl<$Res, _$MutualLinkSectionImpl>
     implements _$$MutualLinkSectionImplCopyWith<$Res> {
-  __$$MutualLinkSectionImplCopyWithImpl(_$MutualLinkSectionImpl _value,
-      $Res Function(_$MutualLinkSectionImpl) _then)
-      : super(_value, _then);
+  __$$MutualLinkSectionImplCopyWithImpl(
+    _$MutualLinkSectionImpl _value,
+    $Res Function(_$MutualLinkSectionImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of MutualLinkSection
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? name = freezed,
-    Object? mutualLinks = null,
-  }) {
-    return _then(_$MutualLinkSectionImpl(
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      mutualLinks: null == mutualLinks
-          ? _value._mutualLinks
-          : mutualLinks // ignore: cast_nullable_to_non_nullable
-              as List<MutualLink>,
-    ));
+  $Res call({Object? name = freezed, Object? mutualLinks = null}) {
+    return _then(
+      _$MutualLinkSectionImpl(
+        name:
+            freezed == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        mutualLinks:
+            null == mutualLinks
+                ? _value._mutualLinks
+                : mutualLinks // ignore: cast_nullable_to_non_nullable
+                    as List<MutualLink>,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$MutualLinkSectionImpl implements _MutualLinkSection {
-  const _$MutualLinkSectionImpl(
-      {this.name, required final List<MutualLink> mutualLinks})
-      : _mutualLinks = mutualLinks;
+  const _$MutualLinkSectionImpl({
+    this.name,
+    required final List<MutualLink> mutualLinks,
+  }) : _mutualLinks = mutualLinks;
 
   factory _$MutualLinkSectionImpl.fromJson(Map<String, dynamic> json) =>
       _$$MutualLinkSectionImplFromJson(json);
@@ -8439,14 +9280,19 @@ class _$MutualLinkSectionImpl implements _MutualLinkSection {
         (other.runtimeType == runtimeType &&
             other is _$MutualLinkSectionImpl &&
             (identical(other.name, name) || other.name == name) &&
-            const DeepCollectionEquality()
-                .equals(other._mutualLinks, _mutualLinks));
+            const DeepCollectionEquality().equals(
+              other._mutualLinks,
+              _mutualLinks,
+            ));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType, name, const DeepCollectionEquality().hash(_mutualLinks));
+    runtimeType,
+    name,
+    const DeepCollectionEquality().hash(_mutualLinks),
+  );
 
   /// Create a copy of MutualLinkSection
   /// with the given fields replaced by the non-null parameter values.
@@ -8455,20 +9301,21 @@ class _$MutualLinkSectionImpl implements _MutualLinkSection {
   @pragma('vm:prefer-inline')
   _$$MutualLinkSectionImplCopyWith<_$MutualLinkSectionImpl> get copyWith =>
       __$$MutualLinkSectionImplCopyWithImpl<_$MutualLinkSectionImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MutualLinkSectionImplToJson(
-      this,
-    );
+    return _$$MutualLinkSectionImplToJson(this);
   }
 }
 
 abstract class _MutualLinkSection implements MutualLinkSection {
-  const factory _MutualLinkSection(
-      {final String? name,
-      required final List<MutualLink> mutualLinks}) = _$MutualLinkSectionImpl;
+  const factory _MutualLinkSection({
+    final String? name,
+    required final List<MutualLink> mutualLinks,
+  }) = _$MutualLinkSectionImpl;
 
   factory _MutualLinkSection.fromJson(Map<String, dynamic> json) =
       _$MutualLinkSectionImpl.fromJson;
@@ -8511,15 +9358,17 @@ mixin _$MutualLink {
 /// @nodoc
 abstract class $MutualLinkCopyWith<$Res> {
   factory $MutualLinkCopyWith(
-          MutualLink value, $Res Function(MutualLink) then) =
-      _$MutualLinkCopyWithImpl<$Res, MutualLink>;
+    MutualLink value,
+    $Res Function(MutualLink) then,
+  ) = _$MutualLinkCopyWithImpl<$Res, MutualLink>;
   @useResult
-  $Res call(
-      {String id,
-      String url,
-      String fileId,
-      String? description,
-      String? imgSrc});
+  $Res call({
+    String id,
+    String url,
+    String fileId,
+    String? description,
+    String? imgSrc,
+  });
 }
 
 /// @nodoc
@@ -8543,28 +9392,36 @@ class _$MutualLinkCopyWithImpl<$Res, $Val extends MutualLink>
     Object? description = freezed,
     Object? imgSrc = freezed,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      fileId: null == fileId
-          ? _value.fileId
-          : fileId // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      imgSrc: freezed == imgSrc
-          ? _value.imgSrc
-          : imgSrc // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            url:
+                null == url
+                    ? _value.url
+                    : url // ignore: cast_nullable_to_non_nullable
+                        as String,
+            fileId:
+                null == fileId
+                    ? _value.fileId
+                    : fileId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            description:
+                freezed == description
+                    ? _value.description
+                    : description // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            imgSrc:
+                freezed == imgSrc
+                    ? _value.imgSrc
+                    : imgSrc // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -8572,16 +9429,18 @@ class _$MutualLinkCopyWithImpl<$Res, $Val extends MutualLink>
 abstract class _$$MutualLinkImplCopyWith<$Res>
     implements $MutualLinkCopyWith<$Res> {
   factory _$$MutualLinkImplCopyWith(
-          _$MutualLinkImpl value, $Res Function(_$MutualLinkImpl) then) =
-      __$$MutualLinkImplCopyWithImpl<$Res>;
+    _$MutualLinkImpl value,
+    $Res Function(_$MutualLinkImpl) then,
+  ) = __$$MutualLinkImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      String url,
-      String fileId,
-      String? description,
-      String? imgSrc});
+  $Res call({
+    String id,
+    String url,
+    String fileId,
+    String? description,
+    String? imgSrc,
+  });
 }
 
 /// @nodoc
@@ -8589,8 +9448,9 @@ class __$$MutualLinkImplCopyWithImpl<$Res>
     extends _$MutualLinkCopyWithImpl<$Res, _$MutualLinkImpl>
     implements _$$MutualLinkImplCopyWith<$Res> {
   __$$MutualLinkImplCopyWithImpl(
-      _$MutualLinkImpl _value, $Res Function(_$MutualLinkImpl) _then)
-      : super(_value, _then);
+    _$MutualLinkImpl _value,
+    $Res Function(_$MutualLinkImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of MutualLink
   /// with the given fields replaced by the non-null parameter values.
@@ -8603,40 +9463,48 @@ class __$$MutualLinkImplCopyWithImpl<$Res>
     Object? description = freezed,
     Object? imgSrc = freezed,
   }) {
-    return _then(_$MutualLinkImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      fileId: null == fileId
-          ? _value.fileId
-          : fileId // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      imgSrc: freezed == imgSrc
-          ? _value.imgSrc
-          : imgSrc // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$MutualLinkImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        url:
+            null == url
+                ? _value.url
+                : url // ignore: cast_nullable_to_non_nullable
+                    as String,
+        fileId:
+            null == fileId
+                ? _value.fileId
+                : fileId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        description:
+            freezed == description
+                ? _value.description
+                : description // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        imgSrc:
+            freezed == imgSrc
+                ? _value.imgSrc
+                : imgSrc // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$MutualLinkImpl implements _MutualLink {
-  const _$MutualLinkImpl(
-      {required this.id,
-      required this.url,
-      required this.fileId,
-      this.description,
-      this.imgSrc});
+  const _$MutualLinkImpl({
+    required this.id,
+    required this.url,
+    required this.fileId,
+    this.description,
+    this.imgSrc,
+  });
 
   factory _$MutualLinkImpl.fromJson(Map<String, dynamic> json) =>
       _$$MutualLinkImplFromJson(json);
@@ -8685,19 +9553,18 @@ class _$MutualLinkImpl implements _MutualLink {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MutualLinkImplToJson(
-      this,
-    );
+    return _$$MutualLinkImplToJson(this);
   }
 }
 
 abstract class _MutualLink implements MutualLink {
-  const factory _MutualLink(
-      {required final String id,
-      required final String url,
-      required final String fileId,
-      final String? description,
-      final String? imgSrc}) = _$MutualLinkImpl;
+  const factory _MutualLink({
+    required final String id,
+    required final String url,
+    required final String fileId,
+    final String? description,
+    final String? imgSrc,
+  }) = _$MutualLinkImpl;
 
   factory _MutualLink.fromJson(Map<String, dynamic> json) =
       _$MutualLinkImpl.fromJson;
@@ -8762,20 +9629,22 @@ class _$MuteWordCopyWithImpl<$Res, $Val extends MuteWord>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? regExp = freezed,
-    Object? content = freezed,
-  }) {
-    return _then(_value.copyWith(
-      regExp: freezed == regExp
-          ? _value.regExp
-          : regExp // ignore: cast_nullable_to_non_nullable
-              as String?,
-      content: freezed == content
-          ? _value.content
-          : content // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-    ) as $Val);
+  $Res call({Object? regExp = freezed, Object? content = freezed}) {
+    return _then(
+      _value.copyWith(
+            regExp:
+                freezed == regExp
+                    ? _value.regExp
+                    : regExp // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            content:
+                freezed == content
+                    ? _value.content
+                    : content // ignore: cast_nullable_to_non_nullable
+                        as List<String>?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -8783,8 +9652,9 @@ class _$MuteWordCopyWithImpl<$Res, $Val extends MuteWord>
 abstract class _$$MuteWordImplCopyWith<$Res>
     implements $MuteWordCopyWith<$Res> {
   factory _$$MuteWordImplCopyWith(
-          _$MuteWordImpl value, $Res Function(_$MuteWordImpl) then) =
-      __$$MuteWordImplCopyWithImpl<$Res>;
+    _$MuteWordImpl value,
+    $Res Function(_$MuteWordImpl) then,
+  ) = __$$MuteWordImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? regExp, List<String>? content});
@@ -8795,27 +9665,29 @@ class __$$MuteWordImplCopyWithImpl<$Res>
     extends _$MuteWordCopyWithImpl<$Res, _$MuteWordImpl>
     implements _$$MuteWordImplCopyWith<$Res> {
   __$$MuteWordImplCopyWithImpl(
-      _$MuteWordImpl _value, $Res Function(_$MuteWordImpl) _then)
-      : super(_value, _then);
+    _$MuteWordImpl _value,
+    $Res Function(_$MuteWordImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of MuteWord
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? regExp = freezed,
-    Object? content = freezed,
-  }) {
-    return _then(_$MuteWordImpl(
-      regExp: freezed == regExp
-          ? _value.regExp
-          : regExp // ignore: cast_nullable_to_non_nullable
-              as String?,
-      content: freezed == content
-          ? _value._content
-          : content // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-    ));
+  $Res call({Object? regExp = freezed, Object? content = freezed}) {
+    return _then(
+      _$MuteWordImpl(
+        regExp:
+            freezed == regExp
+                ? _value.regExp
+                : regExp // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        content:
+            freezed == content
+                ? _value._content
+                : content // ignore: cast_nullable_to_non_nullable
+                    as List<String>?,
+      ),
+    );
   }
 }
 
@@ -8823,7 +9695,7 @@ class __$$MuteWordImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$MuteWordImpl implements _MuteWord {
   const _$MuteWordImpl({this.regExp, final List<String>? content})
-      : _content = content;
+    : _content = content;
 
   factory _$MuteWordImpl.fromJson(Map<String, dynamic> json) =>
       _$$MuteWordImplFromJson(json);
@@ -8857,7 +9729,10 @@ class _$MuteWordImpl implements _MuteWord {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType, regExp, const DeepCollectionEquality().hash(_content));
+    runtimeType,
+    regExp,
+    const DeepCollectionEquality().hash(_content),
+  );
 
   /// Create a copy of MuteWord
   /// with the given fields replaced by the non-null parameter values.
@@ -8869,9 +9744,7 @@ class _$MuteWordImpl implements _MuteWord {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MuteWordImplToJson(
-      this,
-    );
+    return _$$MuteWordImplToJson(this);
   }
 }
 
@@ -8896,7 +9769,8 @@ abstract class _MuteWord implements MuteWord {
 }
 
 NotificationRecieveConfigs _$NotificationRecieveConfigsFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _NotificationRecieveConfigs.fromJson(json);
 }
 
@@ -8929,31 +9803,36 @@ mixin _$NotificationRecieveConfigs {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $NotificationRecieveConfigsCopyWith<NotificationRecieveConfigs>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $NotificationRecieveConfigsCopyWith<$Res> {
-  factory $NotificationRecieveConfigsCopyWith(NotificationRecieveConfigs value,
-          $Res Function(NotificationRecieveConfigs) then) =
-      _$NotificationRecieveConfigsCopyWithImpl<$Res,
-          NotificationRecieveConfigs>;
+  factory $NotificationRecieveConfigsCopyWith(
+    NotificationRecieveConfigs value,
+    $Res Function(NotificationRecieveConfigs) then,
+  ) =
+      _$NotificationRecieveConfigsCopyWithImpl<
+        $Res,
+        NotificationRecieveConfigs
+      >;
   @useResult
-  $Res call(
-      {NotificationRecieveConfig? note,
-      NotificationRecieveConfig? follow,
-      NotificationRecieveConfig? mention,
-      NotificationRecieveConfig? reply,
-      NotificationRecieveConfig? renote,
-      NotificationRecieveConfig? quote,
-      NotificationRecieveConfig? reaction,
-      NotificationRecieveConfig? pollEnded,
-      NotificationRecieveConfig? receiveFollowRequest,
-      NotificationRecieveConfig? followRequestAccepted,
-      NotificationRecieveConfig? roleAssigned,
-      NotificationRecieveConfig? achievementEarned,
-      NotificationRecieveConfig? app,
-      NotificationRecieveConfig? test});
+  $Res call({
+    NotificationRecieveConfig? note,
+    NotificationRecieveConfig? follow,
+    NotificationRecieveConfig? mention,
+    NotificationRecieveConfig? reply,
+    NotificationRecieveConfig? renote,
+    NotificationRecieveConfig? quote,
+    NotificationRecieveConfig? reaction,
+    NotificationRecieveConfig? pollEnded,
+    NotificationRecieveConfig? receiveFollowRequest,
+    NotificationRecieveConfig? followRequestAccepted,
+    NotificationRecieveConfig? roleAssigned,
+    NotificationRecieveConfig? achievementEarned,
+    NotificationRecieveConfig? app,
+    NotificationRecieveConfig? test,
+  });
 
   $NotificationRecieveConfigCopyWith<$Res>? get note;
   $NotificationRecieveConfigCopyWith<$Res>? get follow;
@@ -8972,8 +9851,10 @@ abstract class $NotificationRecieveConfigsCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$NotificationRecieveConfigsCopyWithImpl<$Res,
-        $Val extends NotificationRecieveConfigs>
+class _$NotificationRecieveConfigsCopyWithImpl<
+  $Res,
+  $Val extends NotificationRecieveConfigs
+>
     implements $NotificationRecieveConfigsCopyWith<$Res> {
   _$NotificationRecieveConfigsCopyWithImpl(this._value, this._then);
 
@@ -9002,64 +9883,81 @@ class _$NotificationRecieveConfigsCopyWithImpl<$Res,
     Object? app = freezed,
     Object? test = freezed,
   }) {
-    return _then(_value.copyWith(
-      note: freezed == note
-          ? _value.note
-          : note // ignore: cast_nullable_to_non_nullable
-              as NotificationRecieveConfig?,
-      follow: freezed == follow
-          ? _value.follow
-          : follow // ignore: cast_nullable_to_non_nullable
-              as NotificationRecieveConfig?,
-      mention: freezed == mention
-          ? _value.mention
-          : mention // ignore: cast_nullable_to_non_nullable
-              as NotificationRecieveConfig?,
-      reply: freezed == reply
-          ? _value.reply
-          : reply // ignore: cast_nullable_to_non_nullable
-              as NotificationRecieveConfig?,
-      renote: freezed == renote
-          ? _value.renote
-          : renote // ignore: cast_nullable_to_non_nullable
-              as NotificationRecieveConfig?,
-      quote: freezed == quote
-          ? _value.quote
-          : quote // ignore: cast_nullable_to_non_nullable
-              as NotificationRecieveConfig?,
-      reaction: freezed == reaction
-          ? _value.reaction
-          : reaction // ignore: cast_nullable_to_non_nullable
-              as NotificationRecieveConfig?,
-      pollEnded: freezed == pollEnded
-          ? _value.pollEnded
-          : pollEnded // ignore: cast_nullable_to_non_nullable
-              as NotificationRecieveConfig?,
-      receiveFollowRequest: freezed == receiveFollowRequest
-          ? _value.receiveFollowRequest
-          : receiveFollowRequest // ignore: cast_nullable_to_non_nullable
-              as NotificationRecieveConfig?,
-      followRequestAccepted: freezed == followRequestAccepted
-          ? _value.followRequestAccepted
-          : followRequestAccepted // ignore: cast_nullable_to_non_nullable
-              as NotificationRecieveConfig?,
-      roleAssigned: freezed == roleAssigned
-          ? _value.roleAssigned
-          : roleAssigned // ignore: cast_nullable_to_non_nullable
-              as NotificationRecieveConfig?,
-      achievementEarned: freezed == achievementEarned
-          ? _value.achievementEarned
-          : achievementEarned // ignore: cast_nullable_to_non_nullable
-              as NotificationRecieveConfig?,
-      app: freezed == app
-          ? _value.app
-          : app // ignore: cast_nullable_to_non_nullable
-              as NotificationRecieveConfig?,
-      test: freezed == test
-          ? _value.test
-          : test // ignore: cast_nullable_to_non_nullable
-              as NotificationRecieveConfig?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            note:
+                freezed == note
+                    ? _value.note
+                    : note // ignore: cast_nullable_to_non_nullable
+                        as NotificationRecieveConfig?,
+            follow:
+                freezed == follow
+                    ? _value.follow
+                    : follow // ignore: cast_nullable_to_non_nullable
+                        as NotificationRecieveConfig?,
+            mention:
+                freezed == mention
+                    ? _value.mention
+                    : mention // ignore: cast_nullable_to_non_nullable
+                        as NotificationRecieveConfig?,
+            reply:
+                freezed == reply
+                    ? _value.reply
+                    : reply // ignore: cast_nullable_to_non_nullable
+                        as NotificationRecieveConfig?,
+            renote:
+                freezed == renote
+                    ? _value.renote
+                    : renote // ignore: cast_nullable_to_non_nullable
+                        as NotificationRecieveConfig?,
+            quote:
+                freezed == quote
+                    ? _value.quote
+                    : quote // ignore: cast_nullable_to_non_nullable
+                        as NotificationRecieveConfig?,
+            reaction:
+                freezed == reaction
+                    ? _value.reaction
+                    : reaction // ignore: cast_nullable_to_non_nullable
+                        as NotificationRecieveConfig?,
+            pollEnded:
+                freezed == pollEnded
+                    ? _value.pollEnded
+                    : pollEnded // ignore: cast_nullable_to_non_nullable
+                        as NotificationRecieveConfig?,
+            receiveFollowRequest:
+                freezed == receiveFollowRequest
+                    ? _value.receiveFollowRequest
+                    : receiveFollowRequest // ignore: cast_nullable_to_non_nullable
+                        as NotificationRecieveConfig?,
+            followRequestAccepted:
+                freezed == followRequestAccepted
+                    ? _value.followRequestAccepted
+                    : followRequestAccepted // ignore: cast_nullable_to_non_nullable
+                        as NotificationRecieveConfig?,
+            roleAssigned:
+                freezed == roleAssigned
+                    ? _value.roleAssigned
+                    : roleAssigned // ignore: cast_nullable_to_non_nullable
+                        as NotificationRecieveConfig?,
+            achievementEarned:
+                freezed == achievementEarned
+                    ? _value.achievementEarned
+                    : achievementEarned // ignore: cast_nullable_to_non_nullable
+                        as NotificationRecieveConfig?,
+            app:
+                freezed == app
+                    ? _value.app
+                    : app // ignore: cast_nullable_to_non_nullable
+                        as NotificationRecieveConfig?,
+            test:
+                freezed == test
+                    ? _value.test
+                    : test // ignore: cast_nullable_to_non_nullable
+                        as NotificationRecieveConfig?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of NotificationRecieveConfigs
@@ -9184,9 +10082,11 @@ class _$NotificationRecieveConfigsCopyWithImpl<$Res,
     }
 
     return $NotificationRecieveConfigCopyWith<$Res>(
-        _value.receiveFollowRequest!, (value) {
-      return _then(_value.copyWith(receiveFollowRequest: value) as $Val);
-    });
+      _value.receiveFollowRequest!,
+      (value) {
+        return _then(_value.copyWith(receiveFollowRequest: value) as $Val);
+      },
+    );
   }
 
   /// Create a copy of NotificationRecieveConfigs
@@ -9199,9 +10099,11 @@ class _$NotificationRecieveConfigsCopyWithImpl<$Res,
     }
 
     return $NotificationRecieveConfigCopyWith<$Res>(
-        _value.followRequestAccepted!, (value) {
-      return _then(_value.copyWith(followRequestAccepted: value) as $Val);
-    });
+      _value.followRequestAccepted!,
+      (value) {
+        return _then(_value.copyWith(followRequestAccepted: value) as $Val);
+      },
+    );
   }
 
   /// Create a copy of NotificationRecieveConfigs
@@ -9213,8 +10115,9 @@ class _$NotificationRecieveConfigsCopyWithImpl<$Res,
       return null;
     }
 
-    return $NotificationRecieveConfigCopyWith<$Res>(_value.roleAssigned!,
-        (value) {
+    return $NotificationRecieveConfigCopyWith<$Res>(_value.roleAssigned!, (
+      value,
+    ) {
       return _then(_value.copyWith(roleAssigned: value) as $Val);
     });
   }
@@ -9228,8 +10131,9 @@ class _$NotificationRecieveConfigsCopyWithImpl<$Res,
       return null;
     }
 
-    return $NotificationRecieveConfigCopyWith<$Res>(_value.achievementEarned!,
-        (value) {
+    return $NotificationRecieveConfigCopyWith<$Res>(_value.achievementEarned!, (
+      value,
+    ) {
       return _then(_value.copyWith(achievementEarned: value) as $Val);
     });
   }
@@ -9267,26 +10171,27 @@ class _$NotificationRecieveConfigsCopyWithImpl<$Res,
 abstract class _$$NotificationRecieveConfigsImplCopyWith<$Res>
     implements $NotificationRecieveConfigsCopyWith<$Res> {
   factory _$$NotificationRecieveConfigsImplCopyWith(
-          _$NotificationRecieveConfigsImpl value,
-          $Res Function(_$NotificationRecieveConfigsImpl) then) =
-      __$$NotificationRecieveConfigsImplCopyWithImpl<$Res>;
+    _$NotificationRecieveConfigsImpl value,
+    $Res Function(_$NotificationRecieveConfigsImpl) then,
+  ) = __$$NotificationRecieveConfigsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {NotificationRecieveConfig? note,
-      NotificationRecieveConfig? follow,
-      NotificationRecieveConfig? mention,
-      NotificationRecieveConfig? reply,
-      NotificationRecieveConfig? renote,
-      NotificationRecieveConfig? quote,
-      NotificationRecieveConfig? reaction,
-      NotificationRecieveConfig? pollEnded,
-      NotificationRecieveConfig? receiveFollowRequest,
-      NotificationRecieveConfig? followRequestAccepted,
-      NotificationRecieveConfig? roleAssigned,
-      NotificationRecieveConfig? achievementEarned,
-      NotificationRecieveConfig? app,
-      NotificationRecieveConfig? test});
+  $Res call({
+    NotificationRecieveConfig? note,
+    NotificationRecieveConfig? follow,
+    NotificationRecieveConfig? mention,
+    NotificationRecieveConfig? reply,
+    NotificationRecieveConfig? renote,
+    NotificationRecieveConfig? quote,
+    NotificationRecieveConfig? reaction,
+    NotificationRecieveConfig? pollEnded,
+    NotificationRecieveConfig? receiveFollowRequest,
+    NotificationRecieveConfig? followRequestAccepted,
+    NotificationRecieveConfig? roleAssigned,
+    NotificationRecieveConfig? achievementEarned,
+    NotificationRecieveConfig? app,
+    NotificationRecieveConfig? test,
+  });
 
   @override
   $NotificationRecieveConfigCopyWith<$Res>? get note;
@@ -9320,13 +10225,16 @@ abstract class _$$NotificationRecieveConfigsImplCopyWith<$Res>
 
 /// @nodoc
 class __$$NotificationRecieveConfigsImplCopyWithImpl<$Res>
-    extends _$NotificationRecieveConfigsCopyWithImpl<$Res,
-        _$NotificationRecieveConfigsImpl>
+    extends
+        _$NotificationRecieveConfigsCopyWithImpl<
+          $Res,
+          _$NotificationRecieveConfigsImpl
+        >
     implements _$$NotificationRecieveConfigsImplCopyWith<$Res> {
   __$$NotificationRecieveConfigsImplCopyWithImpl(
-      _$NotificationRecieveConfigsImpl _value,
-      $Res Function(_$NotificationRecieveConfigsImpl) _then)
-      : super(_value, _then);
+    _$NotificationRecieveConfigsImpl _value,
+    $Res Function(_$NotificationRecieveConfigsImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotificationRecieveConfigs
   /// with the given fields replaced by the non-null parameter values.
@@ -9348,89 +10256,106 @@ class __$$NotificationRecieveConfigsImplCopyWithImpl<$Res>
     Object? app = freezed,
     Object? test = freezed,
   }) {
-    return _then(_$NotificationRecieveConfigsImpl(
-      note: freezed == note
-          ? _value.note
-          : note // ignore: cast_nullable_to_non_nullable
-              as NotificationRecieveConfig?,
-      follow: freezed == follow
-          ? _value.follow
-          : follow // ignore: cast_nullable_to_non_nullable
-              as NotificationRecieveConfig?,
-      mention: freezed == mention
-          ? _value.mention
-          : mention // ignore: cast_nullable_to_non_nullable
-              as NotificationRecieveConfig?,
-      reply: freezed == reply
-          ? _value.reply
-          : reply // ignore: cast_nullable_to_non_nullable
-              as NotificationRecieveConfig?,
-      renote: freezed == renote
-          ? _value.renote
-          : renote // ignore: cast_nullable_to_non_nullable
-              as NotificationRecieveConfig?,
-      quote: freezed == quote
-          ? _value.quote
-          : quote // ignore: cast_nullable_to_non_nullable
-              as NotificationRecieveConfig?,
-      reaction: freezed == reaction
-          ? _value.reaction
-          : reaction // ignore: cast_nullable_to_non_nullable
-              as NotificationRecieveConfig?,
-      pollEnded: freezed == pollEnded
-          ? _value.pollEnded
-          : pollEnded // ignore: cast_nullable_to_non_nullable
-              as NotificationRecieveConfig?,
-      receiveFollowRequest: freezed == receiveFollowRequest
-          ? _value.receiveFollowRequest
-          : receiveFollowRequest // ignore: cast_nullable_to_non_nullable
-              as NotificationRecieveConfig?,
-      followRequestAccepted: freezed == followRequestAccepted
-          ? _value.followRequestAccepted
-          : followRequestAccepted // ignore: cast_nullable_to_non_nullable
-              as NotificationRecieveConfig?,
-      roleAssigned: freezed == roleAssigned
-          ? _value.roleAssigned
-          : roleAssigned // ignore: cast_nullable_to_non_nullable
-              as NotificationRecieveConfig?,
-      achievementEarned: freezed == achievementEarned
-          ? _value.achievementEarned
-          : achievementEarned // ignore: cast_nullable_to_non_nullable
-              as NotificationRecieveConfig?,
-      app: freezed == app
-          ? _value.app
-          : app // ignore: cast_nullable_to_non_nullable
-              as NotificationRecieveConfig?,
-      test: freezed == test
-          ? _value.test
-          : test // ignore: cast_nullable_to_non_nullable
-              as NotificationRecieveConfig?,
-    ));
+    return _then(
+      _$NotificationRecieveConfigsImpl(
+        note:
+            freezed == note
+                ? _value.note
+                : note // ignore: cast_nullable_to_non_nullable
+                    as NotificationRecieveConfig?,
+        follow:
+            freezed == follow
+                ? _value.follow
+                : follow // ignore: cast_nullable_to_non_nullable
+                    as NotificationRecieveConfig?,
+        mention:
+            freezed == mention
+                ? _value.mention
+                : mention // ignore: cast_nullable_to_non_nullable
+                    as NotificationRecieveConfig?,
+        reply:
+            freezed == reply
+                ? _value.reply
+                : reply // ignore: cast_nullable_to_non_nullable
+                    as NotificationRecieveConfig?,
+        renote:
+            freezed == renote
+                ? _value.renote
+                : renote // ignore: cast_nullable_to_non_nullable
+                    as NotificationRecieveConfig?,
+        quote:
+            freezed == quote
+                ? _value.quote
+                : quote // ignore: cast_nullable_to_non_nullable
+                    as NotificationRecieveConfig?,
+        reaction:
+            freezed == reaction
+                ? _value.reaction
+                : reaction // ignore: cast_nullable_to_non_nullable
+                    as NotificationRecieveConfig?,
+        pollEnded:
+            freezed == pollEnded
+                ? _value.pollEnded
+                : pollEnded // ignore: cast_nullable_to_non_nullable
+                    as NotificationRecieveConfig?,
+        receiveFollowRequest:
+            freezed == receiveFollowRequest
+                ? _value.receiveFollowRequest
+                : receiveFollowRequest // ignore: cast_nullable_to_non_nullable
+                    as NotificationRecieveConfig?,
+        followRequestAccepted:
+            freezed == followRequestAccepted
+                ? _value.followRequestAccepted
+                : followRequestAccepted // ignore: cast_nullable_to_non_nullable
+                    as NotificationRecieveConfig?,
+        roleAssigned:
+            freezed == roleAssigned
+                ? _value.roleAssigned
+                : roleAssigned // ignore: cast_nullable_to_non_nullable
+                    as NotificationRecieveConfig?,
+        achievementEarned:
+            freezed == achievementEarned
+                ? _value.achievementEarned
+                : achievementEarned // ignore: cast_nullable_to_non_nullable
+                    as NotificationRecieveConfig?,
+        app:
+            freezed == app
+                ? _value.app
+                : app // ignore: cast_nullable_to_non_nullable
+                    as NotificationRecieveConfig?,
+        test:
+            freezed == test
+                ? _value.test
+                : test // ignore: cast_nullable_to_non_nullable
+                    as NotificationRecieveConfig?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$NotificationRecieveConfigsImpl implements _NotificationRecieveConfigs {
-  const _$NotificationRecieveConfigsImpl(
-      {this.note,
-      this.follow,
-      this.mention,
-      this.reply,
-      this.renote,
-      this.quote,
-      this.reaction,
-      this.pollEnded,
-      this.receiveFollowRequest,
-      this.followRequestAccepted,
-      this.roleAssigned,
-      this.achievementEarned,
-      this.app,
-      this.test});
+  const _$NotificationRecieveConfigsImpl({
+    this.note,
+    this.follow,
+    this.mention,
+    this.reply,
+    this.renote,
+    this.quote,
+    this.reaction,
+    this.pollEnded,
+    this.receiveFollowRequest,
+    this.followRequestAccepted,
+    this.roleAssigned,
+    this.achievementEarned,
+    this.app,
+    this.test,
+  });
 
   factory _$NotificationRecieveConfigsImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$NotificationRecieveConfigsImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$NotificationRecieveConfigsImplFromJson(json);
 
   @override
   final NotificationRecieveConfig? note;
@@ -9496,21 +10421,22 @@ class _$NotificationRecieveConfigsImpl implements _NotificationRecieveConfigs {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      note,
-      follow,
-      mention,
-      reply,
-      renote,
-      quote,
-      reaction,
-      pollEnded,
-      receiveFollowRequest,
-      followRequestAccepted,
-      roleAssigned,
-      achievementEarned,
-      app,
-      test);
+    runtimeType,
+    note,
+    follow,
+    mention,
+    reply,
+    renote,
+    quote,
+    reaction,
+    pollEnded,
+    receiveFollowRequest,
+    followRequestAccepted,
+    roleAssigned,
+    achievementEarned,
+    app,
+    test,
+  );
 
   /// Create a copy of NotificationRecieveConfigs
   /// with the given fields replaced by the non-null parameter values.
@@ -9518,35 +10444,34 @@ class _$NotificationRecieveConfigsImpl implements _NotificationRecieveConfigs {
   @override
   @pragma('vm:prefer-inline')
   _$$NotificationRecieveConfigsImplCopyWith<_$NotificationRecieveConfigsImpl>
-      get copyWith => __$$NotificationRecieveConfigsImplCopyWithImpl<
-          _$NotificationRecieveConfigsImpl>(this, _$identity);
+  get copyWith => __$$NotificationRecieveConfigsImplCopyWithImpl<
+    _$NotificationRecieveConfigsImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotificationRecieveConfigsImplToJson(
-      this,
-    );
+    return _$$NotificationRecieveConfigsImplToJson(this);
   }
 }
 
 abstract class _NotificationRecieveConfigs
     implements NotificationRecieveConfigs {
-  const factory _NotificationRecieveConfigs(
-          {final NotificationRecieveConfig? note,
-          final NotificationRecieveConfig? follow,
-          final NotificationRecieveConfig? mention,
-          final NotificationRecieveConfig? reply,
-          final NotificationRecieveConfig? renote,
-          final NotificationRecieveConfig? quote,
-          final NotificationRecieveConfig? reaction,
-          final NotificationRecieveConfig? pollEnded,
-          final NotificationRecieveConfig? receiveFollowRequest,
-          final NotificationRecieveConfig? followRequestAccepted,
-          final NotificationRecieveConfig? roleAssigned,
-          final NotificationRecieveConfig? achievementEarned,
-          final NotificationRecieveConfig? app,
-          final NotificationRecieveConfig? test}) =
-      _$NotificationRecieveConfigsImpl;
+  const factory _NotificationRecieveConfigs({
+    final NotificationRecieveConfig? note,
+    final NotificationRecieveConfig? follow,
+    final NotificationRecieveConfig? mention,
+    final NotificationRecieveConfig? reply,
+    final NotificationRecieveConfig? renote,
+    final NotificationRecieveConfig? quote,
+    final NotificationRecieveConfig? reaction,
+    final NotificationRecieveConfig? pollEnded,
+    final NotificationRecieveConfig? receiveFollowRequest,
+    final NotificationRecieveConfig? followRequestAccepted,
+    final NotificationRecieveConfig? roleAssigned,
+    final NotificationRecieveConfig? achievementEarned,
+    final NotificationRecieveConfig? app,
+    final NotificationRecieveConfig? test,
+  }) = _$NotificationRecieveConfigsImpl;
 
   factory _NotificationRecieveConfigs.fromJson(Map<String, dynamic> json) =
       _$NotificationRecieveConfigsImpl.fromJson;
@@ -9585,11 +10510,12 @@ abstract class _NotificationRecieveConfigs
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotificationRecieveConfigsImplCopyWith<_$NotificationRecieveConfigsImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 NotificationRecieveConfig _$NotificationRecieveConfigFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _NotificationRecieveConfig.fromJson(json);
 }
 
@@ -9610,16 +10536,19 @@ mixin _$NotificationRecieveConfig {
 
 /// @nodoc
 abstract class $NotificationRecieveConfigCopyWith<$Res> {
-  factory $NotificationRecieveConfigCopyWith(NotificationRecieveConfig value,
-          $Res Function(NotificationRecieveConfig) then) =
-      _$NotificationRecieveConfigCopyWithImpl<$Res, NotificationRecieveConfig>;
+  factory $NotificationRecieveConfigCopyWith(
+    NotificationRecieveConfig value,
+    $Res Function(NotificationRecieveConfig) then,
+  ) = _$NotificationRecieveConfigCopyWithImpl<$Res, NotificationRecieveConfig>;
   @useResult
   $Res call({String type, String? userListId});
 }
 
 /// @nodoc
-class _$NotificationRecieveConfigCopyWithImpl<$Res,
-        $Val extends NotificationRecieveConfig>
+class _$NotificationRecieveConfigCopyWithImpl<
+  $Res,
+  $Val extends NotificationRecieveConfig
+>
     implements $NotificationRecieveConfigCopyWith<$Res> {
   _$NotificationRecieveConfigCopyWithImpl(this._value, this._then);
 
@@ -9632,20 +10561,22 @@ class _$NotificationRecieveConfigCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? type = null,
-    Object? userListId = freezed,
-  }) {
-    return _then(_value.copyWith(
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String,
-      userListId: freezed == userListId
-          ? _value.userListId
-          : userListId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  $Res call({Object? type = null, Object? userListId = freezed}) {
+    return _then(
+      _value.copyWith(
+            type:
+                null == type
+                    ? _value.type
+                    : type // ignore: cast_nullable_to_non_nullable
+                        as String,
+            userListId:
+                freezed == userListId
+                    ? _value.userListId
+                    : userListId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -9653,9 +10584,9 @@ class _$NotificationRecieveConfigCopyWithImpl<$Res,
 abstract class _$$NotificationRecieveConfigImplCopyWith<$Res>
     implements $NotificationRecieveConfigCopyWith<$Res> {
   factory _$$NotificationRecieveConfigImplCopyWith(
-          _$NotificationRecieveConfigImpl value,
-          $Res Function(_$NotificationRecieveConfigImpl) then) =
-      __$$NotificationRecieveConfigImplCopyWithImpl<$Res>;
+    _$NotificationRecieveConfigImpl value,
+    $Res Function(_$NotificationRecieveConfigImpl) then,
+  ) = __$$NotificationRecieveConfigImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String type, String? userListId});
@@ -9663,32 +10594,36 @@ abstract class _$$NotificationRecieveConfigImplCopyWith<$Res>
 
 /// @nodoc
 class __$$NotificationRecieveConfigImplCopyWithImpl<$Res>
-    extends _$NotificationRecieveConfigCopyWithImpl<$Res,
-        _$NotificationRecieveConfigImpl>
+    extends
+        _$NotificationRecieveConfigCopyWithImpl<
+          $Res,
+          _$NotificationRecieveConfigImpl
+        >
     implements _$$NotificationRecieveConfigImplCopyWith<$Res> {
   __$$NotificationRecieveConfigImplCopyWithImpl(
-      _$NotificationRecieveConfigImpl _value,
-      $Res Function(_$NotificationRecieveConfigImpl) _then)
-      : super(_value, _then);
+    _$NotificationRecieveConfigImpl _value,
+    $Res Function(_$NotificationRecieveConfigImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotificationRecieveConfig
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? type = null,
-    Object? userListId = freezed,
-  }) {
-    return _then(_$NotificationRecieveConfigImpl(
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String,
-      userListId: freezed == userListId
-          ? _value.userListId
-          : userListId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+  $Res call({Object? type = null, Object? userListId = freezed}) {
+    return _then(
+      _$NotificationRecieveConfigImpl(
+        type:
+            null == type
+                ? _value.type
+                : type // ignore: cast_nullable_to_non_nullable
+                    as String,
+        userListId:
+            freezed == userListId
+                ? _value.userListId
+                : userListId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -9730,21 +10665,21 @@ class _$NotificationRecieveConfigImpl implements _NotificationRecieveConfig {
   @override
   @pragma('vm:prefer-inline')
   _$$NotificationRecieveConfigImplCopyWith<_$NotificationRecieveConfigImpl>
-      get copyWith => __$$NotificationRecieveConfigImplCopyWithImpl<
-          _$NotificationRecieveConfigImpl>(this, _$identity);
+  get copyWith => __$$NotificationRecieveConfigImplCopyWithImpl<
+    _$NotificationRecieveConfigImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotificationRecieveConfigImplToJson(
-      this,
-    );
+    return _$$NotificationRecieveConfigImplToJson(this);
   }
 }
 
 abstract class _NotificationRecieveConfig implements NotificationRecieveConfig {
-  const factory _NotificationRecieveConfig(
-      {required final String type,
-      final String? userListId}) = _$NotificationRecieveConfigImpl;
+  const factory _NotificationRecieveConfig({
+    required final String type,
+    final String? userListId,
+  }) = _$NotificationRecieveConfigImpl;
 
   factory _NotificationRecieveConfig.fromJson(Map<String, dynamic> json) =
       _$NotificationRecieveConfigImpl.fromJson;
@@ -9759,5 +10694,5 @@ abstract class _NotificationRecieveConfig implements NotificationRecieveConfig {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotificationRecieveConfigImplCopyWith<_$NotificationRecieveConfigImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

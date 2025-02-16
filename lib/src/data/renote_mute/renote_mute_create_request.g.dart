@@ -7,20 +7,14 @@ part of 'renote_mute_create_request.dart';
 // **************************************************************************
 
 _$RenoteMuteCreateRequestImpl _$$RenoteMuteCreateRequestImplFromJson(
-        Map<String, dynamic> json) =>
-    $checkedCreate(
-      r'_$RenoteMuteCreateRequestImpl',
-      json,
-      ($checkedConvert) {
-        final val = _$RenoteMuteCreateRequestImpl(
-          userId: $checkedConvert('userId', (v) => v as String),
-        );
-        return val;
-      },
-    );
+  Map<String, dynamic> json,
+) => $checkedCreate(r'_$RenoteMuteCreateRequestImpl', json, ($checkedConvert) {
+  final val = _$RenoteMuteCreateRequestImpl(
+    userId: $checkedConvert('userId', (v) => v as String),
+  );
+  return val;
+});
 
 Map<String, dynamic> _$$RenoteMuteCreateRequestImplToJson(
-        _$RenoteMuteCreateRequestImpl instance) =>
-    <String, dynamic>{
-      'userId': instance.userId,
-    };
+  _$RenoteMuteCreateRequestImpl instance,
+) => <String, dynamic>{'userId': instance.userId};

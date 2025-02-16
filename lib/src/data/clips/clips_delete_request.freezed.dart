@@ -12,7 +12,8 @@ part of 'clips_delete_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ClipsDeleteRequest _$ClipsDeleteRequestFromJson(Map<String, dynamic> json) {
   return _ClipsDeleteRequest.fromJson(json);
@@ -35,8 +36,9 @@ mixin _$ClipsDeleteRequest {
 /// @nodoc
 abstract class $ClipsDeleteRequestCopyWith<$Res> {
   factory $ClipsDeleteRequestCopyWith(
-          ClipsDeleteRequest value, $Res Function(ClipsDeleteRequest) then) =
-      _$ClipsDeleteRequestCopyWithImpl<$Res, ClipsDeleteRequest>;
+    ClipsDeleteRequest value,
+    $Res Function(ClipsDeleteRequest) then,
+  ) = _$ClipsDeleteRequestCopyWithImpl<$Res, ClipsDeleteRequest>;
   @useResult
   $Res call({String clipId});
 }
@@ -55,24 +57,27 @@ class _$ClipsDeleteRequestCopyWithImpl<$Res, $Val extends ClipsDeleteRequest>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? clipId = null,
-  }) {
-    return _then(_value.copyWith(
-      clipId: null == clipId
-          ? _value.clipId
-          : clipId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? clipId = null}) {
+    return _then(
+      _value.copyWith(
+            clipId:
+                null == clipId
+                    ? _value.clipId
+                    : clipId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$ClipsDeleteRequestImplCopyWith<$Res>
     implements $ClipsDeleteRequestCopyWith<$Res> {
-  factory _$$ClipsDeleteRequestImplCopyWith(_$ClipsDeleteRequestImpl value,
-          $Res Function(_$ClipsDeleteRequestImpl) then) =
-      __$$ClipsDeleteRequestImplCopyWithImpl<$Res>;
+  factory _$$ClipsDeleteRequestImplCopyWith(
+    _$ClipsDeleteRequestImpl value,
+    $Res Function(_$ClipsDeleteRequestImpl) then,
+  ) = __$$ClipsDeleteRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String clipId});
@@ -82,23 +87,25 @@ abstract class _$$ClipsDeleteRequestImplCopyWith<$Res>
 class __$$ClipsDeleteRequestImplCopyWithImpl<$Res>
     extends _$ClipsDeleteRequestCopyWithImpl<$Res, _$ClipsDeleteRequestImpl>
     implements _$$ClipsDeleteRequestImplCopyWith<$Res> {
-  __$$ClipsDeleteRequestImplCopyWithImpl(_$ClipsDeleteRequestImpl _value,
-      $Res Function(_$ClipsDeleteRequestImpl) _then)
-      : super(_value, _then);
+  __$$ClipsDeleteRequestImplCopyWithImpl(
+    _$ClipsDeleteRequestImpl _value,
+    $Res Function(_$ClipsDeleteRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ClipsDeleteRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? clipId = null,
-  }) {
-    return _then(_$ClipsDeleteRequestImpl(
-      clipId: null == clipId
-          ? _value.clipId
-          : clipId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? clipId = null}) {
+    return _then(
+      _$ClipsDeleteRequestImpl(
+        clipId:
+            null == clipId
+                ? _value.clipId
+                : clipId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -137,13 +144,13 @@ class _$ClipsDeleteRequestImpl implements _ClipsDeleteRequest {
   @pragma('vm:prefer-inline')
   _$$ClipsDeleteRequestImplCopyWith<_$ClipsDeleteRequestImpl> get copyWith =>
       __$$ClipsDeleteRequestImplCopyWithImpl<_$ClipsDeleteRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ClipsDeleteRequestImplToJson(
-      this,
-    );
+    return _$$ClipsDeleteRequestImplToJson(this);
   }
 }
 

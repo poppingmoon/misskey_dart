@@ -12,10 +12,12 @@ part of 'users_gallery_posts_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 UsersGalleryPostsRequest _$UsersGalleryPostsRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _UsersGalleryPostsRequest.fromJson(json);
 }
 
@@ -38,16 +40,19 @@ mixin _$UsersGalleryPostsRequest {
 
 /// @nodoc
 abstract class $UsersGalleryPostsRequestCopyWith<$Res> {
-  factory $UsersGalleryPostsRequestCopyWith(UsersGalleryPostsRequest value,
-          $Res Function(UsersGalleryPostsRequest) then) =
-      _$UsersGalleryPostsRequestCopyWithImpl<$Res, UsersGalleryPostsRequest>;
+  factory $UsersGalleryPostsRequestCopyWith(
+    UsersGalleryPostsRequest value,
+    $Res Function(UsersGalleryPostsRequest) then,
+  ) = _$UsersGalleryPostsRequestCopyWithImpl<$Res, UsersGalleryPostsRequest>;
   @useResult
   $Res call({String userId, int? limit, String? sinceId, String? untilId});
 }
 
 /// @nodoc
-class _$UsersGalleryPostsRequestCopyWithImpl<$Res,
-        $Val extends UsersGalleryPostsRequest>
+class _$UsersGalleryPostsRequestCopyWithImpl<
+  $Res,
+  $Val extends UsersGalleryPostsRequest
+>
     implements $UsersGalleryPostsRequestCopyWith<$Res> {
   _$UsersGalleryPostsRequestCopyWithImpl(this._value, this._then);
 
@@ -66,24 +71,31 @@ class _$UsersGalleryPostsRequestCopyWithImpl<$Res,
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_value.copyWith(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            userId:
+                null == userId
+                    ? _value.userId
+                    : userId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -91,9 +103,9 @@ class _$UsersGalleryPostsRequestCopyWithImpl<$Res,
 abstract class _$$UsersGalleryPostsRequestImplCopyWith<$Res>
     implements $UsersGalleryPostsRequestCopyWith<$Res> {
   factory _$$UsersGalleryPostsRequestImplCopyWith(
-          _$UsersGalleryPostsRequestImpl value,
-          $Res Function(_$UsersGalleryPostsRequestImpl) then) =
-      __$$UsersGalleryPostsRequestImplCopyWithImpl<$Res>;
+    _$UsersGalleryPostsRequestImpl value,
+    $Res Function(_$UsersGalleryPostsRequestImpl) then,
+  ) = __$$UsersGalleryPostsRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String userId, int? limit, String? sinceId, String? untilId});
@@ -101,13 +113,16 @@ abstract class _$$UsersGalleryPostsRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$UsersGalleryPostsRequestImplCopyWithImpl<$Res>
-    extends _$UsersGalleryPostsRequestCopyWithImpl<$Res,
-        _$UsersGalleryPostsRequestImpl>
+    extends
+        _$UsersGalleryPostsRequestCopyWithImpl<
+          $Res,
+          _$UsersGalleryPostsRequestImpl
+        >
     implements _$$UsersGalleryPostsRequestImplCopyWith<$Res> {
   __$$UsersGalleryPostsRequestImplCopyWithImpl(
-      _$UsersGalleryPostsRequestImpl _value,
-      $Res Function(_$UsersGalleryPostsRequestImpl) _then)
-      : super(_value, _then);
+    _$UsersGalleryPostsRequestImpl _value,
+    $Res Function(_$UsersGalleryPostsRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UsersGalleryPostsRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -119,32 +134,42 @@ class __$$UsersGalleryPostsRequestImplCopyWithImpl<$Res>
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_$UsersGalleryPostsRequestImpl(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$UsersGalleryPostsRequestImpl(
+        userId:
+            null == userId
+                ? _value.userId
+                : userId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$UsersGalleryPostsRequestImpl implements _UsersGalleryPostsRequest {
-  const _$UsersGalleryPostsRequestImpl(
-      {required this.userId, this.limit, this.sinceId, this.untilId});
+  const _$UsersGalleryPostsRequestImpl({
+    required this.userId,
+    this.limit,
+    this.sinceId,
+    this.untilId,
+  });
 
   factory _$UsersGalleryPostsRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$UsersGalleryPostsRequestImplFromJson(json);
@@ -184,23 +209,23 @@ class _$UsersGalleryPostsRequestImpl implements _UsersGalleryPostsRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$UsersGalleryPostsRequestImplCopyWith<_$UsersGalleryPostsRequestImpl>
-      get copyWith => __$$UsersGalleryPostsRequestImplCopyWithImpl<
-          _$UsersGalleryPostsRequestImpl>(this, _$identity);
+  get copyWith => __$$UsersGalleryPostsRequestImplCopyWithImpl<
+    _$UsersGalleryPostsRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UsersGalleryPostsRequestImplToJson(
-      this,
-    );
+    return _$$UsersGalleryPostsRequestImplToJson(this);
   }
 }
 
 abstract class _UsersGalleryPostsRequest implements UsersGalleryPostsRequest {
-  const factory _UsersGalleryPostsRequest(
-      {required final String userId,
-      final int? limit,
-      final String? sinceId,
-      final String? untilId}) = _$UsersGalleryPostsRequestImpl;
+  const factory _UsersGalleryPostsRequest({
+    required final String userId,
+    final int? limit,
+    final String? sinceId,
+    final String? untilId,
+  }) = _$UsersGalleryPostsRequestImpl;
 
   factory _UsersGalleryPostsRequest.fromJson(Map<String, dynamic> json) =
       _$UsersGalleryPostsRequestImpl.fromJson;
@@ -219,5 +244,5 @@ abstract class _UsersGalleryPostsRequest implements UsersGalleryPostsRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersGalleryPostsRequestImplCopyWith<_$UsersGalleryPostsRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

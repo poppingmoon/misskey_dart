@@ -12,7 +12,8 @@ part of 'i_pin_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 IPinRequest _$IPinRequestFromJson(Map<String, dynamic> json) {
   return _IPinRequest.fromJson(json);
@@ -35,8 +36,9 @@ mixin _$IPinRequest {
 /// @nodoc
 abstract class $IPinRequestCopyWith<$Res> {
   factory $IPinRequestCopyWith(
-          IPinRequest value, $Res Function(IPinRequest) then) =
-      _$IPinRequestCopyWithImpl<$Res, IPinRequest>;
+    IPinRequest value,
+    $Res Function(IPinRequest) then,
+  ) = _$IPinRequestCopyWithImpl<$Res, IPinRequest>;
   @useResult
   $Res call({String noteId});
 }
@@ -55,15 +57,17 @@ class _$IPinRequestCopyWithImpl<$Res, $Val extends IPinRequest>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? noteId = null,
-  }) {
-    return _then(_value.copyWith(
-      noteId: null == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? noteId = null}) {
+    return _then(
+      _value.copyWith(
+            noteId:
+                null == noteId
+                    ? _value.noteId
+                    : noteId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -71,8 +75,9 @@ class _$IPinRequestCopyWithImpl<$Res, $Val extends IPinRequest>
 abstract class _$$IPinRequestImplCopyWith<$Res>
     implements $IPinRequestCopyWith<$Res> {
   factory _$$IPinRequestImplCopyWith(
-          _$IPinRequestImpl value, $Res Function(_$IPinRequestImpl) then) =
-      __$$IPinRequestImplCopyWithImpl<$Res>;
+    _$IPinRequestImpl value,
+    $Res Function(_$IPinRequestImpl) then,
+  ) = __$$IPinRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String noteId});
@@ -83,22 +88,24 @@ class __$$IPinRequestImplCopyWithImpl<$Res>
     extends _$IPinRequestCopyWithImpl<$Res, _$IPinRequestImpl>
     implements _$$IPinRequestImplCopyWith<$Res> {
   __$$IPinRequestImplCopyWithImpl(
-      _$IPinRequestImpl _value, $Res Function(_$IPinRequestImpl) _then)
-      : super(_value, _then);
+    _$IPinRequestImpl _value,
+    $Res Function(_$IPinRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of IPinRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? noteId = null,
-  }) {
-    return _then(_$IPinRequestImpl(
-      noteId: null == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? noteId = null}) {
+    return _then(
+      _$IPinRequestImpl(
+        noteId:
+            null == noteId
+                ? _value.noteId
+                : noteId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -140,9 +147,7 @@ class _$IPinRequestImpl implements _IPinRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$IPinRequestImplToJson(
-      this,
-    );
+    return _$$IPinRequestImplToJson(this);
   }
 }
 

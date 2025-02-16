@@ -12,10 +12,12 @@ part of 'get_avatar_decorations_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 GetAvatarDecorationsResponse _$GetAvatarDecorationsResponseFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _GetAvatarDecorationsResponse.fromJson(json);
 }
 
@@ -36,28 +38,34 @@ mixin _$GetAvatarDecorationsResponse {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $GetAvatarDecorationsResponseCopyWith<GetAvatarDecorationsResponse>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $GetAvatarDecorationsResponseCopyWith<$Res> {
   factory $GetAvatarDecorationsResponseCopyWith(
-          GetAvatarDecorationsResponse value,
-          $Res Function(GetAvatarDecorationsResponse) then) =
-      _$GetAvatarDecorationsResponseCopyWithImpl<$Res,
-          GetAvatarDecorationsResponse>;
+    GetAvatarDecorationsResponse value,
+    $Res Function(GetAvatarDecorationsResponse) then,
+  ) =
+      _$GetAvatarDecorationsResponseCopyWithImpl<
+        $Res,
+        GetAvatarDecorationsResponse
+      >;
   @useResult
-  $Res call(
-      {String id,
-      String name,
-      String description,
-      @NullableUriConverter() Uri? url,
-      List<String> roleIdsThatCanBeUsedThisDecoration});
+  $Res call({
+    String id,
+    String name,
+    String description,
+    @NullableUriConverter() Uri? url,
+    List<String> roleIdsThatCanBeUsedThisDecoration,
+  });
 }
 
 /// @nodoc
-class _$GetAvatarDecorationsResponseCopyWithImpl<$Res,
-        $Val extends GetAvatarDecorationsResponse>
+class _$GetAvatarDecorationsResponseCopyWithImpl<
+  $Res,
+  $Val extends GetAvatarDecorationsResponse
+>
     implements $GetAvatarDecorationsResponseCopyWith<$Res> {
   _$GetAvatarDecorationsResponseCopyWithImpl(this._value, this._then);
 
@@ -77,29 +85,36 @@ class _$GetAvatarDecorationsResponseCopyWithImpl<$Res,
     Object? url = freezed,
     Object? roleIdsThatCanBeUsedThisDecoration = null,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: null == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      roleIdsThatCanBeUsedThisDecoration: null ==
-              roleIdsThatCanBeUsedThisDecoration
-          ? _value.roleIdsThatCanBeUsedThisDecoration
-          : roleIdsThatCanBeUsedThisDecoration // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            description:
+                null == description
+                    ? _value.description
+                    : description // ignore: cast_nullable_to_non_nullable
+                        as String,
+            url:
+                freezed == url
+                    ? _value.url
+                    : url // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            roleIdsThatCanBeUsedThisDecoration:
+                null == roleIdsThatCanBeUsedThisDecoration
+                    ? _value.roleIdsThatCanBeUsedThisDecoration
+                    : roleIdsThatCanBeUsedThisDecoration // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -107,28 +122,32 @@ class _$GetAvatarDecorationsResponseCopyWithImpl<$Res,
 abstract class _$$GetAvatarDecorationsResponseImplCopyWith<$Res>
     implements $GetAvatarDecorationsResponseCopyWith<$Res> {
   factory _$$GetAvatarDecorationsResponseImplCopyWith(
-          _$GetAvatarDecorationsResponseImpl value,
-          $Res Function(_$GetAvatarDecorationsResponseImpl) then) =
-      __$$GetAvatarDecorationsResponseImplCopyWithImpl<$Res>;
+    _$GetAvatarDecorationsResponseImpl value,
+    $Res Function(_$GetAvatarDecorationsResponseImpl) then,
+  ) = __$$GetAvatarDecorationsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      String name,
-      String description,
-      @NullableUriConverter() Uri? url,
-      List<String> roleIdsThatCanBeUsedThisDecoration});
+  $Res call({
+    String id,
+    String name,
+    String description,
+    @NullableUriConverter() Uri? url,
+    List<String> roleIdsThatCanBeUsedThisDecoration,
+  });
 }
 
 /// @nodoc
 class __$$GetAvatarDecorationsResponseImplCopyWithImpl<$Res>
-    extends _$GetAvatarDecorationsResponseCopyWithImpl<$Res,
-        _$GetAvatarDecorationsResponseImpl>
+    extends
+        _$GetAvatarDecorationsResponseCopyWithImpl<
+          $Res,
+          _$GetAvatarDecorationsResponseImpl
+        >
     implements _$$GetAvatarDecorationsResponseImplCopyWith<$Res> {
   __$$GetAvatarDecorationsResponseImplCopyWithImpl(
-      _$GetAvatarDecorationsResponseImpl _value,
-      $Res Function(_$GetAvatarDecorationsResponseImpl) _then)
-      : super(_value, _then);
+    _$GetAvatarDecorationsResponseImpl _value,
+    $Res Function(_$GetAvatarDecorationsResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of GetAvatarDecorationsResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -141,29 +160,35 @@ class __$$GetAvatarDecorationsResponseImplCopyWithImpl<$Res>
     Object? url = freezed,
     Object? roleIdsThatCanBeUsedThisDecoration = null,
   }) {
-    return _then(_$GetAvatarDecorationsResponseImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: null == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      roleIdsThatCanBeUsedThisDecoration: null ==
-              roleIdsThatCanBeUsedThisDecoration
-          ? _value._roleIdsThatCanBeUsedThisDecoration
-          : roleIdsThatCanBeUsedThisDecoration // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-    ));
+    return _then(
+      _$GetAvatarDecorationsResponseImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        description:
+            null == description
+                ? _value.description
+                : description // ignore: cast_nullable_to_non_nullable
+                    as String,
+        url:
+            freezed == url
+                ? _value.url
+                : url // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        roleIdsThatCanBeUsedThisDecoration:
+            null == roleIdsThatCanBeUsedThisDecoration
+                ? _value._roleIdsThatCanBeUsedThisDecoration
+                : roleIdsThatCanBeUsedThisDecoration // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+      ),
+    );
   }
 }
 
@@ -171,18 +196,17 @@ class __$$GetAvatarDecorationsResponseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$GetAvatarDecorationsResponseImpl
     implements _GetAvatarDecorationsResponse {
-  const _$GetAvatarDecorationsResponseImpl(
-      {required this.id,
-      required this.name,
-      required this.description,
-      @NullableUriConverter() this.url,
-      final List<String> roleIdsThatCanBeUsedThisDecoration = const []})
-      : _roleIdsThatCanBeUsedThisDecoration =
-            roleIdsThatCanBeUsedThisDecoration;
+  const _$GetAvatarDecorationsResponseImpl({
+    required this.id,
+    required this.name,
+    required this.description,
+    @NullableUriConverter() this.url,
+    final List<String> roleIdsThatCanBeUsedThisDecoration = const [],
+  }) : _roleIdsThatCanBeUsedThisDecoration = roleIdsThatCanBeUsedThisDecoration;
 
   factory _$GetAvatarDecorationsResponseImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$GetAvatarDecorationsResponseImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$GetAvatarDecorationsResponseImplFromJson(json);
 
   @override
   final String id;
@@ -219,14 +243,21 @@ class _$GetAvatarDecorationsResponseImpl
                 other.description == description) &&
             (identical(other.url, url) || other.url == url) &&
             const DeepCollectionEquality().equals(
-                other._roleIdsThatCanBeUsedThisDecoration,
-                _roleIdsThatCanBeUsedThisDecoration));
+              other._roleIdsThatCanBeUsedThisDecoration,
+              _roleIdsThatCanBeUsedThisDecoration,
+            ));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, name, description, url,
-      const DeepCollectionEquality().hash(_roleIdsThatCanBeUsedThisDecoration));
+  int get hashCode => Object.hash(
+    runtimeType,
+    id,
+    name,
+    description,
+    url,
+    const DeepCollectionEquality().hash(_roleIdsThatCanBeUsedThisDecoration),
+  );
 
   /// Create a copy of GetAvatarDecorationsResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -234,27 +265,27 @@ class _$GetAvatarDecorationsResponseImpl
   @override
   @pragma('vm:prefer-inline')
   _$$GetAvatarDecorationsResponseImplCopyWith<
-          _$GetAvatarDecorationsResponseImpl>
-      get copyWith => __$$GetAvatarDecorationsResponseImplCopyWithImpl<
-          _$GetAvatarDecorationsResponseImpl>(this, _$identity);
+    _$GetAvatarDecorationsResponseImpl
+  >
+  get copyWith => __$$GetAvatarDecorationsResponseImplCopyWithImpl<
+    _$GetAvatarDecorationsResponseImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GetAvatarDecorationsResponseImplToJson(
-      this,
-    );
+    return _$$GetAvatarDecorationsResponseImplToJson(this);
   }
 }
 
 abstract class _GetAvatarDecorationsResponse
     implements GetAvatarDecorationsResponse {
-  const factory _GetAvatarDecorationsResponse(
-          {required final String id,
-          required final String name,
-          required final String description,
-          @NullableUriConverter() final Uri? url,
-          final List<String> roleIdsThatCanBeUsedThisDecoration}) =
-      _$GetAvatarDecorationsResponseImpl;
+  const factory _GetAvatarDecorationsResponse({
+    required final String id,
+    required final String name,
+    required final String description,
+    @NullableUriConverter() final Uri? url,
+    final List<String> roleIdsThatCanBeUsedThisDecoration,
+  }) = _$GetAvatarDecorationsResponseImpl;
 
   factory _GetAvatarDecorationsResponse.fromJson(Map<String, dynamic> json) =
       _$GetAvatarDecorationsResponseImpl.fromJson;
@@ -276,6 +307,7 @@ abstract class _GetAvatarDecorationsResponse
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetAvatarDecorationsResponseImplCopyWith<
-          _$GetAvatarDecorationsResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$GetAvatarDecorationsResponseImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }

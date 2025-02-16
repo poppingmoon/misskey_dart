@@ -6,50 +6,55 @@ part of 'antenna.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$AntennaImpl _$$AntennaImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(
-      r'_$AntennaImpl',
-      json,
-      ($checkedConvert) {
-        final val = _$AntennaImpl(
-          id: $checkedConvert('id', (v) => v as String),
-          createdAt: $checkedConvert('createdAt',
-              (v) => const DateTimeConverter().fromJson(v as String)),
-          name: $checkedConvert('name', (v) => v as String),
-          keywords: $checkedConvert(
-              'keywords',
-              (v) => (v as List<dynamic>)
-                  .map((e) =>
-                      (e as List<dynamic>).map((e) => e as String).toList())
-                  .toList()),
-          excludeKeywords: $checkedConvert(
-              'excludeKeywords',
-              (v) => (v as List<dynamic>)
-                  .map((e) =>
-                      (e as List<dynamic>).map((e) => e as String).toList())
-                  .toList()),
-          src: $checkedConvert(
-              'src',
-              (v) => $enumDecodeNullable(_$AntennaSourceEnumMap, v,
-                  unknownValue: JsonKey.nullForUndefinedEnumValue)),
-          userListId: $checkedConvert('userListId', (v) => v as String?),
-          users: $checkedConvert(
-              'users',
-              (v) =>
-                  (v as List<dynamic>?)?.map((e) => e as String).toList() ??
-                  const []),
-          caseSensitive: $checkedConvert('caseSensitive', (v) => v as bool?),
-          notify: $checkedConvert('notify', (v) => v as bool?),
-          withReplies: $checkedConvert('withReplies', (v) => v as bool?),
-          withFile: $checkedConvert('withFile', (v) => v as bool?),
-          isActive: $checkedConvert('isActive', (v) => v as bool?),
-          hasUnreadNote: $checkedConvert('hasUnreadNote', (v) => v as bool?),
-          localOnly: $checkedConvert('localOnly', (v) => v as bool?),
-          excludeBots: $checkedConvert('excludeBots', (v) => v as bool?),
-        );
-        return val;
-      },
-    );
+_$AntennaImpl _$$AntennaImplFromJson(
+  Map<String, dynamic> json,
+) => $checkedCreate(r'_$AntennaImpl', json, ($checkedConvert) {
+  final val = _$AntennaImpl(
+    id: $checkedConvert('id', (v) => v as String),
+    createdAt: $checkedConvert(
+      'createdAt',
+      (v) => const DateTimeConverter().fromJson(v as String),
+    ),
+    name: $checkedConvert('name', (v) => v as String),
+    keywords: $checkedConvert(
+      'keywords',
+      (v) =>
+          (v as List<dynamic>)
+              .map((e) => (e as List<dynamic>).map((e) => e as String).toList())
+              .toList(),
+    ),
+    excludeKeywords: $checkedConvert(
+      'excludeKeywords',
+      (v) =>
+          (v as List<dynamic>)
+              .map((e) => (e as List<dynamic>).map((e) => e as String).toList())
+              .toList(),
+    ),
+    src: $checkedConvert(
+      'src',
+      (v) => $enumDecodeNullable(
+        _$AntennaSourceEnumMap,
+        v,
+        unknownValue: JsonKey.nullForUndefinedEnumValue,
+      ),
+    ),
+    userListId: $checkedConvert('userListId', (v) => v as String?),
+    users: $checkedConvert(
+      'users',
+      (v) =>
+          (v as List<dynamic>?)?.map((e) => e as String).toList() ?? const [],
+    ),
+    caseSensitive: $checkedConvert('caseSensitive', (v) => v as bool?),
+    notify: $checkedConvert('notify', (v) => v as bool?),
+    withReplies: $checkedConvert('withReplies', (v) => v as bool?),
+    withFile: $checkedConvert('withFile', (v) => v as bool?),
+    isActive: $checkedConvert('isActive', (v) => v as bool?),
+    hasUnreadNote: $checkedConvert('hasUnreadNote', (v) => v as bool?),
+    localOnly: $checkedConvert('localOnly', (v) => v as bool?),
+    excludeBots: $checkedConvert('excludeBots', (v) => v as bool?),
+  );
+  return val;
+});
 
 Map<String, dynamic> _$$AntennaImplToJson(_$AntennaImpl instance) =>
     <String, dynamic>{

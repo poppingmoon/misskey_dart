@@ -12,10 +12,12 @@ part of 'i_gallery_likes_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 IGalleryLikesResponse _$IGalleryLikesResponseFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _IGalleryLikesResponse.fromJson(json);
 }
 
@@ -36,9 +38,10 @@ mixin _$IGalleryLikesResponse {
 
 /// @nodoc
 abstract class $IGalleryLikesResponseCopyWith<$Res> {
-  factory $IGalleryLikesResponseCopyWith(IGalleryLikesResponse value,
-          $Res Function(IGalleryLikesResponse) then) =
-      _$IGalleryLikesResponseCopyWithImpl<$Res, IGalleryLikesResponse>;
+  factory $IGalleryLikesResponseCopyWith(
+    IGalleryLikesResponse value,
+    $Res Function(IGalleryLikesResponse) then,
+  ) = _$IGalleryLikesResponseCopyWithImpl<$Res, IGalleryLikesResponse>;
   @useResult
   $Res call({String id, GalleryPost post});
 
@@ -46,8 +49,10 @@ abstract class $IGalleryLikesResponseCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$IGalleryLikesResponseCopyWithImpl<$Res,
-        $Val extends IGalleryLikesResponse>
+class _$IGalleryLikesResponseCopyWithImpl<
+  $Res,
+  $Val extends IGalleryLikesResponse
+>
     implements $IGalleryLikesResponseCopyWith<$Res> {
   _$IGalleryLikesResponseCopyWithImpl(this._value, this._then);
 
@@ -60,20 +65,22 @@ class _$IGalleryLikesResponseCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? post = null,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      post: null == post
-          ? _value.post
-          : post // ignore: cast_nullable_to_non_nullable
-              as GalleryPost,
-    ) as $Val);
+  $Res call({Object? id = null, Object? post = null}) {
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            post:
+                null == post
+                    ? _value.post
+                    : post // ignore: cast_nullable_to_non_nullable
+                        as GalleryPost,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of IGalleryLikesResponse
@@ -91,9 +98,9 @@ class _$IGalleryLikesResponseCopyWithImpl<$Res,
 abstract class _$$IGalleryLikesResponseImplCopyWith<$Res>
     implements $IGalleryLikesResponseCopyWith<$Res> {
   factory _$$IGalleryLikesResponseImplCopyWith(
-          _$IGalleryLikesResponseImpl value,
-          $Res Function(_$IGalleryLikesResponseImpl) then) =
-      __$$IGalleryLikesResponseImplCopyWithImpl<$Res>;
+    _$IGalleryLikesResponseImpl value,
+    $Res Function(_$IGalleryLikesResponseImpl) then,
+  ) = __$$IGalleryLikesResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, GalleryPost post});
@@ -104,31 +111,33 @@ abstract class _$$IGalleryLikesResponseImplCopyWith<$Res>
 
 /// @nodoc
 class __$$IGalleryLikesResponseImplCopyWithImpl<$Res>
-    extends _$IGalleryLikesResponseCopyWithImpl<$Res,
-        _$IGalleryLikesResponseImpl>
+    extends
+        _$IGalleryLikesResponseCopyWithImpl<$Res, _$IGalleryLikesResponseImpl>
     implements _$$IGalleryLikesResponseImplCopyWith<$Res> {
-  __$$IGalleryLikesResponseImplCopyWithImpl(_$IGalleryLikesResponseImpl _value,
-      $Res Function(_$IGalleryLikesResponseImpl) _then)
-      : super(_value, _then);
+  __$$IGalleryLikesResponseImplCopyWithImpl(
+    _$IGalleryLikesResponseImpl _value,
+    $Res Function(_$IGalleryLikesResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of IGalleryLikesResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? post = null,
-  }) {
-    return _then(_$IGalleryLikesResponseImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      post: null == post
-          ? _value.post
-          : post // ignore: cast_nullable_to_non_nullable
-              as GalleryPost,
-    ));
+  $Res call({Object? id = null, Object? post = null}) {
+    return _then(
+      _$IGalleryLikesResponseImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        post:
+            null == post
+                ? _value.post
+                : post // ignore: cast_nullable_to_non_nullable
+                    as GalleryPost,
+      ),
+    );
   }
 }
 
@@ -169,21 +178,23 @@ class _$IGalleryLikesResponseImpl implements _IGalleryLikesResponse {
   @override
   @pragma('vm:prefer-inline')
   _$$IGalleryLikesResponseImplCopyWith<_$IGalleryLikesResponseImpl>
-      get copyWith => __$$IGalleryLikesResponseImplCopyWithImpl<
-          _$IGalleryLikesResponseImpl>(this, _$identity);
+  get copyWith =>
+      __$$IGalleryLikesResponseImplCopyWithImpl<_$IGalleryLikesResponseImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$IGalleryLikesResponseImplToJson(
-      this,
-    );
+    return _$$IGalleryLikesResponseImplToJson(this);
   }
 }
 
 abstract class _IGalleryLikesResponse implements IGalleryLikesResponse {
-  const factory _IGalleryLikesResponse(
-      {required final String id,
-      required final GalleryPost post}) = _$IGalleryLikesResponseImpl;
+  const factory _IGalleryLikesResponse({
+    required final String id,
+    required final GalleryPost post,
+  }) = _$IGalleryLikesResponseImpl;
 
   factory _IGalleryLikesResponse.fromJson(Map<String, dynamic> json) =
       _$IGalleryLikesResponseImpl.fromJson;
@@ -198,5 +209,5 @@ abstract class _IGalleryLikesResponse implements IGalleryLikesResponse {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IGalleryLikesResponseImplCopyWith<_$IGalleryLikesResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

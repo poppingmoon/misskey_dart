@@ -12,7 +12,8 @@ part of 'i_pages_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 IPagesRequest _$IPagesRequestFromJson(Map<String, dynamic> json) {
   return _IPageRequest.fromJson(json);
@@ -37,8 +38,9 @@ mixin _$IPagesRequest {
 /// @nodoc
 abstract class $IPagesRequestCopyWith<$Res> {
   factory $IPagesRequestCopyWith(
-          IPagesRequest value, $Res Function(IPagesRequest) then) =
-      _$IPagesRequestCopyWithImpl<$Res, IPagesRequest>;
+    IPagesRequest value,
+    $Res Function(IPagesRequest) then,
+  ) = _$IPagesRequestCopyWithImpl<$Res, IPagesRequest>;
   @useResult
   $Res call({int? limit, String? sinceId, String? untilId});
 }
@@ -62,20 +64,26 @@ class _$IPagesRequestCopyWithImpl<$Res, $Val extends IPagesRequest>
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_value.copyWith(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -83,8 +91,9 @@ class _$IPagesRequestCopyWithImpl<$Res, $Val extends IPagesRequest>
 abstract class _$$IPageRequestImplCopyWith<$Res>
     implements $IPagesRequestCopyWith<$Res> {
   factory _$$IPageRequestImplCopyWith(
-          _$IPageRequestImpl value, $Res Function(_$IPageRequestImpl) then) =
-      __$$IPageRequestImplCopyWithImpl<$Res>;
+    _$IPageRequestImpl value,
+    $Res Function(_$IPageRequestImpl) then,
+  ) = __$$IPageRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? limit, String? sinceId, String? untilId});
@@ -95,8 +104,9 @@ class __$$IPageRequestImplCopyWithImpl<$Res>
     extends _$IPagesRequestCopyWithImpl<$Res, _$IPageRequestImpl>
     implements _$$IPageRequestImplCopyWith<$Res> {
   __$$IPageRequestImplCopyWithImpl(
-      _$IPageRequestImpl _value, $Res Function(_$IPageRequestImpl) _then)
-      : super(_value, _then);
+    _$IPageRequestImpl _value,
+    $Res Function(_$IPageRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of IPagesRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -107,20 +117,25 @@ class __$$IPageRequestImplCopyWithImpl<$Res>
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_$IPageRequestImpl(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$IPageRequestImpl(
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -168,17 +183,16 @@ class _$IPageRequestImpl implements _IPageRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$IPageRequestImplToJson(
-      this,
-    );
+    return _$$IPageRequestImplToJson(this);
   }
 }
 
 abstract class _IPageRequest implements IPagesRequest {
-  const factory _IPageRequest(
-      {final int? limit,
-      final String? sinceId,
-      final String? untilId}) = _$IPageRequestImpl;
+  const factory _IPageRequest({
+    final int? limit,
+    final String? sinceId,
+    final String? untilId,
+  }) = _$IPageRequestImpl;
 
   factory _IPageRequest.fromJson(Map<String, dynamic> json) =
       _$IPageRequestImpl.fromJson;

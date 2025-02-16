@@ -12,10 +12,12 @@ part of 'renote_mute_create_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 RenoteMuteCreateRequest _$RenoteMuteCreateRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _RenoteMuteCreateRequest.fromJson(json);
 }
 
@@ -35,16 +37,19 @@ mixin _$RenoteMuteCreateRequest {
 
 /// @nodoc
 abstract class $RenoteMuteCreateRequestCopyWith<$Res> {
-  factory $RenoteMuteCreateRequestCopyWith(RenoteMuteCreateRequest value,
-          $Res Function(RenoteMuteCreateRequest) then) =
-      _$RenoteMuteCreateRequestCopyWithImpl<$Res, RenoteMuteCreateRequest>;
+  factory $RenoteMuteCreateRequestCopyWith(
+    RenoteMuteCreateRequest value,
+    $Res Function(RenoteMuteCreateRequest) then,
+  ) = _$RenoteMuteCreateRequestCopyWithImpl<$Res, RenoteMuteCreateRequest>;
   @useResult
   $Res call({String userId});
 }
 
 /// @nodoc
-class _$RenoteMuteCreateRequestCopyWithImpl<$Res,
-        $Val extends RenoteMuteCreateRequest>
+class _$RenoteMuteCreateRequestCopyWithImpl<
+  $Res,
+  $Val extends RenoteMuteCreateRequest
+>
     implements $RenoteMuteCreateRequestCopyWith<$Res> {
   _$RenoteMuteCreateRequestCopyWithImpl(this._value, this._then);
 
@@ -57,15 +62,17 @@ class _$RenoteMuteCreateRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? userId = null,
-  }) {
-    return _then(_value.copyWith(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? userId = null}) {
+    return _then(
+      _value.copyWith(
+            userId:
+                null == userId
+                    ? _value.userId
+                    : userId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -73,9 +80,9 @@ class _$RenoteMuteCreateRequestCopyWithImpl<$Res,
 abstract class _$$RenoteMuteCreateRequestImplCopyWith<$Res>
     implements $RenoteMuteCreateRequestCopyWith<$Res> {
   factory _$$RenoteMuteCreateRequestImplCopyWith(
-          _$RenoteMuteCreateRequestImpl value,
-          $Res Function(_$RenoteMuteCreateRequestImpl) then) =
-      __$$RenoteMuteCreateRequestImplCopyWithImpl<$Res>;
+    _$RenoteMuteCreateRequestImpl value,
+    $Res Function(_$RenoteMuteCreateRequestImpl) then,
+  ) = __$$RenoteMuteCreateRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String userId});
@@ -83,27 +90,31 @@ abstract class _$$RenoteMuteCreateRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$RenoteMuteCreateRequestImplCopyWithImpl<$Res>
-    extends _$RenoteMuteCreateRequestCopyWithImpl<$Res,
-        _$RenoteMuteCreateRequestImpl>
+    extends
+        _$RenoteMuteCreateRequestCopyWithImpl<
+          $Res,
+          _$RenoteMuteCreateRequestImpl
+        >
     implements _$$RenoteMuteCreateRequestImplCopyWith<$Res> {
   __$$RenoteMuteCreateRequestImplCopyWithImpl(
-      _$RenoteMuteCreateRequestImpl _value,
-      $Res Function(_$RenoteMuteCreateRequestImpl) _then)
-      : super(_value, _then);
+    _$RenoteMuteCreateRequestImpl _value,
+    $Res Function(_$RenoteMuteCreateRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of RenoteMuteCreateRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? userId = null,
-  }) {
-    return _then(_$RenoteMuteCreateRequestImpl(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? userId = null}) {
+    return _then(
+      _$RenoteMuteCreateRequestImpl(
+        userId:
+            null == userId
+                ? _value.userId
+                : userId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -141,14 +152,13 @@ class _$RenoteMuteCreateRequestImpl implements _RenoteMuteCreateRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$RenoteMuteCreateRequestImplCopyWith<_$RenoteMuteCreateRequestImpl>
-      get copyWith => __$$RenoteMuteCreateRequestImplCopyWithImpl<
-          _$RenoteMuteCreateRequestImpl>(this, _$identity);
+  get copyWith => __$$RenoteMuteCreateRequestImplCopyWithImpl<
+    _$RenoteMuteCreateRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$RenoteMuteCreateRequestImplToJson(
-      this,
-    );
+    return _$$RenoteMuteCreateRequestImplToJson(this);
   }
 }
 
@@ -167,5 +177,5 @@ abstract class _RenoteMuteCreateRequest implements RenoteMuteCreateRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RenoteMuteCreateRequestImplCopyWith<_$RenoteMuteCreateRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

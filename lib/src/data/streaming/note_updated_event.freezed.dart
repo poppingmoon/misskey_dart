@@ -12,7 +12,8 @@ part of 'note_updated_event.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 NoteUpdatedEvent _$NoteUpdatedEventFromJson(Map<String, dynamic> json) {
   return _NoteUpdatedEvent.fromJson(json);
@@ -39,14 +40,16 @@ mixin _$NoteUpdatedEvent {
 /// @nodoc
 abstract class $NoteUpdatedEventCopyWith<$Res> {
   factory $NoteUpdatedEventCopyWith(
-          NoteUpdatedEvent value, $Res Function(NoteUpdatedEvent) then) =
-      _$NoteUpdatedEventCopyWithImpl<$Res, NoteUpdatedEvent>;
+    NoteUpdatedEvent value,
+    $Res Function(NoteUpdatedEvent) then,
+  ) = _$NoteUpdatedEventCopyWithImpl<$Res, NoteUpdatedEvent>;
   @useResult
-  $Res call(
-      {String id,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      NoteUpdatedEventType? type,
-      Map<String, dynamic> body});
+  $Res call({
+    String id,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    NoteUpdatedEventType? type,
+    Map<String, dynamic> body,
+  });
 }
 
 /// @nodoc
@@ -63,92 +66,98 @@ class _$NoteUpdatedEventCopyWithImpl<$Res, $Val extends NoteUpdatedEvent>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? type = freezed,
-    Object? body = null,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as NoteUpdatedEventType?,
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-    ) as $Val);
+  $Res call({Object? id = null, Object? type = freezed, Object? body = null}) {
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            type:
+                freezed == type
+                    ? _value.type
+                    : type // ignore: cast_nullable_to_non_nullable
+                        as NoteUpdatedEventType?,
+            body:
+                null == body
+                    ? _value.body
+                    : body // ignore: cast_nullable_to_non_nullable
+                        as Map<String, dynamic>,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$NoteUpdatedEventImplCopyWith<$Res>
     implements $NoteUpdatedEventCopyWith<$Res> {
-  factory _$$NoteUpdatedEventImplCopyWith(_$NoteUpdatedEventImpl value,
-          $Res Function(_$NoteUpdatedEventImpl) then) =
-      __$$NoteUpdatedEventImplCopyWithImpl<$Res>;
+  factory _$$NoteUpdatedEventImplCopyWith(
+    _$NoteUpdatedEventImpl value,
+    $Res Function(_$NoteUpdatedEventImpl) then,
+  ) = __$$NoteUpdatedEventImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      NoteUpdatedEventType? type,
-      Map<String, dynamic> body});
+  $Res call({
+    String id,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    NoteUpdatedEventType? type,
+    Map<String, dynamic> body,
+  });
 }
 
 /// @nodoc
 class __$$NoteUpdatedEventImplCopyWithImpl<$Res>
     extends _$NoteUpdatedEventCopyWithImpl<$Res, _$NoteUpdatedEventImpl>
     implements _$$NoteUpdatedEventImplCopyWith<$Res> {
-  __$$NoteUpdatedEventImplCopyWithImpl(_$NoteUpdatedEventImpl _value,
-      $Res Function(_$NoteUpdatedEventImpl) _then)
-      : super(_value, _then);
+  __$$NoteUpdatedEventImplCopyWithImpl(
+    _$NoteUpdatedEventImpl _value,
+    $Res Function(_$NoteUpdatedEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NoteUpdatedEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? type = freezed,
-    Object? body = null,
-  }) {
-    return _then(_$NoteUpdatedEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as NoteUpdatedEventType?,
-      body: null == body
-          ? _value._body
-          : body // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-    ));
+  $Res call({Object? id = null, Object? type = freezed, Object? body = null}) {
+    return _then(
+      _$NoteUpdatedEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        type:
+            freezed == type
+                ? _value.type
+                : type // ignore: cast_nullable_to_non_nullable
+                    as NoteUpdatedEventType?,
+        body:
+            null == body
+                ? _value._body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as Map<String, dynamic>,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$NoteUpdatedEventImpl implements _NoteUpdatedEvent {
-  const _$NoteUpdatedEventImpl(
-      {required this.id,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type,
-      required final Map<String, dynamic> body})
-      : _body = body;
+  const _$NoteUpdatedEventImpl({
+    required this.id,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type,
+    required final Map<String, dynamic> body,
+  }) : _body = body;
 
   factory _$NoteUpdatedEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$NoteUpdatedEventImplFromJson(json);
 
   @override
   final String id;
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final NoteUpdatedEventType? type;
@@ -178,7 +187,11 @@ class _$NoteUpdatedEventImpl implements _NoteUpdatedEvent {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType, id, type, const DeepCollectionEquality().hash(_body));
+    runtimeType,
+    id,
+    type,
+    const DeepCollectionEquality().hash(_body),
+  );
 
   /// Create a copy of NoteUpdatedEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -187,22 +200,23 @@ class _$NoteUpdatedEventImpl implements _NoteUpdatedEvent {
   @pragma('vm:prefer-inline')
   _$$NoteUpdatedEventImplCopyWith<_$NoteUpdatedEventImpl> get copyWith =>
       __$$NoteUpdatedEventImplCopyWithImpl<_$NoteUpdatedEventImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NoteUpdatedEventImplToJson(
-      this,
-    );
+    return _$$NoteUpdatedEventImplToJson(this);
   }
 }
 
 abstract class _NoteUpdatedEvent implements NoteUpdatedEvent {
-  const factory _NoteUpdatedEvent(
-      {required final String id,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      final NoteUpdatedEventType? type,
-      required final Map<String, dynamic> body}) = _$NoteUpdatedEventImpl;
+  const factory _NoteUpdatedEvent({
+    required final String id,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    final NoteUpdatedEventType? type,
+    required final Map<String, dynamic> body,
+  }) = _$NoteUpdatedEventImpl;
 
   factory _NoteUpdatedEvent.fromJson(Map<String, dynamic> json) =
       _$NoteUpdatedEventImpl.fromJson;

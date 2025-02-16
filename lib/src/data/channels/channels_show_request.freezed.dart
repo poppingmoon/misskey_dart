@@ -12,7 +12,8 @@ part of 'channels_show_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ChannelsShowRequest _$ChannelsShowRequestFromJson(Map<String, dynamic> json) {
   return _ChannelsShowRequest.fromJson(json);
@@ -35,8 +36,9 @@ mixin _$ChannelsShowRequest {
 /// @nodoc
 abstract class $ChannelsShowRequestCopyWith<$Res> {
   factory $ChannelsShowRequestCopyWith(
-          ChannelsShowRequest value, $Res Function(ChannelsShowRequest) then) =
-      _$ChannelsShowRequestCopyWithImpl<$Res, ChannelsShowRequest>;
+    ChannelsShowRequest value,
+    $Res Function(ChannelsShowRequest) then,
+  ) = _$ChannelsShowRequestCopyWithImpl<$Res, ChannelsShowRequest>;
   @useResult
   $Res call({String channelId});
 }
@@ -55,24 +57,27 @@ class _$ChannelsShowRequestCopyWithImpl<$Res, $Val extends ChannelsShowRequest>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? channelId = null,
-  }) {
-    return _then(_value.copyWith(
-      channelId: null == channelId
-          ? _value.channelId
-          : channelId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? channelId = null}) {
+    return _then(
+      _value.copyWith(
+            channelId:
+                null == channelId
+                    ? _value.channelId
+                    : channelId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$ChannelsShowRequestImplCopyWith<$Res>
     implements $ChannelsShowRequestCopyWith<$Res> {
-  factory _$$ChannelsShowRequestImplCopyWith(_$ChannelsShowRequestImpl value,
-          $Res Function(_$ChannelsShowRequestImpl) then) =
-      __$$ChannelsShowRequestImplCopyWithImpl<$Res>;
+  factory _$$ChannelsShowRequestImplCopyWith(
+    _$ChannelsShowRequestImpl value,
+    $Res Function(_$ChannelsShowRequestImpl) then,
+  ) = __$$ChannelsShowRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String channelId});
@@ -82,23 +87,25 @@ abstract class _$$ChannelsShowRequestImplCopyWith<$Res>
 class __$$ChannelsShowRequestImplCopyWithImpl<$Res>
     extends _$ChannelsShowRequestCopyWithImpl<$Res, _$ChannelsShowRequestImpl>
     implements _$$ChannelsShowRequestImplCopyWith<$Res> {
-  __$$ChannelsShowRequestImplCopyWithImpl(_$ChannelsShowRequestImpl _value,
-      $Res Function(_$ChannelsShowRequestImpl) _then)
-      : super(_value, _then);
+  __$$ChannelsShowRequestImplCopyWithImpl(
+    _$ChannelsShowRequestImpl _value,
+    $Res Function(_$ChannelsShowRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelsShowRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? channelId = null,
-  }) {
-    return _then(_$ChannelsShowRequestImpl(
-      channelId: null == channelId
-          ? _value.channelId
-          : channelId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? channelId = null}) {
+    return _then(
+      _$ChannelsShowRequestImpl(
+        channelId:
+            null == channelId
+                ? _value.channelId
+                : channelId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -138,13 +145,13 @@ class _$ChannelsShowRequestImpl implements _ChannelsShowRequest {
   @pragma('vm:prefer-inline')
   _$$ChannelsShowRequestImplCopyWith<_$ChannelsShowRequestImpl> get copyWith =>
       __$$ChannelsShowRequestImplCopyWithImpl<_$ChannelsShowRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ChannelsShowRequestImplToJson(
-      this,
-    );
+    return _$$ChannelsShowRequestImplToJson(this);
   }
 }
 

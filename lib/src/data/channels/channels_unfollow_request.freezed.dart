@@ -12,10 +12,12 @@ part of 'channels_unfollow_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ChannelsUnfollowRequest _$ChannelsUnfollowRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _ChannelsUnfollowRequest.fromJson(json);
 }
 
@@ -35,16 +37,19 @@ mixin _$ChannelsUnfollowRequest {
 
 /// @nodoc
 abstract class $ChannelsUnfollowRequestCopyWith<$Res> {
-  factory $ChannelsUnfollowRequestCopyWith(ChannelsUnfollowRequest value,
-          $Res Function(ChannelsUnfollowRequest) then) =
-      _$ChannelsUnfollowRequestCopyWithImpl<$Res, ChannelsUnfollowRequest>;
+  factory $ChannelsUnfollowRequestCopyWith(
+    ChannelsUnfollowRequest value,
+    $Res Function(ChannelsUnfollowRequest) then,
+  ) = _$ChannelsUnfollowRequestCopyWithImpl<$Res, ChannelsUnfollowRequest>;
   @useResult
   $Res call({String channelId});
 }
 
 /// @nodoc
-class _$ChannelsUnfollowRequestCopyWithImpl<$Res,
-        $Val extends ChannelsUnfollowRequest>
+class _$ChannelsUnfollowRequestCopyWithImpl<
+  $Res,
+  $Val extends ChannelsUnfollowRequest
+>
     implements $ChannelsUnfollowRequestCopyWith<$Res> {
   _$ChannelsUnfollowRequestCopyWithImpl(this._value, this._then);
 
@@ -57,15 +62,17 @@ class _$ChannelsUnfollowRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? channelId = null,
-  }) {
-    return _then(_value.copyWith(
-      channelId: null == channelId
-          ? _value.channelId
-          : channelId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? channelId = null}) {
+    return _then(
+      _value.copyWith(
+            channelId:
+                null == channelId
+                    ? _value.channelId
+                    : channelId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -73,9 +80,9 @@ class _$ChannelsUnfollowRequestCopyWithImpl<$Res,
 abstract class _$$ChannelsUnfollowRequestImplCopyWith<$Res>
     implements $ChannelsUnfollowRequestCopyWith<$Res> {
   factory _$$ChannelsUnfollowRequestImplCopyWith(
-          _$ChannelsUnfollowRequestImpl value,
-          $Res Function(_$ChannelsUnfollowRequestImpl) then) =
-      __$$ChannelsUnfollowRequestImplCopyWithImpl<$Res>;
+    _$ChannelsUnfollowRequestImpl value,
+    $Res Function(_$ChannelsUnfollowRequestImpl) then,
+  ) = __$$ChannelsUnfollowRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String channelId});
@@ -83,27 +90,31 @@ abstract class _$$ChannelsUnfollowRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$ChannelsUnfollowRequestImplCopyWithImpl<$Res>
-    extends _$ChannelsUnfollowRequestCopyWithImpl<$Res,
-        _$ChannelsUnfollowRequestImpl>
+    extends
+        _$ChannelsUnfollowRequestCopyWithImpl<
+          $Res,
+          _$ChannelsUnfollowRequestImpl
+        >
     implements _$$ChannelsUnfollowRequestImplCopyWith<$Res> {
   __$$ChannelsUnfollowRequestImplCopyWithImpl(
-      _$ChannelsUnfollowRequestImpl _value,
-      $Res Function(_$ChannelsUnfollowRequestImpl) _then)
-      : super(_value, _then);
+    _$ChannelsUnfollowRequestImpl _value,
+    $Res Function(_$ChannelsUnfollowRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelsUnfollowRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? channelId = null,
-  }) {
-    return _then(_$ChannelsUnfollowRequestImpl(
-      channelId: null == channelId
-          ? _value.channelId
-          : channelId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? channelId = null}) {
+    return _then(
+      _$ChannelsUnfollowRequestImpl(
+        channelId:
+            null == channelId
+                ? _value.channelId
+                : channelId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -142,14 +153,13 @@ class _$ChannelsUnfollowRequestImpl implements _ChannelsUnfollowRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$ChannelsUnfollowRequestImplCopyWith<_$ChannelsUnfollowRequestImpl>
-      get copyWith => __$$ChannelsUnfollowRequestImplCopyWithImpl<
-          _$ChannelsUnfollowRequestImpl>(this, _$identity);
+  get copyWith => __$$ChannelsUnfollowRequestImplCopyWithImpl<
+    _$ChannelsUnfollowRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ChannelsUnfollowRequestImplToJson(
-      this,
-    );
+    return _$$ChannelsUnfollowRequestImplToJson(this);
   }
 }
 
@@ -168,5 +178,5 @@ abstract class _ChannelsUnfollowRequest implements ChannelsUnfollowRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ChannelsUnfollowRequestImplCopyWith<_$ChannelsUnfollowRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

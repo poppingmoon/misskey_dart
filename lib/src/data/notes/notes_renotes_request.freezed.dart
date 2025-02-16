@@ -12,7 +12,8 @@ part of 'notes_renotes_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 NotesRenoteRequest _$NotesRenoteRequestFromJson(Map<String, dynamic> json) {
   return _NotesRenoteRequest.fromJson(json);
@@ -38,8 +39,9 @@ mixin _$NotesRenoteRequest {
 /// @nodoc
 abstract class $NotesRenoteRequestCopyWith<$Res> {
   factory $NotesRenoteRequestCopyWith(
-          NotesRenoteRequest value, $Res Function(NotesRenoteRequest) then) =
-      _$NotesRenoteRequestCopyWithImpl<$Res, NotesRenoteRequest>;
+    NotesRenoteRequest value,
+    $Res Function(NotesRenoteRequest) then,
+  ) = _$NotesRenoteRequestCopyWithImpl<$Res, NotesRenoteRequest>;
   @useResult
   $Res call({String noteId, int? limit, String? sinceId, String? untilId});
 }
@@ -64,33 +66,41 @@ class _$NotesRenoteRequestCopyWithImpl<$Res, $Val extends NotesRenoteRequest>
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_value.copyWith(
-      noteId: null == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            noteId:
+                null == noteId
+                    ? _value.noteId
+                    : noteId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$NotesRenoteRequestImplCopyWith<$Res>
     implements $NotesRenoteRequestCopyWith<$Res> {
-  factory _$$NotesRenoteRequestImplCopyWith(_$NotesRenoteRequestImpl value,
-          $Res Function(_$NotesRenoteRequestImpl) then) =
-      __$$NotesRenoteRequestImplCopyWithImpl<$Res>;
+  factory _$$NotesRenoteRequestImplCopyWith(
+    _$NotesRenoteRequestImpl value,
+    $Res Function(_$NotesRenoteRequestImpl) then,
+  ) = __$$NotesRenoteRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String noteId, int? limit, String? sinceId, String? untilId});
@@ -100,9 +110,10 @@ abstract class _$$NotesRenoteRequestImplCopyWith<$Res>
 class __$$NotesRenoteRequestImplCopyWithImpl<$Res>
     extends _$NotesRenoteRequestCopyWithImpl<$Res, _$NotesRenoteRequestImpl>
     implements _$$NotesRenoteRequestImplCopyWith<$Res> {
-  __$$NotesRenoteRequestImplCopyWithImpl(_$NotesRenoteRequestImpl _value,
-      $Res Function(_$NotesRenoteRequestImpl) _then)
-      : super(_value, _then);
+  __$$NotesRenoteRequestImplCopyWithImpl(
+    _$NotesRenoteRequestImpl _value,
+    $Res Function(_$NotesRenoteRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotesRenoteRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -114,32 +125,42 @@ class __$$NotesRenoteRequestImplCopyWithImpl<$Res>
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_$NotesRenoteRequestImpl(
-      noteId: null == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$NotesRenoteRequestImpl(
+        noteId:
+            null == noteId
+                ? _value.noteId
+                : noteId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$NotesRenoteRequestImpl implements _NotesRenoteRequest {
-  const _$NotesRenoteRequestImpl(
-      {required this.noteId, this.limit, this.sinceId, this.untilId});
+  const _$NotesRenoteRequestImpl({
+    required this.noteId,
+    this.limit,
+    this.sinceId,
+    this.untilId,
+  });
 
   factory _$NotesRenoteRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$NotesRenoteRequestImplFromJson(json);
@@ -180,22 +201,23 @@ class _$NotesRenoteRequestImpl implements _NotesRenoteRequest {
   @pragma('vm:prefer-inline')
   _$$NotesRenoteRequestImplCopyWith<_$NotesRenoteRequestImpl> get copyWith =>
       __$$NotesRenoteRequestImplCopyWithImpl<_$NotesRenoteRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotesRenoteRequestImplToJson(
-      this,
-    );
+    return _$$NotesRenoteRequestImplToJson(this);
   }
 }
 
 abstract class _NotesRenoteRequest implements NotesRenoteRequest {
-  const factory _NotesRenoteRequest(
-      {required final String noteId,
-      final int? limit,
-      final String? sinceId,
-      final String? untilId}) = _$NotesRenoteRequestImpl;
+  const factory _NotesRenoteRequest({
+    required final String noteId,
+    final int? limit,
+    final String? sinceId,
+    final String? untilId,
+  }) = _$NotesRenoteRequestImpl;
 
   factory _NotesRenoteRequest.fromJson(Map<String, dynamic> json) =
       _$NotesRenoteRequestImpl.fromJson;

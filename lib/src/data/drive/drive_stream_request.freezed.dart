@@ -12,7 +12,8 @@ part of 'drive_stream_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 DriveStreamRequest _$DriveStreamRequestFromJson(Map<String, dynamic> json) {
   return _DriveStreamRequest.fromJson(json);
@@ -38,8 +39,9 @@ mixin _$DriveStreamRequest {
 /// @nodoc
 abstract class $DriveStreamRequestCopyWith<$Res> {
   factory $DriveStreamRequestCopyWith(
-          DriveStreamRequest value, $Res Function(DriveStreamRequest) then) =
-      _$DriveStreamRequestCopyWithImpl<$Res, DriveStreamRequest>;
+    DriveStreamRequest value,
+    $Res Function(DriveStreamRequest) then,
+  ) = _$DriveStreamRequestCopyWithImpl<$Res, DriveStreamRequest>;
   @useResult
   $Res call({int? limit, String? sinceId, String? untilId, String? type});
 }
@@ -64,33 +66,41 @@ class _$DriveStreamRequestCopyWithImpl<$Res, $Val extends DriveStreamRequest>
     Object? untilId = freezed,
     Object? type = freezed,
   }) {
-    return _then(_value.copyWith(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            type:
+                freezed == type
+                    ? _value.type
+                    : type // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$DriveStreamRequestImplCopyWith<$Res>
     implements $DriveStreamRequestCopyWith<$Res> {
-  factory _$$DriveStreamRequestImplCopyWith(_$DriveStreamRequestImpl value,
-          $Res Function(_$DriveStreamRequestImpl) then) =
-      __$$DriveStreamRequestImplCopyWithImpl<$Res>;
+  factory _$$DriveStreamRequestImplCopyWith(
+    _$DriveStreamRequestImpl value,
+    $Res Function(_$DriveStreamRequestImpl) then,
+  ) = __$$DriveStreamRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? limit, String? sinceId, String? untilId, String? type});
@@ -100,9 +110,10 @@ abstract class _$$DriveStreamRequestImplCopyWith<$Res>
 class __$$DriveStreamRequestImplCopyWithImpl<$Res>
     extends _$DriveStreamRequestCopyWithImpl<$Res, _$DriveStreamRequestImpl>
     implements _$$DriveStreamRequestImplCopyWith<$Res> {
-  __$$DriveStreamRequestImplCopyWithImpl(_$DriveStreamRequestImpl _value,
-      $Res Function(_$DriveStreamRequestImpl) _then)
-      : super(_value, _then);
+  __$$DriveStreamRequestImplCopyWithImpl(
+    _$DriveStreamRequestImpl _value,
+    $Res Function(_$DriveStreamRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of DriveStreamRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -114,32 +125,42 @@ class __$$DriveStreamRequestImplCopyWithImpl<$Res>
     Object? untilId = freezed,
     Object? type = freezed,
   }) {
-    return _then(_$DriveStreamRequestImpl(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$DriveStreamRequestImpl(
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        type:
+            freezed == type
+                ? _value.type
+                : type // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$DriveStreamRequestImpl implements _DriveStreamRequest {
-  const _$DriveStreamRequestImpl(
-      {this.limit, this.sinceId, this.untilId, this.type});
+  const _$DriveStreamRequestImpl({
+    this.limit,
+    this.sinceId,
+    this.untilId,
+    this.type,
+  });
 
   factory _$DriveStreamRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$DriveStreamRequestImplFromJson(json);
@@ -180,22 +201,23 @@ class _$DriveStreamRequestImpl implements _DriveStreamRequest {
   @pragma('vm:prefer-inline')
   _$$DriveStreamRequestImplCopyWith<_$DriveStreamRequestImpl> get copyWith =>
       __$$DriveStreamRequestImplCopyWithImpl<_$DriveStreamRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DriveStreamRequestImplToJson(
-      this,
-    );
+    return _$$DriveStreamRequestImplToJson(this);
   }
 }
 
 abstract class _DriveStreamRequest implements DriveStreamRequest {
-  const factory _DriveStreamRequest(
-      {final int? limit,
-      final String? sinceId,
-      final String? untilId,
-      final String? type}) = _$DriveStreamRequestImpl;
+  const factory _DriveStreamRequest({
+    final int? limit,
+    final String? sinceId,
+    final String? untilId,
+    final String? type,
+  }) = _$DriveStreamRequestImpl;
 
   factory _DriveStreamRequest.fromJson(Map<String, dynamic> json) =
       _$DriveStreamRequestImpl.fromJson;

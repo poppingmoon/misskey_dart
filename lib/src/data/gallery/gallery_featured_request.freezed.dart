@@ -12,10 +12,12 @@ part of 'gallery_featured_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 GalleryFeaturedRequest _$GalleryFeaturedRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _GalleryFeaturedRequest.fromJson(json);
 }
 
@@ -36,16 +38,19 @@ mixin _$GalleryFeaturedRequest {
 
 /// @nodoc
 abstract class $GalleryFeaturedRequestCopyWith<$Res> {
-  factory $GalleryFeaturedRequestCopyWith(GalleryFeaturedRequest value,
-          $Res Function(GalleryFeaturedRequest) then) =
-      _$GalleryFeaturedRequestCopyWithImpl<$Res, GalleryFeaturedRequest>;
+  factory $GalleryFeaturedRequestCopyWith(
+    GalleryFeaturedRequest value,
+    $Res Function(GalleryFeaturedRequest) then,
+  ) = _$GalleryFeaturedRequestCopyWithImpl<$Res, GalleryFeaturedRequest>;
   @useResult
   $Res call({int? limit, String? untilId});
 }
 
 /// @nodoc
-class _$GalleryFeaturedRequestCopyWithImpl<$Res,
-        $Val extends GalleryFeaturedRequest>
+class _$GalleryFeaturedRequestCopyWithImpl<
+  $Res,
+  $Val extends GalleryFeaturedRequest
+>
     implements $GalleryFeaturedRequestCopyWith<$Res> {
   _$GalleryFeaturedRequestCopyWithImpl(this._value, this._then);
 
@@ -58,20 +63,22 @@ class _$GalleryFeaturedRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? limit = freezed,
-    Object? untilId = freezed,
-  }) {
-    return _then(_value.copyWith(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  $Res call({Object? limit = freezed, Object? untilId = freezed}) {
+    return _then(
+      _value.copyWith(
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -79,9 +86,9 @@ class _$GalleryFeaturedRequestCopyWithImpl<$Res,
 abstract class _$$GalleryFeaturedRequestImplCopyWith<$Res>
     implements $GalleryFeaturedRequestCopyWith<$Res> {
   factory _$$GalleryFeaturedRequestImplCopyWith(
-          _$GalleryFeaturedRequestImpl value,
-          $Res Function(_$GalleryFeaturedRequestImpl) then) =
-      __$$GalleryFeaturedRequestImplCopyWithImpl<$Res>;
+    _$GalleryFeaturedRequestImpl value,
+    $Res Function(_$GalleryFeaturedRequestImpl) then,
+  ) = __$$GalleryFeaturedRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? limit, String? untilId});
@@ -89,32 +96,33 @@ abstract class _$$GalleryFeaturedRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$GalleryFeaturedRequestImplCopyWithImpl<$Res>
-    extends _$GalleryFeaturedRequestCopyWithImpl<$Res,
-        _$GalleryFeaturedRequestImpl>
+    extends
+        _$GalleryFeaturedRequestCopyWithImpl<$Res, _$GalleryFeaturedRequestImpl>
     implements _$$GalleryFeaturedRequestImplCopyWith<$Res> {
   __$$GalleryFeaturedRequestImplCopyWithImpl(
-      _$GalleryFeaturedRequestImpl _value,
-      $Res Function(_$GalleryFeaturedRequestImpl) _then)
-      : super(_value, _then);
+    _$GalleryFeaturedRequestImpl _value,
+    $Res Function(_$GalleryFeaturedRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of GalleryFeaturedRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? limit = freezed,
-    Object? untilId = freezed,
-  }) {
-    return _then(_$GalleryFeaturedRequestImpl(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+  $Res call({Object? limit = freezed, Object? untilId = freezed}) {
+    return _then(
+      _$GalleryFeaturedRequestImpl(
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -155,20 +163,23 @@ class _$GalleryFeaturedRequestImpl implements _GalleryFeaturedRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$GalleryFeaturedRequestImplCopyWith<_$GalleryFeaturedRequestImpl>
-      get copyWith => __$$GalleryFeaturedRequestImplCopyWithImpl<
-          _$GalleryFeaturedRequestImpl>(this, _$identity);
+  get copyWith =>
+      __$$GalleryFeaturedRequestImplCopyWithImpl<_$GalleryFeaturedRequestImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GalleryFeaturedRequestImplToJson(
-      this,
-    );
+    return _$$GalleryFeaturedRequestImplToJson(this);
   }
 }
 
 abstract class _GalleryFeaturedRequest implements GalleryFeaturedRequest {
-  const factory _GalleryFeaturedRequest(
-      {final int? limit, final String? untilId}) = _$GalleryFeaturedRequestImpl;
+  const factory _GalleryFeaturedRequest({
+    final int? limit,
+    final String? untilId,
+  }) = _$GalleryFeaturedRequestImpl;
 
   factory _GalleryFeaturedRequest.fromJson(Map<String, dynamic> json) =
       _$GalleryFeaturedRequestImpl.fromJson;
@@ -183,5 +194,5 @@ abstract class _GalleryFeaturedRequest implements GalleryFeaturedRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GalleryFeaturedRequestImplCopyWith<_$GalleryFeaturedRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

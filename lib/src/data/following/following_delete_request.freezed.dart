@@ -12,10 +12,12 @@ part of 'following_delete_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 FollowingDeleteRequest _$FollowingDeleteRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _FollowingDeleteRequest.fromJson(json);
 }
 
@@ -35,16 +37,19 @@ mixin _$FollowingDeleteRequest {
 
 /// @nodoc
 abstract class $FollowingDeleteRequestCopyWith<$Res> {
-  factory $FollowingDeleteRequestCopyWith(FollowingDeleteRequest value,
-          $Res Function(FollowingDeleteRequest) then) =
-      _$FollowingDeleteRequestCopyWithImpl<$Res, FollowingDeleteRequest>;
+  factory $FollowingDeleteRequestCopyWith(
+    FollowingDeleteRequest value,
+    $Res Function(FollowingDeleteRequest) then,
+  ) = _$FollowingDeleteRequestCopyWithImpl<$Res, FollowingDeleteRequest>;
   @useResult
   $Res call({String userId});
 }
 
 /// @nodoc
-class _$FollowingDeleteRequestCopyWithImpl<$Res,
-        $Val extends FollowingDeleteRequest>
+class _$FollowingDeleteRequestCopyWithImpl<
+  $Res,
+  $Val extends FollowingDeleteRequest
+>
     implements $FollowingDeleteRequestCopyWith<$Res> {
   _$FollowingDeleteRequestCopyWithImpl(this._value, this._then);
 
@@ -57,15 +62,17 @@ class _$FollowingDeleteRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? userId = null,
-  }) {
-    return _then(_value.copyWith(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? userId = null}) {
+    return _then(
+      _value.copyWith(
+            userId:
+                null == userId
+                    ? _value.userId
+                    : userId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -73,9 +80,9 @@ class _$FollowingDeleteRequestCopyWithImpl<$Res,
 abstract class _$$FollowingDeleteRequestImplCopyWith<$Res>
     implements $FollowingDeleteRequestCopyWith<$Res> {
   factory _$$FollowingDeleteRequestImplCopyWith(
-          _$FollowingDeleteRequestImpl value,
-          $Res Function(_$FollowingDeleteRequestImpl) then) =
-      __$$FollowingDeleteRequestImplCopyWithImpl<$Res>;
+    _$FollowingDeleteRequestImpl value,
+    $Res Function(_$FollowingDeleteRequestImpl) then,
+  ) = __$$FollowingDeleteRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String userId});
@@ -83,27 +90,28 @@ abstract class _$$FollowingDeleteRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$FollowingDeleteRequestImplCopyWithImpl<$Res>
-    extends _$FollowingDeleteRequestCopyWithImpl<$Res,
-        _$FollowingDeleteRequestImpl>
+    extends
+        _$FollowingDeleteRequestCopyWithImpl<$Res, _$FollowingDeleteRequestImpl>
     implements _$$FollowingDeleteRequestImplCopyWith<$Res> {
   __$$FollowingDeleteRequestImplCopyWithImpl(
-      _$FollowingDeleteRequestImpl _value,
-      $Res Function(_$FollowingDeleteRequestImpl) _then)
-      : super(_value, _then);
+    _$FollowingDeleteRequestImpl _value,
+    $Res Function(_$FollowingDeleteRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of FollowingDeleteRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? userId = null,
-  }) {
-    return _then(_$FollowingDeleteRequestImpl(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? userId = null}) {
+    return _then(
+      _$FollowingDeleteRequestImpl(
+        userId:
+            null == userId
+                ? _value.userId
+                : userId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -141,14 +149,15 @@ class _$FollowingDeleteRequestImpl implements _FollowingDeleteRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$FollowingDeleteRequestImplCopyWith<_$FollowingDeleteRequestImpl>
-      get copyWith => __$$FollowingDeleteRequestImplCopyWithImpl<
-          _$FollowingDeleteRequestImpl>(this, _$identity);
+  get copyWith =>
+      __$$FollowingDeleteRequestImplCopyWithImpl<_$FollowingDeleteRequestImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$FollowingDeleteRequestImplToJson(
-      this,
-    );
+    return _$$FollowingDeleteRequestImplToJson(this);
   }
 }
 
@@ -167,5 +176,5 @@ abstract class _FollowingDeleteRequest implements FollowingDeleteRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FollowingDeleteRequestImplCopyWith<_$FollowingDeleteRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

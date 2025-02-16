@@ -7,20 +7,14 @@ part of 'drive_folders_show_request.dart';
 // **************************************************************************
 
 _$DriveFoldersShowRequestImpl _$$DriveFoldersShowRequestImplFromJson(
-        Map<String, dynamic> json) =>
-    $checkedCreate(
-      r'_$DriveFoldersShowRequestImpl',
-      json,
-      ($checkedConvert) {
-        final val = _$DriveFoldersShowRequestImpl(
-          folderId: $checkedConvert('folderId', (v) => v as String),
-        );
-        return val;
-      },
-    );
+  Map<String, dynamic> json,
+) => $checkedCreate(r'_$DriveFoldersShowRequestImpl', json, ($checkedConvert) {
+  final val = _$DriveFoldersShowRequestImpl(
+    folderId: $checkedConvert('folderId', (v) => v as String),
+  );
+  return val;
+});
 
 Map<String, dynamic> _$$DriveFoldersShowRequestImplToJson(
-        _$DriveFoldersShowRequestImpl instance) =>
-    <String, dynamic>{
-      'folderId': instance.folderId,
-    };
+  _$DriveFoldersShowRequestImpl instance,
+) => <String, dynamic>{'folderId': instance.folderId};

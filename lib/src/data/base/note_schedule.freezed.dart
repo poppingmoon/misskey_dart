@@ -12,7 +12,8 @@ part of 'note_schedule.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 NoteSchedule _$NoteScheduleFromJson(Map<String, dynamic> json) {
   return _NoteSchedule.fromJson(json);
@@ -39,14 +40,16 @@ mixin _$NoteSchedule {
 /// @nodoc
 abstract class $NoteScheduleCopyWith<$Res> {
   factory $NoteScheduleCopyWith(
-          NoteSchedule value, $Res Function(NoteSchedule) then) =
-      _$NoteScheduleCopyWithImpl<$Res, NoteSchedule>;
+    NoteSchedule value,
+    $Res Function(NoteSchedule) then,
+  ) = _$NoteScheduleCopyWithImpl<$Res, NoteSchedule>;
   @useResult
-  $Res call(
-      {String id,
-      NoteScheduleNote note,
-      String userId,
-      @DateTimeConverter() DateTime scheduledAt});
+  $Res call({
+    String id,
+    NoteScheduleNote note,
+    String userId,
+    @DateTimeConverter() DateTime scheduledAt,
+  });
 
   $NoteScheduleNoteCopyWith<$Res> get note;
 }
@@ -71,24 +74,31 @@ class _$NoteScheduleCopyWithImpl<$Res, $Val extends NoteSchedule>
     Object? userId = null,
     Object? scheduledAt = null,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      note: null == note
-          ? _value.note
-          : note // ignore: cast_nullable_to_non_nullable
-              as NoteScheduleNote,
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      scheduledAt: null == scheduledAt
-          ? _value.scheduledAt
-          : scheduledAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            note:
+                null == note
+                    ? _value.note
+                    : note // ignore: cast_nullable_to_non_nullable
+                        as NoteScheduleNote,
+            userId:
+                null == userId
+                    ? _value.userId
+                    : userId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            scheduledAt:
+                null == scheduledAt
+                    ? _value.scheduledAt
+                    : scheduledAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of NoteSchedule
@@ -106,15 +116,17 @@ class _$NoteScheduleCopyWithImpl<$Res, $Val extends NoteSchedule>
 abstract class _$$NoteScheduleImplCopyWith<$Res>
     implements $NoteScheduleCopyWith<$Res> {
   factory _$$NoteScheduleImplCopyWith(
-          _$NoteScheduleImpl value, $Res Function(_$NoteScheduleImpl) then) =
-      __$$NoteScheduleImplCopyWithImpl<$Res>;
+    _$NoteScheduleImpl value,
+    $Res Function(_$NoteScheduleImpl) then,
+  ) = __$$NoteScheduleImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      NoteScheduleNote note,
-      String userId,
-      @DateTimeConverter() DateTime scheduledAt});
+  $Res call({
+    String id,
+    NoteScheduleNote note,
+    String userId,
+    @DateTimeConverter() DateTime scheduledAt,
+  });
 
   @override
   $NoteScheduleNoteCopyWith<$Res> get note;
@@ -125,8 +137,9 @@ class __$$NoteScheduleImplCopyWithImpl<$Res>
     extends _$NoteScheduleCopyWithImpl<$Res, _$NoteScheduleImpl>
     implements _$$NoteScheduleImplCopyWith<$Res> {
   __$$NoteScheduleImplCopyWithImpl(
-      _$NoteScheduleImpl _value, $Res Function(_$NoteScheduleImpl) _then)
-      : super(_value, _then);
+    _$NoteScheduleImpl _value,
+    $Res Function(_$NoteScheduleImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NoteSchedule
   /// with the given fields replaced by the non-null parameter values.
@@ -138,35 +151,42 @@ class __$$NoteScheduleImplCopyWithImpl<$Res>
     Object? userId = null,
     Object? scheduledAt = null,
   }) {
-    return _then(_$NoteScheduleImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      note: null == note
-          ? _value.note
-          : note // ignore: cast_nullable_to_non_nullable
-              as NoteScheduleNote,
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      scheduledAt: null == scheduledAt
-          ? _value.scheduledAt
-          : scheduledAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-    ));
+    return _then(
+      _$NoteScheduleImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        note:
+            null == note
+                ? _value.note
+                : note // ignore: cast_nullable_to_non_nullable
+                    as NoteScheduleNote,
+        userId:
+            null == userId
+                ? _value.userId
+                : userId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        scheduledAt:
+            null == scheduledAt
+                ? _value.scheduledAt
+                : scheduledAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$NoteScheduleImpl implements _NoteSchedule {
-  const _$NoteScheduleImpl(
-      {required this.id,
-      required this.note,
-      required this.userId,
-      @DateTimeConverter() required this.scheduledAt});
+  const _$NoteScheduleImpl({
+    required this.id,
+    required this.note,
+    required this.userId,
+    @DateTimeConverter() required this.scheduledAt,
+  });
 
   factory _$NoteScheduleImpl.fromJson(Map<String, dynamic> json) =>
       _$$NoteScheduleImplFromJson(json);
@@ -212,19 +232,17 @@ class _$NoteScheduleImpl implements _NoteSchedule {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NoteScheduleImplToJson(
-      this,
-    );
+    return _$$NoteScheduleImplToJson(this);
   }
 }
 
 abstract class _NoteSchedule implements NoteSchedule {
-  const factory _NoteSchedule(
-          {required final String id,
-          required final NoteScheduleNote note,
-          required final String userId,
-          @DateTimeConverter() required final DateTime scheduledAt}) =
-      _$NoteScheduleImpl;
+  const factory _NoteSchedule({
+    required final String id,
+    required final NoteScheduleNote note,
+    required final String userId,
+    @DateTimeConverter() required final DateTime scheduledAt,
+  }) = _$NoteScheduleImpl;
 
   factory _NoteSchedule.fromJson(Map<String, dynamic> json) =
       _$NoteScheduleImpl.fromJson;
@@ -280,20 +298,22 @@ mixin _$NoteScheduleNote {
 /// @nodoc
 abstract class $NoteScheduleNoteCopyWith<$Res> {
   factory $NoteScheduleNoteCopyWith(
-          NoteScheduleNote value, $Res Function(NoteScheduleNote) then) =
-      _$NoteScheduleNoteCopyWithImpl<$Res, NoteScheduleNote>;
+    NoteScheduleNote value,
+    $Res Function(NoteScheduleNote) then,
+  ) = _$NoteScheduleNoteCopyWithImpl<$Res, NoteScheduleNote>;
   @useResult
-  $Res call(
-      {String? text,
-      String? cw,
-      List<String> fileIds,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      NoteVisibility? visibility,
-      List<UserLite> visibleUsers,
-      UserLite user,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      ReactionAcceptance? reactionAcceptance,
-      bool? isSchedule});
+  $Res call({
+    String? text,
+    String? cw,
+    List<String> fileIds,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    NoteVisibility? visibility,
+    List<UserLite> visibleUsers,
+    UserLite user,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    ReactionAcceptance? reactionAcceptance,
+    bool? isSchedule,
+  });
 
   $UserLiteCopyWith<$Res> get user;
 }
@@ -322,40 +342,51 @@ class _$NoteScheduleNoteCopyWithImpl<$Res, $Val extends NoteScheduleNote>
     Object? reactionAcceptance = freezed,
     Object? isSchedule = freezed,
   }) {
-    return _then(_value.copyWith(
-      text: freezed == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String?,
-      cw: freezed == cw
-          ? _value.cw
-          : cw // ignore: cast_nullable_to_non_nullable
-              as String?,
-      fileIds: null == fileIds
-          ? _value.fileIds
-          : fileIds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      visibility: freezed == visibility
-          ? _value.visibility
-          : visibility // ignore: cast_nullable_to_non_nullable
-              as NoteVisibility?,
-      visibleUsers: null == visibleUsers
-          ? _value.visibleUsers
-          : visibleUsers // ignore: cast_nullable_to_non_nullable
-              as List<UserLite>,
-      user: null == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as UserLite,
-      reactionAcceptance: freezed == reactionAcceptance
-          ? _value.reactionAcceptance
-          : reactionAcceptance // ignore: cast_nullable_to_non_nullable
-              as ReactionAcceptance?,
-      isSchedule: freezed == isSchedule
-          ? _value.isSchedule
-          : isSchedule // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            text:
+                freezed == text
+                    ? _value.text
+                    : text // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            cw:
+                freezed == cw
+                    ? _value.cw
+                    : cw // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            fileIds:
+                null == fileIds
+                    ? _value.fileIds
+                    : fileIds // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+            visibility:
+                freezed == visibility
+                    ? _value.visibility
+                    : visibility // ignore: cast_nullable_to_non_nullable
+                        as NoteVisibility?,
+            visibleUsers:
+                null == visibleUsers
+                    ? _value.visibleUsers
+                    : visibleUsers // ignore: cast_nullable_to_non_nullable
+                        as List<UserLite>,
+            user:
+                null == user
+                    ? _value.user
+                    : user // ignore: cast_nullable_to_non_nullable
+                        as UserLite,
+            reactionAcceptance:
+                freezed == reactionAcceptance
+                    ? _value.reactionAcceptance
+                    : reactionAcceptance // ignore: cast_nullable_to_non_nullable
+                        as ReactionAcceptance?,
+            isSchedule:
+                freezed == isSchedule
+                    ? _value.isSchedule
+                    : isSchedule // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of NoteScheduleNote
@@ -372,22 +403,24 @@ class _$NoteScheduleNoteCopyWithImpl<$Res, $Val extends NoteScheduleNote>
 /// @nodoc
 abstract class _$$NoteScheduleNoteImplCopyWith<$Res>
     implements $NoteScheduleNoteCopyWith<$Res> {
-  factory _$$NoteScheduleNoteImplCopyWith(_$NoteScheduleNoteImpl value,
-          $Res Function(_$NoteScheduleNoteImpl) then) =
-      __$$NoteScheduleNoteImplCopyWithImpl<$Res>;
+  factory _$$NoteScheduleNoteImplCopyWith(
+    _$NoteScheduleNoteImpl value,
+    $Res Function(_$NoteScheduleNoteImpl) then,
+  ) = __$$NoteScheduleNoteImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String? text,
-      String? cw,
-      List<String> fileIds,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      NoteVisibility? visibility,
-      List<UserLite> visibleUsers,
-      UserLite user,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      ReactionAcceptance? reactionAcceptance,
-      bool? isSchedule});
+  $Res call({
+    String? text,
+    String? cw,
+    List<String> fileIds,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    NoteVisibility? visibility,
+    List<UserLite> visibleUsers,
+    UserLite user,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    ReactionAcceptance? reactionAcceptance,
+    bool? isSchedule,
+  });
 
   @override
   $UserLiteCopyWith<$Res> get user;
@@ -397,9 +430,10 @@ abstract class _$$NoteScheduleNoteImplCopyWith<$Res>
 class __$$NoteScheduleNoteImplCopyWithImpl<$Res>
     extends _$NoteScheduleNoteCopyWithImpl<$Res, _$NoteScheduleNoteImpl>
     implements _$$NoteScheduleNoteImplCopyWith<$Res> {
-  __$$NoteScheduleNoteImplCopyWithImpl(_$NoteScheduleNoteImpl _value,
-      $Res Function(_$NoteScheduleNoteImpl) _then)
-      : super(_value, _then);
+  __$$NoteScheduleNoteImplCopyWithImpl(
+    _$NoteScheduleNoteImpl _value,
+    $Res Function(_$NoteScheduleNoteImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NoteScheduleNote
   /// with the given fields replaced by the non-null parameter values.
@@ -415,59 +449,69 @@ class __$$NoteScheduleNoteImplCopyWithImpl<$Res>
     Object? reactionAcceptance = freezed,
     Object? isSchedule = freezed,
   }) {
-    return _then(_$NoteScheduleNoteImpl(
-      text: freezed == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String?,
-      cw: freezed == cw
-          ? _value.cw
-          : cw // ignore: cast_nullable_to_non_nullable
-              as String?,
-      fileIds: null == fileIds
-          ? _value._fileIds
-          : fileIds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      visibility: freezed == visibility
-          ? _value.visibility
-          : visibility // ignore: cast_nullable_to_non_nullable
-              as NoteVisibility?,
-      visibleUsers: null == visibleUsers
-          ? _value._visibleUsers
-          : visibleUsers // ignore: cast_nullable_to_non_nullable
-              as List<UserLite>,
-      user: null == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as UserLite,
-      reactionAcceptance: freezed == reactionAcceptance
-          ? _value.reactionAcceptance
-          : reactionAcceptance // ignore: cast_nullable_to_non_nullable
-              as ReactionAcceptance?,
-      isSchedule: freezed == isSchedule
-          ? _value.isSchedule
-          : isSchedule // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+    return _then(
+      _$NoteScheduleNoteImpl(
+        text:
+            freezed == text
+                ? _value.text
+                : text // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        cw:
+            freezed == cw
+                ? _value.cw
+                : cw // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        fileIds:
+            null == fileIds
+                ? _value._fileIds
+                : fileIds // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+        visibility:
+            freezed == visibility
+                ? _value.visibility
+                : visibility // ignore: cast_nullable_to_non_nullable
+                    as NoteVisibility?,
+        visibleUsers:
+            null == visibleUsers
+                ? _value._visibleUsers
+                : visibleUsers // ignore: cast_nullable_to_non_nullable
+                    as List<UserLite>,
+        user:
+            null == user
+                ? _value.user
+                : user // ignore: cast_nullable_to_non_nullable
+                    as UserLite,
+        reactionAcceptance:
+            freezed == reactionAcceptance
+                ? _value.reactionAcceptance
+                : reactionAcceptance // ignore: cast_nullable_to_non_nullable
+                    as ReactionAcceptance?,
+        isSchedule:
+            freezed == isSchedule
+                ? _value.isSchedule
+                : isSchedule // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$NoteScheduleNoteImpl implements _NoteScheduleNote {
-  const _$NoteScheduleNoteImpl(
-      {this.text,
-      this.cw,
-      final List<String> fileIds = const [],
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      this.visibility,
-      final List<UserLite> visibleUsers = const [],
-      required this.user,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      this.reactionAcceptance,
-      this.isSchedule})
-      : _fileIds = fileIds,
-        _visibleUsers = visibleUsers;
+  const _$NoteScheduleNoteImpl({
+    this.text,
+    this.cw,
+    final List<String> fileIds = const [],
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    this.visibility,
+    final List<UserLite> visibleUsers = const [],
+    required this.user,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    this.reactionAcceptance,
+    this.isSchedule,
+  }) : _fileIds = fileIds,
+       _visibleUsers = visibleUsers;
 
   factory _$NoteScheduleNoteImpl.fromJson(Map<String, dynamic> json) =>
       _$$NoteScheduleNoteImplFromJson(json);
@@ -485,7 +529,7 @@ class _$NoteScheduleNoteImpl implements _NoteScheduleNote {
     return EqualUnmodifiableListView(_fileIds);
   }
 
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final NoteVisibility? visibility;
@@ -500,7 +544,7 @@ class _$NoteScheduleNoteImpl implements _NoteScheduleNote {
 
   @override
   final UserLite user;
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final ReactionAcceptance? reactionAcceptance;
@@ -522,8 +566,10 @@ class _$NoteScheduleNoteImpl implements _NoteScheduleNote {
             const DeepCollectionEquality().equals(other._fileIds, _fileIds) &&
             (identical(other.visibility, visibility) ||
                 other.visibility == visibility) &&
-            const DeepCollectionEquality()
-                .equals(other._visibleUsers, _visibleUsers) &&
+            const DeepCollectionEquality().equals(
+              other._visibleUsers,
+              _visibleUsers,
+            ) &&
             (identical(other.user, user) || other.user == user) &&
             (identical(other.reactionAcceptance, reactionAcceptance) ||
                 other.reactionAcceptance == reactionAcceptance) &&
@@ -534,15 +580,16 @@ class _$NoteScheduleNoteImpl implements _NoteScheduleNote {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      text,
-      cw,
-      const DeepCollectionEquality().hash(_fileIds),
-      visibility,
-      const DeepCollectionEquality().hash(_visibleUsers),
-      user,
-      reactionAcceptance,
-      isSchedule);
+    runtimeType,
+    text,
+    cw,
+    const DeepCollectionEquality().hash(_fileIds),
+    visibility,
+    const DeepCollectionEquality().hash(_visibleUsers),
+    user,
+    reactionAcceptance,
+    isSchedule,
+  );
 
   /// Create a copy of NoteScheduleNote
   /// with the given fields replaced by the non-null parameter values.
@@ -551,28 +598,29 @@ class _$NoteScheduleNoteImpl implements _NoteScheduleNote {
   @pragma('vm:prefer-inline')
   _$$NoteScheduleNoteImplCopyWith<_$NoteScheduleNoteImpl> get copyWith =>
       __$$NoteScheduleNoteImplCopyWithImpl<_$NoteScheduleNoteImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NoteScheduleNoteImplToJson(
-      this,
-    );
+    return _$$NoteScheduleNoteImplToJson(this);
   }
 }
 
 abstract class _NoteScheduleNote implements NoteScheduleNote {
-  const factory _NoteScheduleNote(
-      {final String? text,
-      final String? cw,
-      final List<String> fileIds,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      final NoteVisibility? visibility,
-      final List<UserLite> visibleUsers,
-      required final UserLite user,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      final ReactionAcceptance? reactionAcceptance,
-      final bool? isSchedule}) = _$NoteScheduleNoteImpl;
+  const factory _NoteScheduleNote({
+    final String? text,
+    final String? cw,
+    final List<String> fileIds,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    final NoteVisibility? visibility,
+    final List<UserLite> visibleUsers,
+    required final UserLite user,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    final ReactionAcceptance? reactionAcceptance,
+    final bool? isSchedule,
+  }) = _$NoteScheduleNoteImpl;
 
   factory _NoteScheduleNote.fromJson(Map<String, dynamic> json) =
       _$NoteScheduleNoteImpl.fromJson;

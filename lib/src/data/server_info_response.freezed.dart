@@ -12,7 +12,8 @@ part of 'server_info_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ServerInfoResponse _$ServerInfoResponseFromJson(Map<String, dynamic> json) {
   return _ServerInfoResponse.fromJson(json);
@@ -38,11 +39,16 @@ mixin _$ServerInfoResponse {
 /// @nodoc
 abstract class $ServerInfoResponseCopyWith<$Res> {
   factory $ServerInfoResponseCopyWith(
-          ServerInfoResponse value, $Res Function(ServerInfoResponse) then) =
-      _$ServerInfoResponseCopyWithImpl<$Res, ServerInfoResponse>;
+    ServerInfoResponse value,
+    $Res Function(ServerInfoResponse) then,
+  ) = _$ServerInfoResponseCopyWithImpl<$Res, ServerInfoResponse>;
   @useResult
-  $Res call(
-      {String machine, ServerInfoCpu cpu, ServerInfoMem mem, ServerInfoFs fs});
+  $Res call({
+    String machine,
+    ServerInfoCpu cpu,
+    ServerInfoMem mem,
+    ServerInfoFs fs,
+  });
 
   $ServerInfoCpuCopyWith<$Res> get cpu;
   $ServerInfoMemCopyWith<$Res> get mem;
@@ -69,24 +75,31 @@ class _$ServerInfoResponseCopyWithImpl<$Res, $Val extends ServerInfoResponse>
     Object? mem = null,
     Object? fs = null,
   }) {
-    return _then(_value.copyWith(
-      machine: null == machine
-          ? _value.machine
-          : machine // ignore: cast_nullable_to_non_nullable
-              as String,
-      cpu: null == cpu
-          ? _value.cpu
-          : cpu // ignore: cast_nullable_to_non_nullable
-              as ServerInfoCpu,
-      mem: null == mem
-          ? _value.mem
-          : mem // ignore: cast_nullable_to_non_nullable
-              as ServerInfoMem,
-      fs: null == fs
-          ? _value.fs
-          : fs // ignore: cast_nullable_to_non_nullable
-              as ServerInfoFs,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            machine:
+                null == machine
+                    ? _value.machine
+                    : machine // ignore: cast_nullable_to_non_nullable
+                        as String,
+            cpu:
+                null == cpu
+                    ? _value.cpu
+                    : cpu // ignore: cast_nullable_to_non_nullable
+                        as ServerInfoCpu,
+            mem:
+                null == mem
+                    ? _value.mem
+                    : mem // ignore: cast_nullable_to_non_nullable
+                        as ServerInfoMem,
+            fs:
+                null == fs
+                    ? _value.fs
+                    : fs // ignore: cast_nullable_to_non_nullable
+                        as ServerInfoFs,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of ServerInfoResponse
@@ -123,13 +136,18 @@ class _$ServerInfoResponseCopyWithImpl<$Res, $Val extends ServerInfoResponse>
 /// @nodoc
 abstract class _$$ServerInfoResponseImplCopyWith<$Res>
     implements $ServerInfoResponseCopyWith<$Res> {
-  factory _$$ServerInfoResponseImplCopyWith(_$ServerInfoResponseImpl value,
-          $Res Function(_$ServerInfoResponseImpl) then) =
-      __$$ServerInfoResponseImplCopyWithImpl<$Res>;
+  factory _$$ServerInfoResponseImplCopyWith(
+    _$ServerInfoResponseImpl value,
+    $Res Function(_$ServerInfoResponseImpl) then,
+  ) = __$$ServerInfoResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String machine, ServerInfoCpu cpu, ServerInfoMem mem, ServerInfoFs fs});
+  $Res call({
+    String machine,
+    ServerInfoCpu cpu,
+    ServerInfoMem mem,
+    ServerInfoFs fs,
+  });
 
   @override
   $ServerInfoCpuCopyWith<$Res> get cpu;
@@ -143,9 +161,10 @@ abstract class _$$ServerInfoResponseImplCopyWith<$Res>
 class __$$ServerInfoResponseImplCopyWithImpl<$Res>
     extends _$ServerInfoResponseCopyWithImpl<$Res, _$ServerInfoResponseImpl>
     implements _$$ServerInfoResponseImplCopyWith<$Res> {
-  __$$ServerInfoResponseImplCopyWithImpl(_$ServerInfoResponseImpl _value,
-      $Res Function(_$ServerInfoResponseImpl) _then)
-      : super(_value, _then);
+  __$$ServerInfoResponseImplCopyWithImpl(
+    _$ServerInfoResponseImpl _value,
+    $Res Function(_$ServerInfoResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ServerInfoResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -157,35 +176,42 @@ class __$$ServerInfoResponseImplCopyWithImpl<$Res>
     Object? mem = null,
     Object? fs = null,
   }) {
-    return _then(_$ServerInfoResponseImpl(
-      machine: null == machine
-          ? _value.machine
-          : machine // ignore: cast_nullable_to_non_nullable
-              as String,
-      cpu: null == cpu
-          ? _value.cpu
-          : cpu // ignore: cast_nullable_to_non_nullable
-              as ServerInfoCpu,
-      mem: null == mem
-          ? _value.mem
-          : mem // ignore: cast_nullable_to_non_nullable
-              as ServerInfoMem,
-      fs: null == fs
-          ? _value.fs
-          : fs // ignore: cast_nullable_to_non_nullable
-              as ServerInfoFs,
-    ));
+    return _then(
+      _$ServerInfoResponseImpl(
+        machine:
+            null == machine
+                ? _value.machine
+                : machine // ignore: cast_nullable_to_non_nullable
+                    as String,
+        cpu:
+            null == cpu
+                ? _value.cpu
+                : cpu // ignore: cast_nullable_to_non_nullable
+                    as ServerInfoCpu,
+        mem:
+            null == mem
+                ? _value.mem
+                : mem // ignore: cast_nullable_to_non_nullable
+                    as ServerInfoMem,
+        fs:
+            null == fs
+                ? _value.fs
+                : fs // ignore: cast_nullable_to_non_nullable
+                    as ServerInfoFs,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ServerInfoResponseImpl implements _ServerInfoResponse {
-  const _$ServerInfoResponseImpl(
-      {required this.machine,
-      required this.cpu,
-      required this.mem,
-      required this.fs});
+  const _$ServerInfoResponseImpl({
+    required this.machine,
+    required this.cpu,
+    required this.mem,
+    required this.fs,
+  });
 
   factory _$ServerInfoResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$ServerInfoResponseImplFromJson(json);
@@ -226,22 +252,23 @@ class _$ServerInfoResponseImpl implements _ServerInfoResponse {
   @pragma('vm:prefer-inline')
   _$$ServerInfoResponseImplCopyWith<_$ServerInfoResponseImpl> get copyWith =>
       __$$ServerInfoResponseImplCopyWithImpl<_$ServerInfoResponseImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ServerInfoResponseImplToJson(
-      this,
-    );
+    return _$$ServerInfoResponseImplToJson(this);
   }
 }
 
 abstract class _ServerInfoResponse implements ServerInfoResponse {
-  const factory _ServerInfoResponse(
-      {required final String machine,
-      required final ServerInfoCpu cpu,
-      required final ServerInfoMem mem,
-      required final ServerInfoFs fs}) = _$ServerInfoResponseImpl;
+  const factory _ServerInfoResponse({
+    required final String machine,
+    required final ServerInfoCpu cpu,
+    required final ServerInfoMem mem,
+    required final ServerInfoFs fs,
+  }) = _$ServerInfoResponseImpl;
 
   factory _ServerInfoResponse.fromJson(Map<String, dynamic> json) =
       _$ServerInfoResponseImpl.fromJson;
@@ -285,8 +312,9 @@ mixin _$ServerInfoCpu {
 /// @nodoc
 abstract class $ServerInfoCpuCopyWith<$Res> {
   factory $ServerInfoCpuCopyWith(
-          ServerInfoCpu value, $Res Function(ServerInfoCpu) then) =
-      _$ServerInfoCpuCopyWithImpl<$Res, ServerInfoCpu>;
+    ServerInfoCpu value,
+    $Res Function(ServerInfoCpu) then,
+  ) = _$ServerInfoCpuCopyWithImpl<$Res, ServerInfoCpu>;
   @useResult
   $Res call({String model, int cores});
 }
@@ -305,20 +333,22 @@ class _$ServerInfoCpuCopyWithImpl<$Res, $Val extends ServerInfoCpu>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? model = null,
-    Object? cores = null,
-  }) {
-    return _then(_value.copyWith(
-      model: null == model
-          ? _value.model
-          : model // ignore: cast_nullable_to_non_nullable
-              as String,
-      cores: null == cores
-          ? _value.cores
-          : cores // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
+  $Res call({Object? model = null, Object? cores = null}) {
+    return _then(
+      _value.copyWith(
+            model:
+                null == model
+                    ? _value.model
+                    : model // ignore: cast_nullable_to_non_nullable
+                        as String,
+            cores:
+                null == cores
+                    ? _value.cores
+                    : cores // ignore: cast_nullable_to_non_nullable
+                        as int,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -326,8 +356,9 @@ class _$ServerInfoCpuCopyWithImpl<$Res, $Val extends ServerInfoCpu>
 abstract class _$$ServerInfoCpuImplCopyWith<$Res>
     implements $ServerInfoCpuCopyWith<$Res> {
   factory _$$ServerInfoCpuImplCopyWith(
-          _$ServerInfoCpuImpl value, $Res Function(_$ServerInfoCpuImpl) then) =
-      __$$ServerInfoCpuImplCopyWithImpl<$Res>;
+    _$ServerInfoCpuImpl value,
+    $Res Function(_$ServerInfoCpuImpl) then,
+  ) = __$$ServerInfoCpuImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String model, int cores});
@@ -338,27 +369,29 @@ class __$$ServerInfoCpuImplCopyWithImpl<$Res>
     extends _$ServerInfoCpuCopyWithImpl<$Res, _$ServerInfoCpuImpl>
     implements _$$ServerInfoCpuImplCopyWith<$Res> {
   __$$ServerInfoCpuImplCopyWithImpl(
-      _$ServerInfoCpuImpl _value, $Res Function(_$ServerInfoCpuImpl) _then)
-      : super(_value, _then);
+    _$ServerInfoCpuImpl _value,
+    $Res Function(_$ServerInfoCpuImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ServerInfoCpu
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? model = null,
-    Object? cores = null,
-  }) {
-    return _then(_$ServerInfoCpuImpl(
-      model: null == model
-          ? _value.model
-          : model // ignore: cast_nullable_to_non_nullable
-              as String,
-      cores: null == cores
-          ? _value.cores
-          : cores // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
+  $Res call({Object? model = null, Object? cores = null}) {
+    return _then(
+      _$ServerInfoCpuImpl(
+        model:
+            null == model
+                ? _value.model
+                : model // ignore: cast_nullable_to_non_nullable
+                    as String,
+        cores:
+            null == cores
+                ? _value.cores
+                : cores // ignore: cast_nullable_to_non_nullable
+                    as int,
+      ),
+    );
   }
 }
 
@@ -403,16 +436,15 @@ class _$ServerInfoCpuImpl implements _ServerInfoCpu {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ServerInfoCpuImplToJson(
-      this,
-    );
+    return _$$ServerInfoCpuImplToJson(this);
   }
 }
 
 abstract class _ServerInfoCpu implements ServerInfoCpu {
-  const factory _ServerInfoCpu(
-      {required final String model,
-      required final int cores}) = _$ServerInfoCpuImpl;
+  const factory _ServerInfoCpu({
+    required final String model,
+    required final int cores,
+  }) = _$ServerInfoCpuImpl;
 
   factory _ServerInfoCpu.fromJson(Map<String, dynamic> json) =
       _$ServerInfoCpuImpl.fromJson;
@@ -451,8 +483,9 @@ mixin _$ServerInfoMem {
 /// @nodoc
 abstract class $ServerInfoMemCopyWith<$Res> {
   factory $ServerInfoMemCopyWith(
-          ServerInfoMem value, $Res Function(ServerInfoMem) then) =
-      _$ServerInfoMemCopyWithImpl<$Res, ServerInfoMem>;
+    ServerInfoMem value,
+    $Res Function(ServerInfoMem) then,
+  ) = _$ServerInfoMemCopyWithImpl<$Res, ServerInfoMem>;
   @useResult
   $Res call({int total});
 }
@@ -471,15 +504,17 @@ class _$ServerInfoMemCopyWithImpl<$Res, $Val extends ServerInfoMem>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? total = null,
-  }) {
-    return _then(_value.copyWith(
-      total: null == total
-          ? _value.total
-          : total // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
+  $Res call({Object? total = null}) {
+    return _then(
+      _value.copyWith(
+            total:
+                null == total
+                    ? _value.total
+                    : total // ignore: cast_nullable_to_non_nullable
+                        as int,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -487,8 +522,9 @@ class _$ServerInfoMemCopyWithImpl<$Res, $Val extends ServerInfoMem>
 abstract class _$$ServerInfoMemImplCopyWith<$Res>
     implements $ServerInfoMemCopyWith<$Res> {
   factory _$$ServerInfoMemImplCopyWith(
-          _$ServerInfoMemImpl value, $Res Function(_$ServerInfoMemImpl) then) =
-      __$$ServerInfoMemImplCopyWithImpl<$Res>;
+    _$ServerInfoMemImpl value,
+    $Res Function(_$ServerInfoMemImpl) then,
+  ) = __$$ServerInfoMemImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int total});
@@ -499,22 +535,24 @@ class __$$ServerInfoMemImplCopyWithImpl<$Res>
     extends _$ServerInfoMemCopyWithImpl<$Res, _$ServerInfoMemImpl>
     implements _$$ServerInfoMemImplCopyWith<$Res> {
   __$$ServerInfoMemImplCopyWithImpl(
-      _$ServerInfoMemImpl _value, $Res Function(_$ServerInfoMemImpl) _then)
-      : super(_value, _then);
+    _$ServerInfoMemImpl _value,
+    $Res Function(_$ServerInfoMemImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ServerInfoMem
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? total = null,
-  }) {
-    return _then(_$ServerInfoMemImpl(
-      total: null == total
-          ? _value.total
-          : total // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
+  $Res call({Object? total = null}) {
+    return _then(
+      _$ServerInfoMemImpl(
+        total:
+            null == total
+                ? _value.total
+                : total // ignore: cast_nullable_to_non_nullable
+                    as int,
+      ),
+    );
   }
 }
 
@@ -556,9 +594,7 @@ class _$ServerInfoMemImpl implements _ServerInfoMem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ServerInfoMemImplToJson(
-      this,
-    );
+    return _$$ServerInfoMemImplToJson(this);
   }
 }
 
@@ -602,8 +638,9 @@ mixin _$ServerInfoFs {
 /// @nodoc
 abstract class $ServerInfoFsCopyWith<$Res> {
   factory $ServerInfoFsCopyWith(
-          ServerInfoFs value, $Res Function(ServerInfoFs) then) =
-      _$ServerInfoFsCopyWithImpl<$Res, ServerInfoFs>;
+    ServerInfoFs value,
+    $Res Function(ServerInfoFs) then,
+  ) = _$ServerInfoFsCopyWithImpl<$Res, ServerInfoFs>;
   @useResult
   $Res call({int total, int used});
 }
@@ -622,20 +659,22 @@ class _$ServerInfoFsCopyWithImpl<$Res, $Val extends ServerInfoFs>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? total = null,
-    Object? used = null,
-  }) {
-    return _then(_value.copyWith(
-      total: null == total
-          ? _value.total
-          : total // ignore: cast_nullable_to_non_nullable
-              as int,
-      used: null == used
-          ? _value.used
-          : used // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
+  $Res call({Object? total = null, Object? used = null}) {
+    return _then(
+      _value.copyWith(
+            total:
+                null == total
+                    ? _value.total
+                    : total // ignore: cast_nullable_to_non_nullable
+                        as int,
+            used:
+                null == used
+                    ? _value.used
+                    : used // ignore: cast_nullable_to_non_nullable
+                        as int,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -643,8 +682,9 @@ class _$ServerInfoFsCopyWithImpl<$Res, $Val extends ServerInfoFs>
 abstract class _$$ServerInfoFsImplCopyWith<$Res>
     implements $ServerInfoFsCopyWith<$Res> {
   factory _$$ServerInfoFsImplCopyWith(
-          _$ServerInfoFsImpl value, $Res Function(_$ServerInfoFsImpl) then) =
-      __$$ServerInfoFsImplCopyWithImpl<$Res>;
+    _$ServerInfoFsImpl value,
+    $Res Function(_$ServerInfoFsImpl) then,
+  ) = __$$ServerInfoFsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int total, int used});
@@ -655,27 +695,29 @@ class __$$ServerInfoFsImplCopyWithImpl<$Res>
     extends _$ServerInfoFsCopyWithImpl<$Res, _$ServerInfoFsImpl>
     implements _$$ServerInfoFsImplCopyWith<$Res> {
   __$$ServerInfoFsImplCopyWithImpl(
-      _$ServerInfoFsImpl _value, $Res Function(_$ServerInfoFsImpl) _then)
-      : super(_value, _then);
+    _$ServerInfoFsImpl _value,
+    $Res Function(_$ServerInfoFsImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ServerInfoFs
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? total = null,
-    Object? used = null,
-  }) {
-    return _then(_$ServerInfoFsImpl(
-      total: null == total
-          ? _value.total
-          : total // ignore: cast_nullable_to_non_nullable
-              as int,
-      used: null == used
-          ? _value.used
-          : used // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
+  $Res call({Object? total = null, Object? used = null}) {
+    return _then(
+      _$ServerInfoFsImpl(
+        total:
+            null == total
+                ? _value.total
+                : total // ignore: cast_nullable_to_non_nullable
+                    as int,
+        used:
+            null == used
+                ? _value.used
+                : used // ignore: cast_nullable_to_non_nullable
+                    as int,
+      ),
+    );
   }
 }
 
@@ -720,15 +762,15 @@ class _$ServerInfoFsImpl implements _ServerInfoFs {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ServerInfoFsImplToJson(
-      this,
-    );
+    return _$$ServerInfoFsImplToJson(this);
   }
 }
 
 abstract class _ServerInfoFs implements ServerInfoFs {
-  const factory _ServerInfoFs(
-      {required final int total, required final int used}) = _$ServerInfoFsImpl;
+  const factory _ServerInfoFs({
+    required final int total,
+    required final int used,
+  }) = _$ServerInfoFsImpl;
 
   factory _ServerInfoFs.fromJson(Map<String, dynamic> json) =
       _$ServerInfoFsImpl.fromJson;

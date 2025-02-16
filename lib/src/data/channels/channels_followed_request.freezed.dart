@@ -12,10 +12,12 @@ part of 'channels_followed_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ChannelsFollowedRequest _$ChannelsFollowedRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _ChannelsFollowedRequest.fromJson(json);
 }
 
@@ -39,16 +41,19 @@ mixin _$ChannelsFollowedRequest {
 
 /// @nodoc
 abstract class $ChannelsFollowedRequestCopyWith<$Res> {
-  factory $ChannelsFollowedRequestCopyWith(ChannelsFollowedRequest value,
-          $Res Function(ChannelsFollowedRequest) then) =
-      _$ChannelsFollowedRequestCopyWithImpl<$Res, ChannelsFollowedRequest>;
+  factory $ChannelsFollowedRequestCopyWith(
+    ChannelsFollowedRequest value,
+    $Res Function(ChannelsFollowedRequest) then,
+  ) = _$ChannelsFollowedRequestCopyWithImpl<$Res, ChannelsFollowedRequest>;
   @useResult
   $Res call({String? sinceId, String? untilId, int? limit});
 }
 
 /// @nodoc
-class _$ChannelsFollowedRequestCopyWithImpl<$Res,
-        $Val extends ChannelsFollowedRequest>
+class _$ChannelsFollowedRequestCopyWithImpl<
+  $Res,
+  $Val extends ChannelsFollowedRequest
+>
     implements $ChannelsFollowedRequestCopyWith<$Res> {
   _$ChannelsFollowedRequestCopyWithImpl(this._value, this._then);
 
@@ -66,20 +71,26 @@ class _$ChannelsFollowedRequestCopyWithImpl<$Res,
     Object? untilId = freezed,
     Object? limit = freezed,
   }) {
-    return _then(_value.copyWith(
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -87,9 +98,9 @@ class _$ChannelsFollowedRequestCopyWithImpl<$Res,
 abstract class _$$ChannelsFollowedRequestImplCopyWith<$Res>
     implements $ChannelsFollowedRequestCopyWith<$Res> {
   factory _$$ChannelsFollowedRequestImplCopyWith(
-          _$ChannelsFollowedRequestImpl value,
-          $Res Function(_$ChannelsFollowedRequestImpl) then) =
-      __$$ChannelsFollowedRequestImplCopyWithImpl<$Res>;
+    _$ChannelsFollowedRequestImpl value,
+    $Res Function(_$ChannelsFollowedRequestImpl) then,
+  ) = __$$ChannelsFollowedRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? sinceId, String? untilId, int? limit});
@@ -97,13 +108,16 @@ abstract class _$$ChannelsFollowedRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$ChannelsFollowedRequestImplCopyWithImpl<$Res>
-    extends _$ChannelsFollowedRequestCopyWithImpl<$Res,
-        _$ChannelsFollowedRequestImpl>
+    extends
+        _$ChannelsFollowedRequestCopyWithImpl<
+          $Res,
+          _$ChannelsFollowedRequestImpl
+        >
     implements _$$ChannelsFollowedRequestImplCopyWith<$Res> {
   __$$ChannelsFollowedRequestImplCopyWithImpl(
-      _$ChannelsFollowedRequestImpl _value,
-      $Res Function(_$ChannelsFollowedRequestImpl) _then)
-      : super(_value, _then);
+    _$ChannelsFollowedRequestImpl _value,
+    $Res Function(_$ChannelsFollowedRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelsFollowedRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -114,20 +128,25 @@ class __$$ChannelsFollowedRequestImplCopyWithImpl<$Res>
     Object? untilId = freezed,
     Object? limit = freezed,
   }) {
-    return _then(_$ChannelsFollowedRequestImpl(
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ));
+    return _then(
+      _$ChannelsFollowedRequestImpl(
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+      ),
+    );
   }
 }
 
@@ -173,22 +192,22 @@ class _$ChannelsFollowedRequestImpl implements _ChannelsFollowedRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$ChannelsFollowedRequestImplCopyWith<_$ChannelsFollowedRequestImpl>
-      get copyWith => __$$ChannelsFollowedRequestImplCopyWithImpl<
-          _$ChannelsFollowedRequestImpl>(this, _$identity);
+  get copyWith => __$$ChannelsFollowedRequestImplCopyWithImpl<
+    _$ChannelsFollowedRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ChannelsFollowedRequestImplToJson(
-      this,
-    );
+    return _$$ChannelsFollowedRequestImplToJson(this);
   }
 }
 
 abstract class _ChannelsFollowedRequest implements ChannelsFollowedRequest {
-  const factory _ChannelsFollowedRequest(
-      {final String? sinceId,
-      final String? untilId,
-      final int? limit}) = _$ChannelsFollowedRequestImpl;
+  const factory _ChannelsFollowedRequest({
+    final String? sinceId,
+    final String? untilId,
+    final int? limit,
+  }) = _$ChannelsFollowedRequestImpl;
 
   factory _ChannelsFollowedRequest.fromJson(Map<String, dynamic> json) =
       _$ChannelsFollowedRequestImpl.fromJson;
@@ -207,5 +226,5 @@ abstract class _ChannelsFollowedRequest implements ChannelsFollowedRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ChannelsFollowedRequestImplCopyWith<_$ChannelsFollowedRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

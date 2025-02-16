@@ -7,24 +7,20 @@ part of 'gallery_posts_request.dart';
 // **************************************************************************
 
 _$GalleryPostsRequestImpl _$$GalleryPostsRequestImplFromJson(
-        Map<String, dynamic> json) =>
-    $checkedCreate(
-      r'_$GalleryPostsRequestImpl',
-      json,
-      ($checkedConvert) {
-        final val = _$GalleryPostsRequestImpl(
-          limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-          sinceId: $checkedConvert('sinceId', (v) => v as String?),
-          untilId: $checkedConvert('untilId', (v) => v as String?),
-        );
-        return val;
-      },
-    );
+  Map<String, dynamic> json,
+) => $checkedCreate(r'_$GalleryPostsRequestImpl', json, ($checkedConvert) {
+  final val = _$GalleryPostsRequestImpl(
+    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
+    sinceId: $checkedConvert('sinceId', (v) => v as String?),
+    untilId: $checkedConvert('untilId', (v) => v as String?),
+  );
+  return val;
+});
 
 Map<String, dynamic> _$$GalleryPostsRequestImplToJson(
-        _$GalleryPostsRequestImpl instance) =>
-    <String, dynamic>{
-      'limit': instance.limit,
-      'sinceId': instance.sinceId,
-      'untilId': instance.untilId,
-    };
+  _$GalleryPostsRequestImpl instance,
+) => <String, dynamic>{
+  'limit': instance.limit,
+  'sinceId': instance.sinceId,
+  'untilId': instance.untilId,
+};

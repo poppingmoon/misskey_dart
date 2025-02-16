@@ -12,7 +12,8 @@ part of 'flash_update_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 FlashUpdateRequest _$FlashUpdateRequestFromJson(Map<String, dynamic> json) {
   return _FlashUpdateRequest.fromJson(json);
@@ -40,16 +41,18 @@ mixin _$FlashUpdateRequest {
 /// @nodoc
 abstract class $FlashUpdateRequestCopyWith<$Res> {
   factory $FlashUpdateRequestCopyWith(
-          FlashUpdateRequest value, $Res Function(FlashUpdateRequest) then) =
-      _$FlashUpdateRequestCopyWithImpl<$Res, FlashUpdateRequest>;
+    FlashUpdateRequest value,
+    $Res Function(FlashUpdateRequest) then,
+  ) = _$FlashUpdateRequestCopyWithImpl<$Res, FlashUpdateRequest>;
   @useResult
-  $Res call(
-      {String flashId,
-      String? title,
-      String? summary,
-      String? script,
-      List<String>? permissions,
-      FlashVisibility? visibility});
+  $Res call({
+    String flashId,
+    String? title,
+    String? summary,
+    String? script,
+    List<String>? permissions,
+    FlashVisibility? visibility,
+  });
 }
 
 /// @nodoc
@@ -74,59 +77,71 @@ class _$FlashUpdateRequestCopyWithImpl<$Res, $Val extends FlashUpdateRequest>
     Object? permissions = freezed,
     Object? visibility = freezed,
   }) {
-    return _then(_value.copyWith(
-      flashId: null == flashId
-          ? _value.flashId
-          : flashId // ignore: cast_nullable_to_non_nullable
-              as String,
-      title: freezed == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String?,
-      summary: freezed == summary
-          ? _value.summary
-          : summary // ignore: cast_nullable_to_non_nullable
-              as String?,
-      script: freezed == script
-          ? _value.script
-          : script // ignore: cast_nullable_to_non_nullable
-              as String?,
-      permissions: freezed == permissions
-          ? _value.permissions
-          : permissions // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      visibility: freezed == visibility
-          ? _value.visibility
-          : visibility // ignore: cast_nullable_to_non_nullable
-              as FlashVisibility?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            flashId:
+                null == flashId
+                    ? _value.flashId
+                    : flashId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            title:
+                freezed == title
+                    ? _value.title
+                    : title // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            summary:
+                freezed == summary
+                    ? _value.summary
+                    : summary // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            script:
+                freezed == script
+                    ? _value.script
+                    : script // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            permissions:
+                freezed == permissions
+                    ? _value.permissions
+                    : permissions // ignore: cast_nullable_to_non_nullable
+                        as List<String>?,
+            visibility:
+                freezed == visibility
+                    ? _value.visibility
+                    : visibility // ignore: cast_nullable_to_non_nullable
+                        as FlashVisibility?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$FlashUpdateRequestImplCopyWith<$Res>
     implements $FlashUpdateRequestCopyWith<$Res> {
-  factory _$$FlashUpdateRequestImplCopyWith(_$FlashUpdateRequestImpl value,
-          $Res Function(_$FlashUpdateRequestImpl) then) =
-      __$$FlashUpdateRequestImplCopyWithImpl<$Res>;
+  factory _$$FlashUpdateRequestImplCopyWith(
+    _$FlashUpdateRequestImpl value,
+    $Res Function(_$FlashUpdateRequestImpl) then,
+  ) = __$$FlashUpdateRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String flashId,
-      String? title,
-      String? summary,
-      String? script,
-      List<String>? permissions,
-      FlashVisibility? visibility});
+  $Res call({
+    String flashId,
+    String? title,
+    String? summary,
+    String? script,
+    List<String>? permissions,
+    FlashVisibility? visibility,
+  });
 }
 
 /// @nodoc
 class __$$FlashUpdateRequestImplCopyWithImpl<$Res>
     extends _$FlashUpdateRequestCopyWithImpl<$Res, _$FlashUpdateRequestImpl>
     implements _$$FlashUpdateRequestImplCopyWith<$Res> {
-  __$$FlashUpdateRequestImplCopyWithImpl(_$FlashUpdateRequestImpl _value,
-      $Res Function(_$FlashUpdateRequestImpl) _then)
-      : super(_value, _then);
+  __$$FlashUpdateRequestImplCopyWithImpl(
+    _$FlashUpdateRequestImpl _value,
+    $Res Function(_$FlashUpdateRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of FlashUpdateRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -140,46 +155,54 @@ class __$$FlashUpdateRequestImplCopyWithImpl<$Res>
     Object? permissions = freezed,
     Object? visibility = freezed,
   }) {
-    return _then(_$FlashUpdateRequestImpl(
-      flashId: null == flashId
-          ? _value.flashId
-          : flashId // ignore: cast_nullable_to_non_nullable
-              as String,
-      title: freezed == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String?,
-      summary: freezed == summary
-          ? _value.summary
-          : summary // ignore: cast_nullable_to_non_nullable
-              as String?,
-      script: freezed == script
-          ? _value.script
-          : script // ignore: cast_nullable_to_non_nullable
-              as String?,
-      permissions: freezed == permissions
-          ? _value._permissions
-          : permissions // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      visibility: freezed == visibility
-          ? _value.visibility
-          : visibility // ignore: cast_nullable_to_non_nullable
-              as FlashVisibility?,
-    ));
+    return _then(
+      _$FlashUpdateRequestImpl(
+        flashId:
+            null == flashId
+                ? _value.flashId
+                : flashId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        title:
+            freezed == title
+                ? _value.title
+                : title // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        summary:
+            freezed == summary
+                ? _value.summary
+                : summary // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        script:
+            freezed == script
+                ? _value.script
+                : script // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        permissions:
+            freezed == permissions
+                ? _value._permissions
+                : permissions // ignore: cast_nullable_to_non_nullable
+                    as List<String>?,
+        visibility:
+            freezed == visibility
+                ? _value.visibility
+                : visibility // ignore: cast_nullable_to_non_nullable
+                    as FlashVisibility?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$FlashUpdateRequestImpl implements _FlashUpdateRequest {
-  const _$FlashUpdateRequestImpl(
-      {required this.flashId,
-      this.title,
-      this.summary,
-      this.script,
-      final List<String>? permissions,
-      this.visibility})
-      : _permissions = permissions;
+  const _$FlashUpdateRequestImpl({
+    required this.flashId,
+    this.title,
+    this.summary,
+    this.script,
+    final List<String>? permissions,
+    this.visibility,
+  }) : _permissions = permissions;
 
   factory _$FlashUpdateRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$FlashUpdateRequestImplFromJson(json);
@@ -219,16 +242,25 @@ class _$FlashUpdateRequestImpl implements _FlashUpdateRequest {
             (identical(other.title, title) || other.title == title) &&
             (identical(other.summary, summary) || other.summary == summary) &&
             (identical(other.script, script) || other.script == script) &&
-            const DeepCollectionEquality()
-                .equals(other._permissions, _permissions) &&
+            const DeepCollectionEquality().equals(
+              other._permissions,
+              _permissions,
+            ) &&
             (identical(other.visibility, visibility) ||
                 other.visibility == visibility));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, flashId, title, summary, script,
-      const DeepCollectionEquality().hash(_permissions), visibility);
+  int get hashCode => Object.hash(
+    runtimeType,
+    flashId,
+    title,
+    summary,
+    script,
+    const DeepCollectionEquality().hash(_permissions),
+    visibility,
+  );
 
   /// Create a copy of FlashUpdateRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -237,24 +269,25 @@ class _$FlashUpdateRequestImpl implements _FlashUpdateRequest {
   @pragma('vm:prefer-inline')
   _$$FlashUpdateRequestImplCopyWith<_$FlashUpdateRequestImpl> get copyWith =>
       __$$FlashUpdateRequestImplCopyWithImpl<_$FlashUpdateRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$FlashUpdateRequestImplToJson(
-      this,
-    );
+    return _$$FlashUpdateRequestImplToJson(this);
   }
 }
 
 abstract class _FlashUpdateRequest implements FlashUpdateRequest {
-  const factory _FlashUpdateRequest(
-      {required final String flashId,
-      final String? title,
-      final String? summary,
-      final String? script,
-      final List<String>? permissions,
-      final FlashVisibility? visibility}) = _$FlashUpdateRequestImpl;
+  const factory _FlashUpdateRequest({
+    required final String flashId,
+    final String? title,
+    final String? summary,
+    final String? script,
+    final List<String>? permissions,
+    final FlashVisibility? visibility,
+  }) = _$FlashUpdateRequestImpl;
 
   factory _FlashUpdateRequest.fromJson(Map<String, dynamic> json) =
       _$FlashUpdateRequestImpl.fromJson;

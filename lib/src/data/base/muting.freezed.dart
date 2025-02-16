@@ -12,7 +12,8 @@ part of 'muting.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 Muting _$MutingFromJson(Map<String, dynamic> json) {
   return _Muting.fromJson(json);
@@ -42,12 +43,13 @@ abstract class $MutingCopyWith<$Res> {
   factory $MutingCopyWith(Muting value, $Res Function(Muting) then) =
       _$MutingCopyWithImpl<$Res, Muting>;
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime createdAt,
-      @NullableDateTimeConverter() DateTime? expiresAt,
-      String muteeId,
-      UserDetailedNotMe mutee});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime createdAt,
+    @NullableDateTimeConverter() DateTime? expiresAt,
+    String muteeId,
+    UserDetailedNotMe mutee,
+  });
 
   $UserDetailedNotMeCopyWith<$Res> get mutee;
 }
@@ -73,28 +75,36 @@ class _$MutingCopyWithImpl<$Res, $Val extends Muting>
     Object? muteeId = null,
     Object? mutee = null,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      expiresAt: freezed == expiresAt
-          ? _value.expiresAt
-          : expiresAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      muteeId: null == muteeId
-          ? _value.muteeId
-          : muteeId // ignore: cast_nullable_to_non_nullable
-              as String,
-      mutee: null == mutee
-          ? _value.mutee
-          : mutee // ignore: cast_nullable_to_non_nullable
-              as UserDetailedNotMe,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            createdAt:
+                null == createdAt
+                    ? _value.createdAt
+                    : createdAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            expiresAt:
+                freezed == expiresAt
+                    ? _value.expiresAt
+                    : expiresAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            muteeId:
+                null == muteeId
+                    ? _value.muteeId
+                    : muteeId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            mutee:
+                null == mutee
+                    ? _value.mutee
+                    : mutee // ignore: cast_nullable_to_non_nullable
+                        as UserDetailedNotMe,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of Muting
@@ -111,16 +121,18 @@ class _$MutingCopyWithImpl<$Res, $Val extends Muting>
 /// @nodoc
 abstract class _$$MutingImplCopyWith<$Res> implements $MutingCopyWith<$Res> {
   factory _$$MutingImplCopyWith(
-          _$MutingImpl value, $Res Function(_$MutingImpl) then) =
-      __$$MutingImplCopyWithImpl<$Res>;
+    _$MutingImpl value,
+    $Res Function(_$MutingImpl) then,
+  ) = __$$MutingImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime createdAt,
-      @NullableDateTimeConverter() DateTime? expiresAt,
-      String muteeId,
-      UserDetailedNotMe mutee});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime createdAt,
+    @NullableDateTimeConverter() DateTime? expiresAt,
+    String muteeId,
+    UserDetailedNotMe mutee,
+  });
 
   @override
   $UserDetailedNotMeCopyWith<$Res> get mutee;
@@ -131,8 +143,9 @@ class __$$MutingImplCopyWithImpl<$Res>
     extends _$MutingCopyWithImpl<$Res, _$MutingImpl>
     implements _$$MutingImplCopyWith<$Res> {
   __$$MutingImplCopyWithImpl(
-      _$MutingImpl _value, $Res Function(_$MutingImpl) _then)
-      : super(_value, _then);
+    _$MutingImpl _value,
+    $Res Function(_$MutingImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of Muting
   /// with the given fields replaced by the non-null parameter values.
@@ -145,40 +158,48 @@ class __$$MutingImplCopyWithImpl<$Res>
     Object? muteeId = null,
     Object? mutee = null,
   }) {
-    return _then(_$MutingImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      expiresAt: freezed == expiresAt
-          ? _value.expiresAt
-          : expiresAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      muteeId: null == muteeId
-          ? _value.muteeId
-          : muteeId // ignore: cast_nullable_to_non_nullable
-              as String,
-      mutee: null == mutee
-          ? _value.mutee
-          : mutee // ignore: cast_nullable_to_non_nullable
-              as UserDetailedNotMe,
-    ));
+    return _then(
+      _$MutingImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        createdAt:
+            null == createdAt
+                ? _value.createdAt
+                : createdAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        expiresAt:
+            freezed == expiresAt
+                ? _value.expiresAt
+                : expiresAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        muteeId:
+            null == muteeId
+                ? _value.muteeId
+                : muteeId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        mutee:
+            null == mutee
+                ? _value.mutee
+                : mutee // ignore: cast_nullable_to_non_nullable
+                    as UserDetailedNotMe,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$MutingImpl implements _Muting {
-  const _$MutingImpl(
-      {required this.id,
-      @DateTimeConverter() required this.createdAt,
-      @NullableDateTimeConverter() this.expiresAt,
-      required this.muteeId,
-      required this.mutee});
+  const _$MutingImpl({
+    required this.id,
+    @DateTimeConverter() required this.createdAt,
+    @NullableDateTimeConverter() this.expiresAt,
+    required this.muteeId,
+    required this.mutee,
+  });
 
   factory _$MutingImpl.fromJson(Map<String, dynamic> json) =>
       _$$MutingImplFromJson(json);
@@ -230,19 +251,18 @@ class _$MutingImpl implements _Muting {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MutingImplToJson(
-      this,
-    );
+    return _$$MutingImplToJson(this);
   }
 }
 
 abstract class _Muting implements Muting {
-  const factory _Muting(
-      {required final String id,
-      @DateTimeConverter() required final DateTime createdAt,
-      @NullableDateTimeConverter() final DateTime? expiresAt,
-      required final String muteeId,
-      required final UserDetailedNotMe mutee}) = _$MutingImpl;
+  const factory _Muting({
+    required final String id,
+    @DateTimeConverter() required final DateTime createdAt,
+    @NullableDateTimeConverter() final DateTime? expiresAt,
+    required final String muteeId,
+    required final UserDetailedNotMe mutee,
+  }) = _$MutingImpl;
 
   factory _Muting.fromJson(Map<String, dynamic> json) = _$MutingImpl.fromJson;
 

@@ -12,16 +12,18 @@ part of 'drive_files_show_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 DriveFilesShowRequest _$DriveFilesShowRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _DriveFilesShowRequest.fromJson(json);
 }
 
 /// @nodoc
 mixin _$DriveFilesShowRequest {
-// どちらか必須
+  // どちらか必須
   String? get fileId => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
 
@@ -37,16 +39,19 @@ mixin _$DriveFilesShowRequest {
 
 /// @nodoc
 abstract class $DriveFilesShowRequestCopyWith<$Res> {
-  factory $DriveFilesShowRequestCopyWith(DriveFilesShowRequest value,
-          $Res Function(DriveFilesShowRequest) then) =
-      _$DriveFilesShowRequestCopyWithImpl<$Res, DriveFilesShowRequest>;
+  factory $DriveFilesShowRequestCopyWith(
+    DriveFilesShowRequest value,
+    $Res Function(DriveFilesShowRequest) then,
+  ) = _$DriveFilesShowRequestCopyWithImpl<$Res, DriveFilesShowRequest>;
   @useResult
   $Res call({String? fileId, String? url});
 }
 
 /// @nodoc
-class _$DriveFilesShowRequestCopyWithImpl<$Res,
-        $Val extends DriveFilesShowRequest>
+class _$DriveFilesShowRequestCopyWithImpl<
+  $Res,
+  $Val extends DriveFilesShowRequest
+>
     implements $DriveFilesShowRequestCopyWith<$Res> {
   _$DriveFilesShowRequestCopyWithImpl(this._value, this._then);
 
@@ -59,20 +64,22 @@ class _$DriveFilesShowRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? fileId = freezed,
-    Object? url = freezed,
-  }) {
-    return _then(_value.copyWith(
-      fileId: freezed == fileId
-          ? _value.fileId
-          : fileId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  $Res call({Object? fileId = freezed, Object? url = freezed}) {
+    return _then(
+      _value.copyWith(
+            fileId:
+                freezed == fileId
+                    ? _value.fileId
+                    : fileId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            url:
+                freezed == url
+                    ? _value.url
+                    : url // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -80,9 +87,9 @@ class _$DriveFilesShowRequestCopyWithImpl<$Res,
 abstract class _$$DriveFilesShowRequestImplCopyWith<$Res>
     implements $DriveFilesShowRequestCopyWith<$Res> {
   factory _$$DriveFilesShowRequestImplCopyWith(
-          _$DriveFilesShowRequestImpl value,
-          $Res Function(_$DriveFilesShowRequestImpl) then) =
-      __$$DriveFilesShowRequestImplCopyWithImpl<$Res>;
+    _$DriveFilesShowRequestImpl value,
+    $Res Function(_$DriveFilesShowRequestImpl) then,
+  ) = __$$DriveFilesShowRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? fileId, String? url});
@@ -90,31 +97,33 @@ abstract class _$$DriveFilesShowRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$DriveFilesShowRequestImplCopyWithImpl<$Res>
-    extends _$DriveFilesShowRequestCopyWithImpl<$Res,
-        _$DriveFilesShowRequestImpl>
+    extends
+        _$DriveFilesShowRequestCopyWithImpl<$Res, _$DriveFilesShowRequestImpl>
     implements _$$DriveFilesShowRequestImplCopyWith<$Res> {
-  __$$DriveFilesShowRequestImplCopyWithImpl(_$DriveFilesShowRequestImpl _value,
-      $Res Function(_$DriveFilesShowRequestImpl) _then)
-      : super(_value, _then);
+  __$$DriveFilesShowRequestImplCopyWithImpl(
+    _$DriveFilesShowRequestImpl _value,
+    $Res Function(_$DriveFilesShowRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of DriveFilesShowRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? fileId = freezed,
-    Object? url = freezed,
-  }) {
-    return _then(_$DriveFilesShowRequestImpl(
-      fileId: freezed == fileId
-          ? _value.fileId
-          : fileId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+  $Res call({Object? fileId = freezed, Object? url = freezed}) {
+    return _then(
+      _$DriveFilesShowRequestImpl(
+        fileId:
+            freezed == fileId
+                ? _value.fileId
+                : fileId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        url:
+            freezed == url
+                ? _value.url
+                : url // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -126,7 +135,7 @@ class _$DriveFilesShowRequestImpl implements _DriveFilesShowRequest {
   factory _$DriveFilesShowRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$DriveFilesShowRequestImplFromJson(json);
 
-// どちらか必須
+  // どちらか必須
   @override
   final String? fileId;
   @override
@@ -156,25 +165,28 @@ class _$DriveFilesShowRequestImpl implements _DriveFilesShowRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$DriveFilesShowRequestImplCopyWith<_$DriveFilesShowRequestImpl>
-      get copyWith => __$$DriveFilesShowRequestImplCopyWithImpl<
-          _$DriveFilesShowRequestImpl>(this, _$identity);
+  get copyWith =>
+      __$$DriveFilesShowRequestImplCopyWithImpl<_$DriveFilesShowRequestImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DriveFilesShowRequestImplToJson(
-      this,
-    );
+    return _$$DriveFilesShowRequestImplToJson(this);
   }
 }
 
 abstract class _DriveFilesShowRequest implements DriveFilesShowRequest {
-  const factory _DriveFilesShowRequest(
-      {final String? fileId, final String? url}) = _$DriveFilesShowRequestImpl;
+  const factory _DriveFilesShowRequest({
+    final String? fileId,
+    final String? url,
+  }) = _$DriveFilesShowRequestImpl;
 
   factory _DriveFilesShowRequest.fromJson(Map<String, dynamic> json) =
       _$DriveFilesShowRequestImpl.fromJson;
 
-// どちらか必須
+  // どちらか必須
   @override
   String? get fileId;
   @override
@@ -185,5 +197,5 @@ abstract class _DriveFilesShowRequest implements DriveFilesShowRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DriveFilesShowRequestImplCopyWith<_$DriveFilesShowRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

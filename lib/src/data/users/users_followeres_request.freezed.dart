@@ -12,10 +12,12 @@ part of 'users_followeres_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 UsersFollowersRequest _$UsersFollowersRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _UsersFollowersRequest.fromJson(json);
 }
 
@@ -38,16 +40,19 @@ mixin _$UsersFollowersRequest {
 
 /// @nodoc
 abstract class $UsersFollowersRequestCopyWith<$Res> {
-  factory $UsersFollowersRequestCopyWith(UsersFollowersRequest value,
-          $Res Function(UsersFollowersRequest) then) =
-      _$UsersFollowersRequestCopyWithImpl<$Res, UsersFollowersRequest>;
+  factory $UsersFollowersRequestCopyWith(
+    UsersFollowersRequest value,
+    $Res Function(UsersFollowersRequest) then,
+  ) = _$UsersFollowersRequestCopyWithImpl<$Res, UsersFollowersRequest>;
   @useResult
   $Res call({String userId, String? sinceId, String? untilId, int? limit});
 }
 
 /// @nodoc
-class _$UsersFollowersRequestCopyWithImpl<$Res,
-        $Val extends UsersFollowersRequest>
+class _$UsersFollowersRequestCopyWithImpl<
+  $Res,
+  $Val extends UsersFollowersRequest
+>
     implements $UsersFollowersRequestCopyWith<$Res> {
   _$UsersFollowersRequestCopyWithImpl(this._value, this._then);
 
@@ -66,24 +71,31 @@ class _$UsersFollowersRequestCopyWithImpl<$Res,
     Object? untilId = freezed,
     Object? limit = freezed,
   }) {
-    return _then(_value.copyWith(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            userId:
+                null == userId
+                    ? _value.userId
+                    : userId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -91,9 +103,9 @@ class _$UsersFollowersRequestCopyWithImpl<$Res,
 abstract class _$$UsersFollowersRequestImplCopyWith<$Res>
     implements $UsersFollowersRequestCopyWith<$Res> {
   factory _$$UsersFollowersRequestImplCopyWith(
-          _$UsersFollowersRequestImpl value,
-          $Res Function(_$UsersFollowersRequestImpl) then) =
-      __$$UsersFollowersRequestImplCopyWithImpl<$Res>;
+    _$UsersFollowersRequestImpl value,
+    $Res Function(_$UsersFollowersRequestImpl) then,
+  ) = __$$UsersFollowersRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String userId, String? sinceId, String? untilId, int? limit});
@@ -101,12 +113,13 @@ abstract class _$$UsersFollowersRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$UsersFollowersRequestImplCopyWithImpl<$Res>
-    extends _$UsersFollowersRequestCopyWithImpl<$Res,
-        _$UsersFollowersRequestImpl>
+    extends
+        _$UsersFollowersRequestCopyWithImpl<$Res, _$UsersFollowersRequestImpl>
     implements _$$UsersFollowersRequestImplCopyWith<$Res> {
-  __$$UsersFollowersRequestImplCopyWithImpl(_$UsersFollowersRequestImpl _value,
-      $Res Function(_$UsersFollowersRequestImpl) _then)
-      : super(_value, _then);
+  __$$UsersFollowersRequestImplCopyWithImpl(
+    _$UsersFollowersRequestImpl _value,
+    $Res Function(_$UsersFollowersRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UsersFollowersRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -118,32 +131,42 @@ class __$$UsersFollowersRequestImplCopyWithImpl<$Res>
     Object? untilId = freezed,
     Object? limit = freezed,
   }) {
-    return _then(_$UsersFollowersRequestImpl(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ));
+    return _then(
+      _$UsersFollowersRequestImpl(
+        userId:
+            null == userId
+                ? _value.userId
+                : userId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$UsersFollowersRequestImpl implements _UsersFollowersRequest {
-  const _$UsersFollowersRequestImpl(
-      {required this.userId, this.sinceId, this.untilId, this.limit});
+  const _$UsersFollowersRequestImpl({
+    required this.userId,
+    this.sinceId,
+    this.untilId,
+    this.limit,
+  });
 
   factory _$UsersFollowersRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$UsersFollowersRequestImplFromJson(json);
@@ -183,23 +206,25 @@ class _$UsersFollowersRequestImpl implements _UsersFollowersRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$UsersFollowersRequestImplCopyWith<_$UsersFollowersRequestImpl>
-      get copyWith => __$$UsersFollowersRequestImplCopyWithImpl<
-          _$UsersFollowersRequestImpl>(this, _$identity);
+  get copyWith =>
+      __$$UsersFollowersRequestImplCopyWithImpl<_$UsersFollowersRequestImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UsersFollowersRequestImplToJson(
-      this,
-    );
+    return _$$UsersFollowersRequestImplToJson(this);
   }
 }
 
 abstract class _UsersFollowersRequest implements UsersFollowersRequest {
-  const factory _UsersFollowersRequest(
-      {required final String userId,
-      final String? sinceId,
-      final String? untilId,
-      final int? limit}) = _$UsersFollowersRequestImpl;
+  const factory _UsersFollowersRequest({
+    required final String userId,
+    final String? sinceId,
+    final String? untilId,
+    final int? limit,
+  }) = _$UsersFollowersRequestImpl;
 
   factory _UsersFollowersRequest.fromJson(Map<String, dynamic> json) =
       _$UsersFollowersRequestImpl.fromJson;
@@ -218,5 +243,5 @@ abstract class _UsersFollowersRequest implements UsersFollowersRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersFollowersRequestImplCopyWith<_$UsersFollowersRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

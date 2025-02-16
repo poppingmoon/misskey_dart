@@ -12,7 +12,8 @@ part of 'user_list.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 UsersList _$UsersListFromJson(Map<String, dynamic> json) {
   return _UsersList.fromJson(json);
@@ -43,12 +44,13 @@ abstract class $UsersListCopyWith<$Res> {
   factory $UsersListCopyWith(UsersList value, $Res Function(UsersList) then) =
       _$UsersListCopyWithImpl<$Res, UsersList>;
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime createdAt,
-      String? name,
-      List<String> userIds,
-      bool? isPublic});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime createdAt,
+    String? name,
+    List<String> userIds,
+    bool? isPublic,
+  });
 }
 
 /// @nodoc
@@ -72,28 +74,36 @@ class _$UsersListCopyWithImpl<$Res, $Val extends UsersList>
     Object? userIds = null,
     Object? isPublic = freezed,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      userIds: null == userIds
-          ? _value.userIds
-          : userIds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      isPublic: freezed == isPublic
-          ? _value.isPublic
-          : isPublic // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            createdAt:
+                null == createdAt
+                    ? _value.createdAt
+                    : createdAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            name:
+                freezed == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            userIds:
+                null == userIds
+                    ? _value.userIds
+                    : userIds // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+            isPublic:
+                freezed == isPublic
+                    ? _value.isPublic
+                    : isPublic // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -101,16 +111,18 @@ class _$UsersListCopyWithImpl<$Res, $Val extends UsersList>
 abstract class _$$UsersListImplCopyWith<$Res>
     implements $UsersListCopyWith<$Res> {
   factory _$$UsersListImplCopyWith(
-          _$UsersListImpl value, $Res Function(_$UsersListImpl) then) =
-      __$$UsersListImplCopyWithImpl<$Res>;
+    _$UsersListImpl value,
+    $Res Function(_$UsersListImpl) then,
+  ) = __$$UsersListImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime createdAt,
-      String? name,
-      List<String> userIds,
-      bool? isPublic});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime createdAt,
+    String? name,
+    List<String> userIds,
+    bool? isPublic,
+  });
 }
 
 /// @nodoc
@@ -118,8 +130,9 @@ class __$$UsersListImplCopyWithImpl<$Res>
     extends _$UsersListCopyWithImpl<$Res, _$UsersListImpl>
     implements _$$UsersListImplCopyWith<$Res> {
   __$$UsersListImplCopyWithImpl(
-      _$UsersListImpl _value, $Res Function(_$UsersListImpl) _then)
-      : super(_value, _then);
+    _$UsersListImpl _value,
+    $Res Function(_$UsersListImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UsersList
   /// with the given fields replaced by the non-null parameter values.
@@ -132,41 +145,48 @@ class __$$UsersListImplCopyWithImpl<$Res>
     Object? userIds = null,
     Object? isPublic = freezed,
   }) {
-    return _then(_$UsersListImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      userIds: null == userIds
-          ? _value._userIds
-          : userIds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      isPublic: freezed == isPublic
-          ? _value.isPublic
-          : isPublic // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+    return _then(
+      _$UsersListImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        createdAt:
+            null == createdAt
+                ? _value.createdAt
+                : createdAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        name:
+            freezed == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        userIds:
+            null == userIds
+                ? _value._userIds
+                : userIds // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+        isPublic:
+            freezed == isPublic
+                ? _value.isPublic
+                : isPublic // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$UsersListImpl implements _UsersList {
-  const _$UsersListImpl(
-      {required this.id,
-      @DateTimeConverter() required this.createdAt,
-      this.name,
-      required final List<String> userIds,
-      this.isPublic})
-      : _userIds = userIds;
+  const _$UsersListImpl({
+    required this.id,
+    @DateTimeConverter() required this.createdAt,
+    this.name,
+    required final List<String> userIds,
+    this.isPublic,
+  }) : _userIds = userIds;
 
   factory _$UsersListImpl.fromJson(Map<String, dynamic> json) =>
       _$$UsersListImplFromJson(json);
@@ -186,7 +206,7 @@ class _$UsersListImpl implements _UsersList {
     return EqualUnmodifiableListView(_userIds);
   }
 
-// Misskey 13.13.0 で追加. 後方互換性のためnullable
+  // Misskey 13.13.0 で追加. 後方互換性のためnullable
   @override
   final bool? isPublic;
 
@@ -211,8 +231,14 @@ class _$UsersListImpl implements _UsersList {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, createdAt, name,
-      const DeepCollectionEquality().hash(_userIds), isPublic);
+  int get hashCode => Object.hash(
+    runtimeType,
+    id,
+    createdAt,
+    name,
+    const DeepCollectionEquality().hash(_userIds),
+    isPublic,
+  );
 
   /// Create a copy of UsersList
   /// with the given fields replaced by the non-null parameter values.
@@ -224,19 +250,18 @@ class _$UsersListImpl implements _UsersList {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UsersListImplToJson(
-      this,
-    );
+    return _$$UsersListImplToJson(this);
   }
 }
 
 abstract class _UsersList implements UsersList {
-  const factory _UsersList(
-      {required final String id,
-      @DateTimeConverter() required final DateTime createdAt,
-      final String? name,
-      required final List<String> userIds,
-      final bool? isPublic}) = _$UsersListImpl;
+  const factory _UsersList({
+    required final String id,
+    @DateTimeConverter() required final DateTime createdAt,
+    final String? name,
+    required final List<String> userIds,
+    final bool? isPublic,
+  }) = _$UsersListImpl;
 
   factory _UsersList.fromJson(Map<String, dynamic> json) =
       _$UsersListImpl.fromJson;

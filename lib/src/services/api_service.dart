@@ -11,19 +11,17 @@ class ApiService {
   final String host;
   final String? apiUrl;
 
-  ApiService({
-    this.token,
-    required this.host,
-    this.apiUrl,
-    Dio? dio,
-  }) : dio = (dio ?? Dio())
-          ..options = BaseOptions(
-            method: "post",
-            baseUrl: apiUrl ?? "${Uri.https(host)}/api/",
-            contentType: "application/json",
-          )
-          ..interceptors
-              .add(LogInterceptor(requestBody: true, responseBody: true));
+  ApiService({this.token, required this.host, this.apiUrl, Dio? dio})
+    : dio =
+          (dio ?? Dio())
+            ..options = BaseOptions(
+              method: "post",
+              baseUrl: apiUrl ?? "${Uri.https(host)}/api/",
+              contentType: "application/json",
+            )
+            ..interceptors.add(
+              LogInterceptor(requestBody: true, responseBody: true),
+            );
 
   Future<T> post<T>(
     String path,
@@ -32,10 +30,12 @@ class ApiService {
   }) async {
     request
       ..addEntries([MapEntry("i", token)])
-      ..removeWhere((key, value) =>
-          value == null &&
-          (excludeRemoveNullPredicate == null ||
-              !excludeRemoveNullPredicate.call(key, value)));
+      ..removeWhere(
+        (key, value) =>
+            value == null &&
+            (excludeRemoveNullPredicate == null ||
+                !excludeRemoveNullPredicate.call(key, value)),
+      );
     try {
       final response = await dio.request(path, data: request);
       return response.data;
@@ -54,26 +54,27 @@ class ApiService {
   }
 
   Future<T> postWithFile<T>(
-      String path, Map<String, dynamic> request, File file) async {
+    String path,
+    Map<String, dynamic> request,
+    File file,
+  ) async {
     request
       ..addEntries([MapEntry("i", token)])
       ..addEntries([
         MapEntry(
-            "file",
-            await MultipartFile.fromFile(
-              file.path,
-              filename: file.path.split(Platform.pathSeparator).last,
-            ))
+          "file",
+          await MultipartFile.fromFile(
+            file.path,
+            filename: file.path.split(Platform.pathSeparator).last,
+          ),
+        ),
       ])
       ..removeWhere((key, value) => value == null);
     try {
       final response = await dio.request(
         path,
         data: FormData.fromMap(request),
-        options: Options(
-          contentType: "multipart/form-data",
-          method: "POST",
-        ),
+        options: Options(contentType: "multipart/form-data", method: "POST"),
       );
       return response.data;
     } on DioException catch (e) {
@@ -100,17 +101,16 @@ class ApiService {
       ..addEntries([MapEntry("i", token)])
       ..addEntries([
         MapEntry(
-            "file", MultipartFile.fromBytes(binaryData, filename: fileName))
+          "file",
+          MultipartFile.fromBytes(binaryData, filename: fileName),
+        ),
       ])
       ..removeWhere((key, value) => value == null);
     try {
       final response = await dio.request(
         path,
         data: FormData.fromMap(request),
-        options: Options(
-          contentType: "multipart/form-data",
-          method: "POST",
-        ),
+        options: Options(contentType: "multipart/form-data", method: "POST"),
       );
       return response.data;
     } on DioException catch (e) {

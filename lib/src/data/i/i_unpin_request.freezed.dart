@@ -12,7 +12,8 @@ part of 'i_unpin_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 IUnpinRequest _$IUnpinRequestFromJson(Map<String, dynamic> json) {
   return _IUnpinRequest.fromJson(json);
@@ -35,8 +36,9 @@ mixin _$IUnpinRequest {
 /// @nodoc
 abstract class $IUnpinRequestCopyWith<$Res> {
   factory $IUnpinRequestCopyWith(
-          IUnpinRequest value, $Res Function(IUnpinRequest) then) =
-      _$IUnpinRequestCopyWithImpl<$Res, IUnpinRequest>;
+    IUnpinRequest value,
+    $Res Function(IUnpinRequest) then,
+  ) = _$IUnpinRequestCopyWithImpl<$Res, IUnpinRequest>;
   @useResult
   $Res call({String noteId});
 }
@@ -55,15 +57,17 @@ class _$IUnpinRequestCopyWithImpl<$Res, $Val extends IUnpinRequest>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? noteId = null,
-  }) {
-    return _then(_value.copyWith(
-      noteId: null == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? noteId = null}) {
+    return _then(
+      _value.copyWith(
+            noteId:
+                null == noteId
+                    ? _value.noteId
+                    : noteId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -71,8 +75,9 @@ class _$IUnpinRequestCopyWithImpl<$Res, $Val extends IUnpinRequest>
 abstract class _$$IUnpinRequestImplCopyWith<$Res>
     implements $IUnpinRequestCopyWith<$Res> {
   factory _$$IUnpinRequestImplCopyWith(
-          _$IUnpinRequestImpl value, $Res Function(_$IUnpinRequestImpl) then) =
-      __$$IUnpinRequestImplCopyWithImpl<$Res>;
+    _$IUnpinRequestImpl value,
+    $Res Function(_$IUnpinRequestImpl) then,
+  ) = __$$IUnpinRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String noteId});
@@ -83,22 +88,24 @@ class __$$IUnpinRequestImplCopyWithImpl<$Res>
     extends _$IUnpinRequestCopyWithImpl<$Res, _$IUnpinRequestImpl>
     implements _$$IUnpinRequestImplCopyWith<$Res> {
   __$$IUnpinRequestImplCopyWithImpl(
-      _$IUnpinRequestImpl _value, $Res Function(_$IUnpinRequestImpl) _then)
-      : super(_value, _then);
+    _$IUnpinRequestImpl _value,
+    $Res Function(_$IUnpinRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of IUnpinRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? noteId = null,
-  }) {
-    return _then(_$IUnpinRequestImpl(
-      noteId: null == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? noteId = null}) {
+    return _then(
+      _$IUnpinRequestImpl(
+        noteId:
+            null == noteId
+                ? _value.noteId
+                : noteId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -140,9 +147,7 @@ class _$IUnpinRequestImpl implements _IUnpinRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$IUnpinRequestImplToJson(
-      this,
-    );
+    return _$$IUnpinRequestImplToJson(this);
   }
 }
 

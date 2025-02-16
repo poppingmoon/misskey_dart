@@ -12,10 +12,12 @@ part of 'drive_folders_update_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 DriveFoldersUpdateRequest _$DriveFoldersUpdateRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _DriveFoldersUpdateRequest.fromJson(json);
 }
 
@@ -37,16 +39,19 @@ mixin _$DriveFoldersUpdateRequest {
 
 /// @nodoc
 abstract class $DriveFoldersUpdateRequestCopyWith<$Res> {
-  factory $DriveFoldersUpdateRequestCopyWith(DriveFoldersUpdateRequest value,
-          $Res Function(DriveFoldersUpdateRequest) then) =
-      _$DriveFoldersUpdateRequestCopyWithImpl<$Res, DriveFoldersUpdateRequest>;
+  factory $DriveFoldersUpdateRequestCopyWith(
+    DriveFoldersUpdateRequest value,
+    $Res Function(DriveFoldersUpdateRequest) then,
+  ) = _$DriveFoldersUpdateRequestCopyWithImpl<$Res, DriveFoldersUpdateRequest>;
   @useResult
   $Res call({String folderId, String? name, String? parentId});
 }
 
 /// @nodoc
-class _$DriveFoldersUpdateRequestCopyWithImpl<$Res,
-        $Val extends DriveFoldersUpdateRequest>
+class _$DriveFoldersUpdateRequestCopyWithImpl<
+  $Res,
+  $Val extends DriveFoldersUpdateRequest
+>
     implements $DriveFoldersUpdateRequestCopyWith<$Res> {
   _$DriveFoldersUpdateRequestCopyWithImpl(this._value, this._then);
 
@@ -64,20 +69,26 @@ class _$DriveFoldersUpdateRequestCopyWithImpl<$Res,
     Object? name = freezed,
     Object? parentId = freezed,
   }) {
-    return _then(_value.copyWith(
-      folderId: null == folderId
-          ? _value.folderId
-          : folderId // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      parentId: freezed == parentId
-          ? _value.parentId
-          : parentId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            folderId:
+                null == folderId
+                    ? _value.folderId
+                    : folderId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            name:
+                freezed == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            parentId:
+                freezed == parentId
+                    ? _value.parentId
+                    : parentId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -85,9 +96,9 @@ class _$DriveFoldersUpdateRequestCopyWithImpl<$Res,
 abstract class _$$DriveFoldersUpdateRequestImplCopyWith<$Res>
     implements $DriveFoldersUpdateRequestCopyWith<$Res> {
   factory _$$DriveFoldersUpdateRequestImplCopyWith(
-          _$DriveFoldersUpdateRequestImpl value,
-          $Res Function(_$DriveFoldersUpdateRequestImpl) then) =
-      __$$DriveFoldersUpdateRequestImplCopyWithImpl<$Res>;
+    _$DriveFoldersUpdateRequestImpl value,
+    $Res Function(_$DriveFoldersUpdateRequestImpl) then,
+  ) = __$$DriveFoldersUpdateRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String folderId, String? name, String? parentId});
@@ -95,13 +106,16 @@ abstract class _$$DriveFoldersUpdateRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$DriveFoldersUpdateRequestImplCopyWithImpl<$Res>
-    extends _$DriveFoldersUpdateRequestCopyWithImpl<$Res,
-        _$DriveFoldersUpdateRequestImpl>
+    extends
+        _$DriveFoldersUpdateRequestCopyWithImpl<
+          $Res,
+          _$DriveFoldersUpdateRequestImpl
+        >
     implements _$$DriveFoldersUpdateRequestImplCopyWith<$Res> {
   __$$DriveFoldersUpdateRequestImplCopyWithImpl(
-      _$DriveFoldersUpdateRequestImpl _value,
-      $Res Function(_$DriveFoldersUpdateRequestImpl) _then)
-      : super(_value, _then);
+    _$DriveFoldersUpdateRequestImpl _value,
+    $Res Function(_$DriveFoldersUpdateRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of DriveFoldersUpdateRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -112,28 +126,36 @@ class __$$DriveFoldersUpdateRequestImplCopyWithImpl<$Res>
     Object? name = freezed,
     Object? parentId = freezed,
   }) {
-    return _then(_$DriveFoldersUpdateRequestImpl(
-      folderId: null == folderId
-          ? _value.folderId
-          : folderId // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      parentId: freezed == parentId
-          ? _value.parentId
-          : parentId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$DriveFoldersUpdateRequestImpl(
+        folderId:
+            null == folderId
+                ? _value.folderId
+                : folderId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        name:
+            freezed == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        parentId:
+            freezed == parentId
+                ? _value.parentId
+                : parentId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$DriveFoldersUpdateRequestImpl implements _DriveFoldersUpdateRequest {
-  const _$DriveFoldersUpdateRequestImpl(
-      {required this.folderId, this.name, this.parentId});
+  const _$DriveFoldersUpdateRequestImpl({
+    required this.folderId,
+    this.name,
+    this.parentId,
+  });
 
   factory _$DriveFoldersUpdateRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$DriveFoldersUpdateRequestImplFromJson(json);
@@ -172,22 +194,22 @@ class _$DriveFoldersUpdateRequestImpl implements _DriveFoldersUpdateRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$DriveFoldersUpdateRequestImplCopyWith<_$DriveFoldersUpdateRequestImpl>
-      get copyWith => __$$DriveFoldersUpdateRequestImplCopyWithImpl<
-          _$DriveFoldersUpdateRequestImpl>(this, _$identity);
+  get copyWith => __$$DriveFoldersUpdateRequestImplCopyWithImpl<
+    _$DriveFoldersUpdateRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DriveFoldersUpdateRequestImplToJson(
-      this,
-    );
+    return _$$DriveFoldersUpdateRequestImplToJson(this);
   }
 }
 
 abstract class _DriveFoldersUpdateRequest implements DriveFoldersUpdateRequest {
-  const factory _DriveFoldersUpdateRequest(
-      {required final String folderId,
-      final String? name,
-      final String? parentId}) = _$DriveFoldersUpdateRequestImpl;
+  const factory _DriveFoldersUpdateRequest({
+    required final String folderId,
+    final String? name,
+    final String? parentId,
+  }) = _$DriveFoldersUpdateRequestImpl;
 
   factory _DriveFoldersUpdateRequest.fromJson(Map<String, dynamic> json) =
       _$DriveFoldersUpdateRequestImpl.fromJson;
@@ -204,5 +226,5 @@ abstract class _DriveFoldersUpdateRequest implements DriveFoldersUpdateRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DriveFoldersUpdateRequestImplCopyWith<_$DriveFoldersUpdateRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

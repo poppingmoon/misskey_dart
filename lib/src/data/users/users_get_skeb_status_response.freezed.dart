@@ -12,10 +12,12 @@ part of 'users_get_skeb_status_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 UsersGetSkebStatusResponse _$UsersGetSkebStatusResponseFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _UsersGetSkebStatusResponse.fromJson(json);
 }
 
@@ -35,28 +37,35 @@ mixin _$UsersGetSkebStatusResponse {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $UsersGetSkebStatusResponseCopyWith<UsersGetSkebStatusResponse>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $UsersGetSkebStatusResponseCopyWith<$Res> {
-  factory $UsersGetSkebStatusResponseCopyWith(UsersGetSkebStatusResponse value,
-          $Res Function(UsersGetSkebStatusResponse) then) =
-      _$UsersGetSkebStatusResponseCopyWithImpl<$Res,
-          UsersGetSkebStatusResponse>;
+  factory $UsersGetSkebStatusResponseCopyWith(
+    UsersGetSkebStatusResponse value,
+    $Res Function(UsersGetSkebStatusResponse) then,
+  ) =
+      _$UsersGetSkebStatusResponseCopyWithImpl<
+        $Res,
+        UsersGetSkebStatusResponse
+      >;
   @useResult
-  $Res call(
-      {String screenName,
-      bool isCreator,
-      bool isAcceptable,
-      int creatorRequestCount,
-      int clientRequestCount,
-      List<SkebStatusSkill> skills});
+  $Res call({
+    String screenName,
+    bool isCreator,
+    bool isAcceptable,
+    int creatorRequestCount,
+    int clientRequestCount,
+    List<SkebStatusSkill> skills,
+  });
 }
 
 /// @nodoc
-class _$UsersGetSkebStatusResponseCopyWithImpl<$Res,
-        $Val extends UsersGetSkebStatusResponse>
+class _$UsersGetSkebStatusResponseCopyWithImpl<
+  $Res,
+  $Val extends UsersGetSkebStatusResponse
+>
     implements $UsersGetSkebStatusResponseCopyWith<$Res> {
   _$UsersGetSkebStatusResponseCopyWithImpl(this._value, this._then);
 
@@ -77,32 +86,41 @@ class _$UsersGetSkebStatusResponseCopyWithImpl<$Res,
     Object? clientRequestCount = null,
     Object? skills = null,
   }) {
-    return _then(_value.copyWith(
-      screenName: null == screenName
-          ? _value.screenName
-          : screenName // ignore: cast_nullable_to_non_nullable
-              as String,
-      isCreator: null == isCreator
-          ? _value.isCreator
-          : isCreator // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isAcceptable: null == isAcceptable
-          ? _value.isAcceptable
-          : isAcceptable // ignore: cast_nullable_to_non_nullable
-              as bool,
-      creatorRequestCount: null == creatorRequestCount
-          ? _value.creatorRequestCount
-          : creatorRequestCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      clientRequestCount: null == clientRequestCount
-          ? _value.clientRequestCount
-          : clientRequestCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      skills: null == skills
-          ? _value.skills
-          : skills // ignore: cast_nullable_to_non_nullable
-              as List<SkebStatusSkill>,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            screenName:
+                null == screenName
+                    ? _value.screenName
+                    : screenName // ignore: cast_nullable_to_non_nullable
+                        as String,
+            isCreator:
+                null == isCreator
+                    ? _value.isCreator
+                    : isCreator // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            isAcceptable:
+                null == isAcceptable
+                    ? _value.isAcceptable
+                    : isAcceptable // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            creatorRequestCount:
+                null == creatorRequestCount
+                    ? _value.creatorRequestCount
+                    : creatorRequestCount // ignore: cast_nullable_to_non_nullable
+                        as int,
+            clientRequestCount:
+                null == clientRequestCount
+                    ? _value.clientRequestCount
+                    : clientRequestCount // ignore: cast_nullable_to_non_nullable
+                        as int,
+            skills:
+                null == skills
+                    ? _value.skills
+                    : skills // ignore: cast_nullable_to_non_nullable
+                        as List<SkebStatusSkill>,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -110,29 +128,33 @@ class _$UsersGetSkebStatusResponseCopyWithImpl<$Res,
 abstract class _$$UsersGetSkebStatusResponseImplCopyWith<$Res>
     implements $UsersGetSkebStatusResponseCopyWith<$Res> {
   factory _$$UsersGetSkebStatusResponseImplCopyWith(
-          _$UsersGetSkebStatusResponseImpl value,
-          $Res Function(_$UsersGetSkebStatusResponseImpl) then) =
-      __$$UsersGetSkebStatusResponseImplCopyWithImpl<$Res>;
+    _$UsersGetSkebStatusResponseImpl value,
+    $Res Function(_$UsersGetSkebStatusResponseImpl) then,
+  ) = __$$UsersGetSkebStatusResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String screenName,
-      bool isCreator,
-      bool isAcceptable,
-      int creatorRequestCount,
-      int clientRequestCount,
-      List<SkebStatusSkill> skills});
+  $Res call({
+    String screenName,
+    bool isCreator,
+    bool isAcceptable,
+    int creatorRequestCount,
+    int clientRequestCount,
+    List<SkebStatusSkill> skills,
+  });
 }
 
 /// @nodoc
 class __$$UsersGetSkebStatusResponseImplCopyWithImpl<$Res>
-    extends _$UsersGetSkebStatusResponseCopyWithImpl<$Res,
-        _$UsersGetSkebStatusResponseImpl>
+    extends
+        _$UsersGetSkebStatusResponseCopyWithImpl<
+          $Res,
+          _$UsersGetSkebStatusResponseImpl
+        >
     implements _$$UsersGetSkebStatusResponseImplCopyWith<$Res> {
   __$$UsersGetSkebStatusResponseImplCopyWithImpl(
-      _$UsersGetSkebStatusResponseImpl _value,
-      $Res Function(_$UsersGetSkebStatusResponseImpl) _then)
-      : super(_value, _then);
+    _$UsersGetSkebStatusResponseImpl _value,
+    $Res Function(_$UsersGetSkebStatusResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UsersGetSkebStatusResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -146,50 +168,58 @@ class __$$UsersGetSkebStatusResponseImplCopyWithImpl<$Res>
     Object? clientRequestCount = null,
     Object? skills = null,
   }) {
-    return _then(_$UsersGetSkebStatusResponseImpl(
-      screenName: null == screenName
-          ? _value.screenName
-          : screenName // ignore: cast_nullable_to_non_nullable
-              as String,
-      isCreator: null == isCreator
-          ? _value.isCreator
-          : isCreator // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isAcceptable: null == isAcceptable
-          ? _value.isAcceptable
-          : isAcceptable // ignore: cast_nullable_to_non_nullable
-              as bool,
-      creatorRequestCount: null == creatorRequestCount
-          ? _value.creatorRequestCount
-          : creatorRequestCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      clientRequestCount: null == clientRequestCount
-          ? _value.clientRequestCount
-          : clientRequestCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      skills: null == skills
-          ? _value._skills
-          : skills // ignore: cast_nullable_to_non_nullable
-              as List<SkebStatusSkill>,
-    ));
+    return _then(
+      _$UsersGetSkebStatusResponseImpl(
+        screenName:
+            null == screenName
+                ? _value.screenName
+                : screenName // ignore: cast_nullable_to_non_nullable
+                    as String,
+        isCreator:
+            null == isCreator
+                ? _value.isCreator
+                : isCreator // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        isAcceptable:
+            null == isAcceptable
+                ? _value.isAcceptable
+                : isAcceptable // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        creatorRequestCount:
+            null == creatorRequestCount
+                ? _value.creatorRequestCount
+                : creatorRequestCount // ignore: cast_nullable_to_non_nullable
+                    as int,
+        clientRequestCount:
+            null == clientRequestCount
+                ? _value.clientRequestCount
+                : clientRequestCount // ignore: cast_nullable_to_non_nullable
+                    as int,
+        skills:
+            null == skills
+                ? _value._skills
+                : skills // ignore: cast_nullable_to_non_nullable
+                    as List<SkebStatusSkill>,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$UsersGetSkebStatusResponseImpl implements _UsersGetSkebStatusResponse {
-  const _$UsersGetSkebStatusResponseImpl(
-      {required this.screenName,
-      required this.isCreator,
-      required this.isAcceptable,
-      required this.creatorRequestCount,
-      required this.clientRequestCount,
-      required final List<SkebStatusSkill> skills})
-      : _skills = skills;
+  const _$UsersGetSkebStatusResponseImpl({
+    required this.screenName,
+    required this.isCreator,
+    required this.isAcceptable,
+    required this.creatorRequestCount,
+    required this.clientRequestCount,
+    required final List<SkebStatusSkill> skills,
+  }) : _skills = skills;
 
   factory _$UsersGetSkebStatusResponseImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$UsersGetSkebStatusResponseImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$UsersGetSkebStatusResponseImplFromJson(json);
 
   @override
   final String screenName;
@@ -235,13 +265,14 @@ class _$UsersGetSkebStatusResponseImpl implements _UsersGetSkebStatusResponse {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      screenName,
-      isCreator,
-      isAcceptable,
-      creatorRequestCount,
-      clientRequestCount,
-      const DeepCollectionEquality().hash(_skills));
+    runtimeType,
+    screenName,
+    isCreator,
+    isAcceptable,
+    creatorRequestCount,
+    clientRequestCount,
+    const DeepCollectionEquality().hash(_skills),
+  );
 
   /// Create a copy of UsersGetSkebStatusResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -249,27 +280,26 @@ class _$UsersGetSkebStatusResponseImpl implements _UsersGetSkebStatusResponse {
   @override
   @pragma('vm:prefer-inline')
   _$$UsersGetSkebStatusResponseImplCopyWith<_$UsersGetSkebStatusResponseImpl>
-      get copyWith => __$$UsersGetSkebStatusResponseImplCopyWithImpl<
-          _$UsersGetSkebStatusResponseImpl>(this, _$identity);
+  get copyWith => __$$UsersGetSkebStatusResponseImplCopyWithImpl<
+    _$UsersGetSkebStatusResponseImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UsersGetSkebStatusResponseImplToJson(
-      this,
-    );
+    return _$$UsersGetSkebStatusResponseImplToJson(this);
   }
 }
 
 abstract class _UsersGetSkebStatusResponse
     implements UsersGetSkebStatusResponse {
-  const factory _UsersGetSkebStatusResponse(
-          {required final String screenName,
-          required final bool isCreator,
-          required final bool isAcceptable,
-          required final int creatorRequestCount,
-          required final int clientRequestCount,
-          required final List<SkebStatusSkill> skills}) =
-      _$UsersGetSkebStatusResponseImpl;
+  const factory _UsersGetSkebStatusResponse({
+    required final String screenName,
+    required final bool isCreator,
+    required final bool isAcceptable,
+    required final int creatorRequestCount,
+    required final int clientRequestCount,
+    required final List<SkebStatusSkill> skills,
+  }) = _$UsersGetSkebStatusResponseImpl;
 
   factory _UsersGetSkebStatusResponse.fromJson(Map<String, dynamic> json) =
       _$UsersGetSkebStatusResponseImpl.fromJson;
@@ -292,7 +322,7 @@ abstract class _UsersGetSkebStatusResponse
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersGetSkebStatusResponseImplCopyWith<_$UsersGetSkebStatusResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 SkebStatusSkill _$SkebStatusSkillFromJson(Map<String, dynamic> json) {
@@ -319,13 +349,15 @@ mixin _$SkebStatusSkill {
 /// @nodoc
 abstract class $SkebStatusSkillCopyWith<$Res> {
   factory $SkebStatusSkillCopyWith(
-          SkebStatusSkill value, $Res Function(SkebStatusSkill) then) =
-      _$SkebStatusSkillCopyWithImpl<$Res, SkebStatusSkill>;
+    SkebStatusSkill value,
+    $Res Function(SkebStatusSkill) then,
+  ) = _$SkebStatusSkillCopyWithImpl<$Res, SkebStatusSkill>;
   @useResult
-  $Res call(
-      {int amount,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      SkebStatusSkillGenre? genre});
+  $Res call({
+    int amount,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    SkebStatusSkillGenre? genre,
+  });
 }
 
 /// @nodoc
@@ -342,35 +374,39 @@ class _$SkebStatusSkillCopyWithImpl<$Res, $Val extends SkebStatusSkill>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? amount = null,
-    Object? genre = freezed,
-  }) {
-    return _then(_value.copyWith(
-      amount: null == amount
-          ? _value.amount
-          : amount // ignore: cast_nullable_to_non_nullable
-              as int,
-      genre: freezed == genre
-          ? _value.genre
-          : genre // ignore: cast_nullable_to_non_nullable
-              as SkebStatusSkillGenre?,
-    ) as $Val);
+  $Res call({Object? amount = null, Object? genre = freezed}) {
+    return _then(
+      _value.copyWith(
+            amount:
+                null == amount
+                    ? _value.amount
+                    : amount // ignore: cast_nullable_to_non_nullable
+                        as int,
+            genre:
+                freezed == genre
+                    ? _value.genre
+                    : genre // ignore: cast_nullable_to_non_nullable
+                        as SkebStatusSkillGenre?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$SkebStatusSkillImplCopyWith<$Res>
     implements $SkebStatusSkillCopyWith<$Res> {
-  factory _$$SkebStatusSkillImplCopyWith(_$SkebStatusSkillImpl value,
-          $Res Function(_$SkebStatusSkillImpl) then) =
-      __$$SkebStatusSkillImplCopyWithImpl<$Res>;
+  factory _$$SkebStatusSkillImplCopyWith(
+    _$SkebStatusSkillImpl value,
+    $Res Function(_$SkebStatusSkillImpl) then,
+  ) = __$$SkebStatusSkillImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int amount,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      SkebStatusSkillGenre? genre});
+  $Res call({
+    int amount,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    SkebStatusSkillGenre? genre,
+  });
 }
 
 /// @nodoc
@@ -378,44 +414,46 @@ class __$$SkebStatusSkillImplCopyWithImpl<$Res>
     extends _$SkebStatusSkillCopyWithImpl<$Res, _$SkebStatusSkillImpl>
     implements _$$SkebStatusSkillImplCopyWith<$Res> {
   __$$SkebStatusSkillImplCopyWithImpl(
-      _$SkebStatusSkillImpl _value, $Res Function(_$SkebStatusSkillImpl) _then)
-      : super(_value, _then);
+    _$SkebStatusSkillImpl _value,
+    $Res Function(_$SkebStatusSkillImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of SkebStatusSkill
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? amount = null,
-    Object? genre = freezed,
-  }) {
-    return _then(_$SkebStatusSkillImpl(
-      amount: null == amount
-          ? _value.amount
-          : amount // ignore: cast_nullable_to_non_nullable
-              as int,
-      genre: freezed == genre
-          ? _value.genre
-          : genre // ignore: cast_nullable_to_non_nullable
-              as SkebStatusSkillGenre?,
-    ));
+  $Res call({Object? amount = null, Object? genre = freezed}) {
+    return _then(
+      _$SkebStatusSkillImpl(
+        amount:
+            null == amount
+                ? _value.amount
+                : amount // ignore: cast_nullable_to_non_nullable
+                    as int,
+        genre:
+            freezed == genre
+                ? _value.genre
+                : genre // ignore: cast_nullable_to_non_nullable
+                    as SkebStatusSkillGenre?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$SkebStatusSkillImpl implements _SkebStatusSkill {
-  const _$SkebStatusSkillImpl(
-      {required this.amount,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      this.genre});
+  const _$SkebStatusSkillImpl({
+    required this.amount,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.genre,
+  });
 
   factory _$SkebStatusSkillImpl.fromJson(Map<String, dynamic> json) =>
       _$$SkebStatusSkillImplFromJson(json);
 
   @override
   final int amount;
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final SkebStatusSkillGenre? genre;
@@ -445,21 +483,22 @@ class _$SkebStatusSkillImpl implements _SkebStatusSkill {
   @pragma('vm:prefer-inline')
   _$$SkebStatusSkillImplCopyWith<_$SkebStatusSkillImpl> get copyWith =>
       __$$SkebStatusSkillImplCopyWithImpl<_$SkebStatusSkillImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SkebStatusSkillImplToJson(
-      this,
-    );
+    return _$$SkebStatusSkillImplToJson(this);
   }
 }
 
 abstract class _SkebStatusSkill implements SkebStatusSkill {
-  const factory _SkebStatusSkill(
-      {required final int amount,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      final SkebStatusSkillGenre? genre}) = _$SkebStatusSkillImpl;
+  const factory _SkebStatusSkill({
+    required final int amount,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    final SkebStatusSkillGenre? genre,
+  }) = _$SkebStatusSkillImpl;
 
   factory _SkebStatusSkill.fromJson(Map<String, dynamic> json) =
       _$SkebStatusSkillImpl.fromJson;

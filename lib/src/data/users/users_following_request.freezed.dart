@@ -12,10 +12,12 @@ part of 'users_following_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 UsersFollowingRequest _$UsersFollowingRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _UsersFollowingRequest.fromJson(json);
 }
 
@@ -40,21 +42,25 @@ mixin _$UsersFollowingRequest {
 
 /// @nodoc
 abstract class $UsersFollowingRequestCopyWith<$Res> {
-  factory $UsersFollowingRequestCopyWith(UsersFollowingRequest value,
-          $Res Function(UsersFollowingRequest) then) =
-      _$UsersFollowingRequestCopyWithImpl<$Res, UsersFollowingRequest>;
+  factory $UsersFollowingRequestCopyWith(
+    UsersFollowingRequest value,
+    $Res Function(UsersFollowingRequest) then,
+  ) = _$UsersFollowingRequestCopyWithImpl<$Res, UsersFollowingRequest>;
   @useResult
-  $Res call(
-      {String userId,
-      String? sinceId,
-      String? untilId,
-      int? limit,
-      @DateTimeConverter() DateTime? birthday});
+  $Res call({
+    String userId,
+    String? sinceId,
+    String? untilId,
+    int? limit,
+    @DateTimeConverter() DateTime? birthday,
+  });
 }
 
 /// @nodoc
-class _$UsersFollowingRequestCopyWithImpl<$Res,
-        $Val extends UsersFollowingRequest>
+class _$UsersFollowingRequestCopyWithImpl<
+  $Res,
+  $Val extends UsersFollowingRequest
+>
     implements $UsersFollowingRequestCopyWith<$Res> {
   _$UsersFollowingRequestCopyWithImpl(this._value, this._then);
 
@@ -74,28 +80,36 @@ class _$UsersFollowingRequestCopyWithImpl<$Res,
     Object? limit = freezed,
     Object? birthday = freezed,
   }) {
-    return _then(_value.copyWith(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      birthday: freezed == birthday
-          ? _value.birthday
-          : birthday // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            userId:
+                null == userId
+                    ? _value.userId
+                    : userId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            birthday:
+                freezed == birthday
+                    ? _value.birthday
+                    : birthday // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -103,27 +117,29 @@ class _$UsersFollowingRequestCopyWithImpl<$Res,
 abstract class _$$UsersFollowingRequestImplCopyWith<$Res>
     implements $UsersFollowingRequestCopyWith<$Res> {
   factory _$$UsersFollowingRequestImplCopyWith(
-          _$UsersFollowingRequestImpl value,
-          $Res Function(_$UsersFollowingRequestImpl) then) =
-      __$$UsersFollowingRequestImplCopyWithImpl<$Res>;
+    _$UsersFollowingRequestImpl value,
+    $Res Function(_$UsersFollowingRequestImpl) then,
+  ) = __$$UsersFollowingRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String userId,
-      String? sinceId,
-      String? untilId,
-      int? limit,
-      @DateTimeConverter() DateTime? birthday});
+  $Res call({
+    String userId,
+    String? sinceId,
+    String? untilId,
+    int? limit,
+    @DateTimeConverter() DateTime? birthday,
+  });
 }
 
 /// @nodoc
 class __$$UsersFollowingRequestImplCopyWithImpl<$Res>
-    extends _$UsersFollowingRequestCopyWithImpl<$Res,
-        _$UsersFollowingRequestImpl>
+    extends
+        _$UsersFollowingRequestCopyWithImpl<$Res, _$UsersFollowingRequestImpl>
     implements _$$UsersFollowingRequestImplCopyWith<$Res> {
-  __$$UsersFollowingRequestImplCopyWithImpl(_$UsersFollowingRequestImpl _value,
-      $Res Function(_$UsersFollowingRequestImpl) _then)
-      : super(_value, _then);
+  __$$UsersFollowingRequestImplCopyWithImpl(
+    _$UsersFollowingRequestImpl _value,
+    $Res Function(_$UsersFollowingRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UsersFollowingRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -136,40 +152,48 @@ class __$$UsersFollowingRequestImplCopyWithImpl<$Res>
     Object? limit = freezed,
     Object? birthday = freezed,
   }) {
-    return _then(_$UsersFollowingRequestImpl(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      birthday: freezed == birthday
-          ? _value.birthday
-          : birthday // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-    ));
+    return _then(
+      _$UsersFollowingRequestImpl(
+        userId:
+            null == userId
+                ? _value.userId
+                : userId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        birthday:
+            freezed == birthday
+                ? _value.birthday
+                : birthday // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$UsersFollowingRequestImpl implements _UsersFollowingRequest {
-  const _$UsersFollowingRequestImpl(
-      {required this.userId,
-      this.sinceId,
-      this.untilId,
-      this.limit,
-      @DateTimeConverter() this.birthday});
+  const _$UsersFollowingRequestImpl({
+    required this.userId,
+    this.sinceId,
+    this.untilId,
+    this.limit,
+    @DateTimeConverter() this.birthday,
+  });
 
   factory _$UsersFollowingRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$UsersFollowingRequestImplFromJson(json);
@@ -215,25 +239,26 @@ class _$UsersFollowingRequestImpl implements _UsersFollowingRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$UsersFollowingRequestImplCopyWith<_$UsersFollowingRequestImpl>
-      get copyWith => __$$UsersFollowingRequestImplCopyWithImpl<
-          _$UsersFollowingRequestImpl>(this, _$identity);
+  get copyWith =>
+      __$$UsersFollowingRequestImplCopyWithImpl<_$UsersFollowingRequestImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UsersFollowingRequestImplToJson(
-      this,
-    );
+    return _$$UsersFollowingRequestImplToJson(this);
   }
 }
 
 abstract class _UsersFollowingRequest implements UsersFollowingRequest {
-  const factory _UsersFollowingRequest(
-          {required final String userId,
-          final String? sinceId,
-          final String? untilId,
-          final int? limit,
-          @DateTimeConverter() final DateTime? birthday}) =
-      _$UsersFollowingRequestImpl;
+  const factory _UsersFollowingRequest({
+    required final String userId,
+    final String? sinceId,
+    final String? untilId,
+    final int? limit,
+    @DateTimeConverter() final DateTime? birthday,
+  }) = _$UsersFollowingRequestImpl;
 
   factory _UsersFollowingRequest.fromJson(Map<String, dynamic> json) =
       _$UsersFollowingRequestImpl.fromJson;
@@ -255,5 +280,5 @@ abstract class _UsersFollowingRequest implements UsersFollowingRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersFollowingRequestImplCopyWith<_$UsersFollowingRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

@@ -12,10 +12,12 @@ part of 'notes_thread_muting_delete_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 NotesThreadMutingDeleteRequest _$NotesThreadMutingDeleteRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _NotesThreadMutingDeleteRequest.fromJson(json);
 }
 
@@ -30,23 +32,28 @@ mixin _$NotesThreadMutingDeleteRequest {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesThreadMutingDeleteRequestCopyWith<NotesThreadMutingDeleteRequest>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $NotesThreadMutingDeleteRequestCopyWith<$Res> {
   factory $NotesThreadMutingDeleteRequestCopyWith(
-          NotesThreadMutingDeleteRequest value,
-          $Res Function(NotesThreadMutingDeleteRequest) then) =
-      _$NotesThreadMutingDeleteRequestCopyWithImpl<$Res,
-          NotesThreadMutingDeleteRequest>;
+    NotesThreadMutingDeleteRequest value,
+    $Res Function(NotesThreadMutingDeleteRequest) then,
+  ) =
+      _$NotesThreadMutingDeleteRequestCopyWithImpl<
+        $Res,
+        NotesThreadMutingDeleteRequest
+      >;
   @useResult
   $Res call({String noteId});
 }
 
 /// @nodoc
-class _$NotesThreadMutingDeleteRequestCopyWithImpl<$Res,
-        $Val extends NotesThreadMutingDeleteRequest>
+class _$NotesThreadMutingDeleteRequestCopyWithImpl<
+  $Res,
+  $Val extends NotesThreadMutingDeleteRequest
+>
     implements $NotesThreadMutingDeleteRequestCopyWith<$Res> {
   _$NotesThreadMutingDeleteRequestCopyWithImpl(this._value, this._then);
 
@@ -59,15 +66,17 @@ class _$NotesThreadMutingDeleteRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? noteId = null,
-  }) {
-    return _then(_value.copyWith(
-      noteId: null == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? noteId = null}) {
+    return _then(
+      _value.copyWith(
+            noteId:
+                null == noteId
+                    ? _value.noteId
+                    : noteId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -75,9 +84,9 @@ class _$NotesThreadMutingDeleteRequestCopyWithImpl<$Res,
 abstract class _$$NotesThreadMutingDeleteRequestImplCopyWith<$Res>
     implements $NotesThreadMutingDeleteRequestCopyWith<$Res> {
   factory _$$NotesThreadMutingDeleteRequestImplCopyWith(
-          _$NotesThreadMutingDeleteRequestImpl value,
-          $Res Function(_$NotesThreadMutingDeleteRequestImpl) then) =
-      __$$NotesThreadMutingDeleteRequestImplCopyWithImpl<$Res>;
+    _$NotesThreadMutingDeleteRequestImpl value,
+    $Res Function(_$NotesThreadMutingDeleteRequestImpl) then,
+  ) = __$$NotesThreadMutingDeleteRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String noteId});
@@ -85,27 +94,31 @@ abstract class _$$NotesThreadMutingDeleteRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$NotesThreadMutingDeleteRequestImplCopyWithImpl<$Res>
-    extends _$NotesThreadMutingDeleteRequestCopyWithImpl<$Res,
-        _$NotesThreadMutingDeleteRequestImpl>
+    extends
+        _$NotesThreadMutingDeleteRequestCopyWithImpl<
+          $Res,
+          _$NotesThreadMutingDeleteRequestImpl
+        >
     implements _$$NotesThreadMutingDeleteRequestImplCopyWith<$Res> {
   __$$NotesThreadMutingDeleteRequestImplCopyWithImpl(
-      _$NotesThreadMutingDeleteRequestImpl _value,
-      $Res Function(_$NotesThreadMutingDeleteRequestImpl) _then)
-      : super(_value, _then);
+    _$NotesThreadMutingDeleteRequestImpl _value,
+    $Res Function(_$NotesThreadMutingDeleteRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotesThreadMutingDeleteRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? noteId = null,
-  }) {
-    return _then(_$NotesThreadMutingDeleteRequestImpl(
-      noteId: null == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? noteId = null}) {
+    return _then(
+      _$NotesThreadMutingDeleteRequestImpl(
+        noteId:
+            null == noteId
+                ? _value.noteId
+                : noteId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -116,8 +129,8 @@ class _$NotesThreadMutingDeleteRequestImpl
   const _$NotesThreadMutingDeleteRequestImpl({required this.noteId});
 
   factory _$NotesThreadMutingDeleteRequestImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$NotesThreadMutingDeleteRequestImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$NotesThreadMutingDeleteRequestImplFromJson(json);
 
   @override
   final String noteId;
@@ -145,22 +158,23 @@ class _$NotesThreadMutingDeleteRequestImpl
   @override
   @pragma('vm:prefer-inline')
   _$$NotesThreadMutingDeleteRequestImplCopyWith<
-          _$NotesThreadMutingDeleteRequestImpl>
-      get copyWith => __$$NotesThreadMutingDeleteRequestImplCopyWithImpl<
-          _$NotesThreadMutingDeleteRequestImpl>(this, _$identity);
+    _$NotesThreadMutingDeleteRequestImpl
+  >
+  get copyWith => __$$NotesThreadMutingDeleteRequestImplCopyWithImpl<
+    _$NotesThreadMutingDeleteRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotesThreadMutingDeleteRequestImplToJson(
-      this,
-    );
+    return _$$NotesThreadMutingDeleteRequestImplToJson(this);
   }
 }
 
 abstract class _NotesThreadMutingDeleteRequest
     implements NotesThreadMutingDeleteRequest {
-  const factory _NotesThreadMutingDeleteRequest(
-      {required final String noteId}) = _$NotesThreadMutingDeleteRequestImpl;
+  const factory _NotesThreadMutingDeleteRequest({
+    required final String noteId,
+  }) = _$NotesThreadMutingDeleteRequestImpl;
 
   factory _NotesThreadMutingDeleteRequest.fromJson(Map<String, dynamic> json) =
       _$NotesThreadMutingDeleteRequestImpl.fromJson;
@@ -173,6 +187,7 @@ abstract class _NotesThreadMutingDeleteRequest
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesThreadMutingDeleteRequestImplCopyWith<
-          _$NotesThreadMutingDeleteRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$NotesThreadMutingDeleteRequestImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }

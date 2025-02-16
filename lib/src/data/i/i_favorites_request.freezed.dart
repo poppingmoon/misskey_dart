@@ -12,7 +12,8 @@ part of 'i_favorites_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 IFavoritesRequest _$IFavoritesRequestFromJson(Map<String, dynamic> json) {
   return _IFavoritesRequest.fromJson(json);
@@ -38,11 +39,15 @@ mixin _$IFavoritesRequest {
 /// @nodoc
 abstract class $IFavoritesRequestCopyWith<$Res> {
   factory $IFavoritesRequestCopyWith(
-          IFavoritesRequest value, $Res Function(IFavoritesRequest) then) =
-      _$IFavoritesRequestCopyWithImpl<$Res, IFavoritesRequest>;
+    IFavoritesRequest value,
+    $Res Function(IFavoritesRequest) then,
+  ) = _$IFavoritesRequestCopyWithImpl<$Res, IFavoritesRequest>;
   @useResult
-  $Res call(
-      {@Assert('limit > 0') int? limit, String? sinceId, String? untilId});
+  $Res call({
+    @Assert('limit > 0') int? limit,
+    String? sinceId,
+    String? untilId,
+  });
 }
 
 /// @nodoc
@@ -64,42 +69,53 @@ class _$IFavoritesRequestCopyWithImpl<$Res, $Val extends IFavoritesRequest>
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_value.copyWith(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$IFavoritesRequestImplCopyWith<$Res>
     implements $IFavoritesRequestCopyWith<$Res> {
-  factory _$$IFavoritesRequestImplCopyWith(_$IFavoritesRequestImpl value,
-          $Res Function(_$IFavoritesRequestImpl) then) =
-      __$$IFavoritesRequestImplCopyWithImpl<$Res>;
+  factory _$$IFavoritesRequestImplCopyWith(
+    _$IFavoritesRequestImpl value,
+    $Res Function(_$IFavoritesRequestImpl) then,
+  ) = __$$IFavoritesRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {@Assert('limit > 0') int? limit, String? sinceId, String? untilId});
+  $Res call({
+    @Assert('limit > 0') int? limit,
+    String? sinceId,
+    String? untilId,
+  });
 }
 
 /// @nodoc
 class __$$IFavoritesRequestImplCopyWithImpl<$Res>
     extends _$IFavoritesRequestCopyWithImpl<$Res, _$IFavoritesRequestImpl>
     implements _$$IFavoritesRequestImplCopyWith<$Res> {
-  __$$IFavoritesRequestImplCopyWithImpl(_$IFavoritesRequestImpl _value,
-      $Res Function(_$IFavoritesRequestImpl) _then)
-      : super(_value, _then);
+  __$$IFavoritesRequestImplCopyWithImpl(
+    _$IFavoritesRequestImpl _value,
+    $Res Function(_$IFavoritesRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of IFavoritesRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -110,28 +126,36 @@ class __$$IFavoritesRequestImplCopyWithImpl<$Res>
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_$IFavoritesRequestImpl(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$IFavoritesRequestImpl(
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$IFavoritesRequestImpl implements _IFavoritesRequest {
-  const _$IFavoritesRequestImpl(
-      {@Assert('limit > 0') this.limit, this.sinceId, this.untilId});
+  const _$IFavoritesRequestImpl({
+    @Assert('limit > 0') this.limit,
+    this.sinceId,
+    this.untilId,
+  });
 
   factory _$IFavoritesRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$IFavoritesRequestImplFromJson(json);
@@ -170,21 +194,22 @@ class _$IFavoritesRequestImpl implements _IFavoritesRequest {
   @pragma('vm:prefer-inline')
   _$$IFavoritesRequestImplCopyWith<_$IFavoritesRequestImpl> get copyWith =>
       __$$IFavoritesRequestImplCopyWithImpl<_$IFavoritesRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$IFavoritesRequestImplToJson(
-      this,
-    );
+    return _$$IFavoritesRequestImplToJson(this);
   }
 }
 
 abstract class _IFavoritesRequest implements IFavoritesRequest {
-  const factory _IFavoritesRequest(
-      {@Assert('limit > 0') final int? limit,
-      final String? sinceId,
-      final String? untilId}) = _$IFavoritesRequestImpl;
+  const factory _IFavoritesRequest({
+    @Assert('limit > 0') final int? limit,
+    final String? sinceId,
+    final String? untilId,
+  }) = _$IFavoritesRequestImpl;
 
   factory _IFavoritesRequest.fromJson(Map<String, dynamic> json) =
       _$IFavoritesRequestImpl.fromJson;

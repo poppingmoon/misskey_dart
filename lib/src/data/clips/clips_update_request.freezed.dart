@@ -12,7 +12,8 @@ part of 'clips_update_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ClipsUpdateRequest _$ClipsUpdateRequestFromJson(Map<String, dynamic> json) {
   return _ClipsUpdateRequest.fromJson(json);
@@ -38,8 +39,9 @@ mixin _$ClipsUpdateRequest {
 /// @nodoc
 abstract class $ClipsUpdateRequestCopyWith<$Res> {
   factory $ClipsUpdateRequestCopyWith(
-          ClipsUpdateRequest value, $Res Function(ClipsUpdateRequest) then) =
-      _$ClipsUpdateRequestCopyWithImpl<$Res, ClipsUpdateRequest>;
+    ClipsUpdateRequest value,
+    $Res Function(ClipsUpdateRequest) then,
+  ) = _$ClipsUpdateRequestCopyWithImpl<$Res, ClipsUpdateRequest>;
   @useResult
   $Res call({String clipId, String name, bool? isPublic, String? description});
 }
@@ -64,33 +66,41 @@ class _$ClipsUpdateRequestCopyWithImpl<$Res, $Val extends ClipsUpdateRequest>
     Object? isPublic = freezed,
     Object? description = freezed,
   }) {
-    return _then(_value.copyWith(
-      clipId: null == clipId
-          ? _value.clipId
-          : clipId // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      isPublic: freezed == isPublic
-          ? _value.isPublic
-          : isPublic // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            clipId:
+                null == clipId
+                    ? _value.clipId
+                    : clipId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            isPublic:
+                freezed == isPublic
+                    ? _value.isPublic
+                    : isPublic // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            description:
+                freezed == description
+                    ? _value.description
+                    : description // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$ClipsUpdateRequestImplCopyWith<$Res>
     implements $ClipsUpdateRequestCopyWith<$Res> {
-  factory _$$ClipsUpdateRequestImplCopyWith(_$ClipsUpdateRequestImpl value,
-          $Res Function(_$ClipsUpdateRequestImpl) then) =
-      __$$ClipsUpdateRequestImplCopyWithImpl<$Res>;
+  factory _$$ClipsUpdateRequestImplCopyWith(
+    _$ClipsUpdateRequestImpl value,
+    $Res Function(_$ClipsUpdateRequestImpl) then,
+  ) = __$$ClipsUpdateRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String clipId, String name, bool? isPublic, String? description});
@@ -100,9 +110,10 @@ abstract class _$$ClipsUpdateRequestImplCopyWith<$Res>
 class __$$ClipsUpdateRequestImplCopyWithImpl<$Res>
     extends _$ClipsUpdateRequestCopyWithImpl<$Res, _$ClipsUpdateRequestImpl>
     implements _$$ClipsUpdateRequestImplCopyWith<$Res> {
-  __$$ClipsUpdateRequestImplCopyWithImpl(_$ClipsUpdateRequestImpl _value,
-      $Res Function(_$ClipsUpdateRequestImpl) _then)
-      : super(_value, _then);
+  __$$ClipsUpdateRequestImplCopyWithImpl(
+    _$ClipsUpdateRequestImpl _value,
+    $Res Function(_$ClipsUpdateRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ClipsUpdateRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -114,35 +125,42 @@ class __$$ClipsUpdateRequestImplCopyWithImpl<$Res>
     Object? isPublic = freezed,
     Object? description = freezed,
   }) {
-    return _then(_$ClipsUpdateRequestImpl(
-      clipId: null == clipId
-          ? _value.clipId
-          : clipId // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      isPublic: freezed == isPublic
-          ? _value.isPublic
-          : isPublic // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$ClipsUpdateRequestImpl(
+        clipId:
+            null == clipId
+                ? _value.clipId
+                : clipId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        isPublic:
+            freezed == isPublic
+                ? _value.isPublic
+                : isPublic // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        description:
+            freezed == description
+                ? _value.description
+                : description // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ClipsUpdateRequestImpl implements _ClipsUpdateRequest {
-  const _$ClipsUpdateRequestImpl(
-      {required this.clipId,
-      required this.name,
-      this.isPublic,
-      this.description});
+  const _$ClipsUpdateRequestImpl({
+    required this.clipId,
+    required this.name,
+    this.isPublic,
+    this.description,
+  });
 
   factory _$ClipsUpdateRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$ClipsUpdateRequestImplFromJson(json);
@@ -186,22 +204,23 @@ class _$ClipsUpdateRequestImpl implements _ClipsUpdateRequest {
   @pragma('vm:prefer-inline')
   _$$ClipsUpdateRequestImplCopyWith<_$ClipsUpdateRequestImpl> get copyWith =>
       __$$ClipsUpdateRequestImplCopyWithImpl<_$ClipsUpdateRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ClipsUpdateRequestImplToJson(
-      this,
-    );
+    return _$$ClipsUpdateRequestImplToJson(this);
   }
 }
 
 abstract class _ClipsUpdateRequest implements ClipsUpdateRequest {
-  const factory _ClipsUpdateRequest(
-      {required final String clipId,
-      required final String name,
-      final bool? isPublic,
-      final String? description}) = _$ClipsUpdateRequestImpl;
+  const factory _ClipsUpdateRequest({
+    required final String clipId,
+    required final String name,
+    final bool? isPublic,
+    final String? description,
+  }) = _$ClipsUpdateRequestImpl;
 
   factory _ClipsUpdateRequest.fromJson(Map<String, dynamic> json) =
       _$ClipsUpdateRequestImpl.fromJson;

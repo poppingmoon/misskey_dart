@@ -12,7 +12,8 @@ part of 'ap_show_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ApShowResponse _$ApShowResponseFromJson(Map<String, dynamic> json) {
   return _ApShowResponse.fromJson(json);
@@ -36,8 +37,9 @@ mixin _$ApShowResponse {
 /// @nodoc
 abstract class $ApShowResponseCopyWith<$Res> {
   factory $ApShowResponseCopyWith(
-          ApShowResponse value, $Res Function(ApShowResponse) then) =
-      _$ApShowResponseCopyWithImpl<$Res, ApShowResponse>;
+    ApShowResponse value,
+    $Res Function(ApShowResponse) then,
+  ) = _$ApShowResponseCopyWithImpl<$Res, ApShowResponse>;
   @useResult
   $Res call({String type, Map<String, dynamic> object});
 }
@@ -56,29 +58,32 @@ class _$ApShowResponseCopyWithImpl<$Res, $Val extends ApShowResponse>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? type = null,
-    Object? object = null,
-  }) {
-    return _then(_value.copyWith(
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String,
-      object: null == object
-          ? _value.object
-          : object // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-    ) as $Val);
+  $Res call({Object? type = null, Object? object = null}) {
+    return _then(
+      _value.copyWith(
+            type:
+                null == type
+                    ? _value.type
+                    : type // ignore: cast_nullable_to_non_nullable
+                        as String,
+            object:
+                null == object
+                    ? _value.object
+                    : object // ignore: cast_nullable_to_non_nullable
+                        as Map<String, dynamic>,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$ApShowResponseImplCopyWith<$Res>
     implements $ApShowResponseCopyWith<$Res> {
-  factory _$$ApShowResponseImplCopyWith(_$ApShowResponseImpl value,
-          $Res Function(_$ApShowResponseImpl) then) =
-      __$$ApShowResponseImplCopyWithImpl<$Res>;
+  factory _$$ApShowResponseImplCopyWith(
+    _$ApShowResponseImpl value,
+    $Res Function(_$ApShowResponseImpl) then,
+  ) = __$$ApShowResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String type, Map<String, dynamic> object});
@@ -89,36 +94,39 @@ class __$$ApShowResponseImplCopyWithImpl<$Res>
     extends _$ApShowResponseCopyWithImpl<$Res, _$ApShowResponseImpl>
     implements _$$ApShowResponseImplCopyWith<$Res> {
   __$$ApShowResponseImplCopyWithImpl(
-      _$ApShowResponseImpl _value, $Res Function(_$ApShowResponseImpl) _then)
-      : super(_value, _then);
+    _$ApShowResponseImpl _value,
+    $Res Function(_$ApShowResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ApShowResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? type = null,
-    Object? object = null,
-  }) {
-    return _then(_$ApShowResponseImpl(
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String,
-      object: null == object
-          ? _value._object
-          : object // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-    ));
+  $Res call({Object? type = null, Object? object = null}) {
+    return _then(
+      _$ApShowResponseImpl(
+        type:
+            null == type
+                ? _value.type
+                : type // ignore: cast_nullable_to_non_nullable
+                    as String,
+        object:
+            null == object
+                ? _value._object
+                : object // ignore: cast_nullable_to_non_nullable
+                    as Map<String, dynamic>,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ApShowResponseImpl implements _ApShowResponse {
-  const _$ApShowResponseImpl(
-      {required this.type, required final Map<String, dynamic> object})
-      : _object = object;
+  const _$ApShowResponseImpl({
+    required this.type,
+    required final Map<String, dynamic> object,
+  }) : _object = object;
 
   factory _$ApShowResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$ApShowResponseImplFromJson(json);
@@ -150,7 +158,10 @@ class _$ApShowResponseImpl implements _ApShowResponse {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType, type, const DeepCollectionEquality().hash(_object));
+    runtimeType,
+    type,
+    const DeepCollectionEquality().hash(_object),
+  );
 
   /// Create a copy of ApShowResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -159,20 +170,21 @@ class _$ApShowResponseImpl implements _ApShowResponse {
   @pragma('vm:prefer-inline')
   _$$ApShowResponseImplCopyWith<_$ApShowResponseImpl> get copyWith =>
       __$$ApShowResponseImplCopyWithImpl<_$ApShowResponseImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ApShowResponseImplToJson(
-      this,
-    );
+    return _$$ApShowResponseImplToJson(this);
   }
 }
 
 abstract class _ApShowResponse implements ApShowResponse {
-  const factory _ApShowResponse(
-      {required final String type,
-      required final Map<String, dynamic> object}) = _$ApShowResponseImpl;
+  const factory _ApShowResponse({
+    required final String type,
+    required final Map<String, dynamic> object,
+  }) = _$ApShowResponseImpl;
 
   factory _ApShowResponse.fromJson(Map<String, dynamic> json) =
       _$ApShowResponseImpl.fromJson;

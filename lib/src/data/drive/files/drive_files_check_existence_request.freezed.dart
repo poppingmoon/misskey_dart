@@ -12,10 +12,12 @@ part of 'drive_files_check_existence_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 DriveFilesCheckExistenceRequest _$DriveFilesCheckExistenceRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _DriveFilesCheckExistenceRequest.fromJson(json);
 }
 
@@ -30,23 +32,28 @@ mixin _$DriveFilesCheckExistenceRequest {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $DriveFilesCheckExistenceRequestCopyWith<DriveFilesCheckExistenceRequest>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $DriveFilesCheckExistenceRequestCopyWith<$Res> {
   factory $DriveFilesCheckExistenceRequestCopyWith(
-          DriveFilesCheckExistenceRequest value,
-          $Res Function(DriveFilesCheckExistenceRequest) then) =
-      _$DriveFilesCheckExistenceRequestCopyWithImpl<$Res,
-          DriveFilesCheckExistenceRequest>;
+    DriveFilesCheckExistenceRequest value,
+    $Res Function(DriveFilesCheckExistenceRequest) then,
+  ) =
+      _$DriveFilesCheckExistenceRequestCopyWithImpl<
+        $Res,
+        DriveFilesCheckExistenceRequest
+      >;
   @useResult
   $Res call({String md5});
 }
 
 /// @nodoc
-class _$DriveFilesCheckExistenceRequestCopyWithImpl<$Res,
-        $Val extends DriveFilesCheckExistenceRequest>
+class _$DriveFilesCheckExistenceRequestCopyWithImpl<
+  $Res,
+  $Val extends DriveFilesCheckExistenceRequest
+>
     implements $DriveFilesCheckExistenceRequestCopyWith<$Res> {
   _$DriveFilesCheckExistenceRequestCopyWithImpl(this._value, this._then);
 
@@ -59,15 +66,17 @@ class _$DriveFilesCheckExistenceRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? md5 = null,
-  }) {
-    return _then(_value.copyWith(
-      md5: null == md5
-          ? _value.md5
-          : md5 // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? md5 = null}) {
+    return _then(
+      _value.copyWith(
+            md5:
+                null == md5
+                    ? _value.md5
+                    : md5 // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -75,9 +84,9 @@ class _$DriveFilesCheckExistenceRequestCopyWithImpl<$Res,
 abstract class _$$DriveFilesCheckExistenceRequestImplCopyWith<$Res>
     implements $DriveFilesCheckExistenceRequestCopyWith<$Res> {
   factory _$$DriveFilesCheckExistenceRequestImplCopyWith(
-          _$DriveFilesCheckExistenceRequestImpl value,
-          $Res Function(_$DriveFilesCheckExistenceRequestImpl) then) =
-      __$$DriveFilesCheckExistenceRequestImplCopyWithImpl<$Res>;
+    _$DriveFilesCheckExistenceRequestImpl value,
+    $Res Function(_$DriveFilesCheckExistenceRequestImpl) then,
+  ) = __$$DriveFilesCheckExistenceRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String md5});
@@ -85,27 +94,31 @@ abstract class _$$DriveFilesCheckExistenceRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$DriveFilesCheckExistenceRequestImplCopyWithImpl<$Res>
-    extends _$DriveFilesCheckExistenceRequestCopyWithImpl<$Res,
-        _$DriveFilesCheckExistenceRequestImpl>
+    extends
+        _$DriveFilesCheckExistenceRequestCopyWithImpl<
+          $Res,
+          _$DriveFilesCheckExistenceRequestImpl
+        >
     implements _$$DriveFilesCheckExistenceRequestImplCopyWith<$Res> {
   __$$DriveFilesCheckExistenceRequestImplCopyWithImpl(
-      _$DriveFilesCheckExistenceRequestImpl _value,
-      $Res Function(_$DriveFilesCheckExistenceRequestImpl) _then)
-      : super(_value, _then);
+    _$DriveFilesCheckExistenceRequestImpl _value,
+    $Res Function(_$DriveFilesCheckExistenceRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of DriveFilesCheckExistenceRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? md5 = null,
-  }) {
-    return _then(_$DriveFilesCheckExistenceRequestImpl(
-      md5: null == md5
-          ? _value.md5
-          : md5 // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? md5 = null}) {
+    return _then(
+      _$DriveFilesCheckExistenceRequestImpl(
+        md5:
+            null == md5
+                ? _value.md5
+                : md5 // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -116,8 +129,8 @@ class _$DriveFilesCheckExistenceRequestImpl
   const _$DriveFilesCheckExistenceRequestImpl({required this.md5});
 
   factory _$DriveFilesCheckExistenceRequestImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$DriveFilesCheckExistenceRequestImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$DriveFilesCheckExistenceRequestImplFromJson(json);
 
   @override
   final String md5;
@@ -145,15 +158,15 @@ class _$DriveFilesCheckExistenceRequestImpl
   @override
   @pragma('vm:prefer-inline')
   _$$DriveFilesCheckExistenceRequestImplCopyWith<
-          _$DriveFilesCheckExistenceRequestImpl>
-      get copyWith => __$$DriveFilesCheckExistenceRequestImplCopyWithImpl<
-          _$DriveFilesCheckExistenceRequestImpl>(this, _$identity);
+    _$DriveFilesCheckExistenceRequestImpl
+  >
+  get copyWith => __$$DriveFilesCheckExistenceRequestImplCopyWithImpl<
+    _$DriveFilesCheckExistenceRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DriveFilesCheckExistenceRequestImplToJson(
-      this,
-    );
+    return _$$DriveFilesCheckExistenceRequestImplToJson(this);
   }
 }
 
@@ -173,6 +186,7 @@ abstract class _DriveFilesCheckExistenceRequest
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DriveFilesCheckExistenceRequestImplCopyWith<
-          _$DriveFilesCheckExistenceRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$DriveFilesCheckExistenceRequestImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }

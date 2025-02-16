@@ -12,10 +12,12 @@ part of 'gallery_posts_show_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 GalleryPostsShowRequest _$GalleryPostsShowRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _GalleryPostsShowRequest.fromJson(json);
 }
 
@@ -35,16 +37,19 @@ mixin _$GalleryPostsShowRequest {
 
 /// @nodoc
 abstract class $GalleryPostsShowRequestCopyWith<$Res> {
-  factory $GalleryPostsShowRequestCopyWith(GalleryPostsShowRequest value,
-          $Res Function(GalleryPostsShowRequest) then) =
-      _$GalleryPostsShowRequestCopyWithImpl<$Res, GalleryPostsShowRequest>;
+  factory $GalleryPostsShowRequestCopyWith(
+    GalleryPostsShowRequest value,
+    $Res Function(GalleryPostsShowRequest) then,
+  ) = _$GalleryPostsShowRequestCopyWithImpl<$Res, GalleryPostsShowRequest>;
   @useResult
   $Res call({String postId});
 }
 
 /// @nodoc
-class _$GalleryPostsShowRequestCopyWithImpl<$Res,
-        $Val extends GalleryPostsShowRequest>
+class _$GalleryPostsShowRequestCopyWithImpl<
+  $Res,
+  $Val extends GalleryPostsShowRequest
+>
     implements $GalleryPostsShowRequestCopyWith<$Res> {
   _$GalleryPostsShowRequestCopyWithImpl(this._value, this._then);
 
@@ -57,15 +62,17 @@ class _$GalleryPostsShowRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? postId = null,
-  }) {
-    return _then(_value.copyWith(
-      postId: null == postId
-          ? _value.postId
-          : postId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? postId = null}) {
+    return _then(
+      _value.copyWith(
+            postId:
+                null == postId
+                    ? _value.postId
+                    : postId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -73,9 +80,9 @@ class _$GalleryPostsShowRequestCopyWithImpl<$Res,
 abstract class _$$GalleryPostsShowRequestImplCopyWith<$Res>
     implements $GalleryPostsShowRequestCopyWith<$Res> {
   factory _$$GalleryPostsShowRequestImplCopyWith(
-          _$GalleryPostsShowRequestImpl value,
-          $Res Function(_$GalleryPostsShowRequestImpl) then) =
-      __$$GalleryPostsShowRequestImplCopyWithImpl<$Res>;
+    _$GalleryPostsShowRequestImpl value,
+    $Res Function(_$GalleryPostsShowRequestImpl) then,
+  ) = __$$GalleryPostsShowRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String postId});
@@ -83,27 +90,31 @@ abstract class _$$GalleryPostsShowRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$GalleryPostsShowRequestImplCopyWithImpl<$Res>
-    extends _$GalleryPostsShowRequestCopyWithImpl<$Res,
-        _$GalleryPostsShowRequestImpl>
+    extends
+        _$GalleryPostsShowRequestCopyWithImpl<
+          $Res,
+          _$GalleryPostsShowRequestImpl
+        >
     implements _$$GalleryPostsShowRequestImplCopyWith<$Res> {
   __$$GalleryPostsShowRequestImplCopyWithImpl(
-      _$GalleryPostsShowRequestImpl _value,
-      $Res Function(_$GalleryPostsShowRequestImpl) _then)
-      : super(_value, _then);
+    _$GalleryPostsShowRequestImpl _value,
+    $Res Function(_$GalleryPostsShowRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of GalleryPostsShowRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? postId = null,
-  }) {
-    return _then(_$GalleryPostsShowRequestImpl(
-      postId: null == postId
-          ? _value.postId
-          : postId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? postId = null}) {
+    return _then(
+      _$GalleryPostsShowRequestImpl(
+        postId:
+            null == postId
+                ? _value.postId
+                : postId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -141,14 +152,13 @@ class _$GalleryPostsShowRequestImpl implements _GalleryPostsShowRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$GalleryPostsShowRequestImplCopyWith<_$GalleryPostsShowRequestImpl>
-      get copyWith => __$$GalleryPostsShowRequestImplCopyWithImpl<
-          _$GalleryPostsShowRequestImpl>(this, _$identity);
+  get copyWith => __$$GalleryPostsShowRequestImplCopyWithImpl<
+    _$GalleryPostsShowRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GalleryPostsShowRequestImplToJson(
-      this,
-    );
+    return _$$GalleryPostsShowRequestImplToJson(this);
   }
 }
 
@@ -167,5 +177,5 @@ abstract class _GalleryPostsShowRequest implements GalleryPostsShowRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GalleryPostsShowRequestImplCopyWith<_$GalleryPostsShowRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

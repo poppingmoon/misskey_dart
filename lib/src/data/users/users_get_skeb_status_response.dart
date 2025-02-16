@@ -31,12 +31,4 @@ class SkebStatusSkill with _$SkebStatusSkill {
       _$SkebStatusSkillFromJson(json);
 }
 
-enum SkebStatusSkillGenre {
-  art,
-  comic,
-  voice,
-  novel,
-  video,
-  music,
-  correction,
-}
+enum SkebStatusSkillGenre { art, comic, voice, novel, video, music, correction }

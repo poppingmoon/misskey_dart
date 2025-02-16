@@ -12,10 +12,12 @@ part of 'notes_conversation_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 NotesConversationRequest _$NotesConversationRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _NotesConversationRequest.fromJson(json);
 }
 
@@ -37,16 +39,19 @@ mixin _$NotesConversationRequest {
 
 /// @nodoc
 abstract class $NotesConversationRequestCopyWith<$Res> {
-  factory $NotesConversationRequestCopyWith(NotesConversationRequest value,
-          $Res Function(NotesConversationRequest) then) =
-      _$NotesConversationRequestCopyWithImpl<$Res, NotesConversationRequest>;
+  factory $NotesConversationRequestCopyWith(
+    NotesConversationRequest value,
+    $Res Function(NotesConversationRequest) then,
+  ) = _$NotesConversationRequestCopyWithImpl<$Res, NotesConversationRequest>;
   @useResult
   $Res call({String noteId, int? limit, int? offset});
 }
 
 /// @nodoc
-class _$NotesConversationRequestCopyWithImpl<$Res,
-        $Val extends NotesConversationRequest>
+class _$NotesConversationRequestCopyWithImpl<
+  $Res,
+  $Val extends NotesConversationRequest
+>
     implements $NotesConversationRequestCopyWith<$Res> {
   _$NotesConversationRequestCopyWithImpl(this._value, this._then);
 
@@ -64,20 +69,26 @@ class _$NotesConversationRequestCopyWithImpl<$Res,
     Object? limit = freezed,
     Object? offset = freezed,
   }) {
-    return _then(_value.copyWith(
-      noteId: null == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      offset: freezed == offset
-          ? _value.offset
-          : offset // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            noteId:
+                null == noteId
+                    ? _value.noteId
+                    : noteId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            offset:
+                freezed == offset
+                    ? _value.offset
+                    : offset // ignore: cast_nullable_to_non_nullable
+                        as int?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -85,9 +96,9 @@ class _$NotesConversationRequestCopyWithImpl<$Res,
 abstract class _$$NotesConversationRequestImplCopyWith<$Res>
     implements $NotesConversationRequestCopyWith<$Res> {
   factory _$$NotesConversationRequestImplCopyWith(
-          _$NotesConversationRequestImpl value,
-          $Res Function(_$NotesConversationRequestImpl) then) =
-      __$$NotesConversationRequestImplCopyWithImpl<$Res>;
+    _$NotesConversationRequestImpl value,
+    $Res Function(_$NotesConversationRequestImpl) then,
+  ) = __$$NotesConversationRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String noteId, int? limit, int? offset});
@@ -95,13 +106,16 @@ abstract class _$$NotesConversationRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$NotesConversationRequestImplCopyWithImpl<$Res>
-    extends _$NotesConversationRequestCopyWithImpl<$Res,
-        _$NotesConversationRequestImpl>
+    extends
+        _$NotesConversationRequestCopyWithImpl<
+          $Res,
+          _$NotesConversationRequestImpl
+        >
     implements _$$NotesConversationRequestImplCopyWith<$Res> {
   __$$NotesConversationRequestImplCopyWithImpl(
-      _$NotesConversationRequestImpl _value,
-      $Res Function(_$NotesConversationRequestImpl) _then)
-      : super(_value, _then);
+    _$NotesConversationRequestImpl _value,
+    $Res Function(_$NotesConversationRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotesConversationRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -112,28 +126,36 @@ class __$$NotesConversationRequestImplCopyWithImpl<$Res>
     Object? limit = freezed,
     Object? offset = freezed,
   }) {
-    return _then(_$NotesConversationRequestImpl(
-      noteId: null == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      offset: freezed == offset
-          ? _value.offset
-          : offset // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ));
+    return _then(
+      _$NotesConversationRequestImpl(
+        noteId:
+            null == noteId
+                ? _value.noteId
+                : noteId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        offset:
+            freezed == offset
+                ? _value.offset
+                : offset // ignore: cast_nullable_to_non_nullable
+                    as int?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$NotesConversationRequestImpl implements _NotesConversationRequest {
-  const _$NotesConversationRequestImpl(
-      {required this.noteId, this.limit, this.offset});
+  const _$NotesConversationRequestImpl({
+    required this.noteId,
+    this.limit,
+    this.offset,
+  });
 
   factory _$NotesConversationRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$NotesConversationRequestImplFromJson(json);
@@ -170,22 +192,22 @@ class _$NotesConversationRequestImpl implements _NotesConversationRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$NotesConversationRequestImplCopyWith<_$NotesConversationRequestImpl>
-      get copyWith => __$$NotesConversationRequestImplCopyWithImpl<
-          _$NotesConversationRequestImpl>(this, _$identity);
+  get copyWith => __$$NotesConversationRequestImplCopyWithImpl<
+    _$NotesConversationRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotesConversationRequestImplToJson(
-      this,
-    );
+    return _$$NotesConversationRequestImplToJson(this);
   }
 }
 
 abstract class _NotesConversationRequest implements NotesConversationRequest {
-  const factory _NotesConversationRequest(
-      {required final String noteId,
-      final int? limit,
-      final int? offset}) = _$NotesConversationRequestImpl;
+  const factory _NotesConversationRequest({
+    required final String noteId,
+    final int? limit,
+    final int? offset,
+  }) = _$NotesConversationRequestImpl;
 
   factory _NotesConversationRequest.fromJson(Map<String, dynamic> json) =
       _$NotesConversationRequestImpl.fromJson;
@@ -202,5 +224,5 @@ abstract class _NotesConversationRequest implements NotesConversationRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesConversationRequestImplCopyWith<_$NotesConversationRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

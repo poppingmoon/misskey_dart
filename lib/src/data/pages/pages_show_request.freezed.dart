@@ -12,7 +12,8 @@ part of 'pages_show_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 PagesShowRequest _$PagesShowRequestFromJson(Map<String, dynamic> json) {
   return _PagesShowRequest.fromJson(json);
@@ -37,8 +38,9 @@ mixin _$PagesShowRequest {
 /// @nodoc
 abstract class $PagesShowRequestCopyWith<$Res> {
   factory $PagesShowRequestCopyWith(
-          PagesShowRequest value, $Res Function(PagesShowRequest) then) =
-      _$PagesShowRequestCopyWithImpl<$Res, PagesShowRequest>;
+    PagesShowRequest value,
+    $Res Function(PagesShowRequest) then,
+  ) = _$PagesShowRequestCopyWithImpl<$Res, PagesShowRequest>;
   @useResult
   $Res call({String? pageId, String? name, String? username});
 }
@@ -62,29 +64,36 @@ class _$PagesShowRequestCopyWithImpl<$Res, $Val extends PagesShowRequest>
     Object? name = freezed,
     Object? username = freezed,
   }) {
-    return _then(_value.copyWith(
-      pageId: freezed == pageId
-          ? _value.pageId
-          : pageId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      username: freezed == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            pageId:
+                freezed == pageId
+                    ? _value.pageId
+                    : pageId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            name:
+                freezed == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            username:
+                freezed == username
+                    ? _value.username
+                    : username // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$PagesShowRequestImplCopyWith<$Res>
     implements $PagesShowRequestCopyWith<$Res> {
-  factory _$$PagesShowRequestImplCopyWith(_$PagesShowRequestImpl value,
-          $Res Function(_$PagesShowRequestImpl) then) =
-      __$$PagesShowRequestImplCopyWithImpl<$Res>;
+  factory _$$PagesShowRequestImplCopyWith(
+    _$PagesShowRequestImpl value,
+    $Res Function(_$PagesShowRequestImpl) then,
+  ) = __$$PagesShowRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? pageId, String? name, String? username});
@@ -94,9 +103,10 @@ abstract class _$$PagesShowRequestImplCopyWith<$Res>
 class __$$PagesShowRequestImplCopyWithImpl<$Res>
     extends _$PagesShowRequestCopyWithImpl<$Res, _$PagesShowRequestImpl>
     implements _$$PagesShowRequestImplCopyWith<$Res> {
-  __$$PagesShowRequestImplCopyWithImpl(_$PagesShowRequestImpl _value,
-      $Res Function(_$PagesShowRequestImpl) _then)
-      : super(_value, _then);
+  __$$PagesShowRequestImplCopyWithImpl(
+    _$PagesShowRequestImpl _value,
+    $Res Function(_$PagesShowRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of PagesShowRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -107,20 +117,25 @@ class __$$PagesShowRequestImplCopyWithImpl<$Res>
     Object? name = freezed,
     Object? username = freezed,
   }) {
-    return _then(_$PagesShowRequestImpl(
-      pageId: freezed == pageId
-          ? _value.pageId
-          : pageId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      username: freezed == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$PagesShowRequestImpl(
+        pageId:
+            freezed == pageId
+                ? _value.pageId
+                : pageId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        name:
+            freezed == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        username:
+            freezed == username
+                ? _value.username
+                : username // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -166,21 +181,22 @@ class _$PagesShowRequestImpl implements _PagesShowRequest {
   @pragma('vm:prefer-inline')
   _$$PagesShowRequestImplCopyWith<_$PagesShowRequestImpl> get copyWith =>
       __$$PagesShowRequestImplCopyWithImpl<_$PagesShowRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PagesShowRequestImplToJson(
-      this,
-    );
+    return _$$PagesShowRequestImplToJson(this);
   }
 }
 
 abstract class _PagesShowRequest implements PagesShowRequest {
-  const factory _PagesShowRequest(
-      {final String? pageId,
-      final String? name,
-      final String? username}) = _$PagesShowRequestImpl;
+  const factory _PagesShowRequest({
+    final String? pageId,
+    final String? name,
+    final String? username,
+  }) = _$PagesShowRequestImpl;
 
   factory _PagesShowRequest.fromJson(Map<String, dynamic> json) =
       _$PagesShowRequestImpl.fromJson;

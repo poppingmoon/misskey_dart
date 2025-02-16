@@ -12,7 +12,8 @@ part of 'i_update_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 IUpdateRequest _$IUpdateRequestFromJson(Map<String, dynamic> json) {
   return _IUpdateRequest.fromJson(json);
@@ -85,49 +86,51 @@ mixin _$IUpdateRequest {
 /// @nodoc
 abstract class $IUpdateRequestCopyWith<$Res> {
   factory $IUpdateRequestCopyWith(
-          IUpdateRequest value, $Res Function(IUpdateRequest) then) =
-      _$IUpdateRequestCopyWithImpl<$Res, IUpdateRequest>;
+    IUpdateRequest value,
+    $Res Function(IUpdateRequest) then,
+  ) = _$IUpdateRequestCopyWithImpl<$Res, IUpdateRequest>;
   @useResult
-  $Res call(
-      {String? name,
-      String? description,
-      String? followedMessage,
-      String? location,
-      @DateTimeConverter() dynamic birthday,
-      String? lang,
-      String? avatarId,
-      List<IUpdateAvatarDecoration>? avatarDecorations,
-      String? bannerId,
-      List<UserField>? fields,
-      bool? isLocked,
-      bool? isExplorable,
-      bool? hideOnlineStatus,
-      bool? publicReactions,
-      bool? carefulBot,
-      bool? autoAcceptFollowed,
-      bool? noCrawle,
-      bool? preventAiLearning,
-      bool? requireSigninToViewContents,
-      @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
-      @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
-      bool? isBot,
-      bool? isCat,
-      bool? injectFeaturedNote,
-      bool? receiveAnnouncementEmail,
-      bool? alwaysMarkNsfw,
-      bool? autoSensitive,
-      @Deprecated("removed at 2023.12.0") FFVisibility? ffVisibility,
-      FFVisibility? followingVisibility,
-      FFVisibility? followersVisibility,
-      String? pinnedPageId,
-      List<String>? mutingNotificationTypes,
-      @MuteWordsConverter() List<MuteWord>? mutedWords,
-      @MuteWordsConverter() List<MuteWord>? hardMutedWords,
-      List<String>? mutedInstances,
-      NotificationRecieveConfigs? notificationRecieveConfig,
-      List<String>? emailNotificationTypes,
-      List<String>? alsoKnownAs,
-      List<IUpdateMutualLinkSection>? mutualLinkSections});
+  $Res call({
+    String? name,
+    String? description,
+    String? followedMessage,
+    String? location,
+    @DateTimeConverter() dynamic birthday,
+    String? lang,
+    String? avatarId,
+    List<IUpdateAvatarDecoration>? avatarDecorations,
+    String? bannerId,
+    List<UserField>? fields,
+    bool? isLocked,
+    bool? isExplorable,
+    bool? hideOnlineStatus,
+    bool? publicReactions,
+    bool? carefulBot,
+    bool? autoAcceptFollowed,
+    bool? noCrawle,
+    bool? preventAiLearning,
+    bool? requireSigninToViewContents,
+    @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
+    @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
+    bool? isBot,
+    bool? isCat,
+    bool? injectFeaturedNote,
+    bool? receiveAnnouncementEmail,
+    bool? alwaysMarkNsfw,
+    bool? autoSensitive,
+    @Deprecated("removed at 2023.12.0") FFVisibility? ffVisibility,
+    FFVisibility? followingVisibility,
+    FFVisibility? followersVisibility,
+    String? pinnedPageId,
+    List<String>? mutingNotificationTypes,
+    @MuteWordsConverter() List<MuteWord>? mutedWords,
+    @MuteWordsConverter() List<MuteWord>? hardMutedWords,
+    List<String>? mutedInstances,
+    NotificationRecieveConfigs? notificationRecieveConfig,
+    List<String>? emailNotificationTypes,
+    List<String>? alsoKnownAs,
+    List<IUpdateMutualLinkSection>? mutualLinkSections,
+  });
 
   $NotificationRecieveConfigsCopyWith<$Res>? get notificationRecieveConfig;
 }
@@ -187,164 +190,206 @@ class _$IUpdateRequestCopyWithImpl<$Res, $Val extends IUpdateRequest>
     Object? alsoKnownAs = freezed,
     Object? mutualLinkSections = freezed,
   }) {
-    return _then(_value.copyWith(
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      followedMessage: freezed == followedMessage
-          ? _value.followedMessage
-          : followedMessage // ignore: cast_nullable_to_non_nullable
-              as String?,
-      location: freezed == location
-          ? _value.location
-          : location // ignore: cast_nullable_to_non_nullable
-              as String?,
-      birthday: freezed == birthday
-          ? _value.birthday
-          : birthday // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-      lang: freezed == lang
-          ? _value.lang
-          : lang // ignore: cast_nullable_to_non_nullable
-              as String?,
-      avatarId: freezed == avatarId
-          ? _value.avatarId
-          : avatarId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      avatarDecorations: freezed == avatarDecorations
-          ? _value.avatarDecorations
-          : avatarDecorations // ignore: cast_nullable_to_non_nullable
-              as List<IUpdateAvatarDecoration>?,
-      bannerId: freezed == bannerId
-          ? _value.bannerId
-          : bannerId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      fields: freezed == fields
-          ? _value.fields
-          : fields // ignore: cast_nullable_to_non_nullable
-              as List<UserField>?,
-      isLocked: freezed == isLocked
-          ? _value.isLocked
-          : isLocked // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      isExplorable: freezed == isExplorable
-          ? _value.isExplorable
-          : isExplorable // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      hideOnlineStatus: freezed == hideOnlineStatus
-          ? _value.hideOnlineStatus
-          : hideOnlineStatus // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      publicReactions: freezed == publicReactions
-          ? _value.publicReactions
-          : publicReactions // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      carefulBot: freezed == carefulBot
-          ? _value.carefulBot
-          : carefulBot // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      autoAcceptFollowed: freezed == autoAcceptFollowed
-          ? _value.autoAcceptFollowed
-          : autoAcceptFollowed // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      noCrawle: freezed == noCrawle
-          ? _value.noCrawle
-          : noCrawle // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      preventAiLearning: freezed == preventAiLearning
-          ? _value.preventAiLearning
-          : preventAiLearning // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      requireSigninToViewContents: freezed == requireSigninToViewContents
-          ? _value.requireSigninToViewContents
-          : requireSigninToViewContents // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      makeNotesFollowersOnlyBefore: freezed == makeNotesFollowersOnlyBefore
-          ? _value.makeNotesFollowersOnlyBefore
-          : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
-              as HideBefore?,
-      makeNotesHiddenBefore: freezed == makeNotesHiddenBefore
-          ? _value.makeNotesHiddenBefore
-          : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
-              as HideBefore?,
-      isBot: freezed == isBot
-          ? _value.isBot
-          : isBot // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      isCat: freezed == isCat
-          ? _value.isCat
-          : isCat // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      injectFeaturedNote: freezed == injectFeaturedNote
-          ? _value.injectFeaturedNote
-          : injectFeaturedNote // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      receiveAnnouncementEmail: freezed == receiveAnnouncementEmail
-          ? _value.receiveAnnouncementEmail
-          : receiveAnnouncementEmail // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      alwaysMarkNsfw: freezed == alwaysMarkNsfw
-          ? _value.alwaysMarkNsfw
-          : alwaysMarkNsfw // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      autoSensitive: freezed == autoSensitive
-          ? _value.autoSensitive
-          : autoSensitive // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      ffVisibility: freezed == ffVisibility
-          ? _value.ffVisibility
-          : ffVisibility // ignore: cast_nullable_to_non_nullable
-              as FFVisibility?,
-      followingVisibility: freezed == followingVisibility
-          ? _value.followingVisibility
-          : followingVisibility // ignore: cast_nullable_to_non_nullable
-              as FFVisibility?,
-      followersVisibility: freezed == followersVisibility
-          ? _value.followersVisibility
-          : followersVisibility // ignore: cast_nullable_to_non_nullable
-              as FFVisibility?,
-      pinnedPageId: freezed == pinnedPageId
-          ? _value.pinnedPageId
-          : pinnedPageId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      mutingNotificationTypes: freezed == mutingNotificationTypes
-          ? _value.mutingNotificationTypes
-          : mutingNotificationTypes // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      mutedWords: freezed == mutedWords
-          ? _value.mutedWords
-          : mutedWords // ignore: cast_nullable_to_non_nullable
-              as List<MuteWord>?,
-      hardMutedWords: freezed == hardMutedWords
-          ? _value.hardMutedWords
-          : hardMutedWords // ignore: cast_nullable_to_non_nullable
-              as List<MuteWord>?,
-      mutedInstances: freezed == mutedInstances
-          ? _value.mutedInstances
-          : mutedInstances // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      notificationRecieveConfig: freezed == notificationRecieveConfig
-          ? _value.notificationRecieveConfig
-          : notificationRecieveConfig // ignore: cast_nullable_to_non_nullable
-              as NotificationRecieveConfigs?,
-      emailNotificationTypes: freezed == emailNotificationTypes
-          ? _value.emailNotificationTypes
-          : emailNotificationTypes // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      alsoKnownAs: freezed == alsoKnownAs
-          ? _value.alsoKnownAs
-          : alsoKnownAs // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      mutualLinkSections: freezed == mutualLinkSections
-          ? _value.mutualLinkSections
-          : mutualLinkSections // ignore: cast_nullable_to_non_nullable
-              as List<IUpdateMutualLinkSection>?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            name:
+                freezed == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            description:
+                freezed == description
+                    ? _value.description
+                    : description // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            followedMessage:
+                freezed == followedMessage
+                    ? _value.followedMessage
+                    : followedMessage // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            location:
+                freezed == location
+                    ? _value.location
+                    : location // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            birthday:
+                freezed == birthday
+                    ? _value.birthday
+                    : birthday // ignore: cast_nullable_to_non_nullable
+                        as dynamic,
+            lang:
+                freezed == lang
+                    ? _value.lang
+                    : lang // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            avatarId:
+                freezed == avatarId
+                    ? _value.avatarId
+                    : avatarId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            avatarDecorations:
+                freezed == avatarDecorations
+                    ? _value.avatarDecorations
+                    : avatarDecorations // ignore: cast_nullable_to_non_nullable
+                        as List<IUpdateAvatarDecoration>?,
+            bannerId:
+                freezed == bannerId
+                    ? _value.bannerId
+                    : bannerId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            fields:
+                freezed == fields
+                    ? _value.fields
+                    : fields // ignore: cast_nullable_to_non_nullable
+                        as List<UserField>?,
+            isLocked:
+                freezed == isLocked
+                    ? _value.isLocked
+                    : isLocked // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            isExplorable:
+                freezed == isExplorable
+                    ? _value.isExplorable
+                    : isExplorable // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            hideOnlineStatus:
+                freezed == hideOnlineStatus
+                    ? _value.hideOnlineStatus
+                    : hideOnlineStatus // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            publicReactions:
+                freezed == publicReactions
+                    ? _value.publicReactions
+                    : publicReactions // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            carefulBot:
+                freezed == carefulBot
+                    ? _value.carefulBot
+                    : carefulBot // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            autoAcceptFollowed:
+                freezed == autoAcceptFollowed
+                    ? _value.autoAcceptFollowed
+                    : autoAcceptFollowed // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            noCrawle:
+                freezed == noCrawle
+                    ? _value.noCrawle
+                    : noCrawle // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            preventAiLearning:
+                freezed == preventAiLearning
+                    ? _value.preventAiLearning
+                    : preventAiLearning // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            requireSigninToViewContents:
+                freezed == requireSigninToViewContents
+                    ? _value.requireSigninToViewContents
+                    : requireSigninToViewContents // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            makeNotesFollowersOnlyBefore:
+                freezed == makeNotesFollowersOnlyBefore
+                    ? _value.makeNotesFollowersOnlyBefore
+                    : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
+                        as HideBefore?,
+            makeNotesHiddenBefore:
+                freezed == makeNotesHiddenBefore
+                    ? _value.makeNotesHiddenBefore
+                    : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
+                        as HideBefore?,
+            isBot:
+                freezed == isBot
+                    ? _value.isBot
+                    : isBot // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            isCat:
+                freezed == isCat
+                    ? _value.isCat
+                    : isCat // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            injectFeaturedNote:
+                freezed == injectFeaturedNote
+                    ? _value.injectFeaturedNote
+                    : injectFeaturedNote // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            receiveAnnouncementEmail:
+                freezed == receiveAnnouncementEmail
+                    ? _value.receiveAnnouncementEmail
+                    : receiveAnnouncementEmail // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            alwaysMarkNsfw:
+                freezed == alwaysMarkNsfw
+                    ? _value.alwaysMarkNsfw
+                    : alwaysMarkNsfw // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            autoSensitive:
+                freezed == autoSensitive
+                    ? _value.autoSensitive
+                    : autoSensitive // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            ffVisibility:
+                freezed == ffVisibility
+                    ? _value.ffVisibility
+                    : ffVisibility // ignore: cast_nullable_to_non_nullable
+                        as FFVisibility?,
+            followingVisibility:
+                freezed == followingVisibility
+                    ? _value.followingVisibility
+                    : followingVisibility // ignore: cast_nullable_to_non_nullable
+                        as FFVisibility?,
+            followersVisibility:
+                freezed == followersVisibility
+                    ? _value.followersVisibility
+                    : followersVisibility // ignore: cast_nullable_to_non_nullable
+                        as FFVisibility?,
+            pinnedPageId:
+                freezed == pinnedPageId
+                    ? _value.pinnedPageId
+                    : pinnedPageId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            mutingNotificationTypes:
+                freezed == mutingNotificationTypes
+                    ? _value.mutingNotificationTypes
+                    : mutingNotificationTypes // ignore: cast_nullable_to_non_nullable
+                        as List<String>?,
+            mutedWords:
+                freezed == mutedWords
+                    ? _value.mutedWords
+                    : mutedWords // ignore: cast_nullable_to_non_nullable
+                        as List<MuteWord>?,
+            hardMutedWords:
+                freezed == hardMutedWords
+                    ? _value.hardMutedWords
+                    : hardMutedWords // ignore: cast_nullable_to_non_nullable
+                        as List<MuteWord>?,
+            mutedInstances:
+                freezed == mutedInstances
+                    ? _value.mutedInstances
+                    : mutedInstances // ignore: cast_nullable_to_non_nullable
+                        as List<String>?,
+            notificationRecieveConfig:
+                freezed == notificationRecieveConfig
+                    ? _value.notificationRecieveConfig
+                    : notificationRecieveConfig // ignore: cast_nullable_to_non_nullable
+                        as NotificationRecieveConfigs?,
+            emailNotificationTypes:
+                freezed == emailNotificationTypes
+                    ? _value.emailNotificationTypes
+                    : emailNotificationTypes // ignore: cast_nullable_to_non_nullable
+                        as List<String>?,
+            alsoKnownAs:
+                freezed == alsoKnownAs
+                    ? _value.alsoKnownAs
+                    : alsoKnownAs // ignore: cast_nullable_to_non_nullable
+                        as List<String>?,
+            mutualLinkSections:
+                freezed == mutualLinkSections
+                    ? _value.mutualLinkSections
+                    : mutualLinkSections // ignore: cast_nullable_to_non_nullable
+                        as List<IUpdateMutualLinkSection>?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of IUpdateRequest
@@ -357,60 +402,64 @@ class _$IUpdateRequestCopyWithImpl<$Res, $Val extends IUpdateRequest>
     }
 
     return $NotificationRecieveConfigsCopyWith<$Res>(
-        _value.notificationRecieveConfig!, (value) {
-      return _then(_value.copyWith(notificationRecieveConfig: value) as $Val);
-    });
+      _value.notificationRecieveConfig!,
+      (value) {
+        return _then(_value.copyWith(notificationRecieveConfig: value) as $Val);
+      },
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$IUpdateRequestImplCopyWith<$Res>
     implements $IUpdateRequestCopyWith<$Res> {
-  factory _$$IUpdateRequestImplCopyWith(_$IUpdateRequestImpl value,
-          $Res Function(_$IUpdateRequestImpl) then) =
-      __$$IUpdateRequestImplCopyWithImpl<$Res>;
+  factory _$$IUpdateRequestImplCopyWith(
+    _$IUpdateRequestImpl value,
+    $Res Function(_$IUpdateRequestImpl) then,
+  ) = __$$IUpdateRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String? name,
-      String? description,
-      String? followedMessage,
-      String? location,
-      @DateTimeConverter() dynamic birthday,
-      String? lang,
-      String? avatarId,
-      List<IUpdateAvatarDecoration>? avatarDecorations,
-      String? bannerId,
-      List<UserField>? fields,
-      bool? isLocked,
-      bool? isExplorable,
-      bool? hideOnlineStatus,
-      bool? publicReactions,
-      bool? carefulBot,
-      bool? autoAcceptFollowed,
-      bool? noCrawle,
-      bool? preventAiLearning,
-      bool? requireSigninToViewContents,
-      @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
-      @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
-      bool? isBot,
-      bool? isCat,
-      bool? injectFeaturedNote,
-      bool? receiveAnnouncementEmail,
-      bool? alwaysMarkNsfw,
-      bool? autoSensitive,
-      @Deprecated("removed at 2023.12.0") FFVisibility? ffVisibility,
-      FFVisibility? followingVisibility,
-      FFVisibility? followersVisibility,
-      String? pinnedPageId,
-      List<String>? mutingNotificationTypes,
-      @MuteWordsConverter() List<MuteWord>? mutedWords,
-      @MuteWordsConverter() List<MuteWord>? hardMutedWords,
-      List<String>? mutedInstances,
-      NotificationRecieveConfigs? notificationRecieveConfig,
-      List<String>? emailNotificationTypes,
-      List<String>? alsoKnownAs,
-      List<IUpdateMutualLinkSection>? mutualLinkSections});
+  $Res call({
+    String? name,
+    String? description,
+    String? followedMessage,
+    String? location,
+    @DateTimeConverter() dynamic birthday,
+    String? lang,
+    String? avatarId,
+    List<IUpdateAvatarDecoration>? avatarDecorations,
+    String? bannerId,
+    List<UserField>? fields,
+    bool? isLocked,
+    bool? isExplorable,
+    bool? hideOnlineStatus,
+    bool? publicReactions,
+    bool? carefulBot,
+    bool? autoAcceptFollowed,
+    bool? noCrawle,
+    bool? preventAiLearning,
+    bool? requireSigninToViewContents,
+    @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
+    @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
+    bool? isBot,
+    bool? isCat,
+    bool? injectFeaturedNote,
+    bool? receiveAnnouncementEmail,
+    bool? alwaysMarkNsfw,
+    bool? autoSensitive,
+    @Deprecated("removed at 2023.12.0") FFVisibility? ffVisibility,
+    FFVisibility? followingVisibility,
+    FFVisibility? followersVisibility,
+    String? pinnedPageId,
+    List<String>? mutingNotificationTypes,
+    @MuteWordsConverter() List<MuteWord>? mutedWords,
+    @MuteWordsConverter() List<MuteWord>? hardMutedWords,
+    List<String>? mutedInstances,
+    NotificationRecieveConfigs? notificationRecieveConfig,
+    List<String>? emailNotificationTypes,
+    List<String>? alsoKnownAs,
+    List<IUpdateMutualLinkSection>? mutualLinkSections,
+  });
 
   @override
   $NotificationRecieveConfigsCopyWith<$Res>? get notificationRecieveConfig;
@@ -421,8 +470,9 @@ class __$$IUpdateRequestImplCopyWithImpl<$Res>
     extends _$IUpdateRequestCopyWithImpl<$Res, _$IUpdateRequestImpl>
     implements _$$IUpdateRequestImplCopyWith<$Res> {
   __$$IUpdateRequestImplCopyWithImpl(
-      _$IUpdateRequestImpl _value, $Res Function(_$IUpdateRequestImpl) _then)
-      : super(_value, _then);
+    _$IUpdateRequestImpl _value,
+    $Res Function(_$IUpdateRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of IUpdateRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -469,216 +519,256 @@ class __$$IUpdateRequestImplCopyWithImpl<$Res>
     Object? alsoKnownAs = freezed,
     Object? mutualLinkSections = freezed,
   }) {
-    return _then(_$IUpdateRequestImpl(
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      followedMessage: freezed == followedMessage
-          ? _value.followedMessage
-          : followedMessage // ignore: cast_nullable_to_non_nullable
-              as String?,
-      location: freezed == location
-          ? _value.location
-          : location // ignore: cast_nullable_to_non_nullable
-              as String?,
-      birthday: freezed == birthday ? _value.birthday! : birthday,
-      lang: freezed == lang
-          ? _value.lang
-          : lang // ignore: cast_nullable_to_non_nullable
-              as String?,
-      avatarId: freezed == avatarId
-          ? _value.avatarId
-          : avatarId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      avatarDecorations: freezed == avatarDecorations
-          ? _value._avatarDecorations
-          : avatarDecorations // ignore: cast_nullable_to_non_nullable
-              as List<IUpdateAvatarDecoration>?,
-      bannerId: freezed == bannerId
-          ? _value.bannerId
-          : bannerId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      fields: freezed == fields
-          ? _value._fields
-          : fields // ignore: cast_nullable_to_non_nullable
-              as List<UserField>?,
-      isLocked: freezed == isLocked
-          ? _value.isLocked
-          : isLocked // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      isExplorable: freezed == isExplorable
-          ? _value.isExplorable
-          : isExplorable // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      hideOnlineStatus: freezed == hideOnlineStatus
-          ? _value.hideOnlineStatus
-          : hideOnlineStatus // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      publicReactions: freezed == publicReactions
-          ? _value.publicReactions
-          : publicReactions // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      carefulBot: freezed == carefulBot
-          ? _value.carefulBot
-          : carefulBot // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      autoAcceptFollowed: freezed == autoAcceptFollowed
-          ? _value.autoAcceptFollowed
-          : autoAcceptFollowed // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      noCrawle: freezed == noCrawle
-          ? _value.noCrawle
-          : noCrawle // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      preventAiLearning: freezed == preventAiLearning
-          ? _value.preventAiLearning
-          : preventAiLearning // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      requireSigninToViewContents: freezed == requireSigninToViewContents
-          ? _value.requireSigninToViewContents
-          : requireSigninToViewContents // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      makeNotesFollowersOnlyBefore: freezed == makeNotesFollowersOnlyBefore
-          ? _value.makeNotesFollowersOnlyBefore
-          : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
-              as HideBefore?,
-      makeNotesHiddenBefore: freezed == makeNotesHiddenBefore
-          ? _value.makeNotesHiddenBefore
-          : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
-              as HideBefore?,
-      isBot: freezed == isBot
-          ? _value.isBot
-          : isBot // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      isCat: freezed == isCat
-          ? _value.isCat
-          : isCat // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      injectFeaturedNote: freezed == injectFeaturedNote
-          ? _value.injectFeaturedNote
-          : injectFeaturedNote // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      receiveAnnouncementEmail: freezed == receiveAnnouncementEmail
-          ? _value.receiveAnnouncementEmail
-          : receiveAnnouncementEmail // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      alwaysMarkNsfw: freezed == alwaysMarkNsfw
-          ? _value.alwaysMarkNsfw
-          : alwaysMarkNsfw // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      autoSensitive: freezed == autoSensitive
-          ? _value.autoSensitive
-          : autoSensitive // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      ffVisibility: freezed == ffVisibility
-          ? _value.ffVisibility
-          : ffVisibility // ignore: cast_nullable_to_non_nullable
-              as FFVisibility?,
-      followingVisibility: freezed == followingVisibility
-          ? _value.followingVisibility
-          : followingVisibility // ignore: cast_nullable_to_non_nullable
-              as FFVisibility?,
-      followersVisibility: freezed == followersVisibility
-          ? _value.followersVisibility
-          : followersVisibility // ignore: cast_nullable_to_non_nullable
-              as FFVisibility?,
-      pinnedPageId: freezed == pinnedPageId
-          ? _value.pinnedPageId
-          : pinnedPageId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      mutingNotificationTypes: freezed == mutingNotificationTypes
-          ? _value._mutingNotificationTypes
-          : mutingNotificationTypes // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      mutedWords: freezed == mutedWords
-          ? _value._mutedWords
-          : mutedWords // ignore: cast_nullable_to_non_nullable
-              as List<MuteWord>?,
-      hardMutedWords: freezed == hardMutedWords
-          ? _value._hardMutedWords
-          : hardMutedWords // ignore: cast_nullable_to_non_nullable
-              as List<MuteWord>?,
-      mutedInstances: freezed == mutedInstances
-          ? _value._mutedInstances
-          : mutedInstances // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      notificationRecieveConfig: freezed == notificationRecieveConfig
-          ? _value.notificationRecieveConfig
-          : notificationRecieveConfig // ignore: cast_nullable_to_non_nullable
-              as NotificationRecieveConfigs?,
-      emailNotificationTypes: freezed == emailNotificationTypes
-          ? _value._emailNotificationTypes
-          : emailNotificationTypes // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      alsoKnownAs: freezed == alsoKnownAs
-          ? _value._alsoKnownAs
-          : alsoKnownAs // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      mutualLinkSections: freezed == mutualLinkSections
-          ? _value._mutualLinkSections
-          : mutualLinkSections // ignore: cast_nullable_to_non_nullable
-              as List<IUpdateMutualLinkSection>?,
-    ));
+    return _then(
+      _$IUpdateRequestImpl(
+        name:
+            freezed == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        description:
+            freezed == description
+                ? _value.description
+                : description // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        followedMessage:
+            freezed == followedMessage
+                ? _value.followedMessage
+                : followedMessage // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        location:
+            freezed == location
+                ? _value.location
+                : location // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        birthday: freezed == birthday ? _value.birthday! : birthday,
+        lang:
+            freezed == lang
+                ? _value.lang
+                : lang // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        avatarId:
+            freezed == avatarId
+                ? _value.avatarId
+                : avatarId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        avatarDecorations:
+            freezed == avatarDecorations
+                ? _value._avatarDecorations
+                : avatarDecorations // ignore: cast_nullable_to_non_nullable
+                    as List<IUpdateAvatarDecoration>?,
+        bannerId:
+            freezed == bannerId
+                ? _value.bannerId
+                : bannerId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        fields:
+            freezed == fields
+                ? _value._fields
+                : fields // ignore: cast_nullable_to_non_nullable
+                    as List<UserField>?,
+        isLocked:
+            freezed == isLocked
+                ? _value.isLocked
+                : isLocked // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        isExplorable:
+            freezed == isExplorable
+                ? _value.isExplorable
+                : isExplorable // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        hideOnlineStatus:
+            freezed == hideOnlineStatus
+                ? _value.hideOnlineStatus
+                : hideOnlineStatus // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        publicReactions:
+            freezed == publicReactions
+                ? _value.publicReactions
+                : publicReactions // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        carefulBot:
+            freezed == carefulBot
+                ? _value.carefulBot
+                : carefulBot // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        autoAcceptFollowed:
+            freezed == autoAcceptFollowed
+                ? _value.autoAcceptFollowed
+                : autoAcceptFollowed // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        noCrawle:
+            freezed == noCrawle
+                ? _value.noCrawle
+                : noCrawle // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        preventAiLearning:
+            freezed == preventAiLearning
+                ? _value.preventAiLearning
+                : preventAiLearning // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        requireSigninToViewContents:
+            freezed == requireSigninToViewContents
+                ? _value.requireSigninToViewContents
+                : requireSigninToViewContents // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        makeNotesFollowersOnlyBefore:
+            freezed == makeNotesFollowersOnlyBefore
+                ? _value.makeNotesFollowersOnlyBefore
+                : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
+                    as HideBefore?,
+        makeNotesHiddenBefore:
+            freezed == makeNotesHiddenBefore
+                ? _value.makeNotesHiddenBefore
+                : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
+                    as HideBefore?,
+        isBot:
+            freezed == isBot
+                ? _value.isBot
+                : isBot // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        isCat:
+            freezed == isCat
+                ? _value.isCat
+                : isCat // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        injectFeaturedNote:
+            freezed == injectFeaturedNote
+                ? _value.injectFeaturedNote
+                : injectFeaturedNote // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        receiveAnnouncementEmail:
+            freezed == receiveAnnouncementEmail
+                ? _value.receiveAnnouncementEmail
+                : receiveAnnouncementEmail // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        alwaysMarkNsfw:
+            freezed == alwaysMarkNsfw
+                ? _value.alwaysMarkNsfw
+                : alwaysMarkNsfw // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        autoSensitive:
+            freezed == autoSensitive
+                ? _value.autoSensitive
+                : autoSensitive // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        ffVisibility:
+            freezed == ffVisibility
+                ? _value.ffVisibility
+                : ffVisibility // ignore: cast_nullable_to_non_nullable
+                    as FFVisibility?,
+        followingVisibility:
+            freezed == followingVisibility
+                ? _value.followingVisibility
+                : followingVisibility // ignore: cast_nullable_to_non_nullable
+                    as FFVisibility?,
+        followersVisibility:
+            freezed == followersVisibility
+                ? _value.followersVisibility
+                : followersVisibility // ignore: cast_nullable_to_non_nullable
+                    as FFVisibility?,
+        pinnedPageId:
+            freezed == pinnedPageId
+                ? _value.pinnedPageId
+                : pinnedPageId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        mutingNotificationTypes:
+            freezed == mutingNotificationTypes
+                ? _value._mutingNotificationTypes
+                : mutingNotificationTypes // ignore: cast_nullable_to_non_nullable
+                    as List<String>?,
+        mutedWords:
+            freezed == mutedWords
+                ? _value._mutedWords
+                : mutedWords // ignore: cast_nullable_to_non_nullable
+                    as List<MuteWord>?,
+        hardMutedWords:
+            freezed == hardMutedWords
+                ? _value._hardMutedWords
+                : hardMutedWords // ignore: cast_nullable_to_non_nullable
+                    as List<MuteWord>?,
+        mutedInstances:
+            freezed == mutedInstances
+                ? _value._mutedInstances
+                : mutedInstances // ignore: cast_nullable_to_non_nullable
+                    as List<String>?,
+        notificationRecieveConfig:
+            freezed == notificationRecieveConfig
+                ? _value.notificationRecieveConfig
+                : notificationRecieveConfig // ignore: cast_nullable_to_non_nullable
+                    as NotificationRecieveConfigs?,
+        emailNotificationTypes:
+            freezed == emailNotificationTypes
+                ? _value._emailNotificationTypes
+                : emailNotificationTypes // ignore: cast_nullable_to_non_nullable
+                    as List<String>?,
+        alsoKnownAs:
+            freezed == alsoKnownAs
+                ? _value._alsoKnownAs
+                : alsoKnownAs // ignore: cast_nullable_to_non_nullable
+                    as List<String>?,
+        mutualLinkSections:
+            freezed == mutualLinkSections
+                ? _value._mutualLinkSections
+                : mutualLinkSections // ignore: cast_nullable_to_non_nullable
+                    as List<IUpdateMutualLinkSection>?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$IUpdateRequestImpl implements _IUpdateRequest {
-  const _$IUpdateRequestImpl(
-      {this.name,
-      this.description,
-      this.followedMessage,
-      this.location,
-      @DateTimeConverter() this.birthday,
-      this.lang,
-      this.avatarId,
-      final List<IUpdateAvatarDecoration>? avatarDecorations,
-      this.bannerId,
-      final List<UserField>? fields,
-      this.isLocked,
-      this.isExplorable,
-      this.hideOnlineStatus,
-      this.publicReactions,
-      this.carefulBot,
-      this.autoAcceptFollowed,
-      this.noCrawle,
-      this.preventAiLearning,
-      this.requireSigninToViewContents,
-      @HideBeforeConverter() this.makeNotesFollowersOnlyBefore,
-      @HideBeforeConverter() this.makeNotesHiddenBefore,
-      this.isBot,
-      this.isCat,
-      this.injectFeaturedNote,
-      this.receiveAnnouncementEmail,
-      this.alwaysMarkNsfw,
-      this.autoSensitive,
-      @Deprecated("removed at 2023.12.0") this.ffVisibility,
-      this.followingVisibility,
-      this.followersVisibility,
-      this.pinnedPageId,
-      final List<String>? mutingNotificationTypes,
-      @MuteWordsConverter() final List<MuteWord>? mutedWords,
-      @MuteWordsConverter() final List<MuteWord>? hardMutedWords,
-      final List<String>? mutedInstances,
-      this.notificationRecieveConfig,
-      final List<String>? emailNotificationTypes,
-      final List<String>? alsoKnownAs,
-      final List<IUpdateMutualLinkSection>? mutualLinkSections})
-      : _avatarDecorations = avatarDecorations,
-        _fields = fields,
-        _mutingNotificationTypes = mutingNotificationTypes,
-        _mutedWords = mutedWords,
-        _hardMutedWords = hardMutedWords,
-        _mutedInstances = mutedInstances,
-        _emailNotificationTypes = emailNotificationTypes,
-        _alsoKnownAs = alsoKnownAs,
-        _mutualLinkSections = mutualLinkSections;
+  const _$IUpdateRequestImpl({
+    this.name,
+    this.description,
+    this.followedMessage,
+    this.location,
+    @DateTimeConverter() this.birthday,
+    this.lang,
+    this.avatarId,
+    final List<IUpdateAvatarDecoration>? avatarDecorations,
+    this.bannerId,
+    final List<UserField>? fields,
+    this.isLocked,
+    this.isExplorable,
+    this.hideOnlineStatus,
+    this.publicReactions,
+    this.carefulBot,
+    this.autoAcceptFollowed,
+    this.noCrawle,
+    this.preventAiLearning,
+    this.requireSigninToViewContents,
+    @HideBeforeConverter() this.makeNotesFollowersOnlyBefore,
+    @HideBeforeConverter() this.makeNotesHiddenBefore,
+    this.isBot,
+    this.isCat,
+    this.injectFeaturedNote,
+    this.receiveAnnouncementEmail,
+    this.alwaysMarkNsfw,
+    this.autoSensitive,
+    @Deprecated("removed at 2023.12.0") this.ffVisibility,
+    this.followingVisibility,
+    this.followersVisibility,
+    this.pinnedPageId,
+    final List<String>? mutingNotificationTypes,
+    @MuteWordsConverter() final List<MuteWord>? mutedWords,
+    @MuteWordsConverter() final List<MuteWord>? hardMutedWords,
+    final List<String>? mutedInstances,
+    this.notificationRecieveConfig,
+    final List<String>? emailNotificationTypes,
+    final List<String>? alsoKnownAs,
+    final List<IUpdateMutualLinkSection>? mutualLinkSections,
+  }) : _avatarDecorations = avatarDecorations,
+       _fields = fields,
+       _mutingNotificationTypes = mutingNotificationTypes,
+       _mutedWords = mutedWords,
+       _hardMutedWords = hardMutedWords,
+       _mutedInstances = mutedInstances,
+       _emailNotificationTypes = emailNotificationTypes,
+       _alsoKnownAs = alsoKnownAs,
+       _mutualLinkSections = mutualLinkSections;
 
   factory _$IUpdateRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$IUpdateRequestImplFromJson(json);
@@ -864,8 +954,10 @@ class _$IUpdateRequestImpl implements _IUpdateRequest {
             (identical(other.lang, lang) || other.lang == lang) &&
             (identical(other.avatarId, avatarId) ||
                 other.avatarId == avatarId) &&
-            const DeepCollectionEquality()
-                .equals(other._avatarDecorations, _avatarDecorations) &&
+            const DeepCollectionEquality().equals(
+              other._avatarDecorations,
+              _avatarDecorations,
+            ) &&
             (identical(other.bannerId, bannerId) ||
                 other.bannerId == bannerId) &&
             const DeepCollectionEquality().equals(other._fields, _fields) &&
@@ -885,10 +977,16 @@ class _$IUpdateRequestImpl implements _IUpdateRequest {
                 other.noCrawle == noCrawle) &&
             (identical(other.preventAiLearning, preventAiLearning) ||
                 other.preventAiLearning == preventAiLearning) &&
-            (identical(other.requireSigninToViewContents, requireSigninToViewContents) ||
+            (identical(
+                  other.requireSigninToViewContents,
+                  requireSigninToViewContents,
+                ) ||
                 other.requireSigninToViewContents ==
                     requireSigninToViewContents) &&
-            (identical(other.makeNotesFollowersOnlyBefore, makeNotesFollowersOnlyBefore) ||
+            (identical(
+                  other.makeNotesFollowersOnlyBefore,
+                  makeNotesFollowersOnlyBefore,
+                ) ||
                 other.makeNotesFollowersOnlyBefore ==
                     makeNotesFollowersOnlyBefore) &&
             (identical(other.makeNotesHiddenBefore, makeNotesHiddenBefore) ||
@@ -897,7 +995,10 @@ class _$IUpdateRequestImpl implements _IUpdateRequest {
             (identical(other.isCat, isCat) || other.isCat == isCat) &&
             (identical(other.injectFeaturedNote, injectFeaturedNote) ||
                 other.injectFeaturedNote == injectFeaturedNote) &&
-            (identical(other.receiveAnnouncementEmail, receiveAnnouncementEmail) ||
+            (identical(
+                  other.receiveAnnouncementEmail,
+                  receiveAnnouncementEmail,
+                ) ||
                 other.receiveAnnouncementEmail == receiveAnnouncementEmail) &&
             (identical(other.alwaysMarkNsfw, alwaysMarkNsfw) ||
                 other.alwaysMarkNsfw == alwaysMarkNsfw) &&
@@ -912,64 +1013,84 @@ class _$IUpdateRequestImpl implements _IUpdateRequest {
             (identical(other.pinnedPageId, pinnedPageId) ||
                 other.pinnedPageId == pinnedPageId) &&
             const DeepCollectionEquality().equals(
-                other._mutingNotificationTypes, _mutingNotificationTypes) &&
-            const DeepCollectionEquality()
-                .equals(other._mutedWords, _mutedWords) &&
-            const DeepCollectionEquality()
-                .equals(other._hardMutedWords, _hardMutedWords) &&
-            const DeepCollectionEquality()
-                .equals(other._mutedInstances, _mutedInstances) &&
-            (identical(other.notificationRecieveConfig, notificationRecieveConfig) ||
+              other._mutingNotificationTypes,
+              _mutingNotificationTypes,
+            ) &&
+            const DeepCollectionEquality().equals(
+              other._mutedWords,
+              _mutedWords,
+            ) &&
+            const DeepCollectionEquality().equals(
+              other._hardMutedWords,
+              _hardMutedWords,
+            ) &&
+            const DeepCollectionEquality().equals(
+              other._mutedInstances,
+              _mutedInstances,
+            ) &&
+            (identical(
+                  other.notificationRecieveConfig,
+                  notificationRecieveConfig,
+                ) ||
                 other.notificationRecieveConfig == notificationRecieveConfig) &&
-            const DeepCollectionEquality().equals(other._emailNotificationTypes, _emailNotificationTypes) &&
-            const DeepCollectionEquality().equals(other._alsoKnownAs, _alsoKnownAs) &&
-            const DeepCollectionEquality().equals(other._mutualLinkSections, _mutualLinkSections));
+            const DeepCollectionEquality().equals(
+              other._emailNotificationTypes,
+              _emailNotificationTypes,
+            ) &&
+            const DeepCollectionEquality().equals(
+              other._alsoKnownAs,
+              _alsoKnownAs,
+            ) &&
+            const DeepCollectionEquality().equals(
+              other._mutualLinkSections,
+              _mutualLinkSections,
+            ));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
-        runtimeType,
-        name,
-        description,
-        followedMessage,
-        location,
-        const DeepCollectionEquality().hash(birthday),
-        lang,
-        avatarId,
-        const DeepCollectionEquality().hash(_avatarDecorations),
-        bannerId,
-        const DeepCollectionEquality().hash(_fields),
-        isLocked,
-        isExplorable,
-        hideOnlineStatus,
-        publicReactions,
-        carefulBot,
-        autoAcceptFollowed,
-        noCrawle,
-        preventAiLearning,
-        requireSigninToViewContents,
-        makeNotesFollowersOnlyBefore,
-        makeNotesHiddenBefore,
-        isBot,
-        isCat,
-        injectFeaturedNote,
-        receiveAnnouncementEmail,
-        alwaysMarkNsfw,
-        autoSensitive,
-        ffVisibility,
-        followingVisibility,
-        followersVisibility,
-        pinnedPageId,
-        const DeepCollectionEquality().hash(_mutingNotificationTypes),
-        const DeepCollectionEquality().hash(_mutedWords),
-        const DeepCollectionEquality().hash(_hardMutedWords),
-        const DeepCollectionEquality().hash(_mutedInstances),
-        notificationRecieveConfig,
-        const DeepCollectionEquality().hash(_emailNotificationTypes),
-        const DeepCollectionEquality().hash(_alsoKnownAs),
-        const DeepCollectionEquality().hash(_mutualLinkSections)
-      ]);
+    runtimeType,
+    name,
+    description,
+    followedMessage,
+    location,
+    const DeepCollectionEquality().hash(birthday),
+    lang,
+    avatarId,
+    const DeepCollectionEquality().hash(_avatarDecorations),
+    bannerId,
+    const DeepCollectionEquality().hash(_fields),
+    isLocked,
+    isExplorable,
+    hideOnlineStatus,
+    publicReactions,
+    carefulBot,
+    autoAcceptFollowed,
+    noCrawle,
+    preventAiLearning,
+    requireSigninToViewContents,
+    makeNotesFollowersOnlyBefore,
+    makeNotesHiddenBefore,
+    isBot,
+    isCat,
+    injectFeaturedNote,
+    receiveAnnouncementEmail,
+    alwaysMarkNsfw,
+    autoSensitive,
+    ffVisibility,
+    followingVisibility,
+    followersVisibility,
+    pinnedPageId,
+    const DeepCollectionEquality().hash(_mutingNotificationTypes),
+    const DeepCollectionEquality().hash(_mutedWords),
+    const DeepCollectionEquality().hash(_hardMutedWords),
+    const DeepCollectionEquality().hash(_mutedInstances),
+    notificationRecieveConfig,
+    const DeepCollectionEquality().hash(_emailNotificationTypes),
+    const DeepCollectionEquality().hash(_alsoKnownAs),
+    const DeepCollectionEquality().hash(_mutualLinkSections),
+  ]);
 
   /// Create a copy of IUpdateRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -978,58 +1099,58 @@ class _$IUpdateRequestImpl implements _IUpdateRequest {
   @pragma('vm:prefer-inline')
   _$$IUpdateRequestImplCopyWith<_$IUpdateRequestImpl> get copyWith =>
       __$$IUpdateRequestImplCopyWithImpl<_$IUpdateRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$IUpdateRequestImplToJson(
-      this,
-    );
+    return _$$IUpdateRequestImplToJson(this);
   }
 }
 
 abstract class _IUpdateRequest implements IUpdateRequest {
-  const factory _IUpdateRequest(
-          {final String? name,
-          final String? description,
-          final String? followedMessage,
-          final String? location,
-          @DateTimeConverter() final dynamic birthday,
-          final String? lang,
-          final String? avatarId,
-          final List<IUpdateAvatarDecoration>? avatarDecorations,
-          final String? bannerId,
-          final List<UserField>? fields,
-          final bool? isLocked,
-          final bool? isExplorable,
-          final bool? hideOnlineStatus,
-          final bool? publicReactions,
-          final bool? carefulBot,
-          final bool? autoAcceptFollowed,
-          final bool? noCrawle,
-          final bool? preventAiLearning,
-          final bool? requireSigninToViewContents,
-          @HideBeforeConverter() final HideBefore? makeNotesFollowersOnlyBefore,
-          @HideBeforeConverter() final HideBefore? makeNotesHiddenBefore,
-          final bool? isBot,
-          final bool? isCat,
-          final bool? injectFeaturedNote,
-          final bool? receiveAnnouncementEmail,
-          final bool? alwaysMarkNsfw,
-          final bool? autoSensitive,
-          @Deprecated("removed at 2023.12.0") final FFVisibility? ffVisibility,
-          final FFVisibility? followingVisibility,
-          final FFVisibility? followersVisibility,
-          final String? pinnedPageId,
-          final List<String>? mutingNotificationTypes,
-          @MuteWordsConverter() final List<MuteWord>? mutedWords,
-          @MuteWordsConverter() final List<MuteWord>? hardMutedWords,
-          final List<String>? mutedInstances,
-          final NotificationRecieveConfigs? notificationRecieveConfig,
-          final List<String>? emailNotificationTypes,
-          final List<String>? alsoKnownAs,
-          final List<IUpdateMutualLinkSection>? mutualLinkSections}) =
-      _$IUpdateRequestImpl;
+  const factory _IUpdateRequest({
+    final String? name,
+    final String? description,
+    final String? followedMessage,
+    final String? location,
+    @DateTimeConverter() final dynamic birthday,
+    final String? lang,
+    final String? avatarId,
+    final List<IUpdateAvatarDecoration>? avatarDecorations,
+    final String? bannerId,
+    final List<UserField>? fields,
+    final bool? isLocked,
+    final bool? isExplorable,
+    final bool? hideOnlineStatus,
+    final bool? publicReactions,
+    final bool? carefulBot,
+    final bool? autoAcceptFollowed,
+    final bool? noCrawle,
+    final bool? preventAiLearning,
+    final bool? requireSigninToViewContents,
+    @HideBeforeConverter() final HideBefore? makeNotesFollowersOnlyBefore,
+    @HideBeforeConverter() final HideBefore? makeNotesHiddenBefore,
+    final bool? isBot,
+    final bool? isCat,
+    final bool? injectFeaturedNote,
+    final bool? receiveAnnouncementEmail,
+    final bool? alwaysMarkNsfw,
+    final bool? autoSensitive,
+    @Deprecated("removed at 2023.12.0") final FFVisibility? ffVisibility,
+    final FFVisibility? followingVisibility,
+    final FFVisibility? followersVisibility,
+    final String? pinnedPageId,
+    final List<String>? mutingNotificationTypes,
+    @MuteWordsConverter() final List<MuteWord>? mutedWords,
+    @MuteWordsConverter() final List<MuteWord>? hardMutedWords,
+    final List<String>? mutedInstances,
+    final NotificationRecieveConfigs? notificationRecieveConfig,
+    final List<String>? emailNotificationTypes,
+    final List<String>? alsoKnownAs,
+    final List<IUpdateMutualLinkSection>? mutualLinkSections,
+  }) = _$IUpdateRequestImpl;
 
   factory _IUpdateRequest.fromJson(Map<String, dynamic> json) =
       _$IUpdateRequestImpl.fromJson;
@@ -1128,7 +1249,8 @@ abstract class _IUpdateRequest implements IUpdateRequest {
 }
 
 IUpdateAvatarDecoration _$IUpdateAvatarDecorationFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _IUpdateAvatarDecoration.fromJson(json);
 }
 
@@ -1152,17 +1274,25 @@ mixin _$IUpdateAvatarDecoration {
 
 /// @nodoc
 abstract class $IUpdateAvatarDecorationCopyWith<$Res> {
-  factory $IUpdateAvatarDecorationCopyWith(IUpdateAvatarDecoration value,
-          $Res Function(IUpdateAvatarDecoration) then) =
-      _$IUpdateAvatarDecorationCopyWithImpl<$Res, IUpdateAvatarDecoration>;
+  factory $IUpdateAvatarDecorationCopyWith(
+    IUpdateAvatarDecoration value,
+    $Res Function(IUpdateAvatarDecoration) then,
+  ) = _$IUpdateAvatarDecorationCopyWithImpl<$Res, IUpdateAvatarDecoration>;
   @useResult
-  $Res call(
-      {String id, double? angle, bool flipH, double offsetX, double offsetY});
+  $Res call({
+    String id,
+    double? angle,
+    bool flipH,
+    double offsetX,
+    double offsetY,
+  });
 }
 
 /// @nodoc
-class _$IUpdateAvatarDecorationCopyWithImpl<$Res,
-        $Val extends IUpdateAvatarDecoration>
+class _$IUpdateAvatarDecorationCopyWithImpl<
+  $Res,
+  $Val extends IUpdateAvatarDecoration
+>
     implements $IUpdateAvatarDecorationCopyWith<$Res> {
   _$IUpdateAvatarDecorationCopyWithImpl(this._value, this._then);
 
@@ -1182,28 +1312,36 @@ class _$IUpdateAvatarDecorationCopyWithImpl<$Res,
     Object? offsetX = null,
     Object? offsetY = null,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      angle: freezed == angle
-          ? _value.angle
-          : angle // ignore: cast_nullable_to_non_nullable
-              as double?,
-      flipH: null == flipH
-          ? _value.flipH
-          : flipH // ignore: cast_nullable_to_non_nullable
-              as bool,
-      offsetX: null == offsetX
-          ? _value.offsetX
-          : offsetX // ignore: cast_nullable_to_non_nullable
-              as double,
-      offsetY: null == offsetY
-          ? _value.offsetY
-          : offsetY // ignore: cast_nullable_to_non_nullable
-              as double,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            angle:
+                freezed == angle
+                    ? _value.angle
+                    : angle // ignore: cast_nullable_to_non_nullable
+                        as double?,
+            flipH:
+                null == flipH
+                    ? _value.flipH
+                    : flipH // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            offsetX:
+                null == offsetX
+                    ? _value.offsetX
+                    : offsetX // ignore: cast_nullable_to_non_nullable
+                        as double,
+            offsetY:
+                null == offsetY
+                    ? _value.offsetY
+                    : offsetY // ignore: cast_nullable_to_non_nullable
+                        as double,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -1211,24 +1349,32 @@ class _$IUpdateAvatarDecorationCopyWithImpl<$Res,
 abstract class _$$IUpdateAvatarDecorationImplCopyWith<$Res>
     implements $IUpdateAvatarDecorationCopyWith<$Res> {
   factory _$$IUpdateAvatarDecorationImplCopyWith(
-          _$IUpdateAvatarDecorationImpl value,
-          $Res Function(_$IUpdateAvatarDecorationImpl) then) =
-      __$$IUpdateAvatarDecorationImplCopyWithImpl<$Res>;
+    _$IUpdateAvatarDecorationImpl value,
+    $Res Function(_$IUpdateAvatarDecorationImpl) then,
+  ) = __$$IUpdateAvatarDecorationImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id, double? angle, bool flipH, double offsetX, double offsetY});
+  $Res call({
+    String id,
+    double? angle,
+    bool flipH,
+    double offsetX,
+    double offsetY,
+  });
 }
 
 /// @nodoc
 class __$$IUpdateAvatarDecorationImplCopyWithImpl<$Res>
-    extends _$IUpdateAvatarDecorationCopyWithImpl<$Res,
-        _$IUpdateAvatarDecorationImpl>
+    extends
+        _$IUpdateAvatarDecorationCopyWithImpl<
+          $Res,
+          _$IUpdateAvatarDecorationImpl
+        >
     implements _$$IUpdateAvatarDecorationImplCopyWith<$Res> {
   __$$IUpdateAvatarDecorationImplCopyWithImpl(
-      _$IUpdateAvatarDecorationImpl _value,
-      $Res Function(_$IUpdateAvatarDecorationImpl) _then)
-      : super(_value, _then);
+    _$IUpdateAvatarDecorationImpl _value,
+    $Res Function(_$IUpdateAvatarDecorationImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of IUpdateAvatarDecoration
   /// with the given fields replaced by the non-null parameter values.
@@ -1241,40 +1387,48 @@ class __$$IUpdateAvatarDecorationImplCopyWithImpl<$Res>
     Object? offsetX = null,
     Object? offsetY = null,
   }) {
-    return _then(_$IUpdateAvatarDecorationImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      angle: freezed == angle
-          ? _value.angle
-          : angle // ignore: cast_nullable_to_non_nullable
-              as double?,
-      flipH: null == flipH
-          ? _value.flipH
-          : flipH // ignore: cast_nullable_to_non_nullable
-              as bool,
-      offsetX: null == offsetX
-          ? _value.offsetX
-          : offsetX // ignore: cast_nullable_to_non_nullable
-              as double,
-      offsetY: null == offsetY
-          ? _value.offsetY
-          : offsetY // ignore: cast_nullable_to_non_nullable
-              as double,
-    ));
+    return _then(
+      _$IUpdateAvatarDecorationImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        angle:
+            freezed == angle
+                ? _value.angle
+                : angle // ignore: cast_nullable_to_non_nullable
+                    as double?,
+        flipH:
+            null == flipH
+                ? _value.flipH
+                : flipH // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        offsetX:
+            null == offsetX
+                ? _value.offsetX
+                : offsetX // ignore: cast_nullable_to_non_nullable
+                    as double,
+        offsetY:
+            null == offsetY
+                ? _value.offsetY
+                : offsetY // ignore: cast_nullable_to_non_nullable
+                    as double,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$IUpdateAvatarDecorationImpl implements _IUpdateAvatarDecoration {
-  const _$IUpdateAvatarDecorationImpl(
-      {required this.id,
-      this.angle,
-      this.flipH = false,
-      this.offsetX = 0.0,
-      this.offsetY = 0.0});
+  const _$IUpdateAvatarDecorationImpl({
+    required this.id,
+    this.angle,
+    this.flipH = false,
+    this.offsetX = 0.0,
+    this.offsetY = 0.0,
+  });
 
   factory _$IUpdateAvatarDecorationImpl.fromJson(Map<String, dynamic> json) =>
       _$$IUpdateAvatarDecorationImplFromJson(json);
@@ -1321,24 +1475,24 @@ class _$IUpdateAvatarDecorationImpl implements _IUpdateAvatarDecoration {
   @override
   @pragma('vm:prefer-inline')
   _$$IUpdateAvatarDecorationImplCopyWith<_$IUpdateAvatarDecorationImpl>
-      get copyWith => __$$IUpdateAvatarDecorationImplCopyWithImpl<
-          _$IUpdateAvatarDecorationImpl>(this, _$identity);
+  get copyWith => __$$IUpdateAvatarDecorationImplCopyWithImpl<
+    _$IUpdateAvatarDecorationImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$IUpdateAvatarDecorationImplToJson(
-      this,
-    );
+    return _$$IUpdateAvatarDecorationImplToJson(this);
   }
 }
 
 abstract class _IUpdateAvatarDecoration implements IUpdateAvatarDecoration {
-  const factory _IUpdateAvatarDecoration(
-      {required final String id,
-      final double? angle,
-      final bool flipH,
-      final double offsetX,
-      final double offsetY}) = _$IUpdateAvatarDecorationImpl;
+  const factory _IUpdateAvatarDecoration({
+    required final String id,
+    final double? angle,
+    final bool flipH,
+    final double offsetX,
+    final double offsetY,
+  }) = _$IUpdateAvatarDecorationImpl;
 
   factory _IUpdateAvatarDecoration.fromJson(Map<String, dynamic> json) =
       _$IUpdateAvatarDecorationImpl.fromJson;
@@ -1359,11 +1513,12 @@ abstract class _IUpdateAvatarDecoration implements IUpdateAvatarDecoration {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IUpdateAvatarDecorationImplCopyWith<_$IUpdateAvatarDecorationImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 IUpdateMutualLinkSection _$IUpdateMutualLinkSectionFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _IUpdateMutualLinkSection.fromJson(json);
 }
 
@@ -1384,16 +1539,19 @@ mixin _$IUpdateMutualLinkSection {
 
 /// @nodoc
 abstract class $IUpdateMutualLinkSectionCopyWith<$Res> {
-  factory $IUpdateMutualLinkSectionCopyWith(IUpdateMutualLinkSection value,
-          $Res Function(IUpdateMutualLinkSection) then) =
-      _$IUpdateMutualLinkSectionCopyWithImpl<$Res, IUpdateMutualLinkSection>;
+  factory $IUpdateMutualLinkSectionCopyWith(
+    IUpdateMutualLinkSection value,
+    $Res Function(IUpdateMutualLinkSection) then,
+  ) = _$IUpdateMutualLinkSectionCopyWithImpl<$Res, IUpdateMutualLinkSection>;
   @useResult
   $Res call({String? name, List<IUpdateMutualLink> mutualLinks});
 }
 
 /// @nodoc
-class _$IUpdateMutualLinkSectionCopyWithImpl<$Res,
-        $Val extends IUpdateMutualLinkSection>
+class _$IUpdateMutualLinkSectionCopyWithImpl<
+  $Res,
+  $Val extends IUpdateMutualLinkSection
+>
     implements $IUpdateMutualLinkSectionCopyWith<$Res> {
   _$IUpdateMutualLinkSectionCopyWithImpl(this._value, this._then);
 
@@ -1406,20 +1564,22 @@ class _$IUpdateMutualLinkSectionCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? name = freezed,
-    Object? mutualLinks = null,
-  }) {
-    return _then(_value.copyWith(
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      mutualLinks: null == mutualLinks
-          ? _value.mutualLinks
-          : mutualLinks // ignore: cast_nullable_to_non_nullable
-              as List<IUpdateMutualLink>,
-    ) as $Val);
+  $Res call({Object? name = freezed, Object? mutualLinks = null}) {
+    return _then(
+      _value.copyWith(
+            name:
+                freezed == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            mutualLinks:
+                null == mutualLinks
+                    ? _value.mutualLinks
+                    : mutualLinks // ignore: cast_nullable_to_non_nullable
+                        as List<IUpdateMutualLink>,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -1427,9 +1587,9 @@ class _$IUpdateMutualLinkSectionCopyWithImpl<$Res,
 abstract class _$$IUpdateMutualLinkSectionImplCopyWith<$Res>
     implements $IUpdateMutualLinkSectionCopyWith<$Res> {
   factory _$$IUpdateMutualLinkSectionImplCopyWith(
-          _$IUpdateMutualLinkSectionImpl value,
-          $Res Function(_$IUpdateMutualLinkSectionImpl) then) =
-      __$$IUpdateMutualLinkSectionImplCopyWithImpl<$Res>;
+    _$IUpdateMutualLinkSectionImpl value,
+    $Res Function(_$IUpdateMutualLinkSectionImpl) then,
+  ) = __$$IUpdateMutualLinkSectionImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? name, List<IUpdateMutualLink> mutualLinks});
@@ -1437,41 +1597,46 @@ abstract class _$$IUpdateMutualLinkSectionImplCopyWith<$Res>
 
 /// @nodoc
 class __$$IUpdateMutualLinkSectionImplCopyWithImpl<$Res>
-    extends _$IUpdateMutualLinkSectionCopyWithImpl<$Res,
-        _$IUpdateMutualLinkSectionImpl>
+    extends
+        _$IUpdateMutualLinkSectionCopyWithImpl<
+          $Res,
+          _$IUpdateMutualLinkSectionImpl
+        >
     implements _$$IUpdateMutualLinkSectionImplCopyWith<$Res> {
   __$$IUpdateMutualLinkSectionImplCopyWithImpl(
-      _$IUpdateMutualLinkSectionImpl _value,
-      $Res Function(_$IUpdateMutualLinkSectionImpl) _then)
-      : super(_value, _then);
+    _$IUpdateMutualLinkSectionImpl _value,
+    $Res Function(_$IUpdateMutualLinkSectionImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of IUpdateMutualLinkSection
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? name = freezed,
-    Object? mutualLinks = null,
-  }) {
-    return _then(_$IUpdateMutualLinkSectionImpl(
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      mutualLinks: null == mutualLinks
-          ? _value._mutualLinks
-          : mutualLinks // ignore: cast_nullable_to_non_nullable
-              as List<IUpdateMutualLink>,
-    ));
+  $Res call({Object? name = freezed, Object? mutualLinks = null}) {
+    return _then(
+      _$IUpdateMutualLinkSectionImpl(
+        name:
+            freezed == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        mutualLinks:
+            null == mutualLinks
+                ? _value._mutualLinks
+                : mutualLinks // ignore: cast_nullable_to_non_nullable
+                    as List<IUpdateMutualLink>,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$IUpdateMutualLinkSectionImpl implements _IUpdateMutualLinkSection {
-  const _$IUpdateMutualLinkSectionImpl(
-      {this.name, required final List<IUpdateMutualLink> mutualLinks})
-      : _mutualLinks = mutualLinks;
+  const _$IUpdateMutualLinkSectionImpl({
+    this.name,
+    required final List<IUpdateMutualLink> mutualLinks,
+  }) : _mutualLinks = mutualLinks;
 
   factory _$IUpdateMutualLinkSectionImpl.fromJson(Map<String, dynamic> json) =>
       _$$IUpdateMutualLinkSectionImplFromJson(json);
@@ -1497,14 +1662,19 @@ class _$IUpdateMutualLinkSectionImpl implements _IUpdateMutualLinkSection {
         (other.runtimeType == runtimeType &&
             other is _$IUpdateMutualLinkSectionImpl &&
             (identical(other.name, name) || other.name == name) &&
-            const DeepCollectionEquality()
-                .equals(other._mutualLinks, _mutualLinks));
+            const DeepCollectionEquality().equals(
+              other._mutualLinks,
+              _mutualLinks,
+            ));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType, name, const DeepCollectionEquality().hash(_mutualLinks));
+    runtimeType,
+    name,
+    const DeepCollectionEquality().hash(_mutualLinks),
+  );
 
   /// Create a copy of IUpdateMutualLinkSection
   /// with the given fields replaced by the non-null parameter values.
@@ -1512,22 +1682,21 @@ class _$IUpdateMutualLinkSectionImpl implements _IUpdateMutualLinkSection {
   @override
   @pragma('vm:prefer-inline')
   _$$IUpdateMutualLinkSectionImplCopyWith<_$IUpdateMutualLinkSectionImpl>
-      get copyWith => __$$IUpdateMutualLinkSectionImplCopyWithImpl<
-          _$IUpdateMutualLinkSectionImpl>(this, _$identity);
+  get copyWith => __$$IUpdateMutualLinkSectionImplCopyWithImpl<
+    _$IUpdateMutualLinkSectionImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$IUpdateMutualLinkSectionImplToJson(
-      this,
-    );
+    return _$$IUpdateMutualLinkSectionImplToJson(this);
   }
 }
 
 abstract class _IUpdateMutualLinkSection implements IUpdateMutualLinkSection {
-  const factory _IUpdateMutualLinkSection(
-          {final String? name,
-          required final List<IUpdateMutualLink> mutualLinks}) =
-      _$IUpdateMutualLinkSectionImpl;
+  const factory _IUpdateMutualLinkSection({
+    final String? name,
+    required final List<IUpdateMutualLink> mutualLinks,
+  }) = _$IUpdateMutualLinkSectionImpl;
 
   factory _IUpdateMutualLinkSection.fromJson(Map<String, dynamic> json) =
       _$IUpdateMutualLinkSectionImpl.fromJson;
@@ -1542,7 +1711,7 @@ abstract class _IUpdateMutualLinkSection implements IUpdateMutualLinkSection {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IUpdateMutualLinkSectionImplCopyWith<_$IUpdateMutualLinkSectionImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 IUpdateMutualLink _$IUpdateMutualLinkFromJson(Map<String, dynamic> json) {
@@ -1568,8 +1737,9 @@ mixin _$IUpdateMutualLink {
 /// @nodoc
 abstract class $IUpdateMutualLinkCopyWith<$Res> {
   factory $IUpdateMutualLinkCopyWith(
-          IUpdateMutualLink value, $Res Function(IUpdateMutualLink) then) =
-      _$IUpdateMutualLinkCopyWithImpl<$Res, IUpdateMutualLink>;
+    IUpdateMutualLink value,
+    $Res Function(IUpdateMutualLink) then,
+  ) = _$IUpdateMutualLinkCopyWithImpl<$Res, IUpdateMutualLink>;
   @useResult
   $Res call({String url, String fileId, String? description});
 }
@@ -1593,29 +1763,36 @@ class _$IUpdateMutualLinkCopyWithImpl<$Res, $Val extends IUpdateMutualLink>
     Object? fileId = null,
     Object? description = freezed,
   }) {
-    return _then(_value.copyWith(
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      fileId: null == fileId
-          ? _value.fileId
-          : fileId // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            url:
+                null == url
+                    ? _value.url
+                    : url // ignore: cast_nullable_to_non_nullable
+                        as String,
+            fileId:
+                null == fileId
+                    ? _value.fileId
+                    : fileId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            description:
+                freezed == description
+                    ? _value.description
+                    : description // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$IUpdateMutualLinkImplCopyWith<$Res>
     implements $IUpdateMutualLinkCopyWith<$Res> {
-  factory _$$IUpdateMutualLinkImplCopyWith(_$IUpdateMutualLinkImpl value,
-          $Res Function(_$IUpdateMutualLinkImpl) then) =
-      __$$IUpdateMutualLinkImplCopyWithImpl<$Res>;
+  factory _$$IUpdateMutualLinkImplCopyWith(
+    _$IUpdateMutualLinkImpl value,
+    $Res Function(_$IUpdateMutualLinkImpl) then,
+  ) = __$$IUpdateMutualLinkImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String url, String fileId, String? description});
@@ -1625,9 +1802,10 @@ abstract class _$$IUpdateMutualLinkImplCopyWith<$Res>
 class __$$IUpdateMutualLinkImplCopyWithImpl<$Res>
     extends _$IUpdateMutualLinkCopyWithImpl<$Res, _$IUpdateMutualLinkImpl>
     implements _$$IUpdateMutualLinkImplCopyWith<$Res> {
-  __$$IUpdateMutualLinkImplCopyWithImpl(_$IUpdateMutualLinkImpl _value,
-      $Res Function(_$IUpdateMutualLinkImpl) _then)
-      : super(_value, _then);
+  __$$IUpdateMutualLinkImplCopyWithImpl(
+    _$IUpdateMutualLinkImpl _value,
+    $Res Function(_$IUpdateMutualLinkImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of IUpdateMutualLink
   /// with the given fields replaced by the non-null parameter values.
@@ -1638,28 +1816,36 @@ class __$$IUpdateMutualLinkImplCopyWithImpl<$Res>
     Object? fileId = null,
     Object? description = freezed,
   }) {
-    return _then(_$IUpdateMutualLinkImpl(
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      fileId: null == fileId
-          ? _value.fileId
-          : fileId // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$IUpdateMutualLinkImpl(
+        url:
+            null == url
+                ? _value.url
+                : url // ignore: cast_nullable_to_non_nullable
+                    as String,
+        fileId:
+            null == fileId
+                ? _value.fileId
+                : fileId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        description:
+            freezed == description
+                ? _value.description
+                : description // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$IUpdateMutualLinkImpl implements _IUpdateMutualLink {
-  const _$IUpdateMutualLinkImpl(
-      {required this.url, required this.fileId, this.description});
+  const _$IUpdateMutualLinkImpl({
+    required this.url,
+    required this.fileId,
+    this.description,
+  });
 
   factory _$IUpdateMutualLinkImpl.fromJson(Map<String, dynamic> json) =>
       _$$IUpdateMutualLinkImplFromJson(json);
@@ -1698,21 +1884,22 @@ class _$IUpdateMutualLinkImpl implements _IUpdateMutualLink {
   @pragma('vm:prefer-inline')
   _$$IUpdateMutualLinkImplCopyWith<_$IUpdateMutualLinkImpl> get copyWith =>
       __$$IUpdateMutualLinkImplCopyWithImpl<_$IUpdateMutualLinkImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$IUpdateMutualLinkImplToJson(
-      this,
-    );
+    return _$$IUpdateMutualLinkImplToJson(this);
   }
 }
 
 abstract class _IUpdateMutualLink implements IUpdateMutualLink {
-  const factory _IUpdateMutualLink(
-      {required final String url,
-      required final String fileId,
-      final String? description}) = _$IUpdateMutualLinkImpl;
+  const factory _IUpdateMutualLink({
+    required final String url,
+    required final String fileId,
+    final String? description,
+  }) = _$IUpdateMutualLinkImpl;
 
   factory _IUpdateMutualLink.fromJson(Map<String, dynamic> json) =
       _$IUpdateMutualLinkImpl.fromJson;

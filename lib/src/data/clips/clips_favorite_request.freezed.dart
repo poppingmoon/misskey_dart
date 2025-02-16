@@ -12,7 +12,8 @@ part of 'clips_favorite_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ClipsFavoriteRequest _$ClipsFavoriteRequestFromJson(Map<String, dynamic> json) {
   return _ClipsFavoriteRequest.fromJson(json);
@@ -34,16 +35,19 @@ mixin _$ClipsFavoriteRequest {
 
 /// @nodoc
 abstract class $ClipsFavoriteRequestCopyWith<$Res> {
-  factory $ClipsFavoriteRequestCopyWith(ClipsFavoriteRequest value,
-          $Res Function(ClipsFavoriteRequest) then) =
-      _$ClipsFavoriteRequestCopyWithImpl<$Res, ClipsFavoriteRequest>;
+  factory $ClipsFavoriteRequestCopyWith(
+    ClipsFavoriteRequest value,
+    $Res Function(ClipsFavoriteRequest) then,
+  ) = _$ClipsFavoriteRequestCopyWithImpl<$Res, ClipsFavoriteRequest>;
   @useResult
   $Res call({String clipId});
 }
 
 /// @nodoc
-class _$ClipsFavoriteRequestCopyWithImpl<$Res,
-        $Val extends ClipsFavoriteRequest>
+class _$ClipsFavoriteRequestCopyWithImpl<
+  $Res,
+  $Val extends ClipsFavoriteRequest
+>
     implements $ClipsFavoriteRequestCopyWith<$Res> {
   _$ClipsFavoriteRequestCopyWithImpl(this._value, this._then);
 
@@ -56,24 +60,27 @@ class _$ClipsFavoriteRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? clipId = null,
-  }) {
-    return _then(_value.copyWith(
-      clipId: null == clipId
-          ? _value.clipId
-          : clipId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? clipId = null}) {
+    return _then(
+      _value.copyWith(
+            clipId:
+                null == clipId
+                    ? _value.clipId
+                    : clipId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$ClipsFavoriteRequestImplCopyWith<$Res>
     implements $ClipsFavoriteRequestCopyWith<$Res> {
-  factory _$$ClipsFavoriteRequestImplCopyWith(_$ClipsFavoriteRequestImpl value,
-          $Res Function(_$ClipsFavoriteRequestImpl) then) =
-      __$$ClipsFavoriteRequestImplCopyWithImpl<$Res>;
+  factory _$$ClipsFavoriteRequestImplCopyWith(
+    _$ClipsFavoriteRequestImpl value,
+    $Res Function(_$ClipsFavoriteRequestImpl) then,
+  ) = __$$ClipsFavoriteRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String clipId});
@@ -83,23 +90,25 @@ abstract class _$$ClipsFavoriteRequestImplCopyWith<$Res>
 class __$$ClipsFavoriteRequestImplCopyWithImpl<$Res>
     extends _$ClipsFavoriteRequestCopyWithImpl<$Res, _$ClipsFavoriteRequestImpl>
     implements _$$ClipsFavoriteRequestImplCopyWith<$Res> {
-  __$$ClipsFavoriteRequestImplCopyWithImpl(_$ClipsFavoriteRequestImpl _value,
-      $Res Function(_$ClipsFavoriteRequestImpl) _then)
-      : super(_value, _then);
+  __$$ClipsFavoriteRequestImplCopyWithImpl(
+    _$ClipsFavoriteRequestImpl _value,
+    $Res Function(_$ClipsFavoriteRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ClipsFavoriteRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? clipId = null,
-  }) {
-    return _then(_$ClipsFavoriteRequestImpl(
-      clipId: null == clipId
-          ? _value.clipId
-          : clipId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? clipId = null}) {
+    return _then(
+      _$ClipsFavoriteRequestImpl(
+        clipId:
+            null == clipId
+                ? _value.clipId
+                : clipId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -137,15 +146,15 @@ class _$ClipsFavoriteRequestImpl implements _ClipsFavoriteRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$ClipsFavoriteRequestImplCopyWith<_$ClipsFavoriteRequestImpl>
-      get copyWith =>
-          __$$ClipsFavoriteRequestImplCopyWithImpl<_$ClipsFavoriteRequestImpl>(
-              this, _$identity);
+  get copyWith =>
+      __$$ClipsFavoriteRequestImplCopyWithImpl<_$ClipsFavoriteRequestImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ClipsFavoriteRequestImplToJson(
-      this,
-    );
+    return _$$ClipsFavoriteRequestImplToJson(this);
   }
 }
 
@@ -164,5 +173,5 @@ abstract class _ClipsFavoriteRequest implements ClipsFavoriteRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ClipsFavoriteRequestImplCopyWith<_$ClipsFavoriteRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

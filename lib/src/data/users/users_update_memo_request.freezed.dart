@@ -12,10 +12,12 @@ part of 'users_update_memo_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 UsersUpdateMemoRequest _$UsersUpdateMemoRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _UsersUpdateMemoRequest.fromJson(json);
 }
 
@@ -36,16 +38,19 @@ mixin _$UsersUpdateMemoRequest {
 
 /// @nodoc
 abstract class $UsersUpdateMemoRequestCopyWith<$Res> {
-  factory $UsersUpdateMemoRequestCopyWith(UsersUpdateMemoRequest value,
-          $Res Function(UsersUpdateMemoRequest) then) =
-      _$UsersUpdateMemoRequestCopyWithImpl<$Res, UsersUpdateMemoRequest>;
+  factory $UsersUpdateMemoRequestCopyWith(
+    UsersUpdateMemoRequest value,
+    $Res Function(UsersUpdateMemoRequest) then,
+  ) = _$UsersUpdateMemoRequestCopyWithImpl<$Res, UsersUpdateMemoRequest>;
   @useResult
   $Res call({String userId, String memo});
 }
 
 /// @nodoc
-class _$UsersUpdateMemoRequestCopyWithImpl<$Res,
-        $Val extends UsersUpdateMemoRequest>
+class _$UsersUpdateMemoRequestCopyWithImpl<
+  $Res,
+  $Val extends UsersUpdateMemoRequest
+>
     implements $UsersUpdateMemoRequestCopyWith<$Res> {
   _$UsersUpdateMemoRequestCopyWithImpl(this._value, this._then);
 
@@ -58,20 +63,22 @@ class _$UsersUpdateMemoRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? userId = null,
-    Object? memo = null,
-  }) {
-    return _then(_value.copyWith(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      memo: null == memo
-          ? _value.memo
-          : memo // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? userId = null, Object? memo = null}) {
+    return _then(
+      _value.copyWith(
+            userId:
+                null == userId
+                    ? _value.userId
+                    : userId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            memo:
+                null == memo
+                    ? _value.memo
+                    : memo // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -79,9 +86,9 @@ class _$UsersUpdateMemoRequestCopyWithImpl<$Res,
 abstract class _$$UsersUpdateMemoRequestImplCopyWith<$Res>
     implements $UsersUpdateMemoRequestCopyWith<$Res> {
   factory _$$UsersUpdateMemoRequestImplCopyWith(
-          _$UsersUpdateMemoRequestImpl value,
-          $Res Function(_$UsersUpdateMemoRequestImpl) then) =
-      __$$UsersUpdateMemoRequestImplCopyWithImpl<$Res>;
+    _$UsersUpdateMemoRequestImpl value,
+    $Res Function(_$UsersUpdateMemoRequestImpl) then,
+  ) = __$$UsersUpdateMemoRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String userId, String memo});
@@ -89,40 +96,43 @@ abstract class _$$UsersUpdateMemoRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$UsersUpdateMemoRequestImplCopyWithImpl<$Res>
-    extends _$UsersUpdateMemoRequestCopyWithImpl<$Res,
-        _$UsersUpdateMemoRequestImpl>
+    extends
+        _$UsersUpdateMemoRequestCopyWithImpl<$Res, _$UsersUpdateMemoRequestImpl>
     implements _$$UsersUpdateMemoRequestImplCopyWith<$Res> {
   __$$UsersUpdateMemoRequestImplCopyWithImpl(
-      _$UsersUpdateMemoRequestImpl _value,
-      $Res Function(_$UsersUpdateMemoRequestImpl) _then)
-      : super(_value, _then);
+    _$UsersUpdateMemoRequestImpl _value,
+    $Res Function(_$UsersUpdateMemoRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UsersUpdateMemoRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? userId = null,
-    Object? memo = null,
-  }) {
-    return _then(_$UsersUpdateMemoRequestImpl(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      memo: null == memo
-          ? _value.memo
-          : memo // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? userId = null, Object? memo = null}) {
+    return _then(
+      _$UsersUpdateMemoRequestImpl(
+        userId:
+            null == userId
+                ? _value.userId
+                : userId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        memo:
+            null == memo
+                ? _value.memo
+                : memo // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$UsersUpdateMemoRequestImpl implements _UsersUpdateMemoRequest {
-  const _$UsersUpdateMemoRequestImpl(
-      {required this.userId, required this.memo});
+  const _$UsersUpdateMemoRequestImpl({
+    required this.userId,
+    required this.memo,
+  });
 
   factory _$UsersUpdateMemoRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$UsersUpdateMemoRequestImplFromJson(json);
@@ -156,21 +166,23 @@ class _$UsersUpdateMemoRequestImpl implements _UsersUpdateMemoRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$UsersUpdateMemoRequestImplCopyWith<_$UsersUpdateMemoRequestImpl>
-      get copyWith => __$$UsersUpdateMemoRequestImplCopyWithImpl<
-          _$UsersUpdateMemoRequestImpl>(this, _$identity);
+  get copyWith =>
+      __$$UsersUpdateMemoRequestImplCopyWithImpl<_$UsersUpdateMemoRequestImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UsersUpdateMemoRequestImplToJson(
-      this,
-    );
+    return _$$UsersUpdateMemoRequestImplToJson(this);
   }
 }
 
 abstract class _UsersUpdateMemoRequest implements UsersUpdateMemoRequest {
-  const factory _UsersUpdateMemoRequest(
-      {required final String userId,
-      required final String memo}) = _$UsersUpdateMemoRequestImpl;
+  const factory _UsersUpdateMemoRequest({
+    required final String userId,
+    required final String memo,
+  }) = _$UsersUpdateMemoRequestImpl;
 
   factory _UsersUpdateMemoRequest.fromJson(Map<String, dynamic> json) =
       _$UsersUpdateMemoRequestImpl.fromJson;
@@ -185,5 +197,5 @@ abstract class _UsersUpdateMemoRequest implements UsersUpdateMemoRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersUpdateMemoRequestImplCopyWith<_$UsersUpdateMemoRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

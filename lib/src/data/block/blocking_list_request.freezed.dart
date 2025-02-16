@@ -12,7 +12,8 @@ part of 'blocking_list_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 BlockingListRequest _$BlockingListRequestFromJson(Map<String, dynamic> json) {
   return _BlockingListRequest.fromJson(json);
@@ -37,8 +38,9 @@ mixin _$BlockingListRequest {
 /// @nodoc
 abstract class $BlockingListRequestCopyWith<$Res> {
   factory $BlockingListRequestCopyWith(
-          BlockingListRequest value, $Res Function(BlockingListRequest) then) =
-      _$BlockingListRequestCopyWithImpl<$Res, BlockingListRequest>;
+    BlockingListRequest value,
+    $Res Function(BlockingListRequest) then,
+  ) = _$BlockingListRequestCopyWithImpl<$Res, BlockingListRequest>;
   @useResult
   $Res call({int? limit, String? sinceId, String? untilId});
 }
@@ -62,29 +64,36 @@ class _$BlockingListRequestCopyWithImpl<$Res, $Val extends BlockingListRequest>
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_value.copyWith(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$BlockingListRequestImplCopyWith<$Res>
     implements $BlockingListRequestCopyWith<$Res> {
-  factory _$$BlockingListRequestImplCopyWith(_$BlockingListRequestImpl value,
-          $Res Function(_$BlockingListRequestImpl) then) =
-      __$$BlockingListRequestImplCopyWithImpl<$Res>;
+  factory _$$BlockingListRequestImplCopyWith(
+    _$BlockingListRequestImpl value,
+    $Res Function(_$BlockingListRequestImpl) then,
+  ) = __$$BlockingListRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? limit, String? sinceId, String? untilId});
@@ -94,9 +103,10 @@ abstract class _$$BlockingListRequestImplCopyWith<$Res>
 class __$$BlockingListRequestImplCopyWithImpl<$Res>
     extends _$BlockingListRequestCopyWithImpl<$Res, _$BlockingListRequestImpl>
     implements _$$BlockingListRequestImplCopyWith<$Res> {
-  __$$BlockingListRequestImplCopyWithImpl(_$BlockingListRequestImpl _value,
-      $Res Function(_$BlockingListRequestImpl) _then)
-      : super(_value, _then);
+  __$$BlockingListRequestImplCopyWithImpl(
+    _$BlockingListRequestImpl _value,
+    $Res Function(_$BlockingListRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of BlockingListRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -107,20 +117,25 @@ class __$$BlockingListRequestImplCopyWithImpl<$Res>
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_$BlockingListRequestImpl(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$BlockingListRequestImpl(
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -165,21 +180,22 @@ class _$BlockingListRequestImpl implements _BlockingListRequest {
   @pragma('vm:prefer-inline')
   _$$BlockingListRequestImplCopyWith<_$BlockingListRequestImpl> get copyWith =>
       __$$BlockingListRequestImplCopyWithImpl<_$BlockingListRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$BlockingListRequestImplToJson(
-      this,
-    );
+    return _$$BlockingListRequestImplToJson(this);
   }
 }
 
 abstract class _BlockingListRequest implements BlockingListRequest {
-  const factory _BlockingListRequest(
-      {final int? limit,
-      final String? sinceId,
-      final String? untilId}) = _$BlockingListRequestImpl;
+  const factory _BlockingListRequest({
+    final int? limit,
+    final String? sinceId,
+    final String? untilId,
+  }) = _$BlockingListRequestImpl;
 
   factory _BlockingListRequest.fromJson(Map<String, dynamic> json) =
       _$BlockingListRequestImpl.fromJson;

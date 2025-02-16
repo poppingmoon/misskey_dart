@@ -12,10 +12,11 @@ part of 'users_search_by_username_and_host_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 UsersSearchByUsernameAndHostRequest
-    _$UsersSearchByUsernameAndHostRequestFromJson(Map<String, dynamic> json) {
+_$UsersSearchByUsernameAndHostRequestFromJson(Map<String, dynamic> json) {
   return _UsersSearchByUsernameAndHostRequest.fromJson(json);
 }
 
@@ -33,24 +34,30 @@ mixin _$UsersSearchByUsernameAndHostRequest {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $UsersSearchByUsernameAndHostRequestCopyWith<
-          UsersSearchByUsernameAndHostRequest>
-      get copyWith => throw _privateConstructorUsedError;
+    UsersSearchByUsernameAndHostRequest
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $UsersSearchByUsernameAndHostRequestCopyWith<$Res> {
   factory $UsersSearchByUsernameAndHostRequestCopyWith(
-          UsersSearchByUsernameAndHostRequest value,
-          $Res Function(UsersSearchByUsernameAndHostRequest) then) =
-      _$UsersSearchByUsernameAndHostRequestCopyWithImpl<$Res,
-          UsersSearchByUsernameAndHostRequest>;
+    UsersSearchByUsernameAndHostRequest value,
+    $Res Function(UsersSearchByUsernameAndHostRequest) then,
+  ) =
+      _$UsersSearchByUsernameAndHostRequestCopyWithImpl<
+        $Res,
+        UsersSearchByUsernameAndHostRequest
+      >;
   @useResult
   $Res call({int? limit, bool? detail, String? username, String? host});
 }
 
 /// @nodoc
-class _$UsersSearchByUsernameAndHostRequestCopyWithImpl<$Res,
-        $Val extends UsersSearchByUsernameAndHostRequest>
+class _$UsersSearchByUsernameAndHostRequestCopyWithImpl<
+  $Res,
+  $Val extends UsersSearchByUsernameAndHostRequest
+>
     implements $UsersSearchByUsernameAndHostRequestCopyWith<$Res> {
   _$UsersSearchByUsernameAndHostRequestCopyWithImpl(this._value, this._then);
 
@@ -69,24 +76,31 @@ class _$UsersSearchByUsernameAndHostRequestCopyWithImpl<$Res,
     Object? username = freezed,
     Object? host = freezed,
   }) {
-    return _then(_value.copyWith(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      detail: freezed == detail
-          ? _value.detail
-          : detail // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      username: freezed == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String?,
-      host: freezed == host
-          ? _value.host
-          : host // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            detail:
+                freezed == detail
+                    ? _value.detail
+                    : detail // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            username:
+                freezed == username
+                    ? _value.username
+                    : username // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            host:
+                freezed == host
+                    ? _value.host
+                    : host // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -94,9 +108,9 @@ class _$UsersSearchByUsernameAndHostRequestCopyWithImpl<$Res,
 abstract class _$$UsersSearchByUsernameAndHostRequestImplCopyWith<$Res>
     implements $UsersSearchByUsernameAndHostRequestCopyWith<$Res> {
   factory _$$UsersSearchByUsernameAndHostRequestImplCopyWith(
-          _$UsersSearchByUsernameAndHostRequestImpl value,
-          $Res Function(_$UsersSearchByUsernameAndHostRequestImpl) then) =
-      __$$UsersSearchByUsernameAndHostRequestImplCopyWithImpl<$Res>;
+    _$UsersSearchByUsernameAndHostRequestImpl value,
+    $Res Function(_$UsersSearchByUsernameAndHostRequestImpl) then,
+  ) = __$$UsersSearchByUsernameAndHostRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? limit, bool? detail, String? username, String? host});
@@ -104,13 +118,16 @@ abstract class _$$UsersSearchByUsernameAndHostRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$UsersSearchByUsernameAndHostRequestImplCopyWithImpl<$Res>
-    extends _$UsersSearchByUsernameAndHostRequestCopyWithImpl<$Res,
-        _$UsersSearchByUsernameAndHostRequestImpl>
+    extends
+        _$UsersSearchByUsernameAndHostRequestCopyWithImpl<
+          $Res,
+          _$UsersSearchByUsernameAndHostRequestImpl
+        >
     implements _$$UsersSearchByUsernameAndHostRequestImplCopyWith<$Res> {
   __$$UsersSearchByUsernameAndHostRequestImplCopyWithImpl(
-      _$UsersSearchByUsernameAndHostRequestImpl _value,
-      $Res Function(_$UsersSearchByUsernameAndHostRequestImpl) _then)
-      : super(_value, _then);
+    _$UsersSearchByUsernameAndHostRequestImpl _value,
+    $Res Function(_$UsersSearchByUsernameAndHostRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UsersSearchByUsernameAndHostRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -122,24 +139,30 @@ class __$$UsersSearchByUsernameAndHostRequestImplCopyWithImpl<$Res>
     Object? username = freezed,
     Object? host = freezed,
   }) {
-    return _then(_$UsersSearchByUsernameAndHostRequestImpl(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      detail: freezed == detail
-          ? _value.detail
-          : detail // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      username: freezed == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String?,
-      host: freezed == host
-          ? _value.host
-          : host // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$UsersSearchByUsernameAndHostRequestImpl(
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        detail:
+            freezed == detail
+                ? _value.detail
+                : detail // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        username:
+            freezed == username
+                ? _value.username
+                : username // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        host:
+            freezed == host
+                ? _value.host
+                : host // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -147,12 +170,16 @@ class __$$UsersSearchByUsernameAndHostRequestImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$UsersSearchByUsernameAndHostRequestImpl
     implements _UsersSearchByUsernameAndHostRequest {
-  const _$UsersSearchByUsernameAndHostRequestImpl(
-      {this.limit, this.detail, this.username, this.host});
+  const _$UsersSearchByUsernameAndHostRequestImpl({
+    this.limit,
+    this.detail,
+    this.username,
+    this.host,
+  });
 
   factory _$UsersSearchByUsernameAndHostRequestImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$UsersSearchByUsernameAndHostRequestImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$UsersSearchByUsernameAndHostRequestImplFromJson(json);
 
   @override
   final int? limit;
@@ -190,29 +217,30 @@ class _$UsersSearchByUsernameAndHostRequestImpl
   @override
   @pragma('vm:prefer-inline')
   _$$UsersSearchByUsernameAndHostRequestImplCopyWith<
-          _$UsersSearchByUsernameAndHostRequestImpl>
-      get copyWith => __$$UsersSearchByUsernameAndHostRequestImplCopyWithImpl<
-          _$UsersSearchByUsernameAndHostRequestImpl>(this, _$identity);
+    _$UsersSearchByUsernameAndHostRequestImpl
+  >
+  get copyWith => __$$UsersSearchByUsernameAndHostRequestImplCopyWithImpl<
+    _$UsersSearchByUsernameAndHostRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UsersSearchByUsernameAndHostRequestImplToJson(
-      this,
-    );
+    return _$$UsersSearchByUsernameAndHostRequestImplToJson(this);
   }
 }
 
 abstract class _UsersSearchByUsernameAndHostRequest
     implements UsersSearchByUsernameAndHostRequest {
-  const factory _UsersSearchByUsernameAndHostRequest(
-      {final int? limit,
-      final bool? detail,
-      final String? username,
-      final String? host}) = _$UsersSearchByUsernameAndHostRequestImpl;
+  const factory _UsersSearchByUsernameAndHostRequest({
+    final int? limit,
+    final bool? detail,
+    final String? username,
+    final String? host,
+  }) = _$UsersSearchByUsernameAndHostRequestImpl;
 
   factory _UsersSearchByUsernameAndHostRequest.fromJson(
-          Map<String, dynamic> json) =
-      _$UsersSearchByUsernameAndHostRequestImpl.fromJson;
+    Map<String, dynamic> json,
+  ) = _$UsersSearchByUsernameAndHostRequestImpl.fromJson;
 
   @override
   int? get limit;
@@ -228,6 +256,7 @@ abstract class _UsersSearchByUsernameAndHostRequest
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersSearchByUsernameAndHostRequestImplCopyWith<
-          _$UsersSearchByUsernameAndHostRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$UsersSearchByUsernameAndHostRequestImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }

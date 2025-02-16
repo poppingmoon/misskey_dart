@@ -63,17 +63,15 @@ class MyHomePage extends HookWidget {
                     DropdownMenuItem(
                       value: Channel.globalTimeline,
                       child: Text("グローバル"),
-                    )
+                    ),
                   ],
                   value: channel.value,
-                  onChanged: (value) =>
-                      channel.value = value ?? Channel.localTimeline,
+                  onChanged:
+                      (value) => channel.value = value ?? Channel.localTimeline,
                 ),
               ],
             ),
-            Expanded(
-              child: StreamingPage(channel: channel.value),
-            ),
+            Expanded(child: StreamingPage(channel: channel.value)),
           ],
         ),
       ),

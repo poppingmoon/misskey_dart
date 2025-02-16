@@ -12,10 +12,12 @@ part of 'notes_hybrid_timeline_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 NotesHybridTimelineRequest _$NotesHybridTimelineRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _NotesHybridTimelineRequest.fromJson(json);
 }
 
@@ -43,34 +45,41 @@ mixin _$NotesHybridTimelineRequest {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesHybridTimelineRequestCopyWith<NotesHybridTimelineRequest>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $NotesHybridTimelineRequestCopyWith<$Res> {
-  factory $NotesHybridTimelineRequestCopyWith(NotesHybridTimelineRequest value,
-          $Res Function(NotesHybridTimelineRequest) then) =
-      _$NotesHybridTimelineRequestCopyWithImpl<$Res,
-          NotesHybridTimelineRequest>;
+  factory $NotesHybridTimelineRequestCopyWith(
+    NotesHybridTimelineRequest value,
+    $Res Function(NotesHybridTimelineRequest) then,
+  ) =
+      _$NotesHybridTimelineRequestCopyWithImpl<
+        $Res,
+        NotesHybridTimelineRequest
+      >;
   @useResult
-  $Res call(
-      {int? limit,
-      String? sinceId,
-      String? untilId,
-      @EpocTimeDateTimeConverter() DateTime? sinceDate,
-      @EpocTimeDateTimeConverter() DateTime? untilDate,
-      bool? includeMyRenotes,
-      bool? includeRenotedMyNotes,
-      bool? includeLocalRenotes,
-      bool? withFiles,
-      bool? withReplies,
-      bool? withRenotes,
-      bool? allowPartial});
+  $Res call({
+    int? limit,
+    String? sinceId,
+    String? untilId,
+    @EpocTimeDateTimeConverter() DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() DateTime? untilDate,
+    bool? includeMyRenotes,
+    bool? includeRenotedMyNotes,
+    bool? includeLocalRenotes,
+    bool? withFiles,
+    bool? withReplies,
+    bool? withRenotes,
+    bool? allowPartial,
+  });
 }
 
 /// @nodoc
-class _$NotesHybridTimelineRequestCopyWithImpl<$Res,
-        $Val extends NotesHybridTimelineRequest>
+class _$NotesHybridTimelineRequestCopyWithImpl<
+  $Res,
+  $Val extends NotesHybridTimelineRequest
+>
     implements $NotesHybridTimelineRequestCopyWith<$Res> {
   _$NotesHybridTimelineRequestCopyWithImpl(this._value, this._then);
 
@@ -97,56 +106,71 @@ class _$NotesHybridTimelineRequestCopyWithImpl<$Res,
     Object? withRenotes = freezed,
     Object? allowPartial = freezed,
   }) {
-    return _then(_value.copyWith(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      sinceDate: freezed == sinceDate
-          ? _value.sinceDate
-          : sinceDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      untilDate: freezed == untilDate
-          ? _value.untilDate
-          : untilDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      includeMyRenotes: freezed == includeMyRenotes
-          ? _value.includeMyRenotes
-          : includeMyRenotes // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      includeRenotedMyNotes: freezed == includeRenotedMyNotes
-          ? _value.includeRenotedMyNotes
-          : includeRenotedMyNotes // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      includeLocalRenotes: freezed == includeLocalRenotes
-          ? _value.includeLocalRenotes
-          : includeLocalRenotes // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withFiles: freezed == withFiles
-          ? _value.withFiles
-          : withFiles // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withReplies: freezed == withReplies
-          ? _value.withReplies
-          : withReplies // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withRenotes: freezed == withRenotes
-          ? _value.withRenotes
-          : withRenotes // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      allowPartial: freezed == allowPartial
-          ? _value.allowPartial
-          : allowPartial // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            sinceDate:
+                freezed == sinceDate
+                    ? _value.sinceDate
+                    : sinceDate // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            untilDate:
+                freezed == untilDate
+                    ? _value.untilDate
+                    : untilDate // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            includeMyRenotes:
+                freezed == includeMyRenotes
+                    ? _value.includeMyRenotes
+                    : includeMyRenotes // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            includeRenotedMyNotes:
+                freezed == includeRenotedMyNotes
+                    ? _value.includeRenotedMyNotes
+                    : includeRenotedMyNotes // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            includeLocalRenotes:
+                freezed == includeLocalRenotes
+                    ? _value.includeLocalRenotes
+                    : includeLocalRenotes // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            withFiles:
+                freezed == withFiles
+                    ? _value.withFiles
+                    : withFiles // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            withReplies:
+                freezed == withReplies
+                    ? _value.withReplies
+                    : withReplies // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            withRenotes:
+                freezed == withRenotes
+                    ? _value.withRenotes
+                    : withRenotes // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            allowPartial:
+                freezed == allowPartial
+                    ? _value.allowPartial
+                    : allowPartial // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -154,35 +178,39 @@ class _$NotesHybridTimelineRequestCopyWithImpl<$Res,
 abstract class _$$NotesHybridTimelineRequestImplCopyWith<$Res>
     implements $NotesHybridTimelineRequestCopyWith<$Res> {
   factory _$$NotesHybridTimelineRequestImplCopyWith(
-          _$NotesHybridTimelineRequestImpl value,
-          $Res Function(_$NotesHybridTimelineRequestImpl) then) =
-      __$$NotesHybridTimelineRequestImplCopyWithImpl<$Res>;
+    _$NotesHybridTimelineRequestImpl value,
+    $Res Function(_$NotesHybridTimelineRequestImpl) then,
+  ) = __$$NotesHybridTimelineRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int? limit,
-      String? sinceId,
-      String? untilId,
-      @EpocTimeDateTimeConverter() DateTime? sinceDate,
-      @EpocTimeDateTimeConverter() DateTime? untilDate,
-      bool? includeMyRenotes,
-      bool? includeRenotedMyNotes,
-      bool? includeLocalRenotes,
-      bool? withFiles,
-      bool? withReplies,
-      bool? withRenotes,
-      bool? allowPartial});
+  $Res call({
+    int? limit,
+    String? sinceId,
+    String? untilId,
+    @EpocTimeDateTimeConverter() DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() DateTime? untilDate,
+    bool? includeMyRenotes,
+    bool? includeRenotedMyNotes,
+    bool? includeLocalRenotes,
+    bool? withFiles,
+    bool? withReplies,
+    bool? withRenotes,
+    bool? allowPartial,
+  });
 }
 
 /// @nodoc
 class __$$NotesHybridTimelineRequestImplCopyWithImpl<$Res>
-    extends _$NotesHybridTimelineRequestCopyWithImpl<$Res,
-        _$NotesHybridTimelineRequestImpl>
+    extends
+        _$NotesHybridTimelineRequestCopyWithImpl<
+          $Res,
+          _$NotesHybridTimelineRequestImpl
+        >
     implements _$$NotesHybridTimelineRequestImplCopyWith<$Res> {
   __$$NotesHybridTimelineRequestImplCopyWithImpl(
-      _$NotesHybridTimelineRequestImpl _value,
-      $Res Function(_$NotesHybridTimelineRequestImpl) _then)
-      : super(_value, _then);
+    _$NotesHybridTimelineRequestImpl _value,
+    $Res Function(_$NotesHybridTimelineRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotesHybridTimelineRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -202,79 +230,94 @@ class __$$NotesHybridTimelineRequestImplCopyWithImpl<$Res>
     Object? withRenotes = freezed,
     Object? allowPartial = freezed,
   }) {
-    return _then(_$NotesHybridTimelineRequestImpl(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      sinceDate: freezed == sinceDate
-          ? _value.sinceDate
-          : sinceDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      untilDate: freezed == untilDate
-          ? _value.untilDate
-          : untilDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      includeMyRenotes: freezed == includeMyRenotes
-          ? _value.includeMyRenotes
-          : includeMyRenotes // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      includeRenotedMyNotes: freezed == includeRenotedMyNotes
-          ? _value.includeRenotedMyNotes
-          : includeRenotedMyNotes // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      includeLocalRenotes: freezed == includeLocalRenotes
-          ? _value.includeLocalRenotes
-          : includeLocalRenotes // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withFiles: freezed == withFiles
-          ? _value.withFiles
-          : withFiles // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withReplies: freezed == withReplies
-          ? _value.withReplies
-          : withReplies // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withRenotes: freezed == withRenotes
-          ? _value.withRenotes
-          : withRenotes // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      allowPartial: freezed == allowPartial
-          ? _value.allowPartial
-          : allowPartial // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+    return _then(
+      _$NotesHybridTimelineRequestImpl(
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        sinceDate:
+            freezed == sinceDate
+                ? _value.sinceDate
+                : sinceDate // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        untilDate:
+            freezed == untilDate
+                ? _value.untilDate
+                : untilDate // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        includeMyRenotes:
+            freezed == includeMyRenotes
+                ? _value.includeMyRenotes
+                : includeMyRenotes // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        includeRenotedMyNotes:
+            freezed == includeRenotedMyNotes
+                ? _value.includeRenotedMyNotes
+                : includeRenotedMyNotes // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        includeLocalRenotes:
+            freezed == includeLocalRenotes
+                ? _value.includeLocalRenotes
+                : includeLocalRenotes // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        withFiles:
+            freezed == withFiles
+                ? _value.withFiles
+                : withFiles // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        withReplies:
+            freezed == withReplies
+                ? _value.withReplies
+                : withReplies // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        withRenotes:
+            freezed == withRenotes
+                ? _value.withRenotes
+                : withRenotes // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        allowPartial:
+            freezed == allowPartial
+                ? _value.allowPartial
+                : allowPartial // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$NotesHybridTimelineRequestImpl implements _NotesHybridTimelineRequest {
-  const _$NotesHybridTimelineRequestImpl(
-      {this.limit,
-      this.sinceId,
-      this.untilId,
-      @EpocTimeDateTimeConverter() this.sinceDate,
-      @EpocTimeDateTimeConverter() this.untilDate,
-      this.includeMyRenotes,
-      this.includeRenotedMyNotes,
-      this.includeLocalRenotes,
-      this.withFiles,
-      this.withReplies,
-      this.withRenotes,
-      this.allowPartial});
+  const _$NotesHybridTimelineRequestImpl({
+    this.limit,
+    this.sinceId,
+    this.untilId,
+    @EpocTimeDateTimeConverter() this.sinceDate,
+    @EpocTimeDateTimeConverter() this.untilDate,
+    this.includeMyRenotes,
+    this.includeRenotedMyNotes,
+    this.includeLocalRenotes,
+    this.withFiles,
+    this.withReplies,
+    this.withRenotes,
+    this.allowPartial,
+  });
 
   factory _$NotesHybridTimelineRequestImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$NotesHybridTimelineRequestImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$NotesHybridTimelineRequestImplFromJson(json);
 
   @override
   final int? limit;
@@ -339,19 +382,20 @@ class _$NotesHybridTimelineRequestImpl implements _NotesHybridTimelineRequest {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      limit,
-      sinceId,
-      untilId,
-      sinceDate,
-      untilDate,
-      includeMyRenotes,
-      includeRenotedMyNotes,
-      includeLocalRenotes,
-      withFiles,
-      withReplies,
-      withRenotes,
-      allowPartial);
+    runtimeType,
+    limit,
+    sinceId,
+    untilId,
+    sinceDate,
+    untilDate,
+    includeMyRenotes,
+    includeRenotedMyNotes,
+    includeLocalRenotes,
+    withFiles,
+    withReplies,
+    withRenotes,
+    allowPartial,
+  );
 
   /// Create a copy of NotesHybridTimelineRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -359,32 +403,32 @@ class _$NotesHybridTimelineRequestImpl implements _NotesHybridTimelineRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$NotesHybridTimelineRequestImplCopyWith<_$NotesHybridTimelineRequestImpl>
-      get copyWith => __$$NotesHybridTimelineRequestImplCopyWithImpl<
-          _$NotesHybridTimelineRequestImpl>(this, _$identity);
+  get copyWith => __$$NotesHybridTimelineRequestImplCopyWithImpl<
+    _$NotesHybridTimelineRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotesHybridTimelineRequestImplToJson(
-      this,
-    );
+    return _$$NotesHybridTimelineRequestImplToJson(this);
   }
 }
 
 abstract class _NotesHybridTimelineRequest
     implements NotesHybridTimelineRequest {
-  const factory _NotesHybridTimelineRequest(
-      {final int? limit,
-      final String? sinceId,
-      final String? untilId,
-      @EpocTimeDateTimeConverter() final DateTime? sinceDate,
-      @EpocTimeDateTimeConverter() final DateTime? untilDate,
-      final bool? includeMyRenotes,
-      final bool? includeRenotedMyNotes,
-      final bool? includeLocalRenotes,
-      final bool? withFiles,
-      final bool? withReplies,
-      final bool? withRenotes,
-      final bool? allowPartial}) = _$NotesHybridTimelineRequestImpl;
+  const factory _NotesHybridTimelineRequest({
+    final int? limit,
+    final String? sinceId,
+    final String? untilId,
+    @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() final DateTime? untilDate,
+    final bool? includeMyRenotes,
+    final bool? includeRenotedMyNotes,
+    final bool? includeLocalRenotes,
+    final bool? withFiles,
+    final bool? withReplies,
+    final bool? withRenotes,
+    final bool? allowPartial,
+  }) = _$NotesHybridTimelineRequestImpl;
 
   factory _NotesHybridTimelineRequest.fromJson(Map<String, dynamic> json) =
       _$NotesHybridTimelineRequestImpl.fromJson;
@@ -421,5 +465,5 @@ abstract class _NotesHybridTimelineRequest
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesHybridTimelineRequestImplCopyWith<_$NotesHybridTimelineRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

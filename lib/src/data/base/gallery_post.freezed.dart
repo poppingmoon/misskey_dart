@@ -12,7 +12,8 @@ part of 'gallery_post.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 GalleryPost _$GalleryPostFromJson(Map<String, dynamic> json) {
   return _GalleryPost.fromJson(json);
@@ -47,23 +48,25 @@ mixin _$GalleryPost {
 /// @nodoc
 abstract class $GalleryPostCopyWith<$Res> {
   factory $GalleryPostCopyWith(
-          GalleryPost value, $Res Function(GalleryPost) then) =
-      _$GalleryPostCopyWithImpl<$Res, GalleryPost>;
+    GalleryPost value,
+    $Res Function(GalleryPost) then,
+  ) = _$GalleryPostCopyWithImpl<$Res, GalleryPost>;
   @useResult
-  $Res call(
-      {String id,
-      DateTime createdAt,
-      DateTime updatedAt,
-      String userId,
-      UserLite user,
-      String title,
-      String? description,
-      List<String> fileIds,
-      List<DriveFile> files,
-      List<String>? tags,
-      bool isSensitive,
-      int likedCount,
-      bool? isLiked});
+  $Res call({
+    String id,
+    DateTime createdAt,
+    DateTime updatedAt,
+    String userId,
+    UserLite user,
+    String title,
+    String? description,
+    List<String> fileIds,
+    List<DriveFile> files,
+    List<String>? tags,
+    bool isSensitive,
+    int likedCount,
+    bool? isLiked,
+  });
 
   $UserLiteCopyWith<$Res> get user;
 }
@@ -97,60 +100,76 @@ class _$GalleryPostCopyWithImpl<$Res, $Val extends GalleryPost>
     Object? likedCount = null,
     Object? isLiked = freezed,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedAt: null == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      user: null == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as UserLite,
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      fileIds: null == fileIds
-          ? _value.fileIds
-          : fileIds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      files: null == files
-          ? _value.files
-          : files // ignore: cast_nullable_to_non_nullable
-              as List<DriveFile>,
-      tags: freezed == tags
-          ? _value.tags
-          : tags // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      isSensitive: null == isSensitive
-          ? _value.isSensitive
-          : isSensitive // ignore: cast_nullable_to_non_nullable
-              as bool,
-      likedCount: null == likedCount
-          ? _value.likedCount
-          : likedCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      isLiked: freezed == isLiked
-          ? _value.isLiked
-          : isLiked // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            createdAt:
+                null == createdAt
+                    ? _value.createdAt
+                    : createdAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            updatedAt:
+                null == updatedAt
+                    ? _value.updatedAt
+                    : updatedAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            userId:
+                null == userId
+                    ? _value.userId
+                    : userId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            user:
+                null == user
+                    ? _value.user
+                    : user // ignore: cast_nullable_to_non_nullable
+                        as UserLite,
+            title:
+                null == title
+                    ? _value.title
+                    : title // ignore: cast_nullable_to_non_nullable
+                        as String,
+            description:
+                freezed == description
+                    ? _value.description
+                    : description // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            fileIds:
+                null == fileIds
+                    ? _value.fileIds
+                    : fileIds // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+            files:
+                null == files
+                    ? _value.files
+                    : files // ignore: cast_nullable_to_non_nullable
+                        as List<DriveFile>,
+            tags:
+                freezed == tags
+                    ? _value.tags
+                    : tags // ignore: cast_nullable_to_non_nullable
+                        as List<String>?,
+            isSensitive:
+                null == isSensitive
+                    ? _value.isSensitive
+                    : isSensitive // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            likedCount:
+                null == likedCount
+                    ? _value.likedCount
+                    : likedCount // ignore: cast_nullable_to_non_nullable
+                        as int,
+            isLiked:
+                freezed == isLiked
+                    ? _value.isLiked
+                    : isLiked // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of GalleryPost
@@ -168,24 +187,26 @@ class _$GalleryPostCopyWithImpl<$Res, $Val extends GalleryPost>
 abstract class _$$GalleryPostImplCopyWith<$Res>
     implements $GalleryPostCopyWith<$Res> {
   factory _$$GalleryPostImplCopyWith(
-          _$GalleryPostImpl value, $Res Function(_$GalleryPostImpl) then) =
-      __$$GalleryPostImplCopyWithImpl<$Res>;
+    _$GalleryPostImpl value,
+    $Res Function(_$GalleryPostImpl) then,
+  ) = __$$GalleryPostImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      DateTime createdAt,
-      DateTime updatedAt,
-      String userId,
-      UserLite user,
-      String title,
-      String? description,
-      List<String> fileIds,
-      List<DriveFile> files,
-      List<String>? tags,
-      bool isSensitive,
-      int likedCount,
-      bool? isLiked});
+  $Res call({
+    String id,
+    DateTime createdAt,
+    DateTime updatedAt,
+    String userId,
+    UserLite user,
+    String title,
+    String? description,
+    List<String> fileIds,
+    List<DriveFile> files,
+    List<String>? tags,
+    bool isSensitive,
+    int likedCount,
+    bool? isLiked,
+  });
 
   @override
   $UserLiteCopyWith<$Res> get user;
@@ -196,8 +217,9 @@ class __$$GalleryPostImplCopyWithImpl<$Res>
     extends _$GalleryPostCopyWithImpl<$Res, _$GalleryPostImpl>
     implements _$$GalleryPostImplCopyWith<$Res> {
   __$$GalleryPostImplCopyWithImpl(
-      _$GalleryPostImpl _value, $Res Function(_$GalleryPostImpl) _then)
-      : super(_value, _then);
+    _$GalleryPostImpl _value,
+    $Res Function(_$GalleryPostImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of GalleryPost
   /// with the given fields replaced by the non-null parameter values.
@@ -218,83 +240,98 @@ class __$$GalleryPostImplCopyWithImpl<$Res>
     Object? likedCount = null,
     Object? isLiked = freezed,
   }) {
-    return _then(_$GalleryPostImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedAt: null == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      user: null == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as UserLite,
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      fileIds: null == fileIds
-          ? _value._fileIds
-          : fileIds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      files: null == files
-          ? _value._files
-          : files // ignore: cast_nullable_to_non_nullable
-              as List<DriveFile>,
-      tags: freezed == tags
-          ? _value._tags
-          : tags // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      isSensitive: null == isSensitive
-          ? _value.isSensitive
-          : isSensitive // ignore: cast_nullable_to_non_nullable
-              as bool,
-      likedCount: null == likedCount
-          ? _value.likedCount
-          : likedCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      isLiked: freezed == isLiked
-          ? _value.isLiked
-          : isLiked // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+    return _then(
+      _$GalleryPostImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        createdAt:
+            null == createdAt
+                ? _value.createdAt
+                : createdAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        updatedAt:
+            null == updatedAt
+                ? _value.updatedAt
+                : updatedAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        userId:
+            null == userId
+                ? _value.userId
+                : userId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        user:
+            null == user
+                ? _value.user
+                : user // ignore: cast_nullable_to_non_nullable
+                    as UserLite,
+        title:
+            null == title
+                ? _value.title
+                : title // ignore: cast_nullable_to_non_nullable
+                    as String,
+        description:
+            freezed == description
+                ? _value.description
+                : description // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        fileIds:
+            null == fileIds
+                ? _value._fileIds
+                : fileIds // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+        files:
+            null == files
+                ? _value._files
+                : files // ignore: cast_nullable_to_non_nullable
+                    as List<DriveFile>,
+        tags:
+            freezed == tags
+                ? _value._tags
+                : tags // ignore: cast_nullable_to_non_nullable
+                    as List<String>?,
+        isSensitive:
+            null == isSensitive
+                ? _value.isSensitive
+                : isSensitive // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        likedCount:
+            null == likedCount
+                ? _value.likedCount
+                : likedCount // ignore: cast_nullable_to_non_nullable
+                    as int,
+        isLiked:
+            freezed == isLiked
+                ? _value.isLiked
+                : isLiked // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$GalleryPostImpl implements _GalleryPost {
-  const _$GalleryPostImpl(
-      {required this.id,
-      required this.createdAt,
-      required this.updatedAt,
-      required this.userId,
-      required this.user,
-      required this.title,
-      this.description,
-      required final List<String> fileIds,
-      required final List<DriveFile> files,
-      final List<String>? tags,
-      required this.isSensitive,
-      required this.likedCount,
-      this.isLiked})
-      : _fileIds = fileIds,
-        _files = files,
-        _tags = tags;
+  const _$GalleryPostImpl({
+    required this.id,
+    required this.createdAt,
+    required this.updatedAt,
+    required this.userId,
+    required this.user,
+    required this.title,
+    this.description,
+    required final List<String> fileIds,
+    required final List<DriveFile> files,
+    final List<String>? tags,
+    required this.isSensitive,
+    required this.likedCount,
+    this.isLiked,
+  }) : _fileIds = fileIds,
+       _files = files,
+       _tags = tags;
 
   factory _$GalleryPostImpl.fromJson(Map<String, dynamic> json) =>
       _$$GalleryPostImplFromJson(json);
@@ -379,20 +416,21 @@ class _$GalleryPostImpl implements _GalleryPost {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      createdAt,
-      updatedAt,
-      userId,
-      user,
-      title,
-      description,
-      const DeepCollectionEquality().hash(_fileIds),
-      const DeepCollectionEquality().hash(_files),
-      const DeepCollectionEquality().hash(_tags),
-      isSensitive,
-      likedCount,
-      isLiked);
+    runtimeType,
+    id,
+    createdAt,
+    updatedAt,
+    userId,
+    user,
+    title,
+    description,
+    const DeepCollectionEquality().hash(_fileIds),
+    const DeepCollectionEquality().hash(_files),
+    const DeepCollectionEquality().hash(_tags),
+    isSensitive,
+    likedCount,
+    isLiked,
+  );
 
   /// Create a copy of GalleryPost
   /// with the given fields replaced by the non-null parameter values.
@@ -404,27 +442,26 @@ class _$GalleryPostImpl implements _GalleryPost {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GalleryPostImplToJson(
-      this,
-    );
+    return _$$GalleryPostImplToJson(this);
   }
 }
 
 abstract class _GalleryPost implements GalleryPost {
-  const factory _GalleryPost(
-      {required final String id,
-      required final DateTime createdAt,
-      required final DateTime updatedAt,
-      required final String userId,
-      required final UserLite user,
-      required final String title,
-      final String? description,
-      required final List<String> fileIds,
-      required final List<DriveFile> files,
-      final List<String>? tags,
-      required final bool isSensitive,
-      required final int likedCount,
-      final bool? isLiked}) = _$GalleryPostImpl;
+  const factory _GalleryPost({
+    required final String id,
+    required final DateTime createdAt,
+    required final DateTime updatedAt,
+    required final String userId,
+    required final UserLite user,
+    required final String title,
+    final String? description,
+    required final List<String> fileIds,
+    required final List<DriveFile> files,
+    final List<String>? tags,
+    required final bool isSensitive,
+    required final int likedCount,
+    final bool? isLiked,
+  }) = _$GalleryPostImpl;
 
   factory _GalleryPost.fromJson(Map<String, dynamic> json) =
       _$GalleryPostImpl.fromJson;

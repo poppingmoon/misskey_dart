@@ -12,7 +12,8 @@ part of 'i_registry_set_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 IRegistrySetRequest _$IRegistrySetRequestFromJson(Map<String, dynamic> json) {
   return _IRegistrySetRequest.fromJson(json);
@@ -38,8 +39,9 @@ mixin _$IRegistrySetRequest {
 /// @nodoc
 abstract class $IRegistrySetRequestCopyWith<$Res> {
   factory $IRegistrySetRequestCopyWith(
-          IRegistrySetRequest value, $Res Function(IRegistrySetRequest) then) =
-      _$IRegistrySetRequestCopyWithImpl<$Res, IRegistrySetRequest>;
+    IRegistrySetRequest value,
+    $Res Function(IRegistrySetRequest) then,
+  ) = _$IRegistrySetRequestCopyWithImpl<$Res, IRegistrySetRequest>;
   @useResult
   $Res call({String key, dynamic value, List<String> scope, String? domain});
 }
@@ -64,33 +66,41 @@ class _$IRegistrySetRequestCopyWithImpl<$Res, $Val extends IRegistrySetRequest>
     Object? scope = null,
     Object? domain = freezed,
   }) {
-    return _then(_value.copyWith(
-      key: null == key
-          ? _value.key
-          : key // ignore: cast_nullable_to_non_nullable
-              as String,
-      value: freezed == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-      scope: null == scope
-          ? _value.scope
-          : scope // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      domain: freezed == domain
-          ? _value.domain
-          : domain // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            key:
+                null == key
+                    ? _value.key
+                    : key // ignore: cast_nullable_to_non_nullable
+                        as String,
+            value:
+                freezed == value
+                    ? _value.value
+                    : value // ignore: cast_nullable_to_non_nullable
+                        as dynamic,
+            scope:
+                null == scope
+                    ? _value.scope
+                    : scope // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+            domain:
+                freezed == domain
+                    ? _value.domain
+                    : domain // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$IRegistrySetRequestImplCopyWith<$Res>
     implements $IRegistrySetRequestCopyWith<$Res> {
-  factory _$$IRegistrySetRequestImplCopyWith(_$IRegistrySetRequestImpl value,
-          $Res Function(_$IRegistrySetRequestImpl) then) =
-      __$$IRegistrySetRequestImplCopyWithImpl<$Res>;
+  factory _$$IRegistrySetRequestImplCopyWith(
+    _$IRegistrySetRequestImpl value,
+    $Res Function(_$IRegistrySetRequestImpl) then,
+  ) = __$$IRegistrySetRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String key, dynamic value, List<String> scope, String? domain});
@@ -100,9 +110,10 @@ abstract class _$$IRegistrySetRequestImplCopyWith<$Res>
 class __$$IRegistrySetRequestImplCopyWithImpl<$Res>
     extends _$IRegistrySetRequestCopyWithImpl<$Res, _$IRegistrySetRequestImpl>
     implements _$$IRegistrySetRequestImplCopyWith<$Res> {
-  __$$IRegistrySetRequestImplCopyWithImpl(_$IRegistrySetRequestImpl _value,
-      $Res Function(_$IRegistrySetRequestImpl) _then)
-      : super(_value, _then);
+  __$$IRegistrySetRequestImplCopyWithImpl(
+    _$IRegistrySetRequestImpl _value,
+    $Res Function(_$IRegistrySetRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of IRegistrySetRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -114,36 +125,42 @@ class __$$IRegistrySetRequestImplCopyWithImpl<$Res>
     Object? scope = null,
     Object? domain = freezed,
   }) {
-    return _then(_$IRegistrySetRequestImpl(
-      key: null == key
-          ? _value.key
-          : key // ignore: cast_nullable_to_non_nullable
-              as String,
-      value: freezed == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-      scope: null == scope
-          ? _value._scope
-          : scope // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      domain: freezed == domain
-          ? _value.domain
-          : domain // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$IRegistrySetRequestImpl(
+        key:
+            null == key
+                ? _value.key
+                : key // ignore: cast_nullable_to_non_nullable
+                    as String,
+        value:
+            freezed == value
+                ? _value.value
+                : value // ignore: cast_nullable_to_non_nullable
+                    as dynamic,
+        scope:
+            null == scope
+                ? _value._scope
+                : scope // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+        domain:
+            freezed == domain
+                ? _value.domain
+                : domain // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$IRegistrySetRequestImpl implements _IRegistrySetRequest {
-  const _$IRegistrySetRequestImpl(
-      {required this.key,
-      required this.value,
-      required final List<String> scope,
-      this.domain})
-      : _scope = scope;
+  const _$IRegistrySetRequestImpl({
+    required this.key,
+    required this.value,
+    required final List<String> scope,
+    this.domain,
+  }) : _scope = scope;
 
   factory _$IRegistrySetRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$IRegistrySetRequestImplFromJson(json);
@@ -182,11 +199,12 @@ class _$IRegistrySetRequestImpl implements _IRegistrySetRequest {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      key,
-      const DeepCollectionEquality().hash(value),
-      const DeepCollectionEquality().hash(_scope),
-      domain);
+    runtimeType,
+    key,
+    const DeepCollectionEquality().hash(value),
+    const DeepCollectionEquality().hash(_scope),
+    domain,
+  );
 
   /// Create a copy of IRegistrySetRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -195,22 +213,23 @@ class _$IRegistrySetRequestImpl implements _IRegistrySetRequest {
   @pragma('vm:prefer-inline')
   _$$IRegistrySetRequestImplCopyWith<_$IRegistrySetRequestImpl> get copyWith =>
       __$$IRegistrySetRequestImplCopyWithImpl<_$IRegistrySetRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$IRegistrySetRequestImplToJson(
-      this,
-    );
+    return _$$IRegistrySetRequestImplToJson(this);
   }
 }
 
 abstract class _IRegistrySetRequest implements IRegistrySetRequest {
-  const factory _IRegistrySetRequest(
-      {required final String key,
-      required final dynamic value,
-      required final List<String> scope,
-      final String? domain}) = _$IRegistrySetRequestImpl;
+  const factory _IRegistrySetRequest({
+    required final String key,
+    required final dynamic value,
+    required final List<String> scope,
+    final String? domain,
+  }) = _$IRegistrySetRequestImpl;
 
   factory _IRegistrySetRequest.fromJson(Map<String, dynamic> json) =
       _$IRegistrySetRequestImpl.fromJson;

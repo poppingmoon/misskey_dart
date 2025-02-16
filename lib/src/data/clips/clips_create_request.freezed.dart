@@ -12,7 +12,8 @@ part of 'clips_create_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ClipsCreateRequest _$ClipsCreateRequestFromJson(Map<String, dynamic> json) {
   return _ClipsCreateRequest.fromJson(json);
@@ -37,8 +38,9 @@ mixin _$ClipsCreateRequest {
 /// @nodoc
 abstract class $ClipsCreateRequestCopyWith<$Res> {
   factory $ClipsCreateRequestCopyWith(
-          ClipsCreateRequest value, $Res Function(ClipsCreateRequest) then) =
-      _$ClipsCreateRequestCopyWithImpl<$Res, ClipsCreateRequest>;
+    ClipsCreateRequest value,
+    $Res Function(ClipsCreateRequest) then,
+  ) = _$ClipsCreateRequestCopyWithImpl<$Res, ClipsCreateRequest>;
   @useResult
   $Res call({String name, bool? isPublic, String? description});
 }
@@ -62,29 +64,36 @@ class _$ClipsCreateRequestCopyWithImpl<$Res, $Val extends ClipsCreateRequest>
     Object? isPublic = freezed,
     Object? description = freezed,
   }) {
-    return _then(_value.copyWith(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      isPublic: freezed == isPublic
-          ? _value.isPublic
-          : isPublic // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            isPublic:
+                freezed == isPublic
+                    ? _value.isPublic
+                    : isPublic // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            description:
+                freezed == description
+                    ? _value.description
+                    : description // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$ClipsCreateRequestImplCopyWith<$Res>
     implements $ClipsCreateRequestCopyWith<$Res> {
-  factory _$$ClipsCreateRequestImplCopyWith(_$ClipsCreateRequestImpl value,
-          $Res Function(_$ClipsCreateRequestImpl) then) =
-      __$$ClipsCreateRequestImplCopyWithImpl<$Res>;
+  factory _$$ClipsCreateRequestImplCopyWith(
+    _$ClipsCreateRequestImpl value,
+    $Res Function(_$ClipsCreateRequestImpl) then,
+  ) = __$$ClipsCreateRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String name, bool? isPublic, String? description});
@@ -94,9 +103,10 @@ abstract class _$$ClipsCreateRequestImplCopyWith<$Res>
 class __$$ClipsCreateRequestImplCopyWithImpl<$Res>
     extends _$ClipsCreateRequestCopyWithImpl<$Res, _$ClipsCreateRequestImpl>
     implements _$$ClipsCreateRequestImplCopyWith<$Res> {
-  __$$ClipsCreateRequestImplCopyWithImpl(_$ClipsCreateRequestImpl _value,
-      $Res Function(_$ClipsCreateRequestImpl) _then)
-      : super(_value, _then);
+  __$$ClipsCreateRequestImplCopyWithImpl(
+    _$ClipsCreateRequestImpl _value,
+    $Res Function(_$ClipsCreateRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ClipsCreateRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -107,28 +117,36 @@ class __$$ClipsCreateRequestImplCopyWithImpl<$Res>
     Object? isPublic = freezed,
     Object? description = freezed,
   }) {
-    return _then(_$ClipsCreateRequestImpl(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      isPublic: freezed == isPublic
-          ? _value.isPublic
-          : isPublic // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$ClipsCreateRequestImpl(
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        isPublic:
+            freezed == isPublic
+                ? _value.isPublic
+                : isPublic // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        description:
+            freezed == description
+                ? _value.description
+                : description // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ClipsCreateRequestImpl implements _ClipsCreateRequest {
-  const _$ClipsCreateRequestImpl(
-      {required this.name, this.isPublic, this.description});
+  const _$ClipsCreateRequestImpl({
+    required this.name,
+    this.isPublic,
+    this.description,
+  });
 
   factory _$ClipsCreateRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$ClipsCreateRequestImplFromJson(json);
@@ -168,21 +186,22 @@ class _$ClipsCreateRequestImpl implements _ClipsCreateRequest {
   @pragma('vm:prefer-inline')
   _$$ClipsCreateRequestImplCopyWith<_$ClipsCreateRequestImpl> get copyWith =>
       __$$ClipsCreateRequestImplCopyWithImpl<_$ClipsCreateRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ClipsCreateRequestImplToJson(
-      this,
-    );
+    return _$$ClipsCreateRequestImplToJson(this);
   }
 }
 
 abstract class _ClipsCreateRequest implements ClipsCreateRequest {
-  const factory _ClipsCreateRequest(
-      {required final String name,
-      final bool? isPublic,
-      final String? description}) = _$ClipsCreateRequestImpl;
+  const factory _ClipsCreateRequest({
+    required final String name,
+    final bool? isPublic,
+    final String? description,
+  }) = _$ClipsCreateRequestImpl;
 
   factory _ClipsCreateRequest.fromJson(Map<String, dynamic> json) =
       _$ClipsCreateRequestImpl.fromJson;

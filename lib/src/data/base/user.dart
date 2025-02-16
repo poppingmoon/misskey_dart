@@ -577,23 +577,13 @@ class MutualLink with _$MutualLink {
       _$MutualLinkFromJson(json);
 }
 
-enum Notify {
-  normal,
-  none,
-}
+enum Notify { normal, none }
 
-enum TwoFactorBackupCodesStock {
-  full,
-  partial,
-  none,
-}
+enum TwoFactorBackupCodesStock { full, partial, none }
 
 @freezed
 class MuteWord with _$MuteWord {
-  const factory MuteWord({
-    String? regExp,
-    List<String>? content,
-  }) = _MuteWord;
+  const factory MuteWord({String? regExp, List<String>? content}) = _MuteWord;
 
   factory MuteWord.fromJson(Map<String, Object?> json) =>
       _$MuteWordFromJson(json);

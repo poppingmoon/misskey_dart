@@ -61,7 +61,7 @@ enum PageContentType {
   @JsonValue('if')
   condition,
   @Deprecated("removed")
-  post
+  post,
 }
 
 abstract class AbstractPageContent {
@@ -75,11 +75,8 @@ abstract class AbstractPageText extends AbstractPageContent {
 
 @freezed
 class PageText with _$PageText implements AbstractPageText {
-  const factory PageText({
-    String? id,
-    PageContentType? type,
-    String? text,
-  }) = _PageText;
+  const factory PageText({String? id, PageContentType? type, String? text}) =
+      _PageText;
 
   factory PageText.fromJson(Map<String, dynamic> json) =>
       _$PageTextFromJson(json);
@@ -109,11 +106,8 @@ abstract class AbstractPageImage extends AbstractPageContent {
 
 @freezed
 class PageImage with _$PageImage implements AbstractPageImage {
-  const factory PageImage({
-    String? id,
-    PageContentType? type,
-    String? fileId,
-  }) = _PageImage;
+  const factory PageImage({String? id, PageContentType? type, String? fileId}) =
+      _PageImage;
 
   factory PageImage.fromJson(Map<String, dynamic> json) =>
       _$PageImageFromJson(json);

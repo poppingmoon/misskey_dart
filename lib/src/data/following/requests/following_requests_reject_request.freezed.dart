@@ -12,10 +12,12 @@ part of 'following_requests_reject_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 FollowingRequestsRejectRequest _$FollowingRequestsRejectRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _FollowingRequestsRejectRequest.fromJson(json);
 }
 
@@ -30,23 +32,28 @@ mixin _$FollowingRequestsRejectRequest {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $FollowingRequestsRejectRequestCopyWith<FollowingRequestsRejectRequest>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $FollowingRequestsRejectRequestCopyWith<$Res> {
   factory $FollowingRequestsRejectRequestCopyWith(
-          FollowingRequestsRejectRequest value,
-          $Res Function(FollowingRequestsRejectRequest) then) =
-      _$FollowingRequestsRejectRequestCopyWithImpl<$Res,
-          FollowingRequestsRejectRequest>;
+    FollowingRequestsRejectRequest value,
+    $Res Function(FollowingRequestsRejectRequest) then,
+  ) =
+      _$FollowingRequestsRejectRequestCopyWithImpl<
+        $Res,
+        FollowingRequestsRejectRequest
+      >;
   @useResult
   $Res call({String userId});
 }
 
 /// @nodoc
-class _$FollowingRequestsRejectRequestCopyWithImpl<$Res,
-        $Val extends FollowingRequestsRejectRequest>
+class _$FollowingRequestsRejectRequestCopyWithImpl<
+  $Res,
+  $Val extends FollowingRequestsRejectRequest
+>
     implements $FollowingRequestsRejectRequestCopyWith<$Res> {
   _$FollowingRequestsRejectRequestCopyWithImpl(this._value, this._then);
 
@@ -59,15 +66,17 @@ class _$FollowingRequestsRejectRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? userId = null,
-  }) {
-    return _then(_value.copyWith(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? userId = null}) {
+    return _then(
+      _value.copyWith(
+            userId:
+                null == userId
+                    ? _value.userId
+                    : userId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -75,9 +84,9 @@ class _$FollowingRequestsRejectRequestCopyWithImpl<$Res,
 abstract class _$$FollowingRequestsRejectRequestImplCopyWith<$Res>
     implements $FollowingRequestsRejectRequestCopyWith<$Res> {
   factory _$$FollowingRequestsRejectRequestImplCopyWith(
-          _$FollowingRequestsRejectRequestImpl value,
-          $Res Function(_$FollowingRequestsRejectRequestImpl) then) =
-      __$$FollowingRequestsRejectRequestImplCopyWithImpl<$Res>;
+    _$FollowingRequestsRejectRequestImpl value,
+    $Res Function(_$FollowingRequestsRejectRequestImpl) then,
+  ) = __$$FollowingRequestsRejectRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String userId});
@@ -85,27 +94,31 @@ abstract class _$$FollowingRequestsRejectRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$FollowingRequestsRejectRequestImplCopyWithImpl<$Res>
-    extends _$FollowingRequestsRejectRequestCopyWithImpl<$Res,
-        _$FollowingRequestsRejectRequestImpl>
+    extends
+        _$FollowingRequestsRejectRequestCopyWithImpl<
+          $Res,
+          _$FollowingRequestsRejectRequestImpl
+        >
     implements _$$FollowingRequestsRejectRequestImplCopyWith<$Res> {
   __$$FollowingRequestsRejectRequestImplCopyWithImpl(
-      _$FollowingRequestsRejectRequestImpl _value,
-      $Res Function(_$FollowingRequestsRejectRequestImpl) _then)
-      : super(_value, _then);
+    _$FollowingRequestsRejectRequestImpl _value,
+    $Res Function(_$FollowingRequestsRejectRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of FollowingRequestsRejectRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? userId = null,
-  }) {
-    return _then(_$FollowingRequestsRejectRequestImpl(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? userId = null}) {
+    return _then(
+      _$FollowingRequestsRejectRequestImpl(
+        userId:
+            null == userId
+                ? _value.userId
+                : userId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -116,8 +129,8 @@ class _$FollowingRequestsRejectRequestImpl
   const _$FollowingRequestsRejectRequestImpl({required this.userId});
 
   factory _$FollowingRequestsRejectRequestImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$FollowingRequestsRejectRequestImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$FollowingRequestsRejectRequestImplFromJson(json);
 
   @override
   final String userId;
@@ -145,22 +158,23 @@ class _$FollowingRequestsRejectRequestImpl
   @override
   @pragma('vm:prefer-inline')
   _$$FollowingRequestsRejectRequestImplCopyWith<
-          _$FollowingRequestsRejectRequestImpl>
-      get copyWith => __$$FollowingRequestsRejectRequestImplCopyWithImpl<
-          _$FollowingRequestsRejectRequestImpl>(this, _$identity);
+    _$FollowingRequestsRejectRequestImpl
+  >
+  get copyWith => __$$FollowingRequestsRejectRequestImplCopyWithImpl<
+    _$FollowingRequestsRejectRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$FollowingRequestsRejectRequestImplToJson(
-      this,
-    );
+    return _$$FollowingRequestsRejectRequestImplToJson(this);
   }
 }
 
 abstract class _FollowingRequestsRejectRequest
     implements FollowingRequestsRejectRequest {
-  const factory _FollowingRequestsRejectRequest(
-      {required final String userId}) = _$FollowingRequestsRejectRequestImpl;
+  const factory _FollowingRequestsRejectRequest({
+    required final String userId,
+  }) = _$FollowingRequestsRejectRequestImpl;
 
   factory _FollowingRequestsRejectRequest.fromJson(Map<String, dynamic> json) =
       _$FollowingRequestsRejectRequestImpl.fromJson;
@@ -173,6 +187,7 @@ abstract class _FollowingRequestsRejectRequest
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FollowingRequestsRejectRequestImplCopyWith<
-          _$FollowingRequestsRejectRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$FollowingRequestsRejectRequestImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }

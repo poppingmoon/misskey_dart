@@ -12,10 +12,12 @@ part of 'local_timeline_parameter.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 LocalTimelineParameter _$LocalTimelineParameterFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _LocalTimelineParameter.fromJson(json);
 }
 
@@ -37,16 +39,19 @@ mixin _$LocalTimelineParameter {
 
 /// @nodoc
 abstract class $LocalTimelineParameterCopyWith<$Res> {
-  factory $LocalTimelineParameterCopyWith(LocalTimelineParameter value,
-          $Res Function(LocalTimelineParameter) then) =
-      _$LocalTimelineParameterCopyWithImpl<$Res, LocalTimelineParameter>;
+  factory $LocalTimelineParameterCopyWith(
+    LocalTimelineParameter value,
+    $Res Function(LocalTimelineParameter) then,
+  ) = _$LocalTimelineParameterCopyWithImpl<$Res, LocalTimelineParameter>;
   @useResult
   $Res call({bool? withRenotes, bool? withReplies, bool? withFiles});
 }
 
 /// @nodoc
-class _$LocalTimelineParameterCopyWithImpl<$Res,
-        $Val extends LocalTimelineParameter>
+class _$LocalTimelineParameterCopyWithImpl<
+  $Res,
+  $Val extends LocalTimelineParameter
+>
     implements $LocalTimelineParameterCopyWith<$Res> {
   _$LocalTimelineParameterCopyWithImpl(this._value, this._then);
 
@@ -64,20 +69,26 @@ class _$LocalTimelineParameterCopyWithImpl<$Res,
     Object? withReplies = freezed,
     Object? withFiles = freezed,
   }) {
-    return _then(_value.copyWith(
-      withRenotes: freezed == withRenotes
-          ? _value.withRenotes
-          : withRenotes // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withReplies: freezed == withReplies
-          ? _value.withReplies
-          : withReplies // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withFiles: freezed == withFiles
-          ? _value.withFiles
-          : withFiles // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            withRenotes:
+                freezed == withRenotes
+                    ? _value.withRenotes
+                    : withRenotes // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            withReplies:
+                freezed == withReplies
+                    ? _value.withReplies
+                    : withReplies // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            withFiles:
+                freezed == withFiles
+                    ? _value.withFiles
+                    : withFiles // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -85,9 +96,9 @@ class _$LocalTimelineParameterCopyWithImpl<$Res,
 abstract class _$$LocalTimelineParameterImplCopyWith<$Res>
     implements $LocalTimelineParameterCopyWith<$Res> {
   factory _$$LocalTimelineParameterImplCopyWith(
-          _$LocalTimelineParameterImpl value,
-          $Res Function(_$LocalTimelineParameterImpl) then) =
-      __$$LocalTimelineParameterImplCopyWithImpl<$Res>;
+    _$LocalTimelineParameterImpl value,
+    $Res Function(_$LocalTimelineParameterImpl) then,
+  ) = __$$LocalTimelineParameterImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({bool? withRenotes, bool? withReplies, bool? withFiles});
@@ -95,13 +106,13 @@ abstract class _$$LocalTimelineParameterImplCopyWith<$Res>
 
 /// @nodoc
 class __$$LocalTimelineParameterImplCopyWithImpl<$Res>
-    extends _$LocalTimelineParameterCopyWithImpl<$Res,
-        _$LocalTimelineParameterImpl>
+    extends
+        _$LocalTimelineParameterCopyWithImpl<$Res, _$LocalTimelineParameterImpl>
     implements _$$LocalTimelineParameterImplCopyWith<$Res> {
   __$$LocalTimelineParameterImplCopyWithImpl(
-      _$LocalTimelineParameterImpl _value,
-      $Res Function(_$LocalTimelineParameterImpl) _then)
-      : super(_value, _then);
+    _$LocalTimelineParameterImpl _value,
+    $Res Function(_$LocalTimelineParameterImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of LocalTimelineParameter
   /// with the given fields replaced by the non-null parameter values.
@@ -112,28 +123,36 @@ class __$$LocalTimelineParameterImplCopyWithImpl<$Res>
     Object? withReplies = freezed,
     Object? withFiles = freezed,
   }) {
-    return _then(_$LocalTimelineParameterImpl(
-      withRenotes: freezed == withRenotes
-          ? _value.withRenotes
-          : withRenotes // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withReplies: freezed == withReplies
-          ? _value.withReplies
-          : withReplies // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withFiles: freezed == withFiles
-          ? _value.withFiles
-          : withFiles // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+    return _then(
+      _$LocalTimelineParameterImpl(
+        withRenotes:
+            freezed == withRenotes
+                ? _value.withRenotes
+                : withRenotes // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        withReplies:
+            freezed == withReplies
+                ? _value.withReplies
+                : withReplies // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        withFiles:
+            freezed == withFiles
+                ? _value.withFiles
+                : withFiles // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$LocalTimelineParameterImpl implements _LocalTimelineParameter {
-  const _$LocalTimelineParameterImpl(
-      {this.withRenotes, this.withReplies, this.withFiles});
+  const _$LocalTimelineParameterImpl({
+    this.withRenotes,
+    this.withReplies,
+    this.withFiles,
+  });
 
   factory _$LocalTimelineParameterImpl.fromJson(Map<String, dynamic> json) =>
       _$$LocalTimelineParameterImplFromJson(json);
@@ -174,22 +193,24 @@ class _$LocalTimelineParameterImpl implements _LocalTimelineParameter {
   @override
   @pragma('vm:prefer-inline')
   _$$LocalTimelineParameterImplCopyWith<_$LocalTimelineParameterImpl>
-      get copyWith => __$$LocalTimelineParameterImplCopyWithImpl<
-          _$LocalTimelineParameterImpl>(this, _$identity);
+  get copyWith =>
+      __$$LocalTimelineParameterImplCopyWithImpl<_$LocalTimelineParameterImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$LocalTimelineParameterImplToJson(
-      this,
-    );
+    return _$$LocalTimelineParameterImplToJson(this);
   }
 }
 
 abstract class _LocalTimelineParameter implements LocalTimelineParameter {
-  const factory _LocalTimelineParameter(
-      {final bool? withRenotes,
-      final bool? withReplies,
-      final bool? withFiles}) = _$LocalTimelineParameterImpl;
+  const factory _LocalTimelineParameter({
+    final bool? withRenotes,
+    final bool? withReplies,
+    final bool? withFiles,
+  }) = _$LocalTimelineParameterImpl;
 
   factory _LocalTimelineParameter.fromJson(Map<String, dynamic> json) =
       _$LocalTimelineParameterImpl.fromJson;
@@ -206,5 +227,5 @@ abstract class _LocalTimelineParameter implements LocalTimelineParameter {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LocalTimelineParameterImplCopyWith<_$LocalTimelineParameterImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

@@ -12,10 +12,12 @@ part of 'i_read_announcement_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 IReadAnnouncementRequest _$IReadAnnouncementRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _IReadAnnouncementRequest.fromJson(json);
 }
 
@@ -35,16 +37,19 @@ mixin _$IReadAnnouncementRequest {
 
 /// @nodoc
 abstract class $IReadAnnouncementRequestCopyWith<$Res> {
-  factory $IReadAnnouncementRequestCopyWith(IReadAnnouncementRequest value,
-          $Res Function(IReadAnnouncementRequest) then) =
-      _$IReadAnnouncementRequestCopyWithImpl<$Res, IReadAnnouncementRequest>;
+  factory $IReadAnnouncementRequestCopyWith(
+    IReadAnnouncementRequest value,
+    $Res Function(IReadAnnouncementRequest) then,
+  ) = _$IReadAnnouncementRequestCopyWithImpl<$Res, IReadAnnouncementRequest>;
   @useResult
   $Res call({String announcementId});
 }
 
 /// @nodoc
-class _$IReadAnnouncementRequestCopyWithImpl<$Res,
-        $Val extends IReadAnnouncementRequest>
+class _$IReadAnnouncementRequestCopyWithImpl<
+  $Res,
+  $Val extends IReadAnnouncementRequest
+>
     implements $IReadAnnouncementRequestCopyWith<$Res> {
   _$IReadAnnouncementRequestCopyWithImpl(this._value, this._then);
 
@@ -57,15 +62,17 @@ class _$IReadAnnouncementRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? announcementId = null,
-  }) {
-    return _then(_value.copyWith(
-      announcementId: null == announcementId
-          ? _value.announcementId
-          : announcementId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? announcementId = null}) {
+    return _then(
+      _value.copyWith(
+            announcementId:
+                null == announcementId
+                    ? _value.announcementId
+                    : announcementId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -73,9 +80,9 @@ class _$IReadAnnouncementRequestCopyWithImpl<$Res,
 abstract class _$$IReadAnnouncementRequestImplCopyWith<$Res>
     implements $IReadAnnouncementRequestCopyWith<$Res> {
   factory _$$IReadAnnouncementRequestImplCopyWith(
-          _$IReadAnnouncementRequestImpl value,
-          $Res Function(_$IReadAnnouncementRequestImpl) then) =
-      __$$IReadAnnouncementRequestImplCopyWithImpl<$Res>;
+    _$IReadAnnouncementRequestImpl value,
+    $Res Function(_$IReadAnnouncementRequestImpl) then,
+  ) = __$$IReadAnnouncementRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String announcementId});
@@ -83,27 +90,31 @@ abstract class _$$IReadAnnouncementRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$IReadAnnouncementRequestImplCopyWithImpl<$Res>
-    extends _$IReadAnnouncementRequestCopyWithImpl<$Res,
-        _$IReadAnnouncementRequestImpl>
+    extends
+        _$IReadAnnouncementRequestCopyWithImpl<
+          $Res,
+          _$IReadAnnouncementRequestImpl
+        >
     implements _$$IReadAnnouncementRequestImplCopyWith<$Res> {
   __$$IReadAnnouncementRequestImplCopyWithImpl(
-      _$IReadAnnouncementRequestImpl _value,
-      $Res Function(_$IReadAnnouncementRequestImpl) _then)
-      : super(_value, _then);
+    _$IReadAnnouncementRequestImpl _value,
+    $Res Function(_$IReadAnnouncementRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of IReadAnnouncementRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? announcementId = null,
-  }) {
-    return _then(_$IReadAnnouncementRequestImpl(
-      announcementId: null == announcementId
-          ? _value.announcementId
-          : announcementId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? announcementId = null}) {
+    return _then(
+      _$IReadAnnouncementRequestImpl(
+        announcementId:
+            null == announcementId
+                ? _value.announcementId
+                : announcementId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -142,20 +153,20 @@ class _$IReadAnnouncementRequestImpl implements _IReadAnnouncementRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$IReadAnnouncementRequestImplCopyWith<_$IReadAnnouncementRequestImpl>
-      get copyWith => __$$IReadAnnouncementRequestImplCopyWithImpl<
-          _$IReadAnnouncementRequestImpl>(this, _$identity);
+  get copyWith => __$$IReadAnnouncementRequestImplCopyWithImpl<
+    _$IReadAnnouncementRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$IReadAnnouncementRequestImplToJson(
-      this,
-    );
+    return _$$IReadAnnouncementRequestImplToJson(this);
   }
 }
 
 abstract class _IReadAnnouncementRequest implements IReadAnnouncementRequest {
-  const factory _IReadAnnouncementRequest(
-      {required final String announcementId}) = _$IReadAnnouncementRequestImpl;
+  const factory _IReadAnnouncementRequest({
+    required final String announcementId,
+  }) = _$IReadAnnouncementRequestImpl;
 
   factory _IReadAnnouncementRequest.fromJson(Map<String, dynamic> json) =
       _$IReadAnnouncementRequestImpl.fromJson;
@@ -168,5 +179,5 @@ abstract class _IReadAnnouncementRequest implements IReadAnnouncementRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IReadAnnouncementRequestImplCopyWith<_$IReadAnnouncementRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

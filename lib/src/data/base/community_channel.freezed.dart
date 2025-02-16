@@ -12,7 +12,8 @@ part of 'community_channel.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 CommunityChannel _$CommunityChannelFromJson(Map<String, dynamic> json) {
   return _CommunityChannel.fromJson(json);
@@ -56,28 +57,30 @@ mixin _$CommunityChannel {
 /// @nodoc
 abstract class $CommunityChannelCopyWith<$Res> {
   factory $CommunityChannelCopyWith(
-          CommunityChannel value, $Res Function(CommunityChannel) then) =
-      _$CommunityChannelCopyWithImpl<$Res, CommunityChannel>;
+    CommunityChannel value,
+    $Res Function(CommunityChannel) then,
+  ) = _$CommunityChannelCopyWithImpl<$Res, CommunityChannel>;
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime createdAt,
-      @NullableUriConverter() DateTime? lastNotedAt,
-      String name,
-      String? description,
-      String? userId,
-      @NullableUriConverter() Uri? bannerUrl,
-      List<String> pinnedNoteIds,
-      int usersCount,
-      int notesCount,
-      bool isSensitive,
-      bool isArchived,
-      @NullableColorConverter() int? color,
-      bool? isFollowing,
-      bool? isFavorited,
-      bool? hasUnreadNote,
-      List<Note>? pinnedNotes,
-      bool allowRenoteToExternal});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime createdAt,
+    @NullableUriConverter() DateTime? lastNotedAt,
+    String name,
+    String? description,
+    String? userId,
+    @NullableUriConverter() Uri? bannerUrl,
+    List<String> pinnedNoteIds,
+    int usersCount,
+    int notesCount,
+    bool isSensitive,
+    bool isArchived,
+    @NullableColorConverter() int? color,
+    bool? isFollowing,
+    bool? isFavorited,
+    bool? hasUnreadNote,
+    List<Note>? pinnedNotes,
+    bool allowRenoteToExternal,
+  });
 }
 
 /// @nodoc
@@ -114,119 +117,143 @@ class _$CommunityChannelCopyWithImpl<$Res, $Val extends CommunityChannel>
     Object? pinnedNotes = freezed,
     Object? allowRenoteToExternal = null,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      lastNotedAt: freezed == lastNotedAt
-          ? _value.lastNotedAt
-          : lastNotedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      userId: freezed == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      bannerUrl: freezed == bannerUrl
-          ? _value.bannerUrl
-          : bannerUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      pinnedNoteIds: null == pinnedNoteIds
-          ? _value.pinnedNoteIds
-          : pinnedNoteIds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      usersCount: null == usersCount
-          ? _value.usersCount
-          : usersCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      notesCount: null == notesCount
-          ? _value.notesCount
-          : notesCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      isSensitive: null == isSensitive
-          ? _value.isSensitive
-          : isSensitive // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isArchived: null == isArchived
-          ? _value.isArchived
-          : isArchived // ignore: cast_nullable_to_non_nullable
-              as bool,
-      color: freezed == color
-          ? _value.color
-          : color // ignore: cast_nullable_to_non_nullable
-              as int?,
-      isFollowing: freezed == isFollowing
-          ? _value.isFollowing
-          : isFollowing // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      isFavorited: freezed == isFavorited
-          ? _value.isFavorited
-          : isFavorited // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      hasUnreadNote: freezed == hasUnreadNote
-          ? _value.hasUnreadNote
-          : hasUnreadNote // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      pinnedNotes: freezed == pinnedNotes
-          ? _value.pinnedNotes
-          : pinnedNotes // ignore: cast_nullable_to_non_nullable
-              as List<Note>?,
-      allowRenoteToExternal: null == allowRenoteToExternal
-          ? _value.allowRenoteToExternal
-          : allowRenoteToExternal // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            createdAt:
+                null == createdAt
+                    ? _value.createdAt
+                    : createdAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            lastNotedAt:
+                freezed == lastNotedAt
+                    ? _value.lastNotedAt
+                    : lastNotedAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            description:
+                freezed == description
+                    ? _value.description
+                    : description // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            userId:
+                freezed == userId
+                    ? _value.userId
+                    : userId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            bannerUrl:
+                freezed == bannerUrl
+                    ? _value.bannerUrl
+                    : bannerUrl // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            pinnedNoteIds:
+                null == pinnedNoteIds
+                    ? _value.pinnedNoteIds
+                    : pinnedNoteIds // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+            usersCount:
+                null == usersCount
+                    ? _value.usersCount
+                    : usersCount // ignore: cast_nullable_to_non_nullable
+                        as int,
+            notesCount:
+                null == notesCount
+                    ? _value.notesCount
+                    : notesCount // ignore: cast_nullable_to_non_nullable
+                        as int,
+            isSensitive:
+                null == isSensitive
+                    ? _value.isSensitive
+                    : isSensitive // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            isArchived:
+                null == isArchived
+                    ? _value.isArchived
+                    : isArchived // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            color:
+                freezed == color
+                    ? _value.color
+                    : color // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            isFollowing:
+                freezed == isFollowing
+                    ? _value.isFollowing
+                    : isFollowing // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            isFavorited:
+                freezed == isFavorited
+                    ? _value.isFavorited
+                    : isFavorited // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            hasUnreadNote:
+                freezed == hasUnreadNote
+                    ? _value.hasUnreadNote
+                    : hasUnreadNote // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            pinnedNotes:
+                freezed == pinnedNotes
+                    ? _value.pinnedNotes
+                    : pinnedNotes // ignore: cast_nullable_to_non_nullable
+                        as List<Note>?,
+            allowRenoteToExternal:
+                null == allowRenoteToExternal
+                    ? _value.allowRenoteToExternal
+                    : allowRenoteToExternal // ignore: cast_nullable_to_non_nullable
+                        as bool,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$CommunityChannelImplCopyWith<$Res>
     implements $CommunityChannelCopyWith<$Res> {
-  factory _$$CommunityChannelImplCopyWith(_$CommunityChannelImpl value,
-          $Res Function(_$CommunityChannelImpl) then) =
-      __$$CommunityChannelImplCopyWithImpl<$Res>;
+  factory _$$CommunityChannelImplCopyWith(
+    _$CommunityChannelImpl value,
+    $Res Function(_$CommunityChannelImpl) then,
+  ) = __$$CommunityChannelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime createdAt,
-      @NullableUriConverter() DateTime? lastNotedAt,
-      String name,
-      String? description,
-      String? userId,
-      @NullableUriConverter() Uri? bannerUrl,
-      List<String> pinnedNoteIds,
-      int usersCount,
-      int notesCount,
-      bool isSensitive,
-      bool isArchived,
-      @NullableColorConverter() int? color,
-      bool? isFollowing,
-      bool? isFavorited,
-      bool? hasUnreadNote,
-      List<Note>? pinnedNotes,
-      bool allowRenoteToExternal});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime createdAt,
+    @NullableUriConverter() DateTime? lastNotedAt,
+    String name,
+    String? description,
+    String? userId,
+    @NullableUriConverter() Uri? bannerUrl,
+    List<String> pinnedNoteIds,
+    int usersCount,
+    int notesCount,
+    bool isSensitive,
+    bool isArchived,
+    @NullableColorConverter() int? color,
+    bool? isFollowing,
+    bool? isFavorited,
+    bool? hasUnreadNote,
+    List<Note>? pinnedNotes,
+    bool allowRenoteToExternal,
+  });
 }
 
 /// @nodoc
 class __$$CommunityChannelImplCopyWithImpl<$Res>
     extends _$CommunityChannelCopyWithImpl<$Res, _$CommunityChannelImpl>
     implements _$$CommunityChannelImplCopyWith<$Res> {
-  __$$CommunityChannelImplCopyWithImpl(_$CommunityChannelImpl _value,
-      $Res Function(_$CommunityChannelImpl) _then)
-      : super(_value, _then);
+  __$$CommunityChannelImplCopyWithImpl(
+    _$CommunityChannelImpl _value,
+    $Res Function(_$CommunityChannelImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of CommunityChannel
   /// with the given fields replaced by the non-null parameter values.
@@ -252,107 +279,127 @@ class __$$CommunityChannelImplCopyWithImpl<$Res>
     Object? pinnedNotes = freezed,
     Object? allowRenoteToExternal = null,
   }) {
-    return _then(_$CommunityChannelImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      lastNotedAt: freezed == lastNotedAt
-          ? _value.lastNotedAt
-          : lastNotedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      userId: freezed == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      bannerUrl: freezed == bannerUrl
-          ? _value.bannerUrl
-          : bannerUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      pinnedNoteIds: null == pinnedNoteIds
-          ? _value._pinnedNoteIds
-          : pinnedNoteIds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      usersCount: null == usersCount
-          ? _value.usersCount
-          : usersCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      notesCount: null == notesCount
-          ? _value.notesCount
-          : notesCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      isSensitive: null == isSensitive
-          ? _value.isSensitive
-          : isSensitive // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isArchived: null == isArchived
-          ? _value.isArchived
-          : isArchived // ignore: cast_nullable_to_non_nullable
-              as bool,
-      color: freezed == color
-          ? _value.color
-          : color // ignore: cast_nullable_to_non_nullable
-              as int?,
-      isFollowing: freezed == isFollowing
-          ? _value.isFollowing
-          : isFollowing // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      isFavorited: freezed == isFavorited
-          ? _value.isFavorited
-          : isFavorited // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      hasUnreadNote: freezed == hasUnreadNote
-          ? _value.hasUnreadNote
-          : hasUnreadNote // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      pinnedNotes: freezed == pinnedNotes
-          ? _value._pinnedNotes
-          : pinnedNotes // ignore: cast_nullable_to_non_nullable
-              as List<Note>?,
-      allowRenoteToExternal: null == allowRenoteToExternal
-          ? _value.allowRenoteToExternal
-          : allowRenoteToExternal // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ));
+    return _then(
+      _$CommunityChannelImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        createdAt:
+            null == createdAt
+                ? _value.createdAt
+                : createdAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        lastNotedAt:
+            freezed == lastNotedAt
+                ? _value.lastNotedAt
+                : lastNotedAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        description:
+            freezed == description
+                ? _value.description
+                : description // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        userId:
+            freezed == userId
+                ? _value.userId
+                : userId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        bannerUrl:
+            freezed == bannerUrl
+                ? _value.bannerUrl
+                : bannerUrl // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        pinnedNoteIds:
+            null == pinnedNoteIds
+                ? _value._pinnedNoteIds
+                : pinnedNoteIds // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+        usersCount:
+            null == usersCount
+                ? _value.usersCount
+                : usersCount // ignore: cast_nullable_to_non_nullable
+                    as int,
+        notesCount:
+            null == notesCount
+                ? _value.notesCount
+                : notesCount // ignore: cast_nullable_to_non_nullable
+                    as int,
+        isSensitive:
+            null == isSensitive
+                ? _value.isSensitive
+                : isSensitive // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        isArchived:
+            null == isArchived
+                ? _value.isArchived
+                : isArchived // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        color:
+            freezed == color
+                ? _value.color
+                : color // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        isFollowing:
+            freezed == isFollowing
+                ? _value.isFollowing
+                : isFollowing // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        isFavorited:
+            freezed == isFavorited
+                ? _value.isFavorited
+                : isFavorited // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        hasUnreadNote:
+            freezed == hasUnreadNote
+                ? _value.hasUnreadNote
+                : hasUnreadNote // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        pinnedNotes:
+            freezed == pinnedNotes
+                ? _value._pinnedNotes
+                : pinnedNotes // ignore: cast_nullable_to_non_nullable
+                    as List<Note>?,
+        allowRenoteToExternal:
+            null == allowRenoteToExternal
+                ? _value.allowRenoteToExternal
+                : allowRenoteToExternal // ignore: cast_nullable_to_non_nullable
+                    as bool,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$CommunityChannelImpl implements _CommunityChannel {
-  const _$CommunityChannelImpl(
-      {required this.id,
-      @DateTimeConverter() required this.createdAt,
-      @NullableUriConverter() this.lastNotedAt,
-      required this.name,
-      this.description,
-      this.userId,
-      @NullableUriConverter() this.bannerUrl,
-      final List<String> pinnedNoteIds = const [],
-      required this.usersCount,
-      required this.notesCount,
-      this.isSensitive = false,
-      this.isArchived = false,
-      @NullableColorConverter() this.color,
-      this.isFollowing,
-      this.isFavorited,
-      this.hasUnreadNote,
-      final List<Note>? pinnedNotes = const [],
-      this.allowRenoteToExternal = true})
-      : _pinnedNoteIds = pinnedNoteIds,
-        _pinnedNotes = pinnedNotes;
+  const _$CommunityChannelImpl({
+    required this.id,
+    @DateTimeConverter() required this.createdAt,
+    @NullableUriConverter() this.lastNotedAt,
+    required this.name,
+    this.description,
+    this.userId,
+    @NullableUriConverter() this.bannerUrl,
+    final List<String> pinnedNoteIds = const [],
+    required this.usersCount,
+    required this.notesCount,
+    this.isSensitive = false,
+    this.isArchived = false,
+    @NullableColorConverter() this.color,
+    this.isFollowing,
+    this.isFavorited,
+    this.hasUnreadNote,
+    final List<Note>? pinnedNotes = const [],
+    this.allowRenoteToExternal = true,
+  }) : _pinnedNoteIds = pinnedNoteIds,
+       _pinnedNotes = pinnedNotes;
 
   factory _$CommunityChannelImpl.fromJson(Map<String, dynamic> json) =>
       _$$CommunityChannelImplFromJson(json);
@@ -438,8 +485,10 @@ class _$CommunityChannelImpl implements _CommunityChannel {
             (identical(other.userId, userId) || other.userId == userId) &&
             (identical(other.bannerUrl, bannerUrl) ||
                 other.bannerUrl == bannerUrl) &&
-            const DeepCollectionEquality()
-                .equals(other._pinnedNoteIds, _pinnedNoteIds) &&
+            const DeepCollectionEquality().equals(
+              other._pinnedNoteIds,
+              _pinnedNoteIds,
+            ) &&
             (identical(other.usersCount, usersCount) ||
                 other.usersCount == usersCount) &&
             (identical(other.notesCount, notesCount) ||
@@ -455,8 +504,10 @@ class _$CommunityChannelImpl implements _CommunityChannel {
                 other.isFavorited == isFavorited) &&
             (identical(other.hasUnreadNote, hasUnreadNote) ||
                 other.hasUnreadNote == hasUnreadNote) &&
-            const DeepCollectionEquality()
-                .equals(other._pinnedNotes, _pinnedNotes) &&
+            const DeepCollectionEquality().equals(
+              other._pinnedNotes,
+              _pinnedNotes,
+            ) &&
             (identical(other.allowRenoteToExternal, allowRenoteToExternal) ||
                 other.allowRenoteToExternal == allowRenoteToExternal));
   }
@@ -464,25 +515,26 @@ class _$CommunityChannelImpl implements _CommunityChannel {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      createdAt,
-      lastNotedAt,
-      name,
-      description,
-      userId,
-      bannerUrl,
-      const DeepCollectionEquality().hash(_pinnedNoteIds),
-      usersCount,
-      notesCount,
-      isSensitive,
-      isArchived,
-      color,
-      isFollowing,
-      isFavorited,
-      hasUnreadNote,
-      const DeepCollectionEquality().hash(_pinnedNotes),
-      allowRenoteToExternal);
+    runtimeType,
+    id,
+    createdAt,
+    lastNotedAt,
+    name,
+    description,
+    userId,
+    bannerUrl,
+    const DeepCollectionEquality().hash(_pinnedNoteIds),
+    usersCount,
+    notesCount,
+    isSensitive,
+    isArchived,
+    color,
+    isFollowing,
+    isFavorited,
+    hasUnreadNote,
+    const DeepCollectionEquality().hash(_pinnedNotes),
+    allowRenoteToExternal,
+  );
 
   /// Create a copy of CommunityChannel
   /// with the given fields replaced by the non-null parameter values.
@@ -491,36 +543,37 @@ class _$CommunityChannelImpl implements _CommunityChannel {
   @pragma('vm:prefer-inline')
   _$$CommunityChannelImplCopyWith<_$CommunityChannelImpl> get copyWith =>
       __$$CommunityChannelImplCopyWithImpl<_$CommunityChannelImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CommunityChannelImplToJson(
-      this,
-    );
+    return _$$CommunityChannelImplToJson(this);
   }
 }
 
 abstract class _CommunityChannel implements CommunityChannel {
-  const factory _CommunityChannel(
-      {required final String id,
-      @DateTimeConverter() required final DateTime createdAt,
-      @NullableUriConverter() final DateTime? lastNotedAt,
-      required final String name,
-      final String? description,
-      final String? userId,
-      @NullableUriConverter() final Uri? bannerUrl,
-      final List<String> pinnedNoteIds,
-      required final int usersCount,
-      required final int notesCount,
-      final bool isSensitive,
-      final bool isArchived,
-      @NullableColorConverter() final int? color,
-      final bool? isFollowing,
-      final bool? isFavorited,
-      final bool? hasUnreadNote,
-      final List<Note>? pinnedNotes,
-      final bool allowRenoteToExternal}) = _$CommunityChannelImpl;
+  const factory _CommunityChannel({
+    required final String id,
+    @DateTimeConverter() required final DateTime createdAt,
+    @NullableUriConverter() final DateTime? lastNotedAt,
+    required final String name,
+    final String? description,
+    final String? userId,
+    @NullableUriConverter() final Uri? bannerUrl,
+    final List<String> pinnedNoteIds,
+    required final int usersCount,
+    required final int notesCount,
+    final bool isSensitive,
+    final bool isArchived,
+    @NullableColorConverter() final int? color,
+    final bool? isFollowing,
+    final bool? isFavorited,
+    final bool? hasUnreadNote,
+    final List<Note>? pinnedNotes,
+    final bool allowRenoteToExternal,
+  }) = _$CommunityChannelImpl;
 
   factory _CommunityChannel.fromJson(Map<String, dynamic> json) =
       _$CommunityChannelImpl.fromJson;

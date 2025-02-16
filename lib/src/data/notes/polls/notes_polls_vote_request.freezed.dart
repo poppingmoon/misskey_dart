@@ -12,10 +12,12 @@ part of 'notes_polls_vote_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 NotesPollsVoteRequest _$NotesPollsVoteRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _NotesPollsVoteRequest.fromJson(json);
 }
 
@@ -36,16 +38,19 @@ mixin _$NotesPollsVoteRequest {
 
 /// @nodoc
 abstract class $NotesPollsVoteRequestCopyWith<$Res> {
-  factory $NotesPollsVoteRequestCopyWith(NotesPollsVoteRequest value,
-          $Res Function(NotesPollsVoteRequest) then) =
-      _$NotesPollsVoteRequestCopyWithImpl<$Res, NotesPollsVoteRequest>;
+  factory $NotesPollsVoteRequestCopyWith(
+    NotesPollsVoteRequest value,
+    $Res Function(NotesPollsVoteRequest) then,
+  ) = _$NotesPollsVoteRequestCopyWithImpl<$Res, NotesPollsVoteRequest>;
   @useResult
   $Res call({String noteId, int choice});
 }
 
 /// @nodoc
-class _$NotesPollsVoteRequestCopyWithImpl<$Res,
-        $Val extends NotesPollsVoteRequest>
+class _$NotesPollsVoteRequestCopyWithImpl<
+  $Res,
+  $Val extends NotesPollsVoteRequest
+>
     implements $NotesPollsVoteRequestCopyWith<$Res> {
   _$NotesPollsVoteRequestCopyWithImpl(this._value, this._then);
 
@@ -58,20 +63,22 @@ class _$NotesPollsVoteRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? noteId = null,
-    Object? choice = null,
-  }) {
-    return _then(_value.copyWith(
-      noteId: null == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String,
-      choice: null == choice
-          ? _value.choice
-          : choice // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
+  $Res call({Object? noteId = null, Object? choice = null}) {
+    return _then(
+      _value.copyWith(
+            noteId:
+                null == noteId
+                    ? _value.noteId
+                    : noteId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            choice:
+                null == choice
+                    ? _value.choice
+                    : choice // ignore: cast_nullable_to_non_nullable
+                        as int,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -79,9 +86,9 @@ class _$NotesPollsVoteRequestCopyWithImpl<$Res,
 abstract class _$$NotesPollsVoteRequestImplCopyWith<$Res>
     implements $NotesPollsVoteRequestCopyWith<$Res> {
   factory _$$NotesPollsVoteRequestImplCopyWith(
-          _$NotesPollsVoteRequestImpl value,
-          $Res Function(_$NotesPollsVoteRequestImpl) then) =
-      __$$NotesPollsVoteRequestImplCopyWithImpl<$Res>;
+    _$NotesPollsVoteRequestImpl value,
+    $Res Function(_$NotesPollsVoteRequestImpl) then,
+  ) = __$$NotesPollsVoteRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String noteId, int choice});
@@ -89,39 +96,43 @@ abstract class _$$NotesPollsVoteRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$NotesPollsVoteRequestImplCopyWithImpl<$Res>
-    extends _$NotesPollsVoteRequestCopyWithImpl<$Res,
-        _$NotesPollsVoteRequestImpl>
+    extends
+        _$NotesPollsVoteRequestCopyWithImpl<$Res, _$NotesPollsVoteRequestImpl>
     implements _$$NotesPollsVoteRequestImplCopyWith<$Res> {
-  __$$NotesPollsVoteRequestImplCopyWithImpl(_$NotesPollsVoteRequestImpl _value,
-      $Res Function(_$NotesPollsVoteRequestImpl) _then)
-      : super(_value, _then);
+  __$$NotesPollsVoteRequestImplCopyWithImpl(
+    _$NotesPollsVoteRequestImpl _value,
+    $Res Function(_$NotesPollsVoteRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotesPollsVoteRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? noteId = null,
-    Object? choice = null,
-  }) {
-    return _then(_$NotesPollsVoteRequestImpl(
-      noteId: null == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String,
-      choice: null == choice
-          ? _value.choice
-          : choice // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
+  $Res call({Object? noteId = null, Object? choice = null}) {
+    return _then(
+      _$NotesPollsVoteRequestImpl(
+        noteId:
+            null == noteId
+                ? _value.noteId
+                : noteId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        choice:
+            null == choice
+                ? _value.choice
+                : choice // ignore: cast_nullable_to_non_nullable
+                    as int,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$NotesPollsVoteRequestImpl implements _NotesPollsVoteRequest {
-  const _$NotesPollsVoteRequestImpl(
-      {required this.noteId, required this.choice});
+  const _$NotesPollsVoteRequestImpl({
+    required this.noteId,
+    required this.choice,
+  });
 
   factory _$NotesPollsVoteRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$NotesPollsVoteRequestImplFromJson(json);
@@ -155,21 +166,23 @@ class _$NotesPollsVoteRequestImpl implements _NotesPollsVoteRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$NotesPollsVoteRequestImplCopyWith<_$NotesPollsVoteRequestImpl>
-      get copyWith => __$$NotesPollsVoteRequestImplCopyWithImpl<
-          _$NotesPollsVoteRequestImpl>(this, _$identity);
+  get copyWith =>
+      __$$NotesPollsVoteRequestImplCopyWithImpl<_$NotesPollsVoteRequestImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotesPollsVoteRequestImplToJson(
-      this,
-    );
+    return _$$NotesPollsVoteRequestImplToJson(this);
   }
 }
 
 abstract class _NotesPollsVoteRequest implements NotesPollsVoteRequest {
-  const factory _NotesPollsVoteRequest(
-      {required final String noteId,
-      required final int choice}) = _$NotesPollsVoteRequestImpl;
+  const factory _NotesPollsVoteRequest({
+    required final String noteId,
+    required final int choice,
+  }) = _$NotesPollsVoteRequestImpl;
 
   factory _NotesPollsVoteRequest.fromJson(Map<String, dynamic> json) =
       _$NotesPollsVoteRequestImpl.fromJson;
@@ -184,5 +197,5 @@ abstract class _NotesPollsVoteRequest implements NotesPollsVoteRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesPollsVoteRequestImplCopyWith<_$NotesPollsVoteRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

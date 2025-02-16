@@ -12,7 +12,8 @@ part of 'notes_show_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 NotesShowRequest _$NotesShowRequestFromJson(Map<String, dynamic> json) {
   return _NotesShowRequest.fromJson(json);
@@ -35,8 +36,9 @@ mixin _$NotesShowRequest {
 /// @nodoc
 abstract class $NotesShowRequestCopyWith<$Res> {
   factory $NotesShowRequestCopyWith(
-          NotesShowRequest value, $Res Function(NotesShowRequest) then) =
-      _$NotesShowRequestCopyWithImpl<$Res, NotesShowRequest>;
+    NotesShowRequest value,
+    $Res Function(NotesShowRequest) then,
+  ) = _$NotesShowRequestCopyWithImpl<$Res, NotesShowRequest>;
   @useResult
   $Res call({String noteId});
 }
@@ -55,24 +57,27 @@ class _$NotesShowRequestCopyWithImpl<$Res, $Val extends NotesShowRequest>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? noteId = null,
-  }) {
-    return _then(_value.copyWith(
-      noteId: null == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? noteId = null}) {
+    return _then(
+      _value.copyWith(
+            noteId:
+                null == noteId
+                    ? _value.noteId
+                    : noteId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$NotesShowRequestImplCopyWith<$Res>
     implements $NotesShowRequestCopyWith<$Res> {
-  factory _$$NotesShowRequestImplCopyWith(_$NotesShowRequestImpl value,
-          $Res Function(_$NotesShowRequestImpl) then) =
-      __$$NotesShowRequestImplCopyWithImpl<$Res>;
+  factory _$$NotesShowRequestImplCopyWith(
+    _$NotesShowRequestImpl value,
+    $Res Function(_$NotesShowRequestImpl) then,
+  ) = __$$NotesShowRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String noteId});
@@ -82,23 +87,25 @@ abstract class _$$NotesShowRequestImplCopyWith<$Res>
 class __$$NotesShowRequestImplCopyWithImpl<$Res>
     extends _$NotesShowRequestCopyWithImpl<$Res, _$NotesShowRequestImpl>
     implements _$$NotesShowRequestImplCopyWith<$Res> {
-  __$$NotesShowRequestImplCopyWithImpl(_$NotesShowRequestImpl _value,
-      $Res Function(_$NotesShowRequestImpl) _then)
-      : super(_value, _then);
+  __$$NotesShowRequestImplCopyWithImpl(
+    _$NotesShowRequestImpl _value,
+    $Res Function(_$NotesShowRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotesShowRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? noteId = null,
-  }) {
-    return _then(_$NotesShowRequestImpl(
-      noteId: null == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? noteId = null}) {
+    return _then(
+      _$NotesShowRequestImpl(
+        noteId:
+            null == noteId
+                ? _value.noteId
+                : noteId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -137,13 +144,13 @@ class _$NotesShowRequestImpl implements _NotesShowRequest {
   @pragma('vm:prefer-inline')
   _$$NotesShowRequestImplCopyWith<_$NotesShowRequestImpl> get copyWith =>
       __$$NotesShowRequestImplCopyWithImpl<_$NotesShowRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotesShowRequestImplToJson(
-      this,
-    );
+    return _$$NotesShowRequestImplToJson(this);
   }
 }
 

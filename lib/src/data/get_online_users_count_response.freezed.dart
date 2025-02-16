@@ -12,10 +12,12 @@ part of 'get_online_users_count_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 GetOnlineUsersCountResponse _$GetOnlineUsersCountResponseFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _GetOnlineUsersCountResponse.fromJson(json);
 }
 
@@ -30,23 +32,28 @@ mixin _$GetOnlineUsersCountResponse {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $GetOnlineUsersCountResponseCopyWith<GetOnlineUsersCountResponse>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $GetOnlineUsersCountResponseCopyWith<$Res> {
   factory $GetOnlineUsersCountResponseCopyWith(
-          GetOnlineUsersCountResponse value,
-          $Res Function(GetOnlineUsersCountResponse) then) =
-      _$GetOnlineUsersCountResponseCopyWithImpl<$Res,
-          GetOnlineUsersCountResponse>;
+    GetOnlineUsersCountResponse value,
+    $Res Function(GetOnlineUsersCountResponse) then,
+  ) =
+      _$GetOnlineUsersCountResponseCopyWithImpl<
+        $Res,
+        GetOnlineUsersCountResponse
+      >;
   @useResult
   $Res call({int count});
 }
 
 /// @nodoc
-class _$GetOnlineUsersCountResponseCopyWithImpl<$Res,
-        $Val extends GetOnlineUsersCountResponse>
+class _$GetOnlineUsersCountResponseCopyWithImpl<
+  $Res,
+  $Val extends GetOnlineUsersCountResponse
+>
     implements $GetOnlineUsersCountResponseCopyWith<$Res> {
   _$GetOnlineUsersCountResponseCopyWithImpl(this._value, this._then);
 
@@ -59,15 +66,17 @@ class _$GetOnlineUsersCountResponseCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? count = null,
-  }) {
-    return _then(_value.copyWith(
-      count: null == count
-          ? _value.count
-          : count // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
+  $Res call({Object? count = null}) {
+    return _then(
+      _value.copyWith(
+            count:
+                null == count
+                    ? _value.count
+                    : count // ignore: cast_nullable_to_non_nullable
+                        as int,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -75,9 +84,9 @@ class _$GetOnlineUsersCountResponseCopyWithImpl<$Res,
 abstract class _$$GetOnlineUsersCountResponseImplCopyWith<$Res>
     implements $GetOnlineUsersCountResponseCopyWith<$Res> {
   factory _$$GetOnlineUsersCountResponseImplCopyWith(
-          _$GetOnlineUsersCountResponseImpl value,
-          $Res Function(_$GetOnlineUsersCountResponseImpl) then) =
-      __$$GetOnlineUsersCountResponseImplCopyWithImpl<$Res>;
+    _$GetOnlineUsersCountResponseImpl value,
+    $Res Function(_$GetOnlineUsersCountResponseImpl) then,
+  ) = __$$GetOnlineUsersCountResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int count});
@@ -85,27 +94,31 @@ abstract class _$$GetOnlineUsersCountResponseImplCopyWith<$Res>
 
 /// @nodoc
 class __$$GetOnlineUsersCountResponseImplCopyWithImpl<$Res>
-    extends _$GetOnlineUsersCountResponseCopyWithImpl<$Res,
-        _$GetOnlineUsersCountResponseImpl>
+    extends
+        _$GetOnlineUsersCountResponseCopyWithImpl<
+          $Res,
+          _$GetOnlineUsersCountResponseImpl
+        >
     implements _$$GetOnlineUsersCountResponseImplCopyWith<$Res> {
   __$$GetOnlineUsersCountResponseImplCopyWithImpl(
-      _$GetOnlineUsersCountResponseImpl _value,
-      $Res Function(_$GetOnlineUsersCountResponseImpl) _then)
-      : super(_value, _then);
+    _$GetOnlineUsersCountResponseImpl _value,
+    $Res Function(_$GetOnlineUsersCountResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of GetOnlineUsersCountResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? count = null,
-  }) {
-    return _then(_$GetOnlineUsersCountResponseImpl(
-      count: null == count
-          ? _value.count
-          : count // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
+  $Res call({Object? count = null}) {
+    return _then(
+      _$GetOnlineUsersCountResponseImpl(
+        count:
+            null == count
+                ? _value.count
+                : count // ignore: cast_nullable_to_non_nullable
+                    as int,
+      ),
+    );
   }
 }
 
@@ -116,8 +129,8 @@ class _$GetOnlineUsersCountResponseImpl
   const _$GetOnlineUsersCountResponseImpl({required this.count});
 
   factory _$GetOnlineUsersCountResponseImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$GetOnlineUsersCountResponseImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$GetOnlineUsersCountResponseImplFromJson(json);
 
   @override
   final int count;
@@ -145,14 +158,13 @@ class _$GetOnlineUsersCountResponseImpl
   @override
   @pragma('vm:prefer-inline')
   _$$GetOnlineUsersCountResponseImplCopyWith<_$GetOnlineUsersCountResponseImpl>
-      get copyWith => __$$GetOnlineUsersCountResponseImplCopyWithImpl<
-          _$GetOnlineUsersCountResponseImpl>(this, _$identity);
+  get copyWith => __$$GetOnlineUsersCountResponseImplCopyWithImpl<
+    _$GetOnlineUsersCountResponseImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GetOnlineUsersCountResponseImplToJson(
-      this,
-    );
+    return _$$GetOnlineUsersCountResponseImplToJson(this);
   }
 }
 
@@ -172,5 +184,5 @@ abstract class _GetOnlineUsersCountResponse
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetOnlineUsersCountResponseImplCopyWith<_$GetOnlineUsersCountResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

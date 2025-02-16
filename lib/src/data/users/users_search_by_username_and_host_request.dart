@@ -14,6 +14,6 @@ class UsersSearchByUsernameAndHostRequest
   }) = _UsersSearchByUsernameAndHostRequest;
 
   factory UsersSearchByUsernameAndHostRequest.fromJson(
-          Map<String, dynamic> json) =>
-      _$UsersSearchByUsernameAndHostRequestFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$UsersSearchByUsernameAndHostRequestFromJson(json);
 }

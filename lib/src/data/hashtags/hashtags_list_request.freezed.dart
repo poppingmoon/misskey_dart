@@ -12,7 +12,8 @@ part of 'hashtags_list_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 HashtagsListRequest _$HashtagsListRequestFromJson(Map<String, dynamic> json) {
   return _HashtagsListRequest.fromJson(json);
@@ -40,15 +41,17 @@ mixin _$HashtagsListRequest {
 /// @nodoc
 abstract class $HashtagsListRequestCopyWith<$Res> {
   factory $HashtagsListRequestCopyWith(
-          HashtagsListRequest value, $Res Function(HashtagsListRequest) then) =
-      _$HashtagsListRequestCopyWithImpl<$Res, HashtagsListRequest>;
+    HashtagsListRequest value,
+    $Res Function(HashtagsListRequest) then,
+  ) = _$HashtagsListRequestCopyWithImpl<$Res, HashtagsListRequest>;
   @useResult
-  $Res call(
-      {int? limit,
-      bool? attachedToUserOnly,
-      bool? attachedToLocalUserOnly,
-      bool? attachedToRemoteUserOnly,
-      @HashtagsListSortConverter() HashtagsListSortType sort});
+  $Res call({
+    int? limit,
+    bool? attachedToUserOnly,
+    bool? attachedToLocalUserOnly,
+    bool? attachedToRemoteUserOnly,
+    @HashtagsListSortConverter() HashtagsListSortType sort,
+  });
 }
 
 /// @nodoc
@@ -72,54 +75,65 @@ class _$HashtagsListRequestCopyWithImpl<$Res, $Val extends HashtagsListRequest>
     Object? attachedToRemoteUserOnly = freezed,
     Object? sort = null,
   }) {
-    return _then(_value.copyWith(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      attachedToUserOnly: freezed == attachedToUserOnly
-          ? _value.attachedToUserOnly
-          : attachedToUserOnly // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      attachedToLocalUserOnly: freezed == attachedToLocalUserOnly
-          ? _value.attachedToLocalUserOnly
-          : attachedToLocalUserOnly // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      attachedToRemoteUserOnly: freezed == attachedToRemoteUserOnly
-          ? _value.attachedToRemoteUserOnly
-          : attachedToRemoteUserOnly // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      sort: null == sort
-          ? _value.sort
-          : sort // ignore: cast_nullable_to_non_nullable
-              as HashtagsListSortType,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            attachedToUserOnly:
+                freezed == attachedToUserOnly
+                    ? _value.attachedToUserOnly
+                    : attachedToUserOnly // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            attachedToLocalUserOnly:
+                freezed == attachedToLocalUserOnly
+                    ? _value.attachedToLocalUserOnly
+                    : attachedToLocalUserOnly // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            attachedToRemoteUserOnly:
+                freezed == attachedToRemoteUserOnly
+                    ? _value.attachedToRemoteUserOnly
+                    : attachedToRemoteUserOnly // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            sort:
+                null == sort
+                    ? _value.sort
+                    : sort // ignore: cast_nullable_to_non_nullable
+                        as HashtagsListSortType,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$HashtagsListRequestImplCopyWith<$Res>
     implements $HashtagsListRequestCopyWith<$Res> {
-  factory _$$HashtagsListRequestImplCopyWith(_$HashtagsListRequestImpl value,
-          $Res Function(_$HashtagsListRequestImpl) then) =
-      __$$HashtagsListRequestImplCopyWithImpl<$Res>;
+  factory _$$HashtagsListRequestImplCopyWith(
+    _$HashtagsListRequestImpl value,
+    $Res Function(_$HashtagsListRequestImpl) then,
+  ) = __$$HashtagsListRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int? limit,
-      bool? attachedToUserOnly,
-      bool? attachedToLocalUserOnly,
-      bool? attachedToRemoteUserOnly,
-      @HashtagsListSortConverter() HashtagsListSortType sort});
+  $Res call({
+    int? limit,
+    bool? attachedToUserOnly,
+    bool? attachedToLocalUserOnly,
+    bool? attachedToRemoteUserOnly,
+    @HashtagsListSortConverter() HashtagsListSortType sort,
+  });
 }
 
 /// @nodoc
 class __$$HashtagsListRequestImplCopyWithImpl<$Res>
     extends _$HashtagsListRequestCopyWithImpl<$Res, _$HashtagsListRequestImpl>
     implements _$$HashtagsListRequestImplCopyWith<$Res> {
-  __$$HashtagsListRequestImplCopyWithImpl(_$HashtagsListRequestImpl _value,
-      $Res Function(_$HashtagsListRequestImpl) _then)
-      : super(_value, _then);
+  __$$HashtagsListRequestImplCopyWithImpl(
+    _$HashtagsListRequestImpl _value,
+    $Res Function(_$HashtagsListRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of HashtagsListRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -132,40 +146,48 @@ class __$$HashtagsListRequestImplCopyWithImpl<$Res>
     Object? attachedToRemoteUserOnly = freezed,
     Object? sort = null,
   }) {
-    return _then(_$HashtagsListRequestImpl(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      attachedToUserOnly: freezed == attachedToUserOnly
-          ? _value.attachedToUserOnly
-          : attachedToUserOnly // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      attachedToLocalUserOnly: freezed == attachedToLocalUserOnly
-          ? _value.attachedToLocalUserOnly
-          : attachedToLocalUserOnly // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      attachedToRemoteUserOnly: freezed == attachedToRemoteUserOnly
-          ? _value.attachedToRemoteUserOnly
-          : attachedToRemoteUserOnly // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      sort: null == sort
-          ? _value.sort
-          : sort // ignore: cast_nullable_to_non_nullable
-              as HashtagsListSortType,
-    ));
+    return _then(
+      _$HashtagsListRequestImpl(
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        attachedToUserOnly:
+            freezed == attachedToUserOnly
+                ? _value.attachedToUserOnly
+                : attachedToUserOnly // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        attachedToLocalUserOnly:
+            freezed == attachedToLocalUserOnly
+                ? _value.attachedToLocalUserOnly
+                : attachedToLocalUserOnly // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        attachedToRemoteUserOnly:
+            freezed == attachedToRemoteUserOnly
+                ? _value.attachedToRemoteUserOnly
+                : attachedToRemoteUserOnly // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        sort:
+            null == sort
+                ? _value.sort
+                : sort // ignore: cast_nullable_to_non_nullable
+                    as HashtagsListSortType,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$HashtagsListRequestImpl implements _HashtagsListRequest {
-  const _$HashtagsListRequestImpl(
-      {this.limit,
-      this.attachedToUserOnly,
-      this.attachedToLocalUserOnly,
-      this.attachedToRemoteUserOnly,
-      @HashtagsListSortConverter() required this.sort});
+  const _$HashtagsListRequestImpl({
+    this.limit,
+    this.attachedToUserOnly,
+    this.attachedToLocalUserOnly,
+    this.attachedToRemoteUserOnly,
+    @HashtagsListSortConverter() required this.sort,
+  });
 
   factory _$HashtagsListRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$HashtagsListRequestImplFromJson(json);
@@ -196,18 +218,28 @@ class _$HashtagsListRequestImpl implements _HashtagsListRequest {
             (identical(other.attachedToUserOnly, attachedToUserOnly) ||
                 other.attachedToUserOnly == attachedToUserOnly) &&
             (identical(
-                    other.attachedToLocalUserOnly, attachedToLocalUserOnly) ||
+                  other.attachedToLocalUserOnly,
+                  attachedToLocalUserOnly,
+                ) ||
                 other.attachedToLocalUserOnly == attachedToLocalUserOnly) &&
             (identical(
-                    other.attachedToRemoteUserOnly, attachedToRemoteUserOnly) ||
+                  other.attachedToRemoteUserOnly,
+                  attachedToRemoteUserOnly,
+                ) ||
                 other.attachedToRemoteUserOnly == attachedToRemoteUserOnly) &&
             (identical(other.sort, sort) || other.sort == sort));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, limit, attachedToUserOnly,
-      attachedToLocalUserOnly, attachedToRemoteUserOnly, sort);
+  int get hashCode => Object.hash(
+    runtimeType,
+    limit,
+    attachedToUserOnly,
+    attachedToLocalUserOnly,
+    attachedToRemoteUserOnly,
+    sort,
+  );
 
   /// Create a copy of HashtagsListRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -216,24 +248,24 @@ class _$HashtagsListRequestImpl implements _HashtagsListRequest {
   @pragma('vm:prefer-inline')
   _$$HashtagsListRequestImplCopyWith<_$HashtagsListRequestImpl> get copyWith =>
       __$$HashtagsListRequestImplCopyWithImpl<_$HashtagsListRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$HashtagsListRequestImplToJson(
-      this,
-    );
+    return _$$HashtagsListRequestImplToJson(this);
   }
 }
 
 abstract class _HashtagsListRequest implements HashtagsListRequest {
-  const factory _HashtagsListRequest(
-      {final int? limit,
-      final bool? attachedToUserOnly,
-      final bool? attachedToLocalUserOnly,
-      final bool? attachedToRemoteUserOnly,
-      @HashtagsListSortConverter()
-      required final HashtagsListSortType sort}) = _$HashtagsListRequestImpl;
+  const factory _HashtagsListRequest({
+    final int? limit,
+    final bool? attachedToUserOnly,
+    final bool? attachedToLocalUserOnly,
+    final bool? attachedToRemoteUserOnly,
+    @HashtagsListSortConverter() required final HashtagsListSortType sort,
+  }) = _$HashtagsListRequestImpl;
 
   factory _HashtagsListRequest.fromJson(Map<String, dynamic> json) =
       _$HashtagsListRequestImpl.fromJson;

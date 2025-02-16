@@ -12,7 +12,8 @@ part of 'antennas_notes_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 AntennasNotesRequest _$AntennasNotesRequestFromJson(Map<String, dynamic> json) {
   return _AntennasNotesRequest.fromJson(json);
@@ -42,23 +43,27 @@ mixin _$AntennasNotesRequest {
 
 /// @nodoc
 abstract class $AntennasNotesRequestCopyWith<$Res> {
-  factory $AntennasNotesRequestCopyWith(AntennasNotesRequest value,
-          $Res Function(AntennasNotesRequest) then) =
-      _$AntennasNotesRequestCopyWithImpl<$Res, AntennasNotesRequest>;
+  factory $AntennasNotesRequestCopyWith(
+    AntennasNotesRequest value,
+    $Res Function(AntennasNotesRequest) then,
+  ) = _$AntennasNotesRequestCopyWithImpl<$Res, AntennasNotesRequest>;
   @useResult
-  $Res call(
-      {String antennaId,
-      int? limit,
-      String? sinceId,
-      String? untilId,
-      @DateTimeConverter() DateTime? sinceDate,
-      @DateTimeConverter() DateTime? untilDate,
-      String? pagination});
+  $Res call({
+    String antennaId,
+    int? limit,
+    String? sinceId,
+    String? untilId,
+    @DateTimeConverter() DateTime? sinceDate,
+    @DateTimeConverter() DateTime? untilDate,
+    String? pagination,
+  });
 }
 
 /// @nodoc
-class _$AntennasNotesRequestCopyWithImpl<$Res,
-        $Val extends AntennasNotesRequest>
+class _$AntennasNotesRequestCopyWithImpl<
+  $Res,
+  $Val extends AntennasNotesRequest
+>
     implements $AntennasNotesRequestCopyWith<$Res> {
   _$AntennasNotesRequestCopyWithImpl(this._value, this._then);
 
@@ -80,64 +85,77 @@ class _$AntennasNotesRequestCopyWithImpl<$Res,
     Object? untilDate = freezed,
     Object? pagination = freezed,
   }) {
-    return _then(_value.copyWith(
-      antennaId: null == antennaId
-          ? _value.antennaId
-          : antennaId // ignore: cast_nullable_to_non_nullable
-              as String,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      sinceDate: freezed == sinceDate
-          ? _value.sinceDate
-          : sinceDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      untilDate: freezed == untilDate
-          ? _value.untilDate
-          : untilDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      pagination: freezed == pagination
-          ? _value.pagination
-          : pagination // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            antennaId:
+                null == antennaId
+                    ? _value.antennaId
+                    : antennaId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            sinceDate:
+                freezed == sinceDate
+                    ? _value.sinceDate
+                    : sinceDate // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            untilDate:
+                freezed == untilDate
+                    ? _value.untilDate
+                    : untilDate // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            pagination:
+                freezed == pagination
+                    ? _value.pagination
+                    : pagination // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$AntennasNotesRequestImplCopyWith<$Res>
     implements $AntennasNotesRequestCopyWith<$Res> {
-  factory _$$AntennasNotesRequestImplCopyWith(_$AntennasNotesRequestImpl value,
-          $Res Function(_$AntennasNotesRequestImpl) then) =
-      __$$AntennasNotesRequestImplCopyWithImpl<$Res>;
+  factory _$$AntennasNotesRequestImplCopyWith(
+    _$AntennasNotesRequestImpl value,
+    $Res Function(_$AntennasNotesRequestImpl) then,
+  ) = __$$AntennasNotesRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String antennaId,
-      int? limit,
-      String? sinceId,
-      String? untilId,
-      @DateTimeConverter() DateTime? sinceDate,
-      @DateTimeConverter() DateTime? untilDate,
-      String? pagination});
+  $Res call({
+    String antennaId,
+    int? limit,
+    String? sinceId,
+    String? untilId,
+    @DateTimeConverter() DateTime? sinceDate,
+    @DateTimeConverter() DateTime? untilDate,
+    String? pagination,
+  });
 }
 
 /// @nodoc
 class __$$AntennasNotesRequestImplCopyWithImpl<$Res>
     extends _$AntennasNotesRequestCopyWithImpl<$Res, _$AntennasNotesRequestImpl>
     implements _$$AntennasNotesRequestImplCopyWith<$Res> {
-  __$$AntennasNotesRequestImplCopyWithImpl(_$AntennasNotesRequestImpl _value,
-      $Res Function(_$AntennasNotesRequestImpl) _then)
-      : super(_value, _then);
+  __$$AntennasNotesRequestImplCopyWithImpl(
+    _$AntennasNotesRequestImpl _value,
+    $Res Function(_$AntennasNotesRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of AntennasNotesRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -152,50 +170,60 @@ class __$$AntennasNotesRequestImplCopyWithImpl<$Res>
     Object? untilDate = freezed,
     Object? pagination = freezed,
   }) {
-    return _then(_$AntennasNotesRequestImpl(
-      antennaId: null == antennaId
-          ? _value.antennaId
-          : antennaId // ignore: cast_nullable_to_non_nullable
-              as String,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      sinceDate: freezed == sinceDate
-          ? _value.sinceDate
-          : sinceDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      untilDate: freezed == untilDate
-          ? _value.untilDate
-          : untilDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      pagination: freezed == pagination
-          ? _value.pagination
-          : pagination // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$AntennasNotesRequestImpl(
+        antennaId:
+            null == antennaId
+                ? _value.antennaId
+                : antennaId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        sinceDate:
+            freezed == sinceDate
+                ? _value.sinceDate
+                : sinceDate // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        untilDate:
+            freezed == untilDate
+                ? _value.untilDate
+                : untilDate // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        pagination:
+            freezed == pagination
+                ? _value.pagination
+                : pagination // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AntennasNotesRequestImpl implements _AntennasNotesRequest {
-  const _$AntennasNotesRequestImpl(
-      {required this.antennaId,
-      this.limit,
-      this.sinceId,
-      this.untilId,
-      @DateTimeConverter() this.sinceDate,
-      @DateTimeConverter() this.untilDate,
-      this.pagination});
+  const _$AntennasNotesRequestImpl({
+    required this.antennaId,
+    this.limit,
+    this.sinceId,
+    this.untilId,
+    @DateTimeConverter() this.sinceDate,
+    @DateTimeConverter() this.untilDate,
+    this.pagination,
+  });
 
   factory _$AntennasNotesRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$AntennasNotesRequestImplFromJson(json);
@@ -242,8 +270,16 @@ class _$AntennasNotesRequestImpl implements _AntennasNotesRequest {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, antennaId, limit, sinceId,
-      untilId, sinceDate, untilDate, pagination);
+  int get hashCode => Object.hash(
+    runtimeType,
+    antennaId,
+    limit,
+    sinceId,
+    untilId,
+    sinceDate,
+    untilDate,
+    pagination,
+  );
 
   /// Create a copy of AntennasNotesRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -251,27 +287,28 @@ class _$AntennasNotesRequestImpl implements _AntennasNotesRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$AntennasNotesRequestImplCopyWith<_$AntennasNotesRequestImpl>
-      get copyWith =>
-          __$$AntennasNotesRequestImplCopyWithImpl<_$AntennasNotesRequestImpl>(
-              this, _$identity);
+  get copyWith =>
+      __$$AntennasNotesRequestImplCopyWithImpl<_$AntennasNotesRequestImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AntennasNotesRequestImplToJson(
-      this,
-    );
+    return _$$AntennasNotesRequestImplToJson(this);
   }
 }
 
 abstract class _AntennasNotesRequest implements AntennasNotesRequest {
-  const factory _AntennasNotesRequest(
-      {required final String antennaId,
-      final int? limit,
-      final String? sinceId,
-      final String? untilId,
-      @DateTimeConverter() final DateTime? sinceDate,
-      @DateTimeConverter() final DateTime? untilDate,
-      final String? pagination}) = _$AntennasNotesRequestImpl;
+  const factory _AntennasNotesRequest({
+    required final String antennaId,
+    final int? limit,
+    final String? sinceId,
+    final String? untilId,
+    @DateTimeConverter() final DateTime? sinceDate,
+    @DateTimeConverter() final DateTime? untilDate,
+    final String? pagination,
+  }) = _$AntennasNotesRequestImpl;
 
   factory _AntennasNotesRequest.fromJson(Map<String, dynamic> json) =
       _$AntennasNotesRequestImpl.fromJson;
@@ -298,5 +335,5 @@ abstract class _AntennasNotesRequest implements AntennasNotesRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AntennasNotesRequestImplCopyWith<_$AntennasNotesRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

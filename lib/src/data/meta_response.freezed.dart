@@ -12,7 +12,8 @@ part of 'meta_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 MetaResponse _$MetaResponseFromJson(Map<String, dynamic> json) {
   return _MetaResponse.fromJson(json);
@@ -58,8 +59,7 @@ mixin _$MetaResponse {
   @NullableUriConverter()
   Uri? get infoImageUrl => throw _privateConstructorUsedError;
   @NullableUriConverter()
-  Uri? get errorImageUrl =>
-      throw _privateConstructorUsedError; // Removed in Misskey 13.13.2
+  Uri? get errorImageUrl => throw _privateConstructorUsedError; // Removed in Misskey 13.13.2
   @NullableUriConverter()
   Uri? get serverErrorImageUrl => throw _privateConstructorUsedError;
   @NullableUriConverter()
@@ -104,64 +104,66 @@ mixin _$MetaResponse {
 /// @nodoc
 abstract class $MetaResponseCopyWith<$Res> {
   factory $MetaResponseCopyWith(
-          MetaResponse value, $Res Function(MetaResponse) then) =
-      _$MetaResponseCopyWithImpl<$Res, MetaResponse>;
+    MetaResponse value,
+    $Res Function(MetaResponse) then,
+  ) = _$MetaResponseCopyWithImpl<$Res, MetaResponse>;
   @useResult
-  $Res call(
-      {String? maintainerName,
-      String? maintainerEmail,
-      String? version,
-      bool? providesTarball,
-      String? name,
-      String? shortName,
-      @NullableUriConverter() Uri? uri,
-      String? description,
-      List<String> langs,
-      @NullableUriConverter() Uri? tosUrl,
-      @NullableUriConverter() Uri? repositoryUrl,
-      String? feedbackUrl,
-      String? defaultDarkTheme,
-      String? defaultLightTheme,
-      bool? disableRegistration,
-      bool? emailRequiredForSignup,
-      bool? enableHcaptcha,
-      String? hcaptchaSiteKey,
-      bool? enableMcaptcha,
-      String? mcaptchaSiteKey,
-      @NullableUriConverter() Uri? mcaptchaInstanceUrl,
-      bool? enableRecaptcha,
-      String? recaptchaSiteKey,
-      bool? enableTurnstile,
-      String? turnstileSiteKey,
-      String? swPublickey,
-      String? themeColor,
-      @NullableUriConverter() Uri? mascotImageUrl,
-      @NullableUriConverter() Uri? bannerUrl,
-      @NullableUriConverter() Uri? infoImageUrl,
-      @NullableUriConverter() Uri? errorImageUrl,
-      @NullableUriConverter() Uri? serverErrorImageUrl,
-      @NullableUriConverter() Uri? notFountImageUrl,
-      @NullableUriConverter() Uri? iconUrl,
-      @NullableUriConverter() Uri? backgroundImageUrl,
-      @NullableUriConverter() Uri? logoImageUrl,
-      @NullableUriConverter() Uri? impressumUrl,
-      @NullableUriConverter() Uri? privacyPolicyUrl,
-      int? maxNoteTextLength,
-      List<MetaAd> ads,
-      int? notesPerOneAd,
-      List<String> serverRules,
-      UserPolicies? policies,
-      bool? requireSetup,
-      bool? enableEmail,
-      bool? enableServiceWorker,
-      bool? translatorAvailable,
-      String? proxyAccountName,
-      String? mediaProxy,
-      bool? enableUrlPreview,
-      bool? enableSkebStatus,
-      bool? cacheRemoteFiles,
-      bool? cacheRemoteSensitiveFiles,
-      MetaFeature? features});
+  $Res call({
+    String? maintainerName,
+    String? maintainerEmail,
+    String? version,
+    bool? providesTarball,
+    String? name,
+    String? shortName,
+    @NullableUriConverter() Uri? uri,
+    String? description,
+    List<String> langs,
+    @NullableUriConverter() Uri? tosUrl,
+    @NullableUriConverter() Uri? repositoryUrl,
+    String? feedbackUrl,
+    String? defaultDarkTheme,
+    String? defaultLightTheme,
+    bool? disableRegistration,
+    bool? emailRequiredForSignup,
+    bool? enableHcaptcha,
+    String? hcaptchaSiteKey,
+    bool? enableMcaptcha,
+    String? mcaptchaSiteKey,
+    @NullableUriConverter() Uri? mcaptchaInstanceUrl,
+    bool? enableRecaptcha,
+    String? recaptchaSiteKey,
+    bool? enableTurnstile,
+    String? turnstileSiteKey,
+    String? swPublickey,
+    String? themeColor,
+    @NullableUriConverter() Uri? mascotImageUrl,
+    @NullableUriConverter() Uri? bannerUrl,
+    @NullableUriConverter() Uri? infoImageUrl,
+    @NullableUriConverter() Uri? errorImageUrl,
+    @NullableUriConverter() Uri? serverErrorImageUrl,
+    @NullableUriConverter() Uri? notFountImageUrl,
+    @NullableUriConverter() Uri? iconUrl,
+    @NullableUriConverter() Uri? backgroundImageUrl,
+    @NullableUriConverter() Uri? logoImageUrl,
+    @NullableUriConverter() Uri? impressumUrl,
+    @NullableUriConverter() Uri? privacyPolicyUrl,
+    int? maxNoteTextLength,
+    List<MetaAd> ads,
+    int? notesPerOneAd,
+    List<String> serverRules,
+    UserPolicies? policies,
+    bool? requireSetup,
+    bool? enableEmail,
+    bool? enableServiceWorker,
+    bool? translatorAvailable,
+    String? proxyAccountName,
+    String? mediaProxy,
+    bool? enableUrlPreview,
+    bool? enableSkebStatus,
+    bool? cacheRemoteFiles,
+    bool? cacheRemoteSensitiveFiles,
+    MetaFeature? features,
+  });
 
   $UserPoliciesCopyWith<$Res>? get policies;
   $MetaFeatureCopyWith<$Res>? get features;
@@ -237,224 +239,281 @@ class _$MetaResponseCopyWithImpl<$Res, $Val extends MetaResponse>
     Object? cacheRemoteSensitiveFiles = freezed,
     Object? features = freezed,
   }) {
-    return _then(_value.copyWith(
-      maintainerName: freezed == maintainerName
-          ? _value.maintainerName
-          : maintainerName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      maintainerEmail: freezed == maintainerEmail
-          ? _value.maintainerEmail
-          : maintainerEmail // ignore: cast_nullable_to_non_nullable
-              as String?,
-      version: freezed == version
-          ? _value.version
-          : version // ignore: cast_nullable_to_non_nullable
-              as String?,
-      providesTarball: freezed == providesTarball
-          ? _value.providesTarball
-          : providesTarball // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      shortName: freezed == shortName
-          ? _value.shortName
-          : shortName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      uri: freezed == uri
-          ? _value.uri
-          : uri // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      langs: null == langs
-          ? _value.langs
-          : langs // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      tosUrl: freezed == tosUrl
-          ? _value.tosUrl
-          : tosUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      repositoryUrl: freezed == repositoryUrl
-          ? _value.repositoryUrl
-          : repositoryUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      feedbackUrl: freezed == feedbackUrl
-          ? _value.feedbackUrl
-          : feedbackUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      defaultDarkTheme: freezed == defaultDarkTheme
-          ? _value.defaultDarkTheme
-          : defaultDarkTheme // ignore: cast_nullable_to_non_nullable
-              as String?,
-      defaultLightTheme: freezed == defaultLightTheme
-          ? _value.defaultLightTheme
-          : defaultLightTheme // ignore: cast_nullable_to_non_nullable
-              as String?,
-      disableRegistration: freezed == disableRegistration
-          ? _value.disableRegistration
-          : disableRegistration // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      emailRequiredForSignup: freezed == emailRequiredForSignup
-          ? _value.emailRequiredForSignup
-          : emailRequiredForSignup // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      enableHcaptcha: freezed == enableHcaptcha
-          ? _value.enableHcaptcha
-          : enableHcaptcha // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      hcaptchaSiteKey: freezed == hcaptchaSiteKey
-          ? _value.hcaptchaSiteKey
-          : hcaptchaSiteKey // ignore: cast_nullable_to_non_nullable
-              as String?,
-      enableMcaptcha: freezed == enableMcaptcha
-          ? _value.enableMcaptcha
-          : enableMcaptcha // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      mcaptchaSiteKey: freezed == mcaptchaSiteKey
-          ? _value.mcaptchaSiteKey
-          : mcaptchaSiteKey // ignore: cast_nullable_to_non_nullable
-              as String?,
-      mcaptchaInstanceUrl: freezed == mcaptchaInstanceUrl
-          ? _value.mcaptchaInstanceUrl
-          : mcaptchaInstanceUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      enableRecaptcha: freezed == enableRecaptcha
-          ? _value.enableRecaptcha
-          : enableRecaptcha // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      recaptchaSiteKey: freezed == recaptchaSiteKey
-          ? _value.recaptchaSiteKey
-          : recaptchaSiteKey // ignore: cast_nullable_to_non_nullable
-              as String?,
-      enableTurnstile: freezed == enableTurnstile
-          ? _value.enableTurnstile
-          : enableTurnstile // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      turnstileSiteKey: freezed == turnstileSiteKey
-          ? _value.turnstileSiteKey
-          : turnstileSiteKey // ignore: cast_nullable_to_non_nullable
-              as String?,
-      swPublickey: freezed == swPublickey
-          ? _value.swPublickey
-          : swPublickey // ignore: cast_nullable_to_non_nullable
-              as String?,
-      themeColor: freezed == themeColor
-          ? _value.themeColor
-          : themeColor // ignore: cast_nullable_to_non_nullable
-              as String?,
-      mascotImageUrl: freezed == mascotImageUrl
-          ? _value.mascotImageUrl
-          : mascotImageUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      bannerUrl: freezed == bannerUrl
-          ? _value.bannerUrl
-          : bannerUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      infoImageUrl: freezed == infoImageUrl
-          ? _value.infoImageUrl
-          : infoImageUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      errorImageUrl: freezed == errorImageUrl
-          ? _value.errorImageUrl
-          : errorImageUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      serverErrorImageUrl: freezed == serverErrorImageUrl
-          ? _value.serverErrorImageUrl
-          : serverErrorImageUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      notFountImageUrl: freezed == notFountImageUrl
-          ? _value.notFountImageUrl
-          : notFountImageUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      iconUrl: freezed == iconUrl
-          ? _value.iconUrl
-          : iconUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      backgroundImageUrl: freezed == backgroundImageUrl
-          ? _value.backgroundImageUrl
-          : backgroundImageUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      logoImageUrl: freezed == logoImageUrl
-          ? _value.logoImageUrl
-          : logoImageUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      impressumUrl: freezed == impressumUrl
-          ? _value.impressumUrl
-          : impressumUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      privacyPolicyUrl: freezed == privacyPolicyUrl
-          ? _value.privacyPolicyUrl
-          : privacyPolicyUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      maxNoteTextLength: freezed == maxNoteTextLength
-          ? _value.maxNoteTextLength
-          : maxNoteTextLength // ignore: cast_nullable_to_non_nullable
-              as int?,
-      ads: null == ads
-          ? _value.ads
-          : ads // ignore: cast_nullable_to_non_nullable
-              as List<MetaAd>,
-      notesPerOneAd: freezed == notesPerOneAd
-          ? _value.notesPerOneAd
-          : notesPerOneAd // ignore: cast_nullable_to_non_nullable
-              as int?,
-      serverRules: null == serverRules
-          ? _value.serverRules
-          : serverRules // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      policies: freezed == policies
-          ? _value.policies
-          : policies // ignore: cast_nullable_to_non_nullable
-              as UserPolicies?,
-      requireSetup: freezed == requireSetup
-          ? _value.requireSetup
-          : requireSetup // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      enableEmail: freezed == enableEmail
-          ? _value.enableEmail
-          : enableEmail // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      enableServiceWorker: freezed == enableServiceWorker
-          ? _value.enableServiceWorker
-          : enableServiceWorker // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      translatorAvailable: freezed == translatorAvailable
-          ? _value.translatorAvailable
-          : translatorAvailable // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      proxyAccountName: freezed == proxyAccountName
-          ? _value.proxyAccountName
-          : proxyAccountName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      mediaProxy: freezed == mediaProxy
-          ? _value.mediaProxy
-          : mediaProxy // ignore: cast_nullable_to_non_nullable
-              as String?,
-      enableUrlPreview: freezed == enableUrlPreview
-          ? _value.enableUrlPreview
-          : enableUrlPreview // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      enableSkebStatus: freezed == enableSkebStatus
-          ? _value.enableSkebStatus
-          : enableSkebStatus // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      cacheRemoteFiles: freezed == cacheRemoteFiles
-          ? _value.cacheRemoteFiles
-          : cacheRemoteFiles // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      cacheRemoteSensitiveFiles: freezed == cacheRemoteSensitiveFiles
-          ? _value.cacheRemoteSensitiveFiles
-          : cacheRemoteSensitiveFiles // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      features: freezed == features
-          ? _value.features
-          : features // ignore: cast_nullable_to_non_nullable
-              as MetaFeature?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            maintainerName:
+                freezed == maintainerName
+                    ? _value.maintainerName
+                    : maintainerName // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            maintainerEmail:
+                freezed == maintainerEmail
+                    ? _value.maintainerEmail
+                    : maintainerEmail // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            version:
+                freezed == version
+                    ? _value.version
+                    : version // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            providesTarball:
+                freezed == providesTarball
+                    ? _value.providesTarball
+                    : providesTarball // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            name:
+                freezed == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            shortName:
+                freezed == shortName
+                    ? _value.shortName
+                    : shortName // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            uri:
+                freezed == uri
+                    ? _value.uri
+                    : uri // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            description:
+                freezed == description
+                    ? _value.description
+                    : description // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            langs:
+                null == langs
+                    ? _value.langs
+                    : langs // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+            tosUrl:
+                freezed == tosUrl
+                    ? _value.tosUrl
+                    : tosUrl // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            repositoryUrl:
+                freezed == repositoryUrl
+                    ? _value.repositoryUrl
+                    : repositoryUrl // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            feedbackUrl:
+                freezed == feedbackUrl
+                    ? _value.feedbackUrl
+                    : feedbackUrl // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            defaultDarkTheme:
+                freezed == defaultDarkTheme
+                    ? _value.defaultDarkTheme
+                    : defaultDarkTheme // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            defaultLightTheme:
+                freezed == defaultLightTheme
+                    ? _value.defaultLightTheme
+                    : defaultLightTheme // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            disableRegistration:
+                freezed == disableRegistration
+                    ? _value.disableRegistration
+                    : disableRegistration // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            emailRequiredForSignup:
+                freezed == emailRequiredForSignup
+                    ? _value.emailRequiredForSignup
+                    : emailRequiredForSignup // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            enableHcaptcha:
+                freezed == enableHcaptcha
+                    ? _value.enableHcaptcha
+                    : enableHcaptcha // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            hcaptchaSiteKey:
+                freezed == hcaptchaSiteKey
+                    ? _value.hcaptchaSiteKey
+                    : hcaptchaSiteKey // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            enableMcaptcha:
+                freezed == enableMcaptcha
+                    ? _value.enableMcaptcha
+                    : enableMcaptcha // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            mcaptchaSiteKey:
+                freezed == mcaptchaSiteKey
+                    ? _value.mcaptchaSiteKey
+                    : mcaptchaSiteKey // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            mcaptchaInstanceUrl:
+                freezed == mcaptchaInstanceUrl
+                    ? _value.mcaptchaInstanceUrl
+                    : mcaptchaInstanceUrl // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            enableRecaptcha:
+                freezed == enableRecaptcha
+                    ? _value.enableRecaptcha
+                    : enableRecaptcha // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            recaptchaSiteKey:
+                freezed == recaptchaSiteKey
+                    ? _value.recaptchaSiteKey
+                    : recaptchaSiteKey // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            enableTurnstile:
+                freezed == enableTurnstile
+                    ? _value.enableTurnstile
+                    : enableTurnstile // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            turnstileSiteKey:
+                freezed == turnstileSiteKey
+                    ? _value.turnstileSiteKey
+                    : turnstileSiteKey // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            swPublickey:
+                freezed == swPublickey
+                    ? _value.swPublickey
+                    : swPublickey // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            themeColor:
+                freezed == themeColor
+                    ? _value.themeColor
+                    : themeColor // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            mascotImageUrl:
+                freezed == mascotImageUrl
+                    ? _value.mascotImageUrl
+                    : mascotImageUrl // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            bannerUrl:
+                freezed == bannerUrl
+                    ? _value.bannerUrl
+                    : bannerUrl // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            infoImageUrl:
+                freezed == infoImageUrl
+                    ? _value.infoImageUrl
+                    : infoImageUrl // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            errorImageUrl:
+                freezed == errorImageUrl
+                    ? _value.errorImageUrl
+                    : errorImageUrl // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            serverErrorImageUrl:
+                freezed == serverErrorImageUrl
+                    ? _value.serverErrorImageUrl
+                    : serverErrorImageUrl // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            notFountImageUrl:
+                freezed == notFountImageUrl
+                    ? _value.notFountImageUrl
+                    : notFountImageUrl // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            iconUrl:
+                freezed == iconUrl
+                    ? _value.iconUrl
+                    : iconUrl // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            backgroundImageUrl:
+                freezed == backgroundImageUrl
+                    ? _value.backgroundImageUrl
+                    : backgroundImageUrl // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            logoImageUrl:
+                freezed == logoImageUrl
+                    ? _value.logoImageUrl
+                    : logoImageUrl // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            impressumUrl:
+                freezed == impressumUrl
+                    ? _value.impressumUrl
+                    : impressumUrl // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            privacyPolicyUrl:
+                freezed == privacyPolicyUrl
+                    ? _value.privacyPolicyUrl
+                    : privacyPolicyUrl // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            maxNoteTextLength:
+                freezed == maxNoteTextLength
+                    ? _value.maxNoteTextLength
+                    : maxNoteTextLength // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            ads:
+                null == ads
+                    ? _value.ads
+                    : ads // ignore: cast_nullable_to_non_nullable
+                        as List<MetaAd>,
+            notesPerOneAd:
+                freezed == notesPerOneAd
+                    ? _value.notesPerOneAd
+                    : notesPerOneAd // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            serverRules:
+                null == serverRules
+                    ? _value.serverRules
+                    : serverRules // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+            policies:
+                freezed == policies
+                    ? _value.policies
+                    : policies // ignore: cast_nullable_to_non_nullable
+                        as UserPolicies?,
+            requireSetup:
+                freezed == requireSetup
+                    ? _value.requireSetup
+                    : requireSetup // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            enableEmail:
+                freezed == enableEmail
+                    ? _value.enableEmail
+                    : enableEmail // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            enableServiceWorker:
+                freezed == enableServiceWorker
+                    ? _value.enableServiceWorker
+                    : enableServiceWorker // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            translatorAvailable:
+                freezed == translatorAvailable
+                    ? _value.translatorAvailable
+                    : translatorAvailable // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            proxyAccountName:
+                freezed == proxyAccountName
+                    ? _value.proxyAccountName
+                    : proxyAccountName // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            mediaProxy:
+                freezed == mediaProxy
+                    ? _value.mediaProxy
+                    : mediaProxy // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            enableUrlPreview:
+                freezed == enableUrlPreview
+                    ? _value.enableUrlPreview
+                    : enableUrlPreview // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            enableSkebStatus:
+                freezed == enableSkebStatus
+                    ? _value.enableSkebStatus
+                    : enableSkebStatus // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            cacheRemoteFiles:
+                freezed == cacheRemoteFiles
+                    ? _value.cacheRemoteFiles
+                    : cacheRemoteFiles // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            cacheRemoteSensitiveFiles:
+                freezed == cacheRemoteSensitiveFiles
+                    ? _value.cacheRemoteSensitiveFiles
+                    : cacheRemoteSensitiveFiles // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            features:
+                freezed == features
+                    ? _value.features
+                    : features // ignore: cast_nullable_to_non_nullable
+                        as MetaFeature?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of MetaResponse
@@ -490,65 +549,67 @@ class _$MetaResponseCopyWithImpl<$Res, $Val extends MetaResponse>
 abstract class _$$MetaResponseImplCopyWith<$Res>
     implements $MetaResponseCopyWith<$Res> {
   factory _$$MetaResponseImplCopyWith(
-          _$MetaResponseImpl value, $Res Function(_$MetaResponseImpl) then) =
-      __$$MetaResponseImplCopyWithImpl<$Res>;
+    _$MetaResponseImpl value,
+    $Res Function(_$MetaResponseImpl) then,
+  ) = __$$MetaResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String? maintainerName,
-      String? maintainerEmail,
-      String? version,
-      bool? providesTarball,
-      String? name,
-      String? shortName,
-      @NullableUriConverter() Uri? uri,
-      String? description,
-      List<String> langs,
-      @NullableUriConverter() Uri? tosUrl,
-      @NullableUriConverter() Uri? repositoryUrl,
-      String? feedbackUrl,
-      String? defaultDarkTheme,
-      String? defaultLightTheme,
-      bool? disableRegistration,
-      bool? emailRequiredForSignup,
-      bool? enableHcaptcha,
-      String? hcaptchaSiteKey,
-      bool? enableMcaptcha,
-      String? mcaptchaSiteKey,
-      @NullableUriConverter() Uri? mcaptchaInstanceUrl,
-      bool? enableRecaptcha,
-      String? recaptchaSiteKey,
-      bool? enableTurnstile,
-      String? turnstileSiteKey,
-      String? swPublickey,
-      String? themeColor,
-      @NullableUriConverter() Uri? mascotImageUrl,
-      @NullableUriConverter() Uri? bannerUrl,
-      @NullableUriConverter() Uri? infoImageUrl,
-      @NullableUriConverter() Uri? errorImageUrl,
-      @NullableUriConverter() Uri? serverErrorImageUrl,
-      @NullableUriConverter() Uri? notFountImageUrl,
-      @NullableUriConverter() Uri? iconUrl,
-      @NullableUriConverter() Uri? backgroundImageUrl,
-      @NullableUriConverter() Uri? logoImageUrl,
-      @NullableUriConverter() Uri? impressumUrl,
-      @NullableUriConverter() Uri? privacyPolicyUrl,
-      int? maxNoteTextLength,
-      List<MetaAd> ads,
-      int? notesPerOneAd,
-      List<String> serverRules,
-      UserPolicies? policies,
-      bool? requireSetup,
-      bool? enableEmail,
-      bool? enableServiceWorker,
-      bool? translatorAvailable,
-      String? proxyAccountName,
-      String? mediaProxy,
-      bool? enableUrlPreview,
-      bool? enableSkebStatus,
-      bool? cacheRemoteFiles,
-      bool? cacheRemoteSensitiveFiles,
-      MetaFeature? features});
+  $Res call({
+    String? maintainerName,
+    String? maintainerEmail,
+    String? version,
+    bool? providesTarball,
+    String? name,
+    String? shortName,
+    @NullableUriConverter() Uri? uri,
+    String? description,
+    List<String> langs,
+    @NullableUriConverter() Uri? tosUrl,
+    @NullableUriConverter() Uri? repositoryUrl,
+    String? feedbackUrl,
+    String? defaultDarkTheme,
+    String? defaultLightTheme,
+    bool? disableRegistration,
+    bool? emailRequiredForSignup,
+    bool? enableHcaptcha,
+    String? hcaptchaSiteKey,
+    bool? enableMcaptcha,
+    String? mcaptchaSiteKey,
+    @NullableUriConverter() Uri? mcaptchaInstanceUrl,
+    bool? enableRecaptcha,
+    String? recaptchaSiteKey,
+    bool? enableTurnstile,
+    String? turnstileSiteKey,
+    String? swPublickey,
+    String? themeColor,
+    @NullableUriConverter() Uri? mascotImageUrl,
+    @NullableUriConverter() Uri? bannerUrl,
+    @NullableUriConverter() Uri? infoImageUrl,
+    @NullableUriConverter() Uri? errorImageUrl,
+    @NullableUriConverter() Uri? serverErrorImageUrl,
+    @NullableUriConverter() Uri? notFountImageUrl,
+    @NullableUriConverter() Uri? iconUrl,
+    @NullableUriConverter() Uri? backgroundImageUrl,
+    @NullableUriConverter() Uri? logoImageUrl,
+    @NullableUriConverter() Uri? impressumUrl,
+    @NullableUriConverter() Uri? privacyPolicyUrl,
+    int? maxNoteTextLength,
+    List<MetaAd> ads,
+    int? notesPerOneAd,
+    List<String> serverRules,
+    UserPolicies? policies,
+    bool? requireSetup,
+    bool? enableEmail,
+    bool? enableServiceWorker,
+    bool? translatorAvailable,
+    String? proxyAccountName,
+    String? mediaProxy,
+    bool? enableUrlPreview,
+    bool? enableSkebStatus,
+    bool? cacheRemoteFiles,
+    bool? cacheRemoteSensitiveFiles,
+    MetaFeature? features,
+  });
 
   @override
   $UserPoliciesCopyWith<$Res>? get policies;
@@ -561,8 +622,9 @@ class __$$MetaResponseImplCopyWithImpl<$Res>
     extends _$MetaResponseCopyWithImpl<$Res, _$MetaResponseImpl>
     implements _$$MetaResponseImplCopyWith<$Res> {
   __$$MetaResponseImplCopyWithImpl(
-      _$MetaResponseImpl _value, $Res Function(_$MetaResponseImpl) _then)
-      : super(_value, _then);
+    _$MetaResponseImpl _value,
+    $Res Function(_$MetaResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of MetaResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -624,288 +686,344 @@ class __$$MetaResponseImplCopyWithImpl<$Res>
     Object? cacheRemoteSensitiveFiles = freezed,
     Object? features = freezed,
   }) {
-    return _then(_$MetaResponseImpl(
-      maintainerName: freezed == maintainerName
-          ? _value.maintainerName
-          : maintainerName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      maintainerEmail: freezed == maintainerEmail
-          ? _value.maintainerEmail
-          : maintainerEmail // ignore: cast_nullable_to_non_nullable
-              as String?,
-      version: freezed == version
-          ? _value.version
-          : version // ignore: cast_nullable_to_non_nullable
-              as String?,
-      providesTarball: freezed == providesTarball
-          ? _value.providesTarball
-          : providesTarball // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      shortName: freezed == shortName
-          ? _value.shortName
-          : shortName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      uri: freezed == uri
-          ? _value.uri
-          : uri // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      langs: null == langs
-          ? _value._langs
-          : langs // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      tosUrl: freezed == tosUrl
-          ? _value.tosUrl
-          : tosUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      repositoryUrl: freezed == repositoryUrl
-          ? _value.repositoryUrl
-          : repositoryUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      feedbackUrl: freezed == feedbackUrl
-          ? _value.feedbackUrl
-          : feedbackUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      defaultDarkTheme: freezed == defaultDarkTheme
-          ? _value.defaultDarkTheme
-          : defaultDarkTheme // ignore: cast_nullable_to_non_nullable
-              as String?,
-      defaultLightTheme: freezed == defaultLightTheme
-          ? _value.defaultLightTheme
-          : defaultLightTheme // ignore: cast_nullable_to_non_nullable
-              as String?,
-      disableRegistration: freezed == disableRegistration
-          ? _value.disableRegistration
-          : disableRegistration // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      emailRequiredForSignup: freezed == emailRequiredForSignup
-          ? _value.emailRequiredForSignup
-          : emailRequiredForSignup // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      enableHcaptcha: freezed == enableHcaptcha
-          ? _value.enableHcaptcha
-          : enableHcaptcha // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      hcaptchaSiteKey: freezed == hcaptchaSiteKey
-          ? _value.hcaptchaSiteKey
-          : hcaptchaSiteKey // ignore: cast_nullable_to_non_nullable
-              as String?,
-      enableMcaptcha: freezed == enableMcaptcha
-          ? _value.enableMcaptcha
-          : enableMcaptcha // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      mcaptchaSiteKey: freezed == mcaptchaSiteKey
-          ? _value.mcaptchaSiteKey
-          : mcaptchaSiteKey // ignore: cast_nullable_to_non_nullable
-              as String?,
-      mcaptchaInstanceUrl: freezed == mcaptchaInstanceUrl
-          ? _value.mcaptchaInstanceUrl
-          : mcaptchaInstanceUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      enableRecaptcha: freezed == enableRecaptcha
-          ? _value.enableRecaptcha
-          : enableRecaptcha // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      recaptchaSiteKey: freezed == recaptchaSiteKey
-          ? _value.recaptchaSiteKey
-          : recaptchaSiteKey // ignore: cast_nullable_to_non_nullable
-              as String?,
-      enableTurnstile: freezed == enableTurnstile
-          ? _value.enableTurnstile
-          : enableTurnstile // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      turnstileSiteKey: freezed == turnstileSiteKey
-          ? _value.turnstileSiteKey
-          : turnstileSiteKey // ignore: cast_nullable_to_non_nullable
-              as String?,
-      swPublickey: freezed == swPublickey
-          ? _value.swPublickey
-          : swPublickey // ignore: cast_nullable_to_non_nullable
-              as String?,
-      themeColor: freezed == themeColor
-          ? _value.themeColor
-          : themeColor // ignore: cast_nullable_to_non_nullable
-              as String?,
-      mascotImageUrl: freezed == mascotImageUrl
-          ? _value.mascotImageUrl
-          : mascotImageUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      bannerUrl: freezed == bannerUrl
-          ? _value.bannerUrl
-          : bannerUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      infoImageUrl: freezed == infoImageUrl
-          ? _value.infoImageUrl
-          : infoImageUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      errorImageUrl: freezed == errorImageUrl
-          ? _value.errorImageUrl
-          : errorImageUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      serverErrorImageUrl: freezed == serverErrorImageUrl
-          ? _value.serverErrorImageUrl
-          : serverErrorImageUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      notFountImageUrl: freezed == notFountImageUrl
-          ? _value.notFountImageUrl
-          : notFountImageUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      iconUrl: freezed == iconUrl
-          ? _value.iconUrl
-          : iconUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      backgroundImageUrl: freezed == backgroundImageUrl
-          ? _value.backgroundImageUrl
-          : backgroundImageUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      logoImageUrl: freezed == logoImageUrl
-          ? _value.logoImageUrl
-          : logoImageUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      impressumUrl: freezed == impressumUrl
-          ? _value.impressumUrl
-          : impressumUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      privacyPolicyUrl: freezed == privacyPolicyUrl
-          ? _value.privacyPolicyUrl
-          : privacyPolicyUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      maxNoteTextLength: freezed == maxNoteTextLength
-          ? _value.maxNoteTextLength
-          : maxNoteTextLength // ignore: cast_nullable_to_non_nullable
-              as int?,
-      ads: null == ads
-          ? _value._ads
-          : ads // ignore: cast_nullable_to_non_nullable
-              as List<MetaAd>,
-      notesPerOneAd: freezed == notesPerOneAd
-          ? _value.notesPerOneAd
-          : notesPerOneAd // ignore: cast_nullable_to_non_nullable
-              as int?,
-      serverRules: null == serverRules
-          ? _value._serverRules
-          : serverRules // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      policies: freezed == policies
-          ? _value.policies
-          : policies // ignore: cast_nullable_to_non_nullable
-              as UserPolicies?,
-      requireSetup: freezed == requireSetup
-          ? _value.requireSetup
-          : requireSetup // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      enableEmail: freezed == enableEmail
-          ? _value.enableEmail
-          : enableEmail // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      enableServiceWorker: freezed == enableServiceWorker
-          ? _value.enableServiceWorker
-          : enableServiceWorker // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      translatorAvailable: freezed == translatorAvailable
-          ? _value.translatorAvailable
-          : translatorAvailable // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      proxyAccountName: freezed == proxyAccountName
-          ? _value.proxyAccountName
-          : proxyAccountName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      mediaProxy: freezed == mediaProxy
-          ? _value.mediaProxy
-          : mediaProxy // ignore: cast_nullable_to_non_nullable
-              as String?,
-      enableUrlPreview: freezed == enableUrlPreview
-          ? _value.enableUrlPreview
-          : enableUrlPreview // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      enableSkebStatus: freezed == enableSkebStatus
-          ? _value.enableSkebStatus
-          : enableSkebStatus // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      cacheRemoteFiles: freezed == cacheRemoteFiles
-          ? _value.cacheRemoteFiles
-          : cacheRemoteFiles // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      cacheRemoteSensitiveFiles: freezed == cacheRemoteSensitiveFiles
-          ? _value.cacheRemoteSensitiveFiles
-          : cacheRemoteSensitiveFiles // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      features: freezed == features
-          ? _value.features
-          : features // ignore: cast_nullable_to_non_nullable
-              as MetaFeature?,
-    ));
+    return _then(
+      _$MetaResponseImpl(
+        maintainerName:
+            freezed == maintainerName
+                ? _value.maintainerName
+                : maintainerName // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        maintainerEmail:
+            freezed == maintainerEmail
+                ? _value.maintainerEmail
+                : maintainerEmail // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        version:
+            freezed == version
+                ? _value.version
+                : version // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        providesTarball:
+            freezed == providesTarball
+                ? _value.providesTarball
+                : providesTarball // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        name:
+            freezed == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        shortName:
+            freezed == shortName
+                ? _value.shortName
+                : shortName // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        uri:
+            freezed == uri
+                ? _value.uri
+                : uri // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        description:
+            freezed == description
+                ? _value.description
+                : description // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        langs:
+            null == langs
+                ? _value._langs
+                : langs // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+        tosUrl:
+            freezed == tosUrl
+                ? _value.tosUrl
+                : tosUrl // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        repositoryUrl:
+            freezed == repositoryUrl
+                ? _value.repositoryUrl
+                : repositoryUrl // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        feedbackUrl:
+            freezed == feedbackUrl
+                ? _value.feedbackUrl
+                : feedbackUrl // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        defaultDarkTheme:
+            freezed == defaultDarkTheme
+                ? _value.defaultDarkTheme
+                : defaultDarkTheme // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        defaultLightTheme:
+            freezed == defaultLightTheme
+                ? _value.defaultLightTheme
+                : defaultLightTheme // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        disableRegistration:
+            freezed == disableRegistration
+                ? _value.disableRegistration
+                : disableRegistration // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        emailRequiredForSignup:
+            freezed == emailRequiredForSignup
+                ? _value.emailRequiredForSignup
+                : emailRequiredForSignup // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        enableHcaptcha:
+            freezed == enableHcaptcha
+                ? _value.enableHcaptcha
+                : enableHcaptcha // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        hcaptchaSiteKey:
+            freezed == hcaptchaSiteKey
+                ? _value.hcaptchaSiteKey
+                : hcaptchaSiteKey // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        enableMcaptcha:
+            freezed == enableMcaptcha
+                ? _value.enableMcaptcha
+                : enableMcaptcha // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        mcaptchaSiteKey:
+            freezed == mcaptchaSiteKey
+                ? _value.mcaptchaSiteKey
+                : mcaptchaSiteKey // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        mcaptchaInstanceUrl:
+            freezed == mcaptchaInstanceUrl
+                ? _value.mcaptchaInstanceUrl
+                : mcaptchaInstanceUrl // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        enableRecaptcha:
+            freezed == enableRecaptcha
+                ? _value.enableRecaptcha
+                : enableRecaptcha // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        recaptchaSiteKey:
+            freezed == recaptchaSiteKey
+                ? _value.recaptchaSiteKey
+                : recaptchaSiteKey // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        enableTurnstile:
+            freezed == enableTurnstile
+                ? _value.enableTurnstile
+                : enableTurnstile // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        turnstileSiteKey:
+            freezed == turnstileSiteKey
+                ? _value.turnstileSiteKey
+                : turnstileSiteKey // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        swPublickey:
+            freezed == swPublickey
+                ? _value.swPublickey
+                : swPublickey // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        themeColor:
+            freezed == themeColor
+                ? _value.themeColor
+                : themeColor // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        mascotImageUrl:
+            freezed == mascotImageUrl
+                ? _value.mascotImageUrl
+                : mascotImageUrl // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        bannerUrl:
+            freezed == bannerUrl
+                ? _value.bannerUrl
+                : bannerUrl // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        infoImageUrl:
+            freezed == infoImageUrl
+                ? _value.infoImageUrl
+                : infoImageUrl // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        errorImageUrl:
+            freezed == errorImageUrl
+                ? _value.errorImageUrl
+                : errorImageUrl // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        serverErrorImageUrl:
+            freezed == serverErrorImageUrl
+                ? _value.serverErrorImageUrl
+                : serverErrorImageUrl // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        notFountImageUrl:
+            freezed == notFountImageUrl
+                ? _value.notFountImageUrl
+                : notFountImageUrl // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        iconUrl:
+            freezed == iconUrl
+                ? _value.iconUrl
+                : iconUrl // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        backgroundImageUrl:
+            freezed == backgroundImageUrl
+                ? _value.backgroundImageUrl
+                : backgroundImageUrl // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        logoImageUrl:
+            freezed == logoImageUrl
+                ? _value.logoImageUrl
+                : logoImageUrl // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        impressumUrl:
+            freezed == impressumUrl
+                ? _value.impressumUrl
+                : impressumUrl // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        privacyPolicyUrl:
+            freezed == privacyPolicyUrl
+                ? _value.privacyPolicyUrl
+                : privacyPolicyUrl // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        maxNoteTextLength:
+            freezed == maxNoteTextLength
+                ? _value.maxNoteTextLength
+                : maxNoteTextLength // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        ads:
+            null == ads
+                ? _value._ads
+                : ads // ignore: cast_nullable_to_non_nullable
+                    as List<MetaAd>,
+        notesPerOneAd:
+            freezed == notesPerOneAd
+                ? _value.notesPerOneAd
+                : notesPerOneAd // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        serverRules:
+            null == serverRules
+                ? _value._serverRules
+                : serverRules // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+        policies:
+            freezed == policies
+                ? _value.policies
+                : policies // ignore: cast_nullable_to_non_nullable
+                    as UserPolicies?,
+        requireSetup:
+            freezed == requireSetup
+                ? _value.requireSetup
+                : requireSetup // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        enableEmail:
+            freezed == enableEmail
+                ? _value.enableEmail
+                : enableEmail // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        enableServiceWorker:
+            freezed == enableServiceWorker
+                ? _value.enableServiceWorker
+                : enableServiceWorker // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        translatorAvailable:
+            freezed == translatorAvailable
+                ? _value.translatorAvailable
+                : translatorAvailable // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        proxyAccountName:
+            freezed == proxyAccountName
+                ? _value.proxyAccountName
+                : proxyAccountName // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        mediaProxy:
+            freezed == mediaProxy
+                ? _value.mediaProxy
+                : mediaProxy // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        enableUrlPreview:
+            freezed == enableUrlPreview
+                ? _value.enableUrlPreview
+                : enableUrlPreview // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        enableSkebStatus:
+            freezed == enableSkebStatus
+                ? _value.enableSkebStatus
+                : enableSkebStatus // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        cacheRemoteFiles:
+            freezed == cacheRemoteFiles
+                ? _value.cacheRemoteFiles
+                : cacheRemoteFiles // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        cacheRemoteSensitiveFiles:
+            freezed == cacheRemoteSensitiveFiles
+                ? _value.cacheRemoteSensitiveFiles
+                : cacheRemoteSensitiveFiles // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        features:
+            freezed == features
+                ? _value.features
+                : features // ignore: cast_nullable_to_non_nullable
+                    as MetaFeature?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$MetaResponseImpl implements _MetaResponse {
-  const _$MetaResponseImpl(
-      {this.maintainerName,
-      this.maintainerEmail,
-      this.version,
-      this.providesTarball,
-      this.name,
-      this.shortName,
-      @NullableUriConverter() this.uri,
-      this.description,
-      final List<String> langs = const [],
-      @NullableUriConverter() this.tosUrl,
-      @NullableUriConverter() this.repositoryUrl,
-      this.feedbackUrl,
-      this.defaultDarkTheme,
-      this.defaultLightTheme,
-      this.disableRegistration,
-      this.emailRequiredForSignup,
-      this.enableHcaptcha,
-      this.hcaptchaSiteKey,
-      this.enableMcaptcha,
-      this.mcaptchaSiteKey,
-      @NullableUriConverter() this.mcaptchaInstanceUrl,
-      this.enableRecaptcha,
-      this.recaptchaSiteKey,
-      this.enableTurnstile,
-      this.turnstileSiteKey,
-      this.swPublickey,
-      this.themeColor,
-      @NullableUriConverter() this.mascotImageUrl,
-      @NullableUriConverter() this.bannerUrl,
-      @NullableUriConverter() this.infoImageUrl,
-      @NullableUriConverter() this.errorImageUrl,
-      @NullableUriConverter() this.serverErrorImageUrl,
-      @NullableUriConverter() this.notFountImageUrl,
-      @NullableUriConverter() this.iconUrl,
-      @NullableUriConverter() this.backgroundImageUrl,
-      @NullableUriConverter() this.logoImageUrl,
-      @NullableUriConverter() this.impressumUrl,
-      @NullableUriConverter() this.privacyPolicyUrl,
-      this.maxNoteTextLength,
-      final List<MetaAd> ads = const [],
-      this.notesPerOneAd,
-      final List<String> serverRules = const [],
-      this.policies,
-      this.requireSetup,
-      this.enableEmail,
-      this.enableServiceWorker,
-      this.translatorAvailable,
-      this.proxyAccountName,
-      this.mediaProxy,
-      this.enableUrlPreview,
-      this.enableSkebStatus,
-      this.cacheRemoteFiles,
-      this.cacheRemoteSensitiveFiles,
-      this.features})
-      : _langs = langs,
-        _ads = ads,
-        _serverRules = serverRules;
+  const _$MetaResponseImpl({
+    this.maintainerName,
+    this.maintainerEmail,
+    this.version,
+    this.providesTarball,
+    this.name,
+    this.shortName,
+    @NullableUriConverter() this.uri,
+    this.description,
+    final List<String> langs = const [],
+    @NullableUriConverter() this.tosUrl,
+    @NullableUriConverter() this.repositoryUrl,
+    this.feedbackUrl,
+    this.defaultDarkTheme,
+    this.defaultLightTheme,
+    this.disableRegistration,
+    this.emailRequiredForSignup,
+    this.enableHcaptcha,
+    this.hcaptchaSiteKey,
+    this.enableMcaptcha,
+    this.mcaptchaSiteKey,
+    @NullableUriConverter() this.mcaptchaInstanceUrl,
+    this.enableRecaptcha,
+    this.recaptchaSiteKey,
+    this.enableTurnstile,
+    this.turnstileSiteKey,
+    this.swPublickey,
+    this.themeColor,
+    @NullableUriConverter() this.mascotImageUrl,
+    @NullableUriConverter() this.bannerUrl,
+    @NullableUriConverter() this.infoImageUrl,
+    @NullableUriConverter() this.errorImageUrl,
+    @NullableUriConverter() this.serverErrorImageUrl,
+    @NullableUriConverter() this.notFountImageUrl,
+    @NullableUriConverter() this.iconUrl,
+    @NullableUriConverter() this.backgroundImageUrl,
+    @NullableUriConverter() this.logoImageUrl,
+    @NullableUriConverter() this.impressumUrl,
+    @NullableUriConverter() this.privacyPolicyUrl,
+    this.maxNoteTextLength,
+    final List<MetaAd> ads = const [],
+    this.notesPerOneAd,
+    final List<String> serverRules = const [],
+    this.policies,
+    this.requireSetup,
+    this.enableEmail,
+    this.enableServiceWorker,
+    this.translatorAvailable,
+    this.proxyAccountName,
+    this.mediaProxy,
+    this.enableUrlPreview,
+    this.enableSkebStatus,
+    this.cacheRemoteFiles,
+    this.cacheRemoteSensitiveFiles,
+    this.features,
+  }) : _langs = langs,
+       _ads = ads,
+       _serverRules = serverRules;
 
   factory _$MetaResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$MetaResponseImplFromJson(json);
@@ -987,7 +1105,7 @@ class _$MetaResponseImpl implements _MetaResponse {
   @override
   @NullableUriConverter()
   final Uri? errorImageUrl;
-// Removed in Misskey 13.13.2
+  // Removed in Misskey 13.13.2
   @override
   @NullableUriConverter()
   final Uri? serverErrorImageUrl;
@@ -1141,8 +1259,10 @@ class _$MetaResponseImpl implements _MetaResponse {
             const DeepCollectionEquality().equals(other._ads, _ads) &&
             (identical(other.notesPerOneAd, notesPerOneAd) ||
                 other.notesPerOneAd == notesPerOneAd) &&
-            const DeepCollectionEquality()
-                .equals(other._serverRules, _serverRules) &&
+            const DeepCollectionEquality().equals(
+              other._serverRules,
+              _serverRules,
+            ) &&
             (identical(other.policies, policies) ||
                 other.policies == policies) &&
             (identical(other.requireSetup, requireSetup) ||
@@ -1159,71 +1279,78 @@ class _$MetaResponseImpl implements _MetaResponse {
                 other.mediaProxy == mediaProxy) &&
             (identical(other.enableUrlPreview, enableUrlPreview) ||
                 other.enableUrlPreview == enableUrlPreview) &&
-            (identical(other.enableSkebStatus, enableSkebStatus) || other.enableSkebStatus == enableSkebStatus) &&
-            (identical(other.cacheRemoteFiles, cacheRemoteFiles) || other.cacheRemoteFiles == cacheRemoteFiles) &&
-            (identical(other.cacheRemoteSensitiveFiles, cacheRemoteSensitiveFiles) || other.cacheRemoteSensitiveFiles == cacheRemoteSensitiveFiles) &&
-            (identical(other.features, features) || other.features == features));
+            (identical(other.enableSkebStatus, enableSkebStatus) ||
+                other.enableSkebStatus == enableSkebStatus) &&
+            (identical(other.cacheRemoteFiles, cacheRemoteFiles) ||
+                other.cacheRemoteFiles == cacheRemoteFiles) &&
+            (identical(
+                  other.cacheRemoteSensitiveFiles,
+                  cacheRemoteSensitiveFiles,
+                ) ||
+                other.cacheRemoteSensitiveFiles == cacheRemoteSensitiveFiles) &&
+            (identical(other.features, features) ||
+                other.features == features));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
-        runtimeType,
-        maintainerName,
-        maintainerEmail,
-        version,
-        providesTarball,
-        name,
-        shortName,
-        uri,
-        description,
-        const DeepCollectionEquality().hash(_langs),
-        tosUrl,
-        repositoryUrl,
-        feedbackUrl,
-        defaultDarkTheme,
-        defaultLightTheme,
-        disableRegistration,
-        emailRequiredForSignup,
-        enableHcaptcha,
-        hcaptchaSiteKey,
-        enableMcaptcha,
-        mcaptchaSiteKey,
-        mcaptchaInstanceUrl,
-        enableRecaptcha,
-        recaptchaSiteKey,
-        enableTurnstile,
-        turnstileSiteKey,
-        swPublickey,
-        themeColor,
-        mascotImageUrl,
-        bannerUrl,
-        infoImageUrl,
-        errorImageUrl,
-        serverErrorImageUrl,
-        notFountImageUrl,
-        iconUrl,
-        backgroundImageUrl,
-        logoImageUrl,
-        impressumUrl,
-        privacyPolicyUrl,
-        maxNoteTextLength,
-        const DeepCollectionEquality().hash(_ads),
-        notesPerOneAd,
-        const DeepCollectionEquality().hash(_serverRules),
-        policies,
-        requireSetup,
-        enableEmail,
-        enableServiceWorker,
-        translatorAvailable,
-        proxyAccountName,
-        mediaProxy,
-        enableUrlPreview,
-        enableSkebStatus,
-        cacheRemoteFiles,
-        cacheRemoteSensitiveFiles,
-        features
-      ]);
+    runtimeType,
+    maintainerName,
+    maintainerEmail,
+    version,
+    providesTarball,
+    name,
+    shortName,
+    uri,
+    description,
+    const DeepCollectionEquality().hash(_langs),
+    tosUrl,
+    repositoryUrl,
+    feedbackUrl,
+    defaultDarkTheme,
+    defaultLightTheme,
+    disableRegistration,
+    emailRequiredForSignup,
+    enableHcaptcha,
+    hcaptchaSiteKey,
+    enableMcaptcha,
+    mcaptchaSiteKey,
+    mcaptchaInstanceUrl,
+    enableRecaptcha,
+    recaptchaSiteKey,
+    enableTurnstile,
+    turnstileSiteKey,
+    swPublickey,
+    themeColor,
+    mascotImageUrl,
+    bannerUrl,
+    infoImageUrl,
+    errorImageUrl,
+    serverErrorImageUrl,
+    notFountImageUrl,
+    iconUrl,
+    backgroundImageUrl,
+    logoImageUrl,
+    impressumUrl,
+    privacyPolicyUrl,
+    maxNoteTextLength,
+    const DeepCollectionEquality().hash(_ads),
+    notesPerOneAd,
+    const DeepCollectionEquality().hash(_serverRules),
+    policies,
+    requireSetup,
+    enableEmail,
+    enableServiceWorker,
+    translatorAvailable,
+    proxyAccountName,
+    mediaProxy,
+    enableUrlPreview,
+    enableSkebStatus,
+    cacheRemoteFiles,
+    cacheRemoteSensitiveFiles,
+    features,
+  ]);
 
   /// Create a copy of MetaResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -1235,68 +1362,67 @@ class _$MetaResponseImpl implements _MetaResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MetaResponseImplToJson(
-      this,
-    );
+    return _$$MetaResponseImplToJson(this);
   }
 }
 
 abstract class _MetaResponse implements MetaResponse {
-  const factory _MetaResponse(
-      {final String? maintainerName,
-      final String? maintainerEmail,
-      final String? version,
-      final bool? providesTarball,
-      final String? name,
-      final String? shortName,
-      @NullableUriConverter() final Uri? uri,
-      final String? description,
-      final List<String> langs,
-      @NullableUriConverter() final Uri? tosUrl,
-      @NullableUriConverter() final Uri? repositoryUrl,
-      final String? feedbackUrl,
-      final String? defaultDarkTheme,
-      final String? defaultLightTheme,
-      final bool? disableRegistration,
-      final bool? emailRequiredForSignup,
-      final bool? enableHcaptcha,
-      final String? hcaptchaSiteKey,
-      final bool? enableMcaptcha,
-      final String? mcaptchaSiteKey,
-      @NullableUriConverter() final Uri? mcaptchaInstanceUrl,
-      final bool? enableRecaptcha,
-      final String? recaptchaSiteKey,
-      final bool? enableTurnstile,
-      final String? turnstileSiteKey,
-      final String? swPublickey,
-      final String? themeColor,
-      @NullableUriConverter() final Uri? mascotImageUrl,
-      @NullableUriConverter() final Uri? bannerUrl,
-      @NullableUriConverter() final Uri? infoImageUrl,
-      @NullableUriConverter() final Uri? errorImageUrl,
-      @NullableUriConverter() final Uri? serverErrorImageUrl,
-      @NullableUriConverter() final Uri? notFountImageUrl,
-      @NullableUriConverter() final Uri? iconUrl,
-      @NullableUriConverter() final Uri? backgroundImageUrl,
-      @NullableUriConverter() final Uri? logoImageUrl,
-      @NullableUriConverter() final Uri? impressumUrl,
-      @NullableUriConverter() final Uri? privacyPolicyUrl,
-      final int? maxNoteTextLength,
-      final List<MetaAd> ads,
-      final int? notesPerOneAd,
-      final List<String> serverRules,
-      final UserPolicies? policies,
-      final bool? requireSetup,
-      final bool? enableEmail,
-      final bool? enableServiceWorker,
-      final bool? translatorAvailable,
-      final String? proxyAccountName,
-      final String? mediaProxy,
-      final bool? enableUrlPreview,
-      final bool? enableSkebStatus,
-      final bool? cacheRemoteFiles,
-      final bool? cacheRemoteSensitiveFiles,
-      final MetaFeature? features}) = _$MetaResponseImpl;
+  const factory _MetaResponse({
+    final String? maintainerName,
+    final String? maintainerEmail,
+    final String? version,
+    final bool? providesTarball,
+    final String? name,
+    final String? shortName,
+    @NullableUriConverter() final Uri? uri,
+    final String? description,
+    final List<String> langs,
+    @NullableUriConverter() final Uri? tosUrl,
+    @NullableUriConverter() final Uri? repositoryUrl,
+    final String? feedbackUrl,
+    final String? defaultDarkTheme,
+    final String? defaultLightTheme,
+    final bool? disableRegistration,
+    final bool? emailRequiredForSignup,
+    final bool? enableHcaptcha,
+    final String? hcaptchaSiteKey,
+    final bool? enableMcaptcha,
+    final String? mcaptchaSiteKey,
+    @NullableUriConverter() final Uri? mcaptchaInstanceUrl,
+    final bool? enableRecaptcha,
+    final String? recaptchaSiteKey,
+    final bool? enableTurnstile,
+    final String? turnstileSiteKey,
+    final String? swPublickey,
+    final String? themeColor,
+    @NullableUriConverter() final Uri? mascotImageUrl,
+    @NullableUriConverter() final Uri? bannerUrl,
+    @NullableUriConverter() final Uri? infoImageUrl,
+    @NullableUriConverter() final Uri? errorImageUrl,
+    @NullableUriConverter() final Uri? serverErrorImageUrl,
+    @NullableUriConverter() final Uri? notFountImageUrl,
+    @NullableUriConverter() final Uri? iconUrl,
+    @NullableUriConverter() final Uri? backgroundImageUrl,
+    @NullableUriConverter() final Uri? logoImageUrl,
+    @NullableUriConverter() final Uri? impressumUrl,
+    @NullableUriConverter() final Uri? privacyPolicyUrl,
+    final int? maxNoteTextLength,
+    final List<MetaAd> ads,
+    final int? notesPerOneAd,
+    final List<String> serverRules,
+    final UserPolicies? policies,
+    final bool? requireSetup,
+    final bool? enableEmail,
+    final bool? enableServiceWorker,
+    final bool? translatorAvailable,
+    final String? proxyAccountName,
+    final String? mediaProxy,
+    final bool? enableUrlPreview,
+    final bool? enableSkebStatus,
+    final bool? cacheRemoteFiles,
+    final bool? cacheRemoteSensitiveFiles,
+    final MetaFeature? features,
+  }) = _$MetaResponseImpl;
 
   factory _MetaResponse.fromJson(Map<String, dynamic> json) =
       _$MetaResponseImpl.fromJson;
@@ -1461,12 +1587,13 @@ abstract class $MetaAdCopyWith<$Res> {
   factory $MetaAdCopyWith(MetaAd value, $Res Function(MetaAd) then) =
       _$MetaAdCopyWithImpl<$Res, MetaAd>;
   @useResult
-  $Res call(
-      {String id,
-      String place,
-      @NullableUriConverter() Uri? url,
-      @NullableUriConverter() Uri? imageUrl,
-      int ratio});
+  $Res call({
+    String id,
+    String place,
+    @NullableUriConverter() Uri? url,
+    @NullableUriConverter() Uri? imageUrl,
+    int ratio,
+  });
 }
 
 /// @nodoc
@@ -1490,44 +1617,54 @@ class _$MetaAdCopyWithImpl<$Res, $Val extends MetaAd>
     Object? imageUrl = freezed,
     Object? ratio = null,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      place: null == place
-          ? _value.place
-          : place // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      imageUrl: freezed == imageUrl
-          ? _value.imageUrl
-          : imageUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      ratio: null == ratio
-          ? _value.ratio
-          : ratio // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            place:
+                null == place
+                    ? _value.place
+                    : place // ignore: cast_nullable_to_non_nullable
+                        as String,
+            url:
+                freezed == url
+                    ? _value.url
+                    : url // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            imageUrl:
+                freezed == imageUrl
+                    ? _value.imageUrl
+                    : imageUrl // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            ratio:
+                null == ratio
+                    ? _value.ratio
+                    : ratio // ignore: cast_nullable_to_non_nullable
+                        as int,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$MetaAdImplCopyWith<$Res> implements $MetaAdCopyWith<$Res> {
   factory _$$MetaAdImplCopyWith(
-          _$MetaAdImpl value, $Res Function(_$MetaAdImpl) then) =
-      __$$MetaAdImplCopyWithImpl<$Res>;
+    _$MetaAdImpl value,
+    $Res Function(_$MetaAdImpl) then,
+  ) = __$$MetaAdImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      String place,
-      @NullableUriConverter() Uri? url,
-      @NullableUriConverter() Uri? imageUrl,
-      int ratio});
+  $Res call({
+    String id,
+    String place,
+    @NullableUriConverter() Uri? url,
+    @NullableUriConverter() Uri? imageUrl,
+    int ratio,
+  });
 }
 
 /// @nodoc
@@ -1535,8 +1672,9 @@ class __$$MetaAdImplCopyWithImpl<$Res>
     extends _$MetaAdCopyWithImpl<$Res, _$MetaAdImpl>
     implements _$$MetaAdImplCopyWith<$Res> {
   __$$MetaAdImplCopyWithImpl(
-      _$MetaAdImpl _value, $Res Function(_$MetaAdImpl) _then)
-      : super(_value, _then);
+    _$MetaAdImpl _value,
+    $Res Function(_$MetaAdImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of MetaAd
   /// with the given fields replaced by the non-null parameter values.
@@ -1549,40 +1687,48 @@ class __$$MetaAdImplCopyWithImpl<$Res>
     Object? imageUrl = freezed,
     Object? ratio = null,
   }) {
-    return _then(_$MetaAdImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      place: null == place
-          ? _value.place
-          : place // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      imageUrl: freezed == imageUrl
-          ? _value.imageUrl
-          : imageUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      ratio: null == ratio
-          ? _value.ratio
-          : ratio // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
+    return _then(
+      _$MetaAdImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        place:
+            null == place
+                ? _value.place
+                : place // ignore: cast_nullable_to_non_nullable
+                    as String,
+        url:
+            freezed == url
+                ? _value.url
+                : url // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        imageUrl:
+            freezed == imageUrl
+                ? _value.imageUrl
+                : imageUrl // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        ratio:
+            null == ratio
+                ? _value.ratio
+                : ratio // ignore: cast_nullable_to_non_nullable
+                    as int,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$MetaAdImpl implements _MetaAd {
-  const _$MetaAdImpl(
-      {required this.id,
-      required this.place,
-      @NullableUriConverter() this.url,
-      @NullableUriConverter() this.imageUrl,
-      required this.ratio});
+  const _$MetaAdImpl({
+    required this.id,
+    required this.place,
+    @NullableUriConverter() this.url,
+    @NullableUriConverter() this.imageUrl,
+    required this.ratio,
+  });
 
   factory _$MetaAdImpl.fromJson(Map<String, dynamic> json) =>
       _$$MetaAdImplFromJson(json);
@@ -1632,19 +1778,18 @@ class _$MetaAdImpl implements _MetaAd {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MetaAdImplToJson(
-      this,
-    );
+    return _$$MetaAdImplToJson(this);
   }
 }
 
 abstract class _MetaAd implements MetaAd {
-  const factory _MetaAd(
-      {required final String id,
-      required final String place,
-      @NullableUriConverter() final Uri? url,
-      @NullableUriConverter() final Uri? imageUrl,
-      required final int ratio}) = _$MetaAdImpl;
+  const factory _MetaAd({
+    required final String id,
+    required final String place,
+    @NullableUriConverter() final Uri? url,
+    @NullableUriConverter() final Uri? imageUrl,
+    required final int ratio,
+  }) = _$MetaAdImpl;
 
   factory _MetaAd.fromJson(Map<String, dynamic> json) = _$MetaAdImpl.fromJson;
 
@@ -1697,18 +1842,20 @@ mixin _$MetaFeature {
 /// @nodoc
 abstract class $MetaFeatureCopyWith<$Res> {
   factory $MetaFeatureCopyWith(
-          MetaFeature value, $Res Function(MetaFeature) then) =
-      _$MetaFeatureCopyWithImpl<$Res, MetaFeature>;
+    MetaFeature value,
+    $Res Function(MetaFeature) then,
+  ) = _$MetaFeatureCopyWithImpl<$Res, MetaFeature>;
   @useResult
-  $Res call(
-      {bool? registration,
-      bool? emailRequiredForSignup,
-      bool? hcaptcha,
-      bool? recaptcha,
-      bool? turnstile,
-      bool? objectStorage,
-      bool? serviceWorker,
-      bool? miauth});
+  $Res call({
+    bool? registration,
+    bool? emailRequiredForSignup,
+    bool? hcaptcha,
+    bool? recaptcha,
+    bool? turnstile,
+    bool? objectStorage,
+    bool? serviceWorker,
+    bool? miauth,
+  });
 }
 
 /// @nodoc
@@ -1735,40 +1882,51 @@ class _$MetaFeatureCopyWithImpl<$Res, $Val extends MetaFeature>
     Object? serviceWorker = freezed,
     Object? miauth = freezed,
   }) {
-    return _then(_value.copyWith(
-      registration: freezed == registration
-          ? _value.registration
-          : registration // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      emailRequiredForSignup: freezed == emailRequiredForSignup
-          ? _value.emailRequiredForSignup
-          : emailRequiredForSignup // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      hcaptcha: freezed == hcaptcha
-          ? _value.hcaptcha
-          : hcaptcha // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      recaptcha: freezed == recaptcha
-          ? _value.recaptcha
-          : recaptcha // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      turnstile: freezed == turnstile
-          ? _value.turnstile
-          : turnstile // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      objectStorage: freezed == objectStorage
-          ? _value.objectStorage
-          : objectStorage // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      serviceWorker: freezed == serviceWorker
-          ? _value.serviceWorker
-          : serviceWorker // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      miauth: freezed == miauth
-          ? _value.miauth
-          : miauth // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            registration:
+                freezed == registration
+                    ? _value.registration
+                    : registration // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            emailRequiredForSignup:
+                freezed == emailRequiredForSignup
+                    ? _value.emailRequiredForSignup
+                    : emailRequiredForSignup // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            hcaptcha:
+                freezed == hcaptcha
+                    ? _value.hcaptcha
+                    : hcaptcha // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            recaptcha:
+                freezed == recaptcha
+                    ? _value.recaptcha
+                    : recaptcha // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            turnstile:
+                freezed == turnstile
+                    ? _value.turnstile
+                    : turnstile // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            objectStorage:
+                freezed == objectStorage
+                    ? _value.objectStorage
+                    : objectStorage // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            serviceWorker:
+                freezed == serviceWorker
+                    ? _value.serviceWorker
+                    : serviceWorker // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            miauth:
+                freezed == miauth
+                    ? _value.miauth
+                    : miauth // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -1776,19 +1934,21 @@ class _$MetaFeatureCopyWithImpl<$Res, $Val extends MetaFeature>
 abstract class _$$MetaFeatureImplCopyWith<$Res>
     implements $MetaFeatureCopyWith<$Res> {
   factory _$$MetaFeatureImplCopyWith(
-          _$MetaFeatureImpl value, $Res Function(_$MetaFeatureImpl) then) =
-      __$$MetaFeatureImplCopyWithImpl<$Res>;
+    _$MetaFeatureImpl value,
+    $Res Function(_$MetaFeatureImpl) then,
+  ) = __$$MetaFeatureImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {bool? registration,
-      bool? emailRequiredForSignup,
-      bool? hcaptcha,
-      bool? recaptcha,
-      bool? turnstile,
-      bool? objectStorage,
-      bool? serviceWorker,
-      bool? miauth});
+  $Res call({
+    bool? registration,
+    bool? emailRequiredForSignup,
+    bool? hcaptcha,
+    bool? recaptcha,
+    bool? turnstile,
+    bool? objectStorage,
+    bool? serviceWorker,
+    bool? miauth,
+  });
 }
 
 /// @nodoc
@@ -1796,8 +1956,9 @@ class __$$MetaFeatureImplCopyWithImpl<$Res>
     extends _$MetaFeatureCopyWithImpl<$Res, _$MetaFeatureImpl>
     implements _$$MetaFeatureImplCopyWith<$Res> {
   __$$MetaFeatureImplCopyWithImpl(
-      _$MetaFeatureImpl _value, $Res Function(_$MetaFeatureImpl) _then)
-      : super(_value, _then);
+    _$MetaFeatureImpl _value,
+    $Res Function(_$MetaFeatureImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of MetaFeature
   /// with the given fields replaced by the non-null parameter values.
@@ -1813,55 +1974,66 @@ class __$$MetaFeatureImplCopyWithImpl<$Res>
     Object? serviceWorker = freezed,
     Object? miauth = freezed,
   }) {
-    return _then(_$MetaFeatureImpl(
-      registration: freezed == registration
-          ? _value.registration
-          : registration // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      emailRequiredForSignup: freezed == emailRequiredForSignup
-          ? _value.emailRequiredForSignup
-          : emailRequiredForSignup // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      hcaptcha: freezed == hcaptcha
-          ? _value.hcaptcha
-          : hcaptcha // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      recaptcha: freezed == recaptcha
-          ? _value.recaptcha
-          : recaptcha // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      turnstile: freezed == turnstile
-          ? _value.turnstile
-          : turnstile // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      objectStorage: freezed == objectStorage
-          ? _value.objectStorage
-          : objectStorage // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      serviceWorker: freezed == serviceWorker
-          ? _value.serviceWorker
-          : serviceWorker // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      miauth: freezed == miauth
-          ? _value.miauth
-          : miauth // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+    return _then(
+      _$MetaFeatureImpl(
+        registration:
+            freezed == registration
+                ? _value.registration
+                : registration // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        emailRequiredForSignup:
+            freezed == emailRequiredForSignup
+                ? _value.emailRequiredForSignup
+                : emailRequiredForSignup // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        hcaptcha:
+            freezed == hcaptcha
+                ? _value.hcaptcha
+                : hcaptcha // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        recaptcha:
+            freezed == recaptcha
+                ? _value.recaptcha
+                : recaptcha // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        turnstile:
+            freezed == turnstile
+                ? _value.turnstile
+                : turnstile // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        objectStorage:
+            freezed == objectStorage
+                ? _value.objectStorage
+                : objectStorage // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        serviceWorker:
+            freezed == serviceWorker
+                ? _value.serviceWorker
+                : serviceWorker // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        miauth:
+            freezed == miauth
+                ? _value.miauth
+                : miauth // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$MetaFeatureImpl implements _MetaFeature {
-  const _$MetaFeatureImpl(
-      {this.registration,
-      this.emailRequiredForSignup,
-      this.hcaptcha,
-      this.recaptcha,
-      this.turnstile,
-      this.objectStorage,
-      this.serviceWorker,
-      this.miauth});
+  const _$MetaFeatureImpl({
+    this.registration,
+    this.emailRequiredForSignup,
+    this.hcaptcha,
+    this.recaptcha,
+    this.turnstile,
+    this.objectStorage,
+    this.serviceWorker,
+    this.miauth,
+  });
 
   factory _$MetaFeatureImpl.fromJson(Map<String, dynamic> json) =>
       _$$MetaFeatureImplFromJson(json);
@@ -1913,15 +2085,16 @@ class _$MetaFeatureImpl implements _MetaFeature {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      registration,
-      emailRequiredForSignup,
-      hcaptcha,
-      recaptcha,
-      turnstile,
-      objectStorage,
-      serviceWorker,
-      miauth);
+    runtimeType,
+    registration,
+    emailRequiredForSignup,
+    hcaptcha,
+    recaptcha,
+    turnstile,
+    objectStorage,
+    serviceWorker,
+    miauth,
+  );
 
   /// Create a copy of MetaFeature
   /// with the given fields replaced by the non-null parameter values.
@@ -1933,22 +2106,21 @@ class _$MetaFeatureImpl implements _MetaFeature {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MetaFeatureImplToJson(
-      this,
-    );
+    return _$$MetaFeatureImplToJson(this);
   }
 }
 
 abstract class _MetaFeature implements MetaFeature {
-  const factory _MetaFeature(
-      {final bool? registration,
-      final bool? emailRequiredForSignup,
-      final bool? hcaptcha,
-      final bool? recaptcha,
-      final bool? turnstile,
-      final bool? objectStorage,
-      final bool? serviceWorker,
-      final bool? miauth}) = _$MetaFeatureImpl;
+  const factory _MetaFeature({
+    final bool? registration,
+    final bool? emailRequiredForSignup,
+    final bool? hcaptcha,
+    final bool? recaptcha,
+    final bool? turnstile,
+    final bool? objectStorage,
+    final bool? serviceWorker,
+    final bool? miauth,
+  }) = _$MetaFeatureImpl;
 
   factory _MetaFeature.fromJson(Map<String, dynamic> json) =
       _$MetaFeatureImpl.fromJson;

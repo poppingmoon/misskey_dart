@@ -12,10 +12,12 @@ part of 'i_registry_scopes_with_domain_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 IRegistryScopesWithDomainResponse _$IRegistryScopesWithDomainResponseFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _IRegistryScopesWithDomainResponse.fromJson(json);
 }
 
@@ -31,23 +33,28 @@ mixin _$IRegistryScopesWithDomainResponse {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $IRegistryScopesWithDomainResponseCopyWith<IRegistryScopesWithDomainResponse>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $IRegistryScopesWithDomainResponseCopyWith<$Res> {
   factory $IRegistryScopesWithDomainResponseCopyWith(
-          IRegistryScopesWithDomainResponse value,
-          $Res Function(IRegistryScopesWithDomainResponse) then) =
-      _$IRegistryScopesWithDomainResponseCopyWithImpl<$Res,
-          IRegistryScopesWithDomainResponse>;
+    IRegistryScopesWithDomainResponse value,
+    $Res Function(IRegistryScopesWithDomainResponse) then,
+  ) =
+      _$IRegistryScopesWithDomainResponseCopyWithImpl<
+        $Res,
+        IRegistryScopesWithDomainResponse
+      >;
   @useResult
   $Res call({List<List<String>> scopes, String? domain});
 }
 
 /// @nodoc
-class _$IRegistryScopesWithDomainResponseCopyWithImpl<$Res,
-        $Val extends IRegistryScopesWithDomainResponse>
+class _$IRegistryScopesWithDomainResponseCopyWithImpl<
+  $Res,
+  $Val extends IRegistryScopesWithDomainResponse
+>
     implements $IRegistryScopesWithDomainResponseCopyWith<$Res> {
   _$IRegistryScopesWithDomainResponseCopyWithImpl(this._value, this._then);
 
@@ -60,20 +67,22 @@ class _$IRegistryScopesWithDomainResponseCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? scopes = null,
-    Object? domain = freezed,
-  }) {
-    return _then(_value.copyWith(
-      scopes: null == scopes
-          ? _value.scopes
-          : scopes // ignore: cast_nullable_to_non_nullable
-              as List<List<String>>,
-      domain: freezed == domain
-          ? _value.domain
-          : domain // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  $Res call({Object? scopes = null, Object? domain = freezed}) {
+    return _then(
+      _value.copyWith(
+            scopes:
+                null == scopes
+                    ? _value.scopes
+                    : scopes // ignore: cast_nullable_to_non_nullable
+                        as List<List<String>>,
+            domain:
+                freezed == domain
+                    ? _value.domain
+                    : domain // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -81,9 +90,9 @@ class _$IRegistryScopesWithDomainResponseCopyWithImpl<$Res,
 abstract class _$$IRegistryScopesWithDomainResponseImplCopyWith<$Res>
     implements $IRegistryScopesWithDomainResponseCopyWith<$Res> {
   factory _$$IRegistryScopesWithDomainResponseImplCopyWith(
-          _$IRegistryScopesWithDomainResponseImpl value,
-          $Res Function(_$IRegistryScopesWithDomainResponseImpl) then) =
-      __$$IRegistryScopesWithDomainResponseImplCopyWithImpl<$Res>;
+    _$IRegistryScopesWithDomainResponseImpl value,
+    $Res Function(_$IRegistryScopesWithDomainResponseImpl) then,
+  ) = __$$IRegistryScopesWithDomainResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<List<String>> scopes, String? domain});
@@ -91,32 +100,36 @@ abstract class _$$IRegistryScopesWithDomainResponseImplCopyWith<$Res>
 
 /// @nodoc
 class __$$IRegistryScopesWithDomainResponseImplCopyWithImpl<$Res>
-    extends _$IRegistryScopesWithDomainResponseCopyWithImpl<$Res,
-        _$IRegistryScopesWithDomainResponseImpl>
+    extends
+        _$IRegistryScopesWithDomainResponseCopyWithImpl<
+          $Res,
+          _$IRegistryScopesWithDomainResponseImpl
+        >
     implements _$$IRegistryScopesWithDomainResponseImplCopyWith<$Res> {
   __$$IRegistryScopesWithDomainResponseImplCopyWithImpl(
-      _$IRegistryScopesWithDomainResponseImpl _value,
-      $Res Function(_$IRegistryScopesWithDomainResponseImpl) _then)
-      : super(_value, _then);
+    _$IRegistryScopesWithDomainResponseImpl _value,
+    $Res Function(_$IRegistryScopesWithDomainResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of IRegistryScopesWithDomainResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? scopes = null,
-    Object? domain = freezed,
-  }) {
-    return _then(_$IRegistryScopesWithDomainResponseImpl(
-      scopes: null == scopes
-          ? _value._scopes
-          : scopes // ignore: cast_nullable_to_non_nullable
-              as List<List<String>>,
-      domain: freezed == domain
-          ? _value.domain
-          : domain // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+  $Res call({Object? scopes = null, Object? domain = freezed}) {
+    return _then(
+      _$IRegistryScopesWithDomainResponseImpl(
+        scopes:
+            null == scopes
+                ? _value._scopes
+                : scopes // ignore: cast_nullable_to_non_nullable
+                    as List<List<String>>,
+        domain:
+            freezed == domain
+                ? _value.domain
+                : domain // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -124,13 +137,14 @@ class __$$IRegistryScopesWithDomainResponseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$IRegistryScopesWithDomainResponseImpl
     implements _IRegistryScopesWithDomainResponse {
-  const _$IRegistryScopesWithDomainResponseImpl(
-      {required final List<List<String>> scopes, this.domain})
-      : _scopes = scopes;
+  const _$IRegistryScopesWithDomainResponseImpl({
+    required final List<List<String>> scopes,
+    this.domain,
+  }) : _scopes = scopes;
 
   factory _$IRegistryScopesWithDomainResponseImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$IRegistryScopesWithDomainResponseImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$IRegistryScopesWithDomainResponseImplFromJson(json);
 
   final List<List<String>> _scopes;
   @override
@@ -160,7 +174,10 @@ class _$IRegistryScopesWithDomainResponseImpl
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_scopes), domain);
+    runtimeType,
+    const DeepCollectionEquality().hash(_scopes),
+    domain,
+  );
 
   /// Create a copy of IRegistryScopesWithDomainResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -168,27 +185,28 @@ class _$IRegistryScopesWithDomainResponseImpl
   @override
   @pragma('vm:prefer-inline')
   _$$IRegistryScopesWithDomainResponseImplCopyWith<
-          _$IRegistryScopesWithDomainResponseImpl>
-      get copyWith => __$$IRegistryScopesWithDomainResponseImplCopyWithImpl<
-          _$IRegistryScopesWithDomainResponseImpl>(this, _$identity);
+    _$IRegistryScopesWithDomainResponseImpl
+  >
+  get copyWith => __$$IRegistryScopesWithDomainResponseImplCopyWithImpl<
+    _$IRegistryScopesWithDomainResponseImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$IRegistryScopesWithDomainResponseImplToJson(
-      this,
-    );
+    return _$$IRegistryScopesWithDomainResponseImplToJson(this);
   }
 }
 
 abstract class _IRegistryScopesWithDomainResponse
     implements IRegistryScopesWithDomainResponse {
-  const factory _IRegistryScopesWithDomainResponse(
-      {required final List<List<String>> scopes,
-      final String? domain}) = _$IRegistryScopesWithDomainResponseImpl;
+  const factory _IRegistryScopesWithDomainResponse({
+    required final List<List<String>> scopes,
+    final String? domain,
+  }) = _$IRegistryScopesWithDomainResponseImpl;
 
   factory _IRegistryScopesWithDomainResponse.fromJson(
-          Map<String, dynamic> json) =
-      _$IRegistryScopesWithDomainResponseImpl.fromJson;
+    Map<String, dynamic> json,
+  ) = _$IRegistryScopesWithDomainResponseImpl.fromJson;
 
   @override
   List<List<String>> get scopes;
@@ -200,6 +218,7 @@ abstract class _IRegistryScopesWithDomainResponse
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IRegistryScopesWithDomainResponseImplCopyWith<
-          _$IRegistryScopesWithDomainResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$IRegistryScopesWithDomainResponseImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }

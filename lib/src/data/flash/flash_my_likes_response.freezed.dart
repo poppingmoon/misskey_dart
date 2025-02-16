@@ -12,7 +12,8 @@ part of 'flash_my_likes_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 FlashMyLikesResponse _$FlashMyLikesResponseFromJson(Map<String, dynamic> json) {
   return _FlashMyLikesResponse.fromJson(json);
@@ -35,9 +36,10 @@ mixin _$FlashMyLikesResponse {
 
 /// @nodoc
 abstract class $FlashMyLikesResponseCopyWith<$Res> {
-  factory $FlashMyLikesResponseCopyWith(FlashMyLikesResponse value,
-          $Res Function(FlashMyLikesResponse) then) =
-      _$FlashMyLikesResponseCopyWithImpl<$Res, FlashMyLikesResponse>;
+  factory $FlashMyLikesResponseCopyWith(
+    FlashMyLikesResponse value,
+    $Res Function(FlashMyLikesResponse) then,
+  ) = _$FlashMyLikesResponseCopyWithImpl<$Res, FlashMyLikesResponse>;
   @useResult
   $Res call({String id, Flash flash});
 
@@ -45,8 +47,10 @@ abstract class $FlashMyLikesResponseCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$FlashMyLikesResponseCopyWithImpl<$Res,
-        $Val extends FlashMyLikesResponse>
+class _$FlashMyLikesResponseCopyWithImpl<
+  $Res,
+  $Val extends FlashMyLikesResponse
+>
     implements $FlashMyLikesResponseCopyWith<$Res> {
   _$FlashMyLikesResponseCopyWithImpl(this._value, this._then);
 
@@ -59,20 +63,22 @@ class _$FlashMyLikesResponseCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? flash = null,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      flash: null == flash
-          ? _value.flash
-          : flash // ignore: cast_nullable_to_non_nullable
-              as Flash,
-    ) as $Val);
+  $Res call({Object? id = null, Object? flash = null}) {
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            flash:
+                null == flash
+                    ? _value.flash
+                    : flash // ignore: cast_nullable_to_non_nullable
+                        as Flash,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of FlashMyLikesResponse
@@ -89,9 +95,10 @@ class _$FlashMyLikesResponseCopyWithImpl<$Res,
 /// @nodoc
 abstract class _$$FlashMyLikesResponseImplCopyWith<$Res>
     implements $FlashMyLikesResponseCopyWith<$Res> {
-  factory _$$FlashMyLikesResponseImplCopyWith(_$FlashMyLikesResponseImpl value,
-          $Res Function(_$FlashMyLikesResponseImpl) then) =
-      __$$FlashMyLikesResponseImplCopyWithImpl<$Res>;
+  factory _$$FlashMyLikesResponseImplCopyWith(
+    _$FlashMyLikesResponseImpl value,
+    $Res Function(_$FlashMyLikesResponseImpl) then,
+  ) = __$$FlashMyLikesResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, Flash flash});
@@ -104,28 +111,30 @@ abstract class _$$FlashMyLikesResponseImplCopyWith<$Res>
 class __$$FlashMyLikesResponseImplCopyWithImpl<$Res>
     extends _$FlashMyLikesResponseCopyWithImpl<$Res, _$FlashMyLikesResponseImpl>
     implements _$$FlashMyLikesResponseImplCopyWith<$Res> {
-  __$$FlashMyLikesResponseImplCopyWithImpl(_$FlashMyLikesResponseImpl _value,
-      $Res Function(_$FlashMyLikesResponseImpl) _then)
-      : super(_value, _then);
+  __$$FlashMyLikesResponseImplCopyWithImpl(
+    _$FlashMyLikesResponseImpl _value,
+    $Res Function(_$FlashMyLikesResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of FlashMyLikesResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? flash = null,
-  }) {
-    return _then(_$FlashMyLikesResponseImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      flash: null == flash
-          ? _value.flash
-          : flash // ignore: cast_nullable_to_non_nullable
-              as Flash,
-    ));
+  $Res call({Object? id = null, Object? flash = null}) {
+    return _then(
+      _$FlashMyLikesResponseImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        flash:
+            null == flash
+                ? _value.flash
+                : flash // ignore: cast_nullable_to_non_nullable
+                    as Flash,
+      ),
+    );
   }
 }
 
@@ -166,22 +175,23 @@ class _$FlashMyLikesResponseImpl implements _FlashMyLikesResponse {
   @override
   @pragma('vm:prefer-inline')
   _$$FlashMyLikesResponseImplCopyWith<_$FlashMyLikesResponseImpl>
-      get copyWith =>
-          __$$FlashMyLikesResponseImplCopyWithImpl<_$FlashMyLikesResponseImpl>(
-              this, _$identity);
+  get copyWith =>
+      __$$FlashMyLikesResponseImplCopyWithImpl<_$FlashMyLikesResponseImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$FlashMyLikesResponseImplToJson(
-      this,
-    );
+    return _$$FlashMyLikesResponseImplToJson(this);
   }
 }
 
 abstract class _FlashMyLikesResponse implements FlashMyLikesResponse {
-  const factory _FlashMyLikesResponse(
-      {required final String id,
-      required final Flash flash}) = _$FlashMyLikesResponseImpl;
+  const factory _FlashMyLikesResponse({
+    required final String id,
+    required final Flash flash,
+  }) = _$FlashMyLikesResponseImpl;
 
   factory _FlashMyLikesResponse.fromJson(Map<String, dynamic> json) =
       _$FlashMyLikesResponseImpl.fromJson;
@@ -196,5 +206,5 @@ abstract class _FlashMyLikesResponse implements FlashMyLikesResponse {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FlashMyLikesResponseImplCopyWith<_$FlashMyLikesResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

@@ -12,10 +12,12 @@ part of 'channels_unfavorite_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ChannelsUnfavoriteRequest _$ChannelsUnfavoriteRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _ChannelsUnfavoriteRequest.fromJson(json);
 }
 
@@ -35,16 +37,19 @@ mixin _$ChannelsUnfavoriteRequest {
 
 /// @nodoc
 abstract class $ChannelsUnfavoriteRequestCopyWith<$Res> {
-  factory $ChannelsUnfavoriteRequestCopyWith(ChannelsUnfavoriteRequest value,
-          $Res Function(ChannelsUnfavoriteRequest) then) =
-      _$ChannelsUnfavoriteRequestCopyWithImpl<$Res, ChannelsUnfavoriteRequest>;
+  factory $ChannelsUnfavoriteRequestCopyWith(
+    ChannelsUnfavoriteRequest value,
+    $Res Function(ChannelsUnfavoriteRequest) then,
+  ) = _$ChannelsUnfavoriteRequestCopyWithImpl<$Res, ChannelsUnfavoriteRequest>;
   @useResult
   $Res call({String channelId});
 }
 
 /// @nodoc
-class _$ChannelsUnfavoriteRequestCopyWithImpl<$Res,
-        $Val extends ChannelsUnfavoriteRequest>
+class _$ChannelsUnfavoriteRequestCopyWithImpl<
+  $Res,
+  $Val extends ChannelsUnfavoriteRequest
+>
     implements $ChannelsUnfavoriteRequestCopyWith<$Res> {
   _$ChannelsUnfavoriteRequestCopyWithImpl(this._value, this._then);
 
@@ -57,15 +62,17 @@ class _$ChannelsUnfavoriteRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? channelId = null,
-  }) {
-    return _then(_value.copyWith(
-      channelId: null == channelId
-          ? _value.channelId
-          : channelId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? channelId = null}) {
+    return _then(
+      _value.copyWith(
+            channelId:
+                null == channelId
+                    ? _value.channelId
+                    : channelId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -73,9 +80,9 @@ class _$ChannelsUnfavoriteRequestCopyWithImpl<$Res,
 abstract class _$$ChannelsUnfavoriteRequestImplCopyWith<$Res>
     implements $ChannelsUnfavoriteRequestCopyWith<$Res> {
   factory _$$ChannelsUnfavoriteRequestImplCopyWith(
-          _$ChannelsUnfavoriteRequestImpl value,
-          $Res Function(_$ChannelsUnfavoriteRequestImpl) then) =
-      __$$ChannelsUnfavoriteRequestImplCopyWithImpl<$Res>;
+    _$ChannelsUnfavoriteRequestImpl value,
+    $Res Function(_$ChannelsUnfavoriteRequestImpl) then,
+  ) = __$$ChannelsUnfavoriteRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String channelId});
@@ -83,27 +90,31 @@ abstract class _$$ChannelsUnfavoriteRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$ChannelsUnfavoriteRequestImplCopyWithImpl<$Res>
-    extends _$ChannelsUnfavoriteRequestCopyWithImpl<$Res,
-        _$ChannelsUnfavoriteRequestImpl>
+    extends
+        _$ChannelsUnfavoriteRequestCopyWithImpl<
+          $Res,
+          _$ChannelsUnfavoriteRequestImpl
+        >
     implements _$$ChannelsUnfavoriteRequestImplCopyWith<$Res> {
   __$$ChannelsUnfavoriteRequestImplCopyWithImpl(
-      _$ChannelsUnfavoriteRequestImpl _value,
-      $Res Function(_$ChannelsUnfavoriteRequestImpl) _then)
-      : super(_value, _then);
+    _$ChannelsUnfavoriteRequestImpl _value,
+    $Res Function(_$ChannelsUnfavoriteRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelsUnfavoriteRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? channelId = null,
-  }) {
-    return _then(_$ChannelsUnfavoriteRequestImpl(
-      channelId: null == channelId
-          ? _value.channelId
-          : channelId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? channelId = null}) {
+    return _then(
+      _$ChannelsUnfavoriteRequestImpl(
+        channelId:
+            null == channelId
+                ? _value.channelId
+                : channelId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -142,14 +153,13 @@ class _$ChannelsUnfavoriteRequestImpl implements _ChannelsUnfavoriteRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$ChannelsUnfavoriteRequestImplCopyWith<_$ChannelsUnfavoriteRequestImpl>
-      get copyWith => __$$ChannelsUnfavoriteRequestImplCopyWithImpl<
-          _$ChannelsUnfavoriteRequestImpl>(this, _$identity);
+  get copyWith => __$$ChannelsUnfavoriteRequestImplCopyWithImpl<
+    _$ChannelsUnfavoriteRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ChannelsUnfavoriteRequestImplToJson(
-      this,
-    );
+    return _$$ChannelsUnfavoriteRequestImplToJson(this);
   }
 }
 
@@ -168,5 +178,5 @@ abstract class _ChannelsUnfavoriteRequest implements ChannelsUnfavoriteRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ChannelsUnfavoriteRequestImplCopyWith<_$ChannelsUnfavoriteRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

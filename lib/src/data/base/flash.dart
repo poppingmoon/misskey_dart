@@ -6,7 +6,6 @@ part 'flash.freezed.dart';
 part 'flash.g.dart';
 
 @freezed
-
 /// Playのエンティティ
 class Flash with _$Flash {
   const factory Flash({

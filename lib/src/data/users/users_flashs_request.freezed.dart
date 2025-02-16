@@ -12,7 +12,8 @@ part of 'users_flashs_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 UsersFlashsRequest _$UsersFlashsRequestFromJson(Map<String, dynamic> json) {
   return _UsersFlashsRequest.fromJson(json);
@@ -38,8 +39,9 @@ mixin _$UsersFlashsRequest {
 /// @nodoc
 abstract class $UsersFlashsRequestCopyWith<$Res> {
   factory $UsersFlashsRequestCopyWith(
-          UsersFlashsRequest value, $Res Function(UsersFlashsRequest) then) =
-      _$UsersFlashsRequestCopyWithImpl<$Res, UsersFlashsRequest>;
+    UsersFlashsRequest value,
+    $Res Function(UsersFlashsRequest) then,
+  ) = _$UsersFlashsRequestCopyWithImpl<$Res, UsersFlashsRequest>;
   @useResult
   $Res call({String userId, int? limit, String? sinceId, String? untilId});
 }
@@ -64,33 +66,41 @@ class _$UsersFlashsRequestCopyWithImpl<$Res, $Val extends UsersFlashsRequest>
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_value.copyWith(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            userId:
+                null == userId
+                    ? _value.userId
+                    : userId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$UsersFlashsRequestImplCopyWith<$Res>
     implements $UsersFlashsRequestCopyWith<$Res> {
-  factory _$$UsersFlashsRequestImplCopyWith(_$UsersFlashsRequestImpl value,
-          $Res Function(_$UsersFlashsRequestImpl) then) =
-      __$$UsersFlashsRequestImplCopyWithImpl<$Res>;
+  factory _$$UsersFlashsRequestImplCopyWith(
+    _$UsersFlashsRequestImpl value,
+    $Res Function(_$UsersFlashsRequestImpl) then,
+  ) = __$$UsersFlashsRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String userId, int? limit, String? sinceId, String? untilId});
@@ -100,9 +110,10 @@ abstract class _$$UsersFlashsRequestImplCopyWith<$Res>
 class __$$UsersFlashsRequestImplCopyWithImpl<$Res>
     extends _$UsersFlashsRequestCopyWithImpl<$Res, _$UsersFlashsRequestImpl>
     implements _$$UsersFlashsRequestImplCopyWith<$Res> {
-  __$$UsersFlashsRequestImplCopyWithImpl(_$UsersFlashsRequestImpl _value,
-      $Res Function(_$UsersFlashsRequestImpl) _then)
-      : super(_value, _then);
+  __$$UsersFlashsRequestImplCopyWithImpl(
+    _$UsersFlashsRequestImpl _value,
+    $Res Function(_$UsersFlashsRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UsersFlashsRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -114,32 +125,42 @@ class __$$UsersFlashsRequestImplCopyWithImpl<$Res>
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_$UsersFlashsRequestImpl(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$UsersFlashsRequestImpl(
+        userId:
+            null == userId
+                ? _value.userId
+                : userId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$UsersFlashsRequestImpl implements _UsersFlashsRequest {
-  const _$UsersFlashsRequestImpl(
-      {required this.userId, this.limit, this.sinceId, this.untilId});
+  const _$UsersFlashsRequestImpl({
+    required this.userId,
+    this.limit,
+    this.sinceId,
+    this.untilId,
+  });
 
   factory _$UsersFlashsRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$UsersFlashsRequestImplFromJson(json);
@@ -180,22 +201,23 @@ class _$UsersFlashsRequestImpl implements _UsersFlashsRequest {
   @pragma('vm:prefer-inline')
   _$$UsersFlashsRequestImplCopyWith<_$UsersFlashsRequestImpl> get copyWith =>
       __$$UsersFlashsRequestImplCopyWithImpl<_$UsersFlashsRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UsersFlashsRequestImplToJson(
-      this,
-    );
+    return _$$UsersFlashsRequestImplToJson(this);
   }
 }
 
 abstract class _UsersFlashsRequest implements UsersFlashsRequest {
-  const factory _UsersFlashsRequest(
-      {required final String userId,
-      final int? limit,
-      final String? sinceId,
-      final String? untilId}) = _$UsersFlashsRequestImpl;
+  const factory _UsersFlashsRequest({
+    required final String userId,
+    final int? limit,
+    final String? sinceId,
+    final String? untilId,
+  }) = _$UsersFlashsRequestImpl;
 
   factory _UsersFlashsRequest.fromJson(Map<String, dynamic> json) =
       _$UsersFlashsRequestImpl.fromJson;

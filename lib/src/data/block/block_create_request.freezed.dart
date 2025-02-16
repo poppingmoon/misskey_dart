@@ -12,7 +12,8 @@ part of 'block_create_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 BlockCreateRequest _$BlockCreateRequestFromJson(Map<String, dynamic> json) {
   return _BlockCreateRequest.fromJson(json);
@@ -35,8 +36,9 @@ mixin _$BlockCreateRequest {
 /// @nodoc
 abstract class $BlockCreateRequestCopyWith<$Res> {
   factory $BlockCreateRequestCopyWith(
-          BlockCreateRequest value, $Res Function(BlockCreateRequest) then) =
-      _$BlockCreateRequestCopyWithImpl<$Res, BlockCreateRequest>;
+    BlockCreateRequest value,
+    $Res Function(BlockCreateRequest) then,
+  ) = _$BlockCreateRequestCopyWithImpl<$Res, BlockCreateRequest>;
   @useResult
   $Res call({String userId});
 }
@@ -55,24 +57,27 @@ class _$BlockCreateRequestCopyWithImpl<$Res, $Val extends BlockCreateRequest>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? userId = null,
-  }) {
-    return _then(_value.copyWith(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? userId = null}) {
+    return _then(
+      _value.copyWith(
+            userId:
+                null == userId
+                    ? _value.userId
+                    : userId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$BlockCreateRequestImplCopyWith<$Res>
     implements $BlockCreateRequestCopyWith<$Res> {
-  factory _$$BlockCreateRequestImplCopyWith(_$BlockCreateRequestImpl value,
-          $Res Function(_$BlockCreateRequestImpl) then) =
-      __$$BlockCreateRequestImplCopyWithImpl<$Res>;
+  factory _$$BlockCreateRequestImplCopyWith(
+    _$BlockCreateRequestImpl value,
+    $Res Function(_$BlockCreateRequestImpl) then,
+  ) = __$$BlockCreateRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String userId});
@@ -82,23 +87,25 @@ abstract class _$$BlockCreateRequestImplCopyWith<$Res>
 class __$$BlockCreateRequestImplCopyWithImpl<$Res>
     extends _$BlockCreateRequestCopyWithImpl<$Res, _$BlockCreateRequestImpl>
     implements _$$BlockCreateRequestImplCopyWith<$Res> {
-  __$$BlockCreateRequestImplCopyWithImpl(_$BlockCreateRequestImpl _value,
-      $Res Function(_$BlockCreateRequestImpl) _then)
-      : super(_value, _then);
+  __$$BlockCreateRequestImplCopyWithImpl(
+    _$BlockCreateRequestImpl _value,
+    $Res Function(_$BlockCreateRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of BlockCreateRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? userId = null,
-  }) {
-    return _then(_$BlockCreateRequestImpl(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? userId = null}) {
+    return _then(
+      _$BlockCreateRequestImpl(
+        userId:
+            null == userId
+                ? _value.userId
+                : userId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -137,13 +144,13 @@ class _$BlockCreateRequestImpl implements _BlockCreateRequest {
   @pragma('vm:prefer-inline')
   _$$BlockCreateRequestImplCopyWith<_$BlockCreateRequestImpl> get copyWith =>
       __$$BlockCreateRequestImplCopyWithImpl<_$BlockCreateRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$BlockCreateRequestImplToJson(
-      this,
-    );
+    return _$$BlockCreateRequestImplToJson(this);
   }
 }
 

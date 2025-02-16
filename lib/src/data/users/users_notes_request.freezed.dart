@@ -12,7 +12,8 @@ part of 'users_notes_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 UsersNotesRequest _$UsersNotesRequestFromJson(Map<String, dynamic> json) {
   return _UsersNotesRequest.fromJson(json);
@@ -54,25 +55,27 @@ mixin _$UsersNotesRequest {
 /// @nodoc
 abstract class $UsersNotesRequestCopyWith<$Res> {
   factory $UsersNotesRequestCopyWith(
-          UsersNotesRequest value, $Res Function(UsersNotesRequest) then) =
-      _$UsersNotesRequestCopyWithImpl<$Res, UsersNotesRequest>;
+    UsersNotesRequest value,
+    $Res Function(UsersNotesRequest) then,
+  ) = _$UsersNotesRequestCopyWithImpl<$Res, UsersNotesRequest>;
   @useResult
-  $Res call(
-      {String userId,
-      @Deprecated("removed at 2023.9.2") bool? includeReplies,
-      bool? withReplies,
-      bool? withRenotes,
-      bool? withChannelNotes,
-      int? limit,
-      String? sinceId,
-      String? untilId,
-      @EpocTimeDateTimeConverter() DateTime? sinceDate,
-      @EpocTimeDateTimeConverter() DateTime? untilDate,
-      @Deprecated("removed at 2023.11.1") bool? includeMyRenotes,
-      bool? withFiles,
-      List<String>? fileType,
-      bool? allowPartial,
-      @Deprecated("removed at 2023.12.0") bool? excludeNsfw});
+  $Res call({
+    String userId,
+    @Deprecated("removed at 2023.9.2") bool? includeReplies,
+    bool? withReplies,
+    bool? withRenotes,
+    bool? withChannelNotes,
+    int? limit,
+    String? sinceId,
+    String? untilId,
+    @EpocTimeDateTimeConverter() DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() DateTime? untilDate,
+    @Deprecated("removed at 2023.11.1") bool? includeMyRenotes,
+    bool? withFiles,
+    List<String>? fileType,
+    bool? allowPartial,
+    @Deprecated("removed at 2023.12.0") bool? excludeNsfw,
+  });
 }
 
 /// @nodoc
@@ -106,104 +109,125 @@ class _$UsersNotesRequestCopyWithImpl<$Res, $Val extends UsersNotesRequest>
     Object? allowPartial = freezed,
     Object? excludeNsfw = freezed,
   }) {
-    return _then(_value.copyWith(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      includeReplies: freezed == includeReplies
-          ? _value.includeReplies
-          : includeReplies // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withReplies: freezed == withReplies
-          ? _value.withReplies
-          : withReplies // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withRenotes: freezed == withRenotes
-          ? _value.withRenotes
-          : withRenotes // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withChannelNotes: freezed == withChannelNotes
-          ? _value.withChannelNotes
-          : withChannelNotes // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      sinceDate: freezed == sinceDate
-          ? _value.sinceDate
-          : sinceDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      untilDate: freezed == untilDate
-          ? _value.untilDate
-          : untilDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      includeMyRenotes: freezed == includeMyRenotes
-          ? _value.includeMyRenotes
-          : includeMyRenotes // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withFiles: freezed == withFiles
-          ? _value.withFiles
-          : withFiles // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      fileType: freezed == fileType
-          ? _value.fileType
-          : fileType // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      allowPartial: freezed == allowPartial
-          ? _value.allowPartial
-          : allowPartial // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      excludeNsfw: freezed == excludeNsfw
-          ? _value.excludeNsfw
-          : excludeNsfw // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            userId:
+                null == userId
+                    ? _value.userId
+                    : userId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            includeReplies:
+                freezed == includeReplies
+                    ? _value.includeReplies
+                    : includeReplies // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            withReplies:
+                freezed == withReplies
+                    ? _value.withReplies
+                    : withReplies // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            withRenotes:
+                freezed == withRenotes
+                    ? _value.withRenotes
+                    : withRenotes // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            withChannelNotes:
+                freezed == withChannelNotes
+                    ? _value.withChannelNotes
+                    : withChannelNotes // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            sinceDate:
+                freezed == sinceDate
+                    ? _value.sinceDate
+                    : sinceDate // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            untilDate:
+                freezed == untilDate
+                    ? _value.untilDate
+                    : untilDate // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            includeMyRenotes:
+                freezed == includeMyRenotes
+                    ? _value.includeMyRenotes
+                    : includeMyRenotes // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            withFiles:
+                freezed == withFiles
+                    ? _value.withFiles
+                    : withFiles // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            fileType:
+                freezed == fileType
+                    ? _value.fileType
+                    : fileType // ignore: cast_nullable_to_non_nullable
+                        as List<String>?,
+            allowPartial:
+                freezed == allowPartial
+                    ? _value.allowPartial
+                    : allowPartial // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            excludeNsfw:
+                freezed == excludeNsfw
+                    ? _value.excludeNsfw
+                    : excludeNsfw // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$UsersNotesRequestImplCopyWith<$Res>
     implements $UsersNotesRequestCopyWith<$Res> {
-  factory _$$UsersNotesRequestImplCopyWith(_$UsersNotesRequestImpl value,
-          $Res Function(_$UsersNotesRequestImpl) then) =
-      __$$UsersNotesRequestImplCopyWithImpl<$Res>;
+  factory _$$UsersNotesRequestImplCopyWith(
+    _$UsersNotesRequestImpl value,
+    $Res Function(_$UsersNotesRequestImpl) then,
+  ) = __$$UsersNotesRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String userId,
-      @Deprecated("removed at 2023.9.2") bool? includeReplies,
-      bool? withReplies,
-      bool? withRenotes,
-      bool? withChannelNotes,
-      int? limit,
-      String? sinceId,
-      String? untilId,
-      @EpocTimeDateTimeConverter() DateTime? sinceDate,
-      @EpocTimeDateTimeConverter() DateTime? untilDate,
-      @Deprecated("removed at 2023.11.1") bool? includeMyRenotes,
-      bool? withFiles,
-      List<String>? fileType,
-      bool? allowPartial,
-      @Deprecated("removed at 2023.12.0") bool? excludeNsfw});
+  $Res call({
+    String userId,
+    @Deprecated("removed at 2023.9.2") bool? includeReplies,
+    bool? withReplies,
+    bool? withRenotes,
+    bool? withChannelNotes,
+    int? limit,
+    String? sinceId,
+    String? untilId,
+    @EpocTimeDateTimeConverter() DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() DateTime? untilDate,
+    @Deprecated("removed at 2023.11.1") bool? includeMyRenotes,
+    bool? withFiles,
+    List<String>? fileType,
+    bool? allowPartial,
+    @Deprecated("removed at 2023.12.0") bool? excludeNsfw,
+  });
 }
 
 /// @nodoc
 class __$$UsersNotesRequestImplCopyWithImpl<$Res>
     extends _$UsersNotesRequestCopyWithImpl<$Res, _$UsersNotesRequestImpl>
     implements _$$UsersNotesRequestImplCopyWith<$Res> {
-  __$$UsersNotesRequestImplCopyWithImpl(_$UsersNotesRequestImpl _value,
-      $Res Function(_$UsersNotesRequestImpl) _then)
-      : super(_value, _then);
+  __$$UsersNotesRequestImplCopyWithImpl(
+    _$UsersNotesRequestImpl _value,
+    $Res Function(_$UsersNotesRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UsersNotesRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -226,91 +250,108 @@ class __$$UsersNotesRequestImplCopyWithImpl<$Res>
     Object? allowPartial = freezed,
     Object? excludeNsfw = freezed,
   }) {
-    return _then(_$UsersNotesRequestImpl(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      includeReplies: freezed == includeReplies
-          ? _value.includeReplies
-          : includeReplies // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withReplies: freezed == withReplies
-          ? _value.withReplies
-          : withReplies // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withRenotes: freezed == withRenotes
-          ? _value.withRenotes
-          : withRenotes // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withChannelNotes: freezed == withChannelNotes
-          ? _value.withChannelNotes
-          : withChannelNotes // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      sinceDate: freezed == sinceDate
-          ? _value.sinceDate
-          : sinceDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      untilDate: freezed == untilDate
-          ? _value.untilDate
-          : untilDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      includeMyRenotes: freezed == includeMyRenotes
-          ? _value.includeMyRenotes
-          : includeMyRenotes // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withFiles: freezed == withFiles
-          ? _value.withFiles
-          : withFiles // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      fileType: freezed == fileType
-          ? _value._fileType
-          : fileType // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      allowPartial: freezed == allowPartial
-          ? _value.allowPartial
-          : allowPartial // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      excludeNsfw: freezed == excludeNsfw
-          ? _value.excludeNsfw
-          : excludeNsfw // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+    return _then(
+      _$UsersNotesRequestImpl(
+        userId:
+            null == userId
+                ? _value.userId
+                : userId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        includeReplies:
+            freezed == includeReplies
+                ? _value.includeReplies
+                : includeReplies // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        withReplies:
+            freezed == withReplies
+                ? _value.withReplies
+                : withReplies // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        withRenotes:
+            freezed == withRenotes
+                ? _value.withRenotes
+                : withRenotes // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        withChannelNotes:
+            freezed == withChannelNotes
+                ? _value.withChannelNotes
+                : withChannelNotes // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        sinceDate:
+            freezed == sinceDate
+                ? _value.sinceDate
+                : sinceDate // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        untilDate:
+            freezed == untilDate
+                ? _value.untilDate
+                : untilDate // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        includeMyRenotes:
+            freezed == includeMyRenotes
+                ? _value.includeMyRenotes
+                : includeMyRenotes // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        withFiles:
+            freezed == withFiles
+                ? _value.withFiles
+                : withFiles // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        fileType:
+            freezed == fileType
+                ? _value._fileType
+                : fileType // ignore: cast_nullable_to_non_nullable
+                    as List<String>?,
+        allowPartial:
+            freezed == allowPartial
+                ? _value.allowPartial
+                : allowPartial // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        excludeNsfw:
+            freezed == excludeNsfw
+                ? _value.excludeNsfw
+                : excludeNsfw // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$UsersNotesRequestImpl implements _UsersNotesRequest {
-  const _$UsersNotesRequestImpl(
-      {required this.userId,
-      @Deprecated("removed at 2023.9.2") this.includeReplies,
-      this.withReplies,
-      this.withRenotes,
-      this.withChannelNotes,
-      this.limit,
-      this.sinceId,
-      this.untilId,
-      @EpocTimeDateTimeConverter() this.sinceDate,
-      @EpocTimeDateTimeConverter() this.untilDate,
-      @Deprecated("removed at 2023.11.1") this.includeMyRenotes,
-      this.withFiles,
-      final List<String>? fileType,
-      this.allowPartial,
-      @Deprecated("removed at 2023.12.0") this.excludeNsfw})
-      : _fileType = fileType;
+  const _$UsersNotesRequestImpl({
+    required this.userId,
+    @Deprecated("removed at 2023.9.2") this.includeReplies,
+    this.withReplies,
+    this.withRenotes,
+    this.withChannelNotes,
+    this.limit,
+    this.sinceId,
+    this.untilId,
+    @EpocTimeDateTimeConverter() this.sinceDate,
+    @EpocTimeDateTimeConverter() this.untilDate,
+    @Deprecated("removed at 2023.11.1") this.includeMyRenotes,
+    this.withFiles,
+    final List<String>? fileType,
+    this.allowPartial,
+    @Deprecated("removed at 2023.12.0") this.excludeNsfw,
+  }) : _fileType = fileType;
 
   factory _$UsersNotesRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$UsersNotesRequestImplFromJson(json);
@@ -399,22 +440,23 @@ class _$UsersNotesRequestImpl implements _UsersNotesRequest {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      userId,
-      includeReplies,
-      withReplies,
-      withRenotes,
-      withChannelNotes,
-      limit,
-      sinceId,
-      untilId,
-      sinceDate,
-      untilDate,
-      includeMyRenotes,
-      withFiles,
-      const DeepCollectionEquality().hash(_fileType),
-      allowPartial,
-      excludeNsfw);
+    runtimeType,
+    userId,
+    includeReplies,
+    withReplies,
+    withRenotes,
+    withChannelNotes,
+    limit,
+    sinceId,
+    untilId,
+    sinceDate,
+    untilDate,
+    includeMyRenotes,
+    withFiles,
+    const DeepCollectionEquality().hash(_fileType),
+    allowPartial,
+    excludeNsfw,
+  );
 
   /// Create a copy of UsersNotesRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -423,34 +465,34 @@ class _$UsersNotesRequestImpl implements _UsersNotesRequest {
   @pragma('vm:prefer-inline')
   _$$UsersNotesRequestImplCopyWith<_$UsersNotesRequestImpl> get copyWith =>
       __$$UsersNotesRequestImplCopyWithImpl<_$UsersNotesRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UsersNotesRequestImplToJson(
-      this,
-    );
+    return _$$UsersNotesRequestImplToJson(this);
   }
 }
 
 abstract class _UsersNotesRequest implements UsersNotesRequest {
-  const factory _UsersNotesRequest(
-          {required final String userId,
-          @Deprecated("removed at 2023.9.2") final bool? includeReplies,
-          final bool? withReplies,
-          final bool? withRenotes,
-          final bool? withChannelNotes,
-          final int? limit,
-          final String? sinceId,
-          final String? untilId,
-          @EpocTimeDateTimeConverter() final DateTime? sinceDate,
-          @EpocTimeDateTimeConverter() final DateTime? untilDate,
-          @Deprecated("removed at 2023.11.1") final bool? includeMyRenotes,
-          final bool? withFiles,
-          final List<String>? fileType,
-          final bool? allowPartial,
-          @Deprecated("removed at 2023.12.0") final bool? excludeNsfw}) =
-      _$UsersNotesRequestImpl;
+  const factory _UsersNotesRequest({
+    required final String userId,
+    @Deprecated("removed at 2023.9.2") final bool? includeReplies,
+    final bool? withReplies,
+    final bool? withRenotes,
+    final bool? withChannelNotes,
+    final int? limit,
+    final String? sinceId,
+    final String? untilId,
+    @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() final DateTime? untilDate,
+    @Deprecated("removed at 2023.11.1") final bool? includeMyRenotes,
+    final bool? withFiles,
+    final List<String>? fileType,
+    final bool? allowPartial,
+    @Deprecated("removed at 2023.12.0") final bool? excludeNsfw,
+  }) = _$UsersNotesRequestImpl;
 
   factory _UsersNotesRequest.fromJson(Map<String, dynamic> json) =
       _$UsersNotesRequestImpl.fromJson;

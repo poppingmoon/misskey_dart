@@ -12,7 +12,8 @@ part of 'antenna.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 Antenna _$AntennaFromJson(Map<String, dynamic> json) {
   return _Antenna.fromJson(json);
@@ -54,24 +55,25 @@ abstract class $AntennaCopyWith<$Res> {
   factory $AntennaCopyWith(Antenna value, $Res Function(Antenna) then) =
       _$AntennaCopyWithImpl<$Res, Antenna>;
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime createdAt,
-      String name,
-      List<List<String>> keywords,
-      List<List<String>> excludeKeywords,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      AntennaSource? src,
-      String? userListId,
-      List<String> users,
-      bool? caseSensitive,
-      bool? notify,
-      bool? withReplies,
-      bool? withFile,
-      bool? isActive,
-      bool? hasUnreadNote,
-      bool? localOnly,
-      bool? excludeBots});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime createdAt,
+    String name,
+    List<List<String>> keywords,
+    List<List<String>> excludeKeywords,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    AntennaSource? src,
+    String? userListId,
+    List<String> users,
+    bool? caseSensitive,
+    bool? notify,
+    bool? withReplies,
+    bool? withFile,
+    bool? isActive,
+    bool? hasUnreadNote,
+    bool? localOnly,
+    bool? excludeBots,
+  });
 }
 
 /// @nodoc
@@ -106,100 +108,121 @@ class _$AntennaCopyWithImpl<$Res, $Val extends Antenna>
     Object? localOnly = freezed,
     Object? excludeBots = freezed,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      keywords: null == keywords
-          ? _value.keywords
-          : keywords // ignore: cast_nullable_to_non_nullable
-              as List<List<String>>,
-      excludeKeywords: null == excludeKeywords
-          ? _value.excludeKeywords
-          : excludeKeywords // ignore: cast_nullable_to_non_nullable
-              as List<List<String>>,
-      src: freezed == src
-          ? _value.src
-          : src // ignore: cast_nullable_to_non_nullable
-              as AntennaSource?,
-      userListId: freezed == userListId
-          ? _value.userListId
-          : userListId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      users: null == users
-          ? _value.users
-          : users // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      caseSensitive: freezed == caseSensitive
-          ? _value.caseSensitive
-          : caseSensitive // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      notify: freezed == notify
-          ? _value.notify
-          : notify // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withReplies: freezed == withReplies
-          ? _value.withReplies
-          : withReplies // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withFile: freezed == withFile
-          ? _value.withFile
-          : withFile // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      isActive: freezed == isActive
-          ? _value.isActive
-          : isActive // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      hasUnreadNote: freezed == hasUnreadNote
-          ? _value.hasUnreadNote
-          : hasUnreadNote // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      localOnly: freezed == localOnly
-          ? _value.localOnly
-          : localOnly // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      excludeBots: freezed == excludeBots
-          ? _value.excludeBots
-          : excludeBots // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            createdAt:
+                null == createdAt
+                    ? _value.createdAt
+                    : createdAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            keywords:
+                null == keywords
+                    ? _value.keywords
+                    : keywords // ignore: cast_nullable_to_non_nullable
+                        as List<List<String>>,
+            excludeKeywords:
+                null == excludeKeywords
+                    ? _value.excludeKeywords
+                    : excludeKeywords // ignore: cast_nullable_to_non_nullable
+                        as List<List<String>>,
+            src:
+                freezed == src
+                    ? _value.src
+                    : src // ignore: cast_nullable_to_non_nullable
+                        as AntennaSource?,
+            userListId:
+                freezed == userListId
+                    ? _value.userListId
+                    : userListId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            users:
+                null == users
+                    ? _value.users
+                    : users // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+            caseSensitive:
+                freezed == caseSensitive
+                    ? _value.caseSensitive
+                    : caseSensitive // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            notify:
+                freezed == notify
+                    ? _value.notify
+                    : notify // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            withReplies:
+                freezed == withReplies
+                    ? _value.withReplies
+                    : withReplies // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            withFile:
+                freezed == withFile
+                    ? _value.withFile
+                    : withFile // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            isActive:
+                freezed == isActive
+                    ? _value.isActive
+                    : isActive // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            hasUnreadNote:
+                freezed == hasUnreadNote
+                    ? _value.hasUnreadNote
+                    : hasUnreadNote // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            localOnly:
+                freezed == localOnly
+                    ? _value.localOnly
+                    : localOnly // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            excludeBots:
+                freezed == excludeBots
+                    ? _value.excludeBots
+                    : excludeBots // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$AntennaImplCopyWith<$Res> implements $AntennaCopyWith<$Res> {
   factory _$$AntennaImplCopyWith(
-          _$AntennaImpl value, $Res Function(_$AntennaImpl) then) =
-      __$$AntennaImplCopyWithImpl<$Res>;
+    _$AntennaImpl value,
+    $Res Function(_$AntennaImpl) then,
+  ) = __$$AntennaImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime createdAt,
-      String name,
-      List<List<String>> keywords,
-      List<List<String>> excludeKeywords,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      AntennaSource? src,
-      String? userListId,
-      List<String> users,
-      bool? caseSensitive,
-      bool? notify,
-      bool? withReplies,
-      bool? withFile,
-      bool? isActive,
-      bool? hasUnreadNote,
-      bool? localOnly,
-      bool? excludeBots});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime createdAt,
+    String name,
+    List<List<String>> keywords,
+    List<List<String>> excludeKeywords,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    AntennaSource? src,
+    String? userListId,
+    List<String> users,
+    bool? caseSensitive,
+    bool? notify,
+    bool? withReplies,
+    bool? withFile,
+    bool? isActive,
+    bool? hasUnreadNote,
+    bool? localOnly,
+    bool? excludeBots,
+  });
 }
 
 /// @nodoc
@@ -207,8 +230,9 @@ class __$$AntennaImplCopyWithImpl<$Res>
     extends _$AntennaCopyWithImpl<$Res, _$AntennaImpl>
     implements _$$AntennaImplCopyWith<$Res> {
   __$$AntennaImplCopyWithImpl(
-      _$AntennaImpl _value, $Res Function(_$AntennaImpl) _then)
-      : super(_value, _then);
+    _$AntennaImpl _value,
+    $Res Function(_$AntennaImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of Antenna
   /// with the given fields replaced by the non-null parameter values.
@@ -232,98 +256,116 @@ class __$$AntennaImplCopyWithImpl<$Res>
     Object? localOnly = freezed,
     Object? excludeBots = freezed,
   }) {
-    return _then(_$AntennaImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      keywords: null == keywords
-          ? _value._keywords
-          : keywords // ignore: cast_nullable_to_non_nullable
-              as List<List<String>>,
-      excludeKeywords: null == excludeKeywords
-          ? _value._excludeKeywords
-          : excludeKeywords // ignore: cast_nullable_to_non_nullable
-              as List<List<String>>,
-      src: freezed == src
-          ? _value.src
-          : src // ignore: cast_nullable_to_non_nullable
-              as AntennaSource?,
-      userListId: freezed == userListId
-          ? _value.userListId
-          : userListId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      users: null == users
-          ? _value._users
-          : users // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      caseSensitive: freezed == caseSensitive
-          ? _value.caseSensitive
-          : caseSensitive // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      notify: freezed == notify
-          ? _value.notify
-          : notify // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withReplies: freezed == withReplies
-          ? _value.withReplies
-          : withReplies // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withFile: freezed == withFile
-          ? _value.withFile
-          : withFile // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      isActive: freezed == isActive
-          ? _value.isActive
-          : isActive // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      hasUnreadNote: freezed == hasUnreadNote
-          ? _value.hasUnreadNote
-          : hasUnreadNote // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      localOnly: freezed == localOnly
-          ? _value.localOnly
-          : localOnly // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      excludeBots: freezed == excludeBots
-          ? _value.excludeBots
-          : excludeBots // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+    return _then(
+      _$AntennaImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        createdAt:
+            null == createdAt
+                ? _value.createdAt
+                : createdAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        keywords:
+            null == keywords
+                ? _value._keywords
+                : keywords // ignore: cast_nullable_to_non_nullable
+                    as List<List<String>>,
+        excludeKeywords:
+            null == excludeKeywords
+                ? _value._excludeKeywords
+                : excludeKeywords // ignore: cast_nullable_to_non_nullable
+                    as List<List<String>>,
+        src:
+            freezed == src
+                ? _value.src
+                : src // ignore: cast_nullable_to_non_nullable
+                    as AntennaSource?,
+        userListId:
+            freezed == userListId
+                ? _value.userListId
+                : userListId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        users:
+            null == users
+                ? _value._users
+                : users // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+        caseSensitive:
+            freezed == caseSensitive
+                ? _value.caseSensitive
+                : caseSensitive // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        notify:
+            freezed == notify
+                ? _value.notify
+                : notify // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        withReplies:
+            freezed == withReplies
+                ? _value.withReplies
+                : withReplies // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        withFile:
+            freezed == withFile
+                ? _value.withFile
+                : withFile // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        isActive:
+            freezed == isActive
+                ? _value.isActive
+                : isActive // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        hasUnreadNote:
+            freezed == hasUnreadNote
+                ? _value.hasUnreadNote
+                : hasUnreadNote // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        localOnly:
+            freezed == localOnly
+                ? _value.localOnly
+                : localOnly // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        excludeBots:
+            freezed == excludeBots
+                ? _value.excludeBots
+                : excludeBots // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AntennaImpl implements _Antenna {
-  const _$AntennaImpl(
-      {required this.id,
-      @DateTimeConverter() required this.createdAt,
-      required this.name,
-      required final List<List<String>> keywords,
-      required final List<List<String>> excludeKeywords,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.src,
-      this.userListId,
-      final List<String> users = const [],
-      this.caseSensitive,
-      this.notify,
-      this.withReplies,
-      this.withFile,
-      this.isActive,
-      this.hasUnreadNote,
-      this.localOnly,
-      this.excludeBots})
-      : _keywords = keywords,
-        _excludeKeywords = excludeKeywords,
-        _users = users;
+  const _$AntennaImpl({
+    required this.id,
+    @DateTimeConverter() required this.createdAt,
+    required this.name,
+    required final List<List<String>> keywords,
+    required final List<List<String>> excludeKeywords,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.src,
+    this.userListId,
+    final List<String> users = const [],
+    this.caseSensitive,
+    this.notify,
+    this.withReplies,
+    this.withFile,
+    this.isActive,
+    this.hasUnreadNote,
+    this.localOnly,
+    this.excludeBots,
+  }) : _keywords = keywords,
+       _excludeKeywords = excludeKeywords,
+       _users = users;
 
   factory _$AntennaImpl.fromJson(Map<String, dynamic> json) =>
       _$$AntennaImplFromJson(json);
@@ -351,7 +393,7 @@ class _$AntennaImpl implements _Antenna {
     return EqualUnmodifiableListView(_excludeKeywords);
   }
 
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final AntennaSource? src;
@@ -398,8 +440,10 @@ class _$AntennaImpl implements _Antenna {
                 other.createdAt == createdAt) &&
             (identical(other.name, name) || other.name == name) &&
             const DeepCollectionEquality().equals(other._keywords, _keywords) &&
-            const DeepCollectionEquality()
-                .equals(other._excludeKeywords, _excludeKeywords) &&
+            const DeepCollectionEquality().equals(
+              other._excludeKeywords,
+              _excludeKeywords,
+            ) &&
             (identical(other.src, src) || other.src == src) &&
             (identical(other.userListId, userListId) ||
                 other.userListId == userListId) &&
@@ -424,23 +468,24 @@ class _$AntennaImpl implements _Antenna {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      createdAt,
-      name,
-      const DeepCollectionEquality().hash(_keywords),
-      const DeepCollectionEquality().hash(_excludeKeywords),
-      src,
-      userListId,
-      const DeepCollectionEquality().hash(_users),
-      caseSensitive,
-      notify,
-      withReplies,
-      withFile,
-      isActive,
-      hasUnreadNote,
-      localOnly,
-      excludeBots);
+    runtimeType,
+    id,
+    createdAt,
+    name,
+    const DeepCollectionEquality().hash(_keywords),
+    const DeepCollectionEquality().hash(_excludeKeywords),
+    src,
+    userListId,
+    const DeepCollectionEquality().hash(_users),
+    caseSensitive,
+    notify,
+    withReplies,
+    withFile,
+    isActive,
+    hasUnreadNote,
+    localOnly,
+    excludeBots,
+  );
 
   /// Create a copy of Antenna
   /// with the given fields replaced by the non-null parameter values.
@@ -452,31 +497,30 @@ class _$AntennaImpl implements _Antenna {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AntennaImplToJson(
-      this,
-    );
+    return _$$AntennaImplToJson(this);
   }
 }
 
 abstract class _Antenna implements Antenna {
-  const factory _Antenna(
-      {required final String id,
-      @DateTimeConverter() required final DateTime createdAt,
-      required final String name,
-      required final List<List<String>> keywords,
-      required final List<List<String>> excludeKeywords,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      final AntennaSource? src,
-      final String? userListId,
-      final List<String> users,
-      final bool? caseSensitive,
-      final bool? notify,
-      final bool? withReplies,
-      final bool? withFile,
-      final bool? isActive,
-      final bool? hasUnreadNote,
-      final bool? localOnly,
-      final bool? excludeBots}) = _$AntennaImpl;
+  const factory _Antenna({
+    required final String id,
+    @DateTimeConverter() required final DateTime createdAt,
+    required final String name,
+    required final List<List<String>> keywords,
+    required final List<List<String>> excludeKeywords,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    final AntennaSource? src,
+    final String? userListId,
+    final List<String> users,
+    final bool? caseSensitive,
+    final bool? notify,
+    final bool? withReplies,
+    final bool? withFile,
+    final bool? isActive,
+    final bool? hasUnreadNote,
+    final bool? localOnly,
+    final bool? excludeBots,
+  }) = _$AntennaImpl;
 
   factory _Antenna.fromJson(Map<String, dynamic> json) = _$AntennaImpl.fromJson;
 

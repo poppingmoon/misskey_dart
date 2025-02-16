@@ -59,10 +59,7 @@ void main() async {
       ),
     );
     final response = await userClient.sw.updateRegistration(
-      SwUpdateRegistrationRequest(
-        endpoint: endpoint,
-        sendReadMessage: true,
-      ),
+      SwUpdateRegistrationRequest(endpoint: endpoint, sendReadMessage: true),
     );
     expect(response.sendReadMessage, isTrue);
   });

@@ -12,7 +12,8 @@ part of 'pages_unlike_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 PagesUnlikeRequest _$PagesUnlikeRequestFromJson(Map<String, dynamic> json) {
   return _PagesUnlikeRequest.fromJson(json);
@@ -35,8 +36,9 @@ mixin _$PagesUnlikeRequest {
 /// @nodoc
 abstract class $PagesUnlikeRequestCopyWith<$Res> {
   factory $PagesUnlikeRequestCopyWith(
-          PagesUnlikeRequest value, $Res Function(PagesUnlikeRequest) then) =
-      _$PagesUnlikeRequestCopyWithImpl<$Res, PagesUnlikeRequest>;
+    PagesUnlikeRequest value,
+    $Res Function(PagesUnlikeRequest) then,
+  ) = _$PagesUnlikeRequestCopyWithImpl<$Res, PagesUnlikeRequest>;
   @useResult
   $Res call({String pageId});
 }
@@ -55,24 +57,27 @@ class _$PagesUnlikeRequestCopyWithImpl<$Res, $Val extends PagesUnlikeRequest>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? pageId = null,
-  }) {
-    return _then(_value.copyWith(
-      pageId: null == pageId
-          ? _value.pageId
-          : pageId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? pageId = null}) {
+    return _then(
+      _value.copyWith(
+            pageId:
+                null == pageId
+                    ? _value.pageId
+                    : pageId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$PagesUnlikeRequestImplCopyWith<$Res>
     implements $PagesUnlikeRequestCopyWith<$Res> {
-  factory _$$PagesUnlikeRequestImplCopyWith(_$PagesUnlikeRequestImpl value,
-          $Res Function(_$PagesUnlikeRequestImpl) then) =
-      __$$PagesUnlikeRequestImplCopyWithImpl<$Res>;
+  factory _$$PagesUnlikeRequestImplCopyWith(
+    _$PagesUnlikeRequestImpl value,
+    $Res Function(_$PagesUnlikeRequestImpl) then,
+  ) = __$$PagesUnlikeRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String pageId});
@@ -82,23 +87,25 @@ abstract class _$$PagesUnlikeRequestImplCopyWith<$Res>
 class __$$PagesUnlikeRequestImplCopyWithImpl<$Res>
     extends _$PagesUnlikeRequestCopyWithImpl<$Res, _$PagesUnlikeRequestImpl>
     implements _$$PagesUnlikeRequestImplCopyWith<$Res> {
-  __$$PagesUnlikeRequestImplCopyWithImpl(_$PagesUnlikeRequestImpl _value,
-      $Res Function(_$PagesUnlikeRequestImpl) _then)
-      : super(_value, _then);
+  __$$PagesUnlikeRequestImplCopyWithImpl(
+    _$PagesUnlikeRequestImpl _value,
+    $Res Function(_$PagesUnlikeRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of PagesUnlikeRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? pageId = null,
-  }) {
-    return _then(_$PagesUnlikeRequestImpl(
-      pageId: null == pageId
-          ? _value.pageId
-          : pageId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? pageId = null}) {
+    return _then(
+      _$PagesUnlikeRequestImpl(
+        pageId:
+            null == pageId
+                ? _value.pageId
+                : pageId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -137,13 +144,13 @@ class _$PagesUnlikeRequestImpl implements _PagesUnlikeRequest {
   @pragma('vm:prefer-inline')
   _$$PagesUnlikeRequestImplCopyWith<_$PagesUnlikeRequestImpl> get copyWith =>
       __$$PagesUnlikeRequestImplCopyWithImpl<_$PagesUnlikeRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PagesUnlikeRequestImplToJson(
-      this,
-    );
+    return _$$PagesUnlikeRequestImplToJson(this);
   }
 }
 

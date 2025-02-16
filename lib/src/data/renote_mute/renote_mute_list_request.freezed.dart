@@ -12,10 +12,12 @@ part of 'renote_mute_list_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 RenoteMuteListRequest _$RenoteMuteListRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _RenoteMuteListRequest.fromJson(json);
 }
 
@@ -37,16 +39,19 @@ mixin _$RenoteMuteListRequest {
 
 /// @nodoc
 abstract class $RenoteMuteListRequestCopyWith<$Res> {
-  factory $RenoteMuteListRequestCopyWith(RenoteMuteListRequest value,
-          $Res Function(RenoteMuteListRequest) then) =
-      _$RenoteMuteListRequestCopyWithImpl<$Res, RenoteMuteListRequest>;
+  factory $RenoteMuteListRequestCopyWith(
+    RenoteMuteListRequest value,
+    $Res Function(RenoteMuteListRequest) then,
+  ) = _$RenoteMuteListRequestCopyWithImpl<$Res, RenoteMuteListRequest>;
   @useResult
   $Res call({int? limit, String? sinceId, String? untilId});
 }
 
 /// @nodoc
-class _$RenoteMuteListRequestCopyWithImpl<$Res,
-        $Val extends RenoteMuteListRequest>
+class _$RenoteMuteListRequestCopyWithImpl<
+  $Res,
+  $Val extends RenoteMuteListRequest
+>
     implements $RenoteMuteListRequestCopyWith<$Res> {
   _$RenoteMuteListRequestCopyWithImpl(this._value, this._then);
 
@@ -64,20 +69,26 @@ class _$RenoteMuteListRequestCopyWithImpl<$Res,
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_value.copyWith(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -85,9 +96,9 @@ class _$RenoteMuteListRequestCopyWithImpl<$Res,
 abstract class _$$RenoteMuteListRequestImplCopyWith<$Res>
     implements $RenoteMuteListRequestCopyWith<$Res> {
   factory _$$RenoteMuteListRequestImplCopyWith(
-          _$RenoteMuteListRequestImpl value,
-          $Res Function(_$RenoteMuteListRequestImpl) then) =
-      __$$RenoteMuteListRequestImplCopyWithImpl<$Res>;
+    _$RenoteMuteListRequestImpl value,
+    $Res Function(_$RenoteMuteListRequestImpl) then,
+  ) = __$$RenoteMuteListRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? limit, String? sinceId, String? untilId});
@@ -95,12 +106,13 @@ abstract class _$$RenoteMuteListRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$RenoteMuteListRequestImplCopyWithImpl<$Res>
-    extends _$RenoteMuteListRequestCopyWithImpl<$Res,
-        _$RenoteMuteListRequestImpl>
+    extends
+        _$RenoteMuteListRequestCopyWithImpl<$Res, _$RenoteMuteListRequestImpl>
     implements _$$RenoteMuteListRequestImplCopyWith<$Res> {
-  __$$RenoteMuteListRequestImplCopyWithImpl(_$RenoteMuteListRequestImpl _value,
-      $Res Function(_$RenoteMuteListRequestImpl) _then)
-      : super(_value, _then);
+  __$$RenoteMuteListRequestImplCopyWithImpl(
+    _$RenoteMuteListRequestImpl _value,
+    $Res Function(_$RenoteMuteListRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of RenoteMuteListRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -111,20 +123,25 @@ class __$$RenoteMuteListRequestImplCopyWithImpl<$Res>
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_$RenoteMuteListRequestImpl(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$RenoteMuteListRequestImpl(
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -168,22 +185,24 @@ class _$RenoteMuteListRequestImpl implements _RenoteMuteListRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$RenoteMuteListRequestImplCopyWith<_$RenoteMuteListRequestImpl>
-      get copyWith => __$$RenoteMuteListRequestImplCopyWithImpl<
-          _$RenoteMuteListRequestImpl>(this, _$identity);
+  get copyWith =>
+      __$$RenoteMuteListRequestImplCopyWithImpl<_$RenoteMuteListRequestImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$RenoteMuteListRequestImplToJson(
-      this,
-    );
+    return _$$RenoteMuteListRequestImplToJson(this);
   }
 }
 
 abstract class _RenoteMuteListRequest implements RenoteMuteListRequest {
-  const factory _RenoteMuteListRequest(
-      {final int? limit,
-      final String? sinceId,
-      final String? untilId}) = _$RenoteMuteListRequestImpl;
+  const factory _RenoteMuteListRequest({
+    final int? limit,
+    final String? sinceId,
+    final String? untilId,
+  }) = _$RenoteMuteListRequestImpl;
 
   factory _RenoteMuteListRequest.fromJson(Map<String, dynamic> json) =
       _$RenoteMuteListRequestImpl.fromJson;
@@ -200,5 +219,5 @@ abstract class _RenoteMuteListRequest implements RenoteMuteListRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RenoteMuteListRequestImplCopyWith<_$RenoteMuteListRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

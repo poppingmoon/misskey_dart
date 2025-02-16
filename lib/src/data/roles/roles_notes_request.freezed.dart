@@ -12,7 +12,8 @@ part of 'roles_notes_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 RolesNotesRequest _$RolesNotesRequestFromJson(Map<String, dynamic> json) {
   return _RolesNotesRequest.fromJson(json);
@@ -42,16 +43,18 @@ mixin _$RolesNotesRequest {
 /// @nodoc
 abstract class $RolesNotesRequestCopyWith<$Res> {
   factory $RolesNotesRequestCopyWith(
-          RolesNotesRequest value, $Res Function(RolesNotesRequest) then) =
-      _$RolesNotesRequestCopyWithImpl<$Res, RolesNotesRequest>;
+    RolesNotesRequest value,
+    $Res Function(RolesNotesRequest) then,
+  ) = _$RolesNotesRequestCopyWithImpl<$Res, RolesNotesRequest>;
   @useResult
-  $Res call(
-      {String roleId,
-      int? limit,
-      String? sinceId,
-      String? untilId,
-      @EpocTimeDateTimeConverter() DateTime? sinceDate,
-      @EpocTimeDateTimeConverter() DateTime? untilDate});
+  $Res call({
+    String roleId,
+    int? limit,
+    String? sinceId,
+    String? untilId,
+    @EpocTimeDateTimeConverter() DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() DateTime? untilDate,
+  });
 }
 
 /// @nodoc
@@ -76,59 +79,71 @@ class _$RolesNotesRequestCopyWithImpl<$Res, $Val extends RolesNotesRequest>
     Object? sinceDate = freezed,
     Object? untilDate = freezed,
   }) {
-    return _then(_value.copyWith(
-      roleId: null == roleId
-          ? _value.roleId
-          : roleId // ignore: cast_nullable_to_non_nullable
-              as String,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      sinceDate: freezed == sinceDate
-          ? _value.sinceDate
-          : sinceDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      untilDate: freezed == untilDate
-          ? _value.untilDate
-          : untilDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            roleId:
+                null == roleId
+                    ? _value.roleId
+                    : roleId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            sinceDate:
+                freezed == sinceDate
+                    ? _value.sinceDate
+                    : sinceDate // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            untilDate:
+                freezed == untilDate
+                    ? _value.untilDate
+                    : untilDate // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$RolesNotesRequestImplCopyWith<$Res>
     implements $RolesNotesRequestCopyWith<$Res> {
-  factory _$$RolesNotesRequestImplCopyWith(_$RolesNotesRequestImpl value,
-          $Res Function(_$RolesNotesRequestImpl) then) =
-      __$$RolesNotesRequestImplCopyWithImpl<$Res>;
+  factory _$$RolesNotesRequestImplCopyWith(
+    _$RolesNotesRequestImpl value,
+    $Res Function(_$RolesNotesRequestImpl) then,
+  ) = __$$RolesNotesRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String roleId,
-      int? limit,
-      String? sinceId,
-      String? untilId,
-      @EpocTimeDateTimeConverter() DateTime? sinceDate,
-      @EpocTimeDateTimeConverter() DateTime? untilDate});
+  $Res call({
+    String roleId,
+    int? limit,
+    String? sinceId,
+    String? untilId,
+    @EpocTimeDateTimeConverter() DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() DateTime? untilDate,
+  });
 }
 
 /// @nodoc
 class __$$RolesNotesRequestImplCopyWithImpl<$Res>
     extends _$RolesNotesRequestCopyWithImpl<$Res, _$RolesNotesRequestImpl>
     implements _$$RolesNotesRequestImplCopyWith<$Res> {
-  __$$RolesNotesRequestImplCopyWithImpl(_$RolesNotesRequestImpl _value,
-      $Res Function(_$RolesNotesRequestImpl) _then)
-      : super(_value, _then);
+  __$$RolesNotesRequestImplCopyWithImpl(
+    _$RolesNotesRequestImpl _value,
+    $Res Function(_$RolesNotesRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of RolesNotesRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -142,45 +157,54 @@ class __$$RolesNotesRequestImplCopyWithImpl<$Res>
     Object? sinceDate = freezed,
     Object? untilDate = freezed,
   }) {
-    return _then(_$RolesNotesRequestImpl(
-      roleId: null == roleId
-          ? _value.roleId
-          : roleId // ignore: cast_nullable_to_non_nullable
-              as String,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      sinceDate: freezed == sinceDate
-          ? _value.sinceDate
-          : sinceDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      untilDate: freezed == untilDate
-          ? _value.untilDate
-          : untilDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-    ));
+    return _then(
+      _$RolesNotesRequestImpl(
+        roleId:
+            null == roleId
+                ? _value.roleId
+                : roleId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        sinceDate:
+            freezed == sinceDate
+                ? _value.sinceDate
+                : sinceDate // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        untilDate:
+            freezed == untilDate
+                ? _value.untilDate
+                : untilDate // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$RolesNotesRequestImpl implements _RolesNotesRequest {
-  const _$RolesNotesRequestImpl(
-      {required this.roleId,
-      this.limit,
-      this.sinceId,
-      this.untilId,
-      @EpocTimeDateTimeConverter() this.sinceDate,
-      @EpocTimeDateTimeConverter() this.untilDate});
+  const _$RolesNotesRequestImpl({
+    required this.roleId,
+    this.limit,
+    this.sinceId,
+    this.untilId,
+    @EpocTimeDateTimeConverter() this.sinceDate,
+    @EpocTimeDateTimeConverter() this.untilDate,
+  });
 
   factory _$RolesNotesRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$RolesNotesRequestImplFromJson(json);
@@ -223,7 +247,14 @@ class _$RolesNotesRequestImpl implements _RolesNotesRequest {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType, roleId, limit, sinceId, untilId, sinceDate, untilDate);
+    runtimeType,
+    roleId,
+    limit,
+    sinceId,
+    untilId,
+    sinceDate,
+    untilDate,
+  );
 
   /// Create a copy of RolesNotesRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -232,25 +263,25 @@ class _$RolesNotesRequestImpl implements _RolesNotesRequest {
   @pragma('vm:prefer-inline')
   _$$RolesNotesRequestImplCopyWith<_$RolesNotesRequestImpl> get copyWith =>
       __$$RolesNotesRequestImplCopyWithImpl<_$RolesNotesRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$RolesNotesRequestImplToJson(
-      this,
-    );
+    return _$$RolesNotesRequestImplToJson(this);
   }
 }
 
 abstract class _RolesNotesRequest implements RolesNotesRequest {
-  const factory _RolesNotesRequest(
-          {required final String roleId,
-          final int? limit,
-          final String? sinceId,
-          final String? untilId,
-          @EpocTimeDateTimeConverter() final DateTime? sinceDate,
-          @EpocTimeDateTimeConverter() final DateTime? untilDate}) =
-      _$RolesNotesRequestImpl;
+  const factory _RolesNotesRequest({
+    required final String roleId,
+    final int? limit,
+    final String? sinceId,
+    final String? untilId,
+    @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() final DateTime? untilDate,
+  }) = _$RolesNotesRequestImpl;
 
   factory _RolesNotesRequest.fromJson(Map<String, dynamic> json) =
       _$RolesNotesRequestImpl.fromJson;

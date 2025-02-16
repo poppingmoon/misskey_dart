@@ -12,7 +12,8 @@ part of 'streaming_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 StreamingResponse _$StreamingResponseFromJson(Map<String, dynamic> json) {
   switch (json['type']) {
@@ -45,10 +46,9 @@ mixin _$StreamingResponse {
     required TResult Function(EmojiUpdatedStreamEvent body) emojiUpdated,
     required TResult Function(EmojiDeletedStreamEvent body) emojiDeleted,
     required TResult Function(AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(Object body) fallback,
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(ChannelStreamEvent body)? channel,
@@ -58,8 +58,7 @@ mixin _$StreamingResponse {
     TResult? Function(EmojiDeletedStreamEvent body)? emojiDeleted,
     TResult? Function(AnnouncementCreatedStreamEvent body)? announcementCreated,
     TResult? Function(Object body)? fallback,
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(ChannelStreamEvent body)? channel,
@@ -70,24 +69,22 @@ mixin _$StreamingResponse {
     TResult Function(AnnouncementCreatedStreamEvent body)? announcementCreated,
     TResult Function(Object body)? fallback,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(StreamingChannelResponse value) channel,
     required TResult Function(StreamingChannelNoteUpdatedResponse value)
-        noteUpdated,
+    noteUpdated,
     required TResult Function(StreamingChannelEmojiAddedResponse value)
-        emojiAdded,
+    emojiAdded,
     required TResult Function(StreamingChannelEmojiUpdatedResponse value)
-        emojiUpdated,
+    emojiUpdated,
     required TResult Function(StreamingChannelEmojiDeletedResponse value)
-        emojiDeleted,
+    emojiDeleted,
     required TResult Function(StreamingChannelAnnouncementCreatedResponse value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(StreamingChannelUnknownResponse value) fallback,
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(StreamingChannelResponse value)? channel,
@@ -96,10 +93,9 @@ mixin _$StreamingResponse {
     TResult? Function(StreamingChannelEmojiUpdatedResponse value)? emojiUpdated,
     TResult? Function(StreamingChannelEmojiDeletedResponse value)? emojiDeleted,
     TResult? Function(StreamingChannelAnnouncementCreatedResponse value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(StreamingChannelUnknownResponse value)? fallback,
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(StreamingChannelResponse value)? channel,
@@ -108,11 +104,10 @@ mixin _$StreamingResponse {
     TResult Function(StreamingChannelEmojiUpdatedResponse value)? emojiUpdated,
     TResult Function(StreamingChannelEmojiDeletedResponse value)? emojiDeleted,
     TResult Function(StreamingChannelAnnouncementCreatedResponse value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(StreamingChannelUnknownResponse value)? fallback,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
 
   /// Serializes this StreamingResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -121,8 +116,9 @@ mixin _$StreamingResponse {
 /// @nodoc
 abstract class $StreamingResponseCopyWith<$Res> {
   factory $StreamingResponseCopyWith(
-          StreamingResponse value, $Res Function(StreamingResponse) then) =
-      _$StreamingResponseCopyWithImpl<$Res, StreamingResponse>;
+    StreamingResponse value,
+    $Res Function(StreamingResponse) then,
+  ) = _$StreamingResponseCopyWithImpl<$Res, StreamingResponse>;
 }
 
 /// @nodoc
@@ -142,9 +138,9 @@ class _$StreamingResponseCopyWithImpl<$Res, $Val extends StreamingResponse>
 /// @nodoc
 abstract class _$$StreamingChannelResponseImplCopyWith<$Res> {
   factory _$$StreamingChannelResponseImplCopyWith(
-          _$StreamingChannelResponseImpl value,
-          $Res Function(_$StreamingChannelResponseImpl) then) =
-      __$$StreamingChannelResponseImplCopyWithImpl<$Res>;
+    _$StreamingChannelResponseImpl value,
+    $Res Function(_$StreamingChannelResponseImpl) then,
+  ) = __$$StreamingChannelResponseImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ChannelStreamEvent body});
 
@@ -153,27 +149,28 @@ abstract class _$$StreamingChannelResponseImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$StreamingChannelResponseImplCopyWithImpl<$Res>
-    extends _$StreamingResponseCopyWithImpl<$Res,
-        _$StreamingChannelResponseImpl>
+    extends
+        _$StreamingResponseCopyWithImpl<$Res, _$StreamingChannelResponseImpl>
     implements _$$StreamingChannelResponseImplCopyWith<$Res> {
   __$$StreamingChannelResponseImplCopyWithImpl(
-      _$StreamingChannelResponseImpl _value,
-      $Res Function(_$StreamingChannelResponseImpl) _then)
-      : super(_value, _then);
+    _$StreamingChannelResponseImpl _value,
+    $Res Function(_$StreamingChannelResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of StreamingResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? body = null,
-  }) {
-    return _then(_$StreamingChannelResponseImpl(
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as ChannelStreamEvent,
-    ));
+  $Res call({Object? body = null}) {
+    return _then(
+      _$StreamingChannelResponseImpl(
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as ChannelStreamEvent,
+      ),
+    );
   }
 
   /// Create a copy of StreamingResponse
@@ -190,9 +187,10 @@ class __$$StreamingChannelResponseImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$StreamingChannelResponseImpl implements StreamingChannelResponse {
-  const _$StreamingChannelResponseImpl(
-      {required this.body, final String? $type})
-      : $type = $type ?? 'channel';
+  const _$StreamingChannelResponseImpl({
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'channel';
 
   factory _$StreamingChannelResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$StreamingChannelResponseImplFromJson(json);
@@ -226,8 +224,9 @@ class _$StreamingChannelResponseImpl implements StreamingChannelResponse {
   @override
   @pragma('vm:prefer-inline')
   _$$StreamingChannelResponseImplCopyWith<_$StreamingChannelResponseImpl>
-      get copyWith => __$$StreamingChannelResponseImplCopyWithImpl<
-          _$StreamingChannelResponseImpl>(this, _$identity);
+  get copyWith => __$$StreamingChannelResponseImplCopyWithImpl<
+    _$StreamingChannelResponseImpl
+  >(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -238,7 +237,7 @@ class _$StreamingChannelResponseImpl implements StreamingChannelResponse {
     required TResult Function(EmojiUpdatedStreamEvent body) emojiUpdated,
     required TResult Function(EmojiDeletedStreamEvent body) emojiDeleted,
     required TResult Function(AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(Object body) fallback,
   }) {
     return channel(body);
@@ -281,15 +280,15 @@ class _$StreamingChannelResponseImpl implements StreamingChannelResponse {
   TResult map<TResult extends Object?>({
     required TResult Function(StreamingChannelResponse value) channel,
     required TResult Function(StreamingChannelNoteUpdatedResponse value)
-        noteUpdated,
+    noteUpdated,
     required TResult Function(StreamingChannelEmojiAddedResponse value)
-        emojiAdded,
+    emojiAdded,
     required TResult Function(StreamingChannelEmojiUpdatedResponse value)
-        emojiUpdated,
+    emojiUpdated,
     required TResult Function(StreamingChannelEmojiDeletedResponse value)
-        emojiDeleted,
+    emojiDeleted,
     required TResult Function(StreamingChannelAnnouncementCreatedResponse value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(StreamingChannelUnknownResponse value) fallback,
   }) {
     return channel(this);
@@ -304,7 +303,7 @@ class _$StreamingChannelResponseImpl implements StreamingChannelResponse {
     TResult? Function(StreamingChannelEmojiUpdatedResponse value)? emojiUpdated,
     TResult? Function(StreamingChannelEmojiDeletedResponse value)? emojiDeleted,
     TResult? Function(StreamingChannelAnnouncementCreatedResponse value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(StreamingChannelUnknownResponse value)? fallback,
   }) {
     return channel?.call(this);
@@ -319,7 +318,7 @@ class _$StreamingChannelResponseImpl implements StreamingChannelResponse {
     TResult Function(StreamingChannelEmojiUpdatedResponse value)? emojiUpdated,
     TResult Function(StreamingChannelEmojiDeletedResponse value)? emojiDeleted,
     TResult Function(StreamingChannelAnnouncementCreatedResponse value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(StreamingChannelUnknownResponse value)? fallback,
     required TResult orElse(),
   }) {
@@ -331,16 +330,14 @@ class _$StreamingChannelResponseImpl implements StreamingChannelResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$StreamingChannelResponseImplToJson(
-      this,
-    );
+    return _$$StreamingChannelResponseImplToJson(this);
   }
 }
 
 abstract class StreamingChannelResponse implements StreamingResponse {
-  const factory StreamingChannelResponse(
-          {required final ChannelStreamEvent body}) =
-      _$StreamingChannelResponseImpl;
+  const factory StreamingChannelResponse({
+    required final ChannelStreamEvent body,
+  }) = _$StreamingChannelResponseImpl;
 
   factory StreamingChannelResponse.fromJson(Map<String, dynamic> json) =
       _$StreamingChannelResponseImpl.fromJson;
@@ -352,15 +349,15 @@ abstract class StreamingChannelResponse implements StreamingResponse {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StreamingChannelResponseImplCopyWith<_$StreamingChannelResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$StreamingChannelNoteUpdatedResponseImplCopyWith<$Res> {
   factory _$$StreamingChannelNoteUpdatedResponseImplCopyWith(
-          _$StreamingChannelNoteUpdatedResponseImpl value,
-          $Res Function(_$StreamingChannelNoteUpdatedResponseImpl) then) =
-      __$$StreamingChannelNoteUpdatedResponseImplCopyWithImpl<$Res>;
+    _$StreamingChannelNoteUpdatedResponseImpl value,
+    $Res Function(_$StreamingChannelNoteUpdatedResponseImpl) then,
+  ) = __$$StreamingChannelNoteUpdatedResponseImplCopyWithImpl<$Res>;
   @useResult
   $Res call({NoteUpdateStreamEvent body});
 
@@ -369,27 +366,31 @@ abstract class _$$StreamingChannelNoteUpdatedResponseImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$StreamingChannelNoteUpdatedResponseImplCopyWithImpl<$Res>
-    extends _$StreamingResponseCopyWithImpl<$Res,
-        _$StreamingChannelNoteUpdatedResponseImpl>
+    extends
+        _$StreamingResponseCopyWithImpl<
+          $Res,
+          _$StreamingChannelNoteUpdatedResponseImpl
+        >
     implements _$$StreamingChannelNoteUpdatedResponseImplCopyWith<$Res> {
   __$$StreamingChannelNoteUpdatedResponseImplCopyWithImpl(
-      _$StreamingChannelNoteUpdatedResponseImpl _value,
-      $Res Function(_$StreamingChannelNoteUpdatedResponseImpl) _then)
-      : super(_value, _then);
+    _$StreamingChannelNoteUpdatedResponseImpl _value,
+    $Res Function(_$StreamingChannelNoteUpdatedResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of StreamingResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? body = null,
-  }) {
-    return _then(_$StreamingChannelNoteUpdatedResponseImpl(
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as NoteUpdateStreamEvent,
-    ));
+  $Res call({Object? body = null}) {
+    return _then(
+      _$StreamingChannelNoteUpdatedResponseImpl(
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as NoteUpdateStreamEvent,
+      ),
+    );
   }
 
   /// Create a copy of StreamingResponse
@@ -407,13 +408,14 @@ class __$$StreamingChannelNoteUpdatedResponseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$StreamingChannelNoteUpdatedResponseImpl
     implements StreamingChannelNoteUpdatedResponse {
-  const _$StreamingChannelNoteUpdatedResponseImpl(
-      {required this.body, final String? $type})
-      : $type = $type ?? 'noteUpdated';
+  const _$StreamingChannelNoteUpdatedResponseImpl({
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'noteUpdated';
 
   factory _$StreamingChannelNoteUpdatedResponseImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$StreamingChannelNoteUpdatedResponseImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$StreamingChannelNoteUpdatedResponseImplFromJson(json);
 
   @override
   final NoteUpdateStreamEvent body;
@@ -444,9 +446,11 @@ class _$StreamingChannelNoteUpdatedResponseImpl
   @override
   @pragma('vm:prefer-inline')
   _$$StreamingChannelNoteUpdatedResponseImplCopyWith<
-          _$StreamingChannelNoteUpdatedResponseImpl>
-      get copyWith => __$$StreamingChannelNoteUpdatedResponseImplCopyWithImpl<
-          _$StreamingChannelNoteUpdatedResponseImpl>(this, _$identity);
+    _$StreamingChannelNoteUpdatedResponseImpl
+  >
+  get copyWith => __$$StreamingChannelNoteUpdatedResponseImplCopyWithImpl<
+    _$StreamingChannelNoteUpdatedResponseImpl
+  >(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -457,7 +461,7 @@ class _$StreamingChannelNoteUpdatedResponseImpl
     required TResult Function(EmojiUpdatedStreamEvent body) emojiUpdated,
     required TResult Function(EmojiDeletedStreamEvent body) emojiDeleted,
     required TResult Function(AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(Object body) fallback,
   }) {
     return noteUpdated(body);
@@ -500,15 +504,15 @@ class _$StreamingChannelNoteUpdatedResponseImpl
   TResult map<TResult extends Object?>({
     required TResult Function(StreamingChannelResponse value) channel,
     required TResult Function(StreamingChannelNoteUpdatedResponse value)
-        noteUpdated,
+    noteUpdated,
     required TResult Function(StreamingChannelEmojiAddedResponse value)
-        emojiAdded,
+    emojiAdded,
     required TResult Function(StreamingChannelEmojiUpdatedResponse value)
-        emojiUpdated,
+    emojiUpdated,
     required TResult Function(StreamingChannelEmojiDeletedResponse value)
-        emojiDeleted,
+    emojiDeleted,
     required TResult Function(StreamingChannelAnnouncementCreatedResponse value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(StreamingChannelUnknownResponse value) fallback,
   }) {
     return noteUpdated(this);
@@ -523,7 +527,7 @@ class _$StreamingChannelNoteUpdatedResponseImpl
     TResult? Function(StreamingChannelEmojiUpdatedResponse value)? emojiUpdated,
     TResult? Function(StreamingChannelEmojiDeletedResponse value)? emojiDeleted,
     TResult? Function(StreamingChannelAnnouncementCreatedResponse value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(StreamingChannelUnknownResponse value)? fallback,
   }) {
     return noteUpdated?.call(this);
@@ -538,7 +542,7 @@ class _$StreamingChannelNoteUpdatedResponseImpl
     TResult Function(StreamingChannelEmojiUpdatedResponse value)? emojiUpdated,
     TResult Function(StreamingChannelEmojiDeletedResponse value)? emojiDeleted,
     TResult Function(StreamingChannelAnnouncementCreatedResponse value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(StreamingChannelUnknownResponse value)? fallback,
     required TResult orElse(),
   }) {
@@ -550,21 +554,19 @@ class _$StreamingChannelNoteUpdatedResponseImpl
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$StreamingChannelNoteUpdatedResponseImplToJson(
-      this,
-    );
+    return _$$StreamingChannelNoteUpdatedResponseImplToJson(this);
   }
 }
 
 abstract class StreamingChannelNoteUpdatedResponse
     implements StreamingResponse {
-  const factory StreamingChannelNoteUpdatedResponse(
-          {required final NoteUpdateStreamEvent body}) =
-      _$StreamingChannelNoteUpdatedResponseImpl;
+  const factory StreamingChannelNoteUpdatedResponse({
+    required final NoteUpdateStreamEvent body,
+  }) = _$StreamingChannelNoteUpdatedResponseImpl;
 
   factory StreamingChannelNoteUpdatedResponse.fromJson(
-          Map<String, dynamic> json) =
-      _$StreamingChannelNoteUpdatedResponseImpl.fromJson;
+    Map<String, dynamic> json,
+  ) = _$StreamingChannelNoteUpdatedResponseImpl.fromJson;
 
   @override
   NoteUpdateStreamEvent get body;
@@ -573,16 +575,17 @@ abstract class StreamingChannelNoteUpdatedResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StreamingChannelNoteUpdatedResponseImplCopyWith<
-          _$StreamingChannelNoteUpdatedResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$StreamingChannelNoteUpdatedResponseImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$StreamingChannelEmojiAddedResponseImplCopyWith<$Res> {
   factory _$$StreamingChannelEmojiAddedResponseImplCopyWith(
-          _$StreamingChannelEmojiAddedResponseImpl value,
-          $Res Function(_$StreamingChannelEmojiAddedResponseImpl) then) =
-      __$$StreamingChannelEmojiAddedResponseImplCopyWithImpl<$Res>;
+    _$StreamingChannelEmojiAddedResponseImpl value,
+    $Res Function(_$StreamingChannelEmojiAddedResponseImpl) then,
+  ) = __$$StreamingChannelEmojiAddedResponseImplCopyWithImpl<$Res>;
   @useResult
   $Res call({EmojiAddedStreamEvent body});
 
@@ -591,27 +594,31 @@ abstract class _$$StreamingChannelEmojiAddedResponseImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$StreamingChannelEmojiAddedResponseImplCopyWithImpl<$Res>
-    extends _$StreamingResponseCopyWithImpl<$Res,
-        _$StreamingChannelEmojiAddedResponseImpl>
+    extends
+        _$StreamingResponseCopyWithImpl<
+          $Res,
+          _$StreamingChannelEmojiAddedResponseImpl
+        >
     implements _$$StreamingChannelEmojiAddedResponseImplCopyWith<$Res> {
   __$$StreamingChannelEmojiAddedResponseImplCopyWithImpl(
-      _$StreamingChannelEmojiAddedResponseImpl _value,
-      $Res Function(_$StreamingChannelEmojiAddedResponseImpl) _then)
-      : super(_value, _then);
+    _$StreamingChannelEmojiAddedResponseImpl _value,
+    $Res Function(_$StreamingChannelEmojiAddedResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of StreamingResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? body = null,
-  }) {
-    return _then(_$StreamingChannelEmojiAddedResponseImpl(
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as EmojiAddedStreamEvent,
-    ));
+  $Res call({Object? body = null}) {
+    return _then(
+      _$StreamingChannelEmojiAddedResponseImpl(
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as EmojiAddedStreamEvent,
+      ),
+    );
   }
 
   /// Create a copy of StreamingResponse
@@ -629,13 +636,14 @@ class __$$StreamingChannelEmojiAddedResponseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$StreamingChannelEmojiAddedResponseImpl
     implements StreamingChannelEmojiAddedResponse {
-  const _$StreamingChannelEmojiAddedResponseImpl(
-      {required this.body, final String? $type})
-      : $type = $type ?? 'emojiAdded';
+  const _$StreamingChannelEmojiAddedResponseImpl({
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'emojiAdded';
 
   factory _$StreamingChannelEmojiAddedResponseImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$StreamingChannelEmojiAddedResponseImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$StreamingChannelEmojiAddedResponseImplFromJson(json);
 
   @override
   final EmojiAddedStreamEvent body;
@@ -666,9 +674,11 @@ class _$StreamingChannelEmojiAddedResponseImpl
   @override
   @pragma('vm:prefer-inline')
   _$$StreamingChannelEmojiAddedResponseImplCopyWith<
-          _$StreamingChannelEmojiAddedResponseImpl>
-      get copyWith => __$$StreamingChannelEmojiAddedResponseImplCopyWithImpl<
-          _$StreamingChannelEmojiAddedResponseImpl>(this, _$identity);
+    _$StreamingChannelEmojiAddedResponseImpl
+  >
+  get copyWith => __$$StreamingChannelEmojiAddedResponseImplCopyWithImpl<
+    _$StreamingChannelEmojiAddedResponseImpl
+  >(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -679,7 +689,7 @@ class _$StreamingChannelEmojiAddedResponseImpl
     required TResult Function(EmojiUpdatedStreamEvent body) emojiUpdated,
     required TResult Function(EmojiDeletedStreamEvent body) emojiDeleted,
     required TResult Function(AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(Object body) fallback,
   }) {
     return emojiAdded(body);
@@ -722,15 +732,15 @@ class _$StreamingChannelEmojiAddedResponseImpl
   TResult map<TResult extends Object?>({
     required TResult Function(StreamingChannelResponse value) channel,
     required TResult Function(StreamingChannelNoteUpdatedResponse value)
-        noteUpdated,
+    noteUpdated,
     required TResult Function(StreamingChannelEmojiAddedResponse value)
-        emojiAdded,
+    emojiAdded,
     required TResult Function(StreamingChannelEmojiUpdatedResponse value)
-        emojiUpdated,
+    emojiUpdated,
     required TResult Function(StreamingChannelEmojiDeletedResponse value)
-        emojiDeleted,
+    emojiDeleted,
     required TResult Function(StreamingChannelAnnouncementCreatedResponse value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(StreamingChannelUnknownResponse value) fallback,
   }) {
     return emojiAdded(this);
@@ -745,7 +755,7 @@ class _$StreamingChannelEmojiAddedResponseImpl
     TResult? Function(StreamingChannelEmojiUpdatedResponse value)? emojiUpdated,
     TResult? Function(StreamingChannelEmojiDeletedResponse value)? emojiDeleted,
     TResult? Function(StreamingChannelAnnouncementCreatedResponse value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(StreamingChannelUnknownResponse value)? fallback,
   }) {
     return emojiAdded?.call(this);
@@ -760,7 +770,7 @@ class _$StreamingChannelEmojiAddedResponseImpl
     TResult Function(StreamingChannelEmojiUpdatedResponse value)? emojiUpdated,
     TResult Function(StreamingChannelEmojiDeletedResponse value)? emojiDeleted,
     TResult Function(StreamingChannelAnnouncementCreatedResponse value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(StreamingChannelUnknownResponse value)? fallback,
     required TResult orElse(),
   }) {
@@ -772,20 +782,18 @@ class _$StreamingChannelEmojiAddedResponseImpl
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$StreamingChannelEmojiAddedResponseImplToJson(
-      this,
-    );
+    return _$$StreamingChannelEmojiAddedResponseImplToJson(this);
   }
 }
 
 abstract class StreamingChannelEmojiAddedResponse implements StreamingResponse {
-  const factory StreamingChannelEmojiAddedResponse(
-          {required final EmojiAddedStreamEvent body}) =
-      _$StreamingChannelEmojiAddedResponseImpl;
+  const factory StreamingChannelEmojiAddedResponse({
+    required final EmojiAddedStreamEvent body,
+  }) = _$StreamingChannelEmojiAddedResponseImpl;
 
   factory StreamingChannelEmojiAddedResponse.fromJson(
-          Map<String, dynamic> json) =
-      _$StreamingChannelEmojiAddedResponseImpl.fromJson;
+    Map<String, dynamic> json,
+  ) = _$StreamingChannelEmojiAddedResponseImpl.fromJson;
 
   @override
   EmojiAddedStreamEvent get body;
@@ -794,16 +802,17 @@ abstract class StreamingChannelEmojiAddedResponse implements StreamingResponse {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StreamingChannelEmojiAddedResponseImplCopyWith<
-          _$StreamingChannelEmojiAddedResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$StreamingChannelEmojiAddedResponseImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$StreamingChannelEmojiUpdatedResponseImplCopyWith<$Res> {
   factory _$$StreamingChannelEmojiUpdatedResponseImplCopyWith(
-          _$StreamingChannelEmojiUpdatedResponseImpl value,
-          $Res Function(_$StreamingChannelEmojiUpdatedResponseImpl) then) =
-      __$$StreamingChannelEmojiUpdatedResponseImplCopyWithImpl<$Res>;
+    _$StreamingChannelEmojiUpdatedResponseImpl value,
+    $Res Function(_$StreamingChannelEmojiUpdatedResponseImpl) then,
+  ) = __$$StreamingChannelEmojiUpdatedResponseImplCopyWithImpl<$Res>;
   @useResult
   $Res call({EmojiUpdatedStreamEvent body});
 
@@ -812,27 +821,31 @@ abstract class _$$StreamingChannelEmojiUpdatedResponseImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$StreamingChannelEmojiUpdatedResponseImplCopyWithImpl<$Res>
-    extends _$StreamingResponseCopyWithImpl<$Res,
-        _$StreamingChannelEmojiUpdatedResponseImpl>
+    extends
+        _$StreamingResponseCopyWithImpl<
+          $Res,
+          _$StreamingChannelEmojiUpdatedResponseImpl
+        >
     implements _$$StreamingChannelEmojiUpdatedResponseImplCopyWith<$Res> {
   __$$StreamingChannelEmojiUpdatedResponseImplCopyWithImpl(
-      _$StreamingChannelEmojiUpdatedResponseImpl _value,
-      $Res Function(_$StreamingChannelEmojiUpdatedResponseImpl) _then)
-      : super(_value, _then);
+    _$StreamingChannelEmojiUpdatedResponseImpl _value,
+    $Res Function(_$StreamingChannelEmojiUpdatedResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of StreamingResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? body = null,
-  }) {
-    return _then(_$StreamingChannelEmojiUpdatedResponseImpl(
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as EmojiUpdatedStreamEvent,
-    ));
+  $Res call({Object? body = null}) {
+    return _then(
+      _$StreamingChannelEmojiUpdatedResponseImpl(
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as EmojiUpdatedStreamEvent,
+      ),
+    );
   }
 
   /// Create a copy of StreamingResponse
@@ -850,13 +863,14 @@ class __$$StreamingChannelEmojiUpdatedResponseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$StreamingChannelEmojiUpdatedResponseImpl
     implements StreamingChannelEmojiUpdatedResponse {
-  const _$StreamingChannelEmojiUpdatedResponseImpl(
-      {required this.body, final String? $type})
-      : $type = $type ?? 'emojiUpdated';
+  const _$StreamingChannelEmojiUpdatedResponseImpl({
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'emojiUpdated';
 
   factory _$StreamingChannelEmojiUpdatedResponseImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$StreamingChannelEmojiUpdatedResponseImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$StreamingChannelEmojiUpdatedResponseImplFromJson(json);
 
   @override
   final EmojiUpdatedStreamEvent body;
@@ -887,9 +901,11 @@ class _$StreamingChannelEmojiUpdatedResponseImpl
   @override
   @pragma('vm:prefer-inline')
   _$$StreamingChannelEmojiUpdatedResponseImplCopyWith<
-          _$StreamingChannelEmojiUpdatedResponseImpl>
-      get copyWith => __$$StreamingChannelEmojiUpdatedResponseImplCopyWithImpl<
-          _$StreamingChannelEmojiUpdatedResponseImpl>(this, _$identity);
+    _$StreamingChannelEmojiUpdatedResponseImpl
+  >
+  get copyWith => __$$StreamingChannelEmojiUpdatedResponseImplCopyWithImpl<
+    _$StreamingChannelEmojiUpdatedResponseImpl
+  >(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -900,7 +916,7 @@ class _$StreamingChannelEmojiUpdatedResponseImpl
     required TResult Function(EmojiUpdatedStreamEvent body) emojiUpdated,
     required TResult Function(EmojiDeletedStreamEvent body) emojiDeleted,
     required TResult Function(AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(Object body) fallback,
   }) {
     return emojiUpdated(body);
@@ -943,15 +959,15 @@ class _$StreamingChannelEmojiUpdatedResponseImpl
   TResult map<TResult extends Object?>({
     required TResult Function(StreamingChannelResponse value) channel,
     required TResult Function(StreamingChannelNoteUpdatedResponse value)
-        noteUpdated,
+    noteUpdated,
     required TResult Function(StreamingChannelEmojiAddedResponse value)
-        emojiAdded,
+    emojiAdded,
     required TResult Function(StreamingChannelEmojiUpdatedResponse value)
-        emojiUpdated,
+    emojiUpdated,
     required TResult Function(StreamingChannelEmojiDeletedResponse value)
-        emojiDeleted,
+    emojiDeleted,
     required TResult Function(StreamingChannelAnnouncementCreatedResponse value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(StreamingChannelUnknownResponse value) fallback,
   }) {
     return emojiUpdated(this);
@@ -966,7 +982,7 @@ class _$StreamingChannelEmojiUpdatedResponseImpl
     TResult? Function(StreamingChannelEmojiUpdatedResponse value)? emojiUpdated,
     TResult? Function(StreamingChannelEmojiDeletedResponse value)? emojiDeleted,
     TResult? Function(StreamingChannelAnnouncementCreatedResponse value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(StreamingChannelUnknownResponse value)? fallback,
   }) {
     return emojiUpdated?.call(this);
@@ -981,7 +997,7 @@ class _$StreamingChannelEmojiUpdatedResponseImpl
     TResult Function(StreamingChannelEmojiUpdatedResponse value)? emojiUpdated,
     TResult Function(StreamingChannelEmojiDeletedResponse value)? emojiDeleted,
     TResult Function(StreamingChannelAnnouncementCreatedResponse value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(StreamingChannelUnknownResponse value)? fallback,
     required TResult orElse(),
   }) {
@@ -993,21 +1009,19 @@ class _$StreamingChannelEmojiUpdatedResponseImpl
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$StreamingChannelEmojiUpdatedResponseImplToJson(
-      this,
-    );
+    return _$$StreamingChannelEmojiUpdatedResponseImplToJson(this);
   }
 }
 
 abstract class StreamingChannelEmojiUpdatedResponse
     implements StreamingResponse {
-  const factory StreamingChannelEmojiUpdatedResponse(
-          {required final EmojiUpdatedStreamEvent body}) =
-      _$StreamingChannelEmojiUpdatedResponseImpl;
+  const factory StreamingChannelEmojiUpdatedResponse({
+    required final EmojiUpdatedStreamEvent body,
+  }) = _$StreamingChannelEmojiUpdatedResponseImpl;
 
   factory StreamingChannelEmojiUpdatedResponse.fromJson(
-          Map<String, dynamic> json) =
-      _$StreamingChannelEmojiUpdatedResponseImpl.fromJson;
+    Map<String, dynamic> json,
+  ) = _$StreamingChannelEmojiUpdatedResponseImpl.fromJson;
 
   @override
   EmojiUpdatedStreamEvent get body;
@@ -1016,16 +1030,17 @@ abstract class StreamingChannelEmojiUpdatedResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StreamingChannelEmojiUpdatedResponseImplCopyWith<
-          _$StreamingChannelEmojiUpdatedResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$StreamingChannelEmojiUpdatedResponseImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$StreamingChannelEmojiDeletedResponseImplCopyWith<$Res> {
   factory _$$StreamingChannelEmojiDeletedResponseImplCopyWith(
-          _$StreamingChannelEmojiDeletedResponseImpl value,
-          $Res Function(_$StreamingChannelEmojiDeletedResponseImpl) then) =
-      __$$StreamingChannelEmojiDeletedResponseImplCopyWithImpl<$Res>;
+    _$StreamingChannelEmojiDeletedResponseImpl value,
+    $Res Function(_$StreamingChannelEmojiDeletedResponseImpl) then,
+  ) = __$$StreamingChannelEmojiDeletedResponseImplCopyWithImpl<$Res>;
   @useResult
   $Res call({EmojiDeletedStreamEvent body});
 
@@ -1034,27 +1049,31 @@ abstract class _$$StreamingChannelEmojiDeletedResponseImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$StreamingChannelEmojiDeletedResponseImplCopyWithImpl<$Res>
-    extends _$StreamingResponseCopyWithImpl<$Res,
-        _$StreamingChannelEmojiDeletedResponseImpl>
+    extends
+        _$StreamingResponseCopyWithImpl<
+          $Res,
+          _$StreamingChannelEmojiDeletedResponseImpl
+        >
     implements _$$StreamingChannelEmojiDeletedResponseImplCopyWith<$Res> {
   __$$StreamingChannelEmojiDeletedResponseImplCopyWithImpl(
-      _$StreamingChannelEmojiDeletedResponseImpl _value,
-      $Res Function(_$StreamingChannelEmojiDeletedResponseImpl) _then)
-      : super(_value, _then);
+    _$StreamingChannelEmojiDeletedResponseImpl _value,
+    $Res Function(_$StreamingChannelEmojiDeletedResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of StreamingResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? body = null,
-  }) {
-    return _then(_$StreamingChannelEmojiDeletedResponseImpl(
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as EmojiDeletedStreamEvent,
-    ));
+  $Res call({Object? body = null}) {
+    return _then(
+      _$StreamingChannelEmojiDeletedResponseImpl(
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as EmojiDeletedStreamEvent,
+      ),
+    );
   }
 
   /// Create a copy of StreamingResponse
@@ -1072,13 +1091,14 @@ class __$$StreamingChannelEmojiDeletedResponseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$StreamingChannelEmojiDeletedResponseImpl
     implements StreamingChannelEmojiDeletedResponse {
-  const _$StreamingChannelEmojiDeletedResponseImpl(
-      {required this.body, final String? $type})
-      : $type = $type ?? 'emojiDeleted';
+  const _$StreamingChannelEmojiDeletedResponseImpl({
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'emojiDeleted';
 
   factory _$StreamingChannelEmojiDeletedResponseImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$StreamingChannelEmojiDeletedResponseImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$StreamingChannelEmojiDeletedResponseImplFromJson(json);
 
   @override
   final EmojiDeletedStreamEvent body;
@@ -1109,9 +1129,11 @@ class _$StreamingChannelEmojiDeletedResponseImpl
   @override
   @pragma('vm:prefer-inline')
   _$$StreamingChannelEmojiDeletedResponseImplCopyWith<
-          _$StreamingChannelEmojiDeletedResponseImpl>
-      get copyWith => __$$StreamingChannelEmojiDeletedResponseImplCopyWithImpl<
-          _$StreamingChannelEmojiDeletedResponseImpl>(this, _$identity);
+    _$StreamingChannelEmojiDeletedResponseImpl
+  >
+  get copyWith => __$$StreamingChannelEmojiDeletedResponseImplCopyWithImpl<
+    _$StreamingChannelEmojiDeletedResponseImpl
+  >(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1122,7 +1144,7 @@ class _$StreamingChannelEmojiDeletedResponseImpl
     required TResult Function(EmojiUpdatedStreamEvent body) emojiUpdated,
     required TResult Function(EmojiDeletedStreamEvent body) emojiDeleted,
     required TResult Function(AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(Object body) fallback,
   }) {
     return emojiDeleted(body);
@@ -1165,15 +1187,15 @@ class _$StreamingChannelEmojiDeletedResponseImpl
   TResult map<TResult extends Object?>({
     required TResult Function(StreamingChannelResponse value) channel,
     required TResult Function(StreamingChannelNoteUpdatedResponse value)
-        noteUpdated,
+    noteUpdated,
     required TResult Function(StreamingChannelEmojiAddedResponse value)
-        emojiAdded,
+    emojiAdded,
     required TResult Function(StreamingChannelEmojiUpdatedResponse value)
-        emojiUpdated,
+    emojiUpdated,
     required TResult Function(StreamingChannelEmojiDeletedResponse value)
-        emojiDeleted,
+    emojiDeleted,
     required TResult Function(StreamingChannelAnnouncementCreatedResponse value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(StreamingChannelUnknownResponse value) fallback,
   }) {
     return emojiDeleted(this);
@@ -1188,7 +1210,7 @@ class _$StreamingChannelEmojiDeletedResponseImpl
     TResult? Function(StreamingChannelEmojiUpdatedResponse value)? emojiUpdated,
     TResult? Function(StreamingChannelEmojiDeletedResponse value)? emojiDeleted,
     TResult? Function(StreamingChannelAnnouncementCreatedResponse value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(StreamingChannelUnknownResponse value)? fallback,
   }) {
     return emojiDeleted?.call(this);
@@ -1203,7 +1225,7 @@ class _$StreamingChannelEmojiDeletedResponseImpl
     TResult Function(StreamingChannelEmojiUpdatedResponse value)? emojiUpdated,
     TResult Function(StreamingChannelEmojiDeletedResponse value)? emojiDeleted,
     TResult Function(StreamingChannelAnnouncementCreatedResponse value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(StreamingChannelUnknownResponse value)? fallback,
     required TResult orElse(),
   }) {
@@ -1215,21 +1237,19 @@ class _$StreamingChannelEmojiDeletedResponseImpl
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$StreamingChannelEmojiDeletedResponseImplToJson(
-      this,
-    );
+    return _$$StreamingChannelEmojiDeletedResponseImplToJson(this);
   }
 }
 
 abstract class StreamingChannelEmojiDeletedResponse
     implements StreamingResponse {
-  const factory StreamingChannelEmojiDeletedResponse(
-          {required final EmojiDeletedStreamEvent body}) =
-      _$StreamingChannelEmojiDeletedResponseImpl;
+  const factory StreamingChannelEmojiDeletedResponse({
+    required final EmojiDeletedStreamEvent body,
+  }) = _$StreamingChannelEmojiDeletedResponseImpl;
 
   factory StreamingChannelEmojiDeletedResponse.fromJson(
-          Map<String, dynamic> json) =
-      _$StreamingChannelEmojiDeletedResponseImpl.fromJson;
+    Map<String, dynamic> json,
+  ) = _$StreamingChannelEmojiDeletedResponseImpl.fromJson;
 
   @override
   EmojiDeletedStreamEvent get body;
@@ -1238,18 +1258,19 @@ abstract class StreamingChannelEmojiDeletedResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StreamingChannelEmojiDeletedResponseImplCopyWith<
-          _$StreamingChannelEmojiDeletedResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$StreamingChannelEmojiDeletedResponseImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$StreamingChannelAnnouncementCreatedResponseImplCopyWith<
-    $Res> {
+  $Res
+> {
   factory _$$StreamingChannelAnnouncementCreatedResponseImplCopyWith(
-          _$StreamingChannelAnnouncementCreatedResponseImpl value,
-          $Res Function(_$StreamingChannelAnnouncementCreatedResponseImpl)
-              then) =
-      __$$StreamingChannelAnnouncementCreatedResponseImplCopyWithImpl<$Res>;
+    _$StreamingChannelAnnouncementCreatedResponseImpl value,
+    $Res Function(_$StreamingChannelAnnouncementCreatedResponseImpl) then,
+  ) = __$$StreamingChannelAnnouncementCreatedResponseImplCopyWithImpl<$Res>;
   @useResult
   $Res call({AnnouncementCreatedStreamEvent body});
 
@@ -1258,28 +1279,32 @@ abstract class _$$StreamingChannelAnnouncementCreatedResponseImplCopyWith<
 
 /// @nodoc
 class __$$StreamingChannelAnnouncementCreatedResponseImplCopyWithImpl<$Res>
-    extends _$StreamingResponseCopyWithImpl<$Res,
-        _$StreamingChannelAnnouncementCreatedResponseImpl>
+    extends
+        _$StreamingResponseCopyWithImpl<
+          $Res,
+          _$StreamingChannelAnnouncementCreatedResponseImpl
+        >
     implements
         _$$StreamingChannelAnnouncementCreatedResponseImplCopyWith<$Res> {
   __$$StreamingChannelAnnouncementCreatedResponseImplCopyWithImpl(
-      _$StreamingChannelAnnouncementCreatedResponseImpl _value,
-      $Res Function(_$StreamingChannelAnnouncementCreatedResponseImpl) _then)
-      : super(_value, _then);
+    _$StreamingChannelAnnouncementCreatedResponseImpl _value,
+    $Res Function(_$StreamingChannelAnnouncementCreatedResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of StreamingResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? body = null,
-  }) {
-    return _then(_$StreamingChannelAnnouncementCreatedResponseImpl(
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as AnnouncementCreatedStreamEvent,
-    ));
+  $Res call({Object? body = null}) {
+    return _then(
+      _$StreamingChannelAnnouncementCreatedResponseImpl(
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as AnnouncementCreatedStreamEvent,
+      ),
+    );
   }
 
   /// Create a copy of StreamingResponse
@@ -1297,13 +1322,14 @@ class __$$StreamingChannelAnnouncementCreatedResponseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$StreamingChannelAnnouncementCreatedResponseImpl
     implements StreamingChannelAnnouncementCreatedResponse {
-  const _$StreamingChannelAnnouncementCreatedResponseImpl(
-      {required this.body, final String? $type})
-      : $type = $type ?? 'announcementCreated';
+  const _$StreamingChannelAnnouncementCreatedResponseImpl({
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'announcementCreated';
 
   factory _$StreamingChannelAnnouncementCreatedResponseImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$StreamingChannelAnnouncementCreatedResponseImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$StreamingChannelAnnouncementCreatedResponseImplFromJson(json);
 
   @override
   final AnnouncementCreatedStreamEvent body;
@@ -1334,11 +1360,12 @@ class _$StreamingChannelAnnouncementCreatedResponseImpl
   @override
   @pragma('vm:prefer-inline')
   _$$StreamingChannelAnnouncementCreatedResponseImplCopyWith<
-          _$StreamingChannelAnnouncementCreatedResponseImpl>
-      get copyWith =>
-          __$$StreamingChannelAnnouncementCreatedResponseImplCopyWithImpl<
-                  _$StreamingChannelAnnouncementCreatedResponseImpl>(
-              this, _$identity);
+    _$StreamingChannelAnnouncementCreatedResponseImpl
+  >
+  get copyWith =>
+      __$$StreamingChannelAnnouncementCreatedResponseImplCopyWithImpl<
+        _$StreamingChannelAnnouncementCreatedResponseImpl
+      >(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1349,7 +1376,7 @@ class _$StreamingChannelAnnouncementCreatedResponseImpl
     required TResult Function(EmojiUpdatedStreamEvent body) emojiUpdated,
     required TResult Function(EmojiDeletedStreamEvent body) emojiDeleted,
     required TResult Function(AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(Object body) fallback,
   }) {
     return announcementCreated(body);
@@ -1392,15 +1419,15 @@ class _$StreamingChannelAnnouncementCreatedResponseImpl
   TResult map<TResult extends Object?>({
     required TResult Function(StreamingChannelResponse value) channel,
     required TResult Function(StreamingChannelNoteUpdatedResponse value)
-        noteUpdated,
+    noteUpdated,
     required TResult Function(StreamingChannelEmojiAddedResponse value)
-        emojiAdded,
+    emojiAdded,
     required TResult Function(StreamingChannelEmojiUpdatedResponse value)
-        emojiUpdated,
+    emojiUpdated,
     required TResult Function(StreamingChannelEmojiDeletedResponse value)
-        emojiDeleted,
+    emojiDeleted,
     required TResult Function(StreamingChannelAnnouncementCreatedResponse value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(StreamingChannelUnknownResponse value) fallback,
   }) {
     return announcementCreated(this);
@@ -1415,7 +1442,7 @@ class _$StreamingChannelAnnouncementCreatedResponseImpl
     TResult? Function(StreamingChannelEmojiUpdatedResponse value)? emojiUpdated,
     TResult? Function(StreamingChannelEmojiDeletedResponse value)? emojiDeleted,
     TResult? Function(StreamingChannelAnnouncementCreatedResponse value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(StreamingChannelUnknownResponse value)? fallback,
   }) {
     return announcementCreated?.call(this);
@@ -1430,7 +1457,7 @@ class _$StreamingChannelAnnouncementCreatedResponseImpl
     TResult Function(StreamingChannelEmojiUpdatedResponse value)? emojiUpdated,
     TResult Function(StreamingChannelEmojiDeletedResponse value)? emojiDeleted,
     TResult Function(StreamingChannelAnnouncementCreatedResponse value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(StreamingChannelUnknownResponse value)? fallback,
     required TResult orElse(),
   }) {
@@ -1442,21 +1469,19 @@ class _$StreamingChannelAnnouncementCreatedResponseImpl
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$StreamingChannelAnnouncementCreatedResponseImplToJson(
-      this,
-    );
+    return _$$StreamingChannelAnnouncementCreatedResponseImplToJson(this);
   }
 }
 
 abstract class StreamingChannelAnnouncementCreatedResponse
     implements StreamingResponse {
-  const factory StreamingChannelAnnouncementCreatedResponse(
-          {required final AnnouncementCreatedStreamEvent body}) =
-      _$StreamingChannelAnnouncementCreatedResponseImpl;
+  const factory StreamingChannelAnnouncementCreatedResponse({
+    required final AnnouncementCreatedStreamEvent body,
+  }) = _$StreamingChannelAnnouncementCreatedResponseImpl;
 
   factory StreamingChannelAnnouncementCreatedResponse.fromJson(
-          Map<String, dynamic> json) =
-      _$StreamingChannelAnnouncementCreatedResponseImpl.fromJson;
+    Map<String, dynamic> json,
+  ) = _$StreamingChannelAnnouncementCreatedResponseImpl.fromJson;
 
   @override
   AnnouncementCreatedStreamEvent get body;
@@ -1465,40 +1490,44 @@ abstract class StreamingChannelAnnouncementCreatedResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StreamingChannelAnnouncementCreatedResponseImplCopyWith<
-          _$StreamingChannelAnnouncementCreatedResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$StreamingChannelAnnouncementCreatedResponseImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$StreamingChannelUnknownResponseImplCopyWith<$Res> {
   factory _$$StreamingChannelUnknownResponseImplCopyWith(
-          _$StreamingChannelUnknownResponseImpl value,
-          $Res Function(_$StreamingChannelUnknownResponseImpl) then) =
-      __$$StreamingChannelUnknownResponseImplCopyWithImpl<$Res>;
+    _$StreamingChannelUnknownResponseImpl value,
+    $Res Function(_$StreamingChannelUnknownResponseImpl) then,
+  ) = __$$StreamingChannelUnknownResponseImplCopyWithImpl<$Res>;
   @useResult
   $Res call({Object body});
 }
 
 /// @nodoc
 class __$$StreamingChannelUnknownResponseImplCopyWithImpl<$Res>
-    extends _$StreamingResponseCopyWithImpl<$Res,
-        _$StreamingChannelUnknownResponseImpl>
+    extends
+        _$StreamingResponseCopyWithImpl<
+          $Res,
+          _$StreamingChannelUnknownResponseImpl
+        >
     implements _$$StreamingChannelUnknownResponseImplCopyWith<$Res> {
   __$$StreamingChannelUnknownResponseImplCopyWithImpl(
-      _$StreamingChannelUnknownResponseImpl _value,
-      $Res Function(_$StreamingChannelUnknownResponseImpl) _then)
-      : super(_value, _then);
+    _$StreamingChannelUnknownResponseImpl _value,
+    $Res Function(_$StreamingChannelUnknownResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of StreamingResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? body = null,
-  }) {
-    return _then(_$StreamingChannelUnknownResponseImpl(
-      body: null == body ? _value.body : body,
-    ));
+  $Res call({Object? body = null}) {
+    return _then(
+      _$StreamingChannelUnknownResponseImpl(
+        body: null == body ? _value.body : body,
+      ),
+    );
   }
 }
 
@@ -1506,13 +1535,14 @@ class __$$StreamingChannelUnknownResponseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$StreamingChannelUnknownResponseImpl
     implements StreamingChannelUnknownResponse {
-  const _$StreamingChannelUnknownResponseImpl(
-      {required this.body, final String? $type})
-      : $type = $type ?? 'fallback';
+  const _$StreamingChannelUnknownResponseImpl({
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'fallback';
 
   factory _$StreamingChannelUnknownResponseImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$StreamingChannelUnknownResponseImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$StreamingChannelUnknownResponseImplFromJson(json);
 
   @override
   final Object body;
@@ -1544,9 +1574,11 @@ class _$StreamingChannelUnknownResponseImpl
   @override
   @pragma('vm:prefer-inline')
   _$$StreamingChannelUnknownResponseImplCopyWith<
-          _$StreamingChannelUnknownResponseImpl>
-      get copyWith => __$$StreamingChannelUnknownResponseImplCopyWithImpl<
-          _$StreamingChannelUnknownResponseImpl>(this, _$identity);
+    _$StreamingChannelUnknownResponseImpl
+  >
+  get copyWith => __$$StreamingChannelUnknownResponseImplCopyWithImpl<
+    _$StreamingChannelUnknownResponseImpl
+  >(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1557,7 +1589,7 @@ class _$StreamingChannelUnknownResponseImpl
     required TResult Function(EmojiUpdatedStreamEvent body) emojiUpdated,
     required TResult Function(EmojiDeletedStreamEvent body) emojiDeleted,
     required TResult Function(AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(Object body) fallback,
   }) {
     return fallback(body);
@@ -1600,15 +1632,15 @@ class _$StreamingChannelUnknownResponseImpl
   TResult map<TResult extends Object?>({
     required TResult Function(StreamingChannelResponse value) channel,
     required TResult Function(StreamingChannelNoteUpdatedResponse value)
-        noteUpdated,
+    noteUpdated,
     required TResult Function(StreamingChannelEmojiAddedResponse value)
-        emojiAdded,
+    emojiAdded,
     required TResult Function(StreamingChannelEmojiUpdatedResponse value)
-        emojiUpdated,
+    emojiUpdated,
     required TResult Function(StreamingChannelEmojiDeletedResponse value)
-        emojiDeleted,
+    emojiDeleted,
     required TResult Function(StreamingChannelAnnouncementCreatedResponse value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(StreamingChannelUnknownResponse value) fallback,
   }) {
     return fallback(this);
@@ -1623,7 +1655,7 @@ class _$StreamingChannelUnknownResponseImpl
     TResult? Function(StreamingChannelEmojiUpdatedResponse value)? emojiUpdated,
     TResult? Function(StreamingChannelEmojiDeletedResponse value)? emojiDeleted,
     TResult? Function(StreamingChannelAnnouncementCreatedResponse value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(StreamingChannelUnknownResponse value)? fallback,
   }) {
     return fallback?.call(this);
@@ -1638,7 +1670,7 @@ class _$StreamingChannelUnknownResponseImpl
     TResult Function(StreamingChannelEmojiUpdatedResponse value)? emojiUpdated,
     TResult Function(StreamingChannelEmojiDeletedResponse value)? emojiDeleted,
     TResult Function(StreamingChannelAnnouncementCreatedResponse value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(StreamingChannelUnknownResponse value)? fallback,
     required TResult orElse(),
   }) {
@@ -1650,9 +1682,7 @@ class _$StreamingChannelUnknownResponseImpl
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$StreamingChannelUnknownResponseImplToJson(
-      this,
-    );
+    return _$$StreamingChannelUnknownResponseImplToJson(this);
   }
 }
 
@@ -1670,12 +1700,14 @@ abstract class StreamingChannelUnknownResponse implements StreamingResponse {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StreamingChannelUnknownResponseImplCopyWith<
-          _$StreamingChannelUnknownResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$StreamingChannelUnknownResponseImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 EmojiAddedStreamEvent _$EmojiAddedStreamEventFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _EmojiAddedStreamEvent.fromJson(json);
 }
 
@@ -1695,9 +1727,10 @@ mixin _$EmojiAddedStreamEvent {
 
 /// @nodoc
 abstract class $EmojiAddedStreamEventCopyWith<$Res> {
-  factory $EmojiAddedStreamEventCopyWith(EmojiAddedStreamEvent value,
-          $Res Function(EmojiAddedStreamEvent) then) =
-      _$EmojiAddedStreamEventCopyWithImpl<$Res, EmojiAddedStreamEvent>;
+  factory $EmojiAddedStreamEventCopyWith(
+    EmojiAddedStreamEvent value,
+    $Res Function(EmojiAddedStreamEvent) then,
+  ) = _$EmojiAddedStreamEventCopyWithImpl<$Res, EmojiAddedStreamEvent>;
   @useResult
   $Res call({Emoji emoji});
 
@@ -1705,8 +1738,10 @@ abstract class $EmojiAddedStreamEventCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$EmojiAddedStreamEventCopyWithImpl<$Res,
-        $Val extends EmojiAddedStreamEvent>
+class _$EmojiAddedStreamEventCopyWithImpl<
+  $Res,
+  $Val extends EmojiAddedStreamEvent
+>
     implements $EmojiAddedStreamEventCopyWith<$Res> {
   _$EmojiAddedStreamEventCopyWithImpl(this._value, this._then);
 
@@ -1719,15 +1754,17 @@ class _$EmojiAddedStreamEventCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? emoji = null,
-  }) {
-    return _then(_value.copyWith(
-      emoji: null == emoji
-          ? _value.emoji
-          : emoji // ignore: cast_nullable_to_non_nullable
-              as Emoji,
-    ) as $Val);
+  $Res call({Object? emoji = null}) {
+    return _then(
+      _value.copyWith(
+            emoji:
+                null == emoji
+                    ? _value.emoji
+                    : emoji // ignore: cast_nullable_to_non_nullable
+                        as Emoji,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of EmojiAddedStreamEvent
@@ -1745,9 +1782,9 @@ class _$EmojiAddedStreamEventCopyWithImpl<$Res,
 abstract class _$$EmojiAddedStreamEventImplCopyWith<$Res>
     implements $EmojiAddedStreamEventCopyWith<$Res> {
   factory _$$EmojiAddedStreamEventImplCopyWith(
-          _$EmojiAddedStreamEventImpl value,
-          $Res Function(_$EmojiAddedStreamEventImpl) then) =
-      __$$EmojiAddedStreamEventImplCopyWithImpl<$Res>;
+    _$EmojiAddedStreamEventImpl value,
+    $Res Function(_$EmojiAddedStreamEventImpl) then,
+  ) = __$$EmojiAddedStreamEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Emoji emoji});
@@ -1758,26 +1795,28 @@ abstract class _$$EmojiAddedStreamEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$EmojiAddedStreamEventImplCopyWithImpl<$Res>
-    extends _$EmojiAddedStreamEventCopyWithImpl<$Res,
-        _$EmojiAddedStreamEventImpl>
+    extends
+        _$EmojiAddedStreamEventCopyWithImpl<$Res, _$EmojiAddedStreamEventImpl>
     implements _$$EmojiAddedStreamEventImplCopyWith<$Res> {
-  __$$EmojiAddedStreamEventImplCopyWithImpl(_$EmojiAddedStreamEventImpl _value,
-      $Res Function(_$EmojiAddedStreamEventImpl) _then)
-      : super(_value, _then);
+  __$$EmojiAddedStreamEventImplCopyWithImpl(
+    _$EmojiAddedStreamEventImpl _value,
+    $Res Function(_$EmojiAddedStreamEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of EmojiAddedStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? emoji = null,
-  }) {
-    return _then(_$EmojiAddedStreamEventImpl(
-      emoji: null == emoji
-          ? _value.emoji
-          : emoji // ignore: cast_nullable_to_non_nullable
-              as Emoji,
-    ));
+  $Res call({Object? emoji = null}) {
+    return _then(
+      _$EmojiAddedStreamEventImpl(
+        emoji:
+            null == emoji
+                ? _value.emoji
+                : emoji // ignore: cast_nullable_to_non_nullable
+                    as Emoji,
+      ),
+    );
   }
 }
 
@@ -1815,14 +1854,15 @@ class _$EmojiAddedStreamEventImpl implements _EmojiAddedStreamEvent {
   @override
   @pragma('vm:prefer-inline')
   _$$EmojiAddedStreamEventImplCopyWith<_$EmojiAddedStreamEventImpl>
-      get copyWith => __$$EmojiAddedStreamEventImplCopyWithImpl<
-          _$EmojiAddedStreamEventImpl>(this, _$identity);
+  get copyWith =>
+      __$$EmojiAddedStreamEventImplCopyWithImpl<_$EmojiAddedStreamEventImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$EmojiAddedStreamEventImplToJson(
-      this,
-    );
+    return _$$EmojiAddedStreamEventImplToJson(this);
   }
 }
 
@@ -1841,11 +1881,12 @@ abstract class _EmojiAddedStreamEvent implements EmojiAddedStreamEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EmojiAddedStreamEventImplCopyWith<_$EmojiAddedStreamEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 EmojiUpdatedStreamEvent _$EmojiUpdatedStreamEventFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _EmojiUpdatedStreamEvent.fromJson(json);
 }
 
@@ -1865,16 +1906,19 @@ mixin _$EmojiUpdatedStreamEvent {
 
 /// @nodoc
 abstract class $EmojiUpdatedStreamEventCopyWith<$Res> {
-  factory $EmojiUpdatedStreamEventCopyWith(EmojiUpdatedStreamEvent value,
-          $Res Function(EmojiUpdatedStreamEvent) then) =
-      _$EmojiUpdatedStreamEventCopyWithImpl<$Res, EmojiUpdatedStreamEvent>;
+  factory $EmojiUpdatedStreamEventCopyWith(
+    EmojiUpdatedStreamEvent value,
+    $Res Function(EmojiUpdatedStreamEvent) then,
+  ) = _$EmojiUpdatedStreamEventCopyWithImpl<$Res, EmojiUpdatedStreamEvent>;
   @useResult
   $Res call({List<Emoji> emojis});
 }
 
 /// @nodoc
-class _$EmojiUpdatedStreamEventCopyWithImpl<$Res,
-        $Val extends EmojiUpdatedStreamEvent>
+class _$EmojiUpdatedStreamEventCopyWithImpl<
+  $Res,
+  $Val extends EmojiUpdatedStreamEvent
+>
     implements $EmojiUpdatedStreamEventCopyWith<$Res> {
   _$EmojiUpdatedStreamEventCopyWithImpl(this._value, this._then);
 
@@ -1887,15 +1931,17 @@ class _$EmojiUpdatedStreamEventCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? emojis = null,
-  }) {
-    return _then(_value.copyWith(
-      emojis: null == emojis
-          ? _value.emojis
-          : emojis // ignore: cast_nullable_to_non_nullable
-              as List<Emoji>,
-    ) as $Val);
+  $Res call({Object? emojis = null}) {
+    return _then(
+      _value.copyWith(
+            emojis:
+                null == emojis
+                    ? _value.emojis
+                    : emojis // ignore: cast_nullable_to_non_nullable
+                        as List<Emoji>,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -1903,9 +1949,9 @@ class _$EmojiUpdatedStreamEventCopyWithImpl<$Res,
 abstract class _$$EmojiUpdatedStreamEventImplCopyWith<$Res>
     implements $EmojiUpdatedStreamEventCopyWith<$Res> {
   factory _$$EmojiUpdatedStreamEventImplCopyWith(
-          _$EmojiUpdatedStreamEventImpl value,
-          $Res Function(_$EmojiUpdatedStreamEventImpl) then) =
-      __$$EmojiUpdatedStreamEventImplCopyWithImpl<$Res>;
+    _$EmojiUpdatedStreamEventImpl value,
+    $Res Function(_$EmojiUpdatedStreamEventImpl) then,
+  ) = __$$EmojiUpdatedStreamEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<Emoji> emojis});
@@ -1913,27 +1959,31 @@ abstract class _$$EmojiUpdatedStreamEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$EmojiUpdatedStreamEventImplCopyWithImpl<$Res>
-    extends _$EmojiUpdatedStreamEventCopyWithImpl<$Res,
-        _$EmojiUpdatedStreamEventImpl>
+    extends
+        _$EmojiUpdatedStreamEventCopyWithImpl<
+          $Res,
+          _$EmojiUpdatedStreamEventImpl
+        >
     implements _$$EmojiUpdatedStreamEventImplCopyWith<$Res> {
   __$$EmojiUpdatedStreamEventImplCopyWithImpl(
-      _$EmojiUpdatedStreamEventImpl _value,
-      $Res Function(_$EmojiUpdatedStreamEventImpl) _then)
-      : super(_value, _then);
+    _$EmojiUpdatedStreamEventImpl _value,
+    $Res Function(_$EmojiUpdatedStreamEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of EmojiUpdatedStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? emojis = null,
-  }) {
-    return _then(_$EmojiUpdatedStreamEventImpl(
-      emojis: null == emojis
-          ? _value._emojis
-          : emojis // ignore: cast_nullable_to_non_nullable
-              as List<Emoji>,
-    ));
+  $Res call({Object? emojis = null}) {
+    return _then(
+      _$EmojiUpdatedStreamEventImpl(
+        emojis:
+            null == emojis
+                ? _value._emojis
+                : emojis // ignore: cast_nullable_to_non_nullable
+                    as List<Emoji>,
+      ),
+    );
   }
 }
 
@@ -1941,7 +1991,7 @@ class __$$EmojiUpdatedStreamEventImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$EmojiUpdatedStreamEventImpl implements _EmojiUpdatedStreamEvent {
   const _$EmojiUpdatedStreamEventImpl({required final List<Emoji> emojis})
-      : _emojis = emojis;
+    : _emojis = emojis;
 
   factory _$EmojiUpdatedStreamEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$EmojiUpdatedStreamEventImplFromJson(json);
@@ -1978,14 +2028,13 @@ class _$EmojiUpdatedStreamEventImpl implements _EmojiUpdatedStreamEvent {
   @override
   @pragma('vm:prefer-inline')
   _$$EmojiUpdatedStreamEventImplCopyWith<_$EmojiUpdatedStreamEventImpl>
-      get copyWith => __$$EmojiUpdatedStreamEventImplCopyWithImpl<
-          _$EmojiUpdatedStreamEventImpl>(this, _$identity);
+  get copyWith => __$$EmojiUpdatedStreamEventImplCopyWithImpl<
+    _$EmojiUpdatedStreamEventImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$EmojiUpdatedStreamEventImplToJson(
-      this,
-    );
+    return _$$EmojiUpdatedStreamEventImplToJson(this);
   }
 }
 
@@ -2004,11 +2053,12 @@ abstract class _EmojiUpdatedStreamEvent implements EmojiUpdatedStreamEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EmojiUpdatedStreamEventImplCopyWith<_$EmojiUpdatedStreamEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 EmojiDeletedStreamEvent _$EmojiDeletedStreamEventFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _EmojiDeletedStreamEvent.fromJson(json);
 }
 
@@ -2028,16 +2078,19 @@ mixin _$EmojiDeletedStreamEvent {
 
 /// @nodoc
 abstract class $EmojiDeletedStreamEventCopyWith<$Res> {
-  factory $EmojiDeletedStreamEventCopyWith(EmojiDeletedStreamEvent value,
-          $Res Function(EmojiDeletedStreamEvent) then) =
-      _$EmojiDeletedStreamEventCopyWithImpl<$Res, EmojiDeletedStreamEvent>;
+  factory $EmojiDeletedStreamEventCopyWith(
+    EmojiDeletedStreamEvent value,
+    $Res Function(EmojiDeletedStreamEvent) then,
+  ) = _$EmojiDeletedStreamEventCopyWithImpl<$Res, EmojiDeletedStreamEvent>;
   @useResult
   $Res call({List<Emoji> emojis});
 }
 
 /// @nodoc
-class _$EmojiDeletedStreamEventCopyWithImpl<$Res,
-        $Val extends EmojiDeletedStreamEvent>
+class _$EmojiDeletedStreamEventCopyWithImpl<
+  $Res,
+  $Val extends EmojiDeletedStreamEvent
+>
     implements $EmojiDeletedStreamEventCopyWith<$Res> {
   _$EmojiDeletedStreamEventCopyWithImpl(this._value, this._then);
 
@@ -2050,15 +2103,17 @@ class _$EmojiDeletedStreamEventCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? emojis = null,
-  }) {
-    return _then(_value.copyWith(
-      emojis: null == emojis
-          ? _value.emojis
-          : emojis // ignore: cast_nullable_to_non_nullable
-              as List<Emoji>,
-    ) as $Val);
+  $Res call({Object? emojis = null}) {
+    return _then(
+      _value.copyWith(
+            emojis:
+                null == emojis
+                    ? _value.emojis
+                    : emojis // ignore: cast_nullable_to_non_nullable
+                        as List<Emoji>,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -2066,9 +2121,9 @@ class _$EmojiDeletedStreamEventCopyWithImpl<$Res,
 abstract class _$$EmojiDeletedStreamEventImplCopyWith<$Res>
     implements $EmojiDeletedStreamEventCopyWith<$Res> {
   factory _$$EmojiDeletedStreamEventImplCopyWith(
-          _$EmojiDeletedStreamEventImpl value,
-          $Res Function(_$EmojiDeletedStreamEventImpl) then) =
-      __$$EmojiDeletedStreamEventImplCopyWithImpl<$Res>;
+    _$EmojiDeletedStreamEventImpl value,
+    $Res Function(_$EmojiDeletedStreamEventImpl) then,
+  ) = __$$EmojiDeletedStreamEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<Emoji> emojis});
@@ -2076,27 +2131,31 @@ abstract class _$$EmojiDeletedStreamEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$EmojiDeletedStreamEventImplCopyWithImpl<$Res>
-    extends _$EmojiDeletedStreamEventCopyWithImpl<$Res,
-        _$EmojiDeletedStreamEventImpl>
+    extends
+        _$EmojiDeletedStreamEventCopyWithImpl<
+          $Res,
+          _$EmojiDeletedStreamEventImpl
+        >
     implements _$$EmojiDeletedStreamEventImplCopyWith<$Res> {
   __$$EmojiDeletedStreamEventImplCopyWithImpl(
-      _$EmojiDeletedStreamEventImpl _value,
-      $Res Function(_$EmojiDeletedStreamEventImpl) _then)
-      : super(_value, _then);
+    _$EmojiDeletedStreamEventImpl _value,
+    $Res Function(_$EmojiDeletedStreamEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of EmojiDeletedStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? emojis = null,
-  }) {
-    return _then(_$EmojiDeletedStreamEventImpl(
-      emojis: null == emojis
-          ? _value._emojis
-          : emojis // ignore: cast_nullable_to_non_nullable
-              as List<Emoji>,
-    ));
+  $Res call({Object? emojis = null}) {
+    return _then(
+      _$EmojiDeletedStreamEventImpl(
+        emojis:
+            null == emojis
+                ? _value._emojis
+                : emojis // ignore: cast_nullable_to_non_nullable
+                    as List<Emoji>,
+      ),
+    );
   }
 }
 
@@ -2104,7 +2163,7 @@ class __$$EmojiDeletedStreamEventImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$EmojiDeletedStreamEventImpl implements _EmojiDeletedStreamEvent {
   const _$EmojiDeletedStreamEventImpl({required final List<Emoji> emojis})
-      : _emojis = emojis;
+    : _emojis = emojis;
 
   factory _$EmojiDeletedStreamEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$EmojiDeletedStreamEventImplFromJson(json);
@@ -2141,14 +2200,13 @@ class _$EmojiDeletedStreamEventImpl implements _EmojiDeletedStreamEvent {
   @override
   @pragma('vm:prefer-inline')
   _$$EmojiDeletedStreamEventImplCopyWith<_$EmojiDeletedStreamEventImpl>
-      get copyWith => __$$EmojiDeletedStreamEventImplCopyWithImpl<
-          _$EmojiDeletedStreamEventImpl>(this, _$identity);
+  get copyWith => __$$EmojiDeletedStreamEventImplCopyWithImpl<
+    _$EmojiDeletedStreamEventImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$EmojiDeletedStreamEventImplToJson(
-      this,
-    );
+    return _$$EmojiDeletedStreamEventImplToJson(this);
   }
 }
 
@@ -2167,11 +2225,12 @@ abstract class _EmojiDeletedStreamEvent implements EmojiDeletedStreamEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EmojiDeletedStreamEventImplCopyWith<_$EmojiDeletedStreamEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 AnnouncementCreatedStreamEvent _$AnnouncementCreatedStreamEventFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _AnnouncementCreatedStreamEvent.fromJson(json);
 }
 
@@ -2186,16 +2245,19 @@ mixin _$AnnouncementCreatedStreamEvent {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $AnnouncementCreatedStreamEventCopyWith<AnnouncementCreatedStreamEvent>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $AnnouncementCreatedStreamEventCopyWith<$Res> {
   factory $AnnouncementCreatedStreamEventCopyWith(
-          AnnouncementCreatedStreamEvent value,
-          $Res Function(AnnouncementCreatedStreamEvent) then) =
-      _$AnnouncementCreatedStreamEventCopyWithImpl<$Res,
-          AnnouncementCreatedStreamEvent>;
+    AnnouncementCreatedStreamEvent value,
+    $Res Function(AnnouncementCreatedStreamEvent) then,
+  ) =
+      _$AnnouncementCreatedStreamEventCopyWithImpl<
+        $Res,
+        AnnouncementCreatedStreamEvent
+      >;
   @useResult
   $Res call({AnnouncementsResponse announcement});
 
@@ -2203,8 +2265,10 @@ abstract class $AnnouncementCreatedStreamEventCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$AnnouncementCreatedStreamEventCopyWithImpl<$Res,
-        $Val extends AnnouncementCreatedStreamEvent>
+class _$AnnouncementCreatedStreamEventCopyWithImpl<
+  $Res,
+  $Val extends AnnouncementCreatedStreamEvent
+>
     implements $AnnouncementCreatedStreamEventCopyWith<$Res> {
   _$AnnouncementCreatedStreamEventCopyWithImpl(this._value, this._then);
 
@@ -2217,15 +2281,17 @@ class _$AnnouncementCreatedStreamEventCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? announcement = null,
-  }) {
-    return _then(_value.copyWith(
-      announcement: null == announcement
-          ? _value.announcement
-          : announcement // ignore: cast_nullable_to_non_nullable
-              as AnnouncementsResponse,
-    ) as $Val);
+  $Res call({Object? announcement = null}) {
+    return _then(
+      _value.copyWith(
+            announcement:
+                null == announcement
+                    ? _value.announcement
+                    : announcement // ignore: cast_nullable_to_non_nullable
+                        as AnnouncementsResponse,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of AnnouncementCreatedStreamEvent
@@ -2243,9 +2309,9 @@ class _$AnnouncementCreatedStreamEventCopyWithImpl<$Res,
 abstract class _$$AnnouncementCreatedStreamEventImplCopyWith<$Res>
     implements $AnnouncementCreatedStreamEventCopyWith<$Res> {
   factory _$$AnnouncementCreatedStreamEventImplCopyWith(
-          _$AnnouncementCreatedStreamEventImpl value,
-          $Res Function(_$AnnouncementCreatedStreamEventImpl) then) =
-      __$$AnnouncementCreatedStreamEventImplCopyWithImpl<$Res>;
+    _$AnnouncementCreatedStreamEventImpl value,
+    $Res Function(_$AnnouncementCreatedStreamEventImpl) then,
+  ) = __$$AnnouncementCreatedStreamEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({AnnouncementsResponse announcement});
@@ -2256,27 +2322,31 @@ abstract class _$$AnnouncementCreatedStreamEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$AnnouncementCreatedStreamEventImplCopyWithImpl<$Res>
-    extends _$AnnouncementCreatedStreamEventCopyWithImpl<$Res,
-        _$AnnouncementCreatedStreamEventImpl>
+    extends
+        _$AnnouncementCreatedStreamEventCopyWithImpl<
+          $Res,
+          _$AnnouncementCreatedStreamEventImpl
+        >
     implements _$$AnnouncementCreatedStreamEventImplCopyWith<$Res> {
   __$$AnnouncementCreatedStreamEventImplCopyWithImpl(
-      _$AnnouncementCreatedStreamEventImpl _value,
-      $Res Function(_$AnnouncementCreatedStreamEventImpl) _then)
-      : super(_value, _then);
+    _$AnnouncementCreatedStreamEventImpl _value,
+    $Res Function(_$AnnouncementCreatedStreamEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of AnnouncementCreatedStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? announcement = null,
-  }) {
-    return _then(_$AnnouncementCreatedStreamEventImpl(
-      announcement: null == announcement
-          ? _value.announcement
-          : announcement // ignore: cast_nullable_to_non_nullable
-              as AnnouncementsResponse,
-    ));
+  $Res call({Object? announcement = null}) {
+    return _then(
+      _$AnnouncementCreatedStreamEventImpl(
+        announcement:
+            null == announcement
+                ? _value.announcement
+                : announcement // ignore: cast_nullable_to_non_nullable
+                    as AnnouncementsResponse,
+      ),
+    );
   }
 }
 
@@ -2287,8 +2357,8 @@ class _$AnnouncementCreatedStreamEventImpl
   const _$AnnouncementCreatedStreamEventImpl({required this.announcement});
 
   factory _$AnnouncementCreatedStreamEventImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$AnnouncementCreatedStreamEventImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$AnnouncementCreatedStreamEventImplFromJson(json);
 
   @override
   final AnnouncementsResponse announcement;
@@ -2317,23 +2387,23 @@ class _$AnnouncementCreatedStreamEventImpl
   @override
   @pragma('vm:prefer-inline')
   _$$AnnouncementCreatedStreamEventImplCopyWith<
-          _$AnnouncementCreatedStreamEventImpl>
-      get copyWith => __$$AnnouncementCreatedStreamEventImplCopyWithImpl<
-          _$AnnouncementCreatedStreamEventImpl>(this, _$identity);
+    _$AnnouncementCreatedStreamEventImpl
+  >
+  get copyWith => __$$AnnouncementCreatedStreamEventImplCopyWithImpl<
+    _$AnnouncementCreatedStreamEventImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AnnouncementCreatedStreamEventImplToJson(
-      this,
-    );
+    return _$$AnnouncementCreatedStreamEventImplToJson(this);
   }
 }
 
 abstract class _AnnouncementCreatedStreamEvent
     implements AnnouncementCreatedStreamEvent {
-  const factory _AnnouncementCreatedStreamEvent(
-          {required final AnnouncementsResponse announcement}) =
-      _$AnnouncementCreatedStreamEventImpl;
+  const factory _AnnouncementCreatedStreamEvent({
+    required final AnnouncementsResponse announcement,
+  }) = _$AnnouncementCreatedStreamEventImpl;
 
   factory _AnnouncementCreatedStreamEvent.fromJson(Map<String, dynamic> json) =
       _$AnnouncementCreatedStreamEventImpl.fromJson;
@@ -2346,8 +2416,9 @@ abstract class _AnnouncementCreatedStreamEvent
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AnnouncementCreatedStreamEventImplCopyWith<
-          _$AnnouncementCreatedStreamEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$AnnouncementCreatedStreamEventImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 ChannelStreamEvent _$ChannelStreamEventFromJson(Map<String, dynamic> json) {
@@ -2428,21 +2499,26 @@ mixin _$ChannelStreamEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -2452,10 +2528,10 @@ mixin _$ChannelStreamEvent {
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -2471,24 +2547,28 @@ mixin _$ChannelStreamEvent {
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -2501,10 +2581,10 @@ mixin _$ChannelStreamEvent {
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -2520,23 +2600,25 @@ mixin _$ChannelStreamEvent {
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -2551,7 +2633,7 @@ mixin _$ChannelStreamEvent {
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -2567,11 +2649,10 @@ mixin _$ChannelStreamEvent {
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(NoteChannelEvent value) note,
@@ -2589,40 +2670,39 @@ mixin _$ChannelStreamEvent {
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(NoteChannelEvent value)? note,
@@ -2641,33 +2721,32 @@ mixin _$ChannelStreamEvent {
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(NoteChannelEvent value)? note,
@@ -2686,34 +2765,33 @@ mixin _$ChannelStreamEvent {
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
 
   /// Serializes this ChannelStreamEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2728,8 +2806,9 @@ mixin _$ChannelStreamEvent {
 /// @nodoc
 abstract class $ChannelStreamEventCopyWith<$Res> {
   factory $ChannelStreamEventCopyWith(
-          ChannelStreamEvent value, $Res Function(ChannelStreamEvent) then) =
-      _$ChannelStreamEventCopyWithImpl<$Res, ChannelStreamEvent>;
+    ChannelStreamEvent value,
+    $Res Function(ChannelStreamEvent) then,
+  ) = _$ChannelStreamEventCopyWithImpl<$Res, ChannelStreamEvent>;
   @useResult
   $Res call({String id});
 }
@@ -2748,31 +2827,35 @@ class _$ChannelStreamEventCopyWithImpl<$Res, $Val extends ChannelStreamEvent>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? id = null}) {
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$NoteChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
-  factory _$$NoteChannelEventImplCopyWith(_$NoteChannelEventImpl value,
-          $Res Function(_$NoteChannelEventImpl) then) =
-      __$$NoteChannelEventImplCopyWithImpl<$Res>;
+  factory _$$NoteChannelEventImplCopyWith(
+    _$NoteChannelEventImpl value,
+    $Res Function(_$NoteChannelEventImpl) then,
+  ) = __$$NoteChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      ChannelEventType? type,
-      Note body});
+  $Res call({
+    String id,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    ChannelEventType? type,
+    Note body,
+  });
 
   $NoteCopyWith<$Res> get body;
 }
@@ -2781,33 +2864,35 @@ abstract class _$$NoteChannelEventImplCopyWith<$Res>
 class __$$NoteChannelEventImplCopyWithImpl<$Res>
     extends _$ChannelStreamEventCopyWithImpl<$Res, _$NoteChannelEventImpl>
     implements _$$NoteChannelEventImplCopyWith<$Res> {
-  __$$NoteChannelEventImplCopyWithImpl(_$NoteChannelEventImpl _value,
-      $Res Function(_$NoteChannelEventImpl) _then)
-      : super(_value, _then);
+  __$$NoteChannelEventImplCopyWithImpl(
+    _$NoteChannelEventImpl _value,
+    $Res Function(_$NoteChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? type = freezed,
-    Object? body = null,
-  }) {
-    return _then(_$NoteChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as ChannelEventType?,
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as Note,
-    ));
+  $Res call({Object? id = null, Object? type = freezed, Object? body = null}) {
+    return _then(
+      _$NoteChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        type:
+            freezed == type
+                ? _value.type
+                : type // ignore: cast_nullable_to_non_nullable
+                    as ChannelEventType?,
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as Note,
+      ),
+    );
   }
 
   /// Create a copy of ChannelStreamEvent
@@ -2824,17 +2909,18 @@ class __$$NoteChannelEventImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$NoteChannelEventImpl implements NoteChannelEvent {
-  const _$NoteChannelEventImpl(
-      {required this.id,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type,
-      required this.body});
+  const _$NoteChannelEventImpl({
+    required this.id,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type,
+    required this.body,
+  });
 
   factory _$NoteChannelEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$NoteChannelEventImplFromJson(json);
 
   @override
   final String id;
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final ChannelEventType? type;
@@ -2867,27 +2953,34 @@ class _$NoteChannelEventImpl implements NoteChannelEvent {
   @pragma('vm:prefer-inline')
   _$$NoteChannelEventImplCopyWith<_$NoteChannelEventImpl> get copyWith =>
       __$$NoteChannelEventImplCopyWithImpl<_$NoteChannelEventImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -2897,10 +2990,10 @@ class _$NoteChannelEventImpl implements NoteChannelEvent {
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -2916,7 +3009,7 @@ class _$NoteChannelEventImpl implements NoteChannelEvent {
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return note(id, type, body);
@@ -2926,17 +3019,22 @@ class _$NoteChannelEventImpl implements NoteChannelEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -2949,10 +3047,10 @@ class _$NoteChannelEventImpl implements NoteChannelEvent {
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -2968,7 +3066,7 @@ class _$NoteChannelEventImpl implements NoteChannelEvent {
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return note?.call(id, type, body);
@@ -2978,16 +3076,19 @@ class _$NoteChannelEventImpl implements NoteChannelEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -3002,7 +3103,7 @@ class _$NoteChannelEventImpl implements NoteChannelEvent {
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -3018,7 +3119,7 @@ class _$NoteChannelEventImpl implements NoteChannelEvent {
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -3046,37 +3147,37 @@ class _$NoteChannelEventImpl implements NoteChannelEvent {
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return note(this);
@@ -3101,30 +3202,30 @@ class _$NoteChannelEventImpl implements NoteChannelEvent {
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return note?.call(this);
@@ -3149,30 +3250,30 @@ class _$NoteChannelEventImpl implements NoteChannelEvent {
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -3184,18 +3285,17 @@ class _$NoteChannelEventImpl implements NoteChannelEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NoteChannelEventImplToJson(
-      this,
-    );
+    return _$$NoteChannelEventImplToJson(this);
   }
 }
 
 abstract class NoteChannelEvent implements ChannelStreamEvent {
-  const factory NoteChannelEvent(
-      {required final String id,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      final ChannelEventType? type,
-      required final Note body}) = _$NoteChannelEventImpl;
+  const factory NoteChannelEvent({
+    required final String id,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    final ChannelEventType? type,
+    required final Note body,
+  }) = _$NoteChannelEventImpl;
 
   factory NoteChannelEvent.fromJson(Map<String, dynamic> json) =
       _$NoteChannelEventImpl.fromJson;
@@ -3217,9 +3317,10 @@ abstract class NoteChannelEvent implements ChannelStreamEvent {
 /// @nodoc
 abstract class _$$StatsLogChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
-  factory _$$StatsLogChannelEventImplCopyWith(_$StatsLogChannelEventImpl value,
-          $Res Function(_$StatsLogChannelEventImpl) then) =
-      __$$StatsLogChannelEventImplCopyWithImpl<$Res>;
+  factory _$$StatsLogChannelEventImplCopyWith(
+    _$StatsLogChannelEventImpl value,
+    $Res Function(_$StatsLogChannelEventImpl) then,
+  ) = __$$StatsLogChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, @StreamingStatsConverter() List<StreamingStats> body});
@@ -3229,40 +3330,42 @@ abstract class _$$StatsLogChannelEventImplCopyWith<$Res>
 class __$$StatsLogChannelEventImplCopyWithImpl<$Res>
     extends _$ChannelStreamEventCopyWithImpl<$Res, _$StatsLogChannelEventImpl>
     implements _$$StatsLogChannelEventImplCopyWith<$Res> {
-  __$$StatsLogChannelEventImplCopyWithImpl(_$StatsLogChannelEventImpl _value,
-      $Res Function(_$StatsLogChannelEventImpl) _then)
-      : super(_value, _then);
+  __$$StatsLogChannelEventImplCopyWithImpl(
+    _$StatsLogChannelEventImpl _value,
+    $Res Function(_$StatsLogChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? body = null,
-  }) {
-    return _then(_$StatsLogChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      body: null == body
-          ? _value._body
-          : body // ignore: cast_nullable_to_non_nullable
-              as List<StreamingStats>,
-    ));
+  $Res call({Object? id = null, Object? body = null}) {
+    return _then(
+      _$StatsLogChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        body:
+            null == body
+                ? _value._body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as List<StreamingStats>,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$StatsLogChannelEventImpl implements StatsLogChannelEvent {
-  const _$StatsLogChannelEventImpl(
-      {required this.id,
-      @StreamingStatsConverter() required final List<StreamingStats> body,
-      final String? $type})
-      : _body = body,
-        $type = $type ?? 'statsLog';
+  const _$StatsLogChannelEventImpl({
+    required this.id,
+    @StreamingStatsConverter() required final List<StreamingStats> body,
+    final String? $type,
+  }) : _body = body,
+       $type = $type ?? 'statsLog';
 
   factory _$StatsLogChannelEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$StatsLogChannelEventImplFromJson(json);
@@ -3306,29 +3409,36 @@ class _$StatsLogChannelEventImpl implements StatsLogChannelEvent {
   @override
   @pragma('vm:prefer-inline')
   _$$StatsLogChannelEventImplCopyWith<_$StatsLogChannelEventImpl>
-      get copyWith =>
-          __$$StatsLogChannelEventImplCopyWithImpl<_$StatsLogChannelEventImpl>(
-              this, _$identity);
+  get copyWith =>
+      __$$StatsLogChannelEventImplCopyWithImpl<_$StatsLogChannelEventImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -3338,10 +3448,10 @@ class _$StatsLogChannelEventImpl implements StatsLogChannelEvent {
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -3357,7 +3467,7 @@ class _$StatsLogChannelEventImpl implements StatsLogChannelEvent {
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return statsLog(id, body);
@@ -3367,17 +3477,22 @@ class _$StatsLogChannelEventImpl implements StatsLogChannelEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -3390,10 +3505,10 @@ class _$StatsLogChannelEventImpl implements StatsLogChannelEvent {
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -3409,7 +3524,7 @@ class _$StatsLogChannelEventImpl implements StatsLogChannelEvent {
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return statsLog?.call(id, body);
@@ -3419,16 +3534,19 @@ class _$StatsLogChannelEventImpl implements StatsLogChannelEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -3443,7 +3561,7 @@ class _$StatsLogChannelEventImpl implements StatsLogChannelEvent {
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -3459,7 +3577,7 @@ class _$StatsLogChannelEventImpl implements StatsLogChannelEvent {
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -3487,37 +3605,37 @@ class _$StatsLogChannelEventImpl implements StatsLogChannelEvent {
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return statsLog(this);
@@ -3542,30 +3660,30 @@ class _$StatsLogChannelEventImpl implements StatsLogChannelEvent {
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return statsLog?.call(this);
@@ -3590,30 +3708,30 @@ class _$StatsLogChannelEventImpl implements StatsLogChannelEvent {
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -3625,17 +3743,15 @@ class _$StatsLogChannelEventImpl implements StatsLogChannelEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$StatsLogChannelEventImplToJson(
-      this,
-    );
+    return _$$StatsLogChannelEventImplToJson(this);
   }
 }
 
 abstract class StatsLogChannelEvent implements ChannelStreamEvent {
-  const factory StatsLogChannelEvent(
-      {required final String id,
-      @StreamingStatsConverter()
-      required final List<StreamingStats> body}) = _$StatsLogChannelEventImpl;
+  const factory StatsLogChannelEvent({
+    required final String id,
+    @StreamingStatsConverter() required final List<StreamingStats> body,
+  }) = _$StatsLogChannelEventImpl;
 
   factory StatsLogChannelEvent.fromJson(Map<String, dynamic> json) =
       _$StatsLogChannelEventImpl.fromJson;
@@ -3650,15 +3766,16 @@ abstract class StatsLogChannelEvent implements ChannelStreamEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StatsLogChannelEventImplCopyWith<_$StatsLogChannelEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$StatsChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
-  factory _$$StatsChannelEventImplCopyWith(_$StatsChannelEventImpl value,
-          $Res Function(_$StatsChannelEventImpl) then) =
-      __$$StatsChannelEventImplCopyWithImpl<$Res>;
+  factory _$$StatsChannelEventImplCopyWith(
+    _$StatsChannelEventImpl value,
+    $Res Function(_$StatsChannelEventImpl) then,
+  ) = __$$StatsChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, @StreamingStatsConverter() StreamingStats body});
@@ -3670,28 +3787,30 @@ abstract class _$$StatsChannelEventImplCopyWith<$Res>
 class __$$StatsChannelEventImplCopyWithImpl<$Res>
     extends _$ChannelStreamEventCopyWithImpl<$Res, _$StatsChannelEventImpl>
     implements _$$StatsChannelEventImplCopyWith<$Res> {
-  __$$StatsChannelEventImplCopyWithImpl(_$StatsChannelEventImpl _value,
-      $Res Function(_$StatsChannelEventImpl) _then)
-      : super(_value, _then);
+  __$$StatsChannelEventImplCopyWithImpl(
+    _$StatsChannelEventImpl _value,
+    $Res Function(_$StatsChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? body = null,
-  }) {
-    return _then(_$StatsChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as StreamingStats,
-    ));
+  $Res call({Object? id = null, Object? body = null}) {
+    return _then(
+      _$StatsChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as StreamingStats,
+      ),
+    );
   }
 
   /// Create a copy of ChannelStreamEvent
@@ -3708,11 +3827,11 @@ class __$$StatsChannelEventImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$StatsChannelEventImpl implements StatsChannelEvent {
-  const _$StatsChannelEventImpl(
-      {required this.id,
-      @StreamingStatsConverter() required this.body,
-      final String? $type})
-      : $type = $type ?? 'stats';
+  const _$StatsChannelEventImpl({
+    required this.id,
+    @StreamingStatsConverter() required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'stats';
 
   factory _$StatsChannelEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$StatsChannelEventImplFromJson(json);
@@ -3751,27 +3870,34 @@ class _$StatsChannelEventImpl implements StatsChannelEvent {
   @pragma('vm:prefer-inline')
   _$$StatsChannelEventImplCopyWith<_$StatsChannelEventImpl> get copyWith =>
       __$$StatsChannelEventImplCopyWithImpl<_$StatsChannelEventImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -3781,10 +3907,10 @@ class _$StatsChannelEventImpl implements StatsChannelEvent {
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -3800,7 +3926,7 @@ class _$StatsChannelEventImpl implements StatsChannelEvent {
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return stats(id, body);
@@ -3810,17 +3936,22 @@ class _$StatsChannelEventImpl implements StatsChannelEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -3833,10 +3964,10 @@ class _$StatsChannelEventImpl implements StatsChannelEvent {
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -3852,7 +3983,7 @@ class _$StatsChannelEventImpl implements StatsChannelEvent {
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return stats?.call(id, body);
@@ -3862,16 +3993,19 @@ class _$StatsChannelEventImpl implements StatsChannelEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -3886,7 +4020,7 @@ class _$StatsChannelEventImpl implements StatsChannelEvent {
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -3902,7 +4036,7 @@ class _$StatsChannelEventImpl implements StatsChannelEvent {
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -3930,37 +4064,37 @@ class _$StatsChannelEventImpl implements StatsChannelEvent {
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return stats(this);
@@ -3985,30 +4119,30 @@ class _$StatsChannelEventImpl implements StatsChannelEvent {
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return stats?.call(this);
@@ -4033,30 +4167,30 @@ class _$StatsChannelEventImpl implements StatsChannelEvent {
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -4068,17 +4202,15 @@ class _$StatsChannelEventImpl implements StatsChannelEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$StatsChannelEventImplToJson(
-      this,
-    );
+    return _$$StatsChannelEventImplToJson(this);
   }
 }
 
 abstract class StatsChannelEvent implements ChannelStreamEvent {
-  const factory StatsChannelEvent(
-          {required final String id,
-          @StreamingStatsConverter() required final StreamingStats body}) =
-      _$StatsChannelEventImpl;
+  const factory StatsChannelEvent({
+    required final String id,
+    @StreamingStatsConverter() required final StreamingStats body,
+  }) = _$StatsChannelEventImpl;
 
   factory StatsChannelEvent.fromJson(Map<String, dynamic> json) =
       _$StatsChannelEventImpl.fromJson;
@@ -4100,9 +4232,9 @@ abstract class StatsChannelEvent implements ChannelStreamEvent {
 abstract class _$$UserAddedChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
   factory _$$UserAddedChannelEventImplCopyWith(
-          _$UserAddedChannelEventImpl value,
-          $Res Function(_$UserAddedChannelEventImpl) then) =
-      __$$UserAddedChannelEventImplCopyWithImpl<$Res>;
+    _$UserAddedChannelEventImpl value,
+    $Res Function(_$UserAddedChannelEventImpl) then,
+  ) = __$$UserAddedChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, UserLite body});
@@ -4114,28 +4246,30 @@ abstract class _$$UserAddedChannelEventImplCopyWith<$Res>
 class __$$UserAddedChannelEventImplCopyWithImpl<$Res>
     extends _$ChannelStreamEventCopyWithImpl<$Res, _$UserAddedChannelEventImpl>
     implements _$$UserAddedChannelEventImplCopyWith<$Res> {
-  __$$UserAddedChannelEventImplCopyWithImpl(_$UserAddedChannelEventImpl _value,
-      $Res Function(_$UserAddedChannelEventImpl) _then)
-      : super(_value, _then);
+  __$$UserAddedChannelEventImplCopyWithImpl(
+    _$UserAddedChannelEventImpl _value,
+    $Res Function(_$UserAddedChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? body = null,
-  }) {
-    return _then(_$UserAddedChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as UserLite,
-    ));
+  $Res call({Object? id = null, Object? body = null}) {
+    return _then(
+      _$UserAddedChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as UserLite,
+      ),
+    );
   }
 
   /// Create a copy of ChannelStreamEvent
@@ -4152,9 +4286,11 @@ class __$$UserAddedChannelEventImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$UserAddedChannelEventImpl implements UserAddedChannelEvent {
-  const _$UserAddedChannelEventImpl(
-      {required this.id, required this.body, final String? $type})
-      : $type = $type ?? 'userAdded';
+  const _$UserAddedChannelEventImpl({
+    required this.id,
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'userAdded';
 
   factory _$UserAddedChannelEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$UserAddedChannelEventImplFromJson(json);
@@ -4191,28 +4327,36 @@ class _$UserAddedChannelEventImpl implements UserAddedChannelEvent {
   @override
   @pragma('vm:prefer-inline')
   _$$UserAddedChannelEventImplCopyWith<_$UserAddedChannelEventImpl>
-      get copyWith => __$$UserAddedChannelEventImplCopyWithImpl<
-          _$UserAddedChannelEventImpl>(this, _$identity);
+  get copyWith =>
+      __$$UserAddedChannelEventImplCopyWithImpl<_$UserAddedChannelEventImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -4222,10 +4366,10 @@ class _$UserAddedChannelEventImpl implements UserAddedChannelEvent {
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -4241,7 +4385,7 @@ class _$UserAddedChannelEventImpl implements UserAddedChannelEvent {
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return userAdded(id, body);
@@ -4251,17 +4395,22 @@ class _$UserAddedChannelEventImpl implements UserAddedChannelEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -4274,10 +4423,10 @@ class _$UserAddedChannelEventImpl implements UserAddedChannelEvent {
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -4293,7 +4442,7 @@ class _$UserAddedChannelEventImpl implements UserAddedChannelEvent {
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return userAdded?.call(id, body);
@@ -4303,16 +4452,19 @@ class _$UserAddedChannelEventImpl implements UserAddedChannelEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -4327,7 +4479,7 @@ class _$UserAddedChannelEventImpl implements UserAddedChannelEvent {
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -4343,7 +4495,7 @@ class _$UserAddedChannelEventImpl implements UserAddedChannelEvent {
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -4371,37 +4523,37 @@ class _$UserAddedChannelEventImpl implements UserAddedChannelEvent {
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return userAdded(this);
@@ -4426,30 +4578,30 @@ class _$UserAddedChannelEventImpl implements UserAddedChannelEvent {
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return userAdded?.call(this);
@@ -4474,30 +4626,30 @@ class _$UserAddedChannelEventImpl implements UserAddedChannelEvent {
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -4509,16 +4661,15 @@ class _$UserAddedChannelEventImpl implements UserAddedChannelEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UserAddedChannelEventImplToJson(
-      this,
-    );
+    return _$$UserAddedChannelEventImplToJson(this);
   }
 }
 
 abstract class UserAddedChannelEvent implements ChannelStreamEvent {
-  const factory UserAddedChannelEvent(
-      {required final String id,
-      required final UserLite body}) = _$UserAddedChannelEventImpl;
+  const factory UserAddedChannelEvent({
+    required final String id,
+    required final UserLite body,
+  }) = _$UserAddedChannelEventImpl;
 
   factory UserAddedChannelEvent.fromJson(Map<String, dynamic> json) =
       _$UserAddedChannelEventImpl.fromJson;
@@ -4532,16 +4683,16 @@ abstract class UserAddedChannelEvent implements ChannelStreamEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UserAddedChannelEventImplCopyWith<_$UserAddedChannelEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$UserRemovedChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
   factory _$$UserRemovedChannelEventImplCopyWith(
-          _$UserRemovedChannelEventImpl value,
-          $Res Function(_$UserRemovedChannelEventImpl) then) =
-      __$$UserRemovedChannelEventImplCopyWithImpl<$Res>;
+    _$UserRemovedChannelEventImpl value,
+    $Res Function(_$UserRemovedChannelEventImpl) then,
+  ) = __$$UserRemovedChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, UserLite body});
@@ -4551,32 +4702,33 @@ abstract class _$$UserRemovedChannelEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$UserRemovedChannelEventImplCopyWithImpl<$Res>
-    extends _$ChannelStreamEventCopyWithImpl<$Res,
-        _$UserRemovedChannelEventImpl>
+    extends
+        _$ChannelStreamEventCopyWithImpl<$Res, _$UserRemovedChannelEventImpl>
     implements _$$UserRemovedChannelEventImplCopyWith<$Res> {
   __$$UserRemovedChannelEventImplCopyWithImpl(
-      _$UserRemovedChannelEventImpl _value,
-      $Res Function(_$UserRemovedChannelEventImpl) _then)
-      : super(_value, _then);
+    _$UserRemovedChannelEventImpl _value,
+    $Res Function(_$UserRemovedChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? body = null,
-  }) {
-    return _then(_$UserRemovedChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as UserLite,
-    ));
+  $Res call({Object? id = null, Object? body = null}) {
+    return _then(
+      _$UserRemovedChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as UserLite,
+      ),
+    );
   }
 
   /// Create a copy of ChannelStreamEvent
@@ -4593,9 +4745,11 @@ class __$$UserRemovedChannelEventImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$UserRemovedChannelEventImpl implements UserRemovedChannelEvent {
-  const _$UserRemovedChannelEventImpl(
-      {required this.id, required this.body, final String? $type})
-      : $type = $type ?? 'userRemoved';
+  const _$UserRemovedChannelEventImpl({
+    required this.id,
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'userRemoved';
 
   factory _$UserRemovedChannelEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$UserRemovedChannelEventImplFromJson(json);
@@ -4632,28 +4786,34 @@ class _$UserRemovedChannelEventImpl implements UserRemovedChannelEvent {
   @override
   @pragma('vm:prefer-inline')
   _$$UserRemovedChannelEventImplCopyWith<_$UserRemovedChannelEventImpl>
-      get copyWith => __$$UserRemovedChannelEventImplCopyWithImpl<
-          _$UserRemovedChannelEventImpl>(this, _$identity);
+  get copyWith => __$$UserRemovedChannelEventImplCopyWithImpl<
+    _$UserRemovedChannelEventImpl
+  >(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -4663,10 +4823,10 @@ class _$UserRemovedChannelEventImpl implements UserRemovedChannelEvent {
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -4682,7 +4842,7 @@ class _$UserRemovedChannelEventImpl implements UserRemovedChannelEvent {
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return userRemoved(id, body);
@@ -4692,17 +4852,22 @@ class _$UserRemovedChannelEventImpl implements UserRemovedChannelEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -4715,10 +4880,10 @@ class _$UserRemovedChannelEventImpl implements UserRemovedChannelEvent {
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -4734,7 +4899,7 @@ class _$UserRemovedChannelEventImpl implements UserRemovedChannelEvent {
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return userRemoved?.call(id, body);
@@ -4744,16 +4909,19 @@ class _$UserRemovedChannelEventImpl implements UserRemovedChannelEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -4768,7 +4936,7 @@ class _$UserRemovedChannelEventImpl implements UserRemovedChannelEvent {
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -4784,7 +4952,7 @@ class _$UserRemovedChannelEventImpl implements UserRemovedChannelEvent {
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -4812,37 +4980,37 @@ class _$UserRemovedChannelEventImpl implements UserRemovedChannelEvent {
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return userRemoved(this);
@@ -4867,30 +5035,30 @@ class _$UserRemovedChannelEventImpl implements UserRemovedChannelEvent {
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return userRemoved?.call(this);
@@ -4915,30 +5083,30 @@ class _$UserRemovedChannelEventImpl implements UserRemovedChannelEvent {
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -4950,16 +5118,15 @@ class _$UserRemovedChannelEventImpl implements UserRemovedChannelEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UserRemovedChannelEventImplToJson(
-      this,
-    );
+    return _$$UserRemovedChannelEventImplToJson(this);
   }
 }
 
 abstract class UserRemovedChannelEvent implements ChannelStreamEvent {
-  const factory UserRemovedChannelEvent(
-      {required final String id,
-      required final UserLite body}) = _$UserRemovedChannelEventImpl;
+  const factory UserRemovedChannelEvent({
+    required final String id,
+    required final UserLite body,
+  }) = _$UserRemovedChannelEventImpl;
 
   factory UserRemovedChannelEvent.fromJson(Map<String, dynamic> json) =
       _$UserRemovedChannelEventImpl.fromJson;
@@ -4973,16 +5140,16 @@ abstract class UserRemovedChannelEvent implements ChannelStreamEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UserRemovedChannelEventImplCopyWith<_$UserRemovedChannelEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$NotificationChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
   factory _$$NotificationChannelEventImplCopyWith(
-          _$NotificationChannelEventImpl value,
-          $Res Function(_$NotificationChannelEventImpl) then) =
-      __$$NotificationChannelEventImplCopyWithImpl<$Res>;
+    _$NotificationChannelEventImpl value,
+    $Res Function(_$NotificationChannelEventImpl) then,
+  ) = __$$NotificationChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, INotificationsResponse body});
@@ -4992,32 +5159,33 @@ abstract class _$$NotificationChannelEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$NotificationChannelEventImplCopyWithImpl<$Res>
-    extends _$ChannelStreamEventCopyWithImpl<$Res,
-        _$NotificationChannelEventImpl>
+    extends
+        _$ChannelStreamEventCopyWithImpl<$Res, _$NotificationChannelEventImpl>
     implements _$$NotificationChannelEventImplCopyWith<$Res> {
   __$$NotificationChannelEventImplCopyWithImpl(
-      _$NotificationChannelEventImpl _value,
-      $Res Function(_$NotificationChannelEventImpl) _then)
-      : super(_value, _then);
+    _$NotificationChannelEventImpl _value,
+    $Res Function(_$NotificationChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? body = null,
-  }) {
-    return _then(_$NotificationChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as INotificationsResponse,
-    ));
+  $Res call({Object? id = null, Object? body = null}) {
+    return _then(
+      _$NotificationChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as INotificationsResponse,
+      ),
+    );
   }
 
   /// Create a copy of ChannelStreamEvent
@@ -5034,9 +5202,11 @@ class __$$NotificationChannelEventImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$NotificationChannelEventImpl implements NotificationChannelEvent {
-  const _$NotificationChannelEventImpl(
-      {required this.id, required this.body, final String? $type})
-      : $type = $type ?? 'notification';
+  const _$NotificationChannelEventImpl({
+    required this.id,
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'notification';
 
   factory _$NotificationChannelEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$NotificationChannelEventImplFromJson(json);
@@ -5073,28 +5243,34 @@ class _$NotificationChannelEventImpl implements NotificationChannelEvent {
   @override
   @pragma('vm:prefer-inline')
   _$$NotificationChannelEventImplCopyWith<_$NotificationChannelEventImpl>
-      get copyWith => __$$NotificationChannelEventImplCopyWithImpl<
-          _$NotificationChannelEventImpl>(this, _$identity);
+  get copyWith => __$$NotificationChannelEventImplCopyWithImpl<
+    _$NotificationChannelEventImpl
+  >(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -5104,10 +5280,10 @@ class _$NotificationChannelEventImpl implements NotificationChannelEvent {
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -5123,7 +5299,7 @@ class _$NotificationChannelEventImpl implements NotificationChannelEvent {
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return notification(id, body);
@@ -5133,17 +5309,22 @@ class _$NotificationChannelEventImpl implements NotificationChannelEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -5156,10 +5337,10 @@ class _$NotificationChannelEventImpl implements NotificationChannelEvent {
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -5175,7 +5356,7 @@ class _$NotificationChannelEventImpl implements NotificationChannelEvent {
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return notification?.call(id, body);
@@ -5185,16 +5366,19 @@ class _$NotificationChannelEventImpl implements NotificationChannelEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -5209,7 +5393,7 @@ class _$NotificationChannelEventImpl implements NotificationChannelEvent {
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -5225,7 +5409,7 @@ class _$NotificationChannelEventImpl implements NotificationChannelEvent {
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -5253,37 +5437,37 @@ class _$NotificationChannelEventImpl implements NotificationChannelEvent {
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return notification(this);
@@ -5308,30 +5492,30 @@ class _$NotificationChannelEventImpl implements NotificationChannelEvent {
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return notification?.call(this);
@@ -5356,30 +5540,30 @@ class _$NotificationChannelEventImpl implements NotificationChannelEvent {
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -5391,17 +5575,15 @@ class _$NotificationChannelEventImpl implements NotificationChannelEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotificationChannelEventImplToJson(
-      this,
-    );
+    return _$$NotificationChannelEventImplToJson(this);
   }
 }
 
 abstract class NotificationChannelEvent implements ChannelStreamEvent {
-  const factory NotificationChannelEvent(
-          {required final String id,
-          required final INotificationsResponse body}) =
-      _$NotificationChannelEventImpl;
+  const factory NotificationChannelEvent({
+    required final String id,
+    required final INotificationsResponse body,
+  }) = _$NotificationChannelEventImpl;
 
   factory NotificationChannelEvent.fromJson(Map<String, dynamic> json) =
       _$NotificationChannelEventImpl.fromJson;
@@ -5415,15 +5597,16 @@ abstract class NotificationChannelEvent implements ChannelStreamEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotificationChannelEventImplCopyWith<_$NotificationChannelEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$MentionChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
-  factory _$$MentionChannelEventImplCopyWith(_$MentionChannelEventImpl value,
-          $Res Function(_$MentionChannelEventImpl) then) =
-      __$$MentionChannelEventImplCopyWithImpl<$Res>;
+  factory _$$MentionChannelEventImplCopyWith(
+    _$MentionChannelEventImpl value,
+    $Res Function(_$MentionChannelEventImpl) then,
+  ) = __$$MentionChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, Note body});
@@ -5435,28 +5618,30 @@ abstract class _$$MentionChannelEventImplCopyWith<$Res>
 class __$$MentionChannelEventImplCopyWithImpl<$Res>
     extends _$ChannelStreamEventCopyWithImpl<$Res, _$MentionChannelEventImpl>
     implements _$$MentionChannelEventImplCopyWith<$Res> {
-  __$$MentionChannelEventImplCopyWithImpl(_$MentionChannelEventImpl _value,
-      $Res Function(_$MentionChannelEventImpl) _then)
-      : super(_value, _then);
+  __$$MentionChannelEventImplCopyWithImpl(
+    _$MentionChannelEventImpl _value,
+    $Res Function(_$MentionChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? body = null,
-  }) {
-    return _then(_$MentionChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as Note,
-    ));
+  $Res call({Object? id = null, Object? body = null}) {
+    return _then(
+      _$MentionChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as Note,
+      ),
+    );
   }
 
   /// Create a copy of ChannelStreamEvent
@@ -5473,9 +5658,11 @@ class __$$MentionChannelEventImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$MentionChannelEventImpl implements MentionChannelEvent {
-  const _$MentionChannelEventImpl(
-      {required this.id, required this.body, final String? $type})
-      : $type = $type ?? 'mention';
+  const _$MentionChannelEventImpl({
+    required this.id,
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'mention';
 
   factory _$MentionChannelEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$MentionChannelEventImplFromJson(json);
@@ -5513,27 +5700,34 @@ class _$MentionChannelEventImpl implements MentionChannelEvent {
   @pragma('vm:prefer-inline')
   _$$MentionChannelEventImplCopyWith<_$MentionChannelEventImpl> get copyWith =>
       __$$MentionChannelEventImplCopyWithImpl<_$MentionChannelEventImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -5543,10 +5737,10 @@ class _$MentionChannelEventImpl implements MentionChannelEvent {
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -5562,7 +5756,7 @@ class _$MentionChannelEventImpl implements MentionChannelEvent {
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return mention(id, body);
@@ -5572,17 +5766,22 @@ class _$MentionChannelEventImpl implements MentionChannelEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -5595,10 +5794,10 @@ class _$MentionChannelEventImpl implements MentionChannelEvent {
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -5614,7 +5813,7 @@ class _$MentionChannelEventImpl implements MentionChannelEvent {
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return mention?.call(id, body);
@@ -5624,16 +5823,19 @@ class _$MentionChannelEventImpl implements MentionChannelEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -5648,7 +5850,7 @@ class _$MentionChannelEventImpl implements MentionChannelEvent {
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -5664,7 +5866,7 @@ class _$MentionChannelEventImpl implements MentionChannelEvent {
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -5692,37 +5894,37 @@ class _$MentionChannelEventImpl implements MentionChannelEvent {
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return mention(this);
@@ -5747,30 +5949,30 @@ class _$MentionChannelEventImpl implements MentionChannelEvent {
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return mention?.call(this);
@@ -5795,30 +5997,30 @@ class _$MentionChannelEventImpl implements MentionChannelEvent {
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -5830,16 +6032,15 @@ class _$MentionChannelEventImpl implements MentionChannelEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MentionChannelEventImplToJson(
-      this,
-    );
+    return _$$MentionChannelEventImplToJson(this);
   }
 }
 
 abstract class MentionChannelEvent implements ChannelStreamEvent {
-  const factory MentionChannelEvent(
-      {required final String id,
-      required final Note body}) = _$MentionChannelEventImpl;
+  const factory MentionChannelEvent({
+    required final String id,
+    required final Note body,
+  }) = _$MentionChannelEventImpl;
 
   factory MentionChannelEvent.fromJson(Map<String, dynamic> json) =
       _$MentionChannelEventImpl.fromJson;
@@ -5859,9 +6060,10 @@ abstract class MentionChannelEvent implements ChannelStreamEvent {
 /// @nodoc
 abstract class _$$ReplyChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
-  factory _$$ReplyChannelEventImplCopyWith(_$ReplyChannelEventImpl value,
-          $Res Function(_$ReplyChannelEventImpl) then) =
-      __$$ReplyChannelEventImplCopyWithImpl<$Res>;
+  factory _$$ReplyChannelEventImplCopyWith(
+    _$ReplyChannelEventImpl value,
+    $Res Function(_$ReplyChannelEventImpl) then,
+  ) = __$$ReplyChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, Note body});
@@ -5873,28 +6075,30 @@ abstract class _$$ReplyChannelEventImplCopyWith<$Res>
 class __$$ReplyChannelEventImplCopyWithImpl<$Res>
     extends _$ChannelStreamEventCopyWithImpl<$Res, _$ReplyChannelEventImpl>
     implements _$$ReplyChannelEventImplCopyWith<$Res> {
-  __$$ReplyChannelEventImplCopyWithImpl(_$ReplyChannelEventImpl _value,
-      $Res Function(_$ReplyChannelEventImpl) _then)
-      : super(_value, _then);
+  __$$ReplyChannelEventImplCopyWithImpl(
+    _$ReplyChannelEventImpl _value,
+    $Res Function(_$ReplyChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? body = null,
-  }) {
-    return _then(_$ReplyChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as Note,
-    ));
+  $Res call({Object? id = null, Object? body = null}) {
+    return _then(
+      _$ReplyChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as Note,
+      ),
+    );
   }
 
   /// Create a copy of ChannelStreamEvent
@@ -5911,9 +6115,11 @@ class __$$ReplyChannelEventImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$ReplyChannelEventImpl implements ReplyChannelEvent {
-  const _$ReplyChannelEventImpl(
-      {required this.id, required this.body, final String? $type})
-      : $type = $type ?? 'reply';
+  const _$ReplyChannelEventImpl({
+    required this.id,
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'reply';
 
   factory _$ReplyChannelEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$ReplyChannelEventImplFromJson(json);
@@ -5951,27 +6157,34 @@ class _$ReplyChannelEventImpl implements ReplyChannelEvent {
   @pragma('vm:prefer-inline')
   _$$ReplyChannelEventImplCopyWith<_$ReplyChannelEventImpl> get copyWith =>
       __$$ReplyChannelEventImplCopyWithImpl<_$ReplyChannelEventImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -5981,10 +6194,10 @@ class _$ReplyChannelEventImpl implements ReplyChannelEvent {
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -6000,7 +6213,7 @@ class _$ReplyChannelEventImpl implements ReplyChannelEvent {
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return reply(id, body);
@@ -6010,17 +6223,22 @@ class _$ReplyChannelEventImpl implements ReplyChannelEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -6033,10 +6251,10 @@ class _$ReplyChannelEventImpl implements ReplyChannelEvent {
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -6052,7 +6270,7 @@ class _$ReplyChannelEventImpl implements ReplyChannelEvent {
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return reply?.call(id, body);
@@ -6062,16 +6280,19 @@ class _$ReplyChannelEventImpl implements ReplyChannelEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -6086,7 +6307,7 @@ class _$ReplyChannelEventImpl implements ReplyChannelEvent {
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -6102,7 +6323,7 @@ class _$ReplyChannelEventImpl implements ReplyChannelEvent {
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -6130,37 +6351,37 @@ class _$ReplyChannelEventImpl implements ReplyChannelEvent {
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return reply(this);
@@ -6185,30 +6406,30 @@ class _$ReplyChannelEventImpl implements ReplyChannelEvent {
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return reply?.call(this);
@@ -6233,30 +6454,30 @@ class _$ReplyChannelEventImpl implements ReplyChannelEvent {
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -6268,16 +6489,15 @@ class _$ReplyChannelEventImpl implements ReplyChannelEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ReplyChannelEventImplToJson(
-      this,
-    );
+    return _$$ReplyChannelEventImplToJson(this);
   }
 }
 
 abstract class ReplyChannelEvent implements ChannelStreamEvent {
-  const factory ReplyChannelEvent(
-      {required final String id,
-      required final Note body}) = _$ReplyChannelEventImpl;
+  const factory ReplyChannelEvent({
+    required final String id,
+    required final Note body,
+  }) = _$ReplyChannelEventImpl;
 
   factory ReplyChannelEvent.fromJson(Map<String, dynamic> json) =
       _$ReplyChannelEventImpl.fromJson;
@@ -6297,9 +6517,10 @@ abstract class ReplyChannelEvent implements ChannelStreamEvent {
 /// @nodoc
 abstract class _$$RenoteChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
-  factory _$$RenoteChannelEventImplCopyWith(_$RenoteChannelEventImpl value,
-          $Res Function(_$RenoteChannelEventImpl) then) =
-      __$$RenoteChannelEventImplCopyWithImpl<$Res>;
+  factory _$$RenoteChannelEventImplCopyWith(
+    _$RenoteChannelEventImpl value,
+    $Res Function(_$RenoteChannelEventImpl) then,
+  ) = __$$RenoteChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, Note body});
@@ -6311,28 +6532,30 @@ abstract class _$$RenoteChannelEventImplCopyWith<$Res>
 class __$$RenoteChannelEventImplCopyWithImpl<$Res>
     extends _$ChannelStreamEventCopyWithImpl<$Res, _$RenoteChannelEventImpl>
     implements _$$RenoteChannelEventImplCopyWith<$Res> {
-  __$$RenoteChannelEventImplCopyWithImpl(_$RenoteChannelEventImpl _value,
-      $Res Function(_$RenoteChannelEventImpl) _then)
-      : super(_value, _then);
+  __$$RenoteChannelEventImplCopyWithImpl(
+    _$RenoteChannelEventImpl _value,
+    $Res Function(_$RenoteChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? body = null,
-  }) {
-    return _then(_$RenoteChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as Note,
-    ));
+  $Res call({Object? id = null, Object? body = null}) {
+    return _then(
+      _$RenoteChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as Note,
+      ),
+    );
   }
 
   /// Create a copy of ChannelStreamEvent
@@ -6349,9 +6572,11 @@ class __$$RenoteChannelEventImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$RenoteChannelEventImpl implements RenoteChannelEvent {
-  const _$RenoteChannelEventImpl(
-      {required this.id, required this.body, final String? $type})
-      : $type = $type ?? 'renote';
+  const _$RenoteChannelEventImpl({
+    required this.id,
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'renote';
 
   factory _$RenoteChannelEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$RenoteChannelEventImplFromJson(json);
@@ -6389,27 +6614,34 @@ class _$RenoteChannelEventImpl implements RenoteChannelEvent {
   @pragma('vm:prefer-inline')
   _$$RenoteChannelEventImplCopyWith<_$RenoteChannelEventImpl> get copyWith =>
       __$$RenoteChannelEventImplCopyWithImpl<_$RenoteChannelEventImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -6419,10 +6651,10 @@ class _$RenoteChannelEventImpl implements RenoteChannelEvent {
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -6438,7 +6670,7 @@ class _$RenoteChannelEventImpl implements RenoteChannelEvent {
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return renote(id, body);
@@ -6448,17 +6680,22 @@ class _$RenoteChannelEventImpl implements RenoteChannelEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -6471,10 +6708,10 @@ class _$RenoteChannelEventImpl implements RenoteChannelEvent {
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -6490,7 +6727,7 @@ class _$RenoteChannelEventImpl implements RenoteChannelEvent {
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return renote?.call(id, body);
@@ -6500,16 +6737,19 @@ class _$RenoteChannelEventImpl implements RenoteChannelEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -6524,7 +6764,7 @@ class _$RenoteChannelEventImpl implements RenoteChannelEvent {
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -6540,7 +6780,7 @@ class _$RenoteChannelEventImpl implements RenoteChannelEvent {
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -6568,37 +6808,37 @@ class _$RenoteChannelEventImpl implements RenoteChannelEvent {
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return renote(this);
@@ -6623,30 +6863,30 @@ class _$RenoteChannelEventImpl implements RenoteChannelEvent {
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return renote?.call(this);
@@ -6671,30 +6911,30 @@ class _$RenoteChannelEventImpl implements RenoteChannelEvent {
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -6706,16 +6946,15 @@ class _$RenoteChannelEventImpl implements RenoteChannelEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$RenoteChannelEventImplToJson(
-      this,
-    );
+    return _$$RenoteChannelEventImplToJson(this);
   }
 }
 
 abstract class RenoteChannelEvent implements ChannelStreamEvent {
-  const factory RenoteChannelEvent(
-      {required final String id,
-      required final Note body}) = _$RenoteChannelEventImpl;
+  const factory RenoteChannelEvent({
+    required final String id,
+    required final Note body,
+  }) = _$RenoteChannelEventImpl;
 
   factory RenoteChannelEvent.fromJson(Map<String, dynamic> json) =
       _$RenoteChannelEventImpl.fromJson;
@@ -6735,9 +6974,10 @@ abstract class RenoteChannelEvent implements ChannelStreamEvent {
 /// @nodoc
 abstract class _$$FollowChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
-  factory _$$FollowChannelEventImplCopyWith(_$FollowChannelEventImpl value,
-          $Res Function(_$FollowChannelEventImpl) then) =
-      __$$FollowChannelEventImplCopyWithImpl<$Res>;
+  factory _$$FollowChannelEventImplCopyWith(
+    _$FollowChannelEventImpl value,
+    $Res Function(_$FollowChannelEventImpl) then,
+  ) = __$$FollowChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, UserDetailedNotMe body});
@@ -6749,28 +6989,30 @@ abstract class _$$FollowChannelEventImplCopyWith<$Res>
 class __$$FollowChannelEventImplCopyWithImpl<$Res>
     extends _$ChannelStreamEventCopyWithImpl<$Res, _$FollowChannelEventImpl>
     implements _$$FollowChannelEventImplCopyWith<$Res> {
-  __$$FollowChannelEventImplCopyWithImpl(_$FollowChannelEventImpl _value,
-      $Res Function(_$FollowChannelEventImpl) _then)
-      : super(_value, _then);
+  __$$FollowChannelEventImplCopyWithImpl(
+    _$FollowChannelEventImpl _value,
+    $Res Function(_$FollowChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? body = null,
-  }) {
-    return _then(_$FollowChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as UserDetailedNotMe,
-    ));
+  $Res call({Object? id = null, Object? body = null}) {
+    return _then(
+      _$FollowChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as UserDetailedNotMe,
+      ),
+    );
   }
 
   /// Create a copy of ChannelStreamEvent
@@ -6787,9 +7029,11 @@ class __$$FollowChannelEventImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$FollowChannelEventImpl implements FollowChannelEvent {
-  const _$FollowChannelEventImpl(
-      {required this.id, required this.body, final String? $type})
-      : $type = $type ?? 'follow';
+  const _$FollowChannelEventImpl({
+    required this.id,
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'follow';
 
   factory _$FollowChannelEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$FollowChannelEventImplFromJson(json);
@@ -6827,27 +7071,34 @@ class _$FollowChannelEventImpl implements FollowChannelEvent {
   @pragma('vm:prefer-inline')
   _$$FollowChannelEventImplCopyWith<_$FollowChannelEventImpl> get copyWith =>
       __$$FollowChannelEventImplCopyWithImpl<_$FollowChannelEventImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -6857,10 +7108,10 @@ class _$FollowChannelEventImpl implements FollowChannelEvent {
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -6876,7 +7127,7 @@ class _$FollowChannelEventImpl implements FollowChannelEvent {
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return follow(id, body);
@@ -6886,17 +7137,22 @@ class _$FollowChannelEventImpl implements FollowChannelEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -6909,10 +7165,10 @@ class _$FollowChannelEventImpl implements FollowChannelEvent {
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -6928,7 +7184,7 @@ class _$FollowChannelEventImpl implements FollowChannelEvent {
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return follow?.call(id, body);
@@ -6938,16 +7194,19 @@ class _$FollowChannelEventImpl implements FollowChannelEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -6962,7 +7221,7 @@ class _$FollowChannelEventImpl implements FollowChannelEvent {
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -6978,7 +7237,7 @@ class _$FollowChannelEventImpl implements FollowChannelEvent {
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -7006,37 +7265,37 @@ class _$FollowChannelEventImpl implements FollowChannelEvent {
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return follow(this);
@@ -7061,30 +7320,30 @@ class _$FollowChannelEventImpl implements FollowChannelEvent {
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return follow?.call(this);
@@ -7109,30 +7368,30 @@ class _$FollowChannelEventImpl implements FollowChannelEvent {
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -7144,16 +7403,15 @@ class _$FollowChannelEventImpl implements FollowChannelEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$FollowChannelEventImplToJson(
-      this,
-    );
+    return _$$FollowChannelEventImplToJson(this);
   }
 }
 
 abstract class FollowChannelEvent implements ChannelStreamEvent {
-  const factory FollowChannelEvent(
-      {required final String id,
-      required final UserDetailedNotMe body}) = _$FollowChannelEventImpl;
+  const factory FollowChannelEvent({
+    required final String id,
+    required final UserDetailedNotMe body,
+  }) = _$FollowChannelEventImpl;
 
   factory FollowChannelEvent.fromJson(Map<String, dynamic> json) =
       _$FollowChannelEventImpl.fromJson;
@@ -7173,9 +7431,10 @@ abstract class FollowChannelEvent implements ChannelStreamEvent {
 /// @nodoc
 abstract class _$$FollowedChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
-  factory _$$FollowedChannelEventImplCopyWith(_$FollowedChannelEventImpl value,
-          $Res Function(_$FollowedChannelEventImpl) then) =
-      __$$FollowedChannelEventImplCopyWithImpl<$Res>;
+  factory _$$FollowedChannelEventImplCopyWith(
+    _$FollowedChannelEventImpl value,
+    $Res Function(_$FollowedChannelEventImpl) then,
+  ) = __$$FollowedChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, UserLite body});
@@ -7187,28 +7446,30 @@ abstract class _$$FollowedChannelEventImplCopyWith<$Res>
 class __$$FollowedChannelEventImplCopyWithImpl<$Res>
     extends _$ChannelStreamEventCopyWithImpl<$Res, _$FollowedChannelEventImpl>
     implements _$$FollowedChannelEventImplCopyWith<$Res> {
-  __$$FollowedChannelEventImplCopyWithImpl(_$FollowedChannelEventImpl _value,
-      $Res Function(_$FollowedChannelEventImpl) _then)
-      : super(_value, _then);
+  __$$FollowedChannelEventImplCopyWithImpl(
+    _$FollowedChannelEventImpl _value,
+    $Res Function(_$FollowedChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? body = null,
-  }) {
-    return _then(_$FollowedChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as UserLite,
-    ));
+  $Res call({Object? id = null, Object? body = null}) {
+    return _then(
+      _$FollowedChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as UserLite,
+      ),
+    );
   }
 
   /// Create a copy of ChannelStreamEvent
@@ -7225,9 +7486,11 @@ class __$$FollowedChannelEventImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$FollowedChannelEventImpl implements FollowedChannelEvent {
-  const _$FollowedChannelEventImpl(
-      {required this.id, required this.body, final String? $type})
-      : $type = $type ?? 'followed';
+  const _$FollowedChannelEventImpl({
+    required this.id,
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'followed';
 
   factory _$FollowedChannelEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$FollowedChannelEventImplFromJson(json);
@@ -7264,29 +7527,36 @@ class _$FollowedChannelEventImpl implements FollowedChannelEvent {
   @override
   @pragma('vm:prefer-inline')
   _$$FollowedChannelEventImplCopyWith<_$FollowedChannelEventImpl>
-      get copyWith =>
-          __$$FollowedChannelEventImplCopyWithImpl<_$FollowedChannelEventImpl>(
-              this, _$identity);
+  get copyWith =>
+      __$$FollowedChannelEventImplCopyWithImpl<_$FollowedChannelEventImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -7296,10 +7566,10 @@ class _$FollowedChannelEventImpl implements FollowedChannelEvent {
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -7315,7 +7585,7 @@ class _$FollowedChannelEventImpl implements FollowedChannelEvent {
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return followed(id, body);
@@ -7325,17 +7595,22 @@ class _$FollowedChannelEventImpl implements FollowedChannelEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -7348,10 +7623,10 @@ class _$FollowedChannelEventImpl implements FollowedChannelEvent {
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -7367,7 +7642,7 @@ class _$FollowedChannelEventImpl implements FollowedChannelEvent {
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return followed?.call(id, body);
@@ -7377,16 +7652,19 @@ class _$FollowedChannelEventImpl implements FollowedChannelEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -7401,7 +7679,7 @@ class _$FollowedChannelEventImpl implements FollowedChannelEvent {
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -7417,7 +7695,7 @@ class _$FollowedChannelEventImpl implements FollowedChannelEvent {
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -7445,37 +7723,37 @@ class _$FollowedChannelEventImpl implements FollowedChannelEvent {
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return followed(this);
@@ -7500,30 +7778,30 @@ class _$FollowedChannelEventImpl implements FollowedChannelEvent {
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return followed?.call(this);
@@ -7548,30 +7826,30 @@ class _$FollowedChannelEventImpl implements FollowedChannelEvent {
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -7583,16 +7861,15 @@ class _$FollowedChannelEventImpl implements FollowedChannelEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$FollowedChannelEventImplToJson(
-      this,
-    );
+    return _$$FollowedChannelEventImplToJson(this);
   }
 }
 
 abstract class FollowedChannelEvent implements ChannelStreamEvent {
-  const factory FollowedChannelEvent(
-      {required final String id,
-      required final UserLite body}) = _$FollowedChannelEventImpl;
+  const factory FollowedChannelEvent({
+    required final String id,
+    required final UserLite body,
+  }) = _$FollowedChannelEventImpl;
 
   factory FollowedChannelEvent.fromJson(Map<String, dynamic> json) =
       _$FollowedChannelEventImpl.fromJson;
@@ -7606,15 +7883,16 @@ abstract class FollowedChannelEvent implements ChannelStreamEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FollowedChannelEventImplCopyWith<_$FollowedChannelEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$UnfollowChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
-  factory _$$UnfollowChannelEventImplCopyWith(_$UnfollowChannelEventImpl value,
-          $Res Function(_$UnfollowChannelEventImpl) then) =
-      __$$UnfollowChannelEventImplCopyWithImpl<$Res>;
+  factory _$$UnfollowChannelEventImplCopyWith(
+    _$UnfollowChannelEventImpl value,
+    $Res Function(_$UnfollowChannelEventImpl) then,
+  ) = __$$UnfollowChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, UserDetailedNotMe body});
@@ -7626,28 +7904,30 @@ abstract class _$$UnfollowChannelEventImplCopyWith<$Res>
 class __$$UnfollowChannelEventImplCopyWithImpl<$Res>
     extends _$ChannelStreamEventCopyWithImpl<$Res, _$UnfollowChannelEventImpl>
     implements _$$UnfollowChannelEventImplCopyWith<$Res> {
-  __$$UnfollowChannelEventImplCopyWithImpl(_$UnfollowChannelEventImpl _value,
-      $Res Function(_$UnfollowChannelEventImpl) _then)
-      : super(_value, _then);
+  __$$UnfollowChannelEventImplCopyWithImpl(
+    _$UnfollowChannelEventImpl _value,
+    $Res Function(_$UnfollowChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? body = null,
-  }) {
-    return _then(_$UnfollowChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as UserDetailedNotMe,
-    ));
+  $Res call({Object? id = null, Object? body = null}) {
+    return _then(
+      _$UnfollowChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as UserDetailedNotMe,
+      ),
+    );
   }
 
   /// Create a copy of ChannelStreamEvent
@@ -7664,9 +7944,11 @@ class __$$UnfollowChannelEventImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$UnfollowChannelEventImpl implements UnfollowChannelEvent {
-  const _$UnfollowChannelEventImpl(
-      {required this.id, required this.body, final String? $type})
-      : $type = $type ?? 'unfollow';
+  const _$UnfollowChannelEventImpl({
+    required this.id,
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'unfollow';
 
   factory _$UnfollowChannelEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$UnfollowChannelEventImplFromJson(json);
@@ -7703,29 +7985,36 @@ class _$UnfollowChannelEventImpl implements UnfollowChannelEvent {
   @override
   @pragma('vm:prefer-inline')
   _$$UnfollowChannelEventImplCopyWith<_$UnfollowChannelEventImpl>
-      get copyWith =>
-          __$$UnfollowChannelEventImplCopyWithImpl<_$UnfollowChannelEventImpl>(
-              this, _$identity);
+  get copyWith =>
+      __$$UnfollowChannelEventImplCopyWithImpl<_$UnfollowChannelEventImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -7735,10 +8024,10 @@ class _$UnfollowChannelEventImpl implements UnfollowChannelEvent {
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -7754,7 +8043,7 @@ class _$UnfollowChannelEventImpl implements UnfollowChannelEvent {
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return unfollow(id, body);
@@ -7764,17 +8053,22 @@ class _$UnfollowChannelEventImpl implements UnfollowChannelEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -7787,10 +8081,10 @@ class _$UnfollowChannelEventImpl implements UnfollowChannelEvent {
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -7806,7 +8100,7 @@ class _$UnfollowChannelEventImpl implements UnfollowChannelEvent {
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return unfollow?.call(id, body);
@@ -7816,16 +8110,19 @@ class _$UnfollowChannelEventImpl implements UnfollowChannelEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -7840,7 +8137,7 @@ class _$UnfollowChannelEventImpl implements UnfollowChannelEvent {
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -7856,7 +8153,7 @@ class _$UnfollowChannelEventImpl implements UnfollowChannelEvent {
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -7884,37 +8181,37 @@ class _$UnfollowChannelEventImpl implements UnfollowChannelEvent {
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return unfollow(this);
@@ -7939,30 +8236,30 @@ class _$UnfollowChannelEventImpl implements UnfollowChannelEvent {
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return unfollow?.call(this);
@@ -7987,30 +8284,30 @@ class _$UnfollowChannelEventImpl implements UnfollowChannelEvent {
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -8022,16 +8319,15 @@ class _$UnfollowChannelEventImpl implements UnfollowChannelEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UnfollowChannelEventImplToJson(
-      this,
-    );
+    return _$$UnfollowChannelEventImplToJson(this);
   }
 }
 
 abstract class UnfollowChannelEvent implements ChannelStreamEvent {
-  const factory UnfollowChannelEvent(
-      {required final String id,
-      required final UserDetailedNotMe body}) = _$UnfollowChannelEventImpl;
+  const factory UnfollowChannelEvent({
+    required final String id,
+    required final UserDetailedNotMe body,
+  }) = _$UnfollowChannelEventImpl;
 
   factory UnfollowChannelEvent.fromJson(Map<String, dynamic> json) =
       _$UnfollowChannelEventImpl.fromJson;
@@ -8045,16 +8341,16 @@ abstract class UnfollowChannelEvent implements ChannelStreamEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UnfollowChannelEventImplCopyWith<_$UnfollowChannelEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$MeUpdatedChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
   factory _$$MeUpdatedChannelEventImplCopyWith(
-          _$MeUpdatedChannelEventImpl value,
-          $Res Function(_$MeUpdatedChannelEventImpl) then) =
-      __$$MeUpdatedChannelEventImplCopyWithImpl<$Res>;
+    _$MeUpdatedChannelEventImpl value,
+    $Res Function(_$MeUpdatedChannelEventImpl) then,
+  ) = __$$MeUpdatedChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, MeDetailed body});
@@ -8066,28 +8362,30 @@ abstract class _$$MeUpdatedChannelEventImplCopyWith<$Res>
 class __$$MeUpdatedChannelEventImplCopyWithImpl<$Res>
     extends _$ChannelStreamEventCopyWithImpl<$Res, _$MeUpdatedChannelEventImpl>
     implements _$$MeUpdatedChannelEventImplCopyWith<$Res> {
-  __$$MeUpdatedChannelEventImplCopyWithImpl(_$MeUpdatedChannelEventImpl _value,
-      $Res Function(_$MeUpdatedChannelEventImpl) _then)
-      : super(_value, _then);
+  __$$MeUpdatedChannelEventImplCopyWithImpl(
+    _$MeUpdatedChannelEventImpl _value,
+    $Res Function(_$MeUpdatedChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? body = null,
-  }) {
-    return _then(_$MeUpdatedChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as MeDetailed,
-    ));
+  $Res call({Object? id = null, Object? body = null}) {
+    return _then(
+      _$MeUpdatedChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as MeDetailed,
+      ),
+    );
   }
 
   /// Create a copy of ChannelStreamEvent
@@ -8104,9 +8402,11 @@ class __$$MeUpdatedChannelEventImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$MeUpdatedChannelEventImpl implements MeUpdatedChannelEvent {
-  const _$MeUpdatedChannelEventImpl(
-      {required this.id, required this.body, final String? $type})
-      : $type = $type ?? 'meUpdated';
+  const _$MeUpdatedChannelEventImpl({
+    required this.id,
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'meUpdated';
 
   factory _$MeUpdatedChannelEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$MeUpdatedChannelEventImplFromJson(json);
@@ -8143,28 +8443,36 @@ class _$MeUpdatedChannelEventImpl implements MeUpdatedChannelEvent {
   @override
   @pragma('vm:prefer-inline')
   _$$MeUpdatedChannelEventImplCopyWith<_$MeUpdatedChannelEventImpl>
-      get copyWith => __$$MeUpdatedChannelEventImplCopyWithImpl<
-          _$MeUpdatedChannelEventImpl>(this, _$identity);
+  get copyWith =>
+      __$$MeUpdatedChannelEventImplCopyWithImpl<_$MeUpdatedChannelEventImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -8174,10 +8482,10 @@ class _$MeUpdatedChannelEventImpl implements MeUpdatedChannelEvent {
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -8193,7 +8501,7 @@ class _$MeUpdatedChannelEventImpl implements MeUpdatedChannelEvent {
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return meUpdated(id, body);
@@ -8203,17 +8511,22 @@ class _$MeUpdatedChannelEventImpl implements MeUpdatedChannelEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -8226,10 +8539,10 @@ class _$MeUpdatedChannelEventImpl implements MeUpdatedChannelEvent {
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -8245,7 +8558,7 @@ class _$MeUpdatedChannelEventImpl implements MeUpdatedChannelEvent {
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return meUpdated?.call(id, body);
@@ -8255,16 +8568,19 @@ class _$MeUpdatedChannelEventImpl implements MeUpdatedChannelEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -8279,7 +8595,7 @@ class _$MeUpdatedChannelEventImpl implements MeUpdatedChannelEvent {
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -8295,7 +8611,7 @@ class _$MeUpdatedChannelEventImpl implements MeUpdatedChannelEvent {
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -8323,37 +8639,37 @@ class _$MeUpdatedChannelEventImpl implements MeUpdatedChannelEvent {
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return meUpdated(this);
@@ -8378,30 +8694,30 @@ class _$MeUpdatedChannelEventImpl implements MeUpdatedChannelEvent {
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return meUpdated?.call(this);
@@ -8426,30 +8742,30 @@ class _$MeUpdatedChannelEventImpl implements MeUpdatedChannelEvent {
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -8461,16 +8777,15 @@ class _$MeUpdatedChannelEventImpl implements MeUpdatedChannelEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MeUpdatedChannelEventImplToJson(
-      this,
-    );
+    return _$$MeUpdatedChannelEventImplToJson(this);
   }
 }
 
 abstract class MeUpdatedChannelEvent implements ChannelStreamEvent {
-  const factory MeUpdatedChannelEvent(
-      {required final String id,
-      required final MeDetailed body}) = _$MeUpdatedChannelEventImpl;
+  const factory MeUpdatedChannelEvent({
+    required final String id,
+    required final MeDetailed body,
+  }) = _$MeUpdatedChannelEventImpl;
 
   factory MeUpdatedChannelEvent.fromJson(Map<String, dynamic> json) =
       _$MeUpdatedChannelEventImpl.fromJson;
@@ -8484,16 +8799,16 @@ abstract class MeUpdatedChannelEvent implements ChannelStreamEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MeUpdatedChannelEventImplCopyWith<_$MeUpdatedChannelEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$PageEventChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
   factory _$$PageEventChannelEventImplCopyWith(
-          _$PageEventChannelEventImpl value,
-          $Res Function(_$PageEventChannelEventImpl) then) =
-      __$$PageEventChannelEventImplCopyWithImpl<$Res>;
+    _$PageEventChannelEventImpl value,
+    $Res Function(_$PageEventChannelEventImpl) then,
+  ) = __$$PageEventChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, PageEvent body});
@@ -8505,28 +8820,30 @@ abstract class _$$PageEventChannelEventImplCopyWith<$Res>
 class __$$PageEventChannelEventImplCopyWithImpl<$Res>
     extends _$ChannelStreamEventCopyWithImpl<$Res, _$PageEventChannelEventImpl>
     implements _$$PageEventChannelEventImplCopyWith<$Res> {
-  __$$PageEventChannelEventImplCopyWithImpl(_$PageEventChannelEventImpl _value,
-      $Res Function(_$PageEventChannelEventImpl) _then)
-      : super(_value, _then);
+  __$$PageEventChannelEventImplCopyWithImpl(
+    _$PageEventChannelEventImpl _value,
+    $Res Function(_$PageEventChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? body = null,
-  }) {
-    return _then(_$PageEventChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as PageEvent,
-    ));
+  $Res call({Object? id = null, Object? body = null}) {
+    return _then(
+      _$PageEventChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as PageEvent,
+      ),
+    );
   }
 
   /// Create a copy of ChannelStreamEvent
@@ -8543,9 +8860,11 @@ class __$$PageEventChannelEventImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$PageEventChannelEventImpl implements PageEventChannelEvent {
-  const _$PageEventChannelEventImpl(
-      {required this.id, required this.body, final String? $type})
-      : $type = $type ?? 'pageEvent';
+  const _$PageEventChannelEventImpl({
+    required this.id,
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'pageEvent';
 
   factory _$PageEventChannelEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$PageEventChannelEventImplFromJson(json);
@@ -8582,28 +8901,36 @@ class _$PageEventChannelEventImpl implements PageEventChannelEvent {
   @override
   @pragma('vm:prefer-inline')
   _$$PageEventChannelEventImplCopyWith<_$PageEventChannelEventImpl>
-      get copyWith => __$$PageEventChannelEventImplCopyWithImpl<
-          _$PageEventChannelEventImpl>(this, _$identity);
+  get copyWith =>
+      __$$PageEventChannelEventImplCopyWithImpl<_$PageEventChannelEventImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -8613,10 +8940,10 @@ class _$PageEventChannelEventImpl implements PageEventChannelEvent {
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -8632,7 +8959,7 @@ class _$PageEventChannelEventImpl implements PageEventChannelEvent {
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return pageEvent(id, body);
@@ -8642,17 +8969,22 @@ class _$PageEventChannelEventImpl implements PageEventChannelEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -8665,10 +8997,10 @@ class _$PageEventChannelEventImpl implements PageEventChannelEvent {
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -8684,7 +9016,7 @@ class _$PageEventChannelEventImpl implements PageEventChannelEvent {
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return pageEvent?.call(id, body);
@@ -8694,16 +9026,19 @@ class _$PageEventChannelEventImpl implements PageEventChannelEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -8718,7 +9053,7 @@ class _$PageEventChannelEventImpl implements PageEventChannelEvent {
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -8734,7 +9069,7 @@ class _$PageEventChannelEventImpl implements PageEventChannelEvent {
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -8762,37 +9097,37 @@ class _$PageEventChannelEventImpl implements PageEventChannelEvent {
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return pageEvent(this);
@@ -8817,30 +9152,30 @@ class _$PageEventChannelEventImpl implements PageEventChannelEvent {
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return pageEvent?.call(this);
@@ -8865,30 +9200,30 @@ class _$PageEventChannelEventImpl implements PageEventChannelEvent {
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -8900,16 +9235,15 @@ class _$PageEventChannelEventImpl implements PageEventChannelEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PageEventChannelEventImplToJson(
-      this,
-    );
+    return _$$PageEventChannelEventImplToJson(this);
   }
 }
 
 abstract class PageEventChannelEvent implements ChannelStreamEvent {
-  const factory PageEventChannelEvent(
-      {required final String id,
-      required final PageEvent body}) = _$PageEventChannelEventImpl;
+  const factory PageEventChannelEvent({
+    required final String id,
+    required final PageEvent body,
+  }) = _$PageEventChannelEventImpl;
 
   factory PageEventChannelEvent.fromJson(Map<String, dynamic> json) =
       _$PageEventChannelEventImpl.fromJson;
@@ -8923,16 +9257,16 @@ abstract class PageEventChannelEvent implements ChannelStreamEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PageEventChannelEventImplCopyWith<_$PageEventChannelEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$UrlUploadFinishedChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
   factory _$$UrlUploadFinishedChannelEventImplCopyWith(
-          _$UrlUploadFinishedChannelEventImpl value,
-          $Res Function(_$UrlUploadFinishedChannelEventImpl) then) =
-      __$$UrlUploadFinishedChannelEventImplCopyWithImpl<$Res>;
+    _$UrlUploadFinishedChannelEventImpl value,
+    $Res Function(_$UrlUploadFinishedChannelEventImpl) then,
+  ) = __$$UrlUploadFinishedChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, UrlUploadFinishedEvent body});
@@ -8942,32 +9276,36 @@ abstract class _$$UrlUploadFinishedChannelEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$UrlUploadFinishedChannelEventImplCopyWithImpl<$Res>
-    extends _$ChannelStreamEventCopyWithImpl<$Res,
-        _$UrlUploadFinishedChannelEventImpl>
+    extends
+        _$ChannelStreamEventCopyWithImpl<
+          $Res,
+          _$UrlUploadFinishedChannelEventImpl
+        >
     implements _$$UrlUploadFinishedChannelEventImplCopyWith<$Res> {
   __$$UrlUploadFinishedChannelEventImplCopyWithImpl(
-      _$UrlUploadFinishedChannelEventImpl _value,
-      $Res Function(_$UrlUploadFinishedChannelEventImpl) _then)
-      : super(_value, _then);
+    _$UrlUploadFinishedChannelEventImpl _value,
+    $Res Function(_$UrlUploadFinishedChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? body = null,
-  }) {
-    return _then(_$UrlUploadFinishedChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as UrlUploadFinishedEvent,
-    ));
+  $Res call({Object? id = null, Object? body = null}) {
+    return _then(
+      _$UrlUploadFinishedChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as UrlUploadFinishedEvent,
+      ),
+    );
   }
 
   /// Create a copy of ChannelStreamEvent
@@ -8985,13 +9323,15 @@ class __$$UrlUploadFinishedChannelEventImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$UrlUploadFinishedChannelEventImpl
     implements UrlUploadFinishedChannelEvent {
-  const _$UrlUploadFinishedChannelEventImpl(
-      {required this.id, required this.body, final String? $type})
-      : $type = $type ?? 'urlUploadFinished';
+  const _$UrlUploadFinishedChannelEventImpl({
+    required this.id,
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'urlUploadFinished';
 
   factory _$UrlUploadFinishedChannelEventImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$UrlUploadFinishedChannelEventImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$UrlUploadFinishedChannelEventImplFromJson(json);
 
   @override
   final String id;
@@ -9025,29 +9365,36 @@ class _$UrlUploadFinishedChannelEventImpl
   @override
   @pragma('vm:prefer-inline')
   _$$UrlUploadFinishedChannelEventImplCopyWith<
-          _$UrlUploadFinishedChannelEventImpl>
-      get copyWith => __$$UrlUploadFinishedChannelEventImplCopyWithImpl<
-          _$UrlUploadFinishedChannelEventImpl>(this, _$identity);
+    _$UrlUploadFinishedChannelEventImpl
+  >
+  get copyWith => __$$UrlUploadFinishedChannelEventImplCopyWithImpl<
+    _$UrlUploadFinishedChannelEventImpl
+  >(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -9057,10 +9404,10 @@ class _$UrlUploadFinishedChannelEventImpl
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -9076,7 +9423,7 @@ class _$UrlUploadFinishedChannelEventImpl
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return urlUploadFinished(id, body);
@@ -9086,17 +9433,22 @@ class _$UrlUploadFinishedChannelEventImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -9109,10 +9461,10 @@ class _$UrlUploadFinishedChannelEventImpl
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -9128,7 +9480,7 @@ class _$UrlUploadFinishedChannelEventImpl
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return urlUploadFinished?.call(id, body);
@@ -9138,16 +9490,19 @@ class _$UrlUploadFinishedChannelEventImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -9162,7 +9517,7 @@ class _$UrlUploadFinishedChannelEventImpl
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -9178,7 +9533,7 @@ class _$UrlUploadFinishedChannelEventImpl
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -9206,37 +9561,37 @@ class _$UrlUploadFinishedChannelEventImpl
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return urlUploadFinished(this);
@@ -9261,30 +9616,30 @@ class _$UrlUploadFinishedChannelEventImpl
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return urlUploadFinished?.call(this);
@@ -9309,30 +9664,30 @@ class _$UrlUploadFinishedChannelEventImpl
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -9344,17 +9699,15 @@ class _$UrlUploadFinishedChannelEventImpl
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UrlUploadFinishedChannelEventImplToJson(
-      this,
-    );
+    return _$$UrlUploadFinishedChannelEventImplToJson(this);
   }
 }
 
 abstract class UrlUploadFinishedChannelEvent implements ChannelStreamEvent {
-  const factory UrlUploadFinishedChannelEvent(
-          {required final String id,
-          required final UrlUploadFinishedEvent body}) =
-      _$UrlUploadFinishedChannelEventImpl;
+  const factory UrlUploadFinishedChannelEvent({
+    required final String id,
+    required final UrlUploadFinishedEvent body,
+  }) = _$UrlUploadFinishedChannelEventImpl;
 
   factory UrlUploadFinishedChannelEvent.fromJson(Map<String, dynamic> json) =
       _$UrlUploadFinishedChannelEventImpl.fromJson;
@@ -9368,17 +9721,18 @@ abstract class UrlUploadFinishedChannelEvent implements ChannelStreamEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UrlUploadFinishedChannelEventImplCopyWith<
-          _$UrlUploadFinishedChannelEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$UrlUploadFinishedChannelEventImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ReadAllNotificationsChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
   factory _$$ReadAllNotificationsChannelEventImplCopyWith(
-          _$ReadAllNotificationsChannelEventImpl value,
-          $Res Function(_$ReadAllNotificationsChannelEventImpl) then) =
-      __$$ReadAllNotificationsChannelEventImplCopyWithImpl<$Res>;
+    _$ReadAllNotificationsChannelEventImpl value,
+    $Res Function(_$ReadAllNotificationsChannelEventImpl) then,
+  ) = __$$ReadAllNotificationsChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id});
@@ -9386,27 +9740,31 @@ abstract class _$$ReadAllNotificationsChannelEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$ReadAllNotificationsChannelEventImplCopyWithImpl<$Res>
-    extends _$ChannelStreamEventCopyWithImpl<$Res,
-        _$ReadAllNotificationsChannelEventImpl>
+    extends
+        _$ChannelStreamEventCopyWithImpl<
+          $Res,
+          _$ReadAllNotificationsChannelEventImpl
+        >
     implements _$$ReadAllNotificationsChannelEventImplCopyWith<$Res> {
   __$$ReadAllNotificationsChannelEventImplCopyWithImpl(
-      _$ReadAllNotificationsChannelEventImpl _value,
-      $Res Function(_$ReadAllNotificationsChannelEventImpl) _then)
-      : super(_value, _then);
+    _$ReadAllNotificationsChannelEventImpl _value,
+    $Res Function(_$ReadAllNotificationsChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-  }) {
-    return _then(_$ReadAllNotificationsChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? id = null}) {
+    return _then(
+      _$ReadAllNotificationsChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -9414,13 +9772,14 @@ class __$$ReadAllNotificationsChannelEventImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ReadAllNotificationsChannelEventImpl
     implements ReadAllNotificationsChannelEvent {
-  const _$ReadAllNotificationsChannelEventImpl(
-      {required this.id, final String? $type})
-      : $type = $type ?? 'readAllNotifications';
+  const _$ReadAllNotificationsChannelEventImpl({
+    required this.id,
+    final String? $type,
+  }) : $type = $type ?? 'readAllNotifications';
 
   factory _$ReadAllNotificationsChannelEventImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$ReadAllNotificationsChannelEventImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$ReadAllNotificationsChannelEventImplFromJson(json);
 
   @override
   final String id;
@@ -9451,29 +9810,36 @@ class _$ReadAllNotificationsChannelEventImpl
   @override
   @pragma('vm:prefer-inline')
   _$$ReadAllNotificationsChannelEventImplCopyWith<
-          _$ReadAllNotificationsChannelEventImpl>
-      get copyWith => __$$ReadAllNotificationsChannelEventImplCopyWithImpl<
-          _$ReadAllNotificationsChannelEventImpl>(this, _$identity);
+    _$ReadAllNotificationsChannelEventImpl
+  >
+  get copyWith => __$$ReadAllNotificationsChannelEventImplCopyWithImpl<
+    _$ReadAllNotificationsChannelEventImpl
+  >(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -9483,10 +9849,10 @@ class _$ReadAllNotificationsChannelEventImpl
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -9502,7 +9868,7 @@ class _$ReadAllNotificationsChannelEventImpl
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return readAllNotifications(id);
@@ -9512,17 +9878,22 @@ class _$ReadAllNotificationsChannelEventImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -9535,10 +9906,10 @@ class _$ReadAllNotificationsChannelEventImpl
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -9554,7 +9925,7 @@ class _$ReadAllNotificationsChannelEventImpl
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return readAllNotifications?.call(id);
@@ -9564,16 +9935,19 @@ class _$ReadAllNotificationsChannelEventImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -9588,7 +9962,7 @@ class _$ReadAllNotificationsChannelEventImpl
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -9604,7 +9978,7 @@ class _$ReadAllNotificationsChannelEventImpl
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -9632,37 +10006,37 @@ class _$ReadAllNotificationsChannelEventImpl
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return readAllNotifications(this);
@@ -9687,30 +10061,30 @@ class _$ReadAllNotificationsChannelEventImpl
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return readAllNotifications?.call(this);
@@ -9735,30 +10109,30 @@ class _$ReadAllNotificationsChannelEventImpl
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -9770,9 +10144,7 @@ class _$ReadAllNotificationsChannelEventImpl
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ReadAllNotificationsChannelEventImplToJson(
-      this,
-    );
+    return _$$ReadAllNotificationsChannelEventImplToJson(this);
   }
 }
 
@@ -9791,17 +10163,18 @@ abstract class ReadAllNotificationsChannelEvent implements ChannelStreamEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReadAllNotificationsChannelEventImplCopyWith<
-          _$ReadAllNotificationsChannelEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$ReadAllNotificationsChannelEventImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$UnreadNotificationChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
   factory _$$UnreadNotificationChannelEventImplCopyWith(
-          _$UnreadNotificationChannelEventImpl value,
-          $Res Function(_$UnreadNotificationChannelEventImpl) then) =
-      __$$UnreadNotificationChannelEventImplCopyWithImpl<$Res>;
+    _$UnreadNotificationChannelEventImpl value,
+    $Res Function(_$UnreadNotificationChannelEventImpl) then,
+  ) = __$$UnreadNotificationChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, INotificationsResponse body});
@@ -9811,32 +10184,36 @@ abstract class _$$UnreadNotificationChannelEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$UnreadNotificationChannelEventImplCopyWithImpl<$Res>
-    extends _$ChannelStreamEventCopyWithImpl<$Res,
-        _$UnreadNotificationChannelEventImpl>
+    extends
+        _$ChannelStreamEventCopyWithImpl<
+          $Res,
+          _$UnreadNotificationChannelEventImpl
+        >
     implements _$$UnreadNotificationChannelEventImplCopyWith<$Res> {
   __$$UnreadNotificationChannelEventImplCopyWithImpl(
-      _$UnreadNotificationChannelEventImpl _value,
-      $Res Function(_$UnreadNotificationChannelEventImpl) _then)
-      : super(_value, _then);
+    _$UnreadNotificationChannelEventImpl _value,
+    $Res Function(_$UnreadNotificationChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? body = null,
-  }) {
-    return _then(_$UnreadNotificationChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as INotificationsResponse,
-    ));
+  $Res call({Object? id = null, Object? body = null}) {
+    return _then(
+      _$UnreadNotificationChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as INotificationsResponse,
+      ),
+    );
   }
 
   /// Create a copy of ChannelStreamEvent
@@ -9854,13 +10231,15 @@ class __$$UnreadNotificationChannelEventImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$UnreadNotificationChannelEventImpl
     implements UnreadNotificationChannelEvent {
-  const _$UnreadNotificationChannelEventImpl(
-      {required this.id, required this.body, final String? $type})
-      : $type = $type ?? 'unreadNotification';
+  const _$UnreadNotificationChannelEventImpl({
+    required this.id,
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'unreadNotification';
 
   factory _$UnreadNotificationChannelEventImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$UnreadNotificationChannelEventImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$UnreadNotificationChannelEventImplFromJson(json);
 
   @override
   final String id;
@@ -9894,29 +10273,36 @@ class _$UnreadNotificationChannelEventImpl
   @override
   @pragma('vm:prefer-inline')
   _$$UnreadNotificationChannelEventImplCopyWith<
-          _$UnreadNotificationChannelEventImpl>
-      get copyWith => __$$UnreadNotificationChannelEventImplCopyWithImpl<
-          _$UnreadNotificationChannelEventImpl>(this, _$identity);
+    _$UnreadNotificationChannelEventImpl
+  >
+  get copyWith => __$$UnreadNotificationChannelEventImplCopyWithImpl<
+    _$UnreadNotificationChannelEventImpl
+  >(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -9926,10 +10312,10 @@ class _$UnreadNotificationChannelEventImpl
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -9945,7 +10331,7 @@ class _$UnreadNotificationChannelEventImpl
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return unreadNotification(id, body);
@@ -9955,17 +10341,22 @@ class _$UnreadNotificationChannelEventImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -9978,10 +10369,10 @@ class _$UnreadNotificationChannelEventImpl
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -9997,7 +10388,7 @@ class _$UnreadNotificationChannelEventImpl
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return unreadNotification?.call(id, body);
@@ -10007,16 +10398,19 @@ class _$UnreadNotificationChannelEventImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -10031,7 +10425,7 @@ class _$UnreadNotificationChannelEventImpl
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -10047,7 +10441,7 @@ class _$UnreadNotificationChannelEventImpl
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -10075,37 +10469,37 @@ class _$UnreadNotificationChannelEventImpl
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return unreadNotification(this);
@@ -10130,30 +10524,30 @@ class _$UnreadNotificationChannelEventImpl
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return unreadNotification?.call(this);
@@ -10178,30 +10572,30 @@ class _$UnreadNotificationChannelEventImpl
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -10213,17 +10607,15 @@ class _$UnreadNotificationChannelEventImpl
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UnreadNotificationChannelEventImplToJson(
-      this,
-    );
+    return _$$UnreadNotificationChannelEventImplToJson(this);
   }
 }
 
 abstract class UnreadNotificationChannelEvent implements ChannelStreamEvent {
-  const factory UnreadNotificationChannelEvent(
-          {required final String id,
-          required final INotificationsResponse body}) =
-      _$UnreadNotificationChannelEventImpl;
+  const factory UnreadNotificationChannelEvent({
+    required final String id,
+    required final INotificationsResponse body,
+  }) = _$UnreadNotificationChannelEventImpl;
 
   factory UnreadNotificationChannelEvent.fromJson(Map<String, dynamic> json) =
       _$UnreadNotificationChannelEventImpl.fromJson;
@@ -10237,17 +10629,18 @@ abstract class UnreadNotificationChannelEvent implements ChannelStreamEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UnreadNotificationChannelEventImplCopyWith<
-          _$UnreadNotificationChannelEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$UnreadNotificationChannelEventImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$UnreadMentionChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
   factory _$$UnreadMentionChannelEventImplCopyWith(
-          _$UnreadMentionChannelEventImpl value,
-          $Res Function(_$UnreadMentionChannelEventImpl) then) =
-      __$$UnreadMentionChannelEventImplCopyWithImpl<$Res>;
+    _$UnreadMentionChannelEventImpl value,
+    $Res Function(_$UnreadMentionChannelEventImpl) then,
+  ) = __$$UnreadMentionChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, String body});
@@ -10255,41 +10648,44 @@ abstract class _$$UnreadMentionChannelEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$UnreadMentionChannelEventImplCopyWithImpl<$Res>
-    extends _$ChannelStreamEventCopyWithImpl<$Res,
-        _$UnreadMentionChannelEventImpl>
+    extends
+        _$ChannelStreamEventCopyWithImpl<$Res, _$UnreadMentionChannelEventImpl>
     implements _$$UnreadMentionChannelEventImplCopyWith<$Res> {
   __$$UnreadMentionChannelEventImplCopyWithImpl(
-      _$UnreadMentionChannelEventImpl _value,
-      $Res Function(_$UnreadMentionChannelEventImpl) _then)
-      : super(_value, _then);
+    _$UnreadMentionChannelEventImpl _value,
+    $Res Function(_$UnreadMentionChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? body = null,
-  }) {
-    return _then(_$UnreadMentionChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? id = null, Object? body = null}) {
+    return _then(
+      _$UnreadMentionChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$UnreadMentionChannelEventImpl implements UnreadMentionChannelEvent {
-  const _$UnreadMentionChannelEventImpl(
-      {required this.id, required this.body, final String? $type})
-      : $type = $type ?? 'unreadMention';
+  const _$UnreadMentionChannelEventImpl({
+    required this.id,
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'unreadMention';
 
   factory _$UnreadMentionChannelEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$UnreadMentionChannelEventImplFromJson(json);
@@ -10326,28 +10722,34 @@ class _$UnreadMentionChannelEventImpl implements UnreadMentionChannelEvent {
   @override
   @pragma('vm:prefer-inline')
   _$$UnreadMentionChannelEventImplCopyWith<_$UnreadMentionChannelEventImpl>
-      get copyWith => __$$UnreadMentionChannelEventImplCopyWithImpl<
-          _$UnreadMentionChannelEventImpl>(this, _$identity);
+  get copyWith => __$$UnreadMentionChannelEventImplCopyWithImpl<
+    _$UnreadMentionChannelEventImpl
+  >(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -10357,10 +10759,10 @@ class _$UnreadMentionChannelEventImpl implements UnreadMentionChannelEvent {
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -10376,7 +10778,7 @@ class _$UnreadMentionChannelEventImpl implements UnreadMentionChannelEvent {
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return unreadMention(id, body);
@@ -10386,17 +10788,22 @@ class _$UnreadMentionChannelEventImpl implements UnreadMentionChannelEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -10409,10 +10816,10 @@ class _$UnreadMentionChannelEventImpl implements UnreadMentionChannelEvent {
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -10428,7 +10835,7 @@ class _$UnreadMentionChannelEventImpl implements UnreadMentionChannelEvent {
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return unreadMention?.call(id, body);
@@ -10438,16 +10845,19 @@ class _$UnreadMentionChannelEventImpl implements UnreadMentionChannelEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -10462,7 +10872,7 @@ class _$UnreadMentionChannelEventImpl implements UnreadMentionChannelEvent {
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -10478,7 +10888,7 @@ class _$UnreadMentionChannelEventImpl implements UnreadMentionChannelEvent {
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -10506,37 +10916,37 @@ class _$UnreadMentionChannelEventImpl implements UnreadMentionChannelEvent {
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return unreadMention(this);
@@ -10561,30 +10971,30 @@ class _$UnreadMentionChannelEventImpl implements UnreadMentionChannelEvent {
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return unreadMention?.call(this);
@@ -10609,30 +11019,30 @@ class _$UnreadMentionChannelEventImpl implements UnreadMentionChannelEvent {
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -10644,16 +11054,15 @@ class _$UnreadMentionChannelEventImpl implements UnreadMentionChannelEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UnreadMentionChannelEventImplToJson(
-      this,
-    );
+    return _$$UnreadMentionChannelEventImplToJson(this);
   }
 }
 
 abstract class UnreadMentionChannelEvent implements ChannelStreamEvent {
-  const factory UnreadMentionChannelEvent(
-      {required final String id,
-      required final String body}) = _$UnreadMentionChannelEventImpl;
+  const factory UnreadMentionChannelEvent({
+    required final String id,
+    required final String body,
+  }) = _$UnreadMentionChannelEventImpl;
 
   factory UnreadMentionChannelEvent.fromJson(Map<String, dynamic> json) =
       _$UnreadMentionChannelEventImpl.fromJson;
@@ -10667,16 +11076,16 @@ abstract class UnreadMentionChannelEvent implements ChannelStreamEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UnreadMentionChannelEventImplCopyWith<_$UnreadMentionChannelEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ReadAllUnreadMentionsChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
   factory _$$ReadAllUnreadMentionsChannelEventImplCopyWith(
-          _$ReadAllUnreadMentionsChannelEventImpl value,
-          $Res Function(_$ReadAllUnreadMentionsChannelEventImpl) then) =
-      __$$ReadAllUnreadMentionsChannelEventImplCopyWithImpl<$Res>;
+    _$ReadAllUnreadMentionsChannelEventImpl value,
+    $Res Function(_$ReadAllUnreadMentionsChannelEventImpl) then,
+  ) = __$$ReadAllUnreadMentionsChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id});
@@ -10684,27 +11093,31 @@ abstract class _$$ReadAllUnreadMentionsChannelEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$ReadAllUnreadMentionsChannelEventImplCopyWithImpl<$Res>
-    extends _$ChannelStreamEventCopyWithImpl<$Res,
-        _$ReadAllUnreadMentionsChannelEventImpl>
+    extends
+        _$ChannelStreamEventCopyWithImpl<
+          $Res,
+          _$ReadAllUnreadMentionsChannelEventImpl
+        >
     implements _$$ReadAllUnreadMentionsChannelEventImplCopyWith<$Res> {
   __$$ReadAllUnreadMentionsChannelEventImplCopyWithImpl(
-      _$ReadAllUnreadMentionsChannelEventImpl _value,
-      $Res Function(_$ReadAllUnreadMentionsChannelEventImpl) _then)
-      : super(_value, _then);
+    _$ReadAllUnreadMentionsChannelEventImpl _value,
+    $Res Function(_$ReadAllUnreadMentionsChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-  }) {
-    return _then(_$ReadAllUnreadMentionsChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? id = null}) {
+    return _then(
+      _$ReadAllUnreadMentionsChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -10712,13 +11125,14 @@ class __$$ReadAllUnreadMentionsChannelEventImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ReadAllUnreadMentionsChannelEventImpl
     implements ReadAllUnreadMentionsChannelEvent {
-  const _$ReadAllUnreadMentionsChannelEventImpl(
-      {required this.id, final String? $type})
-      : $type = $type ?? 'readAllUnreadMentions';
+  const _$ReadAllUnreadMentionsChannelEventImpl({
+    required this.id,
+    final String? $type,
+  }) : $type = $type ?? 'readAllUnreadMentions';
 
   factory _$ReadAllUnreadMentionsChannelEventImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$ReadAllUnreadMentionsChannelEventImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$ReadAllUnreadMentionsChannelEventImplFromJson(json);
 
   @override
   final String id;
@@ -10749,29 +11163,36 @@ class _$ReadAllUnreadMentionsChannelEventImpl
   @override
   @pragma('vm:prefer-inline')
   _$$ReadAllUnreadMentionsChannelEventImplCopyWith<
-          _$ReadAllUnreadMentionsChannelEventImpl>
-      get copyWith => __$$ReadAllUnreadMentionsChannelEventImplCopyWithImpl<
-          _$ReadAllUnreadMentionsChannelEventImpl>(this, _$identity);
+    _$ReadAllUnreadMentionsChannelEventImpl
+  >
+  get copyWith => __$$ReadAllUnreadMentionsChannelEventImplCopyWithImpl<
+    _$ReadAllUnreadMentionsChannelEventImpl
+  >(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -10781,10 +11202,10 @@ class _$ReadAllUnreadMentionsChannelEventImpl
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -10800,7 +11221,7 @@ class _$ReadAllUnreadMentionsChannelEventImpl
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return readAllUnreadMentions(id);
@@ -10810,17 +11231,22 @@ class _$ReadAllUnreadMentionsChannelEventImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -10833,10 +11259,10 @@ class _$ReadAllUnreadMentionsChannelEventImpl
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -10852,7 +11278,7 @@ class _$ReadAllUnreadMentionsChannelEventImpl
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return readAllUnreadMentions?.call(id);
@@ -10862,16 +11288,19 @@ class _$ReadAllUnreadMentionsChannelEventImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -10886,7 +11315,7 @@ class _$ReadAllUnreadMentionsChannelEventImpl
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -10902,7 +11331,7 @@ class _$ReadAllUnreadMentionsChannelEventImpl
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -10930,37 +11359,37 @@ class _$ReadAllUnreadMentionsChannelEventImpl
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return readAllUnreadMentions(this);
@@ -10985,30 +11414,30 @@ class _$ReadAllUnreadMentionsChannelEventImpl
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return readAllUnreadMentions?.call(this);
@@ -11033,30 +11462,30 @@ class _$ReadAllUnreadMentionsChannelEventImpl
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -11068,9 +11497,7 @@ class _$ReadAllUnreadMentionsChannelEventImpl
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ReadAllUnreadMentionsChannelEventImplToJson(
-      this,
-    );
+    return _$$ReadAllUnreadMentionsChannelEventImplToJson(this);
   }
 }
 
@@ -11079,8 +11506,8 @@ abstract class ReadAllUnreadMentionsChannelEvent implements ChannelStreamEvent {
       _$ReadAllUnreadMentionsChannelEventImpl;
 
   factory ReadAllUnreadMentionsChannelEvent.fromJson(
-          Map<String, dynamic> json) =
-      _$ReadAllUnreadMentionsChannelEventImpl.fromJson;
+    Map<String, dynamic> json,
+  ) = _$ReadAllUnreadMentionsChannelEventImpl.fromJson;
 
   @override
   String get id;
@@ -11090,17 +11517,18 @@ abstract class ReadAllUnreadMentionsChannelEvent implements ChannelStreamEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReadAllUnreadMentionsChannelEventImplCopyWith<
-          _$ReadAllUnreadMentionsChannelEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$ReadAllUnreadMentionsChannelEventImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$NotificationFlushedChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
   factory _$$NotificationFlushedChannelEventImplCopyWith(
-          _$NotificationFlushedChannelEventImpl value,
-          $Res Function(_$NotificationFlushedChannelEventImpl) then) =
-      __$$NotificationFlushedChannelEventImplCopyWithImpl<$Res>;
+    _$NotificationFlushedChannelEventImpl value,
+    $Res Function(_$NotificationFlushedChannelEventImpl) then,
+  ) = __$$NotificationFlushedChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id});
@@ -11108,27 +11536,31 @@ abstract class _$$NotificationFlushedChannelEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$NotificationFlushedChannelEventImplCopyWithImpl<$Res>
-    extends _$ChannelStreamEventCopyWithImpl<$Res,
-        _$NotificationFlushedChannelEventImpl>
+    extends
+        _$ChannelStreamEventCopyWithImpl<
+          $Res,
+          _$NotificationFlushedChannelEventImpl
+        >
     implements _$$NotificationFlushedChannelEventImplCopyWith<$Res> {
   __$$NotificationFlushedChannelEventImplCopyWithImpl(
-      _$NotificationFlushedChannelEventImpl _value,
-      $Res Function(_$NotificationFlushedChannelEventImpl) _then)
-      : super(_value, _then);
+    _$NotificationFlushedChannelEventImpl _value,
+    $Res Function(_$NotificationFlushedChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-  }) {
-    return _then(_$NotificationFlushedChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? id = null}) {
+    return _then(
+      _$NotificationFlushedChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -11136,13 +11568,14 @@ class __$$NotificationFlushedChannelEventImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$NotificationFlushedChannelEventImpl
     implements NotificationFlushedChannelEvent {
-  const _$NotificationFlushedChannelEventImpl(
-      {required this.id, final String? $type})
-      : $type = $type ?? 'notificationFlushed';
+  const _$NotificationFlushedChannelEventImpl({
+    required this.id,
+    final String? $type,
+  }) : $type = $type ?? 'notificationFlushed';
 
   factory _$NotificationFlushedChannelEventImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$NotificationFlushedChannelEventImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$NotificationFlushedChannelEventImplFromJson(json);
 
   @override
   final String id;
@@ -11173,29 +11606,36 @@ class _$NotificationFlushedChannelEventImpl
   @override
   @pragma('vm:prefer-inline')
   _$$NotificationFlushedChannelEventImplCopyWith<
-          _$NotificationFlushedChannelEventImpl>
-      get copyWith => __$$NotificationFlushedChannelEventImplCopyWithImpl<
-          _$NotificationFlushedChannelEventImpl>(this, _$identity);
+    _$NotificationFlushedChannelEventImpl
+  >
+  get copyWith => __$$NotificationFlushedChannelEventImplCopyWithImpl<
+    _$NotificationFlushedChannelEventImpl
+  >(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -11205,10 +11645,10 @@ class _$NotificationFlushedChannelEventImpl
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -11224,7 +11664,7 @@ class _$NotificationFlushedChannelEventImpl
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return notificationFlushed(id);
@@ -11234,17 +11674,22 @@ class _$NotificationFlushedChannelEventImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -11257,10 +11702,10 @@ class _$NotificationFlushedChannelEventImpl
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -11276,7 +11721,7 @@ class _$NotificationFlushedChannelEventImpl
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return notificationFlushed?.call(id);
@@ -11286,16 +11731,19 @@ class _$NotificationFlushedChannelEventImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -11310,7 +11758,7 @@ class _$NotificationFlushedChannelEventImpl
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -11326,7 +11774,7 @@ class _$NotificationFlushedChannelEventImpl
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -11354,37 +11802,37 @@ class _$NotificationFlushedChannelEventImpl
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return notificationFlushed(this);
@@ -11409,30 +11857,30 @@ class _$NotificationFlushedChannelEventImpl
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return notificationFlushed?.call(this);
@@ -11457,30 +11905,30 @@ class _$NotificationFlushedChannelEventImpl
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -11492,9 +11940,7 @@ class _$NotificationFlushedChannelEventImpl
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotificationFlushedChannelEventImplToJson(
-      this,
-    );
+    return _$$NotificationFlushedChannelEventImplToJson(this);
   }
 }
 
@@ -11513,17 +11959,18 @@ abstract class NotificationFlushedChannelEvent implements ChannelStreamEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotificationFlushedChannelEventImplCopyWith<
-          _$NotificationFlushedChannelEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$NotificationFlushedChannelEventImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$UnreadSpecifiedNoteChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
   factory _$$UnreadSpecifiedNoteChannelEventImplCopyWith(
-          _$UnreadSpecifiedNoteChannelEventImpl value,
-          $Res Function(_$UnreadSpecifiedNoteChannelEventImpl) then) =
-      __$$UnreadSpecifiedNoteChannelEventImplCopyWithImpl<$Res>;
+    _$UnreadSpecifiedNoteChannelEventImpl value,
+    $Res Function(_$UnreadSpecifiedNoteChannelEventImpl) then,
+  ) = __$$UnreadSpecifiedNoteChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, String body});
@@ -11531,32 +11978,36 @@ abstract class _$$UnreadSpecifiedNoteChannelEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$UnreadSpecifiedNoteChannelEventImplCopyWithImpl<$Res>
-    extends _$ChannelStreamEventCopyWithImpl<$Res,
-        _$UnreadSpecifiedNoteChannelEventImpl>
+    extends
+        _$ChannelStreamEventCopyWithImpl<
+          $Res,
+          _$UnreadSpecifiedNoteChannelEventImpl
+        >
     implements _$$UnreadSpecifiedNoteChannelEventImplCopyWith<$Res> {
   __$$UnreadSpecifiedNoteChannelEventImplCopyWithImpl(
-      _$UnreadSpecifiedNoteChannelEventImpl _value,
-      $Res Function(_$UnreadSpecifiedNoteChannelEventImpl) _then)
-      : super(_value, _then);
+    _$UnreadSpecifiedNoteChannelEventImpl _value,
+    $Res Function(_$UnreadSpecifiedNoteChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? body = null,
-  }) {
-    return _then(_$UnreadSpecifiedNoteChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? id = null, Object? body = null}) {
+    return _then(
+      _$UnreadSpecifiedNoteChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -11564,13 +12015,15 @@ class __$$UnreadSpecifiedNoteChannelEventImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$UnreadSpecifiedNoteChannelEventImpl
     implements UnreadSpecifiedNoteChannelEvent {
-  const _$UnreadSpecifiedNoteChannelEventImpl(
-      {required this.id, required this.body, final String? $type})
-      : $type = $type ?? 'unreadSpecifiedNote';
+  const _$UnreadSpecifiedNoteChannelEventImpl({
+    required this.id,
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'unreadSpecifiedNote';
 
   factory _$UnreadSpecifiedNoteChannelEventImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$UnreadSpecifiedNoteChannelEventImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$UnreadSpecifiedNoteChannelEventImplFromJson(json);
 
   @override
   final String id;
@@ -11604,29 +12057,36 @@ class _$UnreadSpecifiedNoteChannelEventImpl
   @override
   @pragma('vm:prefer-inline')
   _$$UnreadSpecifiedNoteChannelEventImplCopyWith<
-          _$UnreadSpecifiedNoteChannelEventImpl>
-      get copyWith => __$$UnreadSpecifiedNoteChannelEventImplCopyWithImpl<
-          _$UnreadSpecifiedNoteChannelEventImpl>(this, _$identity);
+    _$UnreadSpecifiedNoteChannelEventImpl
+  >
+  get copyWith => __$$UnreadSpecifiedNoteChannelEventImplCopyWithImpl<
+    _$UnreadSpecifiedNoteChannelEventImpl
+  >(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -11636,10 +12096,10 @@ class _$UnreadSpecifiedNoteChannelEventImpl
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -11655,7 +12115,7 @@ class _$UnreadSpecifiedNoteChannelEventImpl
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return unreadSpecifiedNote(id, body);
@@ -11665,17 +12125,22 @@ class _$UnreadSpecifiedNoteChannelEventImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -11688,10 +12153,10 @@ class _$UnreadSpecifiedNoteChannelEventImpl
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -11707,7 +12172,7 @@ class _$UnreadSpecifiedNoteChannelEventImpl
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return unreadSpecifiedNote?.call(id, body);
@@ -11717,16 +12182,19 @@ class _$UnreadSpecifiedNoteChannelEventImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -11741,7 +12209,7 @@ class _$UnreadSpecifiedNoteChannelEventImpl
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -11757,7 +12225,7 @@ class _$UnreadSpecifiedNoteChannelEventImpl
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -11785,37 +12253,37 @@ class _$UnreadSpecifiedNoteChannelEventImpl
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return unreadSpecifiedNote(this);
@@ -11840,30 +12308,30 @@ class _$UnreadSpecifiedNoteChannelEventImpl
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return unreadSpecifiedNote?.call(this);
@@ -11888,30 +12356,30 @@ class _$UnreadSpecifiedNoteChannelEventImpl
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -11923,16 +12391,15 @@ class _$UnreadSpecifiedNoteChannelEventImpl
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UnreadSpecifiedNoteChannelEventImplToJson(
-      this,
-    );
+    return _$$UnreadSpecifiedNoteChannelEventImplToJson(this);
   }
 }
 
 abstract class UnreadSpecifiedNoteChannelEvent implements ChannelStreamEvent {
-  const factory UnreadSpecifiedNoteChannelEvent(
-      {required final String id,
-      required final String body}) = _$UnreadSpecifiedNoteChannelEventImpl;
+  const factory UnreadSpecifiedNoteChannelEvent({
+    required final String id,
+    required final String body,
+  }) = _$UnreadSpecifiedNoteChannelEventImpl;
 
   factory UnreadSpecifiedNoteChannelEvent.fromJson(Map<String, dynamic> json) =
       _$UnreadSpecifiedNoteChannelEventImpl.fromJson;
@@ -11946,17 +12413,18 @@ abstract class UnreadSpecifiedNoteChannelEvent implements ChannelStreamEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UnreadSpecifiedNoteChannelEventImplCopyWith<
-          _$UnreadSpecifiedNoteChannelEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$UnreadSpecifiedNoteChannelEventImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ReadAllUnreadSpecifiedNotesChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
   factory _$$ReadAllUnreadSpecifiedNotesChannelEventImplCopyWith(
-          _$ReadAllUnreadSpecifiedNotesChannelEventImpl value,
-          $Res Function(_$ReadAllUnreadSpecifiedNotesChannelEventImpl) then) =
-      __$$ReadAllUnreadSpecifiedNotesChannelEventImplCopyWithImpl<$Res>;
+    _$ReadAllUnreadSpecifiedNotesChannelEventImpl value,
+    $Res Function(_$ReadAllUnreadSpecifiedNotesChannelEventImpl) then,
+  ) = __$$ReadAllUnreadSpecifiedNotesChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id});
@@ -11964,27 +12432,31 @@ abstract class _$$ReadAllUnreadSpecifiedNotesChannelEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$ReadAllUnreadSpecifiedNotesChannelEventImplCopyWithImpl<$Res>
-    extends _$ChannelStreamEventCopyWithImpl<$Res,
-        _$ReadAllUnreadSpecifiedNotesChannelEventImpl>
+    extends
+        _$ChannelStreamEventCopyWithImpl<
+          $Res,
+          _$ReadAllUnreadSpecifiedNotesChannelEventImpl
+        >
     implements _$$ReadAllUnreadSpecifiedNotesChannelEventImplCopyWith<$Res> {
   __$$ReadAllUnreadSpecifiedNotesChannelEventImplCopyWithImpl(
-      _$ReadAllUnreadSpecifiedNotesChannelEventImpl _value,
-      $Res Function(_$ReadAllUnreadSpecifiedNotesChannelEventImpl) _then)
-      : super(_value, _then);
+    _$ReadAllUnreadSpecifiedNotesChannelEventImpl _value,
+    $Res Function(_$ReadAllUnreadSpecifiedNotesChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-  }) {
-    return _then(_$ReadAllUnreadSpecifiedNotesChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? id = null}) {
+    return _then(
+      _$ReadAllUnreadSpecifiedNotesChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -11992,13 +12464,14 @@ class __$$ReadAllUnreadSpecifiedNotesChannelEventImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ReadAllUnreadSpecifiedNotesChannelEventImpl
     implements ReadAllUnreadSpecifiedNotesChannelEvent {
-  const _$ReadAllUnreadSpecifiedNotesChannelEventImpl(
-      {required this.id, final String? $type})
-      : $type = $type ?? 'readAllUnreadSpecifiedNotes';
+  const _$ReadAllUnreadSpecifiedNotesChannelEventImpl({
+    required this.id,
+    final String? $type,
+  }) : $type = $type ?? 'readAllUnreadSpecifiedNotes';
 
   factory _$ReadAllUnreadSpecifiedNotesChannelEventImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$ReadAllUnreadSpecifiedNotesChannelEventImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$ReadAllUnreadSpecifiedNotesChannelEventImplFromJson(json);
 
   @override
   final String id;
@@ -12029,30 +12502,36 @@ class _$ReadAllUnreadSpecifiedNotesChannelEventImpl
   @override
   @pragma('vm:prefer-inline')
   _$$ReadAllUnreadSpecifiedNotesChannelEventImplCopyWith<
-          _$ReadAllUnreadSpecifiedNotesChannelEventImpl>
-      get copyWith =>
-          __$$ReadAllUnreadSpecifiedNotesChannelEventImplCopyWithImpl<
-              _$ReadAllUnreadSpecifiedNotesChannelEventImpl>(this, _$identity);
+    _$ReadAllUnreadSpecifiedNotesChannelEventImpl
+  >
+  get copyWith => __$$ReadAllUnreadSpecifiedNotesChannelEventImplCopyWithImpl<
+    _$ReadAllUnreadSpecifiedNotesChannelEventImpl
+  >(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -12062,10 +12541,10 @@ class _$ReadAllUnreadSpecifiedNotesChannelEventImpl
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -12081,7 +12560,7 @@ class _$ReadAllUnreadSpecifiedNotesChannelEventImpl
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return readAllUnreadSpecifiedNotes(id);
@@ -12091,17 +12570,22 @@ class _$ReadAllUnreadSpecifiedNotesChannelEventImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -12114,10 +12598,10 @@ class _$ReadAllUnreadSpecifiedNotesChannelEventImpl
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -12133,7 +12617,7 @@ class _$ReadAllUnreadSpecifiedNotesChannelEventImpl
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return readAllUnreadSpecifiedNotes?.call(id);
@@ -12143,16 +12627,19 @@ class _$ReadAllUnreadSpecifiedNotesChannelEventImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -12167,7 +12654,7 @@ class _$ReadAllUnreadSpecifiedNotesChannelEventImpl
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -12183,7 +12670,7 @@ class _$ReadAllUnreadSpecifiedNotesChannelEventImpl
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -12211,37 +12698,37 @@ class _$ReadAllUnreadSpecifiedNotesChannelEventImpl
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return readAllUnreadSpecifiedNotes(this);
@@ -12266,30 +12753,30 @@ class _$ReadAllUnreadSpecifiedNotesChannelEventImpl
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return readAllUnreadSpecifiedNotes?.call(this);
@@ -12314,30 +12801,30 @@ class _$ReadAllUnreadSpecifiedNotesChannelEventImpl
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -12349,21 +12836,19 @@ class _$ReadAllUnreadSpecifiedNotesChannelEventImpl
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ReadAllUnreadSpecifiedNotesChannelEventImplToJson(
-      this,
-    );
+    return _$$ReadAllUnreadSpecifiedNotesChannelEventImplToJson(this);
   }
 }
 
 abstract class ReadAllUnreadSpecifiedNotesChannelEvent
     implements ChannelStreamEvent {
-  const factory ReadAllUnreadSpecifiedNotesChannelEvent(
-          {required final String id}) =
-      _$ReadAllUnreadSpecifiedNotesChannelEventImpl;
+  const factory ReadAllUnreadSpecifiedNotesChannelEvent({
+    required final String id,
+  }) = _$ReadAllUnreadSpecifiedNotesChannelEventImpl;
 
   factory ReadAllUnreadSpecifiedNotesChannelEvent.fromJson(
-          Map<String, dynamic> json) =
-      _$ReadAllUnreadSpecifiedNotesChannelEventImpl.fromJson;
+    Map<String, dynamic> json,
+  ) = _$ReadAllUnreadSpecifiedNotesChannelEventImpl.fromJson;
 
   @override
   String get id;
@@ -12373,17 +12858,18 @@ abstract class ReadAllUnreadSpecifiedNotesChannelEvent
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReadAllUnreadSpecifiedNotesChannelEventImplCopyWith<
-          _$ReadAllUnreadSpecifiedNotesChannelEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$ReadAllUnreadSpecifiedNotesChannelEventImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ReadAllAntennasChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
   factory _$$ReadAllAntennasChannelEventImplCopyWith(
-          _$ReadAllAntennasChannelEventImpl value,
-          $Res Function(_$ReadAllAntennasChannelEventImpl) then) =
-      __$$ReadAllAntennasChannelEventImplCopyWithImpl<$Res>;
+    _$ReadAllAntennasChannelEventImpl value,
+    $Res Function(_$ReadAllAntennasChannelEventImpl) then,
+  ) = __$$ReadAllAntennasChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id});
@@ -12391,40 +12877,45 @@ abstract class _$$ReadAllAntennasChannelEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$ReadAllAntennasChannelEventImplCopyWithImpl<$Res>
-    extends _$ChannelStreamEventCopyWithImpl<$Res,
-        _$ReadAllAntennasChannelEventImpl>
+    extends
+        _$ChannelStreamEventCopyWithImpl<
+          $Res,
+          _$ReadAllAntennasChannelEventImpl
+        >
     implements _$$ReadAllAntennasChannelEventImplCopyWith<$Res> {
   __$$ReadAllAntennasChannelEventImplCopyWithImpl(
-      _$ReadAllAntennasChannelEventImpl _value,
-      $Res Function(_$ReadAllAntennasChannelEventImpl) _then)
-      : super(_value, _then);
+    _$ReadAllAntennasChannelEventImpl _value,
+    $Res Function(_$ReadAllAntennasChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-  }) {
-    return _then(_$ReadAllAntennasChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? id = null}) {
+    return _then(
+      _$ReadAllAntennasChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ReadAllAntennasChannelEventImpl implements ReadAllAntennasChannelEvent {
-  const _$ReadAllAntennasChannelEventImpl(
-      {required this.id, final String? $type})
-      : $type = $type ?? 'readAllAntennas';
+  const _$ReadAllAntennasChannelEventImpl({
+    required this.id,
+    final String? $type,
+  }) : $type = $type ?? 'readAllAntennas';
 
   factory _$ReadAllAntennasChannelEventImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$ReadAllAntennasChannelEventImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$ReadAllAntennasChannelEventImplFromJson(json);
 
   @override
   final String id;
@@ -12455,28 +12946,34 @@ class _$ReadAllAntennasChannelEventImpl implements ReadAllAntennasChannelEvent {
   @override
   @pragma('vm:prefer-inline')
   _$$ReadAllAntennasChannelEventImplCopyWith<_$ReadAllAntennasChannelEventImpl>
-      get copyWith => __$$ReadAllAntennasChannelEventImplCopyWithImpl<
-          _$ReadAllAntennasChannelEventImpl>(this, _$identity);
+  get copyWith => __$$ReadAllAntennasChannelEventImplCopyWithImpl<
+    _$ReadAllAntennasChannelEventImpl
+  >(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -12486,10 +12983,10 @@ class _$ReadAllAntennasChannelEventImpl implements ReadAllAntennasChannelEvent {
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -12505,7 +13002,7 @@ class _$ReadAllAntennasChannelEventImpl implements ReadAllAntennasChannelEvent {
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return readAllAntennas(id);
@@ -12515,17 +13012,22 @@ class _$ReadAllAntennasChannelEventImpl implements ReadAllAntennasChannelEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -12538,10 +13040,10 @@ class _$ReadAllAntennasChannelEventImpl implements ReadAllAntennasChannelEvent {
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -12557,7 +13059,7 @@ class _$ReadAllAntennasChannelEventImpl implements ReadAllAntennasChannelEvent {
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return readAllAntennas?.call(id);
@@ -12567,16 +13069,19 @@ class _$ReadAllAntennasChannelEventImpl implements ReadAllAntennasChannelEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -12591,7 +13096,7 @@ class _$ReadAllAntennasChannelEventImpl implements ReadAllAntennasChannelEvent {
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -12607,7 +13112,7 @@ class _$ReadAllAntennasChannelEventImpl implements ReadAllAntennasChannelEvent {
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -12635,37 +13140,37 @@ class _$ReadAllAntennasChannelEventImpl implements ReadAllAntennasChannelEvent {
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return readAllAntennas(this);
@@ -12690,30 +13195,30 @@ class _$ReadAllAntennasChannelEventImpl implements ReadAllAntennasChannelEvent {
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return readAllAntennas?.call(this);
@@ -12738,30 +13243,30 @@ class _$ReadAllAntennasChannelEventImpl implements ReadAllAntennasChannelEvent {
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -12773,9 +13278,7 @@ class _$ReadAllAntennasChannelEventImpl implements ReadAllAntennasChannelEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ReadAllAntennasChannelEventImplToJson(
-      this,
-    );
+    return _$$ReadAllAntennasChannelEventImplToJson(this);
   }
 }
 
@@ -12794,16 +13297,16 @@ abstract class ReadAllAntennasChannelEvent implements ChannelStreamEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReadAllAntennasChannelEventImplCopyWith<_$ReadAllAntennasChannelEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$UnreadAntennaChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
   factory _$$UnreadAntennaChannelEventImplCopyWith(
-          _$UnreadAntennaChannelEventImpl value,
-          $Res Function(_$UnreadAntennaChannelEventImpl) then) =
-      __$$UnreadAntennaChannelEventImplCopyWithImpl<$Res>;
+    _$UnreadAntennaChannelEventImpl value,
+    $Res Function(_$UnreadAntennaChannelEventImpl) then,
+  ) = __$$UnreadAntennaChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, Antenna body});
@@ -12813,32 +13316,33 @@ abstract class _$$UnreadAntennaChannelEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$UnreadAntennaChannelEventImplCopyWithImpl<$Res>
-    extends _$ChannelStreamEventCopyWithImpl<$Res,
-        _$UnreadAntennaChannelEventImpl>
+    extends
+        _$ChannelStreamEventCopyWithImpl<$Res, _$UnreadAntennaChannelEventImpl>
     implements _$$UnreadAntennaChannelEventImplCopyWith<$Res> {
   __$$UnreadAntennaChannelEventImplCopyWithImpl(
-      _$UnreadAntennaChannelEventImpl _value,
-      $Res Function(_$UnreadAntennaChannelEventImpl) _then)
-      : super(_value, _then);
+    _$UnreadAntennaChannelEventImpl _value,
+    $Res Function(_$UnreadAntennaChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? body = null,
-  }) {
-    return _then(_$UnreadAntennaChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as Antenna,
-    ));
+  $Res call({Object? id = null, Object? body = null}) {
+    return _then(
+      _$UnreadAntennaChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as Antenna,
+      ),
+    );
   }
 
   /// Create a copy of ChannelStreamEvent
@@ -12855,9 +13359,11 @@ class __$$UnreadAntennaChannelEventImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$UnreadAntennaChannelEventImpl implements UnreadAntennaChannelEvent {
-  const _$UnreadAntennaChannelEventImpl(
-      {required this.id, required this.body, final String? $type})
-      : $type = $type ?? 'unreadAntenna';
+  const _$UnreadAntennaChannelEventImpl({
+    required this.id,
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'unreadAntenna';
 
   factory _$UnreadAntennaChannelEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$UnreadAntennaChannelEventImplFromJson(json);
@@ -12894,28 +13400,34 @@ class _$UnreadAntennaChannelEventImpl implements UnreadAntennaChannelEvent {
   @override
   @pragma('vm:prefer-inline')
   _$$UnreadAntennaChannelEventImplCopyWith<_$UnreadAntennaChannelEventImpl>
-      get copyWith => __$$UnreadAntennaChannelEventImplCopyWithImpl<
-          _$UnreadAntennaChannelEventImpl>(this, _$identity);
+  get copyWith => __$$UnreadAntennaChannelEventImplCopyWithImpl<
+    _$UnreadAntennaChannelEventImpl
+  >(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -12925,10 +13437,10 @@ class _$UnreadAntennaChannelEventImpl implements UnreadAntennaChannelEvent {
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -12944,7 +13456,7 @@ class _$UnreadAntennaChannelEventImpl implements UnreadAntennaChannelEvent {
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return unreadAntenna(id, body);
@@ -12954,17 +13466,22 @@ class _$UnreadAntennaChannelEventImpl implements UnreadAntennaChannelEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -12977,10 +13494,10 @@ class _$UnreadAntennaChannelEventImpl implements UnreadAntennaChannelEvent {
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -12996,7 +13513,7 @@ class _$UnreadAntennaChannelEventImpl implements UnreadAntennaChannelEvent {
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return unreadAntenna?.call(id, body);
@@ -13006,16 +13523,19 @@ class _$UnreadAntennaChannelEventImpl implements UnreadAntennaChannelEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -13030,7 +13550,7 @@ class _$UnreadAntennaChannelEventImpl implements UnreadAntennaChannelEvent {
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -13046,7 +13566,7 @@ class _$UnreadAntennaChannelEventImpl implements UnreadAntennaChannelEvent {
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -13074,37 +13594,37 @@ class _$UnreadAntennaChannelEventImpl implements UnreadAntennaChannelEvent {
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return unreadAntenna(this);
@@ -13129,30 +13649,30 @@ class _$UnreadAntennaChannelEventImpl implements UnreadAntennaChannelEvent {
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return unreadAntenna?.call(this);
@@ -13177,30 +13697,30 @@ class _$UnreadAntennaChannelEventImpl implements UnreadAntennaChannelEvent {
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -13212,16 +13732,15 @@ class _$UnreadAntennaChannelEventImpl implements UnreadAntennaChannelEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UnreadAntennaChannelEventImplToJson(
-      this,
-    );
+    return _$$UnreadAntennaChannelEventImplToJson(this);
   }
 }
 
 abstract class UnreadAntennaChannelEvent implements ChannelStreamEvent {
-  const factory UnreadAntennaChannelEvent(
-      {required final String id,
-      required final Antenna body}) = _$UnreadAntennaChannelEventImpl;
+  const factory UnreadAntennaChannelEvent({
+    required final String id,
+    required final Antenna body,
+  }) = _$UnreadAntennaChannelEventImpl;
 
   factory UnreadAntennaChannelEvent.fromJson(Map<String, dynamic> json) =
       _$UnreadAntennaChannelEventImpl.fromJson;
@@ -13235,16 +13754,16 @@ abstract class UnreadAntennaChannelEvent implements ChannelStreamEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UnreadAntennaChannelEventImplCopyWith<_$UnreadAntennaChannelEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ReadAllAnnouncementsChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
   factory _$$ReadAllAnnouncementsChannelEventImplCopyWith(
-          _$ReadAllAnnouncementsChannelEventImpl value,
-          $Res Function(_$ReadAllAnnouncementsChannelEventImpl) then) =
-      __$$ReadAllAnnouncementsChannelEventImplCopyWithImpl<$Res>;
+    _$ReadAllAnnouncementsChannelEventImpl value,
+    $Res Function(_$ReadAllAnnouncementsChannelEventImpl) then,
+  ) = __$$ReadAllAnnouncementsChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id});
@@ -13252,27 +13771,31 @@ abstract class _$$ReadAllAnnouncementsChannelEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$ReadAllAnnouncementsChannelEventImplCopyWithImpl<$Res>
-    extends _$ChannelStreamEventCopyWithImpl<$Res,
-        _$ReadAllAnnouncementsChannelEventImpl>
+    extends
+        _$ChannelStreamEventCopyWithImpl<
+          $Res,
+          _$ReadAllAnnouncementsChannelEventImpl
+        >
     implements _$$ReadAllAnnouncementsChannelEventImplCopyWith<$Res> {
   __$$ReadAllAnnouncementsChannelEventImplCopyWithImpl(
-      _$ReadAllAnnouncementsChannelEventImpl _value,
-      $Res Function(_$ReadAllAnnouncementsChannelEventImpl) _then)
-      : super(_value, _then);
+    _$ReadAllAnnouncementsChannelEventImpl _value,
+    $Res Function(_$ReadAllAnnouncementsChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-  }) {
-    return _then(_$ReadAllAnnouncementsChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? id = null}) {
+    return _then(
+      _$ReadAllAnnouncementsChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -13280,13 +13803,14 @@ class __$$ReadAllAnnouncementsChannelEventImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ReadAllAnnouncementsChannelEventImpl
     implements ReadAllAnnouncementsChannelEvent {
-  const _$ReadAllAnnouncementsChannelEventImpl(
-      {required this.id, final String? $type})
-      : $type = $type ?? 'readAllAnnouncements';
+  const _$ReadAllAnnouncementsChannelEventImpl({
+    required this.id,
+    final String? $type,
+  }) : $type = $type ?? 'readAllAnnouncements';
 
   factory _$ReadAllAnnouncementsChannelEventImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$ReadAllAnnouncementsChannelEventImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$ReadAllAnnouncementsChannelEventImplFromJson(json);
 
   @override
   final String id;
@@ -13317,29 +13841,36 @@ class _$ReadAllAnnouncementsChannelEventImpl
   @override
   @pragma('vm:prefer-inline')
   _$$ReadAllAnnouncementsChannelEventImplCopyWith<
-          _$ReadAllAnnouncementsChannelEventImpl>
-      get copyWith => __$$ReadAllAnnouncementsChannelEventImplCopyWithImpl<
-          _$ReadAllAnnouncementsChannelEventImpl>(this, _$identity);
+    _$ReadAllAnnouncementsChannelEventImpl
+  >
+  get copyWith => __$$ReadAllAnnouncementsChannelEventImplCopyWithImpl<
+    _$ReadAllAnnouncementsChannelEventImpl
+  >(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -13349,10 +13880,10 @@ class _$ReadAllAnnouncementsChannelEventImpl
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -13368,7 +13899,7 @@ class _$ReadAllAnnouncementsChannelEventImpl
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return readAllAnnouncements(id);
@@ -13378,17 +13909,22 @@ class _$ReadAllAnnouncementsChannelEventImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -13401,10 +13937,10 @@ class _$ReadAllAnnouncementsChannelEventImpl
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -13420,7 +13956,7 @@ class _$ReadAllAnnouncementsChannelEventImpl
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return readAllAnnouncements?.call(id);
@@ -13430,16 +13966,19 @@ class _$ReadAllAnnouncementsChannelEventImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -13454,7 +13993,7 @@ class _$ReadAllAnnouncementsChannelEventImpl
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -13470,7 +14009,7 @@ class _$ReadAllAnnouncementsChannelEventImpl
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -13498,37 +14037,37 @@ class _$ReadAllAnnouncementsChannelEventImpl
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return readAllAnnouncements(this);
@@ -13553,30 +14092,30 @@ class _$ReadAllAnnouncementsChannelEventImpl
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return readAllAnnouncements?.call(this);
@@ -13601,30 +14140,30 @@ class _$ReadAllAnnouncementsChannelEventImpl
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -13636,9 +14175,7 @@ class _$ReadAllAnnouncementsChannelEventImpl
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ReadAllAnnouncementsChannelEventImplToJson(
-      this,
-    );
+    return _$$ReadAllAnnouncementsChannelEventImplToJson(this);
   }
 }
 
@@ -13657,17 +14194,18 @@ abstract class ReadAllAnnouncementsChannelEvent implements ChannelStreamEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReadAllAnnouncementsChannelEventImplCopyWith<
-          _$ReadAllAnnouncementsChannelEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$ReadAllAnnouncementsChannelEventImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$MyTokenRegeneratedChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
   factory _$$MyTokenRegeneratedChannelEventImplCopyWith(
-          _$MyTokenRegeneratedChannelEventImpl value,
-          $Res Function(_$MyTokenRegeneratedChannelEventImpl) then) =
-      __$$MyTokenRegeneratedChannelEventImplCopyWithImpl<$Res>;
+    _$MyTokenRegeneratedChannelEventImpl value,
+    $Res Function(_$MyTokenRegeneratedChannelEventImpl) then,
+  ) = __$$MyTokenRegeneratedChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id});
@@ -13675,27 +14213,31 @@ abstract class _$$MyTokenRegeneratedChannelEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$MyTokenRegeneratedChannelEventImplCopyWithImpl<$Res>
-    extends _$ChannelStreamEventCopyWithImpl<$Res,
-        _$MyTokenRegeneratedChannelEventImpl>
+    extends
+        _$ChannelStreamEventCopyWithImpl<
+          $Res,
+          _$MyTokenRegeneratedChannelEventImpl
+        >
     implements _$$MyTokenRegeneratedChannelEventImplCopyWith<$Res> {
   __$$MyTokenRegeneratedChannelEventImplCopyWithImpl(
-      _$MyTokenRegeneratedChannelEventImpl _value,
-      $Res Function(_$MyTokenRegeneratedChannelEventImpl) _then)
-      : super(_value, _then);
+    _$MyTokenRegeneratedChannelEventImpl _value,
+    $Res Function(_$MyTokenRegeneratedChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-  }) {
-    return _then(_$MyTokenRegeneratedChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? id = null}) {
+    return _then(
+      _$MyTokenRegeneratedChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -13703,13 +14245,14 @@ class __$$MyTokenRegeneratedChannelEventImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$MyTokenRegeneratedChannelEventImpl
     implements MyTokenRegeneratedChannelEvent {
-  const _$MyTokenRegeneratedChannelEventImpl(
-      {required this.id, final String? $type})
-      : $type = $type ?? 'myTokenRegenerated';
+  const _$MyTokenRegeneratedChannelEventImpl({
+    required this.id,
+    final String? $type,
+  }) : $type = $type ?? 'myTokenRegenerated';
 
   factory _$MyTokenRegeneratedChannelEventImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$MyTokenRegeneratedChannelEventImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$MyTokenRegeneratedChannelEventImplFromJson(json);
 
   @override
   final String id;
@@ -13740,29 +14283,36 @@ class _$MyTokenRegeneratedChannelEventImpl
   @override
   @pragma('vm:prefer-inline')
   _$$MyTokenRegeneratedChannelEventImplCopyWith<
-          _$MyTokenRegeneratedChannelEventImpl>
-      get copyWith => __$$MyTokenRegeneratedChannelEventImplCopyWithImpl<
-          _$MyTokenRegeneratedChannelEventImpl>(this, _$identity);
+    _$MyTokenRegeneratedChannelEventImpl
+  >
+  get copyWith => __$$MyTokenRegeneratedChannelEventImplCopyWithImpl<
+    _$MyTokenRegeneratedChannelEventImpl
+  >(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -13772,10 +14322,10 @@ class _$MyTokenRegeneratedChannelEventImpl
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -13791,7 +14341,7 @@ class _$MyTokenRegeneratedChannelEventImpl
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return myTokenRegenerated(id);
@@ -13801,17 +14351,22 @@ class _$MyTokenRegeneratedChannelEventImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -13824,10 +14379,10 @@ class _$MyTokenRegeneratedChannelEventImpl
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -13843,7 +14398,7 @@ class _$MyTokenRegeneratedChannelEventImpl
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return myTokenRegenerated?.call(id);
@@ -13853,16 +14408,19 @@ class _$MyTokenRegeneratedChannelEventImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -13877,7 +14435,7 @@ class _$MyTokenRegeneratedChannelEventImpl
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -13893,7 +14451,7 @@ class _$MyTokenRegeneratedChannelEventImpl
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -13921,37 +14479,37 @@ class _$MyTokenRegeneratedChannelEventImpl
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return myTokenRegenerated(this);
@@ -13976,30 +14534,30 @@ class _$MyTokenRegeneratedChannelEventImpl
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return myTokenRegenerated?.call(this);
@@ -14024,30 +14582,30 @@ class _$MyTokenRegeneratedChannelEventImpl
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -14059,9 +14617,7 @@ class _$MyTokenRegeneratedChannelEventImpl
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MyTokenRegeneratedChannelEventImplToJson(
-      this,
-    );
+    return _$$MyTokenRegeneratedChannelEventImplToJson(this);
   }
 }
 
@@ -14080,16 +14636,18 @@ abstract class MyTokenRegeneratedChannelEvent implements ChannelStreamEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MyTokenRegeneratedChannelEventImplCopyWith<
-          _$MyTokenRegeneratedChannelEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$MyTokenRegeneratedChannelEventImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$SigninChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
-  factory _$$SigninChannelEventImplCopyWith(_$SigninChannelEventImpl value,
-          $Res Function(_$SigninChannelEventImpl) then) =
-      __$$SigninChannelEventImplCopyWithImpl<$Res>;
+  factory _$$SigninChannelEventImplCopyWith(
+    _$SigninChannelEventImpl value,
+    $Res Function(_$SigninChannelEventImpl) then,
+  ) = __$$SigninChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, Signin body});
@@ -14101,28 +14659,30 @@ abstract class _$$SigninChannelEventImplCopyWith<$Res>
 class __$$SigninChannelEventImplCopyWithImpl<$Res>
     extends _$ChannelStreamEventCopyWithImpl<$Res, _$SigninChannelEventImpl>
     implements _$$SigninChannelEventImplCopyWith<$Res> {
-  __$$SigninChannelEventImplCopyWithImpl(_$SigninChannelEventImpl _value,
-      $Res Function(_$SigninChannelEventImpl) _then)
-      : super(_value, _then);
+  __$$SigninChannelEventImplCopyWithImpl(
+    _$SigninChannelEventImpl _value,
+    $Res Function(_$SigninChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? body = null,
-  }) {
-    return _then(_$SigninChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as Signin,
-    ));
+  $Res call({Object? id = null, Object? body = null}) {
+    return _then(
+      _$SigninChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as Signin,
+      ),
+    );
   }
 
   /// Create a copy of ChannelStreamEvent
@@ -14139,9 +14699,11 @@ class __$$SigninChannelEventImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$SigninChannelEventImpl implements SigninChannelEvent {
-  const _$SigninChannelEventImpl(
-      {required this.id, required this.body, final String? $type})
-      : $type = $type ?? 'signin';
+  const _$SigninChannelEventImpl({
+    required this.id,
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'signin';
 
   factory _$SigninChannelEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$SigninChannelEventImplFromJson(json);
@@ -14179,27 +14741,34 @@ class _$SigninChannelEventImpl implements SigninChannelEvent {
   @pragma('vm:prefer-inline')
   _$$SigninChannelEventImplCopyWith<_$SigninChannelEventImpl> get copyWith =>
       __$$SigninChannelEventImplCopyWithImpl<_$SigninChannelEventImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -14209,10 +14778,10 @@ class _$SigninChannelEventImpl implements SigninChannelEvent {
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -14228,7 +14797,7 @@ class _$SigninChannelEventImpl implements SigninChannelEvent {
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return signin(id, body);
@@ -14238,17 +14807,22 @@ class _$SigninChannelEventImpl implements SigninChannelEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -14261,10 +14835,10 @@ class _$SigninChannelEventImpl implements SigninChannelEvent {
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -14280,7 +14854,7 @@ class _$SigninChannelEventImpl implements SigninChannelEvent {
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return signin?.call(id, body);
@@ -14290,16 +14864,19 @@ class _$SigninChannelEventImpl implements SigninChannelEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -14314,7 +14891,7 @@ class _$SigninChannelEventImpl implements SigninChannelEvent {
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -14330,7 +14907,7 @@ class _$SigninChannelEventImpl implements SigninChannelEvent {
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -14358,37 +14935,37 @@ class _$SigninChannelEventImpl implements SigninChannelEvent {
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return signin(this);
@@ -14413,30 +14990,30 @@ class _$SigninChannelEventImpl implements SigninChannelEvent {
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return signin?.call(this);
@@ -14461,30 +15038,30 @@ class _$SigninChannelEventImpl implements SigninChannelEvent {
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -14496,16 +15073,15 @@ class _$SigninChannelEventImpl implements SigninChannelEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SigninChannelEventImplToJson(
-      this,
-    );
+    return _$$SigninChannelEventImplToJson(this);
   }
 }
 
 abstract class SigninChannelEvent implements ChannelStreamEvent {
-  const factory SigninChannelEvent(
-      {required final String id,
-      required final Signin body}) = _$SigninChannelEventImpl;
+  const factory SigninChannelEvent({
+    required final String id,
+    required final Signin body,
+  }) = _$SigninChannelEventImpl;
 
   factory SigninChannelEvent.fromJson(Map<String, dynamic> json) =
       _$SigninChannelEventImpl.fromJson;
@@ -14526,9 +15102,9 @@ abstract class SigninChannelEvent implements ChannelStreamEvent {
 abstract class _$$RegistryUpdatedChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
   factory _$$RegistryUpdatedChannelEventImplCopyWith(
-          _$RegistryUpdatedChannelEventImpl value,
-          $Res Function(_$RegistryUpdatedChannelEventImpl) then) =
-      __$$RegistryUpdatedChannelEventImplCopyWithImpl<$Res>;
+    _$RegistryUpdatedChannelEventImpl value,
+    $Res Function(_$RegistryUpdatedChannelEventImpl) then,
+  ) = __$$RegistryUpdatedChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, RegistryUpdated body});
@@ -14538,32 +15114,36 @@ abstract class _$$RegistryUpdatedChannelEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$RegistryUpdatedChannelEventImplCopyWithImpl<$Res>
-    extends _$ChannelStreamEventCopyWithImpl<$Res,
-        _$RegistryUpdatedChannelEventImpl>
+    extends
+        _$ChannelStreamEventCopyWithImpl<
+          $Res,
+          _$RegistryUpdatedChannelEventImpl
+        >
     implements _$$RegistryUpdatedChannelEventImplCopyWith<$Res> {
   __$$RegistryUpdatedChannelEventImplCopyWithImpl(
-      _$RegistryUpdatedChannelEventImpl _value,
-      $Res Function(_$RegistryUpdatedChannelEventImpl) _then)
-      : super(_value, _then);
+    _$RegistryUpdatedChannelEventImpl _value,
+    $Res Function(_$RegistryUpdatedChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? body = null,
-  }) {
-    return _then(_$RegistryUpdatedChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as RegistryUpdated,
-    ));
+  $Res call({Object? id = null, Object? body = null}) {
+    return _then(
+      _$RegistryUpdatedChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as RegistryUpdated,
+      ),
+    );
   }
 
   /// Create a copy of ChannelStreamEvent
@@ -14580,13 +15160,15 @@ class __$$RegistryUpdatedChannelEventImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$RegistryUpdatedChannelEventImpl implements RegistryUpdatedChannelEvent {
-  const _$RegistryUpdatedChannelEventImpl(
-      {required this.id, required this.body, final String? $type})
-      : $type = $type ?? 'registryUpdated';
+  const _$RegistryUpdatedChannelEventImpl({
+    required this.id,
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'registryUpdated';
 
   factory _$RegistryUpdatedChannelEventImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$RegistryUpdatedChannelEventImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$RegistryUpdatedChannelEventImplFromJson(json);
 
   @override
   final String id;
@@ -14620,28 +15202,34 @@ class _$RegistryUpdatedChannelEventImpl implements RegistryUpdatedChannelEvent {
   @override
   @pragma('vm:prefer-inline')
   _$$RegistryUpdatedChannelEventImplCopyWith<_$RegistryUpdatedChannelEventImpl>
-      get copyWith => __$$RegistryUpdatedChannelEventImplCopyWithImpl<
-          _$RegistryUpdatedChannelEventImpl>(this, _$identity);
+  get copyWith => __$$RegistryUpdatedChannelEventImplCopyWithImpl<
+    _$RegistryUpdatedChannelEventImpl
+  >(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -14651,10 +15239,10 @@ class _$RegistryUpdatedChannelEventImpl implements RegistryUpdatedChannelEvent {
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -14670,7 +15258,7 @@ class _$RegistryUpdatedChannelEventImpl implements RegistryUpdatedChannelEvent {
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return registryUpdated(id, body);
@@ -14680,17 +15268,22 @@ class _$RegistryUpdatedChannelEventImpl implements RegistryUpdatedChannelEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -14703,10 +15296,10 @@ class _$RegistryUpdatedChannelEventImpl implements RegistryUpdatedChannelEvent {
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -14722,7 +15315,7 @@ class _$RegistryUpdatedChannelEventImpl implements RegistryUpdatedChannelEvent {
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return registryUpdated?.call(id, body);
@@ -14732,16 +15325,19 @@ class _$RegistryUpdatedChannelEventImpl implements RegistryUpdatedChannelEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -14756,7 +15352,7 @@ class _$RegistryUpdatedChannelEventImpl implements RegistryUpdatedChannelEvent {
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -14772,7 +15368,7 @@ class _$RegistryUpdatedChannelEventImpl implements RegistryUpdatedChannelEvent {
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -14800,37 +15396,37 @@ class _$RegistryUpdatedChannelEventImpl implements RegistryUpdatedChannelEvent {
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return registryUpdated(this);
@@ -14855,30 +15451,30 @@ class _$RegistryUpdatedChannelEventImpl implements RegistryUpdatedChannelEvent {
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return registryUpdated?.call(this);
@@ -14903,30 +15499,30 @@ class _$RegistryUpdatedChannelEventImpl implements RegistryUpdatedChannelEvent {
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -14938,16 +15534,15 @@ class _$RegistryUpdatedChannelEventImpl implements RegistryUpdatedChannelEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$RegistryUpdatedChannelEventImplToJson(
-      this,
-    );
+    return _$$RegistryUpdatedChannelEventImplToJson(this);
   }
 }
 
 abstract class RegistryUpdatedChannelEvent implements ChannelStreamEvent {
-  const factory RegistryUpdatedChannelEvent(
-      {required final String id,
-      required final RegistryUpdated body}) = _$RegistryUpdatedChannelEventImpl;
+  const factory RegistryUpdatedChannelEvent({
+    required final String id,
+    required final RegistryUpdated body,
+  }) = _$RegistryUpdatedChannelEventImpl;
 
   factory RegistryUpdatedChannelEvent.fromJson(Map<String, dynamic> json) =
       _$RegistryUpdatedChannelEventImpl.fromJson;
@@ -14961,16 +15556,16 @@ abstract class RegistryUpdatedChannelEvent implements ChannelStreamEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RegistryUpdatedChannelEventImplCopyWith<_$RegistryUpdatedChannelEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$DriveFileCreatedChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
   factory _$$DriveFileCreatedChannelEventImplCopyWith(
-          _$DriveFileCreatedChannelEventImpl value,
-          $Res Function(_$DriveFileCreatedChannelEventImpl) then) =
-      __$$DriveFileCreatedChannelEventImplCopyWithImpl<$Res>;
+    _$DriveFileCreatedChannelEventImpl value,
+    $Res Function(_$DriveFileCreatedChannelEventImpl) then,
+  ) = __$$DriveFileCreatedChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, DriveFile body});
@@ -14980,32 +15575,36 @@ abstract class _$$DriveFileCreatedChannelEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$DriveFileCreatedChannelEventImplCopyWithImpl<$Res>
-    extends _$ChannelStreamEventCopyWithImpl<$Res,
-        _$DriveFileCreatedChannelEventImpl>
+    extends
+        _$ChannelStreamEventCopyWithImpl<
+          $Res,
+          _$DriveFileCreatedChannelEventImpl
+        >
     implements _$$DriveFileCreatedChannelEventImplCopyWith<$Res> {
   __$$DriveFileCreatedChannelEventImplCopyWithImpl(
-      _$DriveFileCreatedChannelEventImpl _value,
-      $Res Function(_$DriveFileCreatedChannelEventImpl) _then)
-      : super(_value, _then);
+    _$DriveFileCreatedChannelEventImpl _value,
+    $Res Function(_$DriveFileCreatedChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? body = null,
-  }) {
-    return _then(_$DriveFileCreatedChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as DriveFile,
-    ));
+  $Res call({Object? id = null, Object? body = null}) {
+    return _then(
+      _$DriveFileCreatedChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as DriveFile,
+      ),
+    );
   }
 
   /// Create a copy of ChannelStreamEvent
@@ -15023,13 +15622,15 @@ class __$$DriveFileCreatedChannelEventImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$DriveFileCreatedChannelEventImpl
     implements DriveFileCreatedChannelEvent {
-  const _$DriveFileCreatedChannelEventImpl(
-      {required this.id, required this.body, final String? $type})
-      : $type = $type ?? 'driveFileCreated';
+  const _$DriveFileCreatedChannelEventImpl({
+    required this.id,
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'driveFileCreated';
 
   factory _$DriveFileCreatedChannelEventImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$DriveFileCreatedChannelEventImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$DriveFileCreatedChannelEventImplFromJson(json);
 
   @override
   final String id;
@@ -15063,29 +15664,36 @@ class _$DriveFileCreatedChannelEventImpl
   @override
   @pragma('vm:prefer-inline')
   _$$DriveFileCreatedChannelEventImplCopyWith<
-          _$DriveFileCreatedChannelEventImpl>
-      get copyWith => __$$DriveFileCreatedChannelEventImplCopyWithImpl<
-          _$DriveFileCreatedChannelEventImpl>(this, _$identity);
+    _$DriveFileCreatedChannelEventImpl
+  >
+  get copyWith => __$$DriveFileCreatedChannelEventImplCopyWithImpl<
+    _$DriveFileCreatedChannelEventImpl
+  >(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -15095,10 +15703,10 @@ class _$DriveFileCreatedChannelEventImpl
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -15114,7 +15722,7 @@ class _$DriveFileCreatedChannelEventImpl
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return driveFileCreated(id, body);
@@ -15124,17 +15732,22 @@ class _$DriveFileCreatedChannelEventImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -15147,10 +15760,10 @@ class _$DriveFileCreatedChannelEventImpl
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -15166,7 +15779,7 @@ class _$DriveFileCreatedChannelEventImpl
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return driveFileCreated?.call(id, body);
@@ -15176,16 +15789,19 @@ class _$DriveFileCreatedChannelEventImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -15200,7 +15816,7 @@ class _$DriveFileCreatedChannelEventImpl
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -15216,7 +15832,7 @@ class _$DriveFileCreatedChannelEventImpl
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -15244,37 +15860,37 @@ class _$DriveFileCreatedChannelEventImpl
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return driveFileCreated(this);
@@ -15299,30 +15915,30 @@ class _$DriveFileCreatedChannelEventImpl
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return driveFileCreated?.call(this);
@@ -15347,30 +15963,30 @@ class _$DriveFileCreatedChannelEventImpl
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -15382,16 +15998,15 @@ class _$DriveFileCreatedChannelEventImpl
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DriveFileCreatedChannelEventImplToJson(
-      this,
-    );
+    return _$$DriveFileCreatedChannelEventImplToJson(this);
   }
 }
 
 abstract class DriveFileCreatedChannelEvent implements ChannelStreamEvent {
-  const factory DriveFileCreatedChannelEvent(
-      {required final String id,
-      required final DriveFile body}) = _$DriveFileCreatedChannelEventImpl;
+  const factory DriveFileCreatedChannelEvent({
+    required final String id,
+    required final DriveFile body,
+  }) = _$DriveFileCreatedChannelEventImpl;
 
   factory DriveFileCreatedChannelEvent.fromJson(Map<String, dynamic> json) =
       _$DriveFileCreatedChannelEventImpl.fromJson;
@@ -15405,17 +16020,18 @@ abstract class DriveFileCreatedChannelEvent implements ChannelStreamEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DriveFileCreatedChannelEventImplCopyWith<
-          _$DriveFileCreatedChannelEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$DriveFileCreatedChannelEventImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ReadAntennaChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
   factory _$$ReadAntennaChannelEventImplCopyWith(
-          _$ReadAntennaChannelEventImpl value,
-          $Res Function(_$ReadAntennaChannelEventImpl) then) =
-      __$$ReadAntennaChannelEventImplCopyWithImpl<$Res>;
+    _$ReadAntennaChannelEventImpl value,
+    $Res Function(_$ReadAntennaChannelEventImpl) then,
+  ) = __$$ReadAntennaChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, Antenna body});
@@ -15425,32 +16041,33 @@ abstract class _$$ReadAntennaChannelEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$ReadAntennaChannelEventImplCopyWithImpl<$Res>
-    extends _$ChannelStreamEventCopyWithImpl<$Res,
-        _$ReadAntennaChannelEventImpl>
+    extends
+        _$ChannelStreamEventCopyWithImpl<$Res, _$ReadAntennaChannelEventImpl>
     implements _$$ReadAntennaChannelEventImplCopyWith<$Res> {
   __$$ReadAntennaChannelEventImplCopyWithImpl(
-      _$ReadAntennaChannelEventImpl _value,
-      $Res Function(_$ReadAntennaChannelEventImpl) _then)
-      : super(_value, _then);
+    _$ReadAntennaChannelEventImpl _value,
+    $Res Function(_$ReadAntennaChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? body = null,
-  }) {
-    return _then(_$ReadAntennaChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as Antenna,
-    ));
+  $Res call({Object? id = null, Object? body = null}) {
+    return _then(
+      _$ReadAntennaChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as Antenna,
+      ),
+    );
   }
 
   /// Create a copy of ChannelStreamEvent
@@ -15467,9 +16084,11 @@ class __$$ReadAntennaChannelEventImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$ReadAntennaChannelEventImpl implements ReadAntennaChannelEvent {
-  const _$ReadAntennaChannelEventImpl(
-      {required this.id, required this.body, final String? $type})
-      : $type = $type ?? 'readAntenna';
+  const _$ReadAntennaChannelEventImpl({
+    required this.id,
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'readAntenna';
 
   factory _$ReadAntennaChannelEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$ReadAntennaChannelEventImplFromJson(json);
@@ -15506,28 +16125,34 @@ class _$ReadAntennaChannelEventImpl implements ReadAntennaChannelEvent {
   @override
   @pragma('vm:prefer-inline')
   _$$ReadAntennaChannelEventImplCopyWith<_$ReadAntennaChannelEventImpl>
-      get copyWith => __$$ReadAntennaChannelEventImplCopyWithImpl<
-          _$ReadAntennaChannelEventImpl>(this, _$identity);
+  get copyWith => __$$ReadAntennaChannelEventImplCopyWithImpl<
+    _$ReadAntennaChannelEventImpl
+  >(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -15537,10 +16162,10 @@ class _$ReadAntennaChannelEventImpl implements ReadAntennaChannelEvent {
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -15556,7 +16181,7 @@ class _$ReadAntennaChannelEventImpl implements ReadAntennaChannelEvent {
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return readAntenna(id, body);
@@ -15566,17 +16191,22 @@ class _$ReadAntennaChannelEventImpl implements ReadAntennaChannelEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -15589,10 +16219,10 @@ class _$ReadAntennaChannelEventImpl implements ReadAntennaChannelEvent {
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -15608,7 +16238,7 @@ class _$ReadAntennaChannelEventImpl implements ReadAntennaChannelEvent {
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return readAntenna?.call(id, body);
@@ -15618,16 +16248,19 @@ class _$ReadAntennaChannelEventImpl implements ReadAntennaChannelEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -15642,7 +16275,7 @@ class _$ReadAntennaChannelEventImpl implements ReadAntennaChannelEvent {
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -15658,7 +16291,7 @@ class _$ReadAntennaChannelEventImpl implements ReadAntennaChannelEvent {
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -15686,37 +16319,37 @@ class _$ReadAntennaChannelEventImpl implements ReadAntennaChannelEvent {
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return readAntenna(this);
@@ -15741,30 +16374,30 @@ class _$ReadAntennaChannelEventImpl implements ReadAntennaChannelEvent {
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return readAntenna?.call(this);
@@ -15789,30 +16422,30 @@ class _$ReadAntennaChannelEventImpl implements ReadAntennaChannelEvent {
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -15824,16 +16457,15 @@ class _$ReadAntennaChannelEventImpl implements ReadAntennaChannelEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ReadAntennaChannelEventImplToJson(
-      this,
-    );
+    return _$$ReadAntennaChannelEventImplToJson(this);
   }
 }
 
 abstract class ReadAntennaChannelEvent implements ChannelStreamEvent {
-  const factory ReadAntennaChannelEvent(
-      {required final String id,
-      required final Antenna body}) = _$ReadAntennaChannelEventImpl;
+  const factory ReadAntennaChannelEvent({
+    required final String id,
+    required final Antenna body,
+  }) = _$ReadAntennaChannelEventImpl;
 
   factory ReadAntennaChannelEvent.fromJson(Map<String, dynamic> json) =
       _$ReadAntennaChannelEventImpl.fromJson;
@@ -15847,16 +16479,16 @@ abstract class ReadAntennaChannelEvent implements ChannelStreamEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReadAntennaChannelEventImplCopyWith<_$ReadAntennaChannelEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ReceiveFollowRequestChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
   factory _$$ReceiveFollowRequestChannelEventImplCopyWith(
-          _$ReceiveFollowRequestChannelEventImpl value,
-          $Res Function(_$ReceiveFollowRequestChannelEventImpl) then) =
-      __$$ReceiveFollowRequestChannelEventImplCopyWithImpl<$Res>;
+    _$ReceiveFollowRequestChannelEventImpl value,
+    $Res Function(_$ReceiveFollowRequestChannelEventImpl) then,
+  ) = __$$ReceiveFollowRequestChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, UserLite body});
@@ -15866,32 +16498,36 @@ abstract class _$$ReceiveFollowRequestChannelEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$ReceiveFollowRequestChannelEventImplCopyWithImpl<$Res>
-    extends _$ChannelStreamEventCopyWithImpl<$Res,
-        _$ReceiveFollowRequestChannelEventImpl>
+    extends
+        _$ChannelStreamEventCopyWithImpl<
+          $Res,
+          _$ReceiveFollowRequestChannelEventImpl
+        >
     implements _$$ReceiveFollowRequestChannelEventImplCopyWith<$Res> {
   __$$ReceiveFollowRequestChannelEventImplCopyWithImpl(
-      _$ReceiveFollowRequestChannelEventImpl _value,
-      $Res Function(_$ReceiveFollowRequestChannelEventImpl) _then)
-      : super(_value, _then);
+    _$ReceiveFollowRequestChannelEventImpl _value,
+    $Res Function(_$ReceiveFollowRequestChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? body = null,
-  }) {
-    return _then(_$ReceiveFollowRequestChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as UserLite,
-    ));
+  $Res call({Object? id = null, Object? body = null}) {
+    return _then(
+      _$ReceiveFollowRequestChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as UserLite,
+      ),
+    );
   }
 
   /// Create a copy of ChannelStreamEvent
@@ -15909,13 +16545,15 @@ class __$$ReceiveFollowRequestChannelEventImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ReceiveFollowRequestChannelEventImpl
     implements ReceiveFollowRequestChannelEvent {
-  const _$ReceiveFollowRequestChannelEventImpl(
-      {required this.id, required this.body, final String? $type})
-      : $type = $type ?? 'receiveFollowRequest';
+  const _$ReceiveFollowRequestChannelEventImpl({
+    required this.id,
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'receiveFollowRequest';
 
   factory _$ReceiveFollowRequestChannelEventImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$ReceiveFollowRequestChannelEventImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$ReceiveFollowRequestChannelEventImplFromJson(json);
 
   @override
   final String id;
@@ -15949,29 +16587,36 @@ class _$ReceiveFollowRequestChannelEventImpl
   @override
   @pragma('vm:prefer-inline')
   _$$ReceiveFollowRequestChannelEventImplCopyWith<
-          _$ReceiveFollowRequestChannelEventImpl>
-      get copyWith => __$$ReceiveFollowRequestChannelEventImplCopyWithImpl<
-          _$ReceiveFollowRequestChannelEventImpl>(this, _$identity);
+    _$ReceiveFollowRequestChannelEventImpl
+  >
+  get copyWith => __$$ReceiveFollowRequestChannelEventImplCopyWithImpl<
+    _$ReceiveFollowRequestChannelEventImpl
+  >(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -15981,10 +16626,10 @@ class _$ReceiveFollowRequestChannelEventImpl
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -16000,7 +16645,7 @@ class _$ReceiveFollowRequestChannelEventImpl
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return receiveFollowRequest(id, body);
@@ -16010,17 +16655,22 @@ class _$ReceiveFollowRequestChannelEventImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -16033,10 +16683,10 @@ class _$ReceiveFollowRequestChannelEventImpl
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -16052,7 +16702,7 @@ class _$ReceiveFollowRequestChannelEventImpl
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return receiveFollowRequest?.call(id, body);
@@ -16062,16 +16712,19 @@ class _$ReceiveFollowRequestChannelEventImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -16086,7 +16739,7 @@ class _$ReceiveFollowRequestChannelEventImpl
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -16102,7 +16755,7 @@ class _$ReceiveFollowRequestChannelEventImpl
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -16130,37 +16783,37 @@ class _$ReceiveFollowRequestChannelEventImpl
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return receiveFollowRequest(this);
@@ -16185,30 +16838,30 @@ class _$ReceiveFollowRequestChannelEventImpl
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return receiveFollowRequest?.call(this);
@@ -16233,30 +16886,30 @@ class _$ReceiveFollowRequestChannelEventImpl
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -16268,16 +16921,15 @@ class _$ReceiveFollowRequestChannelEventImpl
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ReceiveFollowRequestChannelEventImplToJson(
-      this,
-    );
+    return _$$ReceiveFollowRequestChannelEventImplToJson(this);
   }
 }
 
 abstract class ReceiveFollowRequestChannelEvent implements ChannelStreamEvent {
-  const factory ReceiveFollowRequestChannelEvent(
-      {required final String id,
-      required final UserLite body}) = _$ReceiveFollowRequestChannelEventImpl;
+  const factory ReceiveFollowRequestChannelEvent({
+    required final String id,
+    required final UserLite body,
+  }) = _$ReceiveFollowRequestChannelEventImpl;
 
   factory ReceiveFollowRequestChannelEvent.fromJson(Map<String, dynamic> json) =
       _$ReceiveFollowRequestChannelEventImpl.fromJson;
@@ -16291,17 +16943,18 @@ abstract class ReceiveFollowRequestChannelEvent implements ChannelStreamEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReceiveFollowRequestChannelEventImplCopyWith<
-          _$ReceiveFollowRequestChannelEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$ReceiveFollowRequestChannelEventImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$AnnouncementCreatedChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
   factory _$$AnnouncementCreatedChannelEventImplCopyWith(
-          _$AnnouncementCreatedChannelEventImpl value,
-          $Res Function(_$AnnouncementCreatedChannelEventImpl) then) =
-      __$$AnnouncementCreatedChannelEventImplCopyWithImpl<$Res>;
+    _$AnnouncementCreatedChannelEventImpl value,
+    $Res Function(_$AnnouncementCreatedChannelEventImpl) then,
+  ) = __$$AnnouncementCreatedChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, AnnouncementCreatedStreamEvent body});
@@ -16311,32 +16964,36 @@ abstract class _$$AnnouncementCreatedChannelEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$AnnouncementCreatedChannelEventImplCopyWithImpl<$Res>
-    extends _$ChannelStreamEventCopyWithImpl<$Res,
-        _$AnnouncementCreatedChannelEventImpl>
+    extends
+        _$ChannelStreamEventCopyWithImpl<
+          $Res,
+          _$AnnouncementCreatedChannelEventImpl
+        >
     implements _$$AnnouncementCreatedChannelEventImplCopyWith<$Res> {
   __$$AnnouncementCreatedChannelEventImplCopyWithImpl(
-      _$AnnouncementCreatedChannelEventImpl _value,
-      $Res Function(_$AnnouncementCreatedChannelEventImpl) _then)
-      : super(_value, _then);
+    _$AnnouncementCreatedChannelEventImpl _value,
+    $Res Function(_$AnnouncementCreatedChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? body = null,
-  }) {
-    return _then(_$AnnouncementCreatedChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as AnnouncementCreatedStreamEvent,
-    ));
+  $Res call({Object? id = null, Object? body = null}) {
+    return _then(
+      _$AnnouncementCreatedChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as AnnouncementCreatedStreamEvent,
+      ),
+    );
   }
 
   /// Create a copy of ChannelStreamEvent
@@ -16354,13 +17011,15 @@ class __$$AnnouncementCreatedChannelEventImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AnnouncementCreatedChannelEventImpl
     implements AnnouncementCreatedChannelEvent {
-  const _$AnnouncementCreatedChannelEventImpl(
-      {required this.id, required this.body, final String? $type})
-      : $type = $type ?? 'announcementCreated';
+  const _$AnnouncementCreatedChannelEventImpl({
+    required this.id,
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'announcementCreated';
 
   factory _$AnnouncementCreatedChannelEventImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$AnnouncementCreatedChannelEventImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$AnnouncementCreatedChannelEventImplFromJson(json);
 
   @override
   final String id;
@@ -16394,29 +17053,36 @@ class _$AnnouncementCreatedChannelEventImpl
   @override
   @pragma('vm:prefer-inline')
   _$$AnnouncementCreatedChannelEventImplCopyWith<
-          _$AnnouncementCreatedChannelEventImpl>
-      get copyWith => __$$AnnouncementCreatedChannelEventImplCopyWithImpl<
-          _$AnnouncementCreatedChannelEventImpl>(this, _$identity);
+    _$AnnouncementCreatedChannelEventImpl
+  >
+  get copyWith => __$$AnnouncementCreatedChannelEventImplCopyWithImpl<
+    _$AnnouncementCreatedChannelEventImpl
+  >(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -16426,10 +17092,10 @@ class _$AnnouncementCreatedChannelEventImpl
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -16445,7 +17111,7 @@ class _$AnnouncementCreatedChannelEventImpl
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return announcementCreated(id, body);
@@ -16455,17 +17121,22 @@ class _$AnnouncementCreatedChannelEventImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -16478,10 +17149,10 @@ class _$AnnouncementCreatedChannelEventImpl
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -16497,7 +17168,7 @@ class _$AnnouncementCreatedChannelEventImpl
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return announcementCreated?.call(id, body);
@@ -16507,16 +17178,19 @@ class _$AnnouncementCreatedChannelEventImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -16531,7 +17205,7 @@ class _$AnnouncementCreatedChannelEventImpl
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -16547,7 +17221,7 @@ class _$AnnouncementCreatedChannelEventImpl
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -16575,37 +17249,37 @@ class _$AnnouncementCreatedChannelEventImpl
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return announcementCreated(this);
@@ -16630,30 +17304,30 @@ class _$AnnouncementCreatedChannelEventImpl
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return announcementCreated?.call(this);
@@ -16678,30 +17352,30 @@ class _$AnnouncementCreatedChannelEventImpl
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -16713,17 +17387,15 @@ class _$AnnouncementCreatedChannelEventImpl
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AnnouncementCreatedChannelEventImplToJson(
-      this,
-    );
+    return _$$AnnouncementCreatedChannelEventImplToJson(this);
   }
 }
 
 abstract class AnnouncementCreatedChannelEvent implements ChannelStreamEvent {
-  const factory AnnouncementCreatedChannelEvent(
-          {required final String id,
-          required final AnnouncementCreatedStreamEvent body}) =
-      _$AnnouncementCreatedChannelEventImpl;
+  const factory AnnouncementCreatedChannelEvent({
+    required final String id,
+    required final AnnouncementCreatedStreamEvent body,
+  }) = _$AnnouncementCreatedChannelEventImpl;
 
   factory AnnouncementCreatedChannelEvent.fromJson(Map<String, dynamic> json) =
       _$AnnouncementCreatedChannelEventImpl.fromJson;
@@ -16737,16 +17409,18 @@ abstract class AnnouncementCreatedChannelEvent implements ChannelStreamEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AnnouncementCreatedChannelEventImplCopyWith<
-          _$AnnouncementCreatedChannelEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$AnnouncementCreatedChannelEventImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$FallbackChannelEventImplCopyWith<$Res>
     implements $ChannelStreamEventCopyWith<$Res> {
-  factory _$$FallbackChannelEventImplCopyWith(_$FallbackChannelEventImpl value,
-          $Res Function(_$FallbackChannelEventImpl) then) =
-      __$$FallbackChannelEventImplCopyWithImpl<$Res>;
+  factory _$$FallbackChannelEventImplCopyWith(
+    _$FallbackChannelEventImpl value,
+    $Res Function(_$FallbackChannelEventImpl) then,
+  ) = __$$FallbackChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, Object? body});
@@ -16756,34 +17430,37 @@ abstract class _$$FallbackChannelEventImplCopyWith<$Res>
 class __$$FallbackChannelEventImplCopyWithImpl<$Res>
     extends _$ChannelStreamEventCopyWithImpl<$Res, _$FallbackChannelEventImpl>
     implements _$$FallbackChannelEventImplCopyWith<$Res> {
-  __$$FallbackChannelEventImplCopyWithImpl(_$FallbackChannelEventImpl _value,
-      $Res Function(_$FallbackChannelEventImpl) _then)
-      : super(_value, _then);
+  __$$FallbackChannelEventImplCopyWithImpl(
+    _$FallbackChannelEventImpl _value,
+    $Res Function(_$FallbackChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? body = freezed,
-  }) {
-    return _then(_$FallbackChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      body: freezed == body ? _value.body : body,
-    ));
+  $Res call({Object? id = null, Object? body = freezed}) {
+    return _then(
+      _$FallbackChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        body: freezed == body ? _value.body : body,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$FallbackChannelEventImpl implements FallbackChannelEvent {
-  const _$FallbackChannelEventImpl(
-      {required this.id, required this.body, final String? $type})
-      : $type = $type ?? 'fallback';
+  const _$FallbackChannelEventImpl({
+    required this.id,
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'fallback';
 
   factory _$FallbackChannelEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$FallbackChannelEventImplFromJson(json);
@@ -16821,29 +17498,36 @@ class _$FallbackChannelEventImpl implements FallbackChannelEvent {
   @override
   @pragma('vm:prefer-inline')
   _$$FallbackChannelEventImplCopyWith<_$FallbackChannelEventImpl>
-      get copyWith =>
-          __$$FallbackChannelEventImplCopyWithImpl<_$FallbackChannelEventImpl>(
-              this, _$identity);
+  get copyWith =>
+      __$$FallbackChannelEventImplCopyWithImpl<_$FallbackChannelEventImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )
+    note,
     required TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )
+    statsLog,
     required TResult Function(
-            String id, @StreamingStatsConverter() StreamingStats body)
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )
+    stats,
     required TResult Function(String id, UserLite body) userAdded,
     required TResult Function(String id, UserLite body) userRemoved,
     required TResult Function(String id, INotificationsResponse body)
-        notification,
+    notification,
     required TResult Function(String id, Note body) mention,
     required TResult Function(String id, Note body) reply,
     required TResult Function(String id, Note body) renote,
@@ -16853,10 +17537,10 @@ class _$FallbackChannelEventImpl implements FallbackChannelEvent {
     required TResult Function(String id, MeDetailed body) meUpdated,
     required TResult Function(String id, PageEvent body) pageEvent,
     required TResult Function(String id, UrlUploadFinishedEvent body)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(String id) readAllNotifications,
     required TResult Function(String id, INotificationsResponse body)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(String id, String body) unreadMention,
     required TResult Function(String id) readAllUnreadMentions,
     required TResult Function(String id) notificationFlushed,
@@ -16872,7 +17556,7 @@ class _$FallbackChannelEventImpl implements FallbackChannelEvent {
     required TResult Function(String id, Antenna body) readAntenna,
     required TResult Function(String id, UserLite body) receiveFollowRequest,
     required TResult Function(String id, AnnouncementCreatedStreamEvent body)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(String id, Object? body) fallback,
   }) {
     return fallback(id, body);
@@ -16882,17 +17566,22 @@ class _$FallbackChannelEventImpl implements FallbackChannelEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult? Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult? Function(
-            String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+      String id,
+      @StreamingStatsConverter() StreamingStats body,
+    )?
+    stats,
     TResult? Function(String id, UserLite body)? userAdded,
     TResult? Function(String id, UserLite body)? userRemoved,
     TResult? Function(String id, INotificationsResponse body)? notification,
@@ -16905,10 +17594,10 @@ class _$FallbackChannelEventImpl implements FallbackChannelEvent {
     TResult? Function(String id, MeDetailed body)? meUpdated,
     TResult? Function(String id, PageEvent body)? pageEvent,
     TResult? Function(String id, UrlUploadFinishedEvent body)?
-        urlUploadFinished,
+    urlUploadFinished,
     TResult? Function(String id)? readAllNotifications,
     TResult? Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult? Function(String id, String body)? unreadMention,
     TResult? Function(String id)? readAllUnreadMentions,
     TResult? Function(String id)? notificationFlushed,
@@ -16924,7 +17613,7 @@ class _$FallbackChannelEventImpl implements FallbackChannelEvent {
     TResult? Function(String id, Antenna body)? readAntenna,
     TResult? Function(String id, UserLite body)? receiveFollowRequest,
     TResult? Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(String id, Object? body)? fallback,
   }) {
     return fallback?.call(id, body);
@@ -16934,16 +17623,19 @@ class _$FallbackChannelEventImpl implements FallbackChannelEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String id,
-            @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-            ChannelEventType? type,
-            Note body)?
-        note,
+      String id,
+      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+      ChannelEventType? type,
+      Note body,
+    )?
+    note,
     TResult Function(
-            String id, @StreamingStatsConverter() List<StreamingStats> body)?
-        statsLog,
+      String id,
+      @StreamingStatsConverter() List<StreamingStats> body,
+    )?
+    statsLog,
     TResult Function(String id, @StreamingStatsConverter() StreamingStats body)?
-        stats,
+    stats,
     TResult Function(String id, UserLite body)? userAdded,
     TResult Function(String id, UserLite body)? userRemoved,
     TResult Function(String id, INotificationsResponse body)? notification,
@@ -16958,7 +17650,7 @@ class _$FallbackChannelEventImpl implements FallbackChannelEvent {
     TResult Function(String id, UrlUploadFinishedEvent body)? urlUploadFinished,
     TResult Function(String id)? readAllNotifications,
     TResult Function(String id, INotificationsResponse body)?
-        unreadNotification,
+    unreadNotification,
     TResult Function(String id, String body)? unreadMention,
     TResult Function(String id)? readAllUnreadMentions,
     TResult Function(String id)? notificationFlushed,
@@ -16974,7 +17666,7 @@ class _$FallbackChannelEventImpl implements FallbackChannelEvent {
     TResult Function(String id, Antenna body)? readAntenna,
     TResult Function(String id, UserLite body)? receiveFollowRequest,
     TResult Function(String id, AnnouncementCreatedStreamEvent body)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(String id, Object? body)? fallback,
     required TResult orElse(),
   }) {
@@ -17002,37 +17694,37 @@ class _$FallbackChannelEventImpl implements FallbackChannelEvent {
     required TResult Function(MeUpdatedChannelEvent value) meUpdated,
     required TResult Function(PageEventChannelEvent value) pageEvent,
     required TResult Function(UrlUploadFinishedChannelEvent value)
-        urlUploadFinished,
+    urlUploadFinished,
     required TResult Function(ReadAllNotificationsChannelEvent value)
-        readAllNotifications,
+    readAllNotifications,
     required TResult Function(UnreadNotificationChannelEvent value)
-        unreadNotification,
+    unreadNotification,
     required TResult Function(UnreadMentionChannelEvent value) unreadMention,
     required TResult Function(ReadAllUnreadMentionsChannelEvent value)
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     required TResult Function(NotificationFlushedChannelEvent value)
-        notificationFlushed,
+    notificationFlushed,
     required TResult Function(UnreadSpecifiedNoteChannelEvent value)
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     required TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     required TResult Function(ReadAllAntennasChannelEvent value)
-        readAllAntennas,
+    readAllAntennas,
     required TResult Function(UnreadAntennaChannelEvent value) unreadAntenna,
     required TResult Function(ReadAllAnnouncementsChannelEvent value)
-        readAllAnnouncements,
+    readAllAnnouncements,
     required TResult Function(MyTokenRegeneratedChannelEvent value)
-        myTokenRegenerated,
+    myTokenRegenerated,
     required TResult Function(SigninChannelEvent value) signin,
     required TResult Function(RegistryUpdatedChannelEvent value)
-        registryUpdated,
+    registryUpdated,
     required TResult Function(DriveFileCreatedChannelEvent value)
-        driveFileCreated,
+    driveFileCreated,
     required TResult Function(ReadAntennaChannelEvent value) readAntenna,
     required TResult Function(ReceiveFollowRequestChannelEvent value)
-        receiveFollowRequest,
+    receiveFollowRequest,
     required TResult Function(AnnouncementCreatedChannelEvent value)
-        announcementCreated,
+    announcementCreated,
     required TResult Function(FallbackChannelEvent value) fallback,
   }) {
     return fallback(this);
@@ -17057,30 +17749,30 @@ class _$FallbackChannelEventImpl implements FallbackChannelEvent {
     TResult? Function(PageEventChannelEvent value)? pageEvent,
     TResult? Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult? Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult? Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult? Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult? Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult? Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult? Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult? Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult? Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult? Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult? Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult? Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult? Function(SigninChannelEvent value)? signin,
     TResult? Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult? Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult? Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult? Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult? Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult? Function(FallbackChannelEvent value)? fallback,
   }) {
     return fallback?.call(this);
@@ -17105,30 +17797,30 @@ class _$FallbackChannelEventImpl implements FallbackChannelEvent {
     TResult Function(PageEventChannelEvent value)? pageEvent,
     TResult Function(UrlUploadFinishedChannelEvent value)? urlUploadFinished,
     TResult Function(ReadAllNotificationsChannelEvent value)?
-        readAllNotifications,
+    readAllNotifications,
     TResult Function(UnreadNotificationChannelEvent value)? unreadNotification,
     TResult Function(UnreadMentionChannelEvent value)? unreadMention,
     TResult Function(ReadAllUnreadMentionsChannelEvent value)?
-        readAllUnreadMentions,
+    readAllUnreadMentions,
     TResult Function(NotificationFlushedChannelEvent value)?
-        notificationFlushed,
+    notificationFlushed,
     TResult Function(UnreadSpecifiedNoteChannelEvent value)?
-        unreadSpecifiedNote,
+    unreadSpecifiedNote,
     TResult Function(ReadAllUnreadSpecifiedNotesChannelEvent value)?
-        readAllUnreadSpecifiedNotes,
+    readAllUnreadSpecifiedNotes,
     TResult Function(ReadAllAntennasChannelEvent value)? readAllAntennas,
     TResult Function(UnreadAntennaChannelEvent value)? unreadAntenna,
     TResult Function(ReadAllAnnouncementsChannelEvent value)?
-        readAllAnnouncements,
+    readAllAnnouncements,
     TResult Function(MyTokenRegeneratedChannelEvent value)? myTokenRegenerated,
     TResult Function(SigninChannelEvent value)? signin,
     TResult Function(RegistryUpdatedChannelEvent value)? registryUpdated,
     TResult Function(DriveFileCreatedChannelEvent value)? driveFileCreated,
     TResult Function(ReadAntennaChannelEvent value)? readAntenna,
     TResult Function(ReceiveFollowRequestChannelEvent value)?
-        receiveFollowRequest,
+    receiveFollowRequest,
     TResult Function(AnnouncementCreatedChannelEvent value)?
-        announcementCreated,
+    announcementCreated,
     TResult Function(FallbackChannelEvent value)? fallback,
     required TResult orElse(),
   }) {
@@ -17140,16 +17832,15 @@ class _$FallbackChannelEventImpl implements FallbackChannelEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$FallbackChannelEventImplToJson(
-      this,
-    );
+    return _$$FallbackChannelEventImplToJson(this);
   }
 }
 
 abstract class FallbackChannelEvent implements ChannelStreamEvent {
-  const factory FallbackChannelEvent(
-      {required final String id,
-      required final Object? body}) = _$FallbackChannelEventImpl;
+  const factory FallbackChannelEvent({
+    required final String id,
+    required final Object? body,
+  }) = _$FallbackChannelEventImpl;
 
   factory FallbackChannelEvent.fromJson(Map<String, dynamic> json) =
       _$FallbackChannelEventImpl.fromJson;
@@ -17163,11 +17854,12 @@ abstract class FallbackChannelEvent implements ChannelStreamEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FallbackChannelEventImplCopyWith<_$FallbackChannelEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 NoteUpdateStreamEvent _$NoteUpdateStreamEventFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   switch (json['type']) {
     case 'reacted':
       return ReactedChannelEvent.fromJson(json);
@@ -17181,8 +17873,12 @@ NoteUpdateStreamEvent _$NoteUpdateStreamEventFromJson(
       return UpdatedChannelEvent.fromJson(json);
 
     default:
-      throw CheckedFromJsonException(json, 'type', 'NoteUpdateStreamEvent',
-          'Invalid union type "${json['type']}"!');
+      throw CheckedFromJsonException(
+        json,
+        'type',
+        'NoteUpdateStreamEvent',
+        'Invalid union type "${json['type']}"!',
+      );
   }
 }
 
@@ -17197,8 +17893,7 @@ mixin _$NoteUpdateStreamEvent {
     required TResult Function(String id, TimelineDeleted body) deleted,
     required TResult Function(String id, TimelineVoted body) pollVoted,
     required TResult Function(String id, NoteEdited body) updated,
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String id, TimelineReacted body)? reacted,
@@ -17206,8 +17901,7 @@ mixin _$NoteUpdateStreamEvent {
     TResult? Function(String id, TimelineDeleted body)? deleted,
     TResult? Function(String id, TimelineVoted body)? pollVoted,
     TResult? Function(String id, NoteEdited body)? updated,
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String id, TimelineReacted body)? reacted,
@@ -17216,8 +17910,7 @@ mixin _$NoteUpdateStreamEvent {
     TResult Function(String id, TimelineVoted body)? pollVoted,
     TResult Function(String id, NoteEdited body)? updated,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(ReactedChannelEvent value) reacted,
@@ -17225,8 +17918,7 @@ mixin _$NoteUpdateStreamEvent {
     required TResult Function(DeletedChannelEvent value) deleted,
     required TResult Function(PollVotedChannelEvent value) pollVoted,
     required TResult Function(UpdatedChannelEvent value) updated,
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(ReactedChannelEvent value)? reacted,
@@ -17234,8 +17926,7 @@ mixin _$NoteUpdateStreamEvent {
     TResult? Function(DeletedChannelEvent value)? deleted,
     TResult? Function(PollVotedChannelEvent value)? pollVoted,
     TResult? Function(UpdatedChannelEvent value)? updated,
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ReactedChannelEvent value)? reacted,
@@ -17244,8 +17935,7 @@ mixin _$NoteUpdateStreamEvent {
     TResult Function(PollVotedChannelEvent value)? pollVoted,
     TResult Function(UpdatedChannelEvent value)? updated,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
 
   /// Serializes this NoteUpdateStreamEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -17259,16 +17949,19 @@ mixin _$NoteUpdateStreamEvent {
 
 /// @nodoc
 abstract class $NoteUpdateStreamEventCopyWith<$Res> {
-  factory $NoteUpdateStreamEventCopyWith(NoteUpdateStreamEvent value,
-          $Res Function(NoteUpdateStreamEvent) then) =
-      _$NoteUpdateStreamEventCopyWithImpl<$Res, NoteUpdateStreamEvent>;
+  factory $NoteUpdateStreamEventCopyWith(
+    NoteUpdateStreamEvent value,
+    $Res Function(NoteUpdateStreamEvent) then,
+  ) = _$NoteUpdateStreamEventCopyWithImpl<$Res, NoteUpdateStreamEvent>;
   @useResult
   $Res call({String id});
 }
 
 /// @nodoc
-class _$NoteUpdateStreamEventCopyWithImpl<$Res,
-        $Val extends NoteUpdateStreamEvent>
+class _$NoteUpdateStreamEventCopyWithImpl<
+  $Res,
+  $Val extends NoteUpdateStreamEvent
+>
     implements $NoteUpdateStreamEventCopyWith<$Res> {
   _$NoteUpdateStreamEventCopyWithImpl(this._value, this._then);
 
@@ -17281,24 +17974,27 @@ class _$NoteUpdateStreamEventCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? id = null}) {
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$ReactedChannelEventImplCopyWith<$Res>
     implements $NoteUpdateStreamEventCopyWith<$Res> {
-  factory _$$ReactedChannelEventImplCopyWith(_$ReactedChannelEventImpl value,
-          $Res Function(_$ReactedChannelEventImpl) then) =
-      __$$ReactedChannelEventImplCopyWithImpl<$Res>;
+  factory _$$ReactedChannelEventImplCopyWith(
+    _$ReactedChannelEventImpl value,
+    $Res Function(_$ReactedChannelEventImpl) then,
+  ) = __$$ReactedChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, TimelineReacted body});
@@ -17310,28 +18006,30 @@ abstract class _$$ReactedChannelEventImplCopyWith<$Res>
 class __$$ReactedChannelEventImplCopyWithImpl<$Res>
     extends _$NoteUpdateStreamEventCopyWithImpl<$Res, _$ReactedChannelEventImpl>
     implements _$$ReactedChannelEventImplCopyWith<$Res> {
-  __$$ReactedChannelEventImplCopyWithImpl(_$ReactedChannelEventImpl _value,
-      $Res Function(_$ReactedChannelEventImpl) _then)
-      : super(_value, _then);
+  __$$ReactedChannelEventImplCopyWithImpl(
+    _$ReactedChannelEventImpl _value,
+    $Res Function(_$ReactedChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NoteUpdateStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? body = null,
-  }) {
-    return _then(_$ReactedChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as TimelineReacted,
-    ));
+  $Res call({Object? id = null, Object? body = null}) {
+    return _then(
+      _$ReactedChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as TimelineReacted,
+      ),
+    );
   }
 
   /// Create a copy of NoteUpdateStreamEvent
@@ -17348,9 +18046,11 @@ class __$$ReactedChannelEventImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$ReactedChannelEventImpl implements ReactedChannelEvent {
-  const _$ReactedChannelEventImpl(
-      {required this.id, required this.body, final String? $type})
-      : $type = $type ?? 'reacted';
+  const _$ReactedChannelEventImpl({
+    required this.id,
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'reacted';
 
   factory _$ReactedChannelEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$ReactedChannelEventImplFromJson(json);
@@ -17388,7 +18088,9 @@ class _$ReactedChannelEventImpl implements ReactedChannelEvent {
   @pragma('vm:prefer-inline')
   _$$ReactedChannelEventImplCopyWith<_$ReactedChannelEventImpl> get copyWith =>
       __$$ReactedChannelEventImplCopyWithImpl<_$ReactedChannelEventImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   @optionalTypeArgs
@@ -17472,16 +18174,15 @@ class _$ReactedChannelEventImpl implements ReactedChannelEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ReactedChannelEventImplToJson(
-      this,
-    );
+    return _$$ReactedChannelEventImplToJson(this);
   }
 }
 
 abstract class ReactedChannelEvent implements NoteUpdateStreamEvent {
-  const factory ReactedChannelEvent(
-      {required final String id,
-      required final TimelineReacted body}) = _$ReactedChannelEventImpl;
+  const factory ReactedChannelEvent({
+    required final String id,
+    required final TimelineReacted body,
+  }) = _$ReactedChannelEventImpl;
 
   factory ReactedChannelEvent.fromJson(Map<String, dynamic> json) =
       _$ReactedChannelEventImpl.fromJson;
@@ -17503,9 +18204,9 @@ abstract class ReactedChannelEvent implements NoteUpdateStreamEvent {
 abstract class _$$UnreactedChannelEventImplCopyWith<$Res>
     implements $NoteUpdateStreamEventCopyWith<$Res> {
   factory _$$UnreactedChannelEventImplCopyWith(
-          _$UnreactedChannelEventImpl value,
-          $Res Function(_$UnreactedChannelEventImpl) then) =
-      __$$UnreactedChannelEventImplCopyWithImpl<$Res>;
+    _$UnreactedChannelEventImpl value,
+    $Res Function(_$UnreactedChannelEventImpl) then,
+  ) = __$$UnreactedChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, TimelineReacted body});
@@ -17515,31 +18216,33 @@ abstract class _$$UnreactedChannelEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$UnreactedChannelEventImplCopyWithImpl<$Res>
-    extends _$NoteUpdateStreamEventCopyWithImpl<$Res,
-        _$UnreactedChannelEventImpl>
+    extends
+        _$NoteUpdateStreamEventCopyWithImpl<$Res, _$UnreactedChannelEventImpl>
     implements _$$UnreactedChannelEventImplCopyWith<$Res> {
-  __$$UnreactedChannelEventImplCopyWithImpl(_$UnreactedChannelEventImpl _value,
-      $Res Function(_$UnreactedChannelEventImpl) _then)
-      : super(_value, _then);
+  __$$UnreactedChannelEventImplCopyWithImpl(
+    _$UnreactedChannelEventImpl _value,
+    $Res Function(_$UnreactedChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NoteUpdateStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? body = null,
-  }) {
-    return _then(_$UnreactedChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as TimelineReacted,
-    ));
+  $Res call({Object? id = null, Object? body = null}) {
+    return _then(
+      _$UnreactedChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as TimelineReacted,
+      ),
+    );
   }
 
   /// Create a copy of NoteUpdateStreamEvent
@@ -17556,9 +18259,11 @@ class __$$UnreactedChannelEventImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$UnreactedChannelEventImpl implements UnreactedChannelEvent {
-  const _$UnreactedChannelEventImpl(
-      {required this.id, required this.body, final String? $type})
-      : $type = $type ?? 'unreacted';
+  const _$UnreactedChannelEventImpl({
+    required this.id,
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'unreacted';
 
   factory _$UnreactedChannelEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$UnreactedChannelEventImplFromJson(json);
@@ -17595,8 +18300,11 @@ class _$UnreactedChannelEventImpl implements UnreactedChannelEvent {
   @override
   @pragma('vm:prefer-inline')
   _$$UnreactedChannelEventImplCopyWith<_$UnreactedChannelEventImpl>
-      get copyWith => __$$UnreactedChannelEventImplCopyWithImpl<
-          _$UnreactedChannelEventImpl>(this, _$identity);
+  get copyWith =>
+      __$$UnreactedChannelEventImplCopyWithImpl<_$UnreactedChannelEventImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   @optionalTypeArgs
@@ -17680,16 +18388,15 @@ class _$UnreactedChannelEventImpl implements UnreactedChannelEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UnreactedChannelEventImplToJson(
-      this,
-    );
+    return _$$UnreactedChannelEventImplToJson(this);
   }
 }
 
 abstract class UnreactedChannelEvent implements NoteUpdateStreamEvent {
-  const factory UnreactedChannelEvent(
-      {required final String id,
-      required final TimelineReacted body}) = _$UnreactedChannelEventImpl;
+  const factory UnreactedChannelEvent({
+    required final String id,
+    required final TimelineReacted body,
+  }) = _$UnreactedChannelEventImpl;
 
   factory UnreactedChannelEvent.fromJson(Map<String, dynamic> json) =
       _$UnreactedChannelEventImpl.fromJson;
@@ -17704,15 +18411,16 @@ abstract class UnreactedChannelEvent implements NoteUpdateStreamEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UnreactedChannelEventImplCopyWith<_$UnreactedChannelEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$DeletedChannelEventImplCopyWith<$Res>
     implements $NoteUpdateStreamEventCopyWith<$Res> {
-  factory _$$DeletedChannelEventImplCopyWith(_$DeletedChannelEventImpl value,
-          $Res Function(_$DeletedChannelEventImpl) then) =
-      __$$DeletedChannelEventImplCopyWithImpl<$Res>;
+  factory _$$DeletedChannelEventImplCopyWith(
+    _$DeletedChannelEventImpl value,
+    $Res Function(_$DeletedChannelEventImpl) then,
+  ) = __$$DeletedChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, TimelineDeleted body});
@@ -17724,28 +18432,30 @@ abstract class _$$DeletedChannelEventImplCopyWith<$Res>
 class __$$DeletedChannelEventImplCopyWithImpl<$Res>
     extends _$NoteUpdateStreamEventCopyWithImpl<$Res, _$DeletedChannelEventImpl>
     implements _$$DeletedChannelEventImplCopyWith<$Res> {
-  __$$DeletedChannelEventImplCopyWithImpl(_$DeletedChannelEventImpl _value,
-      $Res Function(_$DeletedChannelEventImpl) _then)
-      : super(_value, _then);
+  __$$DeletedChannelEventImplCopyWithImpl(
+    _$DeletedChannelEventImpl _value,
+    $Res Function(_$DeletedChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NoteUpdateStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? body = null,
-  }) {
-    return _then(_$DeletedChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as TimelineDeleted,
-    ));
+  $Res call({Object? id = null, Object? body = null}) {
+    return _then(
+      _$DeletedChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as TimelineDeleted,
+      ),
+    );
   }
 
   /// Create a copy of NoteUpdateStreamEvent
@@ -17762,9 +18472,11 @@ class __$$DeletedChannelEventImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$DeletedChannelEventImpl implements DeletedChannelEvent {
-  const _$DeletedChannelEventImpl(
-      {required this.id, required this.body, final String? $type})
-      : $type = $type ?? 'deleted';
+  const _$DeletedChannelEventImpl({
+    required this.id,
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'deleted';
 
   factory _$DeletedChannelEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$DeletedChannelEventImplFromJson(json);
@@ -17802,7 +18514,9 @@ class _$DeletedChannelEventImpl implements DeletedChannelEvent {
   @pragma('vm:prefer-inline')
   _$$DeletedChannelEventImplCopyWith<_$DeletedChannelEventImpl> get copyWith =>
       __$$DeletedChannelEventImplCopyWithImpl<_$DeletedChannelEventImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   @optionalTypeArgs
@@ -17886,16 +18600,15 @@ class _$DeletedChannelEventImpl implements DeletedChannelEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DeletedChannelEventImplToJson(
-      this,
-    );
+    return _$$DeletedChannelEventImplToJson(this);
   }
 }
 
 abstract class DeletedChannelEvent implements NoteUpdateStreamEvent {
-  const factory DeletedChannelEvent(
-      {required final String id,
-      required final TimelineDeleted body}) = _$DeletedChannelEventImpl;
+  const factory DeletedChannelEvent({
+    required final String id,
+    required final TimelineDeleted body,
+  }) = _$DeletedChannelEventImpl;
 
   factory DeletedChannelEvent.fromJson(Map<String, dynamic> json) =
       _$DeletedChannelEventImpl.fromJson;
@@ -17917,9 +18630,9 @@ abstract class DeletedChannelEvent implements NoteUpdateStreamEvent {
 abstract class _$$PollVotedChannelEventImplCopyWith<$Res>
     implements $NoteUpdateStreamEventCopyWith<$Res> {
   factory _$$PollVotedChannelEventImplCopyWith(
-          _$PollVotedChannelEventImpl value,
-          $Res Function(_$PollVotedChannelEventImpl) then) =
-      __$$PollVotedChannelEventImplCopyWithImpl<$Res>;
+    _$PollVotedChannelEventImpl value,
+    $Res Function(_$PollVotedChannelEventImpl) then,
+  ) = __$$PollVotedChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, TimelineVoted body});
@@ -17929,31 +18642,33 @@ abstract class _$$PollVotedChannelEventImplCopyWith<$Res>
 
 /// @nodoc
 class __$$PollVotedChannelEventImplCopyWithImpl<$Res>
-    extends _$NoteUpdateStreamEventCopyWithImpl<$Res,
-        _$PollVotedChannelEventImpl>
+    extends
+        _$NoteUpdateStreamEventCopyWithImpl<$Res, _$PollVotedChannelEventImpl>
     implements _$$PollVotedChannelEventImplCopyWith<$Res> {
-  __$$PollVotedChannelEventImplCopyWithImpl(_$PollVotedChannelEventImpl _value,
-      $Res Function(_$PollVotedChannelEventImpl) _then)
-      : super(_value, _then);
+  __$$PollVotedChannelEventImplCopyWithImpl(
+    _$PollVotedChannelEventImpl _value,
+    $Res Function(_$PollVotedChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NoteUpdateStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? body = null,
-  }) {
-    return _then(_$PollVotedChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as TimelineVoted,
-    ));
+  $Res call({Object? id = null, Object? body = null}) {
+    return _then(
+      _$PollVotedChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as TimelineVoted,
+      ),
+    );
   }
 
   /// Create a copy of NoteUpdateStreamEvent
@@ -17970,9 +18685,11 @@ class __$$PollVotedChannelEventImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$PollVotedChannelEventImpl implements PollVotedChannelEvent {
-  const _$PollVotedChannelEventImpl(
-      {required this.id, required this.body, final String? $type})
-      : $type = $type ?? 'pollVoted';
+  const _$PollVotedChannelEventImpl({
+    required this.id,
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'pollVoted';
 
   factory _$PollVotedChannelEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$PollVotedChannelEventImplFromJson(json);
@@ -18009,8 +18726,11 @@ class _$PollVotedChannelEventImpl implements PollVotedChannelEvent {
   @override
   @pragma('vm:prefer-inline')
   _$$PollVotedChannelEventImplCopyWith<_$PollVotedChannelEventImpl>
-      get copyWith => __$$PollVotedChannelEventImplCopyWithImpl<
-          _$PollVotedChannelEventImpl>(this, _$identity);
+  get copyWith =>
+      __$$PollVotedChannelEventImplCopyWithImpl<_$PollVotedChannelEventImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   @optionalTypeArgs
@@ -18094,16 +18814,15 @@ class _$PollVotedChannelEventImpl implements PollVotedChannelEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PollVotedChannelEventImplToJson(
-      this,
-    );
+    return _$$PollVotedChannelEventImplToJson(this);
   }
 }
 
 abstract class PollVotedChannelEvent implements NoteUpdateStreamEvent {
-  const factory PollVotedChannelEvent(
-      {required final String id,
-      required final TimelineVoted body}) = _$PollVotedChannelEventImpl;
+  const factory PollVotedChannelEvent({
+    required final String id,
+    required final TimelineVoted body,
+  }) = _$PollVotedChannelEventImpl;
 
   factory PollVotedChannelEvent.fromJson(Map<String, dynamic> json) =
       _$PollVotedChannelEventImpl.fromJson;
@@ -18118,15 +18837,16 @@ abstract class PollVotedChannelEvent implements NoteUpdateStreamEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PollVotedChannelEventImplCopyWith<_$PollVotedChannelEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$UpdatedChannelEventImplCopyWith<$Res>
     implements $NoteUpdateStreamEventCopyWith<$Res> {
-  factory _$$UpdatedChannelEventImplCopyWith(_$UpdatedChannelEventImpl value,
-          $Res Function(_$UpdatedChannelEventImpl) then) =
-      __$$UpdatedChannelEventImplCopyWithImpl<$Res>;
+  factory _$$UpdatedChannelEventImplCopyWith(
+    _$UpdatedChannelEventImpl value,
+    $Res Function(_$UpdatedChannelEventImpl) then,
+  ) = __$$UpdatedChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, NoteEdited body});
@@ -18138,28 +18858,30 @@ abstract class _$$UpdatedChannelEventImplCopyWith<$Res>
 class __$$UpdatedChannelEventImplCopyWithImpl<$Res>
     extends _$NoteUpdateStreamEventCopyWithImpl<$Res, _$UpdatedChannelEventImpl>
     implements _$$UpdatedChannelEventImplCopyWith<$Res> {
-  __$$UpdatedChannelEventImplCopyWithImpl(_$UpdatedChannelEventImpl _value,
-      $Res Function(_$UpdatedChannelEventImpl) _then)
-      : super(_value, _then);
+  __$$UpdatedChannelEventImplCopyWithImpl(
+    _$UpdatedChannelEventImpl _value,
+    $Res Function(_$UpdatedChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NoteUpdateStreamEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? body = null,
-  }) {
-    return _then(_$UpdatedChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as NoteEdited,
-    ));
+  $Res call({Object? id = null, Object? body = null}) {
+    return _then(
+      _$UpdatedChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        body:
+            null == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as NoteEdited,
+      ),
+    );
   }
 
   /// Create a copy of NoteUpdateStreamEvent
@@ -18176,9 +18898,11 @@ class __$$UpdatedChannelEventImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$UpdatedChannelEventImpl implements UpdatedChannelEvent {
-  const _$UpdatedChannelEventImpl(
-      {required this.id, required this.body, final String? $type})
-      : $type = $type ?? 'updated';
+  const _$UpdatedChannelEventImpl({
+    required this.id,
+    required this.body,
+    final String? $type,
+  }) : $type = $type ?? 'updated';
 
   factory _$UpdatedChannelEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$UpdatedChannelEventImplFromJson(json);
@@ -18216,7 +18940,9 @@ class _$UpdatedChannelEventImpl implements UpdatedChannelEvent {
   @pragma('vm:prefer-inline')
   _$$UpdatedChannelEventImplCopyWith<_$UpdatedChannelEventImpl> get copyWith =>
       __$$UpdatedChannelEventImplCopyWithImpl<_$UpdatedChannelEventImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   @optionalTypeArgs
@@ -18300,16 +19026,15 @@ class _$UpdatedChannelEventImpl implements UpdatedChannelEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UpdatedChannelEventImplToJson(
-      this,
-    );
+    return _$$UpdatedChannelEventImplToJson(this);
   }
 }
 
 abstract class UpdatedChannelEvent implements NoteUpdateStreamEvent {
-  const factory UpdatedChannelEvent(
-      {required final String id,
-      required final NoteEdited body}) = _$UpdatedChannelEventImpl;
+  const factory UpdatedChannelEvent({
+    required final String id,
+    required final NoteEdited body,
+  }) = _$UpdatedChannelEventImpl;
 
   factory UpdatedChannelEvent.fromJson(Map<String, dynamic> json) =
       _$UpdatedChannelEventImpl.fromJson;

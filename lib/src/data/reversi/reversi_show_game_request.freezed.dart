@@ -12,10 +12,12 @@ part of 'reversi_show_game_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ReversiShowGameRequest _$ReversiShowGameRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _ReversiShowGameRequest.fromJson(json);
 }
 
@@ -35,16 +37,19 @@ mixin _$ReversiShowGameRequest {
 
 /// @nodoc
 abstract class $ReversiShowGameRequestCopyWith<$Res> {
-  factory $ReversiShowGameRequestCopyWith(ReversiShowGameRequest value,
-          $Res Function(ReversiShowGameRequest) then) =
-      _$ReversiShowGameRequestCopyWithImpl<$Res, ReversiShowGameRequest>;
+  factory $ReversiShowGameRequestCopyWith(
+    ReversiShowGameRequest value,
+    $Res Function(ReversiShowGameRequest) then,
+  ) = _$ReversiShowGameRequestCopyWithImpl<$Res, ReversiShowGameRequest>;
   @useResult
   $Res call({String gameId});
 }
 
 /// @nodoc
-class _$ReversiShowGameRequestCopyWithImpl<$Res,
-        $Val extends ReversiShowGameRequest>
+class _$ReversiShowGameRequestCopyWithImpl<
+  $Res,
+  $Val extends ReversiShowGameRequest
+>
     implements $ReversiShowGameRequestCopyWith<$Res> {
   _$ReversiShowGameRequestCopyWithImpl(this._value, this._then);
 
@@ -57,15 +62,17 @@ class _$ReversiShowGameRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? gameId = null,
-  }) {
-    return _then(_value.copyWith(
-      gameId: null == gameId
-          ? _value.gameId
-          : gameId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? gameId = null}) {
+    return _then(
+      _value.copyWith(
+            gameId:
+                null == gameId
+                    ? _value.gameId
+                    : gameId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -73,9 +80,9 @@ class _$ReversiShowGameRequestCopyWithImpl<$Res,
 abstract class _$$ReversiShowGameRequestImplCopyWith<$Res>
     implements $ReversiShowGameRequestCopyWith<$Res> {
   factory _$$ReversiShowGameRequestImplCopyWith(
-          _$ReversiShowGameRequestImpl value,
-          $Res Function(_$ReversiShowGameRequestImpl) then) =
-      __$$ReversiShowGameRequestImplCopyWithImpl<$Res>;
+    _$ReversiShowGameRequestImpl value,
+    $Res Function(_$ReversiShowGameRequestImpl) then,
+  ) = __$$ReversiShowGameRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String gameId});
@@ -83,27 +90,28 @@ abstract class _$$ReversiShowGameRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$ReversiShowGameRequestImplCopyWithImpl<$Res>
-    extends _$ReversiShowGameRequestCopyWithImpl<$Res,
-        _$ReversiShowGameRequestImpl>
+    extends
+        _$ReversiShowGameRequestCopyWithImpl<$Res, _$ReversiShowGameRequestImpl>
     implements _$$ReversiShowGameRequestImplCopyWith<$Res> {
   __$$ReversiShowGameRequestImplCopyWithImpl(
-      _$ReversiShowGameRequestImpl _value,
-      $Res Function(_$ReversiShowGameRequestImpl) _then)
-      : super(_value, _then);
+    _$ReversiShowGameRequestImpl _value,
+    $Res Function(_$ReversiShowGameRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ReversiShowGameRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? gameId = null,
-  }) {
-    return _then(_$ReversiShowGameRequestImpl(
-      gameId: null == gameId
-          ? _value.gameId
-          : gameId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? gameId = null}) {
+    return _then(
+      _$ReversiShowGameRequestImpl(
+        gameId:
+            null == gameId
+                ? _value.gameId
+                : gameId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -141,14 +149,15 @@ class _$ReversiShowGameRequestImpl implements _ReversiShowGameRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$ReversiShowGameRequestImplCopyWith<_$ReversiShowGameRequestImpl>
-      get copyWith => __$$ReversiShowGameRequestImplCopyWithImpl<
-          _$ReversiShowGameRequestImpl>(this, _$identity);
+  get copyWith =>
+      __$$ReversiShowGameRequestImplCopyWithImpl<_$ReversiShowGameRequestImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ReversiShowGameRequestImplToJson(
-      this,
-    );
+    return _$$ReversiShowGameRequestImplToJson(this);
   }
 }
 
@@ -167,5 +176,5 @@ abstract class _ReversiShowGameRequest implements ReversiShowGameRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReversiShowGameRequestImplCopyWith<_$ReversiShowGameRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

@@ -12,10 +12,12 @@ part of 'sw_show_registration_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 SwShowRegistrationRequest _$SwShowRegistrationRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _SwShowRegistrationRequest.fromJson(json);
 }
 
@@ -35,16 +37,19 @@ mixin _$SwShowRegistrationRequest {
 
 /// @nodoc
 abstract class $SwShowRegistrationRequestCopyWith<$Res> {
-  factory $SwShowRegistrationRequestCopyWith(SwShowRegistrationRequest value,
-          $Res Function(SwShowRegistrationRequest) then) =
-      _$SwShowRegistrationRequestCopyWithImpl<$Res, SwShowRegistrationRequest>;
+  factory $SwShowRegistrationRequestCopyWith(
+    SwShowRegistrationRequest value,
+    $Res Function(SwShowRegistrationRequest) then,
+  ) = _$SwShowRegistrationRequestCopyWithImpl<$Res, SwShowRegistrationRequest>;
   @useResult
   $Res call({String endpoint});
 }
 
 /// @nodoc
-class _$SwShowRegistrationRequestCopyWithImpl<$Res,
-        $Val extends SwShowRegistrationRequest>
+class _$SwShowRegistrationRequestCopyWithImpl<
+  $Res,
+  $Val extends SwShowRegistrationRequest
+>
     implements $SwShowRegistrationRequestCopyWith<$Res> {
   _$SwShowRegistrationRequestCopyWithImpl(this._value, this._then);
 
@@ -57,15 +62,17 @@ class _$SwShowRegistrationRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? endpoint = null,
-  }) {
-    return _then(_value.copyWith(
-      endpoint: null == endpoint
-          ? _value.endpoint
-          : endpoint // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? endpoint = null}) {
+    return _then(
+      _value.copyWith(
+            endpoint:
+                null == endpoint
+                    ? _value.endpoint
+                    : endpoint // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -73,9 +80,9 @@ class _$SwShowRegistrationRequestCopyWithImpl<$Res,
 abstract class _$$SwShowRegistrationRequestImplCopyWith<$Res>
     implements $SwShowRegistrationRequestCopyWith<$Res> {
   factory _$$SwShowRegistrationRequestImplCopyWith(
-          _$SwShowRegistrationRequestImpl value,
-          $Res Function(_$SwShowRegistrationRequestImpl) then) =
-      __$$SwShowRegistrationRequestImplCopyWithImpl<$Res>;
+    _$SwShowRegistrationRequestImpl value,
+    $Res Function(_$SwShowRegistrationRequestImpl) then,
+  ) = __$$SwShowRegistrationRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String endpoint});
@@ -83,27 +90,31 @@ abstract class _$$SwShowRegistrationRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$SwShowRegistrationRequestImplCopyWithImpl<$Res>
-    extends _$SwShowRegistrationRequestCopyWithImpl<$Res,
-        _$SwShowRegistrationRequestImpl>
+    extends
+        _$SwShowRegistrationRequestCopyWithImpl<
+          $Res,
+          _$SwShowRegistrationRequestImpl
+        >
     implements _$$SwShowRegistrationRequestImplCopyWith<$Res> {
   __$$SwShowRegistrationRequestImplCopyWithImpl(
-      _$SwShowRegistrationRequestImpl _value,
-      $Res Function(_$SwShowRegistrationRequestImpl) _then)
-      : super(_value, _then);
+    _$SwShowRegistrationRequestImpl _value,
+    $Res Function(_$SwShowRegistrationRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of SwShowRegistrationRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? endpoint = null,
-  }) {
-    return _then(_$SwShowRegistrationRequestImpl(
-      endpoint: null == endpoint
-          ? _value.endpoint
-          : endpoint // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? endpoint = null}) {
+    return _then(
+      _$SwShowRegistrationRequestImpl(
+        endpoint:
+            null == endpoint
+                ? _value.endpoint
+                : endpoint // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -142,14 +153,13 @@ class _$SwShowRegistrationRequestImpl implements _SwShowRegistrationRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$SwShowRegistrationRequestImplCopyWith<_$SwShowRegistrationRequestImpl>
-      get copyWith => __$$SwShowRegistrationRequestImplCopyWithImpl<
-          _$SwShowRegistrationRequestImpl>(this, _$identity);
+  get copyWith => __$$SwShowRegistrationRequestImplCopyWithImpl<
+    _$SwShowRegistrationRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SwShowRegistrationRequestImplToJson(
-      this,
-    );
+    return _$$SwShowRegistrationRequestImplToJson(this);
   }
 }
 
@@ -168,5 +178,5 @@ abstract class _SwShowRegistrationRequest implements SwShowRegistrationRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SwShowRegistrationRequestImplCopyWith<_$SwShowRegistrationRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

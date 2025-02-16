@@ -12,10 +12,12 @@ part of 'channels_create_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ChannelsCreateRequest _$ChannelsCreateRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _ChannelsCreateRequest.fromJson(json);
 }
 
@@ -38,17 +40,24 @@ mixin _$ChannelsCreateRequest {
 
 /// @nodoc
 abstract class $ChannelsCreateRequestCopyWith<$Res> {
-  factory $ChannelsCreateRequestCopyWith(ChannelsCreateRequest value,
-          $Res Function(ChannelsCreateRequest) then) =
-      _$ChannelsCreateRequestCopyWithImpl<$Res, ChannelsCreateRequest>;
+  factory $ChannelsCreateRequestCopyWith(
+    ChannelsCreateRequest value,
+    $Res Function(ChannelsCreateRequest) then,
+  ) = _$ChannelsCreateRequestCopyWithImpl<$Res, ChannelsCreateRequest>;
   @useResult
-  $Res call(
-      {String name, String? description, String? bannerId, String? color});
+  $Res call({
+    String name,
+    String? description,
+    String? bannerId,
+    String? color,
+  });
 }
 
 /// @nodoc
-class _$ChannelsCreateRequestCopyWithImpl<$Res,
-        $Val extends ChannelsCreateRequest>
+class _$ChannelsCreateRequestCopyWithImpl<
+  $Res,
+  $Val extends ChannelsCreateRequest
+>
     implements $ChannelsCreateRequestCopyWith<$Res> {
   _$ChannelsCreateRequestCopyWithImpl(this._value, this._then);
 
@@ -67,24 +76,31 @@ class _$ChannelsCreateRequestCopyWithImpl<$Res,
     Object? bannerId = freezed,
     Object? color = freezed,
   }) {
-    return _then(_value.copyWith(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      bannerId: freezed == bannerId
-          ? _value.bannerId
-          : bannerId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      color: freezed == color
-          ? _value.color
-          : color // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            description:
+                freezed == description
+                    ? _value.description
+                    : description // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            bannerId:
+                freezed == bannerId
+                    ? _value.bannerId
+                    : bannerId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            color:
+                freezed == color
+                    ? _value.color
+                    : color // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -92,23 +108,28 @@ class _$ChannelsCreateRequestCopyWithImpl<$Res,
 abstract class _$$ChannelsCreateRequestImplCopyWith<$Res>
     implements $ChannelsCreateRequestCopyWith<$Res> {
   factory _$$ChannelsCreateRequestImplCopyWith(
-          _$ChannelsCreateRequestImpl value,
-          $Res Function(_$ChannelsCreateRequestImpl) then) =
-      __$$ChannelsCreateRequestImplCopyWithImpl<$Res>;
+    _$ChannelsCreateRequestImpl value,
+    $Res Function(_$ChannelsCreateRequestImpl) then,
+  ) = __$$ChannelsCreateRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String name, String? description, String? bannerId, String? color});
+  $Res call({
+    String name,
+    String? description,
+    String? bannerId,
+    String? color,
+  });
 }
 
 /// @nodoc
 class __$$ChannelsCreateRequestImplCopyWithImpl<$Res>
-    extends _$ChannelsCreateRequestCopyWithImpl<$Res,
-        _$ChannelsCreateRequestImpl>
+    extends
+        _$ChannelsCreateRequestCopyWithImpl<$Res, _$ChannelsCreateRequestImpl>
     implements _$$ChannelsCreateRequestImplCopyWith<$Res> {
-  __$$ChannelsCreateRequestImplCopyWithImpl(_$ChannelsCreateRequestImpl _value,
-      $Res Function(_$ChannelsCreateRequestImpl) _then)
-      : super(_value, _then);
+  __$$ChannelsCreateRequestImplCopyWithImpl(
+    _$ChannelsCreateRequestImpl _value,
+    $Res Function(_$ChannelsCreateRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelsCreateRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -120,32 +141,42 @@ class __$$ChannelsCreateRequestImplCopyWithImpl<$Res>
     Object? bannerId = freezed,
     Object? color = freezed,
   }) {
-    return _then(_$ChannelsCreateRequestImpl(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      bannerId: freezed == bannerId
-          ? _value.bannerId
-          : bannerId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      color: freezed == color
-          ? _value.color
-          : color // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$ChannelsCreateRequestImpl(
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        description:
+            freezed == description
+                ? _value.description
+                : description // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        bannerId:
+            freezed == bannerId
+                ? _value.bannerId
+                : bannerId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        color:
+            freezed == color
+                ? _value.color
+                : color // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ChannelsCreateRequestImpl implements _ChannelsCreateRequest {
-  const _$ChannelsCreateRequestImpl(
-      {required this.name, this.description, this.bannerId, this.color});
+  const _$ChannelsCreateRequestImpl({
+    required this.name,
+    this.description,
+    this.bannerId,
+    this.color,
+  });
 
   factory _$ChannelsCreateRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$ChannelsCreateRequestImplFromJson(json);
@@ -188,23 +219,25 @@ class _$ChannelsCreateRequestImpl implements _ChannelsCreateRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$ChannelsCreateRequestImplCopyWith<_$ChannelsCreateRequestImpl>
-      get copyWith => __$$ChannelsCreateRequestImplCopyWithImpl<
-          _$ChannelsCreateRequestImpl>(this, _$identity);
+  get copyWith =>
+      __$$ChannelsCreateRequestImplCopyWithImpl<_$ChannelsCreateRequestImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ChannelsCreateRequestImplToJson(
-      this,
-    );
+    return _$$ChannelsCreateRequestImplToJson(this);
   }
 }
 
 abstract class _ChannelsCreateRequest implements ChannelsCreateRequest {
-  const factory _ChannelsCreateRequest(
-      {required final String name,
-      final String? description,
-      final String? bannerId,
-      final String? color}) = _$ChannelsCreateRequestImpl;
+  const factory _ChannelsCreateRequest({
+    required final String name,
+    final String? description,
+    final String? bannerId,
+    final String? color,
+  }) = _$ChannelsCreateRequestImpl;
 
   factory _ChannelsCreateRequest.fromJson(Map<String, dynamic> json) =
       _$ChannelsCreateRequestImpl.fromJson;
@@ -223,5 +256,5 @@ abstract class _ChannelsCreateRequest implements ChannelsCreateRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ChannelsCreateRequestImplCopyWith<_$ChannelsCreateRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

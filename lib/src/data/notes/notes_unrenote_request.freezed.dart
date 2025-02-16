@@ -12,7 +12,8 @@ part of 'notes_unrenote_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 NotesUnrenoteRequest _$NotesUnrenoteRequestFromJson(Map<String, dynamic> json) {
   return _NotesUnrenoteRequest.fromJson(json);
@@ -34,16 +35,19 @@ mixin _$NotesUnrenoteRequest {
 
 /// @nodoc
 abstract class $NotesUnrenoteRequestCopyWith<$Res> {
-  factory $NotesUnrenoteRequestCopyWith(NotesUnrenoteRequest value,
-          $Res Function(NotesUnrenoteRequest) then) =
-      _$NotesUnrenoteRequestCopyWithImpl<$Res, NotesUnrenoteRequest>;
+  factory $NotesUnrenoteRequestCopyWith(
+    NotesUnrenoteRequest value,
+    $Res Function(NotesUnrenoteRequest) then,
+  ) = _$NotesUnrenoteRequestCopyWithImpl<$Res, NotesUnrenoteRequest>;
   @useResult
   $Res call({String noteId});
 }
 
 /// @nodoc
-class _$NotesUnrenoteRequestCopyWithImpl<$Res,
-        $Val extends NotesUnrenoteRequest>
+class _$NotesUnrenoteRequestCopyWithImpl<
+  $Res,
+  $Val extends NotesUnrenoteRequest
+>
     implements $NotesUnrenoteRequestCopyWith<$Res> {
   _$NotesUnrenoteRequestCopyWithImpl(this._value, this._then);
 
@@ -56,24 +60,27 @@ class _$NotesUnrenoteRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? noteId = null,
-  }) {
-    return _then(_value.copyWith(
-      noteId: null == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? noteId = null}) {
+    return _then(
+      _value.copyWith(
+            noteId:
+                null == noteId
+                    ? _value.noteId
+                    : noteId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$NotesUnrenoteRequestImplCopyWith<$Res>
     implements $NotesUnrenoteRequestCopyWith<$Res> {
-  factory _$$NotesUnrenoteRequestImplCopyWith(_$NotesUnrenoteRequestImpl value,
-          $Res Function(_$NotesUnrenoteRequestImpl) then) =
-      __$$NotesUnrenoteRequestImplCopyWithImpl<$Res>;
+  factory _$$NotesUnrenoteRequestImplCopyWith(
+    _$NotesUnrenoteRequestImpl value,
+    $Res Function(_$NotesUnrenoteRequestImpl) then,
+  ) = __$$NotesUnrenoteRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String noteId});
@@ -83,23 +90,25 @@ abstract class _$$NotesUnrenoteRequestImplCopyWith<$Res>
 class __$$NotesUnrenoteRequestImplCopyWithImpl<$Res>
     extends _$NotesUnrenoteRequestCopyWithImpl<$Res, _$NotesUnrenoteRequestImpl>
     implements _$$NotesUnrenoteRequestImplCopyWith<$Res> {
-  __$$NotesUnrenoteRequestImplCopyWithImpl(_$NotesUnrenoteRequestImpl _value,
-      $Res Function(_$NotesUnrenoteRequestImpl) _then)
-      : super(_value, _then);
+  __$$NotesUnrenoteRequestImplCopyWithImpl(
+    _$NotesUnrenoteRequestImpl _value,
+    $Res Function(_$NotesUnrenoteRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotesUnrenoteRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? noteId = null,
-  }) {
-    return _then(_$NotesUnrenoteRequestImpl(
-      noteId: null == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? noteId = null}) {
+    return _then(
+      _$NotesUnrenoteRequestImpl(
+        noteId:
+            null == noteId
+                ? _value.noteId
+                : noteId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -137,15 +146,15 @@ class _$NotesUnrenoteRequestImpl implements _NotesUnrenoteRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$NotesUnrenoteRequestImplCopyWith<_$NotesUnrenoteRequestImpl>
-      get copyWith =>
-          __$$NotesUnrenoteRequestImplCopyWithImpl<_$NotesUnrenoteRequestImpl>(
-              this, _$identity);
+  get copyWith =>
+      __$$NotesUnrenoteRequestImplCopyWithImpl<_$NotesUnrenoteRequestImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotesUnrenoteRequestImplToJson(
-      this,
-    );
+    return _$$NotesUnrenoteRequestImplToJson(this);
   }
 }
 
@@ -164,5 +173,5 @@ abstract class _NotesUnrenoteRequest implements NotesUnrenoteRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesUnrenoteRequestImplCopyWith<_$NotesUnrenoteRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

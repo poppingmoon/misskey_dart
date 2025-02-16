@@ -12,7 +12,8 @@ part of 'users_search_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 UsersSearchRequest _$UsersSearchRequestFromJson(Map<String, dynamic> json) {
   return _UsersSearchRequest.fromJson(json);
@@ -39,11 +40,17 @@ mixin _$UsersSearchRequest {
 /// @nodoc
 abstract class $UsersSearchRequestCopyWith<$Res> {
   factory $UsersSearchRequestCopyWith(
-          UsersSearchRequest value, $Res Function(UsersSearchRequest) then) =
-      _$UsersSearchRequestCopyWithImpl<$Res, UsersSearchRequest>;
+    UsersSearchRequest value,
+    $Res Function(UsersSearchRequest) then,
+  ) = _$UsersSearchRequestCopyWithImpl<$Res, UsersSearchRequest>;
   @useResult
-  $Res call(
-      {String query, int? offset, int? limit, Origin? origin, bool? detail});
+  $Res call({
+    String query,
+    int? offset,
+    int? limit,
+    Origin? origin,
+    bool? detail,
+  });
 }
 
 /// @nodoc
@@ -67,50 +74,65 @@ class _$UsersSearchRequestCopyWithImpl<$Res, $Val extends UsersSearchRequest>
     Object? origin = freezed,
     Object? detail = freezed,
   }) {
-    return _then(_value.copyWith(
-      query: null == query
-          ? _value.query
-          : query // ignore: cast_nullable_to_non_nullable
-              as String,
-      offset: freezed == offset
-          ? _value.offset
-          : offset // ignore: cast_nullable_to_non_nullable
-              as int?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      origin: freezed == origin
-          ? _value.origin
-          : origin // ignore: cast_nullable_to_non_nullable
-              as Origin?,
-      detail: freezed == detail
-          ? _value.detail
-          : detail // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            query:
+                null == query
+                    ? _value.query
+                    : query // ignore: cast_nullable_to_non_nullable
+                        as String,
+            offset:
+                freezed == offset
+                    ? _value.offset
+                    : offset // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            origin:
+                freezed == origin
+                    ? _value.origin
+                    : origin // ignore: cast_nullable_to_non_nullable
+                        as Origin?,
+            detail:
+                freezed == detail
+                    ? _value.detail
+                    : detail // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$UsersSearchRequestImplCopyWith<$Res>
     implements $UsersSearchRequestCopyWith<$Res> {
-  factory _$$UsersSearchRequestImplCopyWith(_$UsersSearchRequestImpl value,
-          $Res Function(_$UsersSearchRequestImpl) then) =
-      __$$UsersSearchRequestImplCopyWithImpl<$Res>;
+  factory _$$UsersSearchRequestImplCopyWith(
+    _$UsersSearchRequestImpl value,
+    $Res Function(_$UsersSearchRequestImpl) then,
+  ) = __$$UsersSearchRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String query, int? offset, int? limit, Origin? origin, bool? detail});
+  $Res call({
+    String query,
+    int? offset,
+    int? limit,
+    Origin? origin,
+    bool? detail,
+  });
 }
 
 /// @nodoc
 class __$$UsersSearchRequestImplCopyWithImpl<$Res>
     extends _$UsersSearchRequestCopyWithImpl<$Res, _$UsersSearchRequestImpl>
     implements _$$UsersSearchRequestImplCopyWith<$Res> {
-  __$$UsersSearchRequestImplCopyWithImpl(_$UsersSearchRequestImpl _value,
-      $Res Function(_$UsersSearchRequestImpl) _then)
-      : super(_value, _then);
+  __$$UsersSearchRequestImplCopyWithImpl(
+    _$UsersSearchRequestImpl _value,
+    $Res Function(_$UsersSearchRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UsersSearchRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -123,36 +145,48 @@ class __$$UsersSearchRequestImplCopyWithImpl<$Res>
     Object? origin = freezed,
     Object? detail = freezed,
   }) {
-    return _then(_$UsersSearchRequestImpl(
-      query: null == query
-          ? _value.query
-          : query // ignore: cast_nullable_to_non_nullable
-              as String,
-      offset: freezed == offset
-          ? _value.offset
-          : offset // ignore: cast_nullable_to_non_nullable
-              as int?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      origin: freezed == origin
-          ? _value.origin
-          : origin // ignore: cast_nullable_to_non_nullable
-              as Origin?,
-      detail: freezed == detail
-          ? _value.detail
-          : detail // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+    return _then(
+      _$UsersSearchRequestImpl(
+        query:
+            null == query
+                ? _value.query
+                : query // ignore: cast_nullable_to_non_nullable
+                    as String,
+        offset:
+            freezed == offset
+                ? _value.offset
+                : offset // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        origin:
+            freezed == origin
+                ? _value.origin
+                : origin // ignore: cast_nullable_to_non_nullable
+                    as Origin?,
+        detail:
+            freezed == detail
+                ? _value.detail
+                : detail // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$UsersSearchRequestImpl implements _UsersSearchRequest {
-  const _$UsersSearchRequestImpl(
-      {required this.query, this.offset, this.limit, this.origin, this.detail});
+  const _$UsersSearchRequestImpl({
+    required this.query,
+    this.offset,
+    this.limit,
+    this.origin,
+    this.detail,
+  });
 
   factory _$UsersSearchRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$UsersSearchRequestImplFromJson(json);
@@ -197,23 +231,24 @@ class _$UsersSearchRequestImpl implements _UsersSearchRequest {
   @pragma('vm:prefer-inline')
   _$$UsersSearchRequestImplCopyWith<_$UsersSearchRequestImpl> get copyWith =>
       __$$UsersSearchRequestImplCopyWithImpl<_$UsersSearchRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UsersSearchRequestImplToJson(
-      this,
-    );
+    return _$$UsersSearchRequestImplToJson(this);
   }
 }
 
 abstract class _UsersSearchRequest implements UsersSearchRequest {
-  const factory _UsersSearchRequest(
-      {required final String query,
-      final int? offset,
-      final int? limit,
-      final Origin? origin,
-      final bool? detail}) = _$UsersSearchRequestImpl;
+  const factory _UsersSearchRequest({
+    required final String query,
+    final int? offset,
+    final int? limit,
+    final Origin? origin,
+    final bool? detail,
+  }) = _$UsersSearchRequestImpl;
 
   factory _UsersSearchRequest.fromJson(Map<String, dynamic> json) =
       _$UsersSearchRequestImpl.fromJson;

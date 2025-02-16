@@ -12,7 +12,8 @@ part of 'sw_registration.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 SwRegistration _$SwRegistrationFromJson(Map<String, dynamic> json) {
   return _SwRegistration.fromJson(json);
@@ -37,8 +38,9 @@ mixin _$SwRegistration {
 /// @nodoc
 abstract class $SwRegistrationCopyWith<$Res> {
   factory $SwRegistrationCopyWith(
-          SwRegistration value, $Res Function(SwRegistration) then) =
-      _$SwRegistrationCopyWithImpl<$Res, SwRegistration>;
+    SwRegistration value,
+    $Res Function(SwRegistration) then,
+  ) = _$SwRegistrationCopyWithImpl<$Res, SwRegistration>;
   @useResult
   $Res call({String userId, String endpoint, bool sendReadMessage});
 }
@@ -62,29 +64,36 @@ class _$SwRegistrationCopyWithImpl<$Res, $Val extends SwRegistration>
     Object? endpoint = null,
     Object? sendReadMessage = null,
   }) {
-    return _then(_value.copyWith(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      endpoint: null == endpoint
-          ? _value.endpoint
-          : endpoint // ignore: cast_nullable_to_non_nullable
-              as String,
-      sendReadMessage: null == sendReadMessage
-          ? _value.sendReadMessage
-          : sendReadMessage // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            userId:
+                null == userId
+                    ? _value.userId
+                    : userId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            endpoint:
+                null == endpoint
+                    ? _value.endpoint
+                    : endpoint // ignore: cast_nullable_to_non_nullable
+                        as String,
+            sendReadMessage:
+                null == sendReadMessage
+                    ? _value.sendReadMessage
+                    : sendReadMessage // ignore: cast_nullable_to_non_nullable
+                        as bool,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$SwRegistrationImplCopyWith<$Res>
     implements $SwRegistrationCopyWith<$Res> {
-  factory _$$SwRegistrationImplCopyWith(_$SwRegistrationImpl value,
-          $Res Function(_$SwRegistrationImpl) then) =
-      __$$SwRegistrationImplCopyWithImpl<$Res>;
+  factory _$$SwRegistrationImplCopyWith(
+    _$SwRegistrationImpl value,
+    $Res Function(_$SwRegistrationImpl) then,
+  ) = __$$SwRegistrationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String userId, String endpoint, bool sendReadMessage});
@@ -95,8 +104,9 @@ class __$$SwRegistrationImplCopyWithImpl<$Res>
     extends _$SwRegistrationCopyWithImpl<$Res, _$SwRegistrationImpl>
     implements _$$SwRegistrationImplCopyWith<$Res> {
   __$$SwRegistrationImplCopyWithImpl(
-      _$SwRegistrationImpl _value, $Res Function(_$SwRegistrationImpl) _then)
-      : super(_value, _then);
+    _$SwRegistrationImpl _value,
+    $Res Function(_$SwRegistrationImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of SwRegistration
   /// with the given fields replaced by the non-null parameter values.
@@ -107,30 +117,36 @@ class __$$SwRegistrationImplCopyWithImpl<$Res>
     Object? endpoint = null,
     Object? sendReadMessage = null,
   }) {
-    return _then(_$SwRegistrationImpl(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      endpoint: null == endpoint
-          ? _value.endpoint
-          : endpoint // ignore: cast_nullable_to_non_nullable
-              as String,
-      sendReadMessage: null == sendReadMessage
-          ? _value.sendReadMessage
-          : sendReadMessage // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ));
+    return _then(
+      _$SwRegistrationImpl(
+        userId:
+            null == userId
+                ? _value.userId
+                : userId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        endpoint:
+            null == endpoint
+                ? _value.endpoint
+                : endpoint // ignore: cast_nullable_to_non_nullable
+                    as String,
+        sendReadMessage:
+            null == sendReadMessage
+                ? _value.sendReadMessage
+                : sendReadMessage // ignore: cast_nullable_to_non_nullable
+                    as bool,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$SwRegistrationImpl implements _SwRegistration {
-  const _$SwRegistrationImpl(
-      {required this.userId,
-      required this.endpoint,
-      required this.sendReadMessage});
+  const _$SwRegistrationImpl({
+    required this.userId,
+    required this.endpoint,
+    required this.sendReadMessage,
+  });
 
   factory _$SwRegistrationImpl.fromJson(Map<String, dynamic> json) =>
       _$$SwRegistrationImplFromJson(json);
@@ -171,21 +187,22 @@ class _$SwRegistrationImpl implements _SwRegistration {
   @pragma('vm:prefer-inline')
   _$$SwRegistrationImplCopyWith<_$SwRegistrationImpl> get copyWith =>
       __$$SwRegistrationImplCopyWithImpl<_$SwRegistrationImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SwRegistrationImplToJson(
-      this,
-    );
+    return _$$SwRegistrationImplToJson(this);
   }
 }
 
 abstract class _SwRegistration implements SwRegistration {
-  const factory _SwRegistration(
-      {required final String userId,
-      required final String endpoint,
-      required final bool sendReadMessage}) = _$SwRegistrationImpl;
+  const factory _SwRegistration({
+    required final String userId,
+    required final String endpoint,
+    required final bool sendReadMessage,
+  }) = _$SwRegistrationImpl;
 
   factory _SwRegistration.fromJson(Map<String, dynamic> json) =
       _$SwRegistrationImpl.fromJson;

@@ -12,10 +12,12 @@ part of 'federation_users_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 FederationUsersRequest _$FederationUsersRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _FederationUsersRequest.fromJson(json);
 }
 
@@ -38,16 +40,19 @@ mixin _$FederationUsersRequest {
 
 /// @nodoc
 abstract class $FederationUsersRequestCopyWith<$Res> {
-  factory $FederationUsersRequestCopyWith(FederationUsersRequest value,
-          $Res Function(FederationUsersRequest) then) =
-      _$FederationUsersRequestCopyWithImpl<$Res, FederationUsersRequest>;
+  factory $FederationUsersRequestCopyWith(
+    FederationUsersRequest value,
+    $Res Function(FederationUsersRequest) then,
+  ) = _$FederationUsersRequestCopyWithImpl<$Res, FederationUsersRequest>;
   @useResult
   $Res call({String host, String? sinceId, String? untilId, int? limit});
 }
 
 /// @nodoc
-class _$FederationUsersRequestCopyWithImpl<$Res,
-        $Val extends FederationUsersRequest>
+class _$FederationUsersRequestCopyWithImpl<
+  $Res,
+  $Val extends FederationUsersRequest
+>
     implements $FederationUsersRequestCopyWith<$Res> {
   _$FederationUsersRequestCopyWithImpl(this._value, this._then);
 
@@ -66,24 +71,31 @@ class _$FederationUsersRequestCopyWithImpl<$Res,
     Object? untilId = freezed,
     Object? limit = freezed,
   }) {
-    return _then(_value.copyWith(
-      host: null == host
-          ? _value.host
-          : host // ignore: cast_nullable_to_non_nullable
-              as String,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            host:
+                null == host
+                    ? _value.host
+                    : host // ignore: cast_nullable_to_non_nullable
+                        as String,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -91,9 +103,9 @@ class _$FederationUsersRequestCopyWithImpl<$Res,
 abstract class _$$FederationUsersRequestImplCopyWith<$Res>
     implements $FederationUsersRequestCopyWith<$Res> {
   factory _$$FederationUsersRequestImplCopyWith(
-          _$FederationUsersRequestImpl value,
-          $Res Function(_$FederationUsersRequestImpl) then) =
-      __$$FederationUsersRequestImplCopyWithImpl<$Res>;
+    _$FederationUsersRequestImpl value,
+    $Res Function(_$FederationUsersRequestImpl) then,
+  ) = __$$FederationUsersRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String host, String? sinceId, String? untilId, int? limit});
@@ -101,13 +113,13 @@ abstract class _$$FederationUsersRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$FederationUsersRequestImplCopyWithImpl<$Res>
-    extends _$FederationUsersRequestCopyWithImpl<$Res,
-        _$FederationUsersRequestImpl>
+    extends
+        _$FederationUsersRequestCopyWithImpl<$Res, _$FederationUsersRequestImpl>
     implements _$$FederationUsersRequestImplCopyWith<$Res> {
   __$$FederationUsersRequestImplCopyWithImpl(
-      _$FederationUsersRequestImpl _value,
-      $Res Function(_$FederationUsersRequestImpl) _then)
-      : super(_value, _then);
+    _$FederationUsersRequestImpl _value,
+    $Res Function(_$FederationUsersRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of FederationUsersRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -119,32 +131,42 @@ class __$$FederationUsersRequestImplCopyWithImpl<$Res>
     Object? untilId = freezed,
     Object? limit = freezed,
   }) {
-    return _then(_$FederationUsersRequestImpl(
-      host: null == host
-          ? _value.host
-          : host // ignore: cast_nullable_to_non_nullable
-              as String,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ));
+    return _then(
+      _$FederationUsersRequestImpl(
+        host:
+            null == host
+                ? _value.host
+                : host // ignore: cast_nullable_to_non_nullable
+                    as String,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$FederationUsersRequestImpl implements _FederationUsersRequest {
-  const _$FederationUsersRequestImpl(
-      {required this.host, this.sinceId, this.untilId, this.limit});
+  const _$FederationUsersRequestImpl({
+    required this.host,
+    this.sinceId,
+    this.untilId,
+    this.limit,
+  });
 
   factory _$FederationUsersRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$FederationUsersRequestImplFromJson(json);
@@ -184,23 +206,25 @@ class _$FederationUsersRequestImpl implements _FederationUsersRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$FederationUsersRequestImplCopyWith<_$FederationUsersRequestImpl>
-      get copyWith => __$$FederationUsersRequestImplCopyWithImpl<
-          _$FederationUsersRequestImpl>(this, _$identity);
+  get copyWith =>
+      __$$FederationUsersRequestImplCopyWithImpl<_$FederationUsersRequestImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$FederationUsersRequestImplToJson(
-      this,
-    );
+    return _$$FederationUsersRequestImplToJson(this);
   }
 }
 
 abstract class _FederationUsersRequest implements FederationUsersRequest {
-  const factory _FederationUsersRequest(
-      {required final String host,
-      final String? sinceId,
-      final String? untilId,
-      final int? limit}) = _$FederationUsersRequestImpl;
+  const factory _FederationUsersRequest({
+    required final String host,
+    final String? sinceId,
+    final String? untilId,
+    final int? limit,
+  }) = _$FederationUsersRequestImpl;
 
   factory _FederationUsersRequest.fromJson(Map<String, dynamic> json) =
       _$FederationUsersRequestImpl.fromJson;
@@ -219,5 +243,5 @@ abstract class _FederationUsersRequest implements FederationUsersRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FederationUsersRequestImplCopyWith<_$FederationUsersRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

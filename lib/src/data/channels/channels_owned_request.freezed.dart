@@ -12,7 +12,8 @@ part of 'channels_owned_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ChannelsOwnedRequest _$ChannelsOwnedRequestFromJson(Map<String, dynamic> json) {
   return _ChannelsOwnedRequest.fromJson(json);
@@ -36,16 +37,19 @@ mixin _$ChannelsOwnedRequest {
 
 /// @nodoc
 abstract class $ChannelsOwnedRequestCopyWith<$Res> {
-  factory $ChannelsOwnedRequestCopyWith(ChannelsOwnedRequest value,
-          $Res Function(ChannelsOwnedRequest) then) =
-      _$ChannelsOwnedRequestCopyWithImpl<$Res, ChannelsOwnedRequest>;
+  factory $ChannelsOwnedRequestCopyWith(
+    ChannelsOwnedRequest value,
+    $Res Function(ChannelsOwnedRequest) then,
+  ) = _$ChannelsOwnedRequestCopyWithImpl<$Res, ChannelsOwnedRequest>;
   @useResult
   $Res call({String? sinceId, String? untilId, int? limit});
 }
 
 /// @nodoc
-class _$ChannelsOwnedRequestCopyWithImpl<$Res,
-        $Val extends ChannelsOwnedRequest>
+class _$ChannelsOwnedRequestCopyWithImpl<
+  $Res,
+  $Val extends ChannelsOwnedRequest
+>
     implements $ChannelsOwnedRequestCopyWith<$Res> {
   _$ChannelsOwnedRequestCopyWithImpl(this._value, this._then);
 
@@ -63,29 +67,36 @@ class _$ChannelsOwnedRequestCopyWithImpl<$Res,
     Object? untilId = freezed,
     Object? limit = freezed,
   }) {
-    return _then(_value.copyWith(
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$ChannelsOwnedRequestImplCopyWith<$Res>
     implements $ChannelsOwnedRequestCopyWith<$Res> {
-  factory _$$ChannelsOwnedRequestImplCopyWith(_$ChannelsOwnedRequestImpl value,
-          $Res Function(_$ChannelsOwnedRequestImpl) then) =
-      __$$ChannelsOwnedRequestImplCopyWithImpl<$Res>;
+  factory _$$ChannelsOwnedRequestImplCopyWith(
+    _$ChannelsOwnedRequestImpl value,
+    $Res Function(_$ChannelsOwnedRequestImpl) then,
+  ) = __$$ChannelsOwnedRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? sinceId, String? untilId, int? limit});
@@ -95,9 +106,10 @@ abstract class _$$ChannelsOwnedRequestImplCopyWith<$Res>
 class __$$ChannelsOwnedRequestImplCopyWithImpl<$Res>
     extends _$ChannelsOwnedRequestCopyWithImpl<$Res, _$ChannelsOwnedRequestImpl>
     implements _$$ChannelsOwnedRequestImplCopyWith<$Res> {
-  __$$ChannelsOwnedRequestImplCopyWithImpl(_$ChannelsOwnedRequestImpl _value,
-      $Res Function(_$ChannelsOwnedRequestImpl) _then)
-      : super(_value, _then);
+  __$$ChannelsOwnedRequestImplCopyWithImpl(
+    _$ChannelsOwnedRequestImpl _value,
+    $Res Function(_$ChannelsOwnedRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelsOwnedRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -108,20 +120,25 @@ class __$$ChannelsOwnedRequestImplCopyWithImpl<$Res>
     Object? untilId = freezed,
     Object? limit = freezed,
   }) {
-    return _then(_$ChannelsOwnedRequestImpl(
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ));
+    return _then(
+      _$ChannelsOwnedRequestImpl(
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+      ),
+    );
   }
 }
 
@@ -165,23 +182,24 @@ class _$ChannelsOwnedRequestImpl implements _ChannelsOwnedRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$ChannelsOwnedRequestImplCopyWith<_$ChannelsOwnedRequestImpl>
-      get copyWith =>
-          __$$ChannelsOwnedRequestImplCopyWithImpl<_$ChannelsOwnedRequestImpl>(
-              this, _$identity);
+  get copyWith =>
+      __$$ChannelsOwnedRequestImplCopyWithImpl<_$ChannelsOwnedRequestImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ChannelsOwnedRequestImplToJson(
-      this,
-    );
+    return _$$ChannelsOwnedRequestImplToJson(this);
   }
 }
 
 abstract class _ChannelsOwnedRequest implements ChannelsOwnedRequest {
-  const factory _ChannelsOwnedRequest(
-      {final String? sinceId,
-      final String? untilId,
-      final int? limit}) = _$ChannelsOwnedRequestImpl;
+  const factory _ChannelsOwnedRequest({
+    final String? sinceId,
+    final String? untilId,
+    final int? limit,
+  }) = _$ChannelsOwnedRequestImpl;
 
   factory _ChannelsOwnedRequest.fromJson(Map<String, dynamic> json) =
       _$ChannelsOwnedRequestImpl.fromJson;
@@ -198,5 +216,5 @@ abstract class _ChannelsOwnedRequest implements ChannelsOwnedRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ChannelsOwnedRequestImplCopyWith<_$ChannelsOwnedRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

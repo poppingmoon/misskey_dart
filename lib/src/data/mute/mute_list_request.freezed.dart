@@ -12,7 +12,8 @@ part of 'mute_list_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 MuteListRequest _$MuteListRequestFromJson(Map<String, dynamic> json) {
   return _MuteListRequest.fromJson(json);
@@ -37,8 +38,9 @@ mixin _$MuteListRequest {
 /// @nodoc
 abstract class $MuteListRequestCopyWith<$Res> {
   factory $MuteListRequestCopyWith(
-          MuteListRequest value, $Res Function(MuteListRequest) then) =
-      _$MuteListRequestCopyWithImpl<$Res, MuteListRequest>;
+    MuteListRequest value,
+    $Res Function(MuteListRequest) then,
+  ) = _$MuteListRequestCopyWithImpl<$Res, MuteListRequest>;
   @useResult
   $Res call({int? limit, String? sinceId, String? untilId});
 }
@@ -62,29 +64,36 @@ class _$MuteListRequestCopyWithImpl<$Res, $Val extends MuteListRequest>
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_value.copyWith(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$MuteListRequestImplCopyWith<$Res>
     implements $MuteListRequestCopyWith<$Res> {
-  factory _$$MuteListRequestImplCopyWith(_$MuteListRequestImpl value,
-          $Res Function(_$MuteListRequestImpl) then) =
-      __$$MuteListRequestImplCopyWithImpl<$Res>;
+  factory _$$MuteListRequestImplCopyWith(
+    _$MuteListRequestImpl value,
+    $Res Function(_$MuteListRequestImpl) then,
+  ) = __$$MuteListRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? limit, String? sinceId, String? untilId});
@@ -95,8 +104,9 @@ class __$$MuteListRequestImplCopyWithImpl<$Res>
     extends _$MuteListRequestCopyWithImpl<$Res, _$MuteListRequestImpl>
     implements _$$MuteListRequestImplCopyWith<$Res> {
   __$$MuteListRequestImplCopyWithImpl(
-      _$MuteListRequestImpl _value, $Res Function(_$MuteListRequestImpl) _then)
-      : super(_value, _then);
+    _$MuteListRequestImpl _value,
+    $Res Function(_$MuteListRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of MuteListRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -107,20 +117,25 @@ class __$$MuteListRequestImplCopyWithImpl<$Res>
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_$MuteListRequestImpl(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$MuteListRequestImpl(
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -165,21 +180,22 @@ class _$MuteListRequestImpl implements _MuteListRequest {
   @pragma('vm:prefer-inline')
   _$$MuteListRequestImplCopyWith<_$MuteListRequestImpl> get copyWith =>
       __$$MuteListRequestImplCopyWithImpl<_$MuteListRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MuteListRequestImplToJson(
-      this,
-    );
+    return _$$MuteListRequestImplToJson(this);
   }
 }
 
 abstract class _MuteListRequest implements MuteListRequest {
-  const factory _MuteListRequest(
-      {final int? limit,
-      final String? sinceId,
-      final String? untilId}) = _$MuteListRequestImpl;
+  const factory _MuteListRequest({
+    final int? limit,
+    final String? sinceId,
+    final String? untilId,
+  }) = _$MuteListRequestImpl;
 
   factory _MuteListRequest.fromJson(Map<String, dynamic> json) =
       _$MuteListRequestImpl.fromJson;

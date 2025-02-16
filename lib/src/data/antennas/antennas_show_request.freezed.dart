@@ -12,7 +12,8 @@ part of 'antennas_show_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 AntennasShowRequest _$AntennasShowRequestFromJson(Map<String, dynamic> json) {
   return _AntennasShowRequest.fromJson(json);
@@ -35,8 +36,9 @@ mixin _$AntennasShowRequest {
 /// @nodoc
 abstract class $AntennasShowRequestCopyWith<$Res> {
   factory $AntennasShowRequestCopyWith(
-          AntennasShowRequest value, $Res Function(AntennasShowRequest) then) =
-      _$AntennasShowRequestCopyWithImpl<$Res, AntennasShowRequest>;
+    AntennasShowRequest value,
+    $Res Function(AntennasShowRequest) then,
+  ) = _$AntennasShowRequestCopyWithImpl<$Res, AntennasShowRequest>;
   @useResult
   $Res call({String antennaId});
 }
@@ -55,24 +57,27 @@ class _$AntennasShowRequestCopyWithImpl<$Res, $Val extends AntennasShowRequest>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? antennaId = null,
-  }) {
-    return _then(_value.copyWith(
-      antennaId: null == antennaId
-          ? _value.antennaId
-          : antennaId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? antennaId = null}) {
+    return _then(
+      _value.copyWith(
+            antennaId:
+                null == antennaId
+                    ? _value.antennaId
+                    : antennaId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$AntennasShowRequestImplCopyWith<$Res>
     implements $AntennasShowRequestCopyWith<$Res> {
-  factory _$$AntennasShowRequestImplCopyWith(_$AntennasShowRequestImpl value,
-          $Res Function(_$AntennasShowRequestImpl) then) =
-      __$$AntennasShowRequestImplCopyWithImpl<$Res>;
+  factory _$$AntennasShowRequestImplCopyWith(
+    _$AntennasShowRequestImpl value,
+    $Res Function(_$AntennasShowRequestImpl) then,
+  ) = __$$AntennasShowRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String antennaId});
@@ -82,23 +87,25 @@ abstract class _$$AntennasShowRequestImplCopyWith<$Res>
 class __$$AntennasShowRequestImplCopyWithImpl<$Res>
     extends _$AntennasShowRequestCopyWithImpl<$Res, _$AntennasShowRequestImpl>
     implements _$$AntennasShowRequestImplCopyWith<$Res> {
-  __$$AntennasShowRequestImplCopyWithImpl(_$AntennasShowRequestImpl _value,
-      $Res Function(_$AntennasShowRequestImpl) _then)
-      : super(_value, _then);
+  __$$AntennasShowRequestImplCopyWithImpl(
+    _$AntennasShowRequestImpl _value,
+    $Res Function(_$AntennasShowRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of AntennasShowRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? antennaId = null,
-  }) {
-    return _then(_$AntennasShowRequestImpl(
-      antennaId: null == antennaId
-          ? _value.antennaId
-          : antennaId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? antennaId = null}) {
+    return _then(
+      _$AntennasShowRequestImpl(
+        antennaId:
+            null == antennaId
+                ? _value.antennaId
+                : antennaId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -138,13 +145,13 @@ class _$AntennasShowRequestImpl implements _AntennasShowRequest {
   @pragma('vm:prefer-inline')
   _$$AntennasShowRequestImplCopyWith<_$AntennasShowRequestImpl> get copyWith =>
       __$$AntennasShowRequestImplCopyWithImpl<_$AntennasShowRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AntennasShowRequestImplToJson(
-      this,
-    );
+    return _$$AntennasShowRequestImplToJson(this);
   }
 }
 

@@ -12,7 +12,8 @@ part of 'clips_notes_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ClipsNotesRequest _$ClipsNotesRequestFromJson(Map<String, dynamic> json) {
   return _ClipsNotesRequest.fromJson(json);
@@ -39,14 +40,16 @@ mixin _$ClipsNotesRequest {
 /// @nodoc
 abstract class $ClipsNotesRequestCopyWith<$Res> {
   factory $ClipsNotesRequestCopyWith(
-          ClipsNotesRequest value, $Res Function(ClipsNotesRequest) then) =
-      _$ClipsNotesRequestCopyWithImpl<$Res, ClipsNotesRequest>;
+    ClipsNotesRequest value,
+    $Res Function(ClipsNotesRequest) then,
+  ) = _$ClipsNotesRequestCopyWithImpl<$Res, ClipsNotesRequest>;
   @useResult
-  $Res call(
-      {@Assert('limit > 0') int? limit,
-      String clipId,
-      String? sinceId,
-      String? untilId});
+  $Res call({
+    @Assert('limit > 0') int? limit,
+    String clipId,
+    String? sinceId,
+    String? untilId,
+  });
 }
 
 /// @nodoc
@@ -69,49 +72,59 @@ class _$ClipsNotesRequestCopyWithImpl<$Res, $Val extends ClipsNotesRequest>
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_value.copyWith(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      clipId: null == clipId
-          ? _value.clipId
-          : clipId // ignore: cast_nullable_to_non_nullable
-              as String,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            clipId:
+                null == clipId
+                    ? _value.clipId
+                    : clipId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$ClipsNotesRequestImplCopyWith<$Res>
     implements $ClipsNotesRequestCopyWith<$Res> {
-  factory _$$ClipsNotesRequestImplCopyWith(_$ClipsNotesRequestImpl value,
-          $Res Function(_$ClipsNotesRequestImpl) then) =
-      __$$ClipsNotesRequestImplCopyWithImpl<$Res>;
+  factory _$$ClipsNotesRequestImplCopyWith(
+    _$ClipsNotesRequestImpl value,
+    $Res Function(_$ClipsNotesRequestImpl) then,
+  ) = __$$ClipsNotesRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {@Assert('limit > 0') int? limit,
-      String clipId,
-      String? sinceId,
-      String? untilId});
+  $Res call({
+    @Assert('limit > 0') int? limit,
+    String clipId,
+    String? sinceId,
+    String? untilId,
+  });
 }
 
 /// @nodoc
 class __$$ClipsNotesRequestImplCopyWithImpl<$Res>
     extends _$ClipsNotesRequestCopyWithImpl<$Res, _$ClipsNotesRequestImpl>
     implements _$$ClipsNotesRequestImplCopyWith<$Res> {
-  __$$ClipsNotesRequestImplCopyWithImpl(_$ClipsNotesRequestImpl _value,
-      $Res Function(_$ClipsNotesRequestImpl) _then)
-      : super(_value, _then);
+  __$$ClipsNotesRequestImplCopyWithImpl(
+    _$ClipsNotesRequestImpl _value,
+    $Res Function(_$ClipsNotesRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ClipsNotesRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -123,35 +136,42 @@ class __$$ClipsNotesRequestImplCopyWithImpl<$Res>
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_$ClipsNotesRequestImpl(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      clipId: null == clipId
-          ? _value.clipId
-          : clipId // ignore: cast_nullable_to_non_nullable
-              as String,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$ClipsNotesRequestImpl(
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        clipId:
+            null == clipId
+                ? _value.clipId
+                : clipId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ClipsNotesRequestImpl implements _ClipsNotesRequest {
-  const _$ClipsNotesRequestImpl(
-      {@Assert('limit > 0') this.limit,
-      required this.clipId,
-      this.sinceId,
-      this.untilId});
+  const _$ClipsNotesRequestImpl({
+    @Assert('limit > 0') this.limit,
+    required this.clipId,
+    this.sinceId,
+    this.untilId,
+  });
 
   factory _$ClipsNotesRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$ClipsNotesRequestImplFromJson(json);
@@ -193,22 +213,23 @@ class _$ClipsNotesRequestImpl implements _ClipsNotesRequest {
   @pragma('vm:prefer-inline')
   _$$ClipsNotesRequestImplCopyWith<_$ClipsNotesRequestImpl> get copyWith =>
       __$$ClipsNotesRequestImplCopyWithImpl<_$ClipsNotesRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ClipsNotesRequestImplToJson(
-      this,
-    );
+    return _$$ClipsNotesRequestImplToJson(this);
   }
 }
 
 abstract class _ClipsNotesRequest implements ClipsNotesRequest {
-  const factory _ClipsNotesRequest(
-      {@Assert('limit > 0') final int? limit,
-      required final String clipId,
-      final String? sinceId,
-      final String? untilId}) = _$ClipsNotesRequestImpl;
+  const factory _ClipsNotesRequest({
+    @Assert('limit > 0') final int? limit,
+    required final String clipId,
+    final String? sinceId,
+    final String? untilId,
+  }) = _$ClipsNotesRequestImpl;
 
   factory _ClipsNotesRequest.fromJson(Map<String, dynamic> json) =
       _$ClipsNotesRequestImpl.fromJson;

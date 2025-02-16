@@ -12,7 +12,8 @@ part of 'following.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 Following _$FollowingFromJson(Map<String, dynamic> json) {
   return _Following.fromJson(json);
@@ -28,8 +29,8 @@ mixin _$Following {
 
   /// 以下のエンドポイントでnon-null
   ///
-// - [MisskeyFederation.followers]
-// - [MisskeyFederation.following]
+  // - [MisskeyFederation.followers]
+  // - [MisskeyFederation.following]
   /// - [MisskeyUsers.following]
   UserDetailed? get followee => throw _privateConstructorUsedError;
 
@@ -53,13 +54,14 @@ abstract class $FollowingCopyWith<$Res> {
   factory $FollowingCopyWith(Following value, $Res Function(Following) then) =
       _$FollowingCopyWithImpl<$Res, Following>;
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime createdAt,
-      String followeeId,
-      String followerId,
-      UserDetailed? followee,
-      UserDetailed? follower});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime createdAt,
+    String followeeId,
+    String followerId,
+    UserDetailed? followee,
+    UserDetailed? follower,
+  });
 }
 
 /// @nodoc
@@ -84,32 +86,41 @@ class _$FollowingCopyWithImpl<$Res, $Val extends Following>
     Object? followee = freezed,
     Object? follower = freezed,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      followeeId: null == followeeId
-          ? _value.followeeId
-          : followeeId // ignore: cast_nullable_to_non_nullable
-              as String,
-      followerId: null == followerId
-          ? _value.followerId
-          : followerId // ignore: cast_nullable_to_non_nullable
-              as String,
-      followee: freezed == followee
-          ? _value.followee
-          : followee // ignore: cast_nullable_to_non_nullable
-              as UserDetailed?,
-      follower: freezed == follower
-          ? _value.follower
-          : follower // ignore: cast_nullable_to_non_nullable
-              as UserDetailed?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            createdAt:
+                null == createdAt
+                    ? _value.createdAt
+                    : createdAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            followeeId:
+                null == followeeId
+                    ? _value.followeeId
+                    : followeeId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            followerId:
+                null == followerId
+                    ? _value.followerId
+                    : followerId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            followee:
+                freezed == followee
+                    ? _value.followee
+                    : followee // ignore: cast_nullable_to_non_nullable
+                        as UserDetailed?,
+            follower:
+                freezed == follower
+                    ? _value.follower
+                    : follower // ignore: cast_nullable_to_non_nullable
+                        as UserDetailed?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -117,17 +128,19 @@ class _$FollowingCopyWithImpl<$Res, $Val extends Following>
 abstract class _$$FollowingImplCopyWith<$Res>
     implements $FollowingCopyWith<$Res> {
   factory _$$FollowingImplCopyWith(
-          _$FollowingImpl value, $Res Function(_$FollowingImpl) then) =
-      __$$FollowingImplCopyWithImpl<$Res>;
+    _$FollowingImpl value,
+    $Res Function(_$FollowingImpl) then,
+  ) = __$$FollowingImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime createdAt,
-      String followeeId,
-      String followerId,
-      UserDetailed? followee,
-      UserDetailed? follower});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime createdAt,
+    String followeeId,
+    String followerId,
+    UserDetailed? followee,
+    UserDetailed? follower,
+  });
 }
 
 /// @nodoc
@@ -135,8 +148,9 @@ class __$$FollowingImplCopyWithImpl<$Res>
     extends _$FollowingCopyWithImpl<$Res, _$FollowingImpl>
     implements _$$FollowingImplCopyWith<$Res> {
   __$$FollowingImplCopyWithImpl(
-      _$FollowingImpl _value, $Res Function(_$FollowingImpl) _then)
-      : super(_value, _then);
+    _$FollowingImpl _value,
+    $Res Function(_$FollowingImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of Following
   /// with the given fields replaced by the non-null parameter values.
@@ -150,45 +164,54 @@ class __$$FollowingImplCopyWithImpl<$Res>
     Object? followee = freezed,
     Object? follower = freezed,
   }) {
-    return _then(_$FollowingImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      followeeId: null == followeeId
-          ? _value.followeeId
-          : followeeId // ignore: cast_nullable_to_non_nullable
-              as String,
-      followerId: null == followerId
-          ? _value.followerId
-          : followerId // ignore: cast_nullable_to_non_nullable
-              as String,
-      followee: freezed == followee
-          ? _value.followee
-          : followee // ignore: cast_nullable_to_non_nullable
-              as UserDetailed?,
-      follower: freezed == follower
-          ? _value.follower
-          : follower // ignore: cast_nullable_to_non_nullable
-              as UserDetailed?,
-    ));
+    return _then(
+      _$FollowingImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        createdAt:
+            null == createdAt
+                ? _value.createdAt
+                : createdAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        followeeId:
+            null == followeeId
+                ? _value.followeeId
+                : followeeId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        followerId:
+            null == followerId
+                ? _value.followerId
+                : followerId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        followee:
+            freezed == followee
+                ? _value.followee
+                : followee // ignore: cast_nullable_to_non_nullable
+                    as UserDetailed?,
+        follower:
+            freezed == follower
+                ? _value.follower
+                : follower // ignore: cast_nullable_to_non_nullable
+                    as UserDetailed?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$FollowingImpl implements _Following {
-  const _$FollowingImpl(
-      {required this.id,
-      @DateTimeConverter() required this.createdAt,
-      required this.followeeId,
-      required this.followerId,
-      this.followee,
-      this.follower});
+  const _$FollowingImpl({
+    required this.id,
+    @DateTimeConverter() required this.createdAt,
+    required this.followeeId,
+    required this.followerId,
+    this.followee,
+    this.follower,
+  });
 
   factory _$FollowingImpl.fromJson(Map<String, dynamic> json) =>
       _$$FollowingImplFromJson(json);
@@ -205,8 +228,8 @@ class _$FollowingImpl implements _Following {
 
   /// 以下のエンドポイントでnon-null
   ///
-// - [MisskeyFederation.followers]
-// - [MisskeyFederation.following]
+  // - [MisskeyFederation.followers]
+  // - [MisskeyFederation.following]
   /// - [MisskeyUsers.following]
   @override
   final UserDetailed? followee;
@@ -243,7 +266,14 @@ class _$FollowingImpl implements _Following {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType, id, createdAt, followeeId, followerId, followee, follower);
+    runtimeType,
+    id,
+    createdAt,
+    followeeId,
+    followerId,
+    followee,
+    follower,
+  );
 
   /// Create a copy of Following
   /// with the given fields replaced by the non-null parameter values.
@@ -255,20 +285,19 @@ class _$FollowingImpl implements _Following {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$FollowingImplToJson(
-      this,
-    );
+    return _$$FollowingImplToJson(this);
   }
 }
 
 abstract class _Following implements Following {
-  const factory _Following(
-      {required final String id,
-      @DateTimeConverter() required final DateTime createdAt,
-      required final String followeeId,
-      required final String followerId,
-      final UserDetailed? followee,
-      final UserDetailed? follower}) = _$FollowingImpl;
+  const factory _Following({
+    required final String id,
+    @DateTimeConverter() required final DateTime createdAt,
+    required final String followeeId,
+    required final String followerId,
+    final UserDetailed? followee,
+    final UserDetailed? follower,
+  }) = _$FollowingImpl;
 
   factory _Following.fromJson(Map<String, dynamic> json) =
       _$FollowingImpl.fromJson;
@@ -285,8 +314,8 @@ abstract class _Following implements Following {
 
   /// 以下のエンドポイントでnon-null
   ///
-// - [MisskeyFederation.followers]
-// - [MisskeyFederation.following]
+  // - [MisskeyFederation.followers]
+  // - [MisskeyFederation.following]
   /// - [MisskeyUsers.following]
   @override
   UserDetailed? get followee;

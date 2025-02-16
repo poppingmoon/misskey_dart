@@ -12,11 +12,11 @@ part of 'users_get_frequently_replied_users_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 UsersGetFrequentlyRepliedUsersResponse
-    _$UsersGetFrequentlyRepliedUsersResponseFromJson(
-        Map<String, dynamic> json) {
+_$UsersGetFrequentlyRepliedUsersResponseFromJson(Map<String, dynamic> json) {
   return _UsersGetFrequentlyRepliedUsersResponse.fromJson(json);
 }
 
@@ -32,24 +32,30 @@ mixin _$UsersGetFrequentlyRepliedUsersResponse {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $UsersGetFrequentlyRepliedUsersResponseCopyWith<
-          UsersGetFrequentlyRepliedUsersResponse>
-      get copyWith => throw _privateConstructorUsedError;
+    UsersGetFrequentlyRepliedUsersResponse
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $UsersGetFrequentlyRepliedUsersResponseCopyWith<$Res> {
   factory $UsersGetFrequentlyRepliedUsersResponseCopyWith(
-          UsersGetFrequentlyRepliedUsersResponse value,
-          $Res Function(UsersGetFrequentlyRepliedUsersResponse) then) =
-      _$UsersGetFrequentlyRepliedUsersResponseCopyWithImpl<$Res,
-          UsersGetFrequentlyRepliedUsersResponse>;
+    UsersGetFrequentlyRepliedUsersResponse value,
+    $Res Function(UsersGetFrequentlyRepliedUsersResponse) then,
+  ) =
+      _$UsersGetFrequentlyRepliedUsersResponseCopyWithImpl<
+        $Res,
+        UsersGetFrequentlyRepliedUsersResponse
+      >;
   @useResult
   $Res call({User user, double weight});
 }
 
 /// @nodoc
-class _$UsersGetFrequentlyRepliedUsersResponseCopyWithImpl<$Res,
-        $Val extends UsersGetFrequentlyRepliedUsersResponse>
+class _$UsersGetFrequentlyRepliedUsersResponseCopyWithImpl<
+  $Res,
+  $Val extends UsersGetFrequentlyRepliedUsersResponse
+>
     implements $UsersGetFrequentlyRepliedUsersResponseCopyWith<$Res> {
   _$UsersGetFrequentlyRepliedUsersResponseCopyWithImpl(this._value, this._then);
 
@@ -62,20 +68,22 @@ class _$UsersGetFrequentlyRepliedUsersResponseCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? user = null,
-    Object? weight = null,
-  }) {
-    return _then(_value.copyWith(
-      user: null == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as User,
-      weight: null == weight
-          ? _value.weight
-          : weight // ignore: cast_nullable_to_non_nullable
-              as double,
-    ) as $Val);
+  $Res call({Object? user = null, Object? weight = null}) {
+    return _then(
+      _value.copyWith(
+            user:
+                null == user
+                    ? _value.user
+                    : user // ignore: cast_nullable_to_non_nullable
+                        as User,
+            weight:
+                null == weight
+                    ? _value.weight
+                    : weight // ignore: cast_nullable_to_non_nullable
+                        as double,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -83,9 +91,9 @@ class _$UsersGetFrequentlyRepliedUsersResponseCopyWithImpl<$Res,
 abstract class _$$UsersGetFrequentlyRepliedUsersResponseImplCopyWith<$Res>
     implements $UsersGetFrequentlyRepliedUsersResponseCopyWith<$Res> {
   factory _$$UsersGetFrequentlyRepliedUsersResponseImplCopyWith(
-          _$UsersGetFrequentlyRepliedUsersResponseImpl value,
-          $Res Function(_$UsersGetFrequentlyRepliedUsersResponseImpl) then) =
-      __$$UsersGetFrequentlyRepliedUsersResponseImplCopyWithImpl<$Res>;
+    _$UsersGetFrequentlyRepliedUsersResponseImpl value,
+    $Res Function(_$UsersGetFrequentlyRepliedUsersResponseImpl) then,
+  ) = __$$UsersGetFrequentlyRepliedUsersResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({User user, double weight});
@@ -93,32 +101,36 @@ abstract class _$$UsersGetFrequentlyRepliedUsersResponseImplCopyWith<$Res>
 
 /// @nodoc
 class __$$UsersGetFrequentlyRepliedUsersResponseImplCopyWithImpl<$Res>
-    extends _$UsersGetFrequentlyRepliedUsersResponseCopyWithImpl<$Res,
-        _$UsersGetFrequentlyRepliedUsersResponseImpl>
+    extends
+        _$UsersGetFrequentlyRepliedUsersResponseCopyWithImpl<
+          $Res,
+          _$UsersGetFrequentlyRepliedUsersResponseImpl
+        >
     implements _$$UsersGetFrequentlyRepliedUsersResponseImplCopyWith<$Res> {
   __$$UsersGetFrequentlyRepliedUsersResponseImplCopyWithImpl(
-      _$UsersGetFrequentlyRepliedUsersResponseImpl _value,
-      $Res Function(_$UsersGetFrequentlyRepliedUsersResponseImpl) _then)
-      : super(_value, _then);
+    _$UsersGetFrequentlyRepliedUsersResponseImpl _value,
+    $Res Function(_$UsersGetFrequentlyRepliedUsersResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UsersGetFrequentlyRepliedUsersResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? user = null,
-    Object? weight = null,
-  }) {
-    return _then(_$UsersGetFrequentlyRepliedUsersResponseImpl(
-      user: null == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as User,
-      weight: null == weight
-          ? _value.weight
-          : weight // ignore: cast_nullable_to_non_nullable
-              as double,
-    ));
+  $Res call({Object? user = null, Object? weight = null}) {
+    return _then(
+      _$UsersGetFrequentlyRepliedUsersResponseImpl(
+        user:
+            null == user
+                ? _value.user
+                : user // ignore: cast_nullable_to_non_nullable
+                    as User,
+        weight:
+            null == weight
+                ? _value.weight
+                : weight // ignore: cast_nullable_to_non_nullable
+                    as double,
+      ),
+    );
   }
 }
 
@@ -126,12 +138,14 @@ class __$$UsersGetFrequentlyRepliedUsersResponseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$UsersGetFrequentlyRepliedUsersResponseImpl
     implements _UsersGetFrequentlyRepliedUsersResponse {
-  const _$UsersGetFrequentlyRepliedUsersResponseImpl(
-      {required this.user, required this.weight});
+  const _$UsersGetFrequentlyRepliedUsersResponseImpl({
+    required this.user,
+    required this.weight,
+  });
 
   factory _$UsersGetFrequentlyRepliedUsersResponseImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$UsersGetFrequentlyRepliedUsersResponseImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$UsersGetFrequentlyRepliedUsersResponseImplFromJson(json);
 
   @override
   final User user;
@@ -162,28 +176,28 @@ class _$UsersGetFrequentlyRepliedUsersResponseImpl
   @override
   @pragma('vm:prefer-inline')
   _$$UsersGetFrequentlyRepliedUsersResponseImplCopyWith<
-          _$UsersGetFrequentlyRepliedUsersResponseImpl>
-      get copyWith =>
-          __$$UsersGetFrequentlyRepliedUsersResponseImplCopyWithImpl<
-              _$UsersGetFrequentlyRepliedUsersResponseImpl>(this, _$identity);
+    _$UsersGetFrequentlyRepliedUsersResponseImpl
+  >
+  get copyWith => __$$UsersGetFrequentlyRepliedUsersResponseImplCopyWithImpl<
+    _$UsersGetFrequentlyRepliedUsersResponseImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UsersGetFrequentlyRepliedUsersResponseImplToJson(
-      this,
-    );
+    return _$$UsersGetFrequentlyRepliedUsersResponseImplToJson(this);
   }
 }
 
 abstract class _UsersGetFrequentlyRepliedUsersResponse
     implements UsersGetFrequentlyRepliedUsersResponse {
-  const factory _UsersGetFrequentlyRepliedUsersResponse(
-          {required final User user, required final double weight}) =
-      _$UsersGetFrequentlyRepliedUsersResponseImpl;
+  const factory _UsersGetFrequentlyRepliedUsersResponse({
+    required final User user,
+    required final double weight,
+  }) = _$UsersGetFrequentlyRepliedUsersResponseImpl;
 
   factory _UsersGetFrequentlyRepliedUsersResponse.fromJson(
-          Map<String, dynamic> json) =
-      _$UsersGetFrequentlyRepliedUsersResponseImpl.fromJson;
+    Map<String, dynamic> json,
+  ) = _$UsersGetFrequentlyRepliedUsersResponseImpl.fromJson;
 
   @override
   User get user;
@@ -195,6 +209,7 @@ abstract class _UsersGetFrequentlyRepliedUsersResponse
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersGetFrequentlyRepliedUsersResponseImplCopyWith<
-          _$UsersGetFrequentlyRepliedUsersResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$UsersGetFrequentlyRepliedUsersResponseImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }

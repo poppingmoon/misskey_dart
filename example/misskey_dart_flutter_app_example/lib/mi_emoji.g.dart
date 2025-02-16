@@ -18,7 +18,7 @@ final emojisProvider = AutoDisposeFutureProvider<List<Emoji>>.internal(
   dependencies: <ProviderOrFamily>[hostProvider],
   allTransitiveDependencies: <ProviderOrFamily>{
     hostProvider,
-    ...?hostProvider.allTransitiveDependencies
+    ...?hostProvider.allTransitiveDependencies,
   },
 );
 

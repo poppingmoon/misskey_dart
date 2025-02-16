@@ -12,10 +12,12 @@ part of 'hybrid_timeline_parameter.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 HybridTimelineParameter _$HybridTimelineParameterFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _HybridTimelineParameter.fromJson(json);
 }
 
@@ -37,16 +39,19 @@ mixin _$HybridTimelineParameter {
 
 /// @nodoc
 abstract class $HybridTimelineParameterCopyWith<$Res> {
-  factory $HybridTimelineParameterCopyWith(HybridTimelineParameter value,
-          $Res Function(HybridTimelineParameter) then) =
-      _$HybridTimelineParameterCopyWithImpl<$Res, HybridTimelineParameter>;
+  factory $HybridTimelineParameterCopyWith(
+    HybridTimelineParameter value,
+    $Res Function(HybridTimelineParameter) then,
+  ) = _$HybridTimelineParameterCopyWithImpl<$Res, HybridTimelineParameter>;
   @useResult
   $Res call({bool? withRenotes, bool? withReplies, bool? withFiles});
 }
 
 /// @nodoc
-class _$HybridTimelineParameterCopyWithImpl<$Res,
-        $Val extends HybridTimelineParameter>
+class _$HybridTimelineParameterCopyWithImpl<
+  $Res,
+  $Val extends HybridTimelineParameter
+>
     implements $HybridTimelineParameterCopyWith<$Res> {
   _$HybridTimelineParameterCopyWithImpl(this._value, this._then);
 
@@ -64,20 +69,26 @@ class _$HybridTimelineParameterCopyWithImpl<$Res,
     Object? withReplies = freezed,
     Object? withFiles = freezed,
   }) {
-    return _then(_value.copyWith(
-      withRenotes: freezed == withRenotes
-          ? _value.withRenotes
-          : withRenotes // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withReplies: freezed == withReplies
-          ? _value.withReplies
-          : withReplies // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withFiles: freezed == withFiles
-          ? _value.withFiles
-          : withFiles // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            withRenotes:
+                freezed == withRenotes
+                    ? _value.withRenotes
+                    : withRenotes // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            withReplies:
+                freezed == withReplies
+                    ? _value.withReplies
+                    : withReplies // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            withFiles:
+                freezed == withFiles
+                    ? _value.withFiles
+                    : withFiles // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -85,9 +96,9 @@ class _$HybridTimelineParameterCopyWithImpl<$Res,
 abstract class _$$HybridTimelineParameterImplCopyWith<$Res>
     implements $HybridTimelineParameterCopyWith<$Res> {
   factory _$$HybridTimelineParameterImplCopyWith(
-          _$HybridTimelineParameterImpl value,
-          $Res Function(_$HybridTimelineParameterImpl) then) =
-      __$$HybridTimelineParameterImplCopyWithImpl<$Res>;
+    _$HybridTimelineParameterImpl value,
+    $Res Function(_$HybridTimelineParameterImpl) then,
+  ) = __$$HybridTimelineParameterImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({bool? withRenotes, bool? withReplies, bool? withFiles});
@@ -95,13 +106,16 @@ abstract class _$$HybridTimelineParameterImplCopyWith<$Res>
 
 /// @nodoc
 class __$$HybridTimelineParameterImplCopyWithImpl<$Res>
-    extends _$HybridTimelineParameterCopyWithImpl<$Res,
-        _$HybridTimelineParameterImpl>
+    extends
+        _$HybridTimelineParameterCopyWithImpl<
+          $Res,
+          _$HybridTimelineParameterImpl
+        >
     implements _$$HybridTimelineParameterImplCopyWith<$Res> {
   __$$HybridTimelineParameterImplCopyWithImpl(
-      _$HybridTimelineParameterImpl _value,
-      $Res Function(_$HybridTimelineParameterImpl) _then)
-      : super(_value, _then);
+    _$HybridTimelineParameterImpl _value,
+    $Res Function(_$HybridTimelineParameterImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of HybridTimelineParameter
   /// with the given fields replaced by the non-null parameter values.
@@ -112,28 +126,36 @@ class __$$HybridTimelineParameterImplCopyWithImpl<$Res>
     Object? withReplies = freezed,
     Object? withFiles = freezed,
   }) {
-    return _then(_$HybridTimelineParameterImpl(
-      withRenotes: freezed == withRenotes
-          ? _value.withRenotes
-          : withRenotes // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withReplies: freezed == withReplies
-          ? _value.withReplies
-          : withReplies // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withFiles: freezed == withFiles
-          ? _value.withFiles
-          : withFiles // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+    return _then(
+      _$HybridTimelineParameterImpl(
+        withRenotes:
+            freezed == withRenotes
+                ? _value.withRenotes
+                : withRenotes // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        withReplies:
+            freezed == withReplies
+                ? _value.withReplies
+                : withReplies // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        withFiles:
+            freezed == withFiles
+                ? _value.withFiles
+                : withFiles // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$HybridTimelineParameterImpl implements _HybridTimelineParameter {
-  const _$HybridTimelineParameterImpl(
-      {this.withRenotes, this.withReplies, this.withFiles});
+  const _$HybridTimelineParameterImpl({
+    this.withRenotes,
+    this.withReplies,
+    this.withFiles,
+  });
 
   factory _$HybridTimelineParameterImpl.fromJson(Map<String, dynamic> json) =>
       _$$HybridTimelineParameterImplFromJson(json);
@@ -174,22 +196,22 @@ class _$HybridTimelineParameterImpl implements _HybridTimelineParameter {
   @override
   @pragma('vm:prefer-inline')
   _$$HybridTimelineParameterImplCopyWith<_$HybridTimelineParameterImpl>
-      get copyWith => __$$HybridTimelineParameterImplCopyWithImpl<
-          _$HybridTimelineParameterImpl>(this, _$identity);
+  get copyWith => __$$HybridTimelineParameterImplCopyWithImpl<
+    _$HybridTimelineParameterImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$HybridTimelineParameterImplToJson(
-      this,
-    );
+    return _$$HybridTimelineParameterImplToJson(this);
   }
 }
 
 abstract class _HybridTimelineParameter implements HybridTimelineParameter {
-  const factory _HybridTimelineParameter(
-      {final bool? withRenotes,
-      final bool? withReplies,
-      final bool? withFiles}) = _$HybridTimelineParameterImpl;
+  const factory _HybridTimelineParameter({
+    final bool? withRenotes,
+    final bool? withReplies,
+    final bool? withFiles,
+  }) = _$HybridTimelineParameterImpl;
 
   factory _HybridTimelineParameter.fromJson(Map<String, dynamic> json) =
       _$HybridTimelineParameterImpl.fromJson;
@@ -206,5 +228,5 @@ abstract class _HybridTimelineParameter implements HybridTimelineParameter {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$HybridTimelineParameterImplCopyWith<_$HybridTimelineParameterImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

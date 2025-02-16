@@ -12,10 +12,12 @@ part of 'notes_translate_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 NotesTranslateResponse _$NotesTranslateResponseFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _NotesTranslateResponse.fromJson(json);
 }
 
@@ -36,16 +38,19 @@ mixin _$NotesTranslateResponse {
 
 /// @nodoc
 abstract class $NotesTranslateResponseCopyWith<$Res> {
-  factory $NotesTranslateResponseCopyWith(NotesTranslateResponse value,
-          $Res Function(NotesTranslateResponse) then) =
-      _$NotesTranslateResponseCopyWithImpl<$Res, NotesTranslateResponse>;
+  factory $NotesTranslateResponseCopyWith(
+    NotesTranslateResponse value,
+    $Res Function(NotesTranslateResponse) then,
+  ) = _$NotesTranslateResponseCopyWithImpl<$Res, NotesTranslateResponse>;
   @useResult
   $Res call({String sourceLang, String text});
 }
 
 /// @nodoc
-class _$NotesTranslateResponseCopyWithImpl<$Res,
-        $Val extends NotesTranslateResponse>
+class _$NotesTranslateResponseCopyWithImpl<
+  $Res,
+  $Val extends NotesTranslateResponse
+>
     implements $NotesTranslateResponseCopyWith<$Res> {
   _$NotesTranslateResponseCopyWithImpl(this._value, this._then);
 
@@ -58,20 +63,22 @@ class _$NotesTranslateResponseCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? sourceLang = null,
-    Object? text = null,
-  }) {
-    return _then(_value.copyWith(
-      sourceLang: null == sourceLang
-          ? _value.sourceLang
-          : sourceLang // ignore: cast_nullable_to_non_nullable
-              as String,
-      text: null == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? sourceLang = null, Object? text = null}) {
+    return _then(
+      _value.copyWith(
+            sourceLang:
+                null == sourceLang
+                    ? _value.sourceLang
+                    : sourceLang // ignore: cast_nullable_to_non_nullable
+                        as String,
+            text:
+                null == text
+                    ? _value.text
+                    : text // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -79,9 +86,9 @@ class _$NotesTranslateResponseCopyWithImpl<$Res,
 abstract class _$$NotesTranslateResponseImplCopyWith<$Res>
     implements $NotesTranslateResponseCopyWith<$Res> {
   factory _$$NotesTranslateResponseImplCopyWith(
-          _$NotesTranslateResponseImpl value,
-          $Res Function(_$NotesTranslateResponseImpl) then) =
-      __$$NotesTranslateResponseImplCopyWithImpl<$Res>;
+    _$NotesTranslateResponseImpl value,
+    $Res Function(_$NotesTranslateResponseImpl) then,
+  ) = __$$NotesTranslateResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String sourceLang, String text});
@@ -89,40 +96,43 @@ abstract class _$$NotesTranslateResponseImplCopyWith<$Res>
 
 /// @nodoc
 class __$$NotesTranslateResponseImplCopyWithImpl<$Res>
-    extends _$NotesTranslateResponseCopyWithImpl<$Res,
-        _$NotesTranslateResponseImpl>
+    extends
+        _$NotesTranslateResponseCopyWithImpl<$Res, _$NotesTranslateResponseImpl>
     implements _$$NotesTranslateResponseImplCopyWith<$Res> {
   __$$NotesTranslateResponseImplCopyWithImpl(
-      _$NotesTranslateResponseImpl _value,
-      $Res Function(_$NotesTranslateResponseImpl) _then)
-      : super(_value, _then);
+    _$NotesTranslateResponseImpl _value,
+    $Res Function(_$NotesTranslateResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotesTranslateResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? sourceLang = null,
-    Object? text = null,
-  }) {
-    return _then(_$NotesTranslateResponseImpl(
-      sourceLang: null == sourceLang
-          ? _value.sourceLang
-          : sourceLang // ignore: cast_nullable_to_non_nullable
-              as String,
-      text: null == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? sourceLang = null, Object? text = null}) {
+    return _then(
+      _$NotesTranslateResponseImpl(
+        sourceLang:
+            null == sourceLang
+                ? _value.sourceLang
+                : sourceLang // ignore: cast_nullable_to_non_nullable
+                    as String,
+        text:
+            null == text
+                ? _value.text
+                : text // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$NotesTranslateResponseImpl implements _NotesTranslateResponse {
-  const _$NotesTranslateResponseImpl(
-      {required this.sourceLang, required this.text});
+  const _$NotesTranslateResponseImpl({
+    required this.sourceLang,
+    required this.text,
+  });
 
   factory _$NotesTranslateResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$NotesTranslateResponseImplFromJson(json);
@@ -157,21 +167,23 @@ class _$NotesTranslateResponseImpl implements _NotesTranslateResponse {
   @override
   @pragma('vm:prefer-inline')
   _$$NotesTranslateResponseImplCopyWith<_$NotesTranslateResponseImpl>
-      get copyWith => __$$NotesTranslateResponseImplCopyWithImpl<
-          _$NotesTranslateResponseImpl>(this, _$identity);
+  get copyWith =>
+      __$$NotesTranslateResponseImplCopyWithImpl<_$NotesTranslateResponseImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotesTranslateResponseImplToJson(
-      this,
-    );
+    return _$$NotesTranslateResponseImplToJson(this);
   }
 }
 
 abstract class _NotesTranslateResponse implements NotesTranslateResponse {
-  const factory _NotesTranslateResponse(
-      {required final String sourceLang,
-      required final String text}) = _$NotesTranslateResponseImpl;
+  const factory _NotesTranslateResponse({
+    required final String sourceLang,
+    required final String text,
+  }) = _$NotesTranslateResponseImpl;
 
   factory _NotesTranslateResponse.fromJson(Map<String, dynamic> json) =
       _$NotesTranslateResponseImpl.fromJson;
@@ -186,5 +198,5 @@ abstract class _NotesTranslateResponse implements NotesTranslateResponse {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesTranslateResponseImplCopyWith<_$NotesTranslateResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

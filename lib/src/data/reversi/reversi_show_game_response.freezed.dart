@@ -12,10 +12,12 @@ part of 'reversi_show_game_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ReversiShowGameResponse _$ReversiShowGameResponseFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _ReversiShowGameResponse.fromJson(json);
 }
 
@@ -62,45 +64,49 @@ mixin _$ReversiShowGameResponse {
 
 /// @nodoc
 abstract class $ReversiShowGameResponseCopyWith<$Res> {
-  factory $ReversiShowGameResponseCopyWith(ReversiShowGameResponse value,
-          $Res Function(ReversiShowGameResponse) then) =
-      _$ReversiShowGameResponseCopyWithImpl<$Res, ReversiShowGameResponse>;
+  factory $ReversiShowGameResponseCopyWith(
+    ReversiShowGameResponse value,
+    $Res Function(ReversiShowGameResponse) then,
+  ) = _$ReversiShowGameResponseCopyWithImpl<$Res, ReversiShowGameResponse>;
   @useResult
-  $Res call(
-      {String id,
-      DateTime createdAt,
-      @NullableDateTimeConverter() DateTime? startedAt,
-      @NullableDateTimeConverter() DateTime? endedAt,
-      bool isStarted,
-      bool isEnded,
-      Object? form1,
-      Object? form2,
-      bool user1Ready,
-      bool user2Ready,
-      String user1Id,
-      String user2Id,
-      UserLite user1,
-      UserLite user2,
-      String? winnerId,
-      String? surrenderedUserId,
-      String? timeoutUserId,
-      int? black,
-      String bw,
-      bool noIrregularRules,
-      bool isLlotheo,
-      bool canPutEverywhere,
-      bool loopedBoard,
-      int timeLimitForEachTurn,
-      List<dynamic> logs,
-      List<String> map});
+  $Res call({
+    String id,
+    DateTime createdAt,
+    @NullableDateTimeConverter() DateTime? startedAt,
+    @NullableDateTimeConverter() DateTime? endedAt,
+    bool isStarted,
+    bool isEnded,
+    Object? form1,
+    Object? form2,
+    bool user1Ready,
+    bool user2Ready,
+    String user1Id,
+    String user2Id,
+    UserLite user1,
+    UserLite user2,
+    String? winnerId,
+    String? surrenderedUserId,
+    String? timeoutUserId,
+    int? black,
+    String bw,
+    bool noIrregularRules,
+    bool isLlotheo,
+    bool canPutEverywhere,
+    bool loopedBoard,
+    int timeLimitForEachTurn,
+    List<dynamic> logs,
+    List<String> map,
+  });
 
   $UserLiteCopyWith<$Res> get user1;
   $UserLiteCopyWith<$Res> get user2;
 }
 
 /// @nodoc
-class _$ReversiShowGameResponseCopyWithImpl<$Res,
-        $Val extends ReversiShowGameResponse>
+class _$ReversiShowGameResponseCopyWithImpl<
+  $Res,
+  $Val extends ReversiShowGameResponse
+>
     implements $ReversiShowGameResponseCopyWith<$Res> {
   _$ReversiShowGameResponseCopyWithImpl(this._value, this._then);
 
@@ -141,106 +147,133 @@ class _$ReversiShowGameResponseCopyWithImpl<$Res,
     Object? logs = null,
     Object? map = null,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      startedAt: freezed == startedAt
-          ? _value.startedAt
-          : startedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      endedAt: freezed == endedAt
-          ? _value.endedAt
-          : endedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      isStarted: null == isStarted
-          ? _value.isStarted
-          : isStarted // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isEnded: null == isEnded
-          ? _value.isEnded
-          : isEnded // ignore: cast_nullable_to_non_nullable
-              as bool,
-      form1: freezed == form1 ? _value.form1 : form1,
-      form2: freezed == form2 ? _value.form2 : form2,
-      user1Ready: null == user1Ready
-          ? _value.user1Ready
-          : user1Ready // ignore: cast_nullable_to_non_nullable
-              as bool,
-      user2Ready: null == user2Ready
-          ? _value.user2Ready
-          : user2Ready // ignore: cast_nullable_to_non_nullable
-              as bool,
-      user1Id: null == user1Id
-          ? _value.user1Id
-          : user1Id // ignore: cast_nullable_to_non_nullable
-              as String,
-      user2Id: null == user2Id
-          ? _value.user2Id
-          : user2Id // ignore: cast_nullable_to_non_nullable
-              as String,
-      user1: null == user1
-          ? _value.user1
-          : user1 // ignore: cast_nullable_to_non_nullable
-              as UserLite,
-      user2: null == user2
-          ? _value.user2
-          : user2 // ignore: cast_nullable_to_non_nullable
-              as UserLite,
-      winnerId: freezed == winnerId
-          ? _value.winnerId
-          : winnerId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      surrenderedUserId: freezed == surrenderedUserId
-          ? _value.surrenderedUserId
-          : surrenderedUserId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      timeoutUserId: freezed == timeoutUserId
-          ? _value.timeoutUserId
-          : timeoutUserId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      black: freezed == black
-          ? _value.black
-          : black // ignore: cast_nullable_to_non_nullable
-              as int?,
-      bw: null == bw
-          ? _value.bw
-          : bw // ignore: cast_nullable_to_non_nullable
-              as String,
-      noIrregularRules: null == noIrregularRules
-          ? _value.noIrregularRules
-          : noIrregularRules // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isLlotheo: null == isLlotheo
-          ? _value.isLlotheo
-          : isLlotheo // ignore: cast_nullable_to_non_nullable
-              as bool,
-      canPutEverywhere: null == canPutEverywhere
-          ? _value.canPutEverywhere
-          : canPutEverywhere // ignore: cast_nullable_to_non_nullable
-              as bool,
-      loopedBoard: null == loopedBoard
-          ? _value.loopedBoard
-          : loopedBoard // ignore: cast_nullable_to_non_nullable
-              as bool,
-      timeLimitForEachTurn: null == timeLimitForEachTurn
-          ? _value.timeLimitForEachTurn
-          : timeLimitForEachTurn // ignore: cast_nullable_to_non_nullable
-              as int,
-      logs: null == logs
-          ? _value.logs
-          : logs // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>,
-      map: null == map
-          ? _value.map
-          : map // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            createdAt:
+                null == createdAt
+                    ? _value.createdAt
+                    : createdAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            startedAt:
+                freezed == startedAt
+                    ? _value.startedAt
+                    : startedAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            endedAt:
+                freezed == endedAt
+                    ? _value.endedAt
+                    : endedAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            isStarted:
+                null == isStarted
+                    ? _value.isStarted
+                    : isStarted // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            isEnded:
+                null == isEnded
+                    ? _value.isEnded
+                    : isEnded // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            form1: freezed == form1 ? _value.form1 : form1,
+            form2: freezed == form2 ? _value.form2 : form2,
+            user1Ready:
+                null == user1Ready
+                    ? _value.user1Ready
+                    : user1Ready // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            user2Ready:
+                null == user2Ready
+                    ? _value.user2Ready
+                    : user2Ready // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            user1Id:
+                null == user1Id
+                    ? _value.user1Id
+                    : user1Id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            user2Id:
+                null == user2Id
+                    ? _value.user2Id
+                    : user2Id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            user1:
+                null == user1
+                    ? _value.user1
+                    : user1 // ignore: cast_nullable_to_non_nullable
+                        as UserLite,
+            user2:
+                null == user2
+                    ? _value.user2
+                    : user2 // ignore: cast_nullable_to_non_nullable
+                        as UserLite,
+            winnerId:
+                freezed == winnerId
+                    ? _value.winnerId
+                    : winnerId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            surrenderedUserId:
+                freezed == surrenderedUserId
+                    ? _value.surrenderedUserId
+                    : surrenderedUserId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            timeoutUserId:
+                freezed == timeoutUserId
+                    ? _value.timeoutUserId
+                    : timeoutUserId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            black:
+                freezed == black
+                    ? _value.black
+                    : black // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            bw:
+                null == bw
+                    ? _value.bw
+                    : bw // ignore: cast_nullable_to_non_nullable
+                        as String,
+            noIrregularRules:
+                null == noIrregularRules
+                    ? _value.noIrregularRules
+                    : noIrregularRules // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            isLlotheo:
+                null == isLlotheo
+                    ? _value.isLlotheo
+                    : isLlotheo // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            canPutEverywhere:
+                null == canPutEverywhere
+                    ? _value.canPutEverywhere
+                    : canPutEverywhere // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            loopedBoard:
+                null == loopedBoard
+                    ? _value.loopedBoard
+                    : loopedBoard // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            timeLimitForEachTurn:
+                null == timeLimitForEachTurn
+                    ? _value.timeLimitForEachTurn
+                    : timeLimitForEachTurn // ignore: cast_nullable_to_non_nullable
+                        as int,
+            logs:
+                null == logs
+                    ? _value.logs
+                    : logs // ignore: cast_nullable_to_non_nullable
+                        as List<dynamic>,
+            map:
+                null == map
+                    ? _value.map
+                    : map // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of ReversiShowGameResponse
@@ -268,38 +301,39 @@ class _$ReversiShowGameResponseCopyWithImpl<$Res,
 abstract class _$$ReversiShowGameResponseImplCopyWith<$Res>
     implements $ReversiShowGameResponseCopyWith<$Res> {
   factory _$$ReversiShowGameResponseImplCopyWith(
-          _$ReversiShowGameResponseImpl value,
-          $Res Function(_$ReversiShowGameResponseImpl) then) =
-      __$$ReversiShowGameResponseImplCopyWithImpl<$Res>;
+    _$ReversiShowGameResponseImpl value,
+    $Res Function(_$ReversiShowGameResponseImpl) then,
+  ) = __$$ReversiShowGameResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      DateTime createdAt,
-      @NullableDateTimeConverter() DateTime? startedAt,
-      @NullableDateTimeConverter() DateTime? endedAt,
-      bool isStarted,
-      bool isEnded,
-      Object? form1,
-      Object? form2,
-      bool user1Ready,
-      bool user2Ready,
-      String user1Id,
-      String user2Id,
-      UserLite user1,
-      UserLite user2,
-      String? winnerId,
-      String? surrenderedUserId,
-      String? timeoutUserId,
-      int? black,
-      String bw,
-      bool noIrregularRules,
-      bool isLlotheo,
-      bool canPutEverywhere,
-      bool loopedBoard,
-      int timeLimitForEachTurn,
-      List<dynamic> logs,
-      List<String> map});
+  $Res call({
+    String id,
+    DateTime createdAt,
+    @NullableDateTimeConverter() DateTime? startedAt,
+    @NullableDateTimeConverter() DateTime? endedAt,
+    bool isStarted,
+    bool isEnded,
+    Object? form1,
+    Object? form2,
+    bool user1Ready,
+    bool user2Ready,
+    String user1Id,
+    String user2Id,
+    UserLite user1,
+    UserLite user2,
+    String? winnerId,
+    String? surrenderedUserId,
+    String? timeoutUserId,
+    int? black,
+    String bw,
+    bool noIrregularRules,
+    bool isLlotheo,
+    bool canPutEverywhere,
+    bool loopedBoard,
+    int timeLimitForEachTurn,
+    List<dynamic> logs,
+    List<String> map,
+  });
 
   @override
   $UserLiteCopyWith<$Res> get user1;
@@ -309,13 +343,16 @@ abstract class _$$ReversiShowGameResponseImplCopyWith<$Res>
 
 /// @nodoc
 class __$$ReversiShowGameResponseImplCopyWithImpl<$Res>
-    extends _$ReversiShowGameResponseCopyWithImpl<$Res,
-        _$ReversiShowGameResponseImpl>
+    extends
+        _$ReversiShowGameResponseCopyWithImpl<
+          $Res,
+          _$ReversiShowGameResponseImpl
+        >
     implements _$$ReversiShowGameResponseImplCopyWith<$Res> {
   __$$ReversiShowGameResponseImplCopyWithImpl(
-      _$ReversiShowGameResponseImpl _value,
-      $Res Function(_$ReversiShowGameResponseImpl) _then)
-      : super(_value, _then);
+    _$ReversiShowGameResponseImpl _value,
+    $Res Function(_$ReversiShowGameResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ReversiShowGameResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -349,141 +386,167 @@ class __$$ReversiShowGameResponseImplCopyWithImpl<$Res>
     Object? logs = null,
     Object? map = null,
   }) {
-    return _then(_$ReversiShowGameResponseImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      startedAt: freezed == startedAt
-          ? _value.startedAt
-          : startedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      endedAt: freezed == endedAt
-          ? _value.endedAt
-          : endedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      isStarted: null == isStarted
-          ? _value.isStarted
-          : isStarted // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isEnded: null == isEnded
-          ? _value.isEnded
-          : isEnded // ignore: cast_nullable_to_non_nullable
-              as bool,
-      form1: freezed == form1 ? _value.form1 : form1,
-      form2: freezed == form2 ? _value.form2 : form2,
-      user1Ready: null == user1Ready
-          ? _value.user1Ready
-          : user1Ready // ignore: cast_nullable_to_non_nullable
-              as bool,
-      user2Ready: null == user2Ready
-          ? _value.user2Ready
-          : user2Ready // ignore: cast_nullable_to_non_nullable
-              as bool,
-      user1Id: null == user1Id
-          ? _value.user1Id
-          : user1Id // ignore: cast_nullable_to_non_nullable
-              as String,
-      user2Id: null == user2Id
-          ? _value.user2Id
-          : user2Id // ignore: cast_nullable_to_non_nullable
-              as String,
-      user1: null == user1
-          ? _value.user1
-          : user1 // ignore: cast_nullable_to_non_nullable
-              as UserLite,
-      user2: null == user2
-          ? _value.user2
-          : user2 // ignore: cast_nullable_to_non_nullable
-              as UserLite,
-      winnerId: freezed == winnerId
-          ? _value.winnerId
-          : winnerId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      surrenderedUserId: freezed == surrenderedUserId
-          ? _value.surrenderedUserId
-          : surrenderedUserId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      timeoutUserId: freezed == timeoutUserId
-          ? _value.timeoutUserId
-          : timeoutUserId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      black: freezed == black
-          ? _value.black
-          : black // ignore: cast_nullable_to_non_nullable
-              as int?,
-      bw: null == bw
-          ? _value.bw
-          : bw // ignore: cast_nullable_to_non_nullable
-              as String,
-      noIrregularRules: null == noIrregularRules
-          ? _value.noIrregularRules
-          : noIrregularRules // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isLlotheo: null == isLlotheo
-          ? _value.isLlotheo
-          : isLlotheo // ignore: cast_nullable_to_non_nullable
-              as bool,
-      canPutEverywhere: null == canPutEverywhere
-          ? _value.canPutEverywhere
-          : canPutEverywhere // ignore: cast_nullable_to_non_nullable
-              as bool,
-      loopedBoard: null == loopedBoard
-          ? _value.loopedBoard
-          : loopedBoard // ignore: cast_nullable_to_non_nullable
-              as bool,
-      timeLimitForEachTurn: null == timeLimitForEachTurn
-          ? _value.timeLimitForEachTurn
-          : timeLimitForEachTurn // ignore: cast_nullable_to_non_nullable
-              as int,
-      logs: null == logs
-          ? _value._logs
-          : logs // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>,
-      map: null == map
-          ? _value._map
-          : map // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-    ));
+    return _then(
+      _$ReversiShowGameResponseImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        createdAt:
+            null == createdAt
+                ? _value.createdAt
+                : createdAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        startedAt:
+            freezed == startedAt
+                ? _value.startedAt
+                : startedAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        endedAt:
+            freezed == endedAt
+                ? _value.endedAt
+                : endedAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        isStarted:
+            null == isStarted
+                ? _value.isStarted
+                : isStarted // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        isEnded:
+            null == isEnded
+                ? _value.isEnded
+                : isEnded // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        form1: freezed == form1 ? _value.form1 : form1,
+        form2: freezed == form2 ? _value.form2 : form2,
+        user1Ready:
+            null == user1Ready
+                ? _value.user1Ready
+                : user1Ready // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        user2Ready:
+            null == user2Ready
+                ? _value.user2Ready
+                : user2Ready // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        user1Id:
+            null == user1Id
+                ? _value.user1Id
+                : user1Id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        user2Id:
+            null == user2Id
+                ? _value.user2Id
+                : user2Id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        user1:
+            null == user1
+                ? _value.user1
+                : user1 // ignore: cast_nullable_to_non_nullable
+                    as UserLite,
+        user2:
+            null == user2
+                ? _value.user2
+                : user2 // ignore: cast_nullable_to_non_nullable
+                    as UserLite,
+        winnerId:
+            freezed == winnerId
+                ? _value.winnerId
+                : winnerId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        surrenderedUserId:
+            freezed == surrenderedUserId
+                ? _value.surrenderedUserId
+                : surrenderedUserId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        timeoutUserId:
+            freezed == timeoutUserId
+                ? _value.timeoutUserId
+                : timeoutUserId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        black:
+            freezed == black
+                ? _value.black
+                : black // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        bw:
+            null == bw
+                ? _value.bw
+                : bw // ignore: cast_nullable_to_non_nullable
+                    as String,
+        noIrregularRules:
+            null == noIrregularRules
+                ? _value.noIrregularRules
+                : noIrregularRules // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        isLlotheo:
+            null == isLlotheo
+                ? _value.isLlotheo
+                : isLlotheo // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        canPutEverywhere:
+            null == canPutEverywhere
+                ? _value.canPutEverywhere
+                : canPutEverywhere // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        loopedBoard:
+            null == loopedBoard
+                ? _value.loopedBoard
+                : loopedBoard // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        timeLimitForEachTurn:
+            null == timeLimitForEachTurn
+                ? _value.timeLimitForEachTurn
+                : timeLimitForEachTurn // ignore: cast_nullable_to_non_nullable
+                    as int,
+        logs:
+            null == logs
+                ? _value._logs
+                : logs // ignore: cast_nullable_to_non_nullable
+                    as List<dynamic>,
+        map:
+            null == map
+                ? _value._map
+                : map // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ReversiShowGameResponseImpl implements _ReversiShowGameResponse {
-  const _$ReversiShowGameResponseImpl(
-      {required this.id,
-      required this.createdAt,
-      @NullableDateTimeConverter() this.startedAt,
-      @NullableDateTimeConverter() this.endedAt,
-      required this.isStarted,
-      required this.isEnded,
-      this.form1,
-      this.form2,
-      required this.user1Ready,
-      required this.user2Ready,
-      required this.user1Id,
-      required this.user2Id,
-      required this.user1,
-      required this.user2,
-      this.winnerId,
-      this.surrenderedUserId,
-      this.timeoutUserId,
-      this.black,
-      required this.bw,
-      required this.noIrregularRules,
-      required this.isLlotheo,
-      required this.canPutEverywhere,
-      required this.loopedBoard,
-      required this.timeLimitForEachTurn,
-      required final List<dynamic> logs,
-      required final List<String> map})
-      : _logs = logs,
-        _map = map;
+  const _$ReversiShowGameResponseImpl({
+    required this.id,
+    required this.createdAt,
+    @NullableDateTimeConverter() this.startedAt,
+    @NullableDateTimeConverter() this.endedAt,
+    required this.isStarted,
+    required this.isEnded,
+    this.form1,
+    this.form2,
+    required this.user1Ready,
+    required this.user2Ready,
+    required this.user1Id,
+    required this.user2Id,
+    required this.user1,
+    required this.user2,
+    this.winnerId,
+    this.surrenderedUserId,
+    this.timeoutUserId,
+    this.black,
+    required this.bw,
+    required this.noIrregularRules,
+    required this.isLlotheo,
+    required this.canPutEverywhere,
+    required this.loopedBoard,
+    required this.timeLimitForEachTurn,
+    required final List<dynamic> logs,
+    required final List<String> map,
+  }) : _logs = logs,
+       _map = map;
 
   factory _$ReversiShowGameResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$ReversiShowGameResponseImplFromJson(json);
@@ -608,34 +671,34 @@ class _$ReversiShowGameResponseImpl implements _ReversiShowGameResponse {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
-        runtimeType,
-        id,
-        createdAt,
-        startedAt,
-        endedAt,
-        isStarted,
-        isEnded,
-        const DeepCollectionEquality().hash(form1),
-        const DeepCollectionEquality().hash(form2),
-        user1Ready,
-        user2Ready,
-        user1Id,
-        user2Id,
-        user1,
-        user2,
-        winnerId,
-        surrenderedUserId,
-        timeoutUserId,
-        black,
-        bw,
-        noIrregularRules,
-        isLlotheo,
-        canPutEverywhere,
-        loopedBoard,
-        timeLimitForEachTurn,
-        const DeepCollectionEquality().hash(_logs),
-        const DeepCollectionEquality().hash(_map)
-      ]);
+    runtimeType,
+    id,
+    createdAt,
+    startedAt,
+    endedAt,
+    isStarted,
+    isEnded,
+    const DeepCollectionEquality().hash(form1),
+    const DeepCollectionEquality().hash(form2),
+    user1Ready,
+    user2Ready,
+    user1Id,
+    user2Id,
+    user1,
+    user2,
+    winnerId,
+    surrenderedUserId,
+    timeoutUserId,
+    black,
+    bw,
+    noIrregularRules,
+    isLlotheo,
+    canPutEverywhere,
+    loopedBoard,
+    timeLimitForEachTurn,
+    const DeepCollectionEquality().hash(_logs),
+    const DeepCollectionEquality().hash(_map),
+  ]);
 
   /// Create a copy of ReversiShowGameResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -643,45 +706,45 @@ class _$ReversiShowGameResponseImpl implements _ReversiShowGameResponse {
   @override
   @pragma('vm:prefer-inline')
   _$$ReversiShowGameResponseImplCopyWith<_$ReversiShowGameResponseImpl>
-      get copyWith => __$$ReversiShowGameResponseImplCopyWithImpl<
-          _$ReversiShowGameResponseImpl>(this, _$identity);
+  get copyWith => __$$ReversiShowGameResponseImplCopyWithImpl<
+    _$ReversiShowGameResponseImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ReversiShowGameResponseImplToJson(
-      this,
-    );
+    return _$$ReversiShowGameResponseImplToJson(this);
   }
 }
 
 abstract class _ReversiShowGameResponse implements ReversiShowGameResponse {
-  const factory _ReversiShowGameResponse(
-      {required final String id,
-      required final DateTime createdAt,
-      @NullableDateTimeConverter() final DateTime? startedAt,
-      @NullableDateTimeConverter() final DateTime? endedAt,
-      required final bool isStarted,
-      required final bool isEnded,
-      final Object? form1,
-      final Object? form2,
-      required final bool user1Ready,
-      required final bool user2Ready,
-      required final String user1Id,
-      required final String user2Id,
-      required final UserLite user1,
-      required final UserLite user2,
-      final String? winnerId,
-      final String? surrenderedUserId,
-      final String? timeoutUserId,
-      final int? black,
-      required final String bw,
-      required final bool noIrregularRules,
-      required final bool isLlotheo,
-      required final bool canPutEverywhere,
-      required final bool loopedBoard,
-      required final int timeLimitForEachTurn,
-      required final List<dynamic> logs,
-      required final List<String> map}) = _$ReversiShowGameResponseImpl;
+  const factory _ReversiShowGameResponse({
+    required final String id,
+    required final DateTime createdAt,
+    @NullableDateTimeConverter() final DateTime? startedAt,
+    @NullableDateTimeConverter() final DateTime? endedAt,
+    required final bool isStarted,
+    required final bool isEnded,
+    final Object? form1,
+    final Object? form2,
+    required final bool user1Ready,
+    required final bool user2Ready,
+    required final String user1Id,
+    required final String user2Id,
+    required final UserLite user1,
+    required final UserLite user2,
+    final String? winnerId,
+    final String? surrenderedUserId,
+    final String? timeoutUserId,
+    final int? black,
+    required final String bw,
+    required final bool noIrregularRules,
+    required final bool isLlotheo,
+    required final bool canPutEverywhere,
+    required final bool loopedBoard,
+    required final int timeLimitForEachTurn,
+    required final List<dynamic> logs,
+    required final List<String> map,
+  }) = _$ReversiShowGameResponseImpl;
 
   factory _ReversiShowGameResponse.fromJson(Map<String, dynamic> json) =
       _$ReversiShowGameResponseImpl.fromJson;
@@ -746,5 +809,5 @@ abstract class _ReversiShowGameResponse implements ReversiShowGameResponse {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReversiShowGameResponseImplCopyWith<_$ReversiShowGameResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

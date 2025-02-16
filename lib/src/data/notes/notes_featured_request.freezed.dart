@@ -12,7 +12,8 @@ part of 'notes_featured_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 NotesFeaturedRequest _$NotesFeaturedRequestFromJson(Map<String, dynamic> json) {
   return _NotesFeaturedRequest.fromJson(json);
@@ -38,20 +39,24 @@ mixin _$NotesFeaturedRequest {
 
 /// @nodoc
 abstract class $NotesFeaturedRequestCopyWith<$Res> {
-  factory $NotesFeaturedRequestCopyWith(NotesFeaturedRequest value,
-          $Res Function(NotesFeaturedRequest) then) =
-      _$NotesFeaturedRequestCopyWithImpl<$Res, NotesFeaturedRequest>;
+  factory $NotesFeaturedRequestCopyWith(
+    NotesFeaturedRequest value,
+    $Res Function(NotesFeaturedRequest) then,
+  ) = _$NotesFeaturedRequestCopyWithImpl<$Res, NotesFeaturedRequest>;
   @useResult
-  $Res call(
-      {int? limit,
-      @Deprecated("removed at 2023.10.0") int? offset,
-      String? untilId,
-      String? channelId});
+  $Res call({
+    int? limit,
+    @Deprecated("removed at 2023.10.0") int? offset,
+    String? untilId,
+    String? channelId,
+  });
 }
 
 /// @nodoc
-class _$NotesFeaturedRequestCopyWithImpl<$Res,
-        $Val extends NotesFeaturedRequest>
+class _$NotesFeaturedRequestCopyWithImpl<
+  $Res,
+  $Val extends NotesFeaturedRequest
+>
     implements $NotesFeaturedRequestCopyWith<$Res> {
   _$NotesFeaturedRequestCopyWithImpl(this._value, this._then);
 
@@ -70,49 +75,59 @@ class _$NotesFeaturedRequestCopyWithImpl<$Res,
     Object? untilId = freezed,
     Object? channelId = freezed,
   }) {
-    return _then(_value.copyWith(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      offset: freezed == offset
-          ? _value.offset
-          : offset // ignore: cast_nullable_to_non_nullable
-              as int?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      channelId: freezed == channelId
-          ? _value.channelId
-          : channelId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            offset:
+                freezed == offset
+                    ? _value.offset
+                    : offset // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            channelId:
+                freezed == channelId
+                    ? _value.channelId
+                    : channelId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$NotesFeaturedRequestImplCopyWith<$Res>
     implements $NotesFeaturedRequestCopyWith<$Res> {
-  factory _$$NotesFeaturedRequestImplCopyWith(_$NotesFeaturedRequestImpl value,
-          $Res Function(_$NotesFeaturedRequestImpl) then) =
-      __$$NotesFeaturedRequestImplCopyWithImpl<$Res>;
+  factory _$$NotesFeaturedRequestImplCopyWith(
+    _$NotesFeaturedRequestImpl value,
+    $Res Function(_$NotesFeaturedRequestImpl) then,
+  ) = __$$NotesFeaturedRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int? limit,
-      @Deprecated("removed at 2023.10.0") int? offset,
-      String? untilId,
-      String? channelId});
+  $Res call({
+    int? limit,
+    @Deprecated("removed at 2023.10.0") int? offset,
+    String? untilId,
+    String? channelId,
+  });
 }
 
 /// @nodoc
 class __$$NotesFeaturedRequestImplCopyWithImpl<$Res>
     extends _$NotesFeaturedRequestCopyWithImpl<$Res, _$NotesFeaturedRequestImpl>
     implements _$$NotesFeaturedRequestImplCopyWith<$Res> {
-  __$$NotesFeaturedRequestImplCopyWithImpl(_$NotesFeaturedRequestImpl _value,
-      $Res Function(_$NotesFeaturedRequestImpl) _then)
-      : super(_value, _then);
+  __$$NotesFeaturedRequestImplCopyWithImpl(
+    _$NotesFeaturedRequestImpl _value,
+    $Res Function(_$NotesFeaturedRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotesFeaturedRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -124,35 +139,42 @@ class __$$NotesFeaturedRequestImplCopyWithImpl<$Res>
     Object? untilId = freezed,
     Object? channelId = freezed,
   }) {
-    return _then(_$NotesFeaturedRequestImpl(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      offset: freezed == offset
-          ? _value.offset
-          : offset // ignore: cast_nullable_to_non_nullable
-              as int?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      channelId: freezed == channelId
-          ? _value.channelId
-          : channelId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$NotesFeaturedRequestImpl(
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        offset:
+            freezed == offset
+                ? _value.offset
+                : offset // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        channelId:
+            freezed == channelId
+                ? _value.channelId
+                : channelId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$NotesFeaturedRequestImpl implements _NotesFeaturedRequest {
-  const _$NotesFeaturedRequestImpl(
-      {this.limit,
-      @Deprecated("removed at 2023.10.0") this.offset,
-      this.untilId,
-      this.channelId});
+  const _$NotesFeaturedRequestImpl({
+    this.limit,
+    @Deprecated("removed at 2023.10.0") this.offset,
+    this.untilId,
+    this.channelId,
+  });
 
   factory _$NotesFeaturedRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$NotesFeaturedRequestImplFromJson(json);
@@ -195,24 +217,25 @@ class _$NotesFeaturedRequestImpl implements _NotesFeaturedRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$NotesFeaturedRequestImplCopyWith<_$NotesFeaturedRequestImpl>
-      get copyWith =>
-          __$$NotesFeaturedRequestImplCopyWithImpl<_$NotesFeaturedRequestImpl>(
-              this, _$identity);
+  get copyWith =>
+      __$$NotesFeaturedRequestImplCopyWithImpl<_$NotesFeaturedRequestImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotesFeaturedRequestImplToJson(
-      this,
-    );
+    return _$$NotesFeaturedRequestImplToJson(this);
   }
 }
 
 abstract class _NotesFeaturedRequest implements NotesFeaturedRequest {
-  const factory _NotesFeaturedRequest(
-      {final int? limit,
-      @Deprecated("removed at 2023.10.0") final int? offset,
-      final String? untilId,
-      final String? channelId}) = _$NotesFeaturedRequestImpl;
+  const factory _NotesFeaturedRequest({
+    final int? limit,
+    @Deprecated("removed at 2023.10.0") final int? offset,
+    final String? untilId,
+    final String? channelId,
+  }) = _$NotesFeaturedRequestImpl;
 
   factory _NotesFeaturedRequest.fromJson(Map<String, dynamic> json) =
       _$NotesFeaturedRequestImpl.fromJson;
@@ -232,5 +255,5 @@ abstract class _NotesFeaturedRequest implements NotesFeaturedRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesFeaturedRequestImplCopyWith<_$NotesFeaturedRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

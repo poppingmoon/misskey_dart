@@ -12,7 +12,8 @@ part of 'sw_unregister_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 SwUnregisterRequest _$SwUnregisterRequestFromJson(Map<String, dynamic> json) {
   return _SwUnregisterRequest.fromJson(json);
@@ -35,8 +36,9 @@ mixin _$SwUnregisterRequest {
 /// @nodoc
 abstract class $SwUnregisterRequestCopyWith<$Res> {
   factory $SwUnregisterRequestCopyWith(
-          SwUnregisterRequest value, $Res Function(SwUnregisterRequest) then) =
-      _$SwUnregisterRequestCopyWithImpl<$Res, SwUnregisterRequest>;
+    SwUnregisterRequest value,
+    $Res Function(SwUnregisterRequest) then,
+  ) = _$SwUnregisterRequestCopyWithImpl<$Res, SwUnregisterRequest>;
   @useResult
   $Res call({String endpoint});
 }
@@ -55,24 +57,27 @@ class _$SwUnregisterRequestCopyWithImpl<$Res, $Val extends SwUnregisterRequest>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? endpoint = null,
-  }) {
-    return _then(_value.copyWith(
-      endpoint: null == endpoint
-          ? _value.endpoint
-          : endpoint // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? endpoint = null}) {
+    return _then(
+      _value.copyWith(
+            endpoint:
+                null == endpoint
+                    ? _value.endpoint
+                    : endpoint // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$SwUnregisterRequestImplCopyWith<$Res>
     implements $SwUnregisterRequestCopyWith<$Res> {
-  factory _$$SwUnregisterRequestImplCopyWith(_$SwUnregisterRequestImpl value,
-          $Res Function(_$SwUnregisterRequestImpl) then) =
-      __$$SwUnregisterRequestImplCopyWithImpl<$Res>;
+  factory _$$SwUnregisterRequestImplCopyWith(
+    _$SwUnregisterRequestImpl value,
+    $Res Function(_$SwUnregisterRequestImpl) then,
+  ) = __$$SwUnregisterRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String endpoint});
@@ -82,23 +87,25 @@ abstract class _$$SwUnregisterRequestImplCopyWith<$Res>
 class __$$SwUnregisterRequestImplCopyWithImpl<$Res>
     extends _$SwUnregisterRequestCopyWithImpl<$Res, _$SwUnregisterRequestImpl>
     implements _$$SwUnregisterRequestImplCopyWith<$Res> {
-  __$$SwUnregisterRequestImplCopyWithImpl(_$SwUnregisterRequestImpl _value,
-      $Res Function(_$SwUnregisterRequestImpl) _then)
-      : super(_value, _then);
+  __$$SwUnregisterRequestImplCopyWithImpl(
+    _$SwUnregisterRequestImpl _value,
+    $Res Function(_$SwUnregisterRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of SwUnregisterRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? endpoint = null,
-  }) {
-    return _then(_$SwUnregisterRequestImpl(
-      endpoint: null == endpoint
-          ? _value.endpoint
-          : endpoint // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? endpoint = null}) {
+    return _then(
+      _$SwUnregisterRequestImpl(
+        endpoint:
+            null == endpoint
+                ? _value.endpoint
+                : endpoint // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -138,13 +145,13 @@ class _$SwUnregisterRequestImpl implements _SwUnregisterRequest {
   @pragma('vm:prefer-inline')
   _$$SwUnregisterRequestImplCopyWith<_$SwUnregisterRequestImpl> get copyWith =>
       __$$SwUnregisterRequestImplCopyWithImpl<_$SwUnregisterRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SwUnregisterRequestImplToJson(
-      this,
-    );
+    return _$$SwUnregisterRequestImplToJson(this);
   }
 }
 

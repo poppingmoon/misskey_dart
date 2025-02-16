@@ -12,7 +12,8 @@ part of 'emojis_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 EmojisResponse _$EmojisResponseFromJson(Map<String, dynamic> json) {
   return _EmojisResponse.fromJson(json);
@@ -35,8 +36,9 @@ mixin _$EmojisResponse {
 /// @nodoc
 abstract class $EmojisResponseCopyWith<$Res> {
   factory $EmojisResponseCopyWith(
-          EmojisResponse value, $Res Function(EmojisResponse) then) =
-      _$EmojisResponseCopyWithImpl<$Res, EmojisResponse>;
+    EmojisResponse value,
+    $Res Function(EmojisResponse) then,
+  ) = _$EmojisResponseCopyWithImpl<$Res, EmojisResponse>;
   @useResult
   $Res call({List<Emoji> emojis});
 }
@@ -55,24 +57,27 @@ class _$EmojisResponseCopyWithImpl<$Res, $Val extends EmojisResponse>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? emojis = null,
-  }) {
-    return _then(_value.copyWith(
-      emojis: null == emojis
-          ? _value.emojis
-          : emojis // ignore: cast_nullable_to_non_nullable
-              as List<Emoji>,
-    ) as $Val);
+  $Res call({Object? emojis = null}) {
+    return _then(
+      _value.copyWith(
+            emojis:
+                null == emojis
+                    ? _value.emojis
+                    : emojis // ignore: cast_nullable_to_non_nullable
+                        as List<Emoji>,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$EmojisResponseImplCopyWith<$Res>
     implements $EmojisResponseCopyWith<$Res> {
-  factory _$$EmojisResponseImplCopyWith(_$EmojisResponseImpl value,
-          $Res Function(_$EmojisResponseImpl) then) =
-      __$$EmojisResponseImplCopyWithImpl<$Res>;
+  factory _$$EmojisResponseImplCopyWith(
+    _$EmojisResponseImpl value,
+    $Res Function(_$EmojisResponseImpl) then,
+  ) = __$$EmojisResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<Emoji> emojis});
@@ -83,22 +88,24 @@ class __$$EmojisResponseImplCopyWithImpl<$Res>
     extends _$EmojisResponseCopyWithImpl<$Res, _$EmojisResponseImpl>
     implements _$$EmojisResponseImplCopyWith<$Res> {
   __$$EmojisResponseImplCopyWithImpl(
-      _$EmojisResponseImpl _value, $Res Function(_$EmojisResponseImpl) _then)
-      : super(_value, _then);
+    _$EmojisResponseImpl _value,
+    $Res Function(_$EmojisResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of EmojisResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? emojis = null,
-  }) {
-    return _then(_$EmojisResponseImpl(
-      emojis: null == emojis
-          ? _value._emojis
-          : emojis // ignore: cast_nullable_to_non_nullable
-              as List<Emoji>,
-    ));
+  $Res call({Object? emojis = null}) {
+    return _then(
+      _$EmojisResponseImpl(
+        emojis:
+            null == emojis
+                ? _value._emojis
+                : emojis // ignore: cast_nullable_to_non_nullable
+                    as List<Emoji>,
+      ),
+    );
   }
 }
 
@@ -106,7 +113,7 @@ class __$$EmojisResponseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$EmojisResponseImpl implements _EmojisResponse {
   const _$EmojisResponseImpl({required final List<Emoji> emojis})
-      : _emojis = emojis;
+    : _emojis = emojis;
 
   factory _$EmojisResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$EmojisResponseImplFromJson(json);
@@ -144,13 +151,13 @@ class _$EmojisResponseImpl implements _EmojisResponse {
   @pragma('vm:prefer-inline')
   _$$EmojisResponseImplCopyWith<_$EmojisResponseImpl> get copyWith =>
       __$$EmojisResponseImplCopyWithImpl<_$EmojisResponseImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$EmojisResponseImplToJson(
-      this,
-    );
+    return _$$EmojisResponseImplToJson(this);
   }
 }
 
@@ -202,14 +209,15 @@ abstract class $EmojiCopyWith<$Res> {
   factory $EmojiCopyWith(Emoji value, $Res Function(Emoji) then) =
       _$EmojiCopyWithImpl<$Res, Emoji>;
   @useResult
-  $Res call(
-      {List<String> aliases,
-      String name,
-      String? category,
-      @NullableUriConverter() Uri? url,
-      bool? localOnly,
-      bool isSensitive,
-      List<String>? roleIdsThatCanBeUsedThisEmojiAsReaction});
+  $Res call({
+    List<String> aliases,
+    String name,
+    String? category,
+    @NullableUriConverter() Uri? url,
+    bool? localOnly,
+    bool isSensitive,
+    List<String>? roleIdsThatCanBeUsedThisEmojiAsReaction,
+  });
 }
 
 /// @nodoc
@@ -235,55 +243,66 @@ class _$EmojiCopyWithImpl<$Res, $Val extends Emoji>
     Object? isSensitive = null,
     Object? roleIdsThatCanBeUsedThisEmojiAsReaction = freezed,
   }) {
-    return _then(_value.copyWith(
-      aliases: null == aliases
-          ? _value.aliases
-          : aliases // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      category: freezed == category
-          ? _value.category
-          : category // ignore: cast_nullable_to_non_nullable
-              as String?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      localOnly: freezed == localOnly
-          ? _value.localOnly
-          : localOnly // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      isSensitive: null == isSensitive
-          ? _value.isSensitive
-          : isSensitive // ignore: cast_nullable_to_non_nullable
-              as bool,
-      roleIdsThatCanBeUsedThisEmojiAsReaction: freezed ==
-              roleIdsThatCanBeUsedThisEmojiAsReaction
-          ? _value.roleIdsThatCanBeUsedThisEmojiAsReaction
-          : roleIdsThatCanBeUsedThisEmojiAsReaction // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            aliases:
+                null == aliases
+                    ? _value.aliases
+                    : aliases // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            category:
+                freezed == category
+                    ? _value.category
+                    : category // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            url:
+                freezed == url
+                    ? _value.url
+                    : url // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            localOnly:
+                freezed == localOnly
+                    ? _value.localOnly
+                    : localOnly // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            isSensitive:
+                null == isSensitive
+                    ? _value.isSensitive
+                    : isSensitive // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            roleIdsThatCanBeUsedThisEmojiAsReaction:
+                freezed == roleIdsThatCanBeUsedThisEmojiAsReaction
+                    ? _value.roleIdsThatCanBeUsedThisEmojiAsReaction
+                    : roleIdsThatCanBeUsedThisEmojiAsReaction // ignore: cast_nullable_to_non_nullable
+                        as List<String>?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$EmojiImplCopyWith<$Res> implements $EmojiCopyWith<$Res> {
   factory _$$EmojiImplCopyWith(
-          _$EmojiImpl value, $Res Function(_$EmojiImpl) then) =
-      __$$EmojiImplCopyWithImpl<$Res>;
+    _$EmojiImpl value,
+    $Res Function(_$EmojiImpl) then,
+  ) = __$$EmojiImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {List<String> aliases,
-      String name,
-      String? category,
-      @NullableUriConverter() Uri? url,
-      bool? localOnly,
-      bool isSensitive,
-      List<String>? roleIdsThatCanBeUsedThisEmojiAsReaction});
+  $Res call({
+    List<String> aliases,
+    String name,
+    String? category,
+    @NullableUriConverter() Uri? url,
+    bool? localOnly,
+    bool isSensitive,
+    List<String>? roleIdsThatCanBeUsedThisEmojiAsReaction,
+  });
 }
 
 /// @nodoc
@@ -291,8 +310,9 @@ class __$$EmojiImplCopyWithImpl<$Res>
     extends _$EmojiCopyWithImpl<$Res, _$EmojiImpl>
     implements _$$EmojiImplCopyWith<$Res> {
   __$$EmojiImplCopyWithImpl(
-      _$EmojiImpl _value, $Res Function(_$EmojiImpl) _then)
-      : super(_value, _then);
+    _$EmojiImpl _value,
+    $Res Function(_$EmojiImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of Emoji
   /// with the given fields replaced by the non-null parameter values.
@@ -307,54 +327,62 @@ class __$$EmojiImplCopyWithImpl<$Res>
     Object? isSensitive = null,
     Object? roleIdsThatCanBeUsedThisEmojiAsReaction = freezed,
   }) {
-    return _then(_$EmojiImpl(
-      aliases: null == aliases
-          ? _value._aliases
-          : aliases // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      category: freezed == category
-          ? _value.category
-          : category // ignore: cast_nullable_to_non_nullable
-              as String?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      localOnly: freezed == localOnly
-          ? _value.localOnly
-          : localOnly // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      isSensitive: null == isSensitive
-          ? _value.isSensitive
-          : isSensitive // ignore: cast_nullable_to_non_nullable
-              as bool,
-      roleIdsThatCanBeUsedThisEmojiAsReaction: freezed ==
-              roleIdsThatCanBeUsedThisEmojiAsReaction
-          ? _value._roleIdsThatCanBeUsedThisEmojiAsReaction
-          : roleIdsThatCanBeUsedThisEmojiAsReaction // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-    ));
+    return _then(
+      _$EmojiImpl(
+        aliases:
+            null == aliases
+                ? _value._aliases
+                : aliases // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        category:
+            freezed == category
+                ? _value.category
+                : category // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        url:
+            freezed == url
+                ? _value.url
+                : url // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        localOnly:
+            freezed == localOnly
+                ? _value.localOnly
+                : localOnly // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        isSensitive:
+            null == isSensitive
+                ? _value.isSensitive
+                : isSensitive // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        roleIdsThatCanBeUsedThisEmojiAsReaction:
+            freezed == roleIdsThatCanBeUsedThisEmojiAsReaction
+                ? _value._roleIdsThatCanBeUsedThisEmojiAsReaction
+                : roleIdsThatCanBeUsedThisEmojiAsReaction // ignore: cast_nullable_to_non_nullable
+                    as List<String>?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$EmojiImpl implements _Emoji {
-  const _$EmojiImpl(
-      {final List<String> aliases = const [],
-      required this.name,
-      this.category,
-      @NullableUriConverter() this.url,
-      this.localOnly,
-      this.isSensitive = false,
-      final List<String>? roleIdsThatCanBeUsedThisEmojiAsReaction})
-      : _aliases = aliases,
-        _roleIdsThatCanBeUsedThisEmojiAsReaction =
-            roleIdsThatCanBeUsedThisEmojiAsReaction;
+  const _$EmojiImpl({
+    final List<String> aliases = const [],
+    required this.name,
+    this.category,
+    @NullableUriConverter() this.url,
+    this.localOnly,
+    this.isSensitive = false,
+    final List<String>? roleIdsThatCanBeUsedThisEmojiAsReaction,
+  }) : _aliases = aliases,
+       _roleIdsThatCanBeUsedThisEmojiAsReaction =
+           roleIdsThatCanBeUsedThisEmojiAsReaction;
 
   factory _$EmojiImpl.fromJson(Map<String, dynamic> json) =>
       _$$EmojiImplFromJson(json);
@@ -411,22 +439,25 @@ class _$EmojiImpl implements _Emoji {
             (identical(other.isSensitive, isSensitive) ||
                 other.isSensitive == isSensitive) &&
             const DeepCollectionEquality().equals(
-                other._roleIdsThatCanBeUsedThisEmojiAsReaction,
-                _roleIdsThatCanBeUsedThisEmojiAsReaction));
+              other._roleIdsThatCanBeUsedThisEmojiAsReaction,
+              _roleIdsThatCanBeUsedThisEmojiAsReaction,
+            ));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(_aliases),
-      name,
-      category,
-      url,
-      localOnly,
-      isSensitive,
-      const DeepCollectionEquality()
-          .hash(_roleIdsThatCanBeUsedThisEmojiAsReaction));
+    runtimeType,
+    const DeepCollectionEquality().hash(_aliases),
+    name,
+    category,
+    url,
+    localOnly,
+    isSensitive,
+    const DeepCollectionEquality().hash(
+      _roleIdsThatCanBeUsedThisEmojiAsReaction,
+    ),
+  );
 
   /// Create a copy of Emoji
   /// with the given fields replaced by the non-null parameter values.
@@ -438,22 +469,20 @@ class _$EmojiImpl implements _Emoji {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$EmojiImplToJson(
-      this,
-    );
+    return _$$EmojiImplToJson(this);
   }
 }
 
 abstract class _Emoji implements Emoji {
-  const factory _Emoji(
-          {final List<String> aliases,
-          required final String name,
-          final String? category,
-          @NullableUriConverter() final Uri? url,
-          final bool? localOnly,
-          final bool isSensitive,
-          final List<String>? roleIdsThatCanBeUsedThisEmojiAsReaction}) =
-      _$EmojiImpl;
+  const factory _Emoji({
+    final List<String> aliases,
+    required final String name,
+    final String? category,
+    @NullableUriConverter() final Uri? url,
+    final bool? localOnly,
+    final bool isSensitive,
+    final List<String>? roleIdsThatCanBeUsedThisEmojiAsReaction,
+  }) = _$EmojiImpl;
 
   factory _Emoji.fromJson(Map<String, dynamic> json) = _$EmojiImpl.fromJson;
 

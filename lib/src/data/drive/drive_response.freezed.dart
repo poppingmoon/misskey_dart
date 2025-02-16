@@ -12,7 +12,8 @@ part of 'drive_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 DriveResponse _$DriveResponseFromJson(Map<String, dynamic> json) {
   return _DriveResponse.fromJson(json);
@@ -36,8 +37,9 @@ mixin _$DriveResponse {
 /// @nodoc
 abstract class $DriveResponseCopyWith<$Res> {
   factory $DriveResponseCopyWith(
-          DriveResponse value, $Res Function(DriveResponse) then) =
-      _$DriveResponseCopyWithImpl<$Res, DriveResponse>;
+    DriveResponse value,
+    $Res Function(DriveResponse) then,
+  ) = _$DriveResponseCopyWithImpl<$Res, DriveResponse>;
   @useResult
   $Res call({int capacity, int usage});
 }
@@ -56,20 +58,22 @@ class _$DriveResponseCopyWithImpl<$Res, $Val extends DriveResponse>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? capacity = null,
-    Object? usage = null,
-  }) {
-    return _then(_value.copyWith(
-      capacity: null == capacity
-          ? _value.capacity
-          : capacity // ignore: cast_nullable_to_non_nullable
-              as int,
-      usage: null == usage
-          ? _value.usage
-          : usage // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
+  $Res call({Object? capacity = null, Object? usage = null}) {
+    return _then(
+      _value.copyWith(
+            capacity:
+                null == capacity
+                    ? _value.capacity
+                    : capacity // ignore: cast_nullable_to_non_nullable
+                        as int,
+            usage:
+                null == usage
+                    ? _value.usage
+                    : usage // ignore: cast_nullable_to_non_nullable
+                        as int,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -77,8 +81,9 @@ class _$DriveResponseCopyWithImpl<$Res, $Val extends DriveResponse>
 abstract class _$$DriveResponseImplCopyWith<$Res>
     implements $DriveResponseCopyWith<$Res> {
   factory _$$DriveResponseImplCopyWith(
-          _$DriveResponseImpl value, $Res Function(_$DriveResponseImpl) then) =
-      __$$DriveResponseImplCopyWithImpl<$Res>;
+    _$DriveResponseImpl value,
+    $Res Function(_$DriveResponseImpl) then,
+  ) = __$$DriveResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int capacity, int usage});
@@ -89,27 +94,29 @@ class __$$DriveResponseImplCopyWithImpl<$Res>
     extends _$DriveResponseCopyWithImpl<$Res, _$DriveResponseImpl>
     implements _$$DriveResponseImplCopyWith<$Res> {
   __$$DriveResponseImplCopyWithImpl(
-      _$DriveResponseImpl _value, $Res Function(_$DriveResponseImpl) _then)
-      : super(_value, _then);
+    _$DriveResponseImpl _value,
+    $Res Function(_$DriveResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of DriveResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? capacity = null,
-    Object? usage = null,
-  }) {
-    return _then(_$DriveResponseImpl(
-      capacity: null == capacity
-          ? _value.capacity
-          : capacity // ignore: cast_nullable_to_non_nullable
-              as int,
-      usage: null == usage
-          ? _value.usage
-          : usage // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
+  $Res call({Object? capacity = null, Object? usage = null}) {
+    return _then(
+      _$DriveResponseImpl(
+        capacity:
+            null == capacity
+                ? _value.capacity
+                : capacity // ignore: cast_nullable_to_non_nullable
+                    as int,
+        usage:
+            null == usage
+                ? _value.usage
+                : usage // ignore: cast_nullable_to_non_nullable
+                    as int,
+      ),
+    );
   }
 }
 
@@ -155,16 +162,15 @@ class _$DriveResponseImpl implements _DriveResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DriveResponseImplToJson(
-      this,
-    );
+    return _$$DriveResponseImplToJson(this);
   }
 }
 
 abstract class _DriveResponse implements DriveResponse {
-  const factory _DriveResponse(
-      {required final int capacity,
-      required final int usage}) = _$DriveResponseImpl;
+  const factory _DriveResponse({
+    required final int capacity,
+    required final int usage,
+  }) = _$DriveResponseImpl;
 
   factory _DriveResponse.fromJson(Map<String, dynamic> json) =
       _$DriveResponseImpl.fromJson;

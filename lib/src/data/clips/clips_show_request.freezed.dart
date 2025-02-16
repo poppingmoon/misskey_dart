@@ -12,7 +12,8 @@ part of 'clips_show_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ClipsShowRequest _$ClipsShowRequestFromJson(Map<String, dynamic> json) {
   return _ClipsShowRequest.fromJson(json);
@@ -35,8 +36,9 @@ mixin _$ClipsShowRequest {
 /// @nodoc
 abstract class $ClipsShowRequestCopyWith<$Res> {
   factory $ClipsShowRequestCopyWith(
-          ClipsShowRequest value, $Res Function(ClipsShowRequest) then) =
-      _$ClipsShowRequestCopyWithImpl<$Res, ClipsShowRequest>;
+    ClipsShowRequest value,
+    $Res Function(ClipsShowRequest) then,
+  ) = _$ClipsShowRequestCopyWithImpl<$Res, ClipsShowRequest>;
   @useResult
   $Res call({String clipId});
 }
@@ -55,24 +57,27 @@ class _$ClipsShowRequestCopyWithImpl<$Res, $Val extends ClipsShowRequest>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? clipId = null,
-  }) {
-    return _then(_value.copyWith(
-      clipId: null == clipId
-          ? _value.clipId
-          : clipId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? clipId = null}) {
+    return _then(
+      _value.copyWith(
+            clipId:
+                null == clipId
+                    ? _value.clipId
+                    : clipId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$ClipsShowRequestImplCopyWith<$Res>
     implements $ClipsShowRequestCopyWith<$Res> {
-  factory _$$ClipsShowRequestImplCopyWith(_$ClipsShowRequestImpl value,
-          $Res Function(_$ClipsShowRequestImpl) then) =
-      __$$ClipsShowRequestImplCopyWithImpl<$Res>;
+  factory _$$ClipsShowRequestImplCopyWith(
+    _$ClipsShowRequestImpl value,
+    $Res Function(_$ClipsShowRequestImpl) then,
+  ) = __$$ClipsShowRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String clipId});
@@ -82,23 +87,25 @@ abstract class _$$ClipsShowRequestImplCopyWith<$Res>
 class __$$ClipsShowRequestImplCopyWithImpl<$Res>
     extends _$ClipsShowRequestCopyWithImpl<$Res, _$ClipsShowRequestImpl>
     implements _$$ClipsShowRequestImplCopyWith<$Res> {
-  __$$ClipsShowRequestImplCopyWithImpl(_$ClipsShowRequestImpl _value,
-      $Res Function(_$ClipsShowRequestImpl) _then)
-      : super(_value, _then);
+  __$$ClipsShowRequestImplCopyWithImpl(
+    _$ClipsShowRequestImpl _value,
+    $Res Function(_$ClipsShowRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ClipsShowRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? clipId = null,
-  }) {
-    return _then(_$ClipsShowRequestImpl(
-      clipId: null == clipId
-          ? _value.clipId
-          : clipId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? clipId = null}) {
+    return _then(
+      _$ClipsShowRequestImpl(
+        clipId:
+            null == clipId
+                ? _value.clipId
+                : clipId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -137,13 +144,13 @@ class _$ClipsShowRequestImpl implements _ClipsShowRequest {
   @pragma('vm:prefer-inline')
   _$$ClipsShowRequestImplCopyWith<_$ClipsShowRequestImpl> get copyWith =>
       __$$ClipsShowRequestImplCopyWithImpl<_$ClipsShowRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ClipsShowRequestImplToJson(
-      this,
-    );
+    return _$$ClipsShowRequestImplToJson(this);
   }
 }
 

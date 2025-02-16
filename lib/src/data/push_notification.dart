@@ -22,10 +22,7 @@ class PushNotification with _$PushNotification {
       _$PushNotificationFromJson(json);
 }
 
-enum PushNotificationTypes {
-  notification,
-  readAllNotifications,
-}
+enum PushNotificationTypes { notification, readAllNotifications }
 
 @freezed
 class PushNotificationBody with _$PushNotificationBody {

@@ -7,20 +7,16 @@ part of 'following_requests_cancel_request.dart';
 // **************************************************************************
 
 _$FollowingRequestsCancelRequestImpl
-    _$$FollowingRequestsCancelRequestImplFromJson(Map<String, dynamic> json) =>
-        $checkedCreate(
-          r'_$FollowingRequestsCancelRequestImpl',
-          json,
-          ($checkedConvert) {
-            final val = _$FollowingRequestsCancelRequestImpl(
-              userId: $checkedConvert('userId', (v) => v as String),
-            );
-            return val;
-          },
-        );
+_$$FollowingRequestsCancelRequestImplFromJson(Map<String, dynamic> json) =>
+    $checkedCreate(r'_$FollowingRequestsCancelRequestImpl', json, (
+      $checkedConvert,
+    ) {
+      final val = _$FollowingRequestsCancelRequestImpl(
+        userId: $checkedConvert('userId', (v) => v as String),
+      );
+      return val;
+    });
 
 Map<String, dynamic> _$$FollowingRequestsCancelRequestImplToJson(
-        _$FollowingRequestsCancelRequestImpl instance) =>
-    <String, dynamic>{
-      'userId': instance.userId,
-    };
+  _$FollowingRequestsCancelRequestImpl instance,
+) => <String, dynamic>{'userId': instance.userId};

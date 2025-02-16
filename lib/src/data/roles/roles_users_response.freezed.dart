@@ -12,7 +12,8 @@ part of 'roles_users_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 RolesUsersResponse _$RolesUsersResponseFromJson(Map<String, dynamic> json) {
   return _RolesUsersResponse.fromJson(json);
@@ -36,8 +37,9 @@ mixin _$RolesUsersResponse {
 /// @nodoc
 abstract class $RolesUsersResponseCopyWith<$Res> {
   factory $RolesUsersResponseCopyWith(
-          RolesUsersResponse value, $Res Function(RolesUsersResponse) then) =
-      _$RolesUsersResponseCopyWithImpl<$Res, RolesUsersResponse>;
+    RolesUsersResponse value,
+    $Res Function(RolesUsersResponse) then,
+  ) = _$RolesUsersResponseCopyWithImpl<$Res, RolesUsersResponse>;
   @useResult
   $Res call({String id, UserDetailed user});
 }
@@ -56,29 +58,32 @@ class _$RolesUsersResponseCopyWithImpl<$Res, $Val extends RolesUsersResponse>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? user = null,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      user: null == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as UserDetailed,
-    ) as $Val);
+  $Res call({Object? id = null, Object? user = null}) {
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            user:
+                null == user
+                    ? _value.user
+                    : user // ignore: cast_nullable_to_non_nullable
+                        as UserDetailed,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$RolesUsersResponseImplCopyWith<$Res>
     implements $RolesUsersResponseCopyWith<$Res> {
-  factory _$$RolesUsersResponseImplCopyWith(_$RolesUsersResponseImpl value,
-          $Res Function(_$RolesUsersResponseImpl) then) =
-      __$$RolesUsersResponseImplCopyWithImpl<$Res>;
+  factory _$$RolesUsersResponseImplCopyWith(
+    _$RolesUsersResponseImpl value,
+    $Res Function(_$RolesUsersResponseImpl) then,
+  ) = __$$RolesUsersResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, UserDetailed user});
@@ -88,28 +93,30 @@ abstract class _$$RolesUsersResponseImplCopyWith<$Res>
 class __$$RolesUsersResponseImplCopyWithImpl<$Res>
     extends _$RolesUsersResponseCopyWithImpl<$Res, _$RolesUsersResponseImpl>
     implements _$$RolesUsersResponseImplCopyWith<$Res> {
-  __$$RolesUsersResponseImplCopyWithImpl(_$RolesUsersResponseImpl _value,
-      $Res Function(_$RolesUsersResponseImpl) _then)
-      : super(_value, _then);
+  __$$RolesUsersResponseImplCopyWithImpl(
+    _$RolesUsersResponseImpl _value,
+    $Res Function(_$RolesUsersResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of RolesUsersResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? user = null,
-  }) {
-    return _then(_$RolesUsersResponseImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      user: null == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as UserDetailed,
-    ));
+  $Res call({Object? id = null, Object? user = null}) {
+    return _then(
+      _$RolesUsersResponseImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        user:
+            null == user
+                ? _value.user
+                : user // ignore: cast_nullable_to_non_nullable
+                    as UserDetailed,
+      ),
+    );
   }
 }
 
@@ -151,20 +158,21 @@ class _$RolesUsersResponseImpl implements _RolesUsersResponse {
   @pragma('vm:prefer-inline')
   _$$RolesUsersResponseImplCopyWith<_$RolesUsersResponseImpl> get copyWith =>
       __$$RolesUsersResponseImplCopyWithImpl<_$RolesUsersResponseImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$RolesUsersResponseImplToJson(
-      this,
-    );
+    return _$$RolesUsersResponseImplToJson(this);
   }
 }
 
 abstract class _RolesUsersResponse implements RolesUsersResponse {
-  const factory _RolesUsersResponse(
-      {required final String id,
-      required final UserDetailed user}) = _$RolesUsersResponseImpl;
+  const factory _RolesUsersResponse({
+    required final String id,
+    required final UserDetailed user,
+  }) = _$RolesUsersResponseImpl;
 
   factory _RolesUsersResponse.fromJson(Map<String, dynamic> json) =
       _$RolesUsersResponseImpl.fromJson;

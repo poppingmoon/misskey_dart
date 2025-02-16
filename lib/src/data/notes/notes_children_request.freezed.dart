@@ -12,7 +12,8 @@ part of 'notes_children_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 NotesChildrenRequest _$NotesChildrenRequestFromJson(Map<String, dynamic> json) {
   return _NotesChildrenRequest.fromJson(json);
@@ -38,21 +39,25 @@ mixin _$NotesChildrenRequest {
 
 /// @nodoc
 abstract class $NotesChildrenRequestCopyWith<$Res> {
-  factory $NotesChildrenRequestCopyWith(NotesChildrenRequest value,
-          $Res Function(NotesChildrenRequest) then) =
-      _$NotesChildrenRequestCopyWithImpl<$Res, NotesChildrenRequest>;
+  factory $NotesChildrenRequestCopyWith(
+    NotesChildrenRequest value,
+    $Res Function(NotesChildrenRequest) then,
+  ) = _$NotesChildrenRequestCopyWithImpl<$Res, NotesChildrenRequest>;
   @useResult
-  $Res call(
-      {String noteId,
-      int? limit,
-      int? depth,
-      String? sinceId,
-      String? untilId});
+  $Res call({
+    String noteId,
+    int? limit,
+    int? depth,
+    String? sinceId,
+    String? untilId,
+  });
 }
 
 /// @nodoc
-class _$NotesChildrenRequestCopyWithImpl<$Res,
-        $Val extends NotesChildrenRequest>
+class _$NotesChildrenRequestCopyWithImpl<
+  $Res,
+  $Val extends NotesChildrenRequest
+>
     implements $NotesChildrenRequestCopyWith<$Res> {
   _$NotesChildrenRequestCopyWithImpl(this._value, this._then);
 
@@ -72,54 +77,65 @@ class _$NotesChildrenRequestCopyWithImpl<$Res,
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_value.copyWith(
-      noteId: null == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      depth: freezed == depth
-          ? _value.depth
-          : depth // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            noteId:
+                null == noteId
+                    ? _value.noteId
+                    : noteId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            depth:
+                freezed == depth
+                    ? _value.depth
+                    : depth // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$NotesChildrenRequestImplCopyWith<$Res>
     implements $NotesChildrenRequestCopyWith<$Res> {
-  factory _$$NotesChildrenRequestImplCopyWith(_$NotesChildrenRequestImpl value,
-          $Res Function(_$NotesChildrenRequestImpl) then) =
-      __$$NotesChildrenRequestImplCopyWithImpl<$Res>;
+  factory _$$NotesChildrenRequestImplCopyWith(
+    _$NotesChildrenRequestImpl value,
+    $Res Function(_$NotesChildrenRequestImpl) then,
+  ) = __$$NotesChildrenRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String noteId,
-      int? limit,
-      int? depth,
-      String? sinceId,
-      String? untilId});
+  $Res call({
+    String noteId,
+    int? limit,
+    int? depth,
+    String? sinceId,
+    String? untilId,
+  });
 }
 
 /// @nodoc
 class __$$NotesChildrenRequestImplCopyWithImpl<$Res>
     extends _$NotesChildrenRequestCopyWithImpl<$Res, _$NotesChildrenRequestImpl>
     implements _$$NotesChildrenRequestImplCopyWith<$Res> {
-  __$$NotesChildrenRequestImplCopyWithImpl(_$NotesChildrenRequestImpl _value,
-      $Res Function(_$NotesChildrenRequestImpl) _then)
-      : super(_value, _then);
+  __$$NotesChildrenRequestImplCopyWithImpl(
+    _$NotesChildrenRequestImpl _value,
+    $Res Function(_$NotesChildrenRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotesChildrenRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -132,40 +148,48 @@ class __$$NotesChildrenRequestImplCopyWithImpl<$Res>
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_$NotesChildrenRequestImpl(
-      noteId: null == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      depth: freezed == depth
-          ? _value.depth
-          : depth // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$NotesChildrenRequestImpl(
+        noteId:
+            null == noteId
+                ? _value.noteId
+                : noteId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        depth:
+            freezed == depth
+                ? _value.depth
+                : depth // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$NotesChildrenRequestImpl implements _NotesChildrenRequest {
-  const _$NotesChildrenRequestImpl(
-      {required this.noteId,
-      this.limit,
-      this.depth,
-      this.sinceId,
-      this.untilId});
+  const _$NotesChildrenRequestImpl({
+    required this.noteId,
+    this.limit,
+    this.depth,
+    this.sinceId,
+    this.untilId,
+  });
 
   factory _$NotesChildrenRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$NotesChildrenRequestImplFromJson(json);
@@ -209,25 +233,26 @@ class _$NotesChildrenRequestImpl implements _NotesChildrenRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$NotesChildrenRequestImplCopyWith<_$NotesChildrenRequestImpl>
-      get copyWith =>
-          __$$NotesChildrenRequestImplCopyWithImpl<_$NotesChildrenRequestImpl>(
-              this, _$identity);
+  get copyWith =>
+      __$$NotesChildrenRequestImplCopyWithImpl<_$NotesChildrenRequestImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotesChildrenRequestImplToJson(
-      this,
-    );
+    return _$$NotesChildrenRequestImplToJson(this);
   }
 }
 
 abstract class _NotesChildrenRequest implements NotesChildrenRequest {
-  const factory _NotesChildrenRequest(
-      {required final String noteId,
-      final int? limit,
-      final int? depth,
-      final String? sinceId,
-      final String? untilId}) = _$NotesChildrenRequestImpl;
+  const factory _NotesChildrenRequest({
+    required final String noteId,
+    final int? limit,
+    final int? depth,
+    final String? sinceId,
+    final String? untilId,
+  }) = _$NotesChildrenRequestImpl;
 
   factory _NotesChildrenRequest.fromJson(Map<String, dynamic> json) =
       _$NotesChildrenRequestImpl.fromJson;
@@ -248,5 +273,5 @@ abstract class _NotesChildrenRequest implements NotesChildrenRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesChildrenRequestImplCopyWith<_$NotesChildrenRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

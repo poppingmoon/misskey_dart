@@ -12,7 +12,8 @@ part of 'emoji_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 EmojiResponse _$EmojiResponseFromJson(Map<String, dynamic> json) {
   return _EmojiResponse.fromJson(json);
@@ -46,20 +47,22 @@ mixin _$EmojiResponse {
 /// @nodoc
 abstract class $EmojiResponseCopyWith<$Res> {
   factory $EmojiResponseCopyWith(
-          EmojiResponse value, $Res Function(EmojiResponse) then) =
-      _$EmojiResponseCopyWithImpl<$Res, EmojiResponse>;
+    EmojiResponse value,
+    $Res Function(EmojiResponse) then,
+  ) = _$EmojiResponseCopyWithImpl<$Res, EmojiResponse>;
   @useResult
-  $Res call(
-      {String id,
-      List<String> aliases,
-      String name,
-      String? category,
-      String? host,
-      @NullableUriConverter() Uri? url,
-      String? license,
-      bool isSensitive,
-      bool localOnly,
-      List<String>? roleIdsThatCanBeUsedThisEmojiAsReaction});
+  $Res call({
+    String id,
+    List<String> aliases,
+    String name,
+    String? category,
+    String? host,
+    @NullableUriConverter() Uri? url,
+    String? license,
+    bool isSensitive,
+    bool localOnly,
+    List<String>? roleIdsThatCanBeUsedThisEmojiAsReaction,
+  });
 }
 
 /// @nodoc
@@ -88,49 +91,61 @@ class _$EmojiResponseCopyWithImpl<$Res, $Val extends EmojiResponse>
     Object? localOnly = null,
     Object? roleIdsThatCanBeUsedThisEmojiAsReaction = freezed,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      aliases: null == aliases
-          ? _value.aliases
-          : aliases // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      category: freezed == category
-          ? _value.category
-          : category // ignore: cast_nullable_to_non_nullable
-              as String?,
-      host: freezed == host
-          ? _value.host
-          : host // ignore: cast_nullable_to_non_nullable
-              as String?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      license: freezed == license
-          ? _value.license
-          : license // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isSensitive: null == isSensitive
-          ? _value.isSensitive
-          : isSensitive // ignore: cast_nullable_to_non_nullable
-              as bool,
-      localOnly: null == localOnly
-          ? _value.localOnly
-          : localOnly // ignore: cast_nullable_to_non_nullable
-              as bool,
-      roleIdsThatCanBeUsedThisEmojiAsReaction: freezed ==
-              roleIdsThatCanBeUsedThisEmojiAsReaction
-          ? _value.roleIdsThatCanBeUsedThisEmojiAsReaction
-          : roleIdsThatCanBeUsedThisEmojiAsReaction // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            aliases:
+                null == aliases
+                    ? _value.aliases
+                    : aliases // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            category:
+                freezed == category
+                    ? _value.category
+                    : category // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            host:
+                freezed == host
+                    ? _value.host
+                    : host // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            url:
+                freezed == url
+                    ? _value.url
+                    : url // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            license:
+                freezed == license
+                    ? _value.license
+                    : license // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            isSensitive:
+                null == isSensitive
+                    ? _value.isSensitive
+                    : isSensitive // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            localOnly:
+                null == localOnly
+                    ? _value.localOnly
+                    : localOnly // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            roleIdsThatCanBeUsedThisEmojiAsReaction:
+                freezed == roleIdsThatCanBeUsedThisEmojiAsReaction
+                    ? _value.roleIdsThatCanBeUsedThisEmojiAsReaction
+                    : roleIdsThatCanBeUsedThisEmojiAsReaction // ignore: cast_nullable_to_non_nullable
+                        as List<String>?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -138,21 +153,23 @@ class _$EmojiResponseCopyWithImpl<$Res, $Val extends EmojiResponse>
 abstract class _$$EmojiResponseImplCopyWith<$Res>
     implements $EmojiResponseCopyWith<$Res> {
   factory _$$EmojiResponseImplCopyWith(
-          _$EmojiResponseImpl value, $Res Function(_$EmojiResponseImpl) then) =
-      __$$EmojiResponseImplCopyWithImpl<$Res>;
+    _$EmojiResponseImpl value,
+    $Res Function(_$EmojiResponseImpl) then,
+  ) = __$$EmojiResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      List<String> aliases,
-      String name,
-      String? category,
-      String? host,
-      @NullableUriConverter() Uri? url,
-      String? license,
-      bool isSensitive,
-      bool localOnly,
-      List<String>? roleIdsThatCanBeUsedThisEmojiAsReaction});
+  $Res call({
+    String id,
+    List<String> aliases,
+    String name,
+    String? category,
+    String? host,
+    @NullableUriConverter() Uri? url,
+    String? license,
+    bool isSensitive,
+    bool localOnly,
+    List<String>? roleIdsThatCanBeUsedThisEmojiAsReaction,
+  });
 }
 
 /// @nodoc
@@ -160,8 +177,9 @@ class __$$EmojiResponseImplCopyWithImpl<$Res>
     extends _$EmojiResponseCopyWithImpl<$Res, _$EmojiResponseImpl>
     implements _$$EmojiResponseImplCopyWith<$Res> {
   __$$EmojiResponseImplCopyWithImpl(
-      _$EmojiResponseImpl _value, $Res Function(_$EmojiResponseImpl) _then)
-      : super(_value, _then);
+    _$EmojiResponseImpl _value,
+    $Res Function(_$EmojiResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of EmojiResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -179,69 +197,80 @@ class __$$EmojiResponseImplCopyWithImpl<$Res>
     Object? localOnly = null,
     Object? roleIdsThatCanBeUsedThisEmojiAsReaction = freezed,
   }) {
-    return _then(_$EmojiResponseImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      aliases: null == aliases
-          ? _value._aliases
-          : aliases // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      category: freezed == category
-          ? _value.category
-          : category // ignore: cast_nullable_to_non_nullable
-              as String?,
-      host: freezed == host
-          ? _value.host
-          : host // ignore: cast_nullable_to_non_nullable
-              as String?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      license: freezed == license
-          ? _value.license
-          : license // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isSensitive: null == isSensitive
-          ? _value.isSensitive
-          : isSensitive // ignore: cast_nullable_to_non_nullable
-              as bool,
-      localOnly: null == localOnly
-          ? _value.localOnly
-          : localOnly // ignore: cast_nullable_to_non_nullable
-              as bool,
-      roleIdsThatCanBeUsedThisEmojiAsReaction: freezed ==
-              roleIdsThatCanBeUsedThisEmojiAsReaction
-          ? _value._roleIdsThatCanBeUsedThisEmojiAsReaction
-          : roleIdsThatCanBeUsedThisEmojiAsReaction // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-    ));
+    return _then(
+      _$EmojiResponseImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        aliases:
+            null == aliases
+                ? _value._aliases
+                : aliases // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        category:
+            freezed == category
+                ? _value.category
+                : category // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        host:
+            freezed == host
+                ? _value.host
+                : host // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        url:
+            freezed == url
+                ? _value.url
+                : url // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        license:
+            freezed == license
+                ? _value.license
+                : license // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        isSensitive:
+            null == isSensitive
+                ? _value.isSensitive
+                : isSensitive // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        localOnly:
+            null == localOnly
+                ? _value.localOnly
+                : localOnly // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        roleIdsThatCanBeUsedThisEmojiAsReaction:
+            freezed == roleIdsThatCanBeUsedThisEmojiAsReaction
+                ? _value._roleIdsThatCanBeUsedThisEmojiAsReaction
+                : roleIdsThatCanBeUsedThisEmojiAsReaction // ignore: cast_nullable_to_non_nullable
+                    as List<String>?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$EmojiResponseImpl implements _EmojiResponse {
-  const _$EmojiResponseImpl(
-      {required this.id,
-      final List<String> aliases = const [],
-      required this.name,
-      this.category,
-      this.host,
-      @NullableUriConverter() required this.url,
-      this.license,
-      this.isSensitive = false,
-      this.localOnly = false,
-      final List<String>? roleIdsThatCanBeUsedThisEmojiAsReaction})
-      : _aliases = aliases,
-        _roleIdsThatCanBeUsedThisEmojiAsReaction =
-            roleIdsThatCanBeUsedThisEmojiAsReaction;
+  const _$EmojiResponseImpl({
+    required this.id,
+    final List<String> aliases = const [],
+    required this.name,
+    this.category,
+    this.host,
+    @NullableUriConverter() required this.url,
+    this.license,
+    this.isSensitive = false,
+    this.localOnly = false,
+    final List<String>? roleIdsThatCanBeUsedThisEmojiAsReaction,
+  }) : _aliases = aliases,
+       _roleIdsThatCanBeUsedThisEmojiAsReaction =
+           roleIdsThatCanBeUsedThisEmojiAsReaction;
 
   factory _$EmojiResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$EmojiResponseImplFromJson(json);
@@ -308,25 +337,28 @@ class _$EmojiResponseImpl implements _EmojiResponse {
             (identical(other.localOnly, localOnly) ||
                 other.localOnly == localOnly) &&
             const DeepCollectionEquality().equals(
-                other._roleIdsThatCanBeUsedThisEmojiAsReaction,
-                _roleIdsThatCanBeUsedThisEmojiAsReaction));
+              other._roleIdsThatCanBeUsedThisEmojiAsReaction,
+              _roleIdsThatCanBeUsedThisEmojiAsReaction,
+            ));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      const DeepCollectionEquality().hash(_aliases),
-      name,
-      category,
-      host,
-      url,
-      license,
-      isSensitive,
-      localOnly,
-      const DeepCollectionEquality()
-          .hash(_roleIdsThatCanBeUsedThisEmojiAsReaction));
+    runtimeType,
+    id,
+    const DeepCollectionEquality().hash(_aliases),
+    name,
+    category,
+    host,
+    url,
+    license,
+    isSensitive,
+    localOnly,
+    const DeepCollectionEquality().hash(
+      _roleIdsThatCanBeUsedThisEmojiAsReaction,
+    ),
+  );
 
   /// Create a copy of EmojiResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -338,25 +370,23 @@ class _$EmojiResponseImpl implements _EmojiResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$EmojiResponseImplToJson(
-      this,
-    );
+    return _$$EmojiResponseImplToJson(this);
   }
 }
 
 abstract class _EmojiResponse implements EmojiResponse {
-  const factory _EmojiResponse(
-          {required final String id,
-          final List<String> aliases,
-          required final String name,
-          final String? category,
-          final String? host,
-          @NullableUriConverter() required final Uri? url,
-          final String? license,
-          final bool isSensitive,
-          final bool localOnly,
-          final List<String>? roleIdsThatCanBeUsedThisEmojiAsReaction}) =
-      _$EmojiResponseImpl;
+  const factory _EmojiResponse({
+    required final String id,
+    final List<String> aliases,
+    required final String name,
+    final String? category,
+    final String? host,
+    @NullableUriConverter() required final Uri? url,
+    final String? license,
+    final bool isSensitive,
+    final bool localOnly,
+    final List<String>? roleIdsThatCanBeUsedThisEmojiAsReaction,
+  }) = _$EmojiResponseImpl;
 
   factory _EmojiResponse.fromJson(Map<String, dynamic> json) =
       _$EmojiResponseImpl.fromJson;

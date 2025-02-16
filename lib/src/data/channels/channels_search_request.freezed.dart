@@ -12,10 +12,12 @@ part of 'channels_search_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ChannelsSearchRequest _$ChannelsSearchRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _ChannelsSearchRequest.fromJson(json);
 }
 
@@ -40,21 +42,25 @@ mixin _$ChannelsSearchRequest {
 
 /// @nodoc
 abstract class $ChannelsSearchRequestCopyWith<$Res> {
-  factory $ChannelsSearchRequestCopyWith(ChannelsSearchRequest value,
-          $Res Function(ChannelsSearchRequest) then) =
-      _$ChannelsSearchRequestCopyWithImpl<$Res, ChannelsSearchRequest>;
+  factory $ChannelsSearchRequestCopyWith(
+    ChannelsSearchRequest value,
+    $Res Function(ChannelsSearchRequest) then,
+  ) = _$ChannelsSearchRequestCopyWithImpl<$Res, ChannelsSearchRequest>;
   @useResult
-  $Res call(
-      {String query,
-      ChannelSearchType? type,
-      String? sinceId,
-      String? untilId,
-      @Assert('limit > 0') int? limit});
+  $Res call({
+    String query,
+    ChannelSearchType? type,
+    String? sinceId,
+    String? untilId,
+    @Assert('limit > 0') int? limit,
+  });
 }
 
 /// @nodoc
-class _$ChannelsSearchRequestCopyWithImpl<$Res,
-        $Val extends ChannelsSearchRequest>
+class _$ChannelsSearchRequestCopyWithImpl<
+  $Res,
+  $Val extends ChannelsSearchRequest
+>
     implements $ChannelsSearchRequestCopyWith<$Res> {
   _$ChannelsSearchRequestCopyWithImpl(this._value, this._then);
 
@@ -74,28 +80,36 @@ class _$ChannelsSearchRequestCopyWithImpl<$Res,
     Object? untilId = freezed,
     Object? limit = freezed,
   }) {
-    return _then(_value.copyWith(
-      query: null == query
-          ? _value.query
-          : query // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as ChannelSearchType?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            query:
+                null == query
+                    ? _value.query
+                    : query // ignore: cast_nullable_to_non_nullable
+                        as String,
+            type:
+                freezed == type
+                    ? _value.type
+                    : type // ignore: cast_nullable_to_non_nullable
+                        as ChannelSearchType?,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -103,27 +117,29 @@ class _$ChannelsSearchRequestCopyWithImpl<$Res,
 abstract class _$$ChannelsSearchRequestImplCopyWith<$Res>
     implements $ChannelsSearchRequestCopyWith<$Res> {
   factory _$$ChannelsSearchRequestImplCopyWith(
-          _$ChannelsSearchRequestImpl value,
-          $Res Function(_$ChannelsSearchRequestImpl) then) =
-      __$$ChannelsSearchRequestImplCopyWithImpl<$Res>;
+    _$ChannelsSearchRequestImpl value,
+    $Res Function(_$ChannelsSearchRequestImpl) then,
+  ) = __$$ChannelsSearchRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String query,
-      ChannelSearchType? type,
-      String? sinceId,
-      String? untilId,
-      @Assert('limit > 0') int? limit});
+  $Res call({
+    String query,
+    ChannelSearchType? type,
+    String? sinceId,
+    String? untilId,
+    @Assert('limit > 0') int? limit,
+  });
 }
 
 /// @nodoc
 class __$$ChannelsSearchRequestImplCopyWithImpl<$Res>
-    extends _$ChannelsSearchRequestCopyWithImpl<$Res,
-        _$ChannelsSearchRequestImpl>
+    extends
+        _$ChannelsSearchRequestCopyWithImpl<$Res, _$ChannelsSearchRequestImpl>
     implements _$$ChannelsSearchRequestImplCopyWith<$Res> {
-  __$$ChannelsSearchRequestImplCopyWithImpl(_$ChannelsSearchRequestImpl _value,
-      $Res Function(_$ChannelsSearchRequestImpl) _then)
-      : super(_value, _then);
+  __$$ChannelsSearchRequestImplCopyWithImpl(
+    _$ChannelsSearchRequestImpl _value,
+    $Res Function(_$ChannelsSearchRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelsSearchRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -136,40 +152,48 @@ class __$$ChannelsSearchRequestImplCopyWithImpl<$Res>
     Object? untilId = freezed,
     Object? limit = freezed,
   }) {
-    return _then(_$ChannelsSearchRequestImpl(
-      query: null == query
-          ? _value.query
-          : query // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as ChannelSearchType?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ));
+    return _then(
+      _$ChannelsSearchRequestImpl(
+        query:
+            null == query
+                ? _value.query
+                : query // ignore: cast_nullable_to_non_nullable
+                    as String,
+        type:
+            freezed == type
+                ? _value.type
+                : type // ignore: cast_nullable_to_non_nullable
+                    as ChannelSearchType?,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ChannelsSearchRequestImpl implements _ChannelsSearchRequest {
-  const _$ChannelsSearchRequestImpl(
-      {required this.query,
-      this.type,
-      this.sinceId,
-      this.untilId,
-      @Assert('limit > 0') this.limit});
+  const _$ChannelsSearchRequestImpl({
+    required this.query,
+    this.type,
+    this.sinceId,
+    this.untilId,
+    @Assert('limit > 0') this.limit,
+  });
 
   factory _$ChannelsSearchRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$ChannelsSearchRequestImplFromJson(json);
@@ -214,24 +238,26 @@ class _$ChannelsSearchRequestImpl implements _ChannelsSearchRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$ChannelsSearchRequestImplCopyWith<_$ChannelsSearchRequestImpl>
-      get copyWith => __$$ChannelsSearchRequestImplCopyWithImpl<
-          _$ChannelsSearchRequestImpl>(this, _$identity);
+  get copyWith =>
+      __$$ChannelsSearchRequestImplCopyWithImpl<_$ChannelsSearchRequestImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ChannelsSearchRequestImplToJson(
-      this,
-    );
+    return _$$ChannelsSearchRequestImplToJson(this);
   }
 }
 
 abstract class _ChannelsSearchRequest implements ChannelsSearchRequest {
-  const factory _ChannelsSearchRequest(
-      {required final String query,
-      final ChannelSearchType? type,
-      final String? sinceId,
-      final String? untilId,
-      @Assert('limit > 0') final int? limit}) = _$ChannelsSearchRequestImpl;
+  const factory _ChannelsSearchRequest({
+    required final String query,
+    final ChannelSearchType? type,
+    final String? sinceId,
+    final String? untilId,
+    @Assert('limit > 0') final int? limit,
+  }) = _$ChannelsSearchRequestImpl;
 
   factory _ChannelsSearchRequest.fromJson(Map<String, dynamic> json) =
       _$ChannelsSearchRequestImpl.fromJson;
@@ -253,5 +279,5 @@ abstract class _ChannelsSearchRequest implements ChannelsSearchRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ChannelsSearchRequestImplCopyWith<_$ChannelsSearchRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

@@ -7,20 +7,14 @@ part of 'pages_unlike_request.dart';
 // **************************************************************************
 
 _$PagesUnlikeRequestImpl _$$PagesUnlikeRequestImplFromJson(
-        Map<String, dynamic> json) =>
-    $checkedCreate(
-      r'_$PagesUnlikeRequestImpl',
-      json,
-      ($checkedConvert) {
-        final val = _$PagesUnlikeRequestImpl(
-          pageId: $checkedConvert('pageId', (v) => v as String),
-        );
-        return val;
-      },
-    );
+  Map<String, dynamic> json,
+) => $checkedCreate(r'_$PagesUnlikeRequestImpl', json, ($checkedConvert) {
+  final val = _$PagesUnlikeRequestImpl(
+    pageId: $checkedConvert('pageId', (v) => v as String),
+  );
+  return val;
+});
 
 Map<String, dynamic> _$$PagesUnlikeRequestImplToJson(
-        _$PagesUnlikeRequestImpl instance) =>
-    <String, dynamic>{
-      'pageId': instance.pageId,
-    };
+  _$PagesUnlikeRequestImpl instance,
+) => <String, dynamic>{'pageId': instance.pageId};

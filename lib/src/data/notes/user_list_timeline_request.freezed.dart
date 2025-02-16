@@ -12,10 +12,12 @@ part of 'user_list_timeline_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 UserListTimelineRequest _$UserListTimelineRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _UserListTimelineRequest.fromJson(json);
 }
 
@@ -51,28 +53,32 @@ mixin _$UserListTimelineRequest {
 
 /// @nodoc
 abstract class $UserListTimelineRequestCopyWith<$Res> {
-  factory $UserListTimelineRequestCopyWith(UserListTimelineRequest value,
-          $Res Function(UserListTimelineRequest) then) =
-      _$UserListTimelineRequestCopyWithImpl<$Res, UserListTimelineRequest>;
+  factory $UserListTimelineRequestCopyWith(
+    UserListTimelineRequest value,
+    $Res Function(UserListTimelineRequest) then,
+  ) = _$UserListTimelineRequestCopyWithImpl<$Res, UserListTimelineRequest>;
   @useResult
-  $Res call(
-      {String listId,
-      @Assert('limit > 0') int? limit,
-      String? sinceId,
-      String? untilId,
-      @EpocTimeDateTimeConverter() DateTime? sinceDate,
-      @EpocTimeDateTimeConverter() DateTime? untilDate,
-      bool? includeMyRenotes,
-      bool? includeRenotedMyNotes,
-      bool? includeLocalRenotes,
-      bool? withRenotes,
-      bool? withFiles,
-      bool? allowPartial});
+  $Res call({
+    String listId,
+    @Assert('limit > 0') int? limit,
+    String? sinceId,
+    String? untilId,
+    @EpocTimeDateTimeConverter() DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() DateTime? untilDate,
+    bool? includeMyRenotes,
+    bool? includeRenotedMyNotes,
+    bool? includeLocalRenotes,
+    bool? withRenotes,
+    bool? withFiles,
+    bool? allowPartial,
+  });
 }
 
 /// @nodoc
-class _$UserListTimelineRequestCopyWithImpl<$Res,
-        $Val extends UserListTimelineRequest>
+class _$UserListTimelineRequestCopyWithImpl<
+  $Res,
+  $Val extends UserListTimelineRequest
+>
     implements $UserListTimelineRequestCopyWith<$Res> {
   _$UserListTimelineRequestCopyWithImpl(this._value, this._then);
 
@@ -99,56 +105,71 @@ class _$UserListTimelineRequestCopyWithImpl<$Res,
     Object? withFiles = freezed,
     Object? allowPartial = freezed,
   }) {
-    return _then(_value.copyWith(
-      listId: null == listId
-          ? _value.listId
-          : listId // ignore: cast_nullable_to_non_nullable
-              as String,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      sinceDate: freezed == sinceDate
-          ? _value.sinceDate
-          : sinceDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      untilDate: freezed == untilDate
-          ? _value.untilDate
-          : untilDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      includeMyRenotes: freezed == includeMyRenotes
-          ? _value.includeMyRenotes
-          : includeMyRenotes // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      includeRenotedMyNotes: freezed == includeRenotedMyNotes
-          ? _value.includeRenotedMyNotes
-          : includeRenotedMyNotes // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      includeLocalRenotes: freezed == includeLocalRenotes
-          ? _value.includeLocalRenotes
-          : includeLocalRenotes // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withRenotes: freezed == withRenotes
-          ? _value.withRenotes
-          : withRenotes // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withFiles: freezed == withFiles
-          ? _value.withFiles
-          : withFiles // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      allowPartial: freezed == allowPartial
-          ? _value.allowPartial
-          : allowPartial // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            listId:
+                null == listId
+                    ? _value.listId
+                    : listId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            sinceDate:
+                freezed == sinceDate
+                    ? _value.sinceDate
+                    : sinceDate // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            untilDate:
+                freezed == untilDate
+                    ? _value.untilDate
+                    : untilDate // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            includeMyRenotes:
+                freezed == includeMyRenotes
+                    ? _value.includeMyRenotes
+                    : includeMyRenotes // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            includeRenotedMyNotes:
+                freezed == includeRenotedMyNotes
+                    ? _value.includeRenotedMyNotes
+                    : includeRenotedMyNotes // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            includeLocalRenotes:
+                freezed == includeLocalRenotes
+                    ? _value.includeLocalRenotes
+                    : includeLocalRenotes // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            withRenotes:
+                freezed == withRenotes
+                    ? _value.withRenotes
+                    : withRenotes // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            withFiles:
+                freezed == withFiles
+                    ? _value.withFiles
+                    : withFiles // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            allowPartial:
+                freezed == allowPartial
+                    ? _value.allowPartial
+                    : allowPartial // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -156,35 +177,39 @@ class _$UserListTimelineRequestCopyWithImpl<$Res,
 abstract class _$$UserListTimelineRequestImplCopyWith<$Res>
     implements $UserListTimelineRequestCopyWith<$Res> {
   factory _$$UserListTimelineRequestImplCopyWith(
-          _$UserListTimelineRequestImpl value,
-          $Res Function(_$UserListTimelineRequestImpl) then) =
-      __$$UserListTimelineRequestImplCopyWithImpl<$Res>;
+    _$UserListTimelineRequestImpl value,
+    $Res Function(_$UserListTimelineRequestImpl) then,
+  ) = __$$UserListTimelineRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String listId,
-      @Assert('limit > 0') int? limit,
-      String? sinceId,
-      String? untilId,
-      @EpocTimeDateTimeConverter() DateTime? sinceDate,
-      @EpocTimeDateTimeConverter() DateTime? untilDate,
-      bool? includeMyRenotes,
-      bool? includeRenotedMyNotes,
-      bool? includeLocalRenotes,
-      bool? withRenotes,
-      bool? withFiles,
-      bool? allowPartial});
+  $Res call({
+    String listId,
+    @Assert('limit > 0') int? limit,
+    String? sinceId,
+    String? untilId,
+    @EpocTimeDateTimeConverter() DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() DateTime? untilDate,
+    bool? includeMyRenotes,
+    bool? includeRenotedMyNotes,
+    bool? includeLocalRenotes,
+    bool? withRenotes,
+    bool? withFiles,
+    bool? allowPartial,
+  });
 }
 
 /// @nodoc
 class __$$UserListTimelineRequestImplCopyWithImpl<$Res>
-    extends _$UserListTimelineRequestCopyWithImpl<$Res,
-        _$UserListTimelineRequestImpl>
+    extends
+        _$UserListTimelineRequestCopyWithImpl<
+          $Res,
+          _$UserListTimelineRequestImpl
+        >
     implements _$$UserListTimelineRequestImplCopyWith<$Res> {
   __$$UserListTimelineRequestImplCopyWithImpl(
-      _$UserListTimelineRequestImpl _value,
-      $Res Function(_$UserListTimelineRequestImpl) _then)
-      : super(_value, _then);
+    _$UserListTimelineRequestImpl _value,
+    $Res Function(_$UserListTimelineRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UserListTimelineRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -204,75 +229,90 @@ class __$$UserListTimelineRequestImplCopyWithImpl<$Res>
     Object? withFiles = freezed,
     Object? allowPartial = freezed,
   }) {
-    return _then(_$UserListTimelineRequestImpl(
-      listId: null == listId
-          ? _value.listId
-          : listId // ignore: cast_nullable_to_non_nullable
-              as String,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      sinceDate: freezed == sinceDate
-          ? _value.sinceDate
-          : sinceDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      untilDate: freezed == untilDate
-          ? _value.untilDate
-          : untilDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      includeMyRenotes: freezed == includeMyRenotes
-          ? _value.includeMyRenotes
-          : includeMyRenotes // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      includeRenotedMyNotes: freezed == includeRenotedMyNotes
-          ? _value.includeRenotedMyNotes
-          : includeRenotedMyNotes // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      includeLocalRenotes: freezed == includeLocalRenotes
-          ? _value.includeLocalRenotes
-          : includeLocalRenotes // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withRenotes: freezed == withRenotes
-          ? _value.withRenotes
-          : withRenotes // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withFiles: freezed == withFiles
-          ? _value.withFiles
-          : withFiles // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      allowPartial: freezed == allowPartial
-          ? _value.allowPartial
-          : allowPartial // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+    return _then(
+      _$UserListTimelineRequestImpl(
+        listId:
+            null == listId
+                ? _value.listId
+                : listId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        sinceDate:
+            freezed == sinceDate
+                ? _value.sinceDate
+                : sinceDate // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        untilDate:
+            freezed == untilDate
+                ? _value.untilDate
+                : untilDate // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        includeMyRenotes:
+            freezed == includeMyRenotes
+                ? _value.includeMyRenotes
+                : includeMyRenotes // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        includeRenotedMyNotes:
+            freezed == includeRenotedMyNotes
+                ? _value.includeRenotedMyNotes
+                : includeRenotedMyNotes // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        includeLocalRenotes:
+            freezed == includeLocalRenotes
+                ? _value.includeLocalRenotes
+                : includeLocalRenotes // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        withRenotes:
+            freezed == withRenotes
+                ? _value.withRenotes
+                : withRenotes // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        withFiles:
+            freezed == withFiles
+                ? _value.withFiles
+                : withFiles // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        allowPartial:
+            freezed == allowPartial
+                ? _value.allowPartial
+                : allowPartial // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$UserListTimelineRequestImpl implements _UserListTimelineRequest {
-  const _$UserListTimelineRequestImpl(
-      {required this.listId,
-      @Assert('limit > 0') this.limit,
-      this.sinceId,
-      this.untilId,
-      @EpocTimeDateTimeConverter() this.sinceDate,
-      @EpocTimeDateTimeConverter() this.untilDate,
-      this.includeMyRenotes,
-      this.includeRenotedMyNotes,
-      this.includeLocalRenotes,
-      this.withRenotes,
-      this.withFiles,
-      this.allowPartial});
+  const _$UserListTimelineRequestImpl({
+    required this.listId,
+    @Assert('limit > 0') this.limit,
+    this.sinceId,
+    this.untilId,
+    @EpocTimeDateTimeConverter() this.sinceDate,
+    @EpocTimeDateTimeConverter() this.untilDate,
+    this.includeMyRenotes,
+    this.includeRenotedMyNotes,
+    this.includeLocalRenotes,
+    this.withRenotes,
+    this.withFiles,
+    this.allowPartial,
+  });
 
   factory _$UserListTimelineRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$UserListTimelineRequestImplFromJson(json);
@@ -342,19 +382,20 @@ class _$UserListTimelineRequestImpl implements _UserListTimelineRequest {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      listId,
-      limit,
-      sinceId,
-      untilId,
-      sinceDate,
-      untilDate,
-      includeMyRenotes,
-      includeRenotedMyNotes,
-      includeLocalRenotes,
-      withRenotes,
-      withFiles,
-      allowPartial);
+    runtimeType,
+    listId,
+    limit,
+    sinceId,
+    untilId,
+    sinceDate,
+    untilDate,
+    includeMyRenotes,
+    includeRenotedMyNotes,
+    includeLocalRenotes,
+    withRenotes,
+    withFiles,
+    allowPartial,
+  );
 
   /// Create a copy of UserListTimelineRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -362,31 +403,31 @@ class _$UserListTimelineRequestImpl implements _UserListTimelineRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$UserListTimelineRequestImplCopyWith<_$UserListTimelineRequestImpl>
-      get copyWith => __$$UserListTimelineRequestImplCopyWithImpl<
-          _$UserListTimelineRequestImpl>(this, _$identity);
+  get copyWith => __$$UserListTimelineRequestImplCopyWithImpl<
+    _$UserListTimelineRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UserListTimelineRequestImplToJson(
-      this,
-    );
+    return _$$UserListTimelineRequestImplToJson(this);
   }
 }
 
 abstract class _UserListTimelineRequest implements UserListTimelineRequest {
-  const factory _UserListTimelineRequest(
-      {required final String listId,
-      @Assert('limit > 0') final int? limit,
-      final String? sinceId,
-      final String? untilId,
-      @EpocTimeDateTimeConverter() final DateTime? sinceDate,
-      @EpocTimeDateTimeConverter() final DateTime? untilDate,
-      final bool? includeMyRenotes,
-      final bool? includeRenotedMyNotes,
-      final bool? includeLocalRenotes,
-      final bool? withRenotes,
-      final bool? withFiles,
-      final bool? allowPartial}) = _$UserListTimelineRequestImpl;
+  const factory _UserListTimelineRequest({
+    required final String listId,
+    @Assert('limit > 0') final int? limit,
+    final String? sinceId,
+    final String? untilId,
+    @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() final DateTime? untilDate,
+    final bool? includeMyRenotes,
+    final bool? includeRenotedMyNotes,
+    final bool? includeLocalRenotes,
+    final bool? withRenotes,
+    final bool? withFiles,
+    final bool? allowPartial,
+  }) = _$UserListTimelineRequestImpl;
 
   factory _UserListTimelineRequest.fromJson(Map<String, dynamic> json) =
       _$UserListTimelineRequestImpl.fromJson;
@@ -426,5 +467,5 @@ abstract class _UserListTimelineRequest implements UserListTimelineRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UserListTimelineRequestImplCopyWith<_$UserListTimelineRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

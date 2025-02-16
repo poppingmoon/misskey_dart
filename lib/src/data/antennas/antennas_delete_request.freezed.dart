@@ -12,10 +12,12 @@ part of 'antennas_delete_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 AntennasDeleteRequest _$AntennasDeleteRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _AntennasDeleteRequest.fromJson(json);
 }
 
@@ -35,16 +37,19 @@ mixin _$AntennasDeleteRequest {
 
 /// @nodoc
 abstract class $AntennasDeleteRequestCopyWith<$Res> {
-  factory $AntennasDeleteRequestCopyWith(AntennasDeleteRequest value,
-          $Res Function(AntennasDeleteRequest) then) =
-      _$AntennasDeleteRequestCopyWithImpl<$Res, AntennasDeleteRequest>;
+  factory $AntennasDeleteRequestCopyWith(
+    AntennasDeleteRequest value,
+    $Res Function(AntennasDeleteRequest) then,
+  ) = _$AntennasDeleteRequestCopyWithImpl<$Res, AntennasDeleteRequest>;
   @useResult
   $Res call({String antennaId});
 }
 
 /// @nodoc
-class _$AntennasDeleteRequestCopyWithImpl<$Res,
-        $Val extends AntennasDeleteRequest>
+class _$AntennasDeleteRequestCopyWithImpl<
+  $Res,
+  $Val extends AntennasDeleteRequest
+>
     implements $AntennasDeleteRequestCopyWith<$Res> {
   _$AntennasDeleteRequestCopyWithImpl(this._value, this._then);
 
@@ -57,15 +62,17 @@ class _$AntennasDeleteRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? antennaId = null,
-  }) {
-    return _then(_value.copyWith(
-      antennaId: null == antennaId
-          ? _value.antennaId
-          : antennaId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? antennaId = null}) {
+    return _then(
+      _value.copyWith(
+            antennaId:
+                null == antennaId
+                    ? _value.antennaId
+                    : antennaId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -73,9 +80,9 @@ class _$AntennasDeleteRequestCopyWithImpl<$Res,
 abstract class _$$AntennasDeleteRequestImplCopyWith<$Res>
     implements $AntennasDeleteRequestCopyWith<$Res> {
   factory _$$AntennasDeleteRequestImplCopyWith(
-          _$AntennasDeleteRequestImpl value,
-          $Res Function(_$AntennasDeleteRequestImpl) then) =
-      __$$AntennasDeleteRequestImplCopyWithImpl<$Res>;
+    _$AntennasDeleteRequestImpl value,
+    $Res Function(_$AntennasDeleteRequestImpl) then,
+  ) = __$$AntennasDeleteRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String antennaId});
@@ -83,26 +90,28 @@ abstract class _$$AntennasDeleteRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$AntennasDeleteRequestImplCopyWithImpl<$Res>
-    extends _$AntennasDeleteRequestCopyWithImpl<$Res,
-        _$AntennasDeleteRequestImpl>
+    extends
+        _$AntennasDeleteRequestCopyWithImpl<$Res, _$AntennasDeleteRequestImpl>
     implements _$$AntennasDeleteRequestImplCopyWith<$Res> {
-  __$$AntennasDeleteRequestImplCopyWithImpl(_$AntennasDeleteRequestImpl _value,
-      $Res Function(_$AntennasDeleteRequestImpl) _then)
-      : super(_value, _then);
+  __$$AntennasDeleteRequestImplCopyWithImpl(
+    _$AntennasDeleteRequestImpl _value,
+    $Res Function(_$AntennasDeleteRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of AntennasDeleteRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? antennaId = null,
-  }) {
-    return _then(_$AntennasDeleteRequestImpl(
-      antennaId: null == antennaId
-          ? _value.antennaId
-          : antennaId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? antennaId = null}) {
+    return _then(
+      _$AntennasDeleteRequestImpl(
+        antennaId:
+            null == antennaId
+                ? _value.antennaId
+                : antennaId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -141,14 +150,15 @@ class _$AntennasDeleteRequestImpl implements _AntennasDeleteRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$AntennasDeleteRequestImplCopyWith<_$AntennasDeleteRequestImpl>
-      get copyWith => __$$AntennasDeleteRequestImplCopyWithImpl<
-          _$AntennasDeleteRequestImpl>(this, _$identity);
+  get copyWith =>
+      __$$AntennasDeleteRequestImplCopyWithImpl<_$AntennasDeleteRequestImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AntennasDeleteRequestImplToJson(
-      this,
-    );
+    return _$$AntennasDeleteRequestImplToJson(this);
   }
 }
 
@@ -167,5 +177,5 @@ abstract class _AntennasDeleteRequest implements AntennasDeleteRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AntennasDeleteRequestImplCopyWith<_$AntennasDeleteRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

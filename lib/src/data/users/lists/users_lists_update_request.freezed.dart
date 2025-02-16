@@ -12,10 +12,12 @@ part of 'users_lists_update_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 UsersListsUpdateRequest _$UsersListsUpdateRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _UsersListsUpdateRequest.fromJson(json);
 }
 
@@ -37,16 +39,19 @@ mixin _$UsersListsUpdateRequest {
 
 /// @nodoc
 abstract class $UsersListsUpdateRequestCopyWith<$Res> {
-  factory $UsersListsUpdateRequestCopyWith(UsersListsUpdateRequest value,
-          $Res Function(UsersListsUpdateRequest) then) =
-      _$UsersListsUpdateRequestCopyWithImpl<$Res, UsersListsUpdateRequest>;
+  factory $UsersListsUpdateRequestCopyWith(
+    UsersListsUpdateRequest value,
+    $Res Function(UsersListsUpdateRequest) then,
+  ) = _$UsersListsUpdateRequestCopyWithImpl<$Res, UsersListsUpdateRequest>;
   @useResult
   $Res call({String listId, String? name, bool? isPublic});
 }
 
 /// @nodoc
-class _$UsersListsUpdateRequestCopyWithImpl<$Res,
-        $Val extends UsersListsUpdateRequest>
+class _$UsersListsUpdateRequestCopyWithImpl<
+  $Res,
+  $Val extends UsersListsUpdateRequest
+>
     implements $UsersListsUpdateRequestCopyWith<$Res> {
   _$UsersListsUpdateRequestCopyWithImpl(this._value, this._then);
 
@@ -64,20 +69,26 @@ class _$UsersListsUpdateRequestCopyWithImpl<$Res,
     Object? name = freezed,
     Object? isPublic = freezed,
   }) {
-    return _then(_value.copyWith(
-      listId: null == listId
-          ? _value.listId
-          : listId // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isPublic: freezed == isPublic
-          ? _value.isPublic
-          : isPublic // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            listId:
+                null == listId
+                    ? _value.listId
+                    : listId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            name:
+                freezed == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            isPublic:
+                freezed == isPublic
+                    ? _value.isPublic
+                    : isPublic // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -85,9 +96,9 @@ class _$UsersListsUpdateRequestCopyWithImpl<$Res,
 abstract class _$$UsersListsUpdateRequestImplCopyWith<$Res>
     implements $UsersListsUpdateRequestCopyWith<$Res> {
   factory _$$UsersListsUpdateRequestImplCopyWith(
-          _$UsersListsUpdateRequestImpl value,
-          $Res Function(_$UsersListsUpdateRequestImpl) then) =
-      __$$UsersListsUpdateRequestImplCopyWithImpl<$Res>;
+    _$UsersListsUpdateRequestImpl value,
+    $Res Function(_$UsersListsUpdateRequestImpl) then,
+  ) = __$$UsersListsUpdateRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String listId, String? name, bool? isPublic});
@@ -95,13 +106,16 @@ abstract class _$$UsersListsUpdateRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$UsersListsUpdateRequestImplCopyWithImpl<$Res>
-    extends _$UsersListsUpdateRequestCopyWithImpl<$Res,
-        _$UsersListsUpdateRequestImpl>
+    extends
+        _$UsersListsUpdateRequestCopyWithImpl<
+          $Res,
+          _$UsersListsUpdateRequestImpl
+        >
     implements _$$UsersListsUpdateRequestImplCopyWith<$Res> {
   __$$UsersListsUpdateRequestImplCopyWithImpl(
-      _$UsersListsUpdateRequestImpl _value,
-      $Res Function(_$UsersListsUpdateRequestImpl) _then)
-      : super(_value, _then);
+    _$UsersListsUpdateRequestImpl _value,
+    $Res Function(_$UsersListsUpdateRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UsersListsUpdateRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -112,28 +126,36 @@ class __$$UsersListsUpdateRequestImplCopyWithImpl<$Res>
     Object? name = freezed,
     Object? isPublic = freezed,
   }) {
-    return _then(_$UsersListsUpdateRequestImpl(
-      listId: null == listId
-          ? _value.listId
-          : listId // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isPublic: freezed == isPublic
-          ? _value.isPublic
-          : isPublic // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+    return _then(
+      _$UsersListsUpdateRequestImpl(
+        listId:
+            null == listId
+                ? _value.listId
+                : listId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        name:
+            freezed == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        isPublic:
+            freezed == isPublic
+                ? _value.isPublic
+                : isPublic // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$UsersListsUpdateRequestImpl implements _UsersListsUpdateRequest {
-  const _$UsersListsUpdateRequestImpl(
-      {required this.listId, this.name, this.isPublic});
+  const _$UsersListsUpdateRequestImpl({
+    required this.listId,
+    this.name,
+    this.isPublic,
+  });
 
   factory _$UsersListsUpdateRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$UsersListsUpdateRequestImplFromJson(json);
@@ -171,22 +193,22 @@ class _$UsersListsUpdateRequestImpl implements _UsersListsUpdateRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$UsersListsUpdateRequestImplCopyWith<_$UsersListsUpdateRequestImpl>
-      get copyWith => __$$UsersListsUpdateRequestImplCopyWithImpl<
-          _$UsersListsUpdateRequestImpl>(this, _$identity);
+  get copyWith => __$$UsersListsUpdateRequestImplCopyWithImpl<
+    _$UsersListsUpdateRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UsersListsUpdateRequestImplToJson(
-      this,
-    );
+    return _$$UsersListsUpdateRequestImplToJson(this);
   }
 }
 
 abstract class _UsersListsUpdateRequest implements UsersListsUpdateRequest {
-  const factory _UsersListsUpdateRequest(
-      {required final String listId,
-      final String? name,
-      final bool? isPublic}) = _$UsersListsUpdateRequestImpl;
+  const factory _UsersListsUpdateRequest({
+    required final String listId,
+    final String? name,
+    final bool? isPublic,
+  }) = _$UsersListsUpdateRequestImpl;
 
   factory _UsersListsUpdateRequest.fromJson(Map<String, dynamic> json) =
       _$UsersListsUpdateRequestImpl.fromJson;
@@ -203,5 +225,5 @@ abstract class _UsersListsUpdateRequest implements UsersListsUpdateRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersListsUpdateRequestImplCopyWith<_$UsersListsUpdateRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

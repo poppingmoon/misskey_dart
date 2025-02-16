@@ -12,10 +12,12 @@ part of 'channels_my_favorite_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ChannelsMyFavoriteRequest _$ChannelsMyFavoriteRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _ChannelsMyFavoriteRequest.fromJson(json);
 }
 
@@ -36,16 +38,19 @@ mixin _$ChannelsMyFavoriteRequest {
 
 /// @nodoc
 abstract class $ChannelsMyFavoriteRequestCopyWith<$Res> {
-  factory $ChannelsMyFavoriteRequestCopyWith(ChannelsMyFavoriteRequest value,
-          $Res Function(ChannelsMyFavoriteRequest) then) =
-      _$ChannelsMyFavoriteRequestCopyWithImpl<$Res, ChannelsMyFavoriteRequest>;
+  factory $ChannelsMyFavoriteRequestCopyWith(
+    ChannelsMyFavoriteRequest value,
+    $Res Function(ChannelsMyFavoriteRequest) then,
+  ) = _$ChannelsMyFavoriteRequestCopyWithImpl<$Res, ChannelsMyFavoriteRequest>;
   @useResult
   $Res call({int? limit, bool? noPaging});
 }
 
 /// @nodoc
-class _$ChannelsMyFavoriteRequestCopyWithImpl<$Res,
-        $Val extends ChannelsMyFavoriteRequest>
+class _$ChannelsMyFavoriteRequestCopyWithImpl<
+  $Res,
+  $Val extends ChannelsMyFavoriteRequest
+>
     implements $ChannelsMyFavoriteRequestCopyWith<$Res> {
   _$ChannelsMyFavoriteRequestCopyWithImpl(this._value, this._then);
 
@@ -58,20 +63,22 @@ class _$ChannelsMyFavoriteRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? limit = freezed,
-    Object? noPaging = freezed,
-  }) {
-    return _then(_value.copyWith(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      noPaging: freezed == noPaging
-          ? _value.noPaging
-          : noPaging // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+  $Res call({Object? limit = freezed, Object? noPaging = freezed}) {
+    return _then(
+      _value.copyWith(
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            noPaging:
+                freezed == noPaging
+                    ? _value.noPaging
+                    : noPaging // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -79,9 +86,9 @@ class _$ChannelsMyFavoriteRequestCopyWithImpl<$Res,
 abstract class _$$ChannelsMyFavoriteRequestImplCopyWith<$Res>
     implements $ChannelsMyFavoriteRequestCopyWith<$Res> {
   factory _$$ChannelsMyFavoriteRequestImplCopyWith(
-          _$ChannelsMyFavoriteRequestImpl value,
-          $Res Function(_$ChannelsMyFavoriteRequestImpl) then) =
-      __$$ChannelsMyFavoriteRequestImplCopyWithImpl<$Res>;
+    _$ChannelsMyFavoriteRequestImpl value,
+    $Res Function(_$ChannelsMyFavoriteRequestImpl) then,
+  ) = __$$ChannelsMyFavoriteRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? limit, bool? noPaging});
@@ -89,32 +96,36 @@ abstract class _$$ChannelsMyFavoriteRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$ChannelsMyFavoriteRequestImplCopyWithImpl<$Res>
-    extends _$ChannelsMyFavoriteRequestCopyWithImpl<$Res,
-        _$ChannelsMyFavoriteRequestImpl>
+    extends
+        _$ChannelsMyFavoriteRequestCopyWithImpl<
+          $Res,
+          _$ChannelsMyFavoriteRequestImpl
+        >
     implements _$$ChannelsMyFavoriteRequestImplCopyWith<$Res> {
   __$$ChannelsMyFavoriteRequestImplCopyWithImpl(
-      _$ChannelsMyFavoriteRequestImpl _value,
-      $Res Function(_$ChannelsMyFavoriteRequestImpl) _then)
-      : super(_value, _then);
+    _$ChannelsMyFavoriteRequestImpl _value,
+    $Res Function(_$ChannelsMyFavoriteRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelsMyFavoriteRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? limit = freezed,
-    Object? noPaging = freezed,
-  }) {
-    return _then(_$ChannelsMyFavoriteRequestImpl(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      noPaging: freezed == noPaging
-          ? _value.noPaging
-          : noPaging // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+  $Res call({Object? limit = freezed, Object? noPaging = freezed}) {
+    return _then(
+      _$ChannelsMyFavoriteRequestImpl(
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        noPaging:
+            freezed == noPaging
+                ? _value.noPaging
+                : noPaging // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
   }
 }
 
@@ -156,21 +167,21 @@ class _$ChannelsMyFavoriteRequestImpl implements _ChannelsMyFavoriteRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$ChannelsMyFavoriteRequestImplCopyWith<_$ChannelsMyFavoriteRequestImpl>
-      get copyWith => __$$ChannelsMyFavoriteRequestImplCopyWithImpl<
-          _$ChannelsMyFavoriteRequestImpl>(this, _$identity);
+  get copyWith => __$$ChannelsMyFavoriteRequestImplCopyWithImpl<
+    _$ChannelsMyFavoriteRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ChannelsMyFavoriteRequestImplToJson(
-      this,
-    );
+    return _$$ChannelsMyFavoriteRequestImplToJson(this);
   }
 }
 
 abstract class _ChannelsMyFavoriteRequest implements ChannelsMyFavoriteRequest {
-  const factory _ChannelsMyFavoriteRequest(
-      {final int? limit,
-      final bool? noPaging}) = _$ChannelsMyFavoriteRequestImpl;
+  const factory _ChannelsMyFavoriteRequest({
+    final int? limit,
+    final bool? noPaging,
+  }) = _$ChannelsMyFavoriteRequestImpl;
 
   factory _ChannelsMyFavoriteRequest.fromJson(Map<String, dynamic> json) =
       _$ChannelsMyFavoriteRequestImpl.fromJson;
@@ -185,5 +196,5 @@ abstract class _ChannelsMyFavoriteRequest implements ChannelsMyFavoriteRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ChannelsMyFavoriteRequestImplCopyWith<_$ChannelsMyFavoriteRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

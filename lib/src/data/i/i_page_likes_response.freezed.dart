@@ -12,7 +12,8 @@ part of 'i_page_likes_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 IPageLikesResponse _$IPageLikesResponseFromJson(Map<String, dynamic> json) {
   return _IPageLikesResponse.fromJson(json);
@@ -36,8 +37,9 @@ mixin _$IPageLikesResponse {
 /// @nodoc
 abstract class $IPageLikesResponseCopyWith<$Res> {
   factory $IPageLikesResponseCopyWith(
-          IPageLikesResponse value, $Res Function(IPageLikesResponse) then) =
-      _$IPageLikesResponseCopyWithImpl<$Res, IPageLikesResponse>;
+    IPageLikesResponse value,
+    $Res Function(IPageLikesResponse) then,
+  ) = _$IPageLikesResponseCopyWithImpl<$Res, IPageLikesResponse>;
   @useResult
   $Res call({String id, Page page});
 
@@ -58,20 +60,22 @@ class _$IPageLikesResponseCopyWithImpl<$Res, $Val extends IPageLikesResponse>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? page = null,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      page: null == page
-          ? _value.page
-          : page // ignore: cast_nullable_to_non_nullable
-              as Page,
-    ) as $Val);
+  $Res call({Object? id = null, Object? page = null}) {
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            page:
+                null == page
+                    ? _value.page
+                    : page // ignore: cast_nullable_to_non_nullable
+                        as Page,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of IPageLikesResponse
@@ -88,9 +92,10 @@ class _$IPageLikesResponseCopyWithImpl<$Res, $Val extends IPageLikesResponse>
 /// @nodoc
 abstract class _$$IPageLikesResponseImplCopyWith<$Res>
     implements $IPageLikesResponseCopyWith<$Res> {
-  factory _$$IPageLikesResponseImplCopyWith(_$IPageLikesResponseImpl value,
-          $Res Function(_$IPageLikesResponseImpl) then) =
-      __$$IPageLikesResponseImplCopyWithImpl<$Res>;
+  factory _$$IPageLikesResponseImplCopyWith(
+    _$IPageLikesResponseImpl value,
+    $Res Function(_$IPageLikesResponseImpl) then,
+  ) = __$$IPageLikesResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, Page page});
@@ -103,28 +108,30 @@ abstract class _$$IPageLikesResponseImplCopyWith<$Res>
 class __$$IPageLikesResponseImplCopyWithImpl<$Res>
     extends _$IPageLikesResponseCopyWithImpl<$Res, _$IPageLikesResponseImpl>
     implements _$$IPageLikesResponseImplCopyWith<$Res> {
-  __$$IPageLikesResponseImplCopyWithImpl(_$IPageLikesResponseImpl _value,
-      $Res Function(_$IPageLikesResponseImpl) _then)
-      : super(_value, _then);
+  __$$IPageLikesResponseImplCopyWithImpl(
+    _$IPageLikesResponseImpl _value,
+    $Res Function(_$IPageLikesResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of IPageLikesResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? page = null,
-  }) {
-    return _then(_$IPageLikesResponseImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      page: null == page
-          ? _value.page
-          : page // ignore: cast_nullable_to_non_nullable
-              as Page,
-    ));
+  $Res call({Object? id = null, Object? page = null}) {
+    return _then(
+      _$IPageLikesResponseImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        page:
+            null == page
+                ? _value.page
+                : page // ignore: cast_nullable_to_non_nullable
+                    as Page,
+      ),
+    );
   }
 }
 
@@ -166,20 +173,21 @@ class _$IPageLikesResponseImpl implements _IPageLikesResponse {
   @pragma('vm:prefer-inline')
   _$$IPageLikesResponseImplCopyWith<_$IPageLikesResponseImpl> get copyWith =>
       __$$IPageLikesResponseImplCopyWithImpl<_$IPageLikesResponseImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$IPageLikesResponseImplToJson(
-      this,
-    );
+    return _$$IPageLikesResponseImplToJson(this);
   }
 }
 
 abstract class _IPageLikesResponse implements IPageLikesResponse {
-  const factory _IPageLikesResponse(
-      {required final String id,
-      required final Page page}) = _$IPageLikesResponseImpl;
+  const factory _IPageLikesResponse({
+    required final String id,
+    required final Page page,
+  }) = _$IPageLikesResponseImpl;
 
   factory _IPageLikesResponse.fromJson(Map<String, dynamic> json) =
       _$IPageLikesResponseImpl.fromJson;

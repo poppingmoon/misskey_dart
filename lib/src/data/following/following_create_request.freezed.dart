@@ -12,10 +12,12 @@ part of 'following_create_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 FollowingCreateRequest _$FollowingCreateRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _FollowingCreateRequest.fromJson(json);
 }
 
@@ -36,16 +38,19 @@ mixin _$FollowingCreateRequest {
 
 /// @nodoc
 abstract class $FollowingCreateRequestCopyWith<$Res> {
-  factory $FollowingCreateRequestCopyWith(FollowingCreateRequest value,
-          $Res Function(FollowingCreateRequest) then) =
-      _$FollowingCreateRequestCopyWithImpl<$Res, FollowingCreateRequest>;
+  factory $FollowingCreateRequestCopyWith(
+    FollowingCreateRequest value,
+    $Res Function(FollowingCreateRequest) then,
+  ) = _$FollowingCreateRequestCopyWithImpl<$Res, FollowingCreateRequest>;
   @useResult
   $Res call({String userId, bool? withReplies});
 }
 
 /// @nodoc
-class _$FollowingCreateRequestCopyWithImpl<$Res,
-        $Val extends FollowingCreateRequest>
+class _$FollowingCreateRequestCopyWithImpl<
+  $Res,
+  $Val extends FollowingCreateRequest
+>
     implements $FollowingCreateRequestCopyWith<$Res> {
   _$FollowingCreateRequestCopyWithImpl(this._value, this._then);
 
@@ -58,20 +63,22 @@ class _$FollowingCreateRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? userId = null,
-    Object? withReplies = freezed,
-  }) {
-    return _then(_value.copyWith(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      withReplies: freezed == withReplies
-          ? _value.withReplies
-          : withReplies // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+  $Res call({Object? userId = null, Object? withReplies = freezed}) {
+    return _then(
+      _value.copyWith(
+            userId:
+                null == userId
+                    ? _value.userId
+                    : userId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            withReplies:
+                freezed == withReplies
+                    ? _value.withReplies
+                    : withReplies // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -79,9 +86,9 @@ class _$FollowingCreateRequestCopyWithImpl<$Res,
 abstract class _$$FollowingCreateRequestImplCopyWith<$Res>
     implements $FollowingCreateRequestCopyWith<$Res> {
   factory _$$FollowingCreateRequestImplCopyWith(
-          _$FollowingCreateRequestImpl value,
-          $Res Function(_$FollowingCreateRequestImpl) then) =
-      __$$FollowingCreateRequestImplCopyWithImpl<$Res>;
+    _$FollowingCreateRequestImpl value,
+    $Res Function(_$FollowingCreateRequestImpl) then,
+  ) = __$$FollowingCreateRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String userId, bool? withReplies});
@@ -89,32 +96,33 @@ abstract class _$$FollowingCreateRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$FollowingCreateRequestImplCopyWithImpl<$Res>
-    extends _$FollowingCreateRequestCopyWithImpl<$Res,
-        _$FollowingCreateRequestImpl>
+    extends
+        _$FollowingCreateRequestCopyWithImpl<$Res, _$FollowingCreateRequestImpl>
     implements _$$FollowingCreateRequestImplCopyWith<$Res> {
   __$$FollowingCreateRequestImplCopyWithImpl(
-      _$FollowingCreateRequestImpl _value,
-      $Res Function(_$FollowingCreateRequestImpl) _then)
-      : super(_value, _then);
+    _$FollowingCreateRequestImpl _value,
+    $Res Function(_$FollowingCreateRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of FollowingCreateRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? userId = null,
-    Object? withReplies = freezed,
-  }) {
-    return _then(_$FollowingCreateRequestImpl(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      withReplies: freezed == withReplies
-          ? _value.withReplies
-          : withReplies // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+  $Res call({Object? userId = null, Object? withReplies = freezed}) {
+    return _then(
+      _$FollowingCreateRequestImpl(
+        userId:
+            null == userId
+                ? _value.userId
+                : userId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        withReplies:
+            freezed == withReplies
+                ? _value.withReplies
+                : withReplies // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
   }
 }
 
@@ -156,21 +164,23 @@ class _$FollowingCreateRequestImpl implements _FollowingCreateRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$FollowingCreateRequestImplCopyWith<_$FollowingCreateRequestImpl>
-      get copyWith => __$$FollowingCreateRequestImplCopyWithImpl<
-          _$FollowingCreateRequestImpl>(this, _$identity);
+  get copyWith =>
+      __$$FollowingCreateRequestImplCopyWithImpl<_$FollowingCreateRequestImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$FollowingCreateRequestImplToJson(
-      this,
-    );
+    return _$$FollowingCreateRequestImplToJson(this);
   }
 }
 
 abstract class _FollowingCreateRequest implements FollowingCreateRequest {
-  const factory _FollowingCreateRequest(
-      {required final String userId,
-      final bool? withReplies}) = _$FollowingCreateRequestImpl;
+  const factory _FollowingCreateRequest({
+    required final String userId,
+    final bool? withReplies,
+  }) = _$FollowingCreateRequestImpl;
 
   factory _FollowingCreateRequest.fromJson(Map<String, dynamic> json) =
       _$FollowingCreateRequestImpl.fromJson;
@@ -185,5 +195,5 @@ abstract class _FollowingCreateRequest implements FollowingCreateRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FollowingCreateRequestImplCopyWith<_$FollowingCreateRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

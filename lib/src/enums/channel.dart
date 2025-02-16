@@ -39,7 +39,7 @@ enum Channel {
 
   /// 管理者用のなにか？
   admin,
-  main
+  main,
 }
 
 class ChannelJsonConverter extends JsonConverter<Channel, String> {

@@ -12,7 +12,8 @@ part of 'stats_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 StatsResponse _$StatsResponseFromJson(Map<String, dynamic> json) {
   return _StatsResponse.fromJson(json);
@@ -42,18 +43,20 @@ mixin _$StatsResponse {
 /// @nodoc
 abstract class $StatsResponseCopyWith<$Res> {
   factory $StatsResponseCopyWith(
-          StatsResponse value, $Res Function(StatsResponse) then) =
-      _$StatsResponseCopyWithImpl<$Res, StatsResponse>;
+    StatsResponse value,
+    $Res Function(StatsResponse) then,
+  ) = _$StatsResponseCopyWithImpl<$Res, StatsResponse>;
   @useResult
-  $Res call(
-      {int? notesCount,
-      int? originalNotesCount,
-      int? usersCount,
-      int? originalUsersCount,
-      int? reactionsCount,
-      int? instances,
-      int? driveUsageLocal,
-      int? driveUsageRemote});
+  $Res call({
+    int? notesCount,
+    int? originalNotesCount,
+    int? usersCount,
+    int? originalUsersCount,
+    int? reactionsCount,
+    int? instances,
+    int? driveUsageLocal,
+    int? driveUsageRemote,
+  });
 }
 
 /// @nodoc
@@ -80,40 +83,51 @@ class _$StatsResponseCopyWithImpl<$Res, $Val extends StatsResponse>
     Object? driveUsageLocal = freezed,
     Object? driveUsageRemote = freezed,
   }) {
-    return _then(_value.copyWith(
-      notesCount: freezed == notesCount
-          ? _value.notesCount
-          : notesCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      originalNotesCount: freezed == originalNotesCount
-          ? _value.originalNotesCount
-          : originalNotesCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      usersCount: freezed == usersCount
-          ? _value.usersCount
-          : usersCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      originalUsersCount: freezed == originalUsersCount
-          ? _value.originalUsersCount
-          : originalUsersCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      reactionsCount: freezed == reactionsCount
-          ? _value.reactionsCount
-          : reactionsCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      instances: freezed == instances
-          ? _value.instances
-          : instances // ignore: cast_nullable_to_non_nullable
-              as int?,
-      driveUsageLocal: freezed == driveUsageLocal
-          ? _value.driveUsageLocal
-          : driveUsageLocal // ignore: cast_nullable_to_non_nullable
-              as int?,
-      driveUsageRemote: freezed == driveUsageRemote
-          ? _value.driveUsageRemote
-          : driveUsageRemote // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            notesCount:
+                freezed == notesCount
+                    ? _value.notesCount
+                    : notesCount // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            originalNotesCount:
+                freezed == originalNotesCount
+                    ? _value.originalNotesCount
+                    : originalNotesCount // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            usersCount:
+                freezed == usersCount
+                    ? _value.usersCount
+                    : usersCount // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            originalUsersCount:
+                freezed == originalUsersCount
+                    ? _value.originalUsersCount
+                    : originalUsersCount // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            reactionsCount:
+                freezed == reactionsCount
+                    ? _value.reactionsCount
+                    : reactionsCount // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            instances:
+                freezed == instances
+                    ? _value.instances
+                    : instances // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            driveUsageLocal:
+                freezed == driveUsageLocal
+                    ? _value.driveUsageLocal
+                    : driveUsageLocal // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            driveUsageRemote:
+                freezed == driveUsageRemote
+                    ? _value.driveUsageRemote
+                    : driveUsageRemote // ignore: cast_nullable_to_non_nullable
+                        as int?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -121,19 +135,21 @@ class _$StatsResponseCopyWithImpl<$Res, $Val extends StatsResponse>
 abstract class _$$StatsResponseImplCopyWith<$Res>
     implements $StatsResponseCopyWith<$Res> {
   factory _$$StatsResponseImplCopyWith(
-          _$StatsResponseImpl value, $Res Function(_$StatsResponseImpl) then) =
-      __$$StatsResponseImplCopyWithImpl<$Res>;
+    _$StatsResponseImpl value,
+    $Res Function(_$StatsResponseImpl) then,
+  ) = __$$StatsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int? notesCount,
-      int? originalNotesCount,
-      int? usersCount,
-      int? originalUsersCount,
-      int? reactionsCount,
-      int? instances,
-      int? driveUsageLocal,
-      int? driveUsageRemote});
+  $Res call({
+    int? notesCount,
+    int? originalNotesCount,
+    int? usersCount,
+    int? originalUsersCount,
+    int? reactionsCount,
+    int? instances,
+    int? driveUsageLocal,
+    int? driveUsageRemote,
+  });
 }
 
 /// @nodoc
@@ -141,8 +157,9 @@ class __$$StatsResponseImplCopyWithImpl<$Res>
     extends _$StatsResponseCopyWithImpl<$Res, _$StatsResponseImpl>
     implements _$$StatsResponseImplCopyWith<$Res> {
   __$$StatsResponseImplCopyWithImpl(
-      _$StatsResponseImpl _value, $Res Function(_$StatsResponseImpl) _then)
-      : super(_value, _then);
+    _$StatsResponseImpl _value,
+    $Res Function(_$StatsResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of StatsResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -158,55 +175,66 @@ class __$$StatsResponseImplCopyWithImpl<$Res>
     Object? driveUsageLocal = freezed,
     Object? driveUsageRemote = freezed,
   }) {
-    return _then(_$StatsResponseImpl(
-      notesCount: freezed == notesCount
-          ? _value.notesCount
-          : notesCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      originalNotesCount: freezed == originalNotesCount
-          ? _value.originalNotesCount
-          : originalNotesCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      usersCount: freezed == usersCount
-          ? _value.usersCount
-          : usersCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      originalUsersCount: freezed == originalUsersCount
-          ? _value.originalUsersCount
-          : originalUsersCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      reactionsCount: freezed == reactionsCount
-          ? _value.reactionsCount
-          : reactionsCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      instances: freezed == instances
-          ? _value.instances
-          : instances // ignore: cast_nullable_to_non_nullable
-              as int?,
-      driveUsageLocal: freezed == driveUsageLocal
-          ? _value.driveUsageLocal
-          : driveUsageLocal // ignore: cast_nullable_to_non_nullable
-              as int?,
-      driveUsageRemote: freezed == driveUsageRemote
-          ? _value.driveUsageRemote
-          : driveUsageRemote // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ));
+    return _then(
+      _$StatsResponseImpl(
+        notesCount:
+            freezed == notesCount
+                ? _value.notesCount
+                : notesCount // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        originalNotesCount:
+            freezed == originalNotesCount
+                ? _value.originalNotesCount
+                : originalNotesCount // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        usersCount:
+            freezed == usersCount
+                ? _value.usersCount
+                : usersCount // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        originalUsersCount:
+            freezed == originalUsersCount
+                ? _value.originalUsersCount
+                : originalUsersCount // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        reactionsCount:
+            freezed == reactionsCount
+                ? _value.reactionsCount
+                : reactionsCount // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        instances:
+            freezed == instances
+                ? _value.instances
+                : instances // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        driveUsageLocal:
+            freezed == driveUsageLocal
+                ? _value.driveUsageLocal
+                : driveUsageLocal // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        driveUsageRemote:
+            freezed == driveUsageRemote
+                ? _value.driveUsageRemote
+                : driveUsageRemote // ignore: cast_nullable_to_non_nullable
+                    as int?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$StatsResponseImpl implements _StatsResponse {
-  const _$StatsResponseImpl(
-      {this.notesCount,
-      this.originalNotesCount,
-      this.usersCount,
-      this.originalUsersCount,
-      this.reactionsCount,
-      this.instances,
-      this.driveUsageLocal,
-      this.driveUsageRemote});
+  const _$StatsResponseImpl({
+    this.notesCount,
+    this.originalNotesCount,
+    this.usersCount,
+    this.originalUsersCount,
+    this.reactionsCount,
+    this.instances,
+    this.driveUsageLocal,
+    this.driveUsageRemote,
+  });
 
   factory _$StatsResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$StatsResponseImplFromJson(json);
@@ -259,15 +287,16 @@ class _$StatsResponseImpl implements _StatsResponse {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      notesCount,
-      originalNotesCount,
-      usersCount,
-      originalUsersCount,
-      reactionsCount,
-      instances,
-      driveUsageLocal,
-      driveUsageRemote);
+    runtimeType,
+    notesCount,
+    originalNotesCount,
+    usersCount,
+    originalUsersCount,
+    reactionsCount,
+    instances,
+    driveUsageLocal,
+    driveUsageRemote,
+  );
 
   /// Create a copy of StatsResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -279,22 +308,21 @@ class _$StatsResponseImpl implements _StatsResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$StatsResponseImplToJson(
-      this,
-    );
+    return _$$StatsResponseImplToJson(this);
   }
 }
 
 abstract class _StatsResponse implements StatsResponse {
-  const factory _StatsResponse(
-      {final int? notesCount,
-      final int? originalNotesCount,
-      final int? usersCount,
-      final int? originalUsersCount,
-      final int? reactionsCount,
-      final int? instances,
-      final int? driveUsageLocal,
-      final int? driveUsageRemote}) = _$StatsResponseImpl;
+  const factory _StatsResponse({
+    final int? notesCount,
+    final int? originalNotesCount,
+    final int? usersCount,
+    final int? originalUsersCount,
+    final int? reactionsCount,
+    final int? instances,
+    final int? driveUsageLocal,
+    final int? driveUsageRemote,
+  }) = _$StatsResponseImpl;
 
   factory _StatsResponse.fromJson(Map<String, dynamic> json) =
       _$StatsResponseImpl.fromJson;

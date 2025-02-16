@@ -20,7 +20,4 @@ class SwRegisterResponse with _$SwRegisterResponse {
 }
 
 @JsonEnum(fieldRename: FieldRename.kebab)
-enum SwRegisterResponseState {
-  alreadySubscribed,
-  subscribed,
-}
+enum SwRegisterResponseState { alreadySubscribed, subscribed }

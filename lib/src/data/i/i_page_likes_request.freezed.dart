@@ -12,7 +12,8 @@ part of 'i_page_likes_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 IPageLikesRequest _$IPageLikesRequestFromJson(Map<String, dynamic> json) {
   return _IPageLikesRequest.fromJson(json);
@@ -37,8 +38,9 @@ mixin _$IPageLikesRequest {
 /// @nodoc
 abstract class $IPageLikesRequestCopyWith<$Res> {
   factory $IPageLikesRequestCopyWith(
-          IPageLikesRequest value, $Res Function(IPageLikesRequest) then) =
-      _$IPageLikesRequestCopyWithImpl<$Res, IPageLikesRequest>;
+    IPageLikesRequest value,
+    $Res Function(IPageLikesRequest) then,
+  ) = _$IPageLikesRequestCopyWithImpl<$Res, IPageLikesRequest>;
   @useResult
   $Res call({int? limit, String? sinceId, String? untilId});
 }
@@ -62,29 +64,36 @@ class _$IPageLikesRequestCopyWithImpl<$Res, $Val extends IPageLikesRequest>
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_value.copyWith(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$IPageLikesRequestImplCopyWith<$Res>
     implements $IPageLikesRequestCopyWith<$Res> {
-  factory _$$IPageLikesRequestImplCopyWith(_$IPageLikesRequestImpl value,
-          $Res Function(_$IPageLikesRequestImpl) then) =
-      __$$IPageLikesRequestImplCopyWithImpl<$Res>;
+  factory _$$IPageLikesRequestImplCopyWith(
+    _$IPageLikesRequestImpl value,
+    $Res Function(_$IPageLikesRequestImpl) then,
+  ) = __$$IPageLikesRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? limit, String? sinceId, String? untilId});
@@ -94,9 +103,10 @@ abstract class _$$IPageLikesRequestImplCopyWith<$Res>
 class __$$IPageLikesRequestImplCopyWithImpl<$Res>
     extends _$IPageLikesRequestCopyWithImpl<$Res, _$IPageLikesRequestImpl>
     implements _$$IPageLikesRequestImplCopyWith<$Res> {
-  __$$IPageLikesRequestImplCopyWithImpl(_$IPageLikesRequestImpl _value,
-      $Res Function(_$IPageLikesRequestImpl) _then)
-      : super(_value, _then);
+  __$$IPageLikesRequestImplCopyWithImpl(
+    _$IPageLikesRequestImpl _value,
+    $Res Function(_$IPageLikesRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of IPageLikesRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -107,20 +117,25 @@ class __$$IPageLikesRequestImplCopyWithImpl<$Res>
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_$IPageLikesRequestImpl(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$IPageLikesRequestImpl(
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -165,21 +180,22 @@ class _$IPageLikesRequestImpl implements _IPageLikesRequest {
   @pragma('vm:prefer-inline')
   _$$IPageLikesRequestImplCopyWith<_$IPageLikesRequestImpl> get copyWith =>
       __$$IPageLikesRequestImplCopyWithImpl<_$IPageLikesRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$IPageLikesRequestImplToJson(
-      this,
-    );
+    return _$$IPageLikesRequestImplToJson(this);
   }
 }
 
 abstract class _IPageLikesRequest implements IPageLikesRequest {
-  const factory _IPageLikesRequest(
-      {final int? limit,
-      final String? sinceId,
-      final String? untilId}) = _$IPageLikesRequestImpl;
+  const factory _IPageLikesRequest({
+    final int? limit,
+    final String? sinceId,
+    final String? untilId,
+  }) = _$IPageLikesRequestImpl;
 
   factory _IPageLikesRequest.fromJson(Map<String, dynamic> json) =
       _$IPageLikesRequestImpl.fromJson;

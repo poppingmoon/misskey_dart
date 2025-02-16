@@ -12,7 +12,8 @@ part of 'notes_edit_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 NotesEditRequest _$NotesEditRequestFromJson(Map<String, dynamic> json) {
   return _NotesEditRequest.fromJson(json);
@@ -45,21 +46,23 @@ mixin _$NotesEditRequest {
 /// @nodoc
 abstract class $NotesEditRequestCopyWith<$Res> {
   factory $NotesEditRequestCopyWith(
-          NotesEditRequest value, $Res Function(NotesEditRequest) then) =
-      _$NotesEditRequestCopyWithImpl<$Res, NotesEditRequest>;
+    NotesEditRequest value,
+    $Res Function(NotesEditRequest) then,
+  ) = _$NotesEditRequestCopyWithImpl<$Res, NotesEditRequest>;
   @useResult
-  $Res call(
-      {String editId,
-      NoteVisibility? visibility,
-      List<String>? visibleUserIds,
-      String? text,
-      String? cw,
-      bool? localOnly,
-      List<String>? fileIds,
-      String? replyId,
-      String? renoteId,
-      String? channelId,
-      NotesCreatePollRequest? poll});
+  $Res call({
+    String editId,
+    NoteVisibility? visibility,
+    List<String>? visibleUserIds,
+    String? text,
+    String? cw,
+    bool? localOnly,
+    List<String>? fileIds,
+    String? replyId,
+    String? renoteId,
+    String? channelId,
+    NotesCreatePollRequest? poll,
+  });
 
   $NotesCreatePollRequestCopyWith<$Res>? get poll;
 }
@@ -91,52 +94,66 @@ class _$NotesEditRequestCopyWithImpl<$Res, $Val extends NotesEditRequest>
     Object? channelId = freezed,
     Object? poll = freezed,
   }) {
-    return _then(_value.copyWith(
-      editId: null == editId
-          ? _value.editId
-          : editId // ignore: cast_nullable_to_non_nullable
-              as String,
-      visibility: freezed == visibility
-          ? _value.visibility
-          : visibility // ignore: cast_nullable_to_non_nullable
-              as NoteVisibility?,
-      visibleUserIds: freezed == visibleUserIds
-          ? _value.visibleUserIds
-          : visibleUserIds // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      text: freezed == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String?,
-      cw: freezed == cw
-          ? _value.cw
-          : cw // ignore: cast_nullable_to_non_nullable
-              as String?,
-      localOnly: freezed == localOnly
-          ? _value.localOnly
-          : localOnly // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      fileIds: freezed == fileIds
-          ? _value.fileIds
-          : fileIds // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      replyId: freezed == replyId
-          ? _value.replyId
-          : replyId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      renoteId: freezed == renoteId
-          ? _value.renoteId
-          : renoteId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      channelId: freezed == channelId
-          ? _value.channelId
-          : channelId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      poll: freezed == poll
-          ? _value.poll
-          : poll // ignore: cast_nullable_to_non_nullable
-              as NotesCreatePollRequest?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            editId:
+                null == editId
+                    ? _value.editId
+                    : editId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            visibility:
+                freezed == visibility
+                    ? _value.visibility
+                    : visibility // ignore: cast_nullable_to_non_nullable
+                        as NoteVisibility?,
+            visibleUserIds:
+                freezed == visibleUserIds
+                    ? _value.visibleUserIds
+                    : visibleUserIds // ignore: cast_nullable_to_non_nullable
+                        as List<String>?,
+            text:
+                freezed == text
+                    ? _value.text
+                    : text // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            cw:
+                freezed == cw
+                    ? _value.cw
+                    : cw // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            localOnly:
+                freezed == localOnly
+                    ? _value.localOnly
+                    : localOnly // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            fileIds:
+                freezed == fileIds
+                    ? _value.fileIds
+                    : fileIds // ignore: cast_nullable_to_non_nullable
+                        as List<String>?,
+            replyId:
+                freezed == replyId
+                    ? _value.replyId
+                    : replyId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            renoteId:
+                freezed == renoteId
+                    ? _value.renoteId
+                    : renoteId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            channelId:
+                freezed == channelId
+                    ? _value.channelId
+                    : channelId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            poll:
+                freezed == poll
+                    ? _value.poll
+                    : poll // ignore: cast_nullable_to_non_nullable
+                        as NotesCreatePollRequest?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of NotesEditRequest
@@ -157,23 +174,25 @@ class _$NotesEditRequestCopyWithImpl<$Res, $Val extends NotesEditRequest>
 /// @nodoc
 abstract class _$$NotesEditRequestImplCopyWith<$Res>
     implements $NotesEditRequestCopyWith<$Res> {
-  factory _$$NotesEditRequestImplCopyWith(_$NotesEditRequestImpl value,
-          $Res Function(_$NotesEditRequestImpl) then) =
-      __$$NotesEditRequestImplCopyWithImpl<$Res>;
+  factory _$$NotesEditRequestImplCopyWith(
+    _$NotesEditRequestImpl value,
+    $Res Function(_$NotesEditRequestImpl) then,
+  ) = __$$NotesEditRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String editId,
-      NoteVisibility? visibility,
-      List<String>? visibleUserIds,
-      String? text,
-      String? cw,
-      bool? localOnly,
-      List<String>? fileIds,
-      String? replyId,
-      String? renoteId,
-      String? channelId,
-      NotesCreatePollRequest? poll});
+  $Res call({
+    String editId,
+    NoteVisibility? visibility,
+    List<String>? visibleUserIds,
+    String? text,
+    String? cw,
+    bool? localOnly,
+    List<String>? fileIds,
+    String? replyId,
+    String? renoteId,
+    String? channelId,
+    NotesCreatePollRequest? poll,
+  });
 
   @override
   $NotesCreatePollRequestCopyWith<$Res>? get poll;
@@ -183,9 +202,10 @@ abstract class _$$NotesEditRequestImplCopyWith<$Res>
 class __$$NotesEditRequestImplCopyWithImpl<$Res>
     extends _$NotesEditRequestCopyWithImpl<$Res, _$NotesEditRequestImpl>
     implements _$$NotesEditRequestImplCopyWith<$Res> {
-  __$$NotesEditRequestImplCopyWithImpl(_$NotesEditRequestImpl _value,
-      $Res Function(_$NotesEditRequestImpl) _then)
-      : super(_value, _then);
+  __$$NotesEditRequestImplCopyWithImpl(
+    _$NotesEditRequestImpl _value,
+    $Res Function(_$NotesEditRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotesEditRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -204,72 +224,85 @@ class __$$NotesEditRequestImplCopyWithImpl<$Res>
     Object? channelId = freezed,
     Object? poll = freezed,
   }) {
-    return _then(_$NotesEditRequestImpl(
-      editId: null == editId
-          ? _value.editId
-          : editId // ignore: cast_nullable_to_non_nullable
-              as String,
-      visibility: freezed == visibility
-          ? _value.visibility
-          : visibility // ignore: cast_nullable_to_non_nullable
-              as NoteVisibility?,
-      visibleUserIds: freezed == visibleUserIds
-          ? _value._visibleUserIds
-          : visibleUserIds // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      text: freezed == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String?,
-      cw: freezed == cw
-          ? _value.cw
-          : cw // ignore: cast_nullable_to_non_nullable
-              as String?,
-      localOnly: freezed == localOnly
-          ? _value.localOnly
-          : localOnly // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      fileIds: freezed == fileIds
-          ? _value._fileIds
-          : fileIds // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      replyId: freezed == replyId
-          ? _value.replyId
-          : replyId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      renoteId: freezed == renoteId
-          ? _value.renoteId
-          : renoteId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      channelId: freezed == channelId
-          ? _value.channelId
-          : channelId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      poll: freezed == poll
-          ? _value.poll
-          : poll // ignore: cast_nullable_to_non_nullable
-              as NotesCreatePollRequest?,
-    ));
+    return _then(
+      _$NotesEditRequestImpl(
+        editId:
+            null == editId
+                ? _value.editId
+                : editId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        visibility:
+            freezed == visibility
+                ? _value.visibility
+                : visibility // ignore: cast_nullable_to_non_nullable
+                    as NoteVisibility?,
+        visibleUserIds:
+            freezed == visibleUserIds
+                ? _value._visibleUserIds
+                : visibleUserIds // ignore: cast_nullable_to_non_nullable
+                    as List<String>?,
+        text:
+            freezed == text
+                ? _value.text
+                : text // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        cw:
+            freezed == cw
+                ? _value.cw
+                : cw // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        localOnly:
+            freezed == localOnly
+                ? _value.localOnly
+                : localOnly // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        fileIds:
+            freezed == fileIds
+                ? _value._fileIds
+                : fileIds // ignore: cast_nullable_to_non_nullable
+                    as List<String>?,
+        replyId:
+            freezed == replyId
+                ? _value.replyId
+                : replyId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        renoteId:
+            freezed == renoteId
+                ? _value.renoteId
+                : renoteId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        channelId:
+            freezed == channelId
+                ? _value.channelId
+                : channelId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        poll:
+            freezed == poll
+                ? _value.poll
+                : poll // ignore: cast_nullable_to_non_nullable
+                    as NotesCreatePollRequest?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$NotesEditRequestImpl implements _NotesEditRequest {
-  const _$NotesEditRequestImpl(
-      {required this.editId,
-      this.visibility,
-      final List<String>? visibleUserIds,
-      this.text,
-      this.cw,
-      this.localOnly,
-      final List<String>? fileIds,
-      this.replyId,
-      this.renoteId,
-      this.channelId,
-      this.poll})
-      : _visibleUserIds = visibleUserIds,
-        _fileIds = fileIds;
+  const _$NotesEditRequestImpl({
+    required this.editId,
+    this.visibility,
+    final List<String>? visibleUserIds,
+    this.text,
+    this.cw,
+    this.localOnly,
+    final List<String>? fileIds,
+    this.replyId,
+    this.renoteId,
+    this.channelId,
+    this.poll,
+  }) : _visibleUserIds = visibleUserIds,
+       _fileIds = fileIds;
 
   factory _$NotesEditRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$NotesEditRequestImplFromJson(json);
@@ -326,8 +359,10 @@ class _$NotesEditRequestImpl implements _NotesEditRequest {
             (identical(other.editId, editId) || other.editId == editId) &&
             (identical(other.visibility, visibility) ||
                 other.visibility == visibility) &&
-            const DeepCollectionEquality()
-                .equals(other._visibleUserIds, _visibleUserIds) &&
+            const DeepCollectionEquality().equals(
+              other._visibleUserIds,
+              _visibleUserIds,
+            ) &&
             (identical(other.text, text) || other.text == text) &&
             (identical(other.cw, cw) || other.cw == cw) &&
             (identical(other.localOnly, localOnly) ||
@@ -344,18 +379,19 @@ class _$NotesEditRequestImpl implements _NotesEditRequest {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      editId,
-      visibility,
-      const DeepCollectionEquality().hash(_visibleUserIds),
-      text,
-      cw,
-      localOnly,
-      const DeepCollectionEquality().hash(_fileIds),
-      replyId,
-      renoteId,
-      channelId,
-      poll);
+    runtimeType,
+    editId,
+    visibility,
+    const DeepCollectionEquality().hash(_visibleUserIds),
+    text,
+    cw,
+    localOnly,
+    const DeepCollectionEquality().hash(_fileIds),
+    replyId,
+    renoteId,
+    channelId,
+    poll,
+  );
 
   /// Create a copy of NotesEditRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -364,29 +400,30 @@ class _$NotesEditRequestImpl implements _NotesEditRequest {
   @pragma('vm:prefer-inline')
   _$$NotesEditRequestImplCopyWith<_$NotesEditRequestImpl> get copyWith =>
       __$$NotesEditRequestImplCopyWithImpl<_$NotesEditRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotesEditRequestImplToJson(
-      this,
-    );
+    return _$$NotesEditRequestImplToJson(this);
   }
 }
 
 abstract class _NotesEditRequest implements NotesEditRequest {
-  const factory _NotesEditRequest(
-      {required final String editId,
-      final NoteVisibility? visibility,
-      final List<String>? visibleUserIds,
-      final String? text,
-      final String? cw,
-      final bool? localOnly,
-      final List<String>? fileIds,
-      final String? replyId,
-      final String? renoteId,
-      final String? channelId,
-      final NotesCreatePollRequest? poll}) = _$NotesEditRequestImpl;
+  const factory _NotesEditRequest({
+    required final String editId,
+    final NoteVisibility? visibility,
+    final List<String>? visibleUserIds,
+    final String? text,
+    final String? cw,
+    final bool? localOnly,
+    final List<String>? fileIds,
+    final String? replyId,
+    final String? renoteId,
+    final String? channelId,
+    final NotesCreatePollRequest? poll,
+  }) = _$NotesEditRequestImpl;
 
   factory _NotesEditRequest.fromJson(Map<String, dynamic> json) =
       _$NotesEditRequestImpl.fromJson;

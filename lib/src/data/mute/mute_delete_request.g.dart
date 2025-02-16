@@ -7,20 +7,14 @@ part of 'mute_delete_request.dart';
 // **************************************************************************
 
 _$MuteDeleteRequestImpl _$$MuteDeleteRequestImplFromJson(
-        Map<String, dynamic> json) =>
-    $checkedCreate(
-      r'_$MuteDeleteRequestImpl',
-      json,
-      ($checkedConvert) {
-        final val = _$MuteDeleteRequestImpl(
-          userId: $checkedConvert('userId', (v) => v as String),
-        );
-        return val;
-      },
-    );
+  Map<String, dynamic> json,
+) => $checkedCreate(r'_$MuteDeleteRequestImpl', json, ($checkedConvert) {
+  final val = _$MuteDeleteRequestImpl(
+    userId: $checkedConvert('userId', (v) => v as String),
+  );
+  return val;
+});
 
 Map<String, dynamic> _$$MuteDeleteRequestImplToJson(
-        _$MuteDeleteRequestImpl instance) =>
-    <String, dynamic>{
-      'userId': instance.userId,
-    };
+  _$MuteDeleteRequestImpl instance,
+) => <String, dynamic>{'userId': instance.userId};

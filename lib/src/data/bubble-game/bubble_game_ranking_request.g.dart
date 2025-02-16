@@ -7,20 +7,14 @@ part of 'bubble_game_ranking_request.dart';
 // **************************************************************************
 
 _$BubbleGameRankingRequestImpl _$$BubbleGameRankingRequestImplFromJson(
-        Map<String, dynamic> json) =>
-    $checkedCreate(
-      r'_$BubbleGameRankingRequestImpl',
-      json,
-      ($checkedConvert) {
-        final val = _$BubbleGameRankingRequestImpl(
-          gameMode: $checkedConvert('gameMode', (v) => v as String),
-        );
-        return val;
-      },
-    );
+  Map<String, dynamic> json,
+) => $checkedCreate(r'_$BubbleGameRankingRequestImpl', json, ($checkedConvert) {
+  final val = _$BubbleGameRankingRequestImpl(
+    gameMode: $checkedConvert('gameMode', (v) => v as String),
+  );
+  return val;
+});
 
 Map<String, dynamic> _$$BubbleGameRankingRequestImplToJson(
-        _$BubbleGameRankingRequestImpl instance) =>
-    <String, dynamic>{
-      'gameMode': instance.gameMode,
-    };
+  _$BubbleGameRankingRequestImpl instance,
+) => <String, dynamic>{'gameMode': instance.gameMode};

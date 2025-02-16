@@ -12,10 +12,12 @@ part of 'sw_update_registration_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 SwUpdateRegistrationRequest _$SwUpdateRegistrationRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _SwUpdateRegistrationRequest.fromJson(json);
 }
 
@@ -31,23 +33,28 @@ mixin _$SwUpdateRegistrationRequest {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $SwUpdateRegistrationRequestCopyWith<SwUpdateRegistrationRequest>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $SwUpdateRegistrationRequestCopyWith<$Res> {
   factory $SwUpdateRegistrationRequestCopyWith(
-          SwUpdateRegistrationRequest value,
-          $Res Function(SwUpdateRegistrationRequest) then) =
-      _$SwUpdateRegistrationRequestCopyWithImpl<$Res,
-          SwUpdateRegistrationRequest>;
+    SwUpdateRegistrationRequest value,
+    $Res Function(SwUpdateRegistrationRequest) then,
+  ) =
+      _$SwUpdateRegistrationRequestCopyWithImpl<
+        $Res,
+        SwUpdateRegistrationRequest
+      >;
   @useResult
   $Res call({String endpoint, bool? sendReadMessage});
 }
 
 /// @nodoc
-class _$SwUpdateRegistrationRequestCopyWithImpl<$Res,
-        $Val extends SwUpdateRegistrationRequest>
+class _$SwUpdateRegistrationRequestCopyWithImpl<
+  $Res,
+  $Val extends SwUpdateRegistrationRequest
+>
     implements $SwUpdateRegistrationRequestCopyWith<$Res> {
   _$SwUpdateRegistrationRequestCopyWithImpl(this._value, this._then);
 
@@ -60,20 +67,22 @@ class _$SwUpdateRegistrationRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? endpoint = null,
-    Object? sendReadMessage = freezed,
-  }) {
-    return _then(_value.copyWith(
-      endpoint: null == endpoint
-          ? _value.endpoint
-          : endpoint // ignore: cast_nullable_to_non_nullable
-              as String,
-      sendReadMessage: freezed == sendReadMessage
-          ? _value.sendReadMessage
-          : sendReadMessage // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+  $Res call({Object? endpoint = null, Object? sendReadMessage = freezed}) {
+    return _then(
+      _value.copyWith(
+            endpoint:
+                null == endpoint
+                    ? _value.endpoint
+                    : endpoint // ignore: cast_nullable_to_non_nullable
+                        as String,
+            sendReadMessage:
+                freezed == sendReadMessage
+                    ? _value.sendReadMessage
+                    : sendReadMessage // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -81,9 +90,9 @@ class _$SwUpdateRegistrationRequestCopyWithImpl<$Res,
 abstract class _$$SwUpdateRegistrationRequestImplCopyWith<$Res>
     implements $SwUpdateRegistrationRequestCopyWith<$Res> {
   factory _$$SwUpdateRegistrationRequestImplCopyWith(
-          _$SwUpdateRegistrationRequestImpl value,
-          $Res Function(_$SwUpdateRegistrationRequestImpl) then) =
-      __$$SwUpdateRegistrationRequestImplCopyWithImpl<$Res>;
+    _$SwUpdateRegistrationRequestImpl value,
+    $Res Function(_$SwUpdateRegistrationRequestImpl) then,
+  ) = __$$SwUpdateRegistrationRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String endpoint, bool? sendReadMessage});
@@ -91,32 +100,36 @@ abstract class _$$SwUpdateRegistrationRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$SwUpdateRegistrationRequestImplCopyWithImpl<$Res>
-    extends _$SwUpdateRegistrationRequestCopyWithImpl<$Res,
-        _$SwUpdateRegistrationRequestImpl>
+    extends
+        _$SwUpdateRegistrationRequestCopyWithImpl<
+          $Res,
+          _$SwUpdateRegistrationRequestImpl
+        >
     implements _$$SwUpdateRegistrationRequestImplCopyWith<$Res> {
   __$$SwUpdateRegistrationRequestImplCopyWithImpl(
-      _$SwUpdateRegistrationRequestImpl _value,
-      $Res Function(_$SwUpdateRegistrationRequestImpl) _then)
-      : super(_value, _then);
+    _$SwUpdateRegistrationRequestImpl _value,
+    $Res Function(_$SwUpdateRegistrationRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of SwUpdateRegistrationRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? endpoint = null,
-    Object? sendReadMessage = freezed,
-  }) {
-    return _then(_$SwUpdateRegistrationRequestImpl(
-      endpoint: null == endpoint
-          ? _value.endpoint
-          : endpoint // ignore: cast_nullable_to_non_nullable
-              as String,
-      sendReadMessage: freezed == sendReadMessage
-          ? _value.sendReadMessage
-          : sendReadMessage // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+  $Res call({Object? endpoint = null, Object? sendReadMessage = freezed}) {
+    return _then(
+      _$SwUpdateRegistrationRequestImpl(
+        endpoint:
+            null == endpoint
+                ? _value.endpoint
+                : endpoint // ignore: cast_nullable_to_non_nullable
+                    as String,
+        sendReadMessage:
+            freezed == sendReadMessage
+                ? _value.sendReadMessage
+                : sendReadMessage // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
   }
 }
 
@@ -124,12 +137,14 @@ class __$$SwUpdateRegistrationRequestImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$SwUpdateRegistrationRequestImpl
     implements _SwUpdateRegistrationRequest {
-  const _$SwUpdateRegistrationRequestImpl(
-      {required this.endpoint, this.sendReadMessage});
+  const _$SwUpdateRegistrationRequestImpl({
+    required this.endpoint,
+    this.sendReadMessage,
+  });
 
   factory _$SwUpdateRegistrationRequestImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$SwUpdateRegistrationRequestImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$SwUpdateRegistrationRequestImplFromJson(json);
 
   @override
   final String endpoint;
@@ -162,22 +177,22 @@ class _$SwUpdateRegistrationRequestImpl
   @override
   @pragma('vm:prefer-inline')
   _$$SwUpdateRegistrationRequestImplCopyWith<_$SwUpdateRegistrationRequestImpl>
-      get copyWith => __$$SwUpdateRegistrationRequestImplCopyWithImpl<
-          _$SwUpdateRegistrationRequestImpl>(this, _$identity);
+  get copyWith => __$$SwUpdateRegistrationRequestImplCopyWithImpl<
+    _$SwUpdateRegistrationRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SwUpdateRegistrationRequestImplToJson(
-      this,
-    );
+    return _$$SwUpdateRegistrationRequestImplToJson(this);
   }
 }
 
 abstract class _SwUpdateRegistrationRequest
     implements SwUpdateRegistrationRequest {
-  const factory _SwUpdateRegistrationRequest(
-      {required final String endpoint,
-      final bool? sendReadMessage}) = _$SwUpdateRegistrationRequestImpl;
+  const factory _SwUpdateRegistrationRequest({
+    required final String endpoint,
+    final bool? sendReadMessage,
+  }) = _$SwUpdateRegistrationRequestImpl;
 
   factory _SwUpdateRegistrationRequest.fromJson(Map<String, dynamic> json) =
       _$SwUpdateRegistrationRequestImpl.fromJson;
@@ -192,5 +207,5 @@ abstract class _SwUpdateRegistrationRequest
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SwUpdateRegistrationRequestImplCopyWith<_$SwUpdateRegistrationRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

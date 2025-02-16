@@ -63,10 +63,8 @@ class JoinMisskeyNodeInfo with _$JoinMisskeyNodeInfo {
 
 @freezed
 class JoinMisskeyNodeInfoSoftware with _$JoinMisskeyNodeInfoSoftware {
-  const factory JoinMisskeyNodeInfoSoftware({
-    String? name,
-    String? version,
-  }) = _JoinMisskeyNodeInfoSoftware;
+  const factory JoinMisskeyNodeInfoSoftware({String? name, String? version}) =
+      _JoinMisskeyNodeInfoSoftware;
 
   factory JoinMisskeyNodeInfoSoftware.fromJson(Map<String, dynamic> json) =>
       _$JoinMisskeyNodeInfoSoftwareFromJson(json);
@@ -86,9 +84,8 @@ class JoinMisskeyNodeInfoUsage with _$JoinMisskeyNodeInfoUsage {
 
 @freezed
 class JoinMisskeyNodeInfoUsageUsers with _$JoinMisskeyNodeInfoUsageUsers {
-  const factory JoinMisskeyNodeInfoUsageUsers({
-    int? total,
-  }) = _JoinMisskeyNodeInfoUsageUsers;
+  const factory JoinMisskeyNodeInfoUsageUsers({int? total}) =
+      _JoinMisskeyNodeInfoUsageUsers;
 
   factory JoinMisskeyNodeInfoUsageUsers.fromJson(Map<String, dynamic> json) =>
       _$JoinMisskeyNodeInfoUsageUsersFromJson(json);

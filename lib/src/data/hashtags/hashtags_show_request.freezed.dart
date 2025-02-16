@@ -12,7 +12,8 @@ part of 'hashtags_show_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 HashtagsShowRequest _$HashtagsShowRequestFromJson(Map<String, dynamic> json) {
   return _HashtagsShowRequest.fromJson(json);
@@ -35,8 +36,9 @@ mixin _$HashtagsShowRequest {
 /// @nodoc
 abstract class $HashtagsShowRequestCopyWith<$Res> {
   factory $HashtagsShowRequestCopyWith(
-          HashtagsShowRequest value, $Res Function(HashtagsShowRequest) then) =
-      _$HashtagsShowRequestCopyWithImpl<$Res, HashtagsShowRequest>;
+    HashtagsShowRequest value,
+    $Res Function(HashtagsShowRequest) then,
+  ) = _$HashtagsShowRequestCopyWithImpl<$Res, HashtagsShowRequest>;
   @useResult
   $Res call({String tag});
 }
@@ -55,24 +57,27 @@ class _$HashtagsShowRequestCopyWithImpl<$Res, $Val extends HashtagsShowRequest>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? tag = null,
-  }) {
-    return _then(_value.copyWith(
-      tag: null == tag
-          ? _value.tag
-          : tag // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? tag = null}) {
+    return _then(
+      _value.copyWith(
+            tag:
+                null == tag
+                    ? _value.tag
+                    : tag // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$HashtagsShowRequestImplCopyWith<$Res>
     implements $HashtagsShowRequestCopyWith<$Res> {
-  factory _$$HashtagsShowRequestImplCopyWith(_$HashtagsShowRequestImpl value,
-          $Res Function(_$HashtagsShowRequestImpl) then) =
-      __$$HashtagsShowRequestImplCopyWithImpl<$Res>;
+  factory _$$HashtagsShowRequestImplCopyWith(
+    _$HashtagsShowRequestImpl value,
+    $Res Function(_$HashtagsShowRequestImpl) then,
+  ) = __$$HashtagsShowRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String tag});
@@ -82,23 +87,25 @@ abstract class _$$HashtagsShowRequestImplCopyWith<$Res>
 class __$$HashtagsShowRequestImplCopyWithImpl<$Res>
     extends _$HashtagsShowRequestCopyWithImpl<$Res, _$HashtagsShowRequestImpl>
     implements _$$HashtagsShowRequestImplCopyWith<$Res> {
-  __$$HashtagsShowRequestImplCopyWithImpl(_$HashtagsShowRequestImpl _value,
-      $Res Function(_$HashtagsShowRequestImpl) _then)
-      : super(_value, _then);
+  __$$HashtagsShowRequestImplCopyWithImpl(
+    _$HashtagsShowRequestImpl _value,
+    $Res Function(_$HashtagsShowRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of HashtagsShowRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? tag = null,
-  }) {
-    return _then(_$HashtagsShowRequestImpl(
-      tag: null == tag
-          ? _value.tag
-          : tag // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? tag = null}) {
+    return _then(
+      _$HashtagsShowRequestImpl(
+        tag:
+            null == tag
+                ? _value.tag
+                : tag // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -137,13 +144,13 @@ class _$HashtagsShowRequestImpl implements _HashtagsShowRequest {
   @pragma('vm:prefer-inline')
   _$$HashtagsShowRequestImplCopyWith<_$HashtagsShowRequestImpl> get copyWith =>
       __$$HashtagsShowRequestImplCopyWithImpl<_$HashtagsShowRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$HashtagsShowRequestImplToJson(
-      this,
-    );
+    return _$$HashtagsShowRequestImplToJson(this);
   }
 }
 

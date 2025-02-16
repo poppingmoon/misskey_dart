@@ -12,10 +12,12 @@ part of 'users_lists_create_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 UsersListsCreateRequest _$UsersListsCreateRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _UsersListsCreateRequest.fromJson(json);
 }
 
@@ -35,16 +37,19 @@ mixin _$UsersListsCreateRequest {
 
 /// @nodoc
 abstract class $UsersListsCreateRequestCopyWith<$Res> {
-  factory $UsersListsCreateRequestCopyWith(UsersListsCreateRequest value,
-          $Res Function(UsersListsCreateRequest) then) =
-      _$UsersListsCreateRequestCopyWithImpl<$Res, UsersListsCreateRequest>;
+  factory $UsersListsCreateRequestCopyWith(
+    UsersListsCreateRequest value,
+    $Res Function(UsersListsCreateRequest) then,
+  ) = _$UsersListsCreateRequestCopyWithImpl<$Res, UsersListsCreateRequest>;
   @useResult
   $Res call({String name});
 }
 
 /// @nodoc
-class _$UsersListsCreateRequestCopyWithImpl<$Res,
-        $Val extends UsersListsCreateRequest>
+class _$UsersListsCreateRequestCopyWithImpl<
+  $Res,
+  $Val extends UsersListsCreateRequest
+>
     implements $UsersListsCreateRequestCopyWith<$Res> {
   _$UsersListsCreateRequestCopyWithImpl(this._value, this._then);
 
@@ -57,15 +62,17 @@ class _$UsersListsCreateRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? name = null,
-  }) {
-    return _then(_value.copyWith(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? name = null}) {
+    return _then(
+      _value.copyWith(
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -73,9 +80,9 @@ class _$UsersListsCreateRequestCopyWithImpl<$Res,
 abstract class _$$UsersListsCreateRequestImplCopyWith<$Res>
     implements $UsersListsCreateRequestCopyWith<$Res> {
   factory _$$UsersListsCreateRequestImplCopyWith(
-          _$UsersListsCreateRequestImpl value,
-          $Res Function(_$UsersListsCreateRequestImpl) then) =
-      __$$UsersListsCreateRequestImplCopyWithImpl<$Res>;
+    _$UsersListsCreateRequestImpl value,
+    $Res Function(_$UsersListsCreateRequestImpl) then,
+  ) = __$$UsersListsCreateRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String name});
@@ -83,27 +90,31 @@ abstract class _$$UsersListsCreateRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$UsersListsCreateRequestImplCopyWithImpl<$Res>
-    extends _$UsersListsCreateRequestCopyWithImpl<$Res,
-        _$UsersListsCreateRequestImpl>
+    extends
+        _$UsersListsCreateRequestCopyWithImpl<
+          $Res,
+          _$UsersListsCreateRequestImpl
+        >
     implements _$$UsersListsCreateRequestImplCopyWith<$Res> {
   __$$UsersListsCreateRequestImplCopyWithImpl(
-      _$UsersListsCreateRequestImpl _value,
-      $Res Function(_$UsersListsCreateRequestImpl) _then)
-      : super(_value, _then);
+    _$UsersListsCreateRequestImpl _value,
+    $Res Function(_$UsersListsCreateRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UsersListsCreateRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? name = null,
-  }) {
-    return _then(_$UsersListsCreateRequestImpl(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? name = null}) {
+    return _then(
+      _$UsersListsCreateRequestImpl(
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -141,14 +152,13 @@ class _$UsersListsCreateRequestImpl implements _UsersListsCreateRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$UsersListsCreateRequestImplCopyWith<_$UsersListsCreateRequestImpl>
-      get copyWith => __$$UsersListsCreateRequestImplCopyWithImpl<
-          _$UsersListsCreateRequestImpl>(this, _$identity);
+  get copyWith => __$$UsersListsCreateRequestImplCopyWithImpl<
+    _$UsersListsCreateRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UsersListsCreateRequestImplToJson(
-      this,
-    );
+    return _$$UsersListsCreateRequestImplToJson(this);
   }
 }
 
@@ -167,5 +177,5 @@ abstract class _UsersListsCreateRequest implements UsersListsCreateRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersListsCreateRequestImplCopyWith<_$UsersListsCreateRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

@@ -12,7 +12,8 @@ part of 'flash.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 Flash _$FlashFromJson(Map<String, dynamic> json) {
   return _Flash.fromJson(json);
@@ -50,19 +51,20 @@ abstract class $FlashCopyWith<$Res> {
   factory $FlashCopyWith(Flash value, $Res Function(Flash) then) =
       _$FlashCopyWithImpl<$Res, Flash>;
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime createdAt,
-      @DateTimeConverter() DateTime updatedAt,
-      String title,
-      String summary,
-      String script,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      FlashVisibility? visibility,
-      String userId,
-      UserLite user,
-      int? likedCount,
-      bool isLiked});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime createdAt,
+    @DateTimeConverter() DateTime updatedAt,
+    String title,
+    String summary,
+    String script,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    FlashVisibility? visibility,
+    String userId,
+    UserLite user,
+    int? likedCount,
+    bool isLiked,
+  });
 
   $UserLiteCopyWith<$Res> get user;
 }
@@ -94,52 +96,66 @@ class _$FlashCopyWithImpl<$Res, $Val extends Flash>
     Object? likedCount = freezed,
     Object? isLiked = null,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedAt: null == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      summary: null == summary
-          ? _value.summary
-          : summary // ignore: cast_nullable_to_non_nullable
-              as String,
-      script: null == script
-          ? _value.script
-          : script // ignore: cast_nullable_to_non_nullable
-              as String,
-      visibility: freezed == visibility
-          ? _value.visibility
-          : visibility // ignore: cast_nullable_to_non_nullable
-              as FlashVisibility?,
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      user: null == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as UserLite,
-      likedCount: freezed == likedCount
-          ? _value.likedCount
-          : likedCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      isLiked: null == isLiked
-          ? _value.isLiked
-          : isLiked // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            createdAt:
+                null == createdAt
+                    ? _value.createdAt
+                    : createdAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            updatedAt:
+                null == updatedAt
+                    ? _value.updatedAt
+                    : updatedAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            title:
+                null == title
+                    ? _value.title
+                    : title // ignore: cast_nullable_to_non_nullable
+                        as String,
+            summary:
+                null == summary
+                    ? _value.summary
+                    : summary // ignore: cast_nullable_to_non_nullable
+                        as String,
+            script:
+                null == script
+                    ? _value.script
+                    : script // ignore: cast_nullable_to_non_nullable
+                        as String,
+            visibility:
+                freezed == visibility
+                    ? _value.visibility
+                    : visibility // ignore: cast_nullable_to_non_nullable
+                        as FlashVisibility?,
+            userId:
+                null == userId
+                    ? _value.userId
+                    : userId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            user:
+                null == user
+                    ? _value.user
+                    : user // ignore: cast_nullable_to_non_nullable
+                        as UserLite,
+            likedCount:
+                freezed == likedCount
+                    ? _value.likedCount
+                    : likedCount // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            isLiked:
+                null == isLiked
+                    ? _value.isLiked
+                    : isLiked // ignore: cast_nullable_to_non_nullable
+                        as bool,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of Flash
@@ -156,23 +172,25 @@ class _$FlashCopyWithImpl<$Res, $Val extends Flash>
 /// @nodoc
 abstract class _$$FlashImplCopyWith<$Res> implements $FlashCopyWith<$Res> {
   factory _$$FlashImplCopyWith(
-          _$FlashImpl value, $Res Function(_$FlashImpl) then) =
-      __$$FlashImplCopyWithImpl<$Res>;
+    _$FlashImpl value,
+    $Res Function(_$FlashImpl) then,
+  ) = __$$FlashImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime createdAt,
-      @DateTimeConverter() DateTime updatedAt,
-      String title,
-      String summary,
-      String script,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      FlashVisibility? visibility,
-      String userId,
-      UserLite user,
-      int? likedCount,
-      bool isLiked});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime createdAt,
+    @DateTimeConverter() DateTime updatedAt,
+    String title,
+    String summary,
+    String script,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    FlashVisibility? visibility,
+    String userId,
+    UserLite user,
+    int? likedCount,
+    bool isLiked,
+  });
 
   @override
   $UserLiteCopyWith<$Res> get user;
@@ -183,8 +201,9 @@ class __$$FlashImplCopyWithImpl<$Res>
     extends _$FlashCopyWithImpl<$Res, _$FlashImpl>
     implements _$$FlashImplCopyWith<$Res> {
   __$$FlashImplCopyWithImpl(
-      _$FlashImpl _value, $Res Function(_$FlashImpl) _then)
-      : super(_value, _then);
+    _$FlashImpl _value,
+    $Res Function(_$FlashImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of Flash
   /// with the given fields replaced by the non-null parameter values.
@@ -203,71 +222,85 @@ class __$$FlashImplCopyWithImpl<$Res>
     Object? likedCount = freezed,
     Object? isLiked = null,
   }) {
-    return _then(_$FlashImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedAt: null == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      summary: null == summary
-          ? _value.summary
-          : summary // ignore: cast_nullable_to_non_nullable
-              as String,
-      script: null == script
-          ? _value.script
-          : script // ignore: cast_nullable_to_non_nullable
-              as String,
-      visibility: freezed == visibility
-          ? _value.visibility
-          : visibility // ignore: cast_nullable_to_non_nullable
-              as FlashVisibility?,
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      user: null == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as UserLite,
-      likedCount: freezed == likedCount
-          ? _value.likedCount
-          : likedCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      isLiked: null == isLiked
-          ? _value.isLiked
-          : isLiked // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ));
+    return _then(
+      _$FlashImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        createdAt:
+            null == createdAt
+                ? _value.createdAt
+                : createdAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        updatedAt:
+            null == updatedAt
+                ? _value.updatedAt
+                : updatedAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        title:
+            null == title
+                ? _value.title
+                : title // ignore: cast_nullable_to_non_nullable
+                    as String,
+        summary:
+            null == summary
+                ? _value.summary
+                : summary // ignore: cast_nullable_to_non_nullable
+                    as String,
+        script:
+            null == script
+                ? _value.script
+                : script // ignore: cast_nullable_to_non_nullable
+                    as String,
+        visibility:
+            freezed == visibility
+                ? _value.visibility
+                : visibility // ignore: cast_nullable_to_non_nullable
+                    as FlashVisibility?,
+        userId:
+            null == userId
+                ? _value.userId
+                : userId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        user:
+            null == user
+                ? _value.user
+                : user // ignore: cast_nullable_to_non_nullable
+                    as UserLite,
+        likedCount:
+            freezed == likedCount
+                ? _value.likedCount
+                : likedCount // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        isLiked:
+            null == isLiked
+                ? _value.isLiked
+                : isLiked // ignore: cast_nullable_to_non_nullable
+                    as bool,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$FlashImpl implements _Flash {
-  const _$FlashImpl(
-      {required this.id,
-      @DateTimeConverter() required this.createdAt,
-      @DateTimeConverter() required this.updatedAt,
-      required this.title,
-      required this.summary,
-      required this.script,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      this.visibility,
-      required this.userId,
-      required this.user,
-      this.likedCount,
-      this.isLiked = false});
+  const _$FlashImpl({
+    required this.id,
+    @DateTimeConverter() required this.createdAt,
+    @DateTimeConverter() required this.updatedAt,
+    required this.title,
+    required this.summary,
+    required this.script,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    this.visibility,
+    required this.userId,
+    required this.user,
+    this.likedCount,
+    this.isLiked = false,
+  });
 
   factory _$FlashImpl.fromJson(Map<String, dynamic> json) =>
       _$$FlashImplFromJson(json);
@@ -286,7 +319,7 @@ class _$FlashImpl implements _Flash {
   final String summary;
   @override
   final String script;
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final FlashVisibility? visibility;
@@ -329,8 +362,20 @@ class _$FlashImpl implements _Flash {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, createdAt, updatedAt, title,
-      summary, script, visibility, userId, user, likedCount, isLiked);
+  int get hashCode => Object.hash(
+    runtimeType,
+    id,
+    createdAt,
+    updatedAt,
+    title,
+    summary,
+    script,
+    visibility,
+    userId,
+    user,
+    likedCount,
+    isLiked,
+  );
 
   /// Create a copy of Flash
   /// with the given fields replaced by the non-null parameter values.
@@ -342,26 +387,25 @@ class _$FlashImpl implements _Flash {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$FlashImplToJson(
-      this,
-    );
+    return _$$FlashImplToJson(this);
   }
 }
 
 abstract class _Flash implements Flash {
-  const factory _Flash(
-      {required final String id,
-      @DateTimeConverter() required final DateTime createdAt,
-      @DateTimeConverter() required final DateTime updatedAt,
-      required final String title,
-      required final String summary,
-      required final String script,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      final FlashVisibility? visibility,
-      required final String userId,
-      required final UserLite user,
-      final int? likedCount,
-      final bool isLiked}) = _$FlashImpl;
+  const factory _Flash({
+    required final String id,
+    @DateTimeConverter() required final DateTime createdAt,
+    @DateTimeConverter() required final DateTime updatedAt,
+    required final String title,
+    required final String summary,
+    required final String script,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    final FlashVisibility? visibility,
+    required final String userId,
+    required final UserLite user,
+    final int? likedCount,
+    final bool isLiked,
+  }) = _$FlashImpl;
 
   factory _Flash.fromJson(Map<String, dynamic> json) = _$FlashImpl.fromJson;
 

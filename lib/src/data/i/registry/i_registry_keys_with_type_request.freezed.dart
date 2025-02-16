@@ -12,10 +12,12 @@ part of 'i_registry_keys_with_type_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 IRegistryKeysWithTypeRequest _$IRegistryKeysWithTypeRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _IRegistryKeysWithTypeRequest.fromJson(json);
 }
 
@@ -31,23 +33,28 @@ mixin _$IRegistryKeysWithTypeRequest {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $IRegistryKeysWithTypeRequestCopyWith<IRegistryKeysWithTypeRequest>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $IRegistryKeysWithTypeRequestCopyWith<$Res> {
   factory $IRegistryKeysWithTypeRequestCopyWith(
-          IRegistryKeysWithTypeRequest value,
-          $Res Function(IRegistryKeysWithTypeRequest) then) =
-      _$IRegistryKeysWithTypeRequestCopyWithImpl<$Res,
-          IRegistryKeysWithTypeRequest>;
+    IRegistryKeysWithTypeRequest value,
+    $Res Function(IRegistryKeysWithTypeRequest) then,
+  ) =
+      _$IRegistryKeysWithTypeRequestCopyWithImpl<
+        $Res,
+        IRegistryKeysWithTypeRequest
+      >;
   @useResult
   $Res call({List<String> scope, String? domain});
 }
 
 /// @nodoc
-class _$IRegistryKeysWithTypeRequestCopyWithImpl<$Res,
-        $Val extends IRegistryKeysWithTypeRequest>
+class _$IRegistryKeysWithTypeRequestCopyWithImpl<
+  $Res,
+  $Val extends IRegistryKeysWithTypeRequest
+>
     implements $IRegistryKeysWithTypeRequestCopyWith<$Res> {
   _$IRegistryKeysWithTypeRequestCopyWithImpl(this._value, this._then);
 
@@ -60,20 +67,22 @@ class _$IRegistryKeysWithTypeRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? scope = null,
-    Object? domain = freezed,
-  }) {
-    return _then(_value.copyWith(
-      scope: null == scope
-          ? _value.scope
-          : scope // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      domain: freezed == domain
-          ? _value.domain
-          : domain // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  $Res call({Object? scope = null, Object? domain = freezed}) {
+    return _then(
+      _value.copyWith(
+            scope:
+                null == scope
+                    ? _value.scope
+                    : scope // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+            domain:
+                freezed == domain
+                    ? _value.domain
+                    : domain // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -81,9 +90,9 @@ class _$IRegistryKeysWithTypeRequestCopyWithImpl<$Res,
 abstract class _$$IRegistryKeysWithTypeRequestImplCopyWith<$Res>
     implements $IRegistryKeysWithTypeRequestCopyWith<$Res> {
   factory _$$IRegistryKeysWithTypeRequestImplCopyWith(
-          _$IRegistryKeysWithTypeRequestImpl value,
-          $Res Function(_$IRegistryKeysWithTypeRequestImpl) then) =
-      __$$IRegistryKeysWithTypeRequestImplCopyWithImpl<$Res>;
+    _$IRegistryKeysWithTypeRequestImpl value,
+    $Res Function(_$IRegistryKeysWithTypeRequestImpl) then,
+  ) = __$$IRegistryKeysWithTypeRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<String> scope, String? domain});
@@ -91,32 +100,36 @@ abstract class _$$IRegistryKeysWithTypeRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$IRegistryKeysWithTypeRequestImplCopyWithImpl<$Res>
-    extends _$IRegistryKeysWithTypeRequestCopyWithImpl<$Res,
-        _$IRegistryKeysWithTypeRequestImpl>
+    extends
+        _$IRegistryKeysWithTypeRequestCopyWithImpl<
+          $Res,
+          _$IRegistryKeysWithTypeRequestImpl
+        >
     implements _$$IRegistryKeysWithTypeRequestImplCopyWith<$Res> {
   __$$IRegistryKeysWithTypeRequestImplCopyWithImpl(
-      _$IRegistryKeysWithTypeRequestImpl _value,
-      $Res Function(_$IRegistryKeysWithTypeRequestImpl) _then)
-      : super(_value, _then);
+    _$IRegistryKeysWithTypeRequestImpl _value,
+    $Res Function(_$IRegistryKeysWithTypeRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of IRegistryKeysWithTypeRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? scope = null,
-    Object? domain = freezed,
-  }) {
-    return _then(_$IRegistryKeysWithTypeRequestImpl(
-      scope: null == scope
-          ? _value._scope
-          : scope // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      domain: freezed == domain
-          ? _value.domain
-          : domain // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+  $Res call({Object? scope = null, Object? domain = freezed}) {
+    return _then(
+      _$IRegistryKeysWithTypeRequestImpl(
+        scope:
+            null == scope
+                ? _value._scope
+                : scope // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+        domain:
+            freezed == domain
+                ? _value.domain
+                : domain // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -124,13 +137,14 @@ class __$$IRegistryKeysWithTypeRequestImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$IRegistryKeysWithTypeRequestImpl
     implements _IRegistryKeysWithTypeRequest {
-  const _$IRegistryKeysWithTypeRequestImpl(
-      {required final List<String> scope, this.domain})
-      : _scope = scope;
+  const _$IRegistryKeysWithTypeRequestImpl({
+    required final List<String> scope,
+    this.domain,
+  }) : _scope = scope;
 
   factory _$IRegistryKeysWithTypeRequestImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$IRegistryKeysWithTypeRequestImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$IRegistryKeysWithTypeRequestImplFromJson(json);
 
   final List<String> _scope;
   @override
@@ -160,7 +174,10 @@ class _$IRegistryKeysWithTypeRequestImpl
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_scope), domain);
+    runtimeType,
+    const DeepCollectionEquality().hash(_scope),
+    domain,
+  );
 
   /// Create a copy of IRegistryKeysWithTypeRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -168,23 +185,24 @@ class _$IRegistryKeysWithTypeRequestImpl
   @override
   @pragma('vm:prefer-inline')
   _$$IRegistryKeysWithTypeRequestImplCopyWith<
-          _$IRegistryKeysWithTypeRequestImpl>
-      get copyWith => __$$IRegistryKeysWithTypeRequestImplCopyWithImpl<
-          _$IRegistryKeysWithTypeRequestImpl>(this, _$identity);
+    _$IRegistryKeysWithTypeRequestImpl
+  >
+  get copyWith => __$$IRegistryKeysWithTypeRequestImplCopyWithImpl<
+    _$IRegistryKeysWithTypeRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$IRegistryKeysWithTypeRequestImplToJson(
-      this,
-    );
+    return _$$IRegistryKeysWithTypeRequestImplToJson(this);
   }
 }
 
 abstract class _IRegistryKeysWithTypeRequest
     implements IRegistryKeysWithTypeRequest {
-  const factory _IRegistryKeysWithTypeRequest(
-      {required final List<String> scope,
-      final String? domain}) = _$IRegistryKeysWithTypeRequestImpl;
+  const factory _IRegistryKeysWithTypeRequest({
+    required final List<String> scope,
+    final String? domain,
+  }) = _$IRegistryKeysWithTypeRequestImpl;
 
   factory _IRegistryKeysWithTypeRequest.fromJson(Map<String, dynamic> json) =
       _$IRegistryKeysWithTypeRequestImpl.fromJson;
@@ -199,6 +217,7 @@ abstract class _IRegistryKeysWithTypeRequest
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IRegistryKeysWithTypeRequestImplCopyWith<
-          _$IRegistryKeysWithTypeRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$IRegistryKeysWithTypeRequestImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }

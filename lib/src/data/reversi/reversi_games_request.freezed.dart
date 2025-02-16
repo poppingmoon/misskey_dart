@@ -12,7 +12,8 @@ part of 'reversi_games_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ReversiGamesRequest _$ReversiGamesRequestFromJson(Map<String, dynamic> json) {
   return _ReversiGamesRequest.fromJson(json);
@@ -38,8 +39,9 @@ mixin _$ReversiGamesRequest {
 /// @nodoc
 abstract class $ReversiGamesRequestCopyWith<$Res> {
   factory $ReversiGamesRequestCopyWith(
-          ReversiGamesRequest value, $Res Function(ReversiGamesRequest) then) =
-      _$ReversiGamesRequestCopyWithImpl<$Res, ReversiGamesRequest>;
+    ReversiGamesRequest value,
+    $Res Function(ReversiGamesRequest) then,
+  ) = _$ReversiGamesRequestCopyWithImpl<$Res, ReversiGamesRequest>;
   @useResult
   $Res call({int? limit, String? sinceId, String? untilId, bool? my});
 }
@@ -64,33 +66,41 @@ class _$ReversiGamesRequestCopyWithImpl<$Res, $Val extends ReversiGamesRequest>
     Object? untilId = freezed,
     Object? my = freezed,
   }) {
-    return _then(_value.copyWith(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      my: freezed == my
-          ? _value.my
-          : my // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            my:
+                freezed == my
+                    ? _value.my
+                    : my // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$ReversiGamesRequestImplCopyWith<$Res>
     implements $ReversiGamesRequestCopyWith<$Res> {
-  factory _$$ReversiGamesRequestImplCopyWith(_$ReversiGamesRequestImpl value,
-          $Res Function(_$ReversiGamesRequestImpl) then) =
-      __$$ReversiGamesRequestImplCopyWithImpl<$Res>;
+  factory _$$ReversiGamesRequestImplCopyWith(
+    _$ReversiGamesRequestImpl value,
+    $Res Function(_$ReversiGamesRequestImpl) then,
+  ) = __$$ReversiGamesRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? limit, String? sinceId, String? untilId, bool? my});
@@ -100,9 +110,10 @@ abstract class _$$ReversiGamesRequestImplCopyWith<$Res>
 class __$$ReversiGamesRequestImplCopyWithImpl<$Res>
     extends _$ReversiGamesRequestCopyWithImpl<$Res, _$ReversiGamesRequestImpl>
     implements _$$ReversiGamesRequestImplCopyWith<$Res> {
-  __$$ReversiGamesRequestImplCopyWithImpl(_$ReversiGamesRequestImpl _value,
-      $Res Function(_$ReversiGamesRequestImpl) _then)
-      : super(_value, _then);
+  __$$ReversiGamesRequestImplCopyWithImpl(
+    _$ReversiGamesRequestImpl _value,
+    $Res Function(_$ReversiGamesRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ReversiGamesRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -114,32 +125,42 @@ class __$$ReversiGamesRequestImplCopyWithImpl<$Res>
     Object? untilId = freezed,
     Object? my = freezed,
   }) {
-    return _then(_$ReversiGamesRequestImpl(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      my: freezed == my
-          ? _value.my
-          : my // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+    return _then(
+      _$ReversiGamesRequestImpl(
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        my:
+            freezed == my
+                ? _value.my
+                : my // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ReversiGamesRequestImpl implements _ReversiGamesRequest {
-  const _$ReversiGamesRequestImpl(
-      {this.limit, this.sinceId, this.untilId, this.my});
+  const _$ReversiGamesRequestImpl({
+    this.limit,
+    this.sinceId,
+    this.untilId,
+    this.my,
+  });
 
   factory _$ReversiGamesRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$ReversiGamesRequestImplFromJson(json);
@@ -180,22 +201,23 @@ class _$ReversiGamesRequestImpl implements _ReversiGamesRequest {
   @pragma('vm:prefer-inline')
   _$$ReversiGamesRequestImplCopyWith<_$ReversiGamesRequestImpl> get copyWith =>
       __$$ReversiGamesRequestImplCopyWithImpl<_$ReversiGamesRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ReversiGamesRequestImplToJson(
-      this,
-    );
+    return _$$ReversiGamesRequestImplToJson(this);
   }
 }
 
 abstract class _ReversiGamesRequest implements ReversiGamesRequest {
-  const factory _ReversiGamesRequest(
-      {final int? limit,
-      final String? sinceId,
-      final String? untilId,
-      final bool? my}) = _$ReversiGamesRequestImpl;
+  const factory _ReversiGamesRequest({
+    final int? limit,
+    final String? sinceId,
+    final String? untilId,
+    final bool? my,
+  }) = _$ReversiGamesRequestImpl;
 
   factory _ReversiGamesRequest.fromJson(Map<String, dynamic> json) =
       _$ReversiGamesRequestImpl.fromJson;

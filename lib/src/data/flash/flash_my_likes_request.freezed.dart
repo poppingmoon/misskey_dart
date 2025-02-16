@@ -12,7 +12,8 @@ part of 'flash_my_likes_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 FlashMyLikesRequest _$FlashMyLikesRequestFromJson(Map<String, dynamic> json) {
   return _FlashMyLikesRequest.fromJson(json);
@@ -37,8 +38,9 @@ mixin _$FlashMyLikesRequest {
 /// @nodoc
 abstract class $FlashMyLikesRequestCopyWith<$Res> {
   factory $FlashMyLikesRequestCopyWith(
-          FlashMyLikesRequest value, $Res Function(FlashMyLikesRequest) then) =
-      _$FlashMyLikesRequestCopyWithImpl<$Res, FlashMyLikesRequest>;
+    FlashMyLikesRequest value,
+    $Res Function(FlashMyLikesRequest) then,
+  ) = _$FlashMyLikesRequestCopyWithImpl<$Res, FlashMyLikesRequest>;
   @useResult
   $Res call({int? limit, String? sinceId, String? untilId});
 }
@@ -62,29 +64,36 @@ class _$FlashMyLikesRequestCopyWithImpl<$Res, $Val extends FlashMyLikesRequest>
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_value.copyWith(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$FlashMyLikesRequestImplCopyWith<$Res>
     implements $FlashMyLikesRequestCopyWith<$Res> {
-  factory _$$FlashMyLikesRequestImplCopyWith(_$FlashMyLikesRequestImpl value,
-          $Res Function(_$FlashMyLikesRequestImpl) then) =
-      __$$FlashMyLikesRequestImplCopyWithImpl<$Res>;
+  factory _$$FlashMyLikesRequestImplCopyWith(
+    _$FlashMyLikesRequestImpl value,
+    $Res Function(_$FlashMyLikesRequestImpl) then,
+  ) = __$$FlashMyLikesRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? limit, String? sinceId, String? untilId});
@@ -94,9 +103,10 @@ abstract class _$$FlashMyLikesRequestImplCopyWith<$Res>
 class __$$FlashMyLikesRequestImplCopyWithImpl<$Res>
     extends _$FlashMyLikesRequestCopyWithImpl<$Res, _$FlashMyLikesRequestImpl>
     implements _$$FlashMyLikesRequestImplCopyWith<$Res> {
-  __$$FlashMyLikesRequestImplCopyWithImpl(_$FlashMyLikesRequestImpl _value,
-      $Res Function(_$FlashMyLikesRequestImpl) _then)
-      : super(_value, _then);
+  __$$FlashMyLikesRequestImplCopyWithImpl(
+    _$FlashMyLikesRequestImpl _value,
+    $Res Function(_$FlashMyLikesRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of FlashMyLikesRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -107,20 +117,25 @@ class __$$FlashMyLikesRequestImplCopyWithImpl<$Res>
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_$FlashMyLikesRequestImpl(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$FlashMyLikesRequestImpl(
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -165,21 +180,22 @@ class _$FlashMyLikesRequestImpl implements _FlashMyLikesRequest {
   @pragma('vm:prefer-inline')
   _$$FlashMyLikesRequestImplCopyWith<_$FlashMyLikesRequestImpl> get copyWith =>
       __$$FlashMyLikesRequestImplCopyWithImpl<_$FlashMyLikesRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$FlashMyLikesRequestImplToJson(
-      this,
-    );
+    return _$$FlashMyLikesRequestImplToJson(this);
   }
 }
 
 abstract class _FlashMyLikesRequest implements FlashMyLikesRequest {
-  const factory _FlashMyLikesRequest(
-      {final int? limit,
-      final String? sinceId,
-      final String? untilId}) = _$FlashMyLikesRequestImpl;
+  const factory _FlashMyLikesRequest({
+    final int? limit,
+    final String? sinceId,
+    final String? untilId,
+  }) = _$FlashMyLikesRequestImpl;
 
   factory _FlashMyLikesRequest.fromJson(Map<String, dynamic> json) =
       _$FlashMyLikesRequestImpl.fromJson;

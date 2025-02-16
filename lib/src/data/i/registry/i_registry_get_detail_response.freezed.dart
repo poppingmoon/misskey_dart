@@ -12,10 +12,12 @@ part of 'i_registry_get_detail_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 IRegistryGetDetailResponse _$IRegistryGetDetailResponseFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _IRegistryGetDetailResponse.fromJson(json);
 }
 
@@ -31,22 +33,28 @@ mixin _$IRegistryGetDetailResponse {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $IRegistryGetDetailResponseCopyWith<IRegistryGetDetailResponse>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $IRegistryGetDetailResponseCopyWith<$Res> {
-  factory $IRegistryGetDetailResponseCopyWith(IRegistryGetDetailResponse value,
-          $Res Function(IRegistryGetDetailResponse) then) =
-      _$IRegistryGetDetailResponseCopyWithImpl<$Res,
-          IRegistryGetDetailResponse>;
+  factory $IRegistryGetDetailResponseCopyWith(
+    IRegistryGetDetailResponse value,
+    $Res Function(IRegistryGetDetailResponse) then,
+  ) =
+      _$IRegistryGetDetailResponseCopyWithImpl<
+        $Res,
+        IRegistryGetDetailResponse
+      >;
   @useResult
   $Res call({DateTime updatedAt, dynamic value});
 }
 
 /// @nodoc
-class _$IRegistryGetDetailResponseCopyWithImpl<$Res,
-        $Val extends IRegistryGetDetailResponse>
+class _$IRegistryGetDetailResponseCopyWithImpl<
+  $Res,
+  $Val extends IRegistryGetDetailResponse
+>
     implements $IRegistryGetDetailResponseCopyWith<$Res> {
   _$IRegistryGetDetailResponseCopyWithImpl(this._value, this._then);
 
@@ -59,20 +67,22 @@ class _$IRegistryGetDetailResponseCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? updatedAt = null,
-    Object? value = freezed,
-  }) {
-    return _then(_value.copyWith(
-      updatedAt: null == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      value: freezed == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-    ) as $Val);
+  $Res call({Object? updatedAt = null, Object? value = freezed}) {
+    return _then(
+      _value.copyWith(
+            updatedAt:
+                null == updatedAt
+                    ? _value.updatedAt
+                    : updatedAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            value:
+                freezed == value
+                    ? _value.value
+                    : value // ignore: cast_nullable_to_non_nullable
+                        as dynamic,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -80,9 +90,9 @@ class _$IRegistryGetDetailResponseCopyWithImpl<$Res,
 abstract class _$$IRegistryGetDetailResponseImplCopyWith<$Res>
     implements $IRegistryGetDetailResponseCopyWith<$Res> {
   factory _$$IRegistryGetDetailResponseImplCopyWith(
-          _$IRegistryGetDetailResponseImpl value,
-          $Res Function(_$IRegistryGetDetailResponseImpl) then) =
-      __$$IRegistryGetDetailResponseImplCopyWithImpl<$Res>;
+    _$IRegistryGetDetailResponseImpl value,
+    $Res Function(_$IRegistryGetDetailResponseImpl) then,
+  ) = __$$IRegistryGetDetailResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({DateTime updatedAt, dynamic value});
@@ -90,44 +100,50 @@ abstract class _$$IRegistryGetDetailResponseImplCopyWith<$Res>
 
 /// @nodoc
 class __$$IRegistryGetDetailResponseImplCopyWithImpl<$Res>
-    extends _$IRegistryGetDetailResponseCopyWithImpl<$Res,
-        _$IRegistryGetDetailResponseImpl>
+    extends
+        _$IRegistryGetDetailResponseCopyWithImpl<
+          $Res,
+          _$IRegistryGetDetailResponseImpl
+        >
     implements _$$IRegistryGetDetailResponseImplCopyWith<$Res> {
   __$$IRegistryGetDetailResponseImplCopyWithImpl(
-      _$IRegistryGetDetailResponseImpl _value,
-      $Res Function(_$IRegistryGetDetailResponseImpl) _then)
-      : super(_value, _then);
+    _$IRegistryGetDetailResponseImpl _value,
+    $Res Function(_$IRegistryGetDetailResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of IRegistryGetDetailResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? updatedAt = null,
-    Object? value = freezed,
-  }) {
-    return _then(_$IRegistryGetDetailResponseImpl(
-      updatedAt: null == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      value: freezed == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-    ));
+  $Res call({Object? updatedAt = null, Object? value = freezed}) {
+    return _then(
+      _$IRegistryGetDetailResponseImpl(
+        updatedAt:
+            null == updatedAt
+                ? _value.updatedAt
+                : updatedAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        value:
+            freezed == value
+                ? _value.value
+                : value // ignore: cast_nullable_to_non_nullable
+                    as dynamic,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$IRegistryGetDetailResponseImpl implements _IRegistryGetDetailResponse {
-  const _$IRegistryGetDetailResponseImpl(
-      {required this.updatedAt, required this.value});
+  const _$IRegistryGetDetailResponseImpl({
+    required this.updatedAt,
+    required this.value,
+  });
 
   factory _$IRegistryGetDetailResponseImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$IRegistryGetDetailResponseImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$IRegistryGetDetailResponseImplFromJson(json);
 
   @override
   final DateTime updatedAt;
@@ -152,7 +168,10 @@ class _$IRegistryGetDetailResponseImpl implements _IRegistryGetDetailResponse {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType, updatedAt, const DeepCollectionEquality().hash(value));
+    runtimeType,
+    updatedAt,
+    const DeepCollectionEquality().hash(value),
+  );
 
   /// Create a copy of IRegistryGetDetailResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -160,22 +179,22 @@ class _$IRegistryGetDetailResponseImpl implements _IRegistryGetDetailResponse {
   @override
   @pragma('vm:prefer-inline')
   _$$IRegistryGetDetailResponseImplCopyWith<_$IRegistryGetDetailResponseImpl>
-      get copyWith => __$$IRegistryGetDetailResponseImplCopyWithImpl<
-          _$IRegistryGetDetailResponseImpl>(this, _$identity);
+  get copyWith => __$$IRegistryGetDetailResponseImplCopyWithImpl<
+    _$IRegistryGetDetailResponseImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$IRegistryGetDetailResponseImplToJson(
-      this,
-    );
+    return _$$IRegistryGetDetailResponseImplToJson(this);
   }
 }
 
 abstract class _IRegistryGetDetailResponse
     implements IRegistryGetDetailResponse {
-  const factory _IRegistryGetDetailResponse(
-      {required final DateTime updatedAt,
-      required final dynamic value}) = _$IRegistryGetDetailResponseImpl;
+  const factory _IRegistryGetDetailResponse({
+    required final DateTime updatedAt,
+    required final dynamic value,
+  }) = _$IRegistryGetDetailResponseImpl;
 
   factory _IRegistryGetDetailResponse.fromJson(Map<String, dynamic> json) =
       _$IRegistryGetDetailResponseImpl.fromJson;
@@ -190,5 +209,5 @@ abstract class _IRegistryGetDetailResponse
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IRegistryGetDetailResponseImplCopyWith<_$IRegistryGetDetailResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

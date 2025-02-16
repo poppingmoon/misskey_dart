@@ -12,10 +12,12 @@ part of 'notes_reactions_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 NotesReactionsRequest _$NotesReactionsRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _NotesReactionsRequest.fromJson(json);
 }
 
@@ -40,22 +42,26 @@ mixin _$NotesReactionsRequest {
 
 /// @nodoc
 abstract class $NotesReactionsRequestCopyWith<$Res> {
-  factory $NotesReactionsRequestCopyWith(NotesReactionsRequest value,
-          $Res Function(NotesReactionsRequest) then) =
-      _$NotesReactionsRequestCopyWithImpl<$Res, NotesReactionsRequest>;
+  factory $NotesReactionsRequestCopyWith(
+    NotesReactionsRequest value,
+    $Res Function(NotesReactionsRequest) then,
+  ) = _$NotesReactionsRequestCopyWithImpl<$Res, NotesReactionsRequest>;
   @useResult
-  $Res call(
-      {String noteId,
-      String? type,
-      int? limit,
-      int? offset,
-      String? sinceId,
-      String? untilId});
+  $Res call({
+    String noteId,
+    String? type,
+    int? limit,
+    int? offset,
+    String? sinceId,
+    String? untilId,
+  });
 }
 
 /// @nodoc
-class _$NotesReactionsRequestCopyWithImpl<$Res,
-        $Val extends NotesReactionsRequest>
+class _$NotesReactionsRequestCopyWithImpl<
+  $Res,
+  $Val extends NotesReactionsRequest
+>
     implements $NotesReactionsRequestCopyWith<$Res> {
   _$NotesReactionsRequestCopyWithImpl(this._value, this._then);
 
@@ -76,32 +82,41 @@ class _$NotesReactionsRequestCopyWithImpl<$Res,
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_value.copyWith(
-      noteId: null == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      offset: freezed == offset
-          ? _value.offset
-          : offset // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            noteId:
+                null == noteId
+                    ? _value.noteId
+                    : noteId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            type:
+                freezed == type
+                    ? _value.type
+                    : type // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            offset:
+                freezed == offset
+                    ? _value.offset
+                    : offset // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -109,28 +124,30 @@ class _$NotesReactionsRequestCopyWithImpl<$Res,
 abstract class _$$NotesReactionsRequestImplCopyWith<$Res>
     implements $NotesReactionsRequestCopyWith<$Res> {
   factory _$$NotesReactionsRequestImplCopyWith(
-          _$NotesReactionsRequestImpl value,
-          $Res Function(_$NotesReactionsRequestImpl) then) =
-      __$$NotesReactionsRequestImplCopyWithImpl<$Res>;
+    _$NotesReactionsRequestImpl value,
+    $Res Function(_$NotesReactionsRequestImpl) then,
+  ) = __$$NotesReactionsRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String noteId,
-      String? type,
-      int? limit,
-      int? offset,
-      String? sinceId,
-      String? untilId});
+  $Res call({
+    String noteId,
+    String? type,
+    int? limit,
+    int? offset,
+    String? sinceId,
+    String? untilId,
+  });
 }
 
 /// @nodoc
 class __$$NotesReactionsRequestImplCopyWithImpl<$Res>
-    extends _$NotesReactionsRequestCopyWithImpl<$Res,
-        _$NotesReactionsRequestImpl>
+    extends
+        _$NotesReactionsRequestCopyWithImpl<$Res, _$NotesReactionsRequestImpl>
     implements _$$NotesReactionsRequestImplCopyWith<$Res> {
-  __$$NotesReactionsRequestImplCopyWithImpl(_$NotesReactionsRequestImpl _value,
-      $Res Function(_$NotesReactionsRequestImpl) _then)
-      : super(_value, _then);
+  __$$NotesReactionsRequestImplCopyWithImpl(
+    _$NotesReactionsRequestImpl _value,
+    $Res Function(_$NotesReactionsRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotesReactionsRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -144,45 +161,54 @@ class __$$NotesReactionsRequestImplCopyWithImpl<$Res>
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_$NotesReactionsRequestImpl(
-      noteId: null == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      offset: freezed == offset
-          ? _value.offset
-          : offset // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$NotesReactionsRequestImpl(
+        noteId:
+            null == noteId
+                ? _value.noteId
+                : noteId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        type:
+            freezed == type
+                ? _value.type
+                : type // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        offset:
+            freezed == offset
+                ? _value.offset
+                : offset // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$NotesReactionsRequestImpl implements _NotesReactionsRequest {
-  const _$NotesReactionsRequestImpl(
-      {required this.noteId,
-      this.type,
-      this.limit,
-      this.offset,
-      this.sinceId,
-      this.untilId});
+  const _$NotesReactionsRequestImpl({
+    required this.noteId,
+    this.type,
+    this.limit,
+    this.offset,
+    this.sinceId,
+    this.untilId,
+  });
 
   factory _$NotesReactionsRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$NotesReactionsRequestImplFromJson(json);
@@ -229,25 +255,27 @@ class _$NotesReactionsRequestImpl implements _NotesReactionsRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$NotesReactionsRequestImplCopyWith<_$NotesReactionsRequestImpl>
-      get copyWith => __$$NotesReactionsRequestImplCopyWithImpl<
-          _$NotesReactionsRequestImpl>(this, _$identity);
+  get copyWith =>
+      __$$NotesReactionsRequestImplCopyWithImpl<_$NotesReactionsRequestImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotesReactionsRequestImplToJson(
-      this,
-    );
+    return _$$NotesReactionsRequestImplToJson(this);
   }
 }
 
 abstract class _NotesReactionsRequest implements NotesReactionsRequest {
-  const factory _NotesReactionsRequest(
-      {required final String noteId,
-      final String? type,
-      final int? limit,
-      final int? offset,
-      final String? sinceId,
-      final String? untilId}) = _$NotesReactionsRequestImpl;
+  const factory _NotesReactionsRequest({
+    required final String noteId,
+    final String? type,
+    final int? limit,
+    final int? offset,
+    final String? sinceId,
+    final String? untilId,
+  }) = _$NotesReactionsRequestImpl;
 
   factory _NotesReactionsRequest.fromJson(Map<String, dynamic> json) =
       _$NotesReactionsRequestImpl.fromJson;
@@ -270,5 +298,5 @@ abstract class _NotesReactionsRequest implements NotesReactionsRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesReactionsRequestImplCopyWith<_$NotesReactionsRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

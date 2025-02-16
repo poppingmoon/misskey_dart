@@ -12,10 +12,12 @@ part of 'users_lists_delete_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 UsersListsDeleteRequest _$UsersListsDeleteRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _UsersListsDeleteRequest.fromJson(json);
 }
 
@@ -35,16 +37,19 @@ mixin _$UsersListsDeleteRequest {
 
 /// @nodoc
 abstract class $UsersListsDeleteRequestCopyWith<$Res> {
-  factory $UsersListsDeleteRequestCopyWith(UsersListsDeleteRequest value,
-          $Res Function(UsersListsDeleteRequest) then) =
-      _$UsersListsDeleteRequestCopyWithImpl<$Res, UsersListsDeleteRequest>;
+  factory $UsersListsDeleteRequestCopyWith(
+    UsersListsDeleteRequest value,
+    $Res Function(UsersListsDeleteRequest) then,
+  ) = _$UsersListsDeleteRequestCopyWithImpl<$Res, UsersListsDeleteRequest>;
   @useResult
   $Res call({String listId});
 }
 
 /// @nodoc
-class _$UsersListsDeleteRequestCopyWithImpl<$Res,
-        $Val extends UsersListsDeleteRequest>
+class _$UsersListsDeleteRequestCopyWithImpl<
+  $Res,
+  $Val extends UsersListsDeleteRequest
+>
     implements $UsersListsDeleteRequestCopyWith<$Res> {
   _$UsersListsDeleteRequestCopyWithImpl(this._value, this._then);
 
@@ -57,15 +62,17 @@ class _$UsersListsDeleteRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? listId = null,
-  }) {
-    return _then(_value.copyWith(
-      listId: null == listId
-          ? _value.listId
-          : listId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? listId = null}) {
+    return _then(
+      _value.copyWith(
+            listId:
+                null == listId
+                    ? _value.listId
+                    : listId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -73,9 +80,9 @@ class _$UsersListsDeleteRequestCopyWithImpl<$Res,
 abstract class _$$UsersListsDeleteRequestImplCopyWith<$Res>
     implements $UsersListsDeleteRequestCopyWith<$Res> {
   factory _$$UsersListsDeleteRequestImplCopyWith(
-          _$UsersListsDeleteRequestImpl value,
-          $Res Function(_$UsersListsDeleteRequestImpl) then) =
-      __$$UsersListsDeleteRequestImplCopyWithImpl<$Res>;
+    _$UsersListsDeleteRequestImpl value,
+    $Res Function(_$UsersListsDeleteRequestImpl) then,
+  ) = __$$UsersListsDeleteRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String listId});
@@ -83,27 +90,31 @@ abstract class _$$UsersListsDeleteRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$UsersListsDeleteRequestImplCopyWithImpl<$Res>
-    extends _$UsersListsDeleteRequestCopyWithImpl<$Res,
-        _$UsersListsDeleteRequestImpl>
+    extends
+        _$UsersListsDeleteRequestCopyWithImpl<
+          $Res,
+          _$UsersListsDeleteRequestImpl
+        >
     implements _$$UsersListsDeleteRequestImplCopyWith<$Res> {
   __$$UsersListsDeleteRequestImplCopyWithImpl(
-      _$UsersListsDeleteRequestImpl _value,
-      $Res Function(_$UsersListsDeleteRequestImpl) _then)
-      : super(_value, _then);
+    _$UsersListsDeleteRequestImpl _value,
+    $Res Function(_$UsersListsDeleteRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UsersListsDeleteRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? listId = null,
-  }) {
-    return _then(_$UsersListsDeleteRequestImpl(
-      listId: null == listId
-          ? _value.listId
-          : listId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? listId = null}) {
+    return _then(
+      _$UsersListsDeleteRequestImpl(
+        listId:
+            null == listId
+                ? _value.listId
+                : listId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -141,14 +152,13 @@ class _$UsersListsDeleteRequestImpl implements _UsersListsDeleteRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$UsersListsDeleteRequestImplCopyWith<_$UsersListsDeleteRequestImpl>
-      get copyWith => __$$UsersListsDeleteRequestImplCopyWithImpl<
-          _$UsersListsDeleteRequestImpl>(this, _$identity);
+  get copyWith => __$$UsersListsDeleteRequestImplCopyWithImpl<
+    _$UsersListsDeleteRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UsersListsDeleteRequestImplToJson(
-      this,
-    );
+    return _$$UsersListsDeleteRequestImplToJson(this);
   }
 }
 
@@ -167,5 +177,5 @@ abstract class _UsersListsDeleteRequest implements UsersListsDeleteRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersListsDeleteRequestImplCopyWith<_$UsersListsDeleteRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

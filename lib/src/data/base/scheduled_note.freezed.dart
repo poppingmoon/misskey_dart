@@ -12,7 +12,8 @@ part of 'scheduled_note.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ScheduledNote _$ScheduledNoteFromJson(Map<String, dynamic> json) {
   return _ScheduledNote.fromJson(json);
@@ -44,18 +45,20 @@ mixin _$ScheduledNote {
 /// @nodoc
 abstract class $ScheduledNoteCopyWith<$Res> {
   factory $ScheduledNoteCopyWith(
-          ScheduledNote value, $Res Function(ScheduledNote) then) =
-      _$ScheduledNoteCopyWithImpl<$Res, ScheduledNote>;
+    ScheduledNote value,
+    $Res Function(ScheduledNote) then,
+  ) = _$ScheduledNoteCopyWithImpl<$Res, ScheduledNote>;
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime updatedAt,
-      @NullableDateTimeConverter() DateTime? scheduledAt,
-      String? reason,
-      NoteChannelInfo? channel,
-      ScheduledNoteNote? renote,
-      ScheduledNoteNote? reply,
-      ScheduledNoteData data});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime updatedAt,
+    @NullableDateTimeConverter() DateTime? scheduledAt,
+    String? reason,
+    NoteChannelInfo? channel,
+    ScheduledNoteNote? renote,
+    ScheduledNoteNote? reply,
+    ScheduledNoteData data,
+  });
 
   $NoteChannelInfoCopyWith<$Res>? get channel;
   $ScheduledNoteNoteCopyWith<$Res>? get renote;
@@ -87,40 +90,51 @@ class _$ScheduledNoteCopyWithImpl<$Res, $Val extends ScheduledNote>
     Object? reply = freezed,
     Object? data = null,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      updatedAt: null == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      scheduledAt: freezed == scheduledAt
-          ? _value.scheduledAt
-          : scheduledAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      reason: freezed == reason
-          ? _value.reason
-          : reason // ignore: cast_nullable_to_non_nullable
-              as String?,
-      channel: freezed == channel
-          ? _value.channel
-          : channel // ignore: cast_nullable_to_non_nullable
-              as NoteChannelInfo?,
-      renote: freezed == renote
-          ? _value.renote
-          : renote // ignore: cast_nullable_to_non_nullable
-              as ScheduledNoteNote?,
-      reply: freezed == reply
-          ? _value.reply
-          : reply // ignore: cast_nullable_to_non_nullable
-              as ScheduledNoteNote?,
-      data: null == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as ScheduledNoteData,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            updatedAt:
+                null == updatedAt
+                    ? _value.updatedAt
+                    : updatedAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            scheduledAt:
+                freezed == scheduledAt
+                    ? _value.scheduledAt
+                    : scheduledAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            reason:
+                freezed == reason
+                    ? _value.reason
+                    : reason // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            channel:
+                freezed == channel
+                    ? _value.channel
+                    : channel // ignore: cast_nullable_to_non_nullable
+                        as NoteChannelInfo?,
+            renote:
+                freezed == renote
+                    ? _value.renote
+                    : renote // ignore: cast_nullable_to_non_nullable
+                        as ScheduledNoteNote?,
+            reply:
+                freezed == reply
+                    ? _value.reply
+                    : reply // ignore: cast_nullable_to_non_nullable
+                        as ScheduledNoteNote?,
+            data:
+                null == data
+                    ? _value.data
+                    : data // ignore: cast_nullable_to_non_nullable
+                        as ScheduledNoteData,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of ScheduledNote
@@ -180,19 +194,21 @@ class _$ScheduledNoteCopyWithImpl<$Res, $Val extends ScheduledNote>
 abstract class _$$ScheduledNoteImplCopyWith<$Res>
     implements $ScheduledNoteCopyWith<$Res> {
   factory _$$ScheduledNoteImplCopyWith(
-          _$ScheduledNoteImpl value, $Res Function(_$ScheduledNoteImpl) then) =
-      __$$ScheduledNoteImplCopyWithImpl<$Res>;
+    _$ScheduledNoteImpl value,
+    $Res Function(_$ScheduledNoteImpl) then,
+  ) = __$$ScheduledNoteImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime updatedAt,
-      @NullableDateTimeConverter() DateTime? scheduledAt,
-      String? reason,
-      NoteChannelInfo? channel,
-      ScheduledNoteNote? renote,
-      ScheduledNoteNote? reply,
-      ScheduledNoteData data});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime updatedAt,
+    @NullableDateTimeConverter() DateTime? scheduledAt,
+    String? reason,
+    NoteChannelInfo? channel,
+    ScheduledNoteNote? renote,
+    ScheduledNoteNote? reply,
+    ScheduledNoteData data,
+  });
 
   @override
   $NoteChannelInfoCopyWith<$Res>? get channel;
@@ -209,8 +225,9 @@ class __$$ScheduledNoteImplCopyWithImpl<$Res>
     extends _$ScheduledNoteCopyWithImpl<$Res, _$ScheduledNoteImpl>
     implements _$$ScheduledNoteImplCopyWith<$Res> {
   __$$ScheduledNoteImplCopyWithImpl(
-      _$ScheduledNoteImpl _value, $Res Function(_$ScheduledNoteImpl) _then)
-      : super(_value, _then);
+    _$ScheduledNoteImpl _value,
+    $Res Function(_$ScheduledNoteImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ScheduledNote
   /// with the given fields replaced by the non-null parameter values.
@@ -226,55 +243,66 @@ class __$$ScheduledNoteImplCopyWithImpl<$Res>
     Object? reply = freezed,
     Object? data = null,
   }) {
-    return _then(_$ScheduledNoteImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      updatedAt: null == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      scheduledAt: freezed == scheduledAt
-          ? _value.scheduledAt
-          : scheduledAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      reason: freezed == reason
-          ? _value.reason
-          : reason // ignore: cast_nullable_to_non_nullable
-              as String?,
-      channel: freezed == channel
-          ? _value.channel
-          : channel // ignore: cast_nullable_to_non_nullable
-              as NoteChannelInfo?,
-      renote: freezed == renote
-          ? _value.renote
-          : renote // ignore: cast_nullable_to_non_nullable
-              as ScheduledNoteNote?,
-      reply: freezed == reply
-          ? _value.reply
-          : reply // ignore: cast_nullable_to_non_nullable
-              as ScheduledNoteNote?,
-      data: null == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as ScheduledNoteData,
-    ));
+    return _then(
+      _$ScheduledNoteImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        updatedAt:
+            null == updatedAt
+                ? _value.updatedAt
+                : updatedAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        scheduledAt:
+            freezed == scheduledAt
+                ? _value.scheduledAt
+                : scheduledAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        reason:
+            freezed == reason
+                ? _value.reason
+                : reason // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        channel:
+            freezed == channel
+                ? _value.channel
+                : channel // ignore: cast_nullable_to_non_nullable
+                    as NoteChannelInfo?,
+        renote:
+            freezed == renote
+                ? _value.renote
+                : renote // ignore: cast_nullable_to_non_nullable
+                    as ScheduledNoteNote?,
+        reply:
+            freezed == reply
+                ? _value.reply
+                : reply // ignore: cast_nullable_to_non_nullable
+                    as ScheduledNoteNote?,
+        data:
+            null == data
+                ? _value.data
+                : data // ignore: cast_nullable_to_non_nullable
+                    as ScheduledNoteData,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ScheduledNoteImpl implements _ScheduledNote {
-  const _$ScheduledNoteImpl(
-      {required this.id,
-      @DateTimeConverter() required this.updatedAt,
-      @NullableDateTimeConverter() this.scheduledAt,
-      this.reason,
-      this.channel,
-      this.renote,
-      this.reply,
-      required this.data});
+  const _$ScheduledNoteImpl({
+    required this.id,
+    @DateTimeConverter() required this.updatedAt,
+    @NullableDateTimeConverter() this.scheduledAt,
+    this.reason,
+    this.channel,
+    this.renote,
+    this.reply,
+    required this.data,
+  });
 
   factory _$ScheduledNoteImpl.fromJson(Map<String, dynamic> json) =>
       _$$ScheduledNoteImplFromJson(json);
@@ -322,8 +350,17 @@ class _$ScheduledNoteImpl implements _ScheduledNote {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, updatedAt, scheduledAt,
-      reason, channel, renote, reply, data);
+  int get hashCode => Object.hash(
+    runtimeType,
+    id,
+    updatedAt,
+    scheduledAt,
+    reason,
+    channel,
+    renote,
+    reply,
+    data,
+  );
 
   /// Create a copy of ScheduledNote
   /// with the given fields replaced by the non-null parameter values.
@@ -335,22 +372,21 @@ class _$ScheduledNoteImpl implements _ScheduledNote {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ScheduledNoteImplToJson(
-      this,
-    );
+    return _$$ScheduledNoteImplToJson(this);
   }
 }
 
 abstract class _ScheduledNote implements ScheduledNote {
-  const factory _ScheduledNote(
-      {required final String id,
-      @DateTimeConverter() required final DateTime updatedAt,
-      @NullableDateTimeConverter() final DateTime? scheduledAt,
-      final String? reason,
-      final NoteChannelInfo? channel,
-      final ScheduledNoteNote? renote,
-      final ScheduledNoteNote? reply,
-      required final ScheduledNoteData data}) = _$ScheduledNoteImpl;
+  const factory _ScheduledNote({
+    required final String id,
+    @DateTimeConverter() required final DateTime updatedAt,
+    @NullableDateTimeConverter() final DateTime? scheduledAt,
+    final String? reason,
+    final NoteChannelInfo? channel,
+    final ScheduledNoteNote? renote,
+    final ScheduledNoteNote? reply,
+    required final ScheduledNoteData data,
+  }) = _$ScheduledNoteImpl;
 
   factory _ScheduledNote.fromJson(Map<String, dynamic> json) =
       _$ScheduledNoteImpl.fromJson;
@@ -405,8 +441,9 @@ mixin _$ScheduledNoteNote {
 /// @nodoc
 abstract class $ScheduledNoteNoteCopyWith<$Res> {
   factory $ScheduledNoteNoteCopyWith(
-          ScheduledNoteNote value, $Res Function(ScheduledNoteNote) then) =
-      _$ScheduledNoteNoteCopyWithImpl<$Res, ScheduledNoteNote>;
+    ScheduledNoteNote value,
+    $Res Function(ScheduledNoteNote) then,
+  ) = _$ScheduledNoteNoteCopyWithImpl<$Res, ScheduledNoteNote>;
   @useResult
   $Res call({String id, String? text, ScheduledNoteUser user});
 
@@ -427,25 +464,27 @@ class _$ScheduledNoteNoteCopyWithImpl<$Res, $Val extends ScheduledNoteNote>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? text = freezed,
-    Object? user = null,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      text: freezed == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String?,
-      user: null == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as ScheduledNoteUser,
-    ) as $Val);
+  $Res call({Object? id = null, Object? text = freezed, Object? user = null}) {
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            text:
+                freezed == text
+                    ? _value.text
+                    : text // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            user:
+                null == user
+                    ? _value.user
+                    : user // ignore: cast_nullable_to_non_nullable
+                        as ScheduledNoteUser,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of ScheduledNoteNote
@@ -462,9 +501,10 @@ class _$ScheduledNoteNoteCopyWithImpl<$Res, $Val extends ScheduledNoteNote>
 /// @nodoc
 abstract class _$$ScheduledNoteNoteImplCopyWith<$Res>
     implements $ScheduledNoteNoteCopyWith<$Res> {
-  factory _$$ScheduledNoteNoteImplCopyWith(_$ScheduledNoteNoteImpl value,
-          $Res Function(_$ScheduledNoteNoteImpl) then) =
-      __$$ScheduledNoteNoteImplCopyWithImpl<$Res>;
+  factory _$$ScheduledNoteNoteImplCopyWith(
+    _$ScheduledNoteNoteImpl value,
+    $Res Function(_$ScheduledNoteNoteImpl) then,
+  ) = __$$ScheduledNoteNoteImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, String? text, ScheduledNoteUser user});
@@ -477,41 +517,46 @@ abstract class _$$ScheduledNoteNoteImplCopyWith<$Res>
 class __$$ScheduledNoteNoteImplCopyWithImpl<$Res>
     extends _$ScheduledNoteNoteCopyWithImpl<$Res, _$ScheduledNoteNoteImpl>
     implements _$$ScheduledNoteNoteImplCopyWith<$Res> {
-  __$$ScheduledNoteNoteImplCopyWithImpl(_$ScheduledNoteNoteImpl _value,
-      $Res Function(_$ScheduledNoteNoteImpl) _then)
-      : super(_value, _then);
+  __$$ScheduledNoteNoteImplCopyWithImpl(
+    _$ScheduledNoteNoteImpl _value,
+    $Res Function(_$ScheduledNoteNoteImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ScheduledNoteNote
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? text = freezed,
-    Object? user = null,
-  }) {
-    return _then(_$ScheduledNoteNoteImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      text: freezed == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String?,
-      user: null == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as ScheduledNoteUser,
-    ));
+  $Res call({Object? id = null, Object? text = freezed, Object? user = null}) {
+    return _then(
+      _$ScheduledNoteNoteImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        text:
+            freezed == text
+                ? _value.text
+                : text // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        user:
+            null == user
+                ? _value.user
+                : user // ignore: cast_nullable_to_non_nullable
+                    as ScheduledNoteUser,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ScheduledNoteNoteImpl implements _ScheduledNoteNote {
-  const _$ScheduledNoteNoteImpl(
-      {required this.id, this.text, required this.user});
+  const _$ScheduledNoteNoteImpl({
+    required this.id,
+    this.text,
+    required this.user,
+  });
 
   factory _$ScheduledNoteNoteImpl.fromJson(Map<String, dynamic> json) =>
       _$$ScheduledNoteNoteImplFromJson(json);
@@ -549,21 +594,22 @@ class _$ScheduledNoteNoteImpl implements _ScheduledNoteNote {
   @pragma('vm:prefer-inline')
   _$$ScheduledNoteNoteImplCopyWith<_$ScheduledNoteNoteImpl> get copyWith =>
       __$$ScheduledNoteNoteImplCopyWithImpl<_$ScheduledNoteNoteImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ScheduledNoteNoteImplToJson(
-      this,
-    );
+    return _$$ScheduledNoteNoteImplToJson(this);
   }
 }
 
 abstract class _ScheduledNoteNote implements ScheduledNoteNote {
-  const factory _ScheduledNoteNote(
-      {required final String id,
-      final String? text,
-      required final ScheduledNoteUser user}) = _$ScheduledNoteNoteImpl;
+  const factory _ScheduledNoteNote({
+    required final String id,
+    final String? text,
+    required final ScheduledNoteUser user,
+  }) = _$ScheduledNoteNoteImpl;
 
   factory _ScheduledNoteNote.fromJson(Map<String, dynamic> json) =
       _$ScheduledNoteNoteImpl.fromJson;
@@ -606,8 +652,9 @@ mixin _$ScheduledNoteUser {
 /// @nodoc
 abstract class $ScheduledNoteUserCopyWith<$Res> {
   factory $ScheduledNoteUserCopyWith(
-          ScheduledNoteUser value, $Res Function(ScheduledNoteUser) then) =
-      _$ScheduledNoteUserCopyWithImpl<$Res, ScheduledNoteUser>;
+    ScheduledNoteUser value,
+    $Res Function(ScheduledNoteUser) then,
+  ) = _$ScheduledNoteUserCopyWithImpl<$Res, ScheduledNoteUser>;
   @useResult
   $Res call({String id, String username, String? host});
 }
@@ -631,29 +678,36 @@ class _$ScheduledNoteUserCopyWithImpl<$Res, $Val extends ScheduledNoteUser>
     Object? username = null,
     Object? host = freezed,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      username: null == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String,
-      host: freezed == host
-          ? _value.host
-          : host // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            username:
+                null == username
+                    ? _value.username
+                    : username // ignore: cast_nullable_to_non_nullable
+                        as String,
+            host:
+                freezed == host
+                    ? _value.host
+                    : host // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$ScheduledNoteUserImplCopyWith<$Res>
     implements $ScheduledNoteUserCopyWith<$Res> {
-  factory _$$ScheduledNoteUserImplCopyWith(_$ScheduledNoteUserImpl value,
-          $Res Function(_$ScheduledNoteUserImpl) then) =
-      __$$ScheduledNoteUserImplCopyWithImpl<$Res>;
+  factory _$$ScheduledNoteUserImplCopyWith(
+    _$ScheduledNoteUserImpl value,
+    $Res Function(_$ScheduledNoteUserImpl) then,
+  ) = __$$ScheduledNoteUserImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, String username, String? host});
@@ -663,9 +717,10 @@ abstract class _$$ScheduledNoteUserImplCopyWith<$Res>
 class __$$ScheduledNoteUserImplCopyWithImpl<$Res>
     extends _$ScheduledNoteUserCopyWithImpl<$Res, _$ScheduledNoteUserImpl>
     implements _$$ScheduledNoteUserImplCopyWith<$Res> {
-  __$$ScheduledNoteUserImplCopyWithImpl(_$ScheduledNoteUserImpl _value,
-      $Res Function(_$ScheduledNoteUserImpl) _then)
-      : super(_value, _then);
+  __$$ScheduledNoteUserImplCopyWithImpl(
+    _$ScheduledNoteUserImpl _value,
+    $Res Function(_$ScheduledNoteUserImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ScheduledNoteUser
   /// with the given fields replaced by the non-null parameter values.
@@ -676,28 +731,36 @@ class __$$ScheduledNoteUserImplCopyWithImpl<$Res>
     Object? username = null,
     Object? host = freezed,
   }) {
-    return _then(_$ScheduledNoteUserImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      username: null == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String,
-      host: freezed == host
-          ? _value.host
-          : host // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$ScheduledNoteUserImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        username:
+            null == username
+                ? _value.username
+                : username // ignore: cast_nullable_to_non_nullable
+                    as String,
+        host:
+            freezed == host
+                ? _value.host
+                : host // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ScheduledNoteUserImpl implements _ScheduledNoteUser {
-  const _$ScheduledNoteUserImpl(
-      {required this.id, required this.username, this.host});
+  const _$ScheduledNoteUserImpl({
+    required this.id,
+    required this.username,
+    this.host,
+  });
 
   factory _$ScheduledNoteUserImpl.fromJson(Map<String, dynamic> json) =>
       _$$ScheduledNoteUserImplFromJson(json);
@@ -736,21 +799,22 @@ class _$ScheduledNoteUserImpl implements _ScheduledNoteUser {
   @pragma('vm:prefer-inline')
   _$$ScheduledNoteUserImplCopyWith<_$ScheduledNoteUserImpl> get copyWith =>
       __$$ScheduledNoteUserImplCopyWithImpl<_$ScheduledNoteUserImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ScheduledNoteUserImplToJson(
-      this,
-    );
+    return _$$ScheduledNoteUserImplToJson(this);
   }
 }
 
 abstract class _ScheduledNoteUser implements ScheduledNoteUser {
-  const factory _ScheduledNoteUser(
-      {required final String id,
-      required final String username,
-      final String? host}) = _$ScheduledNoteUserImpl;
+  const factory _ScheduledNoteUser({
+    required final String id,
+    required final String username,
+    final String? host,
+  }) = _$ScheduledNoteUserImpl;
 
   factory _ScheduledNoteUser.fromJson(Map<String, dynamic> json) =
       _$ScheduledNoteUserImpl.fromJson;
@@ -800,19 +864,21 @@ mixin _$ScheduledNoteData {
 /// @nodoc
 abstract class $ScheduledNoteDataCopyWith<$Res> {
   factory $ScheduledNoteDataCopyWith(
-          ScheduledNoteData value, $Res Function(ScheduledNoteData) then) =
-      _$ScheduledNoteDataCopyWithImpl<$Res, ScheduledNoteData>;
+    ScheduledNoteData value,
+    $Res Function(ScheduledNoteData) then,
+  ) = _$ScheduledNoteDataCopyWithImpl<$Res, ScheduledNoteData>;
   @useResult
-  $Res call(
-      {String? text,
-      bool? useCw,
-      String? cw,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      NoteVisibility? visibility,
-      bool localOnly,
-      List<DriveFile> files,
-      NotePoll? poll,
-      List<String> visibleUserIds});
+  $Res call({
+    String? text,
+    bool? useCw,
+    String? cw,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    NoteVisibility? visibility,
+    bool localOnly,
+    List<DriveFile> files,
+    NotePoll? poll,
+    List<String> visibleUserIds,
+  });
 
   $NotePollCopyWith<$Res>? get poll;
 }
@@ -841,40 +907,51 @@ class _$ScheduledNoteDataCopyWithImpl<$Res, $Val extends ScheduledNoteData>
     Object? poll = freezed,
     Object? visibleUserIds = null,
   }) {
-    return _then(_value.copyWith(
-      text: freezed == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String?,
-      useCw: freezed == useCw
-          ? _value.useCw
-          : useCw // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      cw: freezed == cw
-          ? _value.cw
-          : cw // ignore: cast_nullable_to_non_nullable
-              as String?,
-      visibility: freezed == visibility
-          ? _value.visibility
-          : visibility // ignore: cast_nullable_to_non_nullable
-              as NoteVisibility?,
-      localOnly: null == localOnly
-          ? _value.localOnly
-          : localOnly // ignore: cast_nullable_to_non_nullable
-              as bool,
-      files: null == files
-          ? _value.files
-          : files // ignore: cast_nullable_to_non_nullable
-              as List<DriveFile>,
-      poll: freezed == poll
-          ? _value.poll
-          : poll // ignore: cast_nullable_to_non_nullable
-              as NotePoll?,
-      visibleUserIds: null == visibleUserIds
-          ? _value.visibleUserIds
-          : visibleUserIds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            text:
+                freezed == text
+                    ? _value.text
+                    : text // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            useCw:
+                freezed == useCw
+                    ? _value.useCw
+                    : useCw // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            cw:
+                freezed == cw
+                    ? _value.cw
+                    : cw // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            visibility:
+                freezed == visibility
+                    ? _value.visibility
+                    : visibility // ignore: cast_nullable_to_non_nullable
+                        as NoteVisibility?,
+            localOnly:
+                null == localOnly
+                    ? _value.localOnly
+                    : localOnly // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            files:
+                null == files
+                    ? _value.files
+                    : files // ignore: cast_nullable_to_non_nullable
+                        as List<DriveFile>,
+            poll:
+                freezed == poll
+                    ? _value.poll
+                    : poll // ignore: cast_nullable_to_non_nullable
+                        as NotePoll?,
+            visibleUserIds:
+                null == visibleUserIds
+                    ? _value.visibleUserIds
+                    : visibleUserIds // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of ScheduledNoteData
@@ -895,21 +972,23 @@ class _$ScheduledNoteDataCopyWithImpl<$Res, $Val extends ScheduledNoteData>
 /// @nodoc
 abstract class _$$ScheduledNoteDataImplCopyWith<$Res>
     implements $ScheduledNoteDataCopyWith<$Res> {
-  factory _$$ScheduledNoteDataImplCopyWith(_$ScheduledNoteDataImpl value,
-          $Res Function(_$ScheduledNoteDataImpl) then) =
-      __$$ScheduledNoteDataImplCopyWithImpl<$Res>;
+  factory _$$ScheduledNoteDataImplCopyWith(
+    _$ScheduledNoteDataImpl value,
+    $Res Function(_$ScheduledNoteDataImpl) then,
+  ) = __$$ScheduledNoteDataImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String? text,
-      bool? useCw,
-      String? cw,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      NoteVisibility? visibility,
-      bool localOnly,
-      List<DriveFile> files,
-      NotePoll? poll,
-      List<String> visibleUserIds});
+  $Res call({
+    String? text,
+    bool? useCw,
+    String? cw,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    NoteVisibility? visibility,
+    bool localOnly,
+    List<DriveFile> files,
+    NotePoll? poll,
+    List<String> visibleUserIds,
+  });
 
   @override
   $NotePollCopyWith<$Res>? get poll;
@@ -919,9 +998,10 @@ abstract class _$$ScheduledNoteDataImplCopyWith<$Res>
 class __$$ScheduledNoteDataImplCopyWithImpl<$Res>
     extends _$ScheduledNoteDataCopyWithImpl<$Res, _$ScheduledNoteDataImpl>
     implements _$$ScheduledNoteDataImplCopyWith<$Res> {
-  __$$ScheduledNoteDataImplCopyWithImpl(_$ScheduledNoteDataImpl _value,
-      $Res Function(_$ScheduledNoteDataImpl) _then)
-      : super(_value, _then);
+  __$$ScheduledNoteDataImplCopyWithImpl(
+    _$ScheduledNoteDataImpl _value,
+    $Res Function(_$ScheduledNoteDataImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ScheduledNoteData
   /// with the given fields replaced by the non-null parameter values.
@@ -937,58 +1017,68 @@ class __$$ScheduledNoteDataImplCopyWithImpl<$Res>
     Object? poll = freezed,
     Object? visibleUserIds = null,
   }) {
-    return _then(_$ScheduledNoteDataImpl(
-      text: freezed == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String?,
-      useCw: freezed == useCw
-          ? _value.useCw
-          : useCw // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      cw: freezed == cw
-          ? _value.cw
-          : cw // ignore: cast_nullable_to_non_nullable
-              as String?,
-      visibility: freezed == visibility
-          ? _value.visibility
-          : visibility // ignore: cast_nullable_to_non_nullable
-              as NoteVisibility?,
-      localOnly: null == localOnly
-          ? _value.localOnly
-          : localOnly // ignore: cast_nullable_to_non_nullable
-              as bool,
-      files: null == files
-          ? _value._files
-          : files // ignore: cast_nullable_to_non_nullable
-              as List<DriveFile>,
-      poll: freezed == poll
-          ? _value.poll
-          : poll // ignore: cast_nullable_to_non_nullable
-              as NotePoll?,
-      visibleUserIds: null == visibleUserIds
-          ? _value._visibleUserIds
-          : visibleUserIds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-    ));
+    return _then(
+      _$ScheduledNoteDataImpl(
+        text:
+            freezed == text
+                ? _value.text
+                : text // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        useCw:
+            freezed == useCw
+                ? _value.useCw
+                : useCw // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        cw:
+            freezed == cw
+                ? _value.cw
+                : cw // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        visibility:
+            freezed == visibility
+                ? _value.visibility
+                : visibility // ignore: cast_nullable_to_non_nullable
+                    as NoteVisibility?,
+        localOnly:
+            null == localOnly
+                ? _value.localOnly
+                : localOnly // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        files:
+            null == files
+                ? _value._files
+                : files // ignore: cast_nullable_to_non_nullable
+                    as List<DriveFile>,
+        poll:
+            freezed == poll
+                ? _value.poll
+                : poll // ignore: cast_nullable_to_non_nullable
+                    as NotePoll?,
+        visibleUserIds:
+            null == visibleUserIds
+                ? _value._visibleUserIds
+                : visibleUserIds // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ScheduledNoteDataImpl implements _ScheduledNoteData {
-  const _$ScheduledNoteDataImpl(
-      {this.text,
-      this.useCw,
-      this.cw,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      this.visibility,
-      this.localOnly = false,
-      final List<DriveFile> files = const [],
-      this.poll,
-      final List<String> visibleUserIds = const []})
-      : _files = files,
-        _visibleUserIds = visibleUserIds;
+  const _$ScheduledNoteDataImpl({
+    this.text,
+    this.useCw,
+    this.cw,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    this.visibility,
+    this.localOnly = false,
+    final List<DriveFile> files = const [],
+    this.poll,
+    final List<String> visibleUserIds = const [],
+  }) : _files = files,
+       _visibleUserIds = visibleUserIds;
 
   factory _$ScheduledNoteDataImpl.fromJson(Map<String, dynamic> json) =>
       _$$ScheduledNoteDataImplFromJson(json);
@@ -999,7 +1089,7 @@ class _$ScheduledNoteDataImpl implements _ScheduledNoteData {
   final bool? useCw;
   @override
   final String? cw;
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final NoteVisibility? visibility;
@@ -1045,22 +1135,25 @@ class _$ScheduledNoteDataImpl implements _ScheduledNoteData {
                 other.localOnly == localOnly) &&
             const DeepCollectionEquality().equals(other._files, _files) &&
             (identical(other.poll, poll) || other.poll == poll) &&
-            const DeepCollectionEquality()
-                .equals(other._visibleUserIds, _visibleUserIds));
+            const DeepCollectionEquality().equals(
+              other._visibleUserIds,
+              _visibleUserIds,
+            ));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      text,
-      useCw,
-      cw,
-      visibility,
-      localOnly,
-      const DeepCollectionEquality().hash(_files),
-      poll,
-      const DeepCollectionEquality().hash(_visibleUserIds));
+    runtimeType,
+    text,
+    useCw,
+    cw,
+    visibility,
+    localOnly,
+    const DeepCollectionEquality().hash(_files),
+    poll,
+    const DeepCollectionEquality().hash(_visibleUserIds),
+  );
 
   /// Create a copy of ScheduledNoteData
   /// with the given fields replaced by the non-null parameter values.
@@ -1069,27 +1162,28 @@ class _$ScheduledNoteDataImpl implements _ScheduledNoteData {
   @pragma('vm:prefer-inline')
   _$$ScheduledNoteDataImplCopyWith<_$ScheduledNoteDataImpl> get copyWith =>
       __$$ScheduledNoteDataImplCopyWithImpl<_$ScheduledNoteDataImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ScheduledNoteDataImplToJson(
-      this,
-    );
+    return _$$ScheduledNoteDataImplToJson(this);
   }
 }
 
 abstract class _ScheduledNoteData implements ScheduledNoteData {
-  const factory _ScheduledNoteData(
-      {final String? text,
-      final bool? useCw,
-      final String? cw,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      final NoteVisibility? visibility,
-      final bool localOnly,
-      final List<DriveFile> files,
-      final NotePoll? poll,
-      final List<String> visibleUserIds}) = _$ScheduledNoteDataImpl;
+  const factory _ScheduledNoteData({
+    final String? text,
+    final bool? useCw,
+    final String? cw,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    final NoteVisibility? visibility,
+    final bool localOnly,
+    final List<DriveFile> files,
+    final NotePoll? poll,
+    final List<String> visibleUserIds,
+  }) = _$ScheduledNoteDataImpl;
 
   factory _ScheduledNoteData.fromJson(Map<String, dynamic> json) =
       _$ScheduledNoteDataImpl.fromJson;

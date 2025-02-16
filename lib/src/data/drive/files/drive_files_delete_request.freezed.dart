@@ -12,10 +12,12 @@ part of 'drive_files_delete_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 DriveFilesDeleteRequest _$DriveFilesDeleteRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _DriveFilesDeleteRequest.fromJson(json);
 }
 
@@ -35,16 +37,19 @@ mixin _$DriveFilesDeleteRequest {
 
 /// @nodoc
 abstract class $DriveFilesDeleteRequestCopyWith<$Res> {
-  factory $DriveFilesDeleteRequestCopyWith(DriveFilesDeleteRequest value,
-          $Res Function(DriveFilesDeleteRequest) then) =
-      _$DriveFilesDeleteRequestCopyWithImpl<$Res, DriveFilesDeleteRequest>;
+  factory $DriveFilesDeleteRequestCopyWith(
+    DriveFilesDeleteRequest value,
+    $Res Function(DriveFilesDeleteRequest) then,
+  ) = _$DriveFilesDeleteRequestCopyWithImpl<$Res, DriveFilesDeleteRequest>;
   @useResult
   $Res call({String fileId});
 }
 
 /// @nodoc
-class _$DriveFilesDeleteRequestCopyWithImpl<$Res,
-        $Val extends DriveFilesDeleteRequest>
+class _$DriveFilesDeleteRequestCopyWithImpl<
+  $Res,
+  $Val extends DriveFilesDeleteRequest
+>
     implements $DriveFilesDeleteRequestCopyWith<$Res> {
   _$DriveFilesDeleteRequestCopyWithImpl(this._value, this._then);
 
@@ -57,15 +62,17 @@ class _$DriveFilesDeleteRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? fileId = null,
-  }) {
-    return _then(_value.copyWith(
-      fileId: null == fileId
-          ? _value.fileId
-          : fileId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? fileId = null}) {
+    return _then(
+      _value.copyWith(
+            fileId:
+                null == fileId
+                    ? _value.fileId
+                    : fileId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -73,9 +80,9 @@ class _$DriveFilesDeleteRequestCopyWithImpl<$Res,
 abstract class _$$DriveFilesDeleteRequestImplCopyWith<$Res>
     implements $DriveFilesDeleteRequestCopyWith<$Res> {
   factory _$$DriveFilesDeleteRequestImplCopyWith(
-          _$DriveFilesDeleteRequestImpl value,
-          $Res Function(_$DriveFilesDeleteRequestImpl) then) =
-      __$$DriveFilesDeleteRequestImplCopyWithImpl<$Res>;
+    _$DriveFilesDeleteRequestImpl value,
+    $Res Function(_$DriveFilesDeleteRequestImpl) then,
+  ) = __$$DriveFilesDeleteRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String fileId});
@@ -83,27 +90,31 @@ abstract class _$$DriveFilesDeleteRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$DriveFilesDeleteRequestImplCopyWithImpl<$Res>
-    extends _$DriveFilesDeleteRequestCopyWithImpl<$Res,
-        _$DriveFilesDeleteRequestImpl>
+    extends
+        _$DriveFilesDeleteRequestCopyWithImpl<
+          $Res,
+          _$DriveFilesDeleteRequestImpl
+        >
     implements _$$DriveFilesDeleteRequestImplCopyWith<$Res> {
   __$$DriveFilesDeleteRequestImplCopyWithImpl(
-      _$DriveFilesDeleteRequestImpl _value,
-      $Res Function(_$DriveFilesDeleteRequestImpl) _then)
-      : super(_value, _then);
+    _$DriveFilesDeleteRequestImpl _value,
+    $Res Function(_$DriveFilesDeleteRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of DriveFilesDeleteRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? fileId = null,
-  }) {
-    return _then(_$DriveFilesDeleteRequestImpl(
-      fileId: null == fileId
-          ? _value.fileId
-          : fileId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? fileId = null}) {
+    return _then(
+      _$DriveFilesDeleteRequestImpl(
+        fileId:
+            null == fileId
+                ? _value.fileId
+                : fileId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -141,14 +152,13 @@ class _$DriveFilesDeleteRequestImpl implements _DriveFilesDeleteRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$DriveFilesDeleteRequestImplCopyWith<_$DriveFilesDeleteRequestImpl>
-      get copyWith => __$$DriveFilesDeleteRequestImplCopyWithImpl<
-          _$DriveFilesDeleteRequestImpl>(this, _$identity);
+  get copyWith => __$$DriveFilesDeleteRequestImplCopyWithImpl<
+    _$DriveFilesDeleteRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DriveFilesDeleteRequestImplToJson(
-      this,
-    );
+    return _$$DriveFilesDeleteRequestImplToJson(this);
   }
 }
 
@@ -167,5 +177,5 @@ abstract class _DriveFilesDeleteRequest implements DriveFilesDeleteRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DriveFilesDeleteRequestImplCopyWith<_$DriveFilesDeleteRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

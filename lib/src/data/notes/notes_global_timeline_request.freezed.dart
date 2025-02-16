@@ -12,10 +12,12 @@ part of 'notes_global_timeline_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 NotesGlobalTimelineRequest _$NotesGlobalTimelineRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _NotesGlobalTimelineRequest.fromJson(json);
 }
 
@@ -40,30 +42,37 @@ mixin _$NotesGlobalTimelineRequest {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesGlobalTimelineRequestCopyWith<NotesGlobalTimelineRequest>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $NotesGlobalTimelineRequestCopyWith<$Res> {
-  factory $NotesGlobalTimelineRequestCopyWith(NotesGlobalTimelineRequest value,
-          $Res Function(NotesGlobalTimelineRequest) then) =
-      _$NotesGlobalTimelineRequestCopyWithImpl<$Res,
-          NotesGlobalTimelineRequest>;
+  factory $NotesGlobalTimelineRequestCopyWith(
+    NotesGlobalTimelineRequest value,
+    $Res Function(NotesGlobalTimelineRequest) then,
+  ) =
+      _$NotesGlobalTimelineRequestCopyWithImpl<
+        $Res,
+        NotesGlobalTimelineRequest
+      >;
   @useResult
-  $Res call(
-      {int? limit,
-      String? sinceId,
-      String? untilId,
-      @EpocTimeDateTimeConverter() DateTime? sinceDate,
-      @EpocTimeDateTimeConverter() DateTime? untilDate,
-      bool? withFiles,
-      bool? withRenotes,
-      @Deprecated("removed at 2023.10.0") bool? withReplies});
+  $Res call({
+    int? limit,
+    String? sinceId,
+    String? untilId,
+    @EpocTimeDateTimeConverter() DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() DateTime? untilDate,
+    bool? withFiles,
+    bool? withRenotes,
+    @Deprecated("removed at 2023.10.0") bool? withReplies,
+  });
 }
 
 /// @nodoc
-class _$NotesGlobalTimelineRequestCopyWithImpl<$Res,
-        $Val extends NotesGlobalTimelineRequest>
+class _$NotesGlobalTimelineRequestCopyWithImpl<
+  $Res,
+  $Val extends NotesGlobalTimelineRequest
+>
     implements $NotesGlobalTimelineRequestCopyWith<$Res> {
   _$NotesGlobalTimelineRequestCopyWithImpl(this._value, this._then);
 
@@ -86,40 +95,51 @@ class _$NotesGlobalTimelineRequestCopyWithImpl<$Res,
     Object? withRenotes = freezed,
     Object? withReplies = freezed,
   }) {
-    return _then(_value.copyWith(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      sinceDate: freezed == sinceDate
-          ? _value.sinceDate
-          : sinceDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      untilDate: freezed == untilDate
-          ? _value.untilDate
-          : untilDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      withFiles: freezed == withFiles
-          ? _value.withFiles
-          : withFiles // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withRenotes: freezed == withRenotes
-          ? _value.withRenotes
-          : withRenotes // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withReplies: freezed == withReplies
-          ? _value.withReplies
-          : withReplies // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            sinceDate:
+                freezed == sinceDate
+                    ? _value.sinceDate
+                    : sinceDate // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            untilDate:
+                freezed == untilDate
+                    ? _value.untilDate
+                    : untilDate // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            withFiles:
+                freezed == withFiles
+                    ? _value.withFiles
+                    : withFiles // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            withRenotes:
+                freezed == withRenotes
+                    ? _value.withRenotes
+                    : withRenotes // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            withReplies:
+                freezed == withReplies
+                    ? _value.withReplies
+                    : withReplies // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -127,31 +147,35 @@ class _$NotesGlobalTimelineRequestCopyWithImpl<$Res,
 abstract class _$$NotesGlobalTimelineRequestImplCopyWith<$Res>
     implements $NotesGlobalTimelineRequestCopyWith<$Res> {
   factory _$$NotesGlobalTimelineRequestImplCopyWith(
-          _$NotesGlobalTimelineRequestImpl value,
-          $Res Function(_$NotesGlobalTimelineRequestImpl) then) =
-      __$$NotesGlobalTimelineRequestImplCopyWithImpl<$Res>;
+    _$NotesGlobalTimelineRequestImpl value,
+    $Res Function(_$NotesGlobalTimelineRequestImpl) then,
+  ) = __$$NotesGlobalTimelineRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int? limit,
-      String? sinceId,
-      String? untilId,
-      @EpocTimeDateTimeConverter() DateTime? sinceDate,
-      @EpocTimeDateTimeConverter() DateTime? untilDate,
-      bool? withFiles,
-      bool? withRenotes,
-      @Deprecated("removed at 2023.10.0") bool? withReplies});
+  $Res call({
+    int? limit,
+    String? sinceId,
+    String? untilId,
+    @EpocTimeDateTimeConverter() DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() DateTime? untilDate,
+    bool? withFiles,
+    bool? withRenotes,
+    @Deprecated("removed at 2023.10.0") bool? withReplies,
+  });
 }
 
 /// @nodoc
 class __$$NotesGlobalTimelineRequestImplCopyWithImpl<$Res>
-    extends _$NotesGlobalTimelineRequestCopyWithImpl<$Res,
-        _$NotesGlobalTimelineRequestImpl>
+    extends
+        _$NotesGlobalTimelineRequestCopyWithImpl<
+          $Res,
+          _$NotesGlobalTimelineRequestImpl
+        >
     implements _$$NotesGlobalTimelineRequestImplCopyWith<$Res> {
   __$$NotesGlobalTimelineRequestImplCopyWithImpl(
-      _$NotesGlobalTimelineRequestImpl _value,
-      $Res Function(_$NotesGlobalTimelineRequestImpl) _then)
-      : super(_value, _then);
+    _$NotesGlobalTimelineRequestImpl _value,
+    $Res Function(_$NotesGlobalTimelineRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotesGlobalTimelineRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -167,59 +191,70 @@ class __$$NotesGlobalTimelineRequestImplCopyWithImpl<$Res>
     Object? withRenotes = freezed,
     Object? withReplies = freezed,
   }) {
-    return _then(_$NotesGlobalTimelineRequestImpl(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      sinceDate: freezed == sinceDate
-          ? _value.sinceDate
-          : sinceDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      untilDate: freezed == untilDate
-          ? _value.untilDate
-          : untilDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      withFiles: freezed == withFiles
-          ? _value.withFiles
-          : withFiles // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withRenotes: freezed == withRenotes
-          ? _value.withRenotes
-          : withRenotes // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withReplies: freezed == withReplies
-          ? _value.withReplies
-          : withReplies // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+    return _then(
+      _$NotesGlobalTimelineRequestImpl(
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        sinceDate:
+            freezed == sinceDate
+                ? _value.sinceDate
+                : sinceDate // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        untilDate:
+            freezed == untilDate
+                ? _value.untilDate
+                : untilDate // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        withFiles:
+            freezed == withFiles
+                ? _value.withFiles
+                : withFiles // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        withRenotes:
+            freezed == withRenotes
+                ? _value.withRenotes
+                : withRenotes // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        withReplies:
+            freezed == withReplies
+                ? _value.withReplies
+                : withReplies // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$NotesGlobalTimelineRequestImpl implements _NotesGlobalTimelineRequest {
-  const _$NotesGlobalTimelineRequestImpl(
-      {this.limit,
-      this.sinceId,
-      this.untilId,
-      @EpocTimeDateTimeConverter() this.sinceDate,
-      @EpocTimeDateTimeConverter() this.untilDate,
-      this.withFiles,
-      this.withRenotes,
-      @Deprecated("removed at 2023.10.0") this.withReplies});
+  const _$NotesGlobalTimelineRequestImpl({
+    this.limit,
+    this.sinceId,
+    this.untilId,
+    @EpocTimeDateTimeConverter() this.sinceDate,
+    @EpocTimeDateTimeConverter() this.untilDate,
+    this.withFiles,
+    this.withRenotes,
+    @Deprecated("removed at 2023.10.0") this.withReplies,
+  });
 
   factory _$NotesGlobalTimelineRequestImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$NotesGlobalTimelineRequestImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$NotesGlobalTimelineRequestImplFromJson(json);
 
   @override
   final int? limit;
@@ -268,8 +303,17 @@ class _$NotesGlobalTimelineRequestImpl implements _NotesGlobalTimelineRequest {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, limit, sinceId, untilId,
-      sinceDate, untilDate, withFiles, withRenotes, withReplies);
+  int get hashCode => Object.hash(
+    runtimeType,
+    limit,
+    sinceId,
+    untilId,
+    sinceDate,
+    untilDate,
+    withFiles,
+    withRenotes,
+    withReplies,
+  );
 
   /// Create a copy of NotesGlobalTimelineRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -277,29 +321,28 @@ class _$NotesGlobalTimelineRequestImpl implements _NotesGlobalTimelineRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$NotesGlobalTimelineRequestImplCopyWith<_$NotesGlobalTimelineRequestImpl>
-      get copyWith => __$$NotesGlobalTimelineRequestImplCopyWithImpl<
-          _$NotesGlobalTimelineRequestImpl>(this, _$identity);
+  get copyWith => __$$NotesGlobalTimelineRequestImplCopyWithImpl<
+    _$NotesGlobalTimelineRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotesGlobalTimelineRequestImplToJson(
-      this,
-    );
+    return _$$NotesGlobalTimelineRequestImplToJson(this);
   }
 }
 
 abstract class _NotesGlobalTimelineRequest
     implements NotesGlobalTimelineRequest {
-  const factory _NotesGlobalTimelineRequest(
-          {final int? limit,
-          final String? sinceId,
-          final String? untilId,
-          @EpocTimeDateTimeConverter() final DateTime? sinceDate,
-          @EpocTimeDateTimeConverter() final DateTime? untilDate,
-          final bool? withFiles,
-          final bool? withRenotes,
-          @Deprecated("removed at 2023.10.0") final bool? withReplies}) =
-      _$NotesGlobalTimelineRequestImpl;
+  const factory _NotesGlobalTimelineRequest({
+    final int? limit,
+    final String? sinceId,
+    final String? untilId,
+    @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() final DateTime? untilDate,
+    final bool? withFiles,
+    final bool? withRenotes,
+    @Deprecated("removed at 2023.10.0") final bool? withReplies,
+  }) = _$NotesGlobalTimelineRequestImpl;
 
   factory _NotesGlobalTimelineRequest.fromJson(Map<String, dynamic> json) =
       _$NotesGlobalTimelineRequestImpl.fromJson;
@@ -329,5 +372,5 @@ abstract class _NotesGlobalTimelineRequest
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesGlobalTimelineRequestImplCopyWith<_$NotesGlobalTimelineRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

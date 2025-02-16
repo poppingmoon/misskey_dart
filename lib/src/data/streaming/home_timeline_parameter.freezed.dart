@@ -12,10 +12,12 @@ part of 'home_timeline_parameter.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 HomeTimelineParameter _$HomeTimelineParameterFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _HomeTimelineParameter.fromJson(json);
 }
 
@@ -36,16 +38,19 @@ mixin _$HomeTimelineParameter {
 
 /// @nodoc
 abstract class $HomeTimelineParameterCopyWith<$Res> {
-  factory $HomeTimelineParameterCopyWith(HomeTimelineParameter value,
-          $Res Function(HomeTimelineParameter) then) =
-      _$HomeTimelineParameterCopyWithImpl<$Res, HomeTimelineParameter>;
+  factory $HomeTimelineParameterCopyWith(
+    HomeTimelineParameter value,
+    $Res Function(HomeTimelineParameter) then,
+  ) = _$HomeTimelineParameterCopyWithImpl<$Res, HomeTimelineParameter>;
   @useResult
   $Res call({bool? withRenotes, bool? withFiles});
 }
 
 /// @nodoc
-class _$HomeTimelineParameterCopyWithImpl<$Res,
-        $Val extends HomeTimelineParameter>
+class _$HomeTimelineParameterCopyWithImpl<
+  $Res,
+  $Val extends HomeTimelineParameter
+>
     implements $HomeTimelineParameterCopyWith<$Res> {
   _$HomeTimelineParameterCopyWithImpl(this._value, this._then);
 
@@ -58,20 +63,22 @@ class _$HomeTimelineParameterCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? withRenotes = freezed,
-    Object? withFiles = freezed,
-  }) {
-    return _then(_value.copyWith(
-      withRenotes: freezed == withRenotes
-          ? _value.withRenotes
-          : withRenotes // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withFiles: freezed == withFiles
-          ? _value.withFiles
-          : withFiles // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+  $Res call({Object? withRenotes = freezed, Object? withFiles = freezed}) {
+    return _then(
+      _value.copyWith(
+            withRenotes:
+                freezed == withRenotes
+                    ? _value.withRenotes
+                    : withRenotes // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            withFiles:
+                freezed == withFiles
+                    ? _value.withFiles
+                    : withFiles // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -79,9 +86,9 @@ class _$HomeTimelineParameterCopyWithImpl<$Res,
 abstract class _$$HomeTimelineParameterImplCopyWith<$Res>
     implements $HomeTimelineParameterCopyWith<$Res> {
   factory _$$HomeTimelineParameterImplCopyWith(
-          _$HomeTimelineParameterImpl value,
-          $Res Function(_$HomeTimelineParameterImpl) then) =
-      __$$HomeTimelineParameterImplCopyWithImpl<$Res>;
+    _$HomeTimelineParameterImpl value,
+    $Res Function(_$HomeTimelineParameterImpl) then,
+  ) = __$$HomeTimelineParameterImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({bool? withRenotes, bool? withFiles});
@@ -89,31 +96,33 @@ abstract class _$$HomeTimelineParameterImplCopyWith<$Res>
 
 /// @nodoc
 class __$$HomeTimelineParameterImplCopyWithImpl<$Res>
-    extends _$HomeTimelineParameterCopyWithImpl<$Res,
-        _$HomeTimelineParameterImpl>
+    extends
+        _$HomeTimelineParameterCopyWithImpl<$Res, _$HomeTimelineParameterImpl>
     implements _$$HomeTimelineParameterImplCopyWith<$Res> {
-  __$$HomeTimelineParameterImplCopyWithImpl(_$HomeTimelineParameterImpl _value,
-      $Res Function(_$HomeTimelineParameterImpl) _then)
-      : super(_value, _then);
+  __$$HomeTimelineParameterImplCopyWithImpl(
+    _$HomeTimelineParameterImpl _value,
+    $Res Function(_$HomeTimelineParameterImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of HomeTimelineParameter
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? withRenotes = freezed,
-    Object? withFiles = freezed,
-  }) {
-    return _then(_$HomeTimelineParameterImpl(
-      withRenotes: freezed == withRenotes
-          ? _value.withRenotes
-          : withRenotes // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withFiles: freezed == withFiles
-          ? _value.withFiles
-          : withFiles // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+  $Res call({Object? withRenotes = freezed, Object? withFiles = freezed}) {
+    return _then(
+      _$HomeTimelineParameterImpl(
+        withRenotes:
+            freezed == withRenotes
+                ? _value.withRenotes
+                : withRenotes // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        withFiles:
+            freezed == withFiles
+                ? _value.withFiles
+                : withFiles // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
   }
 }
 
@@ -156,21 +165,23 @@ class _$HomeTimelineParameterImpl implements _HomeTimelineParameter {
   @override
   @pragma('vm:prefer-inline')
   _$$HomeTimelineParameterImplCopyWith<_$HomeTimelineParameterImpl>
-      get copyWith => __$$HomeTimelineParameterImplCopyWithImpl<
-          _$HomeTimelineParameterImpl>(this, _$identity);
+  get copyWith =>
+      __$$HomeTimelineParameterImplCopyWithImpl<_$HomeTimelineParameterImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$HomeTimelineParameterImplToJson(
-      this,
-    );
+    return _$$HomeTimelineParameterImplToJson(this);
   }
 }
 
 abstract class _HomeTimelineParameter implements HomeTimelineParameter {
-  const factory _HomeTimelineParameter(
-      {final bool? withRenotes,
-      final bool? withFiles}) = _$HomeTimelineParameterImpl;
+  const factory _HomeTimelineParameter({
+    final bool? withRenotes,
+    final bool? withFiles,
+  }) = _$HomeTimelineParameterImpl;
 
   factory _HomeTimelineParameter.fromJson(Map<String, dynamic> json) =
       _$HomeTimelineParameterImpl.fromJson;
@@ -185,5 +196,5 @@ abstract class _HomeTimelineParameter implements HomeTimelineParameter {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$HomeTimelineParameterImplCopyWith<_$HomeTimelineParameterImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

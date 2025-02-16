@@ -12,7 +12,8 @@ part of 'i_gallery_likes_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 IGalleryLikesRequest _$IGalleryLikesRequestFromJson(Map<String, dynamic> json) {
   return _IGalleryLikesRequest.fromJson(json);
@@ -36,16 +37,19 @@ mixin _$IGalleryLikesRequest {
 
 /// @nodoc
 abstract class $IGalleryLikesRequestCopyWith<$Res> {
-  factory $IGalleryLikesRequestCopyWith(IGalleryLikesRequest value,
-          $Res Function(IGalleryLikesRequest) then) =
-      _$IGalleryLikesRequestCopyWithImpl<$Res, IGalleryLikesRequest>;
+  factory $IGalleryLikesRequestCopyWith(
+    IGalleryLikesRequest value,
+    $Res Function(IGalleryLikesRequest) then,
+  ) = _$IGalleryLikesRequestCopyWithImpl<$Res, IGalleryLikesRequest>;
   @useResult
   $Res call({int? limit, String? sinceId, String? untilId});
 }
 
 /// @nodoc
-class _$IGalleryLikesRequestCopyWithImpl<$Res,
-        $Val extends IGalleryLikesRequest>
+class _$IGalleryLikesRequestCopyWithImpl<
+  $Res,
+  $Val extends IGalleryLikesRequest
+>
     implements $IGalleryLikesRequestCopyWith<$Res> {
   _$IGalleryLikesRequestCopyWithImpl(this._value, this._then);
 
@@ -63,29 +67,36 @@ class _$IGalleryLikesRequestCopyWithImpl<$Res,
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_value.copyWith(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$IGalleryLikesRequestImplCopyWith<$Res>
     implements $IGalleryLikesRequestCopyWith<$Res> {
-  factory _$$IGalleryLikesRequestImplCopyWith(_$IGalleryLikesRequestImpl value,
-          $Res Function(_$IGalleryLikesRequestImpl) then) =
-      __$$IGalleryLikesRequestImplCopyWithImpl<$Res>;
+  factory _$$IGalleryLikesRequestImplCopyWith(
+    _$IGalleryLikesRequestImpl value,
+    $Res Function(_$IGalleryLikesRequestImpl) then,
+  ) = __$$IGalleryLikesRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? limit, String? sinceId, String? untilId});
@@ -95,9 +106,10 @@ abstract class _$$IGalleryLikesRequestImplCopyWith<$Res>
 class __$$IGalleryLikesRequestImplCopyWithImpl<$Res>
     extends _$IGalleryLikesRequestCopyWithImpl<$Res, _$IGalleryLikesRequestImpl>
     implements _$$IGalleryLikesRequestImplCopyWith<$Res> {
-  __$$IGalleryLikesRequestImplCopyWithImpl(_$IGalleryLikesRequestImpl _value,
-      $Res Function(_$IGalleryLikesRequestImpl) _then)
-      : super(_value, _then);
+  __$$IGalleryLikesRequestImplCopyWithImpl(
+    _$IGalleryLikesRequestImpl _value,
+    $Res Function(_$IGalleryLikesRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of IGalleryLikesRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -108,20 +120,25 @@ class __$$IGalleryLikesRequestImplCopyWithImpl<$Res>
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_$IGalleryLikesRequestImpl(
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$IGalleryLikesRequestImpl(
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -165,23 +182,24 @@ class _$IGalleryLikesRequestImpl implements _IGalleryLikesRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$IGalleryLikesRequestImplCopyWith<_$IGalleryLikesRequestImpl>
-      get copyWith =>
-          __$$IGalleryLikesRequestImplCopyWithImpl<_$IGalleryLikesRequestImpl>(
-              this, _$identity);
+  get copyWith =>
+      __$$IGalleryLikesRequestImplCopyWithImpl<_$IGalleryLikesRequestImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$IGalleryLikesRequestImplToJson(
-      this,
-    );
+    return _$$IGalleryLikesRequestImplToJson(this);
   }
 }
 
 abstract class _IGalleryLikesRequest implements IGalleryLikesRequest {
-  const factory _IGalleryLikesRequest(
-      {final int? limit,
-      final String? sinceId,
-      final String? untilId}) = _$IGalleryLikesRequestImpl;
+  const factory _IGalleryLikesRequest({
+    final int? limit,
+    final String? sinceId,
+    final String? untilId,
+  }) = _$IGalleryLikesRequestImpl;
 
   factory _IGalleryLikesRequest.fromJson(Map<String, dynamic> json) =
       _$IGalleryLikesRequestImpl.fromJson;
@@ -198,5 +216,5 @@ abstract class _IGalleryLikesRequest implements IGalleryLikesRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IGalleryLikesRequestImplCopyWith<_$IGalleryLikesRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

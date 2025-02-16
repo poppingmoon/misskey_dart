@@ -12,7 +12,8 @@ part of 'sw_register_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 SwRegisterRequest _$SwRegisterRequestFromJson(Map<String, dynamic> json) {
   return _SwRegisterRequest.fromJson(json);
@@ -38,11 +39,16 @@ mixin _$SwRegisterRequest {
 /// @nodoc
 abstract class $SwRegisterRequestCopyWith<$Res> {
   factory $SwRegisterRequestCopyWith(
-          SwRegisterRequest value, $Res Function(SwRegisterRequest) then) =
-      _$SwRegisterRequestCopyWithImpl<$Res, SwRegisterRequest>;
+    SwRegisterRequest value,
+    $Res Function(SwRegisterRequest) then,
+  ) = _$SwRegisterRequestCopyWithImpl<$Res, SwRegisterRequest>;
   @useResult
-  $Res call(
-      {String endpoint, String auth, String publickey, bool? sendReadMessage});
+  $Res call({
+    String endpoint,
+    String auth,
+    String publickey,
+    bool? sendReadMessage,
+  });
 }
 
 /// @nodoc
@@ -65,46 +71,59 @@ class _$SwRegisterRequestCopyWithImpl<$Res, $Val extends SwRegisterRequest>
     Object? publickey = null,
     Object? sendReadMessage = freezed,
   }) {
-    return _then(_value.copyWith(
-      endpoint: null == endpoint
-          ? _value.endpoint
-          : endpoint // ignore: cast_nullable_to_non_nullable
-              as String,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-      publickey: null == publickey
-          ? _value.publickey
-          : publickey // ignore: cast_nullable_to_non_nullable
-              as String,
-      sendReadMessage: freezed == sendReadMessage
-          ? _value.sendReadMessage
-          : sendReadMessage // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            endpoint:
+                null == endpoint
+                    ? _value.endpoint
+                    : endpoint // ignore: cast_nullable_to_non_nullable
+                        as String,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+            publickey:
+                null == publickey
+                    ? _value.publickey
+                    : publickey // ignore: cast_nullable_to_non_nullable
+                        as String,
+            sendReadMessage:
+                freezed == sendReadMessage
+                    ? _value.sendReadMessage
+                    : sendReadMessage // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$SwRegisterRequestImplCopyWith<$Res>
     implements $SwRegisterRequestCopyWith<$Res> {
-  factory _$$SwRegisterRequestImplCopyWith(_$SwRegisterRequestImpl value,
-          $Res Function(_$SwRegisterRequestImpl) then) =
-      __$$SwRegisterRequestImplCopyWithImpl<$Res>;
+  factory _$$SwRegisterRequestImplCopyWith(
+    _$SwRegisterRequestImpl value,
+    $Res Function(_$SwRegisterRequestImpl) then,
+  ) = __$$SwRegisterRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String endpoint, String auth, String publickey, bool? sendReadMessage});
+  $Res call({
+    String endpoint,
+    String auth,
+    String publickey,
+    bool? sendReadMessage,
+  });
 }
 
 /// @nodoc
 class __$$SwRegisterRequestImplCopyWithImpl<$Res>
     extends _$SwRegisterRequestCopyWithImpl<$Res, _$SwRegisterRequestImpl>
     implements _$$SwRegisterRequestImplCopyWith<$Res> {
-  __$$SwRegisterRequestImplCopyWithImpl(_$SwRegisterRequestImpl _value,
-      $Res Function(_$SwRegisterRequestImpl) _then)
-      : super(_value, _then);
+  __$$SwRegisterRequestImplCopyWithImpl(
+    _$SwRegisterRequestImpl _value,
+    $Res Function(_$SwRegisterRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of SwRegisterRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -116,35 +135,42 @@ class __$$SwRegisterRequestImplCopyWithImpl<$Res>
     Object? publickey = null,
     Object? sendReadMessage = freezed,
   }) {
-    return _then(_$SwRegisterRequestImpl(
-      endpoint: null == endpoint
-          ? _value.endpoint
-          : endpoint // ignore: cast_nullable_to_non_nullable
-              as String,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-      publickey: null == publickey
-          ? _value.publickey
-          : publickey // ignore: cast_nullable_to_non_nullable
-              as String,
-      sendReadMessage: freezed == sendReadMessage
-          ? _value.sendReadMessage
-          : sendReadMessage // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+    return _then(
+      _$SwRegisterRequestImpl(
+        endpoint:
+            null == endpoint
+                ? _value.endpoint
+                : endpoint // ignore: cast_nullable_to_non_nullable
+                    as String,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+        publickey:
+            null == publickey
+                ? _value.publickey
+                : publickey // ignore: cast_nullable_to_non_nullable
+                    as String,
+        sendReadMessage:
+            freezed == sendReadMessage
+                ? _value.sendReadMessage
+                : sendReadMessage // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$SwRegisterRequestImpl implements _SwRegisterRequest {
-  const _$SwRegisterRequestImpl(
-      {required this.endpoint,
-      required this.auth,
-      required this.publickey,
-      this.sendReadMessage});
+  const _$SwRegisterRequestImpl({
+    required this.endpoint,
+    required this.auth,
+    required this.publickey,
+    this.sendReadMessage,
+  });
 
   factory _$SwRegisterRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$SwRegisterRequestImplFromJson(json);
@@ -189,22 +215,23 @@ class _$SwRegisterRequestImpl implements _SwRegisterRequest {
   @pragma('vm:prefer-inline')
   _$$SwRegisterRequestImplCopyWith<_$SwRegisterRequestImpl> get copyWith =>
       __$$SwRegisterRequestImplCopyWithImpl<_$SwRegisterRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SwRegisterRequestImplToJson(
-      this,
-    );
+    return _$$SwRegisterRequestImplToJson(this);
   }
 }
 
 abstract class _SwRegisterRequest implements SwRegisterRequest {
-  const factory _SwRegisterRequest(
-      {required final String endpoint,
-      required final String auth,
-      required final String publickey,
-      final bool? sendReadMessage}) = _$SwRegisterRequestImpl;
+  const factory _SwRegisterRequest({
+    required final String endpoint,
+    required final String auth,
+    required final String publickey,
+    final bool? sendReadMessage,
+  }) = _$SwRegisterRequestImpl;
 
   factory _SwRegisterRequest.fromJson(Map<String, dynamic> json) =
       _$SwRegisterRequestImpl.fromJson;

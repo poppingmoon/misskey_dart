@@ -12,7 +12,8 @@ part of 'notes_delete_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 NotesDeleteRequest _$NotesDeleteRequestFromJson(Map<String, dynamic> json) {
   return _NotesDeleteRequest.fromJson(json);
@@ -35,8 +36,9 @@ mixin _$NotesDeleteRequest {
 /// @nodoc
 abstract class $NotesDeleteRequestCopyWith<$Res> {
   factory $NotesDeleteRequestCopyWith(
-          NotesDeleteRequest value, $Res Function(NotesDeleteRequest) then) =
-      _$NotesDeleteRequestCopyWithImpl<$Res, NotesDeleteRequest>;
+    NotesDeleteRequest value,
+    $Res Function(NotesDeleteRequest) then,
+  ) = _$NotesDeleteRequestCopyWithImpl<$Res, NotesDeleteRequest>;
   @useResult
   $Res call({String noteId});
 }
@@ -55,24 +57,27 @@ class _$NotesDeleteRequestCopyWithImpl<$Res, $Val extends NotesDeleteRequest>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? noteId = null,
-  }) {
-    return _then(_value.copyWith(
-      noteId: null == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? noteId = null}) {
+    return _then(
+      _value.copyWith(
+            noteId:
+                null == noteId
+                    ? _value.noteId
+                    : noteId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$NotesDeleteRequestImplCopyWith<$Res>
     implements $NotesDeleteRequestCopyWith<$Res> {
-  factory _$$NotesDeleteRequestImplCopyWith(_$NotesDeleteRequestImpl value,
-          $Res Function(_$NotesDeleteRequestImpl) then) =
-      __$$NotesDeleteRequestImplCopyWithImpl<$Res>;
+  factory _$$NotesDeleteRequestImplCopyWith(
+    _$NotesDeleteRequestImpl value,
+    $Res Function(_$NotesDeleteRequestImpl) then,
+  ) = __$$NotesDeleteRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String noteId});
@@ -82,23 +87,25 @@ abstract class _$$NotesDeleteRequestImplCopyWith<$Res>
 class __$$NotesDeleteRequestImplCopyWithImpl<$Res>
     extends _$NotesDeleteRequestCopyWithImpl<$Res, _$NotesDeleteRequestImpl>
     implements _$$NotesDeleteRequestImplCopyWith<$Res> {
-  __$$NotesDeleteRequestImplCopyWithImpl(_$NotesDeleteRequestImpl _value,
-      $Res Function(_$NotesDeleteRequestImpl) _then)
-      : super(_value, _then);
+  __$$NotesDeleteRequestImplCopyWithImpl(
+    _$NotesDeleteRequestImpl _value,
+    $Res Function(_$NotesDeleteRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotesDeleteRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? noteId = null,
-  }) {
-    return _then(_$NotesDeleteRequestImpl(
-      noteId: null == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? noteId = null}) {
+    return _then(
+      _$NotesDeleteRequestImpl(
+        noteId:
+            null == noteId
+                ? _value.noteId
+                : noteId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -137,13 +144,13 @@ class _$NotesDeleteRequestImpl implements _NotesDeleteRequest {
   @pragma('vm:prefer-inline')
   _$$NotesDeleteRequestImplCopyWith<_$NotesDeleteRequestImpl> get copyWith =>
       __$$NotesDeleteRequestImplCopyWithImpl<_$NotesDeleteRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotesDeleteRequestImplToJson(
-      this,
-    );
+    return _$$NotesDeleteRequestImplToJson(this);
   }
 }
 

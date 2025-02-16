@@ -12,10 +12,12 @@ part of 'clips_remove_note_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ClipsRemoveNoteRequest _$ClipsRemoveNoteRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _ClipsRemoveNoteRequest.fromJson(json);
 }
 
@@ -36,16 +38,19 @@ mixin _$ClipsRemoveNoteRequest {
 
 /// @nodoc
 abstract class $ClipsRemoveNoteRequestCopyWith<$Res> {
-  factory $ClipsRemoveNoteRequestCopyWith(ClipsRemoveNoteRequest value,
-          $Res Function(ClipsRemoveNoteRequest) then) =
-      _$ClipsRemoveNoteRequestCopyWithImpl<$Res, ClipsRemoveNoteRequest>;
+  factory $ClipsRemoveNoteRequestCopyWith(
+    ClipsRemoveNoteRequest value,
+    $Res Function(ClipsRemoveNoteRequest) then,
+  ) = _$ClipsRemoveNoteRequestCopyWithImpl<$Res, ClipsRemoveNoteRequest>;
   @useResult
   $Res call({String clipId, String noteId});
 }
 
 /// @nodoc
-class _$ClipsRemoveNoteRequestCopyWithImpl<$Res,
-        $Val extends ClipsRemoveNoteRequest>
+class _$ClipsRemoveNoteRequestCopyWithImpl<
+  $Res,
+  $Val extends ClipsRemoveNoteRequest
+>
     implements $ClipsRemoveNoteRequestCopyWith<$Res> {
   _$ClipsRemoveNoteRequestCopyWithImpl(this._value, this._then);
 
@@ -58,20 +63,22 @@ class _$ClipsRemoveNoteRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? clipId = null,
-    Object? noteId = null,
-  }) {
-    return _then(_value.copyWith(
-      clipId: null == clipId
-          ? _value.clipId
-          : clipId // ignore: cast_nullable_to_non_nullable
-              as String,
-      noteId: null == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? clipId = null, Object? noteId = null}) {
+    return _then(
+      _value.copyWith(
+            clipId:
+                null == clipId
+                    ? _value.clipId
+                    : clipId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            noteId:
+                null == noteId
+                    ? _value.noteId
+                    : noteId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -79,9 +86,9 @@ class _$ClipsRemoveNoteRequestCopyWithImpl<$Res,
 abstract class _$$ClipsRemoveNoteRequestImplCopyWith<$Res>
     implements $ClipsRemoveNoteRequestCopyWith<$Res> {
   factory _$$ClipsRemoveNoteRequestImplCopyWith(
-          _$ClipsRemoveNoteRequestImpl value,
-          $Res Function(_$ClipsRemoveNoteRequestImpl) then) =
-      __$$ClipsRemoveNoteRequestImplCopyWithImpl<$Res>;
+    _$ClipsRemoveNoteRequestImpl value,
+    $Res Function(_$ClipsRemoveNoteRequestImpl) then,
+  ) = __$$ClipsRemoveNoteRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String clipId, String noteId});
@@ -89,40 +96,43 @@ abstract class _$$ClipsRemoveNoteRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$ClipsRemoveNoteRequestImplCopyWithImpl<$Res>
-    extends _$ClipsRemoveNoteRequestCopyWithImpl<$Res,
-        _$ClipsRemoveNoteRequestImpl>
+    extends
+        _$ClipsRemoveNoteRequestCopyWithImpl<$Res, _$ClipsRemoveNoteRequestImpl>
     implements _$$ClipsRemoveNoteRequestImplCopyWith<$Res> {
   __$$ClipsRemoveNoteRequestImplCopyWithImpl(
-      _$ClipsRemoveNoteRequestImpl _value,
-      $Res Function(_$ClipsRemoveNoteRequestImpl) _then)
-      : super(_value, _then);
+    _$ClipsRemoveNoteRequestImpl _value,
+    $Res Function(_$ClipsRemoveNoteRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ClipsRemoveNoteRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? clipId = null,
-    Object? noteId = null,
-  }) {
-    return _then(_$ClipsRemoveNoteRequestImpl(
-      clipId: null == clipId
-          ? _value.clipId
-          : clipId // ignore: cast_nullable_to_non_nullable
-              as String,
-      noteId: null == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? clipId = null, Object? noteId = null}) {
+    return _then(
+      _$ClipsRemoveNoteRequestImpl(
+        clipId:
+            null == clipId
+                ? _value.clipId
+                : clipId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        noteId:
+            null == noteId
+                ? _value.noteId
+                : noteId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ClipsRemoveNoteRequestImpl implements _ClipsRemoveNoteRequest {
-  const _$ClipsRemoveNoteRequestImpl(
-      {required this.clipId, required this.noteId});
+  const _$ClipsRemoveNoteRequestImpl({
+    required this.clipId,
+    required this.noteId,
+  });
 
   factory _$ClipsRemoveNoteRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$ClipsRemoveNoteRequestImplFromJson(json);
@@ -156,21 +166,23 @@ class _$ClipsRemoveNoteRequestImpl implements _ClipsRemoveNoteRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$ClipsRemoveNoteRequestImplCopyWith<_$ClipsRemoveNoteRequestImpl>
-      get copyWith => __$$ClipsRemoveNoteRequestImplCopyWithImpl<
-          _$ClipsRemoveNoteRequestImpl>(this, _$identity);
+  get copyWith =>
+      __$$ClipsRemoveNoteRequestImplCopyWithImpl<_$ClipsRemoveNoteRequestImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ClipsRemoveNoteRequestImplToJson(
-      this,
-    );
+    return _$$ClipsRemoveNoteRequestImplToJson(this);
   }
 }
 
 abstract class _ClipsRemoveNoteRequest implements ClipsRemoveNoteRequest {
-  const factory _ClipsRemoveNoteRequest(
-      {required final String clipId,
-      required final String noteId}) = _$ClipsRemoveNoteRequestImpl;
+  const factory _ClipsRemoveNoteRequest({
+    required final String clipId,
+    required final String noteId,
+  }) = _$ClipsRemoveNoteRequestImpl;
 
   factory _ClipsRemoveNoteRequest.fromJson(Map<String, dynamic> json) =
       _$ClipsRemoveNoteRequestImpl.fromJson;
@@ -185,5 +197,5 @@ abstract class _ClipsRemoveNoteRequest implements ClipsRemoveNoteRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ClipsRemoveNoteRequestImplCopyWith<_$ClipsRemoveNoteRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

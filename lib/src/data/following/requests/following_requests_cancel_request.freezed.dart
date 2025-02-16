@@ -12,10 +12,12 @@ part of 'following_requests_cancel_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 FollowingRequestsCancelRequest _$FollowingRequestsCancelRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _FollowingRequestsCancelRequest.fromJson(json);
 }
 
@@ -30,23 +32,28 @@ mixin _$FollowingRequestsCancelRequest {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $FollowingRequestsCancelRequestCopyWith<FollowingRequestsCancelRequest>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $FollowingRequestsCancelRequestCopyWith<$Res> {
   factory $FollowingRequestsCancelRequestCopyWith(
-          FollowingRequestsCancelRequest value,
-          $Res Function(FollowingRequestsCancelRequest) then) =
-      _$FollowingRequestsCancelRequestCopyWithImpl<$Res,
-          FollowingRequestsCancelRequest>;
+    FollowingRequestsCancelRequest value,
+    $Res Function(FollowingRequestsCancelRequest) then,
+  ) =
+      _$FollowingRequestsCancelRequestCopyWithImpl<
+        $Res,
+        FollowingRequestsCancelRequest
+      >;
   @useResult
   $Res call({String userId});
 }
 
 /// @nodoc
-class _$FollowingRequestsCancelRequestCopyWithImpl<$Res,
-        $Val extends FollowingRequestsCancelRequest>
+class _$FollowingRequestsCancelRequestCopyWithImpl<
+  $Res,
+  $Val extends FollowingRequestsCancelRequest
+>
     implements $FollowingRequestsCancelRequestCopyWith<$Res> {
   _$FollowingRequestsCancelRequestCopyWithImpl(this._value, this._then);
 
@@ -59,15 +66,17 @@ class _$FollowingRequestsCancelRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? userId = null,
-  }) {
-    return _then(_value.copyWith(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? userId = null}) {
+    return _then(
+      _value.copyWith(
+            userId:
+                null == userId
+                    ? _value.userId
+                    : userId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -75,9 +84,9 @@ class _$FollowingRequestsCancelRequestCopyWithImpl<$Res,
 abstract class _$$FollowingRequestsCancelRequestImplCopyWith<$Res>
     implements $FollowingRequestsCancelRequestCopyWith<$Res> {
   factory _$$FollowingRequestsCancelRequestImplCopyWith(
-          _$FollowingRequestsCancelRequestImpl value,
-          $Res Function(_$FollowingRequestsCancelRequestImpl) then) =
-      __$$FollowingRequestsCancelRequestImplCopyWithImpl<$Res>;
+    _$FollowingRequestsCancelRequestImpl value,
+    $Res Function(_$FollowingRequestsCancelRequestImpl) then,
+  ) = __$$FollowingRequestsCancelRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String userId});
@@ -85,27 +94,31 @@ abstract class _$$FollowingRequestsCancelRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$FollowingRequestsCancelRequestImplCopyWithImpl<$Res>
-    extends _$FollowingRequestsCancelRequestCopyWithImpl<$Res,
-        _$FollowingRequestsCancelRequestImpl>
+    extends
+        _$FollowingRequestsCancelRequestCopyWithImpl<
+          $Res,
+          _$FollowingRequestsCancelRequestImpl
+        >
     implements _$$FollowingRequestsCancelRequestImplCopyWith<$Res> {
   __$$FollowingRequestsCancelRequestImplCopyWithImpl(
-      _$FollowingRequestsCancelRequestImpl _value,
-      $Res Function(_$FollowingRequestsCancelRequestImpl) _then)
-      : super(_value, _then);
+    _$FollowingRequestsCancelRequestImpl _value,
+    $Res Function(_$FollowingRequestsCancelRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of FollowingRequestsCancelRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? userId = null,
-  }) {
-    return _then(_$FollowingRequestsCancelRequestImpl(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? userId = null}) {
+    return _then(
+      _$FollowingRequestsCancelRequestImpl(
+        userId:
+            null == userId
+                ? _value.userId
+                : userId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -116,8 +129,8 @@ class _$FollowingRequestsCancelRequestImpl
   const _$FollowingRequestsCancelRequestImpl({required this.userId});
 
   factory _$FollowingRequestsCancelRequestImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$FollowingRequestsCancelRequestImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$FollowingRequestsCancelRequestImplFromJson(json);
 
   @override
   final String userId;
@@ -145,22 +158,23 @@ class _$FollowingRequestsCancelRequestImpl
   @override
   @pragma('vm:prefer-inline')
   _$$FollowingRequestsCancelRequestImplCopyWith<
-          _$FollowingRequestsCancelRequestImpl>
-      get copyWith => __$$FollowingRequestsCancelRequestImplCopyWithImpl<
-          _$FollowingRequestsCancelRequestImpl>(this, _$identity);
+    _$FollowingRequestsCancelRequestImpl
+  >
+  get copyWith => __$$FollowingRequestsCancelRequestImplCopyWithImpl<
+    _$FollowingRequestsCancelRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$FollowingRequestsCancelRequestImplToJson(
-      this,
-    );
+    return _$$FollowingRequestsCancelRequestImplToJson(this);
   }
 }
 
 abstract class _FollowingRequestsCancelRequest
     implements FollowingRequestsCancelRequest {
-  const factory _FollowingRequestsCancelRequest(
-      {required final String userId}) = _$FollowingRequestsCancelRequestImpl;
+  const factory _FollowingRequestsCancelRequest({
+    required final String userId,
+  }) = _$FollowingRequestsCancelRequestImpl;
 
   factory _FollowingRequestsCancelRequest.fromJson(Map<String, dynamic> json) =
       _$FollowingRequestsCancelRequestImpl.fromJson;
@@ -173,6 +187,7 @@ abstract class _FollowingRequestsCancelRequest
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FollowingRequestsCancelRequestImplCopyWith<
-          _$FollowingRequestsCancelRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$FollowingRequestsCancelRequestImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }

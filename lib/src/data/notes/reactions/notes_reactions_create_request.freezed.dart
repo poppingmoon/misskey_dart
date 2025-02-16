@@ -12,10 +12,12 @@ part of 'notes_reactions_create_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 NotesReactionsCreateRequest _$NotesReactionsCreateRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _NotesReactionsCreateRequest.fromJson(json);
 }
 
@@ -31,23 +33,28 @@ mixin _$NotesReactionsCreateRequest {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesReactionsCreateRequestCopyWith<NotesReactionsCreateRequest>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $NotesReactionsCreateRequestCopyWith<$Res> {
   factory $NotesReactionsCreateRequestCopyWith(
-          NotesReactionsCreateRequest value,
-          $Res Function(NotesReactionsCreateRequest) then) =
-      _$NotesReactionsCreateRequestCopyWithImpl<$Res,
-          NotesReactionsCreateRequest>;
+    NotesReactionsCreateRequest value,
+    $Res Function(NotesReactionsCreateRequest) then,
+  ) =
+      _$NotesReactionsCreateRequestCopyWithImpl<
+        $Res,
+        NotesReactionsCreateRequest
+      >;
   @useResult
   $Res call({String noteId, String reaction});
 }
 
 /// @nodoc
-class _$NotesReactionsCreateRequestCopyWithImpl<$Res,
-        $Val extends NotesReactionsCreateRequest>
+class _$NotesReactionsCreateRequestCopyWithImpl<
+  $Res,
+  $Val extends NotesReactionsCreateRequest
+>
     implements $NotesReactionsCreateRequestCopyWith<$Res> {
   _$NotesReactionsCreateRequestCopyWithImpl(this._value, this._then);
 
@@ -60,20 +67,22 @@ class _$NotesReactionsCreateRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? noteId = null,
-    Object? reaction = null,
-  }) {
-    return _then(_value.copyWith(
-      noteId: null == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String,
-      reaction: null == reaction
-          ? _value.reaction
-          : reaction // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? noteId = null, Object? reaction = null}) {
+    return _then(
+      _value.copyWith(
+            noteId:
+                null == noteId
+                    ? _value.noteId
+                    : noteId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            reaction:
+                null == reaction
+                    ? _value.reaction
+                    : reaction // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -81,9 +90,9 @@ class _$NotesReactionsCreateRequestCopyWithImpl<$Res,
 abstract class _$$NotesReactionsCreateRequestImplCopyWith<$Res>
     implements $NotesReactionsCreateRequestCopyWith<$Res> {
   factory _$$NotesReactionsCreateRequestImplCopyWith(
-          _$NotesReactionsCreateRequestImpl value,
-          $Res Function(_$NotesReactionsCreateRequestImpl) then) =
-      __$$NotesReactionsCreateRequestImplCopyWithImpl<$Res>;
+    _$NotesReactionsCreateRequestImpl value,
+    $Res Function(_$NotesReactionsCreateRequestImpl) then,
+  ) = __$$NotesReactionsCreateRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String noteId, String reaction});
@@ -91,32 +100,36 @@ abstract class _$$NotesReactionsCreateRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$NotesReactionsCreateRequestImplCopyWithImpl<$Res>
-    extends _$NotesReactionsCreateRequestCopyWithImpl<$Res,
-        _$NotesReactionsCreateRequestImpl>
+    extends
+        _$NotesReactionsCreateRequestCopyWithImpl<
+          $Res,
+          _$NotesReactionsCreateRequestImpl
+        >
     implements _$$NotesReactionsCreateRequestImplCopyWith<$Res> {
   __$$NotesReactionsCreateRequestImplCopyWithImpl(
-      _$NotesReactionsCreateRequestImpl _value,
-      $Res Function(_$NotesReactionsCreateRequestImpl) _then)
-      : super(_value, _then);
+    _$NotesReactionsCreateRequestImpl _value,
+    $Res Function(_$NotesReactionsCreateRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotesReactionsCreateRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? noteId = null,
-    Object? reaction = null,
-  }) {
-    return _then(_$NotesReactionsCreateRequestImpl(
-      noteId: null == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String,
-      reaction: null == reaction
-          ? _value.reaction
-          : reaction // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? noteId = null, Object? reaction = null}) {
+    return _then(
+      _$NotesReactionsCreateRequestImpl(
+        noteId:
+            null == noteId
+                ? _value.noteId
+                : noteId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        reaction:
+            null == reaction
+                ? _value.reaction
+                : reaction // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -124,12 +137,14 @@ class __$$NotesReactionsCreateRequestImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$NotesReactionsCreateRequestImpl
     implements _NotesReactionsCreateRequest {
-  const _$NotesReactionsCreateRequestImpl(
-      {required this.noteId, required this.reaction});
+  const _$NotesReactionsCreateRequestImpl({
+    required this.noteId,
+    required this.reaction,
+  });
 
   factory _$NotesReactionsCreateRequestImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$NotesReactionsCreateRequestImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$NotesReactionsCreateRequestImplFromJson(json);
 
   @override
   final String noteId;
@@ -161,22 +176,22 @@ class _$NotesReactionsCreateRequestImpl
   @override
   @pragma('vm:prefer-inline')
   _$$NotesReactionsCreateRequestImplCopyWith<_$NotesReactionsCreateRequestImpl>
-      get copyWith => __$$NotesReactionsCreateRequestImplCopyWithImpl<
-          _$NotesReactionsCreateRequestImpl>(this, _$identity);
+  get copyWith => __$$NotesReactionsCreateRequestImplCopyWithImpl<
+    _$NotesReactionsCreateRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotesReactionsCreateRequestImplToJson(
-      this,
-    );
+    return _$$NotesReactionsCreateRequestImplToJson(this);
   }
 }
 
 abstract class _NotesReactionsCreateRequest
     implements NotesReactionsCreateRequest {
-  const factory _NotesReactionsCreateRequest(
-      {required final String noteId,
-      required final String reaction}) = _$NotesReactionsCreateRequestImpl;
+  const factory _NotesReactionsCreateRequest({
+    required final String noteId,
+    required final String reaction,
+  }) = _$NotesReactionsCreateRequestImpl;
 
   factory _NotesReactionsCreateRequest.fromJson(Map<String, dynamic> json) =
       _$NotesReactionsCreateRequestImpl.fromJson;
@@ -191,5 +206,5 @@ abstract class _NotesReactionsCreateRequest
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesReactionsCreateRequestImplCopyWith<_$NotesReactionsCreateRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

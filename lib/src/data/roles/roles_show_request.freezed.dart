@@ -12,7 +12,8 @@ part of 'roles_show_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 RolesShowRequest _$RolesShowRequestFromJson(Map<String, dynamic> json) {
   return _RolesShowRequest.fromJson(json);
@@ -35,8 +36,9 @@ mixin _$RolesShowRequest {
 /// @nodoc
 abstract class $RolesShowRequestCopyWith<$Res> {
   factory $RolesShowRequestCopyWith(
-          RolesShowRequest value, $Res Function(RolesShowRequest) then) =
-      _$RolesShowRequestCopyWithImpl<$Res, RolesShowRequest>;
+    RolesShowRequest value,
+    $Res Function(RolesShowRequest) then,
+  ) = _$RolesShowRequestCopyWithImpl<$Res, RolesShowRequest>;
   @useResult
   $Res call({String roleId});
 }
@@ -55,24 +57,27 @@ class _$RolesShowRequestCopyWithImpl<$Res, $Val extends RolesShowRequest>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? roleId = null,
-  }) {
-    return _then(_value.copyWith(
-      roleId: null == roleId
-          ? _value.roleId
-          : roleId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? roleId = null}) {
+    return _then(
+      _value.copyWith(
+            roleId:
+                null == roleId
+                    ? _value.roleId
+                    : roleId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$RolesShowRequestImplCopyWith<$Res>
     implements $RolesShowRequestCopyWith<$Res> {
-  factory _$$RolesShowRequestImplCopyWith(_$RolesShowRequestImpl value,
-          $Res Function(_$RolesShowRequestImpl) then) =
-      __$$RolesShowRequestImplCopyWithImpl<$Res>;
+  factory _$$RolesShowRequestImplCopyWith(
+    _$RolesShowRequestImpl value,
+    $Res Function(_$RolesShowRequestImpl) then,
+  ) = __$$RolesShowRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String roleId});
@@ -82,23 +87,25 @@ abstract class _$$RolesShowRequestImplCopyWith<$Res>
 class __$$RolesShowRequestImplCopyWithImpl<$Res>
     extends _$RolesShowRequestCopyWithImpl<$Res, _$RolesShowRequestImpl>
     implements _$$RolesShowRequestImplCopyWith<$Res> {
-  __$$RolesShowRequestImplCopyWithImpl(_$RolesShowRequestImpl _value,
-      $Res Function(_$RolesShowRequestImpl) _then)
-      : super(_value, _then);
+  __$$RolesShowRequestImplCopyWithImpl(
+    _$RolesShowRequestImpl _value,
+    $Res Function(_$RolesShowRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of RolesShowRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? roleId = null,
-  }) {
-    return _then(_$RolesShowRequestImpl(
-      roleId: null == roleId
-          ? _value.roleId
-          : roleId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? roleId = null}) {
+    return _then(
+      _$RolesShowRequestImpl(
+        roleId:
+            null == roleId
+                ? _value.roleId
+                : roleId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -137,13 +144,13 @@ class _$RolesShowRequestImpl implements _RolesShowRequest {
   @pragma('vm:prefer-inline')
   _$$RolesShowRequestImplCopyWith<_$RolesShowRequestImpl> get copyWith =>
       __$$RolesShowRequestImplCopyWithImpl<_$RolesShowRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$RolesShowRequestImplToJson(
-      this,
-    );
+    return _$$RolesShowRequestImplToJson(this);
   }
 }
 

@@ -12,10 +12,12 @@ part of 'following_update_all.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 FollowingUpdateAllRequest _$FollowingUpdateAllRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _FollowingUpdateAllRequest.fromJson(json);
 }
 
@@ -37,16 +39,19 @@ mixin _$FollowingUpdateAllRequest {
 
 /// @nodoc
 abstract class $FollowingUpdateAllRequestCopyWith<$Res> {
-  factory $FollowingUpdateAllRequestCopyWith(FollowingUpdateAllRequest value,
-          $Res Function(FollowingUpdateAllRequest) then) =
-      _$FollowingUpdateAllRequestCopyWithImpl<$Res, FollowingUpdateAllRequest>;
+  factory $FollowingUpdateAllRequestCopyWith(
+    FollowingUpdateAllRequest value,
+    $Res Function(FollowingUpdateAllRequest) then,
+  ) = _$FollowingUpdateAllRequestCopyWithImpl<$Res, FollowingUpdateAllRequest>;
   @useResult
   $Res call({FollowingUpdateAllNotifyType? notify, bool? withReplies});
 }
 
 /// @nodoc
-class _$FollowingUpdateAllRequestCopyWithImpl<$Res,
-        $Val extends FollowingUpdateAllRequest>
+class _$FollowingUpdateAllRequestCopyWithImpl<
+  $Res,
+  $Val extends FollowingUpdateAllRequest
+>
     implements $FollowingUpdateAllRequestCopyWith<$Res> {
   _$FollowingUpdateAllRequestCopyWithImpl(this._value, this._then);
 
@@ -59,20 +64,22 @@ class _$FollowingUpdateAllRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? notify = freezed,
-    Object? withReplies = freezed,
-  }) {
-    return _then(_value.copyWith(
-      notify: freezed == notify
-          ? _value.notify
-          : notify // ignore: cast_nullable_to_non_nullable
-              as FollowingUpdateAllNotifyType?,
-      withReplies: freezed == withReplies
-          ? _value.withReplies
-          : withReplies // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+  $Res call({Object? notify = freezed, Object? withReplies = freezed}) {
+    return _then(
+      _value.copyWith(
+            notify:
+                freezed == notify
+                    ? _value.notify
+                    : notify // ignore: cast_nullable_to_non_nullable
+                        as FollowingUpdateAllNotifyType?,
+            withReplies:
+                freezed == withReplies
+                    ? _value.withReplies
+                    : withReplies // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -80,9 +87,9 @@ class _$FollowingUpdateAllRequestCopyWithImpl<$Res,
 abstract class _$$FollowingUpdateAllRequestImplCopyWith<$Res>
     implements $FollowingUpdateAllRequestCopyWith<$Res> {
   factory _$$FollowingUpdateAllRequestImplCopyWith(
-          _$FollowingUpdateAllRequestImpl value,
-          $Res Function(_$FollowingUpdateAllRequestImpl) then) =
-      __$$FollowingUpdateAllRequestImplCopyWithImpl<$Res>;
+    _$FollowingUpdateAllRequestImpl value,
+    $Res Function(_$FollowingUpdateAllRequestImpl) then,
+  ) = __$$FollowingUpdateAllRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({FollowingUpdateAllNotifyType? notify, bool? withReplies});
@@ -90,32 +97,36 @@ abstract class _$$FollowingUpdateAllRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$FollowingUpdateAllRequestImplCopyWithImpl<$Res>
-    extends _$FollowingUpdateAllRequestCopyWithImpl<$Res,
-        _$FollowingUpdateAllRequestImpl>
+    extends
+        _$FollowingUpdateAllRequestCopyWithImpl<
+          $Res,
+          _$FollowingUpdateAllRequestImpl
+        >
     implements _$$FollowingUpdateAllRequestImplCopyWith<$Res> {
   __$$FollowingUpdateAllRequestImplCopyWithImpl(
-      _$FollowingUpdateAllRequestImpl _value,
-      $Res Function(_$FollowingUpdateAllRequestImpl) _then)
-      : super(_value, _then);
+    _$FollowingUpdateAllRequestImpl _value,
+    $Res Function(_$FollowingUpdateAllRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of FollowingUpdateAllRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? notify = freezed,
-    Object? withReplies = freezed,
-  }) {
-    return _then(_$FollowingUpdateAllRequestImpl(
-      notify: freezed == notify
-          ? _value.notify
-          : notify // ignore: cast_nullable_to_non_nullable
-              as FollowingUpdateAllNotifyType?,
-      withReplies: freezed == withReplies
-          ? _value.withReplies
-          : withReplies // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+  $Res call({Object? notify = freezed, Object? withReplies = freezed}) {
+    return _then(
+      _$FollowingUpdateAllRequestImpl(
+        notify:
+            freezed == notify
+                ? _value.notify
+                : notify // ignore: cast_nullable_to_non_nullable
+                    as FollowingUpdateAllNotifyType?,
+        withReplies:
+            freezed == withReplies
+                ? _value.withReplies
+                : withReplies // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
   }
 }
 
@@ -157,21 +168,21 @@ class _$FollowingUpdateAllRequestImpl implements _FollowingUpdateAllRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$FollowingUpdateAllRequestImplCopyWith<_$FollowingUpdateAllRequestImpl>
-      get copyWith => __$$FollowingUpdateAllRequestImplCopyWithImpl<
-          _$FollowingUpdateAllRequestImpl>(this, _$identity);
+  get copyWith => __$$FollowingUpdateAllRequestImplCopyWithImpl<
+    _$FollowingUpdateAllRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$FollowingUpdateAllRequestImplToJson(
-      this,
-    );
+    return _$$FollowingUpdateAllRequestImplToJson(this);
   }
 }
 
 abstract class _FollowingUpdateAllRequest implements FollowingUpdateAllRequest {
-  const factory _FollowingUpdateAllRequest(
-      {final FollowingUpdateAllNotifyType? notify,
-      final bool? withReplies}) = _$FollowingUpdateAllRequestImpl;
+  const factory _FollowingUpdateAllRequest({
+    final FollowingUpdateAllNotifyType? notify,
+    final bool? withReplies,
+  }) = _$FollowingUpdateAllRequestImpl;
 
   factory _FollowingUpdateAllRequest.fromJson(Map<String, dynamic> json) =
       _$FollowingUpdateAllRequestImpl.fromJson;
@@ -186,5 +197,5 @@ abstract class _FollowingUpdateAllRequest implements FollowingUpdateAllRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FollowingUpdateAllRequestImplCopyWith<_$FollowingUpdateAllRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

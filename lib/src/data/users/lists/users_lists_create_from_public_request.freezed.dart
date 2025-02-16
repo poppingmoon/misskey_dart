@@ -12,10 +12,12 @@ part of 'users_lists_create_from_public_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 UsersListsCreateFromPublicRequest _$UsersListsCreateFromPublicRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _UsersListsCreateFromPublicRequest.fromJson(json);
 }
 
@@ -31,23 +33,28 @@ mixin _$UsersListsCreateFromPublicRequest {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $UsersListsCreateFromPublicRequestCopyWith<UsersListsCreateFromPublicRequest>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $UsersListsCreateFromPublicRequestCopyWith<$Res> {
   factory $UsersListsCreateFromPublicRequestCopyWith(
-          UsersListsCreateFromPublicRequest value,
-          $Res Function(UsersListsCreateFromPublicRequest) then) =
-      _$UsersListsCreateFromPublicRequestCopyWithImpl<$Res,
-          UsersListsCreateFromPublicRequest>;
+    UsersListsCreateFromPublicRequest value,
+    $Res Function(UsersListsCreateFromPublicRequest) then,
+  ) =
+      _$UsersListsCreateFromPublicRequestCopyWithImpl<
+        $Res,
+        UsersListsCreateFromPublicRequest
+      >;
   @useResult
   $Res call({String name, String listId});
 }
 
 /// @nodoc
-class _$UsersListsCreateFromPublicRequestCopyWithImpl<$Res,
-        $Val extends UsersListsCreateFromPublicRequest>
+class _$UsersListsCreateFromPublicRequestCopyWithImpl<
+  $Res,
+  $Val extends UsersListsCreateFromPublicRequest
+>
     implements $UsersListsCreateFromPublicRequestCopyWith<$Res> {
   _$UsersListsCreateFromPublicRequestCopyWithImpl(this._value, this._then);
 
@@ -60,20 +67,22 @@ class _$UsersListsCreateFromPublicRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? name = null,
-    Object? listId = null,
-  }) {
-    return _then(_value.copyWith(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      listId: null == listId
-          ? _value.listId
-          : listId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? name = null, Object? listId = null}) {
+    return _then(
+      _value.copyWith(
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            listId:
+                null == listId
+                    ? _value.listId
+                    : listId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -81,9 +90,9 @@ class _$UsersListsCreateFromPublicRequestCopyWithImpl<$Res,
 abstract class _$$UsersListsCreateFromPublicRequestImplCopyWith<$Res>
     implements $UsersListsCreateFromPublicRequestCopyWith<$Res> {
   factory _$$UsersListsCreateFromPublicRequestImplCopyWith(
-          _$UsersListsCreateFromPublicRequestImpl value,
-          $Res Function(_$UsersListsCreateFromPublicRequestImpl) then) =
-      __$$UsersListsCreateFromPublicRequestImplCopyWithImpl<$Res>;
+    _$UsersListsCreateFromPublicRequestImpl value,
+    $Res Function(_$UsersListsCreateFromPublicRequestImpl) then,
+  ) = __$$UsersListsCreateFromPublicRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String name, String listId});
@@ -91,32 +100,36 @@ abstract class _$$UsersListsCreateFromPublicRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$UsersListsCreateFromPublicRequestImplCopyWithImpl<$Res>
-    extends _$UsersListsCreateFromPublicRequestCopyWithImpl<$Res,
-        _$UsersListsCreateFromPublicRequestImpl>
+    extends
+        _$UsersListsCreateFromPublicRequestCopyWithImpl<
+          $Res,
+          _$UsersListsCreateFromPublicRequestImpl
+        >
     implements _$$UsersListsCreateFromPublicRequestImplCopyWith<$Res> {
   __$$UsersListsCreateFromPublicRequestImplCopyWithImpl(
-      _$UsersListsCreateFromPublicRequestImpl _value,
-      $Res Function(_$UsersListsCreateFromPublicRequestImpl) _then)
-      : super(_value, _then);
+    _$UsersListsCreateFromPublicRequestImpl _value,
+    $Res Function(_$UsersListsCreateFromPublicRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UsersListsCreateFromPublicRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? name = null,
-    Object? listId = null,
-  }) {
-    return _then(_$UsersListsCreateFromPublicRequestImpl(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      listId: null == listId
-          ? _value.listId
-          : listId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? name = null, Object? listId = null}) {
+    return _then(
+      _$UsersListsCreateFromPublicRequestImpl(
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        listId:
+            null == listId
+                ? _value.listId
+                : listId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -124,12 +137,14 @@ class __$$UsersListsCreateFromPublicRequestImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$UsersListsCreateFromPublicRequestImpl
     implements _UsersListsCreateFromPublicRequest {
-  const _$UsersListsCreateFromPublicRequestImpl(
-      {required this.name, required this.listId});
+  const _$UsersListsCreateFromPublicRequestImpl({
+    required this.name,
+    required this.listId,
+  });
 
   factory _$UsersListsCreateFromPublicRequestImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$UsersListsCreateFromPublicRequestImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$UsersListsCreateFromPublicRequestImplFromJson(json);
 
   @override
   final String name;
@@ -160,27 +175,28 @@ class _$UsersListsCreateFromPublicRequestImpl
   @override
   @pragma('vm:prefer-inline')
   _$$UsersListsCreateFromPublicRequestImplCopyWith<
-          _$UsersListsCreateFromPublicRequestImpl>
-      get copyWith => __$$UsersListsCreateFromPublicRequestImplCopyWithImpl<
-          _$UsersListsCreateFromPublicRequestImpl>(this, _$identity);
+    _$UsersListsCreateFromPublicRequestImpl
+  >
+  get copyWith => __$$UsersListsCreateFromPublicRequestImplCopyWithImpl<
+    _$UsersListsCreateFromPublicRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UsersListsCreateFromPublicRequestImplToJson(
-      this,
-    );
+    return _$$UsersListsCreateFromPublicRequestImplToJson(this);
   }
 }
 
 abstract class _UsersListsCreateFromPublicRequest
     implements UsersListsCreateFromPublicRequest {
-  const factory _UsersListsCreateFromPublicRequest(
-      {required final String name,
-      required final String listId}) = _$UsersListsCreateFromPublicRequestImpl;
+  const factory _UsersListsCreateFromPublicRequest({
+    required final String name,
+    required final String listId,
+  }) = _$UsersListsCreateFromPublicRequestImpl;
 
   factory _UsersListsCreateFromPublicRequest.fromJson(
-          Map<String, dynamic> json) =
-      _$UsersListsCreateFromPublicRequestImpl.fromJson;
+    Map<String, dynamic> json,
+  ) = _$UsersListsCreateFromPublicRequestImpl.fromJson;
 
   @override
   String get name;
@@ -192,6 +208,7 @@ abstract class _UsersListsCreateFromPublicRequest
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersListsCreateFromPublicRequestImplCopyWith<
-          _$UsersListsCreateFromPublicRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$UsersListsCreateFromPublicRequestImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }

@@ -12,10 +12,12 @@ part of 'channels_update_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ChannelsUpdateRequest _$ChannelsUpdateRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _ChannelsUpdateRequest.fromJson(json);
 }
 
@@ -41,23 +43,27 @@ mixin _$ChannelsUpdateRequest {
 
 /// @nodoc
 abstract class $ChannelsUpdateRequestCopyWith<$Res> {
-  factory $ChannelsUpdateRequestCopyWith(ChannelsUpdateRequest value,
-          $Res Function(ChannelsUpdateRequest) then) =
-      _$ChannelsUpdateRequestCopyWithImpl<$Res, ChannelsUpdateRequest>;
+  factory $ChannelsUpdateRequestCopyWith(
+    ChannelsUpdateRequest value,
+    $Res Function(ChannelsUpdateRequest) then,
+  ) = _$ChannelsUpdateRequestCopyWithImpl<$Res, ChannelsUpdateRequest>;
   @useResult
-  $Res call(
-      {String channelId,
-      String? name,
-      String? description,
-      String? bannerId,
-      bool? isArchived,
-      List<String>? pinnedNoteIds,
-      String? color});
+  $Res call({
+    String channelId,
+    String? name,
+    String? description,
+    String? bannerId,
+    bool? isArchived,
+    List<String>? pinnedNoteIds,
+    String? color,
+  });
 }
 
 /// @nodoc
-class _$ChannelsUpdateRequestCopyWithImpl<$Res,
-        $Val extends ChannelsUpdateRequest>
+class _$ChannelsUpdateRequestCopyWithImpl<
+  $Res,
+  $Val extends ChannelsUpdateRequest
+>
     implements $ChannelsUpdateRequestCopyWith<$Res> {
   _$ChannelsUpdateRequestCopyWithImpl(this._value, this._then);
 
@@ -79,36 +85,46 @@ class _$ChannelsUpdateRequestCopyWithImpl<$Res,
     Object? pinnedNoteIds = freezed,
     Object? color = freezed,
   }) {
-    return _then(_value.copyWith(
-      channelId: null == channelId
-          ? _value.channelId
-          : channelId // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      bannerId: freezed == bannerId
-          ? _value.bannerId
-          : bannerId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isArchived: freezed == isArchived
-          ? _value.isArchived
-          : isArchived // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      pinnedNoteIds: freezed == pinnedNoteIds
-          ? _value.pinnedNoteIds
-          : pinnedNoteIds // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      color: freezed == color
-          ? _value.color
-          : color // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            channelId:
+                null == channelId
+                    ? _value.channelId
+                    : channelId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            name:
+                freezed == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            description:
+                freezed == description
+                    ? _value.description
+                    : description // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            bannerId:
+                freezed == bannerId
+                    ? _value.bannerId
+                    : bannerId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            isArchived:
+                freezed == isArchived
+                    ? _value.isArchived
+                    : isArchived // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            pinnedNoteIds:
+                freezed == pinnedNoteIds
+                    ? _value.pinnedNoteIds
+                    : pinnedNoteIds // ignore: cast_nullable_to_non_nullable
+                        as List<String>?,
+            color:
+                freezed == color
+                    ? _value.color
+                    : color // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -116,29 +132,31 @@ class _$ChannelsUpdateRequestCopyWithImpl<$Res,
 abstract class _$$ChannelsUpdateRequestImplCopyWith<$Res>
     implements $ChannelsUpdateRequestCopyWith<$Res> {
   factory _$$ChannelsUpdateRequestImplCopyWith(
-          _$ChannelsUpdateRequestImpl value,
-          $Res Function(_$ChannelsUpdateRequestImpl) then) =
-      __$$ChannelsUpdateRequestImplCopyWithImpl<$Res>;
+    _$ChannelsUpdateRequestImpl value,
+    $Res Function(_$ChannelsUpdateRequestImpl) then,
+  ) = __$$ChannelsUpdateRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String channelId,
-      String? name,
-      String? description,
-      String? bannerId,
-      bool? isArchived,
-      List<String>? pinnedNoteIds,
-      String? color});
+  $Res call({
+    String channelId,
+    String? name,
+    String? description,
+    String? bannerId,
+    bool? isArchived,
+    List<String>? pinnedNoteIds,
+    String? color,
+  });
 }
 
 /// @nodoc
 class __$$ChannelsUpdateRequestImplCopyWithImpl<$Res>
-    extends _$ChannelsUpdateRequestCopyWithImpl<$Res,
-        _$ChannelsUpdateRequestImpl>
+    extends
+        _$ChannelsUpdateRequestCopyWithImpl<$Res, _$ChannelsUpdateRequestImpl>
     implements _$$ChannelsUpdateRequestImplCopyWith<$Res> {
-  __$$ChannelsUpdateRequestImplCopyWithImpl(_$ChannelsUpdateRequestImpl _value,
-      $Res Function(_$ChannelsUpdateRequestImpl) _then)
-      : super(_value, _then);
+  __$$ChannelsUpdateRequestImplCopyWithImpl(
+    _$ChannelsUpdateRequestImpl _value,
+    $Res Function(_$ChannelsUpdateRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelsUpdateRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -153,51 +171,60 @@ class __$$ChannelsUpdateRequestImplCopyWithImpl<$Res>
     Object? pinnedNoteIds = freezed,
     Object? color = freezed,
   }) {
-    return _then(_$ChannelsUpdateRequestImpl(
-      channelId: null == channelId
-          ? _value.channelId
-          : channelId // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      bannerId: freezed == bannerId
-          ? _value.bannerId
-          : bannerId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isArchived: freezed == isArchived
-          ? _value.isArchived
-          : isArchived // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      pinnedNoteIds: freezed == pinnedNoteIds
-          ? _value._pinnedNoteIds
-          : pinnedNoteIds // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      color: freezed == color
-          ? _value.color
-          : color // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$ChannelsUpdateRequestImpl(
+        channelId:
+            null == channelId
+                ? _value.channelId
+                : channelId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        name:
+            freezed == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        description:
+            freezed == description
+                ? _value.description
+                : description // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        bannerId:
+            freezed == bannerId
+                ? _value.bannerId
+                : bannerId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        isArchived:
+            freezed == isArchived
+                ? _value.isArchived
+                : isArchived // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        pinnedNoteIds:
+            freezed == pinnedNoteIds
+                ? _value._pinnedNoteIds
+                : pinnedNoteIds // ignore: cast_nullable_to_non_nullable
+                    as List<String>?,
+        color:
+            freezed == color
+                ? _value.color
+                : color // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ChannelsUpdateRequestImpl implements _ChannelsUpdateRequest {
-  const _$ChannelsUpdateRequestImpl(
-      {required this.channelId,
-      this.name,
-      this.description,
-      this.bannerId,
-      this.isArchived,
-      final List<String>? pinnedNoteIds,
-      this.color})
-      : _pinnedNoteIds = pinnedNoteIds;
+  const _$ChannelsUpdateRequestImpl({
+    required this.channelId,
+    this.name,
+    this.description,
+    this.bannerId,
+    this.isArchived,
+    final List<String>? pinnedNoteIds,
+    this.color,
+  }) : _pinnedNoteIds = pinnedNoteIds;
 
   factory _$ChannelsUpdateRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$ChannelsUpdateRequestImplFromJson(json);
@@ -244,22 +271,25 @@ class _$ChannelsUpdateRequestImpl implements _ChannelsUpdateRequest {
                 other.bannerId == bannerId) &&
             (identical(other.isArchived, isArchived) ||
                 other.isArchived == isArchived) &&
-            const DeepCollectionEquality()
-                .equals(other._pinnedNoteIds, _pinnedNoteIds) &&
+            const DeepCollectionEquality().equals(
+              other._pinnedNoteIds,
+              _pinnedNoteIds,
+            ) &&
             (identical(other.color, color) || other.color == color));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      channelId,
-      name,
-      description,
-      bannerId,
-      isArchived,
-      const DeepCollectionEquality().hash(_pinnedNoteIds),
-      color);
+    runtimeType,
+    channelId,
+    name,
+    description,
+    bannerId,
+    isArchived,
+    const DeepCollectionEquality().hash(_pinnedNoteIds),
+    color,
+  );
 
   /// Create a copy of ChannelsUpdateRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -267,26 +297,28 @@ class _$ChannelsUpdateRequestImpl implements _ChannelsUpdateRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$ChannelsUpdateRequestImplCopyWith<_$ChannelsUpdateRequestImpl>
-      get copyWith => __$$ChannelsUpdateRequestImplCopyWithImpl<
-          _$ChannelsUpdateRequestImpl>(this, _$identity);
+  get copyWith =>
+      __$$ChannelsUpdateRequestImplCopyWithImpl<_$ChannelsUpdateRequestImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ChannelsUpdateRequestImplToJson(
-      this,
-    );
+    return _$$ChannelsUpdateRequestImplToJson(this);
   }
 }
 
 abstract class _ChannelsUpdateRequest implements ChannelsUpdateRequest {
-  const factory _ChannelsUpdateRequest(
-      {required final String channelId,
-      final String? name,
-      final String? description,
-      final String? bannerId,
-      final bool? isArchived,
-      final List<String>? pinnedNoteIds,
-      final String? color}) = _$ChannelsUpdateRequestImpl;
+  const factory _ChannelsUpdateRequest({
+    required final String channelId,
+    final String? name,
+    final String? description,
+    final String? bannerId,
+    final bool? isArchived,
+    final List<String>? pinnedNoteIds,
+    final String? color,
+  }) = _$ChannelsUpdateRequestImpl;
 
   factory _ChannelsUpdateRequest.fromJson(Map<String, dynamic> json) =
       _$ChannelsUpdateRequestImpl.fromJson;
@@ -311,5 +343,5 @@ abstract class _ChannelsUpdateRequest implements ChannelsUpdateRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ChannelsUpdateRequestImplCopyWith<_$ChannelsUpdateRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

@@ -12,7 +12,8 @@ part of 'i_favorites_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 IFavoritesResponse _$IFavoritesResponseFromJson(Map<String, dynamic> json) {
   return _IFavoritesResponse.fromJson(json);
@@ -39,14 +40,16 @@ mixin _$IFavoritesResponse {
 /// @nodoc
 abstract class $IFavoritesResponseCopyWith<$Res> {
   factory $IFavoritesResponseCopyWith(
-          IFavoritesResponse value, $Res Function(IFavoritesResponse) then) =
-      _$IFavoritesResponseCopyWithImpl<$Res, IFavoritesResponse>;
+    IFavoritesResponse value,
+    $Res Function(IFavoritesResponse) then,
+  ) = _$IFavoritesResponseCopyWithImpl<$Res, IFavoritesResponse>;
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime createdAt,
-      String noteId,
-      Note note});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime createdAt,
+    String noteId,
+    Note note,
+  });
 
   $NoteCopyWith<$Res> get note;
 }
@@ -71,24 +74,31 @@ class _$IFavoritesResponseCopyWithImpl<$Res, $Val extends IFavoritesResponse>
     Object? noteId = null,
     Object? note = null,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      noteId: null == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String,
-      note: null == note
-          ? _value.note
-          : note // ignore: cast_nullable_to_non_nullable
-              as Note,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            createdAt:
+                null == createdAt
+                    ? _value.createdAt
+                    : createdAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            noteId:
+                null == noteId
+                    ? _value.noteId
+                    : noteId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            note:
+                null == note
+                    ? _value.note
+                    : note // ignore: cast_nullable_to_non_nullable
+                        as Note,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of IFavoritesResponse
@@ -105,16 +115,18 @@ class _$IFavoritesResponseCopyWithImpl<$Res, $Val extends IFavoritesResponse>
 /// @nodoc
 abstract class _$$IFavoritesResponseImplCopyWith<$Res>
     implements $IFavoritesResponseCopyWith<$Res> {
-  factory _$$IFavoritesResponseImplCopyWith(_$IFavoritesResponseImpl value,
-          $Res Function(_$IFavoritesResponseImpl) then) =
-      __$$IFavoritesResponseImplCopyWithImpl<$Res>;
+  factory _$$IFavoritesResponseImplCopyWith(
+    _$IFavoritesResponseImpl value,
+    $Res Function(_$IFavoritesResponseImpl) then,
+  ) = __$$IFavoritesResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime createdAt,
-      String noteId,
-      Note note});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime createdAt,
+    String noteId,
+    Note note,
+  });
 
   @override
   $NoteCopyWith<$Res> get note;
@@ -124,9 +136,10 @@ abstract class _$$IFavoritesResponseImplCopyWith<$Res>
 class __$$IFavoritesResponseImplCopyWithImpl<$Res>
     extends _$IFavoritesResponseCopyWithImpl<$Res, _$IFavoritesResponseImpl>
     implements _$$IFavoritesResponseImplCopyWith<$Res> {
-  __$$IFavoritesResponseImplCopyWithImpl(_$IFavoritesResponseImpl _value,
-      $Res Function(_$IFavoritesResponseImpl) _then)
-      : super(_value, _then);
+  __$$IFavoritesResponseImplCopyWithImpl(
+    _$IFavoritesResponseImpl _value,
+    $Res Function(_$IFavoritesResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of IFavoritesResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -138,35 +151,42 @@ class __$$IFavoritesResponseImplCopyWithImpl<$Res>
     Object? noteId = null,
     Object? note = null,
   }) {
-    return _then(_$IFavoritesResponseImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      noteId: null == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String,
-      note: null == note
-          ? _value.note
-          : note // ignore: cast_nullable_to_non_nullable
-              as Note,
-    ));
+    return _then(
+      _$IFavoritesResponseImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        createdAt:
+            null == createdAt
+                ? _value.createdAt
+                : createdAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        noteId:
+            null == noteId
+                ? _value.noteId
+                : noteId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        note:
+            null == note
+                ? _value.note
+                : note // ignore: cast_nullable_to_non_nullable
+                    as Note,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$IFavoritesResponseImpl implements _IFavoritesResponse {
-  const _$IFavoritesResponseImpl(
-      {required this.id,
-      @DateTimeConverter() required this.createdAt,
-      required this.noteId,
-      required this.note});
+  const _$IFavoritesResponseImpl({
+    required this.id,
+    @DateTimeConverter() required this.createdAt,
+    required this.noteId,
+    required this.note,
+  });
 
   factory _$IFavoritesResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$IFavoritesResponseImplFromJson(json);
@@ -209,22 +229,23 @@ class _$IFavoritesResponseImpl implements _IFavoritesResponse {
   @pragma('vm:prefer-inline')
   _$$IFavoritesResponseImplCopyWith<_$IFavoritesResponseImpl> get copyWith =>
       __$$IFavoritesResponseImplCopyWithImpl<_$IFavoritesResponseImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$IFavoritesResponseImplToJson(
-      this,
-    );
+    return _$$IFavoritesResponseImplToJson(this);
   }
 }
 
 abstract class _IFavoritesResponse implements IFavoritesResponse {
-  const factory _IFavoritesResponse(
-      {required final String id,
-      @DateTimeConverter() required final DateTime createdAt,
-      required final String noteId,
-      required final Note note}) = _$IFavoritesResponseImpl;
+  const factory _IFavoritesResponse({
+    required final String id,
+    @DateTimeConverter() required final DateTime createdAt,
+    required final String noteId,
+    required final Note note,
+  }) = _$IFavoritesResponseImpl;
 
   factory _IFavoritesResponse.fromJson(Map<String, dynamic> json) =
       _$IFavoritesResponseImpl.fromJson;

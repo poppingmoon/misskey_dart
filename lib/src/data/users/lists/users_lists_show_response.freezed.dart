@@ -12,10 +12,12 @@ part of 'users_lists_show_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 UsersListsShowResponse _$UsersListsShowResponseFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _UsersListsShowResponse.fromJson(json);
 }
 
@@ -43,23 +45,27 @@ mixin _$UsersListsShowResponse {
 
 /// @nodoc
 abstract class $UsersListsShowResponseCopyWith<$Res> {
-  factory $UsersListsShowResponseCopyWith(UsersListsShowResponse value,
-          $Res Function(UsersListsShowResponse) then) =
-      _$UsersListsShowResponseCopyWithImpl<$Res, UsersListsShowResponse>;
+  factory $UsersListsShowResponseCopyWith(
+    UsersListsShowResponse value,
+    $Res Function(UsersListsShowResponse) then,
+  ) = _$UsersListsShowResponseCopyWithImpl<$Res, UsersListsShowResponse>;
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime createdAt,
-      String name,
-      List<String> userIds,
-      bool? isPublic,
-      int? likedCount,
-      bool? isLiked});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime createdAt,
+    String name,
+    List<String> userIds,
+    bool? isPublic,
+    int? likedCount,
+    bool? isLiked,
+  });
 }
 
 /// @nodoc
-class _$UsersListsShowResponseCopyWithImpl<$Res,
-        $Val extends UsersListsShowResponse>
+class _$UsersListsShowResponseCopyWithImpl<
+  $Res,
+  $Val extends UsersListsShowResponse
+>
     implements $UsersListsShowResponseCopyWith<$Res> {
   _$UsersListsShowResponseCopyWithImpl(this._value, this._then);
 
@@ -81,36 +87,46 @@ class _$UsersListsShowResponseCopyWithImpl<$Res,
     Object? likedCount = freezed,
     Object? isLiked = freezed,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      userIds: null == userIds
-          ? _value.userIds
-          : userIds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      isPublic: freezed == isPublic
-          ? _value.isPublic
-          : isPublic // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      likedCount: freezed == likedCount
-          ? _value.likedCount
-          : likedCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      isLiked: freezed == isLiked
-          ? _value.isLiked
-          : isLiked // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            createdAt:
+                null == createdAt
+                    ? _value.createdAt
+                    : createdAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            userIds:
+                null == userIds
+                    ? _value.userIds
+                    : userIds // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+            isPublic:
+                freezed == isPublic
+                    ? _value.isPublic
+                    : isPublic // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            likedCount:
+                freezed == likedCount
+                    ? _value.likedCount
+                    : likedCount // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            isLiked:
+                freezed == isLiked
+                    ? _value.isLiked
+                    : isLiked // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -118,30 +134,31 @@ class _$UsersListsShowResponseCopyWithImpl<$Res,
 abstract class _$$UsersListsShowResponseImplCopyWith<$Res>
     implements $UsersListsShowResponseCopyWith<$Res> {
   factory _$$UsersListsShowResponseImplCopyWith(
-          _$UsersListsShowResponseImpl value,
-          $Res Function(_$UsersListsShowResponseImpl) then) =
-      __$$UsersListsShowResponseImplCopyWithImpl<$Res>;
+    _$UsersListsShowResponseImpl value,
+    $Res Function(_$UsersListsShowResponseImpl) then,
+  ) = __$$UsersListsShowResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime createdAt,
-      String name,
-      List<String> userIds,
-      bool? isPublic,
-      int? likedCount,
-      bool? isLiked});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime createdAt,
+    String name,
+    List<String> userIds,
+    bool? isPublic,
+    int? likedCount,
+    bool? isLiked,
+  });
 }
 
 /// @nodoc
 class __$$UsersListsShowResponseImplCopyWithImpl<$Res>
-    extends _$UsersListsShowResponseCopyWithImpl<$Res,
-        _$UsersListsShowResponseImpl>
+    extends
+        _$UsersListsShowResponseCopyWithImpl<$Res, _$UsersListsShowResponseImpl>
     implements _$$UsersListsShowResponseImplCopyWith<$Res> {
   __$$UsersListsShowResponseImplCopyWithImpl(
-      _$UsersListsShowResponseImpl _value,
-      $Res Function(_$UsersListsShowResponseImpl) _then)
-      : super(_value, _then);
+    _$UsersListsShowResponseImpl _value,
+    $Res Function(_$UsersListsShowResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UsersListsShowResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -156,51 +173,60 @@ class __$$UsersListsShowResponseImplCopyWithImpl<$Res>
     Object? likedCount = freezed,
     Object? isLiked = freezed,
   }) {
-    return _then(_$UsersListsShowResponseImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      userIds: null == userIds
-          ? _value._userIds
-          : userIds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      isPublic: freezed == isPublic
-          ? _value.isPublic
-          : isPublic // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      likedCount: freezed == likedCount
-          ? _value.likedCount
-          : likedCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      isLiked: freezed == isLiked
-          ? _value.isLiked
-          : isLiked // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+    return _then(
+      _$UsersListsShowResponseImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        createdAt:
+            null == createdAt
+                ? _value.createdAt
+                : createdAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        userIds:
+            null == userIds
+                ? _value._userIds
+                : userIds // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+        isPublic:
+            freezed == isPublic
+                ? _value.isPublic
+                : isPublic // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        likedCount:
+            freezed == likedCount
+                ? _value.likedCount
+                : likedCount // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        isLiked:
+            freezed == isLiked
+                ? _value.isLiked
+                : isLiked // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$UsersListsShowResponseImpl implements _UsersListsShowResponse {
-  const _$UsersListsShowResponseImpl(
-      {required this.id,
-      @DateTimeConverter() required this.createdAt,
-      required this.name,
-      required final List<String> userIds,
-      this.isPublic,
-      this.likedCount,
-      this.isLiked})
-      : _userIds = userIds;
+  const _$UsersListsShowResponseImpl({
+    required this.id,
+    @DateTimeConverter() required this.createdAt,
+    required this.name,
+    required final List<String> userIds,
+    this.isPublic,
+    this.likedCount,
+    this.isLiked,
+  }) : _userIds = userIds;
 
   factory _$UsersListsShowResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$UsersListsShowResponseImplFromJson(json);
@@ -220,7 +246,7 @@ class _$UsersListsShowResponseImpl implements _UsersListsShowResponse {
     return EqualUnmodifiableListView(_userIds);
   }
 
-// Misskey 13.13.0 で追加. 後方互換性のためnullable
+  // Misskey 13.13.0 で追加. 後方互換性のためnullable
   @override
   final bool? isPublic;
   @override
@@ -253,14 +279,15 @@ class _$UsersListsShowResponseImpl implements _UsersListsShowResponse {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      createdAt,
-      name,
-      const DeepCollectionEquality().hash(_userIds),
-      isPublic,
-      likedCount,
-      isLiked);
+    runtimeType,
+    id,
+    createdAt,
+    name,
+    const DeepCollectionEquality().hash(_userIds),
+    isPublic,
+    likedCount,
+    isLiked,
+  );
 
   /// Create a copy of UsersListsShowResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -268,26 +295,28 @@ class _$UsersListsShowResponseImpl implements _UsersListsShowResponse {
   @override
   @pragma('vm:prefer-inline')
   _$$UsersListsShowResponseImplCopyWith<_$UsersListsShowResponseImpl>
-      get copyWith => __$$UsersListsShowResponseImplCopyWithImpl<
-          _$UsersListsShowResponseImpl>(this, _$identity);
+  get copyWith =>
+      __$$UsersListsShowResponseImplCopyWithImpl<_$UsersListsShowResponseImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UsersListsShowResponseImplToJson(
-      this,
-    );
+    return _$$UsersListsShowResponseImplToJson(this);
   }
 }
 
 abstract class _UsersListsShowResponse implements UsersListsShowResponse {
-  const factory _UsersListsShowResponse(
-      {required final String id,
-      @DateTimeConverter() required final DateTime createdAt,
-      required final String name,
-      required final List<String> userIds,
-      final bool? isPublic,
-      final int? likedCount,
-      final bool? isLiked}) = _$UsersListsShowResponseImpl;
+  const factory _UsersListsShowResponse({
+    required final String id,
+    @DateTimeConverter() required final DateTime createdAt,
+    required final String name,
+    required final List<String> userIds,
+    final bool? isPublic,
+    final int? likedCount,
+    final bool? isLiked,
+  }) = _$UsersListsShowResponseImpl;
 
   factory _UsersListsShowResponse.fromJson(Map<String, dynamic> json) =
       _$UsersListsShowResponseImpl.fromJson;
@@ -313,5 +342,5 @@ abstract class _UsersListsShowResponse implements UsersListsShowResponse {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersListsShowResponseImplCopyWith<_$UsersListsShowResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

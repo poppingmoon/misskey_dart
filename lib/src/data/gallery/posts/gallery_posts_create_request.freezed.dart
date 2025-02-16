@@ -12,10 +12,12 @@ part of 'gallery_posts_create_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 GalleryPostsCreateRequest _$GalleryPostsCreateRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _GalleryPostsCreateRequest.fromJson(json);
 }
 
@@ -38,20 +40,24 @@ mixin _$GalleryPostsCreateRequest {
 
 /// @nodoc
 abstract class $GalleryPostsCreateRequestCopyWith<$Res> {
-  factory $GalleryPostsCreateRequestCopyWith(GalleryPostsCreateRequest value,
-          $Res Function(GalleryPostsCreateRequest) then) =
-      _$GalleryPostsCreateRequestCopyWithImpl<$Res, GalleryPostsCreateRequest>;
+  factory $GalleryPostsCreateRequestCopyWith(
+    GalleryPostsCreateRequest value,
+    $Res Function(GalleryPostsCreateRequest) then,
+  ) = _$GalleryPostsCreateRequestCopyWithImpl<$Res, GalleryPostsCreateRequest>;
   @useResult
-  $Res call(
-      {String title,
-      String? description,
-      List<String> fileIds,
-      bool? isSensitive});
+  $Res call({
+    String title,
+    String? description,
+    List<String> fileIds,
+    bool? isSensitive,
+  });
 }
 
 /// @nodoc
-class _$GalleryPostsCreateRequestCopyWithImpl<$Res,
-        $Val extends GalleryPostsCreateRequest>
+class _$GalleryPostsCreateRequestCopyWithImpl<
+  $Res,
+  $Val extends GalleryPostsCreateRequest
+>
     implements $GalleryPostsCreateRequestCopyWith<$Res> {
   _$GalleryPostsCreateRequestCopyWithImpl(this._value, this._then);
 
@@ -70,24 +76,31 @@ class _$GalleryPostsCreateRequestCopyWithImpl<$Res,
     Object? fileIds = null,
     Object? isSensitive = freezed,
   }) {
-    return _then(_value.copyWith(
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      fileIds: null == fileIds
-          ? _value.fileIds
-          : fileIds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      isSensitive: freezed == isSensitive
-          ? _value.isSensitive
-          : isSensitive // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            title:
+                null == title
+                    ? _value.title
+                    : title // ignore: cast_nullable_to_non_nullable
+                        as String,
+            description:
+                freezed == description
+                    ? _value.description
+                    : description // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            fileIds:
+                null == fileIds
+                    ? _value.fileIds
+                    : fileIds // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+            isSensitive:
+                freezed == isSensitive
+                    ? _value.isSensitive
+                    : isSensitive // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -95,27 +108,31 @@ class _$GalleryPostsCreateRequestCopyWithImpl<$Res,
 abstract class _$$GalleryPostsCreateRequestImplCopyWith<$Res>
     implements $GalleryPostsCreateRequestCopyWith<$Res> {
   factory _$$GalleryPostsCreateRequestImplCopyWith(
-          _$GalleryPostsCreateRequestImpl value,
-          $Res Function(_$GalleryPostsCreateRequestImpl) then) =
-      __$$GalleryPostsCreateRequestImplCopyWithImpl<$Res>;
+    _$GalleryPostsCreateRequestImpl value,
+    $Res Function(_$GalleryPostsCreateRequestImpl) then,
+  ) = __$$GalleryPostsCreateRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String title,
-      String? description,
-      List<String> fileIds,
-      bool? isSensitive});
+  $Res call({
+    String title,
+    String? description,
+    List<String> fileIds,
+    bool? isSensitive,
+  });
 }
 
 /// @nodoc
 class __$$GalleryPostsCreateRequestImplCopyWithImpl<$Res>
-    extends _$GalleryPostsCreateRequestCopyWithImpl<$Res,
-        _$GalleryPostsCreateRequestImpl>
+    extends
+        _$GalleryPostsCreateRequestCopyWithImpl<
+          $Res,
+          _$GalleryPostsCreateRequestImpl
+        >
     implements _$$GalleryPostsCreateRequestImplCopyWith<$Res> {
   __$$GalleryPostsCreateRequestImplCopyWithImpl(
-      _$GalleryPostsCreateRequestImpl _value,
-      $Res Function(_$GalleryPostsCreateRequestImpl) _then)
-      : super(_value, _then);
+    _$GalleryPostsCreateRequestImpl _value,
+    $Res Function(_$GalleryPostsCreateRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of GalleryPostsCreateRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -127,36 +144,42 @@ class __$$GalleryPostsCreateRequestImplCopyWithImpl<$Res>
     Object? fileIds = null,
     Object? isSensitive = freezed,
   }) {
-    return _then(_$GalleryPostsCreateRequestImpl(
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      fileIds: null == fileIds
-          ? _value._fileIds
-          : fileIds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      isSensitive: freezed == isSensitive
-          ? _value.isSensitive
-          : isSensitive // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+    return _then(
+      _$GalleryPostsCreateRequestImpl(
+        title:
+            null == title
+                ? _value.title
+                : title // ignore: cast_nullable_to_non_nullable
+                    as String,
+        description:
+            freezed == description
+                ? _value.description
+                : description // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        fileIds:
+            null == fileIds
+                ? _value._fileIds
+                : fileIds // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+        isSensitive:
+            freezed == isSensitive
+                ? _value.isSensitive
+                : isSensitive // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$GalleryPostsCreateRequestImpl implements _GalleryPostsCreateRequest {
-  const _$GalleryPostsCreateRequestImpl(
-      {required this.title,
-      this.description,
-      required final List<String> fileIds,
-      this.isSensitive})
-      : _fileIds = fileIds;
+  const _$GalleryPostsCreateRequestImpl({
+    required this.title,
+    this.description,
+    required final List<String> fileIds,
+    this.isSensitive,
+  }) : _fileIds = fileIds;
 
   factory _$GalleryPostsCreateRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$GalleryPostsCreateRequestImplFromJson(json);
@@ -196,8 +219,13 @@ class _$GalleryPostsCreateRequestImpl implements _GalleryPostsCreateRequest {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, title, description,
-      const DeepCollectionEquality().hash(_fileIds), isSensitive);
+  int get hashCode => Object.hash(
+    runtimeType,
+    title,
+    description,
+    const DeepCollectionEquality().hash(_fileIds),
+    isSensitive,
+  );
 
   /// Create a copy of GalleryPostsCreateRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -205,23 +233,23 @@ class _$GalleryPostsCreateRequestImpl implements _GalleryPostsCreateRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$GalleryPostsCreateRequestImplCopyWith<_$GalleryPostsCreateRequestImpl>
-      get copyWith => __$$GalleryPostsCreateRequestImplCopyWithImpl<
-          _$GalleryPostsCreateRequestImpl>(this, _$identity);
+  get copyWith => __$$GalleryPostsCreateRequestImplCopyWithImpl<
+    _$GalleryPostsCreateRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GalleryPostsCreateRequestImplToJson(
-      this,
-    );
+    return _$$GalleryPostsCreateRequestImplToJson(this);
   }
 }
 
 abstract class _GalleryPostsCreateRequest implements GalleryPostsCreateRequest {
-  const factory _GalleryPostsCreateRequest(
-      {required final String title,
-      final String? description,
-      required final List<String> fileIds,
-      final bool? isSensitive}) = _$GalleryPostsCreateRequestImpl;
+  const factory _GalleryPostsCreateRequest({
+    required final String title,
+    final String? description,
+    required final List<String> fileIds,
+    final bool? isSensitive,
+  }) = _$GalleryPostsCreateRequestImpl;
 
   factory _GalleryPostsCreateRequest.fromJson(Map<String, dynamic> json) =
       _$GalleryPostsCreateRequestImpl.fromJson;
@@ -240,5 +268,5 @@ abstract class _GalleryPostsCreateRequest implements GalleryPostsCreateRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GalleryPostsCreateRequestImplCopyWith<_$GalleryPostsCreateRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

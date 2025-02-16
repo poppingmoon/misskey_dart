@@ -12,7 +12,8 @@ part of 'ping_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 PingResponse _$PingResponseFromJson(Map<String, dynamic> json) {
   return _PingResponse.fromJson(json);
@@ -35,8 +36,9 @@ mixin _$PingResponse {
 /// @nodoc
 abstract class $PingResponseCopyWith<$Res> {
   factory $PingResponseCopyWith(
-          PingResponse value, $Res Function(PingResponse) then) =
-      _$PingResponseCopyWithImpl<$Res, PingResponse>;
+    PingResponse value,
+    $Res Function(PingResponse) then,
+  ) = _$PingResponseCopyWithImpl<$Res, PingResponse>;
   @useResult
   $Res call({int pong});
 }
@@ -55,15 +57,17 @@ class _$PingResponseCopyWithImpl<$Res, $Val extends PingResponse>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? pong = null,
-  }) {
-    return _then(_value.copyWith(
-      pong: null == pong
-          ? _value.pong
-          : pong // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
+  $Res call({Object? pong = null}) {
+    return _then(
+      _value.copyWith(
+            pong:
+                null == pong
+                    ? _value.pong
+                    : pong // ignore: cast_nullable_to_non_nullable
+                        as int,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -71,8 +75,9 @@ class _$PingResponseCopyWithImpl<$Res, $Val extends PingResponse>
 abstract class _$$PingResponseImplCopyWith<$Res>
     implements $PingResponseCopyWith<$Res> {
   factory _$$PingResponseImplCopyWith(
-          _$PingResponseImpl value, $Res Function(_$PingResponseImpl) then) =
-      __$$PingResponseImplCopyWithImpl<$Res>;
+    _$PingResponseImpl value,
+    $Res Function(_$PingResponseImpl) then,
+  ) = __$$PingResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int pong});
@@ -83,22 +88,24 @@ class __$$PingResponseImplCopyWithImpl<$Res>
     extends _$PingResponseCopyWithImpl<$Res, _$PingResponseImpl>
     implements _$$PingResponseImplCopyWith<$Res> {
   __$$PingResponseImplCopyWithImpl(
-      _$PingResponseImpl _value, $Res Function(_$PingResponseImpl) _then)
-      : super(_value, _then);
+    _$PingResponseImpl _value,
+    $Res Function(_$PingResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of PingResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? pong = null,
-  }) {
-    return _then(_$PingResponseImpl(
-      pong: null == pong
-          ? _value.pong
-          : pong // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
+  $Res call({Object? pong = null}) {
+    return _then(
+      _$PingResponseImpl(
+        pong:
+            null == pong
+                ? _value.pong
+                : pong // ignore: cast_nullable_to_non_nullable
+                    as int,
+      ),
+    );
   }
 }
 
@@ -140,9 +147,7 @@ class _$PingResponseImpl implements _PingResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PingResponseImplToJson(
-      this,
-    );
+    return _$$PingResponseImplToJson(this);
   }
 }
 

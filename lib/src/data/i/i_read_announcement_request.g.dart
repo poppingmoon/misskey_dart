@@ -7,20 +7,14 @@ part of 'i_read_announcement_request.dart';
 // **************************************************************************
 
 _$IReadAnnouncementRequestImpl _$$IReadAnnouncementRequestImplFromJson(
-        Map<String, dynamic> json) =>
-    $checkedCreate(
-      r'_$IReadAnnouncementRequestImpl',
-      json,
-      ($checkedConvert) {
-        final val = _$IReadAnnouncementRequestImpl(
-          announcementId: $checkedConvert('announcementId', (v) => v as String),
-        );
-        return val;
-      },
-    );
+  Map<String, dynamic> json,
+) => $checkedCreate(r'_$IReadAnnouncementRequestImpl', json, ($checkedConvert) {
+  final val = _$IReadAnnouncementRequestImpl(
+    announcementId: $checkedConvert('announcementId', (v) => v as String),
+  );
+  return val;
+});
 
 Map<String, dynamic> _$$IReadAnnouncementRequestImplToJson(
-        _$IReadAnnouncementRequestImpl instance) =>
-    <String, dynamic>{
-      'announcementId': instance.announcementId,
-    };
+  _$IReadAnnouncementRequestImpl instance,
+) => <String, dynamic>{'announcementId': instance.announcementId};

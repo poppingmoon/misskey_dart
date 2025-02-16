@@ -12,10 +12,12 @@ part of 'gallery_posts_update_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 GalleryPostsUpdateRequest _$GalleryPostsUpdateRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _GalleryPostsUpdateRequest.fromJson(json);
 }
 
@@ -39,21 +41,25 @@ mixin _$GalleryPostsUpdateRequest {
 
 /// @nodoc
 abstract class $GalleryPostsUpdateRequestCopyWith<$Res> {
-  factory $GalleryPostsUpdateRequestCopyWith(GalleryPostsUpdateRequest value,
-          $Res Function(GalleryPostsUpdateRequest) then) =
-      _$GalleryPostsUpdateRequestCopyWithImpl<$Res, GalleryPostsUpdateRequest>;
+  factory $GalleryPostsUpdateRequestCopyWith(
+    GalleryPostsUpdateRequest value,
+    $Res Function(GalleryPostsUpdateRequest) then,
+  ) = _$GalleryPostsUpdateRequestCopyWithImpl<$Res, GalleryPostsUpdateRequest>;
   @useResult
-  $Res call(
-      {String postId,
-      String title,
-      String? description,
-      List<String> fileIds,
-      bool? isSensitive});
+  $Res call({
+    String postId,
+    String title,
+    String? description,
+    List<String> fileIds,
+    bool? isSensitive,
+  });
 }
 
 /// @nodoc
-class _$GalleryPostsUpdateRequestCopyWithImpl<$Res,
-        $Val extends GalleryPostsUpdateRequest>
+class _$GalleryPostsUpdateRequestCopyWithImpl<
+  $Res,
+  $Val extends GalleryPostsUpdateRequest
+>
     implements $GalleryPostsUpdateRequestCopyWith<$Res> {
   _$GalleryPostsUpdateRequestCopyWithImpl(this._value, this._then);
 
@@ -73,28 +79,36 @@ class _$GalleryPostsUpdateRequestCopyWithImpl<$Res,
     Object? fileIds = null,
     Object? isSensitive = freezed,
   }) {
-    return _then(_value.copyWith(
-      postId: null == postId
-          ? _value.postId
-          : postId // ignore: cast_nullable_to_non_nullable
-              as String,
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      fileIds: null == fileIds
-          ? _value.fileIds
-          : fileIds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      isSensitive: freezed == isSensitive
-          ? _value.isSensitive
-          : isSensitive // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            postId:
+                null == postId
+                    ? _value.postId
+                    : postId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            title:
+                null == title
+                    ? _value.title
+                    : title // ignore: cast_nullable_to_non_nullable
+                        as String,
+            description:
+                freezed == description
+                    ? _value.description
+                    : description // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            fileIds:
+                null == fileIds
+                    ? _value.fileIds
+                    : fileIds // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+            isSensitive:
+                freezed == isSensitive
+                    ? _value.isSensitive
+                    : isSensitive // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -102,28 +116,32 @@ class _$GalleryPostsUpdateRequestCopyWithImpl<$Res,
 abstract class _$$GalleryPostsUpdateRequestImplCopyWith<$Res>
     implements $GalleryPostsUpdateRequestCopyWith<$Res> {
   factory _$$GalleryPostsUpdateRequestImplCopyWith(
-          _$GalleryPostsUpdateRequestImpl value,
-          $Res Function(_$GalleryPostsUpdateRequestImpl) then) =
-      __$$GalleryPostsUpdateRequestImplCopyWithImpl<$Res>;
+    _$GalleryPostsUpdateRequestImpl value,
+    $Res Function(_$GalleryPostsUpdateRequestImpl) then,
+  ) = __$$GalleryPostsUpdateRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String postId,
-      String title,
-      String? description,
-      List<String> fileIds,
-      bool? isSensitive});
+  $Res call({
+    String postId,
+    String title,
+    String? description,
+    List<String> fileIds,
+    bool? isSensitive,
+  });
 }
 
 /// @nodoc
 class __$$GalleryPostsUpdateRequestImplCopyWithImpl<$Res>
-    extends _$GalleryPostsUpdateRequestCopyWithImpl<$Res,
-        _$GalleryPostsUpdateRequestImpl>
+    extends
+        _$GalleryPostsUpdateRequestCopyWithImpl<
+          $Res,
+          _$GalleryPostsUpdateRequestImpl
+        >
     implements _$$GalleryPostsUpdateRequestImplCopyWith<$Res> {
   __$$GalleryPostsUpdateRequestImplCopyWithImpl(
-      _$GalleryPostsUpdateRequestImpl _value,
-      $Res Function(_$GalleryPostsUpdateRequestImpl) _then)
-      : super(_value, _then);
+    _$GalleryPostsUpdateRequestImpl _value,
+    $Res Function(_$GalleryPostsUpdateRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of GalleryPostsUpdateRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -136,41 +154,48 @@ class __$$GalleryPostsUpdateRequestImplCopyWithImpl<$Res>
     Object? fileIds = null,
     Object? isSensitive = freezed,
   }) {
-    return _then(_$GalleryPostsUpdateRequestImpl(
-      postId: null == postId
-          ? _value.postId
-          : postId // ignore: cast_nullable_to_non_nullable
-              as String,
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      fileIds: null == fileIds
-          ? _value._fileIds
-          : fileIds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      isSensitive: freezed == isSensitive
-          ? _value.isSensitive
-          : isSensitive // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+    return _then(
+      _$GalleryPostsUpdateRequestImpl(
+        postId:
+            null == postId
+                ? _value.postId
+                : postId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        title:
+            null == title
+                ? _value.title
+                : title // ignore: cast_nullable_to_non_nullable
+                    as String,
+        description:
+            freezed == description
+                ? _value.description
+                : description // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        fileIds:
+            null == fileIds
+                ? _value._fileIds
+                : fileIds // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+        isSensitive:
+            freezed == isSensitive
+                ? _value.isSensitive
+                : isSensitive // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$GalleryPostsUpdateRequestImpl implements _GalleryPostsUpdateRequest {
-  const _$GalleryPostsUpdateRequestImpl(
-      {required this.postId,
-      required this.title,
-      this.description,
-      required final List<String> fileIds,
-      this.isSensitive})
-      : _fileIds = fileIds;
+  const _$GalleryPostsUpdateRequestImpl({
+    required this.postId,
+    required this.title,
+    this.description,
+    required final List<String> fileIds,
+    this.isSensitive,
+  }) : _fileIds = fileIds;
 
   factory _$GalleryPostsUpdateRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$GalleryPostsUpdateRequestImplFromJson(json);
@@ -213,8 +238,14 @@ class _$GalleryPostsUpdateRequestImpl implements _GalleryPostsUpdateRequest {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, postId, title, description,
-      const DeepCollectionEquality().hash(_fileIds), isSensitive);
+  int get hashCode => Object.hash(
+    runtimeType,
+    postId,
+    title,
+    description,
+    const DeepCollectionEquality().hash(_fileIds),
+    isSensitive,
+  );
 
   /// Create a copy of GalleryPostsUpdateRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -222,24 +253,24 @@ class _$GalleryPostsUpdateRequestImpl implements _GalleryPostsUpdateRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$GalleryPostsUpdateRequestImplCopyWith<_$GalleryPostsUpdateRequestImpl>
-      get copyWith => __$$GalleryPostsUpdateRequestImplCopyWithImpl<
-          _$GalleryPostsUpdateRequestImpl>(this, _$identity);
+  get copyWith => __$$GalleryPostsUpdateRequestImplCopyWithImpl<
+    _$GalleryPostsUpdateRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GalleryPostsUpdateRequestImplToJson(
-      this,
-    );
+    return _$$GalleryPostsUpdateRequestImplToJson(this);
   }
 }
 
 abstract class _GalleryPostsUpdateRequest implements GalleryPostsUpdateRequest {
-  const factory _GalleryPostsUpdateRequest(
-      {required final String postId,
-      required final String title,
-      final String? description,
-      required final List<String> fileIds,
-      final bool? isSensitive}) = _$GalleryPostsUpdateRequestImpl;
+  const factory _GalleryPostsUpdateRequest({
+    required final String postId,
+    required final String title,
+    final String? description,
+    required final List<String> fileIds,
+    final bool? isSensitive,
+  }) = _$GalleryPostsUpdateRequestImpl;
 
   factory _GalleryPostsUpdateRequest.fromJson(Map<String, dynamic> json) =
       _$GalleryPostsUpdateRequestImpl.fromJson;
@@ -260,5 +291,5 @@ abstract class _GalleryPostsUpdateRequest implements GalleryPostsUpdateRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GalleryPostsUpdateRequestImplCopyWith<_$GalleryPostsUpdateRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

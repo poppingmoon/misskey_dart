@@ -7,24 +7,20 @@ part of 'i_page_likes_request.dart';
 // **************************************************************************
 
 _$IPageLikesRequestImpl _$$IPageLikesRequestImplFromJson(
-        Map<String, dynamic> json) =>
-    $checkedCreate(
-      r'_$IPageLikesRequestImpl',
-      json,
-      ($checkedConvert) {
-        final val = _$IPageLikesRequestImpl(
-          limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-          sinceId: $checkedConvert('sinceId', (v) => v as String?),
-          untilId: $checkedConvert('untilId', (v) => v as String?),
-        );
-        return val;
-      },
-    );
+  Map<String, dynamic> json,
+) => $checkedCreate(r'_$IPageLikesRequestImpl', json, ($checkedConvert) {
+  final val = _$IPageLikesRequestImpl(
+    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
+    sinceId: $checkedConvert('sinceId', (v) => v as String?),
+    untilId: $checkedConvert('untilId', (v) => v as String?),
+  );
+  return val;
+});
 
 Map<String, dynamic> _$$IPageLikesRequestImplToJson(
-        _$IPageLikesRequestImpl instance) =>
-    <String, dynamic>{
-      'limit': instance.limit,
-      'sinceId': instance.sinceId,
-      'untilId': instance.untilId,
-    };
+  _$IPageLikesRequestImpl instance,
+) => <String, dynamic>{
+  'limit': instance.limit,
+  'sinceId': instance.sinceId,
+  'untilId': instance.untilId,
+};

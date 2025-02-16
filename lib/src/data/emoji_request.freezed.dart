@@ -12,7 +12,8 @@ part of 'emoji_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 EmojiRequest _$EmojiRequestFromJson(Map<String, dynamic> json) {
   return _EmojiRequest.fromJson(json);
@@ -35,8 +36,9 @@ mixin _$EmojiRequest {
 /// @nodoc
 abstract class $EmojiRequestCopyWith<$Res> {
   factory $EmojiRequestCopyWith(
-          EmojiRequest value, $Res Function(EmojiRequest) then) =
-      _$EmojiRequestCopyWithImpl<$Res, EmojiRequest>;
+    EmojiRequest value,
+    $Res Function(EmojiRequest) then,
+  ) = _$EmojiRequestCopyWithImpl<$Res, EmojiRequest>;
   @useResult
   $Res call({String name});
 }
@@ -55,15 +57,17 @@ class _$EmojiRequestCopyWithImpl<$Res, $Val extends EmojiRequest>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? name = null,
-  }) {
-    return _then(_value.copyWith(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? name = null}) {
+    return _then(
+      _value.copyWith(
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -71,8 +75,9 @@ class _$EmojiRequestCopyWithImpl<$Res, $Val extends EmojiRequest>
 abstract class _$$EmojiRequestImplCopyWith<$Res>
     implements $EmojiRequestCopyWith<$Res> {
   factory _$$EmojiRequestImplCopyWith(
-          _$EmojiRequestImpl value, $Res Function(_$EmojiRequestImpl) then) =
-      __$$EmojiRequestImplCopyWithImpl<$Res>;
+    _$EmojiRequestImpl value,
+    $Res Function(_$EmojiRequestImpl) then,
+  ) = __$$EmojiRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String name});
@@ -83,22 +88,24 @@ class __$$EmojiRequestImplCopyWithImpl<$Res>
     extends _$EmojiRequestCopyWithImpl<$Res, _$EmojiRequestImpl>
     implements _$$EmojiRequestImplCopyWith<$Res> {
   __$$EmojiRequestImplCopyWithImpl(
-      _$EmojiRequestImpl _value, $Res Function(_$EmojiRequestImpl) _then)
-      : super(_value, _then);
+    _$EmojiRequestImpl _value,
+    $Res Function(_$EmojiRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of EmojiRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? name = null,
-  }) {
-    return _then(_$EmojiRequestImpl(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? name = null}) {
+    return _then(
+      _$EmojiRequestImpl(
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -140,9 +147,7 @@ class _$EmojiRequestImpl implements _EmojiRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$EmojiRequestImplToJson(
-      this,
-    );
+    return _$$EmojiRequestImplToJson(this);
   }
 }
 

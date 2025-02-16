@@ -12,7 +12,8 @@ part of 'channel_event.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ChannelEvent _$ChannelEventFromJson(Map<String, dynamic> json) {
   return _ChannelEvent.fromJson(json);
@@ -39,14 +40,16 @@ mixin _$ChannelEvent {
 /// @nodoc
 abstract class $ChannelEventCopyWith<$Res> {
   factory $ChannelEventCopyWith(
-          ChannelEvent value, $Res Function(ChannelEvent) then) =
-      _$ChannelEventCopyWithImpl<$Res, ChannelEvent>;
+    ChannelEvent value,
+    $Res Function(ChannelEvent) then,
+  ) = _$ChannelEventCopyWithImpl<$Res, ChannelEvent>;
   @useResult
-  $Res call(
-      {String id,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      ChannelEventType? type,
-      dynamic body});
+  $Res call({
+    String id,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    ChannelEventType? type,
+    dynamic body,
+  });
 }
 
 /// @nodoc
@@ -68,20 +71,26 @@ class _$ChannelEventCopyWithImpl<$Res, $Val extends ChannelEvent>
     Object? type = freezed,
     Object? body = freezed,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as ChannelEventType?,
-      body: freezed == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            type:
+                freezed == type
+                    ? _value.type
+                    : type // ignore: cast_nullable_to_non_nullable
+                        as ChannelEventType?,
+            body:
+                freezed == body
+                    ? _value.body
+                    : body // ignore: cast_nullable_to_non_nullable
+                        as dynamic,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -89,15 +98,17 @@ class _$ChannelEventCopyWithImpl<$Res, $Val extends ChannelEvent>
 abstract class _$$ChannelEventImplCopyWith<$Res>
     implements $ChannelEventCopyWith<$Res> {
   factory _$$ChannelEventImplCopyWith(
-          _$ChannelEventImpl value, $Res Function(_$ChannelEventImpl) then) =
-      __$$ChannelEventImplCopyWithImpl<$Res>;
+    _$ChannelEventImpl value,
+    $Res Function(_$ChannelEventImpl) then,
+  ) = __$$ChannelEventImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      ChannelEventType? type,
-      dynamic body});
+  $Res call({
+    String id,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    ChannelEventType? type,
+    dynamic body,
+  });
 }
 
 /// @nodoc
@@ -105,8 +116,9 @@ class __$$ChannelEventImplCopyWithImpl<$Res>
     extends _$ChannelEventCopyWithImpl<$Res, _$ChannelEventImpl>
     implements _$$ChannelEventImplCopyWith<$Res> {
   __$$ChannelEventImplCopyWithImpl(
-      _$ChannelEventImpl _value, $Res Function(_$ChannelEventImpl) _then)
-      : super(_value, _then);
+    _$ChannelEventImpl _value,
+    $Res Function(_$ChannelEventImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -117,37 +129,43 @@ class __$$ChannelEventImplCopyWithImpl<$Res>
     Object? type = freezed,
     Object? body = freezed,
   }) {
-    return _then(_$ChannelEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as ChannelEventType?,
-      body: freezed == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-    ));
+    return _then(
+      _$ChannelEventImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        type:
+            freezed == type
+                ? _value.type
+                : type // ignore: cast_nullable_to_non_nullable
+                    as ChannelEventType?,
+        body:
+            freezed == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as dynamic,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ChannelEventImpl implements _ChannelEvent {
-  const _$ChannelEventImpl(
-      {required this.id,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type,
-      required this.body});
+  const _$ChannelEventImpl({
+    required this.id,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type,
+    required this.body,
+  });
 
   factory _$ChannelEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$ChannelEventImplFromJson(json);
 
   @override
   final String id;
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final ChannelEventType? type;
@@ -172,7 +190,11 @@ class _$ChannelEventImpl implements _ChannelEvent {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType, id, type, const DeepCollectionEquality().hash(body));
+    runtimeType,
+    id,
+    type,
+    const DeepCollectionEquality().hash(body),
+  );
 
   /// Create a copy of ChannelEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -184,18 +206,17 @@ class _$ChannelEventImpl implements _ChannelEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ChannelEventImplToJson(
-      this,
-    );
+    return _$$ChannelEventImplToJson(this);
   }
 }
 
 abstract class _ChannelEvent implements ChannelEvent {
-  const factory _ChannelEvent(
-      {required final String id,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      final ChannelEventType? type,
-      required final dynamic body}) = _$ChannelEventImpl;
+  const factory _ChannelEvent({
+    required final String id,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    final ChannelEventType? type,
+    required final dynamic body,
+  }) = _$ChannelEventImpl;
 
   factory _ChannelEvent.fromJson(Map<String, dynamic> json) =
       _$ChannelEventImpl.fromJson;

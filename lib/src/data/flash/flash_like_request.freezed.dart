@@ -12,7 +12,8 @@ part of 'flash_like_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 FlashLikeRequest _$FlashLikeRequestFromJson(Map<String, dynamic> json) {
   return _FlashLikeRequest.fromJson(json);
@@ -35,8 +36,9 @@ mixin _$FlashLikeRequest {
 /// @nodoc
 abstract class $FlashLikeRequestCopyWith<$Res> {
   factory $FlashLikeRequestCopyWith(
-          FlashLikeRequest value, $Res Function(FlashLikeRequest) then) =
-      _$FlashLikeRequestCopyWithImpl<$Res, FlashLikeRequest>;
+    FlashLikeRequest value,
+    $Res Function(FlashLikeRequest) then,
+  ) = _$FlashLikeRequestCopyWithImpl<$Res, FlashLikeRequest>;
   @useResult
   $Res call({String flashId});
 }
@@ -55,24 +57,27 @@ class _$FlashLikeRequestCopyWithImpl<$Res, $Val extends FlashLikeRequest>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? flashId = null,
-  }) {
-    return _then(_value.copyWith(
-      flashId: null == flashId
-          ? _value.flashId
-          : flashId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? flashId = null}) {
+    return _then(
+      _value.copyWith(
+            flashId:
+                null == flashId
+                    ? _value.flashId
+                    : flashId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$FlashLikeRequestImplCopyWith<$Res>
     implements $FlashLikeRequestCopyWith<$Res> {
-  factory _$$FlashLikeRequestImplCopyWith(_$FlashLikeRequestImpl value,
-          $Res Function(_$FlashLikeRequestImpl) then) =
-      __$$FlashLikeRequestImplCopyWithImpl<$Res>;
+  factory _$$FlashLikeRequestImplCopyWith(
+    _$FlashLikeRequestImpl value,
+    $Res Function(_$FlashLikeRequestImpl) then,
+  ) = __$$FlashLikeRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String flashId});
@@ -82,23 +87,25 @@ abstract class _$$FlashLikeRequestImplCopyWith<$Res>
 class __$$FlashLikeRequestImplCopyWithImpl<$Res>
     extends _$FlashLikeRequestCopyWithImpl<$Res, _$FlashLikeRequestImpl>
     implements _$$FlashLikeRequestImplCopyWith<$Res> {
-  __$$FlashLikeRequestImplCopyWithImpl(_$FlashLikeRequestImpl _value,
-      $Res Function(_$FlashLikeRequestImpl) _then)
-      : super(_value, _then);
+  __$$FlashLikeRequestImplCopyWithImpl(
+    _$FlashLikeRequestImpl _value,
+    $Res Function(_$FlashLikeRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of FlashLikeRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? flashId = null,
-  }) {
-    return _then(_$FlashLikeRequestImpl(
-      flashId: null == flashId
-          ? _value.flashId
-          : flashId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? flashId = null}) {
+    return _then(
+      _$FlashLikeRequestImpl(
+        flashId:
+            null == flashId
+                ? _value.flashId
+                : flashId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -137,13 +144,13 @@ class _$FlashLikeRequestImpl implements _FlashLikeRequest {
   @pragma('vm:prefer-inline')
   _$$FlashLikeRequestImplCopyWith<_$FlashLikeRequestImpl> get copyWith =>
       __$$FlashLikeRequestImplCopyWithImpl<_$FlashLikeRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$FlashLikeRequestImplToJson(
-      this,
-    );
+    return _$$FlashLikeRequestImplToJson(this);
   }
 }
 

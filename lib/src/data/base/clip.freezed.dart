@@ -12,7 +12,8 @@ part of 'clip.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 Clip _$ClipFromJson(Map<String, dynamic> json) {
   return _Clip.fromJson(json);
@@ -48,18 +49,19 @@ abstract class $ClipCopyWith<$Res> {
   factory $ClipCopyWith(Clip value, $Res Function(Clip) then) =
       _$ClipCopyWithImpl<$Res, Clip>;
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime createdAt,
-      @NullableDateTimeConverter() DateTime? lastClippedAt,
-      String userId,
-      UserLite user,
-      String? name,
-      String? description,
-      bool isPublic,
-      int? favoritedCount,
-      bool? isFavorited,
-      int? notesCount});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime createdAt,
+    @NullableDateTimeConverter() DateTime? lastClippedAt,
+    String userId,
+    UserLite user,
+    String? name,
+    String? description,
+    bool isPublic,
+    int? favoritedCount,
+    bool? isFavorited,
+    int? notesCount,
+  });
 
   $UserLiteCopyWith<$Res> get user;
 }
@@ -91,52 +93,66 @@ class _$ClipCopyWithImpl<$Res, $Val extends Clip>
     Object? isFavorited = freezed,
     Object? notesCount = freezed,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      lastClippedAt: freezed == lastClippedAt
-          ? _value.lastClippedAt
-          : lastClippedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      user: null == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as UserLite,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isPublic: null == isPublic
-          ? _value.isPublic
-          : isPublic // ignore: cast_nullable_to_non_nullable
-              as bool,
-      favoritedCount: freezed == favoritedCount
-          ? _value.favoritedCount
-          : favoritedCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      isFavorited: freezed == isFavorited
-          ? _value.isFavorited
-          : isFavorited // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      notesCount: freezed == notesCount
-          ? _value.notesCount
-          : notesCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            createdAt:
+                null == createdAt
+                    ? _value.createdAt
+                    : createdAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            lastClippedAt:
+                freezed == lastClippedAt
+                    ? _value.lastClippedAt
+                    : lastClippedAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            userId:
+                null == userId
+                    ? _value.userId
+                    : userId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            user:
+                null == user
+                    ? _value.user
+                    : user // ignore: cast_nullable_to_non_nullable
+                        as UserLite,
+            name:
+                freezed == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            description:
+                freezed == description
+                    ? _value.description
+                    : description // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            isPublic:
+                null == isPublic
+                    ? _value.isPublic
+                    : isPublic // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            favoritedCount:
+                freezed == favoritedCount
+                    ? _value.favoritedCount
+                    : favoritedCount // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            isFavorited:
+                freezed == isFavorited
+                    ? _value.isFavorited
+                    : isFavorited // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            notesCount:
+                freezed == notesCount
+                    ? _value.notesCount
+                    : notesCount // ignore: cast_nullable_to_non_nullable
+                        as int?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of Clip
@@ -153,22 +169,24 @@ class _$ClipCopyWithImpl<$Res, $Val extends Clip>
 /// @nodoc
 abstract class _$$ClipImplCopyWith<$Res> implements $ClipCopyWith<$Res> {
   factory _$$ClipImplCopyWith(
-          _$ClipImpl value, $Res Function(_$ClipImpl) then) =
-      __$$ClipImplCopyWithImpl<$Res>;
+    _$ClipImpl value,
+    $Res Function(_$ClipImpl) then,
+  ) = __$$ClipImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime createdAt,
-      @NullableDateTimeConverter() DateTime? lastClippedAt,
-      String userId,
-      UserLite user,
-      String? name,
-      String? description,
-      bool isPublic,
-      int? favoritedCount,
-      bool? isFavorited,
-      int? notesCount});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime createdAt,
+    @NullableDateTimeConverter() DateTime? lastClippedAt,
+    String userId,
+    UserLite user,
+    String? name,
+    String? description,
+    bool isPublic,
+    int? favoritedCount,
+    bool? isFavorited,
+    int? notesCount,
+  });
 
   @override
   $UserLiteCopyWith<$Res> get user;
@@ -179,7 +197,7 @@ class __$$ClipImplCopyWithImpl<$Res>
     extends _$ClipCopyWithImpl<$Res, _$ClipImpl>
     implements _$$ClipImplCopyWith<$Res> {
   __$$ClipImplCopyWithImpl(_$ClipImpl _value, $Res Function(_$ClipImpl) _then)
-      : super(_value, _then);
+    : super(_value, _then);
 
   /// Create a copy of Clip
   /// with the given fields replaced by the non-null parameter values.
@@ -198,70 +216,84 @@ class __$$ClipImplCopyWithImpl<$Res>
     Object? isFavorited = freezed,
     Object? notesCount = freezed,
   }) {
-    return _then(_$ClipImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      lastClippedAt: freezed == lastClippedAt
-          ? _value.lastClippedAt
-          : lastClippedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      user: null == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as UserLite,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isPublic: null == isPublic
-          ? _value.isPublic
-          : isPublic // ignore: cast_nullable_to_non_nullable
-              as bool,
-      favoritedCount: freezed == favoritedCount
-          ? _value.favoritedCount
-          : favoritedCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      isFavorited: freezed == isFavorited
-          ? _value.isFavorited
-          : isFavorited // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      notesCount: freezed == notesCount
-          ? _value.notesCount
-          : notesCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ));
+    return _then(
+      _$ClipImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        createdAt:
+            null == createdAt
+                ? _value.createdAt
+                : createdAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        lastClippedAt:
+            freezed == lastClippedAt
+                ? _value.lastClippedAt
+                : lastClippedAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        userId:
+            null == userId
+                ? _value.userId
+                : userId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        user:
+            null == user
+                ? _value.user
+                : user // ignore: cast_nullable_to_non_nullable
+                    as UserLite,
+        name:
+            freezed == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        description:
+            freezed == description
+                ? _value.description
+                : description // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        isPublic:
+            null == isPublic
+                ? _value.isPublic
+                : isPublic // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        favoritedCount:
+            freezed == favoritedCount
+                ? _value.favoritedCount
+                : favoritedCount // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        isFavorited:
+            freezed == isFavorited
+                ? _value.isFavorited
+                : isFavorited // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        notesCount:
+            freezed == notesCount
+                ? _value.notesCount
+                : notesCount // ignore: cast_nullable_to_non_nullable
+                    as int?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ClipImpl implements _Clip {
-  const _$ClipImpl(
-      {required this.id,
-      @DateTimeConverter() required this.createdAt,
-      @NullableDateTimeConverter() this.lastClippedAt,
-      required this.userId,
-      required this.user,
-      this.name,
-      this.description,
-      required this.isPublic,
-      this.favoritedCount,
-      this.isFavorited,
-      this.notesCount});
+  const _$ClipImpl({
+    required this.id,
+    @DateTimeConverter() required this.createdAt,
+    @NullableDateTimeConverter() this.lastClippedAt,
+    required this.userId,
+    required this.user,
+    this.name,
+    this.description,
+    required this.isPublic,
+    this.favoritedCount,
+    this.isFavorited,
+    this.notesCount,
+  });
 
   factory _$ClipImpl.fromJson(Map<String, dynamic> json) =>
       _$$ClipImplFromJson(json);
@@ -324,18 +356,19 @@ class _$ClipImpl implements _Clip {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      createdAt,
-      lastClippedAt,
-      userId,
-      user,
-      name,
-      description,
-      isPublic,
-      favoritedCount,
-      isFavorited,
-      notesCount);
+    runtimeType,
+    id,
+    createdAt,
+    lastClippedAt,
+    userId,
+    user,
+    name,
+    description,
+    isPublic,
+    favoritedCount,
+    isFavorited,
+    notesCount,
+  );
 
   /// Create a copy of Clip
   /// with the given fields replaced by the non-null parameter values.
@@ -347,25 +380,24 @@ class _$ClipImpl implements _Clip {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ClipImplToJson(
-      this,
-    );
+    return _$$ClipImplToJson(this);
   }
 }
 
 abstract class _Clip implements Clip {
-  const factory _Clip(
-      {required final String id,
-      @DateTimeConverter() required final DateTime createdAt,
-      @NullableDateTimeConverter() final DateTime? lastClippedAt,
-      required final String userId,
-      required final UserLite user,
-      final String? name,
-      final String? description,
-      required final bool isPublic,
-      final int? favoritedCount,
-      final bool? isFavorited,
-      final int? notesCount}) = _$ClipImpl;
+  const factory _Clip({
+    required final String id,
+    @DateTimeConverter() required final DateTime createdAt,
+    @NullableDateTimeConverter() final DateTime? lastClippedAt,
+    required final String userId,
+    required final UserLite user,
+    final String? name,
+    final String? description,
+    required final bool isPublic,
+    final int? favoritedCount,
+    final bool? isFavorited,
+    final int? notesCount,
+  }) = _$ClipImpl;
 
   factory _Clip.fromJson(Map<String, dynamic> json) = _$ClipImpl.fromJson;
 

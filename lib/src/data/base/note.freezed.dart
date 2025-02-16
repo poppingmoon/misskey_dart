@@ -12,7 +12,8 @@ part of 'note.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 Note _$NoteFromJson(Map<String, dynamic> json) {
   return _Note.fromJson(json);
@@ -79,41 +80,42 @@ abstract class $NoteCopyWith<$Res> {
   factory $NoteCopyWith(Note value, $Res Function(Note) then) =
       _$NoteCopyWithImpl<$Res, Note>;
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime createdAt,
-      @NullableDateTimeConverter() DateTime? updatedAt,
-      String? text,
-      String? cw,
-      UserLite user,
-      String userId,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      NoteVisibility? visibility,
-      bool localOnly,
-      int renoteCount,
-      int repliesCount,
-      int? reactionCount,
-      Map<String, int> reactions,
-      @EmojisConverter() Map<String, String> reactionEmojis,
-      @EmojisConverter() Map<String, String> emojis,
-      List<String> fileIds,
-      List<DriveFile> files,
-      String? replyId,
-      String? renoteId,
-      String? channelId,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      ReactionAcceptance? reactionAcceptance,
-      Note? renote,
-      Note? reply,
-      List<String> visibleUserIds,
-      List<String> mentions,
-      String? myReaction,
-      NoteChannelInfo? channel,
-      @NullableUriConverter() Uri? uri,
-      @NullableUriConverter() Uri? url,
-      List<String> reactionAndUserPairCache,
-      NotePoll? poll,
-      int? clippedCount});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime createdAt,
+    @NullableDateTimeConverter() DateTime? updatedAt,
+    String? text,
+    String? cw,
+    UserLite user,
+    String userId,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    NoteVisibility? visibility,
+    bool localOnly,
+    int renoteCount,
+    int repliesCount,
+    int? reactionCount,
+    Map<String, int> reactions,
+    @EmojisConverter() Map<String, String> reactionEmojis,
+    @EmojisConverter() Map<String, String> emojis,
+    List<String> fileIds,
+    List<DriveFile> files,
+    String? replyId,
+    String? renoteId,
+    String? channelId,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    ReactionAcceptance? reactionAcceptance,
+    Note? renote,
+    Note? reply,
+    List<String> visibleUserIds,
+    List<String> mentions,
+    String? myReaction,
+    NoteChannelInfo? channel,
+    @NullableUriConverter() Uri? uri,
+    @NullableUriConverter() Uri? url,
+    List<String> reactionAndUserPairCache,
+    NotePoll? poll,
+    int? clippedCount,
+  });
 
   $UserLiteCopyWith<$Res> get user;
   $NoteCopyWith<$Res>? get renote;
@@ -170,136 +172,171 @@ class _$NoteCopyWithImpl<$Res, $Val extends Note>
     Object? poll = freezed,
     Object? clippedCount = freezed,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedAt: freezed == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      text: freezed == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String?,
-      cw: freezed == cw
-          ? _value.cw
-          : cw // ignore: cast_nullable_to_non_nullable
-              as String?,
-      user: null == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as UserLite,
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      visibility: freezed == visibility
-          ? _value.visibility
-          : visibility // ignore: cast_nullable_to_non_nullable
-              as NoteVisibility?,
-      localOnly: null == localOnly
-          ? _value.localOnly
-          : localOnly // ignore: cast_nullable_to_non_nullable
-              as bool,
-      renoteCount: null == renoteCount
-          ? _value.renoteCount
-          : renoteCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      repliesCount: null == repliesCount
-          ? _value.repliesCount
-          : repliesCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      reactionCount: freezed == reactionCount
-          ? _value.reactionCount
-          : reactionCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      reactions: null == reactions
-          ? _value.reactions
-          : reactions // ignore: cast_nullable_to_non_nullable
-              as Map<String, int>,
-      reactionEmojis: null == reactionEmojis
-          ? _value.reactionEmojis
-          : reactionEmojis // ignore: cast_nullable_to_non_nullable
-              as Map<String, String>,
-      emojis: null == emojis
-          ? _value.emojis
-          : emojis // ignore: cast_nullable_to_non_nullable
-              as Map<String, String>,
-      fileIds: null == fileIds
-          ? _value.fileIds
-          : fileIds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      files: null == files
-          ? _value.files
-          : files // ignore: cast_nullable_to_non_nullable
-              as List<DriveFile>,
-      replyId: freezed == replyId
-          ? _value.replyId
-          : replyId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      renoteId: freezed == renoteId
-          ? _value.renoteId
-          : renoteId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      channelId: freezed == channelId
-          ? _value.channelId
-          : channelId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      reactionAcceptance: freezed == reactionAcceptance
-          ? _value.reactionAcceptance
-          : reactionAcceptance // ignore: cast_nullable_to_non_nullable
-              as ReactionAcceptance?,
-      renote: freezed == renote
-          ? _value.renote
-          : renote // ignore: cast_nullable_to_non_nullable
-              as Note?,
-      reply: freezed == reply
-          ? _value.reply
-          : reply // ignore: cast_nullable_to_non_nullable
-              as Note?,
-      visibleUserIds: null == visibleUserIds
-          ? _value.visibleUserIds
-          : visibleUserIds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      mentions: null == mentions
-          ? _value.mentions
-          : mentions // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      myReaction: freezed == myReaction
-          ? _value.myReaction
-          : myReaction // ignore: cast_nullable_to_non_nullable
-              as String?,
-      channel: freezed == channel
-          ? _value.channel
-          : channel // ignore: cast_nullable_to_non_nullable
-              as NoteChannelInfo?,
-      uri: freezed == uri
-          ? _value.uri
-          : uri // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      reactionAndUserPairCache: null == reactionAndUserPairCache
-          ? _value.reactionAndUserPairCache
-          : reactionAndUserPairCache // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      poll: freezed == poll
-          ? _value.poll
-          : poll // ignore: cast_nullable_to_non_nullable
-              as NotePoll?,
-      clippedCount: freezed == clippedCount
-          ? _value.clippedCount
-          : clippedCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            createdAt:
+                null == createdAt
+                    ? _value.createdAt
+                    : createdAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            updatedAt:
+                freezed == updatedAt
+                    ? _value.updatedAt
+                    : updatedAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            text:
+                freezed == text
+                    ? _value.text
+                    : text // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            cw:
+                freezed == cw
+                    ? _value.cw
+                    : cw // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            user:
+                null == user
+                    ? _value.user
+                    : user // ignore: cast_nullable_to_non_nullable
+                        as UserLite,
+            userId:
+                null == userId
+                    ? _value.userId
+                    : userId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            visibility:
+                freezed == visibility
+                    ? _value.visibility
+                    : visibility // ignore: cast_nullable_to_non_nullable
+                        as NoteVisibility?,
+            localOnly:
+                null == localOnly
+                    ? _value.localOnly
+                    : localOnly // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            renoteCount:
+                null == renoteCount
+                    ? _value.renoteCount
+                    : renoteCount // ignore: cast_nullable_to_non_nullable
+                        as int,
+            repliesCount:
+                null == repliesCount
+                    ? _value.repliesCount
+                    : repliesCount // ignore: cast_nullable_to_non_nullable
+                        as int,
+            reactionCount:
+                freezed == reactionCount
+                    ? _value.reactionCount
+                    : reactionCount // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            reactions:
+                null == reactions
+                    ? _value.reactions
+                    : reactions // ignore: cast_nullable_to_non_nullable
+                        as Map<String, int>,
+            reactionEmojis:
+                null == reactionEmojis
+                    ? _value.reactionEmojis
+                    : reactionEmojis // ignore: cast_nullable_to_non_nullable
+                        as Map<String, String>,
+            emojis:
+                null == emojis
+                    ? _value.emojis
+                    : emojis // ignore: cast_nullable_to_non_nullable
+                        as Map<String, String>,
+            fileIds:
+                null == fileIds
+                    ? _value.fileIds
+                    : fileIds // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+            files:
+                null == files
+                    ? _value.files
+                    : files // ignore: cast_nullable_to_non_nullable
+                        as List<DriveFile>,
+            replyId:
+                freezed == replyId
+                    ? _value.replyId
+                    : replyId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            renoteId:
+                freezed == renoteId
+                    ? _value.renoteId
+                    : renoteId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            channelId:
+                freezed == channelId
+                    ? _value.channelId
+                    : channelId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            reactionAcceptance:
+                freezed == reactionAcceptance
+                    ? _value.reactionAcceptance
+                    : reactionAcceptance // ignore: cast_nullable_to_non_nullable
+                        as ReactionAcceptance?,
+            renote:
+                freezed == renote
+                    ? _value.renote
+                    : renote // ignore: cast_nullable_to_non_nullable
+                        as Note?,
+            reply:
+                freezed == reply
+                    ? _value.reply
+                    : reply // ignore: cast_nullable_to_non_nullable
+                        as Note?,
+            visibleUserIds:
+                null == visibleUserIds
+                    ? _value.visibleUserIds
+                    : visibleUserIds // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+            mentions:
+                null == mentions
+                    ? _value.mentions
+                    : mentions // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+            myReaction:
+                freezed == myReaction
+                    ? _value.myReaction
+                    : myReaction // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            channel:
+                freezed == channel
+                    ? _value.channel
+                    : channel // ignore: cast_nullable_to_non_nullable
+                        as NoteChannelInfo?,
+            uri:
+                freezed == uri
+                    ? _value.uri
+                    : uri // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            url:
+                freezed == url
+                    ? _value.url
+                    : url // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            reactionAndUserPairCache:
+                null == reactionAndUserPairCache
+                    ? _value.reactionAndUserPairCache
+                    : reactionAndUserPairCache // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+            poll:
+                freezed == poll
+                    ? _value.poll
+                    : poll // ignore: cast_nullable_to_non_nullable
+                        as NotePoll?,
+            clippedCount:
+                freezed == clippedCount
+                    ? _value.clippedCount
+                    : clippedCount // ignore: cast_nullable_to_non_nullable
+                        as int?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of Note
@@ -372,45 +409,47 @@ class _$NoteCopyWithImpl<$Res, $Val extends Note>
 /// @nodoc
 abstract class _$$NoteImplCopyWith<$Res> implements $NoteCopyWith<$Res> {
   factory _$$NoteImplCopyWith(
-          _$NoteImpl value, $Res Function(_$NoteImpl) then) =
-      __$$NoteImplCopyWithImpl<$Res>;
+    _$NoteImpl value,
+    $Res Function(_$NoteImpl) then,
+  ) = __$$NoteImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime createdAt,
-      @NullableDateTimeConverter() DateTime? updatedAt,
-      String? text,
-      String? cw,
-      UserLite user,
-      String userId,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      NoteVisibility? visibility,
-      bool localOnly,
-      int renoteCount,
-      int repliesCount,
-      int? reactionCount,
-      Map<String, int> reactions,
-      @EmojisConverter() Map<String, String> reactionEmojis,
-      @EmojisConverter() Map<String, String> emojis,
-      List<String> fileIds,
-      List<DriveFile> files,
-      String? replyId,
-      String? renoteId,
-      String? channelId,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      ReactionAcceptance? reactionAcceptance,
-      Note? renote,
-      Note? reply,
-      List<String> visibleUserIds,
-      List<String> mentions,
-      String? myReaction,
-      NoteChannelInfo? channel,
-      @NullableUriConverter() Uri? uri,
-      @NullableUriConverter() Uri? url,
-      List<String> reactionAndUserPairCache,
-      NotePoll? poll,
-      int? clippedCount});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime createdAt,
+    @NullableDateTimeConverter() DateTime? updatedAt,
+    String? text,
+    String? cw,
+    UserLite user,
+    String userId,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    NoteVisibility? visibility,
+    bool localOnly,
+    int renoteCount,
+    int repliesCount,
+    int? reactionCount,
+    Map<String, int> reactions,
+    @EmojisConverter() Map<String, String> reactionEmojis,
+    @EmojisConverter() Map<String, String> emojis,
+    List<String> fileIds,
+    List<DriveFile> files,
+    String? replyId,
+    String? renoteId,
+    String? channelId,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    ReactionAcceptance? reactionAcceptance,
+    Note? renote,
+    Note? reply,
+    List<String> visibleUserIds,
+    List<String> mentions,
+    String? myReaction,
+    NoteChannelInfo? channel,
+    @NullableUriConverter() Uri? uri,
+    @NullableUriConverter() Uri? url,
+    List<String> reactionAndUserPairCache,
+    NotePoll? poll,
+    int? clippedCount,
+  });
 
   @override
   $UserLiteCopyWith<$Res> get user;
@@ -429,7 +468,7 @@ class __$$NoteImplCopyWithImpl<$Res>
     extends _$NoteCopyWithImpl<$Res, _$NoteImpl>
     implements _$$NoteImplCopyWith<$Res> {
   __$$NoteImplCopyWithImpl(_$NoteImpl _value, $Res Function(_$NoteImpl) _then)
-      : super(_value, _then);
+    : super(_value, _then);
 
   /// Create a copy of Note
   /// with the given fields replaced by the non-null parameter values.
@@ -469,185 +508,219 @@ class __$$NoteImplCopyWithImpl<$Res>
     Object? poll = freezed,
     Object? clippedCount = freezed,
   }) {
-    return _then(_$NoteImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedAt: freezed == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      text: freezed == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String?,
-      cw: freezed == cw
-          ? _value.cw
-          : cw // ignore: cast_nullable_to_non_nullable
-              as String?,
-      user: null == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as UserLite,
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      visibility: freezed == visibility
-          ? _value.visibility
-          : visibility // ignore: cast_nullable_to_non_nullable
-              as NoteVisibility?,
-      localOnly: null == localOnly
-          ? _value.localOnly
-          : localOnly // ignore: cast_nullable_to_non_nullable
-              as bool,
-      renoteCount: null == renoteCount
-          ? _value.renoteCount
-          : renoteCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      repliesCount: null == repliesCount
-          ? _value.repliesCount
-          : repliesCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      reactionCount: freezed == reactionCount
-          ? _value.reactionCount
-          : reactionCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      reactions: null == reactions
-          ? _value._reactions
-          : reactions // ignore: cast_nullable_to_non_nullable
-              as Map<String, int>,
-      reactionEmojis: null == reactionEmojis
-          ? _value._reactionEmojis
-          : reactionEmojis // ignore: cast_nullable_to_non_nullable
-              as Map<String, String>,
-      emojis: null == emojis
-          ? _value._emojis
-          : emojis // ignore: cast_nullable_to_non_nullable
-              as Map<String, String>,
-      fileIds: null == fileIds
-          ? _value._fileIds
-          : fileIds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      files: null == files
-          ? _value._files
-          : files // ignore: cast_nullable_to_non_nullable
-              as List<DriveFile>,
-      replyId: freezed == replyId
-          ? _value.replyId
-          : replyId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      renoteId: freezed == renoteId
-          ? _value.renoteId
-          : renoteId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      channelId: freezed == channelId
-          ? _value.channelId
-          : channelId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      reactionAcceptance: freezed == reactionAcceptance
-          ? _value.reactionAcceptance
-          : reactionAcceptance // ignore: cast_nullable_to_non_nullable
-              as ReactionAcceptance?,
-      renote: freezed == renote
-          ? _value.renote
-          : renote // ignore: cast_nullable_to_non_nullable
-              as Note?,
-      reply: freezed == reply
-          ? _value.reply
-          : reply // ignore: cast_nullable_to_non_nullable
-              as Note?,
-      visibleUserIds: null == visibleUserIds
-          ? _value._visibleUserIds
-          : visibleUserIds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      mentions: null == mentions
-          ? _value._mentions
-          : mentions // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      myReaction: freezed == myReaction
-          ? _value.myReaction
-          : myReaction // ignore: cast_nullable_to_non_nullable
-              as String?,
-      channel: freezed == channel
-          ? _value.channel
-          : channel // ignore: cast_nullable_to_non_nullable
-              as NoteChannelInfo?,
-      uri: freezed == uri
-          ? _value.uri
-          : uri // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      reactionAndUserPairCache: null == reactionAndUserPairCache
-          ? _value._reactionAndUserPairCache
-          : reactionAndUserPairCache // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      poll: freezed == poll
-          ? _value.poll
-          : poll // ignore: cast_nullable_to_non_nullable
-              as NotePoll?,
-      clippedCount: freezed == clippedCount
-          ? _value.clippedCount
-          : clippedCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ));
+    return _then(
+      _$NoteImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        createdAt:
+            null == createdAt
+                ? _value.createdAt
+                : createdAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        updatedAt:
+            freezed == updatedAt
+                ? _value.updatedAt
+                : updatedAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        text:
+            freezed == text
+                ? _value.text
+                : text // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        cw:
+            freezed == cw
+                ? _value.cw
+                : cw // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        user:
+            null == user
+                ? _value.user
+                : user // ignore: cast_nullable_to_non_nullable
+                    as UserLite,
+        userId:
+            null == userId
+                ? _value.userId
+                : userId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        visibility:
+            freezed == visibility
+                ? _value.visibility
+                : visibility // ignore: cast_nullable_to_non_nullable
+                    as NoteVisibility?,
+        localOnly:
+            null == localOnly
+                ? _value.localOnly
+                : localOnly // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        renoteCount:
+            null == renoteCount
+                ? _value.renoteCount
+                : renoteCount // ignore: cast_nullable_to_non_nullable
+                    as int,
+        repliesCount:
+            null == repliesCount
+                ? _value.repliesCount
+                : repliesCount // ignore: cast_nullable_to_non_nullable
+                    as int,
+        reactionCount:
+            freezed == reactionCount
+                ? _value.reactionCount
+                : reactionCount // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        reactions:
+            null == reactions
+                ? _value._reactions
+                : reactions // ignore: cast_nullable_to_non_nullable
+                    as Map<String, int>,
+        reactionEmojis:
+            null == reactionEmojis
+                ? _value._reactionEmojis
+                : reactionEmojis // ignore: cast_nullable_to_non_nullable
+                    as Map<String, String>,
+        emojis:
+            null == emojis
+                ? _value._emojis
+                : emojis // ignore: cast_nullable_to_non_nullable
+                    as Map<String, String>,
+        fileIds:
+            null == fileIds
+                ? _value._fileIds
+                : fileIds // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+        files:
+            null == files
+                ? _value._files
+                : files // ignore: cast_nullable_to_non_nullable
+                    as List<DriveFile>,
+        replyId:
+            freezed == replyId
+                ? _value.replyId
+                : replyId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        renoteId:
+            freezed == renoteId
+                ? _value.renoteId
+                : renoteId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        channelId:
+            freezed == channelId
+                ? _value.channelId
+                : channelId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        reactionAcceptance:
+            freezed == reactionAcceptance
+                ? _value.reactionAcceptance
+                : reactionAcceptance // ignore: cast_nullable_to_non_nullable
+                    as ReactionAcceptance?,
+        renote:
+            freezed == renote
+                ? _value.renote
+                : renote // ignore: cast_nullable_to_non_nullable
+                    as Note?,
+        reply:
+            freezed == reply
+                ? _value.reply
+                : reply // ignore: cast_nullable_to_non_nullable
+                    as Note?,
+        visibleUserIds:
+            null == visibleUserIds
+                ? _value._visibleUserIds
+                : visibleUserIds // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+        mentions:
+            null == mentions
+                ? _value._mentions
+                : mentions // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+        myReaction:
+            freezed == myReaction
+                ? _value.myReaction
+                : myReaction // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        channel:
+            freezed == channel
+                ? _value.channel
+                : channel // ignore: cast_nullable_to_non_nullable
+                    as NoteChannelInfo?,
+        uri:
+            freezed == uri
+                ? _value.uri
+                : uri // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        url:
+            freezed == url
+                ? _value.url
+                : url // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        reactionAndUserPairCache:
+            null == reactionAndUserPairCache
+                ? _value._reactionAndUserPairCache
+                : reactionAndUserPairCache // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+        poll:
+            freezed == poll
+                ? _value.poll
+                : poll // ignore: cast_nullable_to_non_nullable
+                    as NotePoll?,
+        clippedCount:
+            freezed == clippedCount
+                ? _value.clippedCount
+                : clippedCount // ignore: cast_nullable_to_non_nullable
+                    as int?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$NoteImpl implements _Note {
-  const _$NoteImpl(
-      {required this.id,
-      @DateTimeConverter() required this.createdAt,
-      @NullableDateTimeConverter() this.updatedAt,
-      this.text,
-      this.cw,
-      required this.user,
-      required this.userId,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      this.visibility,
-      this.localOnly = false,
-      this.renoteCount = 0,
-      this.repliesCount = 0,
-      this.reactionCount,
-      final Map<String, int> reactions = const {},
-      @EmojisConverter() final Map<String, String> reactionEmojis = const {},
-      @EmojisConverter() final Map<String, String> emojis = const {},
-      final List<String> fileIds = const [],
-      final List<DriveFile> files = const [],
-      this.replyId,
-      this.renoteId,
-      this.channelId,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      this.reactionAcceptance,
-      this.renote,
-      this.reply,
-      final List<String> visibleUserIds = const [],
-      final List<String> mentions = const [],
-      this.myReaction,
-      this.channel,
-      @NullableUriConverter() this.uri,
-      @NullableUriConverter() this.url,
-      final List<String> reactionAndUserPairCache = const [],
-      this.poll,
-      this.clippedCount})
-      : _reactions = reactions,
-        _reactionEmojis = reactionEmojis,
-        _emojis = emojis,
-        _fileIds = fileIds,
-        _files = files,
-        _visibleUserIds = visibleUserIds,
-        _mentions = mentions,
-        _reactionAndUserPairCache = reactionAndUserPairCache;
+  const _$NoteImpl({
+    required this.id,
+    @DateTimeConverter() required this.createdAt,
+    @NullableDateTimeConverter() this.updatedAt,
+    this.text,
+    this.cw,
+    required this.user,
+    required this.userId,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    this.visibility,
+    this.localOnly = false,
+    this.renoteCount = 0,
+    this.repliesCount = 0,
+    this.reactionCount,
+    final Map<String, int> reactions = const {},
+    @EmojisConverter() final Map<String, String> reactionEmojis = const {},
+    @EmojisConverter() final Map<String, String> emojis = const {},
+    final List<String> fileIds = const [],
+    final List<DriveFile> files = const [],
+    this.replyId,
+    this.renoteId,
+    this.channelId,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    this.reactionAcceptance,
+    this.renote,
+    this.reply,
+    final List<String> visibleUserIds = const [],
+    final List<String> mentions = const [],
+    this.myReaction,
+    this.channel,
+    @NullableUriConverter() this.uri,
+    @NullableUriConverter() this.url,
+    final List<String> reactionAndUserPairCache = const [],
+    this.poll,
+    this.clippedCount,
+  }) : _reactions = reactions,
+       _reactionEmojis = reactionEmojis,
+       _emojis = emojis,
+       _fileIds = fileIds,
+       _files = files,
+       _visibleUserIds = visibleUserIds,
+       _mentions = mentions,
+       _reactionAndUserPairCache = reactionAndUserPairCache;
 
   factory _$NoteImpl.fromJson(Map<String, dynamic> json) =>
       _$$NoteImplFromJson(json);
@@ -668,7 +741,7 @@ class _$NoteImpl implements _Note {
   final UserLite user;
   @override
   final String userId;
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final NoteVisibility? visibility;
@@ -736,7 +809,7 @@ class _$NoteImpl implements _Note {
   final String? renoteId;
   @override
   final String? channelId;
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final ReactionAcceptance? reactionAcceptance;
@@ -816,10 +889,14 @@ class _$NoteImpl implements _Note {
                 other.repliesCount == repliesCount) &&
             (identical(other.reactionCount, reactionCount) ||
                 other.reactionCount == reactionCount) &&
-            const DeepCollectionEquality()
-                .equals(other._reactions, _reactions) &&
-            const DeepCollectionEquality()
-                .equals(other._reactionEmojis, _reactionEmojis) &&
+            const DeepCollectionEquality().equals(
+              other._reactions,
+              _reactions,
+            ) &&
+            const DeepCollectionEquality().equals(
+              other._reactionEmojis,
+              _reactionEmojis,
+            ) &&
             const DeepCollectionEquality().equals(other._emojis, _emojis) &&
             const DeepCollectionEquality().equals(other._fileIds, _fileIds) &&
             const DeepCollectionEquality().equals(other._files, _files) &&
@@ -832,8 +909,10 @@ class _$NoteImpl implements _Note {
                 other.reactionAcceptance == reactionAcceptance) &&
             (identical(other.renote, renote) || other.renote == renote) &&
             (identical(other.reply, reply) || other.reply == reply) &&
-            const DeepCollectionEquality()
-                .equals(other._visibleUserIds, _visibleUserIds) &&
+            const DeepCollectionEquality().equals(
+              other._visibleUserIds,
+              _visibleUserIds,
+            ) &&
             const DeepCollectionEquality().equals(other._mentions, _mentions) &&
             (identical(other.myReaction, myReaction) ||
                 other.myReaction == myReaction) &&
@@ -841,7 +920,9 @@ class _$NoteImpl implements _Note {
             (identical(other.uri, uri) || other.uri == uri) &&
             (identical(other.url, url) || other.url == url) &&
             const DeepCollectionEquality().equals(
-                other._reactionAndUserPairCache, _reactionAndUserPairCache) &&
+              other._reactionAndUserPairCache,
+              _reactionAndUserPairCache,
+            ) &&
             (identical(other.poll, poll) || other.poll == poll) &&
             (identical(other.clippedCount, clippedCount) ||
                 other.clippedCount == clippedCount));
@@ -850,40 +931,40 @@ class _$NoteImpl implements _Note {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
-        runtimeType,
-        id,
-        createdAt,
-        updatedAt,
-        text,
-        cw,
-        user,
-        userId,
-        visibility,
-        localOnly,
-        renoteCount,
-        repliesCount,
-        reactionCount,
-        const DeepCollectionEquality().hash(_reactions),
-        const DeepCollectionEquality().hash(_reactionEmojis),
-        const DeepCollectionEquality().hash(_emojis),
-        const DeepCollectionEquality().hash(_fileIds),
-        const DeepCollectionEquality().hash(_files),
-        replyId,
-        renoteId,
-        channelId,
-        reactionAcceptance,
-        renote,
-        reply,
-        const DeepCollectionEquality().hash(_visibleUserIds),
-        const DeepCollectionEquality().hash(_mentions),
-        myReaction,
-        channel,
-        uri,
-        url,
-        const DeepCollectionEquality().hash(_reactionAndUserPairCache),
-        poll,
-        clippedCount
-      ]);
+    runtimeType,
+    id,
+    createdAt,
+    updatedAt,
+    text,
+    cw,
+    user,
+    userId,
+    visibility,
+    localOnly,
+    renoteCount,
+    repliesCount,
+    reactionCount,
+    const DeepCollectionEquality().hash(_reactions),
+    const DeepCollectionEquality().hash(_reactionEmojis),
+    const DeepCollectionEquality().hash(_emojis),
+    const DeepCollectionEquality().hash(_fileIds),
+    const DeepCollectionEquality().hash(_files),
+    replyId,
+    renoteId,
+    channelId,
+    reactionAcceptance,
+    renote,
+    reply,
+    const DeepCollectionEquality().hash(_visibleUserIds),
+    const DeepCollectionEquality().hash(_mentions),
+    myReaction,
+    channel,
+    uri,
+    url,
+    const DeepCollectionEquality().hash(_reactionAndUserPairCache),
+    poll,
+    clippedCount,
+  ]);
 
   /// Create a copy of Note
   /// with the given fields replaced by the non-null parameter values.
@@ -895,48 +976,47 @@ class _$NoteImpl implements _Note {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NoteImplToJson(
-      this,
-    );
+    return _$$NoteImplToJson(this);
   }
 }
 
 abstract class _Note implements Note {
-  const factory _Note(
-      {required final String id,
-      @DateTimeConverter() required final DateTime createdAt,
-      @NullableDateTimeConverter() final DateTime? updatedAt,
-      final String? text,
-      final String? cw,
-      required final UserLite user,
-      required final String userId,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      final NoteVisibility? visibility,
-      final bool localOnly,
-      final int renoteCount,
-      final int repliesCount,
-      final int? reactionCount,
-      final Map<String, int> reactions,
-      @EmojisConverter() final Map<String, String> reactionEmojis,
-      @EmojisConverter() final Map<String, String> emojis,
-      final List<String> fileIds,
-      final List<DriveFile> files,
-      final String? replyId,
-      final String? renoteId,
-      final String? channelId,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      final ReactionAcceptance? reactionAcceptance,
-      final Note? renote,
-      final Note? reply,
-      final List<String> visibleUserIds,
-      final List<String> mentions,
-      final String? myReaction,
-      final NoteChannelInfo? channel,
-      @NullableUriConverter() final Uri? uri,
-      @NullableUriConverter() final Uri? url,
-      final List<String> reactionAndUserPairCache,
-      final NotePoll? poll,
-      final int? clippedCount}) = _$NoteImpl;
+  const factory _Note({
+    required final String id,
+    @DateTimeConverter() required final DateTime createdAt,
+    @NullableDateTimeConverter() final DateTime? updatedAt,
+    final String? text,
+    final String? cw,
+    required final UserLite user,
+    required final String userId,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    final NoteVisibility? visibility,
+    final bool localOnly,
+    final int renoteCount,
+    final int repliesCount,
+    final int? reactionCount,
+    final Map<String, int> reactions,
+    @EmojisConverter() final Map<String, String> reactionEmojis,
+    @EmojisConverter() final Map<String, String> emojis,
+    final List<String> fileIds,
+    final List<DriveFile> files,
+    final String? replyId,
+    final String? renoteId,
+    final String? channelId,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    final ReactionAcceptance? reactionAcceptance,
+    final Note? renote,
+    final Note? reply,
+    final List<String> visibleUserIds,
+    final List<String> mentions,
+    final String? myReaction,
+    final NoteChannelInfo? channel,
+    @NullableUriConverter() final Uri? uri,
+    @NullableUriConverter() final Uri? url,
+    final List<String> reactionAndUserPairCache,
+    final NotePoll? poll,
+    final int? clippedCount,
+  }) = _$NoteImpl;
 
   factory _Note.fromJson(Map<String, dynamic> json) = _$NoteImpl.fromJson;
 
@@ -1047,15 +1127,17 @@ mixin _$NoteChannelInfo {
 /// @nodoc
 abstract class $NoteChannelInfoCopyWith<$Res> {
   factory $NoteChannelInfoCopyWith(
-          NoteChannelInfo value, $Res Function(NoteChannelInfo) then) =
-      _$NoteChannelInfoCopyWithImpl<$Res, NoteChannelInfo>;
+    NoteChannelInfo value,
+    $Res Function(NoteChannelInfo) then,
+  ) = _$NoteChannelInfoCopyWithImpl<$Res, NoteChannelInfo>;
   @useResult
-  $Res call(
-      {String id,
-      String name,
-      @NullableColorConverter() int? color,
-      bool isSensitive,
-      bool allowRenoteToExternal});
+  $Res call({
+    String id,
+    String name,
+    @NullableColorConverter() int? color,
+    bool isSensitive,
+    bool allowRenoteToExternal,
+  });
 }
 
 /// @nodoc
@@ -1079,45 +1161,55 @@ class _$NoteChannelInfoCopyWithImpl<$Res, $Val extends NoteChannelInfo>
     Object? isSensitive = null,
     Object? allowRenoteToExternal = null,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      color: freezed == color
-          ? _value.color
-          : color // ignore: cast_nullable_to_non_nullable
-              as int?,
-      isSensitive: null == isSensitive
-          ? _value.isSensitive
-          : isSensitive // ignore: cast_nullable_to_non_nullable
-              as bool,
-      allowRenoteToExternal: null == allowRenoteToExternal
-          ? _value.allowRenoteToExternal
-          : allowRenoteToExternal // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            color:
+                freezed == color
+                    ? _value.color
+                    : color // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            isSensitive:
+                null == isSensitive
+                    ? _value.isSensitive
+                    : isSensitive // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            allowRenoteToExternal:
+                null == allowRenoteToExternal
+                    ? _value.allowRenoteToExternal
+                    : allowRenoteToExternal // ignore: cast_nullable_to_non_nullable
+                        as bool,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$NoteChannelInfoImplCopyWith<$Res>
     implements $NoteChannelInfoCopyWith<$Res> {
-  factory _$$NoteChannelInfoImplCopyWith(_$NoteChannelInfoImpl value,
-          $Res Function(_$NoteChannelInfoImpl) then) =
-      __$$NoteChannelInfoImplCopyWithImpl<$Res>;
+  factory _$$NoteChannelInfoImplCopyWith(
+    _$NoteChannelInfoImpl value,
+    $Res Function(_$NoteChannelInfoImpl) then,
+  ) = __$$NoteChannelInfoImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      String name,
-      @NullableColorConverter() int? color,
-      bool isSensitive,
-      bool allowRenoteToExternal});
+  $Res call({
+    String id,
+    String name,
+    @NullableColorConverter() int? color,
+    bool isSensitive,
+    bool allowRenoteToExternal,
+  });
 }
 
 /// @nodoc
@@ -1125,8 +1217,9 @@ class __$$NoteChannelInfoImplCopyWithImpl<$Res>
     extends _$NoteChannelInfoCopyWithImpl<$Res, _$NoteChannelInfoImpl>
     implements _$$NoteChannelInfoImplCopyWith<$Res> {
   __$$NoteChannelInfoImplCopyWithImpl(
-      _$NoteChannelInfoImpl _value, $Res Function(_$NoteChannelInfoImpl) _then)
-      : super(_value, _then);
+    _$NoteChannelInfoImpl _value,
+    $Res Function(_$NoteChannelInfoImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NoteChannelInfo
   /// with the given fields replaced by the non-null parameter values.
@@ -1139,40 +1232,48 @@ class __$$NoteChannelInfoImplCopyWithImpl<$Res>
     Object? isSensitive = null,
     Object? allowRenoteToExternal = null,
   }) {
-    return _then(_$NoteChannelInfoImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      color: freezed == color
-          ? _value.color
-          : color // ignore: cast_nullable_to_non_nullable
-              as int?,
-      isSensitive: null == isSensitive
-          ? _value.isSensitive
-          : isSensitive // ignore: cast_nullable_to_non_nullable
-              as bool,
-      allowRenoteToExternal: null == allowRenoteToExternal
-          ? _value.allowRenoteToExternal
-          : allowRenoteToExternal // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ));
+    return _then(
+      _$NoteChannelInfoImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        color:
+            freezed == color
+                ? _value.color
+                : color // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        isSensitive:
+            null == isSensitive
+                ? _value.isSensitive
+                : isSensitive // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        allowRenoteToExternal:
+            null == allowRenoteToExternal
+                ? _value.allowRenoteToExternal
+                : allowRenoteToExternal // ignore: cast_nullable_to_non_nullable
+                    as bool,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$NoteChannelInfoImpl implements _NoteChannelInfo {
-  const _$NoteChannelInfoImpl(
-      {required this.id,
-      required this.name,
-      @NullableColorConverter() this.color,
-      this.isSensitive = false,
-      this.allowRenoteToExternal = true});
+  const _$NoteChannelInfoImpl({
+    required this.id,
+    required this.name,
+    @NullableColorConverter() this.color,
+    this.isSensitive = false,
+    this.allowRenoteToExternal = true,
+  });
 
   factory _$NoteChannelInfoImpl.fromJson(Map<String, dynamic> json) =>
       _$$NoteChannelInfoImplFromJson(json);
@@ -1213,7 +1314,13 @@ class _$NoteChannelInfoImpl implements _NoteChannelInfo {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType, id, name, color, isSensitive, allowRenoteToExternal);
+    runtimeType,
+    id,
+    name,
+    color,
+    isSensitive,
+    allowRenoteToExternal,
+  );
 
   /// Create a copy of NoteChannelInfo
   /// with the given fields replaced by the non-null parameter values.
@@ -1222,23 +1329,24 @@ class _$NoteChannelInfoImpl implements _NoteChannelInfo {
   @pragma('vm:prefer-inline')
   _$$NoteChannelInfoImplCopyWith<_$NoteChannelInfoImpl> get copyWith =>
       __$$NoteChannelInfoImplCopyWithImpl<_$NoteChannelInfoImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NoteChannelInfoImplToJson(
-      this,
-    );
+    return _$$NoteChannelInfoImplToJson(this);
   }
 }
 
 abstract class _NoteChannelInfo implements NoteChannelInfo {
-  const factory _NoteChannelInfo(
-      {required final String id,
-      required final String name,
-      @NullableColorConverter() final int? color,
-      final bool isSensitive,
-      final bool allowRenoteToExternal}) = _$NoteChannelInfoImpl;
+  const factory _NoteChannelInfo({
+    required final String id,
+    required final String name,
+    @NullableColorConverter() final int? color,
+    final bool isSensitive,
+    final bool allowRenoteToExternal,
+  }) = _$NoteChannelInfoImpl;
 
   factory _NoteChannelInfo.fromJson(Map<String, dynamic> json) =
       _$NoteChannelInfoImpl.fromJson;
@@ -1289,10 +1397,11 @@ abstract class $NotePollCopyWith<$Res> {
   factory $NotePollCopyWith(NotePoll value, $Res Function(NotePoll) then) =
       _$NotePollCopyWithImpl<$Res, NotePoll>;
   @useResult
-  $Res call(
-      {bool multiple,
-      @DateTimeConverter() DateTime? expiresAt,
-      List<NotePollChoice> choices});
+  $Res call({
+    bool multiple,
+    @DateTimeConverter() DateTime? expiresAt,
+    List<NotePollChoice> choices,
+  });
 }
 
 /// @nodoc
@@ -1314,20 +1423,26 @@ class _$NotePollCopyWithImpl<$Res, $Val extends NotePoll>
     Object? expiresAt = freezed,
     Object? choices = null,
   }) {
-    return _then(_value.copyWith(
-      multiple: null == multiple
-          ? _value.multiple
-          : multiple // ignore: cast_nullable_to_non_nullable
-              as bool,
-      expiresAt: freezed == expiresAt
-          ? _value.expiresAt
-          : expiresAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      choices: null == choices
-          ? _value.choices
-          : choices // ignore: cast_nullable_to_non_nullable
-              as List<NotePollChoice>,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            multiple:
+                null == multiple
+                    ? _value.multiple
+                    : multiple // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            expiresAt:
+                freezed == expiresAt
+                    ? _value.expiresAt
+                    : expiresAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            choices:
+                null == choices
+                    ? _value.choices
+                    : choices // ignore: cast_nullable_to_non_nullable
+                        as List<NotePollChoice>,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -1335,14 +1450,16 @@ class _$NotePollCopyWithImpl<$Res, $Val extends NotePoll>
 abstract class _$$NotePollImplCopyWith<$Res>
     implements $NotePollCopyWith<$Res> {
   factory _$$NotePollImplCopyWith(
-          _$NotePollImpl value, $Res Function(_$NotePollImpl) then) =
-      __$$NotePollImplCopyWithImpl<$Res>;
+    _$NotePollImpl value,
+    $Res Function(_$NotePollImpl) then,
+  ) = __$$NotePollImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {bool multiple,
-      @DateTimeConverter() DateTime? expiresAt,
-      List<NotePollChoice> choices});
+  $Res call({
+    bool multiple,
+    @DateTimeConverter() DateTime? expiresAt,
+    List<NotePollChoice> choices,
+  });
 }
 
 /// @nodoc
@@ -1350,8 +1467,9 @@ class __$$NotePollImplCopyWithImpl<$Res>
     extends _$NotePollCopyWithImpl<$Res, _$NotePollImpl>
     implements _$$NotePollImplCopyWith<$Res> {
   __$$NotePollImplCopyWithImpl(
-      _$NotePollImpl _value, $Res Function(_$NotePollImpl) _then)
-      : super(_value, _then);
+    _$NotePollImpl _value,
+    $Res Function(_$NotePollImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotePoll
   /// with the given fields replaced by the non-null parameter values.
@@ -1362,31 +1480,36 @@ class __$$NotePollImplCopyWithImpl<$Res>
     Object? expiresAt = freezed,
     Object? choices = null,
   }) {
-    return _then(_$NotePollImpl(
-      multiple: null == multiple
-          ? _value.multiple
-          : multiple // ignore: cast_nullable_to_non_nullable
-              as bool,
-      expiresAt: freezed == expiresAt
-          ? _value.expiresAt
-          : expiresAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      choices: null == choices
-          ? _value._choices
-          : choices // ignore: cast_nullable_to_non_nullable
-              as List<NotePollChoice>,
-    ));
+    return _then(
+      _$NotePollImpl(
+        multiple:
+            null == multiple
+                ? _value.multiple
+                : multiple // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        expiresAt:
+            freezed == expiresAt
+                ? _value.expiresAt
+                : expiresAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        choices:
+            null == choices
+                ? _value._choices
+                : choices // ignore: cast_nullable_to_non_nullable
+                    as List<NotePollChoice>,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$NotePollImpl implements _NotePoll {
-  const _$NotePollImpl(
-      {required this.multiple,
-      @DateTimeConverter() this.expiresAt,
-      required final List<NotePollChoice> choices})
-      : _choices = choices;
+  const _$NotePollImpl({
+    required this.multiple,
+    @DateTimeConverter() this.expiresAt,
+    required final List<NotePollChoice> choices,
+  }) : _choices = choices;
 
   factory _$NotePollImpl.fromJson(Map<String, dynamic> json) =>
       _$$NotePollImplFromJson(json);
@@ -1423,8 +1546,12 @@ class _$NotePollImpl implements _NotePoll {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, multiple, expiresAt,
-      const DeepCollectionEquality().hash(_choices));
+  int get hashCode => Object.hash(
+    runtimeType,
+    multiple,
+    expiresAt,
+    const DeepCollectionEquality().hash(_choices),
+  );
 
   /// Create a copy of NotePoll
   /// with the given fields replaced by the non-null parameter values.
@@ -1436,17 +1563,16 @@ class _$NotePollImpl implements _NotePoll {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotePollImplToJson(
-      this,
-    );
+    return _$$NotePollImplToJson(this);
   }
 }
 
 abstract class _NotePoll implements NotePoll {
-  const factory _NotePoll(
-      {required final bool multiple,
-      @DateTimeConverter() final DateTime? expiresAt,
-      required final List<NotePollChoice> choices}) = _$NotePollImpl;
+  const factory _NotePoll({
+    required final bool multiple,
+    @DateTimeConverter() final DateTime? expiresAt,
+    required final List<NotePollChoice> choices,
+  }) = _$NotePollImpl;
 
   factory _NotePoll.fromJson(Map<String, dynamic> json) =
       _$NotePollImpl.fromJson;
@@ -1491,8 +1617,9 @@ mixin _$NotePollChoice {
 /// @nodoc
 abstract class $NotePollChoiceCopyWith<$Res> {
   factory $NotePollChoiceCopyWith(
-          NotePollChoice value, $Res Function(NotePollChoice) then) =
-      _$NotePollChoiceCopyWithImpl<$Res, NotePollChoice>;
+    NotePollChoice value,
+    $Res Function(NotePollChoice) then,
+  ) = _$NotePollChoiceCopyWithImpl<$Res, NotePollChoice>;
   @useResult
   $Res call({String text, int votes, bool isVoted});
 }
@@ -1516,29 +1643,36 @@ class _$NotePollChoiceCopyWithImpl<$Res, $Val extends NotePollChoice>
     Object? votes = null,
     Object? isVoted = null,
   }) {
-    return _then(_value.copyWith(
-      text: null == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String,
-      votes: null == votes
-          ? _value.votes
-          : votes // ignore: cast_nullable_to_non_nullable
-              as int,
-      isVoted: null == isVoted
-          ? _value.isVoted
-          : isVoted // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            text:
+                null == text
+                    ? _value.text
+                    : text // ignore: cast_nullable_to_non_nullable
+                        as String,
+            votes:
+                null == votes
+                    ? _value.votes
+                    : votes // ignore: cast_nullable_to_non_nullable
+                        as int,
+            isVoted:
+                null == isVoted
+                    ? _value.isVoted
+                    : isVoted // ignore: cast_nullable_to_non_nullable
+                        as bool,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$NotePollChoiceImplCopyWith<$Res>
     implements $NotePollChoiceCopyWith<$Res> {
-  factory _$$NotePollChoiceImplCopyWith(_$NotePollChoiceImpl value,
-          $Res Function(_$NotePollChoiceImpl) then) =
-      __$$NotePollChoiceImplCopyWithImpl<$Res>;
+  factory _$$NotePollChoiceImplCopyWith(
+    _$NotePollChoiceImpl value,
+    $Res Function(_$NotePollChoiceImpl) then,
+  ) = __$$NotePollChoiceImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String text, int votes, bool isVoted});
@@ -1549,8 +1683,9 @@ class __$$NotePollChoiceImplCopyWithImpl<$Res>
     extends _$NotePollChoiceCopyWithImpl<$Res, _$NotePollChoiceImpl>
     implements _$$NotePollChoiceImplCopyWith<$Res> {
   __$$NotePollChoiceImplCopyWithImpl(
-      _$NotePollChoiceImpl _value, $Res Function(_$NotePollChoiceImpl) _then)
-      : super(_value, _then);
+    _$NotePollChoiceImpl _value,
+    $Res Function(_$NotePollChoiceImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotePollChoice
   /// with the given fields replaced by the non-null parameter values.
@@ -1561,28 +1696,36 @@ class __$$NotePollChoiceImplCopyWithImpl<$Res>
     Object? votes = null,
     Object? isVoted = null,
   }) {
-    return _then(_$NotePollChoiceImpl(
-      text: null == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String,
-      votes: null == votes
-          ? _value.votes
-          : votes // ignore: cast_nullable_to_non_nullable
-              as int,
-      isVoted: null == isVoted
-          ? _value.isVoted
-          : isVoted // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ));
+    return _then(
+      _$NotePollChoiceImpl(
+        text:
+            null == text
+                ? _value.text
+                : text // ignore: cast_nullable_to_non_nullable
+                    as String,
+        votes:
+            null == votes
+                ? _value.votes
+                : votes // ignore: cast_nullable_to_non_nullable
+                    as int,
+        isVoted:
+            null == isVoted
+                ? _value.isVoted
+                : isVoted // ignore: cast_nullable_to_non_nullable
+                    as bool,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$NotePollChoiceImpl implements _NotePollChoice {
-  const _$NotePollChoiceImpl(
-      {required this.text, required this.votes, this.isVoted = false});
+  const _$NotePollChoiceImpl({
+    required this.text,
+    required this.votes,
+    this.isVoted = false,
+  });
 
   factory _$NotePollChoiceImpl.fromJson(Map<String, dynamic> json) =>
       _$$NotePollChoiceImplFromJson(json);
@@ -1591,7 +1734,7 @@ class _$NotePollChoiceImpl implements _NotePollChoice {
   final String text;
   @override
   final int votes;
-// Changed to non-nullable in Misskey 11.0.0
+  // Changed to non-nullable in Misskey 11.0.0
   @override
   @JsonKey()
   final bool isVoted;
@@ -1622,21 +1765,22 @@ class _$NotePollChoiceImpl implements _NotePollChoice {
   @pragma('vm:prefer-inline')
   _$$NotePollChoiceImplCopyWith<_$NotePollChoiceImpl> get copyWith =>
       __$$NotePollChoiceImplCopyWithImpl<_$NotePollChoiceImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotePollChoiceImplToJson(
-      this,
-    );
+    return _$$NotePollChoiceImplToJson(this);
   }
 }
 
 abstract class _NotePollChoice implements NotePollChoice {
-  const factory _NotePollChoice(
-      {required final String text,
-      required final int votes,
-      final bool isVoted}) = _$NotePollChoiceImpl;
+  const factory _NotePollChoice({
+    required final String text,
+    required final int votes,
+    final bool isVoted,
+  }) = _$NotePollChoiceImpl;
 
   factory _NotePollChoice.fromJson(Map<String, dynamic> json) =
       _$NotePollChoiceImpl.fromJson;

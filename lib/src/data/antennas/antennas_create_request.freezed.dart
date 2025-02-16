@@ -12,10 +12,12 @@ part of 'antennas_create_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 AntennasCreateRequest _$AntennasCreateRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _AntennasCreateRequest.fromJson(json);
 }
 
@@ -48,29 +50,33 @@ mixin _$AntennasCreateRequest {
 
 /// @nodoc
 abstract class $AntennasCreateRequestCopyWith<$Res> {
-  factory $AntennasCreateRequestCopyWith(AntennasCreateRequest value,
-          $Res Function(AntennasCreateRequest) then) =
-      _$AntennasCreateRequestCopyWithImpl<$Res, AntennasCreateRequest>;
+  factory $AntennasCreateRequestCopyWith(
+    AntennasCreateRequest value,
+    $Res Function(AntennasCreateRequest) then,
+  ) = _$AntennasCreateRequestCopyWithImpl<$Res, AntennasCreateRequest>;
   @useResult
-  $Res call(
-      {String name,
-      AntennaSource src,
-      String? userListId,
-      List<List<String>> keywords,
-      List<List<String>> excludeKeywords,
-      List<String> users,
-      List<String> instances,
-      bool caseSensitive,
-      bool withReplies,
-      bool withFile,
-      bool? notify,
-      bool? localOnly,
-      bool? excludeBots});
+  $Res call({
+    String name,
+    AntennaSource src,
+    String? userListId,
+    List<List<String>> keywords,
+    List<List<String>> excludeKeywords,
+    List<String> users,
+    List<String> instances,
+    bool caseSensitive,
+    bool withReplies,
+    bool withFile,
+    bool? notify,
+    bool? localOnly,
+    bool? excludeBots,
+  });
 }
 
 /// @nodoc
-class _$AntennasCreateRequestCopyWithImpl<$Res,
-        $Val extends AntennasCreateRequest>
+class _$AntennasCreateRequestCopyWithImpl<
+  $Res,
+  $Val extends AntennasCreateRequest
+>
     implements $AntennasCreateRequestCopyWith<$Res> {
   _$AntennasCreateRequestCopyWithImpl(this._value, this._then);
 
@@ -98,60 +104,76 @@ class _$AntennasCreateRequestCopyWithImpl<$Res,
     Object? localOnly = freezed,
     Object? excludeBots = freezed,
   }) {
-    return _then(_value.copyWith(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      src: null == src
-          ? _value.src
-          : src // ignore: cast_nullable_to_non_nullable
-              as AntennaSource,
-      userListId: freezed == userListId
-          ? _value.userListId
-          : userListId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      keywords: null == keywords
-          ? _value.keywords
-          : keywords // ignore: cast_nullable_to_non_nullable
-              as List<List<String>>,
-      excludeKeywords: null == excludeKeywords
-          ? _value.excludeKeywords
-          : excludeKeywords // ignore: cast_nullable_to_non_nullable
-              as List<List<String>>,
-      users: null == users
-          ? _value.users
-          : users // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      instances: null == instances
-          ? _value.instances
-          : instances // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      caseSensitive: null == caseSensitive
-          ? _value.caseSensitive
-          : caseSensitive // ignore: cast_nullable_to_non_nullable
-              as bool,
-      withReplies: null == withReplies
-          ? _value.withReplies
-          : withReplies // ignore: cast_nullable_to_non_nullable
-              as bool,
-      withFile: null == withFile
-          ? _value.withFile
-          : withFile // ignore: cast_nullable_to_non_nullable
-              as bool,
-      notify: freezed == notify
-          ? _value.notify
-          : notify // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      localOnly: freezed == localOnly
-          ? _value.localOnly
-          : localOnly // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      excludeBots: freezed == excludeBots
-          ? _value.excludeBots
-          : excludeBots // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            src:
+                null == src
+                    ? _value.src
+                    : src // ignore: cast_nullable_to_non_nullable
+                        as AntennaSource,
+            userListId:
+                freezed == userListId
+                    ? _value.userListId
+                    : userListId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            keywords:
+                null == keywords
+                    ? _value.keywords
+                    : keywords // ignore: cast_nullable_to_non_nullable
+                        as List<List<String>>,
+            excludeKeywords:
+                null == excludeKeywords
+                    ? _value.excludeKeywords
+                    : excludeKeywords // ignore: cast_nullable_to_non_nullable
+                        as List<List<String>>,
+            users:
+                null == users
+                    ? _value.users
+                    : users // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+            instances:
+                null == instances
+                    ? _value.instances
+                    : instances // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+            caseSensitive:
+                null == caseSensitive
+                    ? _value.caseSensitive
+                    : caseSensitive // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            withReplies:
+                null == withReplies
+                    ? _value.withReplies
+                    : withReplies // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            withFile:
+                null == withFile
+                    ? _value.withFile
+                    : withFile // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            notify:
+                freezed == notify
+                    ? _value.notify
+                    : notify // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            localOnly:
+                freezed == localOnly
+                    ? _value.localOnly
+                    : localOnly // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            excludeBots:
+                freezed == excludeBots
+                    ? _value.excludeBots
+                    : excludeBots // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -159,35 +181,37 @@ class _$AntennasCreateRequestCopyWithImpl<$Res,
 abstract class _$$AntennasCreateRequestImplCopyWith<$Res>
     implements $AntennasCreateRequestCopyWith<$Res> {
   factory _$$AntennasCreateRequestImplCopyWith(
-          _$AntennasCreateRequestImpl value,
-          $Res Function(_$AntennasCreateRequestImpl) then) =
-      __$$AntennasCreateRequestImplCopyWithImpl<$Res>;
+    _$AntennasCreateRequestImpl value,
+    $Res Function(_$AntennasCreateRequestImpl) then,
+  ) = __$$AntennasCreateRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String name,
-      AntennaSource src,
-      String? userListId,
-      List<List<String>> keywords,
-      List<List<String>> excludeKeywords,
-      List<String> users,
-      List<String> instances,
-      bool caseSensitive,
-      bool withReplies,
-      bool withFile,
-      bool? notify,
-      bool? localOnly,
-      bool? excludeBots});
+  $Res call({
+    String name,
+    AntennaSource src,
+    String? userListId,
+    List<List<String>> keywords,
+    List<List<String>> excludeKeywords,
+    List<String> users,
+    List<String> instances,
+    bool caseSensitive,
+    bool withReplies,
+    bool withFile,
+    bool? notify,
+    bool? localOnly,
+    bool? excludeBots,
+  });
 }
 
 /// @nodoc
 class __$$AntennasCreateRequestImplCopyWithImpl<$Res>
-    extends _$AntennasCreateRequestCopyWithImpl<$Res,
-        _$AntennasCreateRequestImpl>
+    extends
+        _$AntennasCreateRequestCopyWithImpl<$Res, _$AntennasCreateRequestImpl>
     implements _$$AntennasCreateRequestImplCopyWith<$Res> {
-  __$$AntennasCreateRequestImplCopyWithImpl(_$AntennasCreateRequestImpl _value,
-      $Res Function(_$AntennasCreateRequestImpl) _then)
-      : super(_value, _then);
+  __$$AntennasCreateRequestImplCopyWithImpl(
+    _$AntennasCreateRequestImpl _value,
+    $Res Function(_$AntennasCreateRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of AntennasCreateRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -208,84 +232,99 @@ class __$$AntennasCreateRequestImplCopyWithImpl<$Res>
     Object? localOnly = freezed,
     Object? excludeBots = freezed,
   }) {
-    return _then(_$AntennasCreateRequestImpl(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      src: null == src
-          ? _value.src
-          : src // ignore: cast_nullable_to_non_nullable
-              as AntennaSource,
-      userListId: freezed == userListId
-          ? _value.userListId
-          : userListId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      keywords: null == keywords
-          ? _value._keywords
-          : keywords // ignore: cast_nullable_to_non_nullable
-              as List<List<String>>,
-      excludeKeywords: null == excludeKeywords
-          ? _value._excludeKeywords
-          : excludeKeywords // ignore: cast_nullable_to_non_nullable
-              as List<List<String>>,
-      users: null == users
-          ? _value._users
-          : users // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      instances: null == instances
-          ? _value._instances
-          : instances // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      caseSensitive: null == caseSensitive
-          ? _value.caseSensitive
-          : caseSensitive // ignore: cast_nullable_to_non_nullable
-              as bool,
-      withReplies: null == withReplies
-          ? _value.withReplies
-          : withReplies // ignore: cast_nullable_to_non_nullable
-              as bool,
-      withFile: null == withFile
-          ? _value.withFile
-          : withFile // ignore: cast_nullable_to_non_nullable
-              as bool,
-      notify: freezed == notify
-          ? _value.notify
-          : notify // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      localOnly: freezed == localOnly
-          ? _value.localOnly
-          : localOnly // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      excludeBots: freezed == excludeBots
-          ? _value.excludeBots
-          : excludeBots // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+    return _then(
+      _$AntennasCreateRequestImpl(
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        src:
+            null == src
+                ? _value.src
+                : src // ignore: cast_nullable_to_non_nullable
+                    as AntennaSource,
+        userListId:
+            freezed == userListId
+                ? _value.userListId
+                : userListId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        keywords:
+            null == keywords
+                ? _value._keywords
+                : keywords // ignore: cast_nullable_to_non_nullable
+                    as List<List<String>>,
+        excludeKeywords:
+            null == excludeKeywords
+                ? _value._excludeKeywords
+                : excludeKeywords // ignore: cast_nullable_to_non_nullable
+                    as List<List<String>>,
+        users:
+            null == users
+                ? _value._users
+                : users // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+        instances:
+            null == instances
+                ? _value._instances
+                : instances // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+        caseSensitive:
+            null == caseSensitive
+                ? _value.caseSensitive
+                : caseSensitive // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        withReplies:
+            null == withReplies
+                ? _value.withReplies
+                : withReplies // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        withFile:
+            null == withFile
+                ? _value.withFile
+                : withFile // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        notify:
+            freezed == notify
+                ? _value.notify
+                : notify // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        localOnly:
+            freezed == localOnly
+                ? _value.localOnly
+                : localOnly // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        excludeBots:
+            freezed == excludeBots
+                ? _value.excludeBots
+                : excludeBots // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AntennasCreateRequestImpl implements _AntennasCreateRequest {
-  const _$AntennasCreateRequestImpl(
-      {required this.name,
-      required this.src,
-      this.userListId,
-      required final List<List<String>> keywords,
-      required final List<List<String>> excludeKeywords,
-      required final List<String> users,
-      final List<String> instances = const [],
-      required this.caseSensitive,
-      required this.withReplies,
-      required this.withFile,
-      this.notify,
-      this.localOnly,
-      this.excludeBots})
-      : _keywords = keywords,
-        _excludeKeywords = excludeKeywords,
-        _users = users,
-        _instances = instances;
+  const _$AntennasCreateRequestImpl({
+    required this.name,
+    required this.src,
+    this.userListId,
+    required final List<List<String>> keywords,
+    required final List<List<String>> excludeKeywords,
+    required final List<String> users,
+    final List<String> instances = const [],
+    required this.caseSensitive,
+    required this.withReplies,
+    required this.withFile,
+    this.notify,
+    this.localOnly,
+    this.excludeBots,
+  }) : _keywords = keywords,
+       _excludeKeywords = excludeKeywords,
+       _users = users,
+       _instances = instances;
 
   factory _$AntennasCreateRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$AntennasCreateRequestImplFromJson(json);
@@ -335,7 +374,7 @@ class _$AntennasCreateRequestImpl implements _AntennasCreateRequest {
   final bool withReplies;
   @override
   final bool withFile;
-// Removed in Misskey 2024.5.0
+  // Removed in Misskey 2024.5.0
   @override
   final bool? notify;
   @override
@@ -358,11 +397,15 @@ class _$AntennasCreateRequestImpl implements _AntennasCreateRequest {
             (identical(other.userListId, userListId) ||
                 other.userListId == userListId) &&
             const DeepCollectionEquality().equals(other._keywords, _keywords) &&
-            const DeepCollectionEquality()
-                .equals(other._excludeKeywords, _excludeKeywords) &&
+            const DeepCollectionEquality().equals(
+              other._excludeKeywords,
+              _excludeKeywords,
+            ) &&
             const DeepCollectionEquality().equals(other._users, _users) &&
-            const DeepCollectionEquality()
-                .equals(other._instances, _instances) &&
+            const DeepCollectionEquality().equals(
+              other._instances,
+              _instances,
+            ) &&
             (identical(other.caseSensitive, caseSensitive) ||
                 other.caseSensitive == caseSensitive) &&
             (identical(other.withReplies, withReplies) ||
@@ -379,20 +422,21 @@ class _$AntennasCreateRequestImpl implements _AntennasCreateRequest {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      name,
-      src,
-      userListId,
-      const DeepCollectionEquality().hash(_keywords),
-      const DeepCollectionEquality().hash(_excludeKeywords),
-      const DeepCollectionEquality().hash(_users),
-      const DeepCollectionEquality().hash(_instances),
-      caseSensitive,
-      withReplies,
-      withFile,
-      notify,
-      localOnly,
-      excludeBots);
+    runtimeType,
+    name,
+    src,
+    userListId,
+    const DeepCollectionEquality().hash(_keywords),
+    const DeepCollectionEquality().hash(_excludeKeywords),
+    const DeepCollectionEquality().hash(_users),
+    const DeepCollectionEquality().hash(_instances),
+    caseSensitive,
+    withReplies,
+    withFile,
+    notify,
+    localOnly,
+    excludeBots,
+  );
 
   /// Create a copy of AntennasCreateRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -400,32 +444,34 @@ class _$AntennasCreateRequestImpl implements _AntennasCreateRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$AntennasCreateRequestImplCopyWith<_$AntennasCreateRequestImpl>
-      get copyWith => __$$AntennasCreateRequestImplCopyWithImpl<
-          _$AntennasCreateRequestImpl>(this, _$identity);
+  get copyWith =>
+      __$$AntennasCreateRequestImplCopyWithImpl<_$AntennasCreateRequestImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AntennasCreateRequestImplToJson(
-      this,
-    );
+    return _$$AntennasCreateRequestImplToJson(this);
   }
 }
 
 abstract class _AntennasCreateRequest implements AntennasCreateRequest {
-  const factory _AntennasCreateRequest(
-      {required final String name,
-      required final AntennaSource src,
-      final String? userListId,
-      required final List<List<String>> keywords,
-      required final List<List<String>> excludeKeywords,
-      required final List<String> users,
-      final List<String> instances,
-      required final bool caseSensitive,
-      required final bool withReplies,
-      required final bool withFile,
-      final bool? notify,
-      final bool? localOnly,
-      final bool? excludeBots}) = _$AntennasCreateRequestImpl;
+  const factory _AntennasCreateRequest({
+    required final String name,
+    required final AntennaSource src,
+    final String? userListId,
+    required final List<List<String>> keywords,
+    required final List<List<String>> excludeKeywords,
+    required final List<String> users,
+    final List<String> instances,
+    required final bool caseSensitive,
+    required final bool withReplies,
+    required final bool withFile,
+    final bool? notify,
+    final bool? localOnly,
+    final bool? excludeBots,
+  }) = _$AntennasCreateRequestImpl;
 
   factory _AntennasCreateRequest.fromJson(Map<String, dynamic> json) =
       _$AntennasCreateRequestImpl.fromJson;
@@ -462,5 +508,5 @@ abstract class _AntennasCreateRequest implements AntennasCreateRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AntennasCreateRequestImplCopyWith<_$AntennasCreateRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

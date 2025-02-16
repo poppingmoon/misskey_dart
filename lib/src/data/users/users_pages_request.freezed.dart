@@ -12,7 +12,8 @@ part of 'users_pages_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 UsersPagesRequest _$UsersPagesRequestFromJson(Map<String, dynamic> json) {
   return _UsersPagesRequest.fromJson(json);
@@ -38,8 +39,9 @@ mixin _$UsersPagesRequest {
 /// @nodoc
 abstract class $UsersPagesRequestCopyWith<$Res> {
   factory $UsersPagesRequestCopyWith(
-          UsersPagesRequest value, $Res Function(UsersPagesRequest) then) =
-      _$UsersPagesRequestCopyWithImpl<$Res, UsersPagesRequest>;
+    UsersPagesRequest value,
+    $Res Function(UsersPagesRequest) then,
+  ) = _$UsersPagesRequestCopyWithImpl<$Res, UsersPagesRequest>;
   @useResult
   $Res call({String userId, int? limit, String? sinceId, String? untilId});
 }
@@ -64,33 +66,41 @@ class _$UsersPagesRequestCopyWithImpl<$Res, $Val extends UsersPagesRequest>
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_value.copyWith(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            userId:
+                null == userId
+                    ? _value.userId
+                    : userId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$UsersPagesRequestImplCopyWith<$Res>
     implements $UsersPagesRequestCopyWith<$Res> {
-  factory _$$UsersPagesRequestImplCopyWith(_$UsersPagesRequestImpl value,
-          $Res Function(_$UsersPagesRequestImpl) then) =
-      __$$UsersPagesRequestImplCopyWithImpl<$Res>;
+  factory _$$UsersPagesRequestImplCopyWith(
+    _$UsersPagesRequestImpl value,
+    $Res Function(_$UsersPagesRequestImpl) then,
+  ) = __$$UsersPagesRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String userId, int? limit, String? sinceId, String? untilId});
@@ -100,9 +110,10 @@ abstract class _$$UsersPagesRequestImplCopyWith<$Res>
 class __$$UsersPagesRequestImplCopyWithImpl<$Res>
     extends _$UsersPagesRequestCopyWithImpl<$Res, _$UsersPagesRequestImpl>
     implements _$$UsersPagesRequestImplCopyWith<$Res> {
-  __$$UsersPagesRequestImplCopyWithImpl(_$UsersPagesRequestImpl _value,
-      $Res Function(_$UsersPagesRequestImpl) _then)
-      : super(_value, _then);
+  __$$UsersPagesRequestImplCopyWithImpl(
+    _$UsersPagesRequestImpl _value,
+    $Res Function(_$UsersPagesRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UsersPagesRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -114,32 +125,42 @@ class __$$UsersPagesRequestImplCopyWithImpl<$Res>
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_$UsersPagesRequestImpl(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$UsersPagesRequestImpl(
+        userId:
+            null == userId
+                ? _value.userId
+                : userId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$UsersPagesRequestImpl implements _UsersPagesRequest {
-  const _$UsersPagesRequestImpl(
-      {required this.userId, this.limit, this.sinceId, this.untilId});
+  const _$UsersPagesRequestImpl({
+    required this.userId,
+    this.limit,
+    this.sinceId,
+    this.untilId,
+  });
 
   factory _$UsersPagesRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$UsersPagesRequestImplFromJson(json);
@@ -180,22 +201,23 @@ class _$UsersPagesRequestImpl implements _UsersPagesRequest {
   @pragma('vm:prefer-inline')
   _$$UsersPagesRequestImplCopyWith<_$UsersPagesRequestImpl> get copyWith =>
       __$$UsersPagesRequestImplCopyWithImpl<_$UsersPagesRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UsersPagesRequestImplToJson(
-      this,
-    );
+    return _$$UsersPagesRequestImplToJson(this);
   }
 }
 
 abstract class _UsersPagesRequest implements UsersPagesRequest {
-  const factory _UsersPagesRequest(
-      {required final String userId,
-      final int? limit,
-      final String? sinceId,
-      final String? untilId}) = _$UsersPagesRequestImpl;
+  const factory _UsersPagesRequest({
+    required final String userId,
+    final int? limit,
+    final String? sinceId,
+    final String? untilId,
+  }) = _$UsersPagesRequestImpl;
 
   factory _UsersPagesRequest.fromJson(Map<String, dynamic> json) =
       _$UsersPagesRequestImpl.fromJson;

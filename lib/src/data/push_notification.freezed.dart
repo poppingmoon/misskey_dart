@@ -12,7 +12,8 @@ part of 'push_notification.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 PushNotification _$PushNotificationFromJson(Map<String, dynamic> json) {
   return _PushNotification.fromJson(json);
@@ -20,7 +21,7 @@ PushNotification _$PushNotificationFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PushNotification {
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   PushNotificationTypes? get type => throw _privateConstructorUsedError;
   PushNotificationBody? get body => throw _privateConstructorUsedError;
@@ -41,15 +42,17 @@ mixin _$PushNotification {
 /// @nodoc
 abstract class $PushNotificationCopyWith<$Res> {
   factory $PushNotificationCopyWith(
-          PushNotification value, $Res Function(PushNotification) then) =
-      _$PushNotificationCopyWithImpl<$Res, PushNotification>;
+    PushNotification value,
+    $Res Function(PushNotification) then,
+  ) = _$PushNotificationCopyWithImpl<$Res, PushNotification>;
   @useResult
-  $Res call(
-      {@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      PushNotificationTypes? type,
-      PushNotificationBody? body,
-      String? userId,
-      @EpocTimeDateTimeConverter() DateTime? dateTime});
+  $Res call({
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    PushNotificationTypes? type,
+    PushNotificationBody? body,
+    String? userId,
+    @EpocTimeDateTimeConverter() DateTime? dateTime,
+  });
 
   $PushNotificationBodyCopyWith<$Res>? get body;
 }
@@ -74,24 +77,31 @@ class _$PushNotificationCopyWithImpl<$Res, $Val extends PushNotification>
     Object? userId = freezed,
     Object? dateTime = freezed,
   }) {
-    return _then(_value.copyWith(
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as PushNotificationTypes?,
-      body: freezed == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as PushNotificationBody?,
-      userId: freezed == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      dateTime: freezed == dateTime
-          ? _value.dateTime
-          : dateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            type:
+                freezed == type
+                    ? _value.type
+                    : type // ignore: cast_nullable_to_non_nullable
+                        as PushNotificationTypes?,
+            body:
+                freezed == body
+                    ? _value.body
+                    : body // ignore: cast_nullable_to_non_nullable
+                        as PushNotificationBody?,
+            userId:
+                freezed == userId
+                    ? _value.userId
+                    : userId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            dateTime:
+                freezed == dateTime
+                    ? _value.dateTime
+                    : dateTime // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of PushNotification
@@ -112,17 +122,19 @@ class _$PushNotificationCopyWithImpl<$Res, $Val extends PushNotification>
 /// @nodoc
 abstract class _$$PushNotificationImplCopyWith<$Res>
     implements $PushNotificationCopyWith<$Res> {
-  factory _$$PushNotificationImplCopyWith(_$PushNotificationImpl value,
-          $Res Function(_$PushNotificationImpl) then) =
-      __$$PushNotificationImplCopyWithImpl<$Res>;
+  factory _$$PushNotificationImplCopyWith(
+    _$PushNotificationImpl value,
+    $Res Function(_$PushNotificationImpl) then,
+  ) = __$$PushNotificationImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      PushNotificationTypes? type,
-      PushNotificationBody? body,
-      String? userId,
-      @EpocTimeDateTimeConverter() DateTime? dateTime});
+  $Res call({
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    PushNotificationTypes? type,
+    PushNotificationBody? body,
+    String? userId,
+    @EpocTimeDateTimeConverter() DateTime? dateTime,
+  });
 
   @override
   $PushNotificationBodyCopyWith<$Res>? get body;
@@ -132,9 +144,10 @@ abstract class _$$PushNotificationImplCopyWith<$Res>
 class __$$PushNotificationImplCopyWithImpl<$Res>
     extends _$PushNotificationCopyWithImpl<$Res, _$PushNotificationImpl>
     implements _$$PushNotificationImplCopyWith<$Res> {
-  __$$PushNotificationImplCopyWithImpl(_$PushNotificationImpl _value,
-      $Res Function(_$PushNotificationImpl) _then)
-      : super(_value, _then);
+  __$$PushNotificationImplCopyWithImpl(
+    _$PushNotificationImpl _value,
+    $Res Function(_$PushNotificationImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of PushNotification
   /// with the given fields replaced by the non-null parameter values.
@@ -146,40 +159,47 @@ class __$$PushNotificationImplCopyWithImpl<$Res>
     Object? userId = freezed,
     Object? dateTime = freezed,
   }) {
-    return _then(_$PushNotificationImpl(
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as PushNotificationTypes?,
-      body: freezed == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as PushNotificationBody?,
-      userId: freezed == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      dateTime: freezed == dateTime
-          ? _value.dateTime
-          : dateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-    ));
+    return _then(
+      _$PushNotificationImpl(
+        type:
+            freezed == type
+                ? _value.type
+                : type // ignore: cast_nullable_to_non_nullable
+                    as PushNotificationTypes?,
+        body:
+            freezed == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as PushNotificationBody?,
+        userId:
+            freezed == userId
+                ? _value.userId
+                : userId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        dateTime:
+            freezed == dateTime
+                ? _value.dateTime
+                : dateTime // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$PushNotificationImpl implements _PushNotification {
-  const _$PushNotificationImpl(
-      {@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type,
-      this.body,
-      this.userId,
-      @EpocTimeDateTimeConverter() this.dateTime});
+  const _$PushNotificationImpl({
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type,
+    this.body,
+    this.userId,
+    @EpocTimeDateTimeConverter() this.dateTime,
+  });
 
   factory _$PushNotificationImpl.fromJson(Map<String, dynamic> json) =>
       _$$PushNotificationImplFromJson(json);
 
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final PushNotificationTypes? type;
@@ -219,29 +239,29 @@ class _$PushNotificationImpl implements _PushNotification {
   @pragma('vm:prefer-inline')
   _$$PushNotificationImplCopyWith<_$PushNotificationImpl> get copyWith =>
       __$$PushNotificationImplCopyWithImpl<_$PushNotificationImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PushNotificationImplToJson(
-      this,
-    );
+    return _$$PushNotificationImplToJson(this);
   }
 }
 
 abstract class _PushNotification implements PushNotification {
-  const factory _PushNotification(
-          {@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-          final PushNotificationTypes? type,
-          final PushNotificationBody? body,
-          final String? userId,
-          @EpocTimeDateTimeConverter() final DateTime? dateTime}) =
-      _$PushNotificationImpl;
+  const factory _PushNotification({
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    final PushNotificationTypes? type,
+    final PushNotificationBody? body,
+    final String? userId,
+    @EpocTimeDateTimeConverter() final DateTime? dateTime,
+  }) = _$PushNotificationImpl;
 
   factory _PushNotification.fromJson(Map<String, dynamic> json) =
       _$PushNotificationImpl.fromJson;
 
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   PushNotificationTypes? get type;
@@ -269,8 +289,7 @@ PushNotificationBody _$PushNotificationBodyFromJson(Map<String, dynamic> json) {
 mixin _$PushNotificationBody {
   String get id => throw _privateConstructorUsedError;
   @DateTimeConverter()
-  DateTime get createdAt =>
-      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  DateTime get createdAt => throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   NotificationType? get type => throw _privateConstructorUsedError;
   String? get noteId => throw _privateConstructorUsedError;
@@ -311,36 +330,38 @@ mixin _$PushNotificationBody {
 
 /// @nodoc
 abstract class $PushNotificationBodyCopyWith<$Res> {
-  factory $PushNotificationBodyCopyWith(PushNotificationBody value,
-          $Res Function(PushNotificationBody) then) =
-      _$PushNotificationBodyCopyWithImpl<$Res, PushNotificationBody>;
+  factory $PushNotificationBodyCopyWith(
+    PushNotificationBody value,
+    $Res Function(PushNotificationBody) then,
+  ) = _$PushNotificationBodyCopyWithImpl<$Res, PushNotificationBody>;
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime createdAt,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      NotificationType? type,
-      String? noteId,
-      String? followRequestId,
-      String? reaction,
-      int? choice,
-      String? achievement,
-      String? body,
-      String? header,
-      @NullableUriConverter() Uri? icon,
-      String? appAccessTokenId,
-      String? userId,
-      UserLite? user,
-      PushNotificationNote? note,
-      RolesListResponse? role,
-      List<INotificationsReaction>? reactions,
-      List<UserLite>? users,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      UserExportableEntities? exportedEntity,
-      String? fileId,
-      String? message,
-      String? errorType,
-      ScheduledNote? draft});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime createdAt,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    NotificationType? type,
+    String? noteId,
+    String? followRequestId,
+    String? reaction,
+    int? choice,
+    String? achievement,
+    String? body,
+    String? header,
+    @NullableUriConverter() Uri? icon,
+    String? appAccessTokenId,
+    String? userId,
+    UserLite? user,
+    PushNotificationNote? note,
+    RolesListResponse? role,
+    List<INotificationsReaction>? reactions,
+    List<UserLite>? users,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    UserExportableEntities? exportedEntity,
+    String? fileId,
+    String? message,
+    String? errorType,
+    ScheduledNote? draft,
+  });
 
   $UserLiteCopyWith<$Res>? get user;
   $PushNotificationNoteCopyWith<$Res>? get note;
@@ -349,8 +370,10 @@ abstract class $PushNotificationBodyCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PushNotificationBodyCopyWithImpl<$Res,
-        $Val extends PushNotificationBody>
+class _$PushNotificationBodyCopyWithImpl<
+  $Res,
+  $Val extends PushNotificationBody
+>
     implements $PushNotificationBodyCopyWith<$Res> {
   _$PushNotificationBodyCopyWithImpl(this._value, this._then);
 
@@ -388,100 +411,126 @@ class _$PushNotificationBodyCopyWithImpl<$Res,
     Object? errorType = freezed,
     Object? draft = freezed,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as NotificationType?,
-      noteId: freezed == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      followRequestId: freezed == followRequestId
-          ? _value.followRequestId
-          : followRequestId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      reaction: freezed == reaction
-          ? _value.reaction
-          : reaction // ignore: cast_nullable_to_non_nullable
-              as String?,
-      choice: freezed == choice
-          ? _value.choice
-          : choice // ignore: cast_nullable_to_non_nullable
-              as int?,
-      achievement: freezed == achievement
-          ? _value.achievement
-          : achievement // ignore: cast_nullable_to_non_nullable
-              as String?,
-      body: freezed == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as String?,
-      header: freezed == header
-          ? _value.header
-          : header // ignore: cast_nullable_to_non_nullable
-              as String?,
-      icon: freezed == icon
-          ? _value.icon
-          : icon // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      appAccessTokenId: freezed == appAccessTokenId
-          ? _value.appAccessTokenId
-          : appAccessTokenId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      userId: freezed == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      user: freezed == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as UserLite?,
-      note: freezed == note
-          ? _value.note
-          : note // ignore: cast_nullable_to_non_nullable
-              as PushNotificationNote?,
-      role: freezed == role
-          ? _value.role
-          : role // ignore: cast_nullable_to_non_nullable
-              as RolesListResponse?,
-      reactions: freezed == reactions
-          ? _value.reactions
-          : reactions // ignore: cast_nullable_to_non_nullable
-              as List<INotificationsReaction>?,
-      users: freezed == users
-          ? _value.users
-          : users // ignore: cast_nullable_to_non_nullable
-              as List<UserLite>?,
-      exportedEntity: freezed == exportedEntity
-          ? _value.exportedEntity
-          : exportedEntity // ignore: cast_nullable_to_non_nullable
-              as UserExportableEntities?,
-      fileId: freezed == fileId
-          ? _value.fileId
-          : fileId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      message: freezed == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String?,
-      errorType: freezed == errorType
-          ? _value.errorType
-          : errorType // ignore: cast_nullable_to_non_nullable
-              as String?,
-      draft: freezed == draft
-          ? _value.draft
-          : draft // ignore: cast_nullable_to_non_nullable
-              as ScheduledNote?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            createdAt:
+                null == createdAt
+                    ? _value.createdAt
+                    : createdAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            type:
+                freezed == type
+                    ? _value.type
+                    : type // ignore: cast_nullable_to_non_nullable
+                        as NotificationType?,
+            noteId:
+                freezed == noteId
+                    ? _value.noteId
+                    : noteId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            followRequestId:
+                freezed == followRequestId
+                    ? _value.followRequestId
+                    : followRequestId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            reaction:
+                freezed == reaction
+                    ? _value.reaction
+                    : reaction // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            choice:
+                freezed == choice
+                    ? _value.choice
+                    : choice // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            achievement:
+                freezed == achievement
+                    ? _value.achievement
+                    : achievement // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            body:
+                freezed == body
+                    ? _value.body
+                    : body // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            header:
+                freezed == header
+                    ? _value.header
+                    : header // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            icon:
+                freezed == icon
+                    ? _value.icon
+                    : icon // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            appAccessTokenId:
+                freezed == appAccessTokenId
+                    ? _value.appAccessTokenId
+                    : appAccessTokenId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            userId:
+                freezed == userId
+                    ? _value.userId
+                    : userId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            user:
+                freezed == user
+                    ? _value.user
+                    : user // ignore: cast_nullable_to_non_nullable
+                        as UserLite?,
+            note:
+                freezed == note
+                    ? _value.note
+                    : note // ignore: cast_nullable_to_non_nullable
+                        as PushNotificationNote?,
+            role:
+                freezed == role
+                    ? _value.role
+                    : role // ignore: cast_nullable_to_non_nullable
+                        as RolesListResponse?,
+            reactions:
+                freezed == reactions
+                    ? _value.reactions
+                    : reactions // ignore: cast_nullable_to_non_nullable
+                        as List<INotificationsReaction>?,
+            users:
+                freezed == users
+                    ? _value.users
+                    : users // ignore: cast_nullable_to_non_nullable
+                        as List<UserLite>?,
+            exportedEntity:
+                freezed == exportedEntity
+                    ? _value.exportedEntity
+                    : exportedEntity // ignore: cast_nullable_to_non_nullable
+                        as UserExportableEntities?,
+            fileId:
+                freezed == fileId
+                    ? _value.fileId
+                    : fileId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            message:
+                freezed == message
+                    ? _value.message
+                    : message // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            errorType:
+                freezed == errorType
+                    ? _value.errorType
+                    : errorType // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            draft:
+                freezed == draft
+                    ? _value.draft
+                    : draft // ignore: cast_nullable_to_non_nullable
+                        as ScheduledNote?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of PushNotificationBody
@@ -544,37 +593,39 @@ class _$PushNotificationBodyCopyWithImpl<$Res,
 /// @nodoc
 abstract class _$$PushNotificationBodyImplCopyWith<$Res>
     implements $PushNotificationBodyCopyWith<$Res> {
-  factory _$$PushNotificationBodyImplCopyWith(_$PushNotificationBodyImpl value,
-          $Res Function(_$PushNotificationBodyImpl) then) =
-      __$$PushNotificationBodyImplCopyWithImpl<$Res>;
+  factory _$$PushNotificationBodyImplCopyWith(
+    _$PushNotificationBodyImpl value,
+    $Res Function(_$PushNotificationBodyImpl) then,
+  ) = __$$PushNotificationBodyImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime createdAt,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      NotificationType? type,
-      String? noteId,
-      String? followRequestId,
-      String? reaction,
-      int? choice,
-      String? achievement,
-      String? body,
-      String? header,
-      @NullableUriConverter() Uri? icon,
-      String? appAccessTokenId,
-      String? userId,
-      UserLite? user,
-      PushNotificationNote? note,
-      RolesListResponse? role,
-      List<INotificationsReaction>? reactions,
-      List<UserLite>? users,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      UserExportableEntities? exportedEntity,
-      String? fileId,
-      String? message,
-      String? errorType,
-      ScheduledNote? draft});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime createdAt,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    NotificationType? type,
+    String? noteId,
+    String? followRequestId,
+    String? reaction,
+    int? choice,
+    String? achievement,
+    String? body,
+    String? header,
+    @NullableUriConverter() Uri? icon,
+    String? appAccessTokenId,
+    String? userId,
+    UserLite? user,
+    PushNotificationNote? note,
+    RolesListResponse? role,
+    List<INotificationsReaction>? reactions,
+    List<UserLite>? users,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    UserExportableEntities? exportedEntity,
+    String? fileId,
+    String? message,
+    String? errorType,
+    ScheduledNote? draft,
+  });
 
   @override
   $UserLiteCopyWith<$Res>? get user;
@@ -590,9 +641,10 @@ abstract class _$$PushNotificationBodyImplCopyWith<$Res>
 class __$$PushNotificationBodyImplCopyWithImpl<$Res>
     extends _$PushNotificationBodyCopyWithImpl<$Res, _$PushNotificationBodyImpl>
     implements _$$PushNotificationBodyImplCopyWith<$Res> {
-  __$$PushNotificationBodyImplCopyWithImpl(_$PushNotificationBodyImpl _value,
-      $Res Function(_$PushNotificationBodyImpl) _then)
-      : super(_value, _then);
+  __$$PushNotificationBodyImplCopyWithImpl(
+    _$PushNotificationBodyImpl _value,
+    $Res Function(_$PushNotificationBodyImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of PushNotificationBody
   /// with the given fields replaced by the non-null parameter values.
@@ -623,133 +675,158 @@ class __$$PushNotificationBodyImplCopyWithImpl<$Res>
     Object? errorType = freezed,
     Object? draft = freezed,
   }) {
-    return _then(_$PushNotificationBodyImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as NotificationType?,
-      noteId: freezed == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      followRequestId: freezed == followRequestId
-          ? _value.followRequestId
-          : followRequestId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      reaction: freezed == reaction
-          ? _value.reaction
-          : reaction // ignore: cast_nullable_to_non_nullable
-              as String?,
-      choice: freezed == choice
-          ? _value.choice
-          : choice // ignore: cast_nullable_to_non_nullable
-              as int?,
-      achievement: freezed == achievement
-          ? _value.achievement
-          : achievement // ignore: cast_nullable_to_non_nullable
-              as String?,
-      body: freezed == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as String?,
-      header: freezed == header
-          ? _value.header
-          : header // ignore: cast_nullable_to_non_nullable
-              as String?,
-      icon: freezed == icon
-          ? _value.icon
-          : icon // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      appAccessTokenId: freezed == appAccessTokenId
-          ? _value.appAccessTokenId
-          : appAccessTokenId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      userId: freezed == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      user: freezed == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as UserLite?,
-      note: freezed == note
-          ? _value.note
-          : note // ignore: cast_nullable_to_non_nullable
-              as PushNotificationNote?,
-      role: freezed == role
-          ? _value.role
-          : role // ignore: cast_nullable_to_non_nullable
-              as RolesListResponse?,
-      reactions: freezed == reactions
-          ? _value._reactions
-          : reactions // ignore: cast_nullable_to_non_nullable
-              as List<INotificationsReaction>?,
-      users: freezed == users
-          ? _value._users
-          : users // ignore: cast_nullable_to_non_nullable
-              as List<UserLite>?,
-      exportedEntity: freezed == exportedEntity
-          ? _value.exportedEntity
-          : exportedEntity // ignore: cast_nullable_to_non_nullable
-              as UserExportableEntities?,
-      fileId: freezed == fileId
-          ? _value.fileId
-          : fileId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      message: freezed == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String?,
-      errorType: freezed == errorType
-          ? _value.errorType
-          : errorType // ignore: cast_nullable_to_non_nullable
-              as String?,
-      draft: freezed == draft
-          ? _value.draft
-          : draft // ignore: cast_nullable_to_non_nullable
-              as ScheduledNote?,
-    ));
+    return _then(
+      _$PushNotificationBodyImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        createdAt:
+            null == createdAt
+                ? _value.createdAt
+                : createdAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        type:
+            freezed == type
+                ? _value.type
+                : type // ignore: cast_nullable_to_non_nullable
+                    as NotificationType?,
+        noteId:
+            freezed == noteId
+                ? _value.noteId
+                : noteId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        followRequestId:
+            freezed == followRequestId
+                ? _value.followRequestId
+                : followRequestId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        reaction:
+            freezed == reaction
+                ? _value.reaction
+                : reaction // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        choice:
+            freezed == choice
+                ? _value.choice
+                : choice // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        achievement:
+            freezed == achievement
+                ? _value.achievement
+                : achievement // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        body:
+            freezed == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        header:
+            freezed == header
+                ? _value.header
+                : header // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        icon:
+            freezed == icon
+                ? _value.icon
+                : icon // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        appAccessTokenId:
+            freezed == appAccessTokenId
+                ? _value.appAccessTokenId
+                : appAccessTokenId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        userId:
+            freezed == userId
+                ? _value.userId
+                : userId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        user:
+            freezed == user
+                ? _value.user
+                : user // ignore: cast_nullable_to_non_nullable
+                    as UserLite?,
+        note:
+            freezed == note
+                ? _value.note
+                : note // ignore: cast_nullable_to_non_nullable
+                    as PushNotificationNote?,
+        role:
+            freezed == role
+                ? _value.role
+                : role // ignore: cast_nullable_to_non_nullable
+                    as RolesListResponse?,
+        reactions:
+            freezed == reactions
+                ? _value._reactions
+                : reactions // ignore: cast_nullable_to_non_nullable
+                    as List<INotificationsReaction>?,
+        users:
+            freezed == users
+                ? _value._users
+                : users // ignore: cast_nullable_to_non_nullable
+                    as List<UserLite>?,
+        exportedEntity:
+            freezed == exportedEntity
+                ? _value.exportedEntity
+                : exportedEntity // ignore: cast_nullable_to_non_nullable
+                    as UserExportableEntities?,
+        fileId:
+            freezed == fileId
+                ? _value.fileId
+                : fileId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        message:
+            freezed == message
+                ? _value.message
+                : message // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        errorType:
+            freezed == errorType
+                ? _value.errorType
+                : errorType // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        draft:
+            freezed == draft
+                ? _value.draft
+                : draft // ignore: cast_nullable_to_non_nullable
+                    as ScheduledNote?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$PushNotificationBodyImpl implements _PushNotificationBody {
-  const _$PushNotificationBodyImpl(
-      {required this.id,
-      @DateTimeConverter() required this.createdAt,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type,
-      this.noteId,
-      this.followRequestId,
-      this.reaction,
-      this.choice,
-      this.achievement,
-      this.body,
-      this.header,
-      @NullableUriConverter() this.icon,
-      this.appAccessTokenId,
-      this.userId,
-      this.user,
-      this.note,
-      this.role,
-      final List<INotificationsReaction>? reactions,
-      final List<UserLite>? users,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      this.exportedEntity,
-      this.fileId,
-      this.message,
-      this.errorType,
-      this.draft})
-      : _reactions = reactions,
-        _users = users;
+  const _$PushNotificationBodyImpl({
+    required this.id,
+    @DateTimeConverter() required this.createdAt,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type,
+    this.noteId,
+    this.followRequestId,
+    this.reaction,
+    this.choice,
+    this.achievement,
+    this.body,
+    this.header,
+    @NullableUriConverter() this.icon,
+    this.appAccessTokenId,
+    this.userId,
+    this.user,
+    this.note,
+    this.role,
+    final List<INotificationsReaction>? reactions,
+    final List<UserLite>? users,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    this.exportedEntity,
+    this.fileId,
+    this.message,
+    this.errorType,
+    this.draft,
+  }) : _reactions = reactions,
+       _users = users;
 
   factory _$PushNotificationBodyImpl.fromJson(Map<String, dynamic> json) =>
       _$$PushNotificationBodyImplFromJson(json);
@@ -759,7 +836,7 @@ class _$PushNotificationBodyImpl implements _PushNotificationBody {
   @override
   @DateTimeConverter()
   final DateTime createdAt;
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final NotificationType? type;
@@ -810,7 +887,7 @@ class _$PushNotificationBodyImpl implements _PushNotificationBody {
     return EqualUnmodifiableListView(value);
   }
 
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final UserExportableEntities? exportedEntity;
@@ -820,7 +897,7 @@ class _$PushNotificationBodyImpl implements _PushNotificationBody {
   final String? message;
   @override
   final String? errorType;
-// CherryPick
+  // CherryPick
   @override
   final ScheduledNote? draft;
 
@@ -855,8 +932,10 @@ class _$PushNotificationBodyImpl implements _PushNotificationBody {
             (identical(other.user, user) || other.user == user) &&
             (identical(other.note, note) || other.note == note) &&
             (identical(other.role, role) || other.role == role) &&
-            const DeepCollectionEquality()
-                .equals(other._reactions, _reactions) &&
+            const DeepCollectionEquality().equals(
+              other._reactions,
+              _reactions,
+            ) &&
             const DeepCollectionEquality().equals(other._users, _users) &&
             (identical(other.exportedEntity, exportedEntity) ||
                 other.exportedEntity == exportedEntity) &&
@@ -870,31 +949,31 @@ class _$PushNotificationBodyImpl implements _PushNotificationBody {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
-        runtimeType,
-        id,
-        createdAt,
-        type,
-        noteId,
-        followRequestId,
-        reaction,
-        choice,
-        achievement,
-        body,
-        header,
-        icon,
-        appAccessTokenId,
-        userId,
-        user,
-        note,
-        role,
-        const DeepCollectionEquality().hash(_reactions),
-        const DeepCollectionEquality().hash(_users),
-        exportedEntity,
-        fileId,
-        message,
-        errorType,
-        draft
-      ]);
+    runtimeType,
+    id,
+    createdAt,
+    type,
+    noteId,
+    followRequestId,
+    reaction,
+    choice,
+    achievement,
+    body,
+    header,
+    icon,
+    appAccessTokenId,
+    userId,
+    user,
+    note,
+    role,
+    const DeepCollectionEquality().hash(_reactions),
+    const DeepCollectionEquality().hash(_users),
+    exportedEntity,
+    fileId,
+    message,
+    errorType,
+    draft,
+  ]);
 
   /// Create a copy of PushNotificationBody
   /// with the given fields replaced by the non-null parameter values.
@@ -902,45 +981,46 @@ class _$PushNotificationBodyImpl implements _PushNotificationBody {
   @override
   @pragma('vm:prefer-inline')
   _$$PushNotificationBodyImplCopyWith<_$PushNotificationBodyImpl>
-      get copyWith =>
-          __$$PushNotificationBodyImplCopyWithImpl<_$PushNotificationBodyImpl>(
-              this, _$identity);
+  get copyWith =>
+      __$$PushNotificationBodyImplCopyWithImpl<_$PushNotificationBodyImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PushNotificationBodyImplToJson(
-      this,
-    );
+    return _$$PushNotificationBodyImplToJson(this);
   }
 }
 
 abstract class _PushNotificationBody implements PushNotificationBody {
-  const factory _PushNotificationBody(
-      {required final String id,
-      @DateTimeConverter() required final DateTime createdAt,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      final NotificationType? type,
-      final String? noteId,
-      final String? followRequestId,
-      final String? reaction,
-      final int? choice,
-      final String? achievement,
-      final String? body,
-      final String? header,
-      @NullableUriConverter() final Uri? icon,
-      final String? appAccessTokenId,
-      final String? userId,
-      final UserLite? user,
-      final PushNotificationNote? note,
-      final RolesListResponse? role,
-      final List<INotificationsReaction>? reactions,
-      final List<UserLite>? users,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      final UserExportableEntities? exportedEntity,
-      final String? fileId,
-      final String? message,
-      final String? errorType,
-      final ScheduledNote? draft}) = _$PushNotificationBodyImpl;
+  const factory _PushNotificationBody({
+    required final String id,
+    @DateTimeConverter() required final DateTime createdAt,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    final NotificationType? type,
+    final String? noteId,
+    final String? followRequestId,
+    final String? reaction,
+    final int? choice,
+    final String? achievement,
+    final String? body,
+    final String? header,
+    @NullableUriConverter() final Uri? icon,
+    final String? appAccessTokenId,
+    final String? userId,
+    final UserLite? user,
+    final PushNotificationNote? note,
+    final RolesListResponse? role,
+    final List<INotificationsReaction>? reactions,
+    final List<UserLite>? users,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    final UserExportableEntities? exportedEntity,
+    final String? fileId,
+    final String? message,
+    final String? errorType,
+    final ScheduledNote? draft,
+  }) = _$PushNotificationBodyImpl;
 
   factory _PushNotificationBody.fromJson(Map<String, dynamic> json) =
       _$PushNotificationBodyImpl.fromJson;
@@ -1001,7 +1081,7 @@ abstract class _PushNotificationBody implements PushNotificationBody {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PushNotificationBodyImplCopyWith<_$PushNotificationBodyImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 PushNotificationNote _$PushNotificationNoteFromJson(Map<String, dynamic> json) {
@@ -1063,49 +1143,53 @@ mixin _$PushNotificationNote {
 
 /// @nodoc
 abstract class $PushNotificationNoteCopyWith<$Res> {
-  factory $PushNotificationNoteCopyWith(PushNotificationNote value,
-          $Res Function(PushNotificationNote) then) =
-      _$PushNotificationNoteCopyWithImpl<$Res, PushNotificationNote>;
+  factory $PushNotificationNoteCopyWith(
+    PushNotificationNote value,
+    $Res Function(PushNotificationNote) then,
+  ) = _$PushNotificationNoteCopyWithImpl<$Res, PushNotificationNote>;
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime createdAt,
-      @NullableDateTimeConverter() DateTime? updatedAt,
-      String? text,
-      String userId,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      NoteVisibility? visibility,
-      bool localOnly,
-      int renoteCount,
-      int repliesCount,
-      int? reactionCount,
-      Map<String, int> reactions,
-      @EmojisConverter() Map<String, String> reactionEmojis,
-      @EmojisConverter() Map<String, String> emojis,
-      List<String> fileIds,
-      List<DriveFile> files,
-      String? replyId,
-      String? renoteId,
-      String? channelId,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      ReactionAcceptance? reactionAcceptance,
-      List<String> visibleUserIds,
-      List<String> mentions,
-      String? myReaction,
-      NoteChannelInfo? channel,
-      @NullableUriConverter() Uri? uri,
-      @NullableUriConverter() Uri? url,
-      List<String> reactionAndUserPairCache,
-      NotePoll? poll,
-      int? clippedCount});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime createdAt,
+    @NullableDateTimeConverter() DateTime? updatedAt,
+    String? text,
+    String userId,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    NoteVisibility? visibility,
+    bool localOnly,
+    int renoteCount,
+    int repliesCount,
+    int? reactionCount,
+    Map<String, int> reactions,
+    @EmojisConverter() Map<String, String> reactionEmojis,
+    @EmojisConverter() Map<String, String> emojis,
+    List<String> fileIds,
+    List<DriveFile> files,
+    String? replyId,
+    String? renoteId,
+    String? channelId,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    ReactionAcceptance? reactionAcceptance,
+    List<String> visibleUserIds,
+    List<String> mentions,
+    String? myReaction,
+    NoteChannelInfo? channel,
+    @NullableUriConverter() Uri? uri,
+    @NullableUriConverter() Uri? url,
+    List<String> reactionAndUserPairCache,
+    NotePoll? poll,
+    int? clippedCount,
+  });
 
   $NoteChannelInfoCopyWith<$Res>? get channel;
   $NotePollCopyWith<$Res>? get poll;
 }
 
 /// @nodoc
-class _$PushNotificationNoteCopyWithImpl<$Res,
-        $Val extends PushNotificationNote>
+class _$PushNotificationNoteCopyWithImpl<
+  $Res,
+  $Val extends PushNotificationNote
+>
     implements $PushNotificationNoteCopyWith<$Res> {
   _$PushNotificationNoteCopyWithImpl(this._value, this._then);
 
@@ -1148,120 +1232,151 @@ class _$PushNotificationNoteCopyWithImpl<$Res,
     Object? poll = freezed,
     Object? clippedCount = freezed,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedAt: freezed == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      text: freezed == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String?,
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      visibility: freezed == visibility
-          ? _value.visibility
-          : visibility // ignore: cast_nullable_to_non_nullable
-              as NoteVisibility?,
-      localOnly: null == localOnly
-          ? _value.localOnly
-          : localOnly // ignore: cast_nullable_to_non_nullable
-              as bool,
-      renoteCount: null == renoteCount
-          ? _value.renoteCount
-          : renoteCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      repliesCount: null == repliesCount
-          ? _value.repliesCount
-          : repliesCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      reactionCount: freezed == reactionCount
-          ? _value.reactionCount
-          : reactionCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      reactions: null == reactions
-          ? _value.reactions
-          : reactions // ignore: cast_nullable_to_non_nullable
-              as Map<String, int>,
-      reactionEmojis: null == reactionEmojis
-          ? _value.reactionEmojis
-          : reactionEmojis // ignore: cast_nullable_to_non_nullable
-              as Map<String, String>,
-      emojis: null == emojis
-          ? _value.emojis
-          : emojis // ignore: cast_nullable_to_non_nullable
-              as Map<String, String>,
-      fileIds: null == fileIds
-          ? _value.fileIds
-          : fileIds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      files: null == files
-          ? _value.files
-          : files // ignore: cast_nullable_to_non_nullable
-              as List<DriveFile>,
-      replyId: freezed == replyId
-          ? _value.replyId
-          : replyId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      renoteId: freezed == renoteId
-          ? _value.renoteId
-          : renoteId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      channelId: freezed == channelId
-          ? _value.channelId
-          : channelId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      reactionAcceptance: freezed == reactionAcceptance
-          ? _value.reactionAcceptance
-          : reactionAcceptance // ignore: cast_nullable_to_non_nullable
-              as ReactionAcceptance?,
-      visibleUserIds: null == visibleUserIds
-          ? _value.visibleUserIds
-          : visibleUserIds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      mentions: null == mentions
-          ? _value.mentions
-          : mentions // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      myReaction: freezed == myReaction
-          ? _value.myReaction
-          : myReaction // ignore: cast_nullable_to_non_nullable
-              as String?,
-      channel: freezed == channel
-          ? _value.channel
-          : channel // ignore: cast_nullable_to_non_nullable
-              as NoteChannelInfo?,
-      uri: freezed == uri
-          ? _value.uri
-          : uri // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      reactionAndUserPairCache: null == reactionAndUserPairCache
-          ? _value.reactionAndUserPairCache
-          : reactionAndUserPairCache // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      poll: freezed == poll
-          ? _value.poll
-          : poll // ignore: cast_nullable_to_non_nullable
-              as NotePoll?,
-      clippedCount: freezed == clippedCount
-          ? _value.clippedCount
-          : clippedCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            createdAt:
+                null == createdAt
+                    ? _value.createdAt
+                    : createdAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            updatedAt:
+                freezed == updatedAt
+                    ? _value.updatedAt
+                    : updatedAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            text:
+                freezed == text
+                    ? _value.text
+                    : text // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            userId:
+                null == userId
+                    ? _value.userId
+                    : userId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            visibility:
+                freezed == visibility
+                    ? _value.visibility
+                    : visibility // ignore: cast_nullable_to_non_nullable
+                        as NoteVisibility?,
+            localOnly:
+                null == localOnly
+                    ? _value.localOnly
+                    : localOnly // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            renoteCount:
+                null == renoteCount
+                    ? _value.renoteCount
+                    : renoteCount // ignore: cast_nullable_to_non_nullable
+                        as int,
+            repliesCount:
+                null == repliesCount
+                    ? _value.repliesCount
+                    : repliesCount // ignore: cast_nullable_to_non_nullable
+                        as int,
+            reactionCount:
+                freezed == reactionCount
+                    ? _value.reactionCount
+                    : reactionCount // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            reactions:
+                null == reactions
+                    ? _value.reactions
+                    : reactions // ignore: cast_nullable_to_non_nullable
+                        as Map<String, int>,
+            reactionEmojis:
+                null == reactionEmojis
+                    ? _value.reactionEmojis
+                    : reactionEmojis // ignore: cast_nullable_to_non_nullable
+                        as Map<String, String>,
+            emojis:
+                null == emojis
+                    ? _value.emojis
+                    : emojis // ignore: cast_nullable_to_non_nullable
+                        as Map<String, String>,
+            fileIds:
+                null == fileIds
+                    ? _value.fileIds
+                    : fileIds // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+            files:
+                null == files
+                    ? _value.files
+                    : files // ignore: cast_nullable_to_non_nullable
+                        as List<DriveFile>,
+            replyId:
+                freezed == replyId
+                    ? _value.replyId
+                    : replyId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            renoteId:
+                freezed == renoteId
+                    ? _value.renoteId
+                    : renoteId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            channelId:
+                freezed == channelId
+                    ? _value.channelId
+                    : channelId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            reactionAcceptance:
+                freezed == reactionAcceptance
+                    ? _value.reactionAcceptance
+                    : reactionAcceptance // ignore: cast_nullable_to_non_nullable
+                        as ReactionAcceptance?,
+            visibleUserIds:
+                null == visibleUserIds
+                    ? _value.visibleUserIds
+                    : visibleUserIds // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+            mentions:
+                null == mentions
+                    ? _value.mentions
+                    : mentions // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+            myReaction:
+                freezed == myReaction
+                    ? _value.myReaction
+                    : myReaction // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            channel:
+                freezed == channel
+                    ? _value.channel
+                    : channel // ignore: cast_nullable_to_non_nullable
+                        as NoteChannelInfo?,
+            uri:
+                freezed == uri
+                    ? _value.uri
+                    : uri // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            url:
+                freezed == url
+                    ? _value.url
+                    : url // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            reactionAndUserPairCache:
+                null == reactionAndUserPairCache
+                    ? _value.reactionAndUserPairCache
+                    : reactionAndUserPairCache // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+            poll:
+                freezed == poll
+                    ? _value.poll
+                    : poll // ignore: cast_nullable_to_non_nullable
+                        as NotePoll?,
+            clippedCount:
+                freezed == clippedCount
+                    ? _value.clippedCount
+                    : clippedCount // ignore: cast_nullable_to_non_nullable
+                        as int?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of PushNotificationNote
@@ -1296,42 +1411,44 @@ class _$PushNotificationNoteCopyWithImpl<$Res,
 /// @nodoc
 abstract class _$$PushNotificationNoteImplCopyWith<$Res>
     implements $PushNotificationNoteCopyWith<$Res> {
-  factory _$$PushNotificationNoteImplCopyWith(_$PushNotificationNoteImpl value,
-          $Res Function(_$PushNotificationNoteImpl) then) =
-      __$$PushNotificationNoteImplCopyWithImpl<$Res>;
+  factory _$$PushNotificationNoteImplCopyWith(
+    _$PushNotificationNoteImpl value,
+    $Res Function(_$PushNotificationNoteImpl) then,
+  ) = __$$PushNotificationNoteImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime createdAt,
-      @NullableDateTimeConverter() DateTime? updatedAt,
-      String? text,
-      String userId,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      NoteVisibility? visibility,
-      bool localOnly,
-      int renoteCount,
-      int repliesCount,
-      int? reactionCount,
-      Map<String, int> reactions,
-      @EmojisConverter() Map<String, String> reactionEmojis,
-      @EmojisConverter() Map<String, String> emojis,
-      List<String> fileIds,
-      List<DriveFile> files,
-      String? replyId,
-      String? renoteId,
-      String? channelId,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      ReactionAcceptance? reactionAcceptance,
-      List<String> visibleUserIds,
-      List<String> mentions,
-      String? myReaction,
-      NoteChannelInfo? channel,
-      @NullableUriConverter() Uri? uri,
-      @NullableUriConverter() Uri? url,
-      List<String> reactionAndUserPairCache,
-      NotePoll? poll,
-      int? clippedCount});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime createdAt,
+    @NullableDateTimeConverter() DateTime? updatedAt,
+    String? text,
+    String userId,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    NoteVisibility? visibility,
+    bool localOnly,
+    int renoteCount,
+    int repliesCount,
+    int? reactionCount,
+    Map<String, int> reactions,
+    @EmojisConverter() Map<String, String> reactionEmojis,
+    @EmojisConverter() Map<String, String> emojis,
+    List<String> fileIds,
+    List<DriveFile> files,
+    String? replyId,
+    String? renoteId,
+    String? channelId,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    ReactionAcceptance? reactionAcceptance,
+    List<String> visibleUserIds,
+    List<String> mentions,
+    String? myReaction,
+    NoteChannelInfo? channel,
+    @NullableUriConverter() Uri? uri,
+    @NullableUriConverter() Uri? url,
+    List<String> reactionAndUserPairCache,
+    NotePoll? poll,
+    int? clippedCount,
+  });
 
   @override
   $NoteChannelInfoCopyWith<$Res>? get channel;
@@ -1343,9 +1460,10 @@ abstract class _$$PushNotificationNoteImplCopyWith<$Res>
 class __$$PushNotificationNoteImplCopyWithImpl<$Res>
     extends _$PushNotificationNoteCopyWithImpl<$Res, _$PushNotificationNoteImpl>
     implements _$$PushNotificationNoteImplCopyWith<$Res> {
-  __$$PushNotificationNoteImplCopyWithImpl(_$PushNotificationNoteImpl _value,
-      $Res Function(_$PushNotificationNoteImpl) _then)
-      : super(_value, _then);
+  __$$PushNotificationNoteImplCopyWithImpl(
+    _$PushNotificationNoteImpl _value,
+    $Res Function(_$PushNotificationNoteImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of PushNotificationNote
   /// with the given fields replaced by the non-null parameter values.
@@ -1381,165 +1499,195 @@ class __$$PushNotificationNoteImplCopyWithImpl<$Res>
     Object? poll = freezed,
     Object? clippedCount = freezed,
   }) {
-    return _then(_$PushNotificationNoteImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedAt: freezed == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      text: freezed == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String?,
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      visibility: freezed == visibility
-          ? _value.visibility
-          : visibility // ignore: cast_nullable_to_non_nullable
-              as NoteVisibility?,
-      localOnly: null == localOnly
-          ? _value.localOnly
-          : localOnly // ignore: cast_nullable_to_non_nullable
-              as bool,
-      renoteCount: null == renoteCount
-          ? _value.renoteCount
-          : renoteCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      repliesCount: null == repliesCount
-          ? _value.repliesCount
-          : repliesCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      reactionCount: freezed == reactionCount
-          ? _value.reactionCount
-          : reactionCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      reactions: null == reactions
-          ? _value._reactions
-          : reactions // ignore: cast_nullable_to_non_nullable
-              as Map<String, int>,
-      reactionEmojis: null == reactionEmojis
-          ? _value._reactionEmojis
-          : reactionEmojis // ignore: cast_nullable_to_non_nullable
-              as Map<String, String>,
-      emojis: null == emojis
-          ? _value._emojis
-          : emojis // ignore: cast_nullable_to_non_nullable
-              as Map<String, String>,
-      fileIds: null == fileIds
-          ? _value._fileIds
-          : fileIds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      files: null == files
-          ? _value._files
-          : files // ignore: cast_nullable_to_non_nullable
-              as List<DriveFile>,
-      replyId: freezed == replyId
-          ? _value.replyId
-          : replyId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      renoteId: freezed == renoteId
-          ? _value.renoteId
-          : renoteId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      channelId: freezed == channelId
-          ? _value.channelId
-          : channelId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      reactionAcceptance: freezed == reactionAcceptance
-          ? _value.reactionAcceptance
-          : reactionAcceptance // ignore: cast_nullable_to_non_nullable
-              as ReactionAcceptance?,
-      visibleUserIds: null == visibleUserIds
-          ? _value._visibleUserIds
-          : visibleUserIds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      mentions: null == mentions
-          ? _value._mentions
-          : mentions // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      myReaction: freezed == myReaction
-          ? _value.myReaction
-          : myReaction // ignore: cast_nullable_to_non_nullable
-              as String?,
-      channel: freezed == channel
-          ? _value.channel
-          : channel // ignore: cast_nullable_to_non_nullable
-              as NoteChannelInfo?,
-      uri: freezed == uri
-          ? _value.uri
-          : uri // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      reactionAndUserPairCache: null == reactionAndUserPairCache
-          ? _value._reactionAndUserPairCache
-          : reactionAndUserPairCache // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      poll: freezed == poll
-          ? _value.poll
-          : poll // ignore: cast_nullable_to_non_nullable
-              as NotePoll?,
-      clippedCount: freezed == clippedCount
-          ? _value.clippedCount
-          : clippedCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ));
+    return _then(
+      _$PushNotificationNoteImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        createdAt:
+            null == createdAt
+                ? _value.createdAt
+                : createdAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        updatedAt:
+            freezed == updatedAt
+                ? _value.updatedAt
+                : updatedAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        text:
+            freezed == text
+                ? _value.text
+                : text // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        userId:
+            null == userId
+                ? _value.userId
+                : userId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        visibility:
+            freezed == visibility
+                ? _value.visibility
+                : visibility // ignore: cast_nullable_to_non_nullable
+                    as NoteVisibility?,
+        localOnly:
+            null == localOnly
+                ? _value.localOnly
+                : localOnly // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        renoteCount:
+            null == renoteCount
+                ? _value.renoteCount
+                : renoteCount // ignore: cast_nullable_to_non_nullable
+                    as int,
+        repliesCount:
+            null == repliesCount
+                ? _value.repliesCount
+                : repliesCount // ignore: cast_nullable_to_non_nullable
+                    as int,
+        reactionCount:
+            freezed == reactionCount
+                ? _value.reactionCount
+                : reactionCount // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        reactions:
+            null == reactions
+                ? _value._reactions
+                : reactions // ignore: cast_nullable_to_non_nullable
+                    as Map<String, int>,
+        reactionEmojis:
+            null == reactionEmojis
+                ? _value._reactionEmojis
+                : reactionEmojis // ignore: cast_nullable_to_non_nullable
+                    as Map<String, String>,
+        emojis:
+            null == emojis
+                ? _value._emojis
+                : emojis // ignore: cast_nullable_to_non_nullable
+                    as Map<String, String>,
+        fileIds:
+            null == fileIds
+                ? _value._fileIds
+                : fileIds // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+        files:
+            null == files
+                ? _value._files
+                : files // ignore: cast_nullable_to_non_nullable
+                    as List<DriveFile>,
+        replyId:
+            freezed == replyId
+                ? _value.replyId
+                : replyId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        renoteId:
+            freezed == renoteId
+                ? _value.renoteId
+                : renoteId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        channelId:
+            freezed == channelId
+                ? _value.channelId
+                : channelId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        reactionAcceptance:
+            freezed == reactionAcceptance
+                ? _value.reactionAcceptance
+                : reactionAcceptance // ignore: cast_nullable_to_non_nullable
+                    as ReactionAcceptance?,
+        visibleUserIds:
+            null == visibleUserIds
+                ? _value._visibleUserIds
+                : visibleUserIds // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+        mentions:
+            null == mentions
+                ? _value._mentions
+                : mentions // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+        myReaction:
+            freezed == myReaction
+                ? _value.myReaction
+                : myReaction // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        channel:
+            freezed == channel
+                ? _value.channel
+                : channel // ignore: cast_nullable_to_non_nullable
+                    as NoteChannelInfo?,
+        uri:
+            freezed == uri
+                ? _value.uri
+                : uri // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        url:
+            freezed == url
+                ? _value.url
+                : url // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        reactionAndUserPairCache:
+            null == reactionAndUserPairCache
+                ? _value._reactionAndUserPairCache
+                : reactionAndUserPairCache // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+        poll:
+            freezed == poll
+                ? _value.poll
+                : poll // ignore: cast_nullable_to_non_nullable
+                    as NotePoll?,
+        clippedCount:
+            freezed == clippedCount
+                ? _value.clippedCount
+                : clippedCount // ignore: cast_nullable_to_non_nullable
+                    as int?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$PushNotificationNoteImpl implements _PushNotificationNote {
-  const _$PushNotificationNoteImpl(
-      {required this.id,
-      @DateTimeConverter() required this.createdAt,
-      @NullableDateTimeConverter() this.updatedAt,
-      this.text,
-      required this.userId,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      this.visibility,
-      this.localOnly = false,
-      this.renoteCount = 0,
-      this.repliesCount = 0,
-      this.reactionCount,
-      required final Map<String, int> reactions,
-      @EmojisConverter() final Map<String, String> reactionEmojis = const {},
-      @EmojisConverter() final Map<String, String> emojis = const {},
-      required final List<String> fileIds,
-      required final List<DriveFile> files,
-      this.replyId,
-      this.renoteId,
-      this.channelId,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      this.reactionAcceptance,
-      final List<String> visibleUserIds = const [],
-      final List<String> mentions = const [],
-      this.myReaction,
-      this.channel,
-      @NullableUriConverter() this.uri,
-      @NullableUriConverter() this.url,
-      final List<String> reactionAndUserPairCache = const [],
-      this.poll,
-      this.clippedCount})
-      : _reactions = reactions,
-        _reactionEmojis = reactionEmojis,
-        _emojis = emojis,
-        _fileIds = fileIds,
-        _files = files,
-        _visibleUserIds = visibleUserIds,
-        _mentions = mentions,
-        _reactionAndUserPairCache = reactionAndUserPairCache;
+  const _$PushNotificationNoteImpl({
+    required this.id,
+    @DateTimeConverter() required this.createdAt,
+    @NullableDateTimeConverter() this.updatedAt,
+    this.text,
+    required this.userId,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    this.visibility,
+    this.localOnly = false,
+    this.renoteCount = 0,
+    this.repliesCount = 0,
+    this.reactionCount,
+    required final Map<String, int> reactions,
+    @EmojisConverter() final Map<String, String> reactionEmojis = const {},
+    @EmojisConverter() final Map<String, String> emojis = const {},
+    required final List<String> fileIds,
+    required final List<DriveFile> files,
+    this.replyId,
+    this.renoteId,
+    this.channelId,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    this.reactionAcceptance,
+    final List<String> visibleUserIds = const [],
+    final List<String> mentions = const [],
+    this.myReaction,
+    this.channel,
+    @NullableUriConverter() this.uri,
+    @NullableUriConverter() this.url,
+    final List<String> reactionAndUserPairCache = const [],
+    this.poll,
+    this.clippedCount,
+  }) : _reactions = reactions,
+       _reactionEmojis = reactionEmojis,
+       _emojis = emojis,
+       _fileIds = fileIds,
+       _files = files,
+       _visibleUserIds = visibleUserIds,
+       _mentions = mentions,
+       _reactionAndUserPairCache = reactionAndUserPairCache;
 
   factory _$PushNotificationNoteImpl.fromJson(Map<String, dynamic> json) =>
       _$$PushNotificationNoteImplFromJson(json);
@@ -1556,7 +1704,7 @@ class _$PushNotificationNoteImpl implements _PushNotificationNote {
   final String? text;
   @override
   final String userId;
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final NoteVisibility? visibility;
@@ -1621,7 +1769,7 @@ class _$PushNotificationNoteImpl implements _PushNotificationNote {
   final String? renoteId;
   @override
   final String? channelId;
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final ReactionAcceptance? reactionAcceptance;
@@ -1695,10 +1843,14 @@ class _$PushNotificationNoteImpl implements _PushNotificationNote {
                 other.repliesCount == repliesCount) &&
             (identical(other.reactionCount, reactionCount) ||
                 other.reactionCount == reactionCount) &&
-            const DeepCollectionEquality()
-                .equals(other._reactions, _reactions) &&
-            const DeepCollectionEquality()
-                .equals(other._reactionEmojis, _reactionEmojis) &&
+            const DeepCollectionEquality().equals(
+              other._reactions,
+              _reactions,
+            ) &&
+            const DeepCollectionEquality().equals(
+              other._reactionEmojis,
+              _reactionEmojis,
+            ) &&
             const DeepCollectionEquality().equals(other._emojis, _emojis) &&
             const DeepCollectionEquality().equals(other._fileIds, _fileIds) &&
             const DeepCollectionEquality().equals(other._files, _files) &&
@@ -1709,8 +1861,10 @@ class _$PushNotificationNoteImpl implements _PushNotificationNote {
                 other.channelId == channelId) &&
             (identical(other.reactionAcceptance, reactionAcceptance) ||
                 other.reactionAcceptance == reactionAcceptance) &&
-            const DeepCollectionEquality()
-                .equals(other._visibleUserIds, _visibleUserIds) &&
+            const DeepCollectionEquality().equals(
+              other._visibleUserIds,
+              _visibleUserIds,
+            ) &&
             const DeepCollectionEquality().equals(other._mentions, _mentions) &&
             (identical(other.myReaction, myReaction) ||
                 other.myReaction == myReaction) &&
@@ -1718,7 +1872,9 @@ class _$PushNotificationNoteImpl implements _PushNotificationNote {
             (identical(other.uri, uri) || other.uri == uri) &&
             (identical(other.url, url) || other.url == url) &&
             const DeepCollectionEquality().equals(
-                other._reactionAndUserPairCache, _reactionAndUserPairCache) &&
+              other._reactionAndUserPairCache,
+              _reactionAndUserPairCache,
+            ) &&
             (identical(other.poll, poll) || other.poll == poll) &&
             (identical(other.clippedCount, clippedCount) ||
                 other.clippedCount == clippedCount));
@@ -1727,36 +1883,36 @@ class _$PushNotificationNoteImpl implements _PushNotificationNote {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
-        runtimeType,
-        id,
-        createdAt,
-        updatedAt,
-        text,
-        userId,
-        visibility,
-        localOnly,
-        renoteCount,
-        repliesCount,
-        reactionCount,
-        const DeepCollectionEquality().hash(_reactions),
-        const DeepCollectionEquality().hash(_reactionEmojis),
-        const DeepCollectionEquality().hash(_emojis),
-        const DeepCollectionEquality().hash(_fileIds),
-        const DeepCollectionEquality().hash(_files),
-        replyId,
-        renoteId,
-        channelId,
-        reactionAcceptance,
-        const DeepCollectionEquality().hash(_visibleUserIds),
-        const DeepCollectionEquality().hash(_mentions),
-        myReaction,
-        channel,
-        uri,
-        url,
-        const DeepCollectionEquality().hash(_reactionAndUserPairCache),
-        poll,
-        clippedCount
-      ]);
+    runtimeType,
+    id,
+    createdAt,
+    updatedAt,
+    text,
+    userId,
+    visibility,
+    localOnly,
+    renoteCount,
+    repliesCount,
+    reactionCount,
+    const DeepCollectionEquality().hash(_reactions),
+    const DeepCollectionEquality().hash(_reactionEmojis),
+    const DeepCollectionEquality().hash(_emojis),
+    const DeepCollectionEquality().hash(_fileIds),
+    const DeepCollectionEquality().hash(_files),
+    replyId,
+    renoteId,
+    channelId,
+    reactionAcceptance,
+    const DeepCollectionEquality().hash(_visibleUserIds),
+    const DeepCollectionEquality().hash(_mentions),
+    myReaction,
+    channel,
+    uri,
+    url,
+    const DeepCollectionEquality().hash(_reactionAndUserPairCache),
+    poll,
+    clippedCount,
+  ]);
 
   /// Create a copy of PushNotificationNote
   /// with the given fields replaced by the non-null parameter values.
@@ -1764,50 +1920,51 @@ class _$PushNotificationNoteImpl implements _PushNotificationNote {
   @override
   @pragma('vm:prefer-inline')
   _$$PushNotificationNoteImplCopyWith<_$PushNotificationNoteImpl>
-      get copyWith =>
-          __$$PushNotificationNoteImplCopyWithImpl<_$PushNotificationNoteImpl>(
-              this, _$identity);
+  get copyWith =>
+      __$$PushNotificationNoteImplCopyWithImpl<_$PushNotificationNoteImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PushNotificationNoteImplToJson(
-      this,
-    );
+    return _$$PushNotificationNoteImplToJson(this);
   }
 }
 
 abstract class _PushNotificationNote implements PushNotificationNote {
-  const factory _PushNotificationNote(
-      {required final String id,
-      @DateTimeConverter() required final DateTime createdAt,
-      @NullableDateTimeConverter() final DateTime? updatedAt,
-      final String? text,
-      required final String userId,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      final NoteVisibility? visibility,
-      final bool localOnly,
-      final int renoteCount,
-      final int repliesCount,
-      final int? reactionCount,
-      required final Map<String, int> reactions,
-      @EmojisConverter() final Map<String, String> reactionEmojis,
-      @EmojisConverter() final Map<String, String> emojis,
-      required final List<String> fileIds,
-      required final List<DriveFile> files,
-      final String? replyId,
-      final String? renoteId,
-      final String? channelId,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      final ReactionAcceptance? reactionAcceptance,
-      final List<String> visibleUserIds,
-      final List<String> mentions,
-      final String? myReaction,
-      final NoteChannelInfo? channel,
-      @NullableUriConverter() final Uri? uri,
-      @NullableUriConverter() final Uri? url,
-      final List<String> reactionAndUserPairCache,
-      final NotePoll? poll,
-      final int? clippedCount}) = _$PushNotificationNoteImpl;
+  const factory _PushNotificationNote({
+    required final String id,
+    @DateTimeConverter() required final DateTime createdAt,
+    @NullableDateTimeConverter() final DateTime? updatedAt,
+    final String? text,
+    required final String userId,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    final NoteVisibility? visibility,
+    final bool localOnly,
+    final int renoteCount,
+    final int repliesCount,
+    final int? reactionCount,
+    required final Map<String, int> reactions,
+    @EmojisConverter() final Map<String, String> reactionEmojis,
+    @EmojisConverter() final Map<String, String> emojis,
+    required final List<String> fileIds,
+    required final List<DriveFile> files,
+    final String? replyId,
+    final String? renoteId,
+    final String? channelId,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    final ReactionAcceptance? reactionAcceptance,
+    final List<String> visibleUserIds,
+    final List<String> mentions,
+    final String? myReaction,
+    final NoteChannelInfo? channel,
+    @NullableUriConverter() final Uri? uri,
+    @NullableUriConverter() final Uri? url,
+    final List<String> reactionAndUserPairCache,
+    final NotePoll? poll,
+    final int? clippedCount,
+  }) = _$PushNotificationNoteImpl;
 
   factory _PushNotificationNote.fromJson(Map<String, dynamic> json) =
       _$PushNotificationNoteImpl.fromJson;
@@ -1882,5 +2039,5 @@ abstract class _PushNotificationNote implements PushNotificationNote {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PushNotificationNoteImplCopyWith<_$PushNotificationNoteImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

@@ -12,10 +12,12 @@ part of 'announcements_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 AnnouncementsResponse _$AnnouncementsResponseFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _AnnouncementsResponse.fromJson(json);
 }
 
@@ -29,11 +31,9 @@ mixin _$AnnouncementsResponse {
   String get text => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   @NullableUriConverter()
-  Uri? get imageUrl =>
-      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  Uri? get imageUrl => throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-  AnnouncementIconType? get icon =>
-      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  AnnouncementIconType? get icon => throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   AnnouncementDisplayType? get display => throw _privateConstructorUsedError;
   bool? get needConfirmationToRead => throw _privateConstructorUsedError;
@@ -55,32 +55,36 @@ mixin _$AnnouncementsResponse {
 
 /// @nodoc
 abstract class $AnnouncementsResponseCopyWith<$Res> {
-  factory $AnnouncementsResponseCopyWith(AnnouncementsResponse value,
-          $Res Function(AnnouncementsResponse) then) =
-      _$AnnouncementsResponseCopyWithImpl<$Res, AnnouncementsResponse>;
+  factory $AnnouncementsResponseCopyWith(
+    AnnouncementsResponse value,
+    $Res Function(AnnouncementsResponse) then,
+  ) = _$AnnouncementsResponseCopyWithImpl<$Res, AnnouncementsResponse>;
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime createdAt,
-      @NullableDateTimeConverter() DateTime? updatedAt,
-      String text,
-      String title,
-      @NullableUriConverter() Uri? imageUrl,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      AnnouncementIconType? icon,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      AnnouncementDisplayType? display,
-      bool? needConfirmationToRead,
-      bool? forYou,
-      bool? isRead,
-      bool forExistingUsers,
-      String? userId,
-      bool silence});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime createdAt,
+    @NullableDateTimeConverter() DateTime? updatedAt,
+    String text,
+    String title,
+    @NullableUriConverter() Uri? imageUrl,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    AnnouncementIconType? icon,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    AnnouncementDisplayType? display,
+    bool? needConfirmationToRead,
+    bool? forYou,
+    bool? isRead,
+    bool forExistingUsers,
+    String? userId,
+    bool silence,
+  });
 }
 
 /// @nodoc
-class _$AnnouncementsResponseCopyWithImpl<$Res,
-        $Val extends AnnouncementsResponse>
+class _$AnnouncementsResponseCopyWithImpl<
+  $Res,
+  $Val extends AnnouncementsResponse
+>
     implements $AnnouncementsResponseCopyWith<$Res> {
   _$AnnouncementsResponseCopyWithImpl(this._value, this._then);
 
@@ -109,64 +113,81 @@ class _$AnnouncementsResponseCopyWithImpl<$Res,
     Object? userId = freezed,
     Object? silence = null,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedAt: freezed == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      text: null == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String,
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      imageUrl: freezed == imageUrl
-          ? _value.imageUrl
-          : imageUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      icon: freezed == icon
-          ? _value.icon
-          : icon // ignore: cast_nullable_to_non_nullable
-              as AnnouncementIconType?,
-      display: freezed == display
-          ? _value.display
-          : display // ignore: cast_nullable_to_non_nullable
-              as AnnouncementDisplayType?,
-      needConfirmationToRead: freezed == needConfirmationToRead
-          ? _value.needConfirmationToRead
-          : needConfirmationToRead // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      forYou: freezed == forYou
-          ? _value.forYou
-          : forYou // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      isRead: freezed == isRead
-          ? _value.isRead
-          : isRead // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      forExistingUsers: null == forExistingUsers
-          ? _value.forExistingUsers
-          : forExistingUsers // ignore: cast_nullable_to_non_nullable
-              as bool,
-      userId: freezed == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      silence: null == silence
-          ? _value.silence
-          : silence // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            createdAt:
+                null == createdAt
+                    ? _value.createdAt
+                    : createdAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            updatedAt:
+                freezed == updatedAt
+                    ? _value.updatedAt
+                    : updatedAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            text:
+                null == text
+                    ? _value.text
+                    : text // ignore: cast_nullable_to_non_nullable
+                        as String,
+            title:
+                null == title
+                    ? _value.title
+                    : title // ignore: cast_nullable_to_non_nullable
+                        as String,
+            imageUrl:
+                freezed == imageUrl
+                    ? _value.imageUrl
+                    : imageUrl // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            icon:
+                freezed == icon
+                    ? _value.icon
+                    : icon // ignore: cast_nullable_to_non_nullable
+                        as AnnouncementIconType?,
+            display:
+                freezed == display
+                    ? _value.display
+                    : display // ignore: cast_nullable_to_non_nullable
+                        as AnnouncementDisplayType?,
+            needConfirmationToRead:
+                freezed == needConfirmationToRead
+                    ? _value.needConfirmationToRead
+                    : needConfirmationToRead // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            forYou:
+                freezed == forYou
+                    ? _value.forYou
+                    : forYou // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            isRead:
+                freezed == isRead
+                    ? _value.isRead
+                    : isRead // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            forExistingUsers:
+                null == forExistingUsers
+                    ? _value.forExistingUsers
+                    : forExistingUsers // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            userId:
+                freezed == userId
+                    ? _value.userId
+                    : userId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            silence:
+                null == silence
+                    ? _value.silence
+                    : silence // ignore: cast_nullable_to_non_nullable
+                        as bool,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -174,38 +195,40 @@ class _$AnnouncementsResponseCopyWithImpl<$Res,
 abstract class _$$AnnouncementsResponseImplCopyWith<$Res>
     implements $AnnouncementsResponseCopyWith<$Res> {
   factory _$$AnnouncementsResponseImplCopyWith(
-          _$AnnouncementsResponseImpl value,
-          $Res Function(_$AnnouncementsResponseImpl) then) =
-      __$$AnnouncementsResponseImplCopyWithImpl<$Res>;
+    _$AnnouncementsResponseImpl value,
+    $Res Function(_$AnnouncementsResponseImpl) then,
+  ) = __$$AnnouncementsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime createdAt,
-      @NullableDateTimeConverter() DateTime? updatedAt,
-      String text,
-      String title,
-      @NullableUriConverter() Uri? imageUrl,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      AnnouncementIconType? icon,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      AnnouncementDisplayType? display,
-      bool? needConfirmationToRead,
-      bool? forYou,
-      bool? isRead,
-      bool forExistingUsers,
-      String? userId,
-      bool silence});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime createdAt,
+    @NullableDateTimeConverter() DateTime? updatedAt,
+    String text,
+    String title,
+    @NullableUriConverter() Uri? imageUrl,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    AnnouncementIconType? icon,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    AnnouncementDisplayType? display,
+    bool? needConfirmationToRead,
+    bool? forYou,
+    bool? isRead,
+    bool forExistingUsers,
+    String? userId,
+    bool silence,
+  });
 }
 
 /// @nodoc
 class __$$AnnouncementsResponseImplCopyWithImpl<$Res>
-    extends _$AnnouncementsResponseCopyWithImpl<$Res,
-        _$AnnouncementsResponseImpl>
+    extends
+        _$AnnouncementsResponseCopyWithImpl<$Res, _$AnnouncementsResponseImpl>
     implements _$$AnnouncementsResponseImplCopyWith<$Res> {
-  __$$AnnouncementsResponseImplCopyWithImpl(_$AnnouncementsResponseImpl _value,
-      $Res Function(_$AnnouncementsResponseImpl) _then)
-      : super(_value, _then);
+  __$$AnnouncementsResponseImplCopyWithImpl(
+    _$AnnouncementsResponseImpl _value,
+    $Res Function(_$AnnouncementsResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of AnnouncementsResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -227,86 +250,102 @@ class __$$AnnouncementsResponseImplCopyWithImpl<$Res>
     Object? userId = freezed,
     Object? silence = null,
   }) {
-    return _then(_$AnnouncementsResponseImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedAt: freezed == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      text: null == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String,
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      imageUrl: freezed == imageUrl
-          ? _value.imageUrl
-          : imageUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      icon: freezed == icon
-          ? _value.icon
-          : icon // ignore: cast_nullable_to_non_nullable
-              as AnnouncementIconType?,
-      display: freezed == display
-          ? _value.display
-          : display // ignore: cast_nullable_to_non_nullable
-              as AnnouncementDisplayType?,
-      needConfirmationToRead: freezed == needConfirmationToRead
-          ? _value.needConfirmationToRead
-          : needConfirmationToRead // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      forYou: freezed == forYou
-          ? _value.forYou
-          : forYou // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      isRead: freezed == isRead
-          ? _value.isRead
-          : isRead // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      forExistingUsers: null == forExistingUsers
-          ? _value.forExistingUsers
-          : forExistingUsers // ignore: cast_nullable_to_non_nullable
-              as bool,
-      userId: freezed == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      silence: null == silence
-          ? _value.silence
-          : silence // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ));
+    return _then(
+      _$AnnouncementsResponseImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        createdAt:
+            null == createdAt
+                ? _value.createdAt
+                : createdAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        updatedAt:
+            freezed == updatedAt
+                ? _value.updatedAt
+                : updatedAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        text:
+            null == text
+                ? _value.text
+                : text // ignore: cast_nullable_to_non_nullable
+                    as String,
+        title:
+            null == title
+                ? _value.title
+                : title // ignore: cast_nullable_to_non_nullable
+                    as String,
+        imageUrl:
+            freezed == imageUrl
+                ? _value.imageUrl
+                : imageUrl // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        icon:
+            freezed == icon
+                ? _value.icon
+                : icon // ignore: cast_nullable_to_non_nullable
+                    as AnnouncementIconType?,
+        display:
+            freezed == display
+                ? _value.display
+                : display // ignore: cast_nullable_to_non_nullable
+                    as AnnouncementDisplayType?,
+        needConfirmationToRead:
+            freezed == needConfirmationToRead
+                ? _value.needConfirmationToRead
+                : needConfirmationToRead // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        forYou:
+            freezed == forYou
+                ? _value.forYou
+                : forYou // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        isRead:
+            freezed == isRead
+                ? _value.isRead
+                : isRead // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        forExistingUsers:
+            null == forExistingUsers
+                ? _value.forExistingUsers
+                : forExistingUsers // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        userId:
+            freezed == userId
+                ? _value.userId
+                : userId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        silence:
+            null == silence
+                ? _value.silence
+                : silence // ignore: cast_nullable_to_non_nullable
+                    as bool,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AnnouncementsResponseImpl implements _AnnouncementsResponse {
-  const _$AnnouncementsResponseImpl(
-      {required this.id,
-      @DateTimeConverter() required this.createdAt,
-      @NullableDateTimeConverter() this.updatedAt,
-      required this.text,
-      required this.title,
-      @NullableUriConverter() this.imageUrl,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.icon,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      this.display,
-      this.needConfirmationToRead,
-      this.forYou,
-      this.isRead,
-      this.forExistingUsers = false,
-      this.userId,
-      this.silence = false});
+  const _$AnnouncementsResponseImpl({
+    required this.id,
+    @DateTimeConverter() required this.createdAt,
+    @NullableDateTimeConverter() this.updatedAt,
+    required this.text,
+    required this.title,
+    @NullableUriConverter() this.imageUrl,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.icon,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.display,
+    this.needConfirmationToRead,
+    this.forYou,
+    this.isRead,
+    this.forExistingUsers = false,
+    this.userId,
+    this.silence = false,
+  });
 
   factory _$AnnouncementsResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$AnnouncementsResponseImplFromJson(json);
@@ -326,11 +365,11 @@ class _$AnnouncementsResponseImpl implements _AnnouncementsResponse {
   @override
   @NullableUriConverter()
   final Uri? imageUrl;
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final AnnouncementIconType? icon;
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final AnnouncementDisplayType? display;
@@ -383,21 +422,22 @@ class _$AnnouncementsResponseImpl implements _AnnouncementsResponse {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      createdAt,
-      updatedAt,
-      text,
-      title,
-      imageUrl,
-      icon,
-      display,
-      needConfirmationToRead,
-      forYou,
-      isRead,
-      forExistingUsers,
-      userId,
-      silence);
+    runtimeType,
+    id,
+    createdAt,
+    updatedAt,
+    text,
+    title,
+    imageUrl,
+    icon,
+    display,
+    needConfirmationToRead,
+    forYou,
+    isRead,
+    forExistingUsers,
+    userId,
+    silence,
+  );
 
   /// Create a copy of AnnouncementsResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -405,35 +445,37 @@ class _$AnnouncementsResponseImpl implements _AnnouncementsResponse {
   @override
   @pragma('vm:prefer-inline')
   _$$AnnouncementsResponseImplCopyWith<_$AnnouncementsResponseImpl>
-      get copyWith => __$$AnnouncementsResponseImplCopyWithImpl<
-          _$AnnouncementsResponseImpl>(this, _$identity);
+  get copyWith =>
+      __$$AnnouncementsResponseImplCopyWithImpl<_$AnnouncementsResponseImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AnnouncementsResponseImplToJson(
-      this,
-    );
+    return _$$AnnouncementsResponseImplToJson(this);
   }
 }
 
 abstract class _AnnouncementsResponse implements AnnouncementsResponse {
-  const factory _AnnouncementsResponse(
-      {required final String id,
-      @DateTimeConverter() required final DateTime createdAt,
-      @NullableDateTimeConverter() final DateTime? updatedAt,
-      required final String text,
-      required final String title,
-      @NullableUriConverter() final Uri? imageUrl,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      final AnnouncementIconType? icon,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      final AnnouncementDisplayType? display,
-      final bool? needConfirmationToRead,
-      final bool? forYou,
-      final bool? isRead,
-      final bool forExistingUsers,
-      final String? userId,
-      final bool silence}) = _$AnnouncementsResponseImpl;
+  const factory _AnnouncementsResponse({
+    required final String id,
+    @DateTimeConverter() required final DateTime createdAt,
+    @NullableDateTimeConverter() final DateTime? updatedAt,
+    required final String text,
+    required final String title,
+    @NullableUriConverter() final Uri? imageUrl,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    final AnnouncementIconType? icon,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    final AnnouncementDisplayType? display,
+    final bool? needConfirmationToRead,
+    final bool? forYou,
+    final bool? isRead,
+    final bool forExistingUsers,
+    final String? userId,
+    final bool silence,
+  }) = _$AnnouncementsResponseImpl;
 
   factory _AnnouncementsResponse.fromJson(Map<String, dynamic> json) =
       _$AnnouncementsResponseImpl.fromJson;
@@ -477,5 +519,5 @@ abstract class _AnnouncementsResponse implements AnnouncementsResponse {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AnnouncementsResponseImplCopyWith<_$AnnouncementsResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

@@ -12,10 +12,12 @@ part of 'drive_files_update_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 DriveFilesUpdateRequest _$DriveFilesUpdateRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _DriveFilesUpdateRequest.fromJson(json);
 }
 
@@ -39,21 +41,25 @@ mixin _$DriveFilesUpdateRequest {
 
 /// @nodoc
 abstract class $DriveFilesUpdateRequestCopyWith<$Res> {
-  factory $DriveFilesUpdateRequestCopyWith(DriveFilesUpdateRequest value,
-          $Res Function(DriveFilesUpdateRequest) then) =
-      _$DriveFilesUpdateRequestCopyWithImpl<$Res, DriveFilesUpdateRequest>;
+  factory $DriveFilesUpdateRequestCopyWith(
+    DriveFilesUpdateRequest value,
+    $Res Function(DriveFilesUpdateRequest) then,
+  ) = _$DriveFilesUpdateRequestCopyWithImpl<$Res, DriveFilesUpdateRequest>;
   @useResult
-  $Res call(
-      {String fileId,
-      String? folderId,
-      String? name,
-      bool? isSensitive,
-      String? comment});
+  $Res call({
+    String fileId,
+    String? folderId,
+    String? name,
+    bool? isSensitive,
+    String? comment,
+  });
 }
 
 /// @nodoc
-class _$DriveFilesUpdateRequestCopyWithImpl<$Res,
-        $Val extends DriveFilesUpdateRequest>
+class _$DriveFilesUpdateRequestCopyWithImpl<
+  $Res,
+  $Val extends DriveFilesUpdateRequest
+>
     implements $DriveFilesUpdateRequestCopyWith<$Res> {
   _$DriveFilesUpdateRequestCopyWithImpl(this._value, this._then);
 
@@ -73,28 +79,36 @@ class _$DriveFilesUpdateRequestCopyWithImpl<$Res,
     Object? isSensitive = freezed,
     Object? comment = freezed,
   }) {
-    return _then(_value.copyWith(
-      fileId: null == fileId
-          ? _value.fileId
-          : fileId // ignore: cast_nullable_to_non_nullable
-              as String,
-      folderId: freezed == folderId
-          ? _value.folderId
-          : folderId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isSensitive: freezed == isSensitive
-          ? _value.isSensitive
-          : isSensitive // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      comment: freezed == comment
-          ? _value.comment
-          : comment // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            fileId:
+                null == fileId
+                    ? _value.fileId
+                    : fileId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            folderId:
+                freezed == folderId
+                    ? _value.folderId
+                    : folderId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            name:
+                freezed == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            isSensitive:
+                freezed == isSensitive
+                    ? _value.isSensitive
+                    : isSensitive // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            comment:
+                freezed == comment
+                    ? _value.comment
+                    : comment // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -102,28 +116,32 @@ class _$DriveFilesUpdateRequestCopyWithImpl<$Res,
 abstract class _$$DriveFilesUpdateRequestImplCopyWith<$Res>
     implements $DriveFilesUpdateRequestCopyWith<$Res> {
   factory _$$DriveFilesUpdateRequestImplCopyWith(
-          _$DriveFilesUpdateRequestImpl value,
-          $Res Function(_$DriveFilesUpdateRequestImpl) then) =
-      __$$DriveFilesUpdateRequestImplCopyWithImpl<$Res>;
+    _$DriveFilesUpdateRequestImpl value,
+    $Res Function(_$DriveFilesUpdateRequestImpl) then,
+  ) = __$$DriveFilesUpdateRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String fileId,
-      String? folderId,
-      String? name,
-      bool? isSensitive,
-      String? comment});
+  $Res call({
+    String fileId,
+    String? folderId,
+    String? name,
+    bool? isSensitive,
+    String? comment,
+  });
 }
 
 /// @nodoc
 class __$$DriveFilesUpdateRequestImplCopyWithImpl<$Res>
-    extends _$DriveFilesUpdateRequestCopyWithImpl<$Res,
-        _$DriveFilesUpdateRequestImpl>
+    extends
+        _$DriveFilesUpdateRequestCopyWithImpl<
+          $Res,
+          _$DriveFilesUpdateRequestImpl
+        >
     implements _$$DriveFilesUpdateRequestImplCopyWith<$Res> {
   __$$DriveFilesUpdateRequestImplCopyWithImpl(
-      _$DriveFilesUpdateRequestImpl _value,
-      $Res Function(_$DriveFilesUpdateRequestImpl) _then)
-      : super(_value, _then);
+    _$DriveFilesUpdateRequestImpl _value,
+    $Res Function(_$DriveFilesUpdateRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of DriveFilesUpdateRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -136,40 +154,48 @@ class __$$DriveFilesUpdateRequestImplCopyWithImpl<$Res>
     Object? isSensitive = freezed,
     Object? comment = freezed,
   }) {
-    return _then(_$DriveFilesUpdateRequestImpl(
-      fileId: null == fileId
-          ? _value.fileId
-          : fileId // ignore: cast_nullable_to_non_nullable
-              as String,
-      folderId: freezed == folderId
-          ? _value.folderId
-          : folderId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isSensitive: freezed == isSensitive
-          ? _value.isSensitive
-          : isSensitive // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      comment: freezed == comment
-          ? _value.comment
-          : comment // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$DriveFilesUpdateRequestImpl(
+        fileId:
+            null == fileId
+                ? _value.fileId
+                : fileId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        folderId:
+            freezed == folderId
+                ? _value.folderId
+                : folderId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        name:
+            freezed == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        isSensitive:
+            freezed == isSensitive
+                ? _value.isSensitive
+                : isSensitive // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        comment:
+            freezed == comment
+                ? _value.comment
+                : comment // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$DriveFilesUpdateRequestImpl implements _DriveFilesUpdateRequest {
-  const _$DriveFilesUpdateRequestImpl(
-      {required this.fileId,
-      this.folderId,
-      this.name,
-      this.isSensitive,
-      this.comment});
+  const _$DriveFilesUpdateRequestImpl({
+    required this.fileId,
+    this.folderId,
+    this.name,
+    this.isSensitive,
+    this.comment,
+  });
 
   factory _$DriveFilesUpdateRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$DriveFilesUpdateRequestImplFromJson(json);
@@ -215,24 +241,24 @@ class _$DriveFilesUpdateRequestImpl implements _DriveFilesUpdateRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$DriveFilesUpdateRequestImplCopyWith<_$DriveFilesUpdateRequestImpl>
-      get copyWith => __$$DriveFilesUpdateRequestImplCopyWithImpl<
-          _$DriveFilesUpdateRequestImpl>(this, _$identity);
+  get copyWith => __$$DriveFilesUpdateRequestImplCopyWithImpl<
+    _$DriveFilesUpdateRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DriveFilesUpdateRequestImplToJson(
-      this,
-    );
+    return _$$DriveFilesUpdateRequestImplToJson(this);
   }
 }
 
 abstract class _DriveFilesUpdateRequest implements DriveFilesUpdateRequest {
-  const factory _DriveFilesUpdateRequest(
-      {required final String fileId,
-      final String? folderId,
-      final String? name,
-      final bool? isSensitive,
-      final String? comment}) = _$DriveFilesUpdateRequestImpl;
+  const factory _DriveFilesUpdateRequest({
+    required final String fileId,
+    final String? folderId,
+    final String? name,
+    final bool? isSensitive,
+    final String? comment,
+  }) = _$DriveFilesUpdateRequestImpl;
 
   factory _DriveFilesUpdateRequest.fromJson(Map<String, dynamic> json) =
       _$DriveFilesUpdateRequestImpl.fromJson;
@@ -253,5 +279,5 @@ abstract class _DriveFilesUpdateRequest implements DriveFilesUpdateRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DriveFilesUpdateRequestImplCopyWith<_$DriveFilesUpdateRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

@@ -12,10 +12,12 @@ part of 'following_requests_list_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 FollowingRequestsListRequest _$FollowingRequestsListRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _FollowingRequestsListRequest.fromJson(json);
 }
 
@@ -32,23 +34,28 @@ mixin _$FollowingRequestsListRequest {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $FollowingRequestsListRequestCopyWith<FollowingRequestsListRequest>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $FollowingRequestsListRequestCopyWith<$Res> {
   factory $FollowingRequestsListRequestCopyWith(
-          FollowingRequestsListRequest value,
-          $Res Function(FollowingRequestsListRequest) then) =
-      _$FollowingRequestsListRequestCopyWithImpl<$Res,
-          FollowingRequestsListRequest>;
+    FollowingRequestsListRequest value,
+    $Res Function(FollowingRequestsListRequest) then,
+  ) =
+      _$FollowingRequestsListRequestCopyWithImpl<
+        $Res,
+        FollowingRequestsListRequest
+      >;
   @useResult
   $Res call({String? sinceId, String? untilId, int? limit});
 }
 
 /// @nodoc
-class _$FollowingRequestsListRequestCopyWithImpl<$Res,
-        $Val extends FollowingRequestsListRequest>
+class _$FollowingRequestsListRequestCopyWithImpl<
+  $Res,
+  $Val extends FollowingRequestsListRequest
+>
     implements $FollowingRequestsListRequestCopyWith<$Res> {
   _$FollowingRequestsListRequestCopyWithImpl(this._value, this._then);
 
@@ -66,20 +73,26 @@ class _$FollowingRequestsListRequestCopyWithImpl<$Res,
     Object? untilId = freezed,
     Object? limit = freezed,
   }) {
-    return _then(_value.copyWith(
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -87,9 +100,9 @@ class _$FollowingRequestsListRequestCopyWithImpl<$Res,
 abstract class _$$FollowingRequestsListRequestImplCopyWith<$Res>
     implements $FollowingRequestsListRequestCopyWith<$Res> {
   factory _$$FollowingRequestsListRequestImplCopyWith(
-          _$FollowingRequestsListRequestImpl value,
-          $Res Function(_$FollowingRequestsListRequestImpl) then) =
-      __$$FollowingRequestsListRequestImplCopyWithImpl<$Res>;
+    _$FollowingRequestsListRequestImpl value,
+    $Res Function(_$FollowingRequestsListRequestImpl) then,
+  ) = __$$FollowingRequestsListRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? sinceId, String? untilId, int? limit});
@@ -97,13 +110,16 @@ abstract class _$$FollowingRequestsListRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$FollowingRequestsListRequestImplCopyWithImpl<$Res>
-    extends _$FollowingRequestsListRequestCopyWithImpl<$Res,
-        _$FollowingRequestsListRequestImpl>
+    extends
+        _$FollowingRequestsListRequestCopyWithImpl<
+          $Res,
+          _$FollowingRequestsListRequestImpl
+        >
     implements _$$FollowingRequestsListRequestImplCopyWith<$Res> {
   __$$FollowingRequestsListRequestImplCopyWithImpl(
-      _$FollowingRequestsListRequestImpl _value,
-      $Res Function(_$FollowingRequestsListRequestImpl) _then)
-      : super(_value, _then);
+    _$FollowingRequestsListRequestImpl _value,
+    $Res Function(_$FollowingRequestsListRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of FollowingRequestsListRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -114,20 +130,25 @@ class __$$FollowingRequestsListRequestImplCopyWithImpl<$Res>
     Object? untilId = freezed,
     Object? limit = freezed,
   }) {
-    return _then(_$FollowingRequestsListRequestImpl(
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ));
+    return _then(
+      _$FollowingRequestsListRequestImpl(
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+      ),
+    );
   }
 }
 
@@ -135,12 +156,15 @@ class __$$FollowingRequestsListRequestImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$FollowingRequestsListRequestImpl
     implements _FollowingRequestsListRequest {
-  const _$FollowingRequestsListRequestImpl(
-      {this.sinceId, this.untilId, this.limit});
+  const _$FollowingRequestsListRequestImpl({
+    this.sinceId,
+    this.untilId,
+    this.limit,
+  });
 
   factory _$FollowingRequestsListRequestImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$FollowingRequestsListRequestImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$FollowingRequestsListRequestImplFromJson(json);
 
   @override
   final String? sinceId;
@@ -174,24 +198,25 @@ class _$FollowingRequestsListRequestImpl
   @override
   @pragma('vm:prefer-inline')
   _$$FollowingRequestsListRequestImplCopyWith<
-          _$FollowingRequestsListRequestImpl>
-      get copyWith => __$$FollowingRequestsListRequestImplCopyWithImpl<
-          _$FollowingRequestsListRequestImpl>(this, _$identity);
+    _$FollowingRequestsListRequestImpl
+  >
+  get copyWith => __$$FollowingRequestsListRequestImplCopyWithImpl<
+    _$FollowingRequestsListRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$FollowingRequestsListRequestImplToJson(
-      this,
-    );
+    return _$$FollowingRequestsListRequestImplToJson(this);
   }
 }
 
 abstract class _FollowingRequestsListRequest
     implements FollowingRequestsListRequest {
-  const factory _FollowingRequestsListRequest(
-      {final String? sinceId,
-      final String? untilId,
-      final int? limit}) = _$FollowingRequestsListRequestImpl;
+  const factory _FollowingRequestsListRequest({
+    final String? sinceId,
+    final String? untilId,
+    final int? limit,
+  }) = _$FollowingRequestsListRequestImpl;
 
   factory _FollowingRequestsListRequest.fromJson(Map<String, dynamic> json) =
       _$FollowingRequestsListRequestImpl.fromJson;
@@ -208,6 +233,7 @@ abstract class _FollowingRequestsListRequest
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FollowingRequestsListRequestImplCopyWith<
-          _$FollowingRequestsListRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$FollowingRequestsListRequestImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }

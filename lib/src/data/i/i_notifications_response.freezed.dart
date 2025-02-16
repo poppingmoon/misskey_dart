@@ -12,10 +12,12 @@ part of 'i_notifications_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 INotificationsResponse _$INotificationsResponseFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _INotificationsResponse.fromJson(json);
 }
 
@@ -23,8 +25,7 @@ INotificationsResponse _$INotificationsResponseFromJson(
 mixin _$INotificationsResponse {
   String get id => throw _privateConstructorUsedError;
   @DateTimeConverter()
-  DateTime get createdAt =>
-      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  DateTime get createdAt => throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   NotificationType? get type => throw _privateConstructorUsedError;
   String? get noteId => throw _privateConstructorUsedError;
@@ -66,37 +67,39 @@ mixin _$INotificationsResponse {
 
 /// @nodoc
 abstract class $INotificationsResponseCopyWith<$Res> {
-  factory $INotificationsResponseCopyWith(INotificationsResponse value,
-          $Res Function(INotificationsResponse) then) =
-      _$INotificationsResponseCopyWithImpl<$Res, INotificationsResponse>;
+  factory $INotificationsResponseCopyWith(
+    INotificationsResponse value,
+    $Res Function(INotificationsResponse) then,
+  ) = _$INotificationsResponseCopyWithImpl<$Res, INotificationsResponse>;
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime createdAt,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      NotificationType? type,
-      String? noteId,
-      String? followRequestId,
-      String? reaction,
-      int? choice,
-      String? achievement,
-      String? body,
-      String? header,
-      @NullableUriConverter() Uri? icon,
-      String? appAccessTokenId,
-      String? userId,
-      UserLite? user,
-      Note? note,
-      RolesListResponse? role,
-      List<INotificationsReaction>? reactions,
-      List<UserLite>? users,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      UserExportableEntities? exportedEntity,
-      String? fileId,
-      String? message,
-      List<String>? noteIds,
-      String? errorType,
-      ScheduledNote? draft});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime createdAt,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    NotificationType? type,
+    String? noteId,
+    String? followRequestId,
+    String? reaction,
+    int? choice,
+    String? achievement,
+    String? body,
+    String? header,
+    @NullableUriConverter() Uri? icon,
+    String? appAccessTokenId,
+    String? userId,
+    UserLite? user,
+    Note? note,
+    RolesListResponse? role,
+    List<INotificationsReaction>? reactions,
+    List<UserLite>? users,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    UserExportableEntities? exportedEntity,
+    String? fileId,
+    String? message,
+    List<String>? noteIds,
+    String? errorType,
+    ScheduledNote? draft,
+  });
 
   $UserLiteCopyWith<$Res>? get user;
   $NoteCopyWith<$Res>? get note;
@@ -105,8 +108,10 @@ abstract class $INotificationsResponseCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$INotificationsResponseCopyWithImpl<$Res,
-        $Val extends INotificationsResponse>
+class _$INotificationsResponseCopyWithImpl<
+  $Res,
+  $Val extends INotificationsResponse
+>
     implements $INotificationsResponseCopyWith<$Res> {
   _$INotificationsResponseCopyWithImpl(this._value, this._then);
 
@@ -145,104 +150,131 @@ class _$INotificationsResponseCopyWithImpl<$Res,
     Object? errorType = freezed,
     Object? draft = freezed,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as NotificationType?,
-      noteId: freezed == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      followRequestId: freezed == followRequestId
-          ? _value.followRequestId
-          : followRequestId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      reaction: freezed == reaction
-          ? _value.reaction
-          : reaction // ignore: cast_nullable_to_non_nullable
-              as String?,
-      choice: freezed == choice
-          ? _value.choice
-          : choice // ignore: cast_nullable_to_non_nullable
-              as int?,
-      achievement: freezed == achievement
-          ? _value.achievement
-          : achievement // ignore: cast_nullable_to_non_nullable
-              as String?,
-      body: freezed == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as String?,
-      header: freezed == header
-          ? _value.header
-          : header // ignore: cast_nullable_to_non_nullable
-              as String?,
-      icon: freezed == icon
-          ? _value.icon
-          : icon // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      appAccessTokenId: freezed == appAccessTokenId
-          ? _value.appAccessTokenId
-          : appAccessTokenId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      userId: freezed == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      user: freezed == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as UserLite?,
-      note: freezed == note
-          ? _value.note
-          : note // ignore: cast_nullable_to_non_nullable
-              as Note?,
-      role: freezed == role
-          ? _value.role
-          : role // ignore: cast_nullable_to_non_nullable
-              as RolesListResponse?,
-      reactions: freezed == reactions
-          ? _value.reactions
-          : reactions // ignore: cast_nullable_to_non_nullable
-              as List<INotificationsReaction>?,
-      users: freezed == users
-          ? _value.users
-          : users // ignore: cast_nullable_to_non_nullable
-              as List<UserLite>?,
-      exportedEntity: freezed == exportedEntity
-          ? _value.exportedEntity
-          : exportedEntity // ignore: cast_nullable_to_non_nullable
-              as UserExportableEntities?,
-      fileId: freezed == fileId
-          ? _value.fileId
-          : fileId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      message: freezed == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String?,
-      noteIds: freezed == noteIds
-          ? _value.noteIds
-          : noteIds // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      errorType: freezed == errorType
-          ? _value.errorType
-          : errorType // ignore: cast_nullable_to_non_nullable
-              as String?,
-      draft: freezed == draft
-          ? _value.draft
-          : draft // ignore: cast_nullable_to_non_nullable
-              as ScheduledNote?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            createdAt:
+                null == createdAt
+                    ? _value.createdAt
+                    : createdAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            type:
+                freezed == type
+                    ? _value.type
+                    : type // ignore: cast_nullable_to_non_nullable
+                        as NotificationType?,
+            noteId:
+                freezed == noteId
+                    ? _value.noteId
+                    : noteId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            followRequestId:
+                freezed == followRequestId
+                    ? _value.followRequestId
+                    : followRequestId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            reaction:
+                freezed == reaction
+                    ? _value.reaction
+                    : reaction // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            choice:
+                freezed == choice
+                    ? _value.choice
+                    : choice // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            achievement:
+                freezed == achievement
+                    ? _value.achievement
+                    : achievement // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            body:
+                freezed == body
+                    ? _value.body
+                    : body // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            header:
+                freezed == header
+                    ? _value.header
+                    : header // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            icon:
+                freezed == icon
+                    ? _value.icon
+                    : icon // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            appAccessTokenId:
+                freezed == appAccessTokenId
+                    ? _value.appAccessTokenId
+                    : appAccessTokenId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            userId:
+                freezed == userId
+                    ? _value.userId
+                    : userId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            user:
+                freezed == user
+                    ? _value.user
+                    : user // ignore: cast_nullable_to_non_nullable
+                        as UserLite?,
+            note:
+                freezed == note
+                    ? _value.note
+                    : note // ignore: cast_nullable_to_non_nullable
+                        as Note?,
+            role:
+                freezed == role
+                    ? _value.role
+                    : role // ignore: cast_nullable_to_non_nullable
+                        as RolesListResponse?,
+            reactions:
+                freezed == reactions
+                    ? _value.reactions
+                    : reactions // ignore: cast_nullable_to_non_nullable
+                        as List<INotificationsReaction>?,
+            users:
+                freezed == users
+                    ? _value.users
+                    : users // ignore: cast_nullable_to_non_nullable
+                        as List<UserLite>?,
+            exportedEntity:
+                freezed == exportedEntity
+                    ? _value.exportedEntity
+                    : exportedEntity // ignore: cast_nullable_to_non_nullable
+                        as UserExportableEntities?,
+            fileId:
+                freezed == fileId
+                    ? _value.fileId
+                    : fileId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            message:
+                freezed == message
+                    ? _value.message
+                    : message // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            noteIds:
+                freezed == noteIds
+                    ? _value.noteIds
+                    : noteIds // ignore: cast_nullable_to_non_nullable
+                        as List<String>?,
+            errorType:
+                freezed == errorType
+                    ? _value.errorType
+                    : errorType // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            draft:
+                freezed == draft
+                    ? _value.draft
+                    : draft // ignore: cast_nullable_to_non_nullable
+                        as ScheduledNote?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of INotificationsResponse
@@ -306,38 +338,39 @@ class _$INotificationsResponseCopyWithImpl<$Res,
 abstract class _$$INotificationsResponseImplCopyWith<$Res>
     implements $INotificationsResponseCopyWith<$Res> {
   factory _$$INotificationsResponseImplCopyWith(
-          _$INotificationsResponseImpl value,
-          $Res Function(_$INotificationsResponseImpl) then) =
-      __$$INotificationsResponseImplCopyWithImpl<$Res>;
+    _$INotificationsResponseImpl value,
+    $Res Function(_$INotificationsResponseImpl) then,
+  ) = __$$INotificationsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime createdAt,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      NotificationType? type,
-      String? noteId,
-      String? followRequestId,
-      String? reaction,
-      int? choice,
-      String? achievement,
-      String? body,
-      String? header,
-      @NullableUriConverter() Uri? icon,
-      String? appAccessTokenId,
-      String? userId,
-      UserLite? user,
-      Note? note,
-      RolesListResponse? role,
-      List<INotificationsReaction>? reactions,
-      List<UserLite>? users,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      UserExportableEntities? exportedEntity,
-      String? fileId,
-      String? message,
-      List<String>? noteIds,
-      String? errorType,
-      ScheduledNote? draft});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime createdAt,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    NotificationType? type,
+    String? noteId,
+    String? followRequestId,
+    String? reaction,
+    int? choice,
+    String? achievement,
+    String? body,
+    String? header,
+    @NullableUriConverter() Uri? icon,
+    String? appAccessTokenId,
+    String? userId,
+    UserLite? user,
+    Note? note,
+    RolesListResponse? role,
+    List<INotificationsReaction>? reactions,
+    List<UserLite>? users,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    UserExportableEntities? exportedEntity,
+    String? fileId,
+    String? message,
+    List<String>? noteIds,
+    String? errorType,
+    ScheduledNote? draft,
+  });
 
   @override
   $UserLiteCopyWith<$Res>? get user;
@@ -351,13 +384,13 @@ abstract class _$$INotificationsResponseImplCopyWith<$Res>
 
 /// @nodoc
 class __$$INotificationsResponseImplCopyWithImpl<$Res>
-    extends _$INotificationsResponseCopyWithImpl<$Res,
-        _$INotificationsResponseImpl>
+    extends
+        _$INotificationsResponseCopyWithImpl<$Res, _$INotificationsResponseImpl>
     implements _$$INotificationsResponseImplCopyWith<$Res> {
   __$$INotificationsResponseImplCopyWithImpl(
-      _$INotificationsResponseImpl _value,
-      $Res Function(_$INotificationsResponseImpl) _then)
-      : super(_value, _then);
+    _$INotificationsResponseImpl _value,
+    $Res Function(_$INotificationsResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of INotificationsResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -389,139 +422,165 @@ class __$$INotificationsResponseImplCopyWithImpl<$Res>
     Object? errorType = freezed,
     Object? draft = freezed,
   }) {
-    return _then(_$INotificationsResponseImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as NotificationType?,
-      noteId: freezed == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      followRequestId: freezed == followRequestId
-          ? _value.followRequestId
-          : followRequestId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      reaction: freezed == reaction
-          ? _value.reaction
-          : reaction // ignore: cast_nullable_to_non_nullable
-              as String?,
-      choice: freezed == choice
-          ? _value.choice
-          : choice // ignore: cast_nullable_to_non_nullable
-              as int?,
-      achievement: freezed == achievement
-          ? _value.achievement
-          : achievement // ignore: cast_nullable_to_non_nullable
-              as String?,
-      body: freezed == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as String?,
-      header: freezed == header
-          ? _value.header
-          : header // ignore: cast_nullable_to_non_nullable
-              as String?,
-      icon: freezed == icon
-          ? _value.icon
-          : icon // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      appAccessTokenId: freezed == appAccessTokenId
-          ? _value.appAccessTokenId
-          : appAccessTokenId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      userId: freezed == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      user: freezed == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as UserLite?,
-      note: freezed == note
-          ? _value.note
-          : note // ignore: cast_nullable_to_non_nullable
-              as Note?,
-      role: freezed == role
-          ? _value.role
-          : role // ignore: cast_nullable_to_non_nullable
-              as RolesListResponse?,
-      reactions: freezed == reactions
-          ? _value._reactions
-          : reactions // ignore: cast_nullable_to_non_nullable
-              as List<INotificationsReaction>?,
-      users: freezed == users
-          ? _value._users
-          : users // ignore: cast_nullable_to_non_nullable
-              as List<UserLite>?,
-      exportedEntity: freezed == exportedEntity
-          ? _value.exportedEntity
-          : exportedEntity // ignore: cast_nullable_to_non_nullable
-              as UserExportableEntities?,
-      fileId: freezed == fileId
-          ? _value.fileId
-          : fileId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      message: freezed == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String?,
-      noteIds: freezed == noteIds
-          ? _value._noteIds
-          : noteIds // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      errorType: freezed == errorType
-          ? _value.errorType
-          : errorType // ignore: cast_nullable_to_non_nullable
-              as String?,
-      draft: freezed == draft
-          ? _value.draft
-          : draft // ignore: cast_nullable_to_non_nullable
-              as ScheduledNote?,
-    ));
+    return _then(
+      _$INotificationsResponseImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        createdAt:
+            null == createdAt
+                ? _value.createdAt
+                : createdAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        type:
+            freezed == type
+                ? _value.type
+                : type // ignore: cast_nullable_to_non_nullable
+                    as NotificationType?,
+        noteId:
+            freezed == noteId
+                ? _value.noteId
+                : noteId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        followRequestId:
+            freezed == followRequestId
+                ? _value.followRequestId
+                : followRequestId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        reaction:
+            freezed == reaction
+                ? _value.reaction
+                : reaction // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        choice:
+            freezed == choice
+                ? _value.choice
+                : choice // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        achievement:
+            freezed == achievement
+                ? _value.achievement
+                : achievement // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        body:
+            freezed == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        header:
+            freezed == header
+                ? _value.header
+                : header // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        icon:
+            freezed == icon
+                ? _value.icon
+                : icon // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        appAccessTokenId:
+            freezed == appAccessTokenId
+                ? _value.appAccessTokenId
+                : appAccessTokenId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        userId:
+            freezed == userId
+                ? _value.userId
+                : userId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        user:
+            freezed == user
+                ? _value.user
+                : user // ignore: cast_nullable_to_non_nullable
+                    as UserLite?,
+        note:
+            freezed == note
+                ? _value.note
+                : note // ignore: cast_nullable_to_non_nullable
+                    as Note?,
+        role:
+            freezed == role
+                ? _value.role
+                : role // ignore: cast_nullable_to_non_nullable
+                    as RolesListResponse?,
+        reactions:
+            freezed == reactions
+                ? _value._reactions
+                : reactions // ignore: cast_nullable_to_non_nullable
+                    as List<INotificationsReaction>?,
+        users:
+            freezed == users
+                ? _value._users
+                : users // ignore: cast_nullable_to_non_nullable
+                    as List<UserLite>?,
+        exportedEntity:
+            freezed == exportedEntity
+                ? _value.exportedEntity
+                : exportedEntity // ignore: cast_nullable_to_non_nullable
+                    as UserExportableEntities?,
+        fileId:
+            freezed == fileId
+                ? _value.fileId
+                : fileId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        message:
+            freezed == message
+                ? _value.message
+                : message // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        noteIds:
+            freezed == noteIds
+                ? _value._noteIds
+                : noteIds // ignore: cast_nullable_to_non_nullable
+                    as List<String>?,
+        errorType:
+            freezed == errorType
+                ? _value.errorType
+                : errorType // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        draft:
+            freezed == draft
+                ? _value.draft
+                : draft // ignore: cast_nullable_to_non_nullable
+                    as ScheduledNote?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$INotificationsResponseImpl implements _INotificationsResponse {
-  const _$INotificationsResponseImpl(
-      {required this.id,
-      @DateTimeConverter() required this.createdAt,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type,
-      this.noteId,
-      this.followRequestId,
-      this.reaction,
-      this.choice,
-      this.achievement,
-      this.body,
-      this.header,
-      @NullableUriConverter() this.icon,
-      this.appAccessTokenId,
-      this.userId,
-      this.user,
-      this.note,
-      this.role,
-      final List<INotificationsReaction>? reactions,
-      final List<UserLite>? users,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      this.exportedEntity,
-      this.fileId,
-      this.message,
-      final List<String>? noteIds,
-      this.errorType,
-      this.draft})
-      : _reactions = reactions,
-        _users = users,
-        _noteIds = noteIds;
+  const _$INotificationsResponseImpl({
+    required this.id,
+    @DateTimeConverter() required this.createdAt,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type,
+    this.noteId,
+    this.followRequestId,
+    this.reaction,
+    this.choice,
+    this.achievement,
+    this.body,
+    this.header,
+    @NullableUriConverter() this.icon,
+    this.appAccessTokenId,
+    this.userId,
+    this.user,
+    this.note,
+    this.role,
+    final List<INotificationsReaction>? reactions,
+    final List<UserLite>? users,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    this.exportedEntity,
+    this.fileId,
+    this.message,
+    final List<String>? noteIds,
+    this.errorType,
+    this.draft,
+  }) : _reactions = reactions,
+       _users = users,
+       _noteIds = noteIds;
 
   factory _$INotificationsResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$INotificationsResponseImplFromJson(json);
@@ -531,7 +590,7 @@ class _$INotificationsResponseImpl implements _INotificationsResponse {
   @override
   @DateTimeConverter()
   final DateTime createdAt;
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final NotificationType? type;
@@ -582,7 +641,7 @@ class _$INotificationsResponseImpl implements _INotificationsResponse {
     return EqualUnmodifiableListView(value);
   }
 
-// ignore: invalid_annotation_target
+  // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   final UserExportableEntities? exportedEntity;
@@ -600,10 +659,10 @@ class _$INotificationsResponseImpl implements _INotificationsResponse {
     return EqualUnmodifiableListView(value);
   }
 
-// CherryPick
+  // CherryPick
   @override
   final String? errorType;
-// CherryPick
+  // CherryPick
   @override
   final ScheduledNote? draft;
 
@@ -638,8 +697,10 @@ class _$INotificationsResponseImpl implements _INotificationsResponse {
             (identical(other.user, user) || other.user == user) &&
             (identical(other.note, note) || other.note == note) &&
             (identical(other.role, role) || other.role == role) &&
-            const DeepCollectionEquality()
-                .equals(other._reactions, _reactions) &&
+            const DeepCollectionEquality().equals(
+              other._reactions,
+              _reactions,
+            ) &&
             const DeepCollectionEquality().equals(other._users, _users) &&
             (identical(other.exportedEntity, exportedEntity) ||
                 other.exportedEntity == exportedEntity) &&
@@ -654,32 +715,32 @@ class _$INotificationsResponseImpl implements _INotificationsResponse {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
-        runtimeType,
-        id,
-        createdAt,
-        type,
-        noteId,
-        followRequestId,
-        reaction,
-        choice,
-        achievement,
-        body,
-        header,
-        icon,
-        appAccessTokenId,
-        userId,
-        user,
-        note,
-        role,
-        const DeepCollectionEquality().hash(_reactions),
-        const DeepCollectionEquality().hash(_users),
-        exportedEntity,
-        fileId,
-        message,
-        const DeepCollectionEquality().hash(_noteIds),
-        errorType,
-        draft
-      ]);
+    runtimeType,
+    id,
+    createdAt,
+    type,
+    noteId,
+    followRequestId,
+    reaction,
+    choice,
+    achievement,
+    body,
+    header,
+    icon,
+    appAccessTokenId,
+    userId,
+    user,
+    note,
+    role,
+    const DeepCollectionEquality().hash(_reactions),
+    const DeepCollectionEquality().hash(_users),
+    exportedEntity,
+    fileId,
+    message,
+    const DeepCollectionEquality().hash(_noteIds),
+    errorType,
+    draft,
+  ]);
 
   /// Create a copy of INotificationsResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -687,45 +748,47 @@ class _$INotificationsResponseImpl implements _INotificationsResponse {
   @override
   @pragma('vm:prefer-inline')
   _$$INotificationsResponseImplCopyWith<_$INotificationsResponseImpl>
-      get copyWith => __$$INotificationsResponseImplCopyWithImpl<
-          _$INotificationsResponseImpl>(this, _$identity);
+  get copyWith =>
+      __$$INotificationsResponseImplCopyWithImpl<_$INotificationsResponseImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$INotificationsResponseImplToJson(
-      this,
-    );
+    return _$$INotificationsResponseImplToJson(this);
   }
 }
 
 abstract class _INotificationsResponse implements INotificationsResponse {
-  const factory _INotificationsResponse(
-      {required final String id,
-      @DateTimeConverter() required final DateTime createdAt,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      final NotificationType? type,
-      final String? noteId,
-      final String? followRequestId,
-      final String? reaction,
-      final int? choice,
-      final String? achievement,
-      final String? body,
-      final String? header,
-      @NullableUriConverter() final Uri? icon,
-      final String? appAccessTokenId,
-      final String? userId,
-      final UserLite? user,
-      final Note? note,
-      final RolesListResponse? role,
-      final List<INotificationsReaction>? reactions,
-      final List<UserLite>? users,
-      @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-      final UserExportableEntities? exportedEntity,
-      final String? fileId,
-      final String? message,
-      final List<String>? noteIds,
-      final String? errorType,
-      final ScheduledNote? draft}) = _$INotificationsResponseImpl;
+  const factory _INotificationsResponse({
+    required final String id,
+    @DateTimeConverter() required final DateTime createdAt,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    final NotificationType? type,
+    final String? noteId,
+    final String? followRequestId,
+    final String? reaction,
+    final int? choice,
+    final String? achievement,
+    final String? body,
+    final String? header,
+    @NullableUriConverter() final Uri? icon,
+    final String? appAccessTokenId,
+    final String? userId,
+    final UserLite? user,
+    final Note? note,
+    final RolesListResponse? role,
+    final List<INotificationsReaction>? reactions,
+    final List<UserLite>? users,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    final UserExportableEntities? exportedEntity,
+    final String? fileId,
+    final String? message,
+    final List<String>? noteIds,
+    final String? errorType,
+    final ScheduledNote? draft,
+  }) = _$INotificationsResponseImpl;
 
   factory _INotificationsResponse.fromJson(Map<String, dynamic> json) =
       _$INotificationsResponseImpl.fromJson;
@@ -788,11 +851,12 @@ abstract class _INotificationsResponse implements INotificationsResponse {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$INotificationsResponseImplCopyWith<_$INotificationsResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 INotificationsReaction _$INotificationsReactionFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _INotificationsReaction.fromJson(json);
 }
 
@@ -813,9 +877,10 @@ mixin _$INotificationsReaction {
 
 /// @nodoc
 abstract class $INotificationsReactionCopyWith<$Res> {
-  factory $INotificationsReactionCopyWith(INotificationsReaction value,
-          $Res Function(INotificationsReaction) then) =
-      _$INotificationsReactionCopyWithImpl<$Res, INotificationsReaction>;
+  factory $INotificationsReactionCopyWith(
+    INotificationsReaction value,
+    $Res Function(INotificationsReaction) then,
+  ) = _$INotificationsReactionCopyWithImpl<$Res, INotificationsReaction>;
   @useResult
   $Res call({UserLite user, String reaction});
 
@@ -823,8 +888,10 @@ abstract class $INotificationsReactionCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$INotificationsReactionCopyWithImpl<$Res,
-        $Val extends INotificationsReaction>
+class _$INotificationsReactionCopyWithImpl<
+  $Res,
+  $Val extends INotificationsReaction
+>
     implements $INotificationsReactionCopyWith<$Res> {
   _$INotificationsReactionCopyWithImpl(this._value, this._then);
 
@@ -837,20 +904,22 @@ class _$INotificationsReactionCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? user = null,
-    Object? reaction = null,
-  }) {
-    return _then(_value.copyWith(
-      user: null == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as UserLite,
-      reaction: null == reaction
-          ? _value.reaction
-          : reaction // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? user = null, Object? reaction = null}) {
+    return _then(
+      _value.copyWith(
+            user:
+                null == user
+                    ? _value.user
+                    : user // ignore: cast_nullable_to_non_nullable
+                        as UserLite,
+            reaction:
+                null == reaction
+                    ? _value.reaction
+                    : reaction // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of INotificationsReaction
@@ -868,9 +937,9 @@ class _$INotificationsReactionCopyWithImpl<$Res,
 abstract class _$$INotificationsReactionImplCopyWith<$Res>
     implements $INotificationsReactionCopyWith<$Res> {
   factory _$$INotificationsReactionImplCopyWith(
-          _$INotificationsReactionImpl value,
-          $Res Function(_$INotificationsReactionImpl) then) =
-      __$$INotificationsReactionImplCopyWithImpl<$Res>;
+    _$INotificationsReactionImpl value,
+    $Res Function(_$INotificationsReactionImpl) then,
+  ) = __$$INotificationsReactionImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({UserLite user, String reaction});
@@ -881,40 +950,43 @@ abstract class _$$INotificationsReactionImplCopyWith<$Res>
 
 /// @nodoc
 class __$$INotificationsReactionImplCopyWithImpl<$Res>
-    extends _$INotificationsReactionCopyWithImpl<$Res,
-        _$INotificationsReactionImpl>
+    extends
+        _$INotificationsReactionCopyWithImpl<$Res, _$INotificationsReactionImpl>
     implements _$$INotificationsReactionImplCopyWith<$Res> {
   __$$INotificationsReactionImplCopyWithImpl(
-      _$INotificationsReactionImpl _value,
-      $Res Function(_$INotificationsReactionImpl) _then)
-      : super(_value, _then);
+    _$INotificationsReactionImpl _value,
+    $Res Function(_$INotificationsReactionImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of INotificationsReaction
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? user = null,
-    Object? reaction = null,
-  }) {
-    return _then(_$INotificationsReactionImpl(
-      user: null == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as UserLite,
-      reaction: null == reaction
-          ? _value.reaction
-          : reaction // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? user = null, Object? reaction = null}) {
+    return _then(
+      _$INotificationsReactionImpl(
+        user:
+            null == user
+                ? _value.user
+                : user // ignore: cast_nullable_to_non_nullable
+                    as UserLite,
+        reaction:
+            null == reaction
+                ? _value.reaction
+                : reaction // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$INotificationsReactionImpl implements _INotificationsReaction {
-  const _$INotificationsReactionImpl(
-      {required this.user, required this.reaction});
+  const _$INotificationsReactionImpl({
+    required this.user,
+    required this.reaction,
+  });
 
   factory _$INotificationsReactionImpl.fromJson(Map<String, dynamic> json) =>
       _$$INotificationsReactionImplFromJson(json);
@@ -949,21 +1021,23 @@ class _$INotificationsReactionImpl implements _INotificationsReaction {
   @override
   @pragma('vm:prefer-inline')
   _$$INotificationsReactionImplCopyWith<_$INotificationsReactionImpl>
-      get copyWith => __$$INotificationsReactionImplCopyWithImpl<
-          _$INotificationsReactionImpl>(this, _$identity);
+  get copyWith =>
+      __$$INotificationsReactionImplCopyWithImpl<_$INotificationsReactionImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$INotificationsReactionImplToJson(
-      this,
-    );
+    return _$$INotificationsReactionImplToJson(this);
   }
 }
 
 abstract class _INotificationsReaction implements INotificationsReaction {
-  const factory _INotificationsReaction(
-      {required final UserLite user,
-      required final String reaction}) = _$INotificationsReactionImpl;
+  const factory _INotificationsReaction({
+    required final UserLite user,
+    required final String reaction,
+  }) = _$INotificationsReactionImpl;
 
   factory _INotificationsReaction.fromJson(Map<String, dynamic> json) =
       _$INotificationsReactionImpl.fromJson;
@@ -978,5 +1052,5 @@ abstract class _INotificationsReaction implements INotificationsReaction {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$INotificationsReactionImplCopyWith<_$INotificationsReactionImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

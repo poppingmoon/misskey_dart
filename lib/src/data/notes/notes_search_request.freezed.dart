@@ -12,7 +12,8 @@ part of 'notes_search_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 NotesSearchRequest _$NotesSearchRequestFromJson(Map<String, dynamic> json) {
   return _NotesSearchRequest.fromJson(json);
@@ -57,18 +58,20 @@ mixin _$NotesSearchRequest {
 /// @nodoc
 abstract class $NotesSearchRequestCopyWith<$Res> {
   factory $NotesSearchRequestCopyWith(
-          NotesSearchRequest value, $Res Function(NotesSearchRequest) then) =
-      _$NotesSearchRequestCopyWithImpl<$Res, NotesSearchRequest>;
+    NotesSearchRequest value,
+    $Res Function(NotesSearchRequest) then,
+  ) = _$NotesSearchRequestCopyWithImpl<$Res, NotesSearchRequest>;
   @useResult
-  $Res call(
-      {String query,
-      String? sinceId,
-      String? untilId,
-      int? limit,
-      int? offset,
-      String? host,
-      String? userId,
-      String? channelId});
+  $Res call({
+    String query,
+    String? sinceId,
+    String? untilId,
+    int? limit,
+    int? offset,
+    String? host,
+    String? userId,
+    String? channelId,
+  });
 }
 
 /// @nodoc
@@ -95,69 +98,83 @@ class _$NotesSearchRequestCopyWithImpl<$Res, $Val extends NotesSearchRequest>
     Object? userId = freezed,
     Object? channelId = freezed,
   }) {
-    return _then(_value.copyWith(
-      query: null == query
-          ? _value.query
-          : query // ignore: cast_nullable_to_non_nullable
-              as String,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      offset: freezed == offset
-          ? _value.offset
-          : offset // ignore: cast_nullable_to_non_nullable
-              as int?,
-      host: freezed == host
-          ? _value.host
-          : host // ignore: cast_nullable_to_non_nullable
-              as String?,
-      userId: freezed == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      channelId: freezed == channelId
-          ? _value.channelId
-          : channelId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            query:
+                null == query
+                    ? _value.query
+                    : query // ignore: cast_nullable_to_non_nullable
+                        as String,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            offset:
+                freezed == offset
+                    ? _value.offset
+                    : offset // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            host:
+                freezed == host
+                    ? _value.host
+                    : host // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            userId:
+                freezed == userId
+                    ? _value.userId
+                    : userId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            channelId:
+                freezed == channelId
+                    ? _value.channelId
+                    : channelId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$NotesSearchRequestImplCopyWith<$Res>
     implements $NotesSearchRequestCopyWith<$Res> {
-  factory _$$NotesSearchRequestImplCopyWith(_$NotesSearchRequestImpl value,
-          $Res Function(_$NotesSearchRequestImpl) then) =
-      __$$NotesSearchRequestImplCopyWithImpl<$Res>;
+  factory _$$NotesSearchRequestImplCopyWith(
+    _$NotesSearchRequestImpl value,
+    $Res Function(_$NotesSearchRequestImpl) then,
+  ) = __$$NotesSearchRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String query,
-      String? sinceId,
-      String? untilId,
-      int? limit,
-      int? offset,
-      String? host,
-      String? userId,
-      String? channelId});
+  $Res call({
+    String query,
+    String? sinceId,
+    String? untilId,
+    int? limit,
+    int? offset,
+    String? host,
+    String? userId,
+    String? channelId,
+  });
 }
 
 /// @nodoc
 class __$$NotesSearchRequestImplCopyWithImpl<$Res>
     extends _$NotesSearchRequestCopyWithImpl<$Res, _$NotesSearchRequestImpl>
     implements _$$NotesSearchRequestImplCopyWith<$Res> {
-  __$$NotesSearchRequestImplCopyWithImpl(_$NotesSearchRequestImpl _value,
-      $Res Function(_$NotesSearchRequestImpl) _then)
-      : super(_value, _then);
+  __$$NotesSearchRequestImplCopyWithImpl(
+    _$NotesSearchRequestImpl _value,
+    $Res Function(_$NotesSearchRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotesSearchRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -173,55 +190,66 @@ class __$$NotesSearchRequestImplCopyWithImpl<$Res>
     Object? userId = freezed,
     Object? channelId = freezed,
   }) {
-    return _then(_$NotesSearchRequestImpl(
-      query: null == query
-          ? _value.query
-          : query // ignore: cast_nullable_to_non_nullable
-              as String,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      offset: freezed == offset
-          ? _value.offset
-          : offset // ignore: cast_nullable_to_non_nullable
-              as int?,
-      host: freezed == host
-          ? _value.host
-          : host // ignore: cast_nullable_to_non_nullable
-              as String?,
-      userId: freezed == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      channelId: freezed == channelId
-          ? _value.channelId
-          : channelId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$NotesSearchRequestImpl(
+        query:
+            null == query
+                ? _value.query
+                : query // ignore: cast_nullable_to_non_nullable
+                    as String,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        offset:
+            freezed == offset
+                ? _value.offset
+                : offset // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        host:
+            freezed == host
+                ? _value.host
+                : host // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        userId:
+            freezed == userId
+                ? _value.userId
+                : userId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        channelId:
+            freezed == channelId
+                ? _value.channelId
+                : channelId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$NotesSearchRequestImpl implements _NotesSearchRequest {
-  const _$NotesSearchRequestImpl(
-      {required this.query,
-      this.sinceId,
-      this.untilId,
-      this.limit,
-      this.offset,
-      this.host,
-      this.userId,
-      this.channelId});
+  const _$NotesSearchRequestImpl({
+    required this.query,
+    this.sinceId,
+    this.untilId,
+    this.limit,
+    this.offset,
+    this.host,
+    this.userId,
+    this.channelId,
+  });
 
   factory _$NotesSearchRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$NotesSearchRequestImplFromJson(json);
@@ -281,8 +309,17 @@ class _$NotesSearchRequestImpl implements _NotesSearchRequest {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, query, sinceId, untilId, limit,
-      offset, host, userId, channelId);
+  int get hashCode => Object.hash(
+    runtimeType,
+    query,
+    sinceId,
+    untilId,
+    limit,
+    offset,
+    host,
+    userId,
+    channelId,
+  );
 
   /// Create a copy of NotesSearchRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -291,26 +328,27 @@ class _$NotesSearchRequestImpl implements _NotesSearchRequest {
   @pragma('vm:prefer-inline')
   _$$NotesSearchRequestImplCopyWith<_$NotesSearchRequestImpl> get copyWith =>
       __$$NotesSearchRequestImplCopyWithImpl<_$NotesSearchRequestImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotesSearchRequestImplToJson(
-      this,
-    );
+    return _$$NotesSearchRequestImplToJson(this);
   }
 }
 
 abstract class _NotesSearchRequest implements NotesSearchRequest {
-  const factory _NotesSearchRequest(
-      {required final String query,
-      final String? sinceId,
-      final String? untilId,
-      final int? limit,
-      final int? offset,
-      final String? host,
-      final String? userId,
-      final String? channelId}) = _$NotesSearchRequestImpl;
+  const factory _NotesSearchRequest({
+    required final String query,
+    final String? sinceId,
+    final String? untilId,
+    final int? limit,
+    final int? offset,
+    final String? host,
+    final String? userId,
+    final String? channelId,
+  }) = _$NotesSearchRequestImpl;
 
   factory _NotesSearchRequest.fromJson(Map<String, dynamic> json) =
       _$NotesSearchRequestImpl.fromJson;

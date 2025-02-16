@@ -12,7 +12,8 @@ part of 'roles_list_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 RolesListResponse _$RolesListResponseFromJson(Map<String, dynamic> json) {
   return _RolesListResponse.fromJson(json);
@@ -54,26 +55,28 @@ mixin _$RolesListResponse {
 /// @nodoc
 abstract class $RolesListResponseCopyWith<$Res> {
   factory $RolesListResponseCopyWith(
-          RolesListResponse value, $Res Function(RolesListResponse) then) =
-      _$RolesListResponseCopyWithImpl<$Res, RolesListResponse>;
+    RolesListResponse value,
+    $Res Function(RolesListResponse) then,
+  ) = _$RolesListResponseCopyWithImpl<$Res, RolesListResponse>;
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime createdAt,
-      @DateTimeConverter() DateTime updatedAt,
-      String name,
-      String? description,
-      @NullableColorConverter() int? color,
-      @NullableUriConverter() Uri? iconUrl,
-      String? target,
-      bool isPublic,
-      bool isAdministrator,
-      bool isModerator,
-      bool isExplorable,
-      bool asBadge,
-      bool canEditMembersByModerator,
-      int displayOrder,
-      int usersCount});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime createdAt,
+    @DateTimeConverter() DateTime updatedAt,
+    String name,
+    String? description,
+    @NullableColorConverter() int? color,
+    @NullableUriConverter() Uri? iconUrl,
+    String? target,
+    bool isPublic,
+    bool isAdministrator,
+    bool isModerator,
+    bool isExplorable,
+    bool asBadge,
+    bool canEditMembersByModerator,
+    int displayOrder,
+    int usersCount,
+  });
 }
 
 /// @nodoc
@@ -108,109 +111,131 @@ class _$RolesListResponseCopyWithImpl<$Res, $Val extends RolesListResponse>
     Object? displayOrder = null,
     Object? usersCount = null,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedAt: null == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      color: freezed == color
-          ? _value.color
-          : color // ignore: cast_nullable_to_non_nullable
-              as int?,
-      iconUrl: freezed == iconUrl
-          ? _value.iconUrl
-          : iconUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      target: freezed == target
-          ? _value.target
-          : target // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isPublic: null == isPublic
-          ? _value.isPublic
-          : isPublic // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isAdministrator: null == isAdministrator
-          ? _value.isAdministrator
-          : isAdministrator // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isModerator: null == isModerator
-          ? _value.isModerator
-          : isModerator // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isExplorable: null == isExplorable
-          ? _value.isExplorable
-          : isExplorable // ignore: cast_nullable_to_non_nullable
-              as bool,
-      asBadge: null == asBadge
-          ? _value.asBadge
-          : asBadge // ignore: cast_nullable_to_non_nullable
-              as bool,
-      canEditMembersByModerator: null == canEditMembersByModerator
-          ? _value.canEditMembersByModerator
-          : canEditMembersByModerator // ignore: cast_nullable_to_non_nullable
-              as bool,
-      displayOrder: null == displayOrder
-          ? _value.displayOrder
-          : displayOrder // ignore: cast_nullable_to_non_nullable
-              as int,
-      usersCount: null == usersCount
-          ? _value.usersCount
-          : usersCount // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            createdAt:
+                null == createdAt
+                    ? _value.createdAt
+                    : createdAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            updatedAt:
+                null == updatedAt
+                    ? _value.updatedAt
+                    : updatedAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            description:
+                freezed == description
+                    ? _value.description
+                    : description // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            color:
+                freezed == color
+                    ? _value.color
+                    : color // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            iconUrl:
+                freezed == iconUrl
+                    ? _value.iconUrl
+                    : iconUrl // ignore: cast_nullable_to_non_nullable
+                        as Uri?,
+            target:
+                freezed == target
+                    ? _value.target
+                    : target // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            isPublic:
+                null == isPublic
+                    ? _value.isPublic
+                    : isPublic // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            isAdministrator:
+                null == isAdministrator
+                    ? _value.isAdministrator
+                    : isAdministrator // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            isModerator:
+                null == isModerator
+                    ? _value.isModerator
+                    : isModerator // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            isExplorable:
+                null == isExplorable
+                    ? _value.isExplorable
+                    : isExplorable // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            asBadge:
+                null == asBadge
+                    ? _value.asBadge
+                    : asBadge // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            canEditMembersByModerator:
+                null == canEditMembersByModerator
+                    ? _value.canEditMembersByModerator
+                    : canEditMembersByModerator // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            displayOrder:
+                null == displayOrder
+                    ? _value.displayOrder
+                    : displayOrder // ignore: cast_nullable_to_non_nullable
+                        as int,
+            usersCount:
+                null == usersCount
+                    ? _value.usersCount
+                    : usersCount // ignore: cast_nullable_to_non_nullable
+                        as int,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$RolesListResponseImplCopyWith<$Res>
     implements $RolesListResponseCopyWith<$Res> {
-  factory _$$RolesListResponseImplCopyWith(_$RolesListResponseImpl value,
-          $Res Function(_$RolesListResponseImpl) then) =
-      __$$RolesListResponseImplCopyWithImpl<$Res>;
+  factory _$$RolesListResponseImplCopyWith(
+    _$RolesListResponseImpl value,
+    $Res Function(_$RolesListResponseImpl) then,
+  ) = __$$RolesListResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime createdAt,
-      @DateTimeConverter() DateTime updatedAt,
-      String name,
-      String? description,
-      @NullableColorConverter() int? color,
-      @NullableUriConverter() Uri? iconUrl,
-      String? target,
-      bool isPublic,
-      bool isAdministrator,
-      bool isModerator,
-      bool isExplorable,
-      bool asBadge,
-      bool canEditMembersByModerator,
-      int displayOrder,
-      int usersCount});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime createdAt,
+    @DateTimeConverter() DateTime updatedAt,
+    String name,
+    String? description,
+    @NullableColorConverter() int? color,
+    @NullableUriConverter() Uri? iconUrl,
+    String? target,
+    bool isPublic,
+    bool isAdministrator,
+    bool isModerator,
+    bool isExplorable,
+    bool asBadge,
+    bool canEditMembersByModerator,
+    int displayOrder,
+    int usersCount,
+  });
 }
 
 /// @nodoc
 class __$$RolesListResponseImplCopyWithImpl<$Res>
     extends _$RolesListResponseCopyWithImpl<$Res, _$RolesListResponseImpl>
     implements _$$RolesListResponseImplCopyWith<$Res> {
-  __$$RolesListResponseImplCopyWithImpl(_$RolesListResponseImpl _value,
-      $Res Function(_$RolesListResponseImpl) _then)
-      : super(_value, _then);
+  __$$RolesListResponseImplCopyWithImpl(
+    _$RolesListResponseImpl _value,
+    $Res Function(_$RolesListResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of RolesListResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -234,95 +259,114 @@ class __$$RolesListResponseImplCopyWithImpl<$Res>
     Object? displayOrder = null,
     Object? usersCount = null,
   }) {
-    return _then(_$RolesListResponseImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedAt: null == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      color: freezed == color
-          ? _value.color
-          : color // ignore: cast_nullable_to_non_nullable
-              as int?,
-      iconUrl: freezed == iconUrl
-          ? _value.iconUrl
-          : iconUrl // ignore: cast_nullable_to_non_nullable
-              as Uri?,
-      target: freezed == target
-          ? _value.target
-          : target // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isPublic: null == isPublic
-          ? _value.isPublic
-          : isPublic // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isAdministrator: null == isAdministrator
-          ? _value.isAdministrator
-          : isAdministrator // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isModerator: null == isModerator
-          ? _value.isModerator
-          : isModerator // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isExplorable: null == isExplorable
-          ? _value.isExplorable
-          : isExplorable // ignore: cast_nullable_to_non_nullable
-              as bool,
-      asBadge: null == asBadge
-          ? _value.asBadge
-          : asBadge // ignore: cast_nullable_to_non_nullable
-              as bool,
-      canEditMembersByModerator: null == canEditMembersByModerator
-          ? _value.canEditMembersByModerator
-          : canEditMembersByModerator // ignore: cast_nullable_to_non_nullable
-              as bool,
-      displayOrder: null == displayOrder
-          ? _value.displayOrder
-          : displayOrder // ignore: cast_nullable_to_non_nullable
-              as int,
-      usersCount: null == usersCount
-          ? _value.usersCount
-          : usersCount // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
+    return _then(
+      _$RolesListResponseImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        createdAt:
+            null == createdAt
+                ? _value.createdAt
+                : createdAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        updatedAt:
+            null == updatedAt
+                ? _value.updatedAt
+                : updatedAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        description:
+            freezed == description
+                ? _value.description
+                : description // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        color:
+            freezed == color
+                ? _value.color
+                : color // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        iconUrl:
+            freezed == iconUrl
+                ? _value.iconUrl
+                : iconUrl // ignore: cast_nullable_to_non_nullable
+                    as Uri?,
+        target:
+            freezed == target
+                ? _value.target
+                : target // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        isPublic:
+            null == isPublic
+                ? _value.isPublic
+                : isPublic // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        isAdministrator:
+            null == isAdministrator
+                ? _value.isAdministrator
+                : isAdministrator // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        isModerator:
+            null == isModerator
+                ? _value.isModerator
+                : isModerator // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        isExplorable:
+            null == isExplorable
+                ? _value.isExplorable
+                : isExplorable // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        asBadge:
+            null == asBadge
+                ? _value.asBadge
+                : asBadge // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        canEditMembersByModerator:
+            null == canEditMembersByModerator
+                ? _value.canEditMembersByModerator
+                : canEditMembersByModerator // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        displayOrder:
+            null == displayOrder
+                ? _value.displayOrder
+                : displayOrder // ignore: cast_nullable_to_non_nullable
+                    as int,
+        usersCount:
+            null == usersCount
+                ? _value.usersCount
+                : usersCount // ignore: cast_nullable_to_non_nullable
+                    as int,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$RolesListResponseImpl implements _RolesListResponse {
-  const _$RolesListResponseImpl(
-      {required this.id,
-      @DateTimeConverter() required this.createdAt,
-      @DateTimeConverter() required this.updatedAt,
-      required this.name,
-      this.description,
-      @NullableColorConverter() this.color,
-      @NullableUriConverter() this.iconUrl,
-      this.target,
-      required this.isPublic,
-      required this.isAdministrator,
-      required this.isModerator,
-      required this.isExplorable,
-      required this.asBadge,
-      required this.canEditMembersByModerator,
-      required this.displayOrder,
-      required this.usersCount});
+  const _$RolesListResponseImpl({
+    required this.id,
+    @DateTimeConverter() required this.createdAt,
+    @DateTimeConverter() required this.updatedAt,
+    required this.name,
+    this.description,
+    @NullableColorConverter() this.color,
+    @NullableUriConverter() this.iconUrl,
+    this.target,
+    required this.isPublic,
+    required this.isAdministrator,
+    required this.isModerator,
+    required this.isExplorable,
+    required this.asBadge,
+    required this.canEditMembersByModerator,
+    required this.displayOrder,
+    required this.usersCount,
+  });
 
   factory _$RolesListResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$RolesListResponseImplFromJson(json);
@@ -394,8 +438,10 @@ class _$RolesListResponseImpl implements _RolesListResponse {
             (identical(other.isExplorable, isExplorable) ||
                 other.isExplorable == isExplorable) &&
             (identical(other.asBadge, asBadge) || other.asBadge == asBadge) &&
-            (identical(other.canEditMembersByModerator,
-                    canEditMembersByModerator) ||
+            (identical(
+                  other.canEditMembersByModerator,
+                  canEditMembersByModerator,
+                ) ||
                 other.canEditMembersByModerator == canEditMembersByModerator) &&
             (identical(other.displayOrder, displayOrder) ||
                 other.displayOrder == displayOrder) &&
@@ -406,23 +452,24 @@ class _$RolesListResponseImpl implements _RolesListResponse {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      createdAt,
-      updatedAt,
-      name,
-      description,
-      color,
-      iconUrl,
-      target,
-      isPublic,
-      isAdministrator,
-      isModerator,
-      isExplorable,
-      asBadge,
-      canEditMembersByModerator,
-      displayOrder,
-      usersCount);
+    runtimeType,
+    id,
+    createdAt,
+    updatedAt,
+    name,
+    description,
+    color,
+    iconUrl,
+    target,
+    isPublic,
+    isAdministrator,
+    isModerator,
+    isExplorable,
+    asBadge,
+    canEditMembersByModerator,
+    displayOrder,
+    usersCount,
+  );
 
   /// Create a copy of RolesListResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -431,34 +478,35 @@ class _$RolesListResponseImpl implements _RolesListResponse {
   @pragma('vm:prefer-inline')
   _$$RolesListResponseImplCopyWith<_$RolesListResponseImpl> get copyWith =>
       __$$RolesListResponseImplCopyWithImpl<_$RolesListResponseImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$RolesListResponseImplToJson(
-      this,
-    );
+    return _$$RolesListResponseImplToJson(this);
   }
 }
 
 abstract class _RolesListResponse implements RolesListResponse {
-  const factory _RolesListResponse(
-      {required final String id,
-      @DateTimeConverter() required final DateTime createdAt,
-      @DateTimeConverter() required final DateTime updatedAt,
-      required final String name,
-      final String? description,
-      @NullableColorConverter() final int? color,
-      @NullableUriConverter() final Uri? iconUrl,
-      final String? target,
-      required final bool isPublic,
-      required final bool isAdministrator,
-      required final bool isModerator,
-      required final bool isExplorable,
-      required final bool asBadge,
-      required final bool canEditMembersByModerator,
-      required final int displayOrder,
-      required final int usersCount}) = _$RolesListResponseImpl;
+  const factory _RolesListResponse({
+    required final String id,
+    @DateTimeConverter() required final DateTime createdAt,
+    @DateTimeConverter() required final DateTime updatedAt,
+    required final String name,
+    final String? description,
+    @NullableColorConverter() final int? color,
+    @NullableUriConverter() final Uri? iconUrl,
+    final String? target,
+    required final bool isPublic,
+    required final bool isAdministrator,
+    required final bool isModerator,
+    required final bool isExplorable,
+    required final bool asBadge,
+    required final bool canEditMembersByModerator,
+    required final int displayOrder,
+    required final int usersCount,
+  }) = _$RolesListResponseImpl;
 
   factory _RolesListResponse.fromJson(Map<String, dynamic> json) =
       _$RolesListResponseImpl.fromJson;

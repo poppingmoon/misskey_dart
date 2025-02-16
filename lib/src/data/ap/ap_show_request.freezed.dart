@@ -12,7 +12,8 @@ part of 'ap_show_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ApShowRequest _$ApShowRequestFromJson(Map<String, dynamic> json) {
   return _ApShowRequest.fromJson(json);
@@ -36,8 +37,9 @@ mixin _$ApShowRequest {
 /// @nodoc
 abstract class $ApShowRequestCopyWith<$Res> {
   factory $ApShowRequestCopyWith(
-          ApShowRequest value, $Res Function(ApShowRequest) then) =
-      _$ApShowRequestCopyWithImpl<$Res, ApShowRequest>;
+    ApShowRequest value,
+    $Res Function(ApShowRequest) then,
+  ) = _$ApShowRequestCopyWithImpl<$Res, ApShowRequest>;
   @useResult
   $Res call({@UriConverter() Uri uri});
 }
@@ -56,15 +58,17 @@ class _$ApShowRequestCopyWithImpl<$Res, $Val extends ApShowRequest>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? uri = null,
-  }) {
-    return _then(_value.copyWith(
-      uri: null == uri
-          ? _value.uri
-          : uri // ignore: cast_nullable_to_non_nullable
-              as Uri,
-    ) as $Val);
+  $Res call({Object? uri = null}) {
+    return _then(
+      _value.copyWith(
+            uri:
+                null == uri
+                    ? _value.uri
+                    : uri // ignore: cast_nullable_to_non_nullable
+                        as Uri,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -72,8 +76,9 @@ class _$ApShowRequestCopyWithImpl<$Res, $Val extends ApShowRequest>
 abstract class _$$ApShowRequestImplCopyWith<$Res>
     implements $ApShowRequestCopyWith<$Res> {
   factory _$$ApShowRequestImplCopyWith(
-          _$ApShowRequestImpl value, $Res Function(_$ApShowRequestImpl) then) =
-      __$$ApShowRequestImplCopyWithImpl<$Res>;
+    _$ApShowRequestImpl value,
+    $Res Function(_$ApShowRequestImpl) then,
+  ) = __$$ApShowRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@UriConverter() Uri uri});
@@ -84,22 +89,24 @@ class __$$ApShowRequestImplCopyWithImpl<$Res>
     extends _$ApShowRequestCopyWithImpl<$Res, _$ApShowRequestImpl>
     implements _$$ApShowRequestImplCopyWith<$Res> {
   __$$ApShowRequestImplCopyWithImpl(
-      _$ApShowRequestImpl _value, $Res Function(_$ApShowRequestImpl) _then)
-      : super(_value, _then);
+    _$ApShowRequestImpl _value,
+    $Res Function(_$ApShowRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ApShowRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? uri = null,
-  }) {
-    return _then(_$ApShowRequestImpl(
-      uri: null == uri
-          ? _value.uri
-          : uri // ignore: cast_nullable_to_non_nullable
-              as Uri,
-    ));
+  $Res call({Object? uri = null}) {
+    return _then(
+      _$ApShowRequestImpl(
+        uri:
+            null == uri
+                ? _value.uri
+                : uri // ignore: cast_nullable_to_non_nullable
+                    as Uri,
+      ),
+    );
   }
 }
 
@@ -142,9 +149,7 @@ class _$ApShowRequestImpl implements _ApShowRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ApShowRequestImplToJson(
-      this,
-    );
+    return _$$ApShowRequestImplToJson(this);
   }
 }
 

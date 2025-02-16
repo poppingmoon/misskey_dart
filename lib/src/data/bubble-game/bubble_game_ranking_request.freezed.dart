@@ -12,10 +12,12 @@ part of 'bubble_game_ranking_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 BubbleGameRankingRequest _$BubbleGameRankingRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _BubbleGameRankingRequest.fromJson(json);
 }
 
@@ -35,16 +37,19 @@ mixin _$BubbleGameRankingRequest {
 
 /// @nodoc
 abstract class $BubbleGameRankingRequestCopyWith<$Res> {
-  factory $BubbleGameRankingRequestCopyWith(BubbleGameRankingRequest value,
-          $Res Function(BubbleGameRankingRequest) then) =
-      _$BubbleGameRankingRequestCopyWithImpl<$Res, BubbleGameRankingRequest>;
+  factory $BubbleGameRankingRequestCopyWith(
+    BubbleGameRankingRequest value,
+    $Res Function(BubbleGameRankingRequest) then,
+  ) = _$BubbleGameRankingRequestCopyWithImpl<$Res, BubbleGameRankingRequest>;
   @useResult
   $Res call({String gameMode});
 }
 
 /// @nodoc
-class _$BubbleGameRankingRequestCopyWithImpl<$Res,
-        $Val extends BubbleGameRankingRequest>
+class _$BubbleGameRankingRequestCopyWithImpl<
+  $Res,
+  $Val extends BubbleGameRankingRequest
+>
     implements $BubbleGameRankingRequestCopyWith<$Res> {
   _$BubbleGameRankingRequestCopyWithImpl(this._value, this._then);
 
@@ -57,15 +62,17 @@ class _$BubbleGameRankingRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? gameMode = null,
-  }) {
-    return _then(_value.copyWith(
-      gameMode: null == gameMode
-          ? _value.gameMode
-          : gameMode // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? gameMode = null}) {
+    return _then(
+      _value.copyWith(
+            gameMode:
+                null == gameMode
+                    ? _value.gameMode
+                    : gameMode // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -73,9 +80,9 @@ class _$BubbleGameRankingRequestCopyWithImpl<$Res,
 abstract class _$$BubbleGameRankingRequestImplCopyWith<$Res>
     implements $BubbleGameRankingRequestCopyWith<$Res> {
   factory _$$BubbleGameRankingRequestImplCopyWith(
-          _$BubbleGameRankingRequestImpl value,
-          $Res Function(_$BubbleGameRankingRequestImpl) then) =
-      __$$BubbleGameRankingRequestImplCopyWithImpl<$Res>;
+    _$BubbleGameRankingRequestImpl value,
+    $Res Function(_$BubbleGameRankingRequestImpl) then,
+  ) = __$$BubbleGameRankingRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String gameMode});
@@ -83,27 +90,31 @@ abstract class _$$BubbleGameRankingRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$BubbleGameRankingRequestImplCopyWithImpl<$Res>
-    extends _$BubbleGameRankingRequestCopyWithImpl<$Res,
-        _$BubbleGameRankingRequestImpl>
+    extends
+        _$BubbleGameRankingRequestCopyWithImpl<
+          $Res,
+          _$BubbleGameRankingRequestImpl
+        >
     implements _$$BubbleGameRankingRequestImplCopyWith<$Res> {
   __$$BubbleGameRankingRequestImplCopyWithImpl(
-      _$BubbleGameRankingRequestImpl _value,
-      $Res Function(_$BubbleGameRankingRequestImpl) _then)
-      : super(_value, _then);
+    _$BubbleGameRankingRequestImpl _value,
+    $Res Function(_$BubbleGameRankingRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of BubbleGameRankingRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? gameMode = null,
-  }) {
-    return _then(_$BubbleGameRankingRequestImpl(
-      gameMode: null == gameMode
-          ? _value.gameMode
-          : gameMode // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? gameMode = null}) {
+    return _then(
+      _$BubbleGameRankingRequestImpl(
+        gameMode:
+            null == gameMode
+                ? _value.gameMode
+                : gameMode // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -142,14 +153,13 @@ class _$BubbleGameRankingRequestImpl implements _BubbleGameRankingRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$BubbleGameRankingRequestImplCopyWith<_$BubbleGameRankingRequestImpl>
-      get copyWith => __$$BubbleGameRankingRequestImplCopyWithImpl<
-          _$BubbleGameRankingRequestImpl>(this, _$identity);
+  get copyWith => __$$BubbleGameRankingRequestImplCopyWithImpl<
+    _$BubbleGameRankingRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$BubbleGameRankingRequestImplToJson(
-      this,
-    );
+    return _$$BubbleGameRankingRequestImplToJson(this);
   }
 }
 
@@ -168,5 +178,5 @@ abstract class _BubbleGameRankingRequest implements BubbleGameRankingRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BubbleGameRankingRequestImplCopyWith<_$BubbleGameRankingRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

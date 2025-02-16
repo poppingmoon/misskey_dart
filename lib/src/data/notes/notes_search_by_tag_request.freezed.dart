@@ -12,10 +12,12 @@ part of 'notes_search_by_tag_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 NotesSearchByTagRequest _$NotesSearchByTagRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _NotesSearchByTagRequest.fromJson(json);
 }
 
@@ -42,24 +44,28 @@ mixin _$NotesSearchByTagRequest {
 
 /// @nodoc
 abstract class $NotesSearchByTagRequestCopyWith<$Res> {
-  factory $NotesSearchByTagRequestCopyWith(NotesSearchByTagRequest value,
-          $Res Function(NotesSearchByTagRequest) then) =
-      _$NotesSearchByTagRequestCopyWithImpl<$Res, NotesSearchByTagRequest>;
+  factory $NotesSearchByTagRequestCopyWith(
+    NotesSearchByTagRequest value,
+    $Res Function(NotesSearchByTagRequest) then,
+  ) = _$NotesSearchByTagRequestCopyWithImpl<$Res, NotesSearchByTagRequest>;
   @useResult
-  $Res call(
-      {String tag,
-      bool? reply,
-      bool? renote,
-      bool? withFiles,
-      bool? poll,
-      String? sinceId,
-      String? untilId,
-      int? limit});
+  $Res call({
+    String tag,
+    bool? reply,
+    bool? renote,
+    bool? withFiles,
+    bool? poll,
+    String? sinceId,
+    String? untilId,
+    int? limit,
+  });
 }
 
 /// @nodoc
-class _$NotesSearchByTagRequestCopyWithImpl<$Res,
-        $Val extends NotesSearchByTagRequest>
+class _$NotesSearchByTagRequestCopyWithImpl<
+  $Res,
+  $Val extends NotesSearchByTagRequest
+>
     implements $NotesSearchByTagRequestCopyWith<$Res> {
   _$NotesSearchByTagRequestCopyWithImpl(this._value, this._then);
 
@@ -82,40 +88,51 @@ class _$NotesSearchByTagRequestCopyWithImpl<$Res,
     Object? untilId = freezed,
     Object? limit = freezed,
   }) {
-    return _then(_value.copyWith(
-      tag: null == tag
-          ? _value.tag
-          : tag // ignore: cast_nullable_to_non_nullable
-              as String,
-      reply: freezed == reply
-          ? _value.reply
-          : reply // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      renote: freezed == renote
-          ? _value.renote
-          : renote // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withFiles: freezed == withFiles
-          ? _value.withFiles
-          : withFiles // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      poll: freezed == poll
-          ? _value.poll
-          : poll // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            tag:
+                null == tag
+                    ? _value.tag
+                    : tag // ignore: cast_nullable_to_non_nullable
+                        as String,
+            reply:
+                freezed == reply
+                    ? _value.reply
+                    : reply // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            renote:
+                freezed == renote
+                    ? _value.renote
+                    : renote // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            withFiles:
+                freezed == withFiles
+                    ? _value.withFiles
+                    : withFiles // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            poll:
+                freezed == poll
+                    ? _value.poll
+                    : poll // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -123,31 +140,35 @@ class _$NotesSearchByTagRequestCopyWithImpl<$Res,
 abstract class _$$NotesSearchByTagRequestImplCopyWith<$Res>
     implements $NotesSearchByTagRequestCopyWith<$Res> {
   factory _$$NotesSearchByTagRequestImplCopyWith(
-          _$NotesSearchByTagRequestImpl value,
-          $Res Function(_$NotesSearchByTagRequestImpl) then) =
-      __$$NotesSearchByTagRequestImplCopyWithImpl<$Res>;
+    _$NotesSearchByTagRequestImpl value,
+    $Res Function(_$NotesSearchByTagRequestImpl) then,
+  ) = __$$NotesSearchByTagRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String tag,
-      bool? reply,
-      bool? renote,
-      bool? withFiles,
-      bool? poll,
-      String? sinceId,
-      String? untilId,
-      int? limit});
+  $Res call({
+    String tag,
+    bool? reply,
+    bool? renote,
+    bool? withFiles,
+    bool? poll,
+    String? sinceId,
+    String? untilId,
+    int? limit,
+  });
 }
 
 /// @nodoc
 class __$$NotesSearchByTagRequestImplCopyWithImpl<$Res>
-    extends _$NotesSearchByTagRequestCopyWithImpl<$Res,
-        _$NotesSearchByTagRequestImpl>
+    extends
+        _$NotesSearchByTagRequestCopyWithImpl<
+          $Res,
+          _$NotesSearchByTagRequestImpl
+        >
     implements _$$NotesSearchByTagRequestImplCopyWith<$Res> {
   __$$NotesSearchByTagRequestImplCopyWithImpl(
-      _$NotesSearchByTagRequestImpl _value,
-      $Res Function(_$NotesSearchByTagRequestImpl) _then)
-      : super(_value, _then);
+    _$NotesSearchByTagRequestImpl _value,
+    $Res Function(_$NotesSearchByTagRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotesSearchByTagRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -163,55 +184,66 @@ class __$$NotesSearchByTagRequestImplCopyWithImpl<$Res>
     Object? untilId = freezed,
     Object? limit = freezed,
   }) {
-    return _then(_$NotesSearchByTagRequestImpl(
-      tag: null == tag
-          ? _value.tag
-          : tag // ignore: cast_nullable_to_non_nullable
-              as String,
-      reply: freezed == reply
-          ? _value.reply
-          : reply // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      renote: freezed == renote
-          ? _value.renote
-          : renote // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withFiles: freezed == withFiles
-          ? _value.withFiles
-          : withFiles // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      poll: freezed == poll
-          ? _value.poll
-          : poll // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ));
+    return _then(
+      _$NotesSearchByTagRequestImpl(
+        tag:
+            null == tag
+                ? _value.tag
+                : tag // ignore: cast_nullable_to_non_nullable
+                    as String,
+        reply:
+            freezed == reply
+                ? _value.reply
+                : reply // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        renote:
+            freezed == renote
+                ? _value.renote
+                : renote // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        withFiles:
+            freezed == withFiles
+                ? _value.withFiles
+                : withFiles // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        poll:
+            freezed == poll
+                ? _value.poll
+                : poll // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$NotesSearchByTagRequestImpl implements _NotesSearchByTagRequest {
-  const _$NotesSearchByTagRequestImpl(
-      {required this.tag,
-      this.reply,
-      this.renote,
-      this.withFiles,
-      this.poll,
-      this.sinceId,
-      this.untilId,
-      this.limit});
+  const _$NotesSearchByTagRequestImpl({
+    required this.tag,
+    this.reply,
+    this.renote,
+    this.withFiles,
+    this.poll,
+    this.sinceId,
+    this.untilId,
+    this.limit,
+  });
 
   factory _$NotesSearchByTagRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$NotesSearchByTagRequestImplFromJson(json);
@@ -256,8 +288,17 @@ class _$NotesSearchByTagRequestImpl implements _NotesSearchByTagRequest {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, tag, reply, renote, withFiles,
-      poll, sinceId, untilId, limit);
+  int get hashCode => Object.hash(
+    runtimeType,
+    tag,
+    reply,
+    renote,
+    withFiles,
+    poll,
+    sinceId,
+    untilId,
+    limit,
+  );
 
   /// Create a copy of NotesSearchByTagRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -265,27 +306,27 @@ class _$NotesSearchByTagRequestImpl implements _NotesSearchByTagRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$NotesSearchByTagRequestImplCopyWith<_$NotesSearchByTagRequestImpl>
-      get copyWith => __$$NotesSearchByTagRequestImplCopyWithImpl<
-          _$NotesSearchByTagRequestImpl>(this, _$identity);
+  get copyWith => __$$NotesSearchByTagRequestImplCopyWithImpl<
+    _$NotesSearchByTagRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotesSearchByTagRequestImplToJson(
-      this,
-    );
+    return _$$NotesSearchByTagRequestImplToJson(this);
   }
 }
 
 abstract class _NotesSearchByTagRequest implements NotesSearchByTagRequest {
-  const factory _NotesSearchByTagRequest(
-      {required final String tag,
-      final bool? reply,
-      final bool? renote,
-      final bool? withFiles,
-      final bool? poll,
-      final String? sinceId,
-      final String? untilId,
-      final int? limit}) = _$NotesSearchByTagRequestImpl;
+  const factory _NotesSearchByTagRequest({
+    required final String tag,
+    final bool? reply,
+    final bool? renote,
+    final bool? withFiles,
+    final bool? poll,
+    final String? sinceId,
+    final String? untilId,
+    final int? limit,
+  }) = _$NotesSearchByTagRequestImpl;
 
   factory _NotesSearchByTagRequest.fromJson(Map<String, dynamic> json) =
       _$NotesSearchByTagRequestImpl.fromJson;
@@ -312,5 +353,5 @@ abstract class _NotesSearchByTagRequest implements NotesSearchByTagRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesSearchByTagRequestImplCopyWith<_$NotesSearchByTagRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

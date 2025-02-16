@@ -150,7 +150,8 @@ class StreamingService implements StreamingController, WebSocketController {
     try {
       final webSocketChannel = _webSocketChannel;
       if (webSocketChannel != null && webSocketChannel.closeCode == null) {
-        /*await*/ Future.wait([
+        /*await*/
+        Future.wait([
           _subscription?.cancel() ?? Future.value(),
           webSocketChannel.sink.close(),
         ]);
@@ -182,8 +183,11 @@ class StreamingService implements StreamingController, WebSocketController {
     Map<String, dynamic>? parameters,
     String id,
   ) {
-    final body =
-        StreamingRequestBody(channel: channel, id: id, params: parameters);
+    final body = StreamingRequestBody(
+      channel: channel,
+      id: id,
+      params: parameters,
+    );
     sendRequest(StreamingRequestType.connect, body);
     _connections.add(body);
     if (_connections.length > 1) _activeStreams++;
@@ -249,70 +253,55 @@ class StreamingService implements StreamingController, WebSocketController {
 
   @override
   void requestLog(String id, int length) => sendRequest(
-        StreamingRequestType.ch,
-        StreamingRequestBody(
-          id: id,
-          type: "requestLog",
-          body: {"id": id, "length": length},
-        ),
-      );
+    StreamingRequestType.ch,
+    StreamingRequestBody(
+      id: id,
+      type: "requestLog",
+      body: {"id": id, "length": length},
+    ),
+  );
 
   @override
   Stream<StreamingResponse> localTimelineStream({
     required LocalTimelineParameter parameter,
     required String id,
-  }) =>
-      addChannel(Channel.localTimeline, parameter.toJson(), id);
+  }) => addChannel(Channel.localTimeline, parameter.toJson(), id);
 
   @override
   Stream<StreamingResponse> globalTimelineStream({
     required GlobalTimelineParameter parameter,
     required String id,
-  }) =>
-      addChannel(Channel.globalTimeline, parameter.toJson(), id);
+  }) => addChannel(Channel.globalTimeline, parameter.toJson(), id);
 
   @override
   Stream<StreamingResponse> hybridTimelineStream({
     required HybridTimelineParameter parameter,
     required String id,
-  }) =>
-      addChannel(Channel.hybridTimeline, parameter.toJson(), id);
+  }) => addChannel(Channel.hybridTimeline, parameter.toJson(), id);
 
   @override
   Stream<StreamingResponse> roleTimelineStream({
     required String roleId,
     String? id,
-  }) =>
-      addChannel(Channel.roleTimeline, {"roleId": roleId}, id ?? roleId);
+  }) => addChannel(Channel.roleTimeline, {"roleId": roleId}, id ?? roleId);
 
   @override
   Stream<StreamingResponse> channelStream({
     required String channelId,
     String? id,
-  }) =>
-      addChannel(
-        Channel.channel,
-        {"channelId": channelId},
-        id ?? channelId,
-      );
+  }) => addChannel(Channel.channel, {"channelId": channelId}, id ?? channelId);
 
   @override
   Stream<StreamingResponse> userListStream({
     required String listId,
     String? id,
-  }) =>
-      addChannel(Channel.userList, {"listId": listId}, id ?? listId);
+  }) => addChannel(Channel.userList, {"listId": listId}, id ?? listId);
 
   @override
   Stream<StreamingResponse> antennaStream({
     required String antennaId,
     String? id,
-  }) =>
-      addChannel(
-        Channel.antenna,
-        {"antennaId": antennaId},
-        id ?? antennaId,
-      );
+  }) => addChannel(Channel.antenna, {"antennaId": antennaId}, id ?? antennaId);
 
   @override
   Stream<StreamingResponse> serverStatsLogStream({required String id}) =>
@@ -330,6 +319,5 @@ class StreamingService implements StreamingController, WebSocketController {
   Stream<StreamingResponse> homeTimelineStream({
     required HomeTimelineParameter parameter,
     required String id,
-  }) =>
-      addChannel(Channel.homeTimeline, parameter.toJson(), id);
+  }) => addChannel(Channel.homeTimeline, parameter.toJson(), id);
 }

@@ -12,10 +12,12 @@ part of 'users_report_abuse_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 UsersReportAbuseRequest _$UsersReportAbuseRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _UsersReportAbuse.fromJson(json);
 }
 
@@ -36,16 +38,19 @@ mixin _$UsersReportAbuseRequest {
 
 /// @nodoc
 abstract class $UsersReportAbuseRequestCopyWith<$Res> {
-  factory $UsersReportAbuseRequestCopyWith(UsersReportAbuseRequest value,
-          $Res Function(UsersReportAbuseRequest) then) =
-      _$UsersReportAbuseRequestCopyWithImpl<$Res, UsersReportAbuseRequest>;
+  factory $UsersReportAbuseRequestCopyWith(
+    UsersReportAbuseRequest value,
+    $Res Function(UsersReportAbuseRequest) then,
+  ) = _$UsersReportAbuseRequestCopyWithImpl<$Res, UsersReportAbuseRequest>;
   @useResult
   $Res call({String userId, String comment});
 }
 
 /// @nodoc
-class _$UsersReportAbuseRequestCopyWithImpl<$Res,
-        $Val extends UsersReportAbuseRequest>
+class _$UsersReportAbuseRequestCopyWithImpl<
+  $Res,
+  $Val extends UsersReportAbuseRequest
+>
     implements $UsersReportAbuseRequestCopyWith<$Res> {
   _$UsersReportAbuseRequestCopyWithImpl(this._value, this._then);
 
@@ -58,29 +63,32 @@ class _$UsersReportAbuseRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? userId = null,
-    Object? comment = null,
-  }) {
-    return _then(_value.copyWith(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      comment: null == comment
-          ? _value.comment
-          : comment // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? userId = null, Object? comment = null}) {
+    return _then(
+      _value.copyWith(
+            userId:
+                null == userId
+                    ? _value.userId
+                    : userId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            comment:
+                null == comment
+                    ? _value.comment
+                    : comment // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$UsersReportAbuseImplCopyWith<$Res>
     implements $UsersReportAbuseRequestCopyWith<$Res> {
-  factory _$$UsersReportAbuseImplCopyWith(_$UsersReportAbuseImpl value,
-          $Res Function(_$UsersReportAbuseImpl) then) =
-      __$$UsersReportAbuseImplCopyWithImpl<$Res>;
+  factory _$$UsersReportAbuseImplCopyWith(
+    _$UsersReportAbuseImpl value,
+    $Res Function(_$UsersReportAbuseImpl) then,
+  ) = __$$UsersReportAbuseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String userId, String comment});
@@ -90,28 +98,30 @@ abstract class _$$UsersReportAbuseImplCopyWith<$Res>
 class __$$UsersReportAbuseImplCopyWithImpl<$Res>
     extends _$UsersReportAbuseRequestCopyWithImpl<$Res, _$UsersReportAbuseImpl>
     implements _$$UsersReportAbuseImplCopyWith<$Res> {
-  __$$UsersReportAbuseImplCopyWithImpl(_$UsersReportAbuseImpl _value,
-      $Res Function(_$UsersReportAbuseImpl) _then)
-      : super(_value, _then);
+  __$$UsersReportAbuseImplCopyWithImpl(
+    _$UsersReportAbuseImpl _value,
+    $Res Function(_$UsersReportAbuseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UsersReportAbuseRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? userId = null,
-    Object? comment = null,
-  }) {
-    return _then(_$UsersReportAbuseImpl(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      comment: null == comment
-          ? _value.comment
-          : comment // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? userId = null, Object? comment = null}) {
+    return _then(
+      _$UsersReportAbuseImpl(
+        userId:
+            null == userId
+                ? _value.userId
+                : userId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        comment:
+            null == comment
+                ? _value.comment
+                : comment // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -153,20 +163,21 @@ class _$UsersReportAbuseImpl implements _UsersReportAbuse {
   @pragma('vm:prefer-inline')
   _$$UsersReportAbuseImplCopyWith<_$UsersReportAbuseImpl> get copyWith =>
       __$$UsersReportAbuseImplCopyWithImpl<_$UsersReportAbuseImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UsersReportAbuseImplToJson(
-      this,
-    );
+    return _$$UsersReportAbuseImplToJson(this);
   }
 }
 
 abstract class _UsersReportAbuse implements UsersReportAbuseRequest {
-  const factory _UsersReportAbuse(
-      {required final String userId,
-      required final String comment}) = _$UsersReportAbuseImpl;
+  const factory _UsersReportAbuse({
+    required final String userId,
+    required final String comment,
+  }) = _$UsersReportAbuseImpl;
 
   factory _UsersReportAbuse.fromJson(Map<String, dynamic> json) =
       _$UsersReportAbuseImpl.fromJson;

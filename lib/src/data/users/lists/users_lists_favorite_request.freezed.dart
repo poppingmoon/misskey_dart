@@ -12,10 +12,12 @@ part of 'users_lists_favorite_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 UsersListsFavoriteRequest _$UsersListsFavoriteRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _UsersListsFavoriteRequest.fromJson(json);
 }
 
@@ -35,16 +37,19 @@ mixin _$UsersListsFavoriteRequest {
 
 /// @nodoc
 abstract class $UsersListsFavoriteRequestCopyWith<$Res> {
-  factory $UsersListsFavoriteRequestCopyWith(UsersListsFavoriteRequest value,
-          $Res Function(UsersListsFavoriteRequest) then) =
-      _$UsersListsFavoriteRequestCopyWithImpl<$Res, UsersListsFavoriteRequest>;
+  factory $UsersListsFavoriteRequestCopyWith(
+    UsersListsFavoriteRequest value,
+    $Res Function(UsersListsFavoriteRequest) then,
+  ) = _$UsersListsFavoriteRequestCopyWithImpl<$Res, UsersListsFavoriteRequest>;
   @useResult
   $Res call({String listId});
 }
 
 /// @nodoc
-class _$UsersListsFavoriteRequestCopyWithImpl<$Res,
-        $Val extends UsersListsFavoriteRequest>
+class _$UsersListsFavoriteRequestCopyWithImpl<
+  $Res,
+  $Val extends UsersListsFavoriteRequest
+>
     implements $UsersListsFavoriteRequestCopyWith<$Res> {
   _$UsersListsFavoriteRequestCopyWithImpl(this._value, this._then);
 
@@ -57,15 +62,17 @@ class _$UsersListsFavoriteRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? listId = null,
-  }) {
-    return _then(_value.copyWith(
-      listId: null == listId
-          ? _value.listId
-          : listId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? listId = null}) {
+    return _then(
+      _value.copyWith(
+            listId:
+                null == listId
+                    ? _value.listId
+                    : listId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -73,9 +80,9 @@ class _$UsersListsFavoriteRequestCopyWithImpl<$Res,
 abstract class _$$UsersListsFavoriteRequestImplCopyWith<$Res>
     implements $UsersListsFavoriteRequestCopyWith<$Res> {
   factory _$$UsersListsFavoriteRequestImplCopyWith(
-          _$UsersListsFavoriteRequestImpl value,
-          $Res Function(_$UsersListsFavoriteRequestImpl) then) =
-      __$$UsersListsFavoriteRequestImplCopyWithImpl<$Res>;
+    _$UsersListsFavoriteRequestImpl value,
+    $Res Function(_$UsersListsFavoriteRequestImpl) then,
+  ) = __$$UsersListsFavoriteRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String listId});
@@ -83,27 +90,31 @@ abstract class _$$UsersListsFavoriteRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$UsersListsFavoriteRequestImplCopyWithImpl<$Res>
-    extends _$UsersListsFavoriteRequestCopyWithImpl<$Res,
-        _$UsersListsFavoriteRequestImpl>
+    extends
+        _$UsersListsFavoriteRequestCopyWithImpl<
+          $Res,
+          _$UsersListsFavoriteRequestImpl
+        >
     implements _$$UsersListsFavoriteRequestImplCopyWith<$Res> {
   __$$UsersListsFavoriteRequestImplCopyWithImpl(
-      _$UsersListsFavoriteRequestImpl _value,
-      $Res Function(_$UsersListsFavoriteRequestImpl) _then)
-      : super(_value, _then);
+    _$UsersListsFavoriteRequestImpl _value,
+    $Res Function(_$UsersListsFavoriteRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UsersListsFavoriteRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? listId = null,
-  }) {
-    return _then(_$UsersListsFavoriteRequestImpl(
-      listId: null == listId
-          ? _value.listId
-          : listId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? listId = null}) {
+    return _then(
+      _$UsersListsFavoriteRequestImpl(
+        listId:
+            null == listId
+                ? _value.listId
+                : listId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -141,14 +152,13 @@ class _$UsersListsFavoriteRequestImpl implements _UsersListsFavoriteRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$UsersListsFavoriteRequestImplCopyWith<_$UsersListsFavoriteRequestImpl>
-      get copyWith => __$$UsersListsFavoriteRequestImplCopyWithImpl<
-          _$UsersListsFavoriteRequestImpl>(this, _$identity);
+  get copyWith => __$$UsersListsFavoriteRequestImplCopyWithImpl<
+    _$UsersListsFavoriteRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UsersListsFavoriteRequestImplToJson(
-      this,
-    );
+    return _$$UsersListsFavoriteRequestImplToJson(this);
   }
 }
 
@@ -167,5 +177,5 @@ abstract class _UsersListsFavoriteRequest implements UsersListsFavoriteRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersListsFavoriteRequestImplCopyWith<_$UsersListsFavoriteRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

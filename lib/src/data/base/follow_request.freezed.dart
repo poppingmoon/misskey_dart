@@ -12,7 +12,8 @@ part of 'follow_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 FollowRequest _$FollowRequestFromJson(Map<String, dynamic> json) {
   return _FollowRequest.fromJson(json);
@@ -37,8 +38,9 @@ mixin _$FollowRequest {
 /// @nodoc
 abstract class $FollowRequestCopyWith<$Res> {
   factory $FollowRequestCopyWith(
-          FollowRequest value, $Res Function(FollowRequest) then) =
-      _$FollowRequestCopyWithImpl<$Res, FollowRequest>;
+    FollowRequest value,
+    $Res Function(FollowRequest) then,
+  ) = _$FollowRequestCopyWithImpl<$Res, FollowRequest>;
   @useResult
   $Res call({String id, UserLite followee, UserLite follower});
 
@@ -65,20 +67,26 @@ class _$FollowRequestCopyWithImpl<$Res, $Val extends FollowRequest>
     Object? followee = null,
     Object? follower = null,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      followee: null == followee
-          ? _value.followee
-          : followee // ignore: cast_nullable_to_non_nullable
-              as UserLite,
-      follower: null == follower
-          ? _value.follower
-          : follower // ignore: cast_nullable_to_non_nullable
-              as UserLite,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            followee:
+                null == followee
+                    ? _value.followee
+                    : followee // ignore: cast_nullable_to_non_nullable
+                        as UserLite,
+            follower:
+                null == follower
+                    ? _value.follower
+                    : follower // ignore: cast_nullable_to_non_nullable
+                        as UserLite,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of FollowRequest
@@ -106,8 +114,9 @@ class _$FollowRequestCopyWithImpl<$Res, $Val extends FollowRequest>
 abstract class _$$FollowRequestImplCopyWith<$Res>
     implements $FollowRequestCopyWith<$Res> {
   factory _$$FollowRequestImplCopyWith(
-          _$FollowRequestImpl value, $Res Function(_$FollowRequestImpl) then) =
-      __$$FollowRequestImplCopyWithImpl<$Res>;
+    _$FollowRequestImpl value,
+    $Res Function(_$FollowRequestImpl) then,
+  ) = __$$FollowRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, UserLite followee, UserLite follower});
@@ -123,8 +132,9 @@ class __$$FollowRequestImplCopyWithImpl<$Res>
     extends _$FollowRequestCopyWithImpl<$Res, _$FollowRequestImpl>
     implements _$$FollowRequestImplCopyWith<$Res> {
   __$$FollowRequestImplCopyWithImpl(
-      _$FollowRequestImpl _value, $Res Function(_$FollowRequestImpl) _then)
-      : super(_value, _then);
+    _$FollowRequestImpl _value,
+    $Res Function(_$FollowRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of FollowRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -135,28 +145,36 @@ class __$$FollowRequestImplCopyWithImpl<$Res>
     Object? followee = null,
     Object? follower = null,
   }) {
-    return _then(_$FollowRequestImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      followee: null == followee
-          ? _value.followee
-          : followee // ignore: cast_nullable_to_non_nullable
-              as UserLite,
-      follower: null == follower
-          ? _value.follower
-          : follower // ignore: cast_nullable_to_non_nullable
-              as UserLite,
-    ));
+    return _then(
+      _$FollowRequestImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        followee:
+            null == followee
+                ? _value.followee
+                : followee // ignore: cast_nullable_to_non_nullable
+                    as UserLite,
+        follower:
+            null == follower
+                ? _value.follower
+                : follower // ignore: cast_nullable_to_non_nullable
+                    as UserLite,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$FollowRequestImpl implements _FollowRequest {
-  const _$FollowRequestImpl(
-      {required this.id, required this.followee, required this.follower});
+  const _$FollowRequestImpl({
+    required this.id,
+    required this.followee,
+    required this.follower,
+  });
 
   factory _$FollowRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$FollowRequestImplFromJson(json);
@@ -199,17 +217,16 @@ class _$FollowRequestImpl implements _FollowRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$FollowRequestImplToJson(
-      this,
-    );
+    return _$$FollowRequestImplToJson(this);
   }
 }
 
 abstract class _FollowRequest implements FollowRequest {
-  const factory _FollowRequest(
-      {required final String id,
-      required final UserLite followee,
-      required final UserLite follower}) = _$FollowRequestImpl;
+  const factory _FollowRequest({
+    required final String id,
+    required final UserLite followee,
+    required final UserLite follower,
+  }) = _$FollowRequestImpl;
 
   factory _FollowRequest.fromJson(Map<String, dynamic> json) =
       _$FollowRequestImpl.fromJson;

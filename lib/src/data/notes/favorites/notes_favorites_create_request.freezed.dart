@@ -12,10 +12,12 @@ part of 'notes_favorites_create_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 NotesFavoritesCreateRequest _$NotesFavoritesCreateRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _NotesFavoritesCreateRequest.fromJson(json);
 }
 
@@ -30,23 +32,28 @@ mixin _$NotesFavoritesCreateRequest {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesFavoritesCreateRequestCopyWith<NotesFavoritesCreateRequest>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $NotesFavoritesCreateRequestCopyWith<$Res> {
   factory $NotesFavoritesCreateRequestCopyWith(
-          NotesFavoritesCreateRequest value,
-          $Res Function(NotesFavoritesCreateRequest) then) =
-      _$NotesFavoritesCreateRequestCopyWithImpl<$Res,
-          NotesFavoritesCreateRequest>;
+    NotesFavoritesCreateRequest value,
+    $Res Function(NotesFavoritesCreateRequest) then,
+  ) =
+      _$NotesFavoritesCreateRequestCopyWithImpl<
+        $Res,
+        NotesFavoritesCreateRequest
+      >;
   @useResult
   $Res call({String noteId});
 }
 
 /// @nodoc
-class _$NotesFavoritesCreateRequestCopyWithImpl<$Res,
-        $Val extends NotesFavoritesCreateRequest>
+class _$NotesFavoritesCreateRequestCopyWithImpl<
+  $Res,
+  $Val extends NotesFavoritesCreateRequest
+>
     implements $NotesFavoritesCreateRequestCopyWith<$Res> {
   _$NotesFavoritesCreateRequestCopyWithImpl(this._value, this._then);
 
@@ -59,15 +66,17 @@ class _$NotesFavoritesCreateRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? noteId = null,
-  }) {
-    return _then(_value.copyWith(
-      noteId: null == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? noteId = null}) {
+    return _then(
+      _value.copyWith(
+            noteId:
+                null == noteId
+                    ? _value.noteId
+                    : noteId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -75,9 +84,9 @@ class _$NotesFavoritesCreateRequestCopyWithImpl<$Res,
 abstract class _$$NotesFavoritesCreateRequestImplCopyWith<$Res>
     implements $NotesFavoritesCreateRequestCopyWith<$Res> {
   factory _$$NotesFavoritesCreateRequestImplCopyWith(
-          _$NotesFavoritesCreateRequestImpl value,
-          $Res Function(_$NotesFavoritesCreateRequestImpl) then) =
-      __$$NotesFavoritesCreateRequestImplCopyWithImpl<$Res>;
+    _$NotesFavoritesCreateRequestImpl value,
+    $Res Function(_$NotesFavoritesCreateRequestImpl) then,
+  ) = __$$NotesFavoritesCreateRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String noteId});
@@ -85,27 +94,31 @@ abstract class _$$NotesFavoritesCreateRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$NotesFavoritesCreateRequestImplCopyWithImpl<$Res>
-    extends _$NotesFavoritesCreateRequestCopyWithImpl<$Res,
-        _$NotesFavoritesCreateRequestImpl>
+    extends
+        _$NotesFavoritesCreateRequestCopyWithImpl<
+          $Res,
+          _$NotesFavoritesCreateRequestImpl
+        >
     implements _$$NotesFavoritesCreateRequestImplCopyWith<$Res> {
   __$$NotesFavoritesCreateRequestImplCopyWithImpl(
-      _$NotesFavoritesCreateRequestImpl _value,
-      $Res Function(_$NotesFavoritesCreateRequestImpl) _then)
-      : super(_value, _then);
+    _$NotesFavoritesCreateRequestImpl _value,
+    $Res Function(_$NotesFavoritesCreateRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotesFavoritesCreateRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? noteId = null,
-  }) {
-    return _then(_$NotesFavoritesCreateRequestImpl(
-      noteId: null == noteId
-          ? _value.noteId
-          : noteId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? noteId = null}) {
+    return _then(
+      _$NotesFavoritesCreateRequestImpl(
+        noteId:
+            null == noteId
+                ? _value.noteId
+                : noteId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -116,8 +129,8 @@ class _$NotesFavoritesCreateRequestImpl
   const _$NotesFavoritesCreateRequestImpl({required this.noteId});
 
   factory _$NotesFavoritesCreateRequestImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$NotesFavoritesCreateRequestImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$NotesFavoritesCreateRequestImplFromJson(json);
 
   @override
   final String noteId;
@@ -145,14 +158,13 @@ class _$NotesFavoritesCreateRequestImpl
   @override
   @pragma('vm:prefer-inline')
   _$$NotesFavoritesCreateRequestImplCopyWith<_$NotesFavoritesCreateRequestImpl>
-      get copyWith => __$$NotesFavoritesCreateRequestImplCopyWithImpl<
-          _$NotesFavoritesCreateRequestImpl>(this, _$identity);
+  get copyWith => __$$NotesFavoritesCreateRequestImplCopyWithImpl<
+    _$NotesFavoritesCreateRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotesFavoritesCreateRequestImplToJson(
-      this,
-    );
+    return _$$NotesFavoritesCreateRequestImplToJson(this);
   }
 }
 
@@ -172,5 +184,5 @@ abstract class _NotesFavoritesCreateRequest
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesFavoritesCreateRequestImplCopyWith<_$NotesFavoritesCreateRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

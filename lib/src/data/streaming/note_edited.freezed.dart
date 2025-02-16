@@ -12,7 +12,8 @@ part of 'note_edited.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 NoteEdited _$NoteEditedFromJson(Map<String, dynamic> json) {
   return _NoteEdited.fromJson(json);
@@ -36,8 +37,9 @@ mixin _$NoteEdited {
 /// @nodoc
 abstract class $NoteEditedCopyWith<$Res> {
   factory $NoteEditedCopyWith(
-          NoteEdited value, $Res Function(NoteEdited) then) =
-      _$NoteEditedCopyWithImpl<$Res, NoteEdited>;
+    NoteEdited value,
+    $Res Function(NoteEdited) then,
+  ) = _$NoteEditedCopyWithImpl<$Res, NoteEdited>;
   @useResult
   $Res call({String? cw, String? text});
 }
@@ -56,20 +58,22 @@ class _$NoteEditedCopyWithImpl<$Res, $Val extends NoteEdited>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? cw = freezed,
-    Object? text = freezed,
-  }) {
-    return _then(_value.copyWith(
-      cw: freezed == cw
-          ? _value.cw
-          : cw // ignore: cast_nullable_to_non_nullable
-              as String?,
-      text: freezed == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  $Res call({Object? cw = freezed, Object? text = freezed}) {
+    return _then(
+      _value.copyWith(
+            cw:
+                freezed == cw
+                    ? _value.cw
+                    : cw // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            text:
+                freezed == text
+                    ? _value.text
+                    : text // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -77,8 +81,9 @@ class _$NoteEditedCopyWithImpl<$Res, $Val extends NoteEdited>
 abstract class _$$NoteEditedImplCopyWith<$Res>
     implements $NoteEditedCopyWith<$Res> {
   factory _$$NoteEditedImplCopyWith(
-          _$NoteEditedImpl value, $Res Function(_$NoteEditedImpl) then) =
-      __$$NoteEditedImplCopyWithImpl<$Res>;
+    _$NoteEditedImpl value,
+    $Res Function(_$NoteEditedImpl) then,
+  ) = __$$NoteEditedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? cw, String? text});
@@ -89,27 +94,29 @@ class __$$NoteEditedImplCopyWithImpl<$Res>
     extends _$NoteEditedCopyWithImpl<$Res, _$NoteEditedImpl>
     implements _$$NoteEditedImplCopyWith<$Res> {
   __$$NoteEditedImplCopyWithImpl(
-      _$NoteEditedImpl _value, $Res Function(_$NoteEditedImpl) _then)
-      : super(_value, _then);
+    _$NoteEditedImpl _value,
+    $Res Function(_$NoteEditedImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NoteEdited
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? cw = freezed,
-    Object? text = freezed,
-  }) {
-    return _then(_$NoteEditedImpl(
-      cw: freezed == cw
-          ? _value.cw
-          : cw // ignore: cast_nullable_to_non_nullable
-              as String?,
-      text: freezed == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+  $Res call({Object? cw = freezed, Object? text = freezed}) {
+    return _then(
+      _$NoteEditedImpl(
+        cw:
+            freezed == cw
+                ? _value.cw
+                : cw // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        text:
+            freezed == text
+                ? _value.text
+                : text // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -154,9 +161,7 @@ class _$NoteEditedImpl implements _NoteEdited {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NoteEditedImplToJson(
-      this,
-    );
+    return _$$NoteEditedImplToJson(this);
   }
 }
 

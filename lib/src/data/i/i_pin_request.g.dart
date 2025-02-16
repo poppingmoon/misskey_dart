@@ -7,18 +7,12 @@ part of 'i_pin_request.dart';
 // **************************************************************************
 
 _$IPinRequestImpl _$$IPinRequestImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(
-      r'_$IPinRequestImpl',
-      json,
-      ($checkedConvert) {
-        final val = _$IPinRequestImpl(
-          noteId: $checkedConvert('noteId', (v) => v as String),
-        );
-        return val;
-      },
-    );
+    $checkedCreate(r'_$IPinRequestImpl', json, ($checkedConvert) {
+      final val = _$IPinRequestImpl(
+        noteId: $checkedConvert('noteId', (v) => v as String),
+      );
+      return val;
+    });
 
 Map<String, dynamic> _$$IPinRequestImplToJson(_$IPinRequestImpl instance) =>
-    <String, dynamic>{
-      'noteId': instance.noteId,
-    };
+    <String, dynamic>{'noteId': instance.noteId};

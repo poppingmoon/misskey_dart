@@ -12,7 +12,8 @@ part of 'notes_mentions_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 NotesMentionsRequest _$NotesMentionsRequestFromJson(Map<String, dynamic> json) {
   return _NotesMentionsRequest.fromJson(json);
@@ -38,21 +39,25 @@ mixin _$NotesMentionsRequest {
 
 /// @nodoc
 abstract class $NotesMentionsRequestCopyWith<$Res> {
-  factory $NotesMentionsRequestCopyWith(NotesMentionsRequest value,
-          $Res Function(NotesMentionsRequest) then) =
-      _$NotesMentionsRequestCopyWithImpl<$Res, NotesMentionsRequest>;
+  factory $NotesMentionsRequestCopyWith(
+    NotesMentionsRequest value,
+    $Res Function(NotesMentionsRequest) then,
+  ) = _$NotesMentionsRequestCopyWithImpl<$Res, NotesMentionsRequest>;
   @useResult
-  $Res call(
-      {bool? following,
-      int? limit,
-      String? sinceId,
-      String? untilId,
-      NoteVisibility? visibility});
+  $Res call({
+    bool? following,
+    int? limit,
+    String? sinceId,
+    String? untilId,
+    NoteVisibility? visibility,
+  });
 }
 
 /// @nodoc
-class _$NotesMentionsRequestCopyWithImpl<$Res,
-        $Val extends NotesMentionsRequest>
+class _$NotesMentionsRequestCopyWithImpl<
+  $Res,
+  $Val extends NotesMentionsRequest
+>
     implements $NotesMentionsRequestCopyWith<$Res> {
   _$NotesMentionsRequestCopyWithImpl(this._value, this._then);
 
@@ -72,54 +77,65 @@ class _$NotesMentionsRequestCopyWithImpl<$Res,
     Object? untilId = freezed,
     Object? visibility = freezed,
   }) {
-    return _then(_value.copyWith(
-      following: freezed == following
-          ? _value.following
-          : following // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      visibility: freezed == visibility
-          ? _value.visibility
-          : visibility // ignore: cast_nullable_to_non_nullable
-              as NoteVisibility?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            following:
+                freezed == following
+                    ? _value.following
+                    : following // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            visibility:
+                freezed == visibility
+                    ? _value.visibility
+                    : visibility // ignore: cast_nullable_to_non_nullable
+                        as NoteVisibility?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$NotesMentionsRequestImplCopyWith<$Res>
     implements $NotesMentionsRequestCopyWith<$Res> {
-  factory _$$NotesMentionsRequestImplCopyWith(_$NotesMentionsRequestImpl value,
-          $Res Function(_$NotesMentionsRequestImpl) then) =
-      __$$NotesMentionsRequestImplCopyWithImpl<$Res>;
+  factory _$$NotesMentionsRequestImplCopyWith(
+    _$NotesMentionsRequestImpl value,
+    $Res Function(_$NotesMentionsRequestImpl) then,
+  ) = __$$NotesMentionsRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {bool? following,
-      int? limit,
-      String? sinceId,
-      String? untilId,
-      NoteVisibility? visibility});
+  $Res call({
+    bool? following,
+    int? limit,
+    String? sinceId,
+    String? untilId,
+    NoteVisibility? visibility,
+  });
 }
 
 /// @nodoc
 class __$$NotesMentionsRequestImplCopyWithImpl<$Res>
     extends _$NotesMentionsRequestCopyWithImpl<$Res, _$NotesMentionsRequestImpl>
     implements _$$NotesMentionsRequestImplCopyWith<$Res> {
-  __$$NotesMentionsRequestImplCopyWithImpl(_$NotesMentionsRequestImpl _value,
-      $Res Function(_$NotesMentionsRequestImpl) _then)
-      : super(_value, _then);
+  __$$NotesMentionsRequestImplCopyWithImpl(
+    _$NotesMentionsRequestImpl _value,
+    $Res Function(_$NotesMentionsRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotesMentionsRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -132,40 +148,48 @@ class __$$NotesMentionsRequestImplCopyWithImpl<$Res>
     Object? untilId = freezed,
     Object? visibility = freezed,
   }) {
-    return _then(_$NotesMentionsRequestImpl(
-      following: freezed == following
-          ? _value.following
-          : following // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      visibility: freezed == visibility
-          ? _value.visibility
-          : visibility // ignore: cast_nullable_to_non_nullable
-              as NoteVisibility?,
-    ));
+    return _then(
+      _$NotesMentionsRequestImpl(
+        following:
+            freezed == following
+                ? _value.following
+                : following // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        visibility:
+            freezed == visibility
+                ? _value.visibility
+                : visibility // ignore: cast_nullable_to_non_nullable
+                    as NoteVisibility?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$NotesMentionsRequestImpl implements _NotesMentionsRequest {
-  const _$NotesMentionsRequestImpl(
-      {this.following,
-      this.limit,
-      this.sinceId,
-      this.untilId,
-      this.visibility});
+  const _$NotesMentionsRequestImpl({
+    this.following,
+    this.limit,
+    this.sinceId,
+    this.untilId,
+    this.visibility,
+  });
 
   factory _$NotesMentionsRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$NotesMentionsRequestImplFromJson(json);
@@ -211,25 +235,26 @@ class _$NotesMentionsRequestImpl implements _NotesMentionsRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$NotesMentionsRequestImplCopyWith<_$NotesMentionsRequestImpl>
-      get copyWith =>
-          __$$NotesMentionsRequestImplCopyWithImpl<_$NotesMentionsRequestImpl>(
-              this, _$identity);
+  get copyWith =>
+      __$$NotesMentionsRequestImplCopyWithImpl<_$NotesMentionsRequestImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotesMentionsRequestImplToJson(
-      this,
-    );
+    return _$$NotesMentionsRequestImplToJson(this);
   }
 }
 
 abstract class _NotesMentionsRequest implements NotesMentionsRequest {
-  const factory _NotesMentionsRequest(
-      {final bool? following,
-      final int? limit,
-      final String? sinceId,
-      final String? untilId,
-      final NoteVisibility? visibility}) = _$NotesMentionsRequestImpl;
+  const factory _NotesMentionsRequest({
+    final bool? following,
+    final int? limit,
+    final String? sinceId,
+    final String? untilId,
+    final NoteVisibility? visibility,
+  }) = _$NotesMentionsRequestImpl;
 
   factory _NotesMentionsRequest.fromJson(Map<String, dynamic> json) =
       _$NotesMentionsRequestImpl.fromJson;
@@ -250,5 +275,5 @@ abstract class _NotesMentionsRequest implements NotesMentionsRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesMentionsRequestImplCopyWith<_$NotesMentionsRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

@@ -12,7 +12,8 @@ part of 'notes_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 NotesRequest _$NotesRequestFromJson(Map<String, dynamic> json) {
   return _NotesRequest.fromJson(json);
@@ -42,18 +43,20 @@ mixin _$NotesRequest {
 /// @nodoc
 abstract class $NotesRequestCopyWith<$Res> {
   factory $NotesRequestCopyWith(
-          NotesRequest value, $Res Function(NotesRequest) then) =
-      _$NotesRequestCopyWithImpl<$Res, NotesRequest>;
+    NotesRequest value,
+    $Res Function(NotesRequest) then,
+  ) = _$NotesRequestCopyWithImpl<$Res, NotesRequest>;
   @useResult
-  $Res call(
-      {bool? local,
-      bool? reply,
-      bool? renote,
-      bool? withFiles,
-      bool? poll,
-      int? limit,
-      String? sinceId,
-      String? untilId});
+  $Res call({
+    bool? local,
+    bool? reply,
+    bool? renote,
+    bool? withFiles,
+    bool? poll,
+    int? limit,
+    String? sinceId,
+    String? untilId,
+  });
 }
 
 /// @nodoc
@@ -80,40 +83,51 @@ class _$NotesRequestCopyWithImpl<$Res, $Val extends NotesRequest>
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_value.copyWith(
-      local: freezed == local
-          ? _value.local
-          : local // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      reply: freezed == reply
-          ? _value.reply
-          : reply // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      renote: freezed == renote
-          ? _value.renote
-          : renote // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withFiles: freezed == withFiles
-          ? _value.withFiles
-          : withFiles // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      poll: freezed == poll
-          ? _value.poll
-          : poll // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            local:
+                freezed == local
+                    ? _value.local
+                    : local // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            reply:
+                freezed == reply
+                    ? _value.reply
+                    : reply // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            renote:
+                freezed == renote
+                    ? _value.renote
+                    : renote // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            withFiles:
+                freezed == withFiles
+                    ? _value.withFiles
+                    : withFiles // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            poll:
+                freezed == poll
+                    ? _value.poll
+                    : poll // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -121,19 +135,21 @@ class _$NotesRequestCopyWithImpl<$Res, $Val extends NotesRequest>
 abstract class _$$NotesRequestImplCopyWith<$Res>
     implements $NotesRequestCopyWith<$Res> {
   factory _$$NotesRequestImplCopyWith(
-          _$NotesRequestImpl value, $Res Function(_$NotesRequestImpl) then) =
-      __$$NotesRequestImplCopyWithImpl<$Res>;
+    _$NotesRequestImpl value,
+    $Res Function(_$NotesRequestImpl) then,
+  ) = __$$NotesRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {bool? local,
-      bool? reply,
-      bool? renote,
-      bool? withFiles,
-      bool? poll,
-      int? limit,
-      String? sinceId,
-      String? untilId});
+  $Res call({
+    bool? local,
+    bool? reply,
+    bool? renote,
+    bool? withFiles,
+    bool? poll,
+    int? limit,
+    String? sinceId,
+    String? untilId,
+  });
 }
 
 /// @nodoc
@@ -141,8 +157,9 @@ class __$$NotesRequestImplCopyWithImpl<$Res>
     extends _$NotesRequestCopyWithImpl<$Res, _$NotesRequestImpl>
     implements _$$NotesRequestImplCopyWith<$Res> {
   __$$NotesRequestImplCopyWithImpl(
-      _$NotesRequestImpl _value, $Res Function(_$NotesRequestImpl) _then)
-      : super(_value, _then);
+    _$NotesRequestImpl _value,
+    $Res Function(_$NotesRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotesRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -158,55 +175,66 @@ class __$$NotesRequestImplCopyWithImpl<$Res>
     Object? sinceId = freezed,
     Object? untilId = freezed,
   }) {
-    return _then(_$NotesRequestImpl(
-      local: freezed == local
-          ? _value.local
-          : local // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      reply: freezed == reply
-          ? _value.reply
-          : reply // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      renote: freezed == renote
-          ? _value.renote
-          : renote // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      withFiles: freezed == withFiles
-          ? _value.withFiles
-          : withFiles // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      poll: freezed == poll
-          ? _value.poll
-          : poll // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$NotesRequestImpl(
+        local:
+            freezed == local
+                ? _value.local
+                : local // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        reply:
+            freezed == reply
+                ? _value.reply
+                : reply // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        renote:
+            freezed == renote
+                ? _value.renote
+                : renote // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        withFiles:
+            freezed == withFiles
+                ? _value.withFiles
+                : withFiles // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        poll:
+            freezed == poll
+                ? _value.poll
+                : poll // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$NotesRequestImpl implements _NotesRequest {
-  const _$NotesRequestImpl(
-      {this.local,
-      this.reply,
-      this.renote,
-      this.withFiles,
-      this.poll,
-      this.limit,
-      this.sinceId,
-      this.untilId});
+  const _$NotesRequestImpl({
+    this.local,
+    this.reply,
+    this.renote,
+    this.withFiles,
+    this.poll,
+    this.limit,
+    this.sinceId,
+    this.untilId,
+  });
 
   factory _$NotesRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$NotesRequestImplFromJson(json);
@@ -251,8 +279,17 @@ class _$NotesRequestImpl implements _NotesRequest {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, local, reply, renote, withFiles,
-      poll, limit, sinceId, untilId);
+  int get hashCode => Object.hash(
+    runtimeType,
+    local,
+    reply,
+    renote,
+    withFiles,
+    poll,
+    limit,
+    sinceId,
+    untilId,
+  );
 
   /// Create a copy of NotesRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -264,22 +301,21 @@ class _$NotesRequestImpl implements _NotesRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotesRequestImplToJson(
-      this,
-    );
+    return _$$NotesRequestImplToJson(this);
   }
 }
 
 abstract class _NotesRequest implements NotesRequest {
-  const factory _NotesRequest(
-      {final bool? local,
-      final bool? reply,
-      final bool? renote,
-      final bool? withFiles,
-      final bool? poll,
-      final int? limit,
-      final String? sinceId,
-      final String? untilId}) = _$NotesRequestImpl;
+  const factory _NotesRequest({
+    final bool? local,
+    final bool? reply,
+    final bool? renote,
+    final bool? withFiles,
+    final bool? poll,
+    final int? limit,
+    final String? sinceId,
+    final String? untilId,
+  }) = _$NotesRequestImpl;
 
   factory _NotesRequest.fromJson(Map<String, dynamic> json) =
       _$NotesRequestImpl.fromJson;

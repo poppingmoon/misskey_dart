@@ -12,10 +12,12 @@ part of 'channels_timeline_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ChannelsTimelineRequest _$ChannelsTimelineRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _ChannelsTimelineRequest.fromJson(json);
 }
 
@@ -44,23 +46,27 @@ mixin _$ChannelsTimelineRequest {
 
 /// @nodoc
 abstract class $ChannelsTimelineRequestCopyWith<$Res> {
-  factory $ChannelsTimelineRequestCopyWith(ChannelsTimelineRequest value,
-          $Res Function(ChannelsTimelineRequest) then) =
-      _$ChannelsTimelineRequestCopyWithImpl<$Res, ChannelsTimelineRequest>;
+  factory $ChannelsTimelineRequestCopyWith(
+    ChannelsTimelineRequest value,
+    $Res Function(ChannelsTimelineRequest) then,
+  ) = _$ChannelsTimelineRequestCopyWithImpl<$Res, ChannelsTimelineRequest>;
   @useResult
-  $Res call(
-      {String channelId,
-      @Assert('limit > 0') int? limit,
-      String? sinceId,
-      String? untilId,
-      @EpocTimeDateTimeConverter() DateTime? sinceDate,
-      @EpocTimeDateTimeConverter() DateTime? untilDate,
-      bool? allowPartial});
+  $Res call({
+    String channelId,
+    @Assert('limit > 0') int? limit,
+    String? sinceId,
+    String? untilId,
+    @EpocTimeDateTimeConverter() DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() DateTime? untilDate,
+    bool? allowPartial,
+  });
 }
 
 /// @nodoc
-class _$ChannelsTimelineRequestCopyWithImpl<$Res,
-        $Val extends ChannelsTimelineRequest>
+class _$ChannelsTimelineRequestCopyWithImpl<
+  $Res,
+  $Val extends ChannelsTimelineRequest
+>
     implements $ChannelsTimelineRequestCopyWith<$Res> {
   _$ChannelsTimelineRequestCopyWithImpl(this._value, this._then);
 
@@ -82,36 +88,46 @@ class _$ChannelsTimelineRequestCopyWithImpl<$Res,
     Object? untilDate = freezed,
     Object? allowPartial = freezed,
   }) {
-    return _then(_value.copyWith(
-      channelId: null == channelId
-          ? _value.channelId
-          : channelId // ignore: cast_nullable_to_non_nullable
-              as String,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      sinceDate: freezed == sinceDate
-          ? _value.sinceDate
-          : sinceDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      untilDate: freezed == untilDate
-          ? _value.untilDate
-          : untilDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      allowPartial: freezed == allowPartial
-          ? _value.allowPartial
-          : allowPartial // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            channelId:
+                null == channelId
+                    ? _value.channelId
+                    : channelId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            sinceId:
+                freezed == sinceId
+                    ? _value.sinceId
+                    : sinceId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            untilId:
+                freezed == untilId
+                    ? _value.untilId
+                    : untilId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            sinceDate:
+                freezed == sinceDate
+                    ? _value.sinceDate
+                    : sinceDate // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            untilDate:
+                freezed == untilDate
+                    ? _value.untilDate
+                    : untilDate // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            allowPartial:
+                freezed == allowPartial
+                    ? _value.allowPartial
+                    : allowPartial // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -119,30 +135,34 @@ class _$ChannelsTimelineRequestCopyWithImpl<$Res,
 abstract class _$$ChannelsTimelineRequestImplCopyWith<$Res>
     implements $ChannelsTimelineRequestCopyWith<$Res> {
   factory _$$ChannelsTimelineRequestImplCopyWith(
-          _$ChannelsTimelineRequestImpl value,
-          $Res Function(_$ChannelsTimelineRequestImpl) then) =
-      __$$ChannelsTimelineRequestImplCopyWithImpl<$Res>;
+    _$ChannelsTimelineRequestImpl value,
+    $Res Function(_$ChannelsTimelineRequestImpl) then,
+  ) = __$$ChannelsTimelineRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String channelId,
-      @Assert('limit > 0') int? limit,
-      String? sinceId,
-      String? untilId,
-      @EpocTimeDateTimeConverter() DateTime? sinceDate,
-      @EpocTimeDateTimeConverter() DateTime? untilDate,
-      bool? allowPartial});
+  $Res call({
+    String channelId,
+    @Assert('limit > 0') int? limit,
+    String? sinceId,
+    String? untilId,
+    @EpocTimeDateTimeConverter() DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() DateTime? untilDate,
+    bool? allowPartial,
+  });
 }
 
 /// @nodoc
 class __$$ChannelsTimelineRequestImplCopyWithImpl<$Res>
-    extends _$ChannelsTimelineRequestCopyWithImpl<$Res,
-        _$ChannelsTimelineRequestImpl>
+    extends
+        _$ChannelsTimelineRequestCopyWithImpl<
+          $Res,
+          _$ChannelsTimelineRequestImpl
+        >
     implements _$$ChannelsTimelineRequestImplCopyWith<$Res> {
   __$$ChannelsTimelineRequestImplCopyWithImpl(
-      _$ChannelsTimelineRequestImpl _value,
-      $Res Function(_$ChannelsTimelineRequestImpl) _then)
-      : super(_value, _then);
+    _$ChannelsTimelineRequestImpl _value,
+    $Res Function(_$ChannelsTimelineRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChannelsTimelineRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -157,50 +177,60 @@ class __$$ChannelsTimelineRequestImplCopyWithImpl<$Res>
     Object? untilDate = freezed,
     Object? allowPartial = freezed,
   }) {
-    return _then(_$ChannelsTimelineRequestImpl(
-      channelId: null == channelId
-          ? _value.channelId
-          : channelId // ignore: cast_nullable_to_non_nullable
-              as String,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      sinceId: freezed == sinceId
-          ? _value.sinceId
-          : sinceId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      untilId: freezed == untilId
-          ? _value.untilId
-          : untilId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      sinceDate: freezed == sinceDate
-          ? _value.sinceDate
-          : sinceDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      untilDate: freezed == untilDate
-          ? _value.untilDate
-          : untilDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      allowPartial: freezed == allowPartial
-          ? _value.allowPartial
-          : allowPartial // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+    return _then(
+      _$ChannelsTimelineRequestImpl(
+        channelId:
+            null == channelId
+                ? _value.channelId
+                : channelId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        sinceId:
+            freezed == sinceId
+                ? _value.sinceId
+                : sinceId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        untilId:
+            freezed == untilId
+                ? _value.untilId
+                : untilId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        sinceDate:
+            freezed == sinceDate
+                ? _value.sinceDate
+                : sinceDate // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        untilDate:
+            freezed == untilDate
+                ? _value.untilDate
+                : untilDate // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        allowPartial:
+            freezed == allowPartial
+                ? _value.allowPartial
+                : allowPartial // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ChannelsTimelineRequestImpl implements _ChannelsTimelineRequest {
-  const _$ChannelsTimelineRequestImpl(
-      {required this.channelId,
-      @Assert('limit > 0') this.limit,
-      this.sinceId,
-      this.untilId,
-      @EpocTimeDateTimeConverter() this.sinceDate,
-      @EpocTimeDateTimeConverter() this.untilDate,
-      this.allowPartial});
+  const _$ChannelsTimelineRequestImpl({
+    required this.channelId,
+    @Assert('limit > 0') this.limit,
+    this.sinceId,
+    this.untilId,
+    @EpocTimeDateTimeConverter() this.sinceDate,
+    @EpocTimeDateTimeConverter() this.untilDate,
+    this.allowPartial,
+  });
 
   factory _$ChannelsTimelineRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$ChannelsTimelineRequestImplFromJson(json);
@@ -248,8 +278,16 @@ class _$ChannelsTimelineRequestImpl implements _ChannelsTimelineRequest {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, channelId, limit, sinceId,
-      untilId, sinceDate, untilDate, allowPartial);
+  int get hashCode => Object.hash(
+    runtimeType,
+    channelId,
+    limit,
+    sinceId,
+    untilId,
+    sinceDate,
+    untilDate,
+    allowPartial,
+  );
 
   /// Create a copy of ChannelsTimelineRequest
   /// with the given fields replaced by the non-null parameter values.
@@ -257,26 +295,26 @@ class _$ChannelsTimelineRequestImpl implements _ChannelsTimelineRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$ChannelsTimelineRequestImplCopyWith<_$ChannelsTimelineRequestImpl>
-      get copyWith => __$$ChannelsTimelineRequestImplCopyWithImpl<
-          _$ChannelsTimelineRequestImpl>(this, _$identity);
+  get copyWith => __$$ChannelsTimelineRequestImplCopyWithImpl<
+    _$ChannelsTimelineRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ChannelsTimelineRequestImplToJson(
-      this,
-    );
+    return _$$ChannelsTimelineRequestImplToJson(this);
   }
 }
 
 abstract class _ChannelsTimelineRequest implements ChannelsTimelineRequest {
-  const factory _ChannelsTimelineRequest(
-      {required final String channelId,
-      @Assert('limit > 0') final int? limit,
-      final String? sinceId,
-      final String? untilId,
-      @EpocTimeDateTimeConverter() final DateTime? sinceDate,
-      @EpocTimeDateTimeConverter() final DateTime? untilDate,
-      final bool? allowPartial}) = _$ChannelsTimelineRequestImpl;
+  const factory _ChannelsTimelineRequest({
+    required final String channelId,
+    @Assert('limit > 0') final int? limit,
+    final String? sinceId,
+    final String? untilId,
+    @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() final DateTime? untilDate,
+    final bool? allowPartial,
+  }) = _$ChannelsTimelineRequestImpl;
 
   factory _ChannelsTimelineRequest.fromJson(Map<String, dynamic> json) =
       _$ChannelsTimelineRequestImpl.fromJson;
@@ -304,5 +342,5 @@ abstract class _ChannelsTimelineRequest implements ChannelsTimelineRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ChannelsTimelineRequestImplCopyWith<_$ChannelsTimelineRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

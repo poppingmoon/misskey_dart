@@ -12,10 +12,12 @@ part of 'notes_reactions_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 NotesReactionsResponse _$NotesReactionsResponseFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _NotesReactionsResponse.fromJson(json);
 }
 
@@ -39,22 +41,26 @@ mixin _$NotesReactionsResponse {
 
 /// @nodoc
 abstract class $NotesReactionsResponseCopyWith<$Res> {
-  factory $NotesReactionsResponseCopyWith(NotesReactionsResponse value,
-          $Res Function(NotesReactionsResponse) then) =
-      _$NotesReactionsResponseCopyWithImpl<$Res, NotesReactionsResponse>;
+  factory $NotesReactionsResponseCopyWith(
+    NotesReactionsResponse value,
+    $Res Function(NotesReactionsResponse) then,
+  ) = _$NotesReactionsResponseCopyWithImpl<$Res, NotesReactionsResponse>;
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime createdAt,
-      UserLite user,
-      String? type});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime createdAt,
+    UserLite user,
+    String? type,
+  });
 
   $UserLiteCopyWith<$Res> get user;
 }
 
 /// @nodoc
-class _$NotesReactionsResponseCopyWithImpl<$Res,
-        $Val extends NotesReactionsResponse>
+class _$NotesReactionsResponseCopyWithImpl<
+  $Res,
+  $Val extends NotesReactionsResponse
+>
     implements $NotesReactionsResponseCopyWith<$Res> {
   _$NotesReactionsResponseCopyWithImpl(this._value, this._then);
 
@@ -73,24 +79,31 @@ class _$NotesReactionsResponseCopyWithImpl<$Res,
     Object? user = null,
     Object? type = freezed,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      user: null == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as UserLite,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            createdAt:
+                null == createdAt
+                    ? _value.createdAt
+                    : createdAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            user:
+                null == user
+                    ? _value.user
+                    : user // ignore: cast_nullable_to_non_nullable
+                        as UserLite,
+            type:
+                freezed == type
+                    ? _value.type
+                    : type // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of NotesReactionsResponse
@@ -108,16 +121,17 @@ class _$NotesReactionsResponseCopyWithImpl<$Res,
 abstract class _$$NotesReactionsResponseImplCopyWith<$Res>
     implements $NotesReactionsResponseCopyWith<$Res> {
   factory _$$NotesReactionsResponseImplCopyWith(
-          _$NotesReactionsResponseImpl value,
-          $Res Function(_$NotesReactionsResponseImpl) then) =
-      __$$NotesReactionsResponseImplCopyWithImpl<$Res>;
+    _$NotesReactionsResponseImpl value,
+    $Res Function(_$NotesReactionsResponseImpl) then,
+  ) = __$$NotesReactionsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      @DateTimeConverter() DateTime createdAt,
-      UserLite user,
-      String? type});
+  $Res call({
+    String id,
+    @DateTimeConverter() DateTime createdAt,
+    UserLite user,
+    String? type,
+  });
 
   @override
   $UserLiteCopyWith<$Res> get user;
@@ -125,13 +139,13 @@ abstract class _$$NotesReactionsResponseImplCopyWith<$Res>
 
 /// @nodoc
 class __$$NotesReactionsResponseImplCopyWithImpl<$Res>
-    extends _$NotesReactionsResponseCopyWithImpl<$Res,
-        _$NotesReactionsResponseImpl>
+    extends
+        _$NotesReactionsResponseCopyWithImpl<$Res, _$NotesReactionsResponseImpl>
     implements _$$NotesReactionsResponseImplCopyWith<$Res> {
   __$$NotesReactionsResponseImplCopyWithImpl(
-      _$NotesReactionsResponseImpl _value,
-      $Res Function(_$NotesReactionsResponseImpl) _then)
-      : super(_value, _then);
+    _$NotesReactionsResponseImpl _value,
+    $Res Function(_$NotesReactionsResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotesReactionsResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -143,35 +157,42 @@ class __$$NotesReactionsResponseImplCopyWithImpl<$Res>
     Object? user = null,
     Object? type = freezed,
   }) {
-    return _then(_$NotesReactionsResponseImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      user: null == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as UserLite,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$NotesReactionsResponseImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        createdAt:
+            null == createdAt
+                ? _value.createdAt
+                : createdAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        user:
+            null == user
+                ? _value.user
+                : user // ignore: cast_nullable_to_non_nullable
+                    as UserLite,
+        type:
+            freezed == type
+                ? _value.type
+                : type // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$NotesReactionsResponseImpl implements _NotesReactionsResponse {
-  const _$NotesReactionsResponseImpl(
-      {required this.id,
-      @DateTimeConverter() required this.createdAt,
-      required this.user,
-      this.type});
+  const _$NotesReactionsResponseImpl({
+    required this.id,
+    @DateTimeConverter() required this.createdAt,
+    required this.user,
+    this.type,
+  });
 
   factory _$NotesReactionsResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$NotesReactionsResponseImplFromJson(json);
@@ -213,23 +234,25 @@ class _$NotesReactionsResponseImpl implements _NotesReactionsResponse {
   @override
   @pragma('vm:prefer-inline')
   _$$NotesReactionsResponseImplCopyWith<_$NotesReactionsResponseImpl>
-      get copyWith => __$$NotesReactionsResponseImplCopyWithImpl<
-          _$NotesReactionsResponseImpl>(this, _$identity);
+  get copyWith =>
+      __$$NotesReactionsResponseImplCopyWithImpl<_$NotesReactionsResponseImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotesReactionsResponseImplToJson(
-      this,
-    );
+    return _$$NotesReactionsResponseImplToJson(this);
   }
 }
 
 abstract class _NotesReactionsResponse implements NotesReactionsResponse {
-  const factory _NotesReactionsResponse(
-      {required final String id,
-      @DateTimeConverter() required final DateTime createdAt,
-      required final UserLite user,
-      final String? type}) = _$NotesReactionsResponseImpl;
+  const factory _NotesReactionsResponse({
+    required final String id,
+    @DateTimeConverter() required final DateTime createdAt,
+    required final UserLite user,
+    final String? type,
+  }) = _$NotesReactionsResponseImpl;
 
   factory _NotesReactionsResponse.fromJson(Map<String, dynamic> json) =
       _$NotesReactionsResponseImpl.fromJson;
@@ -249,5 +272,5 @@ abstract class _NotesReactionsResponse implements NotesReactionsResponse {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesReactionsResponseImplCopyWith<_$NotesReactionsResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

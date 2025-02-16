@@ -12,10 +12,12 @@ part of 'following_requests_accept_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 FollowingRequestsAcceptRequest _$FollowingRequestsAcceptRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _FollowingRequestsAcceptRequest.fromJson(json);
 }
 
@@ -30,23 +32,28 @@ mixin _$FollowingRequestsAcceptRequest {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $FollowingRequestsAcceptRequestCopyWith<FollowingRequestsAcceptRequest>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $FollowingRequestsAcceptRequestCopyWith<$Res> {
   factory $FollowingRequestsAcceptRequestCopyWith(
-          FollowingRequestsAcceptRequest value,
-          $Res Function(FollowingRequestsAcceptRequest) then) =
-      _$FollowingRequestsAcceptRequestCopyWithImpl<$Res,
-          FollowingRequestsAcceptRequest>;
+    FollowingRequestsAcceptRequest value,
+    $Res Function(FollowingRequestsAcceptRequest) then,
+  ) =
+      _$FollowingRequestsAcceptRequestCopyWithImpl<
+        $Res,
+        FollowingRequestsAcceptRequest
+      >;
   @useResult
   $Res call({String userId});
 }
 
 /// @nodoc
-class _$FollowingRequestsAcceptRequestCopyWithImpl<$Res,
-        $Val extends FollowingRequestsAcceptRequest>
+class _$FollowingRequestsAcceptRequestCopyWithImpl<
+  $Res,
+  $Val extends FollowingRequestsAcceptRequest
+>
     implements $FollowingRequestsAcceptRequestCopyWith<$Res> {
   _$FollowingRequestsAcceptRequestCopyWithImpl(this._value, this._then);
 
@@ -59,15 +66,17 @@ class _$FollowingRequestsAcceptRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? userId = null,
-  }) {
-    return _then(_value.copyWith(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? userId = null}) {
+    return _then(
+      _value.copyWith(
+            userId:
+                null == userId
+                    ? _value.userId
+                    : userId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -75,9 +84,9 @@ class _$FollowingRequestsAcceptRequestCopyWithImpl<$Res,
 abstract class _$$FollowingRequestsAcceptRequestImplCopyWith<$Res>
     implements $FollowingRequestsAcceptRequestCopyWith<$Res> {
   factory _$$FollowingRequestsAcceptRequestImplCopyWith(
-          _$FollowingRequestsAcceptRequestImpl value,
-          $Res Function(_$FollowingRequestsAcceptRequestImpl) then) =
-      __$$FollowingRequestsAcceptRequestImplCopyWithImpl<$Res>;
+    _$FollowingRequestsAcceptRequestImpl value,
+    $Res Function(_$FollowingRequestsAcceptRequestImpl) then,
+  ) = __$$FollowingRequestsAcceptRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String userId});
@@ -85,27 +94,31 @@ abstract class _$$FollowingRequestsAcceptRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$FollowingRequestsAcceptRequestImplCopyWithImpl<$Res>
-    extends _$FollowingRequestsAcceptRequestCopyWithImpl<$Res,
-        _$FollowingRequestsAcceptRequestImpl>
+    extends
+        _$FollowingRequestsAcceptRequestCopyWithImpl<
+          $Res,
+          _$FollowingRequestsAcceptRequestImpl
+        >
     implements _$$FollowingRequestsAcceptRequestImplCopyWith<$Res> {
   __$$FollowingRequestsAcceptRequestImplCopyWithImpl(
-      _$FollowingRequestsAcceptRequestImpl _value,
-      $Res Function(_$FollowingRequestsAcceptRequestImpl) _then)
-      : super(_value, _then);
+    _$FollowingRequestsAcceptRequestImpl _value,
+    $Res Function(_$FollowingRequestsAcceptRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of FollowingRequestsAcceptRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? userId = null,
-  }) {
-    return _then(_$FollowingRequestsAcceptRequestImpl(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? userId = null}) {
+    return _then(
+      _$FollowingRequestsAcceptRequestImpl(
+        userId:
+            null == userId
+                ? _value.userId
+                : userId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -116,8 +129,8 @@ class _$FollowingRequestsAcceptRequestImpl
   const _$FollowingRequestsAcceptRequestImpl({required this.userId});
 
   factory _$FollowingRequestsAcceptRequestImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$FollowingRequestsAcceptRequestImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$FollowingRequestsAcceptRequestImplFromJson(json);
 
   @override
   final String userId;
@@ -145,22 +158,23 @@ class _$FollowingRequestsAcceptRequestImpl
   @override
   @pragma('vm:prefer-inline')
   _$$FollowingRequestsAcceptRequestImplCopyWith<
-          _$FollowingRequestsAcceptRequestImpl>
-      get copyWith => __$$FollowingRequestsAcceptRequestImplCopyWithImpl<
-          _$FollowingRequestsAcceptRequestImpl>(this, _$identity);
+    _$FollowingRequestsAcceptRequestImpl
+  >
+  get copyWith => __$$FollowingRequestsAcceptRequestImplCopyWithImpl<
+    _$FollowingRequestsAcceptRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$FollowingRequestsAcceptRequestImplToJson(
-      this,
-    );
+    return _$$FollowingRequestsAcceptRequestImplToJson(this);
   }
 }
 
 abstract class _FollowingRequestsAcceptRequest
     implements FollowingRequestsAcceptRequest {
-  const factory _FollowingRequestsAcceptRequest(
-      {required final String userId}) = _$FollowingRequestsAcceptRequestImpl;
+  const factory _FollowingRequestsAcceptRequest({
+    required final String userId,
+  }) = _$FollowingRequestsAcceptRequestImpl;
 
   factory _FollowingRequestsAcceptRequest.fromJson(Map<String, dynamic> json) =
       _$FollowingRequestsAcceptRequestImpl.fromJson;
@@ -173,6 +187,7 @@ abstract class _FollowingRequestsAcceptRequest
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FollowingRequestsAcceptRequestImplCopyWith<
-          _$FollowingRequestsAcceptRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+    _$FollowingRequestsAcceptRequestImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }

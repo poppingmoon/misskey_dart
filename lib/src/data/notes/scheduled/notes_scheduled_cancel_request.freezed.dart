@@ -12,10 +12,12 @@ part of 'notes_scheduled_cancel_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 NotesScheduledCancelRequest _$NotesScheduledCancelRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _NotesScheduledCancelRequest.fromJson(json);
 }
 
@@ -30,23 +32,28 @@ mixin _$NotesScheduledCancelRequest {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $NotesScheduledCancelRequestCopyWith<NotesScheduledCancelRequest>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $NotesScheduledCancelRequestCopyWith<$Res> {
   factory $NotesScheduledCancelRequestCopyWith(
-          NotesScheduledCancelRequest value,
-          $Res Function(NotesScheduledCancelRequest) then) =
-      _$NotesScheduledCancelRequestCopyWithImpl<$Res,
-          NotesScheduledCancelRequest>;
+    NotesScheduledCancelRequest value,
+    $Res Function(NotesScheduledCancelRequest) then,
+  ) =
+      _$NotesScheduledCancelRequestCopyWithImpl<
+        $Res,
+        NotesScheduledCancelRequest
+      >;
   @useResult
   $Res call({String draftId});
 }
 
 /// @nodoc
-class _$NotesScheduledCancelRequestCopyWithImpl<$Res,
-        $Val extends NotesScheduledCancelRequest>
+class _$NotesScheduledCancelRequestCopyWithImpl<
+  $Res,
+  $Val extends NotesScheduledCancelRequest
+>
     implements $NotesScheduledCancelRequestCopyWith<$Res> {
   _$NotesScheduledCancelRequestCopyWithImpl(this._value, this._then);
 
@@ -59,15 +66,17 @@ class _$NotesScheduledCancelRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? draftId = null,
-  }) {
-    return _then(_value.copyWith(
-      draftId: null == draftId
-          ? _value.draftId
-          : draftId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? draftId = null}) {
+    return _then(
+      _value.copyWith(
+            draftId:
+                null == draftId
+                    ? _value.draftId
+                    : draftId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -75,9 +84,9 @@ class _$NotesScheduledCancelRequestCopyWithImpl<$Res,
 abstract class _$$NotesScheduledCancelRequestImplCopyWith<$Res>
     implements $NotesScheduledCancelRequestCopyWith<$Res> {
   factory _$$NotesScheduledCancelRequestImplCopyWith(
-          _$NotesScheduledCancelRequestImpl value,
-          $Res Function(_$NotesScheduledCancelRequestImpl) then) =
-      __$$NotesScheduledCancelRequestImplCopyWithImpl<$Res>;
+    _$NotesScheduledCancelRequestImpl value,
+    $Res Function(_$NotesScheduledCancelRequestImpl) then,
+  ) = __$$NotesScheduledCancelRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String draftId});
@@ -85,27 +94,31 @@ abstract class _$$NotesScheduledCancelRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$NotesScheduledCancelRequestImplCopyWithImpl<$Res>
-    extends _$NotesScheduledCancelRequestCopyWithImpl<$Res,
-        _$NotesScheduledCancelRequestImpl>
+    extends
+        _$NotesScheduledCancelRequestCopyWithImpl<
+          $Res,
+          _$NotesScheduledCancelRequestImpl
+        >
     implements _$$NotesScheduledCancelRequestImplCopyWith<$Res> {
   __$$NotesScheduledCancelRequestImplCopyWithImpl(
-      _$NotesScheduledCancelRequestImpl _value,
-      $Res Function(_$NotesScheduledCancelRequestImpl) _then)
-      : super(_value, _then);
+    _$NotesScheduledCancelRequestImpl _value,
+    $Res Function(_$NotesScheduledCancelRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of NotesScheduledCancelRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? draftId = null,
-  }) {
-    return _then(_$NotesScheduledCancelRequestImpl(
-      draftId: null == draftId
-          ? _value.draftId
-          : draftId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? draftId = null}) {
+    return _then(
+      _$NotesScheduledCancelRequestImpl(
+        draftId:
+            null == draftId
+                ? _value.draftId
+                : draftId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -116,8 +129,8 @@ class _$NotesScheduledCancelRequestImpl
   const _$NotesScheduledCancelRequestImpl({required this.draftId});
 
   factory _$NotesScheduledCancelRequestImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$NotesScheduledCancelRequestImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$NotesScheduledCancelRequestImplFromJson(json);
 
   @override
   final String draftId;
@@ -145,14 +158,13 @@ class _$NotesScheduledCancelRequestImpl
   @override
   @pragma('vm:prefer-inline')
   _$$NotesScheduledCancelRequestImplCopyWith<_$NotesScheduledCancelRequestImpl>
-      get copyWith => __$$NotesScheduledCancelRequestImplCopyWithImpl<
-          _$NotesScheduledCancelRequestImpl>(this, _$identity);
+  get copyWith => __$$NotesScheduledCancelRequestImplCopyWithImpl<
+    _$NotesScheduledCancelRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotesScheduledCancelRequestImplToJson(
-      this,
-    );
+    return _$$NotesScheduledCancelRequestImplToJson(this);
   }
 }
 
@@ -172,5 +184,5 @@ abstract class _NotesScheduledCancelRequest
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotesScheduledCancelRequestImplCopyWith<_$NotesScheduledCancelRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

@@ -12,10 +12,12 @@ part of 'users_get_skeb_status_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 UsersGetSkebStatusRequest _$UsersGetSkebStatusRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _UsersGetSkebStatusRequest.fromJson(json);
 }
 
@@ -35,16 +37,19 @@ mixin _$UsersGetSkebStatusRequest {
 
 /// @nodoc
 abstract class $UsersGetSkebStatusRequestCopyWith<$Res> {
-  factory $UsersGetSkebStatusRequestCopyWith(UsersGetSkebStatusRequest value,
-          $Res Function(UsersGetSkebStatusRequest) then) =
-      _$UsersGetSkebStatusRequestCopyWithImpl<$Res, UsersGetSkebStatusRequest>;
+  factory $UsersGetSkebStatusRequestCopyWith(
+    UsersGetSkebStatusRequest value,
+    $Res Function(UsersGetSkebStatusRequest) then,
+  ) = _$UsersGetSkebStatusRequestCopyWithImpl<$Res, UsersGetSkebStatusRequest>;
   @useResult
   $Res call({String userId});
 }
 
 /// @nodoc
-class _$UsersGetSkebStatusRequestCopyWithImpl<$Res,
-        $Val extends UsersGetSkebStatusRequest>
+class _$UsersGetSkebStatusRequestCopyWithImpl<
+  $Res,
+  $Val extends UsersGetSkebStatusRequest
+>
     implements $UsersGetSkebStatusRequestCopyWith<$Res> {
   _$UsersGetSkebStatusRequestCopyWithImpl(this._value, this._then);
 
@@ -57,15 +62,17 @@ class _$UsersGetSkebStatusRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? userId = null,
-  }) {
-    return _then(_value.copyWith(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? userId = null}) {
+    return _then(
+      _value.copyWith(
+            userId:
+                null == userId
+                    ? _value.userId
+                    : userId // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -73,9 +80,9 @@ class _$UsersGetSkebStatusRequestCopyWithImpl<$Res,
 abstract class _$$UsersGetSkebStatusRequestImplCopyWith<$Res>
     implements $UsersGetSkebStatusRequestCopyWith<$Res> {
   factory _$$UsersGetSkebStatusRequestImplCopyWith(
-          _$UsersGetSkebStatusRequestImpl value,
-          $Res Function(_$UsersGetSkebStatusRequestImpl) then) =
-      __$$UsersGetSkebStatusRequestImplCopyWithImpl<$Res>;
+    _$UsersGetSkebStatusRequestImpl value,
+    $Res Function(_$UsersGetSkebStatusRequestImpl) then,
+  ) = __$$UsersGetSkebStatusRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String userId});
@@ -83,27 +90,31 @@ abstract class _$$UsersGetSkebStatusRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$UsersGetSkebStatusRequestImplCopyWithImpl<$Res>
-    extends _$UsersGetSkebStatusRequestCopyWithImpl<$Res,
-        _$UsersGetSkebStatusRequestImpl>
+    extends
+        _$UsersGetSkebStatusRequestCopyWithImpl<
+          $Res,
+          _$UsersGetSkebStatusRequestImpl
+        >
     implements _$$UsersGetSkebStatusRequestImplCopyWith<$Res> {
   __$$UsersGetSkebStatusRequestImplCopyWithImpl(
-      _$UsersGetSkebStatusRequestImpl _value,
-      $Res Function(_$UsersGetSkebStatusRequestImpl) _then)
-      : super(_value, _then);
+    _$UsersGetSkebStatusRequestImpl _value,
+    $Res Function(_$UsersGetSkebStatusRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UsersGetSkebStatusRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? userId = null,
-  }) {
-    return _then(_$UsersGetSkebStatusRequestImpl(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? userId = null}) {
+    return _then(
+      _$UsersGetSkebStatusRequestImpl(
+        userId:
+            null == userId
+                ? _value.userId
+                : userId // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -141,14 +152,13 @@ class _$UsersGetSkebStatusRequestImpl implements _UsersGetSkebStatusRequest {
   @override
   @pragma('vm:prefer-inline')
   _$$UsersGetSkebStatusRequestImplCopyWith<_$UsersGetSkebStatusRequestImpl>
-      get copyWith => __$$UsersGetSkebStatusRequestImplCopyWithImpl<
-          _$UsersGetSkebStatusRequestImpl>(this, _$identity);
+  get copyWith => __$$UsersGetSkebStatusRequestImplCopyWithImpl<
+    _$UsersGetSkebStatusRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UsersGetSkebStatusRequestImplToJson(
-      this,
-    );
+    return _$$UsersGetSkebStatusRequestImplToJson(this);
   }
 }
 
@@ -167,5 +177,5 @@ abstract class _UsersGetSkebStatusRequest implements UsersGetSkebStatusRequest {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsersGetSkebStatusRequestImplCopyWith<_$UsersGetSkebStatusRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

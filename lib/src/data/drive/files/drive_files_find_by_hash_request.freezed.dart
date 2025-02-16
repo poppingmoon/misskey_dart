@@ -12,10 +12,12 @@ part of 'drive_files_find_by_hash_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 DriveFilesFindByHashRequest _$DriveFilesFindByHashRequestFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _DriveFilesFindByHashRequest.fromJson(json);
 }
 
@@ -30,23 +32,28 @@ mixin _$DriveFilesFindByHashRequest {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $DriveFilesFindByHashRequestCopyWith<DriveFilesFindByHashRequest>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $DriveFilesFindByHashRequestCopyWith<$Res> {
   factory $DriveFilesFindByHashRequestCopyWith(
-          DriveFilesFindByHashRequest value,
-          $Res Function(DriveFilesFindByHashRequest) then) =
-      _$DriveFilesFindByHashRequestCopyWithImpl<$Res,
-          DriveFilesFindByHashRequest>;
+    DriveFilesFindByHashRequest value,
+    $Res Function(DriveFilesFindByHashRequest) then,
+  ) =
+      _$DriveFilesFindByHashRequestCopyWithImpl<
+        $Res,
+        DriveFilesFindByHashRequest
+      >;
   @useResult
   $Res call({String md5});
 }
 
 /// @nodoc
-class _$DriveFilesFindByHashRequestCopyWithImpl<$Res,
-        $Val extends DriveFilesFindByHashRequest>
+class _$DriveFilesFindByHashRequestCopyWithImpl<
+  $Res,
+  $Val extends DriveFilesFindByHashRequest
+>
     implements $DriveFilesFindByHashRequestCopyWith<$Res> {
   _$DriveFilesFindByHashRequestCopyWithImpl(this._value, this._then);
 
@@ -59,15 +66,17 @@ class _$DriveFilesFindByHashRequestCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? md5 = null,
-  }) {
-    return _then(_value.copyWith(
-      md5: null == md5
-          ? _value.md5
-          : md5 // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? md5 = null}) {
+    return _then(
+      _value.copyWith(
+            md5:
+                null == md5
+                    ? _value.md5
+                    : md5 // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -75,9 +84,9 @@ class _$DriveFilesFindByHashRequestCopyWithImpl<$Res,
 abstract class _$$DriveFilesFindByHashRequestImplCopyWith<$Res>
     implements $DriveFilesFindByHashRequestCopyWith<$Res> {
   factory _$$DriveFilesFindByHashRequestImplCopyWith(
-          _$DriveFilesFindByHashRequestImpl value,
-          $Res Function(_$DriveFilesFindByHashRequestImpl) then) =
-      __$$DriveFilesFindByHashRequestImplCopyWithImpl<$Res>;
+    _$DriveFilesFindByHashRequestImpl value,
+    $Res Function(_$DriveFilesFindByHashRequestImpl) then,
+  ) = __$$DriveFilesFindByHashRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String md5});
@@ -85,27 +94,31 @@ abstract class _$$DriveFilesFindByHashRequestImplCopyWith<$Res>
 
 /// @nodoc
 class __$$DriveFilesFindByHashRequestImplCopyWithImpl<$Res>
-    extends _$DriveFilesFindByHashRequestCopyWithImpl<$Res,
-        _$DriveFilesFindByHashRequestImpl>
+    extends
+        _$DriveFilesFindByHashRequestCopyWithImpl<
+          $Res,
+          _$DriveFilesFindByHashRequestImpl
+        >
     implements _$$DriveFilesFindByHashRequestImplCopyWith<$Res> {
   __$$DriveFilesFindByHashRequestImplCopyWithImpl(
-      _$DriveFilesFindByHashRequestImpl _value,
-      $Res Function(_$DriveFilesFindByHashRequestImpl) _then)
-      : super(_value, _then);
+    _$DriveFilesFindByHashRequestImpl _value,
+    $Res Function(_$DriveFilesFindByHashRequestImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of DriveFilesFindByHashRequest
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? md5 = null,
-  }) {
-    return _then(_$DriveFilesFindByHashRequestImpl(
-      md5: null == md5
-          ? _value.md5
-          : md5 // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? md5 = null}) {
+    return _then(
+      _$DriveFilesFindByHashRequestImpl(
+        md5:
+            null == md5
+                ? _value.md5
+                : md5 // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -116,8 +129,8 @@ class _$DriveFilesFindByHashRequestImpl
   const _$DriveFilesFindByHashRequestImpl({required this.md5});
 
   factory _$DriveFilesFindByHashRequestImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$DriveFilesFindByHashRequestImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$DriveFilesFindByHashRequestImplFromJson(json);
 
   @override
   final String md5;
@@ -145,14 +158,13 @@ class _$DriveFilesFindByHashRequestImpl
   @override
   @pragma('vm:prefer-inline')
   _$$DriveFilesFindByHashRequestImplCopyWith<_$DriveFilesFindByHashRequestImpl>
-      get copyWith => __$$DriveFilesFindByHashRequestImplCopyWithImpl<
-          _$DriveFilesFindByHashRequestImpl>(this, _$identity);
+  get copyWith => __$$DriveFilesFindByHashRequestImplCopyWithImpl<
+    _$DriveFilesFindByHashRequestImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DriveFilesFindByHashRequestImplToJson(
-      this,
-    );
+    return _$$DriveFilesFindByHashRequestImplToJson(this);
   }
 }
 
@@ -172,5 +184,5 @@ abstract class _DriveFilesFindByHashRequest
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DriveFilesFindByHashRequestImplCopyWith<_$DriveFilesFindByHashRequestImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
