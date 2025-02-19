@@ -26,9 +26,11 @@ mixin _$NotesLocalTimelineRequest {
   bool? get withFiles => throw _privateConstructorUsedError;
   bool? get withRenotes => throw _privateConstructorUsedError;
   bool? get withReplies => throw _privateConstructorUsedError;
-  @Deprecated("removed at 2023.10.0")
+
+  /// removed at 2023.10.0
   List<String>? get fileType => throw _privateConstructorUsedError;
-  @Deprecated("removed at 2023.12.0")
+
+  /// removed at 2023.12.0
   bool? get excludeNsfw => throw _privateConstructorUsedError;
   int? get limit => throw _privateConstructorUsedError;
   String? get sinceId => throw _privateConstructorUsedError;
@@ -60,8 +62,8 @@ abstract class $NotesLocalTimelineRequestCopyWith<$Res> {
     bool? withFiles,
     bool? withRenotes,
     bool? withReplies,
-    @Deprecated("removed at 2023.10.0") List<String>? fileType,
-    @Deprecated("removed at 2023.12.0") bool? excludeNsfw,
+    List<String>? fileType,
+    bool? excludeNsfw,
     int? limit,
     String? sinceId,
     String? untilId,
@@ -177,8 +179,8 @@ abstract class _$$NotesLocalTimelineRequestImplCopyWith<$Res>
     bool? withFiles,
     bool? withRenotes,
     bool? withReplies,
-    @Deprecated("removed at 2023.10.0") List<String>? fileType,
-    @Deprecated("removed at 2023.12.0") bool? excludeNsfw,
+    List<String>? fileType,
+    bool? excludeNsfw,
     int? limit,
     String? sinceId,
     String? untilId,
@@ -287,8 +289,8 @@ class _$NotesLocalTimelineRequestImpl implements _NotesLocalTimelineRequest {
     this.withFiles,
     this.withRenotes,
     this.withReplies,
-    @Deprecated("removed at 2023.10.0") final List<String>? fileType,
-    @Deprecated("removed at 2023.12.0") this.excludeNsfw,
+    final List<String>? fileType,
+    this.excludeNsfw,
     this.limit,
     this.sinceId,
     this.untilId,
@@ -306,9 +308,12 @@ class _$NotesLocalTimelineRequestImpl implements _NotesLocalTimelineRequest {
   final bool? withRenotes;
   @override
   final bool? withReplies;
+
+  /// removed at 2023.10.0
   final List<String>? _fileType;
+
+  /// removed at 2023.10.0
   @override
-  @Deprecated("removed at 2023.10.0")
   List<String>? get fileType {
     final value = _fileType;
     if (value == null) return null;
@@ -317,8 +322,8 @@ class _$NotesLocalTimelineRequestImpl implements _NotesLocalTimelineRequest {
     return EqualUnmodifiableListView(value);
   }
 
+  /// removed at 2023.12.0
   @override
-  @Deprecated("removed at 2023.12.0")
   final bool? excludeNsfw;
   @override
   final int? limit;
@@ -403,8 +408,8 @@ abstract class _NotesLocalTimelineRequest implements NotesLocalTimelineRequest {
     final bool? withFiles,
     final bool? withRenotes,
     final bool? withReplies,
-    @Deprecated("removed at 2023.10.0") final List<String>? fileType,
-    @Deprecated("removed at 2023.12.0") final bool? excludeNsfw,
+    final List<String>? fileType,
+    final bool? excludeNsfw,
     final int? limit,
     final String? sinceId,
     final String? untilId,
@@ -422,11 +427,13 @@ abstract class _NotesLocalTimelineRequest implements NotesLocalTimelineRequest {
   bool? get withRenotes;
   @override
   bool? get withReplies;
+
+  /// removed at 2023.10.0
   @override
-  @Deprecated("removed at 2023.10.0")
   List<String>? get fileType;
+
+  /// removed at 2023.12.0
   @override
-  @Deprecated("removed at 2023.12.0")
   bool? get excludeNsfw;
   @override
   int? get limit;

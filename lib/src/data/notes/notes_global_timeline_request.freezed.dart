@@ -32,7 +32,8 @@ mixin _$NotesGlobalTimelineRequest {
   DateTime? get untilDate => throw _privateConstructorUsedError;
   bool? get withFiles => throw _privateConstructorUsedError;
   bool? get withRenotes => throw _privateConstructorUsedError;
-  @Deprecated("removed at 2023.10.0")
+
+  /// removed at 2023.10.0
   bool? get withReplies => throw _privateConstructorUsedError;
 
   /// Serializes this NotesGlobalTimelineRequest to a JSON map.
@@ -64,7 +65,7 @@ abstract class $NotesGlobalTimelineRequestCopyWith<$Res> {
     @EpocTimeDateTimeConverter() DateTime? untilDate,
     bool? withFiles,
     bool? withRenotes,
-    @Deprecated("removed at 2023.10.0") bool? withReplies,
+    bool? withReplies,
   });
 }
 
@@ -160,7 +161,7 @@ abstract class _$$NotesGlobalTimelineRequestImplCopyWith<$Res>
     @EpocTimeDateTimeConverter() DateTime? untilDate,
     bool? withFiles,
     bool? withRenotes,
-    @Deprecated("removed at 2023.10.0") bool? withReplies,
+    bool? withReplies,
   });
 }
 
@@ -249,7 +250,7 @@ class _$NotesGlobalTimelineRequestImpl implements _NotesGlobalTimelineRequest {
     @EpocTimeDateTimeConverter() this.untilDate,
     this.withFiles,
     this.withRenotes,
-    @Deprecated("removed at 2023.10.0") this.withReplies,
+    this.withReplies,
   });
 
   factory _$NotesGlobalTimelineRequestImpl.fromJson(
@@ -272,8 +273,9 @@ class _$NotesGlobalTimelineRequestImpl implements _NotesGlobalTimelineRequest {
   final bool? withFiles;
   @override
   final bool? withRenotes;
+
+  /// removed at 2023.10.0
   @override
-  @Deprecated("removed at 2023.10.0")
   final bool? withReplies;
 
   @override
@@ -341,7 +343,7 @@ abstract class _NotesGlobalTimelineRequest
     @EpocTimeDateTimeConverter() final DateTime? untilDate,
     final bool? withFiles,
     final bool? withRenotes,
-    @Deprecated("removed at 2023.10.0") final bool? withReplies,
+    final bool? withReplies,
   }) = _$NotesGlobalTimelineRequestImpl;
 
   factory _NotesGlobalTimelineRequest.fromJson(Map<String, dynamic> json) =
@@ -363,8 +365,9 @@ abstract class _NotesGlobalTimelineRequest
   bool? get withFiles;
   @override
   bool? get withRenotes;
+
+  /// removed at 2023.10.0
   @override
-  @Deprecated("removed at 2023.10.0")
   bool? get withReplies;
 
   /// Create a copy of NotesGlobalTimelineRequest

@@ -22,7 +22,8 @@ AnnouncementsRequest _$AnnouncementsRequestFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$AnnouncementsRequest {
   int? get limit => throw _privateConstructorUsedError;
-  @Deprecated("removed in Misskey 2023.9")
+
+  /// removed in Misskey 2023.9
   bool? get withUnreads => throw _privateConstructorUsedError;
   bool? get isActive => throw _privateConstructorUsedError;
   String? get sinceId => throw _privateConstructorUsedError;
@@ -48,7 +49,7 @@ abstract class $AnnouncementsRequestCopyWith<$Res> {
   @useResult
   $Res call({
     int? limit,
-    @Deprecated("removed in Misskey 2023.9") bool? withUnreads,
+    bool? withUnreads,
     bool? isActive,
     String? sinceId,
     String? untilId,
@@ -130,7 +131,7 @@ abstract class _$$AnnouncementsRequestImplCopyWith<$Res>
   @useResult
   $Res call({
     int? limit,
-    @Deprecated("removed in Misskey 2023.9") bool? withUnreads,
+    bool? withUnreads,
     bool? isActive,
     String? sinceId,
     String? untilId,
@@ -201,7 +202,7 @@ class __$$AnnouncementsRequestImplCopyWithImpl<$Res>
 class _$AnnouncementsRequestImpl implements _AnnouncementsRequest {
   const _$AnnouncementsRequestImpl({
     this.limit,
-    @Deprecated("removed in Misskey 2023.9") this.withUnreads,
+    this.withUnreads,
     this.isActive,
     this.sinceId,
     this.untilId,
@@ -213,8 +214,9 @@ class _$AnnouncementsRequestImpl implements _AnnouncementsRequest {
 
   @override
   final int? limit;
+
+  /// removed in Misskey 2023.9
   @override
-  @Deprecated("removed in Misskey 2023.9")
   final bool? withUnreads;
   @override
   final bool? isActive;
@@ -279,7 +281,7 @@ class _$AnnouncementsRequestImpl implements _AnnouncementsRequest {
 abstract class _AnnouncementsRequest implements AnnouncementsRequest {
   const factory _AnnouncementsRequest({
     final int? limit,
-    @Deprecated("removed in Misskey 2023.9") final bool? withUnreads,
+    final bool? withUnreads,
     final bool? isActive,
     final String? sinceId,
     final String? untilId,
@@ -291,8 +293,9 @@ abstract class _AnnouncementsRequest implements AnnouncementsRequest {
 
   @override
   int? get limit;
+
+  /// removed in Misskey 2023.9
   @override
-  @Deprecated("removed in Misskey 2023.9")
   bool? get withUnreads;
   @override
   bool? get isActive;

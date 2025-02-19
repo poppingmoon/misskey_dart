@@ -710,7 +710,6 @@ mixin _$UserDetailedNotMe {
   bool get publicReactions =>
       throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-  @Deprecated("removed at 2023.12.0")
   FFVisibility? get ffVisibility => throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FFVisibility? get followersVisibility => throw _privateConstructorUsedError; // ignore: invalid_annotation_target
@@ -789,7 +788,6 @@ abstract class $UserDetailedNotMeCopyWith<$Res> {
     Map<String, dynamic>? pinnedPage,
     bool publicReactions,
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    @Deprecated("removed at 2023.12.0")
     FFVisibility? ffVisibility,
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     FFVisibility? followersVisibility,
@@ -1218,7 +1216,6 @@ abstract class _$$UserDetailedNotMeImplCopyWith<$Res>
     Map<String, dynamic>? pinnedPage,
     bool publicReactions,
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    @Deprecated("removed at 2023.12.0")
     FFVisibility? ffVisibility,
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     FFVisibility? followersVisibility,
@@ -1626,7 +1623,6 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
     final Map<String, dynamic>? pinnedPage,
     this.publicReactions = false,
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    @Deprecated("removed at 2023.12.0")
     this.ffVisibility,
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     this.followersVisibility,
@@ -1842,7 +1838,6 @@ class _$UserDetailedNotMeImpl implements _UserDetailedNotMe {
   // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-  @Deprecated("removed at 2023.12.0")
   final FFVisibility? ffVisibility;
   // ignore: invalid_annotation_target
   @override
@@ -2129,7 +2124,6 @@ abstract class _UserDetailedNotMe implements UserDetailedNotMe {
     final Map<String, dynamic>? pinnedPage,
     final bool publicReactions,
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    @Deprecated("removed at 2023.12.0")
     final FFVisibility? ffVisibility,
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     final FFVisibility? followersVisibility,
@@ -2251,7 +2245,6 @@ abstract class _UserDetailedNotMe implements UserDetailedNotMe {
   bool get publicReactions; // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-  @Deprecated("removed at 2023.12.0")
   FFVisibility? get ffVisibility; // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
@@ -2353,7 +2346,6 @@ mixin _$UserDetailedNotMeWithRelations {
   bool get publicReactions =>
       throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-  @Deprecated("removed at 2023.12.0")
   FFVisibility? get ffVisibility => throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FFVisibility? get followersVisibility => throw _privateConstructorUsedError; // ignore: invalid_annotation_target
@@ -2448,7 +2440,6 @@ abstract class $UserDetailedNotMeWithRelationsCopyWith<$Res> {
     Map<String, dynamic>? pinnedPage,
     bool publicReactions,
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    @Deprecated("removed at 2023.12.0")
     FFVisibility? ffVisibility,
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     FFVisibility? followersVisibility,
@@ -2957,7 +2948,6 @@ abstract class _$$UserDetailedNotMeWithRelationsImplCopyWith<$Res>
     Map<String, dynamic>? pinnedPage,
     bool publicReactions,
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    @Deprecated("removed at 2023.12.0")
     FFVisibility? ffVisibility,
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     FFVisibility? followersVisibility,
@@ -3447,7 +3437,6 @@ class _$UserDetailedNotMeWithRelationsImpl
     final Map<String, dynamic>? pinnedPage,
     this.publicReactions = false,
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    @Deprecated("removed at 2023.12.0")
     this.ffVisibility,
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     this.followersVisibility,
@@ -3675,7 +3664,6 @@ class _$UserDetailedNotMeWithRelationsImpl
   // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-  @Deprecated("removed at 2023.12.0")
   final FFVisibility? ffVisibility;
   // ignore: invalid_annotation_target
   @override
@@ -4027,7 +4015,6 @@ abstract class _UserDetailedNotMeWithRelations
     final Map<String, dynamic>? pinnedPage,
     final bool publicReactions,
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    @Deprecated("removed at 2023.12.0")
     final FFVisibility? ffVisibility,
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     final FFVisibility? followersVisibility,
@@ -4160,7 +4147,6 @@ abstract class _UserDetailedNotMeWithRelations
   bool get publicReactions; // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-  @Deprecated("removed at 2023.12.0")
   FFVisibility? get ffVisibility; // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
@@ -4284,7 +4270,6 @@ mixin _$MeDetailed {
   bool get publicReactions =>
       throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-  @Deprecated("removed at 2023.12.0")
   FFVisibility? get ffVisibility => throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
   FFVisibility? get followersVisibility => throw _privateConstructorUsedError; // ignore: invalid_annotation_target
@@ -4346,7 +4331,8 @@ mixin _$MeDetailed {
   @MuteWordsConverter()
   List<MuteWord>? get hardMutedWords => throw _privateConstructorUsedError; // Added in Misskey 12.99.0
   List<String> get mutedInstances => throw _privateConstructorUsedError;
-  @Deprecated("Deprecated in Misskey 2023.9.2")
+
+  /// Deprecated in Misskey 2023.9.2
   List<String>? get mutingNotificationTypes =>
       throw _privateConstructorUsedError;
   NotificationRecieveConfigs get notificationRecieveConfig =>
@@ -4423,7 +4409,6 @@ abstract class $MeDetailedCopyWith<$Res> {
     Map<String, dynamic>? pinnedPage,
     bool publicReactions,
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    @Deprecated("removed at 2023.12.0")
     FFVisibility? ffVisibility,
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     FFVisibility? followersVisibility,
@@ -4465,7 +4450,6 @@ abstract class $MeDetailedCopyWith<$Res> {
     @MuteWordsConverter() List<MuteWord>? mutedWords,
     @MuteWordsConverter() List<MuteWord>? hardMutedWords,
     List<String> mutedInstances,
-    @Deprecated("Deprecated in Misskey 2023.9.2")
     List<String>? mutingNotificationTypes,
     NotificationRecieveConfigs notificationRecieveConfig,
     List<String> emailNotificationTypes,
@@ -5128,7 +5112,6 @@ abstract class _$$MeDetailedImplCopyWith<$Res>
     Map<String, dynamic>? pinnedPage,
     bool publicReactions,
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    @Deprecated("removed at 2023.12.0")
     FFVisibility? ffVisibility,
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     FFVisibility? followersVisibility,
@@ -5170,7 +5153,6 @@ abstract class _$$MeDetailedImplCopyWith<$Res>
     @MuteWordsConverter() List<MuteWord>? mutedWords,
     @MuteWordsConverter() List<MuteWord>? hardMutedWords,
     List<String> mutedInstances,
-    @Deprecated("Deprecated in Misskey 2023.9.2")
     List<String>? mutingNotificationTypes,
     NotificationRecieveConfigs notificationRecieveConfig,
     List<String> emailNotificationTypes,
@@ -5787,7 +5769,6 @@ class _$MeDetailedImpl implements _MeDetailed {
     final Map<String, dynamic>? pinnedPage,
     this.publicReactions = false,
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    @Deprecated("removed at 2023.12.0")
     this.ffVisibility,
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     this.followersVisibility,
@@ -5829,7 +5810,6 @@ class _$MeDetailedImpl implements _MeDetailed {
     @MuteWordsConverter() final List<MuteWord>? mutedWords,
     @MuteWordsConverter() final List<MuteWord>? hardMutedWords,
     final List<String> mutedInstances = const [],
-    @Deprecated("Deprecated in Misskey 2023.9.2")
     final List<String>? mutingNotificationTypes,
     this.notificationRecieveConfig = const NotificationRecieveConfigs(),
     final List<String> emailNotificationTypes = const [],
@@ -6047,7 +6027,6 @@ class _$MeDetailedImpl implements _MeDetailed {
   // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-  @Deprecated("removed at 2023.12.0")
   final FFVisibility? ffVisibility;
   // ignore: invalid_annotation_target
   @override
@@ -6201,9 +6180,11 @@ class _$MeDetailedImpl implements _MeDetailed {
     return EqualUnmodifiableListView(_mutedInstances);
   }
 
+  /// Deprecated in Misskey 2023.9.2
   final List<String>? _mutingNotificationTypes;
+
+  /// Deprecated in Misskey 2023.9.2
   @override
-  @Deprecated("Deprecated in Misskey 2023.9.2")
   List<String>? get mutingNotificationTypes {
     final value = _mutingNotificationTypes;
     if (value == null) return null;
@@ -6633,7 +6614,6 @@ abstract class _MeDetailed implements MeDetailed {
     final Map<String, dynamic>? pinnedPage,
     final bool publicReactions,
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    @Deprecated("removed at 2023.12.0")
     final FFVisibility? ffVisibility,
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     final FFVisibility? followersVisibility,
@@ -6675,7 +6655,6 @@ abstract class _MeDetailed implements MeDetailed {
     @MuteWordsConverter() final List<MuteWord>? mutedWords,
     @MuteWordsConverter() final List<MuteWord>? hardMutedWords,
     final List<String> mutedInstances,
-    @Deprecated("Deprecated in Misskey 2023.9.2")
     final List<String>? mutingNotificationTypes,
     final NotificationRecieveConfigs notificationRecieveConfig,
     final List<String> emailNotificationTypes,
@@ -6792,7 +6771,6 @@ abstract class _MeDetailed implements MeDetailed {
   bool get publicReactions; // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-  @Deprecated("removed at 2023.12.0")
   FFVisibility? get ffVisibility; // ignore: invalid_annotation_target
   @override
   @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
@@ -6875,8 +6853,9 @@ abstract class _MeDetailed implements MeDetailed {
   List<MuteWord>? get hardMutedWords; // Added in Misskey 12.99.0
   @override
   List<String> get mutedInstances;
+
+  /// Deprecated in Misskey 2023.9.2
   @override
-  @Deprecated("Deprecated in Misskey 2023.9.2")
   List<String>? get mutingNotificationTypes;
   @override
   NotificationRecieveConfigs get notificationRecieveConfig; // Added in Misskey 12.70.0

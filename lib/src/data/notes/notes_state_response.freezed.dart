@@ -23,7 +23,8 @@ NotesStateResponse _$NotesStateResponseFromJson(Map<String, dynamic> json) {
 mixin _$NotesStateResponse {
   bool get isFavorited => throw _privateConstructorUsedError;
   bool get isMutedThread => throw _privateConstructorUsedError;
-  @Deprecated("This property is already removed")
+
+  /// This property is already removed
   bool? get isWatching => throw _privateConstructorUsedError;
 
   /// Serializes this NotesStateResponse to a JSON map.
@@ -43,11 +44,7 @@ abstract class $NotesStateResponseCopyWith<$Res> {
     $Res Function(NotesStateResponse) then,
   ) = _$NotesStateResponseCopyWithImpl<$Res, NotesStateResponse>;
   @useResult
-  $Res call({
-    bool isFavorited,
-    bool isMutedThread,
-    @Deprecated("This property is already removed") bool? isWatching,
-  });
+  $Res call({bool isFavorited, bool isMutedThread, bool? isWatching});
 }
 
 /// @nodoc
@@ -101,11 +98,7 @@ abstract class _$$NotesStateResponseImplCopyWith<$Res>
   ) = __$$NotesStateResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    bool isFavorited,
-    bool isMutedThread,
-    @Deprecated("This property is already removed") bool? isWatching,
-  });
+  $Res call({bool isFavorited, bool isMutedThread, bool? isWatching});
 }
 
 /// @nodoc
@@ -154,7 +147,7 @@ class _$NotesStateResponseImpl implements _NotesStateResponse {
   const _$NotesStateResponseImpl({
     required this.isFavorited,
     required this.isMutedThread,
-    @Deprecated("This property is already removed") this.isWatching,
+    this.isWatching,
   });
 
   factory _$NotesStateResponseImpl.fromJson(Map<String, dynamic> json) =>
@@ -164,8 +157,9 @@ class _$NotesStateResponseImpl implements _NotesStateResponse {
   final bool isFavorited;
   @override
   final bool isMutedThread;
+
+  /// This property is already removed
   @override
-  @Deprecated("This property is already removed")
   final bool? isWatching;
 
   @override
@@ -212,7 +206,7 @@ abstract class _NotesStateResponse implements NotesStateResponse {
   const factory _NotesStateResponse({
     required final bool isFavorited,
     required final bool isMutedThread,
-    @Deprecated("This property is already removed") final bool? isWatching,
+    final bool? isWatching,
   }) = _$NotesStateResponseImpl;
 
   factory _NotesStateResponse.fromJson(Map<String, dynamic> json) =
@@ -222,8 +216,9 @@ abstract class _NotesStateResponse implements NotesStateResponse {
   bool get isFavorited;
   @override
   bool get isMutedThread;
+
+  /// This property is already removed
   @override
-  @Deprecated("This property is already removed")
   bool? get isWatching;
 
   /// Create a copy of NotesStateResponse

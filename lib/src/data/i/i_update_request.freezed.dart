@@ -53,7 +53,8 @@ mixin _$IUpdateRequest {
   bool? get receiveAnnouncementEmail => throw _privateConstructorUsedError;
   bool? get alwaysMarkNsfw => throw _privateConstructorUsedError;
   bool? get autoSensitive => throw _privateConstructorUsedError;
-  @Deprecated("removed at 2023.12.0")
+
+  /// removed at 2023.12.0
   FFVisibility? get ffVisibility => throw _privateConstructorUsedError;
   FFVisibility? get followingVisibility => throw _privateConstructorUsedError;
   FFVisibility? get followersVisibility => throw _privateConstructorUsedError;
@@ -118,7 +119,7 @@ abstract class $IUpdateRequestCopyWith<$Res> {
     bool? receiveAnnouncementEmail,
     bool? alwaysMarkNsfw,
     bool? autoSensitive,
-    @Deprecated("removed at 2023.12.0") FFVisibility? ffVisibility,
+    FFVisibility? ffVisibility,
     FFVisibility? followingVisibility,
     FFVisibility? followersVisibility,
     String? pinnedPageId,
@@ -447,7 +448,7 @@ abstract class _$$IUpdateRequestImplCopyWith<$Res>
     bool? receiveAnnouncementEmail,
     bool? alwaysMarkNsfw,
     bool? autoSensitive,
-    @Deprecated("removed at 2023.12.0") FFVisibility? ffVisibility,
+    FFVisibility? ffVisibility,
     FFVisibility? followingVisibility,
     FFVisibility? followersVisibility,
     String? pinnedPageId,
@@ -748,7 +749,7 @@ class _$IUpdateRequestImpl implements _IUpdateRequest {
     this.receiveAnnouncementEmail,
     this.alwaysMarkNsfw,
     this.autoSensitive,
-    @Deprecated("removed at 2023.12.0") this.ffVisibility,
+    this.ffVisibility,
     this.followingVisibility,
     this.followersVisibility,
     this.pinnedPageId,
@@ -847,8 +848,9 @@ class _$IUpdateRequestImpl implements _IUpdateRequest {
   final bool? alwaysMarkNsfw;
   @override
   final bool? autoSensitive;
+
+  /// removed at 2023.12.0
   @override
-  @Deprecated("removed at 2023.12.0")
   final FFVisibility? ffVisibility;
   @override
   final FFVisibility? followingVisibility;
@@ -1138,7 +1140,7 @@ abstract class _IUpdateRequest implements IUpdateRequest {
     final bool? receiveAnnouncementEmail,
     final bool? alwaysMarkNsfw,
     final bool? autoSensitive,
-    @Deprecated("removed at 2023.12.0") final FFVisibility? ffVisibility,
+    final FFVisibility? ffVisibility,
     final FFVisibility? followingVisibility,
     final FFVisibility? followersVisibility,
     final String? pinnedPageId,
@@ -1212,8 +1214,9 @@ abstract class _IUpdateRequest implements IUpdateRequest {
   bool? get alwaysMarkNsfw;
   @override
   bool? get autoSensitive;
+
+  /// removed at 2023.12.0
   @override
-  @Deprecated("removed at 2023.12.0")
   FFVisibility? get ffVisibility;
   @override
   FFVisibility? get followingVisibility;

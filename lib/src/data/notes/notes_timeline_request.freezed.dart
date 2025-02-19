@@ -33,7 +33,8 @@ mixin _$NotesTimelineRequest {
   bool? get includeLocalRenotes => throw _privateConstructorUsedError;
   bool? get withFiles => throw _privateConstructorUsedError;
   bool? get withRenotes => throw _privateConstructorUsedError;
-  @Deprecated("removed at *")
+
+  /// removed at *
   bool? get excludeNsfw => throw _privateConstructorUsedError;
   bool? get allowPartial => throw _privateConstructorUsedError;
 
@@ -65,7 +66,7 @@ abstract class $NotesTimelineRequestCopyWith<$Res> {
     bool? includeLocalRenotes,
     bool? withFiles,
     bool? withRenotes,
-    @Deprecated("removed at *") bool? excludeNsfw,
+    bool? excludeNsfw,
     bool? allowPartial,
   });
 }
@@ -189,7 +190,7 @@ abstract class _$$NotesTimelineRequestImplCopyWith<$Res>
     bool? includeLocalRenotes,
     bool? withFiles,
     bool? withRenotes,
-    @Deprecated("removed at *") bool? excludeNsfw,
+    bool? excludeNsfw,
     bool? allowPartial,
   });
 }
@@ -302,7 +303,7 @@ class _$NotesTimelineRequestImpl implements _NotesTimelineRequest {
     this.includeLocalRenotes,
     this.withFiles,
     this.withRenotes,
-    @Deprecated("removed at *") this.excludeNsfw,
+    this.excludeNsfw,
     this.allowPartial,
   });
 
@@ -331,8 +332,9 @@ class _$NotesTimelineRequestImpl implements _NotesTimelineRequest {
   final bool? withFiles;
   @override
   final bool? withRenotes;
+
+  /// removed at *
   @override
-  @Deprecated("removed at *")
   final bool? excludeNsfw;
   @override
   final bool? allowPartial;
@@ -418,7 +420,7 @@ abstract class _NotesTimelineRequest implements NotesTimelineRequest {
     final bool? includeLocalRenotes,
     final bool? withFiles,
     final bool? withRenotes,
-    @Deprecated("removed at *") final bool? excludeNsfw,
+    final bool? excludeNsfw,
     final bool? allowPartial,
   }) = _$NotesTimelineRequestImpl;
 
@@ -447,8 +449,9 @@ abstract class _NotesTimelineRequest implements NotesTimelineRequest {
   bool? get withFiles;
   @override
   bool? get withRenotes;
+
+  /// removed at *
   @override
-  @Deprecated("removed at *")
   bool? get excludeNsfw;
   @override
   bool? get allowPartial;

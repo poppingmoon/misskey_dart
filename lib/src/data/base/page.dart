@@ -38,29 +38,40 @@ enum PageContentType {
   section,
   image,
   note,
-  @Deprecated("removed")
+
+  /// removed
   textarea,
-  @Deprecated("removed")
+
+  /// removed
   canvas,
-  @Deprecated("removed")
+
+  /// removed
   button,
-  @Deprecated("removed")
+
+  /// removed
   radioButton,
-  @Deprecated("removed")
+
+  /// removed
   textInput,
-  @Deprecated("removed")
+
+  /// removed
   textareaInput,
-  @Deprecated("removed")
+
+  /// removed
   numberInput,
-  @Deprecated("removed")
+
+  /// removed
   @JsonValue('switch')
   switcher,
-  @Deprecated("removed")
+
+  /// removed
   counter,
-  @Deprecated("removed")
+
+  /// removed
   @JsonValue('if')
   condition,
-  @Deprecated("removed")
+
+  /// removed
   post,
 }
 

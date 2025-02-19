@@ -8,7 +8,9 @@ part 'users_notes_request.g.dart';
 class UsersNotesRequest with _$UsersNotesRequest {
   const factory UsersNotesRequest({
     required String userId,
-    @Deprecated("removed at 2023.9.2") bool? includeReplies,
+
+    /// removed at 2023.9.2
+    bool? includeReplies,
     bool? withReplies,
     bool? withRenotes,
     bool? withChannelNotes,
@@ -17,11 +19,15 @@ class UsersNotesRequest with _$UsersNotesRequest {
     String? untilId,
     @EpocTimeDateTimeConverter() DateTime? sinceDate,
     @EpocTimeDateTimeConverter() DateTime? untilDate,
-    @Deprecated("removed at 2023.11.1") bool? includeMyRenotes,
+
+    /// removed at 2023.11.1
+    bool? includeMyRenotes,
     bool? withFiles,
     List<String>? fileType,
     bool? allowPartial,
-    @Deprecated("removed at 2023.12.0") bool? excludeNsfw,
+
+    /// removed at 2023.12.0
+    bool? excludeNsfw,
   }) = _UsersNotesRequest;
 
   factory UsersNotesRequest.fromJson(Map<String, Object?> json) =>

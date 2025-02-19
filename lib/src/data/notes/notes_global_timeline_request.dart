@@ -14,7 +14,9 @@ class NotesGlobalTimelineRequest with _$NotesGlobalTimelineRequest {
     @EpocTimeDateTimeConverter() DateTime? untilDate,
     bool? withFiles,
     bool? withRenotes,
-    @Deprecated("removed at 2023.10.0") bool? withReplies,
+
+    /// removed at 2023.10.0
+    bool? withReplies,
   }) = _NotesGlobalTimelineRequest;
 
   factory NotesGlobalTimelineRequest.fromJson(Map<String, dynamic> json) =>

@@ -17,7 +17,9 @@ class NotesTimelineRequest with _$NotesTimelineRequest {
     bool? includeLocalRenotes,
     bool? withFiles,
     bool? withRenotes,
-    @Deprecated("removed at *") bool? excludeNsfw,
+
+    /// removed at *
+    bool? excludeNsfw,
     bool? allowPartial,
   }) = _NotesTimelineRequest;
 

@@ -22,7 +22,8 @@ UsersNotesRequest _$UsersNotesRequestFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$UsersNotesRequest {
   String get userId => throw _privateConstructorUsedError;
-  @Deprecated("removed at 2023.9.2")
+
+  /// removed at 2023.9.2
   bool? get includeReplies => throw _privateConstructorUsedError;
   bool? get withReplies => throw _privateConstructorUsedError;
   bool? get withRenotes => throw _privateConstructorUsedError;
@@ -34,12 +35,14 @@ mixin _$UsersNotesRequest {
   DateTime? get sinceDate => throw _privateConstructorUsedError;
   @EpocTimeDateTimeConverter()
   DateTime? get untilDate => throw _privateConstructorUsedError;
-  @Deprecated("removed at 2023.11.1")
+
+  /// removed at 2023.11.1
   bool? get includeMyRenotes => throw _privateConstructorUsedError;
   bool? get withFiles => throw _privateConstructorUsedError;
   List<String>? get fileType => throw _privateConstructorUsedError;
   bool? get allowPartial => throw _privateConstructorUsedError;
-  @Deprecated("removed at 2023.12.0")
+
+  /// removed at 2023.12.0
   bool? get excludeNsfw => throw _privateConstructorUsedError;
 
   /// Serializes this UsersNotesRequest to a JSON map.
@@ -61,7 +64,7 @@ abstract class $UsersNotesRequestCopyWith<$Res> {
   @useResult
   $Res call({
     String userId,
-    @Deprecated("removed at 2023.9.2") bool? includeReplies,
+    bool? includeReplies,
     bool? withReplies,
     bool? withRenotes,
     bool? withChannelNotes,
@@ -70,11 +73,11 @@ abstract class $UsersNotesRequestCopyWith<$Res> {
     String? untilId,
     @EpocTimeDateTimeConverter() DateTime? sinceDate,
     @EpocTimeDateTimeConverter() DateTime? untilDate,
-    @Deprecated("removed at 2023.11.1") bool? includeMyRenotes,
+    bool? includeMyRenotes,
     bool? withFiles,
     List<String>? fileType,
     bool? allowPartial,
-    @Deprecated("removed at 2023.12.0") bool? excludeNsfw,
+    bool? excludeNsfw,
   });
 }
 
@@ -203,7 +206,7 @@ abstract class _$$UsersNotesRequestImplCopyWith<$Res>
   @useResult
   $Res call({
     String userId,
-    @Deprecated("removed at 2023.9.2") bool? includeReplies,
+    bool? includeReplies,
     bool? withReplies,
     bool? withRenotes,
     bool? withChannelNotes,
@@ -212,11 +215,11 @@ abstract class _$$UsersNotesRequestImplCopyWith<$Res>
     String? untilId,
     @EpocTimeDateTimeConverter() DateTime? sinceDate,
     @EpocTimeDateTimeConverter() DateTime? untilDate,
-    @Deprecated("removed at 2023.11.1") bool? includeMyRenotes,
+    bool? includeMyRenotes,
     bool? withFiles,
     List<String>? fileType,
     bool? allowPartial,
-    @Deprecated("removed at 2023.12.0") bool? excludeNsfw,
+    bool? excludeNsfw,
   });
 }
 
@@ -337,7 +340,7 @@ class __$$UsersNotesRequestImplCopyWithImpl<$Res>
 class _$UsersNotesRequestImpl implements _UsersNotesRequest {
   const _$UsersNotesRequestImpl({
     required this.userId,
-    @Deprecated("removed at 2023.9.2") this.includeReplies,
+    this.includeReplies,
     this.withReplies,
     this.withRenotes,
     this.withChannelNotes,
@@ -346,11 +349,11 @@ class _$UsersNotesRequestImpl implements _UsersNotesRequest {
     this.untilId,
     @EpocTimeDateTimeConverter() this.sinceDate,
     @EpocTimeDateTimeConverter() this.untilDate,
-    @Deprecated("removed at 2023.11.1") this.includeMyRenotes,
+    this.includeMyRenotes,
     this.withFiles,
     final List<String>? fileType,
     this.allowPartial,
-    @Deprecated("removed at 2023.12.0") this.excludeNsfw,
+    this.excludeNsfw,
   }) : _fileType = fileType;
 
   factory _$UsersNotesRequestImpl.fromJson(Map<String, dynamic> json) =>
@@ -358,8 +361,9 @@ class _$UsersNotesRequestImpl implements _UsersNotesRequest {
 
   @override
   final String userId;
+
+  /// removed at 2023.9.2
   @override
-  @Deprecated("removed at 2023.9.2")
   final bool? includeReplies;
   @override
   final bool? withReplies;
@@ -379,8 +383,9 @@ class _$UsersNotesRequestImpl implements _UsersNotesRequest {
   @override
   @EpocTimeDateTimeConverter()
   final DateTime? untilDate;
+
+  /// removed at 2023.11.1
   @override
-  @Deprecated("removed at 2023.11.1")
   final bool? includeMyRenotes;
   @override
   final bool? withFiles;
@@ -396,8 +401,9 @@ class _$UsersNotesRequestImpl implements _UsersNotesRequest {
 
   @override
   final bool? allowPartial;
+
+  /// removed at 2023.12.0
   @override
-  @Deprecated("removed at 2023.12.0")
   final bool? excludeNsfw;
 
   @override
@@ -478,7 +484,7 @@ class _$UsersNotesRequestImpl implements _UsersNotesRequest {
 abstract class _UsersNotesRequest implements UsersNotesRequest {
   const factory _UsersNotesRequest({
     required final String userId,
-    @Deprecated("removed at 2023.9.2") final bool? includeReplies,
+    final bool? includeReplies,
     final bool? withReplies,
     final bool? withRenotes,
     final bool? withChannelNotes,
@@ -487,11 +493,11 @@ abstract class _UsersNotesRequest implements UsersNotesRequest {
     final String? untilId,
     @EpocTimeDateTimeConverter() final DateTime? sinceDate,
     @EpocTimeDateTimeConverter() final DateTime? untilDate,
-    @Deprecated("removed at 2023.11.1") final bool? includeMyRenotes,
+    final bool? includeMyRenotes,
     final bool? withFiles,
     final List<String>? fileType,
     final bool? allowPartial,
-    @Deprecated("removed at 2023.12.0") final bool? excludeNsfw,
+    final bool? excludeNsfw,
   }) = _$UsersNotesRequestImpl;
 
   factory _UsersNotesRequest.fromJson(Map<String, dynamic> json) =
@@ -499,8 +505,9 @@ abstract class _UsersNotesRequest implements UsersNotesRequest {
 
   @override
   String get userId;
+
+  /// removed at 2023.9.2
   @override
-  @Deprecated("removed at 2023.9.2")
   bool? get includeReplies;
   @override
   bool? get withReplies;
@@ -520,8 +527,9 @@ abstract class _UsersNotesRequest implements UsersNotesRequest {
   @override
   @EpocTimeDateTimeConverter()
   DateTime? get untilDate;
+
+  /// removed at 2023.11.1
   @override
-  @Deprecated("removed at 2023.11.1")
   bool? get includeMyRenotes;
   @override
   bool? get withFiles;
@@ -529,8 +537,9 @@ abstract class _UsersNotesRequest implements UsersNotesRequest {
   List<String>? get fileType;
   @override
   bool? get allowPartial;
+
+  /// removed at 2023.12.0
   @override
-  @Deprecated("removed at 2023.12.0")
   bool? get excludeNsfw;
 
   /// Create a copy of UsersNotesRequest

@@ -37,7 +37,9 @@ class IUpdateRequest with _$IUpdateRequest {
     bool? receiveAnnouncementEmail,
     bool? alwaysMarkNsfw,
     bool? autoSensitive,
-    @Deprecated("removed at 2023.12.0") FFVisibility? ffVisibility,
+
+    /// removed at 2023.12.0
+    FFVisibility? ffVisibility,
     FFVisibility? followingVisibility,
     FFVisibility? followersVisibility,
     String? pinnedPageId,

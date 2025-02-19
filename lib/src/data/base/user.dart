@@ -179,7 +179,7 @@ class UserDetailedNotMe with _$UserDetailedNotMe implements UserDetailed {
     @Default(false) bool publicReactions,
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    @Deprecated("removed at 2023.12.0")
+    /// removed at 2023.12.0"
     FFVisibility? ffVisibility,
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
@@ -258,7 +258,7 @@ class UserDetailedNotMeWithRelations
     @Default(false) bool publicReactions,
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    @Deprecated("removed at 2023.12.0")
+    /// removed at 2023.12.0"
     FFVisibility? ffVisibility,
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
@@ -347,7 +347,7 @@ class MeDetailed with _$MeDetailed implements UserDetailed {
     @Default(false) bool publicReactions,
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    @Deprecated("removed at 2023.12.0")
+    /// removed at 2023.12.0"
     FFVisibility? ffVisibility,
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
@@ -408,7 +408,8 @@ class MeDetailed with _$MeDetailed implements UserDetailed {
     @MuteWordsConverter() List<MuteWord>? hardMutedWords,
     // Added in Misskey 12.99.0
     @Default([]) List<String> mutedInstances,
-    @Deprecated("Deprecated in Misskey 2023.9.2")
+
+    /// Deprecated in Misskey 2023.9.2
     List<String>? mutingNotificationTypes,
     @Default(NotificationRecieveConfigs())
     NotificationRecieveConfigs notificationRecieveConfig,

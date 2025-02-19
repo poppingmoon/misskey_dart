@@ -10,8 +10,12 @@ class NotesLocalTimelineRequest with _$NotesLocalTimelineRequest {
     bool? withFiles,
     bool? withRenotes,
     bool? withReplies,
-    @Deprecated("removed at 2023.10.0") List<String>? fileType,
-    @Deprecated("removed at 2023.12.0") bool? excludeNsfw,
+
+    /// removed at 2023.10.0
+    List<String>? fileType,
+
+    /// removed at 2023.12.0
+    bool? excludeNsfw,
     int? limit,
     String? sinceId,
     String? untilId,

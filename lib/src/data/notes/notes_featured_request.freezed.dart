@@ -22,7 +22,8 @@ NotesFeaturedRequest _$NotesFeaturedRequestFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$NotesFeaturedRequest {
   int? get limit => throw _privateConstructorUsedError;
-  @Deprecated("removed at 2023.10.0")
+
+  /// removed at 2023.10.0
   int? get offset => throw _privateConstructorUsedError;
   String? get untilId => throw _privateConstructorUsedError;
   String? get channelId => throw _privateConstructorUsedError;
@@ -44,12 +45,7 @@ abstract class $NotesFeaturedRequestCopyWith<$Res> {
     $Res Function(NotesFeaturedRequest) then,
   ) = _$NotesFeaturedRequestCopyWithImpl<$Res, NotesFeaturedRequest>;
   @useResult
-  $Res call({
-    int? limit,
-    @Deprecated("removed at 2023.10.0") int? offset,
-    String? untilId,
-    String? channelId,
-  });
+  $Res call({int? limit, int? offset, String? untilId, String? channelId});
 }
 
 /// @nodoc
@@ -112,12 +108,7 @@ abstract class _$$NotesFeaturedRequestImplCopyWith<$Res>
   ) = __$$NotesFeaturedRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    int? limit,
-    @Deprecated("removed at 2023.10.0") int? offset,
-    String? untilId,
-    String? channelId,
-  });
+  $Res call({int? limit, int? offset, String? untilId, String? channelId});
 }
 
 /// @nodoc
@@ -171,7 +162,7 @@ class __$$NotesFeaturedRequestImplCopyWithImpl<$Res>
 class _$NotesFeaturedRequestImpl implements _NotesFeaturedRequest {
   const _$NotesFeaturedRequestImpl({
     this.limit,
-    @Deprecated("removed at 2023.10.0") this.offset,
+    this.offset,
     this.untilId,
     this.channelId,
   });
@@ -181,8 +172,9 @@ class _$NotesFeaturedRequestImpl implements _NotesFeaturedRequest {
 
   @override
   final int? limit;
+
+  /// removed at 2023.10.0
   @override
-  @Deprecated("removed at 2023.10.0")
   final int? offset;
   @override
   final String? untilId;
@@ -232,7 +224,7 @@ class _$NotesFeaturedRequestImpl implements _NotesFeaturedRequest {
 abstract class _NotesFeaturedRequest implements NotesFeaturedRequest {
   const factory _NotesFeaturedRequest({
     final int? limit,
-    @Deprecated("removed at 2023.10.0") final int? offset,
+    final int? offset,
     final String? untilId,
     final String? channelId,
   }) = _$NotesFeaturedRequestImpl;
@@ -242,8 +234,9 @@ abstract class _NotesFeaturedRequest implements NotesFeaturedRequest {
 
   @override
   int? get limit;
+
+  /// removed at 2023.10.0
   @override
-  @Deprecated("removed at 2023.10.0")
   int? get offset;
   @override
   String? get untilId;
