@@ -16,6 +16,7 @@ enum NotificationType {
   achievementEarned,
   exportCompleted,
   login,
+  createToken,
   scheduleNote, // CherryPick
   noteScheduled, // MisskeyIO
   scheduledNotePosted, // MisskeyIO

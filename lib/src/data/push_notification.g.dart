@@ -193,6 +193,7 @@ const _$NotificationTypeEnumMap = {
   NotificationType.achievementEarned: 'achievementEarned',
   NotificationType.exportCompleted: 'exportCompleted',
   NotificationType.login: 'login',
+  NotificationType.createToken: 'createToken',
   NotificationType.scheduleNote: 'scheduleNote',
   NotificationType.noteScheduled: 'noteScheduled',
   NotificationType.scheduledNotePosted: 'scheduledNotePosted',
