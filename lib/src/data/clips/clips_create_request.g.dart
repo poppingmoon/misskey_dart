@@ -6,21 +6,19 @@ part of 'clips_create_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ClipsCreateRequestImpl _$$ClipsCreateRequestImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$ClipsCreateRequestImpl', json, ($checkedConvert) {
-  final val = _$ClipsCreateRequestImpl(
-    name: $checkedConvert('name', (v) => v as String),
-    isPublic: $checkedConvert('isPublic', (v) => v as bool?),
-    description: $checkedConvert('description', (v) => v as String?),
-  );
-  return val;
-});
+_ClipsCreateRequest _$ClipsCreateRequestFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_ClipsCreateRequest', json, ($checkedConvert) {
+      final val = _ClipsCreateRequest(
+        name: $checkedConvert('name', (v) => v as String),
+        isPublic: $checkedConvert('isPublic', (v) => v as bool?),
+        description: $checkedConvert('description', (v) => v as String?),
+      );
+      return val;
+    });
 
-Map<String, dynamic> _$$ClipsCreateRequestImplToJson(
-  _$ClipsCreateRequestImpl instance,
-) => <String, dynamic>{
-  'name': instance.name,
-  'isPublic': instance.isPublic,
-  'description': instance.description,
-};
+Map<String, dynamic> _$ClipsCreateRequestToJson(_ClipsCreateRequest instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'isPublic': instance.isPublic,
+      'description': instance.description,
+    };

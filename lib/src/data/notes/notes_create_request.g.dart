@@ -6,10 +6,10 @@ part of 'notes_create_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$NotesCreateRequestImpl _$$NotesCreateRequestImplFromJson(
+_NotesCreateRequest _$NotesCreateRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$NotesCreateRequestImpl', json, ($checkedConvert) {
-  final val = _$NotesCreateRequestImpl(
+) => $checkedCreate('_NotesCreateRequest', json, ($checkedConvert) {
+  final val = _NotesCreateRequest(
     visibility: $checkedConvert(
       'visibility',
       (v) => $enumDecodeNullable(_$NoteVisibilityEnumMap, v),
@@ -57,30 +57,29 @@ _$NotesCreateRequestImpl _$$NotesCreateRequestImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$NotesCreateRequestImplToJson(
-  _$NotesCreateRequestImpl instance,
-) => <String, dynamic>{
-  'visibility': _$NoteVisibilityEnumMap[instance.visibility],
-  'visibleUserIds': instance.visibleUserIds,
-  'text': instance.text,
-  'cw': instance.cw,
-  'localOnly': instance.localOnly,
-  'reactionAcceptance':
-      _$ReactionAcceptanceEnumMap[instance.reactionAcceptance],
-  'noExtractMentions': instance.noExtractMentions,
-  'noExtractHashtags': instance.noExtractHashtags,
-  'noExtractEmojis': instance.noExtractEmojis,
-  'fileIds': instance.fileIds,
-  'mediaIds': instance.mediaIds,
-  'replyId': instance.replyId,
-  'renoteId': instance.renoteId,
-  'channelId': instance.channelId,
-  'poll': instance.poll?.toJson(),
-  'scheduledAt': _$JsonConverterToJson<int, DateTime>(
-    instance.scheduledAt,
-    const EpocTimeDateTimeConverter().toJson,
-  ),
-};
+Map<String, dynamic> _$NotesCreateRequestToJson(_NotesCreateRequest instance) =>
+    <String, dynamic>{
+      'visibility': _$NoteVisibilityEnumMap[instance.visibility],
+      'visibleUserIds': instance.visibleUserIds,
+      'text': instance.text,
+      'cw': instance.cw,
+      'localOnly': instance.localOnly,
+      'reactionAcceptance':
+          _$ReactionAcceptanceEnumMap[instance.reactionAcceptance],
+      'noExtractMentions': instance.noExtractMentions,
+      'noExtractHashtags': instance.noExtractHashtags,
+      'noExtractEmojis': instance.noExtractEmojis,
+      'fileIds': instance.fileIds,
+      'mediaIds': instance.mediaIds,
+      'replyId': instance.replyId,
+      'renoteId': instance.renoteId,
+      'channelId': instance.channelId,
+      'poll': instance.poll?.toJson(),
+      'scheduledAt': _$JsonConverterToJson<int, DateTime>(
+        instance.scheduledAt,
+        const EpocTimeDateTimeConverter().toJson,
+      ),
+    };
 
 const _$NoteVisibilityEnumMap = {
   NoteVisibility.public: 'public',

@@ -6,9 +6,9 @@ part of 'user_list.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$UsersListImpl _$$UsersListImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$UsersListImpl', json, ($checkedConvert) {
-      final val = _$UsersListImpl(
+_UsersList _$UsersListFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_UsersList', json, ($checkedConvert) {
+      final val = _UsersList(
         id: $checkedConvert('id', (v) => v as String),
         createdAt: $checkedConvert(
           'createdAt',
@@ -24,7 +24,7 @@ _$UsersListImpl _$$UsersListImplFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$$UsersListImplToJson(_$UsersListImpl instance) =>
+Map<String, dynamic> _$UsersListToJson(_UsersList instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdAt': const DateTimeConverter().toJson(instance.createdAt),

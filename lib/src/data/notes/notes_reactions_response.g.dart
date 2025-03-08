@@ -6,10 +6,10 @@ part of 'notes_reactions_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$NotesReactionsResponseImpl _$$NotesReactionsResponseImplFromJson(
+_NotesReactionsResponse _$NotesReactionsResponseFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$NotesReactionsResponseImpl', json, ($checkedConvert) {
-  final val = _$NotesReactionsResponseImpl(
+) => $checkedCreate('_NotesReactionsResponse', json, ($checkedConvert) {
+  final val = _NotesReactionsResponse(
     id: $checkedConvert('id', (v) => v as String),
     createdAt: $checkedConvert(
       'createdAt',
@@ -24,8 +24,8 @@ _$NotesReactionsResponseImpl _$$NotesReactionsResponseImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$NotesReactionsResponseImplToJson(
-  _$NotesReactionsResponseImpl instance,
+Map<String, dynamic> _$NotesReactionsResponseToJson(
+  _NotesReactionsResponse instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'createdAt': const DateTimeConverter().toJson(instance.createdAt),

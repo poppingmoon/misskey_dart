@@ -6,34 +6,32 @@ part of 'flash_create_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$FlashCreateRequestImpl _$$FlashCreateRequestImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$FlashCreateRequestImpl', json, ($checkedConvert) {
-  final val = _$FlashCreateRequestImpl(
-    title: $checkedConvert('title', (v) => v as String),
-    summary: $checkedConvert('summary', (v) => v as String),
-    script: $checkedConvert('script', (v) => v as String),
-    permissions: $checkedConvert(
-      'permissions',
-      (v) => (v as List<dynamic>).map((e) => e as String).toList(),
-    ),
-    visibility: $checkedConvert(
-      'visibility',
-      (v) => $enumDecodeNullable(_$FlashVisibilityEnumMap, v),
-    ),
-  );
-  return val;
-});
+_FlashCreateRequest _$FlashCreateRequestFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_FlashCreateRequest', json, ($checkedConvert) {
+      final val = _FlashCreateRequest(
+        title: $checkedConvert('title', (v) => v as String),
+        summary: $checkedConvert('summary', (v) => v as String),
+        script: $checkedConvert('script', (v) => v as String),
+        permissions: $checkedConvert(
+          'permissions',
+          (v) => (v as List<dynamic>).map((e) => e as String).toList(),
+        ),
+        visibility: $checkedConvert(
+          'visibility',
+          (v) => $enumDecodeNullable(_$FlashVisibilityEnumMap, v),
+        ),
+      );
+      return val;
+    });
 
-Map<String, dynamic> _$$FlashCreateRequestImplToJson(
-  _$FlashCreateRequestImpl instance,
-) => <String, dynamic>{
-  'title': instance.title,
-  'summary': instance.summary,
-  'script': instance.script,
-  'permissions': instance.permissions,
-  'visibility': _$FlashVisibilityEnumMap[instance.visibility],
-};
+Map<String, dynamic> _$FlashCreateRequestToJson(_FlashCreateRequest instance) =>
+    <String, dynamic>{
+      'title': instance.title,
+      'summary': instance.summary,
+      'script': instance.script,
+      'permissions': instance.permissions,
+      'visibility': _$FlashVisibilityEnumMap[instance.visibility],
+    };
 
 const _$FlashVisibilityEnumMap = {
   FlashVisibility.public: 'public',

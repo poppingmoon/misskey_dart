@@ -8,7 +8,7 @@ part 'i_update_request.freezed.dart';
 part 'i_update_request.g.dart';
 
 @freezed
-class IUpdateRequest with _$IUpdateRequest {
+abstract class IUpdateRequest with _$IUpdateRequest {
   const factory IUpdateRequest({
     String? name,
     String? description,
@@ -58,7 +58,7 @@ class IUpdateRequest with _$IUpdateRequest {
 }
 
 @freezed
-class IUpdateAvatarDecoration with _$IUpdateAvatarDecoration {
+abstract class IUpdateAvatarDecoration with _$IUpdateAvatarDecoration {
   const factory IUpdateAvatarDecoration({
     required String id,
     double? angle,
@@ -72,7 +72,7 @@ class IUpdateAvatarDecoration with _$IUpdateAvatarDecoration {
 }
 
 @freezed
-class IUpdateMutualLinkSection with _$IUpdateMutualLinkSection {
+abstract class IUpdateMutualLinkSection with _$IUpdateMutualLinkSection {
   const factory IUpdateMutualLinkSection({
     String? name,
     required List<IUpdateMutualLink> mutualLinks,
@@ -83,7 +83,7 @@ class IUpdateMutualLinkSection with _$IUpdateMutualLinkSection {
 }
 
 @freezed
-class IUpdateMutualLink with _$IUpdateMutualLink {
+abstract class IUpdateMutualLink with _$IUpdateMutualLink {
   const factory IUpdateMutualLink({
     required String url,
     required String fileId,

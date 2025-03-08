@@ -6,15 +6,15 @@ part of 'clips_unfavorite_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ClipsUnfavoriteRequestImpl _$$ClipsUnfavoriteRequestImplFromJson(
+_ClipsUnfavoriteRequest _$ClipsUnfavoriteRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$ClipsUnfavoriteRequestImpl', json, ($checkedConvert) {
-  final val = _$ClipsUnfavoriteRequestImpl(
+) => $checkedCreate('_ClipsUnfavoriteRequest', json, ($checkedConvert) {
+  final val = _ClipsUnfavoriteRequest(
     clipId: $checkedConvert('clipId', (v) => v as String),
   );
   return val;
 });
 
-Map<String, dynamic> _$$ClipsUnfavoriteRequestImplToJson(
-  _$ClipsUnfavoriteRequestImpl instance,
+Map<String, dynamic> _$ClipsUnfavoriteRequestToJson(
+  _ClipsUnfavoriteRequest instance,
 ) => <String, dynamic>{'clipId': instance.clipId};

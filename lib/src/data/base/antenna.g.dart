@@ -6,10 +6,10 @@ part of 'antenna.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$AntennaImpl _$$AntennaImplFromJson(
+_Antenna _$AntennaFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$AntennaImpl', json, ($checkedConvert) {
-  final val = _$AntennaImpl(
+) => $checkedCreate('_Antenna', json, ($checkedConvert) {
+  final val = _Antenna(
     id: $checkedConvert('id', (v) => v as String),
     createdAt: $checkedConvert(
       'createdAt',
@@ -56,25 +56,24 @@ _$AntennaImpl _$$AntennaImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$AntennaImplToJson(_$AntennaImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'createdAt': const DateTimeConverter().toJson(instance.createdAt),
-      'name': instance.name,
-      'keywords': instance.keywords,
-      'excludeKeywords': instance.excludeKeywords,
-      'src': _$AntennaSourceEnumMap[instance.src],
-      'userListId': instance.userListId,
-      'users': instance.users,
-      'caseSensitive': instance.caseSensitive,
-      'notify': instance.notify,
-      'withReplies': instance.withReplies,
-      'withFile': instance.withFile,
-      'isActive': instance.isActive,
-      'hasUnreadNote': instance.hasUnreadNote,
-      'localOnly': instance.localOnly,
-      'excludeBots': instance.excludeBots,
-    };
+Map<String, dynamic> _$AntennaToJson(_Antenna instance) => <String, dynamic>{
+  'id': instance.id,
+  'createdAt': const DateTimeConverter().toJson(instance.createdAt),
+  'name': instance.name,
+  'keywords': instance.keywords,
+  'excludeKeywords': instance.excludeKeywords,
+  'src': _$AntennaSourceEnumMap[instance.src],
+  'userListId': instance.userListId,
+  'users': instance.users,
+  'caseSensitive': instance.caseSensitive,
+  'notify': instance.notify,
+  'withReplies': instance.withReplies,
+  'withFile': instance.withFile,
+  'isActive': instance.isActive,
+  'hasUnreadNote': instance.hasUnreadNote,
+  'localOnly': instance.localOnly,
+  'excludeBots': instance.excludeBots,
+};
 
 const _$AntennaSourceEnumMap = {
   AntennaSource.home: 'home',

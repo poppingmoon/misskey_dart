@@ -6,10 +6,10 @@ part of 'hashtags_users_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$HashtagsUsersRequestImpl _$$HashtagsUsersRequestImplFromJson(
+_HashtagsUsersRequest _$HashtagsUsersRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$HashtagsUsersRequestImpl', json, ($checkedConvert) {
-  final val = _$HashtagsUsersRequestImpl(
+) => $checkedCreate('_HashtagsUsersRequest', json, ($checkedConvert) {
+  final val = _HashtagsUsersRequest(
     tag: $checkedConvert('tag', (v) => v as String),
     limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
     sort: $checkedConvert(
@@ -28,8 +28,8 @@ _$HashtagsUsersRequestImpl _$$HashtagsUsersRequestImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$HashtagsUsersRequestImplToJson(
-  _$HashtagsUsersRequestImpl instance,
+Map<String, dynamic> _$HashtagsUsersRequestToJson(
+  _HashtagsUsersRequest instance,
 ) => <String, dynamic>{
   'tag': instance.tag,
   'limit': instance.limit,

@@ -6,17 +6,15 @@ part of 'get_online_users_count_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$GetOnlineUsersCountResponseImpl _$$GetOnlineUsersCountResponseImplFromJson(
+_GetOnlineUsersCountResponse _$GetOnlineUsersCountResponseFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$GetOnlineUsersCountResponseImpl', json, (
-  $checkedConvert,
-) {
-  final val = _$GetOnlineUsersCountResponseImpl(
+) => $checkedCreate('_GetOnlineUsersCountResponse', json, ($checkedConvert) {
+  final val = _GetOnlineUsersCountResponse(
     count: $checkedConvert('count', (v) => (v as num).toInt()),
   );
   return val;
 });
 
-Map<String, dynamic> _$$GetOnlineUsersCountResponseImplToJson(
-  _$GetOnlineUsersCountResponseImpl instance,
+Map<String, dynamic> _$GetOnlineUsersCountResponseToJson(
+  _GetOnlineUsersCountResponse instance,
 ) => <String, dynamic>{'count': instance.count};

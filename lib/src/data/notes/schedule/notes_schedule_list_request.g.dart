@@ -6,10 +6,10 @@ part of 'notes_schedule_list_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$NotesScheduleListRequestImpl _$$NotesScheduleListRequestImplFromJson(
+_NotesScheduleListRequest _$NotesScheduleListRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$NotesScheduleListRequestImpl', json, ($checkedConvert) {
-  final val = _$NotesScheduleListRequestImpl(
+) => $checkedCreate('_NotesScheduleListRequest', json, ($checkedConvert) {
+  final val = _NotesScheduleListRequest(
     sinceId: $checkedConvert('sinceId', (v) => v as String?),
     untilId: $checkedConvert('untilId', (v) => v as String?),
     limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
@@ -17,8 +17,8 @@ _$NotesScheduleListRequestImpl _$$NotesScheduleListRequestImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$NotesScheduleListRequestImplToJson(
-  _$NotesScheduleListRequestImpl instance,
+Map<String, dynamic> _$NotesScheduleListRequestToJson(
+  _NotesScheduleListRequest instance,
 ) => <String, dynamic>{
   'sinceId': instance.sinceId,
   'untilId': instance.untilId,

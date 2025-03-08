@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,276 +10,151 @@ part of 'users_following_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-UsersFollowingRequest _$UsersFollowingRequestFromJson(
-  Map<String, dynamic> json,
-) {
-  return _UsersFollowingRequest.fromJson(json);
-}
 
 /// @nodoc
 mixin _$UsersFollowingRequest {
-  String get userId => throw _privateConstructorUsedError;
-  String? get sinceId => throw _privateConstructorUsedError;
-  String? get untilId => throw _privateConstructorUsedError;
-  int? get limit => throw _privateConstructorUsedError;
-  @DateTimeConverter()
-  DateTime? get birthday => throw _privateConstructorUsedError;
+
+ String get userId; String? get sinceId; String? get untilId; int? get limit;@DateTimeConverter() DateTime? get birthday;
+/// Create a copy of UsersFollowingRequest
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$UsersFollowingRequestCopyWith<UsersFollowingRequest> get copyWith => _$UsersFollowingRequestCopyWithImpl<UsersFollowingRequest>(this as UsersFollowingRequest, _$identity);
 
   /// Serializes this UsersFollowingRequest to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of UsersFollowingRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $UsersFollowingRequestCopyWith<UsersFollowingRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is UsersFollowingRequest&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.birthday, birthday) || other.birthday == birthday));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,userId,sinceId,untilId,limit,birthday);
+
+@override
+String toString() {
+  return 'UsersFollowingRequest(userId: $userId, sinceId: $sinceId, untilId: $untilId, limit: $limit, birthday: $birthday)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $UsersFollowingRequestCopyWith<$Res> {
-  factory $UsersFollowingRequestCopyWith(
-    UsersFollowingRequest value,
-    $Res Function(UsersFollowingRequest) then,
-  ) = _$UsersFollowingRequestCopyWithImpl<$Res, UsersFollowingRequest>;
-  @useResult
-  $Res call({
-    String userId,
-    String? sinceId,
-    String? untilId,
-    int? limit,
-    @DateTimeConverter() DateTime? birthday,
-  });
-}
+abstract mixin class $UsersFollowingRequestCopyWith<$Res>  {
+  factory $UsersFollowingRequestCopyWith(UsersFollowingRequest value, $Res Function(UsersFollowingRequest) _then) = _$UsersFollowingRequestCopyWithImpl;
+@useResult
+$Res call({
+ String userId, String? sinceId, String? untilId, int? limit,@DateTimeConverter() DateTime? birthday
+});
 
+
+
+
+}
 /// @nodoc
-class _$UsersFollowingRequestCopyWithImpl<
-  $Res,
-  $Val extends UsersFollowingRequest
->
+class _$UsersFollowingRequestCopyWithImpl<$Res>
     implements $UsersFollowingRequestCopyWith<$Res> {
-  _$UsersFollowingRequestCopyWithImpl(this._value, this._then);
+  _$UsersFollowingRequestCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final UsersFollowingRequest _self;
+  final $Res Function(UsersFollowingRequest) _then;
 
-  /// Create a copy of UsersFollowingRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? userId = null,
-    Object? sinceId = freezed,
-    Object? untilId = freezed,
-    Object? limit = freezed,
-    Object? birthday = freezed,
-  }) {
-    return _then(
-      _value.copyWith(
-            userId:
-                null == userId
-                    ? _value.userId
-                    : userId // ignore: cast_nullable_to_non_nullable
-                        as String,
-            sinceId:
-                freezed == sinceId
-                    ? _value.sinceId
-                    : sinceId // ignore: cast_nullable_to_non_nullable
-                        as String?,
-            untilId:
-                freezed == untilId
-                    ? _value.untilId
-                    : untilId // ignore: cast_nullable_to_non_nullable
-                        as String?,
-            limit:
-                freezed == limit
-                    ? _value.limit
-                    : limit // ignore: cast_nullable_to_non_nullable
-                        as int?,
-            birthday:
-                freezed == birthday
-                    ? _value.birthday
-                    : birthday // ignore: cast_nullable_to_non_nullable
-                        as DateTime?,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of UsersFollowingRequest
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? userId = null,Object? sinceId = freezed,Object? untilId = freezed,Object? limit = freezed,Object? birthday = freezed,}) {
+  return _then(_self.copyWith(
+userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as String,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
+as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
+as String?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
+as int?,birthday: freezed == birthday ? _self.birthday : birthday // ignore: cast_nullable_to_non_nullable
+as DateTime?,
+  ));
 }
 
-/// @nodoc
-abstract class _$$UsersFollowingRequestImplCopyWith<$Res>
-    implements $UsersFollowingRequestCopyWith<$Res> {
-  factory _$$UsersFollowingRequestImplCopyWith(
-    _$UsersFollowingRequestImpl value,
-    $Res Function(_$UsersFollowingRequestImpl) then,
-  ) = __$$UsersFollowingRequestImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({
-    String userId,
-    String? sinceId,
-    String? untilId,
-    int? limit,
-    @DateTimeConverter() DateTime? birthday,
-  });
 }
 
-/// @nodoc
-class __$$UsersFollowingRequestImplCopyWithImpl<$Res>
-    extends
-        _$UsersFollowingRequestCopyWithImpl<$Res, _$UsersFollowingRequestImpl>
-    implements _$$UsersFollowingRequestImplCopyWith<$Res> {
-  __$$UsersFollowingRequestImplCopyWithImpl(
-    _$UsersFollowingRequestImpl _value,
-    $Res Function(_$UsersFollowingRequestImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of UsersFollowingRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? userId = null,
-    Object? sinceId = freezed,
-    Object? untilId = freezed,
-    Object? limit = freezed,
-    Object? birthday = freezed,
-  }) {
-    return _then(
-      _$UsersFollowingRequestImpl(
-        userId:
-            null == userId
-                ? _value.userId
-                : userId // ignore: cast_nullable_to_non_nullable
-                    as String,
-        sinceId:
-            freezed == sinceId
-                ? _value.sinceId
-                : sinceId // ignore: cast_nullable_to_non_nullable
-                    as String?,
-        untilId:
-            freezed == untilId
-                ? _value.untilId
-                : untilId // ignore: cast_nullable_to_non_nullable
-                    as String?,
-        limit:
-            freezed == limit
-                ? _value.limit
-                : limit // ignore: cast_nullable_to_non_nullable
-                    as int?,
-        birthday:
-            freezed == birthday
-                ? _value.birthday
-                : birthday // ignore: cast_nullable_to_non_nullable
-                    as DateTime?,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$UsersFollowingRequestImpl implements _UsersFollowingRequest {
-  const _$UsersFollowingRequestImpl({
-    required this.userId,
-    this.sinceId,
-    this.untilId,
-    this.limit,
-    @DateTimeConverter() this.birthday,
-  });
 
-  factory _$UsersFollowingRequestImpl.fromJson(Map<String, dynamic> json) =>
-      _$$UsersFollowingRequestImplFromJson(json);
+class _UsersFollowingRequest implements UsersFollowingRequest {
+  const _UsersFollowingRequest({required this.userId, this.sinceId, this.untilId, this.limit, @DateTimeConverter() this.birthday});
+  factory _UsersFollowingRequest.fromJson(Map<String, dynamic> json) => _$UsersFollowingRequestFromJson(json);
 
-  @override
-  final String userId;
-  @override
-  final String? sinceId;
-  @override
-  final String? untilId;
-  @override
-  final int? limit;
-  @override
-  @DateTimeConverter()
-  final DateTime? birthday;
+@override final  String userId;
+@override final  String? sinceId;
+@override final  String? untilId;
+@override final  int? limit;
+@override@DateTimeConverter() final  DateTime? birthday;
 
-  @override
-  String toString() {
-    return 'UsersFollowingRequest(userId: $userId, sinceId: $sinceId, untilId: $untilId, limit: $limit, birthday: $birthday)';
-  }
+/// Create a copy of UsersFollowingRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$UsersFollowingRequestCopyWith<_UsersFollowingRequest> get copyWith => __$UsersFollowingRequestCopyWithImpl<_UsersFollowingRequest>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$UsersFollowingRequestImpl &&
-            (identical(other.userId, userId) || other.userId == userId) &&
-            (identical(other.sinceId, sinceId) || other.sinceId == sinceId) &&
-            (identical(other.untilId, untilId) || other.untilId == untilId) &&
-            (identical(other.limit, limit) || other.limit == limit) &&
-            (identical(other.birthday, birthday) ||
-                other.birthday == birthday));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, userId, sinceId, untilId, limit, birthday);
-
-  /// Create a copy of UsersFollowingRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$UsersFollowingRequestImplCopyWith<_$UsersFollowingRequestImpl>
-  get copyWith =>
-      __$$UsersFollowingRequestImplCopyWithImpl<_$UsersFollowingRequestImpl>(
-        this,
-        _$identity,
-      );
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$UsersFollowingRequestImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$UsersFollowingRequestToJson(this, );
 }
 
-abstract class _UsersFollowingRequest implements UsersFollowingRequest {
-  const factory _UsersFollowingRequest({
-    required final String userId,
-    final String? sinceId,
-    final String? untilId,
-    final int? limit,
-    @DateTimeConverter() final DateTime? birthday,
-  }) = _$UsersFollowingRequestImpl;
-
-  factory _UsersFollowingRequest.fromJson(Map<String, dynamic> json) =
-      _$UsersFollowingRequestImpl.fromJson;
-
-  @override
-  String get userId;
-  @override
-  String? get sinceId;
-  @override
-  String? get untilId;
-  @override
-  int? get limit;
-  @override
-  @DateTimeConverter()
-  DateTime? get birthday;
-
-  /// Create a copy of UsersFollowingRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$UsersFollowingRequestImplCopyWith<_$UsersFollowingRequestImpl>
-  get copyWith => throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersFollowingRequest&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.birthday, birthday) || other.birthday == birthday));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,userId,sinceId,untilId,limit,birthday);
+
+@override
+String toString() {
+  return 'UsersFollowingRequest(userId: $userId, sinceId: $sinceId, untilId: $untilId, limit: $limit, birthday: $birthday)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$UsersFollowingRequestCopyWith<$Res> implements $UsersFollowingRequestCopyWith<$Res> {
+  factory _$UsersFollowingRequestCopyWith(_UsersFollowingRequest value, $Res Function(_UsersFollowingRequest) _then) = __$UsersFollowingRequestCopyWithImpl;
+@override @useResult
+$Res call({
+ String userId, String? sinceId, String? untilId, int? limit,@DateTimeConverter() DateTime? birthday
+});
+
+
+
+
+}
+/// @nodoc
+class __$UsersFollowingRequestCopyWithImpl<$Res>
+    implements _$UsersFollowingRequestCopyWith<$Res> {
+  __$UsersFollowingRequestCopyWithImpl(this._self, this._then);
+
+  final _UsersFollowingRequest _self;
+  final $Res Function(_UsersFollowingRequest) _then;
+
+/// Create a copy of UsersFollowingRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? userId = null,Object? sinceId = freezed,Object? untilId = freezed,Object? limit = freezed,Object? birthday = freezed,}) {
+  return _then(_UsersFollowingRequest(
+userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as String,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
+as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
+as String?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
+as int?,birthday: freezed == birthday ? _self.birthday : birthday // ignore: cast_nullable_to_non_nullable
+as DateTime?,
+  ));
+}
+
+
+}
+
+// dart format on

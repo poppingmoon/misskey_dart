@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,194 +10,142 @@ part of 'notes_translate_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-NotesTranslateRequest _$NotesTranslateRequestFromJson(
-  Map<String, dynamic> json,
-) {
-  return _NotesTranslateRequest.fromJson(json);
-}
 
 /// @nodoc
 mixin _$NotesTranslateRequest {
-  String get noteId => throw _privateConstructorUsedError;
-  String get targetLang => throw _privateConstructorUsedError;
+
+ String get noteId; String get targetLang;
+/// Create a copy of NotesTranslateRequest
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$NotesTranslateRequestCopyWith<NotesTranslateRequest> get copyWith => _$NotesTranslateRequestCopyWithImpl<NotesTranslateRequest>(this as NotesTranslateRequest, _$identity);
 
   /// Serializes this NotesTranslateRequest to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of NotesTranslateRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $NotesTranslateRequestCopyWith<NotesTranslateRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesTranslateRequest&&(identical(other.noteId, noteId) || other.noteId == noteId)&&(identical(other.targetLang, targetLang) || other.targetLang == targetLang));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,noteId,targetLang);
+
+@override
+String toString() {
+  return 'NotesTranslateRequest(noteId: $noteId, targetLang: $targetLang)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $NotesTranslateRequestCopyWith<$Res> {
-  factory $NotesTranslateRequestCopyWith(
-    NotesTranslateRequest value,
-    $Res Function(NotesTranslateRequest) then,
-  ) = _$NotesTranslateRequestCopyWithImpl<$Res, NotesTranslateRequest>;
-  @useResult
-  $Res call({String noteId, String targetLang});
-}
+abstract mixin class $NotesTranslateRequestCopyWith<$Res>  {
+  factory $NotesTranslateRequestCopyWith(NotesTranslateRequest value, $Res Function(NotesTranslateRequest) _then) = _$NotesTranslateRequestCopyWithImpl;
+@useResult
+$Res call({
+ String noteId, String targetLang
+});
 
+
+
+
+}
 /// @nodoc
-class _$NotesTranslateRequestCopyWithImpl<
-  $Res,
-  $Val extends NotesTranslateRequest
->
+class _$NotesTranslateRequestCopyWithImpl<$Res>
     implements $NotesTranslateRequestCopyWith<$Res> {
-  _$NotesTranslateRequestCopyWithImpl(this._value, this._then);
+  _$NotesTranslateRequestCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final NotesTranslateRequest _self;
+  final $Res Function(NotesTranslateRequest) _then;
 
-  /// Create a copy of NotesTranslateRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? noteId = null, Object? targetLang = null}) {
-    return _then(
-      _value.copyWith(
-            noteId:
-                null == noteId
-                    ? _value.noteId
-                    : noteId // ignore: cast_nullable_to_non_nullable
-                        as String,
-            targetLang:
-                null == targetLang
-                    ? _value.targetLang
-                    : targetLang // ignore: cast_nullable_to_non_nullable
-                        as String,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of NotesTranslateRequest
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? noteId = null,Object? targetLang = null,}) {
+  return _then(_self.copyWith(
+noteId: null == noteId ? _self.noteId : noteId // ignore: cast_nullable_to_non_nullable
+as String,targetLang: null == targetLang ? _self.targetLang : targetLang // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-abstract class _$$NotesTranslateRequestImplCopyWith<$Res>
-    implements $NotesTranslateRequestCopyWith<$Res> {
-  factory _$$NotesTranslateRequestImplCopyWith(
-    _$NotesTranslateRequestImpl value,
-    $Res Function(_$NotesTranslateRequestImpl) then,
-  ) = __$$NotesTranslateRequestImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String noteId, String targetLang});
 }
 
-/// @nodoc
-class __$$NotesTranslateRequestImplCopyWithImpl<$Res>
-    extends
-        _$NotesTranslateRequestCopyWithImpl<$Res, _$NotesTranslateRequestImpl>
-    implements _$$NotesTranslateRequestImplCopyWith<$Res> {
-  __$$NotesTranslateRequestImplCopyWithImpl(
-    _$NotesTranslateRequestImpl _value,
-    $Res Function(_$NotesTranslateRequestImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of NotesTranslateRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? noteId = null, Object? targetLang = null}) {
-    return _then(
-      _$NotesTranslateRequestImpl(
-        noteId:
-            null == noteId
-                ? _value.noteId
-                : noteId // ignore: cast_nullable_to_non_nullable
-                    as String,
-        targetLang:
-            null == targetLang
-                ? _value.targetLang
-                : targetLang // ignore: cast_nullable_to_non_nullable
-                    as String,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$NotesTranslateRequestImpl implements _NotesTranslateRequest {
-  const _$NotesTranslateRequestImpl({
-    required this.noteId,
-    required this.targetLang,
-  });
 
-  factory _$NotesTranslateRequestImpl.fromJson(Map<String, dynamic> json) =>
-      _$$NotesTranslateRequestImplFromJson(json);
+class _NotesTranslateRequest implements NotesTranslateRequest {
+  const _NotesTranslateRequest({required this.noteId, required this.targetLang});
+  factory _NotesTranslateRequest.fromJson(Map<String, dynamic> json) => _$NotesTranslateRequestFromJson(json);
 
-  @override
-  final String noteId;
-  @override
-  final String targetLang;
+@override final  String noteId;
+@override final  String targetLang;
 
-  @override
-  String toString() {
-    return 'NotesTranslateRequest(noteId: $noteId, targetLang: $targetLang)';
-  }
+/// Create a copy of NotesTranslateRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$NotesTranslateRequestCopyWith<_NotesTranslateRequest> get copyWith => __$NotesTranslateRequestCopyWithImpl<_NotesTranslateRequest>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$NotesTranslateRequestImpl &&
-            (identical(other.noteId, noteId) || other.noteId == noteId) &&
-            (identical(other.targetLang, targetLang) ||
-                other.targetLang == targetLang));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, noteId, targetLang);
-
-  /// Create a copy of NotesTranslateRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$NotesTranslateRequestImplCopyWith<_$NotesTranslateRequestImpl>
-  get copyWith =>
-      __$$NotesTranslateRequestImplCopyWithImpl<_$NotesTranslateRequestImpl>(
-        this,
-        _$identity,
-      );
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$NotesTranslateRequestImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$NotesTranslateRequestToJson(this, );
 }
 
-abstract class _NotesTranslateRequest implements NotesTranslateRequest {
-  const factory _NotesTranslateRequest({
-    required final String noteId,
-    required final String targetLang,
-  }) = _$NotesTranslateRequestImpl;
-
-  factory _NotesTranslateRequest.fromJson(Map<String, dynamic> json) =
-      _$NotesTranslateRequestImpl.fromJson;
-
-  @override
-  String get noteId;
-  @override
-  String get targetLang;
-
-  /// Create a copy of NotesTranslateRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$NotesTranslateRequestImplCopyWith<_$NotesTranslateRequestImpl>
-  get copyWith => throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesTranslateRequest&&(identical(other.noteId, noteId) || other.noteId == noteId)&&(identical(other.targetLang, targetLang) || other.targetLang == targetLang));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,noteId,targetLang);
+
+@override
+String toString() {
+  return 'NotesTranslateRequest(noteId: $noteId, targetLang: $targetLang)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$NotesTranslateRequestCopyWith<$Res> implements $NotesTranslateRequestCopyWith<$Res> {
+  factory _$NotesTranslateRequestCopyWith(_NotesTranslateRequest value, $Res Function(_NotesTranslateRequest) _then) = __$NotesTranslateRequestCopyWithImpl;
+@override @useResult
+$Res call({
+ String noteId, String targetLang
+});
+
+
+
+
+}
+/// @nodoc
+class __$NotesTranslateRequestCopyWithImpl<$Res>
+    implements _$NotesTranslateRequestCopyWith<$Res> {
+  __$NotesTranslateRequestCopyWithImpl(this._self, this._then);
+
+  final _NotesTranslateRequest _self;
+  final $Res Function(_NotesTranslateRequest) _then;
+
+/// Create a copy of NotesTranslateRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? noteId = null,Object? targetLang = null,}) {
+  return _then(_NotesTranslateRequest(
+noteId: null == noteId ? _self.noteId : noteId // ignore: cast_nullable_to_non_nullable
+as String,targetLang: null == targetLang ? _self.targetLang : targetLang // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
+}
+
+
+}
+
+// dart format on

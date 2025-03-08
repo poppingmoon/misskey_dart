@@ -6,9 +6,9 @@ part of 'emoji_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$EmojiResponseImpl _$$EmojiResponseImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$EmojiResponseImpl', json, ($checkedConvert) {
-      final val = _$EmojiResponseImpl(
+_EmojiResponse _$EmojiResponseFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_EmojiResponse', json, ($checkedConvert) {
+      final val = _EmojiResponse(
         id: $checkedConvert('id', (v) => v as String),
         aliases: $checkedConvert(
           'aliases',
@@ -34,7 +34,7 @@ _$EmojiResponseImpl _$$EmojiResponseImplFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$$EmojiResponseImplToJson(_$EmojiResponseImpl instance) =>
+Map<String, dynamic> _$EmojiResponseToJson(_EmojiResponse instance) =>
     <String, dynamic>{
       'id': instance.id,
       'aliases': instance.aliases,

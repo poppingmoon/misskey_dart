@@ -6,15 +6,15 @@ part of 'channels_favorite_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ChannelsFavoriteRequestImpl _$$ChannelsFavoriteRequestImplFromJson(
+_ChannelsFavoriteRequest _$ChannelsFavoriteRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$ChannelsFavoriteRequestImpl', json, ($checkedConvert) {
-  final val = _$ChannelsFavoriteRequestImpl(
+) => $checkedCreate('_ChannelsFavoriteRequest', json, ($checkedConvert) {
+  final val = _ChannelsFavoriteRequest(
     channelId: $checkedConvert('channelId', (v) => v as String),
   );
   return val;
 });
 
-Map<String, dynamic> _$$ChannelsFavoriteRequestImplToJson(
-  _$ChannelsFavoriteRequestImpl instance,
+Map<String, dynamic> _$ChannelsFavoriteRequestToJson(
+  _ChannelsFavoriteRequest instance,
 ) => <String, dynamic>{'channelId': instance.channelId};

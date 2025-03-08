@@ -6,9 +6,9 @@ part of 'follow_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$FollowRequestImpl _$$FollowRequestImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$FollowRequestImpl', json, ($checkedConvert) {
-      final val = _$FollowRequestImpl(
+_FollowRequest _$FollowRequestFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_FollowRequest', json, ($checkedConvert) {
+      final val = _FollowRequest(
         id: $checkedConvert('id', (v) => v as String),
         followee: $checkedConvert(
           'followee',
@@ -22,7 +22,7 @@ _$FollowRequestImpl _$$FollowRequestImplFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$$FollowRequestImplToJson(_$FollowRequestImpl instance) =>
+Map<String, dynamic> _$FollowRequestToJson(_FollowRequest instance) =>
     <String, dynamic>{
       'id': instance.id,
       'followee': instance.followee.toJson(),

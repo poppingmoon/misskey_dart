@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,220 +10,145 @@ part of 'notes_conversation_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-NotesConversationRequest _$NotesConversationRequestFromJson(
-  Map<String, dynamic> json,
-) {
-  return _NotesConversationRequest.fromJson(json);
-}
 
 /// @nodoc
 mixin _$NotesConversationRequest {
-  String get noteId => throw _privateConstructorUsedError;
-  int? get limit => throw _privateConstructorUsedError;
-  int? get offset => throw _privateConstructorUsedError;
+
+ String get noteId; int? get limit; int? get offset;
+/// Create a copy of NotesConversationRequest
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$NotesConversationRequestCopyWith<NotesConversationRequest> get copyWith => _$NotesConversationRequestCopyWithImpl<NotesConversationRequest>(this as NotesConversationRequest, _$identity);
 
   /// Serializes this NotesConversationRequest to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of NotesConversationRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $NotesConversationRequestCopyWith<NotesConversationRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesConversationRequest&&(identical(other.noteId, noteId) || other.noteId == noteId)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.offset, offset) || other.offset == offset));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,noteId,limit,offset);
+
+@override
+String toString() {
+  return 'NotesConversationRequest(noteId: $noteId, limit: $limit, offset: $offset)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $NotesConversationRequestCopyWith<$Res> {
-  factory $NotesConversationRequestCopyWith(
-    NotesConversationRequest value,
-    $Res Function(NotesConversationRequest) then,
-  ) = _$NotesConversationRequestCopyWithImpl<$Res, NotesConversationRequest>;
-  @useResult
-  $Res call({String noteId, int? limit, int? offset});
-}
+abstract mixin class $NotesConversationRequestCopyWith<$Res>  {
+  factory $NotesConversationRequestCopyWith(NotesConversationRequest value, $Res Function(NotesConversationRequest) _then) = _$NotesConversationRequestCopyWithImpl;
+@useResult
+$Res call({
+ String noteId, int? limit, int? offset
+});
 
+
+
+
+}
 /// @nodoc
-class _$NotesConversationRequestCopyWithImpl<
-  $Res,
-  $Val extends NotesConversationRequest
->
+class _$NotesConversationRequestCopyWithImpl<$Res>
     implements $NotesConversationRequestCopyWith<$Res> {
-  _$NotesConversationRequestCopyWithImpl(this._value, this._then);
+  _$NotesConversationRequestCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final NotesConversationRequest _self;
+  final $Res Function(NotesConversationRequest) _then;
 
-  /// Create a copy of NotesConversationRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? noteId = null,
-    Object? limit = freezed,
-    Object? offset = freezed,
-  }) {
-    return _then(
-      _value.copyWith(
-            noteId:
-                null == noteId
-                    ? _value.noteId
-                    : noteId // ignore: cast_nullable_to_non_nullable
-                        as String,
-            limit:
-                freezed == limit
-                    ? _value.limit
-                    : limit // ignore: cast_nullable_to_non_nullable
-                        as int?,
-            offset:
-                freezed == offset
-                    ? _value.offset
-                    : offset // ignore: cast_nullable_to_non_nullable
-                        as int?,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of NotesConversationRequest
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? noteId = null,Object? limit = freezed,Object? offset = freezed,}) {
+  return _then(_self.copyWith(
+noteId: null == noteId ? _self.noteId : noteId // ignore: cast_nullable_to_non_nullable
+as String,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
+as int?,offset: freezed == offset ? _self.offset : offset // ignore: cast_nullable_to_non_nullable
+as int?,
+  ));
 }
 
-/// @nodoc
-abstract class _$$NotesConversationRequestImplCopyWith<$Res>
-    implements $NotesConversationRequestCopyWith<$Res> {
-  factory _$$NotesConversationRequestImplCopyWith(
-    _$NotesConversationRequestImpl value,
-    $Res Function(_$NotesConversationRequestImpl) then,
-  ) = __$$NotesConversationRequestImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String noteId, int? limit, int? offset});
 }
 
-/// @nodoc
-class __$$NotesConversationRequestImplCopyWithImpl<$Res>
-    extends
-        _$NotesConversationRequestCopyWithImpl<
-          $Res,
-          _$NotesConversationRequestImpl
-        >
-    implements _$$NotesConversationRequestImplCopyWith<$Res> {
-  __$$NotesConversationRequestImplCopyWithImpl(
-    _$NotesConversationRequestImpl _value,
-    $Res Function(_$NotesConversationRequestImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of NotesConversationRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? noteId = null,
-    Object? limit = freezed,
-    Object? offset = freezed,
-  }) {
-    return _then(
-      _$NotesConversationRequestImpl(
-        noteId:
-            null == noteId
-                ? _value.noteId
-                : noteId // ignore: cast_nullable_to_non_nullable
-                    as String,
-        limit:
-            freezed == limit
-                ? _value.limit
-                : limit // ignore: cast_nullable_to_non_nullable
-                    as int?,
-        offset:
-            freezed == offset
-                ? _value.offset
-                : offset // ignore: cast_nullable_to_non_nullable
-                    as int?,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$NotesConversationRequestImpl implements _NotesConversationRequest {
-  const _$NotesConversationRequestImpl({
-    required this.noteId,
-    this.limit,
-    this.offset,
-  });
 
-  factory _$NotesConversationRequestImpl.fromJson(Map<String, dynamic> json) =>
-      _$$NotesConversationRequestImplFromJson(json);
+class _NotesConversationRequest implements NotesConversationRequest {
+  const _NotesConversationRequest({required this.noteId, this.limit, this.offset});
+  factory _NotesConversationRequest.fromJson(Map<String, dynamic> json) => _$NotesConversationRequestFromJson(json);
 
-  @override
-  final String noteId;
-  @override
-  final int? limit;
-  @override
-  final int? offset;
+@override final  String noteId;
+@override final  int? limit;
+@override final  int? offset;
 
-  @override
-  String toString() {
-    return 'NotesConversationRequest(noteId: $noteId, limit: $limit, offset: $offset)';
-  }
+/// Create a copy of NotesConversationRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$NotesConversationRequestCopyWith<_NotesConversationRequest> get copyWith => __$NotesConversationRequestCopyWithImpl<_NotesConversationRequest>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$NotesConversationRequestImpl &&
-            (identical(other.noteId, noteId) || other.noteId == noteId) &&
-            (identical(other.limit, limit) || other.limit == limit) &&
-            (identical(other.offset, offset) || other.offset == offset));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, noteId, limit, offset);
-
-  /// Create a copy of NotesConversationRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$NotesConversationRequestImplCopyWith<_$NotesConversationRequestImpl>
-  get copyWith => __$$NotesConversationRequestImplCopyWithImpl<
-    _$NotesConversationRequestImpl
-  >(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$NotesConversationRequestImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$NotesConversationRequestToJson(this, );
 }
 
-abstract class _NotesConversationRequest implements NotesConversationRequest {
-  const factory _NotesConversationRequest({
-    required final String noteId,
-    final int? limit,
-    final int? offset,
-  }) = _$NotesConversationRequestImpl;
-
-  factory _NotesConversationRequest.fromJson(Map<String, dynamic> json) =
-      _$NotesConversationRequestImpl.fromJson;
-
-  @override
-  String get noteId;
-  @override
-  int? get limit;
-  @override
-  int? get offset;
-
-  /// Create a copy of NotesConversationRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$NotesConversationRequestImplCopyWith<_$NotesConversationRequestImpl>
-  get copyWith => throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesConversationRequest&&(identical(other.noteId, noteId) || other.noteId == noteId)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.offset, offset) || other.offset == offset));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,noteId,limit,offset);
+
+@override
+String toString() {
+  return 'NotesConversationRequest(noteId: $noteId, limit: $limit, offset: $offset)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$NotesConversationRequestCopyWith<$Res> implements $NotesConversationRequestCopyWith<$Res> {
+  factory _$NotesConversationRequestCopyWith(_NotesConversationRequest value, $Res Function(_NotesConversationRequest) _then) = __$NotesConversationRequestCopyWithImpl;
+@override @useResult
+$Res call({
+ String noteId, int? limit, int? offset
+});
+
+
+
+
+}
+/// @nodoc
+class __$NotesConversationRequestCopyWithImpl<$Res>
+    implements _$NotesConversationRequestCopyWith<$Res> {
+  __$NotesConversationRequestCopyWithImpl(this._self, this._then);
+
+  final _NotesConversationRequest _self;
+  final $Res Function(_NotesConversationRequest) _then;
+
+/// Create a copy of NotesConversationRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? noteId = null,Object? limit = freezed,Object? offset = freezed,}) {
+  return _then(_NotesConversationRequest(
+noteId: null == noteId ? _self.noteId : noteId // ignore: cast_nullable_to_non_nullable
+as String,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
+as int?,offset: freezed == offset ? _self.offset : offset // ignore: cast_nullable_to_non_nullable
+as int?,
+  ));
+}
+
+
+}
+
+// dart format on

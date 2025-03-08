@@ -4,7 +4,7 @@ part 'sw_register_request.freezed.dart';
 part 'sw_register_request.g.dart';
 
 @freezed
-class SwRegisterRequest with _$SwRegisterRequest {
+abstract class SwRegisterRequest with _$SwRegisterRequest {
   const factory SwRegisterRequest({
     required String endpoint,
     required String auth,

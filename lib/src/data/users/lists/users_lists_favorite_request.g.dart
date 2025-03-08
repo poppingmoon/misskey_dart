@@ -6,16 +6,15 @@ part of 'users_lists_favorite_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$UsersListsFavoriteRequestImpl _$$UsersListsFavoriteRequestImplFromJson(
+_UsersListsFavoriteRequest _$UsersListsFavoriteRequestFromJson(
   Map<String, dynamic> json,
-) =>
-    $checkedCreate(r'_$UsersListsFavoriteRequestImpl', json, ($checkedConvert) {
-      final val = _$UsersListsFavoriteRequestImpl(
-        listId: $checkedConvert('listId', (v) => v as String),
-      );
-      return val;
-    });
+) => $checkedCreate('_UsersListsFavoriteRequest', json, ($checkedConvert) {
+  final val = _UsersListsFavoriteRequest(
+    listId: $checkedConvert('listId', (v) => v as String),
+  );
+  return val;
+});
 
-Map<String, dynamic> _$$UsersListsFavoriteRequestImplToJson(
-  _$UsersListsFavoriteRequestImpl instance,
+Map<String, dynamic> _$UsersListsFavoriteRequestToJson(
+  _UsersListsFavoriteRequest instance,
 ) => <String, dynamic>{'listId': instance.listId};

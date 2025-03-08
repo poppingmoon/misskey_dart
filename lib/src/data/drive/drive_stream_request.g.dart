@@ -6,23 +6,21 @@ part of 'drive_stream_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$DriveStreamRequestImpl _$$DriveStreamRequestImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$DriveStreamRequestImpl', json, ($checkedConvert) {
-  final val = _$DriveStreamRequestImpl(
-    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-    sinceId: $checkedConvert('sinceId', (v) => v as String?),
-    untilId: $checkedConvert('untilId', (v) => v as String?),
-    type: $checkedConvert('type', (v) => v as String?),
-  );
-  return val;
-});
+_DriveStreamRequest _$DriveStreamRequestFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_DriveStreamRequest', json, ($checkedConvert) {
+      final val = _DriveStreamRequest(
+        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
+        sinceId: $checkedConvert('sinceId', (v) => v as String?),
+        untilId: $checkedConvert('untilId', (v) => v as String?),
+        type: $checkedConvert('type', (v) => v as String?),
+      );
+      return val;
+    });
 
-Map<String, dynamic> _$$DriveStreamRequestImplToJson(
-  _$DriveStreamRequestImpl instance,
-) => <String, dynamic>{
-  'limit': instance.limit,
-  'sinceId': instance.sinceId,
-  'untilId': instance.untilId,
-  'type': instance.type,
-};
+Map<String, dynamic> _$DriveStreamRequestToJson(_DriveStreamRequest instance) =>
+    <String, dynamic>{
+      'limit': instance.limit,
+      'sinceId': instance.sinceId,
+      'untilId': instance.untilId,
+      'type': instance.type,
+    };

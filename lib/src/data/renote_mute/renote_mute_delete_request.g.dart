@@ -6,15 +6,15 @@ part of 'renote_mute_delete_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$RenoteMuteDeleteRequestImpl _$$RenoteMuteDeleteRequestImplFromJson(
+_RenoteMuteDeleteRequest _$RenoteMuteDeleteRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$RenoteMuteDeleteRequestImpl', json, ($checkedConvert) {
-  final val = _$RenoteMuteDeleteRequestImpl(
+) => $checkedCreate('_RenoteMuteDeleteRequest', json, ($checkedConvert) {
+  final val = _RenoteMuteDeleteRequest(
     userId: $checkedConvert('userId', (v) => v as String),
   );
   return val;
 });
 
-Map<String, dynamic> _$$RenoteMuteDeleteRequestImplToJson(
-  _$RenoteMuteDeleteRequestImpl instance,
+Map<String, dynamic> _$RenoteMuteDeleteRequestToJson(
+  _RenoteMuteDeleteRequest instance,
 ) => <String, dynamic>{'userId': instance.userId};

@@ -6,10 +6,10 @@ part of 'i_registry_remove_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$IRegistryRemoveRequestImpl _$$IRegistryRemoveRequestImplFromJson(
+_IRegistryRemoveRequest _$IRegistryRemoveRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$IRegistryRemoveRequestImpl', json, ($checkedConvert) {
-  final val = _$IRegistryRemoveRequestImpl(
+) => $checkedCreate('_IRegistryRemoveRequest', json, ($checkedConvert) {
+  final val = _IRegistryRemoveRequest(
     key: $checkedConvert('key', (v) => v as String),
     scope: $checkedConvert(
       'scope',
@@ -20,8 +20,8 @@ _$IRegistryRemoveRequestImpl _$$IRegistryRemoveRequestImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$IRegistryRemoveRequestImplToJson(
-  _$IRegistryRemoveRequestImpl instance,
+Map<String, dynamic> _$IRegistryRemoveRequestToJson(
+  _IRegistryRemoveRequest instance,
 ) => <String, dynamic>{
   'key': instance.key,
   'scope': instance.scope,

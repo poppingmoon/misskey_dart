@@ -6,10 +6,10 @@ part of 'channels_update_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ChannelsUpdateRequestImpl _$$ChannelsUpdateRequestImplFromJson(
+_ChannelsUpdateRequest _$ChannelsUpdateRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$ChannelsUpdateRequestImpl', json, ($checkedConvert) {
-  final val = _$ChannelsUpdateRequestImpl(
+) => $checkedCreate('_ChannelsUpdateRequest', json, ($checkedConvert) {
+  final val = _ChannelsUpdateRequest(
     channelId: $checkedConvert('channelId', (v) => v as String),
     name: $checkedConvert('name', (v) => v as String?),
     description: $checkedConvert('description', (v) => v as String?),
@@ -24,8 +24,8 @@ _$ChannelsUpdateRequestImpl _$$ChannelsUpdateRequestImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$ChannelsUpdateRequestImplToJson(
-  _$ChannelsUpdateRequestImpl instance,
+Map<String, dynamic> _$ChannelsUpdateRequestToJson(
+  _ChannelsUpdateRequest instance,
 ) => <String, dynamic>{
   'channelId': instance.channelId,
   'name': instance.name,

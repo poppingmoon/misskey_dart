@@ -6,10 +6,10 @@ part of 'notes_conversation_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$NotesConversationRequestImpl _$$NotesConversationRequestImplFromJson(
+_NotesConversationRequest _$NotesConversationRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$NotesConversationRequestImpl', json, ($checkedConvert) {
-  final val = _$NotesConversationRequestImpl(
+) => $checkedCreate('_NotesConversationRequest', json, ($checkedConvert) {
+  final val = _NotesConversationRequest(
     noteId: $checkedConvert('noteId', (v) => v as String),
     limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
     offset: $checkedConvert('offset', (v) => (v as num?)?.toInt()),
@@ -17,8 +17,8 @@ _$NotesConversationRequestImpl _$$NotesConversationRequestImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$NotesConversationRequestImplToJson(
-  _$NotesConversationRequestImpl instance,
+Map<String, dynamic> _$NotesConversationRequestToJson(
+  _NotesConversationRequest instance,
 ) => <String, dynamic>{
   'noteId': instance.noteId,
   'limit': instance.limit,

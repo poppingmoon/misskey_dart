@@ -6,23 +6,22 @@ part of 'i_registry_get_detail_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$IRegistryGetDetailRequestImpl _$$IRegistryGetDetailRequestImplFromJson(
+_IRegistryGetDetailRequest _$IRegistryGetDetailRequestFromJson(
   Map<String, dynamic> json,
-) =>
-    $checkedCreate(r'_$IRegistryGetDetailRequestImpl', json, ($checkedConvert) {
-      final val = _$IRegistryGetDetailRequestImpl(
-        key: $checkedConvert('key', (v) => v as String),
-        scope: $checkedConvert(
-          'scope',
-          (v) => (v as List<dynamic>).map((e) => e as String).toList(),
-        ),
-        domain: $checkedConvert('domain', (v) => v as String?),
-      );
-      return val;
-    });
+) => $checkedCreate('_IRegistryGetDetailRequest', json, ($checkedConvert) {
+  final val = _IRegistryGetDetailRequest(
+    key: $checkedConvert('key', (v) => v as String),
+    scope: $checkedConvert(
+      'scope',
+      (v) => (v as List<dynamic>).map((e) => e as String).toList(),
+    ),
+    domain: $checkedConvert('domain', (v) => v as String?),
+  );
+  return val;
+});
 
-Map<String, dynamic> _$$IRegistryGetDetailRequestImplToJson(
-  _$IRegistryGetDetailRequestImpl instance,
+Map<String, dynamic> _$IRegistryGetDetailRequestToJson(
+  _IRegistryGetDetailRequest instance,
 ) => <String, dynamic>{
   'key': instance.key,
   'scope': instance.scope,

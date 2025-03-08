@@ -6,9 +6,9 @@ part of 'scheduled_note.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ScheduledNoteImpl _$$ScheduledNoteImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$ScheduledNoteImpl', json, ($checkedConvert) {
-      final val = _$ScheduledNoteImpl(
+_ScheduledNote _$ScheduledNoteFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_ScheduledNote', json, ($checkedConvert) {
+      final val = _ScheduledNote(
         id: $checkedConvert('id', (v) => v as String),
         updatedAt: $checkedConvert(
           'updatedAt',
@@ -51,8 +51,8 @@ _$ScheduledNoteImpl _$$ScheduledNoteImplFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$$ScheduledNoteImplToJson(
-  _$ScheduledNoteImpl instance,
+Map<String, dynamic> _$ScheduledNoteToJson(
+  _ScheduledNote instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'updatedAt': const DateTimeConverter().toJson(instance.updatedAt),
@@ -69,51 +69,47 @@ Value? _$JsonConverterFromJson<Json, Value>(
   Value? Function(Json json) fromJson,
 ) => json == null ? null : fromJson(json as Json);
 
-_$ScheduledNoteNoteImpl _$$ScheduledNoteNoteImplFromJson(
+_ScheduledNoteNote _$ScheduledNoteNoteFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_ScheduledNoteNote', json, ($checkedConvert) {
+      final val = _ScheduledNoteNote(
+        id: $checkedConvert('id', (v) => v as String),
+        text: $checkedConvert('text', (v) => v as String?),
+        user: $checkedConvert(
+          'user',
+          (v) => ScheduledNoteUser.fromJson(v as Map<String, dynamic>),
+        ),
+      );
+      return val;
+    });
+
+Map<String, dynamic> _$ScheduledNoteNoteToJson(_ScheduledNoteNote instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'text': instance.text,
+      'user': instance.user.toJson(),
+    };
+
+_ScheduledNoteUser _$ScheduledNoteUserFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_ScheduledNoteUser', json, ($checkedConvert) {
+      final val = _ScheduledNoteUser(
+        id: $checkedConvert('id', (v) => v as String),
+        username: $checkedConvert('username', (v) => v as String),
+        host: $checkedConvert('host', (v) => v as String?),
+      );
+      return val;
+    });
+
+Map<String, dynamic> _$ScheduledNoteUserToJson(_ScheduledNoteUser instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'username': instance.username,
+      'host': instance.host,
+    };
+
+_ScheduledNoteData _$ScheduledNoteDataFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$ScheduledNoteNoteImpl', json, ($checkedConvert) {
-  final val = _$ScheduledNoteNoteImpl(
-    id: $checkedConvert('id', (v) => v as String),
-    text: $checkedConvert('text', (v) => v as String?),
-    user: $checkedConvert(
-      'user',
-      (v) => ScheduledNoteUser.fromJson(v as Map<String, dynamic>),
-    ),
-  );
-  return val;
-});
-
-Map<String, dynamic> _$$ScheduledNoteNoteImplToJson(
-  _$ScheduledNoteNoteImpl instance,
-) => <String, dynamic>{
-  'id': instance.id,
-  'text': instance.text,
-  'user': instance.user.toJson(),
-};
-
-_$ScheduledNoteUserImpl _$$ScheduledNoteUserImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$ScheduledNoteUserImpl', json, ($checkedConvert) {
-  final val = _$ScheduledNoteUserImpl(
-    id: $checkedConvert('id', (v) => v as String),
-    username: $checkedConvert('username', (v) => v as String),
-    host: $checkedConvert('host', (v) => v as String?),
-  );
-  return val;
-});
-
-Map<String, dynamic> _$$ScheduledNoteUserImplToJson(
-  _$ScheduledNoteUserImpl instance,
-) => <String, dynamic>{
-  'id': instance.id,
-  'username': instance.username,
-  'host': instance.host,
-};
-
-_$ScheduledNoteDataImpl _$$ScheduledNoteDataImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$ScheduledNoteDataImpl', json, ($checkedConvert) {
-  final val = _$ScheduledNoteDataImpl(
+) => $checkedCreate('_ScheduledNoteData', json, ($checkedConvert) {
+  final val = _ScheduledNoteData(
     text: $checkedConvert('text', (v) => v as String?),
     useCw: $checkedConvert('useCw', (v) => v as bool?),
     cw: $checkedConvert('cw', (v) => v as String?),
@@ -147,18 +143,17 @@ _$ScheduledNoteDataImpl _$$ScheduledNoteDataImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$ScheduledNoteDataImplToJson(
-  _$ScheduledNoteDataImpl instance,
-) => <String, dynamic>{
-  'text': instance.text,
-  'useCw': instance.useCw,
-  'cw': instance.cw,
-  'visibility': _$NoteVisibilityEnumMap[instance.visibility],
-  'localOnly': instance.localOnly,
-  'files': instance.files.map((e) => e.toJson()).toList(),
-  'poll': instance.poll?.toJson(),
-  'visibleUserIds': instance.visibleUserIds,
-};
+Map<String, dynamic> _$ScheduledNoteDataToJson(_ScheduledNoteData instance) =>
+    <String, dynamic>{
+      'text': instance.text,
+      'useCw': instance.useCw,
+      'cw': instance.cw,
+      'visibility': _$NoteVisibilityEnumMap[instance.visibility],
+      'localOnly': instance.localOnly,
+      'files': instance.files.map((e) => e.toJson()).toList(),
+      'poll': instance.poll?.toJson(),
+      'visibleUserIds': instance.visibleUserIds,
+    };
 
 const _$NoteVisibilityEnumMap = {
   NoteVisibility.public: 'public',

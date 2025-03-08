@@ -6,16 +6,15 @@ part of 'users_get_skeb_status_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$UsersGetSkebStatusRequestImpl _$$UsersGetSkebStatusRequestImplFromJson(
+_UsersGetSkebStatusRequest _$UsersGetSkebStatusRequestFromJson(
   Map<String, dynamic> json,
-) =>
-    $checkedCreate(r'_$UsersGetSkebStatusRequestImpl', json, ($checkedConvert) {
-      final val = _$UsersGetSkebStatusRequestImpl(
-        userId: $checkedConvert('userId', (v) => v as String),
-      );
-      return val;
-    });
+) => $checkedCreate('_UsersGetSkebStatusRequest', json, ($checkedConvert) {
+  final val = _UsersGetSkebStatusRequest(
+    userId: $checkedConvert('userId', (v) => v as String),
+  );
+  return val;
+});
 
-Map<String, dynamic> _$$UsersGetSkebStatusRequestImplToJson(
-  _$UsersGetSkebStatusRequestImpl instance,
+Map<String, dynamic> _$UsersGetSkebStatusRequestToJson(
+  _UsersGetSkebStatusRequest instance,
 ) => <String, dynamic>{'userId': instance.userId};

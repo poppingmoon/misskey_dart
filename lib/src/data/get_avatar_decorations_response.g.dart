@@ -6,12 +6,10 @@ part of 'get_avatar_decorations_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$GetAvatarDecorationsResponseImpl _$$GetAvatarDecorationsResponseImplFromJson(
+_GetAvatarDecorationsResponse _$GetAvatarDecorationsResponseFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$GetAvatarDecorationsResponseImpl', json, (
-  $checkedConvert,
-) {
-  final val = _$GetAvatarDecorationsResponseImpl(
+) => $checkedCreate('_GetAvatarDecorationsResponse', json, ($checkedConvert) {
+  final val = _GetAvatarDecorationsResponse(
     id: $checkedConvert('id', (v) => v as String),
     name: $checkedConvert('name', (v) => v as String),
     description: $checkedConvert('description', (v) => v as String),
@@ -28,8 +26,8 @@ _$GetAvatarDecorationsResponseImpl _$$GetAvatarDecorationsResponseImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$GetAvatarDecorationsResponseImplToJson(
-  _$GetAvatarDecorationsResponseImpl instance,
+Map<String, dynamic> _$GetAvatarDecorationsResponseToJson(
+  _GetAvatarDecorationsResponse instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'name': instance.name,

@@ -6,10 +6,10 @@ part of 'hashtags_trend_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$HashtagsTrendResponseImpl _$$HashtagsTrendResponseImplFromJson(
+_HashtagsTrendResponse _$HashtagsTrendResponseFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$HashtagsTrendResponseImpl', json, ($checkedConvert) {
-  final val = _$HashtagsTrendResponseImpl(
+) => $checkedCreate('_HashtagsTrendResponse', json, ($checkedConvert) {
+  final val = _HashtagsTrendResponse(
     tag: $checkedConvert('tag', (v) => v as String),
     chart: $checkedConvert(
       'chart',
@@ -20,8 +20,8 @@ _$HashtagsTrendResponseImpl _$$HashtagsTrendResponseImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$HashtagsTrendResponseImplToJson(
-  _$HashtagsTrendResponseImpl instance,
+Map<String, dynamic> _$HashtagsTrendResponseToJson(
+  _HashtagsTrendResponse instance,
 ) => <String, dynamic>{
   'tag': instance.tag,
   'chart': instance.chart,

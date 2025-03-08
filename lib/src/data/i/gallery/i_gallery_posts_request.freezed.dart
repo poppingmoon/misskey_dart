@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,212 +10,145 @@ part of 'i_gallery_posts_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-IGalleryPostsRequest _$IGalleryPostsRequestFromJson(Map<String, dynamic> json) {
-  return _IGalleryPostsRequest.fromJson(json);
-}
 
 /// @nodoc
 mixin _$IGalleryPostsRequest {
-  int? get limit => throw _privateConstructorUsedError;
-  String? get sinceId => throw _privateConstructorUsedError;
-  String? get untilId => throw _privateConstructorUsedError;
+
+ int? get limit; String? get sinceId; String? get untilId;
+/// Create a copy of IGalleryPostsRequest
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$IGalleryPostsRequestCopyWith<IGalleryPostsRequest> get copyWith => _$IGalleryPostsRequestCopyWithImpl<IGalleryPostsRequest>(this as IGalleryPostsRequest, _$identity);
 
   /// Serializes this IGalleryPostsRequest to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of IGalleryPostsRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $IGalleryPostsRequestCopyWith<IGalleryPostsRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is IGalleryPostsRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,limit,sinceId,untilId);
+
+@override
+String toString() {
+  return 'IGalleryPostsRequest(limit: $limit, sinceId: $sinceId, untilId: $untilId)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $IGalleryPostsRequestCopyWith<$Res> {
-  factory $IGalleryPostsRequestCopyWith(
-    IGalleryPostsRequest value,
-    $Res Function(IGalleryPostsRequest) then,
-  ) = _$IGalleryPostsRequestCopyWithImpl<$Res, IGalleryPostsRequest>;
-  @useResult
-  $Res call({int? limit, String? sinceId, String? untilId});
-}
+abstract mixin class $IGalleryPostsRequestCopyWith<$Res>  {
+  factory $IGalleryPostsRequestCopyWith(IGalleryPostsRequest value, $Res Function(IGalleryPostsRequest) _then) = _$IGalleryPostsRequestCopyWithImpl;
+@useResult
+$Res call({
+ int? limit, String? sinceId, String? untilId
+});
 
+
+
+
+}
 /// @nodoc
-class _$IGalleryPostsRequestCopyWithImpl<
-  $Res,
-  $Val extends IGalleryPostsRequest
->
+class _$IGalleryPostsRequestCopyWithImpl<$Res>
     implements $IGalleryPostsRequestCopyWith<$Res> {
-  _$IGalleryPostsRequestCopyWithImpl(this._value, this._then);
+  _$IGalleryPostsRequestCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final IGalleryPostsRequest _self;
+  final $Res Function(IGalleryPostsRequest) _then;
 
-  /// Create a copy of IGalleryPostsRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? limit = freezed,
-    Object? sinceId = freezed,
-    Object? untilId = freezed,
-  }) {
-    return _then(
-      _value.copyWith(
-            limit:
-                freezed == limit
-                    ? _value.limit
-                    : limit // ignore: cast_nullable_to_non_nullable
-                        as int?,
-            sinceId:
-                freezed == sinceId
-                    ? _value.sinceId
-                    : sinceId // ignore: cast_nullable_to_non_nullable
-                        as String?,
-            untilId:
-                freezed == untilId
-                    ? _value.untilId
-                    : untilId // ignore: cast_nullable_to_non_nullable
-                        as String?,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of IGalleryPostsRequest
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,}) {
+  return _then(_self.copyWith(
+limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
+as int?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
+as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
+as String?,
+  ));
 }
 
-/// @nodoc
-abstract class _$$IGalleryPostsRequestImplCopyWith<$Res>
-    implements $IGalleryPostsRequestCopyWith<$Res> {
-  factory _$$IGalleryPostsRequestImplCopyWith(
-    _$IGalleryPostsRequestImpl value,
-    $Res Function(_$IGalleryPostsRequestImpl) then,
-  ) = __$$IGalleryPostsRequestImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({int? limit, String? sinceId, String? untilId});
 }
 
-/// @nodoc
-class __$$IGalleryPostsRequestImplCopyWithImpl<$Res>
-    extends _$IGalleryPostsRequestCopyWithImpl<$Res, _$IGalleryPostsRequestImpl>
-    implements _$$IGalleryPostsRequestImplCopyWith<$Res> {
-  __$$IGalleryPostsRequestImplCopyWithImpl(
-    _$IGalleryPostsRequestImpl _value,
-    $Res Function(_$IGalleryPostsRequestImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of IGalleryPostsRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? limit = freezed,
-    Object? sinceId = freezed,
-    Object? untilId = freezed,
-  }) {
-    return _then(
-      _$IGalleryPostsRequestImpl(
-        limit:
-            freezed == limit
-                ? _value.limit
-                : limit // ignore: cast_nullable_to_non_nullable
-                    as int?,
-        sinceId:
-            freezed == sinceId
-                ? _value.sinceId
-                : sinceId // ignore: cast_nullable_to_non_nullable
-                    as String?,
-        untilId:
-            freezed == untilId
-                ? _value.untilId
-                : untilId // ignore: cast_nullable_to_non_nullable
-                    as String?,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$IGalleryPostsRequestImpl implements _IGalleryPostsRequest {
-  const _$IGalleryPostsRequestImpl({this.limit, this.sinceId, this.untilId});
 
-  factory _$IGalleryPostsRequestImpl.fromJson(Map<String, dynamic> json) =>
-      _$$IGalleryPostsRequestImplFromJson(json);
+class _IGalleryPostsRequest implements IGalleryPostsRequest {
+  const _IGalleryPostsRequest({this.limit, this.sinceId, this.untilId});
+  factory _IGalleryPostsRequest.fromJson(Map<String, dynamic> json) => _$IGalleryPostsRequestFromJson(json);
 
-  @override
-  final int? limit;
-  @override
-  final String? sinceId;
-  @override
-  final String? untilId;
+@override final  int? limit;
+@override final  String? sinceId;
+@override final  String? untilId;
 
-  @override
-  String toString() {
-    return 'IGalleryPostsRequest(limit: $limit, sinceId: $sinceId, untilId: $untilId)';
-  }
+/// Create a copy of IGalleryPostsRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$IGalleryPostsRequestCopyWith<_IGalleryPostsRequest> get copyWith => __$IGalleryPostsRequestCopyWithImpl<_IGalleryPostsRequest>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$IGalleryPostsRequestImpl &&
-            (identical(other.limit, limit) || other.limit == limit) &&
-            (identical(other.sinceId, sinceId) || other.sinceId == sinceId) &&
-            (identical(other.untilId, untilId) || other.untilId == untilId));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, limit, sinceId, untilId);
-
-  /// Create a copy of IGalleryPostsRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$IGalleryPostsRequestImplCopyWith<_$IGalleryPostsRequestImpl>
-  get copyWith =>
-      __$$IGalleryPostsRequestImplCopyWithImpl<_$IGalleryPostsRequestImpl>(
-        this,
-        _$identity,
-      );
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$IGalleryPostsRequestImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$IGalleryPostsRequestToJson(this, );
 }
 
-abstract class _IGalleryPostsRequest implements IGalleryPostsRequest {
-  const factory _IGalleryPostsRequest({
-    final int? limit,
-    final String? sinceId,
-    final String? untilId,
-  }) = _$IGalleryPostsRequestImpl;
-
-  factory _IGalleryPostsRequest.fromJson(Map<String, dynamic> json) =
-      _$IGalleryPostsRequestImpl.fromJson;
-
-  @override
-  int? get limit;
-  @override
-  String? get sinceId;
-  @override
-  String? get untilId;
-
-  /// Create a copy of IGalleryPostsRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$IGalleryPostsRequestImplCopyWith<_$IGalleryPostsRequestImpl>
-  get copyWith => throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _IGalleryPostsRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,limit,sinceId,untilId);
+
+@override
+String toString() {
+  return 'IGalleryPostsRequest(limit: $limit, sinceId: $sinceId, untilId: $untilId)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$IGalleryPostsRequestCopyWith<$Res> implements $IGalleryPostsRequestCopyWith<$Res> {
+  factory _$IGalleryPostsRequestCopyWith(_IGalleryPostsRequest value, $Res Function(_IGalleryPostsRequest) _then) = __$IGalleryPostsRequestCopyWithImpl;
+@override @useResult
+$Res call({
+ int? limit, String? sinceId, String? untilId
+});
+
+
+
+
+}
+/// @nodoc
+class __$IGalleryPostsRequestCopyWithImpl<$Res>
+    implements _$IGalleryPostsRequestCopyWith<$Res> {
+  __$IGalleryPostsRequestCopyWithImpl(this._self, this._then);
+
+  final _IGalleryPostsRequest _self;
+  final $Res Function(_IGalleryPostsRequest) _then;
+
+/// Create a copy of IGalleryPostsRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,}) {
+  return _then(_IGalleryPostsRequest(
+limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
+as int?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
+as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
+as String?,
+  ));
+}
+
+
+}
+
+// dart format on

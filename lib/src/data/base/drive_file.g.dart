@@ -6,10 +6,10 @@ part of 'drive_file.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$DriveFileImpl _$$DriveFileImplFromJson(
+_DriveFile _$DriveFileFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$DriveFileImpl', json, ($checkedConvert) {
-  final val = _$DriveFileImpl(
+) => $checkedCreate('_DriveFile', json, ($checkedConvert) {
+  final val = _DriveFile(
     id: $checkedConvert('id', (v) => v as String),
     createdAt: $checkedConvert(
       'createdAt',
@@ -42,7 +42,7 @@ _$DriveFileImpl _$$DriveFileImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$DriveFileImplToJson(_$DriveFileImpl instance) =>
+Map<String, dynamic> _$DriveFileToJson(_DriveFile instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdAt': const DateTimeConverter().toJson(instance.createdAt),
@@ -62,23 +62,25 @@ Map<String, dynamic> _$$DriveFileImplToJson(_$DriveFileImpl instance) =>
       'user': instance.user?.toJson(),
     };
 
-_$DriveFilePropertiesImpl _$$DriveFilePropertiesImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$DriveFilePropertiesImpl', json, ($checkedConvert) {
-  final val = _$DriveFilePropertiesImpl(
-    width: $checkedConvert('width', (v) => (v as num?)?.toInt()),
-    height: $checkedConvert('height', (v) => (v as num?)?.toInt()),
-    orientation: $checkedConvert('orientation', (v) => (v as num?)?.toInt()),
-    avgColor: $checkedConvert(
-      'avgColor',
-      (v) => const AvgColorConverter().fromJson(v),
-    ),
-  );
-  return val;
-});
+_DriveFileProperties _$DriveFilePropertiesFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_DriveFileProperties', json, ($checkedConvert) {
+      final val = _DriveFileProperties(
+        width: $checkedConvert('width', (v) => (v as num?)?.toInt()),
+        height: $checkedConvert('height', (v) => (v as num?)?.toInt()),
+        orientation: $checkedConvert(
+          'orientation',
+          (v) => (v as num?)?.toInt(),
+        ),
+        avgColor: $checkedConvert(
+          'avgColor',
+          (v) => const AvgColorConverter().fromJson(v),
+        ),
+      );
+      return val;
+    });
 
-Map<String, dynamic> _$$DriveFilePropertiesImplToJson(
-  _$DriveFilePropertiesImpl instance,
+Map<String, dynamic> _$DriveFilePropertiesToJson(
+  _DriveFileProperties instance,
 ) => <String, dynamic>{
   'width': instance.width,
   'height': instance.height,

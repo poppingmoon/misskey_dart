@@ -6,15 +6,13 @@ part of 'notes_delete_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$NotesDeleteRequestImpl _$$NotesDeleteRequestImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$NotesDeleteRequestImpl', json, ($checkedConvert) {
-  final val = _$NotesDeleteRequestImpl(
-    noteId: $checkedConvert('noteId', (v) => v as String),
-  );
-  return val;
-});
+_NotesDeleteRequest _$NotesDeleteRequestFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_NotesDeleteRequest', json, ($checkedConvert) {
+      final val = _NotesDeleteRequest(
+        noteId: $checkedConvert('noteId', (v) => v as String),
+      );
+      return val;
+    });
 
-Map<String, dynamic> _$$NotesDeleteRequestImplToJson(
-  _$NotesDeleteRequestImpl instance,
-) => <String, dynamic>{'noteId': instance.noteId};
+Map<String, dynamic> _$NotesDeleteRequestToJson(_NotesDeleteRequest instance) =>
+    <String, dynamic>{'noteId': instance.noteId};

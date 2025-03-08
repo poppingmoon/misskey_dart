@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,202 +10,142 @@ part of 'notes_polls_recommendation_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-NotesPollsRecommendationRequest _$NotesPollsRecommendationRequestFromJson(
-  Map<String, dynamic> json,
-) {
-  return _NotesPollsRecommendationRequest.fromJson(json);
-}
 
 /// @nodoc
 mixin _$NotesPollsRecommendationRequest {
-  int? get limit => throw _privateConstructorUsedError;
-  int? get offset => throw _privateConstructorUsedError;
+
+ int? get limit; int? get offset;
+/// Create a copy of NotesPollsRecommendationRequest
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$NotesPollsRecommendationRequestCopyWith<NotesPollsRecommendationRequest> get copyWith => _$NotesPollsRecommendationRequestCopyWithImpl<NotesPollsRecommendationRequest>(this as NotesPollsRecommendationRequest, _$identity);
 
   /// Serializes this NotesPollsRecommendationRequest to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of NotesPollsRecommendationRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $NotesPollsRecommendationRequestCopyWith<NotesPollsRecommendationRequest>
-  get copyWith => throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesPollsRecommendationRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.offset, offset) || other.offset == offset));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,limit,offset);
+
+@override
+String toString() {
+  return 'NotesPollsRecommendationRequest(limit: $limit, offset: $offset)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $NotesPollsRecommendationRequestCopyWith<$Res> {
-  factory $NotesPollsRecommendationRequestCopyWith(
-    NotesPollsRecommendationRequest value,
-    $Res Function(NotesPollsRecommendationRequest) then,
-  ) =
-      _$NotesPollsRecommendationRequestCopyWithImpl<
-        $Res,
-        NotesPollsRecommendationRequest
-      >;
-  @useResult
-  $Res call({int? limit, int? offset});
-}
+abstract mixin class $NotesPollsRecommendationRequestCopyWith<$Res>  {
+  factory $NotesPollsRecommendationRequestCopyWith(NotesPollsRecommendationRequest value, $Res Function(NotesPollsRecommendationRequest) _then) = _$NotesPollsRecommendationRequestCopyWithImpl;
+@useResult
+$Res call({
+ int? limit, int? offset
+});
 
+
+
+
+}
 /// @nodoc
-class _$NotesPollsRecommendationRequestCopyWithImpl<
-  $Res,
-  $Val extends NotesPollsRecommendationRequest
->
+class _$NotesPollsRecommendationRequestCopyWithImpl<$Res>
     implements $NotesPollsRecommendationRequestCopyWith<$Res> {
-  _$NotesPollsRecommendationRequestCopyWithImpl(this._value, this._then);
+  _$NotesPollsRecommendationRequestCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final NotesPollsRecommendationRequest _self;
+  final $Res Function(NotesPollsRecommendationRequest) _then;
 
-  /// Create a copy of NotesPollsRecommendationRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? limit = freezed, Object? offset = freezed}) {
-    return _then(
-      _value.copyWith(
-            limit:
-                freezed == limit
-                    ? _value.limit
-                    : limit // ignore: cast_nullable_to_non_nullable
-                        as int?,
-            offset:
-                freezed == offset
-                    ? _value.offset
-                    : offset // ignore: cast_nullable_to_non_nullable
-                        as int?,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of NotesPollsRecommendationRequest
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? limit = freezed,Object? offset = freezed,}) {
+  return _then(_self.copyWith(
+limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
+as int?,offset: freezed == offset ? _self.offset : offset // ignore: cast_nullable_to_non_nullable
+as int?,
+  ));
 }
 
-/// @nodoc
-abstract class _$$NotesPollsRecommendationRequestImplCopyWith<$Res>
-    implements $NotesPollsRecommendationRequestCopyWith<$Res> {
-  factory _$$NotesPollsRecommendationRequestImplCopyWith(
-    _$NotesPollsRecommendationRequestImpl value,
-    $Res Function(_$NotesPollsRecommendationRequestImpl) then,
-  ) = __$$NotesPollsRecommendationRequestImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({int? limit, int? offset});
 }
 
-/// @nodoc
-class __$$NotesPollsRecommendationRequestImplCopyWithImpl<$Res>
-    extends
-        _$NotesPollsRecommendationRequestCopyWithImpl<
-          $Res,
-          _$NotesPollsRecommendationRequestImpl
-        >
-    implements _$$NotesPollsRecommendationRequestImplCopyWith<$Res> {
-  __$$NotesPollsRecommendationRequestImplCopyWithImpl(
-    _$NotesPollsRecommendationRequestImpl _value,
-    $Res Function(_$NotesPollsRecommendationRequestImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of NotesPollsRecommendationRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? limit = freezed, Object? offset = freezed}) {
-    return _then(
-      _$NotesPollsRecommendationRequestImpl(
-        limit:
-            freezed == limit
-                ? _value.limit
-                : limit // ignore: cast_nullable_to_non_nullable
-                    as int?,
-        offset:
-            freezed == offset
-                ? _value.offset
-                : offset // ignore: cast_nullable_to_non_nullable
-                    as int?,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$NotesPollsRecommendationRequestImpl
-    implements _NotesPollsRecommendationRequest {
-  const _$NotesPollsRecommendationRequestImpl({this.limit, this.offset});
 
-  factory _$NotesPollsRecommendationRequestImpl.fromJson(
-    Map<String, dynamic> json,
-  ) => _$$NotesPollsRecommendationRequestImplFromJson(json);
+class _NotesPollsRecommendationRequest implements NotesPollsRecommendationRequest {
+  const _NotesPollsRecommendationRequest({this.limit, this.offset});
+  factory _NotesPollsRecommendationRequest.fromJson(Map<String, dynamic> json) => _$NotesPollsRecommendationRequestFromJson(json);
 
-  @override
-  final int? limit;
-  @override
-  final int? offset;
+@override final  int? limit;
+@override final  int? offset;
 
-  @override
-  String toString() {
-    return 'NotesPollsRecommendationRequest(limit: $limit, offset: $offset)';
-  }
+/// Create a copy of NotesPollsRecommendationRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$NotesPollsRecommendationRequestCopyWith<_NotesPollsRecommendationRequest> get copyWith => __$NotesPollsRecommendationRequestCopyWithImpl<_NotesPollsRecommendationRequest>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$NotesPollsRecommendationRequestImpl &&
-            (identical(other.limit, limit) || other.limit == limit) &&
-            (identical(other.offset, offset) || other.offset == offset));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, limit, offset);
-
-  /// Create a copy of NotesPollsRecommendationRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$NotesPollsRecommendationRequestImplCopyWith<
-    _$NotesPollsRecommendationRequestImpl
-  >
-  get copyWith => __$$NotesPollsRecommendationRequestImplCopyWithImpl<
-    _$NotesPollsRecommendationRequestImpl
-  >(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$NotesPollsRecommendationRequestImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$NotesPollsRecommendationRequestToJson(this, );
 }
 
-abstract class _NotesPollsRecommendationRequest
-    implements NotesPollsRecommendationRequest {
-  const factory _NotesPollsRecommendationRequest({
-    final int? limit,
-    final int? offset,
-  }) = _$NotesPollsRecommendationRequestImpl;
-
-  factory _NotesPollsRecommendationRequest.fromJson(Map<String, dynamic> json) =
-      _$NotesPollsRecommendationRequestImpl.fromJson;
-
-  @override
-  int? get limit;
-  @override
-  int? get offset;
-
-  /// Create a copy of NotesPollsRecommendationRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$NotesPollsRecommendationRequestImplCopyWith<
-    _$NotesPollsRecommendationRequestImpl
-  >
-  get copyWith => throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesPollsRecommendationRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.offset, offset) || other.offset == offset));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,limit,offset);
+
+@override
+String toString() {
+  return 'NotesPollsRecommendationRequest(limit: $limit, offset: $offset)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$NotesPollsRecommendationRequestCopyWith<$Res> implements $NotesPollsRecommendationRequestCopyWith<$Res> {
+  factory _$NotesPollsRecommendationRequestCopyWith(_NotesPollsRecommendationRequest value, $Res Function(_NotesPollsRecommendationRequest) _then) = __$NotesPollsRecommendationRequestCopyWithImpl;
+@override @useResult
+$Res call({
+ int? limit, int? offset
+});
+
+
+
+
+}
+/// @nodoc
+class __$NotesPollsRecommendationRequestCopyWithImpl<$Res>
+    implements _$NotesPollsRecommendationRequestCopyWith<$Res> {
+  __$NotesPollsRecommendationRequestCopyWithImpl(this._self, this._then);
+
+  final _NotesPollsRecommendationRequest _self;
+  final $Res Function(_NotesPollsRecommendationRequest) _then;
+
+/// Create a copy of NotesPollsRecommendationRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? limit = freezed,Object? offset = freezed,}) {
+  return _then(_NotesPollsRecommendationRequest(
+limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
+as int?,offset: freezed == offset ? _self.offset : offset // ignore: cast_nullable_to_non_nullable
+as int?,
+  ));
+}
+
+
+}
+
+// dart format on

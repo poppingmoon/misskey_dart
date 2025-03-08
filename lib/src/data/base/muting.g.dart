@@ -6,9 +6,9 @@ part of 'muting.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$MutingImpl _$$MutingImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$MutingImpl', json, ($checkedConvert) {
-      final val = _$MutingImpl(
+_Muting _$MutingFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_Muting', json, ($checkedConvert) {
+      final val = _Muting(
         id: $checkedConvert('id', (v) => v as String),
         createdAt: $checkedConvert(
           'createdAt',
@@ -30,14 +30,13 @@ _$MutingImpl _$$MutingImplFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$$MutingImplToJson(_$MutingImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'createdAt': const DateTimeConverter().toJson(instance.createdAt),
-      'expiresAt': const NullableDateTimeConverter().toJson(instance.expiresAt),
-      'muteeId': instance.muteeId,
-      'mutee': instance.mutee.toJson(),
-    };
+Map<String, dynamic> _$MutingToJson(_Muting instance) => <String, dynamic>{
+  'id': instance.id,
+  'createdAt': const DateTimeConverter().toJson(instance.createdAt),
+  'expiresAt': const NullableDateTimeConverter().toJson(instance.expiresAt),
+  'muteeId': instance.muteeId,
+  'mutee': instance.mutee.toJson(),
+};
 
 Value? _$JsonConverterFromJson<Json, Value>(
   Object? json,

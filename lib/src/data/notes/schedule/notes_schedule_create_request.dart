@@ -7,7 +7,7 @@ part 'notes_schedule_create_request.freezed.dart';
 part 'notes_schedule_create_request.g.dart';
 
 @freezed
-class NotesScheduleCreateRequest with _$NotesScheduleCreateRequest {
+abstract class NotesScheduleCreateRequest with _$NotesScheduleCreateRequest {
   const factory NotesScheduleCreateRequest({
     NoteVisibility? visibility,
     List<String>? visibleUserIds,
@@ -34,7 +34,7 @@ class NotesScheduleCreateRequest with _$NotesScheduleCreateRequest {
 }
 
 @freezed
-class ScheduleNote with _$ScheduleNote {
+abstract class ScheduleNote with _$ScheduleNote {
   const factory ScheduleNote({
     @EpocTimeDateTimeConverter() required DateTime scheduledAt,
   }) = _ScheduleNote;
@@ -44,7 +44,7 @@ class ScheduleNote with _$ScheduleNote {
 }
 
 @freezed
-class ScheduledDelete with _$ScheduledDelete {
+abstract class ScheduledDelete with _$ScheduledDelete {
   const factory ScheduledDelete({
     @EpocTimeDateTimeConverter() DateTime? deleteAt,
     @DurationConverter() Duration? deleteAfter,

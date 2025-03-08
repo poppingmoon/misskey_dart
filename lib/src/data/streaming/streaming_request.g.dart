@@ -6,28 +6,26 @@ part of 'streaming_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$StreamingRequestImpl _$$StreamingRequestImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$StreamingRequestImpl', json, ($checkedConvert) {
-  final val = _$StreamingRequestImpl(
-    type: $checkedConvert(
-      'type',
-      (v) => $enumDecode(_$StreamingRequestTypeEnumMap, v),
-    ),
-    body: $checkedConvert(
-      'body',
-      (v) => StreamingRequestBody.fromJson(v as Map<String, dynamic>),
-    ),
-  );
-  return val;
-});
+_StreamingRequest _$StreamingRequestFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_StreamingRequest', json, ($checkedConvert) {
+      final val = _StreamingRequest(
+        type: $checkedConvert(
+          'type',
+          (v) => $enumDecode(_$StreamingRequestTypeEnumMap, v),
+        ),
+        body: $checkedConvert(
+          'body',
+          (v) => StreamingRequestBody.fromJson(v as Map<String, dynamic>),
+        ),
+      );
+      return val;
+    });
 
-Map<String, dynamic> _$$StreamingRequestImplToJson(
-  _$StreamingRequestImpl instance,
-) => <String, dynamic>{
-  'type': _$StreamingRequestTypeEnumMap[instance.type]!,
-  'body': instance.body.toJson(),
-};
+Map<String, dynamic> _$StreamingRequestToJson(_StreamingRequest instance) =>
+    <String, dynamic>{
+      'type': _$StreamingRequestTypeEnumMap[instance.type]!,
+      'body': instance.body.toJson(),
+    };
 
 const _$StreamingRequestTypeEnumMap = {
   StreamingRequestType.readNotification: 'readNotification',
@@ -41,10 +39,10 @@ const _$StreamingRequestTypeEnumMap = {
   StreamingRequestType.ch: 'ch',
 };
 
-_$StreamingRequestBodyImpl _$$StreamingRequestBodyImplFromJson(
+_StreamingRequestBody _$StreamingRequestBodyFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$StreamingRequestBodyImpl', json, ($checkedConvert) {
-  final val = _$StreamingRequestBodyImpl(
+) => $checkedCreate('_StreamingRequestBody', json, ($checkedConvert) {
+  final val = _StreamingRequestBody(
     channel: $checkedConvert(
       'channel',
       (v) => $enumDecodeNullable(_$ChannelEnumMap, v),
@@ -57,8 +55,8 @@ _$StreamingRequestBodyImpl _$$StreamingRequestBodyImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$StreamingRequestBodyImplToJson(
-  _$StreamingRequestBodyImpl instance,
+Map<String, dynamic> _$StreamingRequestBodyToJson(
+  _StreamingRequestBody instance,
 ) => <String, dynamic>{
   'channel': _$ChannelEnumMap[instance.channel],
   'id': instance.id,

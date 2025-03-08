@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,340 +10,181 @@ part of 'drive_folder.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-DriveFolder _$DriveFolderFromJson(Map<String, dynamic> json) {
-  return _DriveFolder.fromJson(json);
-}
 
 /// @nodoc
 mixin _$DriveFolder {
-  String get id => throw _privateConstructorUsedError;
-  @DateTimeConverter()
-  DateTime get createdAt => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  String? get parentId => throw _privateConstructorUsedError;
-  DriveFolder? get parent => throw _privateConstructorUsedError;
-  int? get foldersCount => throw _privateConstructorUsedError;
-  int? get filesCount => throw _privateConstructorUsedError;
+
+ String get id;@DateTimeConverter() DateTime get createdAt; String get name; String? get parentId; DriveFolder? get parent; int? get foldersCount; int? get filesCount;
+/// Create a copy of DriveFolder
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$DriveFolderCopyWith<DriveFolder> get copyWith => _$DriveFolderCopyWithImpl<DriveFolder>(this as DriveFolder, _$identity);
 
   /// Serializes this DriveFolder to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of DriveFolder
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $DriveFolderCopyWith<DriveFolder> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is DriveFolder&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.name, name) || other.name == name)&&(identical(other.parentId, parentId) || other.parentId == parentId)&&(identical(other.parent, parent) || other.parent == parent)&&(identical(other.foldersCount, foldersCount) || other.foldersCount == foldersCount)&&(identical(other.filesCount, filesCount) || other.filesCount == filesCount));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,createdAt,name,parentId,parent,foldersCount,filesCount);
+
+@override
+String toString() {
+  return 'DriveFolder(id: $id, createdAt: $createdAt, name: $name, parentId: $parentId, parent: $parent, foldersCount: $foldersCount, filesCount: $filesCount)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $DriveFolderCopyWith<$Res> {
-  factory $DriveFolderCopyWith(
-    DriveFolder value,
-    $Res Function(DriveFolder) then,
-  ) = _$DriveFolderCopyWithImpl<$Res, DriveFolder>;
-  @useResult
-  $Res call({
-    String id,
-    @DateTimeConverter() DateTime createdAt,
-    String name,
-    String? parentId,
-    DriveFolder? parent,
-    int? foldersCount,
-    int? filesCount,
-  });
+abstract mixin class $DriveFolderCopyWith<$Res>  {
+  factory $DriveFolderCopyWith(DriveFolder value, $Res Function(DriveFolder) _then) = _$DriveFolderCopyWithImpl;
+@useResult
+$Res call({
+ String id,@DateTimeConverter() DateTime createdAt, String name, String? parentId, DriveFolder? parent, int? foldersCount, int? filesCount
+});
 
-  $DriveFolderCopyWith<$Res>? get parent;
+
+$DriveFolderCopyWith<$Res>? get parent;
+
 }
-
 /// @nodoc
-class _$DriveFolderCopyWithImpl<$Res, $Val extends DriveFolder>
+class _$DriveFolderCopyWithImpl<$Res>
     implements $DriveFolderCopyWith<$Res> {
-  _$DriveFolderCopyWithImpl(this._value, this._then);
+  _$DriveFolderCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final DriveFolder _self;
+  final $Res Function(DriveFolder) _then;
 
-  /// Create a copy of DriveFolder
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? createdAt = null,
-    Object? name = null,
-    Object? parentId = freezed,
-    Object? parent = freezed,
-    Object? foldersCount = freezed,
-    Object? filesCount = freezed,
-  }) {
-    return _then(
-      _value.copyWith(
-            id:
-                null == id
-                    ? _value.id
-                    : id // ignore: cast_nullable_to_non_nullable
-                        as String,
-            createdAt:
-                null == createdAt
-                    ? _value.createdAt
-                    : createdAt // ignore: cast_nullable_to_non_nullable
-                        as DateTime,
-            name:
-                null == name
-                    ? _value.name
-                    : name // ignore: cast_nullable_to_non_nullable
-                        as String,
-            parentId:
-                freezed == parentId
-                    ? _value.parentId
-                    : parentId // ignore: cast_nullable_to_non_nullable
-                        as String?,
-            parent:
-                freezed == parent
-                    ? _value.parent
-                    : parent // ignore: cast_nullable_to_non_nullable
-                        as DriveFolder?,
-            foldersCount:
-                freezed == foldersCount
-                    ? _value.foldersCount
-                    : foldersCount // ignore: cast_nullable_to_non_nullable
-                        as int?,
-            filesCount:
-                freezed == filesCount
-                    ? _value.filesCount
-                    : filesCount // ignore: cast_nullable_to_non_nullable
-                        as int?,
-          )
-          as $Val,
-    );
-  }
-
-  /// Create a copy of DriveFolder
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $DriveFolderCopyWith<$Res>? get parent {
-    if (_value.parent == null) {
-      return null;
-    }
-
-    return $DriveFolderCopyWith<$Res>(_value.parent!, (value) {
-      return _then(_value.copyWith(parent: value) as $Val);
-    });
-  }
+/// Create a copy of DriveFolder
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? createdAt = null,Object? name = null,Object? parentId = freezed,Object? parent = freezed,Object? foldersCount = freezed,Object? filesCount = freezed,}) {
+  return _then(_self.copyWith(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
+as DateTime,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String,parentId: freezed == parentId ? _self.parentId : parentId // ignore: cast_nullable_to_non_nullable
+as String?,parent: freezed == parent ? _self.parent : parent // ignore: cast_nullable_to_non_nullable
+as DriveFolder?,foldersCount: freezed == foldersCount ? _self.foldersCount : foldersCount // ignore: cast_nullable_to_non_nullable
+as int?,filesCount: freezed == filesCount ? _self.filesCount : filesCount // ignore: cast_nullable_to_non_nullable
+as int?,
+  ));
 }
+/// Create a copy of DriveFolder
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$DriveFolderCopyWith<$Res>? get parent {
+    if (_self.parent == null) {
+    return null;
+  }
 
-/// @nodoc
-abstract class _$$DriveFolderImplCopyWith<$Res>
-    implements $DriveFolderCopyWith<$Res> {
-  factory _$$DriveFolderImplCopyWith(
-    _$DriveFolderImpl value,
-    $Res Function(_$DriveFolderImpl) then,
-  ) = __$$DriveFolderImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({
-    String id,
-    @DateTimeConverter() DateTime createdAt,
-    String name,
-    String? parentId,
-    DriveFolder? parent,
-    int? foldersCount,
-    int? filesCount,
+  return $DriveFolderCopyWith<$Res>(_self.parent!, (value) {
+    return _then(_self.copyWith(parent: value));
   });
-
-  @override
-  $DriveFolderCopyWith<$Res>? get parent;
+}
 }
 
-/// @nodoc
-class __$$DriveFolderImplCopyWithImpl<$Res>
-    extends _$DriveFolderCopyWithImpl<$Res, _$DriveFolderImpl>
-    implements _$$DriveFolderImplCopyWith<$Res> {
-  __$$DriveFolderImplCopyWithImpl(
-    _$DriveFolderImpl _value,
-    $Res Function(_$DriveFolderImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of DriveFolder
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? createdAt = null,
-    Object? name = null,
-    Object? parentId = freezed,
-    Object? parent = freezed,
-    Object? foldersCount = freezed,
-    Object? filesCount = freezed,
-  }) {
-    return _then(
-      _$DriveFolderImpl(
-        id:
-            null == id
-                ? _value.id
-                : id // ignore: cast_nullable_to_non_nullable
-                    as String,
-        createdAt:
-            null == createdAt
-                ? _value.createdAt
-                : createdAt // ignore: cast_nullable_to_non_nullable
-                    as DateTime,
-        name:
-            null == name
-                ? _value.name
-                : name // ignore: cast_nullable_to_non_nullable
-                    as String,
-        parentId:
-            freezed == parentId
-                ? _value.parentId
-                : parentId // ignore: cast_nullable_to_non_nullable
-                    as String?,
-        parent:
-            freezed == parent
-                ? _value.parent
-                : parent // ignore: cast_nullable_to_non_nullable
-                    as DriveFolder?,
-        foldersCount:
-            freezed == foldersCount
-                ? _value.foldersCount
-                : foldersCount // ignore: cast_nullable_to_non_nullable
-                    as int?,
-        filesCount:
-            freezed == filesCount
-                ? _value.filesCount
-                : filesCount // ignore: cast_nullable_to_non_nullable
-                    as int?,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$DriveFolderImpl implements _DriveFolder {
-  const _$DriveFolderImpl({
-    required this.id,
-    @DateTimeConverter() required this.createdAt,
-    required this.name,
-    this.parentId,
-    this.parent,
-    this.foldersCount,
-    this.filesCount,
+
+class _DriveFolder implements DriveFolder {
+  const _DriveFolder({required this.id, @DateTimeConverter() required this.createdAt, required this.name, this.parentId, this.parent, this.foldersCount, this.filesCount});
+  factory _DriveFolder.fromJson(Map<String, dynamic> json) => _$DriveFolderFromJson(json);
+
+@override final  String id;
+@override@DateTimeConverter() final  DateTime createdAt;
+@override final  String name;
+@override final  String? parentId;
+@override final  DriveFolder? parent;
+@override final  int? foldersCount;
+@override final  int? filesCount;
+
+/// Create a copy of DriveFolder
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$DriveFolderCopyWith<_DriveFolder> get copyWith => __$DriveFolderCopyWithImpl<_DriveFolder>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$DriveFolderToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _DriveFolder&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.name, name) || other.name == name)&&(identical(other.parentId, parentId) || other.parentId == parentId)&&(identical(other.parent, parent) || other.parent == parent)&&(identical(other.foldersCount, foldersCount) || other.foldersCount == foldersCount)&&(identical(other.filesCount, filesCount) || other.filesCount == filesCount));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,createdAt,name,parentId,parent,foldersCount,filesCount);
+
+@override
+String toString() {
+  return 'DriveFolder(id: $id, createdAt: $createdAt, name: $name, parentId: $parentId, parent: $parent, foldersCount: $foldersCount, filesCount: $filesCount)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$DriveFolderCopyWith<$Res> implements $DriveFolderCopyWith<$Res> {
+  factory _$DriveFolderCopyWith(_DriveFolder value, $Res Function(_DriveFolder) _then) = __$DriveFolderCopyWithImpl;
+@override @useResult
+$Res call({
+ String id,@DateTimeConverter() DateTime createdAt, String name, String? parentId, DriveFolder? parent, int? foldersCount, int? filesCount
+});
+
+
+@override $DriveFolderCopyWith<$Res>? get parent;
+
+}
+/// @nodoc
+class __$DriveFolderCopyWithImpl<$Res>
+    implements _$DriveFolderCopyWith<$Res> {
+  __$DriveFolderCopyWithImpl(this._self, this._then);
+
+  final _DriveFolder _self;
+  final $Res Function(_DriveFolder) _then;
+
+/// Create a copy of DriveFolder
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? createdAt = null,Object? name = null,Object? parentId = freezed,Object? parent = freezed,Object? foldersCount = freezed,Object? filesCount = freezed,}) {
+  return _then(_DriveFolder(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
+as DateTime,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String,parentId: freezed == parentId ? _self.parentId : parentId // ignore: cast_nullable_to_non_nullable
+as String?,parent: freezed == parent ? _self.parent : parent // ignore: cast_nullable_to_non_nullable
+as DriveFolder?,foldersCount: freezed == foldersCount ? _self.foldersCount : foldersCount // ignore: cast_nullable_to_non_nullable
+as int?,filesCount: freezed == filesCount ? _self.filesCount : filesCount // ignore: cast_nullable_to_non_nullable
+as int?,
+  ));
+}
+
+/// Create a copy of DriveFolder
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$DriveFolderCopyWith<$Res>? get parent {
+    if (_self.parent == null) {
+    return null;
+  }
+
+  return $DriveFolderCopyWith<$Res>(_self.parent!, (value) {
+    return _then(_self.copyWith(parent: value));
   });
-
-  factory _$DriveFolderImpl.fromJson(Map<String, dynamic> json) =>
-      _$$DriveFolderImplFromJson(json);
-
-  @override
-  final String id;
-  @override
-  @DateTimeConverter()
-  final DateTime createdAt;
-  @override
-  final String name;
-  @override
-  final String? parentId;
-  @override
-  final DriveFolder? parent;
-  @override
-  final int? foldersCount;
-  @override
-  final int? filesCount;
-
-  @override
-  String toString() {
-    return 'DriveFolder(id: $id, createdAt: $createdAt, name: $name, parentId: $parentId, parent: $parent, foldersCount: $foldersCount, filesCount: $filesCount)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$DriveFolderImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.createdAt, createdAt) ||
-                other.createdAt == createdAt) &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.parentId, parentId) ||
-                other.parentId == parentId) &&
-            (identical(other.parent, parent) || other.parent == parent) &&
-            (identical(other.foldersCount, foldersCount) ||
-                other.foldersCount == foldersCount) &&
-            (identical(other.filesCount, filesCount) ||
-                other.filesCount == filesCount));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    id,
-    createdAt,
-    name,
-    parentId,
-    parent,
-    foldersCount,
-    filesCount,
-  );
-
-  /// Create a copy of DriveFolder
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$DriveFolderImplCopyWith<_$DriveFolderImpl> get copyWith =>
-      __$$DriveFolderImplCopyWithImpl<_$DriveFolderImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$DriveFolderImplToJson(this);
-  }
+}
 }
 
-abstract class _DriveFolder implements DriveFolder {
-  const factory _DriveFolder({
-    required final String id,
-    @DateTimeConverter() required final DateTime createdAt,
-    required final String name,
-    final String? parentId,
-    final DriveFolder? parent,
-    final int? foldersCount,
-    final int? filesCount,
-  }) = _$DriveFolderImpl;
-
-  factory _DriveFolder.fromJson(Map<String, dynamic> json) =
-      _$DriveFolderImpl.fromJson;
-
-  @override
-  String get id;
-  @override
-  @DateTimeConverter()
-  DateTime get createdAt;
-  @override
-  String get name;
-  @override
-  String? get parentId;
-  @override
-  DriveFolder? get parent;
-  @override
-  int? get foldersCount;
-  @override
-  int? get filesCount;
-
-  /// Create a copy of DriveFolder
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$DriveFolderImplCopyWith<_$DriveFolderImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+// dart format on

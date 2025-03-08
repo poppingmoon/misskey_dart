@@ -6,10 +6,10 @@ part of 'page.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PageImpl _$$PageImplFromJson(
+_Page _$PageFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$PageImpl', json, ($checkedConvert) {
-  final val = _$PageImpl(
+) => $checkedCreate('_Page', json, ($checkedConvert) {
+  final val = _Page(
     id: $checkedConvert('id', (v) => v as String),
     createdAt: $checkedConvert(
       'createdAt',
@@ -64,32 +64,31 @@ _$PageImpl _$$PageImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$PageImplToJson(_$PageImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'createdAt': const DateTimeConverter().toJson(instance.createdAt),
-      'updatedAt': const DateTimeConverter().toJson(instance.updatedAt),
-      'userId': instance.userId,
-      'user': instance.user.toJson(),
-      'content': const ListPageContentConverter().toJson(instance.content),
-      'variables': instance.variables,
-      'title': instance.title,
-      'name': instance.name,
-      'summary': instance.summary,
-      'hideTitleWhenPinned': instance.hideTitleWhenPinned,
-      'alignCenter': instance.alignCenter,
-      'font': instance.font,
-      'script': instance.script,
-      'eyeCatchingImageId': instance.eyeCatchingImageId,
-      'eyeCatchingImage': instance.eyeCatchingImage?.toJson(),
-      'attachedFiles': instance.attachedFiles?.map((e) => e.toJson()).toList(),
-      'likedCount': instance.likedCount,
-      'isLiked': instance.isLiked,
-    };
+Map<String, dynamic> _$PageToJson(_Page instance) => <String, dynamic>{
+  'id': instance.id,
+  'createdAt': const DateTimeConverter().toJson(instance.createdAt),
+  'updatedAt': const DateTimeConverter().toJson(instance.updatedAt),
+  'userId': instance.userId,
+  'user': instance.user.toJson(),
+  'content': const ListPageContentConverter().toJson(instance.content),
+  'variables': instance.variables,
+  'title': instance.title,
+  'name': instance.name,
+  'summary': instance.summary,
+  'hideTitleWhenPinned': instance.hideTitleWhenPinned,
+  'alignCenter': instance.alignCenter,
+  'font': instance.font,
+  'script': instance.script,
+  'eyeCatchingImageId': instance.eyeCatchingImageId,
+  'eyeCatchingImage': instance.eyeCatchingImage?.toJson(),
+  'attachedFiles': instance.attachedFiles?.map((e) => e.toJson()).toList(),
+  'likedCount': instance.likedCount,
+  'isLiked': instance.isLiked,
+};
 
-_$PageTextImpl _$$PageTextImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$PageTextImpl', json, ($checkedConvert) {
-      final val = _$PageTextImpl(
+_PageText _$PageTextFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_PageText', json, ($checkedConvert) {
+      final val = _PageText(
         id: $checkedConvert('id', (v) => v as String?),
         type: $checkedConvert(
           'type',
@@ -100,12 +99,11 @@ _$PageTextImpl _$$PageTextImplFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$$PageTextImplToJson(_$PageTextImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'type': _$PageContentTypeEnumMap[instance.type],
-      'text': instance.text,
-    };
+Map<String, dynamic> _$PageTextToJson(_PageText instance) => <String, dynamic>{
+  'id': instance.id,
+  'type': _$PageContentTypeEnumMap[instance.type],
+  'text': instance.text,
+};
 
 const _$PageContentTypeEnumMap = {
   PageContentType.text: 'text',
@@ -125,9 +123,9 @@ const _$PageContentTypeEnumMap = {
   PageContentType.post: 'post',
 };
 
-_$PageSectionImpl _$$PageSectionImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$PageSectionImpl', json, ($checkedConvert) {
-      final val = _$PageSectionImpl(
+_PageSection _$PageSectionFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_PageSection', json, ($checkedConvert) {
+      final val = _PageSection(
         id: $checkedConvert('id', (v) => v as String?),
         type: $checkedConvert(
           'type',
@@ -142,8 +140,8 @@ _$PageSectionImpl _$$PageSectionImplFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$$PageSectionImplToJson(
-  _$PageSectionImpl instance,
+Map<String, dynamic> _$PageSectionToJson(
+  _PageSection instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'type': _$PageContentTypeEnumMap[instance.type],
@@ -159,9 +157,9 @@ Json? _$JsonConverterToJson<Json, Value>(
   Json? Function(Value value) toJson,
 ) => value == null ? null : toJson(value);
 
-_$PageImageImpl _$$PageImageImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$PageImageImpl', json, ($checkedConvert) {
-      final val = _$PageImageImpl(
+_PageImage _$PageImageFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_PageImage', json, ($checkedConvert) {
+      final val = _PageImage(
         id: $checkedConvert('id', (v) => v as String?),
         type: $checkedConvert(
           'type',
@@ -172,16 +170,16 @@ _$PageImageImpl _$$PageImageImplFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$$PageImageImplToJson(_$PageImageImpl instance) =>
+Map<String, dynamic> _$PageImageToJson(_PageImage instance) =>
     <String, dynamic>{
       'id': instance.id,
       'type': _$PageContentTypeEnumMap[instance.type],
       'fileId': instance.fileId,
     };
 
-_$PageNoteImpl _$$PageNoteImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$PageNoteImpl', json, ($checkedConvert) {
-      final val = _$PageNoteImpl(
+_PageNote _$PageNoteFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_PageNote', json, ($checkedConvert) {
+      final val = _PageNote(
         id: $checkedConvert('id', (v) => v as String?),
         type: $checkedConvert(
           'type',
@@ -193,17 +191,16 @@ _$PageNoteImpl _$$PageNoteImplFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$$PageNoteImplToJson(_$PageNoteImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'type': _$PageContentTypeEnumMap[instance.type],
-      'note': instance.note,
-      'detailed': instance.detailed,
-    };
+Map<String, dynamic> _$PageNoteToJson(_PageNote instance) => <String, dynamic>{
+  'id': instance.id,
+  'type': _$PageContentTypeEnumMap[instance.type],
+  'note': instance.note,
+  'detailed': instance.detailed,
+};
 
-_$PageUnknownImpl _$$PageUnknownImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$PageUnknownImpl', json, ($checkedConvert) {
-      final val = _$PageUnknownImpl(
+_PageUnknown _$PageUnknownFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_PageUnknown', json, ($checkedConvert) {
+      final val = _PageUnknown(
         id: $checkedConvert('id', (v) => v as String?),
         type: $checkedConvert(
           'type',
@@ -217,7 +214,7 @@ _$PageUnknownImpl _$$PageUnknownImplFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$$PageUnknownImplToJson(_$PageUnknownImpl instance) =>
+Map<String, dynamic> _$PageUnknownToJson(_PageUnknown instance) =>
     <String, dynamic>{
       'id': instance.id,
       'type': _$PageContentTypeEnumMap[instance.type],

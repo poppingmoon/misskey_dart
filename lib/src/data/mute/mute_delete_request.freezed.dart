@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,165 +10,139 @@ part of 'mute_delete_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-MuteDeleteRequest _$MuteDeleteRequestFromJson(Map<String, dynamic> json) {
-  return _MuteDeleteRequest.fromJson(json);
-}
 
 /// @nodoc
 mixin _$MuteDeleteRequest {
-  String get userId => throw _privateConstructorUsedError;
+
+ String get userId;
+/// Create a copy of MuteDeleteRequest
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$MuteDeleteRequestCopyWith<MuteDeleteRequest> get copyWith => _$MuteDeleteRequestCopyWithImpl<MuteDeleteRequest>(this as MuteDeleteRequest, _$identity);
 
   /// Serializes this MuteDeleteRequest to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of MuteDeleteRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $MuteDeleteRequestCopyWith<MuteDeleteRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is MuteDeleteRequest&&(identical(other.userId, userId) || other.userId == userId));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,userId);
+
+@override
+String toString() {
+  return 'MuteDeleteRequest(userId: $userId)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $MuteDeleteRequestCopyWith<$Res> {
-  factory $MuteDeleteRequestCopyWith(
-    MuteDeleteRequest value,
-    $Res Function(MuteDeleteRequest) then,
-  ) = _$MuteDeleteRequestCopyWithImpl<$Res, MuteDeleteRequest>;
-  @useResult
-  $Res call({String userId});
-}
+abstract mixin class $MuteDeleteRequestCopyWith<$Res>  {
+  factory $MuteDeleteRequestCopyWith(MuteDeleteRequest value, $Res Function(MuteDeleteRequest) _then) = _$MuteDeleteRequestCopyWithImpl;
+@useResult
+$Res call({
+ String userId
+});
 
+
+
+
+}
 /// @nodoc
-class _$MuteDeleteRequestCopyWithImpl<$Res, $Val extends MuteDeleteRequest>
+class _$MuteDeleteRequestCopyWithImpl<$Res>
     implements $MuteDeleteRequestCopyWith<$Res> {
-  _$MuteDeleteRequestCopyWithImpl(this._value, this._then);
+  _$MuteDeleteRequestCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final MuteDeleteRequest _self;
+  final $Res Function(MuteDeleteRequest) _then;
 
-  /// Create a copy of MuteDeleteRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? userId = null}) {
-    return _then(
-      _value.copyWith(
-            userId:
-                null == userId
-                    ? _value.userId
-                    : userId // ignore: cast_nullable_to_non_nullable
-                        as String,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of MuteDeleteRequest
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? userId = null,}) {
+  return _then(_self.copyWith(
+userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-abstract class _$$MuteDeleteRequestImplCopyWith<$Res>
-    implements $MuteDeleteRequestCopyWith<$Res> {
-  factory _$$MuteDeleteRequestImplCopyWith(
-    _$MuteDeleteRequestImpl value,
-    $Res Function(_$MuteDeleteRequestImpl) then,
-  ) = __$$MuteDeleteRequestImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String userId});
 }
 
-/// @nodoc
-class __$$MuteDeleteRequestImplCopyWithImpl<$Res>
-    extends _$MuteDeleteRequestCopyWithImpl<$Res, _$MuteDeleteRequestImpl>
-    implements _$$MuteDeleteRequestImplCopyWith<$Res> {
-  __$$MuteDeleteRequestImplCopyWithImpl(
-    _$MuteDeleteRequestImpl _value,
-    $Res Function(_$MuteDeleteRequestImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of MuteDeleteRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? userId = null}) {
-    return _then(
-      _$MuteDeleteRequestImpl(
-        userId:
-            null == userId
-                ? _value.userId
-                : userId // ignore: cast_nullable_to_non_nullable
-                    as String,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$MuteDeleteRequestImpl implements _MuteDeleteRequest {
-  const _$MuteDeleteRequestImpl({required this.userId});
 
-  factory _$MuteDeleteRequestImpl.fromJson(Map<String, dynamic> json) =>
-      _$$MuteDeleteRequestImplFromJson(json);
+class _MuteDeleteRequest implements MuteDeleteRequest {
+  const _MuteDeleteRequest({required this.userId});
+  factory _MuteDeleteRequest.fromJson(Map<String, dynamic> json) => _$MuteDeleteRequestFromJson(json);
 
-  @override
-  final String userId;
+@override final  String userId;
 
-  @override
-  String toString() {
-    return 'MuteDeleteRequest(userId: $userId)';
-  }
+/// Create a copy of MuteDeleteRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$MuteDeleteRequestCopyWith<_MuteDeleteRequest> get copyWith => __$MuteDeleteRequestCopyWithImpl<_MuteDeleteRequest>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$MuteDeleteRequestImpl &&
-            (identical(other.userId, userId) || other.userId == userId));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, userId);
-
-  /// Create a copy of MuteDeleteRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$MuteDeleteRequestImplCopyWith<_$MuteDeleteRequestImpl> get copyWith =>
-      __$$MuteDeleteRequestImplCopyWithImpl<_$MuteDeleteRequestImpl>(
-        this,
-        _$identity,
-      );
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$MuteDeleteRequestImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$MuteDeleteRequestToJson(this, );
 }
 
-abstract class _MuteDeleteRequest implements MuteDeleteRequest {
-  const factory _MuteDeleteRequest({required final String userId}) =
-      _$MuteDeleteRequestImpl;
-
-  factory _MuteDeleteRequest.fromJson(Map<String, dynamic> json) =
-      _$MuteDeleteRequestImpl.fromJson;
-
-  @override
-  String get userId;
-
-  /// Create a copy of MuteDeleteRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$MuteDeleteRequestImplCopyWith<_$MuteDeleteRequestImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _MuteDeleteRequest&&(identical(other.userId, userId) || other.userId == userId));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,userId);
+
+@override
+String toString() {
+  return 'MuteDeleteRequest(userId: $userId)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$MuteDeleteRequestCopyWith<$Res> implements $MuteDeleteRequestCopyWith<$Res> {
+  factory _$MuteDeleteRequestCopyWith(_MuteDeleteRequest value, $Res Function(_MuteDeleteRequest) _then) = __$MuteDeleteRequestCopyWithImpl;
+@override @useResult
+$Res call({
+ String userId
+});
+
+
+
+
+}
+/// @nodoc
+class __$MuteDeleteRequestCopyWithImpl<$Res>
+    implements _$MuteDeleteRequestCopyWith<$Res> {
+  __$MuteDeleteRequestCopyWithImpl(this._self, this._then);
+
+  final _MuteDeleteRequest _self;
+  final $Res Function(_MuteDeleteRequest) _then;
+
+/// Create a copy of MuteDeleteRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? userId = null,}) {
+  return _then(_MuteDeleteRequest(
+userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
+}
+
+
+}
+
+// dart format on

@@ -6,10 +6,10 @@ part of 'user.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$UserLiteImpl _$$UserLiteImplFromJson(
+_UserLite _$UserLiteFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$UserLiteImpl', json, ($checkedConvert) {
-  final val = _$UserLiteImpl(
+) => $checkedCreate('_UserLite', json, ($checkedConvert) {
+  final val = _UserLite(
     id: $checkedConvert('id', (v) => v as String),
     name: $checkedConvert('name', (v) => v as String?),
     username: $checkedConvert('username', (v) => v as String),
@@ -81,33 +81,32 @@ _$UserLiteImpl _$$UserLiteImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$UserLiteImplToJson(_$UserLiteImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-      'username': instance.username,
-      'host': instance.host,
-      'avatarUrl': const NullableUriConverter().toJson(instance.avatarUrl),
-      'avatarBlurhash': instance.avatarBlurhash,
-      'avatarDecorations':
-          instance.avatarDecorations.map((e) => e.toJson()).toList(),
-      'isBot': instance.isBot,
-      'isCat': instance.isCat,
-      'instance': instance.instance?.toJson(),
-      'emojis': const EmojisConverter().toJson(instance.emojis),
-      'onlineStatus': _$OnlineStatusEnumMap[instance.onlineStatus],
-      'badgeRoles': instance.badgeRoles.map((e) => e.toJson()).toList(),
-      'requireSigninToViewContents': instance.requireSigninToViewContents,
-      'makeNotesFollowersOnlyBefore': _$JsonConverterToJson<int, HideBefore>(
-        instance.makeNotesFollowersOnlyBefore,
-        const HideBeforeConverter().toJson,
-      ),
-      'makeNotesHiddenBefore': _$JsonConverterToJson<int, HideBefore>(
-        instance.makeNotesHiddenBefore,
-        const HideBeforeConverter().toJson,
-      ),
-      'speakAsCat': instance.speakAsCat,
-    };
+Map<String, dynamic> _$UserLiteToJson(_UserLite instance) => <String, dynamic>{
+  'id': instance.id,
+  'name': instance.name,
+  'username': instance.username,
+  'host': instance.host,
+  'avatarUrl': const NullableUriConverter().toJson(instance.avatarUrl),
+  'avatarBlurhash': instance.avatarBlurhash,
+  'avatarDecorations':
+      instance.avatarDecorations.map((e) => e.toJson()).toList(),
+  'isBot': instance.isBot,
+  'isCat': instance.isCat,
+  'instance': instance.instance?.toJson(),
+  'emojis': const EmojisConverter().toJson(instance.emojis),
+  'onlineStatus': _$OnlineStatusEnumMap[instance.onlineStatus],
+  'badgeRoles': instance.badgeRoles.map((e) => e.toJson()).toList(),
+  'requireSigninToViewContents': instance.requireSigninToViewContents,
+  'makeNotesFollowersOnlyBefore': _$JsonConverterToJson<int, HideBefore>(
+    instance.makeNotesFollowersOnlyBefore,
+    const HideBeforeConverter().toJson,
+  ),
+  'makeNotesHiddenBefore': _$JsonConverterToJson<int, HideBefore>(
+    instance.makeNotesHiddenBefore,
+    const HideBeforeConverter().toJson,
+  ),
+  'speakAsCat': instance.speakAsCat,
+};
 
 const _$OnlineStatusEnumMap = {
   OnlineStatus.online: 'online',
@@ -126,10 +125,10 @@ Json? _$JsonConverterToJson<Json, Value>(
   Json? Function(Value value) toJson,
 ) => value == null ? null : toJson(value);
 
-_$UserDetailedNotMeImpl _$$UserDetailedNotMeImplFromJson(
+_UserDetailedNotMe _$UserDetailedNotMeFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$UserDetailedNotMeImpl', json, ($checkedConvert) {
-  final val = _$UserDetailedNotMeImpl(
+) => $checkedCreate('_UserDetailedNotMe', json, ($checkedConvert) {
+  final val = _UserDetailedNotMe(
     id: $checkedConvert('id', (v) => v as String),
     name: $checkedConvert('name', (v) => v as String?),
     username: $checkedConvert('username', (v) => v as String),
@@ -342,8 +341,8 @@ _$UserDetailedNotMeImpl _$$UserDetailedNotMeImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$UserDetailedNotMeImplToJson(
-  _$UserDetailedNotMeImpl instance,
+Map<String, dynamic> _$UserDetailedNotMeToJson(
+  _UserDetailedNotMe instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'name': instance.name,
@@ -416,13 +415,10 @@ const _$FFVisibilityEnumMap = {
   FFVisibility.private: 'private',
 };
 
-_$UserDetailedNotMeWithRelationsImpl
-_$$UserDetailedNotMeWithRelationsImplFromJson(
+_UserDetailedNotMeWithRelations _$UserDetailedNotMeWithRelationsFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$UserDetailedNotMeWithRelationsImpl', json, (
-  $checkedConvert,
-) {
-  final val = _$UserDetailedNotMeWithRelationsImpl(
+) => $checkedCreate('_UserDetailedNotMeWithRelations', json, ($checkedConvert) {
+  final val = _UserDetailedNotMeWithRelations(
     id: $checkedConvert('id', (v) => v as String),
     name: $checkedConvert('name', (v) => v as String?),
     username: $checkedConvert('username', (v) => v as String),
@@ -655,8 +651,8 @@ _$$UserDetailedNotMeWithRelationsImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$UserDetailedNotMeWithRelationsImplToJson(
-  _$UserDetailedNotMeWithRelationsImpl instance,
+Map<String, dynamic> _$UserDetailedNotMeWithRelationsToJson(
+  _UserDetailedNotMeWithRelations instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'name': instance.name,
@@ -736,10 +732,10 @@ Map<String, dynamic> _$$UserDetailedNotMeWithRelationsImplToJson(
 
 const _$NotifyEnumMap = {Notify.normal: 'normal', Notify.none: 'none'};
 
-_$MeDetailedImpl _$$MeDetailedImplFromJson(
+_MeDetailed _$MeDetailedFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$MeDetailedImpl', json, ($checkedConvert) {
-  final val = _$MeDetailedImpl(
+) => $checkedCreate('_MeDetailed', json, ($checkedConvert) {
+  final val = _MeDetailed(
     id: $checkedConvert('id', (v) => v as String),
     name: $checkedConvert('name', (v) => v as String?),
     username: $checkedConvert('username', (v) => v as String),
@@ -1077,8 +1073,8 @@ _$MeDetailedImpl _$$MeDetailedImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$MeDetailedImplToJson(
-  _$MeDetailedImpl instance,
+Map<String, dynamic> _$MeDetailedToJson(
+  _MeDetailed instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'name': instance.name,
@@ -1190,10 +1186,10 @@ const _$TwoFactorBackupCodesStockEnumMap = {
   TwoFactorBackupCodesStock.none: 'none',
 };
 
-_$UserAvatarDecorationImpl _$$UserAvatarDecorationImplFromJson(
+_UserAvatarDecoration _$UserAvatarDecorationFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$UserAvatarDecorationImpl', json, ($checkedConvert) {
-  final val = _$UserAvatarDecorationImpl(
+) => $checkedCreate('_UserAvatarDecoration', json, ($checkedConvert) {
+  final val = _UserAvatarDecoration(
     id: $checkedConvert('id', (v) => v as String),
     angle: $checkedConvert('angle', (v) => (v as num?)?.toDouble()),
     flipH: $checkedConvert('flipH', (v) => v as bool? ?? false),
@@ -1204,8 +1200,8 @@ _$UserAvatarDecorationImpl _$$UserAvatarDecorationImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$UserAvatarDecorationImplToJson(
-  _$UserAvatarDecorationImpl instance,
+Map<String, dynamic> _$UserAvatarDecorationToJson(
+  _UserAvatarDecoration instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'angle': instance.angle,
@@ -1215,40 +1211,41 @@ Map<String, dynamic> _$$UserAvatarDecorationImplToJson(
   'offsetY': instance.offsetY,
 };
 
-_$UserInstanceInfoImpl _$$UserInstanceInfoImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$UserInstanceInfoImpl', json, ($checkedConvert) {
-  final val = _$UserInstanceInfoImpl(
-    name: $checkedConvert('name', (v) => v as String?),
-    softwareVersion: $checkedConvert('softwareVersion', (v) => v as String?),
-    softwareName: $checkedConvert('softwareName', (v) => v as String?),
-    iconUrl: $checkedConvert(
-      'iconUrl',
-      (v) => const NullableUriConverter().fromJson(v as String?),
-    ),
-    faviconUrl: $checkedConvert(
-      'faviconUrl',
-      (v) => const NullableUriConverter().fromJson(v as String?),
-    ),
-    themeColor: $checkedConvert('themeColor', (v) => v as String?),
-  );
-  return val;
-});
+_UserInstanceInfo _$UserInstanceInfoFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_UserInstanceInfo', json, ($checkedConvert) {
+      final val = _UserInstanceInfo(
+        name: $checkedConvert('name', (v) => v as String?),
+        softwareVersion: $checkedConvert(
+          'softwareVersion',
+          (v) => v as String?,
+        ),
+        softwareName: $checkedConvert('softwareName', (v) => v as String?),
+        iconUrl: $checkedConvert(
+          'iconUrl',
+          (v) => const NullableUriConverter().fromJson(v as String?),
+        ),
+        faviconUrl: $checkedConvert(
+          'faviconUrl',
+          (v) => const NullableUriConverter().fromJson(v as String?),
+        ),
+        themeColor: $checkedConvert('themeColor', (v) => v as String?),
+      );
+      return val;
+    });
 
-Map<String, dynamic> _$$UserInstanceInfoImplToJson(
-  _$UserInstanceInfoImpl instance,
-) => <String, dynamic>{
-  'name': instance.name,
-  'softwareVersion': instance.softwareVersion,
-  'softwareName': instance.softwareName,
-  'iconUrl': const NullableUriConverter().toJson(instance.iconUrl),
-  'faviconUrl': const NullableUriConverter().toJson(instance.faviconUrl),
-  'themeColor': instance.themeColor,
-};
+Map<String, dynamic> _$UserInstanceInfoToJson(_UserInstanceInfo instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'softwareVersion': instance.softwareVersion,
+      'softwareName': instance.softwareName,
+      'iconUrl': const NullableUriConverter().toJson(instance.iconUrl),
+      'faviconUrl': const NullableUriConverter().toJson(instance.faviconUrl),
+      'themeColor': instance.themeColor,
+    };
 
-_$UserBadgeRoleImpl _$$UserBadgeRoleImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$UserBadgeRoleImpl', json, ($checkedConvert) {
-      final val = _$UserBadgeRoleImpl(
+_UserBadgeRole _$UserBadgeRoleFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_UserBadgeRole', json, ($checkedConvert) {
+      final val = _UserBadgeRole(
         name: $checkedConvert('name', (v) => v as String),
         iconUrl: $checkedConvert(
           'iconUrl',
@@ -1258,15 +1255,15 @@ _$UserBadgeRoleImpl _$$UserBadgeRoleImplFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$$UserBadgeRoleImplToJson(_$UserBadgeRoleImpl instance) =>
+Map<String, dynamic> _$UserBadgeRoleToJson(_UserBadgeRole instance) =>
     <String, dynamic>{
       'name': instance.name,
       'iconUrl': const NullableUriConverter().toJson(instance.iconUrl),
     };
 
-_$UserRoleImpl _$$UserRoleImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$UserRoleImpl', json, ($checkedConvert) {
-      final val = _$UserRoleImpl(
+_UserRole _$UserRoleFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_UserRole', json, ($checkedConvert) {
+      final val = _UserRole(
         id: $checkedConvert('id', (v) => v as String),
         name: $checkedConvert('name', (v) => v as String),
         color: $checkedConvert('color', (v) => v as String?),
@@ -1281,41 +1278,39 @@ _$UserRoleImpl _$$UserRoleImplFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$$UserRoleImplToJson(_$UserRoleImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-      'color': instance.color,
-      'iconUrl': const NullableUriConverter().toJson(instance.iconUrl),
-      'description': instance.description,
-      'isModerator': instance.isModerator,
-      'isAdministrator': instance.isAdministrator,
-    };
+Map<String, dynamic> _$UserRoleToJson(_UserRole instance) => <String, dynamic>{
+  'id': instance.id,
+  'name': instance.name,
+  'color': instance.color,
+  'iconUrl': const NullableUriConverter().toJson(instance.iconUrl),
+  'description': instance.description,
+  'isModerator': instance.isModerator,
+  'isAdministrator': instance.isAdministrator,
+};
 
-_$UserAchievementImpl _$$UserAchievementImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$UserAchievementImpl', json, ($checkedConvert) {
-  final val = _$UserAchievementImpl(
-    name: $checkedConvert('name', (v) => v as String),
-    unlockedAt: $checkedConvert(
-      'unlockedAt',
-      (v) => const EpocTimeDateTimeConverter().fromJson((v as num).toInt()),
-    ),
-  );
-  return val;
-});
+_UserAchievement _$UserAchievementFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_UserAchievement', json, ($checkedConvert) {
+      final val = _UserAchievement(
+        name: $checkedConvert('name', (v) => v as String),
+        unlockedAt: $checkedConvert(
+          'unlockedAt',
+          (v) => const EpocTimeDateTimeConverter().fromJson((v as num).toInt()),
+        ),
+      );
+      return val;
+    });
 
-Map<String, dynamic> _$$UserAchievementImplToJson(
-  _$UserAchievementImpl instance,
+Map<String, dynamic> _$UserAchievementToJson(
+  _UserAchievement instance,
 ) => <String, dynamic>{
   'name': instance.name,
   'unlockedAt': const EpocTimeDateTimeConverter().toJson(instance.unlockedAt),
 };
 
-_$UserPoliciesImpl _$$UserPoliciesImplFromJson(
+_UserPolicies _$UserPoliciesFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$UserPoliciesImpl', json, ($checkedConvert) {
-  final val = _$UserPoliciesImpl(
+) => $checkedCreate('_UserPolicies', json, ($checkedConvert) {
+  final val = _UserPolicies(
     gtlAvailable: $checkedConvert('gtlAvailable', (v) => v as bool?),
     ltlAvailable: $checkedConvert('ltlAvailable', (v) => v as bool?),
     canPublicNote: $checkedConvert('canPublicNote', (v) => v as bool?),
@@ -1390,7 +1385,7 @@ _$UserPoliciesImpl _$$UserPoliciesImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$UserPoliciesImplToJson(_$UserPoliciesImpl instance) =>
+Map<String, dynamic> _$UserPoliciesToJson(_UserPolicies instance) =>
     <String, dynamic>{
       'gtlAvailable': instance.gtlAvailable,
       'ltlAvailable': instance.ltlAvailable,
@@ -1422,44 +1417,42 @@ Map<String, dynamic> _$$UserPoliciesImplToJson(_$UserPoliciesImpl instance) =>
       'scheduleNoteMax': instance.scheduleNoteMax,
     };
 
-_$UserFieldImpl _$$UserFieldImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$UserFieldImpl', json, ($checkedConvert) {
-      final val = _$UserFieldImpl(
+_UserField _$UserFieldFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_UserField', json, ($checkedConvert) {
+      final val = _UserField(
         name: $checkedConvert('name', (v) => v as String),
         value: $checkedConvert('value', (v) => v as String),
       );
       return val;
     });
 
-Map<String, dynamic> _$$UserFieldImplToJson(_$UserFieldImpl instance) =>
+Map<String, dynamic> _$UserFieldToJson(_UserField instance) =>
     <String, dynamic>{'name': instance.name, 'value': instance.value};
 
-_$MutualLinkSectionImpl _$$MutualLinkSectionImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$MutualLinkSectionImpl', json, ($checkedConvert) {
-  final val = _$MutualLinkSectionImpl(
-    name: $checkedConvert('name', (v) => v as String?),
-    mutualLinks: $checkedConvert(
-      'mutualLinks',
-      (v) =>
-          (v as List<dynamic>)
-              .map((e) => MutualLink.fromJson(e as Map<String, dynamic>))
-              .toList(),
-    ),
-  );
-  return val;
-});
+_MutualLinkSection _$MutualLinkSectionFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_MutualLinkSection', json, ($checkedConvert) {
+      final val = _MutualLinkSection(
+        name: $checkedConvert('name', (v) => v as String?),
+        mutualLinks: $checkedConvert(
+          'mutualLinks',
+          (v) =>
+              (v as List<dynamic>)
+                  .map((e) => MutualLink.fromJson(e as Map<String, dynamic>))
+                  .toList(),
+        ),
+      );
+      return val;
+    });
 
-Map<String, dynamic> _$$MutualLinkSectionImplToJson(
-  _$MutualLinkSectionImpl instance,
-) => <String, dynamic>{
-  'name': instance.name,
-  'mutualLinks': instance.mutualLinks.map((e) => e.toJson()).toList(),
-};
+Map<String, dynamic> _$MutualLinkSectionToJson(_MutualLinkSection instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'mutualLinks': instance.mutualLinks.map((e) => e.toJson()).toList(),
+    };
 
-_$MutualLinkImpl _$$MutualLinkImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$MutualLinkImpl', json, ($checkedConvert) {
-      final val = _$MutualLinkImpl(
+_MutualLink _$MutualLinkFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_MutualLink', json, ($checkedConvert) {
+      final val = _MutualLink(
         id: $checkedConvert('id', (v) => v as String),
         url: $checkedConvert('url', (v) => v as String),
         fileId: $checkedConvert('fileId', (v) => v as String),
@@ -1469,7 +1462,7 @@ _$MutualLinkImpl _$$MutualLinkImplFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$$MutualLinkImplToJson(_$MutualLinkImpl instance) =>
+Map<String, dynamic> _$MutualLinkToJson(_MutualLink instance) =>
     <String, dynamic>{
       'id': instance.id,
       'url': instance.url,
@@ -1478,9 +1471,9 @@ Map<String, dynamic> _$$MutualLinkImplToJson(_$MutualLinkImpl instance) =>
       'imgSrc': instance.imgSrc,
     };
 
-_$MuteWordImpl _$$MuteWordImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$MuteWordImpl', json, ($checkedConvert) {
-      final val = _$MuteWordImpl(
+_MuteWord _$MuteWordFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_MuteWord', json, ($checkedConvert) {
+      final val = _MuteWord(
         regExp: $checkedConvert('regExp', (v) => v as String?),
         content: $checkedConvert(
           'content',
@@ -1490,15 +1483,15 @@ _$MuteWordImpl _$$MuteWordImplFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$$MuteWordImplToJson(_$MuteWordImpl instance) =>
-    <String, dynamic>{'regExp': instance.regExp, 'content': instance.content};
+Map<String, dynamic> _$MuteWordToJson(_MuteWord instance) => <String, dynamic>{
+  'regExp': instance.regExp,
+  'content': instance.content,
+};
 
-_$NotificationRecieveConfigsImpl _$$NotificationRecieveConfigsImplFromJson(
+_NotificationRecieveConfigs _$NotificationRecieveConfigsFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$NotificationRecieveConfigsImpl', json, (
-  $checkedConvert,
-) {
-  final val = _$NotificationRecieveConfigsImpl(
+) => $checkedCreate('_NotificationRecieveConfigs', json, ($checkedConvert) {
+  final val = _NotificationRecieveConfigs(
     note: $checkedConvert(
       'note',
       (v) =>
@@ -1601,8 +1594,8 @@ _$NotificationRecieveConfigsImpl _$$NotificationRecieveConfigsImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$NotificationRecieveConfigsImplToJson(
-  _$NotificationRecieveConfigsImpl instance,
+Map<String, dynamic> _$NotificationRecieveConfigsToJson(
+  _NotificationRecieveConfigs instance,
 ) => <String, dynamic>{
   'note': instance.note?.toJson(),
   'follow': instance.follow?.toJson(),
@@ -1620,19 +1613,18 @@ Map<String, dynamic> _$$NotificationRecieveConfigsImplToJson(
   'test': instance.test?.toJson(),
 };
 
-_$NotificationRecieveConfigImpl _$$NotificationRecieveConfigImplFromJson(
+_NotificationRecieveConfig _$NotificationRecieveConfigFromJson(
   Map<String, dynamic> json,
-) =>
-    $checkedCreate(r'_$NotificationRecieveConfigImpl', json, ($checkedConvert) {
-      final val = _$NotificationRecieveConfigImpl(
-        type: $checkedConvert('type', (v) => v as String),
-        userListId: $checkedConvert('userListId', (v) => v as String?),
-      );
-      return val;
-    });
+) => $checkedCreate('_NotificationRecieveConfig', json, ($checkedConvert) {
+  final val = _NotificationRecieveConfig(
+    type: $checkedConvert('type', (v) => v as String),
+    userListId: $checkedConvert('userListId', (v) => v as String?),
+  );
+  return val;
+});
 
-Map<String, dynamic> _$$NotificationRecieveConfigImplToJson(
-  _$NotificationRecieveConfigImpl instance,
+Map<String, dynamic> _$NotificationRecieveConfigToJson(
+  _NotificationRecieveConfig instance,
 ) => <String, dynamic>{
   'type': instance.type,
   'userListId': instance.userListId,

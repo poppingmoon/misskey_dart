@@ -6,10 +6,10 @@ part of 'notes_mentions_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$NotesMentionsRequestImpl _$$NotesMentionsRequestImplFromJson(
+_NotesMentionsRequest _$NotesMentionsRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$NotesMentionsRequestImpl', json, ($checkedConvert) {
-  final val = _$NotesMentionsRequestImpl(
+) => $checkedCreate('_NotesMentionsRequest', json, ($checkedConvert) {
+  final val = _NotesMentionsRequest(
     following: $checkedConvert('following', (v) => v as bool?),
     limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
     sinceId: $checkedConvert('sinceId', (v) => v as String?),
@@ -22,8 +22,8 @@ _$NotesMentionsRequestImpl _$$NotesMentionsRequestImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$NotesMentionsRequestImplToJson(
-  _$NotesMentionsRequestImpl instance,
+Map<String, dynamic> _$NotesMentionsRequestToJson(
+  _NotesMentionsRequest instance,
 ) => <String, dynamic>{
   'following': instance.following,
   'limit': instance.limit,

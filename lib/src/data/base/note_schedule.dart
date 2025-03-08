@@ -6,7 +6,7 @@ part 'note_schedule.freezed.dart';
 part 'note_schedule.g.dart';
 
 @freezed
-class NoteSchedule with _$NoteSchedule {
+abstract class NoteSchedule with _$NoteSchedule {
   const factory NoteSchedule({
     required String id,
     required NoteScheduleNote note,
@@ -19,7 +19,7 @@ class NoteSchedule with _$NoteSchedule {
 }
 
 @freezed
-class NoteScheduleNote with _$NoteScheduleNote {
+abstract class NoteScheduleNote with _$NoteScheduleNote {
   const factory NoteScheduleNote({
     String? text,
     String? cw,

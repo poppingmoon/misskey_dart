@@ -6,17 +6,15 @@ part of 'following_invalidate_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$FollowingInvalidateRequestImpl _$$FollowingInvalidateRequestImplFromJson(
+_FollowingInvalidateRequest _$FollowingInvalidateRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$FollowingInvalidateRequestImpl', json, (
-  $checkedConvert,
-) {
-  final val = _$FollowingInvalidateRequestImpl(
+) => $checkedCreate('_FollowingInvalidateRequest', json, ($checkedConvert) {
+  final val = _FollowingInvalidateRequest(
     userId: $checkedConvert('userId', (v) => v as String),
   );
   return val;
 });
 
-Map<String, dynamic> _$$FollowingInvalidateRequestImplToJson(
-  _$FollowingInvalidateRequestImpl instance,
+Map<String, dynamic> _$FollowingInvalidateRequestToJson(
+  _FollowingInvalidateRequest instance,
 ) => <String, dynamic>{'userId': instance.userId};

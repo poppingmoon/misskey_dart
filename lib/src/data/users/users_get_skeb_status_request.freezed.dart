@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,173 +10,139 @@ part of 'users_get_skeb_status_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-UsersGetSkebStatusRequest _$UsersGetSkebStatusRequestFromJson(
-  Map<String, dynamic> json,
-) {
-  return _UsersGetSkebStatusRequest.fromJson(json);
-}
 
 /// @nodoc
 mixin _$UsersGetSkebStatusRequest {
-  String get userId => throw _privateConstructorUsedError;
+
+ String get userId;
+/// Create a copy of UsersGetSkebStatusRequest
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$UsersGetSkebStatusRequestCopyWith<UsersGetSkebStatusRequest> get copyWith => _$UsersGetSkebStatusRequestCopyWithImpl<UsersGetSkebStatusRequest>(this as UsersGetSkebStatusRequest, _$identity);
 
   /// Serializes this UsersGetSkebStatusRequest to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of UsersGetSkebStatusRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $UsersGetSkebStatusRequestCopyWith<UsersGetSkebStatusRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is UsersGetSkebStatusRequest&&(identical(other.userId, userId) || other.userId == userId));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,userId);
+
+@override
+String toString() {
+  return 'UsersGetSkebStatusRequest(userId: $userId)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $UsersGetSkebStatusRequestCopyWith<$Res> {
-  factory $UsersGetSkebStatusRequestCopyWith(
-    UsersGetSkebStatusRequest value,
-    $Res Function(UsersGetSkebStatusRequest) then,
-  ) = _$UsersGetSkebStatusRequestCopyWithImpl<$Res, UsersGetSkebStatusRequest>;
-  @useResult
-  $Res call({String userId});
-}
+abstract mixin class $UsersGetSkebStatusRequestCopyWith<$Res>  {
+  factory $UsersGetSkebStatusRequestCopyWith(UsersGetSkebStatusRequest value, $Res Function(UsersGetSkebStatusRequest) _then) = _$UsersGetSkebStatusRequestCopyWithImpl;
+@useResult
+$Res call({
+ String userId
+});
 
+
+
+
+}
 /// @nodoc
-class _$UsersGetSkebStatusRequestCopyWithImpl<
-  $Res,
-  $Val extends UsersGetSkebStatusRequest
->
+class _$UsersGetSkebStatusRequestCopyWithImpl<$Res>
     implements $UsersGetSkebStatusRequestCopyWith<$Res> {
-  _$UsersGetSkebStatusRequestCopyWithImpl(this._value, this._then);
+  _$UsersGetSkebStatusRequestCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final UsersGetSkebStatusRequest _self;
+  final $Res Function(UsersGetSkebStatusRequest) _then;
 
-  /// Create a copy of UsersGetSkebStatusRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? userId = null}) {
-    return _then(
-      _value.copyWith(
-            userId:
-                null == userId
-                    ? _value.userId
-                    : userId // ignore: cast_nullable_to_non_nullable
-                        as String,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of UsersGetSkebStatusRequest
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? userId = null,}) {
+  return _then(_self.copyWith(
+userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-abstract class _$$UsersGetSkebStatusRequestImplCopyWith<$Res>
-    implements $UsersGetSkebStatusRequestCopyWith<$Res> {
-  factory _$$UsersGetSkebStatusRequestImplCopyWith(
-    _$UsersGetSkebStatusRequestImpl value,
-    $Res Function(_$UsersGetSkebStatusRequestImpl) then,
-  ) = __$$UsersGetSkebStatusRequestImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String userId});
 }
 
-/// @nodoc
-class __$$UsersGetSkebStatusRequestImplCopyWithImpl<$Res>
-    extends
-        _$UsersGetSkebStatusRequestCopyWithImpl<
-          $Res,
-          _$UsersGetSkebStatusRequestImpl
-        >
-    implements _$$UsersGetSkebStatusRequestImplCopyWith<$Res> {
-  __$$UsersGetSkebStatusRequestImplCopyWithImpl(
-    _$UsersGetSkebStatusRequestImpl _value,
-    $Res Function(_$UsersGetSkebStatusRequestImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of UsersGetSkebStatusRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? userId = null}) {
-    return _then(
-      _$UsersGetSkebStatusRequestImpl(
-        userId:
-            null == userId
-                ? _value.userId
-                : userId // ignore: cast_nullable_to_non_nullable
-                    as String,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$UsersGetSkebStatusRequestImpl implements _UsersGetSkebStatusRequest {
-  const _$UsersGetSkebStatusRequestImpl({required this.userId});
 
-  factory _$UsersGetSkebStatusRequestImpl.fromJson(Map<String, dynamic> json) =>
-      _$$UsersGetSkebStatusRequestImplFromJson(json);
+class _UsersGetSkebStatusRequest implements UsersGetSkebStatusRequest {
+  const _UsersGetSkebStatusRequest({required this.userId});
+  factory _UsersGetSkebStatusRequest.fromJson(Map<String, dynamic> json) => _$UsersGetSkebStatusRequestFromJson(json);
 
-  @override
-  final String userId;
+@override final  String userId;
 
-  @override
-  String toString() {
-    return 'UsersGetSkebStatusRequest(userId: $userId)';
-  }
+/// Create a copy of UsersGetSkebStatusRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$UsersGetSkebStatusRequestCopyWith<_UsersGetSkebStatusRequest> get copyWith => __$UsersGetSkebStatusRequestCopyWithImpl<_UsersGetSkebStatusRequest>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$UsersGetSkebStatusRequestImpl &&
-            (identical(other.userId, userId) || other.userId == userId));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, userId);
-
-  /// Create a copy of UsersGetSkebStatusRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$UsersGetSkebStatusRequestImplCopyWith<_$UsersGetSkebStatusRequestImpl>
-  get copyWith => __$$UsersGetSkebStatusRequestImplCopyWithImpl<
-    _$UsersGetSkebStatusRequestImpl
-  >(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$UsersGetSkebStatusRequestImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$UsersGetSkebStatusRequestToJson(this, );
 }
 
-abstract class _UsersGetSkebStatusRequest implements UsersGetSkebStatusRequest {
-  const factory _UsersGetSkebStatusRequest({required final String userId}) =
-      _$UsersGetSkebStatusRequestImpl;
-
-  factory _UsersGetSkebStatusRequest.fromJson(Map<String, dynamic> json) =
-      _$UsersGetSkebStatusRequestImpl.fromJson;
-
-  @override
-  String get userId;
-
-  /// Create a copy of UsersGetSkebStatusRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$UsersGetSkebStatusRequestImplCopyWith<_$UsersGetSkebStatusRequestImpl>
-  get copyWith => throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersGetSkebStatusRequest&&(identical(other.userId, userId) || other.userId == userId));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,userId);
+
+@override
+String toString() {
+  return 'UsersGetSkebStatusRequest(userId: $userId)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$UsersGetSkebStatusRequestCopyWith<$Res> implements $UsersGetSkebStatusRequestCopyWith<$Res> {
+  factory _$UsersGetSkebStatusRequestCopyWith(_UsersGetSkebStatusRequest value, $Res Function(_UsersGetSkebStatusRequest) _then) = __$UsersGetSkebStatusRequestCopyWithImpl;
+@override @useResult
+$Res call({
+ String userId
+});
+
+
+
+
+}
+/// @nodoc
+class __$UsersGetSkebStatusRequestCopyWithImpl<$Res>
+    implements _$UsersGetSkebStatusRequestCopyWith<$Res> {
+  __$UsersGetSkebStatusRequestCopyWithImpl(this._self, this._then);
+
+  final _UsersGetSkebStatusRequest _self;
+  final $Res Function(_UsersGetSkebStatusRequest) _then;
+
+/// Create a copy of UsersGetSkebStatusRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? userId = null,}) {
+  return _then(_UsersGetSkebStatusRequest(
+userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
+}
+
+
+}
+
+// dart format on

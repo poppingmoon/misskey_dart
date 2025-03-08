@@ -6,10 +6,10 @@ part of 'i_gallery_likes_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$IGalleryLikesResponseImpl _$$IGalleryLikesResponseImplFromJson(
+_IGalleryLikesResponse _$IGalleryLikesResponseFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$IGalleryLikesResponseImpl', json, ($checkedConvert) {
-  final val = _$IGalleryLikesResponseImpl(
+) => $checkedCreate('_IGalleryLikesResponse', json, ($checkedConvert) {
+  final val = _IGalleryLikesResponse(
     id: $checkedConvert('id', (v) => v as String),
     post: $checkedConvert(
       'post',
@@ -19,6 +19,6 @@ _$IGalleryLikesResponseImpl _$$IGalleryLikesResponseImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$IGalleryLikesResponseImplToJson(
-  _$IGalleryLikesResponseImpl instance,
+Map<String, dynamic> _$IGalleryLikesResponseToJson(
+  _IGalleryLikesResponse instance,
 ) => <String, dynamic>{'id': instance.id, 'post': instance.post.toJson()};

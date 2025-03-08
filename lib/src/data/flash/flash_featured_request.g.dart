@@ -6,16 +6,16 @@ part of 'flash_featured_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$FlashFeaturedRequestImpl _$$FlashFeaturedRequestImplFromJson(
+_FlashFeaturedRequest _$FlashFeaturedRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$FlashFeaturedRequestImpl', json, ($checkedConvert) {
-  final val = _$FlashFeaturedRequestImpl(
+) => $checkedCreate('_FlashFeaturedRequest', json, ($checkedConvert) {
+  final val = _FlashFeaturedRequest(
     offset: $checkedConvert('offset', (v) => (v as num?)?.toInt()),
     limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
   );
   return val;
 });
 
-Map<String, dynamic> _$$FlashFeaturedRequestImplToJson(
-  _$FlashFeaturedRequestImpl instance,
+Map<String, dynamic> _$FlashFeaturedRequestToJson(
+  _FlashFeaturedRequest instance,
 ) => <String, dynamic>{'offset': instance.offset, 'limit': instance.limit};

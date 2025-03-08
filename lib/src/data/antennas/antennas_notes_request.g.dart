@@ -6,10 +6,10 @@ part of 'antennas_notes_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$AntennasNotesRequestImpl _$$AntennasNotesRequestImplFromJson(
+_AntennasNotesRequest _$AntennasNotesRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$AntennasNotesRequestImpl', json, ($checkedConvert) {
-  final val = _$AntennasNotesRequestImpl(
+) => $checkedCreate('_AntennasNotesRequest', json, ($checkedConvert) {
+  final val = _AntennasNotesRequest(
     antennaId: $checkedConvert('antennaId', (v) => v as String),
     limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
     sinceId: $checkedConvert('sinceId', (v) => v as String?),
@@ -33,8 +33,8 @@ _$AntennasNotesRequestImpl _$$AntennasNotesRequestImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$AntennasNotesRequestImplToJson(
-  _$AntennasNotesRequestImpl instance,
+Map<String, dynamic> _$AntennasNotesRequestToJson(
+  _AntennasNotesRequest instance,
 ) => <String, dynamic>{
   'antennaId': instance.antennaId,
   'limit': instance.limit,

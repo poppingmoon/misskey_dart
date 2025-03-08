@@ -6,10 +6,10 @@ part of 'notes_featured_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$NotesFeaturedRequestImpl _$$NotesFeaturedRequestImplFromJson(
+_NotesFeaturedRequest _$NotesFeaturedRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$NotesFeaturedRequestImpl', json, ($checkedConvert) {
-  final val = _$NotesFeaturedRequestImpl(
+) => $checkedCreate('_NotesFeaturedRequest', json, ($checkedConvert) {
+  final val = _NotesFeaturedRequest(
     limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
     offset: $checkedConvert('offset', (v) => (v as num?)?.toInt()),
     untilId: $checkedConvert('untilId', (v) => v as String?),
@@ -18,8 +18,8 @@ _$NotesFeaturedRequestImpl _$$NotesFeaturedRequestImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$NotesFeaturedRequestImplToJson(
-  _$NotesFeaturedRequestImpl instance,
+Map<String, dynamic> _$NotesFeaturedRequestToJson(
+  _NotesFeaturedRequest instance,
 ) => <String, dynamic>{
   'limit': instance.limit,
   'offset': instance.offset,

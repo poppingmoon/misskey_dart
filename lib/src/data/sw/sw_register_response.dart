@@ -4,7 +4,7 @@ part 'sw_register_response.freezed.dart';
 part 'sw_register_response.g.dart';
 
 @freezed
-class SwRegisterResponse with _$SwRegisterResponse {
+abstract class SwRegisterResponse with _$SwRegisterResponse {
   const factory SwRegisterResponse({
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)

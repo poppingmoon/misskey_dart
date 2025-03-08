@@ -6,10 +6,10 @@ part of 'user_list_timeline_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$UserListTimelineRequestImpl _$$UserListTimelineRequestImplFromJson(
+_UserListTimelineRequest _$UserListTimelineRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$UserListTimelineRequestImpl', json, ($checkedConvert) {
-  final val = _$UserListTimelineRequestImpl(
+) => $checkedCreate('_UserListTimelineRequest', json, ($checkedConvert) {
+  final val = _UserListTimelineRequest(
     listId: $checkedConvert('listId', (v) => v as String),
     limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
     sinceId: $checkedConvert('sinceId', (v) => v as String?),
@@ -44,8 +44,8 @@ _$UserListTimelineRequestImpl _$$UserListTimelineRequestImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$UserListTimelineRequestImplToJson(
-  _$UserListTimelineRequestImpl instance,
+Map<String, dynamic> _$UserListTimelineRequestToJson(
+  _UserListTimelineRequest instance,
 ) => <String, dynamic>{
   'listId': instance.listId,
   'limit': instance.limit,

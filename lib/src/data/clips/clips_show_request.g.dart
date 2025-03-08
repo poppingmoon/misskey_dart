@@ -6,15 +6,13 @@ part of 'clips_show_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ClipsShowRequestImpl _$$ClipsShowRequestImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$ClipsShowRequestImpl', json, ($checkedConvert) {
-  final val = _$ClipsShowRequestImpl(
-    clipId: $checkedConvert('clipId', (v) => v as String),
-  );
-  return val;
-});
+_ClipsShowRequest _$ClipsShowRequestFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_ClipsShowRequest', json, ($checkedConvert) {
+      final val = _ClipsShowRequest(
+        clipId: $checkedConvert('clipId', (v) => v as String),
+      );
+      return val;
+    });
 
-Map<String, dynamic> _$$ClipsShowRequestImplToJson(
-  _$ClipsShowRequestImpl instance,
-) => <String, dynamic>{'clipId': instance.clipId};
+Map<String, dynamic> _$ClipsShowRequestToJson(_ClipsShowRequest instance) =>
+    <String, dynamic>{'clipId': instance.clipId};

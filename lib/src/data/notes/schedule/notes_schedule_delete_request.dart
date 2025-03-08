@@ -4,7 +4,7 @@ part 'notes_schedule_delete_request.freezed.dart';
 part 'notes_schedule_delete_request.g.dart';
 
 @freezed
-class NotesScheduleDeleteRequest with _$NotesScheduleDeleteRequest {
+abstract class NotesScheduleDeleteRequest with _$NotesScheduleDeleteRequest {
   const factory NotesScheduleDeleteRequest({required String noteId}) =
       _NotesScheduleDeleteRequest;
 

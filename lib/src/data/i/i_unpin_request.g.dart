@@ -6,13 +6,13 @@ part of 'i_unpin_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$IUnpinRequestImpl _$$IUnpinRequestImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$IUnpinRequestImpl', json, ($checkedConvert) {
-      final val = _$IUnpinRequestImpl(
+_IUnpinRequest _$IUnpinRequestFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_IUnpinRequest', json, ($checkedConvert) {
+      final val = _IUnpinRequest(
         noteId: $checkedConvert('noteId', (v) => v as String),
       );
       return val;
     });
 
-Map<String, dynamic> _$$IUnpinRequestImplToJson(_$IUnpinRequestImpl instance) =>
+Map<String, dynamic> _$IUnpinRequestToJson(_IUnpinRequest instance) =>
     <String, dynamic>{'noteId': instance.noteId};

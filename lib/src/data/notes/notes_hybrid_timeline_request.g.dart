@@ -6,12 +6,10 @@ part of 'notes_hybrid_timeline_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$NotesHybridTimelineRequestImpl _$$NotesHybridTimelineRequestImplFromJson(
+_NotesHybridTimelineRequest _$NotesHybridTimelineRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$NotesHybridTimelineRequestImpl', json, (
-  $checkedConvert,
-) {
-  final val = _$NotesHybridTimelineRequestImpl(
+) => $checkedCreate('_NotesHybridTimelineRequest', json, ($checkedConvert) {
+  final val = _NotesHybridTimelineRequest(
     limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
     sinceId: $checkedConvert('sinceId', (v) => v as String?),
     untilId: $checkedConvert('untilId', (v) => v as String?),
@@ -46,8 +44,8 @@ _$NotesHybridTimelineRequestImpl _$$NotesHybridTimelineRequestImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$NotesHybridTimelineRequestImplToJson(
-  _$NotesHybridTimelineRequestImpl instance,
+Map<String, dynamic> _$NotesHybridTimelineRequestToJson(
+  _NotesHybridTimelineRequest instance,
 ) => <String, dynamic>{
   'limit': instance.limit,
   'sinceId': instance.sinceId,

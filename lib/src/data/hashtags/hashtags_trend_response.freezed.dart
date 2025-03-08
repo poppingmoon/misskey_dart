@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,231 +10,151 @@ part of 'hashtags_trend_response.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-HashtagsTrendResponse _$HashtagsTrendResponseFromJson(
-  Map<String, dynamic> json,
-) {
-  return _HashtagsTrendResponse.fromJson(json);
-}
 
 /// @nodoc
 mixin _$HashtagsTrendResponse {
-  String get tag => throw _privateConstructorUsedError;
-  List<int> get chart => throw _privateConstructorUsedError;
-  int get usersCount => throw _privateConstructorUsedError;
+
+ String get tag; List<int> get chart; int get usersCount;
+/// Create a copy of HashtagsTrendResponse
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$HashtagsTrendResponseCopyWith<HashtagsTrendResponse> get copyWith => _$HashtagsTrendResponseCopyWithImpl<HashtagsTrendResponse>(this as HashtagsTrendResponse, _$identity);
 
   /// Serializes this HashtagsTrendResponse to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of HashtagsTrendResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $HashtagsTrendResponseCopyWith<HashtagsTrendResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is HashtagsTrendResponse&&(identical(other.tag, tag) || other.tag == tag)&&const DeepCollectionEquality().equals(other.chart, chart)&&(identical(other.usersCount, usersCount) || other.usersCount == usersCount));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,tag,const DeepCollectionEquality().hash(chart),usersCount);
+
+@override
+String toString() {
+  return 'HashtagsTrendResponse(tag: $tag, chart: $chart, usersCount: $usersCount)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $HashtagsTrendResponseCopyWith<$Res> {
-  factory $HashtagsTrendResponseCopyWith(
-    HashtagsTrendResponse value,
-    $Res Function(HashtagsTrendResponse) then,
-  ) = _$HashtagsTrendResponseCopyWithImpl<$Res, HashtagsTrendResponse>;
-  @useResult
-  $Res call({String tag, List<int> chart, int usersCount});
-}
+abstract mixin class $HashtagsTrendResponseCopyWith<$Res>  {
+  factory $HashtagsTrendResponseCopyWith(HashtagsTrendResponse value, $Res Function(HashtagsTrendResponse) _then) = _$HashtagsTrendResponseCopyWithImpl;
+@useResult
+$Res call({
+ String tag, List<int> chart, int usersCount
+});
 
+
+
+
+}
 /// @nodoc
-class _$HashtagsTrendResponseCopyWithImpl<
-  $Res,
-  $Val extends HashtagsTrendResponse
->
+class _$HashtagsTrendResponseCopyWithImpl<$Res>
     implements $HashtagsTrendResponseCopyWith<$Res> {
-  _$HashtagsTrendResponseCopyWithImpl(this._value, this._then);
+  _$HashtagsTrendResponseCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final HashtagsTrendResponse _self;
+  final $Res Function(HashtagsTrendResponse) _then;
 
-  /// Create a copy of HashtagsTrendResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? tag = null,
-    Object? chart = null,
-    Object? usersCount = null,
-  }) {
-    return _then(
-      _value.copyWith(
-            tag:
-                null == tag
-                    ? _value.tag
-                    : tag // ignore: cast_nullable_to_non_nullable
-                        as String,
-            chart:
-                null == chart
-                    ? _value.chart
-                    : chart // ignore: cast_nullable_to_non_nullable
-                        as List<int>,
-            usersCount:
-                null == usersCount
-                    ? _value.usersCount
-                    : usersCount // ignore: cast_nullable_to_non_nullable
-                        as int,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of HashtagsTrendResponse
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? tag = null,Object? chart = null,Object? usersCount = null,}) {
+  return _then(_self.copyWith(
+tag: null == tag ? _self.tag : tag // ignore: cast_nullable_to_non_nullable
+as String,chart: null == chart ? _self.chart : chart // ignore: cast_nullable_to_non_nullable
+as List<int>,usersCount: null == usersCount ? _self.usersCount : usersCount // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
 }
 
-/// @nodoc
-abstract class _$$HashtagsTrendResponseImplCopyWith<$Res>
-    implements $HashtagsTrendResponseCopyWith<$Res> {
-  factory _$$HashtagsTrendResponseImplCopyWith(
-    _$HashtagsTrendResponseImpl value,
-    $Res Function(_$HashtagsTrendResponseImpl) then,
-  ) = __$$HashtagsTrendResponseImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String tag, List<int> chart, int usersCount});
 }
 
-/// @nodoc
-class __$$HashtagsTrendResponseImplCopyWithImpl<$Res>
-    extends
-        _$HashtagsTrendResponseCopyWithImpl<$Res, _$HashtagsTrendResponseImpl>
-    implements _$$HashtagsTrendResponseImplCopyWith<$Res> {
-  __$$HashtagsTrendResponseImplCopyWithImpl(
-    _$HashtagsTrendResponseImpl _value,
-    $Res Function(_$HashtagsTrendResponseImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of HashtagsTrendResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? tag = null,
-    Object? chart = null,
-    Object? usersCount = null,
-  }) {
-    return _then(
-      _$HashtagsTrendResponseImpl(
-        tag:
-            null == tag
-                ? _value.tag
-                : tag // ignore: cast_nullable_to_non_nullable
-                    as String,
-        chart:
-            null == chart
-                ? _value._chart
-                : chart // ignore: cast_nullable_to_non_nullable
-                    as List<int>,
-        usersCount:
-            null == usersCount
-                ? _value.usersCount
-                : usersCount // ignore: cast_nullable_to_non_nullable
-                    as int,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$HashtagsTrendResponseImpl implements _HashtagsTrendResponse {
-  const _$HashtagsTrendResponseImpl({
-    required this.tag,
-    required final List<int> chart,
-    required this.usersCount,
-  }) : _chart = chart;
 
-  factory _$HashtagsTrendResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$HashtagsTrendResponseImplFromJson(json);
+class _HashtagsTrendResponse implements HashtagsTrendResponse {
+  const _HashtagsTrendResponse({required this.tag, required final  List<int> chart, required this.usersCount}): _chart = chart;
+  factory _HashtagsTrendResponse.fromJson(Map<String, dynamic> json) => _$HashtagsTrendResponseFromJson(json);
 
-  @override
-  final String tag;
-  final List<int> _chart;
-  @override
-  List<int> get chart {
-    if (_chart is EqualUnmodifiableListView) return _chart;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_chart);
-  }
-
-  @override
-  final int usersCount;
-
-  @override
-  String toString() {
-    return 'HashtagsTrendResponse(tag: $tag, chart: $chart, usersCount: $usersCount)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$HashtagsTrendResponseImpl &&
-            (identical(other.tag, tag) || other.tag == tag) &&
-            const DeepCollectionEquality().equals(other._chart, _chart) &&
-            (identical(other.usersCount, usersCount) ||
-                other.usersCount == usersCount));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    tag,
-    const DeepCollectionEquality().hash(_chart),
-    usersCount,
-  );
-
-  /// Create a copy of HashtagsTrendResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$HashtagsTrendResponseImplCopyWith<_$HashtagsTrendResponseImpl>
-  get copyWith =>
-      __$$HashtagsTrendResponseImplCopyWithImpl<_$HashtagsTrendResponseImpl>(
-        this,
-        _$identity,
-      );
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$HashtagsTrendResponseImplToJson(this);
-  }
+@override final  String tag;
+ final  List<int> _chart;
+@override List<int> get chart {
+  if (_chart is EqualUnmodifiableListView) return _chart;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_chart);
 }
 
-abstract class _HashtagsTrendResponse implements HashtagsTrendResponse {
-  const factory _HashtagsTrendResponse({
-    required final String tag,
-    required final List<int> chart,
-    required final int usersCount,
-  }) = _$HashtagsTrendResponseImpl;
+@override final  int usersCount;
 
-  factory _HashtagsTrendResponse.fromJson(Map<String, dynamic> json) =
-      _$HashtagsTrendResponseImpl.fromJson;
+/// Create a copy of HashtagsTrendResponse
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$HashtagsTrendResponseCopyWith<_HashtagsTrendResponse> get copyWith => __$HashtagsTrendResponseCopyWithImpl<_HashtagsTrendResponse>(this, _$identity);
 
-  @override
-  String get tag;
-  @override
-  List<int> get chart;
-  @override
-  int get usersCount;
-
-  /// Create a copy of HashtagsTrendResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$HashtagsTrendResponseImplCopyWith<_$HashtagsTrendResponseImpl>
-  get copyWith => throw _privateConstructorUsedError;
+@override
+Map<String, dynamic> toJson() {
+  return _$HashtagsTrendResponseToJson(this, );
 }
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _HashtagsTrendResponse&&(identical(other.tag, tag) || other.tag == tag)&&const DeepCollectionEquality().equals(other._chart, _chart)&&(identical(other.usersCount, usersCount) || other.usersCount == usersCount));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,tag,const DeepCollectionEquality().hash(_chart),usersCount);
+
+@override
+String toString() {
+  return 'HashtagsTrendResponse(tag: $tag, chart: $chart, usersCount: $usersCount)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$HashtagsTrendResponseCopyWith<$Res> implements $HashtagsTrendResponseCopyWith<$Res> {
+  factory _$HashtagsTrendResponseCopyWith(_HashtagsTrendResponse value, $Res Function(_HashtagsTrendResponse) _then) = __$HashtagsTrendResponseCopyWithImpl;
+@override @useResult
+$Res call({
+ String tag, List<int> chart, int usersCount
+});
+
+
+
+
+}
+/// @nodoc
+class __$HashtagsTrendResponseCopyWithImpl<$Res>
+    implements _$HashtagsTrendResponseCopyWith<$Res> {
+  __$HashtagsTrendResponseCopyWithImpl(this._self, this._then);
+
+  final _HashtagsTrendResponse _self;
+  final $Res Function(_HashtagsTrendResponse) _then;
+
+/// Create a copy of HashtagsTrendResponse
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? tag = null,Object? chart = null,Object? usersCount = null,}) {
+  return _then(_HashtagsTrendResponse(
+tag: null == tag ? _self.tag : tag // ignore: cast_nullable_to_non_nullable
+as String,chart: null == chart ? _self._chart : chart // ignore: cast_nullable_to_non_nullable
+as List<int>,usersCount: null == usersCount ? _self.usersCount : usersCount // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
+}
+
+
+}
+
+// dart format on

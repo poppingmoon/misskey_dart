@@ -6,9 +6,9 @@ part of 'clip.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ClipImpl _$$ClipImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$ClipImpl', json, ($checkedConvert) {
-      final val = _$ClipImpl(
+_Clip _$ClipFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_Clip', json, ($checkedConvert) {
+      final val = _Clip(
         id: $checkedConvert('id', (v) => v as String),
         createdAt: $checkedConvert(
           'createdAt',
@@ -39,22 +39,21 @@ _$ClipImpl _$$ClipImplFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$$ClipImplToJson(_$ClipImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'createdAt': const DateTimeConverter().toJson(instance.createdAt),
-      'lastClippedAt': const NullableDateTimeConverter().toJson(
-        instance.lastClippedAt,
-      ),
-      'userId': instance.userId,
-      'user': instance.user.toJson(),
-      'name': instance.name,
-      'description': instance.description,
-      'isPublic': instance.isPublic,
-      'favoritedCount': instance.favoritedCount,
-      'isFavorited': instance.isFavorited,
-      'notesCount': instance.notesCount,
-    };
+Map<String, dynamic> _$ClipToJson(_Clip instance) => <String, dynamic>{
+  'id': instance.id,
+  'createdAt': const DateTimeConverter().toJson(instance.createdAt),
+  'lastClippedAt': const NullableDateTimeConverter().toJson(
+    instance.lastClippedAt,
+  ),
+  'userId': instance.userId,
+  'user': instance.user.toJson(),
+  'name': instance.name,
+  'description': instance.description,
+  'isPublic': instance.isPublic,
+  'favoritedCount': instance.favoritedCount,
+  'isFavorited': instance.isFavorited,
+  'notesCount': instance.notesCount,
+};
 
 Value? _$JsonConverterFromJson<Json, Value>(
   Object? json,

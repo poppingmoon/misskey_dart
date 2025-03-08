@@ -6,17 +6,15 @@ part of 'notes_scheduled_cancel_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$NotesScheduledCancelRequestImpl _$$NotesScheduledCancelRequestImplFromJson(
+_NotesScheduledCancelRequest _$NotesScheduledCancelRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$NotesScheduledCancelRequestImpl', json, (
-  $checkedConvert,
-) {
-  final val = _$NotesScheduledCancelRequestImpl(
+) => $checkedCreate('_NotesScheduledCancelRequest', json, ($checkedConvert) {
+  final val = _NotesScheduledCancelRequest(
     draftId: $checkedConvert('draftId', (v) => v as String),
   );
   return val;
 });
 
-Map<String, dynamic> _$$NotesScheduledCancelRequestImplToJson(
-  _$NotesScheduledCancelRequestImpl instance,
+Map<String, dynamic> _$NotesScheduledCancelRequestToJson(
+  _NotesScheduledCancelRequest instance,
 ) => <String, dynamic>{'draftId': instance.draftId};

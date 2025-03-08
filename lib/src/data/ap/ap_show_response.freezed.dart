@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,195 +10,148 @@ part of 'ap_show_response.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-ApShowResponse _$ApShowResponseFromJson(Map<String, dynamic> json) {
-  return _ApShowResponse.fromJson(json);
-}
 
 /// @nodoc
 mixin _$ApShowResponse {
-  String get type => throw _privateConstructorUsedError;
-  Map<String, dynamic> get object => throw _privateConstructorUsedError;
+
+ String get type; Map<String, dynamic> get object;
+/// Create a copy of ApShowResponse
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$ApShowResponseCopyWith<ApShowResponse> get copyWith => _$ApShowResponseCopyWithImpl<ApShowResponse>(this as ApShowResponse, _$identity);
 
   /// Serializes this ApShowResponse to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of ApShowResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $ApShowResponseCopyWith<ApShowResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ApShowResponse&&(identical(other.type, type) || other.type == type)&&const DeepCollectionEquality().equals(other.object, object));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,type,const DeepCollectionEquality().hash(object));
+
+@override
+String toString() {
+  return 'ApShowResponse(type: $type, object: $object)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $ApShowResponseCopyWith<$Res> {
-  factory $ApShowResponseCopyWith(
-    ApShowResponse value,
-    $Res Function(ApShowResponse) then,
-  ) = _$ApShowResponseCopyWithImpl<$Res, ApShowResponse>;
-  @useResult
-  $Res call({String type, Map<String, dynamic> object});
-}
+abstract mixin class $ApShowResponseCopyWith<$Res>  {
+  factory $ApShowResponseCopyWith(ApShowResponse value, $Res Function(ApShowResponse) _then) = _$ApShowResponseCopyWithImpl;
+@useResult
+$Res call({
+ String type, Map<String, dynamic> object
+});
 
+
+
+
+}
 /// @nodoc
-class _$ApShowResponseCopyWithImpl<$Res, $Val extends ApShowResponse>
+class _$ApShowResponseCopyWithImpl<$Res>
     implements $ApShowResponseCopyWith<$Res> {
-  _$ApShowResponseCopyWithImpl(this._value, this._then);
+  _$ApShowResponseCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final ApShowResponse _self;
+  final $Res Function(ApShowResponse) _then;
 
-  /// Create a copy of ApShowResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? type = null, Object? object = null}) {
-    return _then(
-      _value.copyWith(
-            type:
-                null == type
-                    ? _value.type
-                    : type // ignore: cast_nullable_to_non_nullable
-                        as String,
-            object:
-                null == object
-                    ? _value.object
-                    : object // ignore: cast_nullable_to_non_nullable
-                        as Map<String, dynamic>,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of ApShowResponse
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? type = null,Object? object = null,}) {
+  return _then(_self.copyWith(
+type: null == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
+as String,object: null == object ? _self.object : object // ignore: cast_nullable_to_non_nullable
+as Map<String, dynamic>,
+  ));
 }
 
-/// @nodoc
-abstract class _$$ApShowResponseImplCopyWith<$Res>
-    implements $ApShowResponseCopyWith<$Res> {
-  factory _$$ApShowResponseImplCopyWith(
-    _$ApShowResponseImpl value,
-    $Res Function(_$ApShowResponseImpl) then,
-  ) = __$$ApShowResponseImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String type, Map<String, dynamic> object});
 }
 
-/// @nodoc
-class __$$ApShowResponseImplCopyWithImpl<$Res>
-    extends _$ApShowResponseCopyWithImpl<$Res, _$ApShowResponseImpl>
-    implements _$$ApShowResponseImplCopyWith<$Res> {
-  __$$ApShowResponseImplCopyWithImpl(
-    _$ApShowResponseImpl _value,
-    $Res Function(_$ApShowResponseImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of ApShowResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? type = null, Object? object = null}) {
-    return _then(
-      _$ApShowResponseImpl(
-        type:
-            null == type
-                ? _value.type
-                : type // ignore: cast_nullable_to_non_nullable
-                    as String,
-        object:
-            null == object
-                ? _value._object
-                : object // ignore: cast_nullable_to_non_nullable
-                    as Map<String, dynamic>,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$ApShowResponseImpl implements _ApShowResponse {
-  const _$ApShowResponseImpl({
-    required this.type,
-    required final Map<String, dynamic> object,
-  }) : _object = object;
 
-  factory _$ApShowResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ApShowResponseImplFromJson(json);
+class _ApShowResponse implements ApShowResponse {
+  const _ApShowResponse({required this.type, required final  Map<String, dynamic> object}): _object = object;
+  factory _ApShowResponse.fromJson(Map<String, dynamic> json) => _$ApShowResponseFromJson(json);
 
-  @override
-  final String type;
-  final Map<String, dynamic> _object;
-  @override
-  Map<String, dynamic> get object {
-    if (_object is EqualUnmodifiableMapView) return _object;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(_object);
-  }
-
-  @override
-  String toString() {
-    return 'ApShowResponse(type: $type, object: $object)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ApShowResponseImpl &&
-            (identical(other.type, type) || other.type == type) &&
-            const DeepCollectionEquality().equals(other._object, _object));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    type,
-    const DeepCollectionEquality().hash(_object),
-  );
-
-  /// Create a copy of ApShowResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ApShowResponseImplCopyWith<_$ApShowResponseImpl> get copyWith =>
-      __$$ApShowResponseImplCopyWithImpl<_$ApShowResponseImpl>(
-        this,
-        _$identity,
-      );
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$ApShowResponseImplToJson(this);
-  }
+@override final  String type;
+ final  Map<String, dynamic> _object;
+@override Map<String, dynamic> get object {
+  if (_object is EqualUnmodifiableMapView) return _object;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableMapView(_object);
 }
 
-abstract class _ApShowResponse implements ApShowResponse {
-  const factory _ApShowResponse({
-    required final String type,
-    required final Map<String, dynamic> object,
-  }) = _$ApShowResponseImpl;
 
-  factory _ApShowResponse.fromJson(Map<String, dynamic> json) =
-      _$ApShowResponseImpl.fromJson;
+/// Create a copy of ApShowResponse
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$ApShowResponseCopyWith<_ApShowResponse> get copyWith => __$ApShowResponseCopyWithImpl<_ApShowResponse>(this, _$identity);
 
-  @override
-  String get type;
-  @override
-  Map<String, dynamic> get object;
-
-  /// Create a copy of ApShowResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ApShowResponseImplCopyWith<_$ApShowResponseImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+Map<String, dynamic> toJson() {
+  return _$ApShowResponseToJson(this, );
 }
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ApShowResponse&&(identical(other.type, type) || other.type == type)&&const DeepCollectionEquality().equals(other._object, _object));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,type,const DeepCollectionEquality().hash(_object));
+
+@override
+String toString() {
+  return 'ApShowResponse(type: $type, object: $object)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$ApShowResponseCopyWith<$Res> implements $ApShowResponseCopyWith<$Res> {
+  factory _$ApShowResponseCopyWith(_ApShowResponse value, $Res Function(_ApShowResponse) _then) = __$ApShowResponseCopyWithImpl;
+@override @useResult
+$Res call({
+ String type, Map<String, dynamic> object
+});
+
+
+
+
+}
+/// @nodoc
+class __$ApShowResponseCopyWithImpl<$Res>
+    implements _$ApShowResponseCopyWith<$Res> {
+  __$ApShowResponseCopyWithImpl(this._self, this._then);
+
+  final _ApShowResponse _self;
+  final $Res Function(_ApShowResponse) _then;
+
+/// Create a copy of ApShowResponse
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? type = null,Object? object = null,}) {
+  return _then(_ApShowResponse(
+type: null == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
+as String,object: null == object ? _self._object : object // ignore: cast_nullable_to_non_nullable
+as Map<String, dynamic>,
+  ));
+}
+
+
+}
+
+// dart format on

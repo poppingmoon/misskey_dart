@@ -6,23 +6,21 @@ part of 'users_show_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$UsersShowRequestImpl _$$UsersShowRequestImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$UsersShowRequestImpl', json, ($checkedConvert) {
-  final val = _$UsersShowRequestImpl(
-    userId: $checkedConvert('userId', (v) => v as String),
-  );
-  return val;
-});
+_UsersShowRequest _$UsersShowRequestFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_UsersShowRequest', json, ($checkedConvert) {
+      final val = _UsersShowRequest(
+        userId: $checkedConvert('userId', (v) => v as String),
+      );
+      return val;
+    });
 
-Map<String, dynamic> _$$UsersShowRequestImplToJson(
-  _$UsersShowRequestImpl instance,
-) => <String, dynamic>{'userId': instance.userId};
+Map<String, dynamic> _$UsersShowRequestToJson(_UsersShowRequest instance) =>
+    <String, dynamic>{'userId': instance.userId};
 
-_$UsersShowByIdsRequestImpl _$$UsersShowByIdsRequestImplFromJson(
+_UsersShowByIdsRequest _$UsersShowByIdsRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$UsersShowByIdsRequestImpl', json, ($checkedConvert) {
-  final val = _$UsersShowByIdsRequestImpl(
+) => $checkedCreate('_UsersShowByIdsRequest', json, ($checkedConvert) {
+  final val = _UsersShowByIdsRequest(
     userIds: $checkedConvert(
       'userIds',
       (v) => (v as List<dynamic>).map((e) => e as String).toList(),
@@ -31,25 +29,20 @@ _$UsersShowByIdsRequestImpl _$$UsersShowByIdsRequestImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$UsersShowByIdsRequestImplToJson(
-  _$UsersShowByIdsRequestImpl instance,
+Map<String, dynamic> _$UsersShowByIdsRequestToJson(
+  _UsersShowByIdsRequest instance,
 ) => <String, dynamic>{'userIds': instance.userIds};
 
-_$UsersShowByUserNameRequestImpl _$$UsersShowByUserNameRequestImplFromJson(
+_UsersShowByUserNameRequest _$UsersShowByUserNameRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(
-  r'_$UsersShowByUserNameRequestImpl',
-  json,
-  ($checkedConvert) {
-    final val = _$UsersShowByUserNameRequestImpl(
-      userName: $checkedConvert('username', (v) => v as String),
-      host: $checkedConvert('host', (v) => v as String?),
-    );
-    return val;
-  },
-  fieldKeyMap: const {'userName': 'username'},
-);
+) => $checkedCreate('_UsersShowByUserNameRequest', json, ($checkedConvert) {
+  final val = _UsersShowByUserNameRequest(
+    userName: $checkedConvert('username', (v) => v as String),
+    host: $checkedConvert('host', (v) => v as String?),
+  );
+  return val;
+}, fieldKeyMap: const {'userName': 'username'});
 
-Map<String, dynamic> _$$UsersShowByUserNameRequestImplToJson(
-  _$UsersShowByUserNameRequestImpl instance,
+Map<String, dynamic> _$UsersShowByUserNameRequestToJson(
+  _UsersShowByUserNameRequest instance,
 ) => <String, dynamic>{'username': instance.userName, 'host': instance.host};

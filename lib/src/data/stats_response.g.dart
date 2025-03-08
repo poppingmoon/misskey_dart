@@ -6,9 +6,9 @@ part of 'stats_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$StatsResponseImpl _$$StatsResponseImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$StatsResponseImpl', json, ($checkedConvert) {
-      final val = _$StatsResponseImpl(
+_StatsResponse _$StatsResponseFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_StatsResponse', json, ($checkedConvert) {
+      final val = _StatsResponse(
         notesCount: $checkedConvert('notesCount', (v) => (v as num?)?.toInt()),
         originalNotesCount: $checkedConvert(
           'originalNotesCount',
@@ -36,7 +36,7 @@ _$StatsResponseImpl _$$StatsResponseImplFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$$StatsResponseImplToJson(_$StatsResponseImpl instance) =>
+Map<String, dynamic> _$StatsResponseToJson(_StatsResponse instance) =>
     <String, dynamic>{
       'notesCount': instance.notesCount,
       'originalNotesCount': instance.originalNotesCount,

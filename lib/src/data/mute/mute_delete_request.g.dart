@@ -6,15 +6,13 @@ part of 'mute_delete_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$MuteDeleteRequestImpl _$$MuteDeleteRequestImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$MuteDeleteRequestImpl', json, ($checkedConvert) {
-  final val = _$MuteDeleteRequestImpl(
-    userId: $checkedConvert('userId', (v) => v as String),
-  );
-  return val;
-});
+_MuteDeleteRequest _$MuteDeleteRequestFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_MuteDeleteRequest', json, ($checkedConvert) {
+      final val = _MuteDeleteRequest(
+        userId: $checkedConvert('userId', (v) => v as String),
+      );
+      return val;
+    });
 
-Map<String, dynamic> _$$MuteDeleteRequestImplToJson(
-  _$MuteDeleteRequestImpl instance,
-) => <String, dynamic>{'userId': instance.userId};
+Map<String, dynamic> _$MuteDeleteRequestToJson(_MuteDeleteRequest instance) =>
+    <String, dynamic>{'userId': instance.userId};

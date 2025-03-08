@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,215 +10,145 @@ part of 'renote_mute_list_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-RenoteMuteListRequest _$RenoteMuteListRequestFromJson(
-  Map<String, dynamic> json,
-) {
-  return _RenoteMuteListRequest.fromJson(json);
-}
 
 /// @nodoc
 mixin _$RenoteMuteListRequest {
-  int? get limit => throw _privateConstructorUsedError;
-  String? get sinceId => throw _privateConstructorUsedError;
-  String? get untilId => throw _privateConstructorUsedError;
+
+ int? get limit; String? get sinceId; String? get untilId;
+/// Create a copy of RenoteMuteListRequest
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$RenoteMuteListRequestCopyWith<RenoteMuteListRequest> get copyWith => _$RenoteMuteListRequestCopyWithImpl<RenoteMuteListRequest>(this as RenoteMuteListRequest, _$identity);
 
   /// Serializes this RenoteMuteListRequest to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of RenoteMuteListRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $RenoteMuteListRequestCopyWith<RenoteMuteListRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is RenoteMuteListRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,limit,sinceId,untilId);
+
+@override
+String toString() {
+  return 'RenoteMuteListRequest(limit: $limit, sinceId: $sinceId, untilId: $untilId)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $RenoteMuteListRequestCopyWith<$Res> {
-  factory $RenoteMuteListRequestCopyWith(
-    RenoteMuteListRequest value,
-    $Res Function(RenoteMuteListRequest) then,
-  ) = _$RenoteMuteListRequestCopyWithImpl<$Res, RenoteMuteListRequest>;
-  @useResult
-  $Res call({int? limit, String? sinceId, String? untilId});
-}
+abstract mixin class $RenoteMuteListRequestCopyWith<$Res>  {
+  factory $RenoteMuteListRequestCopyWith(RenoteMuteListRequest value, $Res Function(RenoteMuteListRequest) _then) = _$RenoteMuteListRequestCopyWithImpl;
+@useResult
+$Res call({
+ int? limit, String? sinceId, String? untilId
+});
 
+
+
+
+}
 /// @nodoc
-class _$RenoteMuteListRequestCopyWithImpl<
-  $Res,
-  $Val extends RenoteMuteListRequest
->
+class _$RenoteMuteListRequestCopyWithImpl<$Res>
     implements $RenoteMuteListRequestCopyWith<$Res> {
-  _$RenoteMuteListRequestCopyWithImpl(this._value, this._then);
+  _$RenoteMuteListRequestCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final RenoteMuteListRequest _self;
+  final $Res Function(RenoteMuteListRequest) _then;
 
-  /// Create a copy of RenoteMuteListRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? limit = freezed,
-    Object? sinceId = freezed,
-    Object? untilId = freezed,
-  }) {
-    return _then(
-      _value.copyWith(
-            limit:
-                freezed == limit
-                    ? _value.limit
-                    : limit // ignore: cast_nullable_to_non_nullable
-                        as int?,
-            sinceId:
-                freezed == sinceId
-                    ? _value.sinceId
-                    : sinceId // ignore: cast_nullable_to_non_nullable
-                        as String?,
-            untilId:
-                freezed == untilId
-                    ? _value.untilId
-                    : untilId // ignore: cast_nullable_to_non_nullable
-                        as String?,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of RenoteMuteListRequest
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,}) {
+  return _then(_self.copyWith(
+limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
+as int?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
+as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
+as String?,
+  ));
 }
 
-/// @nodoc
-abstract class _$$RenoteMuteListRequestImplCopyWith<$Res>
-    implements $RenoteMuteListRequestCopyWith<$Res> {
-  factory _$$RenoteMuteListRequestImplCopyWith(
-    _$RenoteMuteListRequestImpl value,
-    $Res Function(_$RenoteMuteListRequestImpl) then,
-  ) = __$$RenoteMuteListRequestImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({int? limit, String? sinceId, String? untilId});
 }
 
-/// @nodoc
-class __$$RenoteMuteListRequestImplCopyWithImpl<$Res>
-    extends
-        _$RenoteMuteListRequestCopyWithImpl<$Res, _$RenoteMuteListRequestImpl>
-    implements _$$RenoteMuteListRequestImplCopyWith<$Res> {
-  __$$RenoteMuteListRequestImplCopyWithImpl(
-    _$RenoteMuteListRequestImpl _value,
-    $Res Function(_$RenoteMuteListRequestImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of RenoteMuteListRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? limit = freezed,
-    Object? sinceId = freezed,
-    Object? untilId = freezed,
-  }) {
-    return _then(
-      _$RenoteMuteListRequestImpl(
-        limit:
-            freezed == limit
-                ? _value.limit
-                : limit // ignore: cast_nullable_to_non_nullable
-                    as int?,
-        sinceId:
-            freezed == sinceId
-                ? _value.sinceId
-                : sinceId // ignore: cast_nullable_to_non_nullable
-                    as String?,
-        untilId:
-            freezed == untilId
-                ? _value.untilId
-                : untilId // ignore: cast_nullable_to_non_nullable
-                    as String?,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$RenoteMuteListRequestImpl implements _RenoteMuteListRequest {
-  const _$RenoteMuteListRequestImpl({this.limit, this.sinceId, this.untilId});
 
-  factory _$RenoteMuteListRequestImpl.fromJson(Map<String, dynamic> json) =>
-      _$$RenoteMuteListRequestImplFromJson(json);
+class _RenoteMuteListRequest implements RenoteMuteListRequest {
+  const _RenoteMuteListRequest({this.limit, this.sinceId, this.untilId});
+  factory _RenoteMuteListRequest.fromJson(Map<String, dynamic> json) => _$RenoteMuteListRequestFromJson(json);
 
-  @override
-  final int? limit;
-  @override
-  final String? sinceId;
-  @override
-  final String? untilId;
+@override final  int? limit;
+@override final  String? sinceId;
+@override final  String? untilId;
 
-  @override
-  String toString() {
-    return 'RenoteMuteListRequest(limit: $limit, sinceId: $sinceId, untilId: $untilId)';
-  }
+/// Create a copy of RenoteMuteListRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$RenoteMuteListRequestCopyWith<_RenoteMuteListRequest> get copyWith => __$RenoteMuteListRequestCopyWithImpl<_RenoteMuteListRequest>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$RenoteMuteListRequestImpl &&
-            (identical(other.limit, limit) || other.limit == limit) &&
-            (identical(other.sinceId, sinceId) || other.sinceId == sinceId) &&
-            (identical(other.untilId, untilId) || other.untilId == untilId));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, limit, sinceId, untilId);
-
-  /// Create a copy of RenoteMuteListRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$RenoteMuteListRequestImplCopyWith<_$RenoteMuteListRequestImpl>
-  get copyWith =>
-      __$$RenoteMuteListRequestImplCopyWithImpl<_$RenoteMuteListRequestImpl>(
-        this,
-        _$identity,
-      );
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$RenoteMuteListRequestImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$RenoteMuteListRequestToJson(this, );
 }
 
-abstract class _RenoteMuteListRequest implements RenoteMuteListRequest {
-  const factory _RenoteMuteListRequest({
-    final int? limit,
-    final String? sinceId,
-    final String? untilId,
-  }) = _$RenoteMuteListRequestImpl;
-
-  factory _RenoteMuteListRequest.fromJson(Map<String, dynamic> json) =
-      _$RenoteMuteListRequestImpl.fromJson;
-
-  @override
-  int? get limit;
-  @override
-  String? get sinceId;
-  @override
-  String? get untilId;
-
-  /// Create a copy of RenoteMuteListRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RenoteMuteListRequestImplCopyWith<_$RenoteMuteListRequestImpl>
-  get copyWith => throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _RenoteMuteListRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,limit,sinceId,untilId);
+
+@override
+String toString() {
+  return 'RenoteMuteListRequest(limit: $limit, sinceId: $sinceId, untilId: $untilId)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$RenoteMuteListRequestCopyWith<$Res> implements $RenoteMuteListRequestCopyWith<$Res> {
+  factory _$RenoteMuteListRequestCopyWith(_RenoteMuteListRequest value, $Res Function(_RenoteMuteListRequest) _then) = __$RenoteMuteListRequestCopyWithImpl;
+@override @useResult
+$Res call({
+ int? limit, String? sinceId, String? untilId
+});
+
+
+
+
+}
+/// @nodoc
+class __$RenoteMuteListRequestCopyWithImpl<$Res>
+    implements _$RenoteMuteListRequestCopyWith<$Res> {
+  __$RenoteMuteListRequestCopyWithImpl(this._self, this._then);
+
+  final _RenoteMuteListRequest _self;
+  final $Res Function(_RenoteMuteListRequest) _then;
+
+/// Create a copy of RenoteMuteListRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,}) {
+  return _then(_RenoteMuteListRequest(
+limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
+as int?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
+as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
+as String?,
+  ));
+}
+
+
+}
+
+// dart format on

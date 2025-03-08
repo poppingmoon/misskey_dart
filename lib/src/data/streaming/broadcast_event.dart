@@ -5,7 +5,7 @@ part 'broadcast_event.freezed.dart';
 part 'broadcast_event.g.dart';
 
 @freezed
-class BroadcastEvent with _$BroadcastEvent {
+abstract class BroadcastEvent with _$BroadcastEvent {
   const factory BroadcastEvent({
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)

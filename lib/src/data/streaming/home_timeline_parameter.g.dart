@@ -6,18 +6,18 @@ part of 'home_timeline_parameter.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$HomeTimelineParameterImpl _$$HomeTimelineParameterImplFromJson(
+_HomeTimelineParameter _$HomeTimelineParameterFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$HomeTimelineParameterImpl', json, ($checkedConvert) {
-  final val = _$HomeTimelineParameterImpl(
+) => $checkedCreate('_HomeTimelineParameter', json, ($checkedConvert) {
+  final val = _HomeTimelineParameter(
     withRenotes: $checkedConvert('withRenotes', (v) => v as bool?),
     withFiles: $checkedConvert('withFiles', (v) => v as bool?),
   );
   return val;
 });
 
-Map<String, dynamic> _$$HomeTimelineParameterImplToJson(
-  _$HomeTimelineParameterImpl instance,
+Map<String, dynamic> _$HomeTimelineParameterToJson(
+  _HomeTimelineParameter instance,
 ) => <String, dynamic>{
   'withRenotes': instance.withRenotes,
   'withFiles': instance.withFiles,

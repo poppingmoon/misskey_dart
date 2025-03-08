@@ -6,10 +6,10 @@ part of 'i_update_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$IUpdateRequestImpl _$$IUpdateRequestImplFromJson(
+_IUpdateRequest _$IUpdateRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$IUpdateRequestImpl', json, ($checkedConvert) {
-  final val = _$IUpdateRequestImpl(
+) => $checkedCreate('_IUpdateRequest', json, ($checkedConvert) {
+  final val = _IUpdateRequest(
     name: $checkedConvert('name', (v) => v as String?),
     description: $checkedConvert('description', (v) => v as String?),
     followedMessage: $checkedConvert('followedMessage', (v) => v as String?),
@@ -147,8 +147,8 @@ _$IUpdateRequestImpl _$$IUpdateRequestImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$IUpdateRequestImplToJson(
-  _$IUpdateRequestImpl instance,
+Map<String, dynamic> _$IUpdateRequestToJson(
+  _IUpdateRequest instance,
 ) => <String, dynamic>{
   'name': instance.name,
   'description': instance.description,
@@ -220,10 +220,10 @@ Json? _$JsonConverterToJson<Json, Value>(
   Json? Function(Value value) toJson,
 ) => value == null ? null : toJson(value);
 
-_$IUpdateAvatarDecorationImpl _$$IUpdateAvatarDecorationImplFromJson(
+_IUpdateAvatarDecoration _$IUpdateAvatarDecorationFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$IUpdateAvatarDecorationImpl', json, ($checkedConvert) {
-  final val = _$IUpdateAvatarDecorationImpl(
+) => $checkedCreate('_IUpdateAvatarDecoration', json, ($checkedConvert) {
+  final val = _IUpdateAvatarDecoration(
     id: $checkedConvert('id', (v) => v as String),
     angle: $checkedConvert('angle', (v) => (v as num?)?.toDouble()),
     flipH: $checkedConvert('flipH', (v) => v as bool? ?? false),
@@ -233,8 +233,8 @@ _$IUpdateAvatarDecorationImpl _$$IUpdateAvatarDecorationImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$IUpdateAvatarDecorationImplToJson(
-  _$IUpdateAvatarDecorationImpl instance,
+Map<String, dynamic> _$IUpdateAvatarDecorationToJson(
+  _IUpdateAvatarDecoration instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'angle': instance.angle,
@@ -243,10 +243,10 @@ Map<String, dynamic> _$$IUpdateAvatarDecorationImplToJson(
   'offsetY': instance.offsetY,
 };
 
-_$IUpdateMutualLinkSectionImpl _$$IUpdateMutualLinkSectionImplFromJson(
+_IUpdateMutualLinkSection _$IUpdateMutualLinkSectionFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$IUpdateMutualLinkSectionImpl', json, ($checkedConvert) {
-  final val = _$IUpdateMutualLinkSectionImpl(
+) => $checkedCreate('_IUpdateMutualLinkSection', json, ($checkedConvert) {
+  final val = _IUpdateMutualLinkSection(
     name: $checkedConvert('name', (v) => v as String?),
     mutualLinks: $checkedConvert(
       'mutualLinks',
@@ -259,28 +259,26 @@ _$IUpdateMutualLinkSectionImpl _$$IUpdateMutualLinkSectionImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$IUpdateMutualLinkSectionImplToJson(
-  _$IUpdateMutualLinkSectionImpl instance,
+Map<String, dynamic> _$IUpdateMutualLinkSectionToJson(
+  _IUpdateMutualLinkSection instance,
 ) => <String, dynamic>{
   'name': instance.name,
   'mutualLinks': instance.mutualLinks.map((e) => e.toJson()).toList(),
 };
 
-_$IUpdateMutualLinkImpl _$$IUpdateMutualLinkImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$IUpdateMutualLinkImpl', json, ($checkedConvert) {
-  final val = _$IUpdateMutualLinkImpl(
-    url: $checkedConvert('url', (v) => v as String),
-    fileId: $checkedConvert('fileId', (v) => v as String),
-    description: $checkedConvert('description', (v) => v as String?),
-  );
-  return val;
-});
+_IUpdateMutualLink _$IUpdateMutualLinkFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_IUpdateMutualLink', json, ($checkedConvert) {
+      final val = _IUpdateMutualLink(
+        url: $checkedConvert('url', (v) => v as String),
+        fileId: $checkedConvert('fileId', (v) => v as String),
+        description: $checkedConvert('description', (v) => v as String?),
+      );
+      return val;
+    });
 
-Map<String, dynamic> _$$IUpdateMutualLinkImplToJson(
-  _$IUpdateMutualLinkImpl instance,
-) => <String, dynamic>{
-  'url': instance.url,
-  'fileId': instance.fileId,
-  'description': instance.description,
-};
+Map<String, dynamic> _$IUpdateMutualLinkToJson(_IUpdateMutualLink instance) =>
+    <String, dynamic>{
+      'url': instance.url,
+      'fileId': instance.fileId,
+      'description': instance.description,
+    };

@@ -6,10 +6,10 @@ part of 'flash_my_likes_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$FlashMyLikesResponseImpl _$$FlashMyLikesResponseImplFromJson(
+_FlashMyLikesResponse _$FlashMyLikesResponseFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$FlashMyLikesResponseImpl', json, ($checkedConvert) {
-  final val = _$FlashMyLikesResponseImpl(
+) => $checkedCreate('_FlashMyLikesResponse', json, ($checkedConvert) {
+  final val = _FlashMyLikesResponse(
     id: $checkedConvert('id', (v) => v as String),
     flash: $checkedConvert(
       'flash',
@@ -19,6 +19,6 @@ _$FlashMyLikesResponseImpl _$$FlashMyLikesResponseImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$FlashMyLikesResponseImplToJson(
-  _$FlashMyLikesResponseImpl instance,
+Map<String, dynamic> _$FlashMyLikesResponseToJson(
+  _FlashMyLikesResponse instance,
 ) => <String, dynamic>{'id': instance.id, 'flash': instance.flash.toJson()};

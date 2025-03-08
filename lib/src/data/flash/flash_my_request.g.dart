@@ -6,9 +6,9 @@ part of 'flash_my_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$FlashMyRequestImpl _$$FlashMyRequestImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$FlashMyRequestImpl', json, ($checkedConvert) {
-      final val = _$FlashMyRequestImpl(
+_FlashMyRequest _$FlashMyRequestFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_FlashMyRequest', json, ($checkedConvert) {
+      final val = _FlashMyRequest(
         limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
         sinceId: $checkedConvert('sinceId', (v) => v as String?),
         untilId: $checkedConvert('untilId', (v) => v as String?),
@@ -16,10 +16,9 @@ _$FlashMyRequestImpl _$$FlashMyRequestImplFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$$FlashMyRequestImplToJson(
-  _$FlashMyRequestImpl instance,
-) => <String, dynamic>{
-  'limit': instance.limit,
-  'sinceId': instance.sinceId,
-  'untilId': instance.untilId,
-};
+Map<String, dynamic> _$FlashMyRequestToJson(_FlashMyRequest instance) =>
+    <String, dynamic>{
+      'limit': instance.limit,
+      'sinceId': instance.sinceId,
+      'untilId': instance.untilId,
+    };

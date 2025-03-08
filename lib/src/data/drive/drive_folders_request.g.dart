@@ -6,20 +6,19 @@ part of 'drive_folders_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$DriveFoldersRequestImpl _$$DriveFoldersRequestImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$DriveFoldersRequestImpl', json, ($checkedConvert) {
-  final val = _$DriveFoldersRequestImpl(
-    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-    sinceId: $checkedConvert('sinceId', (v) => v as String?),
-    untilId: $checkedConvert('untilId', (v) => v as String?),
-    folderId: $checkedConvert('folderId', (v) => v as String?),
-  );
-  return val;
-});
+_DriveFoldersRequest _$DriveFoldersRequestFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_DriveFoldersRequest', json, ($checkedConvert) {
+      final val = _DriveFoldersRequest(
+        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
+        sinceId: $checkedConvert('sinceId', (v) => v as String?),
+        untilId: $checkedConvert('untilId', (v) => v as String?),
+        folderId: $checkedConvert('folderId', (v) => v as String?),
+      );
+      return val;
+    });
 
-Map<String, dynamic> _$$DriveFoldersRequestImplToJson(
-  _$DriveFoldersRequestImpl instance,
+Map<String, dynamic> _$DriveFoldersRequestToJson(
+  _DriveFoldersRequest instance,
 ) => <String, dynamic>{
   'limit': instance.limit,
   'sinceId': instance.sinceId,

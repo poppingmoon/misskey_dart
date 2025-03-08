@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,165 +10,139 @@ part of 'notes_state_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-NotesStateRequest _$NotesStateRequestFromJson(Map<String, dynamic> json) {
-  return _NotesStateRequest.fromJson(json);
-}
 
 /// @nodoc
 mixin _$NotesStateRequest {
-  String get noteId => throw _privateConstructorUsedError;
+
+ String get noteId;
+/// Create a copy of NotesStateRequest
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$NotesStateRequestCopyWith<NotesStateRequest> get copyWith => _$NotesStateRequestCopyWithImpl<NotesStateRequest>(this as NotesStateRequest, _$identity);
 
   /// Serializes this NotesStateRequest to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of NotesStateRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $NotesStateRequestCopyWith<NotesStateRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesStateRequest&&(identical(other.noteId, noteId) || other.noteId == noteId));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,noteId);
+
+@override
+String toString() {
+  return 'NotesStateRequest(noteId: $noteId)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $NotesStateRequestCopyWith<$Res> {
-  factory $NotesStateRequestCopyWith(
-    NotesStateRequest value,
-    $Res Function(NotesStateRequest) then,
-  ) = _$NotesStateRequestCopyWithImpl<$Res, NotesStateRequest>;
-  @useResult
-  $Res call({String noteId});
-}
+abstract mixin class $NotesStateRequestCopyWith<$Res>  {
+  factory $NotesStateRequestCopyWith(NotesStateRequest value, $Res Function(NotesStateRequest) _then) = _$NotesStateRequestCopyWithImpl;
+@useResult
+$Res call({
+ String noteId
+});
 
+
+
+
+}
 /// @nodoc
-class _$NotesStateRequestCopyWithImpl<$Res, $Val extends NotesStateRequest>
+class _$NotesStateRequestCopyWithImpl<$Res>
     implements $NotesStateRequestCopyWith<$Res> {
-  _$NotesStateRequestCopyWithImpl(this._value, this._then);
+  _$NotesStateRequestCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final NotesStateRequest _self;
+  final $Res Function(NotesStateRequest) _then;
 
-  /// Create a copy of NotesStateRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? noteId = null}) {
-    return _then(
-      _value.copyWith(
-            noteId:
-                null == noteId
-                    ? _value.noteId
-                    : noteId // ignore: cast_nullable_to_non_nullable
-                        as String,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of NotesStateRequest
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? noteId = null,}) {
+  return _then(_self.copyWith(
+noteId: null == noteId ? _self.noteId : noteId // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-abstract class _$$NotesStateRequestImplCopyWith<$Res>
-    implements $NotesStateRequestCopyWith<$Res> {
-  factory _$$NotesStateRequestImplCopyWith(
-    _$NotesStateRequestImpl value,
-    $Res Function(_$NotesStateRequestImpl) then,
-  ) = __$$NotesStateRequestImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String noteId});
 }
 
-/// @nodoc
-class __$$NotesStateRequestImplCopyWithImpl<$Res>
-    extends _$NotesStateRequestCopyWithImpl<$Res, _$NotesStateRequestImpl>
-    implements _$$NotesStateRequestImplCopyWith<$Res> {
-  __$$NotesStateRequestImplCopyWithImpl(
-    _$NotesStateRequestImpl _value,
-    $Res Function(_$NotesStateRequestImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of NotesStateRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? noteId = null}) {
-    return _then(
-      _$NotesStateRequestImpl(
-        noteId:
-            null == noteId
-                ? _value.noteId
-                : noteId // ignore: cast_nullable_to_non_nullable
-                    as String,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$NotesStateRequestImpl implements _NotesStateRequest {
-  const _$NotesStateRequestImpl({required this.noteId});
 
-  factory _$NotesStateRequestImpl.fromJson(Map<String, dynamic> json) =>
-      _$$NotesStateRequestImplFromJson(json);
+class _NotesStateRequest implements NotesStateRequest {
+  const _NotesStateRequest({required this.noteId});
+  factory _NotesStateRequest.fromJson(Map<String, dynamic> json) => _$NotesStateRequestFromJson(json);
 
-  @override
-  final String noteId;
+@override final  String noteId;
 
-  @override
-  String toString() {
-    return 'NotesStateRequest(noteId: $noteId)';
-  }
+/// Create a copy of NotesStateRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$NotesStateRequestCopyWith<_NotesStateRequest> get copyWith => __$NotesStateRequestCopyWithImpl<_NotesStateRequest>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$NotesStateRequestImpl &&
-            (identical(other.noteId, noteId) || other.noteId == noteId));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, noteId);
-
-  /// Create a copy of NotesStateRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$NotesStateRequestImplCopyWith<_$NotesStateRequestImpl> get copyWith =>
-      __$$NotesStateRequestImplCopyWithImpl<_$NotesStateRequestImpl>(
-        this,
-        _$identity,
-      );
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$NotesStateRequestImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$NotesStateRequestToJson(this, );
 }
 
-abstract class _NotesStateRequest implements NotesStateRequest {
-  const factory _NotesStateRequest({required final String noteId}) =
-      _$NotesStateRequestImpl;
-
-  factory _NotesStateRequest.fromJson(Map<String, dynamic> json) =
-      _$NotesStateRequestImpl.fromJson;
-
-  @override
-  String get noteId;
-
-  /// Create a copy of NotesStateRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$NotesStateRequestImplCopyWith<_$NotesStateRequestImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesStateRequest&&(identical(other.noteId, noteId) || other.noteId == noteId));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,noteId);
+
+@override
+String toString() {
+  return 'NotesStateRequest(noteId: $noteId)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$NotesStateRequestCopyWith<$Res> implements $NotesStateRequestCopyWith<$Res> {
+  factory _$NotesStateRequestCopyWith(_NotesStateRequest value, $Res Function(_NotesStateRequest) _then) = __$NotesStateRequestCopyWithImpl;
+@override @useResult
+$Res call({
+ String noteId
+});
+
+
+
+
+}
+/// @nodoc
+class __$NotesStateRequestCopyWithImpl<$Res>
+    implements _$NotesStateRequestCopyWith<$Res> {
+  __$NotesStateRequestCopyWithImpl(this._self, this._then);
+
+  final _NotesStateRequest _self;
+  final $Res Function(_NotesStateRequest) _then;
+
+/// Create a copy of NotesStateRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? noteId = null,}) {
+  return _then(_NotesStateRequest(
+noteId: null == noteId ? _self.noteId : noteId // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
+}
+
+
+}
+
+// dart format on

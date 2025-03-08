@@ -6,48 +6,46 @@ part of 'push_notification.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PushNotificationImpl _$$PushNotificationImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$PushNotificationImpl', json, ($checkedConvert) {
-  final val = _$PushNotificationImpl(
-    type: $checkedConvert(
-      'type',
-      (v) => $enumDecodeNullable(
-        _$PushNotificationTypesEnumMap,
-        v,
-        unknownValue: JsonKey.nullForUndefinedEnumValue,
-      ),
-    ),
-    body: $checkedConvert(
-      'body',
-      (v) =>
-          v == null
-              ? null
-              : PushNotificationBody.fromJson(v as Map<String, dynamic>),
-    ),
-    userId: $checkedConvert('userId', (v) => v as String?),
-    dateTime: $checkedConvert(
-      'dateTime',
-      (v) => _$JsonConverterFromJson<int, DateTime>(
-        v,
-        const EpocTimeDateTimeConverter().fromJson,
-      ),
-    ),
-  );
-  return val;
-});
+_PushNotification _$PushNotificationFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_PushNotification', json, ($checkedConvert) {
+      final val = _PushNotification(
+        type: $checkedConvert(
+          'type',
+          (v) => $enumDecodeNullable(
+            _$PushNotificationTypesEnumMap,
+            v,
+            unknownValue: JsonKey.nullForUndefinedEnumValue,
+          ),
+        ),
+        body: $checkedConvert(
+          'body',
+          (v) =>
+              v == null
+                  ? null
+                  : PushNotificationBody.fromJson(v as Map<String, dynamic>),
+        ),
+        userId: $checkedConvert('userId', (v) => v as String?),
+        dateTime: $checkedConvert(
+          'dateTime',
+          (v) => _$JsonConverterFromJson<int, DateTime>(
+            v,
+            const EpocTimeDateTimeConverter().fromJson,
+          ),
+        ),
+      );
+      return val;
+    });
 
-Map<String, dynamic> _$$PushNotificationImplToJson(
-  _$PushNotificationImpl instance,
-) => <String, dynamic>{
-  'type': _$PushNotificationTypesEnumMap[instance.type],
-  'body': instance.body?.toJson(),
-  'userId': instance.userId,
-  'dateTime': _$JsonConverterToJson<int, DateTime>(
-    instance.dateTime,
-    const EpocTimeDateTimeConverter().toJson,
-  ),
-};
+Map<String, dynamic> _$PushNotificationToJson(_PushNotification instance) =>
+    <String, dynamic>{
+      'type': _$PushNotificationTypesEnumMap[instance.type],
+      'body': instance.body?.toJson(),
+      'userId': instance.userId,
+      'dateTime': _$JsonConverterToJson<int, DateTime>(
+        instance.dateTime,
+        const EpocTimeDateTimeConverter().toJson,
+      ),
+    };
 
 const _$PushNotificationTypesEnumMap = {
   PushNotificationTypes.notification: 'notification',
@@ -64,10 +62,10 @@ Json? _$JsonConverterToJson<Json, Value>(
   Json? Function(Value value) toJson,
 ) => value == null ? null : toJson(value);
 
-_$PushNotificationBodyImpl _$$PushNotificationBodyImplFromJson(
+_PushNotificationBody _$PushNotificationBodyFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$PushNotificationBodyImpl', json, ($checkedConvert) {
-  final val = _$PushNotificationBodyImpl(
+) => $checkedCreate('_PushNotificationBody', json, ($checkedConvert) {
+  final val = _PushNotificationBody(
     id: $checkedConvert('id', (v) => v as String),
     createdAt: $checkedConvert(
       'createdAt',
@@ -149,8 +147,8 @@ _$PushNotificationBodyImpl _$$PushNotificationBodyImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$PushNotificationBodyImplToJson(
-  _$PushNotificationBodyImpl instance,
+Map<String, dynamic> _$PushNotificationBodyToJson(
+  _PushNotificationBody instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'createdAt': const DateTimeConverter().toJson(instance.createdAt),
@@ -219,10 +217,10 @@ const _$UserExportableEntitiesEnumMap = {
   UserExportableEntities.userList: 'userList',
 };
 
-_$PushNotificationNoteImpl _$$PushNotificationNoteImplFromJson(
+_PushNotificationNote _$PushNotificationNoteFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$PushNotificationNoteImpl', json, ($checkedConvert) {
-  final val = _$PushNotificationNoteImpl(
+) => $checkedCreate('_PushNotificationNote', json, ($checkedConvert) {
+  final val = _PushNotificationNote(
     id: $checkedConvert('id', (v) => v as String),
     createdAt: $checkedConvert(
       'createdAt',
@@ -332,8 +330,8 @@ _$PushNotificationNoteImpl _$$PushNotificationNoteImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$PushNotificationNoteImplToJson(
-  _$PushNotificationNoteImpl instance,
+Map<String, dynamic> _$PushNotificationNoteToJson(
+  _PushNotificationNote instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'createdAt': const DateTimeConverter().toJson(instance.createdAt),

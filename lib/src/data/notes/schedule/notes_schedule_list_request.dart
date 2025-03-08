@@ -4,7 +4,7 @@ part 'notes_schedule_list_request.freezed.dart';
 part 'notes_schedule_list_request.g.dart';
 
 @freezed
-class NotesScheduleListRequest with _$NotesScheduleListRequest {
+abstract class NotesScheduleListRequest with _$NotesScheduleListRequest {
   const factory NotesScheduleListRequest({
     String? sinceId,
     String? untilId,

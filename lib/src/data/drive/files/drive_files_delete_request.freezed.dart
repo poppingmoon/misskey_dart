@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,173 +10,139 @@ part of 'drive_files_delete_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-DriveFilesDeleteRequest _$DriveFilesDeleteRequestFromJson(
-  Map<String, dynamic> json,
-) {
-  return _DriveFilesDeleteRequest.fromJson(json);
-}
 
 /// @nodoc
 mixin _$DriveFilesDeleteRequest {
-  String get fileId => throw _privateConstructorUsedError;
+
+ String get fileId;
+/// Create a copy of DriveFilesDeleteRequest
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$DriveFilesDeleteRequestCopyWith<DriveFilesDeleteRequest> get copyWith => _$DriveFilesDeleteRequestCopyWithImpl<DriveFilesDeleteRequest>(this as DriveFilesDeleteRequest, _$identity);
 
   /// Serializes this DriveFilesDeleteRequest to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of DriveFilesDeleteRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $DriveFilesDeleteRequestCopyWith<DriveFilesDeleteRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is DriveFilesDeleteRequest&&(identical(other.fileId, fileId) || other.fileId == fileId));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,fileId);
+
+@override
+String toString() {
+  return 'DriveFilesDeleteRequest(fileId: $fileId)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $DriveFilesDeleteRequestCopyWith<$Res> {
-  factory $DriveFilesDeleteRequestCopyWith(
-    DriveFilesDeleteRequest value,
-    $Res Function(DriveFilesDeleteRequest) then,
-  ) = _$DriveFilesDeleteRequestCopyWithImpl<$Res, DriveFilesDeleteRequest>;
-  @useResult
-  $Res call({String fileId});
-}
+abstract mixin class $DriveFilesDeleteRequestCopyWith<$Res>  {
+  factory $DriveFilesDeleteRequestCopyWith(DriveFilesDeleteRequest value, $Res Function(DriveFilesDeleteRequest) _then) = _$DriveFilesDeleteRequestCopyWithImpl;
+@useResult
+$Res call({
+ String fileId
+});
 
+
+
+
+}
 /// @nodoc
-class _$DriveFilesDeleteRequestCopyWithImpl<
-  $Res,
-  $Val extends DriveFilesDeleteRequest
->
+class _$DriveFilesDeleteRequestCopyWithImpl<$Res>
     implements $DriveFilesDeleteRequestCopyWith<$Res> {
-  _$DriveFilesDeleteRequestCopyWithImpl(this._value, this._then);
+  _$DriveFilesDeleteRequestCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final DriveFilesDeleteRequest _self;
+  final $Res Function(DriveFilesDeleteRequest) _then;
 
-  /// Create a copy of DriveFilesDeleteRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? fileId = null}) {
-    return _then(
-      _value.copyWith(
-            fileId:
-                null == fileId
-                    ? _value.fileId
-                    : fileId // ignore: cast_nullable_to_non_nullable
-                        as String,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of DriveFilesDeleteRequest
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? fileId = null,}) {
+  return _then(_self.copyWith(
+fileId: null == fileId ? _self.fileId : fileId // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-abstract class _$$DriveFilesDeleteRequestImplCopyWith<$Res>
-    implements $DriveFilesDeleteRequestCopyWith<$Res> {
-  factory _$$DriveFilesDeleteRequestImplCopyWith(
-    _$DriveFilesDeleteRequestImpl value,
-    $Res Function(_$DriveFilesDeleteRequestImpl) then,
-  ) = __$$DriveFilesDeleteRequestImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String fileId});
 }
 
-/// @nodoc
-class __$$DriveFilesDeleteRequestImplCopyWithImpl<$Res>
-    extends
-        _$DriveFilesDeleteRequestCopyWithImpl<
-          $Res,
-          _$DriveFilesDeleteRequestImpl
-        >
-    implements _$$DriveFilesDeleteRequestImplCopyWith<$Res> {
-  __$$DriveFilesDeleteRequestImplCopyWithImpl(
-    _$DriveFilesDeleteRequestImpl _value,
-    $Res Function(_$DriveFilesDeleteRequestImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of DriveFilesDeleteRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? fileId = null}) {
-    return _then(
-      _$DriveFilesDeleteRequestImpl(
-        fileId:
-            null == fileId
-                ? _value.fileId
-                : fileId // ignore: cast_nullable_to_non_nullable
-                    as String,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$DriveFilesDeleteRequestImpl implements _DriveFilesDeleteRequest {
-  const _$DriveFilesDeleteRequestImpl({required this.fileId});
 
-  factory _$DriveFilesDeleteRequestImpl.fromJson(Map<String, dynamic> json) =>
-      _$$DriveFilesDeleteRequestImplFromJson(json);
+class _DriveFilesDeleteRequest implements DriveFilesDeleteRequest {
+  const _DriveFilesDeleteRequest({required this.fileId});
+  factory _DriveFilesDeleteRequest.fromJson(Map<String, dynamic> json) => _$DriveFilesDeleteRequestFromJson(json);
 
-  @override
-  final String fileId;
+@override final  String fileId;
 
-  @override
-  String toString() {
-    return 'DriveFilesDeleteRequest(fileId: $fileId)';
-  }
+/// Create a copy of DriveFilesDeleteRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$DriveFilesDeleteRequestCopyWith<_DriveFilesDeleteRequest> get copyWith => __$DriveFilesDeleteRequestCopyWithImpl<_DriveFilesDeleteRequest>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$DriveFilesDeleteRequestImpl &&
-            (identical(other.fileId, fileId) || other.fileId == fileId));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, fileId);
-
-  /// Create a copy of DriveFilesDeleteRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$DriveFilesDeleteRequestImplCopyWith<_$DriveFilesDeleteRequestImpl>
-  get copyWith => __$$DriveFilesDeleteRequestImplCopyWithImpl<
-    _$DriveFilesDeleteRequestImpl
-  >(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$DriveFilesDeleteRequestImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$DriveFilesDeleteRequestToJson(this, );
 }
 
-abstract class _DriveFilesDeleteRequest implements DriveFilesDeleteRequest {
-  const factory _DriveFilesDeleteRequest({required final String fileId}) =
-      _$DriveFilesDeleteRequestImpl;
-
-  factory _DriveFilesDeleteRequest.fromJson(Map<String, dynamic> json) =
-      _$DriveFilesDeleteRequestImpl.fromJson;
-
-  @override
-  String get fileId;
-
-  /// Create a copy of DriveFilesDeleteRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$DriveFilesDeleteRequestImplCopyWith<_$DriveFilesDeleteRequestImpl>
-  get copyWith => throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _DriveFilesDeleteRequest&&(identical(other.fileId, fileId) || other.fileId == fileId));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,fileId);
+
+@override
+String toString() {
+  return 'DriveFilesDeleteRequest(fileId: $fileId)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$DriveFilesDeleteRequestCopyWith<$Res> implements $DriveFilesDeleteRequestCopyWith<$Res> {
+  factory _$DriveFilesDeleteRequestCopyWith(_DriveFilesDeleteRequest value, $Res Function(_DriveFilesDeleteRequest) _then) = __$DriveFilesDeleteRequestCopyWithImpl;
+@override @useResult
+$Res call({
+ String fileId
+});
+
+
+
+
+}
+/// @nodoc
+class __$DriveFilesDeleteRequestCopyWithImpl<$Res>
+    implements _$DriveFilesDeleteRequestCopyWith<$Res> {
+  __$DriveFilesDeleteRequestCopyWithImpl(this._self, this._then);
+
+  final _DriveFilesDeleteRequest _self;
+  final $Res Function(_DriveFilesDeleteRequest) _then;
+
+/// Create a copy of DriveFilesDeleteRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? fileId = null,}) {
+  return _then(_DriveFilesDeleteRequest(
+fileId: null == fileId ? _self.fileId : fileId // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
+}
+
+
+}
+
+// dart format on

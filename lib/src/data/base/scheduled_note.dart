@@ -6,7 +6,7 @@ part 'scheduled_note.freezed.dart';
 part 'scheduled_note.g.dart';
 
 @freezed
-class ScheduledNote with _$ScheduledNote {
+abstract class ScheduledNote with _$ScheduledNote {
   const factory ScheduledNote({
     required String id,
     @DateTimeConverter() required DateTime updatedAt,
@@ -23,7 +23,7 @@ class ScheduledNote with _$ScheduledNote {
 }
 
 @freezed
-class ScheduledNoteNote with _$ScheduledNoteNote {
+abstract class ScheduledNoteNote with _$ScheduledNoteNote {
   const factory ScheduledNoteNote({
     required String id,
     String? text,
@@ -35,7 +35,7 @@ class ScheduledNoteNote with _$ScheduledNoteNote {
 }
 
 @freezed
-class ScheduledNoteUser with _$ScheduledNoteUser {
+abstract class ScheduledNoteUser with _$ScheduledNoteUser {
   const factory ScheduledNoteUser({
     required String id,
     required String username,
@@ -47,7 +47,7 @@ class ScheduledNoteUser with _$ScheduledNoteUser {
 }
 
 @freezed
-class ScheduledNoteData with _$ScheduledNoteData {
+abstract class ScheduledNoteData with _$ScheduledNoteData {
   const factory ScheduledNoteData({
     String? text,
     bool? useCw,

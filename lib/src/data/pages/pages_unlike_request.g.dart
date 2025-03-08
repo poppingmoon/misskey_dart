@@ -6,15 +6,13 @@ part of 'pages_unlike_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PagesUnlikeRequestImpl _$$PagesUnlikeRequestImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$PagesUnlikeRequestImpl', json, ($checkedConvert) {
-  final val = _$PagesUnlikeRequestImpl(
-    pageId: $checkedConvert('pageId', (v) => v as String),
-  );
-  return val;
-});
+_PagesUnlikeRequest _$PagesUnlikeRequestFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_PagesUnlikeRequest', json, ($checkedConvert) {
+      final val = _PagesUnlikeRequest(
+        pageId: $checkedConvert('pageId', (v) => v as String),
+      );
+      return val;
+    });
 
-Map<String, dynamic> _$$PagesUnlikeRequestImplToJson(
-  _$PagesUnlikeRequestImpl instance,
-) => <String, dynamic>{'pageId': instance.pageId};
+Map<String, dynamic> _$PagesUnlikeRequestToJson(_PagesUnlikeRequest instance) =>
+    <String, dynamic>{'pageId': instance.pageId};

@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,286 +10,161 @@ part of 'misskey_exception.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-MisskeyException _$MisskeyExceptionFromJson(Map<String, dynamic> json) {
-  return _MisskeyException.fromJson(json);
-}
 
 /// @nodoc
 mixin _$MisskeyException {
-  String get id => throw _privateConstructorUsedError;
-  String get code => throw _privateConstructorUsedError;
-  String get message =>
-      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
-  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-  MisskeyExceptionKind? get kind => throw _privateConstructorUsedError;
-  Map<String, dynamic>? get info => throw _privateConstructorUsedError;
+
+ String get id; String get code; String get message;// ignore: invalid_annotation_target
+@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) MisskeyExceptionKind? get kind; Map<String, dynamic>? get info;
+/// Create a copy of MisskeyException
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$MisskeyExceptionCopyWith<MisskeyException> get copyWith => _$MisskeyExceptionCopyWithImpl<MisskeyException>(this as MisskeyException, _$identity);
 
   /// Serializes this MisskeyException to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of MisskeyException
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $MisskeyExceptionCopyWith<MisskeyException> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is MisskeyException&&(identical(other.id, id) || other.id == id)&&(identical(other.code, code) || other.code == code)&&(identical(other.message, message) || other.message == message)&&(identical(other.kind, kind) || other.kind == kind)&&const DeepCollectionEquality().equals(other.info, info));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,code,message,kind,const DeepCollectionEquality().hash(info));
+
+@override
+String toString() {
+  return 'MisskeyException(id: $id, code: $code, message: $message, kind: $kind, info: $info)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $MisskeyExceptionCopyWith<$Res> {
-  factory $MisskeyExceptionCopyWith(
-    MisskeyException value,
-    $Res Function(MisskeyException) then,
-  ) = _$MisskeyExceptionCopyWithImpl<$Res, MisskeyException>;
-  @useResult
-  $Res call({
-    String id,
-    String code,
-    String message,
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    MisskeyExceptionKind? kind,
-    Map<String, dynamic>? info,
-  });
-}
+abstract mixin class $MisskeyExceptionCopyWith<$Res>  {
+  factory $MisskeyExceptionCopyWith(MisskeyException value, $Res Function(MisskeyException) _then) = _$MisskeyExceptionCopyWithImpl;
+@useResult
+$Res call({
+ String id, String code, String message,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) MisskeyExceptionKind? kind, Map<String, dynamic>? info
+});
 
+
+
+
+}
 /// @nodoc
-class _$MisskeyExceptionCopyWithImpl<$Res, $Val extends MisskeyException>
+class _$MisskeyExceptionCopyWithImpl<$Res>
     implements $MisskeyExceptionCopyWith<$Res> {
-  _$MisskeyExceptionCopyWithImpl(this._value, this._then);
+  _$MisskeyExceptionCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final MisskeyException _self;
+  final $Res Function(MisskeyException) _then;
 
-  /// Create a copy of MisskeyException
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? code = null,
-    Object? message = null,
-    Object? kind = freezed,
-    Object? info = freezed,
-  }) {
-    return _then(
-      _value.copyWith(
-            id:
-                null == id
-                    ? _value.id
-                    : id // ignore: cast_nullable_to_non_nullable
-                        as String,
-            code:
-                null == code
-                    ? _value.code
-                    : code // ignore: cast_nullable_to_non_nullable
-                        as String,
-            message:
-                null == message
-                    ? _value.message
-                    : message // ignore: cast_nullable_to_non_nullable
-                        as String,
-            kind:
-                freezed == kind
-                    ? _value.kind
-                    : kind // ignore: cast_nullable_to_non_nullable
-                        as MisskeyExceptionKind?,
-            info:
-                freezed == info
-                    ? _value.info
-                    : info // ignore: cast_nullable_to_non_nullable
-                        as Map<String, dynamic>?,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of MisskeyException
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? code = null,Object? message = null,Object? kind = freezed,Object? info = freezed,}) {
+  return _then(_self.copyWith(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,code: null == code ? _self.code : code // ignore: cast_nullable_to_non_nullable
+as String,message: null == message ? _self.message : message // ignore: cast_nullable_to_non_nullable
+as String,kind: freezed == kind ? _self.kind : kind // ignore: cast_nullable_to_non_nullable
+as MisskeyExceptionKind?,info: freezed == info ? _self.info : info // ignore: cast_nullable_to_non_nullable
+as Map<String, dynamic>?,
+  ));
 }
 
-/// @nodoc
-abstract class _$$MisskeyExceptionImplCopyWith<$Res>
-    implements $MisskeyExceptionCopyWith<$Res> {
-  factory _$$MisskeyExceptionImplCopyWith(
-    _$MisskeyExceptionImpl value,
-    $Res Function(_$MisskeyExceptionImpl) then,
-  ) = __$$MisskeyExceptionImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({
-    String id,
-    String code,
-    String message,
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    MisskeyExceptionKind? kind,
-    Map<String, dynamic>? info,
-  });
 }
 
-/// @nodoc
-class __$$MisskeyExceptionImplCopyWithImpl<$Res>
-    extends _$MisskeyExceptionCopyWithImpl<$Res, _$MisskeyExceptionImpl>
-    implements _$$MisskeyExceptionImplCopyWith<$Res> {
-  __$$MisskeyExceptionImplCopyWithImpl(
-    _$MisskeyExceptionImpl _value,
-    $Res Function(_$MisskeyExceptionImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of MisskeyException
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? code = null,
-    Object? message = null,
-    Object? kind = freezed,
-    Object? info = freezed,
-  }) {
-    return _then(
-      _$MisskeyExceptionImpl(
-        id:
-            null == id
-                ? _value.id
-                : id // ignore: cast_nullable_to_non_nullable
-                    as String,
-        code:
-            null == code
-                ? _value.code
-                : code // ignore: cast_nullable_to_non_nullable
-                    as String,
-        message:
-            null == message
-                ? _value.message
-                : message // ignore: cast_nullable_to_non_nullable
-                    as String,
-        kind:
-            freezed == kind
-                ? _value.kind
-                : kind // ignore: cast_nullable_to_non_nullable
-                    as MisskeyExceptionKind?,
-        info:
-            freezed == info
-                ? _value._info
-                : info // ignore: cast_nullable_to_non_nullable
-                    as Map<String, dynamic>?,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$MisskeyExceptionImpl implements _MisskeyException {
-  const _$MisskeyExceptionImpl({
-    required this.id,
-    required this.code,
-    required this.message,
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.kind,
-    final Map<String, dynamic>? info,
-  }) : _info = info;
 
-  factory _$MisskeyExceptionImpl.fromJson(Map<String, dynamic> json) =>
-      _$$MisskeyExceptionImplFromJson(json);
+class _MisskeyException implements MisskeyException {
+  const _MisskeyException({required this.id, required this.code, required this.message, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.kind, final  Map<String, dynamic>? info}): _info = info;
+  factory _MisskeyException.fromJson(Map<String, dynamic> json) => _$MisskeyExceptionFromJson(json);
 
-  @override
-  final String id;
-  @override
-  final String code;
-  @override
-  final String message;
-  // ignore: invalid_annotation_target
-  @override
-  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-  final MisskeyExceptionKind? kind;
-  final Map<String, dynamic>? _info;
-  @override
-  Map<String, dynamic>? get info {
-    final value = _info;
-    if (value == null) return null;
-    if (_info is EqualUnmodifiableMapView) return _info;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(value);
-  }
-
-  @override
-  String toString() {
-    return 'MisskeyException(id: $id, code: $code, message: $message, kind: $kind, info: $info)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$MisskeyExceptionImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.code, code) || other.code == code) &&
-            (identical(other.message, message) || other.message == message) &&
-            (identical(other.kind, kind) || other.kind == kind) &&
-            const DeepCollectionEquality().equals(other._info, _info));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    id,
-    code,
-    message,
-    kind,
-    const DeepCollectionEquality().hash(_info),
-  );
-
-  /// Create a copy of MisskeyException
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$MisskeyExceptionImplCopyWith<_$MisskeyExceptionImpl> get copyWith =>
-      __$$MisskeyExceptionImplCopyWithImpl<_$MisskeyExceptionImpl>(
-        this,
-        _$identity,
-      );
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$MisskeyExceptionImplToJson(this);
-  }
+@override final  String id;
+@override final  String code;
+@override final  String message;
+// ignore: invalid_annotation_target
+@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  MisskeyExceptionKind? kind;
+ final  Map<String, dynamic>? _info;
+@override Map<String, dynamic>? get info {
+  final value = _info;
+  if (value == null) return null;
+  if (_info is EqualUnmodifiableMapView) return _info;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableMapView(value);
 }
 
-abstract class _MisskeyException implements MisskeyException {
-  const factory _MisskeyException({
-    required final String id,
-    required final String code,
-    required final String message,
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    final MisskeyExceptionKind? kind,
-    final Map<String, dynamic>? info,
-  }) = _$MisskeyExceptionImpl;
 
-  factory _MisskeyException.fromJson(Map<String, dynamic> json) =
-      _$MisskeyExceptionImpl.fromJson;
+/// Create a copy of MisskeyException
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$MisskeyExceptionCopyWith<_MisskeyException> get copyWith => __$MisskeyExceptionCopyWithImpl<_MisskeyException>(this, _$identity);
 
-  @override
-  String get id;
-  @override
-  String get code;
-  @override
-  String get message; // ignore: invalid_annotation_target
-  @override
-  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-  MisskeyExceptionKind? get kind;
-  @override
-  Map<String, dynamic>? get info;
-
-  /// Create a copy of MisskeyException
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$MisskeyExceptionImplCopyWith<_$MisskeyExceptionImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+Map<String, dynamic> toJson() {
+  return _$MisskeyExceptionToJson(this, );
 }
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _MisskeyException&&(identical(other.id, id) || other.id == id)&&(identical(other.code, code) || other.code == code)&&(identical(other.message, message) || other.message == message)&&(identical(other.kind, kind) || other.kind == kind)&&const DeepCollectionEquality().equals(other._info, _info));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,code,message,kind,const DeepCollectionEquality().hash(_info));
+
+@override
+String toString() {
+  return 'MisskeyException(id: $id, code: $code, message: $message, kind: $kind, info: $info)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$MisskeyExceptionCopyWith<$Res> implements $MisskeyExceptionCopyWith<$Res> {
+  factory _$MisskeyExceptionCopyWith(_MisskeyException value, $Res Function(_MisskeyException) _then) = __$MisskeyExceptionCopyWithImpl;
+@override @useResult
+$Res call({
+ String id, String code, String message,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) MisskeyExceptionKind? kind, Map<String, dynamic>? info
+});
+
+
+
+
+}
+/// @nodoc
+class __$MisskeyExceptionCopyWithImpl<$Res>
+    implements _$MisskeyExceptionCopyWith<$Res> {
+  __$MisskeyExceptionCopyWithImpl(this._self, this._then);
+
+  final _MisskeyException _self;
+  final $Res Function(_MisskeyException) _then;
+
+/// Create a copy of MisskeyException
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? code = null,Object? message = null,Object? kind = freezed,Object? info = freezed,}) {
+  return _then(_MisskeyException(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,code: null == code ? _self.code : code // ignore: cast_nullable_to_non_nullable
+as String,message: null == message ? _self.message : message // ignore: cast_nullable_to_non_nullable
+as String,kind: freezed == kind ? _self.kind : kind // ignore: cast_nullable_to_non_nullable
+as MisskeyExceptionKind?,info: freezed == info ? _self._info : info // ignore: cast_nullable_to_non_nullable
+as Map<String, dynamic>?,
+  ));
+}
+
+
+}
+
+// dart format on

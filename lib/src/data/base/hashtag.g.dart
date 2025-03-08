@@ -6,9 +6,9 @@ part of 'hashtag.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$HashtagImpl _$$HashtagImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$HashtagImpl', json, ($checkedConvert) {
-      final val = _$HashtagImpl(
+_Hashtag _$HashtagFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_Hashtag', json, ($checkedConvert) {
+      final val = _Hashtag(
         tag: $checkedConvert('tag', (v) => v as String),
         mentionedUsersCount: $checkedConvert(
           'mentionedUsersCount',
@@ -38,13 +38,12 @@ _$HashtagImpl _$$HashtagImplFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$$HashtagImplToJson(_$HashtagImpl instance) =>
-    <String, dynamic>{
-      'tag': instance.tag,
-      'mentionedUsersCount': instance.mentionedUsersCount,
-      'mentionedLocalUsersCount': instance.mentionedLocalUsersCount,
-      'mentionedRemoteUsersCount': instance.mentionedRemoteUsersCount,
-      'attachedUsersCount': instance.attachedUsersCount,
-      'attachedLocalUsersCount': instance.attachedLocalUsersCount,
-      'attachedRemoteUsersCount': instance.attachedRemoteUsersCount,
-    };
+Map<String, dynamic> _$HashtagToJson(_Hashtag instance) => <String, dynamic>{
+  'tag': instance.tag,
+  'mentionedUsersCount': instance.mentionedUsersCount,
+  'mentionedLocalUsersCount': instance.mentionedLocalUsersCount,
+  'mentionedRemoteUsersCount': instance.mentionedRemoteUsersCount,
+  'attachedUsersCount': instance.attachedUsersCount,
+  'attachedLocalUsersCount': instance.attachedLocalUsersCount,
+  'attachedRemoteUsersCount': instance.attachedRemoteUsersCount,
+};

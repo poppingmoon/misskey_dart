@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,180 +10,139 @@ part of 'notes_favorites_create_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-NotesFavoritesCreateRequest _$NotesFavoritesCreateRequestFromJson(
-  Map<String, dynamic> json,
-) {
-  return _NotesFavoritesCreateRequest.fromJson(json);
-}
 
 /// @nodoc
 mixin _$NotesFavoritesCreateRequest {
-  String get noteId => throw _privateConstructorUsedError;
+
+ String get noteId;
+/// Create a copy of NotesFavoritesCreateRequest
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$NotesFavoritesCreateRequestCopyWith<NotesFavoritesCreateRequest> get copyWith => _$NotesFavoritesCreateRequestCopyWithImpl<NotesFavoritesCreateRequest>(this as NotesFavoritesCreateRequest, _$identity);
 
   /// Serializes this NotesFavoritesCreateRequest to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of NotesFavoritesCreateRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $NotesFavoritesCreateRequestCopyWith<NotesFavoritesCreateRequest>
-  get copyWith => throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesFavoritesCreateRequest&&(identical(other.noteId, noteId) || other.noteId == noteId));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,noteId);
+
+@override
+String toString() {
+  return 'NotesFavoritesCreateRequest(noteId: $noteId)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $NotesFavoritesCreateRequestCopyWith<$Res> {
-  factory $NotesFavoritesCreateRequestCopyWith(
-    NotesFavoritesCreateRequest value,
-    $Res Function(NotesFavoritesCreateRequest) then,
-  ) =
-      _$NotesFavoritesCreateRequestCopyWithImpl<
-        $Res,
-        NotesFavoritesCreateRequest
-      >;
-  @useResult
-  $Res call({String noteId});
-}
+abstract mixin class $NotesFavoritesCreateRequestCopyWith<$Res>  {
+  factory $NotesFavoritesCreateRequestCopyWith(NotesFavoritesCreateRequest value, $Res Function(NotesFavoritesCreateRequest) _then) = _$NotesFavoritesCreateRequestCopyWithImpl;
+@useResult
+$Res call({
+ String noteId
+});
 
+
+
+
+}
 /// @nodoc
-class _$NotesFavoritesCreateRequestCopyWithImpl<
-  $Res,
-  $Val extends NotesFavoritesCreateRequest
->
+class _$NotesFavoritesCreateRequestCopyWithImpl<$Res>
     implements $NotesFavoritesCreateRequestCopyWith<$Res> {
-  _$NotesFavoritesCreateRequestCopyWithImpl(this._value, this._then);
+  _$NotesFavoritesCreateRequestCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final NotesFavoritesCreateRequest _self;
+  final $Res Function(NotesFavoritesCreateRequest) _then;
 
-  /// Create a copy of NotesFavoritesCreateRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? noteId = null}) {
-    return _then(
-      _value.copyWith(
-            noteId:
-                null == noteId
-                    ? _value.noteId
-                    : noteId // ignore: cast_nullable_to_non_nullable
-                        as String,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of NotesFavoritesCreateRequest
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? noteId = null,}) {
+  return _then(_self.copyWith(
+noteId: null == noteId ? _self.noteId : noteId // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-abstract class _$$NotesFavoritesCreateRequestImplCopyWith<$Res>
-    implements $NotesFavoritesCreateRequestCopyWith<$Res> {
-  factory _$$NotesFavoritesCreateRequestImplCopyWith(
-    _$NotesFavoritesCreateRequestImpl value,
-    $Res Function(_$NotesFavoritesCreateRequestImpl) then,
-  ) = __$$NotesFavoritesCreateRequestImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String noteId});
 }
 
-/// @nodoc
-class __$$NotesFavoritesCreateRequestImplCopyWithImpl<$Res>
-    extends
-        _$NotesFavoritesCreateRequestCopyWithImpl<
-          $Res,
-          _$NotesFavoritesCreateRequestImpl
-        >
-    implements _$$NotesFavoritesCreateRequestImplCopyWith<$Res> {
-  __$$NotesFavoritesCreateRequestImplCopyWithImpl(
-    _$NotesFavoritesCreateRequestImpl _value,
-    $Res Function(_$NotesFavoritesCreateRequestImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of NotesFavoritesCreateRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? noteId = null}) {
-    return _then(
-      _$NotesFavoritesCreateRequestImpl(
-        noteId:
-            null == noteId
-                ? _value.noteId
-                : noteId // ignore: cast_nullable_to_non_nullable
-                    as String,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$NotesFavoritesCreateRequestImpl
-    implements _NotesFavoritesCreateRequest {
-  const _$NotesFavoritesCreateRequestImpl({required this.noteId});
 
-  factory _$NotesFavoritesCreateRequestImpl.fromJson(
-    Map<String, dynamic> json,
-  ) => _$$NotesFavoritesCreateRequestImplFromJson(json);
+class _NotesFavoritesCreateRequest implements NotesFavoritesCreateRequest {
+  const _NotesFavoritesCreateRequest({required this.noteId});
+  factory _NotesFavoritesCreateRequest.fromJson(Map<String, dynamic> json) => _$NotesFavoritesCreateRequestFromJson(json);
 
-  @override
-  final String noteId;
+@override final  String noteId;
 
-  @override
-  String toString() {
-    return 'NotesFavoritesCreateRequest(noteId: $noteId)';
-  }
+/// Create a copy of NotesFavoritesCreateRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$NotesFavoritesCreateRequestCopyWith<_NotesFavoritesCreateRequest> get copyWith => __$NotesFavoritesCreateRequestCopyWithImpl<_NotesFavoritesCreateRequest>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$NotesFavoritesCreateRequestImpl &&
-            (identical(other.noteId, noteId) || other.noteId == noteId));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, noteId);
-
-  /// Create a copy of NotesFavoritesCreateRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$NotesFavoritesCreateRequestImplCopyWith<_$NotesFavoritesCreateRequestImpl>
-  get copyWith => __$$NotesFavoritesCreateRequestImplCopyWithImpl<
-    _$NotesFavoritesCreateRequestImpl
-  >(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$NotesFavoritesCreateRequestImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$NotesFavoritesCreateRequestToJson(this, );
 }
 
-abstract class _NotesFavoritesCreateRequest
-    implements NotesFavoritesCreateRequest {
-  const factory _NotesFavoritesCreateRequest({required final String noteId}) =
-      _$NotesFavoritesCreateRequestImpl;
-
-  factory _NotesFavoritesCreateRequest.fromJson(Map<String, dynamic> json) =
-      _$NotesFavoritesCreateRequestImpl.fromJson;
-
-  @override
-  String get noteId;
-
-  /// Create a copy of NotesFavoritesCreateRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$NotesFavoritesCreateRequestImplCopyWith<_$NotesFavoritesCreateRequestImpl>
-  get copyWith => throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesFavoritesCreateRequest&&(identical(other.noteId, noteId) || other.noteId == noteId));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,noteId);
+
+@override
+String toString() {
+  return 'NotesFavoritesCreateRequest(noteId: $noteId)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$NotesFavoritesCreateRequestCopyWith<$Res> implements $NotesFavoritesCreateRequestCopyWith<$Res> {
+  factory _$NotesFavoritesCreateRequestCopyWith(_NotesFavoritesCreateRequest value, $Res Function(_NotesFavoritesCreateRequest) _then) = __$NotesFavoritesCreateRequestCopyWithImpl;
+@override @useResult
+$Res call({
+ String noteId
+});
+
+
+
+
+}
+/// @nodoc
+class __$NotesFavoritesCreateRequestCopyWithImpl<$Res>
+    implements _$NotesFavoritesCreateRequestCopyWith<$Res> {
+  __$NotesFavoritesCreateRequestCopyWithImpl(this._self, this._then);
+
+  final _NotesFavoritesCreateRequest _self;
+  final $Res Function(_NotesFavoritesCreateRequest) _then;
+
+/// Create a copy of NotesFavoritesCreateRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? noteId = null,}) {
+  return _then(_NotesFavoritesCreateRequest(
+noteId: null == noteId ? _self.noteId : noteId // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
+}
+
+
+}
+
+// dart format on

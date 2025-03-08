@@ -6,20 +6,19 @@ part of 'users_featured_notes_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$UsersFeaturedNotesRequestImpl _$$UsersFeaturedNotesRequestImplFromJson(
+_UsersFeaturedNotesRequest _$UsersFeaturedNotesRequestFromJson(
   Map<String, dynamic> json,
-) =>
-    $checkedCreate(r'_$UsersFeaturedNotesRequestImpl', json, ($checkedConvert) {
-      final val = _$UsersFeaturedNotesRequestImpl(
-        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-        untilId: $checkedConvert('untilId', (v) => v as String?),
-        userId: $checkedConvert('userId', (v) => v as String),
-      );
-      return val;
-    });
+) => $checkedCreate('_UsersFeaturedNotesRequest', json, ($checkedConvert) {
+  final val = _UsersFeaturedNotesRequest(
+    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
+    untilId: $checkedConvert('untilId', (v) => v as String?),
+    userId: $checkedConvert('userId', (v) => v as String),
+  );
+  return val;
+});
 
-Map<String, dynamic> _$$UsersFeaturedNotesRequestImplToJson(
-  _$UsersFeaturedNotesRequestImpl instance,
+Map<String, dynamic> _$UsersFeaturedNotesRequestToJson(
+  _UsersFeaturedNotesRequest instance,
 ) => <String, dynamic>{
   'limit': instance.limit,
   'untilId': instance.untilId,

@@ -6,10 +6,10 @@ part of 'i_notifications_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$INotificationsResponseImpl _$$INotificationsResponseImplFromJson(
+_INotificationsResponse _$INotificationsResponseFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$INotificationsResponseImpl', json, ($checkedConvert) {
-  final val = _$INotificationsResponseImpl(
+) => $checkedCreate('_INotificationsResponse', json, ($checkedConvert) {
+  final val = _INotificationsResponse(
     id: $checkedConvert('id', (v) => v as String),
     createdAt: $checkedConvert(
       'createdAt',
@@ -92,8 +92,8 @@ _$INotificationsResponseImpl _$$INotificationsResponseImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$INotificationsResponseImplToJson(
-  _$INotificationsResponseImpl instance,
+Map<String, dynamic> _$INotificationsResponseToJson(
+  _INotificationsResponse instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'createdAt': const DateTimeConverter().toJson(instance.createdAt),
@@ -163,10 +163,10 @@ const _$UserExportableEntitiesEnumMap = {
   UserExportableEntities.userList: 'userList',
 };
 
-_$INotificationsReactionImpl _$$INotificationsReactionImplFromJson(
+_INotificationsReaction _$INotificationsReactionFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$INotificationsReactionImpl', json, ($checkedConvert) {
-  final val = _$INotificationsReactionImpl(
+) => $checkedCreate('_INotificationsReaction', json, ($checkedConvert) {
+  final val = _INotificationsReaction(
     user: $checkedConvert(
       'user',
       (v) => UserLite.fromJson(v as Map<String, dynamic>),
@@ -176,8 +176,8 @@ _$INotificationsReactionImpl _$$INotificationsReactionImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$INotificationsReactionImplToJson(
-  _$INotificationsReactionImpl instance,
+Map<String, dynamic> _$INotificationsReactionToJson(
+  _INotificationsReaction instance,
 ) => <String, dynamic>{
   'user': instance.user.toJson(),
   'reaction': instance.reaction,

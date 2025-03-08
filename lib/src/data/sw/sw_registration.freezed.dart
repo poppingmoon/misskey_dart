@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,215 +10,145 @@ part of 'sw_registration.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-SwRegistration _$SwRegistrationFromJson(Map<String, dynamic> json) {
-  return _SwRegistration.fromJson(json);
-}
 
 /// @nodoc
 mixin _$SwRegistration {
-  String get userId => throw _privateConstructorUsedError;
-  String get endpoint => throw _privateConstructorUsedError;
-  bool get sendReadMessage => throw _privateConstructorUsedError;
+
+ String get userId; String get endpoint; bool get sendReadMessage;
+/// Create a copy of SwRegistration
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$SwRegistrationCopyWith<SwRegistration> get copyWith => _$SwRegistrationCopyWithImpl<SwRegistration>(this as SwRegistration, _$identity);
 
   /// Serializes this SwRegistration to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of SwRegistration
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $SwRegistrationCopyWith<SwRegistration> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is SwRegistration&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.endpoint, endpoint) || other.endpoint == endpoint)&&(identical(other.sendReadMessage, sendReadMessage) || other.sendReadMessage == sendReadMessage));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,userId,endpoint,sendReadMessage);
+
+@override
+String toString() {
+  return 'SwRegistration(userId: $userId, endpoint: $endpoint, sendReadMessage: $sendReadMessage)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $SwRegistrationCopyWith<$Res> {
-  factory $SwRegistrationCopyWith(
-    SwRegistration value,
-    $Res Function(SwRegistration) then,
-  ) = _$SwRegistrationCopyWithImpl<$Res, SwRegistration>;
-  @useResult
-  $Res call({String userId, String endpoint, bool sendReadMessage});
-}
+abstract mixin class $SwRegistrationCopyWith<$Res>  {
+  factory $SwRegistrationCopyWith(SwRegistration value, $Res Function(SwRegistration) _then) = _$SwRegistrationCopyWithImpl;
+@useResult
+$Res call({
+ String userId, String endpoint, bool sendReadMessage
+});
 
+
+
+
+}
 /// @nodoc
-class _$SwRegistrationCopyWithImpl<$Res, $Val extends SwRegistration>
+class _$SwRegistrationCopyWithImpl<$Res>
     implements $SwRegistrationCopyWith<$Res> {
-  _$SwRegistrationCopyWithImpl(this._value, this._then);
+  _$SwRegistrationCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final SwRegistration _self;
+  final $Res Function(SwRegistration) _then;
 
-  /// Create a copy of SwRegistration
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? userId = null,
-    Object? endpoint = null,
-    Object? sendReadMessage = null,
-  }) {
-    return _then(
-      _value.copyWith(
-            userId:
-                null == userId
-                    ? _value.userId
-                    : userId // ignore: cast_nullable_to_non_nullable
-                        as String,
-            endpoint:
-                null == endpoint
-                    ? _value.endpoint
-                    : endpoint // ignore: cast_nullable_to_non_nullable
-                        as String,
-            sendReadMessage:
-                null == sendReadMessage
-                    ? _value.sendReadMessage
-                    : sendReadMessage // ignore: cast_nullable_to_non_nullable
-                        as bool,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of SwRegistration
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? userId = null,Object? endpoint = null,Object? sendReadMessage = null,}) {
+  return _then(_self.copyWith(
+userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as String,endpoint: null == endpoint ? _self.endpoint : endpoint // ignore: cast_nullable_to_non_nullable
+as String,sendReadMessage: null == sendReadMessage ? _self.sendReadMessage : sendReadMessage // ignore: cast_nullable_to_non_nullable
+as bool,
+  ));
 }
 
-/// @nodoc
-abstract class _$$SwRegistrationImplCopyWith<$Res>
-    implements $SwRegistrationCopyWith<$Res> {
-  factory _$$SwRegistrationImplCopyWith(
-    _$SwRegistrationImpl value,
-    $Res Function(_$SwRegistrationImpl) then,
-  ) = __$$SwRegistrationImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String userId, String endpoint, bool sendReadMessage});
 }
 
-/// @nodoc
-class __$$SwRegistrationImplCopyWithImpl<$Res>
-    extends _$SwRegistrationCopyWithImpl<$Res, _$SwRegistrationImpl>
-    implements _$$SwRegistrationImplCopyWith<$Res> {
-  __$$SwRegistrationImplCopyWithImpl(
-    _$SwRegistrationImpl _value,
-    $Res Function(_$SwRegistrationImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of SwRegistration
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? userId = null,
-    Object? endpoint = null,
-    Object? sendReadMessage = null,
-  }) {
-    return _then(
-      _$SwRegistrationImpl(
-        userId:
-            null == userId
-                ? _value.userId
-                : userId // ignore: cast_nullable_to_non_nullable
-                    as String,
-        endpoint:
-            null == endpoint
-                ? _value.endpoint
-                : endpoint // ignore: cast_nullable_to_non_nullable
-                    as String,
-        sendReadMessage:
-            null == sendReadMessage
-                ? _value.sendReadMessage
-                : sendReadMessage // ignore: cast_nullable_to_non_nullable
-                    as bool,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$SwRegistrationImpl implements _SwRegistration {
-  const _$SwRegistrationImpl({
-    required this.userId,
-    required this.endpoint,
-    required this.sendReadMessage,
-  });
 
-  factory _$SwRegistrationImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SwRegistrationImplFromJson(json);
+class _SwRegistration implements SwRegistration {
+  const _SwRegistration({required this.userId, required this.endpoint, required this.sendReadMessage});
+  factory _SwRegistration.fromJson(Map<String, dynamic> json) => _$SwRegistrationFromJson(json);
 
-  @override
-  final String userId;
-  @override
-  final String endpoint;
-  @override
-  final bool sendReadMessage;
+@override final  String userId;
+@override final  String endpoint;
+@override final  bool sendReadMessage;
 
-  @override
-  String toString() {
-    return 'SwRegistration(userId: $userId, endpoint: $endpoint, sendReadMessage: $sendReadMessage)';
-  }
+/// Create a copy of SwRegistration
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$SwRegistrationCopyWith<_SwRegistration> get copyWith => __$SwRegistrationCopyWithImpl<_SwRegistration>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$SwRegistrationImpl &&
-            (identical(other.userId, userId) || other.userId == userId) &&
-            (identical(other.endpoint, endpoint) ||
-                other.endpoint == endpoint) &&
-            (identical(other.sendReadMessage, sendReadMessage) ||
-                other.sendReadMessage == sendReadMessage));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, userId, endpoint, sendReadMessage);
-
-  /// Create a copy of SwRegistration
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SwRegistrationImplCopyWith<_$SwRegistrationImpl> get copyWith =>
-      __$$SwRegistrationImplCopyWithImpl<_$SwRegistrationImpl>(
-        this,
-        _$identity,
-      );
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$SwRegistrationImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$SwRegistrationToJson(this, );
 }
 
-abstract class _SwRegistration implements SwRegistration {
-  const factory _SwRegistration({
-    required final String userId,
-    required final String endpoint,
-    required final bool sendReadMessage,
-  }) = _$SwRegistrationImpl;
-
-  factory _SwRegistration.fromJson(Map<String, dynamic> json) =
-      _$SwRegistrationImpl.fromJson;
-
-  @override
-  String get userId;
-  @override
-  String get endpoint;
-  @override
-  bool get sendReadMessage;
-
-  /// Create a copy of SwRegistration
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SwRegistrationImplCopyWith<_$SwRegistrationImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _SwRegistration&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.endpoint, endpoint) || other.endpoint == endpoint)&&(identical(other.sendReadMessage, sendReadMessage) || other.sendReadMessage == sendReadMessage));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,userId,endpoint,sendReadMessage);
+
+@override
+String toString() {
+  return 'SwRegistration(userId: $userId, endpoint: $endpoint, sendReadMessage: $sendReadMessage)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$SwRegistrationCopyWith<$Res> implements $SwRegistrationCopyWith<$Res> {
+  factory _$SwRegistrationCopyWith(_SwRegistration value, $Res Function(_SwRegistration) _then) = __$SwRegistrationCopyWithImpl;
+@override @useResult
+$Res call({
+ String userId, String endpoint, bool sendReadMessage
+});
+
+
+
+
+}
+/// @nodoc
+class __$SwRegistrationCopyWithImpl<$Res>
+    implements _$SwRegistrationCopyWith<$Res> {
+  __$SwRegistrationCopyWithImpl(this._self, this._then);
+
+  final _SwRegistration _self;
+  final $Res Function(_SwRegistration) _then;
+
+/// Create a copy of SwRegistration
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? userId = null,Object? endpoint = null,Object? sendReadMessage = null,}) {
+  return _then(_SwRegistration(
+userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as String,endpoint: null == endpoint ? _self.endpoint : endpoint // ignore: cast_nullable_to_non_nullable
+as String,sendReadMessage: null == sendReadMessage ? _self.sendReadMessage : sendReadMessage // ignore: cast_nullable_to_non_nullable
+as bool,
+  ));
+}
+
+
+}
+
+// dart format on

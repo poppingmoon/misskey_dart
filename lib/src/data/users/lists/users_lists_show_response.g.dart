@@ -6,10 +6,10 @@ part of 'users_lists_show_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$UsersListsShowResponseImpl _$$UsersListsShowResponseImplFromJson(
+_UsersListsShowResponse _$UsersListsShowResponseFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$UsersListsShowResponseImpl', json, ($checkedConvert) {
-  final val = _$UsersListsShowResponseImpl(
+) => $checkedCreate('_UsersListsShowResponse', json, ($checkedConvert) {
+  final val = _UsersListsShowResponse(
     id: $checkedConvert('id', (v) => v as String),
     createdAt: $checkedConvert(
       'createdAt',
@@ -27,8 +27,8 @@ _$UsersListsShowResponseImpl _$$UsersListsShowResponseImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$UsersListsShowResponseImplToJson(
-  _$UsersListsShowResponseImpl instance,
+Map<String, dynamic> _$UsersListsShowResponseToJson(
+  _UsersListsShowResponse instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'createdAt': const DateTimeConverter().toJson(instance.createdAt),

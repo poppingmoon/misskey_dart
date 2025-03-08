@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,193 +10,142 @@ part of 'users_lists_push_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-UsersListsPushRequest _$UsersListsPushRequestFromJson(
-  Map<String, dynamic> json,
-) {
-  return _UsersListsPushRequest.fromJson(json);
-}
 
 /// @nodoc
 mixin _$UsersListsPushRequest {
-  String get listId => throw _privateConstructorUsedError;
-  String get userId => throw _privateConstructorUsedError;
+
+ String get listId; String get userId;
+/// Create a copy of UsersListsPushRequest
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$UsersListsPushRequestCopyWith<UsersListsPushRequest> get copyWith => _$UsersListsPushRequestCopyWithImpl<UsersListsPushRequest>(this as UsersListsPushRequest, _$identity);
 
   /// Serializes this UsersListsPushRequest to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of UsersListsPushRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $UsersListsPushRequestCopyWith<UsersListsPushRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is UsersListsPushRequest&&(identical(other.listId, listId) || other.listId == listId)&&(identical(other.userId, userId) || other.userId == userId));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,listId,userId);
+
+@override
+String toString() {
+  return 'UsersListsPushRequest(listId: $listId, userId: $userId)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $UsersListsPushRequestCopyWith<$Res> {
-  factory $UsersListsPushRequestCopyWith(
-    UsersListsPushRequest value,
-    $Res Function(UsersListsPushRequest) then,
-  ) = _$UsersListsPushRequestCopyWithImpl<$Res, UsersListsPushRequest>;
-  @useResult
-  $Res call({String listId, String userId});
-}
+abstract mixin class $UsersListsPushRequestCopyWith<$Res>  {
+  factory $UsersListsPushRequestCopyWith(UsersListsPushRequest value, $Res Function(UsersListsPushRequest) _then) = _$UsersListsPushRequestCopyWithImpl;
+@useResult
+$Res call({
+ String listId, String userId
+});
 
+
+
+
+}
 /// @nodoc
-class _$UsersListsPushRequestCopyWithImpl<
-  $Res,
-  $Val extends UsersListsPushRequest
->
+class _$UsersListsPushRequestCopyWithImpl<$Res>
     implements $UsersListsPushRequestCopyWith<$Res> {
-  _$UsersListsPushRequestCopyWithImpl(this._value, this._then);
+  _$UsersListsPushRequestCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final UsersListsPushRequest _self;
+  final $Res Function(UsersListsPushRequest) _then;
 
-  /// Create a copy of UsersListsPushRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? listId = null, Object? userId = null}) {
-    return _then(
-      _value.copyWith(
-            listId:
-                null == listId
-                    ? _value.listId
-                    : listId // ignore: cast_nullable_to_non_nullable
-                        as String,
-            userId:
-                null == userId
-                    ? _value.userId
-                    : userId // ignore: cast_nullable_to_non_nullable
-                        as String,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of UsersListsPushRequest
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? listId = null,Object? userId = null,}) {
+  return _then(_self.copyWith(
+listId: null == listId ? _self.listId : listId // ignore: cast_nullable_to_non_nullable
+as String,userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-abstract class _$$UsersListsPushRequestImplCopyWith<$Res>
-    implements $UsersListsPushRequestCopyWith<$Res> {
-  factory _$$UsersListsPushRequestImplCopyWith(
-    _$UsersListsPushRequestImpl value,
-    $Res Function(_$UsersListsPushRequestImpl) then,
-  ) = __$$UsersListsPushRequestImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String listId, String userId});
 }
 
-/// @nodoc
-class __$$UsersListsPushRequestImplCopyWithImpl<$Res>
-    extends
-        _$UsersListsPushRequestCopyWithImpl<$Res, _$UsersListsPushRequestImpl>
-    implements _$$UsersListsPushRequestImplCopyWith<$Res> {
-  __$$UsersListsPushRequestImplCopyWithImpl(
-    _$UsersListsPushRequestImpl _value,
-    $Res Function(_$UsersListsPushRequestImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of UsersListsPushRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? listId = null, Object? userId = null}) {
-    return _then(
-      _$UsersListsPushRequestImpl(
-        listId:
-            null == listId
-                ? _value.listId
-                : listId // ignore: cast_nullable_to_non_nullable
-                    as String,
-        userId:
-            null == userId
-                ? _value.userId
-                : userId // ignore: cast_nullable_to_non_nullable
-                    as String,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$UsersListsPushRequestImpl implements _UsersListsPushRequest {
-  const _$UsersListsPushRequestImpl({
-    required this.listId,
-    required this.userId,
-  });
 
-  factory _$UsersListsPushRequestImpl.fromJson(Map<String, dynamic> json) =>
-      _$$UsersListsPushRequestImplFromJson(json);
+class _UsersListsPushRequest implements UsersListsPushRequest {
+  const _UsersListsPushRequest({required this.listId, required this.userId});
+  factory _UsersListsPushRequest.fromJson(Map<String, dynamic> json) => _$UsersListsPushRequestFromJson(json);
 
-  @override
-  final String listId;
-  @override
-  final String userId;
+@override final  String listId;
+@override final  String userId;
 
-  @override
-  String toString() {
-    return 'UsersListsPushRequest(listId: $listId, userId: $userId)';
-  }
+/// Create a copy of UsersListsPushRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$UsersListsPushRequestCopyWith<_UsersListsPushRequest> get copyWith => __$UsersListsPushRequestCopyWithImpl<_UsersListsPushRequest>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$UsersListsPushRequestImpl &&
-            (identical(other.listId, listId) || other.listId == listId) &&
-            (identical(other.userId, userId) || other.userId == userId));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, listId, userId);
-
-  /// Create a copy of UsersListsPushRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$UsersListsPushRequestImplCopyWith<_$UsersListsPushRequestImpl>
-  get copyWith =>
-      __$$UsersListsPushRequestImplCopyWithImpl<_$UsersListsPushRequestImpl>(
-        this,
-        _$identity,
-      );
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$UsersListsPushRequestImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$UsersListsPushRequestToJson(this, );
 }
 
-abstract class _UsersListsPushRequest implements UsersListsPushRequest {
-  const factory _UsersListsPushRequest({
-    required final String listId,
-    required final String userId,
-  }) = _$UsersListsPushRequestImpl;
-
-  factory _UsersListsPushRequest.fromJson(Map<String, dynamic> json) =
-      _$UsersListsPushRequestImpl.fromJson;
-
-  @override
-  String get listId;
-  @override
-  String get userId;
-
-  /// Create a copy of UsersListsPushRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$UsersListsPushRequestImplCopyWith<_$UsersListsPushRequestImpl>
-  get copyWith => throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersListsPushRequest&&(identical(other.listId, listId) || other.listId == listId)&&(identical(other.userId, userId) || other.userId == userId));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,listId,userId);
+
+@override
+String toString() {
+  return 'UsersListsPushRequest(listId: $listId, userId: $userId)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$UsersListsPushRequestCopyWith<$Res> implements $UsersListsPushRequestCopyWith<$Res> {
+  factory _$UsersListsPushRequestCopyWith(_UsersListsPushRequest value, $Res Function(_UsersListsPushRequest) _then) = __$UsersListsPushRequestCopyWithImpl;
+@override @useResult
+$Res call({
+ String listId, String userId
+});
+
+
+
+
+}
+/// @nodoc
+class __$UsersListsPushRequestCopyWithImpl<$Res>
+    implements _$UsersListsPushRequestCopyWith<$Res> {
+  __$UsersListsPushRequestCopyWithImpl(this._self, this._then);
+
+  final _UsersListsPushRequest _self;
+  final $Res Function(_UsersListsPushRequest) _then;
+
+/// Create a copy of UsersListsPushRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? listId = null,Object? userId = null,}) {
+  return _then(_UsersListsPushRequest(
+listId: null == listId ? _self.listId : listId // ignore: cast_nullable_to_non_nullable
+as String,userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
+}
+
+
+}
+
+// dart format on

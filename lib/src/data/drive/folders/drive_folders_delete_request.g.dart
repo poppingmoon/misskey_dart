@@ -6,16 +6,15 @@ part of 'drive_folders_delete_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$DriveFoldersDeleteRequestImpl _$$DriveFoldersDeleteRequestImplFromJson(
+_DriveFoldersDeleteRequest _$DriveFoldersDeleteRequestFromJson(
   Map<String, dynamic> json,
-) =>
-    $checkedCreate(r'_$DriveFoldersDeleteRequestImpl', json, ($checkedConvert) {
-      final val = _$DriveFoldersDeleteRequestImpl(
-        folderId: $checkedConvert('folderId', (v) => v as String),
-      );
-      return val;
-    });
+) => $checkedCreate('_DriveFoldersDeleteRequest', json, ($checkedConvert) {
+  final val = _DriveFoldersDeleteRequest(
+    folderId: $checkedConvert('folderId', (v) => v as String),
+  );
+  return val;
+});
 
-Map<String, dynamic> _$$DriveFoldersDeleteRequestImplToJson(
-  _$DriveFoldersDeleteRequestImpl instance,
+Map<String, dynamic> _$DriveFoldersDeleteRequestToJson(
+  _DriveFoldersDeleteRequest instance,
 ) => <String, dynamic>{'folderId': instance.folderId};

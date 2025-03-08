@@ -6,16 +6,16 @@ part of 'drive_folders_find_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$DriveFoldersFindRequestImpl _$$DriveFoldersFindRequestImplFromJson(
+_DriveFoldersFindRequest _$DriveFoldersFindRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$DriveFoldersFindRequestImpl', json, ($checkedConvert) {
-  final val = _$DriveFoldersFindRequestImpl(
+) => $checkedCreate('_DriveFoldersFindRequest', json, ($checkedConvert) {
+  final val = _DriveFoldersFindRequest(
     name: $checkedConvert('name', (v) => v as String),
     parentId: $checkedConvert('parentId', (v) => v as String?),
   );
   return val;
 });
 
-Map<String, dynamic> _$$DriveFoldersFindRequestImplToJson(
-  _$DriveFoldersFindRequestImpl instance,
+Map<String, dynamic> _$DriveFoldersFindRequestToJson(
+  _DriveFoldersFindRequest instance,
 ) => <String, dynamic>{'name': instance.name, 'parentId': instance.parentId};

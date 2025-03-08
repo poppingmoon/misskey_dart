@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,178 +10,142 @@ part of 'note_edited.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-NoteEdited _$NoteEditedFromJson(Map<String, dynamic> json) {
-  return _NoteEdited.fromJson(json);
-}
 
 /// @nodoc
 mixin _$NoteEdited {
-  String? get cw => throw _privateConstructorUsedError;
-  String? get text => throw _privateConstructorUsedError;
+
+ String? get cw; String? get text;
+/// Create a copy of NoteEdited
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$NoteEditedCopyWith<NoteEdited> get copyWith => _$NoteEditedCopyWithImpl<NoteEdited>(this as NoteEdited, _$identity);
 
   /// Serializes this NoteEdited to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of NoteEdited
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $NoteEditedCopyWith<NoteEdited> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NoteEdited&&(identical(other.cw, cw) || other.cw == cw)&&(identical(other.text, text) || other.text == text));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,cw,text);
+
+@override
+String toString() {
+  return 'NoteEdited(cw: $cw, text: $text)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $NoteEditedCopyWith<$Res> {
-  factory $NoteEditedCopyWith(
-    NoteEdited value,
-    $Res Function(NoteEdited) then,
-  ) = _$NoteEditedCopyWithImpl<$Res, NoteEdited>;
-  @useResult
-  $Res call({String? cw, String? text});
-}
+abstract mixin class $NoteEditedCopyWith<$Res>  {
+  factory $NoteEditedCopyWith(NoteEdited value, $Res Function(NoteEdited) _then) = _$NoteEditedCopyWithImpl;
+@useResult
+$Res call({
+ String? cw, String? text
+});
 
+
+
+
+}
 /// @nodoc
-class _$NoteEditedCopyWithImpl<$Res, $Val extends NoteEdited>
+class _$NoteEditedCopyWithImpl<$Res>
     implements $NoteEditedCopyWith<$Res> {
-  _$NoteEditedCopyWithImpl(this._value, this._then);
+  _$NoteEditedCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final NoteEdited _self;
+  final $Res Function(NoteEdited) _then;
 
-  /// Create a copy of NoteEdited
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? cw = freezed, Object? text = freezed}) {
-    return _then(
-      _value.copyWith(
-            cw:
-                freezed == cw
-                    ? _value.cw
-                    : cw // ignore: cast_nullable_to_non_nullable
-                        as String?,
-            text:
-                freezed == text
-                    ? _value.text
-                    : text // ignore: cast_nullable_to_non_nullable
-                        as String?,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of NoteEdited
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? cw = freezed,Object? text = freezed,}) {
+  return _then(_self.copyWith(
+cw: freezed == cw ? _self.cw : cw // ignore: cast_nullable_to_non_nullable
+as String?,text: freezed == text ? _self.text : text // ignore: cast_nullable_to_non_nullable
+as String?,
+  ));
 }
 
-/// @nodoc
-abstract class _$$NoteEditedImplCopyWith<$Res>
-    implements $NoteEditedCopyWith<$Res> {
-  factory _$$NoteEditedImplCopyWith(
-    _$NoteEditedImpl value,
-    $Res Function(_$NoteEditedImpl) then,
-  ) = __$$NoteEditedImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String? cw, String? text});
 }
 
-/// @nodoc
-class __$$NoteEditedImplCopyWithImpl<$Res>
-    extends _$NoteEditedCopyWithImpl<$Res, _$NoteEditedImpl>
-    implements _$$NoteEditedImplCopyWith<$Res> {
-  __$$NoteEditedImplCopyWithImpl(
-    _$NoteEditedImpl _value,
-    $Res Function(_$NoteEditedImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of NoteEdited
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? cw = freezed, Object? text = freezed}) {
-    return _then(
-      _$NoteEditedImpl(
-        cw:
-            freezed == cw
-                ? _value.cw
-                : cw // ignore: cast_nullable_to_non_nullable
-                    as String?,
-        text:
-            freezed == text
-                ? _value.text
-                : text // ignore: cast_nullable_to_non_nullable
-                    as String?,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$NoteEditedImpl implements _NoteEdited {
-  const _$NoteEditedImpl({this.cw, this.text});
 
-  factory _$NoteEditedImpl.fromJson(Map<String, dynamic> json) =>
-      _$$NoteEditedImplFromJson(json);
+class _NoteEdited implements NoteEdited {
+  const _NoteEdited({this.cw, this.text});
+  factory _NoteEdited.fromJson(Map<String, dynamic> json) => _$NoteEditedFromJson(json);
 
-  @override
-  final String? cw;
-  @override
-  final String? text;
+@override final  String? cw;
+@override final  String? text;
 
-  @override
-  String toString() {
-    return 'NoteEdited(cw: $cw, text: $text)';
-  }
+/// Create a copy of NoteEdited
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$NoteEditedCopyWith<_NoteEdited> get copyWith => __$NoteEditedCopyWithImpl<_NoteEdited>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$NoteEditedImpl &&
-            (identical(other.cw, cw) || other.cw == cw) &&
-            (identical(other.text, text) || other.text == text));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, cw, text);
-
-  /// Create a copy of NoteEdited
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$NoteEditedImplCopyWith<_$NoteEditedImpl> get copyWith =>
-      __$$NoteEditedImplCopyWithImpl<_$NoteEditedImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$NoteEditedImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$NoteEditedToJson(this, );
 }
 
-abstract class _NoteEdited implements NoteEdited {
-  const factory _NoteEdited({final String? cw, final String? text}) =
-      _$NoteEditedImpl;
-
-  factory _NoteEdited.fromJson(Map<String, dynamic> json) =
-      _$NoteEditedImpl.fromJson;
-
-  @override
-  String? get cw;
-  @override
-  String? get text;
-
-  /// Create a copy of NoteEdited
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$NoteEditedImplCopyWith<_$NoteEditedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NoteEdited&&(identical(other.cw, cw) || other.cw == cw)&&(identical(other.text, text) || other.text == text));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,cw,text);
+
+@override
+String toString() {
+  return 'NoteEdited(cw: $cw, text: $text)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$NoteEditedCopyWith<$Res> implements $NoteEditedCopyWith<$Res> {
+  factory _$NoteEditedCopyWith(_NoteEdited value, $Res Function(_NoteEdited) _then) = __$NoteEditedCopyWithImpl;
+@override @useResult
+$Res call({
+ String? cw, String? text
+});
+
+
+
+
+}
+/// @nodoc
+class __$NoteEditedCopyWithImpl<$Res>
+    implements _$NoteEditedCopyWith<$Res> {
+  __$NoteEditedCopyWithImpl(this._self, this._then);
+
+  final _NoteEdited _self;
+  final $Res Function(_NoteEdited) _then;
+
+/// Create a copy of NoteEdited
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? cw = freezed,Object? text = freezed,}) {
+  return _then(_NoteEdited(
+cw: freezed == cw ? _self.cw : cw // ignore: cast_nullable_to_non_nullable
+as String?,text: freezed == text ? _self.text : text // ignore: cast_nullable_to_non_nullable
+as String?,
+  ));
+}
+
+
+}
+
+// dart format on

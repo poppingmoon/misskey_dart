@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,175 +10,139 @@ part of 'i_read_announcement_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-IReadAnnouncementRequest _$IReadAnnouncementRequestFromJson(
-  Map<String, dynamic> json,
-) {
-  return _IReadAnnouncementRequest.fromJson(json);
-}
 
 /// @nodoc
 mixin _$IReadAnnouncementRequest {
-  String get announcementId => throw _privateConstructorUsedError;
+
+ String get announcementId;
+/// Create a copy of IReadAnnouncementRequest
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$IReadAnnouncementRequestCopyWith<IReadAnnouncementRequest> get copyWith => _$IReadAnnouncementRequestCopyWithImpl<IReadAnnouncementRequest>(this as IReadAnnouncementRequest, _$identity);
 
   /// Serializes this IReadAnnouncementRequest to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of IReadAnnouncementRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $IReadAnnouncementRequestCopyWith<IReadAnnouncementRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is IReadAnnouncementRequest&&(identical(other.announcementId, announcementId) || other.announcementId == announcementId));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,announcementId);
+
+@override
+String toString() {
+  return 'IReadAnnouncementRequest(announcementId: $announcementId)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $IReadAnnouncementRequestCopyWith<$Res> {
-  factory $IReadAnnouncementRequestCopyWith(
-    IReadAnnouncementRequest value,
-    $Res Function(IReadAnnouncementRequest) then,
-  ) = _$IReadAnnouncementRequestCopyWithImpl<$Res, IReadAnnouncementRequest>;
-  @useResult
-  $Res call({String announcementId});
-}
+abstract mixin class $IReadAnnouncementRequestCopyWith<$Res>  {
+  factory $IReadAnnouncementRequestCopyWith(IReadAnnouncementRequest value, $Res Function(IReadAnnouncementRequest) _then) = _$IReadAnnouncementRequestCopyWithImpl;
+@useResult
+$Res call({
+ String announcementId
+});
 
+
+
+
+}
 /// @nodoc
-class _$IReadAnnouncementRequestCopyWithImpl<
-  $Res,
-  $Val extends IReadAnnouncementRequest
->
+class _$IReadAnnouncementRequestCopyWithImpl<$Res>
     implements $IReadAnnouncementRequestCopyWith<$Res> {
-  _$IReadAnnouncementRequestCopyWithImpl(this._value, this._then);
+  _$IReadAnnouncementRequestCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final IReadAnnouncementRequest _self;
+  final $Res Function(IReadAnnouncementRequest) _then;
 
-  /// Create a copy of IReadAnnouncementRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? announcementId = null}) {
-    return _then(
-      _value.copyWith(
-            announcementId:
-                null == announcementId
-                    ? _value.announcementId
-                    : announcementId // ignore: cast_nullable_to_non_nullable
-                        as String,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of IReadAnnouncementRequest
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? announcementId = null,}) {
+  return _then(_self.copyWith(
+announcementId: null == announcementId ? _self.announcementId : announcementId // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-abstract class _$$IReadAnnouncementRequestImplCopyWith<$Res>
-    implements $IReadAnnouncementRequestCopyWith<$Res> {
-  factory _$$IReadAnnouncementRequestImplCopyWith(
-    _$IReadAnnouncementRequestImpl value,
-    $Res Function(_$IReadAnnouncementRequestImpl) then,
-  ) = __$$IReadAnnouncementRequestImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String announcementId});
 }
 
-/// @nodoc
-class __$$IReadAnnouncementRequestImplCopyWithImpl<$Res>
-    extends
-        _$IReadAnnouncementRequestCopyWithImpl<
-          $Res,
-          _$IReadAnnouncementRequestImpl
-        >
-    implements _$$IReadAnnouncementRequestImplCopyWith<$Res> {
-  __$$IReadAnnouncementRequestImplCopyWithImpl(
-    _$IReadAnnouncementRequestImpl _value,
-    $Res Function(_$IReadAnnouncementRequestImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of IReadAnnouncementRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? announcementId = null}) {
-    return _then(
-      _$IReadAnnouncementRequestImpl(
-        announcementId:
-            null == announcementId
-                ? _value.announcementId
-                : announcementId // ignore: cast_nullable_to_non_nullable
-                    as String,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$IReadAnnouncementRequestImpl implements _IReadAnnouncementRequest {
-  const _$IReadAnnouncementRequestImpl({required this.announcementId});
 
-  factory _$IReadAnnouncementRequestImpl.fromJson(Map<String, dynamic> json) =>
-      _$$IReadAnnouncementRequestImplFromJson(json);
+class _IReadAnnouncementRequest implements IReadAnnouncementRequest {
+  const _IReadAnnouncementRequest({required this.announcementId});
+  factory _IReadAnnouncementRequest.fromJson(Map<String, dynamic> json) => _$IReadAnnouncementRequestFromJson(json);
 
-  @override
-  final String announcementId;
+@override final  String announcementId;
 
-  @override
-  String toString() {
-    return 'IReadAnnouncementRequest(announcementId: $announcementId)';
-  }
+/// Create a copy of IReadAnnouncementRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$IReadAnnouncementRequestCopyWith<_IReadAnnouncementRequest> get copyWith => __$IReadAnnouncementRequestCopyWithImpl<_IReadAnnouncementRequest>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$IReadAnnouncementRequestImpl &&
-            (identical(other.announcementId, announcementId) ||
-                other.announcementId == announcementId));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, announcementId);
-
-  /// Create a copy of IReadAnnouncementRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$IReadAnnouncementRequestImplCopyWith<_$IReadAnnouncementRequestImpl>
-  get copyWith => __$$IReadAnnouncementRequestImplCopyWithImpl<
-    _$IReadAnnouncementRequestImpl
-  >(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$IReadAnnouncementRequestImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$IReadAnnouncementRequestToJson(this, );
 }
 
-abstract class _IReadAnnouncementRequest implements IReadAnnouncementRequest {
-  const factory _IReadAnnouncementRequest({
-    required final String announcementId,
-  }) = _$IReadAnnouncementRequestImpl;
-
-  factory _IReadAnnouncementRequest.fromJson(Map<String, dynamic> json) =
-      _$IReadAnnouncementRequestImpl.fromJson;
-
-  @override
-  String get announcementId;
-
-  /// Create a copy of IReadAnnouncementRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$IReadAnnouncementRequestImplCopyWith<_$IReadAnnouncementRequestImpl>
-  get copyWith => throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _IReadAnnouncementRequest&&(identical(other.announcementId, announcementId) || other.announcementId == announcementId));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,announcementId);
+
+@override
+String toString() {
+  return 'IReadAnnouncementRequest(announcementId: $announcementId)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$IReadAnnouncementRequestCopyWith<$Res> implements $IReadAnnouncementRequestCopyWith<$Res> {
+  factory _$IReadAnnouncementRequestCopyWith(_IReadAnnouncementRequest value, $Res Function(_IReadAnnouncementRequest) _then) = __$IReadAnnouncementRequestCopyWithImpl;
+@override @useResult
+$Res call({
+ String announcementId
+});
+
+
+
+
+}
+/// @nodoc
+class __$IReadAnnouncementRequestCopyWithImpl<$Res>
+    implements _$IReadAnnouncementRequestCopyWith<$Res> {
+  __$IReadAnnouncementRequestCopyWithImpl(this._self, this._then);
+
+  final _IReadAnnouncementRequest _self;
+  final $Res Function(_IReadAnnouncementRequest) _then;
+
+/// Create a copy of IReadAnnouncementRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? announcementId = null,}) {
+  return _then(_IReadAnnouncementRequest(
+announcementId: null == announcementId ? _self.announcementId : announcementId // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
+}
+
+
+}
+
+// dart format on

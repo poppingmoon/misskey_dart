@@ -4,7 +4,7 @@ part 'notes_scheduled_list_request.freezed.dart';
 part 'notes_scheduled_list_request.g.dart';
 
 @freezed
-class NotesScheduledListRequest with _$NotesScheduledListRequest {
+abstract class NotesScheduledListRequest with _$NotesScheduledListRequest {
   const factory NotesScheduledListRequest({int? limit, int? offset}) =
       _NotesScheduledListRequest;
 

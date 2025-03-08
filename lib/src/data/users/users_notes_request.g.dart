@@ -6,10 +6,10 @@ part of 'users_notes_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$UsersNotesRequestImpl _$$UsersNotesRequestImplFromJson(
+_UsersNotesRequest _$UsersNotesRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$UsersNotesRequestImpl', json, ($checkedConvert) {
-  final val = _$UsersNotesRequestImpl(
+) => $checkedCreate('_UsersNotesRequest', json, ($checkedConvert) {
+  final val = _UsersNotesRequest(
     userId: $checkedConvert('userId', (v) => v as String),
     includeReplies: $checkedConvert('includeReplies', (v) => v as bool?),
     withReplies: $checkedConvert('withReplies', (v) => v as bool?),
@@ -44,31 +44,30 @@ _$UsersNotesRequestImpl _$$UsersNotesRequestImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$UsersNotesRequestImplToJson(
-  _$UsersNotesRequestImpl instance,
-) => <String, dynamic>{
-  'userId': instance.userId,
-  'includeReplies': instance.includeReplies,
-  'withReplies': instance.withReplies,
-  'withRenotes': instance.withRenotes,
-  'withChannelNotes': instance.withChannelNotes,
-  'limit': instance.limit,
-  'sinceId': instance.sinceId,
-  'untilId': instance.untilId,
-  'sinceDate': _$JsonConverterToJson<int, DateTime>(
-    instance.sinceDate,
-    const EpocTimeDateTimeConverter().toJson,
-  ),
-  'untilDate': _$JsonConverterToJson<int, DateTime>(
-    instance.untilDate,
-    const EpocTimeDateTimeConverter().toJson,
-  ),
-  'includeMyRenotes': instance.includeMyRenotes,
-  'withFiles': instance.withFiles,
-  'fileType': instance.fileType,
-  'allowPartial': instance.allowPartial,
-  'excludeNsfw': instance.excludeNsfw,
-};
+Map<String, dynamic> _$UsersNotesRequestToJson(_UsersNotesRequest instance) =>
+    <String, dynamic>{
+      'userId': instance.userId,
+      'includeReplies': instance.includeReplies,
+      'withReplies': instance.withReplies,
+      'withRenotes': instance.withRenotes,
+      'withChannelNotes': instance.withChannelNotes,
+      'limit': instance.limit,
+      'sinceId': instance.sinceId,
+      'untilId': instance.untilId,
+      'sinceDate': _$JsonConverterToJson<int, DateTime>(
+        instance.sinceDate,
+        const EpocTimeDateTimeConverter().toJson,
+      ),
+      'untilDate': _$JsonConverterToJson<int, DateTime>(
+        instance.untilDate,
+        const EpocTimeDateTimeConverter().toJson,
+      ),
+      'includeMyRenotes': instance.includeMyRenotes,
+      'withFiles': instance.withFiles,
+      'fileType': instance.fileType,
+      'allowPartial': instance.allowPartial,
+      'excludeNsfw': instance.excludeNsfw,
+    };
 
 Value? _$JsonConverterFromJson<Json, Value>(
   Object? json,

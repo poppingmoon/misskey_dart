@@ -6,14 +6,14 @@ part of 'note_edited.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$NoteEditedImpl _$$NoteEditedImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$NoteEditedImpl', json, ($checkedConvert) {
-      final val = _$NoteEditedImpl(
+_NoteEdited _$NoteEditedFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_NoteEdited', json, ($checkedConvert) {
+      final val = _NoteEdited(
         cw: $checkedConvert('cw', (v) => v as String?),
         text: $checkedConvert('text', (v) => v as String?),
       );
       return val;
     });
 
-Map<String, dynamic> _$$NoteEditedImplToJson(_$NoteEditedImpl instance) =>
+Map<String, dynamic> _$NoteEditedToJson(_NoteEdited instance) =>
     <String, dynamic>{'cw': instance.cw, 'text': instance.text};

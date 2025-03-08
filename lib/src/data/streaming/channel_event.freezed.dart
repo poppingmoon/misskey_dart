@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,230 +10,147 @@ part of 'channel_event.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-ChannelEvent _$ChannelEventFromJson(Map<String, dynamic> json) {
-  return _ChannelEvent.fromJson(json);
-}
 
 /// @nodoc
 mixin _$ChannelEvent {
-  String get id =>
-      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
-  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-  ChannelEventType? get type => throw _privateConstructorUsedError;
-  dynamic get body => throw _privateConstructorUsedError;
+
+ String get id;// ignore: invalid_annotation_target
+@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) ChannelEventType? get type; dynamic get body;
+/// Create a copy of ChannelEvent
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$ChannelEventCopyWith<ChannelEvent> get copyWith => _$ChannelEventCopyWithImpl<ChannelEvent>(this as ChannelEvent, _$identity);
 
   /// Serializes this ChannelEvent to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of ChannelEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $ChannelEventCopyWith<ChannelEvent> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.type, type) || other.type == type)&&const DeepCollectionEquality().equals(other.body, body));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,type,const DeepCollectionEquality().hash(body));
+
+@override
+String toString() {
+  return 'ChannelEvent(id: $id, type: $type, body: $body)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $ChannelEventCopyWith<$Res> {
-  factory $ChannelEventCopyWith(
-    ChannelEvent value,
-    $Res Function(ChannelEvent) then,
-  ) = _$ChannelEventCopyWithImpl<$Res, ChannelEvent>;
-  @useResult
-  $Res call({
-    String id,
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    ChannelEventType? type,
-    dynamic body,
-  });
-}
+abstract mixin class $ChannelEventCopyWith<$Res>  {
+  factory $ChannelEventCopyWith(ChannelEvent value, $Res Function(ChannelEvent) _then) = _$ChannelEventCopyWithImpl;
+@useResult
+$Res call({
+ String id,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) ChannelEventType? type, dynamic body
+});
 
+
+
+
+}
 /// @nodoc
-class _$ChannelEventCopyWithImpl<$Res, $Val extends ChannelEvent>
+class _$ChannelEventCopyWithImpl<$Res>
     implements $ChannelEventCopyWith<$Res> {
-  _$ChannelEventCopyWithImpl(this._value, this._then);
+  _$ChannelEventCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final ChannelEvent _self;
+  final $Res Function(ChannelEvent) _then;
 
-  /// Create a copy of ChannelEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? type = freezed,
-    Object? body = freezed,
-  }) {
-    return _then(
-      _value.copyWith(
-            id:
-                null == id
-                    ? _value.id
-                    : id // ignore: cast_nullable_to_non_nullable
-                        as String,
-            type:
-                freezed == type
-                    ? _value.type
-                    : type // ignore: cast_nullable_to_non_nullable
-                        as ChannelEventType?,
-            body:
-                freezed == body
-                    ? _value.body
-                    : body // ignore: cast_nullable_to_non_nullable
-                        as dynamic,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of ChannelEvent
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? type = freezed,Object? body = freezed,}) {
+  return _then(_self.copyWith(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
+as ChannelEventType?,body: freezed == body ? _self.body : body // ignore: cast_nullable_to_non_nullable
+as dynamic,
+  ));
 }
 
-/// @nodoc
-abstract class _$$ChannelEventImplCopyWith<$Res>
-    implements $ChannelEventCopyWith<$Res> {
-  factory _$$ChannelEventImplCopyWith(
-    _$ChannelEventImpl value,
-    $Res Function(_$ChannelEventImpl) then,
-  ) = __$$ChannelEventImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({
-    String id,
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    ChannelEventType? type,
-    dynamic body,
-  });
 }
 
-/// @nodoc
-class __$$ChannelEventImplCopyWithImpl<$Res>
-    extends _$ChannelEventCopyWithImpl<$Res, _$ChannelEventImpl>
-    implements _$$ChannelEventImplCopyWith<$Res> {
-  __$$ChannelEventImplCopyWithImpl(
-    _$ChannelEventImpl _value,
-    $Res Function(_$ChannelEventImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of ChannelEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? type = freezed,
-    Object? body = freezed,
-  }) {
-    return _then(
-      _$ChannelEventImpl(
-        id:
-            null == id
-                ? _value.id
-                : id // ignore: cast_nullable_to_non_nullable
-                    as String,
-        type:
-            freezed == type
-                ? _value.type
-                : type // ignore: cast_nullable_to_non_nullable
-                    as ChannelEventType?,
-        body:
-            freezed == body
-                ? _value.body
-                : body // ignore: cast_nullable_to_non_nullable
-                    as dynamic,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$ChannelEventImpl implements _ChannelEvent {
-  const _$ChannelEventImpl({
-    required this.id,
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type,
-    required this.body,
-  });
 
-  factory _$ChannelEventImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ChannelEventImplFromJson(json);
+class _ChannelEvent implements ChannelEvent {
+  const _ChannelEvent({required this.id, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type, required this.body});
+  factory _ChannelEvent.fromJson(Map<String, dynamic> json) => _$ChannelEventFromJson(json);
 
-  @override
-  final String id;
-  // ignore: invalid_annotation_target
-  @override
-  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-  final ChannelEventType? type;
-  @override
-  final dynamic body;
+@override final  String id;
+// ignore: invalid_annotation_target
+@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  ChannelEventType? type;
+@override final  dynamic body;
 
-  @override
-  String toString() {
-    return 'ChannelEvent(id: $id, type: $type, body: $body)';
-  }
+/// Create a copy of ChannelEvent
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$ChannelEventCopyWith<_ChannelEvent> get copyWith => __$ChannelEventCopyWithImpl<_ChannelEvent>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ChannelEventImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.type, type) || other.type == type) &&
-            const DeepCollectionEquality().equals(other.body, body));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    id,
-    type,
-    const DeepCollectionEquality().hash(body),
-  );
-
-  /// Create a copy of ChannelEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ChannelEventImplCopyWith<_$ChannelEventImpl> get copyWith =>
-      __$$ChannelEventImplCopyWithImpl<_$ChannelEventImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$ChannelEventImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$ChannelEventToJson(this, );
 }
 
-abstract class _ChannelEvent implements ChannelEvent {
-  const factory _ChannelEvent({
-    required final String id,
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    final ChannelEventType? type,
-    required final dynamic body,
-  }) = _$ChannelEventImpl;
-
-  factory _ChannelEvent.fromJson(Map<String, dynamic> json) =
-      _$ChannelEventImpl.fromJson;
-
-  @override
-  String get id; // ignore: invalid_annotation_target
-  @override
-  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-  ChannelEventType? get type;
-  @override
-  dynamic get body;
-
-  /// Create a copy of ChannelEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ChannelEventImplCopyWith<_$ChannelEventImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.type, type) || other.type == type)&&const DeepCollectionEquality().equals(other.body, body));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,type,const DeepCollectionEquality().hash(body));
+
+@override
+String toString() {
+  return 'ChannelEvent(id: $id, type: $type, body: $body)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$ChannelEventCopyWith<$Res> implements $ChannelEventCopyWith<$Res> {
+  factory _$ChannelEventCopyWith(_ChannelEvent value, $Res Function(_ChannelEvent) _then) = __$ChannelEventCopyWithImpl;
+@override @useResult
+$Res call({
+ String id,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) ChannelEventType? type, dynamic body
+});
+
+
+
+
+}
+/// @nodoc
+class __$ChannelEventCopyWithImpl<$Res>
+    implements _$ChannelEventCopyWith<$Res> {
+  __$ChannelEventCopyWithImpl(this._self, this._then);
+
+  final _ChannelEvent _self;
+  final $Res Function(_ChannelEvent) _then;
+
+/// Create a copy of ChannelEvent
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? type = freezed,Object? body = freezed,}) {
+  return _then(_ChannelEvent(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
+as ChannelEventType?,body: freezed == body ? _self.body : body // ignore: cast_nullable_to_non_nullable
+as dynamic,
+  ));
+}
+
+
+}
+
+// dart format on

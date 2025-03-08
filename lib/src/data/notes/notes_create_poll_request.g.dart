@@ -6,10 +6,10 @@ part of 'notes_create_poll_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$NotesCreatePollRequestImpl _$$NotesCreatePollRequestImplFromJson(
+_NotesCreatePollRequest _$NotesCreatePollRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$NotesCreatePollRequestImpl', json, ($checkedConvert) {
-  final val = _$NotesCreatePollRequestImpl(
+) => $checkedCreate('_NotesCreatePollRequest', json, ($checkedConvert) {
+  final val = _NotesCreatePollRequest(
     choices: $checkedConvert(
       'choices',
       (v) => (v as List<dynamic>).map((e) => e as String).toList(),
@@ -33,8 +33,8 @@ _$NotesCreatePollRequestImpl _$$NotesCreatePollRequestImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$NotesCreatePollRequestImplToJson(
-  _$NotesCreatePollRequestImpl instance,
+Map<String, dynamic> _$NotesCreatePollRequestToJson(
+  _NotesCreatePollRequest instance,
 ) => <String, dynamic>{
   'choices': instance.choices,
   if (instance.multiple case final value?) 'multiple': value,

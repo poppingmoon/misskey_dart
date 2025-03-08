@@ -6,7 +6,7 @@ part 'meta_response.freezed.dart';
 part 'meta_response.g.dart';
 
 @freezed
-class MetaResponse with _$MetaResponse {
+abstract class MetaResponse with _$MetaResponse {
   const factory MetaResponse({
     String? maintainerName,
     String? maintainerEmail,
@@ -69,7 +69,7 @@ class MetaResponse with _$MetaResponse {
 }
 
 @freezed
-class MetaAd with _$MetaAd {
+abstract class MetaAd with _$MetaAd {
   const factory MetaAd({
     required String id,
     required String place,
@@ -81,7 +81,7 @@ class MetaAd with _$MetaAd {
 }
 
 @freezed
-class MetaFeature with _$MetaFeature {
+abstract class MetaFeature with _$MetaFeature {
   const factory MetaFeature({
     bool? registration,
     bool? emailRequiredForSignup,

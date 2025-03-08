@@ -6,43 +6,42 @@ part of 'notes_local_timeline_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$NotesLocalTimelineRequestImpl _$$NotesLocalTimelineRequestImplFromJson(
+_NotesLocalTimelineRequest _$NotesLocalTimelineRequestFromJson(
   Map<String, dynamic> json,
-) =>
-    $checkedCreate(r'_$NotesLocalTimelineRequestImpl', json, ($checkedConvert) {
-      final val = _$NotesLocalTimelineRequestImpl(
-        withFiles: $checkedConvert('withFiles', (v) => v as bool?),
-        withRenotes: $checkedConvert('withRenotes', (v) => v as bool?),
-        withReplies: $checkedConvert('withReplies', (v) => v as bool?),
-        fileType: $checkedConvert(
-          'fileType',
-          (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-        ),
-        excludeNsfw: $checkedConvert('excludeNsfw', (v) => v as bool?),
-        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-        sinceId: $checkedConvert('sinceId', (v) => v as String?),
-        untilId: $checkedConvert('untilId', (v) => v as String?),
-        sinceDate: $checkedConvert(
-          'sinceDate',
-          (v) => _$JsonConverterFromJson<int, DateTime>(
-            v,
-            const EpocTimeDateTimeConverter().fromJson,
-          ),
-        ),
-        untilDate: $checkedConvert(
-          'untilDate',
-          (v) => _$JsonConverterFromJson<int, DateTime>(
-            v,
-            const EpocTimeDateTimeConverter().fromJson,
-          ),
-        ),
-        allowPartial: $checkedConvert('allowPartial', (v) => v as bool?),
-      );
-      return val;
-    });
+) => $checkedCreate('_NotesLocalTimelineRequest', json, ($checkedConvert) {
+  final val = _NotesLocalTimelineRequest(
+    withFiles: $checkedConvert('withFiles', (v) => v as bool?),
+    withRenotes: $checkedConvert('withRenotes', (v) => v as bool?),
+    withReplies: $checkedConvert('withReplies', (v) => v as bool?),
+    fileType: $checkedConvert(
+      'fileType',
+      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
+    ),
+    excludeNsfw: $checkedConvert('excludeNsfw', (v) => v as bool?),
+    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
+    sinceId: $checkedConvert('sinceId', (v) => v as String?),
+    untilId: $checkedConvert('untilId', (v) => v as String?),
+    sinceDate: $checkedConvert(
+      'sinceDate',
+      (v) => _$JsonConverterFromJson<int, DateTime>(
+        v,
+        const EpocTimeDateTimeConverter().fromJson,
+      ),
+    ),
+    untilDate: $checkedConvert(
+      'untilDate',
+      (v) => _$JsonConverterFromJson<int, DateTime>(
+        v,
+        const EpocTimeDateTimeConverter().fromJson,
+      ),
+    ),
+    allowPartial: $checkedConvert('allowPartial', (v) => v as bool?),
+  );
+  return val;
+});
 
-Map<String, dynamic> _$$NotesLocalTimelineRequestImplToJson(
-  _$NotesLocalTimelineRequestImpl instance,
+Map<String, dynamic> _$NotesLocalTimelineRequestToJson(
+  _NotesLocalTimelineRequest instance,
 ) => <String, dynamic>{
   'withFiles': instance.withFiles,
   'withRenotes': instance.withRenotes,

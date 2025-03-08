@@ -6,15 +6,13 @@ part of 'notes_state_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$NotesStateRequestImpl _$$NotesStateRequestImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$NotesStateRequestImpl', json, ($checkedConvert) {
-  final val = _$NotesStateRequestImpl(
-    noteId: $checkedConvert('noteId', (v) => v as String),
-  );
-  return val;
-});
+_NotesStateRequest _$NotesStateRequestFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_NotesStateRequest', json, ($checkedConvert) {
+      final val = _NotesStateRequest(
+        noteId: $checkedConvert('noteId', (v) => v as String),
+      );
+      return val;
+    });
 
-Map<String, dynamic> _$$NotesStateRequestImplToJson(
-  _$NotesStateRequestImpl instance,
-) => <String, dynamic>{'noteId': instance.noteId};
+Map<String, dynamic> _$NotesStateRequestToJson(_NotesStateRequest instance) =>
+    <String, dynamic>{'noteId': instance.noteId};

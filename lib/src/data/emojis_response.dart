@@ -5,7 +5,7 @@ part 'emojis_response.freezed.dart';
 part 'emojis_response.g.dart';
 
 @freezed
-class EmojisResponse with _$EmojisResponse {
+abstract class EmojisResponse with _$EmojisResponse {
   const factory EmojisResponse({required List<Emoji> emojis}) = _EmojisResponse;
 
   factory EmojisResponse.fromJson(Map<String, Object?> json) =>
@@ -13,7 +13,7 @@ class EmojisResponse with _$EmojisResponse {
 }
 
 @freezed
-class Emoji with _$Emoji {
+abstract class Emoji with _$Emoji {
   const factory Emoji({
     @Default([]) List<String> aliases,
     required String name,

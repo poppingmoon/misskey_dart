@@ -6,15 +6,15 @@ part of 'drive_files_delete_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$DriveFilesDeleteRequestImpl _$$DriveFilesDeleteRequestImplFromJson(
+_DriveFilesDeleteRequest _$DriveFilesDeleteRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$DriveFilesDeleteRequestImpl', json, ($checkedConvert) {
-  final val = _$DriveFilesDeleteRequestImpl(
+) => $checkedCreate('_DriveFilesDeleteRequest', json, ($checkedConvert) {
+  final val = _DriveFilesDeleteRequest(
     fileId: $checkedConvert('fileId', (v) => v as String),
   );
   return val;
 });
 
-Map<String, dynamic> _$$DriveFilesDeleteRequestImplToJson(
-  _$DriveFilesDeleteRequestImpl instance,
+Map<String, dynamic> _$DriveFilesDeleteRequestToJson(
+  _DriveFilesDeleteRequest instance,
 ) => <String, dynamic>{'fileId': instance.fileId};

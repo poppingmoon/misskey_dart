@@ -6,15 +6,15 @@ part of 'users_lists_create_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$UsersListsCreateRequestImpl _$$UsersListsCreateRequestImplFromJson(
+_UsersListsCreateRequest _$UsersListsCreateRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$UsersListsCreateRequestImpl', json, ($checkedConvert) {
-  final val = _$UsersListsCreateRequestImpl(
+) => $checkedCreate('_UsersListsCreateRequest', json, ($checkedConvert) {
+  final val = _UsersListsCreateRequest(
     name: $checkedConvert('name', (v) => v as String),
   );
   return val;
 });
 
-Map<String, dynamic> _$$UsersListsCreateRequestImplToJson(
-  _$UsersListsCreateRequestImpl instance,
+Map<String, dynamic> _$UsersListsCreateRequestToJson(
+  _UsersListsCreateRequest instance,
 ) => <String, dynamic>{'name': instance.name};

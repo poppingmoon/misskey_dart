@@ -6,12 +6,10 @@ part of 'notes_schedule_create_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$NotesScheduleCreateRequestImpl _$$NotesScheduleCreateRequestImplFromJson(
+_NotesScheduleCreateRequest _$NotesScheduleCreateRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$NotesScheduleCreateRequestImpl', json, (
-  $checkedConvert,
-) {
-  final val = _$NotesScheduleCreateRequestImpl(
+) => $checkedCreate('_NotesScheduleCreateRequest', json, ($checkedConvert) {
+  final val = _NotesScheduleCreateRequest(
     visibility: $checkedConvert(
       'visibility',
       (v) => $enumDecodeNullable(_$NoteVisibilityEnumMap, v),
@@ -64,8 +62,8 @@ _$NotesScheduleCreateRequestImpl _$$NotesScheduleCreateRequestImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$NotesScheduleCreateRequestImplToJson(
-  _$NotesScheduleCreateRequestImpl instance,
+Map<String, dynamic> _$NotesScheduleCreateRequestToJson(
+  _NotesScheduleCreateRequest instance,
 ) => <String, dynamic>{
   'visibility': _$NoteVisibilityEnumMap[instance.visibility],
   'visibleUserIds': instance.visibleUserIds,
@@ -103,9 +101,9 @@ const _$ReactionAcceptanceEnumMap = {
   ReactionAcceptance.likeOnly: 'likeOnly',
 };
 
-_$ScheduleNoteImpl _$$ScheduleNoteImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$ScheduleNoteImpl', json, ($checkedConvert) {
-      final val = _$ScheduleNoteImpl(
+_ScheduleNote _$ScheduleNoteFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_ScheduleNote', json, ($checkedConvert) {
+      final val = _ScheduleNote(
         scheduledAt: $checkedConvert(
           'scheduledAt',
           (v) => const EpocTimeDateTimeConverter().fromJson((v as num).toInt()),
@@ -114,46 +112,44 @@ _$ScheduleNoteImpl _$$ScheduleNoteImplFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$$ScheduleNoteImplToJson(
-  _$ScheduleNoteImpl instance,
+Map<String, dynamic> _$ScheduleNoteToJson(
+  _ScheduleNote instance,
 ) => <String, dynamic>{
   'scheduledAt': const EpocTimeDateTimeConverter().toJson(instance.scheduledAt),
 };
 
-_$ScheduledDeleteImpl _$$ScheduledDeleteImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$ScheduledDeleteImpl', json, ($checkedConvert) {
-  final val = _$ScheduledDeleteImpl(
-    deleteAt: $checkedConvert(
-      'deleteAt',
-      (v) => _$JsonConverterFromJson<int, DateTime>(
-        v,
-        const EpocTimeDateTimeConverter().fromJson,
-      ),
-    ),
-    deleteAfter: $checkedConvert(
-      'deleteAfter',
-      (v) => _$JsonConverterFromJson<int, Duration>(
-        v,
-        const DurationConverter().fromJson,
-      ),
-    ),
-  );
-  return val;
-});
+_ScheduledDelete _$ScheduledDeleteFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_ScheduledDelete', json, ($checkedConvert) {
+      final val = _ScheduledDelete(
+        deleteAt: $checkedConvert(
+          'deleteAt',
+          (v) => _$JsonConverterFromJson<int, DateTime>(
+            v,
+            const EpocTimeDateTimeConverter().fromJson,
+          ),
+        ),
+        deleteAfter: $checkedConvert(
+          'deleteAfter',
+          (v) => _$JsonConverterFromJson<int, Duration>(
+            v,
+            const DurationConverter().fromJson,
+          ),
+        ),
+      );
+      return val;
+    });
 
-Map<String, dynamic> _$$ScheduledDeleteImplToJson(
-  _$ScheduledDeleteImpl instance,
-) => <String, dynamic>{
-  'deleteAt': _$JsonConverterToJson<int, DateTime>(
-    instance.deleteAt,
-    const EpocTimeDateTimeConverter().toJson,
-  ),
-  'deleteAfter': _$JsonConverterToJson<int, Duration>(
-    instance.deleteAfter,
-    const DurationConverter().toJson,
-  ),
-};
+Map<String, dynamic> _$ScheduledDeleteToJson(_ScheduledDelete instance) =>
+    <String, dynamic>{
+      'deleteAt': _$JsonConverterToJson<int, DateTime>(
+        instance.deleteAt,
+        const EpocTimeDateTimeConverter().toJson,
+      ),
+      'deleteAfter': _$JsonConverterToJson<int, Duration>(
+        instance.deleteAfter,
+        const DurationConverter().toJson,
+      ),
+    };
 
 Value? _$JsonConverterFromJson<Json, Value>(
   Object? json,

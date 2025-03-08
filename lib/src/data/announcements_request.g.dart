@@ -6,10 +6,10 @@ part of 'announcements_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$AnnouncementsRequestImpl _$$AnnouncementsRequestImplFromJson(
+_AnnouncementsRequest _$AnnouncementsRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$AnnouncementsRequestImpl', json, ($checkedConvert) {
-  final val = _$AnnouncementsRequestImpl(
+) => $checkedCreate('_AnnouncementsRequest', json, ($checkedConvert) {
+  final val = _AnnouncementsRequest(
     limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
     withUnreads: $checkedConvert('withUnreads', (v) => v as bool?),
     isActive: $checkedConvert('isActive', (v) => v as bool?),
@@ -20,8 +20,8 @@ _$AnnouncementsRequestImpl _$$AnnouncementsRequestImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$AnnouncementsRequestImplToJson(
-  _$AnnouncementsRequestImpl instance,
+Map<String, dynamic> _$AnnouncementsRequestToJson(
+  _AnnouncementsRequest instance,
 ) => <String, dynamic>{
   'limit': instance.limit,
   'withUnreads': instance.withUnreads,

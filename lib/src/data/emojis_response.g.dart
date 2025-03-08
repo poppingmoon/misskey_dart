@@ -6,9 +6,9 @@ part of 'emojis_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$EmojisResponseImpl _$$EmojisResponseImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$EmojisResponseImpl', json, ($checkedConvert) {
-      final val = _$EmojisResponseImpl(
+_EmojisResponse _$EmojisResponseFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_EmojisResponse', json, ($checkedConvert) {
+      final val = _EmojisResponse(
         emojis: $checkedConvert(
           'emojis',
           (v) =>
@@ -20,17 +20,16 @@ _$EmojisResponseImpl _$$EmojisResponseImplFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$$EmojisResponseImplToJson(
-  _$EmojisResponseImpl instance,
-) => <String, dynamic>{
-  'emojis': instance.emojis.map((e) => e.toJson()).toList(),
-};
+Map<String, dynamic> _$EmojisResponseToJson(_EmojisResponse instance) =>
+    <String, dynamic>{
+      'emojis': instance.emojis.map((e) => e.toJson()).toList(),
+    };
 
-_$EmojiImpl _$$EmojiImplFromJson(Map<String, dynamic> json) => $checkedCreate(
-  r'_$EmojiImpl',
+_Emoji _$EmojiFromJson(Map<String, dynamic> json) => $checkedCreate(
+  '_Emoji',
   json,
   ($checkedConvert) {
-    final val = _$EmojiImpl(
+    final val = _Emoji(
       aliases: $checkedConvert(
         'aliases',
         (v) =>
@@ -53,14 +52,13 @@ _$EmojiImpl _$$EmojiImplFromJson(Map<String, dynamic> json) => $checkedCreate(
   },
 );
 
-Map<String, dynamic> _$$EmojiImplToJson(_$EmojiImpl instance) =>
-    <String, dynamic>{
-      'aliases': instance.aliases,
-      'name': instance.name,
-      'category': instance.category,
-      'url': const NullableUriConverter().toJson(instance.url),
-      'localOnly': instance.localOnly,
-      'isSensitive': instance.isSensitive,
-      'roleIdsThatCanBeUsedThisEmojiAsReaction':
-          instance.roleIdsThatCanBeUsedThisEmojiAsReaction,
-    };
+Map<String, dynamic> _$EmojiToJson(_Emoji instance) => <String, dynamic>{
+  'aliases': instance.aliases,
+  'name': instance.name,
+  'category': instance.category,
+  'url': const NullableUriConverter().toJson(instance.url),
+  'localOnly': instance.localOnly,
+  'isSensitive': instance.isSensitive,
+  'roleIdsThatCanBeUsedThisEmojiAsReaction':
+      instance.roleIdsThatCanBeUsedThisEmojiAsReaction,
+};

@@ -6,13 +6,10 @@ part of 'federation_show_instance_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$FederationShowInstanceResponseImpl
-_$$FederationShowInstanceResponseImplFromJson(
+_FederationShowInstanceResponse _$FederationShowInstanceResponseFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$FederationShowInstanceResponseImpl', json, (
-  $checkedConvert,
-) {
-  final val = _$FederationShowInstanceResponseImpl(
+) => $checkedCreate('_FederationShowInstanceResponse', json, ($checkedConvert) {
+  final val = _FederationShowInstanceResponse(
     id: $checkedConvert('id', (v) => v as String),
     firstRetrievedAt: $checkedConvert(
       'firstRetrievedAt',
@@ -80,8 +77,8 @@ _$$FederationShowInstanceResponseImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$FederationShowInstanceResponseImplToJson(
-  _$FederationShowInstanceResponseImpl instance,
+Map<String, dynamic> _$FederationShowInstanceResponseToJson(
+  _FederationShowInstanceResponse instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'firstRetrievedAt': const DateTimeConverter().toJson(

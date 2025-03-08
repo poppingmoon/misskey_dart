@@ -6,22 +6,21 @@ part of 'following_update_all.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$FollowingUpdateAllRequestImpl _$$FollowingUpdateAllRequestImplFromJson(
+_FollowingUpdateAllRequest _$FollowingUpdateAllRequestFromJson(
   Map<String, dynamic> json,
-) =>
-    $checkedCreate(r'_$FollowingUpdateAllRequestImpl', json, ($checkedConvert) {
-      final val = _$FollowingUpdateAllRequestImpl(
-        notify: $checkedConvert(
-          'notify',
-          (v) => $enumDecodeNullable(_$FollowingUpdateAllNotifyTypeEnumMap, v),
-        ),
-        withReplies: $checkedConvert('withReplies', (v) => v as bool?),
-      );
-      return val;
-    });
+) => $checkedCreate('_FollowingUpdateAllRequest', json, ($checkedConvert) {
+  final val = _FollowingUpdateAllRequest(
+    notify: $checkedConvert(
+      'notify',
+      (v) => $enumDecodeNullable(_$FollowingUpdateAllNotifyTypeEnumMap, v),
+    ),
+    withReplies: $checkedConvert('withReplies', (v) => v as bool?),
+  );
+  return val;
+});
 
-Map<String, dynamic> _$$FollowingUpdateAllRequestImplToJson(
-  _$FollowingUpdateAllRequestImpl instance,
+Map<String, dynamic> _$FollowingUpdateAllRequestToJson(
+  _FollowingUpdateAllRequest instance,
 ) => <String, dynamic>{
   'notify': _$FollowingUpdateAllNotifyTypeEnumMap[instance.notify],
   'withReplies': instance.withReplies,

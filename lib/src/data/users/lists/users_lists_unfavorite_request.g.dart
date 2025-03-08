@@ -6,17 +6,15 @@ part of 'users_lists_unfavorite_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$UsersListsUnfavoriteRequestImpl _$$UsersListsUnfavoriteRequestImplFromJson(
+_UsersListsUnfavoriteRequest _$UsersListsUnfavoriteRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$UsersListsUnfavoriteRequestImpl', json, (
-  $checkedConvert,
-) {
-  final val = _$UsersListsUnfavoriteRequestImpl(
+) => $checkedCreate('_UsersListsUnfavoriteRequest', json, ($checkedConvert) {
+  final val = _UsersListsUnfavoriteRequest(
     listId: $checkedConvert('listId', (v) => v as String),
   );
   return val;
 });
 
-Map<String, dynamic> _$$UsersListsUnfavoriteRequestImplToJson(
-  _$UsersListsUnfavoriteRequestImpl instance,
+Map<String, dynamic> _$UsersListsUnfavoriteRequestToJson(
+  _UsersListsUnfavoriteRequest instance,
 ) => <String, dynamic>{'listId': instance.listId};

@@ -6,10 +6,10 @@ part of 'note.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$NoteImpl _$$NoteImplFromJson(
+_Note _$NoteFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$NoteImpl', json, ($checkedConvert) {
-  final val = _$NoteImpl(
+) => $checkedCreate('_Note', json, ($checkedConvert) {
+  final val = _Note(
     id: $checkedConvert('id', (v) => v as String),
     createdAt: $checkedConvert(
       'createdAt',
@@ -138,42 +138,41 @@ _$NoteImpl _$$NoteImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$NoteImplToJson(_$NoteImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'createdAt': const DateTimeConverter().toJson(instance.createdAt),
-      'updatedAt': const NullableDateTimeConverter().toJson(instance.updatedAt),
-      'text': instance.text,
-      'cw': instance.cw,
-      'user': instance.user.toJson(),
-      'userId': instance.userId,
-      'visibility': _$NoteVisibilityEnumMap[instance.visibility],
-      'localOnly': instance.localOnly,
-      'renoteCount': instance.renoteCount,
-      'repliesCount': instance.repliesCount,
-      'reactionCount': instance.reactionCount,
-      'reactions': instance.reactions,
-      'reactionEmojis': const EmojisConverter().toJson(instance.reactionEmojis),
-      'emojis': const EmojisConverter().toJson(instance.emojis),
-      'fileIds': instance.fileIds,
-      'files': instance.files.map((e) => e.toJson()).toList(),
-      'replyId': instance.replyId,
-      'renoteId': instance.renoteId,
-      'channelId': instance.channelId,
-      'reactionAcceptance':
-          _$ReactionAcceptanceEnumMap[instance.reactionAcceptance],
-      'renote': instance.renote?.toJson(),
-      'reply': instance.reply?.toJson(),
-      'visibleUserIds': instance.visibleUserIds,
-      'mentions': instance.mentions,
-      'myReaction': instance.myReaction,
-      'channel': instance.channel?.toJson(),
-      'uri': const NullableUriConverter().toJson(instance.uri),
-      'url': const NullableUriConverter().toJson(instance.url),
-      'reactionAndUserPairCache': instance.reactionAndUserPairCache,
-      'poll': instance.poll?.toJson(),
-      'clippedCount': instance.clippedCount,
-    };
+Map<String, dynamic> _$NoteToJson(_Note instance) => <String, dynamic>{
+  'id': instance.id,
+  'createdAt': const DateTimeConverter().toJson(instance.createdAt),
+  'updatedAt': const NullableDateTimeConverter().toJson(instance.updatedAt),
+  'text': instance.text,
+  'cw': instance.cw,
+  'user': instance.user.toJson(),
+  'userId': instance.userId,
+  'visibility': _$NoteVisibilityEnumMap[instance.visibility],
+  'localOnly': instance.localOnly,
+  'renoteCount': instance.renoteCount,
+  'repliesCount': instance.repliesCount,
+  'reactionCount': instance.reactionCount,
+  'reactions': instance.reactions,
+  'reactionEmojis': const EmojisConverter().toJson(instance.reactionEmojis),
+  'emojis': const EmojisConverter().toJson(instance.emojis),
+  'fileIds': instance.fileIds,
+  'files': instance.files.map((e) => e.toJson()).toList(),
+  'replyId': instance.replyId,
+  'renoteId': instance.renoteId,
+  'channelId': instance.channelId,
+  'reactionAcceptance':
+      _$ReactionAcceptanceEnumMap[instance.reactionAcceptance],
+  'renote': instance.renote?.toJson(),
+  'reply': instance.reply?.toJson(),
+  'visibleUserIds': instance.visibleUserIds,
+  'mentions': instance.mentions,
+  'myReaction': instance.myReaction,
+  'channel': instance.channel?.toJson(),
+  'uri': const NullableUriConverter().toJson(instance.uri),
+  'url': const NullableUriConverter().toJson(instance.url),
+  'reactionAndUserPairCache': instance.reactionAndUserPairCache,
+  'poll': instance.poll?.toJson(),
+  'clippedCount': instance.clippedCount,
+};
 
 Value? _$JsonConverterFromJson<Json, Value>(
   Object? json,
@@ -195,77 +194,75 @@ const _$ReactionAcceptanceEnumMap = {
   ReactionAcceptance.likeOnly: 'likeOnly',
 };
 
-_$NoteChannelInfoImpl _$$NoteChannelInfoImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$NoteChannelInfoImpl', json, ($checkedConvert) {
-  final val = _$NoteChannelInfoImpl(
-    id: $checkedConvert('id', (v) => v as String),
-    name: $checkedConvert('name', (v) => v as String),
-    color: $checkedConvert(
-      'color',
-      (v) => const NullableColorConverter().fromJson(v as String?),
-    ),
-    isSensitive: $checkedConvert('isSensitive', (v) => v as bool? ?? false),
-    allowRenoteToExternal: $checkedConvert(
-      'allowRenoteToExternal',
-      (v) => v as bool? ?? true,
-    ),
-  );
-  return val;
-});
-
-Map<String, dynamic> _$$NoteChannelInfoImplToJson(
-  _$NoteChannelInfoImpl instance,
-) => <String, dynamic>{
-  'id': instance.id,
-  'name': instance.name,
-  'color': const NullableColorConverter().toJson(instance.color),
-  'isSensitive': instance.isSensitive,
-  'allowRenoteToExternal': instance.allowRenoteToExternal,
-};
-
-_$NotePollImpl _$$NotePollImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$NotePollImpl', json, ($checkedConvert) {
-      final val = _$NotePollImpl(
-        multiple: $checkedConvert('multiple', (v) => v as bool),
-        expiresAt: $checkedConvert(
-          'expiresAt',
-          (v) => _$JsonConverterFromJson<String, DateTime>(
-            v,
-            const DateTimeConverter().fromJson,
-          ),
+_NoteChannelInfo _$NoteChannelInfoFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_NoteChannelInfo', json, ($checkedConvert) {
+      final val = _NoteChannelInfo(
+        id: $checkedConvert('id', (v) => v as String),
+        name: $checkedConvert('name', (v) => v as String),
+        color: $checkedConvert(
+          'color',
+          (v) => const NullableColorConverter().fromJson(v as String?),
         ),
-        choices: $checkedConvert(
-          'choices',
-          (v) =>
-              (v as List<dynamic>)
-                  .map(
-                    (e) => NotePollChoice.fromJson(e as Map<String, dynamic>),
-                  )
-                  .toList(),
+        isSensitive: $checkedConvert('isSensitive', (v) => v as bool? ?? false),
+        allowRenoteToExternal: $checkedConvert(
+          'allowRenoteToExternal',
+          (v) => v as bool? ?? true,
         ),
       );
       return val;
     });
 
-Map<String, dynamic> _$$NotePollImplToJson(_$NotePollImpl instance) =>
+Map<String, dynamic> _$NoteChannelInfoToJson(_NoteChannelInfo instance) =>
     <String, dynamic>{
-      'multiple': instance.multiple,
-      'expiresAt': _$JsonConverterToJson<String, DateTime>(
-        instance.expiresAt,
-        const DateTimeConverter().toJson,
-      ),
-      'choices': instance.choices.map((e) => e.toJson()).toList(),
+      'id': instance.id,
+      'name': instance.name,
+      'color': const NullableColorConverter().toJson(instance.color),
+      'isSensitive': instance.isSensitive,
+      'allowRenoteToExternal': instance.allowRenoteToExternal,
     };
+
+_NotePoll _$NotePollFromJson(Map<String, dynamic> json) => $checkedCreate(
+  '_NotePoll',
+  json,
+  ($checkedConvert) {
+    final val = _NotePoll(
+      multiple: $checkedConvert('multiple', (v) => v as bool),
+      expiresAt: $checkedConvert(
+        'expiresAt',
+        (v) => _$JsonConverterFromJson<String, DateTime>(
+          v,
+          const DateTimeConverter().fromJson,
+        ),
+      ),
+      choices: $checkedConvert(
+        'choices',
+        (v) =>
+            (v as List<dynamic>)
+                .map((e) => NotePollChoice.fromJson(e as Map<String, dynamic>))
+                .toList(),
+      ),
+    );
+    return val;
+  },
+);
+
+Map<String, dynamic> _$NotePollToJson(_NotePoll instance) => <String, dynamic>{
+  'multiple': instance.multiple,
+  'expiresAt': _$JsonConverterToJson<String, DateTime>(
+    instance.expiresAt,
+    const DateTimeConverter().toJson,
+  ),
+  'choices': instance.choices.map((e) => e.toJson()).toList(),
+};
 
 Json? _$JsonConverterToJson<Json, Value>(
   Value? value,
   Json? Function(Value value) toJson,
 ) => value == null ? null : toJson(value);
 
-_$NotePollChoiceImpl _$$NotePollChoiceImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$NotePollChoiceImpl', json, ($checkedConvert) {
-      final val = _$NotePollChoiceImpl(
+_NotePollChoice _$NotePollChoiceFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_NotePollChoice', json, ($checkedConvert) {
+      final val = _NotePollChoice(
         text: $checkedConvert('text', (v) => v as String),
         votes: $checkedConvert('votes', (v) => (v as num).toInt()),
         isVoted: $checkedConvert('isVoted', (v) => v as bool? ?? false),
@@ -273,10 +270,9 @@ _$NotePollChoiceImpl _$$NotePollChoiceImplFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$$NotePollChoiceImplToJson(
-  _$NotePollChoiceImpl instance,
-) => <String, dynamic>{
-  'text': instance.text,
-  'votes': instance.votes,
-  'isVoted': instance.isVoted,
-};
+Map<String, dynamic> _$NotePollChoiceToJson(_NotePollChoice instance) =>
+    <String, dynamic>{
+      'text': instance.text,
+      'votes': instance.votes,
+      'isVoted': instance.isVoted,
+    };

@@ -6,17 +6,15 @@ part of 'following_requests_reject_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$FollowingRequestsRejectRequestImpl
-_$$FollowingRequestsRejectRequestImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$FollowingRequestsRejectRequestImpl', json, (
-      $checkedConvert,
-    ) {
-      final val = _$FollowingRequestsRejectRequestImpl(
-        userId: $checkedConvert('userId', (v) => v as String),
-      );
-      return val;
-    });
+_FollowingRequestsRejectRequest _$FollowingRequestsRejectRequestFromJson(
+  Map<String, dynamic> json,
+) => $checkedCreate('_FollowingRequestsRejectRequest', json, ($checkedConvert) {
+  final val = _FollowingRequestsRejectRequest(
+    userId: $checkedConvert('userId', (v) => v as String),
+  );
+  return val;
+});
 
-Map<String, dynamic> _$$FollowingRequestsRejectRequestImplToJson(
-  _$FollowingRequestsRejectRequestImpl instance,
+Map<String, dynamic> _$FollowingRequestsRejectRequestToJson(
+  _FollowingRequestsRejectRequest instance,
 ) => <String, dynamic>{'userId': instance.userId};

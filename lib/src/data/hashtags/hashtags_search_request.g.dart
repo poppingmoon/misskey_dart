@@ -6,10 +6,10 @@ part of 'hashtags_search_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$HashtagsSearchRequestImpl _$$HashtagsSearchRequestImplFromJson(
+_HashtagsSearchRequest _$HashtagsSearchRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$HashtagsSearchRequestImpl', json, ($checkedConvert) {
-  final val = _$HashtagsSearchRequestImpl(
+) => $checkedCreate('_HashtagsSearchRequest', json, ($checkedConvert) {
+  final val = _HashtagsSearchRequest(
     limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
     query: $checkedConvert('query', (v) => v as String),
     offset: $checkedConvert('offset', (v) => (v as num?)?.toInt()),
@@ -17,8 +17,8 @@ _$HashtagsSearchRequestImpl _$$HashtagsSearchRequestImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$HashtagsSearchRequestImplToJson(
-  _$HashtagsSearchRequestImpl instance,
+Map<String, dynamic> _$HashtagsSearchRequestToJson(
+  _HashtagsSearchRequest instance,
 ) => <String, dynamic>{
   'limit': instance.limit,
   'query': instance.query,

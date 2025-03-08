@@ -6,10 +6,10 @@ part of 'streaming_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$StreamingChannelResponseImpl _$$StreamingChannelResponseImplFromJson(
+StreamingChannelResponse _$StreamingChannelResponseFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$StreamingChannelResponseImpl', json, ($checkedConvert) {
-  final val = _$StreamingChannelResponseImpl(
+) => $checkedCreate('StreamingChannelResponse', json, ($checkedConvert) {
+  final val = StreamingChannelResponse(
     body: $checkedConvert(
       'body',
       (v) => ChannelStreamEvent.fromJson(v as Map<String, dynamic>),
@@ -19,108 +19,94 @@ _$StreamingChannelResponseImpl _$$StreamingChannelResponseImplFromJson(
   return val;
 }, fieldKeyMap: const {r'$type': 'type'});
 
-Map<String, dynamic> _$$StreamingChannelResponseImplToJson(
-  _$StreamingChannelResponseImpl instance,
+Map<String, dynamic> _$StreamingChannelResponseToJson(
+  StreamingChannelResponse instance,
 ) => <String, dynamic>{'body': instance.body.toJson(), 'type': instance.$type};
 
-_$StreamingChannelNoteUpdatedResponseImpl
-_$$StreamingChannelNoteUpdatedResponseImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(
-      r'_$StreamingChannelNoteUpdatedResponseImpl',
-      json,
-      ($checkedConvert) {
-        final val = _$StreamingChannelNoteUpdatedResponseImpl(
-          body: $checkedConvert(
-            'body',
-            (v) => NoteUpdateStreamEvent.fromJson(v as Map<String, dynamic>),
-          ),
-          $type: $checkedConvert('type', (v) => v as String?),
-        );
-        return val;
-      },
-      fieldKeyMap: const {r'$type': 'type'},
-    );
+StreamingChannelNoteUpdatedResponse
+_$StreamingChannelNoteUpdatedResponseFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('StreamingChannelNoteUpdatedResponse', json, (
+      $checkedConvert,
+    ) {
+      final val = StreamingChannelNoteUpdatedResponse(
+        body: $checkedConvert(
+          'body',
+          (v) => NoteUpdateStreamEvent.fromJson(v as Map<String, dynamic>),
+        ),
+        $type: $checkedConvert('type', (v) => v as String?),
+      );
+      return val;
+    }, fieldKeyMap: const {r'$type': 'type'});
 
-Map<String, dynamic> _$$StreamingChannelNoteUpdatedResponseImplToJson(
-  _$StreamingChannelNoteUpdatedResponseImpl instance,
+Map<String, dynamic> _$StreamingChannelNoteUpdatedResponseToJson(
+  StreamingChannelNoteUpdatedResponse instance,
 ) => <String, dynamic>{'body': instance.body.toJson(), 'type': instance.$type};
 
-_$StreamingChannelEmojiAddedResponseImpl
-_$$StreamingChannelEmojiAddedResponseImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(
-      r'_$StreamingChannelEmojiAddedResponseImpl',
-      json,
-      ($checkedConvert) {
-        final val = _$StreamingChannelEmojiAddedResponseImpl(
-          body: $checkedConvert(
-            'body',
-            (v) => EmojiAddedStreamEvent.fromJson(v as Map<String, dynamic>),
-          ),
-          $type: $checkedConvert('type', (v) => v as String?),
-        );
-        return val;
-      },
-      fieldKeyMap: const {r'$type': 'type'},
-    );
+StreamingChannelEmojiAddedResponse _$StreamingChannelEmojiAddedResponseFromJson(
+  Map<String, dynamic> json,
+) => $checkedCreate('StreamingChannelEmojiAddedResponse', json, (
+  $checkedConvert,
+) {
+  final val = StreamingChannelEmojiAddedResponse(
+    body: $checkedConvert(
+      'body',
+      (v) => EmojiAddedStreamEvent.fromJson(v as Map<String, dynamic>),
+    ),
+    $type: $checkedConvert('type', (v) => v as String?),
+  );
+  return val;
+}, fieldKeyMap: const {r'$type': 'type'});
 
-Map<String, dynamic> _$$StreamingChannelEmojiAddedResponseImplToJson(
-  _$StreamingChannelEmojiAddedResponseImpl instance,
+Map<String, dynamic> _$StreamingChannelEmojiAddedResponseToJson(
+  StreamingChannelEmojiAddedResponse instance,
 ) => <String, dynamic>{'body': instance.body.toJson(), 'type': instance.$type};
 
-_$StreamingChannelEmojiUpdatedResponseImpl
-_$$StreamingChannelEmojiUpdatedResponseImplFromJson(
+StreamingChannelEmojiUpdatedResponse
+_$StreamingChannelEmojiUpdatedResponseFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('StreamingChannelEmojiUpdatedResponse', json, (
+      $checkedConvert,
+    ) {
+      final val = StreamingChannelEmojiUpdatedResponse(
+        body: $checkedConvert(
+          'body',
+          (v) => EmojiUpdatedStreamEvent.fromJson(v as Map<String, dynamic>),
+        ),
+        $type: $checkedConvert('type', (v) => v as String?),
+      );
+      return val;
+    }, fieldKeyMap: const {r'$type': 'type'});
+
+Map<String, dynamic> _$StreamingChannelEmojiUpdatedResponseToJson(
+  StreamingChannelEmojiUpdatedResponse instance,
+) => <String, dynamic>{'body': instance.body.toJson(), 'type': instance.$type};
+
+StreamingChannelEmojiDeletedResponse
+_$StreamingChannelEmojiDeletedResponseFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('StreamingChannelEmojiDeletedResponse', json, (
+      $checkedConvert,
+    ) {
+      final val = StreamingChannelEmojiDeletedResponse(
+        body: $checkedConvert(
+          'body',
+          (v) => EmojiDeletedStreamEvent.fromJson(v as Map<String, dynamic>),
+        ),
+        $type: $checkedConvert('type', (v) => v as String?),
+      );
+      return val;
+    }, fieldKeyMap: const {r'$type': 'type'});
+
+Map<String, dynamic> _$StreamingChannelEmojiDeletedResponseToJson(
+  StreamingChannelEmojiDeletedResponse instance,
+) => <String, dynamic>{'body': instance.body.toJson(), 'type': instance.$type};
+
+StreamingChannelAnnouncementCreatedResponse
+_$StreamingChannelAnnouncementCreatedResponseFromJson(
   Map<String, dynamic> json,
 ) => $checkedCreate(
-  r'_$StreamingChannelEmojiUpdatedResponseImpl',
+  'StreamingChannelAnnouncementCreatedResponse',
   json,
   ($checkedConvert) {
-    final val = _$StreamingChannelEmojiUpdatedResponseImpl(
-      body: $checkedConvert(
-        'body',
-        (v) => EmojiUpdatedStreamEvent.fromJson(v as Map<String, dynamic>),
-      ),
-      $type: $checkedConvert('type', (v) => v as String?),
-    );
-    return val;
-  },
-  fieldKeyMap: const {r'$type': 'type'},
-);
-
-Map<String, dynamic> _$$StreamingChannelEmojiUpdatedResponseImplToJson(
-  _$StreamingChannelEmojiUpdatedResponseImpl instance,
-) => <String, dynamic>{'body': instance.body.toJson(), 'type': instance.$type};
-
-_$StreamingChannelEmojiDeletedResponseImpl
-_$$StreamingChannelEmojiDeletedResponseImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(
-  r'_$StreamingChannelEmojiDeletedResponseImpl',
-  json,
-  ($checkedConvert) {
-    final val = _$StreamingChannelEmojiDeletedResponseImpl(
-      body: $checkedConvert(
-        'body',
-        (v) => EmojiDeletedStreamEvent.fromJson(v as Map<String, dynamic>),
-      ),
-      $type: $checkedConvert('type', (v) => v as String?),
-    );
-    return val;
-  },
-  fieldKeyMap: const {r'$type': 'type'},
-);
-
-Map<String, dynamic> _$$StreamingChannelEmojiDeletedResponseImplToJson(
-  _$StreamingChannelEmojiDeletedResponseImpl instance,
-) => <String, dynamic>{'body': instance.body.toJson(), 'type': instance.$type};
-
-_$StreamingChannelAnnouncementCreatedResponseImpl
-_$$StreamingChannelAnnouncementCreatedResponseImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(
-  r'_$StreamingChannelAnnouncementCreatedResponseImpl',
-  json,
-  ($checkedConvert) {
-    final val = _$StreamingChannelAnnouncementCreatedResponseImpl(
+    final val = StreamingChannelAnnouncementCreatedResponse(
       body: $checkedConvert(
         'body',
         (v) =>
@@ -133,33 +119,28 @@ _$$StreamingChannelAnnouncementCreatedResponseImplFromJson(
   fieldKeyMap: const {r'$type': 'type'},
 );
 
-Map<String, dynamic> _$$StreamingChannelAnnouncementCreatedResponseImplToJson(
-  _$StreamingChannelAnnouncementCreatedResponseImpl instance,
+Map<String, dynamic> _$StreamingChannelAnnouncementCreatedResponseToJson(
+  StreamingChannelAnnouncementCreatedResponse instance,
 ) => <String, dynamic>{'body': instance.body.toJson(), 'type': instance.$type};
 
-_$StreamingChannelUnknownResponseImpl
-_$$StreamingChannelUnknownResponseImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(
-      r'_$StreamingChannelUnknownResponseImpl',
-      json,
-      ($checkedConvert) {
-        final val = _$StreamingChannelUnknownResponseImpl(
-          body: $checkedConvert('body', (v) => v as Object),
-          $type: $checkedConvert('type', (v) => v as String?),
-        );
-        return val;
-      },
-      fieldKeyMap: const {r'$type': 'type'},
-    );
+StreamingChannelUnknownResponse _$StreamingChannelUnknownResponseFromJson(
+  Map<String, dynamic> json,
+) => $checkedCreate('StreamingChannelUnknownResponse', json, ($checkedConvert) {
+  final val = StreamingChannelUnknownResponse(
+    body: $checkedConvert('body', (v) => v as Object),
+    $type: $checkedConvert('type', (v) => v as String?),
+  );
+  return val;
+}, fieldKeyMap: const {r'$type': 'type'});
 
-Map<String, dynamic> _$$StreamingChannelUnknownResponseImplToJson(
-  _$StreamingChannelUnknownResponseImpl instance,
+Map<String, dynamic> _$StreamingChannelUnknownResponseToJson(
+  StreamingChannelUnknownResponse instance,
 ) => <String, dynamic>{'body': instance.body, 'type': instance.$type};
 
-_$EmojiAddedStreamEventImpl _$$EmojiAddedStreamEventImplFromJson(
+_EmojiAddedStreamEvent _$EmojiAddedStreamEventFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$EmojiAddedStreamEventImpl', json, ($checkedConvert) {
-  final val = _$EmojiAddedStreamEventImpl(
+) => $checkedCreate('_EmojiAddedStreamEvent', json, ($checkedConvert) {
+  final val = _EmojiAddedStreamEvent(
     emoji: $checkedConvert(
       'emoji',
       (v) => Emoji.fromJson(v as Map<String, dynamic>),
@@ -168,14 +149,14 @@ _$EmojiAddedStreamEventImpl _$$EmojiAddedStreamEventImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$EmojiAddedStreamEventImplToJson(
-  _$EmojiAddedStreamEventImpl instance,
+Map<String, dynamic> _$EmojiAddedStreamEventToJson(
+  _EmojiAddedStreamEvent instance,
 ) => <String, dynamic>{'emoji': instance.emoji.toJson()};
 
-_$EmojiUpdatedStreamEventImpl _$$EmojiUpdatedStreamEventImplFromJson(
+_EmojiUpdatedStreamEvent _$EmojiUpdatedStreamEventFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$EmojiUpdatedStreamEventImpl', json, ($checkedConvert) {
-  final val = _$EmojiUpdatedStreamEventImpl(
+) => $checkedCreate('_EmojiUpdatedStreamEvent', json, ($checkedConvert) {
+  final val = _EmojiUpdatedStreamEvent(
     emojis: $checkedConvert(
       'emojis',
       (v) =>
@@ -187,16 +168,16 @@ _$EmojiUpdatedStreamEventImpl _$$EmojiUpdatedStreamEventImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$EmojiUpdatedStreamEventImplToJson(
-  _$EmojiUpdatedStreamEventImpl instance,
+Map<String, dynamic> _$EmojiUpdatedStreamEventToJson(
+  _EmojiUpdatedStreamEvent instance,
 ) => <String, dynamic>{
   'emojis': instance.emojis.map((e) => e.toJson()).toList(),
 };
 
-_$EmojiDeletedStreamEventImpl _$$EmojiDeletedStreamEventImplFromJson(
+_EmojiDeletedStreamEvent _$EmojiDeletedStreamEventFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$EmojiDeletedStreamEventImpl', json, ($checkedConvert) {
-  final val = _$EmojiDeletedStreamEventImpl(
+) => $checkedCreate('_EmojiDeletedStreamEvent', json, ($checkedConvert) {
+  final val = _EmojiDeletedStreamEvent(
     emojis: $checkedConvert(
       'emojis',
       (v) =>
@@ -208,58 +189,54 @@ _$EmojiDeletedStreamEventImpl _$$EmojiDeletedStreamEventImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$EmojiDeletedStreamEventImplToJson(
-  _$EmojiDeletedStreamEventImpl instance,
+Map<String, dynamic> _$EmojiDeletedStreamEventToJson(
+  _EmojiDeletedStreamEvent instance,
 ) => <String, dynamic>{
   'emojis': instance.emojis.map((e) => e.toJson()).toList(),
 };
 
-_$AnnouncementCreatedStreamEventImpl
-_$$AnnouncementCreatedStreamEventImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$AnnouncementCreatedStreamEventImpl', json, (
-      $checkedConvert,
-    ) {
-      final val = _$AnnouncementCreatedStreamEventImpl(
-        announcement: $checkedConvert(
-          'announcement',
-          (v) => AnnouncementsResponse.fromJson(v as Map<String, dynamic>),
+_AnnouncementCreatedStreamEvent _$AnnouncementCreatedStreamEventFromJson(
+  Map<String, dynamic> json,
+) => $checkedCreate('_AnnouncementCreatedStreamEvent', json, ($checkedConvert) {
+  final val = _AnnouncementCreatedStreamEvent(
+    announcement: $checkedConvert(
+      'announcement',
+      (v) => AnnouncementsResponse.fromJson(v as Map<String, dynamic>),
+    ),
+  );
+  return val;
+});
+
+Map<String, dynamic> _$AnnouncementCreatedStreamEventToJson(
+  _AnnouncementCreatedStreamEvent instance,
+) => <String, dynamic>{'announcement': instance.announcement.toJson()};
+
+NoteChannelEvent _$NoteChannelEventFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('NoteChannelEvent', json, ($checkedConvert) {
+      final val = NoteChannelEvent(
+        id: $checkedConvert('id', (v) => v as String),
+        type: $checkedConvert(
+          'type',
+          (v) => $enumDecodeNullable(
+            _$ChannelEventTypeEnumMap,
+            v,
+            unknownValue: JsonKey.nullForUndefinedEnumValue,
+          ),
+        ),
+        body: $checkedConvert(
+          'body',
+          (v) => Note.fromJson(v as Map<String, dynamic>),
         ),
       );
       return val;
     });
 
-Map<String, dynamic> _$$AnnouncementCreatedStreamEventImplToJson(
-  _$AnnouncementCreatedStreamEventImpl instance,
-) => <String, dynamic>{'announcement': instance.announcement.toJson()};
-
-_$NoteChannelEventImpl _$$NoteChannelEventImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$NoteChannelEventImpl', json, ($checkedConvert) {
-  final val = _$NoteChannelEventImpl(
-    id: $checkedConvert('id', (v) => v as String),
-    type: $checkedConvert(
-      'type',
-      (v) => $enumDecodeNullable(
-        _$ChannelEventTypeEnumMap,
-        v,
-        unknownValue: JsonKey.nullForUndefinedEnumValue,
-      ),
-    ),
-    body: $checkedConvert(
-      'body',
-      (v) => Note.fromJson(v as Map<String, dynamic>),
-    ),
-  );
-  return val;
-});
-
-Map<String, dynamic> _$$NoteChannelEventImplToJson(
-  _$NoteChannelEventImpl instance,
-) => <String, dynamic>{
-  'id': instance.id,
-  'type': _$ChannelEventTypeEnumMap[instance.type],
-  'body': instance.body.toJson(),
-};
+Map<String, dynamic> _$NoteChannelEventToJson(NoteChannelEvent instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'type': _$ChannelEventTypeEnumMap[instance.type],
+      'body': instance.body.toJson(),
+    };
 
 const _$ChannelEventTypeEnumMap = {
   ChannelEventType.note: 'note',
@@ -296,10 +273,10 @@ const _$ChannelEventTypeEnumMap = {
   ChannelEventType.unknown: 'unknown',
 };
 
-_$StatsLogChannelEventImpl _$$StatsLogChannelEventImplFromJson(
+StatsLogChannelEvent _$StatsLogChannelEventFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$StatsLogChannelEventImpl', json, ($checkedConvert) {
-  final val = _$StatsLogChannelEventImpl(
+) => $checkedCreate('StatsLogChannelEvent', json, ($checkedConvert) {
+  final val = StatsLogChannelEvent(
     id: $checkedConvert('id', (v) => v as String),
     body: $checkedConvert(
       'body',
@@ -317,63 +294,40 @@ _$StatsLogChannelEventImpl _$$StatsLogChannelEventImplFromJson(
   return val;
 }, fieldKeyMap: const {r'$type': 'type'});
 
-Map<String, dynamic> _$$StatsLogChannelEventImplToJson(
-  _$StatsLogChannelEventImpl instance,
+Map<String, dynamic> _$StatsLogChannelEventToJson(
+  StatsLogChannelEvent instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'body': instance.body.map(const StreamingStatsConverter().toJson).toList(),
   'type': instance.$type,
 };
 
-_$StatsChannelEventImpl _$$StatsChannelEventImplFromJson(
+StatsChannelEvent _$StatsChannelEventFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('StatsChannelEvent', json, ($checkedConvert) {
+      final val = StatsChannelEvent(
+        id: $checkedConvert('id', (v) => v as String),
+        body: $checkedConvert(
+          'body',
+          (v) => const StreamingStatsConverter().fromJson(
+            v as Map<String, dynamic>,
+          ),
+        ),
+        $type: $checkedConvert('type', (v) => v as String?),
+      );
+      return val;
+    }, fieldKeyMap: const {r'$type': 'type'});
+
+Map<String, dynamic> _$StatsChannelEventToJson(StatsChannelEvent instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'body': const StreamingStatsConverter().toJson(instance.body),
+      'type': instance.$type,
+    };
+
+UserAddedChannelEvent _$UserAddedChannelEventFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$StatsChannelEventImpl', json, ($checkedConvert) {
-  final val = _$StatsChannelEventImpl(
-    id: $checkedConvert('id', (v) => v as String),
-    body: $checkedConvert(
-      'body',
-      (v) =>
-          const StreamingStatsConverter().fromJson(v as Map<String, dynamic>),
-    ),
-    $type: $checkedConvert('type', (v) => v as String?),
-  );
-  return val;
-}, fieldKeyMap: const {r'$type': 'type'});
-
-Map<String, dynamic> _$$StatsChannelEventImplToJson(
-  _$StatsChannelEventImpl instance,
-) => <String, dynamic>{
-  'id': instance.id,
-  'body': const StreamingStatsConverter().toJson(instance.body),
-  'type': instance.$type,
-};
-
-_$UserAddedChannelEventImpl _$$UserAddedChannelEventImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$UserAddedChannelEventImpl', json, ($checkedConvert) {
-  final val = _$UserAddedChannelEventImpl(
-    id: $checkedConvert('id', (v) => v as String),
-    body: $checkedConvert(
-      'body',
-      (v) => UserLite.fromJson(v as Map<String, dynamic>),
-    ),
-    $type: $checkedConvert('type', (v) => v as String?),
-  );
-  return val;
-}, fieldKeyMap: const {r'$type': 'type'});
-
-Map<String, dynamic> _$$UserAddedChannelEventImplToJson(
-  _$UserAddedChannelEventImpl instance,
-) => <String, dynamic>{
-  'id': instance.id,
-  'body': instance.body.toJson(),
-  'type': instance.$type,
-};
-
-_$UserRemovedChannelEventImpl _$$UserRemovedChannelEventImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$UserRemovedChannelEventImpl', json, ($checkedConvert) {
-  final val = _$UserRemovedChannelEventImpl(
+) => $checkedCreate('UserAddedChannelEvent', json, ($checkedConvert) {
+  final val = UserAddedChannelEvent(
     id: $checkedConvert('id', (v) => v as String),
     body: $checkedConvert(
       'body',
@@ -384,18 +338,40 @@ _$UserRemovedChannelEventImpl _$$UserRemovedChannelEventImplFromJson(
   return val;
 }, fieldKeyMap: const {r'$type': 'type'});
 
-Map<String, dynamic> _$$UserRemovedChannelEventImplToJson(
-  _$UserRemovedChannelEventImpl instance,
+Map<String, dynamic> _$UserAddedChannelEventToJson(
+  UserAddedChannelEvent instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'body': instance.body.toJson(),
   'type': instance.$type,
 };
 
-_$NotificationChannelEventImpl _$$NotificationChannelEventImplFromJson(
+UserRemovedChannelEvent _$UserRemovedChannelEventFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$NotificationChannelEventImpl', json, ($checkedConvert) {
-  final val = _$NotificationChannelEventImpl(
+) => $checkedCreate('UserRemovedChannelEvent', json, ($checkedConvert) {
+  final val = UserRemovedChannelEvent(
+    id: $checkedConvert('id', (v) => v as String),
+    body: $checkedConvert(
+      'body',
+      (v) => UserLite.fromJson(v as Map<String, dynamic>),
+    ),
+    $type: $checkedConvert('type', (v) => v as String?),
+  );
+  return val;
+}, fieldKeyMap: const {r'$type': 'type'});
+
+Map<String, dynamic> _$UserRemovedChannelEventToJson(
+  UserRemovedChannelEvent instance,
+) => <String, dynamic>{
+  'id': instance.id,
+  'body': instance.body.toJson(),
+  'type': instance.$type,
+};
+
+NotificationChannelEvent _$NotificationChannelEventFromJson(
+  Map<String, dynamic> json,
+) => $checkedCreate('NotificationChannelEvent', json, ($checkedConvert) {
+  final val = NotificationChannelEvent(
     id: $checkedConvert('id', (v) => v as String),
     body: $checkedConvert(
       'body',
@@ -406,106 +382,99 @@ _$NotificationChannelEventImpl _$$NotificationChannelEventImplFromJson(
   return val;
 }, fieldKeyMap: const {r'$type': 'type'});
 
-Map<String, dynamic> _$$NotificationChannelEventImplToJson(
-  _$NotificationChannelEventImpl instance,
+Map<String, dynamic> _$NotificationChannelEventToJson(
+  NotificationChannelEvent instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'body': instance.body.toJson(),
   'type': instance.$type,
 };
 
-_$MentionChannelEventImpl _$$MentionChannelEventImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$MentionChannelEventImpl', json, ($checkedConvert) {
-  final val = _$MentionChannelEventImpl(
-    id: $checkedConvert('id', (v) => v as String),
-    body: $checkedConvert(
-      'body',
-      (v) => Note.fromJson(v as Map<String, dynamic>),
-    ),
-    $type: $checkedConvert('type', (v) => v as String?),
-  );
-  return val;
-}, fieldKeyMap: const {r'$type': 'type'});
+MentionChannelEvent _$MentionChannelEventFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('MentionChannelEvent', json, ($checkedConvert) {
+      final val = MentionChannelEvent(
+        id: $checkedConvert('id', (v) => v as String),
+        body: $checkedConvert(
+          'body',
+          (v) => Note.fromJson(v as Map<String, dynamic>),
+        ),
+        $type: $checkedConvert('type', (v) => v as String?),
+      );
+      return val;
+    }, fieldKeyMap: const {r'$type': 'type'});
 
-Map<String, dynamic> _$$MentionChannelEventImplToJson(
-  _$MentionChannelEventImpl instance,
+Map<String, dynamic> _$MentionChannelEventToJson(
+  MentionChannelEvent instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'body': instance.body.toJson(),
   'type': instance.$type,
 };
 
-_$ReplyChannelEventImpl _$$ReplyChannelEventImplFromJson(
+ReplyChannelEvent _$ReplyChannelEventFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('ReplyChannelEvent', json, ($checkedConvert) {
+      final val = ReplyChannelEvent(
+        id: $checkedConvert('id', (v) => v as String),
+        body: $checkedConvert(
+          'body',
+          (v) => Note.fromJson(v as Map<String, dynamic>),
+        ),
+        $type: $checkedConvert('type', (v) => v as String?),
+      );
+      return val;
+    }, fieldKeyMap: const {r'$type': 'type'});
+
+Map<String, dynamic> _$ReplyChannelEventToJson(ReplyChannelEvent instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'body': instance.body.toJson(),
+      'type': instance.$type,
+    };
+
+RenoteChannelEvent _$RenoteChannelEventFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('RenoteChannelEvent', json, ($checkedConvert) {
+      final val = RenoteChannelEvent(
+        id: $checkedConvert('id', (v) => v as String),
+        body: $checkedConvert(
+          'body',
+          (v) => Note.fromJson(v as Map<String, dynamic>),
+        ),
+        $type: $checkedConvert('type', (v) => v as String?),
+      );
+      return val;
+    }, fieldKeyMap: const {r'$type': 'type'});
+
+Map<String, dynamic> _$RenoteChannelEventToJson(RenoteChannelEvent instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'body': instance.body.toJson(),
+      'type': instance.$type,
+    };
+
+FollowChannelEvent _$FollowChannelEventFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('FollowChannelEvent', json, ($checkedConvert) {
+      final val = FollowChannelEvent(
+        id: $checkedConvert('id', (v) => v as String),
+        body: $checkedConvert(
+          'body',
+          (v) => UserDetailedNotMe.fromJson(v as Map<String, dynamic>),
+        ),
+        $type: $checkedConvert('type', (v) => v as String?),
+      );
+      return val;
+    }, fieldKeyMap: const {r'$type': 'type'});
+
+Map<String, dynamic> _$FollowChannelEventToJson(FollowChannelEvent instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'body': instance.body.toJson(),
+      'type': instance.$type,
+    };
+
+FollowedChannelEvent _$FollowedChannelEventFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$ReplyChannelEventImpl', json, ($checkedConvert) {
-  final val = _$ReplyChannelEventImpl(
-    id: $checkedConvert('id', (v) => v as String),
-    body: $checkedConvert(
-      'body',
-      (v) => Note.fromJson(v as Map<String, dynamic>),
-    ),
-    $type: $checkedConvert('type', (v) => v as String?),
-  );
-  return val;
-}, fieldKeyMap: const {r'$type': 'type'});
-
-Map<String, dynamic> _$$ReplyChannelEventImplToJson(
-  _$ReplyChannelEventImpl instance,
-) => <String, dynamic>{
-  'id': instance.id,
-  'body': instance.body.toJson(),
-  'type': instance.$type,
-};
-
-_$RenoteChannelEventImpl _$$RenoteChannelEventImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$RenoteChannelEventImpl', json, ($checkedConvert) {
-  final val = _$RenoteChannelEventImpl(
-    id: $checkedConvert('id', (v) => v as String),
-    body: $checkedConvert(
-      'body',
-      (v) => Note.fromJson(v as Map<String, dynamic>),
-    ),
-    $type: $checkedConvert('type', (v) => v as String?),
-  );
-  return val;
-}, fieldKeyMap: const {r'$type': 'type'});
-
-Map<String, dynamic> _$$RenoteChannelEventImplToJson(
-  _$RenoteChannelEventImpl instance,
-) => <String, dynamic>{
-  'id': instance.id,
-  'body': instance.body.toJson(),
-  'type': instance.$type,
-};
-
-_$FollowChannelEventImpl _$$FollowChannelEventImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$FollowChannelEventImpl', json, ($checkedConvert) {
-  final val = _$FollowChannelEventImpl(
-    id: $checkedConvert('id', (v) => v as String),
-    body: $checkedConvert(
-      'body',
-      (v) => UserDetailedNotMe.fromJson(v as Map<String, dynamic>),
-    ),
-    $type: $checkedConvert('type', (v) => v as String?),
-  );
-  return val;
-}, fieldKeyMap: const {r'$type': 'type'});
-
-Map<String, dynamic> _$$FollowChannelEventImplToJson(
-  _$FollowChannelEventImpl instance,
-) => <String, dynamic>{
-  'id': instance.id,
-  'body': instance.body.toJson(),
-  'type': instance.$type,
-};
-
-_$FollowedChannelEventImpl _$$FollowedChannelEventImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$FollowedChannelEventImpl', json, ($checkedConvert) {
-  final val = _$FollowedChannelEventImpl(
+) => $checkedCreate('FollowedChannelEvent', json, ($checkedConvert) {
+  final val = FollowedChannelEvent(
     id: $checkedConvert('id', (v) => v as String),
     body: $checkedConvert(
       'body',
@@ -516,18 +485,18 @@ _$FollowedChannelEventImpl _$$FollowedChannelEventImplFromJson(
   return val;
 }, fieldKeyMap: const {r'$type': 'type'});
 
-Map<String, dynamic> _$$FollowedChannelEventImplToJson(
-  _$FollowedChannelEventImpl instance,
+Map<String, dynamic> _$FollowedChannelEventToJson(
+  FollowedChannelEvent instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'body': instance.body.toJson(),
   'type': instance.$type,
 };
 
-_$UnfollowChannelEventImpl _$$UnfollowChannelEventImplFromJson(
+UnfollowChannelEvent _$UnfollowChannelEventFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$UnfollowChannelEventImpl', json, ($checkedConvert) {
-  final val = _$UnfollowChannelEventImpl(
+) => $checkedCreate('UnfollowChannelEvent', json, ($checkedConvert) {
+  final val = UnfollowChannelEvent(
     id: $checkedConvert('id', (v) => v as String),
     body: $checkedConvert(
       'body',
@@ -538,18 +507,18 @@ _$UnfollowChannelEventImpl _$$UnfollowChannelEventImplFromJson(
   return val;
 }, fieldKeyMap: const {r'$type': 'type'});
 
-Map<String, dynamic> _$$UnfollowChannelEventImplToJson(
-  _$UnfollowChannelEventImpl instance,
+Map<String, dynamic> _$UnfollowChannelEventToJson(
+  UnfollowChannelEvent instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'body': instance.body.toJson(),
   'type': instance.$type,
 };
 
-_$MeUpdatedChannelEventImpl _$$MeUpdatedChannelEventImplFromJson(
+MeUpdatedChannelEvent _$MeUpdatedChannelEventFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$MeUpdatedChannelEventImpl', json, ($checkedConvert) {
-  final val = _$MeUpdatedChannelEventImpl(
+) => $checkedCreate('MeUpdatedChannelEvent', json, ($checkedConvert) {
+  final val = MeUpdatedChannelEvent(
     id: $checkedConvert('id', (v) => v as String),
     body: $checkedConvert(
       'body',
@@ -560,18 +529,18 @@ _$MeUpdatedChannelEventImpl _$$MeUpdatedChannelEventImplFromJson(
   return val;
 }, fieldKeyMap: const {r'$type': 'type'});
 
-Map<String, dynamic> _$$MeUpdatedChannelEventImplToJson(
-  _$MeUpdatedChannelEventImpl instance,
+Map<String, dynamic> _$MeUpdatedChannelEventToJson(
+  MeUpdatedChannelEvent instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'body': instance.body.toJson(),
   'type': instance.$type,
 };
 
-_$PageEventChannelEventImpl _$$PageEventChannelEventImplFromJson(
+PageEventChannelEvent _$PageEventChannelEventFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$PageEventChannelEventImpl', json, ($checkedConvert) {
-  final val = _$PageEventChannelEventImpl(
+) => $checkedCreate('PageEventChannelEvent', json, ($checkedConvert) {
+  final val = PageEventChannelEvent(
     id: $checkedConvert('id', (v) => v as String),
     body: $checkedConvert(
       'body',
@@ -582,232 +551,148 @@ _$PageEventChannelEventImpl _$$PageEventChannelEventImplFromJson(
   return val;
 }, fieldKeyMap: const {r'$type': 'type'});
 
-Map<String, dynamic> _$$PageEventChannelEventImplToJson(
-  _$PageEventChannelEventImpl instance,
+Map<String, dynamic> _$PageEventChannelEventToJson(
+  PageEventChannelEvent instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'body': instance.body.toJson(),
   'type': instance.$type,
 };
 
-_$UrlUploadFinishedChannelEventImpl
-_$$UrlUploadFinishedChannelEventImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$UrlUploadFinishedChannelEventImpl', json, (
-      $checkedConvert,
-    ) {
-      final val = _$UrlUploadFinishedChannelEventImpl(
-        id: $checkedConvert('id', (v) => v as String),
-        body: $checkedConvert(
-          'body',
-          (v) => UrlUploadFinishedEvent.fromJson(v as Map<String, dynamic>),
-        ),
-        $type: $checkedConvert('type', (v) => v as String?),
-      );
-      return val;
-    }, fieldKeyMap: const {r'$type': 'type'});
+UrlUploadFinishedChannelEvent _$UrlUploadFinishedChannelEventFromJson(
+  Map<String, dynamic> json,
+) => $checkedCreate('UrlUploadFinishedChannelEvent', json, ($checkedConvert) {
+  final val = UrlUploadFinishedChannelEvent(
+    id: $checkedConvert('id', (v) => v as String),
+    body: $checkedConvert(
+      'body',
+      (v) => UrlUploadFinishedEvent.fromJson(v as Map<String, dynamic>),
+    ),
+    $type: $checkedConvert('type', (v) => v as String?),
+  );
+  return val;
+}, fieldKeyMap: const {r'$type': 'type'});
 
-Map<String, dynamic> _$$UrlUploadFinishedChannelEventImplToJson(
-  _$UrlUploadFinishedChannelEventImpl instance,
+Map<String, dynamic> _$UrlUploadFinishedChannelEventToJson(
+  UrlUploadFinishedChannelEvent instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'body': instance.body.toJson(),
   'type': instance.$type,
 };
 
-_$ReadAllNotificationsChannelEventImpl
-_$$ReadAllNotificationsChannelEventImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(
-      r'_$ReadAllNotificationsChannelEventImpl',
-      json,
-      ($checkedConvert) {
-        final val = _$ReadAllNotificationsChannelEventImpl(
-          id: $checkedConvert('id', (v) => v as String),
-          $type: $checkedConvert('type', (v) => v as String?),
-        );
-        return val;
-      },
-      fieldKeyMap: const {r'$type': 'type'},
-    );
-
-Map<String, dynamic> _$$ReadAllNotificationsChannelEventImplToJson(
-  _$ReadAllNotificationsChannelEventImpl instance,
-) => <String, dynamic>{'id': instance.id, 'type': instance.$type};
-
-_$UnreadNotificationChannelEventImpl
-_$$UnreadNotificationChannelEventImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(
-      r'_$UnreadNotificationChannelEventImpl',
-      json,
-      ($checkedConvert) {
-        final val = _$UnreadNotificationChannelEventImpl(
-          id: $checkedConvert('id', (v) => v as String),
-          body: $checkedConvert(
-            'body',
-            (v) => INotificationsResponse.fromJson(v as Map<String, dynamic>),
-          ),
-          $type: $checkedConvert('type', (v) => v as String?),
-        );
-        return val;
-      },
-      fieldKeyMap: const {r'$type': 'type'},
-    );
-
-Map<String, dynamic> _$$UnreadNotificationChannelEventImplToJson(
-  _$UnreadNotificationChannelEventImpl instance,
-) => <String, dynamic>{
-  'id': instance.id,
-  'body': instance.body.toJson(),
-  'type': instance.$type,
-};
-
-_$UnreadMentionChannelEventImpl _$$UnreadMentionChannelEventImplFromJson(
+ReadAllNotificationsChannelEvent _$ReadAllNotificationsChannelEventFromJson(
   Map<String, dynamic> json,
 ) =>
-    $checkedCreate(r'_$UnreadMentionChannelEventImpl', json, ($checkedConvert) {
-      final val = _$UnreadMentionChannelEventImpl(
+    $checkedCreate('ReadAllNotificationsChannelEvent', json, ($checkedConvert) {
+      final val = ReadAllNotificationsChannelEvent(
         id: $checkedConvert('id', (v) => v as String),
-        body: $checkedConvert('body', (v) => v as String),
         $type: $checkedConvert('type', (v) => v as String?),
       );
       return val;
     }, fieldKeyMap: const {r'$type': 'type'});
 
-Map<String, dynamic> _$$UnreadMentionChannelEventImplToJson(
-  _$UnreadMentionChannelEventImpl instance,
+Map<String, dynamic> _$ReadAllNotificationsChannelEventToJson(
+  ReadAllNotificationsChannelEvent instance,
+) => <String, dynamic>{'id': instance.id, 'type': instance.$type};
+
+UnreadNotificationChannelEvent _$UnreadNotificationChannelEventFromJson(
+  Map<String, dynamic> json,
+) => $checkedCreate('UnreadNotificationChannelEvent', json, ($checkedConvert) {
+  final val = UnreadNotificationChannelEvent(
+    id: $checkedConvert('id', (v) => v as String),
+    body: $checkedConvert(
+      'body',
+      (v) => INotificationsResponse.fromJson(v as Map<String, dynamic>),
+    ),
+    $type: $checkedConvert('type', (v) => v as String?),
+  );
+  return val;
+}, fieldKeyMap: const {r'$type': 'type'});
+
+Map<String, dynamic> _$UnreadNotificationChannelEventToJson(
+  UnreadNotificationChannelEvent instance,
+) => <String, dynamic>{
+  'id': instance.id,
+  'body': instance.body.toJson(),
+  'type': instance.$type,
+};
+
+UnreadMentionChannelEvent _$UnreadMentionChannelEventFromJson(
+  Map<String, dynamic> json,
+) => $checkedCreate('UnreadMentionChannelEvent', json, ($checkedConvert) {
+  final val = UnreadMentionChannelEvent(
+    id: $checkedConvert('id', (v) => v as String),
+    body: $checkedConvert('body', (v) => v as String),
+    $type: $checkedConvert('type', (v) => v as String?),
+  );
+  return val;
+}, fieldKeyMap: const {r'$type': 'type'});
+
+Map<String, dynamic> _$UnreadMentionChannelEventToJson(
+  UnreadMentionChannelEvent instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'body': instance.body,
   'type': instance.$type,
 };
 
-_$ReadAllUnreadMentionsChannelEventImpl
-_$$ReadAllUnreadMentionsChannelEventImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(
-      r'_$ReadAllUnreadMentionsChannelEventImpl',
-      json,
-      ($checkedConvert) {
-        final val = _$ReadAllUnreadMentionsChannelEventImpl(
-          id: $checkedConvert('id', (v) => v as String),
-          $type: $checkedConvert('type', (v) => v as String?),
-        );
-        return val;
-      },
-      fieldKeyMap: const {r'$type': 'type'},
-    );
+ReadAllUnreadMentionsChannelEvent _$ReadAllUnreadMentionsChannelEventFromJson(
+  Map<String, dynamic> json,
+) => $checkedCreate('ReadAllUnreadMentionsChannelEvent', json, (
+  $checkedConvert,
+) {
+  final val = ReadAllUnreadMentionsChannelEvent(
+    id: $checkedConvert('id', (v) => v as String),
+    $type: $checkedConvert('type', (v) => v as String?),
+  );
+  return val;
+}, fieldKeyMap: const {r'$type': 'type'});
 
-Map<String, dynamic> _$$ReadAllUnreadMentionsChannelEventImplToJson(
-  _$ReadAllUnreadMentionsChannelEventImpl instance,
+Map<String, dynamic> _$ReadAllUnreadMentionsChannelEventToJson(
+  ReadAllUnreadMentionsChannelEvent instance,
 ) => <String, dynamic>{'id': instance.id, 'type': instance.$type};
 
-_$NotificationFlushedChannelEventImpl
-_$$NotificationFlushedChannelEventImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(
-      r'_$NotificationFlushedChannelEventImpl',
-      json,
-      ($checkedConvert) {
-        final val = _$NotificationFlushedChannelEventImpl(
-          id: $checkedConvert('id', (v) => v as String),
-          $type: $checkedConvert('type', (v) => v as String?),
-        );
-        return val;
-      },
-      fieldKeyMap: const {r'$type': 'type'},
-    );
+NotificationFlushedChannelEvent _$NotificationFlushedChannelEventFromJson(
+  Map<String, dynamic> json,
+) => $checkedCreate('NotificationFlushedChannelEvent', json, ($checkedConvert) {
+  final val = NotificationFlushedChannelEvent(
+    id: $checkedConvert('id', (v) => v as String),
+    $type: $checkedConvert('type', (v) => v as String?),
+  );
+  return val;
+}, fieldKeyMap: const {r'$type': 'type'});
 
-Map<String, dynamic> _$$NotificationFlushedChannelEventImplToJson(
-  _$NotificationFlushedChannelEventImpl instance,
+Map<String, dynamic> _$NotificationFlushedChannelEventToJson(
+  NotificationFlushedChannelEvent instance,
 ) => <String, dynamic>{'id': instance.id, 'type': instance.$type};
 
-_$UnreadSpecifiedNoteChannelEventImpl
-_$$UnreadSpecifiedNoteChannelEventImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(
-      r'_$UnreadSpecifiedNoteChannelEventImpl',
-      json,
-      ($checkedConvert) {
-        final val = _$UnreadSpecifiedNoteChannelEventImpl(
-          id: $checkedConvert('id', (v) => v as String),
-          body: $checkedConvert('body', (v) => v as String),
-          $type: $checkedConvert('type', (v) => v as String?),
-        );
-        return val;
-      },
-      fieldKeyMap: const {r'$type': 'type'},
-    );
+UnreadSpecifiedNoteChannelEvent _$UnreadSpecifiedNoteChannelEventFromJson(
+  Map<String, dynamic> json,
+) => $checkedCreate('UnreadSpecifiedNoteChannelEvent', json, ($checkedConvert) {
+  final val = UnreadSpecifiedNoteChannelEvent(
+    id: $checkedConvert('id', (v) => v as String),
+    body: $checkedConvert('body', (v) => v as String),
+    $type: $checkedConvert('type', (v) => v as String?),
+  );
+  return val;
+}, fieldKeyMap: const {r'$type': 'type'});
 
-Map<String, dynamic> _$$UnreadSpecifiedNoteChannelEventImplToJson(
-  _$UnreadSpecifiedNoteChannelEventImpl instance,
+Map<String, dynamic> _$UnreadSpecifiedNoteChannelEventToJson(
+  UnreadSpecifiedNoteChannelEvent instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'body': instance.body,
   'type': instance.$type,
 };
 
-_$ReadAllUnreadSpecifiedNotesChannelEventImpl
-_$$ReadAllUnreadSpecifiedNotesChannelEventImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(
-  r'_$ReadAllUnreadSpecifiedNotesChannelEventImpl',
-  json,
-  ($checkedConvert) {
-    final val = _$ReadAllUnreadSpecifiedNotesChannelEventImpl(
-      id: $checkedConvert('id', (v) => v as String),
-      $type: $checkedConvert('type', (v) => v as String?),
-    );
-    return val;
-  },
-  fieldKeyMap: const {r'$type': 'type'},
-);
-
-Map<String, dynamic> _$$ReadAllUnreadSpecifiedNotesChannelEventImplToJson(
-  _$ReadAllUnreadSpecifiedNotesChannelEventImpl instance,
-) => <String, dynamic>{'id': instance.id, 'type': instance.$type};
-
-_$ReadAllAntennasChannelEventImpl _$$ReadAllAntennasChannelEventImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$ReadAllAntennasChannelEventImpl', json, (
-  $checkedConvert,
-) {
-  final val = _$ReadAllAntennasChannelEventImpl(
-    id: $checkedConvert('id', (v) => v as String),
-    $type: $checkedConvert('type', (v) => v as String?),
-  );
-  return val;
-}, fieldKeyMap: const {r'$type': 'type'});
-
-Map<String, dynamic> _$$ReadAllAntennasChannelEventImplToJson(
-  _$ReadAllAntennasChannelEventImpl instance,
-) => <String, dynamic>{'id': instance.id, 'type': instance.$type};
-
-_$UnreadAntennaChannelEventImpl _$$UnreadAntennaChannelEventImplFromJson(
-  Map<String, dynamic> json,
-) =>
-    $checkedCreate(r'_$UnreadAntennaChannelEventImpl', json, ($checkedConvert) {
-      final val = _$UnreadAntennaChannelEventImpl(
-        id: $checkedConvert('id', (v) => v as String),
-        body: $checkedConvert(
-          'body',
-          (v) => Antenna.fromJson(v as Map<String, dynamic>),
-        ),
-        $type: $checkedConvert('type', (v) => v as String?),
-      );
-      return val;
-    }, fieldKeyMap: const {r'$type': 'type'});
-
-Map<String, dynamic> _$$UnreadAntennaChannelEventImplToJson(
-  _$UnreadAntennaChannelEventImpl instance,
-) => <String, dynamic>{
-  'id': instance.id,
-  'body': instance.body.toJson(),
-  'type': instance.$type,
-};
-
-_$ReadAllAnnouncementsChannelEventImpl
-_$$ReadAllAnnouncementsChannelEventImplFromJson(Map<String, dynamic> json) =>
+ReadAllUnreadSpecifiedNotesChannelEvent
+_$ReadAllUnreadSpecifiedNotesChannelEventFromJson(Map<String, dynamic> json) =>
     $checkedCreate(
-      r'_$ReadAllAnnouncementsChannelEventImpl',
+      'ReadAllUnreadSpecifiedNotesChannelEvent',
       json,
       ($checkedConvert) {
-        final val = _$ReadAllAnnouncementsChannelEventImpl(
+        final val = ReadAllUnreadSpecifiedNotesChannelEvent(
           id: $checkedConvert('id', (v) => v as String),
           $type: $checkedConvert('type', (v) => v as String?),
         );
@@ -816,103 +701,28 @@ _$$ReadAllAnnouncementsChannelEventImplFromJson(Map<String, dynamic> json) =>
       fieldKeyMap: const {r'$type': 'type'},
     );
 
-Map<String, dynamic> _$$ReadAllAnnouncementsChannelEventImplToJson(
-  _$ReadAllAnnouncementsChannelEventImpl instance,
+Map<String, dynamic> _$ReadAllUnreadSpecifiedNotesChannelEventToJson(
+  ReadAllUnreadSpecifiedNotesChannelEvent instance,
 ) => <String, dynamic>{'id': instance.id, 'type': instance.$type};
 
-_$MyTokenRegeneratedChannelEventImpl
-_$$MyTokenRegeneratedChannelEventImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(
-      r'_$MyTokenRegeneratedChannelEventImpl',
-      json,
-      ($checkedConvert) {
-        final val = _$MyTokenRegeneratedChannelEventImpl(
-          id: $checkedConvert('id', (v) => v as String),
-          $type: $checkedConvert('type', (v) => v as String?),
-        );
-        return val;
-      },
-      fieldKeyMap: const {r'$type': 'type'},
-    );
+ReadAllAntennasChannelEvent _$ReadAllAntennasChannelEventFromJson(
+  Map<String, dynamic> json,
+) => $checkedCreate('ReadAllAntennasChannelEvent', json, ($checkedConvert) {
+  final val = ReadAllAntennasChannelEvent(
+    id: $checkedConvert('id', (v) => v as String),
+    $type: $checkedConvert('type', (v) => v as String?),
+  );
+  return val;
+}, fieldKeyMap: const {r'$type': 'type'});
 
-Map<String, dynamic> _$$MyTokenRegeneratedChannelEventImplToJson(
-  _$MyTokenRegeneratedChannelEventImpl instance,
+Map<String, dynamic> _$ReadAllAntennasChannelEventToJson(
+  ReadAllAntennasChannelEvent instance,
 ) => <String, dynamic>{'id': instance.id, 'type': instance.$type};
 
-_$SigninChannelEventImpl _$$SigninChannelEventImplFromJson(
+UnreadAntennaChannelEvent _$UnreadAntennaChannelEventFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$SigninChannelEventImpl', json, ($checkedConvert) {
-  final val = _$SigninChannelEventImpl(
-    id: $checkedConvert('id', (v) => v as String),
-    body: $checkedConvert(
-      'body',
-      (v) => Signin.fromJson(v as Map<String, dynamic>),
-    ),
-    $type: $checkedConvert('type', (v) => v as String?),
-  );
-  return val;
-}, fieldKeyMap: const {r'$type': 'type'});
-
-Map<String, dynamic> _$$SigninChannelEventImplToJson(
-  _$SigninChannelEventImpl instance,
-) => <String, dynamic>{
-  'id': instance.id,
-  'body': instance.body.toJson(),
-  'type': instance.$type,
-};
-
-_$RegistryUpdatedChannelEventImpl _$$RegistryUpdatedChannelEventImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$RegistryUpdatedChannelEventImpl', json, (
-  $checkedConvert,
-) {
-  final val = _$RegistryUpdatedChannelEventImpl(
-    id: $checkedConvert('id', (v) => v as String),
-    body: $checkedConvert(
-      'body',
-      (v) => RegistryUpdated.fromJson(v as Map<String, dynamic>),
-    ),
-    $type: $checkedConvert('type', (v) => v as String?),
-  );
-  return val;
-}, fieldKeyMap: const {r'$type': 'type'});
-
-Map<String, dynamic> _$$RegistryUpdatedChannelEventImplToJson(
-  _$RegistryUpdatedChannelEventImpl instance,
-) => <String, dynamic>{
-  'id': instance.id,
-  'body': instance.body.toJson(),
-  'type': instance.$type,
-};
-
-_$DriveFileCreatedChannelEventImpl _$$DriveFileCreatedChannelEventImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$DriveFileCreatedChannelEventImpl', json, (
-  $checkedConvert,
-) {
-  final val = _$DriveFileCreatedChannelEventImpl(
-    id: $checkedConvert('id', (v) => v as String),
-    body: $checkedConvert(
-      'body',
-      (v) => DriveFile.fromJson(v as Map<String, dynamic>),
-    ),
-    $type: $checkedConvert('type', (v) => v as String?),
-  );
-  return val;
-}, fieldKeyMap: const {r'$type': 'type'});
-
-Map<String, dynamic> _$$DriveFileCreatedChannelEventImplToJson(
-  _$DriveFileCreatedChannelEventImpl instance,
-) => <String, dynamic>{
-  'id': instance.id,
-  'body': instance.body.toJson(),
-  'type': instance.$type,
-};
-
-_$ReadAntennaChannelEventImpl _$$ReadAntennaChannelEventImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$ReadAntennaChannelEventImpl', json, ($checkedConvert) {
-  final val = _$ReadAntennaChannelEventImpl(
+) => $checkedCreate('UnreadAntennaChannelEvent', json, ($checkedConvert) {
+  final val = UnreadAntennaChannelEvent(
     id: $checkedConvert('id', (v) => v as String),
     body: $checkedConvert(
       'body',
@@ -923,74 +733,178 @@ _$ReadAntennaChannelEventImpl _$$ReadAntennaChannelEventImplFromJson(
   return val;
 }, fieldKeyMap: const {r'$type': 'type'});
 
-Map<String, dynamic> _$$ReadAntennaChannelEventImplToJson(
-  _$ReadAntennaChannelEventImpl instance,
+Map<String, dynamic> _$UnreadAntennaChannelEventToJson(
+  UnreadAntennaChannelEvent instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'body': instance.body.toJson(),
   'type': instance.$type,
 };
 
-_$ReceiveFollowRequestChannelEventImpl
-_$$ReceiveFollowRequestChannelEventImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(
-      r'_$ReceiveFollowRequestChannelEventImpl',
-      json,
-      ($checkedConvert) {
-        final val = _$ReceiveFollowRequestChannelEventImpl(
-          id: $checkedConvert('id', (v) => v as String),
-          body: $checkedConvert(
-            'body',
-            (v) => UserLite.fromJson(v as Map<String, dynamic>),
-          ),
-          $type: $checkedConvert('type', (v) => v as String?),
-        );
-        return val;
-      },
-      fieldKeyMap: const {r'$type': 'type'},
-    );
-
-Map<String, dynamic> _$$ReceiveFollowRequestChannelEventImplToJson(
-  _$ReceiveFollowRequestChannelEventImpl instance,
-) => <String, dynamic>{
-  'id': instance.id,
-  'body': instance.body.toJson(),
-  'type': instance.$type,
-};
-
-_$AnnouncementCreatedChannelEventImpl
-_$$AnnouncementCreatedChannelEventImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(
-      r'_$AnnouncementCreatedChannelEventImpl',
-      json,
-      ($checkedConvert) {
-        final val = _$AnnouncementCreatedChannelEventImpl(
-          id: $checkedConvert('id', (v) => v as String),
-          body: $checkedConvert(
-            'body',
-            (v) => AnnouncementCreatedStreamEvent.fromJson(
-              v as Map<String, dynamic>,
-            ),
-          ),
-          $type: $checkedConvert('type', (v) => v as String?),
-        );
-        return val;
-      },
-      fieldKeyMap: const {r'$type': 'type'},
-    );
-
-Map<String, dynamic> _$$AnnouncementCreatedChannelEventImplToJson(
-  _$AnnouncementCreatedChannelEventImpl instance,
-) => <String, dynamic>{
-  'id': instance.id,
-  'body': instance.body.toJson(),
-  'type': instance.$type,
-};
-
-_$FallbackChannelEventImpl _$$FallbackChannelEventImplFromJson(
+ReadAllAnnouncementsChannelEvent _$ReadAllAnnouncementsChannelEventFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$FallbackChannelEventImpl', json, ($checkedConvert) {
-  final val = _$FallbackChannelEventImpl(
+) =>
+    $checkedCreate('ReadAllAnnouncementsChannelEvent', json, ($checkedConvert) {
+      final val = ReadAllAnnouncementsChannelEvent(
+        id: $checkedConvert('id', (v) => v as String),
+        $type: $checkedConvert('type', (v) => v as String?),
+      );
+      return val;
+    }, fieldKeyMap: const {r'$type': 'type'});
+
+Map<String, dynamic> _$ReadAllAnnouncementsChannelEventToJson(
+  ReadAllAnnouncementsChannelEvent instance,
+) => <String, dynamic>{'id': instance.id, 'type': instance.$type};
+
+MyTokenRegeneratedChannelEvent _$MyTokenRegeneratedChannelEventFromJson(
+  Map<String, dynamic> json,
+) => $checkedCreate('MyTokenRegeneratedChannelEvent', json, ($checkedConvert) {
+  final val = MyTokenRegeneratedChannelEvent(
+    id: $checkedConvert('id', (v) => v as String),
+    $type: $checkedConvert('type', (v) => v as String?),
+  );
+  return val;
+}, fieldKeyMap: const {r'$type': 'type'});
+
+Map<String, dynamic> _$MyTokenRegeneratedChannelEventToJson(
+  MyTokenRegeneratedChannelEvent instance,
+) => <String, dynamic>{'id': instance.id, 'type': instance.$type};
+
+SigninChannelEvent _$SigninChannelEventFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('SigninChannelEvent', json, ($checkedConvert) {
+      final val = SigninChannelEvent(
+        id: $checkedConvert('id', (v) => v as String),
+        body: $checkedConvert(
+          'body',
+          (v) => Signin.fromJson(v as Map<String, dynamic>),
+        ),
+        $type: $checkedConvert('type', (v) => v as String?),
+      );
+      return val;
+    }, fieldKeyMap: const {r'$type': 'type'});
+
+Map<String, dynamic> _$SigninChannelEventToJson(SigninChannelEvent instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'body': instance.body.toJson(),
+      'type': instance.$type,
+    };
+
+RegistryUpdatedChannelEvent _$RegistryUpdatedChannelEventFromJson(
+  Map<String, dynamic> json,
+) => $checkedCreate('RegistryUpdatedChannelEvent', json, ($checkedConvert) {
+  final val = RegistryUpdatedChannelEvent(
+    id: $checkedConvert('id', (v) => v as String),
+    body: $checkedConvert(
+      'body',
+      (v) => RegistryUpdated.fromJson(v as Map<String, dynamic>),
+    ),
+    $type: $checkedConvert('type', (v) => v as String?),
+  );
+  return val;
+}, fieldKeyMap: const {r'$type': 'type'});
+
+Map<String, dynamic> _$RegistryUpdatedChannelEventToJson(
+  RegistryUpdatedChannelEvent instance,
+) => <String, dynamic>{
+  'id': instance.id,
+  'body': instance.body.toJson(),
+  'type': instance.$type,
+};
+
+DriveFileCreatedChannelEvent _$DriveFileCreatedChannelEventFromJson(
+  Map<String, dynamic> json,
+) => $checkedCreate('DriveFileCreatedChannelEvent', json, ($checkedConvert) {
+  final val = DriveFileCreatedChannelEvent(
+    id: $checkedConvert('id', (v) => v as String),
+    body: $checkedConvert(
+      'body',
+      (v) => DriveFile.fromJson(v as Map<String, dynamic>),
+    ),
+    $type: $checkedConvert('type', (v) => v as String?),
+  );
+  return val;
+}, fieldKeyMap: const {r'$type': 'type'});
+
+Map<String, dynamic> _$DriveFileCreatedChannelEventToJson(
+  DriveFileCreatedChannelEvent instance,
+) => <String, dynamic>{
+  'id': instance.id,
+  'body': instance.body.toJson(),
+  'type': instance.$type,
+};
+
+ReadAntennaChannelEvent _$ReadAntennaChannelEventFromJson(
+  Map<String, dynamic> json,
+) => $checkedCreate('ReadAntennaChannelEvent', json, ($checkedConvert) {
+  final val = ReadAntennaChannelEvent(
+    id: $checkedConvert('id', (v) => v as String),
+    body: $checkedConvert(
+      'body',
+      (v) => Antenna.fromJson(v as Map<String, dynamic>),
+    ),
+    $type: $checkedConvert('type', (v) => v as String?),
+  );
+  return val;
+}, fieldKeyMap: const {r'$type': 'type'});
+
+Map<String, dynamic> _$ReadAntennaChannelEventToJson(
+  ReadAntennaChannelEvent instance,
+) => <String, dynamic>{
+  'id': instance.id,
+  'body': instance.body.toJson(),
+  'type': instance.$type,
+};
+
+ReceiveFollowRequestChannelEvent _$ReceiveFollowRequestChannelEventFromJson(
+  Map<String, dynamic> json,
+) =>
+    $checkedCreate('ReceiveFollowRequestChannelEvent', json, ($checkedConvert) {
+      final val = ReceiveFollowRequestChannelEvent(
+        id: $checkedConvert('id', (v) => v as String),
+        body: $checkedConvert(
+          'body',
+          (v) => UserLite.fromJson(v as Map<String, dynamic>),
+        ),
+        $type: $checkedConvert('type', (v) => v as String?),
+      );
+      return val;
+    }, fieldKeyMap: const {r'$type': 'type'});
+
+Map<String, dynamic> _$ReceiveFollowRequestChannelEventToJson(
+  ReceiveFollowRequestChannelEvent instance,
+) => <String, dynamic>{
+  'id': instance.id,
+  'body': instance.body.toJson(),
+  'type': instance.$type,
+};
+
+AnnouncementCreatedChannelEvent _$AnnouncementCreatedChannelEventFromJson(
+  Map<String, dynamic> json,
+) => $checkedCreate('AnnouncementCreatedChannelEvent', json, ($checkedConvert) {
+  final val = AnnouncementCreatedChannelEvent(
+    id: $checkedConvert('id', (v) => v as String),
+    body: $checkedConvert(
+      'body',
+      (v) => AnnouncementCreatedStreamEvent.fromJson(v as Map<String, dynamic>),
+    ),
+    $type: $checkedConvert('type', (v) => v as String?),
+  );
+  return val;
+}, fieldKeyMap: const {r'$type': 'type'});
+
+Map<String, dynamic> _$AnnouncementCreatedChannelEventToJson(
+  AnnouncementCreatedChannelEvent instance,
+) => <String, dynamic>{
+  'id': instance.id,
+  'body': instance.body.toJson(),
+  'type': instance.$type,
+};
+
+FallbackChannelEvent _$FallbackChannelEventFromJson(
+  Map<String, dynamic> json,
+) => $checkedCreate('FallbackChannelEvent', json, ($checkedConvert) {
+  final val = FallbackChannelEvent(
     id: $checkedConvert('id', (v) => v as String),
     body: $checkedConvert('body', (v) => v),
     $type: $checkedConvert('type', (v) => v as String?),
@@ -998,18 +912,39 @@ _$FallbackChannelEventImpl _$$FallbackChannelEventImplFromJson(
   return val;
 }, fieldKeyMap: const {r'$type': 'type'});
 
-Map<String, dynamic> _$$FallbackChannelEventImplToJson(
-  _$FallbackChannelEventImpl instance,
+Map<String, dynamic> _$FallbackChannelEventToJson(
+  FallbackChannelEvent instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'body': instance.body,
   'type': instance.$type,
 };
 
-_$ReactedChannelEventImpl _$$ReactedChannelEventImplFromJson(
+ReactedChannelEvent _$ReactedChannelEventFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('ReactedChannelEvent', json, ($checkedConvert) {
+      final val = ReactedChannelEvent(
+        id: $checkedConvert('id', (v) => v as String),
+        body: $checkedConvert(
+          'body',
+          (v) => TimelineReacted.fromJson(v as Map<String, dynamic>),
+        ),
+        $type: $checkedConvert('type', (v) => v as String?),
+      );
+      return val;
+    }, fieldKeyMap: const {r'$type': 'type'});
+
+Map<String, dynamic> _$ReactedChannelEventToJson(
+  ReactedChannelEvent instance,
+) => <String, dynamic>{
+  'id': instance.id,
+  'body': instance.body.toJson(),
+  'type': instance.$type,
+};
+
+UnreactedChannelEvent _$UnreactedChannelEventFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$ReactedChannelEventImpl', json, ($checkedConvert) {
-  final val = _$ReactedChannelEventImpl(
+) => $checkedCreate('UnreactedChannelEvent', json, ($checkedConvert) {
+  final val = UnreactedChannelEvent(
     id: $checkedConvert('id', (v) => v as String),
     body: $checkedConvert(
       'body',
@@ -1020,62 +955,39 @@ _$ReactedChannelEventImpl _$$ReactedChannelEventImplFromJson(
   return val;
 }, fieldKeyMap: const {r'$type': 'type'});
 
-Map<String, dynamic> _$$ReactedChannelEventImplToJson(
-  _$ReactedChannelEventImpl instance,
+Map<String, dynamic> _$UnreactedChannelEventToJson(
+  UnreactedChannelEvent instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'body': instance.body.toJson(),
   'type': instance.$type,
 };
 
-_$UnreactedChannelEventImpl _$$UnreactedChannelEventImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$UnreactedChannelEventImpl', json, ($checkedConvert) {
-  final val = _$UnreactedChannelEventImpl(
-    id: $checkedConvert('id', (v) => v as String),
-    body: $checkedConvert(
-      'body',
-      (v) => TimelineReacted.fromJson(v as Map<String, dynamic>),
-    ),
-    $type: $checkedConvert('type', (v) => v as String?),
-  );
-  return val;
-}, fieldKeyMap: const {r'$type': 'type'});
+DeletedChannelEvent _$DeletedChannelEventFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('DeletedChannelEvent', json, ($checkedConvert) {
+      final val = DeletedChannelEvent(
+        id: $checkedConvert('id', (v) => v as String),
+        body: $checkedConvert(
+          'body',
+          (v) => TimelineDeleted.fromJson(v as Map<String, dynamic>),
+        ),
+        $type: $checkedConvert('type', (v) => v as String?),
+      );
+      return val;
+    }, fieldKeyMap: const {r'$type': 'type'});
 
-Map<String, dynamic> _$$UnreactedChannelEventImplToJson(
-  _$UnreactedChannelEventImpl instance,
+Map<String, dynamic> _$DeletedChannelEventToJson(
+  DeletedChannelEvent instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'body': instance.body.toJson(),
   'type': instance.$type,
 };
 
-_$DeletedChannelEventImpl _$$DeletedChannelEventImplFromJson(
+PollVotedChannelEvent _$PollVotedChannelEventFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$DeletedChannelEventImpl', json, ($checkedConvert) {
-  final val = _$DeletedChannelEventImpl(
-    id: $checkedConvert('id', (v) => v as String),
-    body: $checkedConvert(
-      'body',
-      (v) => TimelineDeleted.fromJson(v as Map<String, dynamic>),
-    ),
-    $type: $checkedConvert('type', (v) => v as String?),
-  );
-  return val;
-}, fieldKeyMap: const {r'$type': 'type'});
-
-Map<String, dynamic> _$$DeletedChannelEventImplToJson(
-  _$DeletedChannelEventImpl instance,
-) => <String, dynamic>{
-  'id': instance.id,
-  'body': instance.body.toJson(),
-  'type': instance.$type,
-};
-
-_$PollVotedChannelEventImpl _$$PollVotedChannelEventImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$PollVotedChannelEventImpl', json, ($checkedConvert) {
-  final val = _$PollVotedChannelEventImpl(
+) => $checkedCreate('PollVotedChannelEvent', json, ($checkedConvert) {
+  final val = PollVotedChannelEvent(
     id: $checkedConvert('id', (v) => v as String),
     body: $checkedConvert(
       'body',
@@ -1086,30 +998,29 @@ _$PollVotedChannelEventImpl _$$PollVotedChannelEventImplFromJson(
   return val;
 }, fieldKeyMap: const {r'$type': 'type'});
 
-Map<String, dynamic> _$$PollVotedChannelEventImplToJson(
-  _$PollVotedChannelEventImpl instance,
+Map<String, dynamic> _$PollVotedChannelEventToJson(
+  PollVotedChannelEvent instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'body': instance.body.toJson(),
   'type': instance.$type,
 };
 
-_$UpdatedChannelEventImpl _$$UpdatedChannelEventImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$UpdatedChannelEventImpl', json, ($checkedConvert) {
-  final val = _$UpdatedChannelEventImpl(
-    id: $checkedConvert('id', (v) => v as String),
-    body: $checkedConvert(
-      'body',
-      (v) => NoteEdited.fromJson(v as Map<String, dynamic>),
-    ),
-    $type: $checkedConvert('type', (v) => v as String?),
-  );
-  return val;
-}, fieldKeyMap: const {r'$type': 'type'});
+UpdatedChannelEvent _$UpdatedChannelEventFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('UpdatedChannelEvent', json, ($checkedConvert) {
+      final val = UpdatedChannelEvent(
+        id: $checkedConvert('id', (v) => v as String),
+        body: $checkedConvert(
+          'body',
+          (v) => NoteEdited.fromJson(v as Map<String, dynamic>),
+        ),
+        $type: $checkedConvert('type', (v) => v as String?),
+      );
+      return val;
+    }, fieldKeyMap: const {r'$type': 'type'});
 
-Map<String, dynamic> _$$UpdatedChannelEventImplToJson(
-  _$UpdatedChannelEventImpl instance,
+Map<String, dynamic> _$UpdatedChannelEventToJson(
+  UpdatedChannelEvent instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'body': instance.body.toJson(),

@@ -6,23 +6,22 @@ part of 'bubble_game_ranking_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$BubbleGameRankingResponseImpl _$$BubbleGameRankingResponseImplFromJson(
+_BubbleGameRankingResponse _$BubbleGameRankingResponseFromJson(
   Map<String, dynamic> json,
-) =>
-    $checkedCreate(r'_$BubbleGameRankingResponseImpl', json, ($checkedConvert) {
-      final val = _$BubbleGameRankingResponseImpl(
-        id: $checkedConvert('id', (v) => v as String),
-        score: $checkedConvert('score', (v) => (v as num).toInt()),
-        user: $checkedConvert(
-          'user',
-          (v) => UserLite.fromJson(v as Map<String, dynamic>),
-        ),
-      );
-      return val;
-    });
+) => $checkedCreate('_BubbleGameRankingResponse', json, ($checkedConvert) {
+  final val = _BubbleGameRankingResponse(
+    id: $checkedConvert('id', (v) => v as String),
+    score: $checkedConvert('score', (v) => (v as num).toInt()),
+    user: $checkedConvert(
+      'user',
+      (v) => UserLite.fromJson(v as Map<String, dynamic>),
+    ),
+  );
+  return val;
+});
 
-Map<String, dynamic> _$$BubbleGameRankingResponseImplToJson(
-  _$BubbleGameRankingResponseImpl instance,
+Map<String, dynamic> _$BubbleGameRankingResponseToJson(
+  _BubbleGameRankingResponse instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'score': instance.score,

@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,165 +10,139 @@ part of 'block_create_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-BlockCreateRequest _$BlockCreateRequestFromJson(Map<String, dynamic> json) {
-  return _BlockCreateRequest.fromJson(json);
-}
 
 /// @nodoc
 mixin _$BlockCreateRequest {
-  String get userId => throw _privateConstructorUsedError;
+
+ String get userId;
+/// Create a copy of BlockCreateRequest
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$BlockCreateRequestCopyWith<BlockCreateRequest> get copyWith => _$BlockCreateRequestCopyWithImpl<BlockCreateRequest>(this as BlockCreateRequest, _$identity);
 
   /// Serializes this BlockCreateRequest to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of BlockCreateRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $BlockCreateRequestCopyWith<BlockCreateRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is BlockCreateRequest&&(identical(other.userId, userId) || other.userId == userId));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,userId);
+
+@override
+String toString() {
+  return 'BlockCreateRequest(userId: $userId)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $BlockCreateRequestCopyWith<$Res> {
-  factory $BlockCreateRequestCopyWith(
-    BlockCreateRequest value,
-    $Res Function(BlockCreateRequest) then,
-  ) = _$BlockCreateRequestCopyWithImpl<$Res, BlockCreateRequest>;
-  @useResult
-  $Res call({String userId});
-}
+abstract mixin class $BlockCreateRequestCopyWith<$Res>  {
+  factory $BlockCreateRequestCopyWith(BlockCreateRequest value, $Res Function(BlockCreateRequest) _then) = _$BlockCreateRequestCopyWithImpl;
+@useResult
+$Res call({
+ String userId
+});
 
+
+
+
+}
 /// @nodoc
-class _$BlockCreateRequestCopyWithImpl<$Res, $Val extends BlockCreateRequest>
+class _$BlockCreateRequestCopyWithImpl<$Res>
     implements $BlockCreateRequestCopyWith<$Res> {
-  _$BlockCreateRequestCopyWithImpl(this._value, this._then);
+  _$BlockCreateRequestCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final BlockCreateRequest _self;
+  final $Res Function(BlockCreateRequest) _then;
 
-  /// Create a copy of BlockCreateRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? userId = null}) {
-    return _then(
-      _value.copyWith(
-            userId:
-                null == userId
-                    ? _value.userId
-                    : userId // ignore: cast_nullable_to_non_nullable
-                        as String,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of BlockCreateRequest
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? userId = null,}) {
+  return _then(_self.copyWith(
+userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-abstract class _$$BlockCreateRequestImplCopyWith<$Res>
-    implements $BlockCreateRequestCopyWith<$Res> {
-  factory _$$BlockCreateRequestImplCopyWith(
-    _$BlockCreateRequestImpl value,
-    $Res Function(_$BlockCreateRequestImpl) then,
-  ) = __$$BlockCreateRequestImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String userId});
 }
 
-/// @nodoc
-class __$$BlockCreateRequestImplCopyWithImpl<$Res>
-    extends _$BlockCreateRequestCopyWithImpl<$Res, _$BlockCreateRequestImpl>
-    implements _$$BlockCreateRequestImplCopyWith<$Res> {
-  __$$BlockCreateRequestImplCopyWithImpl(
-    _$BlockCreateRequestImpl _value,
-    $Res Function(_$BlockCreateRequestImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of BlockCreateRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? userId = null}) {
-    return _then(
-      _$BlockCreateRequestImpl(
-        userId:
-            null == userId
-                ? _value.userId
-                : userId // ignore: cast_nullable_to_non_nullable
-                    as String,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$BlockCreateRequestImpl implements _BlockCreateRequest {
-  const _$BlockCreateRequestImpl({required this.userId});
 
-  factory _$BlockCreateRequestImpl.fromJson(Map<String, dynamic> json) =>
-      _$$BlockCreateRequestImplFromJson(json);
+class _BlockCreateRequest implements BlockCreateRequest {
+  const _BlockCreateRequest({required this.userId});
+  factory _BlockCreateRequest.fromJson(Map<String, dynamic> json) => _$BlockCreateRequestFromJson(json);
 
-  @override
-  final String userId;
+@override final  String userId;
 
-  @override
-  String toString() {
-    return 'BlockCreateRequest(userId: $userId)';
-  }
+/// Create a copy of BlockCreateRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$BlockCreateRequestCopyWith<_BlockCreateRequest> get copyWith => __$BlockCreateRequestCopyWithImpl<_BlockCreateRequest>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$BlockCreateRequestImpl &&
-            (identical(other.userId, userId) || other.userId == userId));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, userId);
-
-  /// Create a copy of BlockCreateRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$BlockCreateRequestImplCopyWith<_$BlockCreateRequestImpl> get copyWith =>
-      __$$BlockCreateRequestImplCopyWithImpl<_$BlockCreateRequestImpl>(
-        this,
-        _$identity,
-      );
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$BlockCreateRequestImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$BlockCreateRequestToJson(this, );
 }
 
-abstract class _BlockCreateRequest implements BlockCreateRequest {
-  const factory _BlockCreateRequest({required final String userId}) =
-      _$BlockCreateRequestImpl;
-
-  factory _BlockCreateRequest.fromJson(Map<String, dynamic> json) =
-      _$BlockCreateRequestImpl.fromJson;
-
-  @override
-  String get userId;
-
-  /// Create a copy of BlockCreateRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$BlockCreateRequestImplCopyWith<_$BlockCreateRequestImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _BlockCreateRequest&&(identical(other.userId, userId) || other.userId == userId));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,userId);
+
+@override
+String toString() {
+  return 'BlockCreateRequest(userId: $userId)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$BlockCreateRequestCopyWith<$Res> implements $BlockCreateRequestCopyWith<$Res> {
+  factory _$BlockCreateRequestCopyWith(_BlockCreateRequest value, $Res Function(_BlockCreateRequest) _then) = __$BlockCreateRequestCopyWithImpl;
+@override @useResult
+$Res call({
+ String userId
+});
+
+
+
+
+}
+/// @nodoc
+class __$BlockCreateRequestCopyWithImpl<$Res>
+    implements _$BlockCreateRequestCopyWith<$Res> {
+  __$BlockCreateRequestCopyWithImpl(this._self, this._then);
+
+  final _BlockCreateRequest _self;
+  final $Res Function(_BlockCreateRequest) _then;
+
+/// Create a copy of BlockCreateRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? userId = null,}) {
+  return _then(_BlockCreateRequest(
+userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
+}
+
+
+}
+
+// dart format on

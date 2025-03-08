@@ -6,10 +6,10 @@ part of 'local_timeline_parameter.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$LocalTimelineParameterImpl _$$LocalTimelineParameterImplFromJson(
+_LocalTimelineParameter _$LocalTimelineParameterFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$LocalTimelineParameterImpl', json, ($checkedConvert) {
-  final val = _$LocalTimelineParameterImpl(
+) => $checkedCreate('_LocalTimelineParameter', json, ($checkedConvert) {
+  final val = _LocalTimelineParameter(
     withRenotes: $checkedConvert('withRenotes', (v) => v as bool?),
     withReplies: $checkedConvert('withReplies', (v) => v as bool?),
     withFiles: $checkedConvert('withFiles', (v) => v as bool?),
@@ -17,8 +17,8 @@ _$LocalTimelineParameterImpl _$$LocalTimelineParameterImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$LocalTimelineParameterImplToJson(
-  _$LocalTimelineParameterImpl instance,
+Map<String, dynamic> _$LocalTimelineParameterToJson(
+  _LocalTimelineParameter instance,
 ) => <String, dynamic>{
   'withRenotes': instance.withRenotes,
   'withReplies': instance.withReplies,

@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,232 +10,148 @@ part of 'roles_users_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-RolesUsersRequest _$RolesUsersRequestFromJson(Map<String, dynamic> json) {
-  return _RolesUsersRequest.fromJson(json);
-}
 
 /// @nodoc
 mixin _$RolesUsersRequest {
-  String get roleId => throw _privateConstructorUsedError;
-  String? get sinceId => throw _privateConstructorUsedError;
-  String? get untilId => throw _privateConstructorUsedError;
-  int? get limit => throw _privateConstructorUsedError;
+
+ String get roleId; String? get sinceId; String? get untilId; int? get limit;
+/// Create a copy of RolesUsersRequest
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$RolesUsersRequestCopyWith<RolesUsersRequest> get copyWith => _$RolesUsersRequestCopyWithImpl<RolesUsersRequest>(this as RolesUsersRequest, _$identity);
 
   /// Serializes this RolesUsersRequest to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of RolesUsersRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $RolesUsersRequestCopyWith<RolesUsersRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is RolesUsersRequest&&(identical(other.roleId, roleId) || other.roleId == roleId)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.limit, limit) || other.limit == limit));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,roleId,sinceId,untilId,limit);
+
+@override
+String toString() {
+  return 'RolesUsersRequest(roleId: $roleId, sinceId: $sinceId, untilId: $untilId, limit: $limit)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $RolesUsersRequestCopyWith<$Res> {
-  factory $RolesUsersRequestCopyWith(
-    RolesUsersRequest value,
-    $Res Function(RolesUsersRequest) then,
-  ) = _$RolesUsersRequestCopyWithImpl<$Res, RolesUsersRequest>;
-  @useResult
-  $Res call({String roleId, String? sinceId, String? untilId, int? limit});
-}
+abstract mixin class $RolesUsersRequestCopyWith<$Res>  {
+  factory $RolesUsersRequestCopyWith(RolesUsersRequest value, $Res Function(RolesUsersRequest) _then) = _$RolesUsersRequestCopyWithImpl;
+@useResult
+$Res call({
+ String roleId, String? sinceId, String? untilId, int? limit
+});
 
+
+
+
+}
 /// @nodoc
-class _$RolesUsersRequestCopyWithImpl<$Res, $Val extends RolesUsersRequest>
+class _$RolesUsersRequestCopyWithImpl<$Res>
     implements $RolesUsersRequestCopyWith<$Res> {
-  _$RolesUsersRequestCopyWithImpl(this._value, this._then);
+  _$RolesUsersRequestCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final RolesUsersRequest _self;
+  final $Res Function(RolesUsersRequest) _then;
 
-  /// Create a copy of RolesUsersRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? roleId = null,
-    Object? sinceId = freezed,
-    Object? untilId = freezed,
-    Object? limit = freezed,
-  }) {
-    return _then(
-      _value.copyWith(
-            roleId:
-                null == roleId
-                    ? _value.roleId
-                    : roleId // ignore: cast_nullable_to_non_nullable
-                        as String,
-            sinceId:
-                freezed == sinceId
-                    ? _value.sinceId
-                    : sinceId // ignore: cast_nullable_to_non_nullable
-                        as String?,
-            untilId:
-                freezed == untilId
-                    ? _value.untilId
-                    : untilId // ignore: cast_nullable_to_non_nullable
-                        as String?,
-            limit:
-                freezed == limit
-                    ? _value.limit
-                    : limit // ignore: cast_nullable_to_non_nullable
-                        as int?,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of RolesUsersRequest
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? roleId = null,Object? sinceId = freezed,Object? untilId = freezed,Object? limit = freezed,}) {
+  return _then(_self.copyWith(
+roleId: null == roleId ? _self.roleId : roleId // ignore: cast_nullable_to_non_nullable
+as String,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
+as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
+as String?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
+as int?,
+  ));
 }
 
-/// @nodoc
-abstract class _$$RolesUsersRequestImplCopyWith<$Res>
-    implements $RolesUsersRequestCopyWith<$Res> {
-  factory _$$RolesUsersRequestImplCopyWith(
-    _$RolesUsersRequestImpl value,
-    $Res Function(_$RolesUsersRequestImpl) then,
-  ) = __$$RolesUsersRequestImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String roleId, String? sinceId, String? untilId, int? limit});
 }
 
-/// @nodoc
-class __$$RolesUsersRequestImplCopyWithImpl<$Res>
-    extends _$RolesUsersRequestCopyWithImpl<$Res, _$RolesUsersRequestImpl>
-    implements _$$RolesUsersRequestImplCopyWith<$Res> {
-  __$$RolesUsersRequestImplCopyWithImpl(
-    _$RolesUsersRequestImpl _value,
-    $Res Function(_$RolesUsersRequestImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of RolesUsersRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? roleId = null,
-    Object? sinceId = freezed,
-    Object? untilId = freezed,
-    Object? limit = freezed,
-  }) {
-    return _then(
-      _$RolesUsersRequestImpl(
-        roleId:
-            null == roleId
-                ? _value.roleId
-                : roleId // ignore: cast_nullable_to_non_nullable
-                    as String,
-        sinceId:
-            freezed == sinceId
-                ? _value.sinceId
-                : sinceId // ignore: cast_nullable_to_non_nullable
-                    as String?,
-        untilId:
-            freezed == untilId
-                ? _value.untilId
-                : untilId // ignore: cast_nullable_to_non_nullable
-                    as String?,
-        limit:
-            freezed == limit
-                ? _value.limit
-                : limit // ignore: cast_nullable_to_non_nullable
-                    as int?,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$RolesUsersRequestImpl implements _RolesUsersRequest {
-  const _$RolesUsersRequestImpl({
-    required this.roleId,
-    this.sinceId,
-    this.untilId,
-    this.limit,
-  });
 
-  factory _$RolesUsersRequestImpl.fromJson(Map<String, dynamic> json) =>
-      _$$RolesUsersRequestImplFromJson(json);
+class _RolesUsersRequest implements RolesUsersRequest {
+  const _RolesUsersRequest({required this.roleId, this.sinceId, this.untilId, this.limit});
+  factory _RolesUsersRequest.fromJson(Map<String, dynamic> json) => _$RolesUsersRequestFromJson(json);
 
-  @override
-  final String roleId;
-  @override
-  final String? sinceId;
-  @override
-  final String? untilId;
-  @override
-  final int? limit;
+@override final  String roleId;
+@override final  String? sinceId;
+@override final  String? untilId;
+@override final  int? limit;
 
-  @override
-  String toString() {
-    return 'RolesUsersRequest(roleId: $roleId, sinceId: $sinceId, untilId: $untilId, limit: $limit)';
-  }
+/// Create a copy of RolesUsersRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$RolesUsersRequestCopyWith<_RolesUsersRequest> get copyWith => __$RolesUsersRequestCopyWithImpl<_RolesUsersRequest>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$RolesUsersRequestImpl &&
-            (identical(other.roleId, roleId) || other.roleId == roleId) &&
-            (identical(other.sinceId, sinceId) || other.sinceId == sinceId) &&
-            (identical(other.untilId, untilId) || other.untilId == untilId) &&
-            (identical(other.limit, limit) || other.limit == limit));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, roleId, sinceId, untilId, limit);
-
-  /// Create a copy of RolesUsersRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$RolesUsersRequestImplCopyWith<_$RolesUsersRequestImpl> get copyWith =>
-      __$$RolesUsersRequestImplCopyWithImpl<_$RolesUsersRequestImpl>(
-        this,
-        _$identity,
-      );
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$RolesUsersRequestImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$RolesUsersRequestToJson(this, );
 }
 
-abstract class _RolesUsersRequest implements RolesUsersRequest {
-  const factory _RolesUsersRequest({
-    required final String roleId,
-    final String? sinceId,
-    final String? untilId,
-    final int? limit,
-  }) = _$RolesUsersRequestImpl;
-
-  factory _RolesUsersRequest.fromJson(Map<String, dynamic> json) =
-      _$RolesUsersRequestImpl.fromJson;
-
-  @override
-  String get roleId;
-  @override
-  String? get sinceId;
-  @override
-  String? get untilId;
-  @override
-  int? get limit;
-
-  /// Create a copy of RolesUsersRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RolesUsersRequestImplCopyWith<_$RolesUsersRequestImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _RolesUsersRequest&&(identical(other.roleId, roleId) || other.roleId == roleId)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.limit, limit) || other.limit == limit));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,roleId,sinceId,untilId,limit);
+
+@override
+String toString() {
+  return 'RolesUsersRequest(roleId: $roleId, sinceId: $sinceId, untilId: $untilId, limit: $limit)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$RolesUsersRequestCopyWith<$Res> implements $RolesUsersRequestCopyWith<$Res> {
+  factory _$RolesUsersRequestCopyWith(_RolesUsersRequest value, $Res Function(_RolesUsersRequest) _then) = __$RolesUsersRequestCopyWithImpl;
+@override @useResult
+$Res call({
+ String roleId, String? sinceId, String? untilId, int? limit
+});
+
+
+
+
+}
+/// @nodoc
+class __$RolesUsersRequestCopyWithImpl<$Res>
+    implements _$RolesUsersRequestCopyWith<$Res> {
+  __$RolesUsersRequestCopyWithImpl(this._self, this._then);
+
+  final _RolesUsersRequest _self;
+  final $Res Function(_RolesUsersRequest) _then;
+
+/// Create a copy of RolesUsersRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? roleId = null,Object? sinceId = freezed,Object? untilId = freezed,Object? limit = freezed,}) {
+  return _then(_RolesUsersRequest(
+roleId: null == roleId ? _self.roleId : roleId // ignore: cast_nullable_to_non_nullable
+as String,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
+as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
+as String?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
+as int?,
+  ));
+}
+
+
+}
+
+// dart format on

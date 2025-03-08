@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,166 +10,139 @@ part of 'sw_unregister_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-SwUnregisterRequest _$SwUnregisterRequestFromJson(Map<String, dynamic> json) {
-  return _SwUnregisterRequest.fromJson(json);
-}
 
 /// @nodoc
 mixin _$SwUnregisterRequest {
-  String get endpoint => throw _privateConstructorUsedError;
+
+ String get endpoint;
+/// Create a copy of SwUnregisterRequest
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$SwUnregisterRequestCopyWith<SwUnregisterRequest> get copyWith => _$SwUnregisterRequestCopyWithImpl<SwUnregisterRequest>(this as SwUnregisterRequest, _$identity);
 
   /// Serializes this SwUnregisterRequest to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of SwUnregisterRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $SwUnregisterRequestCopyWith<SwUnregisterRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is SwUnregisterRequest&&(identical(other.endpoint, endpoint) || other.endpoint == endpoint));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,endpoint);
+
+@override
+String toString() {
+  return 'SwUnregisterRequest(endpoint: $endpoint)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $SwUnregisterRequestCopyWith<$Res> {
-  factory $SwUnregisterRequestCopyWith(
-    SwUnregisterRequest value,
-    $Res Function(SwUnregisterRequest) then,
-  ) = _$SwUnregisterRequestCopyWithImpl<$Res, SwUnregisterRequest>;
-  @useResult
-  $Res call({String endpoint});
-}
+abstract mixin class $SwUnregisterRequestCopyWith<$Res>  {
+  factory $SwUnregisterRequestCopyWith(SwUnregisterRequest value, $Res Function(SwUnregisterRequest) _then) = _$SwUnregisterRequestCopyWithImpl;
+@useResult
+$Res call({
+ String endpoint
+});
 
+
+
+
+}
 /// @nodoc
-class _$SwUnregisterRequestCopyWithImpl<$Res, $Val extends SwUnregisterRequest>
+class _$SwUnregisterRequestCopyWithImpl<$Res>
     implements $SwUnregisterRequestCopyWith<$Res> {
-  _$SwUnregisterRequestCopyWithImpl(this._value, this._then);
+  _$SwUnregisterRequestCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final SwUnregisterRequest _self;
+  final $Res Function(SwUnregisterRequest) _then;
 
-  /// Create a copy of SwUnregisterRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? endpoint = null}) {
-    return _then(
-      _value.copyWith(
-            endpoint:
-                null == endpoint
-                    ? _value.endpoint
-                    : endpoint // ignore: cast_nullable_to_non_nullable
-                        as String,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of SwUnregisterRequest
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? endpoint = null,}) {
+  return _then(_self.copyWith(
+endpoint: null == endpoint ? _self.endpoint : endpoint // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-abstract class _$$SwUnregisterRequestImplCopyWith<$Res>
-    implements $SwUnregisterRequestCopyWith<$Res> {
-  factory _$$SwUnregisterRequestImplCopyWith(
-    _$SwUnregisterRequestImpl value,
-    $Res Function(_$SwUnregisterRequestImpl) then,
-  ) = __$$SwUnregisterRequestImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String endpoint});
 }
 
-/// @nodoc
-class __$$SwUnregisterRequestImplCopyWithImpl<$Res>
-    extends _$SwUnregisterRequestCopyWithImpl<$Res, _$SwUnregisterRequestImpl>
-    implements _$$SwUnregisterRequestImplCopyWith<$Res> {
-  __$$SwUnregisterRequestImplCopyWithImpl(
-    _$SwUnregisterRequestImpl _value,
-    $Res Function(_$SwUnregisterRequestImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of SwUnregisterRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? endpoint = null}) {
-    return _then(
-      _$SwUnregisterRequestImpl(
-        endpoint:
-            null == endpoint
-                ? _value.endpoint
-                : endpoint // ignore: cast_nullable_to_non_nullable
-                    as String,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$SwUnregisterRequestImpl implements _SwUnregisterRequest {
-  const _$SwUnregisterRequestImpl({required this.endpoint});
 
-  factory _$SwUnregisterRequestImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SwUnregisterRequestImplFromJson(json);
+class _SwUnregisterRequest implements SwUnregisterRequest {
+  const _SwUnregisterRequest({required this.endpoint});
+  factory _SwUnregisterRequest.fromJson(Map<String, dynamic> json) => _$SwUnregisterRequestFromJson(json);
 
-  @override
-  final String endpoint;
+@override final  String endpoint;
 
-  @override
-  String toString() {
-    return 'SwUnregisterRequest(endpoint: $endpoint)';
-  }
+/// Create a copy of SwUnregisterRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$SwUnregisterRequestCopyWith<_SwUnregisterRequest> get copyWith => __$SwUnregisterRequestCopyWithImpl<_SwUnregisterRequest>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$SwUnregisterRequestImpl &&
-            (identical(other.endpoint, endpoint) ||
-                other.endpoint == endpoint));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, endpoint);
-
-  /// Create a copy of SwUnregisterRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SwUnregisterRequestImplCopyWith<_$SwUnregisterRequestImpl> get copyWith =>
-      __$$SwUnregisterRequestImplCopyWithImpl<_$SwUnregisterRequestImpl>(
-        this,
-        _$identity,
-      );
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$SwUnregisterRequestImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$SwUnregisterRequestToJson(this, );
 }
 
-abstract class _SwUnregisterRequest implements SwUnregisterRequest {
-  const factory _SwUnregisterRequest({required final String endpoint}) =
-      _$SwUnregisterRequestImpl;
-
-  factory _SwUnregisterRequest.fromJson(Map<String, dynamic> json) =
-      _$SwUnregisterRequestImpl.fromJson;
-
-  @override
-  String get endpoint;
-
-  /// Create a copy of SwUnregisterRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SwUnregisterRequestImplCopyWith<_$SwUnregisterRequestImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _SwUnregisterRequest&&(identical(other.endpoint, endpoint) || other.endpoint == endpoint));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,endpoint);
+
+@override
+String toString() {
+  return 'SwUnregisterRequest(endpoint: $endpoint)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$SwUnregisterRequestCopyWith<$Res> implements $SwUnregisterRequestCopyWith<$Res> {
+  factory _$SwUnregisterRequestCopyWith(_SwUnregisterRequest value, $Res Function(_SwUnregisterRequest) _then) = __$SwUnregisterRequestCopyWithImpl;
+@override @useResult
+$Res call({
+ String endpoint
+});
+
+
+
+
+}
+/// @nodoc
+class __$SwUnregisterRequestCopyWithImpl<$Res>
+    implements _$SwUnregisterRequestCopyWith<$Res> {
+  __$SwUnregisterRequestCopyWithImpl(this._self, this._then);
+
+  final _SwUnregisterRequest _self;
+  final $Res Function(_SwUnregisterRequest) _then;
+
+/// Create a copy of SwUnregisterRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? endpoint = null,}) {
+  return _then(_SwUnregisterRequest(
+endpoint: null == endpoint ? _self.endpoint : endpoint // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
+}
+
+
+}
+
+// dart format on

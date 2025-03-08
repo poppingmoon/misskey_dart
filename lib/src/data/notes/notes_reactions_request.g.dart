@@ -6,10 +6,10 @@ part of 'notes_reactions_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$NotesReactionsRequestImpl _$$NotesReactionsRequestImplFromJson(
+_NotesReactionsRequest _$NotesReactionsRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$NotesReactionsRequestImpl', json, ($checkedConvert) {
-  final val = _$NotesReactionsRequestImpl(
+) => $checkedCreate('_NotesReactionsRequest', json, ($checkedConvert) {
+  final val = _NotesReactionsRequest(
     noteId: $checkedConvert('noteId', (v) => v as String),
     type: $checkedConvert('type', (v) => v as String?),
     limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
@@ -20,8 +20,8 @@ _$NotesReactionsRequestImpl _$$NotesReactionsRequestImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$NotesReactionsRequestImplToJson(
-  _$NotesReactionsRequestImpl instance,
+Map<String, dynamic> _$NotesReactionsRequestToJson(
+  _NotesReactionsRequest instance,
 ) => <String, dynamic>{
   'noteId': instance.noteId,
   'type': instance.type,

@@ -6,10 +6,10 @@ part of 'meta_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$MetaResponseImpl _$$MetaResponseImplFromJson(
+_MetaResponse _$MetaResponseFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$MetaResponseImpl', json, ($checkedConvert) {
-  final val = _$MetaResponseImpl(
+) => $checkedCreate('_MetaResponse', json, ($checkedConvert) {
+  final val = _MetaResponse(
     maintainerName: $checkedConvert('maintainerName', (v) => v as String?),
     maintainerEmail: $checkedConvert('maintainerEmail', (v) => v as String?),
     version: $checkedConvert('version', (v) => v as String?),
@@ -159,8 +159,8 @@ _$MetaResponseImpl _$$MetaResponseImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$MetaResponseImplToJson(
-  _$MetaResponseImpl instance,
+Map<String, dynamic> _$MetaResponseToJson(
+  _MetaResponse instance,
 ) => <String, dynamic>{
   'maintainerName': instance.maintainerName,
   'maintainerEmail': instance.maintainerEmail,
@@ -230,9 +230,9 @@ Map<String, dynamic> _$$MetaResponseImplToJson(
   'features': instance.features?.toJson(),
 };
 
-_$MetaAdImpl _$$MetaAdImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$MetaAdImpl', json, ($checkedConvert) {
-      final val = _$MetaAdImpl(
+_MetaAd _$MetaAdFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_MetaAd', json, ($checkedConvert) {
+      final val = _MetaAd(
         id: $checkedConvert('id', (v) => v as String),
         place: $checkedConvert('place', (v) => v as String),
         url: $checkedConvert(
@@ -248,18 +248,17 @@ _$MetaAdImpl _$$MetaAdImplFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$$MetaAdImplToJson(_$MetaAdImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'place': instance.place,
-      'url': const NullableUriConverter().toJson(instance.url),
-      'imageUrl': const NullableUriConverter().toJson(instance.imageUrl),
-      'ratio': instance.ratio,
-    };
+Map<String, dynamic> _$MetaAdToJson(_MetaAd instance) => <String, dynamic>{
+  'id': instance.id,
+  'place': instance.place,
+  'url': const NullableUriConverter().toJson(instance.url),
+  'imageUrl': const NullableUriConverter().toJson(instance.imageUrl),
+  'ratio': instance.ratio,
+};
 
-_$MetaFeatureImpl _$$MetaFeatureImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$MetaFeatureImpl', json, ($checkedConvert) {
-      final val = _$MetaFeatureImpl(
+_MetaFeature _$MetaFeatureFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_MetaFeature', json, ($checkedConvert) {
+      final val = _MetaFeature(
         registration: $checkedConvert('registration', (v) => v as bool?),
         emailRequiredForSignup: $checkedConvert(
           'emailRequiredForSignup',
@@ -275,7 +274,7 @@ _$MetaFeatureImpl _$$MetaFeatureImplFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$$MetaFeatureImplToJson(_$MetaFeatureImpl instance) =>
+Map<String, dynamic> _$MetaFeatureToJson(_MetaFeature instance) =>
     <String, dynamic>{
       'registration': instance.registration,
       'emailRequiredForSignup': instance.emailRequiredForSignup,

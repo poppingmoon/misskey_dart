@@ -6,15 +6,15 @@ part of 'gallery_posts_show_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$GalleryPostsShowRequestImpl _$$GalleryPostsShowRequestImplFromJson(
+_GalleryPostsShowRequest _$GalleryPostsShowRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$GalleryPostsShowRequestImpl', json, ($checkedConvert) {
-  final val = _$GalleryPostsShowRequestImpl(
+) => $checkedCreate('_GalleryPostsShowRequest', json, ($checkedConvert) {
+  final val = _GalleryPostsShowRequest(
     postId: $checkedConvert('postId', (v) => v as String),
   );
   return val;
 });
 
-Map<String, dynamic> _$$GalleryPostsShowRequestImplToJson(
-  _$GalleryPostsShowRequestImpl instance,
+Map<String, dynamic> _$GalleryPostsShowRequestToJson(
+  _GalleryPostsShowRequest instance,
 ) => <String, dynamic>{'postId': instance.postId};

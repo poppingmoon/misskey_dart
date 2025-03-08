@@ -6,16 +6,16 @@ part of 'clips_remove_note_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ClipsRemoveNoteRequestImpl _$$ClipsRemoveNoteRequestImplFromJson(
+_ClipsRemoveNoteRequest _$ClipsRemoveNoteRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$ClipsRemoveNoteRequestImpl', json, ($checkedConvert) {
-  final val = _$ClipsRemoveNoteRequestImpl(
+) => $checkedCreate('_ClipsRemoveNoteRequest', json, ($checkedConvert) {
+  final val = _ClipsRemoveNoteRequest(
     clipId: $checkedConvert('clipId', (v) => v as String),
     noteId: $checkedConvert('noteId', (v) => v as String),
   );
   return val;
 });
 
-Map<String, dynamic> _$$ClipsRemoveNoteRequestImplToJson(
-  _$ClipsRemoveNoteRequestImpl instance,
+Map<String, dynamic> _$ClipsRemoveNoteRequestToJson(
+  _ClipsRemoveNoteRequest instance,
 ) => <String, dynamic>{'clipId': instance.clipId, 'noteId': instance.noteId};

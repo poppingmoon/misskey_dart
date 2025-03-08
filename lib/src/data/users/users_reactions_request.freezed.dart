@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,309 +10,154 @@ part of 'users_reactions_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-UsersReactionsRequest _$UsersReactionsRequestFromJson(
-  Map<String, dynamic> json,
-) {
-  return _UsersReactionsRequest.fromJson(json);
-}
 
 /// @nodoc
 mixin _$UsersReactionsRequest {
-  String get userId => throw _privateConstructorUsedError;
-  int? get limit => throw _privateConstructorUsedError;
-  String? get sinceId => throw _privateConstructorUsedError;
-  String? get untilId => throw _privateConstructorUsedError;
-  @EpocTimeDateTimeConverter()
-  DateTime? get sinceDate => throw _privateConstructorUsedError;
-  @EpocTimeDateTimeConverter()
-  DateTime? get untilDate => throw _privateConstructorUsedError;
+
+ String get userId; int? get limit; String? get sinceId; String? get untilId;@EpocTimeDateTimeConverter() DateTime? get sinceDate;@EpocTimeDateTimeConverter() DateTime? get untilDate;
+/// Create a copy of UsersReactionsRequest
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$UsersReactionsRequestCopyWith<UsersReactionsRequest> get copyWith => _$UsersReactionsRequestCopyWithImpl<UsersReactionsRequest>(this as UsersReactionsRequest, _$identity);
 
   /// Serializes this UsersReactionsRequest to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of UsersReactionsRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $UsersReactionsRequestCopyWith<UsersReactionsRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is UsersReactionsRequest&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,userId,limit,sinceId,untilId,sinceDate,untilDate);
+
+@override
+String toString() {
+  return 'UsersReactionsRequest(userId: $userId, limit: $limit, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $UsersReactionsRequestCopyWith<$Res> {
-  factory $UsersReactionsRequestCopyWith(
-    UsersReactionsRequest value,
-    $Res Function(UsersReactionsRequest) then,
-  ) = _$UsersReactionsRequestCopyWithImpl<$Res, UsersReactionsRequest>;
-  @useResult
-  $Res call({
-    String userId,
-    int? limit,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-  });
-}
+abstract mixin class $UsersReactionsRequestCopyWith<$Res>  {
+  factory $UsersReactionsRequestCopyWith(UsersReactionsRequest value, $Res Function(UsersReactionsRequest) _then) = _$UsersReactionsRequestCopyWithImpl;
+@useResult
+$Res call({
+ String userId, int? limit, String? sinceId, String? untilId,@EpocTimeDateTimeConverter() DateTime? sinceDate,@EpocTimeDateTimeConverter() DateTime? untilDate
+});
 
+
+
+
+}
 /// @nodoc
-class _$UsersReactionsRequestCopyWithImpl<
-  $Res,
-  $Val extends UsersReactionsRequest
->
+class _$UsersReactionsRequestCopyWithImpl<$Res>
     implements $UsersReactionsRequestCopyWith<$Res> {
-  _$UsersReactionsRequestCopyWithImpl(this._value, this._then);
+  _$UsersReactionsRequestCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final UsersReactionsRequest _self;
+  final $Res Function(UsersReactionsRequest) _then;
 
-  /// Create a copy of UsersReactionsRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? userId = null,
-    Object? limit = freezed,
-    Object? sinceId = freezed,
-    Object? untilId = freezed,
-    Object? sinceDate = freezed,
-    Object? untilDate = freezed,
-  }) {
-    return _then(
-      _value.copyWith(
-            userId:
-                null == userId
-                    ? _value.userId
-                    : userId // ignore: cast_nullable_to_non_nullable
-                        as String,
-            limit:
-                freezed == limit
-                    ? _value.limit
-                    : limit // ignore: cast_nullable_to_non_nullable
-                        as int?,
-            sinceId:
-                freezed == sinceId
-                    ? _value.sinceId
-                    : sinceId // ignore: cast_nullable_to_non_nullable
-                        as String?,
-            untilId:
-                freezed == untilId
-                    ? _value.untilId
-                    : untilId // ignore: cast_nullable_to_non_nullable
-                        as String?,
-            sinceDate:
-                freezed == sinceDate
-                    ? _value.sinceDate
-                    : sinceDate // ignore: cast_nullable_to_non_nullable
-                        as DateTime?,
-            untilDate:
-                freezed == untilDate
-                    ? _value.untilDate
-                    : untilDate // ignore: cast_nullable_to_non_nullable
-                        as DateTime?,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of UsersReactionsRequest
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? userId = null,Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,}) {
+  return _then(_self.copyWith(
+userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as String,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
+as int?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
+as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
+as String?,sinceDate: freezed == sinceDate ? _self.sinceDate : sinceDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,untilDate: freezed == untilDate ? _self.untilDate : untilDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,
+  ));
 }
 
-/// @nodoc
-abstract class _$$UsersReactionsRequestImplCopyWith<$Res>
-    implements $UsersReactionsRequestCopyWith<$Res> {
-  factory _$$UsersReactionsRequestImplCopyWith(
-    _$UsersReactionsRequestImpl value,
-    $Res Function(_$UsersReactionsRequestImpl) then,
-  ) = __$$UsersReactionsRequestImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({
-    String userId,
-    int? limit,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-  });
 }
 
-/// @nodoc
-class __$$UsersReactionsRequestImplCopyWithImpl<$Res>
-    extends
-        _$UsersReactionsRequestCopyWithImpl<$Res, _$UsersReactionsRequestImpl>
-    implements _$$UsersReactionsRequestImplCopyWith<$Res> {
-  __$$UsersReactionsRequestImplCopyWithImpl(
-    _$UsersReactionsRequestImpl _value,
-    $Res Function(_$UsersReactionsRequestImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of UsersReactionsRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? userId = null,
-    Object? limit = freezed,
-    Object? sinceId = freezed,
-    Object? untilId = freezed,
-    Object? sinceDate = freezed,
-    Object? untilDate = freezed,
-  }) {
-    return _then(
-      _$UsersReactionsRequestImpl(
-        userId:
-            null == userId
-                ? _value.userId
-                : userId // ignore: cast_nullable_to_non_nullable
-                    as String,
-        limit:
-            freezed == limit
-                ? _value.limit
-                : limit // ignore: cast_nullable_to_non_nullable
-                    as int?,
-        sinceId:
-            freezed == sinceId
-                ? _value.sinceId
-                : sinceId // ignore: cast_nullable_to_non_nullable
-                    as String?,
-        untilId:
-            freezed == untilId
-                ? _value.untilId
-                : untilId // ignore: cast_nullable_to_non_nullable
-                    as String?,
-        sinceDate:
-            freezed == sinceDate
-                ? _value.sinceDate
-                : sinceDate // ignore: cast_nullable_to_non_nullable
-                    as DateTime?,
-        untilDate:
-            freezed == untilDate
-                ? _value.untilDate
-                : untilDate // ignore: cast_nullable_to_non_nullable
-                    as DateTime?,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$UsersReactionsRequestImpl implements _UsersReactionsRequest {
-  const _$UsersReactionsRequestImpl({
-    required this.userId,
-    this.limit,
-    this.sinceId,
-    this.untilId,
-    @EpocTimeDateTimeConverter() this.sinceDate,
-    @EpocTimeDateTimeConverter() this.untilDate,
-  });
 
-  factory _$UsersReactionsRequestImpl.fromJson(Map<String, dynamic> json) =>
-      _$$UsersReactionsRequestImplFromJson(json);
+class _UsersReactionsRequest implements UsersReactionsRequest {
+  const _UsersReactionsRequest({required this.userId, this.limit, this.sinceId, this.untilId, @EpocTimeDateTimeConverter() this.sinceDate, @EpocTimeDateTimeConverter() this.untilDate});
+  factory _UsersReactionsRequest.fromJson(Map<String, dynamic> json) => _$UsersReactionsRequestFromJson(json);
 
-  @override
-  final String userId;
-  @override
-  final int? limit;
-  @override
-  final String? sinceId;
-  @override
-  final String? untilId;
-  @override
-  @EpocTimeDateTimeConverter()
-  final DateTime? sinceDate;
-  @override
-  @EpocTimeDateTimeConverter()
-  final DateTime? untilDate;
+@override final  String userId;
+@override final  int? limit;
+@override final  String? sinceId;
+@override final  String? untilId;
+@override@EpocTimeDateTimeConverter() final  DateTime? sinceDate;
+@override@EpocTimeDateTimeConverter() final  DateTime? untilDate;
 
-  @override
-  String toString() {
-    return 'UsersReactionsRequest(userId: $userId, limit: $limit, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate)';
-  }
+/// Create a copy of UsersReactionsRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$UsersReactionsRequestCopyWith<_UsersReactionsRequest> get copyWith => __$UsersReactionsRequestCopyWithImpl<_UsersReactionsRequest>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$UsersReactionsRequestImpl &&
-            (identical(other.userId, userId) || other.userId == userId) &&
-            (identical(other.limit, limit) || other.limit == limit) &&
-            (identical(other.sinceId, sinceId) || other.sinceId == sinceId) &&
-            (identical(other.untilId, untilId) || other.untilId == untilId) &&
-            (identical(other.sinceDate, sinceDate) ||
-                other.sinceDate == sinceDate) &&
-            (identical(other.untilDate, untilDate) ||
-                other.untilDate == untilDate));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    userId,
-    limit,
-    sinceId,
-    untilId,
-    sinceDate,
-    untilDate,
-  );
-
-  /// Create a copy of UsersReactionsRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$UsersReactionsRequestImplCopyWith<_$UsersReactionsRequestImpl>
-  get copyWith =>
-      __$$UsersReactionsRequestImplCopyWithImpl<_$UsersReactionsRequestImpl>(
-        this,
-        _$identity,
-      );
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$UsersReactionsRequestImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$UsersReactionsRequestToJson(this, );
 }
 
-abstract class _UsersReactionsRequest implements UsersReactionsRequest {
-  const factory _UsersReactionsRequest({
-    required final String userId,
-    final int? limit,
-    final String? sinceId,
-    final String? untilId,
-    @EpocTimeDateTimeConverter() final DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() final DateTime? untilDate,
-  }) = _$UsersReactionsRequestImpl;
-
-  factory _UsersReactionsRequest.fromJson(Map<String, dynamic> json) =
-      _$UsersReactionsRequestImpl.fromJson;
-
-  @override
-  String get userId;
-  @override
-  int? get limit;
-  @override
-  String? get sinceId;
-  @override
-  String? get untilId;
-  @override
-  @EpocTimeDateTimeConverter()
-  DateTime? get sinceDate;
-  @override
-  @EpocTimeDateTimeConverter()
-  DateTime? get untilDate;
-
-  /// Create a copy of UsersReactionsRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$UsersReactionsRequestImplCopyWith<_$UsersReactionsRequestImpl>
-  get copyWith => throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersReactionsRequest&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,userId,limit,sinceId,untilId,sinceDate,untilDate);
+
+@override
+String toString() {
+  return 'UsersReactionsRequest(userId: $userId, limit: $limit, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$UsersReactionsRequestCopyWith<$Res> implements $UsersReactionsRequestCopyWith<$Res> {
+  factory _$UsersReactionsRequestCopyWith(_UsersReactionsRequest value, $Res Function(_UsersReactionsRequest) _then) = __$UsersReactionsRequestCopyWithImpl;
+@override @useResult
+$Res call({
+ String userId, int? limit, String? sinceId, String? untilId,@EpocTimeDateTimeConverter() DateTime? sinceDate,@EpocTimeDateTimeConverter() DateTime? untilDate
+});
+
+
+
+
+}
+/// @nodoc
+class __$UsersReactionsRequestCopyWithImpl<$Res>
+    implements _$UsersReactionsRequestCopyWith<$Res> {
+  __$UsersReactionsRequestCopyWithImpl(this._self, this._then);
+
+  final _UsersReactionsRequest _self;
+  final $Res Function(_UsersReactionsRequest) _then;
+
+/// Create a copy of UsersReactionsRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? userId = null,Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,}) {
+  return _then(_UsersReactionsRequest(
+userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as String,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
+as int?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
+as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
+as String?,sinceDate: freezed == sinceDate ? _self.sinceDate : sinceDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,untilDate: freezed == untilDate ? _self.untilDate : untilDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,
+  ));
+}
+
+
+}
+
+// dart format on

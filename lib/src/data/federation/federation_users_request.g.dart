@@ -6,10 +6,10 @@ part of 'federation_users_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$FederationUsersRequestImpl _$$FederationUsersRequestImplFromJson(
+_FederationUsersRequest _$FederationUsersRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$FederationUsersRequestImpl', json, ($checkedConvert) {
-  final val = _$FederationUsersRequestImpl(
+) => $checkedCreate('_FederationUsersRequest', json, ($checkedConvert) {
+  final val = _FederationUsersRequest(
     host: $checkedConvert('host', (v) => v as String),
     sinceId: $checkedConvert('sinceId', (v) => v as String?),
     untilId: $checkedConvert('untilId', (v) => v as String?),
@@ -18,8 +18,8 @@ _$FederationUsersRequestImpl _$$FederationUsersRequestImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$FederationUsersRequestImplToJson(
-  _$FederationUsersRequestImpl instance,
+Map<String, dynamic> _$FederationUsersRequestToJson(
+  _FederationUsersRequest instance,
 ) => <String, dynamic>{
   'host': instance.host,
   'sinceId': instance.sinceId,

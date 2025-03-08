@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,202 +10,142 @@ part of 'notes_reactions_create_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-NotesReactionsCreateRequest _$NotesReactionsCreateRequestFromJson(
-  Map<String, dynamic> json,
-) {
-  return _NotesReactionsCreateRequest.fromJson(json);
-}
 
 /// @nodoc
 mixin _$NotesReactionsCreateRequest {
-  String get noteId => throw _privateConstructorUsedError;
-  String get reaction => throw _privateConstructorUsedError;
+
+ String get noteId; String get reaction;
+/// Create a copy of NotesReactionsCreateRequest
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$NotesReactionsCreateRequestCopyWith<NotesReactionsCreateRequest> get copyWith => _$NotesReactionsCreateRequestCopyWithImpl<NotesReactionsCreateRequest>(this as NotesReactionsCreateRequest, _$identity);
 
   /// Serializes this NotesReactionsCreateRequest to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of NotesReactionsCreateRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $NotesReactionsCreateRequestCopyWith<NotesReactionsCreateRequest>
-  get copyWith => throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesReactionsCreateRequest&&(identical(other.noteId, noteId) || other.noteId == noteId)&&(identical(other.reaction, reaction) || other.reaction == reaction));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,noteId,reaction);
+
+@override
+String toString() {
+  return 'NotesReactionsCreateRequest(noteId: $noteId, reaction: $reaction)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $NotesReactionsCreateRequestCopyWith<$Res> {
-  factory $NotesReactionsCreateRequestCopyWith(
-    NotesReactionsCreateRequest value,
-    $Res Function(NotesReactionsCreateRequest) then,
-  ) =
-      _$NotesReactionsCreateRequestCopyWithImpl<
-        $Res,
-        NotesReactionsCreateRequest
-      >;
-  @useResult
-  $Res call({String noteId, String reaction});
-}
+abstract mixin class $NotesReactionsCreateRequestCopyWith<$Res>  {
+  factory $NotesReactionsCreateRequestCopyWith(NotesReactionsCreateRequest value, $Res Function(NotesReactionsCreateRequest) _then) = _$NotesReactionsCreateRequestCopyWithImpl;
+@useResult
+$Res call({
+ String noteId, String reaction
+});
 
+
+
+
+}
 /// @nodoc
-class _$NotesReactionsCreateRequestCopyWithImpl<
-  $Res,
-  $Val extends NotesReactionsCreateRequest
->
+class _$NotesReactionsCreateRequestCopyWithImpl<$Res>
     implements $NotesReactionsCreateRequestCopyWith<$Res> {
-  _$NotesReactionsCreateRequestCopyWithImpl(this._value, this._then);
+  _$NotesReactionsCreateRequestCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final NotesReactionsCreateRequest _self;
+  final $Res Function(NotesReactionsCreateRequest) _then;
 
-  /// Create a copy of NotesReactionsCreateRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? noteId = null, Object? reaction = null}) {
-    return _then(
-      _value.copyWith(
-            noteId:
-                null == noteId
-                    ? _value.noteId
-                    : noteId // ignore: cast_nullable_to_non_nullable
-                        as String,
-            reaction:
-                null == reaction
-                    ? _value.reaction
-                    : reaction // ignore: cast_nullable_to_non_nullable
-                        as String,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of NotesReactionsCreateRequest
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? noteId = null,Object? reaction = null,}) {
+  return _then(_self.copyWith(
+noteId: null == noteId ? _self.noteId : noteId // ignore: cast_nullable_to_non_nullable
+as String,reaction: null == reaction ? _self.reaction : reaction // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-abstract class _$$NotesReactionsCreateRequestImplCopyWith<$Res>
-    implements $NotesReactionsCreateRequestCopyWith<$Res> {
-  factory _$$NotesReactionsCreateRequestImplCopyWith(
-    _$NotesReactionsCreateRequestImpl value,
-    $Res Function(_$NotesReactionsCreateRequestImpl) then,
-  ) = __$$NotesReactionsCreateRequestImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String noteId, String reaction});
 }
 
-/// @nodoc
-class __$$NotesReactionsCreateRequestImplCopyWithImpl<$Res>
-    extends
-        _$NotesReactionsCreateRequestCopyWithImpl<
-          $Res,
-          _$NotesReactionsCreateRequestImpl
-        >
-    implements _$$NotesReactionsCreateRequestImplCopyWith<$Res> {
-  __$$NotesReactionsCreateRequestImplCopyWithImpl(
-    _$NotesReactionsCreateRequestImpl _value,
-    $Res Function(_$NotesReactionsCreateRequestImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of NotesReactionsCreateRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? noteId = null, Object? reaction = null}) {
-    return _then(
-      _$NotesReactionsCreateRequestImpl(
-        noteId:
-            null == noteId
-                ? _value.noteId
-                : noteId // ignore: cast_nullable_to_non_nullable
-                    as String,
-        reaction:
-            null == reaction
-                ? _value.reaction
-                : reaction // ignore: cast_nullable_to_non_nullable
-                    as String,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$NotesReactionsCreateRequestImpl
-    implements _NotesReactionsCreateRequest {
-  const _$NotesReactionsCreateRequestImpl({
-    required this.noteId,
-    required this.reaction,
-  });
 
-  factory _$NotesReactionsCreateRequestImpl.fromJson(
-    Map<String, dynamic> json,
-  ) => _$$NotesReactionsCreateRequestImplFromJson(json);
+class _NotesReactionsCreateRequest implements NotesReactionsCreateRequest {
+  const _NotesReactionsCreateRequest({required this.noteId, required this.reaction});
+  factory _NotesReactionsCreateRequest.fromJson(Map<String, dynamic> json) => _$NotesReactionsCreateRequestFromJson(json);
 
-  @override
-  final String noteId;
-  @override
-  final String reaction;
+@override final  String noteId;
+@override final  String reaction;
 
-  @override
-  String toString() {
-    return 'NotesReactionsCreateRequest(noteId: $noteId, reaction: $reaction)';
-  }
+/// Create a copy of NotesReactionsCreateRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$NotesReactionsCreateRequestCopyWith<_NotesReactionsCreateRequest> get copyWith => __$NotesReactionsCreateRequestCopyWithImpl<_NotesReactionsCreateRequest>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$NotesReactionsCreateRequestImpl &&
-            (identical(other.noteId, noteId) || other.noteId == noteId) &&
-            (identical(other.reaction, reaction) ||
-                other.reaction == reaction));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, noteId, reaction);
-
-  /// Create a copy of NotesReactionsCreateRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$NotesReactionsCreateRequestImplCopyWith<_$NotesReactionsCreateRequestImpl>
-  get copyWith => __$$NotesReactionsCreateRequestImplCopyWithImpl<
-    _$NotesReactionsCreateRequestImpl
-  >(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$NotesReactionsCreateRequestImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$NotesReactionsCreateRequestToJson(this, );
 }
 
-abstract class _NotesReactionsCreateRequest
-    implements NotesReactionsCreateRequest {
-  const factory _NotesReactionsCreateRequest({
-    required final String noteId,
-    required final String reaction,
-  }) = _$NotesReactionsCreateRequestImpl;
-
-  factory _NotesReactionsCreateRequest.fromJson(Map<String, dynamic> json) =
-      _$NotesReactionsCreateRequestImpl.fromJson;
-
-  @override
-  String get noteId;
-  @override
-  String get reaction;
-
-  /// Create a copy of NotesReactionsCreateRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$NotesReactionsCreateRequestImplCopyWith<_$NotesReactionsCreateRequestImpl>
-  get copyWith => throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesReactionsCreateRequest&&(identical(other.noteId, noteId) || other.noteId == noteId)&&(identical(other.reaction, reaction) || other.reaction == reaction));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,noteId,reaction);
+
+@override
+String toString() {
+  return 'NotesReactionsCreateRequest(noteId: $noteId, reaction: $reaction)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$NotesReactionsCreateRequestCopyWith<$Res> implements $NotesReactionsCreateRequestCopyWith<$Res> {
+  factory _$NotesReactionsCreateRequestCopyWith(_NotesReactionsCreateRequest value, $Res Function(_NotesReactionsCreateRequest) _then) = __$NotesReactionsCreateRequestCopyWithImpl;
+@override @useResult
+$Res call({
+ String noteId, String reaction
+});
+
+
+
+
+}
+/// @nodoc
+class __$NotesReactionsCreateRequestCopyWithImpl<$Res>
+    implements _$NotesReactionsCreateRequestCopyWith<$Res> {
+  __$NotesReactionsCreateRequestCopyWithImpl(this._self, this._then);
+
+  final _NotesReactionsCreateRequest _self;
+  final $Res Function(_NotesReactionsCreateRequest) _then;
+
+/// Create a copy of NotesReactionsCreateRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? noteId = null,Object? reaction = null,}) {
+  return _then(_NotesReactionsCreateRequest(
+noteId: null == noteId ? _self.noteId : noteId // ignore: cast_nullable_to_non_nullable
+as String,reaction: null == reaction ? _self.reaction : reaction // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
+}
+
+
+}
+
+// dart format on

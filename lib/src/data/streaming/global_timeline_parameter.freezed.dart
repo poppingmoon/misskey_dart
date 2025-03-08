@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,193 +10,142 @@ part of 'global_timeline_parameter.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-GlobalTimelineParameter _$GlobalTimelineParameterFromJson(
-  Map<String, dynamic> json,
-) {
-  return _GlobalTimelineParameter.fromJson(json);
-}
 
 /// @nodoc
 mixin _$GlobalTimelineParameter {
-  bool? get withRenotes => throw _privateConstructorUsedError;
-  bool? get withFiles => throw _privateConstructorUsedError;
+
+ bool? get withRenotes; bool? get withFiles;
+/// Create a copy of GlobalTimelineParameter
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$GlobalTimelineParameterCopyWith<GlobalTimelineParameter> get copyWith => _$GlobalTimelineParameterCopyWithImpl<GlobalTimelineParameter>(this as GlobalTimelineParameter, _$identity);
 
   /// Serializes this GlobalTimelineParameter to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of GlobalTimelineParameter
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $GlobalTimelineParameterCopyWith<GlobalTimelineParameter> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is GlobalTimelineParameter&&(identical(other.withRenotes, withRenotes) || other.withRenotes == withRenotes)&&(identical(other.withFiles, withFiles) || other.withFiles == withFiles));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,withRenotes,withFiles);
+
+@override
+String toString() {
+  return 'GlobalTimelineParameter(withRenotes: $withRenotes, withFiles: $withFiles)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $GlobalTimelineParameterCopyWith<$Res> {
-  factory $GlobalTimelineParameterCopyWith(
-    GlobalTimelineParameter value,
-    $Res Function(GlobalTimelineParameter) then,
-  ) = _$GlobalTimelineParameterCopyWithImpl<$Res, GlobalTimelineParameter>;
-  @useResult
-  $Res call({bool? withRenotes, bool? withFiles});
-}
+abstract mixin class $GlobalTimelineParameterCopyWith<$Res>  {
+  factory $GlobalTimelineParameterCopyWith(GlobalTimelineParameter value, $Res Function(GlobalTimelineParameter) _then) = _$GlobalTimelineParameterCopyWithImpl;
+@useResult
+$Res call({
+ bool? withRenotes, bool? withFiles
+});
 
+
+
+
+}
 /// @nodoc
-class _$GlobalTimelineParameterCopyWithImpl<
-  $Res,
-  $Val extends GlobalTimelineParameter
->
+class _$GlobalTimelineParameterCopyWithImpl<$Res>
     implements $GlobalTimelineParameterCopyWith<$Res> {
-  _$GlobalTimelineParameterCopyWithImpl(this._value, this._then);
+  _$GlobalTimelineParameterCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final GlobalTimelineParameter _self;
+  final $Res Function(GlobalTimelineParameter) _then;
 
-  /// Create a copy of GlobalTimelineParameter
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? withRenotes = freezed, Object? withFiles = freezed}) {
-    return _then(
-      _value.copyWith(
-            withRenotes:
-                freezed == withRenotes
-                    ? _value.withRenotes
-                    : withRenotes // ignore: cast_nullable_to_non_nullable
-                        as bool?,
-            withFiles:
-                freezed == withFiles
-                    ? _value.withFiles
-                    : withFiles // ignore: cast_nullable_to_non_nullable
-                        as bool?,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of GlobalTimelineParameter
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? withRenotes = freezed,Object? withFiles = freezed,}) {
+  return _then(_self.copyWith(
+withRenotes: freezed == withRenotes ? _self.withRenotes : withRenotes // ignore: cast_nullable_to_non_nullable
+as bool?,withFiles: freezed == withFiles ? _self.withFiles : withFiles // ignore: cast_nullable_to_non_nullable
+as bool?,
+  ));
 }
 
-/// @nodoc
-abstract class _$$GlobalTimelineParameterImplCopyWith<$Res>
-    implements $GlobalTimelineParameterCopyWith<$Res> {
-  factory _$$GlobalTimelineParameterImplCopyWith(
-    _$GlobalTimelineParameterImpl value,
-    $Res Function(_$GlobalTimelineParameterImpl) then,
-  ) = __$$GlobalTimelineParameterImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({bool? withRenotes, bool? withFiles});
 }
 
-/// @nodoc
-class __$$GlobalTimelineParameterImplCopyWithImpl<$Res>
-    extends
-        _$GlobalTimelineParameterCopyWithImpl<
-          $Res,
-          _$GlobalTimelineParameterImpl
-        >
-    implements _$$GlobalTimelineParameterImplCopyWith<$Res> {
-  __$$GlobalTimelineParameterImplCopyWithImpl(
-    _$GlobalTimelineParameterImpl _value,
-    $Res Function(_$GlobalTimelineParameterImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of GlobalTimelineParameter
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? withRenotes = freezed, Object? withFiles = freezed}) {
-    return _then(
-      _$GlobalTimelineParameterImpl(
-        withRenotes:
-            freezed == withRenotes
-                ? _value.withRenotes
-                : withRenotes // ignore: cast_nullable_to_non_nullable
-                    as bool?,
-        withFiles:
-            freezed == withFiles
-                ? _value.withFiles
-                : withFiles // ignore: cast_nullable_to_non_nullable
-                    as bool?,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$GlobalTimelineParameterImpl implements _GlobalTimelineParameter {
-  const _$GlobalTimelineParameterImpl({this.withRenotes, this.withFiles});
 
-  factory _$GlobalTimelineParameterImpl.fromJson(Map<String, dynamic> json) =>
-      _$$GlobalTimelineParameterImplFromJson(json);
+class _GlobalTimelineParameter implements GlobalTimelineParameter {
+  const _GlobalTimelineParameter({this.withRenotes, this.withFiles});
+  factory _GlobalTimelineParameter.fromJson(Map<String, dynamic> json) => _$GlobalTimelineParameterFromJson(json);
 
-  @override
-  final bool? withRenotes;
-  @override
-  final bool? withFiles;
+@override final  bool? withRenotes;
+@override final  bool? withFiles;
 
-  @override
-  String toString() {
-    return 'GlobalTimelineParameter(withRenotes: $withRenotes, withFiles: $withFiles)';
-  }
+/// Create a copy of GlobalTimelineParameter
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$GlobalTimelineParameterCopyWith<_GlobalTimelineParameter> get copyWith => __$GlobalTimelineParameterCopyWithImpl<_GlobalTimelineParameter>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$GlobalTimelineParameterImpl &&
-            (identical(other.withRenotes, withRenotes) ||
-                other.withRenotes == withRenotes) &&
-            (identical(other.withFiles, withFiles) ||
-                other.withFiles == withFiles));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, withRenotes, withFiles);
-
-  /// Create a copy of GlobalTimelineParameter
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$GlobalTimelineParameterImplCopyWith<_$GlobalTimelineParameterImpl>
-  get copyWith => __$$GlobalTimelineParameterImplCopyWithImpl<
-    _$GlobalTimelineParameterImpl
-  >(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$GlobalTimelineParameterImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$GlobalTimelineParameterToJson(this, );
 }
 
-abstract class _GlobalTimelineParameter implements GlobalTimelineParameter {
-  const factory _GlobalTimelineParameter({
-    final bool? withRenotes,
-    final bool? withFiles,
-  }) = _$GlobalTimelineParameterImpl;
-
-  factory _GlobalTimelineParameter.fromJson(Map<String, dynamic> json) =
-      _$GlobalTimelineParameterImpl.fromJson;
-
-  @override
-  bool? get withRenotes;
-  @override
-  bool? get withFiles;
-
-  /// Create a copy of GlobalTimelineParameter
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GlobalTimelineParameterImplCopyWith<_$GlobalTimelineParameterImpl>
-  get copyWith => throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _GlobalTimelineParameter&&(identical(other.withRenotes, withRenotes) || other.withRenotes == withRenotes)&&(identical(other.withFiles, withFiles) || other.withFiles == withFiles));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,withRenotes,withFiles);
+
+@override
+String toString() {
+  return 'GlobalTimelineParameter(withRenotes: $withRenotes, withFiles: $withFiles)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$GlobalTimelineParameterCopyWith<$Res> implements $GlobalTimelineParameterCopyWith<$Res> {
+  factory _$GlobalTimelineParameterCopyWith(_GlobalTimelineParameter value, $Res Function(_GlobalTimelineParameter) _then) = __$GlobalTimelineParameterCopyWithImpl;
+@override @useResult
+$Res call({
+ bool? withRenotes, bool? withFiles
+});
+
+
+
+
+}
+/// @nodoc
+class __$GlobalTimelineParameterCopyWithImpl<$Res>
+    implements _$GlobalTimelineParameterCopyWith<$Res> {
+  __$GlobalTimelineParameterCopyWithImpl(this._self, this._then);
+
+  final _GlobalTimelineParameter _self;
+  final $Res Function(_GlobalTimelineParameter) _then;
+
+/// Create a copy of GlobalTimelineParameter
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? withRenotes = freezed,Object? withFiles = freezed,}) {
+  return _then(_GlobalTimelineParameter(
+withRenotes: freezed == withRenotes ? _self.withRenotes : withRenotes // ignore: cast_nullable_to_non_nullable
+as bool?,withFiles: freezed == withFiles ? _self.withFiles : withFiles // ignore: cast_nullable_to_non_nullable
+as bool?,
+  ));
+}
+
+
+}
+
+// dart format on

@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,207 +10,142 @@ part of 'users_get_frequently_replied_users_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-UsersGetFrequentlyRepliedUsersRequest
-_$UsersGetFrequentlyRepliedUsersRequestFromJson(Map<String, dynamic> json) {
-  return _UsersGetFrequentlyRepliedUsersRequest.fromJson(json);
-}
 
 /// @nodoc
 mixin _$UsersGetFrequentlyRepliedUsersRequest {
-  String get userId => throw _privateConstructorUsedError;
-  int? get limit => throw _privateConstructorUsedError;
+
+ String get userId; int? get limit;
+/// Create a copy of UsersGetFrequentlyRepliedUsersRequest
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$UsersGetFrequentlyRepliedUsersRequestCopyWith<UsersGetFrequentlyRepliedUsersRequest> get copyWith => _$UsersGetFrequentlyRepliedUsersRequestCopyWithImpl<UsersGetFrequentlyRepliedUsersRequest>(this as UsersGetFrequentlyRepliedUsersRequest, _$identity);
 
   /// Serializes this UsersGetFrequentlyRepliedUsersRequest to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of UsersGetFrequentlyRepliedUsersRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $UsersGetFrequentlyRepliedUsersRequestCopyWith<
-    UsersGetFrequentlyRepliedUsersRequest
-  >
-  get copyWith => throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is UsersGetFrequentlyRepliedUsersRequest&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.limit, limit) || other.limit == limit));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,userId,limit);
+
+@override
+String toString() {
+  return 'UsersGetFrequentlyRepliedUsersRequest(userId: $userId, limit: $limit)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $UsersGetFrequentlyRepliedUsersRequestCopyWith<$Res> {
-  factory $UsersGetFrequentlyRepliedUsersRequestCopyWith(
-    UsersGetFrequentlyRepliedUsersRequest value,
-    $Res Function(UsersGetFrequentlyRepliedUsersRequest) then,
-  ) =
-      _$UsersGetFrequentlyRepliedUsersRequestCopyWithImpl<
-        $Res,
-        UsersGetFrequentlyRepliedUsersRequest
-      >;
-  @useResult
-  $Res call({String userId, int? limit});
-}
+abstract mixin class $UsersGetFrequentlyRepliedUsersRequestCopyWith<$Res>  {
+  factory $UsersGetFrequentlyRepliedUsersRequestCopyWith(UsersGetFrequentlyRepliedUsersRequest value, $Res Function(UsersGetFrequentlyRepliedUsersRequest) _then) = _$UsersGetFrequentlyRepliedUsersRequestCopyWithImpl;
+@useResult
+$Res call({
+ String userId, int? limit
+});
 
+
+
+
+}
 /// @nodoc
-class _$UsersGetFrequentlyRepliedUsersRequestCopyWithImpl<
-  $Res,
-  $Val extends UsersGetFrequentlyRepliedUsersRequest
->
+class _$UsersGetFrequentlyRepliedUsersRequestCopyWithImpl<$Res>
     implements $UsersGetFrequentlyRepliedUsersRequestCopyWith<$Res> {
-  _$UsersGetFrequentlyRepliedUsersRequestCopyWithImpl(this._value, this._then);
+  _$UsersGetFrequentlyRepliedUsersRequestCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final UsersGetFrequentlyRepliedUsersRequest _self;
+  final $Res Function(UsersGetFrequentlyRepliedUsersRequest) _then;
 
-  /// Create a copy of UsersGetFrequentlyRepliedUsersRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? userId = null, Object? limit = freezed}) {
-    return _then(
-      _value.copyWith(
-            userId:
-                null == userId
-                    ? _value.userId
-                    : userId // ignore: cast_nullable_to_non_nullable
-                        as String,
-            limit:
-                freezed == limit
-                    ? _value.limit
-                    : limit // ignore: cast_nullable_to_non_nullable
-                        as int?,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of UsersGetFrequentlyRepliedUsersRequest
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? userId = null,Object? limit = freezed,}) {
+  return _then(_self.copyWith(
+userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as String,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
+as int?,
+  ));
 }
 
-/// @nodoc
-abstract class _$$UsersGetFrequentlyRepliedUsersRequestImplCopyWith<$Res>
-    implements $UsersGetFrequentlyRepliedUsersRequestCopyWith<$Res> {
-  factory _$$UsersGetFrequentlyRepliedUsersRequestImplCopyWith(
-    _$UsersGetFrequentlyRepliedUsersRequestImpl value,
-    $Res Function(_$UsersGetFrequentlyRepliedUsersRequestImpl) then,
-  ) = __$$UsersGetFrequentlyRepliedUsersRequestImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String userId, int? limit});
 }
 
-/// @nodoc
-class __$$UsersGetFrequentlyRepliedUsersRequestImplCopyWithImpl<$Res>
-    extends
-        _$UsersGetFrequentlyRepliedUsersRequestCopyWithImpl<
-          $Res,
-          _$UsersGetFrequentlyRepliedUsersRequestImpl
-        >
-    implements _$$UsersGetFrequentlyRepliedUsersRequestImplCopyWith<$Res> {
-  __$$UsersGetFrequentlyRepliedUsersRequestImplCopyWithImpl(
-    _$UsersGetFrequentlyRepliedUsersRequestImpl _value,
-    $Res Function(_$UsersGetFrequentlyRepliedUsersRequestImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of UsersGetFrequentlyRepliedUsersRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? userId = null, Object? limit = freezed}) {
-    return _then(
-      _$UsersGetFrequentlyRepliedUsersRequestImpl(
-        userId:
-            null == userId
-                ? _value.userId
-                : userId // ignore: cast_nullable_to_non_nullable
-                    as String,
-        limit:
-            freezed == limit
-                ? _value.limit
-                : limit // ignore: cast_nullable_to_non_nullable
-                    as int?,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$UsersGetFrequentlyRepliedUsersRequestImpl
-    implements _UsersGetFrequentlyRepliedUsersRequest {
-  const _$UsersGetFrequentlyRepliedUsersRequestImpl({
-    required this.userId,
-    this.limit,
-  });
 
-  factory _$UsersGetFrequentlyRepliedUsersRequestImpl.fromJson(
-    Map<String, dynamic> json,
-  ) => _$$UsersGetFrequentlyRepliedUsersRequestImplFromJson(json);
+class _UsersGetFrequentlyRepliedUsersRequest implements UsersGetFrequentlyRepliedUsersRequest {
+  const _UsersGetFrequentlyRepliedUsersRequest({required this.userId, this.limit});
+  factory _UsersGetFrequentlyRepliedUsersRequest.fromJson(Map<String, dynamic> json) => _$UsersGetFrequentlyRepliedUsersRequestFromJson(json);
 
-  @override
-  final String userId;
-  @override
-  final int? limit;
+@override final  String userId;
+@override final  int? limit;
 
-  @override
-  String toString() {
-    return 'UsersGetFrequentlyRepliedUsersRequest(userId: $userId, limit: $limit)';
-  }
+/// Create a copy of UsersGetFrequentlyRepliedUsersRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$UsersGetFrequentlyRepliedUsersRequestCopyWith<_UsersGetFrequentlyRepliedUsersRequest> get copyWith => __$UsersGetFrequentlyRepliedUsersRequestCopyWithImpl<_UsersGetFrequentlyRepliedUsersRequest>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$UsersGetFrequentlyRepliedUsersRequestImpl &&
-            (identical(other.userId, userId) || other.userId == userId) &&
-            (identical(other.limit, limit) || other.limit == limit));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, userId, limit);
-
-  /// Create a copy of UsersGetFrequentlyRepliedUsersRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$UsersGetFrequentlyRepliedUsersRequestImplCopyWith<
-    _$UsersGetFrequentlyRepliedUsersRequestImpl
-  >
-  get copyWith => __$$UsersGetFrequentlyRepliedUsersRequestImplCopyWithImpl<
-    _$UsersGetFrequentlyRepliedUsersRequestImpl
-  >(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$UsersGetFrequentlyRepliedUsersRequestImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$UsersGetFrequentlyRepliedUsersRequestToJson(this, );
 }
 
-abstract class _UsersGetFrequentlyRepliedUsersRequest
-    implements UsersGetFrequentlyRepliedUsersRequest {
-  const factory _UsersGetFrequentlyRepliedUsersRequest({
-    required final String userId,
-    final int? limit,
-  }) = _$UsersGetFrequentlyRepliedUsersRequestImpl;
-
-  factory _UsersGetFrequentlyRepliedUsersRequest.fromJson(
-    Map<String, dynamic> json,
-  ) = _$UsersGetFrequentlyRepliedUsersRequestImpl.fromJson;
-
-  @override
-  String get userId;
-  @override
-  int? get limit;
-
-  /// Create a copy of UsersGetFrequentlyRepliedUsersRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$UsersGetFrequentlyRepliedUsersRequestImplCopyWith<
-    _$UsersGetFrequentlyRepliedUsersRequestImpl
-  >
-  get copyWith => throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersGetFrequentlyRepliedUsersRequest&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.limit, limit) || other.limit == limit));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,userId,limit);
+
+@override
+String toString() {
+  return 'UsersGetFrequentlyRepliedUsersRequest(userId: $userId, limit: $limit)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$UsersGetFrequentlyRepliedUsersRequestCopyWith<$Res> implements $UsersGetFrequentlyRepliedUsersRequestCopyWith<$Res> {
+  factory _$UsersGetFrequentlyRepliedUsersRequestCopyWith(_UsersGetFrequentlyRepliedUsersRequest value, $Res Function(_UsersGetFrequentlyRepliedUsersRequest) _then) = __$UsersGetFrequentlyRepliedUsersRequestCopyWithImpl;
+@override @useResult
+$Res call({
+ String userId, int? limit
+});
+
+
+
+
+}
+/// @nodoc
+class __$UsersGetFrequentlyRepliedUsersRequestCopyWithImpl<$Res>
+    implements _$UsersGetFrequentlyRepliedUsersRequestCopyWith<$Res> {
+  __$UsersGetFrequentlyRepliedUsersRequestCopyWithImpl(this._self, this._then);
+
+  final _UsersGetFrequentlyRepliedUsersRequest _self;
+  final $Res Function(_UsersGetFrequentlyRepliedUsersRequest) _then;
+
+/// Create a copy of UsersGetFrequentlyRepliedUsersRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? userId = null,Object? limit = freezed,}) {
+  return _then(_UsersGetFrequentlyRepliedUsersRequest(
+userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as String,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
+as int?,
+  ));
+}
+
+
+}
+
+// dart format on

@@ -6,12 +6,10 @@ part of 'i_registry_keys_with_type_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$IRegistryKeysWithTypeRequestImpl _$$IRegistryKeysWithTypeRequestImplFromJson(
+_IRegistryKeysWithTypeRequest _$IRegistryKeysWithTypeRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$IRegistryKeysWithTypeRequestImpl', json, (
-  $checkedConvert,
-) {
-  final val = _$IRegistryKeysWithTypeRequestImpl(
+) => $checkedCreate('_IRegistryKeysWithTypeRequest', json, ($checkedConvert) {
+  final val = _IRegistryKeysWithTypeRequest(
     scope: $checkedConvert(
       'scope',
       (v) => (v as List<dynamic>).map((e) => e as String).toList(),
@@ -21,6 +19,6 @@ _$IRegistryKeysWithTypeRequestImpl _$$IRegistryKeysWithTypeRequestImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$IRegistryKeysWithTypeRequestImplToJson(
-  _$IRegistryKeysWithTypeRequestImpl instance,
+Map<String, dynamic> _$IRegistryKeysWithTypeRequestToJson(
+  _IRegistryKeysWithTypeRequest instance,
 ) => <String, dynamic>{'scope': instance.scope, 'domain': instance.domain};

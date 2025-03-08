@@ -6,9 +6,9 @@ part of 'notes_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$NotesRequestImpl _$$NotesRequestImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$NotesRequestImpl', json, ($checkedConvert) {
-      final val = _$NotesRequestImpl(
+_NotesRequest _$NotesRequestFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_NotesRequest', json, ($checkedConvert) {
+      final val = _NotesRequest(
         local: $checkedConvert('local', (v) => v as bool?),
         reply: $checkedConvert('reply', (v) => v as bool?),
         renote: $checkedConvert('renote', (v) => v as bool?),
@@ -21,7 +21,7 @@ _$NotesRequestImpl _$$NotesRequestImplFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$$NotesRequestImplToJson(_$NotesRequestImpl instance) =>
+Map<String, dynamic> _$NotesRequestToJson(_NotesRequest instance) =>
     <String, dynamic>{
       'local': instance.local,
       'reply': instance.reply,

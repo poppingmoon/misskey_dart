@@ -6,17 +6,16 @@ part of 'notes_scheduled_list_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$NotesScheduledListRequestImpl _$$NotesScheduledListRequestImplFromJson(
+_NotesScheduledListRequest _$NotesScheduledListRequestFromJson(
   Map<String, dynamic> json,
-) =>
-    $checkedCreate(r'_$NotesScheduledListRequestImpl', json, ($checkedConvert) {
-      final val = _$NotesScheduledListRequestImpl(
-        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-        offset: $checkedConvert('offset', (v) => (v as num?)?.toInt()),
-      );
-      return val;
-    });
+) => $checkedCreate('_NotesScheduledListRequest', json, ($checkedConvert) {
+  final val = _NotesScheduledListRequest(
+    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
+    offset: $checkedConvert('offset', (v) => (v as num?)?.toInt()),
+  );
+  return val;
+});
 
-Map<String, dynamic> _$$NotesScheduledListRequestImplToJson(
-  _$NotesScheduledListRequestImpl instance,
+Map<String, dynamic> _$NotesScheduledListRequestToJson(
+  _NotesScheduledListRequest instance,
 ) => <String, dynamic>{'limit': instance.limit, 'offset': instance.offset};

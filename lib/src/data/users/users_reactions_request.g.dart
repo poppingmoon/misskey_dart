@@ -6,10 +6,10 @@ part of 'users_reactions_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$UsersReactionsRequestImpl _$$UsersReactionsRequestImplFromJson(
+_UsersReactionsRequest _$UsersReactionsRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$UsersReactionsRequestImpl', json, ($checkedConvert) {
-  final val = _$UsersReactionsRequestImpl(
+) => $checkedCreate('_UsersReactionsRequest', json, ($checkedConvert) {
+  final val = _UsersReactionsRequest(
     userId: $checkedConvert('userId', (v) => v as String),
     limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
     sinceId: $checkedConvert('sinceId', (v) => v as String?),
@@ -32,8 +32,8 @@ _$UsersReactionsRequestImpl _$$UsersReactionsRequestImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$UsersReactionsRequestImplToJson(
-  _$UsersReactionsRequestImpl instance,
+Map<String, dynamic> _$UsersReactionsRequestToJson(
+  _UsersReactionsRequest instance,
 ) => <String, dynamic>{
   'userId': instance.userId,
   'limit': instance.limit,

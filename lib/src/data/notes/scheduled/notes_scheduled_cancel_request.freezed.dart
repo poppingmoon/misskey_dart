@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,180 +10,139 @@ part of 'notes_scheduled_cancel_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-NotesScheduledCancelRequest _$NotesScheduledCancelRequestFromJson(
-  Map<String, dynamic> json,
-) {
-  return _NotesScheduledCancelRequest.fromJson(json);
-}
 
 /// @nodoc
 mixin _$NotesScheduledCancelRequest {
-  String get draftId => throw _privateConstructorUsedError;
+
+ String get draftId;
+/// Create a copy of NotesScheduledCancelRequest
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$NotesScheduledCancelRequestCopyWith<NotesScheduledCancelRequest> get copyWith => _$NotesScheduledCancelRequestCopyWithImpl<NotesScheduledCancelRequest>(this as NotesScheduledCancelRequest, _$identity);
 
   /// Serializes this NotesScheduledCancelRequest to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of NotesScheduledCancelRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $NotesScheduledCancelRequestCopyWith<NotesScheduledCancelRequest>
-  get copyWith => throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesScheduledCancelRequest&&(identical(other.draftId, draftId) || other.draftId == draftId));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,draftId);
+
+@override
+String toString() {
+  return 'NotesScheduledCancelRequest(draftId: $draftId)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $NotesScheduledCancelRequestCopyWith<$Res> {
-  factory $NotesScheduledCancelRequestCopyWith(
-    NotesScheduledCancelRequest value,
-    $Res Function(NotesScheduledCancelRequest) then,
-  ) =
-      _$NotesScheduledCancelRequestCopyWithImpl<
-        $Res,
-        NotesScheduledCancelRequest
-      >;
-  @useResult
-  $Res call({String draftId});
-}
+abstract mixin class $NotesScheduledCancelRequestCopyWith<$Res>  {
+  factory $NotesScheduledCancelRequestCopyWith(NotesScheduledCancelRequest value, $Res Function(NotesScheduledCancelRequest) _then) = _$NotesScheduledCancelRequestCopyWithImpl;
+@useResult
+$Res call({
+ String draftId
+});
 
+
+
+
+}
 /// @nodoc
-class _$NotesScheduledCancelRequestCopyWithImpl<
-  $Res,
-  $Val extends NotesScheduledCancelRequest
->
+class _$NotesScheduledCancelRequestCopyWithImpl<$Res>
     implements $NotesScheduledCancelRequestCopyWith<$Res> {
-  _$NotesScheduledCancelRequestCopyWithImpl(this._value, this._then);
+  _$NotesScheduledCancelRequestCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final NotesScheduledCancelRequest _self;
+  final $Res Function(NotesScheduledCancelRequest) _then;
 
-  /// Create a copy of NotesScheduledCancelRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? draftId = null}) {
-    return _then(
-      _value.copyWith(
-            draftId:
-                null == draftId
-                    ? _value.draftId
-                    : draftId // ignore: cast_nullable_to_non_nullable
-                        as String,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of NotesScheduledCancelRequest
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? draftId = null,}) {
+  return _then(_self.copyWith(
+draftId: null == draftId ? _self.draftId : draftId // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-abstract class _$$NotesScheduledCancelRequestImplCopyWith<$Res>
-    implements $NotesScheduledCancelRequestCopyWith<$Res> {
-  factory _$$NotesScheduledCancelRequestImplCopyWith(
-    _$NotesScheduledCancelRequestImpl value,
-    $Res Function(_$NotesScheduledCancelRequestImpl) then,
-  ) = __$$NotesScheduledCancelRequestImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String draftId});
 }
 
-/// @nodoc
-class __$$NotesScheduledCancelRequestImplCopyWithImpl<$Res>
-    extends
-        _$NotesScheduledCancelRequestCopyWithImpl<
-          $Res,
-          _$NotesScheduledCancelRequestImpl
-        >
-    implements _$$NotesScheduledCancelRequestImplCopyWith<$Res> {
-  __$$NotesScheduledCancelRequestImplCopyWithImpl(
-    _$NotesScheduledCancelRequestImpl _value,
-    $Res Function(_$NotesScheduledCancelRequestImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of NotesScheduledCancelRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? draftId = null}) {
-    return _then(
-      _$NotesScheduledCancelRequestImpl(
-        draftId:
-            null == draftId
-                ? _value.draftId
-                : draftId // ignore: cast_nullable_to_non_nullable
-                    as String,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$NotesScheduledCancelRequestImpl
-    implements _NotesScheduledCancelRequest {
-  const _$NotesScheduledCancelRequestImpl({required this.draftId});
 
-  factory _$NotesScheduledCancelRequestImpl.fromJson(
-    Map<String, dynamic> json,
-  ) => _$$NotesScheduledCancelRequestImplFromJson(json);
+class _NotesScheduledCancelRequest implements NotesScheduledCancelRequest {
+  const _NotesScheduledCancelRequest({required this.draftId});
+  factory _NotesScheduledCancelRequest.fromJson(Map<String, dynamic> json) => _$NotesScheduledCancelRequestFromJson(json);
 
-  @override
-  final String draftId;
+@override final  String draftId;
 
-  @override
-  String toString() {
-    return 'NotesScheduledCancelRequest(draftId: $draftId)';
-  }
+/// Create a copy of NotesScheduledCancelRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$NotesScheduledCancelRequestCopyWith<_NotesScheduledCancelRequest> get copyWith => __$NotesScheduledCancelRequestCopyWithImpl<_NotesScheduledCancelRequest>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$NotesScheduledCancelRequestImpl &&
-            (identical(other.draftId, draftId) || other.draftId == draftId));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, draftId);
-
-  /// Create a copy of NotesScheduledCancelRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$NotesScheduledCancelRequestImplCopyWith<_$NotesScheduledCancelRequestImpl>
-  get copyWith => __$$NotesScheduledCancelRequestImplCopyWithImpl<
-    _$NotesScheduledCancelRequestImpl
-  >(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$NotesScheduledCancelRequestImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$NotesScheduledCancelRequestToJson(this, );
 }
 
-abstract class _NotesScheduledCancelRequest
-    implements NotesScheduledCancelRequest {
-  const factory _NotesScheduledCancelRequest({required final String draftId}) =
-      _$NotesScheduledCancelRequestImpl;
-
-  factory _NotesScheduledCancelRequest.fromJson(Map<String, dynamic> json) =
-      _$NotesScheduledCancelRequestImpl.fromJson;
-
-  @override
-  String get draftId;
-
-  /// Create a copy of NotesScheduledCancelRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$NotesScheduledCancelRequestImplCopyWith<_$NotesScheduledCancelRequestImpl>
-  get copyWith => throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesScheduledCancelRequest&&(identical(other.draftId, draftId) || other.draftId == draftId));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,draftId);
+
+@override
+String toString() {
+  return 'NotesScheduledCancelRequest(draftId: $draftId)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$NotesScheduledCancelRequestCopyWith<$Res> implements $NotesScheduledCancelRequestCopyWith<$Res> {
+  factory _$NotesScheduledCancelRequestCopyWith(_NotesScheduledCancelRequest value, $Res Function(_NotesScheduledCancelRequest) _then) = __$NotesScheduledCancelRequestCopyWithImpl;
+@override @useResult
+$Res call({
+ String draftId
+});
+
+
+
+
+}
+/// @nodoc
+class __$NotesScheduledCancelRequestCopyWithImpl<$Res>
+    implements _$NotesScheduledCancelRequestCopyWith<$Res> {
+  __$NotesScheduledCancelRequestCopyWithImpl(this._self, this._then);
+
+  final _NotesScheduledCancelRequest _self;
+  final $Res Function(_NotesScheduledCancelRequest) _then;
+
+/// Create a copy of NotesScheduledCancelRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? draftId = null,}) {
+  return _then(_NotesScheduledCancelRequest(
+draftId: null == draftId ? _self.draftId : draftId // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
+}
+
+
+}
+
+// dart format on

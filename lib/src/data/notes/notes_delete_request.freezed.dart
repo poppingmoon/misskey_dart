@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,165 +10,139 @@ part of 'notes_delete_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-NotesDeleteRequest _$NotesDeleteRequestFromJson(Map<String, dynamic> json) {
-  return _NotesDeleteRequest.fromJson(json);
-}
 
 /// @nodoc
 mixin _$NotesDeleteRequest {
-  String get noteId => throw _privateConstructorUsedError;
+
+ String get noteId;
+/// Create a copy of NotesDeleteRequest
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$NotesDeleteRequestCopyWith<NotesDeleteRequest> get copyWith => _$NotesDeleteRequestCopyWithImpl<NotesDeleteRequest>(this as NotesDeleteRequest, _$identity);
 
   /// Serializes this NotesDeleteRequest to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of NotesDeleteRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $NotesDeleteRequestCopyWith<NotesDeleteRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesDeleteRequest&&(identical(other.noteId, noteId) || other.noteId == noteId));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,noteId);
+
+@override
+String toString() {
+  return 'NotesDeleteRequest(noteId: $noteId)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $NotesDeleteRequestCopyWith<$Res> {
-  factory $NotesDeleteRequestCopyWith(
-    NotesDeleteRequest value,
-    $Res Function(NotesDeleteRequest) then,
-  ) = _$NotesDeleteRequestCopyWithImpl<$Res, NotesDeleteRequest>;
-  @useResult
-  $Res call({String noteId});
-}
+abstract mixin class $NotesDeleteRequestCopyWith<$Res>  {
+  factory $NotesDeleteRequestCopyWith(NotesDeleteRequest value, $Res Function(NotesDeleteRequest) _then) = _$NotesDeleteRequestCopyWithImpl;
+@useResult
+$Res call({
+ String noteId
+});
 
+
+
+
+}
 /// @nodoc
-class _$NotesDeleteRequestCopyWithImpl<$Res, $Val extends NotesDeleteRequest>
+class _$NotesDeleteRequestCopyWithImpl<$Res>
     implements $NotesDeleteRequestCopyWith<$Res> {
-  _$NotesDeleteRequestCopyWithImpl(this._value, this._then);
+  _$NotesDeleteRequestCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final NotesDeleteRequest _self;
+  final $Res Function(NotesDeleteRequest) _then;
 
-  /// Create a copy of NotesDeleteRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? noteId = null}) {
-    return _then(
-      _value.copyWith(
-            noteId:
-                null == noteId
-                    ? _value.noteId
-                    : noteId // ignore: cast_nullable_to_non_nullable
-                        as String,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of NotesDeleteRequest
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? noteId = null,}) {
+  return _then(_self.copyWith(
+noteId: null == noteId ? _self.noteId : noteId // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-abstract class _$$NotesDeleteRequestImplCopyWith<$Res>
-    implements $NotesDeleteRequestCopyWith<$Res> {
-  factory _$$NotesDeleteRequestImplCopyWith(
-    _$NotesDeleteRequestImpl value,
-    $Res Function(_$NotesDeleteRequestImpl) then,
-  ) = __$$NotesDeleteRequestImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String noteId});
 }
 
-/// @nodoc
-class __$$NotesDeleteRequestImplCopyWithImpl<$Res>
-    extends _$NotesDeleteRequestCopyWithImpl<$Res, _$NotesDeleteRequestImpl>
-    implements _$$NotesDeleteRequestImplCopyWith<$Res> {
-  __$$NotesDeleteRequestImplCopyWithImpl(
-    _$NotesDeleteRequestImpl _value,
-    $Res Function(_$NotesDeleteRequestImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of NotesDeleteRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? noteId = null}) {
-    return _then(
-      _$NotesDeleteRequestImpl(
-        noteId:
-            null == noteId
-                ? _value.noteId
-                : noteId // ignore: cast_nullable_to_non_nullable
-                    as String,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$NotesDeleteRequestImpl implements _NotesDeleteRequest {
-  const _$NotesDeleteRequestImpl({required this.noteId});
 
-  factory _$NotesDeleteRequestImpl.fromJson(Map<String, dynamic> json) =>
-      _$$NotesDeleteRequestImplFromJson(json);
+class _NotesDeleteRequest implements NotesDeleteRequest {
+  const _NotesDeleteRequest({required this.noteId});
+  factory _NotesDeleteRequest.fromJson(Map<String, dynamic> json) => _$NotesDeleteRequestFromJson(json);
 
-  @override
-  final String noteId;
+@override final  String noteId;
 
-  @override
-  String toString() {
-    return 'NotesDeleteRequest(noteId: $noteId)';
-  }
+/// Create a copy of NotesDeleteRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$NotesDeleteRequestCopyWith<_NotesDeleteRequest> get copyWith => __$NotesDeleteRequestCopyWithImpl<_NotesDeleteRequest>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$NotesDeleteRequestImpl &&
-            (identical(other.noteId, noteId) || other.noteId == noteId));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, noteId);
-
-  /// Create a copy of NotesDeleteRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$NotesDeleteRequestImplCopyWith<_$NotesDeleteRequestImpl> get copyWith =>
-      __$$NotesDeleteRequestImplCopyWithImpl<_$NotesDeleteRequestImpl>(
-        this,
-        _$identity,
-      );
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$NotesDeleteRequestImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$NotesDeleteRequestToJson(this, );
 }
 
-abstract class _NotesDeleteRequest implements NotesDeleteRequest {
-  const factory _NotesDeleteRequest({required final String noteId}) =
-      _$NotesDeleteRequestImpl;
-
-  factory _NotesDeleteRequest.fromJson(Map<String, dynamic> json) =
-      _$NotesDeleteRequestImpl.fromJson;
-
-  @override
-  String get noteId;
-
-  /// Create a copy of NotesDeleteRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$NotesDeleteRequestImplCopyWith<_$NotesDeleteRequestImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesDeleteRequest&&(identical(other.noteId, noteId) || other.noteId == noteId));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,noteId);
+
+@override
+String toString() {
+  return 'NotesDeleteRequest(noteId: $noteId)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$NotesDeleteRequestCopyWith<$Res> implements $NotesDeleteRequestCopyWith<$Res> {
+  factory _$NotesDeleteRequestCopyWith(_NotesDeleteRequest value, $Res Function(_NotesDeleteRequest) _then) = __$NotesDeleteRequestCopyWithImpl;
+@override @useResult
+$Res call({
+ String noteId
+});
+
+
+
+
+}
+/// @nodoc
+class __$NotesDeleteRequestCopyWithImpl<$Res>
+    implements _$NotesDeleteRequestCopyWith<$Res> {
+  __$NotesDeleteRequestCopyWithImpl(this._self, this._then);
+
+  final _NotesDeleteRequest _self;
+  final $Res Function(_NotesDeleteRequest) _then;
+
+/// Create a copy of NotesDeleteRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? noteId = null,}) {
+  return _then(_NotesDeleteRequest(
+noteId: null == noteId ? _self.noteId : noteId // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
+}
+
+
+}
+
+// dart format on

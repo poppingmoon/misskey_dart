@@ -4,7 +4,7 @@ part 'notes_scheduled_cancel_request.freezed.dart';
 part 'notes_scheduled_cancel_request.g.dart';
 
 @freezed
-class NotesScheduledCancelRequest with _$NotesScheduledCancelRequest {
+abstract class NotesScheduledCancelRequest with _$NotesScheduledCancelRequest {
   const factory NotesScheduledCancelRequest({required String draftId}) =
       _NotesScheduledCancelRequest;
 

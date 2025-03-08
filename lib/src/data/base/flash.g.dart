@@ -6,9 +6,9 @@ part of 'flash.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$FlashImpl _$$FlashImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$FlashImpl', json, ($checkedConvert) {
-      final val = _$FlashImpl(
+_Flash _$FlashFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_Flash', json, ($checkedConvert) {
+      final val = _Flash(
         id: $checkedConvert('id', (v) => v as String),
         createdAt: $checkedConvert(
           'createdAt',
@@ -40,20 +40,19 @@ _$FlashImpl _$$FlashImplFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$$FlashImplToJson(_$FlashImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'createdAt': const DateTimeConverter().toJson(instance.createdAt),
-      'updatedAt': const DateTimeConverter().toJson(instance.updatedAt),
-      'title': instance.title,
-      'summary': instance.summary,
-      'script': instance.script,
-      'visibility': _$FlashVisibilityEnumMap[instance.visibility],
-      'userId': instance.userId,
-      'user': instance.user.toJson(),
-      'likedCount': instance.likedCount,
-      'isLiked': instance.isLiked,
-    };
+Map<String, dynamic> _$FlashToJson(_Flash instance) => <String, dynamic>{
+  'id': instance.id,
+  'createdAt': const DateTimeConverter().toJson(instance.createdAt),
+  'updatedAt': const DateTimeConverter().toJson(instance.updatedAt),
+  'title': instance.title,
+  'summary': instance.summary,
+  'script': instance.script,
+  'visibility': _$FlashVisibilityEnumMap[instance.visibility],
+  'userId': instance.userId,
+  'user': instance.user.toJson(),
+  'likedCount': instance.likedCount,
+  'isLiked': instance.isLiked,
+};
 
 const _$FlashVisibilityEnumMap = {
   FlashVisibility.public: 'public',

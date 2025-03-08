@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,172 +10,139 @@ part of 'following_delete_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-FollowingDeleteRequest _$FollowingDeleteRequestFromJson(
-  Map<String, dynamic> json,
-) {
-  return _FollowingDeleteRequest.fromJson(json);
-}
 
 /// @nodoc
 mixin _$FollowingDeleteRequest {
-  String get userId => throw _privateConstructorUsedError;
+
+ String get userId;
+/// Create a copy of FollowingDeleteRequest
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$FollowingDeleteRequestCopyWith<FollowingDeleteRequest> get copyWith => _$FollowingDeleteRequestCopyWithImpl<FollowingDeleteRequest>(this as FollowingDeleteRequest, _$identity);
 
   /// Serializes this FollowingDeleteRequest to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of FollowingDeleteRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $FollowingDeleteRequestCopyWith<FollowingDeleteRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is FollowingDeleteRequest&&(identical(other.userId, userId) || other.userId == userId));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,userId);
+
+@override
+String toString() {
+  return 'FollowingDeleteRequest(userId: $userId)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $FollowingDeleteRequestCopyWith<$Res> {
-  factory $FollowingDeleteRequestCopyWith(
-    FollowingDeleteRequest value,
-    $Res Function(FollowingDeleteRequest) then,
-  ) = _$FollowingDeleteRequestCopyWithImpl<$Res, FollowingDeleteRequest>;
-  @useResult
-  $Res call({String userId});
-}
+abstract mixin class $FollowingDeleteRequestCopyWith<$Res>  {
+  factory $FollowingDeleteRequestCopyWith(FollowingDeleteRequest value, $Res Function(FollowingDeleteRequest) _then) = _$FollowingDeleteRequestCopyWithImpl;
+@useResult
+$Res call({
+ String userId
+});
 
+
+
+
+}
 /// @nodoc
-class _$FollowingDeleteRequestCopyWithImpl<
-  $Res,
-  $Val extends FollowingDeleteRequest
->
+class _$FollowingDeleteRequestCopyWithImpl<$Res>
     implements $FollowingDeleteRequestCopyWith<$Res> {
-  _$FollowingDeleteRequestCopyWithImpl(this._value, this._then);
+  _$FollowingDeleteRequestCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final FollowingDeleteRequest _self;
+  final $Res Function(FollowingDeleteRequest) _then;
 
-  /// Create a copy of FollowingDeleteRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? userId = null}) {
-    return _then(
-      _value.copyWith(
-            userId:
-                null == userId
-                    ? _value.userId
-                    : userId // ignore: cast_nullable_to_non_nullable
-                        as String,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of FollowingDeleteRequest
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? userId = null,}) {
+  return _then(_self.copyWith(
+userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-abstract class _$$FollowingDeleteRequestImplCopyWith<$Res>
-    implements $FollowingDeleteRequestCopyWith<$Res> {
-  factory _$$FollowingDeleteRequestImplCopyWith(
-    _$FollowingDeleteRequestImpl value,
-    $Res Function(_$FollowingDeleteRequestImpl) then,
-  ) = __$$FollowingDeleteRequestImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String userId});
 }
 
-/// @nodoc
-class __$$FollowingDeleteRequestImplCopyWithImpl<$Res>
-    extends
-        _$FollowingDeleteRequestCopyWithImpl<$Res, _$FollowingDeleteRequestImpl>
-    implements _$$FollowingDeleteRequestImplCopyWith<$Res> {
-  __$$FollowingDeleteRequestImplCopyWithImpl(
-    _$FollowingDeleteRequestImpl _value,
-    $Res Function(_$FollowingDeleteRequestImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of FollowingDeleteRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? userId = null}) {
-    return _then(
-      _$FollowingDeleteRequestImpl(
-        userId:
-            null == userId
-                ? _value.userId
-                : userId // ignore: cast_nullable_to_non_nullable
-                    as String,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$FollowingDeleteRequestImpl implements _FollowingDeleteRequest {
-  const _$FollowingDeleteRequestImpl({required this.userId});
 
-  factory _$FollowingDeleteRequestImpl.fromJson(Map<String, dynamic> json) =>
-      _$$FollowingDeleteRequestImplFromJson(json);
+class _FollowingDeleteRequest implements FollowingDeleteRequest {
+  const _FollowingDeleteRequest({required this.userId});
+  factory _FollowingDeleteRequest.fromJson(Map<String, dynamic> json) => _$FollowingDeleteRequestFromJson(json);
 
-  @override
-  final String userId;
+@override final  String userId;
 
-  @override
-  String toString() {
-    return 'FollowingDeleteRequest(userId: $userId)';
-  }
+/// Create a copy of FollowingDeleteRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$FollowingDeleteRequestCopyWith<_FollowingDeleteRequest> get copyWith => __$FollowingDeleteRequestCopyWithImpl<_FollowingDeleteRequest>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$FollowingDeleteRequestImpl &&
-            (identical(other.userId, userId) || other.userId == userId));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, userId);
-
-  /// Create a copy of FollowingDeleteRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$FollowingDeleteRequestImplCopyWith<_$FollowingDeleteRequestImpl>
-  get copyWith =>
-      __$$FollowingDeleteRequestImplCopyWithImpl<_$FollowingDeleteRequestImpl>(
-        this,
-        _$identity,
-      );
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$FollowingDeleteRequestImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$FollowingDeleteRequestToJson(this, );
 }
 
-abstract class _FollowingDeleteRequest implements FollowingDeleteRequest {
-  const factory _FollowingDeleteRequest({required final String userId}) =
-      _$FollowingDeleteRequestImpl;
-
-  factory _FollowingDeleteRequest.fromJson(Map<String, dynamic> json) =
-      _$FollowingDeleteRequestImpl.fromJson;
-
-  @override
-  String get userId;
-
-  /// Create a copy of FollowingDeleteRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$FollowingDeleteRequestImplCopyWith<_$FollowingDeleteRequestImpl>
-  get copyWith => throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _FollowingDeleteRequest&&(identical(other.userId, userId) || other.userId == userId));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,userId);
+
+@override
+String toString() {
+  return 'FollowingDeleteRequest(userId: $userId)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$FollowingDeleteRequestCopyWith<$Res> implements $FollowingDeleteRequestCopyWith<$Res> {
+  factory _$FollowingDeleteRequestCopyWith(_FollowingDeleteRequest value, $Res Function(_FollowingDeleteRequest) _then) = __$FollowingDeleteRequestCopyWithImpl;
+@override @useResult
+$Res call({
+ String userId
+});
+
+
+
+
+}
+/// @nodoc
+class __$FollowingDeleteRequestCopyWithImpl<$Res>
+    implements _$FollowingDeleteRequestCopyWith<$Res> {
+  __$FollowingDeleteRequestCopyWithImpl(this._self, this._then);
+
+  final _FollowingDeleteRequest _self;
+  final $Res Function(_FollowingDeleteRequest) _then;
+
+/// Create a copy of FollowingDeleteRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? userId = null,}) {
+  return _then(_FollowingDeleteRequest(
+userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
+}
+
+
+}
+
+// dart format on

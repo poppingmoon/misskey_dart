@@ -5,7 +5,7 @@ part 'notes_edit_request.freezed.dart';
 part 'notes_edit_request.g.dart';
 
 @freezed
-class NotesEditRequest with _$NotesEditRequest {
+abstract class NotesEditRequest with _$NotesEditRequest {
   const factory NotesEditRequest({
     required String editId,
     NoteVisibility? visibility,

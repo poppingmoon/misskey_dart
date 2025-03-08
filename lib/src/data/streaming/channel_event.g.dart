@@ -6,9 +6,9 @@ part of 'channel_event.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ChannelEventImpl _$$ChannelEventImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$ChannelEventImpl', json, ($checkedConvert) {
-      final val = _$ChannelEventImpl(
+_ChannelEvent _$ChannelEventFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_ChannelEvent', json, ($checkedConvert) {
+      final val = _ChannelEvent(
         id: $checkedConvert('id', (v) => v as String),
         type: $checkedConvert(
           'type',
@@ -23,7 +23,7 @@ _$ChannelEventImpl _$$ChannelEventImplFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$$ChannelEventImplToJson(_$ChannelEventImpl instance) =>
+Map<String, dynamic> _$ChannelEventToJson(_ChannelEvent instance) =>
     <String, dynamic>{
       'id': instance.id,
       'type': _$ChannelEventTypeEnumMap[instance.type],

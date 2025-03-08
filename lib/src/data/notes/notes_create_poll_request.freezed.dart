@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,271 +10,154 @@ part of 'notes_create_poll_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-NotesCreatePollRequest _$NotesCreatePollRequestFromJson(
-  Map<String, dynamic> json,
-) {
-  return _NotesCreatePollRequest.fromJson(json);
-}
 
 /// @nodoc
 mixin _$NotesCreatePollRequest {
-  List<String> get choices => throw _privateConstructorUsedError;
-  bool? get multiple => throw _privateConstructorUsedError;
-  @EpocTimeDateTimeConverter()
-  DateTime? get expiresAt => throw _privateConstructorUsedError;
-  @DurationConverter()
-  Duration? get expiredAfter => throw _privateConstructorUsedError;
+
+ List<String> get choices; bool? get multiple;@EpocTimeDateTimeConverter() DateTime? get expiresAt;@DurationConverter() Duration? get expiredAfter;
+/// Create a copy of NotesCreatePollRequest
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$NotesCreatePollRequestCopyWith<NotesCreatePollRequest> get copyWith => _$NotesCreatePollRequestCopyWithImpl<NotesCreatePollRequest>(this as NotesCreatePollRequest, _$identity);
 
   /// Serializes this NotesCreatePollRequest to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of NotesCreatePollRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $NotesCreatePollRequestCopyWith<NotesCreatePollRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesCreatePollRequest&&const DeepCollectionEquality().equals(other.choices, choices)&&(identical(other.multiple, multiple) || other.multiple == multiple)&&(identical(other.expiresAt, expiresAt) || other.expiresAt == expiresAt)&&(identical(other.expiredAfter, expiredAfter) || other.expiredAfter == expiredAfter));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(choices),multiple,expiresAt,expiredAfter);
+
+@override
+String toString() {
+  return 'NotesCreatePollRequest(choices: $choices, multiple: $multiple, expiresAt: $expiresAt, expiredAfter: $expiredAfter)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $NotesCreatePollRequestCopyWith<$Res> {
-  factory $NotesCreatePollRequestCopyWith(
-    NotesCreatePollRequest value,
-    $Res Function(NotesCreatePollRequest) then,
-  ) = _$NotesCreatePollRequestCopyWithImpl<$Res, NotesCreatePollRequest>;
-  @useResult
-  $Res call({
-    List<String> choices,
-    bool? multiple,
-    @EpocTimeDateTimeConverter() DateTime? expiresAt,
-    @DurationConverter() Duration? expiredAfter,
-  });
-}
+abstract mixin class $NotesCreatePollRequestCopyWith<$Res>  {
+  factory $NotesCreatePollRequestCopyWith(NotesCreatePollRequest value, $Res Function(NotesCreatePollRequest) _then) = _$NotesCreatePollRequestCopyWithImpl;
+@useResult
+$Res call({
+ List<String> choices, bool? multiple,@EpocTimeDateTimeConverter() DateTime? expiresAt,@DurationConverter() Duration? expiredAfter
+});
 
+
+
+
+}
 /// @nodoc
-class _$NotesCreatePollRequestCopyWithImpl<
-  $Res,
-  $Val extends NotesCreatePollRequest
->
+class _$NotesCreatePollRequestCopyWithImpl<$Res>
     implements $NotesCreatePollRequestCopyWith<$Res> {
-  _$NotesCreatePollRequestCopyWithImpl(this._value, this._then);
+  _$NotesCreatePollRequestCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final NotesCreatePollRequest _self;
+  final $Res Function(NotesCreatePollRequest) _then;
 
-  /// Create a copy of NotesCreatePollRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? choices = null,
-    Object? multiple = freezed,
-    Object? expiresAt = freezed,
-    Object? expiredAfter = freezed,
-  }) {
-    return _then(
-      _value.copyWith(
-            choices:
-                null == choices
-                    ? _value.choices
-                    : choices // ignore: cast_nullable_to_non_nullable
-                        as List<String>,
-            multiple:
-                freezed == multiple
-                    ? _value.multiple
-                    : multiple // ignore: cast_nullable_to_non_nullable
-                        as bool?,
-            expiresAt:
-                freezed == expiresAt
-                    ? _value.expiresAt
-                    : expiresAt // ignore: cast_nullable_to_non_nullable
-                        as DateTime?,
-            expiredAfter:
-                freezed == expiredAfter
-                    ? _value.expiredAfter
-                    : expiredAfter // ignore: cast_nullable_to_non_nullable
-                        as Duration?,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of NotesCreatePollRequest
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? choices = null,Object? multiple = freezed,Object? expiresAt = freezed,Object? expiredAfter = freezed,}) {
+  return _then(_self.copyWith(
+choices: null == choices ? _self.choices : choices // ignore: cast_nullable_to_non_nullable
+as List<String>,multiple: freezed == multiple ? _self.multiple : multiple // ignore: cast_nullable_to_non_nullable
+as bool?,expiresAt: freezed == expiresAt ? _self.expiresAt : expiresAt // ignore: cast_nullable_to_non_nullable
+as DateTime?,expiredAfter: freezed == expiredAfter ? _self.expiredAfter : expiredAfter // ignore: cast_nullable_to_non_nullable
+as Duration?,
+  ));
 }
 
-/// @nodoc
-abstract class _$$NotesCreatePollRequestImplCopyWith<$Res>
-    implements $NotesCreatePollRequestCopyWith<$Res> {
-  factory _$$NotesCreatePollRequestImplCopyWith(
-    _$NotesCreatePollRequestImpl value,
-    $Res Function(_$NotesCreatePollRequestImpl) then,
-  ) = __$$NotesCreatePollRequestImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({
-    List<String> choices,
-    bool? multiple,
-    @EpocTimeDateTimeConverter() DateTime? expiresAt,
-    @DurationConverter() Duration? expiredAfter,
-  });
 }
 
-/// @nodoc
-class __$$NotesCreatePollRequestImplCopyWithImpl<$Res>
-    extends
-        _$NotesCreatePollRequestCopyWithImpl<$Res, _$NotesCreatePollRequestImpl>
-    implements _$$NotesCreatePollRequestImplCopyWith<$Res> {
-  __$$NotesCreatePollRequestImplCopyWithImpl(
-    _$NotesCreatePollRequestImpl _value,
-    $Res Function(_$NotesCreatePollRequestImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of NotesCreatePollRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? choices = null,
-    Object? multiple = freezed,
-    Object? expiresAt = freezed,
-    Object? expiredAfter = freezed,
-  }) {
-    return _then(
-      _$NotesCreatePollRequestImpl(
-        choices:
-            null == choices
-                ? _value._choices
-                : choices // ignore: cast_nullable_to_non_nullable
-                    as List<String>,
-        multiple:
-            freezed == multiple
-                ? _value.multiple
-                : multiple // ignore: cast_nullable_to_non_nullable
-                    as bool?,
-        expiresAt:
-            freezed == expiresAt
-                ? _value.expiresAt
-                : expiresAt // ignore: cast_nullable_to_non_nullable
-                    as DateTime?,
-        expiredAfter:
-            freezed == expiredAfter
-                ? _value.expiredAfter
-                : expiredAfter // ignore: cast_nullable_to_non_nullable
-                    as Duration?,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 
 @JsonSerializable(includeIfNull: false)
-class _$NotesCreatePollRequestImpl implements _NotesCreatePollRequest {
-  const _$NotesCreatePollRequestImpl({
-    required final List<String> choices,
-    this.multiple,
-    @EpocTimeDateTimeConverter() this.expiresAt,
-    @DurationConverter() this.expiredAfter,
-  }) : _choices = choices;
+class _NotesCreatePollRequest implements NotesCreatePollRequest {
+  const _NotesCreatePollRequest({required final  List<String> choices, this.multiple, @EpocTimeDateTimeConverter() this.expiresAt, @DurationConverter() this.expiredAfter}): _choices = choices;
+  factory _NotesCreatePollRequest.fromJson(Map<String, dynamic> json) => _$NotesCreatePollRequestFromJson(json);
 
-  factory _$NotesCreatePollRequestImpl.fromJson(Map<String, dynamic> json) =>
-      _$$NotesCreatePollRequestImplFromJson(json);
-
-  final List<String> _choices;
-  @override
-  List<String> get choices {
-    if (_choices is EqualUnmodifiableListView) return _choices;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_choices);
-  }
-
-  @override
-  final bool? multiple;
-  @override
-  @EpocTimeDateTimeConverter()
-  final DateTime? expiresAt;
-  @override
-  @DurationConverter()
-  final Duration? expiredAfter;
-
-  @override
-  String toString() {
-    return 'NotesCreatePollRequest(choices: $choices, multiple: $multiple, expiresAt: $expiresAt, expiredAfter: $expiredAfter)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$NotesCreatePollRequestImpl &&
-            const DeepCollectionEquality().equals(other._choices, _choices) &&
-            (identical(other.multiple, multiple) ||
-                other.multiple == multiple) &&
-            (identical(other.expiresAt, expiresAt) ||
-                other.expiresAt == expiresAt) &&
-            (identical(other.expiredAfter, expiredAfter) ||
-                other.expiredAfter == expiredAfter));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    const DeepCollectionEquality().hash(_choices),
-    multiple,
-    expiresAt,
-    expiredAfter,
-  );
-
-  /// Create a copy of NotesCreatePollRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$NotesCreatePollRequestImplCopyWith<_$NotesCreatePollRequestImpl>
-  get copyWith =>
-      __$$NotesCreatePollRequestImplCopyWithImpl<_$NotesCreatePollRequestImpl>(
-        this,
-        _$identity,
-      );
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$NotesCreatePollRequestImplToJson(this);
-  }
+ final  List<String> _choices;
+@override List<String> get choices {
+  if (_choices is EqualUnmodifiableListView) return _choices;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_choices);
 }
 
-abstract class _NotesCreatePollRequest implements NotesCreatePollRequest {
-  const factory _NotesCreatePollRequest({
-    required final List<String> choices,
-    final bool? multiple,
-    @EpocTimeDateTimeConverter() final DateTime? expiresAt,
-    @DurationConverter() final Duration? expiredAfter,
-  }) = _$NotesCreatePollRequestImpl;
+@override final  bool? multiple;
+@override@EpocTimeDateTimeConverter() final  DateTime? expiresAt;
+@override@DurationConverter() final  Duration? expiredAfter;
 
-  factory _NotesCreatePollRequest.fromJson(Map<String, dynamic> json) =
-      _$NotesCreatePollRequestImpl.fromJson;
+/// Create a copy of NotesCreatePollRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$NotesCreatePollRequestCopyWith<_NotesCreatePollRequest> get copyWith => __$NotesCreatePollRequestCopyWithImpl<_NotesCreatePollRequest>(this, _$identity);
 
-  @override
-  List<String> get choices;
-  @override
-  bool? get multiple;
-  @override
-  @EpocTimeDateTimeConverter()
-  DateTime? get expiresAt;
-  @override
-  @DurationConverter()
-  Duration? get expiredAfter;
-
-  /// Create a copy of NotesCreatePollRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$NotesCreatePollRequestImplCopyWith<_$NotesCreatePollRequestImpl>
-  get copyWith => throw _privateConstructorUsedError;
+@override
+Map<String, dynamic> toJson() {
+  return _$NotesCreatePollRequestToJson(this, );
 }
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesCreatePollRequest&&const DeepCollectionEquality().equals(other._choices, _choices)&&(identical(other.multiple, multiple) || other.multiple == multiple)&&(identical(other.expiresAt, expiresAt) || other.expiresAt == expiresAt)&&(identical(other.expiredAfter, expiredAfter) || other.expiredAfter == expiredAfter));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_choices),multiple,expiresAt,expiredAfter);
+
+@override
+String toString() {
+  return 'NotesCreatePollRequest(choices: $choices, multiple: $multiple, expiresAt: $expiresAt, expiredAfter: $expiredAfter)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$NotesCreatePollRequestCopyWith<$Res> implements $NotesCreatePollRequestCopyWith<$Res> {
+  factory _$NotesCreatePollRequestCopyWith(_NotesCreatePollRequest value, $Res Function(_NotesCreatePollRequest) _then) = __$NotesCreatePollRequestCopyWithImpl;
+@override @useResult
+$Res call({
+ List<String> choices, bool? multiple,@EpocTimeDateTimeConverter() DateTime? expiresAt,@DurationConverter() Duration? expiredAfter
+});
+
+
+
+
+}
+/// @nodoc
+class __$NotesCreatePollRequestCopyWithImpl<$Res>
+    implements _$NotesCreatePollRequestCopyWith<$Res> {
+  __$NotesCreatePollRequestCopyWithImpl(this._self, this._then);
+
+  final _NotesCreatePollRequest _self;
+  final $Res Function(_NotesCreatePollRequest) _then;
+
+/// Create a copy of NotesCreatePollRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? choices = null,Object? multiple = freezed,Object? expiresAt = freezed,Object? expiredAfter = freezed,}) {
+  return _then(_NotesCreatePollRequest(
+choices: null == choices ? _self._choices : choices // ignore: cast_nullable_to_non_nullable
+as List<String>,multiple: freezed == multiple ? _self.multiple : multiple // ignore: cast_nullable_to_non_nullable
+as bool?,expiresAt: freezed == expiresAt ? _self.expiresAt : expiresAt // ignore: cast_nullable_to_non_nullable
+as DateTime?,expiredAfter: freezed == expiredAfter ? _self.expiredAfter : expiredAfter // ignore: cast_nullable_to_non_nullable
+as Duration?,
+  ));
+}
+
+
+}
+
+// dart format on

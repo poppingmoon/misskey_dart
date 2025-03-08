@@ -8,7 +8,7 @@ part 'push_notification.freezed.dart';
 part 'push_notification.g.dart';
 
 @freezed
-class PushNotification with _$PushNotification {
+abstract class PushNotification with _$PushNotification {
   const factory PushNotification({
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
@@ -25,7 +25,7 @@ class PushNotification with _$PushNotification {
 enum PushNotificationTypes { notification, readAllNotifications }
 
 @freezed
-class PushNotificationBody with _$PushNotificationBody {
+abstract class PushNotificationBody with _$PushNotificationBody {
   const factory PushNotificationBody({
     required String id,
     @DateTimeConverter() required DateTime createdAt,
@@ -61,7 +61,7 @@ class PushNotificationBody with _$PushNotificationBody {
 }
 
 @freezed
-class PushNotificationNote with _$PushNotificationNote {
+abstract class PushNotificationNote with _$PushNotificationNote {
   const factory PushNotificationNote({
     required String id,
     @DateTimeConverter() required DateTime createdAt,

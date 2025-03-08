@@ -6,10 +6,10 @@ part of 'channels_search_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ChannelsSearchRequestImpl _$$ChannelsSearchRequestImplFromJson(
+_ChannelsSearchRequest _$ChannelsSearchRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$ChannelsSearchRequestImpl', json, ($checkedConvert) {
-  final val = _$ChannelsSearchRequestImpl(
+) => $checkedCreate('_ChannelsSearchRequest', json, ($checkedConvert) {
+  final val = _ChannelsSearchRequest(
     query: $checkedConvert('query', (v) => v as String),
     type: $checkedConvert(
       'type',
@@ -22,8 +22,8 @@ _$ChannelsSearchRequestImpl _$$ChannelsSearchRequestImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$ChannelsSearchRequestImplToJson(
-  _$ChannelsSearchRequestImpl instance,
+Map<String, dynamic> _$ChannelsSearchRequestToJson(
+  _ChannelsSearchRequest instance,
 ) => <String, dynamic>{
   'query': instance.query,
   'type': _$ChannelSearchTypeEnumMap[instance.type],

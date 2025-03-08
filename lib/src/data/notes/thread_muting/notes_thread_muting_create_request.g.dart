@@ -6,17 +6,15 @@ part of 'notes_thread_muting_create_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$NotesThreadMutingCreateRequestImpl
-_$$NotesThreadMutingCreateRequestImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$NotesThreadMutingCreateRequestImpl', json, (
-      $checkedConvert,
-    ) {
-      final val = _$NotesThreadMutingCreateRequestImpl(
-        noteId: $checkedConvert('noteId', (v) => v as String),
-      );
-      return val;
-    });
+_NotesThreadMutingCreateRequest _$NotesThreadMutingCreateRequestFromJson(
+  Map<String, dynamic> json,
+) => $checkedCreate('_NotesThreadMutingCreateRequest', json, ($checkedConvert) {
+  final val = _NotesThreadMutingCreateRequest(
+    noteId: $checkedConvert('noteId', (v) => v as String),
+  );
+  return val;
+});
 
-Map<String, dynamic> _$$NotesThreadMutingCreateRequestImplToJson(
-  _$NotesThreadMutingCreateRequestImpl instance,
+Map<String, dynamic> _$NotesThreadMutingCreateRequestToJson(
+  _NotesThreadMutingCreateRequest instance,
 ) => <String, dynamic>{'noteId': instance.noteId};

@@ -6,12 +6,12 @@ part of 'users_search_by_username_and_host_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$UsersSearchByUsernameAndHostRequestImpl
-_$$UsersSearchByUsernameAndHostRequestImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$UsersSearchByUsernameAndHostRequestImpl', json, (
+_UsersSearchByUsernameAndHostRequest
+_$UsersSearchByUsernameAndHostRequestFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_UsersSearchByUsernameAndHostRequest', json, (
       $checkedConvert,
     ) {
-      final val = _$UsersSearchByUsernameAndHostRequestImpl(
+      final val = _UsersSearchByUsernameAndHostRequest(
         limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
         detail: $checkedConvert('detail', (v) => v as bool?),
         username: $checkedConvert('username', (v) => v as String?),
@@ -20,8 +20,8 @@ _$$UsersSearchByUsernameAndHostRequestImplFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$$UsersSearchByUsernameAndHostRequestImplToJson(
-  _$UsersSearchByUsernameAndHostRequestImpl instance,
+Map<String, dynamic> _$UsersSearchByUsernameAndHostRequestToJson(
+  _UsersSearchByUsernameAndHostRequest instance,
 ) => <String, dynamic>{
   'limit': instance.limit,
   'detail': instance.detail,

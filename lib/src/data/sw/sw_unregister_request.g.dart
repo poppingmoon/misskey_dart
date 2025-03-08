@@ -6,15 +6,14 @@ part of 'sw_unregister_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$SwUnregisterRequestImpl _$$SwUnregisterRequestImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$SwUnregisterRequestImpl', json, ($checkedConvert) {
-  final val = _$SwUnregisterRequestImpl(
-    endpoint: $checkedConvert('endpoint', (v) => v as String),
-  );
-  return val;
-});
+_SwUnregisterRequest _$SwUnregisterRequestFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_SwUnregisterRequest', json, ($checkedConvert) {
+      final val = _SwUnregisterRequest(
+        endpoint: $checkedConvert('endpoint', (v) => v as String),
+      );
+      return val;
+    });
 
-Map<String, dynamic> _$$SwUnregisterRequestImplToJson(
-  _$SwUnregisterRequestImpl instance,
+Map<String, dynamic> _$SwUnregisterRequestToJson(
+  _SwUnregisterRequest instance,
 ) => <String, dynamic>{'endpoint': instance.endpoint};

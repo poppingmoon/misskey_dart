@@ -4,7 +4,7 @@ part 'sw_show_registration_request.freezed.dart';
 part 'sw_show_registration_request.g.dart';
 
 @freezed
-class SwShowRegistrationRequest with _$SwShowRegistrationRequest {
+abstract class SwShowRegistrationRequest with _$SwShowRegistrationRequest {
   const factory SwShowRegistrationRequest({required String endpoint}) =
       _SwShowRegistrationRequest;
 

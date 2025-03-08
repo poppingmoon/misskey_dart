@@ -4,7 +4,7 @@ part 'sw_unregister_request.freezed.dart';
 part 'sw_unregister_request.g.dart';
 
 @freezed
-class SwUnregisterRequest with _$SwUnregisterRequest {
+abstract class SwUnregisterRequest with _$SwUnregisterRequest {
   const factory SwUnregisterRequest({required String endpoint}) =
       _SwUnregisterRequest;
 

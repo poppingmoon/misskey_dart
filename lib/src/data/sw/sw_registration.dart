@@ -4,7 +4,7 @@ part 'sw_registration.freezed.dart';
 part 'sw_registration.g.dart';
 
 @freezed
-class SwRegistration with _$SwRegistration {
+abstract class SwRegistration with _$SwRegistration {
   const factory SwRegistration({
     required String userId,
     required String endpoint,

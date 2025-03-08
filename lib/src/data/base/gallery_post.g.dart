@@ -6,10 +6,10 @@ part of 'gallery_post.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$GalleryPostImpl _$$GalleryPostImplFromJson(
+_GalleryPost _$GalleryPostFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$GalleryPostImpl', json, ($checkedConvert) {
-  final val = _$GalleryPostImpl(
+) => $checkedCreate('_GalleryPost', json, ($checkedConvert) {
+  final val = _GalleryPost(
     id: $checkedConvert('id', (v) => v as String),
     createdAt: $checkedConvert('createdAt', (v) => DateTime.parse(v as String)),
     updatedAt: $checkedConvert('updatedAt', (v) => DateTime.parse(v as String)),
@@ -42,7 +42,7 @@ _$GalleryPostImpl _$$GalleryPostImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$GalleryPostImplToJson(_$GalleryPostImpl instance) =>
+Map<String, dynamic> _$GalleryPostToJson(_GalleryPost instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdAt': instance.createdAt.toIso8601String(),

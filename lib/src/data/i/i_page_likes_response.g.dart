@@ -6,19 +6,17 @@ part of 'i_page_likes_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$IPageLikesResponseImpl _$$IPageLikesResponseImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$IPageLikesResponseImpl', json, ($checkedConvert) {
-  final val = _$IPageLikesResponseImpl(
-    id: $checkedConvert('id', (v) => v as String),
-    page: $checkedConvert(
-      'page',
-      (v) => Page.fromJson(v as Map<String, dynamic>),
-    ),
-  );
-  return val;
-});
+_IPageLikesResponse _$IPageLikesResponseFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_IPageLikesResponse', json, ($checkedConvert) {
+      final val = _IPageLikesResponse(
+        id: $checkedConvert('id', (v) => v as String),
+        page: $checkedConvert(
+          'page',
+          (v) => Page.fromJson(v as Map<String, dynamic>),
+        ),
+      );
+      return val;
+    });
 
-Map<String, dynamic> _$$IPageLikesResponseImplToJson(
-  _$IPageLikesResponseImpl instance,
-) => <String, dynamic>{'id': instance.id, 'page': instance.page.toJson()};
+Map<String, dynamic> _$IPageLikesResponseToJson(_IPageLikesResponse instance) =>
+    <String, dynamic>{'id': instance.id, 'page': instance.page.toJson()};

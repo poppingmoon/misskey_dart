@@ -5,7 +5,7 @@ part 'channel_event.freezed.dart';
 part 'channel_event.g.dart';
 
 @freezed
-class ChannelEvent with _$ChannelEvent {
+abstract class ChannelEvent with _$ChannelEvent {
   const factory ChannelEvent({
     required String id,
     // ignore: invalid_annotation_target

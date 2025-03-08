@@ -6,10 +6,10 @@ part of 'i_notifications_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$INotificationRequestImpl _$$INotificationRequestImplFromJson(
+_INotificationRequest _$INotificationRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$INotificationRequestImpl', json, ($checkedConvert) {
-  final val = _$INotificationRequestImpl(
+) => $checkedCreate('_INotificationRequest', json, ($checkedConvert) {
+  final val = _INotificationRequest(
     limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
     sinceId: $checkedConvert('sinceId', (v) => v as String?),
     untilId: $checkedConvert('untilId', (v) => v as String?),
@@ -34,8 +34,8 @@ _$INotificationRequestImpl _$$INotificationRequestImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$INotificationRequestImplToJson(
-  _$INotificationRequestImpl instance,
+Map<String, dynamic> _$INotificationRequestToJson(
+  _INotificationRequest instance,
 ) => <String, dynamic>{
   'limit': instance.limit,
   'sinceId': instance.sinceId,

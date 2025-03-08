@@ -6,19 +6,18 @@ part of 'flash_my_likes_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$FlashMyLikesRequestImpl _$$FlashMyLikesRequestImplFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate(r'_$FlashMyLikesRequestImpl', json, ($checkedConvert) {
-  final val = _$FlashMyLikesRequestImpl(
-    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-    sinceId: $checkedConvert('sinceId', (v) => v as String?),
-    untilId: $checkedConvert('untilId', (v) => v as String?),
-  );
-  return val;
-});
+_FlashMyLikesRequest _$FlashMyLikesRequestFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_FlashMyLikesRequest', json, ($checkedConvert) {
+      final val = _FlashMyLikesRequest(
+        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
+        sinceId: $checkedConvert('sinceId', (v) => v as String?),
+        untilId: $checkedConvert('untilId', (v) => v as String?),
+      );
+      return val;
+    });
 
-Map<String, dynamic> _$$FlashMyLikesRequestImplToJson(
-  _$FlashMyLikesRequestImpl instance,
+Map<String, dynamic> _$FlashMyLikesRequestToJson(
+  _FlashMyLikesRequest instance,
 ) => <String, dynamic>{
   'limit': instance.limit,
   'sinceId': instance.sinceId,

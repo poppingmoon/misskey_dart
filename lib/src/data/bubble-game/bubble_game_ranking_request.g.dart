@@ -6,15 +6,15 @@ part of 'bubble_game_ranking_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$BubbleGameRankingRequestImpl _$$BubbleGameRankingRequestImplFromJson(
+_BubbleGameRankingRequest _$BubbleGameRankingRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$BubbleGameRankingRequestImpl', json, ($checkedConvert) {
-  final val = _$BubbleGameRankingRequestImpl(
+) => $checkedCreate('_BubbleGameRankingRequest', json, ($checkedConvert) {
+  final val = _BubbleGameRankingRequest(
     gameMode: $checkedConvert('gameMode', (v) => v as String),
   );
   return val;
 });
 
-Map<String, dynamic> _$$BubbleGameRankingRequestImplToJson(
-  _$BubbleGameRankingRequestImpl instance,
+Map<String, dynamic> _$BubbleGameRankingRequestToJson(
+  _BubbleGameRankingRequest instance,
 ) => <String, dynamic>{'gameMode': instance.gameMode};

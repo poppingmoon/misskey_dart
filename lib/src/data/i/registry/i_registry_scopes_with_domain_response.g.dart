@@ -6,13 +6,12 @@ part of 'i_registry_scopes_with_domain_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$IRegistryScopesWithDomainResponseImpl
-_$$IRegistryScopesWithDomainResponseImplFromJson(
+_IRegistryScopesWithDomainResponse _$IRegistryScopesWithDomainResponseFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate(r'_$IRegistryScopesWithDomainResponseImpl', json, (
+) => $checkedCreate('_IRegistryScopesWithDomainResponse', json, (
   $checkedConvert,
 ) {
-  final val = _$IRegistryScopesWithDomainResponseImpl(
+  final val = _IRegistryScopesWithDomainResponse(
     scopes: $checkedConvert(
       'scopes',
       (v) =>
@@ -25,6 +24,6 @@ _$$IRegistryScopesWithDomainResponseImplFromJson(
   return val;
 });
 
-Map<String, dynamic> _$$IRegistryScopesWithDomainResponseImplToJson(
-  _$IRegistryScopesWithDomainResponseImpl instance,
+Map<String, dynamic> _$IRegistryScopesWithDomainResponseToJson(
+  _IRegistryScopesWithDomainResponse instance,
 ) => <String, dynamic>{'scopes': instance.scopes, 'domain': instance.domain};

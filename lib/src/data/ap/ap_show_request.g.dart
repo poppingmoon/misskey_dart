@@ -6,9 +6,9 @@ part of 'ap_show_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ApShowRequestImpl _$$ApShowRequestImplFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(r'_$ApShowRequestImpl', json, ($checkedConvert) {
-      final val = _$ApShowRequestImpl(
+_ApShowRequest _$ApShowRequestFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_ApShowRequest', json, ($checkedConvert) {
+      final val = _ApShowRequest(
         uri: $checkedConvert(
           'uri',
           (v) => const UriConverter().fromJson(v as String),
@@ -17,5 +17,5 @@ _$ApShowRequestImpl _$$ApShowRequestImplFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$$ApShowRequestImplToJson(_$ApShowRequestImpl instance) =>
+Map<String, dynamic> _$ApShowRequestToJson(_ApShowRequest instance) =>
     <String, dynamic>{'uri': const UriConverter().toJson(instance.uri)};

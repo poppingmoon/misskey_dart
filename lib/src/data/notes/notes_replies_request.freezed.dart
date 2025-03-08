@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,232 +10,148 @@ part of 'notes_replies_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-NotesRepliesRequest _$NotesRepliesRequestFromJson(Map<String, dynamic> json) {
-  return _NotesRepliesRequest.fromJson(json);
-}
 
 /// @nodoc
 mixin _$NotesRepliesRequest {
-  String get noteId => throw _privateConstructorUsedError;
-  int? get limit => throw _privateConstructorUsedError;
-  String? get sinceId => throw _privateConstructorUsedError;
-  String? get untilId => throw _privateConstructorUsedError;
+
+ String get noteId; int? get limit; String? get sinceId; String? get untilId;
+/// Create a copy of NotesRepliesRequest
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$NotesRepliesRequestCopyWith<NotesRepliesRequest> get copyWith => _$NotesRepliesRequestCopyWithImpl<NotesRepliesRequest>(this as NotesRepliesRequest, _$identity);
 
   /// Serializes this NotesRepliesRequest to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of NotesRepliesRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $NotesRepliesRequestCopyWith<NotesRepliesRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesRepliesRequest&&(identical(other.noteId, noteId) || other.noteId == noteId)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,noteId,limit,sinceId,untilId);
+
+@override
+String toString() {
+  return 'NotesRepliesRequest(noteId: $noteId, limit: $limit, sinceId: $sinceId, untilId: $untilId)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $NotesRepliesRequestCopyWith<$Res> {
-  factory $NotesRepliesRequestCopyWith(
-    NotesRepliesRequest value,
-    $Res Function(NotesRepliesRequest) then,
-  ) = _$NotesRepliesRequestCopyWithImpl<$Res, NotesRepliesRequest>;
-  @useResult
-  $Res call({String noteId, int? limit, String? sinceId, String? untilId});
-}
+abstract mixin class $NotesRepliesRequestCopyWith<$Res>  {
+  factory $NotesRepliesRequestCopyWith(NotesRepliesRequest value, $Res Function(NotesRepliesRequest) _then) = _$NotesRepliesRequestCopyWithImpl;
+@useResult
+$Res call({
+ String noteId, int? limit, String? sinceId, String? untilId
+});
 
+
+
+
+}
 /// @nodoc
-class _$NotesRepliesRequestCopyWithImpl<$Res, $Val extends NotesRepliesRequest>
+class _$NotesRepliesRequestCopyWithImpl<$Res>
     implements $NotesRepliesRequestCopyWith<$Res> {
-  _$NotesRepliesRequestCopyWithImpl(this._value, this._then);
+  _$NotesRepliesRequestCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final NotesRepliesRequest _self;
+  final $Res Function(NotesRepliesRequest) _then;
 
-  /// Create a copy of NotesRepliesRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? noteId = null,
-    Object? limit = freezed,
-    Object? sinceId = freezed,
-    Object? untilId = freezed,
-  }) {
-    return _then(
-      _value.copyWith(
-            noteId:
-                null == noteId
-                    ? _value.noteId
-                    : noteId // ignore: cast_nullable_to_non_nullable
-                        as String,
-            limit:
-                freezed == limit
-                    ? _value.limit
-                    : limit // ignore: cast_nullable_to_non_nullable
-                        as int?,
-            sinceId:
-                freezed == sinceId
-                    ? _value.sinceId
-                    : sinceId // ignore: cast_nullable_to_non_nullable
-                        as String?,
-            untilId:
-                freezed == untilId
-                    ? _value.untilId
-                    : untilId // ignore: cast_nullable_to_non_nullable
-                        as String?,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of NotesRepliesRequest
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? noteId = null,Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,}) {
+  return _then(_self.copyWith(
+noteId: null == noteId ? _self.noteId : noteId // ignore: cast_nullable_to_non_nullable
+as String,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
+as int?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
+as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
+as String?,
+  ));
 }
 
-/// @nodoc
-abstract class _$$NotesRepliesRequestImplCopyWith<$Res>
-    implements $NotesRepliesRequestCopyWith<$Res> {
-  factory _$$NotesRepliesRequestImplCopyWith(
-    _$NotesRepliesRequestImpl value,
-    $Res Function(_$NotesRepliesRequestImpl) then,
-  ) = __$$NotesRepliesRequestImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String noteId, int? limit, String? sinceId, String? untilId});
 }
 
-/// @nodoc
-class __$$NotesRepliesRequestImplCopyWithImpl<$Res>
-    extends _$NotesRepliesRequestCopyWithImpl<$Res, _$NotesRepliesRequestImpl>
-    implements _$$NotesRepliesRequestImplCopyWith<$Res> {
-  __$$NotesRepliesRequestImplCopyWithImpl(
-    _$NotesRepliesRequestImpl _value,
-    $Res Function(_$NotesRepliesRequestImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of NotesRepliesRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? noteId = null,
-    Object? limit = freezed,
-    Object? sinceId = freezed,
-    Object? untilId = freezed,
-  }) {
-    return _then(
-      _$NotesRepliesRequestImpl(
-        noteId:
-            null == noteId
-                ? _value.noteId
-                : noteId // ignore: cast_nullable_to_non_nullable
-                    as String,
-        limit:
-            freezed == limit
-                ? _value.limit
-                : limit // ignore: cast_nullable_to_non_nullable
-                    as int?,
-        sinceId:
-            freezed == sinceId
-                ? _value.sinceId
-                : sinceId // ignore: cast_nullable_to_non_nullable
-                    as String?,
-        untilId:
-            freezed == untilId
-                ? _value.untilId
-                : untilId // ignore: cast_nullable_to_non_nullable
-                    as String?,
-      ),
-    );
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$NotesRepliesRequestImpl implements _NotesRepliesRequest {
-  const _$NotesRepliesRequestImpl({
-    required this.noteId,
-    this.limit,
-    this.sinceId,
-    this.untilId,
-  });
 
-  factory _$NotesRepliesRequestImpl.fromJson(Map<String, dynamic> json) =>
-      _$$NotesRepliesRequestImplFromJson(json);
+class _NotesRepliesRequest implements NotesRepliesRequest {
+  const _NotesRepliesRequest({required this.noteId, this.limit, this.sinceId, this.untilId});
+  factory _NotesRepliesRequest.fromJson(Map<String, dynamic> json) => _$NotesRepliesRequestFromJson(json);
 
-  @override
-  final String noteId;
-  @override
-  final int? limit;
-  @override
-  final String? sinceId;
-  @override
-  final String? untilId;
+@override final  String noteId;
+@override final  int? limit;
+@override final  String? sinceId;
+@override final  String? untilId;
 
-  @override
-  String toString() {
-    return 'NotesRepliesRequest(noteId: $noteId, limit: $limit, sinceId: $sinceId, untilId: $untilId)';
-  }
+/// Create a copy of NotesRepliesRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$NotesRepliesRequestCopyWith<_NotesRepliesRequest> get copyWith => __$NotesRepliesRequestCopyWithImpl<_NotesRepliesRequest>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$NotesRepliesRequestImpl &&
-            (identical(other.noteId, noteId) || other.noteId == noteId) &&
-            (identical(other.limit, limit) || other.limit == limit) &&
-            (identical(other.sinceId, sinceId) || other.sinceId == sinceId) &&
-            (identical(other.untilId, untilId) || other.untilId == untilId));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, noteId, limit, sinceId, untilId);
-
-  /// Create a copy of NotesRepliesRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$NotesRepliesRequestImplCopyWith<_$NotesRepliesRequestImpl> get copyWith =>
-      __$$NotesRepliesRequestImplCopyWithImpl<_$NotesRepliesRequestImpl>(
-        this,
-        _$identity,
-      );
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$NotesRepliesRequestImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$NotesRepliesRequestToJson(this, );
 }
 
-abstract class _NotesRepliesRequest implements NotesRepliesRequest {
-  const factory _NotesRepliesRequest({
-    required final String noteId,
-    final int? limit,
-    final String? sinceId,
-    final String? untilId,
-  }) = _$NotesRepliesRequestImpl;
-
-  factory _NotesRepliesRequest.fromJson(Map<String, dynamic> json) =
-      _$NotesRepliesRequestImpl.fromJson;
-
-  @override
-  String get noteId;
-  @override
-  int? get limit;
-  @override
-  String? get sinceId;
-  @override
-  String? get untilId;
-
-  /// Create a copy of NotesRepliesRequest
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$NotesRepliesRequestImplCopyWith<_$NotesRepliesRequestImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesRepliesRequest&&(identical(other.noteId, noteId) || other.noteId == noteId)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,noteId,limit,sinceId,untilId);
+
+@override
+String toString() {
+  return 'NotesRepliesRequest(noteId: $noteId, limit: $limit, sinceId: $sinceId, untilId: $untilId)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$NotesRepliesRequestCopyWith<$Res> implements $NotesRepliesRequestCopyWith<$Res> {
+  factory _$NotesRepliesRequestCopyWith(_NotesRepliesRequest value, $Res Function(_NotesRepliesRequest) _then) = __$NotesRepliesRequestCopyWithImpl;
+@override @useResult
+$Res call({
+ String noteId, int? limit, String? sinceId, String? untilId
+});
+
+
+
+
+}
+/// @nodoc
+class __$NotesRepliesRequestCopyWithImpl<$Res>
+    implements _$NotesRepliesRequestCopyWith<$Res> {
+  __$NotesRepliesRequestCopyWithImpl(this._self, this._then);
+
+  final _NotesRepliesRequest _self;
+  final $Res Function(_NotesRepliesRequest) _then;
+
+/// Create a copy of NotesRepliesRequest
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? noteId = null,Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,}) {
+  return _then(_NotesRepliesRequest(
+noteId: null == noteId ? _self.noteId : noteId // ignore: cast_nullable_to_non_nullable
+as String,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
+as int?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
+as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
+as String?,
+  ));
+}
+
+
+}
+
+// dart format on

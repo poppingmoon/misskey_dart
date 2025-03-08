@@ -4,7 +4,7 @@ part 'users_get_skeb_status_response.freezed.dart';
 part 'users_get_skeb_status_response.g.dart';
 
 @freezed
-class UsersGetSkebStatusResponse with _$UsersGetSkebStatusResponse {
+abstract class UsersGetSkebStatusResponse with _$UsersGetSkebStatusResponse {
   const factory UsersGetSkebStatusResponse({
     required String screenName,
     required bool isCreator,
@@ -19,7 +19,7 @@ class UsersGetSkebStatusResponse with _$UsersGetSkebStatusResponse {
 }
 
 @freezed
-class SkebStatusSkill with _$SkebStatusSkill {
+abstract class SkebStatusSkill with _$SkebStatusSkill {
   const factory SkebStatusSkill({
     required int amount,
     // ignore: invalid_annotation_target

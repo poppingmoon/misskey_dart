@@ -6,16 +6,15 @@ part of 'sw_show_registration_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$SwShowRegistrationRequestImpl _$$SwShowRegistrationRequestImplFromJson(
+_SwShowRegistrationRequest _$SwShowRegistrationRequestFromJson(
   Map<String, dynamic> json,
-) =>
-    $checkedCreate(r'_$SwShowRegistrationRequestImpl', json, ($checkedConvert) {
-      final val = _$SwShowRegistrationRequestImpl(
-        endpoint: $checkedConvert('endpoint', (v) => v as String),
-      );
-      return val;
-    });
+) => $checkedCreate('_SwShowRegistrationRequest', json, ($checkedConvert) {
+  final val = _SwShowRegistrationRequest(
+    endpoint: $checkedConvert('endpoint', (v) => v as String),
+  );
+  return val;
+});
 
-Map<String, dynamic> _$$SwShowRegistrationRequestImplToJson(
-  _$SwShowRegistrationRequestImpl instance,
+Map<String, dynamic> _$SwShowRegistrationRequestToJson(
+  _SwShowRegistrationRequest instance,
 ) => <String, dynamic>{'endpoint': instance.endpoint};
