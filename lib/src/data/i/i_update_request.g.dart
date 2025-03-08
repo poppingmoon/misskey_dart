@@ -14,7 +14,13 @@ _$IUpdateRequestImpl _$$IUpdateRequestImplFromJson(
     description: $checkedConvert('description', (v) => v as String?),
     followedMessage: $checkedConvert('followedMessage', (v) => v as String?),
     location: $checkedConvert('location', (v) => v as String?),
-    birthday: $checkedConvert('birthday', (v) => v),
+    birthday: $checkedConvert(
+      'birthday',
+      (v) => _$JsonConverterFromJson<String, DateTime>(
+        v,
+        const DateTimeConverter().fromJson,
+      ),
+    ),
     lang: $checkedConvert('lang', (v) => v as String?),
     avatarId: $checkedConvert('avatarId', (v) => v as String?),
     avatarDecorations: $checkedConvert(
@@ -148,7 +154,10 @@ Map<String, dynamic> _$$IUpdateRequestImplToJson(
   'description': instance.description,
   'followedMessage': instance.followedMessage,
   'location': instance.location,
-  'birthday': instance.birthday,
+  'birthday': _$JsonConverterToJson<String, DateTime>(
+    instance.birthday,
+    const DateTimeConverter().toJson,
+  ),
   'lang': instance.lang,
   'avatarId': instance.avatarId,
   'avatarDecorations':
