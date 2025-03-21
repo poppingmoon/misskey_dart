@@ -7,7 +7,6 @@ import 'package:misskey_dart/src/services/streaming_service_impl.dart';
 
 class Misskey {
   final String? token;
-  final String host;
   final Duration? socketConnectionTimeout;
 
   late final ApiService apiService;
@@ -37,17 +36,21 @@ class Misskey {
 
   Misskey({
     this.token,
-    required this.host,
-    String? apiUrl,
-    String? streamingUrl,
+    required Uri serverUrl,
+    Uri? apiUrl,
+    Uri? streamingUrl,
     Dio? dio,
     this.socketConnectionTimeout,
   }) {
-    apiService = ApiService(token: token, host: host, apiUrl: apiUrl, dio: dio);
-    streamingService = StreamingService(
-      host,
+    apiService = ApiService(
       token: token,
-      streamingUrl: streamingUrl,
+      apiUrl: apiUrl ?? serverUrl.replace(pathSegments: ['api']),
+      dio: dio,
+    );
+    streamingService = StreamingService(
+      token: token,
+      streamingUrl:
+          streamingUrl ?? serverUrl.replace(pathSegments: ['streaming']),
       connectionTimeout: socketConnectionTimeout,
     );
 

@@ -8,15 +8,14 @@ import 'package:misskey_dart/misskey_dart.dart';
 class ApiService {
   final Dio dio;
   final String? token;
-  final String host;
-  final String? apiUrl;
+  final Uri apiUrl;
 
-  ApiService({this.token, required this.host, this.apiUrl, Dio? dio})
+  ApiService({this.token, required this.apiUrl, Dio? dio})
     : dio =
           (dio ?? Dio())
             ..options = BaseOptions(
               method: "post",
-              baseUrl: apiUrl ?? "${Uri.https(host)}/api/",
+              baseUrl: "$apiUrl${apiUrl.path.endsWith("/") ? "" : "/"}",
               contentType: "application/json",
             )
             ..interceptors.add(

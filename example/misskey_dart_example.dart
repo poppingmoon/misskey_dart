@@ -6,7 +6,7 @@ Future<void> main() async {
   // ----------------------------------------------------------------------
   // start streaming
   // ----------------------------------------------------------------------
-  final client = Misskey(token: null, host: "uneune.one");
+  final client = Misskey(token: null, serverUrl: Uri.https("uneune.one"));
   final streamController = await client.streamingService.stream();
 
   // final stream = streamController.localTimelineStream(

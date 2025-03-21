@@ -11,12 +11,10 @@ import 'package:web_socket_channel/web_socket_channel.dart';
 
 @internal
 class StreamingService implements StreamingController, WebSocketController {
-  final String host;
-  final int port;
   final String? token;
   final int maxRetryCounts;
   final Duration? connectionTimeout;
-  final String? streamingUrl;
+  final Uri streamingUrl;
   @override
   bool isClosed = false;
 
@@ -30,18 +28,17 @@ class StreamingService implements StreamingController, WebSocketController {
   StreamSubscription? _subscription;
   int _activeStreams = 0;
 
-  StreamingService(
-    this.host, {
-    this.port = 80,
+  StreamingService({
     this.token,
-    this.streamingUrl,
+    required this.streamingUrl,
     this.maxRetryCounts = 1,
     this.connectionTimeout,
   });
 
   WebSocketChannel _createWebSocketChannel() {
-    final url =
-        "${streamingUrl ?? "wss://$host${port == 80 ? "" : ":$port"}/streaming"}${token != null ? "?i=$token" : ""}";
+    final url = streamingUrl.replace(
+      queryParameters: token != null ? {"i": token} : null,
+    );
 
     log("connect websocket $url");
 
@@ -221,7 +218,7 @@ class StreamingService implements StreamingController, WebSocketController {
       if (_activeStreams == 0) {
         _subNotes.clear();
         if (_connections.isEmpty) {
-          log("attempt $host streaming closed...");
+          log("attempt ${streamingUrl.host} streaming closed...");
           final lock = await _connectWebSocketMutex.acquire();
           try {
             await _close();

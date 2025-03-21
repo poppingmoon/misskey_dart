@@ -15,11 +15,15 @@ class CreateUserResponse {
 }
 
 Misskey getTestClient(String? token) {
+  final host = env["TEST_HOST"];
+  final apiUrl = env["TEST_API_URL"];
+  final streamingUrl = env["TEST_STREAMING_URL"];
+
   return Misskey(
     token: token,
-    host: env["TEST_HOST"]!,
-    apiUrl: env["TEST_API_URL"],
-    streamingUrl: env["TEST_STREAMING_URL"],
+    serverUrl: Uri.https(host!),
+    apiUrl: apiUrl != null ? Uri.parse(apiUrl) : null,
+    streamingUrl: streamingUrl != null ? Uri.parse(streamingUrl) : null,
   );
 }
 
