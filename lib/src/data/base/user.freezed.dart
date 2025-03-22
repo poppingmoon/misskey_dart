@@ -17,7 +17,7 @@ T _$identity<T>(T value) => value;
 mixin _$UserLite {
 
  String get id; String? get name; String get username; String? get host;@NullableUriConverter() Uri? get avatarUrl; String? get avatarBlurhash; List<UserAvatarDecoration> get avatarDecorations; bool get isBot; bool get isCat; UserInstanceInfo? get instance;@EmojisConverter() Map<String, String> get emojis;// ignore: invalid_annotation_target
-@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) OnlineStatus? get onlineStatus; List<UserBadgeRole> get badgeRoles; bool? get requireSigninToViewContents;@HideBeforeConverter() HideBefore? get makeNotesFollowersOnlyBefore;@HideBeforeConverter() HideBefore? get makeNotesHiddenBefore; bool? get speakAsCat;
+@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) OnlineStatus? get onlineStatus; List<UserBadgeRole> get badgeRoles; bool? get requireSigninToViewContents;@HideBeforeConverter() HideBefore? get makeNotesFollowersOnlyBefore;@HideBeforeConverter() HideBefore? get makeNotesHiddenBefore; bool? get speakAsCat; String? get mandatoryCW;
 /// Create a copy of UserLite
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -30,16 +30,16 @@ $UserLiteCopyWith<UserLite> get copyWith => _$UserLiteCopyWithImpl<UserLite>(thi
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is UserLite&&(identical(other.id, id) || other.id == id)&&(identical(other.name, name) || other.name == name)&&(identical(other.username, username) || other.username == username)&&(identical(other.host, host) || other.host == host)&&(identical(other.avatarUrl, avatarUrl) || other.avatarUrl == avatarUrl)&&(identical(other.avatarBlurhash, avatarBlurhash) || other.avatarBlurhash == avatarBlurhash)&&const DeepCollectionEquality().equals(other.avatarDecorations, avatarDecorations)&&(identical(other.isBot, isBot) || other.isBot == isBot)&&(identical(other.isCat, isCat) || other.isCat == isCat)&&(identical(other.instance, instance) || other.instance == instance)&&const DeepCollectionEquality().equals(other.emojis, emojis)&&(identical(other.onlineStatus, onlineStatus) || other.onlineStatus == onlineStatus)&&const DeepCollectionEquality().equals(other.badgeRoles, badgeRoles)&&(identical(other.requireSigninToViewContents, requireSigninToViewContents) || other.requireSigninToViewContents == requireSigninToViewContents)&&(identical(other.makeNotesFollowersOnlyBefore, makeNotesFollowersOnlyBefore) || other.makeNotesFollowersOnlyBefore == makeNotesFollowersOnlyBefore)&&(identical(other.makeNotesHiddenBefore, makeNotesHiddenBefore) || other.makeNotesHiddenBefore == makeNotesHiddenBefore)&&(identical(other.speakAsCat, speakAsCat) || other.speakAsCat == speakAsCat));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is UserLite&&(identical(other.id, id) || other.id == id)&&(identical(other.name, name) || other.name == name)&&(identical(other.username, username) || other.username == username)&&(identical(other.host, host) || other.host == host)&&(identical(other.avatarUrl, avatarUrl) || other.avatarUrl == avatarUrl)&&(identical(other.avatarBlurhash, avatarBlurhash) || other.avatarBlurhash == avatarBlurhash)&&const DeepCollectionEquality().equals(other.avatarDecorations, avatarDecorations)&&(identical(other.isBot, isBot) || other.isBot == isBot)&&(identical(other.isCat, isCat) || other.isCat == isCat)&&(identical(other.instance, instance) || other.instance == instance)&&const DeepCollectionEquality().equals(other.emojis, emojis)&&(identical(other.onlineStatus, onlineStatus) || other.onlineStatus == onlineStatus)&&const DeepCollectionEquality().equals(other.badgeRoles, badgeRoles)&&(identical(other.requireSigninToViewContents, requireSigninToViewContents) || other.requireSigninToViewContents == requireSigninToViewContents)&&(identical(other.makeNotesFollowersOnlyBefore, makeNotesFollowersOnlyBefore) || other.makeNotesFollowersOnlyBefore == makeNotesFollowersOnlyBefore)&&(identical(other.makeNotesHiddenBefore, makeNotesHiddenBefore) || other.makeNotesHiddenBefore == makeNotesHiddenBefore)&&(identical(other.speakAsCat, speakAsCat) || other.speakAsCat == speakAsCat)&&(identical(other.mandatoryCW, mandatoryCW) || other.mandatoryCW == mandatoryCW));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,name,username,host,avatarUrl,avatarBlurhash,const DeepCollectionEquality().hash(avatarDecorations),isBot,isCat,instance,const DeepCollectionEquality().hash(emojis),onlineStatus,const DeepCollectionEquality().hash(badgeRoles),requireSigninToViewContents,makeNotesFollowersOnlyBefore,makeNotesHiddenBefore,speakAsCat);
+int get hashCode => Object.hash(runtimeType,id,name,username,host,avatarUrl,avatarBlurhash,const DeepCollectionEquality().hash(avatarDecorations),isBot,isCat,instance,const DeepCollectionEquality().hash(emojis),onlineStatus,const DeepCollectionEquality().hash(badgeRoles),requireSigninToViewContents,makeNotesFollowersOnlyBefore,makeNotesHiddenBefore,speakAsCat,mandatoryCW);
 
 @override
 String toString() {
-  return 'UserLite(id: $id, name: $name, username: $username, host: $host, avatarUrl: $avatarUrl, avatarBlurhash: $avatarBlurhash, avatarDecorations: $avatarDecorations, isBot: $isBot, isCat: $isCat, instance: $instance, emojis: $emojis, onlineStatus: $onlineStatus, badgeRoles: $badgeRoles, requireSigninToViewContents: $requireSigninToViewContents, makeNotesFollowersOnlyBefore: $makeNotesFollowersOnlyBefore, makeNotesHiddenBefore: $makeNotesHiddenBefore, speakAsCat: $speakAsCat)';
+  return 'UserLite(id: $id, name: $name, username: $username, host: $host, avatarUrl: $avatarUrl, avatarBlurhash: $avatarBlurhash, avatarDecorations: $avatarDecorations, isBot: $isBot, isCat: $isCat, instance: $instance, emojis: $emojis, onlineStatus: $onlineStatus, badgeRoles: $badgeRoles, requireSigninToViewContents: $requireSigninToViewContents, makeNotesFollowersOnlyBefore: $makeNotesFollowersOnlyBefore, makeNotesHiddenBefore: $makeNotesHiddenBefore, speakAsCat: $speakAsCat, mandatoryCW: $mandatoryCW)';
 }
 
 
@@ -50,7 +50,7 @@ abstract mixin class $UserLiteCopyWith<$Res>  {
   factory $UserLiteCopyWith(UserLite value, $Res Function(UserLite) _then) = _$UserLiteCopyWithImpl;
 @useResult
 $Res call({
- String id, String? name, String username, String? host,@NullableUriConverter() Uri? avatarUrl, String? avatarBlurhash, List<UserAvatarDecoration> avatarDecorations, bool isBot, bool isCat, UserInstanceInfo? instance,@EmojisConverter() Map<String, String> emojis,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) OnlineStatus? onlineStatus, List<UserBadgeRole> badgeRoles, bool? requireSigninToViewContents,@HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,@HideBeforeConverter() HideBefore? makeNotesHiddenBefore, bool? speakAsCat
+ String id, String? name, String username, String? host,@NullableUriConverter() Uri? avatarUrl, String? avatarBlurhash, List<UserAvatarDecoration> avatarDecorations, bool isBot, bool isCat, UserInstanceInfo? instance,@EmojisConverter() Map<String, String> emojis,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) OnlineStatus? onlineStatus, List<UserBadgeRole> badgeRoles, bool? requireSigninToViewContents,@HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,@HideBeforeConverter() HideBefore? makeNotesHiddenBefore, bool? speakAsCat, String? mandatoryCW
 });
 
 
@@ -67,7 +67,7 @@ class _$UserLiteCopyWithImpl<$Res>
 
 /// Create a copy of UserLite
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? name = freezed,Object? username = null,Object? host = freezed,Object? avatarUrl = freezed,Object? avatarBlurhash = freezed,Object? avatarDecorations = null,Object? isBot = null,Object? isCat = null,Object? instance = freezed,Object? emojis = null,Object? onlineStatus = freezed,Object? badgeRoles = null,Object? requireSigninToViewContents = freezed,Object? makeNotesFollowersOnlyBefore = freezed,Object? makeNotesHiddenBefore = freezed,Object? speakAsCat = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? name = freezed,Object? username = null,Object? host = freezed,Object? avatarUrl = freezed,Object? avatarBlurhash = freezed,Object? avatarDecorations = null,Object? isBot = null,Object? isCat = null,Object? instance = freezed,Object? emojis = null,Object? onlineStatus = freezed,Object? badgeRoles = null,Object? requireSigninToViewContents = freezed,Object? makeNotesFollowersOnlyBefore = freezed,Object? makeNotesHiddenBefore = freezed,Object? speakAsCat = freezed,Object? mandatoryCW = freezed,}) {
   return _then(_self.copyWith(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
@@ -86,7 +86,8 @@ as List<UserBadgeRole>,requireSigninToViewContents: freezed == requireSigninToVi
 as bool?,makeNotesFollowersOnlyBefore: freezed == makeNotesFollowersOnlyBefore ? _self.makeNotesFollowersOnlyBefore : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
 as HideBefore?,makeNotesHiddenBefore: freezed == makeNotesHiddenBefore ? _self.makeNotesHiddenBefore : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
 as HideBefore?,speakAsCat: freezed == speakAsCat ? _self.speakAsCat : speakAsCat // ignore: cast_nullable_to_non_nullable
-as bool?,
+as bool?,mandatoryCW: freezed == mandatoryCW ? _self.mandatoryCW : mandatoryCW // ignore: cast_nullable_to_non_nullable
+as String?,
   ));
 }
 /// Create a copy of UserLite
@@ -109,7 +110,7 @@ $UserInstanceInfoCopyWith<$Res>? get instance {
 @JsonSerializable()
 
 class _UserLite implements UserLite {
-  const _UserLite({required this.id, this.name, required this.username, this.host, @NullableUriConverter() this.avatarUrl, this.avatarBlurhash, final  List<UserAvatarDecoration> avatarDecorations = const [], this.isBot = false, this.isCat = false, this.instance, @EmojisConverter() final  Map<String, String> emojis = const {}, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.onlineStatus, final  List<UserBadgeRole> badgeRoles = const [], this.requireSigninToViewContents, @HideBeforeConverter() this.makeNotesFollowersOnlyBefore, @HideBeforeConverter() this.makeNotesHiddenBefore, this.speakAsCat}): _avatarDecorations = avatarDecorations,_emojis = emojis,_badgeRoles = badgeRoles;
+  const _UserLite({required this.id, this.name, required this.username, this.host, @NullableUriConverter() this.avatarUrl, this.avatarBlurhash, final  List<UserAvatarDecoration> avatarDecorations = const [], this.isBot = false, this.isCat = false, this.instance, @EmojisConverter() final  Map<String, String> emojis = const {}, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.onlineStatus, final  List<UserBadgeRole> badgeRoles = const [], this.requireSigninToViewContents, @HideBeforeConverter() this.makeNotesFollowersOnlyBefore, @HideBeforeConverter() this.makeNotesHiddenBefore, this.speakAsCat, this.mandatoryCW}): _avatarDecorations = avatarDecorations,_emojis = emojis,_badgeRoles = badgeRoles;
   factory _UserLite.fromJson(Map<String, dynamic> json) => _$UserLiteFromJson(json);
 
 @override final  String id;
@@ -148,6 +149,7 @@ class _UserLite implements UserLite {
 @override@HideBeforeConverter() final  HideBefore? makeNotesFollowersOnlyBefore;
 @override@HideBeforeConverter() final  HideBefore? makeNotesHiddenBefore;
 @override final  bool? speakAsCat;
+@override final  String? mandatoryCW;
 
 /// Create a copy of UserLite
 /// with the given fields replaced by the non-null parameter values.
@@ -162,16 +164,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _UserLite&&(identical(other.id, id) || other.id == id)&&(identical(other.name, name) || other.name == name)&&(identical(other.username, username) || other.username == username)&&(identical(other.host, host) || other.host == host)&&(identical(other.avatarUrl, avatarUrl) || other.avatarUrl == avatarUrl)&&(identical(other.avatarBlurhash, avatarBlurhash) || other.avatarBlurhash == avatarBlurhash)&&const DeepCollectionEquality().equals(other._avatarDecorations, _avatarDecorations)&&(identical(other.isBot, isBot) || other.isBot == isBot)&&(identical(other.isCat, isCat) || other.isCat == isCat)&&(identical(other.instance, instance) || other.instance == instance)&&const DeepCollectionEquality().equals(other._emojis, _emojis)&&(identical(other.onlineStatus, onlineStatus) || other.onlineStatus == onlineStatus)&&const DeepCollectionEquality().equals(other._badgeRoles, _badgeRoles)&&(identical(other.requireSigninToViewContents, requireSigninToViewContents) || other.requireSigninToViewContents == requireSigninToViewContents)&&(identical(other.makeNotesFollowersOnlyBefore, makeNotesFollowersOnlyBefore) || other.makeNotesFollowersOnlyBefore == makeNotesFollowersOnlyBefore)&&(identical(other.makeNotesHiddenBefore, makeNotesHiddenBefore) || other.makeNotesHiddenBefore == makeNotesHiddenBefore)&&(identical(other.speakAsCat, speakAsCat) || other.speakAsCat == speakAsCat));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _UserLite&&(identical(other.id, id) || other.id == id)&&(identical(other.name, name) || other.name == name)&&(identical(other.username, username) || other.username == username)&&(identical(other.host, host) || other.host == host)&&(identical(other.avatarUrl, avatarUrl) || other.avatarUrl == avatarUrl)&&(identical(other.avatarBlurhash, avatarBlurhash) || other.avatarBlurhash == avatarBlurhash)&&const DeepCollectionEquality().equals(other._avatarDecorations, _avatarDecorations)&&(identical(other.isBot, isBot) || other.isBot == isBot)&&(identical(other.isCat, isCat) || other.isCat == isCat)&&(identical(other.instance, instance) || other.instance == instance)&&const DeepCollectionEquality().equals(other._emojis, _emojis)&&(identical(other.onlineStatus, onlineStatus) || other.onlineStatus == onlineStatus)&&const DeepCollectionEquality().equals(other._badgeRoles, _badgeRoles)&&(identical(other.requireSigninToViewContents, requireSigninToViewContents) || other.requireSigninToViewContents == requireSigninToViewContents)&&(identical(other.makeNotesFollowersOnlyBefore, makeNotesFollowersOnlyBefore) || other.makeNotesFollowersOnlyBefore == makeNotesFollowersOnlyBefore)&&(identical(other.makeNotesHiddenBefore, makeNotesHiddenBefore) || other.makeNotesHiddenBefore == makeNotesHiddenBefore)&&(identical(other.speakAsCat, speakAsCat) || other.speakAsCat == speakAsCat)&&(identical(other.mandatoryCW, mandatoryCW) || other.mandatoryCW == mandatoryCW));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,name,username,host,avatarUrl,avatarBlurhash,const DeepCollectionEquality().hash(_avatarDecorations),isBot,isCat,instance,const DeepCollectionEquality().hash(_emojis),onlineStatus,const DeepCollectionEquality().hash(_badgeRoles),requireSigninToViewContents,makeNotesFollowersOnlyBefore,makeNotesHiddenBefore,speakAsCat);
+int get hashCode => Object.hash(runtimeType,id,name,username,host,avatarUrl,avatarBlurhash,const DeepCollectionEquality().hash(_avatarDecorations),isBot,isCat,instance,const DeepCollectionEquality().hash(_emojis),onlineStatus,const DeepCollectionEquality().hash(_badgeRoles),requireSigninToViewContents,makeNotesFollowersOnlyBefore,makeNotesHiddenBefore,speakAsCat,mandatoryCW);
 
 @override
 String toString() {
-  return 'UserLite(id: $id, name: $name, username: $username, host: $host, avatarUrl: $avatarUrl, avatarBlurhash: $avatarBlurhash, avatarDecorations: $avatarDecorations, isBot: $isBot, isCat: $isCat, instance: $instance, emojis: $emojis, onlineStatus: $onlineStatus, badgeRoles: $badgeRoles, requireSigninToViewContents: $requireSigninToViewContents, makeNotesFollowersOnlyBefore: $makeNotesFollowersOnlyBefore, makeNotesHiddenBefore: $makeNotesHiddenBefore, speakAsCat: $speakAsCat)';
+  return 'UserLite(id: $id, name: $name, username: $username, host: $host, avatarUrl: $avatarUrl, avatarBlurhash: $avatarBlurhash, avatarDecorations: $avatarDecorations, isBot: $isBot, isCat: $isCat, instance: $instance, emojis: $emojis, onlineStatus: $onlineStatus, badgeRoles: $badgeRoles, requireSigninToViewContents: $requireSigninToViewContents, makeNotesFollowersOnlyBefore: $makeNotesFollowersOnlyBefore, makeNotesHiddenBefore: $makeNotesHiddenBefore, speakAsCat: $speakAsCat, mandatoryCW: $mandatoryCW)';
 }
 
 
@@ -182,7 +184,7 @@ abstract mixin class _$UserLiteCopyWith<$Res> implements $UserLiteCopyWith<$Res>
   factory _$UserLiteCopyWith(_UserLite value, $Res Function(_UserLite) _then) = __$UserLiteCopyWithImpl;
 @override @useResult
 $Res call({
- String id, String? name, String username, String? host,@NullableUriConverter() Uri? avatarUrl, String? avatarBlurhash, List<UserAvatarDecoration> avatarDecorations, bool isBot, bool isCat, UserInstanceInfo? instance,@EmojisConverter() Map<String, String> emojis,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) OnlineStatus? onlineStatus, List<UserBadgeRole> badgeRoles, bool? requireSigninToViewContents,@HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,@HideBeforeConverter() HideBefore? makeNotesHiddenBefore, bool? speakAsCat
+ String id, String? name, String username, String? host,@NullableUriConverter() Uri? avatarUrl, String? avatarBlurhash, List<UserAvatarDecoration> avatarDecorations, bool isBot, bool isCat, UserInstanceInfo? instance,@EmojisConverter() Map<String, String> emojis,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) OnlineStatus? onlineStatus, List<UserBadgeRole> badgeRoles, bool? requireSigninToViewContents,@HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,@HideBeforeConverter() HideBefore? makeNotesHiddenBefore, bool? speakAsCat, String? mandatoryCW
 });
 
 
@@ -199,7 +201,7 @@ class __$UserLiteCopyWithImpl<$Res>
 
 /// Create a copy of UserLite
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? name = freezed,Object? username = null,Object? host = freezed,Object? avatarUrl = freezed,Object? avatarBlurhash = freezed,Object? avatarDecorations = null,Object? isBot = null,Object? isCat = null,Object? instance = freezed,Object? emojis = null,Object? onlineStatus = freezed,Object? badgeRoles = null,Object? requireSigninToViewContents = freezed,Object? makeNotesFollowersOnlyBefore = freezed,Object? makeNotesHiddenBefore = freezed,Object? speakAsCat = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? name = freezed,Object? username = null,Object? host = freezed,Object? avatarUrl = freezed,Object? avatarBlurhash = freezed,Object? avatarDecorations = null,Object? isBot = null,Object? isCat = null,Object? instance = freezed,Object? emojis = null,Object? onlineStatus = freezed,Object? badgeRoles = null,Object? requireSigninToViewContents = freezed,Object? makeNotesFollowersOnlyBefore = freezed,Object? makeNotesHiddenBefore = freezed,Object? speakAsCat = freezed,Object? mandatoryCW = freezed,}) {
   return _then(_UserLite(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
@@ -218,7 +220,8 @@ as List<UserBadgeRole>,requireSigninToViewContents: freezed == requireSigninToVi
 as bool?,makeNotesFollowersOnlyBefore: freezed == makeNotesFollowersOnlyBefore ? _self.makeNotesFollowersOnlyBefore : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
 as HideBefore?,makeNotesHiddenBefore: freezed == makeNotesHiddenBefore ? _self.makeNotesHiddenBefore : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
 as HideBefore?,speakAsCat: freezed == speakAsCat ? _self.speakAsCat : speakAsCat // ignore: cast_nullable_to_non_nullable
-as bool?,
+as bool?,mandatoryCW: freezed == mandatoryCW ? _self.mandatoryCW : mandatoryCW // ignore: cast_nullable_to_non_nullable
+as String?,
   ));
 }
 

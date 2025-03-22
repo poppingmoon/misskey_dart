@@ -77,6 +77,7 @@ _UserLite _$UserLiteFromJson(
       ),
     ),
     speakAsCat: $checkedConvert('speakAsCat', (v) => v as bool?),
+    mandatoryCW: $checkedConvert('mandatoryCW', (v) => v as String?),
   );
   return val;
 });
@@ -106,6 +107,7 @@ Map<String, dynamic> _$UserLiteToJson(_UserLite instance) => <String, dynamic>{
     const HideBeforeConverter().toJson,
   ),
   'speakAsCat': instance.speakAsCat,
+  'mandatoryCW': instance.mandatoryCW,
 };
 
 const _$OnlineStatusEnumMap = {

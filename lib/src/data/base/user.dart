@@ -119,6 +119,7 @@ abstract class UserLite with _$UserLite implements User {
     @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
     @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
     bool? speakAsCat,
+    String? mandatoryCW, // Sharkey
   }) = _UserLite;
 
   factory UserLite.fromJson(Map<String, Object?> json) =>
