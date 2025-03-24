@@ -408,7 +408,7 @@ void main() async {
         );
         await completer.future;
         await (controller.removeChannel(id), listener.cancel()).wait;
-      });
+      }, skip: "removed in Misskey 2025.3.2-beta.10");
 
       test("readAllUnreadMentions", () async {
         final completer = Completer<void>();
@@ -425,7 +425,7 @@ void main() async {
         await client.apiService.post("i/read-all-unread-notes", {});
         await completer.future;
         await (controller.removeChannel(id), listener.cancel()).wait;
-      });
+      }, skip: "removed in Misskey 2025.3.2-beta.10");
 
       test("unreadSpecifiedNote", () async {
         final completer = Completer<String>();
@@ -448,7 +448,7 @@ void main() async {
         );
         await completer.future;
         await (controller.removeChannel(id), listener.cancel()).wait;
-      });
+      }, skip: "removed in Misskey 2025.3.2-beta.10");
 
       test("readAllUnreadSpecifiedNotes", () async {
         final completer = Completer<void>();
@@ -465,7 +465,7 @@ void main() async {
         await client.apiService.post("i/read-all-unread-notes", {});
         await completer.future;
         await (controller.removeChannel(id), listener.cancel()).wait;
-      });
+      }, skip: "removed in Misskey 2025.3.2-beta.10");
 
       test("receiveFollowRequest", () async {
         final completer = Completer<UserLite>();
