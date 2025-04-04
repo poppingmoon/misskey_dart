@@ -95,6 +95,7 @@ export 'src/data/following/requests/following_requests_accept_request.dart';
 export 'src/data/following/requests/following_requests_cancel_request.dart';
 export 'src/data/following/requests/following_requests_list_request.dart';
 export 'src/data/following/requests/following_requests_reject_request.dart';
+export 'src/data/following/requests/following_requests_sent_request.dart';
 export 'src/data/gallery/gallery_featured_request.dart';
 export 'src/data/gallery/gallery_posts_request.dart';
 export 'src/data/gallery/posts/gallery_posts_create_request.dart';

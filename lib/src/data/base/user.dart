@@ -516,18 +516,22 @@ abstract class UserPolicies with _$UserPolicies {
     bool? gtlAvailable,
     bool? ltlAvailable,
     bool? canPublicNote,
+    int? mentionLimit,
     bool? canEditNote,
     bool? canScheduleNote, // MisskeyIO
     int? scheduleNoteLimit, // MisskeyIO
     int? scheduleNoteMaxDays, // MisskeyIO
     bool? canInvite,
-    bool? canManageCustomEmojis,
-    bool? canHideAds,
     int? inviteLimit,
     int? inviteLimitCycle,
+    int? inviteExpirationTime,
+    bool? canManageCustomEmojis,
     bool? canSearchNotes,
     bool? canUseTranslator,
+    bool? canHideAds,
     int? driveCapacityMb,
+    bool? alwaysMarkNsfw,
+    bool? canUpdateBioMedia,
     int? pinLimit,
     int? antennaLimit,
     int? wordMuteLimit,
@@ -538,6 +542,12 @@ abstract class UserPolicies with _$UserPolicies {
     int? userEachUserListsLimit,
     int? rateLimitFactor,
     int? avatarDecorationLimit,
+    bool? canImportAntennas,
+    bool? canImportBlocking,
+    bool? canImportFollowing,
+    bool? canImportMuting,
+    bool? canImportUserLists,
+    bool? canChat,
     int? mutualLinkSectionLimit, // MisskeyIO
     int? mutualLinkLimit, // MisskeyIO
     int? scheduleNoteMax, // CherryPick
