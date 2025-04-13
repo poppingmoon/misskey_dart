@@ -86,7 +86,9 @@ enum Permission {
   writeClipFavorite("write:clip-favorite"),
   readClipFavorite("read:clip-favorite"),
   readFederation("read:federation"),
-  writeReportAbuse("write:report-abuse");
+  writeReportAbuse("write:report-abuse"),
+  writeChat("write:chat"),
+  readChat("read:chat");
 
   final String value;
   const Permission(this.value);

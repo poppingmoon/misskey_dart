@@ -62,6 +62,7 @@ const _$NotificationTypeEnumMap = {
   NotificationType.receiveFollowRequest: 'receiveFollowRequest',
   NotificationType.followRequestAccepted: 'followRequestAccepted',
   NotificationType.roleAssigned: 'roleAssigned',
+  NotificationType.chatRoomInvitationReceived: 'chatRoomInvitationReceived',
   NotificationType.achievementEarned: 'achievementEarned',
   NotificationType.exportCompleted: 'exportCompleted',
   NotificationType.login: 'login',

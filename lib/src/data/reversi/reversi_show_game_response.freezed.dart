@@ -49,7 +49,7 @@ abstract mixin class $ReversiShowGameResponseCopyWith<$Res>  {
   factory $ReversiShowGameResponseCopyWith(ReversiShowGameResponse value, $Res Function(ReversiShowGameResponse) _then) = _$ReversiShowGameResponseCopyWithImpl;
 @useResult
 $Res call({
- String id, DateTime createdAt,@NullableDateTimeConverter() DateTime? startedAt,@NullableDateTimeConverter() DateTime? endedAt, bool isStarted, bool isEnded, Object? form1, Object? form2, bool user1Ready, bool user2Ready, String user1Id, String user2Id, UserLite user1, UserLite user2, String? winnerId, String? surrenderedUserId, String? timeoutUserId, int? black, String bw, bool noIrregularRules, bool isLlotheo, bool canPutEverywhere, bool loopedBoard, int timeLimitForEachTurn, List<dynamic> logs, List<String> map
+ String id, DateTime createdAt,@NullableDateTimeConverter() DateTime? startedAt,@NullableDateTimeConverter() DateTime? endedAt, bool isStarted, bool isEnded, Object? form1, Object? form2, bool user1Ready, bool user2Ready, String user1Id, String user2Id, UserLite user1, UserLite user2, String? winnerId, String? surrenderedUserId, String? timeoutUserId, int? black, String bw, bool noIrregularRules, bool isLlotheo, bool canPutEverywhere, bool loopedBoard, int timeLimitForEachTurn, List logs, List<String> map
 });
 
 
@@ -90,8 +90,8 @@ as bool,isLlotheo: null == isLlotheo ? _self.isLlotheo : isLlotheo // ignore: ca
 as bool,canPutEverywhere: null == canPutEverywhere ? _self.canPutEverywhere : canPutEverywhere // ignore: cast_nullable_to_non_nullable
 as bool,loopedBoard: null == loopedBoard ? _self.loopedBoard : loopedBoard // ignore: cast_nullable_to_non_nullable
 as bool,timeLimitForEachTurn: null == timeLimitForEachTurn ? _self.timeLimitForEachTurn : timeLimitForEachTurn // ignore: cast_nullable_to_non_nullable
-as int,logs: null == logs ? _self.logs! : logs // ignore: cast_nullable_to_non_nullable
-as List<dynamic>,map: null == map ? _self.map : map // ignore: cast_nullable_to_non_nullable
+as int,logs: null == logs ? _self.logs : logs // ignore: cast_nullable_to_non_nullable
+as List,map: null == map ? _self.map : map // ignore: cast_nullable_to_non_nullable
 as List<String>,
   ));
 }
@@ -121,7 +121,7 @@ $UserLiteCopyWith<$Res> get user2 {
 @JsonSerializable()
 
 class _ReversiShowGameResponse implements ReversiShowGameResponse {
-  const _ReversiShowGameResponse({required this.id, required this.createdAt, @NullableDateTimeConverter() this.startedAt, @NullableDateTimeConverter() this.endedAt, required this.isStarted, required this.isEnded, this.form1, this.form2, required this.user1Ready, required this.user2Ready, required this.user1Id, required this.user2Id, required this.user1, required this.user2, this.winnerId, this.surrenderedUserId, this.timeoutUserId, this.black, required this.bw, required this.noIrregularRules, required this.isLlotheo, required this.canPutEverywhere, required this.loopedBoard, required this.timeLimitForEachTurn, required final  List<dynamic> logs, required final  List<String> map}): _logs = logs,_map = map;
+  const _ReversiShowGameResponse({required this.id, required this.createdAt, @NullableDateTimeConverter() this.startedAt, @NullableDateTimeConverter() this.endedAt, required this.isStarted, required this.isEnded, this.form1, this.form2, required this.user1Ready, required this.user2Ready, required this.user1Id, required this.user2Id, required this.user1, required this.user2, this.winnerId, this.surrenderedUserId, this.timeoutUserId, this.black, required this.bw, required this.noIrregularRules, required this.isLlotheo, required this.canPutEverywhere, required this.loopedBoard, required this.timeLimitForEachTurn, required final  List logs, required final  List<String> map}): _logs = logs,_map = map;
   factory _ReversiShowGameResponse.fromJson(Map<String, dynamic> json) => _$ReversiShowGameResponseFromJson(json);
 
 @override final  String id;
@@ -148,8 +148,8 @@ class _ReversiShowGameResponse implements ReversiShowGameResponse {
 @override final  bool canPutEverywhere;
 @override final  bool loopedBoard;
 @override final  int timeLimitForEachTurn;
- final  List<dynamic> _logs;
-@override List<dynamic> get logs {
+ final  List _logs;
+@override List get logs {
   if (_logs is EqualUnmodifiableListView) return _logs;
   // ignore: implicit_dynamic_type
   return EqualUnmodifiableListView(_logs);
@@ -196,7 +196,7 @@ abstract mixin class _$ReversiShowGameResponseCopyWith<$Res> implements $Reversi
   factory _$ReversiShowGameResponseCopyWith(_ReversiShowGameResponse value, $Res Function(_ReversiShowGameResponse) _then) = __$ReversiShowGameResponseCopyWithImpl;
 @override @useResult
 $Res call({
- String id, DateTime createdAt,@NullableDateTimeConverter() DateTime? startedAt,@NullableDateTimeConverter() DateTime? endedAt, bool isStarted, bool isEnded, Object? form1, Object? form2, bool user1Ready, bool user2Ready, String user1Id, String user2Id, UserLite user1, UserLite user2, String? winnerId, String? surrenderedUserId, String? timeoutUserId, int? black, String bw, bool noIrregularRules, bool isLlotheo, bool canPutEverywhere, bool loopedBoard, int timeLimitForEachTurn, List<dynamic> logs, List<String> map
+ String id, DateTime createdAt,@NullableDateTimeConverter() DateTime? startedAt,@NullableDateTimeConverter() DateTime? endedAt, bool isStarted, bool isEnded, Object? form1, Object? form2, bool user1Ready, bool user2Ready, String user1Id, String user2Id, UserLite user1, UserLite user2, String? winnerId, String? surrenderedUserId, String? timeoutUserId, int? black, String bw, bool noIrregularRules, bool isLlotheo, bool canPutEverywhere, bool loopedBoard, int timeLimitForEachTurn, List logs, List<String> map
 });
 
 
@@ -238,7 +238,7 @@ as bool,canPutEverywhere: null == canPutEverywhere ? _self.canPutEverywhere : ca
 as bool,loopedBoard: null == loopedBoard ? _self.loopedBoard : loopedBoard // ignore: cast_nullable_to_non_nullable
 as bool,timeLimitForEachTurn: null == timeLimitForEachTurn ? _self.timeLimitForEachTurn : timeLimitForEachTurn // ignore: cast_nullable_to_non_nullable
 as int,logs: null == logs ? _self._logs : logs // ignore: cast_nullable_to_non_nullable
-as List<dynamic>,map: null == map ? _self._map : map // ignore: cast_nullable_to_non_nullable
+as List,map: null == map ? _self._map : map // ignore: cast_nullable_to_non_nullable
 as List<String>,
   ));
 }

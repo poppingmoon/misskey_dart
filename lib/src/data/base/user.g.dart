@@ -324,6 +324,15 @@ _UserDetailedNotMe _$UserDetailedNotMeFromJson(
         unknownValue: JsonKey.nullForUndefinedEnumValue,
       ),
     ),
+    chatScope: $checkedConvert(
+      'chatScope',
+      (v) => $enumDecodeNullable(
+        _$ChatScopeEnumMap,
+        v,
+        unknownValue: JsonKey.nullForUndefinedEnumValue,
+      ),
+    ),
+    canChat: $checkedConvert('canChat', (v) => v as bool?),
     twoFactorEnabled: $checkedConvert('twoFactorEnabled', (v) => v as bool?),
     usePasswordLessLogin: $checkedConvert(
       'usePasswordLessLogin',
@@ -403,6 +412,8 @@ Map<String, dynamic> _$UserDetailedNotMeToJson(
   'ffVisibility': _$FFVisibilityEnumMap[instance.ffVisibility],
   'followersVisibility': _$FFVisibilityEnumMap[instance.followersVisibility],
   'followingVisibility': _$FFVisibilityEnumMap[instance.followingVisibility],
+  'chatScope': _$ChatScopeEnumMap[instance.chatScope],
+  'canChat': instance.canChat,
   'twoFactorEnabled': instance.twoFactorEnabled,
   'usePasswordLessLogin': instance.usePasswordLessLogin,
   'securityKeys': instance.securityKeys,
@@ -415,6 +426,14 @@ const _$FFVisibilityEnumMap = {
   FFVisibility.public: 'public',
   FFVisibility.followers: 'followers',
   FFVisibility.private: 'private',
+};
+
+const _$ChatScopeEnumMap = {
+  ChatScope.everyone: 'everyone',
+  ChatScope.followers: 'followers',
+  ChatScope.following: 'following',
+  ChatScope.mutual: 'mutual',
+  ChatScope.none: 'none',
 };
 
 _UserDetailedNotMeWithRelations _$UserDetailedNotMeWithRelationsFromJson(
@@ -614,6 +633,15 @@ _UserDetailedNotMeWithRelations _$UserDetailedNotMeWithRelationsFromJson(
         unknownValue: JsonKey.nullForUndefinedEnumValue,
       ),
     ),
+    chatScope: $checkedConvert(
+      'chatScope',
+      (v) => $enumDecodeNullable(
+        _$ChatScopeEnumMap,
+        v,
+        unknownValue: JsonKey.nullForUndefinedEnumValue,
+      ),
+    ),
+    canChat: $checkedConvert('canChat', (v) => v as bool?),
     twoFactorEnabled: $checkedConvert('twoFactorEnabled', (v) => v as bool?),
     usePasswordLessLogin: $checkedConvert(
       'usePasswordLessLogin',
@@ -713,6 +741,8 @@ Map<String, dynamic> _$UserDetailedNotMeWithRelationsToJson(
   'ffVisibility': _$FFVisibilityEnumMap[instance.ffVisibility],
   'followersVisibility': _$FFVisibilityEnumMap[instance.followersVisibility],
   'followingVisibility': _$FFVisibilityEnumMap[instance.followingVisibility],
+  'chatScope': _$ChatScopeEnumMap[instance.chatScope],
+  'canChat': instance.canChat,
   'twoFactorEnabled': instance.twoFactorEnabled,
   'usePasswordLessLogin': instance.usePasswordLessLogin,
   'securityKeys': instance.securityKeys,
@@ -931,6 +961,15 @@ _MeDetailed _$MeDetailedFromJson(
         unknownValue: JsonKey.nullForUndefinedEnumValue,
       ),
     ),
+    chatScope: $checkedConvert(
+      'chatScope',
+      (v) => $enumDecodeNullable(
+        _$ChatScopeEnumMap,
+        v,
+        unknownValue: JsonKey.nullForUndefinedEnumValue,
+      ),
+    ),
+    canChat: $checkedConvert('canChat', (v) => v as bool?),
     twoFactorEnabled: $checkedConvert('twoFactorEnabled', (v) => v as bool?),
     usePasswordLessLogin: $checkedConvert(
       'usePasswordLessLogin',
@@ -998,6 +1037,10 @@ _MeDetailed _$MeDetailedFromJson(
     hasUnreadChannel: $checkedConvert(
       'hasUnreadChannel',
       (v) => v as bool? ?? false,
+    ),
+    hasUnreadChatMessages: $checkedConvert(
+      'hasUnreadChatMessages',
+      (v) => v as bool?,
     ),
     hasUnreadNotification: $checkedConvert(
       'hasUnreadNotification',
@@ -1135,6 +1178,8 @@ Map<String, dynamic> _$MeDetailedToJson(
   'ffVisibility': _$FFVisibilityEnumMap[instance.ffVisibility],
   'followersVisibility': _$FFVisibilityEnumMap[instance.followersVisibility],
   'followingVisibility': _$FFVisibilityEnumMap[instance.followingVisibility],
+  'chatScope': _$ChatScopeEnumMap[instance.chatScope],
+  'canChat': instance.canChat,
   'twoFactorEnabled': instance.twoFactorEnabled,
   'usePasswordLessLogin': instance.usePasswordLessLogin,
   'securityKeys': instance.securityKeys,
@@ -1164,6 +1209,7 @@ Map<String, dynamic> _$MeDetailedToJson(
   'hasUnreadAnnouncement': instance.hasUnreadAnnouncement,
   'hasUnreadAntenna': instance.hasUnreadAntenna,
   'hasUnreadChannel': instance.hasUnreadChannel,
+  'hasUnreadChatMessages': instance.hasUnreadChatMessages,
   'hasUnreadNotification': instance.hasUnreadNotification,
   'hasPendingReceivedFollowRequest': instance.hasPendingReceivedFollowRequest,
   'unreadNotificationsCount': instance.unreadNotificationsCount,
@@ -1389,7 +1435,14 @@ _UserPolicies _$UserPoliciesFromJson(
       'canImportUserLists',
       (v) => v as bool?,
     ),
-    canChat: $checkedConvert('canChat', (v) => v as bool?),
+    chatAvailability: $checkedConvert(
+      'chatAvailability',
+      (v) => $enumDecodeNullable(
+        _$ChatAvailabilityEnumMap,
+        v,
+        unknownValue: JsonKey.nullForUndefinedEnumValue,
+      ),
+    ),
     mutualLinkSectionLimit: $checkedConvert(
       'mutualLinkSectionLimit',
       (v) => (v as num?)?.toInt(),
@@ -1442,11 +1495,17 @@ Map<String, dynamic> _$UserPoliciesToJson(_UserPolicies instance) =>
       'canImportFollowing': instance.canImportFollowing,
       'canImportMuting': instance.canImportMuting,
       'canImportUserLists': instance.canImportUserLists,
-      'canChat': instance.canChat,
+      'chatAvailability': _$ChatAvailabilityEnumMap[instance.chatAvailability],
       'mutualLinkSectionLimit': instance.mutualLinkSectionLimit,
       'mutualLinkLimit': instance.mutualLinkLimit,
       'scheduleNoteMax': instance.scheduleNoteMax,
     };
+
+const _$ChatAvailabilityEnumMap = {
+  ChatAvailability.available: 'available',
+  ChatAvailability.readOnly: 'readOnly',
+  ChatAvailability.unavailable: 'unavailable',
+};
 
 _UserField _$UserFieldFromJson(Map<String, dynamic> json) =>
     $checkedCreate('_UserField', json, ($checkedConvert) {
@@ -1600,6 +1659,13 @@ _NotificationRecieveConfigs _$NotificationRecieveConfigsFromJson(
               ? null
               : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
     ),
+    chatRoomInvitationReceived: $checkedConvert(
+      'chatRoomInvitationReceived',
+      (v) =>
+          v == null
+              ? null
+              : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
+    ),
     achievementEarned: $checkedConvert(
       'achievementEarned',
       (v) =>
@@ -1639,6 +1705,7 @@ Map<String, dynamic> _$NotificationRecieveConfigsToJson(
   'receiveFollowRequest': instance.receiveFollowRequest?.toJson(),
   'followRequestAccepted': instance.followRequestAccepted?.toJson(),
   'roleAssigned': instance.roleAssigned?.toJson(),
+  'chatRoomInvitationReceived': instance.chatRoomInvitationReceived?.toJson(),
   'achievementEarned': instance.achievementEarned?.toJson(),
   'app': instance.app?.toJson(),
   'test': instance.test?.toJson(),

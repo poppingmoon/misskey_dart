@@ -741,6 +741,27 @@ Map<String, dynamic> _$UnreadAntennaChannelEventToJson(
   'type': instance.$type,
 };
 
+NewChatMessageEvent _$NewChatMessageEventFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('NewChatMessageEvent', json, ($checkedConvert) {
+      final val = NewChatMessageEvent(
+        id: $checkedConvert('id', (v) => v as String),
+        body: $checkedConvert(
+          'body',
+          (v) => ChatMessage.fromJson(v as Map<String, dynamic>),
+        ),
+        $type: $checkedConvert('type', (v) => v as String?),
+      );
+      return val;
+    }, fieldKeyMap: const {r'$type': 'type'});
+
+Map<String, dynamic> _$NewChatMessageEventToJson(
+  NewChatMessageEvent instance,
+) => <String, dynamic>{
+  'id': instance.id,
+  'body': instance.body.toJson(),
+  'type': instance.$type,
+};
+
 ReadAllAnnouncementsChannelEvent _$ReadAllAnnouncementsChannelEventFromJson(
   Map<String, dynamic> json,
 ) =>
@@ -895,6 +916,91 @@ AnnouncementCreatedChannelEvent _$AnnouncementCreatedChannelEventFromJson(
 
 Map<String, dynamic> _$AnnouncementCreatedChannelEventToJson(
   AnnouncementCreatedChannelEvent instance,
+) => <String, dynamic>{
+  'id': instance.id,
+  'body': instance.body.toJson(),
+  'type': instance.$type,
+};
+
+ChatMessageChannelEvent _$ChatMessageChannelEventFromJson(
+  Map<String, dynamic> json,
+) => $checkedCreate('ChatMessageChannelEvent', json, ($checkedConvert) {
+  final val = ChatMessageChannelEvent(
+    id: $checkedConvert('id', (v) => v as String),
+    body: $checkedConvert(
+      'body',
+      (v) => ChatMessage.fromJson(v as Map<String, dynamic>),
+    ),
+    $type: $checkedConvert('type', (v) => v as String?),
+  );
+  return val;
+}, fieldKeyMap: const {r'$type': 'type'});
+
+Map<String, dynamic> _$ChatMessageChannelEventToJson(
+  ChatMessageChannelEvent instance,
+) => <String, dynamic>{
+  'id': instance.id,
+  'body': instance.body.toJson(),
+  'type': instance.$type,
+};
+
+ChatDeletedChannelEvent _$ChatDeletedChannelEventFromJson(
+  Map<String, dynamic> json,
+) => $checkedCreate('ChatDeletedChannelEvent', json, ($checkedConvert) {
+  final val = ChatDeletedChannelEvent(
+    id: $checkedConvert('id', (v) => v as String),
+    body: $checkedConvert('body', (v) => v as String),
+    $type: $checkedConvert('type', (v) => v as String?),
+  );
+  return val;
+}, fieldKeyMap: const {r'$type': 'type'});
+
+Map<String, dynamic> _$ChatDeletedChannelEventToJson(
+  ChatDeletedChannelEvent instance,
+) => <String, dynamic>{
+  'id': instance.id,
+  'body': instance.body,
+  'type': instance.$type,
+};
+
+ChatReactChannelEvent _$ChatReactChannelEventFromJson(
+  Map<String, dynamic> json,
+) => $checkedCreate('ChatReactChannelEvent', json, ($checkedConvert) {
+  final val = ChatReactChannelEvent(
+    id: $checkedConvert('id', (v) => v as String),
+    body: $checkedConvert(
+      'body',
+      (v) => ChatReact.fromJson(v as Map<String, dynamic>),
+    ),
+    $type: $checkedConvert('type', (v) => v as String?),
+  );
+  return val;
+}, fieldKeyMap: const {r'$type': 'type'});
+
+Map<String, dynamic> _$ChatReactChannelEventToJson(
+  ChatReactChannelEvent instance,
+) => <String, dynamic>{
+  'id': instance.id,
+  'body': instance.body.toJson(),
+  'type': instance.$type,
+};
+
+ChatUnreactChannelEvent _$ChatUnreactChannelEventFromJson(
+  Map<String, dynamic> json,
+) => $checkedCreate('ChatUnreactChannelEvent', json, ($checkedConvert) {
+  final val = ChatUnreactChannelEvent(
+    id: $checkedConvert('id', (v) => v as String),
+    body: $checkedConvert(
+      'body',
+      (v) => ChatReact.fromJson(v as Map<String, dynamic>),
+    ),
+    $type: $checkedConvert('type', (v) => v as String?),
+  );
+  return val;
+}, fieldKeyMap: const {r'$type': 'type'});
+
+Map<String, dynamic> _$ChatUnreactChannelEventToJson(
+  ChatUnreactChannelEvent instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'body': instance.body.toJson(),

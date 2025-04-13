@@ -42,6 +42,7 @@ abstract class IUpdateRequest with _$IUpdateRequest {
     FFVisibility? ffVisibility,
     FFVisibility? followingVisibility,
     FFVisibility? followersVisibility,
+    ChatScope? chatScope,
     String? pinnedPageId,
     List<String>? mutingNotificationTypes,
     @MuteWordsConverter() List<MuteWord>? mutedWords,

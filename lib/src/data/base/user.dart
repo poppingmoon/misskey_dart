@@ -74,6 +74,8 @@ abstract class UserDetailed implements User {
   FFVisibility? get ffVisibility;
   FFVisibility? get followersVisibility;
   FFVisibility? get followingVisibility;
+  ChatScope? get chatScope;
+  bool? get canChat;
   bool? get twoFactorEnabled;
   bool? get usePasswordLessLogin;
   bool? get securityKeys;
@@ -190,6 +192,10 @@ abstract class UserDetailedNotMe
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     FFVisibility? followingVisibility,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    ChatScope? chatScope,
+    bool? canChat,
     // Removed in Misskey 2024.10.0
     bool? twoFactorEnabled,
     // Added in Misskey 11.25.0, Removed in Misskey 2024.10.0
@@ -269,6 +275,10 @@ abstract class UserDetailedNotMeWithRelations
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     FFVisibility? followingVisibility,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    ChatScope? chatScope,
+    bool? canChat,
     // Removed in Misskey 2024.10.0
     bool? twoFactorEnabled,
     // Added in Misskey 11.25.0, Removed in Misskey 2024.10.0
@@ -358,6 +368,10 @@ abstract class MeDetailed with _$MeDetailed implements UserDetailed {
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     FFVisibility? followingVisibility,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    ChatScope? chatScope,
+    bool? canChat,
     bool? twoFactorEnabled,
     // Added in Misskey 11.25.0
     // Removed in Misskey 2024.10.0
@@ -402,6 +416,7 @@ abstract class MeDetailed with _$MeDetailed implements UserDetailed {
     @Default(false) bool hasUnreadAntenna,
     // Added in Misskey 12.47.0
     @Default(false) bool hasUnreadChannel,
+    bool? hasUnreadChatMessages,
     @Default(false) bool hasUnreadNotification,
     // Added in Misskey 12.11.0
     @Default(false) bool hasPendingReceivedFollowRequest,
@@ -547,7 +562,9 @@ abstract class UserPolicies with _$UserPolicies {
     bool? canImportFollowing,
     bool? canImportMuting,
     bool? canImportUserLists,
-    bool? canChat,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    ChatAvailability? chatAvailability,
     int? mutualLinkSectionLimit, // MisskeyIO
     int? mutualLinkLimit, // MisskeyIO
     int? scheduleNoteMax, // CherryPick
@@ -591,6 +608,8 @@ abstract class MutualLink with _$MutualLink {
       _$MutualLinkFromJson(json);
 }
 
+enum ChatScope { everyone, followers, following, mutual, none }
+
 enum Notify { normal, none }
 
 enum TwoFactorBackupCodesStock { full, partial, none }
@@ -617,6 +636,7 @@ abstract class NotificationRecieveConfigs with _$NotificationRecieveConfigs {
     NotificationRecieveConfig? receiveFollowRequest,
     NotificationRecieveConfig? followRequestAccepted,
     NotificationRecieveConfig? roleAssigned,
+    NotificationRecieveConfig? chatRoomInvitationReceived,
     NotificationRecieveConfig? achievementEarned,
     NotificationRecieveConfig? app,
     NotificationRecieveConfig? test,
@@ -645,3 +665,5 @@ enum NotificationRecieveConfigType {
   list,
   never,
 }
+
+enum ChatAvailability { available, readOnly, unavailable }

@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:dio/dio.dart';
 import 'package:misskey_dart/misskey_dart.dart';
+import 'package:misskey_dart/src/misskey_chat.dart';
 import 'package:misskey_dart/src/services/api_service.dart';
 import 'package:misskey_dart/src/services/streaming_service_impl.dart';
 
@@ -33,6 +34,7 @@ class Misskey {
   late final MisskeyReversi reversi;
   late final MisskeyBubbleGame bubbleGame;
   late final MisskeySw sw;
+  late final MisskeyChat chat;
 
   Misskey({
     this.token,
@@ -75,6 +77,7 @@ class Misskey {
     bubbleGame = MisskeyBubbleGame(apiService: apiService);
     reversi = MisskeyReversi(apiService: apiService);
     sw = MisskeySw(apiService: apiService);
+    chat = MisskeyChat(apiService: apiService);
   }
 
   /// サーバーからのお知らせを取得します。

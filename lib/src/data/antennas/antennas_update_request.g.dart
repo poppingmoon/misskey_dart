@@ -43,8 +43,8 @@ _AntennasUpdateRequest _$AntennasUpdateRequestFromJson(
     notify: $checkedConvert('notify', (v) => v as bool?),
     localOnly: $checkedConvert('localOnly', (v) => v as bool?),
     excludeBots: $checkedConvert('excludeBots', (v) => v as bool?),
-    hideNotesInSensitiveChannel: $checkedConvert(
-      'hideNotesInSensitiveChannel',
+    excludeNotesInSensitiveChannel: $checkedConvert(
+      'excludeNotesInSensitiveChannel',
       (v) => v as bool?,
     ),
   );
@@ -68,7 +68,7 @@ Map<String, dynamic> _$AntennasUpdateRequestToJson(
   'notify': instance.notify,
   'localOnly': instance.localOnly,
   'excludeBots': instance.excludeBots,
-  'hideNotesInSensitiveChannel': instance.hideNotesInSensitiveChannel,
+  'excludeNotesInSensitiveChannel': instance.excludeNotesInSensitiveChannel,
 };
 
 const _$AntennaSourceEnumMap = {

@@ -35,6 +35,10 @@ _INotificationsResponse _$INotificationsResponseFromJson(
       (v) => const NullableUriConverter().fromJson(v as String?),
     ),
     appAccessTokenId: $checkedConvert('appAccessTokenId', (v) => v as String?),
+    invitation: $checkedConvert(
+      'invitation',
+      (v) => v == null ? null : ChatJoining.fromJson(v as Map<String, dynamic>),
+    ),
     userId: $checkedConvert('userId', (v) => v as String?),
     user: $checkedConvert(
       'user',
@@ -107,6 +111,7 @@ Map<String, dynamic> _$INotificationsResponseToJson(
   'header': instance.header,
   'icon': const NullableUriConverter().toJson(instance.icon),
   'appAccessTokenId': instance.appAccessTokenId,
+  'invitation': instance.invitation?.toJson(),
   'userId': instance.userId,
   'user': instance.user?.toJson(),
   'note': instance.note?.toJson(),
@@ -134,6 +139,7 @@ const _$NotificationTypeEnumMap = {
   NotificationType.receiveFollowRequest: 'receiveFollowRequest',
   NotificationType.followRequestAccepted: 'followRequestAccepted',
   NotificationType.roleAssigned: 'roleAssigned',
+  NotificationType.chatRoomInvitationReceived: 'chatRoomInvitationReceived',
   NotificationType.achievementEarned: 'achievementEarned',
   NotificationType.exportCompleted: 'exportCompleted',
   NotificationType.login: 'login',

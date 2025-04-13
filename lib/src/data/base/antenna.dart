@@ -26,7 +26,7 @@ abstract class Antenna with _$Antenna {
     bool? hasUnreadNote,
     bool? localOnly,
     bool? excludeBots,
-    bool? hideNotesInSensitiveChannel,
+    bool? excludeNotesInSensitiveChannel,
   }) = _Antenna;
 
   factory Antenna.fromJson(Map<String, dynamic> json) =>

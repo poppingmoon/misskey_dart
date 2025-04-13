@@ -23,6 +23,7 @@ abstract class INotificationsResponse with _$INotificationsResponse {
     String? header,
     @NullableUriConverter() Uri? icon,
     String? appAccessTokenId,
+    ChatJoining? invitation,
     String? userId,
     UserLite? user,
     Note? note,

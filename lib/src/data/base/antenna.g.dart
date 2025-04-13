@@ -52,8 +52,8 @@ _Antenna _$AntennaFromJson(
     hasUnreadNote: $checkedConvert('hasUnreadNote', (v) => v as bool?),
     localOnly: $checkedConvert('localOnly', (v) => v as bool?),
     excludeBots: $checkedConvert('excludeBots', (v) => v as bool?),
-    hideNotesInSensitiveChannel: $checkedConvert(
-      'hideNotesInSensitiveChannel',
+    excludeNotesInSensitiveChannel: $checkedConvert(
+      'excludeNotesInSensitiveChannel',
       (v) => v as bool?,
     ),
   );
@@ -77,7 +77,7 @@ Map<String, dynamic> _$AntennaToJson(_Antenna instance) => <String, dynamic>{
   'hasUnreadNote': instance.hasUnreadNote,
   'localOnly': instance.localOnly,
   'excludeBots': instance.excludeBots,
-  'hideNotesInSensitiveChannel': instance.hideNotesInSensitiveChannel,
+  'excludeNotesInSensitiveChannel': instance.excludeNotesInSensitiveChannel,
 };
 
 const _$AntennaSourceEnumMap = {

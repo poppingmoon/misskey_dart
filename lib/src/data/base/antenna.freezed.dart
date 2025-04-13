@@ -17,7 +17,7 @@ T _$identity<T>(T value) => value;
 mixin _$Antenna {
 
  String get id;@DateTimeConverter() DateTime get createdAt; String get name; List<List<String>> get keywords; List<List<String>> get excludeKeywords;// ignore: invalid_annotation_target
-@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) AntennaSource? get src; String? get userListId; List<String> get users; bool? get caseSensitive; bool? get notify; bool? get withReplies; bool? get withFile; bool? get isActive; bool? get hasUnreadNote; bool? get localOnly; bool? get excludeBots; bool? get hideNotesInSensitiveChannel;
+@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) AntennaSource? get src; String? get userListId; List<String> get users; bool? get caseSensitive; bool? get notify; bool? get withReplies; bool? get withFile; bool? get isActive; bool? get hasUnreadNote; bool? get localOnly; bool? get excludeBots; bool? get excludeNotesInSensitiveChannel;
 /// Create a copy of Antenna
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -30,16 +30,16 @@ $AntennaCopyWith<Antenna> get copyWith => _$AntennaCopyWithImpl<Antenna>(this as
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Antenna&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.name, name) || other.name == name)&&const DeepCollectionEquality().equals(other.keywords, keywords)&&const DeepCollectionEquality().equals(other.excludeKeywords, excludeKeywords)&&(identical(other.src, src) || other.src == src)&&(identical(other.userListId, userListId) || other.userListId == userListId)&&const DeepCollectionEquality().equals(other.users, users)&&(identical(other.caseSensitive, caseSensitive) || other.caseSensitive == caseSensitive)&&(identical(other.notify, notify) || other.notify == notify)&&(identical(other.withReplies, withReplies) || other.withReplies == withReplies)&&(identical(other.withFile, withFile) || other.withFile == withFile)&&(identical(other.isActive, isActive) || other.isActive == isActive)&&(identical(other.hasUnreadNote, hasUnreadNote) || other.hasUnreadNote == hasUnreadNote)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&(identical(other.excludeBots, excludeBots) || other.excludeBots == excludeBots)&&(identical(other.hideNotesInSensitiveChannel, hideNotesInSensitiveChannel) || other.hideNotesInSensitiveChannel == hideNotesInSensitiveChannel));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Antenna&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.name, name) || other.name == name)&&const DeepCollectionEquality().equals(other.keywords, keywords)&&const DeepCollectionEquality().equals(other.excludeKeywords, excludeKeywords)&&(identical(other.src, src) || other.src == src)&&(identical(other.userListId, userListId) || other.userListId == userListId)&&const DeepCollectionEquality().equals(other.users, users)&&(identical(other.caseSensitive, caseSensitive) || other.caseSensitive == caseSensitive)&&(identical(other.notify, notify) || other.notify == notify)&&(identical(other.withReplies, withReplies) || other.withReplies == withReplies)&&(identical(other.withFile, withFile) || other.withFile == withFile)&&(identical(other.isActive, isActive) || other.isActive == isActive)&&(identical(other.hasUnreadNote, hasUnreadNote) || other.hasUnreadNote == hasUnreadNote)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&(identical(other.excludeBots, excludeBots) || other.excludeBots == excludeBots)&&(identical(other.excludeNotesInSensitiveChannel, excludeNotesInSensitiveChannel) || other.excludeNotesInSensitiveChannel == excludeNotesInSensitiveChannel));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,createdAt,name,const DeepCollectionEquality().hash(keywords),const DeepCollectionEquality().hash(excludeKeywords),src,userListId,const DeepCollectionEquality().hash(users),caseSensitive,notify,withReplies,withFile,isActive,hasUnreadNote,localOnly,excludeBots,hideNotesInSensitiveChannel);
+int get hashCode => Object.hash(runtimeType,id,createdAt,name,const DeepCollectionEquality().hash(keywords),const DeepCollectionEquality().hash(excludeKeywords),src,userListId,const DeepCollectionEquality().hash(users),caseSensitive,notify,withReplies,withFile,isActive,hasUnreadNote,localOnly,excludeBots,excludeNotesInSensitiveChannel);
 
 @override
 String toString() {
-  return 'Antenna(id: $id, createdAt: $createdAt, name: $name, keywords: $keywords, excludeKeywords: $excludeKeywords, src: $src, userListId: $userListId, users: $users, caseSensitive: $caseSensitive, notify: $notify, withReplies: $withReplies, withFile: $withFile, isActive: $isActive, hasUnreadNote: $hasUnreadNote, localOnly: $localOnly, excludeBots: $excludeBots, hideNotesInSensitiveChannel: $hideNotesInSensitiveChannel)';
+  return 'Antenna(id: $id, createdAt: $createdAt, name: $name, keywords: $keywords, excludeKeywords: $excludeKeywords, src: $src, userListId: $userListId, users: $users, caseSensitive: $caseSensitive, notify: $notify, withReplies: $withReplies, withFile: $withFile, isActive: $isActive, hasUnreadNote: $hasUnreadNote, localOnly: $localOnly, excludeBots: $excludeBots, excludeNotesInSensitiveChannel: $excludeNotesInSensitiveChannel)';
 }
 
 
@@ -50,7 +50,7 @@ abstract mixin class $AntennaCopyWith<$Res>  {
   factory $AntennaCopyWith(Antenna value, $Res Function(Antenna) _then) = _$AntennaCopyWithImpl;
 @useResult
 $Res call({
- String id,@DateTimeConverter() DateTime createdAt, String name, List<List<String>> keywords, List<List<String>> excludeKeywords,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) AntennaSource? src, String? userListId, List<String> users, bool? caseSensitive, bool? notify, bool? withReplies, bool? withFile, bool? isActive, bool? hasUnreadNote, bool? localOnly, bool? excludeBots, bool? hideNotesInSensitiveChannel
+ String id,@DateTimeConverter() DateTime createdAt, String name, List<List<String>> keywords, List<List<String>> excludeKeywords,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) AntennaSource? src, String? userListId, List<String> users, bool? caseSensitive, bool? notify, bool? withReplies, bool? withFile, bool? isActive, bool? hasUnreadNote, bool? localOnly, bool? excludeBots, bool? excludeNotesInSensitiveChannel
 });
 
 
@@ -67,7 +67,7 @@ class _$AntennaCopyWithImpl<$Res>
 
 /// Create a copy of Antenna
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? createdAt = null,Object? name = null,Object? keywords = null,Object? excludeKeywords = null,Object? src = freezed,Object? userListId = freezed,Object? users = null,Object? caseSensitive = freezed,Object? notify = freezed,Object? withReplies = freezed,Object? withFile = freezed,Object? isActive = freezed,Object? hasUnreadNote = freezed,Object? localOnly = freezed,Object? excludeBots = freezed,Object? hideNotesInSensitiveChannel = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? createdAt = null,Object? name = null,Object? keywords = null,Object? excludeKeywords = null,Object? src = freezed,Object? userListId = freezed,Object? users = null,Object? caseSensitive = freezed,Object? notify = freezed,Object? withReplies = freezed,Object? withFile = freezed,Object? isActive = freezed,Object? hasUnreadNote = freezed,Object? localOnly = freezed,Object? excludeBots = freezed,Object? excludeNotesInSensitiveChannel = freezed,}) {
   return _then(_self.copyWith(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
@@ -85,7 +85,7 @@ as bool?,isActive: freezed == isActive ? _self.isActive : isActive // ignore: ca
 as bool?,hasUnreadNote: freezed == hasUnreadNote ? _self.hasUnreadNote : hasUnreadNote // ignore: cast_nullable_to_non_nullable
 as bool?,localOnly: freezed == localOnly ? _self.localOnly : localOnly // ignore: cast_nullable_to_non_nullable
 as bool?,excludeBots: freezed == excludeBots ? _self.excludeBots : excludeBots // ignore: cast_nullable_to_non_nullable
-as bool?,hideNotesInSensitiveChannel: freezed == hideNotesInSensitiveChannel ? _self.hideNotesInSensitiveChannel : hideNotesInSensitiveChannel // ignore: cast_nullable_to_non_nullable
+as bool?,excludeNotesInSensitiveChannel: freezed == excludeNotesInSensitiveChannel ? _self.excludeNotesInSensitiveChannel : excludeNotesInSensitiveChannel // ignore: cast_nullable_to_non_nullable
 as bool?,
   ));
 }
@@ -97,7 +97,7 @@ as bool?,
 @JsonSerializable()
 
 class _Antenna implements Antenna {
-  const _Antenna({required this.id, @DateTimeConverter() required this.createdAt, required this.name, required final  List<List<String>> keywords, required final  List<List<String>> excludeKeywords, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.src, this.userListId, final  List<String> users = const [], this.caseSensitive, this.notify, this.withReplies, this.withFile, this.isActive, this.hasUnreadNote, this.localOnly, this.excludeBots, this.hideNotesInSensitiveChannel}): _keywords = keywords,_excludeKeywords = excludeKeywords,_users = users;
+  const _Antenna({required this.id, @DateTimeConverter() required this.createdAt, required this.name, required final  List<List<String>> keywords, required final  List<List<String>> excludeKeywords, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.src, this.userListId, final  List<String> users = const [], this.caseSensitive, this.notify, this.withReplies, this.withFile, this.isActive, this.hasUnreadNote, this.localOnly, this.excludeBots, this.excludeNotesInSensitiveChannel}): _keywords = keywords,_excludeKeywords = excludeKeywords,_users = users;
   factory _Antenna.fromJson(Map<String, dynamic> json) => _$AntennaFromJson(json);
 
 @override final  String id;
@@ -135,7 +135,7 @@ class _Antenna implements Antenna {
 @override final  bool? hasUnreadNote;
 @override final  bool? localOnly;
 @override final  bool? excludeBots;
-@override final  bool? hideNotesInSensitiveChannel;
+@override final  bool? excludeNotesInSensitiveChannel;
 
 /// Create a copy of Antenna
 /// with the given fields replaced by the non-null parameter values.
@@ -150,16 +150,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Antenna&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.name, name) || other.name == name)&&const DeepCollectionEquality().equals(other._keywords, _keywords)&&const DeepCollectionEquality().equals(other._excludeKeywords, _excludeKeywords)&&(identical(other.src, src) || other.src == src)&&(identical(other.userListId, userListId) || other.userListId == userListId)&&const DeepCollectionEquality().equals(other._users, _users)&&(identical(other.caseSensitive, caseSensitive) || other.caseSensitive == caseSensitive)&&(identical(other.notify, notify) || other.notify == notify)&&(identical(other.withReplies, withReplies) || other.withReplies == withReplies)&&(identical(other.withFile, withFile) || other.withFile == withFile)&&(identical(other.isActive, isActive) || other.isActive == isActive)&&(identical(other.hasUnreadNote, hasUnreadNote) || other.hasUnreadNote == hasUnreadNote)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&(identical(other.excludeBots, excludeBots) || other.excludeBots == excludeBots)&&(identical(other.hideNotesInSensitiveChannel, hideNotesInSensitiveChannel) || other.hideNotesInSensitiveChannel == hideNotesInSensitiveChannel));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Antenna&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.name, name) || other.name == name)&&const DeepCollectionEquality().equals(other._keywords, _keywords)&&const DeepCollectionEquality().equals(other._excludeKeywords, _excludeKeywords)&&(identical(other.src, src) || other.src == src)&&(identical(other.userListId, userListId) || other.userListId == userListId)&&const DeepCollectionEquality().equals(other._users, _users)&&(identical(other.caseSensitive, caseSensitive) || other.caseSensitive == caseSensitive)&&(identical(other.notify, notify) || other.notify == notify)&&(identical(other.withReplies, withReplies) || other.withReplies == withReplies)&&(identical(other.withFile, withFile) || other.withFile == withFile)&&(identical(other.isActive, isActive) || other.isActive == isActive)&&(identical(other.hasUnreadNote, hasUnreadNote) || other.hasUnreadNote == hasUnreadNote)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&(identical(other.excludeBots, excludeBots) || other.excludeBots == excludeBots)&&(identical(other.excludeNotesInSensitiveChannel, excludeNotesInSensitiveChannel) || other.excludeNotesInSensitiveChannel == excludeNotesInSensitiveChannel));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,createdAt,name,const DeepCollectionEquality().hash(_keywords),const DeepCollectionEquality().hash(_excludeKeywords),src,userListId,const DeepCollectionEquality().hash(_users),caseSensitive,notify,withReplies,withFile,isActive,hasUnreadNote,localOnly,excludeBots,hideNotesInSensitiveChannel);
+int get hashCode => Object.hash(runtimeType,id,createdAt,name,const DeepCollectionEquality().hash(_keywords),const DeepCollectionEquality().hash(_excludeKeywords),src,userListId,const DeepCollectionEquality().hash(_users),caseSensitive,notify,withReplies,withFile,isActive,hasUnreadNote,localOnly,excludeBots,excludeNotesInSensitiveChannel);
 
 @override
 String toString() {
-  return 'Antenna(id: $id, createdAt: $createdAt, name: $name, keywords: $keywords, excludeKeywords: $excludeKeywords, src: $src, userListId: $userListId, users: $users, caseSensitive: $caseSensitive, notify: $notify, withReplies: $withReplies, withFile: $withFile, isActive: $isActive, hasUnreadNote: $hasUnreadNote, localOnly: $localOnly, excludeBots: $excludeBots, hideNotesInSensitiveChannel: $hideNotesInSensitiveChannel)';
+  return 'Antenna(id: $id, createdAt: $createdAt, name: $name, keywords: $keywords, excludeKeywords: $excludeKeywords, src: $src, userListId: $userListId, users: $users, caseSensitive: $caseSensitive, notify: $notify, withReplies: $withReplies, withFile: $withFile, isActive: $isActive, hasUnreadNote: $hasUnreadNote, localOnly: $localOnly, excludeBots: $excludeBots, excludeNotesInSensitiveChannel: $excludeNotesInSensitiveChannel)';
 }
 
 
@@ -170,7 +170,7 @@ abstract mixin class _$AntennaCopyWith<$Res> implements $AntennaCopyWith<$Res> {
   factory _$AntennaCopyWith(_Antenna value, $Res Function(_Antenna) _then) = __$AntennaCopyWithImpl;
 @override @useResult
 $Res call({
- String id,@DateTimeConverter() DateTime createdAt, String name, List<List<String>> keywords, List<List<String>> excludeKeywords,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) AntennaSource? src, String? userListId, List<String> users, bool? caseSensitive, bool? notify, bool? withReplies, bool? withFile, bool? isActive, bool? hasUnreadNote, bool? localOnly, bool? excludeBots, bool? hideNotesInSensitiveChannel
+ String id,@DateTimeConverter() DateTime createdAt, String name, List<List<String>> keywords, List<List<String>> excludeKeywords,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) AntennaSource? src, String? userListId, List<String> users, bool? caseSensitive, bool? notify, bool? withReplies, bool? withFile, bool? isActive, bool? hasUnreadNote, bool? localOnly, bool? excludeBots, bool? excludeNotesInSensitiveChannel
 });
 
 
@@ -187,7 +187,7 @@ class __$AntennaCopyWithImpl<$Res>
 
 /// Create a copy of Antenna
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? createdAt = null,Object? name = null,Object? keywords = null,Object? excludeKeywords = null,Object? src = freezed,Object? userListId = freezed,Object? users = null,Object? caseSensitive = freezed,Object? notify = freezed,Object? withReplies = freezed,Object? withFile = freezed,Object? isActive = freezed,Object? hasUnreadNote = freezed,Object? localOnly = freezed,Object? excludeBots = freezed,Object? hideNotesInSensitiveChannel = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? createdAt = null,Object? name = null,Object? keywords = null,Object? excludeKeywords = null,Object? src = freezed,Object? userListId = freezed,Object? users = null,Object? caseSensitive = freezed,Object? notify = freezed,Object? withReplies = freezed,Object? withFile = freezed,Object? isActive = freezed,Object? hasUnreadNote = freezed,Object? localOnly = freezed,Object? excludeBots = freezed,Object? excludeNotesInSensitiveChannel = freezed,}) {
   return _then(_Antenna(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
@@ -205,7 +205,7 @@ as bool?,isActive: freezed == isActive ? _self.isActive : isActive // ignore: ca
 as bool?,hasUnreadNote: freezed == hasUnreadNote ? _self.hasUnreadNote : hasUnreadNote // ignore: cast_nullable_to_non_nullable
 as bool?,localOnly: freezed == localOnly ? _self.localOnly : localOnly // ignore: cast_nullable_to_non_nullable
 as bool?,excludeBots: freezed == excludeBots ? _self.excludeBots : excludeBots // ignore: cast_nullable_to_non_nullable
-as bool?,hideNotesInSensitiveChannel: freezed == hideNotesInSensitiveChannel ? _self.hideNotesInSensitiveChannel : hideNotesInSensitiveChannel // ignore: cast_nullable_to_non_nullable
+as bool?,excludeNotesInSensitiveChannel: freezed == excludeNotesInSensitiveChannel ? _self.excludeNotesInSensitiveChannel : excludeNotesInSensitiveChannel // ignore: cast_nullable_to_non_nullable
 as bool?,
   ));
 }

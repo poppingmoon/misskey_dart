@@ -185,7 +185,7 @@ $PushNotificationBodyCopyWith<$Res>? get body {
 mixin _$PushNotificationBody {
 
  String get id;@DateTimeConverter() DateTime get createdAt;// ignore: invalid_annotation_target
-@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) NotificationType? get type; String? get noteId; String? get followRequestId; String? get reaction; int? get choice; String? get achievement; String? get body; String? get header;@NullableUriConverter() Uri? get icon; String? get appAccessTokenId; String? get userId; UserLite? get user; PushNotificationNote? get note; RolesListResponse? get role; List<INotificationsReaction>? get reactions; List<UserLite>? get users;// ignore: invalid_annotation_target
+@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) NotificationType? get type; String? get noteId; String? get followRequestId; String? get reaction; int? get choice; String? get achievement; String? get body; String? get header;@NullableUriConverter() Uri? get icon; String? get appAccessTokenId; ChatJoining? get invitation; String? get userId; UserLite? get user; PushNotificationNote? get note; RolesListResponse? get role; List<INotificationsReaction>? get reactions; List<UserLite>? get users;// ignore: invalid_annotation_target
 @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) UserExportableEntities? get exportedEntity; String? get fileId; String? get message; String? get errorType;// CherryPick
  ScheduledNote? get draft;
 /// Create a copy of PushNotificationBody
@@ -200,16 +200,16 @@ $PushNotificationBodyCopyWith<PushNotificationBody> get copyWith => _$PushNotifi
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is PushNotificationBody&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.type, type) || other.type == type)&&(identical(other.noteId, noteId) || other.noteId == noteId)&&(identical(other.followRequestId, followRequestId) || other.followRequestId == followRequestId)&&(identical(other.reaction, reaction) || other.reaction == reaction)&&(identical(other.choice, choice) || other.choice == choice)&&(identical(other.achievement, achievement) || other.achievement == achievement)&&(identical(other.body, body) || other.body == body)&&(identical(other.header, header) || other.header == header)&&(identical(other.icon, icon) || other.icon == icon)&&(identical(other.appAccessTokenId, appAccessTokenId) || other.appAccessTokenId == appAccessTokenId)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.user, user) || other.user == user)&&(identical(other.note, note) || other.note == note)&&(identical(other.role, role) || other.role == role)&&const DeepCollectionEquality().equals(other.reactions, reactions)&&const DeepCollectionEquality().equals(other.users, users)&&(identical(other.exportedEntity, exportedEntity) || other.exportedEntity == exportedEntity)&&(identical(other.fileId, fileId) || other.fileId == fileId)&&(identical(other.message, message) || other.message == message)&&(identical(other.errorType, errorType) || other.errorType == errorType)&&(identical(other.draft, draft) || other.draft == draft));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PushNotificationBody&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.type, type) || other.type == type)&&(identical(other.noteId, noteId) || other.noteId == noteId)&&(identical(other.followRequestId, followRequestId) || other.followRequestId == followRequestId)&&(identical(other.reaction, reaction) || other.reaction == reaction)&&(identical(other.choice, choice) || other.choice == choice)&&(identical(other.achievement, achievement) || other.achievement == achievement)&&(identical(other.body, body) || other.body == body)&&(identical(other.header, header) || other.header == header)&&(identical(other.icon, icon) || other.icon == icon)&&(identical(other.appAccessTokenId, appAccessTokenId) || other.appAccessTokenId == appAccessTokenId)&&(identical(other.invitation, invitation) || other.invitation == invitation)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.user, user) || other.user == user)&&(identical(other.note, note) || other.note == note)&&(identical(other.role, role) || other.role == role)&&const DeepCollectionEquality().equals(other.reactions, reactions)&&const DeepCollectionEquality().equals(other.users, users)&&(identical(other.exportedEntity, exportedEntity) || other.exportedEntity == exportedEntity)&&(identical(other.fileId, fileId) || other.fileId == fileId)&&(identical(other.message, message) || other.message == message)&&(identical(other.errorType, errorType) || other.errorType == errorType)&&(identical(other.draft, draft) || other.draft == draft));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hashAll([runtimeType,id,createdAt,type,noteId,followRequestId,reaction,choice,achievement,body,header,icon,appAccessTokenId,userId,user,note,role,const DeepCollectionEquality().hash(reactions),const DeepCollectionEquality().hash(users),exportedEntity,fileId,message,errorType,draft]);
+int get hashCode => Object.hashAll([runtimeType,id,createdAt,type,noteId,followRequestId,reaction,choice,achievement,body,header,icon,appAccessTokenId,invitation,userId,user,note,role,const DeepCollectionEquality().hash(reactions),const DeepCollectionEquality().hash(users),exportedEntity,fileId,message,errorType,draft]);
 
 @override
 String toString() {
-  return 'PushNotificationBody(id: $id, createdAt: $createdAt, type: $type, noteId: $noteId, followRequestId: $followRequestId, reaction: $reaction, choice: $choice, achievement: $achievement, body: $body, header: $header, icon: $icon, appAccessTokenId: $appAccessTokenId, userId: $userId, user: $user, note: $note, role: $role, reactions: $reactions, users: $users, exportedEntity: $exportedEntity, fileId: $fileId, message: $message, errorType: $errorType, draft: $draft)';
+  return 'PushNotificationBody(id: $id, createdAt: $createdAt, type: $type, noteId: $noteId, followRequestId: $followRequestId, reaction: $reaction, choice: $choice, achievement: $achievement, body: $body, header: $header, icon: $icon, appAccessTokenId: $appAccessTokenId, invitation: $invitation, userId: $userId, user: $user, note: $note, role: $role, reactions: $reactions, users: $users, exportedEntity: $exportedEntity, fileId: $fileId, message: $message, errorType: $errorType, draft: $draft)';
 }
 
 
@@ -220,11 +220,11 @@ abstract mixin class $PushNotificationBodyCopyWith<$Res>  {
   factory $PushNotificationBodyCopyWith(PushNotificationBody value, $Res Function(PushNotificationBody) _then) = _$PushNotificationBodyCopyWithImpl;
 @useResult
 $Res call({
- String id,@DateTimeConverter() DateTime createdAt,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) NotificationType? type, String? noteId, String? followRequestId, String? reaction, int? choice, String? achievement, String? body, String? header,@NullableUriConverter() Uri? icon, String? appAccessTokenId, String? userId, UserLite? user, PushNotificationNote? note, RolesListResponse? role, List<INotificationsReaction>? reactions, List<UserLite>? users,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) UserExportableEntities? exportedEntity, String? fileId, String? message, String? errorType, ScheduledNote? draft
+ String id,@DateTimeConverter() DateTime createdAt,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) NotificationType? type, String? noteId, String? followRequestId, String? reaction, int? choice, String? achievement, String? body, String? header,@NullableUriConverter() Uri? icon, String? appAccessTokenId, ChatJoining? invitation, String? userId, UserLite? user, PushNotificationNote? note, RolesListResponse? role, List<INotificationsReaction>? reactions, List<UserLite>? users,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) UserExportableEntities? exportedEntity, String? fileId, String? message, String? errorType, ScheduledNote? draft
 });
 
 
-$UserLiteCopyWith<$Res>? get user;$PushNotificationNoteCopyWith<$Res>? get note;$RolesListResponseCopyWith<$Res>? get role;$ScheduledNoteCopyWith<$Res>? get draft;
+$ChatJoiningCopyWith<$Res>? get invitation;$UserLiteCopyWith<$Res>? get user;$PushNotificationNoteCopyWith<$Res>? get note;$RolesListResponseCopyWith<$Res>? get role;$ScheduledNoteCopyWith<$Res>? get draft;
 
 }
 /// @nodoc
@@ -237,7 +237,7 @@ class _$PushNotificationBodyCopyWithImpl<$Res>
 
 /// Create a copy of PushNotificationBody
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? createdAt = null,Object? type = freezed,Object? noteId = freezed,Object? followRequestId = freezed,Object? reaction = freezed,Object? choice = freezed,Object? achievement = freezed,Object? body = freezed,Object? header = freezed,Object? icon = freezed,Object? appAccessTokenId = freezed,Object? userId = freezed,Object? user = freezed,Object? note = freezed,Object? role = freezed,Object? reactions = freezed,Object? users = freezed,Object? exportedEntity = freezed,Object? fileId = freezed,Object? message = freezed,Object? errorType = freezed,Object? draft = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? createdAt = null,Object? type = freezed,Object? noteId = freezed,Object? followRequestId = freezed,Object? reaction = freezed,Object? choice = freezed,Object? achievement = freezed,Object? body = freezed,Object? header = freezed,Object? icon = freezed,Object? appAccessTokenId = freezed,Object? invitation = freezed,Object? userId = freezed,Object? user = freezed,Object? note = freezed,Object? role = freezed,Object? reactions = freezed,Object? users = freezed,Object? exportedEntity = freezed,Object? fileId = freezed,Object? message = freezed,Object? errorType = freezed,Object? draft = freezed,}) {
   return _then(_self.copyWith(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
@@ -251,7 +251,8 @@ as String?,body: freezed == body ? _self.body : body // ignore: cast_nullable_to
 as String?,header: freezed == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
 as String?,icon: freezed == icon ? _self.icon : icon // ignore: cast_nullable_to_non_nullable
 as Uri?,appAccessTokenId: freezed == appAccessTokenId ? _self.appAccessTokenId : appAccessTokenId // ignore: cast_nullable_to_non_nullable
-as String?,userId: freezed == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as String?,invitation: freezed == invitation ? _self.invitation : invitation // ignore: cast_nullable_to_non_nullable
+as ChatJoining?,userId: freezed == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
 as String?,user: freezed == user ? _self.user : user // ignore: cast_nullable_to_non_nullable
 as UserLite?,note: freezed == note ? _self.note : note // ignore: cast_nullable_to_non_nullable
 as PushNotificationNote?,role: freezed == role ? _self.role : role // ignore: cast_nullable_to_non_nullable
@@ -266,6 +267,18 @@ as ScheduledNote?,
   ));
 }
 /// Create a copy of PushNotificationBody
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$ChatJoiningCopyWith<$Res>? get invitation {
+    if (_self.invitation == null) {
+    return null;
+  }
+
+  return $ChatJoiningCopyWith<$Res>(_self.invitation!, (value) {
+    return _then(_self.copyWith(invitation: value));
+  });
+}/// Create a copy of PushNotificationBody
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
@@ -321,7 +334,7 @@ $ScheduledNoteCopyWith<$Res>? get draft {
 @JsonSerializable()
 
 class _PushNotificationBody implements PushNotificationBody {
-  const _PushNotificationBody({required this.id, @DateTimeConverter() required this.createdAt, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type, this.noteId, this.followRequestId, this.reaction, this.choice, this.achievement, this.body, this.header, @NullableUriConverter() this.icon, this.appAccessTokenId, this.userId, this.user, this.note, this.role, final  List<INotificationsReaction>? reactions, final  List<UserLite>? users, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.exportedEntity, this.fileId, this.message, this.errorType, this.draft}): _reactions = reactions,_users = users;
+  const _PushNotificationBody({required this.id, @DateTimeConverter() required this.createdAt, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type, this.noteId, this.followRequestId, this.reaction, this.choice, this.achievement, this.body, this.header, @NullableUriConverter() this.icon, this.appAccessTokenId, this.invitation, this.userId, this.user, this.note, this.role, final  List<INotificationsReaction>? reactions, final  List<UserLite>? users, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.exportedEntity, this.fileId, this.message, this.errorType, this.draft}): _reactions = reactions,_users = users;
   factory _PushNotificationBody.fromJson(Map<String, dynamic> json) => _$PushNotificationBodyFromJson(json);
 
 @override final  String id;
@@ -337,6 +350,7 @@ class _PushNotificationBody implements PushNotificationBody {
 @override final  String? header;
 @override@NullableUriConverter() final  Uri? icon;
 @override final  String? appAccessTokenId;
+@override final  ChatJoining? invitation;
 @override final  String? userId;
 @override final  UserLite? user;
 @override final  PushNotificationNote? note;
@@ -380,16 +394,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PushNotificationBody&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.type, type) || other.type == type)&&(identical(other.noteId, noteId) || other.noteId == noteId)&&(identical(other.followRequestId, followRequestId) || other.followRequestId == followRequestId)&&(identical(other.reaction, reaction) || other.reaction == reaction)&&(identical(other.choice, choice) || other.choice == choice)&&(identical(other.achievement, achievement) || other.achievement == achievement)&&(identical(other.body, body) || other.body == body)&&(identical(other.header, header) || other.header == header)&&(identical(other.icon, icon) || other.icon == icon)&&(identical(other.appAccessTokenId, appAccessTokenId) || other.appAccessTokenId == appAccessTokenId)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.user, user) || other.user == user)&&(identical(other.note, note) || other.note == note)&&(identical(other.role, role) || other.role == role)&&const DeepCollectionEquality().equals(other._reactions, _reactions)&&const DeepCollectionEquality().equals(other._users, _users)&&(identical(other.exportedEntity, exportedEntity) || other.exportedEntity == exportedEntity)&&(identical(other.fileId, fileId) || other.fileId == fileId)&&(identical(other.message, message) || other.message == message)&&(identical(other.errorType, errorType) || other.errorType == errorType)&&(identical(other.draft, draft) || other.draft == draft));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PushNotificationBody&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.type, type) || other.type == type)&&(identical(other.noteId, noteId) || other.noteId == noteId)&&(identical(other.followRequestId, followRequestId) || other.followRequestId == followRequestId)&&(identical(other.reaction, reaction) || other.reaction == reaction)&&(identical(other.choice, choice) || other.choice == choice)&&(identical(other.achievement, achievement) || other.achievement == achievement)&&(identical(other.body, body) || other.body == body)&&(identical(other.header, header) || other.header == header)&&(identical(other.icon, icon) || other.icon == icon)&&(identical(other.appAccessTokenId, appAccessTokenId) || other.appAccessTokenId == appAccessTokenId)&&(identical(other.invitation, invitation) || other.invitation == invitation)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.user, user) || other.user == user)&&(identical(other.note, note) || other.note == note)&&(identical(other.role, role) || other.role == role)&&const DeepCollectionEquality().equals(other._reactions, _reactions)&&const DeepCollectionEquality().equals(other._users, _users)&&(identical(other.exportedEntity, exportedEntity) || other.exportedEntity == exportedEntity)&&(identical(other.fileId, fileId) || other.fileId == fileId)&&(identical(other.message, message) || other.message == message)&&(identical(other.errorType, errorType) || other.errorType == errorType)&&(identical(other.draft, draft) || other.draft == draft));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hashAll([runtimeType,id,createdAt,type,noteId,followRequestId,reaction,choice,achievement,body,header,icon,appAccessTokenId,userId,user,note,role,const DeepCollectionEquality().hash(_reactions),const DeepCollectionEquality().hash(_users),exportedEntity,fileId,message,errorType,draft]);
+int get hashCode => Object.hashAll([runtimeType,id,createdAt,type,noteId,followRequestId,reaction,choice,achievement,body,header,icon,appAccessTokenId,invitation,userId,user,note,role,const DeepCollectionEquality().hash(_reactions),const DeepCollectionEquality().hash(_users),exportedEntity,fileId,message,errorType,draft]);
 
 @override
 String toString() {
-  return 'PushNotificationBody(id: $id, createdAt: $createdAt, type: $type, noteId: $noteId, followRequestId: $followRequestId, reaction: $reaction, choice: $choice, achievement: $achievement, body: $body, header: $header, icon: $icon, appAccessTokenId: $appAccessTokenId, userId: $userId, user: $user, note: $note, role: $role, reactions: $reactions, users: $users, exportedEntity: $exportedEntity, fileId: $fileId, message: $message, errorType: $errorType, draft: $draft)';
+  return 'PushNotificationBody(id: $id, createdAt: $createdAt, type: $type, noteId: $noteId, followRequestId: $followRequestId, reaction: $reaction, choice: $choice, achievement: $achievement, body: $body, header: $header, icon: $icon, appAccessTokenId: $appAccessTokenId, invitation: $invitation, userId: $userId, user: $user, note: $note, role: $role, reactions: $reactions, users: $users, exportedEntity: $exportedEntity, fileId: $fileId, message: $message, errorType: $errorType, draft: $draft)';
 }
 
 
@@ -400,11 +414,11 @@ abstract mixin class _$PushNotificationBodyCopyWith<$Res> implements $PushNotifi
   factory _$PushNotificationBodyCopyWith(_PushNotificationBody value, $Res Function(_PushNotificationBody) _then) = __$PushNotificationBodyCopyWithImpl;
 @override @useResult
 $Res call({
- String id,@DateTimeConverter() DateTime createdAt,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) NotificationType? type, String? noteId, String? followRequestId, String? reaction, int? choice, String? achievement, String? body, String? header,@NullableUriConverter() Uri? icon, String? appAccessTokenId, String? userId, UserLite? user, PushNotificationNote? note, RolesListResponse? role, List<INotificationsReaction>? reactions, List<UserLite>? users,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) UserExportableEntities? exportedEntity, String? fileId, String? message, String? errorType, ScheduledNote? draft
+ String id,@DateTimeConverter() DateTime createdAt,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) NotificationType? type, String? noteId, String? followRequestId, String? reaction, int? choice, String? achievement, String? body, String? header,@NullableUriConverter() Uri? icon, String? appAccessTokenId, ChatJoining? invitation, String? userId, UserLite? user, PushNotificationNote? note, RolesListResponse? role, List<INotificationsReaction>? reactions, List<UserLite>? users,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) UserExportableEntities? exportedEntity, String? fileId, String? message, String? errorType, ScheduledNote? draft
 });
 
 
-@override $UserLiteCopyWith<$Res>? get user;@override $PushNotificationNoteCopyWith<$Res>? get note;@override $RolesListResponseCopyWith<$Res>? get role;@override $ScheduledNoteCopyWith<$Res>? get draft;
+@override $ChatJoiningCopyWith<$Res>? get invitation;@override $UserLiteCopyWith<$Res>? get user;@override $PushNotificationNoteCopyWith<$Res>? get note;@override $RolesListResponseCopyWith<$Res>? get role;@override $ScheduledNoteCopyWith<$Res>? get draft;
 
 }
 /// @nodoc
@@ -417,7 +431,7 @@ class __$PushNotificationBodyCopyWithImpl<$Res>
 
 /// Create a copy of PushNotificationBody
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? createdAt = null,Object? type = freezed,Object? noteId = freezed,Object? followRequestId = freezed,Object? reaction = freezed,Object? choice = freezed,Object? achievement = freezed,Object? body = freezed,Object? header = freezed,Object? icon = freezed,Object? appAccessTokenId = freezed,Object? userId = freezed,Object? user = freezed,Object? note = freezed,Object? role = freezed,Object? reactions = freezed,Object? users = freezed,Object? exportedEntity = freezed,Object? fileId = freezed,Object? message = freezed,Object? errorType = freezed,Object? draft = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? createdAt = null,Object? type = freezed,Object? noteId = freezed,Object? followRequestId = freezed,Object? reaction = freezed,Object? choice = freezed,Object? achievement = freezed,Object? body = freezed,Object? header = freezed,Object? icon = freezed,Object? appAccessTokenId = freezed,Object? invitation = freezed,Object? userId = freezed,Object? user = freezed,Object? note = freezed,Object? role = freezed,Object? reactions = freezed,Object? users = freezed,Object? exportedEntity = freezed,Object? fileId = freezed,Object? message = freezed,Object? errorType = freezed,Object? draft = freezed,}) {
   return _then(_PushNotificationBody(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
@@ -431,7 +445,8 @@ as String?,body: freezed == body ? _self.body : body // ignore: cast_nullable_to
 as String?,header: freezed == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
 as String?,icon: freezed == icon ? _self.icon : icon // ignore: cast_nullable_to_non_nullable
 as Uri?,appAccessTokenId: freezed == appAccessTokenId ? _self.appAccessTokenId : appAccessTokenId // ignore: cast_nullable_to_non_nullable
-as String?,userId: freezed == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as String?,invitation: freezed == invitation ? _self.invitation : invitation // ignore: cast_nullable_to_non_nullable
+as ChatJoining?,userId: freezed == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
 as String?,user: freezed == user ? _self.user : user // ignore: cast_nullable_to_non_nullable
 as UserLite?,note: freezed == note ? _self.note : note // ignore: cast_nullable_to_non_nullable
 as PushNotificationNote?,role: freezed == role ? _self.role : role // ignore: cast_nullable_to_non_nullable
@@ -447,6 +462,18 @@ as ScheduledNote?,
 }
 
 /// Create a copy of PushNotificationBody
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$ChatJoiningCopyWith<$Res>? get invitation {
+    if (_self.invitation == null) {
+    return null;
+  }
+
+  return $ChatJoiningCopyWith<$Res>(_self.invitation!, (value) {
+    return _then(_self.copyWith(invitation: value));
+  });
+}/// Create a copy of PushNotificationBody
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')

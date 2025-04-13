@@ -274,3 +274,26 @@ Map<String, dynamic> _$QueueStatsLogResponseDataToJson(
   'waiting': instance.waiting,
   'delayed': instance.delayed,
 };
+
+_ChatReact _$ChatReactFromJson(Map<String, dynamic> json) => $checkedCreate(
+  '_ChatReact',
+  json,
+  ($checkedConvert) {
+    final val = _ChatReact(
+      reaction: $checkedConvert('reaction', (v) => v as String),
+      user: $checkedConvert(
+        'user',
+        (v) => v == null ? null : UserLite.fromJson(v as Map<String, dynamic>),
+      ),
+      messageId: $checkedConvert('messageId', (v) => v as String),
+    );
+    return val;
+  },
+);
+
+Map<String, dynamic> _$ChatReactToJson(_ChatReact instance) =>
+    <String, dynamic>{
+      'reaction': instance.reaction,
+      'user': instance.user?.toJson(),
+      'messageId': instance.messageId,
+    };

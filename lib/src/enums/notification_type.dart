@@ -13,6 +13,7 @@ enum NotificationType {
   receiveFollowRequest,
   followRequestAccepted,
   roleAssigned,
+  chatRoomInvitationReceived,
   achievementEarned,
   exportCompleted,
   login,

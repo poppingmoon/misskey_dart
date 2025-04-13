@@ -173,3 +173,15 @@ abstract class QueueStatsLogResponseData with _$QueueStatsLogResponseData {
   factory QueueStatsLogResponseData.fromJson(Map<String, dynamic> json) =>
       _$QueueStatsLogResponseDataFromJson(json);
 }
+
+@freezed
+abstract class ChatReact with _$ChatReact {
+  const factory ChatReact({
+    required String reaction,
+    UserLite? user,
+    required String messageId,
+  }) = _ChatReact;
+
+  factory ChatReact.fromJson(Map<String, dynamic> json) =>
+      _$ChatReactFromJson(json);
+}

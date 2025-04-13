@@ -41,6 +41,7 @@ abstract class PushNotificationBody with _$PushNotificationBody {
     String? header,
     @NullableUriConverter() Uri? icon,
     String? appAccessTokenId,
+    ChatJoining? invitation,
     String? userId,
     UserLite? user,
     PushNotificationNote? note,
