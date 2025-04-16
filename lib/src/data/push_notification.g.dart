@@ -6,50 +6,37 @@ part of 'push_notification.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_PushNotification _$PushNotificationFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_PushNotification', json, ($checkedConvert) {
-      final val = _PushNotification(
-        type: $checkedConvert(
-          'type',
-          (v) => $enumDecodeNullable(
-            _$PushNotificationTypesEnumMap,
-            v,
-            unknownValue: JsonKey.nullForUndefinedEnumValue,
-          ),
-        ),
-        body: $checkedConvert(
-          'body',
-          (v) =>
-              v == null
-                  ? null
-                  : PushNotificationBody.fromJson(v as Map<String, dynamic>),
-        ),
-        userId: $checkedConvert('userId', (v) => v as String?),
-        dateTime: $checkedConvert(
-          'dateTime',
-          (v) => _$JsonConverterFromJson<int, DateTime>(
-            v,
-            const EpocTimeDateTimeConverter().fromJson,
-          ),
-        ),
-      );
-      return val;
-    });
-
-Map<String, dynamic> _$PushNotificationToJson(_PushNotification instance) =>
-    <String, dynamic>{
-      'type': _$PushNotificationTypesEnumMap[instance.type],
-      'body': instance.body?.toJson(),
-      'userId': instance.userId,
-      'dateTime': _$JsonConverterToJson<int, DateTime>(
-        instance.dateTime,
-        const EpocTimeDateTimeConverter().toJson,
+NotificationPushNotification _$NotificationPushNotificationFromJson(
+  Map<String, dynamic> json,
+) => $checkedCreate('NotificationPushNotification', json, ($checkedConvert) {
+  final val = NotificationPushNotification(
+    body: $checkedConvert(
+      'body',
+      (v) => PushNotificationBody.fromJson(v as Map<String, dynamic>),
+    ),
+    userId: $checkedConvert('userId', (v) => v as String?),
+    dateTime: $checkedConvert(
+      'dateTime',
+      (v) => _$JsonConverterFromJson<int, DateTime>(
+        v,
+        const EpocTimeDateTimeConverter().fromJson,
       ),
-    };
+    ),
+    $type: $checkedConvert('type', (v) => v as String?),
+  );
+  return val;
+}, fieldKeyMap: const {r'$type': 'type'});
 
-const _$PushNotificationTypesEnumMap = {
-  PushNotificationTypes.notification: 'notification',
-  PushNotificationTypes.readAllNotifications: 'readAllNotifications',
+Map<String, dynamic> _$NotificationPushNotificationToJson(
+  NotificationPushNotification instance,
+) => <String, dynamic>{
+  'body': instance.body.toJson(),
+  'userId': instance.userId,
+  'dateTime': _$JsonConverterToJson<int, DateTime>(
+    instance.dateTime,
+    const EpocTimeDateTimeConverter().toJson,
+  ),
+  'type': instance.$type,
 };
 
 Value? _$JsonConverterFromJson<Json, Value>(
@@ -61,6 +48,69 @@ Json? _$JsonConverterToJson<Json, Value>(
   Value? value,
   Json? Function(Value value) toJson,
 ) => value == null ? null : toJson(value);
+
+ReadAllNotificationsPushNotification
+_$ReadAllNotificationsPushNotificationFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('ReadAllNotificationsPushNotification', json, (
+      $checkedConvert,
+    ) {
+      final val = ReadAllNotificationsPushNotification(
+        userId: $checkedConvert('userId', (v) => v as String?),
+        dateTime: $checkedConvert(
+          'dateTime',
+          (v) => _$JsonConverterFromJson<int, DateTime>(
+            v,
+            const EpocTimeDateTimeConverter().fromJson,
+          ),
+        ),
+        $type: $checkedConvert('type', (v) => v as String?),
+      );
+      return val;
+    }, fieldKeyMap: const {r'$type': 'type'});
+
+Map<String, dynamic> _$ReadAllNotificationsPushNotificationToJson(
+  ReadAllNotificationsPushNotification instance,
+) => <String, dynamic>{
+  'userId': instance.userId,
+  'dateTime': _$JsonConverterToJson<int, DateTime>(
+    instance.dateTime,
+    const EpocTimeDateTimeConverter().toJson,
+  ),
+  'type': instance.$type,
+};
+
+NewChatMessagePushNotification _$NewChatMessagePushNotificationFromJson(
+  Map<String, dynamic> json,
+) => $checkedCreate('NewChatMessagePushNotification', json, ($checkedConvert) {
+  final val = NewChatMessagePushNotification(
+    body: $checkedConvert(
+      'body',
+      (v) => ChatMessage.fromJson(v as Map<String, dynamic>),
+    ),
+    userId: $checkedConvert('userId', (v) => v as String?),
+    dateTime: $checkedConvert(
+      'dateTime',
+      (v) => _$JsonConverterFromJson<int, DateTime>(
+        v,
+        const EpocTimeDateTimeConverter().fromJson,
+      ),
+    ),
+    $type: $checkedConvert('type', (v) => v as String?),
+  );
+  return val;
+}, fieldKeyMap: const {r'$type': 'type'});
+
+Map<String, dynamic> _$NewChatMessagePushNotificationToJson(
+  NewChatMessagePushNotification instance,
+) => <String, dynamic>{
+  'body': instance.body.toJson(),
+  'userId': instance.userId,
+  'dateTime': _$JsonConverterToJson<int, DateTime>(
+    instance.dateTime,
+    const EpocTimeDateTimeConverter().toJson,
+  ),
+  'type': instance.$type,
+};
 
 _PushNotificationBody _$PushNotificationBodyFromJson(
   Map<String, dynamic> json,
@@ -264,7 +314,11 @@ _PushNotificationNote _$PushNotificationNoteFromJson(
     ),
     reactions: $checkedConvert(
       'reactions',
-      (v) => Map<String, int>.from(v as Map),
+      (v) =>
+          (v as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, (e as num).toInt()),
+          ) ??
+          const {},
     ),
     reactionEmojis: $checkedConvert(
       'reactionEmojis',
@@ -276,14 +330,16 @@ _PushNotificationNote _$PushNotificationNoteFromJson(
     ),
     fileIds: $checkedConvert(
       'fileIds',
-      (v) => (v as List<dynamic>).map((e) => e as String).toList(),
+      (v) =>
+          (v as List<dynamic>?)?.map((e) => e as String).toList() ?? const [],
     ),
     files: $checkedConvert(
       'files',
       (v) =>
-          (v as List<dynamic>)
-              .map((e) => DriveFile.fromJson(e as Map<String, dynamic>))
-              .toList(),
+          (v as List<dynamic>?)
+              ?.map((e) => DriveFile.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const [],
     ),
     replyId: $checkedConvert('replyId', (v) => v as String?),
     renoteId: $checkedConvert('renoteId', (v) => v as String?),

@@ -12,12 +12,38 @@ part of 'push_notification.dart';
 
 // dart format off
 T _$identity<T>(T value) => value;
+PushNotification _$PushNotificationFromJson(
+  Map<String, dynamic> json
+) {
+        switch (json['type']) {
+                  case 'notification':
+          return NotificationPushNotification.fromJson(
+            json
+          );
+                case 'readAllNotifications':
+          return ReadAllNotificationsPushNotification.fromJson(
+            json
+          );
+                case 'newChatMessage':
+          return NewChatMessagePushNotification.fromJson(
+            json
+          );
+        
+          default:
+            throw CheckedFromJsonException(
+  json,
+  'type',
+  'PushNotification',
+  'Invalid union type "${json['type']}"!'
+);
+        }
+      
+}
 
 /// @nodoc
 mixin _$PushNotification {
 
-// ignore: invalid_annotation_target
-@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) PushNotificationTypes? get type; PushNotificationBody? get body; String? get userId;@EpocTimeDateTimeConverter() DateTime? get dateTime;
+ String? get userId;@EpocTimeDateTimeConverter() DateTime? get dateTime;
 /// Create a copy of PushNotification
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -30,16 +56,16 @@ $PushNotificationCopyWith<PushNotification> get copyWith => _$PushNotificationCo
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is PushNotification&&(identical(other.type, type) || other.type == type)&&(identical(other.body, body) || other.body == body)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.dateTime, dateTime) || other.dateTime == dateTime));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PushNotification&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.dateTime, dateTime) || other.dateTime == dateTime));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,type,body,userId,dateTime);
+int get hashCode => Object.hash(runtimeType,userId,dateTime);
 
 @override
 String toString() {
-  return 'PushNotification(type: $type, body: $body, userId: $userId, dateTime: $dateTime)';
+  return 'PushNotification(userId: $userId, dateTime: $dateTime)';
 }
 
 
@@ -50,11 +76,11 @@ abstract mixin class $PushNotificationCopyWith<$Res>  {
   factory $PushNotificationCopyWith(PushNotification value, $Res Function(PushNotification) _then) = _$PushNotificationCopyWithImpl;
 @useResult
 $Res call({
-@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) PushNotificationTypes? type, PushNotificationBody? body, String? userId,@EpocTimeDateTimeConverter() DateTime? dateTime
+ String? userId,@EpocTimeDateTimeConverter() DateTime? dateTime
 });
 
 
-$PushNotificationBodyCopyWith<$Res>? get body;
+
 
 }
 /// @nodoc
@@ -67,99 +93,86 @@ class _$PushNotificationCopyWithImpl<$Res>
 
 /// Create a copy of PushNotification
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? type = freezed,Object? body = freezed,Object? userId = freezed,Object? dateTime = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? userId = freezed,Object? dateTime = freezed,}) {
   return _then(_self.copyWith(
-type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
-as PushNotificationTypes?,body: freezed == body ? _self.body : body // ignore: cast_nullable_to_non_nullable
-as PushNotificationBody?,userId: freezed == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+userId: freezed == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
 as String?,dateTime: freezed == dateTime ? _self.dateTime : dateTime // ignore: cast_nullable_to_non_nullable
 as DateTime?,
   ));
 }
-/// Create a copy of PushNotification
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$PushNotificationBodyCopyWith<$Res>? get body {
-    if (_self.body == null) {
-    return null;
-  }
 
-  return $PushNotificationBodyCopyWith<$Res>(_self.body!, (value) {
-    return _then(_self.copyWith(body: value));
-  });
-}
 }
 
 
 /// @nodoc
 @JsonSerializable()
 
-class _PushNotification implements PushNotification {
-  const _PushNotification({@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type, this.body, this.userId, @EpocTimeDateTimeConverter() this.dateTime});
-  factory _PushNotification.fromJson(Map<String, dynamic> json) => _$PushNotificationFromJson(json);
+class NotificationPushNotification implements PushNotification {
+  const NotificationPushNotification({required this.body, this.userId, @EpocTimeDateTimeConverter() this.dateTime, final  String? $type}): $type = $type ?? 'notification';
+  factory NotificationPushNotification.fromJson(Map<String, dynamic> json) => _$NotificationPushNotificationFromJson(json);
 
-// ignore: invalid_annotation_target
-@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  PushNotificationTypes? type;
-@override final  PushNotificationBody? body;
+ final  PushNotificationBody body;
 @override final  String? userId;
 @override@EpocTimeDateTimeConverter() final  DateTime? dateTime;
+
+@JsonKey(name: 'type')
+final String $type;
+
 
 /// Create a copy of PushNotification
 /// with the given fields replaced by the non-null parameter values.
 @override @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-_$PushNotificationCopyWith<_PushNotification> get copyWith => __$PushNotificationCopyWithImpl<_PushNotification>(this, _$identity);
+$NotificationPushNotificationCopyWith<NotificationPushNotification> get copyWith => _$NotificationPushNotificationCopyWithImpl<NotificationPushNotification>(this, _$identity);
 
 @override
 Map<String, dynamic> toJson() {
-  return _$PushNotificationToJson(this, );
+  return _$NotificationPushNotificationToJson(this, );
 }
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PushNotification&&(identical(other.type, type) || other.type == type)&&(identical(other.body, body) || other.body == body)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.dateTime, dateTime) || other.dateTime == dateTime));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotificationPushNotification&&(identical(other.body, body) || other.body == body)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.dateTime, dateTime) || other.dateTime == dateTime));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,type,body,userId,dateTime);
+int get hashCode => Object.hash(runtimeType,body,userId,dateTime);
 
 @override
 String toString() {
-  return 'PushNotification(type: $type, body: $body, userId: $userId, dateTime: $dateTime)';
+  return 'PushNotification.notification(body: $body, userId: $userId, dateTime: $dateTime)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class _$PushNotificationCopyWith<$Res> implements $PushNotificationCopyWith<$Res> {
-  factory _$PushNotificationCopyWith(_PushNotification value, $Res Function(_PushNotification) _then) = __$PushNotificationCopyWithImpl;
+abstract mixin class $NotificationPushNotificationCopyWith<$Res> implements $PushNotificationCopyWith<$Res> {
+  factory $NotificationPushNotificationCopyWith(NotificationPushNotification value, $Res Function(NotificationPushNotification) _then) = _$NotificationPushNotificationCopyWithImpl;
 @override @useResult
 $Res call({
-@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) PushNotificationTypes? type, PushNotificationBody? body, String? userId,@EpocTimeDateTimeConverter() DateTime? dateTime
+ PushNotificationBody body, String? userId,@EpocTimeDateTimeConverter() DateTime? dateTime
 });
 
 
-@override $PushNotificationBodyCopyWith<$Res>? get body;
+$PushNotificationBodyCopyWith<$Res> get body;
 
 }
 /// @nodoc
-class __$PushNotificationCopyWithImpl<$Res>
-    implements _$PushNotificationCopyWith<$Res> {
-  __$PushNotificationCopyWithImpl(this._self, this._then);
+class _$NotificationPushNotificationCopyWithImpl<$Res>
+    implements $NotificationPushNotificationCopyWith<$Res> {
+  _$NotificationPushNotificationCopyWithImpl(this._self, this._then);
 
-  final _PushNotification _self;
-  final $Res Function(_PushNotification) _then;
+  final NotificationPushNotification _self;
+  final $Res Function(NotificationPushNotification) _then;
 
 /// Create a copy of PushNotification
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? type = freezed,Object? body = freezed,Object? userId = freezed,Object? dateTime = freezed,}) {
-  return _then(_PushNotification(
-type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
-as PushNotificationTypes?,body: freezed == body ? _self.body : body // ignore: cast_nullable_to_non_nullable
-as PushNotificationBody?,userId: freezed == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+@override @pragma('vm:prefer-inline') $Res call({Object? body = null,Object? userId = freezed,Object? dateTime = freezed,}) {
+  return _then(NotificationPushNotification(
+body: null == body ? _self.body : body // ignore: cast_nullable_to_non_nullable
+as PushNotificationBody,userId: freezed == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
 as String?,dateTime: freezed == dateTime ? _self.dateTime : dateTime // ignore: cast_nullable_to_non_nullable
 as DateTime?,
   ));
@@ -169,12 +182,170 @@ as DateTime?,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$PushNotificationBodyCopyWith<$Res>? get body {
-    if (_self.body == null) {
-    return null;
-  }
+$PushNotificationBodyCopyWith<$Res> get body {
+  
+  return $PushNotificationBodyCopyWith<$Res>(_self.body, (value) {
+    return _then(_self.copyWith(body: value));
+  });
+}
+}
 
-  return $PushNotificationBodyCopyWith<$Res>(_self.body!, (value) {
+/// @nodoc
+@JsonSerializable()
+
+class ReadAllNotificationsPushNotification implements PushNotification {
+  const ReadAllNotificationsPushNotification({this.userId, @EpocTimeDateTimeConverter() this.dateTime, final  String? $type}): $type = $type ?? 'readAllNotifications';
+  factory ReadAllNotificationsPushNotification.fromJson(Map<String, dynamic> json) => _$ReadAllNotificationsPushNotificationFromJson(json);
+
+@override final  String? userId;
+@override@EpocTimeDateTimeConverter() final  DateTime? dateTime;
+
+@JsonKey(name: 'type')
+final String $type;
+
+
+/// Create a copy of PushNotification
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$ReadAllNotificationsPushNotificationCopyWith<ReadAllNotificationsPushNotification> get copyWith => _$ReadAllNotificationsPushNotificationCopyWithImpl<ReadAllNotificationsPushNotification>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$ReadAllNotificationsPushNotificationToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReadAllNotificationsPushNotification&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.dateTime, dateTime) || other.dateTime == dateTime));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,userId,dateTime);
+
+@override
+String toString() {
+  return 'PushNotification.readAllNotifications(userId: $userId, dateTime: $dateTime)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $ReadAllNotificationsPushNotificationCopyWith<$Res> implements $PushNotificationCopyWith<$Res> {
+  factory $ReadAllNotificationsPushNotificationCopyWith(ReadAllNotificationsPushNotification value, $Res Function(ReadAllNotificationsPushNotification) _then) = _$ReadAllNotificationsPushNotificationCopyWithImpl;
+@override @useResult
+$Res call({
+ String? userId,@EpocTimeDateTimeConverter() DateTime? dateTime
+});
+
+
+
+
+}
+/// @nodoc
+class _$ReadAllNotificationsPushNotificationCopyWithImpl<$Res>
+    implements $ReadAllNotificationsPushNotificationCopyWith<$Res> {
+  _$ReadAllNotificationsPushNotificationCopyWithImpl(this._self, this._then);
+
+  final ReadAllNotificationsPushNotification _self;
+  final $Res Function(ReadAllNotificationsPushNotification) _then;
+
+/// Create a copy of PushNotification
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? userId = freezed,Object? dateTime = freezed,}) {
+  return _then(ReadAllNotificationsPushNotification(
+userId: freezed == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as String?,dateTime: freezed == dateTime ? _self.dateTime : dateTime // ignore: cast_nullable_to_non_nullable
+as DateTime?,
+  ));
+}
+
+
+}
+
+/// @nodoc
+@JsonSerializable()
+
+class NewChatMessagePushNotification implements PushNotification {
+  const NewChatMessagePushNotification({required this.body, this.userId, @EpocTimeDateTimeConverter() this.dateTime, final  String? $type}): $type = $type ?? 'newChatMessage';
+  factory NewChatMessagePushNotification.fromJson(Map<String, dynamic> json) => _$NewChatMessagePushNotificationFromJson(json);
+
+ final  ChatMessage body;
+@override final  String? userId;
+@override@EpocTimeDateTimeConverter() final  DateTime? dateTime;
+
+@JsonKey(name: 'type')
+final String $type;
+
+
+/// Create a copy of PushNotification
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$NewChatMessagePushNotificationCopyWith<NewChatMessagePushNotification> get copyWith => _$NewChatMessagePushNotificationCopyWithImpl<NewChatMessagePushNotification>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$NewChatMessagePushNotificationToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NewChatMessagePushNotification&&(identical(other.body, body) || other.body == body)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.dateTime, dateTime) || other.dateTime == dateTime));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,body,userId,dateTime);
+
+@override
+String toString() {
+  return 'PushNotification.newChatMessage(body: $body, userId: $userId, dateTime: $dateTime)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $NewChatMessagePushNotificationCopyWith<$Res> implements $PushNotificationCopyWith<$Res> {
+  factory $NewChatMessagePushNotificationCopyWith(NewChatMessagePushNotification value, $Res Function(NewChatMessagePushNotification) _then) = _$NewChatMessagePushNotificationCopyWithImpl;
+@override @useResult
+$Res call({
+ ChatMessage body, String? userId,@EpocTimeDateTimeConverter() DateTime? dateTime
+});
+
+
+$ChatMessageCopyWith<$Res> get body;
+
+}
+/// @nodoc
+class _$NewChatMessagePushNotificationCopyWithImpl<$Res>
+    implements $NewChatMessagePushNotificationCopyWith<$Res> {
+  _$NewChatMessagePushNotificationCopyWithImpl(this._self, this._then);
+
+  final NewChatMessagePushNotification _self;
+  final $Res Function(NewChatMessagePushNotification) _then;
+
+/// Create a copy of PushNotification
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? body = null,Object? userId = freezed,Object? dateTime = freezed,}) {
+  return _then(NewChatMessagePushNotification(
+body: null == body ? _self.body : body // ignore: cast_nullable_to_non_nullable
+as ChatMessage,userId: freezed == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as String?,dateTime: freezed == dateTime ? _self.dateTime : dateTime // ignore: cast_nullable_to_non_nullable
+as DateTime?,
+  ));
+}
+
+/// Create a copy of PushNotification
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$ChatMessageCopyWith<$Res> get body {
+  
+  return $ChatMessageCopyWith<$Res>(_self.body, (value) {
     return _then(_self.copyWith(body: value));
   });
 }
@@ -645,7 +816,7 @@ $NotePollCopyWith<$Res>? get poll {
 @JsonSerializable()
 
 class _PushNotificationNote implements PushNotificationNote {
-  const _PushNotificationNote({required this.id, @DateTimeConverter() required this.createdAt, @NullableDateTimeConverter() this.updatedAt, this.text, required this.userId, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.visibility, this.localOnly = false, this.renoteCount = 0, this.repliesCount = 0, this.reactionCount, required final  Map<String, int> reactions, @EmojisConverter() final  Map<String, String> reactionEmojis = const {}, @EmojisConverter() final  Map<String, String> emojis = const {}, required final  List<String> fileIds, required final  List<DriveFile> files, this.replyId, this.renoteId, this.channelId, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.reactionAcceptance, final  List<String> visibleUserIds = const [], final  List<String> mentions = const [], this.myReaction, this.channel, @NullableUriConverter() this.uri, @NullableUriConverter() this.url, final  List<String> reactionAndUserPairCache = const [], this.poll, this.clippedCount}): _reactions = reactions,_reactionEmojis = reactionEmojis,_emojis = emojis,_fileIds = fileIds,_files = files,_visibleUserIds = visibleUserIds,_mentions = mentions,_reactionAndUserPairCache = reactionAndUserPairCache;
+  const _PushNotificationNote({required this.id, @DateTimeConverter() required this.createdAt, @NullableDateTimeConverter() this.updatedAt, this.text, required this.userId, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.visibility, this.localOnly = false, this.renoteCount = 0, this.repliesCount = 0, this.reactionCount, final  Map<String, int> reactions = const {}, @EmojisConverter() final  Map<String, String> reactionEmojis = const {}, @EmojisConverter() final  Map<String, String> emojis = const {}, final  List<String> fileIds = const [], final  List<DriveFile> files = const [], this.replyId, this.renoteId, this.channelId, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.reactionAcceptance, final  List<String> visibleUserIds = const [], final  List<String> mentions = const [], this.myReaction, this.channel, @NullableUriConverter() this.uri, @NullableUriConverter() this.url, final  List<String> reactionAndUserPairCache = const [], this.poll, this.clippedCount}): _reactions = reactions,_reactionEmojis = reactionEmojis,_emojis = emojis,_fileIds = fileIds,_files = files,_visibleUserIds = visibleUserIds,_mentions = mentions,_reactionAndUserPairCache = reactionAndUserPairCache;
   factory _PushNotificationNote.fromJson(Map<String, dynamic> json) => _$PushNotificationNoteFromJson(json);
 
 @override final  String id;
@@ -660,7 +831,7 @@ class _PushNotificationNote implements PushNotificationNote {
 @override@JsonKey() final  int repliesCount;
 @override final  int? reactionCount;
  final  Map<String, int> _reactions;
-@override Map<String, int> get reactions {
+@override@JsonKey() Map<String, int> get reactions {
   if (_reactions is EqualUnmodifiableMapView) return _reactions;
   // ignore: implicit_dynamic_type
   return EqualUnmodifiableMapView(_reactions);
@@ -681,14 +852,14 @@ class _PushNotificationNote implements PushNotificationNote {
 }
 
  final  List<String> _fileIds;
-@override List<String> get fileIds {
+@override@JsonKey() List<String> get fileIds {
   if (_fileIds is EqualUnmodifiableListView) return _fileIds;
   // ignore: implicit_dynamic_type
   return EqualUnmodifiableListView(_fileIds);
 }
 
  final  List<DriveFile> _files;
-@override List<DriveFile> get files {
+@override@JsonKey() List<DriveFile> get files {
   if (_files is EqualUnmodifiableListView) return _files;
   // ignore: implicit_dynamic_type
   return EqualUnmodifiableListView(_files);

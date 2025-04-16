@@ -7,22 +7,28 @@ import 'package:misskey_dart/src/converters/uri_converter.dart';
 part 'push_notification.freezed.dart';
 part 'push_notification.g.dart';
 
-@freezed
-abstract class PushNotification with _$PushNotification {
-  const factory PushNotification({
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    PushNotificationTypes? type,
-    PushNotificationBody? body,
+@Freezed(unionKey: 'type')
+sealed class PushNotification with _$PushNotification {
+  const factory PushNotification.notification({
+    required PushNotificationBody body,
     String? userId,
     @EpocTimeDateTimeConverter() DateTime? dateTime,
-  }) = _PushNotification;
+  }) = NotificationPushNotification;
+
+  const factory PushNotification.readAllNotifications({
+    String? userId,
+    @EpocTimeDateTimeConverter() DateTime? dateTime,
+  }) = ReadAllNotificationsPushNotification;
+
+  const factory PushNotification.newChatMessage({
+    required ChatMessage body,
+    String? userId,
+    @EpocTimeDateTimeConverter() DateTime? dateTime,
+  }) = NewChatMessagePushNotification;
 
   factory PushNotification.fromJson(Map<String, Object?> json) =>
       _$PushNotificationFromJson(json);
 }
-
-enum PushNotificationTypes { notification, readAllNotifications }
 
 @freezed
 abstract class PushNotificationBody with _$PushNotificationBody {
@@ -76,11 +82,11 @@ abstract class PushNotificationNote with _$PushNotificationNote {
     @Default(0) int renoteCount,
     @Default(0) int repliesCount,
     int? reactionCount,
-    required Map<String, int> reactions,
+    @Default({}) Map<String, int> reactions,
     @EmojisConverter() @Default({}) Map<String, String> reactionEmojis,
     @EmojisConverter() @Default({}) Map<String, String> emojis,
-    required List<String> fileIds,
-    required List<DriveFile> files,
+    @Default([]) List<String> fileIds,
+    @Default([]) List<DriveFile> files,
     String? replyId,
     String? renoteId,
     String? channelId,
