@@ -23,6 +23,7 @@ abstract class NotesScheduleCreateRequest with _$NotesScheduleCreateRequest {
     List<String>? fileIds,
     List<String>? mediaIds,
     String? channelId,
+    bool? localOnly,
     NotesCreatePollRequest? poll,
     Map<String, dynamic>? event,
     required ScheduleNote scheduleNote,

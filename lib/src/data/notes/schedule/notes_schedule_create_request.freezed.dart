@@ -16,7 +16,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$NotesScheduleCreateRequest {
 
- NoteVisibility? get visibility; List<String>? get visibleUserIds; String? get cw; ReactionAcceptance? get reactionAcceptance; bool? get disableRightClick; bool? get noExtractMentions; bool? get noExtractHashtags; bool? get noExtractEmojis; String? get replyId; String? get renoteId; String? get text; List<String>? get fileIds; List<String>? get mediaIds; String? get channelId; NotesCreatePollRequest? get poll; Map<String, dynamic>? get event; ScheduleNote get scheduleNote; ScheduledDelete? get scheduledDelete;
+ NoteVisibility? get visibility; List<String>? get visibleUserIds; String? get cw; ReactionAcceptance? get reactionAcceptance; bool? get disableRightClick; bool? get noExtractMentions; bool? get noExtractHashtags; bool? get noExtractEmojis; String? get replyId; String? get renoteId; String? get text; List<String>? get fileIds; List<String>? get mediaIds; String? get channelId; bool? get localOnly; NotesCreatePollRequest? get poll; Map<String, dynamic>? get event; ScheduleNote get scheduleNote; ScheduledDelete? get scheduledDelete;
 /// Create a copy of NotesScheduleCreateRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -29,16 +29,16 @@ $NotesScheduleCreateRequestCopyWith<NotesScheduleCreateRequest> get copyWith => 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesScheduleCreateRequest&&(identical(other.visibility, visibility) || other.visibility == visibility)&&const DeepCollectionEquality().equals(other.visibleUserIds, visibleUserIds)&&(identical(other.cw, cw) || other.cw == cw)&&(identical(other.reactionAcceptance, reactionAcceptance) || other.reactionAcceptance == reactionAcceptance)&&(identical(other.disableRightClick, disableRightClick) || other.disableRightClick == disableRightClick)&&(identical(other.noExtractMentions, noExtractMentions) || other.noExtractMentions == noExtractMentions)&&(identical(other.noExtractHashtags, noExtractHashtags) || other.noExtractHashtags == noExtractHashtags)&&(identical(other.noExtractEmojis, noExtractEmojis) || other.noExtractEmojis == noExtractEmojis)&&(identical(other.replyId, replyId) || other.replyId == replyId)&&(identical(other.renoteId, renoteId) || other.renoteId == renoteId)&&(identical(other.text, text) || other.text == text)&&const DeepCollectionEquality().equals(other.fileIds, fileIds)&&const DeepCollectionEquality().equals(other.mediaIds, mediaIds)&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.poll, poll) || other.poll == poll)&&const DeepCollectionEquality().equals(other.event, event)&&(identical(other.scheduleNote, scheduleNote) || other.scheduleNote == scheduleNote)&&(identical(other.scheduledDelete, scheduledDelete) || other.scheduledDelete == scheduledDelete));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesScheduleCreateRequest&&(identical(other.visibility, visibility) || other.visibility == visibility)&&const DeepCollectionEquality().equals(other.visibleUserIds, visibleUserIds)&&(identical(other.cw, cw) || other.cw == cw)&&(identical(other.reactionAcceptance, reactionAcceptance) || other.reactionAcceptance == reactionAcceptance)&&(identical(other.disableRightClick, disableRightClick) || other.disableRightClick == disableRightClick)&&(identical(other.noExtractMentions, noExtractMentions) || other.noExtractMentions == noExtractMentions)&&(identical(other.noExtractHashtags, noExtractHashtags) || other.noExtractHashtags == noExtractHashtags)&&(identical(other.noExtractEmojis, noExtractEmojis) || other.noExtractEmojis == noExtractEmojis)&&(identical(other.replyId, replyId) || other.replyId == replyId)&&(identical(other.renoteId, renoteId) || other.renoteId == renoteId)&&(identical(other.text, text) || other.text == text)&&const DeepCollectionEquality().equals(other.fileIds, fileIds)&&const DeepCollectionEquality().equals(other.mediaIds, mediaIds)&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&(identical(other.poll, poll) || other.poll == poll)&&const DeepCollectionEquality().equals(other.event, event)&&(identical(other.scheduleNote, scheduleNote) || other.scheduleNote == scheduleNote)&&(identical(other.scheduledDelete, scheduledDelete) || other.scheduledDelete == scheduledDelete));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,visibility,const DeepCollectionEquality().hash(visibleUserIds),cw,reactionAcceptance,disableRightClick,noExtractMentions,noExtractHashtags,noExtractEmojis,replyId,renoteId,text,const DeepCollectionEquality().hash(fileIds),const DeepCollectionEquality().hash(mediaIds),channelId,poll,const DeepCollectionEquality().hash(event),scheduleNote,scheduledDelete);
+int get hashCode => Object.hashAll([runtimeType,visibility,const DeepCollectionEquality().hash(visibleUserIds),cw,reactionAcceptance,disableRightClick,noExtractMentions,noExtractHashtags,noExtractEmojis,replyId,renoteId,text,const DeepCollectionEquality().hash(fileIds),const DeepCollectionEquality().hash(mediaIds),channelId,localOnly,poll,const DeepCollectionEquality().hash(event),scheduleNote,scheduledDelete]);
 
 @override
 String toString() {
-  return 'NotesScheduleCreateRequest(visibility: $visibility, visibleUserIds: $visibleUserIds, cw: $cw, reactionAcceptance: $reactionAcceptance, disableRightClick: $disableRightClick, noExtractMentions: $noExtractMentions, noExtractHashtags: $noExtractHashtags, noExtractEmojis: $noExtractEmojis, replyId: $replyId, renoteId: $renoteId, text: $text, fileIds: $fileIds, mediaIds: $mediaIds, channelId: $channelId, poll: $poll, event: $event, scheduleNote: $scheduleNote, scheduledDelete: $scheduledDelete)';
+  return 'NotesScheduleCreateRequest(visibility: $visibility, visibleUserIds: $visibleUserIds, cw: $cw, reactionAcceptance: $reactionAcceptance, disableRightClick: $disableRightClick, noExtractMentions: $noExtractMentions, noExtractHashtags: $noExtractHashtags, noExtractEmojis: $noExtractEmojis, replyId: $replyId, renoteId: $renoteId, text: $text, fileIds: $fileIds, mediaIds: $mediaIds, channelId: $channelId, localOnly: $localOnly, poll: $poll, event: $event, scheduleNote: $scheduleNote, scheduledDelete: $scheduledDelete)';
 }
 
 
@@ -49,7 +49,7 @@ abstract mixin class $NotesScheduleCreateRequestCopyWith<$Res>  {
   factory $NotesScheduleCreateRequestCopyWith(NotesScheduleCreateRequest value, $Res Function(NotesScheduleCreateRequest) _then) = _$NotesScheduleCreateRequestCopyWithImpl;
 @useResult
 $Res call({
- NoteVisibility? visibility, List<String>? visibleUserIds, String? cw, ReactionAcceptance? reactionAcceptance, bool? disableRightClick, bool? noExtractMentions, bool? noExtractHashtags, bool? noExtractEmojis, String? replyId, String? renoteId, String? text, List<String>? fileIds, List<String>? mediaIds, String? channelId, NotesCreatePollRequest? poll, Map<String, dynamic>? event, ScheduleNote scheduleNote, ScheduledDelete? scheduledDelete
+ NoteVisibility? visibility, List<String>? visibleUserIds, String? cw, ReactionAcceptance? reactionAcceptance, bool? disableRightClick, bool? noExtractMentions, bool? noExtractHashtags, bool? noExtractEmojis, String? replyId, String? renoteId, String? text, List<String>? fileIds, List<String>? mediaIds, String? channelId, bool? localOnly, NotesCreatePollRequest? poll, Map<String, dynamic>? event, ScheduleNote scheduleNote, ScheduledDelete? scheduledDelete
 });
 
 
@@ -66,7 +66,7 @@ class _$NotesScheduleCreateRequestCopyWithImpl<$Res>
 
 /// Create a copy of NotesScheduleCreateRequest
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? visibility = freezed,Object? visibleUserIds = freezed,Object? cw = freezed,Object? reactionAcceptance = freezed,Object? disableRightClick = freezed,Object? noExtractMentions = freezed,Object? noExtractHashtags = freezed,Object? noExtractEmojis = freezed,Object? replyId = freezed,Object? renoteId = freezed,Object? text = freezed,Object? fileIds = freezed,Object? mediaIds = freezed,Object? channelId = freezed,Object? poll = freezed,Object? event = freezed,Object? scheduleNote = null,Object? scheduledDelete = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? visibility = freezed,Object? visibleUserIds = freezed,Object? cw = freezed,Object? reactionAcceptance = freezed,Object? disableRightClick = freezed,Object? noExtractMentions = freezed,Object? noExtractHashtags = freezed,Object? noExtractEmojis = freezed,Object? replyId = freezed,Object? renoteId = freezed,Object? text = freezed,Object? fileIds = freezed,Object? mediaIds = freezed,Object? channelId = freezed,Object? localOnly = freezed,Object? poll = freezed,Object? event = freezed,Object? scheduleNote = null,Object? scheduledDelete = freezed,}) {
   return _then(_self.copyWith(
 visibility: freezed == visibility ? _self.visibility : visibility // ignore: cast_nullable_to_non_nullable
 as NoteVisibility?,visibleUserIds: freezed == visibleUserIds ? _self.visibleUserIds : visibleUserIds // ignore: cast_nullable_to_non_nullable
@@ -82,7 +82,8 @@ as String?,text: freezed == text ? _self.text : text // ignore: cast_nullable_to
 as String?,fileIds: freezed == fileIds ? _self.fileIds : fileIds // ignore: cast_nullable_to_non_nullable
 as List<String>?,mediaIds: freezed == mediaIds ? _self.mediaIds : mediaIds // ignore: cast_nullable_to_non_nullable
 as List<String>?,channelId: freezed == channelId ? _self.channelId : channelId // ignore: cast_nullable_to_non_nullable
-as String?,poll: freezed == poll ? _self.poll : poll // ignore: cast_nullable_to_non_nullable
+as String?,localOnly: freezed == localOnly ? _self.localOnly : localOnly // ignore: cast_nullable_to_non_nullable
+as bool?,poll: freezed == poll ? _self.poll : poll // ignore: cast_nullable_to_non_nullable
 as NotesCreatePollRequest?,event: freezed == event ? _self.event : event // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,scheduleNote: null == scheduleNote ? _self.scheduleNote : scheduleNote // ignore: cast_nullable_to_non_nullable
 as ScheduleNote,scheduledDelete: freezed == scheduledDelete ? _self.scheduledDelete : scheduledDelete // ignore: cast_nullable_to_non_nullable
@@ -130,7 +131,7 @@ $ScheduledDeleteCopyWith<$Res>? get scheduledDelete {
 @JsonSerializable()
 
 class _NotesScheduleCreateRequest implements NotesScheduleCreateRequest {
-  const _NotesScheduleCreateRequest({this.visibility, final  List<String>? visibleUserIds, this.cw, this.reactionAcceptance, this.disableRightClick, this.noExtractMentions, this.noExtractHashtags, this.noExtractEmojis, this.replyId, this.renoteId, this.text, final  List<String>? fileIds, final  List<String>? mediaIds, this.channelId, this.poll, final  Map<String, dynamic>? event, required this.scheduleNote, this.scheduledDelete}): _visibleUserIds = visibleUserIds,_fileIds = fileIds,_mediaIds = mediaIds,_event = event;
+  const _NotesScheduleCreateRequest({this.visibility, final  List<String>? visibleUserIds, this.cw, this.reactionAcceptance, this.disableRightClick, this.noExtractMentions, this.noExtractHashtags, this.noExtractEmojis, this.replyId, this.renoteId, this.text, final  List<String>? fileIds, final  List<String>? mediaIds, this.channelId, this.localOnly, this.poll, final  Map<String, dynamic>? event, required this.scheduleNote, this.scheduledDelete}): _visibleUserIds = visibleUserIds,_fileIds = fileIds,_mediaIds = mediaIds,_event = event;
   factory _NotesScheduleCreateRequest.fromJson(Map<String, dynamic> json) => _$NotesScheduleCreateRequestFromJson(json);
 
 @override final  NoteVisibility? visibility;
@@ -171,6 +172,7 @@ class _NotesScheduleCreateRequest implements NotesScheduleCreateRequest {
 }
 
 @override final  String? channelId;
+@override final  bool? localOnly;
 @override final  NotesCreatePollRequest? poll;
  final  Map<String, dynamic>? _event;
 @override Map<String, dynamic>? get event {
@@ -197,16 +199,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesScheduleCreateRequest&&(identical(other.visibility, visibility) || other.visibility == visibility)&&const DeepCollectionEquality().equals(other._visibleUserIds, _visibleUserIds)&&(identical(other.cw, cw) || other.cw == cw)&&(identical(other.reactionAcceptance, reactionAcceptance) || other.reactionAcceptance == reactionAcceptance)&&(identical(other.disableRightClick, disableRightClick) || other.disableRightClick == disableRightClick)&&(identical(other.noExtractMentions, noExtractMentions) || other.noExtractMentions == noExtractMentions)&&(identical(other.noExtractHashtags, noExtractHashtags) || other.noExtractHashtags == noExtractHashtags)&&(identical(other.noExtractEmojis, noExtractEmojis) || other.noExtractEmojis == noExtractEmojis)&&(identical(other.replyId, replyId) || other.replyId == replyId)&&(identical(other.renoteId, renoteId) || other.renoteId == renoteId)&&(identical(other.text, text) || other.text == text)&&const DeepCollectionEquality().equals(other._fileIds, _fileIds)&&const DeepCollectionEquality().equals(other._mediaIds, _mediaIds)&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.poll, poll) || other.poll == poll)&&const DeepCollectionEquality().equals(other._event, _event)&&(identical(other.scheduleNote, scheduleNote) || other.scheduleNote == scheduleNote)&&(identical(other.scheduledDelete, scheduledDelete) || other.scheduledDelete == scheduledDelete));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesScheduleCreateRequest&&(identical(other.visibility, visibility) || other.visibility == visibility)&&const DeepCollectionEquality().equals(other._visibleUserIds, _visibleUserIds)&&(identical(other.cw, cw) || other.cw == cw)&&(identical(other.reactionAcceptance, reactionAcceptance) || other.reactionAcceptance == reactionAcceptance)&&(identical(other.disableRightClick, disableRightClick) || other.disableRightClick == disableRightClick)&&(identical(other.noExtractMentions, noExtractMentions) || other.noExtractMentions == noExtractMentions)&&(identical(other.noExtractHashtags, noExtractHashtags) || other.noExtractHashtags == noExtractHashtags)&&(identical(other.noExtractEmojis, noExtractEmojis) || other.noExtractEmojis == noExtractEmojis)&&(identical(other.replyId, replyId) || other.replyId == replyId)&&(identical(other.renoteId, renoteId) || other.renoteId == renoteId)&&(identical(other.text, text) || other.text == text)&&const DeepCollectionEquality().equals(other._fileIds, _fileIds)&&const DeepCollectionEquality().equals(other._mediaIds, _mediaIds)&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&(identical(other.poll, poll) || other.poll == poll)&&const DeepCollectionEquality().equals(other._event, _event)&&(identical(other.scheduleNote, scheduleNote) || other.scheduleNote == scheduleNote)&&(identical(other.scheduledDelete, scheduledDelete) || other.scheduledDelete == scheduledDelete));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,visibility,const DeepCollectionEquality().hash(_visibleUserIds),cw,reactionAcceptance,disableRightClick,noExtractMentions,noExtractHashtags,noExtractEmojis,replyId,renoteId,text,const DeepCollectionEquality().hash(_fileIds),const DeepCollectionEquality().hash(_mediaIds),channelId,poll,const DeepCollectionEquality().hash(_event),scheduleNote,scheduledDelete);
+int get hashCode => Object.hashAll([runtimeType,visibility,const DeepCollectionEquality().hash(_visibleUserIds),cw,reactionAcceptance,disableRightClick,noExtractMentions,noExtractHashtags,noExtractEmojis,replyId,renoteId,text,const DeepCollectionEquality().hash(_fileIds),const DeepCollectionEquality().hash(_mediaIds),channelId,localOnly,poll,const DeepCollectionEquality().hash(_event),scheduleNote,scheduledDelete]);
 
 @override
 String toString() {
-  return 'NotesScheduleCreateRequest(visibility: $visibility, visibleUserIds: $visibleUserIds, cw: $cw, reactionAcceptance: $reactionAcceptance, disableRightClick: $disableRightClick, noExtractMentions: $noExtractMentions, noExtractHashtags: $noExtractHashtags, noExtractEmojis: $noExtractEmojis, replyId: $replyId, renoteId: $renoteId, text: $text, fileIds: $fileIds, mediaIds: $mediaIds, channelId: $channelId, poll: $poll, event: $event, scheduleNote: $scheduleNote, scheduledDelete: $scheduledDelete)';
+  return 'NotesScheduleCreateRequest(visibility: $visibility, visibleUserIds: $visibleUserIds, cw: $cw, reactionAcceptance: $reactionAcceptance, disableRightClick: $disableRightClick, noExtractMentions: $noExtractMentions, noExtractHashtags: $noExtractHashtags, noExtractEmojis: $noExtractEmojis, replyId: $replyId, renoteId: $renoteId, text: $text, fileIds: $fileIds, mediaIds: $mediaIds, channelId: $channelId, localOnly: $localOnly, poll: $poll, event: $event, scheduleNote: $scheduleNote, scheduledDelete: $scheduledDelete)';
 }
 
 
@@ -217,7 +219,7 @@ abstract mixin class _$NotesScheduleCreateRequestCopyWith<$Res> implements $Note
   factory _$NotesScheduleCreateRequestCopyWith(_NotesScheduleCreateRequest value, $Res Function(_NotesScheduleCreateRequest) _then) = __$NotesScheduleCreateRequestCopyWithImpl;
 @override @useResult
 $Res call({
- NoteVisibility? visibility, List<String>? visibleUserIds, String? cw, ReactionAcceptance? reactionAcceptance, bool? disableRightClick, bool? noExtractMentions, bool? noExtractHashtags, bool? noExtractEmojis, String? replyId, String? renoteId, String? text, List<String>? fileIds, List<String>? mediaIds, String? channelId, NotesCreatePollRequest? poll, Map<String, dynamic>? event, ScheduleNote scheduleNote, ScheduledDelete? scheduledDelete
+ NoteVisibility? visibility, List<String>? visibleUserIds, String? cw, ReactionAcceptance? reactionAcceptance, bool? disableRightClick, bool? noExtractMentions, bool? noExtractHashtags, bool? noExtractEmojis, String? replyId, String? renoteId, String? text, List<String>? fileIds, List<String>? mediaIds, String? channelId, bool? localOnly, NotesCreatePollRequest? poll, Map<String, dynamic>? event, ScheduleNote scheduleNote, ScheduledDelete? scheduledDelete
 });
 
 
@@ -234,7 +236,7 @@ class __$NotesScheduleCreateRequestCopyWithImpl<$Res>
 
 /// Create a copy of NotesScheduleCreateRequest
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? visibility = freezed,Object? visibleUserIds = freezed,Object? cw = freezed,Object? reactionAcceptance = freezed,Object? disableRightClick = freezed,Object? noExtractMentions = freezed,Object? noExtractHashtags = freezed,Object? noExtractEmojis = freezed,Object? replyId = freezed,Object? renoteId = freezed,Object? text = freezed,Object? fileIds = freezed,Object? mediaIds = freezed,Object? channelId = freezed,Object? poll = freezed,Object? event = freezed,Object? scheduleNote = null,Object? scheduledDelete = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? visibility = freezed,Object? visibleUserIds = freezed,Object? cw = freezed,Object? reactionAcceptance = freezed,Object? disableRightClick = freezed,Object? noExtractMentions = freezed,Object? noExtractHashtags = freezed,Object? noExtractEmojis = freezed,Object? replyId = freezed,Object? renoteId = freezed,Object? text = freezed,Object? fileIds = freezed,Object? mediaIds = freezed,Object? channelId = freezed,Object? localOnly = freezed,Object? poll = freezed,Object? event = freezed,Object? scheduleNote = null,Object? scheduledDelete = freezed,}) {
   return _then(_NotesScheduleCreateRequest(
 visibility: freezed == visibility ? _self.visibility : visibility // ignore: cast_nullable_to_non_nullable
 as NoteVisibility?,visibleUserIds: freezed == visibleUserIds ? _self._visibleUserIds : visibleUserIds // ignore: cast_nullable_to_non_nullable
@@ -250,7 +252,8 @@ as String?,text: freezed == text ? _self.text : text // ignore: cast_nullable_to
 as String?,fileIds: freezed == fileIds ? _self._fileIds : fileIds // ignore: cast_nullable_to_non_nullable
 as List<String>?,mediaIds: freezed == mediaIds ? _self._mediaIds : mediaIds // ignore: cast_nullable_to_non_nullable
 as List<String>?,channelId: freezed == channelId ? _self.channelId : channelId // ignore: cast_nullable_to_non_nullable
-as String?,poll: freezed == poll ? _self.poll : poll // ignore: cast_nullable_to_non_nullable
+as String?,localOnly: freezed == localOnly ? _self.localOnly : localOnly // ignore: cast_nullable_to_non_nullable
+as bool?,poll: freezed == poll ? _self.poll : poll // ignore: cast_nullable_to_non_nullable
 as NotesCreatePollRequest?,event: freezed == event ? _self._event : event // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,scheduleNote: null == scheduleNote ? _self.scheduleNote : scheduleNote // ignore: cast_nullable_to_non_nullable
 as ScheduleNote,scheduledDelete: freezed == scheduledDelete ? _self.scheduledDelete : scheduledDelete // ignore: cast_nullable_to_non_nullable

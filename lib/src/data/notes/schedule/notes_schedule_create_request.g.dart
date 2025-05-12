@@ -39,6 +39,7 @@ _NotesScheduleCreateRequest _$NotesScheduleCreateRequestFromJson(
       (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
     ),
     channelId: $checkedConvert('channelId', (v) => v as String?),
+    localOnly: $checkedConvert('localOnly', (v) => v as bool?),
     poll: $checkedConvert(
       'poll',
       (v) =>
@@ -80,6 +81,7 @@ Map<String, dynamic> _$NotesScheduleCreateRequestToJson(
   'fileIds': instance.fileIds,
   'mediaIds': instance.mediaIds,
   'channelId': instance.channelId,
+  'localOnly': instance.localOnly,
   'poll': instance.poll?.toJson(),
   'event': instance.event,
   'scheduleNote': instance.scheduleNote.toJson(),
