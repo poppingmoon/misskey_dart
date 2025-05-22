@@ -223,7 +223,7 @@ class MisskeyNotes {
     final response = await _apiService.post<Map<String, dynamic>>(
       "notes/edit",
       request.toJson(),
-      excludeRemoveNullPredicate: (key, __) => key == "text" || key == "cw",
+      excludeRemoveNullPredicate: (key, _) => key == "text" || key == "cw",
     );
     return Note.fromJson(response["createdNote"] ?? response);
   }
