@@ -6,63 +6,63 @@ part of 'page.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_Page _$PageFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate('_Page', json, ($checkedConvert) {
-  final val = _Page(
-    id: $checkedConvert('id', (v) => v as String),
-    createdAt: $checkedConvert(
-      'createdAt',
-      (v) => const DateTimeConverter().fromJson(v as String),
-    ),
-    updatedAt: $checkedConvert(
-      'updatedAt',
-      (v) => const DateTimeConverter().fromJson(v as String),
-    ),
-    userId: $checkedConvert('userId', (v) => v as String),
-    user: $checkedConvert(
-      'user',
-      (v) => UserLite.fromJson(v as Map<String, dynamic>),
-    ),
-    content: $checkedConvert(
-      'content',
-      (v) => const ListPageContentConverter().fromJson(v as List?),
-    ),
-    variables: $checkedConvert(
-      'variables',
-      (v) =>
-          (v as List<dynamic>?)?.map((e) => e as Map<String, dynamic>).toList(),
-    ),
-    title: $checkedConvert('title', (v) => v as String),
-    name: $checkedConvert('name', (v) => v as String),
-    summary: $checkedConvert('summary', (v) => v as String?),
-    hideTitleWhenPinned: $checkedConvert(
-      'hideTitleWhenPinned',
-      (v) => v as bool?,
-    ),
-    alignCenter: $checkedConvert('alignCenter', (v) => v as bool?),
-    font: $checkedConvert('font', (v) => v as String?),
-    script: $checkedConvert('script', (v) => v as String?),
-    eyeCatchingImageId: $checkedConvert(
-      'eyeCatchingImageId',
-      (v) => v as String?,
-    ),
-    eyeCatchingImage: $checkedConvert(
-      'eyeCatchingImage',
-      (v) => v == null ? null : DriveFile.fromJson(v as Map<String, dynamic>),
-    ),
-    attachedFiles: $checkedConvert(
-      'attachedFiles',
-      (v) =>
-          (v as List<dynamic>?)
+_Page _$PageFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_Page', json, ($checkedConvert) {
+      final val = _Page(
+        id: $checkedConvert('id', (v) => v as String),
+        createdAt: $checkedConvert(
+          'createdAt',
+          (v) => const DateTimeConverter().fromJson(v as String),
+        ),
+        updatedAt: $checkedConvert(
+          'updatedAt',
+          (v) => const DateTimeConverter().fromJson(v as String),
+        ),
+        userId: $checkedConvert('userId', (v) => v as String),
+        user: $checkedConvert(
+          'user',
+          (v) => UserLite.fromJson(v as Map<String, dynamic>),
+        ),
+        content: $checkedConvert(
+          'content',
+          (v) => const ListPageContentConverter().fromJson(v as List?),
+        ),
+        variables: $checkedConvert(
+          'variables',
+          (v) => (v as List<dynamic>?)
+              ?.map((e) => e as Map<String, dynamic>)
+              .toList(),
+        ),
+        title: $checkedConvert('title', (v) => v as String),
+        name: $checkedConvert('name', (v) => v as String),
+        summary: $checkedConvert('summary', (v) => v as String?),
+        hideTitleWhenPinned: $checkedConvert(
+          'hideTitleWhenPinned',
+          (v) => v as bool?,
+        ),
+        alignCenter: $checkedConvert('alignCenter', (v) => v as bool?),
+        font: $checkedConvert('font', (v) => v as String?),
+        script: $checkedConvert('script', (v) => v as String?),
+        eyeCatchingImageId: $checkedConvert(
+          'eyeCatchingImageId',
+          (v) => v as String?,
+        ),
+        eyeCatchingImage: $checkedConvert(
+          'eyeCatchingImage',
+          (v) =>
+              v == null ? null : DriveFile.fromJson(v as Map<String, dynamic>),
+        ),
+        attachedFiles: $checkedConvert(
+          'attachedFiles',
+          (v) => (v as List<dynamic>?)
               ?.map((e) => DriveFile.fromJson(e as Map<String, dynamic>))
               .toList(),
-    ),
-    likedCount: $checkedConvert('likedCount', (v) => (v as num?)?.toInt()),
-    isLiked: $checkedConvert('isLiked', (v) => v as bool?),
-  );
-  return val;
-});
+        ),
+        likedCount: $checkedConvert('likedCount', (v) => (v as num?)?.toInt()),
+        isLiked: $checkedConvert('isLiked', (v) => v as bool?),
+      );
+      return val;
+    });
 
 Map<String, dynamic> _$PageToJson(_Page instance) => <String, dynamic>{
   'id': instance.id,

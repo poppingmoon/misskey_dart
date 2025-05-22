@@ -16,17 +16,15 @@ _AntennasUpdateRequest _$AntennasUpdateRequestFromJson(
     userListId: $checkedConvert('userListId', (v) => v as String?),
     keywords: $checkedConvert(
       'keywords',
-      (v) =>
-          (v as List<dynamic>)
-              .map((e) => (e as List<dynamic>).map((e) => e as String).toList())
-              .toList(),
+      (v) => (v as List<dynamic>)
+          .map((e) => (e as List<dynamic>).map((e) => e as String).toList())
+          .toList(),
     ),
     excludeKeywords: $checkedConvert(
       'excludeKeywords',
-      (v) =>
-          (v as List<dynamic>)
-              .map((e) => (e as List<dynamic>).map((e) => e as String).toList())
-              .toList(),
+      (v) => (v as List<dynamic>)
+          .map((e) => (e as List<dynamic>).map((e) => e as String).toList())
+          .toList(),
     ),
     users: $checkedConvert(
       'users',

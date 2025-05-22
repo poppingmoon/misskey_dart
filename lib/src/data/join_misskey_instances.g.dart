@@ -17,13 +17,11 @@ _JoinMisskeyInstances _$JoinMisskeyInstancesFromJson(
     ),
     instancesInfos: $checkedConvert(
       'instancesInfos',
-      (v) =>
-          (v as List<dynamic>)
-              .map(
-                (e) =>
-                    JoinMisskeyInstanceInfo.fromJson(e as Map<String, dynamic>),
-              )
-              .toList(),
+      (v) => (v as List<dynamic>)
+          .map(
+            (e) => JoinMisskeyInstanceInfo.fromJson(e as Map<String, dynamic>),
+          )
+          .toList(),
     ),
   );
   return val;
@@ -77,10 +75,9 @@ _JoinMisskeyInstanceInfo _$JoinMisskeyInstanceInfoFromJson(
     icon: $checkedConvert('icon', (v) => v as bool? ?? false),
     nodeInfo: $checkedConvert(
       'nodeinfo',
-      (v) =>
-          v == null
-              ? null
-              : JoinMisskeyNodeInfo.fromJson(v as Map<String, dynamic>),
+      (v) => v == null
+          ? null
+          : JoinMisskeyNodeInfo.fromJson(v as Map<String, dynamic>),
     ),
     meta: $checkedConvert('meta', (v) => v as Map<String, dynamic>?),
   );
@@ -103,28 +100,25 @@ Map<String, dynamic> _$JoinMisskeyInstanceInfoToJson(
   'meta': instance.meta,
 };
 
-_JoinMisskeyNodeInfo _$JoinMisskeyNodeInfoFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate('_JoinMisskeyNodeInfo', json, ($checkedConvert) {
-  final val = _JoinMisskeyNodeInfo(
-    version: $checkedConvert('version', (v) => v as String?),
-    software: $checkedConvert(
-      'software',
-      (v) =>
-          v == null
+_JoinMisskeyNodeInfo _$JoinMisskeyNodeInfoFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_JoinMisskeyNodeInfo', json, ($checkedConvert) {
+      final val = _JoinMisskeyNodeInfo(
+        version: $checkedConvert('version', (v) => v as String?),
+        software: $checkedConvert(
+          'software',
+          (v) => v == null
               ? null
               : JoinMisskeyNodeInfoSoftware.fromJson(v as Map<String, dynamic>),
-    ),
-    usage: $checkedConvert(
-      'usage',
-      (v) =>
-          v == null
+        ),
+        usage: $checkedConvert(
+          'usage',
+          (v) => v == null
               ? null
               : JoinMisskeyNodeInfoUsage.fromJson(v as Map<String, dynamic>),
-    ),
-  );
-  return val;
-});
+        ),
+      );
+      return val;
+    });
 
 Map<String, dynamic> _$JoinMisskeyNodeInfoToJson(
   _JoinMisskeyNodeInfo instance,
@@ -154,12 +148,9 @@ _JoinMisskeyNodeInfoUsage _$JoinMisskeyNodeInfoUsageFromJson(
   final val = _JoinMisskeyNodeInfoUsage(
     users: $checkedConvert(
       'users',
-      (v) =>
-          v == null
-              ? null
-              : JoinMisskeyNodeInfoUsageUsers.fromJson(
-                v as Map<String, dynamic>,
-              ),
+      (v) => v == null
+          ? null
+          : JoinMisskeyNodeInfoUsageUsers.fromJson(v as Map<String, dynamic>),
     ),
     localPosts: $checkedConvert('localPosts', (v) => (v as num?)?.toInt()),
     localComments: $checkedConvert(

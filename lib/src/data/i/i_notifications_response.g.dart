@@ -50,27 +50,23 @@ _INotificationsResponse _$INotificationsResponseFromJson(
     ),
     role: $checkedConvert(
       'role',
-      (v) =>
-          v == null
-              ? null
-              : RolesListResponse.fromJson(v as Map<String, dynamic>),
+      (v) => v == null
+          ? null
+          : RolesListResponse.fromJson(v as Map<String, dynamic>),
     ),
     reactions: $checkedConvert(
       'reactions',
-      (v) =>
-          (v as List<dynamic>?)
-              ?.map(
-                (e) =>
-                    INotificationsReaction.fromJson(e as Map<String, dynamic>),
-              )
-              .toList(),
+      (v) => (v as List<dynamic>?)
+          ?.map(
+            (e) => INotificationsReaction.fromJson(e as Map<String, dynamic>),
+          )
+          .toList(),
     ),
     users: $checkedConvert(
       'users',
-      (v) =>
-          (v as List<dynamic>?)
-              ?.map((e) => UserLite.fromJson(e as Map<String, dynamic>))
-              .toList(),
+      (v) => (v as List<dynamic>?)
+          ?.map((e) => UserLite.fromJson(e as Map<String, dynamic>))
+          .toList(),
     ),
     exportedEntity: $checkedConvert(
       'exportedEntity',

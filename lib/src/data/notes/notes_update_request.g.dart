@@ -18,10 +18,9 @@ _NotesUpdateRequest _$NotesUpdateRequestFromJson(Map<String, dynamic> json) =>
         ),
         poll: $checkedConvert(
           'poll',
-          (v) =>
-              v == null
-                  ? null
-                  : NotesCreatePollRequest.fromJson(v as Map<String, dynamic>),
+          (v) => v == null
+              ? null
+              : NotesCreatePollRequest.fromJson(v as Map<String, dynamic>),
         ),
       );
       return val;

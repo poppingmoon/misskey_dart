@@ -24,24 +24,21 @@ _ScheduledNote _$ScheduledNoteFromJson(Map<String, dynamic> json) =>
         reason: $checkedConvert('reason', (v) => v as String?),
         channel: $checkedConvert(
           'channel',
-          (v) =>
-              v == null
-                  ? null
-                  : NoteChannelInfo.fromJson(v as Map<String, dynamic>),
+          (v) => v == null
+              ? null
+              : NoteChannelInfo.fromJson(v as Map<String, dynamic>),
         ),
         renote: $checkedConvert(
           'renote',
-          (v) =>
-              v == null
-                  ? null
-                  : ScheduledNoteNote.fromJson(v as Map<String, dynamic>),
+          (v) => v == null
+              ? null
+              : ScheduledNoteNote.fromJson(v as Map<String, dynamic>),
         ),
         reply: $checkedConvert(
           'reply',
-          (v) =>
-              v == null
-                  ? null
-                  : ScheduledNoteNote.fromJson(v as Map<String, dynamic>),
+          (v) => v == null
+              ? null
+              : ScheduledNoteNote.fromJson(v as Map<String, dynamic>),
         ),
         data: $checkedConvert(
           'data',
@@ -106,42 +103,43 @@ Map<String, dynamic> _$ScheduledNoteUserToJson(_ScheduledNoteUser instance) =>
       'host': instance.host,
     };
 
-_ScheduledNoteData _$ScheduledNoteDataFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate('_ScheduledNoteData', json, ($checkedConvert) {
-  final val = _ScheduledNoteData(
-    text: $checkedConvert('text', (v) => v as String?),
-    useCw: $checkedConvert('useCw', (v) => v as bool?),
-    cw: $checkedConvert('cw', (v) => v as String?),
-    visibility: $checkedConvert(
-      'visibility',
-      (v) => $enumDecodeNullable(
-        _$NoteVisibilityEnumMap,
-        v,
-        unknownValue: JsonKey.nullForUndefinedEnumValue,
-      ),
-    ),
-    localOnly: $checkedConvert('localOnly', (v) => v as bool? ?? false),
-    files: $checkedConvert(
-      'files',
-      (v) =>
-          (v as List<dynamic>?)
-              ?.map((e) => DriveFile.fromJson(e as Map<String, dynamic>))
-              .toList() ??
-          const [],
-    ),
-    poll: $checkedConvert(
-      'poll',
-      (v) => v == null ? null : NotePoll.fromJson(v as Map<String, dynamic>),
-    ),
-    visibleUserIds: $checkedConvert(
-      'visibleUserIds',
-      (v) =>
-          (v as List<dynamic>?)?.map((e) => e as String).toList() ?? const [],
-    ),
-  );
-  return val;
-});
+_ScheduledNoteData _$ScheduledNoteDataFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_ScheduledNoteData', json, ($checkedConvert) {
+      final val = _ScheduledNoteData(
+        text: $checkedConvert('text', (v) => v as String?),
+        useCw: $checkedConvert('useCw', (v) => v as bool?),
+        cw: $checkedConvert('cw', (v) => v as String?),
+        visibility: $checkedConvert(
+          'visibility',
+          (v) => $enumDecodeNullable(
+            _$NoteVisibilityEnumMap,
+            v,
+            unknownValue: JsonKey.nullForUndefinedEnumValue,
+          ),
+        ),
+        localOnly: $checkedConvert('localOnly', (v) => v as bool? ?? false),
+        files: $checkedConvert(
+          'files',
+          (v) =>
+              (v as List<dynamic>?)
+                  ?.map((e) => DriveFile.fromJson(e as Map<String, dynamic>))
+                  .toList() ??
+              const [],
+        ),
+        poll: $checkedConvert(
+          'poll',
+          (v) =>
+              v == null ? null : NotePoll.fromJson(v as Map<String, dynamic>),
+        ),
+        visibleUserIds: $checkedConvert(
+          'visibleUserIds',
+          (v) =>
+              (v as List<dynamic>?)?.map((e) => e as String).toList() ??
+              const [],
+        ),
+      );
+      return val;
+    });
 
 Map<String, dynamic> _$ScheduledNoteDataToJson(_ScheduledNoteData instance) =>
     <String, dynamic>{

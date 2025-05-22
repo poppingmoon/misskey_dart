@@ -25,21 +25,18 @@ _IUpdateRequest _$IUpdateRequestFromJson(
     avatarId: $checkedConvert('avatarId', (v) => v as String?),
     avatarDecorations: $checkedConvert(
       'avatarDecorations',
-      (v) =>
-          (v as List<dynamic>?)
-              ?.map(
-                (e) =>
-                    IUpdateAvatarDecoration.fromJson(e as Map<String, dynamic>),
-              )
-              .toList(),
+      (v) => (v as List<dynamic>?)
+          ?.map(
+            (e) => IUpdateAvatarDecoration.fromJson(e as Map<String, dynamic>),
+          )
+          .toList(),
     ),
     bannerId: $checkedConvert('bannerId', (v) => v as String?),
     fields: $checkedConvert(
       'fields',
-      (v) =>
-          (v as List<dynamic>?)
-              ?.map((e) => UserField.fromJson(e as Map<String, dynamic>))
-              .toList(),
+      (v) => (v as List<dynamic>?)
+          ?.map((e) => UserField.fromJson(e as Map<String, dynamic>))
+          .toList(),
     ),
     isLocked: $checkedConvert('isLocked', (v) => v as bool?),
     isExplorable: $checkedConvert('isExplorable', (v) => v as bool?),
@@ -105,17 +102,15 @@ _IUpdateRequest _$IUpdateRequestFromJson(
     ),
     mutedWords: $checkedConvert(
       'mutedWords',
-      (v) =>
-          (v as List<dynamic>?)
-              ?.map(const MuteWordsConverter().fromJson)
-              .toList(),
+      (v) => (v as List<dynamic>?)
+          ?.map(const MuteWordsConverter().fromJson)
+          .toList(),
     ),
     hardMutedWords: $checkedConvert(
       'hardMutedWords',
-      (v) =>
-          (v as List<dynamic>?)
-              ?.map(const MuteWordsConverter().fromJson)
-              .toList(),
+      (v) => (v as List<dynamic>?)
+          ?.map(const MuteWordsConverter().fromJson)
+          .toList(),
     ),
     mutedInstances: $checkedConvert(
       'mutedInstances',
@@ -123,10 +118,9 @@ _IUpdateRequest _$IUpdateRequestFromJson(
     ),
     notificationRecieveConfig: $checkedConvert(
       'notificationRecieveConfig',
-      (v) =>
-          v == null
-              ? null
-              : NotificationRecieveConfigs.fromJson(v as Map<String, dynamic>),
+      (v) => v == null
+          ? null
+          : NotificationRecieveConfigs.fromJson(v as Map<String, dynamic>),
     ),
     emailNotificationTypes: $checkedConvert(
       'emailNotificationTypes',
@@ -138,14 +132,11 @@ _IUpdateRequest _$IUpdateRequestFromJson(
     ),
     mutualLinkSections: $checkedConvert(
       'mutualLinkSections',
-      (v) =>
-          (v as List<dynamic>?)
-              ?.map(
-                (e) => IUpdateMutualLinkSection.fromJson(
-                  e as Map<String, dynamic>,
-                ),
-              )
-              .toList(),
+      (v) => (v as List<dynamic>?)
+          ?.map(
+            (e) => IUpdateMutualLinkSection.fromJson(e as Map<String, dynamic>),
+          )
+          .toList(),
     ),
   );
   return val;
@@ -164,8 +155,9 @@ Map<String, dynamic> _$IUpdateRequestToJson(
   ),
   'lang': instance.lang,
   'avatarId': instance.avatarId,
-  'avatarDecorations':
-      instance.avatarDecorations?.map((e) => e.toJson()).toList(),
+  'avatarDecorations': instance.avatarDecorations
+      ?.map((e) => e.toJson())
+      .toList(),
   'bannerId': instance.bannerId,
   'fields': instance.fields?.map((e) => e.toJson()).toList(),
   'isLocked': instance.isLocked,
@@ -197,16 +189,19 @@ Map<String, dynamic> _$IUpdateRequestToJson(
   'chatScope': _$ChatScopeEnumMap[instance.chatScope],
   'pinnedPageId': instance.pinnedPageId,
   'mutingNotificationTypes': instance.mutingNotificationTypes,
-  'mutedWords':
-      instance.mutedWords?.map(const MuteWordsConverter().toJson).toList(),
-  'hardMutedWords':
-      instance.hardMutedWords?.map(const MuteWordsConverter().toJson).toList(),
+  'mutedWords': instance.mutedWords
+      ?.map(const MuteWordsConverter().toJson)
+      .toList(),
+  'hardMutedWords': instance.hardMutedWords
+      ?.map(const MuteWordsConverter().toJson)
+      .toList(),
   'mutedInstances': instance.mutedInstances,
   'notificationRecieveConfig': instance.notificationRecieveConfig?.toJson(),
   'emailNotificationTypes': instance.emailNotificationTypes,
   'alsoKnownAs': instance.alsoKnownAs,
-  'mutualLinkSections':
-      instance.mutualLinkSections?.map((e) => e.toJson()).toList(),
+  'mutualLinkSections': instance.mutualLinkSections
+      ?.map((e) => e.toJson())
+      .toList(),
 };
 
 Value? _$JsonConverterFromJson<Json, Value>(
@@ -263,10 +258,9 @@ _IUpdateMutualLinkSection _$IUpdateMutualLinkSectionFromJson(
     name: $checkedConvert('name', (v) => v as String?),
     mutualLinks: $checkedConvert(
       'mutualLinks',
-      (v) =>
-          (v as List<dynamic>)
-              .map((e) => IUpdateMutualLink.fromJson(e as Map<String, dynamic>))
-              .toList(),
+      (v) => (v as List<dynamic>)
+          .map((e) => IUpdateMutualLink.fromJson(e as Map<String, dynamic>))
+          .toList(),
     ),
   );
   return val;

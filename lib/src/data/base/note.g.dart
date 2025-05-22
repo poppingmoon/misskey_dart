@@ -111,10 +111,9 @@ _Note _$NoteFromJson(
     myReaction: $checkedConvert('myReaction', (v) => v as String?),
     channel: $checkedConvert(
       'channel',
-      (v) =>
-          v == null
-              ? null
-              : NoteChannelInfo.fromJson(v as Map<String, dynamic>),
+      (v) => v == null
+          ? null
+          : NoteChannelInfo.fromJson(v as Map<String, dynamic>),
     ),
     uri: $checkedConvert(
       'uri',
@@ -221,30 +220,26 @@ Map<String, dynamic> _$NoteChannelInfoToJson(_NoteChannelInfo instance) =>
       'allowRenoteToExternal': instance.allowRenoteToExternal,
     };
 
-_NotePoll _$NotePollFromJson(Map<String, dynamic> json) => $checkedCreate(
-  '_NotePoll',
-  json,
-  ($checkedConvert) {
-    final val = _NotePoll(
-      multiple: $checkedConvert('multiple', (v) => v as bool),
-      expiresAt: $checkedConvert(
-        'expiresAt',
-        (v) => _$JsonConverterFromJson<String, DateTime>(
-          v,
-          const DateTimeConverter().fromJson,
+_NotePoll _$NotePollFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_NotePoll', json, ($checkedConvert) {
+      final val = _NotePoll(
+        multiple: $checkedConvert('multiple', (v) => v as bool),
+        expiresAt: $checkedConvert(
+          'expiresAt',
+          (v) => _$JsonConverterFromJson<String, DateTime>(
+            v,
+            const DateTimeConverter().fromJson,
+          ),
         ),
-      ),
-      choices: $checkedConvert(
-        'choices',
-        (v) =>
-            (v as List<dynamic>)
-                .map((e) => NotePollChoice.fromJson(e as Map<String, dynamic>))
-                .toList(),
-      ),
-    );
-    return val;
-  },
-);
+        choices: $checkedConvert(
+          'choices',
+          (v) => (v as List<dynamic>)
+              .map((e) => NotePollChoice.fromJson(e as Map<String, dynamic>))
+              .toList(),
+        ),
+      );
+      return val;
+    });
 
 Map<String, dynamic> _$NotePollToJson(_NotePoll instance) => <String, dynamic>{
   'multiple': instance.multiple,

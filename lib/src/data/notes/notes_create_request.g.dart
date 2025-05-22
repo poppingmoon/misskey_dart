@@ -41,10 +41,9 @@ _NotesCreateRequest _$NotesCreateRequestFromJson(
     channelId: $checkedConvert('channelId', (v) => v as String?),
     poll: $checkedConvert(
       'poll',
-      (v) =>
-          v == null
-              ? null
-              : NotesCreatePollRequest.fromJson(v as Map<String, dynamic>),
+      (v) => v == null
+          ? null
+          : NotesCreatePollRequest.fromJson(v as Map<String, dynamic>),
     ),
     scheduledAt: $checkedConvert(
       'scheduledAt',

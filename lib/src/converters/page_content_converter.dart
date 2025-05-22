@@ -32,12 +32,9 @@ class ListPageContentConverter
   const ListPageContentConverter();
 
   @override
-  List<AbstractPageContent> fromJson(List? json) =>
-      (json ?? [])
-          .map(
-            (e) => PageContentConverter().fromJson(e as Map<String, dynamic>),
-          )
-          .toList();
+  List<AbstractPageContent> fromJson(List? json) => (json ?? [])
+      .map((e) => PageContentConverter().fromJson(e as Map<String, dynamic>))
+      .toList();
 
   @override
   List toJson(List<AbstractPageContent>? object) =>

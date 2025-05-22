@@ -11,10 +11,9 @@ _EmojisResponse _$EmojisResponseFromJson(Map<String, dynamic> json) =>
       final val = _EmojisResponse(
         emojis: $checkedConvert(
           'emojis',
-          (v) =>
-              (v as List<dynamic>)
-                  .map((e) => Emoji.fromJson(e as Map<String, dynamic>))
-                  .toList(),
+          (v) => (v as List<dynamic>)
+              .map((e) => Emoji.fromJson(e as Map<String, dynamic>))
+              .toList(),
         ),
       );
       return val;

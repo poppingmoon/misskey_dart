@@ -23,10 +23,9 @@ _UsersGetSkebStatusResponse _$UsersGetSkebStatusResponseFromJson(
     ),
     skills: $checkedConvert(
       'skills',
-      (v) =>
-          (v as List<dynamic>)
-              .map((e) => SkebStatusSkill.fromJson(e as Map<String, dynamic>))
-              .toList(),
+      (v) => (v as List<dynamic>)
+          .map((e) => SkebStatusSkill.fromJson(e as Map<String, dynamic>))
+          .toList(),
     ),
   );
   return val;

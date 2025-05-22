@@ -30,10 +30,9 @@ _NotesEditRequest _$NotesEditRequestFromJson(Map<String, dynamic> json) =>
         channelId: $checkedConvert('channelId', (v) => v as String?),
         poll: $checkedConvert(
           'poll',
-          (v) =>
-              v == null
-                  ? null
-                  : NotesCreatePollRequest.fromJson(v as Map<String, dynamic>),
+          (v) => v == null
+              ? null
+              : NotesCreatePollRequest.fromJson(v as Map<String, dynamic>),
         ),
       );
       return val;

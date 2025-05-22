@@ -6,50 +6,54 @@ part of 'chat_message.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ChatMessage _$ChatMessageFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate('_ChatMessage', json, ($checkedConvert) {
-  final val = _ChatMessage(
-    id: $checkedConvert('id', (v) => v as String),
-    createdAt: $checkedConvert(
-      'createdAt',
-      (v) => const DateTimeConverter().fromJson(v as String),
-    ),
-    text: $checkedConvert('text', (v) => v as String?),
-    fromUserId: $checkedConvert('fromUserId', (v) => v as String),
-    fromUser: $checkedConvert(
-      'fromUser',
-      (v) => v == null ? null : UserLite.fromJson(v as Map<String, dynamic>),
-    ),
-    toUserId: $checkedConvert('toUserId', (v) => v as String?),
-    toUser: $checkedConvert(
-      'toUser',
-      (v) => v == null ? null : UserLite.fromJson(v as Map<String, dynamic>),
-    ),
-    toRoomId: $checkedConvert('toRoomId', (v) => v as String?),
-    toRoom: $checkedConvert(
-      'toRoom',
-      (v) => v == null ? null : ChatRoom.fromJson(v as Map<String, dynamic>),
-    ),
-    fileId: $checkedConvert('fileId', (v) => v as String?),
-    file: $checkedConvert(
-      'file',
-      (v) => v == null ? null : DriveFile.fromJson(v as Map<String, dynamic>),
-    ),
-    isRead: $checkedConvert('isRead', (v) => v as bool?),
-    reactions: $checkedConvert(
-      'reactions',
-      (v) =>
-          (v as List<dynamic>?)
-              ?.map(
-                (e) => ChatMessageReaction.fromJson(e as Map<String, dynamic>),
-              )
-              .toList() ??
-          const [],
-    ),
-  );
-  return val;
-});
+_ChatMessage _$ChatMessageFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_ChatMessage', json, ($checkedConvert) {
+      final val = _ChatMessage(
+        id: $checkedConvert('id', (v) => v as String),
+        createdAt: $checkedConvert(
+          'createdAt',
+          (v) => const DateTimeConverter().fromJson(v as String),
+        ),
+        text: $checkedConvert('text', (v) => v as String?),
+        fromUserId: $checkedConvert('fromUserId', (v) => v as String),
+        fromUser: $checkedConvert(
+          'fromUser',
+          (v) =>
+              v == null ? null : UserLite.fromJson(v as Map<String, dynamic>),
+        ),
+        toUserId: $checkedConvert('toUserId', (v) => v as String?),
+        toUser: $checkedConvert(
+          'toUser',
+          (v) =>
+              v == null ? null : UserLite.fromJson(v as Map<String, dynamic>),
+        ),
+        toRoomId: $checkedConvert('toRoomId', (v) => v as String?),
+        toRoom: $checkedConvert(
+          'toRoom',
+          (v) =>
+              v == null ? null : ChatRoom.fromJson(v as Map<String, dynamic>),
+        ),
+        fileId: $checkedConvert('fileId', (v) => v as String?),
+        file: $checkedConvert(
+          'file',
+          (v) =>
+              v == null ? null : DriveFile.fromJson(v as Map<String, dynamic>),
+        ),
+        isRead: $checkedConvert('isRead', (v) => v as bool?),
+        reactions: $checkedConvert(
+          'reactions',
+          (v) =>
+              (v as List<dynamic>?)
+                  ?.map(
+                    (e) =>
+                        ChatMessageReaction.fromJson(e as Map<String, dynamic>),
+                  )
+                  .toList() ??
+              const [],
+        ),
+      );
+      return val;
+    });
 
 Map<String, dynamic> _$ChatMessageToJson(_ChatMessage instance) =>
     <String, dynamic>{

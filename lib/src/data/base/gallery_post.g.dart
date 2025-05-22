@@ -26,10 +26,9 @@ _GalleryPost _$GalleryPostFromJson(
     ),
     files: $checkedConvert(
       'files',
-      (v) =>
-          (v as List<dynamic>)
-              .map((e) => DriveFile.fromJson(e as Map<String, dynamic>))
-              .toList(),
+      (v) => (v as List<dynamic>)
+          .map((e) => DriveFile.fromJson(e as Map<String, dynamic>))
+          .toList(),
     ),
     tags: $checkedConvert(
       'tags',

@@ -14,10 +14,9 @@ _IRegistryScopesWithDomainResponse _$IRegistryScopesWithDomainResponseFromJson(
   final val = _IRegistryScopesWithDomainResponse(
     scopes: $checkedConvert(
       'scopes',
-      (v) =>
-          (v as List<dynamic>)
-              .map((e) => (e as List<dynamic>).map((e) => e as String).toList())
-              .toList(),
+      (v) => (v as List<dynamic>)
+          .map((e) => (e as List<dynamic>).map((e) => e as String).toList())
+          .toList(),
     ),
     domain: $checkedConvert('domain', (v) => v as String?),
   );

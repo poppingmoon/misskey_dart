@@ -111,12 +111,9 @@ _TimelineReacted _$TimelineReactedFromJson(Map<String, dynamic> json) =>
         reaction: $checkedConvert('reaction', (v) => v as String),
         emoji: $checkedConvert(
           'emoji',
-          (v) =>
-              v == null
-                  ? null
-                  : TimelineReactedEmojiData.fromJson(
-                    v as Map<String, dynamic>,
-                  ),
+          (v) => v == null
+              ? null
+              : TimelineReactedEmojiData.fromJson(v as Map<String, dynamic>),
         ),
         userId: $checkedConvert('userId', (v) => v as String),
       );
@@ -275,21 +272,19 @@ Map<String, dynamic> _$QueueStatsLogResponseDataToJson(
   'delayed': instance.delayed,
 };
 
-_ChatReact _$ChatReactFromJson(Map<String, dynamic> json) => $checkedCreate(
-  '_ChatReact',
-  json,
-  ($checkedConvert) {
-    final val = _ChatReact(
-      reaction: $checkedConvert('reaction', (v) => v as String),
-      user: $checkedConvert(
-        'user',
-        (v) => v == null ? null : UserLite.fromJson(v as Map<String, dynamic>),
-      ),
-      messageId: $checkedConvert('messageId', (v) => v as String),
-    );
-    return val;
-  },
-);
+_ChatReact _$ChatReactFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_ChatReact', json, ($checkedConvert) {
+      final val = _ChatReact(
+        reaction: $checkedConvert('reaction', (v) => v as String),
+        user: $checkedConvert(
+          'user',
+          (v) =>
+              v == null ? null : UserLite.fromJson(v as Map<String, dynamic>),
+        ),
+        messageId: $checkedConvert('messageId', (v) => v as String),
+      );
+      return val;
+    });
 
 Map<String, dynamic> _$ChatReactToJson(_ChatReact instance) =>
     <String, dynamic>{

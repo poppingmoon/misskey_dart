@@ -42,10 +42,9 @@ _NotesScheduleCreateRequest _$NotesScheduleCreateRequestFromJson(
     localOnly: $checkedConvert('localOnly', (v) => v as bool?),
     poll: $checkedConvert(
       'poll',
-      (v) =>
-          v == null
-              ? null
-              : NotesCreatePollRequest.fromJson(v as Map<String, dynamic>),
+      (v) => v == null
+          ? null
+          : NotesCreatePollRequest.fromJson(v as Map<String, dynamic>),
     ),
     event: $checkedConvert('event', (v) => v as Map<String, dynamic>?),
     scheduleNote: $checkedConvert(
@@ -54,10 +53,9 @@ _NotesScheduleCreateRequest _$NotesScheduleCreateRequestFromJson(
     ),
     scheduledDelete: $checkedConvert(
       'scheduledDelete',
-      (v) =>
-          v == null
-              ? null
-              : ScheduledDelete.fromJson(v as Map<String, dynamic>),
+      (v) => v == null
+          ? null
+          : ScheduledDelete.fromJson(v as Map<String, dynamic>),
     ),
   );
   return val;

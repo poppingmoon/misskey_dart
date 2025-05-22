@@ -6,81 +6,83 @@ part of 'user.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_UserLite _$UserLiteFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate('_UserLite', json, ($checkedConvert) {
-  final val = _UserLite(
-    id: $checkedConvert('id', (v) => v as String),
-    name: $checkedConvert('name', (v) => v as String?),
-    username: $checkedConvert('username', (v) => v as String),
-    host: $checkedConvert('host', (v) => v as String?),
-    avatarUrl: $checkedConvert(
-      'avatarUrl',
-      (v) => const NullableUriConverter().fromJson(v as String?),
-    ),
-    avatarBlurhash: $checkedConvert('avatarBlurhash', (v) => v as String?),
-    avatarDecorations: $checkedConvert(
-      'avatarDecorations',
-      (v) =>
-          (v as List<dynamic>?)
-              ?.map(
-                (e) => UserAvatarDecoration.fromJson(e as Map<String, dynamic>),
-              )
-              .toList() ??
-          const [],
-    ),
-    isBot: $checkedConvert('isBot', (v) => v as bool? ?? false),
-    isCat: $checkedConvert('isCat', (v) => v as bool? ?? false),
-    instance: $checkedConvert(
-      'instance',
-      (v) =>
-          v == null
-              ? null
-              : UserInstanceInfo.fromJson(v as Map<String, dynamic>),
-    ),
-    emojis: $checkedConvert(
-      'emojis',
-      (v) => v == null ? const {} : const EmojisConverter().fromJson(v),
-    ),
-    onlineStatus: $checkedConvert(
-      'onlineStatus',
-      (v) => $enumDecodeNullable(
-        _$OnlineStatusEnumMap,
-        v,
-        unknownValue: JsonKey.nullForUndefinedEnumValue,
+_UserLite _$UserLiteFromJson(Map<String, dynamic> json) => $checkedCreate(
+  '_UserLite',
+  json,
+  ($checkedConvert) {
+    final val = _UserLite(
+      id: $checkedConvert('id', (v) => v as String),
+      name: $checkedConvert('name', (v) => v as String?),
+      username: $checkedConvert('username', (v) => v as String),
+      host: $checkedConvert('host', (v) => v as String?),
+      avatarUrl: $checkedConvert(
+        'avatarUrl',
+        (v) => const NullableUriConverter().fromJson(v as String?),
       ),
-    ),
-    badgeRoles: $checkedConvert(
-      'badgeRoles',
-      (v) =>
-          (v as List<dynamic>?)
-              ?.map((e) => UserBadgeRole.fromJson(e as Map<String, dynamic>))
-              .toList() ??
-          const [],
-    ),
-    requireSigninToViewContents: $checkedConvert(
-      'requireSigninToViewContents',
-      (v) => v as bool?,
-    ),
-    makeNotesFollowersOnlyBefore: $checkedConvert(
-      'makeNotesFollowersOnlyBefore',
-      (v) => _$JsonConverterFromJson<int, HideBefore>(
-        v,
-        const HideBeforeConverter().fromJson,
+      avatarBlurhash: $checkedConvert('avatarBlurhash', (v) => v as String?),
+      avatarDecorations: $checkedConvert(
+        'avatarDecorations',
+        (v) =>
+            (v as List<dynamic>?)
+                ?.map(
+                  (e) =>
+                      UserAvatarDecoration.fromJson(e as Map<String, dynamic>),
+                )
+                .toList() ??
+            const [],
       ),
-    ),
-    makeNotesHiddenBefore: $checkedConvert(
-      'makeNotesHiddenBefore',
-      (v) => _$JsonConverterFromJson<int, HideBefore>(
-        v,
-        const HideBeforeConverter().fromJson,
+      isBot: $checkedConvert('isBot', (v) => v as bool? ?? false),
+      isCat: $checkedConvert('isCat', (v) => v as bool? ?? false),
+      instance: $checkedConvert(
+        'instance',
+        (v) => v == null
+            ? null
+            : UserInstanceInfo.fromJson(v as Map<String, dynamic>),
       ),
-    ),
-    speakAsCat: $checkedConvert('speakAsCat', (v) => v as bool?),
-    mandatoryCW: $checkedConvert('mandatoryCW', (v) => v as String?),
-  );
-  return val;
-});
+      emojis: $checkedConvert(
+        'emojis',
+        (v) => v == null ? const {} : const EmojisConverter().fromJson(v),
+      ),
+      onlineStatus: $checkedConvert(
+        'onlineStatus',
+        (v) => $enumDecodeNullable(
+          _$OnlineStatusEnumMap,
+          v,
+          unknownValue: JsonKey.nullForUndefinedEnumValue,
+        ),
+      ),
+      badgeRoles: $checkedConvert(
+        'badgeRoles',
+        (v) =>
+            (v as List<dynamic>?)
+                ?.map((e) => UserBadgeRole.fromJson(e as Map<String, dynamic>))
+                .toList() ??
+            const [],
+      ),
+      requireSigninToViewContents: $checkedConvert(
+        'requireSigninToViewContents',
+        (v) => v as bool?,
+      ),
+      makeNotesFollowersOnlyBefore: $checkedConvert(
+        'makeNotesFollowersOnlyBefore',
+        (v) => _$JsonConverterFromJson<int, HideBefore>(
+          v,
+          const HideBeforeConverter().fromJson,
+        ),
+      ),
+      makeNotesHiddenBefore: $checkedConvert(
+        'makeNotesHiddenBefore',
+        (v) => _$JsonConverterFromJson<int, HideBefore>(
+          v,
+          const HideBeforeConverter().fromJson,
+        ),
+      ),
+      speakAsCat: $checkedConvert('speakAsCat', (v) => v as bool?),
+      mandatoryCW: $checkedConvert('mandatoryCW', (v) => v as String?),
+    );
+    return val;
+  },
+);
 
 Map<String, dynamic> _$UserLiteToJson(_UserLite instance) => <String, dynamic>{
   'id': instance.id,
@@ -89,8 +91,9 @@ Map<String, dynamic> _$UserLiteToJson(_UserLite instance) => <String, dynamic>{
   'host': instance.host,
   'avatarUrl': const NullableUriConverter().toJson(instance.avatarUrl),
   'avatarBlurhash': instance.avatarBlurhash,
-  'avatarDecorations':
-      instance.avatarDecorations.map((e) => e.toJson()).toList(),
+  'avatarDecorations': instance.avatarDecorations
+      .map((e) => e.toJson())
+      .toList(),
   'isBot': instance.isBot,
   'isCat': instance.isCat,
   'instance': instance.instance?.toJson(),
@@ -154,10 +157,9 @@ _UserDetailedNotMe _$UserDetailedNotMeFromJson(
     isCat: $checkedConvert('isCat', (v) => v as bool),
     instance: $checkedConvert(
       'instance',
-      (v) =>
-          v == null
-              ? null
-              : UserInstanceInfo.fromJson(v as Map<String, dynamic>),
+      (v) => v == null
+          ? null
+          : UserInstanceInfo.fromJson(v as Map<String, dynamic>),
     ),
     emojis: $checkedConvert(
       'emojis',
@@ -252,10 +254,9 @@ _UserDetailedNotMe _$UserDetailedNotMeFromJson(
     lang: $checkedConvert('lang', (v) => v as String?),
     fields: $checkedConvert(
       'fields',
-      (v) =>
-          (v as List<dynamic>?)
-              ?.map((e) => UserField.fromJson(e as Map<String, dynamic>))
-              .toList(),
+      (v) => (v as List<dynamic>?)
+          ?.map((e) => UserField.fromJson(e as Map<String, dynamic>))
+          .toList(),
     ),
     verifiedLinks: $checkedConvert(
       'verifiedLinks',
@@ -264,12 +265,9 @@ _UserDetailedNotMe _$UserDetailedNotMeFromJson(
     ),
     mutualLinkSections: $checkedConvert(
       'mutualLinkSections',
-      (v) =>
-          (v as List<dynamic>?)
-              ?.map(
-                (e) => MutualLinkSection.fromJson(e as Map<String, dynamic>),
-              )
-              .toList(),
+      (v) => (v as List<dynamic>?)
+          ?.map((e) => MutualLinkSection.fromJson(e as Map<String, dynamic>))
+          .toList(),
     ),
     followersCount: $checkedConvert(
       'followersCount',
@@ -286,10 +284,9 @@ _UserDetailedNotMe _$UserDetailedNotMeFromJson(
     ),
     pinnedNotes: $checkedConvert(
       'pinnedNotes',
-      (v) =>
-          (v as List<dynamic>?)
-              ?.map((e) => Note.fromJson(e as Map<String, dynamic>))
-              .toList(),
+      (v) => (v as List<dynamic>?)
+          ?.map((e) => Note.fromJson(e as Map<String, dynamic>))
+          .toList(),
     ),
     pinnedPageId: $checkedConvert('pinnedPageId', (v) => v as String?),
     pinnedPage: $checkedConvert(
@@ -341,10 +338,9 @@ _UserDetailedNotMe _$UserDetailedNotMeFromJson(
     securityKeys: $checkedConvert('securityKeys', (v) => v as bool?),
     roles: $checkedConvert(
       'roles',
-      (v) =>
-          (v as List<dynamic>?)
-              ?.map((e) => UserRole.fromJson(e as Map<String, dynamic>))
-              .toList(),
+      (v) => (v as List<dynamic>?)
+          ?.map((e) => UserRole.fromJson(e as Map<String, dynamic>))
+          .toList(),
     ),
     memo: $checkedConvert('memo', (v) => v as String?),
     moderationNote: $checkedConvert('moderationNote', (v) => v as String?),
@@ -361,8 +357,9 @@ Map<String, dynamic> _$UserDetailedNotMeToJson(
   'host': instance.host,
   'avatarUrl': const NullableUriConverter().toJson(instance.avatarUrl),
   'avatarBlurhash': instance.avatarBlurhash,
-  'avatarDecorations':
-      instance.avatarDecorations.map((e) => e.toJson()).toList(),
+  'avatarDecorations': instance.avatarDecorations
+      .map((e) => e.toJson())
+      .toList(),
   'isBot': instance.isBot,
   'isCat': instance.isCat,
   'instance': instance.instance?.toJson(),
@@ -399,8 +396,9 @@ Map<String, dynamic> _$UserDetailedNotMeToJson(
   'lang': instance.lang,
   'fields': instance.fields?.map((e) => e.toJson()).toList(),
   'verifiedLinks': instance.verifiedLinks,
-  'mutualLinkSections':
-      instance.mutualLinkSections?.map((e) => e.toJson()).toList(),
+  'mutualLinkSections': instance.mutualLinkSections
+      ?.map((e) => e.toJson())
+      .toList(),
   'followersCount': const IntConverter().toJson(instance.followersCount),
   'followingCount': const IntConverter().toJson(instance.followingCount),
   'notesCount': instance.notesCount,
@@ -463,10 +461,9 @@ _UserDetailedNotMeWithRelations _$UserDetailedNotMeWithRelationsFromJson(
     isCat: $checkedConvert('isCat', (v) => v as bool),
     instance: $checkedConvert(
       'instance',
-      (v) =>
-          v == null
-              ? null
-              : UserInstanceInfo.fromJson(v as Map<String, dynamic>),
+      (v) => v == null
+          ? null
+          : UserInstanceInfo.fromJson(v as Map<String, dynamic>),
     ),
     emojis: $checkedConvert(
       'emojis',
@@ -561,10 +558,9 @@ _UserDetailedNotMeWithRelations _$UserDetailedNotMeWithRelationsFromJson(
     lang: $checkedConvert('lang', (v) => v as String?),
     fields: $checkedConvert(
       'fields',
-      (v) =>
-          (v as List<dynamic>?)
-              ?.map((e) => UserField.fromJson(e as Map<String, dynamic>))
-              .toList(),
+      (v) => (v as List<dynamic>?)
+          ?.map((e) => UserField.fromJson(e as Map<String, dynamic>))
+          .toList(),
     ),
     verifiedLinks: $checkedConvert(
       'verifiedLinks',
@@ -573,12 +569,9 @@ _UserDetailedNotMeWithRelations _$UserDetailedNotMeWithRelationsFromJson(
     ),
     mutualLinkSections: $checkedConvert(
       'mutualLinkSections',
-      (v) =>
-          (v as List<dynamic>?)
-              ?.map(
-                (e) => MutualLinkSection.fromJson(e as Map<String, dynamic>),
-              )
-              .toList(),
+      (v) => (v as List<dynamic>?)
+          ?.map((e) => MutualLinkSection.fromJson(e as Map<String, dynamic>))
+          .toList(),
     ),
     followersCount: $checkedConvert(
       'followersCount',
@@ -595,10 +588,9 @@ _UserDetailedNotMeWithRelations _$UserDetailedNotMeWithRelationsFromJson(
     ),
     pinnedNotes: $checkedConvert(
       'pinnedNotes',
-      (v) =>
-          (v as List<dynamic>?)
-              ?.map((e) => Note.fromJson(e as Map<String, dynamic>))
-              .toList(),
+      (v) => (v as List<dynamic>?)
+          ?.map((e) => Note.fromJson(e as Map<String, dynamic>))
+          .toList(),
     ),
     pinnedPageId: $checkedConvert('pinnedPageId', (v) => v as String?),
     pinnedPage: $checkedConvert(
@@ -650,10 +642,9 @@ _UserDetailedNotMeWithRelations _$UserDetailedNotMeWithRelationsFromJson(
     securityKeys: $checkedConvert('securityKeys', (v) => v as bool?),
     roles: $checkedConvert(
       'roles',
-      (v) =>
-          (v as List<dynamic>?)
-              ?.map((e) => UserRole.fromJson(e as Map<String, dynamic>))
-              .toList(),
+      (v) => (v as List<dynamic>?)
+          ?.map((e) => UserRole.fromJson(e as Map<String, dynamic>))
+          .toList(),
     ),
     memo: $checkedConvert('memo', (v) => v as String?),
     moderationNote: $checkedConvert('moderationNote', (v) => v as String?),
@@ -690,8 +681,9 @@ Map<String, dynamic> _$UserDetailedNotMeWithRelationsToJson(
   'host': instance.host,
   'avatarUrl': const NullableUriConverter().toJson(instance.avatarUrl),
   'avatarBlurhash': instance.avatarBlurhash,
-  'avatarDecorations':
-      instance.avatarDecorations.map((e) => e.toJson()).toList(),
+  'avatarDecorations': instance.avatarDecorations
+      .map((e) => e.toJson())
+      .toList(),
   'isBot': instance.isBot,
   'isCat': instance.isCat,
   'instance': instance.instance?.toJson(),
@@ -728,8 +720,9 @@ Map<String, dynamic> _$UserDetailedNotMeWithRelationsToJson(
   'lang': instance.lang,
   'fields': instance.fields?.map((e) => e.toJson()).toList(),
   'verifiedLinks': instance.verifiedLinks,
-  'mutualLinkSections':
-      instance.mutualLinkSections?.map((e) => e.toJson()).toList(),
+  'mutualLinkSections': instance.mutualLinkSections
+      ?.map((e) => e.toJson())
+      .toList(),
   'followersCount': const IntConverter().toJson(instance.followersCount),
   'followingCount': const IntConverter().toJson(instance.followingCount),
   'notesCount': instance.notesCount,
@@ -791,10 +784,9 @@ _MeDetailed _$MeDetailedFromJson(
     isCat: $checkedConvert('isCat', (v) => v as bool),
     instance: $checkedConvert(
       'instance',
-      (v) =>
-          v == null
-              ? null
-              : UserInstanceInfo.fromJson(v as Map<String, dynamic>),
+      (v) => v == null
+          ? null
+          : UserInstanceInfo.fromJson(v as Map<String, dynamic>),
     ),
     emojis: $checkedConvert(
       'emojis',
@@ -889,10 +881,9 @@ _MeDetailed _$MeDetailedFromJson(
     lang: $checkedConvert('lang', (v) => v as String?),
     fields: $checkedConvert(
       'fields',
-      (v) =>
-          (v as List<dynamic>?)
-              ?.map((e) => UserField.fromJson(e as Map<String, dynamic>))
-              .toList(),
+      (v) => (v as List<dynamic>?)
+          ?.map((e) => UserField.fromJson(e as Map<String, dynamic>))
+          .toList(),
     ),
     verifiedLinks: $checkedConvert(
       'verifiedLinks',
@@ -901,12 +892,9 @@ _MeDetailed _$MeDetailedFromJson(
     ),
     mutualLinkSections: $checkedConvert(
       'mutualLinkSections',
-      (v) =>
-          (v as List<dynamic>?)
-              ?.map(
-                (e) => MutualLinkSection.fromJson(e as Map<String, dynamic>),
-              )
-              .toList(),
+      (v) => (v as List<dynamic>?)
+          ?.map((e) => MutualLinkSection.fromJson(e as Map<String, dynamic>))
+          .toList(),
     ),
     followersCount: $checkedConvert(
       'followersCount',
@@ -923,10 +911,9 @@ _MeDetailed _$MeDetailedFromJson(
     ),
     pinnedNotes: $checkedConvert(
       'pinnedNotes',
-      (v) =>
-          (v as List<dynamic>?)
-              ?.map((e) => Note.fromJson(e as Map<String, dynamic>))
-              .toList(),
+      (v) => (v as List<dynamic>?)
+          ?.map((e) => Note.fromJson(e as Map<String, dynamic>))
+          .toList(),
     ),
     pinnedPageId: $checkedConvert('pinnedPageId', (v) => v as String?),
     pinnedPage: $checkedConvert(
@@ -978,10 +965,9 @@ _MeDetailed _$MeDetailedFromJson(
     securityKeys: $checkedConvert('securityKeys', (v) => v as bool?),
     roles: $checkedConvert(
       'roles',
-      (v) =>
-          (v as List<dynamic>?)
-              ?.map((e) => UserRole.fromJson(e as Map<String, dynamic>))
-              .toList(),
+      (v) => (v as List<dynamic>?)
+          ?.map((e) => UserRole.fromJson(e as Map<String, dynamic>))
+          .toList(),
     ),
     memo: $checkedConvert('memo', (v) => v as String?),
     moderationNote: $checkedConvert('moderationNote', (v) => v as String?),
@@ -1067,17 +1053,15 @@ _MeDetailed _$MeDetailedFromJson(
     ),
     mutedWords: $checkedConvert(
       'mutedWords',
-      (v) =>
-          (v as List<dynamic>?)
-              ?.map(const MuteWordsConverter().fromJson)
-              .toList(),
+      (v) => (v as List<dynamic>?)
+          ?.map(const MuteWordsConverter().fromJson)
+          .toList(),
     ),
     hardMutedWords: $checkedConvert(
       'hardMutedWords',
-      (v) =>
-          (v as List<dynamic>?)
-              ?.map(const MuteWordsConverter().fromJson)
-              .toList(),
+      (v) => (v as List<dynamic>?)
+          ?.map(const MuteWordsConverter().fromJson)
+          .toList(),
     ),
     mutedInstances: $checkedConvert(
       'mutedInstances',
@@ -1090,10 +1074,9 @@ _MeDetailed _$MeDetailedFromJson(
     ),
     notificationRecieveConfig: $checkedConvert(
       'notificationRecieveConfig',
-      (v) =>
-          v == null
-              ? const NotificationRecieveConfigs()
-              : NotificationRecieveConfigs.fromJson(v as Map<String, dynamic>),
+      (v) => v == null
+          ? const NotificationRecieveConfigs()
+          : NotificationRecieveConfigs.fromJson(v as Map<String, dynamic>),
     ),
     emailNotificationTypes: $checkedConvert(
       'emailNotificationTypes',
@@ -1127,8 +1110,9 @@ Map<String, dynamic> _$MeDetailedToJson(
   'host': instance.host,
   'avatarUrl': const NullableUriConverter().toJson(instance.avatarUrl),
   'avatarBlurhash': instance.avatarBlurhash,
-  'avatarDecorations':
-      instance.avatarDecorations.map((e) => e.toJson()).toList(),
+  'avatarDecorations': instance.avatarDecorations
+      .map((e) => e.toJson())
+      .toList(),
   'isBot': instance.isBot,
   'isCat': instance.isCat,
   'instance': instance.instance?.toJson(),
@@ -1165,8 +1149,9 @@ Map<String, dynamic> _$MeDetailedToJson(
   'lang': instance.lang,
   'fields': instance.fields?.map((e) => e.toJson()).toList(),
   'verifiedLinks': instance.verifiedLinks,
-  'mutualLinkSections':
-      instance.mutualLinkSections?.map((e) => e.toJson()).toList(),
+  'mutualLinkSections': instance.mutualLinkSections
+      ?.map((e) => e.toJson())
+      .toList(),
   'followersCount': const IntConverter().toJson(instance.followersCount),
   'followingCount': const IntConverter().toJson(instance.followingCount),
   'notesCount': instance.notesCount,
@@ -1213,12 +1198,15 @@ Map<String, dynamic> _$MeDetailedToJson(
   'hasUnreadNotification': instance.hasUnreadNotification,
   'hasPendingReceivedFollowRequest': instance.hasPendingReceivedFollowRequest,
   'unreadNotificationsCount': instance.unreadNotificationsCount,
-  'unreadAnnouncements':
-      instance.unreadAnnouncements.map((e) => e.toJson()).toList(),
-  'mutedWords':
-      instance.mutedWords?.map(const MuteWordsConverter().toJson).toList(),
-  'hardMutedWords':
-      instance.hardMutedWords?.map(const MuteWordsConverter().toJson).toList(),
+  'unreadAnnouncements': instance.unreadAnnouncements
+      .map((e) => e.toJson())
+      .toList(),
+  'mutedWords': instance.mutedWords
+      ?.map(const MuteWordsConverter().toJson)
+      .toList(),
+  'hardMutedWords': instance.hardMutedWords
+      ?.map(const MuteWordsConverter().toJson)
+      .toList(),
   'mutedInstances': instance.mutedInstances,
   'mutingNotificationTypes': instance.mutingNotificationTypes,
   'notificationRecieveConfig': instance.notificationRecieveConfig.toJson(),
@@ -1525,10 +1513,9 @@ _MutualLinkSection _$MutualLinkSectionFromJson(Map<String, dynamic> json) =>
         name: $checkedConvert('name', (v) => v as String?),
         mutualLinks: $checkedConvert(
           'mutualLinks',
-          (v) =>
-              (v as List<dynamic>)
-                  .map((e) => MutualLink.fromJson(e as Map<String, dynamic>))
-                  .toList(),
+          (v) => (v as List<dynamic>)
+              .map((e) => MutualLink.fromJson(e as Map<String, dynamic>))
+              .toList(),
         ),
       );
       return val;
@@ -1584,108 +1571,93 @@ _NotificationRecieveConfigs _$NotificationRecieveConfigsFromJson(
   final val = _NotificationRecieveConfigs(
     note: $checkedConvert(
       'note',
-      (v) =>
-          v == null
-              ? null
-              : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
+      (v) => v == null
+          ? null
+          : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
     ),
     follow: $checkedConvert(
       'follow',
-      (v) =>
-          v == null
-              ? null
-              : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
+      (v) => v == null
+          ? null
+          : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
     ),
     mention: $checkedConvert(
       'mention',
-      (v) =>
-          v == null
-              ? null
-              : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
+      (v) => v == null
+          ? null
+          : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
     ),
     reply: $checkedConvert(
       'reply',
-      (v) =>
-          v == null
-              ? null
-              : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
+      (v) => v == null
+          ? null
+          : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
     ),
     renote: $checkedConvert(
       'renote',
-      (v) =>
-          v == null
-              ? null
-              : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
+      (v) => v == null
+          ? null
+          : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
     ),
     quote: $checkedConvert(
       'quote',
-      (v) =>
-          v == null
-              ? null
-              : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
+      (v) => v == null
+          ? null
+          : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
     ),
     reaction: $checkedConvert(
       'reaction',
-      (v) =>
-          v == null
-              ? null
-              : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
+      (v) => v == null
+          ? null
+          : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
     ),
     pollEnded: $checkedConvert(
       'pollEnded',
-      (v) =>
-          v == null
-              ? null
-              : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
+      (v) => v == null
+          ? null
+          : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
     ),
     receiveFollowRequest: $checkedConvert(
       'receiveFollowRequest',
-      (v) =>
-          v == null
-              ? null
-              : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
+      (v) => v == null
+          ? null
+          : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
     ),
     followRequestAccepted: $checkedConvert(
       'followRequestAccepted',
-      (v) =>
-          v == null
-              ? null
-              : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
+      (v) => v == null
+          ? null
+          : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
     ),
     roleAssigned: $checkedConvert(
       'roleAssigned',
-      (v) =>
-          v == null
-              ? null
-              : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
+      (v) => v == null
+          ? null
+          : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
     ),
     chatRoomInvitationReceived: $checkedConvert(
       'chatRoomInvitationReceived',
-      (v) =>
-          v == null
-              ? null
-              : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
+      (v) => v == null
+          ? null
+          : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
     ),
     achievementEarned: $checkedConvert(
       'achievementEarned',
-      (v) =>
-          v == null
-              ? null
-              : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
+      (v) => v == null
+          ? null
+          : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
     ),
     app: $checkedConvert(
       'app',
-      (v) =>
-          v == null
-              ? null
-              : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
+      (v) => v == null
+          ? null
+          : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
     ),
     test: $checkedConvert(
       'test',
-      (v) =>
-          v == null
-              ? null
-              : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
+      (v) => v == null
+          ? null
+          : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
     ),
   );
   return val;

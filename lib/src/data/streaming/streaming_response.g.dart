@@ -159,10 +159,9 @@ _EmojiUpdatedStreamEvent _$EmojiUpdatedStreamEventFromJson(
   final val = _EmojiUpdatedStreamEvent(
     emojis: $checkedConvert(
       'emojis',
-      (v) =>
-          (v as List<dynamic>)
-              .map((e) => Emoji.fromJson(e as Map<String, dynamic>))
-              .toList(),
+      (v) => (v as List<dynamic>)
+          .map((e) => Emoji.fromJson(e as Map<String, dynamic>))
+          .toList(),
     ),
   );
   return val;
@@ -180,10 +179,9 @@ _EmojiDeletedStreamEvent _$EmojiDeletedStreamEventFromJson(
   final val = _EmojiDeletedStreamEvent(
     emojis: $checkedConvert(
       'emojis',
-      (v) =>
-          (v as List<dynamic>)
-              .map((e) => Emoji.fromJson(e as Map<String, dynamic>))
-              .toList(),
+      (v) => (v as List<dynamic>)
+          .map((e) => Emoji.fromJson(e as Map<String, dynamic>))
+          .toList(),
     ),
   );
   return val;
@@ -280,14 +278,13 @@ StatsLogChannelEvent _$StatsLogChannelEventFromJson(
     id: $checkedConvert('id', (v) => v as String),
     body: $checkedConvert(
       'body',
-      (v) =>
-          (v as List<dynamic>)
-              .map(
-                (e) => const StreamingStatsConverter().fromJson(
-                  e as Map<String, dynamic>,
-                ),
-              )
-              .toList(),
+      (v) => (v as List<dynamic>)
+          .map(
+            (e) => const StreamingStatsConverter().fromJson(
+              e as Map<String, dynamic>,
+            ),
+          )
+          .toList(),
     ),
     $type: $checkedConvert('type', (v) => v as String?),
   );

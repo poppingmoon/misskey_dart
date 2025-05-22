@@ -6,20 +6,18 @@ part of 'endpoint_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_EndpointResponse _$EndpointResponseFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate('_EndpointResponse', json, ($checkedConvert) {
-  final val = _EndpointResponse(
-    params: $checkedConvert(
-      'params',
-      (v) =>
-          (v as List<dynamic>)
+_EndpointResponse _$EndpointResponseFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_EndpointResponse', json, ($checkedConvert) {
+      final val = _EndpointResponse(
+        params: $checkedConvert(
+          'params',
+          (v) => (v as List<dynamic>)
               .map((e) => EndpointParameter.fromJson(e as Map<String, dynamic>))
               .toList(),
-    ),
-  );
-  return val;
-});
+        ),
+      );
+      return val;
+    });
 
 Map<String, dynamic> _$EndpointResponseToJson(_EndpointResponse instance) =>
     <String, dynamic>{

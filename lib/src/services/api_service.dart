@@ -11,16 +11,15 @@ class ApiService {
   final Uri apiUrl;
 
   ApiService({this.token, required this.apiUrl, Dio? dio})
-    : dio =
-          (dio ?? Dio())
-            ..options = BaseOptions(
-              method: "post",
-              baseUrl: "$apiUrl${apiUrl.path.endsWith("/") ? "" : "/"}",
-              contentType: "application/json",
-            )
-            ..interceptors.add(
-              LogInterceptor(requestBody: true, responseBody: true),
-            );
+    : dio = (dio ?? Dio())
+        ..options = BaseOptions(
+          method: "post",
+          baseUrl: "$apiUrl${apiUrl.path.endsWith("/") ? "" : "/"}",
+          contentType: "application/json",
+        )
+        ..interceptors.add(
+          LogInterceptor(requestBody: true, responseBody: true),
+        );
 
   Future<T> post<T>(
     String path,

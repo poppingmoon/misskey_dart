@@ -18,17 +18,15 @@ _INotificationRequest _$INotificationRequestFromJson(
     markAsRead: $checkedConvert('markAsRead', (v) => v as bool?),
     includeTypes: $checkedConvert(
       'includeTypes',
-      (v) =>
-          (v as List<dynamic>?)
-              ?.map((e) => $enumDecode(_$NotificationTypeEnumMap, e))
-              .toList(),
+      (v) => (v as List<dynamic>?)
+          ?.map((e) => $enumDecode(_$NotificationTypeEnumMap, e))
+          .toList(),
     ),
     excludeTypes: $checkedConvert(
       'excludeTypes',
-      (v) =>
-          (v as List<dynamic>?)
-              ?.map((e) => $enumDecode(_$NotificationTypeEnumMap, e))
-              .toList(),
+      (v) => (v as List<dynamic>?)
+          ?.map((e) => $enumDecode(_$NotificationTypeEnumMap, e))
+          .toList(),
     ),
   );
   return val;
@@ -43,10 +41,12 @@ Map<String, dynamic> _$INotificationRequestToJson(
   'following': instance.following,
   'unreadOnly': instance.unreadOnly,
   'markAsRead': instance.markAsRead,
-  'includeTypes':
-      instance.includeTypes?.map((e) => _$NotificationTypeEnumMap[e]!).toList(),
-  'excludeTypes':
-      instance.excludeTypes?.map((e) => _$NotificationTypeEnumMap[e]!).toList(),
+  'includeTypes': instance.includeTypes
+      ?.map((e) => _$NotificationTypeEnumMap[e]!)
+      .toList(),
+  'excludeTypes': instance.excludeTypes
+      ?.map((e) => _$NotificationTypeEnumMap[e]!)
+      .toList(),
 };
 
 const _$NotificationTypeEnumMap = {

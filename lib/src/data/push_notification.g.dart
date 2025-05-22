@@ -152,34 +152,29 @@ _PushNotificationBody _$PushNotificationBodyFromJson(
     ),
     note: $checkedConvert(
       'note',
-      (v) =>
-          v == null
-              ? null
-              : PushNotificationNote.fromJson(v as Map<String, dynamic>),
+      (v) => v == null
+          ? null
+          : PushNotificationNote.fromJson(v as Map<String, dynamic>),
     ),
     role: $checkedConvert(
       'role',
-      (v) =>
-          v == null
-              ? null
-              : RolesListResponse.fromJson(v as Map<String, dynamic>),
+      (v) => v == null
+          ? null
+          : RolesListResponse.fromJson(v as Map<String, dynamic>),
     ),
     reactions: $checkedConvert(
       'reactions',
-      (v) =>
-          (v as List<dynamic>?)
-              ?.map(
-                (e) =>
-                    INotificationsReaction.fromJson(e as Map<String, dynamic>),
-              )
-              .toList(),
+      (v) => (v as List<dynamic>?)
+          ?.map(
+            (e) => INotificationsReaction.fromJson(e as Map<String, dynamic>),
+          )
+          .toList(),
     ),
     users: $checkedConvert(
       'users',
-      (v) =>
-          (v as List<dynamic>?)
-              ?.map((e) => UserLite.fromJson(e as Map<String, dynamic>))
-              .toList(),
+      (v) => (v as List<dynamic>?)
+          ?.map((e) => UserLite.fromJson(e as Map<String, dynamic>))
+          .toList(),
     ),
     exportedEntity: $checkedConvert(
       'exportedEntity',
@@ -365,10 +360,9 @@ _PushNotificationNote _$PushNotificationNoteFromJson(
     myReaction: $checkedConvert('myReaction', (v) => v as String?),
     channel: $checkedConvert(
       'channel',
-      (v) =>
-          v == null
-              ? null
-              : NoteChannelInfo.fromJson(v as Map<String, dynamic>),
+      (v) => v == null
+          ? null
+          : NoteChannelInfo.fromJson(v as Map<String, dynamic>),
     ),
     uri: $checkedConvert(
       'uri',
