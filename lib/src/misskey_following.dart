@@ -6,7 +6,7 @@ class MisskeyFollowing {
 
   final ApiService _apiService;
 
-  MisskeyFollowing({required apiService})
+  MisskeyFollowing({required ApiService apiService})
     : _apiService = apiService,
       requests = MisskeyFollowingRequests(apiService: apiService);
 
@@ -55,7 +55,8 @@ class MisskeyFollowing {
 class MisskeyFollowingRequests {
   final ApiService _apiService;
 
-  MisskeyFollowingRequests({required apiService}) : _apiService = apiService;
+  MisskeyFollowingRequests({required ApiService apiService})
+    : _apiService = apiService;
 
   /// ユーザーからのフォローリクエストを承認します。
   Future<void> accept(FollowingRequestsAcceptRequest request) async {

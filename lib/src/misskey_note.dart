@@ -12,7 +12,7 @@ class MisskeyNotes {
 
   final ApiService _apiService;
 
-  MisskeyNotes({required apiService})
+  MisskeyNotes({required ApiService apiService})
     : _apiService = apiService,
       reactions = MisskeyNotesReactions(apiService: apiService),
       favorites = MisskeyNotesFavorites(apiService: apiService),
@@ -344,7 +344,8 @@ class MisskeyNotesPolls {
 class MisskeyNotesThreadMuting {
   final ApiService _apiService;
 
-  MisskeyNotesThreadMuting({required apiService}) : _apiService = apiService;
+  MisskeyNotesThreadMuting({required ApiService apiService})
+    : _apiService = apiService;
 
   /// 指定したノートが含まれるスレッドをミュートします。
   Future<void> create(NotesThreadMutingCreateRequest request) async {
