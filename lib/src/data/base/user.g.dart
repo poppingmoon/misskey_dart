@@ -1382,6 +1382,14 @@ _UserPolicies _$UserPoliciesFromJson(
       'driveCapacityMb',
       (v) => (v as num?)?.toInt(),
     ),
+    maxFileSizeMb: $checkedConvert(
+      'maxFileSizeMb',
+      (v) => (v as num?)?.toInt(),
+    ),
+    uploadableFileTypes: $checkedConvert(
+      'uploadableFileTypes',
+      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
+    ),
     alwaysMarkNsfw: $checkedConvert('alwaysMarkNsfw', (v) => v as bool?),
     canUpdateBioMedia: $checkedConvert('canUpdateBioMedia', (v) => v as bool?),
     pinLimit: $checkedConvert('pinLimit', (v) => (v as num?)?.toInt()),
@@ -1466,6 +1474,8 @@ Map<String, dynamic> _$UserPoliciesToJson(_UserPolicies instance) =>
       'canUseTranslator': instance.canUseTranslator,
       'canHideAds': instance.canHideAds,
       'driveCapacityMb': instance.driveCapacityMb,
+      'maxFileSizeMb': instance.maxFileSizeMb,
+      'uploadableFileTypes': instance.uploadableFileTypes,
       'alwaysMarkNsfw': instance.alwaysMarkNsfw,
       'canUpdateBioMedia': instance.canUpdateBioMedia,
       'pinLimit': instance.pinLimit,
