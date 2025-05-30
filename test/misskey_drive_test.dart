@@ -91,6 +91,20 @@ void main() async {
       expect(response.map((e) => e.id), contains(file.id));
     });
 
+    test("move-bulk", () async {
+      final file = await userClient.createDriveFile();
+      final folder = await userClient.drive.folders.create(
+        DriveFoldersCreateRequest(),
+      );
+      await userClient.drive.files.moveBulk(
+        DriveFilesMoveBulkRequest(fileIds: [file.id], folderId: folder.id),
+      );
+      final files = await userClient.drive.files.files(
+        DriveFilesRequest(folderId: folder.id),
+      );
+      expect(files.map((e) => e.id), contains(file.id));
+    });
+
     test("show", () async {
       final file = await userClient.createDriveFile();
       final response = await userClient.drive.files.show(
