@@ -47,6 +47,7 @@ abstract class Note with _$Note {
     @Default([]) List<String> reactionAndUserPairCache,
     NotePoll? poll,
     int? clippedCount,
+    bool? isRenoted, // Iceshrimp
   }) = _Note;
 
   factory Note.fromJson(Map<String, Object?> json) => _$NoteFromJson(json);

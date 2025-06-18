@@ -133,6 +133,7 @@ _Note _$NoteFromJson(
       (v) => v == null ? null : NotePoll.fromJson(v as Map<String, dynamic>),
     ),
     clippedCount: $checkedConvert('clippedCount', (v) => (v as num?)?.toInt()),
+    isRenoted: $checkedConvert('isRenoted', (v) => v as bool?),
   );
   return val;
 });
@@ -171,6 +172,7 @@ Map<String, dynamic> _$NoteToJson(_Note instance) => <String, dynamic>{
   'reactionAndUserPairCache': instance.reactionAndUserPairCache,
   'poll': instance.poll?.toJson(),
   'clippedCount': instance.clippedCount,
+  'isRenoted': instance.isRenoted,
 };
 
 Value? _$JsonConverterFromJson<Json, Value>(
