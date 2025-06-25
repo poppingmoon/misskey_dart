@@ -209,6 +209,7 @@ _NoteChannelInfo _$NoteChannelInfoFromJson(Map<String, dynamic> json) =>
           'allowRenoteToExternal',
           (v) => v as bool? ?? true,
         ),
+        userId: $checkedConvert('userId', (v) => v as String?),
       );
       return val;
     });
@@ -220,6 +221,7 @@ Map<String, dynamic> _$NoteChannelInfoToJson(_NoteChannelInfo instance) =>
       'color': const NullableColorConverter().toJson(instance.color),
       'isSensitive': instance.isSensitive,
       'allowRenoteToExternal': instance.allowRenoteToExternal,
+      'userId': instance.userId,
     };
 
 _NotePoll _$NotePollFromJson(Map<String, dynamic> json) =>
