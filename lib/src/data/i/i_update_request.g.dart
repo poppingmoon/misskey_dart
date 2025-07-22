@@ -16,10 +16,7 @@ _IUpdateRequest _$IUpdateRequestFromJson(
     location: $checkedConvert('location', (v) => v as String?),
     birthday: $checkedConvert(
       'birthday',
-      (v) => _$JsonConverterFromJson<String, DateTime>(
-        v,
-        const DateTimeConverter().fromJson,
-      ),
+      (v) => const BirthdayConverter().fromJson(v as String?),
     ),
     lang: $checkedConvert('lang', (v) => v as String?),
     avatarId: $checkedConvert('avatarId', (v) => v as String?),
@@ -149,10 +146,7 @@ Map<String, dynamic> _$IUpdateRequestToJson(
   'description': instance.description,
   'followedMessage': instance.followedMessage,
   'location': instance.location,
-  'birthday': _$JsonConverterToJson<String, DateTime>(
-    instance.birthday,
-    const DateTimeConverter().toJson,
-  ),
+  'birthday': const BirthdayConverter().toJson(instance.birthday),
   'lang': instance.lang,
   'avatarId': instance.avatarId,
   'avatarDecorations': instance.avatarDecorations

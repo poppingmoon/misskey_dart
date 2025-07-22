@@ -10,10 +10,15 @@ _JoinMisskeyInstances _$JoinMisskeyInstancesFromJson(
   Map<String, dynamic> json,
 ) => $checkedCreate('_JoinMisskeyInstances', json, ($checkedConvert) {
   final val = _JoinMisskeyInstances(
-    date: $checkedConvert('date', (v) => DateTime.parse(v as String)),
+    date: $checkedConvert(
+      'date',
+      (v) => v == null ? null : DateTime.parse(v as String),
+    ),
     stats: $checkedConvert(
       'stats',
-      (v) => JoinMisskeyStats.fromJson(v as Map<String, dynamic>),
+      (v) => v == null
+          ? null
+          : JoinMisskeyStats.fromJson(v as Map<String, dynamic>),
     ),
     instancesInfos: $checkedConvert(
       'instancesInfos',
@@ -30,20 +35,26 @@ _JoinMisskeyInstances _$JoinMisskeyInstancesFromJson(
 Map<String, dynamic> _$JoinMisskeyInstancesToJson(
   _JoinMisskeyInstances instance,
 ) => <String, dynamic>{
-  'date': instance.date.toIso8601String(),
-  'stats': instance.stats.toJson(),
+  'date': instance.date?.toIso8601String(),
+  'stats': instance.stats?.toJson(),
   'instancesInfos': instance.instancesInfos.map((e) => e.toJson()).toList(),
 };
 
 _JoinMisskeyStats _$JoinMisskeyStatsFromJson(Map<String, dynamic> json) =>
     $checkedCreate('_JoinMisskeyStats', json, ($checkedConvert) {
       final val = _JoinMisskeyStats(
-        notesCount: $checkedConvert('notesCount', (v) => (v as num).toInt()),
-        usersCount: $checkedConvert('usersCount', (v) => (v as num).toInt()),
-        mau: $checkedConvert('mau', (v) => (v as num).toInt()),
+        notesCount: $checkedConvert('notesCount', (v) => (v as num?)?.toInt()),
+        usersCount: $checkedConvert('usersCount', (v) => (v as num?)?.toInt()),
+        mau: $checkedConvert('mau', (v) => (v as num?)?.toInt()),
+        npd15: $checkedConvert('npd15', (v) => (v as num?)?.toInt()),
+        druYesterday: $checkedConvert(
+          'druYesterday',
+          (v) => (v as num?)?.toInt(),
+        ),
+        dru15: $checkedConvert('dru15', (v) => (v as num?)?.toInt()),
         instancesCount: $checkedConvert(
           'instancesCount',
-          (v) => (v as num).toInt(),
+          (v) => (v as num?)?.toInt(),
         ),
       );
       return val;
@@ -54,6 +65,9 @@ Map<String, dynamic> _$JoinMisskeyStatsToJson(_JoinMisskeyStats instance) =>
       'notesCount': instance.notesCount,
       'usersCount': instance.usersCount,
       'mau': instance.mau,
+      'npd15': instance.npd15,
+      'druYesterday': instance.druYesterday,
+      'dru15': instance.dru15,
       'instancesCount': instance.instancesCount,
     };
 
@@ -65,11 +79,12 @@ _JoinMisskeyInstanceInfo _$JoinMisskeyInstanceInfoFromJson(
     name: $checkedConvert('name', (v) => v as String),
     langs: $checkedConvert(
       'langs',
-      (v) => (v as List<dynamic>).map((e) => e as String).toList(),
+      (v) =>
+          (v as List<dynamic>?)?.map((e) => e as String).toList() ?? const [],
     ),
     description: $checkedConvert('description', (v) => v as String?),
-    isAlive: $checkedConvert('isAlive', (v) => v as bool),
-    value: $checkedConvert('value', (v) => (v as num).toDouble()),
+    isAlive: $checkedConvert('isAlive', (v) => v as bool?),
+    value: $checkedConvert('value', (v) => (v as num?)?.toDouble()),
     banner: $checkedConvert('banner', (v) => v as bool? ?? false),
     background: $checkedConvert('background', (v) => v as bool? ?? false),
     icon: $checkedConvert('icon', (v) => v as bool? ?? false),
@@ -80,6 +95,9 @@ _JoinMisskeyInstanceInfo _$JoinMisskeyInstanceInfoFromJson(
           : JoinMisskeyNodeInfo.fromJson(v as Map<String, dynamic>),
     ),
     meta: $checkedConvert('meta', (v) => v as Map<String, dynamic>?),
+    npd15: $checkedConvert('npd15', (v) => (v as num?)?.toInt()),
+    druYesterday: $checkedConvert('druYesterday', (v) => (v as num?)?.toInt()),
+    dru15: $checkedConvert('dru15', (v) => (v as num?)?.toInt()),
   );
   return val;
 }, fieldKeyMap: const {'nodeInfo': 'nodeinfo'});
@@ -98,6 +116,9 @@ Map<String, dynamic> _$JoinMisskeyInstanceInfoToJson(
   'icon': instance.icon,
   'nodeinfo': instance.nodeInfo?.toJson(),
   'meta': instance.meta,
+  'npd15': instance.npd15,
+  'druYesterday': instance.druYesterday,
+  'dru15': instance.dru15,
 };
 
 _JoinMisskeyNodeInfo _$JoinMisskeyNodeInfoFromJson(Map<String, dynamic> json) =>

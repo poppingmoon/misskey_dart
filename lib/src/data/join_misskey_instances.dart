@@ -6,8 +6,8 @@ part 'join_misskey_instances.g.dart';
 @freezed
 abstract class JoinMisskeyInstances with _$JoinMisskeyInstances {
   const factory JoinMisskeyInstances({
-    required DateTime date,
-    required JoinMisskeyStats stats,
+    DateTime? date,
+    JoinMisskeyStats? stats,
     required List<JoinMisskeyInstanceInfo> instancesInfos,
   }) = _JoinMisskeyInstances;
 
@@ -18,10 +18,14 @@ abstract class JoinMisskeyInstances with _$JoinMisskeyInstances {
 @freezed
 abstract class JoinMisskeyStats with _$JoinMisskeyStats {
   const factory JoinMisskeyStats({
-    required int notesCount,
-    required int usersCount,
-    required int mau,
-    required int instancesCount,
+    int? notesCount,
+    int? usersCount,
+    // Removed in joinmisskey/api 3.1.0
+    int? mau,
+    int? npd15,
+    int? druYesterday,
+    int? dru15,
+    int? instancesCount,
   }) = _JoinMisskeyStats;
 
   factory JoinMisskeyStats.fromJson(Map<String, dynamic> json) =>
@@ -33,16 +37,19 @@ abstract class JoinMisskeyInstanceInfo with _$JoinMisskeyInstanceInfo {
   const factory JoinMisskeyInstanceInfo({
     required String url,
     required String name,
-    required List<String> langs,
-    required String? description,
-    required bool isAlive,
-    required double value,
+    @Default([]) List<String> langs,
+    String? description,
+    bool? isAlive,
+    double? value,
     @Default(false) bool banner,
     @Default(false) bool background,
     @Default(false) bool icon,
     // ignore: invalid_annotation_target
     @JsonKey(name: "nodeinfo") JoinMisskeyNodeInfo? nodeInfo,
     Map<String, dynamic>? meta,
+    int? npd15,
+    int? druYesterday,
+    int? dru15,
   }) = _JoinMisskeyInstanceInfo;
 
   factory JoinMisskeyInstanceInfo.fromJson(Map<String, dynamic> json) =>

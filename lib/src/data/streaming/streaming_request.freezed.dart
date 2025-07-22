@@ -170,7 +170,7 @@ $StreamingRequestBodyCopyWith<$Res> get body {
 /// @nodoc
 mixin _$StreamingRequestBody {
 
- Channel? get channel; String get id; Map<String, dynamic>? get params; String? get type; Map<String, dynamic>? get body;
+@ChannelJsonConverter() Channel? get channel; String get id; Map<String, dynamic>? get params; String? get type; Map<String, dynamic>? get body;
 /// Create a copy of StreamingRequestBody
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -203,11 +203,11 @@ abstract mixin class $StreamingRequestBodyCopyWith<$Res>  {
   factory $StreamingRequestBodyCopyWith(StreamingRequestBody value, $Res Function(StreamingRequestBody) _then) = _$StreamingRequestBodyCopyWithImpl;
 @useResult
 $Res call({
- Channel? channel, String id, Map<String, dynamic>? params, String? type, Map<String, dynamic>? body
+@ChannelJsonConverter() Channel? channel, String id, Map<String, dynamic>? params, String? type, Map<String, dynamic>? body
 });
 
 
-
+$ChannelCopyWith<$Res>? get channel;
 
 }
 /// @nodoc
@@ -230,7 +230,19 @@ as String?,body: freezed == body ? _self.body : body // ignore: cast_nullable_to
 as Map<String, dynamic>?,
   ));
 }
+/// Create a copy of StreamingRequestBody
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$ChannelCopyWith<$Res>? get channel {
+    if (_self.channel == null) {
+    return null;
+  }
 
+  return $ChannelCopyWith<$Res>(_self.channel!, (value) {
+    return _then(_self.copyWith(channel: value));
+  });
+}
 }
 
 
@@ -238,10 +250,10 @@ as Map<String, dynamic>?,
 @JsonSerializable()
 
 class _StreamingRequestBody implements StreamingRequestBody {
-  const _StreamingRequestBody({this.channel, required this.id, final  Map<String, dynamic>? params, this.type, final  Map<String, dynamic>? body}): _params = params,_body = body;
+  const _StreamingRequestBody({@ChannelJsonConverter() this.channel, required this.id, final  Map<String, dynamic>? params, this.type, final  Map<String, dynamic>? body}): _params = params,_body = body;
   factory _StreamingRequestBody.fromJson(Map<String, dynamic> json) => _$StreamingRequestBodyFromJson(json);
 
-@override final  Channel? channel;
+@override@ChannelJsonConverter() final  Channel? channel;
 @override final  String id;
  final  Map<String, dynamic>? _params;
 @override Map<String, dynamic>? get params {
@@ -296,11 +308,11 @@ abstract mixin class _$StreamingRequestBodyCopyWith<$Res> implements $StreamingR
   factory _$StreamingRequestBodyCopyWith(_StreamingRequestBody value, $Res Function(_StreamingRequestBody) _then) = __$StreamingRequestBodyCopyWithImpl;
 @override @useResult
 $Res call({
- Channel? channel, String id, Map<String, dynamic>? params, String? type, Map<String, dynamic>? body
+@ChannelJsonConverter() Channel? channel, String id, Map<String, dynamic>? params, String? type, Map<String, dynamic>? body
 });
 
 
-
+@override $ChannelCopyWith<$Res>? get channel;
 
 }
 /// @nodoc
@@ -324,7 +336,19 @@ as Map<String, dynamic>?,
   ));
 }
 
+/// Create a copy of StreamingRequestBody
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$ChannelCopyWith<$Res>? get channel {
+    if (_self.channel == null) {
+    return null;
+  }
 
+  return $ChannelCopyWith<$Res>(_self.channel!, (value) {
+    return _then(_self.copyWith(channel: value));
+  });
+}
 }
 
 // dart format on
