@@ -1,6 +1,5 @@
-// dart format width=80
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -80,6 +79,166 @@ class $StreamingResponseCopyWith<$Res>  {
 $StreamingResponseCopyWith(StreamingResponse _, $Res Function(StreamingResponse) __);
 }
 
+
+/// Adds pattern-matching-related methods to [StreamingResponse].
+extension StreamingResponsePatterns on StreamingResponse {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( StreamingChannelResponse value)?  channel,TResult Function( StreamingChannelNoteUpdatedResponse value)?  noteUpdated,TResult Function( StreamingChannelEmojiAddedResponse value)?  emojiAdded,TResult Function( StreamingChannelEmojiUpdatedResponse value)?  emojiUpdated,TResult Function( StreamingChannelEmojiDeletedResponse value)?  emojiDeleted,TResult Function( StreamingChannelAnnouncementCreatedResponse value)?  announcementCreated,TResult Function( StreamingChannelUnknownResponse value)?  fallback,required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case StreamingChannelResponse() when channel != null:
+return channel(_that);case StreamingChannelNoteUpdatedResponse() when noteUpdated != null:
+return noteUpdated(_that);case StreamingChannelEmojiAddedResponse() when emojiAdded != null:
+return emojiAdded(_that);case StreamingChannelEmojiUpdatedResponse() when emojiUpdated != null:
+return emojiUpdated(_that);case StreamingChannelEmojiDeletedResponse() when emojiDeleted != null:
+return emojiDeleted(_that);case StreamingChannelAnnouncementCreatedResponse() when announcementCreated != null:
+return announcementCreated(_that);case StreamingChannelUnknownResponse() when fallback != null:
+return fallback(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( StreamingChannelResponse value)  channel,required TResult Function( StreamingChannelNoteUpdatedResponse value)  noteUpdated,required TResult Function( StreamingChannelEmojiAddedResponse value)  emojiAdded,required TResult Function( StreamingChannelEmojiUpdatedResponse value)  emojiUpdated,required TResult Function( StreamingChannelEmojiDeletedResponse value)  emojiDeleted,required TResult Function( StreamingChannelAnnouncementCreatedResponse value)  announcementCreated,required TResult Function( StreamingChannelUnknownResponse value)  fallback,}){
+final _that = this;
+switch (_that) {
+case StreamingChannelResponse():
+return channel(_that);case StreamingChannelNoteUpdatedResponse():
+return noteUpdated(_that);case StreamingChannelEmojiAddedResponse():
+return emojiAdded(_that);case StreamingChannelEmojiUpdatedResponse():
+return emojiUpdated(_that);case StreamingChannelEmojiDeletedResponse():
+return emojiDeleted(_that);case StreamingChannelAnnouncementCreatedResponse():
+return announcementCreated(_that);case StreamingChannelUnknownResponse():
+return fallback(_that);}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( StreamingChannelResponse value)?  channel,TResult? Function( StreamingChannelNoteUpdatedResponse value)?  noteUpdated,TResult? Function( StreamingChannelEmojiAddedResponse value)?  emojiAdded,TResult? Function( StreamingChannelEmojiUpdatedResponse value)?  emojiUpdated,TResult? Function( StreamingChannelEmojiDeletedResponse value)?  emojiDeleted,TResult? Function( StreamingChannelAnnouncementCreatedResponse value)?  announcementCreated,TResult? Function( StreamingChannelUnknownResponse value)?  fallback,}){
+final _that = this;
+switch (_that) {
+case StreamingChannelResponse() when channel != null:
+return channel(_that);case StreamingChannelNoteUpdatedResponse() when noteUpdated != null:
+return noteUpdated(_that);case StreamingChannelEmojiAddedResponse() when emojiAdded != null:
+return emojiAdded(_that);case StreamingChannelEmojiUpdatedResponse() when emojiUpdated != null:
+return emojiUpdated(_that);case StreamingChannelEmojiDeletedResponse() when emojiDeleted != null:
+return emojiDeleted(_that);case StreamingChannelAnnouncementCreatedResponse() when announcementCreated != null:
+return announcementCreated(_that);case StreamingChannelUnknownResponse() when fallback != null:
+return fallback(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( ChannelStreamEvent body)?  channel,TResult Function( NoteUpdateStreamEvent body)?  noteUpdated,TResult Function( EmojiAddedStreamEvent body)?  emojiAdded,TResult Function( EmojiUpdatedStreamEvent body)?  emojiUpdated,TResult Function( EmojiDeletedStreamEvent body)?  emojiDeleted,TResult Function( AnnouncementCreatedStreamEvent body)?  announcementCreated,TResult Function( Object body)?  fallback,required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case StreamingChannelResponse() when channel != null:
+return channel(_that.body);case StreamingChannelNoteUpdatedResponse() when noteUpdated != null:
+return noteUpdated(_that.body);case StreamingChannelEmojiAddedResponse() when emojiAdded != null:
+return emojiAdded(_that.body);case StreamingChannelEmojiUpdatedResponse() when emojiUpdated != null:
+return emojiUpdated(_that.body);case StreamingChannelEmojiDeletedResponse() when emojiDeleted != null:
+return emojiDeleted(_that.body);case StreamingChannelAnnouncementCreatedResponse() when announcementCreated != null:
+return announcementCreated(_that.body);case StreamingChannelUnknownResponse() when fallback != null:
+return fallback(_that.body);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( ChannelStreamEvent body)  channel,required TResult Function( NoteUpdateStreamEvent body)  noteUpdated,required TResult Function( EmojiAddedStreamEvent body)  emojiAdded,required TResult Function( EmojiUpdatedStreamEvent body)  emojiUpdated,required TResult Function( EmojiDeletedStreamEvent body)  emojiDeleted,required TResult Function( AnnouncementCreatedStreamEvent body)  announcementCreated,required TResult Function( Object body)  fallback,}) {final _that = this;
+switch (_that) {
+case StreamingChannelResponse():
+return channel(_that.body);case StreamingChannelNoteUpdatedResponse():
+return noteUpdated(_that.body);case StreamingChannelEmojiAddedResponse():
+return emojiAdded(_that.body);case StreamingChannelEmojiUpdatedResponse():
+return emojiUpdated(_that.body);case StreamingChannelEmojiDeletedResponse():
+return emojiDeleted(_that.body);case StreamingChannelAnnouncementCreatedResponse():
+return announcementCreated(_that.body);case StreamingChannelUnknownResponse():
+return fallback(_that.body);}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( ChannelStreamEvent body)?  channel,TResult? Function( NoteUpdateStreamEvent body)?  noteUpdated,TResult? Function( EmojiAddedStreamEvent body)?  emojiAdded,TResult? Function( EmojiUpdatedStreamEvent body)?  emojiUpdated,TResult? Function( EmojiDeletedStreamEvent body)?  emojiDeleted,TResult? Function( AnnouncementCreatedStreamEvent body)?  announcementCreated,TResult? Function( Object body)?  fallback,}) {final _that = this;
+switch (_that) {
+case StreamingChannelResponse() when channel != null:
+return channel(_that.body);case StreamingChannelNoteUpdatedResponse() when noteUpdated != null:
+return noteUpdated(_that.body);case StreamingChannelEmojiAddedResponse() when emojiAdded != null:
+return emojiAdded(_that.body);case StreamingChannelEmojiUpdatedResponse() when emojiUpdated != null:
+return emojiUpdated(_that.body);case StreamingChannelEmojiDeletedResponse() when emojiDeleted != null:
+return emojiDeleted(_that.body);case StreamingChannelAnnouncementCreatedResponse() when announcementCreated != null:
+return announcementCreated(_that.body);case StreamingChannelUnknownResponse() when fallback != null:
+return fallback(_that.body);case _:
+  return null;
+
+}
+}
+
+}
 
 /// @nodoc
 @JsonSerializable()
@@ -718,6 +877,136 @@ $EmojiCopyWith<$Res> get emoji {
 }
 
 
+/// Adds pattern-matching-related methods to [EmojiAddedStreamEvent].
+extension EmojiAddedStreamEventPatterns on EmojiAddedStreamEvent {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _EmojiAddedStreamEvent value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _EmojiAddedStreamEvent() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _EmojiAddedStreamEvent value)  $default,){
+final _that = this;
+switch (_that) {
+case _EmojiAddedStreamEvent():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _EmojiAddedStreamEvent value)?  $default,){
+final _that = this;
+switch (_that) {
+case _EmojiAddedStreamEvent() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( Emoji emoji)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _EmojiAddedStreamEvent() when $default != null:
+return $default(_that.emoji);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( Emoji emoji)  $default,) {final _that = this;
+switch (_that) {
+case _EmojiAddedStreamEvent():
+return $default(_that.emoji);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( Emoji emoji)?  $default,) {final _that = this;
+switch (_that) {
+case _EmojiAddedStreamEvent() when $default != null:
+return $default(_that.emoji);case _:
+  return null;
+
+}
+}
+
+}
+
 /// @nodoc
 @JsonSerializable()
 
@@ -860,6 +1149,136 @@ as List<Emoji>,
 }
 
 
+/// Adds pattern-matching-related methods to [EmojiUpdatedStreamEvent].
+extension EmojiUpdatedStreamEventPatterns on EmojiUpdatedStreamEvent {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _EmojiUpdatedStreamEvent value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _EmojiUpdatedStreamEvent() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _EmojiUpdatedStreamEvent value)  $default,){
+final _that = this;
+switch (_that) {
+case _EmojiUpdatedStreamEvent():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _EmojiUpdatedStreamEvent value)?  $default,){
+final _that = this;
+switch (_that) {
+case _EmojiUpdatedStreamEvent() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( List<Emoji> emojis)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _EmojiUpdatedStreamEvent() when $default != null:
+return $default(_that.emojis);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( List<Emoji> emojis)  $default,) {final _that = this;
+switch (_that) {
+case _EmojiUpdatedStreamEvent():
+return $default(_that.emojis);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( List<Emoji> emojis)?  $default,) {final _that = this;
+switch (_that) {
+case _EmojiUpdatedStreamEvent() when $default != null:
+return $default(_that.emojis);case _:
+  return null;
+
+}
+}
+
+}
+
 /// @nodoc
 @JsonSerializable()
 
@@ -998,6 +1417,136 @@ as List<Emoji>,
 
 }
 
+
+/// Adds pattern-matching-related methods to [EmojiDeletedStreamEvent].
+extension EmojiDeletedStreamEventPatterns on EmojiDeletedStreamEvent {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _EmojiDeletedStreamEvent value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _EmojiDeletedStreamEvent() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _EmojiDeletedStreamEvent value)  $default,){
+final _that = this;
+switch (_that) {
+case _EmojiDeletedStreamEvent():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _EmojiDeletedStreamEvent value)?  $default,){
+final _that = this;
+switch (_that) {
+case _EmojiDeletedStreamEvent() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( List<Emoji> emojis)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _EmojiDeletedStreamEvent() when $default != null:
+return $default(_that.emojis);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( List<Emoji> emojis)  $default,) {final _that = this;
+switch (_that) {
+case _EmojiDeletedStreamEvent():
+return $default(_that.emojis);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( List<Emoji> emojis)?  $default,) {final _that = this;
+switch (_that) {
+case _EmojiDeletedStreamEvent() when $default != null:
+return $default(_that.emojis);case _:
+  return null;
+
+}
+}
+
+}
 
 /// @nodoc
 @JsonSerializable()
@@ -1146,6 +1695,136 @@ $AnnouncementsResponseCopyWith<$Res> get announcement {
 }
 }
 
+
+/// Adds pattern-matching-related methods to [AnnouncementCreatedStreamEvent].
+extension AnnouncementCreatedStreamEventPatterns on AnnouncementCreatedStreamEvent {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _AnnouncementCreatedStreamEvent value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _AnnouncementCreatedStreamEvent() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _AnnouncementCreatedStreamEvent value)  $default,){
+final _that = this;
+switch (_that) {
+case _AnnouncementCreatedStreamEvent():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _AnnouncementCreatedStreamEvent value)?  $default,){
+final _that = this;
+switch (_that) {
+case _AnnouncementCreatedStreamEvent() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( AnnouncementsResponse announcement)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _AnnouncementCreatedStreamEvent() when $default != null:
+return $default(_that.announcement);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( AnnouncementsResponse announcement)  $default,) {final _that = this;
+switch (_that) {
+case _AnnouncementCreatedStreamEvent():
+return $default(_that.announcement);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( AnnouncementsResponse announcement)?  $default,) {final _that = this;
+switch (_that) {
+case _AnnouncementCreatedStreamEvent() when $default != null:
+return $default(_that.announcement);case _:
+  return null;
+
+}
+}
+
+}
 
 /// @nodoc
 @JsonSerializable()
@@ -1448,6 +2127,352 @@ as String,
 
 }
 
+
+/// Adds pattern-matching-related methods to [ChannelStreamEvent].
+extension ChannelStreamEventPatterns on ChannelStreamEvent {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( NoteChannelEvent value)?  note,TResult Function( StatsLogChannelEvent value)?  statsLog,TResult Function( StatsChannelEvent value)?  stats,TResult Function( UserAddedChannelEvent value)?  userAdded,TResult Function( UserRemovedChannelEvent value)?  userRemoved,TResult Function( NotificationChannelEvent value)?  notification,TResult Function( MentionChannelEvent value)?  mention,TResult Function( ReplyChannelEvent value)?  reply,TResult Function( RenoteChannelEvent value)?  renote,TResult Function( FollowChannelEvent value)?  follow,TResult Function( FollowedChannelEvent value)?  followed,TResult Function( UnfollowChannelEvent value)?  unfollow,TResult Function( MeUpdatedChannelEvent value)?  meUpdated,TResult Function( PageEventChannelEvent value)?  pageEvent,TResult Function( UrlUploadFinishedChannelEvent value)?  urlUploadFinished,TResult Function( ReadAllNotificationsChannelEvent value)?  readAllNotifications,TResult Function( UnreadNotificationChannelEvent value)?  unreadNotification,TResult Function( UnreadMentionChannelEvent value)?  unreadMention,TResult Function( ReadAllUnreadMentionsChannelEvent value)?  readAllUnreadMentions,TResult Function( NotificationFlushedChannelEvent value)?  notificationFlushed,TResult Function( UnreadSpecifiedNoteChannelEvent value)?  unreadSpecifiedNote,TResult Function( ReadAllUnreadSpecifiedNotesChannelEvent value)?  readAllUnreadSpecifiedNotes,TResult Function( ReadAllAntennasChannelEvent value)?  readAllAntennas,TResult Function( UnreadAntennaChannelEvent value)?  unreadAntenna,TResult Function( NewChatMessageEvent value)?  newChatMessage,TResult Function( ReadAllAnnouncementsChannelEvent value)?  readAllAnnouncements,TResult Function( MyTokenRegeneratedChannelEvent value)?  myTokenRegenerated,TResult Function( SigninChannelEvent value)?  signin,TResult Function( RegistryUpdatedChannelEvent value)?  registryUpdated,TResult Function( DriveFileCreatedChannelEvent value)?  driveFileCreated,TResult Function( ReadAntennaChannelEvent value)?  readAntenna,TResult Function( ReceiveFollowRequestChannelEvent value)?  receiveFollowRequest,TResult Function( AnnouncementCreatedChannelEvent value)?  announcementCreated,TResult Function( ChatMessageChannelEvent value)?  chatMessage,TResult Function( ChatDeletedChannelEvent value)?  chatDeleted,TResult Function( ChatReactChannelEvent value)?  chatReact,TResult Function( ChatUnreactChannelEvent value)?  chatUnreact,TResult Function( FallbackChannelEvent value)?  fallback,required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case NoteChannelEvent() when note != null:
+return note(_that);case StatsLogChannelEvent() when statsLog != null:
+return statsLog(_that);case StatsChannelEvent() when stats != null:
+return stats(_that);case UserAddedChannelEvent() when userAdded != null:
+return userAdded(_that);case UserRemovedChannelEvent() when userRemoved != null:
+return userRemoved(_that);case NotificationChannelEvent() when notification != null:
+return notification(_that);case MentionChannelEvent() when mention != null:
+return mention(_that);case ReplyChannelEvent() when reply != null:
+return reply(_that);case RenoteChannelEvent() when renote != null:
+return renote(_that);case FollowChannelEvent() when follow != null:
+return follow(_that);case FollowedChannelEvent() when followed != null:
+return followed(_that);case UnfollowChannelEvent() when unfollow != null:
+return unfollow(_that);case MeUpdatedChannelEvent() when meUpdated != null:
+return meUpdated(_that);case PageEventChannelEvent() when pageEvent != null:
+return pageEvent(_that);case UrlUploadFinishedChannelEvent() when urlUploadFinished != null:
+return urlUploadFinished(_that);case ReadAllNotificationsChannelEvent() when readAllNotifications != null:
+return readAllNotifications(_that);case UnreadNotificationChannelEvent() when unreadNotification != null:
+return unreadNotification(_that);case UnreadMentionChannelEvent() when unreadMention != null:
+return unreadMention(_that);case ReadAllUnreadMentionsChannelEvent() when readAllUnreadMentions != null:
+return readAllUnreadMentions(_that);case NotificationFlushedChannelEvent() when notificationFlushed != null:
+return notificationFlushed(_that);case UnreadSpecifiedNoteChannelEvent() when unreadSpecifiedNote != null:
+return unreadSpecifiedNote(_that);case ReadAllUnreadSpecifiedNotesChannelEvent() when readAllUnreadSpecifiedNotes != null:
+return readAllUnreadSpecifiedNotes(_that);case ReadAllAntennasChannelEvent() when readAllAntennas != null:
+return readAllAntennas(_that);case UnreadAntennaChannelEvent() when unreadAntenna != null:
+return unreadAntenna(_that);case NewChatMessageEvent() when newChatMessage != null:
+return newChatMessage(_that);case ReadAllAnnouncementsChannelEvent() when readAllAnnouncements != null:
+return readAllAnnouncements(_that);case MyTokenRegeneratedChannelEvent() when myTokenRegenerated != null:
+return myTokenRegenerated(_that);case SigninChannelEvent() when signin != null:
+return signin(_that);case RegistryUpdatedChannelEvent() when registryUpdated != null:
+return registryUpdated(_that);case DriveFileCreatedChannelEvent() when driveFileCreated != null:
+return driveFileCreated(_that);case ReadAntennaChannelEvent() when readAntenna != null:
+return readAntenna(_that);case ReceiveFollowRequestChannelEvent() when receiveFollowRequest != null:
+return receiveFollowRequest(_that);case AnnouncementCreatedChannelEvent() when announcementCreated != null:
+return announcementCreated(_that);case ChatMessageChannelEvent() when chatMessage != null:
+return chatMessage(_that);case ChatDeletedChannelEvent() when chatDeleted != null:
+return chatDeleted(_that);case ChatReactChannelEvent() when chatReact != null:
+return chatReact(_that);case ChatUnreactChannelEvent() when chatUnreact != null:
+return chatUnreact(_that);case FallbackChannelEvent() when fallback != null:
+return fallback(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( NoteChannelEvent value)  note,required TResult Function( StatsLogChannelEvent value)  statsLog,required TResult Function( StatsChannelEvent value)  stats,required TResult Function( UserAddedChannelEvent value)  userAdded,required TResult Function( UserRemovedChannelEvent value)  userRemoved,required TResult Function( NotificationChannelEvent value)  notification,required TResult Function( MentionChannelEvent value)  mention,required TResult Function( ReplyChannelEvent value)  reply,required TResult Function( RenoteChannelEvent value)  renote,required TResult Function( FollowChannelEvent value)  follow,required TResult Function( FollowedChannelEvent value)  followed,required TResult Function( UnfollowChannelEvent value)  unfollow,required TResult Function( MeUpdatedChannelEvent value)  meUpdated,required TResult Function( PageEventChannelEvent value)  pageEvent,required TResult Function( UrlUploadFinishedChannelEvent value)  urlUploadFinished,required TResult Function( ReadAllNotificationsChannelEvent value)  readAllNotifications,required TResult Function( UnreadNotificationChannelEvent value)  unreadNotification,required TResult Function( UnreadMentionChannelEvent value)  unreadMention,required TResult Function( ReadAllUnreadMentionsChannelEvent value)  readAllUnreadMentions,required TResult Function( NotificationFlushedChannelEvent value)  notificationFlushed,required TResult Function( UnreadSpecifiedNoteChannelEvent value)  unreadSpecifiedNote,required TResult Function( ReadAllUnreadSpecifiedNotesChannelEvent value)  readAllUnreadSpecifiedNotes,required TResult Function( ReadAllAntennasChannelEvent value)  readAllAntennas,required TResult Function( UnreadAntennaChannelEvent value)  unreadAntenna,required TResult Function( NewChatMessageEvent value)  newChatMessage,required TResult Function( ReadAllAnnouncementsChannelEvent value)  readAllAnnouncements,required TResult Function( MyTokenRegeneratedChannelEvent value)  myTokenRegenerated,required TResult Function( SigninChannelEvent value)  signin,required TResult Function( RegistryUpdatedChannelEvent value)  registryUpdated,required TResult Function( DriveFileCreatedChannelEvent value)  driveFileCreated,required TResult Function( ReadAntennaChannelEvent value)  readAntenna,required TResult Function( ReceiveFollowRequestChannelEvent value)  receiveFollowRequest,required TResult Function( AnnouncementCreatedChannelEvent value)  announcementCreated,required TResult Function( ChatMessageChannelEvent value)  chatMessage,required TResult Function( ChatDeletedChannelEvent value)  chatDeleted,required TResult Function( ChatReactChannelEvent value)  chatReact,required TResult Function( ChatUnreactChannelEvent value)  chatUnreact,required TResult Function( FallbackChannelEvent value)  fallback,}){
+final _that = this;
+switch (_that) {
+case NoteChannelEvent():
+return note(_that);case StatsLogChannelEvent():
+return statsLog(_that);case StatsChannelEvent():
+return stats(_that);case UserAddedChannelEvent():
+return userAdded(_that);case UserRemovedChannelEvent():
+return userRemoved(_that);case NotificationChannelEvent():
+return notification(_that);case MentionChannelEvent():
+return mention(_that);case ReplyChannelEvent():
+return reply(_that);case RenoteChannelEvent():
+return renote(_that);case FollowChannelEvent():
+return follow(_that);case FollowedChannelEvent():
+return followed(_that);case UnfollowChannelEvent():
+return unfollow(_that);case MeUpdatedChannelEvent():
+return meUpdated(_that);case PageEventChannelEvent():
+return pageEvent(_that);case UrlUploadFinishedChannelEvent():
+return urlUploadFinished(_that);case ReadAllNotificationsChannelEvent():
+return readAllNotifications(_that);case UnreadNotificationChannelEvent():
+return unreadNotification(_that);case UnreadMentionChannelEvent():
+return unreadMention(_that);case ReadAllUnreadMentionsChannelEvent():
+return readAllUnreadMentions(_that);case NotificationFlushedChannelEvent():
+return notificationFlushed(_that);case UnreadSpecifiedNoteChannelEvent():
+return unreadSpecifiedNote(_that);case ReadAllUnreadSpecifiedNotesChannelEvent():
+return readAllUnreadSpecifiedNotes(_that);case ReadAllAntennasChannelEvent():
+return readAllAntennas(_that);case UnreadAntennaChannelEvent():
+return unreadAntenna(_that);case NewChatMessageEvent():
+return newChatMessage(_that);case ReadAllAnnouncementsChannelEvent():
+return readAllAnnouncements(_that);case MyTokenRegeneratedChannelEvent():
+return myTokenRegenerated(_that);case SigninChannelEvent():
+return signin(_that);case RegistryUpdatedChannelEvent():
+return registryUpdated(_that);case DriveFileCreatedChannelEvent():
+return driveFileCreated(_that);case ReadAntennaChannelEvent():
+return readAntenna(_that);case ReceiveFollowRequestChannelEvent():
+return receiveFollowRequest(_that);case AnnouncementCreatedChannelEvent():
+return announcementCreated(_that);case ChatMessageChannelEvent():
+return chatMessage(_that);case ChatDeletedChannelEvent():
+return chatDeleted(_that);case ChatReactChannelEvent():
+return chatReact(_that);case ChatUnreactChannelEvent():
+return chatUnreact(_that);case FallbackChannelEvent():
+return fallback(_that);}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( NoteChannelEvent value)?  note,TResult? Function( StatsLogChannelEvent value)?  statsLog,TResult? Function( StatsChannelEvent value)?  stats,TResult? Function( UserAddedChannelEvent value)?  userAdded,TResult? Function( UserRemovedChannelEvent value)?  userRemoved,TResult? Function( NotificationChannelEvent value)?  notification,TResult? Function( MentionChannelEvent value)?  mention,TResult? Function( ReplyChannelEvent value)?  reply,TResult? Function( RenoteChannelEvent value)?  renote,TResult? Function( FollowChannelEvent value)?  follow,TResult? Function( FollowedChannelEvent value)?  followed,TResult? Function( UnfollowChannelEvent value)?  unfollow,TResult? Function( MeUpdatedChannelEvent value)?  meUpdated,TResult? Function( PageEventChannelEvent value)?  pageEvent,TResult? Function( UrlUploadFinishedChannelEvent value)?  urlUploadFinished,TResult? Function( ReadAllNotificationsChannelEvent value)?  readAllNotifications,TResult? Function( UnreadNotificationChannelEvent value)?  unreadNotification,TResult? Function( UnreadMentionChannelEvent value)?  unreadMention,TResult? Function( ReadAllUnreadMentionsChannelEvent value)?  readAllUnreadMentions,TResult? Function( NotificationFlushedChannelEvent value)?  notificationFlushed,TResult? Function( UnreadSpecifiedNoteChannelEvent value)?  unreadSpecifiedNote,TResult? Function( ReadAllUnreadSpecifiedNotesChannelEvent value)?  readAllUnreadSpecifiedNotes,TResult? Function( ReadAllAntennasChannelEvent value)?  readAllAntennas,TResult? Function( UnreadAntennaChannelEvent value)?  unreadAntenna,TResult? Function( NewChatMessageEvent value)?  newChatMessage,TResult? Function( ReadAllAnnouncementsChannelEvent value)?  readAllAnnouncements,TResult? Function( MyTokenRegeneratedChannelEvent value)?  myTokenRegenerated,TResult? Function( SigninChannelEvent value)?  signin,TResult? Function( RegistryUpdatedChannelEvent value)?  registryUpdated,TResult? Function( DriveFileCreatedChannelEvent value)?  driveFileCreated,TResult? Function( ReadAntennaChannelEvent value)?  readAntenna,TResult? Function( ReceiveFollowRequestChannelEvent value)?  receiveFollowRequest,TResult? Function( AnnouncementCreatedChannelEvent value)?  announcementCreated,TResult? Function( ChatMessageChannelEvent value)?  chatMessage,TResult? Function( ChatDeletedChannelEvent value)?  chatDeleted,TResult? Function( ChatReactChannelEvent value)?  chatReact,TResult? Function( ChatUnreactChannelEvent value)?  chatUnreact,TResult? Function( FallbackChannelEvent value)?  fallback,}){
+final _that = this;
+switch (_that) {
+case NoteChannelEvent() when note != null:
+return note(_that);case StatsLogChannelEvent() when statsLog != null:
+return statsLog(_that);case StatsChannelEvent() when stats != null:
+return stats(_that);case UserAddedChannelEvent() when userAdded != null:
+return userAdded(_that);case UserRemovedChannelEvent() when userRemoved != null:
+return userRemoved(_that);case NotificationChannelEvent() when notification != null:
+return notification(_that);case MentionChannelEvent() when mention != null:
+return mention(_that);case ReplyChannelEvent() when reply != null:
+return reply(_that);case RenoteChannelEvent() when renote != null:
+return renote(_that);case FollowChannelEvent() when follow != null:
+return follow(_that);case FollowedChannelEvent() when followed != null:
+return followed(_that);case UnfollowChannelEvent() when unfollow != null:
+return unfollow(_that);case MeUpdatedChannelEvent() when meUpdated != null:
+return meUpdated(_that);case PageEventChannelEvent() when pageEvent != null:
+return pageEvent(_that);case UrlUploadFinishedChannelEvent() when urlUploadFinished != null:
+return urlUploadFinished(_that);case ReadAllNotificationsChannelEvent() when readAllNotifications != null:
+return readAllNotifications(_that);case UnreadNotificationChannelEvent() when unreadNotification != null:
+return unreadNotification(_that);case UnreadMentionChannelEvent() when unreadMention != null:
+return unreadMention(_that);case ReadAllUnreadMentionsChannelEvent() when readAllUnreadMentions != null:
+return readAllUnreadMentions(_that);case NotificationFlushedChannelEvent() when notificationFlushed != null:
+return notificationFlushed(_that);case UnreadSpecifiedNoteChannelEvent() when unreadSpecifiedNote != null:
+return unreadSpecifiedNote(_that);case ReadAllUnreadSpecifiedNotesChannelEvent() when readAllUnreadSpecifiedNotes != null:
+return readAllUnreadSpecifiedNotes(_that);case ReadAllAntennasChannelEvent() when readAllAntennas != null:
+return readAllAntennas(_that);case UnreadAntennaChannelEvent() when unreadAntenna != null:
+return unreadAntenna(_that);case NewChatMessageEvent() when newChatMessage != null:
+return newChatMessage(_that);case ReadAllAnnouncementsChannelEvent() when readAllAnnouncements != null:
+return readAllAnnouncements(_that);case MyTokenRegeneratedChannelEvent() when myTokenRegenerated != null:
+return myTokenRegenerated(_that);case SigninChannelEvent() when signin != null:
+return signin(_that);case RegistryUpdatedChannelEvent() when registryUpdated != null:
+return registryUpdated(_that);case DriveFileCreatedChannelEvent() when driveFileCreated != null:
+return driveFileCreated(_that);case ReadAntennaChannelEvent() when readAntenna != null:
+return readAntenna(_that);case ReceiveFollowRequestChannelEvent() when receiveFollowRequest != null:
+return receiveFollowRequest(_that);case AnnouncementCreatedChannelEvent() when announcementCreated != null:
+return announcementCreated(_that);case ChatMessageChannelEvent() when chatMessage != null:
+return chatMessage(_that);case ChatDeletedChannelEvent() when chatDeleted != null:
+return chatDeleted(_that);case ChatReactChannelEvent() when chatReact != null:
+return chatReact(_that);case ChatUnreactChannelEvent() when chatUnreact != null:
+return chatUnreact(_that);case FallbackChannelEvent() when fallback != null:
+return fallback(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( String id, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChannelEventType? type,  Note body)?  note,TResult Function( String id, @StreamingStatsConverter()  List<StreamingStats> body)?  statsLog,TResult Function( String id, @StreamingStatsConverter()  StreamingStats body)?  stats,TResult Function( String id,  UserLite body)?  userAdded,TResult Function( String id,  UserLite body)?  userRemoved,TResult Function( String id,  INotificationsResponse body)?  notification,TResult Function( String id,  Note body)?  mention,TResult Function( String id,  Note body)?  reply,TResult Function( String id,  Note body)?  renote,TResult Function( String id,  UserDetailedNotMe body)?  follow,TResult Function( String id,  UserLite body)?  followed,TResult Function( String id,  UserDetailedNotMe body)?  unfollow,TResult Function( String id,  MeDetailed body)?  meUpdated,TResult Function( String id,  PageEvent body)?  pageEvent,TResult Function( String id,  UrlUploadFinishedEvent body)?  urlUploadFinished,TResult Function( String id)?  readAllNotifications,TResult Function( String id,  INotificationsResponse body)?  unreadNotification,TResult Function( String id,  String body)?  unreadMention,TResult Function( String id)?  readAllUnreadMentions,TResult Function( String id)?  notificationFlushed,TResult Function( String id,  String body)?  unreadSpecifiedNote,TResult Function( String id)?  readAllUnreadSpecifiedNotes,TResult Function( String id)?  readAllAntennas,TResult Function( String id,  Antenna body)?  unreadAntenna,TResult Function( String id,  ChatMessage body)?  newChatMessage,TResult Function( String id)?  readAllAnnouncements,TResult Function( String id)?  myTokenRegenerated,TResult Function( String id,  Signin body)?  signin,TResult Function( String id,  RegistryUpdated body)?  registryUpdated,TResult Function( String id,  DriveFile body)?  driveFileCreated,TResult Function( String id,  Antenna body)?  readAntenna,TResult Function( String id,  UserLite body)?  receiveFollowRequest,TResult Function( String id,  AnnouncementCreatedStreamEvent body)?  announcementCreated,TResult Function( String id,  ChatMessage body)?  chatMessage,TResult Function( String id,  String body)?  chatDeleted,TResult Function( String id,  ChatReact body)?  chatReact,TResult Function( String id,  ChatReact body)?  chatUnreact,TResult Function( String id,  Object? body)?  fallback,required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case NoteChannelEvent() when note != null:
+return note(_that.id,_that.type,_that.body);case StatsLogChannelEvent() when statsLog != null:
+return statsLog(_that.id,_that.body);case StatsChannelEvent() when stats != null:
+return stats(_that.id,_that.body);case UserAddedChannelEvent() when userAdded != null:
+return userAdded(_that.id,_that.body);case UserRemovedChannelEvent() when userRemoved != null:
+return userRemoved(_that.id,_that.body);case NotificationChannelEvent() when notification != null:
+return notification(_that.id,_that.body);case MentionChannelEvent() when mention != null:
+return mention(_that.id,_that.body);case ReplyChannelEvent() when reply != null:
+return reply(_that.id,_that.body);case RenoteChannelEvent() when renote != null:
+return renote(_that.id,_that.body);case FollowChannelEvent() when follow != null:
+return follow(_that.id,_that.body);case FollowedChannelEvent() when followed != null:
+return followed(_that.id,_that.body);case UnfollowChannelEvent() when unfollow != null:
+return unfollow(_that.id,_that.body);case MeUpdatedChannelEvent() when meUpdated != null:
+return meUpdated(_that.id,_that.body);case PageEventChannelEvent() when pageEvent != null:
+return pageEvent(_that.id,_that.body);case UrlUploadFinishedChannelEvent() when urlUploadFinished != null:
+return urlUploadFinished(_that.id,_that.body);case ReadAllNotificationsChannelEvent() when readAllNotifications != null:
+return readAllNotifications(_that.id);case UnreadNotificationChannelEvent() when unreadNotification != null:
+return unreadNotification(_that.id,_that.body);case UnreadMentionChannelEvent() when unreadMention != null:
+return unreadMention(_that.id,_that.body);case ReadAllUnreadMentionsChannelEvent() when readAllUnreadMentions != null:
+return readAllUnreadMentions(_that.id);case NotificationFlushedChannelEvent() when notificationFlushed != null:
+return notificationFlushed(_that.id);case UnreadSpecifiedNoteChannelEvent() when unreadSpecifiedNote != null:
+return unreadSpecifiedNote(_that.id,_that.body);case ReadAllUnreadSpecifiedNotesChannelEvent() when readAllUnreadSpecifiedNotes != null:
+return readAllUnreadSpecifiedNotes(_that.id);case ReadAllAntennasChannelEvent() when readAllAntennas != null:
+return readAllAntennas(_that.id);case UnreadAntennaChannelEvent() when unreadAntenna != null:
+return unreadAntenna(_that.id,_that.body);case NewChatMessageEvent() when newChatMessage != null:
+return newChatMessage(_that.id,_that.body);case ReadAllAnnouncementsChannelEvent() when readAllAnnouncements != null:
+return readAllAnnouncements(_that.id);case MyTokenRegeneratedChannelEvent() when myTokenRegenerated != null:
+return myTokenRegenerated(_that.id);case SigninChannelEvent() when signin != null:
+return signin(_that.id,_that.body);case RegistryUpdatedChannelEvent() when registryUpdated != null:
+return registryUpdated(_that.id,_that.body);case DriveFileCreatedChannelEvent() when driveFileCreated != null:
+return driveFileCreated(_that.id,_that.body);case ReadAntennaChannelEvent() when readAntenna != null:
+return readAntenna(_that.id,_that.body);case ReceiveFollowRequestChannelEvent() when receiveFollowRequest != null:
+return receiveFollowRequest(_that.id,_that.body);case AnnouncementCreatedChannelEvent() when announcementCreated != null:
+return announcementCreated(_that.id,_that.body);case ChatMessageChannelEvent() when chatMessage != null:
+return chatMessage(_that.id,_that.body);case ChatDeletedChannelEvent() when chatDeleted != null:
+return chatDeleted(_that.id,_that.body);case ChatReactChannelEvent() when chatReact != null:
+return chatReact(_that.id,_that.body);case ChatUnreactChannelEvent() when chatUnreact != null:
+return chatUnreact(_that.id,_that.body);case FallbackChannelEvent() when fallback != null:
+return fallback(_that.id,_that.body);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( String id, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChannelEventType? type,  Note body)  note,required TResult Function( String id, @StreamingStatsConverter()  List<StreamingStats> body)  statsLog,required TResult Function( String id, @StreamingStatsConverter()  StreamingStats body)  stats,required TResult Function( String id,  UserLite body)  userAdded,required TResult Function( String id,  UserLite body)  userRemoved,required TResult Function( String id,  INotificationsResponse body)  notification,required TResult Function( String id,  Note body)  mention,required TResult Function( String id,  Note body)  reply,required TResult Function( String id,  Note body)  renote,required TResult Function( String id,  UserDetailedNotMe body)  follow,required TResult Function( String id,  UserLite body)  followed,required TResult Function( String id,  UserDetailedNotMe body)  unfollow,required TResult Function( String id,  MeDetailed body)  meUpdated,required TResult Function( String id,  PageEvent body)  pageEvent,required TResult Function( String id,  UrlUploadFinishedEvent body)  urlUploadFinished,required TResult Function( String id)  readAllNotifications,required TResult Function( String id,  INotificationsResponse body)  unreadNotification,required TResult Function( String id,  String body)  unreadMention,required TResult Function( String id)  readAllUnreadMentions,required TResult Function( String id)  notificationFlushed,required TResult Function( String id,  String body)  unreadSpecifiedNote,required TResult Function( String id)  readAllUnreadSpecifiedNotes,required TResult Function( String id)  readAllAntennas,required TResult Function( String id,  Antenna body)  unreadAntenna,required TResult Function( String id,  ChatMessage body)  newChatMessage,required TResult Function( String id)  readAllAnnouncements,required TResult Function( String id)  myTokenRegenerated,required TResult Function( String id,  Signin body)  signin,required TResult Function( String id,  RegistryUpdated body)  registryUpdated,required TResult Function( String id,  DriveFile body)  driveFileCreated,required TResult Function( String id,  Antenna body)  readAntenna,required TResult Function( String id,  UserLite body)  receiveFollowRequest,required TResult Function( String id,  AnnouncementCreatedStreamEvent body)  announcementCreated,required TResult Function( String id,  ChatMessage body)  chatMessage,required TResult Function( String id,  String body)  chatDeleted,required TResult Function( String id,  ChatReact body)  chatReact,required TResult Function( String id,  ChatReact body)  chatUnreact,required TResult Function( String id,  Object? body)  fallback,}) {final _that = this;
+switch (_that) {
+case NoteChannelEvent():
+return note(_that.id,_that.type,_that.body);case StatsLogChannelEvent():
+return statsLog(_that.id,_that.body);case StatsChannelEvent():
+return stats(_that.id,_that.body);case UserAddedChannelEvent():
+return userAdded(_that.id,_that.body);case UserRemovedChannelEvent():
+return userRemoved(_that.id,_that.body);case NotificationChannelEvent():
+return notification(_that.id,_that.body);case MentionChannelEvent():
+return mention(_that.id,_that.body);case ReplyChannelEvent():
+return reply(_that.id,_that.body);case RenoteChannelEvent():
+return renote(_that.id,_that.body);case FollowChannelEvent():
+return follow(_that.id,_that.body);case FollowedChannelEvent():
+return followed(_that.id,_that.body);case UnfollowChannelEvent():
+return unfollow(_that.id,_that.body);case MeUpdatedChannelEvent():
+return meUpdated(_that.id,_that.body);case PageEventChannelEvent():
+return pageEvent(_that.id,_that.body);case UrlUploadFinishedChannelEvent():
+return urlUploadFinished(_that.id,_that.body);case ReadAllNotificationsChannelEvent():
+return readAllNotifications(_that.id);case UnreadNotificationChannelEvent():
+return unreadNotification(_that.id,_that.body);case UnreadMentionChannelEvent():
+return unreadMention(_that.id,_that.body);case ReadAllUnreadMentionsChannelEvent():
+return readAllUnreadMentions(_that.id);case NotificationFlushedChannelEvent():
+return notificationFlushed(_that.id);case UnreadSpecifiedNoteChannelEvent():
+return unreadSpecifiedNote(_that.id,_that.body);case ReadAllUnreadSpecifiedNotesChannelEvent():
+return readAllUnreadSpecifiedNotes(_that.id);case ReadAllAntennasChannelEvent():
+return readAllAntennas(_that.id);case UnreadAntennaChannelEvent():
+return unreadAntenna(_that.id,_that.body);case NewChatMessageEvent():
+return newChatMessage(_that.id,_that.body);case ReadAllAnnouncementsChannelEvent():
+return readAllAnnouncements(_that.id);case MyTokenRegeneratedChannelEvent():
+return myTokenRegenerated(_that.id);case SigninChannelEvent():
+return signin(_that.id,_that.body);case RegistryUpdatedChannelEvent():
+return registryUpdated(_that.id,_that.body);case DriveFileCreatedChannelEvent():
+return driveFileCreated(_that.id,_that.body);case ReadAntennaChannelEvent():
+return readAntenna(_that.id,_that.body);case ReceiveFollowRequestChannelEvent():
+return receiveFollowRequest(_that.id,_that.body);case AnnouncementCreatedChannelEvent():
+return announcementCreated(_that.id,_that.body);case ChatMessageChannelEvent():
+return chatMessage(_that.id,_that.body);case ChatDeletedChannelEvent():
+return chatDeleted(_that.id,_that.body);case ChatReactChannelEvent():
+return chatReact(_that.id,_that.body);case ChatUnreactChannelEvent():
+return chatUnreact(_that.id,_that.body);case FallbackChannelEvent():
+return fallback(_that.id,_that.body);}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( String id, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChannelEventType? type,  Note body)?  note,TResult? Function( String id, @StreamingStatsConverter()  List<StreamingStats> body)?  statsLog,TResult? Function( String id, @StreamingStatsConverter()  StreamingStats body)?  stats,TResult? Function( String id,  UserLite body)?  userAdded,TResult? Function( String id,  UserLite body)?  userRemoved,TResult? Function( String id,  INotificationsResponse body)?  notification,TResult? Function( String id,  Note body)?  mention,TResult? Function( String id,  Note body)?  reply,TResult? Function( String id,  Note body)?  renote,TResult? Function( String id,  UserDetailedNotMe body)?  follow,TResult? Function( String id,  UserLite body)?  followed,TResult? Function( String id,  UserDetailedNotMe body)?  unfollow,TResult? Function( String id,  MeDetailed body)?  meUpdated,TResult? Function( String id,  PageEvent body)?  pageEvent,TResult? Function( String id,  UrlUploadFinishedEvent body)?  urlUploadFinished,TResult? Function( String id)?  readAllNotifications,TResult? Function( String id,  INotificationsResponse body)?  unreadNotification,TResult? Function( String id,  String body)?  unreadMention,TResult? Function( String id)?  readAllUnreadMentions,TResult? Function( String id)?  notificationFlushed,TResult? Function( String id,  String body)?  unreadSpecifiedNote,TResult? Function( String id)?  readAllUnreadSpecifiedNotes,TResult? Function( String id)?  readAllAntennas,TResult? Function( String id,  Antenna body)?  unreadAntenna,TResult? Function( String id,  ChatMessage body)?  newChatMessage,TResult? Function( String id)?  readAllAnnouncements,TResult? Function( String id)?  myTokenRegenerated,TResult? Function( String id,  Signin body)?  signin,TResult? Function( String id,  RegistryUpdated body)?  registryUpdated,TResult? Function( String id,  DriveFile body)?  driveFileCreated,TResult? Function( String id,  Antenna body)?  readAntenna,TResult? Function( String id,  UserLite body)?  receiveFollowRequest,TResult? Function( String id,  AnnouncementCreatedStreamEvent body)?  announcementCreated,TResult? Function( String id,  ChatMessage body)?  chatMessage,TResult? Function( String id,  String body)?  chatDeleted,TResult? Function( String id,  ChatReact body)?  chatReact,TResult? Function( String id,  ChatReact body)?  chatUnreact,TResult? Function( String id,  Object? body)?  fallback,}) {final _that = this;
+switch (_that) {
+case NoteChannelEvent() when note != null:
+return note(_that.id,_that.type,_that.body);case StatsLogChannelEvent() when statsLog != null:
+return statsLog(_that.id,_that.body);case StatsChannelEvent() when stats != null:
+return stats(_that.id,_that.body);case UserAddedChannelEvent() when userAdded != null:
+return userAdded(_that.id,_that.body);case UserRemovedChannelEvent() when userRemoved != null:
+return userRemoved(_that.id,_that.body);case NotificationChannelEvent() when notification != null:
+return notification(_that.id,_that.body);case MentionChannelEvent() when mention != null:
+return mention(_that.id,_that.body);case ReplyChannelEvent() when reply != null:
+return reply(_that.id,_that.body);case RenoteChannelEvent() when renote != null:
+return renote(_that.id,_that.body);case FollowChannelEvent() when follow != null:
+return follow(_that.id,_that.body);case FollowedChannelEvent() when followed != null:
+return followed(_that.id,_that.body);case UnfollowChannelEvent() when unfollow != null:
+return unfollow(_that.id,_that.body);case MeUpdatedChannelEvent() when meUpdated != null:
+return meUpdated(_that.id,_that.body);case PageEventChannelEvent() when pageEvent != null:
+return pageEvent(_that.id,_that.body);case UrlUploadFinishedChannelEvent() when urlUploadFinished != null:
+return urlUploadFinished(_that.id,_that.body);case ReadAllNotificationsChannelEvent() when readAllNotifications != null:
+return readAllNotifications(_that.id);case UnreadNotificationChannelEvent() when unreadNotification != null:
+return unreadNotification(_that.id,_that.body);case UnreadMentionChannelEvent() when unreadMention != null:
+return unreadMention(_that.id,_that.body);case ReadAllUnreadMentionsChannelEvent() when readAllUnreadMentions != null:
+return readAllUnreadMentions(_that.id);case NotificationFlushedChannelEvent() when notificationFlushed != null:
+return notificationFlushed(_that.id);case UnreadSpecifiedNoteChannelEvent() when unreadSpecifiedNote != null:
+return unreadSpecifiedNote(_that.id,_that.body);case ReadAllUnreadSpecifiedNotesChannelEvent() when readAllUnreadSpecifiedNotes != null:
+return readAllUnreadSpecifiedNotes(_that.id);case ReadAllAntennasChannelEvent() when readAllAntennas != null:
+return readAllAntennas(_that.id);case UnreadAntennaChannelEvent() when unreadAntenna != null:
+return unreadAntenna(_that.id,_that.body);case NewChatMessageEvent() when newChatMessage != null:
+return newChatMessage(_that.id,_that.body);case ReadAllAnnouncementsChannelEvent() when readAllAnnouncements != null:
+return readAllAnnouncements(_that.id);case MyTokenRegeneratedChannelEvent() when myTokenRegenerated != null:
+return myTokenRegenerated(_that.id);case SigninChannelEvent() when signin != null:
+return signin(_that.id,_that.body);case RegistryUpdatedChannelEvent() when registryUpdated != null:
+return registryUpdated(_that.id,_that.body);case DriveFileCreatedChannelEvent() when driveFileCreated != null:
+return driveFileCreated(_that.id,_that.body);case ReadAntennaChannelEvent() when readAntenna != null:
+return readAntenna(_that.id,_that.body);case ReceiveFollowRequestChannelEvent() when receiveFollowRequest != null:
+return receiveFollowRequest(_that.id,_that.body);case AnnouncementCreatedChannelEvent() when announcementCreated != null:
+return announcementCreated(_that.id,_that.body);case ChatMessageChannelEvent() when chatMessage != null:
+return chatMessage(_that.id,_that.body);case ChatDeletedChannelEvent() when chatDeleted != null:
+return chatDeleted(_that.id,_that.body);case ChatReactChannelEvent() when chatReact != null:
+return chatReact(_that.id,_that.body);case ChatUnreactChannelEvent() when chatUnreact != null:
+return chatUnreact(_that.id,_that.body);case FallbackChannelEvent() when fallback != null:
+return fallback(_that.id,_that.body);case _:
+  return null;
+
+}
+}
+
+}
 
 /// @nodoc
 @JsonSerializable()
@@ -4621,6 +5646,154 @@ as String,
 
 }
 
+
+/// Adds pattern-matching-related methods to [NoteUpdateStreamEvent].
+extension NoteUpdateStreamEventPatterns on NoteUpdateStreamEvent {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( ReactedChannelEvent value)?  reacted,TResult Function( UnreactedChannelEvent value)?  unreacted,TResult Function( DeletedChannelEvent value)?  deleted,TResult Function( PollVotedChannelEvent value)?  pollVoted,TResult Function( UpdatedChannelEvent value)?  updated,required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case ReactedChannelEvent() when reacted != null:
+return reacted(_that);case UnreactedChannelEvent() when unreacted != null:
+return unreacted(_that);case DeletedChannelEvent() when deleted != null:
+return deleted(_that);case PollVotedChannelEvent() when pollVoted != null:
+return pollVoted(_that);case UpdatedChannelEvent() when updated != null:
+return updated(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( ReactedChannelEvent value)  reacted,required TResult Function( UnreactedChannelEvent value)  unreacted,required TResult Function( DeletedChannelEvent value)  deleted,required TResult Function( PollVotedChannelEvent value)  pollVoted,required TResult Function( UpdatedChannelEvent value)  updated,}){
+final _that = this;
+switch (_that) {
+case ReactedChannelEvent():
+return reacted(_that);case UnreactedChannelEvent():
+return unreacted(_that);case DeletedChannelEvent():
+return deleted(_that);case PollVotedChannelEvent():
+return pollVoted(_that);case UpdatedChannelEvent():
+return updated(_that);}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( ReactedChannelEvent value)?  reacted,TResult? Function( UnreactedChannelEvent value)?  unreacted,TResult? Function( DeletedChannelEvent value)?  deleted,TResult? Function( PollVotedChannelEvent value)?  pollVoted,TResult? Function( UpdatedChannelEvent value)?  updated,}){
+final _that = this;
+switch (_that) {
+case ReactedChannelEvent() when reacted != null:
+return reacted(_that);case UnreactedChannelEvent() when unreacted != null:
+return unreacted(_that);case DeletedChannelEvent() when deleted != null:
+return deleted(_that);case PollVotedChannelEvent() when pollVoted != null:
+return pollVoted(_that);case UpdatedChannelEvent() when updated != null:
+return updated(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( String id,  TimelineReacted body)?  reacted,TResult Function( String id,  TimelineReacted body)?  unreacted,TResult Function( String id,  TimelineDeleted body)?  deleted,TResult Function( String id,  TimelineVoted body)?  pollVoted,TResult Function( String id,  NoteEdited body)?  updated,required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case ReactedChannelEvent() when reacted != null:
+return reacted(_that.id,_that.body);case UnreactedChannelEvent() when unreacted != null:
+return unreacted(_that.id,_that.body);case DeletedChannelEvent() when deleted != null:
+return deleted(_that.id,_that.body);case PollVotedChannelEvent() when pollVoted != null:
+return pollVoted(_that.id,_that.body);case UpdatedChannelEvent() when updated != null:
+return updated(_that.id,_that.body);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( String id,  TimelineReacted body)  reacted,required TResult Function( String id,  TimelineReacted body)  unreacted,required TResult Function( String id,  TimelineDeleted body)  deleted,required TResult Function( String id,  TimelineVoted body)  pollVoted,required TResult Function( String id,  NoteEdited body)  updated,}) {final _that = this;
+switch (_that) {
+case ReactedChannelEvent():
+return reacted(_that.id,_that.body);case UnreactedChannelEvent():
+return unreacted(_that.id,_that.body);case DeletedChannelEvent():
+return deleted(_that.id,_that.body);case PollVotedChannelEvent():
+return pollVoted(_that.id,_that.body);case UpdatedChannelEvent():
+return updated(_that.id,_that.body);}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( String id,  TimelineReacted body)?  reacted,TResult? Function( String id,  TimelineReacted body)?  unreacted,TResult? Function( String id,  TimelineDeleted body)?  deleted,TResult? Function( String id,  TimelineVoted body)?  pollVoted,TResult? Function( String id,  NoteEdited body)?  updated,}) {final _that = this;
+switch (_that) {
+case ReactedChannelEvent() when reacted != null:
+return reacted(_that.id,_that.body);case UnreactedChannelEvent() when unreacted != null:
+return unreacted(_that.id,_that.body);case DeletedChannelEvent() when deleted != null:
+return deleted(_that.id,_that.body);case PollVotedChannelEvent() when pollVoted != null:
+return pollVoted(_that.id,_that.body);case UpdatedChannelEvent() when updated != null:
+return updated(_that.id,_that.body);case _:
+  return null;
+
+}
+}
+
+}
 
 /// @nodoc
 @JsonSerializable()

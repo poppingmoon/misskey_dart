@@ -37,19 +37,15 @@ Map<String, dynamic> _$NotesCreatePollRequestToJson(
   _NotesCreatePollRequest instance,
 ) => <String, dynamic>{
   'choices': instance.choices,
-  if (instance.multiple case final value?) 'multiple': value,
-  if (_$JsonConverterToJson<int, DateTime>(
-        instance.expiresAt,
-        const EpocTimeDateTimeConverter().toJson,
-      )
-      case final value?)
-    'expiresAt': value,
-  if (_$JsonConverterToJson<int, Duration>(
-        instance.expiredAfter,
-        const DurationConverter().toJson,
-      )
-      case final value?)
-    'expiredAfter': value,
+  'multiple': ?instance.multiple,
+  'expiresAt': ?_$JsonConverterToJson<int, DateTime>(
+    instance.expiresAt,
+    const EpocTimeDateTimeConverter().toJson,
+  ),
+  'expiredAfter': ?_$JsonConverterToJson<int, Duration>(
+    instance.expiredAfter,
+    const DurationConverter().toJson,
+  ),
 };
 
 Value? _$JsonConverterFromJson<Json, Value>(

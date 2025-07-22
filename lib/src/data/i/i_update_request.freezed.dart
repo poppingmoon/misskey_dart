@@ -1,6 +1,5 @@
-// dart format width=80
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -127,6 +126,136 @@ $NotificationRecieveConfigsCopyWith<$Res>? get notificationRecieveConfig {
 }
 }
 
+
+/// Adds pattern-matching-related methods to [IUpdateRequest].
+extension IUpdateRequestPatterns on IUpdateRequest {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _IUpdateRequest value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _IUpdateRequest() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _IUpdateRequest value)  $default,){
+final _that = this;
+switch (_that) {
+case _IUpdateRequest():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _IUpdateRequest value)?  $default,){
+final _that = this;
+switch (_that) {
+case _IUpdateRequest() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? name,  String? description,  String? followedMessage,  String? location, @BirthdayConverter()  DateTime? birthday,  String? lang,  String? avatarId,  List<IUpdateAvatarDecoration>? avatarDecorations,  String? bannerId,  List<UserField>? fields,  bool? isLocked,  bool? isExplorable,  bool? hideOnlineStatus,  bool? publicReactions,  bool? carefulBot,  bool? autoAcceptFollowed,  bool? noCrawle,  bool? preventAiLearning,  bool? requireSigninToViewContents, @HideBeforeConverter()  HideBefore? makeNotesFollowersOnlyBefore, @HideBeforeConverter()  HideBefore? makeNotesHiddenBefore,  bool? isBot,  bool? isCat,  bool? injectFeaturedNote,  bool? receiveAnnouncementEmail,  bool? alwaysMarkNsfw,  bool? autoSensitive,  FFVisibility? ffVisibility,  FFVisibility? followingVisibility,  FFVisibility? followersVisibility,  ChatScope? chatScope,  String? pinnedPageId,  List<String>? mutingNotificationTypes, @MuteWordsConverter()  List<MuteWord>? mutedWords, @MuteWordsConverter()  List<MuteWord>? hardMutedWords,  List<String>? mutedInstances,  NotificationRecieveConfigs? notificationRecieveConfig,  List<String>? emailNotificationTypes,  List<String>? alsoKnownAs,  List<IUpdateMutualLinkSection>? mutualLinkSections)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _IUpdateRequest() when $default != null:
+return $default(_that.name,_that.description,_that.followedMessage,_that.location,_that.birthday,_that.lang,_that.avatarId,_that.avatarDecorations,_that.bannerId,_that.fields,_that.isLocked,_that.isExplorable,_that.hideOnlineStatus,_that.publicReactions,_that.carefulBot,_that.autoAcceptFollowed,_that.noCrawle,_that.preventAiLearning,_that.requireSigninToViewContents,_that.makeNotesFollowersOnlyBefore,_that.makeNotesHiddenBefore,_that.isBot,_that.isCat,_that.injectFeaturedNote,_that.receiveAnnouncementEmail,_that.alwaysMarkNsfw,_that.autoSensitive,_that.ffVisibility,_that.followingVisibility,_that.followersVisibility,_that.chatScope,_that.pinnedPageId,_that.mutingNotificationTypes,_that.mutedWords,_that.hardMutedWords,_that.mutedInstances,_that.notificationRecieveConfig,_that.emailNotificationTypes,_that.alsoKnownAs,_that.mutualLinkSections);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? name,  String? description,  String? followedMessage,  String? location, @BirthdayConverter()  DateTime? birthday,  String? lang,  String? avatarId,  List<IUpdateAvatarDecoration>? avatarDecorations,  String? bannerId,  List<UserField>? fields,  bool? isLocked,  bool? isExplorable,  bool? hideOnlineStatus,  bool? publicReactions,  bool? carefulBot,  bool? autoAcceptFollowed,  bool? noCrawle,  bool? preventAiLearning,  bool? requireSigninToViewContents, @HideBeforeConverter()  HideBefore? makeNotesFollowersOnlyBefore, @HideBeforeConverter()  HideBefore? makeNotesHiddenBefore,  bool? isBot,  bool? isCat,  bool? injectFeaturedNote,  bool? receiveAnnouncementEmail,  bool? alwaysMarkNsfw,  bool? autoSensitive,  FFVisibility? ffVisibility,  FFVisibility? followingVisibility,  FFVisibility? followersVisibility,  ChatScope? chatScope,  String? pinnedPageId,  List<String>? mutingNotificationTypes, @MuteWordsConverter()  List<MuteWord>? mutedWords, @MuteWordsConverter()  List<MuteWord>? hardMutedWords,  List<String>? mutedInstances,  NotificationRecieveConfigs? notificationRecieveConfig,  List<String>? emailNotificationTypes,  List<String>? alsoKnownAs,  List<IUpdateMutualLinkSection>? mutualLinkSections)  $default,) {final _that = this;
+switch (_that) {
+case _IUpdateRequest():
+return $default(_that.name,_that.description,_that.followedMessage,_that.location,_that.birthday,_that.lang,_that.avatarId,_that.avatarDecorations,_that.bannerId,_that.fields,_that.isLocked,_that.isExplorable,_that.hideOnlineStatus,_that.publicReactions,_that.carefulBot,_that.autoAcceptFollowed,_that.noCrawle,_that.preventAiLearning,_that.requireSigninToViewContents,_that.makeNotesFollowersOnlyBefore,_that.makeNotesHiddenBefore,_that.isBot,_that.isCat,_that.injectFeaturedNote,_that.receiveAnnouncementEmail,_that.alwaysMarkNsfw,_that.autoSensitive,_that.ffVisibility,_that.followingVisibility,_that.followersVisibility,_that.chatScope,_that.pinnedPageId,_that.mutingNotificationTypes,_that.mutedWords,_that.hardMutedWords,_that.mutedInstances,_that.notificationRecieveConfig,_that.emailNotificationTypes,_that.alsoKnownAs,_that.mutualLinkSections);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? name,  String? description,  String? followedMessage,  String? location, @BirthdayConverter()  DateTime? birthday,  String? lang,  String? avatarId,  List<IUpdateAvatarDecoration>? avatarDecorations,  String? bannerId,  List<UserField>? fields,  bool? isLocked,  bool? isExplorable,  bool? hideOnlineStatus,  bool? publicReactions,  bool? carefulBot,  bool? autoAcceptFollowed,  bool? noCrawle,  bool? preventAiLearning,  bool? requireSigninToViewContents, @HideBeforeConverter()  HideBefore? makeNotesFollowersOnlyBefore, @HideBeforeConverter()  HideBefore? makeNotesHiddenBefore,  bool? isBot,  bool? isCat,  bool? injectFeaturedNote,  bool? receiveAnnouncementEmail,  bool? alwaysMarkNsfw,  bool? autoSensitive,  FFVisibility? ffVisibility,  FFVisibility? followingVisibility,  FFVisibility? followersVisibility,  ChatScope? chatScope,  String? pinnedPageId,  List<String>? mutingNotificationTypes, @MuteWordsConverter()  List<MuteWord>? mutedWords, @MuteWordsConverter()  List<MuteWord>? hardMutedWords,  List<String>? mutedInstances,  NotificationRecieveConfigs? notificationRecieveConfig,  List<String>? emailNotificationTypes,  List<String>? alsoKnownAs,  List<IUpdateMutualLinkSection>? mutualLinkSections)?  $default,) {final _that = this;
+switch (_that) {
+case _IUpdateRequest() when $default != null:
+return $default(_that.name,_that.description,_that.followedMessage,_that.location,_that.birthday,_that.lang,_that.avatarId,_that.avatarDecorations,_that.bannerId,_that.fields,_that.isLocked,_that.isExplorable,_that.hideOnlineStatus,_that.publicReactions,_that.carefulBot,_that.autoAcceptFollowed,_that.noCrawle,_that.preventAiLearning,_that.requireSigninToViewContents,_that.makeNotesFollowersOnlyBefore,_that.makeNotesHiddenBefore,_that.isBot,_that.isCat,_that.injectFeaturedNote,_that.receiveAnnouncementEmail,_that.alwaysMarkNsfw,_that.autoSensitive,_that.ffVisibility,_that.followingVisibility,_that.followersVisibility,_that.chatScope,_that.pinnedPageId,_that.mutingNotificationTypes,_that.mutedWords,_that.hardMutedWords,_that.mutedInstances,_that.notificationRecieveConfig,_that.emailNotificationTypes,_that.alsoKnownAs,_that.mutualLinkSections);case _:
+  return null;
+
+}
+}
+
+}
 
 /// @nodoc
 @JsonSerializable()
@@ -428,6 +557,136 @@ as double,
 }
 
 
+/// Adds pattern-matching-related methods to [IUpdateAvatarDecoration].
+extension IUpdateAvatarDecorationPatterns on IUpdateAvatarDecoration {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _IUpdateAvatarDecoration value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _IUpdateAvatarDecoration() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _IUpdateAvatarDecoration value)  $default,){
+final _that = this;
+switch (_that) {
+case _IUpdateAvatarDecoration():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _IUpdateAvatarDecoration value)?  $default,){
+final _that = this;
+switch (_that) {
+case _IUpdateAvatarDecoration() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  double? angle,  bool flipH,  double offsetX,  double offsetY)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _IUpdateAvatarDecoration() when $default != null:
+return $default(_that.id,_that.angle,_that.flipH,_that.offsetX,_that.offsetY);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  double? angle,  bool flipH,  double offsetX,  double offsetY)  $default,) {final _that = this;
+switch (_that) {
+case _IUpdateAvatarDecoration():
+return $default(_that.id,_that.angle,_that.flipH,_that.offsetX,_that.offsetY);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  double? angle,  bool flipH,  double offsetX,  double offsetY)?  $default,) {final _that = this;
+switch (_that) {
+case _IUpdateAvatarDecoration() when $default != null:
+return $default(_that.id,_that.angle,_that.flipH,_that.offsetX,_that.offsetY);case _:
+  return null;
+
+}
+}
+
+}
+
 /// @nodoc
 @JsonSerializable()
 
@@ -569,6 +828,136 @@ as List<IUpdateMutualLink>,
 
 }
 
+
+/// Adds pattern-matching-related methods to [IUpdateMutualLinkSection].
+extension IUpdateMutualLinkSectionPatterns on IUpdateMutualLinkSection {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _IUpdateMutualLinkSection value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _IUpdateMutualLinkSection() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _IUpdateMutualLinkSection value)  $default,){
+final _that = this;
+switch (_that) {
+case _IUpdateMutualLinkSection():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _IUpdateMutualLinkSection value)?  $default,){
+final _that = this;
+switch (_that) {
+case _IUpdateMutualLinkSection() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? name,  List<IUpdateMutualLink> mutualLinks)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _IUpdateMutualLinkSection() when $default != null:
+return $default(_that.name,_that.mutualLinks);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? name,  List<IUpdateMutualLink> mutualLinks)  $default,) {final _that = this;
+switch (_that) {
+case _IUpdateMutualLinkSection():
+return $default(_that.name,_that.mutualLinks);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? name,  List<IUpdateMutualLink> mutualLinks)?  $default,) {final _that = this;
+switch (_that) {
+case _IUpdateMutualLinkSection() when $default != null:
+return $default(_that.name,_that.mutualLinks);case _:
+  return null;
+
+}
+}
+
+}
 
 /// @nodoc
 @JsonSerializable()
@@ -712,6 +1101,136 @@ as String?,
 
 }
 
+
+/// Adds pattern-matching-related methods to [IUpdateMutualLink].
+extension IUpdateMutualLinkPatterns on IUpdateMutualLink {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _IUpdateMutualLink value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _IUpdateMutualLink() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _IUpdateMutualLink value)  $default,){
+final _that = this;
+switch (_that) {
+case _IUpdateMutualLink():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _IUpdateMutualLink value)?  $default,){
+final _that = this;
+switch (_that) {
+case _IUpdateMutualLink() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String url,  String fileId,  String? description)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _IUpdateMutualLink() when $default != null:
+return $default(_that.url,_that.fileId,_that.description);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String url,  String fileId,  String? description)  $default,) {final _that = this;
+switch (_that) {
+case _IUpdateMutualLink():
+return $default(_that.url,_that.fileId,_that.description);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String url,  String fileId,  String? description)?  $default,) {final _that = this;
+switch (_that) {
+case _IUpdateMutualLink() when $default != null:
+return $default(_that.url,_that.fileId,_that.description);case _:
+  return null;
+
+}
+}
+
+}
 
 /// @nodoc
 @JsonSerializable()

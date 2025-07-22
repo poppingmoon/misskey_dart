@@ -1,6 +1,5 @@
-// dart format width=80
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -103,6 +102,142 @@ as DateTime?,
 
 }
 
+
+/// Adds pattern-matching-related methods to [PushNotification].
+extension PushNotificationPatterns on PushNotification {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( NotificationPushNotification value)?  notification,TResult Function( ReadAllNotificationsPushNotification value)?  readAllNotifications,TResult Function( NewChatMessagePushNotification value)?  newChatMessage,required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case NotificationPushNotification() when notification != null:
+return notification(_that);case ReadAllNotificationsPushNotification() when readAllNotifications != null:
+return readAllNotifications(_that);case NewChatMessagePushNotification() when newChatMessage != null:
+return newChatMessage(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( NotificationPushNotification value)  notification,required TResult Function( ReadAllNotificationsPushNotification value)  readAllNotifications,required TResult Function( NewChatMessagePushNotification value)  newChatMessage,}){
+final _that = this;
+switch (_that) {
+case NotificationPushNotification():
+return notification(_that);case ReadAllNotificationsPushNotification():
+return readAllNotifications(_that);case NewChatMessagePushNotification():
+return newChatMessage(_that);}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( NotificationPushNotification value)?  notification,TResult? Function( ReadAllNotificationsPushNotification value)?  readAllNotifications,TResult? Function( NewChatMessagePushNotification value)?  newChatMessage,}){
+final _that = this;
+switch (_that) {
+case NotificationPushNotification() when notification != null:
+return notification(_that);case ReadAllNotificationsPushNotification() when readAllNotifications != null:
+return readAllNotifications(_that);case NewChatMessagePushNotification() when newChatMessage != null:
+return newChatMessage(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( PushNotificationBody body,  String? userId, @EpocTimeDateTimeConverter()  DateTime? dateTime)?  notification,TResult Function( String? userId, @EpocTimeDateTimeConverter()  DateTime? dateTime)?  readAllNotifications,TResult Function( ChatMessage body,  String? userId, @EpocTimeDateTimeConverter()  DateTime? dateTime)?  newChatMessage,required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case NotificationPushNotification() when notification != null:
+return notification(_that.body,_that.userId,_that.dateTime);case ReadAllNotificationsPushNotification() when readAllNotifications != null:
+return readAllNotifications(_that.userId,_that.dateTime);case NewChatMessagePushNotification() when newChatMessage != null:
+return newChatMessage(_that.body,_that.userId,_that.dateTime);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( PushNotificationBody body,  String? userId, @EpocTimeDateTimeConverter()  DateTime? dateTime)  notification,required TResult Function( String? userId, @EpocTimeDateTimeConverter()  DateTime? dateTime)  readAllNotifications,required TResult Function( ChatMessage body,  String? userId, @EpocTimeDateTimeConverter()  DateTime? dateTime)  newChatMessage,}) {final _that = this;
+switch (_that) {
+case NotificationPushNotification():
+return notification(_that.body,_that.userId,_that.dateTime);case ReadAllNotificationsPushNotification():
+return readAllNotifications(_that.userId,_that.dateTime);case NewChatMessagePushNotification():
+return newChatMessage(_that.body,_that.userId,_that.dateTime);}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( PushNotificationBody body,  String? userId, @EpocTimeDateTimeConverter()  DateTime? dateTime)?  notification,TResult? Function( String? userId, @EpocTimeDateTimeConverter()  DateTime? dateTime)?  readAllNotifications,TResult? Function( ChatMessage body,  String? userId, @EpocTimeDateTimeConverter()  DateTime? dateTime)?  newChatMessage,}) {final _that = this;
+switch (_that) {
+case NotificationPushNotification() when notification != null:
+return notification(_that.body,_that.userId,_that.dateTime);case ReadAllNotificationsPushNotification() when readAllNotifications != null:
+return readAllNotifications(_that.userId,_that.dateTime);case NewChatMessagePushNotification() when newChatMessage != null:
+return newChatMessage(_that.body,_that.userId,_that.dateTime);case _:
+  return null;
+
+}
+}
+
+}
 
 /// @nodoc
 @JsonSerializable()
@@ -501,6 +636,136 @@ $ScheduledNoteCopyWith<$Res>? get draft {
 }
 
 
+/// Adds pattern-matching-related methods to [PushNotificationBody].
+extension PushNotificationBodyPatterns on PushNotificationBody {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _PushNotificationBody value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _PushNotificationBody() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _PushNotificationBody value)  $default,){
+final _that = this;
+switch (_that) {
+case _PushNotificationBody():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _PushNotificationBody value)?  $default,){
+final _that = this;
+switch (_that) {
+case _PushNotificationBody() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  NotificationType? type,  String? noteId,  String? followRequestId,  String? reaction,  int? choice,  String? achievement,  String? body,  String? header, @NullableUriConverter()  Uri? icon,  String? appAccessTokenId,  ChatJoining? invitation,  String? userId,  UserLite? user,  PushNotificationNote? note,  RolesListResponse? role,  List<INotificationsReaction>? reactions,  List<UserLite>? users, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  UserExportableEntities? exportedEntity,  String? fileId,  String? message,  String? errorType,  ScheduledNote? draft)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _PushNotificationBody() when $default != null:
+return $default(_that.id,_that.createdAt,_that.type,_that.noteId,_that.followRequestId,_that.reaction,_that.choice,_that.achievement,_that.body,_that.header,_that.icon,_that.appAccessTokenId,_that.invitation,_that.userId,_that.user,_that.note,_that.role,_that.reactions,_that.users,_that.exportedEntity,_that.fileId,_that.message,_that.errorType,_that.draft);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  NotificationType? type,  String? noteId,  String? followRequestId,  String? reaction,  int? choice,  String? achievement,  String? body,  String? header, @NullableUriConverter()  Uri? icon,  String? appAccessTokenId,  ChatJoining? invitation,  String? userId,  UserLite? user,  PushNotificationNote? note,  RolesListResponse? role,  List<INotificationsReaction>? reactions,  List<UserLite>? users, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  UserExportableEntities? exportedEntity,  String? fileId,  String? message,  String? errorType,  ScheduledNote? draft)  $default,) {final _that = this;
+switch (_that) {
+case _PushNotificationBody():
+return $default(_that.id,_that.createdAt,_that.type,_that.noteId,_that.followRequestId,_that.reaction,_that.choice,_that.achievement,_that.body,_that.header,_that.icon,_that.appAccessTokenId,_that.invitation,_that.userId,_that.user,_that.note,_that.role,_that.reactions,_that.users,_that.exportedEntity,_that.fileId,_that.message,_that.errorType,_that.draft);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id, @DateTimeConverter()  DateTime createdAt, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  NotificationType? type,  String? noteId,  String? followRequestId,  String? reaction,  int? choice,  String? achievement,  String? body,  String? header, @NullableUriConverter()  Uri? icon,  String? appAccessTokenId,  ChatJoining? invitation,  String? userId,  UserLite? user,  PushNotificationNote? note,  RolesListResponse? role,  List<INotificationsReaction>? reactions,  List<UserLite>? users, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  UserExportableEntities? exportedEntity,  String? fileId,  String? message,  String? errorType,  ScheduledNote? draft)?  $default,) {final _that = this;
+switch (_that) {
+case _PushNotificationBody() when $default != null:
+return $default(_that.id,_that.createdAt,_that.type,_that.noteId,_that.followRequestId,_that.reaction,_that.choice,_that.achievement,_that.body,_that.header,_that.icon,_that.appAccessTokenId,_that.invitation,_that.userId,_that.user,_that.note,_that.role,_that.reactions,_that.users,_that.exportedEntity,_that.fileId,_that.message,_that.errorType,_that.draft);case _:
+  return null;
+
+}
+}
+
+}
+
 /// @nodoc
 @JsonSerializable()
 
@@ -811,6 +1076,136 @@ $NotePollCopyWith<$Res>? get poll {
 }
 }
 
+
+/// Adds pattern-matching-related methods to [PushNotificationNote].
+extension PushNotificationNotePatterns on PushNotificationNote {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _PushNotificationNote value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _PushNotificationNote() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _PushNotificationNote value)  $default,){
+final _that = this;
+switch (_that) {
+case _PushNotificationNote():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _PushNotificationNote value)?  $default,){
+final _that = this;
+switch (_that) {
+case _PushNotificationNote() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? updatedAt,  String? text,  String userId, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  NoteVisibility? visibility,  bool localOnly,  int renoteCount,  int repliesCount,  int? reactionCount,  Map<String, int> reactions, @EmojisConverter()  Map<String, String> reactionEmojis, @EmojisConverter()  Map<String, String> emojis,  List<String> fileIds,  List<DriveFile> files,  String? replyId,  String? renoteId,  String? channelId, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ReactionAcceptance? reactionAcceptance,  List<String> visibleUserIds,  List<String> mentions,  String? myReaction,  NoteChannelInfo? channel, @NullableUriConverter()  Uri? uri, @NullableUriConverter()  Uri? url,  List<String> reactionAndUserPairCache,  NotePoll? poll,  int? clippedCount)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _PushNotificationNote() when $default != null:
+return $default(_that.id,_that.createdAt,_that.updatedAt,_that.text,_that.userId,_that.visibility,_that.localOnly,_that.renoteCount,_that.repliesCount,_that.reactionCount,_that.reactions,_that.reactionEmojis,_that.emojis,_that.fileIds,_that.files,_that.replyId,_that.renoteId,_that.channelId,_that.reactionAcceptance,_that.visibleUserIds,_that.mentions,_that.myReaction,_that.channel,_that.uri,_that.url,_that.reactionAndUserPairCache,_that.poll,_that.clippedCount);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? updatedAt,  String? text,  String userId, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  NoteVisibility? visibility,  bool localOnly,  int renoteCount,  int repliesCount,  int? reactionCount,  Map<String, int> reactions, @EmojisConverter()  Map<String, String> reactionEmojis, @EmojisConverter()  Map<String, String> emojis,  List<String> fileIds,  List<DriveFile> files,  String? replyId,  String? renoteId,  String? channelId, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ReactionAcceptance? reactionAcceptance,  List<String> visibleUserIds,  List<String> mentions,  String? myReaction,  NoteChannelInfo? channel, @NullableUriConverter()  Uri? uri, @NullableUriConverter()  Uri? url,  List<String> reactionAndUserPairCache,  NotePoll? poll,  int? clippedCount)  $default,) {final _that = this;
+switch (_that) {
+case _PushNotificationNote():
+return $default(_that.id,_that.createdAt,_that.updatedAt,_that.text,_that.userId,_that.visibility,_that.localOnly,_that.renoteCount,_that.repliesCount,_that.reactionCount,_that.reactions,_that.reactionEmojis,_that.emojis,_that.fileIds,_that.files,_that.replyId,_that.renoteId,_that.channelId,_that.reactionAcceptance,_that.visibleUserIds,_that.mentions,_that.myReaction,_that.channel,_that.uri,_that.url,_that.reactionAndUserPairCache,_that.poll,_that.clippedCount);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? updatedAt,  String? text,  String userId, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  NoteVisibility? visibility,  bool localOnly,  int renoteCount,  int repliesCount,  int? reactionCount,  Map<String, int> reactions, @EmojisConverter()  Map<String, String> reactionEmojis, @EmojisConverter()  Map<String, String> emojis,  List<String> fileIds,  List<DriveFile> files,  String? replyId,  String? renoteId,  String? channelId, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ReactionAcceptance? reactionAcceptance,  List<String> visibleUserIds,  List<String> mentions,  String? myReaction,  NoteChannelInfo? channel, @NullableUriConverter()  Uri? uri, @NullableUriConverter()  Uri? url,  List<String> reactionAndUserPairCache,  NotePoll? poll,  int? clippedCount)?  $default,) {final _that = this;
+switch (_that) {
+case _PushNotificationNote() when $default != null:
+return $default(_that.id,_that.createdAt,_that.updatedAt,_that.text,_that.userId,_that.visibility,_that.localOnly,_that.renoteCount,_that.repliesCount,_that.reactionCount,_that.reactions,_that.reactionEmojis,_that.emojis,_that.fileIds,_that.files,_that.replyId,_that.renoteId,_that.channelId,_that.reactionAcceptance,_that.visibleUserIds,_that.mentions,_that.myReaction,_that.channel,_that.uri,_that.url,_that.reactionAndUserPairCache,_that.poll,_that.clippedCount);case _:
+  return null;
+
+}
+}
+
+}
 
 /// @nodoc
 @JsonSerializable()

@@ -1,6 +1,5 @@
-// dart format width=80
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -114,6 +113,136 @@ $DriveFileCopyWith<$Res>? get eyeCatchingImage {
 }
 }
 
+
+/// Adds pattern-matching-related methods to [Page].
+extension PagePatterns on Page {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _Page value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _Page() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _Page value)  $default,){
+final _that = this;
+switch (_that) {
+case _Page():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _Page value)?  $default,){
+final _that = this;
+switch (_that) {
+case _Page() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt, @DateTimeConverter()  DateTime updatedAt,  String userId,  UserLite user, @ListPageContentConverter()  List<AbstractPageContent> content,  List<Map<String, dynamic>>? variables,  String title,  String name,  String? summary,  bool? hideTitleWhenPinned,  bool? alignCenter,  String? font,  String? script,  String? eyeCatchingImageId,  DriveFile? eyeCatchingImage,  List<DriveFile>? attachedFiles,  int? likedCount,  bool? isLiked)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _Page() when $default != null:
+return $default(_that.id,_that.createdAt,_that.updatedAt,_that.userId,_that.user,_that.content,_that.variables,_that.title,_that.name,_that.summary,_that.hideTitleWhenPinned,_that.alignCenter,_that.font,_that.script,_that.eyeCatchingImageId,_that.eyeCatchingImage,_that.attachedFiles,_that.likedCount,_that.isLiked);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt, @DateTimeConverter()  DateTime updatedAt,  String userId,  UserLite user, @ListPageContentConverter()  List<AbstractPageContent> content,  List<Map<String, dynamic>>? variables,  String title,  String name,  String? summary,  bool? hideTitleWhenPinned,  bool? alignCenter,  String? font,  String? script,  String? eyeCatchingImageId,  DriveFile? eyeCatchingImage,  List<DriveFile>? attachedFiles,  int? likedCount,  bool? isLiked)  $default,) {final _that = this;
+switch (_that) {
+case _Page():
+return $default(_that.id,_that.createdAt,_that.updatedAt,_that.userId,_that.user,_that.content,_that.variables,_that.title,_that.name,_that.summary,_that.hideTitleWhenPinned,_that.alignCenter,_that.font,_that.script,_that.eyeCatchingImageId,_that.eyeCatchingImage,_that.attachedFiles,_that.likedCount,_that.isLiked);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id, @DateTimeConverter()  DateTime createdAt, @DateTimeConverter()  DateTime updatedAt,  String userId,  UserLite user, @ListPageContentConverter()  List<AbstractPageContent> content,  List<Map<String, dynamic>>? variables,  String title,  String name,  String? summary,  bool? hideTitleWhenPinned,  bool? alignCenter,  String? font,  String? script,  String? eyeCatchingImageId,  DriveFile? eyeCatchingImage,  List<DriveFile>? attachedFiles,  int? likedCount,  bool? isLiked)?  $default,) {final _that = this;
+switch (_that) {
+case _Page() when $default != null:
+return $default(_that.id,_that.createdAt,_that.updatedAt,_that.userId,_that.user,_that.content,_that.variables,_that.title,_that.name,_that.summary,_that.hideTitleWhenPinned,_that.alignCenter,_that.font,_that.script,_that.eyeCatchingImageId,_that.eyeCatchingImage,_that.attachedFiles,_that.likedCount,_that.isLiked);case _:
+  return null;
+
+}
+}
+
+}
 
 /// @nodoc
 @JsonSerializable()
@@ -329,6 +458,136 @@ as String?,
 }
 
 
+/// Adds pattern-matching-related methods to [PageText].
+extension PageTextPatterns on PageText {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _PageText value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _PageText() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _PageText value)  $default,){
+final _that = this;
+switch (_that) {
+case _PageText():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _PageText value)?  $default,){
+final _that = this;
+switch (_that) {
+case _PageText() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? id,  PageContentType? type,  String? text)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _PageText() when $default != null:
+return $default(_that.id,_that.type,_that.text);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? id,  PageContentType? type,  String? text)  $default,) {final _that = this;
+switch (_that) {
+case _PageText():
+return $default(_that.id,_that.type,_that.text);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? id,  PageContentType? type,  String? text)?  $default,) {final _that = this;
+switch (_that) {
+case _PageText() when $default != null:
+return $default(_that.id,_that.type,_that.text);case _:
+  return null;
+
+}
+}
+
+}
+
 /// @nodoc
 @JsonSerializable()
 
@@ -468,6 +727,136 @@ as List<AbstractPageContent>?,
 
 }
 
+
+/// Adds pattern-matching-related methods to [PageSection].
+extension PageSectionPatterns on PageSection {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _PageSection value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _PageSection() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _PageSection value)  $default,){
+final _that = this;
+switch (_that) {
+case _PageSection():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _PageSection value)?  $default,){
+final _that = this;
+switch (_that) {
+case _PageSection() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? id,  PageContentType? type,  String? title, @ListPageContentConverter()  List<AbstractPageContent>? children)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _PageSection() when $default != null:
+return $default(_that.id,_that.type,_that.title,_that.children);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? id,  PageContentType? type,  String? title, @ListPageContentConverter()  List<AbstractPageContent>? children)  $default,) {final _that = this;
+switch (_that) {
+case _PageSection():
+return $default(_that.id,_that.type,_that.title,_that.children);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? id,  PageContentType? type,  String? title, @ListPageContentConverter()  List<AbstractPageContent>? children)?  $default,) {final _that = this;
+switch (_that) {
+case _PageSection() when $default != null:
+return $default(_that.id,_that.type,_that.title,_that.children);case _:
+  return null;
+
+}
+}
+
+}
 
 /// @nodoc
 @JsonSerializable()
@@ -618,6 +1007,136 @@ as String?,
 }
 
 
+/// Adds pattern-matching-related methods to [PageImage].
+extension PageImagePatterns on PageImage {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _PageImage value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _PageImage() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _PageImage value)  $default,){
+final _that = this;
+switch (_that) {
+case _PageImage():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _PageImage value)?  $default,){
+final _that = this;
+switch (_that) {
+case _PageImage() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? id,  PageContentType? type,  String? fileId)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _PageImage() when $default != null:
+return $default(_that.id,_that.type,_that.fileId);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? id,  PageContentType? type,  String? fileId)  $default,) {final _that = this;
+switch (_that) {
+case _PageImage():
+return $default(_that.id,_that.type,_that.fileId);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? id,  PageContentType? type,  String? fileId)?  $default,) {final _that = this;
+switch (_that) {
+case _PageImage() when $default != null:
+return $default(_that.id,_that.type,_that.fileId);case _:
+  return null;
+
+}
+}
+
+}
+
 /// @nodoc
 @JsonSerializable()
 
@@ -757,6 +1276,136 @@ as bool?,
 
 }
 
+
+/// Adds pattern-matching-related methods to [PageNote].
+extension PageNotePatterns on PageNote {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _PageNote value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _PageNote() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _PageNote value)  $default,){
+final _that = this;
+switch (_that) {
+case _PageNote():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _PageNote value)?  $default,){
+final _that = this;
+switch (_that) {
+case _PageNote() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? id,  PageContentType? type,  String? note,  bool? detailed)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _PageNote() when $default != null:
+return $default(_that.id,_that.type,_that.note,_that.detailed);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? id,  PageContentType? type,  String? note,  bool? detailed)  $default,) {final _that = this;
+switch (_that) {
+case _PageNote():
+return $default(_that.id,_that.type,_that.note,_that.detailed);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? id,  PageContentType? type,  String? note,  bool? detailed)?  $default,) {final _that = this;
+switch (_that) {
+case _PageNote() when $default != null:
+return $default(_that.id,_that.type,_that.note,_that.detailed);case _:
+  return null;
+
+}
+}
+
+}
 
 /// @nodoc
 @JsonSerializable()
@@ -898,6 +1547,136 @@ as PageContentType?,
 
 }
 
+
+/// Adds pattern-matching-related methods to [PageUnknown].
+extension PageUnknownPatterns on PageUnknown {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _PageUnknown value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _PageUnknown() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _PageUnknown value)  $default,){
+final _that = this;
+switch (_that) {
+case _PageUnknown():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _PageUnknown value)?  $default,){
+final _that = this;
+switch (_that) {
+case _PageUnknown() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? id, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  PageContentType? type)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _PageUnknown() when $default != null:
+return $default(_that.id,_that.type);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? id, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  PageContentType? type)  $default,) {final _that = this;
+switch (_that) {
+case _PageUnknown():
+return $default(_that.id,_that.type);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? id, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  PageContentType? type)?  $default,) {final _that = this;
+switch (_that) {
+case _PageUnknown() when $default != null:
+return $default(_that.id,_that.type);case _:
+  return null;
+
+}
+}
+
+}
 
 /// @nodoc
 @JsonSerializable()

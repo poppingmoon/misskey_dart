@@ -1,6 +1,5 @@
-// dart format width=80
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -153,6 +152,136 @@ $MetaFeatureCopyWith<$Res>? get features {
 }
 }
 
+
+/// Adds pattern-matching-related methods to [MetaResponse].
+extension MetaResponsePatterns on MetaResponse {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _MetaResponse value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _MetaResponse() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _MetaResponse value)  $default,){
+final _that = this;
+switch (_that) {
+case _MetaResponse():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _MetaResponse value)?  $default,){
+final _that = this;
+switch (_that) {
+case _MetaResponse() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? maintainerName,  String? maintainerEmail,  String? version,  bool? providesTarball,  String? name,  String? shortName, @NullableUriConverter()  Uri? uri,  String? description,  List<String> langs, @NullableUriConverter()  Uri? tosUrl, @NullableUriConverter()  Uri? repositoryUrl,  String? feedbackUrl,  String? defaultDarkTheme,  String? defaultLightTheme,  bool? disableRegistration,  bool? emailRequiredForSignup,  bool? enableHcaptcha,  String? hcaptchaSiteKey,  bool? enableMcaptcha,  String? mcaptchaSiteKey, @NullableUriConverter()  Uri? mcaptchaInstanceUrl,  bool? enableRecaptcha,  String? recaptchaSiteKey,  bool? enableTurnstile,  String? turnstileSiteKey,  String? swPublickey,  String? themeColor, @NullableUriConverter()  Uri? mascotImageUrl, @NullableUriConverter()  Uri? bannerUrl, @NullableUriConverter()  Uri? infoImageUrl, @NullableUriConverter()  Uri? errorImageUrl, @NullableUriConverter()  Uri? serverErrorImageUrl, @NullableUriConverter()  Uri? notFountImageUrl, @NullableUriConverter()  Uri? iconUrl, @NullableUriConverter()  Uri? backgroundImageUrl, @NullableUriConverter()  Uri? logoImageUrl, @NullableUriConverter()  Uri? impressumUrl, @NullableUriConverter()  Uri? privacyPolicyUrl,  int? maxNoteTextLength,  List<MetaAd> ads,  int? notesPerOneAd,  List<String> serverRules,  UserPolicies? policies,  bool? requireSetup,  bool? enableEmail,  bool? enableServiceWorker,  bool? translatorAvailable,  String? proxyAccountName,  String? mediaProxy,  bool? enableUrlPreview,  bool? enableSkebStatus,  bool? cacheRemoteFiles,  bool? cacheRemoteSensitiveFiles,  MetaFeature? features)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _MetaResponse() when $default != null:
+return $default(_that.maintainerName,_that.maintainerEmail,_that.version,_that.providesTarball,_that.name,_that.shortName,_that.uri,_that.description,_that.langs,_that.tosUrl,_that.repositoryUrl,_that.feedbackUrl,_that.defaultDarkTheme,_that.defaultLightTheme,_that.disableRegistration,_that.emailRequiredForSignup,_that.enableHcaptcha,_that.hcaptchaSiteKey,_that.enableMcaptcha,_that.mcaptchaSiteKey,_that.mcaptchaInstanceUrl,_that.enableRecaptcha,_that.recaptchaSiteKey,_that.enableTurnstile,_that.turnstileSiteKey,_that.swPublickey,_that.themeColor,_that.mascotImageUrl,_that.bannerUrl,_that.infoImageUrl,_that.errorImageUrl,_that.serverErrorImageUrl,_that.notFountImageUrl,_that.iconUrl,_that.backgroundImageUrl,_that.logoImageUrl,_that.impressumUrl,_that.privacyPolicyUrl,_that.maxNoteTextLength,_that.ads,_that.notesPerOneAd,_that.serverRules,_that.policies,_that.requireSetup,_that.enableEmail,_that.enableServiceWorker,_that.translatorAvailable,_that.proxyAccountName,_that.mediaProxy,_that.enableUrlPreview,_that.enableSkebStatus,_that.cacheRemoteFiles,_that.cacheRemoteSensitiveFiles,_that.features);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? maintainerName,  String? maintainerEmail,  String? version,  bool? providesTarball,  String? name,  String? shortName, @NullableUriConverter()  Uri? uri,  String? description,  List<String> langs, @NullableUriConverter()  Uri? tosUrl, @NullableUriConverter()  Uri? repositoryUrl,  String? feedbackUrl,  String? defaultDarkTheme,  String? defaultLightTheme,  bool? disableRegistration,  bool? emailRequiredForSignup,  bool? enableHcaptcha,  String? hcaptchaSiteKey,  bool? enableMcaptcha,  String? mcaptchaSiteKey, @NullableUriConverter()  Uri? mcaptchaInstanceUrl,  bool? enableRecaptcha,  String? recaptchaSiteKey,  bool? enableTurnstile,  String? turnstileSiteKey,  String? swPublickey,  String? themeColor, @NullableUriConverter()  Uri? mascotImageUrl, @NullableUriConverter()  Uri? bannerUrl, @NullableUriConverter()  Uri? infoImageUrl, @NullableUriConverter()  Uri? errorImageUrl, @NullableUriConverter()  Uri? serverErrorImageUrl, @NullableUriConverter()  Uri? notFountImageUrl, @NullableUriConverter()  Uri? iconUrl, @NullableUriConverter()  Uri? backgroundImageUrl, @NullableUriConverter()  Uri? logoImageUrl, @NullableUriConverter()  Uri? impressumUrl, @NullableUriConverter()  Uri? privacyPolicyUrl,  int? maxNoteTextLength,  List<MetaAd> ads,  int? notesPerOneAd,  List<String> serverRules,  UserPolicies? policies,  bool? requireSetup,  bool? enableEmail,  bool? enableServiceWorker,  bool? translatorAvailable,  String? proxyAccountName,  String? mediaProxy,  bool? enableUrlPreview,  bool? enableSkebStatus,  bool? cacheRemoteFiles,  bool? cacheRemoteSensitiveFiles,  MetaFeature? features)  $default,) {final _that = this;
+switch (_that) {
+case _MetaResponse():
+return $default(_that.maintainerName,_that.maintainerEmail,_that.version,_that.providesTarball,_that.name,_that.shortName,_that.uri,_that.description,_that.langs,_that.tosUrl,_that.repositoryUrl,_that.feedbackUrl,_that.defaultDarkTheme,_that.defaultLightTheme,_that.disableRegistration,_that.emailRequiredForSignup,_that.enableHcaptcha,_that.hcaptchaSiteKey,_that.enableMcaptcha,_that.mcaptchaSiteKey,_that.mcaptchaInstanceUrl,_that.enableRecaptcha,_that.recaptchaSiteKey,_that.enableTurnstile,_that.turnstileSiteKey,_that.swPublickey,_that.themeColor,_that.mascotImageUrl,_that.bannerUrl,_that.infoImageUrl,_that.errorImageUrl,_that.serverErrorImageUrl,_that.notFountImageUrl,_that.iconUrl,_that.backgroundImageUrl,_that.logoImageUrl,_that.impressumUrl,_that.privacyPolicyUrl,_that.maxNoteTextLength,_that.ads,_that.notesPerOneAd,_that.serverRules,_that.policies,_that.requireSetup,_that.enableEmail,_that.enableServiceWorker,_that.translatorAvailable,_that.proxyAccountName,_that.mediaProxy,_that.enableUrlPreview,_that.enableSkebStatus,_that.cacheRemoteFiles,_that.cacheRemoteSensitiveFiles,_that.features);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? maintainerName,  String? maintainerEmail,  String? version,  bool? providesTarball,  String? name,  String? shortName, @NullableUriConverter()  Uri? uri,  String? description,  List<String> langs, @NullableUriConverter()  Uri? tosUrl, @NullableUriConverter()  Uri? repositoryUrl,  String? feedbackUrl,  String? defaultDarkTheme,  String? defaultLightTheme,  bool? disableRegistration,  bool? emailRequiredForSignup,  bool? enableHcaptcha,  String? hcaptchaSiteKey,  bool? enableMcaptcha,  String? mcaptchaSiteKey, @NullableUriConverter()  Uri? mcaptchaInstanceUrl,  bool? enableRecaptcha,  String? recaptchaSiteKey,  bool? enableTurnstile,  String? turnstileSiteKey,  String? swPublickey,  String? themeColor, @NullableUriConverter()  Uri? mascotImageUrl, @NullableUriConverter()  Uri? bannerUrl, @NullableUriConverter()  Uri? infoImageUrl, @NullableUriConverter()  Uri? errorImageUrl, @NullableUriConverter()  Uri? serverErrorImageUrl, @NullableUriConverter()  Uri? notFountImageUrl, @NullableUriConverter()  Uri? iconUrl, @NullableUriConverter()  Uri? backgroundImageUrl, @NullableUriConverter()  Uri? logoImageUrl, @NullableUriConverter()  Uri? impressumUrl, @NullableUriConverter()  Uri? privacyPolicyUrl,  int? maxNoteTextLength,  List<MetaAd> ads,  int? notesPerOneAd,  List<String> serverRules,  UserPolicies? policies,  bool? requireSetup,  bool? enableEmail,  bool? enableServiceWorker,  bool? translatorAvailable,  String? proxyAccountName,  String? mediaProxy,  bool? enableUrlPreview,  bool? enableSkebStatus,  bool? cacheRemoteFiles,  bool? cacheRemoteSensitiveFiles,  MetaFeature? features)?  $default,) {final _that = this;
+switch (_that) {
+case _MetaResponse() when $default != null:
+return $default(_that.maintainerName,_that.maintainerEmail,_that.version,_that.providesTarball,_that.name,_that.shortName,_that.uri,_that.description,_that.langs,_that.tosUrl,_that.repositoryUrl,_that.feedbackUrl,_that.defaultDarkTheme,_that.defaultLightTheme,_that.disableRegistration,_that.emailRequiredForSignup,_that.enableHcaptcha,_that.hcaptchaSiteKey,_that.enableMcaptcha,_that.mcaptchaSiteKey,_that.mcaptchaInstanceUrl,_that.enableRecaptcha,_that.recaptchaSiteKey,_that.enableTurnstile,_that.turnstileSiteKey,_that.swPublickey,_that.themeColor,_that.mascotImageUrl,_that.bannerUrl,_that.infoImageUrl,_that.errorImageUrl,_that.serverErrorImageUrl,_that.notFountImageUrl,_that.iconUrl,_that.backgroundImageUrl,_that.logoImageUrl,_that.impressumUrl,_that.privacyPolicyUrl,_that.maxNoteTextLength,_that.ads,_that.notesPerOneAd,_that.serverRules,_that.policies,_that.requireSetup,_that.enableEmail,_that.enableServiceWorker,_that.translatorAvailable,_that.proxyAccountName,_that.mediaProxy,_that.enableUrlPreview,_that.enableSkebStatus,_that.cacheRemoteFiles,_that.cacheRemoteSensitiveFiles,_that.features);case _:
+  return null;
+
+}
+}
+
+}
 
 /// @nodoc
 @JsonSerializable()
@@ -440,6 +569,136 @@ as int,
 }
 
 
+/// Adds pattern-matching-related methods to [MetaAd].
+extension MetaAdPatterns on MetaAd {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _MetaAd value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _MetaAd() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _MetaAd value)  $default,){
+final _that = this;
+switch (_that) {
+case _MetaAd():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _MetaAd value)?  $default,){
+final _that = this;
+switch (_that) {
+case _MetaAd() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String place, @NullableUriConverter()  Uri? url, @NullableUriConverter()  Uri? imageUrl,  int ratio)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _MetaAd() when $default != null:
+return $default(_that.id,_that.place,_that.url,_that.imageUrl,_that.ratio);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String place, @NullableUriConverter()  Uri? url, @NullableUriConverter()  Uri? imageUrl,  int ratio)  $default,) {final _that = this;
+switch (_that) {
+case _MetaAd():
+return $default(_that.id,_that.place,_that.url,_that.imageUrl,_that.ratio);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String place, @NullableUriConverter()  Uri? url, @NullableUriConverter()  Uri? imageUrl,  int ratio)?  $default,) {final _that = this;
+switch (_that) {
+case _MetaAd() when $default != null:
+return $default(_that.id,_that.place,_that.url,_that.imageUrl,_that.ratio);case _:
+  return null;
+
+}
+}
+
+}
+
 /// @nodoc
 @JsonSerializable()
 
@@ -587,6 +846,136 @@ as bool?,
 
 }
 
+
+/// Adds pattern-matching-related methods to [MetaFeature].
+extension MetaFeaturePatterns on MetaFeature {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _MetaFeature value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _MetaFeature() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _MetaFeature value)  $default,){
+final _that = this;
+switch (_that) {
+case _MetaFeature():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _MetaFeature value)?  $default,){
+final _that = this;
+switch (_that) {
+case _MetaFeature() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( bool? registration,  bool? emailRequiredForSignup,  bool? hcaptcha,  bool? recaptcha,  bool? turnstile,  bool? objectStorage,  bool? serviceWorker,  bool? miauth)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _MetaFeature() when $default != null:
+return $default(_that.registration,_that.emailRequiredForSignup,_that.hcaptcha,_that.recaptcha,_that.turnstile,_that.objectStorage,_that.serviceWorker,_that.miauth);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( bool? registration,  bool? emailRequiredForSignup,  bool? hcaptcha,  bool? recaptcha,  bool? turnstile,  bool? objectStorage,  bool? serviceWorker,  bool? miauth)  $default,) {final _that = this;
+switch (_that) {
+case _MetaFeature():
+return $default(_that.registration,_that.emailRequiredForSignup,_that.hcaptcha,_that.recaptcha,_that.turnstile,_that.objectStorage,_that.serviceWorker,_that.miauth);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( bool? registration,  bool? emailRequiredForSignup,  bool? hcaptcha,  bool? recaptcha,  bool? turnstile,  bool? objectStorage,  bool? serviceWorker,  bool? miauth)?  $default,) {final _that = this;
+switch (_that) {
+case _MetaFeature() when $default != null:
+return $default(_that.registration,_that.emailRequiredForSignup,_that.hcaptcha,_that.recaptcha,_that.turnstile,_that.objectStorage,_that.serviceWorker,_that.miauth);case _:
+  return null;
+
+}
+}
+
+}
 
 /// @nodoc
 @JsonSerializable()

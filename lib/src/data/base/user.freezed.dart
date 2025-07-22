@@ -1,6 +1,5 @@
-// dart format width=80
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -105,6 +104,136 @@ $UserInstanceInfoCopyWith<$Res>? get instance {
 }
 }
 
+
+/// Adds pattern-matching-related methods to [UserLite].
+extension UserLitePatterns on UserLite {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UserLite value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _UserLite() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UserLite value)  $default,){
+final _that = this;
+switch (_that) {
+case _UserLite():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UserLite value)?  $default,){
+final _that = this;
+switch (_that) {
+case _UserLite() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String? name,  String username,  String? host, @NullableUriConverter()  Uri? avatarUrl,  String? avatarBlurhash,  List<UserAvatarDecoration> avatarDecorations,  bool isBot,  bool isCat,  UserInstanceInfo? instance, @EmojisConverter()  Map<String, String> emojis, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  OnlineStatus? onlineStatus,  List<UserBadgeRole> badgeRoles,  bool? requireSigninToViewContents, @HideBeforeConverter()  HideBefore? makeNotesFollowersOnlyBefore, @HideBeforeConverter()  HideBefore? makeNotesHiddenBefore,  bool? speakAsCat,  String? mandatoryCW)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _UserLite() when $default != null:
+return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_that.avatarBlurhash,_that.avatarDecorations,_that.isBot,_that.isCat,_that.instance,_that.emojis,_that.onlineStatus,_that.badgeRoles,_that.requireSigninToViewContents,_that.makeNotesFollowersOnlyBefore,_that.makeNotesHiddenBefore,_that.speakAsCat,_that.mandatoryCW);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String? name,  String username,  String? host, @NullableUriConverter()  Uri? avatarUrl,  String? avatarBlurhash,  List<UserAvatarDecoration> avatarDecorations,  bool isBot,  bool isCat,  UserInstanceInfo? instance, @EmojisConverter()  Map<String, String> emojis, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  OnlineStatus? onlineStatus,  List<UserBadgeRole> badgeRoles,  bool? requireSigninToViewContents, @HideBeforeConverter()  HideBefore? makeNotesFollowersOnlyBefore, @HideBeforeConverter()  HideBefore? makeNotesHiddenBefore,  bool? speakAsCat,  String? mandatoryCW)  $default,) {final _that = this;
+switch (_that) {
+case _UserLite():
+return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_that.avatarBlurhash,_that.avatarDecorations,_that.isBot,_that.isCat,_that.instance,_that.emojis,_that.onlineStatus,_that.badgeRoles,_that.requireSigninToViewContents,_that.makeNotesFollowersOnlyBefore,_that.makeNotesHiddenBefore,_that.speakAsCat,_that.mandatoryCW);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String? name,  String username,  String? host, @NullableUriConverter()  Uri? avatarUrl,  String? avatarBlurhash,  List<UserAvatarDecoration> avatarDecorations,  bool isBot,  bool isCat,  UserInstanceInfo? instance, @EmojisConverter()  Map<String, String> emojis, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  OnlineStatus? onlineStatus,  List<UserBadgeRole> badgeRoles,  bool? requireSigninToViewContents, @HideBeforeConverter()  HideBefore? makeNotesFollowersOnlyBefore, @HideBeforeConverter()  HideBefore? makeNotesHiddenBefore,  bool? speakAsCat,  String? mandatoryCW)?  $default,) {final _that = this;
+switch (_that) {
+case _UserLite() when $default != null:
+return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_that.avatarBlurhash,_that.avatarDecorations,_that.isBot,_that.isCat,_that.instance,_that.emojis,_that.onlineStatus,_that.badgeRoles,_that.requireSigninToViewContents,_that.makeNotesFollowersOnlyBefore,_that.makeNotesHiddenBefore,_that.speakAsCat,_that.mandatoryCW);case _:
+  return null;
+
+}
+}
+
+}
 
 /// @nodoc
 @JsonSerializable()
@@ -380,6 +509,136 @@ $UserInstanceInfoCopyWith<$Res>? get instance {
 }
 }
 
+
+/// Adds pattern-matching-related methods to [UserDetailedNotMe].
+extension UserDetailedNotMePatterns on UserDetailedNotMe {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UserDetailedNotMe value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _UserDetailedNotMe() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UserDetailedNotMe value)  $default,){
+final _that = this;
+switch (_that) {
+case _UserDetailedNotMe():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UserDetailedNotMe value)?  $default,){
+final _that = this;
+switch (_that) {
+case _UserDetailedNotMe() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String? name,  String username,  String? host, @NullableUriConverter()  Uri? avatarUrl,  String? avatarBlurhash,  List<UserAvatarDecoration> avatarDecorations,  bool isBot,  bool isCat,  UserInstanceInfo? instance, @EmojisConverter()  Map<String, String> emojis, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  OnlineStatus? onlineStatus,  List<UserBadgeRole> badgeRoles,  bool? requireSigninToViewContents, @HideBeforeConverter()  HideBefore? makeNotesFollowersOnlyBefore, @HideBeforeConverter()  HideBefore? makeNotesHiddenBefore,  bool? speakAsCat, @NullableUriConverter()  Uri? url, @NullableUriConverter()  Uri? uri, @NullableUriConverter()  Uri? movedTo,  List<String>? alsoKnownAs, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? updatedAt, @NullableDateTimeConverter()  DateTime? lastFetchedAt, @NullableUriConverter()  Uri? bannerUrl,  String? bannerBlurhash,  bool isLocked,  bool isSilenced,  bool isSuspended,  String? description,  String? location, @NullableDateTimeConverter()  DateTime? birthday,  String? lang,  List<UserField>? fields,  List<String> verifiedLinks,  List<MutualLinkSection>? mutualLinkSections, @IntConverter()  int followersCount, @IntConverter()  int followingCount,  int notesCount,  List<String>? pinnedNoteIds,  List<Note>? pinnedNotes,  String? pinnedPageId,  Map<String, dynamic>? pinnedPage,  bool publicReactions, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? ffVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followersVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followingVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChatScope? chatScope,  bool? canChat,  bool? twoFactorEnabled,  bool? usePasswordLessLogin,  bool? securityKeys,  List<UserRole>? roles,  String? memo,  String? moderationNote)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _UserDetailedNotMe() when $default != null:
+return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_that.avatarBlurhash,_that.avatarDecorations,_that.isBot,_that.isCat,_that.instance,_that.emojis,_that.onlineStatus,_that.badgeRoles,_that.requireSigninToViewContents,_that.makeNotesFollowersOnlyBefore,_that.makeNotesHiddenBefore,_that.speakAsCat,_that.url,_that.uri,_that.movedTo,_that.alsoKnownAs,_that.createdAt,_that.updatedAt,_that.lastFetchedAt,_that.bannerUrl,_that.bannerBlurhash,_that.isLocked,_that.isSilenced,_that.isSuspended,_that.description,_that.location,_that.birthday,_that.lang,_that.fields,_that.verifiedLinks,_that.mutualLinkSections,_that.followersCount,_that.followingCount,_that.notesCount,_that.pinnedNoteIds,_that.pinnedNotes,_that.pinnedPageId,_that.pinnedPage,_that.publicReactions,_that.ffVisibility,_that.followersVisibility,_that.followingVisibility,_that.chatScope,_that.canChat,_that.twoFactorEnabled,_that.usePasswordLessLogin,_that.securityKeys,_that.roles,_that.memo,_that.moderationNote);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String? name,  String username,  String? host, @NullableUriConverter()  Uri? avatarUrl,  String? avatarBlurhash,  List<UserAvatarDecoration> avatarDecorations,  bool isBot,  bool isCat,  UserInstanceInfo? instance, @EmojisConverter()  Map<String, String> emojis, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  OnlineStatus? onlineStatus,  List<UserBadgeRole> badgeRoles,  bool? requireSigninToViewContents, @HideBeforeConverter()  HideBefore? makeNotesFollowersOnlyBefore, @HideBeforeConverter()  HideBefore? makeNotesHiddenBefore,  bool? speakAsCat, @NullableUriConverter()  Uri? url, @NullableUriConverter()  Uri? uri, @NullableUriConverter()  Uri? movedTo,  List<String>? alsoKnownAs, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? updatedAt, @NullableDateTimeConverter()  DateTime? lastFetchedAt, @NullableUriConverter()  Uri? bannerUrl,  String? bannerBlurhash,  bool isLocked,  bool isSilenced,  bool isSuspended,  String? description,  String? location, @NullableDateTimeConverter()  DateTime? birthday,  String? lang,  List<UserField>? fields,  List<String> verifiedLinks,  List<MutualLinkSection>? mutualLinkSections, @IntConverter()  int followersCount, @IntConverter()  int followingCount,  int notesCount,  List<String>? pinnedNoteIds,  List<Note>? pinnedNotes,  String? pinnedPageId,  Map<String, dynamic>? pinnedPage,  bool publicReactions, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? ffVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followersVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followingVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChatScope? chatScope,  bool? canChat,  bool? twoFactorEnabled,  bool? usePasswordLessLogin,  bool? securityKeys,  List<UserRole>? roles,  String? memo,  String? moderationNote)  $default,) {final _that = this;
+switch (_that) {
+case _UserDetailedNotMe():
+return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_that.avatarBlurhash,_that.avatarDecorations,_that.isBot,_that.isCat,_that.instance,_that.emojis,_that.onlineStatus,_that.badgeRoles,_that.requireSigninToViewContents,_that.makeNotesFollowersOnlyBefore,_that.makeNotesHiddenBefore,_that.speakAsCat,_that.url,_that.uri,_that.movedTo,_that.alsoKnownAs,_that.createdAt,_that.updatedAt,_that.lastFetchedAt,_that.bannerUrl,_that.bannerBlurhash,_that.isLocked,_that.isSilenced,_that.isSuspended,_that.description,_that.location,_that.birthday,_that.lang,_that.fields,_that.verifiedLinks,_that.mutualLinkSections,_that.followersCount,_that.followingCount,_that.notesCount,_that.pinnedNoteIds,_that.pinnedNotes,_that.pinnedPageId,_that.pinnedPage,_that.publicReactions,_that.ffVisibility,_that.followersVisibility,_that.followingVisibility,_that.chatScope,_that.canChat,_that.twoFactorEnabled,_that.usePasswordLessLogin,_that.securityKeys,_that.roles,_that.memo,_that.moderationNote);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String? name,  String username,  String? host, @NullableUriConverter()  Uri? avatarUrl,  String? avatarBlurhash,  List<UserAvatarDecoration> avatarDecorations,  bool isBot,  bool isCat,  UserInstanceInfo? instance, @EmojisConverter()  Map<String, String> emojis, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  OnlineStatus? onlineStatus,  List<UserBadgeRole> badgeRoles,  bool? requireSigninToViewContents, @HideBeforeConverter()  HideBefore? makeNotesFollowersOnlyBefore, @HideBeforeConverter()  HideBefore? makeNotesHiddenBefore,  bool? speakAsCat, @NullableUriConverter()  Uri? url, @NullableUriConverter()  Uri? uri, @NullableUriConverter()  Uri? movedTo,  List<String>? alsoKnownAs, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? updatedAt, @NullableDateTimeConverter()  DateTime? lastFetchedAt, @NullableUriConverter()  Uri? bannerUrl,  String? bannerBlurhash,  bool isLocked,  bool isSilenced,  bool isSuspended,  String? description,  String? location, @NullableDateTimeConverter()  DateTime? birthday,  String? lang,  List<UserField>? fields,  List<String> verifiedLinks,  List<MutualLinkSection>? mutualLinkSections, @IntConverter()  int followersCount, @IntConverter()  int followingCount,  int notesCount,  List<String>? pinnedNoteIds,  List<Note>? pinnedNotes,  String? pinnedPageId,  Map<String, dynamic>? pinnedPage,  bool publicReactions, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? ffVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followersVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followingVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChatScope? chatScope,  bool? canChat,  bool? twoFactorEnabled,  bool? usePasswordLessLogin,  bool? securityKeys,  List<UserRole>? roles,  String? memo,  String? moderationNote)?  $default,) {final _that = this;
+switch (_that) {
+case _UserDetailedNotMe() when $default != null:
+return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_that.avatarBlurhash,_that.avatarDecorations,_that.isBot,_that.isCat,_that.instance,_that.emojis,_that.onlineStatus,_that.badgeRoles,_that.requireSigninToViewContents,_that.makeNotesFollowersOnlyBefore,_that.makeNotesHiddenBefore,_that.speakAsCat,_that.url,_that.uri,_that.movedTo,_that.alsoKnownAs,_that.createdAt,_that.updatedAt,_that.lastFetchedAt,_that.bannerUrl,_that.bannerBlurhash,_that.isLocked,_that.isSilenced,_that.isSuspended,_that.description,_that.location,_that.birthday,_that.lang,_that.fields,_that.verifiedLinks,_that.mutualLinkSections,_that.followersCount,_that.followingCount,_that.notesCount,_that.pinnedNoteIds,_that.pinnedNotes,_that.pinnedPageId,_that.pinnedPage,_that.publicReactions,_that.ffVisibility,_that.followersVisibility,_that.followingVisibility,_that.chatScope,_that.canChat,_that.twoFactorEnabled,_that.usePasswordLessLogin,_that.securityKeys,_that.roles,_that.memo,_that.moderationNote);case _:
+  return null;
+
+}
+}
+
+}
 
 /// @nodoc
 @JsonSerializable()
@@ -813,6 +1072,136 @@ $UserInstanceInfoCopyWith<$Res>? get instance {
 }
 }
 
+
+/// Adds pattern-matching-related methods to [UserDetailedNotMeWithRelations].
+extension UserDetailedNotMeWithRelationsPatterns on UserDetailedNotMeWithRelations {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UserDetailedNotMeWithRelations value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _UserDetailedNotMeWithRelations() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UserDetailedNotMeWithRelations value)  $default,){
+final _that = this;
+switch (_that) {
+case _UserDetailedNotMeWithRelations():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UserDetailedNotMeWithRelations value)?  $default,){
+final _that = this;
+switch (_that) {
+case _UserDetailedNotMeWithRelations() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String? name,  String username,  String? host, @NullableUriConverter()  Uri? avatarUrl,  String? avatarBlurhash,  List<UserAvatarDecoration> avatarDecorations,  bool isBot,  bool isCat,  UserInstanceInfo? instance, @EmojisConverter()  Map<String, String> emojis, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  OnlineStatus? onlineStatus,  List<UserBadgeRole> badgeRoles,  bool? requireSigninToViewContents, @HideBeforeConverter()  HideBefore? makeNotesFollowersOnlyBefore, @HideBeforeConverter()  HideBefore? makeNotesHiddenBefore,  bool? speakAsCat, @NullableUriConverter()  Uri? url, @NullableUriConverter()  Uri? uri, @NullableUriConverter()  Uri? movedTo,  List<String>? alsoKnownAs, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? updatedAt, @NullableDateTimeConverter()  DateTime? lastFetchedAt, @NullableUriConverter()  Uri? bannerUrl,  String? bannerBlurhash,  bool isLocked,  bool isSilenced,  bool isSuspended,  String? description,  String? location, @NullableDateTimeConverter()  DateTime? birthday,  String? lang,  List<UserField>? fields,  List<String> verifiedLinks,  List<MutualLinkSection>? mutualLinkSections, @IntConverter()  int followersCount, @IntConverter()  int followingCount,  int notesCount,  List<String>? pinnedNoteIds,  List<Note>? pinnedNotes,  String? pinnedPageId,  Map<String, dynamic>? pinnedPage,  bool publicReactions, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? ffVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followersVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followingVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChatScope? chatScope,  bool? canChat,  bool? twoFactorEnabled,  bool? usePasswordLessLogin,  bool? securityKeys,  List<UserRole>? roles,  String? memo,  String? moderationNote,  bool isFollowing,  bool isFollowed,  bool hasPendingFollowRequestFromYou,  bool hasPendingFollowRequestToYou,  bool isBlocking,  bool isBlocked,  bool isMuted,  bool isRenoteMuted,  Notify? notify,  bool? withReplies,  String? followedMessage)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _UserDetailedNotMeWithRelations() when $default != null:
+return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_that.avatarBlurhash,_that.avatarDecorations,_that.isBot,_that.isCat,_that.instance,_that.emojis,_that.onlineStatus,_that.badgeRoles,_that.requireSigninToViewContents,_that.makeNotesFollowersOnlyBefore,_that.makeNotesHiddenBefore,_that.speakAsCat,_that.url,_that.uri,_that.movedTo,_that.alsoKnownAs,_that.createdAt,_that.updatedAt,_that.lastFetchedAt,_that.bannerUrl,_that.bannerBlurhash,_that.isLocked,_that.isSilenced,_that.isSuspended,_that.description,_that.location,_that.birthday,_that.lang,_that.fields,_that.verifiedLinks,_that.mutualLinkSections,_that.followersCount,_that.followingCount,_that.notesCount,_that.pinnedNoteIds,_that.pinnedNotes,_that.pinnedPageId,_that.pinnedPage,_that.publicReactions,_that.ffVisibility,_that.followersVisibility,_that.followingVisibility,_that.chatScope,_that.canChat,_that.twoFactorEnabled,_that.usePasswordLessLogin,_that.securityKeys,_that.roles,_that.memo,_that.moderationNote,_that.isFollowing,_that.isFollowed,_that.hasPendingFollowRequestFromYou,_that.hasPendingFollowRequestToYou,_that.isBlocking,_that.isBlocked,_that.isMuted,_that.isRenoteMuted,_that.notify,_that.withReplies,_that.followedMessage);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String? name,  String username,  String? host, @NullableUriConverter()  Uri? avatarUrl,  String? avatarBlurhash,  List<UserAvatarDecoration> avatarDecorations,  bool isBot,  bool isCat,  UserInstanceInfo? instance, @EmojisConverter()  Map<String, String> emojis, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  OnlineStatus? onlineStatus,  List<UserBadgeRole> badgeRoles,  bool? requireSigninToViewContents, @HideBeforeConverter()  HideBefore? makeNotesFollowersOnlyBefore, @HideBeforeConverter()  HideBefore? makeNotesHiddenBefore,  bool? speakAsCat, @NullableUriConverter()  Uri? url, @NullableUriConverter()  Uri? uri, @NullableUriConverter()  Uri? movedTo,  List<String>? alsoKnownAs, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? updatedAt, @NullableDateTimeConverter()  DateTime? lastFetchedAt, @NullableUriConverter()  Uri? bannerUrl,  String? bannerBlurhash,  bool isLocked,  bool isSilenced,  bool isSuspended,  String? description,  String? location, @NullableDateTimeConverter()  DateTime? birthday,  String? lang,  List<UserField>? fields,  List<String> verifiedLinks,  List<MutualLinkSection>? mutualLinkSections, @IntConverter()  int followersCount, @IntConverter()  int followingCount,  int notesCount,  List<String>? pinnedNoteIds,  List<Note>? pinnedNotes,  String? pinnedPageId,  Map<String, dynamic>? pinnedPage,  bool publicReactions, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? ffVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followersVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followingVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChatScope? chatScope,  bool? canChat,  bool? twoFactorEnabled,  bool? usePasswordLessLogin,  bool? securityKeys,  List<UserRole>? roles,  String? memo,  String? moderationNote,  bool isFollowing,  bool isFollowed,  bool hasPendingFollowRequestFromYou,  bool hasPendingFollowRequestToYou,  bool isBlocking,  bool isBlocked,  bool isMuted,  bool isRenoteMuted,  Notify? notify,  bool? withReplies,  String? followedMessage)  $default,) {final _that = this;
+switch (_that) {
+case _UserDetailedNotMeWithRelations():
+return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_that.avatarBlurhash,_that.avatarDecorations,_that.isBot,_that.isCat,_that.instance,_that.emojis,_that.onlineStatus,_that.badgeRoles,_that.requireSigninToViewContents,_that.makeNotesFollowersOnlyBefore,_that.makeNotesHiddenBefore,_that.speakAsCat,_that.url,_that.uri,_that.movedTo,_that.alsoKnownAs,_that.createdAt,_that.updatedAt,_that.lastFetchedAt,_that.bannerUrl,_that.bannerBlurhash,_that.isLocked,_that.isSilenced,_that.isSuspended,_that.description,_that.location,_that.birthday,_that.lang,_that.fields,_that.verifiedLinks,_that.mutualLinkSections,_that.followersCount,_that.followingCount,_that.notesCount,_that.pinnedNoteIds,_that.pinnedNotes,_that.pinnedPageId,_that.pinnedPage,_that.publicReactions,_that.ffVisibility,_that.followersVisibility,_that.followingVisibility,_that.chatScope,_that.canChat,_that.twoFactorEnabled,_that.usePasswordLessLogin,_that.securityKeys,_that.roles,_that.memo,_that.moderationNote,_that.isFollowing,_that.isFollowed,_that.hasPendingFollowRequestFromYou,_that.hasPendingFollowRequestToYou,_that.isBlocking,_that.isBlocked,_that.isMuted,_that.isRenoteMuted,_that.notify,_that.withReplies,_that.followedMessage);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String? name,  String username,  String? host, @NullableUriConverter()  Uri? avatarUrl,  String? avatarBlurhash,  List<UserAvatarDecoration> avatarDecorations,  bool isBot,  bool isCat,  UserInstanceInfo? instance, @EmojisConverter()  Map<String, String> emojis, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  OnlineStatus? onlineStatus,  List<UserBadgeRole> badgeRoles,  bool? requireSigninToViewContents, @HideBeforeConverter()  HideBefore? makeNotesFollowersOnlyBefore, @HideBeforeConverter()  HideBefore? makeNotesHiddenBefore,  bool? speakAsCat, @NullableUriConverter()  Uri? url, @NullableUriConverter()  Uri? uri, @NullableUriConverter()  Uri? movedTo,  List<String>? alsoKnownAs, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? updatedAt, @NullableDateTimeConverter()  DateTime? lastFetchedAt, @NullableUriConverter()  Uri? bannerUrl,  String? bannerBlurhash,  bool isLocked,  bool isSilenced,  bool isSuspended,  String? description,  String? location, @NullableDateTimeConverter()  DateTime? birthday,  String? lang,  List<UserField>? fields,  List<String> verifiedLinks,  List<MutualLinkSection>? mutualLinkSections, @IntConverter()  int followersCount, @IntConverter()  int followingCount,  int notesCount,  List<String>? pinnedNoteIds,  List<Note>? pinnedNotes,  String? pinnedPageId,  Map<String, dynamic>? pinnedPage,  bool publicReactions, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? ffVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followersVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followingVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChatScope? chatScope,  bool? canChat,  bool? twoFactorEnabled,  bool? usePasswordLessLogin,  bool? securityKeys,  List<UserRole>? roles,  String? memo,  String? moderationNote,  bool isFollowing,  bool isFollowed,  bool hasPendingFollowRequestFromYou,  bool hasPendingFollowRequestToYou,  bool isBlocking,  bool isBlocked,  bool isMuted,  bool isRenoteMuted,  Notify? notify,  bool? withReplies,  String? followedMessage)?  $default,) {final _that = this;
+switch (_that) {
+case _UserDetailedNotMeWithRelations() when $default != null:
+return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_that.avatarBlurhash,_that.avatarDecorations,_that.isBot,_that.isCat,_that.instance,_that.emojis,_that.onlineStatus,_that.badgeRoles,_that.requireSigninToViewContents,_that.makeNotesFollowersOnlyBefore,_that.makeNotesHiddenBefore,_that.speakAsCat,_that.url,_that.uri,_that.movedTo,_that.alsoKnownAs,_that.createdAt,_that.updatedAt,_that.lastFetchedAt,_that.bannerUrl,_that.bannerBlurhash,_that.isLocked,_that.isSilenced,_that.isSuspended,_that.description,_that.location,_that.birthday,_that.lang,_that.fields,_that.verifiedLinks,_that.mutualLinkSections,_that.followersCount,_that.followingCount,_that.notesCount,_that.pinnedNoteIds,_that.pinnedNotes,_that.pinnedPageId,_that.pinnedPage,_that.publicReactions,_that.ffVisibility,_that.followersVisibility,_that.followingVisibility,_that.chatScope,_that.canChat,_that.twoFactorEnabled,_that.usePasswordLessLogin,_that.securityKeys,_that.roles,_that.memo,_that.moderationNote,_that.isFollowing,_that.isFollowed,_that.hasPendingFollowRequestFromYou,_that.hasPendingFollowRequestToYou,_that.isBlocking,_that.isBlocked,_that.isMuted,_that.isRenoteMuted,_that.notify,_that.withReplies,_that.followedMessage);case _:
+  return null;
+
+}
+}
+
+}
 
 /// @nodoc
 @JsonSerializable()
@@ -1334,6 +1723,136 @@ $UserPoliciesCopyWith<$Res>? get policies {
 }
 
 
+/// Adds pattern-matching-related methods to [MeDetailed].
+extension MeDetailedPatterns on MeDetailed {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _MeDetailed value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _MeDetailed() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _MeDetailed value)  $default,){
+final _that = this;
+switch (_that) {
+case _MeDetailed():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _MeDetailed value)?  $default,){
+final _that = this;
+switch (_that) {
+case _MeDetailed() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String? name,  String username,  String? host, @NullableUriConverter()  Uri? avatarUrl,  String? avatarBlurhash,  List<UserAvatarDecoration> avatarDecorations,  bool isBot,  bool isCat,  UserInstanceInfo? instance, @EmojisConverter()  Map<String, String> emojis, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  OnlineStatus? onlineStatus,  List<UserBadgeRole> badgeRoles,  bool? requireSigninToViewContents, @HideBeforeConverter()  HideBefore? makeNotesFollowersOnlyBefore, @HideBeforeConverter()  HideBefore? makeNotesHiddenBefore,  bool? speakAsCat, @NullableUriConverter()  Uri? url, @NullableUriConverter()  Uri? uri, @NullableUriConverter()  Uri? movedTo,  List<String>? alsoKnownAs, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? updatedAt, @NullableDateTimeConverter()  DateTime? lastFetchedAt, @NullableUriConverter()  Uri? bannerUrl,  String? bannerBlurhash,  bool isLocked,  bool isSilenced,  bool isSuspended,  String? description,  String? location, @NullableDateTimeConverter()  DateTime? birthday,  String? lang,  List<UserField>? fields,  List<String> verifiedLinks,  List<MutualLinkSection>? mutualLinkSections, @IntConverter()  int followersCount, @IntConverter()  int followingCount,  int notesCount,  List<String>? pinnedNoteIds,  List<Note>? pinnedNotes,  String? pinnedPageId,  Map<String, dynamic>? pinnedPage,  bool publicReactions, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? ffVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followersVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followingVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChatScope? chatScope,  bool? canChat,  bool? twoFactorEnabled,  bool? usePasswordLessLogin,  bool? securityKeys,  List<UserRole>? roles,  String? memo,  String? moderationNote,  String? avatarId,  String? bannerId,  String? followedMessage,  bool isModerator,  bool isAdmin,  bool injectFeaturedNote,  bool receiveAnnouncementEmail,  bool alwaysMarkNsfw,  bool autoSensitive,  bool carefulBot,  bool autoAcceptFollowed,  bool? preventAiLearning,  bool noCrawle,  bool isExplorable,  bool isDeleted, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  TwoFactorBackupCodesStock? twoFactorBackupCodesStock,  bool hideOnlineStatus,  bool hasUnreadSpecifiedNotes,  bool hasUnreadMentions,  bool hasUnreadAnnouncement,  bool hasUnreadAntenna,  bool hasUnreadChannel,  bool? hasUnreadChatMessages,  bool hasUnreadNotification,  bool hasPendingReceivedFollowRequest,  int? unreadNotificationsCount,  List<AnnouncementsResponse> unreadAnnouncements, @MuteWordsConverter()  List<MuteWord>? mutedWords, @MuteWordsConverter()  List<MuteWord>? hardMutedWords,  List<String> mutedInstances,  List<String>? mutingNotificationTypes,  NotificationRecieveConfigs notificationRecieveConfig,  List<String> emailNotificationTypes,  List<UserAchievement> achievements,  int? loggedInDays,  UserPolicies? policies)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _MeDetailed() when $default != null:
+return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_that.avatarBlurhash,_that.avatarDecorations,_that.isBot,_that.isCat,_that.instance,_that.emojis,_that.onlineStatus,_that.badgeRoles,_that.requireSigninToViewContents,_that.makeNotesFollowersOnlyBefore,_that.makeNotesHiddenBefore,_that.speakAsCat,_that.url,_that.uri,_that.movedTo,_that.alsoKnownAs,_that.createdAt,_that.updatedAt,_that.lastFetchedAt,_that.bannerUrl,_that.bannerBlurhash,_that.isLocked,_that.isSilenced,_that.isSuspended,_that.description,_that.location,_that.birthday,_that.lang,_that.fields,_that.verifiedLinks,_that.mutualLinkSections,_that.followersCount,_that.followingCount,_that.notesCount,_that.pinnedNoteIds,_that.pinnedNotes,_that.pinnedPageId,_that.pinnedPage,_that.publicReactions,_that.ffVisibility,_that.followersVisibility,_that.followingVisibility,_that.chatScope,_that.canChat,_that.twoFactorEnabled,_that.usePasswordLessLogin,_that.securityKeys,_that.roles,_that.memo,_that.moderationNote,_that.avatarId,_that.bannerId,_that.followedMessage,_that.isModerator,_that.isAdmin,_that.injectFeaturedNote,_that.receiveAnnouncementEmail,_that.alwaysMarkNsfw,_that.autoSensitive,_that.carefulBot,_that.autoAcceptFollowed,_that.preventAiLearning,_that.noCrawle,_that.isExplorable,_that.isDeleted,_that.twoFactorBackupCodesStock,_that.hideOnlineStatus,_that.hasUnreadSpecifiedNotes,_that.hasUnreadMentions,_that.hasUnreadAnnouncement,_that.hasUnreadAntenna,_that.hasUnreadChannel,_that.hasUnreadChatMessages,_that.hasUnreadNotification,_that.hasPendingReceivedFollowRequest,_that.unreadNotificationsCount,_that.unreadAnnouncements,_that.mutedWords,_that.hardMutedWords,_that.mutedInstances,_that.mutingNotificationTypes,_that.notificationRecieveConfig,_that.emailNotificationTypes,_that.achievements,_that.loggedInDays,_that.policies);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String? name,  String username,  String? host, @NullableUriConverter()  Uri? avatarUrl,  String? avatarBlurhash,  List<UserAvatarDecoration> avatarDecorations,  bool isBot,  bool isCat,  UserInstanceInfo? instance, @EmojisConverter()  Map<String, String> emojis, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  OnlineStatus? onlineStatus,  List<UserBadgeRole> badgeRoles,  bool? requireSigninToViewContents, @HideBeforeConverter()  HideBefore? makeNotesFollowersOnlyBefore, @HideBeforeConverter()  HideBefore? makeNotesHiddenBefore,  bool? speakAsCat, @NullableUriConverter()  Uri? url, @NullableUriConverter()  Uri? uri, @NullableUriConverter()  Uri? movedTo,  List<String>? alsoKnownAs, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? updatedAt, @NullableDateTimeConverter()  DateTime? lastFetchedAt, @NullableUriConverter()  Uri? bannerUrl,  String? bannerBlurhash,  bool isLocked,  bool isSilenced,  bool isSuspended,  String? description,  String? location, @NullableDateTimeConverter()  DateTime? birthday,  String? lang,  List<UserField>? fields,  List<String> verifiedLinks,  List<MutualLinkSection>? mutualLinkSections, @IntConverter()  int followersCount, @IntConverter()  int followingCount,  int notesCount,  List<String>? pinnedNoteIds,  List<Note>? pinnedNotes,  String? pinnedPageId,  Map<String, dynamic>? pinnedPage,  bool publicReactions, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? ffVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followersVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followingVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChatScope? chatScope,  bool? canChat,  bool? twoFactorEnabled,  bool? usePasswordLessLogin,  bool? securityKeys,  List<UserRole>? roles,  String? memo,  String? moderationNote,  String? avatarId,  String? bannerId,  String? followedMessage,  bool isModerator,  bool isAdmin,  bool injectFeaturedNote,  bool receiveAnnouncementEmail,  bool alwaysMarkNsfw,  bool autoSensitive,  bool carefulBot,  bool autoAcceptFollowed,  bool? preventAiLearning,  bool noCrawle,  bool isExplorable,  bool isDeleted, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  TwoFactorBackupCodesStock? twoFactorBackupCodesStock,  bool hideOnlineStatus,  bool hasUnreadSpecifiedNotes,  bool hasUnreadMentions,  bool hasUnreadAnnouncement,  bool hasUnreadAntenna,  bool hasUnreadChannel,  bool? hasUnreadChatMessages,  bool hasUnreadNotification,  bool hasPendingReceivedFollowRequest,  int? unreadNotificationsCount,  List<AnnouncementsResponse> unreadAnnouncements, @MuteWordsConverter()  List<MuteWord>? mutedWords, @MuteWordsConverter()  List<MuteWord>? hardMutedWords,  List<String> mutedInstances,  List<String>? mutingNotificationTypes,  NotificationRecieveConfigs notificationRecieveConfig,  List<String> emailNotificationTypes,  List<UserAchievement> achievements,  int? loggedInDays,  UserPolicies? policies)  $default,) {final _that = this;
+switch (_that) {
+case _MeDetailed():
+return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_that.avatarBlurhash,_that.avatarDecorations,_that.isBot,_that.isCat,_that.instance,_that.emojis,_that.onlineStatus,_that.badgeRoles,_that.requireSigninToViewContents,_that.makeNotesFollowersOnlyBefore,_that.makeNotesHiddenBefore,_that.speakAsCat,_that.url,_that.uri,_that.movedTo,_that.alsoKnownAs,_that.createdAt,_that.updatedAt,_that.lastFetchedAt,_that.bannerUrl,_that.bannerBlurhash,_that.isLocked,_that.isSilenced,_that.isSuspended,_that.description,_that.location,_that.birthday,_that.lang,_that.fields,_that.verifiedLinks,_that.mutualLinkSections,_that.followersCount,_that.followingCount,_that.notesCount,_that.pinnedNoteIds,_that.pinnedNotes,_that.pinnedPageId,_that.pinnedPage,_that.publicReactions,_that.ffVisibility,_that.followersVisibility,_that.followingVisibility,_that.chatScope,_that.canChat,_that.twoFactorEnabled,_that.usePasswordLessLogin,_that.securityKeys,_that.roles,_that.memo,_that.moderationNote,_that.avatarId,_that.bannerId,_that.followedMessage,_that.isModerator,_that.isAdmin,_that.injectFeaturedNote,_that.receiveAnnouncementEmail,_that.alwaysMarkNsfw,_that.autoSensitive,_that.carefulBot,_that.autoAcceptFollowed,_that.preventAiLearning,_that.noCrawle,_that.isExplorable,_that.isDeleted,_that.twoFactorBackupCodesStock,_that.hideOnlineStatus,_that.hasUnreadSpecifiedNotes,_that.hasUnreadMentions,_that.hasUnreadAnnouncement,_that.hasUnreadAntenna,_that.hasUnreadChannel,_that.hasUnreadChatMessages,_that.hasUnreadNotification,_that.hasPendingReceivedFollowRequest,_that.unreadNotificationsCount,_that.unreadAnnouncements,_that.mutedWords,_that.hardMutedWords,_that.mutedInstances,_that.mutingNotificationTypes,_that.notificationRecieveConfig,_that.emailNotificationTypes,_that.achievements,_that.loggedInDays,_that.policies);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String? name,  String username,  String? host, @NullableUriConverter()  Uri? avatarUrl,  String? avatarBlurhash,  List<UserAvatarDecoration> avatarDecorations,  bool isBot,  bool isCat,  UserInstanceInfo? instance, @EmojisConverter()  Map<String, String> emojis, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  OnlineStatus? onlineStatus,  List<UserBadgeRole> badgeRoles,  bool? requireSigninToViewContents, @HideBeforeConverter()  HideBefore? makeNotesFollowersOnlyBefore, @HideBeforeConverter()  HideBefore? makeNotesHiddenBefore,  bool? speakAsCat, @NullableUriConverter()  Uri? url, @NullableUriConverter()  Uri? uri, @NullableUriConverter()  Uri? movedTo,  List<String>? alsoKnownAs, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? updatedAt, @NullableDateTimeConverter()  DateTime? lastFetchedAt, @NullableUriConverter()  Uri? bannerUrl,  String? bannerBlurhash,  bool isLocked,  bool isSilenced,  bool isSuspended,  String? description,  String? location, @NullableDateTimeConverter()  DateTime? birthday,  String? lang,  List<UserField>? fields,  List<String> verifiedLinks,  List<MutualLinkSection>? mutualLinkSections, @IntConverter()  int followersCount, @IntConverter()  int followingCount,  int notesCount,  List<String>? pinnedNoteIds,  List<Note>? pinnedNotes,  String? pinnedPageId,  Map<String, dynamic>? pinnedPage,  bool publicReactions, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? ffVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followersVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followingVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChatScope? chatScope,  bool? canChat,  bool? twoFactorEnabled,  bool? usePasswordLessLogin,  bool? securityKeys,  List<UserRole>? roles,  String? memo,  String? moderationNote,  String? avatarId,  String? bannerId,  String? followedMessage,  bool isModerator,  bool isAdmin,  bool injectFeaturedNote,  bool receiveAnnouncementEmail,  bool alwaysMarkNsfw,  bool autoSensitive,  bool carefulBot,  bool autoAcceptFollowed,  bool? preventAiLearning,  bool noCrawle,  bool isExplorable,  bool isDeleted, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  TwoFactorBackupCodesStock? twoFactorBackupCodesStock,  bool hideOnlineStatus,  bool hasUnreadSpecifiedNotes,  bool hasUnreadMentions,  bool hasUnreadAnnouncement,  bool hasUnreadAntenna,  bool hasUnreadChannel,  bool? hasUnreadChatMessages,  bool hasUnreadNotification,  bool hasPendingReceivedFollowRequest,  int? unreadNotificationsCount,  List<AnnouncementsResponse> unreadAnnouncements, @MuteWordsConverter()  List<MuteWord>? mutedWords, @MuteWordsConverter()  List<MuteWord>? hardMutedWords,  List<String> mutedInstances,  List<String>? mutingNotificationTypes,  NotificationRecieveConfigs notificationRecieveConfig,  List<String> emailNotificationTypes,  List<UserAchievement> achievements,  int? loggedInDays,  UserPolicies? policies)?  $default,) {final _that = this;
+switch (_that) {
+case _MeDetailed() when $default != null:
+return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_that.avatarBlurhash,_that.avatarDecorations,_that.isBot,_that.isCat,_that.instance,_that.emojis,_that.onlineStatus,_that.badgeRoles,_that.requireSigninToViewContents,_that.makeNotesFollowersOnlyBefore,_that.makeNotesHiddenBefore,_that.speakAsCat,_that.url,_that.uri,_that.movedTo,_that.alsoKnownAs,_that.createdAt,_that.updatedAt,_that.lastFetchedAt,_that.bannerUrl,_that.bannerBlurhash,_that.isLocked,_that.isSilenced,_that.isSuspended,_that.description,_that.location,_that.birthday,_that.lang,_that.fields,_that.verifiedLinks,_that.mutualLinkSections,_that.followersCount,_that.followingCount,_that.notesCount,_that.pinnedNoteIds,_that.pinnedNotes,_that.pinnedPageId,_that.pinnedPage,_that.publicReactions,_that.ffVisibility,_that.followersVisibility,_that.followingVisibility,_that.chatScope,_that.canChat,_that.twoFactorEnabled,_that.usePasswordLessLogin,_that.securityKeys,_that.roles,_that.memo,_that.moderationNote,_that.avatarId,_that.bannerId,_that.followedMessage,_that.isModerator,_that.isAdmin,_that.injectFeaturedNote,_that.receiveAnnouncementEmail,_that.alwaysMarkNsfw,_that.autoSensitive,_that.carefulBot,_that.autoAcceptFollowed,_that.preventAiLearning,_that.noCrawle,_that.isExplorable,_that.isDeleted,_that.twoFactorBackupCodesStock,_that.hideOnlineStatus,_that.hasUnreadSpecifiedNotes,_that.hasUnreadMentions,_that.hasUnreadAnnouncement,_that.hasUnreadAntenna,_that.hasUnreadChannel,_that.hasUnreadChatMessages,_that.hasUnreadNotification,_that.hasPendingReceivedFollowRequest,_that.unreadNotificationsCount,_that.unreadAnnouncements,_that.mutedWords,_that.hardMutedWords,_that.mutedInstances,_that.mutingNotificationTypes,_that.notificationRecieveConfig,_that.emailNotificationTypes,_that.achievements,_that.loggedInDays,_that.policies);case _:
+  return null;
+
+}
+}
+
+}
+
 /// @nodoc
 @JsonSerializable()
 
@@ -1847,6 +2366,136 @@ as double,
 }
 
 
+/// Adds pattern-matching-related methods to [UserAvatarDecoration].
+extension UserAvatarDecorationPatterns on UserAvatarDecoration {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UserAvatarDecoration value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _UserAvatarDecoration() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UserAvatarDecoration value)  $default,){
+final _that = this;
+switch (_that) {
+case _UserAvatarDecoration():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UserAvatarDecoration value)?  $default,){
+final _that = this;
+switch (_that) {
+case _UserAvatarDecoration() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  double? angle,  bool flipH,  String url,  double offsetX,  double offsetY)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _UserAvatarDecoration() when $default != null:
+return $default(_that.id,_that.angle,_that.flipH,_that.url,_that.offsetX,_that.offsetY);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  double? angle,  bool flipH,  String url,  double offsetX,  double offsetY)  $default,) {final _that = this;
+switch (_that) {
+case _UserAvatarDecoration():
+return $default(_that.id,_that.angle,_that.flipH,_that.url,_that.offsetX,_that.offsetY);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  double? angle,  bool flipH,  String url,  double offsetX,  double offsetY)?  $default,) {final _that = this;
+switch (_that) {
+case _UserAvatarDecoration() when $default != null:
+return $default(_that.id,_that.angle,_that.flipH,_that.url,_that.offsetX,_that.offsetY);case _:
+  return null;
+
+}
+}
+
+}
+
 /// @nodoc
 @JsonSerializable()
 
@@ -1995,6 +2644,136 @@ as String?,
 }
 
 
+/// Adds pattern-matching-related methods to [UserInstanceInfo].
+extension UserInstanceInfoPatterns on UserInstanceInfo {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UserInstanceInfo value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _UserInstanceInfo() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UserInstanceInfo value)  $default,){
+final _that = this;
+switch (_that) {
+case _UserInstanceInfo():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UserInstanceInfo value)?  $default,){
+final _that = this;
+switch (_that) {
+case _UserInstanceInfo() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? name,  String? softwareVersion,  String? softwareName, @NullableUriConverter()  Uri? iconUrl, @NullableUriConverter()  Uri? faviconUrl,  String? themeColor)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _UserInstanceInfo() when $default != null:
+return $default(_that.name,_that.softwareVersion,_that.softwareName,_that.iconUrl,_that.faviconUrl,_that.themeColor);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? name,  String? softwareVersion,  String? softwareName, @NullableUriConverter()  Uri? iconUrl, @NullableUriConverter()  Uri? faviconUrl,  String? themeColor)  $default,) {final _that = this;
+switch (_that) {
+case _UserInstanceInfo():
+return $default(_that.name,_that.softwareVersion,_that.softwareName,_that.iconUrl,_that.faviconUrl,_that.themeColor);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? name,  String? softwareVersion,  String? softwareName, @NullableUriConverter()  Uri? iconUrl, @NullableUriConverter()  Uri? faviconUrl,  String? themeColor)?  $default,) {final _that = this;
+switch (_that) {
+case _UserInstanceInfo() when $default != null:
+return $default(_that.name,_that.softwareVersion,_that.softwareName,_that.iconUrl,_that.faviconUrl,_that.themeColor);case _:
+  return null;
+
+}
+}
+
+}
+
 /// @nodoc
 @JsonSerializable()
 
@@ -2139,6 +2918,136 @@ as Uri?,
 }
 
 
+/// Adds pattern-matching-related methods to [UserBadgeRole].
+extension UserBadgeRolePatterns on UserBadgeRole {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UserBadgeRole value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _UserBadgeRole() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UserBadgeRole value)  $default,){
+final _that = this;
+switch (_that) {
+case _UserBadgeRole():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UserBadgeRole value)?  $default,){
+final _that = this;
+switch (_that) {
+case _UserBadgeRole() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String name, @NullableUriConverter()  Uri? iconUrl)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _UserBadgeRole() when $default != null:
+return $default(_that.name,_that.iconUrl);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String name, @NullableUriConverter()  Uri? iconUrl)  $default,) {final _that = this;
+switch (_that) {
+case _UserBadgeRole():
+return $default(_that.name,_that.iconUrl);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String name, @NullableUriConverter()  Uri? iconUrl)?  $default,) {final _that = this;
+switch (_that) {
+case _UserBadgeRole() when $default != null:
+return $default(_that.name,_that.iconUrl);case _:
+  return null;
+
+}
+}
+
+}
+
 /// @nodoc
 @JsonSerializable()
 
@@ -2279,6 +3188,136 @@ as bool,
 
 }
 
+
+/// Adds pattern-matching-related methods to [UserRole].
+extension UserRolePatterns on UserRole {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UserRole value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _UserRole() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UserRole value)  $default,){
+final _that = this;
+switch (_that) {
+case _UserRole():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UserRole value)?  $default,){
+final _that = this;
+switch (_that) {
+case _UserRole() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String name,  String? color, @NullableUriConverter()  Uri? iconUrl,  String? description,  bool isModerator,  bool isAdministrator)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _UserRole() when $default != null:
+return $default(_that.id,_that.name,_that.color,_that.iconUrl,_that.description,_that.isModerator,_that.isAdministrator);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String name,  String? color, @NullableUriConverter()  Uri? iconUrl,  String? description,  bool isModerator,  bool isAdministrator)  $default,) {final _that = this;
+switch (_that) {
+case _UserRole():
+return $default(_that.id,_that.name,_that.color,_that.iconUrl,_that.description,_that.isModerator,_that.isAdministrator);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String name,  String? color, @NullableUriConverter()  Uri? iconUrl,  String? description,  bool isModerator,  bool isAdministrator)?  $default,) {final _that = this;
+switch (_that) {
+case _UserRole() when $default != null:
+return $default(_that.id,_that.name,_that.color,_that.iconUrl,_that.description,_that.isModerator,_that.isAdministrator);case _:
+  return null;
+
+}
+}
+
+}
 
 /// @nodoc
 @JsonSerializable()
@@ -2425,6 +3464,136 @@ as DateTime,
 
 }
 
+
+/// Adds pattern-matching-related methods to [UserAchievement].
+extension UserAchievementPatterns on UserAchievement {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UserAchievement value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _UserAchievement() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UserAchievement value)  $default,){
+final _that = this;
+switch (_that) {
+case _UserAchievement():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UserAchievement value)?  $default,){
+final _that = this;
+switch (_that) {
+case _UserAchievement() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String name, @EpocTimeDateTimeConverter()  DateTime unlockedAt)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _UserAchievement() when $default != null:
+return $default(_that.name,_that.unlockedAt);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String name, @EpocTimeDateTimeConverter()  DateTime unlockedAt)  $default,) {final _that = this;
+switch (_that) {
+case _UserAchievement():
+return $default(_that.name,_that.unlockedAt);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String name, @EpocTimeDateTimeConverter()  DateTime unlockedAt)?  $default,) {final _that = this;
+switch (_that) {
+case _UserAchievement() when $default != null:
+return $default(_that.name,_that.unlockedAt);case _:
+  return null;
+
+}
+}
+
+}
 
 /// @nodoc
 @JsonSerializable()
@@ -2605,6 +3774,136 @@ as int?,
 
 }
 
+
+/// Adds pattern-matching-related methods to [UserPolicies].
+extension UserPoliciesPatterns on UserPolicies {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UserPolicies value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _UserPolicies() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UserPolicies value)  $default,){
+final _that = this;
+switch (_that) {
+case _UserPolicies():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UserPolicies value)?  $default,){
+final _that = this;
+switch (_that) {
+case _UserPolicies() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( bool? gtlAvailable,  bool? ltlAvailable,  bool? canPublicNote,  int? mentionLimit,  bool? canEditNote,  bool? canScheduleNote,  int? scheduleNoteLimit,  int? scheduleNoteMaxDays,  bool? canInvite,  int? inviteLimit,  int? inviteLimitCycle,  int? inviteExpirationTime,  bool? canManageCustomEmojis,  bool? canSearchNotes,  bool? canUseTranslator,  bool? canHideAds,  int? driveCapacityMb,  int? maxFileSizeMb,  List<String>? uploadableFileTypes,  bool? alwaysMarkNsfw,  bool? canUpdateBioMedia,  int? pinLimit,  int? antennaLimit,  int? wordMuteLimit,  int? webhookLimit,  int? clipLimit,  int? noteEachClipsLimit,  int? userListLimit,  int? userEachUserListsLimit,  int? rateLimitFactor,  int? avatarDecorationLimit,  bool? canImportAntennas,  bool? canImportBlocking,  bool? canImportFollowing,  bool? canImportMuting,  bool? canImportUserLists, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChatAvailability? chatAvailability,  int? mutualLinkSectionLimit,  int? mutualLinkLimit,  int? scheduleNoteMax)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _UserPolicies() when $default != null:
+return $default(_that.gtlAvailable,_that.ltlAvailable,_that.canPublicNote,_that.mentionLimit,_that.canEditNote,_that.canScheduleNote,_that.scheduleNoteLimit,_that.scheduleNoteMaxDays,_that.canInvite,_that.inviteLimit,_that.inviteLimitCycle,_that.inviteExpirationTime,_that.canManageCustomEmojis,_that.canSearchNotes,_that.canUseTranslator,_that.canHideAds,_that.driveCapacityMb,_that.maxFileSizeMb,_that.uploadableFileTypes,_that.alwaysMarkNsfw,_that.canUpdateBioMedia,_that.pinLimit,_that.antennaLimit,_that.wordMuteLimit,_that.webhookLimit,_that.clipLimit,_that.noteEachClipsLimit,_that.userListLimit,_that.userEachUserListsLimit,_that.rateLimitFactor,_that.avatarDecorationLimit,_that.canImportAntennas,_that.canImportBlocking,_that.canImportFollowing,_that.canImportMuting,_that.canImportUserLists,_that.chatAvailability,_that.mutualLinkSectionLimit,_that.mutualLinkLimit,_that.scheduleNoteMax);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( bool? gtlAvailable,  bool? ltlAvailable,  bool? canPublicNote,  int? mentionLimit,  bool? canEditNote,  bool? canScheduleNote,  int? scheduleNoteLimit,  int? scheduleNoteMaxDays,  bool? canInvite,  int? inviteLimit,  int? inviteLimitCycle,  int? inviteExpirationTime,  bool? canManageCustomEmojis,  bool? canSearchNotes,  bool? canUseTranslator,  bool? canHideAds,  int? driveCapacityMb,  int? maxFileSizeMb,  List<String>? uploadableFileTypes,  bool? alwaysMarkNsfw,  bool? canUpdateBioMedia,  int? pinLimit,  int? antennaLimit,  int? wordMuteLimit,  int? webhookLimit,  int? clipLimit,  int? noteEachClipsLimit,  int? userListLimit,  int? userEachUserListsLimit,  int? rateLimitFactor,  int? avatarDecorationLimit,  bool? canImportAntennas,  bool? canImportBlocking,  bool? canImportFollowing,  bool? canImportMuting,  bool? canImportUserLists, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChatAvailability? chatAvailability,  int? mutualLinkSectionLimit,  int? mutualLinkLimit,  int? scheduleNoteMax)  $default,) {final _that = this;
+switch (_that) {
+case _UserPolicies():
+return $default(_that.gtlAvailable,_that.ltlAvailable,_that.canPublicNote,_that.mentionLimit,_that.canEditNote,_that.canScheduleNote,_that.scheduleNoteLimit,_that.scheduleNoteMaxDays,_that.canInvite,_that.inviteLimit,_that.inviteLimitCycle,_that.inviteExpirationTime,_that.canManageCustomEmojis,_that.canSearchNotes,_that.canUseTranslator,_that.canHideAds,_that.driveCapacityMb,_that.maxFileSizeMb,_that.uploadableFileTypes,_that.alwaysMarkNsfw,_that.canUpdateBioMedia,_that.pinLimit,_that.antennaLimit,_that.wordMuteLimit,_that.webhookLimit,_that.clipLimit,_that.noteEachClipsLimit,_that.userListLimit,_that.userEachUserListsLimit,_that.rateLimitFactor,_that.avatarDecorationLimit,_that.canImportAntennas,_that.canImportBlocking,_that.canImportFollowing,_that.canImportMuting,_that.canImportUserLists,_that.chatAvailability,_that.mutualLinkSectionLimit,_that.mutualLinkLimit,_that.scheduleNoteMax);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( bool? gtlAvailable,  bool? ltlAvailable,  bool? canPublicNote,  int? mentionLimit,  bool? canEditNote,  bool? canScheduleNote,  int? scheduleNoteLimit,  int? scheduleNoteMaxDays,  bool? canInvite,  int? inviteLimit,  int? inviteLimitCycle,  int? inviteExpirationTime,  bool? canManageCustomEmojis,  bool? canSearchNotes,  bool? canUseTranslator,  bool? canHideAds,  int? driveCapacityMb,  int? maxFileSizeMb,  List<String>? uploadableFileTypes,  bool? alwaysMarkNsfw,  bool? canUpdateBioMedia,  int? pinLimit,  int? antennaLimit,  int? wordMuteLimit,  int? webhookLimit,  int? clipLimit,  int? noteEachClipsLimit,  int? userListLimit,  int? userEachUserListsLimit,  int? rateLimitFactor,  int? avatarDecorationLimit,  bool? canImportAntennas,  bool? canImportBlocking,  bool? canImportFollowing,  bool? canImportMuting,  bool? canImportUserLists, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChatAvailability? chatAvailability,  int? mutualLinkSectionLimit,  int? mutualLinkLimit,  int? scheduleNoteMax)?  $default,) {final _that = this;
+switch (_that) {
+case _UserPolicies() when $default != null:
+return $default(_that.gtlAvailable,_that.ltlAvailable,_that.canPublicNote,_that.mentionLimit,_that.canEditNote,_that.canScheduleNote,_that.scheduleNoteLimit,_that.scheduleNoteMaxDays,_that.canInvite,_that.inviteLimit,_that.inviteLimitCycle,_that.inviteExpirationTime,_that.canManageCustomEmojis,_that.canSearchNotes,_that.canUseTranslator,_that.canHideAds,_that.driveCapacityMb,_that.maxFileSizeMb,_that.uploadableFileTypes,_that.alwaysMarkNsfw,_that.canUpdateBioMedia,_that.pinLimit,_that.antennaLimit,_that.wordMuteLimit,_that.webhookLimit,_that.clipLimit,_that.noteEachClipsLimit,_that.userListLimit,_that.userEachUserListsLimit,_that.rateLimitFactor,_that.avatarDecorationLimit,_that.canImportAntennas,_that.canImportBlocking,_that.canImportFollowing,_that.canImportMuting,_that.canImportUserLists,_that.chatAvailability,_that.mutualLinkSectionLimit,_that.mutualLinkLimit,_that.scheduleNoteMax);case _:
+  return null;
+
+}
+}
+
+}
 
 /// @nodoc
 @JsonSerializable()
@@ -2832,6 +4131,136 @@ as String,
 }
 
 
+/// Adds pattern-matching-related methods to [UserField].
+extension UserFieldPatterns on UserField {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UserField value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _UserField() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UserField value)  $default,){
+final _that = this;
+switch (_that) {
+case _UserField():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UserField value)?  $default,){
+final _that = this;
+switch (_that) {
+case _UserField() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String name,  String value)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _UserField() when $default != null:
+return $default(_that.name,_that.value);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String name,  String value)  $default,) {final _that = this;
+switch (_that) {
+case _UserField():
+return $default(_that.name,_that.value);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String name,  String value)?  $default,) {final _that = this;
+switch (_that) {
+case _UserField() when $default != null:
+return $default(_that.name,_that.value);case _:
+  return null;
+
+}
+}
+
+}
+
 /// @nodoc
 @JsonSerializable()
 
@@ -2967,6 +4396,136 @@ as List<MutualLink>,
 
 }
 
+
+/// Adds pattern-matching-related methods to [MutualLinkSection].
+extension MutualLinkSectionPatterns on MutualLinkSection {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _MutualLinkSection value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _MutualLinkSection() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _MutualLinkSection value)  $default,){
+final _that = this;
+switch (_that) {
+case _MutualLinkSection():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _MutualLinkSection value)?  $default,){
+final _that = this;
+switch (_that) {
+case _MutualLinkSection() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? name,  List<MutualLink> mutualLinks)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _MutualLinkSection() when $default != null:
+return $default(_that.name,_that.mutualLinks);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? name,  List<MutualLink> mutualLinks)  $default,) {final _that = this;
+switch (_that) {
+case _MutualLinkSection():
+return $default(_that.name,_that.mutualLinks);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? name,  List<MutualLink> mutualLinks)?  $default,) {final _that = this;
+switch (_that) {
+case _MutualLinkSection() when $default != null:
+return $default(_that.name,_that.mutualLinks);case _:
+  return null;
+
+}
+}
+
+}
 
 /// @nodoc
 @JsonSerializable()
@@ -3113,6 +4672,136 @@ as String?,
 }
 
 
+/// Adds pattern-matching-related methods to [MutualLink].
+extension MutualLinkPatterns on MutualLink {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _MutualLink value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _MutualLink() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _MutualLink value)  $default,){
+final _that = this;
+switch (_that) {
+case _MutualLink():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _MutualLink value)?  $default,){
+final _that = this;
+switch (_that) {
+case _MutualLink() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String url,  String fileId,  String? description,  String? imgSrc)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _MutualLink() when $default != null:
+return $default(_that.id,_that.url,_that.fileId,_that.description,_that.imgSrc);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String url,  String fileId,  String? description,  String? imgSrc)  $default,) {final _that = this;
+switch (_that) {
+case _MutualLink():
+return $default(_that.id,_that.url,_that.fileId,_that.description,_that.imgSrc);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String url,  String fileId,  String? description,  String? imgSrc)?  $default,) {final _that = this;
+switch (_that) {
+case _MutualLink() when $default != null:
+return $default(_that.id,_that.url,_that.fileId,_that.description,_that.imgSrc);case _:
+  return null;
+
+}
+}
+
+}
+
 /// @nodoc
 @JsonSerializable()
 
@@ -3254,6 +4943,136 @@ as List<String>?,
 
 }
 
+
+/// Adds pattern-matching-related methods to [MuteWord].
+extension MuteWordPatterns on MuteWord {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _MuteWord value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _MuteWord() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _MuteWord value)  $default,){
+final _that = this;
+switch (_that) {
+case _MuteWord():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _MuteWord value)?  $default,){
+final _that = this;
+switch (_that) {
+case _MuteWord() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? regExp,  List<String>? content)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _MuteWord() when $default != null:
+return $default(_that.regExp,_that.content);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? regExp,  List<String>? content)  $default,) {final _that = this;
+switch (_that) {
+case _MuteWord():
+return $default(_that.regExp,_that.content);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? regExp,  List<String>? content)?  $default,) {final _that = this;
+switch (_that) {
+case _MuteWord() when $default != null:
+return $default(_that.regExp,_that.content);case _:
+  return null;
+
+}
+}
+
+}
 
 /// @nodoc
 @JsonSerializable()
@@ -3591,6 +5410,136 @@ $NotificationRecieveConfigCopyWith<$Res>? get test {
 }
 }
 
+
+/// Adds pattern-matching-related methods to [NotificationRecieveConfigs].
+extension NotificationRecieveConfigsPatterns on NotificationRecieveConfigs {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _NotificationRecieveConfigs value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _NotificationRecieveConfigs() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _NotificationRecieveConfigs value)  $default,){
+final _that = this;
+switch (_that) {
+case _NotificationRecieveConfigs():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _NotificationRecieveConfigs value)?  $default,){
+final _that = this;
+switch (_that) {
+case _NotificationRecieveConfigs() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( NotificationRecieveConfig? note,  NotificationRecieveConfig? follow,  NotificationRecieveConfig? mention,  NotificationRecieveConfig? reply,  NotificationRecieveConfig? renote,  NotificationRecieveConfig? quote,  NotificationRecieveConfig? reaction,  NotificationRecieveConfig? pollEnded,  NotificationRecieveConfig? receiveFollowRequest,  NotificationRecieveConfig? followRequestAccepted,  NotificationRecieveConfig? roleAssigned,  NotificationRecieveConfig? chatRoomInvitationReceived,  NotificationRecieveConfig? achievementEarned,  NotificationRecieveConfig? app,  NotificationRecieveConfig? test)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _NotificationRecieveConfigs() when $default != null:
+return $default(_that.note,_that.follow,_that.mention,_that.reply,_that.renote,_that.quote,_that.reaction,_that.pollEnded,_that.receiveFollowRequest,_that.followRequestAccepted,_that.roleAssigned,_that.chatRoomInvitationReceived,_that.achievementEarned,_that.app,_that.test);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( NotificationRecieveConfig? note,  NotificationRecieveConfig? follow,  NotificationRecieveConfig? mention,  NotificationRecieveConfig? reply,  NotificationRecieveConfig? renote,  NotificationRecieveConfig? quote,  NotificationRecieveConfig? reaction,  NotificationRecieveConfig? pollEnded,  NotificationRecieveConfig? receiveFollowRequest,  NotificationRecieveConfig? followRequestAccepted,  NotificationRecieveConfig? roleAssigned,  NotificationRecieveConfig? chatRoomInvitationReceived,  NotificationRecieveConfig? achievementEarned,  NotificationRecieveConfig? app,  NotificationRecieveConfig? test)  $default,) {final _that = this;
+switch (_that) {
+case _NotificationRecieveConfigs():
+return $default(_that.note,_that.follow,_that.mention,_that.reply,_that.renote,_that.quote,_that.reaction,_that.pollEnded,_that.receiveFollowRequest,_that.followRequestAccepted,_that.roleAssigned,_that.chatRoomInvitationReceived,_that.achievementEarned,_that.app,_that.test);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( NotificationRecieveConfig? note,  NotificationRecieveConfig? follow,  NotificationRecieveConfig? mention,  NotificationRecieveConfig? reply,  NotificationRecieveConfig? renote,  NotificationRecieveConfig? quote,  NotificationRecieveConfig? reaction,  NotificationRecieveConfig? pollEnded,  NotificationRecieveConfig? receiveFollowRequest,  NotificationRecieveConfig? followRequestAccepted,  NotificationRecieveConfig? roleAssigned,  NotificationRecieveConfig? chatRoomInvitationReceived,  NotificationRecieveConfig? achievementEarned,  NotificationRecieveConfig? app,  NotificationRecieveConfig? test)?  $default,) {final _that = this;
+switch (_that) {
+case _NotificationRecieveConfigs() when $default != null:
+return $default(_that.note,_that.follow,_that.mention,_that.reply,_that.renote,_that.quote,_that.reaction,_that.pollEnded,_that.receiveFollowRequest,_that.followRequestAccepted,_that.roleAssigned,_that.chatRoomInvitationReceived,_that.achievementEarned,_that.app,_that.test);case _:
+  return null;
+
+}
+}
+
+}
 
 /// @nodoc
 @JsonSerializable()
@@ -3933,6 +5882,136 @@ as String?,
 
 }
 
+
+/// Adds pattern-matching-related methods to [NotificationRecieveConfig].
+extension NotificationRecieveConfigPatterns on NotificationRecieveConfig {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _NotificationRecieveConfig value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _NotificationRecieveConfig() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _NotificationRecieveConfig value)  $default,){
+final _that = this;
+switch (_that) {
+case _NotificationRecieveConfig():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _NotificationRecieveConfig value)?  $default,){
+final _that = this;
+switch (_that) {
+case _NotificationRecieveConfig() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String type,  String? userListId)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _NotificationRecieveConfig() when $default != null:
+return $default(_that.type,_that.userListId);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String type,  String? userListId)  $default,) {final _that = this;
+switch (_that) {
+case _NotificationRecieveConfig():
+return $default(_that.type,_that.userListId);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String type,  String? userListId)?  $default,) {final _that = this;
+switch (_that) {
+case _NotificationRecieveConfig() when $default != null:
+return $default(_that.type,_that.userListId);case _:
+  return null;
+
+}
+}
+
+}
 
 /// @nodoc
 @JsonSerializable()

@@ -1,6 +1,5 @@
-// dart format width=80
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -113,6 +112,136 @@ $UserLiteCopyWith<$Res> get user2 {
 }
 }
 
+
+/// Adds pattern-matching-related methods to [ReversiGamesResponse].
+extension ReversiGamesResponsePatterns on ReversiGamesResponse {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ReversiGamesResponse value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _ReversiGamesResponse() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ReversiGamesResponse value)  $default,){
+final _that = this;
+switch (_that) {
+case _ReversiGamesResponse():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ReversiGamesResponse value)?  $default,){
+final _that = this;
+switch (_that) {
+case _ReversiGamesResponse() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? startedAt, @NullableDateTimeConverter()  DateTime? endedAt,  bool isStarted,  bool isEnded,  String user1Id,  String user2Id,  UserLite user1,  UserLite user2,  String? winnerId,  User? winner,  String? surrenderedUserId,  String? timeoutUserId,  int? black,  String bw,  bool noIrregularRules,  bool isLlotheo,  bool canPutEveryWhere,  bool loopedBoard,  int timeLimitForEachTurn)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _ReversiGamesResponse() when $default != null:
+return $default(_that.id,_that.createdAt,_that.startedAt,_that.endedAt,_that.isStarted,_that.isEnded,_that.user1Id,_that.user2Id,_that.user1,_that.user2,_that.winnerId,_that.winner,_that.surrenderedUserId,_that.timeoutUserId,_that.black,_that.bw,_that.noIrregularRules,_that.isLlotheo,_that.canPutEveryWhere,_that.loopedBoard,_that.timeLimitForEachTurn);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? startedAt, @NullableDateTimeConverter()  DateTime? endedAt,  bool isStarted,  bool isEnded,  String user1Id,  String user2Id,  UserLite user1,  UserLite user2,  String? winnerId,  User? winner,  String? surrenderedUserId,  String? timeoutUserId,  int? black,  String bw,  bool noIrregularRules,  bool isLlotheo,  bool canPutEveryWhere,  bool loopedBoard,  int timeLimitForEachTurn)  $default,) {final _that = this;
+switch (_that) {
+case _ReversiGamesResponse():
+return $default(_that.id,_that.createdAt,_that.startedAt,_that.endedAt,_that.isStarted,_that.isEnded,_that.user1Id,_that.user2Id,_that.user1,_that.user2,_that.winnerId,_that.winner,_that.surrenderedUserId,_that.timeoutUserId,_that.black,_that.bw,_that.noIrregularRules,_that.isLlotheo,_that.canPutEveryWhere,_that.loopedBoard,_that.timeLimitForEachTurn);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? startedAt, @NullableDateTimeConverter()  DateTime? endedAt,  bool isStarted,  bool isEnded,  String user1Id,  String user2Id,  UserLite user1,  UserLite user2,  String? winnerId,  User? winner,  String? surrenderedUserId,  String? timeoutUserId,  int? black,  String bw,  bool noIrregularRules,  bool isLlotheo,  bool canPutEveryWhere,  bool loopedBoard,  int timeLimitForEachTurn)?  $default,) {final _that = this;
+switch (_that) {
+case _ReversiGamesResponse() when $default != null:
+return $default(_that.id,_that.createdAt,_that.startedAt,_that.endedAt,_that.isStarted,_that.isEnded,_that.user1Id,_that.user2Id,_that.user1,_that.user2,_that.winnerId,_that.winner,_that.surrenderedUserId,_that.timeoutUserId,_that.black,_that.bw,_that.noIrregularRules,_that.isLlotheo,_that.canPutEveryWhere,_that.loopedBoard,_that.timeLimitForEachTurn);case _:
+  return null;
+
+}
+}
+
+}
 
 /// @nodoc
 @JsonSerializable()
