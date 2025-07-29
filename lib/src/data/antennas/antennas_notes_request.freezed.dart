@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$AntennasNotesRequest {
 
- String get antennaId; int? get limit; String? get sinceId; String? get untilId;@DateTimeConverter() DateTime? get sinceDate;@DateTimeConverter() DateTime? get untilDate; String? get pagination;
+ String get antennaId; int? get limit; String? get sinceId; String? get untilId;@EpocTimeDateTimeConverter() DateTime? get sinceDate;@EpocTimeDateTimeConverter() DateTime? get untilDate; String? get pagination;
 /// Create a copy of AntennasNotesRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,7 +48,7 @@ abstract mixin class $AntennasNotesRequestCopyWith<$Res>  {
   factory $AntennasNotesRequestCopyWith(AntennasNotesRequest value, $Res Function(AntennasNotesRequest) _then) = _$AntennasNotesRequestCopyWithImpl;
 @useResult
 $Res call({
- String antennaId, int? limit, String? sinceId, String? untilId,@DateTimeConverter() DateTime? sinceDate,@DateTimeConverter() DateTime? untilDate, String? pagination
+ String antennaId, int? limit, String? sinceId, String? untilId,@EpocTimeDateTimeConverter() DateTime? sinceDate,@EpocTimeDateTimeConverter() DateTime? untilDate, String? pagination
 });
 
 
@@ -159,7 +159,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String antennaId,  int? limit,  String? sinceId,  String? untilId, @DateTimeConverter()  DateTime? sinceDate, @DateTimeConverter()  DateTime? untilDate,  String? pagination)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String antennaId,  int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  String? pagination)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _AntennasNotesRequest() when $default != null:
 return $default(_that.antennaId,_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.pagination);case _:
@@ -180,7 +180,7 @@ return $default(_that.antennaId,_that.limit,_that.sinceId,_that.untilId,_that.si
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String antennaId,  int? limit,  String? sinceId,  String? untilId, @DateTimeConverter()  DateTime? sinceDate, @DateTimeConverter()  DateTime? untilDate,  String? pagination)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String antennaId,  int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  String? pagination)  $default,) {final _that = this;
 switch (_that) {
 case _AntennasNotesRequest():
 return $default(_that.antennaId,_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.pagination);case _:
@@ -200,7 +200,7 @@ return $default(_that.antennaId,_that.limit,_that.sinceId,_that.untilId,_that.si
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String antennaId,  int? limit,  String? sinceId,  String? untilId, @DateTimeConverter()  DateTime? sinceDate, @DateTimeConverter()  DateTime? untilDate,  String? pagination)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String antennaId,  int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  String? pagination)?  $default,) {final _that = this;
 switch (_that) {
 case _AntennasNotesRequest() when $default != null:
 return $default(_that.antennaId,_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.pagination);case _:
@@ -215,15 +215,15 @@ return $default(_that.antennaId,_that.limit,_that.sinceId,_that.untilId,_that.si
 @JsonSerializable()
 
 class _AntennasNotesRequest implements AntennasNotesRequest {
-  const _AntennasNotesRequest({required this.antennaId, this.limit, this.sinceId, this.untilId, @DateTimeConverter() this.sinceDate, @DateTimeConverter() this.untilDate, this.pagination});
+  const _AntennasNotesRequest({required this.antennaId, this.limit, this.sinceId, this.untilId, @EpocTimeDateTimeConverter() this.sinceDate, @EpocTimeDateTimeConverter() this.untilDate, this.pagination});
   factory _AntennasNotesRequest.fromJson(Map<String, dynamic> json) => _$AntennasNotesRequestFromJson(json);
 
 @override final  String antennaId;
 @override final  int? limit;
 @override final  String? sinceId;
 @override final  String? untilId;
-@override@DateTimeConverter() final  DateTime? sinceDate;
-@override@DateTimeConverter() final  DateTime? untilDate;
+@override@EpocTimeDateTimeConverter() final  DateTime? sinceDate;
+@override@EpocTimeDateTimeConverter() final  DateTime? untilDate;
 @override final  String? pagination;
 
 /// Create a copy of AntennasNotesRequest
@@ -259,7 +259,7 @@ abstract mixin class _$AntennasNotesRequestCopyWith<$Res> implements $AntennasNo
   factory _$AntennasNotesRequestCopyWith(_AntennasNotesRequest value, $Res Function(_AntennasNotesRequest) _then) = __$AntennasNotesRequestCopyWithImpl;
 @override @useResult
 $Res call({
- String antennaId, int? limit, String? sinceId, String? untilId,@DateTimeConverter() DateTime? sinceDate,@DateTimeConverter() DateTime? untilDate, String? pagination
+ String antennaId, int? limit, String? sinceId, String? untilId,@EpocTimeDateTimeConverter() DateTime? sinceDate,@EpocTimeDateTimeConverter() DateTime? untilDate, String? pagination
 });
 
 

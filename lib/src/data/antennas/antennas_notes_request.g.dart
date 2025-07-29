@@ -16,16 +16,16 @@ _AntennasNotesRequest _$AntennasNotesRequestFromJson(
     untilId: $checkedConvert('untilId', (v) => v as String?),
     sinceDate: $checkedConvert(
       'sinceDate',
-      (v) => _$JsonConverterFromJson<String, DateTime>(
+      (v) => _$JsonConverterFromJson<int, DateTime>(
         v,
-        const DateTimeConverter().fromJson,
+        const EpocTimeDateTimeConverter().fromJson,
       ),
     ),
     untilDate: $checkedConvert(
       'untilDate',
-      (v) => _$JsonConverterFromJson<String, DateTime>(
+      (v) => _$JsonConverterFromJson<int, DateTime>(
         v,
-        const DateTimeConverter().fromJson,
+        const EpocTimeDateTimeConverter().fromJson,
       ),
     ),
     pagination: $checkedConvert('pagination', (v) => v as String?),
@@ -40,13 +40,13 @@ Map<String, dynamic> _$AntennasNotesRequestToJson(
   'limit': instance.limit,
   'sinceId': instance.sinceId,
   'untilId': instance.untilId,
-  'sinceDate': _$JsonConverterToJson<String, DateTime>(
+  'sinceDate': _$JsonConverterToJson<int, DateTime>(
     instance.sinceDate,
-    const DateTimeConverter().toJson,
+    const EpocTimeDateTimeConverter().toJson,
   ),
-  'untilDate': _$JsonConverterToJson<String, DateTime>(
+  'untilDate': _$JsonConverterToJson<int, DateTime>(
     instance.untilDate,
-    const DateTimeConverter().toJson,
+    const EpocTimeDateTimeConverter().toJson,
   ),
   'pagination': instance.pagination,
 };

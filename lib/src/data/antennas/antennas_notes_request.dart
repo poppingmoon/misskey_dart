@@ -11,8 +11,8 @@ abstract class AntennasNotesRequest with _$AntennasNotesRequest {
     int? limit,
     String? sinceId,
     String? untilId,
-    @DateTimeConverter() DateTime? sinceDate,
-    @DateTimeConverter() DateTime? untilDate,
+    @EpocTimeDateTimeConverter() DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() DateTime? untilDate,
     String? pagination,
   }) = _AntennasNotesRequest;
 
