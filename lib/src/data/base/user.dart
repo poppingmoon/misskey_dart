@@ -567,6 +567,7 @@ abstract class UserPolicies with _$UserPolicies {
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     ChatAvailability? chatAvailability,
+    int? noteDraftLimit,
     int? mutualLinkSectionLimit, // MisskeyIO
     int? mutualLinkLimit, // MisskeyIO
     int? scheduleNoteMax, // CherryPick

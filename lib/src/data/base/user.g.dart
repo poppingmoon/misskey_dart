@@ -1439,6 +1439,10 @@ _UserPolicies _$UserPoliciesFromJson(
         unknownValue: JsonKey.nullForUndefinedEnumValue,
       ),
     ),
+    noteDraftLimit: $checkedConvert(
+      'noteDraftLimit',
+      (v) => (v as num?)?.toInt(),
+    ),
     mutualLinkSectionLimit: $checkedConvert(
       'mutualLinkSectionLimit',
       (v) => (v as num?)?.toInt(),
@@ -1494,6 +1498,7 @@ Map<String, dynamic> _$UserPoliciesToJson(_UserPolicies instance) =>
       'canImportMuting': instance.canImportMuting,
       'canImportUserLists': instance.canImportUserLists,
       'chatAvailability': _$ChatAvailabilityEnumMap[instance.chatAvailability],
+      'noteDraftLimit': instance.noteDraftLimit,
       'mutualLinkSectionLimit': instance.mutualLinkSectionLimit,
       'mutualLinkLimit': instance.mutualLinkLimit,
       'scheduleNoteMax': instance.scheduleNoteMax,

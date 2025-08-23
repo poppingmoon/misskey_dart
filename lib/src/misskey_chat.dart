@@ -46,6 +46,11 @@ class MisskeyChat {
     );
     return response.map((e) => ChatMessage.fromJson(e));
   }
+
+  /// 全てのチャットメッセージを既読にします
+  Future<void> readAll() async {
+    await _apiService.post("chat/read-all", {});
+  }
 }
 
 class MisskeyChatMessages {
