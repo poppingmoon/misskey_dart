@@ -33,7 +33,11 @@ _NoteDraft _$NoteDraftFromJson(Map<String, dynamic> json) =>
         ),
         visibility: $checkedConvert(
           'visibility',
-          (v) => $enumDecode(_$NoteVisibilityEnumMap, v),
+          (v) => $enumDecodeNullable(
+            _$NoteVisibilityEnumMap,
+            v,
+            unknownValue: JsonKey.nullForUndefinedEnumValue,
+          ),
         ),
         visibleUserIds: $checkedConvert(
           'visibleUserIds',
@@ -68,6 +72,17 @@ _NoteDraft _$NoteDraftFromJson(Map<String, dynamic> json) =>
           'reactionAcceptance',
           (v) => $enumDecodeNullable(_$ReactionAcceptanceEnumMap, v),
         ),
+        scheduledAt: $checkedConvert(
+          'scheduledAt',
+          (v) => _$JsonConverterFromJson<String, DateTime>(
+            v,
+            const DateTimeConverter().fromJson,
+          ),
+        ),
+        isActuallyScheduled: $checkedConvert(
+          'isActuallyScheduled',
+          (v) => v as bool?,
+        ),
       );
       return val;
     });
@@ -84,7 +99,7 @@ Map<String, dynamic> _$NoteDraftToJson(_NoteDraft instance) =>
       'renoteId': instance.renoteId,
       'reply': instance.reply?.toJson(),
       'renote': instance.renote?.toJson(),
-      'visibility': _$NoteVisibilityEnumMap[instance.visibility]!,
+      'visibility': _$NoteVisibilityEnumMap[instance.visibility],
       'visibleUserIds': instance.visibleUserIds,
       'fileIds': instance.fileIds,
       'files': instance.files?.map((e) => e.toJson()).toList(),
@@ -95,6 +110,11 @@ Map<String, dynamic> _$NoteDraftToJson(_NoteDraft instance) =>
       'localOnly': instance.localOnly,
       'reactionAcceptance':
           _$ReactionAcceptanceEnumMap[instance.reactionAcceptance],
+      'scheduledAt': _$JsonConverterToJson<String, DateTime>(
+        instance.scheduledAt,
+        const DateTimeConverter().toJson,
+      ),
+      'isActuallyScheduled': instance.isActuallyScheduled,
     };
 
 const _$NoteVisibilityEnumMap = {
@@ -111,6 +131,16 @@ const _$ReactionAcceptanceEnumMap = {
       'nonSensitiveOnlyForLocalLikeOnlyForRemote',
   ReactionAcceptance.likeOnly: 'likeOnly',
 };
+
+Value? _$JsonConverterFromJson<Json, Value>(
+  Object? json,
+  Value? Function(Json json) fromJson,
+) => json == null ? null : fromJson(json as Json);
+
+Json? _$JsonConverterToJson<Json, Value>(
+  Value? value,
+  Json? Function(Value value) toJson,
+) => value == null ? null : toJson(value);
 
 _NoteDraftPoll _$NoteDraftPollFromJson(Map<String, dynamic> json) =>
     $checkedCreate('_NoteDraftPoll', json, ($checkedConvert) {
@@ -151,13 +181,3 @@ Map<String, dynamic> _$NoteDraftPollToJson(_NoteDraftPoll instance) =>
       'multiple': instance.multiple,
       'choices': instance.choices,
     };
-
-Value? _$JsonConverterFromJson<Json, Value>(
-  Object? json,
-  Value? Function(Json json) fromJson,
-) => json == null ? null : fromJson(json as Json);
-
-Json? _$JsonConverterToJson<Json, Value>(
-  Value? value,
-  Json? Function(Value value) toJson,
-) => value == null ? null : toJson(value);

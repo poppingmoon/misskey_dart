@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$NotesDraftsUpdateRequest {
 
- String get draftId; NoteVisibility? get visibility; List<String>? get visibleUserIds; String? get cw; String? get hashtag; bool? get localOnly; ReactionAcceptance? get reactionAcceptance; String? get replyId; String? get renoteId; String? get channelId; String? get text; List<String>? get fileIds; NotesCreatePollRequest? get poll;
+ String get draftId; NoteVisibility? get visibility; List<String>? get visibleUserIds; String? get cw; String? get hashtag; bool? get localOnly; ReactionAcceptance? get reactionAcceptance; String? get replyId; String? get renoteId; String? get channelId; String? get text; List<String>? get fileIds; NotesCreatePollRequest? get poll;@DateTimeConverter() DateTime? get scheduledAt; bool? get isActuallyScheduled;
 /// Create a copy of NotesDraftsUpdateRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -28,16 +28,16 @@ $NotesDraftsUpdateRequestCopyWith<NotesDraftsUpdateRequest> get copyWith => _$No
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesDraftsUpdateRequest&&(identical(other.draftId, draftId) || other.draftId == draftId)&&(identical(other.visibility, visibility) || other.visibility == visibility)&&const DeepCollectionEquality().equals(other.visibleUserIds, visibleUserIds)&&(identical(other.cw, cw) || other.cw == cw)&&(identical(other.hashtag, hashtag) || other.hashtag == hashtag)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&(identical(other.reactionAcceptance, reactionAcceptance) || other.reactionAcceptance == reactionAcceptance)&&(identical(other.replyId, replyId) || other.replyId == replyId)&&(identical(other.renoteId, renoteId) || other.renoteId == renoteId)&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.text, text) || other.text == text)&&const DeepCollectionEquality().equals(other.fileIds, fileIds)&&(identical(other.poll, poll) || other.poll == poll));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesDraftsUpdateRequest&&(identical(other.draftId, draftId) || other.draftId == draftId)&&(identical(other.visibility, visibility) || other.visibility == visibility)&&const DeepCollectionEquality().equals(other.visibleUserIds, visibleUserIds)&&(identical(other.cw, cw) || other.cw == cw)&&(identical(other.hashtag, hashtag) || other.hashtag == hashtag)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&(identical(other.reactionAcceptance, reactionAcceptance) || other.reactionAcceptance == reactionAcceptance)&&(identical(other.replyId, replyId) || other.replyId == replyId)&&(identical(other.renoteId, renoteId) || other.renoteId == renoteId)&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.text, text) || other.text == text)&&const DeepCollectionEquality().equals(other.fileIds, fileIds)&&(identical(other.poll, poll) || other.poll == poll)&&(identical(other.scheduledAt, scheduledAt) || other.scheduledAt == scheduledAt)&&(identical(other.isActuallyScheduled, isActuallyScheduled) || other.isActuallyScheduled == isActuallyScheduled));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,draftId,visibility,const DeepCollectionEquality().hash(visibleUserIds),cw,hashtag,localOnly,reactionAcceptance,replyId,renoteId,channelId,text,const DeepCollectionEquality().hash(fileIds),poll);
+int get hashCode => Object.hash(runtimeType,draftId,visibility,const DeepCollectionEquality().hash(visibleUserIds),cw,hashtag,localOnly,reactionAcceptance,replyId,renoteId,channelId,text,const DeepCollectionEquality().hash(fileIds),poll,scheduledAt,isActuallyScheduled);
 
 @override
 String toString() {
-  return 'NotesDraftsUpdateRequest(draftId: $draftId, visibility: $visibility, visibleUserIds: $visibleUserIds, cw: $cw, hashtag: $hashtag, localOnly: $localOnly, reactionAcceptance: $reactionAcceptance, replyId: $replyId, renoteId: $renoteId, channelId: $channelId, text: $text, fileIds: $fileIds, poll: $poll)';
+  return 'NotesDraftsUpdateRequest(draftId: $draftId, visibility: $visibility, visibleUserIds: $visibleUserIds, cw: $cw, hashtag: $hashtag, localOnly: $localOnly, reactionAcceptance: $reactionAcceptance, replyId: $replyId, renoteId: $renoteId, channelId: $channelId, text: $text, fileIds: $fileIds, poll: $poll, scheduledAt: $scheduledAt, isActuallyScheduled: $isActuallyScheduled)';
 }
 
 
@@ -48,7 +48,7 @@ abstract mixin class $NotesDraftsUpdateRequestCopyWith<$Res>  {
   factory $NotesDraftsUpdateRequestCopyWith(NotesDraftsUpdateRequest value, $Res Function(NotesDraftsUpdateRequest) _then) = _$NotesDraftsUpdateRequestCopyWithImpl;
 @useResult
 $Res call({
- String draftId, NoteVisibility? visibility, List<String>? visibleUserIds, String? cw, String? hashtag, bool? localOnly, ReactionAcceptance? reactionAcceptance, String? replyId, String? renoteId, String? channelId, String? text, List<String>? fileIds, NotesCreatePollRequest? poll
+ String draftId, NoteVisibility? visibility, List<String>? visibleUserIds, String? cw, String? hashtag, bool? localOnly, ReactionAcceptance? reactionAcceptance, String? replyId, String? renoteId, String? channelId, String? text, List<String>? fileIds, NotesCreatePollRequest? poll,@DateTimeConverter() DateTime? scheduledAt, bool? isActuallyScheduled
 });
 
 
@@ -65,7 +65,7 @@ class _$NotesDraftsUpdateRequestCopyWithImpl<$Res>
 
 /// Create a copy of NotesDraftsUpdateRequest
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? draftId = null,Object? visibility = freezed,Object? visibleUserIds = freezed,Object? cw = freezed,Object? hashtag = freezed,Object? localOnly = freezed,Object? reactionAcceptance = freezed,Object? replyId = freezed,Object? renoteId = freezed,Object? channelId = freezed,Object? text = freezed,Object? fileIds = freezed,Object? poll = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? draftId = null,Object? visibility = freezed,Object? visibleUserIds = freezed,Object? cw = freezed,Object? hashtag = freezed,Object? localOnly = freezed,Object? reactionAcceptance = freezed,Object? replyId = freezed,Object? renoteId = freezed,Object? channelId = freezed,Object? text = freezed,Object? fileIds = freezed,Object? poll = freezed,Object? scheduledAt = freezed,Object? isActuallyScheduled = freezed,}) {
   return _then(_self.copyWith(
 draftId: null == draftId ? _self.draftId : draftId // ignore: cast_nullable_to_non_nullable
 as String,visibility: freezed == visibility ? _self.visibility : visibility // ignore: cast_nullable_to_non_nullable
@@ -80,7 +80,9 @@ as String?,channelId: freezed == channelId ? _self.channelId : channelId // igno
 as String?,text: freezed == text ? _self.text : text // ignore: cast_nullable_to_non_nullable
 as String?,fileIds: freezed == fileIds ? _self.fileIds : fileIds // ignore: cast_nullable_to_non_nullable
 as List<String>?,poll: freezed == poll ? _self.poll : poll // ignore: cast_nullable_to_non_nullable
-as NotesCreatePollRequest?,
+as NotesCreatePollRequest?,scheduledAt: freezed == scheduledAt ? _self.scheduledAt : scheduledAt // ignore: cast_nullable_to_non_nullable
+as DateTime?,isActuallyScheduled: freezed == isActuallyScheduled ? _self.isActuallyScheduled : isActuallyScheduled // ignore: cast_nullable_to_non_nullable
+as bool?,
   ));
 }
 /// Create a copy of NotesDraftsUpdateRequest
@@ -177,10 +179,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String draftId,  NoteVisibility? visibility,  List<String>? visibleUserIds,  String? cw,  String? hashtag,  bool? localOnly,  ReactionAcceptance? reactionAcceptance,  String? replyId,  String? renoteId,  String? channelId,  String? text,  List<String>? fileIds,  NotesCreatePollRequest? poll)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String draftId,  NoteVisibility? visibility,  List<String>? visibleUserIds,  String? cw,  String? hashtag,  bool? localOnly,  ReactionAcceptance? reactionAcceptance,  String? replyId,  String? renoteId,  String? channelId,  String? text,  List<String>? fileIds,  NotesCreatePollRequest? poll, @DateTimeConverter()  DateTime? scheduledAt,  bool? isActuallyScheduled)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _NotesDraftsUpdateRequest() when $default != null:
-return $default(_that.draftId,_that.visibility,_that.visibleUserIds,_that.cw,_that.hashtag,_that.localOnly,_that.reactionAcceptance,_that.replyId,_that.renoteId,_that.channelId,_that.text,_that.fileIds,_that.poll);case _:
+return $default(_that.draftId,_that.visibility,_that.visibleUserIds,_that.cw,_that.hashtag,_that.localOnly,_that.reactionAcceptance,_that.replyId,_that.renoteId,_that.channelId,_that.text,_that.fileIds,_that.poll,_that.scheduledAt,_that.isActuallyScheduled);case _:
   return orElse();
 
 }
@@ -198,10 +200,10 @@ return $default(_that.draftId,_that.visibility,_that.visibleUserIds,_that.cw,_th
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String draftId,  NoteVisibility? visibility,  List<String>? visibleUserIds,  String? cw,  String? hashtag,  bool? localOnly,  ReactionAcceptance? reactionAcceptance,  String? replyId,  String? renoteId,  String? channelId,  String? text,  List<String>? fileIds,  NotesCreatePollRequest? poll)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String draftId,  NoteVisibility? visibility,  List<String>? visibleUserIds,  String? cw,  String? hashtag,  bool? localOnly,  ReactionAcceptance? reactionAcceptance,  String? replyId,  String? renoteId,  String? channelId,  String? text,  List<String>? fileIds,  NotesCreatePollRequest? poll, @DateTimeConverter()  DateTime? scheduledAt,  bool? isActuallyScheduled)  $default,) {final _that = this;
 switch (_that) {
 case _NotesDraftsUpdateRequest():
-return $default(_that.draftId,_that.visibility,_that.visibleUserIds,_that.cw,_that.hashtag,_that.localOnly,_that.reactionAcceptance,_that.replyId,_that.renoteId,_that.channelId,_that.text,_that.fileIds,_that.poll);case _:
+return $default(_that.draftId,_that.visibility,_that.visibleUserIds,_that.cw,_that.hashtag,_that.localOnly,_that.reactionAcceptance,_that.replyId,_that.renoteId,_that.channelId,_that.text,_that.fileIds,_that.poll,_that.scheduledAt,_that.isActuallyScheduled);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -218,10 +220,10 @@ return $default(_that.draftId,_that.visibility,_that.visibleUserIds,_that.cw,_th
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String draftId,  NoteVisibility? visibility,  List<String>? visibleUserIds,  String? cw,  String? hashtag,  bool? localOnly,  ReactionAcceptance? reactionAcceptance,  String? replyId,  String? renoteId,  String? channelId,  String? text,  List<String>? fileIds,  NotesCreatePollRequest? poll)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String draftId,  NoteVisibility? visibility,  List<String>? visibleUserIds,  String? cw,  String? hashtag,  bool? localOnly,  ReactionAcceptance? reactionAcceptance,  String? replyId,  String? renoteId,  String? channelId,  String? text,  List<String>? fileIds,  NotesCreatePollRequest? poll, @DateTimeConverter()  DateTime? scheduledAt,  bool? isActuallyScheduled)?  $default,) {final _that = this;
 switch (_that) {
 case _NotesDraftsUpdateRequest() when $default != null:
-return $default(_that.draftId,_that.visibility,_that.visibleUserIds,_that.cw,_that.hashtag,_that.localOnly,_that.reactionAcceptance,_that.replyId,_that.renoteId,_that.channelId,_that.text,_that.fileIds,_that.poll);case _:
+return $default(_that.draftId,_that.visibility,_that.visibleUserIds,_that.cw,_that.hashtag,_that.localOnly,_that.reactionAcceptance,_that.replyId,_that.renoteId,_that.channelId,_that.text,_that.fileIds,_that.poll,_that.scheduledAt,_that.isActuallyScheduled);case _:
   return null;
 
 }
@@ -233,7 +235,7 @@ return $default(_that.draftId,_that.visibility,_that.visibleUserIds,_that.cw,_th
 @JsonSerializable()
 
 class _NotesDraftsUpdateRequest implements NotesDraftsUpdateRequest {
-  const _NotesDraftsUpdateRequest({required this.draftId, this.visibility, final  List<String>? visibleUserIds, this.cw, this.hashtag, this.localOnly, this.reactionAcceptance, this.replyId, this.renoteId, this.channelId, this.text, final  List<String>? fileIds, this.poll}): _visibleUserIds = visibleUserIds,_fileIds = fileIds;
+  const _NotesDraftsUpdateRequest({required this.draftId, this.visibility, final  List<String>? visibleUserIds, this.cw, this.hashtag, this.localOnly, this.reactionAcceptance, this.replyId, this.renoteId, this.channelId, this.text, final  List<String>? fileIds, this.poll, @DateTimeConverter() this.scheduledAt, this.isActuallyScheduled}): _visibleUserIds = visibleUserIds,_fileIds = fileIds;
   factory _NotesDraftsUpdateRequest.fromJson(Map<String, dynamic> json) => _$NotesDraftsUpdateRequestFromJson(json);
 
 @override final  String draftId;
@@ -265,6 +267,8 @@ class _NotesDraftsUpdateRequest implements NotesDraftsUpdateRequest {
 }
 
 @override final  NotesCreatePollRequest? poll;
+@override@DateTimeConverter() final  DateTime? scheduledAt;
+@override final  bool? isActuallyScheduled;
 
 /// Create a copy of NotesDraftsUpdateRequest
 /// with the given fields replaced by the non-null parameter values.
@@ -279,16 +283,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesDraftsUpdateRequest&&(identical(other.draftId, draftId) || other.draftId == draftId)&&(identical(other.visibility, visibility) || other.visibility == visibility)&&const DeepCollectionEquality().equals(other._visibleUserIds, _visibleUserIds)&&(identical(other.cw, cw) || other.cw == cw)&&(identical(other.hashtag, hashtag) || other.hashtag == hashtag)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&(identical(other.reactionAcceptance, reactionAcceptance) || other.reactionAcceptance == reactionAcceptance)&&(identical(other.replyId, replyId) || other.replyId == replyId)&&(identical(other.renoteId, renoteId) || other.renoteId == renoteId)&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.text, text) || other.text == text)&&const DeepCollectionEquality().equals(other._fileIds, _fileIds)&&(identical(other.poll, poll) || other.poll == poll));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesDraftsUpdateRequest&&(identical(other.draftId, draftId) || other.draftId == draftId)&&(identical(other.visibility, visibility) || other.visibility == visibility)&&const DeepCollectionEquality().equals(other._visibleUserIds, _visibleUserIds)&&(identical(other.cw, cw) || other.cw == cw)&&(identical(other.hashtag, hashtag) || other.hashtag == hashtag)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&(identical(other.reactionAcceptance, reactionAcceptance) || other.reactionAcceptance == reactionAcceptance)&&(identical(other.replyId, replyId) || other.replyId == replyId)&&(identical(other.renoteId, renoteId) || other.renoteId == renoteId)&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.text, text) || other.text == text)&&const DeepCollectionEquality().equals(other._fileIds, _fileIds)&&(identical(other.poll, poll) || other.poll == poll)&&(identical(other.scheduledAt, scheduledAt) || other.scheduledAt == scheduledAt)&&(identical(other.isActuallyScheduled, isActuallyScheduled) || other.isActuallyScheduled == isActuallyScheduled));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,draftId,visibility,const DeepCollectionEquality().hash(_visibleUserIds),cw,hashtag,localOnly,reactionAcceptance,replyId,renoteId,channelId,text,const DeepCollectionEquality().hash(_fileIds),poll);
+int get hashCode => Object.hash(runtimeType,draftId,visibility,const DeepCollectionEquality().hash(_visibleUserIds),cw,hashtag,localOnly,reactionAcceptance,replyId,renoteId,channelId,text,const DeepCollectionEquality().hash(_fileIds),poll,scheduledAt,isActuallyScheduled);
 
 @override
 String toString() {
-  return 'NotesDraftsUpdateRequest(draftId: $draftId, visibility: $visibility, visibleUserIds: $visibleUserIds, cw: $cw, hashtag: $hashtag, localOnly: $localOnly, reactionAcceptance: $reactionAcceptance, replyId: $replyId, renoteId: $renoteId, channelId: $channelId, text: $text, fileIds: $fileIds, poll: $poll)';
+  return 'NotesDraftsUpdateRequest(draftId: $draftId, visibility: $visibility, visibleUserIds: $visibleUserIds, cw: $cw, hashtag: $hashtag, localOnly: $localOnly, reactionAcceptance: $reactionAcceptance, replyId: $replyId, renoteId: $renoteId, channelId: $channelId, text: $text, fileIds: $fileIds, poll: $poll, scheduledAt: $scheduledAt, isActuallyScheduled: $isActuallyScheduled)';
 }
 
 
@@ -299,7 +303,7 @@ abstract mixin class _$NotesDraftsUpdateRequestCopyWith<$Res> implements $NotesD
   factory _$NotesDraftsUpdateRequestCopyWith(_NotesDraftsUpdateRequest value, $Res Function(_NotesDraftsUpdateRequest) _then) = __$NotesDraftsUpdateRequestCopyWithImpl;
 @override @useResult
 $Res call({
- String draftId, NoteVisibility? visibility, List<String>? visibleUserIds, String? cw, String? hashtag, bool? localOnly, ReactionAcceptance? reactionAcceptance, String? replyId, String? renoteId, String? channelId, String? text, List<String>? fileIds, NotesCreatePollRequest? poll
+ String draftId, NoteVisibility? visibility, List<String>? visibleUserIds, String? cw, String? hashtag, bool? localOnly, ReactionAcceptance? reactionAcceptance, String? replyId, String? renoteId, String? channelId, String? text, List<String>? fileIds, NotesCreatePollRequest? poll,@DateTimeConverter() DateTime? scheduledAt, bool? isActuallyScheduled
 });
 
 
@@ -316,7 +320,7 @@ class __$NotesDraftsUpdateRequestCopyWithImpl<$Res>
 
 /// Create a copy of NotesDraftsUpdateRequest
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? draftId = null,Object? visibility = freezed,Object? visibleUserIds = freezed,Object? cw = freezed,Object? hashtag = freezed,Object? localOnly = freezed,Object? reactionAcceptance = freezed,Object? replyId = freezed,Object? renoteId = freezed,Object? channelId = freezed,Object? text = freezed,Object? fileIds = freezed,Object? poll = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? draftId = null,Object? visibility = freezed,Object? visibleUserIds = freezed,Object? cw = freezed,Object? hashtag = freezed,Object? localOnly = freezed,Object? reactionAcceptance = freezed,Object? replyId = freezed,Object? renoteId = freezed,Object? channelId = freezed,Object? text = freezed,Object? fileIds = freezed,Object? poll = freezed,Object? scheduledAt = freezed,Object? isActuallyScheduled = freezed,}) {
   return _then(_NotesDraftsUpdateRequest(
 draftId: null == draftId ? _self.draftId : draftId // ignore: cast_nullable_to_non_nullable
 as String,visibility: freezed == visibility ? _self.visibility : visibility // ignore: cast_nullable_to_non_nullable
@@ -331,7 +335,9 @@ as String?,channelId: freezed == channelId ? _self.channelId : channelId // igno
 as String?,text: freezed == text ? _self.text : text // ignore: cast_nullable_to_non_nullable
 as String?,fileIds: freezed == fileIds ? _self._fileIds : fileIds // ignore: cast_nullable_to_non_nullable
 as List<String>?,poll: freezed == poll ? _self.poll : poll // ignore: cast_nullable_to_non_nullable
-as NotesCreatePollRequest?,
+as NotesCreatePollRequest?,scheduledAt: freezed == scheduledAt ? _self.scheduledAt : scheduledAt // ignore: cast_nullable_to_non_nullable
+as DateTime?,isActuallyScheduled: freezed == isActuallyScheduled ? _self.isActuallyScheduled : isActuallyScheduled // ignore: cast_nullable_to_non_nullable
+as bool?,
   ));
 }
 

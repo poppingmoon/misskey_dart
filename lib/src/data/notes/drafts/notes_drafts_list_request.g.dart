@@ -13,6 +13,7 @@ _NotesDraftsListRequest _$NotesDraftsListRequestFromJson(
     limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
     sinceId: $checkedConvert('sinceId', (v) => v as String?),
     untilId: $checkedConvert('untilId', (v) => v as String?),
+    scheduled: $checkedConvert('scheduled', (v) => v as bool?),
   );
   return val;
 });
@@ -23,4 +24,5 @@ Map<String, dynamic> _$NotesDraftsListRequestToJson(
   'limit': instance.limit,
   'sinceId': instance.sinceId,
   'untilId': instance.untilId,
+  'scheduled': instance.scheduled,
 };

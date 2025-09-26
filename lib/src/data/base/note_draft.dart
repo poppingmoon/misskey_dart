@@ -19,7 +19,9 @@ abstract class NoteDraft with _$NoteDraft {
     String? renoteId,
     Note? reply,
     Note? renote,
-    required NoteVisibility visibility,
+    // ignore: invalid_annotation_target
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    NoteVisibility? visibility,
     List<String>? visibleUserIds,
     List<String>? fileIds,
     List<DriveFile>? files,
@@ -29,6 +31,8 @@ abstract class NoteDraft with _$NoteDraft {
     NoteChannelInfo? channel,
     bool? localOnly,
     ReactionAcceptance? reactionAcceptance,
+    @DateTimeConverter() DateTime? scheduledAt,
+    bool? isActuallyScheduled,
   }) = _NoteDraft;
 
   factory NoteDraft.fromJson(Map<String, Object?> json) =>

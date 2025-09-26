@@ -1443,6 +1443,14 @@ _UserPolicies _$UserPoliciesFromJson(
       'noteDraftLimit',
       (v) => (v as num?)?.toInt(),
     ),
+    scheduledNoteLimit: $checkedConvert(
+      'scheduledNoteLimit',
+      (v) => (v as num?)?.toInt(),
+    ),
+    watermarkAvailable: $checkedConvert(
+      'watermarkAvailable',
+      (v) => v as bool?,
+    ),
     mutualLinkSectionLimit: $checkedConvert(
       'mutualLinkSectionLimit',
       (v) => (v as num?)?.toInt(),
@@ -1499,6 +1507,8 @@ Map<String, dynamic> _$UserPoliciesToJson(_UserPolicies instance) =>
       'canImportUserLists': instance.canImportUserLists,
       'chatAvailability': _$ChatAvailabilityEnumMap[instance.chatAvailability],
       'noteDraftLimit': instance.noteDraftLimit,
+      'scheduledNoteLimit': instance.scheduledNoteLimit,
+      'watermarkAvailable': instance.watermarkAvailable,
       'mutualLinkSectionLimit': instance.mutualLinkSectionLimit,
       'mutualLinkLimit': instance.mutualLinkLimit,
       'scheduleNoteMax': instance.scheduleNoteMax,
@@ -1632,6 +1642,18 @@ _NotificationRecieveConfigs _$NotificationRecieveConfigsFromJson(
           ? null
           : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
     ),
+    scheduledNotePosted: $checkedConvert(
+      'scheduledNotePosted',
+      (v) => v == null
+          ? null
+          : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
+    ),
+    scheduledNotePostFailed: $checkedConvert(
+      'scheduledNotePostFailed',
+      (v) => v == null
+          ? null
+          : NotificationRecieveConfig.fromJson(v as Map<String, dynamic>),
+    ),
     receiveFollowRequest: $checkedConvert(
       'receiveFollowRequest',
       (v) => v == null
@@ -1689,6 +1711,8 @@ Map<String, dynamic> _$NotificationRecieveConfigsToJson(
   'quote': instance.quote?.toJson(),
   'reaction': instance.reaction?.toJson(),
   'pollEnded': instance.pollEnded?.toJson(),
+  'scheduledNotePosted': instance.scheduledNotePosted?.toJson(),
+  'scheduledNotePostFailed': instance.scheduledNotePostFailed?.toJson(),
   'receiveFollowRequest': instance.receiveFollowRequest?.toJson(),
   'followRequestAccepted': instance.followRequestAccepted?.toJson(),
   'roleAssigned': instance.roleAssigned?.toJson(),

@@ -40,6 +40,17 @@ _NotesDraftsUpdateRequest _$NotesDraftsUpdateRequestFromJson(
           ? null
           : NotesCreatePollRequest.fromJson(v as Map<String, dynamic>),
     ),
+    scheduledAt: $checkedConvert(
+      'scheduledAt',
+      (v) => _$JsonConverterFromJson<String, DateTime>(
+        v,
+        const DateTimeConverter().fromJson,
+      ),
+    ),
+    isActuallyScheduled: $checkedConvert(
+      'isActuallyScheduled',
+      (v) => v as bool?,
+    ),
   );
   return val;
 });
@@ -61,6 +72,11 @@ Map<String, dynamic> _$NotesDraftsUpdateRequestToJson(
   'text': instance.text,
   'fileIds': instance.fileIds,
   'poll': instance.poll?.toJson(),
+  'scheduledAt': _$JsonConverterToJson<String, DateTime>(
+    instance.scheduledAt,
+    const DateTimeConverter().toJson,
+  ),
+  'isActuallyScheduled': instance.isActuallyScheduled,
 };
 
 const _$NoteVisibilityEnumMap = {
@@ -77,3 +93,13 @@ const _$ReactionAcceptanceEnumMap = {
       'nonSensitiveOnlyForLocalLikeOnlyForRemote',
   ReactionAcceptance.likeOnly: 'likeOnly',
 };
+
+Value? _$JsonConverterFromJson<Json, Value>(
+  Object? json,
+  Value? Function(Json json) fromJson,
+) => json == null ? null : fromJson(json as Json);
+
+Json? _$JsonConverterToJson<Json, Value>(
+  Value? value,
+  Json? Function(Value value) toJson,
+) => value == null ? null : toJson(value);

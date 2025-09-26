@@ -9,6 +9,7 @@ abstract class NotesDraftsListRequest with _$NotesDraftsListRequest {
     int? limit,
     String? sinceId,
     String? untilId,
+    bool? scheduled,
   }) = _NotesDraftsListRequest;
 
   factory NotesDraftsListRequest.fromJson(Map<String, Object?> json) =>

@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:misskey_dart/misskey_dart.dart';
+import 'package:misskey_dart/src/converters/date_time_converter.dart';
 
 part 'notes_drafts_update_request.freezed.dart';
 part 'notes_drafts_update_request.g.dart';
@@ -20,6 +21,8 @@ abstract class NotesDraftsUpdateRequest with _$NotesDraftsUpdateRequest {
     String? text,
     List<String>? fileIds,
     NotesCreatePollRequest? poll,
+    @DateTimeConverter() DateTime? scheduledAt,
+    bool? isActuallyScheduled,
   }) = _NotesDraftsUpdateRequest;
 
   factory NotesDraftsUpdateRequest.fromJson(Map<String, Object?> json) =>

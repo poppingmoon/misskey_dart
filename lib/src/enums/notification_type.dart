@@ -9,6 +9,8 @@ enum NotificationType {
   quote,
   reaction,
   pollEnded,
+  scheduledNotePosted,
+  scheduledNotePostFailed,
   edited, // Sharkey
   receiveFollowRequest,
   followRequestAccepted,
@@ -20,7 +22,6 @@ enum NotificationType {
   createToken,
   scheduleNote, // CherryPick
   noteScheduled, // MisskeyIO
-  scheduledNotePosted, // MisskeyIO
   scheduledNoteError, // MisskeyIO
   app,
   test,
