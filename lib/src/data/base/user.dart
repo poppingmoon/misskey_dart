@@ -184,7 +184,6 @@ abstract class UserDetailedNotMe
     @Default(false) bool publicReactions,
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-
     /// removed at 2023.12.0"
     FFVisibility? ffVisibility,
     // ignore: invalid_annotation_target
@@ -268,7 +267,6 @@ abstract class UserDetailedNotMeWithRelations
     @Default(false) bool publicReactions,
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-
     /// removed at 2023.12.0"
     FFVisibility? ffVisibility,
     // ignore: invalid_annotation_target
@@ -362,7 +360,6 @@ abstract class MeDetailed with _$MeDetailed implements UserDetailed {
     @Default(false) bool publicReactions,
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-
     /// removed at 2023.12.0"
     FFVisibility? ffVisibility,
     // ignore: invalid_annotation_target
@@ -457,6 +454,7 @@ abstract class UserAvatarDecoration with _$UserAvatarDecoration {
     required String url,
     @Default(0.0) double offsetX,
     @Default(0.0) double offsetY,
+    bool? showBelow, // Sharkey
   }) = _UserAvatarDecoration;
 
   factory UserAvatarDecoration.fromJson(Map<String, Object?> json) =>

@@ -2301,7 +2301,7 @@ $UserPoliciesCopyWith<$Res>? get policies {
 /// @nodoc
 mixin _$UserAvatarDecoration {
 
- String get id; double? get angle; bool get flipH; String get url; double get offsetX; double get offsetY;
+ String get id; double? get angle; bool get flipH; String get url; double get offsetX; double get offsetY; bool? get showBelow;
 /// Create a copy of UserAvatarDecoration
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -2314,16 +2314,16 @@ $UserAvatarDecorationCopyWith<UserAvatarDecoration> get copyWith => _$UserAvatar
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is UserAvatarDecoration&&(identical(other.id, id) || other.id == id)&&(identical(other.angle, angle) || other.angle == angle)&&(identical(other.flipH, flipH) || other.flipH == flipH)&&(identical(other.url, url) || other.url == url)&&(identical(other.offsetX, offsetX) || other.offsetX == offsetX)&&(identical(other.offsetY, offsetY) || other.offsetY == offsetY));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is UserAvatarDecoration&&(identical(other.id, id) || other.id == id)&&(identical(other.angle, angle) || other.angle == angle)&&(identical(other.flipH, flipH) || other.flipH == flipH)&&(identical(other.url, url) || other.url == url)&&(identical(other.offsetX, offsetX) || other.offsetX == offsetX)&&(identical(other.offsetY, offsetY) || other.offsetY == offsetY)&&(identical(other.showBelow, showBelow) || other.showBelow == showBelow));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,angle,flipH,url,offsetX,offsetY);
+int get hashCode => Object.hash(runtimeType,id,angle,flipH,url,offsetX,offsetY,showBelow);
 
 @override
 String toString() {
-  return 'UserAvatarDecoration(id: $id, angle: $angle, flipH: $flipH, url: $url, offsetX: $offsetX, offsetY: $offsetY)';
+  return 'UserAvatarDecoration(id: $id, angle: $angle, flipH: $flipH, url: $url, offsetX: $offsetX, offsetY: $offsetY, showBelow: $showBelow)';
 }
 
 
@@ -2334,7 +2334,7 @@ abstract mixin class $UserAvatarDecorationCopyWith<$Res>  {
   factory $UserAvatarDecorationCopyWith(UserAvatarDecoration value, $Res Function(UserAvatarDecoration) _then) = _$UserAvatarDecorationCopyWithImpl;
 @useResult
 $Res call({
- String id, double? angle, bool flipH, String url, double offsetX, double offsetY
+ String id, double? angle, bool flipH, String url, double offsetX, double offsetY, bool? showBelow
 });
 
 
@@ -2351,7 +2351,7 @@ class _$UserAvatarDecorationCopyWithImpl<$Res>
 
 /// Create a copy of UserAvatarDecoration
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? angle = freezed,Object? flipH = null,Object? url = null,Object? offsetX = null,Object? offsetY = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? angle = freezed,Object? flipH = null,Object? url = null,Object? offsetX = null,Object? offsetY = null,Object? showBelow = freezed,}) {
   return _then(_self.copyWith(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,angle: freezed == angle ? _self.angle : angle // ignore: cast_nullable_to_non_nullable
@@ -2359,7 +2359,8 @@ as double?,flipH: null == flipH ? _self.flipH : flipH // ignore: cast_nullable_t
 as bool,url: null == url ? _self.url : url // ignore: cast_nullable_to_non_nullable
 as String,offsetX: null == offsetX ? _self.offsetX : offsetX // ignore: cast_nullable_to_non_nullable
 as double,offsetY: null == offsetY ? _self.offsetY : offsetY // ignore: cast_nullable_to_non_nullable
-as double,
+as double,showBelow: freezed == showBelow ? _self.showBelow : showBelow // ignore: cast_nullable_to_non_nullable
+as bool?,
   ));
 }
 
@@ -2444,10 +2445,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  double? angle,  bool flipH,  String url,  double offsetX,  double offsetY)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  double? angle,  bool flipH,  String url,  double offsetX,  double offsetY,  bool? showBelow)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _UserAvatarDecoration() when $default != null:
-return $default(_that.id,_that.angle,_that.flipH,_that.url,_that.offsetX,_that.offsetY);case _:
+return $default(_that.id,_that.angle,_that.flipH,_that.url,_that.offsetX,_that.offsetY,_that.showBelow);case _:
   return orElse();
 
 }
@@ -2465,10 +2466,10 @@ return $default(_that.id,_that.angle,_that.flipH,_that.url,_that.offsetX,_that.o
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  double? angle,  bool flipH,  String url,  double offsetX,  double offsetY)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  double? angle,  bool flipH,  String url,  double offsetX,  double offsetY,  bool? showBelow)  $default,) {final _that = this;
 switch (_that) {
 case _UserAvatarDecoration():
-return $default(_that.id,_that.angle,_that.flipH,_that.url,_that.offsetX,_that.offsetY);case _:
+return $default(_that.id,_that.angle,_that.flipH,_that.url,_that.offsetX,_that.offsetY,_that.showBelow);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -2485,10 +2486,10 @@ return $default(_that.id,_that.angle,_that.flipH,_that.url,_that.offsetX,_that.o
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  double? angle,  bool flipH,  String url,  double offsetX,  double offsetY)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  double? angle,  bool flipH,  String url,  double offsetX,  double offsetY,  bool? showBelow)?  $default,) {final _that = this;
 switch (_that) {
 case _UserAvatarDecoration() when $default != null:
-return $default(_that.id,_that.angle,_that.flipH,_that.url,_that.offsetX,_that.offsetY);case _:
+return $default(_that.id,_that.angle,_that.flipH,_that.url,_that.offsetX,_that.offsetY,_that.showBelow);case _:
   return null;
 
 }
@@ -2500,7 +2501,7 @@ return $default(_that.id,_that.angle,_that.flipH,_that.url,_that.offsetX,_that.o
 @JsonSerializable()
 
 class _UserAvatarDecoration implements UserAvatarDecoration {
-  const _UserAvatarDecoration({required this.id, this.angle, this.flipH = false, required this.url, this.offsetX = 0.0, this.offsetY = 0.0});
+  const _UserAvatarDecoration({required this.id, this.angle, this.flipH = false, required this.url, this.offsetX = 0.0, this.offsetY = 0.0, this.showBelow});
   factory _UserAvatarDecoration.fromJson(Map<String, dynamic> json) => _$UserAvatarDecorationFromJson(json);
 
 @override final  String id;
@@ -2509,6 +2510,7 @@ class _UserAvatarDecoration implements UserAvatarDecoration {
 @override final  String url;
 @override@JsonKey() final  double offsetX;
 @override@JsonKey() final  double offsetY;
+@override final  bool? showBelow;
 
 /// Create a copy of UserAvatarDecoration
 /// with the given fields replaced by the non-null parameter values.
@@ -2523,16 +2525,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _UserAvatarDecoration&&(identical(other.id, id) || other.id == id)&&(identical(other.angle, angle) || other.angle == angle)&&(identical(other.flipH, flipH) || other.flipH == flipH)&&(identical(other.url, url) || other.url == url)&&(identical(other.offsetX, offsetX) || other.offsetX == offsetX)&&(identical(other.offsetY, offsetY) || other.offsetY == offsetY));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _UserAvatarDecoration&&(identical(other.id, id) || other.id == id)&&(identical(other.angle, angle) || other.angle == angle)&&(identical(other.flipH, flipH) || other.flipH == flipH)&&(identical(other.url, url) || other.url == url)&&(identical(other.offsetX, offsetX) || other.offsetX == offsetX)&&(identical(other.offsetY, offsetY) || other.offsetY == offsetY)&&(identical(other.showBelow, showBelow) || other.showBelow == showBelow));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,angle,flipH,url,offsetX,offsetY);
+int get hashCode => Object.hash(runtimeType,id,angle,flipH,url,offsetX,offsetY,showBelow);
 
 @override
 String toString() {
-  return 'UserAvatarDecoration(id: $id, angle: $angle, flipH: $flipH, url: $url, offsetX: $offsetX, offsetY: $offsetY)';
+  return 'UserAvatarDecoration(id: $id, angle: $angle, flipH: $flipH, url: $url, offsetX: $offsetX, offsetY: $offsetY, showBelow: $showBelow)';
 }
 
 
@@ -2543,7 +2545,7 @@ abstract mixin class _$UserAvatarDecorationCopyWith<$Res> implements $UserAvatar
   factory _$UserAvatarDecorationCopyWith(_UserAvatarDecoration value, $Res Function(_UserAvatarDecoration) _then) = __$UserAvatarDecorationCopyWithImpl;
 @override @useResult
 $Res call({
- String id, double? angle, bool flipH, String url, double offsetX, double offsetY
+ String id, double? angle, bool flipH, String url, double offsetX, double offsetY, bool? showBelow
 });
 
 
@@ -2560,7 +2562,7 @@ class __$UserAvatarDecorationCopyWithImpl<$Res>
 
 /// Create a copy of UserAvatarDecoration
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? angle = freezed,Object? flipH = null,Object? url = null,Object? offsetX = null,Object? offsetY = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? angle = freezed,Object? flipH = null,Object? url = null,Object? offsetX = null,Object? offsetY = null,Object? showBelow = freezed,}) {
   return _then(_UserAvatarDecoration(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,angle: freezed == angle ? _self.angle : angle // ignore: cast_nullable_to_non_nullable
@@ -2568,7 +2570,8 @@ as double?,flipH: null == flipH ? _self.flipH : flipH // ignore: cast_nullable_t
 as bool,url: null == url ? _self.url : url // ignore: cast_nullable_to_non_nullable
 as String,offsetX: null == offsetX ? _self.offsetX : offsetX // ignore: cast_nullable_to_non_nullable
 as double,offsetY: null == offsetY ? _self.offsetY : offsetY // ignore: cast_nullable_to_non_nullable
-as double,
+as double,showBelow: freezed == showBelow ? _self.showBelow : showBelow // ignore: cast_nullable_to_non_nullable
+as bool?,
   ));
 }
 

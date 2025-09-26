@@ -1232,6 +1232,7 @@ _UserAvatarDecoration _$UserAvatarDecorationFromJson(
     url: $checkedConvert('url', (v) => v as String),
     offsetX: $checkedConvert('offsetX', (v) => (v as num?)?.toDouble() ?? 0.0),
     offsetY: $checkedConvert('offsetY', (v) => (v as num?)?.toDouble() ?? 0.0),
+    showBelow: $checkedConvert('showBelow', (v) => v as bool?),
   );
   return val;
 });
@@ -1245,6 +1246,7 @@ Map<String, dynamic> _$UserAvatarDecorationToJson(
   'url': instance.url,
   'offsetX': instance.offsetX,
   'offsetY': instance.offsetY,
+  'showBelow': instance.showBelow,
 };
 
 _UserInstanceInfo _$UserInstanceInfoFromJson(Map<String, dynamic> json) =>
