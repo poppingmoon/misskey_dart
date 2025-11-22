@@ -674,4 +674,4 @@ enum NotificationRecieveConfigType {
   never,
 }
 
-enum ChatAvailability { available, readOnly, unavailable }
+enum ChatAvailability { available, readonly, unavailable }

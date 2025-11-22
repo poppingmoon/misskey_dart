@@ -244,42 +244,21 @@ void main() async {
 
   group("drafts", () {
     test("count", () async {
-      await userClient.notes.drafts.create(
-        NotesDraftsCreateRequest(
-          visibility: NoteVisibility.public,
-          visibleUserIds: [],
-          localOnly: false,
-          fileIds: [],
-          isActuallyScheduled: false,
-        ),
-      );
+      await userClient.notes.drafts.create(NotesDraftsCreateRequest());
       final response = await userClient.notes.drafts.count();
       expect(response, greaterThan(0));
     });
 
     test("create", () async {
       final response = await userClient.notes.drafts.create(
-        NotesDraftsCreateRequest(
-          visibility: NoteVisibility.public,
-          visibleUserIds: [],
-          localOnly: false,
-          text: "test",
-          fileIds: [],
-          isActuallyScheduled: false,
-        ),
+        NotesDraftsCreateRequest(text: "test"),
       );
       expect(response.createdDraft.text, "test");
     });
 
     test("delete", () async {
       final draft = await userClient.notes.drafts.create(
-        NotesDraftsCreateRequest(
-          visibility: NoteVisibility.public,
-          visibleUserIds: [],
-          localOnly: false,
-          fileIds: [],
-          isActuallyScheduled: false,
-        ),
+        NotesDraftsCreateRequest(),
       );
       await userClient.notes.drafts.delete(
         NotesDraftsDeleteRequest(draftId: draft.createdDraft.id),
@@ -292,13 +271,7 @@ void main() async {
 
     test("list", () async {
       final draft = await userClient.notes.drafts.create(
-        NotesDraftsCreateRequest(
-          visibility: NoteVisibility.public,
-          visibleUserIds: [],
-          localOnly: false,
-          fileIds: [],
-          isActuallyScheduled: false,
-        ),
+        NotesDraftsCreateRequest(),
       );
       final drafts = await userClient.notes.drafts.list(
         NotesDraftsListRequest(),
@@ -308,13 +281,7 @@ void main() async {
 
     test("update", () async {
       final draft = await userClient.notes.drafts.create(
-        NotesDraftsCreateRequest(
-          visibility: NoteVisibility.public,
-          visibleUserIds: [],
-          localOnly: false,
-          fileIds: [],
-          isActuallyScheduled: false,
-        ),
+        NotesDraftsCreateRequest(),
       );
       final response = await userClient.notes.drafts.update(
         NotesDraftsUpdateRequest(

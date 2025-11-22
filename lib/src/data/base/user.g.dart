@@ -1518,7 +1518,7 @@ Map<String, dynamic> _$UserPoliciesToJson(_UserPolicies instance) =>
 
 const _$ChatAvailabilityEnumMap = {
   ChatAvailability.available: 'available',
-  ChatAvailability.readOnly: 'readOnly',
+  ChatAvailability.readonly: 'readonly',
   ChatAvailability.unavailable: 'unavailable',
 };
 
