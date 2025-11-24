@@ -8,13 +8,10 @@ part of 'chat_rooms_create_request.dart';
 
 _ChatRoomsCreateRequest _$ChatRoomsCreateRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_ChatRoomsCreateRequest', json, ($checkedConvert) {
-  final val = _ChatRoomsCreateRequest(
-    name: $checkedConvert('name', (v) => v as String),
-    description: $checkedConvert('description', (v) => v as String?),
-  );
-  return val;
-});
+) => _ChatRoomsCreateRequest(
+  name: json['name'] as String,
+  description: json['description'] as String?,
+);
 
 Map<String, dynamic> _$ChatRoomsCreateRequestToJson(
   _ChatRoomsCreateRequest instance,

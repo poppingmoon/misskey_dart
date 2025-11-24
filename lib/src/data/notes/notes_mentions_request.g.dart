@@ -8,19 +8,13 @@ part of 'notes_mentions_request.dart';
 
 _NotesMentionsRequest _$NotesMentionsRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_NotesMentionsRequest', json, ($checkedConvert) {
-  final val = _NotesMentionsRequest(
-    following: $checkedConvert('following', (v) => v as bool?),
-    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-    sinceId: $checkedConvert('sinceId', (v) => v as String?),
-    untilId: $checkedConvert('untilId', (v) => v as String?),
-    visibility: $checkedConvert(
-      'visibility',
-      (v) => $enumDecodeNullable(_$NoteVisibilityEnumMap, v),
-    ),
-  );
-  return val;
-});
+) => _NotesMentionsRequest(
+  following: json['following'] as bool?,
+  limit: (json['limit'] as num?)?.toInt(),
+  sinceId: json['sinceId'] as String?,
+  untilId: json['untilId'] as String?,
+  visibility: $enumDecodeNullable(_$NoteVisibilityEnumMap, json['visibility']),
+);
 
 Map<String, dynamic> _$NotesMentionsRequestToJson(
   _NotesMentionsRequest instance,

@@ -8,12 +8,7 @@ part of 'following_invalidate_request.dart';
 
 _FollowingInvalidateRequest _$FollowingInvalidateRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_FollowingInvalidateRequest', json, ($checkedConvert) {
-  final val = _FollowingInvalidateRequest(
-    userId: $checkedConvert('userId', (v) => v as String),
-  );
-  return val;
-});
+) => _FollowingInvalidateRequest(userId: json['userId'] as String);
 
 Map<String, dynamic> _$FollowingInvalidateRequestToJson(
   _FollowingInvalidateRequest instance,

@@ -7,19 +7,10 @@ part of 'streaming_request.dart';
 // **************************************************************************
 
 _StreamingRequest _$StreamingRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_StreamingRequest', json, ($checkedConvert) {
-      final val = _StreamingRequest(
-        type: $checkedConvert(
-          'type',
-          (v) => $enumDecode(_$StreamingRequestTypeEnumMap, v),
-        ),
-        body: $checkedConvert(
-          'body',
-          (v) => StreamingRequestBody.fromJson(v as Map<String, dynamic>),
-        ),
-      );
-      return val;
-    });
+    _StreamingRequest(
+      type: $enumDecode(_$StreamingRequestTypeEnumMap, json['type']),
+      body: StreamingRequestBody.fromJson(json['body'] as Map<String, dynamic>),
+    );
 
 Map<String, dynamic> _$StreamingRequestToJson(_StreamingRequest instance) =>
     <String, dynamic>{
@@ -41,22 +32,16 @@ const _$StreamingRequestTypeEnumMap = {
 
 _StreamingRequestBody _$StreamingRequestBodyFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_StreamingRequestBody', json, ($checkedConvert) {
-  final val = _StreamingRequestBody(
-    channel: $checkedConvert(
-      'channel',
-      (v) => _$JsonConverterFromJson<String, Channel>(
-        v,
-        const ChannelJsonConverter().fromJson,
-      ),
-    ),
-    id: $checkedConvert('id', (v) => v as String),
-    params: $checkedConvert('params', (v) => v as Map<String, dynamic>?),
-    type: $checkedConvert('type', (v) => v as String?),
-    body: $checkedConvert('body', (v) => v as Map<String, dynamic>?),
-  );
-  return val;
-});
+) => _StreamingRequestBody(
+  channel: _$JsonConverterFromJson<String, Channel>(
+    json['channel'],
+    const ChannelJsonConverter().fromJson,
+  ),
+  id: json['id'] as String,
+  params: json['params'] as Map<String, dynamic>?,
+  type: json['type'] as String?,
+  body: json['body'] as Map<String, dynamic>?,
+);
 
 Map<String, dynamic> _$StreamingRequestBodyToJson(
   _StreamingRequestBody instance,

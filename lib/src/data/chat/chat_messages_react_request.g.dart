@@ -8,13 +8,10 @@ part of 'chat_messages_react_request.dart';
 
 _ChatMessagesReactRequest _$ChatMessagesReactRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_ChatMessagesReactRequest', json, ($checkedConvert) {
-  final val = _ChatMessagesReactRequest(
-    messageId: $checkedConvert('messageId', (v) => v as String),
-    reaction: $checkedConvert('reaction', (v) => v as String),
-  );
-  return val;
-});
+) => _ChatMessagesReactRequest(
+  messageId: json['messageId'] as String,
+  reaction: json['reaction'] as String,
+);
 
 Map<String, dynamic> _$ChatMessagesReactRequestToJson(
   _ChatMessagesReactRequest instance,

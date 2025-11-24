@@ -8,12 +8,7 @@ part of 'clips_unfavorite_request.dart';
 
 _ClipsUnfavoriteRequest _$ClipsUnfavoriteRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_ClipsUnfavoriteRequest', json, ($checkedConvert) {
-  final val = _ClipsUnfavoriteRequest(
-    clipId: $checkedConvert('clipId', (v) => v as String),
-  );
-  return val;
-});
+) => _ClipsUnfavoriteRequest(clipId: json['clipId'] as String);
 
 Map<String, dynamic> _$ClipsUnfavoriteRequestToJson(
   _ClipsUnfavoriteRequest instance,

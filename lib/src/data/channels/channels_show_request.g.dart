@@ -7,12 +7,7 @@ part of 'channels_show_request.dart';
 // **************************************************************************
 
 _ChannelsShowRequest _$ChannelsShowRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_ChannelsShowRequest', json, ($checkedConvert) {
-      final val = _ChannelsShowRequest(
-        channelId: $checkedConvert('channelId', (v) => v as String),
-      );
-      return val;
-    });
+    _ChannelsShowRequest(channelId: json['channelId'] as String);
 
 Map<String, dynamic> _$ChannelsShowRequestToJson(
   _ChannelsShowRequest instance,

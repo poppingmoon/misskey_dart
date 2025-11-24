@@ -7,13 +7,7 @@ part of 'note_edited.dart';
 // **************************************************************************
 
 _NoteEdited _$NoteEditedFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_NoteEdited', json, ($checkedConvert) {
-      final val = _NoteEdited(
-        cw: $checkedConvert('cw', (v) => v as String?),
-        text: $checkedConvert('text', (v) => v as String?),
-      );
-      return val;
-    });
+    _NoteEdited(cw: json['cw'] as String?, text: json['text'] as String?);
 
 Map<String, dynamic> _$NoteEditedToJson(_NoteEdited instance) =>
     <String, dynamic>{'cw': instance.cw, 'text': instance.text};

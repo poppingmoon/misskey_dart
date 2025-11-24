@@ -8,29 +8,20 @@ part of 'users_reactions_request.dart';
 
 _UsersReactionsRequest _$UsersReactionsRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_UsersReactionsRequest', json, ($checkedConvert) {
-  final val = _UsersReactionsRequest(
-    userId: $checkedConvert('userId', (v) => v as String),
-    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-    sinceId: $checkedConvert('sinceId', (v) => v as String?),
-    untilId: $checkedConvert('untilId', (v) => v as String?),
-    sinceDate: $checkedConvert(
-      'sinceDate',
-      (v) => _$JsonConverterFromJson<int, DateTime>(
-        v,
-        const EpocTimeDateTimeConverter().fromJson,
-      ),
-    ),
-    untilDate: $checkedConvert(
-      'untilDate',
-      (v) => _$JsonConverterFromJson<int, DateTime>(
-        v,
-        const EpocTimeDateTimeConverter().fromJson,
-      ),
-    ),
-  );
-  return val;
-});
+) => _UsersReactionsRequest(
+  userId: json['userId'] as String,
+  limit: (json['limit'] as num?)?.toInt(),
+  sinceId: json['sinceId'] as String?,
+  untilId: json['untilId'] as String?,
+  sinceDate: _$JsonConverterFromJson<int, DateTime>(
+    json['sinceDate'],
+    const EpocTimeDateTimeConverter().fromJson,
+  ),
+  untilDate: _$JsonConverterFromJson<int, DateTime>(
+    json['untilDate'],
+    const EpocTimeDateTimeConverter().fromJson,
+  ),
+);
 
 Map<String, dynamic> _$UsersReactionsRequestToJson(
   _UsersReactionsRequest instance,

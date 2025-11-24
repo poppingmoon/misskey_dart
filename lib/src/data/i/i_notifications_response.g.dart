@@ -8,89 +8,57 @@ part of 'i_notifications_response.dart';
 
 _INotificationsResponse _$INotificationsResponseFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_INotificationsResponse', json, ($checkedConvert) {
-  final val = _INotificationsResponse(
-    id: $checkedConvert('id', (v) => v as String),
-    createdAt: $checkedConvert(
-      'createdAt',
-      (v) => const DateTimeConverter().fromJson(v as String),
-    ),
-    type: $checkedConvert(
-      'type',
-      (v) => $enumDecodeNullable(
-        _$NotificationTypeEnumMap,
-        v,
-        unknownValue: JsonKey.nullForUndefinedEnumValue,
-      ),
-    ),
-    noteId: $checkedConvert('noteId', (v) => v as String?),
-    followRequestId: $checkedConvert('followRequestId', (v) => v as String?),
-    reaction: $checkedConvert('reaction', (v) => v as String?),
-    choice: $checkedConvert('choice', (v) => (v as num?)?.toInt()),
-    achievement: $checkedConvert('achievement', (v) => v as String?),
-    body: $checkedConvert('body', (v) => v as String?),
-    header: $checkedConvert('header', (v) => v as String?),
-    icon: $checkedConvert(
-      'icon',
-      (v) => const NullableUriConverter().fromJson(v as String?),
-    ),
-    appAccessTokenId: $checkedConvert('appAccessTokenId', (v) => v as String?),
-    invitation: $checkedConvert(
-      'invitation',
-      (v) => v == null ? null : ChatJoining.fromJson(v as Map<String, dynamic>),
-    ),
-    userId: $checkedConvert('userId', (v) => v as String?),
-    user: $checkedConvert(
-      'user',
-      (v) => v == null ? null : UserLite.fromJson(v as Map<String, dynamic>),
-    ),
-    note: $checkedConvert(
-      'note',
-      (v) => v == null ? null : Note.fromJson(v as Map<String, dynamic>),
-    ),
-    role: $checkedConvert(
-      'role',
-      (v) => v == null
-          ? null
-          : RolesListResponse.fromJson(v as Map<String, dynamic>),
-    ),
-    reactions: $checkedConvert(
-      'reactions',
-      (v) => (v as List<dynamic>?)
-          ?.map(
-            (e) => INotificationsReaction.fromJson(e as Map<String, dynamic>),
-          )
-          .toList(),
-    ),
-    users: $checkedConvert(
-      'users',
-      (v) => (v as List<dynamic>?)
-          ?.map((e) => UserLite.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    ),
-    exportedEntity: $checkedConvert(
-      'exportedEntity',
-      (v) => $enumDecodeNullable(
-        _$UserExportableEntitiesEnumMap,
-        v,
-        unknownValue: JsonKey.nullForUndefinedEnumValue,
-      ),
-    ),
-    fileId: $checkedConvert('fileId', (v) => v as String?),
-    message: $checkedConvert('message', (v) => v as String?),
-    noteIds: $checkedConvert(
-      'noteIds',
-      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-    ),
-    errorType: $checkedConvert('errorType', (v) => v as String?),
-    draft: $checkedConvert(
-      'draft',
-      (v) =>
-          v == null ? null : ScheduledNote.fromJson(v as Map<String, dynamic>),
-    ),
-  );
-  return val;
-});
+) => _INotificationsResponse(
+  id: json['id'] as String,
+  createdAt: const DateTimeConverter().fromJson(json['createdAt'] as String),
+  type: $enumDecodeNullable(
+    _$NotificationTypeEnumMap,
+    json['type'],
+    unknownValue: JsonKey.nullForUndefinedEnumValue,
+  ),
+  noteId: json['noteId'] as String?,
+  followRequestId: json['followRequestId'] as String?,
+  reaction: json['reaction'] as String?,
+  choice: (json['choice'] as num?)?.toInt(),
+  achievement: json['achievement'] as String?,
+  body: json['body'] as String?,
+  header: json['header'] as String?,
+  icon: const NullableUriConverter().fromJson(json['icon'] as String?),
+  appAccessTokenId: json['appAccessTokenId'] as String?,
+  invitation: json['invitation'] == null
+      ? null
+      : ChatJoining.fromJson(json['invitation'] as Map<String, dynamic>),
+  userId: json['userId'] as String?,
+  user: json['user'] == null
+      ? null
+      : UserLite.fromJson(json['user'] as Map<String, dynamic>),
+  note: json['note'] == null
+      ? null
+      : Note.fromJson(json['note'] as Map<String, dynamic>),
+  role: json['role'] == null
+      ? null
+      : RolesListResponse.fromJson(json['role'] as Map<String, dynamic>),
+  reactions: (json['reactions'] as List<dynamic>?)
+      ?.map((e) => INotificationsReaction.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  users: (json['users'] as List<dynamic>?)
+      ?.map((e) => UserLite.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  exportedEntity: $enumDecodeNullable(
+    _$UserExportableEntitiesEnumMap,
+    json['exportedEntity'],
+    unknownValue: JsonKey.nullForUndefinedEnumValue,
+  ),
+  fileId: json['fileId'] as String?,
+  message: json['message'] as String?,
+  noteIds: (json['noteIds'] as List<dynamic>?)
+      ?.map((e) => e as String)
+      .toList(),
+  errorType: json['errorType'] as String?,
+  draft: json['draft'] == null
+      ? null
+      : ScheduledNote.fromJson(json['draft'] as Map<String, dynamic>),
+);
 
 Map<String, dynamic> _$INotificationsResponseToJson(
   _INotificationsResponse instance,
@@ -168,16 +136,10 @@ const _$UserExportableEntitiesEnumMap = {
 
 _INotificationsReaction _$INotificationsReactionFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_INotificationsReaction', json, ($checkedConvert) {
-  final val = _INotificationsReaction(
-    user: $checkedConvert(
-      'user',
-      (v) => UserLite.fromJson(v as Map<String, dynamic>),
-    ),
-    reaction: $checkedConvert('reaction', (v) => v as String),
-  );
-  return val;
-});
+) => _INotificationsReaction(
+  user: UserLite.fromJson(json['user'] as Map<String, dynamic>),
+  reaction: json['reaction'] as String,
+);
 
 Map<String, dynamic> _$INotificationsReactionToJson(
   _INotificationsReaction instance,

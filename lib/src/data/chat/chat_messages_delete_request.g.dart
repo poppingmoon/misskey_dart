@@ -8,12 +8,7 @@ part of 'chat_messages_delete_request.dart';
 
 _ChatMessagesDeleteRequest _$ChatMessagesDeleteRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_ChatMessagesDeleteRequest', json, ($checkedConvert) {
-  final val = _ChatMessagesDeleteRequest(
-    messageId: $checkedConvert('messageId', (v) => v as String),
-  );
-  return val;
-});
+) => _ChatMessagesDeleteRequest(messageId: json['messageId'] as String);
 
 Map<String, dynamic> _$ChatMessagesDeleteRequestToJson(
   _ChatMessagesDeleteRequest instance,

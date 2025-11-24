@@ -8,13 +8,10 @@ part of 'drive_folders_find_request.dart';
 
 _DriveFoldersFindRequest _$DriveFoldersFindRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_DriveFoldersFindRequest', json, ($checkedConvert) {
-  final val = _DriveFoldersFindRequest(
-    name: $checkedConvert('name', (v) => v as String),
-    parentId: $checkedConvert('parentId', (v) => v as String?),
-  );
-  return val;
-});
+) => _DriveFoldersFindRequest(
+  name: json['name'] as String,
+  parentId: json['parentId'] as String?,
+);
 
 Map<String, dynamic> _$DriveFoldersFindRequestToJson(
   _DriveFoldersFindRequest instance,

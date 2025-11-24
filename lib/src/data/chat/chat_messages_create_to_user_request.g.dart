@@ -8,15 +8,11 @@ part of 'chat_messages_create_to_user_request.dart';
 
 _ChatMessagesCreateToUserRequest _$ChatMessagesCreateToUserRequestFromJson(
   Map<String, dynamic> json,
-) =>
-    $checkedCreate('_ChatMessagesCreateToUserRequest', json, ($checkedConvert) {
-      final val = _ChatMessagesCreateToUserRequest(
-        toUserId: $checkedConvert('toUserId', (v) => v as String),
-        text: $checkedConvert('text', (v) => v as String?),
-        fileId: $checkedConvert('fileId', (v) => v as String?),
-      );
-      return val;
-    });
+) => _ChatMessagesCreateToUserRequest(
+  toUserId: json['toUserId'] as String,
+  text: json['text'] as String?,
+  fileId: json['fileId'] as String?,
+);
 
 Map<String, dynamic> _$ChatMessagesCreateToUserRequestToJson(
   _ChatMessagesCreateToUserRequest instance,

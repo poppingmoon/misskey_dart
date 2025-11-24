@@ -8,12 +8,7 @@ part of 'drive_folders_delete_request.dart';
 
 _DriveFoldersDeleteRequest _$DriveFoldersDeleteRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_DriveFoldersDeleteRequest', json, ($checkedConvert) {
-  final val = _DriveFoldersDeleteRequest(
-    folderId: $checkedConvert('folderId', (v) => v as String),
-  );
-  return val;
-});
+) => _DriveFoldersDeleteRequest(folderId: json['folderId'] as String);
 
 Map<String, dynamic> _$DriveFoldersDeleteRequestToJson(
   _DriveFoldersDeleteRequest instance,

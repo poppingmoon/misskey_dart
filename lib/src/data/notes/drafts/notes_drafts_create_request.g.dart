@@ -8,51 +8,34 @@ part of 'notes_drafts_create_request.dart';
 
 _NotesDraftsCreateRequest _$NotesDraftsCreateRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_NotesDraftsCreateRequest', json, ($checkedConvert) {
-  final val = _NotesDraftsCreateRequest(
-    visibility: $checkedConvert(
-      'visibility',
-      (v) => $enumDecodeNullable(_$NoteVisibilityEnumMap, v),
-    ),
-    visibleUserIds: $checkedConvert(
-      'visibleUserIds',
-      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-    ),
-    cw: $checkedConvert('cw', (v) => v as String?),
-    hashtag: $checkedConvert('hashtag', (v) => v as String?),
-    localOnly: $checkedConvert('localOnly', (v) => v as bool?),
-    reactionAcceptance: $checkedConvert(
-      'reactionAcceptance',
-      (v) => $enumDecodeNullable(_$ReactionAcceptanceEnumMap, v),
-    ),
-    replyId: $checkedConvert('replyId', (v) => v as String?),
-    renoteId: $checkedConvert('renoteId', (v) => v as String?),
-    channelId: $checkedConvert('channelId', (v) => v as String?),
-    text: $checkedConvert('text', (v) => v as String?),
-    fileIds: $checkedConvert(
-      'fileIds',
-      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-    ),
-    poll: $checkedConvert(
-      'poll',
-      (v) => v == null
-          ? null
-          : NotesCreatePollRequest.fromJson(v as Map<String, dynamic>),
-    ),
-    scheduledAt: $checkedConvert(
-      'scheduledAt',
-      (v) => _$JsonConverterFromJson<String, DateTime>(
-        v,
-        const DateTimeConverter().fromJson,
-      ),
-    ),
-    isActuallyScheduled: $checkedConvert(
-      'isActuallyScheduled',
-      (v) => v as bool?,
-    ),
-  );
-  return val;
-});
+) => _NotesDraftsCreateRequest(
+  visibility: $enumDecodeNullable(_$NoteVisibilityEnumMap, json['visibility']),
+  visibleUserIds: (json['visibleUserIds'] as List<dynamic>?)
+      ?.map((e) => e as String)
+      .toList(),
+  cw: json['cw'] as String?,
+  hashtag: json['hashtag'] as String?,
+  localOnly: json['localOnly'] as bool?,
+  reactionAcceptance: $enumDecodeNullable(
+    _$ReactionAcceptanceEnumMap,
+    json['reactionAcceptance'],
+  ),
+  replyId: json['replyId'] as String?,
+  renoteId: json['renoteId'] as String?,
+  channelId: json['channelId'] as String?,
+  text: json['text'] as String?,
+  fileIds: (json['fileIds'] as List<dynamic>?)
+      ?.map((e) => e as String)
+      .toList(),
+  poll: json['poll'] == null
+      ? null
+      : NotesCreatePollRequest.fromJson(json['poll'] as Map<String, dynamic>),
+  scheduledAt: _$JsonConverterFromJson<String, DateTime>(
+    json['scheduledAt'],
+    const DateTimeConverter().fromJson,
+  ),
+  isActuallyScheduled: json['isActuallyScheduled'] as bool?,
+);
 
 Map<String, dynamic> _$NotesDraftsCreateRequestToJson(
   _NotesDraftsCreateRequest instance,

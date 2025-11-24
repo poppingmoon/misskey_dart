@@ -7,15 +7,12 @@ part of 'notes_renotes_request.dart';
 // **************************************************************************
 
 _NotesRenoteRequest _$NotesRenoteRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_NotesRenoteRequest', json, ($checkedConvert) {
-      final val = _NotesRenoteRequest(
-        noteId: $checkedConvert('noteId', (v) => v as String),
-        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-        sinceId: $checkedConvert('sinceId', (v) => v as String?),
-        untilId: $checkedConvert('untilId', (v) => v as String?),
-      );
-      return val;
-    });
+    _NotesRenoteRequest(
+      noteId: json['noteId'] as String,
+      limit: (json['limit'] as num?)?.toInt(),
+      sinceId: json['sinceId'] as String?,
+      untilId: json['untilId'] as String?,
+    );
 
 Map<String, dynamic> _$NotesRenoteRequestToJson(_NotesRenoteRequest instance) =>
     <String, dynamic>{

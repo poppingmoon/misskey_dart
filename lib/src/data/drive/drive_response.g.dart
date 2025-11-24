@@ -7,13 +7,10 @@ part of 'drive_response.dart';
 // **************************************************************************
 
 _DriveResponse _$DriveResponseFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_DriveResponse', json, ($checkedConvert) {
-      final val = _DriveResponse(
-        capacity: $checkedConvert('capacity', (v) => (v as num).toInt()),
-        usage: $checkedConvert('usage', (v) => (v as num).toInt()),
-      );
-      return val;
-    });
+    _DriveResponse(
+      capacity: (json['capacity'] as num).toInt(),
+      usage: (json['usage'] as num).toInt(),
+    );
 
 Map<String, dynamic> _$DriveResponseToJson(_DriveResponse instance) =>
     <String, dynamic>{'capacity': instance.capacity, 'usage': instance.usage};

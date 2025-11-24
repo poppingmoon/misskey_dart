@@ -8,22 +8,16 @@ part of 'users_following_request.dart';
 
 _UsersFollowingRequest _$UsersFollowingRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_UsersFollowingRequest', json, ($checkedConvert) {
-  final val = _UsersFollowingRequest(
-    userId: $checkedConvert('userId', (v) => v as String),
-    sinceId: $checkedConvert('sinceId', (v) => v as String?),
-    untilId: $checkedConvert('untilId', (v) => v as String?),
-    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-    birthday: $checkedConvert(
-      'birthday',
-      (v) => _$JsonConverterFromJson<String, DateTime>(
-        v,
-        const DateTimeConverter().fromJson,
-      ),
-    ),
-  );
-  return val;
-});
+) => _UsersFollowingRequest(
+  userId: json['userId'] as String,
+  sinceId: json['sinceId'] as String?,
+  untilId: json['untilId'] as String?,
+  limit: (json['limit'] as num?)?.toInt(),
+  birthday: _$JsonConverterFromJson<String, DateTime>(
+    json['birthday'],
+    const DateTimeConverter().fromJson,
+  ),
+);
 
 Map<String, dynamic> _$UsersFollowingRequestToJson(
   _UsersFollowingRequest instance,

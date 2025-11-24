@@ -8,16 +8,10 @@ part of 'i_registry_keys_with_type_request.dart';
 
 _IRegistryKeysWithTypeRequest _$IRegistryKeysWithTypeRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_IRegistryKeysWithTypeRequest', json, ($checkedConvert) {
-  final val = _IRegistryKeysWithTypeRequest(
-    scope: $checkedConvert(
-      'scope',
-      (v) => (v as List<dynamic>).map((e) => e as String).toList(),
-    ),
-    domain: $checkedConvert('domain', (v) => v as String?),
-  );
-  return val;
-});
+) => _IRegistryKeysWithTypeRequest(
+  scope: (json['scope'] as List<dynamic>).map((e) => e as String).toList(),
+  domain: json['domain'] as String?,
+);
 
 Map<String, dynamic> _$IRegistryKeysWithTypeRequestToJson(
   _IRegistryKeysWithTypeRequest instance,

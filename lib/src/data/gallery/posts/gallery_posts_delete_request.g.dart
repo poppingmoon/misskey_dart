@@ -8,12 +8,7 @@ part of 'gallery_posts_delete_request.dart';
 
 _GalleryPostsDeleteRequest _$GalleryPostsDeleteRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_GalleryPostsDeleteRequest', json, ($checkedConvert) {
-  final val = _GalleryPostsDeleteRequest(
-    postId: $checkedConvert('postId', (v) => v as String),
-  );
-  return val;
-});
+) => _GalleryPostsDeleteRequest(postId: json['postId'] as String);
 
 Map<String, dynamic> _$GalleryPostsDeleteRequestToJson(
   _GalleryPostsDeleteRequest instance,

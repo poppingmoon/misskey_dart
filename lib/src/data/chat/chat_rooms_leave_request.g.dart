@@ -8,12 +8,7 @@ part of 'chat_rooms_leave_request.dart';
 
 _ChatRoomsLeaveRequest _$ChatRoomsLeaveRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_ChatRoomsLeaveRequest', json, ($checkedConvert) {
-  final val = _ChatRoomsLeaveRequest(
-    roomId: $checkedConvert('roomId', (v) => v as String),
-  );
-  return val;
-});
+) => _ChatRoomsLeaveRequest(roomId: json['roomId'] as String);
 
 Map<String, dynamic> _$ChatRoomsLeaveRequestToJson(
   _ChatRoomsLeaveRequest instance,

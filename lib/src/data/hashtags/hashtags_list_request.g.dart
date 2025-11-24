@@ -7,28 +7,13 @@ part of 'hashtags_list_request.dart';
 // **************************************************************************
 
 _HashtagsListRequest _$HashtagsListRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_HashtagsListRequest', json, ($checkedConvert) {
-      final val = _HashtagsListRequest(
-        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-        attachedToUserOnly: $checkedConvert(
-          'attachedToUserOnly',
-          (v) => v as bool?,
-        ),
-        attachedToLocalUserOnly: $checkedConvert(
-          'attachedToLocalUserOnly',
-          (v) => v as bool?,
-        ),
-        attachedToRemoteUserOnly: $checkedConvert(
-          'attachedToRemoteUserOnly',
-          (v) => v as bool?,
-        ),
-        sort: $checkedConvert(
-          'sort',
-          (v) => const HashtagsListSortConverter().fromJson(v as String),
-        ),
-      );
-      return val;
-    });
+    _HashtagsListRequest(
+      limit: (json['limit'] as num?)?.toInt(),
+      attachedToUserOnly: json['attachedToUserOnly'] as bool?,
+      attachedToLocalUserOnly: json['attachedToLocalUserOnly'] as bool?,
+      attachedToRemoteUserOnly: json['attachedToRemoteUserOnly'] as bool?,
+      sort: const HashtagsListSortConverter().fromJson(json['sort'] as String),
+    );
 
 Map<String, dynamic> _$HashtagsListRequestToJson(
   _HashtagsListRequest instance,

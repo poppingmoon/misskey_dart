@@ -7,12 +7,7 @@ part of 'block_delete_request.dart';
 // **************************************************************************
 
 _BlockDeleteRequest _$BlockDeleteRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_BlockDeleteRequest', json, ($checkedConvert) {
-      final val = _BlockDeleteRequest(
-        userId: $checkedConvert('userId', (v) => v as String),
-      );
-      return val;
-    });
+    _BlockDeleteRequest(userId: json['userId'] as String);
 
 Map<String, dynamic> _$BlockDeleteRequestToJson(_BlockDeleteRequest instance) =>
     <String, dynamic>{'userId': instance.userId};

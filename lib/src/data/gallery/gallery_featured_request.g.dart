@@ -8,13 +8,10 @@ part of 'gallery_featured_request.dart';
 
 _GalleryFeaturedRequest _$GalleryFeaturedRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_GalleryFeaturedRequest', json, ($checkedConvert) {
-  final val = _GalleryFeaturedRequest(
-    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-    untilId: $checkedConvert('untilId', (v) => v as String?),
-  );
-  return val;
-});
+) => _GalleryFeaturedRequest(
+  limit: (json['limit'] as num?)?.toInt(),
+  untilId: json['untilId'] as String?,
+);
 
 Map<String, dynamic> _$GalleryFeaturedRequestToJson(
   _GalleryFeaturedRequest instance,

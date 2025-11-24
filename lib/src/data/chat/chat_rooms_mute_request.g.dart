@@ -8,13 +8,10 @@ part of 'chat_rooms_mute_request.dart';
 
 _ChatRoomsMuteRequest _$ChatRoomsMuteRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_ChatRoomsMuteRequest', json, ($checkedConvert) {
-  final val = _ChatRoomsMuteRequest(
-    roomId: $checkedConvert('roomId', (v) => v as String),
-    mute: $checkedConvert('mute', (v) => v as bool),
-  );
-  return val;
-});
+) => _ChatRoomsMuteRequest(
+  roomId: json['roomId'] as String,
+  mute: json['mute'] as bool,
+);
 
 Map<String, dynamic> _$ChatRoomsMuteRequestToJson(
   _ChatRoomsMuteRequest instance,

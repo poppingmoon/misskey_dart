@@ -8,14 +8,11 @@ part of 'drive_folders_update_request.dart';
 
 _DriveFoldersUpdateRequest _$DriveFoldersUpdateRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_DriveFoldersUpdateRequest', json, ($checkedConvert) {
-  final val = _DriveFoldersUpdateRequest(
-    folderId: $checkedConvert('folderId', (v) => v as String),
-    name: $checkedConvert('name', (v) => v as String?),
-    parentId: $checkedConvert('parentId', (v) => v as String?),
-  );
-  return val;
-});
+) => _DriveFoldersUpdateRequest(
+  folderId: json['folderId'] as String,
+  name: json['name'] as String?,
+  parentId: json['parentId'] as String?,
+);
 
 Map<String, dynamic> _$DriveFoldersUpdateRequestToJson(
   _DriveFoldersUpdateRequest instance,

@@ -7,12 +7,7 @@ part of 'flash_like_request.dart';
 // **************************************************************************
 
 _FlashLikeRequest _$FlashLikeRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_FlashLikeRequest', json, ($checkedConvert) {
-      final val = _FlashLikeRequest(
-        flashId: $checkedConvert('flashId', (v) => v as String),
-      );
-      return val;
-    });
+    _FlashLikeRequest(flashId: json['flashId'] as String);
 
 Map<String, dynamic> _$FlashLikeRequestToJson(_FlashLikeRequest instance) =>
     <String, dynamic>{'flashId': instance.flashId};

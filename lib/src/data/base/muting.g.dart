@@ -6,29 +6,16 @@ part of 'muting.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_Muting _$MutingFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_Muting', json, ($checkedConvert) {
-      final val = _Muting(
-        id: $checkedConvert('id', (v) => v as String),
-        createdAt: $checkedConvert(
-          'createdAt',
-          (v) => const DateTimeConverter().fromJson(v as String),
-        ),
-        expiresAt: $checkedConvert(
-          'expiresAt',
-          (v) => _$JsonConverterFromJson<String, DateTime?>(
-            v,
-            const NullableDateTimeConverter().fromJson,
-          ),
-        ),
-        muteeId: $checkedConvert('muteeId', (v) => v as String),
-        mutee: $checkedConvert(
-          'mutee',
-          (v) => UserDetailedNotMe.fromJson(v as Map<String, dynamic>),
-        ),
-      );
-      return val;
-    });
+_Muting _$MutingFromJson(Map<String, dynamic> json) => _Muting(
+  id: json['id'] as String,
+  createdAt: const DateTimeConverter().fromJson(json['createdAt'] as String),
+  expiresAt: _$JsonConverterFromJson<String, DateTime?>(
+    json['expiresAt'],
+    const NullableDateTimeConverter().fromJson,
+  ),
+  muteeId: json['muteeId'] as String,
+  mutee: UserDetailedNotMe.fromJson(json['mutee'] as Map<String, dynamic>),
+);
 
 Map<String, dynamic> _$MutingToJson(_Muting instance) => <String, dynamic>{
   'id': instance.id,

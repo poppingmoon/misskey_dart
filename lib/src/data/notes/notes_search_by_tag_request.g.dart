@@ -8,19 +8,16 @@ part of 'notes_search_by_tag_request.dart';
 
 _NotesSearchByTagRequest _$NotesSearchByTagRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_NotesSearchByTagRequest', json, ($checkedConvert) {
-  final val = _NotesSearchByTagRequest(
-    tag: $checkedConvert('tag', (v) => v as String),
-    reply: $checkedConvert('reply', (v) => v as bool?),
-    renote: $checkedConvert('renote', (v) => v as bool?),
-    withFiles: $checkedConvert('withFiles', (v) => v as bool?),
-    poll: $checkedConvert('poll', (v) => v as bool?),
-    sinceId: $checkedConvert('sinceId', (v) => v as String?),
-    untilId: $checkedConvert('untilId', (v) => v as String?),
-    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-  );
-  return val;
-});
+) => _NotesSearchByTagRequest(
+  tag: json['tag'] as String,
+  reply: json['reply'] as bool?,
+  renote: json['renote'] as bool?,
+  withFiles: json['withFiles'] as bool?,
+  poll: json['poll'] as bool?,
+  sinceId: json['sinceId'] as String?,
+  untilId: json['untilId'] as String?,
+  limit: (json['limit'] as num?)?.toInt(),
+);
 
 Map<String, dynamic> _$NotesSearchByTagRequestToJson(
   _NotesSearchByTagRequest instance,

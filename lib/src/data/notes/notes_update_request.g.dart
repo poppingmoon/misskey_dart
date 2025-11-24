@@ -7,24 +7,19 @@ part of 'notes_update_request.dart';
 // **************************************************************************
 
 _NotesUpdateRequest _$NotesUpdateRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_NotesUpdateRequest', json, ($checkedConvert) {
-      final val = _NotesUpdateRequest(
-        noteId: $checkedConvert('noteId', (v) => v as String),
-        text: $checkedConvert('text', (v) => v as String?),
-        cw: $checkedConvert('cw', (v) => v as String?),
-        fileIds: $checkedConvert(
-          'fileIds',
-          (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-        ),
-        poll: $checkedConvert(
-          'poll',
-          (v) => v == null
-              ? null
-              : NotesCreatePollRequest.fromJson(v as Map<String, dynamic>),
-        ),
-      );
-      return val;
-    });
+    _NotesUpdateRequest(
+      noteId: json['noteId'] as String,
+      text: json['text'] as String?,
+      cw: json['cw'] as String?,
+      fileIds: (json['fileIds'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      poll: json['poll'] == null
+          ? null
+          : NotesCreatePollRequest.fromJson(
+              json['poll'] as Map<String, dynamic>,
+            ),
+    );
 
 Map<String, dynamic> _$NotesUpdateRequestToJson(_NotesUpdateRequest instance) =>
     <String, dynamic>{

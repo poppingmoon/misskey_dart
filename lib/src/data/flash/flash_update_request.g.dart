@@ -7,23 +7,19 @@ part of 'flash_update_request.dart';
 // **************************************************************************
 
 _FlashUpdateRequest _$FlashUpdateRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_FlashUpdateRequest', json, ($checkedConvert) {
-      final val = _FlashUpdateRequest(
-        flashId: $checkedConvert('flashId', (v) => v as String),
-        title: $checkedConvert('title', (v) => v as String?),
-        summary: $checkedConvert('summary', (v) => v as String?),
-        script: $checkedConvert('script', (v) => v as String?),
-        permissions: $checkedConvert(
-          'permissions',
-          (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-        ),
-        visibility: $checkedConvert(
-          'visibility',
-          (v) => $enumDecodeNullable(_$FlashVisibilityEnumMap, v),
-        ),
-      );
-      return val;
-    });
+    _FlashUpdateRequest(
+      flashId: json['flashId'] as String,
+      title: json['title'] as String?,
+      summary: json['summary'] as String?,
+      script: json['script'] as String?,
+      permissions: (json['permissions'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      visibility: $enumDecodeNullable(
+        _$FlashVisibilityEnumMap,
+        json['visibility'],
+      ),
+    );
 
 Map<String, dynamic> _$FlashUpdateRequestToJson(_FlashUpdateRequest instance) =>
     <String, dynamic>{

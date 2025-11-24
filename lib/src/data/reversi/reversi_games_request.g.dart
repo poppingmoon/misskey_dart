@@ -7,15 +7,12 @@ part of 'reversi_games_request.dart';
 // **************************************************************************
 
 _ReversiGamesRequest _$ReversiGamesRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_ReversiGamesRequest', json, ($checkedConvert) {
-      final val = _ReversiGamesRequest(
-        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-        sinceId: $checkedConvert('sinceId', (v) => v as String?),
-        untilId: $checkedConvert('untilId', (v) => v as String?),
-        my: $checkedConvert('my', (v) => v as bool?),
-      );
-      return val;
-    });
+    _ReversiGamesRequest(
+      limit: (json['limit'] as num?)?.toInt(),
+      sinceId: json['sinceId'] as String?,
+      untilId: json['untilId'] as String?,
+      my: json['my'] as bool?,
+    );
 
 Map<String, dynamic> _$ReversiGamesRequestToJson(
   _ReversiGamesRequest instance,

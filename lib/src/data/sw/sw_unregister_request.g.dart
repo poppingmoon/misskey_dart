@@ -7,12 +7,7 @@ part of 'sw_unregister_request.dart';
 // **************************************************************************
 
 _SwUnregisterRequest _$SwUnregisterRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_SwUnregisterRequest', json, ($checkedConvert) {
-      final val = _SwUnregisterRequest(
-        endpoint: $checkedConvert('endpoint', (v) => v as String),
-      );
-      return val;
-    });
+    _SwUnregisterRequest(endpoint: json['endpoint'] as String);
 
 Map<String, dynamic> _$SwUnregisterRequestToJson(
   _SwUnregisterRequest instance,

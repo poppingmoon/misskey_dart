@@ -7,13 +7,10 @@ part of 'clips_add_note_request.dart';
 // **************************************************************************
 
 _ClipsAddNoteRequest _$ClipsAddNoteRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_ClipsAddNoteRequest', json, ($checkedConvert) {
-      final val = _ClipsAddNoteRequest(
-        clipId: $checkedConvert('clipId', (v) => v as String),
-        noteId: $checkedConvert('noteId', (v) => v as String),
-      );
-      return val;
-    });
+    _ClipsAddNoteRequest(
+      clipId: json['clipId'] as String,
+      noteId: json['noteId'] as String,
+    );
 
 Map<String, dynamic> _$ClipsAddNoteRequestToJson(
   _ClipsAddNoteRequest instance,

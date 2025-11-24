@@ -8,17 +8,14 @@ part of 'following_update_request.dart';
 
 _FollowingUpdateRequest _$FollowingUpdateRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_FollowingUpdateRequest', json, ($checkedConvert) {
-  final val = _FollowingUpdateRequest(
-    userId: $checkedConvert('userId', (v) => v as String),
-    notify: $checkedConvert(
-      'notify',
-      (v) => $enumDecodeNullable(_$FollowingUpdateAllNotifyTypeEnumMap, v),
-    ),
-    withReplies: $checkedConvert('withReplies', (v) => v as bool?),
-  );
-  return val;
-});
+) => _FollowingUpdateRequest(
+  userId: json['userId'] as String,
+  notify: $enumDecodeNullable(
+    _$FollowingUpdateAllNotifyTypeEnumMap,
+    json['notify'],
+  ),
+  withReplies: json['withReplies'] as bool?,
+);
 
 Map<String, dynamic> _$FollowingUpdateRequestToJson(
   _FollowingUpdateRequest instance,

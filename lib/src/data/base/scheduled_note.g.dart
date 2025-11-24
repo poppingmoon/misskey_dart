@@ -7,46 +7,27 @@ part of 'scheduled_note.dart';
 // **************************************************************************
 
 _ScheduledNote _$ScheduledNoteFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_ScheduledNote', json, ($checkedConvert) {
-      final val = _ScheduledNote(
-        id: $checkedConvert('id', (v) => v as String),
-        updatedAt: $checkedConvert(
-          'updatedAt',
-          (v) => const DateTimeConverter().fromJson(v as String),
-        ),
-        scheduledAt: $checkedConvert(
-          'scheduledAt',
-          (v) => _$JsonConverterFromJson<String, DateTime?>(
-            v,
-            const NullableDateTimeConverter().fromJson,
-          ),
-        ),
-        reason: $checkedConvert('reason', (v) => v as String?),
-        channel: $checkedConvert(
-          'channel',
-          (v) => v == null
-              ? null
-              : NoteChannelInfo.fromJson(v as Map<String, dynamic>),
-        ),
-        renote: $checkedConvert(
-          'renote',
-          (v) => v == null
-              ? null
-              : ScheduledNoteNote.fromJson(v as Map<String, dynamic>),
-        ),
-        reply: $checkedConvert(
-          'reply',
-          (v) => v == null
-              ? null
-              : ScheduledNoteNote.fromJson(v as Map<String, dynamic>),
-        ),
-        data: $checkedConvert(
-          'data',
-          (v) => ScheduledNoteData.fromJson(v as Map<String, dynamic>),
-        ),
-      );
-      return val;
-    });
+    _ScheduledNote(
+      id: json['id'] as String,
+      updatedAt: const DateTimeConverter().fromJson(
+        json['updatedAt'] as String,
+      ),
+      scheduledAt: _$JsonConverterFromJson<String, DateTime?>(
+        json['scheduledAt'],
+        const NullableDateTimeConverter().fromJson,
+      ),
+      reason: json['reason'] as String?,
+      channel: json['channel'] == null
+          ? null
+          : NoteChannelInfo.fromJson(json['channel'] as Map<String, dynamic>),
+      renote: json['renote'] == null
+          ? null
+          : ScheduledNoteNote.fromJson(json['renote'] as Map<String, dynamic>),
+      reply: json['reply'] == null
+          ? null
+          : ScheduledNoteNote.fromJson(json['reply'] as Map<String, dynamic>),
+      data: ScheduledNoteData.fromJson(json['data'] as Map<String, dynamic>),
+    );
 
 Map<String, dynamic> _$ScheduledNoteToJson(
   _ScheduledNote instance,
@@ -67,17 +48,11 @@ Value? _$JsonConverterFromJson<Json, Value>(
 ) => json == null ? null : fromJson(json as Json);
 
 _ScheduledNoteNote _$ScheduledNoteNoteFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_ScheduledNoteNote', json, ($checkedConvert) {
-      final val = _ScheduledNoteNote(
-        id: $checkedConvert('id', (v) => v as String),
-        text: $checkedConvert('text', (v) => v as String?),
-        user: $checkedConvert(
-          'user',
-          (v) => ScheduledNoteUser.fromJson(v as Map<String, dynamic>),
-        ),
-      );
-      return val;
-    });
+    _ScheduledNoteNote(
+      id: json['id'] as String,
+      text: json['text'] as String?,
+      user: ScheduledNoteUser.fromJson(json['user'] as Map<String, dynamic>),
+    );
 
 Map<String, dynamic> _$ScheduledNoteNoteToJson(_ScheduledNoteNote instance) =>
     <String, dynamic>{
@@ -87,14 +62,11 @@ Map<String, dynamic> _$ScheduledNoteNoteToJson(_ScheduledNoteNote instance) =>
     };
 
 _ScheduledNoteUser _$ScheduledNoteUserFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_ScheduledNoteUser', json, ($checkedConvert) {
-      final val = _ScheduledNoteUser(
-        id: $checkedConvert('id', (v) => v as String),
-        username: $checkedConvert('username', (v) => v as String),
-        host: $checkedConvert('host', (v) => v as String?),
-      );
-      return val;
-    });
+    _ScheduledNoteUser(
+      id: json['id'] as String,
+      username: json['username'] as String,
+      host: json['host'] as String?,
+    );
 
 Map<String, dynamic> _$ScheduledNoteUserToJson(_ScheduledNoteUser instance) =>
     <String, dynamic>{
@@ -104,42 +76,30 @@ Map<String, dynamic> _$ScheduledNoteUserToJson(_ScheduledNoteUser instance) =>
     };
 
 _ScheduledNoteData _$ScheduledNoteDataFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_ScheduledNoteData', json, ($checkedConvert) {
-      final val = _ScheduledNoteData(
-        text: $checkedConvert('text', (v) => v as String?),
-        useCw: $checkedConvert('useCw', (v) => v as bool?),
-        cw: $checkedConvert('cw', (v) => v as String?),
-        visibility: $checkedConvert(
-          'visibility',
-          (v) => $enumDecodeNullable(
-            _$NoteVisibilityEnumMap,
-            v,
-            unknownValue: JsonKey.nullForUndefinedEnumValue,
-          ),
-        ),
-        localOnly: $checkedConvert('localOnly', (v) => v as bool? ?? false),
-        files: $checkedConvert(
-          'files',
-          (v) =>
-              (v as List<dynamic>?)
-                  ?.map((e) => DriveFile.fromJson(e as Map<String, dynamic>))
-                  .toList() ??
-              const [],
-        ),
-        poll: $checkedConvert(
-          'poll',
-          (v) =>
-              v == null ? null : NotePoll.fromJson(v as Map<String, dynamic>),
-        ),
-        visibleUserIds: $checkedConvert(
-          'visibleUserIds',
-          (v) =>
-              (v as List<dynamic>?)?.map((e) => e as String).toList() ??
-              const [],
-        ),
-      );
-      return val;
-    });
+    _ScheduledNoteData(
+      text: json['text'] as String?,
+      useCw: json['useCw'] as bool?,
+      cw: json['cw'] as String?,
+      visibility: $enumDecodeNullable(
+        _$NoteVisibilityEnumMap,
+        json['visibility'],
+        unknownValue: JsonKey.nullForUndefinedEnumValue,
+      ),
+      localOnly: json['localOnly'] as bool? ?? false,
+      files:
+          (json['files'] as List<dynamic>?)
+              ?.map((e) => DriveFile.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const [],
+      poll: json['poll'] == null
+          ? null
+          : NotePoll.fromJson(json['poll'] as Map<String, dynamic>),
+      visibleUserIds:
+          (json['visibleUserIds'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList() ??
+          const [],
+    );
 
 Map<String, dynamic> _$ScheduledNoteDataToJson(_ScheduledNoteData instance) =>
     <String, dynamic>{

@@ -8,17 +8,14 @@ part of 'announcements_request.dart';
 
 _AnnouncementsRequest _$AnnouncementsRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_AnnouncementsRequest', json, ($checkedConvert) {
-  final val = _AnnouncementsRequest(
-    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-    withUnreads: $checkedConvert('withUnreads', (v) => v as bool?),
-    isActive: $checkedConvert('isActive', (v) => v as bool?),
-    sinceId: $checkedConvert('sinceId', (v) => v as String?),
-    untilId: $checkedConvert('untilId', (v) => v as String?),
-    offset: $checkedConvert('offset', (v) => (v as num?)?.toInt()),
-  );
-  return val;
-});
+) => _AnnouncementsRequest(
+  limit: (json['limit'] as num?)?.toInt(),
+  withUnreads: json['withUnreads'] as bool?,
+  isActive: json['isActive'] as bool?,
+  sinceId: json['sinceId'] as String?,
+  untilId: json['untilId'] as String?,
+  offset: (json['offset'] as num?)?.toInt(),
+);
 
 Map<String, dynamic> _$AnnouncementsRequestToJson(
   _AnnouncementsRequest instance,

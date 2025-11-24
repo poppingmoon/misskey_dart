@@ -8,12 +8,7 @@ part of 'users_lists_create_request.dart';
 
 _UsersListsCreateRequest _$UsersListsCreateRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_UsersListsCreateRequest', json, ($checkedConvert) {
-  final val = _UsersListsCreateRequest(
-    name: $checkedConvert('name', (v) => v as String),
-  );
-  return val;
-});
+) => _UsersListsCreateRequest(name: json['name'] as String);
 
 Map<String, dynamic> _$UsersListsCreateRequestToJson(
   _UsersListsCreateRequest instance,

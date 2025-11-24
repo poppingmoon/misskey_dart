@@ -8,15 +8,12 @@ part of 'chat_messages_search_request.dart';
 
 _ChatMessagesSearchRequest _$ChatMessagesSearchRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_ChatMessagesSearchRequest', json, ($checkedConvert) {
-  final val = _ChatMessagesSearchRequest(
-    query: $checkedConvert('query', (v) => v as String),
-    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-    roomId: $checkedConvert('roomId', (v) => v as String?),
-    userId: $checkedConvert('userId', (v) => v as String?),
-  );
-  return val;
-});
+) => _ChatMessagesSearchRequest(
+  query: json['query'] as String,
+  limit: (json['limit'] as num?)?.toInt(),
+  roomId: json['roomId'] as String?,
+  userId: json['userId'] as String?,
+);
 
 Map<String, dynamic> _$ChatMessagesSearchRequestToJson(
   _ChatMessagesSearchRequest instance,

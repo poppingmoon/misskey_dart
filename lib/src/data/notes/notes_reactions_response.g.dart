@@ -8,21 +8,12 @@ part of 'notes_reactions_response.dart';
 
 _NotesReactionsResponse _$NotesReactionsResponseFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_NotesReactionsResponse', json, ($checkedConvert) {
-  final val = _NotesReactionsResponse(
-    id: $checkedConvert('id', (v) => v as String),
-    createdAt: $checkedConvert(
-      'createdAt',
-      (v) => const DateTimeConverter().fromJson(v as String),
-    ),
-    user: $checkedConvert(
-      'user',
-      (v) => UserLite.fromJson(v as Map<String, dynamic>),
-    ),
-    type: $checkedConvert('type', (v) => v as String?),
-  );
-  return val;
-});
+) => _NotesReactionsResponse(
+  id: json['id'] as String,
+  createdAt: const DateTimeConverter().fromJson(json['createdAt'] as String),
+  user: UserLite.fromJson(json['user'] as Map<String, dynamic>),
+  type: json['type'] as String?,
+);
 
 Map<String, dynamic> _$NotesReactionsResponseToJson(
   _NotesReactionsResponse instance,

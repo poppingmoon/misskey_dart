@@ -8,13 +8,10 @@ part of 'users_lists_show_request.dart';
 
 _UsersListsShowRequest _$UsersListsShowRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_UsersListsShowRequest', json, ($checkedConvert) {
-  final val = _UsersListsShowRequest(
-    listId: $checkedConvert('listId', (v) => v as String),
-    forPublic: $checkedConvert('forPublic', (v) => v as bool?),
-  );
-  return val;
-});
+) => _UsersListsShowRequest(
+  listId: json['listId'] as String,
+  forPublic: json['forPublic'] as bool?,
+);
 
 Map<String, dynamic> _$UsersListsShowRequestToJson(
   _UsersListsShowRequest instance,

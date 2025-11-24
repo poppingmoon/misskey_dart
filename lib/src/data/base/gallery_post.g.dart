@@ -6,40 +6,23 @@ part of 'gallery_post.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_GalleryPost _$GalleryPostFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate('_GalleryPost', json, ($checkedConvert) {
-  final val = _GalleryPost(
-    id: $checkedConvert('id', (v) => v as String),
-    createdAt: $checkedConvert('createdAt', (v) => DateTime.parse(v as String)),
-    updatedAt: $checkedConvert('updatedAt', (v) => DateTime.parse(v as String)),
-    userId: $checkedConvert('userId', (v) => v as String),
-    user: $checkedConvert(
-      'user',
-      (v) => UserLite.fromJson(v as Map<String, dynamic>),
-    ),
-    title: $checkedConvert('title', (v) => v as String),
-    description: $checkedConvert('description', (v) => v as String?),
-    fileIds: $checkedConvert(
-      'fileIds',
-      (v) => (v as List<dynamic>).map((e) => e as String).toList(),
-    ),
-    files: $checkedConvert(
-      'files',
-      (v) => (v as List<dynamic>)
-          .map((e) => DriveFile.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    ),
-    tags: $checkedConvert(
-      'tags',
-      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-    ),
-    isSensitive: $checkedConvert('isSensitive', (v) => v as bool),
-    likedCount: $checkedConvert('likedCount', (v) => (v as num).toInt()),
-    isLiked: $checkedConvert('isLiked', (v) => v as bool?),
-  );
-  return val;
-});
+_GalleryPost _$GalleryPostFromJson(Map<String, dynamic> json) => _GalleryPost(
+  id: json['id'] as String,
+  createdAt: DateTime.parse(json['createdAt'] as String),
+  updatedAt: DateTime.parse(json['updatedAt'] as String),
+  userId: json['userId'] as String,
+  user: UserLite.fromJson(json['user'] as Map<String, dynamic>),
+  title: json['title'] as String,
+  description: json['description'] as String?,
+  fileIds: (json['fileIds'] as List<dynamic>).map((e) => e as String).toList(),
+  files: (json['files'] as List<dynamic>)
+      .map((e) => DriveFile.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  tags: (json['tags'] as List<dynamic>?)?.map((e) => e as String).toList(),
+  isSensitive: json['isSensitive'] as bool,
+  likedCount: (json['likedCount'] as num).toInt(),
+  isLiked: json['isLiked'] as bool?,
+);
 
 Map<String, dynamic> _$GalleryPostToJson(_GalleryPost instance) =>
     <String, dynamic>{

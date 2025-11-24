@@ -8,19 +8,13 @@ part of 'gallery_posts_update_request.dart';
 
 _GalleryPostsUpdateRequest _$GalleryPostsUpdateRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_GalleryPostsUpdateRequest', json, ($checkedConvert) {
-  final val = _GalleryPostsUpdateRequest(
-    postId: $checkedConvert('postId', (v) => v as String),
-    title: $checkedConvert('title', (v) => v as String),
-    description: $checkedConvert('description', (v) => v as String?),
-    fileIds: $checkedConvert(
-      'fileIds',
-      (v) => (v as List<dynamic>).map((e) => e as String).toList(),
-    ),
-    isSensitive: $checkedConvert('isSensitive', (v) => v as bool?),
-  );
-  return val;
-});
+) => _GalleryPostsUpdateRequest(
+  postId: json['postId'] as String,
+  title: json['title'] as String,
+  description: json['description'] as String?,
+  fileIds: (json['fileIds'] as List<dynamic>).map((e) => e as String).toList(),
+  isSensitive: json['isSensitive'] as bool?,
+);
 
 Map<String, dynamic> _$GalleryPostsUpdateRequestToJson(
   _GalleryPostsUpdateRequest instance,

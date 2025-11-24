@@ -8,12 +8,7 @@ part of 'following_requests_reject_request.dart';
 
 _FollowingRequestsRejectRequest _$FollowingRequestsRejectRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_FollowingRequestsRejectRequest', json, ($checkedConvert) {
-  final val = _FollowingRequestsRejectRequest(
-    userId: $checkedConvert('userId', (v) => v as String),
-  );
-  return val;
-});
+) => _FollowingRequestsRejectRequest(userId: json['userId'] as String);
 
 Map<String, dynamic> _$FollowingRequestsRejectRequestToJson(
   _FollowingRequestsRejectRequest instance,

@@ -7,12 +7,7 @@ part of 'emoji_request.dart';
 // **************************************************************************
 
 _EmojiRequest _$EmojiRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_EmojiRequest', json, ($checkedConvert) {
-      final val = _EmojiRequest(
-        name: $checkedConvert('name', (v) => v as String),
-      );
-      return val;
-    });
+    _EmojiRequest(name: json['name'] as String);
 
 Map<String, dynamic> _$EmojiRequestToJson(_EmojiRequest instance) =>
     <String, dynamic>{'name': instance.name};

@@ -6,25 +6,15 @@ part of 'chat_room.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ChatRoom _$ChatRoomFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_ChatRoom', json, ($checkedConvert) {
-      final val = _ChatRoom(
-        id: $checkedConvert('id', (v) => v as String),
-        createdAt: $checkedConvert(
-          'createdAt',
-          (v) => const DateTimeConverter().fromJson(v as String),
-        ),
-        ownerId: $checkedConvert('ownerId', (v) => v as String),
-        owner: $checkedConvert(
-          'owner',
-          (v) => UserLite.fromJson(v as Map<String, dynamic>),
-        ),
-        name: $checkedConvert('name', (v) => v as String),
-        description: $checkedConvert('description', (v) => v as String),
-        isMuted: $checkedConvert('isMuted', (v) => v as bool?),
-      );
-      return val;
-    });
+_ChatRoom _$ChatRoomFromJson(Map<String, dynamic> json) => _ChatRoom(
+  id: json['id'] as String,
+  createdAt: const DateTimeConverter().fromJson(json['createdAt'] as String),
+  ownerId: json['ownerId'] as String,
+  owner: UserLite.fromJson(json['owner'] as Map<String, dynamic>),
+  name: json['name'] as String,
+  description: json['description'] as String,
+  isMuted: json['isMuted'] as bool?,
+);
 
 Map<String, dynamic> _$ChatRoomToJson(_ChatRoom instance) => <String, dynamic>{
   'id': instance.id,

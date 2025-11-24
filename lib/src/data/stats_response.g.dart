@@ -7,34 +7,16 @@ part of 'stats_response.dart';
 // **************************************************************************
 
 _StatsResponse _$StatsResponseFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_StatsResponse', json, ($checkedConvert) {
-      final val = _StatsResponse(
-        notesCount: $checkedConvert('notesCount', (v) => (v as num?)?.toInt()),
-        originalNotesCount: $checkedConvert(
-          'originalNotesCount',
-          (v) => (v as num?)?.toInt(),
-        ),
-        usersCount: $checkedConvert('usersCount', (v) => (v as num?)?.toInt()),
-        originalUsersCount: $checkedConvert(
-          'originalUsersCount',
-          (v) => (v as num?)?.toInt(),
-        ),
-        reactionsCount: $checkedConvert(
-          'reactionsCount',
-          (v) => (v as num?)?.toInt(),
-        ),
-        instances: $checkedConvert('instances', (v) => (v as num?)?.toInt()),
-        driveUsageLocal: $checkedConvert(
-          'driveUsageLocal',
-          (v) => (v as num?)?.toInt(),
-        ),
-        driveUsageRemote: $checkedConvert(
-          'driveUsageRemote',
-          (v) => (v as num?)?.toInt(),
-        ),
-      );
-      return val;
-    });
+    _StatsResponse(
+      notesCount: (json['notesCount'] as num?)?.toInt(),
+      originalNotesCount: (json['originalNotesCount'] as num?)?.toInt(),
+      usersCount: (json['usersCount'] as num?)?.toInt(),
+      originalUsersCount: (json['originalUsersCount'] as num?)?.toInt(),
+      reactionsCount: (json['reactionsCount'] as num?)?.toInt(),
+      instances: (json['instances'] as num?)?.toInt(),
+      driveUsageLocal: (json['driveUsageLocal'] as num?)?.toInt(),
+      driveUsageRemote: (json['driveUsageRemote'] as num?)?.toInt(),
+    );
 
 Map<String, dynamic> _$StatsResponseToJson(_StatsResponse instance) =>
     <String, dynamic>{

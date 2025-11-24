@@ -7,12 +7,7 @@ part of 'roles_show_request.dart';
 // **************************************************************************
 
 _RolesShowRequest _$RolesShowRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_RolesShowRequest', json, ($checkedConvert) {
-      final val = _RolesShowRequest(
-        roleId: $checkedConvert('roleId', (v) => v as String),
-      );
-      return val;
-    });
+    _RolesShowRequest(roleId: json['roleId'] as String);
 
 Map<String, dynamic> _$RolesShowRequestToJson(_RolesShowRequest instance) =>
     <String, dynamic>{'roleId': instance.roleId};

@@ -7,14 +7,11 @@ part of 'pages_show_request.dart';
 // **************************************************************************
 
 _PagesShowRequest _$PagesShowRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_PagesShowRequest', json, ($checkedConvert) {
-      final val = _PagesShowRequest(
-        pageId: $checkedConvert('pageId', (v) => v as String?),
-        name: $checkedConvert('name', (v) => v as String?),
-        username: $checkedConvert('username', (v) => v as String?),
-      );
-      return val;
-    });
+    _PagesShowRequest(
+      pageId: json['pageId'] as String?,
+      name: json['name'] as String?,
+      username: json['username'] as String?,
+    );
 
 Map<String, dynamic> _$PagesShowRequestToJson(_PagesShowRequest instance) =>
     <String, dynamic>{

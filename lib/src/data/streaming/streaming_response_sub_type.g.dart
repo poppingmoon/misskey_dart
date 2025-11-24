@@ -6,20 +6,13 @@ part of 'streaming_response_sub_type.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_PageEvent _$PageEventFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_PageEvent', json, ($checkedConvert) {
-      final val = _PageEvent(
-        pageId: $checkedConvert('pageId', (v) => v as String),
-        event: $checkedConvert('event', (v) => v as String),
-        variable: $checkedConvert('variable', (v) => v as Object),
-        user: $checkedConvert(
-          'user',
-          (v) => User.fromJson(v as Map<String, dynamic>),
-        ),
-        userId: $checkedConvert('userId', (v) => v as String),
-      );
-      return val;
-    });
+_PageEvent _$PageEventFromJson(Map<String, dynamic> json) => _PageEvent(
+  pageId: json['pageId'] as String,
+  event: json['event'] as String,
+  variable: json['variable'] as Object,
+  user: User.fromJson(json['user'] as Map<String, dynamic>),
+  userId: json['userId'] as String,
+);
 
 Map<String, dynamic> _$PageEventToJson(_PageEvent instance) =>
     <String, dynamic>{
@@ -32,16 +25,10 @@ Map<String, dynamic> _$PageEventToJson(_PageEvent instance) =>
 
 _UrlUploadFinishedEvent _$UrlUploadFinishedEventFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_UrlUploadFinishedEvent', json, ($checkedConvert) {
-  final val = _UrlUploadFinishedEvent(
-    marker: $checkedConvert('marker', (v) => v as String),
-    file: $checkedConvert(
-      'file',
-      (v) => DriveFile.fromJson(v as Map<String, dynamic>),
-    ),
-  );
-  return val;
-});
+) => _UrlUploadFinishedEvent(
+  marker: json['marker'] as String,
+  file: DriveFile.fromJson(json['file'] as Map<String, dynamic>),
+);
 
 Map<String, dynamic> _$UrlUploadFinishedEventToJson(
   _UrlUploadFinishedEvent instance,
@@ -51,17 +38,13 @@ Map<String, dynamic> _$UrlUploadFinishedEventToJson(
 };
 
 _RegistryUpdated _$RegistryUpdatedFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_RegistryUpdated', json, ($checkedConvert) {
-      final val = _RegistryUpdated(
-        scope: $checkedConvert(
-          'scope',
-          (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-        ),
-        key: $checkedConvert('key', (v) => v as String),
-        value: $checkedConvert('value', (v) => v),
-      );
-      return val;
-    });
+    _RegistryUpdated(
+      scope: (json['scope'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      key: json['key'] as String,
+      value: json['value'],
+    );
 
 Map<String, dynamic> _$RegistryUpdatedToJson(_RegistryUpdated instance) =>
     <String, dynamic>{
@@ -70,20 +53,13 @@ Map<String, dynamic> _$RegistryUpdatedToJson(_RegistryUpdated instance) =>
       'value': instance.value,
     };
 
-_Signin _$SigninFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_Signin', json, ($checkedConvert) {
-      final val = _Signin(
-        id: $checkedConvert('id', (v) => v as String),
-        createdAt: $checkedConvert(
-          'createdAt',
-          (v) => const DateTimeConverter().fromJson(v as String),
-        ),
-        ip: $checkedConvert('ip', (v) => v as String),
-        headers: $checkedConvert('headers', (v) => v),
-        success: $checkedConvert('success', (v) => v as bool),
-      );
-      return val;
-    });
+_Signin _$SigninFromJson(Map<String, dynamic> json) => _Signin(
+  id: json['id'] as String,
+  createdAt: const DateTimeConverter().fromJson(json['createdAt'] as String),
+  ip: json['ip'] as String,
+  headers: json['headers'],
+  success: json['success'] as bool,
+);
 
 Map<String, dynamic> _$SigninToJson(_Signin instance) => <String, dynamic>{
   'id': instance.id,
@@ -94,31 +70,24 @@ Map<String, dynamic> _$SigninToJson(_Signin instance) => <String, dynamic>{
 };
 
 _TimelineVoted _$TimelineVotedFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_TimelineVoted', json, ($checkedConvert) {
-      final val = _TimelineVoted(
-        choice: $checkedConvert('choice', (v) => (v as num).toInt()),
-        userId: $checkedConvert('userId', (v) => v as String),
-      );
-      return val;
-    });
+    _TimelineVoted(
+      choice: (json['choice'] as num).toInt(),
+      userId: json['userId'] as String,
+    );
 
 Map<String, dynamic> _$TimelineVotedToJson(_TimelineVoted instance) =>
     <String, dynamic>{'choice': instance.choice, 'userId': instance.userId};
 
 _TimelineReacted _$TimelineReactedFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_TimelineReacted', json, ($checkedConvert) {
-      final val = _TimelineReacted(
-        reaction: $checkedConvert('reaction', (v) => v as String),
-        emoji: $checkedConvert(
-          'emoji',
-          (v) => v == null
-              ? null
-              : TimelineReactedEmojiData.fromJson(v as Map<String, dynamic>),
-        ),
-        userId: $checkedConvert('userId', (v) => v as String),
-      );
-      return val;
-    });
+    _TimelineReacted(
+      reaction: json['reaction'] as String,
+      emoji: json['emoji'] == null
+          ? null
+          : TimelineReactedEmojiData.fromJson(
+              json['emoji'] as Map<String, dynamic>,
+            ),
+      userId: json['userId'] as String,
+    );
 
 Map<String, dynamic> _$TimelineReactedToJson(_TimelineReacted instance) =>
     <String, dynamic>{
@@ -129,28 +98,21 @@ Map<String, dynamic> _$TimelineReactedToJson(_TimelineReacted instance) =>
 
 _TimelineReactedEmojiData _$TimelineReactedEmojiDataFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_TimelineReactedEmojiData', json, ($checkedConvert) {
-  final val = _TimelineReactedEmojiData(
-    name: $checkedConvert('name', (v) => v as String),
-    url: $checkedConvert('url', (v) => v as String),
-  );
-  return val;
-});
+) => _TimelineReactedEmojiData(
+  name: json['name'] as String,
+  url: json['url'] as String,
+);
 
 Map<String, dynamic> _$TimelineReactedEmojiDataToJson(
   _TimelineReactedEmojiData instance,
 ) => <String, dynamic>{'name': instance.name, 'url': instance.url};
 
 _TimelineDeleted _$TimelineDeletedFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_TimelineDeleted', json, ($checkedConvert) {
-      final val = _TimelineDeleted(
-        deletedAt: $checkedConvert(
-          'deletedAt',
-          (v) => const DateTimeConverter().fromJson(v as String),
-        ),
-      );
-      return val;
-    });
+    _TimelineDeleted(
+      deletedAt: const DateTimeConverter().fromJson(
+        json['deletedAt'] as String,
+      ),
+    );
 
 Map<String, dynamic> _$TimelineDeletedToJson(_TimelineDeleted instance) =>
     <String, dynamic>{
@@ -159,25 +121,13 @@ Map<String, dynamic> _$TimelineDeletedToJson(_TimelineDeleted instance) =>
 
 ServerMetricsResponse _$ServerMetricsResponseFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('ServerMetricsResponse', json, ($checkedConvert) {
-  final val = ServerMetricsResponse(
-    cpu: $checkedConvert('cpu', (v) => (v as num).toDouble()),
-    fs: $checkedConvert(
-      'fs',
-      (v) => StatsLogFs.fromJson(v as Map<String, dynamic>),
-    ),
-    mem: $checkedConvert(
-      'mem',
-      (v) => StatsLogMem.fromJson(v as Map<String, dynamic>),
-    ),
-    net: $checkedConvert(
-      'net',
-      (v) => StatsLogNet.fromJson(v as Map<String, dynamic>),
-    ),
-    $type: $checkedConvert('runtimeType', (v) => v as String?),
-  );
-  return val;
-}, fieldKeyMap: const {r'$type': 'runtimeType'});
+) => ServerMetricsResponse(
+  cpu: (json['cpu'] as num).toDouble(),
+  fs: StatsLogFs.fromJson(json['fs'] as Map<String, dynamic>),
+  mem: StatsLogMem.fromJson(json['mem'] as Map<String, dynamic>),
+  net: StatsLogNet.fromJson(json['net'] as Map<String, dynamic>),
+  $type: json['runtimeType'] as String?,
+);
 
 Map<String, dynamic> _$ServerMetricsResponseToJson(
   ServerMetricsResponse instance,
@@ -190,20 +140,15 @@ Map<String, dynamic> _$ServerMetricsResponseToJson(
 };
 
 JobQueueResponse _$JobQueueResponseFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('JobQueueResponse', json, ($checkedConvert) {
-      final val = JobQueueResponse(
-        inbox: $checkedConvert(
-          'inbox',
-          (v) => QueueStatsLogResponseData.fromJson(v as Map<String, dynamic>),
-        ),
-        deliver: $checkedConvert(
-          'deliver',
-          (v) => QueueStatsLogResponseData.fromJson(v as Map<String, dynamic>),
-        ),
-        $type: $checkedConvert('runtimeType', (v) => v as String?),
-      );
-      return val;
-    }, fieldKeyMap: const {r'$type': 'runtimeType'});
+    JobQueueResponse(
+      inbox: QueueStatsLogResponseData.fromJson(
+        json['inbox'] as Map<String, dynamic>,
+      ),
+      deliver: QueueStatsLogResponseData.fromJson(
+        json['deliver'] as Map<String, dynamic>,
+      ),
+      $type: json['runtimeType'] as String?,
+    );
 
 Map<String, dynamic> _$JobQueueResponseToJson(JobQueueResponse instance) =>
     <String, dynamic>{
@@ -212,56 +157,38 @@ Map<String, dynamic> _$JobQueueResponseToJson(JobQueueResponse instance) =>
       'runtimeType': instance.$type,
     };
 
-_StatsLogFs _$StatsLogFsFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_StatsLogFs', json, ($checkedConvert) {
-      final val = _StatsLogFs(
-        r: $checkedConvert('r', (v) => (v as num).toDouble()),
-        w: $checkedConvert('w', (v) => (v as num).toDouble()),
-      );
-      return val;
-    });
+_StatsLogFs _$StatsLogFsFromJson(Map<String, dynamic> json) => _StatsLogFs(
+  r: (json['r'] as num).toDouble(),
+  w: (json['w'] as num).toDouble(),
+);
 
 Map<String, dynamic> _$StatsLogFsToJson(_StatsLogFs instance) =>
     <String, dynamic>{'r': instance.r, 'w': instance.w};
 
-_StatsLogMem _$StatsLogMemFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_StatsLogMem', json, ($checkedConvert) {
-      final val = _StatsLogMem(
-        used: $checkedConvert('used', (v) => (v as num).toDouble()),
-        active: $checkedConvert('active', (v) => (v as num).toDouble()),
-      );
-      return val;
-    });
+_StatsLogMem _$StatsLogMemFromJson(Map<String, dynamic> json) => _StatsLogMem(
+  used: (json['used'] as num).toDouble(),
+  active: (json['active'] as num).toDouble(),
+);
 
 Map<String, dynamic> _$StatsLogMemToJson(_StatsLogMem instance) =>
     <String, dynamic>{'used': instance.used, 'active': instance.active};
 
-_StatsLogNet _$StatsLogNetFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_StatsLogNet', json, ($checkedConvert) {
-      final val = _StatsLogNet(
-        rx: $checkedConvert('rx', (v) => (v as num).toDouble()),
-        tx: $checkedConvert('tx', (v) => (v as num).toDouble()),
-      );
-      return val;
-    });
+_StatsLogNet _$StatsLogNetFromJson(Map<String, dynamic> json) => _StatsLogNet(
+  rx: (json['rx'] as num).toDouble(),
+  tx: (json['tx'] as num).toDouble(),
+);
 
 Map<String, dynamic> _$StatsLogNetToJson(_StatsLogNet instance) =>
     <String, dynamic>{'rx': instance.rx, 'tx': instance.tx};
 
 _QueueStatsLogResponseData _$QueueStatsLogResponseDataFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_QueueStatsLogResponseData', json, ($checkedConvert) {
-  final val = _QueueStatsLogResponseData(
-    activeSincePrevTick: $checkedConvert(
-      'activeSincePrevTick',
-      (v) => (v as num).toInt(),
-    ),
-    active: $checkedConvert('active', (v) => (v as num).toInt()),
-    waiting: $checkedConvert('waiting', (v) => (v as num).toInt()),
-    delayed: $checkedConvert('delayed', (v) => (v as num).toInt()),
-  );
-  return val;
-});
+) => _QueueStatsLogResponseData(
+  activeSincePrevTick: (json['activeSincePrevTick'] as num).toInt(),
+  active: (json['active'] as num).toInt(),
+  waiting: (json['waiting'] as num).toInt(),
+  delayed: (json['delayed'] as num).toInt(),
+);
 
 Map<String, dynamic> _$QueueStatsLogResponseDataToJson(
   _QueueStatsLogResponseData instance,
@@ -272,19 +199,13 @@ Map<String, dynamic> _$QueueStatsLogResponseDataToJson(
   'delayed': instance.delayed,
 };
 
-_ChatReact _$ChatReactFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_ChatReact', json, ($checkedConvert) {
-      final val = _ChatReact(
-        reaction: $checkedConvert('reaction', (v) => v as String),
-        user: $checkedConvert(
-          'user',
-          (v) =>
-              v == null ? null : UserLite.fromJson(v as Map<String, dynamic>),
-        ),
-        messageId: $checkedConvert('messageId', (v) => v as String),
-      );
-      return val;
-    });
+_ChatReact _$ChatReactFromJson(Map<String, dynamic> json) => _ChatReact(
+  reaction: json['reaction'] as String,
+  user: json['user'] == null
+      ? null
+      : UserLite.fromJson(json['user'] as Map<String, dynamic>),
+  messageId: json['messageId'] as String,
+);
 
 Map<String, dynamic> _$ChatReactToJson(_ChatReact instance) =>
     <String, dynamic>{

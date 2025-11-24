@@ -8,14 +8,11 @@ part of 'following_requests_list_request.dart';
 
 _FollowingRequestsListRequest _$FollowingRequestsListRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_FollowingRequestsListRequest', json, ($checkedConvert) {
-  final val = _FollowingRequestsListRequest(
-    sinceId: $checkedConvert('sinceId', (v) => v as String?),
-    untilId: $checkedConvert('untilId', (v) => v as String?),
-    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-  );
-  return val;
-});
+) => _FollowingRequestsListRequest(
+  sinceId: json['sinceId'] as String?,
+  untilId: json['untilId'] as String?,
+  limit: (json['limit'] as num?)?.toInt(),
+);
 
 Map<String, dynamic> _$FollowingRequestsListRequestToJson(
   _FollowingRequestsListRequest instance,

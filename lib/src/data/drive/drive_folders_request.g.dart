@@ -7,15 +7,12 @@ part of 'drive_folders_request.dart';
 // **************************************************************************
 
 _DriveFoldersRequest _$DriveFoldersRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_DriveFoldersRequest', json, ($checkedConvert) {
-      final val = _DriveFoldersRequest(
-        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-        sinceId: $checkedConvert('sinceId', (v) => v as String?),
-        untilId: $checkedConvert('untilId', (v) => v as String?),
-        folderId: $checkedConvert('folderId', (v) => v as String?),
-      );
-      return val;
-    });
+    _DriveFoldersRequest(
+      limit: (json['limit'] as num?)?.toInt(),
+      sinceId: json['sinceId'] as String?,
+      untilId: json['untilId'] as String?,
+      folderId: json['folderId'] as String?,
+    );
 
 Map<String, dynamic> _$DriveFoldersRequestToJson(
   _DriveFoldersRequest instance,

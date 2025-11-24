@@ -8,14 +8,11 @@ part of 'renote_mute_list_request.dart';
 
 _RenoteMuteListRequest _$RenoteMuteListRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_RenoteMuteListRequest', json, ($checkedConvert) {
-  final val = _RenoteMuteListRequest(
-    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-    sinceId: $checkedConvert('sinceId', (v) => v as String?),
-    untilId: $checkedConvert('untilId', (v) => v as String?),
-  );
-  return val;
-});
+) => _RenoteMuteListRequest(
+  limit: (json['limit'] as num?)?.toInt(),
+  sinceId: json['sinceId'] as String?,
+  untilId: json['untilId'] as String?,
+);
 
 Map<String, dynamic> _$RenoteMuteListRequestToJson(
   _RenoteMuteListRequest instance,

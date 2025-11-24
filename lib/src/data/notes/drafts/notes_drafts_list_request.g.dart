@@ -8,15 +8,12 @@ part of 'notes_drafts_list_request.dart';
 
 _NotesDraftsListRequest _$NotesDraftsListRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_NotesDraftsListRequest', json, ($checkedConvert) {
-  final val = _NotesDraftsListRequest(
-    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-    sinceId: $checkedConvert('sinceId', (v) => v as String?),
-    untilId: $checkedConvert('untilId', (v) => v as String?),
-    scheduled: $checkedConvert('scheduled', (v) => v as bool?),
-  );
-  return val;
-});
+) => _NotesDraftsListRequest(
+  limit: (json['limit'] as num?)?.toInt(),
+  sinceId: json['sinceId'] as String?,
+  untilId: json['untilId'] as String?,
+  scheduled: json['scheduled'] as bool?,
+);
 
 Map<String, dynamic> _$NotesDraftsListRequestToJson(
   _NotesDraftsListRequest instance,

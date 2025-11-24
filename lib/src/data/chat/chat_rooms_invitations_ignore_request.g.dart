@@ -8,14 +8,7 @@ part of 'chat_rooms_invitations_ignore_request.dart';
 
 _ChatRoomsInvitationsIgnoreRequest _$ChatRoomsInvitationsIgnoreRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_ChatRoomsInvitationsIgnoreRequest', json, (
-  $checkedConvert,
-) {
-  final val = _ChatRoomsInvitationsIgnoreRequest(
-    roomId: $checkedConvert('roomId', (v) => v as String),
-  );
-  return val;
-});
+) => _ChatRoomsInvitationsIgnoreRequest(roomId: json['roomId'] as String);
 
 Map<String, dynamic> _$ChatRoomsInvitationsIgnoreRequestToJson(
   _ChatRoomsInvitationsIgnoreRequest instance,

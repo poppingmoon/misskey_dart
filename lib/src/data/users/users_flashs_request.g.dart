@@ -7,15 +7,12 @@ part of 'users_flashs_request.dart';
 // **************************************************************************
 
 _UsersFlashsRequest _$UsersFlashsRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_UsersFlashsRequest', json, ($checkedConvert) {
-      final val = _UsersFlashsRequest(
-        userId: $checkedConvert('userId', (v) => v as String),
-        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-        sinceId: $checkedConvert('sinceId', (v) => v as String?),
-        untilId: $checkedConvert('untilId', (v) => v as String?),
-      );
-      return val;
-    });
+    _UsersFlashsRequest(
+      userId: json['userId'] as String,
+      limit: (json['limit'] as num?)?.toInt(),
+      sinceId: json['sinceId'] as String?,
+      untilId: json['untilId'] as String?,
+    );
 
 Map<String, dynamic> _$UsersFlashsRequestToJson(_UsersFlashsRequest instance) =>
     <String, dynamic>{

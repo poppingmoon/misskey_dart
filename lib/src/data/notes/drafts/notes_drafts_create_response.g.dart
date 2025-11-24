@@ -8,15 +8,11 @@ part of 'notes_drafts_create_response.dart';
 
 _NotesDraftsCreateResponse _$NotesDraftsCreateResponseFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_NotesDraftsCreateResponse', json, ($checkedConvert) {
-  final val = _NotesDraftsCreateResponse(
-    createdDraft: $checkedConvert(
-      'createdDraft',
-      (v) => NoteDraft.fromJson(v as Map<String, dynamic>),
-    ),
-  );
-  return val;
-});
+) => _NotesDraftsCreateResponse(
+  createdDraft: NoteDraft.fromJson(
+    json['createdDraft'] as Map<String, dynamic>,
+  ),
+);
 
 Map<String, dynamic> _$NotesDraftsCreateResponseToJson(
   _NotesDraftsCreateResponse instance,

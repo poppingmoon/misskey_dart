@@ -8,15 +8,11 @@ part of 'chat_messages_create_to_room_request.dart';
 
 _ChatMessagesCreateToRoomRequest _$ChatMessagesCreateToRoomRequestFromJson(
   Map<String, dynamic> json,
-) =>
-    $checkedCreate('_ChatMessagesCreateToRoomRequest', json, ($checkedConvert) {
-      final val = _ChatMessagesCreateToRoomRequest(
-        toRoomId: $checkedConvert('toRoomId', (v) => v as String),
-        text: $checkedConvert('text', (v) => v as String?),
-        fileId: $checkedConvert('fileId', (v) => v as String?),
-      );
-      return val;
-    });
+) => _ChatMessagesCreateToRoomRequest(
+  toRoomId: json['toRoomId'] as String,
+  text: json['text'] as String?,
+  fileId: json['fileId'] as String?,
+);
 
 Map<String, dynamic> _$ChatMessagesCreateToRoomRequestToJson(
   _ChatMessagesCreateToRoomRequest instance,

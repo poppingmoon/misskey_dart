@@ -8,12 +8,7 @@ part of 'users_get_skeb_status_request.dart';
 
 _UsersGetSkebStatusRequest _$UsersGetSkebStatusRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_UsersGetSkebStatusRequest', json, ($checkedConvert) {
-  final val = _UsersGetSkebStatusRequest(
-    userId: $checkedConvert('userId', (v) => v as String),
-  );
-  return val;
-});
+) => _UsersGetSkebStatusRequest(userId: json['userId'] as String);
 
 Map<String, dynamic> _$UsersGetSkebStatusRequestToJson(
   _UsersGetSkebStatusRequest instance,

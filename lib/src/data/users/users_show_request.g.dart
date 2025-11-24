@@ -7,27 +7,16 @@ part of 'users_show_request.dart';
 // **************************************************************************
 
 _UsersShowRequest _$UsersShowRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_UsersShowRequest', json, ($checkedConvert) {
-      final val = _UsersShowRequest(
-        userId: $checkedConvert('userId', (v) => v as String),
-      );
-      return val;
-    });
+    _UsersShowRequest(userId: json['userId'] as String);
 
 Map<String, dynamic> _$UsersShowRequestToJson(_UsersShowRequest instance) =>
     <String, dynamic>{'userId': instance.userId};
 
 _UsersShowByIdsRequest _$UsersShowByIdsRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_UsersShowByIdsRequest', json, ($checkedConvert) {
-  final val = _UsersShowByIdsRequest(
-    userIds: $checkedConvert(
-      'userIds',
-      (v) => (v as List<dynamic>).map((e) => e as String).toList(),
-    ),
-  );
-  return val;
-});
+) => _UsersShowByIdsRequest(
+  userIds: (json['userIds'] as List<dynamic>).map((e) => e as String).toList(),
+);
 
 Map<String, dynamic> _$UsersShowByIdsRequestToJson(
   _UsersShowByIdsRequest instance,
@@ -35,13 +24,10 @@ Map<String, dynamic> _$UsersShowByIdsRequestToJson(
 
 _UsersShowByUserNameRequest _$UsersShowByUserNameRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_UsersShowByUserNameRequest', json, ($checkedConvert) {
-  final val = _UsersShowByUserNameRequest(
-    userName: $checkedConvert('username', (v) => v as String),
-    host: $checkedConvert('host', (v) => v as String?),
-  );
-  return val;
-}, fieldKeyMap: const {'userName': 'username'});
+) => _UsersShowByUserNameRequest(
+  userName: json['username'] as String,
+  host: json['host'] as String?,
+);
 
 Map<String, dynamic> _$UsersShowByUserNameRequestToJson(
   _UsersShowByUserNameRequest instance,

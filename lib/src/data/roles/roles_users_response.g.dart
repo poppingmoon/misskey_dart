@@ -7,16 +7,10 @@ part of 'roles_users_response.dart';
 // **************************************************************************
 
 _RolesUsersResponse _$RolesUsersResponseFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_RolesUsersResponse', json, ($checkedConvert) {
-      final val = _RolesUsersResponse(
-        id: $checkedConvert('id', (v) => v as String),
-        user: $checkedConvert(
-          'user',
-          (v) => UserDetailed.fromJson(v as Map<String, dynamic>),
-        ),
-      );
-      return val;
-    });
+    _RolesUsersResponse(
+      id: json['id'] as String,
+      user: UserDetailed.fromJson(json['user'] as Map<String, dynamic>),
+    );
 
 Map<String, dynamic> _$RolesUsersResponseToJson(_RolesUsersResponse instance) =>
     <String, dynamic>{'id': instance.id, 'user': instance.user.toJson()};

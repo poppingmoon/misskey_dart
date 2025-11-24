@@ -8,16 +8,10 @@ part of 'drive_files_move_bulk_request.dart';
 
 _DriveFilesMoveBulkRequest _$DriveFilesMoveBulkRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_DriveFilesMoveBulkRequest', json, ($checkedConvert) {
-  final val = _DriveFilesMoveBulkRequest(
-    fileIds: $checkedConvert(
-      'fileIds',
-      (v) => (v as List<dynamic>).map((e) => e as String).toList(),
-    ),
-    folderId: $checkedConvert('folderId', (v) => v as String?),
-  );
-  return val;
-});
+) => _DriveFilesMoveBulkRequest(
+  fileIds: (json['fileIds'] as List<dynamic>).map((e) => e as String).toList(),
+  folderId: json['folderId'] as String?,
+);
 
 Map<String, dynamic> _$DriveFilesMoveBulkRequestToJson(
   _DriveFilesMoveBulkRequest instance,

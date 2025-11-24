@@ -7,14 +7,11 @@ part of 'i_page_likes_request.dart';
 // **************************************************************************
 
 _IPageLikesRequest _$IPageLikesRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_IPageLikesRequest', json, ($checkedConvert) {
-      final val = _IPageLikesRequest(
-        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-        sinceId: $checkedConvert('sinceId', (v) => v as String?),
-        untilId: $checkedConvert('untilId', (v) => v as String?),
-      );
-      return val;
-    });
+    _IPageLikesRequest(
+      limit: (json['limit'] as num?)?.toInt(),
+      sinceId: json['sinceId'] as String?,
+      untilId: json['untilId'] as String?,
+    );
 
 Map<String, dynamic> _$IPageLikesRequestToJson(_IPageLikesRequest instance) =>
     <String, dynamic>{

@@ -8,14 +8,11 @@ part of 'hybrid_timeline_parameter.dart';
 
 _HybridTimelineParameter _$HybridTimelineParameterFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_HybridTimelineParameter', json, ($checkedConvert) {
-  final val = _HybridTimelineParameter(
-    withRenotes: $checkedConvert('withRenotes', (v) => v as bool?),
-    withReplies: $checkedConvert('withReplies', (v) => v as bool?),
-    withFiles: $checkedConvert('withFiles', (v) => v as bool?),
-  );
-  return val;
-});
+) => _HybridTimelineParameter(
+  withRenotes: json['withRenotes'] as bool?,
+  withReplies: json['withReplies'] as bool?,
+  withFiles: json['withFiles'] as bool?,
+);
 
 Map<String, dynamic> _$HybridTimelineParameterToJson(
   _HybridTimelineParameter instance,

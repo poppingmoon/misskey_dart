@@ -8,15 +8,12 @@ part of 'users_followeres_request.dart';
 
 _UsersFollowersRequest _$UsersFollowersRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_UsersFollowersRequest', json, ($checkedConvert) {
-  final val = _UsersFollowersRequest(
-    userId: $checkedConvert('userId', (v) => v as String),
-    sinceId: $checkedConvert('sinceId', (v) => v as String?),
-    untilId: $checkedConvert('untilId', (v) => v as String?),
-    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-  );
-  return val;
-});
+) => _UsersFollowersRequest(
+  userId: json['userId'] as String,
+  sinceId: json['sinceId'] as String?,
+  untilId: json['untilId'] as String?,
+  limit: (json['limit'] as num?)?.toInt(),
+);
 
 Map<String, dynamic> _$UsersFollowersRequestToJson(
   _UsersFollowersRequest instance,

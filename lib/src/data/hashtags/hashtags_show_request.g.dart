@@ -7,12 +7,7 @@ part of 'hashtags_show_request.dart';
 // **************************************************************************
 
 _HashtagsShowRequest _$HashtagsShowRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_HashtagsShowRequest', json, ($checkedConvert) {
-      final val = _HashtagsShowRequest(
-        tag: $checkedConvert('tag', (v) => v as String),
-      );
-      return val;
-    });
+    _HashtagsShowRequest(tag: json['tag'] as String);
 
 Map<String, dynamic> _$HashtagsShowRequestToJson(
   _HashtagsShowRequest instance,

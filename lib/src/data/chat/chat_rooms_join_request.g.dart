@@ -8,12 +8,7 @@ part of 'chat_rooms_join_request.dart';
 
 _ChatRoomsJoinRequest _$ChatRoomsJoinRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_ChatRoomsJoinRequest', json, ($checkedConvert) {
-  final val = _ChatRoomsJoinRequest(
-    roomId: $checkedConvert('roomId', (v) => v as String),
-  );
-  return val;
-});
+) => _ChatRoomsJoinRequest(roomId: json['roomId'] as String);
 
 Map<String, dynamic> _$ChatRoomsJoinRequestToJson(
   _ChatRoomsJoinRequest instance,

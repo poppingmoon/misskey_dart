@@ -7,12 +7,7 @@ part of 'pages_like_request.dart';
 // **************************************************************************
 
 _PagesLikeRequest _$PagesLikeRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_PagesLikeRequest', json, ($checkedConvert) {
-      final val = _PagesLikeRequest(
-        pageId: $checkedConvert('pageId', (v) => v as String),
-      );
-      return val;
-    });
+    _PagesLikeRequest(pageId: json['pageId'] as String);
 
 Map<String, dynamic> _$PagesLikeRequestToJson(_PagesLikeRequest instance) =>
     <String, dynamic>{'pageId': instance.pageId};

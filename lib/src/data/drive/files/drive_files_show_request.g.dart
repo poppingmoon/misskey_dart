@@ -8,13 +8,10 @@ part of 'drive_files_show_request.dart';
 
 _DriveFilesShowRequest _$DriveFilesShowRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_DriveFilesShowRequest', json, ($checkedConvert) {
-  final val = _DriveFilesShowRequest(
-    fileId: $checkedConvert('fileId', (v) => v as String?),
-    url: $checkedConvert('url', (v) => v as String?),
-  );
-  return val;
-});
+) => _DriveFilesShowRequest(
+  fileId: json['fileId'] as String?,
+  url: json['url'] as String?,
+);
 
 Map<String, dynamic> _$DriveFilesShowRequestToJson(
   _DriveFilesShowRequest instance,

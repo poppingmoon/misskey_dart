@@ -8,13 +8,10 @@ part of 'sw_update_registration_request.dart';
 
 _SwUpdateRegistrationRequest _$SwUpdateRegistrationRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_SwUpdateRegistrationRequest', json, ($checkedConvert) {
-  final val = _SwUpdateRegistrationRequest(
-    endpoint: $checkedConvert('endpoint', (v) => v as String),
-    sendReadMessage: $checkedConvert('sendReadMessage', (v) => v as bool?),
-  );
-  return val;
-});
+) => _SwUpdateRegistrationRequest(
+  endpoint: json['endpoint'] as String,
+  sendReadMessage: json['sendReadMessage'] as bool?,
+);
 
 Map<String, dynamic> _$SwUpdateRegistrationRequestToJson(
   _SwUpdateRegistrationRequest instance,

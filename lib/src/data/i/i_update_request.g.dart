@@ -8,136 +8,85 @@ part of 'i_update_request.dart';
 
 _IUpdateRequest _$IUpdateRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_IUpdateRequest', json, ($checkedConvert) {
-  final val = _IUpdateRequest(
-    name: $checkedConvert('name', (v) => v as String?),
-    description: $checkedConvert('description', (v) => v as String?),
-    followedMessage: $checkedConvert('followedMessage', (v) => v as String?),
-    location: $checkedConvert('location', (v) => v as String?),
-    birthday: $checkedConvert(
-      'birthday',
-      (v) => const BirthdayConverter().fromJson(v as String?),
-    ),
-    lang: $checkedConvert('lang', (v) => v as String?),
-    avatarId: $checkedConvert('avatarId', (v) => v as String?),
-    avatarDecorations: $checkedConvert(
-      'avatarDecorations',
-      (v) => (v as List<dynamic>?)
-          ?.map(
-            (e) => IUpdateAvatarDecoration.fromJson(e as Map<String, dynamic>),
-          )
-          .toList(),
-    ),
-    bannerId: $checkedConvert('bannerId', (v) => v as String?),
-    fields: $checkedConvert(
-      'fields',
-      (v) => (v as List<dynamic>?)
-          ?.map((e) => UserField.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    ),
-    isLocked: $checkedConvert('isLocked', (v) => v as bool?),
-    isExplorable: $checkedConvert('isExplorable', (v) => v as bool?),
-    hideOnlineStatus: $checkedConvert('hideOnlineStatus', (v) => v as bool?),
-    publicReactions: $checkedConvert('publicReactions', (v) => v as bool?),
-    carefulBot: $checkedConvert('carefulBot', (v) => v as bool?),
-    autoAcceptFollowed: $checkedConvert(
-      'autoAcceptFollowed',
-      (v) => v as bool?,
-    ),
-    noCrawle: $checkedConvert('noCrawle', (v) => v as bool?),
-    preventAiLearning: $checkedConvert('preventAiLearning', (v) => v as bool?),
-    requireSigninToViewContents: $checkedConvert(
-      'requireSigninToViewContents',
-      (v) => v as bool?,
-    ),
-    makeNotesFollowersOnlyBefore: $checkedConvert(
-      'makeNotesFollowersOnlyBefore',
-      (v) => _$JsonConverterFromJson<int, HideBefore>(
-        v,
-        const HideBeforeConverter().fromJson,
-      ),
-    ),
-    makeNotesHiddenBefore: $checkedConvert(
-      'makeNotesHiddenBefore',
-      (v) => _$JsonConverterFromJson<int, HideBefore>(
-        v,
-        const HideBeforeConverter().fromJson,
-      ),
-    ),
-    isBot: $checkedConvert('isBot', (v) => v as bool?),
-    isCat: $checkedConvert('isCat', (v) => v as bool?),
-    injectFeaturedNote: $checkedConvert(
-      'injectFeaturedNote',
-      (v) => v as bool?,
-    ),
-    receiveAnnouncementEmail: $checkedConvert(
-      'receiveAnnouncementEmail',
-      (v) => v as bool?,
-    ),
-    alwaysMarkNsfw: $checkedConvert('alwaysMarkNsfw', (v) => v as bool?),
-    autoSensitive: $checkedConvert('autoSensitive', (v) => v as bool?),
-    ffVisibility: $checkedConvert(
-      'ffVisibility',
-      (v) => $enumDecodeNullable(_$FFVisibilityEnumMap, v),
-    ),
-    followingVisibility: $checkedConvert(
-      'followingVisibility',
-      (v) => $enumDecodeNullable(_$FFVisibilityEnumMap, v),
-    ),
-    followersVisibility: $checkedConvert(
-      'followersVisibility',
-      (v) => $enumDecodeNullable(_$FFVisibilityEnumMap, v),
-    ),
-    chatScope: $checkedConvert(
-      'chatScope',
-      (v) => $enumDecodeNullable(_$ChatScopeEnumMap, v),
-    ),
-    pinnedPageId: $checkedConvert('pinnedPageId', (v) => v as String?),
-    mutingNotificationTypes: $checkedConvert(
-      'mutingNotificationTypes',
-      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-    ),
-    mutedWords: $checkedConvert(
-      'mutedWords',
-      (v) => (v as List<dynamic>?)
-          ?.map(const MuteWordsConverter().fromJson)
-          .toList(),
-    ),
-    hardMutedWords: $checkedConvert(
-      'hardMutedWords',
-      (v) => (v as List<dynamic>?)
-          ?.map(const MuteWordsConverter().fromJson)
-          .toList(),
-    ),
-    mutedInstances: $checkedConvert(
-      'mutedInstances',
-      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-    ),
-    notificationRecieveConfig: $checkedConvert(
-      'notificationRecieveConfig',
-      (v) => v == null
-          ? null
-          : NotificationRecieveConfigs.fromJson(v as Map<String, dynamic>),
-    ),
-    emailNotificationTypes: $checkedConvert(
-      'emailNotificationTypes',
-      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-    ),
-    alsoKnownAs: $checkedConvert(
-      'alsoKnownAs',
-      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-    ),
-    mutualLinkSections: $checkedConvert(
-      'mutualLinkSections',
-      (v) => (v as List<dynamic>?)
-          ?.map(
-            (e) => IUpdateMutualLinkSection.fromJson(e as Map<String, dynamic>),
-          )
-          .toList(),
-    ),
-  );
-  return val;
-});
+) => _IUpdateRequest(
+  name: json['name'] as String?,
+  description: json['description'] as String?,
+  followedMessage: json['followedMessage'] as String?,
+  location: json['location'] as String?,
+  birthday: const BirthdayConverter().fromJson(json['birthday'] as String?),
+  lang: json['lang'] as String?,
+  avatarId: json['avatarId'] as String?,
+  avatarDecorations: (json['avatarDecorations'] as List<dynamic>?)
+      ?.map((e) => IUpdateAvatarDecoration.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  bannerId: json['bannerId'] as String?,
+  fields: (json['fields'] as List<dynamic>?)
+      ?.map((e) => UserField.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  isLocked: json['isLocked'] as bool?,
+  isExplorable: json['isExplorable'] as bool?,
+  hideOnlineStatus: json['hideOnlineStatus'] as bool?,
+  publicReactions: json['publicReactions'] as bool?,
+  carefulBot: json['carefulBot'] as bool?,
+  autoAcceptFollowed: json['autoAcceptFollowed'] as bool?,
+  noCrawle: json['noCrawle'] as bool?,
+  preventAiLearning: json['preventAiLearning'] as bool?,
+  requireSigninToViewContents: json['requireSigninToViewContents'] as bool?,
+  makeNotesFollowersOnlyBefore: _$JsonConverterFromJson<int, HideBefore>(
+    json['makeNotesFollowersOnlyBefore'],
+    const HideBeforeConverter().fromJson,
+  ),
+  makeNotesHiddenBefore: _$JsonConverterFromJson<int, HideBefore>(
+    json['makeNotesHiddenBefore'],
+    const HideBeforeConverter().fromJson,
+  ),
+  isBot: json['isBot'] as bool?,
+  isCat: json['isCat'] as bool?,
+  injectFeaturedNote: json['injectFeaturedNote'] as bool?,
+  receiveAnnouncementEmail: json['receiveAnnouncementEmail'] as bool?,
+  alwaysMarkNsfw: json['alwaysMarkNsfw'] as bool?,
+  autoSensitive: json['autoSensitive'] as bool?,
+  ffVisibility: $enumDecodeNullable(
+    _$FFVisibilityEnumMap,
+    json['ffVisibility'],
+  ),
+  followingVisibility: $enumDecodeNullable(
+    _$FFVisibilityEnumMap,
+    json['followingVisibility'],
+  ),
+  followersVisibility: $enumDecodeNullable(
+    _$FFVisibilityEnumMap,
+    json['followersVisibility'],
+  ),
+  chatScope: $enumDecodeNullable(_$ChatScopeEnumMap, json['chatScope']),
+  pinnedPageId: json['pinnedPageId'] as String?,
+  mutingNotificationTypes: (json['mutingNotificationTypes'] as List<dynamic>?)
+      ?.map((e) => e as String)
+      .toList(),
+  mutedWords: (json['mutedWords'] as List<dynamic>?)
+      ?.map(const MuteWordsConverter().fromJson)
+      .toList(),
+  hardMutedWords: (json['hardMutedWords'] as List<dynamic>?)
+      ?.map(const MuteWordsConverter().fromJson)
+      .toList(),
+  mutedInstances: (json['mutedInstances'] as List<dynamic>?)
+      ?.map((e) => e as String)
+      .toList(),
+  notificationRecieveConfig: json['notificationRecieveConfig'] == null
+      ? null
+      : NotificationRecieveConfigs.fromJson(
+          json['notificationRecieveConfig'] as Map<String, dynamic>,
+        ),
+  emailNotificationTypes: (json['emailNotificationTypes'] as List<dynamic>?)
+      ?.map((e) => e as String)
+      .toList(),
+  alsoKnownAs: (json['alsoKnownAs'] as List<dynamic>?)
+      ?.map((e) => e as String)
+      .toList(),
+  mutualLinkSections: (json['mutualLinkSections'] as List<dynamic>?)
+      ?.map((e) => IUpdateMutualLinkSection.fromJson(e as Map<String, dynamic>))
+      .toList(),
+);
 
 Map<String, dynamic> _$IUpdateRequestToJson(
   _IUpdateRequest instance,
@@ -224,16 +173,13 @@ Json? _$JsonConverterToJson<Json, Value>(
 
 _IUpdateAvatarDecoration _$IUpdateAvatarDecorationFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_IUpdateAvatarDecoration', json, ($checkedConvert) {
-  final val = _IUpdateAvatarDecoration(
-    id: $checkedConvert('id', (v) => v as String),
-    angle: $checkedConvert('angle', (v) => (v as num?)?.toDouble()),
-    flipH: $checkedConvert('flipH', (v) => v as bool? ?? false),
-    offsetX: $checkedConvert('offsetX', (v) => (v as num?)?.toDouble() ?? 0.0),
-    offsetY: $checkedConvert('offsetY', (v) => (v as num?)?.toDouble() ?? 0.0),
-  );
-  return val;
-});
+) => _IUpdateAvatarDecoration(
+  id: json['id'] as String,
+  angle: (json['angle'] as num?)?.toDouble(),
+  flipH: json['flipH'] as bool? ?? false,
+  offsetX: (json['offsetX'] as num?)?.toDouble() ?? 0.0,
+  offsetY: (json['offsetY'] as num?)?.toDouble() ?? 0.0,
+);
 
 Map<String, dynamic> _$IUpdateAvatarDecorationToJson(
   _IUpdateAvatarDecoration instance,
@@ -247,18 +193,12 @@ Map<String, dynamic> _$IUpdateAvatarDecorationToJson(
 
 _IUpdateMutualLinkSection _$IUpdateMutualLinkSectionFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_IUpdateMutualLinkSection', json, ($checkedConvert) {
-  final val = _IUpdateMutualLinkSection(
-    name: $checkedConvert('name', (v) => v as String?),
-    mutualLinks: $checkedConvert(
-      'mutualLinks',
-      (v) => (v as List<dynamic>)
-          .map((e) => IUpdateMutualLink.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    ),
-  );
-  return val;
-});
+) => _IUpdateMutualLinkSection(
+  name: json['name'] as String?,
+  mutualLinks: (json['mutualLinks'] as List<dynamic>)
+      .map((e) => IUpdateMutualLink.fromJson(e as Map<String, dynamic>))
+      .toList(),
+);
 
 Map<String, dynamic> _$IUpdateMutualLinkSectionToJson(
   _IUpdateMutualLinkSection instance,
@@ -268,14 +208,11 @@ Map<String, dynamic> _$IUpdateMutualLinkSectionToJson(
 };
 
 _IUpdateMutualLink _$IUpdateMutualLinkFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_IUpdateMutualLink', json, ($checkedConvert) {
-      final val = _IUpdateMutualLink(
-        url: $checkedConvert('url', (v) => v as String),
-        fileId: $checkedConvert('fileId', (v) => v as String),
-        description: $checkedConvert('description', (v) => v as String?),
-      );
-      return val;
-    });
+    _IUpdateMutualLink(
+      url: json['url'] as String,
+      fileId: json['fileId'] as String,
+      description: json['description'] as String?,
+    );
 
 Map<String, dynamic> _$IUpdateMutualLinkToJson(_IUpdateMutualLink instance) =>
     <String, dynamic>{

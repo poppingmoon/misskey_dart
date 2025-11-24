@@ -7,15 +7,12 @@ part of 'users_clips_request.dart';
 // **************************************************************************
 
 _UsersClipsRequest _$UsersClipsRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_UsersClipsRequest', json, ($checkedConvert) {
-      final val = _UsersClipsRequest(
-        userId: $checkedConvert('userId', (v) => v as String),
-        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-        sinceId: $checkedConvert('sinceId', (v) => v as String?),
-        untilId: $checkedConvert('untilId', (v) => v as String?),
-      );
-      return val;
-    });
+    _UsersClipsRequest(
+      userId: json['userId'] as String,
+      limit: (json['limit'] as num?)?.toInt(),
+      sinceId: json['sinceId'] as String?,
+      untilId: json['untilId'] as String?,
+    );
 
 Map<String, dynamic> _$UsersClipsRequestToJson(_UsersClipsRequest instance) =>
     <String, dynamic>{

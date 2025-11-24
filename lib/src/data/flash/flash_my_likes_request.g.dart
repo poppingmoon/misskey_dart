@@ -7,14 +7,11 @@ part of 'flash_my_likes_request.dart';
 // **************************************************************************
 
 _FlashMyLikesRequest _$FlashMyLikesRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_FlashMyLikesRequest', json, ($checkedConvert) {
-      final val = _FlashMyLikesRequest(
-        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-        sinceId: $checkedConvert('sinceId', (v) => v as String?),
-        untilId: $checkedConvert('untilId', (v) => v as String?),
-      );
-      return val;
-    });
+    _FlashMyLikesRequest(
+      limit: (json['limit'] as num?)?.toInt(),
+      sinceId: json['sinceId'] as String?,
+      untilId: json['untilId'] as String?,
+    );
 
 Map<String, dynamic> _$FlashMyLikesRequestToJson(
   _FlashMyLikesRequest instance,

@@ -7,13 +7,10 @@ part of 'ap_show_response.dart';
 // **************************************************************************
 
 _ApShowResponse _$ApShowResponseFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_ApShowResponse', json, ($checkedConvert) {
-      final val = _ApShowResponse(
-        type: $checkedConvert('type', (v) => v as String),
-        object: $checkedConvert('object', (v) => v as Map<String, dynamic>),
-      );
-      return val;
-    });
+    _ApShowResponse(
+      type: json['type'] as String,
+      object: json['object'] as Map<String, dynamic>,
+    );
 
 Map<String, dynamic> _$ApShowResponseToJson(_ApShowResponse instance) =>
     <String, dynamic>{'type': instance.type, 'object': instance.object};

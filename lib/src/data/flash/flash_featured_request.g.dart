@@ -8,13 +8,10 @@ part of 'flash_featured_request.dart';
 
 _FlashFeaturedRequest _$FlashFeaturedRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_FlashFeaturedRequest', json, ($checkedConvert) {
-  final val = _FlashFeaturedRequest(
-    offset: $checkedConvert('offset', (v) => (v as num?)?.toInt()),
-    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-  );
-  return val;
-});
+) => _FlashFeaturedRequest(
+  offset: (json['offset'] as num?)?.toInt(),
+  limit: (json['limit'] as num?)?.toInt(),
+);
 
 Map<String, dynamic> _$FlashFeaturedRequestToJson(
   _FlashFeaturedRequest instance,

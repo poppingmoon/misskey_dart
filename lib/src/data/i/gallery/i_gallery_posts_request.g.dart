@@ -8,14 +8,11 @@ part of 'i_gallery_posts_request.dart';
 
 _IGalleryPostsRequest _$IGalleryPostsRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_IGalleryPostsRequest', json, ($checkedConvert) {
-  final val = _IGalleryPostsRequest(
-    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-    sinceId: $checkedConvert('sinceId', (v) => v as String?),
-    untilId: $checkedConvert('untilId', (v) => v as String?),
-  );
-  return val;
-});
+) => _IGalleryPostsRequest(
+  limit: (json['limit'] as num?)?.toInt(),
+  sinceId: json['sinceId'] as String?,
+  untilId: json['untilId'] as String?,
+);
 
 Map<String, dynamic> _$IGalleryPostsRequestToJson(
   _IGalleryPostsRequest instance,

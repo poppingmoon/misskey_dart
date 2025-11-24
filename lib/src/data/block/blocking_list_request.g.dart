@@ -7,14 +7,11 @@ part of 'blocking_list_request.dart';
 // **************************************************************************
 
 _BlockingListRequest _$BlockingListRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_BlockingListRequest', json, ($checkedConvert) {
-      final val = _BlockingListRequest(
-        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-        sinceId: $checkedConvert('sinceId', (v) => v as String?),
-        untilId: $checkedConvert('untilId', (v) => v as String?),
-      );
-      return val;
-    });
+    _BlockingListRequest(
+      limit: (json['limit'] as num?)?.toInt(),
+      sinceId: json['sinceId'] as String?,
+      untilId: json['untilId'] as String?,
+    );
 
 Map<String, dynamic> _$BlockingListRequestToJson(
   _BlockingListRequest instance,

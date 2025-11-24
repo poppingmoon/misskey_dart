@@ -8,12 +8,7 @@ part of 'gallery_posts_like_request.dart';
 
 _GalleryPostsLikeRequest _$GalleryPostsLikeRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_GalleryPostsLikeRequest', json, ($checkedConvert) {
-  final val = _GalleryPostsLikeRequest(
-    postId: $checkedConvert('postId', (v) => v as String),
-  );
-  return val;
-});
+) => _GalleryPostsLikeRequest(postId: json['postId'] as String);
 
 Map<String, dynamic> _$GalleryPostsLikeRequestToJson(
   _GalleryPostsLikeRequest instance,

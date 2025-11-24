@@ -8,14 +8,11 @@ part of 'chat_rooms_history_request.dart';
 
 _ChatRoomsHistoryRequest _$ChatRoomsHistoryRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_ChatRoomsHistoryRequest', json, ($checkedConvert) {
-  final val = _ChatRoomsHistoryRequest(
-    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-    sinceId: $checkedConvert('sinceId', (v) => v as String?),
-    untilId: $checkedConvert('untilId', (v) => v as String?),
-  );
-  return val;
-});
+) => _ChatRoomsHistoryRequest(
+  limit: (json['limit'] as num?)?.toInt(),
+  sinceId: json['sinceId'] as String?,
+  untilId: json['untilId'] as String?,
+);
 
 Map<String, dynamic> _$ChatRoomsHistoryRequestToJson(
   _ChatRoomsHistoryRequest instance,

@@ -8,30 +8,18 @@ part of 'notes_create_poll_request.dart';
 
 _NotesCreatePollRequest _$NotesCreatePollRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_NotesCreatePollRequest', json, ($checkedConvert) {
-  final val = _NotesCreatePollRequest(
-    choices: $checkedConvert(
-      'choices',
-      (v) => (v as List<dynamic>).map((e) => e as String).toList(),
-    ),
-    multiple: $checkedConvert('multiple', (v) => v as bool?),
-    expiresAt: $checkedConvert(
-      'expiresAt',
-      (v) => _$JsonConverterFromJson<int, DateTime>(
-        v,
-        const EpocTimeDateTimeConverter().fromJson,
-      ),
-    ),
-    expiredAfter: $checkedConvert(
-      'expiredAfter',
-      (v) => _$JsonConverterFromJson<int, Duration>(
-        v,
-        const DurationConverter().fromJson,
-      ),
-    ),
-  );
-  return val;
-});
+) => _NotesCreatePollRequest(
+  choices: (json['choices'] as List<dynamic>).map((e) => e as String).toList(),
+  multiple: json['multiple'] as bool?,
+  expiresAt: _$JsonConverterFromJson<int, DateTime>(
+    json['expiresAt'],
+    const EpocTimeDateTimeConverter().fromJson,
+  ),
+  expiredAfter: _$JsonConverterFromJson<int, Duration>(
+    json['expiredAfter'],
+    const DurationConverter().fromJson,
+  ),
+);
 
 Map<String, dynamic> _$NotesCreatePollRequestToJson(
   _NotesCreatePollRequest instance,

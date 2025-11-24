@@ -8,13 +8,10 @@ part of 'users_lists_push_request.dart';
 
 _UsersListsPushRequest _$UsersListsPushRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_UsersListsPushRequest', json, ($checkedConvert) {
-  final val = _UsersListsPushRequest(
-    listId: $checkedConvert('listId', (v) => v as String),
-    userId: $checkedConvert('userId', (v) => v as String),
-  );
-  return val;
-});
+) => _UsersListsPushRequest(
+  listId: json['listId'] as String,
+  userId: json['userId'] as String,
+);
 
 Map<String, dynamic> _$UsersListsPushRequestToJson(
   _UsersListsPushRequest instance,

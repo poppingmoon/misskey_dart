@@ -8,17 +8,14 @@ part of 'notes_reactions_request.dart';
 
 _NotesReactionsRequest _$NotesReactionsRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_NotesReactionsRequest', json, ($checkedConvert) {
-  final val = _NotesReactionsRequest(
-    noteId: $checkedConvert('noteId', (v) => v as String),
-    type: $checkedConvert('type', (v) => v as String?),
-    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-    offset: $checkedConvert('offset', (v) => (v as num?)?.toInt()),
-    sinceId: $checkedConvert('sinceId', (v) => v as String?),
-    untilId: $checkedConvert('untilId', (v) => v as String?),
-  );
-  return val;
-});
+) => _NotesReactionsRequest(
+  noteId: json['noteId'] as String,
+  type: json['type'] as String?,
+  limit: (json['limit'] as num?)?.toInt(),
+  offset: (json['offset'] as num?)?.toInt(),
+  sinceId: json['sinceId'] as String?,
+  untilId: json['untilId'] as String?,
+);
 
 Map<String, dynamic> _$NotesReactionsRequestToJson(
   _NotesReactionsRequest instance,

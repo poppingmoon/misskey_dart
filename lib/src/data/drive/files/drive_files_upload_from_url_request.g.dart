@@ -8,17 +8,14 @@ part of 'drive_files_upload_from_url_request.dart';
 
 _DriveFilesUploadFromUrlRequest _$DriveFilesUploadFromUrlRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_DriveFilesUploadFromUrlRequest', json, ($checkedConvert) {
-  final val = _DriveFilesUploadFromUrlRequest(
-    url: $checkedConvert('url', (v) => v as String),
-    folderId: $checkedConvert('folderId', (v) => v as String?),
-    isSensitive: $checkedConvert('isSensitive', (v) => v as bool?),
-    comment: $checkedConvert('comment', (v) => v as String?),
-    marker: $checkedConvert('marker', (v) => v as String?),
-    force: $checkedConvert('force', (v) => v as bool?),
-  );
-  return val;
-});
+) => _DriveFilesUploadFromUrlRequest(
+  url: json['url'] as String,
+  folderId: json['folderId'] as String?,
+  isSensitive: json['isSensitive'] as bool?,
+  comment: json['comment'] as String?,
+  marker: json['marker'] as String?,
+  force: json['force'] as bool?,
+);
 
 Map<String, dynamic> _$DriveFilesUploadFromUrlRequestToJson(
   _DriveFilesUploadFromUrlRequest instance,

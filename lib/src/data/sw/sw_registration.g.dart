@@ -7,14 +7,11 @@ part of 'sw_registration.dart';
 // **************************************************************************
 
 _SwRegistration _$SwRegistrationFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_SwRegistration', json, ($checkedConvert) {
-      final val = _SwRegistration(
-        userId: $checkedConvert('userId', (v) => v as String),
-        endpoint: $checkedConvert('endpoint', (v) => v as String),
-        sendReadMessage: $checkedConvert('sendReadMessage', (v) => v as bool),
-      );
-      return val;
-    });
+    _SwRegistration(
+      userId: json['userId'] as String,
+      endpoint: json['endpoint'] as String,
+      sendReadMessage: json['sendReadMessage'] as bool,
+    );
 
 Map<String, dynamic> _$SwRegistrationToJson(_SwRegistration instance) =>
     <String, dynamic>{

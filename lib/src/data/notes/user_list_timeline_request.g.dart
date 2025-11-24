@@ -8,41 +8,26 @@ part of 'user_list_timeline_request.dart';
 
 _UserListTimelineRequest _$UserListTimelineRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_UserListTimelineRequest', json, ($checkedConvert) {
-  final val = _UserListTimelineRequest(
-    listId: $checkedConvert('listId', (v) => v as String),
-    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-    sinceId: $checkedConvert('sinceId', (v) => v as String?),
-    untilId: $checkedConvert('untilId', (v) => v as String?),
-    sinceDate: $checkedConvert(
-      'sinceDate',
-      (v) => _$JsonConverterFromJson<int, DateTime>(
-        v,
-        const EpocTimeDateTimeConverter().fromJson,
-      ),
-    ),
-    untilDate: $checkedConvert(
-      'untilDate',
-      (v) => _$JsonConverterFromJson<int, DateTime>(
-        v,
-        const EpocTimeDateTimeConverter().fromJson,
-      ),
-    ),
-    includeMyRenotes: $checkedConvert('includeMyRenotes', (v) => v as bool?),
-    includeRenotedMyNotes: $checkedConvert(
-      'includeRenotedMyNotes',
-      (v) => v as bool?,
-    ),
-    includeLocalRenotes: $checkedConvert(
-      'includeLocalRenotes',
-      (v) => v as bool?,
-    ),
-    withRenotes: $checkedConvert('withRenotes', (v) => v as bool?),
-    withFiles: $checkedConvert('withFiles', (v) => v as bool?),
-    allowPartial: $checkedConvert('allowPartial', (v) => v as bool?),
-  );
-  return val;
-});
+) => _UserListTimelineRequest(
+  listId: json['listId'] as String,
+  limit: (json['limit'] as num?)?.toInt(),
+  sinceId: json['sinceId'] as String?,
+  untilId: json['untilId'] as String?,
+  sinceDate: _$JsonConverterFromJson<int, DateTime>(
+    json['sinceDate'],
+    const EpocTimeDateTimeConverter().fromJson,
+  ),
+  untilDate: _$JsonConverterFromJson<int, DateTime>(
+    json['untilDate'],
+    const EpocTimeDateTimeConverter().fromJson,
+  ),
+  includeMyRenotes: json['includeMyRenotes'] as bool?,
+  includeRenotedMyNotes: json['includeRenotedMyNotes'] as bool?,
+  includeLocalRenotes: json['includeLocalRenotes'] as bool?,
+  withRenotes: json['withRenotes'] as bool?,
+  withFiles: json['withFiles'] as bool?,
+  allowPartial: json['allowPartial'] as bool?,
+);
 
 Map<String, dynamic> _$UserListTimelineRequestToJson(
   _UserListTimelineRequest instance,

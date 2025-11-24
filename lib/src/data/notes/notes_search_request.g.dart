@@ -7,19 +7,16 @@ part of 'notes_search_request.dart';
 // **************************************************************************
 
 _NotesSearchRequest _$NotesSearchRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_NotesSearchRequest', json, ($checkedConvert) {
-      final val = _NotesSearchRequest(
-        query: $checkedConvert('query', (v) => v as String),
-        sinceId: $checkedConvert('sinceId', (v) => v as String?),
-        untilId: $checkedConvert('untilId', (v) => v as String?),
-        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-        offset: $checkedConvert('offset', (v) => (v as num?)?.toInt()),
-        host: $checkedConvert('host', (v) => v as String?),
-        userId: $checkedConvert('userId', (v) => v as String?),
-        channelId: $checkedConvert('channelId', (v) => v as String?),
-      );
-      return val;
-    });
+    _NotesSearchRequest(
+      query: json['query'] as String,
+      sinceId: json['sinceId'] as String?,
+      untilId: json['untilId'] as String?,
+      limit: (json['limit'] as num?)?.toInt(),
+      offset: (json['offset'] as num?)?.toInt(),
+      host: json['host'] as String?,
+      userId: json['userId'] as String?,
+      channelId: json['channelId'] as String?,
+    );
 
 Map<String, dynamic> _$NotesSearchRequestToJson(_NotesSearchRequest instance) =>
     <String, dynamic>{

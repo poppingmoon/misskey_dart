@@ -7,21 +7,14 @@ part of 'note_schedule.dart';
 // **************************************************************************
 
 _NoteSchedule _$NoteScheduleFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_NoteSchedule', json, ($checkedConvert) {
-      final val = _NoteSchedule(
-        id: $checkedConvert('id', (v) => v as String),
-        note: $checkedConvert(
-          'note',
-          (v) => NoteScheduleNote.fromJson(v as Map<String, dynamic>),
-        ),
-        userId: $checkedConvert('userId', (v) => v as String),
-        scheduledAt: $checkedConvert(
-          'scheduledAt',
-          (v) => const DateTimeConverter().fromJson(v as String),
-        ),
-      );
-      return val;
-    });
+    _NoteSchedule(
+      id: json['id'] as String,
+      note: NoteScheduleNote.fromJson(json['note'] as Map<String, dynamic>),
+      userId: json['userId'] as String,
+      scheduledAt: const DateTimeConverter().fromJson(
+        json['scheduledAt'] as String,
+      ),
+    );
 
 Map<String, dynamic> _$NoteScheduleToJson(_NoteSchedule instance) =>
     <String, dynamic>{
@@ -32,48 +25,32 @@ Map<String, dynamic> _$NoteScheduleToJson(_NoteSchedule instance) =>
     };
 
 _NoteScheduleNote _$NoteScheduleNoteFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_NoteScheduleNote', json, ($checkedConvert) {
-      final val = _NoteScheduleNote(
-        text: $checkedConvert('text', (v) => v as String?),
-        cw: $checkedConvert('cw', (v) => v as String?),
-        fileIds: $checkedConvert(
-          'fileIds',
-          (v) =>
-              (v as List<dynamic>?)?.map((e) => e as String).toList() ??
-              const [],
-        ),
-        visibility: $checkedConvert(
-          'visibility',
-          (v) => $enumDecodeNullable(
-            _$NoteVisibilityEnumMap,
-            v,
-            unknownValue: JsonKey.nullForUndefinedEnumValue,
-          ),
-        ),
-        visibleUsers: $checkedConvert(
-          'visibleUsers',
-          (v) =>
-              (v as List<dynamic>?)
-                  ?.map((e) => UserLite.fromJson(e as Map<String, dynamic>))
-                  .toList() ??
-              const [],
-        ),
-        user: $checkedConvert(
-          'user',
-          (v) => UserLite.fromJson(v as Map<String, dynamic>),
-        ),
-        reactionAcceptance: $checkedConvert(
-          'reactionAcceptance',
-          (v) => $enumDecodeNullable(
-            _$ReactionAcceptanceEnumMap,
-            v,
-            unknownValue: JsonKey.nullForUndefinedEnumValue,
-          ),
-        ),
-        isSchedule: $checkedConvert('isSchedule', (v) => v as bool?),
-      );
-      return val;
-    });
+    _NoteScheduleNote(
+      text: json['text'] as String?,
+      cw: json['cw'] as String?,
+      fileIds:
+          (json['fileIds'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList() ??
+          const [],
+      visibility: $enumDecodeNullable(
+        _$NoteVisibilityEnumMap,
+        json['visibility'],
+        unknownValue: JsonKey.nullForUndefinedEnumValue,
+      ),
+      visibleUsers:
+          (json['visibleUsers'] as List<dynamic>?)
+              ?.map((e) => UserLite.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const [],
+      user: UserLite.fromJson(json['user'] as Map<String, dynamic>),
+      reactionAcceptance: $enumDecodeNullable(
+        _$ReactionAcceptanceEnumMap,
+        json['reactionAcceptance'],
+        unknownValue: JsonKey.nullForUndefinedEnumValue,
+      ),
+      isSchedule: json['isSchedule'] as bool?,
+    );
 
 Map<String, dynamic> _$NoteScheduleNoteToJson(_NoteScheduleNote instance) =>
     <String, dynamic>{

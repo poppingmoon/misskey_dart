@@ -7,22 +7,18 @@ part of 'flash_create_request.dart';
 // **************************************************************************
 
 _FlashCreateRequest _$FlashCreateRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_FlashCreateRequest', json, ($checkedConvert) {
-      final val = _FlashCreateRequest(
-        title: $checkedConvert('title', (v) => v as String),
-        summary: $checkedConvert('summary', (v) => v as String),
-        script: $checkedConvert('script', (v) => v as String),
-        permissions: $checkedConvert(
-          'permissions',
-          (v) => (v as List<dynamic>).map((e) => e as String).toList(),
-        ),
-        visibility: $checkedConvert(
-          'visibility',
-          (v) => $enumDecodeNullable(_$FlashVisibilityEnumMap, v),
-        ),
-      );
-      return val;
-    });
+    _FlashCreateRequest(
+      title: json['title'] as String,
+      summary: json['summary'] as String,
+      script: json['script'] as String,
+      permissions: (json['permissions'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+      visibility: $enumDecodeNullable(
+        _$FlashVisibilityEnumMap,
+        json['visibility'],
+      ),
+    );
 
 Map<String, dynamic> _$FlashCreateRequestToJson(_FlashCreateRequest instance) =>
     <String, dynamic>{

@@ -8,12 +8,7 @@ part of 'gallery_posts_show_request.dart';
 
 _GalleryPostsShowRequest _$GalleryPostsShowRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_GalleryPostsShowRequest', json, ($checkedConvert) {
-  final val = _GalleryPostsShowRequest(
-    postId: $checkedConvert('postId', (v) => v as String),
-  );
-  return val;
-});
+) => _GalleryPostsShowRequest(postId: json['postId'] as String);
 
 Map<String, dynamic> _$GalleryPostsShowRequestToJson(
   _GalleryPostsShowRequest instance,

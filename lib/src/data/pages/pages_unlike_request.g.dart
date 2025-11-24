@@ -7,12 +7,7 @@ part of 'pages_unlike_request.dart';
 // **************************************************************************
 
 _PagesUnlikeRequest _$PagesUnlikeRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_PagesUnlikeRequest', json, ($checkedConvert) {
-      final val = _PagesUnlikeRequest(
-        pageId: $checkedConvert('pageId', (v) => v as String),
-      );
-      return val;
-    });
+    _PagesUnlikeRequest(pageId: json['pageId'] as String);
 
 Map<String, dynamic> _$PagesUnlikeRequestToJson(_PagesUnlikeRequest instance) =>
     <String, dynamic>{'pageId': instance.pageId};

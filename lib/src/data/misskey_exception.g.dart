@@ -7,23 +7,17 @@ part of 'misskey_exception.dart';
 // **************************************************************************
 
 _MisskeyException _$MisskeyExceptionFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_MisskeyException', json, ($checkedConvert) {
-      final val = _MisskeyException(
-        id: $checkedConvert('id', (v) => v as String),
-        code: $checkedConvert('code', (v) => v as String),
-        message: $checkedConvert('message', (v) => v as String),
-        kind: $checkedConvert(
-          'kind',
-          (v) => $enumDecodeNullable(
-            _$MisskeyExceptionKindEnumMap,
-            v,
-            unknownValue: JsonKey.nullForUndefinedEnumValue,
-          ),
-        ),
-        info: $checkedConvert('info', (v) => v as Map<String, dynamic>?),
-      );
-      return val;
-    });
+    _MisskeyException(
+      id: json['id'] as String,
+      code: json['code'] as String,
+      message: json['message'] as String,
+      kind: $enumDecodeNullable(
+        _$MisskeyExceptionKindEnumMap,
+        json['kind'],
+        unknownValue: JsonKey.nullForUndefinedEnumValue,
+      ),
+      info: json['info'] as Map<String, dynamic>?,
+    );
 
 Map<String, dynamic> _$MisskeyExceptionToJson(_MisskeyException instance) =>
     <String, dynamic>{

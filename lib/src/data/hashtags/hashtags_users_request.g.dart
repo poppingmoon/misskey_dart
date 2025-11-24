@@ -8,25 +8,13 @@ part of 'hashtags_users_request.dart';
 
 _HashtagsUsersRequest _$HashtagsUsersRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_HashtagsUsersRequest', json, ($checkedConvert) {
-  final val = _HashtagsUsersRequest(
-    tag: $checkedConvert('tag', (v) => v as String),
-    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-    sort: $checkedConvert(
-      'sort',
-      (v) => const UsersSortConverter().fromJson(v as String),
-    ),
-    state: $checkedConvert(
-      'state',
-      (v) => $enumDecodeNullable(_$UsersStateEnumMap, v),
-    ),
-    origin: $checkedConvert(
-      'origin',
-      (v) => $enumDecodeNullable(_$OriginEnumMap, v),
-    ),
-  );
-  return val;
-});
+) => _HashtagsUsersRequest(
+  tag: json['tag'] as String,
+  limit: (json['limit'] as num?)?.toInt(),
+  sort: const UsersSortConverter().fromJson(json['sort'] as String),
+  state: $enumDecodeNullable(_$UsersStateEnumMap, json['state']),
+  origin: $enumDecodeNullable(_$OriginEnumMap, json['origin']),
+);
 
 Map<String, dynamic> _$HashtagsUsersRequestToJson(
   _HashtagsUsersRequest instance,

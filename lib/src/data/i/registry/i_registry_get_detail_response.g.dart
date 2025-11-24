@@ -8,13 +8,10 @@ part of 'i_registry_get_detail_response.dart';
 
 _IRegistryGetDetailResponse _$IRegistryGetDetailResponseFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_IRegistryGetDetailResponse', json, ($checkedConvert) {
-  final val = _IRegistryGetDetailResponse(
-    updatedAt: $checkedConvert('updatedAt', (v) => DateTime.parse(v as String)),
-    value: $checkedConvert('value', (v) => v),
-  );
-  return val;
-});
+) => _IRegistryGetDetailResponse(
+  updatedAt: DateTime.parse(json['updatedAt'] as String),
+  value: json['value'],
+);
 
 Map<String, dynamic> _$IRegistryGetDetailResponseToJson(
   _IRegistryGetDetailResponse instance,

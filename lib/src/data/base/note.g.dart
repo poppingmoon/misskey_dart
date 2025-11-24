@@ -6,137 +6,84 @@ part of 'note.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_Note _$NoteFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate('_Note', json, ($checkedConvert) {
-  final val = _Note(
-    id: $checkedConvert('id', (v) => v as String),
-    createdAt: $checkedConvert(
-      'createdAt',
-      (v) => const DateTimeConverter().fromJson(v as String),
-    ),
-    updatedAt: $checkedConvert(
-      'updatedAt',
-      (v) => _$JsonConverterFromJson<String, DateTime?>(
-        v,
-        const NullableDateTimeConverter().fromJson,
-      ),
-    ),
-    text: $checkedConvert('text', (v) => v as String?),
-    cw: $checkedConvert('cw', (v) => v as String?),
-    user: $checkedConvert(
-      'user',
-      (v) => UserLite.fromJson(v as Map<String, dynamic>),
-    ),
-    userId: $checkedConvert('userId', (v) => v as String),
-    visibility: $checkedConvert(
-      'visibility',
-      (v) => $enumDecodeNullable(
-        _$NoteVisibilityEnumMap,
-        v,
-        unknownValue: JsonKey.nullForUndefinedEnumValue,
-      ),
-    ),
-    localOnly: $checkedConvert('localOnly', (v) => v as bool? ?? false),
-    renoteCount: $checkedConvert(
-      'renoteCount',
-      (v) => (v as num?)?.toInt() ?? 0,
-    ),
-    repliesCount: $checkedConvert(
-      'repliesCount',
-      (v) => (v as num?)?.toInt() ?? 0,
-    ),
-    reactionCount: $checkedConvert(
-      'reactionCount',
-      (v) => (v as num?)?.toInt(),
-    ),
-    reactions: $checkedConvert(
-      'reactions',
-      (v) =>
-          (v as Map<String, dynamic>?)?.map(
-            (k, e) => MapEntry(k, (e as num).toInt()),
-          ) ??
-          const {},
-    ),
-    reactionEmojis: $checkedConvert(
-      'reactionEmojis',
-      (v) => v == null ? const {} : const EmojisConverter().fromJson(v),
-    ),
-    emojis: $checkedConvert(
-      'emojis',
-      (v) => v == null ? const {} : const EmojisConverter().fromJson(v),
-    ),
-    fileIds: $checkedConvert(
-      'fileIds',
-      (v) =>
-          (v as List<dynamic>?)?.map((e) => e as String).toList() ?? const [],
-    ),
-    files: $checkedConvert(
-      'files',
-      (v) =>
-          (v as List<dynamic>?)
-              ?.map((e) => DriveFile.fromJson(e as Map<String, dynamic>))
-              .toList() ??
-          const [],
-    ),
-    replyId: $checkedConvert('replyId', (v) => v as String?),
-    renoteId: $checkedConvert('renoteId', (v) => v as String?),
-    channelId: $checkedConvert('channelId', (v) => v as String?),
-    reactionAcceptance: $checkedConvert(
-      'reactionAcceptance',
-      (v) => $enumDecodeNullable(
-        _$ReactionAcceptanceEnumMap,
-        v,
-        unknownValue: JsonKey.nullForUndefinedEnumValue,
-      ),
-    ),
-    renote: $checkedConvert(
-      'renote',
-      (v) => v == null ? null : Note.fromJson(v as Map<String, dynamic>),
-    ),
-    reply: $checkedConvert(
-      'reply',
-      (v) => v == null ? null : Note.fromJson(v as Map<String, dynamic>),
-    ),
-    visibleUserIds: $checkedConvert(
-      'visibleUserIds',
-      (v) =>
-          (v as List<dynamic>?)?.map((e) => e as String).toList() ?? const [],
-    ),
-    mentions: $checkedConvert(
-      'mentions',
-      (v) =>
-          (v as List<dynamic>?)?.map((e) => e as String).toList() ?? const [],
-    ),
-    myReaction: $checkedConvert('myReaction', (v) => v as String?),
-    channel: $checkedConvert(
-      'channel',
-      (v) => v == null
-          ? null
-          : NoteChannelInfo.fromJson(v as Map<String, dynamic>),
-    ),
-    uri: $checkedConvert(
-      'uri',
-      (v) => const NullableUriConverter().fromJson(v as String?),
-    ),
-    url: $checkedConvert(
-      'url',
-      (v) => const NullableUriConverter().fromJson(v as String?),
-    ),
-    reactionAndUserPairCache: $checkedConvert(
-      'reactionAndUserPairCache',
-      (v) =>
-          (v as List<dynamic>?)?.map((e) => e as String).toList() ?? const [],
-    ),
-    poll: $checkedConvert(
-      'poll',
-      (v) => v == null ? null : NotePoll.fromJson(v as Map<String, dynamic>),
-    ),
-    clippedCount: $checkedConvert('clippedCount', (v) => (v as num?)?.toInt()),
-    isRenoted: $checkedConvert('isRenoted', (v) => v as bool?),
-  );
-  return val;
-});
+_Note _$NoteFromJson(Map<String, dynamic> json) => _Note(
+  id: json['id'] as String,
+  createdAt: const DateTimeConverter().fromJson(json['createdAt'] as String),
+  updatedAt: _$JsonConverterFromJson<String, DateTime?>(
+    json['updatedAt'],
+    const NullableDateTimeConverter().fromJson,
+  ),
+  text: json['text'] as String?,
+  cw: json['cw'] as String?,
+  user: UserLite.fromJson(json['user'] as Map<String, dynamic>),
+  userId: json['userId'] as String,
+  visibility: $enumDecodeNullable(
+    _$NoteVisibilityEnumMap,
+    json['visibility'],
+    unknownValue: JsonKey.nullForUndefinedEnumValue,
+  ),
+  localOnly: json['localOnly'] as bool? ?? false,
+  renoteCount: (json['renoteCount'] as num?)?.toInt() ?? 0,
+  repliesCount: (json['repliesCount'] as num?)?.toInt() ?? 0,
+  reactionCount: (json['reactionCount'] as num?)?.toInt(),
+  reactions:
+      (json['reactions'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(k, (e as num).toInt()),
+      ) ??
+      const {},
+  reactionEmojis: json['reactionEmojis'] == null
+      ? const {}
+      : const EmojisConverter().fromJson(json['reactionEmojis']),
+  emojis: json['emojis'] == null
+      ? const {}
+      : const EmojisConverter().fromJson(json['emojis']),
+  fileIds:
+      (json['fileIds'] as List<dynamic>?)?.map((e) => e as String).toList() ??
+      const [],
+  files:
+      (json['files'] as List<dynamic>?)
+          ?.map((e) => DriveFile.fromJson(e as Map<String, dynamic>))
+          .toList() ??
+      const [],
+  replyId: json['replyId'] as String?,
+  renoteId: json['renoteId'] as String?,
+  channelId: json['channelId'] as String?,
+  reactionAcceptance: $enumDecodeNullable(
+    _$ReactionAcceptanceEnumMap,
+    json['reactionAcceptance'],
+    unknownValue: JsonKey.nullForUndefinedEnumValue,
+  ),
+  renote: json['renote'] == null
+      ? null
+      : Note.fromJson(json['renote'] as Map<String, dynamic>),
+  reply: json['reply'] == null
+      ? null
+      : Note.fromJson(json['reply'] as Map<String, dynamic>),
+  visibleUserIds:
+      (json['visibleUserIds'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList() ??
+      const [],
+  mentions:
+      (json['mentions'] as List<dynamic>?)?.map((e) => e as String).toList() ??
+      const [],
+  myReaction: json['myReaction'] as String?,
+  channel: json['channel'] == null
+      ? null
+      : NoteChannelInfo.fromJson(json['channel'] as Map<String, dynamic>),
+  uri: const NullableUriConverter().fromJson(json['uri'] as String?),
+  url: const NullableUriConverter().fromJson(json['url'] as String?),
+  reactionAndUserPairCache:
+      (json['reactionAndUserPairCache'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList() ??
+      const [],
+  poll: json['poll'] == null
+      ? null
+      : NotePoll.fromJson(json['poll'] as Map<String, dynamic>),
+  clippedCount: (json['clippedCount'] as num?)?.toInt(),
+  isRenoted: json['isRenoted'] as bool?,
+);
 
 Map<String, dynamic> _$NoteToJson(_Note instance) => <String, dynamic>{
   'id': instance.id,
@@ -196,23 +143,14 @@ const _$ReactionAcceptanceEnumMap = {
 };
 
 _NoteChannelInfo _$NoteChannelInfoFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_NoteChannelInfo', json, ($checkedConvert) {
-      final val = _NoteChannelInfo(
-        id: $checkedConvert('id', (v) => v as String),
-        name: $checkedConvert('name', (v) => v as String),
-        color: $checkedConvert(
-          'color',
-          (v) => const NullableColorConverter().fromJson(v as String?),
-        ),
-        isSensitive: $checkedConvert('isSensitive', (v) => v as bool? ?? false),
-        allowRenoteToExternal: $checkedConvert(
-          'allowRenoteToExternal',
-          (v) => v as bool? ?? true,
-        ),
-        userId: $checkedConvert('userId', (v) => v as String?),
-      );
-      return val;
-    });
+    _NoteChannelInfo(
+      id: json['id'] as String,
+      name: json['name'] as String,
+      color: const NullableColorConverter().fromJson(json['color'] as String?),
+      isSensitive: json['isSensitive'] as bool? ?? false,
+      allowRenoteToExternal: json['allowRenoteToExternal'] as bool? ?? true,
+      userId: json['userId'] as String?,
+    );
 
 Map<String, dynamic> _$NoteChannelInfoToJson(_NoteChannelInfo instance) =>
     <String, dynamic>{
@@ -224,26 +162,16 @@ Map<String, dynamic> _$NoteChannelInfoToJson(_NoteChannelInfo instance) =>
       'userId': instance.userId,
     };
 
-_NotePoll _$NotePollFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_NotePoll', json, ($checkedConvert) {
-      final val = _NotePoll(
-        multiple: $checkedConvert('multiple', (v) => v as bool),
-        expiresAt: $checkedConvert(
-          'expiresAt',
-          (v) => _$JsonConverterFromJson<String, DateTime>(
-            v,
-            const DateTimeConverter().fromJson,
-          ),
-        ),
-        choices: $checkedConvert(
-          'choices',
-          (v) => (v as List<dynamic>)
-              .map((e) => NotePollChoice.fromJson(e as Map<String, dynamic>))
-              .toList(),
-        ),
-      );
-      return val;
-    });
+_NotePoll _$NotePollFromJson(Map<String, dynamic> json) => _NotePoll(
+  multiple: json['multiple'] as bool,
+  expiresAt: _$JsonConverterFromJson<String, DateTime>(
+    json['expiresAt'],
+    const DateTimeConverter().fromJson,
+  ),
+  choices: (json['choices'] as List<dynamic>)
+      .map((e) => NotePollChoice.fromJson(e as Map<String, dynamic>))
+      .toList(),
+);
 
 Map<String, dynamic> _$NotePollToJson(_NotePoll instance) => <String, dynamic>{
   'multiple': instance.multiple,
@@ -260,14 +188,11 @@ Json? _$JsonConverterToJson<Json, Value>(
 ) => value == null ? null : toJson(value);
 
 _NotePollChoice _$NotePollChoiceFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_NotePollChoice', json, ($checkedConvert) {
-      final val = _NotePollChoice(
-        text: $checkedConvert('text', (v) => v as String),
-        votes: $checkedConvert('votes', (v) => (v as num).toInt()),
-        isVoted: $checkedConvert('isVoted', (v) => v as bool? ?? false),
-      );
-      return val;
-    });
+    _NotePollChoice(
+      text: json['text'] as String,
+      votes: (json['votes'] as num).toInt(),
+      isVoted: json['isVoted'] as bool? ?? false,
+    );
 
 Map<String, dynamic> _$NotePollChoiceToJson(_NotePollChoice instance) =>
     <String, dynamic>{

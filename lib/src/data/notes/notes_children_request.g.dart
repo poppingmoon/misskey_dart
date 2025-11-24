@@ -8,16 +8,13 @@ part of 'notes_children_request.dart';
 
 _NotesChildrenRequest _$NotesChildrenRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_NotesChildrenRequest', json, ($checkedConvert) {
-  final val = _NotesChildrenRequest(
-    noteId: $checkedConvert('noteId', (v) => v as String),
-    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-    depth: $checkedConvert('depth', (v) => (v as num?)?.toInt()),
-    sinceId: $checkedConvert('sinceId', (v) => v as String?),
-    untilId: $checkedConvert('untilId', (v) => v as String?),
-  );
-  return val;
-});
+) => _NotesChildrenRequest(
+  noteId: json['noteId'] as String,
+  limit: (json['limit'] as num?)?.toInt(),
+  depth: (json['depth'] as num?)?.toInt(),
+  sinceId: json['sinceId'] as String?,
+  untilId: json['untilId'] as String?,
+);
 
 Map<String, dynamic> _$NotesChildrenRequestToJson(
   _NotesChildrenRequest instance,

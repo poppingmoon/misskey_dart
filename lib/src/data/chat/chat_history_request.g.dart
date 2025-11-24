@@ -7,13 +7,10 @@ part of 'chat_history_request.dart';
 // **************************************************************************
 
 _ChatHistoryRequest _$ChatHistoryRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_ChatHistoryRequest', json, ($checkedConvert) {
-      final val = _ChatHistoryRequest(
-        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-        room: $checkedConvert('room', (v) => v as bool?),
-      );
-      return val;
-    });
+    _ChatHistoryRequest(
+      limit: (json['limit'] as num?)?.toInt(),
+      room: json['room'] as bool?,
+    );
 
 Map<String, dynamic> _$ChatHistoryRequestToJson(_ChatHistoryRequest instance) =>
     <String, dynamic>{'limit': instance.limit, 'room': instance.room};

@@ -7,14 +7,11 @@ part of 'i_pages_request.dart';
 // **************************************************************************
 
 _IPageRequest _$IPageRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_IPageRequest', json, ($checkedConvert) {
-      final val = _IPageRequest(
-        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-        sinceId: $checkedConvert('sinceId', (v) => v as String?),
-        untilId: $checkedConvert('untilId', (v) => v as String?),
-      );
-      return val;
-    });
+    _IPageRequest(
+      limit: (json['limit'] as num?)?.toInt(),
+      sinceId: json['sinceId'] as String?,
+      untilId: json['untilId'] as String?,
+    );
 
 Map<String, dynamic> _$IPageRequestToJson(_IPageRequest instance) =>
     <String, dynamic>{

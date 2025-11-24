@@ -8,12 +8,7 @@ part of 'reversi_show_game_request.dart';
 
 _ReversiShowGameRequest _$ReversiShowGameRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_ReversiShowGameRequest', json, ($checkedConvert) {
-  final val = _ReversiShowGameRequest(
-    gameId: $checkedConvert('gameId', (v) => v as String),
-  );
-  return val;
-});
+) => _ReversiShowGameRequest(gameId: json['gameId'] as String);
 
 Map<String, dynamic> _$ReversiShowGameRequestToJson(
   _ReversiShowGameRequest instance,

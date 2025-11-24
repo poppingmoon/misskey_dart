@@ -7,12 +7,7 @@ part of 'notes_show_request.dart';
 // **************************************************************************
 
 _NotesShowRequest _$NotesShowRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_NotesShowRequest', json, ($checkedConvert) {
-      final val = _NotesShowRequest(
-        noteId: $checkedConvert('noteId', (v) => v as String),
-      );
-      return val;
-    });
+    _NotesShowRequest(noteId: json['noteId'] as String);
 
 Map<String, dynamic> _$NotesShowRequestToJson(_NotesShowRequest instance) =>
     <String, dynamic>{'noteId': instance.noteId};

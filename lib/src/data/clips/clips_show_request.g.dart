@@ -7,12 +7,7 @@ part of 'clips_show_request.dart';
 // **************************************************************************
 
 _ClipsShowRequest _$ClipsShowRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_ClipsShowRequest', json, ($checkedConvert) {
-      final val = _ClipsShowRequest(
-        clipId: $checkedConvert('clipId', (v) => v as String),
-      );
-      return val;
-    });
+    _ClipsShowRequest(clipId: json['clipId'] as String);
 
 Map<String, dynamic> _$ClipsShowRequestToJson(_ClipsShowRequest instance) =>
     <String, dynamic>{'clipId': instance.clipId};

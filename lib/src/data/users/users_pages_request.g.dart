@@ -7,15 +7,12 @@ part of 'users_pages_request.dart';
 // **************************************************************************
 
 _UsersPagesRequest _$UsersPagesRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_UsersPagesRequest', json, ($checkedConvert) {
-      final val = _UsersPagesRequest(
-        userId: $checkedConvert('userId', (v) => v as String),
-        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-        sinceId: $checkedConvert('sinceId', (v) => v as String?),
-        untilId: $checkedConvert('untilId', (v) => v as String?),
-      );
-      return val;
-    });
+    _UsersPagesRequest(
+      userId: json['userId'] as String,
+      limit: (json['limit'] as num?)?.toInt(),
+      sinceId: json['sinceId'] as String?,
+      untilId: json['untilId'] as String?,
+    );
 
 Map<String, dynamic> _$UsersPagesRequestToJson(_UsersPagesRequest instance) =>
     <String, dynamic>{

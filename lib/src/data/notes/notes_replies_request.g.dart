@@ -7,15 +7,12 @@ part of 'notes_replies_request.dart';
 // **************************************************************************
 
 _NotesRepliesRequest _$NotesRepliesRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_NotesRepliesRequest', json, ($checkedConvert) {
-      final val = _NotesRepliesRequest(
-        noteId: $checkedConvert('noteId', (v) => v as String),
-        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-        sinceId: $checkedConvert('sinceId', (v) => v as String?),
-        untilId: $checkedConvert('untilId', (v) => v as String?),
-      );
-      return val;
-    });
+    _NotesRepliesRequest(
+      noteId: json['noteId'] as String,
+      limit: (json['limit'] as num?)?.toInt(),
+      sinceId: json['sinceId'] as String?,
+      untilId: json['untilId'] as String?,
+    );
 
 Map<String, dynamic> _$NotesRepliesRequestToJson(
   _NotesRepliesRequest instance,

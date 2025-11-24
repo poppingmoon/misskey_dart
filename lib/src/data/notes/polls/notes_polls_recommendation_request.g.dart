@@ -8,14 +8,10 @@ part of 'notes_polls_recommendation_request.dart';
 
 _NotesPollsRecommendationRequest _$NotesPollsRecommendationRequestFromJson(
   Map<String, dynamic> json,
-) =>
-    $checkedCreate('_NotesPollsRecommendationRequest', json, ($checkedConvert) {
-      final val = _NotesPollsRecommendationRequest(
-        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-        offset: $checkedConvert('offset', (v) => (v as num?)?.toInt()),
-      );
-      return val;
-    });
+) => _NotesPollsRecommendationRequest(
+  limit: (json['limit'] as num?)?.toInt(),
+  offset: (json['offset'] as num?)?.toInt(),
+);
 
 Map<String, dynamic> _$NotesPollsRecommendationRequestToJson(
   _NotesPollsRecommendationRequest instance,

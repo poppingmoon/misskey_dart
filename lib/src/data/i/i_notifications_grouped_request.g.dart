@@ -8,27 +8,18 @@ part of 'i_notifications_grouped_request.dart';
 
 _INotificationRequest _$INotificationRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_INotificationRequest', json, ($checkedConvert) {
-  final val = _INotificationRequest(
-    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-    sinceId: $checkedConvert('sinceId', (v) => v as String?),
-    untilId: $checkedConvert('untilId', (v) => v as String?),
-    markAsRead: $checkedConvert('markAsRead', (v) => v as bool?),
-    includeTypes: $checkedConvert(
-      'includeTypes',
-      (v) => (v as List<dynamic>?)
-          ?.map((e) => $enumDecode(_$NotificationTypeEnumMap, e))
-          .toList(),
-    ),
-    excludeTypes: $checkedConvert(
-      'excludeTypes',
-      (v) => (v as List<dynamic>?)
-          ?.map((e) => $enumDecode(_$NotificationTypeEnumMap, e))
-          .toList(),
-    ),
-  );
-  return val;
-});
+) => _INotificationRequest(
+  limit: (json['limit'] as num?)?.toInt(),
+  sinceId: json['sinceId'] as String?,
+  untilId: json['untilId'] as String?,
+  markAsRead: json['markAsRead'] as bool?,
+  includeTypes: (json['includeTypes'] as List<dynamic>?)
+      ?.map((e) => $enumDecode(_$NotificationTypeEnumMap, e))
+      .toList(),
+  excludeTypes: (json['excludeTypes'] as List<dynamic>?)
+      ?.map((e) => $enumDecode(_$NotificationTypeEnumMap, e))
+      .toList(),
+);
 
 Map<String, dynamic> _$INotificationRequestToJson(
   _INotificationRequest instance,

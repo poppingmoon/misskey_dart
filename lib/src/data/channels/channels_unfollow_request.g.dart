@@ -8,12 +8,7 @@ part of 'channels_unfollow_request.dart';
 
 _ChannelsUnfollowRequest _$ChannelsUnfollowRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_ChannelsUnfollowRequest', json, ($checkedConvert) {
-  final val = _ChannelsUnfollowRequest(
-    channelId: $checkedConvert('channelId', (v) => v as String),
-  );
-  return val;
-});
+) => _ChannelsUnfollowRequest(channelId: json['channelId'] as String);
 
 Map<String, dynamic> _$ChannelsUnfollowRequestToJson(
   _ChannelsUnfollowRequest instance,

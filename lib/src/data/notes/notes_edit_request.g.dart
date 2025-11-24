@@ -6,37 +6,27 @@ part of 'notes_edit_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_NotesEditRequest _$NotesEditRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_NotesEditRequest', json, ($checkedConvert) {
-      final val = _NotesEditRequest(
-        editId: $checkedConvert('editId', (v) => v as String),
-        visibility: $checkedConvert(
-          'visibility',
-          (v) => $enumDecodeNullable(_$NoteVisibilityEnumMap, v),
-        ),
-        visibleUserIds: $checkedConvert(
-          'visibleUserIds',
-          (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-        ),
-        text: $checkedConvert('text', (v) => v as String?),
-        cw: $checkedConvert('cw', (v) => v as String?),
-        localOnly: $checkedConvert('localOnly', (v) => v as bool?),
-        fileIds: $checkedConvert(
-          'fileIds',
-          (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-        ),
-        replyId: $checkedConvert('replyId', (v) => v as String?),
-        renoteId: $checkedConvert('renoteId', (v) => v as String?),
-        channelId: $checkedConvert('channelId', (v) => v as String?),
-        poll: $checkedConvert(
-          'poll',
-          (v) => v == null
-              ? null
-              : NotesCreatePollRequest.fromJson(v as Map<String, dynamic>),
-        ),
-      );
-      return val;
-    });
+_NotesEditRequest _$NotesEditRequestFromJson(
+  Map<String, dynamic> json,
+) => _NotesEditRequest(
+  editId: json['editId'] as String,
+  visibility: $enumDecodeNullable(_$NoteVisibilityEnumMap, json['visibility']),
+  visibleUserIds: (json['visibleUserIds'] as List<dynamic>?)
+      ?.map((e) => e as String)
+      .toList(),
+  text: json['text'] as String?,
+  cw: json['cw'] as String?,
+  localOnly: json['localOnly'] as bool?,
+  fileIds: (json['fileIds'] as List<dynamic>?)
+      ?.map((e) => e as String)
+      .toList(),
+  replyId: json['replyId'] as String?,
+  renoteId: json['renoteId'] as String?,
+  channelId: json['channelId'] as String?,
+  poll: json['poll'] == null
+      ? null
+      : NotesCreatePollRequest.fromJson(json['poll'] as Map<String, dynamic>),
+);
 
 Map<String, dynamic> _$NotesEditRequestToJson(_NotesEditRequest instance) =>
     <String, dynamic>{

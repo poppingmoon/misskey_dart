@@ -6,22 +6,12 @@ part of 'blocking.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_Blocking _$BlockingFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_Blocking', json, ($checkedConvert) {
-      final val = _Blocking(
-        id: $checkedConvert('id', (v) => v as String),
-        createdAt: $checkedConvert(
-          'createdAt',
-          (v) => const DateTimeConverter().fromJson(v as String),
-        ),
-        blockeeId: $checkedConvert('blockeeId', (v) => v as String),
-        blockee: $checkedConvert(
-          'blockee',
-          (v) => UserDetailedNotMe.fromJson(v as Map<String, dynamic>),
-        ),
-      );
-      return val;
-    });
+_Blocking _$BlockingFromJson(Map<String, dynamic> json) => _Blocking(
+  id: json['id'] as String,
+  createdAt: const DateTimeConverter().fromJson(json['createdAt'] as String),
+  blockeeId: json['blockeeId'] as String,
+  blockee: UserDetailedNotMe.fromJson(json['blockee'] as Map<String, dynamic>),
+);
 
 Map<String, dynamic> _$BlockingToJson(_Blocking instance) => <String, dynamic>{
   'id': instance.id,

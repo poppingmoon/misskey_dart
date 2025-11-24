@@ -6,31 +6,17 @@ part of 'following.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_Following _$FollowingFromJson(Map<String, dynamic> json) => $checkedCreate(
-  '_Following',
-  json,
-  ($checkedConvert) {
-    final val = _Following(
-      id: $checkedConvert('id', (v) => v as String),
-      createdAt: $checkedConvert(
-        'createdAt',
-        (v) => const DateTimeConverter().fromJson(v as String),
-      ),
-      followeeId: $checkedConvert('followeeId', (v) => v as String),
-      followerId: $checkedConvert('followerId', (v) => v as String),
-      followee: $checkedConvert(
-        'followee',
-        (v) =>
-            v == null ? null : UserDetailed.fromJson(v as Map<String, dynamic>),
-      ),
-      follower: $checkedConvert(
-        'follower',
-        (v) =>
-            v == null ? null : UserDetailed.fromJson(v as Map<String, dynamic>),
-      ),
-    );
-    return val;
-  },
+_Following _$FollowingFromJson(Map<String, dynamic> json) => _Following(
+  id: json['id'] as String,
+  createdAt: const DateTimeConverter().fromJson(json['createdAt'] as String),
+  followeeId: json['followeeId'] as String,
+  followerId: json['followerId'] as String,
+  followee: json['followee'] == null
+      ? null
+      : UserDetailed.fromJson(json['followee'] as Map<String, dynamic>),
+  follower: json['follower'] == null
+      ? null
+      : UserDetailed.fromJson(json['follower'] as Map<String, dynamic>),
 );
 
 Map<String, dynamic> _$FollowingToJson(_Following instance) =>

@@ -6,63 +6,33 @@ part of 'page.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_Page _$PageFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_Page', json, ($checkedConvert) {
-      final val = _Page(
-        id: $checkedConvert('id', (v) => v as String),
-        createdAt: $checkedConvert(
-          'createdAt',
-          (v) => const DateTimeConverter().fromJson(v as String),
-        ),
-        updatedAt: $checkedConvert(
-          'updatedAt',
-          (v) => const DateTimeConverter().fromJson(v as String),
-        ),
-        userId: $checkedConvert('userId', (v) => v as String),
-        user: $checkedConvert(
-          'user',
-          (v) => UserLite.fromJson(v as Map<String, dynamic>),
-        ),
-        content: $checkedConvert(
-          'content',
-          (v) => const ListPageContentConverter().fromJson(v as List?),
-        ),
-        variables: $checkedConvert(
-          'variables',
-          (v) => (v as List<dynamic>?)
-              ?.map((e) => e as Map<String, dynamic>)
-              .toList(),
-        ),
-        title: $checkedConvert('title', (v) => v as String),
-        name: $checkedConvert('name', (v) => v as String),
-        summary: $checkedConvert('summary', (v) => v as String?),
-        hideTitleWhenPinned: $checkedConvert(
-          'hideTitleWhenPinned',
-          (v) => v as bool?,
-        ),
-        alignCenter: $checkedConvert('alignCenter', (v) => v as bool?),
-        font: $checkedConvert('font', (v) => v as String?),
-        script: $checkedConvert('script', (v) => v as String?),
-        eyeCatchingImageId: $checkedConvert(
-          'eyeCatchingImageId',
-          (v) => v as String?,
-        ),
-        eyeCatchingImage: $checkedConvert(
-          'eyeCatchingImage',
-          (v) =>
-              v == null ? null : DriveFile.fromJson(v as Map<String, dynamic>),
-        ),
-        attachedFiles: $checkedConvert(
-          'attachedFiles',
-          (v) => (v as List<dynamic>?)
-              ?.map((e) => DriveFile.fromJson(e as Map<String, dynamic>))
-              .toList(),
-        ),
-        likedCount: $checkedConvert('likedCount', (v) => (v as num?)?.toInt()),
-        isLiked: $checkedConvert('isLiked', (v) => v as bool?),
-      );
-      return val;
-    });
+_Page _$PageFromJson(Map<String, dynamic> json) => _Page(
+  id: json['id'] as String,
+  createdAt: const DateTimeConverter().fromJson(json['createdAt'] as String),
+  updatedAt: const DateTimeConverter().fromJson(json['updatedAt'] as String),
+  userId: json['userId'] as String,
+  user: UserLite.fromJson(json['user'] as Map<String, dynamic>),
+  content: const ListPageContentConverter().fromJson(json['content'] as List?),
+  variables: (json['variables'] as List<dynamic>?)
+      ?.map((e) => e as Map<String, dynamic>)
+      .toList(),
+  title: json['title'] as String,
+  name: json['name'] as String,
+  summary: json['summary'] as String?,
+  hideTitleWhenPinned: json['hideTitleWhenPinned'] as bool?,
+  alignCenter: json['alignCenter'] as bool?,
+  font: json['font'] as String?,
+  script: json['script'] as String?,
+  eyeCatchingImageId: json['eyeCatchingImageId'] as String?,
+  eyeCatchingImage: json['eyeCatchingImage'] == null
+      ? null
+      : DriveFile.fromJson(json['eyeCatchingImage'] as Map<String, dynamic>),
+  attachedFiles: (json['attachedFiles'] as List<dynamic>?)
+      ?.map((e) => DriveFile.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  likedCount: (json['likedCount'] as num?)?.toInt(),
+  isLiked: json['isLiked'] as bool?,
+);
 
 Map<String, dynamic> _$PageToJson(_Page instance) => <String, dynamic>{
   'id': instance.id,
@@ -86,18 +56,11 @@ Map<String, dynamic> _$PageToJson(_Page instance) => <String, dynamic>{
   'isLiked': instance.isLiked,
 };
 
-_PageText _$PageTextFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_PageText', json, ($checkedConvert) {
-      final val = _PageText(
-        id: $checkedConvert('id', (v) => v as String?),
-        type: $checkedConvert(
-          'type',
-          (v) => $enumDecodeNullable(_$PageContentTypeEnumMap, v),
-        ),
-        text: $checkedConvert('text', (v) => v as String?),
-      );
-      return val;
-    });
+_PageText _$PageTextFromJson(Map<String, dynamic> json) => _PageText(
+  id: json['id'] as String?,
+  type: $enumDecodeNullable(_$PageContentTypeEnumMap, json['type']),
+  text: json['text'] as String?,
+);
 
 Map<String, dynamic> _$PageTextToJson(_PageText instance) => <String, dynamic>{
   'id': instance.id,
@@ -123,22 +86,14 @@ const _$PageContentTypeEnumMap = {
   PageContentType.post: 'post',
 };
 
-_PageSection _$PageSectionFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_PageSection', json, ($checkedConvert) {
-      final val = _PageSection(
-        id: $checkedConvert('id', (v) => v as String?),
-        type: $checkedConvert(
-          'type',
-          (v) => $enumDecodeNullable(_$PageContentTypeEnumMap, v),
-        ),
-        title: $checkedConvert('title', (v) => v as String?),
-        children: $checkedConvert(
-          'children',
-          (v) => const ListPageContentConverter().fromJson(v as List?),
-        ),
-      );
-      return val;
-    });
+_PageSection _$PageSectionFromJson(Map<String, dynamic> json) => _PageSection(
+  id: json['id'] as String?,
+  type: $enumDecodeNullable(_$PageContentTypeEnumMap, json['type']),
+  title: json['title'] as String?,
+  children: const ListPageContentConverter().fromJson(
+    json['children'] as List?,
+  ),
+);
 
 Map<String, dynamic> _$PageSectionToJson(
   _PageSection instance,
@@ -157,18 +112,11 @@ Json? _$JsonConverterToJson<Json, Value>(
   Json? Function(Value value) toJson,
 ) => value == null ? null : toJson(value);
 
-_PageImage _$PageImageFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_PageImage', json, ($checkedConvert) {
-      final val = _PageImage(
-        id: $checkedConvert('id', (v) => v as String?),
-        type: $checkedConvert(
-          'type',
-          (v) => $enumDecodeNullable(_$PageContentTypeEnumMap, v),
-        ),
-        fileId: $checkedConvert('fileId', (v) => v as String?),
-      );
-      return val;
-    });
+_PageImage _$PageImageFromJson(Map<String, dynamic> json) => _PageImage(
+  id: json['id'] as String?,
+  type: $enumDecodeNullable(_$PageContentTypeEnumMap, json['type']),
+  fileId: json['fileId'] as String?,
+);
 
 Map<String, dynamic> _$PageImageToJson(_PageImage instance) =>
     <String, dynamic>{
@@ -177,19 +125,12 @@ Map<String, dynamic> _$PageImageToJson(_PageImage instance) =>
       'fileId': instance.fileId,
     };
 
-_PageNote _$PageNoteFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_PageNote', json, ($checkedConvert) {
-      final val = _PageNote(
-        id: $checkedConvert('id', (v) => v as String?),
-        type: $checkedConvert(
-          'type',
-          (v) => $enumDecodeNullable(_$PageContentTypeEnumMap, v),
-        ),
-        note: $checkedConvert('note', (v) => v as String?),
-        detailed: $checkedConvert('detailed', (v) => v as bool?),
-      );
-      return val;
-    });
+_PageNote _$PageNoteFromJson(Map<String, dynamic> json) => _PageNote(
+  id: json['id'] as String?,
+  type: $enumDecodeNullable(_$PageContentTypeEnumMap, json['type']),
+  note: json['note'] as String?,
+  detailed: json['detailed'] as bool?,
+);
 
 Map<String, dynamic> _$PageNoteToJson(_PageNote instance) => <String, dynamic>{
   'id': instance.id,
@@ -198,21 +139,14 @@ Map<String, dynamic> _$PageNoteToJson(_PageNote instance) => <String, dynamic>{
   'detailed': instance.detailed,
 };
 
-_PageUnknown _$PageUnknownFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_PageUnknown', json, ($checkedConvert) {
-      final val = _PageUnknown(
-        id: $checkedConvert('id', (v) => v as String?),
-        type: $checkedConvert(
-          'type',
-          (v) => $enumDecodeNullable(
-            _$PageContentTypeEnumMap,
-            v,
-            unknownValue: JsonKey.nullForUndefinedEnumValue,
-          ),
-        ),
-      );
-      return val;
-    });
+_PageUnknown _$PageUnknownFromJson(Map<String, dynamic> json) => _PageUnknown(
+  id: json['id'] as String?,
+  type: $enumDecodeNullable(
+    _$PageContentTypeEnumMap,
+    json['type'],
+    unknownValue: JsonKey.nullForUndefinedEnumValue,
+  ),
+);
 
 Map<String, dynamic> _$PageUnknownToJson(_PageUnknown instance) =>
     <String, dynamic>{

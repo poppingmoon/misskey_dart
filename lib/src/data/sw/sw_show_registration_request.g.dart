@@ -8,12 +8,7 @@ part of 'sw_show_registration_request.dart';
 
 _SwShowRegistrationRequest _$SwShowRegistrationRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_SwShowRegistrationRequest', json, ($checkedConvert) {
-  final val = _SwShowRegistrationRequest(
-    endpoint: $checkedConvert('endpoint', (v) => v as String),
-  );
-  return val;
-});
+) => _SwShowRegistrationRequest(endpoint: json['endpoint'] as String);
 
 Map<String, dynamic> _$SwShowRegistrationRequestToJson(
   _SwShowRegistrationRequest instance,

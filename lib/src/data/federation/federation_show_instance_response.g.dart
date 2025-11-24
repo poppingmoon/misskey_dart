@@ -8,74 +8,50 @@ part of 'federation_show_instance_response.dart';
 
 _FederationShowInstanceResponse _$FederationShowInstanceResponseFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_FederationShowInstanceResponse', json, ($checkedConvert) {
-  final val = _FederationShowInstanceResponse(
-    id: $checkedConvert('id', (v) => v as String),
-    firstRetrievedAt: $checkedConvert(
-      'firstRetrievedAt',
-      (v) => const DateTimeConverter().fromJson(v as String),
-    ),
-    host: $checkedConvert('host', (v) => v as String),
-    usersCount: $checkedConvert('usersCount', (v) => (v as num?)?.toInt()),
-    notesCount: $checkedConvert('notesCount', (v) => (v as num?)?.toInt()),
-    followingCount: $checkedConvert(
-      'followingCount',
-      (v) => (v as num?)?.toInt(),
-    ),
-    followersCount: $checkedConvert(
-      'followersCount',
-      (v) => (v as num?)?.toInt(),
-    ),
-    isNotResponding: $checkedConvert('isNotResponding', (v) => v as bool),
-    isSuspended: $checkedConvert('isSuspended', (v) => v as bool),
-    suspensionState: $checkedConvert(
-      'suspensionState',
-      (v) => $enumDecodeNullable(
-        _$SuspensionStateEnumMap,
-        v,
-        unknownValue: JsonKey.nullForUndefinedEnumValue,
-      ),
-    ),
-    isBlocked: $checkedConvert('isBlocked', (v) => v as bool),
-    softwareName: $checkedConvert('softwareName', (v) => v as String?),
-    softwareVersion: $checkedConvert('softwareVersion', (v) => v as String?),
-    openRegistrations: $checkedConvert('openRegistrations', (v) => v as bool?),
-    name: $checkedConvert('name', (v) => v as String?),
-    description: $checkedConvert('description', (v) => v as String?),
-    maintainerName: $checkedConvert('maintainerName', (v) => v as String?),
-    maintainerEmail: $checkedConvert('maintainerEmail', (v) => v as String?),
-    isSilenced: $checkedConvert('isSilenced', (v) => v as bool?),
-    isMediaSilenced: $checkedConvert('isMediaSilenced', (v) => v as bool?),
-    iconUrl: $checkedConvert(
-      'iconUrl',
-      (v) => const NullableUriConverter().fromJson(v as String?),
-    ),
-    faviconUrl: $checkedConvert(
-      'faviconUrl',
-      (v) => const NullableUriConverter().fromJson(v as String?),
-    ),
-    themeColor: $checkedConvert(
-      'themeColor',
-      (v) => const NullableColorConverter().fromJson(v as String?),
-    ),
-    infoUpdatedAt: $checkedConvert(
-      'infoUpdatedAt',
-      (v) => _$JsonConverterFromJson<String, DateTime>(
-        v,
-        const DateTimeConverter().fromJson,
-      ),
-    ),
-    latestRequestReceivedAt: $checkedConvert(
-      'latestRequestReceivedAt',
-      (v) => _$JsonConverterFromJson<String, DateTime>(
-        v,
-        const DateTimeConverter().fromJson,
-      ),
-    ),
-    moderationNote: $checkedConvert('moderationNote', (v) => v as String?),
-  );
-  return val;
-});
+) => _FederationShowInstanceResponse(
+  id: json['id'] as String,
+  firstRetrievedAt: const DateTimeConverter().fromJson(
+    json['firstRetrievedAt'] as String,
+  ),
+  host: json['host'] as String,
+  usersCount: (json['usersCount'] as num?)?.toInt(),
+  notesCount: (json['notesCount'] as num?)?.toInt(),
+  followingCount: (json['followingCount'] as num?)?.toInt(),
+  followersCount: (json['followersCount'] as num?)?.toInt(),
+  isNotResponding: json['isNotResponding'] as bool,
+  isSuspended: json['isSuspended'] as bool,
+  suspensionState: $enumDecodeNullable(
+    _$SuspensionStateEnumMap,
+    json['suspensionState'],
+    unknownValue: JsonKey.nullForUndefinedEnumValue,
+  ),
+  isBlocked: json['isBlocked'] as bool,
+  softwareName: json['softwareName'] as String?,
+  softwareVersion: json['softwareVersion'] as String?,
+  openRegistrations: json['openRegistrations'] as bool?,
+  name: json['name'] as String?,
+  description: json['description'] as String?,
+  maintainerName: json['maintainerName'] as String?,
+  maintainerEmail: json['maintainerEmail'] as String?,
+  isSilenced: json['isSilenced'] as bool?,
+  isMediaSilenced: json['isMediaSilenced'] as bool?,
+  iconUrl: const NullableUriConverter().fromJson(json['iconUrl'] as String?),
+  faviconUrl: const NullableUriConverter().fromJson(
+    json['faviconUrl'] as String?,
+  ),
+  themeColor: const NullableColorConverter().fromJson(
+    json['themeColor'] as String?,
+  ),
+  infoUpdatedAt: _$JsonConverterFromJson<String, DateTime>(
+    json['infoUpdatedAt'],
+    const DateTimeConverter().fromJson,
+  ),
+  latestRequestReceivedAt: _$JsonConverterFromJson<String, DateTime>(
+    json['latestRequestReceivedAt'],
+    const DateTimeConverter().fromJson,
+  ),
+  moderationNote: json['moderationNote'] as String?,
+);
 
 Map<String, dynamic> _$FederationShowInstanceResponseToJson(
   _FederationShowInstanceResponse instance,

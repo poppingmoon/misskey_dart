@@ -8,12 +8,7 @@ part of 'antennas_delete_request.dart';
 
 _AntennasDeleteRequest _$AntennasDeleteRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_AntennasDeleteRequest', json, ($checkedConvert) {
-  final val = _AntennasDeleteRequest(
-    antennaId: $checkedConvert('antennaId', (v) => v as String),
-  );
-  return val;
-});
+) => _AntennasDeleteRequest(antennaId: json['antennaId'] as String);
 
 Map<String, dynamic> _$AntennasDeleteRequestToJson(
   _AntennasDeleteRequest instance,

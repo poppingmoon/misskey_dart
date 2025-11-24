@@ -6,86 +6,54 @@ part of 'note_draft.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_NoteDraft _$NoteDraftFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_NoteDraft', json, ($checkedConvert) {
-      final val = _NoteDraft(
-        id: $checkedConvert('id', (v) => v as String),
-        createdAt: $checkedConvert(
-          'createdAt',
-          (v) => const DateTimeConverter().fromJson(v as String),
-        ),
-        text: $checkedConvert('text', (v) => v as String?),
-        cw: $checkedConvert('cw', (v) => v as String?),
-        userId: $checkedConvert('userId', (v) => v as String),
-        user: $checkedConvert(
-          'user',
-          (v) => UserLite.fromJson(v as Map<String, dynamic>),
-        ),
-        replyId: $checkedConvert('replyId', (v) => v as String?),
-        renoteId: $checkedConvert('renoteId', (v) => v as String?),
-        reply: $checkedConvert(
-          'reply',
-          (v) => v == null ? null : Note.fromJson(v as Map<String, dynamic>),
-        ),
-        renote: $checkedConvert(
-          'renote',
-          (v) => v == null ? null : Note.fromJson(v as Map<String, dynamic>),
-        ),
-        visibility: $checkedConvert(
-          'visibility',
-          (v) => $enumDecodeNullable(
-            _$NoteVisibilityEnumMap,
-            v,
-            unknownValue: JsonKey.nullForUndefinedEnumValue,
-          ),
-        ),
-        visibleUserIds: $checkedConvert(
-          'visibleUserIds',
-          (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-        ),
-        fileIds: $checkedConvert(
-          'fileIds',
-          (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-        ),
-        files: $checkedConvert(
-          'files',
-          (v) => (v as List<dynamic>?)
-              ?.map((e) => DriveFile.fromJson(e as Map<String, dynamic>))
-              .toList(),
-        ),
-        hashtag: $checkedConvert('hashtag', (v) => v as String?),
-        poll: $checkedConvert(
-          'poll',
-          (v) => v == null
-              ? null
-              : NoteDraftPoll.fromJson(v as Map<String, dynamic>),
-        ),
-        channelId: $checkedConvert('channelId', (v) => v as String?),
-        channel: $checkedConvert(
-          'channel',
-          (v) => v == null
-              ? null
-              : NoteChannelInfo.fromJson(v as Map<String, dynamic>),
-        ),
-        localOnly: $checkedConvert('localOnly', (v) => v as bool?),
-        reactionAcceptance: $checkedConvert(
-          'reactionAcceptance',
-          (v) => $enumDecodeNullable(_$ReactionAcceptanceEnumMap, v),
-        ),
-        scheduledAt: $checkedConvert(
-          'scheduledAt',
-          (v) => _$JsonConverterFromJson<String, DateTime>(
-            v,
-            const DateTimeConverter().fromJson,
-          ),
-        ),
-        isActuallyScheduled: $checkedConvert(
-          'isActuallyScheduled',
-          (v) => v as bool?,
-        ),
-      );
-      return val;
-    });
+_NoteDraft _$NoteDraftFromJson(Map<String, dynamic> json) => _NoteDraft(
+  id: json['id'] as String,
+  createdAt: const DateTimeConverter().fromJson(json['createdAt'] as String),
+  text: json['text'] as String?,
+  cw: json['cw'] as String?,
+  userId: json['userId'] as String,
+  user: UserLite.fromJson(json['user'] as Map<String, dynamic>),
+  replyId: json['replyId'] as String?,
+  renoteId: json['renoteId'] as String?,
+  reply: json['reply'] == null
+      ? null
+      : Note.fromJson(json['reply'] as Map<String, dynamic>),
+  renote: json['renote'] == null
+      ? null
+      : Note.fromJson(json['renote'] as Map<String, dynamic>),
+  visibility: $enumDecodeNullable(
+    _$NoteVisibilityEnumMap,
+    json['visibility'],
+    unknownValue: JsonKey.nullForUndefinedEnumValue,
+  ),
+  visibleUserIds: (json['visibleUserIds'] as List<dynamic>?)
+      ?.map((e) => e as String)
+      .toList(),
+  fileIds: (json['fileIds'] as List<dynamic>?)
+      ?.map((e) => e as String)
+      .toList(),
+  files: (json['files'] as List<dynamic>?)
+      ?.map((e) => DriveFile.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  hashtag: json['hashtag'] as String?,
+  poll: json['poll'] == null
+      ? null
+      : NoteDraftPoll.fromJson(json['poll'] as Map<String, dynamic>),
+  channelId: json['channelId'] as String?,
+  channel: json['channel'] == null
+      ? null
+      : NoteChannelInfo.fromJson(json['channel'] as Map<String, dynamic>),
+  localOnly: json['localOnly'] as bool?,
+  reactionAcceptance: $enumDecodeNullable(
+    _$ReactionAcceptanceEnumMap,
+    json['reactionAcceptance'],
+  ),
+  scheduledAt: _$JsonConverterFromJson<String, DateTime>(
+    json['scheduledAt'],
+    const DateTimeConverter().fromJson,
+  ),
+  isActuallyScheduled: json['isActuallyScheduled'] as bool?,
+);
 
 Map<String, dynamic> _$NoteDraftToJson(_NoteDraft instance) =>
     <String, dynamic>{
@@ -143,30 +111,20 @@ Json? _$JsonConverterToJson<Json, Value>(
 ) => value == null ? null : toJson(value);
 
 _NoteDraftPoll _$NoteDraftPollFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_NoteDraftPoll', json, ($checkedConvert) {
-      final val = _NoteDraftPoll(
-        expiresAt: $checkedConvert(
-          'expiresAt',
-          (v) => _$JsonConverterFromJson<String, DateTime>(
-            v,
-            const DateTimeConverter().fromJson,
-          ),
-        ),
-        expiredAfter: $checkedConvert(
-          'expiredAfter',
-          (v) => _$JsonConverterFromJson<int, Duration>(
-            v,
-            const DurationConverter().fromJson,
-          ),
-        ),
-        multiple: $checkedConvert('multiple', (v) => v as bool),
-        choices: $checkedConvert(
-          'choices',
-          (v) => (v as List<dynamic>).map((e) => e as String).toList(),
-        ),
-      );
-      return val;
-    });
+    _NoteDraftPoll(
+      expiresAt: _$JsonConverterFromJson<String, DateTime>(
+        json['expiresAt'],
+        const DateTimeConverter().fromJson,
+      ),
+      expiredAfter: _$JsonConverterFromJson<int, Duration>(
+        json['expiredAfter'],
+        const DurationConverter().fromJson,
+      ),
+      multiple: json['multiple'] as bool,
+      choices: (json['choices'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+    );
 
 Map<String, dynamic> _$NoteDraftPollToJson(_NoteDraftPoll instance) =>
     <String, dynamic>{

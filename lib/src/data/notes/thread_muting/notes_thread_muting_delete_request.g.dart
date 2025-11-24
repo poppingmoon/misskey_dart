@@ -8,12 +8,7 @@ part of 'notes_thread_muting_delete_request.dart';
 
 _NotesThreadMutingDeleteRequest _$NotesThreadMutingDeleteRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_NotesThreadMutingDeleteRequest', json, ($checkedConvert) {
-  final val = _NotesThreadMutingDeleteRequest(
-    noteId: $checkedConvert('noteId', (v) => v as String),
-  );
-  return val;
-});
+) => _NotesThreadMutingDeleteRequest(noteId: json['noteId'] as String);
 
 Map<String, dynamic> _$NotesThreadMutingDeleteRequestToJson(
   _NotesThreadMutingDeleteRequest instance,

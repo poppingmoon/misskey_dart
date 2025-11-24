@@ -7,15 +7,12 @@ part of 'clips_notes_request.dart';
 // **************************************************************************
 
 _ClipsNotesRequest _$ClipsNotesRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_ClipsNotesRequest', json, ($checkedConvert) {
-      final val = _ClipsNotesRequest(
-        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-        clipId: $checkedConvert('clipId', (v) => v as String),
-        sinceId: $checkedConvert('sinceId', (v) => v as String?),
-        untilId: $checkedConvert('untilId', (v) => v as String?),
-      );
-      return val;
-    });
+    _ClipsNotesRequest(
+      limit: (json['limit'] as num?)?.toInt(),
+      clipId: json['clipId'] as String,
+      sinceId: json['sinceId'] as String?,
+      untilId: json['untilId'] as String?,
+    );
 
 Map<String, dynamic> _$ClipsNotesRequestToJson(_ClipsNotesRequest instance) =>
     <String, dynamic>{

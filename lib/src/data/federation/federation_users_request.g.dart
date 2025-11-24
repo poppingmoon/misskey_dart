@@ -8,15 +8,12 @@ part of 'federation_users_request.dart';
 
 _FederationUsersRequest _$FederationUsersRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_FederationUsersRequest', json, ($checkedConvert) {
-  final val = _FederationUsersRequest(
-    host: $checkedConvert('host', (v) => v as String),
-    sinceId: $checkedConvert('sinceId', (v) => v as String?),
-    untilId: $checkedConvert('untilId', (v) => v as String?),
-    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-  );
-  return val;
-});
+) => _FederationUsersRequest(
+  host: json['host'] as String,
+  sinceId: json['sinceId'] as String?,
+  untilId: json['untilId'] as String?,
+  limit: (json['limit'] as num?)?.toInt(),
+);
 
 Map<String, dynamic> _$FederationUsersRequestToJson(
   _FederationUsersRequest instance,

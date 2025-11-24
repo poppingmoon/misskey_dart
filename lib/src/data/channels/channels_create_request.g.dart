@@ -8,15 +8,12 @@ part of 'channels_create_request.dart';
 
 _ChannelsCreateRequest _$ChannelsCreateRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_ChannelsCreateRequest', json, ($checkedConvert) {
-  final val = _ChannelsCreateRequest(
-    name: $checkedConvert('name', (v) => v as String),
-    description: $checkedConvert('description', (v) => v as String?),
-    bannerId: $checkedConvert('bannerId', (v) => v as String?),
-    color: $checkedConvert('color', (v) => v as String?),
-  );
-  return val;
-});
+) => _ChannelsCreateRequest(
+  name: json['name'] as String,
+  description: json['description'] as String?,
+  bannerId: json['bannerId'] as String?,
+  color: json['color'] as String?,
+);
 
 Map<String, dynamic> _$ChannelsCreateRequestToJson(
   _ChannelsCreateRequest instance,

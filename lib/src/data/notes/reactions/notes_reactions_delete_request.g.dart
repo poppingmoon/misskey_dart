@@ -8,12 +8,7 @@ part of 'notes_reactions_delete_request.dart';
 
 _NotesReactionsDeleteRequest _$NotesReactionsDeleteRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_NotesReactionsDeleteRequest', json, ($checkedConvert) {
-  final val = _NotesReactionsDeleteRequest(
-    noteId: $checkedConvert('noteId', (v) => v as String),
-  );
-  return val;
-});
+) => _NotesReactionsDeleteRequest(noteId: json['noteId'] as String);
 
 Map<String, dynamic> _$NotesReactionsDeleteRequestToJson(
   _NotesReactionsDeleteRequest instance,

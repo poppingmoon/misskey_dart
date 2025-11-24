@@ -6,38 +6,22 @@ part of 'clip.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_Clip _$ClipFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_Clip', json, ($checkedConvert) {
-      final val = _Clip(
-        id: $checkedConvert('id', (v) => v as String),
-        createdAt: $checkedConvert(
-          'createdAt',
-          (v) => const DateTimeConverter().fromJson(v as String),
-        ),
-        lastClippedAt: $checkedConvert(
-          'lastClippedAt',
-          (v) => _$JsonConverterFromJson<String, DateTime?>(
-            v,
-            const NullableDateTimeConverter().fromJson,
-          ),
-        ),
-        userId: $checkedConvert('userId', (v) => v as String),
-        user: $checkedConvert(
-          'user',
-          (v) => UserLite.fromJson(v as Map<String, dynamic>),
-        ),
-        name: $checkedConvert('name', (v) => v as String?),
-        description: $checkedConvert('description', (v) => v as String?),
-        isPublic: $checkedConvert('isPublic', (v) => v as bool),
-        favoritedCount: $checkedConvert(
-          'favoritedCount',
-          (v) => (v as num?)?.toInt(),
-        ),
-        isFavorited: $checkedConvert('isFavorited', (v) => v as bool?),
-        notesCount: $checkedConvert('notesCount', (v) => (v as num?)?.toInt()),
-      );
-      return val;
-    });
+_Clip _$ClipFromJson(Map<String, dynamic> json) => _Clip(
+  id: json['id'] as String,
+  createdAt: const DateTimeConverter().fromJson(json['createdAt'] as String),
+  lastClippedAt: _$JsonConverterFromJson<String, DateTime?>(
+    json['lastClippedAt'],
+    const NullableDateTimeConverter().fromJson,
+  ),
+  userId: json['userId'] as String,
+  user: UserLite.fromJson(json['user'] as Map<String, dynamic>),
+  name: json['name'] as String?,
+  description: json['description'] as String?,
+  isPublic: json['isPublic'] as bool,
+  favoritedCount: (json['favoritedCount'] as num?)?.toInt(),
+  isFavorited: json['isFavorited'] as bool?,
+  notesCount: (json['notesCount'] as num?)?.toInt(),
+);
 
 Map<String, dynamic> _$ClipToJson(_Clip instance) => <String, dynamic>{
   'id': instance.id,

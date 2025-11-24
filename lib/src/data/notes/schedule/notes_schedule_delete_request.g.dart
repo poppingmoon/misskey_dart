@@ -8,12 +8,7 @@ part of 'notes_schedule_delete_request.dart';
 
 _NotesScheduleDeleteRequest _$NotesScheduleDeleteRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_NotesScheduleDeleteRequest', json, ($checkedConvert) {
-  final val = _NotesScheduleDeleteRequest(
-    noteId: $checkedConvert('noteId', (v) => v as String),
-  );
-  return val;
-});
+) => _NotesScheduleDeleteRequest(noteId: json['noteId'] as String);
 
 Map<String, dynamic> _$NotesScheduleDeleteRequestToJson(
   _NotesScheduleDeleteRequest instance,

@@ -8,12 +8,7 @@ part of 'following_delete_request.dart';
 
 _FollowingDeleteRequest _$FollowingDeleteRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_FollowingDeleteRequest', json, ($checkedConvert) {
-  final val = _FollowingDeleteRequest(
-    userId: $checkedConvert('userId', (v) => v as String),
-  );
-  return val;
-});
+) => _FollowingDeleteRequest(userId: json['userId'] as String);
 
 Map<String, dynamic> _$FollowingDeleteRequestToJson(
   _FollowingDeleteRequest instance,

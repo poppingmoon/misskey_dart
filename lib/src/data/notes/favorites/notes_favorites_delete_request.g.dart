@@ -8,12 +8,7 @@ part of 'notes_favorites_delete_request.dart';
 
 _NotesFavoritesDeleteRequest _$NotesFavoritesDeleteRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_NotesFavoritesDeleteRequest', json, ($checkedConvert) {
-  final val = _NotesFavoritesDeleteRequest(
-    noteId: $checkedConvert('noteId', (v) => v as String),
-  );
-  return val;
-});
+) => _NotesFavoritesDeleteRequest(noteId: json['noteId'] as String);
 
 Map<String, dynamic> _$NotesFavoritesDeleteRequestToJson(
   _NotesFavoritesDeleteRequest instance,

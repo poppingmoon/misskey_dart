@@ -6,158 +6,103 @@ part of 'meta_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_MetaResponse _$MetaResponseFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate('_MetaResponse', json, ($checkedConvert) {
-  final val = _MetaResponse(
-    maintainerName: $checkedConvert('maintainerName', (v) => v as String?),
-    maintainerEmail: $checkedConvert('maintainerEmail', (v) => v as String?),
-    version: $checkedConvert('version', (v) => v as String?),
-    providesTarball: $checkedConvert('providesTarball', (v) => v as bool?),
-    name: $checkedConvert('name', (v) => v as String?),
-    shortName: $checkedConvert('shortName', (v) => v as String?),
-    uri: $checkedConvert(
-      'uri',
-      (v) => const NullableUriConverter().fromJson(v as String?),
-    ),
-    description: $checkedConvert('description', (v) => v as String?),
-    langs: $checkedConvert(
-      'langs',
-      (v) =>
-          (v as List<dynamic>?)?.map((e) => e as String).toList() ?? const [],
-    ),
-    tosUrl: $checkedConvert(
-      'tosUrl',
-      (v) => const NullableUriConverter().fromJson(v as String?),
-    ),
-    repositoryUrl: $checkedConvert(
-      'repositoryUrl',
-      (v) => const NullableUriConverter().fromJson(v as String?),
-    ),
-    feedbackUrl: $checkedConvert('feedbackUrl', (v) => v as String?),
-    defaultDarkTheme: $checkedConvert('defaultDarkTheme', (v) => v as String?),
-    defaultLightTheme: $checkedConvert(
-      'defaultLightTheme',
-      (v) => v as String?,
-    ),
-    disableRegistration: $checkedConvert(
-      'disableRegistration',
-      (v) => v as bool?,
-    ),
-    emailRequiredForSignup: $checkedConvert(
-      'emailRequiredForSignup',
-      (v) => v as bool?,
-    ),
-    enableHcaptcha: $checkedConvert('enableHcaptcha', (v) => v as bool?),
-    hcaptchaSiteKey: $checkedConvert('hcaptchaSiteKey', (v) => v as String?),
-    enableMcaptcha: $checkedConvert('enableMcaptcha', (v) => v as bool?),
-    mcaptchaSiteKey: $checkedConvert('mcaptchaSiteKey', (v) => v as String?),
-    mcaptchaInstanceUrl: $checkedConvert(
-      'mcaptchaInstanceUrl',
-      (v) => const NullableUriConverter().fromJson(v as String?),
-    ),
-    enableRecaptcha: $checkedConvert('enableRecaptcha', (v) => v as bool?),
-    recaptchaSiteKey: $checkedConvert('recaptchaSiteKey', (v) => v as String?),
-    enableTurnstile: $checkedConvert('enableTurnstile', (v) => v as bool?),
-    turnstileSiteKey: $checkedConvert('turnstileSiteKey', (v) => v as String?),
-    swPublickey: $checkedConvert('swPublickey', (v) => v as String?),
-    themeColor: $checkedConvert('themeColor', (v) => v as String?),
-    mascotImageUrl: $checkedConvert(
-      'mascotImageUrl',
-      (v) => const NullableUriConverter().fromJson(v as String?),
-    ),
-    bannerUrl: $checkedConvert(
-      'bannerUrl',
-      (v) => const NullableUriConverter().fromJson(v as String?),
-    ),
-    infoImageUrl: $checkedConvert(
-      'infoImageUrl',
-      (v) => const NullableUriConverter().fromJson(v as String?),
-    ),
-    errorImageUrl: $checkedConvert(
-      'errorImageUrl',
-      (v) => const NullableUriConverter().fromJson(v as String?),
-    ),
-    serverErrorImageUrl: $checkedConvert(
-      'serverErrorImageUrl',
-      (v) => const NullableUriConverter().fromJson(v as String?),
-    ),
-    notFountImageUrl: $checkedConvert(
-      'notFountImageUrl',
-      (v) => const NullableUriConverter().fromJson(v as String?),
-    ),
-    iconUrl: $checkedConvert(
-      'iconUrl',
-      (v) => const NullableUriConverter().fromJson(v as String?),
-    ),
-    backgroundImageUrl: $checkedConvert(
-      'backgroundImageUrl',
-      (v) => const NullableUriConverter().fromJson(v as String?),
-    ),
-    logoImageUrl: $checkedConvert(
-      'logoImageUrl',
-      (v) => const NullableUriConverter().fromJson(v as String?),
-    ),
-    impressumUrl: $checkedConvert(
-      'impressumUrl',
-      (v) => const NullableUriConverter().fromJson(v as String?),
-    ),
-    privacyPolicyUrl: $checkedConvert(
-      'privacyPolicyUrl',
-      (v) => const NullableUriConverter().fromJson(v as String?),
-    ),
-    maxNoteTextLength: $checkedConvert(
-      'maxNoteTextLength',
-      (v) => (v as num?)?.toInt(),
-    ),
-    ads: $checkedConvert(
-      'ads',
-      (v) =>
-          (v as List<dynamic>?)
+_MetaResponse _$MetaResponseFromJson(Map<String, dynamic> json) =>
+    _MetaResponse(
+      maintainerName: json['maintainerName'] as String?,
+      maintainerEmail: json['maintainerEmail'] as String?,
+      version: json['version'] as String?,
+      providesTarball: json['providesTarball'] as bool?,
+      name: json['name'] as String?,
+      shortName: json['shortName'] as String?,
+      uri: const NullableUriConverter().fromJson(json['uri'] as String?),
+      description: json['description'] as String?,
+      langs:
+          (json['langs'] as List<dynamic>?)?.map((e) => e as String).toList() ??
+          const [],
+      tosUrl: const NullableUriConverter().fromJson(json['tosUrl'] as String?),
+      repositoryUrl: const NullableUriConverter().fromJson(
+        json['repositoryUrl'] as String?,
+      ),
+      feedbackUrl: json['feedbackUrl'] as String?,
+      defaultDarkTheme: json['defaultDarkTheme'] as String?,
+      defaultLightTheme: json['defaultLightTheme'] as String?,
+      disableRegistration: json['disableRegistration'] as bool?,
+      emailRequiredForSignup: json['emailRequiredForSignup'] as bool?,
+      enableHcaptcha: json['enableHcaptcha'] as bool?,
+      hcaptchaSiteKey: json['hcaptchaSiteKey'] as String?,
+      enableMcaptcha: json['enableMcaptcha'] as bool?,
+      mcaptchaSiteKey: json['mcaptchaSiteKey'] as String?,
+      mcaptchaInstanceUrl: const NullableUriConverter().fromJson(
+        json['mcaptchaInstanceUrl'] as String?,
+      ),
+      enableRecaptcha: json['enableRecaptcha'] as bool?,
+      recaptchaSiteKey: json['recaptchaSiteKey'] as String?,
+      enableTurnstile: json['enableTurnstile'] as bool?,
+      turnstileSiteKey: json['turnstileSiteKey'] as String?,
+      swPublickey: json['swPublickey'] as String?,
+      themeColor: json['themeColor'] as String?,
+      mascotImageUrl: const NullableUriConverter().fromJson(
+        json['mascotImageUrl'] as String?,
+      ),
+      bannerUrl: const NullableUriConverter().fromJson(
+        json['bannerUrl'] as String?,
+      ),
+      infoImageUrl: const NullableUriConverter().fromJson(
+        json['infoImageUrl'] as String?,
+      ),
+      errorImageUrl: const NullableUriConverter().fromJson(
+        json['errorImageUrl'] as String?,
+      ),
+      serverErrorImageUrl: const NullableUriConverter().fromJson(
+        json['serverErrorImageUrl'] as String?,
+      ),
+      notFountImageUrl: const NullableUriConverter().fromJson(
+        json['notFountImageUrl'] as String?,
+      ),
+      iconUrl: const NullableUriConverter().fromJson(
+        json['iconUrl'] as String?,
+      ),
+      backgroundImageUrl: const NullableUriConverter().fromJson(
+        json['backgroundImageUrl'] as String?,
+      ),
+      logoImageUrl: const NullableUriConverter().fromJson(
+        json['logoImageUrl'] as String?,
+      ),
+      impressumUrl: const NullableUriConverter().fromJson(
+        json['impressumUrl'] as String?,
+      ),
+      privacyPolicyUrl: const NullableUriConverter().fromJson(
+        json['privacyPolicyUrl'] as String?,
+      ),
+      maxNoteTextLength: (json['maxNoteTextLength'] as num?)?.toInt(),
+      ads:
+          (json['ads'] as List<dynamic>?)
               ?.map((e) => MetaAd.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const [],
-    ),
-    notesPerOneAd: $checkedConvert(
-      'notesPerOneAd',
-      (v) => (v as num?)?.toInt(),
-    ),
-    serverRules: $checkedConvert(
-      'serverRules',
-      (v) =>
-          (v as List<dynamic>?)?.map((e) => e as String).toList() ?? const [],
-    ),
-    policies: $checkedConvert(
-      'policies',
-      (v) =>
-          v == null ? null : UserPolicies.fromJson(v as Map<String, dynamic>),
-    ),
-    requireSetup: $checkedConvert('requireSetup', (v) => v as bool?),
-    enableEmail: $checkedConvert('enableEmail', (v) => v as bool?),
-    enableServiceWorker: $checkedConvert(
-      'enableServiceWorker',
-      (v) => v as bool?,
-    ),
-    translatorAvailable: $checkedConvert(
-      'translatorAvailable',
-      (v) => v as bool?,
-    ),
-    proxyAccountName: $checkedConvert('proxyAccountName', (v) => v as String?),
-    mediaProxy: $checkedConvert('mediaProxy', (v) => v as String?),
-    enableUrlPreview: $checkedConvert('enableUrlPreview', (v) => v as bool?),
-    enableSkebStatus: $checkedConvert('enableSkebStatus', (v) => v as bool?),
-    cacheRemoteFiles: $checkedConvert('cacheRemoteFiles', (v) => v as bool?),
-    cacheRemoteSensitiveFiles: $checkedConvert(
-      'cacheRemoteSensitiveFiles',
-      (v) => v as bool?,
-    ),
-    features: $checkedConvert(
-      'features',
-      (v) => v == null ? null : MetaFeature.fromJson(v as Map<String, dynamic>),
-    ),
-  );
-  return val;
-});
+      notesPerOneAd: (json['notesPerOneAd'] as num?)?.toInt(),
+      serverRules:
+          (json['serverRules'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList() ??
+          const [],
+      policies: json['policies'] == null
+          ? null
+          : UserPolicies.fromJson(json['policies'] as Map<String, dynamic>),
+      requireSetup: json['requireSetup'] as bool?,
+      enableEmail: json['enableEmail'] as bool?,
+      enableServiceWorker: json['enableServiceWorker'] as bool?,
+      translatorAvailable: json['translatorAvailable'] as bool?,
+      proxyAccountName: json['proxyAccountName'] as String?,
+      mediaProxy: json['mediaProxy'] as String?,
+      enableUrlPreview: json['enableUrlPreview'] as bool?,
+      enableSkebStatus: json['enableSkebStatus'] as bool?,
+      cacheRemoteFiles: json['cacheRemoteFiles'] as bool?,
+      cacheRemoteSensitiveFiles: json['cacheRemoteSensitiveFiles'] as bool?,
+      features: json['features'] == null
+          ? null
+          : MetaFeature.fromJson(json['features'] as Map<String, dynamic>),
+    );
 
 Map<String, dynamic> _$MetaResponseToJson(
   _MetaResponse instance,
@@ -230,23 +175,13 @@ Map<String, dynamic> _$MetaResponseToJson(
   'features': instance.features?.toJson(),
 };
 
-_MetaAd _$MetaAdFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_MetaAd', json, ($checkedConvert) {
-      final val = _MetaAd(
-        id: $checkedConvert('id', (v) => v as String),
-        place: $checkedConvert('place', (v) => v as String),
-        url: $checkedConvert(
-          'url',
-          (v) => const NullableUriConverter().fromJson(v as String?),
-        ),
-        imageUrl: $checkedConvert(
-          'imageUrl',
-          (v) => const NullableUriConverter().fromJson(v as String?),
-        ),
-        ratio: $checkedConvert('ratio', (v) => (v as num).toInt()),
-      );
-      return val;
-    });
+_MetaAd _$MetaAdFromJson(Map<String, dynamic> json) => _MetaAd(
+  id: json['id'] as String,
+  place: json['place'] as String,
+  url: const NullableUriConverter().fromJson(json['url'] as String?),
+  imageUrl: const NullableUriConverter().fromJson(json['imageUrl'] as String?),
+  ratio: (json['ratio'] as num).toInt(),
+);
 
 Map<String, dynamic> _$MetaAdToJson(_MetaAd instance) => <String, dynamic>{
   'id': instance.id,
@@ -256,23 +191,16 @@ Map<String, dynamic> _$MetaAdToJson(_MetaAd instance) => <String, dynamic>{
   'ratio': instance.ratio,
 };
 
-_MetaFeature _$MetaFeatureFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_MetaFeature', json, ($checkedConvert) {
-      final val = _MetaFeature(
-        registration: $checkedConvert('registration', (v) => v as bool?),
-        emailRequiredForSignup: $checkedConvert(
-          'emailRequiredForSignup',
-          (v) => v as bool?,
-        ),
-        hcaptcha: $checkedConvert('hcaptcha', (v) => v as bool?),
-        recaptcha: $checkedConvert('recaptcha', (v) => v as bool?),
-        turnstile: $checkedConvert('turnstile', (v) => v as bool?),
-        objectStorage: $checkedConvert('objectStorage', (v) => v as bool?),
-        serviceWorker: $checkedConvert('serviceWorker', (v) => v as bool?),
-        miauth: $checkedConvert('miauth', (v) => v as bool?),
-      );
-      return val;
-    });
+_MetaFeature _$MetaFeatureFromJson(Map<String, dynamic> json) => _MetaFeature(
+  registration: json['registration'] as bool?,
+  emailRequiredForSignup: json['emailRequiredForSignup'] as bool?,
+  hcaptcha: json['hcaptcha'] as bool?,
+  recaptcha: json['recaptcha'] as bool?,
+  turnstile: json['turnstile'] as bool?,
+  objectStorage: json['objectStorage'] as bool?,
+  serviceWorker: json['serviceWorker'] as bool?,
+  miauth: json['miauth'] as bool?,
+);
 
 Map<String, dynamic> _$MetaFeatureToJson(_MetaFeature instance) =>
     <String, dynamic>{

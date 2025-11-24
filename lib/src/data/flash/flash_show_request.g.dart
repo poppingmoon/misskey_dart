@@ -7,12 +7,7 @@ part of 'flash_show_request.dart';
 // **************************************************************************
 
 _FlashShowRequest _$FlashShowRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_FlashShowRequest', json, ($checkedConvert) {
-      final val = _FlashShowRequest(
-        flashId: $checkedConvert('flashId', (v) => v as String),
-      );
-      return val;
-    });
+    _FlashShowRequest(flashId: json['flashId'] as String);
 
 Map<String, dynamic> _$FlashShowRequestToJson(_FlashShowRequest instance) =>
     <String, dynamic>{'flashId': instance.flashId};

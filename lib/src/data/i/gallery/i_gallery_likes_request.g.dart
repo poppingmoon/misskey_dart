@@ -8,14 +8,11 @@ part of 'i_gallery_likes_request.dart';
 
 _IGalleryLikesRequest _$IGalleryLikesRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_IGalleryLikesRequest', json, ($checkedConvert) {
-  final val = _IGalleryLikesRequest(
-    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-    sinceId: $checkedConvert('sinceId', (v) => v as String?),
-    untilId: $checkedConvert('untilId', (v) => v as String?),
-  );
-  return val;
-});
+) => _IGalleryLikesRequest(
+  limit: (json['limit'] as num?)?.toInt(),
+  sinceId: json['sinceId'] as String?,
+  untilId: json['untilId'] as String?,
+);
 
 Map<String, dynamic> _$IGalleryLikesRequestToJson(
   _IGalleryLikesRequest instance,

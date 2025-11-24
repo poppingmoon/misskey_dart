@@ -7,32 +7,25 @@ part of 'emoji_response.dart';
 // **************************************************************************
 
 _EmojiResponse _$EmojiResponseFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_EmojiResponse', json, ($checkedConvert) {
-      final val = _EmojiResponse(
-        id: $checkedConvert('id', (v) => v as String),
-        aliases: $checkedConvert(
-          'aliases',
-          (v) =>
-              (v as List<dynamic>?)?.map((e) => e as String).toList() ??
-              const [],
-        ),
-        name: $checkedConvert('name', (v) => v as String),
-        category: $checkedConvert('category', (v) => v as String?),
-        host: $checkedConvert('host', (v) => v as String?),
-        url: $checkedConvert(
-          'url',
-          (v) => const NullableUriConverter().fromJson(v as String?),
-        ),
-        license: $checkedConvert('license', (v) => v as String?),
-        isSensitive: $checkedConvert('isSensitive', (v) => v as bool? ?? false),
-        localOnly: $checkedConvert('localOnly', (v) => v as bool? ?? false),
-        roleIdsThatCanBeUsedThisEmojiAsReaction: $checkedConvert(
-          'roleIdsThatCanBeUsedThisEmojiAsReaction',
-          (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-        ),
-      );
-      return val;
-    });
+    _EmojiResponse(
+      id: json['id'] as String,
+      aliases:
+          (json['aliases'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList() ??
+          const [],
+      name: json['name'] as String,
+      category: json['category'] as String?,
+      host: json['host'] as String?,
+      url: const NullableUriConverter().fromJson(json['url'] as String?),
+      license: json['license'] as String?,
+      isSensitive: json['isSensitive'] as bool? ?? false,
+      localOnly: json['localOnly'] as bool? ?? false,
+      roleIdsThatCanBeUsedThisEmojiAsReaction:
+          (json['roleIdsThatCanBeUsedThisEmojiAsReaction'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList(),
+    );
 
 Map<String, dynamic> _$EmojiResponseToJson(_EmojiResponse instance) =>
     <String, dynamic>{

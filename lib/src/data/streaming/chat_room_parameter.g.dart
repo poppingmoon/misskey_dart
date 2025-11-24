@@ -7,12 +7,7 @@ part of 'chat_room_parameter.dart';
 // **************************************************************************
 
 _ChatRoomParameter _$ChatRoomParameterFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_ChatRoomParameter', json, ($checkedConvert) {
-      final val = _ChatRoomParameter(
-        roomId: $checkedConvert('roomId', (v) => v as String),
-      );
-      return val;
-    });
+    _ChatRoomParameter(roomId: json['roomId'] as String);
 
 Map<String, dynamic> _$ChatRoomParameterToJson(_ChatRoomParameter instance) =>
     <String, dynamic>{'roomId': instance.roomId};

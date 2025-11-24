@@ -7,29 +7,17 @@ part of 'users_users_request.dart';
 // **************************************************************************
 
 _UsersUsersRequest _$UsersUsersRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_UsersUsersRequest', json, ($checkedConvert) {
-      final val = _UsersUsersRequest(
-        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-        offset: $checkedConvert('offset', (v) => (v as num?)?.toInt()),
-        sort: $checkedConvert(
-          'sort',
-          (v) => _$JsonConverterFromJson<String, UsersSortType>(
-            v,
-            const UsersSortConverter().fromJson,
-          ),
-        ),
-        state: $checkedConvert(
-          'state',
-          (v) => $enumDecodeNullable(_$UsersStateEnumMap, v),
-        ),
-        origin: $checkedConvert(
-          'origin',
-          (v) => $enumDecodeNullable(_$OriginEnumMap, v),
-        ),
-        hostname: $checkedConvert('hostname', (v) => v as String?),
-      );
-      return val;
-    });
+    _UsersUsersRequest(
+      limit: (json['limit'] as num?)?.toInt(),
+      offset: (json['offset'] as num?)?.toInt(),
+      sort: _$JsonConverterFromJson<String, UsersSortType>(
+        json['sort'],
+        const UsersSortConverter().fromJson,
+      ),
+      state: $enumDecodeNullable(_$UsersStateEnumMap, json['state']),
+      origin: $enumDecodeNullable(_$OriginEnumMap, json['origin']),
+      hostname: json['hostname'] as String?,
+    );
 
 Map<String, dynamic> _$UsersUsersRequestToJson(_UsersUsersRequest instance) =>
     <String, dynamic>{

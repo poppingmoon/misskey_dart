@@ -7,56 +7,40 @@ part of 'community_channel.dart';
 // **************************************************************************
 
 _CommunityChannel _$CommunityChannelFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_CommunityChannel', json, ($checkedConvert) {
-      final val = _CommunityChannel(
-        id: $checkedConvert('id', (v) => v as String),
-        createdAt: $checkedConvert(
-          'createdAt',
-          (v) => const DateTimeConverter().fromJson(v as String),
-        ),
-        lastNotedAt: $checkedConvert(
-          'lastNotedAt',
-          (v) => v == null ? null : DateTime.parse(v as String),
-        ),
-        name: $checkedConvert('name', (v) => v as String),
-        description: $checkedConvert('description', (v) => v as String?),
-        userId: $checkedConvert('userId', (v) => v as String?),
-        bannerUrl: $checkedConvert(
-          'bannerUrl',
-          (v) => const NullableUriConverter().fromJson(v as String?),
-        ),
-        pinnedNoteIds: $checkedConvert(
-          'pinnedNoteIds',
-          (v) =>
-              (v as List<dynamic>?)?.map((e) => e as String).toList() ??
-              const [],
-        ),
-        usersCount: $checkedConvert('usersCount', (v) => (v as num).toInt()),
-        notesCount: $checkedConvert('notesCount', (v) => (v as num).toInt()),
-        isSensitive: $checkedConvert('isSensitive', (v) => v as bool? ?? false),
-        isArchived: $checkedConvert('isArchived', (v) => v as bool? ?? false),
-        color: $checkedConvert(
-          'color',
-          (v) => const NullableColorConverter().fromJson(v as String?),
-        ),
-        isFollowing: $checkedConvert('isFollowing', (v) => v as bool?),
-        isFavorited: $checkedConvert('isFavorited', (v) => v as bool?),
-        hasUnreadNote: $checkedConvert('hasUnreadNote', (v) => v as bool?),
-        pinnedNotes: $checkedConvert(
-          'pinnedNotes',
-          (v) =>
-              (v as List<dynamic>?)
-                  ?.map((e) => Note.fromJson(e as Map<String, dynamic>))
-                  .toList() ??
-              const [],
-        ),
-        allowRenoteToExternal: $checkedConvert(
-          'allowRenoteToExternal',
-          (v) => v as bool? ?? true,
-        ),
-      );
-      return val;
-    });
+    _CommunityChannel(
+      id: json['id'] as String,
+      createdAt: const DateTimeConverter().fromJson(
+        json['createdAt'] as String,
+      ),
+      lastNotedAt: json['lastNotedAt'] == null
+          ? null
+          : DateTime.parse(json['lastNotedAt'] as String),
+      name: json['name'] as String,
+      description: json['description'] as String?,
+      userId: json['userId'] as String?,
+      bannerUrl: const NullableUriConverter().fromJson(
+        json['bannerUrl'] as String?,
+      ),
+      pinnedNoteIds:
+          (json['pinnedNoteIds'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList() ??
+          const [],
+      usersCount: (json['usersCount'] as num).toInt(),
+      notesCount: (json['notesCount'] as num).toInt(),
+      isSensitive: json['isSensitive'] as bool? ?? false,
+      isArchived: json['isArchived'] as bool? ?? false,
+      color: const NullableColorConverter().fromJson(json['color'] as String?),
+      isFollowing: json['isFollowing'] as bool?,
+      isFavorited: json['isFavorited'] as bool?,
+      hasUnreadNote: json['hasUnreadNote'] as bool?,
+      pinnedNotes:
+          (json['pinnedNotes'] as List<dynamic>?)
+              ?.map((e) => Note.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const [],
+      allowRenoteToExternal: json['allowRenoteToExternal'] as bool? ?? true,
+    );
 
 Map<String, dynamic> _$CommunityChannelToJson(_CommunityChannel instance) =>
     <String, dynamic>{

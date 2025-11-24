@@ -8,13 +8,10 @@ part of 'users_lists_pull_request.dart';
 
 _UsersListsPullRequest _$UsersListsPullRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_UsersListsPullRequest', json, ($checkedConvert) {
-  final val = _UsersListsPullRequest(
-    listId: $checkedConvert('listId', (v) => v as String),
-    userId: $checkedConvert('userId', (v) => v as String),
-  );
-  return val;
-});
+) => _UsersListsPullRequest(
+  listId: json['listId'] as String,
+  userId: json['userId'] as String,
+);
 
 Map<String, dynamic> _$UsersListsPullRequestToJson(
   _UsersListsPullRequest instance,

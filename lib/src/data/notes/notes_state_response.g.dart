@@ -7,14 +7,11 @@ part of 'notes_state_response.dart';
 // **************************************************************************
 
 _NotesStateResponse _$NotesStateResponseFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_NotesStateResponse', json, ($checkedConvert) {
-      final val = _NotesStateResponse(
-        isFavorited: $checkedConvert('isFavorited', (v) => v as bool),
-        isMutedThread: $checkedConvert('isMutedThread', (v) => v as bool),
-        isWatching: $checkedConvert('isWatching', (v) => v as bool?),
-      );
-      return val;
-    });
+    _NotesStateResponse(
+      isFavorited: json['isFavorited'] as bool,
+      isMutedThread: json['isMutedThread'] as bool,
+      isWatching: json['isWatching'] as bool?,
+    );
 
 Map<String, dynamic> _$NotesStateResponseToJson(_NotesStateResponse instance) =>
     <String, dynamic>{

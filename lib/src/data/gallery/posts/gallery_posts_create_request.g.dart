@@ -8,18 +8,12 @@ part of 'gallery_posts_create_request.dart';
 
 _GalleryPostsCreateRequest _$GalleryPostsCreateRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_GalleryPostsCreateRequest', json, ($checkedConvert) {
-  final val = _GalleryPostsCreateRequest(
-    title: $checkedConvert('title', (v) => v as String),
-    description: $checkedConvert('description', (v) => v as String?),
-    fileIds: $checkedConvert(
-      'fileIds',
-      (v) => (v as List<dynamic>).map((e) => e as String).toList(),
-    ),
-    isSensitive: $checkedConvert('isSensitive', (v) => v as bool?),
-  );
-  return val;
-});
+) => _GalleryPostsCreateRequest(
+  title: json['title'] as String,
+  description: json['description'] as String?,
+  fileIds: (json['fileIds'] as List<dynamic>).map((e) => e as String).toList(),
+  isSensitive: json['isSensitive'] as bool?,
+);
 
 Map<String, dynamic> _$GalleryPostsCreateRequestToJson(
   _GalleryPostsCreateRequest instance,

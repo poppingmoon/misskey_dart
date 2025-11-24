@@ -8,16 +8,12 @@ part of 'chat_messages_room_timeline_request.dart';
 
 _ChatMessagesRoomTimelineRequest _$ChatMessagesRoomTimelineRequestFromJson(
   Map<String, dynamic> json,
-) =>
-    $checkedCreate('_ChatMessagesRoomTimelineRequest', json, ($checkedConvert) {
-      final val = _ChatMessagesRoomTimelineRequest(
-        roomId: $checkedConvert('roomId', (v) => v as String),
-        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-        sinceId: $checkedConvert('sinceId', (v) => v as String?),
-        untilId: $checkedConvert('untilId', (v) => v as String?),
-      );
-      return val;
-    });
+) => _ChatMessagesRoomTimelineRequest(
+  roomId: json['roomId'] as String,
+  limit: (json['limit'] as num?)?.toInt(),
+  sinceId: json['sinceId'] as String?,
+  untilId: json['untilId'] as String?,
+);
 
 Map<String, dynamic> _$ChatMessagesRoomTimelineRequestToJson(
   _ChatMessagesRoomTimelineRequest instance,

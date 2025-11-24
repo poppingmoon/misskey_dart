@@ -8,13 +8,10 @@ part of 'users_recommendation_request.dart';
 
 _UsersRecommendationRequest _$UsersRecommendationRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_UsersRecommendationRequest', json, ($checkedConvert) {
-  final val = _UsersRecommendationRequest(
-    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-    offset: $checkedConvert('offset', (v) => (v as num?)?.toInt()),
-  );
-  return val;
-});
+) => _UsersRecommendationRequest(
+  limit: (json['limit'] as num?)?.toInt(),
+  offset: (json['offset'] as num?)?.toInt(),
+);
 
 Map<String, dynamic> _$UsersRecommendationRequestToJson(
   _UsersRecommendationRequest instance,

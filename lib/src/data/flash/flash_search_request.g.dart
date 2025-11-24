@@ -7,17 +7,14 @@ part of 'flash_search_request.dart';
 // **************************************************************************
 
 _FlashSearchRequest _$FlashSearchRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_FlashSearchRequest', json, ($checkedConvert) {
-      final val = _FlashSearchRequest(
-        query: $checkedConvert('query', (v) => v as String),
-        sinceId: $checkedConvert('sinceId', (v) => v as String?),
-        untilId: $checkedConvert('untilId', (v) => v as String?),
-        sinceDate: $checkedConvert('sinceDate', (v) => (v as num?)?.toInt()),
-        untilDate: $checkedConvert('untilDate', (v) => (v as num?)?.toInt()),
-        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-      );
-      return val;
-    });
+    _FlashSearchRequest(
+      query: json['query'] as String,
+      sinceId: json['sinceId'] as String?,
+      untilId: json['untilId'] as String?,
+      sinceDate: (json['sinceDate'] as num?)?.toInt(),
+      untilDate: (json['untilDate'] as num?)?.toInt(),
+      limit: (json['limit'] as num?)?.toInt(),
+    );
 
 Map<String, dynamic> _$FlashSearchRequestToJson(_FlashSearchRequest instance) =>
     <String, dynamic>{

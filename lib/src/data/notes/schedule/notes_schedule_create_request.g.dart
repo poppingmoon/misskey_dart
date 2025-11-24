@@ -8,58 +8,44 @@ part of 'notes_schedule_create_request.dart';
 
 _NotesScheduleCreateRequest _$NotesScheduleCreateRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_NotesScheduleCreateRequest', json, ($checkedConvert) {
-  final val = _NotesScheduleCreateRequest(
-    visibility: $checkedConvert(
-      'visibility',
-      (v) => $enumDecodeNullable(_$NoteVisibilityEnumMap, v),
-    ),
-    visibleUserIds: $checkedConvert(
-      'visibleUserIds',
-      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-    ),
-    cw: $checkedConvert('cw', (v) => v as String?),
-    reactionAcceptance: $checkedConvert(
-      'reactionAcceptance',
-      (v) => $enumDecodeNullable(_$ReactionAcceptanceEnumMap, v),
-    ),
-    disableRightClick: $checkedConvert('disableRightClick', (v) => v as bool?),
-    noExtractMentions: $checkedConvert('noExtractMentions', (v) => v as bool?),
-    noExtractHashtags: $checkedConvert('noExtractHashtags', (v) => v as bool?),
-    noExtractEmojis: $checkedConvert('noExtractEmojis', (v) => v as bool?),
-    replyId: $checkedConvert('replyId', (v) => v as String?),
-    renoteId: $checkedConvert('renoteId', (v) => v as String?),
-    text: $checkedConvert('text', (v) => v as String?),
-    fileIds: $checkedConvert(
-      'fileIds',
-      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-    ),
-    mediaIds: $checkedConvert(
-      'mediaIds',
-      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-    ),
-    channelId: $checkedConvert('channelId', (v) => v as String?),
-    localOnly: $checkedConvert('localOnly', (v) => v as bool?),
-    poll: $checkedConvert(
-      'poll',
-      (v) => v == null
-          ? null
-          : NotesCreatePollRequest.fromJson(v as Map<String, dynamic>),
-    ),
-    event: $checkedConvert('event', (v) => v as Map<String, dynamic>?),
-    scheduleNote: $checkedConvert(
-      'scheduleNote',
-      (v) => ScheduleNote.fromJson(v as Map<String, dynamic>),
-    ),
-    scheduledDelete: $checkedConvert(
-      'scheduledDelete',
-      (v) => v == null
-          ? null
-          : ScheduledDelete.fromJson(v as Map<String, dynamic>),
-    ),
-  );
-  return val;
-});
+) => _NotesScheduleCreateRequest(
+  visibility: $enumDecodeNullable(_$NoteVisibilityEnumMap, json['visibility']),
+  visibleUserIds: (json['visibleUserIds'] as List<dynamic>?)
+      ?.map((e) => e as String)
+      .toList(),
+  cw: json['cw'] as String?,
+  reactionAcceptance: $enumDecodeNullable(
+    _$ReactionAcceptanceEnumMap,
+    json['reactionAcceptance'],
+  ),
+  disableRightClick: json['disableRightClick'] as bool?,
+  noExtractMentions: json['noExtractMentions'] as bool?,
+  noExtractHashtags: json['noExtractHashtags'] as bool?,
+  noExtractEmojis: json['noExtractEmojis'] as bool?,
+  replyId: json['replyId'] as String?,
+  renoteId: json['renoteId'] as String?,
+  text: json['text'] as String?,
+  fileIds: (json['fileIds'] as List<dynamic>?)
+      ?.map((e) => e as String)
+      .toList(),
+  mediaIds: (json['mediaIds'] as List<dynamic>?)
+      ?.map((e) => e as String)
+      .toList(),
+  channelId: json['channelId'] as String?,
+  localOnly: json['localOnly'] as bool?,
+  poll: json['poll'] == null
+      ? null
+      : NotesCreatePollRequest.fromJson(json['poll'] as Map<String, dynamic>),
+  event: json['event'] as Map<String, dynamic>?,
+  scheduleNote: ScheduleNote.fromJson(
+    json['scheduleNote'] as Map<String, dynamic>,
+  ),
+  scheduledDelete: json['scheduledDelete'] == null
+      ? null
+      : ScheduledDelete.fromJson(
+          json['scheduledDelete'] as Map<String, dynamic>,
+        ),
+);
 
 Map<String, dynamic> _$NotesScheduleCreateRequestToJson(
   _NotesScheduleCreateRequest instance,
@@ -102,15 +88,11 @@ const _$ReactionAcceptanceEnumMap = {
 };
 
 _ScheduleNote _$ScheduleNoteFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_ScheduleNote', json, ($checkedConvert) {
-      final val = _ScheduleNote(
-        scheduledAt: $checkedConvert(
-          'scheduledAt',
-          (v) => const EpocTimeDateTimeConverter().fromJson((v as num).toInt()),
-        ),
-      );
-      return val;
-    });
+    _ScheduleNote(
+      scheduledAt: const EpocTimeDateTimeConverter().fromJson(
+        (json['scheduledAt'] as num).toInt(),
+      ),
+    );
 
 Map<String, dynamic> _$ScheduleNoteToJson(
   _ScheduleNote instance,
@@ -119,25 +101,16 @@ Map<String, dynamic> _$ScheduleNoteToJson(
 };
 
 _ScheduledDelete _$ScheduledDeleteFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_ScheduledDelete', json, ($checkedConvert) {
-      final val = _ScheduledDelete(
-        deleteAt: $checkedConvert(
-          'deleteAt',
-          (v) => _$JsonConverterFromJson<int, DateTime>(
-            v,
-            const EpocTimeDateTimeConverter().fromJson,
-          ),
-        ),
-        deleteAfter: $checkedConvert(
-          'deleteAfter',
-          (v) => _$JsonConverterFromJson<int, Duration>(
-            v,
-            const DurationConverter().fromJson,
-          ),
-        ),
-      );
-      return val;
-    });
+    _ScheduledDelete(
+      deleteAt: _$JsonConverterFromJson<int, DateTime>(
+        json['deleteAt'],
+        const EpocTimeDateTimeConverter().fromJson,
+      ),
+      deleteAfter: _$JsonConverterFromJson<int, Duration>(
+        json['deleteAfter'],
+        const DurationConverter().fromJson,
+      ),
+    );
 
 Map<String, dynamic> _$ScheduledDeleteToJson(_ScheduledDelete instance) =>
     <String, dynamic>{

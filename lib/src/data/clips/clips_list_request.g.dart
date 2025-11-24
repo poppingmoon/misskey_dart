@@ -7,28 +7,19 @@ part of 'clips_list_request.dart';
 // **************************************************************************
 
 _ClipsListRequest _$ClipsListRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_ClipsListRequest', json, ($checkedConvert) {
-      final val = _ClipsListRequest(
-        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-        sinceId: $checkedConvert('sinceId', (v) => v as String?),
-        untilId: $checkedConvert('untilId', (v) => v as String?),
-        sinceDate: $checkedConvert(
-          'sinceDate',
-          (v) => _$JsonConverterFromJson<int, DateTime>(
-            v,
-            const EpocTimeDateTimeConverter().fromJson,
-          ),
-        ),
-        untilDate: $checkedConvert(
-          'untilDate',
-          (v) => _$JsonConverterFromJson<int, DateTime>(
-            v,
-            const EpocTimeDateTimeConverter().fromJson,
-          ),
-        ),
-      );
-      return val;
-    });
+    _ClipsListRequest(
+      limit: (json['limit'] as num?)?.toInt(),
+      sinceId: json['sinceId'] as String?,
+      untilId: json['untilId'] as String?,
+      sinceDate: _$JsonConverterFromJson<int, DateTime>(
+        json['sinceDate'],
+        const EpocTimeDateTimeConverter().fromJson,
+      ),
+      untilDate: _$JsonConverterFromJson<int, DateTime>(
+        json['untilDate'],
+        const EpocTimeDateTimeConverter().fromJson,
+      ),
+    );
 
 Map<String, dynamic> _$ClipsListRequestToJson(_ClipsListRequest instance) =>
     <String, dynamic>{

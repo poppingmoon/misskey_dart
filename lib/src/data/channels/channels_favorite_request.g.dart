@@ -8,12 +8,7 @@ part of 'channels_favorite_request.dart';
 
 _ChannelsFavoriteRequest _$ChannelsFavoriteRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_ChannelsFavoriteRequest', json, ($checkedConvert) {
-  final val = _ChannelsFavoriteRequest(
-    channelId: $checkedConvert('channelId', (v) => v as String),
-  );
-  return val;
-});
+) => _ChannelsFavoriteRequest(channelId: json['channelId'] as String);
 
 Map<String, dynamic> _$ChannelsFavoriteRequestToJson(
   _ChannelsFavoriteRequest instance,

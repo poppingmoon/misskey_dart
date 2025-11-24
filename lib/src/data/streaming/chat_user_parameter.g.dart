@@ -7,12 +7,7 @@ part of 'chat_user_parameter.dart';
 // **************************************************************************
 
 _ChatUserParameter _$ChatUserParameterFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_ChatUserParameter', json, ($checkedConvert) {
-      final val = _ChatUserParameter(
-        otherId: $checkedConvert('otherId', (v) => v as String),
-      );
-      return val;
-    });
+    _ChatUserParameter(otherId: json['otherId'] as String);
 
 Map<String, dynamic> _$ChatUserParameterToJson(_ChatUserParameter instance) =>
     <String, dynamic>{'otherId': instance.otherId};

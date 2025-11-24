@@ -8,13 +8,10 @@ part of 'following_create_request.dart';
 
 _FollowingCreateRequest _$FollowingCreateRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_FollowingCreateRequest', json, ($checkedConvert) {
-  final val = _FollowingCreateRequest(
-    userId: $checkedConvert('userId', (v) => v as String),
-    withReplies: $checkedConvert('withReplies', (v) => v as bool?),
-  );
-  return val;
-});
+) => _FollowingCreateRequest(
+  userId: json['userId'] as String,
+  withReplies: json['withReplies'] as bool?,
+);
 
 Map<String, dynamic> _$FollowingCreateRequestToJson(
   _FollowingCreateRequest instance,

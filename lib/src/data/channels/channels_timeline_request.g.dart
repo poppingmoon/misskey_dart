@@ -8,30 +8,21 @@ part of 'channels_timeline_request.dart';
 
 _ChannelsTimelineRequest _$ChannelsTimelineRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_ChannelsTimelineRequest', json, ($checkedConvert) {
-  final val = _ChannelsTimelineRequest(
-    channelId: $checkedConvert('channelId', (v) => v as String),
-    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-    sinceId: $checkedConvert('sinceId', (v) => v as String?),
-    untilId: $checkedConvert('untilId', (v) => v as String?),
-    sinceDate: $checkedConvert(
-      'sinceDate',
-      (v) => _$JsonConverterFromJson<int, DateTime>(
-        v,
-        const EpocTimeDateTimeConverter().fromJson,
-      ),
-    ),
-    untilDate: $checkedConvert(
-      'untilDate',
-      (v) => _$JsonConverterFromJson<int, DateTime>(
-        v,
-        const EpocTimeDateTimeConverter().fromJson,
-      ),
-    ),
-    allowPartial: $checkedConvert('allowPartial', (v) => v as bool?),
-  );
-  return val;
-});
+) => _ChannelsTimelineRequest(
+  channelId: json['channelId'] as String,
+  limit: (json['limit'] as num?)?.toInt(),
+  sinceId: json['sinceId'] as String?,
+  untilId: json['untilId'] as String?,
+  sinceDate: _$JsonConverterFromJson<int, DateTime>(
+    json['sinceDate'],
+    const EpocTimeDateTimeConverter().fromJson,
+  ),
+  untilDate: _$JsonConverterFromJson<int, DateTime>(
+    json['untilDate'],
+    const EpocTimeDateTimeConverter().fromJson,
+  ),
+  allowPartial: json['allowPartial'] as bool?,
+);
 
 Map<String, dynamic> _$ChannelsTimelineRequestToJson(
   _ChannelsTimelineRequest instance,

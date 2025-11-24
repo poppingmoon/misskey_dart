@@ -6,29 +6,18 @@ part of 'chat_joinning.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ChatJoining _$ChatJoiningFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_ChatJoining', json, ($checkedConvert) {
-      final val = _ChatJoining(
-        id: $checkedConvert('id', (v) => v as String),
-        createdAt: $checkedConvert(
-          'createdAt',
-          (v) => const DateTimeConverter().fromJson(v as String),
-        ),
-        userId: $checkedConvert('userId', (v) => v as String),
-        user: $checkedConvert(
-          'user',
-          (v) =>
-              v == null ? null : UserLite.fromJson(v as Map<String, dynamic>),
-        ),
-        roomId: $checkedConvert('roomId', (v) => v as String),
-        room: $checkedConvert(
-          'room',
-          (v) =>
-              v == null ? null : ChatRoom.fromJson(v as Map<String, dynamic>),
-        ),
-      );
-      return val;
-    });
+_ChatJoining _$ChatJoiningFromJson(Map<String, dynamic> json) => _ChatJoining(
+  id: json['id'] as String,
+  createdAt: const DateTimeConverter().fromJson(json['createdAt'] as String),
+  userId: json['userId'] as String,
+  user: json['user'] == null
+      ? null
+      : UserLite.fromJson(json['user'] as Map<String, dynamic>),
+  roomId: json['roomId'] as String,
+  room: json['room'] == null
+      ? null
+      : ChatRoom.fromJson(json['room'] as Map<String, dynamic>),
+);
 
 Map<String, dynamic> _$ChatJoiningToJson(_ChatJoining instance) =>
     <String, dynamic>{

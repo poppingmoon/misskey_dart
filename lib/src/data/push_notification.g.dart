@@ -8,24 +8,15 @@ part of 'push_notification.dart';
 
 NotificationPushNotification _$NotificationPushNotificationFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('NotificationPushNotification', json, ($checkedConvert) {
-  final val = NotificationPushNotification(
-    body: $checkedConvert(
-      'body',
-      (v) => PushNotificationBody.fromJson(v as Map<String, dynamic>),
-    ),
-    userId: $checkedConvert('userId', (v) => v as String?),
-    dateTime: $checkedConvert(
-      'dateTime',
-      (v) => _$JsonConverterFromJson<int, DateTime>(
-        v,
-        const EpocTimeDateTimeConverter().fromJson,
-      ),
-    ),
-    $type: $checkedConvert('type', (v) => v as String?),
-  );
-  return val;
-}, fieldKeyMap: const {r'$type': 'type'});
+) => NotificationPushNotification(
+  body: PushNotificationBody.fromJson(json['body'] as Map<String, dynamic>),
+  userId: json['userId'] as String?,
+  dateTime: _$JsonConverterFromJson<int, DateTime>(
+    json['dateTime'],
+    const EpocTimeDateTimeConverter().fromJson,
+  ),
+  $type: json['type'] as String?,
+);
 
 Map<String, dynamic> _$NotificationPushNotificationToJson(
   NotificationPushNotification instance,
@@ -51,22 +42,14 @@ Json? _$JsonConverterToJson<Json, Value>(
 
 ReadAllNotificationsPushNotification
 _$ReadAllNotificationsPushNotificationFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('ReadAllNotificationsPushNotification', json, (
-      $checkedConvert,
-    ) {
-      final val = ReadAllNotificationsPushNotification(
-        userId: $checkedConvert('userId', (v) => v as String?),
-        dateTime: $checkedConvert(
-          'dateTime',
-          (v) => _$JsonConverterFromJson<int, DateTime>(
-            v,
-            const EpocTimeDateTimeConverter().fromJson,
-          ),
-        ),
-        $type: $checkedConvert('type', (v) => v as String?),
-      );
-      return val;
-    }, fieldKeyMap: const {r'$type': 'type'});
+    ReadAllNotificationsPushNotification(
+      userId: json['userId'] as String?,
+      dateTime: _$JsonConverterFromJson<int, DateTime>(
+        json['dateTime'],
+        const EpocTimeDateTimeConverter().fromJson,
+      ),
+      $type: json['type'] as String?,
+    );
 
 Map<String, dynamic> _$ReadAllNotificationsPushNotificationToJson(
   ReadAllNotificationsPushNotification instance,
@@ -81,24 +64,15 @@ Map<String, dynamic> _$ReadAllNotificationsPushNotificationToJson(
 
 NewChatMessagePushNotification _$NewChatMessagePushNotificationFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('NewChatMessagePushNotification', json, ($checkedConvert) {
-  final val = NewChatMessagePushNotification(
-    body: $checkedConvert(
-      'body',
-      (v) => ChatMessage.fromJson(v as Map<String, dynamic>),
-    ),
-    userId: $checkedConvert('userId', (v) => v as String?),
-    dateTime: $checkedConvert(
-      'dateTime',
-      (v) => _$JsonConverterFromJson<int, DateTime>(
-        v,
-        const EpocTimeDateTimeConverter().fromJson,
-      ),
-    ),
-    $type: $checkedConvert('type', (v) => v as String?),
-  );
-  return val;
-}, fieldKeyMap: const {r'$type': 'type'});
+) => NewChatMessagePushNotification(
+  body: ChatMessage.fromJson(json['body'] as Map<String, dynamic>),
+  userId: json['userId'] as String?,
+  dateTime: _$JsonConverterFromJson<int, DateTime>(
+    json['dateTime'],
+    const EpocTimeDateTimeConverter().fromJson,
+  ),
+  $type: json['type'] as String?,
+);
 
 Map<String, dynamic> _$NewChatMessagePushNotificationToJson(
   NewChatMessagePushNotification instance,
@@ -114,87 +88,54 @@ Map<String, dynamic> _$NewChatMessagePushNotificationToJson(
 
 _PushNotificationBody _$PushNotificationBodyFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_PushNotificationBody', json, ($checkedConvert) {
-  final val = _PushNotificationBody(
-    id: $checkedConvert('id', (v) => v as String),
-    createdAt: $checkedConvert(
-      'createdAt',
-      (v) => const DateTimeConverter().fromJson(v as String),
-    ),
-    type: $checkedConvert(
-      'type',
-      (v) => $enumDecodeNullable(
-        _$NotificationTypeEnumMap,
-        v,
-        unknownValue: JsonKey.nullForUndefinedEnumValue,
-      ),
-    ),
-    noteId: $checkedConvert('noteId', (v) => v as String?),
-    followRequestId: $checkedConvert('followRequestId', (v) => v as String?),
-    reaction: $checkedConvert('reaction', (v) => v as String?),
-    choice: $checkedConvert('choice', (v) => (v as num?)?.toInt()),
-    achievement: $checkedConvert('achievement', (v) => v as String?),
-    body: $checkedConvert('body', (v) => v as String?),
-    header: $checkedConvert('header', (v) => v as String?),
-    icon: $checkedConvert(
-      'icon',
-      (v) => const NullableUriConverter().fromJson(v as String?),
-    ),
-    appAccessTokenId: $checkedConvert('appAccessTokenId', (v) => v as String?),
-    invitation: $checkedConvert(
-      'invitation',
-      (v) => v == null ? null : ChatJoining.fromJson(v as Map<String, dynamic>),
-    ),
-    userId: $checkedConvert('userId', (v) => v as String?),
-    user: $checkedConvert(
-      'user',
-      (v) => v == null ? null : UserLite.fromJson(v as Map<String, dynamic>),
-    ),
-    note: $checkedConvert(
-      'note',
-      (v) => v == null
-          ? null
-          : PushNotificationNote.fromJson(v as Map<String, dynamic>),
-    ),
-    role: $checkedConvert(
-      'role',
-      (v) => v == null
-          ? null
-          : RolesListResponse.fromJson(v as Map<String, dynamic>),
-    ),
-    reactions: $checkedConvert(
-      'reactions',
-      (v) => (v as List<dynamic>?)
-          ?.map(
-            (e) => INotificationsReaction.fromJson(e as Map<String, dynamic>),
-          )
-          .toList(),
-    ),
-    users: $checkedConvert(
-      'users',
-      (v) => (v as List<dynamic>?)
-          ?.map((e) => UserLite.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    ),
-    exportedEntity: $checkedConvert(
-      'exportedEntity',
-      (v) => $enumDecodeNullable(
-        _$UserExportableEntitiesEnumMap,
-        v,
-        unknownValue: JsonKey.nullForUndefinedEnumValue,
-      ),
-    ),
-    fileId: $checkedConvert('fileId', (v) => v as String?),
-    message: $checkedConvert('message', (v) => v as String?),
-    errorType: $checkedConvert('errorType', (v) => v as String?),
-    draft: $checkedConvert(
-      'draft',
-      (v) =>
-          v == null ? null : ScheduledNote.fromJson(v as Map<String, dynamic>),
-    ),
-  );
-  return val;
-});
+) => _PushNotificationBody(
+  id: json['id'] as String,
+  createdAt: const DateTimeConverter().fromJson(json['createdAt'] as String),
+  type: $enumDecodeNullable(
+    _$NotificationTypeEnumMap,
+    json['type'],
+    unknownValue: JsonKey.nullForUndefinedEnumValue,
+  ),
+  noteId: json['noteId'] as String?,
+  followRequestId: json['followRequestId'] as String?,
+  reaction: json['reaction'] as String?,
+  choice: (json['choice'] as num?)?.toInt(),
+  achievement: json['achievement'] as String?,
+  body: json['body'] as String?,
+  header: json['header'] as String?,
+  icon: const NullableUriConverter().fromJson(json['icon'] as String?),
+  appAccessTokenId: json['appAccessTokenId'] as String?,
+  invitation: json['invitation'] == null
+      ? null
+      : ChatJoining.fromJson(json['invitation'] as Map<String, dynamic>),
+  userId: json['userId'] as String?,
+  user: json['user'] == null
+      ? null
+      : UserLite.fromJson(json['user'] as Map<String, dynamic>),
+  note: json['note'] == null
+      ? null
+      : PushNotificationNote.fromJson(json['note'] as Map<String, dynamic>),
+  role: json['role'] == null
+      ? null
+      : RolesListResponse.fromJson(json['role'] as Map<String, dynamic>),
+  reactions: (json['reactions'] as List<dynamic>?)
+      ?.map((e) => INotificationsReaction.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  users: (json['users'] as List<dynamic>?)
+      ?.map((e) => UserLite.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  exportedEntity: $enumDecodeNullable(
+    _$UserExportableEntitiesEnumMap,
+    json['exportedEntity'],
+    unknownValue: JsonKey.nullForUndefinedEnumValue,
+  ),
+  fileId: json['fileId'] as String?,
+  message: json['message'] as String?,
+  errorType: json['errorType'] as String?,
+  draft: json['draft'] == null
+      ? null
+      : ScheduledNote.fromJson(json['draft'] as Map<String, dynamic>),
+);
 
 Map<String, dynamic> _$PushNotificationBodyToJson(
   _PushNotificationBody instance,
@@ -271,121 +212,75 @@ const _$UserExportableEntitiesEnumMap = {
 
 _PushNotificationNote _$PushNotificationNoteFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_PushNotificationNote', json, ($checkedConvert) {
-  final val = _PushNotificationNote(
-    id: $checkedConvert('id', (v) => v as String),
-    createdAt: $checkedConvert(
-      'createdAt',
-      (v) => const DateTimeConverter().fromJson(v as String),
-    ),
-    updatedAt: $checkedConvert(
-      'updatedAt',
-      (v) => _$JsonConverterFromJson<String, DateTime?>(
-        v,
-        const NullableDateTimeConverter().fromJson,
-      ),
-    ),
-    text: $checkedConvert('text', (v) => v as String?),
-    userId: $checkedConvert('userId', (v) => v as String),
-    visibility: $checkedConvert(
-      'visibility',
-      (v) => $enumDecodeNullable(
-        _$NoteVisibilityEnumMap,
-        v,
-        unknownValue: JsonKey.nullForUndefinedEnumValue,
-      ),
-    ),
-    localOnly: $checkedConvert('localOnly', (v) => v as bool? ?? false),
-    renoteCount: $checkedConvert(
-      'renoteCount',
-      (v) => (v as num?)?.toInt() ?? 0,
-    ),
-    repliesCount: $checkedConvert(
-      'repliesCount',
-      (v) => (v as num?)?.toInt() ?? 0,
-    ),
-    reactionCount: $checkedConvert(
-      'reactionCount',
-      (v) => (v as num?)?.toInt(),
-    ),
-    reactions: $checkedConvert(
-      'reactions',
-      (v) =>
-          (v as Map<String, dynamic>?)?.map(
-            (k, e) => MapEntry(k, (e as num).toInt()),
-          ) ??
-          const {},
-    ),
-    reactionEmojis: $checkedConvert(
-      'reactionEmojis',
-      (v) => v == null ? const {} : const EmojisConverter().fromJson(v),
-    ),
-    emojis: $checkedConvert(
-      'emojis',
-      (v) => v == null ? const {} : const EmojisConverter().fromJson(v),
-    ),
-    fileIds: $checkedConvert(
-      'fileIds',
-      (v) =>
-          (v as List<dynamic>?)?.map((e) => e as String).toList() ?? const [],
-    ),
-    files: $checkedConvert(
-      'files',
-      (v) =>
-          (v as List<dynamic>?)
-              ?.map((e) => DriveFile.fromJson(e as Map<String, dynamic>))
-              .toList() ??
-          const [],
-    ),
-    replyId: $checkedConvert('replyId', (v) => v as String?),
-    renoteId: $checkedConvert('renoteId', (v) => v as String?),
-    channelId: $checkedConvert('channelId', (v) => v as String?),
-    reactionAcceptance: $checkedConvert(
-      'reactionAcceptance',
-      (v) => $enumDecodeNullable(
-        _$ReactionAcceptanceEnumMap,
-        v,
-        unknownValue: JsonKey.nullForUndefinedEnumValue,
-      ),
-    ),
-    visibleUserIds: $checkedConvert(
-      'visibleUserIds',
-      (v) =>
-          (v as List<dynamic>?)?.map((e) => e as String).toList() ?? const [],
-    ),
-    mentions: $checkedConvert(
-      'mentions',
-      (v) =>
-          (v as List<dynamic>?)?.map((e) => e as String).toList() ?? const [],
-    ),
-    myReaction: $checkedConvert('myReaction', (v) => v as String?),
-    channel: $checkedConvert(
-      'channel',
-      (v) => v == null
-          ? null
-          : NoteChannelInfo.fromJson(v as Map<String, dynamic>),
-    ),
-    uri: $checkedConvert(
-      'uri',
-      (v) => const NullableUriConverter().fromJson(v as String?),
-    ),
-    url: $checkedConvert(
-      'url',
-      (v) => const NullableUriConverter().fromJson(v as String?),
-    ),
-    reactionAndUserPairCache: $checkedConvert(
-      'reactionAndUserPairCache',
-      (v) =>
-          (v as List<dynamic>?)?.map((e) => e as String).toList() ?? const [],
-    ),
-    poll: $checkedConvert(
-      'poll',
-      (v) => v == null ? null : NotePoll.fromJson(v as Map<String, dynamic>),
-    ),
-    clippedCount: $checkedConvert('clippedCount', (v) => (v as num?)?.toInt()),
-  );
-  return val;
-});
+) => _PushNotificationNote(
+  id: json['id'] as String,
+  createdAt: const DateTimeConverter().fromJson(json['createdAt'] as String),
+  updatedAt: _$JsonConverterFromJson<String, DateTime?>(
+    json['updatedAt'],
+    const NullableDateTimeConverter().fromJson,
+  ),
+  text: json['text'] as String?,
+  userId: json['userId'] as String,
+  visibility: $enumDecodeNullable(
+    _$NoteVisibilityEnumMap,
+    json['visibility'],
+    unknownValue: JsonKey.nullForUndefinedEnumValue,
+  ),
+  localOnly: json['localOnly'] as bool? ?? false,
+  renoteCount: (json['renoteCount'] as num?)?.toInt() ?? 0,
+  repliesCount: (json['repliesCount'] as num?)?.toInt() ?? 0,
+  reactionCount: (json['reactionCount'] as num?)?.toInt(),
+  reactions:
+      (json['reactions'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(k, (e as num).toInt()),
+      ) ??
+      const {},
+  reactionEmojis: json['reactionEmojis'] == null
+      ? const {}
+      : const EmojisConverter().fromJson(json['reactionEmojis']),
+  emojis: json['emojis'] == null
+      ? const {}
+      : const EmojisConverter().fromJson(json['emojis']),
+  fileIds:
+      (json['fileIds'] as List<dynamic>?)?.map((e) => e as String).toList() ??
+      const [],
+  files:
+      (json['files'] as List<dynamic>?)
+          ?.map((e) => DriveFile.fromJson(e as Map<String, dynamic>))
+          .toList() ??
+      const [],
+  replyId: json['replyId'] as String?,
+  renoteId: json['renoteId'] as String?,
+  channelId: json['channelId'] as String?,
+  reactionAcceptance: $enumDecodeNullable(
+    _$ReactionAcceptanceEnumMap,
+    json['reactionAcceptance'],
+    unknownValue: JsonKey.nullForUndefinedEnumValue,
+  ),
+  visibleUserIds:
+      (json['visibleUserIds'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList() ??
+      const [],
+  mentions:
+      (json['mentions'] as List<dynamic>?)?.map((e) => e as String).toList() ??
+      const [],
+  myReaction: json['myReaction'] as String?,
+  channel: json['channel'] == null
+      ? null
+      : NoteChannelInfo.fromJson(json['channel'] as Map<String, dynamic>),
+  uri: const NullableUriConverter().fromJson(json['uri'] as String?),
+  url: const NullableUriConverter().fromJson(json['url'] as String?),
+  reactionAndUserPairCache:
+      (json['reactionAndUserPairCache'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList() ??
+      const [],
+  poll: json['poll'] == null
+      ? null
+      : NotePoll.fromJson(json['poll'] as Map<String, dynamic>),
+  clippedCount: (json['clippedCount'] as num?)?.toInt(),
+);
 
 Map<String, dynamic> _$PushNotificationNoteToJson(
   _PushNotificationNote instance,

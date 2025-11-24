@@ -7,12 +7,7 @@ part of 'i_unpin_request.dart';
 // **************************************************************************
 
 _IUnpinRequest _$IUnpinRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_IUnpinRequest', json, ($checkedConvert) {
-      final val = _IUnpinRequest(
-        noteId: $checkedConvert('noteId', (v) => v as String),
-      );
-      return val;
-    });
+    _IUnpinRequest(noteId: json['noteId'] as String);
 
 Map<String, dynamic> _$IUnpinRequestToJson(_IUnpinRequest instance) =>
     <String, dynamic>{'noteId': instance.noteId};

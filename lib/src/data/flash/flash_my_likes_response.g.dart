@@ -8,16 +8,10 @@ part of 'flash_my_likes_response.dart';
 
 _FlashMyLikesResponse _$FlashMyLikesResponseFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_FlashMyLikesResponse', json, ($checkedConvert) {
-  final val = _FlashMyLikesResponse(
-    id: $checkedConvert('id', (v) => v as String),
-    flash: $checkedConvert(
-      'flash',
-      (v) => Flash.fromJson(v as Map<String, dynamic>),
-    ),
-  );
-  return val;
-});
+) => _FlashMyLikesResponse(
+  id: json['id'] as String,
+  flash: Flash.fromJson(json['flash'] as Map<String, dynamic>),
+);
 
 Map<String, dynamic> _$FlashMyLikesResponseToJson(
   _FlashMyLikesResponse instance,

@@ -8,37 +8,27 @@ part of 'notes_local_timeline_request.dart';
 
 _NotesLocalTimelineRequest _$NotesLocalTimelineRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_NotesLocalTimelineRequest', json, ($checkedConvert) {
-  final val = _NotesLocalTimelineRequest(
-    withFiles: $checkedConvert('withFiles', (v) => v as bool?),
-    withRenotes: $checkedConvert('withRenotes', (v) => v as bool?),
-    withReplies: $checkedConvert('withReplies', (v) => v as bool?),
-    fileType: $checkedConvert(
-      'fileType',
-      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-    ),
-    excludeNsfw: $checkedConvert('excludeNsfw', (v) => v as bool?),
-    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-    sinceId: $checkedConvert('sinceId', (v) => v as String?),
-    untilId: $checkedConvert('untilId', (v) => v as String?),
-    sinceDate: $checkedConvert(
-      'sinceDate',
-      (v) => _$JsonConverterFromJson<int, DateTime>(
-        v,
-        const EpocTimeDateTimeConverter().fromJson,
-      ),
-    ),
-    untilDate: $checkedConvert(
-      'untilDate',
-      (v) => _$JsonConverterFromJson<int, DateTime>(
-        v,
-        const EpocTimeDateTimeConverter().fromJson,
-      ),
-    ),
-    allowPartial: $checkedConvert('allowPartial', (v) => v as bool?),
-  );
-  return val;
-});
+) => _NotesLocalTimelineRequest(
+  withFiles: json['withFiles'] as bool?,
+  withRenotes: json['withRenotes'] as bool?,
+  withReplies: json['withReplies'] as bool?,
+  fileType: (json['fileType'] as List<dynamic>?)
+      ?.map((e) => e as String)
+      .toList(),
+  excludeNsfw: json['excludeNsfw'] as bool?,
+  limit: (json['limit'] as num?)?.toInt(),
+  sinceId: json['sinceId'] as String?,
+  untilId: json['untilId'] as String?,
+  sinceDate: _$JsonConverterFromJson<int, DateTime>(
+    json['sinceDate'],
+    const EpocTimeDateTimeConverter().fromJson,
+  ),
+  untilDate: _$JsonConverterFromJson<int, DateTime>(
+    json['untilDate'],
+    const EpocTimeDateTimeConverter().fromJson,
+  ),
+  allowPartial: json['allowPartial'] as bool?,
+);
 
 Map<String, dynamic> _$NotesLocalTimelineRequestToJson(
   _NotesLocalTimelineRequest instance,

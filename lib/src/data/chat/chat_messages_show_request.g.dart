@@ -8,12 +8,7 @@ part of 'chat_messages_show_request.dart';
 
 _ChatMessagesShowRequest _$ChatMessagesShowRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_ChatMessagesShowRequest', json, ($checkedConvert) {
-  final val = _ChatMessagesShowRequest(
-    messageId: $checkedConvert('messageId', (v) => v as String),
-  );
-  return val;
-});
+) => _ChatMessagesShowRequest(messageId: json['messageId'] as String);
 
 Map<String, dynamic> _$ChatMessagesShowRequestToJson(
   _ChatMessagesShowRequest instance,

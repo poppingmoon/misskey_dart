@@ -8,12 +8,7 @@ part of 'notes_scheduled_cancel_request.dart';
 
 _NotesScheduledCancelRequest _$NotesScheduledCancelRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_NotesScheduledCancelRequest', json, ($checkedConvert) {
-  final val = _NotesScheduledCancelRequest(
-    draftId: $checkedConvert('draftId', (v) => v as String),
-  );
-  return val;
-});
+) => _NotesScheduledCancelRequest(draftId: json['draftId'] as String);
 
 Map<String, dynamic> _$NotesScheduledCancelRequestToJson(
   _NotesScheduledCancelRequest instance,

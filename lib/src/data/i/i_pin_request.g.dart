@@ -7,12 +7,7 @@ part of 'i_pin_request.dart';
 // **************************************************************************
 
 _IPinRequest _$IPinRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_IPinRequest', json, ($checkedConvert) {
-      final val = _IPinRequest(
-        noteId: $checkedConvert('noteId', (v) => v as String),
-      );
-      return val;
-    });
+    _IPinRequest(noteId: json['noteId'] as String);
 
 Map<String, dynamic> _$IPinRequestToJson(_IPinRequest instance) =>
     <String, dynamic>{'noteId': instance.noteId};

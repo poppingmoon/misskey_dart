@@ -7,19 +7,16 @@ part of 'notes_request.dart';
 // **************************************************************************
 
 _NotesRequest _$NotesRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_NotesRequest', json, ($checkedConvert) {
-      final val = _NotesRequest(
-        local: $checkedConvert('local', (v) => v as bool?),
-        reply: $checkedConvert('reply', (v) => v as bool?),
-        renote: $checkedConvert('renote', (v) => v as bool?),
-        withFiles: $checkedConvert('withFiles', (v) => v as bool?),
-        poll: $checkedConvert('poll', (v) => v as bool?),
-        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-        sinceId: $checkedConvert('sinceId', (v) => v as String?),
-        untilId: $checkedConvert('untilId', (v) => v as String?),
-      );
-      return val;
-    });
+    _NotesRequest(
+      local: json['local'] as bool?,
+      reply: json['reply'] as bool?,
+      renote: json['renote'] as bool?,
+      withFiles: json['withFiles'] as bool?,
+      poll: json['poll'] as bool?,
+      limit: (json['limit'] as num?)?.toInt(),
+      sinceId: json['sinceId'] as String?,
+      untilId: json['untilId'] as String?,
+    );
 
 Map<String, dynamic> _$NotesRequestToJson(_NotesRequest instance) =>
     <String, dynamic>{

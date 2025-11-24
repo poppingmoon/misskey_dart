@@ -7,19 +7,13 @@ part of 'mute_create_request.dart';
 // **************************************************************************
 
 _MuteCreateRequest _$MuteCreateRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_MuteCreateRequest', json, ($checkedConvert) {
-      final val = _MuteCreateRequest(
-        userId: $checkedConvert('userId', (v) => v as String),
-        expiresAt: $checkedConvert(
-          'expiresAt',
-          (v) => _$JsonConverterFromJson<int, DateTime>(
-            v,
-            const EpocTimeDateTimeConverter().fromJson,
-          ),
-        ),
-      );
-      return val;
-    });
+    _MuteCreateRequest(
+      userId: json['userId'] as String,
+      expiresAt: _$JsonConverterFromJson<int, DateTime>(
+        json['expiresAt'],
+        const EpocTimeDateTimeConverter().fromJson,
+      ),
+    );
 
 Map<String, dynamic> _$MuteCreateRequestToJson(_MuteCreateRequest instance) =>
     <String, dynamic>{

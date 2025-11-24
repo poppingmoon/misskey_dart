@@ -7,14 +7,11 @@ part of 'flash_my_request.dart';
 // **************************************************************************
 
 _FlashMyRequest _$FlashMyRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_FlashMyRequest', json, ($checkedConvert) {
-      final val = _FlashMyRequest(
-        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-        sinceId: $checkedConvert('sinceId', (v) => v as String?),
-        untilId: $checkedConvert('untilId', (v) => v as String?),
-      );
-      return val;
-    });
+    _FlashMyRequest(
+      limit: (json['limit'] as num?)?.toInt(),
+      sinceId: json['sinceId'] as String?,
+      untilId: json['untilId'] as String?,
+    );
 
 Map<String, dynamic> _$FlashMyRequestToJson(_FlashMyRequest instance) =>
     <String, dynamic>{

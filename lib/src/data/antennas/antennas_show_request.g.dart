@@ -7,12 +7,7 @@ part of 'antennas_show_request.dart';
 // **************************************************************************
 
 _AntennasShowRequest _$AntennasShowRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_AntennasShowRequest', json, ($checkedConvert) {
-      final val = _AntennasShowRequest(
-        antennaId: $checkedConvert('antennaId', (v) => v as String),
-      );
-      return val;
-    });
+    _AntennasShowRequest(antennaId: json['antennaId'] as String);
 
 Map<String, dynamic> _$AntennasShowRequestToJson(
   _AntennasShowRequest instance,

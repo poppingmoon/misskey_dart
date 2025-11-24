@@ -8,20 +8,12 @@ part of 'i_registry_scopes_with_domain_response.dart';
 
 _IRegistryScopesWithDomainResponse _$IRegistryScopesWithDomainResponseFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_IRegistryScopesWithDomainResponse', json, (
-  $checkedConvert,
-) {
-  final val = _IRegistryScopesWithDomainResponse(
-    scopes: $checkedConvert(
-      'scopes',
-      (v) => (v as List<dynamic>)
-          .map((e) => (e as List<dynamic>).map((e) => e as String).toList())
-          .toList(),
-    ),
-    domain: $checkedConvert('domain', (v) => v as String?),
-  );
-  return val;
-});
+) => _IRegistryScopesWithDomainResponse(
+  scopes: (json['scopes'] as List<dynamic>)
+      .map((e) => (e as List<dynamic>).map((e) => e as String).toList())
+      .toList(),
+  domain: json['domain'] as String?,
+);
 
 Map<String, dynamic> _$IRegistryScopesWithDomainResponseToJson(
   _IRegistryScopesWithDomainResponse instance,

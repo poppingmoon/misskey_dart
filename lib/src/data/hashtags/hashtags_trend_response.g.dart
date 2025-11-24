@@ -8,17 +8,13 @@ part of 'hashtags_trend_response.dart';
 
 _HashtagsTrendResponse _$HashtagsTrendResponseFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_HashtagsTrendResponse', json, ($checkedConvert) {
-  final val = _HashtagsTrendResponse(
-    tag: $checkedConvert('tag', (v) => v as String),
-    chart: $checkedConvert(
-      'chart',
-      (v) => (v as List<dynamic>).map((e) => (e as num).toInt()).toList(),
-    ),
-    usersCount: $checkedConvert('usersCount', (v) => (v as num).toInt()),
-  );
-  return val;
-});
+) => _HashtagsTrendResponse(
+  tag: json['tag'] as String,
+  chart: (json['chart'] as List<dynamic>)
+      .map((e) => (e as num).toInt())
+      .toList(),
+  usersCount: (json['usersCount'] as num).toInt(),
+);
 
 Map<String, dynamic> _$HashtagsTrendResponseToJson(
   _HashtagsTrendResponse instance,

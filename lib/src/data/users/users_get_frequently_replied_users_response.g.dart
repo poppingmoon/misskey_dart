@@ -8,18 +8,10 @@ part of 'users_get_frequently_replied_users_response.dart';
 
 _UsersGetFrequentlyRepliedUsersResponse
 _$UsersGetFrequentlyRepliedUsersResponseFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_UsersGetFrequentlyRepliedUsersResponse', json, (
-      $checkedConvert,
-    ) {
-      final val = _UsersGetFrequentlyRepliedUsersResponse(
-        user: $checkedConvert(
-          'user',
-          (v) => User.fromJson(v as Map<String, dynamic>),
-        ),
-        weight: $checkedConvert('weight', (v) => (v as num).toDouble()),
-      );
-      return val;
-    });
+    _UsersGetFrequentlyRepliedUsersResponse(
+      user: User.fromJson(json['user'] as Map<String, dynamic>),
+      weight: (json['weight'] as num).toDouble(),
+    );
 
 Map<String, dynamic> _$UsersGetFrequentlyRepliedUsersResponseToJson(
   _UsersGetFrequentlyRepliedUsersResponse instance,

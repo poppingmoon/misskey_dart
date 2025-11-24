@@ -6,43 +6,32 @@ part of 'users_notes_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_UsersNotesRequest _$UsersNotesRequestFromJson(
-  Map<String, dynamic> json,
-) => $checkedCreate('_UsersNotesRequest', json, ($checkedConvert) {
-  final val = _UsersNotesRequest(
-    userId: $checkedConvert('userId', (v) => v as String),
-    includeReplies: $checkedConvert('includeReplies', (v) => v as bool?),
-    withReplies: $checkedConvert('withReplies', (v) => v as bool?),
-    withRenotes: $checkedConvert('withRenotes', (v) => v as bool?),
-    withChannelNotes: $checkedConvert('withChannelNotes', (v) => v as bool?),
-    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-    sinceId: $checkedConvert('sinceId', (v) => v as String?),
-    untilId: $checkedConvert('untilId', (v) => v as String?),
-    sinceDate: $checkedConvert(
-      'sinceDate',
-      (v) => _$JsonConverterFromJson<int, DateTime>(
-        v,
+_UsersNotesRequest _$UsersNotesRequestFromJson(Map<String, dynamic> json) =>
+    _UsersNotesRequest(
+      userId: json['userId'] as String,
+      includeReplies: json['includeReplies'] as bool?,
+      withReplies: json['withReplies'] as bool?,
+      withRenotes: json['withRenotes'] as bool?,
+      withChannelNotes: json['withChannelNotes'] as bool?,
+      limit: (json['limit'] as num?)?.toInt(),
+      sinceId: json['sinceId'] as String?,
+      untilId: json['untilId'] as String?,
+      sinceDate: _$JsonConverterFromJson<int, DateTime>(
+        json['sinceDate'],
         const EpocTimeDateTimeConverter().fromJson,
       ),
-    ),
-    untilDate: $checkedConvert(
-      'untilDate',
-      (v) => _$JsonConverterFromJson<int, DateTime>(
-        v,
+      untilDate: _$JsonConverterFromJson<int, DateTime>(
+        json['untilDate'],
         const EpocTimeDateTimeConverter().fromJson,
       ),
-    ),
-    includeMyRenotes: $checkedConvert('includeMyRenotes', (v) => v as bool?),
-    withFiles: $checkedConvert('withFiles', (v) => v as bool?),
-    fileType: $checkedConvert(
-      'fileType',
-      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-    ),
-    allowPartial: $checkedConvert('allowPartial', (v) => v as bool?),
-    excludeNsfw: $checkedConvert('excludeNsfw', (v) => v as bool?),
-  );
-  return val;
-});
+      includeMyRenotes: json['includeMyRenotes'] as bool?,
+      withFiles: json['withFiles'] as bool?,
+      fileType: (json['fileType'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      allowPartial: json['allowPartial'] as bool?,
+      excludeNsfw: json['excludeNsfw'] as bool?,
+    );
 
 Map<String, dynamic> _$UsersNotesRequestToJson(_UsersNotesRequest instance) =>
     <String, dynamic>{

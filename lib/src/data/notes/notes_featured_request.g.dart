@@ -8,15 +8,12 @@ part of 'notes_featured_request.dart';
 
 _NotesFeaturedRequest _$NotesFeaturedRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_NotesFeaturedRequest', json, ($checkedConvert) {
-  final val = _NotesFeaturedRequest(
-    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-    offset: $checkedConvert('offset', (v) => (v as num?)?.toInt()),
-    untilId: $checkedConvert('untilId', (v) => v as String?),
-    channelId: $checkedConvert('channelId', (v) => v as String?),
-  );
-  return val;
-});
+) => _NotesFeaturedRequest(
+  limit: (json['limit'] as num?)?.toInt(),
+  offset: (json['offset'] as num?)?.toInt(),
+  untilId: json['untilId'] as String?,
+  channelId: json['channelId'] as String?,
+);
 
 Map<String, dynamic> _$NotesFeaturedRequestToJson(
   _NotesFeaturedRequest instance,

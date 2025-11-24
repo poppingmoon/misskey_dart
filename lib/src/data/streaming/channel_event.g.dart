@@ -7,21 +7,15 @@ part of 'channel_event.dart';
 // **************************************************************************
 
 _ChannelEvent _$ChannelEventFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_ChannelEvent', json, ($checkedConvert) {
-      final val = _ChannelEvent(
-        id: $checkedConvert('id', (v) => v as String),
-        type: $checkedConvert(
-          'type',
-          (v) => $enumDecodeNullable(
-            _$ChannelEventTypeEnumMap,
-            v,
-            unknownValue: JsonKey.nullForUndefinedEnumValue,
-          ),
-        ),
-        body: $checkedConvert('body', (v) => v),
-      );
-      return val;
-    });
+    _ChannelEvent(
+      id: json['id'] as String,
+      type: $enumDecodeNullable(
+        _$ChannelEventTypeEnumMap,
+        json['type'],
+        unknownValue: JsonKey.nullForUndefinedEnumValue,
+      ),
+      body: json['body'],
+    );
 
 Map<String, dynamic> _$ChannelEventToJson(_ChannelEvent instance) =>
     <String, dynamic>{

@@ -8,23 +8,17 @@ part of 'get_avatar_decorations_response.dart';
 
 _GetAvatarDecorationsResponse _$GetAvatarDecorationsResponseFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_GetAvatarDecorationsResponse', json, ($checkedConvert) {
-  final val = _GetAvatarDecorationsResponse(
-    id: $checkedConvert('id', (v) => v as String),
-    name: $checkedConvert('name', (v) => v as String),
-    description: $checkedConvert('description', (v) => v as String),
-    url: $checkedConvert(
-      'url',
-      (v) => const NullableUriConverter().fromJson(v as String?),
-    ),
-    roleIdsThatCanBeUsedThisDecoration: $checkedConvert(
-      'roleIdsThatCanBeUsedThisDecoration',
-      (v) =>
-          (v as List<dynamic>?)?.map((e) => e as String).toList() ?? const [],
-    ),
-  );
-  return val;
-});
+) => _GetAvatarDecorationsResponse(
+  id: json['id'] as String,
+  name: json['name'] as String,
+  description: json['description'] as String,
+  url: const NullableUriConverter().fromJson(json['url'] as String?),
+  roleIdsThatCanBeUsedThisDecoration:
+      (json['roleIdsThatCanBeUsedThisDecoration'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList() ??
+      const [],
+);
 
 Map<String, dynamic> _$GetAvatarDecorationsResponseToJson(
   _GetAvatarDecorationsResponse instance,

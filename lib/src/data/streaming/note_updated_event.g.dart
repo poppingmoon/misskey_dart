@@ -7,21 +7,15 @@ part of 'note_updated_event.dart';
 // **************************************************************************
 
 _NoteUpdatedEvent _$NoteUpdatedEventFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_NoteUpdatedEvent', json, ($checkedConvert) {
-      final val = _NoteUpdatedEvent(
-        id: $checkedConvert('id', (v) => v as String),
-        type: $checkedConvert(
-          'type',
-          (v) => $enumDecodeNullable(
-            _$NoteUpdatedEventTypeEnumMap,
-            v,
-            unknownValue: JsonKey.nullForUndefinedEnumValue,
-          ),
-        ),
-        body: $checkedConvert('body', (v) => v as Map<String, dynamic>),
-      );
-      return val;
-    });
+    _NoteUpdatedEvent(
+      id: json['id'] as String,
+      type: $enumDecodeNullable(
+        _$NoteUpdatedEventTypeEnumMap,
+        json['type'],
+        unknownValue: JsonKey.nullForUndefinedEnumValue,
+      ),
+      body: json['body'] as Map<String, dynamic>,
+    );
 
 Map<String, dynamic> _$NoteUpdatedEventToJson(_NoteUpdatedEvent instance) =>
     <String, dynamic>{

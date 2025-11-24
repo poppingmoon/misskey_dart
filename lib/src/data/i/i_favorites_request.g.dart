@@ -7,14 +7,11 @@ part of 'i_favorites_request.dart';
 // **************************************************************************
 
 _IFavoritesRequest _$IFavoritesRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_IFavoritesRequest', json, ($checkedConvert) {
-      final val = _IFavoritesRequest(
-        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-        sinceId: $checkedConvert('sinceId', (v) => v as String?),
-        untilId: $checkedConvert('untilId', (v) => v as String?),
-      );
-      return val;
-    });
+    _IFavoritesRequest(
+      limit: (json['limit'] as num?)?.toInt(),
+      sinceId: json['sinceId'] as String?,
+      untilId: json['untilId'] as String?,
+    );
 
 Map<String, dynamic> _$IFavoritesRequestToJson(_IFavoritesRequest instance) =>
     <String, dynamic>{

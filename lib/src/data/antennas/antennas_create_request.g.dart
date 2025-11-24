@@ -8,45 +8,29 @@ part of 'antennas_create_request.dart';
 
 _AntennasCreateRequest _$AntennasCreateRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_AntennasCreateRequest', json, ($checkedConvert) {
-  final val = _AntennasCreateRequest(
-    name: $checkedConvert('name', (v) => v as String),
-    src: $checkedConvert('src', (v) => $enumDecode(_$AntennaSourceEnumMap, v)),
-    userListId: $checkedConvert('userListId', (v) => v as String?),
-    keywords: $checkedConvert(
-      'keywords',
-      (v) => (v as List<dynamic>)
-          .map((e) => (e as List<dynamic>).map((e) => e as String).toList())
-          .toList(),
-    ),
-    excludeKeywords: $checkedConvert(
-      'excludeKeywords',
-      (v) => (v as List<dynamic>)
-          .map((e) => (e as List<dynamic>).map((e) => e as String).toList())
-          .toList(),
-    ),
-    users: $checkedConvert(
-      'users',
-      (v) => (v as List<dynamic>).map((e) => e as String).toList(),
-    ),
-    instances: $checkedConvert(
-      'instances',
-      (v) =>
-          (v as List<dynamic>?)?.map((e) => e as String).toList() ?? const [],
-    ),
-    caseSensitive: $checkedConvert('caseSensitive', (v) => v as bool),
-    withReplies: $checkedConvert('withReplies', (v) => v as bool),
-    withFile: $checkedConvert('withFile', (v) => v as bool),
-    notify: $checkedConvert('notify', (v) => v as bool?),
-    localOnly: $checkedConvert('localOnly', (v) => v as bool?),
-    excludeBots: $checkedConvert('excludeBots', (v) => v as bool?),
-    excludeNotesInSensitiveChannel: $checkedConvert(
-      'excludeNotesInSensitiveChannel',
-      (v) => v as bool?,
-    ),
-  );
-  return val;
-});
+) => _AntennasCreateRequest(
+  name: json['name'] as String,
+  src: $enumDecode(_$AntennaSourceEnumMap, json['src']),
+  userListId: json['userListId'] as String?,
+  keywords: (json['keywords'] as List<dynamic>)
+      .map((e) => (e as List<dynamic>).map((e) => e as String).toList())
+      .toList(),
+  excludeKeywords: (json['excludeKeywords'] as List<dynamic>)
+      .map((e) => (e as List<dynamic>).map((e) => e as String).toList())
+      .toList(),
+  users: (json['users'] as List<dynamic>).map((e) => e as String).toList(),
+  instances:
+      (json['instances'] as List<dynamic>?)?.map((e) => e as String).toList() ??
+      const [],
+  caseSensitive: json['caseSensitive'] as bool,
+  withReplies: json['withReplies'] as bool,
+  withFile: json['withFile'] as bool,
+  notify: json['notify'] as bool?,
+  localOnly: json['localOnly'] as bool?,
+  excludeBots: json['excludeBots'] as bool?,
+  excludeNotesInSensitiveChannel:
+      json['excludeNotesInSensitiveChannel'] as bool?,
+);
 
 Map<String, dynamic> _$AntennasCreateRequestToJson(
   _AntennasCreateRequest instance,

@@ -8,12 +8,7 @@ part of 'renote_mute_create_request.dart';
 
 _RenoteMuteCreateRequest _$RenoteMuteCreateRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_RenoteMuteCreateRequest', json, ($checkedConvert) {
-  final val = _RenoteMuteCreateRequest(
-    userId: $checkedConvert('userId', (v) => v as String),
-  );
-  return val;
-});
+) => _RenoteMuteCreateRequest(userId: json['userId'] as String);
 
 Map<String, dynamic> _$RenoteMuteCreateRequestToJson(
   _RenoteMuteCreateRequest instance,

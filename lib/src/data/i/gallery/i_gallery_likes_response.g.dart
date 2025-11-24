@@ -8,16 +8,10 @@ part of 'i_gallery_likes_response.dart';
 
 _IGalleryLikesResponse _$IGalleryLikesResponseFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_IGalleryLikesResponse', json, ($checkedConvert) {
-  final val = _IGalleryLikesResponse(
-    id: $checkedConvert('id', (v) => v as String),
-    post: $checkedConvert(
-      'post',
-      (v) => GalleryPost.fromJson(v as Map<String, dynamic>),
-    ),
-  );
-  return val;
-});
+) => _IGalleryLikesResponse(
+  id: json['id'] as String,
+  post: GalleryPost.fromJson(json['post'] as Map<String, dynamic>),
+);
 
 Map<String, dynamic> _$IGalleryLikesResponseToJson(
   _IGalleryLikesResponse instance,

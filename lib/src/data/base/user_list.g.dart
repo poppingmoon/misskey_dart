@@ -6,23 +6,13 @@ part of 'user_list.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_UsersList _$UsersListFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_UsersList', json, ($checkedConvert) {
-      final val = _UsersList(
-        id: $checkedConvert('id', (v) => v as String),
-        createdAt: $checkedConvert(
-          'createdAt',
-          (v) => const DateTimeConverter().fromJson(v as String),
-        ),
-        name: $checkedConvert('name', (v) => v as String?),
-        userIds: $checkedConvert(
-          'userIds',
-          (v) => (v as List<dynamic>).map((e) => e as String).toList(),
-        ),
-        isPublic: $checkedConvert('isPublic', (v) => v as bool?),
-      );
-      return val;
-    });
+_UsersList _$UsersListFromJson(Map<String, dynamic> json) => _UsersList(
+  id: json['id'] as String,
+  createdAt: const DateTimeConverter().fromJson(json['createdAt'] as String),
+  name: json['name'] as String?,
+  userIds: (json['userIds'] as List<dynamic>).map((e) => e as String).toList(),
+  isPublic: json['isPublic'] as bool?,
+);
 
 Map<String, dynamic> _$UsersListToJson(_UsersList instance) =>
     <String, dynamic>{

@@ -7,23 +7,17 @@ part of 'sw_register_response.dart';
 // **************************************************************************
 
 _SwRegisterResponse _$SwRegisterResponseFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_SwRegisterResponse', json, ($checkedConvert) {
-      final val = _SwRegisterResponse(
-        state: $checkedConvert(
-          'state',
-          (v) => $enumDecodeNullable(
-            _$SwRegisterResponseStateEnumMap,
-            v,
-            unknownValue: JsonKey.nullForUndefinedEnumValue,
-          ),
-        ),
-        key: $checkedConvert('key', (v) => v as String?),
-        userId: $checkedConvert('userId', (v) => v as String),
-        endpoint: $checkedConvert('endpoint', (v) => v as String),
-        sendReadMessage: $checkedConvert('sendReadMessage', (v) => v as bool),
-      );
-      return val;
-    });
+    _SwRegisterResponse(
+      state: $enumDecodeNullable(
+        _$SwRegisterResponseStateEnumMap,
+        json['state'],
+        unknownValue: JsonKey.nullForUndefinedEnumValue,
+      ),
+      key: json['key'] as String?,
+      userId: json['userId'] as String,
+      endpoint: json['endpoint'] as String,
+      sendReadMessage: json['sendReadMessage'] as bool,
+    );
 
 Map<String, dynamic> _$SwRegisterResponseToJson(_SwRegisterResponse instance) =>
     <String, dynamic>{

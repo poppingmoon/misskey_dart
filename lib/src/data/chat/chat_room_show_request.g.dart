@@ -7,12 +7,7 @@ part of 'chat_room_show_request.dart';
 // **************************************************************************
 
 _ChatRoomShowRequest _$ChatRoomShowRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_ChatRoomShowRequest', json, ($checkedConvert) {
-      final val = _ChatRoomShowRequest(
-        roomId: $checkedConvert('roomId', (v) => v as String),
-      );
-      return val;
-    });
+    _ChatRoomShowRequest(roomId: json['roomId'] as String);
 
 Map<String, dynamic> _$ChatRoomShowRequestToJson(
   _ChatRoomShowRequest instance,

@@ -7,18 +7,12 @@ part of 'i_registry_set_request.dart';
 // **************************************************************************
 
 _IRegistrySetRequest _$IRegistrySetRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_IRegistrySetRequest', json, ($checkedConvert) {
-      final val = _IRegistrySetRequest(
-        key: $checkedConvert('key', (v) => v as String),
-        value: $checkedConvert('value', (v) => v),
-        scope: $checkedConvert(
-          'scope',
-          (v) => (v as List<dynamic>).map((e) => e as String).toList(),
-        ),
-        domain: $checkedConvert('domain', (v) => v as String?),
-      );
-      return val;
-    });
+    _IRegistrySetRequest(
+      key: json['key'] as String,
+      value: json['value'],
+      scope: (json['scope'] as List<dynamic>).map((e) => e as String).toList(),
+      domain: json['domain'] as String?,
+    );
 
 Map<String, dynamic> _$IRegistrySetRequestToJson(
   _IRegistrySetRequest instance,

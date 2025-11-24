@@ -8,17 +8,11 @@ part of 'i_registry_get_detail_request.dart';
 
 _IRegistryGetDetailRequest _$IRegistryGetDetailRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_IRegistryGetDetailRequest', json, ($checkedConvert) {
-  final val = _IRegistryGetDetailRequest(
-    key: $checkedConvert('key', (v) => v as String),
-    scope: $checkedConvert(
-      'scope',
-      (v) => (v as List<dynamic>).map((e) => e as String).toList(),
-    ),
-    domain: $checkedConvert('domain', (v) => v as String?),
-  );
-  return val;
-});
+) => _IRegistryGetDetailRequest(
+  key: json['key'] as String,
+  scope: (json['scope'] as List<dynamic>).map((e) => e as String).toList(),
+  domain: json['domain'] as String?,
+);
 
 Map<String, dynamic> _$IRegistryGetDetailRequestToJson(
   _IRegistryGetDetailRequest instance,

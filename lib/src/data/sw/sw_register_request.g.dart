@@ -7,15 +7,12 @@ part of 'sw_register_request.dart';
 // **************************************************************************
 
 _SwRegisterRequest _$SwRegisterRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_SwRegisterRequest', json, ($checkedConvert) {
-      final val = _SwRegisterRequest(
-        endpoint: $checkedConvert('endpoint', (v) => v as String),
-        auth: $checkedConvert('auth', (v) => v as String),
-        publickey: $checkedConvert('publickey', (v) => v as String),
-        sendReadMessage: $checkedConvert('sendReadMessage', (v) => v as bool?),
-      );
-      return val;
-    });
+    _SwRegisterRequest(
+      endpoint: json['endpoint'] as String,
+      auth: json['auth'] as String,
+      publickey: json['publickey'] as String,
+      sendReadMessage: json['sendReadMessage'] as bool?,
+    );
 
 Map<String, dynamic> _$SwRegisterRequestToJson(_SwRegisterRequest instance) =>
     <String, dynamic>{

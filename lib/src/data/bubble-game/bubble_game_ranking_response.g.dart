@@ -8,17 +8,11 @@ part of 'bubble_game_ranking_response.dart';
 
 _BubbleGameRankingResponse _$BubbleGameRankingResponseFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_BubbleGameRankingResponse', json, ($checkedConvert) {
-  final val = _BubbleGameRankingResponse(
-    id: $checkedConvert('id', (v) => v as String),
-    score: $checkedConvert('score', (v) => (v as num).toInt()),
-    user: $checkedConvert(
-      'user',
-      (v) => UserLite.fromJson(v as Map<String, dynamic>),
-    ),
-  );
-  return val;
-});
+) => _BubbleGameRankingResponse(
+  id: json['id'] as String,
+  score: (json['score'] as num).toInt(),
+  user: UserLite.fromJson(json['user'] as Map<String, dynamic>),
+);
 
 Map<String, dynamic> _$BubbleGameRankingResponseToJson(
   _BubbleGameRankingResponse instance,

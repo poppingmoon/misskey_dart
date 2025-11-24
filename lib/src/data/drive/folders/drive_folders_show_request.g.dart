@@ -8,12 +8,7 @@ part of 'drive_folders_show_request.dart';
 
 _DriveFoldersShowRequest _$DriveFoldersShowRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_DriveFoldersShowRequest', json, ($checkedConvert) {
-  final val = _DriveFoldersShowRequest(
-    folderId: $checkedConvert('folderId', (v) => v as String),
-  );
-  return val;
-});
+) => _DriveFoldersShowRequest(folderId: json['folderId'] as String);
 
 Map<String, dynamic> _$DriveFoldersShowRequestToJson(
   _DriveFoldersShowRequest instance,

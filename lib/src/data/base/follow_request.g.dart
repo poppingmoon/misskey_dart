@@ -7,20 +7,11 @@ part of 'follow_request.dart';
 // **************************************************************************
 
 _FollowRequest _$FollowRequestFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_FollowRequest', json, ($checkedConvert) {
-      final val = _FollowRequest(
-        id: $checkedConvert('id', (v) => v as String),
-        followee: $checkedConvert(
-          'followee',
-          (v) => UserLite.fromJson(v as Map<String, dynamic>),
-        ),
-        follower: $checkedConvert(
-          'follower',
-          (v) => UserLite.fromJson(v as Map<String, dynamic>),
-        ),
-      );
-      return val;
-    });
+    _FollowRequest(
+      id: json['id'] as String,
+      followee: UserLite.fromJson(json['followee'] as Map<String, dynamic>),
+      follower: UserLite.fromJson(json['follower'] as Map<String, dynamic>),
+    );
 
 Map<String, dynamic> _$FollowRequestToJson(_FollowRequest instance) =>
     <String, dynamic>{

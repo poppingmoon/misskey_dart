@@ -7,21 +7,14 @@ part of 'renote_muting.dart';
 // **************************************************************************
 
 _RenoteMuting _$RenoteMutingFromJson(Map<String, dynamic> json) =>
-    $checkedCreate('_RenoteMuting', json, ($checkedConvert) {
-      final val = _RenoteMuting(
-        id: $checkedConvert('id', (v) => v as String),
-        createdAt: $checkedConvert(
-          'createdAt',
-          (v) => const DateTimeConverter().fromJson(v as String),
-        ),
-        muteeId: $checkedConvert('muteeId', (v) => v as String),
-        mutee: $checkedConvert(
-          'mutee',
-          (v) => UserDetailedNotMe.fromJson(v as Map<String, dynamic>),
-        ),
-      );
-      return val;
-    });
+    _RenoteMuting(
+      id: json['id'] as String,
+      createdAt: const DateTimeConverter().fromJson(
+        json['createdAt'] as String,
+      ),
+      muteeId: json['muteeId'] as String,
+      mutee: UserDetailedNotMe.fromJson(json['mutee'] as Map<String, dynamic>),
+    );
 
 Map<String, dynamic> _$RenoteMutingToJson(_RenoteMuting instance) =>
     <String, dynamic>{

@@ -8,14 +8,11 @@ part of 'users_featured_notes_request.dart';
 
 _UsersFeaturedNotesRequest _$UsersFeaturedNotesRequestFromJson(
   Map<String, dynamic> json,
-) => $checkedCreate('_UsersFeaturedNotesRequest', json, ($checkedConvert) {
-  final val = _UsersFeaturedNotesRequest(
-    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt()),
-    untilId: $checkedConvert('untilId', (v) => v as String?),
-    userId: $checkedConvert('userId', (v) => v as String),
-  );
-  return val;
-});
+) => _UsersFeaturedNotesRequest(
+  limit: (json['limit'] as num?)?.toInt(),
+  untilId: json['untilId'] as String?,
+  userId: json['userId'] as String,
+);
 
 Map<String, dynamic> _$UsersFeaturedNotesRequestToJson(
   _UsersFeaturedNotesRequest instance,
