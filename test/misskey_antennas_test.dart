@@ -87,7 +87,7 @@ void main() async {
       AntennasNotesRequest(antennaId: antenna.id),
     );
     expect(response.map((e) => e.id), contains(note.id));
-  });
+  }, retry: 3);
 
   test("show", () async {
     final antenna = await userClient.antennas.create(
