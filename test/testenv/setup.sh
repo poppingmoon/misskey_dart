@@ -4,6 +4,8 @@ set -eu
 
 cd "$(dirname -- "$0")"
 
+chmod a+w .config
+
 readonly MAX_RETRY=5
 
 count=0
