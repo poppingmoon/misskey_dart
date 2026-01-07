@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'package:misskey_dart/misskey_dart.dart';
 
 import 'package:misskey_dart/src/services/api_service.dart';
@@ -211,14 +212,33 @@ class MisskeyNotes {
   }
 
   /// ノートを翻訳します。
-  Future<NotesTranslateResponse> translate(
+  Future<NotesTranslateResponse?> translate(
     NotesTranslateRequest request,
   ) async {
-    final response = await _apiService.post<Map<String, dynamic>>(
-      "notes/translate",
-      request.toJson(),
-    );
-    return NotesTranslateResponse.fromJson(response);
+    try {
+      final response = await _apiService.dio.post(
+        "notes/translate",
+        data: {...request.toJson(), "i": ?_apiService.token},
+      );
+      if (response.statusCode == 204) {
+        return null;
+      } else {
+        return NotesTranslateResponse.fromJson(
+          response.data as Map<String, dynamic>,
+        );
+      }
+    } on DioException catch (e) {
+      Exception exception;
+      try {
+        exception = MisskeyException.fromJson(
+          (e.response?.data as Map<String, dynamic>)["error"]
+              as Map<String, dynamic>,
+        );
+      } catch (_) {
+        exception = e;
+      }
+      throw exception;
+    }
   }
 
   Future<Note> edit(NotesEditRequest request) async {
