@@ -165,10 +165,7 @@ _UserDetailedNotMe _$UserDetailedNotMeFromJson(
   isSuspended: json['isSuspended'] as bool,
   description: json['description'] as String?,
   location: json['location'] as String?,
-  birthday: _$JsonConverterFromJson<String, DateTime?>(
-    json['birthday'],
-    const NullableDateTimeConverter().fromJson,
-  ),
+  birthday: json['birthday'] as String?,
   lang: json['lang'] as String?,
   fields: (json['fields'] as List<dynamic>?)
       ?.map((e) => UserField.fromJson(e as Map<String, dynamic>))
@@ -268,7 +265,7 @@ Map<String, dynamic> _$UserDetailedNotMeToJson(
   'isSuspended': instance.isSuspended,
   'description': instance.description,
   'location': instance.location,
-  'birthday': const NullableDateTimeConverter().toJson(instance.birthday),
+  'birthday': instance.birthday,
   'lang': instance.lang,
   'fields': instance.fields?.map((e) => e.toJson()).toList(),
   'verifiedLinks': instance.verifiedLinks,
@@ -378,10 +375,7 @@ _UserDetailedNotMeWithRelations _$UserDetailedNotMeWithRelationsFromJson(
   isSuspended: json['isSuspended'] as bool,
   description: json['description'] as String?,
   location: json['location'] as String?,
-  birthday: _$JsonConverterFromJson<String, DateTime?>(
-    json['birthday'],
-    const NullableDateTimeConverter().fromJson,
-  ),
+  birthday: json['birthday'] as String?,
   lang: json['lang'] as String?,
   fields: (json['fields'] as List<dynamic>?)
       ?.map((e) => UserField.fromJson(e as Map<String, dynamic>))
@@ -493,7 +487,7 @@ Map<String, dynamic> _$UserDetailedNotMeWithRelationsToJson(
   'isSuspended': instance.isSuspended,
   'description': instance.description,
   'location': instance.location,
-  'birthday': const NullableDateTimeConverter().toJson(instance.birthday),
+  'birthday': instance.birthday,
   'lang': instance.lang,
   'fields': instance.fields?.map((e) => e.toJson()).toList(),
   'verifiedLinks': instance.verifiedLinks,
@@ -600,10 +594,7 @@ _MeDetailed _$MeDetailedFromJson(Map<String, dynamic> json) => _MeDetailed(
   isSuspended: json['isSuspended'] as bool,
   description: json['description'] as String?,
   location: json['location'] as String?,
-  birthday: _$JsonConverterFromJson<String, DateTime?>(
-    json['birthday'],
-    const NullableDateTimeConverter().fromJson,
-  ),
+  birthday: json['birthday'] as String?,
   lang: json['lang'] as String?,
   fields: (json['fields'] as List<dynamic>?)
       ?.map((e) => UserField.fromJson(e as Map<String, dynamic>))
@@ -774,7 +765,7 @@ Map<String, dynamic> _$MeDetailedToJson(
   'isSuspended': instance.isSuspended,
   'description': instance.description,
   'location': instance.location,
-  'birthday': const NullableDateTimeConverter().toJson(instance.birthday),
+  'birthday': instance.birthday,
   'lang': instance.lang,
   'fields': instance.fields?.map((e) => e.toJson()).toList(),
   'verifiedLinks': instance.verifiedLinks,

@@ -57,7 +57,7 @@ abstract class UserDetailed implements User {
   bool get isSuspended;
   String? get description;
   String? get location;
-  DateTime? get birthday;
+  String? get birthday;
   String? get lang;
   List<UserField>? get fields;
   List<String> get verifiedLinks;
@@ -166,7 +166,7 @@ abstract class UserDetailedNotMe
     required bool isSuspended,
     String? description,
     String? location,
-    @NullableDateTimeConverter() DateTime? birthday,
+    String? birthday,
     String? lang,
     List<UserField>? fields,
     @Default([]) List<String> verifiedLinks,
@@ -249,7 +249,7 @@ abstract class UserDetailedNotMeWithRelations
     required bool isSuspended,
     String? description,
     String? location,
-    @NullableDateTimeConverter() DateTime? birthday,
+    String? birthday,
     String? lang,
     List<UserField>? fields,
     @Default([]) List<String> verifiedLinks,
@@ -342,7 +342,7 @@ abstract class MeDetailed with _$MeDetailed implements UserDetailed {
     required bool isSuspended,
     String? description,
     String? location,
-    @NullableDateTimeConverter() DateTime? birthday,
+    String? birthday,
     String? lang,
     List<UserField>? fields,
     @Default([]) List<String> verifiedLinks,
