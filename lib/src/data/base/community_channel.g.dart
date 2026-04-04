@@ -33,6 +33,7 @@ _CommunityChannel _$CommunityChannelFromJson(Map<String, dynamic> json) =>
       color: const NullableColorConverter().fromJson(json['color'] as String?),
       isFollowing: json['isFollowing'] as bool?,
       isFavorited: json['isFavorited'] as bool?,
+      isMuting: json['isMuting'] as bool?,
       hasUnreadNote: json['hasUnreadNote'] as bool?,
       pinnedNotes:
           (json['pinnedNotes'] as List<dynamic>?)
@@ -59,6 +60,7 @@ Map<String, dynamic> _$CommunityChannelToJson(_CommunityChannel instance) =>
       'color': const NullableColorConverter().toJson(instance.color),
       'isFollowing': instance.isFollowing,
       'isFavorited': instance.isFavorited,
+      'isMuting': instance.isMuting,
       'hasUnreadNote': instance.hasUnreadNote,
       'pinnedNotes': instance.pinnedNotes?.map((e) => e.toJson()).toList(),
       'allowRenoteToExternal': instance.allowRenoteToExternal,

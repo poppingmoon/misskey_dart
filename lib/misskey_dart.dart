@@ -44,6 +44,8 @@ export 'src/data/channels/channels_timeline_request.dart';
 export 'src/data/channels/channels_unfavorite_request.dart';
 export 'src/data/channels/channels_unfollow_request.dart';
 export 'src/data/channels/channels_update_request.dart';
+export 'src/data/channels/mute/channels_mute_create_request.dart';
+export 'src/data/channels/mute/channels_mute_delete_request.dart';
 export 'src/data/chat/chat_history_request.dart';
 export 'src/data/chat/chat_joinning.dart';
 export 'src/data/chat/chat_message.dart';

@@ -25,6 +25,7 @@ abstract class CommunityChannel with _$CommunityChannel {
     @NullableColorConverter() int? color,
     bool? isFollowing,
     bool? isFavorited,
+    bool? isMuting,
     bool? hasUnreadNote,
     @Default([]) List<Note>? pinnedNotes,
     @Default(true) bool allowRenoteToExternal,

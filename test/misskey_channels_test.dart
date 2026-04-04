@@ -153,4 +153,46 @@ void main() async {
     );
     expect(channels.map((e) => e.id), isNot(contains(channel.id)));
   });
+
+  group("mute", () {
+    test("create", () async {
+      final channel = await userClient.channels.create(
+        ChannelsCreateRequest(name: "test"),
+      );
+      await userClient.channels.mute.create(
+        ChannelsMuteCreateRequest(channelId: channel.id),
+      );
+      final muted = await userClient.channels.show(
+        ChannelsShowRequest(channelId: channel.id),
+      );
+      expect(muted.isMuting, isTrue);
+    });
+
+    test("delete", () async {
+      final channel = await userClient.channels.create(
+        ChannelsCreateRequest(name: "test"),
+      );
+      await userClient.channels.mute.create(
+        ChannelsMuteCreateRequest(channelId: channel.id),
+      );
+      await userClient.channels.mute.delete(
+        ChannelsMuteDeleteRequest(channelId: channel.id),
+      );
+      final unmuted = await userClient.channels.show(
+        ChannelsShowRequest(channelId: channel.id),
+      );
+      expect(unmuted.isMuting, isFalse);
+    });
+
+    test("list", () async {
+      final channel = await userClient.channels.create(
+        ChannelsCreateRequest(name: "test"),
+      );
+      await userClient.channels.mute.create(
+        ChannelsMuteCreateRequest(channelId: channel.id),
+      );
+      final response = await userClient.channels.mute.list();
+      expect(response.map((e) => e.id), contains(channel.id));
+    });
+  });
 }

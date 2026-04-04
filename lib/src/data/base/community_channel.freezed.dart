@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$CommunityChannel {
 
- String get id;@DateTimeConverter() DateTime get createdAt;@NullableUriConverter() DateTime? get lastNotedAt; String get name; String? get description; String? get userId;@NullableUriConverter() Uri? get bannerUrl; List<String> get pinnedNoteIds; int get usersCount; int get notesCount; bool get isSensitive; bool get isArchived;@NullableColorConverter() int? get color; bool? get isFollowing; bool? get isFavorited; bool? get hasUnreadNote; List<Note>? get pinnedNotes; bool get allowRenoteToExternal;
+ String get id;@DateTimeConverter() DateTime get createdAt;@NullableUriConverter() DateTime? get lastNotedAt; String get name; String? get description; String? get userId;@NullableUriConverter() Uri? get bannerUrl; List<String> get pinnedNoteIds; int get usersCount; int get notesCount; bool get isSensitive; bool get isArchived;@NullableColorConverter() int? get color; bool? get isFollowing; bool? get isFavorited; bool? get isMuting; bool? get hasUnreadNote; List<Note>? get pinnedNotes; bool get allowRenoteToExternal;
 /// Create a copy of CommunityChannel
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -28,16 +28,16 @@ $CommunityChannelCopyWith<CommunityChannel> get copyWith => _$CommunityChannelCo
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is CommunityChannel&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.lastNotedAt, lastNotedAt) || other.lastNotedAt == lastNotedAt)&&(identical(other.name, name) || other.name == name)&&(identical(other.description, description) || other.description == description)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.bannerUrl, bannerUrl) || other.bannerUrl == bannerUrl)&&const DeepCollectionEquality().equals(other.pinnedNoteIds, pinnedNoteIds)&&(identical(other.usersCount, usersCount) || other.usersCount == usersCount)&&(identical(other.notesCount, notesCount) || other.notesCount == notesCount)&&(identical(other.isSensitive, isSensitive) || other.isSensitive == isSensitive)&&(identical(other.isArchived, isArchived) || other.isArchived == isArchived)&&(identical(other.color, color) || other.color == color)&&(identical(other.isFollowing, isFollowing) || other.isFollowing == isFollowing)&&(identical(other.isFavorited, isFavorited) || other.isFavorited == isFavorited)&&(identical(other.hasUnreadNote, hasUnreadNote) || other.hasUnreadNote == hasUnreadNote)&&const DeepCollectionEquality().equals(other.pinnedNotes, pinnedNotes)&&(identical(other.allowRenoteToExternal, allowRenoteToExternal) || other.allowRenoteToExternal == allowRenoteToExternal));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is CommunityChannel&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.lastNotedAt, lastNotedAt) || other.lastNotedAt == lastNotedAt)&&(identical(other.name, name) || other.name == name)&&(identical(other.description, description) || other.description == description)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.bannerUrl, bannerUrl) || other.bannerUrl == bannerUrl)&&const DeepCollectionEquality().equals(other.pinnedNoteIds, pinnedNoteIds)&&(identical(other.usersCount, usersCount) || other.usersCount == usersCount)&&(identical(other.notesCount, notesCount) || other.notesCount == notesCount)&&(identical(other.isSensitive, isSensitive) || other.isSensitive == isSensitive)&&(identical(other.isArchived, isArchived) || other.isArchived == isArchived)&&(identical(other.color, color) || other.color == color)&&(identical(other.isFollowing, isFollowing) || other.isFollowing == isFollowing)&&(identical(other.isFavorited, isFavorited) || other.isFavorited == isFavorited)&&(identical(other.isMuting, isMuting) || other.isMuting == isMuting)&&(identical(other.hasUnreadNote, hasUnreadNote) || other.hasUnreadNote == hasUnreadNote)&&const DeepCollectionEquality().equals(other.pinnedNotes, pinnedNotes)&&(identical(other.allowRenoteToExternal, allowRenoteToExternal) || other.allowRenoteToExternal == allowRenoteToExternal));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,createdAt,lastNotedAt,name,description,userId,bannerUrl,const DeepCollectionEquality().hash(pinnedNoteIds),usersCount,notesCount,isSensitive,isArchived,color,isFollowing,isFavorited,hasUnreadNote,const DeepCollectionEquality().hash(pinnedNotes),allowRenoteToExternal);
+int get hashCode => Object.hashAll([runtimeType,id,createdAt,lastNotedAt,name,description,userId,bannerUrl,const DeepCollectionEquality().hash(pinnedNoteIds),usersCount,notesCount,isSensitive,isArchived,color,isFollowing,isFavorited,isMuting,hasUnreadNote,const DeepCollectionEquality().hash(pinnedNotes),allowRenoteToExternal]);
 
 @override
 String toString() {
-  return 'CommunityChannel(id: $id, createdAt: $createdAt, lastNotedAt: $lastNotedAt, name: $name, description: $description, userId: $userId, bannerUrl: $bannerUrl, pinnedNoteIds: $pinnedNoteIds, usersCount: $usersCount, notesCount: $notesCount, isSensitive: $isSensitive, isArchived: $isArchived, color: $color, isFollowing: $isFollowing, isFavorited: $isFavorited, hasUnreadNote: $hasUnreadNote, pinnedNotes: $pinnedNotes, allowRenoteToExternal: $allowRenoteToExternal)';
+  return 'CommunityChannel(id: $id, createdAt: $createdAt, lastNotedAt: $lastNotedAt, name: $name, description: $description, userId: $userId, bannerUrl: $bannerUrl, pinnedNoteIds: $pinnedNoteIds, usersCount: $usersCount, notesCount: $notesCount, isSensitive: $isSensitive, isArchived: $isArchived, color: $color, isFollowing: $isFollowing, isFavorited: $isFavorited, isMuting: $isMuting, hasUnreadNote: $hasUnreadNote, pinnedNotes: $pinnedNotes, allowRenoteToExternal: $allowRenoteToExternal)';
 }
 
 
@@ -48,7 +48,7 @@ abstract mixin class $CommunityChannelCopyWith<$Res>  {
   factory $CommunityChannelCopyWith(CommunityChannel value, $Res Function(CommunityChannel) _then) = _$CommunityChannelCopyWithImpl;
 @useResult
 $Res call({
- String id,@DateTimeConverter() DateTime createdAt,@NullableUriConverter() DateTime? lastNotedAt, String name, String? description, String? userId,@NullableUriConverter() Uri? bannerUrl, List<String> pinnedNoteIds, int usersCount, int notesCount, bool isSensitive, bool isArchived,@NullableColorConverter() int? color, bool? isFollowing, bool? isFavorited, bool? hasUnreadNote, List<Note>? pinnedNotes, bool allowRenoteToExternal
+ String id,@DateTimeConverter() DateTime createdAt,@NullableUriConverter() DateTime? lastNotedAt, String name, String? description, String? userId,@NullableUriConverter() Uri? bannerUrl, List<String> pinnedNoteIds, int usersCount, int notesCount, bool isSensitive, bool isArchived,@NullableColorConverter() int? color, bool? isFollowing, bool? isFavorited, bool? isMuting, bool? hasUnreadNote, List<Note>? pinnedNotes, bool allowRenoteToExternal
 });
 
 
@@ -65,7 +65,7 @@ class _$CommunityChannelCopyWithImpl<$Res>
 
 /// Create a copy of CommunityChannel
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? createdAt = null,Object? lastNotedAt = freezed,Object? name = null,Object? description = freezed,Object? userId = freezed,Object? bannerUrl = freezed,Object? pinnedNoteIds = null,Object? usersCount = null,Object? notesCount = null,Object? isSensitive = null,Object? isArchived = null,Object? color = freezed,Object? isFollowing = freezed,Object? isFavorited = freezed,Object? hasUnreadNote = freezed,Object? pinnedNotes = freezed,Object? allowRenoteToExternal = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? createdAt = null,Object? lastNotedAt = freezed,Object? name = null,Object? description = freezed,Object? userId = freezed,Object? bannerUrl = freezed,Object? pinnedNoteIds = null,Object? usersCount = null,Object? notesCount = null,Object? isSensitive = null,Object? isArchived = null,Object? color = freezed,Object? isFollowing = freezed,Object? isFavorited = freezed,Object? isMuting = freezed,Object? hasUnreadNote = freezed,Object? pinnedNotes = freezed,Object? allowRenoteToExternal = null,}) {
   return _then(_self.copyWith(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
@@ -82,6 +82,7 @@ as bool,isArchived: null == isArchived ? _self.isArchived : isArchived // ignore
 as bool,color: freezed == color ? _self.color : color // ignore: cast_nullable_to_non_nullable
 as int?,isFollowing: freezed == isFollowing ? _self.isFollowing : isFollowing // ignore: cast_nullable_to_non_nullable
 as bool?,isFavorited: freezed == isFavorited ? _self.isFavorited : isFavorited // ignore: cast_nullable_to_non_nullable
+as bool?,isMuting: freezed == isMuting ? _self.isMuting : isMuting // ignore: cast_nullable_to_non_nullable
 as bool?,hasUnreadNote: freezed == hasUnreadNote ? _self.hasUnreadNote : hasUnreadNote // ignore: cast_nullable_to_non_nullable
 as bool?,pinnedNotes: freezed == pinnedNotes ? _self.pinnedNotes : pinnedNotes // ignore: cast_nullable_to_non_nullable
 as List<Note>?,allowRenoteToExternal: null == allowRenoteToExternal ? _self.allowRenoteToExternal : allowRenoteToExternal // ignore: cast_nullable_to_non_nullable
@@ -170,10 +171,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt, @NullableUriConverter()  DateTime? lastNotedAt,  String name,  String? description,  String? userId, @NullableUriConverter()  Uri? bannerUrl,  List<String> pinnedNoteIds,  int usersCount,  int notesCount,  bool isSensitive,  bool isArchived, @NullableColorConverter()  int? color,  bool? isFollowing,  bool? isFavorited,  bool? hasUnreadNote,  List<Note>? pinnedNotes,  bool allowRenoteToExternal)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt, @NullableUriConverter()  DateTime? lastNotedAt,  String name,  String? description,  String? userId, @NullableUriConverter()  Uri? bannerUrl,  List<String> pinnedNoteIds,  int usersCount,  int notesCount,  bool isSensitive,  bool isArchived, @NullableColorConverter()  int? color,  bool? isFollowing,  bool? isFavorited,  bool? isMuting,  bool? hasUnreadNote,  List<Note>? pinnedNotes,  bool allowRenoteToExternal)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _CommunityChannel() when $default != null:
-return $default(_that.id,_that.createdAt,_that.lastNotedAt,_that.name,_that.description,_that.userId,_that.bannerUrl,_that.pinnedNoteIds,_that.usersCount,_that.notesCount,_that.isSensitive,_that.isArchived,_that.color,_that.isFollowing,_that.isFavorited,_that.hasUnreadNote,_that.pinnedNotes,_that.allowRenoteToExternal);case _:
+return $default(_that.id,_that.createdAt,_that.lastNotedAt,_that.name,_that.description,_that.userId,_that.bannerUrl,_that.pinnedNoteIds,_that.usersCount,_that.notesCount,_that.isSensitive,_that.isArchived,_that.color,_that.isFollowing,_that.isFavorited,_that.isMuting,_that.hasUnreadNote,_that.pinnedNotes,_that.allowRenoteToExternal);case _:
   return orElse();
 
 }
@@ -191,10 +192,10 @@ return $default(_that.id,_that.createdAt,_that.lastNotedAt,_that.name,_that.desc
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt, @NullableUriConverter()  DateTime? lastNotedAt,  String name,  String? description,  String? userId, @NullableUriConverter()  Uri? bannerUrl,  List<String> pinnedNoteIds,  int usersCount,  int notesCount,  bool isSensitive,  bool isArchived, @NullableColorConverter()  int? color,  bool? isFollowing,  bool? isFavorited,  bool? hasUnreadNote,  List<Note>? pinnedNotes,  bool allowRenoteToExternal)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt, @NullableUriConverter()  DateTime? lastNotedAt,  String name,  String? description,  String? userId, @NullableUriConverter()  Uri? bannerUrl,  List<String> pinnedNoteIds,  int usersCount,  int notesCount,  bool isSensitive,  bool isArchived, @NullableColorConverter()  int? color,  bool? isFollowing,  bool? isFavorited,  bool? isMuting,  bool? hasUnreadNote,  List<Note>? pinnedNotes,  bool allowRenoteToExternal)  $default,) {final _that = this;
 switch (_that) {
 case _CommunityChannel():
-return $default(_that.id,_that.createdAt,_that.lastNotedAt,_that.name,_that.description,_that.userId,_that.bannerUrl,_that.pinnedNoteIds,_that.usersCount,_that.notesCount,_that.isSensitive,_that.isArchived,_that.color,_that.isFollowing,_that.isFavorited,_that.hasUnreadNote,_that.pinnedNotes,_that.allowRenoteToExternal);case _:
+return $default(_that.id,_that.createdAt,_that.lastNotedAt,_that.name,_that.description,_that.userId,_that.bannerUrl,_that.pinnedNoteIds,_that.usersCount,_that.notesCount,_that.isSensitive,_that.isArchived,_that.color,_that.isFollowing,_that.isFavorited,_that.isMuting,_that.hasUnreadNote,_that.pinnedNotes,_that.allowRenoteToExternal);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -211,10 +212,10 @@ return $default(_that.id,_that.createdAt,_that.lastNotedAt,_that.name,_that.desc
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id, @DateTimeConverter()  DateTime createdAt, @NullableUriConverter()  DateTime? lastNotedAt,  String name,  String? description,  String? userId, @NullableUriConverter()  Uri? bannerUrl,  List<String> pinnedNoteIds,  int usersCount,  int notesCount,  bool isSensitive,  bool isArchived, @NullableColorConverter()  int? color,  bool? isFollowing,  bool? isFavorited,  bool? hasUnreadNote,  List<Note>? pinnedNotes,  bool allowRenoteToExternal)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id, @DateTimeConverter()  DateTime createdAt, @NullableUriConverter()  DateTime? lastNotedAt,  String name,  String? description,  String? userId, @NullableUriConverter()  Uri? bannerUrl,  List<String> pinnedNoteIds,  int usersCount,  int notesCount,  bool isSensitive,  bool isArchived, @NullableColorConverter()  int? color,  bool? isFollowing,  bool? isFavorited,  bool? isMuting,  bool? hasUnreadNote,  List<Note>? pinnedNotes,  bool allowRenoteToExternal)?  $default,) {final _that = this;
 switch (_that) {
 case _CommunityChannel() when $default != null:
-return $default(_that.id,_that.createdAt,_that.lastNotedAt,_that.name,_that.description,_that.userId,_that.bannerUrl,_that.pinnedNoteIds,_that.usersCount,_that.notesCount,_that.isSensitive,_that.isArchived,_that.color,_that.isFollowing,_that.isFavorited,_that.hasUnreadNote,_that.pinnedNotes,_that.allowRenoteToExternal);case _:
+return $default(_that.id,_that.createdAt,_that.lastNotedAt,_that.name,_that.description,_that.userId,_that.bannerUrl,_that.pinnedNoteIds,_that.usersCount,_that.notesCount,_that.isSensitive,_that.isArchived,_that.color,_that.isFollowing,_that.isFavorited,_that.isMuting,_that.hasUnreadNote,_that.pinnedNotes,_that.allowRenoteToExternal);case _:
   return null;
 
 }
@@ -226,7 +227,7 @@ return $default(_that.id,_that.createdAt,_that.lastNotedAt,_that.name,_that.desc
 @JsonSerializable()
 
 class _CommunityChannel implements CommunityChannel {
-  const _CommunityChannel({required this.id, @DateTimeConverter() required this.createdAt, @NullableUriConverter() this.lastNotedAt, required this.name, this.description, this.userId, @NullableUriConverter() this.bannerUrl, final  List<String> pinnedNoteIds = const [], required this.usersCount, required this.notesCount, this.isSensitive = false, this.isArchived = false, @NullableColorConverter() this.color, this.isFollowing, this.isFavorited, this.hasUnreadNote, final  List<Note>? pinnedNotes = const [], this.allowRenoteToExternal = true}): _pinnedNoteIds = pinnedNoteIds,_pinnedNotes = pinnedNotes;
+  const _CommunityChannel({required this.id, @DateTimeConverter() required this.createdAt, @NullableUriConverter() this.lastNotedAt, required this.name, this.description, this.userId, @NullableUriConverter() this.bannerUrl, final  List<String> pinnedNoteIds = const [], required this.usersCount, required this.notesCount, this.isSensitive = false, this.isArchived = false, @NullableColorConverter() this.color, this.isFollowing, this.isFavorited, this.isMuting, this.hasUnreadNote, final  List<Note>? pinnedNotes = const [], this.allowRenoteToExternal = true}): _pinnedNoteIds = pinnedNoteIds,_pinnedNotes = pinnedNotes;
   factory _CommunityChannel.fromJson(Map<String, dynamic> json) => _$CommunityChannelFromJson(json);
 
 @override final  String id;
@@ -250,6 +251,7 @@ class _CommunityChannel implements CommunityChannel {
 @override@NullableColorConverter() final  int? color;
 @override final  bool? isFollowing;
 @override final  bool? isFavorited;
+@override final  bool? isMuting;
 @override final  bool? hasUnreadNote;
  final  List<Note>? _pinnedNotes;
 @override@JsonKey() List<Note>? get pinnedNotes {
@@ -275,16 +277,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _CommunityChannel&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.lastNotedAt, lastNotedAt) || other.lastNotedAt == lastNotedAt)&&(identical(other.name, name) || other.name == name)&&(identical(other.description, description) || other.description == description)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.bannerUrl, bannerUrl) || other.bannerUrl == bannerUrl)&&const DeepCollectionEquality().equals(other._pinnedNoteIds, _pinnedNoteIds)&&(identical(other.usersCount, usersCount) || other.usersCount == usersCount)&&(identical(other.notesCount, notesCount) || other.notesCount == notesCount)&&(identical(other.isSensitive, isSensitive) || other.isSensitive == isSensitive)&&(identical(other.isArchived, isArchived) || other.isArchived == isArchived)&&(identical(other.color, color) || other.color == color)&&(identical(other.isFollowing, isFollowing) || other.isFollowing == isFollowing)&&(identical(other.isFavorited, isFavorited) || other.isFavorited == isFavorited)&&(identical(other.hasUnreadNote, hasUnreadNote) || other.hasUnreadNote == hasUnreadNote)&&const DeepCollectionEquality().equals(other._pinnedNotes, _pinnedNotes)&&(identical(other.allowRenoteToExternal, allowRenoteToExternal) || other.allowRenoteToExternal == allowRenoteToExternal));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _CommunityChannel&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.lastNotedAt, lastNotedAt) || other.lastNotedAt == lastNotedAt)&&(identical(other.name, name) || other.name == name)&&(identical(other.description, description) || other.description == description)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.bannerUrl, bannerUrl) || other.bannerUrl == bannerUrl)&&const DeepCollectionEquality().equals(other._pinnedNoteIds, _pinnedNoteIds)&&(identical(other.usersCount, usersCount) || other.usersCount == usersCount)&&(identical(other.notesCount, notesCount) || other.notesCount == notesCount)&&(identical(other.isSensitive, isSensitive) || other.isSensitive == isSensitive)&&(identical(other.isArchived, isArchived) || other.isArchived == isArchived)&&(identical(other.color, color) || other.color == color)&&(identical(other.isFollowing, isFollowing) || other.isFollowing == isFollowing)&&(identical(other.isFavorited, isFavorited) || other.isFavorited == isFavorited)&&(identical(other.isMuting, isMuting) || other.isMuting == isMuting)&&(identical(other.hasUnreadNote, hasUnreadNote) || other.hasUnreadNote == hasUnreadNote)&&const DeepCollectionEquality().equals(other._pinnedNotes, _pinnedNotes)&&(identical(other.allowRenoteToExternal, allowRenoteToExternal) || other.allowRenoteToExternal == allowRenoteToExternal));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,createdAt,lastNotedAt,name,description,userId,bannerUrl,const DeepCollectionEquality().hash(_pinnedNoteIds),usersCount,notesCount,isSensitive,isArchived,color,isFollowing,isFavorited,hasUnreadNote,const DeepCollectionEquality().hash(_pinnedNotes),allowRenoteToExternal);
+int get hashCode => Object.hashAll([runtimeType,id,createdAt,lastNotedAt,name,description,userId,bannerUrl,const DeepCollectionEquality().hash(_pinnedNoteIds),usersCount,notesCount,isSensitive,isArchived,color,isFollowing,isFavorited,isMuting,hasUnreadNote,const DeepCollectionEquality().hash(_pinnedNotes),allowRenoteToExternal]);
 
 @override
 String toString() {
-  return 'CommunityChannel(id: $id, createdAt: $createdAt, lastNotedAt: $lastNotedAt, name: $name, description: $description, userId: $userId, bannerUrl: $bannerUrl, pinnedNoteIds: $pinnedNoteIds, usersCount: $usersCount, notesCount: $notesCount, isSensitive: $isSensitive, isArchived: $isArchived, color: $color, isFollowing: $isFollowing, isFavorited: $isFavorited, hasUnreadNote: $hasUnreadNote, pinnedNotes: $pinnedNotes, allowRenoteToExternal: $allowRenoteToExternal)';
+  return 'CommunityChannel(id: $id, createdAt: $createdAt, lastNotedAt: $lastNotedAt, name: $name, description: $description, userId: $userId, bannerUrl: $bannerUrl, pinnedNoteIds: $pinnedNoteIds, usersCount: $usersCount, notesCount: $notesCount, isSensitive: $isSensitive, isArchived: $isArchived, color: $color, isFollowing: $isFollowing, isFavorited: $isFavorited, isMuting: $isMuting, hasUnreadNote: $hasUnreadNote, pinnedNotes: $pinnedNotes, allowRenoteToExternal: $allowRenoteToExternal)';
 }
 
 
@@ -295,7 +297,7 @@ abstract mixin class _$CommunityChannelCopyWith<$Res> implements $CommunityChann
   factory _$CommunityChannelCopyWith(_CommunityChannel value, $Res Function(_CommunityChannel) _then) = __$CommunityChannelCopyWithImpl;
 @override @useResult
 $Res call({
- String id,@DateTimeConverter() DateTime createdAt,@NullableUriConverter() DateTime? lastNotedAt, String name, String? description, String? userId,@NullableUriConverter() Uri? bannerUrl, List<String> pinnedNoteIds, int usersCount, int notesCount, bool isSensitive, bool isArchived,@NullableColorConverter() int? color, bool? isFollowing, bool? isFavorited, bool? hasUnreadNote, List<Note>? pinnedNotes, bool allowRenoteToExternal
+ String id,@DateTimeConverter() DateTime createdAt,@NullableUriConverter() DateTime? lastNotedAt, String name, String? description, String? userId,@NullableUriConverter() Uri? bannerUrl, List<String> pinnedNoteIds, int usersCount, int notesCount, bool isSensitive, bool isArchived,@NullableColorConverter() int? color, bool? isFollowing, bool? isFavorited, bool? isMuting, bool? hasUnreadNote, List<Note>? pinnedNotes, bool allowRenoteToExternal
 });
 
 
@@ -312,7 +314,7 @@ class __$CommunityChannelCopyWithImpl<$Res>
 
 /// Create a copy of CommunityChannel
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? createdAt = null,Object? lastNotedAt = freezed,Object? name = null,Object? description = freezed,Object? userId = freezed,Object? bannerUrl = freezed,Object? pinnedNoteIds = null,Object? usersCount = null,Object? notesCount = null,Object? isSensitive = null,Object? isArchived = null,Object? color = freezed,Object? isFollowing = freezed,Object? isFavorited = freezed,Object? hasUnreadNote = freezed,Object? pinnedNotes = freezed,Object? allowRenoteToExternal = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? createdAt = null,Object? lastNotedAt = freezed,Object? name = null,Object? description = freezed,Object? userId = freezed,Object? bannerUrl = freezed,Object? pinnedNoteIds = null,Object? usersCount = null,Object? notesCount = null,Object? isSensitive = null,Object? isArchived = null,Object? color = freezed,Object? isFollowing = freezed,Object? isFavorited = freezed,Object? isMuting = freezed,Object? hasUnreadNote = freezed,Object? pinnedNotes = freezed,Object? allowRenoteToExternal = null,}) {
   return _then(_CommunityChannel(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
@@ -329,6 +331,7 @@ as bool,isArchived: null == isArchived ? _self.isArchived : isArchived // ignore
 as bool,color: freezed == color ? _self.color : color // ignore: cast_nullable_to_non_nullable
 as int?,isFollowing: freezed == isFollowing ? _self.isFollowing : isFollowing // ignore: cast_nullable_to_non_nullable
 as bool?,isFavorited: freezed == isFavorited ? _self.isFavorited : isFavorited // ignore: cast_nullable_to_non_nullable
+as bool?,isMuting: freezed == isMuting ? _self.isMuting : isMuting // ignore: cast_nullable_to_non_nullable
 as bool?,hasUnreadNote: freezed == hasUnreadNote ? _self.hasUnreadNote : hasUnreadNote // ignore: cast_nullable_to_non_nullable
 as bool?,pinnedNotes: freezed == pinnedNotes ? _self._pinnedNotes : pinnedNotes // ignore: cast_nullable_to_non_nullable
 as List<Note>?,allowRenoteToExternal: null == allowRenoteToExternal ? _self.allowRenoteToExternal : allowRenoteToExternal // ignore: cast_nullable_to_non_nullable

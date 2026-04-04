@@ -5,8 +5,11 @@ import 'package:misskey_dart/src/services/api_service.dart';
 
 class MisskeyChannels {
   final ApiService _apiService;
+  final MisskeyChannelsMute mute;
 
-  MisskeyChannels({required ApiService apiService}) : _apiService = apiService;
+  MisskeyChannels({required ApiService apiService})
+    : _apiService = apiService,
+      mute = MisskeyChannelsMute(apiService: apiService);
 
   /// チャンネルのタイムラインを取得します。
   Future<Iterable<Note>> timeline(ChannelsTimelineRequest request) async {
@@ -106,5 +109,27 @@ class MisskeyChannels {
   /// チャンネルのフォローを解除します。
   Future<void> unfollow(ChannelsUnfollowRequest request) async {
     await _apiService.post("channels/unfollow", request.toJson());
+  }
+}
+
+class MisskeyChannelsMute {
+  final ApiService _apiService;
+
+  MisskeyChannelsMute({required ApiService apiService})
+    : _apiService = apiService;
+
+  Future<void> create(ChannelsMuteCreateRequest request) async {
+    await _apiService.post<void>("channels/mute/create", request.toJson());
+  }
+
+  Future<void> delete(ChannelsMuteDeleteRequest request) async {
+    await _apiService.post<void>("channels/mute/delete", request.toJson());
+  }
+
+  Future<Iterable<CommunityChannel>> list() async {
+    final response = await _apiService.post<List>("channels/mute/list", {});
+    return response.map(
+      (e) => CommunityChannel.fromJson(e as Map<String, dynamic>),
+    );
   }
 }
