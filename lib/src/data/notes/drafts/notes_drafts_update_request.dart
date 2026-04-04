@@ -21,7 +21,7 @@ abstract class NotesDraftsUpdateRequest with _$NotesDraftsUpdateRequest {
     String? text,
     List<String>? fileIds,
     NotesCreatePollRequest? poll,
-    @DateTimeConverter() DateTime? scheduledAt,
+    @EpocTimeDateTimeConverter() DateTime? scheduledAt,
     bool? isActuallyScheduled,
   }) = _NotesDraftsUpdateRequest;
 

@@ -31,7 +31,7 @@ abstract class NoteDraft with _$NoteDraft {
     NoteChannelInfo? channel,
     bool? localOnly,
     ReactionAcceptance? reactionAcceptance,
-    @DateTimeConverter() DateTime? scheduledAt,
+    @EpocTimeDateTimeConverter() DateTime? scheduledAt,
     bool? isActuallyScheduled,
   }) = _NoteDraft;
 

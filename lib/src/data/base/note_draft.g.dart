@@ -48,9 +48,9 @@ _NoteDraft _$NoteDraftFromJson(Map<String, dynamic> json) => _NoteDraft(
     _$ReactionAcceptanceEnumMap,
     json['reactionAcceptance'],
   ),
-  scheduledAt: _$JsonConverterFromJson<String, DateTime>(
+  scheduledAt: _$JsonConverterFromJson<int, DateTime>(
     json['scheduledAt'],
-    const DateTimeConverter().fromJson,
+    const EpocTimeDateTimeConverter().fromJson,
   ),
   isActuallyScheduled: json['isActuallyScheduled'] as bool?,
 );
@@ -78,9 +78,9 @@ Map<String, dynamic> _$NoteDraftToJson(_NoteDraft instance) =>
       'localOnly': instance.localOnly,
       'reactionAcceptance':
           _$ReactionAcceptanceEnumMap[instance.reactionAcceptance],
-      'scheduledAt': _$JsonConverterToJson<String, DateTime>(
+      'scheduledAt': _$JsonConverterToJson<int, DateTime>(
         instance.scheduledAt,
-        const DateTimeConverter().toJson,
+        const EpocTimeDateTimeConverter().toJson,
       ),
       'isActuallyScheduled': instance.isActuallyScheduled,
     };

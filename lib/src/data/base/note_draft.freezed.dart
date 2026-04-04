@@ -16,7 +16,7 @@ T _$identity<T>(T value) => value;
 mixin _$NoteDraft {
 
  String get id;@DateTimeConverter() DateTime get createdAt; String? get text; String? get cw; String get userId; UserLite get user; String? get replyId; String? get renoteId; Note? get reply; Note? get renote;// ignore: invalid_annotation_target
-@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) NoteVisibility? get visibility; List<String>? get visibleUserIds; List<String>? get fileIds; List<DriveFile>? get files; String? get hashtag; NoteDraftPoll? get poll; String? get channelId; NoteChannelInfo? get channel; bool? get localOnly; ReactionAcceptance? get reactionAcceptance;@DateTimeConverter() DateTime? get scheduledAt; bool? get isActuallyScheduled;
+@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) NoteVisibility? get visibility; List<String>? get visibleUserIds; List<String>? get fileIds; List<DriveFile>? get files; String? get hashtag; NoteDraftPoll? get poll; String? get channelId; NoteChannelInfo? get channel; bool? get localOnly; ReactionAcceptance? get reactionAcceptance;@EpocTimeDateTimeConverter() DateTime? get scheduledAt; bool? get isActuallyScheduled;
 /// Create a copy of NoteDraft
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -49,7 +49,7 @@ abstract mixin class $NoteDraftCopyWith<$Res>  {
   factory $NoteDraftCopyWith(NoteDraft value, $Res Function(NoteDraft) _then) = _$NoteDraftCopyWithImpl;
 @useResult
 $Res call({
- String id,@DateTimeConverter() DateTime createdAt, String? text, String? cw, String userId, UserLite user, String? replyId, String? renoteId, Note? reply, Note? renote,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) NoteVisibility? visibility, List<String>? visibleUserIds, List<String>? fileIds, List<DriveFile>? files, String? hashtag, NoteDraftPoll? poll, String? channelId, NoteChannelInfo? channel, bool? localOnly, ReactionAcceptance? reactionAcceptance,@DateTimeConverter() DateTime? scheduledAt, bool? isActuallyScheduled
+ String id,@DateTimeConverter() DateTime createdAt, String? text, String? cw, String userId, UserLite user, String? replyId, String? renoteId, Note? reply, Note? renote,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) NoteVisibility? visibility, List<String>? visibleUserIds, List<String>? fileIds, List<DriveFile>? files, String? hashtag, NoteDraftPoll? poll, String? channelId, NoteChannelInfo? channel, bool? localOnly, ReactionAcceptance? reactionAcceptance,@EpocTimeDateTimeConverter() DateTime? scheduledAt, bool? isActuallyScheduled
 });
 
 
@@ -232,7 +232,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt,  String? text,  String? cw,  String userId,  UserLite user,  String? replyId,  String? renoteId,  Note? reply,  Note? renote, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  NoteVisibility? visibility,  List<String>? visibleUserIds,  List<String>? fileIds,  List<DriveFile>? files,  String? hashtag,  NoteDraftPoll? poll,  String? channelId,  NoteChannelInfo? channel,  bool? localOnly,  ReactionAcceptance? reactionAcceptance, @DateTimeConverter()  DateTime? scheduledAt,  bool? isActuallyScheduled)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt,  String? text,  String? cw,  String userId,  UserLite user,  String? replyId,  String? renoteId,  Note? reply,  Note? renote, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  NoteVisibility? visibility,  List<String>? visibleUserIds,  List<String>? fileIds,  List<DriveFile>? files,  String? hashtag,  NoteDraftPoll? poll,  String? channelId,  NoteChannelInfo? channel,  bool? localOnly,  ReactionAcceptance? reactionAcceptance, @EpocTimeDateTimeConverter()  DateTime? scheduledAt,  bool? isActuallyScheduled)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _NoteDraft() when $default != null:
 return $default(_that.id,_that.createdAt,_that.text,_that.cw,_that.userId,_that.user,_that.replyId,_that.renoteId,_that.reply,_that.renote,_that.visibility,_that.visibleUserIds,_that.fileIds,_that.files,_that.hashtag,_that.poll,_that.channelId,_that.channel,_that.localOnly,_that.reactionAcceptance,_that.scheduledAt,_that.isActuallyScheduled);case _:
@@ -253,7 +253,7 @@ return $default(_that.id,_that.createdAt,_that.text,_that.cw,_that.userId,_that.
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt,  String? text,  String? cw,  String userId,  UserLite user,  String? replyId,  String? renoteId,  Note? reply,  Note? renote, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  NoteVisibility? visibility,  List<String>? visibleUserIds,  List<String>? fileIds,  List<DriveFile>? files,  String? hashtag,  NoteDraftPoll? poll,  String? channelId,  NoteChannelInfo? channel,  bool? localOnly,  ReactionAcceptance? reactionAcceptance, @DateTimeConverter()  DateTime? scheduledAt,  bool? isActuallyScheduled)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt,  String? text,  String? cw,  String userId,  UserLite user,  String? replyId,  String? renoteId,  Note? reply,  Note? renote, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  NoteVisibility? visibility,  List<String>? visibleUserIds,  List<String>? fileIds,  List<DriveFile>? files,  String? hashtag,  NoteDraftPoll? poll,  String? channelId,  NoteChannelInfo? channel,  bool? localOnly,  ReactionAcceptance? reactionAcceptance, @EpocTimeDateTimeConverter()  DateTime? scheduledAt,  bool? isActuallyScheduled)  $default,) {final _that = this;
 switch (_that) {
 case _NoteDraft():
 return $default(_that.id,_that.createdAt,_that.text,_that.cw,_that.userId,_that.user,_that.replyId,_that.renoteId,_that.reply,_that.renote,_that.visibility,_that.visibleUserIds,_that.fileIds,_that.files,_that.hashtag,_that.poll,_that.channelId,_that.channel,_that.localOnly,_that.reactionAcceptance,_that.scheduledAt,_that.isActuallyScheduled);case _:
@@ -273,7 +273,7 @@ return $default(_that.id,_that.createdAt,_that.text,_that.cw,_that.userId,_that.
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id, @DateTimeConverter()  DateTime createdAt,  String? text,  String? cw,  String userId,  UserLite user,  String? replyId,  String? renoteId,  Note? reply,  Note? renote, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  NoteVisibility? visibility,  List<String>? visibleUserIds,  List<String>? fileIds,  List<DriveFile>? files,  String? hashtag,  NoteDraftPoll? poll,  String? channelId,  NoteChannelInfo? channel,  bool? localOnly,  ReactionAcceptance? reactionAcceptance, @DateTimeConverter()  DateTime? scheduledAt,  bool? isActuallyScheduled)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id, @DateTimeConverter()  DateTime createdAt,  String? text,  String? cw,  String userId,  UserLite user,  String? replyId,  String? renoteId,  Note? reply,  Note? renote, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  NoteVisibility? visibility,  List<String>? visibleUserIds,  List<String>? fileIds,  List<DriveFile>? files,  String? hashtag,  NoteDraftPoll? poll,  String? channelId,  NoteChannelInfo? channel,  bool? localOnly,  ReactionAcceptance? reactionAcceptance, @EpocTimeDateTimeConverter()  DateTime? scheduledAt,  bool? isActuallyScheduled)?  $default,) {final _that = this;
 switch (_that) {
 case _NoteDraft() when $default != null:
 return $default(_that.id,_that.createdAt,_that.text,_that.cw,_that.userId,_that.user,_that.replyId,_that.renoteId,_that.reply,_that.renote,_that.visibility,_that.visibleUserIds,_that.fileIds,_that.files,_that.hashtag,_that.poll,_that.channelId,_that.channel,_that.localOnly,_that.reactionAcceptance,_that.scheduledAt,_that.isActuallyScheduled);case _:
@@ -288,7 +288,7 @@ return $default(_that.id,_that.createdAt,_that.text,_that.cw,_that.userId,_that.
 @JsonSerializable()
 
 class _NoteDraft implements NoteDraft {
-  const _NoteDraft({required this.id, @DateTimeConverter() required this.createdAt, this.text, this.cw, required this.userId, required this.user, this.replyId, this.renoteId, this.reply, this.renote, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.visibility, final  List<String>? visibleUserIds, final  List<String>? fileIds, final  List<DriveFile>? files, this.hashtag, this.poll, this.channelId, this.channel, this.localOnly, this.reactionAcceptance, @DateTimeConverter() this.scheduledAt, this.isActuallyScheduled}): _visibleUserIds = visibleUserIds,_fileIds = fileIds,_files = files;
+  const _NoteDraft({required this.id, @DateTimeConverter() required this.createdAt, this.text, this.cw, required this.userId, required this.user, this.replyId, this.renoteId, this.reply, this.renote, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.visibility, final  List<String>? visibleUserIds, final  List<String>? fileIds, final  List<DriveFile>? files, this.hashtag, this.poll, this.channelId, this.channel, this.localOnly, this.reactionAcceptance, @EpocTimeDateTimeConverter() this.scheduledAt, this.isActuallyScheduled}): _visibleUserIds = visibleUserIds,_fileIds = fileIds,_files = files;
   factory _NoteDraft.fromJson(Map<String, dynamic> json) => _$NoteDraftFromJson(json);
 
 @override final  String id;
@@ -336,7 +336,7 @@ class _NoteDraft implements NoteDraft {
 @override final  NoteChannelInfo? channel;
 @override final  bool? localOnly;
 @override final  ReactionAcceptance? reactionAcceptance;
-@override@DateTimeConverter() final  DateTime? scheduledAt;
+@override@EpocTimeDateTimeConverter() final  DateTime? scheduledAt;
 @override final  bool? isActuallyScheduled;
 
 /// Create a copy of NoteDraft
@@ -372,7 +372,7 @@ abstract mixin class _$NoteDraftCopyWith<$Res> implements $NoteDraftCopyWith<$Re
   factory _$NoteDraftCopyWith(_NoteDraft value, $Res Function(_NoteDraft) _then) = __$NoteDraftCopyWithImpl;
 @override @useResult
 $Res call({
- String id,@DateTimeConverter() DateTime createdAt, String? text, String? cw, String userId, UserLite user, String? replyId, String? renoteId, Note? reply, Note? renote,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) NoteVisibility? visibility, List<String>? visibleUserIds, List<String>? fileIds, List<DriveFile>? files, String? hashtag, NoteDraftPoll? poll, String? channelId, NoteChannelInfo? channel, bool? localOnly, ReactionAcceptance? reactionAcceptance,@DateTimeConverter() DateTime? scheduledAt, bool? isActuallyScheduled
+ String id,@DateTimeConverter() DateTime createdAt, String? text, String? cw, String userId, UserLite user, String? replyId, String? renoteId, Note? reply, Note? renote,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) NoteVisibility? visibility, List<String>? visibleUserIds, List<String>? fileIds, List<DriveFile>? files, String? hashtag, NoteDraftPoll? poll, String? channelId, NoteChannelInfo? channel, bool? localOnly, ReactionAcceptance? reactionAcceptance,@EpocTimeDateTimeConverter() DateTime? scheduledAt, bool? isActuallyScheduled
 });
 
 

@@ -20,7 +20,7 @@ abstract class NotesDraftsCreateRequest with _$NotesDraftsCreateRequest {
     String? text,
     List<String>? fileIds,
     NotesCreatePollRequest? poll,
-    @DateTimeConverter() DateTime? scheduledAt,
+    @EpocTimeDateTimeConverter() DateTime? scheduledAt,
     bool? isActuallyScheduled,
   }) = _NotesDraftsCreateRequest;
 
