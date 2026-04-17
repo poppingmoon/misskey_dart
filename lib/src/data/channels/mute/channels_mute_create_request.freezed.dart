@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ChannelsMuteCreateRequest {
 
- String? get channelId; int? get expiresAt;
+ String? get channelId;@EpocTimeDateTimeConverter() DateTime? get expiresAt;
 /// Create a copy of ChannelsMuteCreateRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,7 +48,7 @@ abstract mixin class $ChannelsMuteCreateRequestCopyWith<$Res>  {
   factory $ChannelsMuteCreateRequestCopyWith(ChannelsMuteCreateRequest value, $Res Function(ChannelsMuteCreateRequest) _then) = _$ChannelsMuteCreateRequestCopyWithImpl;
 @useResult
 $Res call({
- String? channelId, int? expiresAt
+ String? channelId,@EpocTimeDateTimeConverter() DateTime? expiresAt
 });
 
 
@@ -69,7 +69,7 @@ class _$ChannelsMuteCreateRequestCopyWithImpl<$Res>
   return _then(_self.copyWith(
 channelId: freezed == channelId ? _self.channelId : channelId // ignore: cast_nullable_to_non_nullable
 as String?,expiresAt: freezed == expiresAt ? _self.expiresAt : expiresAt // ignore: cast_nullable_to_non_nullable
-as int?,
+as DateTime?,
   ));
 }
 
@@ -154,7 +154,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? channelId,  int? expiresAt)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? channelId, @EpocTimeDateTimeConverter()  DateTime? expiresAt)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _ChannelsMuteCreateRequest() when $default != null:
 return $default(_that.channelId,_that.expiresAt);case _:
@@ -175,7 +175,7 @@ return $default(_that.channelId,_that.expiresAt);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? channelId,  int? expiresAt)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? channelId, @EpocTimeDateTimeConverter()  DateTime? expiresAt)  $default,) {final _that = this;
 switch (_that) {
 case _ChannelsMuteCreateRequest():
 return $default(_that.channelId,_that.expiresAt);case _:
@@ -195,7 +195,7 @@ return $default(_that.channelId,_that.expiresAt);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? channelId,  int? expiresAt)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? channelId, @EpocTimeDateTimeConverter()  DateTime? expiresAt)?  $default,) {final _that = this;
 switch (_that) {
 case _ChannelsMuteCreateRequest() when $default != null:
 return $default(_that.channelId,_that.expiresAt);case _:
@@ -210,11 +210,11 @@ return $default(_that.channelId,_that.expiresAt);case _:
 @JsonSerializable()
 
 class _ChannelsMuteCreateRequest implements ChannelsMuteCreateRequest {
-  const _ChannelsMuteCreateRequest({this.channelId, this.expiresAt});
+  const _ChannelsMuteCreateRequest({this.channelId, @EpocTimeDateTimeConverter() this.expiresAt});
   factory _ChannelsMuteCreateRequest.fromJson(Map<String, dynamic> json) => _$ChannelsMuteCreateRequestFromJson(json);
 
 @override final  String? channelId;
-@override final  int? expiresAt;
+@override@EpocTimeDateTimeConverter() final  DateTime? expiresAt;
 
 /// Create a copy of ChannelsMuteCreateRequest
 /// with the given fields replaced by the non-null parameter values.
@@ -249,7 +249,7 @@ abstract mixin class _$ChannelsMuteCreateRequestCopyWith<$Res> implements $Chann
   factory _$ChannelsMuteCreateRequestCopyWith(_ChannelsMuteCreateRequest value, $Res Function(_ChannelsMuteCreateRequest) _then) = __$ChannelsMuteCreateRequestCopyWithImpl;
 @override @useResult
 $Res call({
- String? channelId, int? expiresAt
+ String? channelId,@EpocTimeDateTimeConverter() DateTime? expiresAt
 });
 
 
@@ -270,7 +270,7 @@ class __$ChannelsMuteCreateRequestCopyWithImpl<$Res>
   return _then(_ChannelsMuteCreateRequest(
 channelId: freezed == channelId ? _self.channelId : channelId // ignore: cast_nullable_to_non_nullable
 as String?,expiresAt: freezed == expiresAt ? _self.expiresAt : expiresAt // ignore: cast_nullable_to_non_nullable
-as int?,
+as DateTime?,
   ));
 }
 
