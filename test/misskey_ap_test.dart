@@ -9,9 +9,9 @@ void main() async {
       final note = await userClient.createNote();
       final response = await userClient.ap.show(
         ApShowRequest(
-          uri: userClient.apiService.apiUrl.replace(
-            pathSegments: ["notes", note.id],
-          ),
+          uri: userClient.apiService.apiUrl
+              .replace(pathSegments: ["notes", note.id])
+              .toString(),
         ),
       );
       expect(response.type, equals("Note"));
@@ -22,9 +22,9 @@ void main() async {
       final user = await userClient.i.i();
       final response = await userClient.ap.show(
         ApShowRequest(
-          uri: userClient.apiService.apiUrl.replace(
-            pathSegments: ["users", user.id],
-          ),
+          uri: userClient.apiService.apiUrl
+              .replace(pathSegments: ["users", user.id])
+              .toString(),
         ),
       );
       expect(response.type, equals("User"));
