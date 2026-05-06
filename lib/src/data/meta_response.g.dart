@@ -181,6 +181,7 @@ _MetaAd _$MetaAdFromJson(Map<String, dynamic> json) => _MetaAd(
   url: const NullableUriConverter().fromJson(json['url'] as String?),
   imageUrl: const NullableUriConverter().fromJson(json['imageUrl'] as String?),
   ratio: (json['ratio'] as num).toInt(),
+  isSensitive: json['isSensitive'] as bool?,
 );
 
 Map<String, dynamic> _$MetaAdToJson(_MetaAd instance) => <String, dynamic>{
@@ -189,6 +190,7 @@ Map<String, dynamic> _$MetaAdToJson(_MetaAd instance) => <String, dynamic>{
   'url': const NullableUriConverter().toJson(instance.url),
   'imageUrl': const NullableUriConverter().toJson(instance.imageUrl),
   'ratio': instance.ratio,
+  'isSensitive': instance.isSensitive,
 };
 
 _MetaFeature _$MetaFeatureFromJson(Map<String, dynamic> json) => _MetaFeature(

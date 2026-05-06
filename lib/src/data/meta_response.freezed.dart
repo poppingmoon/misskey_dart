@@ -505,7 +505,7 @@ $MetaFeatureCopyWith<$Res>? get features {
 /// @nodoc
 mixin _$MetaAd {
 
- String get id; String get place;@NullableUriConverter() Uri? get url;@NullableUriConverter() Uri? get imageUrl; int get ratio;
+ String get id; String get place;@NullableUriConverter() Uri? get url;@NullableUriConverter() Uri? get imageUrl; int get ratio; bool? get isSensitive;
 /// Create a copy of MetaAd
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -518,16 +518,16 @@ $MetaAdCopyWith<MetaAd> get copyWith => _$MetaAdCopyWithImpl<MetaAd>(this as Met
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is MetaAd&&(identical(other.id, id) || other.id == id)&&(identical(other.place, place) || other.place == place)&&(identical(other.url, url) || other.url == url)&&(identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl)&&(identical(other.ratio, ratio) || other.ratio == ratio));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is MetaAd&&(identical(other.id, id) || other.id == id)&&(identical(other.place, place) || other.place == place)&&(identical(other.url, url) || other.url == url)&&(identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl)&&(identical(other.ratio, ratio) || other.ratio == ratio)&&(identical(other.isSensitive, isSensitive) || other.isSensitive == isSensitive));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,place,url,imageUrl,ratio);
+int get hashCode => Object.hash(runtimeType,id,place,url,imageUrl,ratio,isSensitive);
 
 @override
 String toString() {
-  return 'MetaAd(id: $id, place: $place, url: $url, imageUrl: $imageUrl, ratio: $ratio)';
+  return 'MetaAd(id: $id, place: $place, url: $url, imageUrl: $imageUrl, ratio: $ratio, isSensitive: $isSensitive)';
 }
 
 
@@ -538,7 +538,7 @@ abstract mixin class $MetaAdCopyWith<$Res>  {
   factory $MetaAdCopyWith(MetaAd value, $Res Function(MetaAd) _then) = _$MetaAdCopyWithImpl;
 @useResult
 $Res call({
- String id, String place,@NullableUriConverter() Uri? url,@NullableUriConverter() Uri? imageUrl, int ratio
+ String id, String place,@NullableUriConverter() Uri? url,@NullableUriConverter() Uri? imageUrl, int ratio, bool? isSensitive
 });
 
 
@@ -555,14 +555,15 @@ class _$MetaAdCopyWithImpl<$Res>
 
 /// Create a copy of MetaAd
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? place = null,Object? url = freezed,Object? imageUrl = freezed,Object? ratio = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? place = null,Object? url = freezed,Object? imageUrl = freezed,Object? ratio = null,Object? isSensitive = freezed,}) {
   return _then(_self.copyWith(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,place: null == place ? _self.place : place // ignore: cast_nullable_to_non_nullable
 as String,url: freezed == url ? _self.url : url // ignore: cast_nullable_to_non_nullable
 as Uri?,imageUrl: freezed == imageUrl ? _self.imageUrl : imageUrl // ignore: cast_nullable_to_non_nullable
 as Uri?,ratio: null == ratio ? _self.ratio : ratio // ignore: cast_nullable_to_non_nullable
-as int,
+as int,isSensitive: freezed == isSensitive ? _self.isSensitive : isSensitive // ignore: cast_nullable_to_non_nullable
+as bool?,
   ));
 }
 
@@ -647,10 +648,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String place, @NullableUriConverter()  Uri? url, @NullableUriConverter()  Uri? imageUrl,  int ratio)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String place, @NullableUriConverter()  Uri? url, @NullableUriConverter()  Uri? imageUrl,  int ratio,  bool? isSensitive)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _MetaAd() when $default != null:
-return $default(_that.id,_that.place,_that.url,_that.imageUrl,_that.ratio);case _:
+return $default(_that.id,_that.place,_that.url,_that.imageUrl,_that.ratio,_that.isSensitive);case _:
   return orElse();
 
 }
@@ -668,10 +669,10 @@ return $default(_that.id,_that.place,_that.url,_that.imageUrl,_that.ratio);case 
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String place, @NullableUriConverter()  Uri? url, @NullableUriConverter()  Uri? imageUrl,  int ratio)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String place, @NullableUriConverter()  Uri? url, @NullableUriConverter()  Uri? imageUrl,  int ratio,  bool? isSensitive)  $default,) {final _that = this;
 switch (_that) {
 case _MetaAd():
-return $default(_that.id,_that.place,_that.url,_that.imageUrl,_that.ratio);case _:
+return $default(_that.id,_that.place,_that.url,_that.imageUrl,_that.ratio,_that.isSensitive);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -688,10 +689,10 @@ return $default(_that.id,_that.place,_that.url,_that.imageUrl,_that.ratio);case 
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String place, @NullableUriConverter()  Uri? url, @NullableUriConverter()  Uri? imageUrl,  int ratio)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String place, @NullableUriConverter()  Uri? url, @NullableUriConverter()  Uri? imageUrl,  int ratio,  bool? isSensitive)?  $default,) {final _that = this;
 switch (_that) {
 case _MetaAd() when $default != null:
-return $default(_that.id,_that.place,_that.url,_that.imageUrl,_that.ratio);case _:
+return $default(_that.id,_that.place,_that.url,_that.imageUrl,_that.ratio,_that.isSensitive);case _:
   return null;
 
 }
@@ -703,7 +704,7 @@ return $default(_that.id,_that.place,_that.url,_that.imageUrl,_that.ratio);case 
 @JsonSerializable()
 
 class _MetaAd implements MetaAd {
-  const _MetaAd({required this.id, required this.place, @NullableUriConverter() this.url, @NullableUriConverter() this.imageUrl, required this.ratio});
+  const _MetaAd({required this.id, required this.place, @NullableUriConverter() this.url, @NullableUriConverter() this.imageUrl, required this.ratio, this.isSensitive});
   factory _MetaAd.fromJson(Map<String, dynamic> json) => _$MetaAdFromJson(json);
 
 @override final  String id;
@@ -711,6 +712,7 @@ class _MetaAd implements MetaAd {
 @override@NullableUriConverter() final  Uri? url;
 @override@NullableUriConverter() final  Uri? imageUrl;
 @override final  int ratio;
+@override final  bool? isSensitive;
 
 /// Create a copy of MetaAd
 /// with the given fields replaced by the non-null parameter values.
@@ -725,16 +727,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _MetaAd&&(identical(other.id, id) || other.id == id)&&(identical(other.place, place) || other.place == place)&&(identical(other.url, url) || other.url == url)&&(identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl)&&(identical(other.ratio, ratio) || other.ratio == ratio));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _MetaAd&&(identical(other.id, id) || other.id == id)&&(identical(other.place, place) || other.place == place)&&(identical(other.url, url) || other.url == url)&&(identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl)&&(identical(other.ratio, ratio) || other.ratio == ratio)&&(identical(other.isSensitive, isSensitive) || other.isSensitive == isSensitive));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,place,url,imageUrl,ratio);
+int get hashCode => Object.hash(runtimeType,id,place,url,imageUrl,ratio,isSensitive);
 
 @override
 String toString() {
-  return 'MetaAd(id: $id, place: $place, url: $url, imageUrl: $imageUrl, ratio: $ratio)';
+  return 'MetaAd(id: $id, place: $place, url: $url, imageUrl: $imageUrl, ratio: $ratio, isSensitive: $isSensitive)';
 }
 
 
@@ -745,7 +747,7 @@ abstract mixin class _$MetaAdCopyWith<$Res> implements $MetaAdCopyWith<$Res> {
   factory _$MetaAdCopyWith(_MetaAd value, $Res Function(_MetaAd) _then) = __$MetaAdCopyWithImpl;
 @override @useResult
 $Res call({
- String id, String place,@NullableUriConverter() Uri? url,@NullableUriConverter() Uri? imageUrl, int ratio
+ String id, String place,@NullableUriConverter() Uri? url,@NullableUriConverter() Uri? imageUrl, int ratio, bool? isSensitive
 });
 
 
@@ -762,14 +764,15 @@ class __$MetaAdCopyWithImpl<$Res>
 
 /// Create a copy of MetaAd
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? place = null,Object? url = freezed,Object? imageUrl = freezed,Object? ratio = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? place = null,Object? url = freezed,Object? imageUrl = freezed,Object? ratio = null,Object? isSensitive = freezed,}) {
   return _then(_MetaAd(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,place: null == place ? _self.place : place // ignore: cast_nullable_to_non_nullable
 as String,url: freezed == url ? _self.url : url // ignore: cast_nullable_to_non_nullable
 as Uri?,imageUrl: freezed == imageUrl ? _self.imageUrl : imageUrl // ignore: cast_nullable_to_non_nullable
 as Uri?,ratio: null == ratio ? _self.ratio : ratio // ignore: cast_nullable_to_non_nullable
-as int,
+as int,isSensitive: freezed == isSensitive ? _self.isSensitive : isSensitive // ignore: cast_nullable_to_non_nullable
+as bool?,
   ));
 }
 

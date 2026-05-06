@@ -76,6 +76,7 @@ abstract class MetaAd with _$MetaAd {
     @NullableUriConverter() Uri? url,
     @NullableUriConverter() Uri? imageUrl,
     required int ratio,
+    bool? isSensitive,
   }) = _MetaAd;
   factory MetaAd.fromJson(Map<String, Object?> json) => _$MetaAdFromJson(json);
 }
