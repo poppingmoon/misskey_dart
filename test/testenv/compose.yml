@@ -1,5 +1,3 @@
-version: "3"
-
 services:
   get-token:
     build: get-token
@@ -29,6 +27,7 @@ services:
     volumes:
       - ./.config:/misskey/.config
     environment:
+      - CI=true
       - NODE_ENV=development
 
   redis:
