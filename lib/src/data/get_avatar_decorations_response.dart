@@ -13,6 +13,7 @@ abstract class GetAvatarDecorationsResponse
     required String description,
     @NullableUriConverter() Uri? url,
     @Default([]) List<String> roleIdsThatCanBeUsedThisDecoration,
+    String? category,
   }) = _GetAvatarDecorationsResponse;
 
   factory GetAvatarDecorationsResponse.fromJson(Map<String, dynamic> json) =>

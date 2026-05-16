@@ -18,6 +18,7 @@ _GetAvatarDecorationsResponse _$GetAvatarDecorationsResponseFromJson(
           ?.map((e) => e as String)
           .toList() ??
       const [],
+  category: json['category'] as String?,
 );
 
 Map<String, dynamic> _$GetAvatarDecorationsResponseToJson(
@@ -29,4 +30,5 @@ Map<String, dynamic> _$GetAvatarDecorationsResponseToJson(
   'url': const NullableUriConverter().toJson(instance.url),
   'roleIdsThatCanBeUsedThisDecoration':
       instance.roleIdsThatCanBeUsedThisDecoration,
+  'category': instance.category,
 };
