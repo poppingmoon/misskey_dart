@@ -51,6 +51,8 @@ abstract class MetaResponse with _$MetaResponse {
     int? notesPerOneAd,
     @Default([]) List<String> serverRules,
     UserPolicies? policies,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    MetaFederation? federation,
     bool? requireSetup,
     bool? enableEmail,
     bool? enableServiceWorker,
@@ -80,6 +82,8 @@ abstract class MetaAd with _$MetaAd {
   }) = _MetaAd;
   factory MetaAd.fromJson(Map<String, Object?> json) => _$MetaAdFromJson(json);
 }
+
+enum MetaFederation { all, specified, none }
 
 @freezed
 abstract class MetaFeature with _$MetaFeature {

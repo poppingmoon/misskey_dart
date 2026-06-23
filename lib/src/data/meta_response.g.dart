@@ -89,6 +89,11 @@ _MetaResponse _$MetaResponseFromJson(Map<String, dynamic> json) =>
       policies: json['policies'] == null
           ? null
           : UserPolicies.fromJson(json['policies'] as Map<String, dynamic>),
+      federation: $enumDecodeNullable(
+        _$MetaFederationEnumMap,
+        json['federation'],
+        unknownValue: JsonKey.nullForUndefinedEnumValue,
+      ),
       requireSetup: json['requireSetup'] as bool?,
       enableEmail: json['enableEmail'] as bool?,
       enableServiceWorker: json['enableServiceWorker'] as bool?,
@@ -162,6 +167,7 @@ Map<String, dynamic> _$MetaResponseToJson(
   'notesPerOneAd': instance.notesPerOneAd,
   'serverRules': instance.serverRules,
   'policies': instance.policies?.toJson(),
+  'federation': _$MetaFederationEnumMap[instance.federation],
   'requireSetup': instance.requireSetup,
   'enableEmail': instance.enableEmail,
   'enableServiceWorker': instance.enableServiceWorker,
@@ -173,6 +179,12 @@ Map<String, dynamic> _$MetaResponseToJson(
   'cacheRemoteFiles': instance.cacheRemoteFiles,
   'cacheRemoteSensitiveFiles': instance.cacheRemoteSensitiveFiles,
   'features': instance.features?.toJson(),
+};
+
+const _$MetaFederationEnumMap = {
+  MetaFederation.all: 'all',
+  MetaFederation.specified: 'specified',
+  MetaFederation.none: 'none',
 };
 
 _MetaAd _$MetaAdFromJson(Map<String, dynamic> json) => _MetaAd(
