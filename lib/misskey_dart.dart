@@ -296,6 +296,7 @@ export 'src/enums/announcement_icon_type.dart';
 export 'src/enums/antenna_source.dart';
 export 'src/enums/channel.dart';
 export 'src/enums/channel_search_type.dart';
+export 'src/enums/drive_files_sort_type.dart';
 export 'src/enums/ff_visibility.dart';
 export 'src/enums/flash_visibility.dart';
 export 'src/enums/following_update_all_notify_type.dart';
