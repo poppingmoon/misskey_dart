@@ -84,10 +84,10 @@ abstract class UserDetailed implements User {
   String? get moderationNote;
 
   factory UserDetailed.fromJson(Map<String, Object?> json) {
-    if (json.containsKey("isFollowing")) {
-      return UserDetailedNotMeWithRelations.fromJson(json);
-    } else if (json.containsKey("avatarId")) {
+    if (json.containsKey("avatarId")) {
       return MeDetailed.fromJson(json);
+    } else if (json.containsKey("isFollowing")) {
+      return UserDetailedNotMeWithRelations.fromJson(json);
     } else {
       return UserDetailedNotMe.fromJson(json);
     }
