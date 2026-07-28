@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:misskey_dart/src/converters/date_time_converter.dart';
 
 part 'drive_files_attached_notes_request.freezed.dart';
 part 'drive_files_attached_notes_request.g.dart';
@@ -12,6 +13,8 @@ abstract class DriveFilesAttachedNotesRequest
     int? limit,
     String? sinceId,
     String? untilId,
+    @EpocTimeDateTimeConverter() DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() DateTime? untilDate,
   }) = _DriveFilesAttachedNotesRequest;
 
   factory DriveFilesAttachedNotesRequest.fromJson(Map<String, dynamic> json) =>

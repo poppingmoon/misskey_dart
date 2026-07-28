@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:misskey_dart/src/converters/date_time_converter.dart';
 import 'package:misskey_dart/src/enums/channel_search_type.dart';
 
 part 'channels_search_request.freezed.dart';
@@ -11,6 +12,8 @@ abstract class ChannelsSearchRequest with _$ChannelsSearchRequest {
     ChannelSearchType? type,
     String? sinceId,
     String? untilId,
+    @EpocTimeDateTimeConverter() DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() DateTime? untilDate,
     @Assert('limit > 0') int? limit,
   }) = _ChannelsSearchRequest;
 

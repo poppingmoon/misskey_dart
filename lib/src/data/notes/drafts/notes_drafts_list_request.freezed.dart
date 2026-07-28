@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$NotesDraftsListRequest {
 
- int? get limit; String? get sinceId; String? get untilId; bool? get scheduled;
+ int? get limit; String? get sinceId; String? get untilId;@EpocTimeDateTimeConverter() DateTime? get sinceDate;@EpocTimeDateTimeConverter() DateTime? get untilDate; bool? get scheduled;
 /// Create a copy of NotesDraftsListRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -28,16 +28,16 @@ $NotesDraftsListRequestCopyWith<NotesDraftsListRequest> get copyWith => _$NotesD
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesDraftsListRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.scheduled, scheduled) || other.scheduled == scheduled));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesDraftsListRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.scheduled, scheduled) || other.scheduled == scheduled));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,limit,sinceId,untilId,scheduled);
+int get hashCode => Object.hash(runtimeType,limit,sinceId,untilId,sinceDate,untilDate,scheduled);
 
 @override
 String toString() {
-  return 'NotesDraftsListRequest(limit: $limit, sinceId: $sinceId, untilId: $untilId, scheduled: $scheduled)';
+  return 'NotesDraftsListRequest(limit: $limit, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, scheduled: $scheduled)';
 }
 
 
@@ -48,7 +48,7 @@ abstract mixin class $NotesDraftsListRequestCopyWith<$Res>  {
   factory $NotesDraftsListRequestCopyWith(NotesDraftsListRequest value, $Res Function(NotesDraftsListRequest) _then) = _$NotesDraftsListRequestCopyWithImpl;
 @useResult
 $Res call({
- int? limit, String? sinceId, String? untilId, bool? scheduled
+ int? limit, String? sinceId, String? untilId,@EpocTimeDateTimeConverter() DateTime? sinceDate,@EpocTimeDateTimeConverter() DateTime? untilDate, bool? scheduled
 });
 
 
@@ -65,12 +65,14 @@ class _$NotesDraftsListRequestCopyWithImpl<$Res>
 
 /// Create a copy of NotesDraftsListRequest
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? scheduled = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,Object? scheduled = freezed,}) {
   return _then(_self.copyWith(
 limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
 as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
-as String?,scheduled: freezed == scheduled ? _self.scheduled : scheduled // ignore: cast_nullable_to_non_nullable
+as String?,sinceDate: freezed == sinceDate ? _self.sinceDate : sinceDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,untilDate: freezed == untilDate ? _self.untilDate : untilDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,scheduled: freezed == scheduled ? _self.scheduled : scheduled // ignore: cast_nullable_to_non_nullable
 as bool?,
   ));
 }
@@ -156,10 +158,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? limit,  String? sinceId,  String? untilId,  bool? scheduled)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  bool? scheduled)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _NotesDraftsListRequest() when $default != null:
-return $default(_that.limit,_that.sinceId,_that.untilId,_that.scheduled);case _:
+return $default(_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.scheduled);case _:
   return orElse();
 
 }
@@ -177,10 +179,10 @@ return $default(_that.limit,_that.sinceId,_that.untilId,_that.scheduled);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? limit,  String? sinceId,  String? untilId,  bool? scheduled)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  bool? scheduled)  $default,) {final _that = this;
 switch (_that) {
 case _NotesDraftsListRequest():
-return $default(_that.limit,_that.sinceId,_that.untilId,_that.scheduled);case _:
+return $default(_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.scheduled);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -197,10 +199,10 @@ return $default(_that.limit,_that.sinceId,_that.untilId,_that.scheduled);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? limit,  String? sinceId,  String? untilId,  bool? scheduled)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  bool? scheduled)?  $default,) {final _that = this;
 switch (_that) {
 case _NotesDraftsListRequest() when $default != null:
-return $default(_that.limit,_that.sinceId,_that.untilId,_that.scheduled);case _:
+return $default(_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.scheduled);case _:
   return null;
 
 }
@@ -212,12 +214,14 @@ return $default(_that.limit,_that.sinceId,_that.untilId,_that.scheduled);case _:
 @JsonSerializable()
 
 class _NotesDraftsListRequest implements NotesDraftsListRequest {
-  const _NotesDraftsListRequest({this.limit, this.sinceId, this.untilId, this.scheduled});
+  const _NotesDraftsListRequest({this.limit, this.sinceId, this.untilId, @EpocTimeDateTimeConverter() this.sinceDate, @EpocTimeDateTimeConverter() this.untilDate, this.scheduled});
   factory _NotesDraftsListRequest.fromJson(Map<String, dynamic> json) => _$NotesDraftsListRequestFromJson(json);
 
 @override final  int? limit;
 @override final  String? sinceId;
 @override final  String? untilId;
+@override@EpocTimeDateTimeConverter() final  DateTime? sinceDate;
+@override@EpocTimeDateTimeConverter() final  DateTime? untilDate;
 @override final  bool? scheduled;
 
 /// Create a copy of NotesDraftsListRequest
@@ -233,16 +237,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesDraftsListRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.scheduled, scheduled) || other.scheduled == scheduled));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesDraftsListRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.scheduled, scheduled) || other.scheduled == scheduled));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,limit,sinceId,untilId,scheduled);
+int get hashCode => Object.hash(runtimeType,limit,sinceId,untilId,sinceDate,untilDate,scheduled);
 
 @override
 String toString() {
-  return 'NotesDraftsListRequest(limit: $limit, sinceId: $sinceId, untilId: $untilId, scheduled: $scheduled)';
+  return 'NotesDraftsListRequest(limit: $limit, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, scheduled: $scheduled)';
 }
 
 
@@ -253,7 +257,7 @@ abstract mixin class _$NotesDraftsListRequestCopyWith<$Res> implements $NotesDra
   factory _$NotesDraftsListRequestCopyWith(_NotesDraftsListRequest value, $Res Function(_NotesDraftsListRequest) _then) = __$NotesDraftsListRequestCopyWithImpl;
 @override @useResult
 $Res call({
- int? limit, String? sinceId, String? untilId, bool? scheduled
+ int? limit, String? sinceId, String? untilId,@EpocTimeDateTimeConverter() DateTime? sinceDate,@EpocTimeDateTimeConverter() DateTime? untilDate, bool? scheduled
 });
 
 
@@ -270,12 +274,14 @@ class __$NotesDraftsListRequestCopyWithImpl<$Res>
 
 /// Create a copy of NotesDraftsListRequest
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? scheduled = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,Object? scheduled = freezed,}) {
   return _then(_NotesDraftsListRequest(
 limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
 as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
-as String?,scheduled: freezed == scheduled ? _self.scheduled : scheduled // ignore: cast_nullable_to_non_nullable
+as String?,sinceDate: freezed == sinceDate ? _self.sinceDate : sinceDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,untilDate: freezed == untilDate ? _self.untilDate : untilDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,scheduled: freezed == scheduled ? _self.scheduled : scheduled // ignore: cast_nullable_to_non_nullable
 as bool?,
   ));
 }

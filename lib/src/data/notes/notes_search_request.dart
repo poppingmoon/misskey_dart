@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:misskey_dart/src/converters/date_time_converter.dart';
 
 part 'notes_search_request.freezed.dart';
 part 'notes_search_request.g.dart';
@@ -14,6 +15,9 @@ abstract class NotesSearchRequest with _$NotesSearchRequest {
 
     /// 指定すると、idがその値よりも小さいノートを返します。
     String? untilId,
+
+    @EpocTimeDateTimeConverter() DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() DateTime? untilDate,
 
     /// 取得するノートの最大数。
     int? limit,

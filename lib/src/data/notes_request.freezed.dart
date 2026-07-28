@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$NotesRequest {
 
- bool? get local; bool? get reply; bool? get renote; bool? get withFiles; bool? get poll; int? get limit; String? get sinceId; String? get untilId;
+ bool? get local; bool? get reply; bool? get renote; bool? get withFiles; bool? get poll; int? get limit; String? get sinceId; String? get untilId;@EpocTimeDateTimeConverter() DateTime? get sinceDate;@EpocTimeDateTimeConverter() DateTime? get untilDate;
 /// Create a copy of NotesRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -28,16 +28,16 @@ $NotesRequestCopyWith<NotesRequest> get copyWith => _$NotesRequestCopyWithImpl<N
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesRequest&&(identical(other.local, local) || other.local == local)&&(identical(other.reply, reply) || other.reply == reply)&&(identical(other.renote, renote) || other.renote == renote)&&(identical(other.withFiles, withFiles) || other.withFiles == withFiles)&&(identical(other.poll, poll) || other.poll == poll)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesRequest&&(identical(other.local, local) || other.local == local)&&(identical(other.reply, reply) || other.reply == reply)&&(identical(other.renote, renote) || other.renote == renote)&&(identical(other.withFiles, withFiles) || other.withFiles == withFiles)&&(identical(other.poll, poll) || other.poll == poll)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,local,reply,renote,withFiles,poll,limit,sinceId,untilId);
+int get hashCode => Object.hash(runtimeType,local,reply,renote,withFiles,poll,limit,sinceId,untilId,sinceDate,untilDate);
 
 @override
 String toString() {
-  return 'NotesRequest(local: $local, reply: $reply, renote: $renote, withFiles: $withFiles, poll: $poll, limit: $limit, sinceId: $sinceId, untilId: $untilId)';
+  return 'NotesRequest(local: $local, reply: $reply, renote: $renote, withFiles: $withFiles, poll: $poll, limit: $limit, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate)';
 }
 
 
@@ -48,7 +48,7 @@ abstract mixin class $NotesRequestCopyWith<$Res>  {
   factory $NotesRequestCopyWith(NotesRequest value, $Res Function(NotesRequest) _then) = _$NotesRequestCopyWithImpl;
 @useResult
 $Res call({
- bool? local, bool? reply, bool? renote, bool? withFiles, bool? poll, int? limit, String? sinceId, String? untilId
+ bool? local, bool? reply, bool? renote, bool? withFiles, bool? poll, int? limit, String? sinceId, String? untilId,@EpocTimeDateTimeConverter() DateTime? sinceDate,@EpocTimeDateTimeConverter() DateTime? untilDate
 });
 
 
@@ -65,7 +65,7 @@ class _$NotesRequestCopyWithImpl<$Res>
 
 /// Create a copy of NotesRequest
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? local = freezed,Object? reply = freezed,Object? renote = freezed,Object? withFiles = freezed,Object? poll = freezed,Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? local = freezed,Object? reply = freezed,Object? renote = freezed,Object? withFiles = freezed,Object? poll = freezed,Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,}) {
   return _then(_self.copyWith(
 local: freezed == local ? _self.local : local // ignore: cast_nullable_to_non_nullable
 as bool?,reply: freezed == reply ? _self.reply : reply // ignore: cast_nullable_to_non_nullable
@@ -75,7 +75,9 @@ as bool?,poll: freezed == poll ? _self.poll : poll // ignore: cast_nullable_to_n
 as bool?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
 as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
-as String?,
+as String?,sinceDate: freezed == sinceDate ? _self.sinceDate : sinceDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,untilDate: freezed == untilDate ? _self.untilDate : untilDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,
   ));
 }
 
@@ -160,10 +162,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( bool? local,  bool? reply,  bool? renote,  bool? withFiles,  bool? poll,  int? limit,  String? sinceId,  String? untilId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( bool? local,  bool? reply,  bool? renote,  bool? withFiles,  bool? poll,  int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _NotesRequest() when $default != null:
-return $default(_that.local,_that.reply,_that.renote,_that.withFiles,_that.poll,_that.limit,_that.sinceId,_that.untilId);case _:
+return $default(_that.local,_that.reply,_that.renote,_that.withFiles,_that.poll,_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate);case _:
   return orElse();
 
 }
@@ -181,10 +183,10 @@ return $default(_that.local,_that.reply,_that.renote,_that.withFiles,_that.poll,
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( bool? local,  bool? reply,  bool? renote,  bool? withFiles,  bool? poll,  int? limit,  String? sinceId,  String? untilId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( bool? local,  bool? reply,  bool? renote,  bool? withFiles,  bool? poll,  int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate)  $default,) {final _that = this;
 switch (_that) {
 case _NotesRequest():
-return $default(_that.local,_that.reply,_that.renote,_that.withFiles,_that.poll,_that.limit,_that.sinceId,_that.untilId);case _:
+return $default(_that.local,_that.reply,_that.renote,_that.withFiles,_that.poll,_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -201,10 +203,10 @@ return $default(_that.local,_that.reply,_that.renote,_that.withFiles,_that.poll,
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( bool? local,  bool? reply,  bool? renote,  bool? withFiles,  bool? poll,  int? limit,  String? sinceId,  String? untilId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( bool? local,  bool? reply,  bool? renote,  bool? withFiles,  bool? poll,  int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate)?  $default,) {final _that = this;
 switch (_that) {
 case _NotesRequest() when $default != null:
-return $default(_that.local,_that.reply,_that.renote,_that.withFiles,_that.poll,_that.limit,_that.sinceId,_that.untilId);case _:
+return $default(_that.local,_that.reply,_that.renote,_that.withFiles,_that.poll,_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate);case _:
   return null;
 
 }
@@ -216,7 +218,7 @@ return $default(_that.local,_that.reply,_that.renote,_that.withFiles,_that.poll,
 @JsonSerializable()
 
 class _NotesRequest implements NotesRequest {
-  const _NotesRequest({this.local, this.reply, this.renote, this.withFiles, this.poll, this.limit, this.sinceId, this.untilId});
+  const _NotesRequest({this.local, this.reply, this.renote, this.withFiles, this.poll, this.limit, this.sinceId, this.untilId, @EpocTimeDateTimeConverter() this.sinceDate, @EpocTimeDateTimeConverter() this.untilDate});
   factory _NotesRequest.fromJson(Map<String, dynamic> json) => _$NotesRequestFromJson(json);
 
 @override final  bool? local;
@@ -227,6 +229,8 @@ class _NotesRequest implements NotesRequest {
 @override final  int? limit;
 @override final  String? sinceId;
 @override final  String? untilId;
+@override@EpocTimeDateTimeConverter() final  DateTime? sinceDate;
+@override@EpocTimeDateTimeConverter() final  DateTime? untilDate;
 
 /// Create a copy of NotesRequest
 /// with the given fields replaced by the non-null parameter values.
@@ -241,16 +245,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesRequest&&(identical(other.local, local) || other.local == local)&&(identical(other.reply, reply) || other.reply == reply)&&(identical(other.renote, renote) || other.renote == renote)&&(identical(other.withFiles, withFiles) || other.withFiles == withFiles)&&(identical(other.poll, poll) || other.poll == poll)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesRequest&&(identical(other.local, local) || other.local == local)&&(identical(other.reply, reply) || other.reply == reply)&&(identical(other.renote, renote) || other.renote == renote)&&(identical(other.withFiles, withFiles) || other.withFiles == withFiles)&&(identical(other.poll, poll) || other.poll == poll)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,local,reply,renote,withFiles,poll,limit,sinceId,untilId);
+int get hashCode => Object.hash(runtimeType,local,reply,renote,withFiles,poll,limit,sinceId,untilId,sinceDate,untilDate);
 
 @override
 String toString() {
-  return 'NotesRequest(local: $local, reply: $reply, renote: $renote, withFiles: $withFiles, poll: $poll, limit: $limit, sinceId: $sinceId, untilId: $untilId)';
+  return 'NotesRequest(local: $local, reply: $reply, renote: $renote, withFiles: $withFiles, poll: $poll, limit: $limit, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate)';
 }
 
 
@@ -261,7 +265,7 @@ abstract mixin class _$NotesRequestCopyWith<$Res> implements $NotesRequestCopyWi
   factory _$NotesRequestCopyWith(_NotesRequest value, $Res Function(_NotesRequest) _then) = __$NotesRequestCopyWithImpl;
 @override @useResult
 $Res call({
- bool? local, bool? reply, bool? renote, bool? withFiles, bool? poll, int? limit, String? sinceId, String? untilId
+ bool? local, bool? reply, bool? renote, bool? withFiles, bool? poll, int? limit, String? sinceId, String? untilId,@EpocTimeDateTimeConverter() DateTime? sinceDate,@EpocTimeDateTimeConverter() DateTime? untilDate
 });
 
 
@@ -278,7 +282,7 @@ class __$NotesRequestCopyWithImpl<$Res>
 
 /// Create a copy of NotesRequest
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? local = freezed,Object? reply = freezed,Object? renote = freezed,Object? withFiles = freezed,Object? poll = freezed,Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? local = freezed,Object? reply = freezed,Object? renote = freezed,Object? withFiles = freezed,Object? poll = freezed,Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,}) {
   return _then(_NotesRequest(
 local: freezed == local ? _self.local : local // ignore: cast_nullable_to_non_nullable
 as bool?,reply: freezed == reply ? _self.reply : reply // ignore: cast_nullable_to_non_nullable
@@ -288,7 +292,9 @@ as bool?,poll: freezed == poll ? _self.poll : poll // ignore: cast_nullable_to_n
 as bool?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
 as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
-as String?,
+as String?,sinceDate: freezed == sinceDate ? _self.sinceDate : sinceDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,untilDate: freezed == untilDate ? _self.untilDate : untilDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,
   ));
 }
 

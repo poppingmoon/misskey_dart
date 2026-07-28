@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$DriveFoldersRequest {
 
- int? get limit; String? get sinceId; String? get untilId; String? get folderId;
+ int? get limit; String? get sinceId; String? get untilId;@EpocTimeDateTimeConverter() DateTime? get sinceDate;@EpocTimeDateTimeConverter() DateTime? get untilDate; String? get folderId;
 /// Create a copy of DriveFoldersRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -28,16 +28,16 @@ $DriveFoldersRequestCopyWith<DriveFoldersRequest> get copyWith => _$DriveFolders
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is DriveFoldersRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.folderId, folderId) || other.folderId == folderId));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is DriveFoldersRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.folderId, folderId) || other.folderId == folderId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,limit,sinceId,untilId,folderId);
+int get hashCode => Object.hash(runtimeType,limit,sinceId,untilId,sinceDate,untilDate,folderId);
 
 @override
 String toString() {
-  return 'DriveFoldersRequest(limit: $limit, sinceId: $sinceId, untilId: $untilId, folderId: $folderId)';
+  return 'DriveFoldersRequest(limit: $limit, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, folderId: $folderId)';
 }
 
 
@@ -48,7 +48,7 @@ abstract mixin class $DriveFoldersRequestCopyWith<$Res>  {
   factory $DriveFoldersRequestCopyWith(DriveFoldersRequest value, $Res Function(DriveFoldersRequest) _then) = _$DriveFoldersRequestCopyWithImpl;
 @useResult
 $Res call({
- int? limit, String? sinceId, String? untilId, String? folderId
+ int? limit, String? sinceId, String? untilId,@EpocTimeDateTimeConverter() DateTime? sinceDate,@EpocTimeDateTimeConverter() DateTime? untilDate, String? folderId
 });
 
 
@@ -65,12 +65,14 @@ class _$DriveFoldersRequestCopyWithImpl<$Res>
 
 /// Create a copy of DriveFoldersRequest
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? folderId = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,Object? folderId = freezed,}) {
   return _then(_self.copyWith(
 limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
 as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
-as String?,folderId: freezed == folderId ? _self.folderId : folderId // ignore: cast_nullable_to_non_nullable
+as String?,sinceDate: freezed == sinceDate ? _self.sinceDate : sinceDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,untilDate: freezed == untilDate ? _self.untilDate : untilDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,folderId: freezed == folderId ? _self.folderId : folderId // ignore: cast_nullable_to_non_nullable
 as String?,
   ));
 }
@@ -156,10 +158,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? limit,  String? sinceId,  String? untilId,  String? folderId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  String? folderId)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _DriveFoldersRequest() when $default != null:
-return $default(_that.limit,_that.sinceId,_that.untilId,_that.folderId);case _:
+return $default(_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.folderId);case _:
   return orElse();
 
 }
@@ -177,10 +179,10 @@ return $default(_that.limit,_that.sinceId,_that.untilId,_that.folderId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? limit,  String? sinceId,  String? untilId,  String? folderId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  String? folderId)  $default,) {final _that = this;
 switch (_that) {
 case _DriveFoldersRequest():
-return $default(_that.limit,_that.sinceId,_that.untilId,_that.folderId);case _:
+return $default(_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.folderId);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -197,10 +199,10 @@ return $default(_that.limit,_that.sinceId,_that.untilId,_that.folderId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? limit,  String? sinceId,  String? untilId,  String? folderId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  String? folderId)?  $default,) {final _that = this;
 switch (_that) {
 case _DriveFoldersRequest() when $default != null:
-return $default(_that.limit,_that.sinceId,_that.untilId,_that.folderId);case _:
+return $default(_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.folderId);case _:
   return null;
 
 }
@@ -212,12 +214,14 @@ return $default(_that.limit,_that.sinceId,_that.untilId,_that.folderId);case _:
 @JsonSerializable()
 
 class _DriveFoldersRequest implements DriveFoldersRequest {
-  const _DriveFoldersRequest({this.limit, this.sinceId, this.untilId, this.folderId});
+  const _DriveFoldersRequest({this.limit, this.sinceId, this.untilId, @EpocTimeDateTimeConverter() this.sinceDate, @EpocTimeDateTimeConverter() this.untilDate, this.folderId});
   factory _DriveFoldersRequest.fromJson(Map<String, dynamic> json) => _$DriveFoldersRequestFromJson(json);
 
 @override final  int? limit;
 @override final  String? sinceId;
 @override final  String? untilId;
+@override@EpocTimeDateTimeConverter() final  DateTime? sinceDate;
+@override@EpocTimeDateTimeConverter() final  DateTime? untilDate;
 @override final  String? folderId;
 
 /// Create a copy of DriveFoldersRequest
@@ -233,16 +237,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _DriveFoldersRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.folderId, folderId) || other.folderId == folderId));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _DriveFoldersRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.folderId, folderId) || other.folderId == folderId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,limit,sinceId,untilId,folderId);
+int get hashCode => Object.hash(runtimeType,limit,sinceId,untilId,sinceDate,untilDate,folderId);
 
 @override
 String toString() {
-  return 'DriveFoldersRequest(limit: $limit, sinceId: $sinceId, untilId: $untilId, folderId: $folderId)';
+  return 'DriveFoldersRequest(limit: $limit, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, folderId: $folderId)';
 }
 
 
@@ -253,7 +257,7 @@ abstract mixin class _$DriveFoldersRequestCopyWith<$Res> implements $DriveFolder
   factory _$DriveFoldersRequestCopyWith(_DriveFoldersRequest value, $Res Function(_DriveFoldersRequest) _then) = __$DriveFoldersRequestCopyWithImpl;
 @override @useResult
 $Res call({
- int? limit, String? sinceId, String? untilId, String? folderId
+ int? limit, String? sinceId, String? untilId,@EpocTimeDateTimeConverter() DateTime? sinceDate,@EpocTimeDateTimeConverter() DateTime? untilDate, String? folderId
 });
 
 
@@ -270,12 +274,14 @@ class __$DriveFoldersRequestCopyWithImpl<$Res>
 
 /// Create a copy of DriveFoldersRequest
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? folderId = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,Object? folderId = freezed,}) {
   return _then(_DriveFoldersRequest(
 limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
 as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
-as String?,folderId: freezed == folderId ? _self.folderId : folderId // ignore: cast_nullable_to_non_nullable
+as String?,sinceDate: freezed == sinceDate ? _self.sinceDate : sinceDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,untilDate: freezed == untilDate ? _self.untilDate : untilDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,folderId: freezed == folderId ? _self.folderId : folderId // ignore: cast_nullable_to_non_nullable
 as String?,
   ));
 }

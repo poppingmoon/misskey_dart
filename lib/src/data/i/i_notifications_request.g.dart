@@ -12,6 +12,14 @@ _INotificationRequest _$INotificationRequestFromJson(
   limit: (json['limit'] as num?)?.toInt(),
   sinceId: json['sinceId'] as String?,
   untilId: json['untilId'] as String?,
+  sinceDate: _$JsonConverterFromJson<int, DateTime>(
+    json['sinceDate'],
+    const EpocTimeDateTimeConverter().fromJson,
+  ),
+  untilDate: _$JsonConverterFromJson<int, DateTime>(
+    json['untilDate'],
+    const EpocTimeDateTimeConverter().fromJson,
+  ),
   following: json['following'] as bool?,
   unreadOnly: json['unreadOnly'] as bool?,
   markAsRead: json['markAsRead'] as bool?,
@@ -29,6 +37,14 @@ Map<String, dynamic> _$INotificationRequestToJson(
   'limit': instance.limit,
   'sinceId': instance.sinceId,
   'untilId': instance.untilId,
+  'sinceDate': _$JsonConverterToJson<int, DateTime>(
+    instance.sinceDate,
+    const EpocTimeDateTimeConverter().toJson,
+  ),
+  'untilDate': _$JsonConverterToJson<int, DateTime>(
+    instance.untilDate,
+    const EpocTimeDateTimeConverter().toJson,
+  ),
   'following': instance.following,
   'unreadOnly': instance.unreadOnly,
   'markAsRead': instance.markAsRead,
@@ -39,6 +55,11 @@ Map<String, dynamic> _$INotificationRequestToJson(
       ?.map((e) => _$NotificationTypeEnumMap[e]!)
       .toList(),
 };
+
+Value? _$JsonConverterFromJson<Json, Value>(
+  Object? json,
+  Value? Function(Json json) fromJson,
+) => json == null ? null : fromJson(json as Json);
 
 const _$NotificationTypeEnumMap = {
   NotificationType.note: 'note',
@@ -71,3 +92,8 @@ const _$NotificationTypeEnumMap = {
   NotificationType.pollVote: 'pollVote',
   NotificationType.groupInvited: 'groupInvited',
 };
+
+Json? _$JsonConverterToJson<Json, Value>(
+  Value? value,
+  Json? Function(Value value) toJson,
+) => value == null ? null : toJson(value);

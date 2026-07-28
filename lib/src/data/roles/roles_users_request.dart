@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:misskey_dart/src/converters/date_time_converter.dart';
 
 part 'roles_users_request.freezed.dart';
 part 'roles_users_request.g.dart';
@@ -9,6 +10,8 @@ abstract class RolesUsersRequest with _$RolesUsersRequest {
     required String roleId,
     String? sinceId,
     String? untilId,
+    @EpocTimeDateTimeConverter() DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() DateTime? untilDate,
     int? limit,
   }) = _RolesUsersRequest;
 

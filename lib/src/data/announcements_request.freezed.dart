@@ -16,7 +16,7 @@ T _$identity<T>(T value) => value;
 mixin _$AnnouncementsRequest {
 
  int? get limit;/// removed in Misskey 2023.9
- bool? get withUnreads; bool? get isActive; String? get sinceId; String? get untilId;// ioはこれで動く
+ bool? get withUnreads; bool? get isActive; String? get sinceId; String? get untilId;@EpocTimeDateTimeConverter() DateTime? get sinceDate;@EpocTimeDateTimeConverter() DateTime? get untilDate;// ioはこれで動く
  int? get offset;
 /// Create a copy of AnnouncementsRequest
 /// with the given fields replaced by the non-null parameter values.
@@ -30,16 +30,16 @@ $AnnouncementsRequestCopyWith<AnnouncementsRequest> get copyWith => _$Announceme
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is AnnouncementsRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.withUnreads, withUnreads) || other.withUnreads == withUnreads)&&(identical(other.isActive, isActive) || other.isActive == isActive)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.offset, offset) || other.offset == offset));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is AnnouncementsRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.withUnreads, withUnreads) || other.withUnreads == withUnreads)&&(identical(other.isActive, isActive) || other.isActive == isActive)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.offset, offset) || other.offset == offset));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,limit,withUnreads,isActive,sinceId,untilId,offset);
+int get hashCode => Object.hash(runtimeType,limit,withUnreads,isActive,sinceId,untilId,sinceDate,untilDate,offset);
 
 @override
 String toString() {
-  return 'AnnouncementsRequest(limit: $limit, withUnreads: $withUnreads, isActive: $isActive, sinceId: $sinceId, untilId: $untilId, offset: $offset)';
+  return 'AnnouncementsRequest(limit: $limit, withUnreads: $withUnreads, isActive: $isActive, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, offset: $offset)';
 }
 
 
@@ -50,7 +50,7 @@ abstract mixin class $AnnouncementsRequestCopyWith<$Res>  {
   factory $AnnouncementsRequestCopyWith(AnnouncementsRequest value, $Res Function(AnnouncementsRequest) _then) = _$AnnouncementsRequestCopyWithImpl;
 @useResult
 $Res call({
- int? limit, bool? withUnreads, bool? isActive, String? sinceId, String? untilId, int? offset
+ int? limit, bool? withUnreads, bool? isActive, String? sinceId, String? untilId,@EpocTimeDateTimeConverter() DateTime? sinceDate,@EpocTimeDateTimeConverter() DateTime? untilDate, int? offset
 });
 
 
@@ -67,14 +67,16 @@ class _$AnnouncementsRequestCopyWithImpl<$Res>
 
 /// Create a copy of AnnouncementsRequest
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? limit = freezed,Object? withUnreads = freezed,Object? isActive = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? offset = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? limit = freezed,Object? withUnreads = freezed,Object? isActive = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,Object? offset = freezed,}) {
   return _then(_self.copyWith(
 limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int?,withUnreads: freezed == withUnreads ? _self.withUnreads : withUnreads // ignore: cast_nullable_to_non_nullable
 as bool?,isActive: freezed == isActive ? _self.isActive : isActive // ignore: cast_nullable_to_non_nullable
 as bool?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
 as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
-as String?,offset: freezed == offset ? _self.offset : offset // ignore: cast_nullable_to_non_nullable
+as String?,sinceDate: freezed == sinceDate ? _self.sinceDate : sinceDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,untilDate: freezed == untilDate ? _self.untilDate : untilDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,offset: freezed == offset ? _self.offset : offset // ignore: cast_nullable_to_non_nullable
 as int?,
   ));
 }
@@ -160,10 +162,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? limit,  bool? withUnreads,  bool? isActive,  String? sinceId,  String? untilId,  int? offset)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? limit,  bool? withUnreads,  bool? isActive,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  int? offset)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _AnnouncementsRequest() when $default != null:
-return $default(_that.limit,_that.withUnreads,_that.isActive,_that.sinceId,_that.untilId,_that.offset);case _:
+return $default(_that.limit,_that.withUnreads,_that.isActive,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.offset);case _:
   return orElse();
 
 }
@@ -181,10 +183,10 @@ return $default(_that.limit,_that.withUnreads,_that.isActive,_that.sinceId,_that
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? limit,  bool? withUnreads,  bool? isActive,  String? sinceId,  String? untilId,  int? offset)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? limit,  bool? withUnreads,  bool? isActive,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  int? offset)  $default,) {final _that = this;
 switch (_that) {
 case _AnnouncementsRequest():
-return $default(_that.limit,_that.withUnreads,_that.isActive,_that.sinceId,_that.untilId,_that.offset);case _:
+return $default(_that.limit,_that.withUnreads,_that.isActive,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.offset);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -201,10 +203,10 @@ return $default(_that.limit,_that.withUnreads,_that.isActive,_that.sinceId,_that
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? limit,  bool? withUnreads,  bool? isActive,  String? sinceId,  String? untilId,  int? offset)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? limit,  bool? withUnreads,  bool? isActive,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  int? offset)?  $default,) {final _that = this;
 switch (_that) {
 case _AnnouncementsRequest() when $default != null:
-return $default(_that.limit,_that.withUnreads,_that.isActive,_that.sinceId,_that.untilId,_that.offset);case _:
+return $default(_that.limit,_that.withUnreads,_that.isActive,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.offset);case _:
   return null;
 
 }
@@ -216,7 +218,7 @@ return $default(_that.limit,_that.withUnreads,_that.isActive,_that.sinceId,_that
 @JsonSerializable()
 
 class _AnnouncementsRequest implements AnnouncementsRequest {
-  const _AnnouncementsRequest({this.limit, this.withUnreads, this.isActive, this.sinceId, this.untilId, this.offset});
+  const _AnnouncementsRequest({this.limit, this.withUnreads, this.isActive, this.sinceId, this.untilId, @EpocTimeDateTimeConverter() this.sinceDate, @EpocTimeDateTimeConverter() this.untilDate, this.offset});
   factory _AnnouncementsRequest.fromJson(Map<String, dynamic> json) => _$AnnouncementsRequestFromJson(json);
 
 @override final  int? limit;
@@ -225,6 +227,8 @@ class _AnnouncementsRequest implements AnnouncementsRequest {
 @override final  bool? isActive;
 @override final  String? sinceId;
 @override final  String? untilId;
+@override@EpocTimeDateTimeConverter() final  DateTime? sinceDate;
+@override@EpocTimeDateTimeConverter() final  DateTime? untilDate;
 // ioはこれで動く
 @override final  int? offset;
 
@@ -241,16 +245,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _AnnouncementsRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.withUnreads, withUnreads) || other.withUnreads == withUnreads)&&(identical(other.isActive, isActive) || other.isActive == isActive)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.offset, offset) || other.offset == offset));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _AnnouncementsRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.withUnreads, withUnreads) || other.withUnreads == withUnreads)&&(identical(other.isActive, isActive) || other.isActive == isActive)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.offset, offset) || other.offset == offset));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,limit,withUnreads,isActive,sinceId,untilId,offset);
+int get hashCode => Object.hash(runtimeType,limit,withUnreads,isActive,sinceId,untilId,sinceDate,untilDate,offset);
 
 @override
 String toString() {
-  return 'AnnouncementsRequest(limit: $limit, withUnreads: $withUnreads, isActive: $isActive, sinceId: $sinceId, untilId: $untilId, offset: $offset)';
+  return 'AnnouncementsRequest(limit: $limit, withUnreads: $withUnreads, isActive: $isActive, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, offset: $offset)';
 }
 
 
@@ -261,7 +265,7 @@ abstract mixin class _$AnnouncementsRequestCopyWith<$Res> implements $Announceme
   factory _$AnnouncementsRequestCopyWith(_AnnouncementsRequest value, $Res Function(_AnnouncementsRequest) _then) = __$AnnouncementsRequestCopyWithImpl;
 @override @useResult
 $Res call({
- int? limit, bool? withUnreads, bool? isActive, String? sinceId, String? untilId, int? offset
+ int? limit, bool? withUnreads, bool? isActive, String? sinceId, String? untilId,@EpocTimeDateTimeConverter() DateTime? sinceDate,@EpocTimeDateTimeConverter() DateTime? untilDate, int? offset
 });
 
 
@@ -278,14 +282,16 @@ class __$AnnouncementsRequestCopyWithImpl<$Res>
 
 /// Create a copy of AnnouncementsRequest
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? limit = freezed,Object? withUnreads = freezed,Object? isActive = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? offset = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? limit = freezed,Object? withUnreads = freezed,Object? isActive = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,Object? offset = freezed,}) {
   return _then(_AnnouncementsRequest(
 limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int?,withUnreads: freezed == withUnreads ? _self.withUnreads : withUnreads // ignore: cast_nullable_to_non_nullable
 as bool?,isActive: freezed == isActive ? _self.isActive : isActive // ignore: cast_nullable_to_non_nullable
 as bool?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
 as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
-as String?,offset: freezed == offset ? _self.offset : offset // ignore: cast_nullable_to_non_nullable
+as String?,sinceDate: freezed == sinceDate ? _self.sinceDate : sinceDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,untilDate: freezed == untilDate ? _self.untilDate : untilDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,offset: freezed == offset ? _self.offset : offset // ignore: cast_nullable_to_non_nullable
 as int?,
   ));
 }

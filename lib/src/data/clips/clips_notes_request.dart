@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:misskey_dart/src/converters/date_time_converter.dart';
 
 part 'clips_notes_request.freezed.dart';
 part 'clips_notes_request.g.dart';
@@ -10,6 +11,8 @@ abstract class ClipsNotesRequest with _$ClipsNotesRequest {
     required String clipId,
     String? sinceId,
     String? untilId,
+    @EpocTimeDateTimeConverter() DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() DateTime? untilDate,
   }) = _ClipsNotesRequest;
 
   factory ClipsNotesRequest.fromJson(Map<String, Object?> json) =>

@@ -12,6 +12,14 @@ _UsersFollowingRequest _$UsersFollowingRequestFromJson(
   userId: json['userId'] as String,
   sinceId: json['sinceId'] as String?,
   untilId: json['untilId'] as String?,
+  sinceDate: _$JsonConverterFromJson<int, DateTime>(
+    json['sinceDate'],
+    const EpocTimeDateTimeConverter().fromJson,
+  ),
+  untilDate: _$JsonConverterFromJson<int, DateTime>(
+    json['untilDate'],
+    const EpocTimeDateTimeConverter().fromJson,
+  ),
   limit: (json['limit'] as num?)?.toInt(),
   birthday: _$JsonConverterFromJson<String, DateTime>(
     json['birthday'],
@@ -25,6 +33,14 @@ Map<String, dynamic> _$UsersFollowingRequestToJson(
   'userId': instance.userId,
   'sinceId': instance.sinceId,
   'untilId': instance.untilId,
+  'sinceDate': _$JsonConverterToJson<int, DateTime>(
+    instance.sinceDate,
+    const EpocTimeDateTimeConverter().toJson,
+  ),
+  'untilDate': _$JsonConverterToJson<int, DateTime>(
+    instance.untilDate,
+    const EpocTimeDateTimeConverter().toJson,
+  ),
   'limit': instance.limit,
   'birthday': _$JsonConverterToJson<String, DateTime>(
     instance.birthday,

@@ -22,7 +22,7 @@ INotificationsGroupedRequest _$INotificationsGroupedRequestFromJson(
 /// @nodoc
 mixin _$INotificationsGroupedRequest {
 
- int? get limit; String? get sinceId; String? get untilId; bool? get markAsRead; List<NotificationType>? get includeTypes; List<NotificationType>? get excludeTypes;
+ int? get limit; String? get sinceId; String? get untilId;@EpocTimeDateTimeConverter() DateTime? get sinceDate;@EpocTimeDateTimeConverter() DateTime? get untilDate; bool? get markAsRead; List<NotificationType>? get includeTypes; List<NotificationType>? get excludeTypes;
 /// Create a copy of INotificationsGroupedRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -35,16 +35,16 @@ $INotificationsGroupedRequestCopyWith<INotificationsGroupedRequest> get copyWith
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is INotificationsGroupedRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.markAsRead, markAsRead) || other.markAsRead == markAsRead)&&const DeepCollectionEquality().equals(other.includeTypes, includeTypes)&&const DeepCollectionEquality().equals(other.excludeTypes, excludeTypes));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is INotificationsGroupedRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.markAsRead, markAsRead) || other.markAsRead == markAsRead)&&const DeepCollectionEquality().equals(other.includeTypes, includeTypes)&&const DeepCollectionEquality().equals(other.excludeTypes, excludeTypes));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,limit,sinceId,untilId,markAsRead,const DeepCollectionEquality().hash(includeTypes),const DeepCollectionEquality().hash(excludeTypes));
+int get hashCode => Object.hash(runtimeType,limit,sinceId,untilId,sinceDate,untilDate,markAsRead,const DeepCollectionEquality().hash(includeTypes),const DeepCollectionEquality().hash(excludeTypes));
 
 @override
 String toString() {
-  return 'INotificationsGroupedRequest(limit: $limit, sinceId: $sinceId, untilId: $untilId, markAsRead: $markAsRead, includeTypes: $includeTypes, excludeTypes: $excludeTypes)';
+  return 'INotificationsGroupedRequest(limit: $limit, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, markAsRead: $markAsRead, includeTypes: $includeTypes, excludeTypes: $excludeTypes)';
 }
 
 
@@ -55,7 +55,7 @@ abstract mixin class $INotificationsGroupedRequestCopyWith<$Res>  {
   factory $INotificationsGroupedRequestCopyWith(INotificationsGroupedRequest value, $Res Function(INotificationsGroupedRequest) _then) = _$INotificationsGroupedRequestCopyWithImpl;
 @useResult
 $Res call({
- int? limit, String? sinceId, String? untilId, bool? markAsRead, List<NotificationType>? includeTypes, List<NotificationType>? excludeTypes
+ int? limit, String? sinceId, String? untilId,@EpocTimeDateTimeConverter() DateTime? sinceDate,@EpocTimeDateTimeConverter() DateTime? untilDate, bool? markAsRead, List<NotificationType>? includeTypes, List<NotificationType>? excludeTypes
 });
 
 
@@ -72,12 +72,14 @@ class _$INotificationsGroupedRequestCopyWithImpl<$Res>
 
 /// Create a copy of INotificationsGroupedRequest
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? markAsRead = freezed,Object? includeTypes = freezed,Object? excludeTypes = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,Object? markAsRead = freezed,Object? includeTypes = freezed,Object? excludeTypes = freezed,}) {
   return _then(_self.copyWith(
 limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
 as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
-as String?,markAsRead: freezed == markAsRead ? _self.markAsRead : markAsRead // ignore: cast_nullable_to_non_nullable
+as String?,sinceDate: freezed == sinceDate ? _self.sinceDate : sinceDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,untilDate: freezed == untilDate ? _self.untilDate : untilDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,markAsRead: freezed == markAsRead ? _self.markAsRead : markAsRead // ignore: cast_nullable_to_non_nullable
 as bool?,includeTypes: freezed == includeTypes ? _self.includeTypes : includeTypes // ignore: cast_nullable_to_non_nullable
 as List<NotificationType>?,excludeTypes: freezed == excludeTypes ? _self.excludeTypes : excludeTypes // ignore: cast_nullable_to_non_nullable
 as List<NotificationType>?,
@@ -165,10 +167,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? limit,  String? sinceId,  String? untilId,  bool? markAsRead,  List<NotificationType>? includeTypes,  List<NotificationType>? excludeTypes)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  bool? markAsRead,  List<NotificationType>? includeTypes,  List<NotificationType>? excludeTypes)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _INotificationRequest() when $default != null:
-return $default(_that.limit,_that.sinceId,_that.untilId,_that.markAsRead,_that.includeTypes,_that.excludeTypes);case _:
+return $default(_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.markAsRead,_that.includeTypes,_that.excludeTypes);case _:
   return orElse();
 
 }
@@ -186,10 +188,10 @@ return $default(_that.limit,_that.sinceId,_that.untilId,_that.markAsRead,_that.i
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? limit,  String? sinceId,  String? untilId,  bool? markAsRead,  List<NotificationType>? includeTypes,  List<NotificationType>? excludeTypes)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  bool? markAsRead,  List<NotificationType>? includeTypes,  List<NotificationType>? excludeTypes)  $default,) {final _that = this;
 switch (_that) {
 case _INotificationRequest():
-return $default(_that.limit,_that.sinceId,_that.untilId,_that.markAsRead,_that.includeTypes,_that.excludeTypes);case _:
+return $default(_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.markAsRead,_that.includeTypes,_that.excludeTypes);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -206,10 +208,10 @@ return $default(_that.limit,_that.sinceId,_that.untilId,_that.markAsRead,_that.i
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? limit,  String? sinceId,  String? untilId,  bool? markAsRead,  List<NotificationType>? includeTypes,  List<NotificationType>? excludeTypes)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  bool? markAsRead,  List<NotificationType>? includeTypes,  List<NotificationType>? excludeTypes)?  $default,) {final _that = this;
 switch (_that) {
 case _INotificationRequest() when $default != null:
-return $default(_that.limit,_that.sinceId,_that.untilId,_that.markAsRead,_that.includeTypes,_that.excludeTypes);case _:
+return $default(_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.markAsRead,_that.includeTypes,_that.excludeTypes);case _:
   return null;
 
 }
@@ -221,12 +223,14 @@ return $default(_that.limit,_that.sinceId,_that.untilId,_that.markAsRead,_that.i
 @JsonSerializable()
 
 class _INotificationRequest implements INotificationsGroupedRequest {
-  const _INotificationRequest({this.limit, this.sinceId, this.untilId, this.markAsRead, final  List<NotificationType>? includeTypes, final  List<NotificationType>? excludeTypes}): _includeTypes = includeTypes,_excludeTypes = excludeTypes;
+  const _INotificationRequest({this.limit, this.sinceId, this.untilId, @EpocTimeDateTimeConverter() this.sinceDate, @EpocTimeDateTimeConverter() this.untilDate, this.markAsRead, final  List<NotificationType>? includeTypes, final  List<NotificationType>? excludeTypes}): _includeTypes = includeTypes,_excludeTypes = excludeTypes;
   factory _INotificationRequest.fromJson(Map<String, dynamic> json) => _$INotificationRequestFromJson(json);
 
 @override final  int? limit;
 @override final  String? sinceId;
 @override final  String? untilId;
+@override@EpocTimeDateTimeConverter() final  DateTime? sinceDate;
+@override@EpocTimeDateTimeConverter() final  DateTime? untilDate;
 @override final  bool? markAsRead;
  final  List<NotificationType>? _includeTypes;
 @override List<NotificationType>? get includeTypes {
@@ -260,16 +264,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _INotificationRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.markAsRead, markAsRead) || other.markAsRead == markAsRead)&&const DeepCollectionEquality().equals(other._includeTypes, _includeTypes)&&const DeepCollectionEquality().equals(other._excludeTypes, _excludeTypes));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _INotificationRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.markAsRead, markAsRead) || other.markAsRead == markAsRead)&&const DeepCollectionEquality().equals(other._includeTypes, _includeTypes)&&const DeepCollectionEquality().equals(other._excludeTypes, _excludeTypes));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,limit,sinceId,untilId,markAsRead,const DeepCollectionEquality().hash(_includeTypes),const DeepCollectionEquality().hash(_excludeTypes));
+int get hashCode => Object.hash(runtimeType,limit,sinceId,untilId,sinceDate,untilDate,markAsRead,const DeepCollectionEquality().hash(_includeTypes),const DeepCollectionEquality().hash(_excludeTypes));
 
 @override
 String toString() {
-  return 'INotificationsGroupedRequest(limit: $limit, sinceId: $sinceId, untilId: $untilId, markAsRead: $markAsRead, includeTypes: $includeTypes, excludeTypes: $excludeTypes)';
+  return 'INotificationsGroupedRequest(limit: $limit, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, markAsRead: $markAsRead, includeTypes: $includeTypes, excludeTypes: $excludeTypes)';
 }
 
 
@@ -280,7 +284,7 @@ abstract mixin class _$INotificationRequestCopyWith<$Res> implements $INotificat
   factory _$INotificationRequestCopyWith(_INotificationRequest value, $Res Function(_INotificationRequest) _then) = __$INotificationRequestCopyWithImpl;
 @override @useResult
 $Res call({
- int? limit, String? sinceId, String? untilId, bool? markAsRead, List<NotificationType>? includeTypes, List<NotificationType>? excludeTypes
+ int? limit, String? sinceId, String? untilId,@EpocTimeDateTimeConverter() DateTime? sinceDate,@EpocTimeDateTimeConverter() DateTime? untilDate, bool? markAsRead, List<NotificationType>? includeTypes, List<NotificationType>? excludeTypes
 });
 
 
@@ -297,12 +301,14 @@ class __$INotificationRequestCopyWithImpl<$Res>
 
 /// Create a copy of INotificationsGroupedRequest
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? markAsRead = freezed,Object? includeTypes = freezed,Object? excludeTypes = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,Object? markAsRead = freezed,Object? includeTypes = freezed,Object? excludeTypes = freezed,}) {
   return _then(_INotificationRequest(
 limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
 as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
-as String?,markAsRead: freezed == markAsRead ? _self.markAsRead : markAsRead // ignore: cast_nullable_to_non_nullable
+as String?,sinceDate: freezed == sinceDate ? _self.sinceDate : sinceDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,untilDate: freezed == untilDate ? _self.untilDate : untilDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,markAsRead: freezed == markAsRead ? _self.markAsRead : markAsRead // ignore: cast_nullable_to_non_nullable
 as bool?,includeTypes: freezed == includeTypes ? _self._includeTypes : includeTypes // ignore: cast_nullable_to_non_nullable
 as List<NotificationType>?,excludeTypes: freezed == excludeTypes ? _self._excludeTypes : excludeTypes // ignore: cast_nullable_to_non_nullable
 as List<NotificationType>?,

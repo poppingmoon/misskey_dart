@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:misskey_dart/src/converters/date_time_converter.dart';
 
 part 'notes_children_request.freezed.dart';
 part 'notes_children_request.g.dart';
@@ -11,6 +12,8 @@ abstract class NotesChildrenRequest with _$NotesChildrenRequest {
     int? depth,
     String? sinceId,
     String? untilId,
+    @EpocTimeDateTimeConverter() DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() DateTime? untilDate,
   }) = _NotesChildrenRequest;
 
   factory NotesChildrenRequest.fromJson(Map<String, dynamic> json) =>

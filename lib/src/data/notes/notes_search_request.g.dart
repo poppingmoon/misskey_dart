@@ -11,6 +11,14 @@ _NotesSearchRequest _$NotesSearchRequestFromJson(Map<String, dynamic> json) =>
       query: json['query'] as String,
       sinceId: json['sinceId'] as String?,
       untilId: json['untilId'] as String?,
+      sinceDate: _$JsonConverterFromJson<int, DateTime>(
+        json['sinceDate'],
+        const EpocTimeDateTimeConverter().fromJson,
+      ),
+      untilDate: _$JsonConverterFromJson<int, DateTime>(
+        json['untilDate'],
+        const EpocTimeDateTimeConverter().fromJson,
+      ),
       limit: (json['limit'] as num?)?.toInt(),
       offset: (json['offset'] as num?)?.toInt(),
       host: json['host'] as String?,
@@ -23,9 +31,27 @@ Map<String, dynamic> _$NotesSearchRequestToJson(_NotesSearchRequest instance) =>
       'query': instance.query,
       'sinceId': instance.sinceId,
       'untilId': instance.untilId,
+      'sinceDate': _$JsonConverterToJson<int, DateTime>(
+        instance.sinceDate,
+        const EpocTimeDateTimeConverter().toJson,
+      ),
+      'untilDate': _$JsonConverterToJson<int, DateTime>(
+        instance.untilDate,
+        const EpocTimeDateTimeConverter().toJson,
+      ),
       'limit': instance.limit,
       'offset': instance.offset,
       'host': instance.host,
       'userId': instance.userId,
       'channelId': instance.channelId,
     };
+
+Value? _$JsonConverterFromJson<Json, Value>(
+  Object? json,
+  Value? Function(Json json) fromJson,
+) => json == null ? null : fromJson(json as Json);
+
+Json? _$JsonConverterToJson<Json, Value>(
+  Value? value,
+  Json? Function(Value value) toJson,
+) => value == null ? null : toJson(value);

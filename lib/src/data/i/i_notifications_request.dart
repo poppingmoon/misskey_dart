@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:misskey_dart/src/converters/date_time_converter.dart';
 import 'package:misskey_dart/src/enums/notification_type.dart';
 
 part 'i_notifications_request.freezed.dart';
@@ -10,6 +11,8 @@ abstract class INotificationsRequest with _$INotificationsRequest {
     @Assert('limit > 0') int? limit,
     String? sinceId,
     String? untilId,
+    @EpocTimeDateTimeConverter() DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() DateTime? untilDate,
     bool? following,
     bool? unreadOnly,
     bool? markAsRead,

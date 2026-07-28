@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$NotesSearchByTagRequest {
 
- String get tag; bool? get reply; bool? get renote; bool? get withFiles; bool? get poll; String? get sinceId; String? get untilId; int? get limit;
+ String get tag; bool? get reply; bool? get renote; bool? get withFiles; bool? get poll; String? get sinceId; String? get untilId;@EpocTimeDateTimeConverter() DateTime? get sinceDate;@EpocTimeDateTimeConverter() DateTime? get untilDate; int? get limit;
 /// Create a copy of NotesSearchByTagRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -28,16 +28,16 @@ $NotesSearchByTagRequestCopyWith<NotesSearchByTagRequest> get copyWith => _$Note
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesSearchByTagRequest&&(identical(other.tag, tag) || other.tag == tag)&&(identical(other.reply, reply) || other.reply == reply)&&(identical(other.renote, renote) || other.renote == renote)&&(identical(other.withFiles, withFiles) || other.withFiles == withFiles)&&(identical(other.poll, poll) || other.poll == poll)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.limit, limit) || other.limit == limit));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesSearchByTagRequest&&(identical(other.tag, tag) || other.tag == tag)&&(identical(other.reply, reply) || other.reply == reply)&&(identical(other.renote, renote) || other.renote == renote)&&(identical(other.withFiles, withFiles) || other.withFiles == withFiles)&&(identical(other.poll, poll) || other.poll == poll)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.limit, limit) || other.limit == limit));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,tag,reply,renote,withFiles,poll,sinceId,untilId,limit);
+int get hashCode => Object.hash(runtimeType,tag,reply,renote,withFiles,poll,sinceId,untilId,sinceDate,untilDate,limit);
 
 @override
 String toString() {
-  return 'NotesSearchByTagRequest(tag: $tag, reply: $reply, renote: $renote, withFiles: $withFiles, poll: $poll, sinceId: $sinceId, untilId: $untilId, limit: $limit)';
+  return 'NotesSearchByTagRequest(tag: $tag, reply: $reply, renote: $renote, withFiles: $withFiles, poll: $poll, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, limit: $limit)';
 }
 
 
@@ -48,7 +48,7 @@ abstract mixin class $NotesSearchByTagRequestCopyWith<$Res>  {
   factory $NotesSearchByTagRequestCopyWith(NotesSearchByTagRequest value, $Res Function(NotesSearchByTagRequest) _then) = _$NotesSearchByTagRequestCopyWithImpl;
 @useResult
 $Res call({
- String tag, bool? reply, bool? renote, bool? withFiles, bool? poll, String? sinceId, String? untilId, int? limit
+ String tag, bool? reply, bool? renote, bool? withFiles, bool? poll, String? sinceId, String? untilId,@EpocTimeDateTimeConverter() DateTime? sinceDate,@EpocTimeDateTimeConverter() DateTime? untilDate, int? limit
 });
 
 
@@ -65,7 +65,7 @@ class _$NotesSearchByTagRequestCopyWithImpl<$Res>
 
 /// Create a copy of NotesSearchByTagRequest
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? tag = null,Object? reply = freezed,Object? renote = freezed,Object? withFiles = freezed,Object? poll = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? limit = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? tag = null,Object? reply = freezed,Object? renote = freezed,Object? withFiles = freezed,Object? poll = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,Object? limit = freezed,}) {
   return _then(_self.copyWith(
 tag: null == tag ? _self.tag : tag // ignore: cast_nullable_to_non_nullable
 as String,reply: freezed == reply ? _self.reply : reply // ignore: cast_nullable_to_non_nullable
@@ -74,7 +74,9 @@ as bool?,withFiles: freezed == withFiles ? _self.withFiles : withFiles // ignore
 as bool?,poll: freezed == poll ? _self.poll : poll // ignore: cast_nullable_to_non_nullable
 as bool?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
 as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
-as String?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
+as String?,sinceDate: freezed == sinceDate ? _self.sinceDate : sinceDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,untilDate: freezed == untilDate ? _self.untilDate : untilDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int?,
   ));
 }
@@ -160,10 +162,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String tag,  bool? reply,  bool? renote,  bool? withFiles,  bool? poll,  String? sinceId,  String? untilId,  int? limit)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String tag,  bool? reply,  bool? renote,  bool? withFiles,  bool? poll,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  int? limit)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _NotesSearchByTagRequest() when $default != null:
-return $default(_that.tag,_that.reply,_that.renote,_that.withFiles,_that.poll,_that.sinceId,_that.untilId,_that.limit);case _:
+return $default(_that.tag,_that.reply,_that.renote,_that.withFiles,_that.poll,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.limit);case _:
   return orElse();
 
 }
@@ -181,10 +183,10 @@ return $default(_that.tag,_that.reply,_that.renote,_that.withFiles,_that.poll,_t
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String tag,  bool? reply,  bool? renote,  bool? withFiles,  bool? poll,  String? sinceId,  String? untilId,  int? limit)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String tag,  bool? reply,  bool? renote,  bool? withFiles,  bool? poll,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  int? limit)  $default,) {final _that = this;
 switch (_that) {
 case _NotesSearchByTagRequest():
-return $default(_that.tag,_that.reply,_that.renote,_that.withFiles,_that.poll,_that.sinceId,_that.untilId,_that.limit);case _:
+return $default(_that.tag,_that.reply,_that.renote,_that.withFiles,_that.poll,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.limit);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -201,10 +203,10 @@ return $default(_that.tag,_that.reply,_that.renote,_that.withFiles,_that.poll,_t
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String tag,  bool? reply,  bool? renote,  bool? withFiles,  bool? poll,  String? sinceId,  String? untilId,  int? limit)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String tag,  bool? reply,  bool? renote,  bool? withFiles,  bool? poll,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  int? limit)?  $default,) {final _that = this;
 switch (_that) {
 case _NotesSearchByTagRequest() when $default != null:
-return $default(_that.tag,_that.reply,_that.renote,_that.withFiles,_that.poll,_that.sinceId,_that.untilId,_that.limit);case _:
+return $default(_that.tag,_that.reply,_that.renote,_that.withFiles,_that.poll,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.limit);case _:
   return null;
 
 }
@@ -216,7 +218,7 @@ return $default(_that.tag,_that.reply,_that.renote,_that.withFiles,_that.poll,_t
 @JsonSerializable()
 
 class _NotesSearchByTagRequest implements NotesSearchByTagRequest {
-  const _NotesSearchByTagRequest({required this.tag, this.reply, this.renote, this.withFiles, this.poll, this.sinceId, this.untilId, this.limit});
+  const _NotesSearchByTagRequest({required this.tag, this.reply, this.renote, this.withFiles, this.poll, this.sinceId, this.untilId, @EpocTimeDateTimeConverter() this.sinceDate, @EpocTimeDateTimeConverter() this.untilDate, this.limit});
   factory _NotesSearchByTagRequest.fromJson(Map<String, dynamic> json) => _$NotesSearchByTagRequestFromJson(json);
 
 @override final  String tag;
@@ -226,6 +228,8 @@ class _NotesSearchByTagRequest implements NotesSearchByTagRequest {
 @override final  bool? poll;
 @override final  String? sinceId;
 @override final  String? untilId;
+@override@EpocTimeDateTimeConverter() final  DateTime? sinceDate;
+@override@EpocTimeDateTimeConverter() final  DateTime? untilDate;
 @override final  int? limit;
 
 /// Create a copy of NotesSearchByTagRequest
@@ -241,16 +245,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesSearchByTagRequest&&(identical(other.tag, tag) || other.tag == tag)&&(identical(other.reply, reply) || other.reply == reply)&&(identical(other.renote, renote) || other.renote == renote)&&(identical(other.withFiles, withFiles) || other.withFiles == withFiles)&&(identical(other.poll, poll) || other.poll == poll)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.limit, limit) || other.limit == limit));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesSearchByTagRequest&&(identical(other.tag, tag) || other.tag == tag)&&(identical(other.reply, reply) || other.reply == reply)&&(identical(other.renote, renote) || other.renote == renote)&&(identical(other.withFiles, withFiles) || other.withFiles == withFiles)&&(identical(other.poll, poll) || other.poll == poll)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.limit, limit) || other.limit == limit));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,tag,reply,renote,withFiles,poll,sinceId,untilId,limit);
+int get hashCode => Object.hash(runtimeType,tag,reply,renote,withFiles,poll,sinceId,untilId,sinceDate,untilDate,limit);
 
 @override
 String toString() {
-  return 'NotesSearchByTagRequest(tag: $tag, reply: $reply, renote: $renote, withFiles: $withFiles, poll: $poll, sinceId: $sinceId, untilId: $untilId, limit: $limit)';
+  return 'NotesSearchByTagRequest(tag: $tag, reply: $reply, renote: $renote, withFiles: $withFiles, poll: $poll, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, limit: $limit)';
 }
 
 
@@ -261,7 +265,7 @@ abstract mixin class _$NotesSearchByTagRequestCopyWith<$Res> implements $NotesSe
   factory _$NotesSearchByTagRequestCopyWith(_NotesSearchByTagRequest value, $Res Function(_NotesSearchByTagRequest) _then) = __$NotesSearchByTagRequestCopyWithImpl;
 @override @useResult
 $Res call({
- String tag, bool? reply, bool? renote, bool? withFiles, bool? poll, String? sinceId, String? untilId, int? limit
+ String tag, bool? reply, bool? renote, bool? withFiles, bool? poll, String? sinceId, String? untilId,@EpocTimeDateTimeConverter() DateTime? sinceDate,@EpocTimeDateTimeConverter() DateTime? untilDate, int? limit
 });
 
 
@@ -278,7 +282,7 @@ class __$NotesSearchByTagRequestCopyWithImpl<$Res>
 
 /// Create a copy of NotesSearchByTagRequest
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? tag = null,Object? reply = freezed,Object? renote = freezed,Object? withFiles = freezed,Object? poll = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? limit = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? tag = null,Object? reply = freezed,Object? renote = freezed,Object? withFiles = freezed,Object? poll = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,Object? limit = freezed,}) {
   return _then(_NotesSearchByTagRequest(
 tag: null == tag ? _self.tag : tag // ignore: cast_nullable_to_non_nullable
 as String,reply: freezed == reply ? _self.reply : reply // ignore: cast_nullable_to_non_nullable
@@ -287,7 +291,9 @@ as bool?,withFiles: freezed == withFiles ? _self.withFiles : withFiles // ignore
 as bool?,poll: freezed == poll ? _self.poll : poll // ignore: cast_nullable_to_non_nullable
 as bool?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
 as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
-as String?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
+as String?,sinceDate: freezed == sinceDate ? _self.sinceDate : sinceDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,untilDate: freezed == untilDate ? _self.untilDate : untilDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int?,
   ));
 }

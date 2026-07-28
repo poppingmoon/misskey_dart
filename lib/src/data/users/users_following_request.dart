@@ -10,6 +10,8 @@ abstract class UsersFollowingRequest with _$UsersFollowingRequest {
     required String userId,
     String? sinceId,
     String? untilId,
+    @EpocTimeDateTimeConverter() DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() DateTime? untilDate,
     int? limit,
     @DateTimeConverter() DateTime? birthday,
   }) = _UsersFollowingRequest;

@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ReversiGamesRequest {
 
- int? get limit; String? get sinceId; String? get untilId; bool? get my;
+ int? get limit; String? get sinceId; String? get untilId;@EpocTimeDateTimeConverter() DateTime? get sinceDate;@EpocTimeDateTimeConverter() DateTime? get untilDate; bool? get my;
 /// Create a copy of ReversiGamesRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -28,16 +28,16 @@ $ReversiGamesRequestCopyWith<ReversiGamesRequest> get copyWith => _$ReversiGames
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiGamesRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.my, my) || other.my == my));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiGamesRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.my, my) || other.my == my));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,limit,sinceId,untilId,my);
+int get hashCode => Object.hash(runtimeType,limit,sinceId,untilId,sinceDate,untilDate,my);
 
 @override
 String toString() {
-  return 'ReversiGamesRequest(limit: $limit, sinceId: $sinceId, untilId: $untilId, my: $my)';
+  return 'ReversiGamesRequest(limit: $limit, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, my: $my)';
 }
 
 
@@ -48,7 +48,7 @@ abstract mixin class $ReversiGamesRequestCopyWith<$Res>  {
   factory $ReversiGamesRequestCopyWith(ReversiGamesRequest value, $Res Function(ReversiGamesRequest) _then) = _$ReversiGamesRequestCopyWithImpl;
 @useResult
 $Res call({
- int? limit, String? sinceId, String? untilId, bool? my
+ int? limit, String? sinceId, String? untilId,@EpocTimeDateTimeConverter() DateTime? sinceDate,@EpocTimeDateTimeConverter() DateTime? untilDate, bool? my
 });
 
 
@@ -65,12 +65,14 @@ class _$ReversiGamesRequestCopyWithImpl<$Res>
 
 /// Create a copy of ReversiGamesRequest
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? my = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,Object? my = freezed,}) {
   return _then(_self.copyWith(
 limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
 as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
-as String?,my: freezed == my ? _self.my : my // ignore: cast_nullable_to_non_nullable
+as String?,sinceDate: freezed == sinceDate ? _self.sinceDate : sinceDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,untilDate: freezed == untilDate ? _self.untilDate : untilDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,my: freezed == my ? _self.my : my // ignore: cast_nullable_to_non_nullable
 as bool?,
   ));
 }
@@ -156,10 +158,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? limit,  String? sinceId,  String? untilId,  bool? my)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  bool? my)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _ReversiGamesRequest() when $default != null:
-return $default(_that.limit,_that.sinceId,_that.untilId,_that.my);case _:
+return $default(_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.my);case _:
   return orElse();
 
 }
@@ -177,10 +179,10 @@ return $default(_that.limit,_that.sinceId,_that.untilId,_that.my);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? limit,  String? sinceId,  String? untilId,  bool? my)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  bool? my)  $default,) {final _that = this;
 switch (_that) {
 case _ReversiGamesRequest():
-return $default(_that.limit,_that.sinceId,_that.untilId,_that.my);case _:
+return $default(_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.my);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -197,10 +199,10 @@ return $default(_that.limit,_that.sinceId,_that.untilId,_that.my);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? limit,  String? sinceId,  String? untilId,  bool? my)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  bool? my)?  $default,) {final _that = this;
 switch (_that) {
 case _ReversiGamesRequest() when $default != null:
-return $default(_that.limit,_that.sinceId,_that.untilId,_that.my);case _:
+return $default(_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.my);case _:
   return null;
 
 }
@@ -212,12 +214,14 @@ return $default(_that.limit,_that.sinceId,_that.untilId,_that.my);case _:
 @JsonSerializable()
 
 class _ReversiGamesRequest implements ReversiGamesRequest {
-  const _ReversiGamesRequest({this.limit, this.sinceId, this.untilId, this.my});
+  const _ReversiGamesRequest({this.limit, this.sinceId, this.untilId, @EpocTimeDateTimeConverter() this.sinceDate, @EpocTimeDateTimeConverter() this.untilDate, this.my});
   factory _ReversiGamesRequest.fromJson(Map<String, dynamic> json) => _$ReversiGamesRequestFromJson(json);
 
 @override final  int? limit;
 @override final  String? sinceId;
 @override final  String? untilId;
+@override@EpocTimeDateTimeConverter() final  DateTime? sinceDate;
+@override@EpocTimeDateTimeConverter() final  DateTime? untilDate;
 @override final  bool? my;
 
 /// Create a copy of ReversiGamesRequest
@@ -233,16 +237,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ReversiGamesRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.my, my) || other.my == my));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ReversiGamesRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.my, my) || other.my == my));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,limit,sinceId,untilId,my);
+int get hashCode => Object.hash(runtimeType,limit,sinceId,untilId,sinceDate,untilDate,my);
 
 @override
 String toString() {
-  return 'ReversiGamesRequest(limit: $limit, sinceId: $sinceId, untilId: $untilId, my: $my)';
+  return 'ReversiGamesRequest(limit: $limit, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, my: $my)';
 }
 
 
@@ -253,7 +257,7 @@ abstract mixin class _$ReversiGamesRequestCopyWith<$Res> implements $ReversiGame
   factory _$ReversiGamesRequestCopyWith(_ReversiGamesRequest value, $Res Function(_ReversiGamesRequest) _then) = __$ReversiGamesRequestCopyWithImpl;
 @override @useResult
 $Res call({
- int? limit, String? sinceId, String? untilId, bool? my
+ int? limit, String? sinceId, String? untilId,@EpocTimeDateTimeConverter() DateTime? sinceDate,@EpocTimeDateTimeConverter() DateTime? untilDate, bool? my
 });
 
 
@@ -270,12 +274,14 @@ class __$ReversiGamesRequestCopyWithImpl<$Res>
 
 /// Create a copy of ReversiGamesRequest
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? my = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,Object? my = freezed,}) {
   return _then(_ReversiGamesRequest(
 limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
 as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
-as String?,my: freezed == my ? _self.my : my // ignore: cast_nullable_to_non_nullable
+as String?,sinceDate: freezed == sinceDate ? _self.sinceDate : sinceDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,untilDate: freezed == untilDate ? _self.untilDate : untilDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,my: freezed == my ? _self.my : my // ignore: cast_nullable_to_non_nullable
 as bool?,
   ));
 }

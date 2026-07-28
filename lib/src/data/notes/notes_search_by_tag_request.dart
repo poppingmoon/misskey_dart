@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:misskey_dart/src/converters/date_time_converter.dart';
 
 part 'notes_search_by_tag_request.freezed.dart';
 part 'notes_search_by_tag_request.g.dart';
@@ -13,6 +14,8 @@ abstract class NotesSearchByTagRequest with _$NotesSearchByTagRequest {
     bool? poll,
     String? sinceId,
     String? untilId,
+    @EpocTimeDateTimeConverter() DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() DateTime? untilDate,
     int? limit,
   }) = _NotesSearchByTagRequest;
 

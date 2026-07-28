@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$RolesUsersRequest {
 
- String get roleId; String? get sinceId; String? get untilId; int? get limit;
+ String get roleId; String? get sinceId; String? get untilId;@EpocTimeDateTimeConverter() DateTime? get sinceDate;@EpocTimeDateTimeConverter() DateTime? get untilDate; int? get limit;
 /// Create a copy of RolesUsersRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -28,16 +28,16 @@ $RolesUsersRequestCopyWith<RolesUsersRequest> get copyWith => _$RolesUsersReques
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RolesUsersRequest&&(identical(other.roleId, roleId) || other.roleId == roleId)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.limit, limit) || other.limit == limit));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is RolesUsersRequest&&(identical(other.roleId, roleId) || other.roleId == roleId)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.limit, limit) || other.limit == limit));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,roleId,sinceId,untilId,limit);
+int get hashCode => Object.hash(runtimeType,roleId,sinceId,untilId,sinceDate,untilDate,limit);
 
 @override
 String toString() {
-  return 'RolesUsersRequest(roleId: $roleId, sinceId: $sinceId, untilId: $untilId, limit: $limit)';
+  return 'RolesUsersRequest(roleId: $roleId, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, limit: $limit)';
 }
 
 
@@ -48,7 +48,7 @@ abstract mixin class $RolesUsersRequestCopyWith<$Res>  {
   factory $RolesUsersRequestCopyWith(RolesUsersRequest value, $Res Function(RolesUsersRequest) _then) = _$RolesUsersRequestCopyWithImpl;
 @useResult
 $Res call({
- String roleId, String? sinceId, String? untilId, int? limit
+ String roleId, String? sinceId, String? untilId,@EpocTimeDateTimeConverter() DateTime? sinceDate,@EpocTimeDateTimeConverter() DateTime? untilDate, int? limit
 });
 
 
@@ -65,12 +65,14 @@ class _$RolesUsersRequestCopyWithImpl<$Res>
 
 /// Create a copy of RolesUsersRequest
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? roleId = null,Object? sinceId = freezed,Object? untilId = freezed,Object? limit = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? roleId = null,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,Object? limit = freezed,}) {
   return _then(_self.copyWith(
 roleId: null == roleId ? _self.roleId : roleId // ignore: cast_nullable_to_non_nullable
 as String,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
 as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
-as String?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
+as String?,sinceDate: freezed == sinceDate ? _self.sinceDate : sinceDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,untilDate: freezed == untilDate ? _self.untilDate : untilDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int?,
   ));
 }
@@ -156,10 +158,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String roleId,  String? sinceId,  String? untilId,  int? limit)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String roleId,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  int? limit)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _RolesUsersRequest() when $default != null:
-return $default(_that.roleId,_that.sinceId,_that.untilId,_that.limit);case _:
+return $default(_that.roleId,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.limit);case _:
   return orElse();
 
 }
@@ -177,10 +179,10 @@ return $default(_that.roleId,_that.sinceId,_that.untilId,_that.limit);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String roleId,  String? sinceId,  String? untilId,  int? limit)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String roleId,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  int? limit)  $default,) {final _that = this;
 switch (_that) {
 case _RolesUsersRequest():
-return $default(_that.roleId,_that.sinceId,_that.untilId,_that.limit);case _:
+return $default(_that.roleId,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.limit);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -197,10 +199,10 @@ return $default(_that.roleId,_that.sinceId,_that.untilId,_that.limit);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String roleId,  String? sinceId,  String? untilId,  int? limit)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String roleId,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  int? limit)?  $default,) {final _that = this;
 switch (_that) {
 case _RolesUsersRequest() when $default != null:
-return $default(_that.roleId,_that.sinceId,_that.untilId,_that.limit);case _:
+return $default(_that.roleId,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.limit);case _:
   return null;
 
 }
@@ -212,12 +214,14 @@ return $default(_that.roleId,_that.sinceId,_that.untilId,_that.limit);case _:
 @JsonSerializable()
 
 class _RolesUsersRequest implements RolesUsersRequest {
-  const _RolesUsersRequest({required this.roleId, this.sinceId, this.untilId, this.limit});
+  const _RolesUsersRequest({required this.roleId, this.sinceId, this.untilId, @EpocTimeDateTimeConverter() this.sinceDate, @EpocTimeDateTimeConverter() this.untilDate, this.limit});
   factory _RolesUsersRequest.fromJson(Map<String, dynamic> json) => _$RolesUsersRequestFromJson(json);
 
 @override final  String roleId;
 @override final  String? sinceId;
 @override final  String? untilId;
+@override@EpocTimeDateTimeConverter() final  DateTime? sinceDate;
+@override@EpocTimeDateTimeConverter() final  DateTime? untilDate;
 @override final  int? limit;
 
 /// Create a copy of RolesUsersRequest
@@ -233,16 +237,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _RolesUsersRequest&&(identical(other.roleId, roleId) || other.roleId == roleId)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.limit, limit) || other.limit == limit));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _RolesUsersRequest&&(identical(other.roleId, roleId) || other.roleId == roleId)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.limit, limit) || other.limit == limit));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,roleId,sinceId,untilId,limit);
+int get hashCode => Object.hash(runtimeType,roleId,sinceId,untilId,sinceDate,untilDate,limit);
 
 @override
 String toString() {
-  return 'RolesUsersRequest(roleId: $roleId, sinceId: $sinceId, untilId: $untilId, limit: $limit)';
+  return 'RolesUsersRequest(roleId: $roleId, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, limit: $limit)';
 }
 
 
@@ -253,7 +257,7 @@ abstract mixin class _$RolesUsersRequestCopyWith<$Res> implements $RolesUsersReq
   factory _$RolesUsersRequestCopyWith(_RolesUsersRequest value, $Res Function(_RolesUsersRequest) _then) = __$RolesUsersRequestCopyWithImpl;
 @override @useResult
 $Res call({
- String roleId, String? sinceId, String? untilId, int? limit
+ String roleId, String? sinceId, String? untilId,@EpocTimeDateTimeConverter() DateTime? sinceDate,@EpocTimeDateTimeConverter() DateTime? untilDate, int? limit
 });
 
 
@@ -270,12 +274,14 @@ class __$RolesUsersRequestCopyWithImpl<$Res>
 
 /// Create a copy of RolesUsersRequest
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? roleId = null,Object? sinceId = freezed,Object? untilId = freezed,Object? limit = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? roleId = null,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,Object? limit = freezed,}) {
   return _then(_RolesUsersRequest(
 roleId: null == roleId ? _self.roleId : roleId // ignore: cast_nullable_to_non_nullable
 as String,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
 as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
-as String?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
+as String?,sinceDate: freezed == sinceDate ? _self.sinceDate : sinceDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,untilDate: freezed == untilDate ? _self.untilDate : untilDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int?,
   ));
 }

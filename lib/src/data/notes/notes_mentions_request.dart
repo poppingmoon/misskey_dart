@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:misskey_dart/src/converters/date_time_converter.dart';
 import 'package:misskey_dart/src/enums/note_visibility.dart';
 
 part 'notes_mentions_request.freezed.dart';
@@ -11,6 +12,8 @@ abstract class NotesMentionsRequest with _$NotesMentionsRequest {
     int? limit,
     String? sinceId,
     String? untilId,
+    @EpocTimeDateTimeConverter() DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() DateTime? untilDate,
     NoteVisibility? visibility,
   }) = _NotesMentionsRequest;
 

@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$UsersFollowingRequest {
 
- String get userId; String? get sinceId; String? get untilId; int? get limit;@DateTimeConverter() DateTime? get birthday;
+ String get userId; String? get sinceId; String? get untilId;@EpocTimeDateTimeConverter() DateTime? get sinceDate;@EpocTimeDateTimeConverter() DateTime? get untilDate; int? get limit;@DateTimeConverter() DateTime? get birthday;
 /// Create a copy of UsersFollowingRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -28,16 +28,16 @@ $UsersFollowingRequestCopyWith<UsersFollowingRequest> get copyWith => _$UsersFol
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is UsersFollowingRequest&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.birthday, birthday) || other.birthday == birthday));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is UsersFollowingRequest&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.birthday, birthday) || other.birthday == birthday));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,userId,sinceId,untilId,limit,birthday);
+int get hashCode => Object.hash(runtimeType,userId,sinceId,untilId,sinceDate,untilDate,limit,birthday);
 
 @override
 String toString() {
-  return 'UsersFollowingRequest(userId: $userId, sinceId: $sinceId, untilId: $untilId, limit: $limit, birthday: $birthday)';
+  return 'UsersFollowingRequest(userId: $userId, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, limit: $limit, birthday: $birthday)';
 }
 
 
@@ -48,7 +48,7 @@ abstract mixin class $UsersFollowingRequestCopyWith<$Res>  {
   factory $UsersFollowingRequestCopyWith(UsersFollowingRequest value, $Res Function(UsersFollowingRequest) _then) = _$UsersFollowingRequestCopyWithImpl;
 @useResult
 $Res call({
- String userId, String? sinceId, String? untilId, int? limit,@DateTimeConverter() DateTime? birthday
+ String userId, String? sinceId, String? untilId,@EpocTimeDateTimeConverter() DateTime? sinceDate,@EpocTimeDateTimeConverter() DateTime? untilDate, int? limit,@DateTimeConverter() DateTime? birthday
 });
 
 
@@ -65,12 +65,14 @@ class _$UsersFollowingRequestCopyWithImpl<$Res>
 
 /// Create a copy of UsersFollowingRequest
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? userId = null,Object? sinceId = freezed,Object? untilId = freezed,Object? limit = freezed,Object? birthday = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? userId = null,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,Object? limit = freezed,Object? birthday = freezed,}) {
   return _then(_self.copyWith(
 userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
 as String,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
 as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
-as String?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
+as String?,sinceDate: freezed == sinceDate ? _self.sinceDate : sinceDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,untilDate: freezed == untilDate ? _self.untilDate : untilDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int?,birthday: freezed == birthday ? _self.birthday : birthday // ignore: cast_nullable_to_non_nullable
 as DateTime?,
   ));
@@ -157,10 +159,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String userId,  String? sinceId,  String? untilId,  int? limit, @DateTimeConverter()  DateTime? birthday)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String userId,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  int? limit, @DateTimeConverter()  DateTime? birthday)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _UsersFollowingRequest() when $default != null:
-return $default(_that.userId,_that.sinceId,_that.untilId,_that.limit,_that.birthday);case _:
+return $default(_that.userId,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.limit,_that.birthday);case _:
   return orElse();
 
 }
@@ -178,10 +180,10 @@ return $default(_that.userId,_that.sinceId,_that.untilId,_that.limit,_that.birth
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String userId,  String? sinceId,  String? untilId,  int? limit, @DateTimeConverter()  DateTime? birthday)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String userId,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  int? limit, @DateTimeConverter()  DateTime? birthday)  $default,) {final _that = this;
 switch (_that) {
 case _UsersFollowingRequest():
-return $default(_that.userId,_that.sinceId,_that.untilId,_that.limit,_that.birthday);case _:
+return $default(_that.userId,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.limit,_that.birthday);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -198,10 +200,10 @@ return $default(_that.userId,_that.sinceId,_that.untilId,_that.limit,_that.birth
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String userId,  String? sinceId,  String? untilId,  int? limit, @DateTimeConverter()  DateTime? birthday)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String userId,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  int? limit, @DateTimeConverter()  DateTime? birthday)?  $default,) {final _that = this;
 switch (_that) {
 case _UsersFollowingRequest() when $default != null:
-return $default(_that.userId,_that.sinceId,_that.untilId,_that.limit,_that.birthday);case _:
+return $default(_that.userId,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.limit,_that.birthday);case _:
   return null;
 
 }
@@ -213,12 +215,14 @@ return $default(_that.userId,_that.sinceId,_that.untilId,_that.limit,_that.birth
 @JsonSerializable()
 
 class _UsersFollowingRequest implements UsersFollowingRequest {
-  const _UsersFollowingRequest({required this.userId, this.sinceId, this.untilId, this.limit, @DateTimeConverter() this.birthday});
+  const _UsersFollowingRequest({required this.userId, this.sinceId, this.untilId, @EpocTimeDateTimeConverter() this.sinceDate, @EpocTimeDateTimeConverter() this.untilDate, this.limit, @DateTimeConverter() this.birthday});
   factory _UsersFollowingRequest.fromJson(Map<String, dynamic> json) => _$UsersFollowingRequestFromJson(json);
 
 @override final  String userId;
 @override final  String? sinceId;
 @override final  String? untilId;
+@override@EpocTimeDateTimeConverter() final  DateTime? sinceDate;
+@override@EpocTimeDateTimeConverter() final  DateTime? untilDate;
 @override final  int? limit;
 @override@DateTimeConverter() final  DateTime? birthday;
 
@@ -235,16 +239,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersFollowingRequest&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.birthday, birthday) || other.birthday == birthday));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersFollowingRequest&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.birthday, birthday) || other.birthday == birthday));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,userId,sinceId,untilId,limit,birthday);
+int get hashCode => Object.hash(runtimeType,userId,sinceId,untilId,sinceDate,untilDate,limit,birthday);
 
 @override
 String toString() {
-  return 'UsersFollowingRequest(userId: $userId, sinceId: $sinceId, untilId: $untilId, limit: $limit, birthday: $birthday)';
+  return 'UsersFollowingRequest(userId: $userId, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, limit: $limit, birthday: $birthday)';
 }
 
 
@@ -255,7 +259,7 @@ abstract mixin class _$UsersFollowingRequestCopyWith<$Res> implements $UsersFoll
   factory _$UsersFollowingRequestCopyWith(_UsersFollowingRequest value, $Res Function(_UsersFollowingRequest) _then) = __$UsersFollowingRequestCopyWithImpl;
 @override @useResult
 $Res call({
- String userId, String? sinceId, String? untilId, int? limit,@DateTimeConverter() DateTime? birthday
+ String userId, String? sinceId, String? untilId,@EpocTimeDateTimeConverter() DateTime? sinceDate,@EpocTimeDateTimeConverter() DateTime? untilDate, int? limit,@DateTimeConverter() DateTime? birthday
 });
 
 
@@ -272,12 +276,14 @@ class __$UsersFollowingRequestCopyWithImpl<$Res>
 
 /// Create a copy of UsersFollowingRequest
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? userId = null,Object? sinceId = freezed,Object? untilId = freezed,Object? limit = freezed,Object? birthday = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? userId = null,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,Object? limit = freezed,Object? birthday = freezed,}) {
   return _then(_UsersFollowingRequest(
 userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
 as String,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
 as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
-as String?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
+as String?,sinceDate: freezed == sinceDate ? _self.sinceDate : sinceDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,untilDate: freezed == untilDate ? _self.untilDate : untilDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int?,birthday: freezed == birthday ? _self.birthday : birthday // ignore: cast_nullable_to_non_nullable
 as DateTime?,
   ));

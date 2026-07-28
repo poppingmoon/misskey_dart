@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:misskey_dart/src/converters/date_time_converter.dart';
 
 part 'users_gallery_posts_request.freezed.dart';
 part 'users_gallery_posts_request.g.dart';
@@ -10,6 +11,8 @@ abstract class UsersGalleryPostsRequest with _$UsersGalleryPostsRequest {
     int? limit,
     String? sinceId,
     String? untilId,
+    @EpocTimeDateTimeConverter() DateTime? sinceDate,
+    @EpocTimeDateTimeConverter() DateTime? untilDate,
   }) = _UsersGalleryPostsRequest;
 
   factory UsersGalleryPostsRequest.fromJson(Map<String, dynamic> json) =>
