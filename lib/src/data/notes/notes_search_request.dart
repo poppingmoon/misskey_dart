@@ -19,6 +19,15 @@ abstract class NotesSearchRequest with _$NotesSearchRequest {
     @EpocTimeDateTimeConverter() DateTime? sinceDate,
     @EpocTimeDateTimeConverter() DateTime? untilDate,
 
+    /// 指定すると、その日時以降に投稿されたノートに絞り込みます。
+    ///
+    /// `sinceId` / `untilId` はページングのカーソルなので、投稿日時で
+    /// 絞り込むときはこちらを使います。
+    @EpocTimeDateTimeConverter() DateTime? rangeStartAt,
+
+    /// 指定すると、その日時以前に投稿されたノートに絞り込みます。
+    @EpocTimeDateTimeConverter() DateTime? rangeEndAt,
+
     /// 取得するノートの最大数。
     int? limit,
 

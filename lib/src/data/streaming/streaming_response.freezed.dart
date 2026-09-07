@@ -2056,6 +2056,38 @@ ChannelStreamEvent _$ChannelStreamEventFromJson(
           return ChatUnreactChannelEvent.fromJson(
             json
           );
+                case 'invited':
+          return ReversiInvitedChannelEvent.fromJson(
+            json
+          );
+                case 'matched':
+          return ReversiMatchedChannelEvent.fromJson(
+            json
+          );
+                case 'started':
+          return ReversiStartedChannelEvent.fromJson(
+            json
+          );
+                case 'ended':
+          return ReversiEndedChannelEvent.fromJson(
+            json
+          );
+                case 'log':
+          return ReversiLogChannelEvent.fromJson(
+            json
+          );
+                case 'changeReadyStates':
+          return ReversiChangeReadyStatesChannelEvent.fromJson(
+            json
+          );
+                case 'updateSettings':
+          return ReversiUpdateSettingsChannelEvent.fromJson(
+            json
+          );
+                case 'canceled':
+          return ReversiCanceledChannelEvent.fromJson(
+            json
+          );
         
           default:
             return FallbackChannelEvent.fromJson(
@@ -2142,7 +2174,7 @@ extension ChannelStreamEventPatterns on ChannelStreamEvent {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( NoteChannelEvent value)?  note,TResult Function( StatsLogChannelEvent value)?  statsLog,TResult Function( StatsChannelEvent value)?  stats,TResult Function( UserAddedChannelEvent value)?  userAdded,TResult Function( UserRemovedChannelEvent value)?  userRemoved,TResult Function( NotificationChannelEvent value)?  notification,TResult Function( MentionChannelEvent value)?  mention,TResult Function( ReplyChannelEvent value)?  reply,TResult Function( RenoteChannelEvent value)?  renote,TResult Function( FollowChannelEvent value)?  follow,TResult Function( FollowedChannelEvent value)?  followed,TResult Function( UnfollowChannelEvent value)?  unfollow,TResult Function( MeUpdatedChannelEvent value)?  meUpdated,TResult Function( PageEventChannelEvent value)?  pageEvent,TResult Function( UrlUploadFinishedChannelEvent value)?  urlUploadFinished,TResult Function( ReadAllNotificationsChannelEvent value)?  readAllNotifications,TResult Function( UnreadNotificationChannelEvent value)?  unreadNotification,TResult Function( UnreadMentionChannelEvent value)?  unreadMention,TResult Function( ReadAllUnreadMentionsChannelEvent value)?  readAllUnreadMentions,TResult Function( NotificationFlushedChannelEvent value)?  notificationFlushed,TResult Function( UnreadSpecifiedNoteChannelEvent value)?  unreadSpecifiedNote,TResult Function( ReadAllUnreadSpecifiedNotesChannelEvent value)?  readAllUnreadSpecifiedNotes,TResult Function( ReadAllAntennasChannelEvent value)?  readAllAntennas,TResult Function( UnreadAntennaChannelEvent value)?  unreadAntenna,TResult Function( NewChatMessageEvent value)?  newChatMessage,TResult Function( ReadAllAnnouncementsChannelEvent value)?  readAllAnnouncements,TResult Function( MyTokenRegeneratedChannelEvent value)?  myTokenRegenerated,TResult Function( SigninChannelEvent value)?  signin,TResult Function( RegistryUpdatedChannelEvent value)?  registryUpdated,TResult Function( DriveFileCreatedChannelEvent value)?  driveFileCreated,TResult Function( ReadAntennaChannelEvent value)?  readAntenna,TResult Function( ReceiveFollowRequestChannelEvent value)?  receiveFollowRequest,TResult Function( AnnouncementCreatedChannelEvent value)?  announcementCreated,TResult Function( ChatMessageChannelEvent value)?  chatMessage,TResult Function( ChatDeletedChannelEvent value)?  chatDeleted,TResult Function( ChatReactChannelEvent value)?  chatReact,TResult Function( ChatUnreactChannelEvent value)?  chatUnreact,TResult Function( FallbackChannelEvent value)?  fallback,required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( NoteChannelEvent value)?  note,TResult Function( StatsLogChannelEvent value)?  statsLog,TResult Function( StatsChannelEvent value)?  stats,TResult Function( UserAddedChannelEvent value)?  userAdded,TResult Function( UserRemovedChannelEvent value)?  userRemoved,TResult Function( NotificationChannelEvent value)?  notification,TResult Function( MentionChannelEvent value)?  mention,TResult Function( ReplyChannelEvent value)?  reply,TResult Function( RenoteChannelEvent value)?  renote,TResult Function( FollowChannelEvent value)?  follow,TResult Function( FollowedChannelEvent value)?  followed,TResult Function( UnfollowChannelEvent value)?  unfollow,TResult Function( MeUpdatedChannelEvent value)?  meUpdated,TResult Function( PageEventChannelEvent value)?  pageEvent,TResult Function( UrlUploadFinishedChannelEvent value)?  urlUploadFinished,TResult Function( ReadAllNotificationsChannelEvent value)?  readAllNotifications,TResult Function( UnreadNotificationChannelEvent value)?  unreadNotification,TResult Function( UnreadMentionChannelEvent value)?  unreadMention,TResult Function( ReadAllUnreadMentionsChannelEvent value)?  readAllUnreadMentions,TResult Function( NotificationFlushedChannelEvent value)?  notificationFlushed,TResult Function( UnreadSpecifiedNoteChannelEvent value)?  unreadSpecifiedNote,TResult Function( ReadAllUnreadSpecifiedNotesChannelEvent value)?  readAllUnreadSpecifiedNotes,TResult Function( ReadAllAntennasChannelEvent value)?  readAllAntennas,TResult Function( UnreadAntennaChannelEvent value)?  unreadAntenna,TResult Function( NewChatMessageEvent value)?  newChatMessage,TResult Function( ReadAllAnnouncementsChannelEvent value)?  readAllAnnouncements,TResult Function( MyTokenRegeneratedChannelEvent value)?  myTokenRegenerated,TResult Function( SigninChannelEvent value)?  signin,TResult Function( RegistryUpdatedChannelEvent value)?  registryUpdated,TResult Function( DriveFileCreatedChannelEvent value)?  driveFileCreated,TResult Function( ReadAntennaChannelEvent value)?  readAntenna,TResult Function( ReceiveFollowRequestChannelEvent value)?  receiveFollowRequest,TResult Function( AnnouncementCreatedChannelEvent value)?  announcementCreated,TResult Function( ChatMessageChannelEvent value)?  chatMessage,TResult Function( ChatDeletedChannelEvent value)?  chatDeleted,TResult Function( ChatReactChannelEvent value)?  chatReact,TResult Function( ChatUnreactChannelEvent value)?  chatUnreact,TResult Function( ReversiInvitedChannelEvent value)?  reversiInvited,TResult Function( ReversiMatchedChannelEvent value)?  reversiMatched,TResult Function( ReversiStartedChannelEvent value)?  reversiStarted,TResult Function( ReversiEndedChannelEvent value)?  reversiEnded,TResult Function( ReversiLogChannelEvent value)?  reversiLog,TResult Function( ReversiChangeReadyStatesChannelEvent value)?  reversiChangeReadyStates,TResult Function( ReversiUpdateSettingsChannelEvent value)?  reversiUpdateSettings,TResult Function( ReversiCanceledChannelEvent value)?  reversiCanceled,TResult Function( FallbackChannelEvent value)?  fallback,required TResult orElse(),}){
 final _that = this;
 switch (_that) {
 case NoteChannelEvent() when note != null:
@@ -2182,7 +2214,15 @@ return announcementCreated(_that);case ChatMessageChannelEvent() when chatMessag
 return chatMessage(_that);case ChatDeletedChannelEvent() when chatDeleted != null:
 return chatDeleted(_that);case ChatReactChannelEvent() when chatReact != null:
 return chatReact(_that);case ChatUnreactChannelEvent() when chatUnreact != null:
-return chatUnreact(_that);case FallbackChannelEvent() when fallback != null:
+return chatUnreact(_that);case ReversiInvitedChannelEvent() when reversiInvited != null:
+return reversiInvited(_that);case ReversiMatchedChannelEvent() when reversiMatched != null:
+return reversiMatched(_that);case ReversiStartedChannelEvent() when reversiStarted != null:
+return reversiStarted(_that);case ReversiEndedChannelEvent() when reversiEnded != null:
+return reversiEnded(_that);case ReversiLogChannelEvent() when reversiLog != null:
+return reversiLog(_that);case ReversiChangeReadyStatesChannelEvent() when reversiChangeReadyStates != null:
+return reversiChangeReadyStates(_that);case ReversiUpdateSettingsChannelEvent() when reversiUpdateSettings != null:
+return reversiUpdateSettings(_that);case ReversiCanceledChannelEvent() when reversiCanceled != null:
+return reversiCanceled(_that);case FallbackChannelEvent() when fallback != null:
 return fallback(_that);case _:
   return orElse();
 
@@ -2201,7 +2241,7 @@ return fallback(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( NoteChannelEvent value)  note,required TResult Function( StatsLogChannelEvent value)  statsLog,required TResult Function( StatsChannelEvent value)  stats,required TResult Function( UserAddedChannelEvent value)  userAdded,required TResult Function( UserRemovedChannelEvent value)  userRemoved,required TResult Function( NotificationChannelEvent value)  notification,required TResult Function( MentionChannelEvent value)  mention,required TResult Function( ReplyChannelEvent value)  reply,required TResult Function( RenoteChannelEvent value)  renote,required TResult Function( FollowChannelEvent value)  follow,required TResult Function( FollowedChannelEvent value)  followed,required TResult Function( UnfollowChannelEvent value)  unfollow,required TResult Function( MeUpdatedChannelEvent value)  meUpdated,required TResult Function( PageEventChannelEvent value)  pageEvent,required TResult Function( UrlUploadFinishedChannelEvent value)  urlUploadFinished,required TResult Function( ReadAllNotificationsChannelEvent value)  readAllNotifications,required TResult Function( UnreadNotificationChannelEvent value)  unreadNotification,required TResult Function( UnreadMentionChannelEvent value)  unreadMention,required TResult Function( ReadAllUnreadMentionsChannelEvent value)  readAllUnreadMentions,required TResult Function( NotificationFlushedChannelEvent value)  notificationFlushed,required TResult Function( UnreadSpecifiedNoteChannelEvent value)  unreadSpecifiedNote,required TResult Function( ReadAllUnreadSpecifiedNotesChannelEvent value)  readAllUnreadSpecifiedNotes,required TResult Function( ReadAllAntennasChannelEvent value)  readAllAntennas,required TResult Function( UnreadAntennaChannelEvent value)  unreadAntenna,required TResult Function( NewChatMessageEvent value)  newChatMessage,required TResult Function( ReadAllAnnouncementsChannelEvent value)  readAllAnnouncements,required TResult Function( MyTokenRegeneratedChannelEvent value)  myTokenRegenerated,required TResult Function( SigninChannelEvent value)  signin,required TResult Function( RegistryUpdatedChannelEvent value)  registryUpdated,required TResult Function( DriveFileCreatedChannelEvent value)  driveFileCreated,required TResult Function( ReadAntennaChannelEvent value)  readAntenna,required TResult Function( ReceiveFollowRequestChannelEvent value)  receiveFollowRequest,required TResult Function( AnnouncementCreatedChannelEvent value)  announcementCreated,required TResult Function( ChatMessageChannelEvent value)  chatMessage,required TResult Function( ChatDeletedChannelEvent value)  chatDeleted,required TResult Function( ChatReactChannelEvent value)  chatReact,required TResult Function( ChatUnreactChannelEvent value)  chatUnreact,required TResult Function( FallbackChannelEvent value)  fallback,}){
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( NoteChannelEvent value)  note,required TResult Function( StatsLogChannelEvent value)  statsLog,required TResult Function( StatsChannelEvent value)  stats,required TResult Function( UserAddedChannelEvent value)  userAdded,required TResult Function( UserRemovedChannelEvent value)  userRemoved,required TResult Function( NotificationChannelEvent value)  notification,required TResult Function( MentionChannelEvent value)  mention,required TResult Function( ReplyChannelEvent value)  reply,required TResult Function( RenoteChannelEvent value)  renote,required TResult Function( FollowChannelEvent value)  follow,required TResult Function( FollowedChannelEvent value)  followed,required TResult Function( UnfollowChannelEvent value)  unfollow,required TResult Function( MeUpdatedChannelEvent value)  meUpdated,required TResult Function( PageEventChannelEvent value)  pageEvent,required TResult Function( UrlUploadFinishedChannelEvent value)  urlUploadFinished,required TResult Function( ReadAllNotificationsChannelEvent value)  readAllNotifications,required TResult Function( UnreadNotificationChannelEvent value)  unreadNotification,required TResult Function( UnreadMentionChannelEvent value)  unreadMention,required TResult Function( ReadAllUnreadMentionsChannelEvent value)  readAllUnreadMentions,required TResult Function( NotificationFlushedChannelEvent value)  notificationFlushed,required TResult Function( UnreadSpecifiedNoteChannelEvent value)  unreadSpecifiedNote,required TResult Function( ReadAllUnreadSpecifiedNotesChannelEvent value)  readAllUnreadSpecifiedNotes,required TResult Function( ReadAllAntennasChannelEvent value)  readAllAntennas,required TResult Function( UnreadAntennaChannelEvent value)  unreadAntenna,required TResult Function( NewChatMessageEvent value)  newChatMessage,required TResult Function( ReadAllAnnouncementsChannelEvent value)  readAllAnnouncements,required TResult Function( MyTokenRegeneratedChannelEvent value)  myTokenRegenerated,required TResult Function( SigninChannelEvent value)  signin,required TResult Function( RegistryUpdatedChannelEvent value)  registryUpdated,required TResult Function( DriveFileCreatedChannelEvent value)  driveFileCreated,required TResult Function( ReadAntennaChannelEvent value)  readAntenna,required TResult Function( ReceiveFollowRequestChannelEvent value)  receiveFollowRequest,required TResult Function( AnnouncementCreatedChannelEvent value)  announcementCreated,required TResult Function( ChatMessageChannelEvent value)  chatMessage,required TResult Function( ChatDeletedChannelEvent value)  chatDeleted,required TResult Function( ChatReactChannelEvent value)  chatReact,required TResult Function( ChatUnreactChannelEvent value)  chatUnreact,required TResult Function( ReversiInvitedChannelEvent value)  reversiInvited,required TResult Function( ReversiMatchedChannelEvent value)  reversiMatched,required TResult Function( ReversiStartedChannelEvent value)  reversiStarted,required TResult Function( ReversiEndedChannelEvent value)  reversiEnded,required TResult Function( ReversiLogChannelEvent value)  reversiLog,required TResult Function( ReversiChangeReadyStatesChannelEvent value)  reversiChangeReadyStates,required TResult Function( ReversiUpdateSettingsChannelEvent value)  reversiUpdateSettings,required TResult Function( ReversiCanceledChannelEvent value)  reversiCanceled,required TResult Function( FallbackChannelEvent value)  fallback,}){
 final _that = this;
 switch (_that) {
 case NoteChannelEvent():
@@ -2241,7 +2281,15 @@ return announcementCreated(_that);case ChatMessageChannelEvent():
 return chatMessage(_that);case ChatDeletedChannelEvent():
 return chatDeleted(_that);case ChatReactChannelEvent():
 return chatReact(_that);case ChatUnreactChannelEvent():
-return chatUnreact(_that);case FallbackChannelEvent():
+return chatUnreact(_that);case ReversiInvitedChannelEvent():
+return reversiInvited(_that);case ReversiMatchedChannelEvent():
+return reversiMatched(_that);case ReversiStartedChannelEvent():
+return reversiStarted(_that);case ReversiEndedChannelEvent():
+return reversiEnded(_that);case ReversiLogChannelEvent():
+return reversiLog(_that);case ReversiChangeReadyStatesChannelEvent():
+return reversiChangeReadyStates(_that);case ReversiUpdateSettingsChannelEvent():
+return reversiUpdateSettings(_that);case ReversiCanceledChannelEvent():
+return reversiCanceled(_that);case FallbackChannelEvent():
 return fallback(_that);}
 }
 /// A variant of `map` that fallback to returning `null`.
@@ -2256,7 +2304,7 @@ return fallback(_that);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( NoteChannelEvent value)?  note,TResult? Function( StatsLogChannelEvent value)?  statsLog,TResult? Function( StatsChannelEvent value)?  stats,TResult? Function( UserAddedChannelEvent value)?  userAdded,TResult? Function( UserRemovedChannelEvent value)?  userRemoved,TResult? Function( NotificationChannelEvent value)?  notification,TResult? Function( MentionChannelEvent value)?  mention,TResult? Function( ReplyChannelEvent value)?  reply,TResult? Function( RenoteChannelEvent value)?  renote,TResult? Function( FollowChannelEvent value)?  follow,TResult? Function( FollowedChannelEvent value)?  followed,TResult? Function( UnfollowChannelEvent value)?  unfollow,TResult? Function( MeUpdatedChannelEvent value)?  meUpdated,TResult? Function( PageEventChannelEvent value)?  pageEvent,TResult? Function( UrlUploadFinishedChannelEvent value)?  urlUploadFinished,TResult? Function( ReadAllNotificationsChannelEvent value)?  readAllNotifications,TResult? Function( UnreadNotificationChannelEvent value)?  unreadNotification,TResult? Function( UnreadMentionChannelEvent value)?  unreadMention,TResult? Function( ReadAllUnreadMentionsChannelEvent value)?  readAllUnreadMentions,TResult? Function( NotificationFlushedChannelEvent value)?  notificationFlushed,TResult? Function( UnreadSpecifiedNoteChannelEvent value)?  unreadSpecifiedNote,TResult? Function( ReadAllUnreadSpecifiedNotesChannelEvent value)?  readAllUnreadSpecifiedNotes,TResult? Function( ReadAllAntennasChannelEvent value)?  readAllAntennas,TResult? Function( UnreadAntennaChannelEvent value)?  unreadAntenna,TResult? Function( NewChatMessageEvent value)?  newChatMessage,TResult? Function( ReadAllAnnouncementsChannelEvent value)?  readAllAnnouncements,TResult? Function( MyTokenRegeneratedChannelEvent value)?  myTokenRegenerated,TResult? Function( SigninChannelEvent value)?  signin,TResult? Function( RegistryUpdatedChannelEvent value)?  registryUpdated,TResult? Function( DriveFileCreatedChannelEvent value)?  driveFileCreated,TResult? Function( ReadAntennaChannelEvent value)?  readAntenna,TResult? Function( ReceiveFollowRequestChannelEvent value)?  receiveFollowRequest,TResult? Function( AnnouncementCreatedChannelEvent value)?  announcementCreated,TResult? Function( ChatMessageChannelEvent value)?  chatMessage,TResult? Function( ChatDeletedChannelEvent value)?  chatDeleted,TResult? Function( ChatReactChannelEvent value)?  chatReact,TResult? Function( ChatUnreactChannelEvent value)?  chatUnreact,TResult? Function( FallbackChannelEvent value)?  fallback,}){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( NoteChannelEvent value)?  note,TResult? Function( StatsLogChannelEvent value)?  statsLog,TResult? Function( StatsChannelEvent value)?  stats,TResult? Function( UserAddedChannelEvent value)?  userAdded,TResult? Function( UserRemovedChannelEvent value)?  userRemoved,TResult? Function( NotificationChannelEvent value)?  notification,TResult? Function( MentionChannelEvent value)?  mention,TResult? Function( ReplyChannelEvent value)?  reply,TResult? Function( RenoteChannelEvent value)?  renote,TResult? Function( FollowChannelEvent value)?  follow,TResult? Function( FollowedChannelEvent value)?  followed,TResult? Function( UnfollowChannelEvent value)?  unfollow,TResult? Function( MeUpdatedChannelEvent value)?  meUpdated,TResult? Function( PageEventChannelEvent value)?  pageEvent,TResult? Function( UrlUploadFinishedChannelEvent value)?  urlUploadFinished,TResult? Function( ReadAllNotificationsChannelEvent value)?  readAllNotifications,TResult? Function( UnreadNotificationChannelEvent value)?  unreadNotification,TResult? Function( UnreadMentionChannelEvent value)?  unreadMention,TResult? Function( ReadAllUnreadMentionsChannelEvent value)?  readAllUnreadMentions,TResult? Function( NotificationFlushedChannelEvent value)?  notificationFlushed,TResult? Function( UnreadSpecifiedNoteChannelEvent value)?  unreadSpecifiedNote,TResult? Function( ReadAllUnreadSpecifiedNotesChannelEvent value)?  readAllUnreadSpecifiedNotes,TResult? Function( ReadAllAntennasChannelEvent value)?  readAllAntennas,TResult? Function( UnreadAntennaChannelEvent value)?  unreadAntenna,TResult? Function( NewChatMessageEvent value)?  newChatMessage,TResult? Function( ReadAllAnnouncementsChannelEvent value)?  readAllAnnouncements,TResult? Function( MyTokenRegeneratedChannelEvent value)?  myTokenRegenerated,TResult? Function( SigninChannelEvent value)?  signin,TResult? Function( RegistryUpdatedChannelEvent value)?  registryUpdated,TResult? Function( DriveFileCreatedChannelEvent value)?  driveFileCreated,TResult? Function( ReadAntennaChannelEvent value)?  readAntenna,TResult? Function( ReceiveFollowRequestChannelEvent value)?  receiveFollowRequest,TResult? Function( AnnouncementCreatedChannelEvent value)?  announcementCreated,TResult? Function( ChatMessageChannelEvent value)?  chatMessage,TResult? Function( ChatDeletedChannelEvent value)?  chatDeleted,TResult? Function( ChatReactChannelEvent value)?  chatReact,TResult? Function( ChatUnreactChannelEvent value)?  chatUnreact,TResult? Function( ReversiInvitedChannelEvent value)?  reversiInvited,TResult? Function( ReversiMatchedChannelEvent value)?  reversiMatched,TResult? Function( ReversiStartedChannelEvent value)?  reversiStarted,TResult? Function( ReversiEndedChannelEvent value)?  reversiEnded,TResult? Function( ReversiLogChannelEvent value)?  reversiLog,TResult? Function( ReversiChangeReadyStatesChannelEvent value)?  reversiChangeReadyStates,TResult? Function( ReversiUpdateSettingsChannelEvent value)?  reversiUpdateSettings,TResult? Function( ReversiCanceledChannelEvent value)?  reversiCanceled,TResult? Function( FallbackChannelEvent value)?  fallback,}){
 final _that = this;
 switch (_that) {
 case NoteChannelEvent() when note != null:
@@ -2296,7 +2344,15 @@ return announcementCreated(_that);case ChatMessageChannelEvent() when chatMessag
 return chatMessage(_that);case ChatDeletedChannelEvent() when chatDeleted != null:
 return chatDeleted(_that);case ChatReactChannelEvent() when chatReact != null:
 return chatReact(_that);case ChatUnreactChannelEvent() when chatUnreact != null:
-return chatUnreact(_that);case FallbackChannelEvent() when fallback != null:
+return chatUnreact(_that);case ReversiInvitedChannelEvent() when reversiInvited != null:
+return reversiInvited(_that);case ReversiMatchedChannelEvent() when reversiMatched != null:
+return reversiMatched(_that);case ReversiStartedChannelEvent() when reversiStarted != null:
+return reversiStarted(_that);case ReversiEndedChannelEvent() when reversiEnded != null:
+return reversiEnded(_that);case ReversiLogChannelEvent() when reversiLog != null:
+return reversiLog(_that);case ReversiChangeReadyStatesChannelEvent() when reversiChangeReadyStates != null:
+return reversiChangeReadyStates(_that);case ReversiUpdateSettingsChannelEvent() when reversiUpdateSettings != null:
+return reversiUpdateSettings(_that);case ReversiCanceledChannelEvent() when reversiCanceled != null:
+return reversiCanceled(_that);case FallbackChannelEvent() when fallback != null:
 return fallback(_that);case _:
   return null;
 
@@ -2314,7 +2370,7 @@ return fallback(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( String id, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChannelEventType? type,  Note body)?  note,TResult Function( String id, @StreamingStatsConverter()  List<StreamingStats> body)?  statsLog,TResult Function( String id, @StreamingStatsConverter()  StreamingStats body)?  stats,TResult Function( String id,  UserLite body)?  userAdded,TResult Function( String id,  UserLite body)?  userRemoved,TResult Function( String id,  INotificationsResponse body)?  notification,TResult Function( String id,  Note body)?  mention,TResult Function( String id,  Note body)?  reply,TResult Function( String id,  Note body)?  renote,TResult Function( String id,  UserDetailedNotMe body)?  follow,TResult Function( String id,  UserLite body)?  followed,TResult Function( String id,  UserDetailedNotMe body)?  unfollow,TResult Function( String id,  MeDetailed body)?  meUpdated,TResult Function( String id,  PageEvent body)?  pageEvent,TResult Function( String id,  UrlUploadFinishedEvent body)?  urlUploadFinished,TResult Function( String id)?  readAllNotifications,TResult Function( String id,  INotificationsResponse body)?  unreadNotification,TResult Function( String id,  String body)?  unreadMention,TResult Function( String id)?  readAllUnreadMentions,TResult Function( String id)?  notificationFlushed,TResult Function( String id,  String body)?  unreadSpecifiedNote,TResult Function( String id)?  readAllUnreadSpecifiedNotes,TResult Function( String id)?  readAllAntennas,TResult Function( String id,  Antenna body)?  unreadAntenna,TResult Function( String id,  ChatMessage body)?  newChatMessage,TResult Function( String id)?  readAllAnnouncements,TResult Function( String id)?  myTokenRegenerated,TResult Function( String id,  Signin body)?  signin,TResult Function( String id,  RegistryUpdated body)?  registryUpdated,TResult Function( String id,  DriveFile body)?  driveFileCreated,TResult Function( String id,  Antenna body)?  readAntenna,TResult Function( String id,  UserLite body)?  receiveFollowRequest,TResult Function( String id,  AnnouncementCreatedStreamEvent body)?  announcementCreated,TResult Function( String id,  ChatMessage body)?  chatMessage,TResult Function( String id,  String body)?  chatDeleted,TResult Function( String id,  ChatReact body)?  chatReact,TResult Function( String id,  ChatReact body)?  chatUnreact,TResult Function( String id,  Object? body)?  fallback,required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( String id, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChannelEventType? type,  Note body)?  note,TResult Function( String id, @StreamingStatsConverter()  List<StreamingStats> body)?  statsLog,TResult Function( String id, @StreamingStatsConverter()  StreamingStats body)?  stats,TResult Function( String id,  UserLite body)?  userAdded,TResult Function( String id,  UserLite body)?  userRemoved,TResult Function( String id,  INotificationsResponse body)?  notification,TResult Function( String id,  Note body)?  mention,TResult Function( String id,  Note body)?  reply,TResult Function( String id,  Note body)?  renote,TResult Function( String id,  UserDetailedNotMe body)?  follow,TResult Function( String id,  UserLite body)?  followed,TResult Function( String id,  UserDetailedNotMe body)?  unfollow,TResult Function( String id,  MeDetailed body)?  meUpdated,TResult Function( String id,  PageEvent body)?  pageEvent,TResult Function( String id,  UrlUploadFinishedEvent body)?  urlUploadFinished,TResult Function( String id)?  readAllNotifications,TResult Function( String id,  INotificationsResponse body)?  unreadNotification,TResult Function( String id,  String body)?  unreadMention,TResult Function( String id)?  readAllUnreadMentions,TResult Function( String id)?  notificationFlushed,TResult Function( String id,  String body)?  unreadSpecifiedNote,TResult Function( String id)?  readAllUnreadSpecifiedNotes,TResult Function( String id)?  readAllAntennas,TResult Function( String id,  Antenna body)?  unreadAntenna,TResult Function( String id,  ChatMessage body)?  newChatMessage,TResult Function( String id)?  readAllAnnouncements,TResult Function( String id)?  myTokenRegenerated,TResult Function( String id,  Signin body)?  signin,TResult Function( String id,  RegistryUpdated body)?  registryUpdated,TResult Function( String id,  DriveFile body)?  driveFileCreated,TResult Function( String id,  Antenna body)?  readAntenna,TResult Function( String id,  UserLite body)?  receiveFollowRequest,TResult Function( String id,  AnnouncementCreatedStreamEvent body)?  announcementCreated,TResult Function( String id,  ChatMessage body)?  chatMessage,TResult Function( String id,  String body)?  chatDeleted,TResult Function( String id,  ChatReact body)?  chatReact,TResult Function( String id,  ChatReact body)?  chatUnreact,TResult Function( String id,  ReversiInvited body)?  reversiInvited,TResult Function( String id,  ReversiGameEvent body)?  reversiMatched,TResult Function( String id,  ReversiGameEvent body)?  reversiStarted,TResult Function( String id,  ReversiEnded body)?  reversiEnded,TResult Function( String id,  ReversiLogEvent body)?  reversiLog,TResult Function( String id,  ReversiReadyStates body)?  reversiChangeReadyStates,TResult Function( String id,  ReversiUpdateSettings body)?  reversiUpdateSettings,TResult Function( String id,  ReversiCanceled body)?  reversiCanceled,TResult Function( String id,  Object? body)?  fallback,required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case NoteChannelEvent() when note != null:
 return note(_that.id,_that.type,_that.body);case StatsLogChannelEvent() when statsLog != null:
@@ -2353,7 +2409,15 @@ return announcementCreated(_that.id,_that.body);case ChatMessageChannelEvent() w
 return chatMessage(_that.id,_that.body);case ChatDeletedChannelEvent() when chatDeleted != null:
 return chatDeleted(_that.id,_that.body);case ChatReactChannelEvent() when chatReact != null:
 return chatReact(_that.id,_that.body);case ChatUnreactChannelEvent() when chatUnreact != null:
-return chatUnreact(_that.id,_that.body);case FallbackChannelEvent() when fallback != null:
+return chatUnreact(_that.id,_that.body);case ReversiInvitedChannelEvent() when reversiInvited != null:
+return reversiInvited(_that.id,_that.body);case ReversiMatchedChannelEvent() when reversiMatched != null:
+return reversiMatched(_that.id,_that.body);case ReversiStartedChannelEvent() when reversiStarted != null:
+return reversiStarted(_that.id,_that.body);case ReversiEndedChannelEvent() when reversiEnded != null:
+return reversiEnded(_that.id,_that.body);case ReversiLogChannelEvent() when reversiLog != null:
+return reversiLog(_that.id,_that.body);case ReversiChangeReadyStatesChannelEvent() when reversiChangeReadyStates != null:
+return reversiChangeReadyStates(_that.id,_that.body);case ReversiUpdateSettingsChannelEvent() when reversiUpdateSettings != null:
+return reversiUpdateSettings(_that.id,_that.body);case ReversiCanceledChannelEvent() when reversiCanceled != null:
+return reversiCanceled(_that.id,_that.body);case FallbackChannelEvent() when fallback != null:
 return fallback(_that.id,_that.body);case _:
   return orElse();
 
@@ -2372,7 +2436,7 @@ return fallback(_that.id,_that.body);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( String id, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChannelEventType? type,  Note body)  note,required TResult Function( String id, @StreamingStatsConverter()  List<StreamingStats> body)  statsLog,required TResult Function( String id, @StreamingStatsConverter()  StreamingStats body)  stats,required TResult Function( String id,  UserLite body)  userAdded,required TResult Function( String id,  UserLite body)  userRemoved,required TResult Function( String id,  INotificationsResponse body)  notification,required TResult Function( String id,  Note body)  mention,required TResult Function( String id,  Note body)  reply,required TResult Function( String id,  Note body)  renote,required TResult Function( String id,  UserDetailedNotMe body)  follow,required TResult Function( String id,  UserLite body)  followed,required TResult Function( String id,  UserDetailedNotMe body)  unfollow,required TResult Function( String id,  MeDetailed body)  meUpdated,required TResult Function( String id,  PageEvent body)  pageEvent,required TResult Function( String id,  UrlUploadFinishedEvent body)  urlUploadFinished,required TResult Function( String id)  readAllNotifications,required TResult Function( String id,  INotificationsResponse body)  unreadNotification,required TResult Function( String id,  String body)  unreadMention,required TResult Function( String id)  readAllUnreadMentions,required TResult Function( String id)  notificationFlushed,required TResult Function( String id,  String body)  unreadSpecifiedNote,required TResult Function( String id)  readAllUnreadSpecifiedNotes,required TResult Function( String id)  readAllAntennas,required TResult Function( String id,  Antenna body)  unreadAntenna,required TResult Function( String id,  ChatMessage body)  newChatMessage,required TResult Function( String id)  readAllAnnouncements,required TResult Function( String id)  myTokenRegenerated,required TResult Function( String id,  Signin body)  signin,required TResult Function( String id,  RegistryUpdated body)  registryUpdated,required TResult Function( String id,  DriveFile body)  driveFileCreated,required TResult Function( String id,  Antenna body)  readAntenna,required TResult Function( String id,  UserLite body)  receiveFollowRequest,required TResult Function( String id,  AnnouncementCreatedStreamEvent body)  announcementCreated,required TResult Function( String id,  ChatMessage body)  chatMessage,required TResult Function( String id,  String body)  chatDeleted,required TResult Function( String id,  ChatReact body)  chatReact,required TResult Function( String id,  ChatReact body)  chatUnreact,required TResult Function( String id,  Object? body)  fallback,}) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( String id, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChannelEventType? type,  Note body)  note,required TResult Function( String id, @StreamingStatsConverter()  List<StreamingStats> body)  statsLog,required TResult Function( String id, @StreamingStatsConverter()  StreamingStats body)  stats,required TResult Function( String id,  UserLite body)  userAdded,required TResult Function( String id,  UserLite body)  userRemoved,required TResult Function( String id,  INotificationsResponse body)  notification,required TResult Function( String id,  Note body)  mention,required TResult Function( String id,  Note body)  reply,required TResult Function( String id,  Note body)  renote,required TResult Function( String id,  UserDetailedNotMe body)  follow,required TResult Function( String id,  UserLite body)  followed,required TResult Function( String id,  UserDetailedNotMe body)  unfollow,required TResult Function( String id,  MeDetailed body)  meUpdated,required TResult Function( String id,  PageEvent body)  pageEvent,required TResult Function( String id,  UrlUploadFinishedEvent body)  urlUploadFinished,required TResult Function( String id)  readAllNotifications,required TResult Function( String id,  INotificationsResponse body)  unreadNotification,required TResult Function( String id,  String body)  unreadMention,required TResult Function( String id)  readAllUnreadMentions,required TResult Function( String id)  notificationFlushed,required TResult Function( String id,  String body)  unreadSpecifiedNote,required TResult Function( String id)  readAllUnreadSpecifiedNotes,required TResult Function( String id)  readAllAntennas,required TResult Function( String id,  Antenna body)  unreadAntenna,required TResult Function( String id,  ChatMessage body)  newChatMessage,required TResult Function( String id)  readAllAnnouncements,required TResult Function( String id)  myTokenRegenerated,required TResult Function( String id,  Signin body)  signin,required TResult Function( String id,  RegistryUpdated body)  registryUpdated,required TResult Function( String id,  DriveFile body)  driveFileCreated,required TResult Function( String id,  Antenna body)  readAntenna,required TResult Function( String id,  UserLite body)  receiveFollowRequest,required TResult Function( String id,  AnnouncementCreatedStreamEvent body)  announcementCreated,required TResult Function( String id,  ChatMessage body)  chatMessage,required TResult Function( String id,  String body)  chatDeleted,required TResult Function( String id,  ChatReact body)  chatReact,required TResult Function( String id,  ChatReact body)  chatUnreact,required TResult Function( String id,  ReversiInvited body)  reversiInvited,required TResult Function( String id,  ReversiGameEvent body)  reversiMatched,required TResult Function( String id,  ReversiGameEvent body)  reversiStarted,required TResult Function( String id,  ReversiEnded body)  reversiEnded,required TResult Function( String id,  ReversiLogEvent body)  reversiLog,required TResult Function( String id,  ReversiReadyStates body)  reversiChangeReadyStates,required TResult Function( String id,  ReversiUpdateSettings body)  reversiUpdateSettings,required TResult Function( String id,  ReversiCanceled body)  reversiCanceled,required TResult Function( String id,  Object? body)  fallback,}) {final _that = this;
 switch (_that) {
 case NoteChannelEvent():
 return note(_that.id,_that.type,_that.body);case StatsLogChannelEvent():
@@ -2411,7 +2475,15 @@ return announcementCreated(_that.id,_that.body);case ChatMessageChannelEvent():
 return chatMessage(_that.id,_that.body);case ChatDeletedChannelEvent():
 return chatDeleted(_that.id,_that.body);case ChatReactChannelEvent():
 return chatReact(_that.id,_that.body);case ChatUnreactChannelEvent():
-return chatUnreact(_that.id,_that.body);case FallbackChannelEvent():
+return chatUnreact(_that.id,_that.body);case ReversiInvitedChannelEvent():
+return reversiInvited(_that.id,_that.body);case ReversiMatchedChannelEvent():
+return reversiMatched(_that.id,_that.body);case ReversiStartedChannelEvent():
+return reversiStarted(_that.id,_that.body);case ReversiEndedChannelEvent():
+return reversiEnded(_that.id,_that.body);case ReversiLogChannelEvent():
+return reversiLog(_that.id,_that.body);case ReversiChangeReadyStatesChannelEvent():
+return reversiChangeReadyStates(_that.id,_that.body);case ReversiUpdateSettingsChannelEvent():
+return reversiUpdateSettings(_that.id,_that.body);case ReversiCanceledChannelEvent():
+return reversiCanceled(_that.id,_that.body);case FallbackChannelEvent():
 return fallback(_that.id,_that.body);}
 }
 /// A variant of `when` that fallback to returning `null`
@@ -2426,7 +2498,7 @@ return fallback(_that.id,_that.body);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( String id, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChannelEventType? type,  Note body)?  note,TResult? Function( String id, @StreamingStatsConverter()  List<StreamingStats> body)?  statsLog,TResult? Function( String id, @StreamingStatsConverter()  StreamingStats body)?  stats,TResult? Function( String id,  UserLite body)?  userAdded,TResult? Function( String id,  UserLite body)?  userRemoved,TResult? Function( String id,  INotificationsResponse body)?  notification,TResult? Function( String id,  Note body)?  mention,TResult? Function( String id,  Note body)?  reply,TResult? Function( String id,  Note body)?  renote,TResult? Function( String id,  UserDetailedNotMe body)?  follow,TResult? Function( String id,  UserLite body)?  followed,TResult? Function( String id,  UserDetailedNotMe body)?  unfollow,TResult? Function( String id,  MeDetailed body)?  meUpdated,TResult? Function( String id,  PageEvent body)?  pageEvent,TResult? Function( String id,  UrlUploadFinishedEvent body)?  urlUploadFinished,TResult? Function( String id)?  readAllNotifications,TResult? Function( String id,  INotificationsResponse body)?  unreadNotification,TResult? Function( String id,  String body)?  unreadMention,TResult? Function( String id)?  readAllUnreadMentions,TResult? Function( String id)?  notificationFlushed,TResult? Function( String id,  String body)?  unreadSpecifiedNote,TResult? Function( String id)?  readAllUnreadSpecifiedNotes,TResult? Function( String id)?  readAllAntennas,TResult? Function( String id,  Antenna body)?  unreadAntenna,TResult? Function( String id,  ChatMessage body)?  newChatMessage,TResult? Function( String id)?  readAllAnnouncements,TResult? Function( String id)?  myTokenRegenerated,TResult? Function( String id,  Signin body)?  signin,TResult? Function( String id,  RegistryUpdated body)?  registryUpdated,TResult? Function( String id,  DriveFile body)?  driveFileCreated,TResult? Function( String id,  Antenna body)?  readAntenna,TResult? Function( String id,  UserLite body)?  receiveFollowRequest,TResult? Function( String id,  AnnouncementCreatedStreamEvent body)?  announcementCreated,TResult? Function( String id,  ChatMessage body)?  chatMessage,TResult? Function( String id,  String body)?  chatDeleted,TResult? Function( String id,  ChatReact body)?  chatReact,TResult? Function( String id,  ChatReact body)?  chatUnreact,TResult? Function( String id,  Object? body)?  fallback,}) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( String id, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChannelEventType? type,  Note body)?  note,TResult? Function( String id, @StreamingStatsConverter()  List<StreamingStats> body)?  statsLog,TResult? Function( String id, @StreamingStatsConverter()  StreamingStats body)?  stats,TResult? Function( String id,  UserLite body)?  userAdded,TResult? Function( String id,  UserLite body)?  userRemoved,TResult? Function( String id,  INotificationsResponse body)?  notification,TResult? Function( String id,  Note body)?  mention,TResult? Function( String id,  Note body)?  reply,TResult? Function( String id,  Note body)?  renote,TResult? Function( String id,  UserDetailedNotMe body)?  follow,TResult? Function( String id,  UserLite body)?  followed,TResult? Function( String id,  UserDetailedNotMe body)?  unfollow,TResult? Function( String id,  MeDetailed body)?  meUpdated,TResult? Function( String id,  PageEvent body)?  pageEvent,TResult? Function( String id,  UrlUploadFinishedEvent body)?  urlUploadFinished,TResult? Function( String id)?  readAllNotifications,TResult? Function( String id,  INotificationsResponse body)?  unreadNotification,TResult? Function( String id,  String body)?  unreadMention,TResult? Function( String id)?  readAllUnreadMentions,TResult? Function( String id)?  notificationFlushed,TResult? Function( String id,  String body)?  unreadSpecifiedNote,TResult? Function( String id)?  readAllUnreadSpecifiedNotes,TResult? Function( String id)?  readAllAntennas,TResult? Function( String id,  Antenna body)?  unreadAntenna,TResult? Function( String id,  ChatMessage body)?  newChatMessage,TResult? Function( String id)?  readAllAnnouncements,TResult? Function( String id)?  myTokenRegenerated,TResult? Function( String id,  Signin body)?  signin,TResult? Function( String id,  RegistryUpdated body)?  registryUpdated,TResult? Function( String id,  DriveFile body)?  driveFileCreated,TResult? Function( String id,  Antenna body)?  readAntenna,TResult? Function( String id,  UserLite body)?  receiveFollowRequest,TResult? Function( String id,  AnnouncementCreatedStreamEvent body)?  announcementCreated,TResult? Function( String id,  ChatMessage body)?  chatMessage,TResult? Function( String id,  String body)?  chatDeleted,TResult? Function( String id,  ChatReact body)?  chatReact,TResult? Function( String id,  ChatReact body)?  chatUnreact,TResult? Function( String id,  ReversiInvited body)?  reversiInvited,TResult? Function( String id,  ReversiGameEvent body)?  reversiMatched,TResult? Function( String id,  ReversiGameEvent body)?  reversiStarted,TResult? Function( String id,  ReversiEnded body)?  reversiEnded,TResult? Function( String id,  ReversiLogEvent body)?  reversiLog,TResult? Function( String id,  ReversiReadyStates body)?  reversiChangeReadyStates,TResult? Function( String id,  ReversiUpdateSettings body)?  reversiUpdateSettings,TResult? Function( String id,  ReversiCanceled body)?  reversiCanceled,TResult? Function( String id,  Object? body)?  fallback,}) {final _that = this;
 switch (_that) {
 case NoteChannelEvent() when note != null:
 return note(_that.id,_that.type,_that.body);case StatsLogChannelEvent() when statsLog != null:
@@ -2465,7 +2537,15 @@ return announcementCreated(_that.id,_that.body);case ChatMessageChannelEvent() w
 return chatMessage(_that.id,_that.body);case ChatDeletedChannelEvent() when chatDeleted != null:
 return chatDeleted(_that.id,_that.body);case ChatReactChannelEvent() when chatReact != null:
 return chatReact(_that.id,_that.body);case ChatUnreactChannelEvent() when chatUnreact != null:
-return chatUnreact(_that.id,_that.body);case FallbackChannelEvent() when fallback != null:
+return chatUnreact(_that.id,_that.body);case ReversiInvitedChannelEvent() when reversiInvited != null:
+return reversiInvited(_that.id,_that.body);case ReversiMatchedChannelEvent() when reversiMatched != null:
+return reversiMatched(_that.id,_that.body);case ReversiStartedChannelEvent() when reversiStarted != null:
+return reversiStarted(_that.id,_that.body);case ReversiEndedChannelEvent() when reversiEnded != null:
+return reversiEnded(_that.id,_that.body);case ReversiLogChannelEvent() when reversiLog != null:
+return reversiLog(_that.id,_that.body);case ReversiChangeReadyStatesChannelEvent() when reversiChangeReadyStates != null:
+return reversiChangeReadyStates(_that.id,_that.body);case ReversiUpdateSettingsChannelEvent() when reversiUpdateSettings != null:
+return reversiUpdateSettings(_that.id,_that.body);case ReversiCanceledChannelEvent() when reversiCanceled != null:
+return reversiCanceled(_that.id,_that.body);case FallbackChannelEvent() when fallback != null:
 return fallback(_that.id,_that.body);case _:
   return null;
 
@@ -5469,6 +5549,678 @@ as ChatReact,
 $ChatReactCopyWith<$Res> get body {
   
   return $ChatReactCopyWith<$Res>(_self.body, (value) {
+    return _then(_self.copyWith(body: value));
+  });
+}
+}
+
+/// @nodoc
+@JsonSerializable()
+
+class ReversiInvitedChannelEvent implements ChannelStreamEvent {
+  const ReversiInvitedChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'invited';
+  factory ReversiInvitedChannelEvent.fromJson(Map<String, dynamic> json) => _$ReversiInvitedChannelEventFromJson(json);
+
+@override final  String id;
+ final  ReversiInvited body;
+
+@JsonKey(name: 'type')
+final String $type;
+
+
+/// Create a copy of ChannelStreamEvent
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$ReversiInvitedChannelEventCopyWith<ReversiInvitedChannelEvent> get copyWith => _$ReversiInvitedChannelEventCopyWithImpl<ReversiInvitedChannelEvent>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$ReversiInvitedChannelEventToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiInvitedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,body);
+
+@override
+String toString() {
+  return 'ChannelStreamEvent.reversiInvited(id: $id, body: $body)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $ReversiInvitedChannelEventCopyWith<$Res> implements $ChannelStreamEventCopyWith<$Res> {
+  factory $ReversiInvitedChannelEventCopyWith(ReversiInvitedChannelEvent value, $Res Function(ReversiInvitedChannelEvent) _then) = _$ReversiInvitedChannelEventCopyWithImpl;
+@override @useResult
+$Res call({
+ String id, ReversiInvited body
+});
+
+
+$ReversiInvitedCopyWith<$Res> get body;
+
+}
+/// @nodoc
+class _$ReversiInvitedChannelEventCopyWithImpl<$Res>
+    implements $ReversiInvitedChannelEventCopyWith<$Res> {
+  _$ReversiInvitedChannelEventCopyWithImpl(this._self, this._then);
+
+  final ReversiInvitedChannelEvent _self;
+  final $Res Function(ReversiInvitedChannelEvent) _then;
+
+/// Create a copy of ChannelStreamEvent
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? body = null,}) {
+  return _then(ReversiInvitedChannelEvent(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,body: null == body ? _self.body : body // ignore: cast_nullable_to_non_nullable
+as ReversiInvited,
+  ));
+}
+
+/// Create a copy of ChannelStreamEvent
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$ReversiInvitedCopyWith<$Res> get body {
+  
+  return $ReversiInvitedCopyWith<$Res>(_self.body, (value) {
+    return _then(_self.copyWith(body: value));
+  });
+}
+}
+
+/// @nodoc
+@JsonSerializable()
+
+class ReversiMatchedChannelEvent implements ChannelStreamEvent {
+  const ReversiMatchedChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'matched';
+  factory ReversiMatchedChannelEvent.fromJson(Map<String, dynamic> json) => _$ReversiMatchedChannelEventFromJson(json);
+
+@override final  String id;
+ final  ReversiGameEvent body;
+
+@JsonKey(name: 'type')
+final String $type;
+
+
+/// Create a copy of ChannelStreamEvent
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$ReversiMatchedChannelEventCopyWith<ReversiMatchedChannelEvent> get copyWith => _$ReversiMatchedChannelEventCopyWithImpl<ReversiMatchedChannelEvent>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$ReversiMatchedChannelEventToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiMatchedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,body);
+
+@override
+String toString() {
+  return 'ChannelStreamEvent.reversiMatched(id: $id, body: $body)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $ReversiMatchedChannelEventCopyWith<$Res> implements $ChannelStreamEventCopyWith<$Res> {
+  factory $ReversiMatchedChannelEventCopyWith(ReversiMatchedChannelEvent value, $Res Function(ReversiMatchedChannelEvent) _then) = _$ReversiMatchedChannelEventCopyWithImpl;
+@override @useResult
+$Res call({
+ String id, ReversiGameEvent body
+});
+
+
+$ReversiGameEventCopyWith<$Res> get body;
+
+}
+/// @nodoc
+class _$ReversiMatchedChannelEventCopyWithImpl<$Res>
+    implements $ReversiMatchedChannelEventCopyWith<$Res> {
+  _$ReversiMatchedChannelEventCopyWithImpl(this._self, this._then);
+
+  final ReversiMatchedChannelEvent _self;
+  final $Res Function(ReversiMatchedChannelEvent) _then;
+
+/// Create a copy of ChannelStreamEvent
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? body = null,}) {
+  return _then(ReversiMatchedChannelEvent(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,body: null == body ? _self.body : body // ignore: cast_nullable_to_non_nullable
+as ReversiGameEvent,
+  ));
+}
+
+/// Create a copy of ChannelStreamEvent
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$ReversiGameEventCopyWith<$Res> get body {
+  
+  return $ReversiGameEventCopyWith<$Res>(_self.body, (value) {
+    return _then(_self.copyWith(body: value));
+  });
+}
+}
+
+/// @nodoc
+@JsonSerializable()
+
+class ReversiStartedChannelEvent implements ChannelStreamEvent {
+  const ReversiStartedChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'started';
+  factory ReversiStartedChannelEvent.fromJson(Map<String, dynamic> json) => _$ReversiStartedChannelEventFromJson(json);
+
+@override final  String id;
+ final  ReversiGameEvent body;
+
+@JsonKey(name: 'type')
+final String $type;
+
+
+/// Create a copy of ChannelStreamEvent
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$ReversiStartedChannelEventCopyWith<ReversiStartedChannelEvent> get copyWith => _$ReversiStartedChannelEventCopyWithImpl<ReversiStartedChannelEvent>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$ReversiStartedChannelEventToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiStartedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,body);
+
+@override
+String toString() {
+  return 'ChannelStreamEvent.reversiStarted(id: $id, body: $body)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $ReversiStartedChannelEventCopyWith<$Res> implements $ChannelStreamEventCopyWith<$Res> {
+  factory $ReversiStartedChannelEventCopyWith(ReversiStartedChannelEvent value, $Res Function(ReversiStartedChannelEvent) _then) = _$ReversiStartedChannelEventCopyWithImpl;
+@override @useResult
+$Res call({
+ String id, ReversiGameEvent body
+});
+
+
+$ReversiGameEventCopyWith<$Res> get body;
+
+}
+/// @nodoc
+class _$ReversiStartedChannelEventCopyWithImpl<$Res>
+    implements $ReversiStartedChannelEventCopyWith<$Res> {
+  _$ReversiStartedChannelEventCopyWithImpl(this._self, this._then);
+
+  final ReversiStartedChannelEvent _self;
+  final $Res Function(ReversiStartedChannelEvent) _then;
+
+/// Create a copy of ChannelStreamEvent
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? body = null,}) {
+  return _then(ReversiStartedChannelEvent(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,body: null == body ? _self.body : body // ignore: cast_nullable_to_non_nullable
+as ReversiGameEvent,
+  ));
+}
+
+/// Create a copy of ChannelStreamEvent
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$ReversiGameEventCopyWith<$Res> get body {
+  
+  return $ReversiGameEventCopyWith<$Res>(_self.body, (value) {
+    return _then(_self.copyWith(body: value));
+  });
+}
+}
+
+/// @nodoc
+@JsonSerializable()
+
+class ReversiEndedChannelEvent implements ChannelStreamEvent {
+  const ReversiEndedChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'ended';
+  factory ReversiEndedChannelEvent.fromJson(Map<String, dynamic> json) => _$ReversiEndedChannelEventFromJson(json);
+
+@override final  String id;
+ final  ReversiEnded body;
+
+@JsonKey(name: 'type')
+final String $type;
+
+
+/// Create a copy of ChannelStreamEvent
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$ReversiEndedChannelEventCopyWith<ReversiEndedChannelEvent> get copyWith => _$ReversiEndedChannelEventCopyWithImpl<ReversiEndedChannelEvent>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$ReversiEndedChannelEventToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiEndedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,body);
+
+@override
+String toString() {
+  return 'ChannelStreamEvent.reversiEnded(id: $id, body: $body)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $ReversiEndedChannelEventCopyWith<$Res> implements $ChannelStreamEventCopyWith<$Res> {
+  factory $ReversiEndedChannelEventCopyWith(ReversiEndedChannelEvent value, $Res Function(ReversiEndedChannelEvent) _then) = _$ReversiEndedChannelEventCopyWithImpl;
+@override @useResult
+$Res call({
+ String id, ReversiEnded body
+});
+
+
+$ReversiEndedCopyWith<$Res> get body;
+
+}
+/// @nodoc
+class _$ReversiEndedChannelEventCopyWithImpl<$Res>
+    implements $ReversiEndedChannelEventCopyWith<$Res> {
+  _$ReversiEndedChannelEventCopyWithImpl(this._self, this._then);
+
+  final ReversiEndedChannelEvent _self;
+  final $Res Function(ReversiEndedChannelEvent) _then;
+
+/// Create a copy of ChannelStreamEvent
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? body = null,}) {
+  return _then(ReversiEndedChannelEvent(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,body: null == body ? _self.body : body // ignore: cast_nullable_to_non_nullable
+as ReversiEnded,
+  ));
+}
+
+/// Create a copy of ChannelStreamEvent
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$ReversiEndedCopyWith<$Res> get body {
+  
+  return $ReversiEndedCopyWith<$Res>(_self.body, (value) {
+    return _then(_self.copyWith(body: value));
+  });
+}
+}
+
+/// @nodoc
+@JsonSerializable()
+
+class ReversiLogChannelEvent implements ChannelStreamEvent {
+  const ReversiLogChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'log';
+  factory ReversiLogChannelEvent.fromJson(Map<String, dynamic> json) => _$ReversiLogChannelEventFromJson(json);
+
+@override final  String id;
+ final  ReversiLogEvent body;
+
+@JsonKey(name: 'type')
+final String $type;
+
+
+/// Create a copy of ChannelStreamEvent
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$ReversiLogChannelEventCopyWith<ReversiLogChannelEvent> get copyWith => _$ReversiLogChannelEventCopyWithImpl<ReversiLogChannelEvent>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$ReversiLogChannelEventToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiLogChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,body);
+
+@override
+String toString() {
+  return 'ChannelStreamEvent.reversiLog(id: $id, body: $body)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $ReversiLogChannelEventCopyWith<$Res> implements $ChannelStreamEventCopyWith<$Res> {
+  factory $ReversiLogChannelEventCopyWith(ReversiLogChannelEvent value, $Res Function(ReversiLogChannelEvent) _then) = _$ReversiLogChannelEventCopyWithImpl;
+@override @useResult
+$Res call({
+ String id, ReversiLogEvent body
+});
+
+
+$ReversiLogEventCopyWith<$Res> get body;
+
+}
+/// @nodoc
+class _$ReversiLogChannelEventCopyWithImpl<$Res>
+    implements $ReversiLogChannelEventCopyWith<$Res> {
+  _$ReversiLogChannelEventCopyWithImpl(this._self, this._then);
+
+  final ReversiLogChannelEvent _self;
+  final $Res Function(ReversiLogChannelEvent) _then;
+
+/// Create a copy of ChannelStreamEvent
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? body = null,}) {
+  return _then(ReversiLogChannelEvent(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,body: null == body ? _self.body : body // ignore: cast_nullable_to_non_nullable
+as ReversiLogEvent,
+  ));
+}
+
+/// Create a copy of ChannelStreamEvent
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$ReversiLogEventCopyWith<$Res> get body {
+  
+  return $ReversiLogEventCopyWith<$Res>(_self.body, (value) {
+    return _then(_self.copyWith(body: value));
+  });
+}
+}
+
+/// @nodoc
+@JsonSerializable()
+
+class ReversiChangeReadyStatesChannelEvent implements ChannelStreamEvent {
+  const ReversiChangeReadyStatesChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'changeReadyStates';
+  factory ReversiChangeReadyStatesChannelEvent.fromJson(Map<String, dynamic> json) => _$ReversiChangeReadyStatesChannelEventFromJson(json);
+
+@override final  String id;
+ final  ReversiReadyStates body;
+
+@JsonKey(name: 'type')
+final String $type;
+
+
+/// Create a copy of ChannelStreamEvent
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$ReversiChangeReadyStatesChannelEventCopyWith<ReversiChangeReadyStatesChannelEvent> get copyWith => _$ReversiChangeReadyStatesChannelEventCopyWithImpl<ReversiChangeReadyStatesChannelEvent>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$ReversiChangeReadyStatesChannelEventToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiChangeReadyStatesChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,body);
+
+@override
+String toString() {
+  return 'ChannelStreamEvent.reversiChangeReadyStates(id: $id, body: $body)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $ReversiChangeReadyStatesChannelEventCopyWith<$Res> implements $ChannelStreamEventCopyWith<$Res> {
+  factory $ReversiChangeReadyStatesChannelEventCopyWith(ReversiChangeReadyStatesChannelEvent value, $Res Function(ReversiChangeReadyStatesChannelEvent) _then) = _$ReversiChangeReadyStatesChannelEventCopyWithImpl;
+@override @useResult
+$Res call({
+ String id, ReversiReadyStates body
+});
+
+
+$ReversiReadyStatesCopyWith<$Res> get body;
+
+}
+/// @nodoc
+class _$ReversiChangeReadyStatesChannelEventCopyWithImpl<$Res>
+    implements $ReversiChangeReadyStatesChannelEventCopyWith<$Res> {
+  _$ReversiChangeReadyStatesChannelEventCopyWithImpl(this._self, this._then);
+
+  final ReversiChangeReadyStatesChannelEvent _self;
+  final $Res Function(ReversiChangeReadyStatesChannelEvent) _then;
+
+/// Create a copy of ChannelStreamEvent
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? body = null,}) {
+  return _then(ReversiChangeReadyStatesChannelEvent(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,body: null == body ? _self.body : body // ignore: cast_nullable_to_non_nullable
+as ReversiReadyStates,
+  ));
+}
+
+/// Create a copy of ChannelStreamEvent
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$ReversiReadyStatesCopyWith<$Res> get body {
+  
+  return $ReversiReadyStatesCopyWith<$Res>(_self.body, (value) {
+    return _then(_self.copyWith(body: value));
+  });
+}
+}
+
+/// @nodoc
+@JsonSerializable()
+
+class ReversiUpdateSettingsChannelEvent implements ChannelStreamEvent {
+  const ReversiUpdateSettingsChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'updateSettings';
+  factory ReversiUpdateSettingsChannelEvent.fromJson(Map<String, dynamic> json) => _$ReversiUpdateSettingsChannelEventFromJson(json);
+
+@override final  String id;
+ final  ReversiUpdateSettings body;
+
+@JsonKey(name: 'type')
+final String $type;
+
+
+/// Create a copy of ChannelStreamEvent
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$ReversiUpdateSettingsChannelEventCopyWith<ReversiUpdateSettingsChannelEvent> get copyWith => _$ReversiUpdateSettingsChannelEventCopyWithImpl<ReversiUpdateSettingsChannelEvent>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$ReversiUpdateSettingsChannelEventToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiUpdateSettingsChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,body);
+
+@override
+String toString() {
+  return 'ChannelStreamEvent.reversiUpdateSettings(id: $id, body: $body)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $ReversiUpdateSettingsChannelEventCopyWith<$Res> implements $ChannelStreamEventCopyWith<$Res> {
+  factory $ReversiUpdateSettingsChannelEventCopyWith(ReversiUpdateSettingsChannelEvent value, $Res Function(ReversiUpdateSettingsChannelEvent) _then) = _$ReversiUpdateSettingsChannelEventCopyWithImpl;
+@override @useResult
+$Res call({
+ String id, ReversiUpdateSettings body
+});
+
+
+$ReversiUpdateSettingsCopyWith<$Res> get body;
+
+}
+/// @nodoc
+class _$ReversiUpdateSettingsChannelEventCopyWithImpl<$Res>
+    implements $ReversiUpdateSettingsChannelEventCopyWith<$Res> {
+  _$ReversiUpdateSettingsChannelEventCopyWithImpl(this._self, this._then);
+
+  final ReversiUpdateSettingsChannelEvent _self;
+  final $Res Function(ReversiUpdateSettingsChannelEvent) _then;
+
+/// Create a copy of ChannelStreamEvent
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? body = null,}) {
+  return _then(ReversiUpdateSettingsChannelEvent(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,body: null == body ? _self.body : body // ignore: cast_nullable_to_non_nullable
+as ReversiUpdateSettings,
+  ));
+}
+
+/// Create a copy of ChannelStreamEvent
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$ReversiUpdateSettingsCopyWith<$Res> get body {
+  
+  return $ReversiUpdateSettingsCopyWith<$Res>(_self.body, (value) {
+    return _then(_self.copyWith(body: value));
+  });
+}
+}
+
+/// @nodoc
+@JsonSerializable()
+
+class ReversiCanceledChannelEvent implements ChannelStreamEvent {
+  const ReversiCanceledChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'canceled';
+  factory ReversiCanceledChannelEvent.fromJson(Map<String, dynamic> json) => _$ReversiCanceledChannelEventFromJson(json);
+
+@override final  String id;
+ final  ReversiCanceled body;
+
+@JsonKey(name: 'type')
+final String $type;
+
+
+/// Create a copy of ChannelStreamEvent
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$ReversiCanceledChannelEventCopyWith<ReversiCanceledChannelEvent> get copyWith => _$ReversiCanceledChannelEventCopyWithImpl<ReversiCanceledChannelEvent>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$ReversiCanceledChannelEventToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiCanceledChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,body);
+
+@override
+String toString() {
+  return 'ChannelStreamEvent.reversiCanceled(id: $id, body: $body)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $ReversiCanceledChannelEventCopyWith<$Res> implements $ChannelStreamEventCopyWith<$Res> {
+  factory $ReversiCanceledChannelEventCopyWith(ReversiCanceledChannelEvent value, $Res Function(ReversiCanceledChannelEvent) _then) = _$ReversiCanceledChannelEventCopyWithImpl;
+@override @useResult
+$Res call({
+ String id, ReversiCanceled body
+});
+
+
+$ReversiCanceledCopyWith<$Res> get body;
+
+}
+/// @nodoc
+class _$ReversiCanceledChannelEventCopyWithImpl<$Res>
+    implements $ReversiCanceledChannelEventCopyWith<$Res> {
+  _$ReversiCanceledChannelEventCopyWithImpl(this._self, this._then);
+
+  final ReversiCanceledChannelEvent _self;
+  final $Res Function(ReversiCanceledChannelEvent) _then;
+
+/// Create a copy of ChannelStreamEvent
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? body = null,}) {
+  return _then(ReversiCanceledChannelEvent(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,body: null == body ? _self.body : body // ignore: cast_nullable_to_non_nullable
+as ReversiCanceled,
+  ));
+}
+
+/// Create a copy of ChannelStreamEvent
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$ReversiCanceledCopyWith<$Res> get body {
+  
+  return $ReversiCanceledCopyWith<$Res>(_self.body, (value) {
     return _then(_self.copyWith(body: value));
   });
 }

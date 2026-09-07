@@ -299,7 +299,12 @@ $StreamingRequestBodyCopyWith<$Res> get body {
 /// @nodoc
 mixin _$StreamingRequestBody {
 
-@ChannelJsonConverter() Channel? get channel; String get id; Map<String, dynamic>? get params; String? get type; Map<String, dynamic>? get body;
+@ChannelJsonConverter() Channel? get channel; String get id; Map<String, dynamic>? get params; String? get type;/// チャンネルへ送るメッセージの中身。
+///
+/// Map とは限らない。リバーシの `ready` は真偽値をそのまま送る
+/// （サーバーは `typeof body !== 'boolean'` で弾く）ので、Map に
+/// 縛ると送れなくなる。
+ Object? get body;
 /// Create a copy of StreamingRequestBody
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -332,7 +337,7 @@ abstract mixin class $StreamingRequestBodyCopyWith<$Res>  {
   factory $StreamingRequestBodyCopyWith(StreamingRequestBody value, $Res Function(StreamingRequestBody) _then) = _$StreamingRequestBodyCopyWithImpl;
 @useResult
 $Res call({
-@ChannelJsonConverter() Channel? channel, String id, Map<String, dynamic>? params, String? type, Map<String, dynamic>? body
+@ChannelJsonConverter() Channel? channel, String id, Map<String, dynamic>? params, String? type, Object? body
 });
 
 
@@ -355,8 +360,7 @@ channel: freezed == channel ? _self.channel : channel // ignore: cast_nullable_t
 as Channel?,id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,params: freezed == params ? _self.params : params // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
-as String?,body: freezed == body ? _self.body : body // ignore: cast_nullable_to_non_nullable
-as Map<String, dynamic>?,
+as String?,body: freezed == body ? _self.body : body ,
   ));
 }
 /// Create a copy of StreamingRequestBody
@@ -453,7 +457,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@ChannelJsonConverter()  Channel? channel,  String id,  Map<String, dynamic>? params,  String? type,  Map<String, dynamic>? body)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@ChannelJsonConverter()  Channel? channel,  String id,  Map<String, dynamic>? params,  String? type,  Object? body)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _StreamingRequestBody() when $default != null:
 return $default(_that.channel,_that.id,_that.params,_that.type,_that.body);case _:
@@ -474,7 +478,7 @@ return $default(_that.channel,_that.id,_that.params,_that.type,_that.body);case 
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@ChannelJsonConverter()  Channel? channel,  String id,  Map<String, dynamic>? params,  String? type,  Map<String, dynamic>? body)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@ChannelJsonConverter()  Channel? channel,  String id,  Map<String, dynamic>? params,  String? type,  Object? body)  $default,) {final _that = this;
 switch (_that) {
 case _StreamingRequestBody():
 return $default(_that.channel,_that.id,_that.params,_that.type,_that.body);case _:
@@ -494,7 +498,7 @@ return $default(_that.channel,_that.id,_that.params,_that.type,_that.body);case 
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@ChannelJsonConverter()  Channel? channel,  String id,  Map<String, dynamic>? params,  String? type,  Map<String, dynamic>? body)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@ChannelJsonConverter()  Channel? channel,  String id,  Map<String, dynamic>? params,  String? type,  Object? body)?  $default,) {final _that = this;
 switch (_that) {
 case _StreamingRequestBody() when $default != null:
 return $default(_that.channel,_that.id,_that.params,_that.type,_that.body);case _:
@@ -509,7 +513,7 @@ return $default(_that.channel,_that.id,_that.params,_that.type,_that.body);case 
 @JsonSerializable()
 
 class _StreamingRequestBody implements StreamingRequestBody {
-  const _StreamingRequestBody({@ChannelJsonConverter() this.channel, required this.id, final  Map<String, dynamic>? params, this.type, final  Map<String, dynamic>? body}): _params = params,_body = body;
+  const _StreamingRequestBody({@ChannelJsonConverter() this.channel, required this.id, final  Map<String, dynamic>? params, this.type, this.body}): _params = params;
   factory _StreamingRequestBody.fromJson(Map<String, dynamic> json) => _$StreamingRequestBodyFromJson(json);
 
 @override@ChannelJsonConverter() final  Channel? channel;
@@ -524,15 +528,12 @@ class _StreamingRequestBody implements StreamingRequestBody {
 }
 
 @override final  String? type;
- final  Map<String, dynamic>? _body;
-@override Map<String, dynamic>? get body {
-  final value = _body;
-  if (value == null) return null;
-  if (_body is EqualUnmodifiableMapView) return _body;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableMapView(value);
-}
-
+/// チャンネルへ送るメッセージの中身。
+///
+/// Map とは限らない。リバーシの `ready` は真偽値をそのまま送る
+/// （サーバーは `typeof body !== 'boolean'` で弾く）ので、Map に
+/// 縛ると送れなくなる。
+@override final  Object? body;
 
 /// Create a copy of StreamingRequestBody
 /// with the given fields replaced by the non-null parameter values.
@@ -547,12 +548,12 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _StreamingRequestBody&&(identical(other.channel, channel) || other.channel == channel)&&(identical(other.id, id) || other.id == id)&&const DeepCollectionEquality().equals(other._params, _params)&&(identical(other.type, type) || other.type == type)&&const DeepCollectionEquality().equals(other._body, _body));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _StreamingRequestBody&&(identical(other.channel, channel) || other.channel == channel)&&(identical(other.id, id) || other.id == id)&&const DeepCollectionEquality().equals(other._params, _params)&&(identical(other.type, type) || other.type == type)&&const DeepCollectionEquality().equals(other.body, body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,channel,id,const DeepCollectionEquality().hash(_params),type,const DeepCollectionEquality().hash(_body));
+int get hashCode => Object.hash(runtimeType,channel,id,const DeepCollectionEquality().hash(_params),type,const DeepCollectionEquality().hash(body));
 
 @override
 String toString() {
@@ -567,7 +568,7 @@ abstract mixin class _$StreamingRequestBodyCopyWith<$Res> implements $StreamingR
   factory _$StreamingRequestBodyCopyWith(_StreamingRequestBody value, $Res Function(_StreamingRequestBody) _then) = __$StreamingRequestBodyCopyWithImpl;
 @override @useResult
 $Res call({
-@ChannelJsonConverter() Channel? channel, String id, Map<String, dynamic>? params, String? type, Map<String, dynamic>? body
+@ChannelJsonConverter() Channel? channel, String id, Map<String, dynamic>? params, String? type, Object? body
 });
 
 
@@ -590,8 +591,7 @@ channel: freezed == channel ? _self.channel : channel // ignore: cast_nullable_t
 as Channel?,id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,params: freezed == params ? _self._params : params // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
-as String?,body: freezed == body ? _self._body : body // ignore: cast_nullable_to_non_nullable
-as Map<String, dynamic>?,
+as String?,body: freezed == body ? _self.body : body ,
   ));
 }
 

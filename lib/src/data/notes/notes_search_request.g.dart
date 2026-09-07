@@ -19,6 +19,14 @@ _NotesSearchRequest _$NotesSearchRequestFromJson(Map<String, dynamic> json) =>
         json['untilDate'],
         const EpocTimeDateTimeConverter().fromJson,
       ),
+      rangeStartAt: _$JsonConverterFromJson<int, DateTime>(
+        json['rangeStartAt'],
+        const EpocTimeDateTimeConverter().fromJson,
+      ),
+      rangeEndAt: _$JsonConverterFromJson<int, DateTime>(
+        json['rangeEndAt'],
+        const EpocTimeDateTimeConverter().fromJson,
+      ),
       limit: (json['limit'] as num?)?.toInt(),
       offset: (json['offset'] as num?)?.toInt(),
       host: json['host'] as String?,
@@ -37,6 +45,14 @@ Map<String, dynamic> _$NotesSearchRequestToJson(_NotesSearchRequest instance) =>
       ),
       'untilDate': _$JsonConverterToJson<int, DateTime>(
         instance.untilDate,
+        const EpocTimeDateTimeConverter().toJson,
+      ),
+      'rangeStartAt': _$JsonConverterToJson<int, DateTime>(
+        instance.rangeStartAt,
+        const EpocTimeDateTimeConverter().toJson,
+      ),
+      'rangeEndAt': _$JsonConverterToJson<int, DateTime>(
+        instance.rangeEndAt,
         const EpocTimeDateTimeConverter().toJson,
       ),
       'limit': instance.limit,

@@ -813,6 +813,25 @@ void main() async {
         await (controller.removeChannel(id), listener.cancel()).wait;
       });
 
+      test("newChatMessage", () async {
+        final completer = Completer<ChatMessage>();
+        final client = userClient;
+        final controller = await client.streamingService.stream();
+        await client.i.update(IUpdateRequest(chatScope: ChatScope.everyone));
+        await adminClient.chat.messages.createToUser(
+          ChatMessagesCreateToUserRequest(toUserId: user.id, text: "test"),
+        );
+        final id = DateTime.now().toIso8601String();
+        final listener = controller.mainStream(id: id).listen((event) {
+          final body = event.body;
+          if (body is NewChatMessageEvent) {
+            completer.complete(body.body);
+          }
+        });
+        await completer.future;
+        await (controller.removeChannel(id), listener.cancel()).wait;
+      });
+
       test("driveFileCreated", () async {
         final completer = Completer<DriveFile>();
         final client = userClient;

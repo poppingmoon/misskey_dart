@@ -55,7 +55,7 @@ extension ChannelPatterns on Channel {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( _HomeTimeline value)?  homeTimeline,TResult Function( _LocalTimeline value)?  localTimeline,TResult Function( _GlobalTimeline value)?  globalTimeline,TResult Function( _HybridTimeline value)?  hybridTimeline,TResult Function( _RoleTimeline value)?  roleTimeline,TResult Function( _ChannelType value)?  channel,TResult Function( _UserList value)?  userList,TResult Function( _Hashtag value)?  hashtag,TResult Function( _Antenna value)?  antenna,TResult Function( _Drive value)?  drive,TResult Function( _ServerStats value)?  serverStats,TResult Function( _QueueStats value)?  queueStats,TResult Function( _ChatRoom value)?  chatRoom,TResult Function( _ChatUser value)?  chatUser,TResult Function( _Admin value)?  admin,TResult Function( _Main value)?  main,TResult Function( _Custom value)?  custom,required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( _HomeTimeline value)?  homeTimeline,TResult Function( _LocalTimeline value)?  localTimeline,TResult Function( _GlobalTimeline value)?  globalTimeline,TResult Function( _HybridTimeline value)?  hybridTimeline,TResult Function( _RoleTimeline value)?  roleTimeline,TResult Function( _ChannelType value)?  channel,TResult Function( _UserList value)?  userList,TResult Function( _Hashtag value)?  hashtag,TResult Function( _Antenna value)?  antenna,TResult Function( _Drive value)?  drive,TResult Function( _ServerStats value)?  serverStats,TResult Function( _QueueStats value)?  queueStats,TResult Function( _ChatRoom value)?  chatRoom,TResult Function( _ChatUser value)?  chatUser,TResult Function( _Reversi value)?  reversi,TResult Function( _ReversiGame value)?  reversiGame,TResult Function( _Admin value)?  admin,TResult Function( _Main value)?  main,TResult Function( _Custom value)?  custom,required TResult orElse(),}){
 final _that = this;
 switch (_that) {
 case _HomeTimeline() when homeTimeline != null:
@@ -72,7 +72,9 @@ return drive(_that);case _ServerStats() when serverStats != null:
 return serverStats(_that);case _QueueStats() when queueStats != null:
 return queueStats(_that);case _ChatRoom() when chatRoom != null:
 return chatRoom(_that);case _ChatUser() when chatUser != null:
-return chatUser(_that);case _Admin() when admin != null:
+return chatUser(_that);case _Reversi() when reversi != null:
+return reversi(_that);case _ReversiGame() when reversiGame != null:
+return reversiGame(_that);case _Admin() when admin != null:
 return admin(_that);case _Main() when main != null:
 return main(_that);case _Custom() when custom != null:
 return custom(_that);case _:
@@ -93,7 +95,7 @@ return custom(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( _HomeTimeline value)  homeTimeline,required TResult Function( _LocalTimeline value)  localTimeline,required TResult Function( _GlobalTimeline value)  globalTimeline,required TResult Function( _HybridTimeline value)  hybridTimeline,required TResult Function( _RoleTimeline value)  roleTimeline,required TResult Function( _ChannelType value)  channel,required TResult Function( _UserList value)  userList,required TResult Function( _Hashtag value)  hashtag,required TResult Function( _Antenna value)  antenna,required TResult Function( _Drive value)  drive,required TResult Function( _ServerStats value)  serverStats,required TResult Function( _QueueStats value)  queueStats,required TResult Function( _ChatRoom value)  chatRoom,required TResult Function( _ChatUser value)  chatUser,required TResult Function( _Admin value)  admin,required TResult Function( _Main value)  main,required TResult Function( _Custom value)  custom,}){
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( _HomeTimeline value)  homeTimeline,required TResult Function( _LocalTimeline value)  localTimeline,required TResult Function( _GlobalTimeline value)  globalTimeline,required TResult Function( _HybridTimeline value)  hybridTimeline,required TResult Function( _RoleTimeline value)  roleTimeline,required TResult Function( _ChannelType value)  channel,required TResult Function( _UserList value)  userList,required TResult Function( _Hashtag value)  hashtag,required TResult Function( _Antenna value)  antenna,required TResult Function( _Drive value)  drive,required TResult Function( _ServerStats value)  serverStats,required TResult Function( _QueueStats value)  queueStats,required TResult Function( _ChatRoom value)  chatRoom,required TResult Function( _ChatUser value)  chatUser,required TResult Function( _Reversi value)  reversi,required TResult Function( _ReversiGame value)  reversiGame,required TResult Function( _Admin value)  admin,required TResult Function( _Main value)  main,required TResult Function( _Custom value)  custom,}){
 final _that = this;
 switch (_that) {
 case _HomeTimeline():
@@ -110,7 +112,9 @@ return drive(_that);case _ServerStats():
 return serverStats(_that);case _QueueStats():
 return queueStats(_that);case _ChatRoom():
 return chatRoom(_that);case _ChatUser():
-return chatUser(_that);case _Admin():
+return chatUser(_that);case _Reversi():
+return reversi(_that);case _ReversiGame():
+return reversiGame(_that);case _Admin():
 return admin(_that);case _Main():
 return main(_that);case _Custom():
 return custom(_that);}
@@ -127,7 +131,7 @@ return custom(_that);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( _HomeTimeline value)?  homeTimeline,TResult? Function( _LocalTimeline value)?  localTimeline,TResult? Function( _GlobalTimeline value)?  globalTimeline,TResult? Function( _HybridTimeline value)?  hybridTimeline,TResult? Function( _RoleTimeline value)?  roleTimeline,TResult? Function( _ChannelType value)?  channel,TResult? Function( _UserList value)?  userList,TResult? Function( _Hashtag value)?  hashtag,TResult? Function( _Antenna value)?  antenna,TResult? Function( _Drive value)?  drive,TResult? Function( _ServerStats value)?  serverStats,TResult? Function( _QueueStats value)?  queueStats,TResult? Function( _ChatRoom value)?  chatRoom,TResult? Function( _ChatUser value)?  chatUser,TResult? Function( _Admin value)?  admin,TResult? Function( _Main value)?  main,TResult? Function( _Custom value)?  custom,}){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( _HomeTimeline value)?  homeTimeline,TResult? Function( _LocalTimeline value)?  localTimeline,TResult? Function( _GlobalTimeline value)?  globalTimeline,TResult? Function( _HybridTimeline value)?  hybridTimeline,TResult? Function( _RoleTimeline value)?  roleTimeline,TResult? Function( _ChannelType value)?  channel,TResult? Function( _UserList value)?  userList,TResult? Function( _Hashtag value)?  hashtag,TResult? Function( _Antenna value)?  antenna,TResult? Function( _Drive value)?  drive,TResult? Function( _ServerStats value)?  serverStats,TResult? Function( _QueueStats value)?  queueStats,TResult? Function( _ChatRoom value)?  chatRoom,TResult? Function( _ChatUser value)?  chatUser,TResult? Function( _Reversi value)?  reversi,TResult? Function( _ReversiGame value)?  reversiGame,TResult? Function( _Admin value)?  admin,TResult? Function( _Main value)?  main,TResult? Function( _Custom value)?  custom,}){
 final _that = this;
 switch (_that) {
 case _HomeTimeline() when homeTimeline != null:
@@ -144,7 +148,9 @@ return drive(_that);case _ServerStats() when serverStats != null:
 return serverStats(_that);case _QueueStats() when queueStats != null:
 return queueStats(_that);case _ChatRoom() when chatRoom != null:
 return chatRoom(_that);case _ChatUser() when chatUser != null:
-return chatUser(_that);case _Admin() when admin != null:
+return chatUser(_that);case _Reversi() when reversi != null:
+return reversi(_that);case _ReversiGame() when reversiGame != null:
+return reversiGame(_that);case _Admin() when admin != null:
 return admin(_that);case _Main() when main != null:
 return main(_that);case _Custom() when custom != null:
 return custom(_that);case _:
@@ -164,7 +170,7 @@ return custom(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function()?  homeTimeline,TResult Function()?  localTimeline,TResult Function()?  globalTimeline,TResult Function()?  hybridTimeline,TResult Function()?  roleTimeline,TResult Function()?  channel,TResult Function()?  userList,TResult Function()?  hashtag,TResult Function()?  antenna,TResult Function()?  drive,TResult Function()?  serverStats,TResult Function()?  queueStats,TResult Function()?  chatRoom,TResult Function()?  chatUser,TResult Function()?  admin,TResult Function()?  main,TResult Function( String value)?  custom,required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function()?  homeTimeline,TResult Function()?  localTimeline,TResult Function()?  globalTimeline,TResult Function()?  hybridTimeline,TResult Function()?  roleTimeline,TResult Function()?  channel,TResult Function()?  userList,TResult Function()?  hashtag,TResult Function()?  antenna,TResult Function()?  drive,TResult Function()?  serverStats,TResult Function()?  queueStats,TResult Function()?  chatRoom,TResult Function()?  chatUser,TResult Function()?  reversi,TResult Function()?  reversiGame,TResult Function()?  admin,TResult Function()?  main,TResult Function( String value)?  custom,required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _HomeTimeline() when homeTimeline != null:
 return homeTimeline();case _LocalTimeline() when localTimeline != null:
@@ -180,7 +186,9 @@ return drive();case _ServerStats() when serverStats != null:
 return serverStats();case _QueueStats() when queueStats != null:
 return queueStats();case _ChatRoom() when chatRoom != null:
 return chatRoom();case _ChatUser() when chatUser != null:
-return chatUser();case _Admin() when admin != null:
+return chatUser();case _Reversi() when reversi != null:
+return reversi();case _ReversiGame() when reversiGame != null:
+return reversiGame();case _Admin() when admin != null:
 return admin();case _Main() when main != null:
 return main();case _Custom() when custom != null:
 return custom(_that.value);case _:
@@ -201,7 +209,7 @@ return custom(_that.value);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function()  homeTimeline,required TResult Function()  localTimeline,required TResult Function()  globalTimeline,required TResult Function()  hybridTimeline,required TResult Function()  roleTimeline,required TResult Function()  channel,required TResult Function()  userList,required TResult Function()  hashtag,required TResult Function()  antenna,required TResult Function()  drive,required TResult Function()  serverStats,required TResult Function()  queueStats,required TResult Function()  chatRoom,required TResult Function()  chatUser,required TResult Function()  admin,required TResult Function()  main,required TResult Function( String value)  custom,}) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function()  homeTimeline,required TResult Function()  localTimeline,required TResult Function()  globalTimeline,required TResult Function()  hybridTimeline,required TResult Function()  roleTimeline,required TResult Function()  channel,required TResult Function()  userList,required TResult Function()  hashtag,required TResult Function()  antenna,required TResult Function()  drive,required TResult Function()  serverStats,required TResult Function()  queueStats,required TResult Function()  chatRoom,required TResult Function()  chatUser,required TResult Function()  reversi,required TResult Function()  reversiGame,required TResult Function()  admin,required TResult Function()  main,required TResult Function( String value)  custom,}) {final _that = this;
 switch (_that) {
 case _HomeTimeline():
 return homeTimeline();case _LocalTimeline():
@@ -217,7 +225,9 @@ return drive();case _ServerStats():
 return serverStats();case _QueueStats():
 return queueStats();case _ChatRoom():
 return chatRoom();case _ChatUser():
-return chatUser();case _Admin():
+return chatUser();case _Reversi():
+return reversi();case _ReversiGame():
+return reversiGame();case _Admin():
 return admin();case _Main():
 return main();case _Custom():
 return custom(_that.value);}
@@ -234,7 +244,7 @@ return custom(_that.value);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function()?  homeTimeline,TResult? Function()?  localTimeline,TResult? Function()?  globalTimeline,TResult? Function()?  hybridTimeline,TResult? Function()?  roleTimeline,TResult? Function()?  channel,TResult? Function()?  userList,TResult? Function()?  hashtag,TResult? Function()?  antenna,TResult? Function()?  drive,TResult? Function()?  serverStats,TResult? Function()?  queueStats,TResult? Function()?  chatRoom,TResult? Function()?  chatUser,TResult? Function()?  admin,TResult? Function()?  main,TResult? Function( String value)?  custom,}) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function()?  homeTimeline,TResult? Function()?  localTimeline,TResult? Function()?  globalTimeline,TResult? Function()?  hybridTimeline,TResult? Function()?  roleTimeline,TResult? Function()?  channel,TResult? Function()?  userList,TResult? Function()?  hashtag,TResult? Function()?  antenna,TResult? Function()?  drive,TResult? Function()?  serverStats,TResult? Function()?  queueStats,TResult? Function()?  chatRoom,TResult? Function()?  chatUser,TResult? Function()?  reversi,TResult? Function()?  reversiGame,TResult? Function()?  admin,TResult? Function()?  main,TResult? Function( String value)?  custom,}) {final _that = this;
 switch (_that) {
 case _HomeTimeline() when homeTimeline != null:
 return homeTimeline();case _LocalTimeline() when localTimeline != null:
@@ -250,7 +260,9 @@ return drive();case _ServerStats() when serverStats != null:
 return serverStats();case _QueueStats() when queueStats != null:
 return queueStats();case _ChatRoom() when chatRoom != null:
 return chatRoom();case _ChatUser() when chatUser != null:
-return chatUser();case _Admin() when admin != null:
+return chatUser();case _Reversi() when reversi != null:
+return reversi();case _ReversiGame() when reversiGame != null:
+return reversiGame();case _Admin() when admin != null:
 return admin();case _Main() when main != null:
 return main();case _Custom() when custom != null:
 return custom(_that.value);case _:
@@ -701,6 +713,70 @@ int get hashCode => runtimeType.hashCode;
 @override
 String toString() {
   return 'Channel.chatUser()';
+}
+
+
+}
+
+
+
+
+/// @nodoc
+
+
+class _Reversi extends Channel {
+  const _Reversi(): super._();
+  
+
+
+
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Reversi);
+}
+
+
+@override
+int get hashCode => runtimeType.hashCode;
+
+@override
+String toString() {
+  return 'Channel.reversi()';
+}
+
+
+}
+
+
+
+
+/// @nodoc
+
+
+class _ReversiGame extends Channel {
+  const _ReversiGame(): super._();
+  
+
+
+
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ReversiGame);
+}
+
+
+@override
+int get hashCode => runtimeType.hashCode;
+
+@override
+String toString() {
+  return 'Channel.reversiGame()';
 }
 
 

@@ -288,7 +288,7 @@ as String,
 /// @nodoc
 mixin _$UrlUploadFinishedEvent {
 
- String get marker; DriveFile get file;
+ String? get marker; DriveFile get file;
 /// Create a copy of UrlUploadFinishedEvent
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -321,7 +321,7 @@ abstract mixin class $UrlUploadFinishedEventCopyWith<$Res>  {
   factory $UrlUploadFinishedEventCopyWith(UrlUploadFinishedEvent value, $Res Function(UrlUploadFinishedEvent) _then) = _$UrlUploadFinishedEventCopyWithImpl;
 @useResult
 $Res call({
- String marker, DriveFile file
+ String? marker, DriveFile file
 });
 
 
@@ -338,10 +338,10 @@ class _$UrlUploadFinishedEventCopyWithImpl<$Res>
 
 /// Create a copy of UrlUploadFinishedEvent
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? marker = null,Object? file = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? marker = freezed,Object? file = null,}) {
   return _then(_self.copyWith(
-marker: null == marker ? _self.marker : marker // ignore: cast_nullable_to_non_nullable
-as String,file: null == file ? _self.file : file // ignore: cast_nullable_to_non_nullable
+marker: freezed == marker ? _self.marker : marker // ignore: cast_nullable_to_non_nullable
+as String?,file: null == file ? _self.file : file // ignore: cast_nullable_to_non_nullable
 as DriveFile,
   ));
 }
@@ -436,7 +436,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String marker,  DriveFile file)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? marker,  DriveFile file)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _UrlUploadFinishedEvent() when $default != null:
 return $default(_that.marker,_that.file);case _:
@@ -457,7 +457,7 @@ return $default(_that.marker,_that.file);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String marker,  DriveFile file)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? marker,  DriveFile file)  $default,) {final _that = this;
 switch (_that) {
 case _UrlUploadFinishedEvent():
 return $default(_that.marker,_that.file);case _:
@@ -477,7 +477,7 @@ return $default(_that.marker,_that.file);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String marker,  DriveFile file)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? marker,  DriveFile file)?  $default,) {final _that = this;
 switch (_that) {
 case _UrlUploadFinishedEvent() when $default != null:
 return $default(_that.marker,_that.file);case _:
@@ -492,10 +492,10 @@ return $default(_that.marker,_that.file);case _:
 @JsonSerializable()
 
 class _UrlUploadFinishedEvent implements UrlUploadFinishedEvent {
-  const _UrlUploadFinishedEvent({required this.marker, required this.file});
+  const _UrlUploadFinishedEvent({this.marker, required this.file});
   factory _UrlUploadFinishedEvent.fromJson(Map<String, dynamic> json) => _$UrlUploadFinishedEventFromJson(json);
 
-@override final  String marker;
+@override final  String? marker;
 @override final  DriveFile file;
 
 /// Create a copy of UrlUploadFinishedEvent
@@ -531,7 +531,7 @@ abstract mixin class _$UrlUploadFinishedEventCopyWith<$Res> implements $UrlUploa
   factory _$UrlUploadFinishedEventCopyWith(_UrlUploadFinishedEvent value, $Res Function(_UrlUploadFinishedEvent) _then) = __$UrlUploadFinishedEventCopyWithImpl;
 @override @useResult
 $Res call({
- String marker, DriveFile file
+ String? marker, DriveFile file
 });
 
 
@@ -548,10 +548,10 @@ class __$UrlUploadFinishedEventCopyWithImpl<$Res>
 
 /// Create a copy of UrlUploadFinishedEvent
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? marker = null,Object? file = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? marker = freezed,Object? file = null,}) {
   return _then(_UrlUploadFinishedEvent(
-marker: null == marker ? _self.marker : marker // ignore: cast_nullable_to_non_nullable
-as String,file: null == file ? _self.file : file // ignore: cast_nullable_to_non_nullable
+marker: freezed == marker ? _self.marker : marker // ignore: cast_nullable_to_non_nullable
+as String?,file: null == file ? _self.file : file // ignore: cast_nullable_to_non_nullable
 as DriveFile,
   ));
 }

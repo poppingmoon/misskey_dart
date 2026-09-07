@@ -15,7 +15,10 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ReversiGamesResponse {
 
- String get id;@DateTimeConverter() DateTime get createdAt;@NullableDateTimeConverter() DateTime? get startedAt;@NullableDateTimeConverter() DateTime? get endedAt; bool get isStarted; bool get isEnded; String get user1Id; String get user2Id; UserLite get user1; UserLite get user2; String? get winnerId; User? get winner; String? get surrenderedUserId; String? get timeoutUserId; int? get black; String get bw; bool get noIrregularRules; bool get isLlotheo; bool get canPutEveryWhere; bool get loopedBoard; int get timeLimitForEachTurn;
+ String get id;@DateTimeConverter() DateTime get createdAt;@NullableDateTimeConverter() DateTime? get startedAt;@NullableDateTimeConverter() DateTime? get endedAt; bool get isStarted; bool get isEnded; String get user1Id; String get user2Id; UserLite get user1; UserLite get user2; String? get winnerId; User? get winner; String? get surrenderedUserId; String? get timeoutUserId; int? get black; String get bw; bool get noIrregularRules; bool get isLlotheo;// API のフィールド名は canPutEverywhere（w は小文字）。綴りがずれていた
+// ため JSON に対応するキーが無く、reversi/games は終了済みの対局を 1 件でも
+// 含むと必ず「Null is not a subtype of bool」で落ちていた。
+ bool get canPutEverywhere; bool get loopedBoard; int get timeLimitForEachTurn;
 /// Create a copy of ReversiGamesResponse
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -28,16 +31,16 @@ $ReversiGamesResponseCopyWith<ReversiGamesResponse> get copyWith => _$ReversiGam
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiGamesResponse&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.startedAt, startedAt) || other.startedAt == startedAt)&&(identical(other.endedAt, endedAt) || other.endedAt == endedAt)&&(identical(other.isStarted, isStarted) || other.isStarted == isStarted)&&(identical(other.isEnded, isEnded) || other.isEnded == isEnded)&&(identical(other.user1Id, user1Id) || other.user1Id == user1Id)&&(identical(other.user2Id, user2Id) || other.user2Id == user2Id)&&(identical(other.user1, user1) || other.user1 == user1)&&(identical(other.user2, user2) || other.user2 == user2)&&(identical(other.winnerId, winnerId) || other.winnerId == winnerId)&&(identical(other.winner, winner) || other.winner == winner)&&(identical(other.surrenderedUserId, surrenderedUserId) || other.surrenderedUserId == surrenderedUserId)&&(identical(other.timeoutUserId, timeoutUserId) || other.timeoutUserId == timeoutUserId)&&(identical(other.black, black) || other.black == black)&&(identical(other.bw, bw) || other.bw == bw)&&(identical(other.noIrregularRules, noIrregularRules) || other.noIrregularRules == noIrregularRules)&&(identical(other.isLlotheo, isLlotheo) || other.isLlotheo == isLlotheo)&&(identical(other.canPutEveryWhere, canPutEveryWhere) || other.canPutEveryWhere == canPutEveryWhere)&&(identical(other.loopedBoard, loopedBoard) || other.loopedBoard == loopedBoard)&&(identical(other.timeLimitForEachTurn, timeLimitForEachTurn) || other.timeLimitForEachTurn == timeLimitForEachTurn));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiGamesResponse&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.startedAt, startedAt) || other.startedAt == startedAt)&&(identical(other.endedAt, endedAt) || other.endedAt == endedAt)&&(identical(other.isStarted, isStarted) || other.isStarted == isStarted)&&(identical(other.isEnded, isEnded) || other.isEnded == isEnded)&&(identical(other.user1Id, user1Id) || other.user1Id == user1Id)&&(identical(other.user2Id, user2Id) || other.user2Id == user2Id)&&(identical(other.user1, user1) || other.user1 == user1)&&(identical(other.user2, user2) || other.user2 == user2)&&(identical(other.winnerId, winnerId) || other.winnerId == winnerId)&&(identical(other.winner, winner) || other.winner == winner)&&(identical(other.surrenderedUserId, surrenderedUserId) || other.surrenderedUserId == surrenderedUserId)&&(identical(other.timeoutUserId, timeoutUserId) || other.timeoutUserId == timeoutUserId)&&(identical(other.black, black) || other.black == black)&&(identical(other.bw, bw) || other.bw == bw)&&(identical(other.noIrregularRules, noIrregularRules) || other.noIrregularRules == noIrregularRules)&&(identical(other.isLlotheo, isLlotheo) || other.isLlotheo == isLlotheo)&&(identical(other.canPutEverywhere, canPutEverywhere) || other.canPutEverywhere == canPutEverywhere)&&(identical(other.loopedBoard, loopedBoard) || other.loopedBoard == loopedBoard)&&(identical(other.timeLimitForEachTurn, timeLimitForEachTurn) || other.timeLimitForEachTurn == timeLimitForEachTurn));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hashAll([runtimeType,id,createdAt,startedAt,endedAt,isStarted,isEnded,user1Id,user2Id,user1,user2,winnerId,winner,surrenderedUserId,timeoutUserId,black,bw,noIrregularRules,isLlotheo,canPutEveryWhere,loopedBoard,timeLimitForEachTurn]);
+int get hashCode => Object.hashAll([runtimeType,id,createdAt,startedAt,endedAt,isStarted,isEnded,user1Id,user2Id,user1,user2,winnerId,winner,surrenderedUserId,timeoutUserId,black,bw,noIrregularRules,isLlotheo,canPutEverywhere,loopedBoard,timeLimitForEachTurn]);
 
 @override
 String toString() {
-  return 'ReversiGamesResponse(id: $id, createdAt: $createdAt, startedAt: $startedAt, endedAt: $endedAt, isStarted: $isStarted, isEnded: $isEnded, user1Id: $user1Id, user2Id: $user2Id, user1: $user1, user2: $user2, winnerId: $winnerId, winner: $winner, surrenderedUserId: $surrenderedUserId, timeoutUserId: $timeoutUserId, black: $black, bw: $bw, noIrregularRules: $noIrregularRules, isLlotheo: $isLlotheo, canPutEveryWhere: $canPutEveryWhere, loopedBoard: $loopedBoard, timeLimitForEachTurn: $timeLimitForEachTurn)';
+  return 'ReversiGamesResponse(id: $id, createdAt: $createdAt, startedAt: $startedAt, endedAt: $endedAt, isStarted: $isStarted, isEnded: $isEnded, user1Id: $user1Id, user2Id: $user2Id, user1: $user1, user2: $user2, winnerId: $winnerId, winner: $winner, surrenderedUserId: $surrenderedUserId, timeoutUserId: $timeoutUserId, black: $black, bw: $bw, noIrregularRules: $noIrregularRules, isLlotheo: $isLlotheo, canPutEverywhere: $canPutEverywhere, loopedBoard: $loopedBoard, timeLimitForEachTurn: $timeLimitForEachTurn)';
 }
 
 
@@ -48,7 +51,7 @@ abstract mixin class $ReversiGamesResponseCopyWith<$Res>  {
   factory $ReversiGamesResponseCopyWith(ReversiGamesResponse value, $Res Function(ReversiGamesResponse) _then) = _$ReversiGamesResponseCopyWithImpl;
 @useResult
 $Res call({
- String id,@DateTimeConverter() DateTime createdAt,@NullableDateTimeConverter() DateTime? startedAt,@NullableDateTimeConverter() DateTime? endedAt, bool isStarted, bool isEnded, String user1Id, String user2Id, UserLite user1, UserLite user2, String? winnerId, User? winner, String? surrenderedUserId, String? timeoutUserId, int? black, String bw, bool noIrregularRules, bool isLlotheo, bool canPutEveryWhere, bool loopedBoard, int timeLimitForEachTurn
+ String id,@DateTimeConverter() DateTime createdAt,@NullableDateTimeConverter() DateTime? startedAt,@NullableDateTimeConverter() DateTime? endedAt, bool isStarted, bool isEnded, String user1Id, String user2Id, UserLite user1, UserLite user2, String? winnerId, User? winner, String? surrenderedUserId, String? timeoutUserId, int? black, String bw, bool noIrregularRules, bool isLlotheo, bool canPutEverywhere, bool loopedBoard, int timeLimitForEachTurn
 });
 
 
@@ -65,7 +68,7 @@ class _$ReversiGamesResponseCopyWithImpl<$Res>
 
 /// Create a copy of ReversiGamesResponse
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? createdAt = null,Object? startedAt = freezed,Object? endedAt = freezed,Object? isStarted = null,Object? isEnded = null,Object? user1Id = null,Object? user2Id = null,Object? user1 = null,Object? user2 = null,Object? winnerId = freezed,Object? winner = freezed,Object? surrenderedUserId = freezed,Object? timeoutUserId = freezed,Object? black = freezed,Object? bw = null,Object? noIrregularRules = null,Object? isLlotheo = null,Object? canPutEveryWhere = null,Object? loopedBoard = null,Object? timeLimitForEachTurn = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? createdAt = null,Object? startedAt = freezed,Object? endedAt = freezed,Object? isStarted = null,Object? isEnded = null,Object? user1Id = null,Object? user2Id = null,Object? user1 = null,Object? user2 = null,Object? winnerId = freezed,Object? winner = freezed,Object? surrenderedUserId = freezed,Object? timeoutUserId = freezed,Object? black = freezed,Object? bw = null,Object? noIrregularRules = null,Object? isLlotheo = null,Object? canPutEverywhere = null,Object? loopedBoard = null,Object? timeLimitForEachTurn = null,}) {
   return _then(_self.copyWith(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
@@ -85,7 +88,7 @@ as String?,black: freezed == black ? _self.black : black // ignore: cast_nullabl
 as int?,bw: null == bw ? _self.bw : bw // ignore: cast_nullable_to_non_nullable
 as String,noIrregularRules: null == noIrregularRules ? _self.noIrregularRules : noIrregularRules // ignore: cast_nullable_to_non_nullable
 as bool,isLlotheo: null == isLlotheo ? _self.isLlotheo : isLlotheo // ignore: cast_nullable_to_non_nullable
-as bool,canPutEveryWhere: null == canPutEveryWhere ? _self.canPutEveryWhere : canPutEveryWhere // ignore: cast_nullable_to_non_nullable
+as bool,canPutEverywhere: null == canPutEverywhere ? _self.canPutEverywhere : canPutEverywhere // ignore: cast_nullable_to_non_nullable
 as bool,loopedBoard: null == loopedBoard ? _self.loopedBoard : loopedBoard // ignore: cast_nullable_to_non_nullable
 as bool,timeLimitForEachTurn: null == timeLimitForEachTurn ? _self.timeLimitForEachTurn : timeLimitForEachTurn // ignore: cast_nullable_to_non_nullable
 as int,
@@ -191,10 +194,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? startedAt, @NullableDateTimeConverter()  DateTime? endedAt,  bool isStarted,  bool isEnded,  String user1Id,  String user2Id,  UserLite user1,  UserLite user2,  String? winnerId,  User? winner,  String? surrenderedUserId,  String? timeoutUserId,  int? black,  String bw,  bool noIrregularRules,  bool isLlotheo,  bool canPutEveryWhere,  bool loopedBoard,  int timeLimitForEachTurn)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? startedAt, @NullableDateTimeConverter()  DateTime? endedAt,  bool isStarted,  bool isEnded,  String user1Id,  String user2Id,  UserLite user1,  UserLite user2,  String? winnerId,  User? winner,  String? surrenderedUserId,  String? timeoutUserId,  int? black,  String bw,  bool noIrregularRules,  bool isLlotheo,  bool canPutEverywhere,  bool loopedBoard,  int timeLimitForEachTurn)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _ReversiGamesResponse() when $default != null:
-return $default(_that.id,_that.createdAt,_that.startedAt,_that.endedAt,_that.isStarted,_that.isEnded,_that.user1Id,_that.user2Id,_that.user1,_that.user2,_that.winnerId,_that.winner,_that.surrenderedUserId,_that.timeoutUserId,_that.black,_that.bw,_that.noIrregularRules,_that.isLlotheo,_that.canPutEveryWhere,_that.loopedBoard,_that.timeLimitForEachTurn);case _:
+return $default(_that.id,_that.createdAt,_that.startedAt,_that.endedAt,_that.isStarted,_that.isEnded,_that.user1Id,_that.user2Id,_that.user1,_that.user2,_that.winnerId,_that.winner,_that.surrenderedUserId,_that.timeoutUserId,_that.black,_that.bw,_that.noIrregularRules,_that.isLlotheo,_that.canPutEverywhere,_that.loopedBoard,_that.timeLimitForEachTurn);case _:
   return orElse();
 
 }
@@ -212,10 +215,10 @@ return $default(_that.id,_that.createdAt,_that.startedAt,_that.endedAt,_that.isS
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? startedAt, @NullableDateTimeConverter()  DateTime? endedAt,  bool isStarted,  bool isEnded,  String user1Id,  String user2Id,  UserLite user1,  UserLite user2,  String? winnerId,  User? winner,  String? surrenderedUserId,  String? timeoutUserId,  int? black,  String bw,  bool noIrregularRules,  bool isLlotheo,  bool canPutEveryWhere,  bool loopedBoard,  int timeLimitForEachTurn)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? startedAt, @NullableDateTimeConverter()  DateTime? endedAt,  bool isStarted,  bool isEnded,  String user1Id,  String user2Id,  UserLite user1,  UserLite user2,  String? winnerId,  User? winner,  String? surrenderedUserId,  String? timeoutUserId,  int? black,  String bw,  bool noIrregularRules,  bool isLlotheo,  bool canPutEverywhere,  bool loopedBoard,  int timeLimitForEachTurn)  $default,) {final _that = this;
 switch (_that) {
 case _ReversiGamesResponse():
-return $default(_that.id,_that.createdAt,_that.startedAt,_that.endedAt,_that.isStarted,_that.isEnded,_that.user1Id,_that.user2Id,_that.user1,_that.user2,_that.winnerId,_that.winner,_that.surrenderedUserId,_that.timeoutUserId,_that.black,_that.bw,_that.noIrregularRules,_that.isLlotheo,_that.canPutEveryWhere,_that.loopedBoard,_that.timeLimitForEachTurn);case _:
+return $default(_that.id,_that.createdAt,_that.startedAt,_that.endedAt,_that.isStarted,_that.isEnded,_that.user1Id,_that.user2Id,_that.user1,_that.user2,_that.winnerId,_that.winner,_that.surrenderedUserId,_that.timeoutUserId,_that.black,_that.bw,_that.noIrregularRules,_that.isLlotheo,_that.canPutEverywhere,_that.loopedBoard,_that.timeLimitForEachTurn);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -232,10 +235,10 @@ return $default(_that.id,_that.createdAt,_that.startedAt,_that.endedAt,_that.isS
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? startedAt, @NullableDateTimeConverter()  DateTime? endedAt,  bool isStarted,  bool isEnded,  String user1Id,  String user2Id,  UserLite user1,  UserLite user2,  String? winnerId,  User? winner,  String? surrenderedUserId,  String? timeoutUserId,  int? black,  String bw,  bool noIrregularRules,  bool isLlotheo,  bool canPutEveryWhere,  bool loopedBoard,  int timeLimitForEachTurn)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? startedAt, @NullableDateTimeConverter()  DateTime? endedAt,  bool isStarted,  bool isEnded,  String user1Id,  String user2Id,  UserLite user1,  UserLite user2,  String? winnerId,  User? winner,  String? surrenderedUserId,  String? timeoutUserId,  int? black,  String bw,  bool noIrregularRules,  bool isLlotheo,  bool canPutEverywhere,  bool loopedBoard,  int timeLimitForEachTurn)?  $default,) {final _that = this;
 switch (_that) {
 case _ReversiGamesResponse() when $default != null:
-return $default(_that.id,_that.createdAt,_that.startedAt,_that.endedAt,_that.isStarted,_that.isEnded,_that.user1Id,_that.user2Id,_that.user1,_that.user2,_that.winnerId,_that.winner,_that.surrenderedUserId,_that.timeoutUserId,_that.black,_that.bw,_that.noIrregularRules,_that.isLlotheo,_that.canPutEveryWhere,_that.loopedBoard,_that.timeLimitForEachTurn);case _:
+return $default(_that.id,_that.createdAt,_that.startedAt,_that.endedAt,_that.isStarted,_that.isEnded,_that.user1Id,_that.user2Id,_that.user1,_that.user2,_that.winnerId,_that.winner,_that.surrenderedUserId,_that.timeoutUserId,_that.black,_that.bw,_that.noIrregularRules,_that.isLlotheo,_that.canPutEverywhere,_that.loopedBoard,_that.timeLimitForEachTurn);case _:
   return null;
 
 }
@@ -247,7 +250,7 @@ return $default(_that.id,_that.createdAt,_that.startedAt,_that.endedAt,_that.isS
 @JsonSerializable()
 
 class _ReversiGamesResponse implements ReversiGamesResponse {
-  const _ReversiGamesResponse({required this.id, @DateTimeConverter() required this.createdAt, @NullableDateTimeConverter() this.startedAt, @NullableDateTimeConverter() this.endedAt, required this.isStarted, required this.isEnded, required this.user1Id, required this.user2Id, required this.user1, required this.user2, this.winnerId, this.winner, this.surrenderedUserId, this.timeoutUserId, this.black, required this.bw, required this.noIrregularRules, required this.isLlotheo, required this.canPutEveryWhere, required this.loopedBoard, required this.timeLimitForEachTurn});
+  const _ReversiGamesResponse({required this.id, @DateTimeConverter() required this.createdAt, @NullableDateTimeConverter() this.startedAt, @NullableDateTimeConverter() this.endedAt, required this.isStarted, required this.isEnded, required this.user1Id, required this.user2Id, required this.user1, required this.user2, this.winnerId, this.winner, this.surrenderedUserId, this.timeoutUserId, this.black, required this.bw, required this.noIrregularRules, required this.isLlotheo, required this.canPutEverywhere, required this.loopedBoard, required this.timeLimitForEachTurn});
   factory _ReversiGamesResponse.fromJson(Map<String, dynamic> json) => _$ReversiGamesResponseFromJson(json);
 
 @override final  String id;
@@ -268,7 +271,10 @@ class _ReversiGamesResponse implements ReversiGamesResponse {
 @override final  String bw;
 @override final  bool noIrregularRules;
 @override final  bool isLlotheo;
-@override final  bool canPutEveryWhere;
+// API のフィールド名は canPutEverywhere（w は小文字）。綴りがずれていた
+// ため JSON に対応するキーが無く、reversi/games は終了済みの対局を 1 件でも
+// 含むと必ず「Null is not a subtype of bool」で落ちていた。
+@override final  bool canPutEverywhere;
 @override final  bool loopedBoard;
 @override final  int timeLimitForEachTurn;
 
@@ -285,16 +291,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ReversiGamesResponse&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.startedAt, startedAt) || other.startedAt == startedAt)&&(identical(other.endedAt, endedAt) || other.endedAt == endedAt)&&(identical(other.isStarted, isStarted) || other.isStarted == isStarted)&&(identical(other.isEnded, isEnded) || other.isEnded == isEnded)&&(identical(other.user1Id, user1Id) || other.user1Id == user1Id)&&(identical(other.user2Id, user2Id) || other.user2Id == user2Id)&&(identical(other.user1, user1) || other.user1 == user1)&&(identical(other.user2, user2) || other.user2 == user2)&&(identical(other.winnerId, winnerId) || other.winnerId == winnerId)&&(identical(other.winner, winner) || other.winner == winner)&&(identical(other.surrenderedUserId, surrenderedUserId) || other.surrenderedUserId == surrenderedUserId)&&(identical(other.timeoutUserId, timeoutUserId) || other.timeoutUserId == timeoutUserId)&&(identical(other.black, black) || other.black == black)&&(identical(other.bw, bw) || other.bw == bw)&&(identical(other.noIrregularRules, noIrregularRules) || other.noIrregularRules == noIrregularRules)&&(identical(other.isLlotheo, isLlotheo) || other.isLlotheo == isLlotheo)&&(identical(other.canPutEveryWhere, canPutEveryWhere) || other.canPutEveryWhere == canPutEveryWhere)&&(identical(other.loopedBoard, loopedBoard) || other.loopedBoard == loopedBoard)&&(identical(other.timeLimitForEachTurn, timeLimitForEachTurn) || other.timeLimitForEachTurn == timeLimitForEachTurn));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ReversiGamesResponse&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.startedAt, startedAt) || other.startedAt == startedAt)&&(identical(other.endedAt, endedAt) || other.endedAt == endedAt)&&(identical(other.isStarted, isStarted) || other.isStarted == isStarted)&&(identical(other.isEnded, isEnded) || other.isEnded == isEnded)&&(identical(other.user1Id, user1Id) || other.user1Id == user1Id)&&(identical(other.user2Id, user2Id) || other.user2Id == user2Id)&&(identical(other.user1, user1) || other.user1 == user1)&&(identical(other.user2, user2) || other.user2 == user2)&&(identical(other.winnerId, winnerId) || other.winnerId == winnerId)&&(identical(other.winner, winner) || other.winner == winner)&&(identical(other.surrenderedUserId, surrenderedUserId) || other.surrenderedUserId == surrenderedUserId)&&(identical(other.timeoutUserId, timeoutUserId) || other.timeoutUserId == timeoutUserId)&&(identical(other.black, black) || other.black == black)&&(identical(other.bw, bw) || other.bw == bw)&&(identical(other.noIrregularRules, noIrregularRules) || other.noIrregularRules == noIrregularRules)&&(identical(other.isLlotheo, isLlotheo) || other.isLlotheo == isLlotheo)&&(identical(other.canPutEverywhere, canPutEverywhere) || other.canPutEverywhere == canPutEverywhere)&&(identical(other.loopedBoard, loopedBoard) || other.loopedBoard == loopedBoard)&&(identical(other.timeLimitForEachTurn, timeLimitForEachTurn) || other.timeLimitForEachTurn == timeLimitForEachTurn));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hashAll([runtimeType,id,createdAt,startedAt,endedAt,isStarted,isEnded,user1Id,user2Id,user1,user2,winnerId,winner,surrenderedUserId,timeoutUserId,black,bw,noIrregularRules,isLlotheo,canPutEveryWhere,loopedBoard,timeLimitForEachTurn]);
+int get hashCode => Object.hashAll([runtimeType,id,createdAt,startedAt,endedAt,isStarted,isEnded,user1Id,user2Id,user1,user2,winnerId,winner,surrenderedUserId,timeoutUserId,black,bw,noIrregularRules,isLlotheo,canPutEverywhere,loopedBoard,timeLimitForEachTurn]);
 
 @override
 String toString() {
-  return 'ReversiGamesResponse(id: $id, createdAt: $createdAt, startedAt: $startedAt, endedAt: $endedAt, isStarted: $isStarted, isEnded: $isEnded, user1Id: $user1Id, user2Id: $user2Id, user1: $user1, user2: $user2, winnerId: $winnerId, winner: $winner, surrenderedUserId: $surrenderedUserId, timeoutUserId: $timeoutUserId, black: $black, bw: $bw, noIrregularRules: $noIrregularRules, isLlotheo: $isLlotheo, canPutEveryWhere: $canPutEveryWhere, loopedBoard: $loopedBoard, timeLimitForEachTurn: $timeLimitForEachTurn)';
+  return 'ReversiGamesResponse(id: $id, createdAt: $createdAt, startedAt: $startedAt, endedAt: $endedAt, isStarted: $isStarted, isEnded: $isEnded, user1Id: $user1Id, user2Id: $user2Id, user1: $user1, user2: $user2, winnerId: $winnerId, winner: $winner, surrenderedUserId: $surrenderedUserId, timeoutUserId: $timeoutUserId, black: $black, bw: $bw, noIrregularRules: $noIrregularRules, isLlotheo: $isLlotheo, canPutEverywhere: $canPutEverywhere, loopedBoard: $loopedBoard, timeLimitForEachTurn: $timeLimitForEachTurn)';
 }
 
 
@@ -305,7 +311,7 @@ abstract mixin class _$ReversiGamesResponseCopyWith<$Res> implements $ReversiGam
   factory _$ReversiGamesResponseCopyWith(_ReversiGamesResponse value, $Res Function(_ReversiGamesResponse) _then) = __$ReversiGamesResponseCopyWithImpl;
 @override @useResult
 $Res call({
- String id,@DateTimeConverter() DateTime createdAt,@NullableDateTimeConverter() DateTime? startedAt,@NullableDateTimeConverter() DateTime? endedAt, bool isStarted, bool isEnded, String user1Id, String user2Id, UserLite user1, UserLite user2, String? winnerId, User? winner, String? surrenderedUserId, String? timeoutUserId, int? black, String bw, bool noIrregularRules, bool isLlotheo, bool canPutEveryWhere, bool loopedBoard, int timeLimitForEachTurn
+ String id,@DateTimeConverter() DateTime createdAt,@NullableDateTimeConverter() DateTime? startedAt,@NullableDateTimeConverter() DateTime? endedAt, bool isStarted, bool isEnded, String user1Id, String user2Id, UserLite user1, UserLite user2, String? winnerId, User? winner, String? surrenderedUserId, String? timeoutUserId, int? black, String bw, bool noIrregularRules, bool isLlotheo, bool canPutEverywhere, bool loopedBoard, int timeLimitForEachTurn
 });
 
 
@@ -322,7 +328,7 @@ class __$ReversiGamesResponseCopyWithImpl<$Res>
 
 /// Create a copy of ReversiGamesResponse
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? createdAt = null,Object? startedAt = freezed,Object? endedAt = freezed,Object? isStarted = null,Object? isEnded = null,Object? user1Id = null,Object? user2Id = null,Object? user1 = null,Object? user2 = null,Object? winnerId = freezed,Object? winner = freezed,Object? surrenderedUserId = freezed,Object? timeoutUserId = freezed,Object? black = freezed,Object? bw = null,Object? noIrregularRules = null,Object? isLlotheo = null,Object? canPutEveryWhere = null,Object? loopedBoard = null,Object? timeLimitForEachTurn = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? createdAt = null,Object? startedAt = freezed,Object? endedAt = freezed,Object? isStarted = null,Object? isEnded = null,Object? user1Id = null,Object? user2Id = null,Object? user1 = null,Object? user2 = null,Object? winnerId = freezed,Object? winner = freezed,Object? surrenderedUserId = freezed,Object? timeoutUserId = freezed,Object? black = freezed,Object? bw = null,Object? noIrregularRules = null,Object? isLlotheo = null,Object? canPutEverywhere = null,Object? loopedBoard = null,Object? timeLimitForEachTurn = null,}) {
   return _then(_ReversiGamesResponse(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
@@ -342,7 +348,7 @@ as String?,black: freezed == black ? _self.black : black // ignore: cast_nullabl
 as int?,bw: null == bw ? _self.bw : bw // ignore: cast_nullable_to_non_nullable
 as String,noIrregularRules: null == noIrregularRules ? _self.noIrregularRules : noIrregularRules // ignore: cast_nullable_to_non_nullable
 as bool,isLlotheo: null == isLlotheo ? _self.isLlotheo : isLlotheo // ignore: cast_nullable_to_non_nullable
-as bool,canPutEveryWhere: null == canPutEveryWhere ? _self.canPutEveryWhere : canPutEveryWhere // ignore: cast_nullable_to_non_nullable
+as bool,canPutEverywhere: null == canPutEverywhere ? _self.canPutEverywhere : canPutEverywhere // ignore: cast_nullable_to_non_nullable
 as bool,loopedBoard: null == loopedBoard ? _self.loopedBoard : loopedBoard // ignore: cast_nullable_to_non_nullable
 as bool,timeLimitForEachTurn: null == timeLimitForEachTurn ? _self.timeLimitForEachTurn : timeLimitForEachTurn // ignore: cast_nullable_to_non_nullable
 as int,
