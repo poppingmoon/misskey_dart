@@ -97,14 +97,16 @@ extension MisskeyTestExtension on Misskey {
     );
   }
 
-  Future<Map<String, dynamic>> createPage() {
-    return apiService.post<Map<String, dynamic>>("pages/create", {
-      "title": "test",
-      "name": Uuid().v4(),
-      "content": [],
-      "variables": [],
-      "script": "",
-    });
+  Future<Page> createPage() {
+    return pages.create(
+      PagesCreateRequest(
+        title: "test",
+        name: Uuid().v4(),
+        content: [],
+        variables: [],
+        script: "",
+      ),
+    );
   }
 
   Future<Flash> createFlash() {

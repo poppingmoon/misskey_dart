@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$Page {
 
- String get id;@DateTimeConverter() DateTime get createdAt;@DateTimeConverter() DateTime get updatedAt; String get userId; UserLite get user;@ListPageContentConverter() List<AbstractPageContent> get content; List<Map<String, dynamic>>? get variables; String get title; String get name; String? get summary; bool? get hideTitleWhenPinned; bool? get alignCenter; String? get font; String? get script; String? get eyeCatchingImageId; DriveFile? get eyeCatchingImage; List<DriveFile>? get attachedFiles; int? get likedCount; bool? get isLiked;
+ String get id;@DateTimeConverter() DateTime get createdAt;@DateTimeConverter() DateTime get updatedAt; String get userId; UserLite get user;@PageContentConverter() List<AbstractPageContent> get content; List<Map<String, dynamic>>? get variables; String get title; String get name; String? get summary; bool? get hideTitleWhenPinned; bool? get alignCenter; String? get font; String? get script; String? get eyeCatchingImageId; DriveFile? get eyeCatchingImage; List<DriveFile>? get attachedFiles; int? get likedCount; bool? get isLiked;
 /// Create a copy of Page
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,7 +48,7 @@ abstract mixin class $PageCopyWith<$Res>  {
   factory $PageCopyWith(Page value, $Res Function(Page) _then) = _$PageCopyWithImpl;
 @useResult
 $Res call({
- String id,@DateTimeConverter() DateTime createdAt,@DateTimeConverter() DateTime updatedAt, String userId, UserLite user,@ListPageContentConverter() List<AbstractPageContent> content, List<Map<String, dynamic>>? variables, String title, String name, String? summary, bool? hideTitleWhenPinned, bool? alignCenter, String? font, String? script, String? eyeCatchingImageId, DriveFile? eyeCatchingImage, List<DriveFile>? attachedFiles, int? likedCount, bool? isLiked
+ String id,@DateTimeConverter() DateTime createdAt,@DateTimeConverter() DateTime updatedAt, String userId, UserLite user,@PageContentConverter() List<AbstractPageContent> content, List<Map<String, dynamic>>? variables, String title, String name, String? summary, bool? hideTitleWhenPinned, bool? alignCenter, String? font, String? script, String? eyeCatchingImageId, DriveFile? eyeCatchingImage, List<DriveFile>? attachedFiles, int? likedCount, bool? isLiked
 });
 
 
@@ -192,7 +192,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt, @DateTimeConverter()  DateTime updatedAt,  String userId,  UserLite user, @ListPageContentConverter()  List<AbstractPageContent> content,  List<Map<String, dynamic>>? variables,  String title,  String name,  String? summary,  bool? hideTitleWhenPinned,  bool? alignCenter,  String? font,  String? script,  String? eyeCatchingImageId,  DriveFile? eyeCatchingImage,  List<DriveFile>? attachedFiles,  int? likedCount,  bool? isLiked)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt, @DateTimeConverter()  DateTime updatedAt,  String userId,  UserLite user, @PageContentConverter()  List<AbstractPageContent> content,  List<Map<String, dynamic>>? variables,  String title,  String name,  String? summary,  bool? hideTitleWhenPinned,  bool? alignCenter,  String? font,  String? script,  String? eyeCatchingImageId,  DriveFile? eyeCatchingImage,  List<DriveFile>? attachedFiles,  int? likedCount,  bool? isLiked)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Page() when $default != null:
 return $default(_that.id,_that.createdAt,_that.updatedAt,_that.userId,_that.user,_that.content,_that.variables,_that.title,_that.name,_that.summary,_that.hideTitleWhenPinned,_that.alignCenter,_that.font,_that.script,_that.eyeCatchingImageId,_that.eyeCatchingImage,_that.attachedFiles,_that.likedCount,_that.isLiked);case _:
@@ -213,7 +213,7 @@ return $default(_that.id,_that.createdAt,_that.updatedAt,_that.userId,_that.user
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt, @DateTimeConverter()  DateTime updatedAt,  String userId,  UserLite user, @ListPageContentConverter()  List<AbstractPageContent> content,  List<Map<String, dynamic>>? variables,  String title,  String name,  String? summary,  bool? hideTitleWhenPinned,  bool? alignCenter,  String? font,  String? script,  String? eyeCatchingImageId,  DriveFile? eyeCatchingImage,  List<DriveFile>? attachedFiles,  int? likedCount,  bool? isLiked)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt, @DateTimeConverter()  DateTime updatedAt,  String userId,  UserLite user, @PageContentConverter()  List<AbstractPageContent> content,  List<Map<String, dynamic>>? variables,  String title,  String name,  String? summary,  bool? hideTitleWhenPinned,  bool? alignCenter,  String? font,  String? script,  String? eyeCatchingImageId,  DriveFile? eyeCatchingImage,  List<DriveFile>? attachedFiles,  int? likedCount,  bool? isLiked)  $default,) {final _that = this;
 switch (_that) {
 case _Page():
 return $default(_that.id,_that.createdAt,_that.updatedAt,_that.userId,_that.user,_that.content,_that.variables,_that.title,_that.name,_that.summary,_that.hideTitleWhenPinned,_that.alignCenter,_that.font,_that.script,_that.eyeCatchingImageId,_that.eyeCatchingImage,_that.attachedFiles,_that.likedCount,_that.isLiked);case _:
@@ -233,7 +233,7 @@ return $default(_that.id,_that.createdAt,_that.updatedAt,_that.userId,_that.user
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id, @DateTimeConverter()  DateTime createdAt, @DateTimeConverter()  DateTime updatedAt,  String userId,  UserLite user, @ListPageContentConverter()  List<AbstractPageContent> content,  List<Map<String, dynamic>>? variables,  String title,  String name,  String? summary,  bool? hideTitleWhenPinned,  bool? alignCenter,  String? font,  String? script,  String? eyeCatchingImageId,  DriveFile? eyeCatchingImage,  List<DriveFile>? attachedFiles,  int? likedCount,  bool? isLiked)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id, @DateTimeConverter()  DateTime createdAt, @DateTimeConverter()  DateTime updatedAt,  String userId,  UserLite user, @PageContentConverter()  List<AbstractPageContent> content,  List<Map<String, dynamic>>? variables,  String title,  String name,  String? summary,  bool? hideTitleWhenPinned,  bool? alignCenter,  String? font,  String? script,  String? eyeCatchingImageId,  DriveFile? eyeCatchingImage,  List<DriveFile>? attachedFiles,  int? likedCount,  bool? isLiked)?  $default,) {final _that = this;
 switch (_that) {
 case _Page() when $default != null:
 return $default(_that.id,_that.createdAt,_that.updatedAt,_that.userId,_that.user,_that.content,_that.variables,_that.title,_that.name,_that.summary,_that.hideTitleWhenPinned,_that.alignCenter,_that.font,_that.script,_that.eyeCatchingImageId,_that.eyeCatchingImage,_that.attachedFiles,_that.likedCount,_that.isLiked);case _:
@@ -248,7 +248,7 @@ return $default(_that.id,_that.createdAt,_that.updatedAt,_that.userId,_that.user
 @JsonSerializable()
 
 class _Page implements Page {
-  const _Page({required this.id, @DateTimeConverter() required this.createdAt, @DateTimeConverter() required this.updatedAt, required this.userId, required this.user, @ListPageContentConverter() required final  List<AbstractPageContent> content, final  List<Map<String, dynamic>>? variables, required this.title, required this.name, this.summary, this.hideTitleWhenPinned, this.alignCenter, this.font, this.script, this.eyeCatchingImageId, this.eyeCatchingImage, final  List<DriveFile>? attachedFiles, this.likedCount, this.isLiked}): _content = content,_variables = variables,_attachedFiles = attachedFiles;
+  const _Page({required this.id, @DateTimeConverter() required this.createdAt, @DateTimeConverter() required this.updatedAt, required this.userId, required this.user, @PageContentConverter() required final  List<AbstractPageContent> content, final  List<Map<String, dynamic>>? variables, required this.title, required this.name, this.summary, this.hideTitleWhenPinned, this.alignCenter, this.font, this.script, this.eyeCatchingImageId, this.eyeCatchingImage, final  List<DriveFile>? attachedFiles, this.likedCount, this.isLiked}): _content = content,_variables = variables,_attachedFiles = attachedFiles;
   factory _Page.fromJson(Map<String, dynamic> json) => _$PageFromJson(json);
 
 @override final  String id;
@@ -257,7 +257,7 @@ class _Page implements Page {
 @override final  String userId;
 @override final  UserLite user;
  final  List<AbstractPageContent> _content;
-@override@ListPageContentConverter() List<AbstractPageContent> get content {
+@override@PageContentConverter() List<AbstractPageContent> get content {
   if (_content is EqualUnmodifiableListView) return _content;
   // ignore: implicit_dynamic_type
   return EqualUnmodifiableListView(_content);
@@ -326,7 +326,7 @@ abstract mixin class _$PageCopyWith<$Res> implements $PageCopyWith<$Res> {
   factory _$PageCopyWith(_Page value, $Res Function(_Page) _then) = __$PageCopyWithImpl;
 @override @useResult
 $Res call({
- String id,@DateTimeConverter() DateTime createdAt,@DateTimeConverter() DateTime updatedAt, String userId, UserLite user,@ListPageContentConverter() List<AbstractPageContent> content, List<Map<String, dynamic>>? variables, String title, String name, String? summary, bool? hideTitleWhenPinned, bool? alignCenter, String? font, String? script, String? eyeCatchingImageId, DriveFile? eyeCatchingImage, List<DriveFile>? attachedFiles, int? likedCount, bool? isLiked
+ String id,@DateTimeConverter() DateTime createdAt,@DateTimeConverter() DateTime updatedAt, String userId, UserLite user,@PageContentConverter() List<AbstractPageContent> content, List<Map<String, dynamic>>? variables, String title, String name, String? summary, bool? hideTitleWhenPinned, bool? alignCenter, String? font, String? script, String? eyeCatchingImageId, DriveFile? eyeCatchingImage, List<DriveFile>? attachedFiles, int? likedCount, bool? isLiked
 });
 
 
@@ -592,11 +592,11 @@ return $default(_that.id,_that.type,_that.text);case _:
 @JsonSerializable()
 
 class _PageText implements PageText {
-  const _PageText({this.id, this.type, this.text});
+  const _PageText({this.id, this.type = PageContentType.text, this.text});
   factory _PageText.fromJson(Map<String, dynamic> json) => _$PageTextFromJson(json);
 
 @override final  String? id;
-@override final  PageContentType? type;
+@override@JsonKey() final  PageContentType? type;
 @override final  String? text;
 
 /// Create a copy of PageText
@@ -665,7 +665,7 @@ as String?,
 /// @nodoc
 mixin _$PageSection {
 
- String? get id; PageContentType? get type; String? get title;@ListPageContentConverter() List<AbstractPageContent>? get children;
+ String? get id; PageContentType? get type; String? get title;@PageContentConverter() List<AbstractPageContent>? get children;
 /// Create a copy of PageSection
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -698,7 +698,7 @@ abstract mixin class $PageSectionCopyWith<$Res>  {
   factory $PageSectionCopyWith(PageSection value, $Res Function(PageSection) _then) = _$PageSectionCopyWithImpl;
 @useResult
 $Res call({
- String? id, PageContentType? type, String? title,@ListPageContentConverter() List<AbstractPageContent>? children
+ String? id, PageContentType? type, String? title,@PageContentConverter() List<AbstractPageContent>? children
 });
 
 
@@ -806,7 +806,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? id,  PageContentType? type,  String? title, @ListPageContentConverter()  List<AbstractPageContent>? children)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? id,  PageContentType? type,  String? title, @PageContentConverter()  List<AbstractPageContent>? children)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _PageSection() when $default != null:
 return $default(_that.id,_that.type,_that.title,_that.children);case _:
@@ -827,7 +827,7 @@ return $default(_that.id,_that.type,_that.title,_that.children);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? id,  PageContentType? type,  String? title, @ListPageContentConverter()  List<AbstractPageContent>? children)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? id,  PageContentType? type,  String? title, @PageContentConverter()  List<AbstractPageContent>? children)  $default,) {final _that = this;
 switch (_that) {
 case _PageSection():
 return $default(_that.id,_that.type,_that.title,_that.children);case _:
@@ -847,7 +847,7 @@ return $default(_that.id,_that.type,_that.title,_that.children);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? id,  PageContentType? type,  String? title, @ListPageContentConverter()  List<AbstractPageContent>? children)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? id,  PageContentType? type,  String? title, @PageContentConverter()  List<AbstractPageContent>? children)?  $default,) {final _that = this;
 switch (_that) {
 case _PageSection() when $default != null:
 return $default(_that.id,_that.type,_that.title,_that.children);case _:
@@ -862,14 +862,14 @@ return $default(_that.id,_that.type,_that.title,_that.children);case _:
 @JsonSerializable()
 
 class _PageSection implements PageSection {
-  const _PageSection({this.id, this.type, this.title, @ListPageContentConverter() final  List<AbstractPageContent>? children}): _children = children;
+  const _PageSection({this.id, this.type = PageContentType.section, this.title, @PageContentConverter() final  List<AbstractPageContent>? children}): _children = children;
   factory _PageSection.fromJson(Map<String, dynamic> json) => _$PageSectionFromJson(json);
 
 @override final  String? id;
-@override final  PageContentType? type;
+@override@JsonKey() final  PageContentType? type;
 @override final  String? title;
  final  List<AbstractPageContent>? _children;
-@override@ListPageContentConverter() List<AbstractPageContent>? get children {
+@override@PageContentConverter() List<AbstractPageContent>? get children {
   final value = _children;
   if (value == null) return null;
   if (_children is EqualUnmodifiableListView) return _children;
@@ -911,7 +911,7 @@ abstract mixin class _$PageSectionCopyWith<$Res> implements $PageSectionCopyWith
   factory _$PageSectionCopyWith(_PageSection value, $Res Function(_PageSection) _then) = __$PageSectionCopyWithImpl;
 @override @useResult
 $Res call({
- String? id, PageContentType? type, String? title,@ListPageContentConverter() List<AbstractPageContent>? children
+ String? id, PageContentType? type, String? title,@PageContentConverter() List<AbstractPageContent>? children
 });
 
 
@@ -1141,11 +1141,11 @@ return $default(_that.id,_that.type,_that.fileId);case _:
 @JsonSerializable()
 
 class _PageImage implements PageImage {
-  const _PageImage({this.id, this.type, this.fileId});
+  const _PageImage({this.id, this.type = PageContentType.image, this.fileId});
   factory _PageImage.fromJson(Map<String, dynamic> json) => _$PageImageFromJson(json);
 
 @override final  String? id;
-@override final  PageContentType? type;
+@override@JsonKey() final  PageContentType? type;
 @override final  String? fileId;
 
 /// Create a copy of PageImage
@@ -1411,11 +1411,11 @@ return $default(_that.id,_that.type,_that.note,_that.detailed);case _:
 @JsonSerializable()
 
 class _PageNote implements PageNote {
-  const _PageNote({this.id, this.type, this.note, this.detailed});
+  const _PageNote({this.id, this.type = PageContentType.note, this.note, this.detailed});
   factory _PageNote.fromJson(Map<String, dynamic> json) => _$PageNoteFromJson(json);
 
 @override final  String? id;
-@override final  PageContentType? type;
+@override@JsonKey() final  PageContentType? type;
 @override final  String? note;
 @override final  bool? detailed;
 

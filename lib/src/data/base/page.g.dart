@@ -12,7 +12,11 @@ _Page _$PageFromJson(Map<String, dynamic> json) => _Page(
   updatedAt: const DateTimeConverter().fromJson(json['updatedAt'] as String),
   userId: json['userId'] as String,
   user: UserLite.fromJson(json['user'] as Map<String, dynamic>),
-  content: const ListPageContentConverter().fromJson(json['content'] as List?),
+  content: (json['content'] as List<dynamic>)
+      .map(
+        (e) => const PageContentConverter().fromJson(e as Map<String, dynamic>),
+      )
+      .toList(),
   variables: (json['variables'] as List<dynamic>?)
       ?.map((e) => e as Map<String, dynamic>)
       .toList(),
@@ -40,7 +44,7 @@ Map<String, dynamic> _$PageToJson(_Page instance) => <String, dynamic>{
   'updatedAt': const DateTimeConverter().toJson(instance.updatedAt),
   'userId': instance.userId,
   'user': instance.user.toJson(),
-  'content': const ListPageContentConverter().toJson(instance.content),
+  'content': instance.content.map(const PageContentConverter().toJson).toList(),
   'variables': instance.variables,
   'title': instance.title,
   'name': instance.name,
@@ -58,7 +62,9 @@ Map<String, dynamic> _$PageToJson(_Page instance) => <String, dynamic>{
 
 _PageText _$PageTextFromJson(Map<String, dynamic> json) => _PageText(
   id: json['id'] as String?,
-  type: $enumDecodeNullable(_$PageContentTypeEnumMap, json['type']),
+  type:
+      $enumDecodeNullable(_$PageContentTypeEnumMap, json['type']) ??
+      PageContentType.text,
   text: json['text'] as String?,
 );
 
@@ -88,33 +94,32 @@ const _$PageContentTypeEnumMap = {
 
 _PageSection _$PageSectionFromJson(Map<String, dynamic> json) => _PageSection(
   id: json['id'] as String?,
-  type: $enumDecodeNullable(_$PageContentTypeEnumMap, json['type']),
+  type:
+      $enumDecodeNullable(_$PageContentTypeEnumMap, json['type']) ??
+      PageContentType.section,
   title: json['title'] as String?,
-  children: const ListPageContentConverter().fromJson(
-    json['children'] as List?,
-  ),
+  children: (json['children'] as List<dynamic>?)
+      ?.map(
+        (e) => const PageContentConverter().fromJson(e as Map<String, dynamic>),
+      )
+      .toList(),
 );
 
-Map<String, dynamic> _$PageSectionToJson(
-  _PageSection instance,
-) => <String, dynamic>{
-  'id': instance.id,
-  'type': _$PageContentTypeEnumMap[instance.type],
-  'title': instance.title,
-  'children': _$JsonConverterToJson<List<dynamic>?, List<AbstractPageContent>>(
-    instance.children,
-    const ListPageContentConverter().toJson,
-  ),
-};
-
-Json? _$JsonConverterToJson<Json, Value>(
-  Value? value,
-  Json? Function(Value value) toJson,
-) => value == null ? null : toJson(value);
+Map<String, dynamic> _$PageSectionToJson(_PageSection instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'type': _$PageContentTypeEnumMap[instance.type],
+      'title': instance.title,
+      'children': instance.children
+          ?.map(const PageContentConverter().toJson)
+          .toList(),
+    };
 
 _PageImage _$PageImageFromJson(Map<String, dynamic> json) => _PageImage(
   id: json['id'] as String?,
-  type: $enumDecodeNullable(_$PageContentTypeEnumMap, json['type']),
+  type:
+      $enumDecodeNullable(_$PageContentTypeEnumMap, json['type']) ??
+      PageContentType.image,
   fileId: json['fileId'] as String?,
 );
 
@@ -127,7 +132,9 @@ Map<String, dynamic> _$PageImageToJson(_PageImage instance) =>
 
 _PageNote _$PageNoteFromJson(Map<String, dynamic> json) => _PageNote(
   id: json['id'] as String?,
-  type: $enumDecodeNullable(_$PageContentTypeEnumMap, json['type']),
+  type:
+      $enumDecodeNullable(_$PageContentTypeEnumMap, json['type']) ??
+      PageContentType.note,
   note: json['note'] as String?,
   detailed: json['detailed'] as bool?,
 );

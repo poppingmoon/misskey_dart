@@ -75,15 +75,15 @@ void main() async {
 
   test("page-likes", () async {
     final page = await adminClient.createPage();
-    await userClient.pages.like(PagesLikeRequest(pageId: page["id"]));
+    await userClient.pages.like(PagesLikeRequest(pageId: page.id));
     final response = await userClient.i.pageLikes(IPageLikesRequest());
-    expect(response.map((e) => e.page.id), contains(page["id"]));
+    expect(response.map((e) => e.page.id), contains(page.id));
   });
 
   test("pages", () async {
     final page = await userClient.createPage();
     final response = await userClient.i.pages(IPagesRequest());
-    expect(response.map((e) => e.id), contains(page["id"]));
+    expect(response.map((e) => e.id), contains(page.id));
   });
 
   test("pin", () async {

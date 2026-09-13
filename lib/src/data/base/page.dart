@@ -14,7 +14,7 @@ abstract class Page with _$Page {
     @DateTimeConverter() required DateTime updatedAt,
     required String userId,
     required UserLite user,
-    @ListPageContentConverter() required List<AbstractPageContent> content,
+    @PageContentConverter() required List<AbstractPageContent> content,
     List<Map<String, dynamic>>? variables,
     required String title,
     required String name,
@@ -86,8 +86,11 @@ abstract class AbstractPageText extends AbstractPageContent {
 
 @freezed
 abstract class PageText with _$PageText implements AbstractPageText {
-  const factory PageText({String? id, PageContentType? type, String? text}) =
-      _PageText;
+  const factory PageText({
+    String? id,
+    @Default(PageContentType.text) PageContentType? type,
+    String? text,
+  }) = _PageText;
 
   factory PageText.fromJson(Map<String, dynamic> json) =>
       _$PageTextFromJson(json);
@@ -102,9 +105,9 @@ abstract class AbstractPageSection extends AbstractPageContent {
 abstract class PageSection with _$PageSection implements AbstractPageSection {
   const factory PageSection({
     String? id,
-    PageContentType? type,
+    @Default(PageContentType.section) PageContentType? type,
     String? title,
-    @ListPageContentConverter() List<AbstractPageContent>? children,
+    @PageContentConverter() List<AbstractPageContent>? children,
   }) = _PageSection;
 
   factory PageSection.fromJson(Map<String, dynamic> json) =>
@@ -117,8 +120,11 @@ abstract class AbstractPageImage extends AbstractPageContent {
 
 @freezed
 abstract class PageImage with _$PageImage implements AbstractPageImage {
-  const factory PageImage({String? id, PageContentType? type, String? fileId}) =
-      _PageImage;
+  const factory PageImage({
+    String? id,
+    @Default(PageContentType.image) PageContentType? type,
+    String? fileId,
+  }) = _PageImage;
 
   factory PageImage.fromJson(Map<String, dynamic> json) =>
       _$PageImageFromJson(json);
@@ -133,7 +139,7 @@ abstract class AbstractPageNote extends AbstractPageContent {
 abstract class PageNote with _$PageNote implements AbstractPageNote {
   const factory PageNote({
     String? id,
-    PageContentType? type,
+    @Default(PageContentType.note) PageContentType? type,
     String? note,
     bool? detailed,
   }) = _PageNote;

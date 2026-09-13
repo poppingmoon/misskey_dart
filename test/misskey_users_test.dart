@@ -180,7 +180,7 @@ void main() async {
     final response = await userClient.users.pages(
       UsersPagesRequest(userId: user.id),
     );
-    expect(response.map((e) => e.id), contains(page["id"]));
+    expect(response.map((e) => e.id), contains(page.id));
   });
 
   group("gallery", () {

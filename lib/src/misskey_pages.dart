@@ -6,6 +6,18 @@ class MisskeyPages {
 
   MisskeyPages({required ApiService apiService}) : _apiService = apiService;
 
+  Future<Page> create(PagesCreateRequest request) async {
+    final response = await _apiService.post<Map<String, dynamic>>(
+      "pages/create",
+      request.toJson(),
+    );
+    return Page.fromJson(response);
+  }
+
+  Future<void> delete(PagesDeleteRequest request) async {
+    await _apiService.post("pages/delete", request.toJson());
+  }
+
   Future<Iterable<Page>> featured() async {
     final response = await _apiService.post<List>("pages/featured", {});
     return response.map((e) => Page.fromJson(e));
@@ -25,5 +37,9 @@ class MisskeyPages {
 
   Future<void> unlike(PagesUnlikeRequest request) async {
     await _apiService.post<void>("pages/unlike", request.toJson());
+  }
+
+  Future<void> update(PagesUpdateRequest request) async {
+    await _apiService.post("pages/update", request.toJson());
   }
 }

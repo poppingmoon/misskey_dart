@@ -23,20 +23,12 @@ class PageContentConverter
 
   @override
   Map<String, dynamic> toJson(AbstractPageContent object) {
-    throw UnimplementedError();
+    return switch (object) {
+      PageText() => object.toJson(),
+      PageImage() => object.toJson(),
+      PageNote() => object.toJson(),
+      PageSection() => object.toJson(),
+      _ => throw UnimplementedError(),
+    };
   }
-}
-
-class ListPageContentConverter
-    extends JsonConverter<List<AbstractPageContent>, List?> {
-  const ListPageContentConverter();
-
-  @override
-  List<AbstractPageContent> fromJson(List? json) => (json ?? [])
-      .map((e) => PageContentConverter().fromJson(e as Map<String, dynamic>))
-      .toList();
-
-  @override
-  List toJson(List<AbstractPageContent>? object) =>
-      (object ?? []).map((e) => PageContentConverter().toJson(e)).toList();
 }
