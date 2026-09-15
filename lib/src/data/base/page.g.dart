@@ -154,9 +154,3 @@ _PageUnknown _$PageUnknownFromJson(Map<String, dynamic> json) => _PageUnknown(
     unknownValue: JsonKey.nullForUndefinedEnumValue,
   ),
 );
-
-Map<String, dynamic> _$PageUnknownToJson(_PageUnknown instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'type': _$PageContentTypeEnumMap[instance.type],
-    };

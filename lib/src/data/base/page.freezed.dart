@@ -1487,29 +1487,27 @@ as bool?,
 mixin _$PageUnknown {
 
  String? get id;// ignore: invalid_annotation_target
-@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) PageContentType? get type;
+@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) PageContentType? get type;@JsonKey(includeFromJson: false) Map<String, dynamic> get json;
 /// Create a copy of PageUnknown
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $PageUnknownCopyWith<PageUnknown> get copyWith => _$PageUnknownCopyWithImpl<PageUnknown>(this as PageUnknown, _$identity);
 
-  /// Serializes this PageUnknown to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is PageUnknown&&(identical(other.id, id) || other.id == id)&&(identical(other.type, type) || other.type == type));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PageUnknown&&(identical(other.id, id) || other.id == id)&&(identical(other.type, type) || other.type == type)&&const DeepCollectionEquality().equals(other.json, json));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,type);
+int get hashCode => Object.hash(runtimeType,id,type,const DeepCollectionEquality().hash(json));
 
 @override
 String toString() {
-  return 'PageUnknown(id: $id, type: $type)';
+  return 'PageUnknown(id: $id, type: $type, json: $json)';
 }
 
 
@@ -1520,7 +1518,7 @@ abstract mixin class $PageUnknownCopyWith<$Res>  {
   factory $PageUnknownCopyWith(PageUnknown value, $Res Function(PageUnknown) _then) = _$PageUnknownCopyWithImpl;
 @useResult
 $Res call({
- String? id,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) PageContentType? type
+ String? id,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) PageContentType? type,@JsonKey(includeFromJson: false) Map<String, dynamic> json
 });
 
 
@@ -1537,11 +1535,12 @@ class _$PageUnknownCopyWithImpl<$Res>
 
 /// Create a copy of PageUnknown
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? id = freezed,Object? type = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? id = freezed,Object? type = freezed,Object? json = null,}) {
   return _then(_self.copyWith(
 id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String?,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
-as PageContentType?,
+as PageContentType?,json: null == json ? _self.json : json // ignore: cast_nullable_to_non_nullable
+as Map<String, dynamic>,
   ));
 }
 
@@ -1626,10 +1625,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? id, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  PageContentType? type)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? id, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  PageContentType? type, @JsonKey(includeFromJson: false)  Map<String, dynamic> json)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _PageUnknown() when $default != null:
-return $default(_that.id,_that.type);case _:
+return $default(_that.id,_that.type,_that.json);case _:
   return orElse();
 
 }
@@ -1647,10 +1646,10 @@ return $default(_that.id,_that.type);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? id, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  PageContentType? type)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? id, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  PageContentType? type, @JsonKey(includeFromJson: false)  Map<String, dynamic> json)  $default,) {final _that = this;
 switch (_that) {
 case _PageUnknown():
-return $default(_that.id,_that.type);case _:
+return $default(_that.id,_that.type,_that.json);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -1667,10 +1666,10 @@ return $default(_that.id,_that.type);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? id, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  PageContentType? type)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? id, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  PageContentType? type, @JsonKey(includeFromJson: false)  Map<String, dynamic> json)?  $default,) {final _that = this;
 switch (_that) {
 case _PageUnknown() when $default != null:
-return $default(_that.id,_that.type);case _:
+return $default(_that.id,_that.type,_that.json);case _:
   return null;
 
 }
@@ -1679,15 +1678,22 @@ return $default(_that.id,_that.type);case _:
 }
 
 /// @nodoc
-@JsonSerializable()
+@JsonSerializable(createToJson: false)
 
 class _PageUnknown implements PageUnknown {
-  const _PageUnknown({this.id, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type});
+  const _PageUnknown({this.id, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type, @JsonKey(includeFromJson: false) final  Map<String, dynamic> json = const {}}): _json = json;
   factory _PageUnknown.fromJson(Map<String, dynamic> json) => _$PageUnknownFromJson(json);
 
 @override final  String? id;
 // ignore: invalid_annotation_target
 @override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  PageContentType? type;
+ final  Map<String, dynamic> _json;
+@override@JsonKey(includeFromJson: false) Map<String, dynamic> get json {
+  if (_json is EqualUnmodifiableMapView) return _json;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableMapView(_json);
+}
+
 
 /// Create a copy of PageUnknown
 /// with the given fields replaced by the non-null parameter values.
@@ -1695,23 +1701,20 @@ class _PageUnknown implements PageUnknown {
 @pragma('vm:prefer-inline')
 _$PageUnknownCopyWith<_PageUnknown> get copyWith => __$PageUnknownCopyWithImpl<_PageUnknown>(this, _$identity);
 
-@override
-Map<String, dynamic> toJson() {
-  return _$PageUnknownToJson(this, );
-}
+
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PageUnknown&&(identical(other.id, id) || other.id == id)&&(identical(other.type, type) || other.type == type));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PageUnknown&&(identical(other.id, id) || other.id == id)&&(identical(other.type, type) || other.type == type)&&const DeepCollectionEquality().equals(other._json, _json));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,type);
+int get hashCode => Object.hash(runtimeType,id,type,const DeepCollectionEquality().hash(_json));
 
 @override
 String toString() {
-  return 'PageUnknown(id: $id, type: $type)';
+  return 'PageUnknown(id: $id, type: $type, json: $json)';
 }
 
 
@@ -1722,7 +1725,7 @@ abstract mixin class _$PageUnknownCopyWith<$Res> implements $PageUnknownCopyWith
   factory _$PageUnknownCopyWith(_PageUnknown value, $Res Function(_PageUnknown) _then) = __$PageUnknownCopyWithImpl;
 @override @useResult
 $Res call({
- String? id,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) PageContentType? type
+ String? id,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) PageContentType? type,@JsonKey(includeFromJson: false) Map<String, dynamic> json
 });
 
 
@@ -1739,11 +1742,12 @@ class __$PageUnknownCopyWithImpl<$Res>
 
 /// Create a copy of PageUnknown
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = freezed,Object? type = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? id = freezed,Object? type = freezed,Object? json = null,}) {
   return _then(_PageUnknown(
 id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String?,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
-as PageContentType?,
+as PageContentType?,json: null == json ? _self._json : json // ignore: cast_nullable_to_non_nullable
+as Map<String, dynamic>,
   ));
 }
 

@@ -28,6 +28,7 @@ class PageContentConverter
       PageImage() => object.toJson(),
       PageNote() => object.toJson(),
       PageSection() => object.toJson(),
+      PageUnknown() => object.json,
       _ => throw UnimplementedError(),
     };
   }

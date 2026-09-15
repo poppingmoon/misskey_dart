@@ -150,15 +150,16 @@ abstract class PageNote with _$PageNote implements AbstractPageNote {
 
 abstract class AbstractPageUnknown extends AbstractPageContent {}
 
-@freezed
+@Freezed(toJson: false)
 abstract class PageUnknown with _$PageUnknown implements AbstractPageUnknown {
   const factory PageUnknown({
     String? id,
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     PageContentType? type,
+    @JsonKey(includeFromJson: false) @Default({}) Map<String, dynamic> json,
   }) = _PageUnknown;
 
   factory PageUnknown.fromJson(Map<String, dynamic> json) =>
-      _$PageUnknownFromJson(json);
+      _$PageUnknownFromJson(json).copyWith(json: json);
 }
