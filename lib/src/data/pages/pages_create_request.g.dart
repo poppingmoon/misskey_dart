@@ -6,25 +6,25 @@ part of 'pages_create_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_PagesCreateRequest _$PagesCreateRequestFromJson(Map<String, dynamic> json) =>
-    _PagesCreateRequest(
-      title: json['title'] as String,
-      name: json['name'] as String,
-      summary: json['summary'] as String?,
-      content: (json['content'] as List<dynamic>)
-          .map(
-            (e) => const PageContentConverter().fromJson(
-              e as Map<String, dynamic>,
-            ),
-          )
-          .toList(),
-      variables: json['variables'] as List<dynamic>,
-      script: json['script'] as String,
-      eyeCatchingImageId: json['eyeCatchingImageId'] as String?,
-      font: json['font'] as String?,
-      alignCenter: json['alignCenter'] as bool?,
-      hideTitleWhenPinned: json['hideTitleWhenPinned'] as bool?,
-    );
+_PagesCreateRequest _$PagesCreateRequestFromJson(
+  Map<String, dynamic> json,
+) => _PagesCreateRequest(
+  title: json['title'] as String,
+  name: json['name'] as String,
+  summary: json['summary'] as String?,
+  content: (json['content'] as List<dynamic>)
+      .map(
+        (e) => const PageContentConverter().fromJson(e as Map<String, dynamic>),
+      )
+      .toList(),
+  variables: json['variables'] as List<dynamic>,
+  script: json['script'] as String,
+  eyeCatchingImageId: json['eyeCatchingImageId'] as String?,
+  font: json['font'] as String?,
+  alignCenter: json['alignCenter'] as bool?,
+  hideTitleWhenPinned: json['hideTitleWhenPinned'] as bool?,
+  visibility: $enumDecodeNullable(_$PageVisibilityEnumMap, json['visibility']),
+);
 
 Map<String, dynamic> _$PagesCreateRequestToJson(
   _PagesCreateRequest instance,
@@ -39,4 +39,10 @@ Map<String, dynamic> _$PagesCreateRequestToJson(
   'font': instance.font,
   'alignCenter': instance.alignCenter,
   'hideTitleWhenPinned': instance.hideTitleWhenPinned,
+  'visibility': _$PageVisibilityEnumMap[instance.visibility],
+};
+
+const _$PageVisibilityEnumMap = {
+  PageVisibility.public: 'public',
+  PageVisibility.private: 'private',
 };

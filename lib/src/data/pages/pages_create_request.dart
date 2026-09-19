@@ -18,6 +18,7 @@ abstract class PagesCreateRequest with _$PagesCreateRequest {
     String? font,
     bool? alignCenter,
     bool? hideTitleWhenPinned,
+    PageVisibility? visibility,
   }) = _PagesCreateRequest;
 
   factory PagesCreateRequest.fromJson(Map<String, dynamic> json) =>

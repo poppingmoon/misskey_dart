@@ -28,6 +28,8 @@ abstract class Page with _$Page {
     List<DriveFile>? attachedFiles,
     int? likedCount,
     bool? isLiked,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+    PageVisibility? visibility, // MisskeyIO
   }) = _Page;
 
   factory Page.fromJson(Map<String, dynamic> json) => _$PageFromJson(json);
@@ -163,3 +165,5 @@ abstract class PageUnknown with _$PageUnknown implements AbstractPageUnknown {
   factory PageUnknown.fromJson(Map<String, dynamic> json) =>
       _$PageUnknownFromJson(json).copyWith(json: json);
 }
+
+enum PageVisibility { public, private }

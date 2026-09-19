@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$Page {
 
- String get id;@DateTimeConverter() DateTime get createdAt;@DateTimeConverter() DateTime get updatedAt; String get userId; UserLite get user;@PageContentConverter() List<AbstractPageContent> get content; List<Map<String, dynamic>>? get variables; String get title; String get name; String? get summary; bool? get hideTitleWhenPinned; bool? get alignCenter; String? get font; String? get script; String? get eyeCatchingImageId; DriveFile? get eyeCatchingImage; List<DriveFile>? get attachedFiles; int? get likedCount; bool? get isLiked;
+ String get id;@DateTimeConverter() DateTime get createdAt;@DateTimeConverter() DateTime get updatedAt; String get userId; UserLite get user;@PageContentConverter() List<AbstractPageContent> get content; List<Map<String, dynamic>>? get variables; String get title; String get name; String? get summary; bool? get hideTitleWhenPinned; bool? get alignCenter; String? get font; String? get script; String? get eyeCatchingImageId; DriveFile? get eyeCatchingImage; List<DriveFile>? get attachedFiles; int? get likedCount; bool? get isLiked;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) PageVisibility? get visibility;
 /// Create a copy of Page
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -28,16 +28,16 @@ $PageCopyWith<Page> get copyWith => _$PageCopyWithImpl<Page>(this as Page, _$ide
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Page&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.user, user) || other.user == user)&&const DeepCollectionEquality().equals(other.content, content)&&const DeepCollectionEquality().equals(other.variables, variables)&&(identical(other.title, title) || other.title == title)&&(identical(other.name, name) || other.name == name)&&(identical(other.summary, summary) || other.summary == summary)&&(identical(other.hideTitleWhenPinned, hideTitleWhenPinned) || other.hideTitleWhenPinned == hideTitleWhenPinned)&&(identical(other.alignCenter, alignCenter) || other.alignCenter == alignCenter)&&(identical(other.font, font) || other.font == font)&&(identical(other.script, script) || other.script == script)&&(identical(other.eyeCatchingImageId, eyeCatchingImageId) || other.eyeCatchingImageId == eyeCatchingImageId)&&(identical(other.eyeCatchingImage, eyeCatchingImage) || other.eyeCatchingImage == eyeCatchingImage)&&const DeepCollectionEquality().equals(other.attachedFiles, attachedFiles)&&(identical(other.likedCount, likedCount) || other.likedCount == likedCount)&&(identical(other.isLiked, isLiked) || other.isLiked == isLiked));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Page&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.user, user) || other.user == user)&&const DeepCollectionEquality().equals(other.content, content)&&const DeepCollectionEquality().equals(other.variables, variables)&&(identical(other.title, title) || other.title == title)&&(identical(other.name, name) || other.name == name)&&(identical(other.summary, summary) || other.summary == summary)&&(identical(other.hideTitleWhenPinned, hideTitleWhenPinned) || other.hideTitleWhenPinned == hideTitleWhenPinned)&&(identical(other.alignCenter, alignCenter) || other.alignCenter == alignCenter)&&(identical(other.font, font) || other.font == font)&&(identical(other.script, script) || other.script == script)&&(identical(other.eyeCatchingImageId, eyeCatchingImageId) || other.eyeCatchingImageId == eyeCatchingImageId)&&(identical(other.eyeCatchingImage, eyeCatchingImage) || other.eyeCatchingImage == eyeCatchingImage)&&const DeepCollectionEquality().equals(other.attachedFiles, attachedFiles)&&(identical(other.likedCount, likedCount) || other.likedCount == likedCount)&&(identical(other.isLiked, isLiked) || other.isLiked == isLiked)&&(identical(other.visibility, visibility) || other.visibility == visibility));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hashAll([runtimeType,id,createdAt,updatedAt,userId,user,const DeepCollectionEquality().hash(content),const DeepCollectionEquality().hash(variables),title,name,summary,hideTitleWhenPinned,alignCenter,font,script,eyeCatchingImageId,eyeCatchingImage,const DeepCollectionEquality().hash(attachedFiles),likedCount,isLiked]);
+int get hashCode => Object.hashAll([runtimeType,id,createdAt,updatedAt,userId,user,const DeepCollectionEquality().hash(content),const DeepCollectionEquality().hash(variables),title,name,summary,hideTitleWhenPinned,alignCenter,font,script,eyeCatchingImageId,eyeCatchingImage,const DeepCollectionEquality().hash(attachedFiles),likedCount,isLiked,visibility]);
 
 @override
 String toString() {
-  return 'Page(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, userId: $userId, user: $user, content: $content, variables: $variables, title: $title, name: $name, summary: $summary, hideTitleWhenPinned: $hideTitleWhenPinned, alignCenter: $alignCenter, font: $font, script: $script, eyeCatchingImageId: $eyeCatchingImageId, eyeCatchingImage: $eyeCatchingImage, attachedFiles: $attachedFiles, likedCount: $likedCount, isLiked: $isLiked)';
+  return 'Page(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, userId: $userId, user: $user, content: $content, variables: $variables, title: $title, name: $name, summary: $summary, hideTitleWhenPinned: $hideTitleWhenPinned, alignCenter: $alignCenter, font: $font, script: $script, eyeCatchingImageId: $eyeCatchingImageId, eyeCatchingImage: $eyeCatchingImage, attachedFiles: $attachedFiles, likedCount: $likedCount, isLiked: $isLiked, visibility: $visibility)';
 }
 
 
@@ -48,7 +48,7 @@ abstract mixin class $PageCopyWith<$Res>  {
   factory $PageCopyWith(Page value, $Res Function(Page) _then) = _$PageCopyWithImpl;
 @useResult
 $Res call({
- String id,@DateTimeConverter() DateTime createdAt,@DateTimeConverter() DateTime updatedAt, String userId, UserLite user,@PageContentConverter() List<AbstractPageContent> content, List<Map<String, dynamic>>? variables, String title, String name, String? summary, bool? hideTitleWhenPinned, bool? alignCenter, String? font, String? script, String? eyeCatchingImageId, DriveFile? eyeCatchingImage, List<DriveFile>? attachedFiles, int? likedCount, bool? isLiked
+ String id,@DateTimeConverter() DateTime createdAt,@DateTimeConverter() DateTime updatedAt, String userId, UserLite user,@PageContentConverter() List<AbstractPageContent> content, List<Map<String, dynamic>>? variables, String title, String name, String? summary, bool? hideTitleWhenPinned, bool? alignCenter, String? font, String? script, String? eyeCatchingImageId, DriveFile? eyeCatchingImage, List<DriveFile>? attachedFiles, int? likedCount, bool? isLiked,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) PageVisibility? visibility
 });
 
 
@@ -65,7 +65,7 @@ class _$PageCopyWithImpl<$Res>
 
 /// Create a copy of Page
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? createdAt = null,Object? updatedAt = null,Object? userId = null,Object? user = null,Object? content = null,Object? variables = freezed,Object? title = null,Object? name = null,Object? summary = freezed,Object? hideTitleWhenPinned = freezed,Object? alignCenter = freezed,Object? font = freezed,Object? script = freezed,Object? eyeCatchingImageId = freezed,Object? eyeCatchingImage = freezed,Object? attachedFiles = freezed,Object? likedCount = freezed,Object? isLiked = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? createdAt = null,Object? updatedAt = null,Object? userId = null,Object? user = null,Object? content = null,Object? variables = freezed,Object? title = null,Object? name = null,Object? summary = freezed,Object? hideTitleWhenPinned = freezed,Object? alignCenter = freezed,Object? font = freezed,Object? script = freezed,Object? eyeCatchingImageId = freezed,Object? eyeCatchingImage = freezed,Object? attachedFiles = freezed,Object? likedCount = freezed,Object? isLiked = freezed,Object? visibility = freezed,}) {
   return _then(_self.copyWith(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
@@ -86,7 +86,8 @@ as String?,eyeCatchingImage: freezed == eyeCatchingImage ? _self.eyeCatchingImag
 as DriveFile?,attachedFiles: freezed == attachedFiles ? _self.attachedFiles : attachedFiles // ignore: cast_nullable_to_non_nullable
 as List<DriveFile>?,likedCount: freezed == likedCount ? _self.likedCount : likedCount // ignore: cast_nullable_to_non_nullable
 as int?,isLiked: freezed == isLiked ? _self.isLiked : isLiked // ignore: cast_nullable_to_non_nullable
-as bool?,
+as bool?,visibility: freezed == visibility ? _self.visibility : visibility // ignore: cast_nullable_to_non_nullable
+as PageVisibility?,
   ));
 }
 /// Create a copy of Page
@@ -192,10 +193,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt, @DateTimeConverter()  DateTime updatedAt,  String userId,  UserLite user, @PageContentConverter()  List<AbstractPageContent> content,  List<Map<String, dynamic>>? variables,  String title,  String name,  String? summary,  bool? hideTitleWhenPinned,  bool? alignCenter,  String? font,  String? script,  String? eyeCatchingImageId,  DriveFile? eyeCatchingImage,  List<DriveFile>? attachedFiles,  int? likedCount,  bool? isLiked)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt, @DateTimeConverter()  DateTime updatedAt,  String userId,  UserLite user, @PageContentConverter()  List<AbstractPageContent> content,  List<Map<String, dynamic>>? variables,  String title,  String name,  String? summary,  bool? hideTitleWhenPinned,  bool? alignCenter,  String? font,  String? script,  String? eyeCatchingImageId,  DriveFile? eyeCatchingImage,  List<DriveFile>? attachedFiles,  int? likedCount,  bool? isLiked, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  PageVisibility? visibility)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Page() when $default != null:
-return $default(_that.id,_that.createdAt,_that.updatedAt,_that.userId,_that.user,_that.content,_that.variables,_that.title,_that.name,_that.summary,_that.hideTitleWhenPinned,_that.alignCenter,_that.font,_that.script,_that.eyeCatchingImageId,_that.eyeCatchingImage,_that.attachedFiles,_that.likedCount,_that.isLiked);case _:
+return $default(_that.id,_that.createdAt,_that.updatedAt,_that.userId,_that.user,_that.content,_that.variables,_that.title,_that.name,_that.summary,_that.hideTitleWhenPinned,_that.alignCenter,_that.font,_that.script,_that.eyeCatchingImageId,_that.eyeCatchingImage,_that.attachedFiles,_that.likedCount,_that.isLiked,_that.visibility);case _:
   return orElse();
 
 }
@@ -213,10 +214,10 @@ return $default(_that.id,_that.createdAt,_that.updatedAt,_that.userId,_that.user
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt, @DateTimeConverter()  DateTime updatedAt,  String userId,  UserLite user, @PageContentConverter()  List<AbstractPageContent> content,  List<Map<String, dynamic>>? variables,  String title,  String name,  String? summary,  bool? hideTitleWhenPinned,  bool? alignCenter,  String? font,  String? script,  String? eyeCatchingImageId,  DriveFile? eyeCatchingImage,  List<DriveFile>? attachedFiles,  int? likedCount,  bool? isLiked)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt, @DateTimeConverter()  DateTime updatedAt,  String userId,  UserLite user, @PageContentConverter()  List<AbstractPageContent> content,  List<Map<String, dynamic>>? variables,  String title,  String name,  String? summary,  bool? hideTitleWhenPinned,  bool? alignCenter,  String? font,  String? script,  String? eyeCatchingImageId,  DriveFile? eyeCatchingImage,  List<DriveFile>? attachedFiles,  int? likedCount,  bool? isLiked, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  PageVisibility? visibility)  $default,) {final _that = this;
 switch (_that) {
 case _Page():
-return $default(_that.id,_that.createdAt,_that.updatedAt,_that.userId,_that.user,_that.content,_that.variables,_that.title,_that.name,_that.summary,_that.hideTitleWhenPinned,_that.alignCenter,_that.font,_that.script,_that.eyeCatchingImageId,_that.eyeCatchingImage,_that.attachedFiles,_that.likedCount,_that.isLiked);case _:
+return $default(_that.id,_that.createdAt,_that.updatedAt,_that.userId,_that.user,_that.content,_that.variables,_that.title,_that.name,_that.summary,_that.hideTitleWhenPinned,_that.alignCenter,_that.font,_that.script,_that.eyeCatchingImageId,_that.eyeCatchingImage,_that.attachedFiles,_that.likedCount,_that.isLiked,_that.visibility);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -233,10 +234,10 @@ return $default(_that.id,_that.createdAt,_that.updatedAt,_that.userId,_that.user
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id, @DateTimeConverter()  DateTime createdAt, @DateTimeConverter()  DateTime updatedAt,  String userId,  UserLite user, @PageContentConverter()  List<AbstractPageContent> content,  List<Map<String, dynamic>>? variables,  String title,  String name,  String? summary,  bool? hideTitleWhenPinned,  bool? alignCenter,  String? font,  String? script,  String? eyeCatchingImageId,  DriveFile? eyeCatchingImage,  List<DriveFile>? attachedFiles,  int? likedCount,  bool? isLiked)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id, @DateTimeConverter()  DateTime createdAt, @DateTimeConverter()  DateTime updatedAt,  String userId,  UserLite user, @PageContentConverter()  List<AbstractPageContent> content,  List<Map<String, dynamic>>? variables,  String title,  String name,  String? summary,  bool? hideTitleWhenPinned,  bool? alignCenter,  String? font,  String? script,  String? eyeCatchingImageId,  DriveFile? eyeCatchingImage,  List<DriveFile>? attachedFiles,  int? likedCount,  bool? isLiked, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  PageVisibility? visibility)?  $default,) {final _that = this;
 switch (_that) {
 case _Page() when $default != null:
-return $default(_that.id,_that.createdAt,_that.updatedAt,_that.userId,_that.user,_that.content,_that.variables,_that.title,_that.name,_that.summary,_that.hideTitleWhenPinned,_that.alignCenter,_that.font,_that.script,_that.eyeCatchingImageId,_that.eyeCatchingImage,_that.attachedFiles,_that.likedCount,_that.isLiked);case _:
+return $default(_that.id,_that.createdAt,_that.updatedAt,_that.userId,_that.user,_that.content,_that.variables,_that.title,_that.name,_that.summary,_that.hideTitleWhenPinned,_that.alignCenter,_that.font,_that.script,_that.eyeCatchingImageId,_that.eyeCatchingImage,_that.attachedFiles,_that.likedCount,_that.isLiked,_that.visibility);case _:
   return null;
 
 }
@@ -248,7 +249,7 @@ return $default(_that.id,_that.createdAt,_that.updatedAt,_that.userId,_that.user
 @JsonSerializable()
 
 class _Page implements Page {
-  const _Page({required this.id, @DateTimeConverter() required this.createdAt, @DateTimeConverter() required this.updatedAt, required this.userId, required this.user, @PageContentConverter() required final  List<AbstractPageContent> content, final  List<Map<String, dynamic>>? variables, required this.title, required this.name, this.summary, this.hideTitleWhenPinned, this.alignCenter, this.font, this.script, this.eyeCatchingImageId, this.eyeCatchingImage, final  List<DriveFile>? attachedFiles, this.likedCount, this.isLiked}): _content = content,_variables = variables,_attachedFiles = attachedFiles;
+  const _Page({required this.id, @DateTimeConverter() required this.createdAt, @DateTimeConverter() required this.updatedAt, required this.userId, required this.user, @PageContentConverter() required final  List<AbstractPageContent> content, final  List<Map<String, dynamic>>? variables, required this.title, required this.name, this.summary, this.hideTitleWhenPinned, this.alignCenter, this.font, this.script, this.eyeCatchingImageId, this.eyeCatchingImage, final  List<DriveFile>? attachedFiles, this.likedCount, this.isLiked, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.visibility}): _content = content,_variables = variables,_attachedFiles = attachedFiles;
   factory _Page.fromJson(Map<String, dynamic> json) => _$PageFromJson(json);
 
 @override final  String id;
@@ -292,6 +293,7 @@ class _Page implements Page {
 
 @override final  int? likedCount;
 @override final  bool? isLiked;
+@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  PageVisibility? visibility;
 
 /// Create a copy of Page
 /// with the given fields replaced by the non-null parameter values.
@@ -306,16 +308,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Page&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.user, user) || other.user == user)&&const DeepCollectionEquality().equals(other._content, _content)&&const DeepCollectionEquality().equals(other._variables, _variables)&&(identical(other.title, title) || other.title == title)&&(identical(other.name, name) || other.name == name)&&(identical(other.summary, summary) || other.summary == summary)&&(identical(other.hideTitleWhenPinned, hideTitleWhenPinned) || other.hideTitleWhenPinned == hideTitleWhenPinned)&&(identical(other.alignCenter, alignCenter) || other.alignCenter == alignCenter)&&(identical(other.font, font) || other.font == font)&&(identical(other.script, script) || other.script == script)&&(identical(other.eyeCatchingImageId, eyeCatchingImageId) || other.eyeCatchingImageId == eyeCatchingImageId)&&(identical(other.eyeCatchingImage, eyeCatchingImage) || other.eyeCatchingImage == eyeCatchingImage)&&const DeepCollectionEquality().equals(other._attachedFiles, _attachedFiles)&&(identical(other.likedCount, likedCount) || other.likedCount == likedCount)&&(identical(other.isLiked, isLiked) || other.isLiked == isLiked));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Page&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.user, user) || other.user == user)&&const DeepCollectionEquality().equals(other._content, _content)&&const DeepCollectionEquality().equals(other._variables, _variables)&&(identical(other.title, title) || other.title == title)&&(identical(other.name, name) || other.name == name)&&(identical(other.summary, summary) || other.summary == summary)&&(identical(other.hideTitleWhenPinned, hideTitleWhenPinned) || other.hideTitleWhenPinned == hideTitleWhenPinned)&&(identical(other.alignCenter, alignCenter) || other.alignCenter == alignCenter)&&(identical(other.font, font) || other.font == font)&&(identical(other.script, script) || other.script == script)&&(identical(other.eyeCatchingImageId, eyeCatchingImageId) || other.eyeCatchingImageId == eyeCatchingImageId)&&(identical(other.eyeCatchingImage, eyeCatchingImage) || other.eyeCatchingImage == eyeCatchingImage)&&const DeepCollectionEquality().equals(other._attachedFiles, _attachedFiles)&&(identical(other.likedCount, likedCount) || other.likedCount == likedCount)&&(identical(other.isLiked, isLiked) || other.isLiked == isLiked)&&(identical(other.visibility, visibility) || other.visibility == visibility));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hashAll([runtimeType,id,createdAt,updatedAt,userId,user,const DeepCollectionEquality().hash(_content),const DeepCollectionEquality().hash(_variables),title,name,summary,hideTitleWhenPinned,alignCenter,font,script,eyeCatchingImageId,eyeCatchingImage,const DeepCollectionEquality().hash(_attachedFiles),likedCount,isLiked]);
+int get hashCode => Object.hashAll([runtimeType,id,createdAt,updatedAt,userId,user,const DeepCollectionEquality().hash(_content),const DeepCollectionEquality().hash(_variables),title,name,summary,hideTitleWhenPinned,alignCenter,font,script,eyeCatchingImageId,eyeCatchingImage,const DeepCollectionEquality().hash(_attachedFiles),likedCount,isLiked,visibility]);
 
 @override
 String toString() {
-  return 'Page(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, userId: $userId, user: $user, content: $content, variables: $variables, title: $title, name: $name, summary: $summary, hideTitleWhenPinned: $hideTitleWhenPinned, alignCenter: $alignCenter, font: $font, script: $script, eyeCatchingImageId: $eyeCatchingImageId, eyeCatchingImage: $eyeCatchingImage, attachedFiles: $attachedFiles, likedCount: $likedCount, isLiked: $isLiked)';
+  return 'Page(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, userId: $userId, user: $user, content: $content, variables: $variables, title: $title, name: $name, summary: $summary, hideTitleWhenPinned: $hideTitleWhenPinned, alignCenter: $alignCenter, font: $font, script: $script, eyeCatchingImageId: $eyeCatchingImageId, eyeCatchingImage: $eyeCatchingImage, attachedFiles: $attachedFiles, likedCount: $likedCount, isLiked: $isLiked, visibility: $visibility)';
 }
 
 
@@ -326,7 +328,7 @@ abstract mixin class _$PageCopyWith<$Res> implements $PageCopyWith<$Res> {
   factory _$PageCopyWith(_Page value, $Res Function(_Page) _then) = __$PageCopyWithImpl;
 @override @useResult
 $Res call({
- String id,@DateTimeConverter() DateTime createdAt,@DateTimeConverter() DateTime updatedAt, String userId, UserLite user,@PageContentConverter() List<AbstractPageContent> content, List<Map<String, dynamic>>? variables, String title, String name, String? summary, bool? hideTitleWhenPinned, bool? alignCenter, String? font, String? script, String? eyeCatchingImageId, DriveFile? eyeCatchingImage, List<DriveFile>? attachedFiles, int? likedCount, bool? isLiked
+ String id,@DateTimeConverter() DateTime createdAt,@DateTimeConverter() DateTime updatedAt, String userId, UserLite user,@PageContentConverter() List<AbstractPageContent> content, List<Map<String, dynamic>>? variables, String title, String name, String? summary, bool? hideTitleWhenPinned, bool? alignCenter, String? font, String? script, String? eyeCatchingImageId, DriveFile? eyeCatchingImage, List<DriveFile>? attachedFiles, int? likedCount, bool? isLiked,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) PageVisibility? visibility
 });
 
 
@@ -343,7 +345,7 @@ class __$PageCopyWithImpl<$Res>
 
 /// Create a copy of Page
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? createdAt = null,Object? updatedAt = null,Object? userId = null,Object? user = null,Object? content = null,Object? variables = freezed,Object? title = null,Object? name = null,Object? summary = freezed,Object? hideTitleWhenPinned = freezed,Object? alignCenter = freezed,Object? font = freezed,Object? script = freezed,Object? eyeCatchingImageId = freezed,Object? eyeCatchingImage = freezed,Object? attachedFiles = freezed,Object? likedCount = freezed,Object? isLiked = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? createdAt = null,Object? updatedAt = null,Object? userId = null,Object? user = null,Object? content = null,Object? variables = freezed,Object? title = null,Object? name = null,Object? summary = freezed,Object? hideTitleWhenPinned = freezed,Object? alignCenter = freezed,Object? font = freezed,Object? script = freezed,Object? eyeCatchingImageId = freezed,Object? eyeCatchingImage = freezed,Object? attachedFiles = freezed,Object? likedCount = freezed,Object? isLiked = freezed,Object? visibility = freezed,}) {
   return _then(_Page(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
@@ -364,7 +366,8 @@ as String?,eyeCatchingImage: freezed == eyeCatchingImage ? _self.eyeCatchingImag
 as DriveFile?,attachedFiles: freezed == attachedFiles ? _self._attachedFiles : attachedFiles // ignore: cast_nullable_to_non_nullable
 as List<DriveFile>?,likedCount: freezed == likedCount ? _self.likedCount : likedCount // ignore: cast_nullable_to_non_nullable
 as int?,isLiked: freezed == isLiked ? _self.isLiked : isLiked // ignore: cast_nullable_to_non_nullable
-as bool?,
+as bool?,visibility: freezed == visibility ? _self.visibility : visibility // ignore: cast_nullable_to_non_nullable
+as PageVisibility?,
   ));
 }
 

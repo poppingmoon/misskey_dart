@@ -36,6 +36,11 @@ _Page _$PageFromJson(Map<String, dynamic> json) => _Page(
       .toList(),
   likedCount: (json['likedCount'] as num?)?.toInt(),
   isLiked: json['isLiked'] as bool?,
+  visibility: $enumDecodeNullable(
+    _$PageVisibilityEnumMap,
+    json['visibility'],
+    unknownValue: JsonKey.nullForUndefinedEnumValue,
+  ),
 );
 
 Map<String, dynamic> _$PageToJson(_Page instance) => <String, dynamic>{
@@ -58,6 +63,12 @@ Map<String, dynamic> _$PageToJson(_Page instance) => <String, dynamic>{
   'attachedFiles': instance.attachedFiles?.map((e) => e.toJson()).toList(),
   'likedCount': instance.likedCount,
   'isLiked': instance.isLiked,
+  'visibility': _$PageVisibilityEnumMap[instance.visibility],
+};
+
+const _$PageVisibilityEnumMap = {
+  PageVisibility.public: 'public',
+  PageVisibility.private: 'private',
 };
 
 _PageText _$PageTextFromJson(Map<String, dynamic> json) => _PageText(

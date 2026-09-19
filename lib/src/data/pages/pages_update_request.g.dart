@@ -6,26 +6,26 @@ part of 'pages_update_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_PagesUpdateRequest _$PagesUpdateRequestFromJson(Map<String, dynamic> json) =>
-    _PagesUpdateRequest(
-      pageId: json['pageId'] as String,
-      title: json['title'] as String?,
-      name: json['name'] as String?,
-      summary: json['summary'] as String?,
-      content: (json['content'] as List<dynamic>?)
-          ?.map(
-            (e) => const PageContentConverter().fromJson(
-              e as Map<String, dynamic>,
-            ),
-          )
-          .toList(),
-      variables: json['variables'] as List<dynamic>?,
-      script: json['script'] as String?,
-      eyeCatchingImageId: json['eyeCatchingImageId'] as String?,
-      font: json['font'] as String?,
-      alignCenter: json['alignCenter'] as bool?,
-      hideTitleWhenPinned: json['hideTitleWhenPinned'] as bool?,
-    );
+_PagesUpdateRequest _$PagesUpdateRequestFromJson(
+  Map<String, dynamic> json,
+) => _PagesUpdateRequest(
+  pageId: json['pageId'] as String,
+  title: json['title'] as String?,
+  name: json['name'] as String?,
+  summary: json['summary'] as String?,
+  content: (json['content'] as List<dynamic>?)
+      ?.map(
+        (e) => const PageContentConverter().fromJson(e as Map<String, dynamic>),
+      )
+      .toList(),
+  variables: json['variables'] as List<dynamic>?,
+  script: json['script'] as String?,
+  eyeCatchingImageId: json['eyeCatchingImageId'] as String?,
+  font: json['font'] as String?,
+  alignCenter: json['alignCenter'] as bool?,
+  hideTitleWhenPinned: json['hideTitleWhenPinned'] as bool?,
+  visibility: $enumDecodeNullable(_$PageVisibilityEnumMap, json['visibility']),
+);
 
 Map<String, dynamic> _$PagesUpdateRequestToJson(_PagesUpdateRequest instance) =>
     <String, dynamic>{
@@ -42,4 +42,10 @@ Map<String, dynamic> _$PagesUpdateRequestToJson(_PagesUpdateRequest instance) =>
       'font': instance.font,
       'alignCenter': instance.alignCenter,
       'hideTitleWhenPinned': instance.hideTitleWhenPinned,
+      'visibility': _$PageVisibilityEnumMap[instance.visibility],
     };
+
+const _$PageVisibilityEnumMap = {
+  PageVisibility.public: 'public',
+  PageVisibility.private: 'private',
+};

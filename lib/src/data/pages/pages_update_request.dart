@@ -19,6 +19,7 @@ abstract class PagesUpdateRequest with _$PagesUpdateRequest {
     String? font,
     bool? alignCenter,
     bool? hideTitleWhenPinned,
+    PageVisibility? visibility,
   }) = _PagesUpdateRequest;
 
   factory PagesUpdateRequest.fromJson(Map<String, dynamic> json) =>

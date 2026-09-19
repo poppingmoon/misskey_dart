@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$PagesUpdateRequest {
 
- String get pageId; String? get title; String? get name; String? get summary;@PageContentConverter() List<AbstractPageContent>? get content; List<dynamic>? get variables; String? get script; String? get eyeCatchingImageId; String? get font; bool? get alignCenter; bool? get hideTitleWhenPinned;
+ String get pageId; String? get title; String? get name; String? get summary;@PageContentConverter() List<AbstractPageContent>? get content; List<dynamic>? get variables; String? get script; String? get eyeCatchingImageId; String? get font; bool? get alignCenter; bool? get hideTitleWhenPinned; PageVisibility? get visibility;
 /// Create a copy of PagesUpdateRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -28,16 +28,16 @@ $PagesUpdateRequestCopyWith<PagesUpdateRequest> get copyWith => _$PagesUpdateReq
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is PagesUpdateRequest&&(identical(other.pageId, pageId) || other.pageId == pageId)&&(identical(other.title, title) || other.title == title)&&(identical(other.name, name) || other.name == name)&&(identical(other.summary, summary) || other.summary == summary)&&const DeepCollectionEquality().equals(other.content, content)&&const DeepCollectionEquality().equals(other.variables, variables)&&(identical(other.script, script) || other.script == script)&&(identical(other.eyeCatchingImageId, eyeCatchingImageId) || other.eyeCatchingImageId == eyeCatchingImageId)&&(identical(other.font, font) || other.font == font)&&(identical(other.alignCenter, alignCenter) || other.alignCenter == alignCenter)&&(identical(other.hideTitleWhenPinned, hideTitleWhenPinned) || other.hideTitleWhenPinned == hideTitleWhenPinned));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PagesUpdateRequest&&(identical(other.pageId, pageId) || other.pageId == pageId)&&(identical(other.title, title) || other.title == title)&&(identical(other.name, name) || other.name == name)&&(identical(other.summary, summary) || other.summary == summary)&&const DeepCollectionEquality().equals(other.content, content)&&const DeepCollectionEquality().equals(other.variables, variables)&&(identical(other.script, script) || other.script == script)&&(identical(other.eyeCatchingImageId, eyeCatchingImageId) || other.eyeCatchingImageId == eyeCatchingImageId)&&(identical(other.font, font) || other.font == font)&&(identical(other.alignCenter, alignCenter) || other.alignCenter == alignCenter)&&(identical(other.hideTitleWhenPinned, hideTitleWhenPinned) || other.hideTitleWhenPinned == hideTitleWhenPinned)&&(identical(other.visibility, visibility) || other.visibility == visibility));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,pageId,title,name,summary,const DeepCollectionEquality().hash(content),const DeepCollectionEquality().hash(variables),script,eyeCatchingImageId,font,alignCenter,hideTitleWhenPinned);
+int get hashCode => Object.hash(runtimeType,pageId,title,name,summary,const DeepCollectionEquality().hash(content),const DeepCollectionEquality().hash(variables),script,eyeCatchingImageId,font,alignCenter,hideTitleWhenPinned,visibility);
 
 @override
 String toString() {
-  return 'PagesUpdateRequest(pageId: $pageId, title: $title, name: $name, summary: $summary, content: $content, variables: $variables, script: $script, eyeCatchingImageId: $eyeCatchingImageId, font: $font, alignCenter: $alignCenter, hideTitleWhenPinned: $hideTitleWhenPinned)';
+  return 'PagesUpdateRequest(pageId: $pageId, title: $title, name: $name, summary: $summary, content: $content, variables: $variables, script: $script, eyeCatchingImageId: $eyeCatchingImageId, font: $font, alignCenter: $alignCenter, hideTitleWhenPinned: $hideTitleWhenPinned, visibility: $visibility)';
 }
 
 
@@ -48,7 +48,7 @@ abstract mixin class $PagesUpdateRequestCopyWith<$Res>  {
   factory $PagesUpdateRequestCopyWith(PagesUpdateRequest value, $Res Function(PagesUpdateRequest) _then) = _$PagesUpdateRequestCopyWithImpl;
 @useResult
 $Res call({
- String pageId, String? title, String? name, String? summary,@PageContentConverter() List<AbstractPageContent>? content, List<dynamic>? variables, String? script, String? eyeCatchingImageId, String? font, bool? alignCenter, bool? hideTitleWhenPinned
+ String pageId, String? title, String? name, String? summary,@PageContentConverter() List<AbstractPageContent>? content, List<dynamic>? variables, String? script, String? eyeCatchingImageId, String? font, bool? alignCenter, bool? hideTitleWhenPinned, PageVisibility? visibility
 });
 
 
@@ -65,7 +65,7 @@ class _$PagesUpdateRequestCopyWithImpl<$Res>
 
 /// Create a copy of PagesUpdateRequest
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? pageId = null,Object? title = freezed,Object? name = freezed,Object? summary = freezed,Object? content = freezed,Object? variables = freezed,Object? script = freezed,Object? eyeCatchingImageId = freezed,Object? font = freezed,Object? alignCenter = freezed,Object? hideTitleWhenPinned = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? pageId = null,Object? title = freezed,Object? name = freezed,Object? summary = freezed,Object? content = freezed,Object? variables = freezed,Object? script = freezed,Object? eyeCatchingImageId = freezed,Object? font = freezed,Object? alignCenter = freezed,Object? hideTitleWhenPinned = freezed,Object? visibility = freezed,}) {
   return _then(_self.copyWith(
 pageId: null == pageId ? _self.pageId : pageId // ignore: cast_nullable_to_non_nullable
 as String,title: freezed == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
@@ -78,7 +78,8 @@ as String?,eyeCatchingImageId: freezed == eyeCatchingImageId ? _self.eyeCatching
 as String?,font: freezed == font ? _self.font : font // ignore: cast_nullable_to_non_nullable
 as String?,alignCenter: freezed == alignCenter ? _self.alignCenter : alignCenter // ignore: cast_nullable_to_non_nullable
 as bool?,hideTitleWhenPinned: freezed == hideTitleWhenPinned ? _self.hideTitleWhenPinned : hideTitleWhenPinned // ignore: cast_nullable_to_non_nullable
-as bool?,
+as bool?,visibility: freezed == visibility ? _self.visibility : visibility // ignore: cast_nullable_to_non_nullable
+as PageVisibility?,
   ));
 }
 
@@ -163,10 +164,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String pageId,  String? title,  String? name,  String? summary, @PageContentConverter()  List<AbstractPageContent>? content,  List<dynamic>? variables,  String? script,  String? eyeCatchingImageId,  String? font,  bool? alignCenter,  bool? hideTitleWhenPinned)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String pageId,  String? title,  String? name,  String? summary, @PageContentConverter()  List<AbstractPageContent>? content,  List<dynamic>? variables,  String? script,  String? eyeCatchingImageId,  String? font,  bool? alignCenter,  bool? hideTitleWhenPinned,  PageVisibility? visibility)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _PagesUpdateRequest() when $default != null:
-return $default(_that.pageId,_that.title,_that.name,_that.summary,_that.content,_that.variables,_that.script,_that.eyeCatchingImageId,_that.font,_that.alignCenter,_that.hideTitleWhenPinned);case _:
+return $default(_that.pageId,_that.title,_that.name,_that.summary,_that.content,_that.variables,_that.script,_that.eyeCatchingImageId,_that.font,_that.alignCenter,_that.hideTitleWhenPinned,_that.visibility);case _:
   return orElse();
 
 }
@@ -184,10 +185,10 @@ return $default(_that.pageId,_that.title,_that.name,_that.summary,_that.content,
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String pageId,  String? title,  String? name,  String? summary, @PageContentConverter()  List<AbstractPageContent>? content,  List<dynamic>? variables,  String? script,  String? eyeCatchingImageId,  String? font,  bool? alignCenter,  bool? hideTitleWhenPinned)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String pageId,  String? title,  String? name,  String? summary, @PageContentConverter()  List<AbstractPageContent>? content,  List<dynamic>? variables,  String? script,  String? eyeCatchingImageId,  String? font,  bool? alignCenter,  bool? hideTitleWhenPinned,  PageVisibility? visibility)  $default,) {final _that = this;
 switch (_that) {
 case _PagesUpdateRequest():
-return $default(_that.pageId,_that.title,_that.name,_that.summary,_that.content,_that.variables,_that.script,_that.eyeCatchingImageId,_that.font,_that.alignCenter,_that.hideTitleWhenPinned);case _:
+return $default(_that.pageId,_that.title,_that.name,_that.summary,_that.content,_that.variables,_that.script,_that.eyeCatchingImageId,_that.font,_that.alignCenter,_that.hideTitleWhenPinned,_that.visibility);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -204,10 +205,10 @@ return $default(_that.pageId,_that.title,_that.name,_that.summary,_that.content,
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String pageId,  String? title,  String? name,  String? summary, @PageContentConverter()  List<AbstractPageContent>? content,  List<dynamic>? variables,  String? script,  String? eyeCatchingImageId,  String? font,  bool? alignCenter,  bool? hideTitleWhenPinned)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String pageId,  String? title,  String? name,  String? summary, @PageContentConverter()  List<AbstractPageContent>? content,  List<dynamic>? variables,  String? script,  String? eyeCatchingImageId,  String? font,  bool? alignCenter,  bool? hideTitleWhenPinned,  PageVisibility? visibility)?  $default,) {final _that = this;
 switch (_that) {
 case _PagesUpdateRequest() when $default != null:
-return $default(_that.pageId,_that.title,_that.name,_that.summary,_that.content,_that.variables,_that.script,_that.eyeCatchingImageId,_that.font,_that.alignCenter,_that.hideTitleWhenPinned);case _:
+return $default(_that.pageId,_that.title,_that.name,_that.summary,_that.content,_that.variables,_that.script,_that.eyeCatchingImageId,_that.font,_that.alignCenter,_that.hideTitleWhenPinned,_that.visibility);case _:
   return null;
 
 }
@@ -219,7 +220,7 @@ return $default(_that.pageId,_that.title,_that.name,_that.summary,_that.content,
 @JsonSerializable()
 
 class _PagesUpdateRequest implements PagesUpdateRequest {
-  const _PagesUpdateRequest({required this.pageId, this.title, this.name, this.summary, @PageContentConverter() final  List<AbstractPageContent>? content, final  List<dynamic>? variables, this.script, this.eyeCatchingImageId, this.font, this.alignCenter, this.hideTitleWhenPinned}): _content = content,_variables = variables;
+  const _PagesUpdateRequest({required this.pageId, this.title, this.name, this.summary, @PageContentConverter() final  List<AbstractPageContent>? content, final  List<dynamic>? variables, this.script, this.eyeCatchingImageId, this.font, this.alignCenter, this.hideTitleWhenPinned, this.visibility}): _content = content,_variables = variables;
   factory _PagesUpdateRequest.fromJson(Map<String, dynamic> json) => _$PagesUpdateRequestFromJson(json);
 
 @override final  String pageId;
@@ -249,6 +250,7 @@ class _PagesUpdateRequest implements PagesUpdateRequest {
 @override final  String? font;
 @override final  bool? alignCenter;
 @override final  bool? hideTitleWhenPinned;
+@override final  PageVisibility? visibility;
 
 /// Create a copy of PagesUpdateRequest
 /// with the given fields replaced by the non-null parameter values.
@@ -263,16 +265,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PagesUpdateRequest&&(identical(other.pageId, pageId) || other.pageId == pageId)&&(identical(other.title, title) || other.title == title)&&(identical(other.name, name) || other.name == name)&&(identical(other.summary, summary) || other.summary == summary)&&const DeepCollectionEquality().equals(other._content, _content)&&const DeepCollectionEquality().equals(other._variables, _variables)&&(identical(other.script, script) || other.script == script)&&(identical(other.eyeCatchingImageId, eyeCatchingImageId) || other.eyeCatchingImageId == eyeCatchingImageId)&&(identical(other.font, font) || other.font == font)&&(identical(other.alignCenter, alignCenter) || other.alignCenter == alignCenter)&&(identical(other.hideTitleWhenPinned, hideTitleWhenPinned) || other.hideTitleWhenPinned == hideTitleWhenPinned));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PagesUpdateRequest&&(identical(other.pageId, pageId) || other.pageId == pageId)&&(identical(other.title, title) || other.title == title)&&(identical(other.name, name) || other.name == name)&&(identical(other.summary, summary) || other.summary == summary)&&const DeepCollectionEquality().equals(other._content, _content)&&const DeepCollectionEquality().equals(other._variables, _variables)&&(identical(other.script, script) || other.script == script)&&(identical(other.eyeCatchingImageId, eyeCatchingImageId) || other.eyeCatchingImageId == eyeCatchingImageId)&&(identical(other.font, font) || other.font == font)&&(identical(other.alignCenter, alignCenter) || other.alignCenter == alignCenter)&&(identical(other.hideTitleWhenPinned, hideTitleWhenPinned) || other.hideTitleWhenPinned == hideTitleWhenPinned)&&(identical(other.visibility, visibility) || other.visibility == visibility));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,pageId,title,name,summary,const DeepCollectionEquality().hash(_content),const DeepCollectionEquality().hash(_variables),script,eyeCatchingImageId,font,alignCenter,hideTitleWhenPinned);
+int get hashCode => Object.hash(runtimeType,pageId,title,name,summary,const DeepCollectionEquality().hash(_content),const DeepCollectionEquality().hash(_variables),script,eyeCatchingImageId,font,alignCenter,hideTitleWhenPinned,visibility);
 
 @override
 String toString() {
-  return 'PagesUpdateRequest(pageId: $pageId, title: $title, name: $name, summary: $summary, content: $content, variables: $variables, script: $script, eyeCatchingImageId: $eyeCatchingImageId, font: $font, alignCenter: $alignCenter, hideTitleWhenPinned: $hideTitleWhenPinned)';
+  return 'PagesUpdateRequest(pageId: $pageId, title: $title, name: $name, summary: $summary, content: $content, variables: $variables, script: $script, eyeCatchingImageId: $eyeCatchingImageId, font: $font, alignCenter: $alignCenter, hideTitleWhenPinned: $hideTitleWhenPinned, visibility: $visibility)';
 }
 
 
@@ -283,7 +285,7 @@ abstract mixin class _$PagesUpdateRequestCopyWith<$Res> implements $PagesUpdateR
   factory _$PagesUpdateRequestCopyWith(_PagesUpdateRequest value, $Res Function(_PagesUpdateRequest) _then) = __$PagesUpdateRequestCopyWithImpl;
 @override @useResult
 $Res call({
- String pageId, String? title, String? name, String? summary,@PageContentConverter() List<AbstractPageContent>? content, List<dynamic>? variables, String? script, String? eyeCatchingImageId, String? font, bool? alignCenter, bool? hideTitleWhenPinned
+ String pageId, String? title, String? name, String? summary,@PageContentConverter() List<AbstractPageContent>? content, List<dynamic>? variables, String? script, String? eyeCatchingImageId, String? font, bool? alignCenter, bool? hideTitleWhenPinned, PageVisibility? visibility
 });
 
 
@@ -300,7 +302,7 @@ class __$PagesUpdateRequestCopyWithImpl<$Res>
 
 /// Create a copy of PagesUpdateRequest
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? pageId = null,Object? title = freezed,Object? name = freezed,Object? summary = freezed,Object? content = freezed,Object? variables = freezed,Object? script = freezed,Object? eyeCatchingImageId = freezed,Object? font = freezed,Object? alignCenter = freezed,Object? hideTitleWhenPinned = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? pageId = null,Object? title = freezed,Object? name = freezed,Object? summary = freezed,Object? content = freezed,Object? variables = freezed,Object? script = freezed,Object? eyeCatchingImageId = freezed,Object? font = freezed,Object? alignCenter = freezed,Object? hideTitleWhenPinned = freezed,Object? visibility = freezed,}) {
   return _then(_PagesUpdateRequest(
 pageId: null == pageId ? _self.pageId : pageId // ignore: cast_nullable_to_non_nullable
 as String,title: freezed == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
@@ -313,7 +315,8 @@ as String?,eyeCatchingImageId: freezed == eyeCatchingImageId ? _self.eyeCatching
 as String?,font: freezed == font ? _self.font : font // ignore: cast_nullable_to_non_nullable
 as String?,alignCenter: freezed == alignCenter ? _self.alignCenter : alignCenter // ignore: cast_nullable_to_non_nullable
 as bool?,hideTitleWhenPinned: freezed == hideTitleWhenPinned ? _self.hideTitleWhenPinned : hideTitleWhenPinned // ignore: cast_nullable_to_non_nullable
-as bool?,
+as bool?,visibility: freezed == visibility ? _self.visibility : visibility // ignore: cast_nullable_to_non_nullable
+as PageVisibility?,
   ));
 }
 
