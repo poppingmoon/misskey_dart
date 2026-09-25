@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'pages_create_request.dart';
@@ -9,6 +9,7 @@ part of 'pages_create_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $PagesCreateRequestCopyWith<PagesCreateRequest> get copyWith => _$PagesCreateReq
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is PagesCreateRequest&&(identical(other.title, title) || other.title == title)&&(identical(other.name, name) || other.name == name)&&(identical(other.summary, summary) || other.summary == summary)&&const DeepCollectionEquality().equals(other.content, content)&&const DeepCollectionEquality().equals(other.variables, variables)&&(identical(other.script, script) || other.script == script)&&(identical(other.eyeCatchingImageId, eyeCatchingImageId) || other.eyeCatchingImageId == eyeCatchingImageId)&&(identical(other.font, font) || other.font == font)&&(identical(other.alignCenter, alignCenter) || other.alignCenter == alignCenter)&&(identical(other.hideTitleWhenPinned, hideTitleWhenPinned) || other.hideTitleWhenPinned == hideTitleWhenPinned)&&(identical(other.visibility, visibility) || other.visibility == visibility));
+  final _this = this as PagesCreateRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PagesCreateRequest&&(identical(other.title, _this.title) || other.title == _this.title)&&(identical(other.name, _this.name) || other.name == _this.name)&&(identical(other.summary, _this.summary) || other.summary == _this.summary)&&const DeepCollectionEquality().equals(other.content, _this.content)&&const DeepCollectionEquality().equals(other.variables, _this.variables)&&(identical(other.script, _this.script) || other.script == _this.script)&&(identical(other.eyeCatchingImageId, _this.eyeCatchingImageId) || other.eyeCatchingImageId == _this.eyeCatchingImageId)&&(identical(other.font, _this.font) || other.font == _this.font)&&(identical(other.alignCenter, _this.alignCenter) || other.alignCenter == _this.alignCenter)&&(identical(other.hideTitleWhenPinned, _this.hideTitleWhenPinned) || other.hideTitleWhenPinned == _this.hideTitleWhenPinned)&&(identical(other.visibility, _this.visibility) || other.visibility == _this.visibility));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,title,name,summary,const DeepCollectionEquality().hash(content),const DeepCollectionEquality().hash(variables),script,eyeCatchingImageId,font,alignCenter,hideTitleWhenPinned,visibility);
+int get hashCode {
+  final _this = this as PagesCreateRequest;
+  return Object.hash(runtimeType,_this.title,_this.name,_this.summary,const DeepCollectionEquality().hash(_this.content),const DeepCollectionEquality().hash(_this.variables),_this.script,_this.eyeCatchingImageId,_this.font,_this.alignCenter,_this.hideTitleWhenPinned,_this.visibility);
+}
 
 @override
 String toString() {
-  return 'PagesCreateRequest(title: $title, name: $name, summary: $summary, content: $content, variables: $variables, script: $script, eyeCatchingImageId: $eyeCatchingImageId, font: $font, alignCenter: $alignCenter, hideTitleWhenPinned: $hideTitleWhenPinned, visibility: $visibility)';
+  final _this = this as PagesCreateRequest;
+  return 'PagesCreateRequest(title: ${_this.title}, name: ${_this.name}, summary: ${_this.summary}, content: ${_this.content}, variables: ${_this.variables}, script: ${_this.script}, eyeCatchingImageId: ${_this.eyeCatchingImageId}, font: ${_this.font}, alignCenter: ${_this.alignCenter}, hideTitleWhenPinned: ${_this.hideTitleWhenPinned}, visibility: ${_this.visibility})';
 }
 
 
@@ -66,7 +72,7 @@ class _$PagesCreateRequestCopyWithImpl<$Res>
 /// Create a copy of PagesCreateRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? title = null,Object? name = null,Object? summary = freezed,Object? content = null,Object? variables = null,Object? script = null,Object? eyeCatchingImageId = freezed,Object? font = freezed,Object? alignCenter = freezed,Object? hideTitleWhenPinned = freezed,Object? visibility = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(PagesCreateRequest(
 title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
 as String,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
 as String,summary: freezed == summary ? _self.summary : summary // ignore: cast_nullable_to_non_nullable
@@ -219,7 +225,7 @@ return $default(_that.title,_that.name,_that.summary,_that.content,_that.variabl
 @JsonSerializable()
 
 class _PagesCreateRequest implements PagesCreateRequest {
-  const _PagesCreateRequest({required this.title, required this.name, this.summary, @PageContentConverter() required final  List<AbstractPageContent> content, required final  List<dynamic> variables, required this.script, this.eyeCatchingImageId, this.font, this.alignCenter, this.hideTitleWhenPinned, this.visibility}): _content = content,_variables = variables;
+  const _PagesCreateRequest({required this.title, required this.name, this.summary, @PageContentConverter() required  List<AbstractPageContent> content, required  List<dynamic> variables, required this.script, this.eyeCatchingImageId, this.font, this.alignCenter, this.hideTitleWhenPinned, this.visibility}): _content = content,_variables = variables;
   factory _PagesCreateRequest.fromJson(Map<String, dynamic> json) => _$PagesCreateRequestFromJson(json);
 
 @override final  String title;
@@ -259,16 +265,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PagesCreateRequest&&(identical(other.title, title) || other.title == title)&&(identical(other.name, name) || other.name == name)&&(identical(other.summary, summary) || other.summary == summary)&&const DeepCollectionEquality().equals(other._content, _content)&&const DeepCollectionEquality().equals(other._variables, _variables)&&(identical(other.script, script) || other.script == script)&&(identical(other.eyeCatchingImageId, eyeCatchingImageId) || other.eyeCatchingImageId == eyeCatchingImageId)&&(identical(other.font, font) || other.font == font)&&(identical(other.alignCenter, alignCenter) || other.alignCenter == alignCenter)&&(identical(other.hideTitleWhenPinned, hideTitleWhenPinned) || other.hideTitleWhenPinned == hideTitleWhenPinned)&&(identical(other.visibility, visibility) || other.visibility == visibility));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _PagesCreateRequest&&(identical(other.title, title) || other.title == title)&&(identical(other.name, name) || other.name == name)&&(identical(other.summary, summary) || other.summary == summary)&&const DeepCollectionEquality().equals(other.content, _content)&&const DeepCollectionEquality().equals(other.variables, _variables)&&(identical(other.script, script) || other.script == script)&&(identical(other.eyeCatchingImageId, eyeCatchingImageId) || other.eyeCatchingImageId == eyeCatchingImageId)&&(identical(other.font, font) || other.font == font)&&(identical(other.alignCenter, alignCenter) || other.alignCenter == alignCenter)&&(identical(other.hideTitleWhenPinned, hideTitleWhenPinned) || other.hideTitleWhenPinned == hideTitleWhenPinned)&&(identical(other.visibility, visibility) || other.visibility == visibility));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,title,name,summary,const DeepCollectionEquality().hash(_content),const DeepCollectionEquality().hash(_variables),script,eyeCatchingImageId,font,alignCenter,hideTitleWhenPinned,visibility);
+int get hashCode {
+    return Object.hash(runtimeType,title,name,summary,const DeepCollectionEquality().hash(_content),const DeepCollectionEquality().hash(_variables),script,eyeCatchingImageId,font,alignCenter,hideTitleWhenPinned,visibility);
+}
 
 @override
 String toString() {
-  return 'PagesCreateRequest(title: $title, name: $name, summary: $summary, content: $content, variables: $variables, script: $script, eyeCatchingImageId: $eyeCatchingImageId, font: $font, alignCenter: $alignCenter, hideTitleWhenPinned: $hideTitleWhenPinned, visibility: $visibility)';
+    return 'PagesCreateRequest(title: $title, name: $name, summary: $summary, content: $content, variables: $variables, script: $script, eyeCatchingImageId: $eyeCatchingImageId, font: $font, alignCenter: $alignCenter, hideTitleWhenPinned: $hideTitleWhenPinned, visibility: $visibility)';
 }
 
 

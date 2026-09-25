@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'hashtag.dart';
@@ -9,6 +9,7 @@ part of 'hashtag.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $HashtagCopyWith<Hashtag> get copyWith => _$HashtagCopyWithImpl<Hashtag>(this as
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Hashtag&&(identical(other.tag, tag) || other.tag == tag)&&(identical(other.mentionedUsersCount, mentionedUsersCount) || other.mentionedUsersCount == mentionedUsersCount)&&(identical(other.mentionedLocalUsersCount, mentionedLocalUsersCount) || other.mentionedLocalUsersCount == mentionedLocalUsersCount)&&(identical(other.mentionedRemoteUsersCount, mentionedRemoteUsersCount) || other.mentionedRemoteUsersCount == mentionedRemoteUsersCount)&&(identical(other.attachedUsersCount, attachedUsersCount) || other.attachedUsersCount == attachedUsersCount)&&(identical(other.attachedLocalUsersCount, attachedLocalUsersCount) || other.attachedLocalUsersCount == attachedLocalUsersCount)&&(identical(other.attachedRemoteUsersCount, attachedRemoteUsersCount) || other.attachedRemoteUsersCount == attachedRemoteUsersCount));
+  final _this = this as Hashtag;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Hashtag&&(identical(other.tag, _this.tag) || other.tag == _this.tag)&&(identical(other.mentionedUsersCount, _this.mentionedUsersCount) || other.mentionedUsersCount == _this.mentionedUsersCount)&&(identical(other.mentionedLocalUsersCount, _this.mentionedLocalUsersCount) || other.mentionedLocalUsersCount == _this.mentionedLocalUsersCount)&&(identical(other.mentionedRemoteUsersCount, _this.mentionedRemoteUsersCount) || other.mentionedRemoteUsersCount == _this.mentionedRemoteUsersCount)&&(identical(other.attachedUsersCount, _this.attachedUsersCount) || other.attachedUsersCount == _this.attachedUsersCount)&&(identical(other.attachedLocalUsersCount, _this.attachedLocalUsersCount) || other.attachedLocalUsersCount == _this.attachedLocalUsersCount)&&(identical(other.attachedRemoteUsersCount, _this.attachedRemoteUsersCount) || other.attachedRemoteUsersCount == _this.attachedRemoteUsersCount));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,tag,mentionedUsersCount,mentionedLocalUsersCount,mentionedRemoteUsersCount,attachedUsersCount,attachedLocalUsersCount,attachedRemoteUsersCount);
+int get hashCode {
+  final _this = this as Hashtag;
+  return Object.hash(runtimeType,_this.tag,_this.mentionedUsersCount,_this.mentionedLocalUsersCount,_this.mentionedRemoteUsersCount,_this.attachedUsersCount,_this.attachedLocalUsersCount,_this.attachedRemoteUsersCount);
+}
 
 @override
 String toString() {
-  return 'Hashtag(tag: $tag, mentionedUsersCount: $mentionedUsersCount, mentionedLocalUsersCount: $mentionedLocalUsersCount, mentionedRemoteUsersCount: $mentionedRemoteUsersCount, attachedUsersCount: $attachedUsersCount, attachedLocalUsersCount: $attachedLocalUsersCount, attachedRemoteUsersCount: $attachedRemoteUsersCount)';
+  final _this = this as Hashtag;
+  return 'Hashtag(tag: ${_this.tag}, mentionedUsersCount: ${_this.mentionedUsersCount}, mentionedLocalUsersCount: ${_this.mentionedLocalUsersCount}, mentionedRemoteUsersCount: ${_this.mentionedRemoteUsersCount}, attachedUsersCount: ${_this.attachedUsersCount}, attachedLocalUsersCount: ${_this.attachedLocalUsersCount}, attachedRemoteUsersCount: ${_this.attachedRemoteUsersCount})';
 }
 
 
@@ -66,7 +72,7 @@ class _$HashtagCopyWithImpl<$Res>
 /// Create a copy of Hashtag
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? tag = null,Object? mentionedUsersCount = null,Object? mentionedLocalUsersCount = null,Object? mentionedRemoteUsersCount = null,Object? attachedUsersCount = null,Object? attachedLocalUsersCount = null,Object? attachedRemoteUsersCount = null,}) {
-  return _then(_self.copyWith(
+  return _then(Hashtag(
 tag: null == tag ? _self.tag : tag // ignore: cast_nullable_to_non_nullable
 as String,mentionedUsersCount: null == mentionedUsersCount ? _self.mentionedUsersCount : mentionedUsersCount // ignore: cast_nullable_to_non_nullable
 as int,mentionedLocalUsersCount: null == mentionedLocalUsersCount ? _self.mentionedLocalUsersCount : mentionedLocalUsersCount // ignore: cast_nullable_to_non_nullable
@@ -239,16 +245,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Hashtag&&(identical(other.tag, tag) || other.tag == tag)&&(identical(other.mentionedUsersCount, mentionedUsersCount) || other.mentionedUsersCount == mentionedUsersCount)&&(identical(other.mentionedLocalUsersCount, mentionedLocalUsersCount) || other.mentionedLocalUsersCount == mentionedLocalUsersCount)&&(identical(other.mentionedRemoteUsersCount, mentionedRemoteUsersCount) || other.mentionedRemoteUsersCount == mentionedRemoteUsersCount)&&(identical(other.attachedUsersCount, attachedUsersCount) || other.attachedUsersCount == attachedUsersCount)&&(identical(other.attachedLocalUsersCount, attachedLocalUsersCount) || other.attachedLocalUsersCount == attachedLocalUsersCount)&&(identical(other.attachedRemoteUsersCount, attachedRemoteUsersCount) || other.attachedRemoteUsersCount == attachedRemoteUsersCount));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Hashtag&&(identical(other.tag, tag) || other.tag == tag)&&(identical(other.mentionedUsersCount, mentionedUsersCount) || other.mentionedUsersCount == mentionedUsersCount)&&(identical(other.mentionedLocalUsersCount, mentionedLocalUsersCount) || other.mentionedLocalUsersCount == mentionedLocalUsersCount)&&(identical(other.mentionedRemoteUsersCount, mentionedRemoteUsersCount) || other.mentionedRemoteUsersCount == mentionedRemoteUsersCount)&&(identical(other.attachedUsersCount, attachedUsersCount) || other.attachedUsersCount == attachedUsersCount)&&(identical(other.attachedLocalUsersCount, attachedLocalUsersCount) || other.attachedLocalUsersCount == attachedLocalUsersCount)&&(identical(other.attachedRemoteUsersCount, attachedRemoteUsersCount) || other.attachedRemoteUsersCount == attachedRemoteUsersCount));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,tag,mentionedUsersCount,mentionedLocalUsersCount,mentionedRemoteUsersCount,attachedUsersCount,attachedLocalUsersCount,attachedRemoteUsersCount);
+int get hashCode {
+    return Object.hash(runtimeType,tag,mentionedUsersCount,mentionedLocalUsersCount,mentionedRemoteUsersCount,attachedUsersCount,attachedLocalUsersCount,attachedRemoteUsersCount);
+}
 
 @override
 String toString() {
-  return 'Hashtag(tag: $tag, mentionedUsersCount: $mentionedUsersCount, mentionedLocalUsersCount: $mentionedLocalUsersCount, mentionedRemoteUsersCount: $mentionedRemoteUsersCount, attachedUsersCount: $attachedUsersCount, attachedLocalUsersCount: $attachedLocalUsersCount, attachedRemoteUsersCount: $attachedRemoteUsersCount)';
+    return 'Hashtag(tag: $tag, mentionedUsersCount: $mentionedUsersCount, mentionedLocalUsersCount: $mentionedLocalUsersCount, mentionedRemoteUsersCount: $mentionedRemoteUsersCount, attachedUsersCount: $attachedUsersCount, attachedLocalUsersCount: $attachedLocalUsersCount, attachedRemoteUsersCount: $attachedRemoteUsersCount)';
 }
 
 

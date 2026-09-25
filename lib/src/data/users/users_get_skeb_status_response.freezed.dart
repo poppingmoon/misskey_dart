@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'users_get_skeb_status_response.dart';
@@ -9,6 +9,7 @@ part of 'users_get_skeb_status_response.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $UsersGetSkebStatusResponseCopyWith<UsersGetSkebStatusResponse> get copyWith => 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is UsersGetSkebStatusResponse&&(identical(other.screenName, screenName) || other.screenName == screenName)&&(identical(other.isCreator, isCreator) || other.isCreator == isCreator)&&(identical(other.isAcceptable, isAcceptable) || other.isAcceptable == isAcceptable)&&(identical(other.creatorRequestCount, creatorRequestCount) || other.creatorRequestCount == creatorRequestCount)&&(identical(other.clientRequestCount, clientRequestCount) || other.clientRequestCount == clientRequestCount)&&const DeepCollectionEquality().equals(other.skills, skills));
+  final _this = this as UsersGetSkebStatusResponse;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is UsersGetSkebStatusResponse&&(identical(other.screenName, _this.screenName) || other.screenName == _this.screenName)&&(identical(other.isCreator, _this.isCreator) || other.isCreator == _this.isCreator)&&(identical(other.isAcceptable, _this.isAcceptable) || other.isAcceptable == _this.isAcceptable)&&(identical(other.creatorRequestCount, _this.creatorRequestCount) || other.creatorRequestCount == _this.creatorRequestCount)&&(identical(other.clientRequestCount, _this.clientRequestCount) || other.clientRequestCount == _this.clientRequestCount)&&const DeepCollectionEquality().equals(other.skills, _this.skills));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,screenName,isCreator,isAcceptable,creatorRequestCount,clientRequestCount,const DeepCollectionEquality().hash(skills));
+int get hashCode {
+  final _this = this as UsersGetSkebStatusResponse;
+  return Object.hash(runtimeType,_this.screenName,_this.isCreator,_this.isAcceptable,_this.creatorRequestCount,_this.clientRequestCount,const DeepCollectionEquality().hash(_this.skills));
+}
 
 @override
 String toString() {
-  return 'UsersGetSkebStatusResponse(screenName: $screenName, isCreator: $isCreator, isAcceptable: $isAcceptable, creatorRequestCount: $creatorRequestCount, clientRequestCount: $clientRequestCount, skills: $skills)';
+  final _this = this as UsersGetSkebStatusResponse;
+  return 'UsersGetSkebStatusResponse(screenName: ${_this.screenName}, isCreator: ${_this.isCreator}, isAcceptable: ${_this.isAcceptable}, creatorRequestCount: ${_this.creatorRequestCount}, clientRequestCount: ${_this.clientRequestCount}, skills: ${_this.skills})';
 }
 
 
@@ -66,7 +72,7 @@ class _$UsersGetSkebStatusResponseCopyWithImpl<$Res>
 /// Create a copy of UsersGetSkebStatusResponse
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? screenName = null,Object? isCreator = null,Object? isAcceptable = null,Object? creatorRequestCount = null,Object? clientRequestCount = null,Object? skills = null,}) {
-  return _then(_self.copyWith(
+  return _then(UsersGetSkebStatusResponse(
 screenName: null == screenName ? _self.screenName : screenName // ignore: cast_nullable_to_non_nullable
 as String,isCreator: null == isCreator ? _self.isCreator : isCreator // ignore: cast_nullable_to_non_nullable
 as bool,isAcceptable: null == isAcceptable ? _self.isAcceptable : isAcceptable // ignore: cast_nullable_to_non_nullable
@@ -214,7 +220,7 @@ return $default(_that.screenName,_that.isCreator,_that.isAcceptable,_that.creato
 @JsonSerializable()
 
 class _UsersGetSkebStatusResponse implements UsersGetSkebStatusResponse {
-  const _UsersGetSkebStatusResponse({required this.screenName, required this.isCreator, required this.isAcceptable, required this.creatorRequestCount, required this.clientRequestCount, required final  List<SkebStatusSkill> skills}): _skills = skills;
+  const _UsersGetSkebStatusResponse({required this.screenName, required this.isCreator, required this.isAcceptable, required this.creatorRequestCount, required this.clientRequestCount, required  List<SkebStatusSkill> skills}): _skills = skills;
   factory _UsersGetSkebStatusResponse.fromJson(Map<String, dynamic> json) => _$UsersGetSkebStatusResponseFromJson(json);
 
 @override final  String screenName;
@@ -243,16 +249,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersGetSkebStatusResponse&&(identical(other.screenName, screenName) || other.screenName == screenName)&&(identical(other.isCreator, isCreator) || other.isCreator == isCreator)&&(identical(other.isAcceptable, isAcceptable) || other.isAcceptable == isAcceptable)&&(identical(other.creatorRequestCount, creatorRequestCount) || other.creatorRequestCount == creatorRequestCount)&&(identical(other.clientRequestCount, clientRequestCount) || other.clientRequestCount == clientRequestCount)&&const DeepCollectionEquality().equals(other._skills, _skills));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersGetSkebStatusResponse&&(identical(other.screenName, screenName) || other.screenName == screenName)&&(identical(other.isCreator, isCreator) || other.isCreator == isCreator)&&(identical(other.isAcceptable, isAcceptable) || other.isAcceptable == isAcceptable)&&(identical(other.creatorRequestCount, creatorRequestCount) || other.creatorRequestCount == creatorRequestCount)&&(identical(other.clientRequestCount, clientRequestCount) || other.clientRequestCount == clientRequestCount)&&const DeepCollectionEquality().equals(other.skills, _skills));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,screenName,isCreator,isAcceptable,creatorRequestCount,clientRequestCount,const DeepCollectionEquality().hash(_skills));
+int get hashCode {
+    return Object.hash(runtimeType,screenName,isCreator,isAcceptable,creatorRequestCount,clientRequestCount,const DeepCollectionEquality().hash(_skills));
+}
 
 @override
 String toString() {
-  return 'UsersGetSkebStatusResponse(screenName: $screenName, isCreator: $isCreator, isAcceptable: $isAcceptable, creatorRequestCount: $creatorRequestCount, clientRequestCount: $clientRequestCount, skills: $skills)';
+    return 'UsersGetSkebStatusResponse(screenName: $screenName, isCreator: $isCreator, isAcceptable: $isAcceptable, creatorRequestCount: $creatorRequestCount, clientRequestCount: $clientRequestCount, skills: $skills)';
 }
 
 
@@ -299,8 +307,7 @@ as List<SkebStatusSkill>,
 /// @nodoc
 mixin _$SkebStatusSkill {
 
- int get amount;// ignore: invalid_annotation_target
-@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) SkebStatusSkillGenre? get genre;
+ int get amount;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) SkebStatusSkillGenre? get genre;
 /// Create a copy of SkebStatusSkill
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -313,16 +320,21 @@ $SkebStatusSkillCopyWith<SkebStatusSkill> get copyWith => _$SkebStatusSkillCopyW
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is SkebStatusSkill&&(identical(other.amount, amount) || other.amount == amount)&&(identical(other.genre, genre) || other.genre == genre));
+  final _this = this as SkebStatusSkill;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is SkebStatusSkill&&(identical(other.amount, _this.amount) || other.amount == _this.amount)&&(identical(other.genre, _this.genre) || other.genre == _this.genre));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,amount,genre);
+int get hashCode {
+  final _this = this as SkebStatusSkill;
+  return Object.hash(runtimeType,_this.amount,_this.genre);
+}
 
 @override
 String toString() {
-  return 'SkebStatusSkill(amount: $amount, genre: $genre)';
+  final _this = this as SkebStatusSkill;
+  return 'SkebStatusSkill(amount: ${_this.amount}, genre: ${_this.genre})';
 }
 
 
@@ -351,7 +363,7 @@ class _$SkebStatusSkillCopyWithImpl<$Res>
 /// Create a copy of SkebStatusSkill
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? amount = null,Object? genre = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(SkebStatusSkill(
 amount: null == amount ? _self.amount : amount // ignore: cast_nullable_to_non_nullable
 as int,genre: freezed == genre ? _self.genre : genre // ignore: cast_nullable_to_non_nullable
 as SkebStatusSkillGenre?,
@@ -499,7 +511,6 @@ class _SkebStatusSkill implements SkebStatusSkill {
   factory _SkebStatusSkill.fromJson(Map<String, dynamic> json) => _$SkebStatusSkillFromJson(json);
 
 @override final  int amount;
-// ignore: invalid_annotation_target
 @override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  SkebStatusSkillGenre? genre;
 
 /// Create a copy of SkebStatusSkill
@@ -515,16 +526,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _SkebStatusSkill&&(identical(other.amount, amount) || other.amount == amount)&&(identical(other.genre, genre) || other.genre == genre));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _SkebStatusSkill&&(identical(other.amount, amount) || other.amount == amount)&&(identical(other.genre, genre) || other.genre == genre));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,amount,genre);
+int get hashCode {
+    return Object.hash(runtimeType,amount,genre);
+}
 
 @override
 String toString() {
-  return 'SkebStatusSkill(amount: $amount, genre: $genre)';
+    return 'SkebStatusSkill(amount: $amount, genre: $genre)';
 }
 
 

@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'drive_files_request.dart';
@@ -9,6 +9,7 @@ part of 'drive_files_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $DriveFilesRequestCopyWith<DriveFilesRequest> get copyWith => _$DriveFilesReques
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is DriveFilesRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.folderId, folderId) || other.folderId == folderId)&&(identical(other.type, type) || other.type == type)&&(identical(other.sort, sort) || other.sort == sort));
+  final _this = this as DriveFilesRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is DriveFilesRequest&&(identical(other.limit, _this.limit) || other.limit == _this.limit)&&(identical(other.sinceId, _this.sinceId) || other.sinceId == _this.sinceId)&&(identical(other.untilId, _this.untilId) || other.untilId == _this.untilId)&&(identical(other.sinceDate, _this.sinceDate) || other.sinceDate == _this.sinceDate)&&(identical(other.untilDate, _this.untilDate) || other.untilDate == _this.untilDate)&&(identical(other.folderId, _this.folderId) || other.folderId == _this.folderId)&&(identical(other.type, _this.type) || other.type == _this.type)&&(identical(other.sort, _this.sort) || other.sort == _this.sort));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,limit,sinceId,untilId,sinceDate,untilDate,folderId,type,sort);
+int get hashCode {
+  final _this = this as DriveFilesRequest;
+  return Object.hash(runtimeType,_this.limit,_this.sinceId,_this.untilId,_this.sinceDate,_this.untilDate,_this.folderId,_this.type,_this.sort);
+}
 
 @override
 String toString() {
-  return 'DriveFilesRequest(limit: $limit, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, folderId: $folderId, type: $type, sort: $sort)';
+  final _this = this as DriveFilesRequest;
+  return 'DriveFilesRequest(limit: ${_this.limit}, sinceId: ${_this.sinceId}, untilId: ${_this.untilId}, sinceDate: ${_this.sinceDate}, untilDate: ${_this.untilDate}, folderId: ${_this.folderId}, type: ${_this.type}, sort: ${_this.sort})';
 }
 
 
@@ -66,7 +72,7 @@ class _$DriveFilesRequestCopyWithImpl<$Res>
 /// Create a copy of DriveFilesRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,Object? folderId = freezed,Object? type = freezed,Object? sort = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(DriveFilesRequest(
 limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
 as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
@@ -241,16 +247,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _DriveFilesRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.folderId, folderId) || other.folderId == folderId)&&(identical(other.type, type) || other.type == type)&&(identical(other.sort, sort) || other.sort == sort));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _DriveFilesRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.folderId, folderId) || other.folderId == folderId)&&(identical(other.type, type) || other.type == type)&&(identical(other.sort, sort) || other.sort == sort));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,limit,sinceId,untilId,sinceDate,untilDate,folderId,type,sort);
+int get hashCode {
+    return Object.hash(runtimeType,limit,sinceId,untilId,sinceDate,untilDate,folderId,type,sort);
+}
 
 @override
 String toString() {
-  return 'DriveFilesRequest(limit: $limit, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, folderId: $folderId, type: $type, sort: $sort)';
+    return 'DriveFilesRequest(limit: $limit, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, folderId: $folderId, type: $type, sort: $sort)';
 }
 
 

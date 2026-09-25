@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'i_update_request.dart';
@@ -9,6 +9,7 @@ part of 'i_update_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -29,16 +30,21 @@ $IUpdateRequestCopyWith<IUpdateRequest> get copyWith => _$IUpdateRequestCopyWith
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is IUpdateRequest&&(identical(other.name, name) || other.name == name)&&(identical(other.description, description) || other.description == description)&&(identical(other.followedMessage, followedMessage) || other.followedMessage == followedMessage)&&(identical(other.location, location) || other.location == location)&&(identical(other.birthday, birthday) || other.birthday == birthday)&&(identical(other.lang, lang) || other.lang == lang)&&(identical(other.avatarId, avatarId) || other.avatarId == avatarId)&&const DeepCollectionEquality().equals(other.avatarDecorations, avatarDecorations)&&(identical(other.bannerId, bannerId) || other.bannerId == bannerId)&&const DeepCollectionEquality().equals(other.fields, fields)&&(identical(other.isLocked, isLocked) || other.isLocked == isLocked)&&(identical(other.isExplorable, isExplorable) || other.isExplorable == isExplorable)&&(identical(other.hideOnlineStatus, hideOnlineStatus) || other.hideOnlineStatus == hideOnlineStatus)&&(identical(other.publicReactions, publicReactions) || other.publicReactions == publicReactions)&&(identical(other.carefulBot, carefulBot) || other.carefulBot == carefulBot)&&(identical(other.autoAcceptFollowed, autoAcceptFollowed) || other.autoAcceptFollowed == autoAcceptFollowed)&&(identical(other.noCrawle, noCrawle) || other.noCrawle == noCrawle)&&(identical(other.preventAiLearning, preventAiLearning) || other.preventAiLearning == preventAiLearning)&&(identical(other.requireSigninToViewContents, requireSigninToViewContents) || other.requireSigninToViewContents == requireSigninToViewContents)&&(identical(other.makeNotesFollowersOnlyBefore, makeNotesFollowersOnlyBefore) || other.makeNotesFollowersOnlyBefore == makeNotesFollowersOnlyBefore)&&(identical(other.makeNotesHiddenBefore, makeNotesHiddenBefore) || other.makeNotesHiddenBefore == makeNotesHiddenBefore)&&(identical(other.isBot, isBot) || other.isBot == isBot)&&(identical(other.isCat, isCat) || other.isCat == isCat)&&(identical(other.injectFeaturedNote, injectFeaturedNote) || other.injectFeaturedNote == injectFeaturedNote)&&(identical(other.receiveAnnouncementEmail, receiveAnnouncementEmail) || other.receiveAnnouncementEmail == receiveAnnouncementEmail)&&(identical(other.alwaysMarkNsfw, alwaysMarkNsfw) || other.alwaysMarkNsfw == alwaysMarkNsfw)&&(identical(other.autoSensitive, autoSensitive) || other.autoSensitive == autoSensitive)&&(identical(other.ffVisibility, ffVisibility) || other.ffVisibility == ffVisibility)&&(identical(other.followingVisibility, followingVisibility) || other.followingVisibility == followingVisibility)&&(identical(other.followersVisibility, followersVisibility) || other.followersVisibility == followersVisibility)&&(identical(other.chatScope, chatScope) || other.chatScope == chatScope)&&(identical(other.pinnedPageId, pinnedPageId) || other.pinnedPageId == pinnedPageId)&&const DeepCollectionEquality().equals(other.mutingNotificationTypes, mutingNotificationTypes)&&const DeepCollectionEquality().equals(other.mutedWords, mutedWords)&&const DeepCollectionEquality().equals(other.hardMutedWords, hardMutedWords)&&const DeepCollectionEquality().equals(other.mutedInstances, mutedInstances)&&(identical(other.notificationRecieveConfig, notificationRecieveConfig) || other.notificationRecieveConfig == notificationRecieveConfig)&&const DeepCollectionEquality().equals(other.emailNotificationTypes, emailNotificationTypes)&&const DeepCollectionEquality().equals(other.alsoKnownAs, alsoKnownAs)&&const DeepCollectionEquality().equals(other.mutualLinkSections, mutualLinkSections));
+  final _this = this as IUpdateRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is IUpdateRequest&&(identical(other.name, _this.name) || other.name == _this.name)&&(identical(other.description, _this.description) || other.description == _this.description)&&(identical(other.followedMessage, _this.followedMessage) || other.followedMessage == _this.followedMessage)&&(identical(other.location, _this.location) || other.location == _this.location)&&(identical(other.birthday, _this.birthday) || other.birthday == _this.birthday)&&(identical(other.lang, _this.lang) || other.lang == _this.lang)&&(identical(other.avatarId, _this.avatarId) || other.avatarId == _this.avatarId)&&const DeepCollectionEquality().equals(other.avatarDecorations, _this.avatarDecorations)&&(identical(other.bannerId, _this.bannerId) || other.bannerId == _this.bannerId)&&const DeepCollectionEquality().equals(other.fields, _this.fields)&&(identical(other.isLocked, _this.isLocked) || other.isLocked == _this.isLocked)&&(identical(other.isExplorable, _this.isExplorable) || other.isExplorable == _this.isExplorable)&&(identical(other.hideOnlineStatus, _this.hideOnlineStatus) || other.hideOnlineStatus == _this.hideOnlineStatus)&&(identical(other.publicReactions, _this.publicReactions) || other.publicReactions == _this.publicReactions)&&(identical(other.carefulBot, _this.carefulBot) || other.carefulBot == _this.carefulBot)&&(identical(other.autoAcceptFollowed, _this.autoAcceptFollowed) || other.autoAcceptFollowed == _this.autoAcceptFollowed)&&(identical(other.noCrawle, _this.noCrawle) || other.noCrawle == _this.noCrawle)&&(identical(other.preventAiLearning, _this.preventAiLearning) || other.preventAiLearning == _this.preventAiLearning)&&(identical(other.requireSigninToViewContents, _this.requireSigninToViewContents) || other.requireSigninToViewContents == _this.requireSigninToViewContents)&&(identical(other.makeNotesFollowersOnlyBefore, _this.makeNotesFollowersOnlyBefore) || other.makeNotesFollowersOnlyBefore == _this.makeNotesFollowersOnlyBefore)&&(identical(other.makeNotesHiddenBefore, _this.makeNotesHiddenBefore) || other.makeNotesHiddenBefore == _this.makeNotesHiddenBefore)&&(identical(other.isBot, _this.isBot) || other.isBot == _this.isBot)&&(identical(other.isCat, _this.isCat) || other.isCat == _this.isCat)&&(identical(other.injectFeaturedNote, _this.injectFeaturedNote) || other.injectFeaturedNote == _this.injectFeaturedNote)&&(identical(other.receiveAnnouncementEmail, _this.receiveAnnouncementEmail) || other.receiveAnnouncementEmail == _this.receiveAnnouncementEmail)&&(identical(other.alwaysMarkNsfw, _this.alwaysMarkNsfw) || other.alwaysMarkNsfw == _this.alwaysMarkNsfw)&&(identical(other.autoSensitive, _this.autoSensitive) || other.autoSensitive == _this.autoSensitive)&&(identical(other.ffVisibility, _this.ffVisibility) || other.ffVisibility == _this.ffVisibility)&&(identical(other.followingVisibility, _this.followingVisibility) || other.followingVisibility == _this.followingVisibility)&&(identical(other.followersVisibility, _this.followersVisibility) || other.followersVisibility == _this.followersVisibility)&&(identical(other.chatScope, _this.chatScope) || other.chatScope == _this.chatScope)&&(identical(other.pinnedPageId, _this.pinnedPageId) || other.pinnedPageId == _this.pinnedPageId)&&const DeepCollectionEquality().equals(other.mutingNotificationTypes, _this.mutingNotificationTypes)&&const DeepCollectionEquality().equals(other.mutedWords, _this.mutedWords)&&const DeepCollectionEquality().equals(other.hardMutedWords, _this.hardMutedWords)&&const DeepCollectionEquality().equals(other.mutedInstances, _this.mutedInstances)&&(identical(other.notificationRecieveConfig, _this.notificationRecieveConfig) || other.notificationRecieveConfig == _this.notificationRecieveConfig)&&const DeepCollectionEquality().equals(other.emailNotificationTypes, _this.emailNotificationTypes)&&const DeepCollectionEquality().equals(other.alsoKnownAs, _this.alsoKnownAs)&&const DeepCollectionEquality().equals(other.mutualLinkSections, _this.mutualLinkSections));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hashAll([runtimeType,name,description,followedMessage,location,birthday,lang,avatarId,const DeepCollectionEquality().hash(avatarDecorations),bannerId,const DeepCollectionEquality().hash(fields),isLocked,isExplorable,hideOnlineStatus,publicReactions,carefulBot,autoAcceptFollowed,noCrawle,preventAiLearning,requireSigninToViewContents,makeNotesFollowersOnlyBefore,makeNotesHiddenBefore,isBot,isCat,injectFeaturedNote,receiveAnnouncementEmail,alwaysMarkNsfw,autoSensitive,ffVisibility,followingVisibility,followersVisibility,chatScope,pinnedPageId,const DeepCollectionEquality().hash(mutingNotificationTypes),const DeepCollectionEquality().hash(mutedWords),const DeepCollectionEquality().hash(hardMutedWords),const DeepCollectionEquality().hash(mutedInstances),notificationRecieveConfig,const DeepCollectionEquality().hash(emailNotificationTypes),const DeepCollectionEquality().hash(alsoKnownAs),const DeepCollectionEquality().hash(mutualLinkSections)]);
+int get hashCode {
+  final _this = this as IUpdateRequest;
+  return Object.hashAll([runtimeType,_this.name,_this.description,_this.followedMessage,_this.location,_this.birthday,_this.lang,_this.avatarId,const DeepCollectionEquality().hash(_this.avatarDecorations),_this.bannerId,const DeepCollectionEquality().hash(_this.fields),_this.isLocked,_this.isExplorable,_this.hideOnlineStatus,_this.publicReactions,_this.carefulBot,_this.autoAcceptFollowed,_this.noCrawle,_this.preventAiLearning,_this.requireSigninToViewContents,_this.makeNotesFollowersOnlyBefore,_this.makeNotesHiddenBefore,_this.isBot,_this.isCat,_this.injectFeaturedNote,_this.receiveAnnouncementEmail,_this.alwaysMarkNsfw,_this.autoSensitive,_this.ffVisibility,_this.followingVisibility,_this.followersVisibility,_this.chatScope,_this.pinnedPageId,const DeepCollectionEquality().hash(_this.mutingNotificationTypes),const DeepCollectionEquality().hash(_this.mutedWords),const DeepCollectionEquality().hash(_this.hardMutedWords),const DeepCollectionEquality().hash(_this.mutedInstances),_this.notificationRecieveConfig,const DeepCollectionEquality().hash(_this.emailNotificationTypes),const DeepCollectionEquality().hash(_this.alsoKnownAs),const DeepCollectionEquality().hash(_this.mutualLinkSections)]);
+}
 
 @override
 String toString() {
-  return 'IUpdateRequest(name: $name, description: $description, followedMessage: $followedMessage, location: $location, birthday: $birthday, lang: $lang, avatarId: $avatarId, avatarDecorations: $avatarDecorations, bannerId: $bannerId, fields: $fields, isLocked: $isLocked, isExplorable: $isExplorable, hideOnlineStatus: $hideOnlineStatus, publicReactions: $publicReactions, carefulBot: $carefulBot, autoAcceptFollowed: $autoAcceptFollowed, noCrawle: $noCrawle, preventAiLearning: $preventAiLearning, requireSigninToViewContents: $requireSigninToViewContents, makeNotesFollowersOnlyBefore: $makeNotesFollowersOnlyBefore, makeNotesHiddenBefore: $makeNotesHiddenBefore, isBot: $isBot, isCat: $isCat, injectFeaturedNote: $injectFeaturedNote, receiveAnnouncementEmail: $receiveAnnouncementEmail, alwaysMarkNsfw: $alwaysMarkNsfw, autoSensitive: $autoSensitive, ffVisibility: $ffVisibility, followingVisibility: $followingVisibility, followersVisibility: $followersVisibility, chatScope: $chatScope, pinnedPageId: $pinnedPageId, mutingNotificationTypes: $mutingNotificationTypes, mutedWords: $mutedWords, hardMutedWords: $hardMutedWords, mutedInstances: $mutedInstances, notificationRecieveConfig: $notificationRecieveConfig, emailNotificationTypes: $emailNotificationTypes, alsoKnownAs: $alsoKnownAs, mutualLinkSections: $mutualLinkSections)';
+  final _this = this as IUpdateRequest;
+  return 'IUpdateRequest(name: ${_this.name}, description: ${_this.description}, followedMessage: ${_this.followedMessage}, location: ${_this.location}, birthday: ${_this.birthday}, lang: ${_this.lang}, avatarId: ${_this.avatarId}, avatarDecorations: ${_this.avatarDecorations}, bannerId: ${_this.bannerId}, fields: ${_this.fields}, isLocked: ${_this.isLocked}, isExplorable: ${_this.isExplorable}, hideOnlineStatus: ${_this.hideOnlineStatus}, publicReactions: ${_this.publicReactions}, carefulBot: ${_this.carefulBot}, autoAcceptFollowed: ${_this.autoAcceptFollowed}, noCrawle: ${_this.noCrawle}, preventAiLearning: ${_this.preventAiLearning}, requireSigninToViewContents: ${_this.requireSigninToViewContents}, makeNotesFollowersOnlyBefore: ${_this.makeNotesFollowersOnlyBefore}, makeNotesHiddenBefore: ${_this.makeNotesHiddenBefore}, isBot: ${_this.isBot}, isCat: ${_this.isCat}, injectFeaturedNote: ${_this.injectFeaturedNote}, receiveAnnouncementEmail: ${_this.receiveAnnouncementEmail}, alwaysMarkNsfw: ${_this.alwaysMarkNsfw}, autoSensitive: ${_this.autoSensitive}, ffVisibility: ${_this.ffVisibility}, followingVisibility: ${_this.followingVisibility}, followersVisibility: ${_this.followersVisibility}, chatScope: ${_this.chatScope}, pinnedPageId: ${_this.pinnedPageId}, mutingNotificationTypes: ${_this.mutingNotificationTypes}, mutedWords: ${_this.mutedWords}, hardMutedWords: ${_this.hardMutedWords}, mutedInstances: ${_this.mutedInstances}, notificationRecieveConfig: ${_this.notificationRecieveConfig}, emailNotificationTypes: ${_this.emailNotificationTypes}, alsoKnownAs: ${_this.alsoKnownAs}, mutualLinkSections: ${_this.mutualLinkSections})';
 }
 
 
@@ -67,7 +73,7 @@ class _$IUpdateRequestCopyWithImpl<$Res>
 /// Create a copy of IUpdateRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? name = freezed,Object? description = freezed,Object? followedMessage = freezed,Object? location = freezed,Object? birthday = freezed,Object? lang = freezed,Object? avatarId = freezed,Object? avatarDecorations = freezed,Object? bannerId = freezed,Object? fields = freezed,Object? isLocked = freezed,Object? isExplorable = freezed,Object? hideOnlineStatus = freezed,Object? publicReactions = freezed,Object? carefulBot = freezed,Object? autoAcceptFollowed = freezed,Object? noCrawle = freezed,Object? preventAiLearning = freezed,Object? requireSigninToViewContents = freezed,Object? makeNotesFollowersOnlyBefore = freezed,Object? makeNotesHiddenBefore = freezed,Object? isBot = freezed,Object? isCat = freezed,Object? injectFeaturedNote = freezed,Object? receiveAnnouncementEmail = freezed,Object? alwaysMarkNsfw = freezed,Object? autoSensitive = freezed,Object? ffVisibility = freezed,Object? followingVisibility = freezed,Object? followersVisibility = freezed,Object? chatScope = freezed,Object? pinnedPageId = freezed,Object? mutingNotificationTypes = freezed,Object? mutedWords = freezed,Object? hardMutedWords = freezed,Object? mutedInstances = freezed,Object? notificationRecieveConfig = freezed,Object? emailNotificationTypes = freezed,Object? alsoKnownAs = freezed,Object? mutualLinkSections = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(IUpdateRequest(
 name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
 as String?,description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
 as String?,followedMessage: freezed == followedMessage ? _self.followedMessage : followedMessage // ignore: cast_nullable_to_non_nullable
@@ -261,7 +267,7 @@ return $default(_that.name,_that.description,_that.followedMessage,_that.locatio
 @JsonSerializable()
 
 class _IUpdateRequest implements IUpdateRequest {
-  const _IUpdateRequest({this.name, this.description, this.followedMessage, this.location, @BirthdayConverter() this.birthday, this.lang, this.avatarId, final  List<IUpdateAvatarDecoration>? avatarDecorations, this.bannerId, final  List<UserField>? fields, this.isLocked, this.isExplorable, this.hideOnlineStatus, this.publicReactions, this.carefulBot, this.autoAcceptFollowed, this.noCrawle, this.preventAiLearning, this.requireSigninToViewContents, @HideBeforeConverter() this.makeNotesFollowersOnlyBefore, @HideBeforeConverter() this.makeNotesHiddenBefore, this.isBot, this.isCat, this.injectFeaturedNote, this.receiveAnnouncementEmail, this.alwaysMarkNsfw, this.autoSensitive, this.ffVisibility, this.followingVisibility, this.followersVisibility, this.chatScope, this.pinnedPageId, final  List<String>? mutingNotificationTypes, @MuteWordsConverter() final  List<MuteWord>? mutedWords, @MuteWordsConverter() final  List<MuteWord>? hardMutedWords, final  List<String>? mutedInstances, this.notificationRecieveConfig, final  List<String>? emailNotificationTypes, final  List<String>? alsoKnownAs, final  List<IUpdateMutualLinkSection>? mutualLinkSections}): _avatarDecorations = avatarDecorations,_fields = fields,_mutingNotificationTypes = mutingNotificationTypes,_mutedWords = mutedWords,_hardMutedWords = hardMutedWords,_mutedInstances = mutedInstances,_emailNotificationTypes = emailNotificationTypes,_alsoKnownAs = alsoKnownAs,_mutualLinkSections = mutualLinkSections;
+  const _IUpdateRequest({this.name, this.description, this.followedMessage, this.location, @BirthdayConverter() this.birthday, this.lang, this.avatarId,  List<IUpdateAvatarDecoration>? avatarDecorations, this.bannerId,  List<UserField>? fields, this.isLocked, this.isExplorable, this.hideOnlineStatus, this.publicReactions, this.carefulBot, this.autoAcceptFollowed, this.noCrawle, this.preventAiLearning, this.requireSigninToViewContents, @HideBeforeConverter() this.makeNotesFollowersOnlyBefore, @HideBeforeConverter() this.makeNotesHiddenBefore, this.isBot, this.isCat, this.injectFeaturedNote, this.receiveAnnouncementEmail, this.alwaysMarkNsfw, this.autoSensitive, this.ffVisibility, this.followingVisibility, this.followersVisibility, this.chatScope, this.pinnedPageId,  List<String>? mutingNotificationTypes, @MuteWordsConverter()  List<MuteWord>? mutedWords, @MuteWordsConverter()  List<MuteWord>? hardMutedWords,  List<String>? mutedInstances, this.notificationRecieveConfig,  List<String>? emailNotificationTypes,  List<String>? alsoKnownAs,  List<IUpdateMutualLinkSection>? mutualLinkSections}): _avatarDecorations = avatarDecorations,_fields = fields,_mutingNotificationTypes = mutingNotificationTypes,_mutedWords = mutedWords,_hardMutedWords = hardMutedWords,_mutedInstances = mutedInstances,_emailNotificationTypes = emailNotificationTypes,_alsoKnownAs = alsoKnownAs,_mutualLinkSections = mutualLinkSections;
   factory _IUpdateRequest.fromJson(Map<String, dynamic> json) => _$IUpdateRequestFromJson(json);
 
 @override final  String? name;
@@ -391,16 +397,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _IUpdateRequest&&(identical(other.name, name) || other.name == name)&&(identical(other.description, description) || other.description == description)&&(identical(other.followedMessage, followedMessage) || other.followedMessage == followedMessage)&&(identical(other.location, location) || other.location == location)&&(identical(other.birthday, birthday) || other.birthday == birthday)&&(identical(other.lang, lang) || other.lang == lang)&&(identical(other.avatarId, avatarId) || other.avatarId == avatarId)&&const DeepCollectionEquality().equals(other._avatarDecorations, _avatarDecorations)&&(identical(other.bannerId, bannerId) || other.bannerId == bannerId)&&const DeepCollectionEquality().equals(other._fields, _fields)&&(identical(other.isLocked, isLocked) || other.isLocked == isLocked)&&(identical(other.isExplorable, isExplorable) || other.isExplorable == isExplorable)&&(identical(other.hideOnlineStatus, hideOnlineStatus) || other.hideOnlineStatus == hideOnlineStatus)&&(identical(other.publicReactions, publicReactions) || other.publicReactions == publicReactions)&&(identical(other.carefulBot, carefulBot) || other.carefulBot == carefulBot)&&(identical(other.autoAcceptFollowed, autoAcceptFollowed) || other.autoAcceptFollowed == autoAcceptFollowed)&&(identical(other.noCrawle, noCrawle) || other.noCrawle == noCrawle)&&(identical(other.preventAiLearning, preventAiLearning) || other.preventAiLearning == preventAiLearning)&&(identical(other.requireSigninToViewContents, requireSigninToViewContents) || other.requireSigninToViewContents == requireSigninToViewContents)&&(identical(other.makeNotesFollowersOnlyBefore, makeNotesFollowersOnlyBefore) || other.makeNotesFollowersOnlyBefore == makeNotesFollowersOnlyBefore)&&(identical(other.makeNotesHiddenBefore, makeNotesHiddenBefore) || other.makeNotesHiddenBefore == makeNotesHiddenBefore)&&(identical(other.isBot, isBot) || other.isBot == isBot)&&(identical(other.isCat, isCat) || other.isCat == isCat)&&(identical(other.injectFeaturedNote, injectFeaturedNote) || other.injectFeaturedNote == injectFeaturedNote)&&(identical(other.receiveAnnouncementEmail, receiveAnnouncementEmail) || other.receiveAnnouncementEmail == receiveAnnouncementEmail)&&(identical(other.alwaysMarkNsfw, alwaysMarkNsfw) || other.alwaysMarkNsfw == alwaysMarkNsfw)&&(identical(other.autoSensitive, autoSensitive) || other.autoSensitive == autoSensitive)&&(identical(other.ffVisibility, ffVisibility) || other.ffVisibility == ffVisibility)&&(identical(other.followingVisibility, followingVisibility) || other.followingVisibility == followingVisibility)&&(identical(other.followersVisibility, followersVisibility) || other.followersVisibility == followersVisibility)&&(identical(other.chatScope, chatScope) || other.chatScope == chatScope)&&(identical(other.pinnedPageId, pinnedPageId) || other.pinnedPageId == pinnedPageId)&&const DeepCollectionEquality().equals(other._mutingNotificationTypes, _mutingNotificationTypes)&&const DeepCollectionEquality().equals(other._mutedWords, _mutedWords)&&const DeepCollectionEquality().equals(other._hardMutedWords, _hardMutedWords)&&const DeepCollectionEquality().equals(other._mutedInstances, _mutedInstances)&&(identical(other.notificationRecieveConfig, notificationRecieveConfig) || other.notificationRecieveConfig == notificationRecieveConfig)&&const DeepCollectionEquality().equals(other._emailNotificationTypes, _emailNotificationTypes)&&const DeepCollectionEquality().equals(other._alsoKnownAs, _alsoKnownAs)&&const DeepCollectionEquality().equals(other._mutualLinkSections, _mutualLinkSections));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _IUpdateRequest&&(identical(other.name, name) || other.name == name)&&(identical(other.description, description) || other.description == description)&&(identical(other.followedMessage, followedMessage) || other.followedMessage == followedMessage)&&(identical(other.location, location) || other.location == location)&&(identical(other.birthday, birthday) || other.birthday == birthday)&&(identical(other.lang, lang) || other.lang == lang)&&(identical(other.avatarId, avatarId) || other.avatarId == avatarId)&&const DeepCollectionEquality().equals(other.avatarDecorations, _avatarDecorations)&&(identical(other.bannerId, bannerId) || other.bannerId == bannerId)&&const DeepCollectionEquality().equals(other.fields, _fields)&&(identical(other.isLocked, isLocked) || other.isLocked == isLocked)&&(identical(other.isExplorable, isExplorable) || other.isExplorable == isExplorable)&&(identical(other.hideOnlineStatus, hideOnlineStatus) || other.hideOnlineStatus == hideOnlineStatus)&&(identical(other.publicReactions, publicReactions) || other.publicReactions == publicReactions)&&(identical(other.carefulBot, carefulBot) || other.carefulBot == carefulBot)&&(identical(other.autoAcceptFollowed, autoAcceptFollowed) || other.autoAcceptFollowed == autoAcceptFollowed)&&(identical(other.noCrawle, noCrawle) || other.noCrawle == noCrawle)&&(identical(other.preventAiLearning, preventAiLearning) || other.preventAiLearning == preventAiLearning)&&(identical(other.requireSigninToViewContents, requireSigninToViewContents) || other.requireSigninToViewContents == requireSigninToViewContents)&&(identical(other.makeNotesFollowersOnlyBefore, makeNotesFollowersOnlyBefore) || other.makeNotesFollowersOnlyBefore == makeNotesFollowersOnlyBefore)&&(identical(other.makeNotesHiddenBefore, makeNotesHiddenBefore) || other.makeNotesHiddenBefore == makeNotesHiddenBefore)&&(identical(other.isBot, isBot) || other.isBot == isBot)&&(identical(other.isCat, isCat) || other.isCat == isCat)&&(identical(other.injectFeaturedNote, injectFeaturedNote) || other.injectFeaturedNote == injectFeaturedNote)&&(identical(other.receiveAnnouncementEmail, receiveAnnouncementEmail) || other.receiveAnnouncementEmail == receiveAnnouncementEmail)&&(identical(other.alwaysMarkNsfw, alwaysMarkNsfw) || other.alwaysMarkNsfw == alwaysMarkNsfw)&&(identical(other.autoSensitive, autoSensitive) || other.autoSensitive == autoSensitive)&&(identical(other.ffVisibility, ffVisibility) || other.ffVisibility == ffVisibility)&&(identical(other.followingVisibility, followingVisibility) || other.followingVisibility == followingVisibility)&&(identical(other.followersVisibility, followersVisibility) || other.followersVisibility == followersVisibility)&&(identical(other.chatScope, chatScope) || other.chatScope == chatScope)&&(identical(other.pinnedPageId, pinnedPageId) || other.pinnedPageId == pinnedPageId)&&const DeepCollectionEquality().equals(other.mutingNotificationTypes, _mutingNotificationTypes)&&const DeepCollectionEquality().equals(other.mutedWords, _mutedWords)&&const DeepCollectionEquality().equals(other.hardMutedWords, _hardMutedWords)&&const DeepCollectionEquality().equals(other.mutedInstances, _mutedInstances)&&(identical(other.notificationRecieveConfig, notificationRecieveConfig) || other.notificationRecieveConfig == notificationRecieveConfig)&&const DeepCollectionEquality().equals(other.emailNotificationTypes, _emailNotificationTypes)&&const DeepCollectionEquality().equals(other.alsoKnownAs, _alsoKnownAs)&&const DeepCollectionEquality().equals(other.mutualLinkSections, _mutualLinkSections));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hashAll([runtimeType,name,description,followedMessage,location,birthday,lang,avatarId,const DeepCollectionEquality().hash(_avatarDecorations),bannerId,const DeepCollectionEquality().hash(_fields),isLocked,isExplorable,hideOnlineStatus,publicReactions,carefulBot,autoAcceptFollowed,noCrawle,preventAiLearning,requireSigninToViewContents,makeNotesFollowersOnlyBefore,makeNotesHiddenBefore,isBot,isCat,injectFeaturedNote,receiveAnnouncementEmail,alwaysMarkNsfw,autoSensitive,ffVisibility,followingVisibility,followersVisibility,chatScope,pinnedPageId,const DeepCollectionEquality().hash(_mutingNotificationTypes),const DeepCollectionEquality().hash(_mutedWords),const DeepCollectionEquality().hash(_hardMutedWords),const DeepCollectionEquality().hash(_mutedInstances),notificationRecieveConfig,const DeepCollectionEquality().hash(_emailNotificationTypes),const DeepCollectionEquality().hash(_alsoKnownAs),const DeepCollectionEquality().hash(_mutualLinkSections)]);
+int get hashCode {
+    return Object.hashAll([runtimeType,name,description,followedMessage,location,birthday,lang,avatarId,const DeepCollectionEquality().hash(_avatarDecorations),bannerId,const DeepCollectionEquality().hash(_fields),isLocked,isExplorable,hideOnlineStatus,publicReactions,carefulBot,autoAcceptFollowed,noCrawle,preventAiLearning,requireSigninToViewContents,makeNotesFollowersOnlyBefore,makeNotesHiddenBefore,isBot,isCat,injectFeaturedNote,receiveAnnouncementEmail,alwaysMarkNsfw,autoSensitive,ffVisibility,followingVisibility,followersVisibility,chatScope,pinnedPageId,const DeepCollectionEquality().hash(_mutingNotificationTypes),const DeepCollectionEquality().hash(_mutedWords),const DeepCollectionEquality().hash(_hardMutedWords),const DeepCollectionEquality().hash(_mutedInstances),notificationRecieveConfig,const DeepCollectionEquality().hash(_emailNotificationTypes),const DeepCollectionEquality().hash(_alsoKnownAs),const DeepCollectionEquality().hash(_mutualLinkSections)]);
+}
 
 @override
 String toString() {
-  return 'IUpdateRequest(name: $name, description: $description, followedMessage: $followedMessage, location: $location, birthday: $birthday, lang: $lang, avatarId: $avatarId, avatarDecorations: $avatarDecorations, bannerId: $bannerId, fields: $fields, isLocked: $isLocked, isExplorable: $isExplorable, hideOnlineStatus: $hideOnlineStatus, publicReactions: $publicReactions, carefulBot: $carefulBot, autoAcceptFollowed: $autoAcceptFollowed, noCrawle: $noCrawle, preventAiLearning: $preventAiLearning, requireSigninToViewContents: $requireSigninToViewContents, makeNotesFollowersOnlyBefore: $makeNotesFollowersOnlyBefore, makeNotesHiddenBefore: $makeNotesHiddenBefore, isBot: $isBot, isCat: $isCat, injectFeaturedNote: $injectFeaturedNote, receiveAnnouncementEmail: $receiveAnnouncementEmail, alwaysMarkNsfw: $alwaysMarkNsfw, autoSensitive: $autoSensitive, ffVisibility: $ffVisibility, followingVisibility: $followingVisibility, followersVisibility: $followersVisibility, chatScope: $chatScope, pinnedPageId: $pinnedPageId, mutingNotificationTypes: $mutingNotificationTypes, mutedWords: $mutedWords, hardMutedWords: $hardMutedWords, mutedInstances: $mutedInstances, notificationRecieveConfig: $notificationRecieveConfig, emailNotificationTypes: $emailNotificationTypes, alsoKnownAs: $alsoKnownAs, mutualLinkSections: $mutualLinkSections)';
+    return 'IUpdateRequest(name: $name, description: $description, followedMessage: $followedMessage, location: $location, birthday: $birthday, lang: $lang, avatarId: $avatarId, avatarDecorations: $avatarDecorations, bannerId: $bannerId, fields: $fields, isLocked: $isLocked, isExplorable: $isExplorable, hideOnlineStatus: $hideOnlineStatus, publicReactions: $publicReactions, carefulBot: $carefulBot, autoAcceptFollowed: $autoAcceptFollowed, noCrawle: $noCrawle, preventAiLearning: $preventAiLearning, requireSigninToViewContents: $requireSigninToViewContents, makeNotesFollowersOnlyBefore: $makeNotesFollowersOnlyBefore, makeNotesHiddenBefore: $makeNotesHiddenBefore, isBot: $isBot, isCat: $isCat, injectFeaturedNote: $injectFeaturedNote, receiveAnnouncementEmail: $receiveAnnouncementEmail, alwaysMarkNsfw: $alwaysMarkNsfw, autoSensitive: $autoSensitive, ffVisibility: $ffVisibility, followingVisibility: $followingVisibility, followersVisibility: $followersVisibility, chatScope: $chatScope, pinnedPageId: $pinnedPageId, mutingNotificationTypes: $mutingNotificationTypes, mutedWords: $mutedWords, hardMutedWords: $hardMutedWords, mutedInstances: $mutedInstances, notificationRecieveConfig: $notificationRecieveConfig, emailNotificationTypes: $emailNotificationTypes, alsoKnownAs: $alsoKnownAs, mutualLinkSections: $mutualLinkSections)';
 }
 
 
@@ -506,16 +514,21 @@ $IUpdateAvatarDecorationCopyWith<IUpdateAvatarDecoration> get copyWith => _$IUpd
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is IUpdateAvatarDecoration&&(identical(other.id, id) || other.id == id)&&(identical(other.angle, angle) || other.angle == angle)&&(identical(other.flipH, flipH) || other.flipH == flipH)&&(identical(other.offsetX, offsetX) || other.offsetX == offsetX)&&(identical(other.offsetY, offsetY) || other.offsetY == offsetY));
+  final _this = this as IUpdateAvatarDecoration;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is IUpdateAvatarDecoration&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.angle, _this.angle) || other.angle == _this.angle)&&(identical(other.flipH, _this.flipH) || other.flipH == _this.flipH)&&(identical(other.offsetX, _this.offsetX) || other.offsetX == _this.offsetX)&&(identical(other.offsetY, _this.offsetY) || other.offsetY == _this.offsetY));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,angle,flipH,offsetX,offsetY);
+int get hashCode {
+  final _this = this as IUpdateAvatarDecoration;
+  return Object.hash(runtimeType,_this.id,_this.angle,_this.flipH,_this.offsetX,_this.offsetY);
+}
 
 @override
 String toString() {
-  return 'IUpdateAvatarDecoration(id: $id, angle: $angle, flipH: $flipH, offsetX: $offsetX, offsetY: $offsetY)';
+  final _this = this as IUpdateAvatarDecoration;
+  return 'IUpdateAvatarDecoration(id: ${_this.id}, angle: ${_this.angle}, flipH: ${_this.flipH}, offsetX: ${_this.offsetX}, offsetY: ${_this.offsetY})';
 }
 
 
@@ -544,7 +557,7 @@ class _$IUpdateAvatarDecorationCopyWithImpl<$Res>
 /// Create a copy of IUpdateAvatarDecoration
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? angle = freezed,Object? flipH = null,Object? offsetX = null,Object? offsetY = null,}) {
-  return _then(_self.copyWith(
+  return _then(IUpdateAvatarDecoration(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,angle: freezed == angle ? _self.angle : angle // ignore: cast_nullable_to_non_nullable
 as double?,flipH: null == flipH ? _self.flipH : flipH // ignore: cast_nullable_to_non_nullable
@@ -713,16 +726,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _IUpdateAvatarDecoration&&(identical(other.id, id) || other.id == id)&&(identical(other.angle, angle) || other.angle == angle)&&(identical(other.flipH, flipH) || other.flipH == flipH)&&(identical(other.offsetX, offsetX) || other.offsetX == offsetX)&&(identical(other.offsetY, offsetY) || other.offsetY == offsetY));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _IUpdateAvatarDecoration&&(identical(other.id, id) || other.id == id)&&(identical(other.angle, angle) || other.angle == angle)&&(identical(other.flipH, flipH) || other.flipH == flipH)&&(identical(other.offsetX, offsetX) || other.offsetX == offsetX)&&(identical(other.offsetY, offsetY) || other.offsetY == offsetY));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,angle,flipH,offsetX,offsetY);
+int get hashCode {
+    return Object.hash(runtimeType,id,angle,flipH,offsetX,offsetY);
+}
 
 @override
 String toString() {
-  return 'IUpdateAvatarDecoration(id: $id, angle: $angle, flipH: $flipH, offsetX: $offsetX, offsetY: $offsetY)';
+    return 'IUpdateAvatarDecoration(id: $id, angle: $angle, flipH: $flipH, offsetX: $offsetX, offsetY: $offsetY)';
 }
 
 
@@ -781,16 +796,21 @@ $IUpdateMutualLinkSectionCopyWith<IUpdateMutualLinkSection> get copyWith => _$IU
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is IUpdateMutualLinkSection&&(identical(other.name, name) || other.name == name)&&const DeepCollectionEquality().equals(other.mutualLinks, mutualLinks));
+  final _this = this as IUpdateMutualLinkSection;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is IUpdateMutualLinkSection&&(identical(other.name, _this.name) || other.name == _this.name)&&const DeepCollectionEquality().equals(other.mutualLinks, _this.mutualLinks));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,name,const DeepCollectionEquality().hash(mutualLinks));
+int get hashCode {
+  final _this = this as IUpdateMutualLinkSection;
+  return Object.hash(runtimeType,_this.name,const DeepCollectionEquality().hash(_this.mutualLinks));
+}
 
 @override
 String toString() {
-  return 'IUpdateMutualLinkSection(name: $name, mutualLinks: $mutualLinks)';
+  final _this = this as IUpdateMutualLinkSection;
+  return 'IUpdateMutualLinkSection(name: ${_this.name}, mutualLinks: ${_this.mutualLinks})';
 }
 
 
@@ -819,7 +839,7 @@ class _$IUpdateMutualLinkSectionCopyWithImpl<$Res>
 /// Create a copy of IUpdateMutualLinkSection
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? name = freezed,Object? mutualLinks = null,}) {
-  return _then(_self.copyWith(
+  return _then(IUpdateMutualLinkSection(
 name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
 as String?,mutualLinks: null == mutualLinks ? _self.mutualLinks : mutualLinks // ignore: cast_nullable_to_non_nullable
 as List<IUpdateMutualLink>,
@@ -963,7 +983,7 @@ return $default(_that.name,_that.mutualLinks);case _:
 @JsonSerializable()
 
 class _IUpdateMutualLinkSection implements IUpdateMutualLinkSection {
-  const _IUpdateMutualLinkSection({this.name, required final  List<IUpdateMutualLink> mutualLinks}): _mutualLinks = mutualLinks;
+  const _IUpdateMutualLinkSection({this.name, required  List<IUpdateMutualLink> mutualLinks}): _mutualLinks = mutualLinks;
   factory _IUpdateMutualLinkSection.fromJson(Map<String, dynamic> json) => _$IUpdateMutualLinkSectionFromJson(json);
 
 @override final  String? name;
@@ -988,16 +1008,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _IUpdateMutualLinkSection&&(identical(other.name, name) || other.name == name)&&const DeepCollectionEquality().equals(other._mutualLinks, _mutualLinks));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _IUpdateMutualLinkSection&&(identical(other.name, name) || other.name == name)&&const DeepCollectionEquality().equals(other.mutualLinks, _mutualLinks));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,name,const DeepCollectionEquality().hash(_mutualLinks));
+int get hashCode {
+    return Object.hash(runtimeType,name,const DeepCollectionEquality().hash(_mutualLinks));
+}
 
 @override
 String toString() {
-  return 'IUpdateMutualLinkSection(name: $name, mutualLinks: $mutualLinks)';
+    return 'IUpdateMutualLinkSection(name: $name, mutualLinks: $mutualLinks)';
 }
 
 
@@ -1053,16 +1075,21 @@ $IUpdateMutualLinkCopyWith<IUpdateMutualLink> get copyWith => _$IUpdateMutualLin
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is IUpdateMutualLink&&(identical(other.url, url) || other.url == url)&&(identical(other.fileId, fileId) || other.fileId == fileId)&&(identical(other.description, description) || other.description == description));
+  final _this = this as IUpdateMutualLink;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is IUpdateMutualLink&&(identical(other.url, _this.url) || other.url == _this.url)&&(identical(other.fileId, _this.fileId) || other.fileId == _this.fileId)&&(identical(other.description, _this.description) || other.description == _this.description));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,url,fileId,description);
+int get hashCode {
+  final _this = this as IUpdateMutualLink;
+  return Object.hash(runtimeType,_this.url,_this.fileId,_this.description);
+}
 
 @override
 String toString() {
-  return 'IUpdateMutualLink(url: $url, fileId: $fileId, description: $description)';
+  final _this = this as IUpdateMutualLink;
+  return 'IUpdateMutualLink(url: ${_this.url}, fileId: ${_this.fileId}, description: ${_this.description})';
 }
 
 
@@ -1091,7 +1118,7 @@ class _$IUpdateMutualLinkCopyWithImpl<$Res>
 /// Create a copy of IUpdateMutualLink
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? url = null,Object? fileId = null,Object? description = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(IUpdateMutualLink(
 url: null == url ? _self.url : url // ignore: cast_nullable_to_non_nullable
 as String,fileId: null == fileId ? _self.fileId : fileId // ignore: cast_nullable_to_non_nullable
 as String,description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
@@ -1256,16 +1283,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _IUpdateMutualLink&&(identical(other.url, url) || other.url == url)&&(identical(other.fileId, fileId) || other.fileId == fileId)&&(identical(other.description, description) || other.description == description));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _IUpdateMutualLink&&(identical(other.url, url) || other.url == url)&&(identical(other.fileId, fileId) || other.fileId == fileId)&&(identical(other.description, description) || other.description == description));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,url,fileId,description);
+int get hashCode {
+    return Object.hash(runtimeType,url,fileId,description);
+}
 
 @override
 String toString() {
-  return 'IUpdateMutualLink(url: $url, fileId: $fileId, description: $description)';
+    return 'IUpdateMutualLink(url: $url, fileId: $fileId, description: $description)';
 }
 
 

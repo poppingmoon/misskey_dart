@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'announcements_response.dart';
@@ -9,15 +9,14 @@ part of 'announcements_response.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
 /// @nodoc
 mixin _$AnnouncementsResponse {
 
- String get id;@DateTimeConverter() DateTime get createdAt;@NullableDateTimeConverter() DateTime? get updatedAt; String get text; String get title;@NullableUriConverter() Uri? get imageUrl;// ignore: invalid_annotation_target
-@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) AnnouncementIconType? get icon;// ignore: invalid_annotation_target
-@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) AnnouncementDisplayType? get display; bool? get needConfirmationToRead; bool? get forYou; bool? get isRead; bool get forExistingUsers; String? get userId; bool get silence;
+ String get id;@DateTimeConverter() DateTime get createdAt;@NullableDateTimeConverter() DateTime? get updatedAt; String get text; String get title;@NullableUriConverter() Uri? get imageUrl;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) AnnouncementIconType? get icon;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) AnnouncementDisplayType? get display; bool? get needConfirmationToRead; bool? get forYou; bool? get isRead; bool get forExistingUsers; String? get userId; bool get silence;
 /// Create a copy of AnnouncementsResponse
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -30,16 +29,21 @@ $AnnouncementsResponseCopyWith<AnnouncementsResponse> get copyWith => _$Announce
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is AnnouncementsResponse&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.text, text) || other.text == text)&&(identical(other.title, title) || other.title == title)&&(identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl)&&(identical(other.icon, icon) || other.icon == icon)&&(identical(other.display, display) || other.display == display)&&(identical(other.needConfirmationToRead, needConfirmationToRead) || other.needConfirmationToRead == needConfirmationToRead)&&(identical(other.forYou, forYou) || other.forYou == forYou)&&(identical(other.isRead, isRead) || other.isRead == isRead)&&(identical(other.forExistingUsers, forExistingUsers) || other.forExistingUsers == forExistingUsers)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.silence, silence) || other.silence == silence));
+  final _this = this as AnnouncementsResponse;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is AnnouncementsResponse&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.createdAt, _this.createdAt) || other.createdAt == _this.createdAt)&&(identical(other.updatedAt, _this.updatedAt) || other.updatedAt == _this.updatedAt)&&(identical(other.text, _this.text) || other.text == _this.text)&&(identical(other.title, _this.title) || other.title == _this.title)&&(identical(other.imageUrl, _this.imageUrl) || other.imageUrl == _this.imageUrl)&&(identical(other.icon, _this.icon) || other.icon == _this.icon)&&(identical(other.display, _this.display) || other.display == _this.display)&&(identical(other.needConfirmationToRead, _this.needConfirmationToRead) || other.needConfirmationToRead == _this.needConfirmationToRead)&&(identical(other.forYou, _this.forYou) || other.forYou == _this.forYou)&&(identical(other.isRead, _this.isRead) || other.isRead == _this.isRead)&&(identical(other.forExistingUsers, _this.forExistingUsers) || other.forExistingUsers == _this.forExistingUsers)&&(identical(other.userId, _this.userId) || other.userId == _this.userId)&&(identical(other.silence, _this.silence) || other.silence == _this.silence));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,createdAt,updatedAt,text,title,imageUrl,icon,display,needConfirmationToRead,forYou,isRead,forExistingUsers,userId,silence);
+int get hashCode {
+  final _this = this as AnnouncementsResponse;
+  return Object.hash(runtimeType,_this.id,_this.createdAt,_this.updatedAt,_this.text,_this.title,_this.imageUrl,_this.icon,_this.display,_this.needConfirmationToRead,_this.forYou,_this.isRead,_this.forExistingUsers,_this.userId,_this.silence);
+}
 
 @override
 String toString() {
-  return 'AnnouncementsResponse(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, text: $text, title: $title, imageUrl: $imageUrl, icon: $icon, display: $display, needConfirmationToRead: $needConfirmationToRead, forYou: $forYou, isRead: $isRead, forExistingUsers: $forExistingUsers, userId: $userId, silence: $silence)';
+  final _this = this as AnnouncementsResponse;
+  return 'AnnouncementsResponse(id: ${_this.id}, createdAt: ${_this.createdAt}, updatedAt: ${_this.updatedAt}, text: ${_this.text}, title: ${_this.title}, imageUrl: ${_this.imageUrl}, icon: ${_this.icon}, display: ${_this.display}, needConfirmationToRead: ${_this.needConfirmationToRead}, forYou: ${_this.forYou}, isRead: ${_this.isRead}, forExistingUsers: ${_this.forExistingUsers}, userId: ${_this.userId}, silence: ${_this.silence})';
 }
 
 
@@ -68,7 +72,7 @@ class _$AnnouncementsResponseCopyWithImpl<$Res>
 /// Create a copy of AnnouncementsResponse
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? createdAt = null,Object? updatedAt = freezed,Object? text = null,Object? title = null,Object? imageUrl = freezed,Object? icon = freezed,Object? display = freezed,Object? needConfirmationToRead = freezed,Object? forYou = freezed,Object? isRead = freezed,Object? forExistingUsers = null,Object? userId = freezed,Object? silence = null,}) {
-  return _then(_self.copyWith(
+  return _then(AnnouncementsResponse(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime,updatedAt: freezed == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
@@ -233,9 +237,7 @@ class _AnnouncementsResponse implements AnnouncementsResponse {
 @override final  String text;
 @override final  String title;
 @override@NullableUriConverter() final  Uri? imageUrl;
-// ignore: invalid_annotation_target
 @override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  AnnouncementIconType? icon;
-// ignore: invalid_annotation_target
 @override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  AnnouncementDisplayType? display;
 @override final  bool? needConfirmationToRead;
 @override final  bool? forYou;
@@ -257,16 +259,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _AnnouncementsResponse&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.text, text) || other.text == text)&&(identical(other.title, title) || other.title == title)&&(identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl)&&(identical(other.icon, icon) || other.icon == icon)&&(identical(other.display, display) || other.display == display)&&(identical(other.needConfirmationToRead, needConfirmationToRead) || other.needConfirmationToRead == needConfirmationToRead)&&(identical(other.forYou, forYou) || other.forYou == forYou)&&(identical(other.isRead, isRead) || other.isRead == isRead)&&(identical(other.forExistingUsers, forExistingUsers) || other.forExistingUsers == forExistingUsers)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.silence, silence) || other.silence == silence));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _AnnouncementsResponse&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.text, text) || other.text == text)&&(identical(other.title, title) || other.title == title)&&(identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl)&&(identical(other.icon, icon) || other.icon == icon)&&(identical(other.display, display) || other.display == display)&&(identical(other.needConfirmationToRead, needConfirmationToRead) || other.needConfirmationToRead == needConfirmationToRead)&&(identical(other.forYou, forYou) || other.forYou == forYou)&&(identical(other.isRead, isRead) || other.isRead == isRead)&&(identical(other.forExistingUsers, forExistingUsers) || other.forExistingUsers == forExistingUsers)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.silence, silence) || other.silence == silence));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,createdAt,updatedAt,text,title,imageUrl,icon,display,needConfirmationToRead,forYou,isRead,forExistingUsers,userId,silence);
+int get hashCode {
+    return Object.hash(runtimeType,id,createdAt,updatedAt,text,title,imageUrl,icon,display,needConfirmationToRead,forYou,isRead,forExistingUsers,userId,silence);
+}
 
 @override
 String toString() {
-  return 'AnnouncementsResponse(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, text: $text, title: $title, imageUrl: $imageUrl, icon: $icon, display: $display, needConfirmationToRead: $needConfirmationToRead, forYou: $forYou, isRead: $isRead, forExistingUsers: $forExistingUsers, userId: $userId, silence: $silence)';
+    return 'AnnouncementsResponse(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, text: $text, title: $title, imageUrl: $imageUrl, icon: $icon, display: $display, needConfirmationToRead: $needConfirmationToRead, forYou: $forYou, isRead: $isRead, forExistingUsers: $forExistingUsers, userId: $userId, silence: $silence)';
 }
 
 

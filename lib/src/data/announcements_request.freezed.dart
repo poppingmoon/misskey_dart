@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'announcements_request.dart';
@@ -9,6 +9,7 @@ part of 'announcements_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -16,8 +17,7 @@ T _$identity<T>(T value) => value;
 mixin _$AnnouncementsRequest {
 
  int? get limit;/// removed in Misskey 2023.9
- bool? get withUnreads; bool? get isActive; String? get sinceId; String? get untilId;@EpocTimeDateTimeConverter() DateTime? get sinceDate;@EpocTimeDateTimeConverter() DateTime? get untilDate;// ioはこれで動く
- int? get offset;
+ bool? get withUnreads; bool? get isActive; String? get sinceId; String? get untilId;@EpocTimeDateTimeConverter() DateTime? get sinceDate;@EpocTimeDateTimeConverter() DateTime? get untilDate; int? get offset;
 /// Create a copy of AnnouncementsRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -30,16 +30,21 @@ $AnnouncementsRequestCopyWith<AnnouncementsRequest> get copyWith => _$Announceme
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is AnnouncementsRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.withUnreads, withUnreads) || other.withUnreads == withUnreads)&&(identical(other.isActive, isActive) || other.isActive == isActive)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.offset, offset) || other.offset == offset));
+  final _this = this as AnnouncementsRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is AnnouncementsRequest&&(identical(other.limit, _this.limit) || other.limit == _this.limit)&&(identical(other.withUnreads, _this.withUnreads) || other.withUnreads == _this.withUnreads)&&(identical(other.isActive, _this.isActive) || other.isActive == _this.isActive)&&(identical(other.sinceId, _this.sinceId) || other.sinceId == _this.sinceId)&&(identical(other.untilId, _this.untilId) || other.untilId == _this.untilId)&&(identical(other.sinceDate, _this.sinceDate) || other.sinceDate == _this.sinceDate)&&(identical(other.untilDate, _this.untilDate) || other.untilDate == _this.untilDate)&&(identical(other.offset, _this.offset) || other.offset == _this.offset));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,limit,withUnreads,isActive,sinceId,untilId,sinceDate,untilDate,offset);
+int get hashCode {
+  final _this = this as AnnouncementsRequest;
+  return Object.hash(runtimeType,_this.limit,_this.withUnreads,_this.isActive,_this.sinceId,_this.untilId,_this.sinceDate,_this.untilDate,_this.offset);
+}
 
 @override
 String toString() {
-  return 'AnnouncementsRequest(limit: $limit, withUnreads: $withUnreads, isActive: $isActive, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, offset: $offset)';
+  final _this = this as AnnouncementsRequest;
+  return 'AnnouncementsRequest(limit: ${_this.limit}, withUnreads: ${_this.withUnreads}, isActive: ${_this.isActive}, sinceId: ${_this.sinceId}, untilId: ${_this.untilId}, sinceDate: ${_this.sinceDate}, untilDate: ${_this.untilDate}, offset: ${_this.offset})';
 }
 
 
@@ -68,7 +73,7 @@ class _$AnnouncementsRequestCopyWithImpl<$Res>
 /// Create a copy of AnnouncementsRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? limit = freezed,Object? withUnreads = freezed,Object? isActive = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,Object? offset = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(AnnouncementsRequest(
 limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int?,withUnreads: freezed == withUnreads ? _self.withUnreads : withUnreads // ignore: cast_nullable_to_non_nullable
 as bool?,isActive: freezed == isActive ? _self.isActive : isActive // ignore: cast_nullable_to_non_nullable
@@ -229,7 +234,6 @@ class _AnnouncementsRequest implements AnnouncementsRequest {
 @override final  String? untilId;
 @override@EpocTimeDateTimeConverter() final  DateTime? sinceDate;
 @override@EpocTimeDateTimeConverter() final  DateTime? untilDate;
-// ioはこれで動く
 @override final  int? offset;
 
 /// Create a copy of AnnouncementsRequest
@@ -245,16 +249,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _AnnouncementsRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.withUnreads, withUnreads) || other.withUnreads == withUnreads)&&(identical(other.isActive, isActive) || other.isActive == isActive)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.offset, offset) || other.offset == offset));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _AnnouncementsRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.withUnreads, withUnreads) || other.withUnreads == withUnreads)&&(identical(other.isActive, isActive) || other.isActive == isActive)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.offset, offset) || other.offset == offset));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,limit,withUnreads,isActive,sinceId,untilId,sinceDate,untilDate,offset);
+int get hashCode {
+    return Object.hash(runtimeType,limit,withUnreads,isActive,sinceId,untilId,sinceDate,untilDate,offset);
+}
 
 @override
 String toString() {
-  return 'AnnouncementsRequest(limit: $limit, withUnreads: $withUnreads, isActive: $isActive, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, offset: $offset)';
+    return 'AnnouncementsRequest(limit: $limit, withUnreads: $withUnreads, isActive: $isActive, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, offset: $offset)';
 }
 
 

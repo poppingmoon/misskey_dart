@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'reversi_stream_events.dart';
@@ -9,6 +9,7 @@ part of 'reversi_stream_events.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $ReversiInvitedCopyWith<ReversiInvited> get copyWith => _$ReversiInvitedCopyWith
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiInvited&&(identical(other.user, user) || other.user == user));
+  final _this = this as ReversiInvited;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiInvited&&(identical(other.user, _this.user) || other.user == _this.user));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,user);
+int get hashCode {
+  final _this = this as ReversiInvited;
+  return Object.hash(runtimeType,_this.user);
+}
 
 @override
 String toString() {
-  return 'ReversiInvited(user: $user)';
+  final _this = this as ReversiInvited;
+  return 'ReversiInvited(user: ${_this.user})';
 }
 
 
@@ -66,7 +72,7 @@ class _$ReversiInvitedCopyWithImpl<$Res>
 /// Create a copy of ReversiInvited
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? user = null,}) {
-  return _then(_self.copyWith(
+  return _then(ReversiInvited(
 user: null == user ? _self.user : user // ignore: cast_nullable_to_non_nullable
 as User,
   ));
@@ -227,16 +233,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ReversiInvited&&(identical(other.user, user) || other.user == user));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ReversiInvited&&(identical(other.user, user) || other.user == user));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,user);
+int get hashCode {
+    return Object.hash(runtimeType,user);
+}
 
 @override
 String toString() {
-  return 'ReversiInvited(user: $user)';
+    return 'ReversiInvited(user: $user)';
 }
 
 
@@ -291,16 +299,21 @@ $ReversiGameEventCopyWith<ReversiGameEvent> get copyWith => _$ReversiGameEventCo
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiGameEvent&&(identical(other.game, game) || other.game == game));
+  final _this = this as ReversiGameEvent;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiGameEvent&&(identical(other.game, _this.game) || other.game == _this.game));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,game);
+int get hashCode {
+  final _this = this as ReversiGameEvent;
+  return Object.hash(runtimeType,_this.game);
+}
 
 @override
 String toString() {
-  return 'ReversiGameEvent(game: $game)';
+  final _this = this as ReversiGameEvent;
+  return 'ReversiGameEvent(game: ${_this.game})';
 }
 
 
@@ -329,7 +342,7 @@ class _$ReversiGameEventCopyWithImpl<$Res>
 /// Create a copy of ReversiGameEvent
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? game = null,}) {
-  return _then(_self.copyWith(
+  return _then(ReversiGameEvent(
 game: null == game ? _self.game : game // ignore: cast_nullable_to_non_nullable
 as ReversiShowGameResponse,
   ));
@@ -499,16 +512,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ReversiGameEvent&&(identical(other.game, game) || other.game == game));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ReversiGameEvent&&(identical(other.game, game) || other.game == game));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,game);
+int get hashCode {
+    return Object.hash(runtimeType,game);
+}
 
 @override
 String toString() {
-  return 'ReversiGameEvent(game: $game)';
+    return 'ReversiGameEvent(game: $game)';
 }
 
 
@@ -573,16 +588,21 @@ $ReversiEndedCopyWith<ReversiEnded> get copyWith => _$ReversiEndedCopyWithImpl<R
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiEnded&&(identical(other.winnerId, winnerId) || other.winnerId == winnerId)&&(identical(other.game, game) || other.game == game));
+  final _this = this as ReversiEnded;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiEnded&&(identical(other.winnerId, _this.winnerId) || other.winnerId == _this.winnerId)&&(identical(other.game, _this.game) || other.game == _this.game));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,winnerId,game);
+int get hashCode {
+  final _this = this as ReversiEnded;
+  return Object.hash(runtimeType,_this.winnerId,_this.game);
+}
 
 @override
 String toString() {
-  return 'ReversiEnded(winnerId: $winnerId, game: $game)';
+  final _this = this as ReversiEnded;
+  return 'ReversiEnded(winnerId: ${_this.winnerId}, game: ${_this.game})';
 }
 
 
@@ -611,7 +631,7 @@ class _$ReversiEndedCopyWithImpl<$Res>
 /// Create a copy of ReversiEnded
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? winnerId = freezed,Object? game = null,}) {
-  return _then(_self.copyWith(
+  return _then(ReversiEnded(
 winnerId: freezed == winnerId ? _self.winnerId : winnerId // ignore: cast_nullable_to_non_nullable
 as String?,game: null == game ? _self.game : game // ignore: cast_nullable_to_non_nullable
 as ReversiShowGameResponse,
@@ -784,16 +804,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ReversiEnded&&(identical(other.winnerId, winnerId) || other.winnerId == winnerId)&&(identical(other.game, game) || other.game == game));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ReversiEnded&&(identical(other.winnerId, winnerId) || other.winnerId == winnerId)&&(identical(other.game, game) || other.game == game));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,winnerId,game);
+int get hashCode {
+    return Object.hash(runtimeType,winnerId,game);
+}
 
 @override
 String toString() {
-  return 'ReversiEnded(winnerId: $winnerId, game: $game)';
+    return 'ReversiEnded(winnerId: $winnerId, game: $game)';
 }
 
 
@@ -866,16 +888,21 @@ $ReversiLogEventCopyWith<ReversiLogEvent> get copyWith => _$ReversiLogEventCopyW
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiLogEvent&&(identical(other.time, time) || other.time == time)&&(identical(other.player, player) || other.player == player)&&(identical(other.operation, operation) || other.operation == operation)&&(identical(other.pos, pos) || other.pos == pos)&&(identical(other.id, id) || other.id == id));
+  final _this = this as ReversiLogEvent;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiLogEvent&&(identical(other.time, _this.time) || other.time == _this.time)&&(identical(other.player, _this.player) || other.player == _this.player)&&(identical(other.operation, _this.operation) || other.operation == _this.operation)&&(identical(other.pos, _this.pos) || other.pos == _this.pos)&&(identical(other.id, _this.id) || other.id == _this.id));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,time,player,operation,pos,id);
+int get hashCode {
+  final _this = this as ReversiLogEvent;
+  return Object.hash(runtimeType,_this.time,_this.player,_this.operation,_this.pos,_this.id);
+}
 
 @override
 String toString() {
-  return 'ReversiLogEvent(time: $time, player: $player, operation: $operation, pos: $pos, id: $id)';
+  final _this = this as ReversiLogEvent;
+  return 'ReversiLogEvent(time: ${_this.time}, player: ${_this.player}, operation: ${_this.operation}, pos: ${_this.pos}, id: ${_this.id})';
 }
 
 
@@ -904,7 +931,7 @@ class _$ReversiLogEventCopyWithImpl<$Res>
 /// Create a copy of ReversiLogEvent
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? time = null,Object? player = null,Object? operation = null,Object? pos = null,Object? id = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(ReversiLogEvent(
 time: null == time ? _self.time : time // ignore: cast_nullable_to_non_nullable
 as int,player: null == player ? _self.player : player // ignore: cast_nullable_to_non_nullable
 as bool,operation: null == operation ? _self.operation : operation // ignore: cast_nullable_to_non_nullable
@@ -1081,16 +1108,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ReversiLogEvent&&(identical(other.time, time) || other.time == time)&&(identical(other.player, player) || other.player == player)&&(identical(other.operation, operation) || other.operation == operation)&&(identical(other.pos, pos) || other.pos == pos)&&(identical(other.id, id) || other.id == id));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ReversiLogEvent&&(identical(other.time, time) || other.time == time)&&(identical(other.player, player) || other.player == player)&&(identical(other.operation, operation) || other.operation == operation)&&(identical(other.pos, pos) || other.pos == pos)&&(identical(other.id, id) || other.id == id));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,time,player,operation,pos,id);
+int get hashCode {
+    return Object.hash(runtimeType,time,player,operation,pos,id);
+}
 
 @override
 String toString() {
-  return 'ReversiLogEvent(time: $time, player: $player, operation: $operation, pos: $pos, id: $id)';
+    return 'ReversiLogEvent(time: $time, player: $player, operation: $operation, pos: $pos, id: $id)';
 }
 
 
@@ -1149,16 +1178,21 @@ $ReversiReadyStatesCopyWith<ReversiReadyStates> get copyWith => _$ReversiReadySt
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiReadyStates&&(identical(other.user1, user1) || other.user1 == user1)&&(identical(other.user2, user2) || other.user2 == user2));
+  final _this = this as ReversiReadyStates;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiReadyStates&&(identical(other.user1, _this.user1) || other.user1 == _this.user1)&&(identical(other.user2, _this.user2) || other.user2 == _this.user2));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,user1,user2);
+int get hashCode {
+  final _this = this as ReversiReadyStates;
+  return Object.hash(runtimeType,_this.user1,_this.user2);
+}
 
 @override
 String toString() {
-  return 'ReversiReadyStates(user1: $user1, user2: $user2)';
+  final _this = this as ReversiReadyStates;
+  return 'ReversiReadyStates(user1: ${_this.user1}, user2: ${_this.user2})';
 }
 
 
@@ -1187,7 +1221,7 @@ class _$ReversiReadyStatesCopyWithImpl<$Res>
 /// Create a copy of ReversiReadyStates
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? user1 = null,Object? user2 = null,}) {
-  return _then(_self.copyWith(
+  return _then(ReversiReadyStates(
 user1: null == user1 ? _self.user1 : user1 // ignore: cast_nullable_to_non_nullable
 as bool,user2: null == user2 ? _self.user2 : user2 // ignore: cast_nullable_to_non_nullable
 as bool,
@@ -1350,16 +1384,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ReversiReadyStates&&(identical(other.user1, user1) || other.user1 == user1)&&(identical(other.user2, user2) || other.user2 == user2));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ReversiReadyStates&&(identical(other.user1, user1) || other.user1 == user1)&&(identical(other.user2, user2) || other.user2 == user2));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,user1,user2);
+int get hashCode {
+    return Object.hash(runtimeType,user1,user2);
+}
 
 @override
 String toString() {
-  return 'ReversiReadyStates(user1: $user1, user2: $user2)';
+    return 'ReversiReadyStates(user1: $user1, user2: $user2)';
 }
 
 
@@ -1415,16 +1451,21 @@ $ReversiUpdateSettingsCopyWith<ReversiUpdateSettings> get copyWith => _$ReversiU
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiUpdateSettings&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.key, key) || other.key == key)&&const DeepCollectionEquality().equals(other.value, value));
+  final _this = this as ReversiUpdateSettings;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiUpdateSettings&&(identical(other.userId, _this.userId) || other.userId == _this.userId)&&(identical(other.key, _this.key) || other.key == _this.key)&&const DeepCollectionEquality().equals(other.value, _this.value));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,userId,key,const DeepCollectionEquality().hash(value));
+int get hashCode {
+  final _this = this as ReversiUpdateSettings;
+  return Object.hash(runtimeType,_this.userId,_this.key,const DeepCollectionEquality().hash(_this.value));
+}
 
 @override
 String toString() {
-  return 'ReversiUpdateSettings(userId: $userId, key: $key, value: $value)';
+  final _this = this as ReversiUpdateSettings;
+  return 'ReversiUpdateSettings(userId: ${_this.userId}, key: ${_this.key}, value: ${_this.value})';
 }
 
 
@@ -1453,7 +1494,7 @@ class _$ReversiUpdateSettingsCopyWithImpl<$Res>
 /// Create a copy of ReversiUpdateSettings
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? userId = null,Object? key = null,Object? value = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(ReversiUpdateSettings(
 userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
 as String,key: null == key ? _self.key : key // ignore: cast_nullable_to_non_nullable
 as String,value: freezed == value ? _self.value : value ,
@@ -1617,16 +1658,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ReversiUpdateSettings&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.key, key) || other.key == key)&&const DeepCollectionEquality().equals(other.value, value));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ReversiUpdateSettings&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.key, key) || other.key == key)&&const DeepCollectionEquality().equals(other.value, value));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,userId,key,const DeepCollectionEquality().hash(value));
+int get hashCode {
+    return Object.hash(runtimeType,userId,key,const DeepCollectionEquality().hash(value));
+}
 
 @override
 String toString() {
-  return 'ReversiUpdateSettings(userId: $userId, key: $key, value: $value)';
+    return 'ReversiUpdateSettings(userId: $userId, key: $key, value: $value)';
 }
 
 
@@ -1682,16 +1725,21 @@ $ReversiCanceledCopyWith<ReversiCanceled> get copyWith => _$ReversiCanceledCopyW
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiCanceled&&(identical(other.userId, userId) || other.userId == userId));
+  final _this = this as ReversiCanceled;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiCanceled&&(identical(other.userId, _this.userId) || other.userId == _this.userId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,userId);
+int get hashCode {
+  final _this = this as ReversiCanceled;
+  return Object.hash(runtimeType,_this.userId);
+}
 
 @override
 String toString() {
-  return 'ReversiCanceled(userId: $userId)';
+  final _this = this as ReversiCanceled;
+  return 'ReversiCanceled(userId: ${_this.userId})';
 }
 
 
@@ -1720,7 +1768,7 @@ class _$ReversiCanceledCopyWithImpl<$Res>
 /// Create a copy of ReversiCanceled
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? userId = null,}) {
-  return _then(_self.copyWith(
+  return _then(ReversiCanceled(
 userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
 as String,
   ));
@@ -1881,16 +1929,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ReversiCanceled&&(identical(other.userId, userId) || other.userId == userId));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ReversiCanceled&&(identical(other.userId, userId) || other.userId == userId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,userId);
+int get hashCode {
+    return Object.hash(runtimeType,userId);
+}
 
 @override
 String toString() {
-  return 'ReversiCanceled(userId: $userId)';
+    return 'ReversiCanceled(userId: $userId)';
 }
 
 

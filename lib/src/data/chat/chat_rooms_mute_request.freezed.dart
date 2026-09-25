@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'chat_rooms_mute_request.dart';
@@ -9,6 +9,7 @@ part of 'chat_rooms_mute_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $ChatRoomsMuteRequestCopyWith<ChatRoomsMuteRequest> get copyWith => _$ChatRoomsM
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ChatRoomsMuteRequest&&(identical(other.roomId, roomId) || other.roomId == roomId)&&(identical(other.mute, mute) || other.mute == mute));
+  final _this = this as ChatRoomsMuteRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ChatRoomsMuteRequest&&(identical(other.roomId, _this.roomId) || other.roomId == _this.roomId)&&(identical(other.mute, _this.mute) || other.mute == _this.mute));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,roomId,mute);
+int get hashCode {
+  final _this = this as ChatRoomsMuteRequest;
+  return Object.hash(runtimeType,_this.roomId,_this.mute);
+}
 
 @override
 String toString() {
-  return 'ChatRoomsMuteRequest(roomId: $roomId, mute: $mute)';
+  final _this = this as ChatRoomsMuteRequest;
+  return 'ChatRoomsMuteRequest(roomId: ${_this.roomId}, mute: ${_this.mute})';
 }
 
 
@@ -66,7 +72,7 @@ class _$ChatRoomsMuteRequestCopyWithImpl<$Res>
 /// Create a copy of ChatRoomsMuteRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? roomId = null,Object? mute = null,}) {
-  return _then(_self.copyWith(
+  return _then(ChatRoomsMuteRequest(
 roomId: null == roomId ? _self.roomId : roomId // ignore: cast_nullable_to_non_nullable
 as String,mute: null == mute ? _self.mute : mute // ignore: cast_nullable_to_non_nullable
 as bool,
@@ -229,16 +235,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatRoomsMuteRequest&&(identical(other.roomId, roomId) || other.roomId == roomId)&&(identical(other.mute, mute) || other.mute == mute));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatRoomsMuteRequest&&(identical(other.roomId, roomId) || other.roomId == roomId)&&(identical(other.mute, mute) || other.mute == mute));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,roomId,mute);
+int get hashCode {
+    return Object.hash(runtimeType,roomId,mute);
+}
 
 @override
 String toString() {
-  return 'ChatRoomsMuteRequest(roomId: $roomId, mute: $mute)';
+    return 'ChatRoomsMuteRequest(roomId: $roomId, mute: $mute)';
 }
 
 

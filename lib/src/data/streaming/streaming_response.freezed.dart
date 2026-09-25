@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'streaming_response.dart';
@@ -9,6 +9,7 @@ part of 'streaming_response.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 StreamingResponse _$StreamingResponseFromJson(
@@ -59,16 +60,21 @@ mixin _$StreamingResponse {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is StreamingResponse&&const DeepCollectionEquality().equals(other.body, body));
+  final _this = this as StreamingResponse;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is StreamingResponse&&const DeepCollectionEquality().equals(other.body, _this.body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(body));
+int get hashCode {
+  final _this = this as StreamingResponse;
+  return Object.hash(runtimeType,const DeepCollectionEquality().hash(_this.body));
+}
 
 @override
 String toString() {
-  return 'StreamingResponse(body: $body)';
+  final _this = this as StreamingResponse;
+  return 'StreamingResponse(body: ${_this.body})';
 }
 
 
@@ -244,7 +250,7 @@ return fallback(_that.body);case _:
 @JsonSerializable()
 
 class StreamingChannelResponse implements StreamingResponse {
-  const StreamingChannelResponse({required this.body, final  String? $type}): $type = $type ?? 'channel';
+  const StreamingChannelResponse({required this.body,  String? $type}): $type = $type ?? 'channel';
   factory StreamingChannelResponse.fromJson(Map<String, dynamic> json) => _$StreamingChannelResponseFromJson(json);
 
 @override final  ChannelStreamEvent body;
@@ -266,16 +272,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is StreamingChannelResponse&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is StreamingChannelResponse&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,body);
+int get hashCode {
+    return Object.hash(runtimeType,body);
+}
 
 @override
 String toString() {
-  return 'StreamingResponse.channel(body: $body)';
+    return 'StreamingResponse.channel(body: $body)';
 }
 
 
@@ -326,7 +334,7 @@ $ChannelStreamEventCopyWith<$Res> get body {
 @JsonSerializable()
 
 class StreamingChannelNoteUpdatedResponse implements StreamingResponse {
-  const StreamingChannelNoteUpdatedResponse({required this.body, final  String? $type}): $type = $type ?? 'noteUpdated';
+  const StreamingChannelNoteUpdatedResponse({required this.body,  String? $type}): $type = $type ?? 'noteUpdated';
   factory StreamingChannelNoteUpdatedResponse.fromJson(Map<String, dynamic> json) => _$StreamingChannelNoteUpdatedResponseFromJson(json);
 
 @override final  NoteUpdateStreamEvent body;
@@ -348,16 +356,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is StreamingChannelNoteUpdatedResponse&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is StreamingChannelNoteUpdatedResponse&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,body);
+int get hashCode {
+    return Object.hash(runtimeType,body);
+}
 
 @override
 String toString() {
-  return 'StreamingResponse.noteUpdated(body: $body)';
+    return 'StreamingResponse.noteUpdated(body: $body)';
 }
 
 
@@ -408,7 +418,7 @@ $NoteUpdateStreamEventCopyWith<$Res> get body {
 @JsonSerializable()
 
 class StreamingChannelEmojiAddedResponse implements StreamingResponse {
-  const StreamingChannelEmojiAddedResponse({required this.body, final  String? $type}): $type = $type ?? 'emojiAdded';
+  const StreamingChannelEmojiAddedResponse({required this.body,  String? $type}): $type = $type ?? 'emojiAdded';
   factory StreamingChannelEmojiAddedResponse.fromJson(Map<String, dynamic> json) => _$StreamingChannelEmojiAddedResponseFromJson(json);
 
 @override final  EmojiAddedStreamEvent body;
@@ -430,16 +440,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is StreamingChannelEmojiAddedResponse&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is StreamingChannelEmojiAddedResponse&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,body);
+int get hashCode {
+    return Object.hash(runtimeType,body);
+}
 
 @override
 String toString() {
-  return 'StreamingResponse.emojiAdded(body: $body)';
+    return 'StreamingResponse.emojiAdded(body: $body)';
 }
 
 
@@ -490,7 +502,7 @@ $EmojiAddedStreamEventCopyWith<$Res> get body {
 @JsonSerializable()
 
 class StreamingChannelEmojiUpdatedResponse implements StreamingResponse {
-  const StreamingChannelEmojiUpdatedResponse({required this.body, final  String? $type}): $type = $type ?? 'emojiUpdated';
+  const StreamingChannelEmojiUpdatedResponse({required this.body,  String? $type}): $type = $type ?? 'emojiUpdated';
   factory StreamingChannelEmojiUpdatedResponse.fromJson(Map<String, dynamic> json) => _$StreamingChannelEmojiUpdatedResponseFromJson(json);
 
 @override final  EmojiUpdatedStreamEvent body;
@@ -512,16 +524,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is StreamingChannelEmojiUpdatedResponse&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is StreamingChannelEmojiUpdatedResponse&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,body);
+int get hashCode {
+    return Object.hash(runtimeType,body);
+}
 
 @override
 String toString() {
-  return 'StreamingResponse.emojiUpdated(body: $body)';
+    return 'StreamingResponse.emojiUpdated(body: $body)';
 }
 
 
@@ -572,7 +586,7 @@ $EmojiUpdatedStreamEventCopyWith<$Res> get body {
 @JsonSerializable()
 
 class StreamingChannelEmojiDeletedResponse implements StreamingResponse {
-  const StreamingChannelEmojiDeletedResponse({required this.body, final  String? $type}): $type = $type ?? 'emojiDeleted';
+  const StreamingChannelEmojiDeletedResponse({required this.body,  String? $type}): $type = $type ?? 'emojiDeleted';
   factory StreamingChannelEmojiDeletedResponse.fromJson(Map<String, dynamic> json) => _$StreamingChannelEmojiDeletedResponseFromJson(json);
 
 @override final  EmojiDeletedStreamEvent body;
@@ -594,16 +608,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is StreamingChannelEmojiDeletedResponse&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is StreamingChannelEmojiDeletedResponse&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,body);
+int get hashCode {
+    return Object.hash(runtimeType,body);
+}
 
 @override
 String toString() {
-  return 'StreamingResponse.emojiDeleted(body: $body)';
+    return 'StreamingResponse.emojiDeleted(body: $body)';
 }
 
 
@@ -654,7 +670,7 @@ $EmojiDeletedStreamEventCopyWith<$Res> get body {
 @JsonSerializable()
 
 class StreamingChannelAnnouncementCreatedResponse implements StreamingResponse {
-  const StreamingChannelAnnouncementCreatedResponse({required this.body, final  String? $type}): $type = $type ?? 'announcementCreated';
+  const StreamingChannelAnnouncementCreatedResponse({required this.body,  String? $type}): $type = $type ?? 'announcementCreated';
   factory StreamingChannelAnnouncementCreatedResponse.fromJson(Map<String, dynamic> json) => _$StreamingChannelAnnouncementCreatedResponseFromJson(json);
 
 @override final  AnnouncementCreatedStreamEvent body;
@@ -676,16 +692,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is StreamingChannelAnnouncementCreatedResponse&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is StreamingChannelAnnouncementCreatedResponse&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,body);
+int get hashCode {
+    return Object.hash(runtimeType,body);
+}
 
 @override
 String toString() {
-  return 'StreamingResponse.announcementCreated(body: $body)';
+    return 'StreamingResponse.announcementCreated(body: $body)';
 }
 
 
@@ -736,7 +754,7 @@ $AnnouncementCreatedStreamEventCopyWith<$Res> get body {
 @JsonSerializable()
 
 class StreamingChannelUnknownResponse implements StreamingResponse {
-  const StreamingChannelUnknownResponse({required this.body, final  String? $type}): $type = $type ?? 'fallback';
+  const StreamingChannelUnknownResponse({required this.body,  String? $type}): $type = $type ?? 'fallback';
   factory StreamingChannelUnknownResponse.fromJson(Map<String, dynamic> json) => _$StreamingChannelUnknownResponseFromJson(json);
 
 @override final  Object body;
@@ -758,16 +776,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is StreamingChannelUnknownResponse&&const DeepCollectionEquality().equals(other.body, body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is StreamingChannelUnknownResponse&&const DeepCollectionEquality().equals(other.body, body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(body));
+int get hashCode {
+    return Object.hash(runtimeType,const DeepCollectionEquality().hash(body));
+}
 
 @override
 String toString() {
-  return 'StreamingResponse.fallback(body: $body)';
+    return 'StreamingResponse.fallback(body: $body)';
 }
 
 
@@ -821,16 +841,21 @@ $EmojiAddedStreamEventCopyWith<EmojiAddedStreamEvent> get copyWith => _$EmojiAdd
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is EmojiAddedStreamEvent&&(identical(other.emoji, emoji) || other.emoji == emoji));
+  final _this = this as EmojiAddedStreamEvent;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is EmojiAddedStreamEvent&&(identical(other.emoji, _this.emoji) || other.emoji == _this.emoji));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,emoji);
+int get hashCode {
+  final _this = this as EmojiAddedStreamEvent;
+  return Object.hash(runtimeType,_this.emoji);
+}
 
 @override
 String toString() {
-  return 'EmojiAddedStreamEvent(emoji: $emoji)';
+  final _this = this as EmojiAddedStreamEvent;
+  return 'EmojiAddedStreamEvent(emoji: ${_this.emoji})';
 }
 
 
@@ -859,7 +884,7 @@ class _$EmojiAddedStreamEventCopyWithImpl<$Res>
 /// Create a copy of EmojiAddedStreamEvent
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? emoji = null,}) {
-  return _then(_self.copyWith(
+  return _then(EmojiAddedStreamEvent(
 emoji: null == emoji ? _self.emoji : emoji // ignore: cast_nullable_to_non_nullable
 as Emoji,
   ));
@@ -1029,16 +1054,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _EmojiAddedStreamEvent&&(identical(other.emoji, emoji) || other.emoji == emoji));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _EmojiAddedStreamEvent&&(identical(other.emoji, emoji) || other.emoji == emoji));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,emoji);
+int get hashCode {
+    return Object.hash(runtimeType,emoji);
+}
 
 @override
 String toString() {
-  return 'EmojiAddedStreamEvent(emoji: $emoji)';
+    return 'EmojiAddedStreamEvent(emoji: $emoji)';
 }
 
 
@@ -1102,16 +1129,21 @@ $EmojiUpdatedStreamEventCopyWith<EmojiUpdatedStreamEvent> get copyWith => _$Emoj
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is EmojiUpdatedStreamEvent&&const DeepCollectionEquality().equals(other.emojis, emojis));
+  final _this = this as EmojiUpdatedStreamEvent;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is EmojiUpdatedStreamEvent&&const DeepCollectionEquality().equals(other.emojis, _this.emojis));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(emojis));
+int get hashCode {
+  final _this = this as EmojiUpdatedStreamEvent;
+  return Object.hash(runtimeType,const DeepCollectionEquality().hash(_this.emojis));
+}
 
 @override
 String toString() {
-  return 'EmojiUpdatedStreamEvent(emojis: $emojis)';
+  final _this = this as EmojiUpdatedStreamEvent;
+  return 'EmojiUpdatedStreamEvent(emojis: ${_this.emojis})';
 }
 
 
@@ -1140,7 +1172,7 @@ class _$EmojiUpdatedStreamEventCopyWithImpl<$Res>
 /// Create a copy of EmojiUpdatedStreamEvent
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? emojis = null,}) {
-  return _then(_self.copyWith(
+  return _then(EmojiUpdatedStreamEvent(
 emojis: null == emojis ? _self.emojis : emojis // ignore: cast_nullable_to_non_nullable
 as List<Emoji>,
   ));
@@ -1283,7 +1315,7 @@ return $default(_that.emojis);case _:
 @JsonSerializable()
 
 class _EmojiUpdatedStreamEvent implements EmojiUpdatedStreamEvent {
-  const _EmojiUpdatedStreamEvent({required final  List<Emoji> emojis}): _emojis = emojis;
+  const _EmojiUpdatedStreamEvent({required  List<Emoji> emojis}): _emojis = emojis;
   factory _EmojiUpdatedStreamEvent.fromJson(Map<String, dynamic> json) => _$EmojiUpdatedStreamEventFromJson(json);
 
  final  List<Emoji> _emojis;
@@ -1307,16 +1339,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _EmojiUpdatedStreamEvent&&const DeepCollectionEquality().equals(other._emojis, _emojis));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _EmojiUpdatedStreamEvent&&const DeepCollectionEquality().equals(other.emojis, _emojis));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_emojis));
+int get hashCode {
+    return Object.hash(runtimeType,const DeepCollectionEquality().hash(_emojis));
+}
 
 @override
 String toString() {
-  return 'EmojiUpdatedStreamEvent(emojis: $emojis)';
+    return 'EmojiUpdatedStreamEvent(emojis: $emojis)';
 }
 
 
@@ -1371,16 +1405,21 @@ $EmojiDeletedStreamEventCopyWith<EmojiDeletedStreamEvent> get copyWith => _$Emoj
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is EmojiDeletedStreamEvent&&const DeepCollectionEquality().equals(other.emojis, emojis));
+  final _this = this as EmojiDeletedStreamEvent;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is EmojiDeletedStreamEvent&&const DeepCollectionEquality().equals(other.emojis, _this.emojis));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(emojis));
+int get hashCode {
+  final _this = this as EmojiDeletedStreamEvent;
+  return Object.hash(runtimeType,const DeepCollectionEquality().hash(_this.emojis));
+}
 
 @override
 String toString() {
-  return 'EmojiDeletedStreamEvent(emojis: $emojis)';
+  final _this = this as EmojiDeletedStreamEvent;
+  return 'EmojiDeletedStreamEvent(emojis: ${_this.emojis})';
 }
 
 
@@ -1409,7 +1448,7 @@ class _$EmojiDeletedStreamEventCopyWithImpl<$Res>
 /// Create a copy of EmojiDeletedStreamEvent
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? emojis = null,}) {
-  return _then(_self.copyWith(
+  return _then(EmojiDeletedStreamEvent(
 emojis: null == emojis ? _self.emojis : emojis // ignore: cast_nullable_to_non_nullable
 as List<Emoji>,
   ));
@@ -1552,7 +1591,7 @@ return $default(_that.emojis);case _:
 @JsonSerializable()
 
 class _EmojiDeletedStreamEvent implements EmojiDeletedStreamEvent {
-  const _EmojiDeletedStreamEvent({required final  List<Emoji> emojis}): _emojis = emojis;
+  const _EmojiDeletedStreamEvent({required  List<Emoji> emojis}): _emojis = emojis;
   factory _EmojiDeletedStreamEvent.fromJson(Map<String, dynamic> json) => _$EmojiDeletedStreamEventFromJson(json);
 
  final  List<Emoji> _emojis;
@@ -1576,16 +1615,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _EmojiDeletedStreamEvent&&const DeepCollectionEquality().equals(other._emojis, _emojis));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _EmojiDeletedStreamEvent&&const DeepCollectionEquality().equals(other.emojis, _emojis));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_emojis));
+int get hashCode {
+    return Object.hash(runtimeType,const DeepCollectionEquality().hash(_emojis));
+}
 
 @override
 String toString() {
-  return 'EmojiDeletedStreamEvent(emojis: $emojis)';
+    return 'EmojiDeletedStreamEvent(emojis: $emojis)';
 }
 
 
@@ -1640,16 +1681,21 @@ $AnnouncementCreatedStreamEventCopyWith<AnnouncementCreatedStreamEvent> get copy
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is AnnouncementCreatedStreamEvent&&(identical(other.announcement, announcement) || other.announcement == announcement));
+  final _this = this as AnnouncementCreatedStreamEvent;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is AnnouncementCreatedStreamEvent&&(identical(other.announcement, _this.announcement) || other.announcement == _this.announcement));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,announcement);
+int get hashCode {
+  final _this = this as AnnouncementCreatedStreamEvent;
+  return Object.hash(runtimeType,_this.announcement);
+}
 
 @override
 String toString() {
-  return 'AnnouncementCreatedStreamEvent(announcement: $announcement)';
+  final _this = this as AnnouncementCreatedStreamEvent;
+  return 'AnnouncementCreatedStreamEvent(announcement: ${_this.announcement})';
 }
 
 
@@ -1678,7 +1724,7 @@ class _$AnnouncementCreatedStreamEventCopyWithImpl<$Res>
 /// Create a copy of AnnouncementCreatedStreamEvent
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? announcement = null,}) {
-  return _then(_self.copyWith(
+  return _then(AnnouncementCreatedStreamEvent(
 announcement: null == announcement ? _self.announcement : announcement // ignore: cast_nullable_to_non_nullable
 as AnnouncementsResponse,
   ));
@@ -1848,16 +1894,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _AnnouncementCreatedStreamEvent&&(identical(other.announcement, announcement) || other.announcement == announcement));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _AnnouncementCreatedStreamEvent&&(identical(other.announcement, announcement) || other.announcement == announcement));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,announcement);
+int get hashCode {
+    return Object.hash(runtimeType,announcement);
+}
 
 @override
 String toString() {
-  return 'AnnouncementCreatedStreamEvent(announcement: $announcement)';
+    return 'AnnouncementCreatedStreamEvent(announcement: $announcement)';
 }
 
 
@@ -2113,16 +2161,21 @@ $ChannelStreamEventCopyWith<ChannelStreamEvent> get copyWith => _$ChannelStreamE
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ChannelStreamEvent&&(identical(other.id, id) || other.id == id));
+  final _this = this as ChannelStreamEvent;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ChannelStreamEvent&&(identical(other.id, _this.id) || other.id == _this.id));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id);
+int get hashCode {
+  final _this = this as ChannelStreamEvent;
+  return Object.hash(runtimeType,_this.id);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent(id: $id)';
+  final _this = this as ChannelStreamEvent;
+  return 'ChannelStreamEvent(id: ${_this.id})';
 }
 
 
@@ -2562,7 +2615,6 @@ class NoteChannelEvent implements ChannelStreamEvent {
   factory NoteChannelEvent.fromJson(Map<String, dynamic> json) => _$NoteChannelEventFromJson(json);
 
 @override final  String id;
-// ignore: invalid_annotation_target
 @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  ChannelEventType? type;
  final  Note body;
 
@@ -2579,16 +2631,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NoteChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.type, type) || other.type == type)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is NoteChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.type, type) || other.type == type)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,type,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,type,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.note(id: $id, type: $type, body: $body)';
+    return 'ChannelStreamEvent.note(id: $id, type: $type, body: $body)';
 }
 
 
@@ -2641,7 +2695,7 @@ $NoteCopyWith<$Res> get body {
 @JsonSerializable()
 
 class StatsLogChannelEvent implements ChannelStreamEvent {
-  const StatsLogChannelEvent({required this.id, @StreamingStatsConverter() required final  List<StreamingStats> body, final  String? $type}): _body = body,$type = $type ?? 'statsLog';
+  const StatsLogChannelEvent({required this.id, @StreamingStatsConverter() required  List<StreamingStats> body,  String? $type}): _body = body,$type = $type ?? 'statsLog';
   factory StatsLogChannelEvent.fromJson(Map<String, dynamic> json) => _$StatsLogChannelEventFromJson(json);
 
 @override final  String id;
@@ -2670,16 +2724,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is StatsLogChannelEvent&&(identical(other.id, id) || other.id == id)&&const DeepCollectionEquality().equals(other._body, _body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is StatsLogChannelEvent&&(identical(other.id, id) || other.id == id)&&const DeepCollectionEquality().equals(other.body, _body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,const DeepCollectionEquality().hash(_body));
+int get hashCode {
+    return Object.hash(runtimeType,id,const DeepCollectionEquality().hash(_body));
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.statsLog(id: $id, body: $body)';
+    return 'ChannelStreamEvent.statsLog(id: $id, body: $body)';
 }
 
 
@@ -2722,7 +2778,7 @@ as List<StreamingStats>,
 @JsonSerializable()
 
 class StatsChannelEvent implements ChannelStreamEvent {
-  const StatsChannelEvent({required this.id, @StreamingStatsConverter() required this.body, final  String? $type}): $type = $type ?? 'stats';
+  const StatsChannelEvent({required this.id, @StreamingStatsConverter() required this.body,  String? $type}): $type = $type ?? 'stats';
   factory StatsChannelEvent.fromJson(Map<String, dynamic> json) => _$StatsChannelEventFromJson(json);
 
 @override final  String id;
@@ -2745,16 +2801,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is StatsChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is StatsChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.stats(id: $id, body: $body)';
+    return 'ChannelStreamEvent.stats(id: $id, body: $body)';
 }
 
 
@@ -2806,7 +2864,7 @@ $StreamingStatsCopyWith<$Res> get body {
 @JsonSerializable()
 
 class UserAddedChannelEvent implements ChannelStreamEvent {
-  const UserAddedChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'userAdded';
+  const UserAddedChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'userAdded';
   factory UserAddedChannelEvent.fromJson(Map<String, dynamic> json) => _$UserAddedChannelEventFromJson(json);
 
 @override final  String id;
@@ -2829,16 +2887,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is UserAddedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is UserAddedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.userAdded(id: $id, body: $body)';
+    return 'ChannelStreamEvent.userAdded(id: $id, body: $body)';
 }
 
 
@@ -2890,7 +2950,7 @@ $UserLiteCopyWith<$Res> get body {
 @JsonSerializable()
 
 class UserRemovedChannelEvent implements ChannelStreamEvent {
-  const UserRemovedChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'userRemoved';
+  const UserRemovedChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'userRemoved';
   factory UserRemovedChannelEvent.fromJson(Map<String, dynamic> json) => _$UserRemovedChannelEventFromJson(json);
 
 @override final  String id;
@@ -2913,16 +2973,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is UserRemovedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is UserRemovedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.userRemoved(id: $id, body: $body)';
+    return 'ChannelStreamEvent.userRemoved(id: $id, body: $body)';
 }
 
 
@@ -2974,7 +3036,7 @@ $UserLiteCopyWith<$Res> get body {
 @JsonSerializable()
 
 class NotificationChannelEvent implements ChannelStreamEvent {
-  const NotificationChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'notification';
+  const NotificationChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'notification';
   factory NotificationChannelEvent.fromJson(Map<String, dynamic> json) => _$NotificationChannelEventFromJson(json);
 
 @override final  String id;
@@ -2997,16 +3059,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotificationChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is NotificationChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.notification(id: $id, body: $body)';
+    return 'ChannelStreamEvent.notification(id: $id, body: $body)';
 }
 
 
@@ -3058,7 +3122,7 @@ $INotificationsResponseCopyWith<$Res> get body {
 @JsonSerializable()
 
 class MentionChannelEvent implements ChannelStreamEvent {
-  const MentionChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'mention';
+  const MentionChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'mention';
   factory MentionChannelEvent.fromJson(Map<String, dynamic> json) => _$MentionChannelEventFromJson(json);
 
 @override final  String id;
@@ -3081,16 +3145,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is MentionChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is MentionChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.mention(id: $id, body: $body)';
+    return 'ChannelStreamEvent.mention(id: $id, body: $body)';
 }
 
 
@@ -3142,7 +3208,7 @@ $NoteCopyWith<$Res> get body {
 @JsonSerializable()
 
 class ReplyChannelEvent implements ChannelStreamEvent {
-  const ReplyChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'reply';
+  const ReplyChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'reply';
   factory ReplyChannelEvent.fromJson(Map<String, dynamic> json) => _$ReplyChannelEventFromJson(json);
 
 @override final  String id;
@@ -3165,16 +3231,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReplyChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is ReplyChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.reply(id: $id, body: $body)';
+    return 'ChannelStreamEvent.reply(id: $id, body: $body)';
 }
 
 
@@ -3226,7 +3294,7 @@ $NoteCopyWith<$Res> get body {
 @JsonSerializable()
 
 class RenoteChannelEvent implements ChannelStreamEvent {
-  const RenoteChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'renote';
+  const RenoteChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'renote';
   factory RenoteChannelEvent.fromJson(Map<String, dynamic> json) => _$RenoteChannelEventFromJson(json);
 
 @override final  String id;
@@ -3249,16 +3317,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RenoteChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RenoteChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.renote(id: $id, body: $body)';
+    return 'ChannelStreamEvent.renote(id: $id, body: $body)';
 }
 
 
@@ -3310,7 +3380,7 @@ $NoteCopyWith<$Res> get body {
 @JsonSerializable()
 
 class FollowChannelEvent implements ChannelStreamEvent {
-  const FollowChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'follow';
+  const FollowChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'follow';
   factory FollowChannelEvent.fromJson(Map<String, dynamic> json) => _$FollowChannelEventFromJson(json);
 
 @override final  String id;
@@ -3333,16 +3403,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is FollowChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is FollowChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.follow(id: $id, body: $body)';
+    return 'ChannelStreamEvent.follow(id: $id, body: $body)';
 }
 
 
@@ -3394,7 +3466,7 @@ $UserDetailedNotMeCopyWith<$Res> get body {
 @JsonSerializable()
 
 class FollowedChannelEvent implements ChannelStreamEvent {
-  const FollowedChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'followed';
+  const FollowedChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'followed';
   factory FollowedChannelEvent.fromJson(Map<String, dynamic> json) => _$FollowedChannelEventFromJson(json);
 
 @override final  String id;
@@ -3417,16 +3489,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is FollowedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is FollowedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.followed(id: $id, body: $body)';
+    return 'ChannelStreamEvent.followed(id: $id, body: $body)';
 }
 
 
@@ -3478,7 +3552,7 @@ $UserLiteCopyWith<$Res> get body {
 @JsonSerializable()
 
 class UnfollowChannelEvent implements ChannelStreamEvent {
-  const UnfollowChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'unfollow';
+  const UnfollowChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'unfollow';
   factory UnfollowChannelEvent.fromJson(Map<String, dynamic> json) => _$UnfollowChannelEventFromJson(json);
 
 @override final  String id;
@@ -3501,16 +3575,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is UnfollowChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is UnfollowChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.unfollow(id: $id, body: $body)';
+    return 'ChannelStreamEvent.unfollow(id: $id, body: $body)';
 }
 
 
@@ -3562,7 +3638,7 @@ $UserDetailedNotMeCopyWith<$Res> get body {
 @JsonSerializable()
 
 class MeUpdatedChannelEvent implements ChannelStreamEvent {
-  const MeUpdatedChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'meUpdated';
+  const MeUpdatedChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'meUpdated';
   factory MeUpdatedChannelEvent.fromJson(Map<String, dynamic> json) => _$MeUpdatedChannelEventFromJson(json);
 
 @override final  String id;
@@ -3585,16 +3661,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is MeUpdatedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is MeUpdatedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.meUpdated(id: $id, body: $body)';
+    return 'ChannelStreamEvent.meUpdated(id: $id, body: $body)';
 }
 
 
@@ -3646,7 +3724,7 @@ $MeDetailedCopyWith<$Res> get body {
 @JsonSerializable()
 
 class PageEventChannelEvent implements ChannelStreamEvent {
-  const PageEventChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'pageEvent';
+  const PageEventChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'pageEvent';
   factory PageEventChannelEvent.fromJson(Map<String, dynamic> json) => _$PageEventChannelEventFromJson(json);
 
 @override final  String id;
@@ -3669,16 +3747,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is PageEventChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is PageEventChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.pageEvent(id: $id, body: $body)';
+    return 'ChannelStreamEvent.pageEvent(id: $id, body: $body)';
 }
 
 
@@ -3730,7 +3810,7 @@ $PageEventCopyWith<$Res> get body {
 @JsonSerializable()
 
 class UrlUploadFinishedChannelEvent implements ChannelStreamEvent {
-  const UrlUploadFinishedChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'urlUploadFinished';
+  const UrlUploadFinishedChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'urlUploadFinished';
   factory UrlUploadFinishedChannelEvent.fromJson(Map<String, dynamic> json) => _$UrlUploadFinishedChannelEventFromJson(json);
 
 @override final  String id;
@@ -3753,16 +3833,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is UrlUploadFinishedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is UrlUploadFinishedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.urlUploadFinished(id: $id, body: $body)';
+    return 'ChannelStreamEvent.urlUploadFinished(id: $id, body: $body)';
 }
 
 
@@ -3814,7 +3896,7 @@ $UrlUploadFinishedEventCopyWith<$Res> get body {
 @JsonSerializable()
 
 class ReadAllNotificationsChannelEvent implements ChannelStreamEvent {
-  const ReadAllNotificationsChannelEvent({required this.id, final  String? $type}): $type = $type ?? 'readAllNotifications';
+  const ReadAllNotificationsChannelEvent({required this.id,  String? $type}): $type = $type ?? 'readAllNotifications';
   factory ReadAllNotificationsChannelEvent.fromJson(Map<String, dynamic> json) => _$ReadAllNotificationsChannelEventFromJson(json);
 
 @override final  String id;
@@ -3836,16 +3918,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReadAllNotificationsChannelEvent&&(identical(other.id, id) || other.id == id));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is ReadAllNotificationsChannelEvent&&(identical(other.id, id) || other.id == id));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id);
+int get hashCode {
+    return Object.hash(runtimeType,id);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.readAllNotifications(id: $id)';
+    return 'ChannelStreamEvent.readAllNotifications(id: $id)';
 }
 
 
@@ -3887,7 +3971,7 @@ as String,
 @JsonSerializable()
 
 class UnreadNotificationChannelEvent implements ChannelStreamEvent {
-  const UnreadNotificationChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'unreadNotification';
+  const UnreadNotificationChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'unreadNotification';
   factory UnreadNotificationChannelEvent.fromJson(Map<String, dynamic> json) => _$UnreadNotificationChannelEventFromJson(json);
 
 @override final  String id;
@@ -3910,16 +3994,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is UnreadNotificationChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is UnreadNotificationChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.unreadNotification(id: $id, body: $body)';
+    return 'ChannelStreamEvent.unreadNotification(id: $id, body: $body)';
 }
 
 
@@ -3971,7 +4057,7 @@ $INotificationsResponseCopyWith<$Res> get body {
 @JsonSerializable()
 
 class UnreadMentionChannelEvent implements ChannelStreamEvent {
-  const UnreadMentionChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'unreadMention';
+  const UnreadMentionChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'unreadMention';
   factory UnreadMentionChannelEvent.fromJson(Map<String, dynamic> json) => _$UnreadMentionChannelEventFromJson(json);
 
 @override final  String id;
@@ -3994,16 +4080,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is UnreadMentionChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is UnreadMentionChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.unreadMention(id: $id, body: $body)';
+    return 'ChannelStreamEvent.unreadMention(id: $id, body: $body)';
 }
 
 
@@ -4046,7 +4134,7 @@ as String,
 @JsonSerializable()
 
 class ReadAllUnreadMentionsChannelEvent implements ChannelStreamEvent {
-  const ReadAllUnreadMentionsChannelEvent({required this.id, final  String? $type}): $type = $type ?? 'readAllUnreadMentions';
+  const ReadAllUnreadMentionsChannelEvent({required this.id,  String? $type}): $type = $type ?? 'readAllUnreadMentions';
   factory ReadAllUnreadMentionsChannelEvent.fromJson(Map<String, dynamic> json) => _$ReadAllUnreadMentionsChannelEventFromJson(json);
 
 @override final  String id;
@@ -4068,16 +4156,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReadAllUnreadMentionsChannelEvent&&(identical(other.id, id) || other.id == id));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is ReadAllUnreadMentionsChannelEvent&&(identical(other.id, id) || other.id == id));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id);
+int get hashCode {
+    return Object.hash(runtimeType,id);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.readAllUnreadMentions(id: $id)';
+    return 'ChannelStreamEvent.readAllUnreadMentions(id: $id)';
 }
 
 
@@ -4119,7 +4209,7 @@ as String,
 @JsonSerializable()
 
 class NotificationFlushedChannelEvent implements ChannelStreamEvent {
-  const NotificationFlushedChannelEvent({required this.id, final  String? $type}): $type = $type ?? 'notificationFlushed';
+  const NotificationFlushedChannelEvent({required this.id,  String? $type}): $type = $type ?? 'notificationFlushed';
   factory NotificationFlushedChannelEvent.fromJson(Map<String, dynamic> json) => _$NotificationFlushedChannelEventFromJson(json);
 
 @override final  String id;
@@ -4141,16 +4231,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotificationFlushedChannelEvent&&(identical(other.id, id) || other.id == id));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is NotificationFlushedChannelEvent&&(identical(other.id, id) || other.id == id));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id);
+int get hashCode {
+    return Object.hash(runtimeType,id);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.notificationFlushed(id: $id)';
+    return 'ChannelStreamEvent.notificationFlushed(id: $id)';
 }
 
 
@@ -4192,7 +4284,7 @@ as String,
 @JsonSerializable()
 
 class UnreadSpecifiedNoteChannelEvent implements ChannelStreamEvent {
-  const UnreadSpecifiedNoteChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'unreadSpecifiedNote';
+  const UnreadSpecifiedNoteChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'unreadSpecifiedNote';
   factory UnreadSpecifiedNoteChannelEvent.fromJson(Map<String, dynamic> json) => _$UnreadSpecifiedNoteChannelEventFromJson(json);
 
 @override final  String id;
@@ -4215,16 +4307,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is UnreadSpecifiedNoteChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is UnreadSpecifiedNoteChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.unreadSpecifiedNote(id: $id, body: $body)';
+    return 'ChannelStreamEvent.unreadSpecifiedNote(id: $id, body: $body)';
 }
 
 
@@ -4267,7 +4361,7 @@ as String,
 @JsonSerializable()
 
 class ReadAllUnreadSpecifiedNotesChannelEvent implements ChannelStreamEvent {
-  const ReadAllUnreadSpecifiedNotesChannelEvent({required this.id, final  String? $type}): $type = $type ?? 'readAllUnreadSpecifiedNotes';
+  const ReadAllUnreadSpecifiedNotesChannelEvent({required this.id,  String? $type}): $type = $type ?? 'readAllUnreadSpecifiedNotes';
   factory ReadAllUnreadSpecifiedNotesChannelEvent.fromJson(Map<String, dynamic> json) => _$ReadAllUnreadSpecifiedNotesChannelEventFromJson(json);
 
 @override final  String id;
@@ -4289,16 +4383,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReadAllUnreadSpecifiedNotesChannelEvent&&(identical(other.id, id) || other.id == id));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is ReadAllUnreadSpecifiedNotesChannelEvent&&(identical(other.id, id) || other.id == id));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id);
+int get hashCode {
+    return Object.hash(runtimeType,id);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.readAllUnreadSpecifiedNotes(id: $id)';
+    return 'ChannelStreamEvent.readAllUnreadSpecifiedNotes(id: $id)';
 }
 
 
@@ -4340,7 +4436,7 @@ as String,
 @JsonSerializable()
 
 class ReadAllAntennasChannelEvent implements ChannelStreamEvent {
-  const ReadAllAntennasChannelEvent({required this.id, final  String? $type}): $type = $type ?? 'readAllAntennas';
+  const ReadAllAntennasChannelEvent({required this.id,  String? $type}): $type = $type ?? 'readAllAntennas';
   factory ReadAllAntennasChannelEvent.fromJson(Map<String, dynamic> json) => _$ReadAllAntennasChannelEventFromJson(json);
 
 @override final  String id;
@@ -4362,16 +4458,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReadAllAntennasChannelEvent&&(identical(other.id, id) || other.id == id));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is ReadAllAntennasChannelEvent&&(identical(other.id, id) || other.id == id));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id);
+int get hashCode {
+    return Object.hash(runtimeType,id);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.readAllAntennas(id: $id)';
+    return 'ChannelStreamEvent.readAllAntennas(id: $id)';
 }
 
 
@@ -4413,7 +4511,7 @@ as String,
 @JsonSerializable()
 
 class UnreadAntennaChannelEvent implements ChannelStreamEvent {
-  const UnreadAntennaChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'unreadAntenna';
+  const UnreadAntennaChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'unreadAntenna';
   factory UnreadAntennaChannelEvent.fromJson(Map<String, dynamic> json) => _$UnreadAntennaChannelEventFromJson(json);
 
 @override final  String id;
@@ -4436,16 +4534,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is UnreadAntennaChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is UnreadAntennaChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.unreadAntenna(id: $id, body: $body)';
+    return 'ChannelStreamEvent.unreadAntenna(id: $id, body: $body)';
 }
 
 
@@ -4497,7 +4597,7 @@ $AntennaCopyWith<$Res> get body {
 @JsonSerializable()
 
 class NewChatMessageEvent implements ChannelStreamEvent {
-  const NewChatMessageEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'newChatMessage';
+  const NewChatMessageEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'newChatMessage';
   factory NewChatMessageEvent.fromJson(Map<String, dynamic> json) => _$NewChatMessageEventFromJson(json);
 
 @override final  String id;
@@ -4520,16 +4620,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NewChatMessageEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is NewChatMessageEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.newChatMessage(id: $id, body: $body)';
+    return 'ChannelStreamEvent.newChatMessage(id: $id, body: $body)';
 }
 
 
@@ -4581,7 +4683,7 @@ $ChatMessageCopyWith<$Res> get body {
 @JsonSerializable()
 
 class ReadAllAnnouncementsChannelEvent implements ChannelStreamEvent {
-  const ReadAllAnnouncementsChannelEvent({required this.id, final  String? $type}): $type = $type ?? 'readAllAnnouncements';
+  const ReadAllAnnouncementsChannelEvent({required this.id,  String? $type}): $type = $type ?? 'readAllAnnouncements';
   factory ReadAllAnnouncementsChannelEvent.fromJson(Map<String, dynamic> json) => _$ReadAllAnnouncementsChannelEventFromJson(json);
 
 @override final  String id;
@@ -4603,16 +4705,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReadAllAnnouncementsChannelEvent&&(identical(other.id, id) || other.id == id));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is ReadAllAnnouncementsChannelEvent&&(identical(other.id, id) || other.id == id));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id);
+int get hashCode {
+    return Object.hash(runtimeType,id);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.readAllAnnouncements(id: $id)';
+    return 'ChannelStreamEvent.readAllAnnouncements(id: $id)';
 }
 
 
@@ -4654,7 +4758,7 @@ as String,
 @JsonSerializable()
 
 class MyTokenRegeneratedChannelEvent implements ChannelStreamEvent {
-  const MyTokenRegeneratedChannelEvent({required this.id, final  String? $type}): $type = $type ?? 'myTokenRegenerated';
+  const MyTokenRegeneratedChannelEvent({required this.id,  String? $type}): $type = $type ?? 'myTokenRegenerated';
   factory MyTokenRegeneratedChannelEvent.fromJson(Map<String, dynamic> json) => _$MyTokenRegeneratedChannelEventFromJson(json);
 
 @override final  String id;
@@ -4676,16 +4780,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is MyTokenRegeneratedChannelEvent&&(identical(other.id, id) || other.id == id));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is MyTokenRegeneratedChannelEvent&&(identical(other.id, id) || other.id == id));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id);
+int get hashCode {
+    return Object.hash(runtimeType,id);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.myTokenRegenerated(id: $id)';
+    return 'ChannelStreamEvent.myTokenRegenerated(id: $id)';
 }
 
 
@@ -4727,7 +4833,7 @@ as String,
 @JsonSerializable()
 
 class SigninChannelEvent implements ChannelStreamEvent {
-  const SigninChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'signin';
+  const SigninChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'signin';
   factory SigninChannelEvent.fromJson(Map<String, dynamic> json) => _$SigninChannelEventFromJson(json);
 
 @override final  String id;
@@ -4750,16 +4856,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is SigninChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is SigninChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.signin(id: $id, body: $body)';
+    return 'ChannelStreamEvent.signin(id: $id, body: $body)';
 }
 
 
@@ -4811,7 +4919,7 @@ $SigninCopyWith<$Res> get body {
 @JsonSerializable()
 
 class RegistryUpdatedChannelEvent implements ChannelStreamEvent {
-  const RegistryUpdatedChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'registryUpdated';
+  const RegistryUpdatedChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'registryUpdated';
   factory RegistryUpdatedChannelEvent.fromJson(Map<String, dynamic> json) => _$RegistryUpdatedChannelEventFromJson(json);
 
 @override final  String id;
@@ -4834,16 +4942,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RegistryUpdatedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RegistryUpdatedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.registryUpdated(id: $id, body: $body)';
+    return 'ChannelStreamEvent.registryUpdated(id: $id, body: $body)';
 }
 
 
@@ -4895,7 +5005,7 @@ $RegistryUpdatedCopyWith<$Res> get body {
 @JsonSerializable()
 
 class DriveFileCreatedChannelEvent implements ChannelStreamEvent {
-  const DriveFileCreatedChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'driveFileCreated';
+  const DriveFileCreatedChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'driveFileCreated';
   factory DriveFileCreatedChannelEvent.fromJson(Map<String, dynamic> json) => _$DriveFileCreatedChannelEventFromJson(json);
 
 @override final  String id;
@@ -4918,16 +5028,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is DriveFileCreatedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is DriveFileCreatedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.driveFileCreated(id: $id, body: $body)';
+    return 'ChannelStreamEvent.driveFileCreated(id: $id, body: $body)';
 }
 
 
@@ -4979,7 +5091,7 @@ $DriveFileCopyWith<$Res> get body {
 @JsonSerializable()
 
 class ReadAntennaChannelEvent implements ChannelStreamEvent {
-  const ReadAntennaChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'readAntenna';
+  const ReadAntennaChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'readAntenna';
   factory ReadAntennaChannelEvent.fromJson(Map<String, dynamic> json) => _$ReadAntennaChannelEventFromJson(json);
 
 @override final  String id;
@@ -5002,16 +5114,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReadAntennaChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is ReadAntennaChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.readAntenna(id: $id, body: $body)';
+    return 'ChannelStreamEvent.readAntenna(id: $id, body: $body)';
 }
 
 
@@ -5063,7 +5177,7 @@ $AntennaCopyWith<$Res> get body {
 @JsonSerializable()
 
 class ReceiveFollowRequestChannelEvent implements ChannelStreamEvent {
-  const ReceiveFollowRequestChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'receiveFollowRequest';
+  const ReceiveFollowRequestChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'receiveFollowRequest';
   factory ReceiveFollowRequestChannelEvent.fromJson(Map<String, dynamic> json) => _$ReceiveFollowRequestChannelEventFromJson(json);
 
 @override final  String id;
@@ -5086,16 +5200,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReceiveFollowRequestChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is ReceiveFollowRequestChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.receiveFollowRequest(id: $id, body: $body)';
+    return 'ChannelStreamEvent.receiveFollowRequest(id: $id, body: $body)';
 }
 
 
@@ -5147,7 +5263,7 @@ $UserLiteCopyWith<$Res> get body {
 @JsonSerializable()
 
 class AnnouncementCreatedChannelEvent implements ChannelStreamEvent {
-  const AnnouncementCreatedChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'announcementCreated';
+  const AnnouncementCreatedChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'announcementCreated';
   factory AnnouncementCreatedChannelEvent.fromJson(Map<String, dynamic> json) => _$AnnouncementCreatedChannelEventFromJson(json);
 
 @override final  String id;
@@ -5170,16 +5286,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is AnnouncementCreatedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is AnnouncementCreatedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.announcementCreated(id: $id, body: $body)';
+    return 'ChannelStreamEvent.announcementCreated(id: $id, body: $body)';
 }
 
 
@@ -5231,7 +5349,7 @@ $AnnouncementCreatedStreamEventCopyWith<$Res> get body {
 @JsonSerializable()
 
 class ChatMessageChannelEvent implements ChannelStreamEvent {
-  const ChatMessageChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'message';
+  const ChatMessageChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'message';
   factory ChatMessageChannelEvent.fromJson(Map<String, dynamic> json) => _$ChatMessageChannelEventFromJson(json);
 
 @override final  String id;
@@ -5254,16 +5372,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ChatMessageChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is ChatMessageChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.chatMessage(id: $id, body: $body)';
+    return 'ChannelStreamEvent.chatMessage(id: $id, body: $body)';
 }
 
 
@@ -5315,7 +5435,7 @@ $ChatMessageCopyWith<$Res> get body {
 @JsonSerializable()
 
 class ChatDeletedChannelEvent implements ChannelStreamEvent {
-  const ChatDeletedChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'deleted';
+  const ChatDeletedChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'deleted';
   factory ChatDeletedChannelEvent.fromJson(Map<String, dynamic> json) => _$ChatDeletedChannelEventFromJson(json);
 
 @override final  String id;
@@ -5338,16 +5458,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ChatDeletedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is ChatDeletedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.chatDeleted(id: $id, body: $body)';
+    return 'ChannelStreamEvent.chatDeleted(id: $id, body: $body)';
 }
 
 
@@ -5390,7 +5512,7 @@ as String,
 @JsonSerializable()
 
 class ChatReactChannelEvent implements ChannelStreamEvent {
-  const ChatReactChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'react';
+  const ChatReactChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'react';
   factory ChatReactChannelEvent.fromJson(Map<String, dynamic> json) => _$ChatReactChannelEventFromJson(json);
 
 @override final  String id;
@@ -5413,16 +5535,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ChatReactChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is ChatReactChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.chatReact(id: $id, body: $body)';
+    return 'ChannelStreamEvent.chatReact(id: $id, body: $body)';
 }
 
 
@@ -5474,7 +5598,7 @@ $ChatReactCopyWith<$Res> get body {
 @JsonSerializable()
 
 class ChatUnreactChannelEvent implements ChannelStreamEvent {
-  const ChatUnreactChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'unreact';
+  const ChatUnreactChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'unreact';
   factory ChatUnreactChannelEvent.fromJson(Map<String, dynamic> json) => _$ChatUnreactChannelEventFromJson(json);
 
 @override final  String id;
@@ -5497,16 +5621,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ChatUnreactChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is ChatUnreactChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.chatUnreact(id: $id, body: $body)';
+    return 'ChannelStreamEvent.chatUnreact(id: $id, body: $body)';
 }
 
 
@@ -5558,7 +5684,7 @@ $ChatReactCopyWith<$Res> get body {
 @JsonSerializable()
 
 class ReversiInvitedChannelEvent implements ChannelStreamEvent {
-  const ReversiInvitedChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'invited';
+  const ReversiInvitedChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'invited';
   factory ReversiInvitedChannelEvent.fromJson(Map<String, dynamic> json) => _$ReversiInvitedChannelEventFromJson(json);
 
 @override final  String id;
@@ -5581,16 +5707,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiInvitedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiInvitedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.reversiInvited(id: $id, body: $body)';
+    return 'ChannelStreamEvent.reversiInvited(id: $id, body: $body)';
 }
 
 
@@ -5642,7 +5770,7 @@ $ReversiInvitedCopyWith<$Res> get body {
 @JsonSerializable()
 
 class ReversiMatchedChannelEvent implements ChannelStreamEvent {
-  const ReversiMatchedChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'matched';
+  const ReversiMatchedChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'matched';
   factory ReversiMatchedChannelEvent.fromJson(Map<String, dynamic> json) => _$ReversiMatchedChannelEventFromJson(json);
 
 @override final  String id;
@@ -5665,16 +5793,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiMatchedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiMatchedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.reversiMatched(id: $id, body: $body)';
+    return 'ChannelStreamEvent.reversiMatched(id: $id, body: $body)';
 }
 
 
@@ -5726,7 +5856,7 @@ $ReversiGameEventCopyWith<$Res> get body {
 @JsonSerializable()
 
 class ReversiStartedChannelEvent implements ChannelStreamEvent {
-  const ReversiStartedChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'started';
+  const ReversiStartedChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'started';
   factory ReversiStartedChannelEvent.fromJson(Map<String, dynamic> json) => _$ReversiStartedChannelEventFromJson(json);
 
 @override final  String id;
@@ -5749,16 +5879,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiStartedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiStartedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.reversiStarted(id: $id, body: $body)';
+    return 'ChannelStreamEvent.reversiStarted(id: $id, body: $body)';
 }
 
 
@@ -5810,7 +5942,7 @@ $ReversiGameEventCopyWith<$Res> get body {
 @JsonSerializable()
 
 class ReversiEndedChannelEvent implements ChannelStreamEvent {
-  const ReversiEndedChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'ended';
+  const ReversiEndedChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'ended';
   factory ReversiEndedChannelEvent.fromJson(Map<String, dynamic> json) => _$ReversiEndedChannelEventFromJson(json);
 
 @override final  String id;
@@ -5833,16 +5965,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiEndedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiEndedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.reversiEnded(id: $id, body: $body)';
+    return 'ChannelStreamEvent.reversiEnded(id: $id, body: $body)';
 }
 
 
@@ -5894,7 +6028,7 @@ $ReversiEndedCopyWith<$Res> get body {
 @JsonSerializable()
 
 class ReversiLogChannelEvent implements ChannelStreamEvent {
-  const ReversiLogChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'log';
+  const ReversiLogChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'log';
   factory ReversiLogChannelEvent.fromJson(Map<String, dynamic> json) => _$ReversiLogChannelEventFromJson(json);
 
 @override final  String id;
@@ -5917,16 +6051,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiLogChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiLogChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.reversiLog(id: $id, body: $body)';
+    return 'ChannelStreamEvent.reversiLog(id: $id, body: $body)';
 }
 
 
@@ -5978,7 +6114,7 @@ $ReversiLogEventCopyWith<$Res> get body {
 @JsonSerializable()
 
 class ReversiChangeReadyStatesChannelEvent implements ChannelStreamEvent {
-  const ReversiChangeReadyStatesChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'changeReadyStates';
+  const ReversiChangeReadyStatesChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'changeReadyStates';
   factory ReversiChangeReadyStatesChannelEvent.fromJson(Map<String, dynamic> json) => _$ReversiChangeReadyStatesChannelEventFromJson(json);
 
 @override final  String id;
@@ -6001,16 +6137,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiChangeReadyStatesChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiChangeReadyStatesChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.reversiChangeReadyStates(id: $id, body: $body)';
+    return 'ChannelStreamEvent.reversiChangeReadyStates(id: $id, body: $body)';
 }
 
 
@@ -6062,7 +6200,7 @@ $ReversiReadyStatesCopyWith<$Res> get body {
 @JsonSerializable()
 
 class ReversiUpdateSettingsChannelEvent implements ChannelStreamEvent {
-  const ReversiUpdateSettingsChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'updateSettings';
+  const ReversiUpdateSettingsChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'updateSettings';
   factory ReversiUpdateSettingsChannelEvent.fromJson(Map<String, dynamic> json) => _$ReversiUpdateSettingsChannelEventFromJson(json);
 
 @override final  String id;
@@ -6085,16 +6223,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiUpdateSettingsChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiUpdateSettingsChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.reversiUpdateSettings(id: $id, body: $body)';
+    return 'ChannelStreamEvent.reversiUpdateSettings(id: $id, body: $body)';
 }
 
 
@@ -6146,7 +6286,7 @@ $ReversiUpdateSettingsCopyWith<$Res> get body {
 @JsonSerializable()
 
 class ReversiCanceledChannelEvent implements ChannelStreamEvent {
-  const ReversiCanceledChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'canceled';
+  const ReversiCanceledChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'canceled';
   factory ReversiCanceledChannelEvent.fromJson(Map<String, dynamic> json) => _$ReversiCanceledChannelEventFromJson(json);
 
 @override final  String id;
@@ -6169,16 +6309,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiCanceledChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiCanceledChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.reversiCanceled(id: $id, body: $body)';
+    return 'ChannelStreamEvent.reversiCanceled(id: $id, body: $body)';
 }
 
 
@@ -6230,7 +6372,7 @@ $ReversiCanceledCopyWith<$Res> get body {
 @JsonSerializable()
 
 class FallbackChannelEvent implements ChannelStreamEvent {
-  const FallbackChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'fallback';
+  const FallbackChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'fallback';
   factory FallbackChannelEvent.fromJson(Map<String, dynamic> json) => _$FallbackChannelEventFromJson(json);
 
 @override final  String id;
@@ -6253,16 +6395,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is FallbackChannelEvent&&(identical(other.id, id) || other.id == id)&&const DeepCollectionEquality().equals(other.body, body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is FallbackChannelEvent&&(identical(other.id, id) || other.id == id)&&const DeepCollectionEquality().equals(other.body, body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,const DeepCollectionEquality().hash(body));
+int get hashCode {
+    return Object.hash(runtimeType,id,const DeepCollectionEquality().hash(body));
+}
 
 @override
 String toString() {
-  return 'ChannelStreamEvent.fallback(id: $id, body: $body)';
+    return 'ChannelStreamEvent.fallback(id: $id, body: $body)';
 }
 
 
@@ -6352,16 +6496,21 @@ $NoteUpdateStreamEventCopyWith<NoteUpdateStreamEvent> get copyWith => _$NoteUpda
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NoteUpdateStreamEvent&&(identical(other.id, id) || other.id == id)&&const DeepCollectionEquality().equals(other.body, body));
+  final _this = this as NoteUpdateStreamEvent;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NoteUpdateStreamEvent&&(identical(other.id, _this.id) || other.id == _this.id)&&const DeepCollectionEquality().equals(other.body, _this.body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,const DeepCollectionEquality().hash(body));
+int get hashCode {
+  final _this = this as NoteUpdateStreamEvent;
+  return Object.hash(runtimeType,_this.id,const DeepCollectionEquality().hash(_this.body));
+}
 
 @override
 String toString() {
-  return 'NoteUpdateStreamEvent(id: $id, body: $body)';
+  final _this = this as NoteUpdateStreamEvent;
+  return 'NoteUpdateStreamEvent(id: ${_this.id}, body: ${_this.body})';
 }
 
 
@@ -6551,7 +6700,7 @@ return updated(_that.id,_that.body);case _:
 @JsonSerializable()
 
 class ReactedChannelEvent implements NoteUpdateStreamEvent {
-  const ReactedChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'reacted';
+  const ReactedChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'reacted';
   factory ReactedChannelEvent.fromJson(Map<String, dynamic> json) => _$ReactedChannelEventFromJson(json);
 
 @override final  String id;
@@ -6574,16 +6723,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReactedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is ReactedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'NoteUpdateStreamEvent.reacted(id: $id, body: $body)';
+    return 'NoteUpdateStreamEvent.reacted(id: $id, body: $body)';
 }
 
 
@@ -6635,7 +6786,7 @@ $TimelineReactedCopyWith<$Res> get body {
 @JsonSerializable()
 
 class UnreactedChannelEvent implements NoteUpdateStreamEvent {
-  const UnreactedChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'unreacted';
+  const UnreactedChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'unreacted';
   factory UnreactedChannelEvent.fromJson(Map<String, dynamic> json) => _$UnreactedChannelEventFromJson(json);
 
 @override final  String id;
@@ -6658,16 +6809,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is UnreactedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is UnreactedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'NoteUpdateStreamEvent.unreacted(id: $id, body: $body)';
+    return 'NoteUpdateStreamEvent.unreacted(id: $id, body: $body)';
 }
 
 
@@ -6719,7 +6872,7 @@ $TimelineReactedCopyWith<$Res> get body {
 @JsonSerializable()
 
 class DeletedChannelEvent implements NoteUpdateStreamEvent {
-  const DeletedChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'deleted';
+  const DeletedChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'deleted';
   factory DeletedChannelEvent.fromJson(Map<String, dynamic> json) => _$DeletedChannelEventFromJson(json);
 
 @override final  String id;
@@ -6742,16 +6895,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is DeletedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is DeletedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'NoteUpdateStreamEvent.deleted(id: $id, body: $body)';
+    return 'NoteUpdateStreamEvent.deleted(id: $id, body: $body)';
 }
 
 
@@ -6803,7 +6958,7 @@ $TimelineDeletedCopyWith<$Res> get body {
 @JsonSerializable()
 
 class PollVotedChannelEvent implements NoteUpdateStreamEvent {
-  const PollVotedChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'pollVoted';
+  const PollVotedChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'pollVoted';
   factory PollVotedChannelEvent.fromJson(Map<String, dynamic> json) => _$PollVotedChannelEventFromJson(json);
 
 @override final  String id;
@@ -6826,16 +6981,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is PollVotedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is PollVotedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'NoteUpdateStreamEvent.pollVoted(id: $id, body: $body)';
+    return 'NoteUpdateStreamEvent.pollVoted(id: $id, body: $body)';
 }
 
 
@@ -6887,7 +7044,7 @@ $TimelineVotedCopyWith<$Res> get body {
 @JsonSerializable()
 
 class UpdatedChannelEvent implements NoteUpdateStreamEvent {
-  const UpdatedChannelEvent({required this.id, required this.body, final  String? $type}): $type = $type ?? 'updated';
+  const UpdatedChannelEvent({required this.id, required this.body,  String? $type}): $type = $type ?? 'updated';
   factory UpdatedChannelEvent.fromJson(Map<String, dynamic> json) => _$UpdatedChannelEventFromJson(json);
 
 @override final  String id;
@@ -6910,16 +7067,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is UpdatedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is UpdatedChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,body);
+int get hashCode {
+    return Object.hash(runtimeType,id,body);
+}
 
 @override
 String toString() {
-  return 'NoteUpdateStreamEvent.updated(id: $id, body: $body)';
+    return 'NoteUpdateStreamEvent.updated(id: $id, body: $body)';
 }
 
 

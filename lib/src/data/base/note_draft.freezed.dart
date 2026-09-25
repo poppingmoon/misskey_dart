@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'note_draft.dart';
@@ -9,14 +9,14 @@ part of 'note_draft.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
 /// @nodoc
 mixin _$NoteDraft {
 
- String get id;@DateTimeConverter() DateTime get createdAt; String? get text; String? get cw; String get userId; UserLite get user; String? get replyId; String? get renoteId; Note? get reply; Note? get renote;// ignore: invalid_annotation_target
-@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) NoteVisibility? get visibility; List<String>? get visibleUserIds; List<String>? get fileIds; List<DriveFile>? get files; String? get hashtag; NoteDraftPoll? get poll; String? get channelId; NoteChannelInfo? get channel; bool? get localOnly; ReactionAcceptance? get reactionAcceptance;@EpocTimeDateTimeConverter() DateTime? get scheduledAt; bool? get isActuallyScheduled;
+ String get id;@DateTimeConverter() DateTime get createdAt; String? get text; String? get cw; String get userId; UserLite get user; String? get replyId; String? get renoteId; Note? get reply; Note? get renote;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) NoteVisibility? get visibility; List<String>? get visibleUserIds; List<String>? get fileIds; List<DriveFile>? get files; String? get hashtag; NoteDraftPoll? get poll; String? get channelId; NoteChannelInfo? get channel; bool? get localOnly; ReactionAcceptance? get reactionAcceptance;@EpocTimeDateTimeConverter() DateTime? get scheduledAt; bool? get isActuallyScheduled;
 /// Create a copy of NoteDraft
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -29,16 +29,21 @@ $NoteDraftCopyWith<NoteDraft> get copyWith => _$NoteDraftCopyWithImpl<NoteDraft>
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NoteDraft&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.text, text) || other.text == text)&&(identical(other.cw, cw) || other.cw == cw)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.user, user) || other.user == user)&&(identical(other.replyId, replyId) || other.replyId == replyId)&&(identical(other.renoteId, renoteId) || other.renoteId == renoteId)&&(identical(other.reply, reply) || other.reply == reply)&&(identical(other.renote, renote) || other.renote == renote)&&(identical(other.visibility, visibility) || other.visibility == visibility)&&const DeepCollectionEquality().equals(other.visibleUserIds, visibleUserIds)&&const DeepCollectionEquality().equals(other.fileIds, fileIds)&&const DeepCollectionEquality().equals(other.files, files)&&(identical(other.hashtag, hashtag) || other.hashtag == hashtag)&&(identical(other.poll, poll) || other.poll == poll)&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.channel, channel) || other.channel == channel)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&(identical(other.reactionAcceptance, reactionAcceptance) || other.reactionAcceptance == reactionAcceptance)&&(identical(other.scheduledAt, scheduledAt) || other.scheduledAt == scheduledAt)&&(identical(other.isActuallyScheduled, isActuallyScheduled) || other.isActuallyScheduled == isActuallyScheduled));
+  final _this = this as NoteDraft;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NoteDraft&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.createdAt, _this.createdAt) || other.createdAt == _this.createdAt)&&(identical(other.text, _this.text) || other.text == _this.text)&&(identical(other.cw, _this.cw) || other.cw == _this.cw)&&(identical(other.userId, _this.userId) || other.userId == _this.userId)&&(identical(other.user, _this.user) || other.user == _this.user)&&(identical(other.replyId, _this.replyId) || other.replyId == _this.replyId)&&(identical(other.renoteId, _this.renoteId) || other.renoteId == _this.renoteId)&&(identical(other.reply, _this.reply) || other.reply == _this.reply)&&(identical(other.renote, _this.renote) || other.renote == _this.renote)&&(identical(other.visibility, _this.visibility) || other.visibility == _this.visibility)&&const DeepCollectionEquality().equals(other.visibleUserIds, _this.visibleUserIds)&&const DeepCollectionEquality().equals(other.fileIds, _this.fileIds)&&const DeepCollectionEquality().equals(other.files, _this.files)&&(identical(other.hashtag, _this.hashtag) || other.hashtag == _this.hashtag)&&(identical(other.poll, _this.poll) || other.poll == _this.poll)&&(identical(other.channelId, _this.channelId) || other.channelId == _this.channelId)&&(identical(other.channel, _this.channel) || other.channel == _this.channel)&&(identical(other.localOnly, _this.localOnly) || other.localOnly == _this.localOnly)&&(identical(other.reactionAcceptance, _this.reactionAcceptance) || other.reactionAcceptance == _this.reactionAcceptance)&&(identical(other.scheduledAt, _this.scheduledAt) || other.scheduledAt == _this.scheduledAt)&&(identical(other.isActuallyScheduled, _this.isActuallyScheduled) || other.isActuallyScheduled == _this.isActuallyScheduled));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hashAll([runtimeType,id,createdAt,text,cw,userId,user,replyId,renoteId,reply,renote,visibility,const DeepCollectionEquality().hash(visibleUserIds),const DeepCollectionEquality().hash(fileIds),const DeepCollectionEquality().hash(files),hashtag,poll,channelId,channel,localOnly,reactionAcceptance,scheduledAt,isActuallyScheduled]);
+int get hashCode {
+  final _this = this as NoteDraft;
+  return Object.hashAll([runtimeType,_this.id,_this.createdAt,_this.text,_this.cw,_this.userId,_this.user,_this.replyId,_this.renoteId,_this.reply,_this.renote,_this.visibility,const DeepCollectionEquality().hash(_this.visibleUserIds),const DeepCollectionEquality().hash(_this.fileIds),const DeepCollectionEquality().hash(_this.files),_this.hashtag,_this.poll,_this.channelId,_this.channel,_this.localOnly,_this.reactionAcceptance,_this.scheduledAt,_this.isActuallyScheduled]);
+}
 
 @override
 String toString() {
-  return 'NoteDraft(id: $id, createdAt: $createdAt, text: $text, cw: $cw, userId: $userId, user: $user, replyId: $replyId, renoteId: $renoteId, reply: $reply, renote: $renote, visibility: $visibility, visibleUserIds: $visibleUserIds, fileIds: $fileIds, files: $files, hashtag: $hashtag, poll: $poll, channelId: $channelId, channel: $channel, localOnly: $localOnly, reactionAcceptance: $reactionAcceptance, scheduledAt: $scheduledAt, isActuallyScheduled: $isActuallyScheduled)';
+  final _this = this as NoteDraft;
+  return 'NoteDraft(id: ${_this.id}, createdAt: ${_this.createdAt}, text: ${_this.text}, cw: ${_this.cw}, userId: ${_this.userId}, user: ${_this.user}, replyId: ${_this.replyId}, renoteId: ${_this.renoteId}, reply: ${_this.reply}, renote: ${_this.renote}, visibility: ${_this.visibility}, visibleUserIds: ${_this.visibleUserIds}, fileIds: ${_this.fileIds}, files: ${_this.files}, hashtag: ${_this.hashtag}, poll: ${_this.poll}, channelId: ${_this.channelId}, channel: ${_this.channel}, localOnly: ${_this.localOnly}, reactionAcceptance: ${_this.reactionAcceptance}, scheduledAt: ${_this.scheduledAt}, isActuallyScheduled: ${_this.isActuallyScheduled})';
 }
 
 
@@ -67,7 +72,7 @@ class _$NoteDraftCopyWithImpl<$Res>
 /// Create a copy of NoteDraft
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? createdAt = null,Object? text = freezed,Object? cw = freezed,Object? userId = null,Object? user = null,Object? replyId = freezed,Object? renoteId = freezed,Object? reply = freezed,Object? renote = freezed,Object? visibility = freezed,Object? visibleUserIds = freezed,Object? fileIds = freezed,Object? files = freezed,Object? hashtag = freezed,Object? poll = freezed,Object? channelId = freezed,Object? channel = freezed,Object? localOnly = freezed,Object? reactionAcceptance = freezed,Object? scheduledAt = freezed,Object? isActuallyScheduled = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NoteDraft(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime,text: freezed == text ? _self.text : text // ignore: cast_nullable_to_non_nullable
@@ -288,7 +293,7 @@ return $default(_that.id,_that.createdAt,_that.text,_that.cw,_that.userId,_that.
 @JsonSerializable()
 
 class _NoteDraft implements NoteDraft {
-  const _NoteDraft({required this.id, @DateTimeConverter() required this.createdAt, this.text, this.cw, required this.userId, required this.user, this.replyId, this.renoteId, this.reply, this.renote, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.visibility, final  List<String>? visibleUserIds, final  List<String>? fileIds, final  List<DriveFile>? files, this.hashtag, this.poll, this.channelId, this.channel, this.localOnly, this.reactionAcceptance, @EpocTimeDateTimeConverter() this.scheduledAt, this.isActuallyScheduled}): _visibleUserIds = visibleUserIds,_fileIds = fileIds,_files = files;
+  const _NoteDraft({required this.id, @DateTimeConverter() required this.createdAt, this.text, this.cw, required this.userId, required this.user, this.replyId, this.renoteId, this.reply, this.renote, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.visibility,  List<String>? visibleUserIds,  List<String>? fileIds,  List<DriveFile>? files, this.hashtag, this.poll, this.channelId, this.channel, this.localOnly, this.reactionAcceptance, @EpocTimeDateTimeConverter() this.scheduledAt, this.isActuallyScheduled}): _visibleUserIds = visibleUserIds,_fileIds = fileIds,_files = files;
   factory _NoteDraft.fromJson(Map<String, dynamic> json) => _$NoteDraftFromJson(json);
 
 @override final  String id;
@@ -301,7 +306,6 @@ class _NoteDraft implements NoteDraft {
 @override final  String? renoteId;
 @override final  Note? reply;
 @override final  Note? renote;
-// ignore: invalid_annotation_target
 @override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  NoteVisibility? visibility;
  final  List<String>? _visibleUserIds;
 @override List<String>? get visibleUserIds {
@@ -352,16 +356,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NoteDraft&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.text, text) || other.text == text)&&(identical(other.cw, cw) || other.cw == cw)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.user, user) || other.user == user)&&(identical(other.replyId, replyId) || other.replyId == replyId)&&(identical(other.renoteId, renoteId) || other.renoteId == renoteId)&&(identical(other.reply, reply) || other.reply == reply)&&(identical(other.renote, renote) || other.renote == renote)&&(identical(other.visibility, visibility) || other.visibility == visibility)&&const DeepCollectionEquality().equals(other._visibleUserIds, _visibleUserIds)&&const DeepCollectionEquality().equals(other._fileIds, _fileIds)&&const DeepCollectionEquality().equals(other._files, _files)&&(identical(other.hashtag, hashtag) || other.hashtag == hashtag)&&(identical(other.poll, poll) || other.poll == poll)&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.channel, channel) || other.channel == channel)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&(identical(other.reactionAcceptance, reactionAcceptance) || other.reactionAcceptance == reactionAcceptance)&&(identical(other.scheduledAt, scheduledAt) || other.scheduledAt == scheduledAt)&&(identical(other.isActuallyScheduled, isActuallyScheduled) || other.isActuallyScheduled == isActuallyScheduled));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NoteDraft&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.text, text) || other.text == text)&&(identical(other.cw, cw) || other.cw == cw)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.user, user) || other.user == user)&&(identical(other.replyId, replyId) || other.replyId == replyId)&&(identical(other.renoteId, renoteId) || other.renoteId == renoteId)&&(identical(other.reply, reply) || other.reply == reply)&&(identical(other.renote, renote) || other.renote == renote)&&(identical(other.visibility, visibility) || other.visibility == visibility)&&const DeepCollectionEquality().equals(other.visibleUserIds, _visibleUserIds)&&const DeepCollectionEquality().equals(other.fileIds, _fileIds)&&const DeepCollectionEquality().equals(other.files, _files)&&(identical(other.hashtag, hashtag) || other.hashtag == hashtag)&&(identical(other.poll, poll) || other.poll == poll)&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.channel, channel) || other.channel == channel)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&(identical(other.reactionAcceptance, reactionAcceptance) || other.reactionAcceptance == reactionAcceptance)&&(identical(other.scheduledAt, scheduledAt) || other.scheduledAt == scheduledAt)&&(identical(other.isActuallyScheduled, isActuallyScheduled) || other.isActuallyScheduled == isActuallyScheduled));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hashAll([runtimeType,id,createdAt,text,cw,userId,user,replyId,renoteId,reply,renote,visibility,const DeepCollectionEquality().hash(_visibleUserIds),const DeepCollectionEquality().hash(_fileIds),const DeepCollectionEquality().hash(_files),hashtag,poll,channelId,channel,localOnly,reactionAcceptance,scheduledAt,isActuallyScheduled]);
+int get hashCode {
+    return Object.hashAll([runtimeType,id,createdAt,text,cw,userId,user,replyId,renoteId,reply,renote,visibility,const DeepCollectionEquality().hash(_visibleUserIds),const DeepCollectionEquality().hash(_fileIds),const DeepCollectionEquality().hash(_files),hashtag,poll,channelId,channel,localOnly,reactionAcceptance,scheduledAt,isActuallyScheduled]);
+}
 
 @override
 String toString() {
-  return 'NoteDraft(id: $id, createdAt: $createdAt, text: $text, cw: $cw, userId: $userId, user: $user, replyId: $replyId, renoteId: $renoteId, reply: $reply, renote: $renote, visibility: $visibility, visibleUserIds: $visibleUserIds, fileIds: $fileIds, files: $files, hashtag: $hashtag, poll: $poll, channelId: $channelId, channel: $channel, localOnly: $localOnly, reactionAcceptance: $reactionAcceptance, scheduledAt: $scheduledAt, isActuallyScheduled: $isActuallyScheduled)';
+    return 'NoteDraft(id: $id, createdAt: $createdAt, text: $text, cw: $cw, userId: $userId, user: $user, replyId: $replyId, renoteId: $renoteId, reply: $reply, renote: $renote, visibility: $visibility, visibleUserIds: $visibleUserIds, fileIds: $fileIds, files: $files, hashtag: $hashtag, poll: $poll, channelId: $channelId, channel: $channel, localOnly: $localOnly, reactionAcceptance: $reactionAcceptance, scheduledAt: $scheduledAt, isActuallyScheduled: $isActuallyScheduled)';
 }
 
 
@@ -494,16 +500,21 @@ $NoteDraftPollCopyWith<NoteDraftPoll> get copyWith => _$NoteDraftPollCopyWithImp
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NoteDraftPoll&&(identical(other.expiresAt, expiresAt) || other.expiresAt == expiresAt)&&(identical(other.expiredAfter, expiredAfter) || other.expiredAfter == expiredAfter)&&(identical(other.multiple, multiple) || other.multiple == multiple)&&const DeepCollectionEquality().equals(other.choices, choices));
+  final _this = this as NoteDraftPoll;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NoteDraftPoll&&(identical(other.expiresAt, _this.expiresAt) || other.expiresAt == _this.expiresAt)&&(identical(other.expiredAfter, _this.expiredAfter) || other.expiredAfter == _this.expiredAfter)&&(identical(other.multiple, _this.multiple) || other.multiple == _this.multiple)&&const DeepCollectionEquality().equals(other.choices, _this.choices));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,expiresAt,expiredAfter,multiple,const DeepCollectionEquality().hash(choices));
+int get hashCode {
+  final _this = this as NoteDraftPoll;
+  return Object.hash(runtimeType,_this.expiresAt,_this.expiredAfter,_this.multiple,const DeepCollectionEquality().hash(_this.choices));
+}
 
 @override
 String toString() {
-  return 'NoteDraftPoll(expiresAt: $expiresAt, expiredAfter: $expiredAfter, multiple: $multiple, choices: $choices)';
+  final _this = this as NoteDraftPoll;
+  return 'NoteDraftPoll(expiresAt: ${_this.expiresAt}, expiredAfter: ${_this.expiredAfter}, multiple: ${_this.multiple}, choices: ${_this.choices})';
 }
 
 
@@ -532,7 +543,7 @@ class _$NoteDraftPollCopyWithImpl<$Res>
 /// Create a copy of NoteDraftPoll
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? expiresAt = freezed,Object? expiredAfter = freezed,Object? multiple = null,Object? choices = null,}) {
-  return _then(_self.copyWith(
+  return _then(NoteDraftPoll(
 expiresAt: freezed == expiresAt ? _self.expiresAt : expiresAt // ignore: cast_nullable_to_non_nullable
 as DateTime?,expiredAfter: freezed == expiredAfter ? _self.expiredAfter : expiredAfter // ignore: cast_nullable_to_non_nullable
 as Duration?,multiple: null == multiple ? _self.multiple : multiple // ignore: cast_nullable_to_non_nullable
@@ -678,7 +689,7 @@ return $default(_that.expiresAt,_that.expiredAfter,_that.multiple,_that.choices)
 @JsonSerializable()
 
 class _NoteDraftPoll implements NoteDraftPoll {
-  const _NoteDraftPoll({@DateTimeConverter() this.expiresAt, @DurationConverter() this.expiredAfter, required this.multiple, required final  List<String> choices}): _choices = choices;
+  const _NoteDraftPoll({@DateTimeConverter() this.expiresAt, @DurationConverter() this.expiredAfter, required this.multiple, required  List<String> choices}): _choices = choices;
   factory _NoteDraftPoll.fromJson(Map<String, dynamic> json) => _$NoteDraftPollFromJson(json);
 
 @override@DateTimeConverter() final  DateTime? expiresAt;
@@ -705,16 +716,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NoteDraftPoll&&(identical(other.expiresAt, expiresAt) || other.expiresAt == expiresAt)&&(identical(other.expiredAfter, expiredAfter) || other.expiredAfter == expiredAfter)&&(identical(other.multiple, multiple) || other.multiple == multiple)&&const DeepCollectionEquality().equals(other._choices, _choices));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NoteDraftPoll&&(identical(other.expiresAt, expiresAt) || other.expiresAt == expiresAt)&&(identical(other.expiredAfter, expiredAfter) || other.expiredAfter == expiredAfter)&&(identical(other.multiple, multiple) || other.multiple == multiple)&&const DeepCollectionEquality().equals(other.choices, _choices));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,expiresAt,expiredAfter,multiple,const DeepCollectionEquality().hash(_choices));
+int get hashCode {
+    return Object.hash(runtimeType,expiresAt,expiredAfter,multiple,const DeepCollectionEquality().hash(_choices));
+}
 
 @override
 String toString() {
-  return 'NoteDraftPoll(expiresAt: $expiresAt, expiredAfter: $expiredAfter, multiple: $multiple, choices: $choices)';
+    return 'NoteDraftPoll(expiresAt: $expiresAt, expiredAfter: $expiredAfter, multiple: $multiple, choices: $choices)';
 }
 
 

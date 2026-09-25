@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'notes_state_response.dart';
@@ -9,6 +9,7 @@ part of 'notes_state_response.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -29,16 +30,21 @@ $NotesStateResponseCopyWith<NotesStateResponse> get copyWith => _$NotesStateResp
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesStateResponse&&(identical(other.isFavorited, isFavorited) || other.isFavorited == isFavorited)&&(identical(other.isMutedThread, isMutedThread) || other.isMutedThread == isMutedThread)&&(identical(other.isWatching, isWatching) || other.isWatching == isWatching));
+  final _this = this as NotesStateResponse;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesStateResponse&&(identical(other.isFavorited, _this.isFavorited) || other.isFavorited == _this.isFavorited)&&(identical(other.isMutedThread, _this.isMutedThread) || other.isMutedThread == _this.isMutedThread)&&(identical(other.isWatching, _this.isWatching) || other.isWatching == _this.isWatching));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,isFavorited,isMutedThread,isWatching);
+int get hashCode {
+  final _this = this as NotesStateResponse;
+  return Object.hash(runtimeType,_this.isFavorited,_this.isMutedThread,_this.isWatching);
+}
 
 @override
 String toString() {
-  return 'NotesStateResponse(isFavorited: $isFavorited, isMutedThread: $isMutedThread, isWatching: $isWatching)';
+  final _this = this as NotesStateResponse;
+  return 'NotesStateResponse(isFavorited: ${_this.isFavorited}, isMutedThread: ${_this.isMutedThread}, isWatching: ${_this.isWatching})';
 }
 
 
@@ -67,7 +73,7 @@ class _$NotesStateResponseCopyWithImpl<$Res>
 /// Create a copy of NotesStateResponse
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? isFavorited = null,Object? isMutedThread = null,Object? isWatching = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NotesStateResponse(
 isFavorited: null == isFavorited ? _self.isFavorited : isFavorited // ignore: cast_nullable_to_non_nullable
 as bool,isMutedThread: null == isMutedThread ? _self.isMutedThread : isMutedThread // ignore: cast_nullable_to_non_nullable
 as bool,isWatching: freezed == isWatching ? _self.isWatching : isWatching // ignore: cast_nullable_to_non_nullable
@@ -233,16 +239,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesStateResponse&&(identical(other.isFavorited, isFavorited) || other.isFavorited == isFavorited)&&(identical(other.isMutedThread, isMutedThread) || other.isMutedThread == isMutedThread)&&(identical(other.isWatching, isWatching) || other.isWatching == isWatching));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesStateResponse&&(identical(other.isFavorited, isFavorited) || other.isFavorited == isFavorited)&&(identical(other.isMutedThread, isMutedThread) || other.isMutedThread == isMutedThread)&&(identical(other.isWatching, isWatching) || other.isWatching == isWatching));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,isFavorited,isMutedThread,isWatching);
+int get hashCode {
+    return Object.hash(runtimeType,isFavorited,isMutedThread,isWatching);
+}
 
 @override
 String toString() {
-  return 'NotesStateResponse(isFavorited: $isFavorited, isMutedThread: $isMutedThread, isWatching: $isWatching)';
+    return 'NotesStateResponse(isFavorited: $isFavorited, isMutedThread: $isMutedThread, isWatching: $isWatching)';
 }
 
 

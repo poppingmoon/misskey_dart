@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'server_info_response.dart';
@@ -9,6 +9,7 @@ part of 'server_info_response.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $ServerInfoResponseCopyWith<ServerInfoResponse> get copyWith => _$ServerInfoResp
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ServerInfoResponse&&(identical(other.machine, machine) || other.machine == machine)&&(identical(other.cpu, cpu) || other.cpu == cpu)&&(identical(other.mem, mem) || other.mem == mem)&&(identical(other.fs, fs) || other.fs == fs));
+  final _this = this as ServerInfoResponse;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ServerInfoResponse&&(identical(other.machine, _this.machine) || other.machine == _this.machine)&&(identical(other.cpu, _this.cpu) || other.cpu == _this.cpu)&&(identical(other.mem, _this.mem) || other.mem == _this.mem)&&(identical(other.fs, _this.fs) || other.fs == _this.fs));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,machine,cpu,mem,fs);
+int get hashCode {
+  final _this = this as ServerInfoResponse;
+  return Object.hash(runtimeType,_this.machine,_this.cpu,_this.mem,_this.fs);
+}
 
 @override
 String toString() {
-  return 'ServerInfoResponse(machine: $machine, cpu: $cpu, mem: $mem, fs: $fs)';
+  final _this = this as ServerInfoResponse;
+  return 'ServerInfoResponse(machine: ${_this.machine}, cpu: ${_this.cpu}, mem: ${_this.mem}, fs: ${_this.fs})';
 }
 
 
@@ -66,7 +72,7 @@ class _$ServerInfoResponseCopyWithImpl<$Res>
 /// Create a copy of ServerInfoResponse
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? machine = null,Object? cpu = null,Object? mem = null,Object? fs = null,}) {
-  return _then(_self.copyWith(
+  return _then(ServerInfoResponse(
 machine: null == machine ? _self.machine : machine // ignore: cast_nullable_to_non_nullable
 as String,cpu: null == cpu ? _self.cpu : cpu // ignore: cast_nullable_to_non_nullable
 as ServerInfoCpu,mem: null == mem ? _self.mem : mem // ignore: cast_nullable_to_non_nullable
@@ -260,16 +266,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ServerInfoResponse&&(identical(other.machine, machine) || other.machine == machine)&&(identical(other.cpu, cpu) || other.cpu == cpu)&&(identical(other.mem, mem) || other.mem == mem)&&(identical(other.fs, fs) || other.fs == fs));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ServerInfoResponse&&(identical(other.machine, machine) || other.machine == machine)&&(identical(other.cpu, cpu) || other.cpu == cpu)&&(identical(other.mem, mem) || other.mem == mem)&&(identical(other.fs, fs) || other.fs == fs));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,machine,cpu,mem,fs);
+int get hashCode {
+    return Object.hash(runtimeType,machine,cpu,mem,fs);
+}
 
 @override
 String toString() {
-  return 'ServerInfoResponse(machine: $machine, cpu: $cpu, mem: $mem, fs: $fs)';
+    return 'ServerInfoResponse(machine: $machine, cpu: $cpu, mem: $mem, fs: $fs)';
 }
 
 
@@ -354,16 +362,21 @@ $ServerInfoCpuCopyWith<ServerInfoCpu> get copyWith => _$ServerInfoCpuCopyWithImp
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ServerInfoCpu&&(identical(other.model, model) || other.model == model)&&(identical(other.cores, cores) || other.cores == cores));
+  final _this = this as ServerInfoCpu;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ServerInfoCpu&&(identical(other.model, _this.model) || other.model == _this.model)&&(identical(other.cores, _this.cores) || other.cores == _this.cores));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,model,cores);
+int get hashCode {
+  final _this = this as ServerInfoCpu;
+  return Object.hash(runtimeType,_this.model,_this.cores);
+}
 
 @override
 String toString() {
-  return 'ServerInfoCpu(model: $model, cores: $cores)';
+  final _this = this as ServerInfoCpu;
+  return 'ServerInfoCpu(model: ${_this.model}, cores: ${_this.cores})';
 }
 
 
@@ -392,7 +405,7 @@ class _$ServerInfoCpuCopyWithImpl<$Res>
 /// Create a copy of ServerInfoCpu
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? model = null,Object? cores = null,}) {
-  return _then(_self.copyWith(
+  return _then(ServerInfoCpu(
 model: null == model ? _self.model : model // ignore: cast_nullable_to_non_nullable
 as String,cores: null == cores ? _self.cores : cores // ignore: cast_nullable_to_non_nullable
 as int,
@@ -555,16 +568,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ServerInfoCpu&&(identical(other.model, model) || other.model == model)&&(identical(other.cores, cores) || other.cores == cores));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ServerInfoCpu&&(identical(other.model, model) || other.model == model)&&(identical(other.cores, cores) || other.cores == cores));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,model,cores);
+int get hashCode {
+    return Object.hash(runtimeType,model,cores);
+}
 
 @override
 String toString() {
-  return 'ServerInfoCpu(model: $model, cores: $cores)';
+    return 'ServerInfoCpu(model: $model, cores: $cores)';
 }
 
 
@@ -620,16 +635,21 @@ $ServerInfoMemCopyWith<ServerInfoMem> get copyWith => _$ServerInfoMemCopyWithImp
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ServerInfoMem&&(identical(other.total, total) || other.total == total));
+  final _this = this as ServerInfoMem;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ServerInfoMem&&(identical(other.total, _this.total) || other.total == _this.total));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,total);
+int get hashCode {
+  final _this = this as ServerInfoMem;
+  return Object.hash(runtimeType,_this.total);
+}
 
 @override
 String toString() {
-  return 'ServerInfoMem(total: $total)';
+  final _this = this as ServerInfoMem;
+  return 'ServerInfoMem(total: ${_this.total})';
 }
 
 
@@ -658,7 +678,7 @@ class _$ServerInfoMemCopyWithImpl<$Res>
 /// Create a copy of ServerInfoMem
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? total = null,}) {
-  return _then(_self.copyWith(
+  return _then(ServerInfoMem(
 total: null == total ? _self.total : total // ignore: cast_nullable_to_non_nullable
 as int,
   ));
@@ -819,16 +839,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ServerInfoMem&&(identical(other.total, total) || other.total == total));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ServerInfoMem&&(identical(other.total, total) || other.total == total));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,total);
+int get hashCode {
+    return Object.hash(runtimeType,total);
+}
 
 @override
 String toString() {
-  return 'ServerInfoMem(total: $total)';
+    return 'ServerInfoMem(total: $total)';
 }
 
 
@@ -883,16 +905,21 @@ $ServerInfoFsCopyWith<ServerInfoFs> get copyWith => _$ServerInfoFsCopyWithImpl<S
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ServerInfoFs&&(identical(other.total, total) || other.total == total)&&(identical(other.used, used) || other.used == used));
+  final _this = this as ServerInfoFs;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ServerInfoFs&&(identical(other.total, _this.total) || other.total == _this.total)&&(identical(other.used, _this.used) || other.used == _this.used));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,total,used);
+int get hashCode {
+  final _this = this as ServerInfoFs;
+  return Object.hash(runtimeType,_this.total,_this.used);
+}
 
 @override
 String toString() {
-  return 'ServerInfoFs(total: $total, used: $used)';
+  final _this = this as ServerInfoFs;
+  return 'ServerInfoFs(total: ${_this.total}, used: ${_this.used})';
 }
 
 
@@ -921,7 +948,7 @@ class _$ServerInfoFsCopyWithImpl<$Res>
 /// Create a copy of ServerInfoFs
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? total = null,Object? used = null,}) {
-  return _then(_self.copyWith(
+  return _then(ServerInfoFs(
 total: null == total ? _self.total : total // ignore: cast_nullable_to_non_nullable
 as int,used: null == used ? _self.used : used // ignore: cast_nullable_to_non_nullable
 as int,
@@ -1084,16 +1111,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ServerInfoFs&&(identical(other.total, total) || other.total == total)&&(identical(other.used, used) || other.used == used));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ServerInfoFs&&(identical(other.total, total) || other.total == total)&&(identical(other.used, used) || other.used == used));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,total,used);
+int get hashCode {
+    return Object.hash(runtimeType,total,used);
+}
 
 @override
 String toString() {
-  return 'ServerInfoFs(total: $total, used: $used)';
+    return 'ServerInfoFs(total: $total, used: $used)';
 }
 
 

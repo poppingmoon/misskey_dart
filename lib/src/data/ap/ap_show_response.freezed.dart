@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'ap_show_response.dart';
@@ -9,6 +9,7 @@ part of 'ap_show_response.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $ApShowResponseCopyWith<ApShowResponse> get copyWith => _$ApShowResponseCopyWith
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ApShowResponse&&(identical(other.type, type) || other.type == type)&&const DeepCollectionEquality().equals(other.object, object));
+  final _this = this as ApShowResponse;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ApShowResponse&&(identical(other.type, _this.type) || other.type == _this.type)&&const DeepCollectionEquality().equals(other.object, _this.object));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,type,const DeepCollectionEquality().hash(object));
+int get hashCode {
+  final _this = this as ApShowResponse;
+  return Object.hash(runtimeType,_this.type,const DeepCollectionEquality().hash(_this.object));
+}
 
 @override
 String toString() {
-  return 'ApShowResponse(type: $type, object: $object)';
+  final _this = this as ApShowResponse;
+  return 'ApShowResponse(type: ${_this.type}, object: ${_this.object})';
 }
 
 
@@ -66,7 +72,7 @@ class _$ApShowResponseCopyWithImpl<$Res>
 /// Create a copy of ApShowResponse
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? type = null,Object? object = null,}) {
-  return _then(_self.copyWith(
+  return _then(ApShowResponse(
 type: null == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
 as String,object: null == object ? _self.object : object // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>,
@@ -210,7 +216,7 @@ return $default(_that.type,_that.object);case _:
 @JsonSerializable()
 
 class _ApShowResponse implements ApShowResponse {
-  const _ApShowResponse({required this.type, required final  Map<String, dynamic> object}): _object = object;
+  const _ApShowResponse({required this.type, required  Map<String, dynamic> object}): _object = object;
   factory _ApShowResponse.fromJson(Map<String, dynamic> json) => _$ApShowResponseFromJson(json);
 
 @override final  String type;
@@ -235,16 +241,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ApShowResponse&&(identical(other.type, type) || other.type == type)&&const DeepCollectionEquality().equals(other._object, _object));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ApShowResponse&&(identical(other.type, type) || other.type == type)&&const DeepCollectionEquality().equals(other.object, _object));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,type,const DeepCollectionEquality().hash(_object));
+int get hashCode {
+    return Object.hash(runtimeType,type,const DeepCollectionEquality().hash(_object));
+}
 
 @override
 String toString() {
-  return 'ApShowResponse(type: $type, object: $object)';
+    return 'ApShowResponse(type: $type, object: $object)';
 }
 
 

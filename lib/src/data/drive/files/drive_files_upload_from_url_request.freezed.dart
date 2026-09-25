@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'drive_files_upload_from_url_request.dart';
@@ -9,6 +9,7 @@ part of 'drive_files_upload_from_url_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $DriveFilesUploadFromUrlRequestCopyWith<DriveFilesUploadFromUrlRequest> get copy
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is DriveFilesUploadFromUrlRequest&&(identical(other.url, url) || other.url == url)&&(identical(other.folderId, folderId) || other.folderId == folderId)&&(identical(other.isSensitive, isSensitive) || other.isSensitive == isSensitive)&&(identical(other.comment, comment) || other.comment == comment)&&(identical(other.marker, marker) || other.marker == marker)&&(identical(other.force, force) || other.force == force));
+  final _this = this as DriveFilesUploadFromUrlRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is DriveFilesUploadFromUrlRequest&&(identical(other.url, _this.url) || other.url == _this.url)&&(identical(other.folderId, _this.folderId) || other.folderId == _this.folderId)&&(identical(other.isSensitive, _this.isSensitive) || other.isSensitive == _this.isSensitive)&&(identical(other.comment, _this.comment) || other.comment == _this.comment)&&(identical(other.marker, _this.marker) || other.marker == _this.marker)&&(identical(other.force, _this.force) || other.force == _this.force));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,url,folderId,isSensitive,comment,marker,force);
+int get hashCode {
+  final _this = this as DriveFilesUploadFromUrlRequest;
+  return Object.hash(runtimeType,_this.url,_this.folderId,_this.isSensitive,_this.comment,_this.marker,_this.force);
+}
 
 @override
 String toString() {
-  return 'DriveFilesUploadFromUrlRequest(url: $url, folderId: $folderId, isSensitive: $isSensitive, comment: $comment, marker: $marker, force: $force)';
+  final _this = this as DriveFilesUploadFromUrlRequest;
+  return 'DriveFilesUploadFromUrlRequest(url: ${_this.url}, folderId: ${_this.folderId}, isSensitive: ${_this.isSensitive}, comment: ${_this.comment}, marker: ${_this.marker}, force: ${_this.force})';
 }
 
 
@@ -66,7 +72,7 @@ class _$DriveFilesUploadFromUrlRequestCopyWithImpl<$Res>
 /// Create a copy of DriveFilesUploadFromUrlRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? url = null,Object? folderId = freezed,Object? isSensitive = freezed,Object? comment = freezed,Object? marker = freezed,Object? force = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(DriveFilesUploadFromUrlRequest(
 url: null == url ? _self.url : url // ignore: cast_nullable_to_non_nullable
 as String,folderId: freezed == folderId ? _self.folderId : folderId // ignore: cast_nullable_to_non_nullable
 as String?,isSensitive: freezed == isSensitive ? _self.isSensitive : isSensitive // ignore: cast_nullable_to_non_nullable
@@ -237,16 +243,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _DriveFilesUploadFromUrlRequest&&(identical(other.url, url) || other.url == url)&&(identical(other.folderId, folderId) || other.folderId == folderId)&&(identical(other.isSensitive, isSensitive) || other.isSensitive == isSensitive)&&(identical(other.comment, comment) || other.comment == comment)&&(identical(other.marker, marker) || other.marker == marker)&&(identical(other.force, force) || other.force == force));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _DriveFilesUploadFromUrlRequest&&(identical(other.url, url) || other.url == url)&&(identical(other.folderId, folderId) || other.folderId == folderId)&&(identical(other.isSensitive, isSensitive) || other.isSensitive == isSensitive)&&(identical(other.comment, comment) || other.comment == comment)&&(identical(other.marker, marker) || other.marker == marker)&&(identical(other.force, force) || other.force == force));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,url,folderId,isSensitive,comment,marker,force);
+int get hashCode {
+    return Object.hash(runtimeType,url,folderId,isSensitive,comment,marker,force);
+}
 
 @override
 String toString() {
-  return 'DriveFilesUploadFromUrlRequest(url: $url, folderId: $folderId, isSensitive: $isSensitive, comment: $comment, marker: $marker, force: $force)';
+    return 'DriveFilesUploadFromUrlRequest(url: $url, folderId: $folderId, isSensitive: $isSensitive, comment: $comment, marker: $marker, force: $force)';
 }
 
 

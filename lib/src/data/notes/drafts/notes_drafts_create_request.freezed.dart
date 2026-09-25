@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'notes_drafts_create_request.dart';
@@ -9,6 +9,7 @@ part of 'notes_drafts_create_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $NotesDraftsCreateRequestCopyWith<NotesDraftsCreateRequest> get copyWith => _$No
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesDraftsCreateRequest&&(identical(other.visibility, visibility) || other.visibility == visibility)&&const DeepCollectionEquality().equals(other.visibleUserIds, visibleUserIds)&&(identical(other.cw, cw) || other.cw == cw)&&(identical(other.hashtag, hashtag) || other.hashtag == hashtag)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&(identical(other.reactionAcceptance, reactionAcceptance) || other.reactionAcceptance == reactionAcceptance)&&(identical(other.replyId, replyId) || other.replyId == replyId)&&(identical(other.renoteId, renoteId) || other.renoteId == renoteId)&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.text, text) || other.text == text)&&const DeepCollectionEquality().equals(other.fileIds, fileIds)&&(identical(other.poll, poll) || other.poll == poll)&&(identical(other.scheduledAt, scheduledAt) || other.scheduledAt == scheduledAt)&&(identical(other.isActuallyScheduled, isActuallyScheduled) || other.isActuallyScheduled == isActuallyScheduled));
+  final _this = this as NotesDraftsCreateRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesDraftsCreateRequest&&(identical(other.visibility, _this.visibility) || other.visibility == _this.visibility)&&const DeepCollectionEquality().equals(other.visibleUserIds, _this.visibleUserIds)&&(identical(other.cw, _this.cw) || other.cw == _this.cw)&&(identical(other.hashtag, _this.hashtag) || other.hashtag == _this.hashtag)&&(identical(other.localOnly, _this.localOnly) || other.localOnly == _this.localOnly)&&(identical(other.reactionAcceptance, _this.reactionAcceptance) || other.reactionAcceptance == _this.reactionAcceptance)&&(identical(other.replyId, _this.replyId) || other.replyId == _this.replyId)&&(identical(other.renoteId, _this.renoteId) || other.renoteId == _this.renoteId)&&(identical(other.channelId, _this.channelId) || other.channelId == _this.channelId)&&(identical(other.text, _this.text) || other.text == _this.text)&&const DeepCollectionEquality().equals(other.fileIds, _this.fileIds)&&(identical(other.poll, _this.poll) || other.poll == _this.poll)&&(identical(other.scheduledAt, _this.scheduledAt) || other.scheduledAt == _this.scheduledAt)&&(identical(other.isActuallyScheduled, _this.isActuallyScheduled) || other.isActuallyScheduled == _this.isActuallyScheduled));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,visibility,const DeepCollectionEquality().hash(visibleUserIds),cw,hashtag,localOnly,reactionAcceptance,replyId,renoteId,channelId,text,const DeepCollectionEquality().hash(fileIds),poll,scheduledAt,isActuallyScheduled);
+int get hashCode {
+  final _this = this as NotesDraftsCreateRequest;
+  return Object.hash(runtimeType,_this.visibility,const DeepCollectionEquality().hash(_this.visibleUserIds),_this.cw,_this.hashtag,_this.localOnly,_this.reactionAcceptance,_this.replyId,_this.renoteId,_this.channelId,_this.text,const DeepCollectionEquality().hash(_this.fileIds),_this.poll,_this.scheduledAt,_this.isActuallyScheduled);
+}
 
 @override
 String toString() {
-  return 'NotesDraftsCreateRequest(visibility: $visibility, visibleUserIds: $visibleUserIds, cw: $cw, hashtag: $hashtag, localOnly: $localOnly, reactionAcceptance: $reactionAcceptance, replyId: $replyId, renoteId: $renoteId, channelId: $channelId, text: $text, fileIds: $fileIds, poll: $poll, scheduledAt: $scheduledAt, isActuallyScheduled: $isActuallyScheduled)';
+  final _this = this as NotesDraftsCreateRequest;
+  return 'NotesDraftsCreateRequest(visibility: ${_this.visibility}, visibleUserIds: ${_this.visibleUserIds}, cw: ${_this.cw}, hashtag: ${_this.hashtag}, localOnly: ${_this.localOnly}, reactionAcceptance: ${_this.reactionAcceptance}, replyId: ${_this.replyId}, renoteId: ${_this.renoteId}, channelId: ${_this.channelId}, text: ${_this.text}, fileIds: ${_this.fileIds}, poll: ${_this.poll}, scheduledAt: ${_this.scheduledAt}, isActuallyScheduled: ${_this.isActuallyScheduled})';
 }
 
 
@@ -66,7 +72,7 @@ class _$NotesDraftsCreateRequestCopyWithImpl<$Res>
 /// Create a copy of NotesDraftsCreateRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? visibility = freezed,Object? visibleUserIds = freezed,Object? cw = freezed,Object? hashtag = freezed,Object? localOnly = freezed,Object? reactionAcceptance = freezed,Object? replyId = freezed,Object? renoteId = freezed,Object? channelId = freezed,Object? text = freezed,Object? fileIds = freezed,Object? poll = freezed,Object? scheduledAt = freezed,Object? isActuallyScheduled = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NotesDraftsCreateRequest(
 visibility: freezed == visibility ? _self.visibility : visibility // ignore: cast_nullable_to_non_nullable
 as NoteVisibility?,visibleUserIds: freezed == visibleUserIds ? _self.visibleUserIds : visibleUserIds // ignore: cast_nullable_to_non_nullable
 as List<String>?,cw: freezed == cw ? _self.cw : cw // ignore: cast_nullable_to_non_nullable
@@ -234,7 +240,7 @@ return $default(_that.visibility,_that.visibleUserIds,_that.cw,_that.hashtag,_th
 @JsonSerializable()
 
 class _NotesDraftsCreateRequest implements NotesDraftsCreateRequest {
-  const _NotesDraftsCreateRequest({this.visibility, final  List<String>? visibleUserIds, this.cw, this.hashtag, this.localOnly, this.reactionAcceptance, this.replyId, this.renoteId, this.channelId, this.text, final  List<String>? fileIds, this.poll, @EpocTimeDateTimeConverter() this.scheduledAt, this.isActuallyScheduled}): _visibleUserIds = visibleUserIds,_fileIds = fileIds;
+  const _NotesDraftsCreateRequest({this.visibility,  List<String>? visibleUserIds, this.cw, this.hashtag, this.localOnly, this.reactionAcceptance, this.replyId, this.renoteId, this.channelId, this.text,  List<String>? fileIds, this.poll, @EpocTimeDateTimeConverter() this.scheduledAt, this.isActuallyScheduled}): _visibleUserIds = visibleUserIds,_fileIds = fileIds;
   factory _NotesDraftsCreateRequest.fromJson(Map<String, dynamic> json) => _$NotesDraftsCreateRequestFromJson(json);
 
 @override final  NoteVisibility? visibility;
@@ -281,16 +287,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesDraftsCreateRequest&&(identical(other.visibility, visibility) || other.visibility == visibility)&&const DeepCollectionEquality().equals(other._visibleUserIds, _visibleUserIds)&&(identical(other.cw, cw) || other.cw == cw)&&(identical(other.hashtag, hashtag) || other.hashtag == hashtag)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&(identical(other.reactionAcceptance, reactionAcceptance) || other.reactionAcceptance == reactionAcceptance)&&(identical(other.replyId, replyId) || other.replyId == replyId)&&(identical(other.renoteId, renoteId) || other.renoteId == renoteId)&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.text, text) || other.text == text)&&const DeepCollectionEquality().equals(other._fileIds, _fileIds)&&(identical(other.poll, poll) || other.poll == poll)&&(identical(other.scheduledAt, scheduledAt) || other.scheduledAt == scheduledAt)&&(identical(other.isActuallyScheduled, isActuallyScheduled) || other.isActuallyScheduled == isActuallyScheduled));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesDraftsCreateRequest&&(identical(other.visibility, visibility) || other.visibility == visibility)&&const DeepCollectionEquality().equals(other.visibleUserIds, _visibleUserIds)&&(identical(other.cw, cw) || other.cw == cw)&&(identical(other.hashtag, hashtag) || other.hashtag == hashtag)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&(identical(other.reactionAcceptance, reactionAcceptance) || other.reactionAcceptance == reactionAcceptance)&&(identical(other.replyId, replyId) || other.replyId == replyId)&&(identical(other.renoteId, renoteId) || other.renoteId == renoteId)&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.text, text) || other.text == text)&&const DeepCollectionEquality().equals(other.fileIds, _fileIds)&&(identical(other.poll, poll) || other.poll == poll)&&(identical(other.scheduledAt, scheduledAt) || other.scheduledAt == scheduledAt)&&(identical(other.isActuallyScheduled, isActuallyScheduled) || other.isActuallyScheduled == isActuallyScheduled));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,visibility,const DeepCollectionEquality().hash(_visibleUserIds),cw,hashtag,localOnly,reactionAcceptance,replyId,renoteId,channelId,text,const DeepCollectionEquality().hash(_fileIds),poll,scheduledAt,isActuallyScheduled);
+int get hashCode {
+    return Object.hash(runtimeType,visibility,const DeepCollectionEquality().hash(_visibleUserIds),cw,hashtag,localOnly,reactionAcceptance,replyId,renoteId,channelId,text,const DeepCollectionEquality().hash(_fileIds),poll,scheduledAt,isActuallyScheduled);
+}
 
 @override
 String toString() {
-  return 'NotesDraftsCreateRequest(visibility: $visibility, visibleUserIds: $visibleUserIds, cw: $cw, hashtag: $hashtag, localOnly: $localOnly, reactionAcceptance: $reactionAcceptance, replyId: $replyId, renoteId: $renoteId, channelId: $channelId, text: $text, fileIds: $fileIds, poll: $poll, scheduledAt: $scheduledAt, isActuallyScheduled: $isActuallyScheduled)';
+    return 'NotesDraftsCreateRequest(visibility: $visibility, visibleUserIds: $visibleUserIds, cw: $cw, hashtag: $hashtag, localOnly: $localOnly, reactionAcceptance: $reactionAcceptance, replyId: $replyId, renoteId: $renoteId, channelId: $channelId, text: $text, fileIds: $fileIds, poll: $poll, scheduledAt: $scheduledAt, isActuallyScheduled: $isActuallyScheduled)';
 }
 
 

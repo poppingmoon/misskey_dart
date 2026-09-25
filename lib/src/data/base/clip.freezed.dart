@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'clip.dart';
@@ -9,6 +9,7 @@ part of 'clip.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $ClipCopyWith<Clip> get copyWith => _$ClipCopyWithImpl<Clip>(this as Clip, _$ide
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Clip&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.lastClippedAt, lastClippedAt) || other.lastClippedAt == lastClippedAt)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.user, user) || other.user == user)&&(identical(other.name, name) || other.name == name)&&(identical(other.description, description) || other.description == description)&&(identical(other.isPublic, isPublic) || other.isPublic == isPublic)&&(identical(other.favoritedCount, favoritedCount) || other.favoritedCount == favoritedCount)&&(identical(other.isFavorited, isFavorited) || other.isFavorited == isFavorited)&&(identical(other.notesCount, notesCount) || other.notesCount == notesCount));
+  final _this = this as Clip;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Clip&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.createdAt, _this.createdAt) || other.createdAt == _this.createdAt)&&(identical(other.lastClippedAt, _this.lastClippedAt) || other.lastClippedAt == _this.lastClippedAt)&&(identical(other.userId, _this.userId) || other.userId == _this.userId)&&(identical(other.user, _this.user) || other.user == _this.user)&&(identical(other.name, _this.name) || other.name == _this.name)&&(identical(other.description, _this.description) || other.description == _this.description)&&(identical(other.isPublic, _this.isPublic) || other.isPublic == _this.isPublic)&&(identical(other.favoritedCount, _this.favoritedCount) || other.favoritedCount == _this.favoritedCount)&&(identical(other.isFavorited, _this.isFavorited) || other.isFavorited == _this.isFavorited)&&(identical(other.notesCount, _this.notesCount) || other.notesCount == _this.notesCount));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,createdAt,lastClippedAt,userId,user,name,description,isPublic,favoritedCount,isFavorited,notesCount);
+int get hashCode {
+  final _this = this as Clip;
+  return Object.hash(runtimeType,_this.id,_this.createdAt,_this.lastClippedAt,_this.userId,_this.user,_this.name,_this.description,_this.isPublic,_this.favoritedCount,_this.isFavorited,_this.notesCount);
+}
 
 @override
 String toString() {
-  return 'Clip(id: $id, createdAt: $createdAt, lastClippedAt: $lastClippedAt, userId: $userId, user: $user, name: $name, description: $description, isPublic: $isPublic, favoritedCount: $favoritedCount, isFavorited: $isFavorited, notesCount: $notesCount)';
+  final _this = this as Clip;
+  return 'Clip(id: ${_this.id}, createdAt: ${_this.createdAt}, lastClippedAt: ${_this.lastClippedAt}, userId: ${_this.userId}, user: ${_this.user}, name: ${_this.name}, description: ${_this.description}, isPublic: ${_this.isPublic}, favoritedCount: ${_this.favoritedCount}, isFavorited: ${_this.isFavorited}, notesCount: ${_this.notesCount})';
 }
 
 
@@ -66,7 +72,7 @@ class _$ClipCopyWithImpl<$Res>
 /// Create a copy of Clip
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? createdAt = null,Object? lastClippedAt = freezed,Object? userId = null,Object? user = null,Object? name = freezed,Object? description = freezed,Object? isPublic = null,Object? favoritedCount = freezed,Object? isFavorited = freezed,Object? notesCount = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(Clip(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime,lastClippedAt: freezed == lastClippedAt ? _self.lastClippedAt : lastClippedAt // ignore: cast_nullable_to_non_nullable
@@ -256,16 +262,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Clip&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.lastClippedAt, lastClippedAt) || other.lastClippedAt == lastClippedAt)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.user, user) || other.user == user)&&(identical(other.name, name) || other.name == name)&&(identical(other.description, description) || other.description == description)&&(identical(other.isPublic, isPublic) || other.isPublic == isPublic)&&(identical(other.favoritedCount, favoritedCount) || other.favoritedCount == favoritedCount)&&(identical(other.isFavorited, isFavorited) || other.isFavorited == isFavorited)&&(identical(other.notesCount, notesCount) || other.notesCount == notesCount));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Clip&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.lastClippedAt, lastClippedAt) || other.lastClippedAt == lastClippedAt)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.user, user) || other.user == user)&&(identical(other.name, name) || other.name == name)&&(identical(other.description, description) || other.description == description)&&(identical(other.isPublic, isPublic) || other.isPublic == isPublic)&&(identical(other.favoritedCount, favoritedCount) || other.favoritedCount == favoritedCount)&&(identical(other.isFavorited, isFavorited) || other.isFavorited == isFavorited)&&(identical(other.notesCount, notesCount) || other.notesCount == notesCount));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,createdAt,lastClippedAt,userId,user,name,description,isPublic,favoritedCount,isFavorited,notesCount);
+int get hashCode {
+    return Object.hash(runtimeType,id,createdAt,lastClippedAt,userId,user,name,description,isPublic,favoritedCount,isFavorited,notesCount);
+}
 
 @override
 String toString() {
-  return 'Clip(id: $id, createdAt: $createdAt, lastClippedAt: $lastClippedAt, userId: $userId, user: $user, name: $name, description: $description, isPublic: $isPublic, favoritedCount: $favoritedCount, isFavorited: $isFavorited, notesCount: $notesCount)';
+    return 'Clip(id: $id, createdAt: $createdAt, lastClippedAt: $lastClippedAt, userId: $userId, user: $user, name: $name, description: $description, isPublic: $isPublic, favoritedCount: $favoritedCount, isFavorited: $isFavorited, notesCount: $notesCount)';
 }
 
 

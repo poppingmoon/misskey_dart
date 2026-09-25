@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'flash_my_likes_response.dart';
@@ -9,6 +9,7 @@ part of 'flash_my_likes_response.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $FlashMyLikesResponseCopyWith<FlashMyLikesResponse> get copyWith => _$FlashMyLik
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is FlashMyLikesResponse&&(identical(other.id, id) || other.id == id)&&(identical(other.flash, flash) || other.flash == flash));
+  final _this = this as FlashMyLikesResponse;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is FlashMyLikesResponse&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.flash, _this.flash) || other.flash == _this.flash));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,flash);
+int get hashCode {
+  final _this = this as FlashMyLikesResponse;
+  return Object.hash(runtimeType,_this.id,_this.flash);
+}
 
 @override
 String toString() {
-  return 'FlashMyLikesResponse(id: $id, flash: $flash)';
+  final _this = this as FlashMyLikesResponse;
+  return 'FlashMyLikesResponse(id: ${_this.id}, flash: ${_this.flash})';
 }
 
 
@@ -66,7 +72,7 @@ class _$FlashMyLikesResponseCopyWithImpl<$Res>
 /// Create a copy of FlashMyLikesResponse
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? flash = null,}) {
-  return _then(_self.copyWith(
+  return _then(FlashMyLikesResponse(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,flash: null == flash ? _self.flash : flash // ignore: cast_nullable_to_non_nullable
 as Flash,
@@ -238,16 +244,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _FlashMyLikesResponse&&(identical(other.id, id) || other.id == id)&&(identical(other.flash, flash) || other.flash == flash));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _FlashMyLikesResponse&&(identical(other.id, id) || other.id == id)&&(identical(other.flash, flash) || other.flash == flash));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,flash);
+int get hashCode {
+    return Object.hash(runtimeType,id,flash);
+}
 
 @override
 String toString() {
-  return 'FlashMyLikesResponse(id: $id, flash: $flash)';
+    return 'FlashMyLikesResponse(id: $id, flash: $flash)';
 }
 
 

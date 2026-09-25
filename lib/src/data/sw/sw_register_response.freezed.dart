@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'sw_register_response.dart';
@@ -9,13 +9,13 @@ part of 'sw_register_response.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
 /// @nodoc
 mixin _$SwRegisterResponse {
 
-// ignore: invalid_annotation_target
 @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) SwRegisterResponseState? get state; String? get key; String get userId; String get endpoint; bool get sendReadMessage;
 /// Create a copy of SwRegisterResponse
 /// with the given fields replaced by the non-null parameter values.
@@ -29,16 +29,21 @@ $SwRegisterResponseCopyWith<SwRegisterResponse> get copyWith => _$SwRegisterResp
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is SwRegisterResponse&&(identical(other.state, state) || other.state == state)&&(identical(other.key, key) || other.key == key)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.endpoint, endpoint) || other.endpoint == endpoint)&&(identical(other.sendReadMessage, sendReadMessage) || other.sendReadMessage == sendReadMessage));
+  final _this = this as SwRegisterResponse;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is SwRegisterResponse&&(identical(other.state, _this.state) || other.state == _this.state)&&(identical(other.key, _this.key) || other.key == _this.key)&&(identical(other.userId, _this.userId) || other.userId == _this.userId)&&(identical(other.endpoint, _this.endpoint) || other.endpoint == _this.endpoint)&&(identical(other.sendReadMessage, _this.sendReadMessage) || other.sendReadMessage == _this.sendReadMessage));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,state,key,userId,endpoint,sendReadMessage);
+int get hashCode {
+  final _this = this as SwRegisterResponse;
+  return Object.hash(runtimeType,_this.state,_this.key,_this.userId,_this.endpoint,_this.sendReadMessage);
+}
 
 @override
 String toString() {
-  return 'SwRegisterResponse(state: $state, key: $key, userId: $userId, endpoint: $endpoint, sendReadMessage: $sendReadMessage)';
+  final _this = this as SwRegisterResponse;
+  return 'SwRegisterResponse(state: ${_this.state}, key: ${_this.key}, userId: ${_this.userId}, endpoint: ${_this.endpoint}, sendReadMessage: ${_this.sendReadMessage})';
 }
 
 
@@ -67,7 +72,7 @@ class _$SwRegisterResponseCopyWithImpl<$Res>
 /// Create a copy of SwRegisterResponse
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? state = freezed,Object? key = freezed,Object? userId = null,Object? endpoint = null,Object? sendReadMessage = null,}) {
-  return _then(_self.copyWith(
+  return _then(SwRegisterResponse(
 state: freezed == state ? _self.state : state // ignore: cast_nullable_to_non_nullable
 as SwRegisterResponseState?,key: freezed == key ? _self.key : key // ignore: cast_nullable_to_non_nullable
 as String?,userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
@@ -217,7 +222,6 @@ class _SwRegisterResponse implements SwRegisterResponse {
   const _SwRegisterResponse({@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.state, this.key, required this.userId, required this.endpoint, required this.sendReadMessage});
   factory _SwRegisterResponse.fromJson(Map<String, dynamic> json) => _$SwRegisterResponseFromJson(json);
 
-// ignore: invalid_annotation_target
 @override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  SwRegisterResponseState? state;
 @override final  String? key;
 @override final  String userId;
@@ -237,16 +241,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _SwRegisterResponse&&(identical(other.state, state) || other.state == state)&&(identical(other.key, key) || other.key == key)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.endpoint, endpoint) || other.endpoint == endpoint)&&(identical(other.sendReadMessage, sendReadMessage) || other.sendReadMessage == sendReadMessage));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _SwRegisterResponse&&(identical(other.state, state) || other.state == state)&&(identical(other.key, key) || other.key == key)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.endpoint, endpoint) || other.endpoint == endpoint)&&(identical(other.sendReadMessage, sendReadMessage) || other.sendReadMessage == sendReadMessage));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,state,key,userId,endpoint,sendReadMessage);
+int get hashCode {
+    return Object.hash(runtimeType,state,key,userId,endpoint,sendReadMessage);
+}
 
 @override
 String toString() {
-  return 'SwRegisterResponse(state: $state, key: $key, userId: $userId, endpoint: $endpoint, sendReadMessage: $sendReadMessage)';
+    return 'SwRegisterResponse(state: $state, key: $key, userId: $userId, endpoint: $endpoint, sendReadMessage: $sendReadMessage)';
 }
 
 

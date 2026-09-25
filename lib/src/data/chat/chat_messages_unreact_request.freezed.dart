@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'chat_messages_unreact_request.dart';
@@ -9,6 +9,7 @@ part of 'chat_messages_unreact_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $ChatMessagesUnreactRequestCopyWith<ChatMessagesUnreactRequest> get copyWith => 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ChatMessagesUnreactRequest&&(identical(other.messageId, messageId) || other.messageId == messageId)&&(identical(other.reaction, reaction) || other.reaction == reaction));
+  final _this = this as ChatMessagesUnreactRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ChatMessagesUnreactRequest&&(identical(other.messageId, _this.messageId) || other.messageId == _this.messageId)&&(identical(other.reaction, _this.reaction) || other.reaction == _this.reaction));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,messageId,reaction);
+int get hashCode {
+  final _this = this as ChatMessagesUnreactRequest;
+  return Object.hash(runtimeType,_this.messageId,_this.reaction);
+}
 
 @override
 String toString() {
-  return 'ChatMessagesUnreactRequest(messageId: $messageId, reaction: $reaction)';
+  final _this = this as ChatMessagesUnreactRequest;
+  return 'ChatMessagesUnreactRequest(messageId: ${_this.messageId}, reaction: ${_this.reaction})';
 }
 
 
@@ -66,7 +72,7 @@ class _$ChatMessagesUnreactRequestCopyWithImpl<$Res>
 /// Create a copy of ChatMessagesUnreactRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? messageId = null,Object? reaction = null,}) {
-  return _then(_self.copyWith(
+  return _then(ChatMessagesUnreactRequest(
 messageId: null == messageId ? _self.messageId : messageId // ignore: cast_nullable_to_non_nullable
 as String,reaction: null == reaction ? _self.reaction : reaction // ignore: cast_nullable_to_non_nullable
 as String,
@@ -229,16 +235,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatMessagesUnreactRequest&&(identical(other.messageId, messageId) || other.messageId == messageId)&&(identical(other.reaction, reaction) || other.reaction == reaction));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatMessagesUnreactRequest&&(identical(other.messageId, messageId) || other.messageId == messageId)&&(identical(other.reaction, reaction) || other.reaction == reaction));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,messageId,reaction);
+int get hashCode {
+    return Object.hash(runtimeType,messageId,reaction);
+}
 
 @override
 String toString() {
-  return 'ChatMessagesUnreactRequest(messageId: $messageId, reaction: $reaction)';
+    return 'ChatMessagesUnreactRequest(messageId: $messageId, reaction: $reaction)';
 }
 
 

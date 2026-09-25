@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'notes_search_by_tag_request.dart';
@@ -9,6 +9,7 @@ part of 'notes_search_by_tag_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $NotesSearchByTagRequestCopyWith<NotesSearchByTagRequest> get copyWith => _$Note
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesSearchByTagRequest&&(identical(other.tag, tag) || other.tag == tag)&&(identical(other.reply, reply) || other.reply == reply)&&(identical(other.renote, renote) || other.renote == renote)&&(identical(other.withFiles, withFiles) || other.withFiles == withFiles)&&(identical(other.poll, poll) || other.poll == poll)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.limit, limit) || other.limit == limit));
+  final _this = this as NotesSearchByTagRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesSearchByTagRequest&&(identical(other.tag, _this.tag) || other.tag == _this.tag)&&(identical(other.reply, _this.reply) || other.reply == _this.reply)&&(identical(other.renote, _this.renote) || other.renote == _this.renote)&&(identical(other.withFiles, _this.withFiles) || other.withFiles == _this.withFiles)&&(identical(other.poll, _this.poll) || other.poll == _this.poll)&&(identical(other.sinceId, _this.sinceId) || other.sinceId == _this.sinceId)&&(identical(other.untilId, _this.untilId) || other.untilId == _this.untilId)&&(identical(other.sinceDate, _this.sinceDate) || other.sinceDate == _this.sinceDate)&&(identical(other.untilDate, _this.untilDate) || other.untilDate == _this.untilDate)&&(identical(other.limit, _this.limit) || other.limit == _this.limit));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,tag,reply,renote,withFiles,poll,sinceId,untilId,sinceDate,untilDate,limit);
+int get hashCode {
+  final _this = this as NotesSearchByTagRequest;
+  return Object.hash(runtimeType,_this.tag,_this.reply,_this.renote,_this.withFiles,_this.poll,_this.sinceId,_this.untilId,_this.sinceDate,_this.untilDate,_this.limit);
+}
 
 @override
 String toString() {
-  return 'NotesSearchByTagRequest(tag: $tag, reply: $reply, renote: $renote, withFiles: $withFiles, poll: $poll, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, limit: $limit)';
+  final _this = this as NotesSearchByTagRequest;
+  return 'NotesSearchByTagRequest(tag: ${_this.tag}, reply: ${_this.reply}, renote: ${_this.renote}, withFiles: ${_this.withFiles}, poll: ${_this.poll}, sinceId: ${_this.sinceId}, untilId: ${_this.untilId}, sinceDate: ${_this.sinceDate}, untilDate: ${_this.untilDate}, limit: ${_this.limit})';
 }
 
 
@@ -66,7 +72,7 @@ class _$NotesSearchByTagRequestCopyWithImpl<$Res>
 /// Create a copy of NotesSearchByTagRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? tag = null,Object? reply = freezed,Object? renote = freezed,Object? withFiles = freezed,Object? poll = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,Object? limit = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NotesSearchByTagRequest(
 tag: null == tag ? _self.tag : tag // ignore: cast_nullable_to_non_nullable
 as String,reply: freezed == reply ? _self.reply : reply // ignore: cast_nullable_to_non_nullable
 as bool?,renote: freezed == renote ? _self.renote : renote // ignore: cast_nullable_to_non_nullable
@@ -245,16 +251,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesSearchByTagRequest&&(identical(other.tag, tag) || other.tag == tag)&&(identical(other.reply, reply) || other.reply == reply)&&(identical(other.renote, renote) || other.renote == renote)&&(identical(other.withFiles, withFiles) || other.withFiles == withFiles)&&(identical(other.poll, poll) || other.poll == poll)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.limit, limit) || other.limit == limit));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesSearchByTagRequest&&(identical(other.tag, tag) || other.tag == tag)&&(identical(other.reply, reply) || other.reply == reply)&&(identical(other.renote, renote) || other.renote == renote)&&(identical(other.withFiles, withFiles) || other.withFiles == withFiles)&&(identical(other.poll, poll) || other.poll == poll)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.limit, limit) || other.limit == limit));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,tag,reply,renote,withFiles,poll,sinceId,untilId,sinceDate,untilDate,limit);
+int get hashCode {
+    return Object.hash(runtimeType,tag,reply,renote,withFiles,poll,sinceId,untilId,sinceDate,untilDate,limit);
+}
 
 @override
 String toString() {
-  return 'NotesSearchByTagRequest(tag: $tag, reply: $reply, renote: $renote, withFiles: $withFiles, poll: $poll, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, limit: $limit)';
+    return 'NotesSearchByTagRequest(tag: $tag, reply: $reply, renote: $renote, withFiles: $withFiles, poll: $poll, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, limit: $limit)';
 }
 
 

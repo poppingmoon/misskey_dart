@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'i_registry_get_request.dart';
@@ -9,6 +9,7 @@ part of 'i_registry_get_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $IRegistryGetRequestCopyWith<IRegistryGetRequest> get copyWith => _$IRegistryGet
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is IRegistryGetRequest&&(identical(other.key, key) || other.key == key)&&const DeepCollectionEquality().equals(other.scope, scope)&&(identical(other.domain, domain) || other.domain == domain));
+  final _this = this as IRegistryGetRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is IRegistryGetRequest&&(identical(other.key, _this.key) || other.key == _this.key)&&const DeepCollectionEquality().equals(other.scope, _this.scope)&&(identical(other.domain, _this.domain) || other.domain == _this.domain));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,key,const DeepCollectionEquality().hash(scope),domain);
+int get hashCode {
+  final _this = this as IRegistryGetRequest;
+  return Object.hash(runtimeType,_this.key,const DeepCollectionEquality().hash(_this.scope),_this.domain);
+}
 
 @override
 String toString() {
-  return 'IRegistryGetRequest(key: $key, scope: $scope, domain: $domain)';
+  final _this = this as IRegistryGetRequest;
+  return 'IRegistryGetRequest(key: ${_this.key}, scope: ${_this.scope}, domain: ${_this.domain})';
 }
 
 
@@ -66,7 +72,7 @@ class _$IRegistryGetRequestCopyWithImpl<$Res>
 /// Create a copy of IRegistryGetRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? key = null,Object? scope = null,Object? domain = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(IRegistryGetRequest(
 key: null == key ? _self.key : key // ignore: cast_nullable_to_non_nullable
 as String,scope: null == scope ? _self.scope : scope // ignore: cast_nullable_to_non_nullable
 as List<String>,domain: freezed == domain ? _self.domain : domain // ignore: cast_nullable_to_non_nullable
@@ -211,7 +217,7 @@ return $default(_that.key,_that.scope,_that.domain);case _:
 @JsonSerializable()
 
 class _IRegistryGetRequest implements IRegistryGetRequest {
-  const _IRegistryGetRequest({required this.key, required final  List<String> scope, this.domain}): _scope = scope;
+  const _IRegistryGetRequest({required this.key, required  List<String> scope, this.domain}): _scope = scope;
   factory _IRegistryGetRequest.fromJson(Map<String, dynamic> json) => _$IRegistryGetRequestFromJson(json);
 
 @override final  String key;
@@ -237,16 +243,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _IRegistryGetRequest&&(identical(other.key, key) || other.key == key)&&const DeepCollectionEquality().equals(other._scope, _scope)&&(identical(other.domain, domain) || other.domain == domain));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _IRegistryGetRequest&&(identical(other.key, key) || other.key == key)&&const DeepCollectionEquality().equals(other.scope, _scope)&&(identical(other.domain, domain) || other.domain == domain));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,key,const DeepCollectionEquality().hash(_scope),domain);
+int get hashCode {
+    return Object.hash(runtimeType,key,const DeepCollectionEquality().hash(_scope),domain);
+}
 
 @override
 String toString() {
-  return 'IRegistryGetRequest(key: $key, scope: $scope, domain: $domain)';
+    return 'IRegistryGetRequest(key: $key, scope: $scope, domain: $domain)';
 }
 
 

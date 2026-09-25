@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'i_registry_scopes_with_domain_response.dart';
@@ -9,6 +9,7 @@ part of 'i_registry_scopes_with_domain_response.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $IRegistryScopesWithDomainResponseCopyWith<IRegistryScopesWithDomainResponse> ge
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is IRegistryScopesWithDomainResponse&&const DeepCollectionEquality().equals(other.scopes, scopes)&&(identical(other.domain, domain) || other.domain == domain));
+  final _this = this as IRegistryScopesWithDomainResponse;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is IRegistryScopesWithDomainResponse&&const DeepCollectionEquality().equals(other.scopes, _this.scopes)&&(identical(other.domain, _this.domain) || other.domain == _this.domain));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(scopes),domain);
+int get hashCode {
+  final _this = this as IRegistryScopesWithDomainResponse;
+  return Object.hash(runtimeType,const DeepCollectionEquality().hash(_this.scopes),_this.domain);
+}
 
 @override
 String toString() {
-  return 'IRegistryScopesWithDomainResponse(scopes: $scopes, domain: $domain)';
+  final _this = this as IRegistryScopesWithDomainResponse;
+  return 'IRegistryScopesWithDomainResponse(scopes: ${_this.scopes}, domain: ${_this.domain})';
 }
 
 
@@ -66,7 +72,7 @@ class _$IRegistryScopesWithDomainResponseCopyWithImpl<$Res>
 /// Create a copy of IRegistryScopesWithDomainResponse
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? scopes = null,Object? domain = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(IRegistryScopesWithDomainResponse(
 scopes: null == scopes ? _self.scopes : scopes // ignore: cast_nullable_to_non_nullable
 as List<List<String>>,domain: freezed == domain ? _self.domain : domain // ignore: cast_nullable_to_non_nullable
 as String?,
@@ -210,7 +216,7 @@ return $default(_that.scopes,_that.domain);case _:
 @JsonSerializable()
 
 class _IRegistryScopesWithDomainResponse implements IRegistryScopesWithDomainResponse {
-  const _IRegistryScopesWithDomainResponse({required final  List<List<String>> scopes, this.domain}): _scopes = scopes;
+  const _IRegistryScopesWithDomainResponse({required  List<List<String>> scopes, this.domain}): _scopes = scopes;
   factory _IRegistryScopesWithDomainResponse.fromJson(Map<String, dynamic> json) => _$IRegistryScopesWithDomainResponseFromJson(json);
 
  final  List<List<String>> _scopes;
@@ -235,16 +241,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _IRegistryScopesWithDomainResponse&&const DeepCollectionEquality().equals(other._scopes, _scopes)&&(identical(other.domain, domain) || other.domain == domain));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _IRegistryScopesWithDomainResponse&&const DeepCollectionEquality().equals(other.scopes, _scopes)&&(identical(other.domain, domain) || other.domain == domain));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_scopes),domain);
+int get hashCode {
+    return Object.hash(runtimeType,const DeepCollectionEquality().hash(_scopes),domain);
+}
 
 @override
 String toString() {
-  return 'IRegistryScopesWithDomainResponse(scopes: $scopes, domain: $domain)';
+    return 'IRegistryScopesWithDomainResponse(scopes: $scopes, domain: $domain)';
 }
 
 

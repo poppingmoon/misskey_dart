@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'misskey_exception.dart';
@@ -9,14 +9,14 @@ part of 'misskey_exception.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
 /// @nodoc
 mixin _$MisskeyException {
 
- String get id; String get code; String get message;// ignore: invalid_annotation_target
-@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) MisskeyExceptionKind? get kind; Map<String, dynamic>? get info;
+ String get id; String get code; String get message;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) MisskeyExceptionKind? get kind; Map<String, dynamic>? get info;
 /// Create a copy of MisskeyException
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -29,16 +29,21 @@ $MisskeyExceptionCopyWith<MisskeyException> get copyWith => _$MisskeyExceptionCo
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is MisskeyException&&(identical(other.id, id) || other.id == id)&&(identical(other.code, code) || other.code == code)&&(identical(other.message, message) || other.message == message)&&(identical(other.kind, kind) || other.kind == kind)&&const DeepCollectionEquality().equals(other.info, info));
+  final _this = this as MisskeyException;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is MisskeyException&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.code, _this.code) || other.code == _this.code)&&(identical(other.message, _this.message) || other.message == _this.message)&&(identical(other.kind, _this.kind) || other.kind == _this.kind)&&const DeepCollectionEquality().equals(other.info, _this.info));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,code,message,kind,const DeepCollectionEquality().hash(info));
+int get hashCode {
+  final _this = this as MisskeyException;
+  return Object.hash(runtimeType,_this.id,_this.code,_this.message,_this.kind,const DeepCollectionEquality().hash(_this.info));
+}
 
 @override
 String toString() {
-  return 'MisskeyException(id: $id, code: $code, message: $message, kind: $kind, info: $info)';
+  final _this = this as MisskeyException;
+  return 'MisskeyException(id: ${_this.id}, code: ${_this.code}, message: ${_this.message}, kind: ${_this.kind}, info: ${_this.info})';
 }
 
 
@@ -67,7 +72,7 @@ class _$MisskeyExceptionCopyWithImpl<$Res>
 /// Create a copy of MisskeyException
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? code = null,Object? message = null,Object? kind = freezed,Object? info = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(MisskeyException(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,code: null == code ? _self.code : code // ignore: cast_nullable_to_non_nullable
 as String,message: null == message ? _self.message : message // ignore: cast_nullable_to_non_nullable
@@ -214,13 +219,12 @@ return $default(_that.id,_that.code,_that.message,_that.kind,_that.info);case _:
 @JsonSerializable()
 
 class _MisskeyException implements MisskeyException {
-  const _MisskeyException({required this.id, required this.code, required this.message, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.kind, final  Map<String, dynamic>? info}): _info = info;
+  const _MisskeyException({required this.id, required this.code, required this.message, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.kind,  Map<String, dynamic>? info}): _info = info;
   factory _MisskeyException.fromJson(Map<String, dynamic> json) => _$MisskeyExceptionFromJson(json);
 
 @override final  String id;
 @override final  String code;
 @override final  String message;
-// ignore: invalid_annotation_target
 @override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  MisskeyExceptionKind? kind;
  final  Map<String, dynamic>? _info;
 @override Map<String, dynamic>? get info {
@@ -245,16 +249,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _MisskeyException&&(identical(other.id, id) || other.id == id)&&(identical(other.code, code) || other.code == code)&&(identical(other.message, message) || other.message == message)&&(identical(other.kind, kind) || other.kind == kind)&&const DeepCollectionEquality().equals(other._info, _info));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _MisskeyException&&(identical(other.id, id) || other.id == id)&&(identical(other.code, code) || other.code == code)&&(identical(other.message, message) || other.message == message)&&(identical(other.kind, kind) || other.kind == kind)&&const DeepCollectionEquality().equals(other.info, _info));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,code,message,kind,const DeepCollectionEquality().hash(_info));
+int get hashCode {
+    return Object.hash(runtimeType,id,code,message,kind,const DeepCollectionEquality().hash(_info));
+}
 
 @override
 String toString() {
-  return 'MisskeyException(id: $id, code: $code, message: $message, kind: $kind, info: $info)';
+    return 'MisskeyException(id: $id, code: $code, message: $message, kind: $kind, info: $info)';
 }
 
 

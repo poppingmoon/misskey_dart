@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'join_misskey_instances.dart';
@@ -9,6 +9,7 @@ part of 'join_misskey_instances.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $JoinMisskeyInstancesCopyWith<JoinMisskeyInstances> get copyWith => _$JoinMisske
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is JoinMisskeyInstances&&(identical(other.date, date) || other.date == date)&&(identical(other.stats, stats) || other.stats == stats)&&const DeepCollectionEquality().equals(other.instancesInfos, instancesInfos));
+  final _this = this as JoinMisskeyInstances;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is JoinMisskeyInstances&&(identical(other.date, _this.date) || other.date == _this.date)&&(identical(other.stats, _this.stats) || other.stats == _this.stats)&&const DeepCollectionEquality().equals(other.instancesInfos, _this.instancesInfos));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,date,stats,const DeepCollectionEquality().hash(instancesInfos));
+int get hashCode {
+  final _this = this as JoinMisskeyInstances;
+  return Object.hash(runtimeType,_this.date,_this.stats,const DeepCollectionEquality().hash(_this.instancesInfos));
+}
 
 @override
 String toString() {
-  return 'JoinMisskeyInstances(date: $date, stats: $stats, instancesInfos: $instancesInfos)';
+  final _this = this as JoinMisskeyInstances;
+  return 'JoinMisskeyInstances(date: ${_this.date}, stats: ${_this.stats}, instancesInfos: ${_this.instancesInfos})';
 }
 
 
@@ -66,7 +72,7 @@ class _$JoinMisskeyInstancesCopyWithImpl<$Res>
 /// Create a copy of JoinMisskeyInstances
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? date = freezed,Object? stats = freezed,Object? instancesInfos = null,}) {
-  return _then(_self.copyWith(
+  return _then(JoinMisskeyInstances(
 date: freezed == date ? _self.date : date // ignore: cast_nullable_to_non_nullable
 as DateTime?,stats: freezed == stats ? _self.stats : stats // ignore: cast_nullable_to_non_nullable
 as JoinMisskeyStats?,instancesInfos: null == instancesInfos ? _self.instancesInfos : instancesInfos // ignore: cast_nullable_to_non_nullable
@@ -223,7 +229,7 @@ return $default(_that.date,_that.stats,_that.instancesInfos);case _:
 @JsonSerializable()
 
 class _JoinMisskeyInstances implements JoinMisskeyInstances {
-  const _JoinMisskeyInstances({this.date, this.stats, required final  List<JoinMisskeyInstanceInfo> instancesInfos}): _instancesInfos = instancesInfos;
+  const _JoinMisskeyInstances({this.date, this.stats, required  List<JoinMisskeyInstanceInfo> instancesInfos}): _instancesInfos = instancesInfos;
   factory _JoinMisskeyInstances.fromJson(Map<String, dynamic> json) => _$JoinMisskeyInstancesFromJson(json);
 
 @override final  DateTime? date;
@@ -249,16 +255,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _JoinMisskeyInstances&&(identical(other.date, date) || other.date == date)&&(identical(other.stats, stats) || other.stats == stats)&&const DeepCollectionEquality().equals(other._instancesInfos, _instancesInfos));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _JoinMisskeyInstances&&(identical(other.date, date) || other.date == date)&&(identical(other.stats, stats) || other.stats == stats)&&const DeepCollectionEquality().equals(other.instancesInfos, _instancesInfos));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,date,stats,const DeepCollectionEquality().hash(_instancesInfos));
+int get hashCode {
+    return Object.hash(runtimeType,date,stats,const DeepCollectionEquality().hash(_instancesInfos));
+}
 
 @override
 String toString() {
-  return 'JoinMisskeyInstances(date: $date, stats: $stats, instancesInfos: $instancesInfos)';
+    return 'JoinMisskeyInstances(date: $date, stats: $stats, instancesInfos: $instancesInfos)';
 }
 
 
@@ -314,8 +322,7 @@ $JoinMisskeyStatsCopyWith<$Res>? get stats {
 /// @nodoc
 mixin _$JoinMisskeyStats {
 
- int? get notesCount; int? get usersCount;// Removed in joinmisskey/api 3.1.0
- int? get mau; int? get npd15; int? get druYesterday; int? get dru15; int? get instancesCount;
+ int? get notesCount; int? get usersCount; int? get mau; int? get npd15; int? get druYesterday; int? get dru15; int? get instancesCount;
 /// Create a copy of JoinMisskeyStats
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -328,16 +335,21 @@ $JoinMisskeyStatsCopyWith<JoinMisskeyStats> get copyWith => _$JoinMisskeyStatsCo
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is JoinMisskeyStats&&(identical(other.notesCount, notesCount) || other.notesCount == notesCount)&&(identical(other.usersCount, usersCount) || other.usersCount == usersCount)&&(identical(other.mau, mau) || other.mau == mau)&&(identical(other.npd15, npd15) || other.npd15 == npd15)&&(identical(other.druYesterday, druYesterday) || other.druYesterday == druYesterday)&&(identical(other.dru15, dru15) || other.dru15 == dru15)&&(identical(other.instancesCount, instancesCount) || other.instancesCount == instancesCount));
+  final _this = this as JoinMisskeyStats;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is JoinMisskeyStats&&(identical(other.notesCount, _this.notesCount) || other.notesCount == _this.notesCount)&&(identical(other.usersCount, _this.usersCount) || other.usersCount == _this.usersCount)&&(identical(other.mau, _this.mau) || other.mau == _this.mau)&&(identical(other.npd15, _this.npd15) || other.npd15 == _this.npd15)&&(identical(other.druYesterday, _this.druYesterday) || other.druYesterday == _this.druYesterday)&&(identical(other.dru15, _this.dru15) || other.dru15 == _this.dru15)&&(identical(other.instancesCount, _this.instancesCount) || other.instancesCount == _this.instancesCount));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,notesCount,usersCount,mau,npd15,druYesterday,dru15,instancesCount);
+int get hashCode {
+  final _this = this as JoinMisskeyStats;
+  return Object.hash(runtimeType,_this.notesCount,_this.usersCount,_this.mau,_this.npd15,_this.druYesterday,_this.dru15,_this.instancesCount);
+}
 
 @override
 String toString() {
-  return 'JoinMisskeyStats(notesCount: $notesCount, usersCount: $usersCount, mau: $mau, npd15: $npd15, druYesterday: $druYesterday, dru15: $dru15, instancesCount: $instancesCount)';
+  final _this = this as JoinMisskeyStats;
+  return 'JoinMisskeyStats(notesCount: ${_this.notesCount}, usersCount: ${_this.usersCount}, mau: ${_this.mau}, npd15: ${_this.npd15}, druYesterday: ${_this.druYesterday}, dru15: ${_this.dru15}, instancesCount: ${_this.instancesCount})';
 }
 
 
@@ -366,7 +378,7 @@ class _$JoinMisskeyStatsCopyWithImpl<$Res>
 /// Create a copy of JoinMisskeyStats
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? notesCount = freezed,Object? usersCount = freezed,Object? mau = freezed,Object? npd15 = freezed,Object? druYesterday = freezed,Object? dru15 = freezed,Object? instancesCount = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(JoinMisskeyStats(
 notesCount: freezed == notesCount ? _self.notesCount : notesCount // ignore: cast_nullable_to_non_nullable
 as int?,usersCount: freezed == usersCount ? _self.usersCount : usersCount // ignore: cast_nullable_to_non_nullable
 as int?,mau: freezed == mau ? _self.mau : mau // ignore: cast_nullable_to_non_nullable
@@ -520,7 +532,6 @@ class _JoinMisskeyStats implements JoinMisskeyStats {
 
 @override final  int? notesCount;
 @override final  int? usersCount;
-// Removed in joinmisskey/api 3.1.0
 @override final  int? mau;
 @override final  int? npd15;
 @override final  int? druYesterday;
@@ -540,16 +551,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _JoinMisskeyStats&&(identical(other.notesCount, notesCount) || other.notesCount == notesCount)&&(identical(other.usersCount, usersCount) || other.usersCount == usersCount)&&(identical(other.mau, mau) || other.mau == mau)&&(identical(other.npd15, npd15) || other.npd15 == npd15)&&(identical(other.druYesterday, druYesterday) || other.druYesterday == druYesterday)&&(identical(other.dru15, dru15) || other.dru15 == dru15)&&(identical(other.instancesCount, instancesCount) || other.instancesCount == instancesCount));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _JoinMisskeyStats&&(identical(other.notesCount, notesCount) || other.notesCount == notesCount)&&(identical(other.usersCount, usersCount) || other.usersCount == usersCount)&&(identical(other.mau, mau) || other.mau == mau)&&(identical(other.npd15, npd15) || other.npd15 == npd15)&&(identical(other.druYesterday, druYesterday) || other.druYesterday == druYesterday)&&(identical(other.dru15, dru15) || other.dru15 == dru15)&&(identical(other.instancesCount, instancesCount) || other.instancesCount == instancesCount));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,notesCount,usersCount,mau,npd15,druYesterday,dru15,instancesCount);
+int get hashCode {
+    return Object.hash(runtimeType,notesCount,usersCount,mau,npd15,druYesterday,dru15,instancesCount);
+}
 
 @override
 String toString() {
-  return 'JoinMisskeyStats(notesCount: $notesCount, usersCount: $usersCount, mau: $mau, npd15: $npd15, druYesterday: $druYesterday, dru15: $dru15, instancesCount: $instancesCount)';
+    return 'JoinMisskeyStats(notesCount: $notesCount, usersCount: $usersCount, mau: $mau, npd15: $npd15, druYesterday: $druYesterday, dru15: $dru15, instancesCount: $instancesCount)';
 }
 
 
@@ -597,8 +610,7 @@ as int?,
 /// @nodoc
 mixin _$JoinMisskeyInstanceInfo {
 
- String get url; String get name; List<String> get langs; String? get description; bool? get isAlive; double? get value; bool get banner; bool get background; bool get icon;// ignore: invalid_annotation_target
-@JsonKey(name: "nodeinfo") JoinMisskeyNodeInfo? get nodeInfo; Map<String, dynamic>? get meta; int? get npd15; int? get druYesterday; int? get dru15;
+ String get url; String get name; List<String> get langs; String? get description; bool? get isAlive; double? get value; bool get banner; bool get background; bool get icon;@JsonKey(name: "nodeinfo") JoinMisskeyNodeInfo? get nodeInfo; Map<String, dynamic>? get meta; int? get npd15; int? get druYesterday; int? get dru15;
 /// Create a copy of JoinMisskeyInstanceInfo
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -611,16 +623,21 @@ $JoinMisskeyInstanceInfoCopyWith<JoinMisskeyInstanceInfo> get copyWith => _$Join
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is JoinMisskeyInstanceInfo&&(identical(other.url, url) || other.url == url)&&(identical(other.name, name) || other.name == name)&&const DeepCollectionEquality().equals(other.langs, langs)&&(identical(other.description, description) || other.description == description)&&(identical(other.isAlive, isAlive) || other.isAlive == isAlive)&&(identical(other.value, value) || other.value == value)&&(identical(other.banner, banner) || other.banner == banner)&&(identical(other.background, background) || other.background == background)&&(identical(other.icon, icon) || other.icon == icon)&&(identical(other.nodeInfo, nodeInfo) || other.nodeInfo == nodeInfo)&&const DeepCollectionEquality().equals(other.meta, meta)&&(identical(other.npd15, npd15) || other.npd15 == npd15)&&(identical(other.druYesterday, druYesterday) || other.druYesterday == druYesterday)&&(identical(other.dru15, dru15) || other.dru15 == dru15));
+  final _this = this as JoinMisskeyInstanceInfo;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is JoinMisskeyInstanceInfo&&(identical(other.url, _this.url) || other.url == _this.url)&&(identical(other.name, _this.name) || other.name == _this.name)&&const DeepCollectionEquality().equals(other.langs, _this.langs)&&(identical(other.description, _this.description) || other.description == _this.description)&&(identical(other.isAlive, _this.isAlive) || other.isAlive == _this.isAlive)&&(identical(other.value, _this.value) || other.value == _this.value)&&(identical(other.banner, _this.banner) || other.banner == _this.banner)&&(identical(other.background, _this.background) || other.background == _this.background)&&(identical(other.icon, _this.icon) || other.icon == _this.icon)&&(identical(other.nodeInfo, _this.nodeInfo) || other.nodeInfo == _this.nodeInfo)&&const DeepCollectionEquality().equals(other.meta, _this.meta)&&(identical(other.npd15, _this.npd15) || other.npd15 == _this.npd15)&&(identical(other.druYesterday, _this.druYesterday) || other.druYesterday == _this.druYesterday)&&(identical(other.dru15, _this.dru15) || other.dru15 == _this.dru15));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,url,name,const DeepCollectionEquality().hash(langs),description,isAlive,value,banner,background,icon,nodeInfo,const DeepCollectionEquality().hash(meta),npd15,druYesterday,dru15);
+int get hashCode {
+  final _this = this as JoinMisskeyInstanceInfo;
+  return Object.hash(runtimeType,_this.url,_this.name,const DeepCollectionEquality().hash(_this.langs),_this.description,_this.isAlive,_this.value,_this.banner,_this.background,_this.icon,_this.nodeInfo,const DeepCollectionEquality().hash(_this.meta),_this.npd15,_this.druYesterday,_this.dru15);
+}
 
 @override
 String toString() {
-  return 'JoinMisskeyInstanceInfo(url: $url, name: $name, langs: $langs, description: $description, isAlive: $isAlive, value: $value, banner: $banner, background: $background, icon: $icon, nodeInfo: $nodeInfo, meta: $meta, npd15: $npd15, druYesterday: $druYesterday, dru15: $dru15)';
+  final _this = this as JoinMisskeyInstanceInfo;
+  return 'JoinMisskeyInstanceInfo(url: ${_this.url}, name: ${_this.name}, langs: ${_this.langs}, description: ${_this.description}, isAlive: ${_this.isAlive}, value: ${_this.value}, banner: ${_this.banner}, background: ${_this.background}, icon: ${_this.icon}, nodeInfo: ${_this.nodeInfo}, meta: ${_this.meta}, npd15: ${_this.npd15}, druYesterday: ${_this.druYesterday}, dru15: ${_this.dru15})';
 }
 
 
@@ -649,7 +666,7 @@ class _$JoinMisskeyInstanceInfoCopyWithImpl<$Res>
 /// Create a copy of JoinMisskeyInstanceInfo
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? url = null,Object? name = null,Object? langs = null,Object? description = freezed,Object? isAlive = freezed,Object? value = freezed,Object? banner = null,Object? background = null,Object? icon = null,Object? nodeInfo = freezed,Object? meta = freezed,Object? npd15 = freezed,Object? druYesterday = freezed,Object? dru15 = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(JoinMisskeyInstanceInfo(
 url: null == url ? _self.url : url // ignore: cast_nullable_to_non_nullable
 as String,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
 as String,langs: null == langs ? _self.langs : langs // ignore: cast_nullable_to_non_nullable
@@ -817,7 +834,7 @@ return $default(_that.url,_that.name,_that.langs,_that.description,_that.isAlive
 @JsonSerializable()
 
 class _JoinMisskeyInstanceInfo implements JoinMisskeyInstanceInfo {
-  const _JoinMisskeyInstanceInfo({required this.url, required this.name, final  List<String> langs = const [], this.description, this.isAlive, this.value, this.banner = false, this.background = false, this.icon = false, @JsonKey(name: "nodeinfo") this.nodeInfo, final  Map<String, dynamic>? meta, this.npd15, this.druYesterday, this.dru15}): _langs = langs,_meta = meta;
+  const _JoinMisskeyInstanceInfo({required this.url, required this.name,  List<String> langs = const [], this.description, this.isAlive, this.value, this.banner = false, this.background = false, this.icon = false, @JsonKey(name: "nodeinfo") this.nodeInfo,  Map<String, dynamic>? meta, this.npd15, this.druYesterday, this.dru15}): _langs = langs,_meta = meta;
   factory _JoinMisskeyInstanceInfo.fromJson(Map<String, dynamic> json) => _$JoinMisskeyInstanceInfoFromJson(json);
 
 @override final  String url;
@@ -835,7 +852,6 @@ class _JoinMisskeyInstanceInfo implements JoinMisskeyInstanceInfo {
 @override@JsonKey() final  bool banner;
 @override@JsonKey() final  bool background;
 @override@JsonKey() final  bool icon;
-// ignore: invalid_annotation_target
 @override@JsonKey(name: "nodeinfo") final  JoinMisskeyNodeInfo? nodeInfo;
  final  Map<String, dynamic>? _meta;
 @override Map<String, dynamic>? get meta {
@@ -863,16 +879,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _JoinMisskeyInstanceInfo&&(identical(other.url, url) || other.url == url)&&(identical(other.name, name) || other.name == name)&&const DeepCollectionEquality().equals(other._langs, _langs)&&(identical(other.description, description) || other.description == description)&&(identical(other.isAlive, isAlive) || other.isAlive == isAlive)&&(identical(other.value, value) || other.value == value)&&(identical(other.banner, banner) || other.banner == banner)&&(identical(other.background, background) || other.background == background)&&(identical(other.icon, icon) || other.icon == icon)&&(identical(other.nodeInfo, nodeInfo) || other.nodeInfo == nodeInfo)&&const DeepCollectionEquality().equals(other._meta, _meta)&&(identical(other.npd15, npd15) || other.npd15 == npd15)&&(identical(other.druYesterday, druYesterday) || other.druYesterday == druYesterday)&&(identical(other.dru15, dru15) || other.dru15 == dru15));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _JoinMisskeyInstanceInfo&&(identical(other.url, url) || other.url == url)&&(identical(other.name, name) || other.name == name)&&const DeepCollectionEquality().equals(other.langs, _langs)&&(identical(other.description, description) || other.description == description)&&(identical(other.isAlive, isAlive) || other.isAlive == isAlive)&&(identical(other.value, value) || other.value == value)&&(identical(other.banner, banner) || other.banner == banner)&&(identical(other.background, background) || other.background == background)&&(identical(other.icon, icon) || other.icon == icon)&&(identical(other.nodeInfo, nodeInfo) || other.nodeInfo == nodeInfo)&&const DeepCollectionEquality().equals(other.meta, _meta)&&(identical(other.npd15, npd15) || other.npd15 == npd15)&&(identical(other.druYesterday, druYesterday) || other.druYesterday == druYesterday)&&(identical(other.dru15, dru15) || other.dru15 == dru15));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,url,name,const DeepCollectionEquality().hash(_langs),description,isAlive,value,banner,background,icon,nodeInfo,const DeepCollectionEquality().hash(_meta),npd15,druYesterday,dru15);
+int get hashCode {
+    return Object.hash(runtimeType,url,name,const DeepCollectionEquality().hash(_langs),description,isAlive,value,banner,background,icon,nodeInfo,const DeepCollectionEquality().hash(_meta),npd15,druYesterday,dru15);
+}
 
 @override
 String toString() {
-  return 'JoinMisskeyInstanceInfo(url: $url, name: $name, langs: $langs, description: $description, isAlive: $isAlive, value: $value, banner: $banner, background: $background, icon: $icon, nodeInfo: $nodeInfo, meta: $meta, npd15: $npd15, druYesterday: $druYesterday, dru15: $dru15)';
+    return 'JoinMisskeyInstanceInfo(url: $url, name: $name, langs: $langs, description: $description, isAlive: $isAlive, value: $value, banner: $banner, background: $background, icon: $icon, nodeInfo: $nodeInfo, meta: $meta, npd15: $npd15, druYesterday: $druYesterday, dru15: $dru15)';
 }
 
 
@@ -952,16 +970,21 @@ $JoinMisskeyNodeInfoCopyWith<JoinMisskeyNodeInfo> get copyWith => _$JoinMisskeyN
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is JoinMisskeyNodeInfo&&(identical(other.version, version) || other.version == version)&&(identical(other.software, software) || other.software == software)&&(identical(other.usage, usage) || other.usage == usage));
+  final _this = this as JoinMisskeyNodeInfo;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is JoinMisskeyNodeInfo&&(identical(other.version, _this.version) || other.version == _this.version)&&(identical(other.software, _this.software) || other.software == _this.software)&&(identical(other.usage, _this.usage) || other.usage == _this.usage));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,version,software,usage);
+int get hashCode {
+  final _this = this as JoinMisskeyNodeInfo;
+  return Object.hash(runtimeType,_this.version,_this.software,_this.usage);
+}
 
 @override
 String toString() {
-  return 'JoinMisskeyNodeInfo(version: $version, software: $software, usage: $usage)';
+  final _this = this as JoinMisskeyNodeInfo;
+  return 'JoinMisskeyNodeInfo(version: ${_this.version}, software: ${_this.software}, usage: ${_this.usage})';
 }
 
 
@@ -990,7 +1013,7 @@ class _$JoinMisskeyNodeInfoCopyWithImpl<$Res>
 /// Create a copy of JoinMisskeyNodeInfo
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? version = freezed,Object? software = freezed,Object? usage = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(JoinMisskeyNodeInfo(
 version: freezed == version ? _self.version : version // ignore: cast_nullable_to_non_nullable
 as String?,software: freezed == software ? _self.software : software // ignore: cast_nullable_to_non_nullable
 as JoinMisskeyNodeInfoSoftware?,usage: freezed == usage ? _self.usage : usage // ignore: cast_nullable_to_non_nullable
@@ -1179,16 +1202,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _JoinMisskeyNodeInfo&&(identical(other.version, version) || other.version == version)&&(identical(other.software, software) || other.software == software)&&(identical(other.usage, usage) || other.usage == usage));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _JoinMisskeyNodeInfo&&(identical(other.version, version) || other.version == version)&&(identical(other.software, software) || other.software == software)&&(identical(other.usage, usage) || other.usage == usage));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,version,software,usage);
+int get hashCode {
+    return Object.hash(runtimeType,version,software,usage);
+}
 
 @override
 String toString() {
-  return 'JoinMisskeyNodeInfo(version: $version, software: $software, usage: $usage)';
+    return 'JoinMisskeyNodeInfo(version: $version, software: $software, usage: $usage)';
 }
 
 
@@ -1269,16 +1294,21 @@ $JoinMisskeyNodeInfoSoftwareCopyWith<JoinMisskeyNodeInfoSoftware> get copyWith =
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is JoinMisskeyNodeInfoSoftware&&(identical(other.name, name) || other.name == name)&&(identical(other.version, version) || other.version == version));
+  final _this = this as JoinMisskeyNodeInfoSoftware;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is JoinMisskeyNodeInfoSoftware&&(identical(other.name, _this.name) || other.name == _this.name)&&(identical(other.version, _this.version) || other.version == _this.version));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,name,version);
+int get hashCode {
+  final _this = this as JoinMisskeyNodeInfoSoftware;
+  return Object.hash(runtimeType,_this.name,_this.version);
+}
 
 @override
 String toString() {
-  return 'JoinMisskeyNodeInfoSoftware(name: $name, version: $version)';
+  final _this = this as JoinMisskeyNodeInfoSoftware;
+  return 'JoinMisskeyNodeInfoSoftware(name: ${_this.name}, version: ${_this.version})';
 }
 
 
@@ -1307,7 +1337,7 @@ class _$JoinMisskeyNodeInfoSoftwareCopyWithImpl<$Res>
 /// Create a copy of JoinMisskeyNodeInfoSoftware
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? name = freezed,Object? version = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(JoinMisskeyNodeInfoSoftware(
 name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
 as String?,version: freezed == version ? _self.version : version // ignore: cast_nullable_to_non_nullable
 as String?,
@@ -1470,16 +1500,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _JoinMisskeyNodeInfoSoftware&&(identical(other.name, name) || other.name == name)&&(identical(other.version, version) || other.version == version));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _JoinMisskeyNodeInfoSoftware&&(identical(other.name, name) || other.name == name)&&(identical(other.version, version) || other.version == version));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,name,version);
+int get hashCode {
+    return Object.hash(runtimeType,name,version);
+}
 
 @override
 String toString() {
-  return 'JoinMisskeyNodeInfoSoftware(name: $name, version: $version)';
+    return 'JoinMisskeyNodeInfoSoftware(name: $name, version: $version)';
 }
 
 
@@ -1535,16 +1567,21 @@ $JoinMisskeyNodeInfoUsageCopyWith<JoinMisskeyNodeInfoUsage> get copyWith => _$Jo
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is JoinMisskeyNodeInfoUsage&&(identical(other.users, users) || other.users == users)&&(identical(other.localPosts, localPosts) || other.localPosts == localPosts)&&(identical(other.localComments, localComments) || other.localComments == localComments));
+  final _this = this as JoinMisskeyNodeInfoUsage;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is JoinMisskeyNodeInfoUsage&&(identical(other.users, _this.users) || other.users == _this.users)&&(identical(other.localPosts, _this.localPosts) || other.localPosts == _this.localPosts)&&(identical(other.localComments, _this.localComments) || other.localComments == _this.localComments));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,users,localPosts,localComments);
+int get hashCode {
+  final _this = this as JoinMisskeyNodeInfoUsage;
+  return Object.hash(runtimeType,_this.users,_this.localPosts,_this.localComments);
+}
 
 @override
 String toString() {
-  return 'JoinMisskeyNodeInfoUsage(users: $users, localPosts: $localPosts, localComments: $localComments)';
+  final _this = this as JoinMisskeyNodeInfoUsage;
+  return 'JoinMisskeyNodeInfoUsage(users: ${_this.users}, localPosts: ${_this.localPosts}, localComments: ${_this.localComments})';
 }
 
 
@@ -1573,7 +1610,7 @@ class _$JoinMisskeyNodeInfoUsageCopyWithImpl<$Res>
 /// Create a copy of JoinMisskeyNodeInfoUsage
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? users = freezed,Object? localPosts = freezed,Object? localComments = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(JoinMisskeyNodeInfoUsage(
 users: freezed == users ? _self.users : users // ignore: cast_nullable_to_non_nullable
 as JoinMisskeyNodeInfoUsageUsers?,localPosts: freezed == localPosts ? _self.localPosts : localPosts // ignore: cast_nullable_to_non_nullable
 as int?,localComments: freezed == localComments ? _self.localComments : localComments // ignore: cast_nullable_to_non_nullable
@@ -1750,16 +1787,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _JoinMisskeyNodeInfoUsage&&(identical(other.users, users) || other.users == users)&&(identical(other.localPosts, localPosts) || other.localPosts == localPosts)&&(identical(other.localComments, localComments) || other.localComments == localComments));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _JoinMisskeyNodeInfoUsage&&(identical(other.users, users) || other.users == users)&&(identical(other.localPosts, localPosts) || other.localPosts == localPosts)&&(identical(other.localComments, localComments) || other.localComments == localComments));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,users,localPosts,localComments);
+int get hashCode {
+    return Object.hash(runtimeType,users,localPosts,localComments);
+}
 
 @override
 String toString() {
-  return 'JoinMisskeyNodeInfoUsage(users: $users, localPosts: $localPosts, localComments: $localComments)';
+    return 'JoinMisskeyNodeInfoUsage(users: $users, localPosts: $localPosts, localComments: $localComments)';
 }
 
 
@@ -1828,16 +1867,21 @@ $JoinMisskeyNodeInfoUsageUsersCopyWith<JoinMisskeyNodeInfoUsageUsers> get copyWi
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is JoinMisskeyNodeInfoUsageUsers&&(identical(other.total, total) || other.total == total));
+  final _this = this as JoinMisskeyNodeInfoUsageUsers;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is JoinMisskeyNodeInfoUsageUsers&&(identical(other.total, _this.total) || other.total == _this.total));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,total);
+int get hashCode {
+  final _this = this as JoinMisskeyNodeInfoUsageUsers;
+  return Object.hash(runtimeType,_this.total);
+}
 
 @override
 String toString() {
-  return 'JoinMisskeyNodeInfoUsageUsers(total: $total)';
+  final _this = this as JoinMisskeyNodeInfoUsageUsers;
+  return 'JoinMisskeyNodeInfoUsageUsers(total: ${_this.total})';
 }
 
 
@@ -1866,7 +1910,7 @@ class _$JoinMisskeyNodeInfoUsageUsersCopyWithImpl<$Res>
 /// Create a copy of JoinMisskeyNodeInfoUsageUsers
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? total = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(JoinMisskeyNodeInfoUsageUsers(
 total: freezed == total ? _self.total : total // ignore: cast_nullable_to_non_nullable
 as int?,
   ));
@@ -2027,16 +2071,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _JoinMisskeyNodeInfoUsageUsers&&(identical(other.total, total) || other.total == total));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _JoinMisskeyNodeInfoUsageUsers&&(identical(other.total, total) || other.total == total));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,total);
+int get hashCode {
+    return Object.hash(runtimeType,total);
+}
 
 @override
 String toString() {
-  return 'JoinMisskeyNodeInfoUsageUsers(total: $total)';
+    return 'JoinMisskeyNodeInfoUsageUsers(total: $total)';
 }
 
 

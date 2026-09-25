@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'hashtags_users_request.dart';
@@ -9,6 +9,7 @@ part of 'hashtags_users_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $HashtagsUsersRequestCopyWith<HashtagsUsersRequest> get copyWith => _$HashtagsUs
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is HashtagsUsersRequest&&(identical(other.tag, tag) || other.tag == tag)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sort, sort) || other.sort == sort)&&(identical(other.state, state) || other.state == state)&&(identical(other.origin, origin) || other.origin == origin));
+  final _this = this as HashtagsUsersRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is HashtagsUsersRequest&&(identical(other.tag, _this.tag) || other.tag == _this.tag)&&(identical(other.limit, _this.limit) || other.limit == _this.limit)&&(identical(other.sort, _this.sort) || other.sort == _this.sort)&&(identical(other.state, _this.state) || other.state == _this.state)&&(identical(other.origin, _this.origin) || other.origin == _this.origin));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,tag,limit,sort,state,origin);
+int get hashCode {
+  final _this = this as HashtagsUsersRequest;
+  return Object.hash(runtimeType,_this.tag,_this.limit,_this.sort,_this.state,_this.origin);
+}
 
 @override
 String toString() {
-  return 'HashtagsUsersRequest(tag: $tag, limit: $limit, sort: $sort, state: $state, origin: $origin)';
+  final _this = this as HashtagsUsersRequest;
+  return 'HashtagsUsersRequest(tag: ${_this.tag}, limit: ${_this.limit}, sort: ${_this.sort}, state: ${_this.state}, origin: ${_this.origin})';
 }
 
 
@@ -66,7 +72,7 @@ class _$HashtagsUsersRequestCopyWithImpl<$Res>
 /// Create a copy of HashtagsUsersRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? tag = null,Object? limit = freezed,Object? sort = null,Object? state = freezed,Object? origin = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(HashtagsUsersRequest(
 tag: null == tag ? _self.tag : tag // ignore: cast_nullable_to_non_nullable
 as String,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int?,sort: null == sort ? _self.sort : sort // ignore: cast_nullable_to_non_nullable
@@ -235,16 +241,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _HashtagsUsersRequest&&(identical(other.tag, tag) || other.tag == tag)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sort, sort) || other.sort == sort)&&(identical(other.state, state) || other.state == state)&&(identical(other.origin, origin) || other.origin == origin));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _HashtagsUsersRequest&&(identical(other.tag, tag) || other.tag == tag)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sort, sort) || other.sort == sort)&&(identical(other.state, state) || other.state == state)&&(identical(other.origin, origin) || other.origin == origin));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,tag,limit,sort,state,origin);
+int get hashCode {
+    return Object.hash(runtimeType,tag,limit,sort,state,origin);
+}
 
 @override
 String toString() {
-  return 'HashtagsUsersRequest(tag: $tag, limit: $limit, sort: $sort, state: $state, origin: $origin)';
+    return 'HashtagsUsersRequest(tag: $tag, limit: $limit, sort: $sort, state: $state, origin: $origin)';
 }
 
 

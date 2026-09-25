@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'follow_request.dart';
@@ -9,6 +9,7 @@ part of 'follow_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $FollowRequestCopyWith<FollowRequest> get copyWith => _$FollowRequestCopyWithImp
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is FollowRequest&&(identical(other.id, id) || other.id == id)&&(identical(other.followee, followee) || other.followee == followee)&&(identical(other.follower, follower) || other.follower == follower));
+  final _this = this as FollowRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is FollowRequest&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.followee, _this.followee) || other.followee == _this.followee)&&(identical(other.follower, _this.follower) || other.follower == _this.follower));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,followee,follower);
+int get hashCode {
+  final _this = this as FollowRequest;
+  return Object.hash(runtimeType,_this.id,_this.followee,_this.follower);
+}
 
 @override
 String toString() {
-  return 'FollowRequest(id: $id, followee: $followee, follower: $follower)';
+  final _this = this as FollowRequest;
+  return 'FollowRequest(id: ${_this.id}, followee: ${_this.followee}, follower: ${_this.follower})';
 }
 
 
@@ -66,7 +72,7 @@ class _$FollowRequestCopyWithImpl<$Res>
 /// Create a copy of FollowRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? followee = null,Object? follower = null,}) {
-  return _then(_self.copyWith(
+  return _then(FollowRequest(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,followee: null == followee ? _self.followee : followee // ignore: cast_nullable_to_non_nullable
 as UserLite,follower: null == follower ? _self.follower : follower // ignore: cast_nullable_to_non_nullable
@@ -249,16 +255,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _FollowRequest&&(identical(other.id, id) || other.id == id)&&(identical(other.followee, followee) || other.followee == followee)&&(identical(other.follower, follower) || other.follower == follower));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _FollowRequest&&(identical(other.id, id) || other.id == id)&&(identical(other.followee, followee) || other.followee == followee)&&(identical(other.follower, follower) || other.follower == follower));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,followee,follower);
+int get hashCode {
+    return Object.hash(runtimeType,id,followee,follower);
+}
 
 @override
 String toString() {
-  return 'FollowRequest(id: $id, followee: $followee, follower: $follower)';
+    return 'FollowRequest(id: $id, followee: $followee, follower: $follower)';
 }
 
 

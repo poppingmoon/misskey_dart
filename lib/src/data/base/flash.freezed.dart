@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'flash.dart';
@@ -9,14 +9,14 @@ part of 'flash.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
 /// @nodoc
 mixin _$Flash {
 
- String get id;@DateTimeConverter() DateTime get createdAt;@DateTimeConverter() DateTime get updatedAt; String get title; String get summary; String get script;// ignore: invalid_annotation_target
-@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FlashVisibility? get visibility; String get userId; UserLite get user; int? get likedCount; bool get isLiked;
+ String get id;@DateTimeConverter() DateTime get createdAt;@DateTimeConverter() DateTime get updatedAt; String get title; String get summary; String get script;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FlashVisibility? get visibility; String get userId; UserLite get user; int? get likedCount; bool get isLiked;
 /// Create a copy of Flash
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -29,16 +29,21 @@ $FlashCopyWith<Flash> get copyWith => _$FlashCopyWithImpl<Flash>(this as Flash, 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Flash&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.title, title) || other.title == title)&&(identical(other.summary, summary) || other.summary == summary)&&(identical(other.script, script) || other.script == script)&&(identical(other.visibility, visibility) || other.visibility == visibility)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.user, user) || other.user == user)&&(identical(other.likedCount, likedCount) || other.likedCount == likedCount)&&(identical(other.isLiked, isLiked) || other.isLiked == isLiked));
+  final _this = this as Flash;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Flash&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.createdAt, _this.createdAt) || other.createdAt == _this.createdAt)&&(identical(other.updatedAt, _this.updatedAt) || other.updatedAt == _this.updatedAt)&&(identical(other.title, _this.title) || other.title == _this.title)&&(identical(other.summary, _this.summary) || other.summary == _this.summary)&&(identical(other.script, _this.script) || other.script == _this.script)&&(identical(other.visibility, _this.visibility) || other.visibility == _this.visibility)&&(identical(other.userId, _this.userId) || other.userId == _this.userId)&&(identical(other.user, _this.user) || other.user == _this.user)&&(identical(other.likedCount, _this.likedCount) || other.likedCount == _this.likedCount)&&(identical(other.isLiked, _this.isLiked) || other.isLiked == _this.isLiked));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,createdAt,updatedAt,title,summary,script,visibility,userId,user,likedCount,isLiked);
+int get hashCode {
+  final _this = this as Flash;
+  return Object.hash(runtimeType,_this.id,_this.createdAt,_this.updatedAt,_this.title,_this.summary,_this.script,_this.visibility,_this.userId,_this.user,_this.likedCount,_this.isLiked);
+}
 
 @override
 String toString() {
-  return 'Flash(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, title: $title, summary: $summary, script: $script, visibility: $visibility, userId: $userId, user: $user, likedCount: $likedCount, isLiked: $isLiked)';
+  final _this = this as Flash;
+  return 'Flash(id: ${_this.id}, createdAt: ${_this.createdAt}, updatedAt: ${_this.updatedAt}, title: ${_this.title}, summary: ${_this.summary}, script: ${_this.script}, visibility: ${_this.visibility}, userId: ${_this.userId}, user: ${_this.user}, likedCount: ${_this.likedCount}, isLiked: ${_this.isLiked})';
 }
 
 
@@ -67,7 +72,7 @@ class _$FlashCopyWithImpl<$Res>
 /// Create a copy of Flash
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? createdAt = null,Object? updatedAt = null,Object? title = null,Object? summary = null,Object? script = null,Object? visibility = freezed,Object? userId = null,Object? user = null,Object? likedCount = freezed,Object? isLiked = null,}) {
-  return _then(_self.copyWith(
+  return _then(Flash(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime,updatedAt: null == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
@@ -238,7 +243,6 @@ class _Flash implements Flash {
 @override final  String title;
 @override final  String summary;
 @override final  String script;
-// ignore: invalid_annotation_target
 @override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  FlashVisibility? visibility;
 @override final  String userId;
 @override final  UserLite user;
@@ -258,16 +262,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Flash&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.title, title) || other.title == title)&&(identical(other.summary, summary) || other.summary == summary)&&(identical(other.script, script) || other.script == script)&&(identical(other.visibility, visibility) || other.visibility == visibility)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.user, user) || other.user == user)&&(identical(other.likedCount, likedCount) || other.likedCount == likedCount)&&(identical(other.isLiked, isLiked) || other.isLiked == isLiked));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Flash&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.title, title) || other.title == title)&&(identical(other.summary, summary) || other.summary == summary)&&(identical(other.script, script) || other.script == script)&&(identical(other.visibility, visibility) || other.visibility == visibility)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.user, user) || other.user == user)&&(identical(other.likedCount, likedCount) || other.likedCount == likedCount)&&(identical(other.isLiked, isLiked) || other.isLiked == isLiked));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,createdAt,updatedAt,title,summary,script,visibility,userId,user,likedCount,isLiked);
+int get hashCode {
+    return Object.hash(runtimeType,id,createdAt,updatedAt,title,summary,script,visibility,userId,user,likedCount,isLiked);
+}
 
 @override
 String toString() {
-  return 'Flash(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, title: $title, summary: $summary, script: $script, visibility: $visibility, userId: $userId, user: $user, likedCount: $likedCount, isLiked: $isLiked)';
+    return 'Flash(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, title: $title, summary: $summary, script: $script, visibility: $visibility, userId: $userId, user: $user, likedCount: $likedCount, isLiked: $isLiked)';
 }
 
 

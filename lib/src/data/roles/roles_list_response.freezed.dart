@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'roles_list_response.dart';
@@ -9,6 +9,7 @@ part of 'roles_list_response.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $RolesListResponseCopyWith<RolesListResponse> get copyWith => _$RolesListRespons
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RolesListResponse&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.name, name) || other.name == name)&&(identical(other.description, description) || other.description == description)&&(identical(other.color, color) || other.color == color)&&(identical(other.iconUrl, iconUrl) || other.iconUrl == iconUrl)&&(identical(other.target, target) || other.target == target)&&(identical(other.isPublic, isPublic) || other.isPublic == isPublic)&&(identical(other.isAdministrator, isAdministrator) || other.isAdministrator == isAdministrator)&&(identical(other.isModerator, isModerator) || other.isModerator == isModerator)&&(identical(other.isExplorable, isExplorable) || other.isExplorable == isExplorable)&&(identical(other.asBadge, asBadge) || other.asBadge == asBadge)&&(identical(other.canEditMembersByModerator, canEditMembersByModerator) || other.canEditMembersByModerator == canEditMembersByModerator)&&(identical(other.displayOrder, displayOrder) || other.displayOrder == displayOrder)&&(identical(other.usersCount, usersCount) || other.usersCount == usersCount));
+  final _this = this as RolesListResponse;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is RolesListResponse&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.createdAt, _this.createdAt) || other.createdAt == _this.createdAt)&&(identical(other.updatedAt, _this.updatedAt) || other.updatedAt == _this.updatedAt)&&(identical(other.name, _this.name) || other.name == _this.name)&&(identical(other.description, _this.description) || other.description == _this.description)&&(identical(other.color, _this.color) || other.color == _this.color)&&(identical(other.iconUrl, _this.iconUrl) || other.iconUrl == _this.iconUrl)&&(identical(other.target, _this.target) || other.target == _this.target)&&(identical(other.isPublic, _this.isPublic) || other.isPublic == _this.isPublic)&&(identical(other.isAdministrator, _this.isAdministrator) || other.isAdministrator == _this.isAdministrator)&&(identical(other.isModerator, _this.isModerator) || other.isModerator == _this.isModerator)&&(identical(other.isExplorable, _this.isExplorable) || other.isExplorable == _this.isExplorable)&&(identical(other.asBadge, _this.asBadge) || other.asBadge == _this.asBadge)&&(identical(other.canEditMembersByModerator, _this.canEditMembersByModerator) || other.canEditMembersByModerator == _this.canEditMembersByModerator)&&(identical(other.displayOrder, _this.displayOrder) || other.displayOrder == _this.displayOrder)&&(identical(other.usersCount, _this.usersCount) || other.usersCount == _this.usersCount));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,createdAt,updatedAt,name,description,color,iconUrl,target,isPublic,isAdministrator,isModerator,isExplorable,asBadge,canEditMembersByModerator,displayOrder,usersCount);
+int get hashCode {
+  final _this = this as RolesListResponse;
+  return Object.hash(runtimeType,_this.id,_this.createdAt,_this.updatedAt,_this.name,_this.description,_this.color,_this.iconUrl,_this.target,_this.isPublic,_this.isAdministrator,_this.isModerator,_this.isExplorable,_this.asBadge,_this.canEditMembersByModerator,_this.displayOrder,_this.usersCount);
+}
 
 @override
 String toString() {
-  return 'RolesListResponse(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, name: $name, description: $description, color: $color, iconUrl: $iconUrl, target: $target, isPublic: $isPublic, isAdministrator: $isAdministrator, isModerator: $isModerator, isExplorable: $isExplorable, asBadge: $asBadge, canEditMembersByModerator: $canEditMembersByModerator, displayOrder: $displayOrder, usersCount: $usersCount)';
+  final _this = this as RolesListResponse;
+  return 'RolesListResponse(id: ${_this.id}, createdAt: ${_this.createdAt}, updatedAt: ${_this.updatedAt}, name: ${_this.name}, description: ${_this.description}, color: ${_this.color}, iconUrl: ${_this.iconUrl}, target: ${_this.target}, isPublic: ${_this.isPublic}, isAdministrator: ${_this.isAdministrator}, isModerator: ${_this.isModerator}, isExplorable: ${_this.isExplorable}, asBadge: ${_this.asBadge}, canEditMembersByModerator: ${_this.canEditMembersByModerator}, displayOrder: ${_this.displayOrder}, usersCount: ${_this.usersCount})';
 }
 
 
@@ -66,7 +72,7 @@ class _$RolesListResponseCopyWithImpl<$Res>
 /// Create a copy of RolesListResponse
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? createdAt = null,Object? updatedAt = null,Object? name = null,Object? description = freezed,Object? color = freezed,Object? iconUrl = freezed,Object? target = freezed,Object? isPublic = null,Object? isAdministrator = null,Object? isModerator = null,Object? isExplorable = null,Object? asBadge = null,Object? canEditMembersByModerator = null,Object? displayOrder = null,Object? usersCount = null,}) {
-  return _then(_self.copyWith(
+  return _then(RolesListResponse(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime,updatedAt: null == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
@@ -257,16 +263,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _RolesListResponse&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.name, name) || other.name == name)&&(identical(other.description, description) || other.description == description)&&(identical(other.color, color) || other.color == color)&&(identical(other.iconUrl, iconUrl) || other.iconUrl == iconUrl)&&(identical(other.target, target) || other.target == target)&&(identical(other.isPublic, isPublic) || other.isPublic == isPublic)&&(identical(other.isAdministrator, isAdministrator) || other.isAdministrator == isAdministrator)&&(identical(other.isModerator, isModerator) || other.isModerator == isModerator)&&(identical(other.isExplorable, isExplorable) || other.isExplorable == isExplorable)&&(identical(other.asBadge, asBadge) || other.asBadge == asBadge)&&(identical(other.canEditMembersByModerator, canEditMembersByModerator) || other.canEditMembersByModerator == canEditMembersByModerator)&&(identical(other.displayOrder, displayOrder) || other.displayOrder == displayOrder)&&(identical(other.usersCount, usersCount) || other.usersCount == usersCount));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _RolesListResponse&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.name, name) || other.name == name)&&(identical(other.description, description) || other.description == description)&&(identical(other.color, color) || other.color == color)&&(identical(other.iconUrl, iconUrl) || other.iconUrl == iconUrl)&&(identical(other.target, target) || other.target == target)&&(identical(other.isPublic, isPublic) || other.isPublic == isPublic)&&(identical(other.isAdministrator, isAdministrator) || other.isAdministrator == isAdministrator)&&(identical(other.isModerator, isModerator) || other.isModerator == isModerator)&&(identical(other.isExplorable, isExplorable) || other.isExplorable == isExplorable)&&(identical(other.asBadge, asBadge) || other.asBadge == asBadge)&&(identical(other.canEditMembersByModerator, canEditMembersByModerator) || other.canEditMembersByModerator == canEditMembersByModerator)&&(identical(other.displayOrder, displayOrder) || other.displayOrder == displayOrder)&&(identical(other.usersCount, usersCount) || other.usersCount == usersCount));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,createdAt,updatedAt,name,description,color,iconUrl,target,isPublic,isAdministrator,isModerator,isExplorable,asBadge,canEditMembersByModerator,displayOrder,usersCount);
+int get hashCode {
+    return Object.hash(runtimeType,id,createdAt,updatedAt,name,description,color,iconUrl,target,isPublic,isAdministrator,isModerator,isExplorable,asBadge,canEditMembersByModerator,displayOrder,usersCount);
+}
 
 @override
 String toString() {
-  return 'RolesListResponse(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, name: $name, description: $description, color: $color, iconUrl: $iconUrl, target: $target, isPublic: $isPublic, isAdministrator: $isAdministrator, isModerator: $isModerator, isExplorable: $isExplorable, asBadge: $asBadge, canEditMembersByModerator: $canEditMembersByModerator, displayOrder: $displayOrder, usersCount: $usersCount)';
+    return 'RolesListResponse(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, name: $name, description: $description, color: $color, iconUrl: $iconUrl, target: $target, isPublic: $isPublic, isAdministrator: $isAdministrator, isModerator: $isModerator, isExplorable: $isExplorable, asBadge: $asBadge, canEditMembersByModerator: $canEditMembersByModerator, displayOrder: $displayOrder, usersCount: $usersCount)';
 }
 
 

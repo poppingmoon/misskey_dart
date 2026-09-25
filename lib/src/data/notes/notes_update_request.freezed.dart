@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'notes_update_request.dart';
@@ -9,6 +9,7 @@ part of 'notes_update_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $NotesUpdateRequestCopyWith<NotesUpdateRequest> get copyWith => _$NotesUpdateReq
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesUpdateRequest&&(identical(other.noteId, noteId) || other.noteId == noteId)&&(identical(other.text, text) || other.text == text)&&(identical(other.cw, cw) || other.cw == cw)&&const DeepCollectionEquality().equals(other.fileIds, fileIds)&&(identical(other.poll, poll) || other.poll == poll));
+  final _this = this as NotesUpdateRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesUpdateRequest&&(identical(other.noteId, _this.noteId) || other.noteId == _this.noteId)&&(identical(other.text, _this.text) || other.text == _this.text)&&(identical(other.cw, _this.cw) || other.cw == _this.cw)&&const DeepCollectionEquality().equals(other.fileIds, _this.fileIds)&&(identical(other.poll, _this.poll) || other.poll == _this.poll));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,noteId,text,cw,const DeepCollectionEquality().hash(fileIds),poll);
+int get hashCode {
+  final _this = this as NotesUpdateRequest;
+  return Object.hash(runtimeType,_this.noteId,_this.text,_this.cw,const DeepCollectionEquality().hash(_this.fileIds),_this.poll);
+}
 
 @override
 String toString() {
-  return 'NotesUpdateRequest(noteId: $noteId, text: $text, cw: $cw, fileIds: $fileIds, poll: $poll)';
+  final _this = this as NotesUpdateRequest;
+  return 'NotesUpdateRequest(noteId: ${_this.noteId}, text: ${_this.text}, cw: ${_this.cw}, fileIds: ${_this.fileIds}, poll: ${_this.poll})';
 }
 
 
@@ -66,7 +72,7 @@ class _$NotesUpdateRequestCopyWithImpl<$Res>
 /// Create a copy of NotesUpdateRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? noteId = null,Object? text = freezed,Object? cw = freezed,Object? fileIds = freezed,Object? poll = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NotesUpdateRequest(
 noteId: null == noteId ? _self.noteId : noteId // ignore: cast_nullable_to_non_nullable
 as String,text: freezed == text ? _self.text : text // ignore: cast_nullable_to_non_nullable
 as String?,cw: freezed == cw ? _self.cw : cw // ignore: cast_nullable_to_non_nullable
@@ -225,7 +231,7 @@ return $default(_that.noteId,_that.text,_that.cw,_that.fileIds,_that.poll);case 
 @JsonSerializable()
 
 class _NotesUpdateRequest implements NotesUpdateRequest {
-  const _NotesUpdateRequest({required this.noteId, this.text, this.cw, final  List<String>? fileIds, this.poll}): _fileIds = fileIds;
+  const _NotesUpdateRequest({required this.noteId, this.text, this.cw,  List<String>? fileIds, this.poll}): _fileIds = fileIds;
   factory _NotesUpdateRequest.fromJson(Map<String, dynamic> json) => _$NotesUpdateRequestFromJson(json);
 
 @override final  String noteId;
@@ -255,16 +261,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesUpdateRequest&&(identical(other.noteId, noteId) || other.noteId == noteId)&&(identical(other.text, text) || other.text == text)&&(identical(other.cw, cw) || other.cw == cw)&&const DeepCollectionEquality().equals(other._fileIds, _fileIds)&&(identical(other.poll, poll) || other.poll == poll));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesUpdateRequest&&(identical(other.noteId, noteId) || other.noteId == noteId)&&(identical(other.text, text) || other.text == text)&&(identical(other.cw, cw) || other.cw == cw)&&const DeepCollectionEquality().equals(other.fileIds, _fileIds)&&(identical(other.poll, poll) || other.poll == poll));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,noteId,text,cw,const DeepCollectionEquality().hash(_fileIds),poll);
+int get hashCode {
+    return Object.hash(runtimeType,noteId,text,cw,const DeepCollectionEquality().hash(_fileIds),poll);
+}
 
 @override
 String toString() {
-  return 'NotesUpdateRequest(noteId: $noteId, text: $text, cw: $cw, fileIds: $fileIds, poll: $poll)';
+    return 'NotesUpdateRequest(noteId: $noteId, text: $text, cw: $cw, fileIds: $fileIds, poll: $poll)';
 }
 
 

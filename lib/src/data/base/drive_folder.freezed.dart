@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'drive_folder.dart';
@@ -9,6 +9,7 @@ part of 'drive_folder.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $DriveFolderCopyWith<DriveFolder> get copyWith => _$DriveFolderCopyWithImpl<Driv
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is DriveFolder&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.name, name) || other.name == name)&&(identical(other.parentId, parentId) || other.parentId == parentId)&&(identical(other.parent, parent) || other.parent == parent)&&(identical(other.foldersCount, foldersCount) || other.foldersCount == foldersCount)&&(identical(other.filesCount, filesCount) || other.filesCount == filesCount));
+  final _this = this as DriveFolder;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is DriveFolder&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.createdAt, _this.createdAt) || other.createdAt == _this.createdAt)&&(identical(other.name, _this.name) || other.name == _this.name)&&(identical(other.parentId, _this.parentId) || other.parentId == _this.parentId)&&(identical(other.parent, _this.parent) || other.parent == _this.parent)&&(identical(other.foldersCount, _this.foldersCount) || other.foldersCount == _this.foldersCount)&&(identical(other.filesCount, _this.filesCount) || other.filesCount == _this.filesCount));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,createdAt,name,parentId,parent,foldersCount,filesCount);
+int get hashCode {
+  final _this = this as DriveFolder;
+  return Object.hash(runtimeType,_this.id,_this.createdAt,_this.name,_this.parentId,_this.parent,_this.foldersCount,_this.filesCount);
+}
 
 @override
 String toString() {
-  return 'DriveFolder(id: $id, createdAt: $createdAt, name: $name, parentId: $parentId, parent: $parent, foldersCount: $foldersCount, filesCount: $filesCount)';
+  final _this = this as DriveFolder;
+  return 'DriveFolder(id: ${_this.id}, createdAt: ${_this.createdAt}, name: ${_this.name}, parentId: ${_this.parentId}, parent: ${_this.parent}, foldersCount: ${_this.foldersCount}, filesCount: ${_this.filesCount})';
 }
 
 
@@ -66,7 +72,7 @@ class _$DriveFolderCopyWithImpl<$Res>
 /// Create a copy of DriveFolder
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? createdAt = null,Object? name = null,Object? parentId = freezed,Object? parent = freezed,Object? foldersCount = freezed,Object? filesCount = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(DriveFolder(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
@@ -251,16 +257,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _DriveFolder&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.name, name) || other.name == name)&&(identical(other.parentId, parentId) || other.parentId == parentId)&&(identical(other.parent, parent) || other.parent == parent)&&(identical(other.foldersCount, foldersCount) || other.foldersCount == foldersCount)&&(identical(other.filesCount, filesCount) || other.filesCount == filesCount));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _DriveFolder&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.name, name) || other.name == name)&&(identical(other.parentId, parentId) || other.parentId == parentId)&&(identical(other.parent, parent) || other.parent == parent)&&(identical(other.foldersCount, foldersCount) || other.foldersCount == foldersCount)&&(identical(other.filesCount, filesCount) || other.filesCount == filesCount));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,createdAt,name,parentId,parent,foldersCount,filesCount);
+int get hashCode {
+    return Object.hash(runtimeType,id,createdAt,name,parentId,parent,foldersCount,filesCount);
+}
 
 @override
 String toString() {
-  return 'DriveFolder(id: $id, createdAt: $createdAt, name: $name, parentId: $parentId, parent: $parent, foldersCount: $foldersCount, filesCount: $filesCount)';
+    return 'DriveFolder(id: $id, createdAt: $createdAt, name: $name, parentId: $parentId, parent: $parent, foldersCount: $foldersCount, filesCount: $filesCount)';
 }
 
 

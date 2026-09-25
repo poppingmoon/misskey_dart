@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'notes_drafts_create_response.dart';
@@ -9,6 +9,7 @@ part of 'notes_drafts_create_response.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $NotesDraftsCreateResponseCopyWith<NotesDraftsCreateResponse> get copyWith => _$
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesDraftsCreateResponse&&(identical(other.createdDraft, createdDraft) || other.createdDraft == createdDraft));
+  final _this = this as NotesDraftsCreateResponse;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesDraftsCreateResponse&&(identical(other.createdDraft, _this.createdDraft) || other.createdDraft == _this.createdDraft));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,createdDraft);
+int get hashCode {
+  final _this = this as NotesDraftsCreateResponse;
+  return Object.hash(runtimeType,_this.createdDraft);
+}
 
 @override
 String toString() {
-  return 'NotesDraftsCreateResponse(createdDraft: $createdDraft)';
+  final _this = this as NotesDraftsCreateResponse;
+  return 'NotesDraftsCreateResponse(createdDraft: ${_this.createdDraft})';
 }
 
 
@@ -66,7 +72,7 @@ class _$NotesDraftsCreateResponseCopyWithImpl<$Res>
 /// Create a copy of NotesDraftsCreateResponse
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? createdDraft = null,}) {
-  return _then(_self.copyWith(
+  return _then(NotesDraftsCreateResponse(
 createdDraft: null == createdDraft ? _self.createdDraft : createdDraft // ignore: cast_nullable_to_non_nullable
 as NoteDraft,
   ));
@@ -236,16 +242,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesDraftsCreateResponse&&(identical(other.createdDraft, createdDraft) || other.createdDraft == createdDraft));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesDraftsCreateResponse&&(identical(other.createdDraft, createdDraft) || other.createdDraft == createdDraft));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,createdDraft);
+int get hashCode {
+    return Object.hash(runtimeType,createdDraft);
+}
 
 @override
 String toString() {
-  return 'NotesDraftsCreateResponse(createdDraft: $createdDraft)';
+    return 'NotesDraftsCreateResponse(createdDraft: $createdDraft)';
 }
 
 

@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'stats_response.dart';
@@ -9,6 +9,7 @@ part of 'stats_response.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $StatsResponseCopyWith<StatsResponse> get copyWith => _$StatsResponseCopyWithImp
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is StatsResponse&&(identical(other.notesCount, notesCount) || other.notesCount == notesCount)&&(identical(other.originalNotesCount, originalNotesCount) || other.originalNotesCount == originalNotesCount)&&(identical(other.usersCount, usersCount) || other.usersCount == usersCount)&&(identical(other.originalUsersCount, originalUsersCount) || other.originalUsersCount == originalUsersCount)&&(identical(other.reactionsCount, reactionsCount) || other.reactionsCount == reactionsCount)&&(identical(other.instances, instances) || other.instances == instances)&&(identical(other.driveUsageLocal, driveUsageLocal) || other.driveUsageLocal == driveUsageLocal)&&(identical(other.driveUsageRemote, driveUsageRemote) || other.driveUsageRemote == driveUsageRemote));
+  final _this = this as StatsResponse;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is StatsResponse&&(identical(other.notesCount, _this.notesCount) || other.notesCount == _this.notesCount)&&(identical(other.originalNotesCount, _this.originalNotesCount) || other.originalNotesCount == _this.originalNotesCount)&&(identical(other.usersCount, _this.usersCount) || other.usersCount == _this.usersCount)&&(identical(other.originalUsersCount, _this.originalUsersCount) || other.originalUsersCount == _this.originalUsersCount)&&(identical(other.reactionsCount, _this.reactionsCount) || other.reactionsCount == _this.reactionsCount)&&(identical(other.instances, _this.instances) || other.instances == _this.instances)&&(identical(other.driveUsageLocal, _this.driveUsageLocal) || other.driveUsageLocal == _this.driveUsageLocal)&&(identical(other.driveUsageRemote, _this.driveUsageRemote) || other.driveUsageRemote == _this.driveUsageRemote));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,notesCount,originalNotesCount,usersCount,originalUsersCount,reactionsCount,instances,driveUsageLocal,driveUsageRemote);
+int get hashCode {
+  final _this = this as StatsResponse;
+  return Object.hash(runtimeType,_this.notesCount,_this.originalNotesCount,_this.usersCount,_this.originalUsersCount,_this.reactionsCount,_this.instances,_this.driveUsageLocal,_this.driveUsageRemote);
+}
 
 @override
 String toString() {
-  return 'StatsResponse(notesCount: $notesCount, originalNotesCount: $originalNotesCount, usersCount: $usersCount, originalUsersCount: $originalUsersCount, reactionsCount: $reactionsCount, instances: $instances, driveUsageLocal: $driveUsageLocal, driveUsageRemote: $driveUsageRemote)';
+  final _this = this as StatsResponse;
+  return 'StatsResponse(notesCount: ${_this.notesCount}, originalNotesCount: ${_this.originalNotesCount}, usersCount: ${_this.usersCount}, originalUsersCount: ${_this.originalUsersCount}, reactionsCount: ${_this.reactionsCount}, instances: ${_this.instances}, driveUsageLocal: ${_this.driveUsageLocal}, driveUsageRemote: ${_this.driveUsageRemote})';
 }
 
 
@@ -66,7 +72,7 @@ class _$StatsResponseCopyWithImpl<$Res>
 /// Create a copy of StatsResponse
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? notesCount = freezed,Object? originalNotesCount = freezed,Object? usersCount = freezed,Object? originalUsersCount = freezed,Object? reactionsCount = freezed,Object? instances = freezed,Object? driveUsageLocal = freezed,Object? driveUsageRemote = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(StatsResponse(
 notesCount: freezed == notesCount ? _self.notesCount : notesCount // ignore: cast_nullable_to_non_nullable
 as int?,originalNotesCount: freezed == originalNotesCount ? _self.originalNotesCount : originalNotesCount // ignore: cast_nullable_to_non_nullable
 as int?,usersCount: freezed == usersCount ? _self.usersCount : usersCount // ignore: cast_nullable_to_non_nullable
@@ -241,16 +247,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _StatsResponse&&(identical(other.notesCount, notesCount) || other.notesCount == notesCount)&&(identical(other.originalNotesCount, originalNotesCount) || other.originalNotesCount == originalNotesCount)&&(identical(other.usersCount, usersCount) || other.usersCount == usersCount)&&(identical(other.originalUsersCount, originalUsersCount) || other.originalUsersCount == originalUsersCount)&&(identical(other.reactionsCount, reactionsCount) || other.reactionsCount == reactionsCount)&&(identical(other.instances, instances) || other.instances == instances)&&(identical(other.driveUsageLocal, driveUsageLocal) || other.driveUsageLocal == driveUsageLocal)&&(identical(other.driveUsageRemote, driveUsageRemote) || other.driveUsageRemote == driveUsageRemote));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _StatsResponse&&(identical(other.notesCount, notesCount) || other.notesCount == notesCount)&&(identical(other.originalNotesCount, originalNotesCount) || other.originalNotesCount == originalNotesCount)&&(identical(other.usersCount, usersCount) || other.usersCount == usersCount)&&(identical(other.originalUsersCount, originalUsersCount) || other.originalUsersCount == originalUsersCount)&&(identical(other.reactionsCount, reactionsCount) || other.reactionsCount == reactionsCount)&&(identical(other.instances, instances) || other.instances == instances)&&(identical(other.driveUsageLocal, driveUsageLocal) || other.driveUsageLocal == driveUsageLocal)&&(identical(other.driveUsageRemote, driveUsageRemote) || other.driveUsageRemote == driveUsageRemote));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,notesCount,originalNotesCount,usersCount,originalUsersCount,reactionsCount,instances,driveUsageLocal,driveUsageRemote);
+int get hashCode {
+    return Object.hash(runtimeType,notesCount,originalNotesCount,usersCount,originalUsersCount,reactionsCount,instances,driveUsageLocal,driveUsageRemote);
+}
 
 @override
 String toString() {
-  return 'StatsResponse(notesCount: $notesCount, originalNotesCount: $originalNotesCount, usersCount: $usersCount, originalUsersCount: $originalUsersCount, reactionsCount: $reactionsCount, instances: $instances, driveUsageLocal: $driveUsageLocal, driveUsageRemote: $driveUsageRemote)';
+    return 'StatsResponse(notesCount: $notesCount, originalNotesCount: $originalNotesCount, usersCount: $usersCount, originalUsersCount: $originalUsersCount, reactionsCount: $reactionsCount, instances: $instances, driveUsageLocal: $driveUsageLocal, driveUsageRemote: $driveUsageRemote)';
 }
 
 

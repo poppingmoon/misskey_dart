@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'flash_delete_request.dart';
@@ -9,6 +9,7 @@ part of 'flash_delete_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $FlashDeleteRequestCopyWith<FlashDeleteRequest> get copyWith => _$FlashDeleteReq
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is FlashDeleteRequest&&(identical(other.flashId, flashId) || other.flashId == flashId));
+  final _this = this as FlashDeleteRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is FlashDeleteRequest&&(identical(other.flashId, _this.flashId) || other.flashId == _this.flashId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,flashId);
+int get hashCode {
+  final _this = this as FlashDeleteRequest;
+  return Object.hash(runtimeType,_this.flashId);
+}
 
 @override
 String toString() {
-  return 'FlashDeleteRequest(flashId: $flashId)';
+  final _this = this as FlashDeleteRequest;
+  return 'FlashDeleteRequest(flashId: ${_this.flashId})';
 }
 
 
@@ -66,7 +72,7 @@ class _$FlashDeleteRequestCopyWithImpl<$Res>
 /// Create a copy of FlashDeleteRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? flashId = null,}) {
-  return _then(_self.copyWith(
+  return _then(FlashDeleteRequest(
 flashId: null == flashId ? _self.flashId : flashId // ignore: cast_nullable_to_non_nullable
 as String,
   ));
@@ -227,16 +233,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _FlashDeleteRequest&&(identical(other.flashId, flashId) || other.flashId == flashId));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _FlashDeleteRequest&&(identical(other.flashId, flashId) || other.flashId == flashId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,flashId);
+int get hashCode {
+    return Object.hash(runtimeType,flashId);
+}
 
 @override
 String toString() {
-  return 'FlashDeleteRequest(flashId: $flashId)';
+    return 'FlashDeleteRequest(flashId: $flashId)';
 }
 
 

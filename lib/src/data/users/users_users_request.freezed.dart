@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'users_users_request.dart';
@@ -9,6 +9,7 @@ part of 'users_users_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $UsersUsersRequestCopyWith<UsersUsersRequest> get copyWith => _$UsersUsersReques
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is UsersUsersRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.offset, offset) || other.offset == offset)&&(identical(other.sort, sort) || other.sort == sort)&&(identical(other.state, state) || other.state == state)&&(identical(other.origin, origin) || other.origin == origin)&&(identical(other.hostname, hostname) || other.hostname == hostname));
+  final _this = this as UsersUsersRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is UsersUsersRequest&&(identical(other.limit, _this.limit) || other.limit == _this.limit)&&(identical(other.offset, _this.offset) || other.offset == _this.offset)&&(identical(other.sort, _this.sort) || other.sort == _this.sort)&&(identical(other.state, _this.state) || other.state == _this.state)&&(identical(other.origin, _this.origin) || other.origin == _this.origin)&&(identical(other.hostname, _this.hostname) || other.hostname == _this.hostname));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,limit,offset,sort,state,origin,hostname);
+int get hashCode {
+  final _this = this as UsersUsersRequest;
+  return Object.hash(runtimeType,_this.limit,_this.offset,_this.sort,_this.state,_this.origin,_this.hostname);
+}
 
 @override
 String toString() {
-  return 'UsersUsersRequest(limit: $limit, offset: $offset, sort: $sort, state: $state, origin: $origin, hostname: $hostname)';
+  final _this = this as UsersUsersRequest;
+  return 'UsersUsersRequest(limit: ${_this.limit}, offset: ${_this.offset}, sort: ${_this.sort}, state: ${_this.state}, origin: ${_this.origin}, hostname: ${_this.hostname})';
 }
 
 
@@ -66,7 +72,7 @@ class _$UsersUsersRequestCopyWithImpl<$Res>
 /// Create a copy of UsersUsersRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? limit = freezed,Object? offset = freezed,Object? sort = freezed,Object? state = freezed,Object? origin = freezed,Object? hostname = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(UsersUsersRequest(
 limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int?,offset: freezed == offset ? _self.offset : offset // ignore: cast_nullable_to_non_nullable
 as int?,sort: freezed == sort ? _self.sort : sort // ignore: cast_nullable_to_non_nullable
@@ -237,16 +243,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersUsersRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.offset, offset) || other.offset == offset)&&(identical(other.sort, sort) || other.sort == sort)&&(identical(other.state, state) || other.state == state)&&(identical(other.origin, origin) || other.origin == origin)&&(identical(other.hostname, hostname) || other.hostname == hostname));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersUsersRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.offset, offset) || other.offset == offset)&&(identical(other.sort, sort) || other.sort == sort)&&(identical(other.state, state) || other.state == state)&&(identical(other.origin, origin) || other.origin == origin)&&(identical(other.hostname, hostname) || other.hostname == hostname));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,limit,offset,sort,state,origin,hostname);
+int get hashCode {
+    return Object.hash(runtimeType,limit,offset,sort,state,origin,hostname);
+}
 
 @override
 String toString() {
-  return 'UsersUsersRequest(limit: $limit, offset: $offset, sort: $sort, state: $state, origin: $origin, hostname: $hostname)';
+    return 'UsersUsersRequest(limit: $limit, offset: $offset, sort: $sort, state: $state, origin: $origin, hostname: $hostname)';
 }
 
 

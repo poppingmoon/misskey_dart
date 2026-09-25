@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'users_notes_request.dart';
@@ -9,6 +9,7 @@ part of 'users_notes_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -31,16 +32,21 @@ $UsersNotesRequestCopyWith<UsersNotesRequest> get copyWith => _$UsersNotesReques
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is UsersNotesRequest&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.includeReplies, includeReplies) || other.includeReplies == includeReplies)&&(identical(other.withReplies, withReplies) || other.withReplies == withReplies)&&(identical(other.withRenotes, withRenotes) || other.withRenotes == withRenotes)&&(identical(other.withChannelNotes, withChannelNotes) || other.withChannelNotes == withChannelNotes)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.includeMyRenotes, includeMyRenotes) || other.includeMyRenotes == includeMyRenotes)&&(identical(other.withFiles, withFiles) || other.withFiles == withFiles)&&const DeepCollectionEquality().equals(other.fileType, fileType)&&(identical(other.allowPartial, allowPartial) || other.allowPartial == allowPartial)&&(identical(other.excludeNsfw, excludeNsfw) || other.excludeNsfw == excludeNsfw));
+  final _this = this as UsersNotesRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is UsersNotesRequest&&(identical(other.userId, _this.userId) || other.userId == _this.userId)&&(identical(other.includeReplies, _this.includeReplies) || other.includeReplies == _this.includeReplies)&&(identical(other.withReplies, _this.withReplies) || other.withReplies == _this.withReplies)&&(identical(other.withRenotes, _this.withRenotes) || other.withRenotes == _this.withRenotes)&&(identical(other.withChannelNotes, _this.withChannelNotes) || other.withChannelNotes == _this.withChannelNotes)&&(identical(other.limit, _this.limit) || other.limit == _this.limit)&&(identical(other.sinceId, _this.sinceId) || other.sinceId == _this.sinceId)&&(identical(other.untilId, _this.untilId) || other.untilId == _this.untilId)&&(identical(other.sinceDate, _this.sinceDate) || other.sinceDate == _this.sinceDate)&&(identical(other.untilDate, _this.untilDate) || other.untilDate == _this.untilDate)&&(identical(other.includeMyRenotes, _this.includeMyRenotes) || other.includeMyRenotes == _this.includeMyRenotes)&&(identical(other.withFiles, _this.withFiles) || other.withFiles == _this.withFiles)&&const DeepCollectionEquality().equals(other.fileType, _this.fileType)&&(identical(other.allowPartial, _this.allowPartial) || other.allowPartial == _this.allowPartial)&&(identical(other.excludeNsfw, _this.excludeNsfw) || other.excludeNsfw == _this.excludeNsfw));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,userId,includeReplies,withReplies,withRenotes,withChannelNotes,limit,sinceId,untilId,sinceDate,untilDate,includeMyRenotes,withFiles,const DeepCollectionEquality().hash(fileType),allowPartial,excludeNsfw);
+int get hashCode {
+  final _this = this as UsersNotesRequest;
+  return Object.hash(runtimeType,_this.userId,_this.includeReplies,_this.withReplies,_this.withRenotes,_this.withChannelNotes,_this.limit,_this.sinceId,_this.untilId,_this.sinceDate,_this.untilDate,_this.includeMyRenotes,_this.withFiles,const DeepCollectionEquality().hash(_this.fileType),_this.allowPartial,_this.excludeNsfw);
+}
 
 @override
 String toString() {
-  return 'UsersNotesRequest(userId: $userId, includeReplies: $includeReplies, withReplies: $withReplies, withRenotes: $withRenotes, withChannelNotes: $withChannelNotes, limit: $limit, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, includeMyRenotes: $includeMyRenotes, withFiles: $withFiles, fileType: $fileType, allowPartial: $allowPartial, excludeNsfw: $excludeNsfw)';
+  final _this = this as UsersNotesRequest;
+  return 'UsersNotesRequest(userId: ${_this.userId}, includeReplies: ${_this.includeReplies}, withReplies: ${_this.withReplies}, withRenotes: ${_this.withRenotes}, withChannelNotes: ${_this.withChannelNotes}, limit: ${_this.limit}, sinceId: ${_this.sinceId}, untilId: ${_this.untilId}, sinceDate: ${_this.sinceDate}, untilDate: ${_this.untilDate}, includeMyRenotes: ${_this.includeMyRenotes}, withFiles: ${_this.withFiles}, fileType: ${_this.fileType}, allowPartial: ${_this.allowPartial}, excludeNsfw: ${_this.excludeNsfw})';
 }
 
 
@@ -69,7 +75,7 @@ class _$UsersNotesRequestCopyWithImpl<$Res>
 /// Create a copy of UsersNotesRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? userId = null,Object? includeReplies = freezed,Object? withReplies = freezed,Object? withRenotes = freezed,Object? withChannelNotes = freezed,Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,Object? includeMyRenotes = freezed,Object? withFiles = freezed,Object? fileType = freezed,Object? allowPartial = freezed,Object? excludeNsfw = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(UsersNotesRequest(
 userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
 as String,includeReplies: freezed == includeReplies ? _self.includeReplies : includeReplies // ignore: cast_nullable_to_non_nullable
 as bool?,withReplies: freezed == withReplies ? _self.withReplies : withReplies // ignore: cast_nullable_to_non_nullable
@@ -226,7 +232,7 @@ return $default(_that.userId,_that.includeReplies,_that.withReplies,_that.withRe
 @JsonSerializable()
 
 class _UsersNotesRequest implements UsersNotesRequest {
-  const _UsersNotesRequest({required this.userId, this.includeReplies, this.withReplies, this.withRenotes, this.withChannelNotes, this.limit, this.sinceId, this.untilId, @EpocTimeDateTimeConverter() this.sinceDate, @EpocTimeDateTimeConverter() this.untilDate, this.includeMyRenotes, this.withFiles, final  List<String>? fileType, this.allowPartial, this.excludeNsfw}): _fileType = fileType;
+  const _UsersNotesRequest({required this.userId, this.includeReplies, this.withReplies, this.withRenotes, this.withChannelNotes, this.limit, this.sinceId, this.untilId, @EpocTimeDateTimeConverter() this.sinceDate, @EpocTimeDateTimeConverter() this.untilDate, this.includeMyRenotes, this.withFiles,  List<String>? fileType, this.allowPartial, this.excludeNsfw}): _fileType = fileType;
   factory _UsersNotesRequest.fromJson(Map<String, dynamic> json) => _$UsersNotesRequestFromJson(json);
 
 @override final  String userId;
@@ -269,16 +275,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersNotesRequest&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.includeReplies, includeReplies) || other.includeReplies == includeReplies)&&(identical(other.withReplies, withReplies) || other.withReplies == withReplies)&&(identical(other.withRenotes, withRenotes) || other.withRenotes == withRenotes)&&(identical(other.withChannelNotes, withChannelNotes) || other.withChannelNotes == withChannelNotes)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.includeMyRenotes, includeMyRenotes) || other.includeMyRenotes == includeMyRenotes)&&(identical(other.withFiles, withFiles) || other.withFiles == withFiles)&&const DeepCollectionEquality().equals(other._fileType, _fileType)&&(identical(other.allowPartial, allowPartial) || other.allowPartial == allowPartial)&&(identical(other.excludeNsfw, excludeNsfw) || other.excludeNsfw == excludeNsfw));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersNotesRequest&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.includeReplies, includeReplies) || other.includeReplies == includeReplies)&&(identical(other.withReplies, withReplies) || other.withReplies == withReplies)&&(identical(other.withRenotes, withRenotes) || other.withRenotes == withRenotes)&&(identical(other.withChannelNotes, withChannelNotes) || other.withChannelNotes == withChannelNotes)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.includeMyRenotes, includeMyRenotes) || other.includeMyRenotes == includeMyRenotes)&&(identical(other.withFiles, withFiles) || other.withFiles == withFiles)&&const DeepCollectionEquality().equals(other.fileType, _fileType)&&(identical(other.allowPartial, allowPartial) || other.allowPartial == allowPartial)&&(identical(other.excludeNsfw, excludeNsfw) || other.excludeNsfw == excludeNsfw));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,userId,includeReplies,withReplies,withRenotes,withChannelNotes,limit,sinceId,untilId,sinceDate,untilDate,includeMyRenotes,withFiles,const DeepCollectionEquality().hash(_fileType),allowPartial,excludeNsfw);
+int get hashCode {
+    return Object.hash(runtimeType,userId,includeReplies,withReplies,withRenotes,withChannelNotes,limit,sinceId,untilId,sinceDate,untilDate,includeMyRenotes,withFiles,const DeepCollectionEquality().hash(_fileType),allowPartial,excludeNsfw);
+}
 
 @override
 String toString() {
-  return 'UsersNotesRequest(userId: $userId, includeReplies: $includeReplies, withReplies: $withReplies, withRenotes: $withRenotes, withChannelNotes: $withChannelNotes, limit: $limit, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, includeMyRenotes: $includeMyRenotes, withFiles: $withFiles, fileType: $fileType, allowPartial: $allowPartial, excludeNsfw: $excludeNsfw)';
+    return 'UsersNotesRequest(userId: $userId, includeReplies: $includeReplies, withReplies: $withReplies, withRenotes: $withRenotes, withChannelNotes: $withChannelNotes, limit: $limit, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, includeMyRenotes: $includeMyRenotes, withFiles: $withFiles, fileType: $fileType, allowPartial: $allowPartial, excludeNsfw: $excludeNsfw)';
 }
 
 

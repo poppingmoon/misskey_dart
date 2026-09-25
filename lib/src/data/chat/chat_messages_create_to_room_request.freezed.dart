@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'chat_messages_create_to_room_request.dart';
@@ -9,6 +9,7 @@ part of 'chat_messages_create_to_room_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $ChatMessagesCreateToRoomRequestCopyWith<ChatMessagesCreateToRoomRequest> get co
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ChatMessagesCreateToRoomRequest&&(identical(other.toRoomId, toRoomId) || other.toRoomId == toRoomId)&&(identical(other.text, text) || other.text == text)&&(identical(other.fileId, fileId) || other.fileId == fileId));
+  final _this = this as ChatMessagesCreateToRoomRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ChatMessagesCreateToRoomRequest&&(identical(other.toRoomId, _this.toRoomId) || other.toRoomId == _this.toRoomId)&&(identical(other.text, _this.text) || other.text == _this.text)&&(identical(other.fileId, _this.fileId) || other.fileId == _this.fileId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,toRoomId,text,fileId);
+int get hashCode {
+  final _this = this as ChatMessagesCreateToRoomRequest;
+  return Object.hash(runtimeType,_this.toRoomId,_this.text,_this.fileId);
+}
 
 @override
 String toString() {
-  return 'ChatMessagesCreateToRoomRequest(toRoomId: $toRoomId, text: $text, fileId: $fileId)';
+  final _this = this as ChatMessagesCreateToRoomRequest;
+  return 'ChatMessagesCreateToRoomRequest(toRoomId: ${_this.toRoomId}, text: ${_this.text}, fileId: ${_this.fileId})';
 }
 
 
@@ -66,7 +72,7 @@ class _$ChatMessagesCreateToRoomRequestCopyWithImpl<$Res>
 /// Create a copy of ChatMessagesCreateToRoomRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? toRoomId = null,Object? text = freezed,Object? fileId = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(ChatMessagesCreateToRoomRequest(
 toRoomId: null == toRoomId ? _self.toRoomId : toRoomId // ignore: cast_nullable_to_non_nullable
 as String,text: freezed == text ? _self.text : text // ignore: cast_nullable_to_non_nullable
 as String?,fileId: freezed == fileId ? _self.fileId : fileId // ignore: cast_nullable_to_non_nullable
@@ -231,16 +237,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatMessagesCreateToRoomRequest&&(identical(other.toRoomId, toRoomId) || other.toRoomId == toRoomId)&&(identical(other.text, text) || other.text == text)&&(identical(other.fileId, fileId) || other.fileId == fileId));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatMessagesCreateToRoomRequest&&(identical(other.toRoomId, toRoomId) || other.toRoomId == toRoomId)&&(identical(other.text, text) || other.text == text)&&(identical(other.fileId, fileId) || other.fileId == fileId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,toRoomId,text,fileId);
+int get hashCode {
+    return Object.hash(runtimeType,toRoomId,text,fileId);
+}
 
 @override
 String toString() {
-  return 'ChatMessagesCreateToRoomRequest(toRoomId: $toRoomId, text: $text, fileId: $fileId)';
+    return 'ChatMessagesCreateToRoomRequest(toRoomId: $toRoomId, text: $text, fileId: $fileId)';
 }
 
 

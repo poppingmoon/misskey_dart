@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'muting.dart';
@@ -9,6 +9,7 @@ part of 'muting.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $MutingCopyWith<Muting> get copyWith => _$MutingCopyWithImpl<Muting>(this as Mut
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Muting&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.expiresAt, expiresAt) || other.expiresAt == expiresAt)&&(identical(other.muteeId, muteeId) || other.muteeId == muteeId)&&(identical(other.mutee, mutee) || other.mutee == mutee));
+  final _this = this as Muting;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Muting&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.createdAt, _this.createdAt) || other.createdAt == _this.createdAt)&&(identical(other.expiresAt, _this.expiresAt) || other.expiresAt == _this.expiresAt)&&(identical(other.muteeId, _this.muteeId) || other.muteeId == _this.muteeId)&&(identical(other.mutee, _this.mutee) || other.mutee == _this.mutee));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,createdAt,expiresAt,muteeId,mutee);
+int get hashCode {
+  final _this = this as Muting;
+  return Object.hash(runtimeType,_this.id,_this.createdAt,_this.expiresAt,_this.muteeId,_this.mutee);
+}
 
 @override
 String toString() {
-  return 'Muting(id: $id, createdAt: $createdAt, expiresAt: $expiresAt, muteeId: $muteeId, mutee: $mutee)';
+  final _this = this as Muting;
+  return 'Muting(id: ${_this.id}, createdAt: ${_this.createdAt}, expiresAt: ${_this.expiresAt}, muteeId: ${_this.muteeId}, mutee: ${_this.mutee})';
 }
 
 
@@ -66,7 +72,7 @@ class _$MutingCopyWithImpl<$Res>
 /// Create a copy of Muting
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? createdAt = null,Object? expiresAt = freezed,Object? muteeId = null,Object? mutee = null,}) {
-  return _then(_self.copyWith(
+  return _then(Muting(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime,expiresAt: freezed == expiresAt ? _self.expiresAt : expiresAt // ignore: cast_nullable_to_non_nullable
@@ -244,16 +250,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Muting&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.expiresAt, expiresAt) || other.expiresAt == expiresAt)&&(identical(other.muteeId, muteeId) || other.muteeId == muteeId)&&(identical(other.mutee, mutee) || other.mutee == mutee));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Muting&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.expiresAt, expiresAt) || other.expiresAt == expiresAt)&&(identical(other.muteeId, muteeId) || other.muteeId == muteeId)&&(identical(other.mutee, mutee) || other.mutee == mutee));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,createdAt,expiresAt,muteeId,mutee);
+int get hashCode {
+    return Object.hash(runtimeType,id,createdAt,expiresAt,muteeId,mutee);
+}
 
 @override
 String toString() {
-  return 'Muting(id: $id, createdAt: $createdAt, expiresAt: $expiresAt, muteeId: $muteeId, mutee: $mutee)';
+    return 'Muting(id: $id, createdAt: $createdAt, expiresAt: $expiresAt, muteeId: $muteeId, mutee: $mutee)';
 }
 
 

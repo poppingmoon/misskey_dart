@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'channels_update_request.dart';
@@ -9,6 +9,7 @@ part of 'channels_update_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $ChannelsUpdateRequestCopyWith<ChannelsUpdateRequest> get copyWith => _$Channels
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ChannelsUpdateRequest&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.name, name) || other.name == name)&&(identical(other.description, description) || other.description == description)&&(identical(other.bannerId, bannerId) || other.bannerId == bannerId)&&(identical(other.isArchived, isArchived) || other.isArchived == isArchived)&&const DeepCollectionEquality().equals(other.pinnedNoteIds, pinnedNoteIds)&&(identical(other.color, color) || other.color == color));
+  final _this = this as ChannelsUpdateRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ChannelsUpdateRequest&&(identical(other.channelId, _this.channelId) || other.channelId == _this.channelId)&&(identical(other.name, _this.name) || other.name == _this.name)&&(identical(other.description, _this.description) || other.description == _this.description)&&(identical(other.bannerId, _this.bannerId) || other.bannerId == _this.bannerId)&&(identical(other.isArchived, _this.isArchived) || other.isArchived == _this.isArchived)&&const DeepCollectionEquality().equals(other.pinnedNoteIds, _this.pinnedNoteIds)&&(identical(other.color, _this.color) || other.color == _this.color));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,channelId,name,description,bannerId,isArchived,const DeepCollectionEquality().hash(pinnedNoteIds),color);
+int get hashCode {
+  final _this = this as ChannelsUpdateRequest;
+  return Object.hash(runtimeType,_this.channelId,_this.name,_this.description,_this.bannerId,_this.isArchived,const DeepCollectionEquality().hash(_this.pinnedNoteIds),_this.color);
+}
 
 @override
 String toString() {
-  return 'ChannelsUpdateRequest(channelId: $channelId, name: $name, description: $description, bannerId: $bannerId, isArchived: $isArchived, pinnedNoteIds: $pinnedNoteIds, color: $color)';
+  final _this = this as ChannelsUpdateRequest;
+  return 'ChannelsUpdateRequest(channelId: ${_this.channelId}, name: ${_this.name}, description: ${_this.description}, bannerId: ${_this.bannerId}, isArchived: ${_this.isArchived}, pinnedNoteIds: ${_this.pinnedNoteIds}, color: ${_this.color})';
 }
 
 
@@ -66,7 +72,7 @@ class _$ChannelsUpdateRequestCopyWithImpl<$Res>
 /// Create a copy of ChannelsUpdateRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? channelId = null,Object? name = freezed,Object? description = freezed,Object? bannerId = freezed,Object? isArchived = freezed,Object? pinnedNoteIds = freezed,Object? color = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(ChannelsUpdateRequest(
 channelId: null == channelId ? _self.channelId : channelId // ignore: cast_nullable_to_non_nullable
 as String,name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
 as String?,description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
@@ -215,7 +221,7 @@ return $default(_that.channelId,_that.name,_that.description,_that.bannerId,_tha
 @JsonSerializable()
 
 class _ChannelsUpdateRequest implements ChannelsUpdateRequest {
-  const _ChannelsUpdateRequest({required this.channelId, this.name, this.description, this.bannerId, this.isArchived, final  List<String>? pinnedNoteIds, this.color}): _pinnedNoteIds = pinnedNoteIds;
+  const _ChannelsUpdateRequest({required this.channelId, this.name, this.description, this.bannerId, this.isArchived,  List<String>? pinnedNoteIds, this.color}): _pinnedNoteIds = pinnedNoteIds;
   factory _ChannelsUpdateRequest.fromJson(Map<String, dynamic> json) => _$ChannelsUpdateRequestFromJson(json);
 
 @override final  String channelId;
@@ -247,16 +253,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChannelsUpdateRequest&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.name, name) || other.name == name)&&(identical(other.description, description) || other.description == description)&&(identical(other.bannerId, bannerId) || other.bannerId == bannerId)&&(identical(other.isArchived, isArchived) || other.isArchived == isArchived)&&const DeepCollectionEquality().equals(other._pinnedNoteIds, _pinnedNoteIds)&&(identical(other.color, color) || other.color == color));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChannelsUpdateRequest&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.name, name) || other.name == name)&&(identical(other.description, description) || other.description == description)&&(identical(other.bannerId, bannerId) || other.bannerId == bannerId)&&(identical(other.isArchived, isArchived) || other.isArchived == isArchived)&&const DeepCollectionEquality().equals(other.pinnedNoteIds, _pinnedNoteIds)&&(identical(other.color, color) || other.color == color));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,channelId,name,description,bannerId,isArchived,const DeepCollectionEquality().hash(_pinnedNoteIds),color);
+int get hashCode {
+    return Object.hash(runtimeType,channelId,name,description,bannerId,isArchived,const DeepCollectionEquality().hash(_pinnedNoteIds),color);
+}
 
 @override
 String toString() {
-  return 'ChannelsUpdateRequest(channelId: $channelId, name: $name, description: $description, bannerId: $bannerId, isArchived: $isArchived, pinnedNoteIds: $pinnedNoteIds, color: $color)';
+    return 'ChannelsUpdateRequest(channelId: $channelId, name: $name, description: $description, bannerId: $bannerId, isArchived: $isArchived, pinnedNoteIds: $pinnedNoteIds, color: $color)';
 }
 
 

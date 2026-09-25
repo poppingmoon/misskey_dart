@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'sw_update_registration_request.dart';
@@ -9,6 +9,7 @@ part of 'sw_update_registration_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $SwUpdateRegistrationRequestCopyWith<SwUpdateRegistrationRequest> get copyWith =
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is SwUpdateRegistrationRequest&&(identical(other.endpoint, endpoint) || other.endpoint == endpoint)&&(identical(other.sendReadMessage, sendReadMessage) || other.sendReadMessage == sendReadMessage));
+  final _this = this as SwUpdateRegistrationRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is SwUpdateRegistrationRequest&&(identical(other.endpoint, _this.endpoint) || other.endpoint == _this.endpoint)&&(identical(other.sendReadMessage, _this.sendReadMessage) || other.sendReadMessage == _this.sendReadMessage));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,endpoint,sendReadMessage);
+int get hashCode {
+  final _this = this as SwUpdateRegistrationRequest;
+  return Object.hash(runtimeType,_this.endpoint,_this.sendReadMessage);
+}
 
 @override
 String toString() {
-  return 'SwUpdateRegistrationRequest(endpoint: $endpoint, sendReadMessage: $sendReadMessage)';
+  final _this = this as SwUpdateRegistrationRequest;
+  return 'SwUpdateRegistrationRequest(endpoint: ${_this.endpoint}, sendReadMessage: ${_this.sendReadMessage})';
 }
 
 
@@ -66,7 +72,7 @@ class _$SwUpdateRegistrationRequestCopyWithImpl<$Res>
 /// Create a copy of SwUpdateRegistrationRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? endpoint = null,Object? sendReadMessage = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(SwUpdateRegistrationRequest(
 endpoint: null == endpoint ? _self.endpoint : endpoint // ignore: cast_nullable_to_non_nullable
 as String,sendReadMessage: freezed == sendReadMessage ? _self.sendReadMessage : sendReadMessage // ignore: cast_nullable_to_non_nullable
 as bool?,
@@ -229,16 +235,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _SwUpdateRegistrationRequest&&(identical(other.endpoint, endpoint) || other.endpoint == endpoint)&&(identical(other.sendReadMessage, sendReadMessage) || other.sendReadMessage == sendReadMessage));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _SwUpdateRegistrationRequest&&(identical(other.endpoint, endpoint) || other.endpoint == endpoint)&&(identical(other.sendReadMessage, sendReadMessage) || other.sendReadMessage == sendReadMessage));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,endpoint,sendReadMessage);
+int get hashCode {
+    return Object.hash(runtimeType,endpoint,sendReadMessage);
+}
 
 @override
 String toString() {
-  return 'SwUpdateRegistrationRequest(endpoint: $endpoint, sendReadMessage: $sendReadMessage)';
+    return 'SwUpdateRegistrationRequest(endpoint: $endpoint, sendReadMessage: $sendReadMessage)';
 }
 
 

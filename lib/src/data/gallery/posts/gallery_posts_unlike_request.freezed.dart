@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'gallery_posts_unlike_request.dart';
@@ -9,6 +9,7 @@ part of 'gallery_posts_unlike_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $GalleryPostsUnlikeRequestCopyWith<GalleryPostsUnlikeRequest> get copyWith => _$
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is GalleryPostsUnlikeRequest&&(identical(other.postId, postId) || other.postId == postId));
+  final _this = this as GalleryPostsUnlikeRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is GalleryPostsUnlikeRequest&&(identical(other.postId, _this.postId) || other.postId == _this.postId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,postId);
+int get hashCode {
+  final _this = this as GalleryPostsUnlikeRequest;
+  return Object.hash(runtimeType,_this.postId);
+}
 
 @override
 String toString() {
-  return 'GalleryPostsUnlikeRequest(postId: $postId)';
+  final _this = this as GalleryPostsUnlikeRequest;
+  return 'GalleryPostsUnlikeRequest(postId: ${_this.postId})';
 }
 
 
@@ -66,7 +72,7 @@ class _$GalleryPostsUnlikeRequestCopyWithImpl<$Res>
 /// Create a copy of GalleryPostsUnlikeRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? postId = null,}) {
-  return _then(_self.copyWith(
+  return _then(GalleryPostsUnlikeRequest(
 postId: null == postId ? _self.postId : postId // ignore: cast_nullable_to_non_nullable
 as String,
   ));
@@ -227,16 +233,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _GalleryPostsUnlikeRequest&&(identical(other.postId, postId) || other.postId == postId));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _GalleryPostsUnlikeRequest&&(identical(other.postId, postId) || other.postId == postId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,postId);
+int get hashCode {
+    return Object.hash(runtimeType,postId);
+}
 
 @override
 String toString() {
-  return 'GalleryPostsUnlikeRequest(postId: $postId)';
+    return 'GalleryPostsUnlikeRequest(postId: $postId)';
 }
 
 

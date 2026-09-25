@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'i_registry_get_detail_response.dart';
@@ -9,6 +9,7 @@ part of 'i_registry_get_detail_response.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $IRegistryGetDetailResponseCopyWith<IRegistryGetDetailResponse> get copyWith => 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is IRegistryGetDetailResponse&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&const DeepCollectionEquality().equals(other.value, value));
+  final _this = this as IRegistryGetDetailResponse;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is IRegistryGetDetailResponse&&(identical(other.updatedAt, _this.updatedAt) || other.updatedAt == _this.updatedAt)&&const DeepCollectionEquality().equals(other.value, _this.value));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,updatedAt,const DeepCollectionEquality().hash(value));
+int get hashCode {
+  final _this = this as IRegistryGetDetailResponse;
+  return Object.hash(runtimeType,_this.updatedAt,const DeepCollectionEquality().hash(_this.value));
+}
 
 @override
 String toString() {
-  return 'IRegistryGetDetailResponse(updatedAt: $updatedAt, value: $value)';
+  final _this = this as IRegistryGetDetailResponse;
+  return 'IRegistryGetDetailResponse(updatedAt: ${_this.updatedAt}, value: ${_this.value})';
 }
 
 
@@ -66,7 +72,7 @@ class _$IRegistryGetDetailResponseCopyWithImpl<$Res>
 /// Create a copy of IRegistryGetDetailResponse
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? updatedAt = null,Object? value = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(IRegistryGetDetailResponse(
 updatedAt: null == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
 as DateTime,value: freezed == value ? _self.value : value // ignore: cast_nullable_to_non_nullable
 as dynamic,
@@ -229,16 +235,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _IRegistryGetDetailResponse&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&const DeepCollectionEquality().equals(other.value, value));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _IRegistryGetDetailResponse&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&const DeepCollectionEquality().equals(other.value, value));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,updatedAt,const DeepCollectionEquality().hash(value));
+int get hashCode {
+    return Object.hash(runtimeType,updatedAt,const DeepCollectionEquality().hash(value));
+}
 
 @override
 String toString() {
-  return 'IRegistryGetDetailResponse(updatedAt: $updatedAt, value: $value)';
+    return 'IRegistryGetDetailResponse(updatedAt: $updatedAt, value: $value)';
 }
 
 

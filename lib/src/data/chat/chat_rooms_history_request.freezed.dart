@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'chat_rooms_history_request.dart';
@@ -9,6 +9,7 @@ part of 'chat_rooms_history_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $ChatRoomsHistoryRequestCopyWith<ChatRoomsHistoryRequest> get copyWith => _$Chat
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ChatRoomsHistoryRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId));
+  final _this = this as ChatRoomsHistoryRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ChatRoomsHistoryRequest&&(identical(other.limit, _this.limit) || other.limit == _this.limit)&&(identical(other.sinceId, _this.sinceId) || other.sinceId == _this.sinceId)&&(identical(other.untilId, _this.untilId) || other.untilId == _this.untilId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,limit,sinceId,untilId);
+int get hashCode {
+  final _this = this as ChatRoomsHistoryRequest;
+  return Object.hash(runtimeType,_this.limit,_this.sinceId,_this.untilId);
+}
 
 @override
 String toString() {
-  return 'ChatRoomsHistoryRequest(limit: $limit, sinceId: $sinceId, untilId: $untilId)';
+  final _this = this as ChatRoomsHistoryRequest;
+  return 'ChatRoomsHistoryRequest(limit: ${_this.limit}, sinceId: ${_this.sinceId}, untilId: ${_this.untilId})';
 }
 
 
@@ -66,7 +72,7 @@ class _$ChatRoomsHistoryRequestCopyWithImpl<$Res>
 /// Create a copy of ChatRoomsHistoryRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(ChatRoomsHistoryRequest(
 limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
 as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
@@ -231,16 +237,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatRoomsHistoryRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatRoomsHistoryRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,limit,sinceId,untilId);
+int get hashCode {
+    return Object.hash(runtimeType,limit,sinceId,untilId);
+}
 
 @override
 String toString() {
-  return 'ChatRoomsHistoryRequest(limit: $limit, sinceId: $sinceId, untilId: $untilId)';
+    return 'ChatRoomsHistoryRequest(limit: $limit, sinceId: $sinceId, untilId: $untilId)';
 }
 
 

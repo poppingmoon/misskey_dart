@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'page.dart';
@@ -9,6 +9,7 @@ part of 'page.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $PageCopyWith<Page> get copyWith => _$PageCopyWithImpl<Page>(this as Page, _$ide
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Page&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.user, user) || other.user == user)&&const DeepCollectionEquality().equals(other.content, content)&&const DeepCollectionEquality().equals(other.variables, variables)&&(identical(other.title, title) || other.title == title)&&(identical(other.name, name) || other.name == name)&&(identical(other.summary, summary) || other.summary == summary)&&(identical(other.hideTitleWhenPinned, hideTitleWhenPinned) || other.hideTitleWhenPinned == hideTitleWhenPinned)&&(identical(other.alignCenter, alignCenter) || other.alignCenter == alignCenter)&&(identical(other.font, font) || other.font == font)&&(identical(other.script, script) || other.script == script)&&(identical(other.eyeCatchingImageId, eyeCatchingImageId) || other.eyeCatchingImageId == eyeCatchingImageId)&&(identical(other.eyeCatchingImage, eyeCatchingImage) || other.eyeCatchingImage == eyeCatchingImage)&&const DeepCollectionEquality().equals(other.attachedFiles, attachedFiles)&&(identical(other.likedCount, likedCount) || other.likedCount == likedCount)&&(identical(other.isLiked, isLiked) || other.isLiked == isLiked)&&(identical(other.visibility, visibility) || other.visibility == visibility));
+  final _this = this as Page;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Page&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.createdAt, _this.createdAt) || other.createdAt == _this.createdAt)&&(identical(other.updatedAt, _this.updatedAt) || other.updatedAt == _this.updatedAt)&&(identical(other.userId, _this.userId) || other.userId == _this.userId)&&(identical(other.user, _this.user) || other.user == _this.user)&&const DeepCollectionEquality().equals(other.content, _this.content)&&const DeepCollectionEquality().equals(other.variables, _this.variables)&&(identical(other.title, _this.title) || other.title == _this.title)&&(identical(other.name, _this.name) || other.name == _this.name)&&(identical(other.summary, _this.summary) || other.summary == _this.summary)&&(identical(other.hideTitleWhenPinned, _this.hideTitleWhenPinned) || other.hideTitleWhenPinned == _this.hideTitleWhenPinned)&&(identical(other.alignCenter, _this.alignCenter) || other.alignCenter == _this.alignCenter)&&(identical(other.font, _this.font) || other.font == _this.font)&&(identical(other.script, _this.script) || other.script == _this.script)&&(identical(other.eyeCatchingImageId, _this.eyeCatchingImageId) || other.eyeCatchingImageId == _this.eyeCatchingImageId)&&(identical(other.eyeCatchingImage, _this.eyeCatchingImage) || other.eyeCatchingImage == _this.eyeCatchingImage)&&const DeepCollectionEquality().equals(other.attachedFiles, _this.attachedFiles)&&(identical(other.likedCount, _this.likedCount) || other.likedCount == _this.likedCount)&&(identical(other.isLiked, _this.isLiked) || other.isLiked == _this.isLiked)&&(identical(other.visibility, _this.visibility) || other.visibility == _this.visibility));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hashAll([runtimeType,id,createdAt,updatedAt,userId,user,const DeepCollectionEquality().hash(content),const DeepCollectionEquality().hash(variables),title,name,summary,hideTitleWhenPinned,alignCenter,font,script,eyeCatchingImageId,eyeCatchingImage,const DeepCollectionEquality().hash(attachedFiles),likedCount,isLiked,visibility]);
+int get hashCode {
+  final _this = this as Page;
+  return Object.hashAll([runtimeType,_this.id,_this.createdAt,_this.updatedAt,_this.userId,_this.user,const DeepCollectionEquality().hash(_this.content),const DeepCollectionEquality().hash(_this.variables),_this.title,_this.name,_this.summary,_this.hideTitleWhenPinned,_this.alignCenter,_this.font,_this.script,_this.eyeCatchingImageId,_this.eyeCatchingImage,const DeepCollectionEquality().hash(_this.attachedFiles),_this.likedCount,_this.isLiked,_this.visibility]);
+}
 
 @override
 String toString() {
-  return 'Page(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, userId: $userId, user: $user, content: $content, variables: $variables, title: $title, name: $name, summary: $summary, hideTitleWhenPinned: $hideTitleWhenPinned, alignCenter: $alignCenter, font: $font, script: $script, eyeCatchingImageId: $eyeCatchingImageId, eyeCatchingImage: $eyeCatchingImage, attachedFiles: $attachedFiles, likedCount: $likedCount, isLiked: $isLiked, visibility: $visibility)';
+  final _this = this as Page;
+  return 'Page(id: ${_this.id}, createdAt: ${_this.createdAt}, updatedAt: ${_this.updatedAt}, userId: ${_this.userId}, user: ${_this.user}, content: ${_this.content}, variables: ${_this.variables}, title: ${_this.title}, name: ${_this.name}, summary: ${_this.summary}, hideTitleWhenPinned: ${_this.hideTitleWhenPinned}, alignCenter: ${_this.alignCenter}, font: ${_this.font}, script: ${_this.script}, eyeCatchingImageId: ${_this.eyeCatchingImageId}, eyeCatchingImage: ${_this.eyeCatchingImage}, attachedFiles: ${_this.attachedFiles}, likedCount: ${_this.likedCount}, isLiked: ${_this.isLiked}, visibility: ${_this.visibility})';
 }
 
 
@@ -66,7 +72,7 @@ class _$PageCopyWithImpl<$Res>
 /// Create a copy of Page
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? createdAt = null,Object? updatedAt = null,Object? userId = null,Object? user = null,Object? content = null,Object? variables = freezed,Object? title = null,Object? name = null,Object? summary = freezed,Object? hideTitleWhenPinned = freezed,Object? alignCenter = freezed,Object? font = freezed,Object? script = freezed,Object? eyeCatchingImageId = freezed,Object? eyeCatchingImage = freezed,Object? attachedFiles = freezed,Object? likedCount = freezed,Object? isLiked = freezed,Object? visibility = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(Page(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime,updatedAt: null == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
@@ -249,7 +255,7 @@ return $default(_that.id,_that.createdAt,_that.updatedAt,_that.userId,_that.user
 @JsonSerializable()
 
 class _Page implements Page {
-  const _Page({required this.id, @DateTimeConverter() required this.createdAt, @DateTimeConverter() required this.updatedAt, required this.userId, required this.user, @PageContentConverter() required final  List<AbstractPageContent> content, final  List<Map<String, dynamic>>? variables, required this.title, required this.name, this.summary, this.hideTitleWhenPinned, this.alignCenter, this.font, this.script, this.eyeCatchingImageId, this.eyeCatchingImage, final  List<DriveFile>? attachedFiles, this.likedCount, this.isLiked, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.visibility}): _content = content,_variables = variables,_attachedFiles = attachedFiles;
+  const _Page({required this.id, @DateTimeConverter() required this.createdAt, @DateTimeConverter() required this.updatedAt, required this.userId, required this.user, @PageContentConverter() required  List<AbstractPageContent> content,  List<Map<String, dynamic>>? variables, required this.title, required this.name, this.summary, this.hideTitleWhenPinned, this.alignCenter, this.font, this.script, this.eyeCatchingImageId, this.eyeCatchingImage,  List<DriveFile>? attachedFiles, this.likedCount, this.isLiked, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.visibility}): _content = content,_variables = variables,_attachedFiles = attachedFiles;
   factory _Page.fromJson(Map<String, dynamic> json) => _$PageFromJson(json);
 
 @override final  String id;
@@ -308,16 +314,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Page&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.user, user) || other.user == user)&&const DeepCollectionEquality().equals(other._content, _content)&&const DeepCollectionEquality().equals(other._variables, _variables)&&(identical(other.title, title) || other.title == title)&&(identical(other.name, name) || other.name == name)&&(identical(other.summary, summary) || other.summary == summary)&&(identical(other.hideTitleWhenPinned, hideTitleWhenPinned) || other.hideTitleWhenPinned == hideTitleWhenPinned)&&(identical(other.alignCenter, alignCenter) || other.alignCenter == alignCenter)&&(identical(other.font, font) || other.font == font)&&(identical(other.script, script) || other.script == script)&&(identical(other.eyeCatchingImageId, eyeCatchingImageId) || other.eyeCatchingImageId == eyeCatchingImageId)&&(identical(other.eyeCatchingImage, eyeCatchingImage) || other.eyeCatchingImage == eyeCatchingImage)&&const DeepCollectionEquality().equals(other._attachedFiles, _attachedFiles)&&(identical(other.likedCount, likedCount) || other.likedCount == likedCount)&&(identical(other.isLiked, isLiked) || other.isLiked == isLiked)&&(identical(other.visibility, visibility) || other.visibility == visibility));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Page&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.user, user) || other.user == user)&&const DeepCollectionEquality().equals(other.content, _content)&&const DeepCollectionEquality().equals(other.variables, _variables)&&(identical(other.title, title) || other.title == title)&&(identical(other.name, name) || other.name == name)&&(identical(other.summary, summary) || other.summary == summary)&&(identical(other.hideTitleWhenPinned, hideTitleWhenPinned) || other.hideTitleWhenPinned == hideTitleWhenPinned)&&(identical(other.alignCenter, alignCenter) || other.alignCenter == alignCenter)&&(identical(other.font, font) || other.font == font)&&(identical(other.script, script) || other.script == script)&&(identical(other.eyeCatchingImageId, eyeCatchingImageId) || other.eyeCatchingImageId == eyeCatchingImageId)&&(identical(other.eyeCatchingImage, eyeCatchingImage) || other.eyeCatchingImage == eyeCatchingImage)&&const DeepCollectionEquality().equals(other.attachedFiles, _attachedFiles)&&(identical(other.likedCount, likedCount) || other.likedCount == likedCount)&&(identical(other.isLiked, isLiked) || other.isLiked == isLiked)&&(identical(other.visibility, visibility) || other.visibility == visibility));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hashAll([runtimeType,id,createdAt,updatedAt,userId,user,const DeepCollectionEquality().hash(_content),const DeepCollectionEquality().hash(_variables),title,name,summary,hideTitleWhenPinned,alignCenter,font,script,eyeCatchingImageId,eyeCatchingImage,const DeepCollectionEquality().hash(_attachedFiles),likedCount,isLiked,visibility]);
+int get hashCode {
+    return Object.hashAll([runtimeType,id,createdAt,updatedAt,userId,user,const DeepCollectionEquality().hash(_content),const DeepCollectionEquality().hash(_variables),title,name,summary,hideTitleWhenPinned,alignCenter,font,script,eyeCatchingImageId,eyeCatchingImage,const DeepCollectionEquality().hash(_attachedFiles),likedCount,isLiked,visibility]);
+}
 
 @override
 String toString() {
-  return 'Page(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, userId: $userId, user: $user, content: $content, variables: $variables, title: $title, name: $name, summary: $summary, hideTitleWhenPinned: $hideTitleWhenPinned, alignCenter: $alignCenter, font: $font, script: $script, eyeCatchingImageId: $eyeCatchingImageId, eyeCatchingImage: $eyeCatchingImage, attachedFiles: $attachedFiles, likedCount: $likedCount, isLiked: $isLiked, visibility: $visibility)';
+    return 'Page(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, userId: $userId, user: $user, content: $content, variables: $variables, title: $title, name: $name, summary: $summary, hideTitleWhenPinned: $hideTitleWhenPinned, alignCenter: $alignCenter, font: $font, script: $script, eyeCatchingImageId: $eyeCatchingImageId, eyeCatchingImage: $eyeCatchingImage, attachedFiles: $attachedFiles, likedCount: $likedCount, isLiked: $isLiked, visibility: $visibility)';
 }
 
 
@@ -412,16 +420,21 @@ $PageTextCopyWith<PageText> get copyWith => _$PageTextCopyWithImpl<PageText>(thi
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is PageText&&(identical(other.id, id) || other.id == id)&&(identical(other.type, type) || other.type == type)&&(identical(other.text, text) || other.text == text));
+  final _this = this as PageText;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PageText&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.type, _this.type) || other.type == _this.type)&&(identical(other.text, _this.text) || other.text == _this.text));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,type,text);
+int get hashCode {
+  final _this = this as PageText;
+  return Object.hash(runtimeType,_this.id,_this.type,_this.text);
+}
 
 @override
 String toString() {
-  return 'PageText(id: $id, type: $type, text: $text)';
+  final _this = this as PageText;
+  return 'PageText(id: ${_this.id}, type: ${_this.type}, text: ${_this.text})';
 }
 
 
@@ -450,7 +463,7 @@ class _$PageTextCopyWithImpl<$Res>
 /// Create a copy of PageText
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = freezed,Object? type = freezed,Object? text = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(PageText(
 id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String?,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
 as PageContentType?,text: freezed == text ? _self.text : text // ignore: cast_nullable_to_non_nullable
@@ -615,16 +628,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PageText&&(identical(other.id, id) || other.id == id)&&(identical(other.type, type) || other.type == type)&&(identical(other.text, text) || other.text == text));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _PageText&&(identical(other.id, id) || other.id == id)&&(identical(other.type, type) || other.type == type)&&(identical(other.text, text) || other.text == text));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,type,text);
+int get hashCode {
+    return Object.hash(runtimeType,id,type,text);
+}
 
 @override
 String toString() {
-  return 'PageText(id: $id, type: $type, text: $text)';
+    return 'PageText(id: $id, type: $type, text: $text)';
 }
 
 
@@ -681,16 +696,21 @@ $PageSectionCopyWith<PageSection> get copyWith => _$PageSectionCopyWithImpl<Page
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is PageSection&&(identical(other.id, id) || other.id == id)&&(identical(other.type, type) || other.type == type)&&(identical(other.title, title) || other.title == title)&&const DeepCollectionEquality().equals(other.children, children));
+  final _this = this as PageSection;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PageSection&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.type, _this.type) || other.type == _this.type)&&(identical(other.title, _this.title) || other.title == _this.title)&&const DeepCollectionEquality().equals(other.children, _this.children));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,type,title,const DeepCollectionEquality().hash(children));
+int get hashCode {
+  final _this = this as PageSection;
+  return Object.hash(runtimeType,_this.id,_this.type,_this.title,const DeepCollectionEquality().hash(_this.children));
+}
 
 @override
 String toString() {
-  return 'PageSection(id: $id, type: $type, title: $title, children: $children)';
+  final _this = this as PageSection;
+  return 'PageSection(id: ${_this.id}, type: ${_this.type}, title: ${_this.title}, children: ${_this.children})';
 }
 
 
@@ -719,7 +739,7 @@ class _$PageSectionCopyWithImpl<$Res>
 /// Create a copy of PageSection
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = freezed,Object? type = freezed,Object? title = freezed,Object? children = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(PageSection(
 id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String?,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
 as PageContentType?,title: freezed == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
@@ -865,7 +885,7 @@ return $default(_that.id,_that.type,_that.title,_that.children);case _:
 @JsonSerializable()
 
 class _PageSection implements PageSection {
-  const _PageSection({this.id, this.type = PageContentType.section, this.title, @PageContentConverter() final  List<AbstractPageContent>? children}): _children = children;
+  const _PageSection({this.id, this.type = PageContentType.section, this.title, @PageContentConverter()  List<AbstractPageContent>? children}): _children = children;
   factory _PageSection.fromJson(Map<String, dynamic> json) => _$PageSectionFromJson(json);
 
 @override final  String? id;
@@ -894,16 +914,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PageSection&&(identical(other.id, id) || other.id == id)&&(identical(other.type, type) || other.type == type)&&(identical(other.title, title) || other.title == title)&&const DeepCollectionEquality().equals(other._children, _children));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _PageSection&&(identical(other.id, id) || other.id == id)&&(identical(other.type, type) || other.type == type)&&(identical(other.title, title) || other.title == title)&&const DeepCollectionEquality().equals(other.children, _children));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,type,title,const DeepCollectionEquality().hash(_children));
+int get hashCode {
+    return Object.hash(runtimeType,id,type,title,const DeepCollectionEquality().hash(_children));
+}
 
 @override
 String toString() {
-  return 'PageSection(id: $id, type: $type, title: $title, children: $children)';
+    return 'PageSection(id: $id, type: $type, title: $title, children: $children)';
 }
 
 
@@ -961,16 +983,21 @@ $PageImageCopyWith<PageImage> get copyWith => _$PageImageCopyWithImpl<PageImage>
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is PageImage&&(identical(other.id, id) || other.id == id)&&(identical(other.type, type) || other.type == type)&&(identical(other.fileId, fileId) || other.fileId == fileId));
+  final _this = this as PageImage;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PageImage&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.type, _this.type) || other.type == _this.type)&&(identical(other.fileId, _this.fileId) || other.fileId == _this.fileId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,type,fileId);
+int get hashCode {
+  final _this = this as PageImage;
+  return Object.hash(runtimeType,_this.id,_this.type,_this.fileId);
+}
 
 @override
 String toString() {
-  return 'PageImage(id: $id, type: $type, fileId: $fileId)';
+  final _this = this as PageImage;
+  return 'PageImage(id: ${_this.id}, type: ${_this.type}, fileId: ${_this.fileId})';
 }
 
 
@@ -999,7 +1026,7 @@ class _$PageImageCopyWithImpl<$Res>
 /// Create a copy of PageImage
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = freezed,Object? type = freezed,Object? fileId = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(PageImage(
 id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String?,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
 as PageContentType?,fileId: freezed == fileId ? _self.fileId : fileId // ignore: cast_nullable_to_non_nullable
@@ -1164,16 +1191,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PageImage&&(identical(other.id, id) || other.id == id)&&(identical(other.type, type) || other.type == type)&&(identical(other.fileId, fileId) || other.fileId == fileId));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _PageImage&&(identical(other.id, id) || other.id == id)&&(identical(other.type, type) || other.type == type)&&(identical(other.fileId, fileId) || other.fileId == fileId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,type,fileId);
+int get hashCode {
+    return Object.hash(runtimeType,id,type,fileId);
+}
 
 @override
 String toString() {
-  return 'PageImage(id: $id, type: $type, fileId: $fileId)';
+    return 'PageImage(id: $id, type: $type, fileId: $fileId)';
 }
 
 
@@ -1230,16 +1259,21 @@ $PageNoteCopyWith<PageNote> get copyWith => _$PageNoteCopyWithImpl<PageNote>(thi
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is PageNote&&(identical(other.id, id) || other.id == id)&&(identical(other.type, type) || other.type == type)&&(identical(other.note, note) || other.note == note)&&(identical(other.detailed, detailed) || other.detailed == detailed));
+  final _this = this as PageNote;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PageNote&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.type, _this.type) || other.type == _this.type)&&(identical(other.note, _this.note) || other.note == _this.note)&&(identical(other.detailed, _this.detailed) || other.detailed == _this.detailed));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,type,note,detailed);
+int get hashCode {
+  final _this = this as PageNote;
+  return Object.hash(runtimeType,_this.id,_this.type,_this.note,_this.detailed);
+}
 
 @override
 String toString() {
-  return 'PageNote(id: $id, type: $type, note: $note, detailed: $detailed)';
+  final _this = this as PageNote;
+  return 'PageNote(id: ${_this.id}, type: ${_this.type}, note: ${_this.note}, detailed: ${_this.detailed})';
 }
 
 
@@ -1268,7 +1302,7 @@ class _$PageNoteCopyWithImpl<$Res>
 /// Create a copy of PageNote
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = freezed,Object? type = freezed,Object? note = freezed,Object? detailed = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(PageNote(
 id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String?,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
 as PageContentType?,note: freezed == note ? _self.note : note // ignore: cast_nullable_to_non_nullable
@@ -1435,16 +1469,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PageNote&&(identical(other.id, id) || other.id == id)&&(identical(other.type, type) || other.type == type)&&(identical(other.note, note) || other.note == note)&&(identical(other.detailed, detailed) || other.detailed == detailed));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _PageNote&&(identical(other.id, id) || other.id == id)&&(identical(other.type, type) || other.type == type)&&(identical(other.note, note) || other.note == note)&&(identical(other.detailed, detailed) || other.detailed == detailed));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,type,note,detailed);
+int get hashCode {
+    return Object.hash(runtimeType,id,type,note,detailed);
+}
 
 @override
 String toString() {
-  return 'PageNote(id: $id, type: $type, note: $note, detailed: $detailed)';
+    return 'PageNote(id: $id, type: $type, note: $note, detailed: $detailed)';
 }
 
 
@@ -1489,8 +1525,7 @@ as bool?,
 /// @nodoc
 mixin _$PageUnknown {
 
- String? get id;// ignore: invalid_annotation_target
-@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) PageContentType? get type;@JsonKey(includeFromJson: false) Map<String, dynamic> get json;
+ String? get id;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) PageContentType? get type;@JsonKey(includeFromJson: false) Map<String, dynamic> get json;
 /// Create a copy of PageUnknown
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -1501,16 +1536,21 @@ $PageUnknownCopyWith<PageUnknown> get copyWith => _$PageUnknownCopyWithImpl<Page
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is PageUnknown&&(identical(other.id, id) || other.id == id)&&(identical(other.type, type) || other.type == type)&&const DeepCollectionEquality().equals(other.json, json));
+  final _this = this as PageUnknown;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PageUnknown&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.type, _this.type) || other.type == _this.type)&&const DeepCollectionEquality().equals(other.json, _this.json));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,type,const DeepCollectionEquality().hash(json));
+int get hashCode {
+  final _this = this as PageUnknown;
+  return Object.hash(runtimeType,_this.id,_this.type,const DeepCollectionEquality().hash(_this.json));
+}
 
 @override
 String toString() {
-  return 'PageUnknown(id: $id, type: $type, json: $json)';
+  final _this = this as PageUnknown;
+  return 'PageUnknown(id: ${_this.id}, type: ${_this.type}, json: ${_this.json})';
 }
 
 
@@ -1539,7 +1579,7 @@ class _$PageUnknownCopyWithImpl<$Res>
 /// Create a copy of PageUnknown
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = freezed,Object? type = freezed,Object? json = null,}) {
-  return _then(_self.copyWith(
+  return _then(PageUnknown(
 id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String?,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
 as PageContentType?,json: null == json ? _self.json : json // ignore: cast_nullable_to_non_nullable
@@ -1684,11 +1724,10 @@ return $default(_that.id,_that.type,_that.json);case _:
 @JsonSerializable(createToJson: false)
 
 class _PageUnknown implements PageUnknown {
-  const _PageUnknown({this.id, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type, @JsonKey(includeFromJson: false) final  Map<String, dynamic> json = const {}}): _json = json;
+  const _PageUnknown({this.id, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type, @JsonKey(includeFromJson: false)  Map<String, dynamic> json = const {}}): _json = json;
   factory _PageUnknown.fromJson(Map<String, dynamic> json) => _$PageUnknownFromJson(json);
 
 @override final  String? id;
-// ignore: invalid_annotation_target
 @override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  PageContentType? type;
  final  Map<String, dynamic> _json;
 @override@JsonKey(includeFromJson: false) Map<String, dynamic> get json {
@@ -1708,16 +1747,18 @@ _$PageUnknownCopyWith<_PageUnknown> get copyWith => __$PageUnknownCopyWithImpl<_
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PageUnknown&&(identical(other.id, id) || other.id == id)&&(identical(other.type, type) || other.type == type)&&const DeepCollectionEquality().equals(other._json, _json));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _PageUnknown&&(identical(other.id, id) || other.id == id)&&(identical(other.type, type) || other.type == type)&&const DeepCollectionEquality().equals(other.json, _json));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,type,const DeepCollectionEquality().hash(_json));
+int get hashCode {
+    return Object.hash(runtimeType,id,type,const DeepCollectionEquality().hash(_json));
+}
 
 @override
 String toString() {
-  return 'PageUnknown(id: $id, type: $type, json: $json)';
+    return 'PageUnknown(id: $id, type: $type, json: $json)';
 }
 
 

@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'notes_polls_vote_request.dart';
@@ -9,6 +9,7 @@ part of 'notes_polls_vote_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $NotesPollsVoteRequestCopyWith<NotesPollsVoteRequest> get copyWith => _$NotesPol
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesPollsVoteRequest&&(identical(other.noteId, noteId) || other.noteId == noteId)&&(identical(other.choice, choice) || other.choice == choice));
+  final _this = this as NotesPollsVoteRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesPollsVoteRequest&&(identical(other.noteId, _this.noteId) || other.noteId == _this.noteId)&&(identical(other.choice, _this.choice) || other.choice == _this.choice));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,noteId,choice);
+int get hashCode {
+  final _this = this as NotesPollsVoteRequest;
+  return Object.hash(runtimeType,_this.noteId,_this.choice);
+}
 
 @override
 String toString() {
-  return 'NotesPollsVoteRequest(noteId: $noteId, choice: $choice)';
+  final _this = this as NotesPollsVoteRequest;
+  return 'NotesPollsVoteRequest(noteId: ${_this.noteId}, choice: ${_this.choice})';
 }
 
 
@@ -66,7 +72,7 @@ class _$NotesPollsVoteRequestCopyWithImpl<$Res>
 /// Create a copy of NotesPollsVoteRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? noteId = null,Object? choice = null,}) {
-  return _then(_self.copyWith(
+  return _then(NotesPollsVoteRequest(
 noteId: null == noteId ? _self.noteId : noteId // ignore: cast_nullable_to_non_nullable
 as String,choice: null == choice ? _self.choice : choice // ignore: cast_nullable_to_non_nullable
 as int,
@@ -229,16 +235,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesPollsVoteRequest&&(identical(other.noteId, noteId) || other.noteId == noteId)&&(identical(other.choice, choice) || other.choice == choice));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesPollsVoteRequest&&(identical(other.noteId, noteId) || other.noteId == noteId)&&(identical(other.choice, choice) || other.choice == choice));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,noteId,choice);
+int get hashCode {
+    return Object.hash(runtimeType,noteId,choice);
+}
 
 @override
 String toString() {
-  return 'NotesPollsVoteRequest(noteId: $noteId, choice: $choice)';
+    return 'NotesPollsVoteRequest(noteId: $noteId, choice: $choice)';
 }
 
 

@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'following.dart';
@@ -9,6 +9,7 @@ part of 'following.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -17,8 +18,6 @@ mixin _$Following {
 
  String get id;@DateTimeConverter() DateTime get createdAt; String get followeeId; String get followerId;/// 以下のエンドポイントでnon-null
 ///
-// - [MisskeyFederation.followers]
-// - [MisskeyFederation.following]
 /// - [MisskeyUsers.following]
  UserDetailed? get followee;/// 以下のエンドポイントでnon-null
 ///
@@ -36,16 +35,21 @@ $FollowingCopyWith<Following> get copyWith => _$FollowingCopyWithImpl<Following>
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Following&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.followeeId, followeeId) || other.followeeId == followeeId)&&(identical(other.followerId, followerId) || other.followerId == followerId)&&(identical(other.followee, followee) || other.followee == followee)&&(identical(other.follower, follower) || other.follower == follower));
+  final _this = this as Following;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Following&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.createdAt, _this.createdAt) || other.createdAt == _this.createdAt)&&(identical(other.followeeId, _this.followeeId) || other.followeeId == _this.followeeId)&&(identical(other.followerId, _this.followerId) || other.followerId == _this.followerId)&&(identical(other.followee, _this.followee) || other.followee == _this.followee)&&(identical(other.follower, _this.follower) || other.follower == _this.follower));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,createdAt,followeeId,followerId,followee,follower);
+int get hashCode {
+  final _this = this as Following;
+  return Object.hash(runtimeType,_this.id,_this.createdAt,_this.followeeId,_this.followerId,_this.followee,_this.follower);
+}
 
 @override
 String toString() {
-  return 'Following(id: $id, createdAt: $createdAt, followeeId: $followeeId, followerId: $followerId, followee: $followee, follower: $follower)';
+  final _this = this as Following;
+  return 'Following(id: ${_this.id}, createdAt: ${_this.createdAt}, followeeId: ${_this.followeeId}, followerId: ${_this.followerId}, followee: ${_this.followee}, follower: ${_this.follower})';
 }
 
 
@@ -74,7 +78,7 @@ class _$FollowingCopyWithImpl<$Res>
 /// Create a copy of Following
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? createdAt = null,Object? followeeId = null,Object? followerId = null,Object? followee = freezed,Object? follower = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(Following(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime,followeeId: null == followeeId ? _self.followeeId : followeeId // ignore: cast_nullable_to_non_nullable
@@ -231,8 +235,6 @@ class _Following implements Following {
 @override final  String followerId;
 /// 以下のエンドポイントでnon-null
 ///
-// - [MisskeyFederation.followers]
-// - [MisskeyFederation.following]
 /// - [MisskeyUsers.following]
 @override final  UserDetailed? followee;
 /// 以下のエンドポイントでnon-null
@@ -253,16 +255,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Following&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.followeeId, followeeId) || other.followeeId == followeeId)&&(identical(other.followerId, followerId) || other.followerId == followerId)&&(identical(other.followee, followee) || other.followee == followee)&&(identical(other.follower, follower) || other.follower == follower));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Following&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.followeeId, followeeId) || other.followeeId == followeeId)&&(identical(other.followerId, followerId) || other.followerId == followerId)&&(identical(other.followee, followee) || other.followee == followee)&&(identical(other.follower, follower) || other.follower == follower));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,createdAt,followeeId,followerId,followee,follower);
+int get hashCode {
+    return Object.hash(runtimeType,id,createdAt,followeeId,followerId,followee,follower);
+}
 
 @override
 String toString() {
-  return 'Following(id: $id, createdAt: $createdAt, followeeId: $followeeId, followerId: $followerId, followee: $followee, follower: $follower)';
+    return 'Following(id: $id, createdAt: $createdAt, followeeId: $followeeId, followerId: $followerId, followee: $followee, follower: $follower)';
 }
 
 

@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'antennas_create_request.dart';
@@ -9,14 +9,14 @@ part of 'antennas_create_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
 /// @nodoc
 mixin _$AntennasCreateRequest {
 
- String get name; AntennaSource get src; String? get userListId; List<List<String>> get keywords; List<List<String>> get excludeKeywords; List<String> get users; List<String> get instances; bool get caseSensitive; bool get withReplies; bool get withFile;// Removed in Misskey 2024.5.0
- bool? get notify; bool? get localOnly; bool? get excludeBots; bool? get excludeNotesInSensitiveChannel;
+ String get name; AntennaSource get src; String? get userListId; List<List<String>> get keywords; List<List<String>> get excludeKeywords; List<String> get users; List<String> get instances; bool get caseSensitive; bool get withReplies; bool get withFile; bool? get notify; bool? get localOnly; bool? get excludeBots; bool? get excludeNotesInSensitiveChannel;
 /// Create a copy of AntennasCreateRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -29,16 +29,21 @@ $AntennasCreateRequestCopyWith<AntennasCreateRequest> get copyWith => _$Antennas
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is AntennasCreateRequest&&(identical(other.name, name) || other.name == name)&&(identical(other.src, src) || other.src == src)&&(identical(other.userListId, userListId) || other.userListId == userListId)&&const DeepCollectionEquality().equals(other.keywords, keywords)&&const DeepCollectionEquality().equals(other.excludeKeywords, excludeKeywords)&&const DeepCollectionEquality().equals(other.users, users)&&const DeepCollectionEquality().equals(other.instances, instances)&&(identical(other.caseSensitive, caseSensitive) || other.caseSensitive == caseSensitive)&&(identical(other.withReplies, withReplies) || other.withReplies == withReplies)&&(identical(other.withFile, withFile) || other.withFile == withFile)&&(identical(other.notify, notify) || other.notify == notify)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&(identical(other.excludeBots, excludeBots) || other.excludeBots == excludeBots)&&(identical(other.excludeNotesInSensitiveChannel, excludeNotesInSensitiveChannel) || other.excludeNotesInSensitiveChannel == excludeNotesInSensitiveChannel));
+  final _this = this as AntennasCreateRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is AntennasCreateRequest&&(identical(other.name, _this.name) || other.name == _this.name)&&(identical(other.src, _this.src) || other.src == _this.src)&&(identical(other.userListId, _this.userListId) || other.userListId == _this.userListId)&&const DeepCollectionEquality().equals(other.keywords, _this.keywords)&&const DeepCollectionEquality().equals(other.excludeKeywords, _this.excludeKeywords)&&const DeepCollectionEquality().equals(other.users, _this.users)&&const DeepCollectionEquality().equals(other.instances, _this.instances)&&(identical(other.caseSensitive, _this.caseSensitive) || other.caseSensitive == _this.caseSensitive)&&(identical(other.withReplies, _this.withReplies) || other.withReplies == _this.withReplies)&&(identical(other.withFile, _this.withFile) || other.withFile == _this.withFile)&&(identical(other.notify, _this.notify) || other.notify == _this.notify)&&(identical(other.localOnly, _this.localOnly) || other.localOnly == _this.localOnly)&&(identical(other.excludeBots, _this.excludeBots) || other.excludeBots == _this.excludeBots)&&(identical(other.excludeNotesInSensitiveChannel, _this.excludeNotesInSensitiveChannel) || other.excludeNotesInSensitiveChannel == _this.excludeNotesInSensitiveChannel));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,name,src,userListId,const DeepCollectionEquality().hash(keywords),const DeepCollectionEquality().hash(excludeKeywords),const DeepCollectionEquality().hash(users),const DeepCollectionEquality().hash(instances),caseSensitive,withReplies,withFile,notify,localOnly,excludeBots,excludeNotesInSensitiveChannel);
+int get hashCode {
+  final _this = this as AntennasCreateRequest;
+  return Object.hash(runtimeType,_this.name,_this.src,_this.userListId,const DeepCollectionEquality().hash(_this.keywords),const DeepCollectionEquality().hash(_this.excludeKeywords),const DeepCollectionEquality().hash(_this.users),const DeepCollectionEquality().hash(_this.instances),_this.caseSensitive,_this.withReplies,_this.withFile,_this.notify,_this.localOnly,_this.excludeBots,_this.excludeNotesInSensitiveChannel);
+}
 
 @override
 String toString() {
-  return 'AntennasCreateRequest(name: $name, src: $src, userListId: $userListId, keywords: $keywords, excludeKeywords: $excludeKeywords, users: $users, instances: $instances, caseSensitive: $caseSensitive, withReplies: $withReplies, withFile: $withFile, notify: $notify, localOnly: $localOnly, excludeBots: $excludeBots, excludeNotesInSensitiveChannel: $excludeNotesInSensitiveChannel)';
+  final _this = this as AntennasCreateRequest;
+  return 'AntennasCreateRequest(name: ${_this.name}, src: ${_this.src}, userListId: ${_this.userListId}, keywords: ${_this.keywords}, excludeKeywords: ${_this.excludeKeywords}, users: ${_this.users}, instances: ${_this.instances}, caseSensitive: ${_this.caseSensitive}, withReplies: ${_this.withReplies}, withFile: ${_this.withFile}, notify: ${_this.notify}, localOnly: ${_this.localOnly}, excludeBots: ${_this.excludeBots}, excludeNotesInSensitiveChannel: ${_this.excludeNotesInSensitiveChannel})';
 }
 
 
@@ -67,7 +72,7 @@ class _$AntennasCreateRequestCopyWithImpl<$Res>
 /// Create a copy of AntennasCreateRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? name = null,Object? src = null,Object? userListId = freezed,Object? keywords = null,Object? excludeKeywords = null,Object? users = null,Object? instances = null,Object? caseSensitive = null,Object? withReplies = null,Object? withFile = null,Object? notify = freezed,Object? localOnly = freezed,Object? excludeBots = freezed,Object? excludeNotesInSensitiveChannel = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(AntennasCreateRequest(
 name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
 as String,src: null == src ? _self.src : src // ignore: cast_nullable_to_non_nullable
 as AntennaSource,userListId: freezed == userListId ? _self.userListId : userListId // ignore: cast_nullable_to_non_nullable
@@ -223,7 +228,7 @@ return $default(_that.name,_that.src,_that.userListId,_that.keywords,_that.exclu
 @JsonSerializable()
 
 class _AntennasCreateRequest implements AntennasCreateRequest {
-  const _AntennasCreateRequest({required this.name, required this.src, this.userListId, required final  List<List<String>> keywords, required final  List<List<String>> excludeKeywords, required final  List<String> users, final  List<String> instances = const [], required this.caseSensitive, required this.withReplies, required this.withFile, this.notify, this.localOnly, this.excludeBots, this.excludeNotesInSensitiveChannel}): _keywords = keywords,_excludeKeywords = excludeKeywords,_users = users,_instances = instances;
+  const _AntennasCreateRequest({required this.name, required this.src, this.userListId, required  List<List<String>> keywords, required  List<List<String>> excludeKeywords, required  List<String> users,  List<String> instances = const [], required this.caseSensitive, required this.withReplies, required this.withFile, this.notify, this.localOnly, this.excludeBots, this.excludeNotesInSensitiveChannel}): _keywords = keywords,_excludeKeywords = excludeKeywords,_users = users,_instances = instances;
   factory _AntennasCreateRequest.fromJson(Map<String, dynamic> json) => _$AntennasCreateRequestFromJson(json);
 
 @override final  String name;
@@ -260,7 +265,6 @@ class _AntennasCreateRequest implements AntennasCreateRequest {
 @override final  bool caseSensitive;
 @override final  bool withReplies;
 @override final  bool withFile;
-// Removed in Misskey 2024.5.0
 @override final  bool? notify;
 @override final  bool? localOnly;
 @override final  bool? excludeBots;
@@ -279,16 +283,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _AntennasCreateRequest&&(identical(other.name, name) || other.name == name)&&(identical(other.src, src) || other.src == src)&&(identical(other.userListId, userListId) || other.userListId == userListId)&&const DeepCollectionEquality().equals(other._keywords, _keywords)&&const DeepCollectionEquality().equals(other._excludeKeywords, _excludeKeywords)&&const DeepCollectionEquality().equals(other._users, _users)&&const DeepCollectionEquality().equals(other._instances, _instances)&&(identical(other.caseSensitive, caseSensitive) || other.caseSensitive == caseSensitive)&&(identical(other.withReplies, withReplies) || other.withReplies == withReplies)&&(identical(other.withFile, withFile) || other.withFile == withFile)&&(identical(other.notify, notify) || other.notify == notify)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&(identical(other.excludeBots, excludeBots) || other.excludeBots == excludeBots)&&(identical(other.excludeNotesInSensitiveChannel, excludeNotesInSensitiveChannel) || other.excludeNotesInSensitiveChannel == excludeNotesInSensitiveChannel));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _AntennasCreateRequest&&(identical(other.name, name) || other.name == name)&&(identical(other.src, src) || other.src == src)&&(identical(other.userListId, userListId) || other.userListId == userListId)&&const DeepCollectionEquality().equals(other.keywords, _keywords)&&const DeepCollectionEquality().equals(other.excludeKeywords, _excludeKeywords)&&const DeepCollectionEquality().equals(other.users, _users)&&const DeepCollectionEquality().equals(other.instances, _instances)&&(identical(other.caseSensitive, caseSensitive) || other.caseSensitive == caseSensitive)&&(identical(other.withReplies, withReplies) || other.withReplies == withReplies)&&(identical(other.withFile, withFile) || other.withFile == withFile)&&(identical(other.notify, notify) || other.notify == notify)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&(identical(other.excludeBots, excludeBots) || other.excludeBots == excludeBots)&&(identical(other.excludeNotesInSensitiveChannel, excludeNotesInSensitiveChannel) || other.excludeNotesInSensitiveChannel == excludeNotesInSensitiveChannel));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,name,src,userListId,const DeepCollectionEquality().hash(_keywords),const DeepCollectionEquality().hash(_excludeKeywords),const DeepCollectionEquality().hash(_users),const DeepCollectionEquality().hash(_instances),caseSensitive,withReplies,withFile,notify,localOnly,excludeBots,excludeNotesInSensitiveChannel);
+int get hashCode {
+    return Object.hash(runtimeType,name,src,userListId,const DeepCollectionEquality().hash(_keywords),const DeepCollectionEquality().hash(_excludeKeywords),const DeepCollectionEquality().hash(_users),const DeepCollectionEquality().hash(_instances),caseSensitive,withReplies,withFile,notify,localOnly,excludeBots,excludeNotesInSensitiveChannel);
+}
 
 @override
 String toString() {
-  return 'AntennasCreateRequest(name: $name, src: $src, userListId: $userListId, keywords: $keywords, excludeKeywords: $excludeKeywords, users: $users, instances: $instances, caseSensitive: $caseSensitive, withReplies: $withReplies, withFile: $withFile, notify: $notify, localOnly: $localOnly, excludeBots: $excludeBots, excludeNotesInSensitiveChannel: $excludeNotesInSensitiveChannel)';
+    return 'AntennasCreateRequest(name: $name, src: $src, userListId: $userListId, keywords: $keywords, excludeKeywords: $excludeKeywords, users: $users, instances: $instances, caseSensitive: $caseSensitive, withReplies: $withReplies, withFile: $withFile, notify: $notify, localOnly: $localOnly, excludeBots: $excludeBots, excludeNotesInSensitiveChannel: $excludeNotesInSensitiveChannel)';
 }
 
 

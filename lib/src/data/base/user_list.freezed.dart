@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'user_list.dart';
@@ -9,14 +9,14 @@ part of 'user_list.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
 /// @nodoc
 mixin _$UsersList {
 
- String get id;@DateTimeConverter() DateTime get createdAt; String? get name; List<String> get userIds;// Misskey 13.13.0 で追加. 後方互換性のためnullable
- bool? get isPublic;
+ String get id;@DateTimeConverter() DateTime get createdAt; String? get name; List<String> get userIds; bool? get isPublic;
 /// Create a copy of UsersList
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -29,16 +29,21 @@ $UsersListCopyWith<UsersList> get copyWith => _$UsersListCopyWithImpl<UsersList>
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is UsersList&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.name, name) || other.name == name)&&const DeepCollectionEquality().equals(other.userIds, userIds)&&(identical(other.isPublic, isPublic) || other.isPublic == isPublic));
+  final _this = this as UsersList;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is UsersList&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.createdAt, _this.createdAt) || other.createdAt == _this.createdAt)&&(identical(other.name, _this.name) || other.name == _this.name)&&const DeepCollectionEquality().equals(other.userIds, _this.userIds)&&(identical(other.isPublic, _this.isPublic) || other.isPublic == _this.isPublic));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,createdAt,name,const DeepCollectionEquality().hash(userIds),isPublic);
+int get hashCode {
+  final _this = this as UsersList;
+  return Object.hash(runtimeType,_this.id,_this.createdAt,_this.name,const DeepCollectionEquality().hash(_this.userIds),_this.isPublic);
+}
 
 @override
 String toString() {
-  return 'UsersList(id: $id, createdAt: $createdAt, name: $name, userIds: $userIds, isPublic: $isPublic)';
+  final _this = this as UsersList;
+  return 'UsersList(id: ${_this.id}, createdAt: ${_this.createdAt}, name: ${_this.name}, userIds: ${_this.userIds}, isPublic: ${_this.isPublic})';
 }
 
 
@@ -67,7 +72,7 @@ class _$UsersListCopyWithImpl<$Res>
 /// Create a copy of UsersList
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? createdAt = null,Object? name = freezed,Object? userIds = null,Object? isPublic = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(UsersList(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime,name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
@@ -214,7 +219,7 @@ return $default(_that.id,_that.createdAt,_that.name,_that.userIds,_that.isPublic
 @JsonSerializable()
 
 class _UsersList implements UsersList {
-  const _UsersList({required this.id, @DateTimeConverter() required this.createdAt, this.name, required final  List<String> userIds, this.isPublic}): _userIds = userIds;
+  const _UsersList({required this.id, @DateTimeConverter() required this.createdAt, this.name, required  List<String> userIds, this.isPublic}): _userIds = userIds;
   factory _UsersList.fromJson(Map<String, dynamic> json) => _$UsersListFromJson(json);
 
 @override final  String id;
@@ -227,7 +232,6 @@ class _UsersList implements UsersList {
   return EqualUnmodifiableListView(_userIds);
 }
 
-// Misskey 13.13.0 で追加. 後方互換性のためnullable
 @override final  bool? isPublic;
 
 /// Create a copy of UsersList
@@ -243,16 +247,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersList&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.name, name) || other.name == name)&&const DeepCollectionEquality().equals(other._userIds, _userIds)&&(identical(other.isPublic, isPublic) || other.isPublic == isPublic));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersList&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.name, name) || other.name == name)&&const DeepCollectionEquality().equals(other.userIds, _userIds)&&(identical(other.isPublic, isPublic) || other.isPublic == isPublic));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,createdAt,name,const DeepCollectionEquality().hash(_userIds),isPublic);
+int get hashCode {
+    return Object.hash(runtimeType,id,createdAt,name,const DeepCollectionEquality().hash(_userIds),isPublic);
+}
 
 @override
 String toString() {
-  return 'UsersList(id: $id, createdAt: $createdAt, name: $name, userIds: $userIds, isPublic: $isPublic)';
+    return 'UsersList(id: $id, createdAt: $createdAt, name: $name, userIds: $userIds, isPublic: $isPublic)';
 }
 
 

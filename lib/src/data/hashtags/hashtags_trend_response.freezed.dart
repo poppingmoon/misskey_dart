@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'hashtags_trend_response.dart';
@@ -9,6 +9,7 @@ part of 'hashtags_trend_response.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $HashtagsTrendResponseCopyWith<HashtagsTrendResponse> get copyWith => _$Hashtags
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is HashtagsTrendResponse&&(identical(other.tag, tag) || other.tag == tag)&&const DeepCollectionEquality().equals(other.chart, chart)&&(identical(other.usersCount, usersCount) || other.usersCount == usersCount));
+  final _this = this as HashtagsTrendResponse;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is HashtagsTrendResponse&&(identical(other.tag, _this.tag) || other.tag == _this.tag)&&const DeepCollectionEquality().equals(other.chart, _this.chart)&&(identical(other.usersCount, _this.usersCount) || other.usersCount == _this.usersCount));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,tag,const DeepCollectionEquality().hash(chart),usersCount);
+int get hashCode {
+  final _this = this as HashtagsTrendResponse;
+  return Object.hash(runtimeType,_this.tag,const DeepCollectionEquality().hash(_this.chart),_this.usersCount);
+}
 
 @override
 String toString() {
-  return 'HashtagsTrendResponse(tag: $tag, chart: $chart, usersCount: $usersCount)';
+  final _this = this as HashtagsTrendResponse;
+  return 'HashtagsTrendResponse(tag: ${_this.tag}, chart: ${_this.chart}, usersCount: ${_this.usersCount})';
 }
 
 
@@ -66,7 +72,7 @@ class _$HashtagsTrendResponseCopyWithImpl<$Res>
 /// Create a copy of HashtagsTrendResponse
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? tag = null,Object? chart = null,Object? usersCount = null,}) {
-  return _then(_self.copyWith(
+  return _then(HashtagsTrendResponse(
 tag: null == tag ? _self.tag : tag // ignore: cast_nullable_to_non_nullable
 as String,chart: null == chart ? _self.chart : chart // ignore: cast_nullable_to_non_nullable
 as List<int>,usersCount: null == usersCount ? _self.usersCount : usersCount // ignore: cast_nullable_to_non_nullable
@@ -211,7 +217,7 @@ return $default(_that.tag,_that.chart,_that.usersCount);case _:
 @JsonSerializable()
 
 class _HashtagsTrendResponse implements HashtagsTrendResponse {
-  const _HashtagsTrendResponse({required this.tag, required final  List<int> chart, required this.usersCount}): _chart = chart;
+  const _HashtagsTrendResponse({required this.tag, required  List<int> chart, required this.usersCount}): _chart = chart;
   factory _HashtagsTrendResponse.fromJson(Map<String, dynamic> json) => _$HashtagsTrendResponseFromJson(json);
 
 @override final  String tag;
@@ -237,16 +243,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _HashtagsTrendResponse&&(identical(other.tag, tag) || other.tag == tag)&&const DeepCollectionEquality().equals(other._chart, _chart)&&(identical(other.usersCount, usersCount) || other.usersCount == usersCount));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _HashtagsTrendResponse&&(identical(other.tag, tag) || other.tag == tag)&&const DeepCollectionEquality().equals(other.chart, _chart)&&(identical(other.usersCount, usersCount) || other.usersCount == usersCount));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,tag,const DeepCollectionEquality().hash(_chart),usersCount);
+int get hashCode {
+    return Object.hash(runtimeType,tag,const DeepCollectionEquality().hash(_chart),usersCount);
+}
 
 @override
 String toString() {
-  return 'HashtagsTrendResponse(tag: $tag, chart: $chart, usersCount: $usersCount)';
+    return 'HashtagsTrendResponse(tag: $tag, chart: $chart, usersCount: $usersCount)';
 }
 
 

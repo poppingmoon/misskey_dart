@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'bubble_game_ranking_request.dart';
@@ -9,6 +9,7 @@ part of 'bubble_game_ranking_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $BubbleGameRankingRequestCopyWith<BubbleGameRankingRequest> get copyWith => _$Bu
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is BubbleGameRankingRequest&&(identical(other.gameMode, gameMode) || other.gameMode == gameMode));
+  final _this = this as BubbleGameRankingRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is BubbleGameRankingRequest&&(identical(other.gameMode, _this.gameMode) || other.gameMode == _this.gameMode));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,gameMode);
+int get hashCode {
+  final _this = this as BubbleGameRankingRequest;
+  return Object.hash(runtimeType,_this.gameMode);
+}
 
 @override
 String toString() {
-  return 'BubbleGameRankingRequest(gameMode: $gameMode)';
+  final _this = this as BubbleGameRankingRequest;
+  return 'BubbleGameRankingRequest(gameMode: ${_this.gameMode})';
 }
 
 
@@ -66,7 +72,7 @@ class _$BubbleGameRankingRequestCopyWithImpl<$Res>
 /// Create a copy of BubbleGameRankingRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? gameMode = null,}) {
-  return _then(_self.copyWith(
+  return _then(BubbleGameRankingRequest(
 gameMode: null == gameMode ? _self.gameMode : gameMode // ignore: cast_nullable_to_non_nullable
 as String,
   ));
@@ -227,16 +233,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _BubbleGameRankingRequest&&(identical(other.gameMode, gameMode) || other.gameMode == gameMode));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _BubbleGameRankingRequest&&(identical(other.gameMode, gameMode) || other.gameMode == gameMode));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,gameMode);
+int get hashCode {
+    return Object.hash(runtimeType,gameMode);
+}
 
 @override
 String toString() {
-  return 'BubbleGameRankingRequest(gameMode: $gameMode)';
+    return 'BubbleGameRankingRequest(gameMode: $gameMode)';
 }
 
 

@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'chat_message.dart';
@@ -9,6 +9,7 @@ part of 'chat_message.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $ChatMessageCopyWith<ChatMessage> get copyWith => _$ChatMessageCopyWithImpl<Chat
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ChatMessage&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.text, text) || other.text == text)&&(identical(other.fromUserId, fromUserId) || other.fromUserId == fromUserId)&&(identical(other.fromUser, fromUser) || other.fromUser == fromUser)&&(identical(other.toUserId, toUserId) || other.toUserId == toUserId)&&(identical(other.toUser, toUser) || other.toUser == toUser)&&(identical(other.toRoomId, toRoomId) || other.toRoomId == toRoomId)&&(identical(other.toRoom, toRoom) || other.toRoom == toRoom)&&(identical(other.fileId, fileId) || other.fileId == fileId)&&(identical(other.file, file) || other.file == file)&&(identical(other.isRead, isRead) || other.isRead == isRead)&&const DeepCollectionEquality().equals(other.reactions, reactions));
+  final _this = this as ChatMessage;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ChatMessage&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.createdAt, _this.createdAt) || other.createdAt == _this.createdAt)&&(identical(other.text, _this.text) || other.text == _this.text)&&(identical(other.fromUserId, _this.fromUserId) || other.fromUserId == _this.fromUserId)&&(identical(other.fromUser, _this.fromUser) || other.fromUser == _this.fromUser)&&(identical(other.toUserId, _this.toUserId) || other.toUserId == _this.toUserId)&&(identical(other.toUser, _this.toUser) || other.toUser == _this.toUser)&&(identical(other.toRoomId, _this.toRoomId) || other.toRoomId == _this.toRoomId)&&(identical(other.toRoom, _this.toRoom) || other.toRoom == _this.toRoom)&&(identical(other.fileId, _this.fileId) || other.fileId == _this.fileId)&&(identical(other.file, _this.file) || other.file == _this.file)&&(identical(other.isRead, _this.isRead) || other.isRead == _this.isRead)&&const DeepCollectionEquality().equals(other.reactions, _this.reactions));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,createdAt,text,fromUserId,fromUser,toUserId,toUser,toRoomId,toRoom,fileId,file,isRead,const DeepCollectionEquality().hash(reactions));
+int get hashCode {
+  final _this = this as ChatMessage;
+  return Object.hash(runtimeType,_this.id,_this.createdAt,_this.text,_this.fromUserId,_this.fromUser,_this.toUserId,_this.toUser,_this.toRoomId,_this.toRoom,_this.fileId,_this.file,_this.isRead,const DeepCollectionEquality().hash(_this.reactions));
+}
 
 @override
 String toString() {
-  return 'ChatMessage(id: $id, createdAt: $createdAt, text: $text, fromUserId: $fromUserId, fromUser: $fromUser, toUserId: $toUserId, toUser: $toUser, toRoomId: $toRoomId, toRoom: $toRoom, fileId: $fileId, file: $file, isRead: $isRead, reactions: $reactions)';
+  final _this = this as ChatMessage;
+  return 'ChatMessage(id: ${_this.id}, createdAt: ${_this.createdAt}, text: ${_this.text}, fromUserId: ${_this.fromUserId}, fromUser: ${_this.fromUser}, toUserId: ${_this.toUserId}, toUser: ${_this.toUser}, toRoomId: ${_this.toRoomId}, toRoom: ${_this.toRoom}, fileId: ${_this.fileId}, file: ${_this.file}, isRead: ${_this.isRead}, reactions: ${_this.reactions})';
 }
 
 
@@ -66,7 +72,7 @@ class _$ChatMessageCopyWithImpl<$Res>
 /// Create a copy of ChatMessage
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? createdAt = null,Object? text = freezed,Object? fromUserId = null,Object? fromUser = freezed,Object? toUserId = freezed,Object? toUser = freezed,Object? toRoomId = freezed,Object? toRoom = freezed,Object? fileId = freezed,Object? file = freezed,Object? isRead = freezed,Object? reactions = null,}) {
-  return _then(_self.copyWith(
+  return _then(ChatMessage(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime,text: freezed == text ? _self.text : text // ignore: cast_nullable_to_non_nullable
@@ -269,7 +275,7 @@ return $default(_that.id,_that.createdAt,_that.text,_that.fromUserId,_that.fromU
 @JsonSerializable()
 
 class _ChatMessage implements ChatMessage {
-  const _ChatMessage({required this.id, @DateTimeConverter() required this.createdAt, this.text, required this.fromUserId, this.fromUser, this.toUserId, this.toUser, this.toRoomId, this.toRoom, this.fileId, this.file, this.isRead, final  List<ChatMessageReaction> reactions = const []}): _reactions = reactions;
+  const _ChatMessage({required this.id, @DateTimeConverter() required this.createdAt, this.text, required this.fromUserId, this.fromUser, this.toUserId, this.toUser, this.toRoomId, this.toRoom, this.fileId, this.file, this.isRead,  List<ChatMessageReaction> reactions = const []}): _reactions = reactions;
   factory _ChatMessage.fromJson(Map<String, dynamic> json) => _$ChatMessageFromJson(json);
 
 @override final  String id;
@@ -305,16 +311,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatMessage&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.text, text) || other.text == text)&&(identical(other.fromUserId, fromUserId) || other.fromUserId == fromUserId)&&(identical(other.fromUser, fromUser) || other.fromUser == fromUser)&&(identical(other.toUserId, toUserId) || other.toUserId == toUserId)&&(identical(other.toUser, toUser) || other.toUser == toUser)&&(identical(other.toRoomId, toRoomId) || other.toRoomId == toRoomId)&&(identical(other.toRoom, toRoom) || other.toRoom == toRoom)&&(identical(other.fileId, fileId) || other.fileId == fileId)&&(identical(other.file, file) || other.file == file)&&(identical(other.isRead, isRead) || other.isRead == isRead)&&const DeepCollectionEquality().equals(other._reactions, _reactions));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatMessage&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.text, text) || other.text == text)&&(identical(other.fromUserId, fromUserId) || other.fromUserId == fromUserId)&&(identical(other.fromUser, fromUser) || other.fromUser == fromUser)&&(identical(other.toUserId, toUserId) || other.toUserId == toUserId)&&(identical(other.toUser, toUser) || other.toUser == toUser)&&(identical(other.toRoomId, toRoomId) || other.toRoomId == toRoomId)&&(identical(other.toRoom, toRoom) || other.toRoom == toRoom)&&(identical(other.fileId, fileId) || other.fileId == fileId)&&(identical(other.file, file) || other.file == file)&&(identical(other.isRead, isRead) || other.isRead == isRead)&&const DeepCollectionEquality().equals(other.reactions, _reactions));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,createdAt,text,fromUserId,fromUser,toUserId,toUser,toRoomId,toRoom,fileId,file,isRead,const DeepCollectionEquality().hash(_reactions));
+int get hashCode {
+    return Object.hash(runtimeType,id,createdAt,text,fromUserId,fromUser,toUserId,toUser,toRoomId,toRoom,fileId,file,isRead,const DeepCollectionEquality().hash(_reactions));
+}
 
 @override
 String toString() {
-  return 'ChatMessage(id: $id, createdAt: $createdAt, text: $text, fromUserId: $fromUserId, fromUser: $fromUser, toUserId: $toUserId, toUser: $toUser, toRoomId: $toRoomId, toRoom: $toRoom, fileId: $fileId, file: $file, isRead: $isRead, reactions: $reactions)';
+    return 'ChatMessage(id: $id, createdAt: $createdAt, text: $text, fromUserId: $fromUserId, fromUser: $fromUser, toUserId: $toUserId, toUser: $toUser, toRoomId: $toRoomId, toRoom: $toRoom, fileId: $fileId, file: $file, isRead: $isRead, reactions: $reactions)';
 }
 
 
@@ -429,16 +437,21 @@ $ChatMessageReactionCopyWith<ChatMessageReaction> get copyWith => _$ChatMessageR
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ChatMessageReaction&&(identical(other.reaction, reaction) || other.reaction == reaction)&&(identical(other.user, user) || other.user == user));
+  final _this = this as ChatMessageReaction;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ChatMessageReaction&&(identical(other.reaction, _this.reaction) || other.reaction == _this.reaction)&&(identical(other.user, _this.user) || other.user == _this.user));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,reaction,user);
+int get hashCode {
+  final _this = this as ChatMessageReaction;
+  return Object.hash(runtimeType,_this.reaction,_this.user);
+}
 
 @override
 String toString() {
-  return 'ChatMessageReaction(reaction: $reaction, user: $user)';
+  final _this = this as ChatMessageReaction;
+  return 'ChatMessageReaction(reaction: ${_this.reaction}, user: ${_this.user})';
 }
 
 
@@ -467,7 +480,7 @@ class _$ChatMessageReactionCopyWithImpl<$Res>
 /// Create a copy of ChatMessageReaction
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? reaction = null,Object? user = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(ChatMessageReaction(
 reaction: null == reaction ? _self.reaction : reaction // ignore: cast_nullable_to_non_nullable
 as String,user: freezed == user ? _self.user : user // ignore: cast_nullable_to_non_nullable
 as UserLite?,
@@ -642,16 +655,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatMessageReaction&&(identical(other.reaction, reaction) || other.reaction == reaction)&&(identical(other.user, user) || other.user == user));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatMessageReaction&&(identical(other.reaction, reaction) || other.reaction == reaction)&&(identical(other.user, user) || other.user == user));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,reaction,user);
+int get hashCode {
+    return Object.hash(runtimeType,reaction,user);
+}
 
 @override
 String toString() {
-  return 'ChatMessageReaction(reaction: $reaction, user: $user)';
+    return 'ChatMessageReaction(reaction: $reaction, user: $user)';
 }
 
 

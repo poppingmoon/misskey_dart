@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'gallery_post.dart';
@@ -9,6 +9,7 @@ part of 'gallery_post.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $GalleryPostCopyWith<GalleryPost> get copyWith => _$GalleryPostCopyWithImpl<Gall
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is GalleryPost&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.user, user) || other.user == user)&&(identical(other.title, title) || other.title == title)&&(identical(other.description, description) || other.description == description)&&const DeepCollectionEquality().equals(other.fileIds, fileIds)&&const DeepCollectionEquality().equals(other.files, files)&&const DeepCollectionEquality().equals(other.tags, tags)&&(identical(other.isSensitive, isSensitive) || other.isSensitive == isSensitive)&&(identical(other.likedCount, likedCount) || other.likedCount == likedCount)&&(identical(other.isLiked, isLiked) || other.isLiked == isLiked));
+  final _this = this as GalleryPost;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is GalleryPost&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.createdAt, _this.createdAt) || other.createdAt == _this.createdAt)&&(identical(other.updatedAt, _this.updatedAt) || other.updatedAt == _this.updatedAt)&&(identical(other.userId, _this.userId) || other.userId == _this.userId)&&(identical(other.user, _this.user) || other.user == _this.user)&&(identical(other.title, _this.title) || other.title == _this.title)&&(identical(other.description, _this.description) || other.description == _this.description)&&const DeepCollectionEquality().equals(other.fileIds, _this.fileIds)&&const DeepCollectionEquality().equals(other.files, _this.files)&&const DeepCollectionEquality().equals(other.tags, _this.tags)&&(identical(other.isSensitive, _this.isSensitive) || other.isSensitive == _this.isSensitive)&&(identical(other.likedCount, _this.likedCount) || other.likedCount == _this.likedCount)&&(identical(other.isLiked, _this.isLiked) || other.isLiked == _this.isLiked));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,createdAt,updatedAt,userId,user,title,description,const DeepCollectionEquality().hash(fileIds),const DeepCollectionEquality().hash(files),const DeepCollectionEquality().hash(tags),isSensitive,likedCount,isLiked);
+int get hashCode {
+  final _this = this as GalleryPost;
+  return Object.hash(runtimeType,_this.id,_this.createdAt,_this.updatedAt,_this.userId,_this.user,_this.title,_this.description,const DeepCollectionEquality().hash(_this.fileIds),const DeepCollectionEquality().hash(_this.files),const DeepCollectionEquality().hash(_this.tags),_this.isSensitive,_this.likedCount,_this.isLiked);
+}
 
 @override
 String toString() {
-  return 'GalleryPost(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, userId: $userId, user: $user, title: $title, description: $description, fileIds: $fileIds, files: $files, tags: $tags, isSensitive: $isSensitive, likedCount: $likedCount, isLiked: $isLiked)';
+  final _this = this as GalleryPost;
+  return 'GalleryPost(id: ${_this.id}, createdAt: ${_this.createdAt}, updatedAt: ${_this.updatedAt}, userId: ${_this.userId}, user: ${_this.user}, title: ${_this.title}, description: ${_this.description}, fileIds: ${_this.fileIds}, files: ${_this.files}, tags: ${_this.tags}, isSensitive: ${_this.isSensitive}, likedCount: ${_this.likedCount}, isLiked: ${_this.isLiked})';
 }
 
 
@@ -66,7 +72,7 @@ class _$GalleryPostCopyWithImpl<$Res>
 /// Create a copy of GalleryPost
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? createdAt = null,Object? updatedAt = null,Object? userId = null,Object? user = null,Object? title = null,Object? description = freezed,Object? fileIds = null,Object? files = null,Object? tags = freezed,Object? isSensitive = null,Object? likedCount = null,Object? isLiked = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(GalleryPost(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime,updatedAt: null == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
@@ -230,7 +236,7 @@ return $default(_that.id,_that.createdAt,_that.updatedAt,_that.userId,_that.user
 @JsonSerializable()
 
 class _GalleryPost implements GalleryPost {
-  const _GalleryPost({required this.id, required this.createdAt, required this.updatedAt, required this.userId, required this.user, required this.title, this.description, required final  List<String> fileIds, required final  List<DriveFile> files, final  List<String>? tags, required this.isSensitive, required this.likedCount, this.isLiked}): _fileIds = fileIds,_files = files,_tags = tags;
+  const _GalleryPost({required this.id, required this.createdAt, required this.updatedAt, required this.userId, required this.user, required this.title, this.description, required  List<String> fileIds, required  List<DriveFile> files,  List<String>? tags, required this.isSensitive, required this.likedCount, this.isLiked}): _fileIds = fileIds,_files = files,_tags = tags;
   factory _GalleryPost.fromJson(Map<String, dynamic> json) => _$GalleryPostFromJson(json);
 
 @override final  String id;
@@ -280,16 +286,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _GalleryPost&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.user, user) || other.user == user)&&(identical(other.title, title) || other.title == title)&&(identical(other.description, description) || other.description == description)&&const DeepCollectionEquality().equals(other._fileIds, _fileIds)&&const DeepCollectionEquality().equals(other._files, _files)&&const DeepCollectionEquality().equals(other._tags, _tags)&&(identical(other.isSensitive, isSensitive) || other.isSensitive == isSensitive)&&(identical(other.likedCount, likedCount) || other.likedCount == likedCount)&&(identical(other.isLiked, isLiked) || other.isLiked == isLiked));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _GalleryPost&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.user, user) || other.user == user)&&(identical(other.title, title) || other.title == title)&&(identical(other.description, description) || other.description == description)&&const DeepCollectionEquality().equals(other.fileIds, _fileIds)&&const DeepCollectionEquality().equals(other.files, _files)&&const DeepCollectionEquality().equals(other.tags, _tags)&&(identical(other.isSensitive, isSensitive) || other.isSensitive == isSensitive)&&(identical(other.likedCount, likedCount) || other.likedCount == likedCount)&&(identical(other.isLiked, isLiked) || other.isLiked == isLiked));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,createdAt,updatedAt,userId,user,title,description,const DeepCollectionEquality().hash(_fileIds),const DeepCollectionEquality().hash(_files),const DeepCollectionEquality().hash(_tags),isSensitive,likedCount,isLiked);
+int get hashCode {
+    return Object.hash(runtimeType,id,createdAt,updatedAt,userId,user,title,description,const DeepCollectionEquality().hash(_fileIds),const DeepCollectionEquality().hash(_files),const DeepCollectionEquality().hash(_tags),isSensitive,likedCount,isLiked);
+}
 
 @override
 String toString() {
-  return 'GalleryPost(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, userId: $userId, user: $user, title: $title, description: $description, fileIds: $fileIds, files: $files, tags: $tags, isSensitive: $isSensitive, likedCount: $likedCount, isLiked: $isLiked)';
+    return 'GalleryPost(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, userId: $userId, user: $user, title: $title, description: $description, fileIds: $fileIds, files: $files, tags: $tags, isSensitive: $isSensitive, likedCount: $likedCount, isLiked: $isLiked)';
 }
 
 

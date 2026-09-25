@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'reversi_verify_response.dart';
@@ -9,6 +9,7 @@ part of 'reversi_verify_response.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -30,16 +31,21 @@ $ReversiVerifyResponseCopyWith<ReversiVerifyResponse> get copyWith => _$ReversiV
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiVerifyResponse&&(identical(other.desynced, desynced) || other.desynced == desynced)&&(identical(other.game, game) || other.game == game));
+  final _this = this as ReversiVerifyResponse;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiVerifyResponse&&(identical(other.desynced, _this.desynced) || other.desynced == _this.desynced)&&(identical(other.game, _this.game) || other.game == _this.game));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,desynced,game);
+int get hashCode {
+  final _this = this as ReversiVerifyResponse;
+  return Object.hash(runtimeType,_this.desynced,_this.game);
+}
 
 @override
 String toString() {
-  return 'ReversiVerifyResponse(desynced: $desynced, game: $game)';
+  final _this = this as ReversiVerifyResponse;
+  return 'ReversiVerifyResponse(desynced: ${_this.desynced}, game: ${_this.game})';
 }
 
 
@@ -68,7 +74,7 @@ class _$ReversiVerifyResponseCopyWithImpl<$Res>
 /// Create a copy of ReversiVerifyResponse
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? desynced = null,Object? game = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(ReversiVerifyResponse(
 desynced: null == desynced ? _self.desynced : desynced // ignore: cast_nullable_to_non_nullable
 as bool,game: freezed == game ? _self.game : game // ignore: cast_nullable_to_non_nullable
 as ReversiShowGameResponse?,
@@ -245,16 +251,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ReversiVerifyResponse&&(identical(other.desynced, desynced) || other.desynced == desynced)&&(identical(other.game, game) || other.game == game));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ReversiVerifyResponse&&(identical(other.desynced, desynced) || other.desynced == desynced)&&(identical(other.game, game) || other.game == game));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,desynced,game);
+int get hashCode {
+    return Object.hash(runtimeType,desynced,game);
+}
 
 @override
 String toString() {
-  return 'ReversiVerifyResponse(desynced: $desynced, game: $game)';
+    return 'ReversiVerifyResponse(desynced: $desynced, game: $game)';
 }
 
 

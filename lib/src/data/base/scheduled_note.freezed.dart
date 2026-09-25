@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'scheduled_note.dart';
@@ -9,6 +9,7 @@ part of 'scheduled_note.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $ScheduledNoteCopyWith<ScheduledNote> get copyWith => _$ScheduledNoteCopyWithImp
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ScheduledNote&&(identical(other.id, id) || other.id == id)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.scheduledAt, scheduledAt) || other.scheduledAt == scheduledAt)&&(identical(other.reason, reason) || other.reason == reason)&&(identical(other.channel, channel) || other.channel == channel)&&(identical(other.renote, renote) || other.renote == renote)&&(identical(other.reply, reply) || other.reply == reply)&&(identical(other.data, data) || other.data == data));
+  final _this = this as ScheduledNote;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ScheduledNote&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.updatedAt, _this.updatedAt) || other.updatedAt == _this.updatedAt)&&(identical(other.scheduledAt, _this.scheduledAt) || other.scheduledAt == _this.scheduledAt)&&(identical(other.reason, _this.reason) || other.reason == _this.reason)&&(identical(other.channel, _this.channel) || other.channel == _this.channel)&&(identical(other.renote, _this.renote) || other.renote == _this.renote)&&(identical(other.reply, _this.reply) || other.reply == _this.reply)&&(identical(other.data, _this.data) || other.data == _this.data));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,updatedAt,scheduledAt,reason,channel,renote,reply,data);
+int get hashCode {
+  final _this = this as ScheduledNote;
+  return Object.hash(runtimeType,_this.id,_this.updatedAt,_this.scheduledAt,_this.reason,_this.channel,_this.renote,_this.reply,_this.data);
+}
 
 @override
 String toString() {
-  return 'ScheduledNote(id: $id, updatedAt: $updatedAt, scheduledAt: $scheduledAt, reason: $reason, channel: $channel, renote: $renote, reply: $reply, data: $data)';
+  final _this = this as ScheduledNote;
+  return 'ScheduledNote(id: ${_this.id}, updatedAt: ${_this.updatedAt}, scheduledAt: ${_this.scheduledAt}, reason: ${_this.reason}, channel: ${_this.channel}, renote: ${_this.renote}, reply: ${_this.reply}, data: ${_this.data})';
 }
 
 
@@ -66,7 +72,7 @@ class _$ScheduledNoteCopyWithImpl<$Res>
 /// Create a copy of ScheduledNote
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? updatedAt = null,Object? scheduledAt = freezed,Object? reason = freezed,Object? channel = freezed,Object? renote = freezed,Object? reply = freezed,Object? data = null,}) {
-  return _then(_self.copyWith(
+  return _then(ScheduledNote(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,updatedAt: null == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
 as DateTime,scheduledAt: freezed == scheduledAt ? _self.scheduledAt : scheduledAt // ignore: cast_nullable_to_non_nullable
@@ -286,16 +292,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ScheduledNote&&(identical(other.id, id) || other.id == id)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.scheduledAt, scheduledAt) || other.scheduledAt == scheduledAt)&&(identical(other.reason, reason) || other.reason == reason)&&(identical(other.channel, channel) || other.channel == channel)&&(identical(other.renote, renote) || other.renote == renote)&&(identical(other.reply, reply) || other.reply == reply)&&(identical(other.data, data) || other.data == data));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ScheduledNote&&(identical(other.id, id) || other.id == id)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.scheduledAt, scheduledAt) || other.scheduledAt == scheduledAt)&&(identical(other.reason, reason) || other.reason == reason)&&(identical(other.channel, channel) || other.channel == channel)&&(identical(other.renote, renote) || other.renote == renote)&&(identical(other.reply, reply) || other.reply == reply)&&(identical(other.data, data) || other.data == data));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,updatedAt,scheduledAt,reason,channel,renote,reply,data);
+int get hashCode {
+    return Object.hash(runtimeType,id,updatedAt,scheduledAt,reason,channel,renote,reply,data);
+}
 
 @override
 String toString() {
-  return 'ScheduledNote(id: $id, updatedAt: $updatedAt, scheduledAt: $scheduledAt, reason: $reason, channel: $channel, renote: $renote, reply: $reply, data: $data)';
+    return 'ScheduledNote(id: $id, updatedAt: $updatedAt, scheduledAt: $scheduledAt, reason: $reason, channel: $channel, renote: $renote, reply: $reply, data: $data)';
 }
 
 
@@ -402,16 +410,21 @@ $ScheduledNoteNoteCopyWith<ScheduledNoteNote> get copyWith => _$ScheduledNoteNot
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ScheduledNoteNote&&(identical(other.id, id) || other.id == id)&&(identical(other.text, text) || other.text == text)&&(identical(other.user, user) || other.user == user));
+  final _this = this as ScheduledNoteNote;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ScheduledNoteNote&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.text, _this.text) || other.text == _this.text)&&(identical(other.user, _this.user) || other.user == _this.user));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,text,user);
+int get hashCode {
+  final _this = this as ScheduledNoteNote;
+  return Object.hash(runtimeType,_this.id,_this.text,_this.user);
+}
 
 @override
 String toString() {
-  return 'ScheduledNoteNote(id: $id, text: $text, user: $user)';
+  final _this = this as ScheduledNoteNote;
+  return 'ScheduledNoteNote(id: ${_this.id}, text: ${_this.text}, user: ${_this.user})';
 }
 
 
@@ -440,7 +453,7 @@ class _$ScheduledNoteNoteCopyWithImpl<$Res>
 /// Create a copy of ScheduledNoteNote
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? text = freezed,Object? user = null,}) {
-  return _then(_self.copyWith(
+  return _then(ScheduledNoteNote(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,text: freezed == text ? _self.text : text // ignore: cast_nullable_to_non_nullable
 as String?,user: null == user ? _self.user : user // ignore: cast_nullable_to_non_nullable
@@ -614,16 +627,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ScheduledNoteNote&&(identical(other.id, id) || other.id == id)&&(identical(other.text, text) || other.text == text)&&(identical(other.user, user) || other.user == user));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ScheduledNoteNote&&(identical(other.id, id) || other.id == id)&&(identical(other.text, text) || other.text == text)&&(identical(other.user, user) || other.user == user));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,text,user);
+int get hashCode {
+    return Object.hash(runtimeType,id,text,user);
+}
 
 @override
 String toString() {
-  return 'ScheduledNoteNote(id: $id, text: $text, user: $user)';
+    return 'ScheduledNoteNote(id: $id, text: $text, user: $user)';
 }
 
 
@@ -689,16 +704,21 @@ $ScheduledNoteUserCopyWith<ScheduledNoteUser> get copyWith => _$ScheduledNoteUse
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ScheduledNoteUser&&(identical(other.id, id) || other.id == id)&&(identical(other.username, username) || other.username == username)&&(identical(other.host, host) || other.host == host));
+  final _this = this as ScheduledNoteUser;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ScheduledNoteUser&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.username, _this.username) || other.username == _this.username)&&(identical(other.host, _this.host) || other.host == _this.host));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,username,host);
+int get hashCode {
+  final _this = this as ScheduledNoteUser;
+  return Object.hash(runtimeType,_this.id,_this.username,_this.host);
+}
 
 @override
 String toString() {
-  return 'ScheduledNoteUser(id: $id, username: $username, host: $host)';
+  final _this = this as ScheduledNoteUser;
+  return 'ScheduledNoteUser(id: ${_this.id}, username: ${_this.username}, host: ${_this.host})';
 }
 
 
@@ -727,7 +747,7 @@ class _$ScheduledNoteUserCopyWithImpl<$Res>
 /// Create a copy of ScheduledNoteUser
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? username = null,Object? host = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(ScheduledNoteUser(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,username: null == username ? _self.username : username // ignore: cast_nullable_to_non_nullable
 as String,host: freezed == host ? _self.host : host // ignore: cast_nullable_to_non_nullable
@@ -892,16 +912,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ScheduledNoteUser&&(identical(other.id, id) || other.id == id)&&(identical(other.username, username) || other.username == username)&&(identical(other.host, host) || other.host == host));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ScheduledNoteUser&&(identical(other.id, id) || other.id == id)&&(identical(other.username, username) || other.username == username)&&(identical(other.host, host) || other.host == host));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,username,host);
+int get hashCode {
+    return Object.hash(runtimeType,id,username,host);
+}
 
 @override
 String toString() {
-  return 'ScheduledNoteUser(id: $id, username: $username, host: $host)';
+    return 'ScheduledNoteUser(id: $id, username: $username, host: $host)';
 }
 
 
@@ -945,8 +967,7 @@ as String?,
 /// @nodoc
 mixin _$ScheduledNoteData {
 
- String? get text; bool? get useCw; String? get cw;// ignore: invalid_annotation_target
-@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) NoteVisibility? get visibility; bool get localOnly; List<DriveFile> get files; NotePoll? get poll; List<String> get visibleUserIds;
+ String? get text; bool? get useCw; String? get cw;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) NoteVisibility? get visibility; bool get localOnly; List<DriveFile> get files; NotePoll? get poll; List<String> get visibleUserIds;
 /// Create a copy of ScheduledNoteData
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -959,16 +980,21 @@ $ScheduledNoteDataCopyWith<ScheduledNoteData> get copyWith => _$ScheduledNoteDat
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ScheduledNoteData&&(identical(other.text, text) || other.text == text)&&(identical(other.useCw, useCw) || other.useCw == useCw)&&(identical(other.cw, cw) || other.cw == cw)&&(identical(other.visibility, visibility) || other.visibility == visibility)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&const DeepCollectionEquality().equals(other.files, files)&&(identical(other.poll, poll) || other.poll == poll)&&const DeepCollectionEquality().equals(other.visibleUserIds, visibleUserIds));
+  final _this = this as ScheduledNoteData;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ScheduledNoteData&&(identical(other.text, _this.text) || other.text == _this.text)&&(identical(other.useCw, _this.useCw) || other.useCw == _this.useCw)&&(identical(other.cw, _this.cw) || other.cw == _this.cw)&&(identical(other.visibility, _this.visibility) || other.visibility == _this.visibility)&&(identical(other.localOnly, _this.localOnly) || other.localOnly == _this.localOnly)&&const DeepCollectionEquality().equals(other.files, _this.files)&&(identical(other.poll, _this.poll) || other.poll == _this.poll)&&const DeepCollectionEquality().equals(other.visibleUserIds, _this.visibleUserIds));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,text,useCw,cw,visibility,localOnly,const DeepCollectionEquality().hash(files),poll,const DeepCollectionEquality().hash(visibleUserIds));
+int get hashCode {
+  final _this = this as ScheduledNoteData;
+  return Object.hash(runtimeType,_this.text,_this.useCw,_this.cw,_this.visibility,_this.localOnly,const DeepCollectionEquality().hash(_this.files),_this.poll,const DeepCollectionEquality().hash(_this.visibleUserIds));
+}
 
 @override
 String toString() {
-  return 'ScheduledNoteData(text: $text, useCw: $useCw, cw: $cw, visibility: $visibility, localOnly: $localOnly, files: $files, poll: $poll, visibleUserIds: $visibleUserIds)';
+  final _this = this as ScheduledNoteData;
+  return 'ScheduledNoteData(text: ${_this.text}, useCw: ${_this.useCw}, cw: ${_this.cw}, visibility: ${_this.visibility}, localOnly: ${_this.localOnly}, files: ${_this.files}, poll: ${_this.poll}, visibleUserIds: ${_this.visibleUserIds})';
 }
 
 
@@ -997,7 +1023,7 @@ class _$ScheduledNoteDataCopyWithImpl<$Res>
 /// Create a copy of ScheduledNoteData
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? text = freezed,Object? useCw = freezed,Object? cw = freezed,Object? visibility = freezed,Object? localOnly = null,Object? files = null,Object? poll = freezed,Object? visibleUserIds = null,}) {
-  return _then(_self.copyWith(
+  return _then(ScheduledNoteData(
 text: freezed == text ? _self.text : text // ignore: cast_nullable_to_non_nullable
 as String?,useCw: freezed == useCw ? _self.useCw : useCw // ignore: cast_nullable_to_non_nullable
 as bool?,cw: freezed == cw ? _self.cw : cw // ignore: cast_nullable_to_non_nullable
@@ -1159,13 +1185,12 @@ return $default(_that.text,_that.useCw,_that.cw,_that.visibility,_that.localOnly
 @JsonSerializable()
 
 class _ScheduledNoteData implements ScheduledNoteData {
-  const _ScheduledNoteData({this.text, this.useCw, this.cw, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.visibility, this.localOnly = false, final  List<DriveFile> files = const [], this.poll, final  List<String> visibleUserIds = const []}): _files = files,_visibleUserIds = visibleUserIds;
+  const _ScheduledNoteData({this.text, this.useCw, this.cw, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.visibility, this.localOnly = false,  List<DriveFile> files = const [], this.poll,  List<String> visibleUserIds = const []}): _files = files,_visibleUserIds = visibleUserIds;
   factory _ScheduledNoteData.fromJson(Map<String, dynamic> json) => _$ScheduledNoteDataFromJson(json);
 
 @override final  String? text;
 @override final  bool? useCw;
 @override final  String? cw;
-// ignore: invalid_annotation_target
 @override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  NoteVisibility? visibility;
 @override@JsonKey() final  bool localOnly;
  final  List<DriveFile> _files;
@@ -1197,16 +1222,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ScheduledNoteData&&(identical(other.text, text) || other.text == text)&&(identical(other.useCw, useCw) || other.useCw == useCw)&&(identical(other.cw, cw) || other.cw == cw)&&(identical(other.visibility, visibility) || other.visibility == visibility)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&const DeepCollectionEquality().equals(other._files, _files)&&(identical(other.poll, poll) || other.poll == poll)&&const DeepCollectionEquality().equals(other._visibleUserIds, _visibleUserIds));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ScheduledNoteData&&(identical(other.text, text) || other.text == text)&&(identical(other.useCw, useCw) || other.useCw == useCw)&&(identical(other.cw, cw) || other.cw == cw)&&(identical(other.visibility, visibility) || other.visibility == visibility)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&const DeepCollectionEquality().equals(other.files, _files)&&(identical(other.poll, poll) || other.poll == poll)&&const DeepCollectionEquality().equals(other.visibleUserIds, _visibleUserIds));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,text,useCw,cw,visibility,localOnly,const DeepCollectionEquality().hash(_files),poll,const DeepCollectionEquality().hash(_visibleUserIds));
+int get hashCode {
+    return Object.hash(runtimeType,text,useCw,cw,visibility,localOnly,const DeepCollectionEquality().hash(_files),poll,const DeepCollectionEquality().hash(_visibleUserIds));
+}
 
 @override
 String toString() {
-  return 'ScheduledNoteData(text: $text, useCw: $useCw, cw: $cw, visibility: $visibility, localOnly: $localOnly, files: $files, poll: $poll, visibleUserIds: $visibleUserIds)';
+    return 'ScheduledNoteData(text: $text, useCw: $useCw, cw: $cw, visibility: $visibility, localOnly: $localOnly, files: $files, poll: $poll, visibleUserIds: $visibleUserIds)';
 }
 
 

@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'note_updated_event.dart';
@@ -9,14 +9,14 @@ part of 'note_updated_event.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
 /// @nodoc
 mixin _$NoteUpdatedEvent {
 
- String get id;// ignore: invalid_annotation_target
-@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) NoteUpdatedEventType? get type; Map<String, dynamic> get body;
+ String get id;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) NoteUpdatedEventType? get type; Map<String, dynamic> get body;
 /// Create a copy of NoteUpdatedEvent
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -29,16 +29,21 @@ $NoteUpdatedEventCopyWith<NoteUpdatedEvent> get copyWith => _$NoteUpdatedEventCo
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NoteUpdatedEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.type, type) || other.type == type)&&const DeepCollectionEquality().equals(other.body, body));
+  final _this = this as NoteUpdatedEvent;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NoteUpdatedEvent&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.type, _this.type) || other.type == _this.type)&&const DeepCollectionEquality().equals(other.body, _this.body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,type,const DeepCollectionEquality().hash(body));
+int get hashCode {
+  final _this = this as NoteUpdatedEvent;
+  return Object.hash(runtimeType,_this.id,_this.type,const DeepCollectionEquality().hash(_this.body));
+}
 
 @override
 String toString() {
-  return 'NoteUpdatedEvent(id: $id, type: $type, body: $body)';
+  final _this = this as NoteUpdatedEvent;
+  return 'NoteUpdatedEvent(id: ${_this.id}, type: ${_this.type}, body: ${_this.body})';
 }
 
 
@@ -67,7 +72,7 @@ class _$NoteUpdatedEventCopyWithImpl<$Res>
 /// Create a copy of NoteUpdatedEvent
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? type = freezed,Object? body = null,}) {
-  return _then(_self.copyWith(
+  return _then(NoteUpdatedEvent(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
 as NoteUpdatedEventType?,body: null == body ? _self.body : body // ignore: cast_nullable_to_non_nullable
@@ -212,11 +217,10 @@ return $default(_that.id,_that.type,_that.body);case _:
 @JsonSerializable()
 
 class _NoteUpdatedEvent implements NoteUpdatedEvent {
-  const _NoteUpdatedEvent({required this.id, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type, required final  Map<String, dynamic> body}): _body = body;
+  const _NoteUpdatedEvent({required this.id, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type, required  Map<String, dynamic> body}): _body = body;
   factory _NoteUpdatedEvent.fromJson(Map<String, dynamic> json) => _$NoteUpdatedEventFromJson(json);
 
 @override final  String id;
-// ignore: invalid_annotation_target
 @override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  NoteUpdatedEventType? type;
  final  Map<String, dynamic> _body;
 @override Map<String, dynamic> get body {
@@ -239,16 +243,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NoteUpdatedEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.type, type) || other.type == type)&&const DeepCollectionEquality().equals(other._body, _body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NoteUpdatedEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.type, type) || other.type == type)&&const DeepCollectionEquality().equals(other.body, _body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,type,const DeepCollectionEquality().hash(_body));
+int get hashCode {
+    return Object.hash(runtimeType,id,type,const DeepCollectionEquality().hash(_body));
+}
 
 @override
 String toString() {
-  return 'NoteUpdatedEvent(id: $id, type: $type, body: $body)';
+    return 'NoteUpdatedEvent(id: $id, type: $type, body: $body)';
 }
 
 

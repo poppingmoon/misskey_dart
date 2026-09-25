@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'federation_show_instance_request.dart';
@@ -9,6 +9,7 @@ part of 'federation_show_instance_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $FederationShowInstanceRequestCopyWith<FederationShowInstanceRequest> get copyWi
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is FederationShowInstanceRequest&&(identical(other.host, host) || other.host == host)&&(identical(other.blocked, blocked) || other.blocked == blocked)&&(identical(other.notResponding, notResponding) || other.notResponding == notResponding)&&(identical(other.suspended, suspended) || other.suspended == suspended)&&(identical(other.silenced, silenced) || other.silenced == silenced)&&(identical(other.federating, federating) || other.federating == federating)&&(identical(other.subscribing, subscribing) || other.subscribing == subscribing)&&(identical(other.publishing, publishing) || other.publishing == publishing)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.offset, offset) || other.offset == offset)&&(identical(other.sort, sort) || other.sort == sort));
+  final _this = this as FederationShowInstanceRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is FederationShowInstanceRequest&&(identical(other.host, _this.host) || other.host == _this.host)&&(identical(other.blocked, _this.blocked) || other.blocked == _this.blocked)&&(identical(other.notResponding, _this.notResponding) || other.notResponding == _this.notResponding)&&(identical(other.suspended, _this.suspended) || other.suspended == _this.suspended)&&(identical(other.silenced, _this.silenced) || other.silenced == _this.silenced)&&(identical(other.federating, _this.federating) || other.federating == _this.federating)&&(identical(other.subscribing, _this.subscribing) || other.subscribing == _this.subscribing)&&(identical(other.publishing, _this.publishing) || other.publishing == _this.publishing)&&(identical(other.limit, _this.limit) || other.limit == _this.limit)&&(identical(other.offset, _this.offset) || other.offset == _this.offset)&&(identical(other.sort, _this.sort) || other.sort == _this.sort));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,host,blocked,notResponding,suspended,silenced,federating,subscribing,publishing,limit,offset,sort);
+int get hashCode {
+  final _this = this as FederationShowInstanceRequest;
+  return Object.hash(runtimeType,_this.host,_this.blocked,_this.notResponding,_this.suspended,_this.silenced,_this.federating,_this.subscribing,_this.publishing,_this.limit,_this.offset,_this.sort);
+}
 
 @override
 String toString() {
-  return 'FederationShowInstanceRequest(host: $host, blocked: $blocked, notResponding: $notResponding, suspended: $suspended, silenced: $silenced, federating: $federating, subscribing: $subscribing, publishing: $publishing, limit: $limit, offset: $offset, sort: $sort)';
+  final _this = this as FederationShowInstanceRequest;
+  return 'FederationShowInstanceRequest(host: ${_this.host}, blocked: ${_this.blocked}, notResponding: ${_this.notResponding}, suspended: ${_this.suspended}, silenced: ${_this.silenced}, federating: ${_this.federating}, subscribing: ${_this.subscribing}, publishing: ${_this.publishing}, limit: ${_this.limit}, offset: ${_this.offset}, sort: ${_this.sort})';
 }
 
 
@@ -66,7 +72,7 @@ class _$FederationShowInstanceRequestCopyWithImpl<$Res>
 /// Create a copy of FederationShowInstanceRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? host = null,Object? blocked = freezed,Object? notResponding = freezed,Object? suspended = freezed,Object? silenced = freezed,Object? federating = freezed,Object? subscribing = freezed,Object? publishing = freezed,Object? limit = freezed,Object? offset = freezed,Object? sort = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(FederationShowInstanceRequest(
 host: null == host ? _self.host : host // ignore: cast_nullable_to_non_nullable
 as String,blocked: freezed == blocked ? _self.blocked : blocked // ignore: cast_nullable_to_non_nullable
 as bool?,notResponding: freezed == notResponding ? _self.notResponding : notResponding // ignore: cast_nullable_to_non_nullable
@@ -247,16 +253,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _FederationShowInstanceRequest&&(identical(other.host, host) || other.host == host)&&(identical(other.blocked, blocked) || other.blocked == blocked)&&(identical(other.notResponding, notResponding) || other.notResponding == notResponding)&&(identical(other.suspended, suspended) || other.suspended == suspended)&&(identical(other.silenced, silenced) || other.silenced == silenced)&&(identical(other.federating, federating) || other.federating == federating)&&(identical(other.subscribing, subscribing) || other.subscribing == subscribing)&&(identical(other.publishing, publishing) || other.publishing == publishing)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.offset, offset) || other.offset == offset)&&(identical(other.sort, sort) || other.sort == sort));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _FederationShowInstanceRequest&&(identical(other.host, host) || other.host == host)&&(identical(other.blocked, blocked) || other.blocked == blocked)&&(identical(other.notResponding, notResponding) || other.notResponding == notResponding)&&(identical(other.suspended, suspended) || other.suspended == suspended)&&(identical(other.silenced, silenced) || other.silenced == silenced)&&(identical(other.federating, federating) || other.federating == federating)&&(identical(other.subscribing, subscribing) || other.subscribing == subscribing)&&(identical(other.publishing, publishing) || other.publishing == publishing)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.offset, offset) || other.offset == offset)&&(identical(other.sort, sort) || other.sort == sort));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,host,blocked,notResponding,suspended,silenced,federating,subscribing,publishing,limit,offset,sort);
+int get hashCode {
+    return Object.hash(runtimeType,host,blocked,notResponding,suspended,silenced,federating,subscribing,publishing,limit,offset,sort);
+}
 
 @override
 String toString() {
-  return 'FederationShowInstanceRequest(host: $host, blocked: $blocked, notResponding: $notResponding, suspended: $suspended, silenced: $silenced, federating: $federating, subscribing: $subscribing, publishing: $publishing, limit: $limit, offset: $offset, sort: $sort)';
+    return 'FederationShowInstanceRequest(host: $host, blocked: $blocked, notResponding: $notResponding, suspended: $suspended, silenced: $silenced, federating: $federating, subscribing: $subscribing, publishing: $publishing, limit: $limit, offset: $offset, sort: $sort)';
 }
 
 

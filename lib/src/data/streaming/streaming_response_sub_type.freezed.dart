@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'streaming_response_sub_type.dart';
@@ -9,6 +9,7 @@ part of 'streaming_response_sub_type.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $PageEventCopyWith<PageEvent> get copyWith => _$PageEventCopyWithImpl<PageEvent>
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is PageEvent&&(identical(other.pageId, pageId) || other.pageId == pageId)&&(identical(other.event, event) || other.event == event)&&const DeepCollectionEquality().equals(other.variable, variable)&&(identical(other.user, user) || other.user == user)&&(identical(other.userId, userId) || other.userId == userId));
+  final _this = this as PageEvent;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PageEvent&&(identical(other.pageId, _this.pageId) || other.pageId == _this.pageId)&&(identical(other.event, _this.event) || other.event == _this.event)&&const DeepCollectionEquality().equals(other.variable, _this.variable)&&(identical(other.user, _this.user) || other.user == _this.user)&&(identical(other.userId, _this.userId) || other.userId == _this.userId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,pageId,event,const DeepCollectionEquality().hash(variable),user,userId);
+int get hashCode {
+  final _this = this as PageEvent;
+  return Object.hash(runtimeType,_this.pageId,_this.event,const DeepCollectionEquality().hash(_this.variable),_this.user,_this.userId);
+}
 
 @override
 String toString() {
-  return 'PageEvent(pageId: $pageId, event: $event, variable: $variable, user: $user, userId: $userId)';
+  final _this = this as PageEvent;
+  return 'PageEvent(pageId: ${_this.pageId}, event: ${_this.event}, variable: ${_this.variable}, user: ${_this.user}, userId: ${_this.userId})';
 }
 
 
@@ -66,7 +72,7 @@ class _$PageEventCopyWithImpl<$Res>
 /// Create a copy of PageEvent
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? pageId = null,Object? event = null,Object? variable = null,Object? user = null,Object? userId = null,}) {
-  return _then(_self.copyWith(
+  return _then(PageEvent(
 pageId: null == pageId ? _self.pageId : pageId // ignore: cast_nullable_to_non_nullable
 as String,event: null == event ? _self.event : event // ignore: cast_nullable_to_non_nullable
 as String,variable: null == variable ? _self.variable : variable ,user: null == user ? _self.user : user // ignore: cast_nullable_to_non_nullable
@@ -234,16 +240,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PageEvent&&(identical(other.pageId, pageId) || other.pageId == pageId)&&(identical(other.event, event) || other.event == event)&&const DeepCollectionEquality().equals(other.variable, variable)&&(identical(other.user, user) || other.user == user)&&(identical(other.userId, userId) || other.userId == userId));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _PageEvent&&(identical(other.pageId, pageId) || other.pageId == pageId)&&(identical(other.event, event) || other.event == event)&&const DeepCollectionEquality().equals(other.variable, variable)&&(identical(other.user, user) || other.user == user)&&(identical(other.userId, userId) || other.userId == userId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,pageId,event,const DeepCollectionEquality().hash(variable),user,userId);
+int get hashCode {
+    return Object.hash(runtimeType,pageId,event,const DeepCollectionEquality().hash(variable),user,userId);
+}
 
 @override
 String toString() {
-  return 'PageEvent(pageId: $pageId, event: $event, variable: $variable, user: $user, userId: $userId)';
+    return 'PageEvent(pageId: $pageId, event: $event, variable: $variable, user: $user, userId: $userId)';
 }
 
 
@@ -301,16 +309,21 @@ $UrlUploadFinishedEventCopyWith<UrlUploadFinishedEvent> get copyWith => _$UrlUpl
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is UrlUploadFinishedEvent&&(identical(other.marker, marker) || other.marker == marker)&&(identical(other.file, file) || other.file == file));
+  final _this = this as UrlUploadFinishedEvent;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is UrlUploadFinishedEvent&&(identical(other.marker, _this.marker) || other.marker == _this.marker)&&(identical(other.file, _this.file) || other.file == _this.file));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,marker,file);
+int get hashCode {
+  final _this = this as UrlUploadFinishedEvent;
+  return Object.hash(runtimeType,_this.marker,_this.file);
+}
 
 @override
 String toString() {
-  return 'UrlUploadFinishedEvent(marker: $marker, file: $file)';
+  final _this = this as UrlUploadFinishedEvent;
+  return 'UrlUploadFinishedEvent(marker: ${_this.marker}, file: ${_this.file})';
 }
 
 
@@ -339,7 +352,7 @@ class _$UrlUploadFinishedEventCopyWithImpl<$Res>
 /// Create a copy of UrlUploadFinishedEvent
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? marker = freezed,Object? file = null,}) {
-  return _then(_self.copyWith(
+  return _then(UrlUploadFinishedEvent(
 marker: freezed == marker ? _self.marker : marker // ignore: cast_nullable_to_non_nullable
 as String?,file: null == file ? _self.file : file // ignore: cast_nullable_to_non_nullable
 as DriveFile,
@@ -511,16 +524,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _UrlUploadFinishedEvent&&(identical(other.marker, marker) || other.marker == marker)&&(identical(other.file, file) || other.file == file));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UrlUploadFinishedEvent&&(identical(other.marker, marker) || other.marker == marker)&&(identical(other.file, file) || other.file == file));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,marker,file);
+int get hashCode {
+    return Object.hash(runtimeType,marker,file);
+}
 
 @override
 String toString() {
-  return 'UrlUploadFinishedEvent(marker: $marker, file: $file)';
+    return 'UrlUploadFinishedEvent(marker: $marker, file: $file)';
 }
 
 
@@ -585,16 +600,21 @@ $RegistryUpdatedCopyWith<RegistryUpdated> get copyWith => _$RegistryUpdatedCopyW
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RegistryUpdated&&const DeepCollectionEquality().equals(other.scope, scope)&&(identical(other.key, key) || other.key == key)&&const DeepCollectionEquality().equals(other.value, value));
+  final _this = this as RegistryUpdated;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is RegistryUpdated&&const DeepCollectionEquality().equals(other.scope, _this.scope)&&(identical(other.key, _this.key) || other.key == _this.key)&&const DeepCollectionEquality().equals(other.value, _this.value));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(scope),key,const DeepCollectionEquality().hash(value));
+int get hashCode {
+  final _this = this as RegistryUpdated;
+  return Object.hash(runtimeType,const DeepCollectionEquality().hash(_this.scope),_this.key,const DeepCollectionEquality().hash(_this.value));
+}
 
 @override
 String toString() {
-  return 'RegistryUpdated(scope: $scope, key: $key, value: $value)';
+  final _this = this as RegistryUpdated;
+  return 'RegistryUpdated(scope: ${_this.scope}, key: ${_this.key}, value: ${_this.value})';
 }
 
 
@@ -623,7 +643,7 @@ class _$RegistryUpdatedCopyWithImpl<$Res>
 /// Create a copy of RegistryUpdated
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? scope = freezed,Object? key = null,Object? value = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(RegistryUpdated(
 scope: freezed == scope ? _self.scope : scope // ignore: cast_nullable_to_non_nullable
 as List<String>?,key: null == key ? _self.key : key // ignore: cast_nullable_to_non_nullable
 as String,value: freezed == value ? _self.value : value ,
@@ -767,7 +787,7 @@ return $default(_that.scope,_that.key,_that.value);case _:
 @JsonSerializable()
 
 class _RegistryUpdated implements RegistryUpdated {
-  const _RegistryUpdated({final  List<String>? scope, required this.key, required this.value}): _scope = scope;
+  const _RegistryUpdated({ List<String>? scope, required this.key, required this.value}): _scope = scope;
   factory _RegistryUpdated.fromJson(Map<String, dynamic> json) => _$RegistryUpdatedFromJson(json);
 
  final  List<String>? _scope;
@@ -795,16 +815,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _RegistryUpdated&&const DeepCollectionEquality().equals(other._scope, _scope)&&(identical(other.key, key) || other.key == key)&&const DeepCollectionEquality().equals(other.value, value));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _RegistryUpdated&&const DeepCollectionEquality().equals(other.scope, _scope)&&(identical(other.key, key) || other.key == key)&&const DeepCollectionEquality().equals(other.value, value));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_scope),key,const DeepCollectionEquality().hash(value));
+int get hashCode {
+    return Object.hash(runtimeType,const DeepCollectionEquality().hash(_scope),key,const DeepCollectionEquality().hash(value));
+}
 
 @override
 String toString() {
-  return 'RegistryUpdated(scope: $scope, key: $key, value: $value)';
+    return 'RegistryUpdated(scope: $scope, key: $key, value: $value)';
 }
 
 
@@ -860,16 +882,21 @@ $SigninCopyWith<Signin> get copyWith => _$SigninCopyWithImpl<Signin>(this as Sig
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Signin&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.ip, ip) || other.ip == ip)&&const DeepCollectionEquality().equals(other.headers, headers)&&(identical(other.success, success) || other.success == success));
+  final _this = this as Signin;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Signin&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.createdAt, _this.createdAt) || other.createdAt == _this.createdAt)&&(identical(other.ip, _this.ip) || other.ip == _this.ip)&&const DeepCollectionEquality().equals(other.headers, _this.headers)&&(identical(other.success, _this.success) || other.success == _this.success));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,createdAt,ip,const DeepCollectionEquality().hash(headers),success);
+int get hashCode {
+  final _this = this as Signin;
+  return Object.hash(runtimeType,_this.id,_this.createdAt,_this.ip,const DeepCollectionEquality().hash(_this.headers),_this.success);
+}
 
 @override
 String toString() {
-  return 'Signin(id: $id, createdAt: $createdAt, ip: $ip, headers: $headers, success: $success)';
+  final _this = this as Signin;
+  return 'Signin(id: ${_this.id}, createdAt: ${_this.createdAt}, ip: ${_this.ip}, headers: ${_this.headers}, success: ${_this.success})';
 }
 
 
@@ -898,7 +925,7 @@ class _$SigninCopyWithImpl<$Res>
 /// Create a copy of Signin
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? createdAt = null,Object? ip = null,Object? headers = freezed,Object? success = null,}) {
-  return _then(_self.copyWith(
+  return _then(Signin(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime,ip: null == ip ? _self.ip : ip // ignore: cast_nullable_to_non_nullable
@@ -1066,16 +1093,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Signin&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.ip, ip) || other.ip == ip)&&const DeepCollectionEquality().equals(other.headers, headers)&&(identical(other.success, success) || other.success == success));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Signin&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.ip, ip) || other.ip == ip)&&const DeepCollectionEquality().equals(other.headers, headers)&&(identical(other.success, success) || other.success == success));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,createdAt,ip,const DeepCollectionEquality().hash(headers),success);
+int get hashCode {
+    return Object.hash(runtimeType,id,createdAt,ip,const DeepCollectionEquality().hash(headers),success);
+}
 
 @override
 String toString() {
-  return 'Signin(id: $id, createdAt: $createdAt, ip: $ip, headers: $headers, success: $success)';
+    return 'Signin(id: $id, createdAt: $createdAt, ip: $ip, headers: $headers, success: $success)';
 }
 
 
@@ -1133,16 +1162,21 @@ $TimelineVotedCopyWith<TimelineVoted> get copyWith => _$TimelineVotedCopyWithImp
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is TimelineVoted&&(identical(other.choice, choice) || other.choice == choice)&&(identical(other.userId, userId) || other.userId == userId));
+  final _this = this as TimelineVoted;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is TimelineVoted&&(identical(other.choice, _this.choice) || other.choice == _this.choice)&&(identical(other.userId, _this.userId) || other.userId == _this.userId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,choice,userId);
+int get hashCode {
+  final _this = this as TimelineVoted;
+  return Object.hash(runtimeType,_this.choice,_this.userId);
+}
 
 @override
 String toString() {
-  return 'TimelineVoted(choice: $choice, userId: $userId)';
+  final _this = this as TimelineVoted;
+  return 'TimelineVoted(choice: ${_this.choice}, userId: ${_this.userId})';
 }
 
 
@@ -1171,7 +1205,7 @@ class _$TimelineVotedCopyWithImpl<$Res>
 /// Create a copy of TimelineVoted
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? choice = null,Object? userId = null,}) {
-  return _then(_self.copyWith(
+  return _then(TimelineVoted(
 choice: null == choice ? _self.choice : choice // ignore: cast_nullable_to_non_nullable
 as int,userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
 as String,
@@ -1334,16 +1368,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _TimelineVoted&&(identical(other.choice, choice) || other.choice == choice)&&(identical(other.userId, userId) || other.userId == userId));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _TimelineVoted&&(identical(other.choice, choice) || other.choice == choice)&&(identical(other.userId, userId) || other.userId == userId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,choice,userId);
+int get hashCode {
+    return Object.hash(runtimeType,choice,userId);
+}
 
 @override
 String toString() {
-  return 'TimelineVoted(choice: $choice, userId: $userId)';
+    return 'TimelineVoted(choice: $choice, userId: $userId)';
 }
 
 
@@ -1399,16 +1435,21 @@ $TimelineReactedCopyWith<TimelineReacted> get copyWith => _$TimelineReactedCopyW
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is TimelineReacted&&(identical(other.reaction, reaction) || other.reaction == reaction)&&(identical(other.emoji, emoji) || other.emoji == emoji)&&(identical(other.userId, userId) || other.userId == userId));
+  final _this = this as TimelineReacted;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is TimelineReacted&&(identical(other.reaction, _this.reaction) || other.reaction == _this.reaction)&&(identical(other.emoji, _this.emoji) || other.emoji == _this.emoji)&&(identical(other.userId, _this.userId) || other.userId == _this.userId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,reaction,emoji,userId);
+int get hashCode {
+  final _this = this as TimelineReacted;
+  return Object.hash(runtimeType,_this.reaction,_this.emoji,_this.userId);
+}
 
 @override
 String toString() {
-  return 'TimelineReacted(reaction: $reaction, emoji: $emoji, userId: $userId)';
+  final _this = this as TimelineReacted;
+  return 'TimelineReacted(reaction: ${_this.reaction}, emoji: ${_this.emoji}, userId: ${_this.userId})';
 }
 
 
@@ -1437,7 +1478,7 @@ class _$TimelineReactedCopyWithImpl<$Res>
 /// Create a copy of TimelineReacted
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? reaction = null,Object? emoji = freezed,Object? userId = null,}) {
-  return _then(_self.copyWith(
+  return _then(TimelineReacted(
 reaction: null == reaction ? _self.reaction : reaction // ignore: cast_nullable_to_non_nullable
 as String,emoji: freezed == emoji ? _self.emoji : emoji // ignore: cast_nullable_to_non_nullable
 as TimelineReactedEmojiData?,userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
@@ -1614,16 +1655,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _TimelineReacted&&(identical(other.reaction, reaction) || other.reaction == reaction)&&(identical(other.emoji, emoji) || other.emoji == emoji)&&(identical(other.userId, userId) || other.userId == userId));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _TimelineReacted&&(identical(other.reaction, reaction) || other.reaction == reaction)&&(identical(other.emoji, emoji) || other.emoji == emoji)&&(identical(other.userId, userId) || other.userId == userId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,reaction,emoji,userId);
+int get hashCode {
+    return Object.hash(runtimeType,reaction,emoji,userId);
+}
 
 @override
 String toString() {
-  return 'TimelineReacted(reaction: $reaction, emoji: $emoji, userId: $userId)';
+    return 'TimelineReacted(reaction: $reaction, emoji: $emoji, userId: $userId)';
 }
 
 
@@ -1692,16 +1735,21 @@ $TimelineReactedEmojiDataCopyWith<TimelineReactedEmojiData> get copyWith => _$Ti
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is TimelineReactedEmojiData&&(identical(other.name, name) || other.name == name)&&(identical(other.url, url) || other.url == url));
+  final _this = this as TimelineReactedEmojiData;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is TimelineReactedEmojiData&&(identical(other.name, _this.name) || other.name == _this.name)&&(identical(other.url, _this.url) || other.url == _this.url));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,name,url);
+int get hashCode {
+  final _this = this as TimelineReactedEmojiData;
+  return Object.hash(runtimeType,_this.name,_this.url);
+}
 
 @override
 String toString() {
-  return 'TimelineReactedEmojiData(name: $name, url: $url)';
+  final _this = this as TimelineReactedEmojiData;
+  return 'TimelineReactedEmojiData(name: ${_this.name}, url: ${_this.url})';
 }
 
 
@@ -1730,7 +1778,7 @@ class _$TimelineReactedEmojiDataCopyWithImpl<$Res>
 /// Create a copy of TimelineReactedEmojiData
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? name = null,Object? url = null,}) {
-  return _then(_self.copyWith(
+  return _then(TimelineReactedEmojiData(
 name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
 as String,url: null == url ? _self.url : url // ignore: cast_nullable_to_non_nullable
 as String,
@@ -1893,16 +1941,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _TimelineReactedEmojiData&&(identical(other.name, name) || other.name == name)&&(identical(other.url, url) || other.url == url));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _TimelineReactedEmojiData&&(identical(other.name, name) || other.name == name)&&(identical(other.url, url) || other.url == url));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,name,url);
+int get hashCode {
+    return Object.hash(runtimeType,name,url);
+}
 
 @override
 String toString() {
-  return 'TimelineReactedEmojiData(name: $name, url: $url)';
+    return 'TimelineReactedEmojiData(name: $name, url: $url)';
 }
 
 
@@ -1958,16 +2008,21 @@ $TimelineDeletedCopyWith<TimelineDeleted> get copyWith => _$TimelineDeletedCopyW
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is TimelineDeleted&&(identical(other.deletedAt, deletedAt) || other.deletedAt == deletedAt));
+  final _this = this as TimelineDeleted;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is TimelineDeleted&&(identical(other.deletedAt, _this.deletedAt) || other.deletedAt == _this.deletedAt));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,deletedAt);
+int get hashCode {
+  final _this = this as TimelineDeleted;
+  return Object.hash(runtimeType,_this.deletedAt);
+}
 
 @override
 String toString() {
-  return 'TimelineDeleted(deletedAt: $deletedAt)';
+  final _this = this as TimelineDeleted;
+  return 'TimelineDeleted(deletedAt: ${_this.deletedAt})';
 }
 
 
@@ -1996,7 +2051,7 @@ class _$TimelineDeletedCopyWithImpl<$Res>
 /// Create a copy of TimelineDeleted
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? deletedAt = null,}) {
-  return _then(_self.copyWith(
+  return _then(TimelineDeleted(
 deletedAt: null == deletedAt ? _self.deletedAt : deletedAt // ignore: cast_nullable_to_non_nullable
 as DateTime,
   ));
@@ -2157,16 +2212,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _TimelineDeleted&&(identical(other.deletedAt, deletedAt) || other.deletedAt == deletedAt));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _TimelineDeleted&&(identical(other.deletedAt, deletedAt) || other.deletedAt == deletedAt));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,deletedAt);
+int get hashCode {
+    return Object.hash(runtimeType,deletedAt);
+}
 
 @override
 String toString() {
-  return 'TimelineDeleted(deletedAt: $deletedAt)';
+    return 'TimelineDeleted(deletedAt: $deletedAt)';
 }
 
 
@@ -2239,7 +2296,7 @@ mixin _$StreamingStats {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is StreamingStats);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is StreamingStats);
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -2248,7 +2305,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'StreamingStats()';
+    return 'StreamingStats()';
 }
 
 
@@ -2394,7 +2451,7 @@ return jobQueue(_that.inbox,_that.deliver);case _:
 @JsonSerializable()
 
 class ServerMetricsResponse implements StreamingStats {
-  const ServerMetricsResponse({required this.cpu, required this.fs, required this.mem, required this.net, final  String? $type}): $type = $type ?? 'serverMetrics';
+  const ServerMetricsResponse({required this.cpu, required this.fs, required this.mem, required this.net,  String? $type}): $type = $type ?? 'serverMetrics';
   factory ServerMetricsResponse.fromJson(Map<String, dynamic> json) => _$ServerMetricsResponseFromJson(json);
 
  final  double cpu;
@@ -2419,16 +2476,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ServerMetricsResponse&&(identical(other.cpu, cpu) || other.cpu == cpu)&&(identical(other.fs, fs) || other.fs == fs)&&(identical(other.mem, mem) || other.mem == mem)&&(identical(other.net, net) || other.net == net));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is ServerMetricsResponse&&(identical(other.cpu, cpu) || other.cpu == cpu)&&(identical(other.fs, fs) || other.fs == fs)&&(identical(other.mem, mem) || other.mem == mem)&&(identical(other.net, net) || other.net == net));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,cpu,fs,mem,net);
+int get hashCode {
+    return Object.hash(runtimeType,cpu,fs,mem,net);
+}
 
 @override
 String toString() {
-  return 'StreamingStats.serverMetrics(cpu: $cpu, fs: $fs, mem: $mem, net: $net)';
+    return 'StreamingStats.serverMetrics(cpu: $cpu, fs: $fs, mem: $mem, net: $net)';
 }
 
 
@@ -2500,7 +2559,7 @@ $StatsLogNetCopyWith<$Res> get net {
 @JsonSerializable()
 
 class JobQueueResponse implements StreamingStats {
-  const JobQueueResponse({required this.inbox, required this.deliver, final  String? $type}): $type = $type ?? 'jobQueue';
+  const JobQueueResponse({required this.inbox, required this.deliver,  String? $type}): $type = $type ?? 'jobQueue';
   factory JobQueueResponse.fromJson(Map<String, dynamic> json) => _$JobQueueResponseFromJson(json);
 
  final  QueueStatsLogResponseData inbox;
@@ -2523,16 +2582,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is JobQueueResponse&&(identical(other.inbox, inbox) || other.inbox == inbox)&&(identical(other.deliver, deliver) || other.deliver == deliver));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is JobQueueResponse&&(identical(other.inbox, inbox) || other.inbox == inbox)&&(identical(other.deliver, deliver) || other.deliver == deliver));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,inbox,deliver);
+int get hashCode {
+    return Object.hash(runtimeType,inbox,deliver);
+}
 
 @override
 String toString() {
-  return 'StreamingStats.jobQueue(inbox: $inbox, deliver: $deliver)';
+    return 'StreamingStats.jobQueue(inbox: $inbox, deliver: $deliver)';
 }
 
 
@@ -2606,16 +2667,21 @@ $StatsLogFsCopyWith<StatsLogFs> get copyWith => _$StatsLogFsCopyWithImpl<StatsLo
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is StatsLogFs&&(identical(other.r, r) || other.r == r)&&(identical(other.w, w) || other.w == w));
+  final _this = this as StatsLogFs;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is StatsLogFs&&(identical(other.r, _this.r) || other.r == _this.r)&&(identical(other.w, _this.w) || other.w == _this.w));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,r,w);
+int get hashCode {
+  final _this = this as StatsLogFs;
+  return Object.hash(runtimeType,_this.r,_this.w);
+}
 
 @override
 String toString() {
-  return 'StatsLogFs(r: $r, w: $w)';
+  final _this = this as StatsLogFs;
+  return 'StatsLogFs(r: ${_this.r}, w: ${_this.w})';
 }
 
 
@@ -2644,7 +2710,7 @@ class _$StatsLogFsCopyWithImpl<$Res>
 /// Create a copy of StatsLogFs
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? r = null,Object? w = null,}) {
-  return _then(_self.copyWith(
+  return _then(StatsLogFs(
 r: null == r ? _self.r : r // ignore: cast_nullable_to_non_nullable
 as double,w: null == w ? _self.w : w // ignore: cast_nullable_to_non_nullable
 as double,
@@ -2807,16 +2873,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _StatsLogFs&&(identical(other.r, r) || other.r == r)&&(identical(other.w, w) || other.w == w));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _StatsLogFs&&(identical(other.r, r) || other.r == r)&&(identical(other.w, w) || other.w == w));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,r,w);
+int get hashCode {
+    return Object.hash(runtimeType,r,w);
+}
 
 @override
 String toString() {
-  return 'StatsLogFs(r: $r, w: $w)';
+    return 'StatsLogFs(r: $r, w: $w)';
 }
 
 
@@ -2872,16 +2940,21 @@ $StatsLogMemCopyWith<StatsLogMem> get copyWith => _$StatsLogMemCopyWithImpl<Stat
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is StatsLogMem&&(identical(other.used, used) || other.used == used)&&(identical(other.active, active) || other.active == active));
+  final _this = this as StatsLogMem;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is StatsLogMem&&(identical(other.used, _this.used) || other.used == _this.used)&&(identical(other.active, _this.active) || other.active == _this.active));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,used,active);
+int get hashCode {
+  final _this = this as StatsLogMem;
+  return Object.hash(runtimeType,_this.used,_this.active);
+}
 
 @override
 String toString() {
-  return 'StatsLogMem(used: $used, active: $active)';
+  final _this = this as StatsLogMem;
+  return 'StatsLogMem(used: ${_this.used}, active: ${_this.active})';
 }
 
 
@@ -2910,7 +2983,7 @@ class _$StatsLogMemCopyWithImpl<$Res>
 /// Create a copy of StatsLogMem
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? used = null,Object? active = null,}) {
-  return _then(_self.copyWith(
+  return _then(StatsLogMem(
 used: null == used ? _self.used : used // ignore: cast_nullable_to_non_nullable
 as double,active: null == active ? _self.active : active // ignore: cast_nullable_to_non_nullable
 as double,
@@ -3073,16 +3146,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _StatsLogMem&&(identical(other.used, used) || other.used == used)&&(identical(other.active, active) || other.active == active));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _StatsLogMem&&(identical(other.used, used) || other.used == used)&&(identical(other.active, active) || other.active == active));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,used,active);
+int get hashCode {
+    return Object.hash(runtimeType,used,active);
+}
 
 @override
 String toString() {
-  return 'StatsLogMem(used: $used, active: $active)';
+    return 'StatsLogMem(used: $used, active: $active)';
 }
 
 
@@ -3138,16 +3213,21 @@ $StatsLogNetCopyWith<StatsLogNet> get copyWith => _$StatsLogNetCopyWithImpl<Stat
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is StatsLogNet&&(identical(other.rx, rx) || other.rx == rx)&&(identical(other.tx, tx) || other.tx == tx));
+  final _this = this as StatsLogNet;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is StatsLogNet&&(identical(other.rx, _this.rx) || other.rx == _this.rx)&&(identical(other.tx, _this.tx) || other.tx == _this.tx));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,rx,tx);
+int get hashCode {
+  final _this = this as StatsLogNet;
+  return Object.hash(runtimeType,_this.rx,_this.tx);
+}
 
 @override
 String toString() {
-  return 'StatsLogNet(rx: $rx, tx: $tx)';
+  final _this = this as StatsLogNet;
+  return 'StatsLogNet(rx: ${_this.rx}, tx: ${_this.tx})';
 }
 
 
@@ -3176,7 +3256,7 @@ class _$StatsLogNetCopyWithImpl<$Res>
 /// Create a copy of StatsLogNet
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? rx = null,Object? tx = null,}) {
-  return _then(_self.copyWith(
+  return _then(StatsLogNet(
 rx: null == rx ? _self.rx : rx // ignore: cast_nullable_to_non_nullable
 as double,tx: null == tx ? _self.tx : tx // ignore: cast_nullable_to_non_nullable
 as double,
@@ -3339,16 +3419,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _StatsLogNet&&(identical(other.rx, rx) || other.rx == rx)&&(identical(other.tx, tx) || other.tx == tx));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _StatsLogNet&&(identical(other.rx, rx) || other.rx == rx)&&(identical(other.tx, tx) || other.tx == tx));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,rx,tx);
+int get hashCode {
+    return Object.hash(runtimeType,rx,tx);
+}
 
 @override
 String toString() {
-  return 'StatsLogNet(rx: $rx, tx: $tx)';
+    return 'StatsLogNet(rx: $rx, tx: $tx)';
 }
 
 
@@ -3404,16 +3486,21 @@ $QueueStatsLogResponseDataCopyWith<QueueStatsLogResponseData> get copyWith => _$
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is QueueStatsLogResponseData&&(identical(other.activeSincePrevTick, activeSincePrevTick) || other.activeSincePrevTick == activeSincePrevTick)&&(identical(other.active, active) || other.active == active)&&(identical(other.waiting, waiting) || other.waiting == waiting)&&(identical(other.delayed, delayed) || other.delayed == delayed));
+  final _this = this as QueueStatsLogResponseData;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is QueueStatsLogResponseData&&(identical(other.activeSincePrevTick, _this.activeSincePrevTick) || other.activeSincePrevTick == _this.activeSincePrevTick)&&(identical(other.active, _this.active) || other.active == _this.active)&&(identical(other.waiting, _this.waiting) || other.waiting == _this.waiting)&&(identical(other.delayed, _this.delayed) || other.delayed == _this.delayed));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,activeSincePrevTick,active,waiting,delayed);
+int get hashCode {
+  final _this = this as QueueStatsLogResponseData;
+  return Object.hash(runtimeType,_this.activeSincePrevTick,_this.active,_this.waiting,_this.delayed);
+}
 
 @override
 String toString() {
-  return 'QueueStatsLogResponseData(activeSincePrevTick: $activeSincePrevTick, active: $active, waiting: $waiting, delayed: $delayed)';
+  final _this = this as QueueStatsLogResponseData;
+  return 'QueueStatsLogResponseData(activeSincePrevTick: ${_this.activeSincePrevTick}, active: ${_this.active}, waiting: ${_this.waiting}, delayed: ${_this.delayed})';
 }
 
 
@@ -3442,7 +3529,7 @@ class _$QueueStatsLogResponseDataCopyWithImpl<$Res>
 /// Create a copy of QueueStatsLogResponseData
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? activeSincePrevTick = null,Object? active = null,Object? waiting = null,Object? delayed = null,}) {
-  return _then(_self.copyWith(
+  return _then(QueueStatsLogResponseData(
 activeSincePrevTick: null == activeSincePrevTick ? _self.activeSincePrevTick : activeSincePrevTick // ignore: cast_nullable_to_non_nullable
 as int,active: null == active ? _self.active : active // ignore: cast_nullable_to_non_nullable
 as int,waiting: null == waiting ? _self.waiting : waiting // ignore: cast_nullable_to_non_nullable
@@ -3609,16 +3696,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _QueueStatsLogResponseData&&(identical(other.activeSincePrevTick, activeSincePrevTick) || other.activeSincePrevTick == activeSincePrevTick)&&(identical(other.active, active) || other.active == active)&&(identical(other.waiting, waiting) || other.waiting == waiting)&&(identical(other.delayed, delayed) || other.delayed == delayed));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _QueueStatsLogResponseData&&(identical(other.activeSincePrevTick, activeSincePrevTick) || other.activeSincePrevTick == activeSincePrevTick)&&(identical(other.active, active) || other.active == active)&&(identical(other.waiting, waiting) || other.waiting == waiting)&&(identical(other.delayed, delayed) || other.delayed == delayed));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,activeSincePrevTick,active,waiting,delayed);
+int get hashCode {
+    return Object.hash(runtimeType,activeSincePrevTick,active,waiting,delayed);
+}
 
 @override
 String toString() {
-  return 'QueueStatsLogResponseData(activeSincePrevTick: $activeSincePrevTick, active: $active, waiting: $waiting, delayed: $delayed)';
+    return 'QueueStatsLogResponseData(activeSincePrevTick: $activeSincePrevTick, active: $active, waiting: $waiting, delayed: $delayed)';
 }
 
 
@@ -3676,16 +3765,21 @@ $ChatReactCopyWith<ChatReact> get copyWith => _$ChatReactCopyWithImpl<ChatReact>
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ChatReact&&(identical(other.reaction, reaction) || other.reaction == reaction)&&(identical(other.user, user) || other.user == user)&&(identical(other.messageId, messageId) || other.messageId == messageId));
+  final _this = this as ChatReact;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ChatReact&&(identical(other.reaction, _this.reaction) || other.reaction == _this.reaction)&&(identical(other.user, _this.user) || other.user == _this.user)&&(identical(other.messageId, _this.messageId) || other.messageId == _this.messageId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,reaction,user,messageId);
+int get hashCode {
+  final _this = this as ChatReact;
+  return Object.hash(runtimeType,_this.reaction,_this.user,_this.messageId);
+}
 
 @override
 String toString() {
-  return 'ChatReact(reaction: $reaction, user: $user, messageId: $messageId)';
+  final _this = this as ChatReact;
+  return 'ChatReact(reaction: ${_this.reaction}, user: ${_this.user}, messageId: ${_this.messageId})';
 }
 
 
@@ -3714,7 +3808,7 @@ class _$ChatReactCopyWithImpl<$Res>
 /// Create a copy of ChatReact
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? reaction = null,Object? user = freezed,Object? messageId = null,}) {
-  return _then(_self.copyWith(
+  return _then(ChatReact(
 reaction: null == reaction ? _self.reaction : reaction // ignore: cast_nullable_to_non_nullable
 as String,user: freezed == user ? _self.user : user // ignore: cast_nullable_to_non_nullable
 as UserLite?,messageId: null == messageId ? _self.messageId : messageId // ignore: cast_nullable_to_non_nullable
@@ -3891,16 +3985,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatReact&&(identical(other.reaction, reaction) || other.reaction == reaction)&&(identical(other.user, user) || other.user == user)&&(identical(other.messageId, messageId) || other.messageId == messageId));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatReact&&(identical(other.reaction, reaction) || other.reaction == reaction)&&(identical(other.user, user) || other.user == user)&&(identical(other.messageId, messageId) || other.messageId == messageId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,reaction,user,messageId);
+int get hashCode {
+    return Object.hash(runtimeType,reaction,user,messageId);
+}
 
 @override
 String toString() {
-  return 'ChatReact(reaction: $reaction, user: $user, messageId: $messageId)';
+    return 'ChatReact(reaction: $reaction, user: $user, messageId: $messageId)';
 }
 
 

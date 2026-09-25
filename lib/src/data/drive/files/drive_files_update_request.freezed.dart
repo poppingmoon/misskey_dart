@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'drive_files_update_request.dart';
@@ -9,6 +9,7 @@ part of 'drive_files_update_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $DriveFilesUpdateRequestCopyWith<DriveFilesUpdateRequest> get copyWith => _$Driv
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is DriveFilesUpdateRequest&&(identical(other.fileId, fileId) || other.fileId == fileId)&&(identical(other.folderId, folderId) || other.folderId == folderId)&&(identical(other.name, name) || other.name == name)&&(identical(other.isSensitive, isSensitive) || other.isSensitive == isSensitive)&&(identical(other.comment, comment) || other.comment == comment));
+  final _this = this as DriveFilesUpdateRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is DriveFilesUpdateRequest&&(identical(other.fileId, _this.fileId) || other.fileId == _this.fileId)&&(identical(other.folderId, _this.folderId) || other.folderId == _this.folderId)&&(identical(other.name, _this.name) || other.name == _this.name)&&(identical(other.isSensitive, _this.isSensitive) || other.isSensitive == _this.isSensitive)&&(identical(other.comment, _this.comment) || other.comment == _this.comment));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,fileId,folderId,name,isSensitive,comment);
+int get hashCode {
+  final _this = this as DriveFilesUpdateRequest;
+  return Object.hash(runtimeType,_this.fileId,_this.folderId,_this.name,_this.isSensitive,_this.comment);
+}
 
 @override
 String toString() {
-  return 'DriveFilesUpdateRequest(fileId: $fileId, folderId: $folderId, name: $name, isSensitive: $isSensitive, comment: $comment)';
+  final _this = this as DriveFilesUpdateRequest;
+  return 'DriveFilesUpdateRequest(fileId: ${_this.fileId}, folderId: ${_this.folderId}, name: ${_this.name}, isSensitive: ${_this.isSensitive}, comment: ${_this.comment})';
 }
 
 
@@ -66,7 +72,7 @@ class _$DriveFilesUpdateRequestCopyWithImpl<$Res>
 /// Create a copy of DriveFilesUpdateRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? fileId = null,Object? folderId = freezed,Object? name = freezed,Object? isSensitive = freezed,Object? comment = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(DriveFilesUpdateRequest(
 fileId: null == fileId ? _self.fileId : fileId // ignore: cast_nullable_to_non_nullable
 as String,folderId: freezed == folderId ? _self.folderId : folderId // ignore: cast_nullable_to_non_nullable
 as String?,name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
@@ -235,16 +241,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _DriveFilesUpdateRequest&&(identical(other.fileId, fileId) || other.fileId == fileId)&&(identical(other.folderId, folderId) || other.folderId == folderId)&&(identical(other.name, name) || other.name == name)&&(identical(other.isSensitive, isSensitive) || other.isSensitive == isSensitive)&&(identical(other.comment, comment) || other.comment == comment));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _DriveFilesUpdateRequest&&(identical(other.fileId, fileId) || other.fileId == fileId)&&(identical(other.folderId, folderId) || other.folderId == folderId)&&(identical(other.name, name) || other.name == name)&&(identical(other.isSensitive, isSensitive) || other.isSensitive == isSensitive)&&(identical(other.comment, comment) || other.comment == comment));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,fileId,folderId,name,isSensitive,comment);
+int get hashCode {
+    return Object.hash(runtimeType,fileId,folderId,name,isSensitive,comment);
+}
 
 @override
 String toString() {
-  return 'DriveFilesUpdateRequest(fileId: $fileId, folderId: $folderId, name: $name, isSensitive: $isSensitive, comment: $comment)';
+    return 'DriveFilesUpdateRequest(fileId: $fileId, folderId: $folderId, name: $name, isSensitive: $isSensitive, comment: $comment)';
 }
 
 

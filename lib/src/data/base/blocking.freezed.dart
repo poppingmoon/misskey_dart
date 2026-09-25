@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'blocking.dart';
@@ -9,6 +9,7 @@ part of 'blocking.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $BlockingCopyWith<Blocking> get copyWith => _$BlockingCopyWithImpl<Blocking>(thi
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Blocking&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.blockeeId, blockeeId) || other.blockeeId == blockeeId)&&(identical(other.blockee, blockee) || other.blockee == blockee));
+  final _this = this as Blocking;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Blocking&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.createdAt, _this.createdAt) || other.createdAt == _this.createdAt)&&(identical(other.blockeeId, _this.blockeeId) || other.blockeeId == _this.blockeeId)&&(identical(other.blockee, _this.blockee) || other.blockee == _this.blockee));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,createdAt,blockeeId,blockee);
+int get hashCode {
+  final _this = this as Blocking;
+  return Object.hash(runtimeType,_this.id,_this.createdAt,_this.blockeeId,_this.blockee);
+}
 
 @override
 String toString() {
-  return 'Blocking(id: $id, createdAt: $createdAt, blockeeId: $blockeeId, blockee: $blockee)';
+  final _this = this as Blocking;
+  return 'Blocking(id: ${_this.id}, createdAt: ${_this.createdAt}, blockeeId: ${_this.blockeeId}, blockee: ${_this.blockee})';
 }
 
 
@@ -66,7 +72,7 @@ class _$BlockingCopyWithImpl<$Res>
 /// Create a copy of Blocking
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? createdAt = null,Object? blockeeId = null,Object? blockee = null,}) {
-  return _then(_self.copyWith(
+  return _then(Blocking(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime,blockeeId: null == blockeeId ? _self.blockeeId : blockeeId // ignore: cast_nullable_to_non_nullable
@@ -242,16 +248,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Blocking&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.blockeeId, blockeeId) || other.blockeeId == blockeeId)&&(identical(other.blockee, blockee) || other.blockee == blockee));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Blocking&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.blockeeId, blockeeId) || other.blockeeId == blockeeId)&&(identical(other.blockee, blockee) || other.blockee == blockee));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,createdAt,blockeeId,blockee);
+int get hashCode {
+    return Object.hash(runtimeType,id,createdAt,blockeeId,blockee);
+}
 
 @override
 String toString() {
-  return 'Blocking(id: $id, createdAt: $createdAt, blockeeId: $blockeeId, blockee: $blockee)';
+    return 'Blocking(id: $id, createdAt: $createdAt, blockeeId: $blockeeId, blockee: $blockee)';
 }
 
 

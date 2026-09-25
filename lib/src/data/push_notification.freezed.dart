@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'push_notification.dart';
@@ -9,6 +9,7 @@ part of 'push_notification.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 PushNotification _$PushNotificationFromJson(
@@ -55,16 +56,21 @@ $PushNotificationCopyWith<PushNotification> get copyWith => _$PushNotificationCo
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is PushNotification&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.dateTime, dateTime) || other.dateTime == dateTime));
+  final _this = this as PushNotification;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PushNotification&&(identical(other.userId, _this.userId) || other.userId == _this.userId)&&(identical(other.dateTime, _this.dateTime) || other.dateTime == _this.dateTime));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,userId,dateTime);
+int get hashCode {
+  final _this = this as PushNotification;
+  return Object.hash(runtimeType,_this.userId,_this.dateTime);
+}
 
 @override
 String toString() {
-  return 'PushNotification(userId: $userId, dateTime: $dateTime)';
+  final _this = this as PushNotification;
+  return 'PushNotification(userId: ${_this.userId}, dateTime: ${_this.dateTime})';
 }
 
 
@@ -243,7 +249,7 @@ return newChatMessage(_that.body,_that.userId,_that.dateTime);case _:
 @JsonSerializable()
 
 class NotificationPushNotification implements PushNotification {
-  const NotificationPushNotification({required this.body, this.userId, @EpocTimeDateTimeConverter() this.dateTime, final  String? $type}): $type = $type ?? 'notification';
+  const NotificationPushNotification({required this.body, this.userId, @EpocTimeDateTimeConverter() this.dateTime,  String? $type}): $type = $type ?? 'notification';
   factory NotificationPushNotification.fromJson(Map<String, dynamic> json) => _$NotificationPushNotificationFromJson(json);
 
  final  PushNotificationBody body;
@@ -267,16 +273,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotificationPushNotification&&(identical(other.body, body) || other.body == body)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.dateTime, dateTime) || other.dateTime == dateTime));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is NotificationPushNotification&&(identical(other.body, body) || other.body == body)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.dateTime, dateTime) || other.dateTime == dateTime));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,body,userId,dateTime);
+int get hashCode {
+    return Object.hash(runtimeType,body,userId,dateTime);
+}
 
 @override
 String toString() {
-  return 'PushNotification.notification(body: $body, userId: $userId, dateTime: $dateTime)';
+    return 'PushNotification.notification(body: $body, userId: $userId, dateTime: $dateTime)';
 }
 
 
@@ -329,7 +337,7 @@ $PushNotificationBodyCopyWith<$Res> get body {
 @JsonSerializable()
 
 class ReadAllNotificationsPushNotification implements PushNotification {
-  const ReadAllNotificationsPushNotification({this.userId, @EpocTimeDateTimeConverter() this.dateTime, final  String? $type}): $type = $type ?? 'readAllNotifications';
+  const ReadAllNotificationsPushNotification({this.userId, @EpocTimeDateTimeConverter() this.dateTime,  String? $type}): $type = $type ?? 'readAllNotifications';
   factory ReadAllNotificationsPushNotification.fromJson(Map<String, dynamic> json) => _$ReadAllNotificationsPushNotificationFromJson(json);
 
 @override final  String? userId;
@@ -352,16 +360,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReadAllNotificationsPushNotification&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.dateTime, dateTime) || other.dateTime == dateTime));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is ReadAllNotificationsPushNotification&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.dateTime, dateTime) || other.dateTime == dateTime));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,userId,dateTime);
+int get hashCode {
+    return Object.hash(runtimeType,userId,dateTime);
+}
 
 @override
 String toString() {
-  return 'PushNotification.readAllNotifications(userId: $userId, dateTime: $dateTime)';
+    return 'PushNotification.readAllNotifications(userId: $userId, dateTime: $dateTime)';
 }
 
 
@@ -404,7 +414,7 @@ as DateTime?,
 @JsonSerializable()
 
 class NewChatMessagePushNotification implements PushNotification {
-  const NewChatMessagePushNotification({required this.body, this.userId, @EpocTimeDateTimeConverter() this.dateTime, final  String? $type}): $type = $type ?? 'newChatMessage';
+  const NewChatMessagePushNotification({required this.body, this.userId, @EpocTimeDateTimeConverter() this.dateTime,  String? $type}): $type = $type ?? 'newChatMessage';
   factory NewChatMessagePushNotification.fromJson(Map<String, dynamic> json) => _$NewChatMessagePushNotificationFromJson(json);
 
  final  ChatMessage body;
@@ -428,16 +438,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NewChatMessagePushNotification&&(identical(other.body, body) || other.body == body)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.dateTime, dateTime) || other.dateTime == dateTime));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is NewChatMessagePushNotification&&(identical(other.body, body) || other.body == body)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.dateTime, dateTime) || other.dateTime == dateTime));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,body,userId,dateTime);
+int get hashCode {
+    return Object.hash(runtimeType,body,userId,dateTime);
+}
 
 @override
 String toString() {
-  return 'PushNotification.newChatMessage(body: $body, userId: $userId, dateTime: $dateTime)';
+    return 'PushNotification.newChatMessage(body: $body, userId: $userId, dateTime: $dateTime)';
 }
 
 
@@ -490,10 +502,7 @@ $ChatMessageCopyWith<$Res> get body {
 /// @nodoc
 mixin _$PushNotificationBody {
 
- String get id;@DateTimeConverter() DateTime get createdAt;// ignore: invalid_annotation_target
-@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) NotificationType? get type; String? get noteId; String? get followRequestId; String? get reaction; int? get choice; String? get achievement; String? get body; String? get header;@NullableUriConverter() Uri? get icon; String? get appAccessTokenId; ChatJoining? get invitation; String? get userId; UserLite? get user; PushNotificationNote? get note; RolesListResponse? get role; List<INotificationsReaction>? get reactions; List<UserLite>? get users;// ignore: invalid_annotation_target
-@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) UserExportableEntities? get exportedEntity; String? get fileId; String? get message; String? get errorType;// CherryPick
- ScheduledNote? get draft;
+ String get id;@DateTimeConverter() DateTime get createdAt;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) NotificationType? get type; String? get noteId; String? get followRequestId; String? get reaction; int? get choice; String? get achievement; String? get body; String? get header;@NullableUriConverter() Uri? get icon; String? get appAccessTokenId; ChatJoining? get invitation; String? get userId; UserLite? get user; PushNotificationNote? get note; RolesListResponse? get role; List<INotificationsReaction>? get reactions; List<UserLite>? get users;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) UserExportableEntities? get exportedEntity; String? get fileId; String? get message; String? get errorType; ScheduledNote? get draft;
 /// Create a copy of PushNotificationBody
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -506,16 +515,21 @@ $PushNotificationBodyCopyWith<PushNotificationBody> get copyWith => _$PushNotifi
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is PushNotificationBody&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.type, type) || other.type == type)&&(identical(other.noteId, noteId) || other.noteId == noteId)&&(identical(other.followRequestId, followRequestId) || other.followRequestId == followRequestId)&&(identical(other.reaction, reaction) || other.reaction == reaction)&&(identical(other.choice, choice) || other.choice == choice)&&(identical(other.achievement, achievement) || other.achievement == achievement)&&(identical(other.body, body) || other.body == body)&&(identical(other.header, header) || other.header == header)&&(identical(other.icon, icon) || other.icon == icon)&&(identical(other.appAccessTokenId, appAccessTokenId) || other.appAccessTokenId == appAccessTokenId)&&(identical(other.invitation, invitation) || other.invitation == invitation)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.user, user) || other.user == user)&&(identical(other.note, note) || other.note == note)&&(identical(other.role, role) || other.role == role)&&const DeepCollectionEquality().equals(other.reactions, reactions)&&const DeepCollectionEquality().equals(other.users, users)&&(identical(other.exportedEntity, exportedEntity) || other.exportedEntity == exportedEntity)&&(identical(other.fileId, fileId) || other.fileId == fileId)&&(identical(other.message, message) || other.message == message)&&(identical(other.errorType, errorType) || other.errorType == errorType)&&(identical(other.draft, draft) || other.draft == draft));
+  final _this = this as PushNotificationBody;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PushNotificationBody&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.createdAt, _this.createdAt) || other.createdAt == _this.createdAt)&&(identical(other.type, _this.type) || other.type == _this.type)&&(identical(other.noteId, _this.noteId) || other.noteId == _this.noteId)&&(identical(other.followRequestId, _this.followRequestId) || other.followRequestId == _this.followRequestId)&&(identical(other.reaction, _this.reaction) || other.reaction == _this.reaction)&&(identical(other.choice, _this.choice) || other.choice == _this.choice)&&(identical(other.achievement, _this.achievement) || other.achievement == _this.achievement)&&(identical(other.body, _this.body) || other.body == _this.body)&&(identical(other.header, _this.header) || other.header == _this.header)&&(identical(other.icon, _this.icon) || other.icon == _this.icon)&&(identical(other.appAccessTokenId, _this.appAccessTokenId) || other.appAccessTokenId == _this.appAccessTokenId)&&(identical(other.invitation, _this.invitation) || other.invitation == _this.invitation)&&(identical(other.userId, _this.userId) || other.userId == _this.userId)&&(identical(other.user, _this.user) || other.user == _this.user)&&(identical(other.note, _this.note) || other.note == _this.note)&&(identical(other.role, _this.role) || other.role == _this.role)&&const DeepCollectionEquality().equals(other.reactions, _this.reactions)&&const DeepCollectionEquality().equals(other.users, _this.users)&&(identical(other.exportedEntity, _this.exportedEntity) || other.exportedEntity == _this.exportedEntity)&&(identical(other.fileId, _this.fileId) || other.fileId == _this.fileId)&&(identical(other.message, _this.message) || other.message == _this.message)&&(identical(other.errorType, _this.errorType) || other.errorType == _this.errorType)&&(identical(other.draft, _this.draft) || other.draft == _this.draft));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hashAll([runtimeType,id,createdAt,type,noteId,followRequestId,reaction,choice,achievement,body,header,icon,appAccessTokenId,invitation,userId,user,note,role,const DeepCollectionEquality().hash(reactions),const DeepCollectionEquality().hash(users),exportedEntity,fileId,message,errorType,draft]);
+int get hashCode {
+  final _this = this as PushNotificationBody;
+  return Object.hashAll([runtimeType,_this.id,_this.createdAt,_this.type,_this.noteId,_this.followRequestId,_this.reaction,_this.choice,_this.achievement,_this.body,_this.header,_this.icon,_this.appAccessTokenId,_this.invitation,_this.userId,_this.user,_this.note,_this.role,const DeepCollectionEquality().hash(_this.reactions),const DeepCollectionEquality().hash(_this.users),_this.exportedEntity,_this.fileId,_this.message,_this.errorType,_this.draft]);
+}
 
 @override
 String toString() {
-  return 'PushNotificationBody(id: $id, createdAt: $createdAt, type: $type, noteId: $noteId, followRequestId: $followRequestId, reaction: $reaction, choice: $choice, achievement: $achievement, body: $body, header: $header, icon: $icon, appAccessTokenId: $appAccessTokenId, invitation: $invitation, userId: $userId, user: $user, note: $note, role: $role, reactions: $reactions, users: $users, exportedEntity: $exportedEntity, fileId: $fileId, message: $message, errorType: $errorType, draft: $draft)';
+  final _this = this as PushNotificationBody;
+  return 'PushNotificationBody(id: ${_this.id}, createdAt: ${_this.createdAt}, type: ${_this.type}, noteId: ${_this.noteId}, followRequestId: ${_this.followRequestId}, reaction: ${_this.reaction}, choice: ${_this.choice}, achievement: ${_this.achievement}, body: ${_this.body}, header: ${_this.header}, icon: ${_this.icon}, appAccessTokenId: ${_this.appAccessTokenId}, invitation: ${_this.invitation}, userId: ${_this.userId}, user: ${_this.user}, note: ${_this.note}, role: ${_this.role}, reactions: ${_this.reactions}, users: ${_this.users}, exportedEntity: ${_this.exportedEntity}, fileId: ${_this.fileId}, message: ${_this.message}, errorType: ${_this.errorType}, draft: ${_this.draft})';
 }
 
 
@@ -544,7 +558,7 @@ class _$PushNotificationBodyCopyWithImpl<$Res>
 /// Create a copy of PushNotificationBody
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? createdAt = null,Object? type = freezed,Object? noteId = freezed,Object? followRequestId = freezed,Object? reaction = freezed,Object? choice = freezed,Object? achievement = freezed,Object? body = freezed,Object? header = freezed,Object? icon = freezed,Object? appAccessTokenId = freezed,Object? invitation = freezed,Object? userId = freezed,Object? user = freezed,Object? note = freezed,Object? role = freezed,Object? reactions = freezed,Object? users = freezed,Object? exportedEntity = freezed,Object? fileId = freezed,Object? message = freezed,Object? errorType = freezed,Object? draft = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(PushNotificationBody(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
@@ -770,12 +784,11 @@ return $default(_that.id,_that.createdAt,_that.type,_that.noteId,_that.followReq
 @JsonSerializable()
 
 class _PushNotificationBody implements PushNotificationBody {
-  const _PushNotificationBody({required this.id, @DateTimeConverter() required this.createdAt, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type, this.noteId, this.followRequestId, this.reaction, this.choice, this.achievement, this.body, this.header, @NullableUriConverter() this.icon, this.appAccessTokenId, this.invitation, this.userId, this.user, this.note, this.role, final  List<INotificationsReaction>? reactions, final  List<UserLite>? users, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.exportedEntity, this.fileId, this.message, this.errorType, this.draft}): _reactions = reactions,_users = users;
+  const _PushNotificationBody({required this.id, @DateTimeConverter() required this.createdAt, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type, this.noteId, this.followRequestId, this.reaction, this.choice, this.achievement, this.body, this.header, @NullableUriConverter() this.icon, this.appAccessTokenId, this.invitation, this.userId, this.user, this.note, this.role,  List<INotificationsReaction>? reactions,  List<UserLite>? users, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.exportedEntity, this.fileId, this.message, this.errorType, this.draft}): _reactions = reactions,_users = users;
   factory _PushNotificationBody.fromJson(Map<String, dynamic> json) => _$PushNotificationBodyFromJson(json);
 
 @override final  String id;
 @override@DateTimeConverter() final  DateTime createdAt;
-// ignore: invalid_annotation_target
 @override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  NotificationType? type;
 @override final  String? noteId;
 @override final  String? followRequestId;
@@ -809,12 +822,10 @@ class _PushNotificationBody implements PushNotificationBody {
   return EqualUnmodifiableListView(value);
 }
 
-// ignore: invalid_annotation_target
 @override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  UserExportableEntities? exportedEntity;
 @override final  String? fileId;
 @override final  String? message;
 @override final  String? errorType;
-// CherryPick
 @override final  ScheduledNote? draft;
 
 /// Create a copy of PushNotificationBody
@@ -830,16 +841,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PushNotificationBody&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.type, type) || other.type == type)&&(identical(other.noteId, noteId) || other.noteId == noteId)&&(identical(other.followRequestId, followRequestId) || other.followRequestId == followRequestId)&&(identical(other.reaction, reaction) || other.reaction == reaction)&&(identical(other.choice, choice) || other.choice == choice)&&(identical(other.achievement, achievement) || other.achievement == achievement)&&(identical(other.body, body) || other.body == body)&&(identical(other.header, header) || other.header == header)&&(identical(other.icon, icon) || other.icon == icon)&&(identical(other.appAccessTokenId, appAccessTokenId) || other.appAccessTokenId == appAccessTokenId)&&(identical(other.invitation, invitation) || other.invitation == invitation)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.user, user) || other.user == user)&&(identical(other.note, note) || other.note == note)&&(identical(other.role, role) || other.role == role)&&const DeepCollectionEquality().equals(other._reactions, _reactions)&&const DeepCollectionEquality().equals(other._users, _users)&&(identical(other.exportedEntity, exportedEntity) || other.exportedEntity == exportedEntity)&&(identical(other.fileId, fileId) || other.fileId == fileId)&&(identical(other.message, message) || other.message == message)&&(identical(other.errorType, errorType) || other.errorType == errorType)&&(identical(other.draft, draft) || other.draft == draft));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _PushNotificationBody&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.type, type) || other.type == type)&&(identical(other.noteId, noteId) || other.noteId == noteId)&&(identical(other.followRequestId, followRequestId) || other.followRequestId == followRequestId)&&(identical(other.reaction, reaction) || other.reaction == reaction)&&(identical(other.choice, choice) || other.choice == choice)&&(identical(other.achievement, achievement) || other.achievement == achievement)&&(identical(other.body, body) || other.body == body)&&(identical(other.header, header) || other.header == header)&&(identical(other.icon, icon) || other.icon == icon)&&(identical(other.appAccessTokenId, appAccessTokenId) || other.appAccessTokenId == appAccessTokenId)&&(identical(other.invitation, invitation) || other.invitation == invitation)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.user, user) || other.user == user)&&(identical(other.note, note) || other.note == note)&&(identical(other.role, role) || other.role == role)&&const DeepCollectionEquality().equals(other.reactions, _reactions)&&const DeepCollectionEquality().equals(other.users, _users)&&(identical(other.exportedEntity, exportedEntity) || other.exportedEntity == exportedEntity)&&(identical(other.fileId, fileId) || other.fileId == fileId)&&(identical(other.message, message) || other.message == message)&&(identical(other.errorType, errorType) || other.errorType == errorType)&&(identical(other.draft, draft) || other.draft == draft));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hashAll([runtimeType,id,createdAt,type,noteId,followRequestId,reaction,choice,achievement,body,header,icon,appAccessTokenId,invitation,userId,user,note,role,const DeepCollectionEquality().hash(_reactions),const DeepCollectionEquality().hash(_users),exportedEntity,fileId,message,errorType,draft]);
+int get hashCode {
+    return Object.hashAll([runtimeType,id,createdAt,type,noteId,followRequestId,reaction,choice,achievement,body,header,icon,appAccessTokenId,invitation,userId,user,note,role,const DeepCollectionEquality().hash(_reactions),const DeepCollectionEquality().hash(_users),exportedEntity,fileId,message,errorType,draft]);
+}
 
 @override
 String toString() {
-  return 'PushNotificationBody(id: $id, createdAt: $createdAt, type: $type, noteId: $noteId, followRequestId: $followRequestId, reaction: $reaction, choice: $choice, achievement: $achievement, body: $body, header: $header, icon: $icon, appAccessTokenId: $appAccessTokenId, invitation: $invitation, userId: $userId, user: $user, note: $note, role: $role, reactions: $reactions, users: $users, exportedEntity: $exportedEntity, fileId: $fileId, message: $message, errorType: $errorType, draft: $draft)';
+    return 'PushNotificationBody(id: $id, createdAt: $createdAt, type: $type, noteId: $noteId, followRequestId: $followRequestId, reaction: $reaction, choice: $choice, achievement: $achievement, body: $body, header: $header, icon: $icon, appAccessTokenId: $appAccessTokenId, invitation: $invitation, userId: $userId, user: $user, note: $note, role: $role, reactions: $reactions, users: $users, exportedEntity: $exportedEntity, fileId: $fileId, message: $message, errorType: $errorType, draft: $draft)';
 }
 
 
@@ -964,9 +977,7 @@ $ScheduledNoteCopyWith<$Res>? get draft {
 /// @nodoc
 mixin _$PushNotificationNote {
 
- String get id;@DateTimeConverter() DateTime get createdAt;@NullableDateTimeConverter() DateTime? get updatedAt; String? get text; String get userId;// ignore: invalid_annotation_target
-@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) NoteVisibility? get visibility; bool get localOnly; int get renoteCount; int get repliesCount; int? get reactionCount; Map<String, int> get reactions;@EmojisConverter() Map<String, String> get reactionEmojis;@EmojisConverter() Map<String, String> get emojis; List<String> get fileIds; List<DriveFile> get files; String? get replyId; String? get renoteId; String? get channelId;// ignore: invalid_annotation_target
-@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) ReactionAcceptance? get reactionAcceptance; List<String> get visibleUserIds; List<String> get mentions; String? get myReaction; NoteChannelInfo? get channel;@NullableUriConverter() Uri? get uri;@NullableUriConverter() Uri? get url; List<String> get reactionAndUserPairCache; NotePoll? get poll; int? get clippedCount;
+ String get id;@DateTimeConverter() DateTime get createdAt;@NullableDateTimeConverter() DateTime? get updatedAt; String? get text; String get userId;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) NoteVisibility? get visibility; bool get localOnly; int get renoteCount; int get repliesCount; int? get reactionCount; Map<String, int> get reactions;@EmojisConverter() Map<String, String> get reactionEmojis;@EmojisConverter() Map<String, String> get emojis; List<String> get fileIds; List<DriveFile> get files; String? get replyId; String? get renoteId; String? get channelId;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) ReactionAcceptance? get reactionAcceptance; List<String> get visibleUserIds; List<String> get mentions; String? get myReaction; NoteChannelInfo? get channel;@NullableUriConverter() Uri? get uri;@NullableUriConverter() Uri? get url; List<String> get reactionAndUserPairCache; NotePoll? get poll; int? get clippedCount;
 /// Create a copy of PushNotificationNote
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -979,16 +990,21 @@ $PushNotificationNoteCopyWith<PushNotificationNote> get copyWith => _$PushNotifi
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is PushNotificationNote&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.text, text) || other.text == text)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.visibility, visibility) || other.visibility == visibility)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&(identical(other.renoteCount, renoteCount) || other.renoteCount == renoteCount)&&(identical(other.repliesCount, repliesCount) || other.repliesCount == repliesCount)&&(identical(other.reactionCount, reactionCount) || other.reactionCount == reactionCount)&&const DeepCollectionEquality().equals(other.reactions, reactions)&&const DeepCollectionEquality().equals(other.reactionEmojis, reactionEmojis)&&const DeepCollectionEquality().equals(other.emojis, emojis)&&const DeepCollectionEquality().equals(other.fileIds, fileIds)&&const DeepCollectionEquality().equals(other.files, files)&&(identical(other.replyId, replyId) || other.replyId == replyId)&&(identical(other.renoteId, renoteId) || other.renoteId == renoteId)&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.reactionAcceptance, reactionAcceptance) || other.reactionAcceptance == reactionAcceptance)&&const DeepCollectionEquality().equals(other.visibleUserIds, visibleUserIds)&&const DeepCollectionEquality().equals(other.mentions, mentions)&&(identical(other.myReaction, myReaction) || other.myReaction == myReaction)&&(identical(other.channel, channel) || other.channel == channel)&&(identical(other.uri, uri) || other.uri == uri)&&(identical(other.url, url) || other.url == url)&&const DeepCollectionEquality().equals(other.reactionAndUserPairCache, reactionAndUserPairCache)&&(identical(other.poll, poll) || other.poll == poll)&&(identical(other.clippedCount, clippedCount) || other.clippedCount == clippedCount));
+  final _this = this as PushNotificationNote;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PushNotificationNote&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.createdAt, _this.createdAt) || other.createdAt == _this.createdAt)&&(identical(other.updatedAt, _this.updatedAt) || other.updatedAt == _this.updatedAt)&&(identical(other.text, _this.text) || other.text == _this.text)&&(identical(other.userId, _this.userId) || other.userId == _this.userId)&&(identical(other.visibility, _this.visibility) || other.visibility == _this.visibility)&&(identical(other.localOnly, _this.localOnly) || other.localOnly == _this.localOnly)&&(identical(other.renoteCount, _this.renoteCount) || other.renoteCount == _this.renoteCount)&&(identical(other.repliesCount, _this.repliesCount) || other.repliesCount == _this.repliesCount)&&(identical(other.reactionCount, _this.reactionCount) || other.reactionCount == _this.reactionCount)&&const DeepCollectionEquality().equals(other.reactions, _this.reactions)&&const DeepCollectionEquality().equals(other.reactionEmojis, _this.reactionEmojis)&&const DeepCollectionEquality().equals(other.emojis, _this.emojis)&&const DeepCollectionEquality().equals(other.fileIds, _this.fileIds)&&const DeepCollectionEquality().equals(other.files, _this.files)&&(identical(other.replyId, _this.replyId) || other.replyId == _this.replyId)&&(identical(other.renoteId, _this.renoteId) || other.renoteId == _this.renoteId)&&(identical(other.channelId, _this.channelId) || other.channelId == _this.channelId)&&(identical(other.reactionAcceptance, _this.reactionAcceptance) || other.reactionAcceptance == _this.reactionAcceptance)&&const DeepCollectionEquality().equals(other.visibleUserIds, _this.visibleUserIds)&&const DeepCollectionEquality().equals(other.mentions, _this.mentions)&&(identical(other.myReaction, _this.myReaction) || other.myReaction == _this.myReaction)&&(identical(other.channel, _this.channel) || other.channel == _this.channel)&&(identical(other.uri, _this.uri) || other.uri == _this.uri)&&(identical(other.url, _this.url) || other.url == _this.url)&&const DeepCollectionEquality().equals(other.reactionAndUserPairCache, _this.reactionAndUserPairCache)&&(identical(other.poll, _this.poll) || other.poll == _this.poll)&&(identical(other.clippedCount, _this.clippedCount) || other.clippedCount == _this.clippedCount));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hashAll([runtimeType,id,createdAt,updatedAt,text,userId,visibility,localOnly,renoteCount,repliesCount,reactionCount,const DeepCollectionEquality().hash(reactions),const DeepCollectionEquality().hash(reactionEmojis),const DeepCollectionEquality().hash(emojis),const DeepCollectionEquality().hash(fileIds),const DeepCollectionEquality().hash(files),replyId,renoteId,channelId,reactionAcceptance,const DeepCollectionEquality().hash(visibleUserIds),const DeepCollectionEquality().hash(mentions),myReaction,channel,uri,url,const DeepCollectionEquality().hash(reactionAndUserPairCache),poll,clippedCount]);
+int get hashCode {
+  final _this = this as PushNotificationNote;
+  return Object.hashAll([runtimeType,_this.id,_this.createdAt,_this.updatedAt,_this.text,_this.userId,_this.visibility,_this.localOnly,_this.renoteCount,_this.repliesCount,_this.reactionCount,const DeepCollectionEquality().hash(_this.reactions),const DeepCollectionEquality().hash(_this.reactionEmojis),const DeepCollectionEquality().hash(_this.emojis),const DeepCollectionEquality().hash(_this.fileIds),const DeepCollectionEquality().hash(_this.files),_this.replyId,_this.renoteId,_this.channelId,_this.reactionAcceptance,const DeepCollectionEquality().hash(_this.visibleUserIds),const DeepCollectionEquality().hash(_this.mentions),_this.myReaction,_this.channel,_this.uri,_this.url,const DeepCollectionEquality().hash(_this.reactionAndUserPairCache),_this.poll,_this.clippedCount]);
+}
 
 @override
 String toString() {
-  return 'PushNotificationNote(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, text: $text, userId: $userId, visibility: $visibility, localOnly: $localOnly, renoteCount: $renoteCount, repliesCount: $repliesCount, reactionCount: $reactionCount, reactions: $reactions, reactionEmojis: $reactionEmojis, emojis: $emojis, fileIds: $fileIds, files: $files, replyId: $replyId, renoteId: $renoteId, channelId: $channelId, reactionAcceptance: $reactionAcceptance, visibleUserIds: $visibleUserIds, mentions: $mentions, myReaction: $myReaction, channel: $channel, uri: $uri, url: $url, reactionAndUserPairCache: $reactionAndUserPairCache, poll: $poll, clippedCount: $clippedCount)';
+  final _this = this as PushNotificationNote;
+  return 'PushNotificationNote(id: ${_this.id}, createdAt: ${_this.createdAt}, updatedAt: ${_this.updatedAt}, text: ${_this.text}, userId: ${_this.userId}, visibility: ${_this.visibility}, localOnly: ${_this.localOnly}, renoteCount: ${_this.renoteCount}, repliesCount: ${_this.repliesCount}, reactionCount: ${_this.reactionCount}, reactions: ${_this.reactions}, reactionEmojis: ${_this.reactionEmojis}, emojis: ${_this.emojis}, fileIds: ${_this.fileIds}, files: ${_this.files}, replyId: ${_this.replyId}, renoteId: ${_this.renoteId}, channelId: ${_this.channelId}, reactionAcceptance: ${_this.reactionAcceptance}, visibleUserIds: ${_this.visibleUserIds}, mentions: ${_this.mentions}, myReaction: ${_this.myReaction}, channel: ${_this.channel}, uri: ${_this.uri}, url: ${_this.url}, reactionAndUserPairCache: ${_this.reactionAndUserPairCache}, poll: ${_this.poll}, clippedCount: ${_this.clippedCount})';
 }
 
 
@@ -1017,7 +1033,7 @@ class _$PushNotificationNoteCopyWithImpl<$Res>
 /// Create a copy of PushNotificationNote
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? createdAt = null,Object? updatedAt = freezed,Object? text = freezed,Object? userId = null,Object? visibility = freezed,Object? localOnly = null,Object? renoteCount = null,Object? repliesCount = null,Object? reactionCount = freezed,Object? reactions = null,Object? reactionEmojis = null,Object? emojis = null,Object? fileIds = null,Object? files = null,Object? replyId = freezed,Object? renoteId = freezed,Object? channelId = freezed,Object? reactionAcceptance = freezed,Object? visibleUserIds = null,Object? mentions = null,Object? myReaction = freezed,Object? channel = freezed,Object? uri = freezed,Object? url = freezed,Object? reactionAndUserPairCache = null,Object? poll = freezed,Object? clippedCount = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(PushNotificationNote(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime,updatedAt: freezed == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
@@ -1211,7 +1227,7 @@ return $default(_that.id,_that.createdAt,_that.updatedAt,_that.text,_that.userId
 @JsonSerializable()
 
 class _PushNotificationNote implements PushNotificationNote {
-  const _PushNotificationNote({required this.id, @DateTimeConverter() required this.createdAt, @NullableDateTimeConverter() this.updatedAt, this.text, required this.userId, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.visibility, this.localOnly = false, this.renoteCount = 0, this.repliesCount = 0, this.reactionCount, final  Map<String, int> reactions = const {}, @EmojisConverter() final  Map<String, String> reactionEmojis = const {}, @EmojisConverter() final  Map<String, String> emojis = const {}, final  List<String> fileIds = const [], final  List<DriveFile> files = const [], this.replyId, this.renoteId, this.channelId, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.reactionAcceptance, final  List<String> visibleUserIds = const [], final  List<String> mentions = const [], this.myReaction, this.channel, @NullableUriConverter() this.uri, @NullableUriConverter() this.url, final  List<String> reactionAndUserPairCache = const [], this.poll, this.clippedCount}): _reactions = reactions,_reactionEmojis = reactionEmojis,_emojis = emojis,_fileIds = fileIds,_files = files,_visibleUserIds = visibleUserIds,_mentions = mentions,_reactionAndUserPairCache = reactionAndUserPairCache;
+  const _PushNotificationNote({required this.id, @DateTimeConverter() required this.createdAt, @NullableDateTimeConverter() this.updatedAt, this.text, required this.userId, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.visibility, this.localOnly = false, this.renoteCount = 0, this.repliesCount = 0, this.reactionCount,  Map<String, int> reactions = const {}, @EmojisConverter()  Map<String, String> reactionEmojis = const {}, @EmojisConverter()  Map<String, String> emojis = const {},  List<String> fileIds = const [],  List<DriveFile> files = const [], this.replyId, this.renoteId, this.channelId, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.reactionAcceptance,  List<String> visibleUserIds = const [],  List<String> mentions = const [], this.myReaction, this.channel, @NullableUriConverter() this.uri, @NullableUriConverter() this.url,  List<String> reactionAndUserPairCache = const [], this.poll, this.clippedCount}): _reactions = reactions,_reactionEmojis = reactionEmojis,_emojis = emojis,_fileIds = fileIds,_files = files,_visibleUserIds = visibleUserIds,_mentions = mentions,_reactionAndUserPairCache = reactionAndUserPairCache;
   factory _PushNotificationNote.fromJson(Map<String, dynamic> json) => _$PushNotificationNoteFromJson(json);
 
 @override final  String id;
@@ -1219,7 +1235,6 @@ class _PushNotificationNote implements PushNotificationNote {
 @override@NullableDateTimeConverter() final  DateTime? updatedAt;
 @override final  String? text;
 @override final  String userId;
-// ignore: invalid_annotation_target
 @override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  NoteVisibility? visibility;
 @override@JsonKey() final  bool localOnly;
 @override@JsonKey() final  int renoteCount;
@@ -1263,7 +1278,6 @@ class _PushNotificationNote implements PushNotificationNote {
 @override final  String? replyId;
 @override final  String? renoteId;
 @override final  String? channelId;
-// ignore: invalid_annotation_target
 @override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  ReactionAcceptance? reactionAcceptance;
  final  List<String> _visibleUserIds;
 @override@JsonKey() List<String> get visibleUserIds {
@@ -1306,16 +1320,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PushNotificationNote&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.text, text) || other.text == text)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.visibility, visibility) || other.visibility == visibility)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&(identical(other.renoteCount, renoteCount) || other.renoteCount == renoteCount)&&(identical(other.repliesCount, repliesCount) || other.repliesCount == repliesCount)&&(identical(other.reactionCount, reactionCount) || other.reactionCount == reactionCount)&&const DeepCollectionEquality().equals(other._reactions, _reactions)&&const DeepCollectionEquality().equals(other._reactionEmojis, _reactionEmojis)&&const DeepCollectionEquality().equals(other._emojis, _emojis)&&const DeepCollectionEquality().equals(other._fileIds, _fileIds)&&const DeepCollectionEquality().equals(other._files, _files)&&(identical(other.replyId, replyId) || other.replyId == replyId)&&(identical(other.renoteId, renoteId) || other.renoteId == renoteId)&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.reactionAcceptance, reactionAcceptance) || other.reactionAcceptance == reactionAcceptance)&&const DeepCollectionEquality().equals(other._visibleUserIds, _visibleUserIds)&&const DeepCollectionEquality().equals(other._mentions, _mentions)&&(identical(other.myReaction, myReaction) || other.myReaction == myReaction)&&(identical(other.channel, channel) || other.channel == channel)&&(identical(other.uri, uri) || other.uri == uri)&&(identical(other.url, url) || other.url == url)&&const DeepCollectionEquality().equals(other._reactionAndUserPairCache, _reactionAndUserPairCache)&&(identical(other.poll, poll) || other.poll == poll)&&(identical(other.clippedCount, clippedCount) || other.clippedCount == clippedCount));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _PushNotificationNote&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.text, text) || other.text == text)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.visibility, visibility) || other.visibility == visibility)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&(identical(other.renoteCount, renoteCount) || other.renoteCount == renoteCount)&&(identical(other.repliesCount, repliesCount) || other.repliesCount == repliesCount)&&(identical(other.reactionCount, reactionCount) || other.reactionCount == reactionCount)&&const DeepCollectionEquality().equals(other.reactions, _reactions)&&const DeepCollectionEquality().equals(other.reactionEmojis, _reactionEmojis)&&const DeepCollectionEquality().equals(other.emojis, _emojis)&&const DeepCollectionEquality().equals(other.fileIds, _fileIds)&&const DeepCollectionEquality().equals(other.files, _files)&&(identical(other.replyId, replyId) || other.replyId == replyId)&&(identical(other.renoteId, renoteId) || other.renoteId == renoteId)&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.reactionAcceptance, reactionAcceptance) || other.reactionAcceptance == reactionAcceptance)&&const DeepCollectionEquality().equals(other.visibleUserIds, _visibleUserIds)&&const DeepCollectionEquality().equals(other.mentions, _mentions)&&(identical(other.myReaction, myReaction) || other.myReaction == myReaction)&&(identical(other.channel, channel) || other.channel == channel)&&(identical(other.uri, uri) || other.uri == uri)&&(identical(other.url, url) || other.url == url)&&const DeepCollectionEquality().equals(other.reactionAndUserPairCache, _reactionAndUserPairCache)&&(identical(other.poll, poll) || other.poll == poll)&&(identical(other.clippedCount, clippedCount) || other.clippedCount == clippedCount));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hashAll([runtimeType,id,createdAt,updatedAt,text,userId,visibility,localOnly,renoteCount,repliesCount,reactionCount,const DeepCollectionEquality().hash(_reactions),const DeepCollectionEquality().hash(_reactionEmojis),const DeepCollectionEquality().hash(_emojis),const DeepCollectionEquality().hash(_fileIds),const DeepCollectionEquality().hash(_files),replyId,renoteId,channelId,reactionAcceptance,const DeepCollectionEquality().hash(_visibleUserIds),const DeepCollectionEquality().hash(_mentions),myReaction,channel,uri,url,const DeepCollectionEquality().hash(_reactionAndUserPairCache),poll,clippedCount]);
+int get hashCode {
+    return Object.hashAll([runtimeType,id,createdAt,updatedAt,text,userId,visibility,localOnly,renoteCount,repliesCount,reactionCount,const DeepCollectionEquality().hash(_reactions),const DeepCollectionEquality().hash(_reactionEmojis),const DeepCollectionEquality().hash(_emojis),const DeepCollectionEquality().hash(_fileIds),const DeepCollectionEquality().hash(_files),replyId,renoteId,channelId,reactionAcceptance,const DeepCollectionEquality().hash(_visibleUserIds),const DeepCollectionEquality().hash(_mentions),myReaction,channel,uri,url,const DeepCollectionEquality().hash(_reactionAndUserPairCache),poll,clippedCount]);
+}
 
 @override
 String toString() {
-  return 'PushNotificationNote(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, text: $text, userId: $userId, visibility: $visibility, localOnly: $localOnly, renoteCount: $renoteCount, repliesCount: $repliesCount, reactionCount: $reactionCount, reactions: $reactions, reactionEmojis: $reactionEmojis, emojis: $emojis, fileIds: $fileIds, files: $files, replyId: $replyId, renoteId: $renoteId, channelId: $channelId, reactionAcceptance: $reactionAcceptance, visibleUserIds: $visibleUserIds, mentions: $mentions, myReaction: $myReaction, channel: $channel, uri: $uri, url: $url, reactionAndUserPairCache: $reactionAndUserPairCache, poll: $poll, clippedCount: $clippedCount)';
+    return 'PushNotificationNote(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, text: $text, userId: $userId, visibility: $visibility, localOnly: $localOnly, renoteCount: $renoteCount, repliesCount: $repliesCount, reactionCount: $reactionCount, reactions: $reactions, reactionEmojis: $reactionEmojis, emojis: $emojis, fileIds: $fileIds, files: $files, replyId: $replyId, renoteId: $renoteId, channelId: $channelId, reactionAcceptance: $reactionAcceptance, visibleUserIds: $visibleUserIds, mentions: $mentions, myReaction: $myReaction, channel: $channel, uri: $uri, url: $url, reactionAndUserPairCache: $reactionAndUserPairCache, poll: $poll, clippedCount: $clippedCount)';
 }
 
 

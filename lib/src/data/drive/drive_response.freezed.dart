@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'drive_response.dart';
@@ -9,6 +9,7 @@ part of 'drive_response.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $DriveResponseCopyWith<DriveResponse> get copyWith => _$DriveResponseCopyWithImp
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is DriveResponse&&(identical(other.capacity, capacity) || other.capacity == capacity)&&(identical(other.usage, usage) || other.usage == usage));
+  final _this = this as DriveResponse;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is DriveResponse&&(identical(other.capacity, _this.capacity) || other.capacity == _this.capacity)&&(identical(other.usage, _this.usage) || other.usage == _this.usage));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,capacity,usage);
+int get hashCode {
+  final _this = this as DriveResponse;
+  return Object.hash(runtimeType,_this.capacity,_this.usage);
+}
 
 @override
 String toString() {
-  return 'DriveResponse(capacity: $capacity, usage: $usage)';
+  final _this = this as DriveResponse;
+  return 'DriveResponse(capacity: ${_this.capacity}, usage: ${_this.usage})';
 }
 
 
@@ -66,7 +72,7 @@ class _$DriveResponseCopyWithImpl<$Res>
 /// Create a copy of DriveResponse
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? capacity = null,Object? usage = null,}) {
-  return _then(_self.copyWith(
+  return _then(DriveResponse(
 capacity: null == capacity ? _self.capacity : capacity // ignore: cast_nullable_to_non_nullable
 as int,usage: null == usage ? _self.usage : usage // ignore: cast_nullable_to_non_nullable
 as int,
@@ -229,16 +235,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _DriveResponse&&(identical(other.capacity, capacity) || other.capacity == capacity)&&(identical(other.usage, usage) || other.usage == usage));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _DriveResponse&&(identical(other.capacity, capacity) || other.capacity == capacity)&&(identical(other.usage, usage) || other.usage == usage));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,capacity,usage);
+int get hashCode {
+    return Object.hash(runtimeType,capacity,usage);
+}
 
 @override
 String toString() {
-  return 'DriveResponse(capacity: $capacity, usage: $usage)';
+    return 'DriveResponse(capacity: $capacity, usage: $usage)';
 }
 
 

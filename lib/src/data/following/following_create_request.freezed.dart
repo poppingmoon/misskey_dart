@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'following_create_request.dart';
@@ -9,6 +9,7 @@ part of 'following_create_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $FollowingCreateRequestCopyWith<FollowingCreateRequest> get copyWith => _$Follow
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is FollowingCreateRequest&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.withReplies, withReplies) || other.withReplies == withReplies));
+  final _this = this as FollowingCreateRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is FollowingCreateRequest&&(identical(other.userId, _this.userId) || other.userId == _this.userId)&&(identical(other.withReplies, _this.withReplies) || other.withReplies == _this.withReplies));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,userId,withReplies);
+int get hashCode {
+  final _this = this as FollowingCreateRequest;
+  return Object.hash(runtimeType,_this.userId,_this.withReplies);
+}
 
 @override
 String toString() {
-  return 'FollowingCreateRequest(userId: $userId, withReplies: $withReplies)';
+  final _this = this as FollowingCreateRequest;
+  return 'FollowingCreateRequest(userId: ${_this.userId}, withReplies: ${_this.withReplies})';
 }
 
 
@@ -66,7 +72,7 @@ class _$FollowingCreateRequestCopyWithImpl<$Res>
 /// Create a copy of FollowingCreateRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? userId = null,Object? withReplies = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(FollowingCreateRequest(
 userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
 as String,withReplies: freezed == withReplies ? _self.withReplies : withReplies // ignore: cast_nullable_to_non_nullable
 as bool?,
@@ -229,16 +235,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _FollowingCreateRequest&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.withReplies, withReplies) || other.withReplies == withReplies));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _FollowingCreateRequest&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.withReplies, withReplies) || other.withReplies == withReplies));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,userId,withReplies);
+int get hashCode {
+    return Object.hash(runtimeType,userId,withReplies);
+}
 
 @override
 String toString() {
-  return 'FollowingCreateRequest(userId: $userId, withReplies: $withReplies)';
+    return 'FollowingCreateRequest(userId: $userId, withReplies: $withReplies)';
 }
 
 

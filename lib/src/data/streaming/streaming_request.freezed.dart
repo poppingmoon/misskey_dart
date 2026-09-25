@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'streaming_request.dart';
@@ -9,6 +9,7 @@ part of 'streaming_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $StreamingRequestCopyWith<StreamingRequest> get copyWith => _$StreamingRequestCo
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is StreamingRequest&&(identical(other.type, type) || other.type == type)&&(identical(other.body, body) || other.body == body));
+  final _this = this as StreamingRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is StreamingRequest&&(identical(other.type, _this.type) || other.type == _this.type)&&(identical(other.body, _this.body) || other.body == _this.body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,type,body);
+int get hashCode {
+  final _this = this as StreamingRequest;
+  return Object.hash(runtimeType,_this.type,_this.body);
+}
 
 @override
 String toString() {
-  return 'StreamingRequest(type: $type, body: $body)';
+  final _this = this as StreamingRequest;
+  return 'StreamingRequest(type: ${_this.type}, body: ${_this.body})';
 }
 
 
@@ -66,7 +72,7 @@ class _$StreamingRequestCopyWithImpl<$Res>
 /// Create a copy of StreamingRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? type = null,Object? body = null,}) {
-  return _then(_self.copyWith(
+  return _then(StreamingRequest(
 type: null == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
 as StreamingRequestType,body: null == body ? _self.body : body // ignore: cast_nullable_to_non_nullable
 as StreamingRequestBody,
@@ -238,16 +244,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _StreamingRequest&&(identical(other.type, type) || other.type == type)&&(identical(other.body, body) || other.body == body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _StreamingRequest&&(identical(other.type, type) || other.type == type)&&(identical(other.body, body) || other.body == body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,type,body);
+int get hashCode {
+    return Object.hash(runtimeType,type,body);
+}
 
 @override
 String toString() {
-  return 'StreamingRequest(type: $type, body: $body)';
+    return 'StreamingRequest(type: $type, body: $body)';
 }
 
 
@@ -317,16 +325,21 @@ $StreamingRequestBodyCopyWith<StreamingRequestBody> get copyWith => _$StreamingR
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is StreamingRequestBody&&(identical(other.channel, channel) || other.channel == channel)&&(identical(other.id, id) || other.id == id)&&const DeepCollectionEquality().equals(other.params, params)&&(identical(other.type, type) || other.type == type)&&const DeepCollectionEquality().equals(other.body, body));
+  final _this = this as StreamingRequestBody;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is StreamingRequestBody&&(identical(other.channel, _this.channel) || other.channel == _this.channel)&&(identical(other.id, _this.id) || other.id == _this.id)&&const DeepCollectionEquality().equals(other.params, _this.params)&&(identical(other.type, _this.type) || other.type == _this.type)&&const DeepCollectionEquality().equals(other.body, _this.body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,channel,id,const DeepCollectionEquality().hash(params),type,const DeepCollectionEquality().hash(body));
+int get hashCode {
+  final _this = this as StreamingRequestBody;
+  return Object.hash(runtimeType,_this.channel,_this.id,const DeepCollectionEquality().hash(_this.params),_this.type,const DeepCollectionEquality().hash(_this.body));
+}
 
 @override
 String toString() {
-  return 'StreamingRequestBody(channel: $channel, id: $id, params: $params, type: $type, body: $body)';
+  final _this = this as StreamingRequestBody;
+  return 'StreamingRequestBody(channel: ${_this.channel}, id: ${_this.id}, params: ${_this.params}, type: ${_this.type}, body: ${_this.body})';
 }
 
 
@@ -355,7 +368,7 @@ class _$StreamingRequestBodyCopyWithImpl<$Res>
 /// Create a copy of StreamingRequestBody
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? channel = freezed,Object? id = null,Object? params = freezed,Object? type = freezed,Object? body = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(StreamingRequestBody(
 channel: freezed == channel ? _self.channel : channel // ignore: cast_nullable_to_non_nullable
 as Channel?,id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,params: freezed == params ? _self.params : params // ignore: cast_nullable_to_non_nullable
@@ -513,7 +526,7 @@ return $default(_that.channel,_that.id,_that.params,_that.type,_that.body);case 
 @JsonSerializable()
 
 class _StreamingRequestBody implements StreamingRequestBody {
-  const _StreamingRequestBody({@ChannelJsonConverter() this.channel, required this.id, final  Map<String, dynamic>? params, this.type, this.body}): _params = params;
+  const _StreamingRequestBody({@ChannelJsonConverter() this.channel, required this.id,  Map<String, dynamic>? params, this.type, this.body}): _params = params;
   factory _StreamingRequestBody.fromJson(Map<String, dynamic> json) => _$StreamingRequestBodyFromJson(json);
 
 @override@ChannelJsonConverter() final  Channel? channel;
@@ -548,16 +561,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _StreamingRequestBody&&(identical(other.channel, channel) || other.channel == channel)&&(identical(other.id, id) || other.id == id)&&const DeepCollectionEquality().equals(other._params, _params)&&(identical(other.type, type) || other.type == type)&&const DeepCollectionEquality().equals(other.body, body));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _StreamingRequestBody&&(identical(other.channel, channel) || other.channel == channel)&&(identical(other.id, id) || other.id == id)&&const DeepCollectionEquality().equals(other.params, _params)&&(identical(other.type, type) || other.type == type)&&const DeepCollectionEquality().equals(other.body, body));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,channel,id,const DeepCollectionEquality().hash(_params),type,const DeepCollectionEquality().hash(body));
+int get hashCode {
+    return Object.hash(runtimeType,channel,id,const DeepCollectionEquality().hash(_params),type,const DeepCollectionEquality().hash(body));
+}
 
 @override
 String toString() {
-  return 'StreamingRequestBody(channel: $channel, id: $id, params: $params, type: $type, body: $body)';
+    return 'StreamingRequestBody(channel: $channel, id: $id, params: $params, type: $type, body: $body)';
 }
 
 

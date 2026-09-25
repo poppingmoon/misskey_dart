@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'drive_files_attached_notes_request.dart';
@@ -9,14 +9,14 @@ part of 'drive_files_attached_notes_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
 /// @nodoc
 mixin _$DriveFilesAttachedNotesRequest {
 
- String get fileId;// 以下 Misskey 2023.10.0 で追加
- int? get limit; String? get sinceId; String? get untilId;@EpocTimeDateTimeConverter() DateTime? get sinceDate;@EpocTimeDateTimeConverter() DateTime? get untilDate;
+ String get fileId; int? get limit; String? get sinceId; String? get untilId;@EpocTimeDateTimeConverter() DateTime? get sinceDate;@EpocTimeDateTimeConverter() DateTime? get untilDate;
 /// Create a copy of DriveFilesAttachedNotesRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -29,16 +29,21 @@ $DriveFilesAttachedNotesRequestCopyWith<DriveFilesAttachedNotesRequest> get copy
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is DriveFilesAttachedNotesRequest&&(identical(other.fileId, fileId) || other.fileId == fileId)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate));
+  final _this = this as DriveFilesAttachedNotesRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is DriveFilesAttachedNotesRequest&&(identical(other.fileId, _this.fileId) || other.fileId == _this.fileId)&&(identical(other.limit, _this.limit) || other.limit == _this.limit)&&(identical(other.sinceId, _this.sinceId) || other.sinceId == _this.sinceId)&&(identical(other.untilId, _this.untilId) || other.untilId == _this.untilId)&&(identical(other.sinceDate, _this.sinceDate) || other.sinceDate == _this.sinceDate)&&(identical(other.untilDate, _this.untilDate) || other.untilDate == _this.untilDate));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,fileId,limit,sinceId,untilId,sinceDate,untilDate);
+int get hashCode {
+  final _this = this as DriveFilesAttachedNotesRequest;
+  return Object.hash(runtimeType,_this.fileId,_this.limit,_this.sinceId,_this.untilId,_this.sinceDate,_this.untilDate);
+}
 
 @override
 String toString() {
-  return 'DriveFilesAttachedNotesRequest(fileId: $fileId, limit: $limit, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate)';
+  final _this = this as DriveFilesAttachedNotesRequest;
+  return 'DriveFilesAttachedNotesRequest(fileId: ${_this.fileId}, limit: ${_this.limit}, sinceId: ${_this.sinceId}, untilId: ${_this.untilId}, sinceDate: ${_this.sinceDate}, untilDate: ${_this.untilDate})';
 }
 
 
@@ -67,7 +72,7 @@ class _$DriveFilesAttachedNotesRequestCopyWithImpl<$Res>
 /// Create a copy of DriveFilesAttachedNotesRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? fileId = null,Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(DriveFilesAttachedNotesRequest(
 fileId: null == fileId ? _self.fileId : fileId // ignore: cast_nullable_to_non_nullable
 as String,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
@@ -219,7 +224,6 @@ class _DriveFilesAttachedNotesRequest implements DriveFilesAttachedNotesRequest 
   factory _DriveFilesAttachedNotesRequest.fromJson(Map<String, dynamic> json) => _$DriveFilesAttachedNotesRequestFromJson(json);
 
 @override final  String fileId;
-// 以下 Misskey 2023.10.0 で追加
 @override final  int? limit;
 @override final  String? sinceId;
 @override final  String? untilId;
@@ -239,16 +243,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _DriveFilesAttachedNotesRequest&&(identical(other.fileId, fileId) || other.fileId == fileId)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _DriveFilesAttachedNotesRequest&&(identical(other.fileId, fileId) || other.fileId == fileId)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,fileId,limit,sinceId,untilId,sinceDate,untilDate);
+int get hashCode {
+    return Object.hash(runtimeType,fileId,limit,sinceId,untilId,sinceDate,untilDate);
+}
 
 @override
 String toString() {
-  return 'DriveFilesAttachedNotesRequest(fileId: $fileId, limit: $limit, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate)';
+    return 'DriveFilesAttachedNotesRequest(fileId: $fileId, limit: $limit, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate)';
 }
 
 

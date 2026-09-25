@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'note_schedule.dart';
@@ -9,6 +9,7 @@ part of 'note_schedule.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $NoteScheduleCopyWith<NoteSchedule> get copyWith => _$NoteScheduleCopyWithImpl<N
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NoteSchedule&&(identical(other.id, id) || other.id == id)&&(identical(other.note, note) || other.note == note)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.scheduledAt, scheduledAt) || other.scheduledAt == scheduledAt));
+  final _this = this as NoteSchedule;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NoteSchedule&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.note, _this.note) || other.note == _this.note)&&(identical(other.userId, _this.userId) || other.userId == _this.userId)&&(identical(other.scheduledAt, _this.scheduledAt) || other.scheduledAt == _this.scheduledAt));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,note,userId,scheduledAt);
+int get hashCode {
+  final _this = this as NoteSchedule;
+  return Object.hash(runtimeType,_this.id,_this.note,_this.userId,_this.scheduledAt);
+}
 
 @override
 String toString() {
-  return 'NoteSchedule(id: $id, note: $note, userId: $userId, scheduledAt: $scheduledAt)';
+  final _this = this as NoteSchedule;
+  return 'NoteSchedule(id: ${_this.id}, note: ${_this.note}, userId: ${_this.userId}, scheduledAt: ${_this.scheduledAt})';
 }
 
 
@@ -66,7 +72,7 @@ class _$NoteScheduleCopyWithImpl<$Res>
 /// Create a copy of NoteSchedule
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? note = null,Object? userId = null,Object? scheduledAt = null,}) {
-  return _then(_self.copyWith(
+  return _then(NoteSchedule(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,note: null == note ? _self.note : note // ignore: cast_nullable_to_non_nullable
 as NoteScheduleNote,userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
@@ -242,16 +248,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NoteSchedule&&(identical(other.id, id) || other.id == id)&&(identical(other.note, note) || other.note == note)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.scheduledAt, scheduledAt) || other.scheduledAt == scheduledAt));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NoteSchedule&&(identical(other.id, id) || other.id == id)&&(identical(other.note, note) || other.note == note)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.scheduledAt, scheduledAt) || other.scheduledAt == scheduledAt));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,note,userId,scheduledAt);
+int get hashCode {
+    return Object.hash(runtimeType,id,note,userId,scheduledAt);
+}
 
 @override
 String toString() {
-  return 'NoteSchedule(id: $id, note: $note, userId: $userId, scheduledAt: $scheduledAt)';
+    return 'NoteSchedule(id: $id, note: $note, userId: $userId, scheduledAt: $scheduledAt)';
 }
 
 
@@ -305,9 +313,7 @@ $NoteScheduleNoteCopyWith<$Res> get note {
 /// @nodoc
 mixin _$NoteScheduleNote {
 
- String? get text; String? get cw; List<String> get fileIds;// ignore: invalid_annotation_target
-@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) NoteVisibility? get visibility; List<UserLite> get visibleUsers; UserLite get user;// ignore: invalid_annotation_target
-@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) ReactionAcceptance? get reactionAcceptance; bool? get isSchedule;
+ String? get text; String? get cw; List<String> get fileIds;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) NoteVisibility? get visibility; List<UserLite> get visibleUsers; UserLite get user;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) ReactionAcceptance? get reactionAcceptance; bool? get isSchedule;
 /// Create a copy of NoteScheduleNote
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -320,16 +326,21 @@ $NoteScheduleNoteCopyWith<NoteScheduleNote> get copyWith => _$NoteScheduleNoteCo
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NoteScheduleNote&&(identical(other.text, text) || other.text == text)&&(identical(other.cw, cw) || other.cw == cw)&&const DeepCollectionEquality().equals(other.fileIds, fileIds)&&(identical(other.visibility, visibility) || other.visibility == visibility)&&const DeepCollectionEquality().equals(other.visibleUsers, visibleUsers)&&(identical(other.user, user) || other.user == user)&&(identical(other.reactionAcceptance, reactionAcceptance) || other.reactionAcceptance == reactionAcceptance)&&(identical(other.isSchedule, isSchedule) || other.isSchedule == isSchedule));
+  final _this = this as NoteScheduleNote;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NoteScheduleNote&&(identical(other.text, _this.text) || other.text == _this.text)&&(identical(other.cw, _this.cw) || other.cw == _this.cw)&&const DeepCollectionEquality().equals(other.fileIds, _this.fileIds)&&(identical(other.visibility, _this.visibility) || other.visibility == _this.visibility)&&const DeepCollectionEquality().equals(other.visibleUsers, _this.visibleUsers)&&(identical(other.user, _this.user) || other.user == _this.user)&&(identical(other.reactionAcceptance, _this.reactionAcceptance) || other.reactionAcceptance == _this.reactionAcceptance)&&(identical(other.isSchedule, _this.isSchedule) || other.isSchedule == _this.isSchedule));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,text,cw,const DeepCollectionEquality().hash(fileIds),visibility,const DeepCollectionEquality().hash(visibleUsers),user,reactionAcceptance,isSchedule);
+int get hashCode {
+  final _this = this as NoteScheduleNote;
+  return Object.hash(runtimeType,_this.text,_this.cw,const DeepCollectionEquality().hash(_this.fileIds),_this.visibility,const DeepCollectionEquality().hash(_this.visibleUsers),_this.user,_this.reactionAcceptance,_this.isSchedule);
+}
 
 @override
 String toString() {
-  return 'NoteScheduleNote(text: $text, cw: $cw, fileIds: $fileIds, visibility: $visibility, visibleUsers: $visibleUsers, user: $user, reactionAcceptance: $reactionAcceptance, isSchedule: $isSchedule)';
+  final _this = this as NoteScheduleNote;
+  return 'NoteScheduleNote(text: ${_this.text}, cw: ${_this.cw}, fileIds: ${_this.fileIds}, visibility: ${_this.visibility}, visibleUsers: ${_this.visibleUsers}, user: ${_this.user}, reactionAcceptance: ${_this.reactionAcceptance}, isSchedule: ${_this.isSchedule})';
 }
 
 
@@ -358,7 +369,7 @@ class _$NoteScheduleNoteCopyWithImpl<$Res>
 /// Create a copy of NoteScheduleNote
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? text = freezed,Object? cw = freezed,Object? fileIds = null,Object? visibility = freezed,Object? visibleUsers = null,Object? user = null,Object? reactionAcceptance = freezed,Object? isSchedule = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NoteScheduleNote(
 text: freezed == text ? _self.text : text // ignore: cast_nullable_to_non_nullable
 as String?,cw: freezed == cw ? _self.cw : cw // ignore: cast_nullable_to_non_nullable
 as String?,fileIds: null == fileIds ? _self.fileIds : fileIds // ignore: cast_nullable_to_non_nullable
@@ -517,7 +528,7 @@ return $default(_that.text,_that.cw,_that.fileIds,_that.visibility,_that.visible
 @JsonSerializable()
 
 class _NoteScheduleNote implements NoteScheduleNote {
-  const _NoteScheduleNote({this.text, this.cw, final  List<String> fileIds = const [], @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.visibility, final  List<UserLite> visibleUsers = const [], required this.user, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.reactionAcceptance, this.isSchedule}): _fileIds = fileIds,_visibleUsers = visibleUsers;
+  const _NoteScheduleNote({this.text, this.cw,  List<String> fileIds = const [], @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.visibility,  List<UserLite> visibleUsers = const [], required this.user, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.reactionAcceptance, this.isSchedule}): _fileIds = fileIds,_visibleUsers = visibleUsers;
   factory _NoteScheduleNote.fromJson(Map<String, dynamic> json) => _$NoteScheduleNoteFromJson(json);
 
 @override final  String? text;
@@ -529,7 +540,6 @@ class _NoteScheduleNote implements NoteScheduleNote {
   return EqualUnmodifiableListView(_fileIds);
 }
 
-// ignore: invalid_annotation_target
 @override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  NoteVisibility? visibility;
  final  List<UserLite> _visibleUsers;
 @override@JsonKey() List<UserLite> get visibleUsers {
@@ -539,7 +549,6 @@ class _NoteScheduleNote implements NoteScheduleNote {
 }
 
 @override final  UserLite user;
-// ignore: invalid_annotation_target
 @override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  ReactionAcceptance? reactionAcceptance;
 @override final  bool? isSchedule;
 
@@ -556,16 +565,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NoteScheduleNote&&(identical(other.text, text) || other.text == text)&&(identical(other.cw, cw) || other.cw == cw)&&const DeepCollectionEquality().equals(other._fileIds, _fileIds)&&(identical(other.visibility, visibility) || other.visibility == visibility)&&const DeepCollectionEquality().equals(other._visibleUsers, _visibleUsers)&&(identical(other.user, user) || other.user == user)&&(identical(other.reactionAcceptance, reactionAcceptance) || other.reactionAcceptance == reactionAcceptance)&&(identical(other.isSchedule, isSchedule) || other.isSchedule == isSchedule));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NoteScheduleNote&&(identical(other.text, text) || other.text == text)&&(identical(other.cw, cw) || other.cw == cw)&&const DeepCollectionEquality().equals(other.fileIds, _fileIds)&&(identical(other.visibility, visibility) || other.visibility == visibility)&&const DeepCollectionEquality().equals(other.visibleUsers, _visibleUsers)&&(identical(other.user, user) || other.user == user)&&(identical(other.reactionAcceptance, reactionAcceptance) || other.reactionAcceptance == reactionAcceptance)&&(identical(other.isSchedule, isSchedule) || other.isSchedule == isSchedule));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,text,cw,const DeepCollectionEquality().hash(_fileIds),visibility,const DeepCollectionEquality().hash(_visibleUsers),user,reactionAcceptance,isSchedule);
+int get hashCode {
+    return Object.hash(runtimeType,text,cw,const DeepCollectionEquality().hash(_fileIds),visibility,const DeepCollectionEquality().hash(_visibleUsers),user,reactionAcceptance,isSchedule);
+}
 
 @override
 String toString() {
-  return 'NoteScheduleNote(text: $text, cw: $cw, fileIds: $fileIds, visibility: $visibility, visibleUsers: $visibleUsers, user: $user, reactionAcceptance: $reactionAcceptance, isSchedule: $isSchedule)';
+    return 'NoteScheduleNote(text: $text, cw: $cw, fileIds: $fileIds, visibility: $visibility, visibleUsers: $visibleUsers, user: $user, reactionAcceptance: $reactionAcceptance, isSchedule: $isSchedule)';
 }
 
 

@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'users_show_request.dart';
@@ -9,6 +9,7 @@ part of 'users_show_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $UsersShowRequestCopyWith<UsersShowRequest> get copyWith => _$UsersShowRequestCo
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is UsersShowRequest&&(identical(other.userId, userId) || other.userId == userId));
+  final _this = this as UsersShowRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is UsersShowRequest&&(identical(other.userId, _this.userId) || other.userId == _this.userId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,userId);
+int get hashCode {
+  final _this = this as UsersShowRequest;
+  return Object.hash(runtimeType,_this.userId);
+}
 
 @override
 String toString() {
-  return 'UsersShowRequest(userId: $userId)';
+  final _this = this as UsersShowRequest;
+  return 'UsersShowRequest(userId: ${_this.userId})';
 }
 
 
@@ -66,7 +72,7 @@ class _$UsersShowRequestCopyWithImpl<$Res>
 /// Create a copy of UsersShowRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? userId = null,}) {
-  return _then(_self.copyWith(
+  return _then(UsersShowRequest(
 userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
 as String,
   ));
@@ -227,16 +233,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersShowRequest&&(identical(other.userId, userId) || other.userId == userId));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersShowRequest&&(identical(other.userId, userId) || other.userId == userId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,userId);
+int get hashCode {
+    return Object.hash(runtimeType,userId);
+}
 
 @override
 String toString() {
-  return 'UsersShowRequest(userId: $userId)';
+    return 'UsersShowRequest(userId: $userId)';
 }
 
 
@@ -291,16 +299,21 @@ $UsersShowByIdsRequestCopyWith<UsersShowByIdsRequest> get copyWith => _$UsersSho
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is UsersShowByIdsRequest&&const DeepCollectionEquality().equals(other.userIds, userIds));
+  final _this = this as UsersShowByIdsRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is UsersShowByIdsRequest&&const DeepCollectionEquality().equals(other.userIds, _this.userIds));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(userIds));
+int get hashCode {
+  final _this = this as UsersShowByIdsRequest;
+  return Object.hash(runtimeType,const DeepCollectionEquality().hash(_this.userIds));
+}
 
 @override
 String toString() {
-  return 'UsersShowByIdsRequest(userIds: $userIds)';
+  final _this = this as UsersShowByIdsRequest;
+  return 'UsersShowByIdsRequest(userIds: ${_this.userIds})';
 }
 
 
@@ -329,7 +342,7 @@ class _$UsersShowByIdsRequestCopyWithImpl<$Res>
 /// Create a copy of UsersShowByIdsRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? userIds = null,}) {
-  return _then(_self.copyWith(
+  return _then(UsersShowByIdsRequest(
 userIds: null == userIds ? _self.userIds : userIds // ignore: cast_nullable_to_non_nullable
 as List<String>,
   ));
@@ -472,7 +485,7 @@ return $default(_that.userIds);case _:
 @JsonSerializable()
 
 class _UsersShowByIdsRequest implements UsersShowByIdsRequest {
-  const _UsersShowByIdsRequest({required final  List<String> userIds}): _userIds = userIds;
+  const _UsersShowByIdsRequest({required  List<String> userIds}): _userIds = userIds;
   factory _UsersShowByIdsRequest.fromJson(Map<String, dynamic> json) => _$UsersShowByIdsRequestFromJson(json);
 
  final  List<String> _userIds;
@@ -496,16 +509,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersShowByIdsRequest&&const DeepCollectionEquality().equals(other._userIds, _userIds));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersShowByIdsRequest&&const DeepCollectionEquality().equals(other.userIds, _userIds));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_userIds));
+int get hashCode {
+    return Object.hash(runtimeType,const DeepCollectionEquality().hash(_userIds));
+}
 
 @override
 String toString() {
-  return 'UsersShowByIdsRequest(userIds: $userIds)';
+    return 'UsersShowByIdsRequest(userIds: $userIds)';
 }
 
 
@@ -547,7 +562,6 @@ as List<String>,
 /// @nodoc
 mixin _$UsersShowByUserNameRequest {
 
-// ignore: invalid_annotation_target
 @JsonKey(name: "username") String get userName; String? get host;
 /// Create a copy of UsersShowByUserNameRequest
 /// with the given fields replaced by the non-null parameter values.
@@ -561,16 +575,21 @@ $UsersShowByUserNameRequestCopyWith<UsersShowByUserNameRequest> get copyWith => 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is UsersShowByUserNameRequest&&(identical(other.userName, userName) || other.userName == userName)&&(identical(other.host, host) || other.host == host));
+  final _this = this as UsersShowByUserNameRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is UsersShowByUserNameRequest&&(identical(other.userName, _this.userName) || other.userName == _this.userName)&&(identical(other.host, _this.host) || other.host == _this.host));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,userName,host);
+int get hashCode {
+  final _this = this as UsersShowByUserNameRequest;
+  return Object.hash(runtimeType,_this.userName,_this.host);
+}
 
 @override
 String toString() {
-  return 'UsersShowByUserNameRequest(userName: $userName, host: $host)';
+  final _this = this as UsersShowByUserNameRequest;
+  return 'UsersShowByUserNameRequest(userName: ${_this.userName}, host: ${_this.host})';
 }
 
 
@@ -599,7 +618,7 @@ class _$UsersShowByUserNameRequestCopyWithImpl<$Res>
 /// Create a copy of UsersShowByUserNameRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? userName = null,Object? host = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(UsersShowByUserNameRequest(
 userName: null == userName ? _self.userName : userName // ignore: cast_nullable_to_non_nullable
 as String,host: freezed == host ? _self.host : host // ignore: cast_nullable_to_non_nullable
 as String?,
@@ -746,7 +765,6 @@ class _UsersShowByUserNameRequest implements UsersShowByUserNameRequest {
   const _UsersShowByUserNameRequest({@JsonKey(name: "username") required this.userName, this.host});
   factory _UsersShowByUserNameRequest.fromJson(Map<String, dynamic> json) => _$UsersShowByUserNameRequestFromJson(json);
 
-// ignore: invalid_annotation_target
 @override@JsonKey(name: "username") final  String userName;
 @override final  String? host;
 
@@ -763,16 +781,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersShowByUserNameRequest&&(identical(other.userName, userName) || other.userName == userName)&&(identical(other.host, host) || other.host == host));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersShowByUserNameRequest&&(identical(other.userName, userName) || other.userName == userName)&&(identical(other.host, host) || other.host == host));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,userName,host);
+int get hashCode {
+    return Object.hash(runtimeType,userName,host);
+}
 
 @override
 String toString() {
-  return 'UsersShowByUserNameRequest(userName: $userName, host: $host)';
+    return 'UsersShowByUserNameRequest(userName: $userName, host: $host)';
 }
 
 

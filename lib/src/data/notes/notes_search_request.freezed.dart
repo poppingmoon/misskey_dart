@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'notes_search_request.dart';
@@ -9,6 +9,7 @@ part of 'notes_search_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -41,16 +42,21 @@ $NotesSearchRequestCopyWith<NotesSearchRequest> get copyWith => _$NotesSearchReq
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesSearchRequest&&(identical(other.query, query) || other.query == query)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.rangeStartAt, rangeStartAt) || other.rangeStartAt == rangeStartAt)&&(identical(other.rangeEndAt, rangeEndAt) || other.rangeEndAt == rangeEndAt)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.offset, offset) || other.offset == offset)&&(identical(other.host, host) || other.host == host)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.channelId, channelId) || other.channelId == channelId));
+  final _this = this as NotesSearchRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesSearchRequest&&(identical(other.query, _this.query) || other.query == _this.query)&&(identical(other.sinceId, _this.sinceId) || other.sinceId == _this.sinceId)&&(identical(other.untilId, _this.untilId) || other.untilId == _this.untilId)&&(identical(other.sinceDate, _this.sinceDate) || other.sinceDate == _this.sinceDate)&&(identical(other.untilDate, _this.untilDate) || other.untilDate == _this.untilDate)&&(identical(other.rangeStartAt, _this.rangeStartAt) || other.rangeStartAt == _this.rangeStartAt)&&(identical(other.rangeEndAt, _this.rangeEndAt) || other.rangeEndAt == _this.rangeEndAt)&&(identical(other.limit, _this.limit) || other.limit == _this.limit)&&(identical(other.offset, _this.offset) || other.offset == _this.offset)&&(identical(other.host, _this.host) || other.host == _this.host)&&(identical(other.userId, _this.userId) || other.userId == _this.userId)&&(identical(other.channelId, _this.channelId) || other.channelId == _this.channelId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,query,sinceId,untilId,sinceDate,untilDate,rangeStartAt,rangeEndAt,limit,offset,host,userId,channelId);
+int get hashCode {
+  final _this = this as NotesSearchRequest;
+  return Object.hash(runtimeType,_this.query,_this.sinceId,_this.untilId,_this.sinceDate,_this.untilDate,_this.rangeStartAt,_this.rangeEndAt,_this.limit,_this.offset,_this.host,_this.userId,_this.channelId);
+}
 
 @override
 String toString() {
-  return 'NotesSearchRequest(query: $query, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, rangeStartAt: $rangeStartAt, rangeEndAt: $rangeEndAt, limit: $limit, offset: $offset, host: $host, userId: $userId, channelId: $channelId)';
+  final _this = this as NotesSearchRequest;
+  return 'NotesSearchRequest(query: ${_this.query}, sinceId: ${_this.sinceId}, untilId: ${_this.untilId}, sinceDate: ${_this.sinceDate}, untilDate: ${_this.untilDate}, rangeStartAt: ${_this.rangeStartAt}, rangeEndAt: ${_this.rangeEndAt}, limit: ${_this.limit}, offset: ${_this.offset}, host: ${_this.host}, userId: ${_this.userId}, channelId: ${_this.channelId})';
 }
 
 
@@ -79,7 +85,7 @@ class _$NotesSearchRequestCopyWithImpl<$Res>
 /// Create a copy of NotesSearchRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? query = null,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,Object? rangeStartAt = freezed,Object? rangeEndAt = freezed,Object? limit = freezed,Object? offset = freezed,Object? host = freezed,Object? userId = freezed,Object? channelId = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NotesSearchRequest(
 query: null == query ? _self.query : query // ignore: cast_nullable_to_non_nullable
 as String,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
 as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
@@ -275,16 +281,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesSearchRequest&&(identical(other.query, query) || other.query == query)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.rangeStartAt, rangeStartAt) || other.rangeStartAt == rangeStartAt)&&(identical(other.rangeEndAt, rangeEndAt) || other.rangeEndAt == rangeEndAt)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.offset, offset) || other.offset == offset)&&(identical(other.host, host) || other.host == host)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.channelId, channelId) || other.channelId == channelId));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesSearchRequest&&(identical(other.query, query) || other.query == query)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.rangeStartAt, rangeStartAt) || other.rangeStartAt == rangeStartAt)&&(identical(other.rangeEndAt, rangeEndAt) || other.rangeEndAt == rangeEndAt)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.offset, offset) || other.offset == offset)&&(identical(other.host, host) || other.host == host)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.channelId, channelId) || other.channelId == channelId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,query,sinceId,untilId,sinceDate,untilDate,rangeStartAt,rangeEndAt,limit,offset,host,userId,channelId);
+int get hashCode {
+    return Object.hash(runtimeType,query,sinceId,untilId,sinceDate,untilDate,rangeStartAt,rangeEndAt,limit,offset,host,userId,channelId);
+}
 
 @override
 String toString() {
-  return 'NotesSearchRequest(query: $query, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, rangeStartAt: $rangeStartAt, rangeEndAt: $rangeEndAt, limit: $limit, offset: $offset, host: $host, userId: $userId, channelId: $channelId)';
+    return 'NotesSearchRequest(query: $query, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, rangeStartAt: $rangeStartAt, rangeEndAt: $rangeEndAt, limit: $limit, offset: $offset, host: $host, userId: $userId, channelId: $channelId)';
 }
 
 

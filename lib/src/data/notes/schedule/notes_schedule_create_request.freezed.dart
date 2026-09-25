@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'notes_schedule_create_request.dart';
@@ -9,6 +9,7 @@ part of 'notes_schedule_create_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $NotesScheduleCreateRequestCopyWith<NotesScheduleCreateRequest> get copyWith => 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesScheduleCreateRequest&&(identical(other.visibility, visibility) || other.visibility == visibility)&&const DeepCollectionEquality().equals(other.visibleUserIds, visibleUserIds)&&(identical(other.cw, cw) || other.cw == cw)&&(identical(other.reactionAcceptance, reactionAcceptance) || other.reactionAcceptance == reactionAcceptance)&&(identical(other.disableRightClick, disableRightClick) || other.disableRightClick == disableRightClick)&&(identical(other.noExtractMentions, noExtractMentions) || other.noExtractMentions == noExtractMentions)&&(identical(other.noExtractHashtags, noExtractHashtags) || other.noExtractHashtags == noExtractHashtags)&&(identical(other.noExtractEmojis, noExtractEmojis) || other.noExtractEmojis == noExtractEmojis)&&(identical(other.replyId, replyId) || other.replyId == replyId)&&(identical(other.renoteId, renoteId) || other.renoteId == renoteId)&&(identical(other.text, text) || other.text == text)&&const DeepCollectionEquality().equals(other.fileIds, fileIds)&&const DeepCollectionEquality().equals(other.mediaIds, mediaIds)&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&(identical(other.poll, poll) || other.poll == poll)&&const DeepCollectionEquality().equals(other.event, event)&&(identical(other.scheduleNote, scheduleNote) || other.scheduleNote == scheduleNote)&&(identical(other.scheduledDelete, scheduledDelete) || other.scheduledDelete == scheduledDelete));
+  final _this = this as NotesScheduleCreateRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesScheduleCreateRequest&&(identical(other.visibility, _this.visibility) || other.visibility == _this.visibility)&&const DeepCollectionEquality().equals(other.visibleUserIds, _this.visibleUserIds)&&(identical(other.cw, _this.cw) || other.cw == _this.cw)&&(identical(other.reactionAcceptance, _this.reactionAcceptance) || other.reactionAcceptance == _this.reactionAcceptance)&&(identical(other.disableRightClick, _this.disableRightClick) || other.disableRightClick == _this.disableRightClick)&&(identical(other.noExtractMentions, _this.noExtractMentions) || other.noExtractMentions == _this.noExtractMentions)&&(identical(other.noExtractHashtags, _this.noExtractHashtags) || other.noExtractHashtags == _this.noExtractHashtags)&&(identical(other.noExtractEmojis, _this.noExtractEmojis) || other.noExtractEmojis == _this.noExtractEmojis)&&(identical(other.replyId, _this.replyId) || other.replyId == _this.replyId)&&(identical(other.renoteId, _this.renoteId) || other.renoteId == _this.renoteId)&&(identical(other.text, _this.text) || other.text == _this.text)&&const DeepCollectionEquality().equals(other.fileIds, _this.fileIds)&&const DeepCollectionEquality().equals(other.mediaIds, _this.mediaIds)&&(identical(other.channelId, _this.channelId) || other.channelId == _this.channelId)&&(identical(other.localOnly, _this.localOnly) || other.localOnly == _this.localOnly)&&(identical(other.poll, _this.poll) || other.poll == _this.poll)&&const DeepCollectionEquality().equals(other.event, _this.event)&&(identical(other.scheduleNote, _this.scheduleNote) || other.scheduleNote == _this.scheduleNote)&&(identical(other.scheduledDelete, _this.scheduledDelete) || other.scheduledDelete == _this.scheduledDelete));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hashAll([runtimeType,visibility,const DeepCollectionEquality().hash(visibleUserIds),cw,reactionAcceptance,disableRightClick,noExtractMentions,noExtractHashtags,noExtractEmojis,replyId,renoteId,text,const DeepCollectionEquality().hash(fileIds),const DeepCollectionEquality().hash(mediaIds),channelId,localOnly,poll,const DeepCollectionEquality().hash(event),scheduleNote,scheduledDelete]);
+int get hashCode {
+  final _this = this as NotesScheduleCreateRequest;
+  return Object.hashAll([runtimeType,_this.visibility,const DeepCollectionEquality().hash(_this.visibleUserIds),_this.cw,_this.reactionAcceptance,_this.disableRightClick,_this.noExtractMentions,_this.noExtractHashtags,_this.noExtractEmojis,_this.replyId,_this.renoteId,_this.text,const DeepCollectionEquality().hash(_this.fileIds),const DeepCollectionEquality().hash(_this.mediaIds),_this.channelId,_this.localOnly,_this.poll,const DeepCollectionEquality().hash(_this.event),_this.scheduleNote,_this.scheduledDelete]);
+}
 
 @override
 String toString() {
-  return 'NotesScheduleCreateRequest(visibility: $visibility, visibleUserIds: $visibleUserIds, cw: $cw, reactionAcceptance: $reactionAcceptance, disableRightClick: $disableRightClick, noExtractMentions: $noExtractMentions, noExtractHashtags: $noExtractHashtags, noExtractEmojis: $noExtractEmojis, replyId: $replyId, renoteId: $renoteId, text: $text, fileIds: $fileIds, mediaIds: $mediaIds, channelId: $channelId, localOnly: $localOnly, poll: $poll, event: $event, scheduleNote: $scheduleNote, scheduledDelete: $scheduledDelete)';
+  final _this = this as NotesScheduleCreateRequest;
+  return 'NotesScheduleCreateRequest(visibility: ${_this.visibility}, visibleUserIds: ${_this.visibleUserIds}, cw: ${_this.cw}, reactionAcceptance: ${_this.reactionAcceptance}, disableRightClick: ${_this.disableRightClick}, noExtractMentions: ${_this.noExtractMentions}, noExtractHashtags: ${_this.noExtractHashtags}, noExtractEmojis: ${_this.noExtractEmojis}, replyId: ${_this.replyId}, renoteId: ${_this.renoteId}, text: ${_this.text}, fileIds: ${_this.fileIds}, mediaIds: ${_this.mediaIds}, channelId: ${_this.channelId}, localOnly: ${_this.localOnly}, poll: ${_this.poll}, event: ${_this.event}, scheduleNote: ${_this.scheduleNote}, scheduledDelete: ${_this.scheduledDelete})';
 }
 
 
@@ -66,7 +72,7 @@ class _$NotesScheduleCreateRequestCopyWithImpl<$Res>
 /// Create a copy of NotesScheduleCreateRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? visibility = freezed,Object? visibleUserIds = freezed,Object? cw = freezed,Object? reactionAcceptance = freezed,Object? disableRightClick = freezed,Object? noExtractMentions = freezed,Object? noExtractHashtags = freezed,Object? noExtractEmojis = freezed,Object? replyId = freezed,Object? renoteId = freezed,Object? text = freezed,Object? fileIds = freezed,Object? mediaIds = freezed,Object? channelId = freezed,Object? localOnly = freezed,Object? poll = freezed,Object? event = freezed,Object? scheduleNote = null,Object? scheduledDelete = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NotesScheduleCreateRequest(
 visibility: freezed == visibility ? _self.visibility : visibility // ignore: cast_nullable_to_non_nullable
 as NoteVisibility?,visibleUserIds: freezed == visibleUserIds ? _self.visibleUserIds : visibleUserIds // ignore: cast_nullable_to_non_nullable
 as List<String>?,cw: freezed == cw ? _self.cw : cw // ignore: cast_nullable_to_non_nullable
@@ -260,7 +266,7 @@ return $default(_that.visibility,_that.visibleUserIds,_that.cw,_that.reactionAcc
 @JsonSerializable()
 
 class _NotesScheduleCreateRequest implements NotesScheduleCreateRequest {
-  const _NotesScheduleCreateRequest({this.visibility, final  List<String>? visibleUserIds, this.cw, this.reactionAcceptance, this.disableRightClick, this.noExtractMentions, this.noExtractHashtags, this.noExtractEmojis, this.replyId, this.renoteId, this.text, final  List<String>? fileIds, final  List<String>? mediaIds, this.channelId, this.localOnly, this.poll, final  Map<String, dynamic>? event, required this.scheduleNote, this.scheduledDelete}): _visibleUserIds = visibleUserIds,_fileIds = fileIds,_mediaIds = mediaIds,_event = event;
+  const _NotesScheduleCreateRequest({this.visibility,  List<String>? visibleUserIds, this.cw, this.reactionAcceptance, this.disableRightClick, this.noExtractMentions, this.noExtractHashtags, this.noExtractEmojis, this.replyId, this.renoteId, this.text,  List<String>? fileIds,  List<String>? mediaIds, this.channelId, this.localOnly, this.poll,  Map<String, dynamic>? event, required this.scheduleNote, this.scheduledDelete}): _visibleUserIds = visibleUserIds,_fileIds = fileIds,_mediaIds = mediaIds,_event = event;
   factory _NotesScheduleCreateRequest.fromJson(Map<String, dynamic> json) => _$NotesScheduleCreateRequestFromJson(json);
 
 @override final  NoteVisibility? visibility;
@@ -328,16 +334,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesScheduleCreateRequest&&(identical(other.visibility, visibility) || other.visibility == visibility)&&const DeepCollectionEquality().equals(other._visibleUserIds, _visibleUserIds)&&(identical(other.cw, cw) || other.cw == cw)&&(identical(other.reactionAcceptance, reactionAcceptance) || other.reactionAcceptance == reactionAcceptance)&&(identical(other.disableRightClick, disableRightClick) || other.disableRightClick == disableRightClick)&&(identical(other.noExtractMentions, noExtractMentions) || other.noExtractMentions == noExtractMentions)&&(identical(other.noExtractHashtags, noExtractHashtags) || other.noExtractHashtags == noExtractHashtags)&&(identical(other.noExtractEmojis, noExtractEmojis) || other.noExtractEmojis == noExtractEmojis)&&(identical(other.replyId, replyId) || other.replyId == replyId)&&(identical(other.renoteId, renoteId) || other.renoteId == renoteId)&&(identical(other.text, text) || other.text == text)&&const DeepCollectionEquality().equals(other._fileIds, _fileIds)&&const DeepCollectionEquality().equals(other._mediaIds, _mediaIds)&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&(identical(other.poll, poll) || other.poll == poll)&&const DeepCollectionEquality().equals(other._event, _event)&&(identical(other.scheduleNote, scheduleNote) || other.scheduleNote == scheduleNote)&&(identical(other.scheduledDelete, scheduledDelete) || other.scheduledDelete == scheduledDelete));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesScheduleCreateRequest&&(identical(other.visibility, visibility) || other.visibility == visibility)&&const DeepCollectionEquality().equals(other.visibleUserIds, _visibleUserIds)&&(identical(other.cw, cw) || other.cw == cw)&&(identical(other.reactionAcceptance, reactionAcceptance) || other.reactionAcceptance == reactionAcceptance)&&(identical(other.disableRightClick, disableRightClick) || other.disableRightClick == disableRightClick)&&(identical(other.noExtractMentions, noExtractMentions) || other.noExtractMentions == noExtractMentions)&&(identical(other.noExtractHashtags, noExtractHashtags) || other.noExtractHashtags == noExtractHashtags)&&(identical(other.noExtractEmojis, noExtractEmojis) || other.noExtractEmojis == noExtractEmojis)&&(identical(other.replyId, replyId) || other.replyId == replyId)&&(identical(other.renoteId, renoteId) || other.renoteId == renoteId)&&(identical(other.text, text) || other.text == text)&&const DeepCollectionEquality().equals(other.fileIds, _fileIds)&&const DeepCollectionEquality().equals(other.mediaIds, _mediaIds)&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&(identical(other.poll, poll) || other.poll == poll)&&const DeepCollectionEquality().equals(other.event, _event)&&(identical(other.scheduleNote, scheduleNote) || other.scheduleNote == scheduleNote)&&(identical(other.scheduledDelete, scheduledDelete) || other.scheduledDelete == scheduledDelete));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hashAll([runtimeType,visibility,const DeepCollectionEquality().hash(_visibleUserIds),cw,reactionAcceptance,disableRightClick,noExtractMentions,noExtractHashtags,noExtractEmojis,replyId,renoteId,text,const DeepCollectionEquality().hash(_fileIds),const DeepCollectionEquality().hash(_mediaIds),channelId,localOnly,poll,const DeepCollectionEquality().hash(_event),scheduleNote,scheduledDelete]);
+int get hashCode {
+    return Object.hashAll([runtimeType,visibility,const DeepCollectionEquality().hash(_visibleUserIds),cw,reactionAcceptance,disableRightClick,noExtractMentions,noExtractHashtags,noExtractEmojis,replyId,renoteId,text,const DeepCollectionEquality().hash(_fileIds),const DeepCollectionEquality().hash(_mediaIds),channelId,localOnly,poll,const DeepCollectionEquality().hash(_event),scheduleNote,scheduledDelete]);
+}
 
 @override
 String toString() {
-  return 'NotesScheduleCreateRequest(visibility: $visibility, visibleUserIds: $visibleUserIds, cw: $cw, reactionAcceptance: $reactionAcceptance, disableRightClick: $disableRightClick, noExtractMentions: $noExtractMentions, noExtractHashtags: $noExtractHashtags, noExtractEmojis: $noExtractEmojis, replyId: $replyId, renoteId: $renoteId, text: $text, fileIds: $fileIds, mediaIds: $mediaIds, channelId: $channelId, localOnly: $localOnly, poll: $poll, event: $event, scheduleNote: $scheduleNote, scheduledDelete: $scheduledDelete)';
+    return 'NotesScheduleCreateRequest(visibility: $visibility, visibleUserIds: $visibleUserIds, cw: $cw, reactionAcceptance: $reactionAcceptance, disableRightClick: $disableRightClick, noExtractMentions: $noExtractMentions, noExtractHashtags: $noExtractHashtags, noExtractEmojis: $noExtractEmojis, replyId: $replyId, renoteId: $renoteId, text: $text, fileIds: $fileIds, mediaIds: $mediaIds, channelId: $channelId, localOnly: $localOnly, poll: $poll, event: $event, scheduleNote: $scheduleNote, scheduledDelete: $scheduledDelete)';
 }
 
 
@@ -443,16 +451,21 @@ $ScheduleNoteCopyWith<ScheduleNote> get copyWith => _$ScheduleNoteCopyWithImpl<S
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ScheduleNote&&(identical(other.scheduledAt, scheduledAt) || other.scheduledAt == scheduledAt));
+  final _this = this as ScheduleNote;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ScheduleNote&&(identical(other.scheduledAt, _this.scheduledAt) || other.scheduledAt == _this.scheduledAt));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,scheduledAt);
+int get hashCode {
+  final _this = this as ScheduleNote;
+  return Object.hash(runtimeType,_this.scheduledAt);
+}
 
 @override
 String toString() {
-  return 'ScheduleNote(scheduledAt: $scheduledAt)';
+  final _this = this as ScheduleNote;
+  return 'ScheduleNote(scheduledAt: ${_this.scheduledAt})';
 }
 
 
@@ -481,7 +494,7 @@ class _$ScheduleNoteCopyWithImpl<$Res>
 /// Create a copy of ScheduleNote
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? scheduledAt = null,}) {
-  return _then(_self.copyWith(
+  return _then(ScheduleNote(
 scheduledAt: null == scheduledAt ? _self.scheduledAt : scheduledAt // ignore: cast_nullable_to_non_nullable
 as DateTime,
   ));
@@ -642,16 +655,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ScheduleNote&&(identical(other.scheduledAt, scheduledAt) || other.scheduledAt == scheduledAt));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ScheduleNote&&(identical(other.scheduledAt, scheduledAt) || other.scheduledAt == scheduledAt));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,scheduledAt);
+int get hashCode {
+    return Object.hash(runtimeType,scheduledAt);
+}
 
 @override
 String toString() {
-  return 'ScheduleNote(scheduledAt: $scheduledAt)';
+    return 'ScheduleNote(scheduledAt: $scheduledAt)';
 }
 
 
@@ -706,16 +721,21 @@ $ScheduledDeleteCopyWith<ScheduledDelete> get copyWith => _$ScheduledDeleteCopyW
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ScheduledDelete&&(identical(other.deleteAt, deleteAt) || other.deleteAt == deleteAt)&&(identical(other.deleteAfter, deleteAfter) || other.deleteAfter == deleteAfter));
+  final _this = this as ScheduledDelete;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ScheduledDelete&&(identical(other.deleteAt, _this.deleteAt) || other.deleteAt == _this.deleteAt)&&(identical(other.deleteAfter, _this.deleteAfter) || other.deleteAfter == _this.deleteAfter));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,deleteAt,deleteAfter);
+int get hashCode {
+  final _this = this as ScheduledDelete;
+  return Object.hash(runtimeType,_this.deleteAt,_this.deleteAfter);
+}
 
 @override
 String toString() {
-  return 'ScheduledDelete(deleteAt: $deleteAt, deleteAfter: $deleteAfter)';
+  final _this = this as ScheduledDelete;
+  return 'ScheduledDelete(deleteAt: ${_this.deleteAt}, deleteAfter: ${_this.deleteAfter})';
 }
 
 
@@ -744,7 +764,7 @@ class _$ScheduledDeleteCopyWithImpl<$Res>
 /// Create a copy of ScheduledDelete
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? deleteAt = freezed,Object? deleteAfter = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(ScheduledDelete(
 deleteAt: freezed == deleteAt ? _self.deleteAt : deleteAt // ignore: cast_nullable_to_non_nullable
 as DateTime?,deleteAfter: freezed == deleteAfter ? _self.deleteAfter : deleteAfter // ignore: cast_nullable_to_non_nullable
 as Duration?,
@@ -907,16 +927,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ScheduledDelete&&(identical(other.deleteAt, deleteAt) || other.deleteAt == deleteAt)&&(identical(other.deleteAfter, deleteAfter) || other.deleteAfter == deleteAfter));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ScheduledDelete&&(identical(other.deleteAt, deleteAt) || other.deleteAt == deleteAt)&&(identical(other.deleteAfter, deleteAfter) || other.deleteAfter == deleteAfter));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,deleteAt,deleteAfter);
+int get hashCode {
+    return Object.hash(runtimeType,deleteAt,deleteAfter);
+}
 
 @override
 String toString() {
-  return 'ScheduledDelete(deleteAt: $deleteAt, deleteAfter: $deleteAfter)';
+    return 'ScheduledDelete(deleteAt: $deleteAt, deleteAfter: $deleteAfter)';
 }
 
 

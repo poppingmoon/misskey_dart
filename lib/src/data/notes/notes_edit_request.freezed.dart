@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'notes_edit_request.dart';
@@ -9,6 +9,7 @@ part of 'notes_edit_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $NotesEditRequestCopyWith<NotesEditRequest> get copyWith => _$NotesEditRequestCo
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesEditRequest&&(identical(other.editId, editId) || other.editId == editId)&&(identical(other.visibility, visibility) || other.visibility == visibility)&&const DeepCollectionEquality().equals(other.visibleUserIds, visibleUserIds)&&(identical(other.text, text) || other.text == text)&&(identical(other.cw, cw) || other.cw == cw)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&const DeepCollectionEquality().equals(other.fileIds, fileIds)&&(identical(other.replyId, replyId) || other.replyId == replyId)&&(identical(other.renoteId, renoteId) || other.renoteId == renoteId)&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.poll, poll) || other.poll == poll));
+  final _this = this as NotesEditRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesEditRequest&&(identical(other.editId, _this.editId) || other.editId == _this.editId)&&(identical(other.visibility, _this.visibility) || other.visibility == _this.visibility)&&const DeepCollectionEquality().equals(other.visibleUserIds, _this.visibleUserIds)&&(identical(other.text, _this.text) || other.text == _this.text)&&(identical(other.cw, _this.cw) || other.cw == _this.cw)&&(identical(other.localOnly, _this.localOnly) || other.localOnly == _this.localOnly)&&const DeepCollectionEquality().equals(other.fileIds, _this.fileIds)&&(identical(other.replyId, _this.replyId) || other.replyId == _this.replyId)&&(identical(other.renoteId, _this.renoteId) || other.renoteId == _this.renoteId)&&(identical(other.channelId, _this.channelId) || other.channelId == _this.channelId)&&(identical(other.poll, _this.poll) || other.poll == _this.poll));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,editId,visibility,const DeepCollectionEquality().hash(visibleUserIds),text,cw,localOnly,const DeepCollectionEquality().hash(fileIds),replyId,renoteId,channelId,poll);
+int get hashCode {
+  final _this = this as NotesEditRequest;
+  return Object.hash(runtimeType,_this.editId,_this.visibility,const DeepCollectionEquality().hash(_this.visibleUserIds),_this.text,_this.cw,_this.localOnly,const DeepCollectionEquality().hash(_this.fileIds),_this.replyId,_this.renoteId,_this.channelId,_this.poll);
+}
 
 @override
 String toString() {
-  return 'NotesEditRequest(editId: $editId, visibility: $visibility, visibleUserIds: $visibleUserIds, text: $text, cw: $cw, localOnly: $localOnly, fileIds: $fileIds, replyId: $replyId, renoteId: $renoteId, channelId: $channelId, poll: $poll)';
+  final _this = this as NotesEditRequest;
+  return 'NotesEditRequest(editId: ${_this.editId}, visibility: ${_this.visibility}, visibleUserIds: ${_this.visibleUserIds}, text: ${_this.text}, cw: ${_this.cw}, localOnly: ${_this.localOnly}, fileIds: ${_this.fileIds}, replyId: ${_this.replyId}, renoteId: ${_this.renoteId}, channelId: ${_this.channelId}, poll: ${_this.poll})';
 }
 
 
@@ -66,7 +72,7 @@ class _$NotesEditRequestCopyWithImpl<$Res>
 /// Create a copy of NotesEditRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? editId = null,Object? visibility = freezed,Object? visibleUserIds = freezed,Object? text = freezed,Object? cw = freezed,Object? localOnly = freezed,Object? fileIds = freezed,Object? replyId = freezed,Object? renoteId = freezed,Object? channelId = freezed,Object? poll = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NotesEditRequest(
 editId: null == editId ? _self.editId : editId // ignore: cast_nullable_to_non_nullable
 as String,visibility: freezed == visibility ? _self.visibility : visibility // ignore: cast_nullable_to_non_nullable
 as NoteVisibility?,visibleUserIds: freezed == visibleUserIds ? _self.visibleUserIds : visibleUserIds // ignore: cast_nullable_to_non_nullable
@@ -231,7 +237,7 @@ return $default(_that.editId,_that.visibility,_that.visibleUserIds,_that.text,_t
 @JsonSerializable()
 
 class _NotesEditRequest implements NotesEditRequest {
-  const _NotesEditRequest({required this.editId, this.visibility, final  List<String>? visibleUserIds, this.text, this.cw, this.localOnly, final  List<String>? fileIds, this.replyId, this.renoteId, this.channelId, this.poll}): _visibleUserIds = visibleUserIds,_fileIds = fileIds;
+  const _NotesEditRequest({required this.editId, this.visibility,  List<String>? visibleUserIds, this.text, this.cw, this.localOnly,  List<String>? fileIds, this.replyId, this.renoteId, this.channelId, this.poll}): _visibleUserIds = visibleUserIds,_fileIds = fileIds;
   factory _NotesEditRequest.fromJson(Map<String, dynamic> json) => _$NotesEditRequestFromJson(json);
 
 @override final  String editId;
@@ -275,16 +281,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesEditRequest&&(identical(other.editId, editId) || other.editId == editId)&&(identical(other.visibility, visibility) || other.visibility == visibility)&&const DeepCollectionEquality().equals(other._visibleUserIds, _visibleUserIds)&&(identical(other.text, text) || other.text == text)&&(identical(other.cw, cw) || other.cw == cw)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&const DeepCollectionEquality().equals(other._fileIds, _fileIds)&&(identical(other.replyId, replyId) || other.replyId == replyId)&&(identical(other.renoteId, renoteId) || other.renoteId == renoteId)&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.poll, poll) || other.poll == poll));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesEditRequest&&(identical(other.editId, editId) || other.editId == editId)&&(identical(other.visibility, visibility) || other.visibility == visibility)&&const DeepCollectionEquality().equals(other.visibleUserIds, _visibleUserIds)&&(identical(other.text, text) || other.text == text)&&(identical(other.cw, cw) || other.cw == cw)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&const DeepCollectionEquality().equals(other.fileIds, _fileIds)&&(identical(other.replyId, replyId) || other.replyId == replyId)&&(identical(other.renoteId, renoteId) || other.renoteId == renoteId)&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.poll, poll) || other.poll == poll));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,editId,visibility,const DeepCollectionEquality().hash(_visibleUserIds),text,cw,localOnly,const DeepCollectionEquality().hash(_fileIds),replyId,renoteId,channelId,poll);
+int get hashCode {
+    return Object.hash(runtimeType,editId,visibility,const DeepCollectionEquality().hash(_visibleUserIds),text,cw,localOnly,const DeepCollectionEquality().hash(_fileIds),replyId,renoteId,channelId,poll);
+}
 
 @override
 String toString() {
-  return 'NotesEditRequest(editId: $editId, visibility: $visibility, visibleUserIds: $visibleUserIds, text: $text, cw: $cw, localOnly: $localOnly, fileIds: $fileIds, replyId: $replyId, renoteId: $renoteId, channelId: $channelId, poll: $poll)';
+    return 'NotesEditRequest(editId: $editId, visibility: $visibility, visibleUserIds: $visibleUserIds, text: $text, cw: $cw, localOnly: $localOnly, fileIds: $fileIds, replyId: $replyId, renoteId: $renoteId, channelId: $channelId, poll: $poll)';
 }
 
 

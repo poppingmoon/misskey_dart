@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'users_report_abuse_request.dart';
@@ -9,6 +9,7 @@ part of 'users_report_abuse_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 UsersReportAbuseRequest _$UsersReportAbuseRequestFromJson(
@@ -35,16 +36,21 @@ $UsersReportAbuseRequestCopyWith<UsersReportAbuseRequest> get copyWith => _$User
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is UsersReportAbuseRequest&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.comment, comment) || other.comment == comment));
+  final _this = this as UsersReportAbuseRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is UsersReportAbuseRequest&&(identical(other.userId, _this.userId) || other.userId == _this.userId)&&(identical(other.comment, _this.comment) || other.comment == _this.comment));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,userId,comment);
+int get hashCode {
+  final _this = this as UsersReportAbuseRequest;
+  return Object.hash(runtimeType,_this.userId,_this.comment);
+}
 
 @override
 String toString() {
-  return 'UsersReportAbuseRequest(userId: $userId, comment: $comment)';
+  final _this = this as UsersReportAbuseRequest;
+  return 'UsersReportAbuseRequest(userId: ${_this.userId}, comment: ${_this.comment})';
 }
 
 
@@ -73,7 +79,7 @@ class _$UsersReportAbuseRequestCopyWithImpl<$Res>
 /// Create a copy of UsersReportAbuseRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? userId = null,Object? comment = null,}) {
-  return _then(_self.copyWith(
+  return _then(UsersReportAbuseRequest(
 userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
 as String,comment: null == comment ? _self.comment : comment // ignore: cast_nullable_to_non_nullable
 as String,
@@ -236,16 +242,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersReportAbuse&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.comment, comment) || other.comment == comment));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersReportAbuse&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.comment, comment) || other.comment == comment));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,userId,comment);
+int get hashCode {
+    return Object.hash(runtimeType,userId,comment);
+}
 
 @override
 String toString() {
-  return 'UsersReportAbuseRequest(userId: $userId, comment: $comment)';
+    return 'UsersReportAbuseRequest(userId: $userId, comment: $comment)';
 }
 
 

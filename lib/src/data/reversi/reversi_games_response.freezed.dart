@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'reversi_games_response.dart';
@@ -9,16 +9,14 @@ part of 'reversi_games_response.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
 /// @nodoc
 mixin _$ReversiGamesResponse {
 
- String get id;@DateTimeConverter() DateTime get createdAt;@NullableDateTimeConverter() DateTime? get startedAt;@NullableDateTimeConverter() DateTime? get endedAt; bool get isStarted; bool get isEnded; String get user1Id; String get user2Id; UserLite get user1; UserLite get user2; String? get winnerId; User? get winner; String? get surrenderedUserId; String? get timeoutUserId; int? get black; String get bw; bool get noIrregularRules; bool get isLlotheo;// API のフィールド名は canPutEverywhere（w は小文字）。綴りがずれていた
-// ため JSON に対応するキーが無く、reversi/games は終了済みの対局を 1 件でも
-// 含むと必ず「Null is not a subtype of bool」で落ちていた。
- bool get canPutEverywhere; bool get loopedBoard; int get timeLimitForEachTurn;
+ String get id;@DateTimeConverter() DateTime get createdAt;@NullableDateTimeConverter() DateTime? get startedAt;@NullableDateTimeConverter() DateTime? get endedAt; bool get isStarted; bool get isEnded; String get user1Id; String get user2Id; UserLite get user1; UserLite get user2; String? get winnerId; User? get winner; String? get surrenderedUserId; String? get timeoutUserId; int? get black; String get bw; bool get noIrregularRules; bool get isLlotheo; bool get canPutEverywhere; bool get loopedBoard; int get timeLimitForEachTurn;
 /// Create a copy of ReversiGamesResponse
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -31,16 +29,21 @@ $ReversiGamesResponseCopyWith<ReversiGamesResponse> get copyWith => _$ReversiGam
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiGamesResponse&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.startedAt, startedAt) || other.startedAt == startedAt)&&(identical(other.endedAt, endedAt) || other.endedAt == endedAt)&&(identical(other.isStarted, isStarted) || other.isStarted == isStarted)&&(identical(other.isEnded, isEnded) || other.isEnded == isEnded)&&(identical(other.user1Id, user1Id) || other.user1Id == user1Id)&&(identical(other.user2Id, user2Id) || other.user2Id == user2Id)&&(identical(other.user1, user1) || other.user1 == user1)&&(identical(other.user2, user2) || other.user2 == user2)&&(identical(other.winnerId, winnerId) || other.winnerId == winnerId)&&(identical(other.winner, winner) || other.winner == winner)&&(identical(other.surrenderedUserId, surrenderedUserId) || other.surrenderedUserId == surrenderedUserId)&&(identical(other.timeoutUserId, timeoutUserId) || other.timeoutUserId == timeoutUserId)&&(identical(other.black, black) || other.black == black)&&(identical(other.bw, bw) || other.bw == bw)&&(identical(other.noIrregularRules, noIrregularRules) || other.noIrregularRules == noIrregularRules)&&(identical(other.isLlotheo, isLlotheo) || other.isLlotheo == isLlotheo)&&(identical(other.canPutEverywhere, canPutEverywhere) || other.canPutEverywhere == canPutEverywhere)&&(identical(other.loopedBoard, loopedBoard) || other.loopedBoard == loopedBoard)&&(identical(other.timeLimitForEachTurn, timeLimitForEachTurn) || other.timeLimitForEachTurn == timeLimitForEachTurn));
+  final _this = this as ReversiGamesResponse;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ReversiGamesResponse&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.createdAt, _this.createdAt) || other.createdAt == _this.createdAt)&&(identical(other.startedAt, _this.startedAt) || other.startedAt == _this.startedAt)&&(identical(other.endedAt, _this.endedAt) || other.endedAt == _this.endedAt)&&(identical(other.isStarted, _this.isStarted) || other.isStarted == _this.isStarted)&&(identical(other.isEnded, _this.isEnded) || other.isEnded == _this.isEnded)&&(identical(other.user1Id, _this.user1Id) || other.user1Id == _this.user1Id)&&(identical(other.user2Id, _this.user2Id) || other.user2Id == _this.user2Id)&&(identical(other.user1, _this.user1) || other.user1 == _this.user1)&&(identical(other.user2, _this.user2) || other.user2 == _this.user2)&&(identical(other.winnerId, _this.winnerId) || other.winnerId == _this.winnerId)&&(identical(other.winner, _this.winner) || other.winner == _this.winner)&&(identical(other.surrenderedUserId, _this.surrenderedUserId) || other.surrenderedUserId == _this.surrenderedUserId)&&(identical(other.timeoutUserId, _this.timeoutUserId) || other.timeoutUserId == _this.timeoutUserId)&&(identical(other.black, _this.black) || other.black == _this.black)&&(identical(other.bw, _this.bw) || other.bw == _this.bw)&&(identical(other.noIrregularRules, _this.noIrregularRules) || other.noIrregularRules == _this.noIrregularRules)&&(identical(other.isLlotheo, _this.isLlotheo) || other.isLlotheo == _this.isLlotheo)&&(identical(other.canPutEverywhere, _this.canPutEverywhere) || other.canPutEverywhere == _this.canPutEverywhere)&&(identical(other.loopedBoard, _this.loopedBoard) || other.loopedBoard == _this.loopedBoard)&&(identical(other.timeLimitForEachTurn, _this.timeLimitForEachTurn) || other.timeLimitForEachTurn == _this.timeLimitForEachTurn));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hashAll([runtimeType,id,createdAt,startedAt,endedAt,isStarted,isEnded,user1Id,user2Id,user1,user2,winnerId,winner,surrenderedUserId,timeoutUserId,black,bw,noIrregularRules,isLlotheo,canPutEverywhere,loopedBoard,timeLimitForEachTurn]);
+int get hashCode {
+  final _this = this as ReversiGamesResponse;
+  return Object.hashAll([runtimeType,_this.id,_this.createdAt,_this.startedAt,_this.endedAt,_this.isStarted,_this.isEnded,_this.user1Id,_this.user2Id,_this.user1,_this.user2,_this.winnerId,_this.winner,_this.surrenderedUserId,_this.timeoutUserId,_this.black,_this.bw,_this.noIrregularRules,_this.isLlotheo,_this.canPutEverywhere,_this.loopedBoard,_this.timeLimitForEachTurn]);
+}
 
 @override
 String toString() {
-  return 'ReversiGamesResponse(id: $id, createdAt: $createdAt, startedAt: $startedAt, endedAt: $endedAt, isStarted: $isStarted, isEnded: $isEnded, user1Id: $user1Id, user2Id: $user2Id, user1: $user1, user2: $user2, winnerId: $winnerId, winner: $winner, surrenderedUserId: $surrenderedUserId, timeoutUserId: $timeoutUserId, black: $black, bw: $bw, noIrregularRules: $noIrregularRules, isLlotheo: $isLlotheo, canPutEverywhere: $canPutEverywhere, loopedBoard: $loopedBoard, timeLimitForEachTurn: $timeLimitForEachTurn)';
+  final _this = this as ReversiGamesResponse;
+  return 'ReversiGamesResponse(id: ${_this.id}, createdAt: ${_this.createdAt}, startedAt: ${_this.startedAt}, endedAt: ${_this.endedAt}, isStarted: ${_this.isStarted}, isEnded: ${_this.isEnded}, user1Id: ${_this.user1Id}, user2Id: ${_this.user2Id}, user1: ${_this.user1}, user2: ${_this.user2}, winnerId: ${_this.winnerId}, winner: ${_this.winner}, surrenderedUserId: ${_this.surrenderedUserId}, timeoutUserId: ${_this.timeoutUserId}, black: ${_this.black}, bw: ${_this.bw}, noIrregularRules: ${_this.noIrregularRules}, isLlotheo: ${_this.isLlotheo}, canPutEverywhere: ${_this.canPutEverywhere}, loopedBoard: ${_this.loopedBoard}, timeLimitForEachTurn: ${_this.timeLimitForEachTurn})';
 }
 
 
@@ -69,7 +72,7 @@ class _$ReversiGamesResponseCopyWithImpl<$Res>
 /// Create a copy of ReversiGamesResponse
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? createdAt = null,Object? startedAt = freezed,Object? endedAt = freezed,Object? isStarted = null,Object? isEnded = null,Object? user1Id = null,Object? user2Id = null,Object? user1 = null,Object? user2 = null,Object? winnerId = freezed,Object? winner = freezed,Object? surrenderedUserId = freezed,Object? timeoutUserId = freezed,Object? black = freezed,Object? bw = null,Object? noIrregularRules = null,Object? isLlotheo = null,Object? canPutEverywhere = null,Object? loopedBoard = null,Object? timeLimitForEachTurn = null,}) {
-  return _then(_self.copyWith(
+  return _then(ReversiGamesResponse(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime,startedAt: freezed == startedAt ? _self.startedAt : startedAt // ignore: cast_nullable_to_non_nullable
@@ -271,9 +274,6 @@ class _ReversiGamesResponse implements ReversiGamesResponse {
 @override final  String bw;
 @override final  bool noIrregularRules;
 @override final  bool isLlotheo;
-// API のフィールド名は canPutEverywhere（w は小文字）。綴りがずれていた
-// ため JSON に対応するキーが無く、reversi/games は終了済みの対局を 1 件でも
-// 含むと必ず「Null is not a subtype of bool」で落ちていた。
 @override final  bool canPutEverywhere;
 @override final  bool loopedBoard;
 @override final  int timeLimitForEachTurn;
@@ -291,16 +291,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ReversiGamesResponse&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.startedAt, startedAt) || other.startedAt == startedAt)&&(identical(other.endedAt, endedAt) || other.endedAt == endedAt)&&(identical(other.isStarted, isStarted) || other.isStarted == isStarted)&&(identical(other.isEnded, isEnded) || other.isEnded == isEnded)&&(identical(other.user1Id, user1Id) || other.user1Id == user1Id)&&(identical(other.user2Id, user2Id) || other.user2Id == user2Id)&&(identical(other.user1, user1) || other.user1 == user1)&&(identical(other.user2, user2) || other.user2 == user2)&&(identical(other.winnerId, winnerId) || other.winnerId == winnerId)&&(identical(other.winner, winner) || other.winner == winner)&&(identical(other.surrenderedUserId, surrenderedUserId) || other.surrenderedUserId == surrenderedUserId)&&(identical(other.timeoutUserId, timeoutUserId) || other.timeoutUserId == timeoutUserId)&&(identical(other.black, black) || other.black == black)&&(identical(other.bw, bw) || other.bw == bw)&&(identical(other.noIrregularRules, noIrregularRules) || other.noIrregularRules == noIrregularRules)&&(identical(other.isLlotheo, isLlotheo) || other.isLlotheo == isLlotheo)&&(identical(other.canPutEverywhere, canPutEverywhere) || other.canPutEverywhere == canPutEverywhere)&&(identical(other.loopedBoard, loopedBoard) || other.loopedBoard == loopedBoard)&&(identical(other.timeLimitForEachTurn, timeLimitForEachTurn) || other.timeLimitForEachTurn == timeLimitForEachTurn));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ReversiGamesResponse&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.startedAt, startedAt) || other.startedAt == startedAt)&&(identical(other.endedAt, endedAt) || other.endedAt == endedAt)&&(identical(other.isStarted, isStarted) || other.isStarted == isStarted)&&(identical(other.isEnded, isEnded) || other.isEnded == isEnded)&&(identical(other.user1Id, user1Id) || other.user1Id == user1Id)&&(identical(other.user2Id, user2Id) || other.user2Id == user2Id)&&(identical(other.user1, user1) || other.user1 == user1)&&(identical(other.user2, user2) || other.user2 == user2)&&(identical(other.winnerId, winnerId) || other.winnerId == winnerId)&&(identical(other.winner, winner) || other.winner == winner)&&(identical(other.surrenderedUserId, surrenderedUserId) || other.surrenderedUserId == surrenderedUserId)&&(identical(other.timeoutUserId, timeoutUserId) || other.timeoutUserId == timeoutUserId)&&(identical(other.black, black) || other.black == black)&&(identical(other.bw, bw) || other.bw == bw)&&(identical(other.noIrregularRules, noIrregularRules) || other.noIrregularRules == noIrregularRules)&&(identical(other.isLlotheo, isLlotheo) || other.isLlotheo == isLlotheo)&&(identical(other.canPutEverywhere, canPutEverywhere) || other.canPutEverywhere == canPutEverywhere)&&(identical(other.loopedBoard, loopedBoard) || other.loopedBoard == loopedBoard)&&(identical(other.timeLimitForEachTurn, timeLimitForEachTurn) || other.timeLimitForEachTurn == timeLimitForEachTurn));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hashAll([runtimeType,id,createdAt,startedAt,endedAt,isStarted,isEnded,user1Id,user2Id,user1,user2,winnerId,winner,surrenderedUserId,timeoutUserId,black,bw,noIrregularRules,isLlotheo,canPutEverywhere,loopedBoard,timeLimitForEachTurn]);
+int get hashCode {
+    return Object.hashAll([runtimeType,id,createdAt,startedAt,endedAt,isStarted,isEnded,user1Id,user2Id,user1,user2,winnerId,winner,surrenderedUserId,timeoutUserId,black,bw,noIrregularRules,isLlotheo,canPutEverywhere,loopedBoard,timeLimitForEachTurn]);
+}
 
 @override
 String toString() {
-  return 'ReversiGamesResponse(id: $id, createdAt: $createdAt, startedAt: $startedAt, endedAt: $endedAt, isStarted: $isStarted, isEnded: $isEnded, user1Id: $user1Id, user2Id: $user2Id, user1: $user1, user2: $user2, winnerId: $winnerId, winner: $winner, surrenderedUserId: $surrenderedUserId, timeoutUserId: $timeoutUserId, black: $black, bw: $bw, noIrregularRules: $noIrregularRules, isLlotheo: $isLlotheo, canPutEverywhere: $canPutEverywhere, loopedBoard: $loopedBoard, timeLimitForEachTurn: $timeLimitForEachTurn)';
+    return 'ReversiGamesResponse(id: $id, createdAt: $createdAt, startedAt: $startedAt, endedAt: $endedAt, isStarted: $isStarted, isEnded: $isEnded, user1Id: $user1Id, user2Id: $user2Id, user1: $user1, user2: $user2, winnerId: $winnerId, winner: $winner, surrenderedUserId: $surrenderedUserId, timeoutUserId: $timeoutUserId, black: $black, bw: $bw, noIrregularRules: $noIrregularRules, isLlotheo: $isLlotheo, canPutEverywhere: $canPutEverywhere, loopedBoard: $loopedBoard, timeLimitForEachTurn: $timeLimitForEachTurn)';
 }
 
 

@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'flash_update_request.dart';
@@ -9,6 +9,7 @@ part of 'flash_update_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $FlashUpdateRequestCopyWith<FlashUpdateRequest> get copyWith => _$FlashUpdateReq
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is FlashUpdateRequest&&(identical(other.flashId, flashId) || other.flashId == flashId)&&(identical(other.title, title) || other.title == title)&&(identical(other.summary, summary) || other.summary == summary)&&(identical(other.script, script) || other.script == script)&&const DeepCollectionEquality().equals(other.permissions, permissions)&&(identical(other.visibility, visibility) || other.visibility == visibility));
+  final _this = this as FlashUpdateRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is FlashUpdateRequest&&(identical(other.flashId, _this.flashId) || other.flashId == _this.flashId)&&(identical(other.title, _this.title) || other.title == _this.title)&&(identical(other.summary, _this.summary) || other.summary == _this.summary)&&(identical(other.script, _this.script) || other.script == _this.script)&&const DeepCollectionEquality().equals(other.permissions, _this.permissions)&&(identical(other.visibility, _this.visibility) || other.visibility == _this.visibility));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,flashId,title,summary,script,const DeepCollectionEquality().hash(permissions),visibility);
+int get hashCode {
+  final _this = this as FlashUpdateRequest;
+  return Object.hash(runtimeType,_this.flashId,_this.title,_this.summary,_this.script,const DeepCollectionEquality().hash(_this.permissions),_this.visibility);
+}
 
 @override
 String toString() {
-  return 'FlashUpdateRequest(flashId: $flashId, title: $title, summary: $summary, script: $script, permissions: $permissions, visibility: $visibility)';
+  final _this = this as FlashUpdateRequest;
+  return 'FlashUpdateRequest(flashId: ${_this.flashId}, title: ${_this.title}, summary: ${_this.summary}, script: ${_this.script}, permissions: ${_this.permissions}, visibility: ${_this.visibility})';
 }
 
 
@@ -66,7 +72,7 @@ class _$FlashUpdateRequestCopyWithImpl<$Res>
 /// Create a copy of FlashUpdateRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? flashId = null,Object? title = freezed,Object? summary = freezed,Object? script = freezed,Object? permissions = freezed,Object? visibility = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(FlashUpdateRequest(
 flashId: null == flashId ? _self.flashId : flashId // ignore: cast_nullable_to_non_nullable
 as String,title: freezed == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
 as String?,summary: freezed == summary ? _self.summary : summary // ignore: cast_nullable_to_non_nullable
@@ -214,7 +220,7 @@ return $default(_that.flashId,_that.title,_that.summary,_that.script,_that.permi
 @JsonSerializable()
 
 class _FlashUpdateRequest implements FlashUpdateRequest {
-  const _FlashUpdateRequest({required this.flashId, this.title, this.summary, this.script, final  List<String>? permissions, this.visibility}): _permissions = permissions;
+  const _FlashUpdateRequest({required this.flashId, this.title, this.summary, this.script,  List<String>? permissions, this.visibility}): _permissions = permissions;
   factory _FlashUpdateRequest.fromJson(Map<String, dynamic> json) => _$FlashUpdateRequestFromJson(json);
 
 @override final  String flashId;
@@ -245,16 +251,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _FlashUpdateRequest&&(identical(other.flashId, flashId) || other.flashId == flashId)&&(identical(other.title, title) || other.title == title)&&(identical(other.summary, summary) || other.summary == summary)&&(identical(other.script, script) || other.script == script)&&const DeepCollectionEquality().equals(other._permissions, _permissions)&&(identical(other.visibility, visibility) || other.visibility == visibility));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _FlashUpdateRequest&&(identical(other.flashId, flashId) || other.flashId == flashId)&&(identical(other.title, title) || other.title == title)&&(identical(other.summary, summary) || other.summary == summary)&&(identical(other.script, script) || other.script == script)&&const DeepCollectionEquality().equals(other.permissions, _permissions)&&(identical(other.visibility, visibility) || other.visibility == visibility));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,flashId,title,summary,script,const DeepCollectionEquality().hash(_permissions),visibility);
+int get hashCode {
+    return Object.hash(runtimeType,flashId,title,summary,script,const DeepCollectionEquality().hash(_permissions),visibility);
+}
 
 @override
 String toString() {
-  return 'FlashUpdateRequest(flashId: $flashId, title: $title, summary: $summary, script: $script, permissions: $permissions, visibility: $visibility)';
+    return 'FlashUpdateRequest(flashId: $flashId, title: $title, summary: $summary, script: $script, permissions: $permissions, visibility: $visibility)';
 }
 
 

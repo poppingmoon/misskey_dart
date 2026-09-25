@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'notes_create_request.dart';
@@ -9,6 +9,7 @@ part of 'notes_create_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -38,16 +39,21 @@ $NotesCreateRequestCopyWith<NotesCreateRequest> get copyWith => _$NotesCreateReq
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesCreateRequest&&(identical(other.visibility, visibility) || other.visibility == visibility)&&const DeepCollectionEquality().equals(other.visibleUserIds, visibleUserIds)&&(identical(other.text, text) || other.text == text)&&(identical(other.cw, cw) || other.cw == cw)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&(identical(other.reactionAcceptance, reactionAcceptance) || other.reactionAcceptance == reactionAcceptance)&&(identical(other.noExtractMentions, noExtractMentions) || other.noExtractMentions == noExtractMentions)&&(identical(other.noExtractHashtags, noExtractHashtags) || other.noExtractHashtags == noExtractHashtags)&&(identical(other.noExtractEmojis, noExtractEmojis) || other.noExtractEmojis == noExtractEmojis)&&const DeepCollectionEquality().equals(other.fileIds, fileIds)&&const DeepCollectionEquality().equals(other.mediaIds, mediaIds)&&(identical(other.replyId, replyId) || other.replyId == replyId)&&(identical(other.renoteId, renoteId) || other.renoteId == renoteId)&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.poll, poll) || other.poll == poll)&&(identical(other.scheduledAt, scheduledAt) || other.scheduledAt == scheduledAt));
+  final _this = this as NotesCreateRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesCreateRequest&&(identical(other.visibility, _this.visibility) || other.visibility == _this.visibility)&&const DeepCollectionEquality().equals(other.visibleUserIds, _this.visibleUserIds)&&(identical(other.text, _this.text) || other.text == _this.text)&&(identical(other.cw, _this.cw) || other.cw == _this.cw)&&(identical(other.localOnly, _this.localOnly) || other.localOnly == _this.localOnly)&&(identical(other.reactionAcceptance, _this.reactionAcceptance) || other.reactionAcceptance == _this.reactionAcceptance)&&(identical(other.noExtractMentions, _this.noExtractMentions) || other.noExtractMentions == _this.noExtractMentions)&&(identical(other.noExtractHashtags, _this.noExtractHashtags) || other.noExtractHashtags == _this.noExtractHashtags)&&(identical(other.noExtractEmojis, _this.noExtractEmojis) || other.noExtractEmojis == _this.noExtractEmojis)&&const DeepCollectionEquality().equals(other.fileIds, _this.fileIds)&&const DeepCollectionEquality().equals(other.mediaIds, _this.mediaIds)&&(identical(other.replyId, _this.replyId) || other.replyId == _this.replyId)&&(identical(other.renoteId, _this.renoteId) || other.renoteId == _this.renoteId)&&(identical(other.channelId, _this.channelId) || other.channelId == _this.channelId)&&(identical(other.poll, _this.poll) || other.poll == _this.poll)&&(identical(other.scheduledAt, _this.scheduledAt) || other.scheduledAt == _this.scheduledAt));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,visibility,const DeepCollectionEquality().hash(visibleUserIds),text,cw,localOnly,reactionAcceptance,noExtractMentions,noExtractHashtags,noExtractEmojis,const DeepCollectionEquality().hash(fileIds),const DeepCollectionEquality().hash(mediaIds),replyId,renoteId,channelId,poll,scheduledAt);
+int get hashCode {
+  final _this = this as NotesCreateRequest;
+  return Object.hash(runtimeType,_this.visibility,const DeepCollectionEquality().hash(_this.visibleUserIds),_this.text,_this.cw,_this.localOnly,_this.reactionAcceptance,_this.noExtractMentions,_this.noExtractHashtags,_this.noExtractEmojis,const DeepCollectionEquality().hash(_this.fileIds),const DeepCollectionEquality().hash(_this.mediaIds),_this.replyId,_this.renoteId,_this.channelId,_this.poll,_this.scheduledAt);
+}
 
 @override
 String toString() {
-  return 'NotesCreateRequest(visibility: $visibility, visibleUserIds: $visibleUserIds, text: $text, cw: $cw, localOnly: $localOnly, reactionAcceptance: $reactionAcceptance, noExtractMentions: $noExtractMentions, noExtractHashtags: $noExtractHashtags, noExtractEmojis: $noExtractEmojis, fileIds: $fileIds, mediaIds: $mediaIds, replyId: $replyId, renoteId: $renoteId, channelId: $channelId, poll: $poll, scheduledAt: $scheduledAt)';
+  final _this = this as NotesCreateRequest;
+  return 'NotesCreateRequest(visibility: ${_this.visibility}, visibleUserIds: ${_this.visibleUserIds}, text: ${_this.text}, cw: ${_this.cw}, localOnly: ${_this.localOnly}, reactionAcceptance: ${_this.reactionAcceptance}, noExtractMentions: ${_this.noExtractMentions}, noExtractHashtags: ${_this.noExtractHashtags}, noExtractEmojis: ${_this.noExtractEmojis}, fileIds: ${_this.fileIds}, mediaIds: ${_this.mediaIds}, replyId: ${_this.replyId}, renoteId: ${_this.renoteId}, channelId: ${_this.channelId}, poll: ${_this.poll}, scheduledAt: ${_this.scheduledAt})';
 }
 
 
@@ -76,7 +82,7 @@ class _$NotesCreateRequestCopyWithImpl<$Res>
 /// Create a copy of NotesCreateRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? visibility = freezed,Object? visibleUserIds = freezed,Object? text = freezed,Object? cw = freezed,Object? localOnly = freezed,Object? reactionAcceptance = freezed,Object? noExtractMentions = freezed,Object? noExtractHashtags = freezed,Object? noExtractEmojis = freezed,Object? fileIds = freezed,Object? mediaIds = freezed,Object? replyId = freezed,Object? renoteId = freezed,Object? channelId = freezed,Object? poll = freezed,Object? scheduledAt = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NotesCreateRequest(
 visibility: freezed == visibility ? _self.visibility : visibility // ignore: cast_nullable_to_non_nullable
 as NoteVisibility?,visibleUserIds: freezed == visibleUserIds ? _self.visibleUserIds : visibleUserIds // ignore: cast_nullable_to_non_nullable
 as List<String>?,text: freezed == text ? _self.text : text // ignore: cast_nullable_to_non_nullable
@@ -246,7 +252,7 @@ return $default(_that.visibility,_that.visibleUserIds,_that.text,_that.cw,_that.
 @JsonSerializable()
 
 class _NotesCreateRequest implements NotesCreateRequest {
-  const _NotesCreateRequest({this.visibility, final  List<String>? visibleUserIds, this.text, this.cw, this.localOnly, this.reactionAcceptance, this.noExtractMentions, this.noExtractHashtags, this.noExtractEmojis, final  List<String>? fileIds, final  List<String>? mediaIds, this.replyId, this.renoteId, this.channelId, this.poll, @EpocTimeDateTimeConverter() this.scheduledAt}): _visibleUserIds = visibleUserIds,_fileIds = fileIds,_mediaIds = mediaIds;
+  const _NotesCreateRequest({this.visibility,  List<String>? visibleUserIds, this.text, this.cw, this.localOnly, this.reactionAcceptance, this.noExtractMentions, this.noExtractHashtags, this.noExtractEmojis,  List<String>? fileIds,  List<String>? mediaIds, this.replyId, this.renoteId, this.channelId, this.poll, @EpocTimeDateTimeConverter() this.scheduledAt}): _visibleUserIds = visibleUserIds,_fileIds = fileIds,_mediaIds = mediaIds;
   factory _NotesCreateRequest.fromJson(Map<String, dynamic> json) => _$NotesCreateRequestFromJson(json);
 
 /// ノートの公開範囲。
@@ -316,16 +322,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesCreateRequest&&(identical(other.visibility, visibility) || other.visibility == visibility)&&const DeepCollectionEquality().equals(other._visibleUserIds, _visibleUserIds)&&(identical(other.text, text) || other.text == text)&&(identical(other.cw, cw) || other.cw == cw)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&(identical(other.reactionAcceptance, reactionAcceptance) || other.reactionAcceptance == reactionAcceptance)&&(identical(other.noExtractMentions, noExtractMentions) || other.noExtractMentions == noExtractMentions)&&(identical(other.noExtractHashtags, noExtractHashtags) || other.noExtractHashtags == noExtractHashtags)&&(identical(other.noExtractEmojis, noExtractEmojis) || other.noExtractEmojis == noExtractEmojis)&&const DeepCollectionEquality().equals(other._fileIds, _fileIds)&&const DeepCollectionEquality().equals(other._mediaIds, _mediaIds)&&(identical(other.replyId, replyId) || other.replyId == replyId)&&(identical(other.renoteId, renoteId) || other.renoteId == renoteId)&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.poll, poll) || other.poll == poll)&&(identical(other.scheduledAt, scheduledAt) || other.scheduledAt == scheduledAt));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesCreateRequest&&(identical(other.visibility, visibility) || other.visibility == visibility)&&const DeepCollectionEquality().equals(other.visibleUserIds, _visibleUserIds)&&(identical(other.text, text) || other.text == text)&&(identical(other.cw, cw) || other.cw == cw)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&(identical(other.reactionAcceptance, reactionAcceptance) || other.reactionAcceptance == reactionAcceptance)&&(identical(other.noExtractMentions, noExtractMentions) || other.noExtractMentions == noExtractMentions)&&(identical(other.noExtractHashtags, noExtractHashtags) || other.noExtractHashtags == noExtractHashtags)&&(identical(other.noExtractEmojis, noExtractEmojis) || other.noExtractEmojis == noExtractEmojis)&&const DeepCollectionEquality().equals(other.fileIds, _fileIds)&&const DeepCollectionEquality().equals(other.mediaIds, _mediaIds)&&(identical(other.replyId, replyId) || other.replyId == replyId)&&(identical(other.renoteId, renoteId) || other.renoteId == renoteId)&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.poll, poll) || other.poll == poll)&&(identical(other.scheduledAt, scheduledAt) || other.scheduledAt == scheduledAt));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,visibility,const DeepCollectionEquality().hash(_visibleUserIds),text,cw,localOnly,reactionAcceptance,noExtractMentions,noExtractHashtags,noExtractEmojis,const DeepCollectionEquality().hash(_fileIds),const DeepCollectionEquality().hash(_mediaIds),replyId,renoteId,channelId,poll,scheduledAt);
+int get hashCode {
+    return Object.hash(runtimeType,visibility,const DeepCollectionEquality().hash(_visibleUserIds),text,cw,localOnly,reactionAcceptance,noExtractMentions,noExtractHashtags,noExtractEmojis,const DeepCollectionEquality().hash(_fileIds),const DeepCollectionEquality().hash(_mediaIds),replyId,renoteId,channelId,poll,scheduledAt);
+}
 
 @override
 String toString() {
-  return 'NotesCreateRequest(visibility: $visibility, visibleUserIds: $visibleUserIds, text: $text, cw: $cw, localOnly: $localOnly, reactionAcceptance: $reactionAcceptance, noExtractMentions: $noExtractMentions, noExtractHashtags: $noExtractHashtags, noExtractEmojis: $noExtractEmojis, fileIds: $fileIds, mediaIds: $mediaIds, replyId: $replyId, renoteId: $renoteId, channelId: $channelId, poll: $poll, scheduledAt: $scheduledAt)';
+    return 'NotesCreateRequest(visibility: $visibility, visibleUserIds: $visibleUserIds, text: $text, cw: $cw, localOnly: $localOnly, reactionAcceptance: $reactionAcceptance, noExtractMentions: $noExtractMentions, noExtractHashtags: $noExtractHashtags, noExtractEmojis: $noExtractEmojis, fileIds: $fileIds, mediaIds: $mediaIds, replyId: $replyId, renoteId: $renoteId, channelId: $channelId, poll: $poll, scheduledAt: $scheduledAt)';
 }
 
 

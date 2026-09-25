@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'notes_create_poll_request.dart';
@@ -9,6 +9,7 @@ part of 'notes_create_poll_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $NotesCreatePollRequestCopyWith<NotesCreatePollRequest> get copyWith => _$NotesC
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesCreatePollRequest&&const DeepCollectionEquality().equals(other.choices, choices)&&(identical(other.multiple, multiple) || other.multiple == multiple)&&(identical(other.expiresAt, expiresAt) || other.expiresAt == expiresAt)&&(identical(other.expiredAfter, expiredAfter) || other.expiredAfter == expiredAfter));
+  final _this = this as NotesCreatePollRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotesCreatePollRequest&&const DeepCollectionEquality().equals(other.choices, _this.choices)&&(identical(other.multiple, _this.multiple) || other.multiple == _this.multiple)&&(identical(other.expiresAt, _this.expiresAt) || other.expiresAt == _this.expiresAt)&&(identical(other.expiredAfter, _this.expiredAfter) || other.expiredAfter == _this.expiredAfter));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(choices),multiple,expiresAt,expiredAfter);
+int get hashCode {
+  final _this = this as NotesCreatePollRequest;
+  return Object.hash(runtimeType,const DeepCollectionEquality().hash(_this.choices),_this.multiple,_this.expiresAt,_this.expiredAfter);
+}
 
 @override
 String toString() {
-  return 'NotesCreatePollRequest(choices: $choices, multiple: $multiple, expiresAt: $expiresAt, expiredAfter: $expiredAfter)';
+  final _this = this as NotesCreatePollRequest;
+  return 'NotesCreatePollRequest(choices: ${_this.choices}, multiple: ${_this.multiple}, expiresAt: ${_this.expiresAt}, expiredAfter: ${_this.expiredAfter})';
 }
 
 
@@ -66,7 +72,7 @@ class _$NotesCreatePollRequestCopyWithImpl<$Res>
 /// Create a copy of NotesCreatePollRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? choices = null,Object? multiple = freezed,Object? expiresAt = freezed,Object? expiredAfter = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NotesCreatePollRequest(
 choices: null == choices ? _self.choices : choices // ignore: cast_nullable_to_non_nullable
 as List<String>,multiple: freezed == multiple ? _self.multiple : multiple // ignore: cast_nullable_to_non_nullable
 as bool?,expiresAt: freezed == expiresAt ? _self.expiresAt : expiresAt // ignore: cast_nullable_to_non_nullable
@@ -212,7 +218,7 @@ return $default(_that.choices,_that.multiple,_that.expiresAt,_that.expiredAfter)
 
 @JsonSerializable(includeIfNull: false)
 class _NotesCreatePollRequest implements NotesCreatePollRequest {
-  const _NotesCreatePollRequest({required final  List<String> choices, this.multiple, @EpocTimeDateTimeConverter() this.expiresAt, @DurationConverter() this.expiredAfter}): _choices = choices;
+  const _NotesCreatePollRequest({required  List<String> choices, this.multiple, @EpocTimeDateTimeConverter() this.expiresAt, @DurationConverter() this.expiredAfter}): _choices = choices;
   factory _NotesCreatePollRequest.fromJson(Map<String, dynamic> json) => _$NotesCreatePollRequestFromJson(json);
 
  final  List<String> _choices;
@@ -239,16 +245,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesCreatePollRequest&&const DeepCollectionEquality().equals(other._choices, _choices)&&(identical(other.multiple, multiple) || other.multiple == multiple)&&(identical(other.expiresAt, expiresAt) || other.expiresAt == expiresAt)&&(identical(other.expiredAfter, expiredAfter) || other.expiredAfter == expiredAfter));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesCreatePollRequest&&const DeepCollectionEquality().equals(other.choices, _choices)&&(identical(other.multiple, multiple) || other.multiple == multiple)&&(identical(other.expiresAt, expiresAt) || other.expiresAt == expiresAt)&&(identical(other.expiredAfter, expiredAfter) || other.expiredAfter == expiredAfter));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_choices),multiple,expiresAt,expiredAfter);
+int get hashCode {
+    return Object.hash(runtimeType,const DeepCollectionEquality().hash(_choices),multiple,expiresAt,expiredAfter);
+}
 
 @override
 String toString() {
-  return 'NotesCreatePollRequest(choices: $choices, multiple: $multiple, expiresAt: $expiresAt, expiredAfter: $expiredAfter)';
+    return 'NotesCreatePollRequest(choices: $choices, multiple: $multiple, expiresAt: $expiresAt, expiredAfter: $expiredAfter)';
 }
 
 

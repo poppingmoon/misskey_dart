@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'chat_history_request.dart';
@@ -9,6 +9,7 @@ part of 'chat_history_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $ChatHistoryRequestCopyWith<ChatHistoryRequest> get copyWith => _$ChatHistoryReq
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ChatHistoryRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.room, room) || other.room == room));
+  final _this = this as ChatHistoryRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ChatHistoryRequest&&(identical(other.limit, _this.limit) || other.limit == _this.limit)&&(identical(other.room, _this.room) || other.room == _this.room));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,limit,room);
+int get hashCode {
+  final _this = this as ChatHistoryRequest;
+  return Object.hash(runtimeType,_this.limit,_this.room);
+}
 
 @override
 String toString() {
-  return 'ChatHistoryRequest(limit: $limit, room: $room)';
+  final _this = this as ChatHistoryRequest;
+  return 'ChatHistoryRequest(limit: ${_this.limit}, room: ${_this.room})';
 }
 
 
@@ -66,7 +72,7 @@ class _$ChatHistoryRequestCopyWithImpl<$Res>
 /// Create a copy of ChatHistoryRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? limit = freezed,Object? room = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(ChatHistoryRequest(
 limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int?,room: freezed == room ? _self.room : room // ignore: cast_nullable_to_non_nullable
 as bool?,
@@ -229,16 +235,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatHistoryRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.room, room) || other.room == room));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatHistoryRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.room, room) || other.room == room));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,limit,room);
+int get hashCode {
+    return Object.hash(runtimeType,limit,room);
+}
 
 @override
 String toString() {
-  return 'ChatHistoryRequest(limit: $limit, room: $room)';
+    return 'ChatHistoryRequest(limit: $limit, room: $room)';
 }
 
 

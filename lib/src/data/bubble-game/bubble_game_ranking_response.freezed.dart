@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'bubble_game_ranking_response.dart';
@@ -9,6 +9,7 @@ part of 'bubble_game_ranking_response.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $BubbleGameRankingResponseCopyWith<BubbleGameRankingResponse> get copyWith => _$
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is BubbleGameRankingResponse&&(identical(other.id, id) || other.id == id)&&(identical(other.score, score) || other.score == score)&&(identical(other.user, user) || other.user == user));
+  final _this = this as BubbleGameRankingResponse;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is BubbleGameRankingResponse&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.score, _this.score) || other.score == _this.score)&&(identical(other.user, _this.user) || other.user == _this.user));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,score,user);
+int get hashCode {
+  final _this = this as BubbleGameRankingResponse;
+  return Object.hash(runtimeType,_this.id,_this.score,_this.user);
+}
 
 @override
 String toString() {
-  return 'BubbleGameRankingResponse(id: $id, score: $score, user: $user)';
+  final _this = this as BubbleGameRankingResponse;
+  return 'BubbleGameRankingResponse(id: ${_this.id}, score: ${_this.score}, user: ${_this.user})';
 }
 
 
@@ -66,7 +72,7 @@ class _$BubbleGameRankingResponseCopyWithImpl<$Res>
 /// Create a copy of BubbleGameRankingResponse
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? score = null,Object? user = null,}) {
-  return _then(_self.copyWith(
+  return _then(BubbleGameRankingResponse(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,score: null == score ? _self.score : score // ignore: cast_nullable_to_non_nullable
 as int,user: null == user ? _self.user : user // ignore: cast_nullable_to_non_nullable
@@ -240,16 +246,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _BubbleGameRankingResponse&&(identical(other.id, id) || other.id == id)&&(identical(other.score, score) || other.score == score)&&(identical(other.user, user) || other.user == user));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _BubbleGameRankingResponse&&(identical(other.id, id) || other.id == id)&&(identical(other.score, score) || other.score == score)&&(identical(other.user, user) || other.user == user));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,score,user);
+int get hashCode {
+    return Object.hash(runtimeType,id,score,user);
+}
 
 @override
 String toString() {
-  return 'BubbleGameRankingResponse(id: $id, score: $score, user: $user)';
+    return 'BubbleGameRankingResponse(id: $id, score: $score, user: $user)';
 }
 
 

@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'channels_mute_create_request.dart';
@@ -9,6 +9,7 @@ part of 'channels_mute_create_request.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $ChannelsMuteCreateRequestCopyWith<ChannelsMuteCreateRequest> get copyWith => _$
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ChannelsMuteCreateRequest&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.expiresAt, expiresAt) || other.expiresAt == expiresAt));
+  final _this = this as ChannelsMuteCreateRequest;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ChannelsMuteCreateRequest&&(identical(other.channelId, _this.channelId) || other.channelId == _this.channelId)&&(identical(other.expiresAt, _this.expiresAt) || other.expiresAt == _this.expiresAt));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,channelId,expiresAt);
+int get hashCode {
+  final _this = this as ChannelsMuteCreateRequest;
+  return Object.hash(runtimeType,_this.channelId,_this.expiresAt);
+}
 
 @override
 String toString() {
-  return 'ChannelsMuteCreateRequest(channelId: $channelId, expiresAt: $expiresAt)';
+  final _this = this as ChannelsMuteCreateRequest;
+  return 'ChannelsMuteCreateRequest(channelId: ${_this.channelId}, expiresAt: ${_this.expiresAt})';
 }
 
 
@@ -66,7 +72,7 @@ class _$ChannelsMuteCreateRequestCopyWithImpl<$Res>
 /// Create a copy of ChannelsMuteCreateRequest
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? channelId = freezed,Object? expiresAt = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(ChannelsMuteCreateRequest(
 channelId: freezed == channelId ? _self.channelId : channelId // ignore: cast_nullable_to_non_nullable
 as String?,expiresAt: freezed == expiresAt ? _self.expiresAt : expiresAt // ignore: cast_nullable_to_non_nullable
 as DateTime?,
@@ -229,16 +235,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChannelsMuteCreateRequest&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.expiresAt, expiresAt) || other.expiresAt == expiresAt));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChannelsMuteCreateRequest&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.expiresAt, expiresAt) || other.expiresAt == expiresAt));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,channelId,expiresAt);
+int get hashCode {
+    return Object.hash(runtimeType,channelId,expiresAt);
+}
 
 @override
 String toString() {
-  return 'ChannelsMuteCreateRequest(channelId: $channelId, expiresAt: $expiresAt)';
+    return 'ChannelsMuteCreateRequest(channelId: $channelId, expiresAt: $expiresAt)';
 }
 
 

@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'channel.dart';
@@ -9,6 +9,7 @@ part of 'channel.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 /// @nodoc
@@ -20,7 +21,7 @@ mixin _$Channel {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Channel);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is Channel);
 }
 
 
@@ -29,7 +30,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'Channel()';
+    return 'Channel()';
 }
 
 
@@ -287,7 +288,7 @@ class _HomeTimeline extends Channel {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _HomeTimeline);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _HomeTimeline);
 }
 
 
@@ -296,7 +297,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'Channel.homeTimeline()';
+    return 'Channel.homeTimeline()';
 }
 
 
@@ -319,7 +320,7 @@ class _LocalTimeline extends Channel {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _LocalTimeline);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _LocalTimeline);
 }
 
 
@@ -328,7 +329,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'Channel.localTimeline()';
+    return 'Channel.localTimeline()';
 }
 
 
@@ -351,7 +352,7 @@ class _GlobalTimeline extends Channel {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _GlobalTimeline);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _GlobalTimeline);
 }
 
 
@@ -360,7 +361,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'Channel.globalTimeline()';
+    return 'Channel.globalTimeline()';
 }
 
 
@@ -383,7 +384,7 @@ class _HybridTimeline extends Channel {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _HybridTimeline);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _HybridTimeline);
 }
 
 
@@ -392,7 +393,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'Channel.hybridTimeline()';
+    return 'Channel.hybridTimeline()';
 }
 
 
@@ -415,7 +416,7 @@ class _RoleTimeline extends Channel {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _RoleTimeline);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _RoleTimeline);
 }
 
 
@@ -424,7 +425,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'Channel.roleTimeline()';
+    return 'Channel.roleTimeline()';
 }
 
 
@@ -447,7 +448,7 @@ class _ChannelType extends Channel {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChannelType);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChannelType);
 }
 
 
@@ -456,7 +457,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'Channel.channel()';
+    return 'Channel.channel()';
 }
 
 
@@ -479,7 +480,7 @@ class _UserList extends Channel {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _UserList);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UserList);
 }
 
 
@@ -488,7 +489,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'Channel.userList()';
+    return 'Channel.userList()';
 }
 
 
@@ -511,7 +512,7 @@ class _Hashtag extends Channel {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Hashtag);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Hashtag);
 }
 
 
@@ -520,7 +521,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'Channel.hashtag()';
+    return 'Channel.hashtag()';
 }
 
 
@@ -543,7 +544,7 @@ class _Antenna extends Channel {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Antenna);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Antenna);
 }
 
 
@@ -552,7 +553,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'Channel.antenna()';
+    return 'Channel.antenna()';
 }
 
 
@@ -575,7 +576,7 @@ class _Drive extends Channel {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Drive);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Drive);
 }
 
 
@@ -584,7 +585,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'Channel.drive()';
+    return 'Channel.drive()';
 }
 
 
@@ -607,7 +608,7 @@ class _ServerStats extends Channel {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ServerStats);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ServerStats);
 }
 
 
@@ -616,7 +617,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'Channel.serverStats()';
+    return 'Channel.serverStats()';
 }
 
 
@@ -639,7 +640,7 @@ class _QueueStats extends Channel {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _QueueStats);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _QueueStats);
 }
 
 
@@ -648,7 +649,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'Channel.queueStats()';
+    return 'Channel.queueStats()';
 }
 
 
@@ -671,7 +672,7 @@ class _ChatRoom extends Channel {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatRoom);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatRoom);
 }
 
 
@@ -680,7 +681,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'Channel.chatRoom()';
+    return 'Channel.chatRoom()';
 }
 
 
@@ -703,7 +704,7 @@ class _ChatUser extends Channel {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatUser);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatUser);
 }
 
 
@@ -712,7 +713,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'Channel.chatUser()';
+    return 'Channel.chatUser()';
 }
 
 
@@ -735,7 +736,7 @@ class _Reversi extends Channel {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Reversi);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Reversi);
 }
 
 
@@ -744,7 +745,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'Channel.reversi()';
+    return 'Channel.reversi()';
 }
 
 
@@ -767,7 +768,7 @@ class _ReversiGame extends Channel {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ReversiGame);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ReversiGame);
 }
 
 
@@ -776,7 +777,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'Channel.reversiGame()';
+    return 'Channel.reversiGame()';
 }
 
 
@@ -799,7 +800,7 @@ class _Admin extends Channel {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Admin);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Admin);
 }
 
 
@@ -808,7 +809,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'Channel.admin()';
+    return 'Channel.admin()';
 }
 
 
@@ -831,7 +832,7 @@ class _Main extends Channel {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Main);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Main);
 }
 
 
@@ -840,7 +841,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'Channel.main()';
+    return 'Channel.main()';
 }
 
 
@@ -868,16 +869,18 @@ _$CustomCopyWith<_Custom> get copyWith => __$CustomCopyWithImpl<_Custom>(this, _
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Custom&&(identical(other.value, value) || other.value == value));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Custom&&(identical(other.value, value) || other.value == value));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,value);
+int get hashCode {
+    return Object.hash(runtimeType,value);
+}
 
 @override
 String toString() {
-  return 'Channel.custom(value: $value)';
+    return 'Channel.custom(value: $value)';
 }
 
 
