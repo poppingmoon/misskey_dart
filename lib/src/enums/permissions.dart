@@ -91,7 +91,7 @@ enum Permission {
   readChat("read:chat");
 
   final String value;
-  const new(this.value);
+  new(this.value);
 }
 
 class PermissionJsonConverter extends JsonConverter<Permission, String> {
