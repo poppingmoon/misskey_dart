@@ -198,8 +198,7 @@ class MisskeyUsers {
 class MisskeyUsersGallery {
   final ApiService _apiService;
 
-  MisskeyUsersGallery({required ApiService apiService})
-    : _apiService = apiService;
+  MisskeyUsersGallery({required this._apiService});
 
   /// ユーザーが作成したギャラリーの投稿を取得します。
   Future<Iterable<GalleryPost>> posts(UsersGalleryPostsRequest request) async {
@@ -214,8 +213,7 @@ class MisskeyUsersGallery {
 class MisskeyUsersLists {
   final ApiService _apiService;
 
-  MisskeyUsersLists({required ApiService apiService})
-    : _apiService = apiService;
+  MisskeyUsersLists({required this._apiService});
 
   /// リストを作成します。
   Future<UsersList> create(UsersListsCreateRequest request) async {

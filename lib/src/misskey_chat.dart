@@ -56,8 +56,7 @@ class MisskeyChat {
 class MisskeyChatMessages {
   final ApiService _apiService;
 
-  MisskeyChatMessages({required ApiService apiService})
-    : _apiService = apiService;
+  MisskeyChatMessages({required this._apiService});
 
   /// チャットメッセージを作成します（ルーム宛）
   Future<ChatMessage> createToRoom(
@@ -226,8 +225,7 @@ class MisskeyChatRooms {
 class MisskeyChatRoomsInvitations {
   final ApiService _apiService;
 
-  MisskeyChatRoomsInvitations({required ApiService apiService})
-    : _apiService = apiService;
+  MisskeyChatRoomsInvitations({required this._apiService});
 
   /// チャットルームへの招待を作成します
   Future<ChatJoining> create(ChatRoomsInvitationsCreateRequest request) async {

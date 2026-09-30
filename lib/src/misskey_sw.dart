@@ -4,7 +4,7 @@ import 'package:misskey_dart/src/services/api_service.dart';
 class MisskeySw {
   final ApiService _apiService;
 
-  MisskeySw({required ApiService apiService}) : _apiService = apiService;
+  MisskeySw({required this._apiService});
 
   Future<SwRegisterResponse> register(SwRegisterRequest request) async {
     final response = await _apiService.post<Map<String, dynamic>>(

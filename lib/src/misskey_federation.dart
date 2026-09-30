@@ -4,8 +4,7 @@ import 'package:misskey_dart/src/services/api_service.dart';
 class MisskeyFederation {
   final ApiService _apiService;
 
-  MisskeyFederation({required ApiService apiService})
-    : _apiService = apiService;
+  MisskeyFederation({required this._apiService});
 
   /// 自身のサーバーが保持する外部サーバーの情報を取得します。
   Future<FederationShowInstanceResponse> showInstance(

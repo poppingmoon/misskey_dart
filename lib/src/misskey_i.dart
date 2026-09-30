@@ -105,7 +105,7 @@ class MisskeyI {
 class MisskeyIGallery {
   final ApiService _apiService;
 
-  MisskeyIGallery({required ApiService apiService}) : _apiService = apiService;
+  MisskeyIGallery({required this._apiService});
 
   /// ギャラリーの投稿の一覧を取得します。
   Future<Iterable<IGalleryLikesResponse>> likes(
@@ -131,7 +131,7 @@ class MisskeyIGallery {
 class MisskeyIRegistry {
   final ApiService _apiService;
 
-  MisskeyIRegistry({required ApiService apiService}) : _apiService = apiService;
+  MisskeyIRegistry({required this._apiService});
 
   /// 指定したスコープの全てのキーと値を取得します。
   Future<Map<String, dynamic>> getAll(IRegistryGetAllRequest request) async {

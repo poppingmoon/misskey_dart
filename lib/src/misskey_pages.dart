@@ -4,7 +4,7 @@ import 'package:misskey_dart/src/services/api_service.dart';
 class MisskeyPages {
   final ApiService _apiService;
 
-  MisskeyPages({required ApiService apiService}) : _apiService = apiService;
+  MisskeyPages({required this._apiService});
 
   Future<Page> create(PagesCreateRequest request) async {
     final response = await _apiService.post<Map<String, dynamic>>(

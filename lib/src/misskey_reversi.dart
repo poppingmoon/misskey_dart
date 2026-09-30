@@ -4,7 +4,7 @@ import 'package:misskey_dart/src/services/api_service.dart';
 class MisskeyReversi {
   final ApiService _apiService;
 
-  MisskeyReversi({required ApiService apiService}) : _apiService = apiService;
+  MisskeyReversi({required this._apiService});
 
   /// サーバー内のリバーシのゲームを取得します。
   Future<Iterable<ReversiGamesResponse>> show(

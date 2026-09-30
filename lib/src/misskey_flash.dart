@@ -4,7 +4,7 @@ import 'package:misskey_dart/src/services/api_service.dart';
 class MisskeyFlash {
   final ApiService _apiService;
 
-  MisskeyFlash({required ApiService apiService}) : _apiService = apiService;
+  MisskeyFlash({required this._apiService});
 
   /// Playを作成します。
   Future<Flash> create(FlashCreateRequest request) async {
