@@ -6,7 +6,7 @@ import 'util/misskey_dart_test_util.dart';
 
 void main() async {
   test("register", () async {
-    final endpoint = Uuid().v4();
+    final endpoint = "https://example.com/${Uuid().v4()}";
     final response = await userClient.sw.register(
       SwRegisterRequest(
         endpoint: endpoint,
@@ -18,7 +18,7 @@ void main() async {
   });
 
   test("show-registration", () async {
-    final endpoint = Uuid().v4();
+    final endpoint = "https://example.com/${Uuid().v4()}";
     await userClient.sw.register(
       SwRegisterRequest(
         endpoint: endpoint,
@@ -33,7 +33,7 @@ void main() async {
   });
 
   test("unregister", () async {
-    final endpoint = Uuid().v4();
+    final endpoint = "https://example.com/${Uuid().v4()}";
     await userClient.sw.register(
       SwRegisterRequest(
         endpoint: endpoint,
@@ -49,7 +49,7 @@ void main() async {
   });
 
   test("update-registration", () async {
-    final endpoint = Uuid().v4();
+    final endpoint = "https://example.com/${Uuid().v4()}";
     await userClient.sw.register(
       SwRegisterRequest(
         endpoint: endpoint,
