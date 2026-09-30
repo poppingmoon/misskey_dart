@@ -486,7 +486,7 @@ abstract class UserBadgeRole with _$UserBadgeRole {
       _$UserBadgeRoleFromJson(json);
 }
 
-sealed class HideBefore {}
+sealed class HideBefore;
 
 class HideBeforeDuration implements HideBefore {
   const HideBeforeDuration(this.duration);

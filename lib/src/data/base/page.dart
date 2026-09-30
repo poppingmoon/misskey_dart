@@ -150,7 +150,7 @@ abstract class PageNote with _$PageNote implements AbstractPageNote {
       _$PageNoteFromJson(json);
 }
 
-abstract class AbstractPageUnknown extends AbstractPageContent {}
+abstract class AbstractPageUnknown extends AbstractPageContent;
 
 @Freezed(toJson: false)
 abstract class PageUnknown with _$PageUnknown implements AbstractPageUnknown {

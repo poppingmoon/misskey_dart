@@ -7,3 +7,4 @@ analyzer:
 linter:
   rules:
     - directives_ordering
+    - empty_container_bodies
