@@ -7,20 +7,19 @@ part 'note_schedule.g.dart';
 
 @freezed
 abstract class NoteSchedule with _$NoteSchedule {
-  const factory NoteSchedule({
+  const factory({
     required String id,
     required NoteScheduleNote note,
     required String userId,
     @DateTimeConverter() required DateTime scheduledAt,
   }) = _NoteSchedule;
 
-  factory NoteSchedule.fromJson(Map<String, dynamic> json) =>
-      _$NoteScheduleFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$NoteScheduleFromJson(json);
 }
 
 @freezed
 abstract class NoteScheduleNote with _$NoteScheduleNote {
-  const factory NoteScheduleNote({
+  const factory({
     String? text,
     String? cw,
     @Default([]) List<String> fileIds,
@@ -35,6 +34,6 @@ abstract class NoteScheduleNote with _$NoteScheduleNote {
     bool? isSchedule,
   }) = _NoteScheduleNote;
 
-  factory NoteScheduleNote.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$NoteScheduleNoteFromJson(json);
 }

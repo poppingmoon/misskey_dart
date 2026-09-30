@@ -6,7 +6,7 @@ part 'notes_reactions_request.g.dart';
 
 @freezed
 abstract class NotesReactionsRequest with _$NotesReactionsRequest {
-  const factory NotesReactionsRequest({
+  const factory({
     required String noteId,
     String? type,
     int? limit,
@@ -17,6 +17,6 @@ abstract class NotesReactionsRequest with _$NotesReactionsRequest {
     @EpocTimeDateTimeConverter() DateTime? untilDate,
   }) = _NotesReactionsRequest;
 
-  factory NotesReactionsRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$NotesReactionsRequestFromJson(json);
 }

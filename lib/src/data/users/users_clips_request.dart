@@ -6,7 +6,7 @@ part 'users_clips_request.g.dart';
 
 @freezed
 abstract class UsersClipsRequest with _$UsersClipsRequest {
-  const factory UsersClipsRequest({
+  const factory({
     required String userId,
     int? limit,
     String? sinceId,
@@ -15,6 +15,6 @@ abstract class UsersClipsRequest with _$UsersClipsRequest {
     @EpocTimeDateTimeConverter() DateTime? untilDate,
   }) = _UsersClipsRequest;
 
-  factory UsersClipsRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$UsersClipsRequestFromJson(json);
 }

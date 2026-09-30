@@ -5,7 +5,7 @@ part 'stats_response.g.dart';
 
 @freezed
 abstract class StatsResponse with _$StatsResponse {
-  const factory StatsResponse({
+  const factory({
     int? notesCount,
     int? originalNotesCount,
     int? usersCount,
@@ -16,6 +16,5 @@ abstract class StatsResponse with _$StatsResponse {
     int? driveUsageRemote,
   }) = _StatsResponse;
 
-  factory StatsResponse.fromJson(Map<String, dynamic> json) =>
-      _$StatsResponseFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$StatsResponseFromJson(json);
 }

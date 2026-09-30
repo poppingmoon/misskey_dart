@@ -9,7 +9,7 @@ part 'i_update_request.g.dart';
 
 @freezed
 abstract class IUpdateRequest with _$IUpdateRequest {
-  const factory IUpdateRequest({
+  const factory({
     String? name,
     String? description,
     String? followedMessage,
@@ -54,13 +54,12 @@ abstract class IUpdateRequest with _$IUpdateRequest {
     List<IUpdateMutualLinkSection>? mutualLinkSections,
   }) = _IUpdateRequest;
 
-  factory IUpdateRequest.fromJson(Map<String, dynamic> json) =>
-      _$IUpdateRequestFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$IUpdateRequestFromJson(json);
 }
 
 @freezed
 abstract class IUpdateAvatarDecoration with _$IUpdateAvatarDecoration {
-  const factory IUpdateAvatarDecoration({
+  const factory({
     required String id,
     double? angle,
     @Default(false) bool flipH,
@@ -68,29 +67,27 @@ abstract class IUpdateAvatarDecoration with _$IUpdateAvatarDecoration {
     @Default(0.0) double offsetY,
   }) = _IUpdateAvatarDecoration;
 
-  factory IUpdateAvatarDecoration.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$IUpdateAvatarDecorationFromJson(json);
 }
 
 @freezed
 abstract class IUpdateMutualLinkSection with _$IUpdateMutualLinkSection {
-  const factory IUpdateMutualLinkSection({
-    String? name,
-    required List<IUpdateMutualLink> mutualLinks,
-  }) = _IUpdateMutualLinkSection;
+  const factory({String? name, required List<IUpdateMutualLink> mutualLinks}) =
+      _IUpdateMutualLinkSection;
 
-  factory IUpdateMutualLinkSection.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$IUpdateMutualLinkSectionFromJson(json);
 }
 
 @freezed
 abstract class IUpdateMutualLink with _$IUpdateMutualLink {
-  const factory IUpdateMutualLink({
+  const factory({
     required String url,
     required String fileId,
     String? description,
   }) = _IUpdateMutualLink;
 
-  factory IUpdateMutualLink.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$IUpdateMutualLinkFromJson(json);
 }

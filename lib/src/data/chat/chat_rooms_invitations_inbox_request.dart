@@ -7,7 +7,7 @@ part 'chat_rooms_invitations_inbox_request.g.dart';
 @freezed
 abstract class ChatRoomsInvitationsInboxRequest
     with _$ChatRoomsInvitationsInboxRequest {
-  const factory ChatRoomsInvitationsInboxRequest({
+  const factory({
     int? limit,
     String? sinceId,
     String? untilId,
@@ -15,7 +15,6 @@ abstract class ChatRoomsInvitationsInboxRequest
     @EpocTimeDateTimeConverter() DateTime? untilDate,
   }) = _ChatRoomsInvitationsInboxRequest;
 
-  factory ChatRoomsInvitationsInboxRequest.fromJson(
-    Map<String, dynamic> json,
-  ) => _$ChatRoomsInvitationsInboxRequestFromJson(json);
+  factory fromJson(Map<String, dynamic> json) =>
+      _$ChatRoomsInvitationsInboxRequestFromJson(json);
 }

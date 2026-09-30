@@ -9,7 +9,7 @@ part 'notes_create_request.g.dart';
 
 @freezed
 abstract class NotesCreateRequest with _$NotesCreateRequest {
-  const factory NotesCreateRequest({
+  const factory({
     /// ノートの公開範囲。
     NoteVisibility? visibility,
 
@@ -47,6 +47,6 @@ abstract class NotesCreateRequest with _$NotesCreateRequest {
     @EpocTimeDateTimeConverter() DateTime? scheduledAt,
   }) = _NotesCreateRequest;
 
-  factory NotesCreateRequest.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$NotesCreateRequestFromJson(json);
 }

@@ -7,7 +7,7 @@ part 'pages_update_request.g.dart';
 
 @freezed
 abstract class PagesUpdateRequest with _$PagesUpdateRequest {
-  const factory PagesUpdateRequest({
+  const factory({
     required String pageId,
     String? title,
     String? name,
@@ -22,6 +22,6 @@ abstract class PagesUpdateRequest with _$PagesUpdateRequest {
     PageVisibility? visibility,
   }) = _PagesUpdateRequest;
 
-  factory PagesUpdateRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$PagesUpdateRequestFromJson(json);
 }

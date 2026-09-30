@@ -7,7 +7,7 @@ part 'reversi_show_game_response.g.dart';
 
 @freezed
 abstract class ReversiShowGameResponse with _$ReversiShowGameResponse {
-  const factory ReversiShowGameResponse({
+  const factory({
     required String id,
     required DateTime createdAt,
     @NullableDateTimeConverter() DateTime? startedAt,
@@ -40,6 +40,6 @@ abstract class ReversiShowGameResponse with _$ReversiShowGameResponse {
     required List<String> map,
   }) = _ReversiShowGameResponse;
 
-  factory ReversiShowGameResponse.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$ReversiShowGameResponseFromJson(json);
 }

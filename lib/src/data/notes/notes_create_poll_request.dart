@@ -8,13 +8,13 @@ part 'notes_create_poll_request.g.dart';
 @freezed
 abstract class NotesCreatePollRequest with _$NotesCreatePollRequest {
   @JsonSerializable(includeIfNull: false) // ignore: invalid_annotation_target
-  const factory NotesCreatePollRequest({
+  const factory({
     required List<String> choices,
     bool? multiple,
     @EpocTimeDateTimeConverter() DateTime? expiresAt,
     @DurationConverter() Duration? expiredAfter,
   }) = _NotesCreatePollRequest;
 
-  factory NotesCreatePollRequest.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$NotesCreatePollRequestFromJson(json);
 }

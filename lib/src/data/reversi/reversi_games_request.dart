@@ -6,7 +6,7 @@ part 'reversi_games_request.g.dart';
 
 @freezed
 abstract class ReversiGamesRequest with _$ReversiGamesRequest {
-  const factory ReversiGamesRequest({
+  const factory({
     int? limit,
     String? sinceId,
     String? untilId,
@@ -15,6 +15,6 @@ abstract class ReversiGamesRequest with _$ReversiGamesRequest {
     bool? my,
   }) = _ReversiGamesRequest;
 
-  factory ReversiGamesRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$ReversiGamesRequestFromJson(json);
 }

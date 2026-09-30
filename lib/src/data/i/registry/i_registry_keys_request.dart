@@ -5,11 +5,9 @@ part 'i_registry_keys_request.g.dart';
 
 @freezed
 abstract class IRegistryKeysRequest with _$IRegistryKeysRequest {
-  const factory IRegistryKeysRequest({
-    required List<String> scope,
-    String? domain,
-  }) = _IRegistryKeysRequest;
+  const factory({required List<String> scope, String? domain}) =
+      _IRegistryKeysRequest;
 
-  factory IRegistryKeysRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$IRegistryKeysRequestFromJson(json);
 }

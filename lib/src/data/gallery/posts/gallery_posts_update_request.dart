@@ -5,7 +5,7 @@ part 'gallery_posts_update_request.g.dart';
 
 @freezed
 abstract class GalleryPostsUpdateRequest with _$GalleryPostsUpdateRequest {
-  const factory GalleryPostsUpdateRequest({
+  const factory({
     required String postId,
     required String title,
     String? description,
@@ -13,6 +13,6 @@ abstract class GalleryPostsUpdateRequest with _$GalleryPostsUpdateRequest {
     bool? isSensitive,
   }) = _GalleryPostsUpdateRequest;
 
-  factory GalleryPostsUpdateRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$GalleryPostsUpdateRequestFromJson(json);
 }

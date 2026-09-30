@@ -6,7 +6,7 @@ part 'drive_files_upload_from_url_request.g.dart';
 @freezed
 abstract class DriveFilesUploadFromUrlRequest
     with _$DriveFilesUploadFromUrlRequest {
-  const factory DriveFilesUploadFromUrlRequest({
+  const factory({
     required String url,
     String? folderId,
     bool? isSensitive,
@@ -15,6 +15,6 @@ abstract class DriveFilesUploadFromUrlRequest
     bool? force,
   }) = _DriveFilesUploadFromUrlRequest;
 
-  factory DriveFilesUploadFromUrlRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$DriveFilesUploadFromUrlRequestFromJson(json);
 }

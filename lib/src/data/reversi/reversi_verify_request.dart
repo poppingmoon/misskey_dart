@@ -5,7 +5,7 @@ part 'reversi_verify_request.g.dart';
 
 @freezed
 abstract class ReversiVerifyRequest with _$ReversiVerifyRequest {
-  const factory ReversiVerifyRequest({
+  const factory({
     required String gameId,
 
     /// クライアントが計算した盤面の CRC32。
@@ -15,6 +15,6 @@ abstract class ReversiVerifyRequest with _$ReversiVerifyRequest {
     required String crc32,
   }) = _ReversiVerifyRequest;
 
-  factory ReversiVerifyRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$ReversiVerifyRequestFromJson(json);
 }

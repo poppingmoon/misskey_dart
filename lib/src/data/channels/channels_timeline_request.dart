@@ -6,7 +6,7 @@ part 'channels_timeline_request.g.dart';
 
 @freezed
 abstract class ChannelsTimelineRequest with _$ChannelsTimelineRequest {
-  const factory ChannelsTimelineRequest({
+  const factory({
     required String channelId,
     @Assert('limit > 0') int? limit,
     String? sinceId,
@@ -16,6 +16,6 @@ abstract class ChannelsTimelineRequest with _$ChannelsTimelineRequest {
     bool? allowPartial,
   }) = _ChannelsTimelineRequest;
 
-  factory ChannelsTimelineRequest.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$ChannelsTimelineRequestFromJson(json);
 }

@@ -7,7 +7,7 @@ part "streaming_response_sub_type.g.dart";
 
 @freezed
 abstract class PageEvent with _$PageEvent {
-  const factory PageEvent({
+  const factory({
     required String pageId,
     required String event,
     required Object variable,
@@ -15,36 +15,33 @@ abstract class PageEvent with _$PageEvent {
     required String userId,
   }) = _PageEvent;
 
-  factory PageEvent.fromJson(Map<String, dynamic> json) =>
-      _$PageEventFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$PageEventFromJson(json);
 }
 
 @freezed
 abstract class UrlUploadFinishedEvent with _$UrlUploadFinishedEvent {
-  const factory UrlUploadFinishedEvent({
-    String? marker,
-    required DriveFile file,
-  }) = _UrlUploadFinishedEvent;
+  const factory({String? marker, required DriveFile file}) =
+      _UrlUploadFinishedEvent;
 
-  factory UrlUploadFinishedEvent.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$UrlUploadFinishedEventFromJson(json);
 }
 
 @freezed
 abstract class RegistryUpdated with _$RegistryUpdated {
-  const factory RegistryUpdated({
+  const factory({
     List<String>? scope,
     required String key,
     required Object? value,
   }) = _RegistryUpdated;
 
-  factory RegistryUpdated.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$RegistryUpdatedFromJson(json);
 }
 
 @freezed
 abstract class Signin with _$Signin {
-  const factory Signin({
+  const factory({
     required String id,
     @DateTimeConverter() required DateTime createdAt,
     required String ip,
@@ -52,54 +49,49 @@ abstract class Signin with _$Signin {
     required bool success,
   }) = _Signin;
 
-  factory Signin.fromJson(Map<String, dynamic> json) => _$SigninFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$SigninFromJson(json);
 }
 
 @freezed
 abstract class TimelineVoted with _$TimelineVoted {
-  const factory TimelineVoted({required int choice, required String userId}) =
-      _TimelineVoted;
+  const factory({required int choice, required String userId}) = _TimelineVoted;
 
-  factory TimelineVoted.fromJson(Map<String, dynamic> json) =>
-      _$TimelineVotedFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$TimelineVotedFromJson(json);
 }
 
 @freezed
 abstract class TimelineReacted with _$TimelineReacted {
-  const factory TimelineReacted({
+  const factory({
     required String reaction,
     required TimelineReactedEmojiData? emoji,
     required String userId,
   }) = _TimelineReacted;
 
-  factory TimelineReacted.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$TimelineReactedFromJson(json);
 }
 
 @freezed
 abstract class TimelineReactedEmojiData with _$TimelineReactedEmojiData {
-  const factory TimelineReactedEmojiData({
-    required String name,
-    required String url,
-  }) = _TimelineReactedEmojiData;
+  const factory({required String name, required String url}) =
+      _TimelineReactedEmojiData;
 
-  factory TimelineReactedEmojiData.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$TimelineReactedEmojiDataFromJson(json);
 }
 
 @freezed
 abstract class TimelineDeleted with _$TimelineDeleted {
-  const factory TimelineDeleted({
-    @DateTimeConverter() required DateTime deletedAt,
-  }) = _TimelineDeleted;
+  const factory({@DateTimeConverter() required DateTime deletedAt}) =
+      _TimelineDeleted;
 
-  factory TimelineDeleted.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$TimelineDeletedFromJson(json);
 }
 
 class StreamingStatsConverter
     implements JsonConverter<StreamingStats, Map<String, dynamic>> {
-  const StreamingStatsConverter();
+  const new();
 
   @override
   StreamingStats fromJson(Map<String, dynamic> json) {
@@ -118,70 +110,62 @@ class StreamingStatsConverter
 
 @freezed
 sealed class StreamingStats with _$StreamingStats {
-  const factory StreamingStats.serverMetrics({
+  const factory serverMetrics({
     required double cpu,
     required StatsLogFs fs,
     required StatsLogMem mem,
     required StatsLogNet net,
   }) = ServerMetricsResponse;
 
-  const factory StreamingStats.jobQueue({
+  const factory jobQueue({
     required QueueStatsLogResponseData inbox,
     required QueueStatsLogResponseData deliver,
   }) = JobQueueResponse;
 
-  factory StreamingStats.fromJson(Map<String, dynamic> json) =>
-      _$StreamingStatsFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$StreamingStatsFromJson(json);
 }
 
 @freezed
 abstract class StatsLogFs with _$StatsLogFs {
-  const factory StatsLogFs({required double r, required double w}) =
-      _StatsLogFs;
+  const factory({required double r, required double w}) = _StatsLogFs;
 
-  factory StatsLogFs.fromJson(Map<String, dynamic> json) =>
-      _$StatsLogFsFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$StatsLogFsFromJson(json);
 }
 
 @freezed
 abstract class StatsLogMem with _$StatsLogMem {
-  const factory StatsLogMem({required double used, required double active}) =
-      _StatsLogMem;
+  const factory({required double used, required double active}) = _StatsLogMem;
 
-  factory StatsLogMem.fromJson(Map<String, dynamic> json) =>
-      _$StatsLogMemFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$StatsLogMemFromJson(json);
 }
 
 @freezed
 abstract class StatsLogNet with _$StatsLogNet {
-  const factory StatsLogNet({required double rx, required double tx}) =
-      _StatsLogNet;
+  const factory({required double rx, required double tx}) = _StatsLogNet;
 
-  factory StatsLogNet.fromJson(Map<String, dynamic> json) =>
-      _$StatsLogNetFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$StatsLogNetFromJson(json);
 }
 
 @freezed
 abstract class QueueStatsLogResponseData with _$QueueStatsLogResponseData {
-  const factory QueueStatsLogResponseData({
+  const factory({
     required int activeSincePrevTick,
     required int active,
     required int waiting,
     required int delayed,
   }) = _QueueStatsLogResponseData;
 
-  factory QueueStatsLogResponseData.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$QueueStatsLogResponseDataFromJson(json);
 }
 
 @freezed
 abstract class ChatReact with _$ChatReact {
-  const factory ChatReact({
+  const factory({
     required String reaction,
     UserLite? user,
     required String messageId,
   }) = _ChatReact;
 
-  factory ChatReact.fromJson(Map<String, dynamic> json) =>
-      _$ChatReactFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$ChatReactFromJson(json);
 }

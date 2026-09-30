@@ -6,7 +6,7 @@ part 'notes_search_request.g.dart';
 
 @freezed
 abstract class NotesSearchRequest with _$NotesSearchRequest {
-  const factory NotesSearchRequest({
+  const factory({
     /// 検索クエリ。クエリが本文に含まれるノートを検索します。
     required String query,
 
@@ -44,6 +44,6 @@ abstract class NotesSearchRequest with _$NotesSearchRequest {
     String? channelId,
   }) = _NotesSearchRequest;
 
-  factory NotesSearchRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$NotesSearchRequestFromJson(json);
 }

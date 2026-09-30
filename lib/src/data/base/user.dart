@@ -29,7 +29,7 @@ abstract class User {
   HideBefore? get makeNotesHiddenBefore;
   bool? get speakAsCat; // Firefish
 
-  factory User.fromJson(Map<String, Object?> json) {
+  factory fromJson(Map<String, Object?> json) {
     if (json.containsKey("url")) {
       return UserDetailed.fromJson(json);
     } else {
@@ -83,7 +83,7 @@ abstract class UserDetailed implements User {
   String? get memo;
   String? get moderationNote;
 
-  factory UserDetailed.fromJson(Map<String, Object?> json) {
+  factory fromJson(Map<String, Object?> json) {
     if (json.containsKey("avatarId")) {
       return MeDetailed.fromJson(json);
     } else if (json.containsKey("isFollowing")) {
@@ -101,7 +101,7 @@ abstract class UserDetailed implements User {
 
 @freezed
 abstract class UserLite with _$UserLite implements User {
-  const factory UserLite({
+  const factory({
     required String id,
     String? name,
     required String username,
@@ -124,15 +124,14 @@ abstract class UserLite with _$UserLite implements User {
     String? mandatoryCW, // Sharkey
   }) = _UserLite;
 
-  factory UserLite.fromJson(Map<String, Object?> json) =>
-      _$UserLiteFromJson(json);
+  factory fromJson(Map<String, Object?> json) => _$UserLiteFromJson(json);
 }
 
 @freezed
 abstract class UserDetailedNotMe
     with _$UserDetailedNotMe
     implements UserDetailed {
-  const factory UserDetailedNotMe({
+  const factory({
     required String id,
     String? name,
     required String username,
@@ -207,7 +206,7 @@ abstract class UserDetailedNotMe
     String? moderationNote,
   }) = _UserDetailedNotMe;
 
-  factory UserDetailedNotMe.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$UserDetailedNotMeFromJson(json);
 }
 
@@ -215,7 +214,7 @@ abstract class UserDetailedNotMe
 abstract class UserDetailedNotMeWithRelations
     with _$UserDetailedNotMeWithRelations
     implements UserDetailed {
-  const factory UserDetailedNotMeWithRelations({
+  const factory({
     required String id,
     String? name,
     required String username,
@@ -302,13 +301,13 @@ abstract class UserDetailedNotMeWithRelations
     String? followedMessage,
   }) = _UserDetailedNotMeWithRelations;
 
-  factory UserDetailedNotMeWithRelations.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$UserDetailedNotMeWithRelationsFromJson(json);
 }
 
 @freezed
 abstract class MeDetailed with _$MeDetailed implements UserDetailed {
-  const factory MeDetailed({
+  const factory({
     required String id,
     String? name,
     required String username,
@@ -441,13 +440,12 @@ abstract class MeDetailed with _$MeDetailed implements UserDetailed {
     UserPolicies? policies,
   }) = _MeDetailed;
 
-  factory MeDetailed.fromJson(Map<String, Object?> json) =>
-      _$MeDetailedFromJson(json);
+  factory fromJson(Map<String, Object?> json) => _$MeDetailedFromJson(json);
 }
 
 @freezed
 abstract class UserAvatarDecoration with _$UserAvatarDecoration {
-  const factory UserAvatarDecoration({
+  const factory({
     required String id,
     double? angle,
     @Default(false) bool flipH,
@@ -457,13 +455,13 @@ abstract class UserAvatarDecoration with _$UserAvatarDecoration {
     bool? showBelow, // Sharkey
   }) = _UserAvatarDecoration;
 
-  factory UserAvatarDecoration.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$UserAvatarDecorationFromJson(json);
 }
 
 @freezed
 abstract class UserInstanceInfo with _$UserInstanceInfo {
-  const factory UserInstanceInfo({
+  const factory({
     String? name,
     String? softwareVersion,
     String? softwareName,
@@ -472,37 +470,36 @@ abstract class UserInstanceInfo with _$UserInstanceInfo {
     String? themeColor,
   }) = _UserInstanceInfo;
 
-  factory UserInstanceInfo.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$UserInstanceInfoFromJson(json);
 }
 
 @freezed
 abstract class UserBadgeRole with _$UserBadgeRole {
-  const factory UserBadgeRole({
+  const factory({
     required String name,
     @NullableUriConverter() required Uri? iconUrl,
   }) = _UserBadgeRole;
-  factory UserBadgeRole.fromJson(Map<String, Object?> json) =>
-      _$UserBadgeRoleFromJson(json);
+  factory fromJson(Map<String, Object?> json) => _$UserBadgeRoleFromJson(json);
 }
 
 sealed class HideBefore;
 
 class HideBeforeDuration implements HideBefore {
-  const HideBeforeDuration(this.duration);
+  const new(this.duration);
 
   final Duration duration;
 }
 
 class HideBeforeDateTime implements HideBefore {
-  const HideBeforeDateTime(this.date);
+  const new(this.date);
 
   final DateTime date;
 }
 
 @freezed
 abstract class UserRole with _$UserRole {
-  const factory UserRole({
+  const factory({
     required String id,
     required String name,
     String? color,
@@ -511,24 +508,23 @@ abstract class UserRole with _$UserRole {
     required bool isModerator,
     required bool isAdministrator,
   }) = _UserRole;
-  factory UserRole.fromJson(Map<String, Object?> json) =>
-      _$UserRoleFromJson(json);
+  factory fromJson(Map<String, Object?> json) => _$UserRoleFromJson(json);
 }
 
 @freezed
 abstract class UserAchievement with _$UserAchievement {
-  const factory UserAchievement({
+  const factory({
     required String name,
     @EpocTimeDateTimeConverter() required DateTime unlockedAt,
   }) = _UserAchievement;
 
-  factory UserAchievement.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$UserAchievementFromJson(json);
 }
 
 @freezed
 abstract class UserPolicies with _$UserPolicies {
-  const factory UserPolicies({
+  const factory({
     bool? gtlAvailable,
     bool? ltlAvailable,
     bool? canPublicNote,
@@ -576,33 +572,28 @@ abstract class UserPolicies with _$UserPolicies {
     int? scheduleNoteMax, // CherryPick
   }) = _UserPolicies;
 
-  factory UserPolicies.fromJson(Map<String, Object?> json) =>
-      _$UserPoliciesFromJson(json);
+  factory fromJson(Map<String, Object?> json) => _$UserPoliciesFromJson(json);
 }
 
 @freezed
 abstract class UserField with _$UserField {
-  const factory UserField({required String name, required String value}) =
-      _UserField;
+  const factory({required String name, required String value}) = _UserField;
 
-  factory UserField.fromJson(Map<String, Object?> json) =>
-      _$UserFieldFromJson(json);
+  factory fromJson(Map<String, Object?> json) => _$UserFieldFromJson(json);
 }
 
 @freezed
 abstract class MutualLinkSection with _$MutualLinkSection {
-  const factory MutualLinkSection({
-    String? name,
-    required List<MutualLink> mutualLinks,
-  }) = _MutualLinkSection;
+  const factory({String? name, required List<MutualLink> mutualLinks}) =
+      _MutualLinkSection;
 
-  factory MutualLinkSection.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$MutualLinkSectionFromJson(json);
 }
 
 @freezed
 abstract class MutualLink with _$MutualLink {
-  const factory MutualLink({
+  const factory({
     required String id,
     required String url,
     required String fileId,
@@ -610,8 +601,7 @@ abstract class MutualLink with _$MutualLink {
     String? imgSrc,
   }) = _MutualLink;
 
-  factory MutualLink.fromJson(Map<String, Object?> json) =>
-      _$MutualLinkFromJson(json);
+  factory fromJson(Map<String, Object?> json) => _$MutualLinkFromJson(json);
 }
 
 enum ChatScope { everyone, followers, following, mutual, none }
@@ -622,15 +612,14 @@ enum TwoFactorBackupCodesStock { full, partial, none }
 
 @freezed
 abstract class MuteWord with _$MuteWord {
-  const factory MuteWord({String? regExp, List<String>? content}) = _MuteWord;
+  const factory({String? regExp, List<String>? content}) = _MuteWord;
 
-  factory MuteWord.fromJson(Map<String, Object?> json) =>
-      _$MuteWordFromJson(json);
+  factory fromJson(Map<String, Object?> json) => _$MuteWordFromJson(json);
 }
 
 @freezed
 abstract class NotificationRecieveConfigs with _$NotificationRecieveConfigs {
-  const factory NotificationRecieveConfigs({
+  const factory({
     NotificationRecieveConfig? note,
     NotificationRecieveConfig? follow,
     NotificationRecieveConfig? mention,
@@ -650,18 +639,16 @@ abstract class NotificationRecieveConfigs with _$NotificationRecieveConfigs {
     NotificationRecieveConfig? test,
   }) = _NotificationRecieveConfigs;
 
-  factory NotificationRecieveConfigs.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$NotificationRecieveConfigsFromJson(json);
 }
 
 @freezed
 abstract class NotificationRecieveConfig with _$NotificationRecieveConfig {
-  const factory NotificationRecieveConfig({
-    required String type,
-    String? userListId,
-  }) = _NotificationRecieveConfig;
+  const factory({required String type, String? userListId}) =
+      _NotificationRecieveConfig;
 
-  factory NotificationRecieveConfig.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$NotificationRecieveConfigFromJson(json);
 }
 

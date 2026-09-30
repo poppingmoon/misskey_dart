@@ -4,7 +4,7 @@ import 'package:misskey_dart/src/services/api_service.dart';
 class MisskeyAntenna {
   final ApiService _apiService;
 
-  MisskeyAntenna({required this._apiService});
+  new({required this._apiService});
 
   /// アンテナを作成します。
   Future<Antenna> create(AntennasCreateRequest request) async {

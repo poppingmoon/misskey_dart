@@ -5,13 +5,13 @@ part 'channels_create_request.g.dart';
 
 @freezed
 abstract class ChannelsCreateRequest with _$ChannelsCreateRequest {
-  const factory ChannelsCreateRequest({
+  const factory({
     required String name,
     String? description,
     String? bannerId,
     String? color,
   }) = _ChannelsCreateRequest;
 
-  factory ChannelsCreateRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$ChannelsCreateRequestFromJson(json);
 }

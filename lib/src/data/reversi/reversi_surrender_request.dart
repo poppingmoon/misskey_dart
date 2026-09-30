@@ -5,9 +5,8 @@ part 'reversi_surrender_request.g.dart';
 
 @freezed
 abstract class ReversiSurrenderRequest with _$ReversiSurrenderRequest {
-  const factory ReversiSurrenderRequest({required String gameId}) =
-      _ReversiSurrenderRequest;
+  const factory({required String gameId}) = _ReversiSurrenderRequest;
 
-  factory ReversiSurrenderRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$ReversiSurrenderRequestFromJson(json);
 }

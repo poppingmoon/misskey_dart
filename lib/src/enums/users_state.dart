@@ -2,5 +2,5 @@ enum UsersState {
   all,
   alive;
 
-  const UsersState();
+  const new();
 }

@@ -7,7 +7,7 @@ part 'following_requests_list_request.g.dart';
 @freezed
 abstract class FollowingRequestsListRequest
     with _$FollowingRequestsListRequest {
-  const factory FollowingRequestsListRequest({
+  const factory({
     String? sinceId,
     String? untilId,
     @EpocTimeDateTimeConverter() DateTime? sinceDate,
@@ -15,6 +15,6 @@ abstract class FollowingRequestsListRequest
     int? limit,
   }) = _FollowingRequestsListRequest;
 
-  factory FollowingRequestsListRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$FollowingRequestsListRequestFromJson(json);
 }

@@ -5,13 +5,13 @@ part 'gallery_posts_create_request.g.dart';
 
 @freezed
 abstract class GalleryPostsCreateRequest with _$GalleryPostsCreateRequest {
-  const factory GalleryPostsCreateRequest({
+  const factory({
     required String title,
     String? description,
     required List<String> fileIds,
     bool? isSensitive,
   }) = _GalleryPostsCreateRequest;
 
-  factory GalleryPostsCreateRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$GalleryPostsCreateRequestFromJson(json);
 }

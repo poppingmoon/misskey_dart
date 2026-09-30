@@ -6,7 +6,7 @@ part 'flash_update_request.g.dart';
 
 @freezed
 abstract class FlashUpdateRequest with _$FlashUpdateRequest {
-  const factory FlashUpdateRequest({
+  const factory({
     required String flashId,
     String? title,
     String? summary,
@@ -15,6 +15,6 @@ abstract class FlashUpdateRequest with _$FlashUpdateRequest {
     FlashVisibility? visibility,
   }) = _FlashUpdateRequest;
 
-  factory FlashUpdateRequest.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$FlashUpdateRequestFromJson(json);
 }

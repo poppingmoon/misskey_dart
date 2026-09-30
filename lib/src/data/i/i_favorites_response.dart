@@ -7,13 +7,13 @@ part 'i_favorites_response.g.dart';
 
 @freezed
 abstract class IFavoritesResponse with _$IFavoritesResponse {
-  const factory IFavoritesResponse({
+  const factory({
     required String id,
     @DateTimeConverter() required DateTime createdAt,
     required String noteId,
     required Note note,
   }) = _IFavoritesResponse;
 
-  factory IFavoritesResponse.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$IFavoritesResponseFromJson(json);
 }

@@ -5,9 +5,8 @@ part 'notes_schedule_delete_request.g.dart';
 
 @freezed
 abstract class NotesScheduleDeleteRequest with _$NotesScheduleDeleteRequest {
-  const factory NotesScheduleDeleteRequest({required String noteId}) =
-      _NotesScheduleDeleteRequest;
+  const factory({required String noteId}) = _NotesScheduleDeleteRequest;
 
-  factory NotesScheduleDeleteRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$NotesScheduleDeleteRequestFromJson(json);
 }

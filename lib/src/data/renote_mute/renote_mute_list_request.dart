@@ -6,7 +6,7 @@ part 'renote_mute_list_request.g.dart';
 
 @freezed
 abstract class RenoteMuteListRequest with _$RenoteMuteListRequest {
-  const factory RenoteMuteListRequest({
+  const factory({
     int? limit,
     String? sinceId,
     String? untilId,
@@ -14,6 +14,6 @@ abstract class RenoteMuteListRequest with _$RenoteMuteListRequest {
     @EpocTimeDateTimeConverter() DateTime? untilDate,
   }) = _RenoteMuteListRequest;
 
-  factory RenoteMuteListRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$RenoteMuteListRequestFromJson(json);
 }

@@ -7,7 +7,7 @@ part 'chat_messages_user_timeline_request.g.dart';
 @freezed
 abstract class ChatMessagesUserTimelineRequest
     with _$ChatMessagesUserTimelineRequest {
-  const factory ChatMessagesUserTimelineRequest({
+  const factory({
     required String userId,
     int? limit,
     String? sinceId,
@@ -16,6 +16,6 @@ abstract class ChatMessagesUserTimelineRequest
     @EpocTimeDateTimeConverter() DateTime? untilDate,
   }) = _ChatMessagesUserTimelineRequest;
 
-  factory ChatMessagesUserTimelineRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$ChatMessagesUserTimelineRequestFromJson(json);
 }

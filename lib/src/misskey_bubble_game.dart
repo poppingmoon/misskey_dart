@@ -5,7 +5,7 @@ import 'package:misskey_dart/src/services/api_service.dart';
 class MisskeyBubbleGame {
   final ApiService _apiService;
 
-  MisskeyBubbleGame({required this._apiService});
+  new({required this._apiService});
 
   /// バブルゲームのサーバー内ランキングを取得します。
   Future<Iterable<BubbleGameRankingResponse>> show(

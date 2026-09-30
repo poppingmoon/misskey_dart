@@ -6,15 +6,14 @@ part 'emojis_response.g.dart';
 
 @freezed
 abstract class EmojisResponse with _$EmojisResponse {
-  const factory EmojisResponse({required List<Emoji> emojis}) = _EmojisResponse;
+  const factory({required List<Emoji> emojis}) = _EmojisResponse;
 
-  factory EmojisResponse.fromJson(Map<String, Object?> json) =>
-      _$EmojisResponseFromJson(json);
+  factory fromJson(Map<String, Object?> json) => _$EmojisResponseFromJson(json);
 }
 
 @freezed
 abstract class Emoji with _$Emoji {
-  const factory Emoji({
+  const factory({
     @Default([]) List<String> aliases,
     required String name,
     String? category,
@@ -24,5 +23,5 @@ abstract class Emoji with _$Emoji {
     List<String>? roleIdsThatCanBeUsedThisEmojiAsReaction,
   }) = _Emoji;
 
-  factory Emoji.fromJson(Map<String, Object?> json) => _$EmojiFromJson(json);
+  factory fromJson(Map<String, Object?> json) => _$EmojiFromJson(json);
 }

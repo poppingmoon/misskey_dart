@@ -5,9 +5,8 @@ part 'sw_show_registration_request.g.dart';
 
 @freezed
 abstract class SwShowRegistrationRequest with _$SwShowRegistrationRequest {
-  const factory SwShowRegistrationRequest({required String endpoint}) =
-      _SwShowRegistrationRequest;
+  const factory({required String endpoint}) = _SwShowRegistrationRequest;
 
-  factory SwShowRegistrationRequest.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$SwShowRegistrationRequestFromJson(json);
 }

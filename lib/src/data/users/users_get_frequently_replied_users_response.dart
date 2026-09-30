@@ -7,12 +7,9 @@ part 'users_get_frequently_replied_users_response.g.dart';
 @freezed
 abstract class UsersGetFrequentlyRepliedUsersResponse
     with _$UsersGetFrequentlyRepliedUsersResponse {
-  const factory UsersGetFrequentlyRepliedUsersResponse({
-    required User user,
-    required double weight,
-  }) = _UsersGetFrequentlyRepliedUsersResponse;
+  const factory({required User user, required double weight}) =
+      _UsersGetFrequentlyRepliedUsersResponse;
 
-  factory UsersGetFrequentlyRepliedUsersResponse.fromJson(
-    Map<String, Object?> json,
-  ) => _$UsersGetFrequentlyRepliedUsersResponseFromJson(json);
+  factory fromJson(Map<String, Object?> json) =>
+      _$UsersGetFrequentlyRepliedUsersResponseFromJson(json);
 }

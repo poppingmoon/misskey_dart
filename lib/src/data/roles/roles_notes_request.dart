@@ -6,7 +6,7 @@ part 'roles_notes_request.g.dart';
 
 @freezed
 abstract class RolesNotesRequest with _$RolesNotesRequest {
-  const factory RolesNotesRequest({
+  const factory({
     required String roleId,
     int? limit,
     String? sinceId,
@@ -15,6 +15,6 @@ abstract class RolesNotesRequest with _$RolesNotesRequest {
     @EpocTimeDateTimeConverter() DateTime? untilDate,
   }) = _RolesNotesRequest;
 
-  factory RolesNotesRequest.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$RolesNotesRequestFromJson(json);
 }

@@ -6,7 +6,7 @@ part 'notes_update_request.g.dart';
 
 @freezed
 abstract class NotesUpdateRequest with _$NotesUpdateRequest {
-  const factory NotesUpdateRequest({
+  const factory({
     required String noteId,
     String? text,
     String? cw,
@@ -14,6 +14,6 @@ abstract class NotesUpdateRequest with _$NotesUpdateRequest {
     NotesCreatePollRequest? poll,
   }) = _NotesUpdateRequest;
 
-  factory NotesUpdateRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$NotesUpdateRequestFromJson(json);
 }

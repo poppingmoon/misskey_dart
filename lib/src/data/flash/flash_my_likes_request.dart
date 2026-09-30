@@ -6,7 +6,7 @@ part 'flash_my_likes_request.g.dart';
 
 @freezed
 abstract class FlashMyLikesRequest with _$FlashMyLikesRequest {
-  const factory FlashMyLikesRequest({
+  const factory({
     int? limit,
     String? sinceId,
     String? untilId,
@@ -14,6 +14,6 @@ abstract class FlashMyLikesRequest with _$FlashMyLikesRequest {
     @EpocTimeDateTimeConverter() DateTime? untilDate,
   }) = _FlashMyLikesRequest;
 
-  factory FlashMyLikesRequest.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$FlashMyLikesRequestFromJson(json);
 }

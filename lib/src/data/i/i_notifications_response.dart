@@ -8,7 +8,7 @@ part 'i_notifications_response.g.dart';
 
 @freezed
 abstract class INotificationsResponse with _$INotificationsResponse {
-  const factory INotificationsResponse({
+  const factory({
     required String id,
     @DateTimeConverter() required DateTime createdAt,
     // ignore: invalid_annotation_target
@@ -40,18 +40,16 @@ abstract class INotificationsResponse with _$INotificationsResponse {
     ScheduledNote? draft, // MisskeyIO
   }) = _INotificationsResponse;
 
-  factory INotificationsResponse.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$INotificationsResponseFromJson(json);
 }
 
 @freezed
 abstract class INotificationsReaction with _$INotificationsReaction {
-  const factory INotificationsReaction({
-    required UserLite user,
-    required String reaction,
-  }) = _INotificationsReaction;
+  const factory({required UserLite user, required String reaction}) =
+      _INotificationsReaction;
 
-  factory INotificationsReaction.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$INotificationsReactionFromJson(json);
 }
 

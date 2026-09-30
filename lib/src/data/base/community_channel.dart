@@ -9,7 +9,7 @@ part 'community_channel.g.dart';
 
 @freezed
 abstract class CommunityChannel with _$CommunityChannel {
-  const factory CommunityChannel({
+  const factory({
     required String id,
     @DateTimeConverter() required DateTime createdAt,
     @NullableUriConverter() DateTime? lastNotedAt,
@@ -31,6 +31,6 @@ abstract class CommunityChannel with _$CommunityChannel {
     @Default(true) bool allowRenoteToExternal,
   }) = _CommunityChannel;
 
-  factory CommunityChannel.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$CommunityChannelFromJson(json);
 }

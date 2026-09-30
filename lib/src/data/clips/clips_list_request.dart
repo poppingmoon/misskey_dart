@@ -6,7 +6,7 @@ part 'clips_list_request.g.dart';
 
 @freezed
 abstract class ClipsListRequest with _$ClipsListRequest {
-  const factory ClipsListRequest({
+  const factory({
     int? limit,
     String? sinceId,
     String? untilId,
@@ -14,6 +14,6 @@ abstract class ClipsListRequest with _$ClipsListRequest {
     @EpocTimeDateTimeConverter() DateTime? untilDate,
   }) = _ClipsListRequest;
 
-  factory ClipsListRequest.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$ClipsListRequestFromJson(json);
 }

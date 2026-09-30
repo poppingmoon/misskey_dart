@@ -5,12 +5,9 @@ part 'chat_rooms_update_request.g.dart';
 
 @freezed
 abstract class ChatRoomsUpdateRequest with _$ChatRoomsUpdateRequest {
-  const factory ChatRoomsUpdateRequest({
-    required String roomId,
-    String? name,
-    String? description,
-  }) = _ChatRoomsUpdateRequest;
+  const factory({required String roomId, String? name, String? description}) =
+      _ChatRoomsUpdateRequest;
 
-  factory ChatRoomsUpdateRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$ChatRoomsUpdateRequestFromJson(json);
 }

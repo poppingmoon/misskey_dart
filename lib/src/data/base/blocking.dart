@@ -7,13 +7,12 @@ part 'blocking.g.dart';
 
 @freezed
 abstract class Blocking with _$Blocking {
-  const factory Blocking({
+  const factory({
     required String id,
     @DateTimeConverter() required DateTime createdAt,
     required String blockeeId,
     required UserDetailedNotMe blockee,
   }) = _Blocking;
 
-  factory Blocking.fromJson(Map<String, dynamic> json) =>
-      _$BlockingFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$BlockingFromJson(json);
 }

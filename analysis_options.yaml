@@ -8,3 +8,4 @@ linter:
   rules:
     - directives_ordering
     - empty_container_bodies
+    - unnecessary_type_name_in_constructor

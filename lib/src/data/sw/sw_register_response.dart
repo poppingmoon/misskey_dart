@@ -5,7 +5,7 @@ part 'sw_register_response.g.dart';
 
 @freezed
 abstract class SwRegisterResponse with _$SwRegisterResponse {
-  const factory SwRegisterResponse({
+  const factory({
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     SwRegisterResponseState? state,
@@ -15,7 +15,7 @@ abstract class SwRegisterResponse with _$SwRegisterResponse {
     required bool sendReadMessage,
   }) = _SwRegisterResponse;
 
-  factory SwRegisterResponse.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$SwRegisterResponseFromJson(json);
 }
 

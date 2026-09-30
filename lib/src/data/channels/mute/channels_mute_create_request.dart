@@ -6,11 +6,11 @@ part 'channels_mute_create_request.g.dart';
 
 @freezed
 abstract class ChannelsMuteCreateRequest with _$ChannelsMuteCreateRequest {
-  const factory ChannelsMuteCreateRequest({
+  const factory({
     String? channelId,
     @EpocTimeDateTimeConverter() DateTime? expiresAt,
   }) = _ChannelsMuteCreateRequest;
 
-  factory ChannelsMuteCreateRequest.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$ChannelsMuteCreateRequestFromJson(json);
 }

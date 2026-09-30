@@ -6,12 +6,9 @@ part 'users_get_frequently_replied_users_request.g.dart';
 @freezed
 abstract class UsersGetFrequentlyRepliedUsersRequest
     with _$UsersGetFrequentlyRepliedUsersRequest {
-  const factory UsersGetFrequentlyRepliedUsersRequest({
-    required String userId,
-    int? limit,
-  }) = _UsersGetFrequentlyRepliedUsersRequest;
+  const factory({required String userId, int? limit}) =
+      _UsersGetFrequentlyRepliedUsersRequest;
 
-  factory UsersGetFrequentlyRepliedUsersRequest.fromJson(
-    Map<String, Object?> json,
-  ) => _$UsersGetFrequentlyRepliedUsersRequestFromJson(json);
+  factory fromJson(Map<String, Object?> json) =>
+      _$UsersGetFrequentlyRepliedUsersRequestFromJson(json);
 }

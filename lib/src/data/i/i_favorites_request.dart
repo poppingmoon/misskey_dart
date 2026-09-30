@@ -5,7 +5,7 @@ part 'i_favorites_request.g.dart';
 
 @freezed
 abstract class IFavoritesRequest with _$IFavoritesRequest {
-  const factory IFavoritesRequest({
+  const factory({
     @Assert('limit > 0') int? limit,
     String? sinceId,
     String? untilId,
@@ -13,6 +13,6 @@ abstract class IFavoritesRequest with _$IFavoritesRequest {
     @EpocTimeDateTimeConverter() DateTime? untilDate,
   }) = _IFavoritesRequest;
 
-  factory IFavoritesRequest.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$IFavoritesRequestFromJson(json);
 }

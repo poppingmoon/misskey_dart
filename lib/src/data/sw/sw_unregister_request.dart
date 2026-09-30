@@ -5,9 +5,8 @@ part 'sw_unregister_request.g.dart';
 
 @freezed
 abstract class SwUnregisterRequest with _$SwUnregisterRequest {
-  const factory SwUnregisterRequest({required String endpoint}) =
-      _SwUnregisterRequest;
+  const factory({required String endpoint}) = _SwUnregisterRequest;
 
-  factory SwUnregisterRequest.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$SwUnregisterRequestFromJson(json);
 }

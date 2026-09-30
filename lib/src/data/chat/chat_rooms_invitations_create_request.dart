@@ -6,12 +6,9 @@ part 'chat_rooms_invitations_create_request.g.dart';
 @freezed
 abstract class ChatRoomsInvitationsCreateRequest
     with _$ChatRoomsInvitationsCreateRequest {
-  const factory ChatRoomsInvitationsCreateRequest({
-    required String roomId,
-    required String userId,
-  }) = _ChatRoomsInvitationsCreateRequest;
+  const factory({required String roomId, required String userId}) =
+      _ChatRoomsInvitationsCreateRequest;
 
-  factory ChatRoomsInvitationsCreateRequest.fromJson(
-    Map<String, dynamic> json,
-  ) => _$ChatRoomsInvitationsCreateRequestFromJson(json);
+  factory fromJson(Map<String, dynamic> json) =>
+      _$ChatRoomsInvitationsCreateRequestFromJson(json);
 }

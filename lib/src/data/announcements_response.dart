@@ -9,7 +9,7 @@ part 'announcements_response.g.dart';
 
 @freezed
 abstract class AnnouncementsResponse with _$AnnouncementsResponse {
-  const factory AnnouncementsResponse({
+  const factory({
     required String id,
     @DateTimeConverter() required DateTime createdAt,
     @NullableDateTimeConverter() DateTime? updatedAt,
@@ -30,6 +30,6 @@ abstract class AnnouncementsResponse with _$AnnouncementsResponse {
     @Default(false) bool silence,
   }) = _AnnouncementsResponse;
 
-  factory AnnouncementsResponse.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$AnnouncementsResponseFromJson(json);
 }

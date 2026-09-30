@@ -7,7 +7,7 @@ part 'scheduled_note.g.dart';
 
 @freezed
 abstract class ScheduledNote with _$ScheduledNote {
-  const factory ScheduledNote({
+  const factory({
     required String id,
     @DateTimeConverter() required DateTime updatedAt,
     @NullableDateTimeConverter() DateTime? scheduledAt,
@@ -18,37 +18,33 @@ abstract class ScheduledNote with _$ScheduledNote {
     required ScheduledNoteData data,
   }) = _ScheduledNote;
 
-  factory ScheduledNote.fromJson(Map<String, dynamic> json) =>
-      _$ScheduledNoteFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$ScheduledNoteFromJson(json);
 }
 
 @freezed
 abstract class ScheduledNoteNote with _$ScheduledNoteNote {
-  const factory ScheduledNoteNote({
+  const factory({
     required String id,
     String? text,
     required ScheduledNoteUser user,
   }) = _ScheduledNoteNote;
 
-  factory ScheduledNoteNote.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$ScheduledNoteNoteFromJson(json);
 }
 
 @freezed
 abstract class ScheduledNoteUser with _$ScheduledNoteUser {
-  const factory ScheduledNoteUser({
-    required String id,
-    required String username,
-    String? host,
-  }) = _ScheduledNoteUser;
+  const factory({required String id, required String username, String? host}) =
+      _ScheduledNoteUser;
 
-  factory ScheduledNoteUser.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$ScheduledNoteUserFromJson(json);
 }
 
 @freezed
 abstract class ScheduledNoteData with _$ScheduledNoteData {
-  const factory ScheduledNoteData({
+  const factory({
     String? text,
     bool? useCw,
     String? cw,
@@ -61,6 +57,6 @@ abstract class ScheduledNoteData with _$ScheduledNoteData {
     @Default([]) List<String> visibleUserIds,
   }) = _ScheduledNoteData;
 
-  factory ScheduledNoteData.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$ScheduledNoteDataFromJson(json);
 }

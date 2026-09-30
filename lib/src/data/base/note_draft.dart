@@ -8,7 +8,7 @@ part 'note_draft.g.dart';
 
 @freezed
 abstract class NoteDraft with _$NoteDraft {
-  const factory NoteDraft({
+  const factory({
     required String id,
     @DateTimeConverter() required DateTime createdAt,
     String? text,
@@ -35,19 +35,17 @@ abstract class NoteDraft with _$NoteDraft {
     bool? isActuallyScheduled,
   }) = _NoteDraft;
 
-  factory NoteDraft.fromJson(Map<String, Object?> json) =>
-      _$NoteDraftFromJson(json);
+  factory fromJson(Map<String, Object?> json) => _$NoteDraftFromJson(json);
 }
 
 @freezed
 abstract class NoteDraftPoll with _$NoteDraftPoll {
-  const factory NoteDraftPoll({
+  const factory({
     @DateTimeConverter() DateTime? expiresAt,
     @DurationConverter() Duration? expiredAfter,
     required bool multiple,
     required List<String> choices,
   }) = _NoteDraftPoll;
 
-  factory NoteDraftPoll.fromJson(Map<String, dynamic> json) =>
-      _$NoteDraftPollFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$NoteDraftPollFromJson(json);
 }

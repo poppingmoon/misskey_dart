@@ -5,7 +5,7 @@ enum NoteVisibility {
   specified(3);
 
   final int priority;
-  const NoteVisibility(this.priority);
+  const new(this.priority);
 
   /// 見える範囲が小さい方を返す
   static NoteVisibility min(NoteVisibility a, NoteVisibility b) {

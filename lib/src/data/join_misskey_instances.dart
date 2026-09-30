@@ -5,19 +5,19 @@ part 'join_misskey_instances.g.dart';
 
 @freezed
 abstract class JoinMisskeyInstances with _$JoinMisskeyInstances {
-  const factory JoinMisskeyInstances({
+  const factory({
     DateTime? date,
     JoinMisskeyStats? stats,
     required List<JoinMisskeyInstanceInfo> instancesInfos,
   }) = _JoinMisskeyInstances;
 
-  factory JoinMisskeyInstances.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$JoinMisskeyInstancesFromJson(json);
 }
 
 @freezed
 abstract class JoinMisskeyStats with _$JoinMisskeyStats {
-  const factory JoinMisskeyStats({
+  const factory({
     int? notesCount,
     int? usersCount,
     // Removed in joinmisskey/api 3.1.0
@@ -28,13 +28,13 @@ abstract class JoinMisskeyStats with _$JoinMisskeyStats {
     int? instancesCount,
   }) = _JoinMisskeyStats;
 
-  factory JoinMisskeyStats.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$JoinMisskeyStatsFromJson(json);
 }
 
 @freezed
 abstract class JoinMisskeyInstanceInfo with _$JoinMisskeyInstanceInfo {
-  const factory JoinMisskeyInstanceInfo({
+  const factory({
     required String url,
     required String name,
     @Default([]) List<String> langs,
@@ -52,49 +52,47 @@ abstract class JoinMisskeyInstanceInfo with _$JoinMisskeyInstanceInfo {
     int? dru15,
   }) = _JoinMisskeyInstanceInfo;
 
-  factory JoinMisskeyInstanceInfo.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$JoinMisskeyInstanceInfoFromJson(json);
 }
 
 @freezed
 abstract class JoinMisskeyNodeInfo with _$JoinMisskeyNodeInfo {
-  const factory JoinMisskeyNodeInfo({
+  const factory({
     String? version,
     JoinMisskeyNodeInfoSoftware? software,
     JoinMisskeyNodeInfoUsage? usage,
   }) = _JoinMisskeyNodeInfo;
 
-  factory JoinMisskeyNodeInfo.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$JoinMisskeyNodeInfoFromJson(json);
 }
 
 @freezed
 abstract class JoinMisskeyNodeInfoSoftware with _$JoinMisskeyNodeInfoSoftware {
-  const factory JoinMisskeyNodeInfoSoftware({String? name, String? version}) =
-      _JoinMisskeyNodeInfoSoftware;
+  const factory({String? name, String? version}) = _JoinMisskeyNodeInfoSoftware;
 
-  factory JoinMisskeyNodeInfoSoftware.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$JoinMisskeyNodeInfoSoftwareFromJson(json);
 }
 
 @freezed
 abstract class JoinMisskeyNodeInfoUsage with _$JoinMisskeyNodeInfoUsage {
-  const factory JoinMisskeyNodeInfoUsage({
+  const factory({
     JoinMisskeyNodeInfoUsageUsers? users,
     int? localPosts,
     int? localComments,
   }) = _JoinMisskeyNodeInfoUsage;
 
-  factory JoinMisskeyNodeInfoUsage.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$JoinMisskeyNodeInfoUsageFromJson(json);
 }
 
 @freezed
 abstract class JoinMisskeyNodeInfoUsageUsers
     with _$JoinMisskeyNodeInfoUsageUsers {
-  const factory JoinMisskeyNodeInfoUsageUsers({int? total}) =
-      _JoinMisskeyNodeInfoUsageUsers;
+  const factory({int? total}) = _JoinMisskeyNodeInfoUsageUsers;
 
-  factory JoinMisskeyNodeInfoUsageUsers.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$JoinMisskeyNodeInfoUsageUsersFromJson(json);
 }

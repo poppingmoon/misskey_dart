@@ -6,7 +6,7 @@ part 'drive_folders_request.g.dart';
 
 @freezed
 abstract class DriveFoldersRequest with _$DriveFoldersRequest {
-  const factory DriveFoldersRequest({
+  const factory({
     int? limit,
     String? sinceId,
     String? untilId,
@@ -15,6 +15,6 @@ abstract class DriveFoldersRequest with _$DriveFoldersRequest {
     String? folderId,
   }) = _DriveFoldersRequest;
 
-  factory DriveFoldersRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$DriveFoldersRequestFromJson(json);
 }

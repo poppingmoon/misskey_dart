@@ -7,7 +7,7 @@ part 'following.g.dart';
 
 @freezed
 abstract class Following with _$Following {
-  const factory Following({
+  const factory({
     required String id,
     @DateTimeConverter() required DateTime createdAt,
     required String followeeId,
@@ -26,6 +26,5 @@ abstract class Following with _$Following {
     UserDetailed? follower,
   }) = _Following;
 
-  factory Following.fromJson(Map<String, dynamic> json) =>
-      _$FollowingFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$FollowingFromJson(json);
 }

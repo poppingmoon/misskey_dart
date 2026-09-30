@@ -5,7 +5,7 @@ part 'drive_files_update_request.g.dart';
 
 @freezed
 abstract class DriveFilesUpdateRequest with _$DriveFilesUpdateRequest {
-  const factory DriveFilesUpdateRequest({
+  const factory({
     required String fileId,
     String? folderId,
     String? name,
@@ -13,6 +13,6 @@ abstract class DriveFilesUpdateRequest with _$DriveFilesUpdateRequest {
     String? comment,
   }) = _DriveFilesUpdateRequest;
 
-  factory DriveFilesUpdateRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$DriveFilesUpdateRequestFromJson(json);
 }

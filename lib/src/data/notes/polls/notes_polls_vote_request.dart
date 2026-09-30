@@ -5,11 +5,9 @@ part 'notes_polls_vote_request.g.dart';
 
 @freezed
 abstract class NotesPollsVoteRequest with _$NotesPollsVoteRequest {
-  const factory NotesPollsVoteRequest({
-    required String noteId,
-    required int choice,
-  }) = _NotesPollsVoteRequest;
+  const factory({required String noteId, required int choice}) =
+      _NotesPollsVoteRequest;
 
-  factory NotesPollsVoteRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$NotesPollsVoteRequestFromJson(json);
 }

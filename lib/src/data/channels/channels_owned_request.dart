@@ -6,7 +6,7 @@ part 'channels_owned_request.g.dart';
 
 @freezed
 abstract class ChannelsOwnedRequest with _$ChannelsOwnedRequest {
-  const factory ChannelsOwnedRequest({
+  const factory({
     String? sinceId,
     String? untilId,
     @EpocTimeDateTimeConverter() DateTime? sinceDate,
@@ -14,6 +14,6 @@ abstract class ChannelsOwnedRequest with _$ChannelsOwnedRequest {
     int? limit,
   }) = _ChannelsOwnedRequest;
 
-  factory ChannelsOwnedRequest.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$ChannelsOwnedRequestFromJson(json);
 }

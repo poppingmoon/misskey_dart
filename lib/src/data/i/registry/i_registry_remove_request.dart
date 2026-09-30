@@ -5,12 +5,12 @@ part 'i_registry_remove_request.g.dart';
 
 @freezed
 abstract class IRegistryRemoveRequest with _$IRegistryRemoveRequest {
-  const factory IRegistryRemoveRequest({
+  const factory({
     required String key,
     required List<String> scope,
     String? domain,
   }) = _IRegistryRemoveRequest;
 
-  factory IRegistryRemoveRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$IRegistryRemoveRequestFromJson(json);
 }

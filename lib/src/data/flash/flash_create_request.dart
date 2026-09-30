@@ -6,7 +6,7 @@ part 'flash_create_request.g.dart';
 
 @freezed
 abstract class FlashCreateRequest with _$FlashCreateRequest {
-  const factory FlashCreateRequest({
+  const factory({
     required String title,
     required String summary,
     required String script,
@@ -14,6 +14,6 @@ abstract class FlashCreateRequest with _$FlashCreateRequest {
     FlashVisibility? visibility,
   }) = _FlashCreateRequest;
 
-  factory FlashCreateRequest.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$FlashCreateRequestFromJson(json);
 }

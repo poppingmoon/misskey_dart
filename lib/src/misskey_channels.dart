@@ -7,7 +7,7 @@ class MisskeyChannels {
   final ApiService _apiService;
   final MisskeyChannelsMute mute;
 
-  MisskeyChannels({required ApiService apiService})
+  new({required ApiService apiService})
     : _apiService = apiService,
       mute = MisskeyChannelsMute(apiService: apiService);
 
@@ -115,7 +115,7 @@ class MisskeyChannels {
 class MisskeyChannelsMute {
   final ApiService _apiService;
 
-  MisskeyChannelsMute({required this._apiService});
+  new({required this._apiService});
 
   Future<void> create(ChannelsMuteCreateRequest request) async {
     await _apiService.post<void>("channels/mute/create", request.toJson());

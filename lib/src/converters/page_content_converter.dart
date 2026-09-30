@@ -3,7 +3,7 @@ import 'package:misskey_dart/src/data/base/page.dart';
 
 class PageContentConverter
     extends JsonConverter<AbstractPageContent, Map<String, dynamic>> {
-  const PageContentConverter();
+  const new();
 
   @override
   AbstractPageContent fromJson(Map<String, dynamic> json) {

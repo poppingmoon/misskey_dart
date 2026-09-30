@@ -5,12 +5,9 @@ part 'drive_folders_update_request.g.dart';
 
 @freezed
 abstract class DriveFoldersUpdateRequest with _$DriveFoldersUpdateRequest {
-  const factory DriveFoldersUpdateRequest({
-    required String folderId,
-    String? name,
-    String? parentId,
-  }) = _DriveFoldersUpdateRequest;
+  const factory({required String folderId, String? name, String? parentId}) =
+      _DriveFoldersUpdateRequest;
 
-  factory DriveFoldersUpdateRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$DriveFoldersUpdateRequestFromJson(json);
 }

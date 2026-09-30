@@ -6,7 +6,7 @@ part 'notes_local_timeline_request.g.dart';
 
 @freezed
 abstract class NotesLocalTimelineRequest with _$NotesLocalTimelineRequest {
-  const factory NotesLocalTimelineRequest({
+  const factory({
     bool? withFiles,
     bool? withRenotes,
     bool? withReplies,
@@ -24,6 +24,6 @@ abstract class NotesLocalTimelineRequest with _$NotesLocalTimelineRequest {
     bool? allowPartial,
   }) = _NotesLocalTimelineRequest;
 
-  factory NotesLocalTimelineRequest.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$NotesLocalTimelineRequestFromJson(json);
 }

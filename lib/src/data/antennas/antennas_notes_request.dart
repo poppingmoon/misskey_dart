@@ -6,7 +6,7 @@ part 'antennas_notes_request.g.dart';
 
 @freezed
 abstract class AntennasNotesRequest with _$AntennasNotesRequest {
-  const factory AntennasNotesRequest({
+  const factory({
     required String antennaId,
     int? limit,
     String? sinceId,
@@ -16,6 +16,6 @@ abstract class AntennasNotesRequest with _$AntennasNotesRequest {
     String? pagination,
   }) = _AntennasNotesRequest;
 
-  factory AntennasNotesRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$AntennasNotesRequestFromJson(json);
 }

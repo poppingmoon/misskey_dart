@@ -6,7 +6,7 @@ class MisskeyGallery {
 
   final ApiService _apiService;
 
-  MisskeyGallery({required ApiService apiService})
+  new({required ApiService apiService})
     : _apiService = apiService,
       posts = MisskeyGalleryPosts(apiService: apiService);
 
@@ -29,7 +29,7 @@ class MisskeyGallery {
 class MisskeyGalleryPosts {
   final ApiService _apiService;
 
-  MisskeyGalleryPosts({required this._apiService});
+  new({required this._apiService});
 
   /// ギャラリーの投稿を作成します。
   Future<GalleryPost> create(GalleryPostsCreateRequest request) async {

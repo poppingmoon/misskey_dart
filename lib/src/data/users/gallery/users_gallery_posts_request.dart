@@ -6,7 +6,7 @@ part 'users_gallery_posts_request.g.dart';
 
 @freezed
 abstract class UsersGalleryPostsRequest with _$UsersGalleryPostsRequest {
-  const factory UsersGalleryPostsRequest({
+  const factory({
     required String userId,
     int? limit,
     String? sinceId,
@@ -15,6 +15,6 @@ abstract class UsersGalleryPostsRequest with _$UsersGalleryPostsRequest {
     @EpocTimeDateTimeConverter() DateTime? untilDate,
   }) = _UsersGalleryPostsRequest;
 
-  factory UsersGalleryPostsRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$UsersGalleryPostsRequestFromJson(json);
 }

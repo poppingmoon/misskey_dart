@@ -6,7 +6,7 @@ part 'notes_edit_request.g.dart';
 
 @freezed
 abstract class NotesEditRequest with _$NotesEditRequest {
-  const factory NotesEditRequest({
+  const factory({
     required String editId,
     NoteVisibility? visibility,
     List<String>? visibleUserIds,
@@ -20,6 +20,6 @@ abstract class NotesEditRequest with _$NotesEditRequest {
     NotesCreatePollRequest? poll,
   }) = _NotesEditRequest;
 
-  factory NotesEditRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$NotesEditRequestFromJson(json);
 }

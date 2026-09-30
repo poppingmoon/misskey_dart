@@ -6,7 +6,7 @@ part 'notes_request.g.dart';
 
 @freezed
 abstract class NotesRequest with _$NotesRequest {
-  const factory NotesRequest({
+  const factory({
     bool? local,
     bool? reply,
     bool? renote,
@@ -19,6 +19,5 @@ abstract class NotesRequest with _$NotesRequest {
     @EpocTimeDateTimeConverter() DateTime? untilDate,
   }) = _NotesRequest;
 
-  factory NotesRequest.fromJson(Map<String, Object?> json) =>
-      _$NotesRequestFromJson(json);
+  factory fromJson(Map<String, Object?> json) => _$NotesRequestFromJson(json);
 }

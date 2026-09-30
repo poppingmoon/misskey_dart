@@ -6,7 +6,7 @@ part 'user_list_timeline_request.g.dart';
 
 @freezed
 abstract class UserListTimelineRequest with _$UserListTimelineRequest {
-  const factory UserListTimelineRequest({
+  const factory({
     required String listId,
     @Assert('limit > 0') int? limit,
     String? sinceId,
@@ -23,6 +23,6 @@ abstract class UserListTimelineRequest with _$UserListTimelineRequest {
     bool? allowPartial,
   }) = _UserListTimelineRequest;
 
-  factory UserListTimelineRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$UserListTimelineRequestFromJson(json);
 }

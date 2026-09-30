@@ -7,7 +7,7 @@ part 'chat_room.g.dart';
 
 @freezed
 abstract class ChatRoom with _$ChatRoom {
-  const factory ChatRoom({
+  const factory({
     required String id,
     @DateTimeConverter() required DateTime createdAt,
     required String ownerId,
@@ -17,6 +17,5 @@ abstract class ChatRoom with _$ChatRoom {
     bool? isMuted,
   }) = _ChatRoom;
 
-  factory ChatRoom.fromJson(Map<String, dynamic> json) =>
-      _$ChatRoomFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$ChatRoomFromJson(json);
 }

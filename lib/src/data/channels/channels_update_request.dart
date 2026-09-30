@@ -5,7 +5,7 @@ part 'channels_update_request.g.dart';
 
 @freezed
 abstract class ChannelsUpdateRequest with _$ChannelsUpdateRequest {
-  const factory ChannelsUpdateRequest({
+  const factory({
     required String channelId,
     String? name,
     String? description,
@@ -15,6 +15,6 @@ abstract class ChannelsUpdateRequest with _$ChannelsUpdateRequest {
     String? color,
   }) = _ChannelsUpdateRequest;
 
-  factory ChannelsUpdateRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$ChannelsUpdateRequestFromJson(json);
 }

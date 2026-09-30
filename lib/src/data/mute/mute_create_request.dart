@@ -6,11 +6,11 @@ part 'mute_create_request.g.dart';
 
 @freezed
 abstract class MuteCreateRequest with _$MuteCreateRequest {
-  const factory MuteCreateRequest({
+  const factory({
     required String userId,
     @EpocTimeDateTimeConverter() DateTime? expiresAt,
   }) = _MuteCreateRequest;
 
-  factory MuteCreateRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$MuteCreateRequestFromJson(json);
 }

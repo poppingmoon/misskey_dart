@@ -7,7 +7,7 @@ part 'users_reactions_response.g.dart';
 
 @freezed
 abstract class UsersReactionsResponse with _$UsersReactionsResponse {
-  const factory UsersReactionsResponse({
+  const factory({
     required String id,
     @DateTimeConverter() required DateTime createdAt,
     required UserLite user,
@@ -15,6 +15,6 @@ abstract class UsersReactionsResponse with _$UsersReactionsResponse {
     required Note note,
   }) = _UsersReactionsResponse;
 
-  factory UsersReactionsResponse.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$UsersReactionsResponseFromJson(json);
 }

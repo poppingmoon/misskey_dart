@@ -8,7 +8,7 @@ part 'notes_schedule_create_request.g.dart';
 
 @freezed
 abstract class NotesScheduleCreateRequest with _$NotesScheduleCreateRequest {
-  const factory NotesScheduleCreateRequest({
+  const factory({
     NoteVisibility? visibility,
     List<String>? visibleUserIds,
     String? cw,
@@ -30,27 +30,25 @@ abstract class NotesScheduleCreateRequest with _$NotesScheduleCreateRequest {
     ScheduledDelete? scheduledDelete,
   }) = _NotesScheduleCreateRequest;
 
-  factory NotesScheduleCreateRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$NotesScheduleCreateRequestFromJson(json);
 }
 
 @freezed
 abstract class ScheduleNote with _$ScheduleNote {
-  const factory ScheduleNote({
-    @EpocTimeDateTimeConverter() required DateTime scheduledAt,
-  }) = _ScheduleNote;
+  const factory({@EpocTimeDateTimeConverter() required DateTime scheduledAt}) =
+      _ScheduleNote;
 
-  factory ScheduleNote.fromJson(Map<String, dynamic> json) =>
-      _$ScheduleNoteFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$ScheduleNoteFromJson(json);
 }
 
 @freezed
 abstract class ScheduledDelete with _$ScheduledDelete {
-  const factory ScheduledDelete({
+  const factory({
     @EpocTimeDateTimeConverter() DateTime? deleteAt,
     @DurationConverter() Duration? deleteAfter,
   }) = _ScheduledDelete;
 
-  factory ScheduledDelete.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$ScheduledDeleteFromJson(json);
 }

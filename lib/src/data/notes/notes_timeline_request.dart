@@ -6,7 +6,7 @@ part 'notes_timeline_request.g.dart';
 
 @freezed
 abstract class NotesTimelineRequest with _$NotesTimelineRequest {
-  const factory NotesTimelineRequest({
+  const factory({
     int? limit,
     String? sinceId,
     String? untilId,
@@ -23,6 +23,6 @@ abstract class NotesTimelineRequest with _$NotesTimelineRequest {
     bool? allowPartial,
   }) = _NotesTimelineRequest;
 
-  factory NotesTimelineRequest.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$NotesTimelineRequestFromJson(json);
 }

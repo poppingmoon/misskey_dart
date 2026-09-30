@@ -61,7 +61,7 @@ class Mutex {
 /// Can be released *once*.
 class Lock {
   Mutex? _mutex;
-  Lock._(this._mutex);
+  new _(this._mutex);
 
   /// Release the lock on the mutex.
   ///

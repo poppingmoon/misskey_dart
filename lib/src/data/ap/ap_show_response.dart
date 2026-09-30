@@ -5,11 +5,8 @@ part 'ap_show_response.g.dart';
 
 @freezed
 abstract class ApShowResponse with _$ApShowResponse {
-  const factory ApShowResponse({
-    required String type,
-    required Map<String, dynamic> object,
-  }) = _ApShowResponse;
+  const factory({required String type, required Map<String, dynamic> object}) =
+      _ApShowResponse;
 
-  factory ApShowResponse.fromJson(Map<String, dynamic> json) =>
-      _$ApShowResponseFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$ApShowResponseFromJson(json);
 }

@@ -6,7 +6,7 @@ part 'emoji_response.g.dart';
 
 @freezed
 abstract class EmojiResponse with _$EmojiResponse {
-  const factory EmojiResponse({
+  const factory({
     required String id,
     @Default([]) List<String> aliases,
     required String name,
@@ -19,6 +19,5 @@ abstract class EmojiResponse with _$EmojiResponse {
     List<String>? roleIdsThatCanBeUsedThisEmojiAsReaction,
   }) = _EmojiResponse;
 
-  factory EmojiResponse.fromJson(Map<String, dynamic> json) =>
-      _$EmojiResponseFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$EmojiResponseFromJson(json);
 }

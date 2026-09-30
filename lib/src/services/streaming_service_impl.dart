@@ -34,7 +34,7 @@ class StreamingService implements StreamingController, WebSocketController {
 
   Timer? _timer;
 
-  StreamingService({
+  new({
     this.token,
     required this.streamingUrl,
     this.maxRetryCounts = 1,

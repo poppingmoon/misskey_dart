@@ -7,13 +7,13 @@ part 'notes_reactions_response.g.dart';
 
 @freezed
 abstract class NotesReactionsResponse with _$NotesReactionsResponse {
-  const factory NotesReactionsResponse({
+  const factory({
     required String id,
     @DateTimeConverter() required DateTime createdAt,
     required UserLite user,
     String? type,
   }) = _NotesReactionsResponse;
 
-  factory NotesReactionsResponse.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$NotesReactionsResponseFromJson(json);
 }

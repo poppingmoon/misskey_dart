@@ -14,5 +14,5 @@ enum HashtagsListSortType {
 
   final String value;
 
-  const HashtagsListSortType(this.value);
+  const new(this.value);
 }

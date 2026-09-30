@@ -6,7 +6,7 @@ part 'note_updated_event.g.dart';
 
 @freezed
 abstract class NoteUpdatedEvent with _$NoteUpdatedEvent {
-  const factory NoteUpdatedEvent({
+  const factory({
     required String id,
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
@@ -14,6 +14,6 @@ abstract class NoteUpdatedEvent with _$NoteUpdatedEvent {
     required Map<String, dynamic> body,
   }) = _NoteUpdatedEvent;
 
-  factory NoteUpdatedEvent.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$NoteUpdatedEventFromJson(json);
 }

@@ -8,7 +8,7 @@ part 'drive_files_request.g.dart';
 
 @freezed
 abstract class DriveFilesRequest with _$DriveFilesRequest {
-  const factory DriveFilesRequest({
+  const factory({
     int? limit,
     String? sinceId,
     String? untilId,
@@ -19,6 +19,6 @@ abstract class DriveFilesRequest with _$DriveFilesRequest {
     @DriveFilesSortConverter() DriveFilesSortType? sort,
   }) = _DriveFilesRequest;
 
-  factory DriveFilesRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$DriveFilesRequestFromJson(json);
 }

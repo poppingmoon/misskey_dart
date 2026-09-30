@@ -3,7 +3,7 @@ import 'package:misskey_dart/src/enums/hashtags_list_sort_type.dart';
 
 class HashtagsListSortConverter
     extends JsonConverter<HashtagsListSortType, String> {
-  const HashtagsListSortConverter();
+  const new();
 
   @override
   HashtagsListSortType fromJson(String json) => HashtagsListSortType.values

@@ -4,7 +4,7 @@ import 'package:misskey_dart/src/services/api_service.dart';
 class MisskeyBlocking {
   final ApiService _apiService;
 
-  MisskeyBlocking({required this._apiService});
+  new({required this._apiService});
 
   /// ユーザーをブロックします。
   Future<void> create(BlockCreateRequest request) async {

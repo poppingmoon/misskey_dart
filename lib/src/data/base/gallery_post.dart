@@ -6,7 +6,7 @@ part 'gallery_post.g.dart';
 
 @freezed
 abstract class GalleryPost with _$GalleryPost {
-  const factory GalleryPost({
+  const factory({
     required String id,
     required DateTime createdAt,
     required DateTime updatedAt,
@@ -22,6 +22,5 @@ abstract class GalleryPost with _$GalleryPost {
     bool? isLiked,
   }) = _GalleryPost;
 
-  factory GalleryPost.fromJson(Map<String, Object?> json) =>
-      _$GalleryPostFromJson(json);
+  factory fromJson(Map<String, Object?> json) => _$GalleryPostFromJson(json);
 }

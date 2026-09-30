@@ -6,7 +6,7 @@ part 'channel_event.g.dart';
 
 @freezed
 abstract class ChannelEvent with _$ChannelEvent {
-  const factory ChannelEvent({
+  const factory({
     required String id,
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
@@ -14,6 +14,5 @@ abstract class ChannelEvent with _$ChannelEvent {
     required dynamic body,
   }) = _ChannelEvent;
 
-  factory ChannelEvent.fromJson(Map<String, Object?> json) =>
-      _$ChannelEventFromJson(json);
+  factory fromJson(Map<String, Object?> json) => _$ChannelEventFromJson(json);
 }

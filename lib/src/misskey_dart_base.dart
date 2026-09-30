@@ -36,7 +36,7 @@ class Misskey {
   late final MisskeySw sw;
   late final MisskeyChat chat;
 
-  Misskey({
+  new({
     this.token,
     required Uri serverUrl,
     Uri? apiUrl,

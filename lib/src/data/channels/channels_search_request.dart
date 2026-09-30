@@ -7,7 +7,7 @@ part 'channels_search_request.g.dart';
 
 @freezed
 abstract class ChannelsSearchRequest with _$ChannelsSearchRequest {
-  const factory ChannelsSearchRequest({
+  const factory({
     required String query,
     ChannelSearchType? type,
     String? sinceId,
@@ -17,6 +17,6 @@ abstract class ChannelsSearchRequest with _$ChannelsSearchRequest {
     @Assert('limit > 0') int? limit,
   }) = _ChannelsSearchRequest;
 
-  factory ChannelsSearchRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$ChannelsSearchRequestFromJson(json);
 }

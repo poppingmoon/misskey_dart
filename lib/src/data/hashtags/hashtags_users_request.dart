@@ -9,7 +9,7 @@ part 'hashtags_users_request.g.dart';
 
 @freezed
 abstract class HashtagsUsersRequest with _$HashtagsUsersRequest {
-  const factory HashtagsUsersRequest({
+  const factory({
     required String tag,
     int? limit,
     @UsersSortConverter() required UsersSortType sort,
@@ -17,6 +17,6 @@ abstract class HashtagsUsersRequest with _$HashtagsUsersRequest {
     Origin? origin,
   }) = _HashtagsUsersRequest;
 
-  factory HashtagsUsersRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$HashtagsUsersRequestFromJson(json);
 }

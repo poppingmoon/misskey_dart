@@ -6,11 +6,9 @@ part 'flash_my_likes_response.g.dart';
 
 @freezed
 abstract class FlashMyLikesResponse with _$FlashMyLikesResponse {
-  const factory FlashMyLikesResponse({
-    required String id,
-    required Flash flash,
-  }) = _FlashMyLikesResponse;
+  const factory({required String id, required Flash flash}) =
+      _FlashMyLikesResponse;
 
-  factory FlashMyLikesResponse.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$FlashMyLikesResponseFromJson(json);
 }

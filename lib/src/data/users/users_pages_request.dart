@@ -6,7 +6,7 @@ part 'users_pages_request.g.dart';
 
 @freezed
 abstract class UsersPagesRequest with _$UsersPagesRequest {
-  const factory UsersPagesRequest({
+  const factory({
     required String userId,
     int? limit,
     String? sinceId,
@@ -15,6 +15,6 @@ abstract class UsersPagesRequest with _$UsersPagesRequest {
     @EpocTimeDateTimeConverter() DateTime? untilDate,
   }) = _UsersPagesRequest;
 
-  factory UsersPagesRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$UsersPagesRequestFromJson(json);
 }

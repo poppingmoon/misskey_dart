@@ -6,11 +6,9 @@ part 'i_gallery_likes_response.g.dart';
 
 @freezed
 abstract class IGalleryLikesResponse with _$IGalleryLikesResponse {
-  const factory IGalleryLikesResponse({
-    required String id,
-    required GalleryPost post,
-  }) = _IGalleryLikesResponse;
+  const factory({required String id, required GalleryPost post}) =
+      _IGalleryLikesResponse;
 
-  factory IGalleryLikesResponse.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$IGalleryLikesResponseFromJson(json);
 }

@@ -6,7 +6,7 @@ part 'i_gallery_likes_request.g.dart';
 
 @freezed
 abstract class IGalleryLikesRequest with _$IGalleryLikesRequest {
-  const factory IGalleryLikesRequest({
+  const factory({
     int? limit,
     String? sinceId,
     String? untilId,
@@ -14,6 +14,6 @@ abstract class IGalleryLikesRequest with _$IGalleryLikesRequest {
     @EpocTimeDateTimeConverter() DateTime? untilDate,
   }) = _IGalleryLikesRequest;
 
-  factory IGalleryLikesRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$IGalleryLikesRequestFromJson(json);
 }

@@ -8,7 +8,7 @@ part 'roles_list_response.g.dart';
 
 @freezed
 abstract class RolesListResponse with _$RolesListResponse {
-  const factory RolesListResponse({
+  const factory({
     required String id,
     @DateTimeConverter() required DateTime createdAt,
     @DateTimeConverter() required DateTime updatedAt,
@@ -27,6 +27,6 @@ abstract class RolesListResponse with _$RolesListResponse {
     required int usersCount,
   }) = _RolesListResponse;
 
-  factory RolesListResponse.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$RolesListResponseFromJson(json);
 }

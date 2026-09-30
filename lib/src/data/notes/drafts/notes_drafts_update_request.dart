@@ -7,7 +7,7 @@ part 'notes_drafts_update_request.g.dart';
 
 @freezed
 abstract class NotesDraftsUpdateRequest with _$NotesDraftsUpdateRequest {
-  const factory NotesDraftsUpdateRequest({
+  const factory({
     required String draftId,
     NoteVisibility? visibility,
     List<String>? visibleUserIds,
@@ -25,6 +25,6 @@ abstract class NotesDraftsUpdateRequest with _$NotesDraftsUpdateRequest {
     bool? isActuallyScheduled,
   }) = _NotesDraftsUpdateRequest;
 
-  factory NotesDraftsUpdateRequest.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$NotesDraftsUpdateRequestFromJson(json);
 }

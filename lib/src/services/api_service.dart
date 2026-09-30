@@ -10,7 +10,7 @@ class ApiService {
   final String? token;
   final Uri apiUrl;
 
-  ApiService({this.token, required this.apiUrl, Dio? dio})
+  new({this.token, required this.apiUrl, Dio? dio})
     : dio = (dio ?? Dio())
         ..options = BaseOptions(
           method: "post",

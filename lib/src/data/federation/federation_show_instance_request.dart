@@ -6,7 +6,7 @@ part 'federation_show_instance_request.g.dart';
 @freezed
 abstract class FederationShowInstanceRequest
     with _$FederationShowInstanceRequest {
-  const factory FederationShowInstanceRequest({
+  const factory({
     required String host,
     bool? blocked,
     bool? notResponding,
@@ -20,6 +20,6 @@ abstract class FederationShowInstanceRequest
     String? sort,
   }) = _FederationShowInstanceRequest;
 
-  factory FederationShowInstanceRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$FederationShowInstanceRequestFromJson(json);
 }

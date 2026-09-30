@@ -6,7 +6,7 @@ enum DriveFilesSortType {
   sizeDescending("+size"),
   sizeAscending("-size");
 
-  const DriveFilesSortType(this.value);
+  const new(this.value);
 
   final String value;
 }

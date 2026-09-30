@@ -6,7 +6,7 @@ part 'chat_rooms_owned_request.g.dart';
 
 @freezed
 abstract class ChatRoomsOwnedRequest with _$ChatRoomsOwnedRequest {
-  const factory ChatRoomsOwnedRequest({
+  const factory({
     int? limit,
     String? sinceId,
     String? untilId,
@@ -14,6 +14,6 @@ abstract class ChatRoomsOwnedRequest with _$ChatRoomsOwnedRequest {
     @EpocTimeDateTimeConverter() DateTime? untilDate,
   }) = _ChatRoomsOwnedRequest;
 
-  factory ChatRoomsOwnedRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$ChatRoomsOwnedRequestFromJson(json);
 }

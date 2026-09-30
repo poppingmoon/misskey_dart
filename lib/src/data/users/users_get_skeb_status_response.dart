@@ -5,7 +5,7 @@ part 'users_get_skeb_status_response.g.dart';
 
 @freezed
 abstract class UsersGetSkebStatusResponse with _$UsersGetSkebStatusResponse {
-  const factory UsersGetSkebStatusResponse({
+  const factory({
     required String screenName,
     required bool isCreator,
     required bool isAcceptable,
@@ -14,20 +14,20 @@ abstract class UsersGetSkebStatusResponse with _$UsersGetSkebStatusResponse {
     required List<SkebStatusSkill> skills,
   }) = _UsersGetSkebStatusResponse;
 
-  factory UsersGetSkebStatusResponse.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$UsersGetSkebStatusResponseFromJson(json);
 }
 
 @freezed
 abstract class SkebStatusSkill with _$SkebStatusSkill {
-  const factory SkebStatusSkill({
+  const factory({
     required int amount,
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     SkebStatusSkillGenre? genre,
   }) = _SkebStatusSkill;
 
-  factory SkebStatusSkill.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$SkebStatusSkillFromJson(json);
 }
 

@@ -6,13 +6,12 @@ part 'broadcast_event.g.dart';
 
 @freezed
 abstract class BroadcastEvent with _$BroadcastEvent {
-  const factory BroadcastEvent({
+  const factory({
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     BroadcastEventType? type,
     required Map<String, dynamic> body,
   }) = _BroadcastResponse;
 
-  factory BroadcastEvent.fromJson(Map<String, Object?> json) =>
-      _$BroadcastEventFromJson(json);
+  factory fromJson(Map<String, Object?> json) => _$BroadcastEventFromJson(json);
 }

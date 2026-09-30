@@ -5,8 +5,7 @@ part 'i_unpin_request.g.dart';
 
 @freezed
 abstract class IUnpinRequest with _$IUnpinRequest {
-  const factory IUnpinRequest({required String noteId}) = _IUnpinRequest;
+  const factory({required String noteId}) = _IUnpinRequest;
 
-  factory IUnpinRequest.fromJson(Map<String, Object?> json) =>
-      _$IUnpinRequestFromJson(json);
+  factory fromJson(Map<String, Object?> json) => _$IUnpinRequestFromJson(json);
 }

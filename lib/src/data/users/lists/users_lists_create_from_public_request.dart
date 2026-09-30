@@ -6,12 +6,9 @@ part 'users_lists_create_from_public_request.g.dart';
 @freezed
 abstract class UsersListsCreateFromPublicRequest
     with _$UsersListsCreateFromPublicRequest {
-  const factory UsersListsCreateFromPublicRequest({
-    required String name,
-    required String listId,
-  }) = _UsersListsCreateFromPublicRequest;
+  const factory({required String name, required String listId}) =
+      _UsersListsCreateFromPublicRequest;
 
-  factory UsersListsCreateFromPublicRequest.fromJson(
-    Map<String, dynamic> json,
-  ) => _$UsersListsCreateFromPublicRequestFromJson(json);
+  factory fromJson(Map<String, dynamic> json) =>
+      _$UsersListsCreateFromPublicRequestFromJson(json);
 }

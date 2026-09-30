@@ -5,11 +5,9 @@ part 'i_registry_get_all_request.g.dart';
 
 @freezed
 abstract class IRegistryGetAllRequest with _$IRegistryGetAllRequest {
-  const factory IRegistryGetAllRequest({
-    required List<String> scope,
-    String? domain,
-  }) = _IRegistryGetAllRequest;
+  const factory({required List<String> scope, String? domain}) =
+      _IRegistryGetAllRequest;
 
-  factory IRegistryGetAllRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$IRegistryGetAllRequestFromJson(json);
 }

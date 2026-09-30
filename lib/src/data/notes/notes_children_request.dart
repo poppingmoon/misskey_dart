@@ -6,7 +6,7 @@ part 'notes_children_request.g.dart';
 
 @freezed
 abstract class NotesChildrenRequest with _$NotesChildrenRequest {
-  const factory NotesChildrenRequest({
+  const factory({
     required String noteId,
     int? limit,
     int? depth,
@@ -16,6 +16,6 @@ abstract class NotesChildrenRequest with _$NotesChildrenRequest {
     @EpocTimeDateTimeConverter() DateTime? untilDate,
   }) = _NotesChildrenRequest;
 
-  factory NotesChildrenRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$NotesChildrenRequestFromJson(json);
 }

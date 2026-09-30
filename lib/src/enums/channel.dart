@@ -5,64 +5,64 @@ part 'channel.freezed.dart';
 
 @freezed
 sealed class Channel with _$Channel {
-  const Channel._();
+  const new _();
 
   /// ホームタイムライン
-  const factory Channel.homeTimeline() = _HomeTimeline;
+  const factory homeTimeline() = _HomeTimeline;
 
   /// ローカルタイムライン
-  const factory Channel.localTimeline() = _LocalTimeline;
+  const factory localTimeline() = _LocalTimeline;
 
   /// グローバルタイムライン
-  const factory Channel.globalTimeline() = _GlobalTimeline;
+  const factory globalTimeline() = _GlobalTimeline;
 
   /// ソーシャルタイムライン
-  const factory Channel.hybridTimeline() = _HybridTimeline;
+  const factory hybridTimeline() = _HybridTimeline;
 
   /// ロールタイムライン
-  const factory Channel.roleTimeline() = _RoleTimeline;
+  const factory roleTimeline() = _RoleTimeline;
 
   /// チャンネル
-  const factory Channel.channel() = _ChannelType;
+  const factory channel() = _ChannelType;
 
   /// ?
-  const factory Channel.userList() = _UserList;
+  const factory userList() = _UserList;
 
   /// ハッシュタグ？
-  const factory Channel.hashtag() = _Hashtag;
+  const factory hashtag() = _Hashtag;
 
   /// あんてな
-  const factory Channel.antenna() = _Antenna;
+  const factory antenna() = _Antenna;
 
   /// ドライブ？
-  const factory Channel.drive() = _Drive;
+  const factory drive() = _Drive;
 
   /// サーバー統計情報（メモリ、CPU使用率）
-  const factory Channel.serverStats() = _ServerStats;
+  const factory serverStats() = _ServerStats;
 
   /// ジョブキュー統計情報（inbox, outbox）
-  const factory Channel.queueStats() = _QueueStats;
+  const factory queueStats() = _QueueStats;
 
   /// チャット（ルーム）
-  const factory Channel.chatRoom() = _ChatRoom;
+  const factory chatRoom() = _ChatRoom;
 
   /// チャット（一対一）
-  const factory Channel.chatUser() = _ChatUser;
+  const factory chatUser() = _ChatUser;
 
   /// リバーシのマッチング。招待されたときとマッチが成立したときに流れる。
-  const factory Channel.reversi() = _Reversi;
+  const factory reversi() = _Reversi;
 
   /// リバーシの対局。パラメータに gameId が要る。
-  const factory Channel.reversiGame() = _ReversiGame;
+  const factory reversiGame() = _ReversiGame;
 
   /// 管理者用のなにか？
-  const factory Channel.admin() = _Admin;
+  const factory admin() = _Admin;
 
   /// メイン
-  const factory Channel.main() = _Main;
+  const factory main() = _Main;
 
   /// カスタムチャンネル（任意の値）
-  const factory Channel.custom(String value) = _Custom;
+  const factory custom(String value) = _Custom;
 
   static const _map = <String, Channel>{
     'homeTimeline': Channel.homeTimeline(),
@@ -93,7 +93,7 @@ sealed class Channel with _$Channel {
 }
 
 class ChannelJsonConverter extends JsonConverter<Channel, String> {
-  const ChannelJsonConverter();
+  const new();
 
   @override
   Channel fromJson(String json) {

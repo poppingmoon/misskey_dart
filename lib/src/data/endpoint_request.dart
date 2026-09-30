@@ -5,8 +5,8 @@ part 'endpoint_request.g.dart';
 
 @freezed
 abstract class EndpointRequest with _$EndpointRequest {
-  const factory EndpointRequest({required String endpoint}) = _EndpointRequest;
+  const factory({required String endpoint}) = _EndpointRequest;
 
-  factory EndpointRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$EndpointRequestFromJson(json);
 }

@@ -5,11 +5,9 @@ part 'sw_update_registration_request.g.dart';
 
 @freezed
 abstract class SwUpdateRegistrationRequest with _$SwUpdateRegistrationRequest {
-  const factory SwUpdateRegistrationRequest({
-    required String endpoint,
-    bool? sendReadMessage,
-  }) = _SwUpdateRegistrationRequest;
+  const factory({required String endpoint, bool? sendReadMessage}) =
+      _SwUpdateRegistrationRequest;
 
-  factory SwUpdateRegistrationRequest.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$SwUpdateRegistrationRequestFromJson(json);
 }

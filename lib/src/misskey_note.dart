@@ -14,7 +14,7 @@ class MisskeyNotes {
 
   final ApiService _apiService;
 
-  MisskeyNotes({required ApiService apiService})
+  new({required ApiService apiService})
     : _apiService = apiService,
       reactions = MisskeyNotesReactions(apiService: apiService),
       drafts = MisskeyNotesDrafts(apiService: apiService),
@@ -254,7 +254,7 @@ class MisskeyNotes {
 class MisskeyNotesReactions {
   final ApiService _apiService;
 
-  MisskeyNotesReactions({required this._apiService});
+  new({required this._apiService});
 
   /// ノートにリアクションします。
   Future<void> create(NotesReactionsCreateRequest request) async {
@@ -279,7 +279,7 @@ class MisskeyNotesReactions {
 }
 
 class MisskeyNotesDrafts {
-  const MisskeyNotesDrafts({required this._apiService});
+  const new({required this._apiService});
 
   final ApiService _apiService;
 
@@ -328,7 +328,7 @@ class MisskeyNotesDrafts {
 class MisskeyNotesFavorites {
   final ApiService _apiService;
 
-  MisskeyNotesFavorites({required this._apiService});
+  new({required this._apiService});
 
   /// ノートをお気に入りに登録します。
   Future<void> create(NotesFavoritesCreateRequest request) async {
@@ -344,7 +344,7 @@ class MisskeyNotesFavorites {
 class MisskeyNotesSchedule {
   final ApiService _apiService;
 
-  MisskeyNotesSchedule({required this._apiService});
+  new({required this._apiService});
 
   Future<void> create(NotesScheduleCreateRequest request) async {
     await _apiService.post<void>("notes/schedule/create", request.toJson());
@@ -366,7 +366,7 @@ class MisskeyNotesSchedule {
 class MisskeyNotesScheduled {
   final ApiService _apiService;
 
-  MisskeyNotesScheduled({required this._apiService});
+  new({required this._apiService});
 
   Future<void> cancel(NotesScheduledCancelRequest request) async {
     await _apiService.post<void>("notes/scheduled/cancel", request.toJson());
@@ -386,7 +386,7 @@ class MisskeyNotesScheduled {
 class MisskeyNotesPolls {
   final ApiService _apiService;
 
-  MisskeyNotesPolls({required this._apiService});
+  new({required this._apiService});
 
   /// ノートのアンケートに投票します。
   Future<void> vote(NotesPollsVoteRequest request) async {
@@ -408,7 +408,7 @@ class MisskeyNotesPolls {
 class MisskeyNotesThreadMuting {
   final ApiService _apiService;
 
-  MisskeyNotesThreadMuting({required this._apiService});
+  new({required this._apiService});
 
   /// 指定したノートが含まれるスレッドをミュートします。
   Future<void> create(NotesThreadMutingCreateRequest request) async {

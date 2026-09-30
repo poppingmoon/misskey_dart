@@ -7,7 +7,7 @@ part 'meta_response.g.dart';
 
 @freezed
 abstract class MetaResponse with _$MetaResponse {
-  const factory MetaResponse({
+  const factory({
     String? maintainerName,
     String? maintainerEmail,
     String? version,
@@ -66,13 +66,12 @@ abstract class MetaResponse with _$MetaResponse {
     MetaFeature? features,
   }) = _MetaResponse;
 
-  factory MetaResponse.fromJson(Map<String, Object?> json) =>
-      _$MetaResponseFromJson(json);
+  factory fromJson(Map<String, Object?> json) => _$MetaResponseFromJson(json);
 }
 
 @freezed
 abstract class MetaAd with _$MetaAd {
-  const factory MetaAd({
+  const factory({
     required String id,
     required String place,
     @NullableUriConverter() Uri? url,
@@ -80,14 +79,14 @@ abstract class MetaAd with _$MetaAd {
     required int ratio,
     bool? isSensitive,
   }) = _MetaAd;
-  factory MetaAd.fromJson(Map<String, Object?> json) => _$MetaAdFromJson(json);
+  factory fromJson(Map<String, Object?> json) => _$MetaAdFromJson(json);
 }
 
 enum MetaFederation { all, specified, none }
 
 @freezed
 abstract class MetaFeature with _$MetaFeature {
-  const factory MetaFeature({
+  const factory({
     bool? registration,
     bool? emailRequiredForSignup,
     bool? hcaptcha,
@@ -97,6 +96,5 @@ abstract class MetaFeature with _$MetaFeature {
     bool? serviceWorker,
     bool? miauth,
   }) = _MetaFeature;
-  factory MetaFeature.fromJson(Map<String, Object?> json) =>
-      _$MetaFeatureFromJson(json);
+  factory fromJson(Map<String, Object?> json) => _$MetaFeatureFromJson(json);
 }

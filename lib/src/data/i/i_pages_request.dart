@@ -6,7 +6,7 @@ part 'i_pages_request.g.dart';
 
 @freezed
 abstract class IPagesRequest with _$IPagesRequest {
-  const factory IPagesRequest({
+  const factory({
     int? limit,
     String? sinceId,
     String? untilId,
@@ -14,6 +14,5 @@ abstract class IPagesRequest with _$IPagesRequest {
     @EpocTimeDateTimeConverter() DateTime? untilDate,
   }) = _IPageRequest;
 
-  factory IPagesRequest.fromJson(Map<String, Object?> json) =>
-      _$IPagesRequestFromJson(json);
+  factory fromJson(Map<String, Object?> json) => _$IPagesRequestFromJson(json);
 }

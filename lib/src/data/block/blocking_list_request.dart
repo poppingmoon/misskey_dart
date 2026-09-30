@@ -6,7 +6,7 @@ part 'blocking_list_request.g.dart';
 
 @freezed
 abstract class BlockingListRequest with _$BlockingListRequest {
-  const factory BlockingListRequest({
+  const factory({
     int? limit,
     String? sinceId,
     String? untilId,
@@ -14,6 +14,6 @@ abstract class BlockingListRequest with _$BlockingListRequest {
     @EpocTimeDateTimeConverter() DateTime? untilDate,
   }) = _BlockingListRequest;
 
-  factory BlockingListRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$BlockingListRequestFromJson(json);
 }

@@ -8,7 +8,7 @@ part 'page.g.dart';
 
 @freezed
 abstract class Page with _$Page {
-  const factory Page({
+  const factory({
     required String id,
     @DateTimeConverter() required DateTime createdAt,
     @DateTimeConverter() required DateTime updatedAt,
@@ -32,7 +32,7 @@ abstract class Page with _$Page {
     PageVisibility? visibility, // MisskeyIO
   }) = _Page;
 
-  factory Page.fromJson(Map<String, dynamic> json) => _$PageFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$PageFromJson(json);
 }
 
 enum PageContentType {
@@ -88,14 +88,13 @@ abstract class AbstractPageText extends AbstractPageContent {
 
 @freezed
 abstract class PageText with _$PageText implements AbstractPageText {
-  const factory PageText({
+  const factory({
     String? id,
     @Default(PageContentType.text) PageContentType? type,
     String? text,
   }) = _PageText;
 
-  factory PageText.fromJson(Map<String, dynamic> json) =>
-      _$PageTextFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$PageTextFromJson(json);
 }
 
 abstract class AbstractPageSection extends AbstractPageContent {
@@ -105,15 +104,14 @@ abstract class AbstractPageSection extends AbstractPageContent {
 
 @freezed
 abstract class PageSection with _$PageSection implements AbstractPageSection {
-  const factory PageSection({
+  const factory({
     String? id,
     @Default(PageContentType.section) PageContentType? type,
     String? title,
     @PageContentConverter() List<AbstractPageContent>? children,
   }) = _PageSection;
 
-  factory PageSection.fromJson(Map<String, dynamic> json) =>
-      _$PageSectionFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$PageSectionFromJson(json);
 }
 
 abstract class AbstractPageImage extends AbstractPageContent {
@@ -122,14 +120,13 @@ abstract class AbstractPageImage extends AbstractPageContent {
 
 @freezed
 abstract class PageImage with _$PageImage implements AbstractPageImage {
-  const factory PageImage({
+  const factory({
     String? id,
     @Default(PageContentType.image) PageContentType? type,
     String? fileId,
   }) = _PageImage;
 
-  factory PageImage.fromJson(Map<String, dynamic> json) =>
-      _$PageImageFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$PageImageFromJson(json);
 }
 
 abstract class AbstractPageNote extends AbstractPageContent {
@@ -139,22 +136,21 @@ abstract class AbstractPageNote extends AbstractPageContent {
 
 @freezed
 abstract class PageNote with _$PageNote implements AbstractPageNote {
-  const factory PageNote({
+  const factory({
     String? id,
     @Default(PageContentType.note) PageContentType? type,
     String? note,
     bool? detailed,
   }) = _PageNote;
 
-  factory PageNote.fromJson(Map<String, dynamic> json) =>
-      _$PageNoteFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$PageNoteFromJson(json);
 }
 
 abstract class AbstractPageUnknown extends AbstractPageContent;
 
 @Freezed(toJson: false)
 abstract class PageUnknown with _$PageUnknown implements AbstractPageUnknown {
-  const factory PageUnknown({
+  const factory({
     String? id,
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
@@ -162,7 +158,7 @@ abstract class PageUnknown with _$PageUnknown implements AbstractPageUnknown {
     @JsonKey(includeFromJson: false) @Default({}) Map<String, dynamic> json,
   }) = _PageUnknown;
 
-  factory PageUnknown.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$PageUnknownFromJson(json).copyWith(json: json);
 }
 

@@ -6,7 +6,7 @@ part 'users_followeres_request.g.dart';
 
 @freezed
 abstract class UsersFollowersRequest with _$UsersFollowersRequest {
-  const factory UsersFollowersRequest({
+  const factory({
     required String userId,
     String? sinceId,
     String? untilId,
@@ -15,6 +15,6 @@ abstract class UsersFollowersRequest with _$UsersFollowersRequest {
     int? limit,
   }) = _UsersFollowersRequest;
 
-  factory UsersFollowersRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$UsersFollowersRequestFromJson(json);
 }

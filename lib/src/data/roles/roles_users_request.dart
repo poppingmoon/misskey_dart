@@ -6,7 +6,7 @@ part 'roles_users_request.g.dart';
 
 @freezed
 abstract class RolesUsersRequest with _$RolesUsersRequest {
-  const factory RolesUsersRequest({
+  const factory({
     required String roleId,
     String? sinceId,
     String? untilId,
@@ -15,6 +15,6 @@ abstract class RolesUsersRequest with _$RolesUsersRequest {
     int? limit,
   }) = _RolesUsersRequest;
 
-  factory RolesUsersRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$RolesUsersRequestFromJson(json);
 }

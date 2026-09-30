@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 class NullableDateTimeConverter extends JsonConverter<DateTime?, String> {
-  const NullableDateTimeConverter();
+  const new();
 
   @override
   DateTime? fromJson(String json) => DateTime.tryParse(json);
@@ -11,7 +11,7 @@ class NullableDateTimeConverter extends JsonConverter<DateTime?, String> {
 }
 
 class DateTimeConverter extends JsonConverter<DateTime, String> {
-  const DateTimeConverter();
+  const new();
 
   @override
   DateTime fromJson(String json) => DateTime.parse(json);
@@ -21,7 +21,7 @@ class DateTimeConverter extends JsonConverter<DateTime, String> {
 }
 
 class EpocTimeDateTimeConverter extends JsonConverter<DateTime, int> {
-  const EpocTimeDateTimeConverter();
+  const new();
 
   @override
   DateTime fromJson(int json) => DateTime.fromMillisecondsSinceEpoch(json);
@@ -31,7 +31,7 @@ class EpocTimeDateTimeConverter extends JsonConverter<DateTime, int> {
 }
 
 class BirthdayConverter extends JsonConverter<DateTime?, String?> {
-  const BirthdayConverter();
+  const new();
 
   @override
   DateTime? fromJson(String? json) =>

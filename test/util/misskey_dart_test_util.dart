@@ -11,7 +11,7 @@ class CreateUserResponse {
   final Misskey client;
   final User user;
 
-  CreateUserResponse({required this.client, required this.user});
+  new({required this.client, required this.user});
 }
 
 Misskey getTestClient(String? token) {

@@ -6,7 +6,7 @@ part 'users_search_request.g.dart';
 
 @freezed
 abstract class UsersSearchRequest with _$UsersSearchRequest {
-  const factory UsersSearchRequest({
+  const factory({
     required String query,
     int? offset,
     int? limit,
@@ -14,6 +14,6 @@ abstract class UsersSearchRequest with _$UsersSearchRequest {
     bool? detail,
   }) = _UsersSearchRequest;
 
-  factory UsersSearchRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$UsersSearchRequestFromJson(json);
 }

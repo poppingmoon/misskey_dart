@@ -9,7 +9,7 @@ part 'federation_show_instance_response.g.dart';
 @freezed
 abstract class FederationShowInstanceResponse
     with _$FederationShowInstanceResponse {
-  const factory FederationShowInstanceResponse({
+  const factory({
     required String id,
     @DateTimeConverter() required DateTime firstRetrievedAt,
     required String host,
@@ -40,7 +40,7 @@ abstract class FederationShowInstanceResponse
     String? moderationNote,
   }) = _FederationShowInstanceResponse;
 
-  factory FederationShowInstanceResponse.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$FederationShowInstanceResponseFromJson(json);
 }
 

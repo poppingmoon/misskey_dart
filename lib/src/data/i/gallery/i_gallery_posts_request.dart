@@ -6,7 +6,7 @@ part 'i_gallery_posts_request.g.dart';
 
 @freezed
 abstract class IGalleryPostsRequest with _$IGalleryPostsRequest {
-  const factory IGalleryPostsRequest({
+  const factory({
     int? limit,
     String? sinceId,
     String? untilId,
@@ -14,6 +14,6 @@ abstract class IGalleryPostsRequest with _$IGalleryPostsRequest {
     @EpocTimeDateTimeConverter() DateTime? untilDate,
   }) = _IGalleryPostsRequest;
 
-  factory IGalleryPostsRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$IGalleryPostsRequestFromJson(json);
 }

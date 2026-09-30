@@ -5,7 +5,7 @@ part 'misskey_exception.g.dart';
 
 @freezed
 abstract class MisskeyException with _$MisskeyException implements Exception {
-  const factory MisskeyException({
+  const factory({
     required String id,
     required String code,
     required String message,
@@ -15,7 +15,7 @@ abstract class MisskeyException with _$MisskeyException implements Exception {
     Map<String, dynamic>? info,
   }) = _MisskeyException;
 
-  factory MisskeyException.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$MisskeyExceptionFromJson(json);
 }
 

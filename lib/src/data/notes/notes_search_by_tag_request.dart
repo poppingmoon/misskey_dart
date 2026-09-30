@@ -6,7 +6,7 @@ part 'notes_search_by_tag_request.g.dart';
 
 @freezed
 abstract class NotesSearchByTagRequest with _$NotesSearchByTagRequest {
-  const factory NotesSearchByTagRequest({
+  const factory({
     required String tag,
     bool? reply,
     bool? renote,
@@ -19,6 +19,6 @@ abstract class NotesSearchByTagRequest with _$NotesSearchByTagRequest {
     int? limit,
   }) = _NotesSearchByTagRequest;
 
-  factory NotesSearchByTagRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$NotesSearchByTagRequestFromJson(json);
 }

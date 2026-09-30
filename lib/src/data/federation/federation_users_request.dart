@@ -6,7 +6,7 @@ part 'federation_users_request.g.dart';
 
 @freezed
 abstract class FederationUsersRequest with _$FederationUsersRequest {
-  const factory FederationUsersRequest({
+  const factory({
     required String host,
     String? sinceId,
     String? untilId,
@@ -15,6 +15,6 @@ abstract class FederationUsersRequest with _$FederationUsersRequest {
     int? limit,
   }) = _FederationUsersRequest;
 
-  factory FederationUsersRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$FederationUsersRequestFromJson(json);
 }

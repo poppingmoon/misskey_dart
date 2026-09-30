@@ -5,11 +5,9 @@ part 'notes_translate_response.g.dart';
 
 @freezed
 abstract class NotesTranslateResponse with _$NotesTranslateResponse {
-  const factory NotesTranslateResponse({
-    required String sourceLang,
-    required String text,
-  }) = _NotesTranslateResponse;
+  const factory({required String sourceLang, required String text}) =
+      _NotesTranslateResponse;
 
-  factory NotesTranslateResponse.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$NotesTranslateResponseFromJson(json);
 }

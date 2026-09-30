@@ -7,5 +7,5 @@ enum UsersSortType {
   updateAtDescendant("+updatedAt");
 
   final String value;
-  const UsersSortType(this.value);
+  const new(this.value);
 }

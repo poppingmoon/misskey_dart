@@ -9,30 +9,30 @@ part 'push_notification.g.dart';
 
 @Freezed(unionKey: 'type')
 sealed class PushNotification with _$PushNotification {
-  const factory PushNotification.notification({
+  const factory notification({
     required PushNotificationBody body,
     String? userId,
     @EpocTimeDateTimeConverter() DateTime? dateTime,
   }) = NotificationPushNotification;
 
-  const factory PushNotification.readAllNotifications({
+  const factory readAllNotifications({
     String? userId,
     @EpocTimeDateTimeConverter() DateTime? dateTime,
   }) = ReadAllNotificationsPushNotification;
 
-  const factory PushNotification.newChatMessage({
+  const factory newChatMessage({
     required ChatMessage body,
     String? userId,
     @EpocTimeDateTimeConverter() DateTime? dateTime,
   }) = NewChatMessagePushNotification;
 
-  factory PushNotification.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$PushNotificationFromJson(json);
 }
 
 @freezed
 abstract class PushNotificationBody with _$PushNotificationBody {
-  const factory PushNotificationBody({
+  const factory({
     required String id,
     @DateTimeConverter() required DateTime createdAt,
     // ignore: invalid_annotation_target
@@ -63,13 +63,13 @@ abstract class PushNotificationBody with _$PushNotificationBody {
     ScheduledNote? draft, // MisskeyIO
   }) = _PushNotificationBody;
 
-  factory PushNotificationBody.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$PushNotificationBodyFromJson(json);
 }
 
 @freezed
 abstract class PushNotificationNote with _$PushNotificationNote {
-  const factory PushNotificationNote({
+  const factory({
     required String id,
     @DateTimeConverter() required DateTime createdAt,
     @NullableDateTimeConverter() DateTime? updatedAt,
@@ -104,6 +104,6 @@ abstract class PushNotificationNote with _$PushNotificationNote {
     int? clippedCount,
   }) = _PushNotificationNote;
 
-  factory PushNotificationNote.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$PushNotificationNoteFromJson(json);
 }

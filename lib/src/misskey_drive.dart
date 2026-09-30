@@ -9,7 +9,7 @@ class MisskeyDrive {
   final MisskeyDriveFolders folders;
   final ApiService _apiService;
 
-  MisskeyDrive(this._apiService)
+  new(this._apiService)
     : files = MisskeyDriveFiles(_apiService),
       folders = MisskeyDriveFolders(_apiService);
 
@@ -31,7 +31,7 @@ class MisskeyDrive {
 
 class MisskeyDriveFiles {
   final ApiService _apiService;
-  MisskeyDriveFiles(ApiService apiService) : _apiService = apiService;
+  new(ApiService apiService) : _apiService = apiService;
 
   /// ドライブにファイルを作成します。
   Future<DriveFile> create(
@@ -145,7 +145,7 @@ class MisskeyDriveFiles {
 
 class MisskeyDriveFolders {
   final ApiService _apiService;
-  MisskeyDriveFolders(ApiService apiService) : _apiService = apiService;
+  new(ApiService apiService) : _apiService = apiService;
 
   /// ドライブのフォルダの中にあるフォルダを取得します。
   Future<Iterable<DriveFolder>> folders(DriveFoldersRequest request) async {

@@ -6,7 +6,7 @@ part 'users_lists_show_response.g.dart';
 
 @freezed
 abstract class UsersListsShowResponse with _$UsersListsShowResponse {
-  const factory UsersListsShowResponse({
+  const factory({
     required String id,
     @DateTimeConverter() required DateTime createdAt,
     required String name,
@@ -17,6 +17,6 @@ abstract class UsersListsShowResponse with _$UsersListsShowResponse {
     bool? isLiked,
   }) = _UsersListsShowResponse;
 
-  factory UsersListsShowResponse.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$UsersListsShowResponseFromJson(json);
 }

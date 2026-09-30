@@ -5,11 +5,9 @@ part 'users_lists_show_request.g.dart';
 
 @freezed
 abstract class UsersListsShowRequest with _$UsersListsShowRequest {
-  const factory UsersListsShowRequest({
-    required String listId,
-    bool? forPublic,
-  }) = _UsersListsShowRequest;
+  const factory({required String listId, bool? forPublic}) =
+      _UsersListsShowRequest;
 
-  factory UsersListsShowRequest.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$UsersListsShowRequestFromJson(json);
 }

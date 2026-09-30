@@ -8,7 +8,7 @@ part 'flash.g.dart';
 @freezed
 /// Playのエンティティ
 abstract class Flash with _$Flash {
-  const factory Flash({
+  const factory({
     required String id,
     @DateTimeConverter() required DateTime createdAt,
     @DateTimeConverter() required DateTime updatedAt,
@@ -24,5 +24,5 @@ abstract class Flash with _$Flash {
     @Default(false) bool isLiked,
   }) = _Flash;
 
-  factory Flash.fromJson(Map<String, dynamic> json) => _$FlashFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$FlashFromJson(json);
 }

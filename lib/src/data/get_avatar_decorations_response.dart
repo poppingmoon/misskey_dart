@@ -7,7 +7,7 @@ part 'get_avatar_decorations_response.g.dart';
 @freezed
 abstract class GetAvatarDecorationsResponse
     with _$GetAvatarDecorationsResponse {
-  const factory GetAvatarDecorationsResponse({
+  const factory({
     required String id,
     required String name,
     required String description,
@@ -16,6 +16,6 @@ abstract class GetAvatarDecorationsResponse
     String? category,
   }) = _GetAvatarDecorationsResponse;
 
-  factory GetAvatarDecorationsResponse.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$GetAvatarDecorationsResponseFromJson(json);
 }

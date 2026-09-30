@@ -7,7 +7,7 @@ part 'chat_messages_room_timeline_request.g.dart';
 @freezed
 abstract class ChatMessagesRoomTimelineRequest
     with _$ChatMessagesRoomTimelineRequest {
-  const factory ChatMessagesRoomTimelineRequest({
+  const factory({
     required String roomId,
     int? limit,
     String? sinceId,
@@ -16,6 +16,6 @@ abstract class ChatMessagesRoomTimelineRequest
     @EpocTimeDateTimeConverter() DateTime? untilDate,
   }) = _ChatMessagesRoomTimelineRequest;
 
-  factory ChatMessagesRoomTimelineRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$ChatMessagesRoomTimelineRequestFromJson(json);
 }

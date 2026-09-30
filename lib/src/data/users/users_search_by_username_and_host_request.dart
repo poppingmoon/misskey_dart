@@ -6,14 +6,9 @@ part 'users_search_by_username_and_host_request.g.dart';
 @freezed
 abstract class UsersSearchByUsernameAndHostRequest
     with _$UsersSearchByUsernameAndHostRequest {
-  const factory UsersSearchByUsernameAndHostRequest({
-    int? limit,
-    bool? detail,
-    String? username,
-    String? host,
-  }) = _UsersSearchByUsernameAndHostRequest;
+  const factory({int? limit, bool? detail, String? username, String? host}) =
+      _UsersSearchByUsernameAndHostRequest;
 
-  factory UsersSearchByUsernameAndHostRequest.fromJson(
-    Map<String, dynamic> json,
-  ) => _$UsersSearchByUsernameAndHostRequestFromJson(json);
+  factory fromJson(Map<String, dynamic> json) =>
+      _$UsersSearchByUsernameAndHostRequestFromJson(json);
 }

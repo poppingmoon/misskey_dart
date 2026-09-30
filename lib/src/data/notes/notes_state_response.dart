@@ -5,7 +5,7 @@ part 'notes_state_response.g.dart';
 
 @freezed
 abstract class NotesStateResponse with _$NotesStateResponse {
-  const factory NotesStateResponse({
+  const factory({
     required bool isFavorited,
     required bool isMutedThread,
 
@@ -13,6 +13,6 @@ abstract class NotesStateResponse with _$NotesStateResponse {
     bool? isWatching,
   }) = _NotesStateResponse;
 
-  factory NotesStateResponse.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$NotesStateResponseFromJson(json);
 }

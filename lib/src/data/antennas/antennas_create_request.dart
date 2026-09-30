@@ -6,7 +6,7 @@ part 'antennas_create_request.g.dart';
 
 @freezed
 abstract class AntennasCreateRequest with _$AntennasCreateRequest {
-  const factory AntennasCreateRequest({
+  const factory({
     required String name,
     required AntennaSource src,
     String? userListId,
@@ -24,6 +24,6 @@ abstract class AntennasCreateRequest with _$AntennasCreateRequest {
     bool? excludeNotesInSensitiveChannel,
   }) = _AntennasCreateRequest;
 
-  factory AntennasCreateRequest.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$AntennasCreateRequestFromJson(json);
 }

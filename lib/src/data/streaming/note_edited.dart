@@ -5,8 +5,7 @@ part 'note_edited.g.dart';
 
 @freezed
 abstract class NoteEdited with _$NoteEdited {
-  const factory NoteEdited({String? cw, String? text}) = _NoteEdited;
+  const factory({String? cw, String? text}) = _NoteEdited;
 
-  factory NoteEdited.fromJson(Map<String, Object?> json) =>
-      _$NoteEditedFromJson(json);
+  factory fromJson(Map<String, Object?> json) => _$NoteEditedFromJson(json);
 }

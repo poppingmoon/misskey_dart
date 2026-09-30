@@ -9,7 +9,7 @@ part 'users_users_request.g.dart';
 
 @freezed
 abstract class UsersUsersRequest with _$UsersUsersRequest {
-  const factory UsersUsersRequest({
+  const factory({
     int? limit,
     int? offset,
     @UsersSortConverter() UsersSortType? sort,
@@ -18,6 +18,6 @@ abstract class UsersUsersRequest with _$UsersUsersRequest {
     String? hostname,
   }) = _UsersUsersRequest;
 
-  factory UsersUsersRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$UsersUsersRequestFromJson(json);
 }

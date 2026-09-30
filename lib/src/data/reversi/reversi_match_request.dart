@@ -5,7 +5,7 @@ part 'reversi_match_request.g.dart';
 
 @freezed
 abstract class ReversiMatchRequest with _$ReversiMatchRequest {
-  const factory ReversiMatchRequest({
+  const factory({
     /// 対戦相手。null なら誰でもよいマッチング。
     String? userId,
 
@@ -17,6 +17,6 @@ abstract class ReversiMatchRequest with _$ReversiMatchRequest {
     bool? multiple,
   }) = _ReversiMatchRequest;
 
-  factory ReversiMatchRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$ReversiMatchRequestFromJson(json);
 }

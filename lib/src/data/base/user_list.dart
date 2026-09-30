@@ -6,7 +6,7 @@ part 'user_list.g.dart';
 
 @freezed
 abstract class UsersList with _$UsersList {
-  const factory UsersList({
+  const factory({
     required String id,
     @DateTimeConverter() required DateTime createdAt,
     String? name,
@@ -15,6 +15,5 @@ abstract class UsersList with _$UsersList {
     bool? isPublic,
   }) = _UsersList;
 
-  factory UsersList.fromJson(Map<String, dynamic> json) =>
-      _$UsersListFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$UsersListFromJson(json);
 }

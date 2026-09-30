@@ -6,12 +6,11 @@ part 'follow_request.g.dart';
 
 @freezed
 abstract class FollowRequest with _$FollowRequest {
-  const factory FollowRequest({
+  const factory({
     required String id,
     required UserLite followee,
     required UserLite follower,
   }) = _FollowRequest;
 
-  factory FollowRequest.fromJson(Map<String, dynamic> json) =>
-      _$FollowRequestFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$FollowRequestFromJson(json);
 }

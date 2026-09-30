@@ -8,7 +8,7 @@ part 'drive_file.g.dart';
 
 @freezed
 abstract class DriveFile with _$DriveFile {
-  const factory DriveFile({
+  const factory({
     required String id,
     @DateTimeConverter() required DateTime createdAt,
     required String name,
@@ -27,19 +27,18 @@ abstract class DriveFile with _$DriveFile {
     UserLite? user,
   }) = _DriveFile;
 
-  factory DriveFile.fromJson(Map<String, dynamic> json) =>
-      _$DriveFileFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$DriveFileFromJson(json);
 }
 
 @freezed
 abstract class DriveFileProperties with _$DriveFileProperties {
-  const factory DriveFileProperties({
+  const factory({
     int? width,
     int? height,
     int? orientation,
     @AvgColorConverter() String? avgColor,
   }) = _DriveFileProperties;
 
-  factory DriveFileProperties.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$DriveFilePropertiesFromJson(json);
 }

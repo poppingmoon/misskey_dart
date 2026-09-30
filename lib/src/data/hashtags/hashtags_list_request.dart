@@ -7,7 +7,7 @@ part 'hashtags_list_request.g.dart';
 
 @freezed
 abstract class HashtagsListRequest with _$HashtagsListRequest {
-  const factory HashtagsListRequest({
+  const factory({
     int? limit,
     bool? attachedToUserOnly,
     bool? attachedToLocalUserOnly,
@@ -15,6 +15,6 @@ abstract class HashtagsListRequest with _$HashtagsListRequest {
     @HashtagsListSortConverter() required HashtagsListSortType sort,
   }) = _HashtagsListRequest;
 
-  factory HashtagsListRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$HashtagsListRequestFromJson(json);
 }

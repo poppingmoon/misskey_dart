@@ -7,7 +7,7 @@ part 'chat_message.g.dart';
 
 @freezed
 abstract class ChatMessage with _$ChatMessage {
-  const factory ChatMessage({
+  const factory({
     required String id,
     @DateTimeConverter() required DateTime createdAt,
     String? text,
@@ -23,17 +23,14 @@ abstract class ChatMessage with _$ChatMessage {
     @Default([]) List<ChatMessageReaction> reactions,
   }) = _ChatMessage;
 
-  factory ChatMessage.fromJson(Map<String, dynamic> json) =>
-      _$ChatMessageFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$ChatMessageFromJson(json);
 }
 
 @freezed
 abstract class ChatMessageReaction with _$ChatMessageReaction {
-  const factory ChatMessageReaction({
-    required String reaction,
-    UserLite? user,
-  }) = _ChatMessageReaction;
+  const factory({required String reaction, UserLite? user}) =
+      _ChatMessageReaction;
 
-  factory ChatMessageReaction.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$ChatMessageReactionFromJson(json);
 }

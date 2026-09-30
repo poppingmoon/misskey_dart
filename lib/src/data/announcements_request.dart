@@ -6,7 +6,7 @@ part 'announcements_request.g.dart';
 
 @freezed
 abstract class AnnouncementsRequest with _$AnnouncementsRequest {
-  const factory AnnouncementsRequest({
+  const factory({
     int? limit,
 
     /// removed in Misskey 2023.9
@@ -20,6 +20,6 @@ abstract class AnnouncementsRequest with _$AnnouncementsRequest {
     int? offset,
   }) = _AnnouncementsRequest;
 
-  factory AnnouncementsRequest.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$AnnouncementsRequestFromJson(json);
 }

@@ -5,7 +5,7 @@ import 'package:misskey_dart/src/services/api_service.dart';
 class MisskeyAp {
   final ApiService _apiService;
 
-  MisskeyAp({required this._apiService});
+  new({required this._apiService});
 
   /// 照会操作を行います。
   Future<ApShowResponse> show(ApShowRequest request) async {

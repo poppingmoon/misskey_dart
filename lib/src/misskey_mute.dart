@@ -4,7 +4,7 @@ import 'package:misskey_dart/src/services/api_service.dart';
 class MisskeyMute {
   final ApiService _apiService;
 
-  MisskeyMute({required this._apiService});
+  new({required this._apiService});
 
   /// ユーザーをミュートします。
   Future<void> create(MuteCreateRequest request) async {

@@ -5,11 +5,9 @@ part 'clips_add_note_request.g.dart';
 
 @freezed
 abstract class ClipsAddNoteRequest with _$ClipsAddNoteRequest {
-  const factory ClipsAddNoteRequest({
-    required String clipId,
-    required String noteId,
-  }) = _ClipsAddNoteRequest;
+  const factory({required String clipId, required String noteId}) =
+      _ClipsAddNoteRequest;
 
-  factory ClipsAddNoteRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$ClipsAddNoteRequestFromJson(json);
 }

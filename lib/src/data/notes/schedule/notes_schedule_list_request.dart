@@ -5,12 +5,9 @@ part 'notes_schedule_list_request.g.dart';
 
 @freezed
 abstract class NotesScheduleListRequest with _$NotesScheduleListRequest {
-  const factory NotesScheduleListRequest({
-    String? sinceId,
-    String? untilId,
-    int? limit,
-  }) = _NotesScheduleListRequest;
+  const factory({String? sinceId, String? untilId, int? limit}) =
+      _NotesScheduleListRequest;
 
-  factory NotesScheduleListRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$NotesScheduleListRequestFromJson(json);
 }

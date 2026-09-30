@@ -8,7 +8,7 @@ part 'chat_joinning.g.dart';
 
 @freezed
 abstract class ChatJoining with _$ChatJoining {
-  const factory ChatJoining({
+  const factory({
     required String id,
     @DateTimeConverter() required DateTime createdAt,
     required String userId,
@@ -17,6 +17,5 @@ abstract class ChatJoining with _$ChatJoining {
     ChatRoom? room,
   }) = _ChatJoining;
 
-  factory ChatJoining.fromJson(Map<String, dynamic> json) =>
-      _$ChatJoiningFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$ChatJoiningFromJson(json);
 }

@@ -7,7 +7,7 @@ part 'drive_files_attached_notes_request.g.dart';
 @freezed
 abstract class DriveFilesAttachedNotesRequest
     with _$DriveFilesAttachedNotesRequest {
-  const factory DriveFilesAttachedNotesRequest({
+  const factory({
     required String fileId,
     // 以下 Misskey 2023.10.0 で追加
     int? limit,
@@ -17,6 +17,6 @@ abstract class DriveFilesAttachedNotesRequest
     @EpocTimeDateTimeConverter() DateTime? untilDate,
   }) = _DriveFilesAttachedNotesRequest;
 
-  factory DriveFilesAttachedNotesRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$DriveFilesAttachedNotesRequestFromJson(json);
 }

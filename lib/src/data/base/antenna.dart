@@ -7,7 +7,7 @@ part 'antenna.g.dart';
 
 @freezed
 abstract class Antenna with _$Antenna {
-  const factory Antenna({
+  const factory({
     required String id,
     @DateTimeConverter() required DateTime createdAt,
     required String name,
@@ -29,6 +29,5 @@ abstract class Antenna with _$Antenna {
     bool? excludeNotesInSensitiveChannel,
   }) = _Antenna;
 
-  factory Antenna.fromJson(Map<String, dynamic> json) =>
-      _$AntennaFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$AntennaFromJson(json);
 }

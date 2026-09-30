@@ -7,7 +7,7 @@ part 'i_notifications_request.g.dart';
 
 @freezed
 abstract class INotificationsRequest with _$INotificationsRequest {
-  const factory INotificationsRequest({
+  const factory({
     @Assert('limit > 0') int? limit,
     String? sinceId,
     String? untilId,
@@ -20,6 +20,6 @@ abstract class INotificationsRequest with _$INotificationsRequest {
     List<NotificationType>? excludeTypes,
   }) = _INotificationRequest;
 
-  factory INotificationsRequest.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$INotificationsRequestFromJson(json);
 }

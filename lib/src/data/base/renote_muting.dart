@@ -7,13 +7,12 @@ part 'renote_muting.g.dart';
 
 @freezed
 abstract class RenoteMuting with _$RenoteMuting {
-  const factory RenoteMuting({
+  const factory({
     required String id,
     @DateTimeConverter() required DateTime createdAt,
     required String muteeId,
     required UserDetailedNotMe mutee,
   }) = _RenoteMuting;
 
-  factory RenoteMuting.fromJson(Map<String, dynamic> json) =>
-      _$RenoteMutingFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$RenoteMutingFromJson(json);
 }

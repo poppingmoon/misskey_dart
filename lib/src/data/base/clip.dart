@@ -7,7 +7,7 @@ part 'clip.g.dart';
 
 @freezed
 abstract class Clip with _$Clip {
-  const factory Clip({
+  const factory({
     required String id,
     @DateTimeConverter() required DateTime createdAt,
     @NullableDateTimeConverter() DateTime? lastClippedAt,
@@ -21,5 +21,5 @@ abstract class Clip with _$Clip {
     int? notesCount,
   }) = _Clip;
 
-  factory Clip.fromJson(Map<String, Object?> json) => _$ClipFromJson(json);
+  factory fromJson(Map<String, Object?> json) => _$ClipFromJson(json);
 }

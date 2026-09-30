@@ -5,7 +5,7 @@ part 'drive_files_create_request.g.dart';
 
 @freezed
 abstract class DriveFilesCreateRequest with _$DriveFilesCreateRequest {
-  const factory DriveFilesCreateRequest({
+  const factory({
     String? folderId,
     String? name,
     String? comment,
@@ -13,6 +13,6 @@ abstract class DriveFilesCreateRequest with _$DriveFilesCreateRequest {
     bool? force,
   }) = _DriveFilesCreateRequest;
 
-  factory DriveFilesCreateRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$DriveFilesCreateRequestFromJson(json);
 }

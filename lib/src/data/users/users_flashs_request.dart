@@ -6,7 +6,7 @@ part 'users_flashs_request.g.dart';
 
 @freezed
 abstract class UsersFlashsRequest with _$UsersFlashsRequest {
-  const factory UsersFlashsRequest({
+  const factory({
     required String userId,
     int? limit,
     String? sinceId,
@@ -15,6 +15,6 @@ abstract class UsersFlashsRequest with _$UsersFlashsRequest {
     @EpocTimeDateTimeConverter() DateTime? untilDate,
   }) = _UsersFlashsRequest;
 
-  factory UsersFlashsRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$UsersFlashsRequestFromJson(json);
 }

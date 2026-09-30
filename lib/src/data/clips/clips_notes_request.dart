@@ -6,7 +6,7 @@ part 'clips_notes_request.g.dart';
 
 @freezed
 abstract class ClipsNotesRequest with _$ClipsNotesRequest {
-  const factory ClipsNotesRequest({
+  const factory({
     @Assert('limit > 0') int? limit,
     required String clipId,
     String? sinceId,
@@ -15,6 +15,6 @@ abstract class ClipsNotesRequest with _$ClipsNotesRequest {
     @EpocTimeDateTimeConverter() DateTime? untilDate,
   }) = _ClipsNotesRequest;
 
-  factory ClipsNotesRequest.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$ClipsNotesRequestFromJson(json);
 }

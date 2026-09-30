@@ -8,80 +8,72 @@ part 'streaming_response.g.dart';
 @Freezed(unionKey: "type", fallbackUnion: "fallback")
 sealed class StreamingResponse with _$StreamingResponse {
   @FreezedUnionValue("channel")
-  const factory StreamingResponse.channel({required ChannelStreamEvent body}) =
+  const factory channel({required ChannelStreamEvent body}) =
       StreamingChannelResponse;
 
   @FreezedUnionValue("noteUpdated")
-  const factory StreamingResponse.noteUpdated({
-    required NoteUpdateStreamEvent body,
-  }) = StreamingChannelNoteUpdatedResponse;
+  const factory noteUpdated({required NoteUpdateStreamEvent body}) =
+      StreamingChannelNoteUpdatedResponse;
 
   @FreezedUnionValue("emojiAdded")
-  const factory StreamingResponse.emojiAdded({
-    required EmojiAddedStreamEvent body,
-  }) = StreamingChannelEmojiAddedResponse;
+  const factory emojiAdded({required EmojiAddedStreamEvent body}) =
+      StreamingChannelEmojiAddedResponse;
 
   @FreezedUnionValue("emojiUpdated")
-  const factory StreamingResponse.emojiUpdated({
-    required EmojiUpdatedStreamEvent body,
-  }) = StreamingChannelEmojiUpdatedResponse;
+  const factory emojiUpdated({required EmojiUpdatedStreamEvent body}) =
+      StreamingChannelEmojiUpdatedResponse;
 
   @FreezedUnionValue("emojiDeleted")
-  const factory StreamingResponse.emojiDeleted({
-    required EmojiDeletedStreamEvent body,
-  }) = StreamingChannelEmojiDeletedResponse;
+  const factory emojiDeleted({required EmojiDeletedStreamEvent body}) =
+      StreamingChannelEmojiDeletedResponse;
 
   @FreezedUnionValue("announcementCreated")
-  const factory StreamingResponse.announcementCreated({
+  const factory announcementCreated({
     required AnnouncementCreatedStreamEvent body,
   }) = StreamingChannelAnnouncementCreatedResponse;
 
-  const factory StreamingResponse.fallback({required Object body}) =
+  const factory fallback({required Object body}) =
       StreamingChannelUnknownResponse;
 
-  factory StreamingResponse.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$StreamingResponseFromJson(json);
 }
 
 @freezed
 abstract class EmojiAddedStreamEvent with _$EmojiAddedStreamEvent {
-  const factory EmojiAddedStreamEvent({required Emoji emoji}) =
-      _EmojiAddedStreamEvent;
-  factory EmojiAddedStreamEvent.fromJson(Map<String, Object?> json) =>
+  const factory({required Emoji emoji}) = _EmojiAddedStreamEvent;
+  factory fromJson(Map<String, Object?> json) =>
       _$EmojiAddedStreamEventFromJson(json);
 }
 
 @freezed
 abstract class EmojiUpdatedStreamEvent with _$EmojiUpdatedStreamEvent {
-  const factory EmojiUpdatedStreamEvent({required List<Emoji> emojis}) =
-      _EmojiUpdatedStreamEvent;
-  factory EmojiUpdatedStreamEvent.fromJson(Map<String, Object?> json) =>
+  const factory({required List<Emoji> emojis}) = _EmojiUpdatedStreamEvent;
+  factory fromJson(Map<String, Object?> json) =>
       _$EmojiUpdatedStreamEventFromJson(json);
 }
 
 @freezed
 abstract class EmojiDeletedStreamEvent with _$EmojiDeletedStreamEvent {
-  const factory EmojiDeletedStreamEvent({required List<Emoji> emojis}) =
-      _EmojiDeletedStreamEvent;
-  factory EmojiDeletedStreamEvent.fromJson(Map<String, Object?> json) =>
+  const factory({required List<Emoji> emojis}) = _EmojiDeletedStreamEvent;
+  factory fromJson(Map<String, Object?> json) =>
       _$EmojiDeletedStreamEventFromJson(json);
 }
 
 @freezed
 abstract class AnnouncementCreatedStreamEvent
     with _$AnnouncementCreatedStreamEvent {
-  const factory AnnouncementCreatedStreamEvent({
-    required AnnouncementsResponse announcement,
-  }) = _AnnouncementCreatedStreamEvent;
+  const factory({required AnnouncementsResponse announcement}) =
+      _AnnouncementCreatedStreamEvent;
 
-  factory AnnouncementCreatedStreamEvent.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$AnnouncementCreatedStreamEventFromJson(json);
 }
 
 @Freezed(unionKey: "type", fallbackUnion: "fallback")
 sealed class ChannelStreamEvent with _$ChannelStreamEvent {
   @FreezedUnionValue("note")
-  const factory ChannelStreamEvent.note({
+  const factory note({
     required String id,
     // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
@@ -91,306 +83,257 @@ sealed class ChannelStreamEvent with _$ChannelStreamEvent {
 
   // stats
   @FreezedUnionValue("statsLog")
-  const factory ChannelStreamEvent.statsLog({
+  const factory statsLog({
     required String id,
     @StreamingStatsConverter() required List<StreamingStats> body,
   }) = StatsLogChannelEvent;
 
   @FreezedUnionValue("stats")
-  const factory ChannelStreamEvent.stats({
+  const factory stats({
     required String id,
     @StreamingStatsConverter() required StreamingStats body,
   }) = StatsChannelEvent;
 
   // list
   @FreezedUnionValue("userAdded")
-  const factory ChannelStreamEvent.userAdded({
-    required String id,
-    required UserLite body,
-  }) = UserAddedChannelEvent;
+  const factory userAdded({required String id, required UserLite body}) =
+      UserAddedChannelEvent;
 
   @FreezedUnionValue("userRemoved")
-  const factory ChannelStreamEvent.userRemoved({
-    required String id,
-    required UserLite body,
-  }) = UserRemovedChannelEvent;
+  const factory userRemoved({required String id, required UserLite body}) =
+      UserRemovedChannelEvent;
 
   // main
   @FreezedUnionValue("notification")
-  const factory ChannelStreamEvent.notification({
+  const factory notification({
     required String id,
     required INotificationsResponse body,
   }) = NotificationChannelEvent;
 
   @FreezedUnionValue("mention")
-  const factory ChannelStreamEvent.mention({
-    required String id,
-    required Note body,
-  }) = MentionChannelEvent;
+  const factory mention({required String id, required Note body}) =
+      MentionChannelEvent;
 
   @FreezedUnionValue("reply")
-  const factory ChannelStreamEvent.reply({
-    required String id,
-    required Note body,
-  }) = ReplyChannelEvent;
+  const factory reply({required String id, required Note body}) =
+      ReplyChannelEvent;
 
   @FreezedUnionValue("renote")
-  const factory ChannelStreamEvent.renote({
-    required String id,
-    required Note body,
-  }) = RenoteChannelEvent;
+  const factory renote({required String id, required Note body}) =
+      RenoteChannelEvent;
 
   @FreezedUnionValue("follow")
-  const factory ChannelStreamEvent.follow({
-    required String id,
-    required UserDetailedNotMe body,
-  }) = FollowChannelEvent;
+  const factory follow({required String id, required UserDetailedNotMe body}) =
+      FollowChannelEvent;
 
   @FreezedUnionValue("followed")
-  const factory ChannelStreamEvent.followed({
-    required String id,
-    required UserLite body,
-  }) = FollowedChannelEvent;
+  const factory followed({required String id, required UserLite body}) =
+      FollowedChannelEvent;
 
   @FreezedUnionValue("unfollow")
-  const factory ChannelStreamEvent.unfollow({
+  const factory unfollow({
     required String id,
     required UserDetailedNotMe body,
   }) = UnfollowChannelEvent;
 
   @FreezedUnionValue("meUpdated")
-  const factory ChannelStreamEvent.meUpdated({
-    required String id,
-    required MeDetailed body,
-  }) = MeUpdatedChannelEvent;
+  const factory meUpdated({required String id, required MeDetailed body}) =
+      MeUpdatedChannelEvent;
 
   @FreezedUnionValue("pageEvent")
-  const factory ChannelStreamEvent.pageEvent({
-    required String id,
-    required PageEvent body,
-  }) = PageEventChannelEvent;
+  const factory pageEvent({required String id, required PageEvent body}) =
+      PageEventChannelEvent;
 
   @FreezedUnionValue("urlUploadFinished")
-  const factory ChannelStreamEvent.urlUploadFinished({
+  const factory urlUploadFinished({
     required String id,
     required UrlUploadFinishedEvent body,
   }) = UrlUploadFinishedChannelEvent;
 
   @FreezedUnionValue("readAllNotifications")
-  const factory ChannelStreamEvent.readAllNotifications({required String id}) =
+  const factory readAllNotifications({required String id}) =
       ReadAllNotificationsChannelEvent;
 
   @FreezedUnionValue("unreadNotification")
-  const factory ChannelStreamEvent.unreadNotification({
+  const factory unreadNotification({
     required String id,
     required INotificationsResponse body,
   }) = UnreadNotificationChannelEvent;
 
   /// Removed in Misskey 2025.3.2-beta.10.
   @FreezedUnionValue("unreadMention")
-  const factory ChannelStreamEvent.unreadMention({
-    required String id,
-    required String body,
-  }) = UnreadMentionChannelEvent;
+  const factory unreadMention({required String id, required String body}) =
+      UnreadMentionChannelEvent;
 
   /// Removed in Misskey 2025.3.2-beta.10.
   @FreezedUnionValue("readAllUnreadMentions")
-  const factory ChannelStreamEvent.readAllUnreadMentions({required String id}) =
+  const factory readAllUnreadMentions({required String id}) =
       ReadAllUnreadMentionsChannelEvent;
 
   @FreezedUnionValue("notificationFlushed")
-  const factory ChannelStreamEvent.notificationFlushed({required String id}) =
+  const factory notificationFlushed({required String id}) =
       NotificationFlushedChannelEvent;
 
   /// Removed in Misskey 2025.3.2-beta.10.
   @FreezedUnionValue("unreadSpecifiedNote")
-  const factory ChannelStreamEvent.unreadSpecifiedNote({
+  const factory unreadSpecifiedNote({
     required String id,
     required String body,
   }) = UnreadSpecifiedNoteChannelEvent;
 
   /// Removed in Misskey 2025.3.2-beta.10.
   @FreezedUnionValue("readAllUnreadSpecifiedNotes")
-  const factory ChannelStreamEvent.readAllUnreadSpecifiedNotes({
-    required String id,
-  }) = ReadAllUnreadSpecifiedNotesChannelEvent;
+  const factory readAllUnreadSpecifiedNotes({required String id}) =
+      ReadAllUnreadSpecifiedNotesChannelEvent;
 
   /// Removed in Misskey 2025.3.2-beta.10.
   @FreezedUnionValue("readAllAntennas")
-  const factory ChannelStreamEvent.readAllAntennas({required String id}) =
+  const factory readAllAntennas({required String id}) =
       ReadAllAntennasChannelEvent;
 
   @FreezedUnionValue("unreadAntenna")
-  const factory ChannelStreamEvent.unreadAntenna({
-    required String id,
-    required Antenna body,
-  }) = UnreadAntennaChannelEvent;
+  const factory unreadAntenna({required String id, required Antenna body}) =
+      UnreadAntennaChannelEvent;
 
   @FreezedUnionValue("newChatMessage")
-  const factory ChannelStreamEvent.newChatMessage({
+  const factory newChatMessage({
     required String id,
     required ChatMessage body,
   }) = NewChatMessageEvent;
 
   @FreezedUnionValue("readAllAnnouncements")
-  const factory ChannelStreamEvent.readAllAnnouncements({required String id}) =
+  const factory readAllAnnouncements({required String id}) =
       ReadAllAnnouncementsChannelEvent;
 
   @FreezedUnionValue("myTokenRegenerated")
-  const factory ChannelStreamEvent.myTokenRegenerated({required String id}) =
+  const factory myTokenRegenerated({required String id}) =
       MyTokenRegeneratedChannelEvent;
 
   @FreezedUnionValue("signin")
-  const factory ChannelStreamEvent.signin({
-    required String id,
-    required Signin body,
-  }) = SigninChannelEvent;
+  const factory signin({required String id, required Signin body}) =
+      SigninChannelEvent;
 
   @FreezedUnionValue("registryUpdated")
-  const factory ChannelStreamEvent.registryUpdated({
+  const factory registryUpdated({
     required String id,
     required RegistryUpdated body,
   }) = RegistryUpdatedChannelEvent;
 
   @FreezedUnionValue("driveFileCreated")
-  const factory ChannelStreamEvent.driveFileCreated({
+  const factory driveFileCreated({
     required String id,
     required DriveFile body,
   }) = DriveFileCreatedChannelEvent;
 
   @FreezedUnionValue("readAntenna")
-  const factory ChannelStreamEvent.readAntenna({
-    required String id,
-    required Antenna body,
-  }) = ReadAntennaChannelEvent;
+  const factory readAntenna({required String id, required Antenna body}) =
+      ReadAntennaChannelEvent;
 
   @FreezedUnionValue("receiveFollowRequest")
-  const factory ChannelStreamEvent.receiveFollowRequest({
+  const factory receiveFollowRequest({
     required String id,
     required UserLite body,
   }) = ReceiveFollowRequestChannelEvent;
 
   @FreezedUnionValue("announcementCreated")
-  const factory ChannelStreamEvent.announcementCreated({
+  const factory announcementCreated({
     required String id,
     required AnnouncementCreatedStreamEvent body,
   }) = AnnouncementCreatedChannelEvent;
 
   // chat
   @FreezedUnionValue("message")
-  const factory ChannelStreamEvent.chatMessage({
-    required String id,
-    required ChatMessage body,
-  }) = ChatMessageChannelEvent;
+  const factory chatMessage({required String id, required ChatMessage body}) =
+      ChatMessageChannelEvent;
 
   @FreezedUnionValue("deleted")
-  const factory ChannelStreamEvent.chatDeleted({
-    required String id,
-    required String body,
-  }) = ChatDeletedChannelEvent;
+  const factory chatDeleted({required String id, required String body}) =
+      ChatDeletedChannelEvent;
 
   @FreezedUnionValue("react")
-  const factory ChannelStreamEvent.chatReact({
-    required String id,
-    required ChatReact body,
-  }) = ChatReactChannelEvent;
+  const factory chatReact({required String id, required ChatReact body}) =
+      ChatReactChannelEvent;
 
   @FreezedUnionValue("unreact")
-  const factory ChannelStreamEvent.chatUnreact({
-    required String id,
-    required ChatReact body,
-  }) = ChatUnreactChannelEvent;
+  const factory chatUnreact({required String id, required ChatReact body}) =
+      ChatUnreactChannelEvent;
 
   // reversi / reversiGame
   @FreezedUnionValue("invited")
-  const factory ChannelStreamEvent.reversiInvited({
+  const factory reversiInvited({
     required String id,
     required ReversiInvited body,
   }) = ReversiInvitedChannelEvent;
 
   @FreezedUnionValue("matched")
-  const factory ChannelStreamEvent.reversiMatched({
+  const factory reversiMatched({
     required String id,
     required ReversiGameEvent body,
   }) = ReversiMatchedChannelEvent;
 
   @FreezedUnionValue("started")
-  const factory ChannelStreamEvent.reversiStarted({
+  const factory reversiStarted({
     required String id,
     required ReversiGameEvent body,
   }) = ReversiStartedChannelEvent;
 
   @FreezedUnionValue("ended")
-  const factory ChannelStreamEvent.reversiEnded({
-    required String id,
-    required ReversiEnded body,
-  }) = ReversiEndedChannelEvent;
+  const factory reversiEnded({required String id, required ReversiEnded body}) =
+      ReversiEndedChannelEvent;
 
   @FreezedUnionValue("log")
-  const factory ChannelStreamEvent.reversiLog({
+  const factory reversiLog({
     required String id,
     required ReversiLogEvent body,
   }) = ReversiLogChannelEvent;
 
   @FreezedUnionValue("changeReadyStates")
-  const factory ChannelStreamEvent.reversiChangeReadyStates({
+  const factory reversiChangeReadyStates({
     required String id,
     required ReversiReadyStates body,
   }) = ReversiChangeReadyStatesChannelEvent;
 
   @FreezedUnionValue("updateSettings")
-  const factory ChannelStreamEvent.reversiUpdateSettings({
+  const factory reversiUpdateSettings({
     required String id,
     required ReversiUpdateSettings body,
   }) = ReversiUpdateSettingsChannelEvent;
 
   @FreezedUnionValue("canceled")
-  const factory ChannelStreamEvent.reversiCanceled({
+  const factory reversiCanceled({
     required String id,
     required ReversiCanceled body,
   }) = ReversiCanceledChannelEvent;
 
-  const factory ChannelStreamEvent.fallback({
-    required String id,
-    required Object? body,
-  }) = FallbackChannelEvent;
+  const factory fallback({required String id, required Object? body}) =
+      FallbackChannelEvent;
 
-  factory ChannelStreamEvent.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$ChannelStreamEventFromJson(json);
 }
 
 @Freezed(unionKey: "type")
 sealed class NoteUpdateStreamEvent with _$NoteUpdateStreamEvent {
   @FreezedUnionValue("reacted")
-  const factory NoteUpdateStreamEvent.reacted({
-    required String id,
-    required TimelineReacted body,
-  }) = ReactedChannelEvent;
+  const factory reacted({required String id, required TimelineReacted body}) =
+      ReactedChannelEvent;
 
   @FreezedUnionValue("unreacted")
-  const factory NoteUpdateStreamEvent.unreacted({
-    required String id,
-    required TimelineReacted body,
-  }) = UnreactedChannelEvent;
+  const factory unreacted({required String id, required TimelineReacted body}) =
+      UnreactedChannelEvent;
 
   @FreezedUnionValue("deleted")
-  const factory NoteUpdateStreamEvent.deleted({
-    required String id,
-    required TimelineDeleted body,
-  }) = DeletedChannelEvent;
+  const factory deleted({required String id, required TimelineDeleted body}) =
+      DeletedChannelEvent;
 
   @FreezedUnionValue("pollVoted")
-  const factory NoteUpdateStreamEvent.pollVoted({
-    required String id,
-    required TimelineVoted body,
-  }) = PollVotedChannelEvent;
+  const factory pollVoted({required String id, required TimelineVoted body}) =
+      PollVotedChannelEvent;
 
   @FreezedUnionValue("updated")
-  const factory NoteUpdateStreamEvent.updated({
-    required String id,
-    required NoteEdited body,
-  }) = UpdatedChannelEvent;
+  const factory updated({required String id, required NoteEdited body}) =
+      UpdatedChannelEvent;
 
-  factory NoteUpdateStreamEvent.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$NoteUpdateStreamEventFromJson(json);
 }

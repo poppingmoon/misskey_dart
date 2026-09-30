@@ -5,11 +5,9 @@ part 'chat_messages_react_request.g.dart';
 
 @freezed
 abstract class ChatMessagesReactRequest with _$ChatMessagesReactRequest {
-  const factory ChatMessagesReactRequest({
-    required String messageId,
-    required String reaction,
-  }) = _ChatMessagesReactRequest;
+  const factory({required String messageId, required String reaction}) =
+      _ChatMessagesReactRequest;
 
-  factory ChatMessagesReactRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$ChatMessagesReactRequestFromJson(json);
 }

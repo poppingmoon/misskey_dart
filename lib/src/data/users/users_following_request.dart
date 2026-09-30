@@ -6,7 +6,7 @@ part 'users_following_request.g.dart';
 
 @freezed
 abstract class UsersFollowingRequest with _$UsersFollowingRequest {
-  const factory UsersFollowingRequest({
+  const factory({
     required String userId,
     String? sinceId,
     String? untilId,
@@ -16,6 +16,6 @@ abstract class UsersFollowingRequest with _$UsersFollowingRequest {
     @DateTimeConverter() DateTime? birthday,
   }) = _UsersFollowingRequest;
 
-  factory UsersFollowingRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$UsersFollowingRequestFromJson(json);
 }

@@ -6,7 +6,7 @@ part 'i_page_likes_request.g.dart';
 
 @freezed
 abstract class IPageLikesRequest with _$IPageLikesRequest {
-  const factory IPageLikesRequest({
+  const factory({
     int? limit,
     String? sinceId,
     String? untilId,
@@ -14,6 +14,6 @@ abstract class IPageLikesRequest with _$IPageLikesRequest {
     @EpocTimeDateTimeConverter() DateTime? untilDate,
   }) = _IPageLikesRequest;
 
-  factory IPageLikesRequest.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$IPageLikesRequestFromJson(json);
 }

@@ -6,9 +6,8 @@ part 'notes_polls_recommendation_request.g.dart';
 @freezed
 abstract class NotesPollsRecommendationRequest
     with _$NotesPollsRecommendationRequest {
-  const factory NotesPollsRecommendationRequest({int? limit, int? offset}) =
-      _NotesPollsRecommendationRequest;
+  const factory({int? limit, int? offset}) = _NotesPollsRecommendationRequest;
 
-  factory NotesPollsRecommendationRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$NotesPollsRecommendationRequestFromJson(json);
 }

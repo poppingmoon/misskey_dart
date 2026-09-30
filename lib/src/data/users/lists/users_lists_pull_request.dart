@@ -5,11 +5,9 @@ part 'users_lists_pull_request.g.dart';
 
 @freezed
 abstract class UsersListsPullRequest with _$UsersListsPullRequest {
-  const factory UsersListsPullRequest({
-    required String listId,
-    required String userId,
-  }) = _UsersListsPullRequest;
+  const factory({required String listId, required String userId}) =
+      _UsersListsPullRequest;
 
-  factory UsersListsPullRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$UsersListsPullRequestFromJson(json);
 }

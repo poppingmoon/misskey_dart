@@ -6,7 +6,7 @@ part 'notes_drafts_list_request.g.dart';
 
 @freezed
 abstract class NotesDraftsListRequest with _$NotesDraftsListRequest {
-  const factory NotesDraftsListRequest({
+  const factory({
     int? limit,
     String? sinceId,
     String? untilId,
@@ -15,6 +15,6 @@ abstract class NotesDraftsListRequest with _$NotesDraftsListRequest {
     bool? scheduled,
   }) = _NotesDraftsListRequest;
 
-  factory NotesDraftsListRequest.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$NotesDraftsListRequestFromJson(json);
 }

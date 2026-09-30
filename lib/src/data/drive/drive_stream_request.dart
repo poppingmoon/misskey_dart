@@ -6,7 +6,7 @@ part 'drive_stream_request.g.dart';
 
 @freezed
 abstract class DriveStreamRequest with _$DriveStreamRequest {
-  const factory DriveStreamRequest({
+  const factory({
     int? limit,
     String? sinceId,
     String? untilId,
@@ -15,6 +15,6 @@ abstract class DriveStreamRequest with _$DriveStreamRequest {
     String? type,
   }) = _DriveStreamRequest;
 
-  factory DriveStreamRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$DriveStreamRequestFromJson(json);
 }

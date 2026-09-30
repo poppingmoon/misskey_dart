@@ -7,7 +7,7 @@ part 'notes_mentions_request.g.dart';
 
 @freezed
 abstract class NotesMentionsRequest with _$NotesMentionsRequest {
-  const factory NotesMentionsRequest({
+  const factory({
     bool? following,
     int? limit,
     String? sinceId,
@@ -17,6 +17,6 @@ abstract class NotesMentionsRequest with _$NotesMentionsRequest {
     NoteVisibility? visibility,
   }) = _NotesMentionsRequest;
 
-  factory NotesMentionsRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$NotesMentionsRequestFromJson(json);
 }

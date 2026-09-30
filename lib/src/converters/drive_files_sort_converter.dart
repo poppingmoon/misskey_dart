@@ -3,7 +3,7 @@ import 'package:misskey_dart/misskey_dart.dart';
 
 class DriveFilesSortConverter
     extends JsonConverter<DriveFilesSortType, String> {
-  const DriveFilesSortConverter();
+  const new();
 
   @override
   DriveFilesSortType fromJson(String json) =>

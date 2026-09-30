@@ -5,7 +5,7 @@ class JoinMisskey {
   final dio = Dio();
   final String host;
 
-  JoinMisskey({required this.host});
+  new({required this.host});
 
   Future<JoinMisskeyInstances> instances() async {
     final response = await dio.get<Map<String, dynamic>>(

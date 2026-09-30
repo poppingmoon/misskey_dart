@@ -6,7 +6,7 @@ part 'drive_folder.g.dart';
 
 @freezed
 abstract class DriveFolder with _$DriveFolder {
-  const factory DriveFolder({
+  const factory({
     required String id,
     @DateTimeConverter() required DateTime createdAt,
     required String name,
@@ -16,6 +16,5 @@ abstract class DriveFolder with _$DriveFolder {
     int? filesCount,
   }) = _DriveFolder;
 
-  factory DriveFolder.fromJson(Map<String, dynamic> json) =>
-      _$DriveFolderFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$DriveFolderFromJson(json);
 }

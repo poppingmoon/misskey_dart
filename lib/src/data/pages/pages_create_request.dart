@@ -7,7 +7,7 @@ part 'pages_create_request.g.dart';
 
 @freezed
 abstract class PagesCreateRequest with _$PagesCreateRequest {
-  const factory PagesCreateRequest({
+  const factory({
     required String title,
     required String name,
     String? summary,
@@ -21,6 +21,6 @@ abstract class PagesCreateRequest with _$PagesCreateRequest {
     PageVisibility? visibility,
   }) = _PagesCreateRequest;
 
-  factory PagesCreateRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$PagesCreateRequestFromJson(json);
 }

@@ -5,13 +5,13 @@ part 'i_registry_set_request.g.dart';
 
 @freezed
 abstract class IRegistrySetRequest with _$IRegistrySetRequest {
-  const factory IRegistrySetRequest({
+  const factory({
     required String key,
     required dynamic value,
     required List<String> scope,
     String? domain,
   }) = _IRegistrySetRequest;
 
-  factory IRegistrySetRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$IRegistrySetRequestFromJson(json);
 }

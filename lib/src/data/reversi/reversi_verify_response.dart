@@ -6,7 +6,7 @@ part 'reversi_verify_response.g.dart';
 
 @freezed
 abstract class ReversiVerifyResponse with _$ReversiVerifyResponse {
-  const factory ReversiVerifyResponse({
+  const factory({
     /// クライアントの盤面がサーバーとずれているかどうか。
     required bool desynced,
 
@@ -14,6 +14,6 @@ abstract class ReversiVerifyResponse with _$ReversiVerifyResponse {
     ReversiShowGameResponse? game,
   }) = _ReversiVerifyResponse;
 
-  factory ReversiVerifyResponse.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$ReversiVerifyResponseFromJson(json);
 }

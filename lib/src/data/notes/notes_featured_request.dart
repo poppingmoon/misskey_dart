@@ -5,7 +5,7 @@ part 'notes_featured_request.g.dart';
 
 @freezed
 abstract class NotesFeaturedRequest with _$NotesFeaturedRequest {
-  const factory NotesFeaturedRequest({
+  const factory({
     int? limit,
 
     /// removed at 2023.10.0
@@ -14,6 +14,6 @@ abstract class NotesFeaturedRequest with _$NotesFeaturedRequest {
     String? channelId,
   }) = _NotesFeaturedRequest;
 
-  factory NotesFeaturedRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$NotesFeaturedRequestFromJson(json);
 }

@@ -6,7 +6,7 @@ part 'notes_global_timeline_request.g.dart';
 
 @freezed
 abstract class NotesGlobalTimelineRequest with _$NotesGlobalTimelineRequest {
-  const factory NotesGlobalTimelineRequest({
+  const factory({
     int? limit,
     String? sinceId,
     String? untilId,
@@ -19,6 +19,6 @@ abstract class NotesGlobalTimelineRequest with _$NotesGlobalTimelineRequest {
     bool? withReplies,
   }) = _NotesGlobalTimelineRequest;
 
-  factory NotesGlobalTimelineRequest.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$NotesGlobalTimelineRequestFromJson(json);
 }

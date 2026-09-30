@@ -7,33 +7,30 @@ part 'reversi_stream_events.g.dart';
 /// `reversi` チャンネルの `invited`。誰かに対局へ誘われた。
 @freezed
 abstract class ReversiInvited with _$ReversiInvited {
-  const factory ReversiInvited({required User user}) = _ReversiInvited;
+  const factory({required User user}) = _ReversiInvited;
 
-  factory ReversiInvited.fromJson(Map<String, dynamic> json) =>
-      _$ReversiInvitedFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$ReversiInvitedFromJson(json);
 }
 
 /// `reversi` チャンネルの `matched`、`reversiGame` チャンネルの `started`。
 @freezed
 abstract class ReversiGameEvent with _$ReversiGameEvent {
-  const factory ReversiGameEvent({required ReversiShowGameResponse game}) =
-      _ReversiGameEvent;
+  const factory({required ReversiShowGameResponse game}) = _ReversiGameEvent;
 
-  factory ReversiGameEvent.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$ReversiGameEventFromJson(json);
 }
 
 /// `reversiGame` チャンネルの `ended`。
 @freezed
 abstract class ReversiEnded with _$ReversiEnded {
-  const factory ReversiEnded({
+  const factory({
     /// 引き分けなら null。
     String? winnerId,
     required ReversiShowGameResponse game,
   }) = _ReversiEnded;
 
-  factory ReversiEnded.fromJson(Map<String, dynamic> json) =>
-      _$ReversiEndedFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$ReversiEndedFromJson(json);
 }
 
 /// `reversiGame` チャンネルの `log`。石が 1 つ打たれた。
@@ -42,7 +39,7 @@ abstract class ReversiEnded with _$ReversiEnded {
 /// 適用して追従する。
 @freezed
 abstract class ReversiLogEvent with _$ReversiLogEvent {
-  const factory ReversiLogEvent({
+  const factory({
     /// エポックミリ秒。
     required int time,
 
@@ -62,38 +59,38 @@ abstract class ReversiLogEvent with _$ReversiLogEvent {
     String? id,
   }) = _ReversiLogEvent;
 
-  factory ReversiLogEvent.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$ReversiLogEventFromJson(json);
 }
 
 /// `reversiGame` チャンネルの `changeReadyStates`。
 @freezed
 abstract class ReversiReadyStates with _$ReversiReadyStates {
-  const factory ReversiReadyStates({required bool user1, required bool user2}) =
+  const factory({required bool user1, required bool user2}) =
       _ReversiReadyStates;
 
-  factory ReversiReadyStates.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$ReversiReadyStatesFromJson(json);
 }
 
 /// `reversiGame` チャンネルの `updateSettings`。対局前の設定が変わった。
 @freezed
 abstract class ReversiUpdateSettings with _$ReversiUpdateSettings {
-  const factory ReversiUpdateSettings({
+  const factory({
     required String userId,
     required String key,
     required Object? value,
   }) = _ReversiUpdateSettings;
 
-  factory ReversiUpdateSettings.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$ReversiUpdateSettingsFromJson(json);
 }
 
 /// `reversiGame` チャンネルの `canceled`。対局開始前に取り消された。
 @freezed
 abstract class ReversiCanceled with _$ReversiCanceled {
-  const factory ReversiCanceled({required String userId}) = _ReversiCanceled;
+  const factory({required String userId}) = _ReversiCanceled;
 
-  factory ReversiCanceled.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$ReversiCanceledFromJson(json);
 }

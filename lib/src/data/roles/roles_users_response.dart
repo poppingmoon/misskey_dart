@@ -6,11 +6,9 @@ part 'roles_users_response.g.dart';
 
 @freezed
 abstract class RolesUsersResponse with _$RolesUsersResponse {
-  const factory RolesUsersResponse({
-    required String id,
-    required UserDetailed user,
-  }) = _RolesUsersResponse;
+  const factory({required String id, required UserDetailed user}) =
+      _RolesUsersResponse;
 
-  factory RolesUsersResponse.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$RolesUsersResponseFromJson(json);
 }

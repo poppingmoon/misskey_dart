@@ -6,7 +6,7 @@ part 'antennas_update_request.g.dart';
 
 @freezed
 abstract class AntennasUpdateRequest with _$AntennasUpdateRequest {
-  const factory AntennasUpdateRequest({
+  const factory({
     required String antennaId,
     required String name,
     required AntennaSource src,
@@ -25,6 +25,6 @@ abstract class AntennasUpdateRequest with _$AntennasUpdateRequest {
     bool? excludeNotesInSensitiveChannel,
   }) = _AntennasUpdateRequest;
 
-  factory AntennasUpdateRequest.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$AntennasUpdateRequestFromJson(json);
 }

@@ -7,18 +7,18 @@ part 'streaming_request.g.dart';
 
 @freezed
 abstract class StreamingRequest with _$StreamingRequest {
-  const factory StreamingRequest({
+  const factory({
     @StreamingRequestTypeJsonConverter() required StreamingRequestType type,
     required StreamingRequestBody body,
   }) = _StreamingRequest;
 
-  factory StreamingRequest.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$StreamingRequestFromJson(json);
 }
 
 @freezed
 abstract class StreamingRequestBody with _$StreamingRequestBody {
-  const factory StreamingRequestBody({
+  const factory({
     @ChannelJsonConverter() Channel? channel,
     required String id,
     Map<String, dynamic>? params,
@@ -32,6 +32,6 @@ abstract class StreamingRequestBody with _$StreamingRequestBody {
     Object? body,
   }) = _StreamingRequestBody;
 
-  factory StreamingRequestBody.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$StreamingRequestBodyFromJson(json);
 }

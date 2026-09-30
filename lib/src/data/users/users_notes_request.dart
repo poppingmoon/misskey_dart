@@ -6,7 +6,7 @@ part 'users_notes_request.g.dart';
 
 @freezed
 abstract class UsersNotesRequest with _$UsersNotesRequest {
-  const factory UsersNotesRequest({
+  const factory({
     required String userId,
 
     /// removed at 2023.9.2
@@ -30,6 +30,6 @@ abstract class UsersNotesRequest with _$UsersNotesRequest {
     bool? excludeNsfw,
   }) = _UsersNotesRequest;
 
-  factory UsersNotesRequest.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$UsersNotesRequestFromJson(json);
 }

@@ -7,7 +7,7 @@ part 'muting.g.dart';
 
 @freezed
 abstract class Muting with _$Muting {
-  const factory Muting({
+  const factory({
     required String id,
     @DateTimeConverter() required DateTime createdAt,
     @NullableDateTimeConverter() DateTime? expiresAt,
@@ -15,5 +15,5 @@ abstract class Muting with _$Muting {
     required UserDetailedNotMe mutee,
   }) = _Muting;
 
-  factory Muting.fromJson(Map<String, dynamic> json) => _$MutingFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$MutingFromJson(json);
 }

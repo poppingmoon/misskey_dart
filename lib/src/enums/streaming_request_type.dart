@@ -14,7 +14,7 @@ enum StreamingRequestType {
 
 class StreamingRequestTypeJsonConverter
     extends JsonConverter<StreamingRequestType?, String> {
-  const StreamingRequestTypeJsonConverter();
+  const new();
 
   @override
   StreamingRequestType? fromJson(String json) =>

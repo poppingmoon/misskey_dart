@@ -6,7 +6,7 @@ part 'flash_my_request.g.dart';
 
 @freezed
 abstract class FlashMyRequest with _$FlashMyRequest {
-  const factory FlashMyRequest({
+  const factory({
     int? limit,
     String? sinceId,
     String? untilId,
@@ -14,6 +14,5 @@ abstract class FlashMyRequest with _$FlashMyRequest {
     @EpocTimeDateTimeConverter() DateTime? untilDate,
   }) = _FlashMyRequest;
 
-  factory FlashMyRequest.fromJson(Map<String, Object?> json) =>
-      _$FlashMyRequestFromJson(json);
+  factory fromJson(Map<String, Object?> json) => _$FlashMyRequestFromJson(json);
 }

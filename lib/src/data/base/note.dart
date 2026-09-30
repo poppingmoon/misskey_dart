@@ -10,7 +10,7 @@ part 'note.g.dart';
 
 @freezed
 abstract class Note with _$Note {
-  const factory Note({
+  const factory({
     required String id,
     @DateTimeConverter() required DateTime createdAt,
     @NullableDateTimeConverter() DateTime? updatedAt,
@@ -50,12 +50,12 @@ abstract class Note with _$Note {
     bool? isRenoted, // Iceshrimp
   }) = _Note;
 
-  factory Note.fromJson(Map<String, Object?> json) => _$NoteFromJson(json);
+  factory fromJson(Map<String, Object?> json) => _$NoteFromJson(json);
 }
 
 @freezed
 abstract class NoteChannelInfo with _$NoteChannelInfo {
-  const factory NoteChannelInfo({
+  const factory({
     required String id,
     required String name,
     @NullableColorConverter() int? color,
@@ -64,31 +64,29 @@ abstract class NoteChannelInfo with _$NoteChannelInfo {
     String? userId,
   }) = _NoteChannelInfo;
 
-  factory NoteChannelInfo.fromJson(Map<String, Object?> json) =>
+  factory fromJson(Map<String, Object?> json) =>
       _$NoteChannelInfoFromJson(json);
 }
 
 @freezed
 abstract class NotePoll with _$NotePoll {
-  const factory NotePoll({
+  const factory({
     required bool multiple,
     @DateTimeConverter() DateTime? expiresAt,
     required List<NotePollChoice> choices,
   }) = _NotePoll;
 
-  factory NotePoll.fromJson(Map<String, dynamic> json) =>
-      _$NotePollFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$NotePollFromJson(json);
 }
 
 @freezed
 abstract class NotePollChoice with _$NotePollChoice {
-  const factory NotePollChoice({
+  const factory({
     required String text,
     required int votes,
     // Changed to non-nullable in Misskey 11.0.0
     @Default(false) bool isVoted,
   }) = _NotePollChoice;
 
-  factory NotePollChoice.fromJson(Map<String, dynamic> json) =>
-      _$NotePollChoiceFromJson(json);
+  factory fromJson(Map<String, dynamic> json) => _$NotePollChoiceFromJson(json);
 }
