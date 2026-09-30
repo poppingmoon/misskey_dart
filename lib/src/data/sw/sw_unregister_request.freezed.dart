@@ -16,7 +16,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$SwUnregisterRequest {
 
- String get endpoint;
+ String get endpoint; String? get auth; String? get publickey;
 /// Create a copy of SwUnregisterRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -30,20 +30,20 @@ $SwUnregisterRequestCopyWith<SwUnregisterRequest> get copyWith => _$SwUnregister
 @override
 bool operator ==(Object other) {
   final _this = this as SwUnregisterRequest;
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is SwUnregisterRequest&&(identical(other.endpoint, _this.endpoint) || other.endpoint == _this.endpoint));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is SwUnregisterRequest&&(identical(other.endpoint, _this.endpoint) || other.endpoint == _this.endpoint)&&(identical(other.auth, _this.auth) || other.auth == _this.auth)&&(identical(other.publickey, _this.publickey) || other.publickey == _this.publickey));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
 int get hashCode {
   final _this = this as SwUnregisterRequest;
-  return Object.hash(runtimeType,_this.endpoint);
+  return Object.hash(runtimeType,_this.endpoint,_this.auth,_this.publickey);
 }
 
 @override
 String toString() {
   final _this = this as SwUnregisterRequest;
-  return 'SwUnregisterRequest(endpoint: ${_this.endpoint})';
+  return 'SwUnregisterRequest(endpoint: ${_this.endpoint}, auth: ${_this.auth}, publickey: ${_this.publickey})';
 }
 
 
@@ -54,7 +54,7 @@ abstract mixin class $SwUnregisterRequestCopyWith<$Res>  {
   factory $SwUnregisterRequestCopyWith(SwUnregisterRequest value, $Res Function(SwUnregisterRequest) _then) = _$SwUnregisterRequestCopyWithImpl;
 @useResult
 $Res call({
- String endpoint
+ String endpoint, String? auth, String? publickey
 });
 
 
@@ -71,10 +71,12 @@ class _$SwUnregisterRequestCopyWithImpl<$Res>
 
 /// Create a copy of SwUnregisterRequest
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? endpoint = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? endpoint = null,Object? auth = freezed,Object? publickey = freezed,}) {
   return _then(SwUnregisterRequest(
 endpoint: null == endpoint ? _self.endpoint : endpoint // ignore: cast_nullable_to_non_nullable
-as String,
+as String,auth: freezed == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
+as String?,publickey: freezed == publickey ? _self.publickey : publickey // ignore: cast_nullable_to_non_nullable
+as String?,
   ));
 }
 
@@ -159,10 +161,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String endpoint)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String endpoint,  String? auth,  String? publickey)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _SwUnregisterRequest() when $default != null:
-return $default(_that.endpoint);case _:
+return $default(_that.endpoint,_that.auth,_that.publickey);case _:
   return orElse();
 
 }
@@ -180,10 +182,10 @@ return $default(_that.endpoint);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String endpoint)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String endpoint,  String? auth,  String? publickey)  $default,) {final _that = this;
 switch (_that) {
 case _SwUnregisterRequest():
-return $default(_that.endpoint);case _:
+return $default(_that.endpoint,_that.auth,_that.publickey);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -200,10 +202,10 @@ return $default(_that.endpoint);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String endpoint)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String endpoint,  String? auth,  String? publickey)?  $default,) {final _that = this;
 switch (_that) {
 case _SwUnregisterRequest() when $default != null:
-return $default(_that.endpoint);case _:
+return $default(_that.endpoint,_that.auth,_that.publickey);case _:
   return null;
 
 }
@@ -215,10 +217,12 @@ return $default(_that.endpoint);case _:
 @JsonSerializable()
 
 class _SwUnregisterRequest implements SwUnregisterRequest {
-  const _SwUnregisterRequest({required this.endpoint});
+  const _SwUnregisterRequest({required this.endpoint, this.auth, this.publickey});
   factory _SwUnregisterRequest.fromJson(Map<String, dynamic> json) => _$SwUnregisterRequestFromJson(json);
 
 @override final  String endpoint;
+@override final  String? auth;
+@override final  String? publickey;
 
 /// Create a copy of SwUnregisterRequest
 /// with the given fields replaced by the non-null parameter values.
@@ -233,18 +237,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _SwUnregisterRequest&&(identical(other.endpoint, endpoint) || other.endpoint == endpoint));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _SwUnregisterRequest&&(identical(other.endpoint, endpoint) || other.endpoint == endpoint)&&(identical(other.auth, auth) || other.auth == auth)&&(identical(other.publickey, publickey) || other.publickey == publickey));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
 int get hashCode {
-    return Object.hash(runtimeType,endpoint);
+    return Object.hash(runtimeType,endpoint,auth,publickey);
 }
 
 @override
 String toString() {
-    return 'SwUnregisterRequest(endpoint: $endpoint)';
+    return 'SwUnregisterRequest(endpoint: $endpoint, auth: $auth, publickey: $publickey)';
 }
 
 
@@ -255,7 +259,7 @@ abstract mixin class _$SwUnregisterRequestCopyWith<$Res> implements $SwUnregiste
   factory _$SwUnregisterRequestCopyWith(_SwUnregisterRequest value, $Res Function(_SwUnregisterRequest) _then) = __$SwUnregisterRequestCopyWithImpl;
 @override @useResult
 $Res call({
- String endpoint
+ String endpoint, String? auth, String? publickey
 });
 
 
@@ -272,10 +276,12 @@ class __$SwUnregisterRequestCopyWithImpl<$Res>
 
 /// Create a copy of SwUnregisterRequest
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? endpoint = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? endpoint = null,Object? auth = freezed,Object? publickey = freezed,}) {
   return _then(_SwUnregisterRequest(
 endpoint: null == endpoint ? _self.endpoint : endpoint // ignore: cast_nullable_to_non_nullable
-as String,
+as String,auth: freezed == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
+as String?,publickey: freezed == publickey ? _self.publickey : publickey // ignore: cast_nullable_to_non_nullable
+as String?,
   ));
 }
 

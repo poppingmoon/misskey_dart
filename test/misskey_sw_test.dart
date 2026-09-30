@@ -34,14 +34,14 @@ void main() async {
 
   test("unregister", () async {
     final endpoint = "https://example.com/${Uuid().v4()}";
+    final auth = Uuid().v4();
+    final publicKey = Uuid().v4();
     await userClient.sw.register(
-      SwRegisterRequest(
-        endpoint: endpoint,
-        auth: Uuid().v4(),
-        publickey: Uuid().v4(),
-      ),
+      SwRegisterRequest(endpoint: endpoint, auth: auth, publickey: publicKey),
     );
-    await userClient.sw.unregister(SwUnregisterRequest(endpoint: endpoint));
+    await userClient.sw.unregister(
+      SwUnregisterRequest(endpoint: endpoint, auth: auth, publickey: publicKey),
+    );
     final registration = await userClient.sw.showRegistration(
       SwShowRegistrationRequest(endpoint: endpoint),
     );
