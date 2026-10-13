@@ -3,15 +3,13 @@ import 'dart:convert';
 import 'package:misskey_dart/misskey_dart.dart';
 import 'package:misskey_dart/src/services/api_service.dart';
 
-class MisskeyI {
-  final ApiService _apiService;
+class MisskeyI({required final ApiService _apiService}) {
   final MisskeyIGallery gallery;
   final MisskeyIRegistry registry;
 
-  new({required ApiService apiService})
-    : _apiService = apiService,
-      gallery = MisskeyIGallery(apiService: apiService),
-      registry = MisskeyIRegistry(apiService: apiService);
+  this
+    : gallery = MisskeyIGallery(apiService: _apiService),
+      registry = MisskeyIRegistry(apiService: _apiService);
 
   /// 自分自身の情報を取得します。
   Future<MeDetailed> i() async {
@@ -102,11 +100,7 @@ class MisskeyI {
   }
 }
 
-class MisskeyIGallery {
-  final ApiService _apiService;
-
-  new({required this._apiService});
-
+class const MisskeyIGallery({required final ApiService _apiService}) {
   /// ギャラリーの投稿の一覧を取得します。
   Future<Iterable<IGalleryLikesResponse>> likes(
     IGalleryLikesRequest request,
@@ -128,11 +122,7 @@ class MisskeyIGallery {
   }
 }
 
-class MisskeyIRegistry {
-  final ApiService _apiService;
-
-  new({required this._apiService});
-
+class const MisskeyIRegistry({required final ApiService _apiService}) {
   /// 指定したスコープの全てのキーと値を取得します。
   Future<Map<String, dynamic>> getAll(IRegistryGetAllRequest request) async {
     final response = await _apiService.post<Map<String, dynamic>>(

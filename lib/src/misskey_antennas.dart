@@ -1,11 +1,7 @@
 import 'package:misskey_dart/misskey_dart.dart';
 import 'package:misskey_dart/src/services/api_service.dart';
 
-class MisskeyAntenna {
-  final ApiService _apiService;
-
-  new({required this._apiService});
-
+class const MisskeyAntenna({required final ApiService _apiService}) {
   /// アンテナを作成します。
   Future<Antenna> create(AntennasCreateRequest request) async {
     final response = await _apiService.post<Map<String, dynamic>>(

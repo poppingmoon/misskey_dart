@@ -1,3 +1,1 @@
-class UnsupportedDolphin {
-  const new();
-}
+class const UnsupportedDolphin();

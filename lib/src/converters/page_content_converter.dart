@@ -1,10 +1,8 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:misskey_dart/src/data/base/page.dart';
 
-class PageContentConverter
+class const PageContentConverter()
     extends JsonConverter<AbstractPageContent, Map<String, dynamic>> {
-  const new();
-
   @override
   AbstractPageContent fromJson(Map<String, dynamic> json) {
     final type = json["type"] as String?;

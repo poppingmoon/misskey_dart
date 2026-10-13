@@ -1,11 +1,7 @@
 import 'package:misskey_dart/misskey_dart.dart';
 import 'package:misskey_dart/src/services/api_service.dart';
 
-class MisskeyRoles {
-  final ApiService _apiService;
-
-  new({required this._apiService});
-
+class const MisskeyRoles({required final ApiService _apiService}) {
   /// タイムライン公開ロールの一覧を取得します。
   Future<Iterable<RolesListResponse>> list() async {
     final response = await _apiService.post<List>("roles/list", {});

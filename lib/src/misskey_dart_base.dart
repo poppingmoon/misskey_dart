@@ -6,10 +6,14 @@ import 'package:misskey_dart/src/misskey_chat.dart';
 import 'package:misskey_dart/src/services/api_service.dart';
 import 'package:misskey_dart/src/services/streaming_service_impl.dart';
 
-class Misskey {
-  final String? token;
-  final Duration? socketConnectionTimeout;
-
+class Misskey({
+  final String? token,
+  required Uri serverUrl,
+  Uri? apiUrl,
+  Uri? streamingUrl,
+  Dio? dio,
+  final Duration? socketConnectionTimeout,
+}) {
   late final ApiService apiService;
   late final WebSocketController streamingService;
 
@@ -36,14 +40,7 @@ class Misskey {
   late final MisskeySw sw;
   late final MisskeyChat chat;
 
-  new({
-    this.token,
-    required Uri serverUrl,
-    Uri? apiUrl,
-    Uri? streamingUrl,
-    Dio? dio,
-    this.socketConnectionTimeout,
-  }) {
+  this {
     apiService = ApiService(
       token: token,
       apiUrl: apiUrl ?? serverUrl.replace(pathSegments: ['api']),

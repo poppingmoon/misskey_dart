@@ -1,12 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:misskey_dart/src/data/join_misskey_instances.dart';
 
-class JoinMisskey {
+class JoinMisskey({required final String host}) {
   final dio = Dio();
-  final String host;
-
-  new({required this.host});
-
   Future<JoinMisskeyInstances> instances() async {
     final response = await dio.get<Map<String, dynamic>>(
       "https://$host/instances.json",

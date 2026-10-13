@@ -59,10 +59,7 @@ class Mutex {
 /// A lock acquired against a [Mutex].
 ///
 /// Can be released *once*.
-class Lock {
-  Mutex? _mutex;
-  new _(this._mutex);
-
+class Lock._(var Mutex? _mutex) {
   /// Release the lock on the mutex.
   ///
   /// The lock object no longer holds a lock on the mutex.

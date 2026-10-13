@@ -485,17 +485,9 @@ abstract class UserBadgeRole with _$UserBadgeRole {
 
 sealed class HideBefore;
 
-class HideBeforeDuration implements HideBefore {
-  const new(this.duration);
+class const HideBeforeDuration(final Duration duration) implements HideBefore;
 
-  final Duration duration;
-}
-
-class HideBeforeDateTime implements HideBefore {
-  const new(this.date);
-
-  final DateTime date;
-}
+class const HideBeforeDateTime(final DateTime date) implements HideBefore;
 
 @freezed
 abstract class UserRole with _$UserRole {

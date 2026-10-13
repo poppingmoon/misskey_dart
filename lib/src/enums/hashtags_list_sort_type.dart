@@ -1,4 +1,4 @@
-enum HashtagsListSortType {
+enum HashtagsListSortType(final String value) {
   mentionedUsersDescendant("+mentionedUsers"),
   mentionedUsersAscendant("-mentionedUsers"),
   mentionedLocalUsersDescendant("+mentionedLocalUsers"),
@@ -10,9 +10,5 @@ enum HashtagsListSortType {
   attachedLocalUsersDescendant("+attachedLocalUsers"),
   attachedLocalUsersAscendant("-attachedLocalUsers"),
   attachedRemoteUsersDescendant("+attachedRemoteUsers"),
-  attachedRemoteUsersAscendant("-attachedRemoteUsers");
-
-  final String value;
-
-  new(this.value);
+  attachedRemoteUsersAscendant("-attachedRemoteUsers"),
 }

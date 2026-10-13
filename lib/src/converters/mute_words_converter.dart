@@ -1,9 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:misskey_dart/misskey_dart.dart';
 
-class MuteWordsConverter extends JsonConverter<MuteWord, dynamic> {
-  const new();
-
+class const MuteWordsConverter() extends JsonConverter<MuteWord, dynamic> {
   @override
   MuteWord fromJson(dynamic json) {
     if (json is String) {

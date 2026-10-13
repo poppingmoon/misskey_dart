@@ -1,14 +1,10 @@
 import 'package:misskey_dart/misskey_dart.dart';
 import 'package:misskey_dart/src/services/api_service.dart';
 
-class MisskeyFollowing {
+class MisskeyFollowing({required final ApiService _apiService}) {
   final MisskeyFollowingRequests requests;
 
-  final ApiService _apiService;
-
-  new({required ApiService apiService})
-    : _apiService = apiService,
-      requests = MisskeyFollowingRequests(apiService: apiService);
+  this : requests = MisskeyFollowingRequests(apiService: _apiService);
 
   /// ユーザーをフォローします。
   Future<UserLite> create(FollowingCreateRequest request) async {
@@ -52,11 +48,7 @@ class MisskeyFollowing {
   }
 }
 
-class MisskeyFollowingRequests {
-  final ApiService _apiService;
-
-  new({required this._apiService});
-
+class const MisskeyFollowingRequests({required final ApiService _apiService}) {
   /// ユーザーからのフォローリクエストを承認します。
   Future<void> accept(FollowingRequestsAcceptRequest request) async {
     await _apiService.post("following/requests/accept", request.toJson());

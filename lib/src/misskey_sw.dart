@@ -1,11 +1,7 @@
 import 'package:misskey_dart/misskey_dart.dart';
 import 'package:misskey_dart/src/services/api_service.dart';
 
-class MisskeySw {
-  final ApiService _apiService;
-
-  new({required this._apiService});
-
+class const MisskeySw({required final ApiService _apiService}) {
   Future<SwRegisterResponse> register(SwRegisterRequest request) async {
     final response = await _apiService.post<Map<String, dynamic>>(
       "sw/register",

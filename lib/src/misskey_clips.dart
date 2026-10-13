@@ -1,11 +1,7 @@
 import 'package:misskey_dart/misskey_dart.dart';
 import 'package:misskey_dart/src/services/api_service.dart';
 
-class MisskeyClips {
-  final ApiService _apiService;
-
-  new({required this._apiService});
-
+class const MisskeyClips({required final ApiService _apiService}) {
   /// ログイン中のユーザーが作成したクリップの一覧を取得します。
   Future<Iterable<Clip>> list(ClipsListRequest request) async {
     final response = await _apiService.post<List>(

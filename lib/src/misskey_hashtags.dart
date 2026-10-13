@@ -1,11 +1,7 @@
 import 'package:misskey_dart/misskey_dart.dart';
 import 'package:misskey_dart/src/services/api_service.dart';
 
-class MisskeyHashtags {
-  final ApiService _apiService;
-
-  new({required this._apiService});
-
+class const MisskeyHashtags({required final ApiService _apiService}) {
   Future<Iterable<Hashtag>> list(HashtagsListRequest request) async {
     final response = await _apiService.post<List>(
       "hashtags/list",

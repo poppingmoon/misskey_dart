@@ -27,16 +27,13 @@ import 'package:misskey_dart/src/data/chat/chat_rooms_show_request.dart';
 import 'package:misskey_dart/src/data/chat/chat_rooms_update_request.dart';
 import 'package:misskey_dart/src/services/api_service.dart';
 
-class MisskeyChat {
-  final ApiService _apiService;
-
+class MisskeyChat({required final ApiService _apiService}) {
   final MisskeyChatMessages messages;
   final MisskeyChatRooms rooms;
 
-  new({required ApiService apiService})
-    : _apiService = apiService,
-      messages = MisskeyChatMessages(apiService: apiService),
-      rooms = MisskeyChatRooms(apiService: apiService);
+  this
+    : messages = MisskeyChatMessages(apiService: _apiService),
+      rooms = MisskeyChatRooms(apiService: _apiService);
 
   /// 直近のチャットメッセージを取得します
   Future<Iterable<ChatMessage>> history(ChatHistoryRequest request) async {
@@ -53,11 +50,7 @@ class MisskeyChat {
   }
 }
 
-class MisskeyChatMessages {
-  final ApiService _apiService;
-
-  new({required this._apiService});
-
+class const MisskeyChatMessages({required final ApiService _apiService}) {
   /// チャットメッセージを作成します（ルーム宛）
   Future<ChatMessage> createToRoom(
     ChatMessagesCreateToRoomRequest request,
@@ -138,14 +131,10 @@ class MisskeyChatMessages {
   }
 }
 
-class MisskeyChatRooms {
-  final ApiService _apiService;
-
+class MisskeyChatRooms({required final ApiService _apiService}) {
   final MisskeyChatRoomsInvitations invitations;
 
-  new({required ApiService apiService})
-    : _apiService = apiService,
-      invitations = MisskeyChatRoomsInvitations(apiService: apiService);
+  this : invitations = MisskeyChatRoomsInvitations(apiService: _apiService);
 
   /// チャットルームを作成します
   Future<ChatRoom> create(ChatRoomsCreateRequest request) async {
@@ -222,11 +211,9 @@ class MisskeyChatRooms {
   }
 }
 
-class MisskeyChatRoomsInvitations {
-  final ApiService _apiService;
-
-  new({required this._apiService});
-
+class const MisskeyChatRoomsInvitations({
+  required final ApiService _apiService,
+}) {
   /// チャットルームへの招待を作成します
   Future<ChatJoining> create(ChatRoomsInvitationsCreateRequest request) async {
     final response = await _apiService.post<Map<String, dynamic>>(

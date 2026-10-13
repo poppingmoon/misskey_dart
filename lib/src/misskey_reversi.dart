@@ -1,11 +1,7 @@
 import 'package:misskey_dart/misskey_dart.dart';
 import 'package:misskey_dart/src/services/api_service.dart';
 
-class MisskeyReversi {
-  final ApiService _apiService;
-
-  new({required this._apiService});
-
+class const MisskeyReversi({required final ApiService _apiService}) {
   /// サーバー内のリバーシのゲームを取得します。
   Future<Iterable<ReversiGamesResponse>> show(
     ReversiGamesRequest request,

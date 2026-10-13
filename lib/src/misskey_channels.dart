@@ -3,13 +3,10 @@ import 'dart:async';
 import 'package:misskey_dart/misskey_dart.dart';
 import 'package:misskey_dart/src/services/api_service.dart';
 
-class MisskeyChannels {
-  final ApiService _apiService;
+class MisskeyChannels({required final ApiService _apiService}) {
   final MisskeyChannelsMute mute;
 
-  new({required ApiService apiService})
-    : _apiService = apiService,
-      mute = MisskeyChannelsMute(apiService: apiService);
+  this : mute = MisskeyChannelsMute(apiService: _apiService);
 
   /// チャンネルのタイムラインを取得します。
   Future<Iterable<Note>> timeline(ChannelsTimelineRequest request) async {
@@ -112,11 +109,7 @@ class MisskeyChannels {
   }
 }
 
-class MisskeyChannelsMute {
-  final ApiService _apiService;
-
-  new({required this._apiService});
-
+class const MisskeyChannelsMute({required final ApiService _apiService}) {
   Future<void> create(ChannelsMuteCreateRequest request) async {
     await _apiService.post<void>("channels/mute/create", request.toJson());
   }

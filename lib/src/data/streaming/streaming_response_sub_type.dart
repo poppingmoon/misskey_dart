@@ -89,10 +89,8 @@ abstract class TimelineDeleted with _$TimelineDeleted {
       _$TimelineDeletedFromJson(json);
 }
 
-class StreamingStatsConverter
+class const StreamingStatsConverter()
     implements JsonConverter<StreamingStats, Map<String, dynamic>> {
-  const new();
-
   @override
   StreamingStats fromJson(Map<String, dynamic> json) {
     if (json.containsKey("inbox")) {

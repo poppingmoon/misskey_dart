@@ -1,11 +1,7 @@
 import 'package:misskey_dart/misskey_dart.dart';
 import 'package:misskey_dart/src/services/api_service.dart';
 
-class MisskeyPages {
-  final ApiService _apiService;
-
-  new({required this._apiService});
-
+class const MisskeyPages({required final ApiService _apiService}) {
   Future<Page> create(PagesCreateRequest request) async {
     final response = await _apiService.post<Map<String, dynamic>>(
       "pages/create",

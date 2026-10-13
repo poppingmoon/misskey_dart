@@ -1,15 +1,13 @@
 import 'package:misskey_dart/misskey_dart.dart';
 import 'package:misskey_dart/src/services/api_service.dart';
 
-class MisskeyUsers {
-  final ApiService _apiService;
+class MisskeyUsers({required final ApiService _apiService}) {
   final MisskeyUsersGallery gallery;
   final MisskeyUsersLists list;
 
-  new({required ApiService apiService})
-    : _apiService = apiService,
-      gallery = MisskeyUsersGallery(apiService: apiService),
-      list = MisskeyUsersLists(apiService: apiService);
+  this
+    : gallery = MisskeyUsersGallery(apiService: _apiService),
+      list = MisskeyUsersLists(apiService: _apiService);
 
   /// ユーザー情報をIDから取得します。
   Future<UserDetailed> show(UsersShowRequest request) async {
@@ -195,11 +193,7 @@ class MisskeyUsers {
   }
 }
 
-class MisskeyUsersGallery {
-  final ApiService _apiService;
-
-  new({required this._apiService});
-
+class const MisskeyUsersGallery({required final ApiService _apiService}) {
   /// ユーザーが作成したギャラリーの投稿を取得します。
   Future<Iterable<GalleryPost>> posts(UsersGalleryPostsRequest request) async {
     final response = await _apiService.post<List>(
@@ -210,11 +204,7 @@ class MisskeyUsersGallery {
   }
 }
 
-class MisskeyUsersLists {
-  final ApiService _apiService;
-
-  new({required this._apiService});
-
+class const MisskeyUsersLists({required final ApiService _apiService}) {
   /// リストを作成します。
   Future<UsersList> create(UsersListsCreateRequest request) async {
     final response = await _apiService.post<Map<String, dynamic>>(

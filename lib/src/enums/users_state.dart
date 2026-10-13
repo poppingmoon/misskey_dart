@@ -1,6 +1,4 @@
-enum UsersState {
+enum UsersState() {
   all,
-  alive;
-
-  new();
+  alive,
 }

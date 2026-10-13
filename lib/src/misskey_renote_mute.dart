@@ -1,11 +1,7 @@
 import 'package:misskey_dart/misskey_dart.dart';
 import 'package:misskey_dart/src/services/api_service.dart';
 
-class MisskeyRenoteMute {
-  final ApiService _apiService;
-
-  new({required this._apiService});
-
+class const MisskeyRenoteMute({required final ApiService _apiService}) {
   /// ユーザーのリノートをミュートします。
   Future<void> create(RenoteMuteCreateRequest request) async {
     await _apiService.post("renote-mute/create", request.toJson());

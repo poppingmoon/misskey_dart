@@ -1,8 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-class EmojisConverter extends JsonConverter<Map<String, String>, dynamic> {
-  const new();
-
+class const EmojisConverter()
+    extends JsonConverter<Map<String, String>, dynamic> {
   @override
   Map<String, String> fromJson(dynamic json) {
     if (json == null) {

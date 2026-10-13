@@ -4,12 +4,10 @@ import 'dart:typed_data';
 import 'package:misskey_dart/misskey_dart.dart';
 import 'package:misskey_dart/src/services/api_service.dart';
 
-class MisskeyDrive {
+class MisskeyDrive({required final ApiService _apiService}) {
   final MisskeyDriveFiles files;
   final MisskeyDriveFolders folders;
-  final ApiService _apiService;
-
-  new({required this._apiService})
+  this
     : files = MisskeyDriveFiles(apiService: _apiService),
       folders = MisskeyDriveFolders(apiService: _apiService);
 
@@ -29,10 +27,7 @@ class MisskeyDrive {
   }
 }
 
-class MisskeyDriveFiles {
-  final ApiService _apiService;
-  new({required this._apiService});
-
+class const MisskeyDriveFiles({required final ApiService _apiService}) {
   /// ドライブにファイルを作成します。
   Future<DriveFile> create(
     DriveFilesCreateRequest request,
@@ -143,10 +138,7 @@ class MisskeyDriveFiles {
   }
 }
 
-class MisskeyDriveFolders {
-  final ApiService _apiService;
-  new({required this._apiService});
-
+class const MisskeyDriveFolders({required final ApiService _apiService}) {
   /// ドライブのフォルダの中にあるフォルダを取得します。
   Future<Iterable<DriveFolder>> folders(DriveFoldersRequest request) async {
     final response = await _apiService.post<List>(

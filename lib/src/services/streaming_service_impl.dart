@@ -11,11 +11,12 @@ import 'package:web_socket_channel/io.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
 
 @internal
-class StreamingService implements StreamingController, WebSocketController {
-  final String? token;
-  final int maxRetryCounts;
-  final Duration? connectionTimeout;
-  final Uri streamingUrl;
+class StreamingService({
+  final String? token,
+  required final Uri streamingUrl,
+  final int maxRetryCounts = 1,
+  final Duration? connectionTimeout,
+}) implements StreamingController, WebSocketController {
   @override
   bool isClosed = false;
   bool isConnecting = false;
@@ -33,13 +34,6 @@ class StreamingService implements StreamingController, WebSocketController {
   int _activeStreams = 0;
 
   Timer? _timer;
-
-  new({
-    this.token,
-    required this.streamingUrl,
-    this.maxRetryCounts = 1,
-    this.connectionTimeout,
-  });
 
   WebSocketChannel _createWebSocketChannel() {
     final url = streamingUrl.replace(

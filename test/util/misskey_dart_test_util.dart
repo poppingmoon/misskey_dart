@@ -7,12 +7,10 @@ import 'package:uuid/uuid.dart';
 
 final env = DotEnv(includePlatformEnvironment: true)..load(["test/.env"]);
 
-class CreateUserResponse {
-  final Misskey client;
-  final User user;
-
-  new({required this.client, required this.user});
-}
+class CreateUserResponse({
+  required final Misskey client,
+  required final User user,
+});
 
 Misskey getTestClient(String? token) {
   final host = env["TEST_HOST"];

@@ -1,8 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-class DurationConverter extends JsonConverter<Duration, int> {
-  const new();
-
+class const DurationConverter() extends JsonConverter<Duration, int> {
   @override
   Duration fromJson(int json) => Duration(milliseconds: json);
 

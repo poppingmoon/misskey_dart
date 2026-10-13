@@ -1,11 +1,7 @@
 import 'package:misskey_dart/misskey_dart.dart';
 import 'package:misskey_dart/src/services/api_service.dart';
 
-class MisskeyMute {
-  final ApiService _apiService;
-
-  new({required this._apiService});
-
+class const MisskeyMute({required final ApiService _apiService}) {
   /// ユーザーをミュートします。
   Future<void> create(MuteCreateRequest request) async {
     await _apiService.post("mute/create", request.toJson());

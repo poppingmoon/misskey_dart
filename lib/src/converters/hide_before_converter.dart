@@ -1,9 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:misskey_dart/misskey_dart.dart';
 
-class HideBeforeConverter extends JsonConverter<HideBefore, int> {
-  const new();
-
+class const HideBeforeConverter() extends JsonConverter<HideBefore, int> {
   @override
   HideBefore fromJson(int json) {
     if (json <= 0) {

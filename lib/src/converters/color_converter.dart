@@ -1,8 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-class NullableColorConverter extends JsonConverter<int?, String?> {
-  const new();
-
+class const NullableColorConverter() extends JsonConverter<int?, String?> {
   @override
   int? fromJson(String? json) {
     if (json == null) {

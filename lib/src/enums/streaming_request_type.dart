@@ -12,10 +12,8 @@ enum StreamingRequestType {
   ch,
 }
 
-class StreamingRequestTypeJsonConverter
+class const StreamingRequestTypeJsonConverter()
     extends JsonConverter<StreamingRequestType?, String> {
-  const new();
-
   @override
   StreamingRequestType? fromJson(String json) =>
       StreamingRequestType.values.firstWhere((e) => e.name == json);

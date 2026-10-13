@@ -5,12 +5,9 @@ import 'dart:typed_data';
 import 'package:dio/dio.dart';
 import 'package:misskey_dart/misskey_dart.dart';
 
-class ApiService {
+class ApiService({final String? token, required final Uri apiUrl, Dio? dio}) {
   final Dio dio;
-  final String? token;
-  final Uri apiUrl;
-
-  new({this.token, required this.apiUrl, Dio? dio})
+  this
     : dio = (dio ?? Dio())
         ..options = BaseOptions(
           method: "post",

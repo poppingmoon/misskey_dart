@@ -4,9 +4,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'channel.freezed.dart';
 
 @freezed
-sealed class Channel with _$Channel {
-  const new _();
-
+sealed class const Channel._() with _$Channel {
   /// ホームタイムライン
   const factory homeTimeline() = _HomeTimeline;
 
@@ -92,9 +90,7 @@ sealed class Channel with _$Channel {
   }
 }
 
-class ChannelJsonConverter extends JsonConverter<Channel, String> {
-  const new();
-
+class const ChannelJsonConverter() extends JsonConverter<Channel, String> {
   @override
   Channel fromJson(String json) {
     final entry = Channel._map.entries.firstWhereOrNull((e) => e.key == json);

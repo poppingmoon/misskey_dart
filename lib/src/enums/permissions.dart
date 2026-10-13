@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-enum Permission {
+enum Permission(final String value) {
   readAccount("read:account"),
   writeAccount("write:account"),
   readBlocks("read:blocks"),
@@ -88,13 +88,10 @@ enum Permission {
   readFederation("read:federation"),
   writeReportAbuse("write:report-abuse"),
   writeChat("write:chat"),
-  readChat("read:chat");
-
-  final String value;
-  new(this.value);
+  readChat("read:chat"),
 }
 
-class PermissionJsonConverter extends JsonConverter<Permission, String> {
+class PermissionJsonConverter() extends JsonConverter<Permission, String> {
   @override
   Permission fromJson(String json) =>
       Permission.values.firstWhere((element) => element.value == json);

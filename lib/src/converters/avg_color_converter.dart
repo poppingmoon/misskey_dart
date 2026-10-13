@@ -1,8 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-class AvgColorConverter extends JsonConverter<String?, dynamic> {
-  const new();
-
+class const AvgColorConverter() extends JsonConverter<String?, dynamic> {
   @override
   String? fromJson(dynamic json) {
     if (json is String) {

@@ -2,11 +2,7 @@ import 'package:misskey_dart/src/data/ap/ap_show_request.dart';
 import 'package:misskey_dart/src/data/ap/ap_show_response.dart';
 import 'package:misskey_dart/src/services/api_service.dart';
 
-class MisskeyAp {
-  final ApiService _apiService;
-
-  new({required this._apiService});
-
+class const MisskeyAp({required final ApiService _apiService}) {
   /// 照会操作を行います。
   Future<ApShowResponse> show(ApShowRequest request) async {
     return ApShowResponse.fromJson(
