@@ -62,7 +62,7 @@ class Misskey {
     i = MisskeyI(apiService: apiService);
     clips = MisskeyClips(apiService: apiService);
     antennas = MisskeyAntenna(apiService: apiService);
-    drive = MisskeyDrive(apiService);
+    drive = MisskeyDrive(apiService: apiService);
     following = MisskeyFollowing(apiService: apiService);
     gallery = MisskeyGallery(apiService: apiService);
     blocking = MisskeyBlocking(apiService: apiService);
