@@ -2,12 +2,8 @@ import 'package:misskey_dart/misskey_dart.dart';
 import 'package:misskey_dart/src/services/api_service.dart';
 
 class MisskeyUsers({required final ApiService _apiService}) {
-  final MisskeyUsersGallery gallery;
-  final MisskeyUsersLists list;
-
-  this
-    : gallery = MisskeyUsersGallery(apiService: _apiService),
-      list = MisskeyUsersLists(apiService: _apiService);
+  final gallery = MisskeyUsersGallery(apiService: _apiService);
+  final list = MisskeyUsersLists(apiService: _apiService);
 
   /// ユーザー情報をIDから取得します。
   Future<UserDetailed> show(UsersShowRequest request) async {

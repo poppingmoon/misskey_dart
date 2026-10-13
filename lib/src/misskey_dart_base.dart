@@ -6,75 +6,54 @@ import 'package:misskey_dart/src/misskey_chat.dart';
 import 'package:misskey_dart/src/services/api_service.dart';
 import 'package:misskey_dart/src/services/streaming_service_impl.dart';
 
-class Misskey({
-  final String? token,
-  required Uri serverUrl,
-  Uri? apiUrl,
-  Uri? streamingUrl,
-  Dio? dio,
-  final Duration? socketConnectionTimeout,
+class Misskey._({
+  required final ApiService apiService,
+  required final WebSocketController streamingService,
 }) {
-  late final ApiService apiService;
-  late final WebSocketController streamingService;
+  final notes = MisskeyNotes(apiService: apiService);
+  final channels = MisskeyChannels(apiService: apiService);
+  final users = MisskeyUsers(apiService: apiService);
+  final i = MisskeyI(apiService: apiService);
+  final clips = MisskeyClips(apiService: apiService);
+  final antennas = MisskeyAntenna(apiService: apiService);
+  final drive = MisskeyDrive(apiService: apiService);
+  final following = MisskeyFollowing(apiService: apiService);
+  final gallery = MisskeyGallery(apiService: apiService);
+  final blocking = MisskeyBlocking(apiService: apiService);
+  final mute = MisskeyMute(apiService: apiService);
+  final renoteMute = MisskeyRenoteMute(apiService: apiService);
+  final federation = MisskeyFederation(apiService: apiService);
+  final roles = MisskeyRoles(apiService: apiService);
+  final hashtags = MisskeyHashtags(apiService: apiService);
+  final ap = MisskeyAp(apiService: apiService);
+  final pages = MisskeyPages(apiService: apiService);
+  final flash = MisskeyFlash(apiService: apiService);
+  final bubbleGame = MisskeyBubbleGame(apiService: apiService);
+  final reversi = MisskeyReversi(apiService: apiService);
+  final sw = MisskeySw(apiService: apiService);
+  final chat = MisskeyChat(apiService: apiService);
 
-  late final MisskeyNotes notes;
-  late final MisskeyChannels channels;
-  late final MisskeyUsers users;
-  late final MisskeyI i;
-  late final MisskeyClips clips;
-  late final MisskeyAntenna antennas;
-  late final MisskeyDrive drive;
-  late final MisskeyFollowing following;
-  late final MisskeyGallery gallery;
-  late final MisskeyBlocking blocking;
-  late final MisskeyMute mute;
-  late final MisskeyRenoteMute renoteMute;
-  late final MisskeyFederation federation;
-  late final MisskeyRoles roles;
-  late final MisskeyHashtags hashtags;
-  late final MisskeyAp ap;
-  late final MisskeyPages pages;
-  late final MisskeyFlash flash;
-  late final MisskeyReversi reversi;
-  late final MisskeyBubbleGame bubbleGame;
-  late final MisskeySw sw;
-  late final MisskeyChat chat;
-
-  this {
-    apiService = ApiService(
-      token: token,
-      apiUrl: apiUrl ?? serverUrl.replace(pathSegments: ['api']),
-      dio: dio,
+  factory({
+    String? token,
+    required Uri serverUrl,
+    Uri? apiUrl,
+    Uri? streamingUrl,
+    Dio? dio,
+    Duration? socketConnectionTimeout,
+  }) {
+    return Misskey._(
+      apiService: ApiService(
+        token: token,
+        apiUrl: apiUrl ?? serverUrl.replace(pathSegments: ['api']),
+        dio: dio,
+      ),
+      streamingService: StreamingService(
+        token: token,
+        streamingUrl:
+            streamingUrl ?? serverUrl.replace(pathSegments: ['streaming']),
+        connectionTimeout: socketConnectionTimeout,
+      ),
     );
-    streamingService = StreamingService(
-      token: token,
-      streamingUrl:
-          streamingUrl ?? serverUrl.replace(pathSegments: ['streaming']),
-      connectionTimeout: socketConnectionTimeout,
-    );
-
-    notes = MisskeyNotes(apiService: apiService);
-    channels = MisskeyChannels(apiService: apiService);
-    users = MisskeyUsers(apiService: apiService);
-    i = MisskeyI(apiService: apiService);
-    clips = MisskeyClips(apiService: apiService);
-    antennas = MisskeyAntenna(apiService: apiService);
-    drive = MisskeyDrive(apiService: apiService);
-    following = MisskeyFollowing(apiService: apiService);
-    gallery = MisskeyGallery(apiService: apiService);
-    blocking = MisskeyBlocking(apiService: apiService);
-    mute = MisskeyMute(apiService: apiService);
-    renoteMute = MisskeyRenoteMute(apiService: apiService);
-    federation = MisskeyFederation(apiService: apiService);
-    roles = MisskeyRoles(apiService: apiService);
-    hashtags = MisskeyHashtags(apiService: apiService);
-    ap = MisskeyAp(apiService: apiService);
-    pages = MisskeyPages(apiService: apiService);
-    flash = MisskeyFlash(apiService: apiService);
-    bubbleGame = MisskeyBubbleGame(apiService: apiService);
-    reversi = MisskeyReversi(apiService: apiService);
-    sw = MisskeySw(apiService: apiService);
-    chat = MisskeyChat(apiService: apiService);
   }
 
   /// サーバーからのお知らせを取得します。

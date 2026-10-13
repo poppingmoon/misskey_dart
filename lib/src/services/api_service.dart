@@ -6,17 +6,13 @@ import 'package:dio/dio.dart';
 import 'package:misskey_dart/misskey_dart.dart';
 
 class ApiService({final String? token, required final Uri apiUrl, Dio? dio}) {
-  final Dio dio;
-  this
-    : dio = (dio ?? Dio())
-        ..options = BaseOptions(
-          method: "post",
-          baseUrl: "$apiUrl${apiUrl.path.endsWith("/") ? "" : "/"}",
-          contentType: "application/json",
-        )
-        ..interceptors.add(
-          LogInterceptor(requestBody: true, responseBody: true),
-        );
+  final Dio dio = (dio ?? Dio())
+    ..options = BaseOptions(
+      method: "post",
+      baseUrl: "$apiUrl${apiUrl.path.endsWith("/") ? "" : "/"}",
+      contentType: "application/json",
+    )
+    ..interceptors.add(LogInterceptor(requestBody: true, responseBody: true));
 
   Future<T> post<T>(
     String path,

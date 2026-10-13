@@ -5,11 +5,8 @@ import 'package:misskey_dart/misskey_dart.dart';
 import 'package:misskey_dart/src/services/api_service.dart';
 
 class MisskeyDrive({required final ApiService _apiService}) {
-  final MisskeyDriveFiles files;
-  final MisskeyDriveFolders folders;
-  this
-    : files = MisskeyDriveFiles(apiService: _apiService),
-      folders = MisskeyDriveFolders(apiService: _apiService);
+  final files = MisskeyDriveFiles(apiService: _apiService);
+  final folders = MisskeyDriveFolders(apiService: _apiService);
 
   /// ドライブの容量と使用量を取得します。
   Future<DriveResponse> drive() async {

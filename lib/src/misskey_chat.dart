@@ -28,12 +28,8 @@ import 'package:misskey_dart/src/data/chat/chat_rooms_update_request.dart';
 import 'package:misskey_dart/src/services/api_service.dart';
 
 class MisskeyChat({required final ApiService _apiService}) {
-  final MisskeyChatMessages messages;
-  final MisskeyChatRooms rooms;
-
-  this
-    : messages = MisskeyChatMessages(apiService: _apiService),
-      rooms = MisskeyChatRooms(apiService: _apiService);
+  final messages = MisskeyChatMessages(apiService: _apiService);
+  final rooms = MisskeyChatRooms(apiService: _apiService);
 
   /// 直近のチャットメッセージを取得します
   Future<Iterable<ChatMessage>> history(ChatHistoryRequest request) async {
@@ -132,9 +128,9 @@ class const MisskeyChatMessages({required final ApiService _apiService}) {
 }
 
 class MisskeyChatRooms({required final ApiService _apiService}) {
-  final MisskeyChatRoomsInvitations invitations;
-
-  this : invitations = MisskeyChatRoomsInvitations(apiService: _apiService);
+  final MisskeyChatRoomsInvitations invitations = MisskeyChatRoomsInvitations(
+    apiService: _apiService,
+  );
 
   /// チャットルームを作成します
   Future<ChatRoom> create(ChatRoomsCreateRequest request) async {

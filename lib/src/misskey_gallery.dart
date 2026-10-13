@@ -2,9 +2,7 @@ import 'package:misskey_dart/misskey_dart.dart';
 import 'package:misskey_dart/src/services/api_service.dart';
 
 class MisskeyGallery({required final ApiService _apiService}) {
-  final MisskeyGalleryPosts posts;
-
-  this : posts = MisskeyGalleryPosts(apiService: _apiService);
+  final posts = MisskeyGalleryPosts(apiService: _apiService);
 
   /// 人気なギャラリーの投稿の一覧を取得します。
   Future<Iterable<GalleryPost>> featured(GalleryFeaturedRequest request) async {

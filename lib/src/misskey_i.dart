@@ -4,12 +4,8 @@ import 'package:misskey_dart/misskey_dart.dart';
 import 'package:misskey_dart/src/services/api_service.dart';
 
 class MisskeyI({required final ApiService _apiService}) {
-  final MisskeyIGallery gallery;
-  final MisskeyIRegistry registry;
-
-  this
-    : gallery = MisskeyIGallery(apiService: _apiService),
-      registry = MisskeyIRegistry(apiService: _apiService);
+  final gallery = MisskeyIGallery(apiService: _apiService);
+  final registry = MisskeyIRegistry(apiService: _apiService);
 
   /// 自分自身の情報を取得します。
   Future<MeDetailed> i() async {

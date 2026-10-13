@@ -4,9 +4,7 @@ import 'package:misskey_dart/misskey_dart.dart';
 import 'package:misskey_dart/src/services/api_service.dart';
 
 class MisskeyChannels({required final ApiService _apiService}) {
-  final MisskeyChannelsMute mute;
-
-  this : mute = MisskeyChannelsMute(apiService: _apiService);
+  final mute = MisskeyChannelsMute(apiService: _apiService);
 
   /// チャンネルのタイムラインを取得します。
   Future<Iterable<Note>> timeline(ChannelsTimelineRequest request) async {

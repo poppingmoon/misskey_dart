@@ -4,22 +4,13 @@ import 'package:misskey_dart/misskey_dart.dart';
 import 'package:misskey_dart/src/services/api_service.dart';
 
 class MisskeyNotes({required final ApiService _apiService}) {
-  final MisskeyNotesReactions reactions;
-  final MisskeyNotesDrafts drafts;
-  final MisskeyNotesFavorites favorites;
-  final MisskeyNotesSchedule schedule;
-  final MisskeyNotesScheduled scheduled;
-  final MisskeyNotesPolls polls;
-  final MisskeyNotesThreadMuting threadMuting;
-
-  this
-    : reactions = MisskeyNotesReactions(apiService: _apiService),
-      drafts = MisskeyNotesDrafts(apiService: _apiService),
-      favorites = MisskeyNotesFavorites(apiService: _apiService),
-      schedule = MisskeyNotesSchedule(apiService: _apiService),
-      scheduled = MisskeyNotesScheduled(apiService: _apiService),
-      polls = MisskeyNotesPolls(apiService: _apiService),
-      threadMuting = MisskeyNotesThreadMuting(apiService: _apiService);
+  final reactions = MisskeyNotesReactions(apiService: _apiService);
+  final drafts = MisskeyNotesDrafts(apiService: _apiService);
+  final favorites = MisskeyNotesFavorites(apiService: _apiService);
+  final schedule = MisskeyNotesSchedule(apiService: _apiService);
+  final scheduled = MisskeyNotesScheduled(apiService: _apiService);
+  final polls = MisskeyNotesPolls(apiService: _apiService);
+  final threadMuting = MisskeyNotesThreadMuting(apiService: _apiService);
 
   /// ノートを投稿します。
   Future<Note?> create(NotesCreateRequest request) async {
