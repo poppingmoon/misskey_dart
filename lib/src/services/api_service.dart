@@ -5,14 +5,23 @@ import 'dart:typed_data';
 import 'package:dio/dio.dart';
 import 'package:misskey_dart/misskey_dart.dart';
 
-class ApiService({final String? token, required final Uri apiUrl, Dio? dio}) {
-  final Dio dio = (dio ?? Dio())
-    ..options = BaseOptions(
-      method: "post",
-      baseUrl: "$apiUrl${apiUrl.path.endsWith("/") ? "" : "/"}",
-      contentType: "application/json",
-    )
-    ..interceptors.add(LogInterceptor(requestBody: true, responseBody: true));
+class ApiService({
+  final String? token,
+  required final Uri apiUrl,
+  required final Dio dio,
+}) {
+  this {
+    dio.options
+      ..method = "post"
+      ..baseUrl = "$apiUrl${apiUrl.path.endsWith("/") ? "" : "/"}"
+      ..contentType = "application/json";
+    assert(_addInterceptor(dio));
+  }
+
+  bool _addInterceptor(Dio dio) {
+    dio.interceptors.add(LogInterceptor(requestBody: true, responseBody: true));
+    return true;
+  }
 
   Future<T> post<T>(String path, Map<String, dynamic> request) async {
     if (token != null) {

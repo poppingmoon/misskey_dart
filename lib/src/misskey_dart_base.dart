@@ -45,7 +45,7 @@ class Misskey._({
       apiService: ApiService(
         token: token,
         apiUrl: apiUrl ?? serverUrl.replace(pathSegments: ['api']),
-        dio: dio,
+        dio: dio ?? Dio(),
       ),
       streamingService: StreamingService(
         token: token,
