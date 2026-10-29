@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$NotesFavoritesCreateRequest {
 
- String get noteId;
+
 /// Create a copy of NotesFavoritesCreateRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $NotesFavoritesCreateRequestCopyWith<NotesFavoritesCreateRequest> get copyWith => _$NotesFavoritesCreateRequestCopyWithImpl<NotesFavoritesCreateRequest>(this as NotesFavoritesCreateRequest, _$identity);
 
-  /// Serializes this NotesFavoritesCreateRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -95,11 +93,10 @@ extension NotesFavoritesCreateRequestPatterns on NotesFavoritesCreateRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _NotesFavoritesCreateRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _NotesFavoritesCreateRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -117,11 +114,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _NotesFavoritesCreateRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _NotesFavoritesCreateRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -138,11 +134,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _NotesFavoritesCreateRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _NotesFavoritesCreateRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -159,10 +154,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String noteId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _NotesFavoritesCreateRequest() when $default != null:
-return $default(_that.noteId);case _:
+case _:
   return orElse();
 
 }
@@ -180,10 +174,9 @@ return $default(_that.noteId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String noteId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _NotesFavoritesCreateRequest():
-return $default(_that.noteId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -200,85 +193,13 @@ return $default(_that.noteId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String noteId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _NotesFavoritesCreateRequest() when $default != null:
-return $default(_that.noteId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _NotesFavoritesCreateRequest implements NotesFavoritesCreateRequest {
-  const _NotesFavoritesCreateRequest({required this.noteId});
-  factory _NotesFavoritesCreateRequest.fromJson(Map<String, dynamic> json) => _$NotesFavoritesCreateRequestFromJson(json);
-
-@override final  String noteId;
-
-/// Create a copy of NotesFavoritesCreateRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$NotesFavoritesCreateRequestCopyWith<_NotesFavoritesCreateRequest> get copyWith => __$NotesFavoritesCreateRequestCopyWithImpl<_NotesFavoritesCreateRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$NotesFavoritesCreateRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesFavoritesCreateRequest&&(identical(other.noteId, noteId) || other.noteId == noteId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,noteId);
-}
-
-@override
-String toString() {
-    return 'NotesFavoritesCreateRequest(noteId: $noteId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$NotesFavoritesCreateRequestCopyWith<$Res> implements $NotesFavoritesCreateRequestCopyWith<$Res> {
-  factory _$NotesFavoritesCreateRequestCopyWith(_NotesFavoritesCreateRequest value, $Res Function(_NotesFavoritesCreateRequest) _then) = __$NotesFavoritesCreateRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String noteId
-});
-
-
-
-
-}
-/// @nodoc
-class __$NotesFavoritesCreateRequestCopyWithImpl<$Res>
-    implements _$NotesFavoritesCreateRequestCopyWith<$Res> {
-  __$NotesFavoritesCreateRequestCopyWithImpl(this._self, this._then);
-
-  final _NotesFavoritesCreateRequest _self;
-  final $Res Function(_NotesFavoritesCreateRequest) _then;
-
-/// Create a copy of NotesFavoritesCreateRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? noteId = null,}) {
-  return _then(_NotesFavoritesCreateRequest(
-noteId: null == noteId ? _self.noteId : noteId // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

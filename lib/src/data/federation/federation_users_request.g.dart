@@ -6,9 +6,9 @@ part of 'federation_users_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_FederationUsersRequest _$FederationUsersRequestFromJson(
+FederationUsersRequest _$FederationUsersRequestFromJson(
   Map<String, dynamic> json,
-) => _FederationUsersRequest(
+) => FederationUsersRequest(
   host: json['host'] as String,
   sinceId: json['sinceId'] as String?,
   untilId: json['untilId'] as String?,
@@ -24,7 +24,7 @@ _FederationUsersRequest _$FederationUsersRequestFromJson(
 );
 
 Map<String, dynamic> _$FederationUsersRequestToJson(
-  _FederationUsersRequest instance,
+  FederationUsersRequest instance,
 ) => <String, dynamic>{
   'host': instance.host,
   'sinceId': instance.sinceId,

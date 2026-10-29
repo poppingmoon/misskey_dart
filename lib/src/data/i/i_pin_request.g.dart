@@ -6,8 +6,8 @@ part of 'i_pin_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_IPinRequest _$IPinRequestFromJson(Map<String, dynamic> json) =>
-    _IPinRequest(noteId: json['noteId'] as String);
+IPinRequest _$IPinRequestFromJson(Map<String, dynamic> json) =>
+    IPinRequest(noteId: json['noteId'] as String);
 
-Map<String, dynamic> _$IPinRequestToJson(_IPinRequest instance) =>
+Map<String, dynamic> _$IPinRequestToJson(IPinRequest instance) =>
     <String, dynamic>{'noteId': instance.noteId};

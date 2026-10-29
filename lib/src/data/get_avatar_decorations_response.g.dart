@@ -6,9 +6,9 @@ part of 'get_avatar_decorations_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_GetAvatarDecorationsResponse _$GetAvatarDecorationsResponseFromJson(
+GetAvatarDecorationsResponse _$GetAvatarDecorationsResponseFromJson(
   Map<String, dynamic> json,
-) => _GetAvatarDecorationsResponse(
+) => GetAvatarDecorationsResponse(
   id: json['id'] as String,
   name: json['name'] as String,
   description: json['description'] as String,
@@ -22,7 +22,7 @@ _GetAvatarDecorationsResponse _$GetAvatarDecorationsResponseFromJson(
 );
 
 Map<String, dynamic> _$GetAvatarDecorationsResponseToJson(
-  _GetAvatarDecorationsResponse instance,
+  GetAvatarDecorationsResponse instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'name': instance.name,

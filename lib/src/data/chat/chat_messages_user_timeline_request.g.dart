@@ -6,9 +6,9 @@ part of 'chat_messages_user_timeline_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ChatMessagesUserTimelineRequest _$ChatMessagesUserTimelineRequestFromJson(
+ChatMessagesUserTimelineRequest _$ChatMessagesUserTimelineRequestFromJson(
   Map<String, dynamic> json,
-) => _ChatMessagesUserTimelineRequest(
+) => ChatMessagesUserTimelineRequest(
   userId: json['userId'] as String,
   limit: (json['limit'] as num?)?.toInt(),
   sinceId: json['sinceId'] as String?,
@@ -24,7 +24,7 @@ _ChatMessagesUserTimelineRequest _$ChatMessagesUserTimelineRequestFromJson(
 );
 
 Map<String, dynamic> _$ChatMessagesUserTimelineRequestToJson(
-  _ChatMessagesUserTimelineRequest instance,
+  ChatMessagesUserTimelineRequest instance,
 ) => <String, dynamic>{
   'userId': instance.userId,
   'limit': instance.limit,

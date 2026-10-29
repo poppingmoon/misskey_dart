@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ChatMessagesCreateToRoomRequest {
 
- String get toRoomId; String? get text; String? get fileId;
+
 /// Create a copy of ChatMessagesCreateToRoomRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $ChatMessagesCreateToRoomRequestCopyWith<ChatMessagesCreateToRoomRequest> get copyWith => _$ChatMessagesCreateToRoomRequestCopyWithImpl<ChatMessagesCreateToRoomRequest>(this as ChatMessagesCreateToRoomRequest, _$identity);
 
-  /// Serializes this ChatMessagesCreateToRoomRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -97,11 +95,10 @@ extension ChatMessagesCreateToRoomRequestPatterns on ChatMessagesCreateToRoomReq
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ChatMessagesCreateToRoomRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _ChatMessagesCreateToRoomRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -119,11 +116,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ChatMessagesCreateToRoomRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChatMessagesCreateToRoomRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -140,11 +136,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ChatMessagesCreateToRoomRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChatMessagesCreateToRoomRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -161,10 +156,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String toRoomId,  String? text,  String? fileId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _ChatMessagesCreateToRoomRequest() when $default != null:
-return $default(_that.toRoomId,_that.text,_that.fileId);case _:
+case _:
   return orElse();
 
 }
@@ -182,10 +176,9 @@ return $default(_that.toRoomId,_that.text,_that.fileId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String toRoomId,  String? text,  String? fileId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChatMessagesCreateToRoomRequest():
-return $default(_that.toRoomId,_that.text,_that.fileId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -202,89 +195,13 @@ return $default(_that.toRoomId,_that.text,_that.fileId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String toRoomId,  String? text,  String? fileId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChatMessagesCreateToRoomRequest() when $default != null:
-return $default(_that.toRoomId,_that.text,_that.fileId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _ChatMessagesCreateToRoomRequest implements ChatMessagesCreateToRoomRequest {
-  const _ChatMessagesCreateToRoomRequest({required this.toRoomId, this.text, this.fileId});
-  factory _ChatMessagesCreateToRoomRequest.fromJson(Map<String, dynamic> json) => _$ChatMessagesCreateToRoomRequestFromJson(json);
-
-@override final  String toRoomId;
-@override final  String? text;
-@override final  String? fileId;
-
-/// Create a copy of ChatMessagesCreateToRoomRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ChatMessagesCreateToRoomRequestCopyWith<_ChatMessagesCreateToRoomRequest> get copyWith => __$ChatMessagesCreateToRoomRequestCopyWithImpl<_ChatMessagesCreateToRoomRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$ChatMessagesCreateToRoomRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatMessagesCreateToRoomRequest&&(identical(other.toRoomId, toRoomId) || other.toRoomId == toRoomId)&&(identical(other.text, text) || other.text == text)&&(identical(other.fileId, fileId) || other.fileId == fileId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,toRoomId,text,fileId);
-}
-
-@override
-String toString() {
-    return 'ChatMessagesCreateToRoomRequest(toRoomId: $toRoomId, text: $text, fileId: $fileId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ChatMessagesCreateToRoomRequestCopyWith<$Res> implements $ChatMessagesCreateToRoomRequestCopyWith<$Res> {
-  factory _$ChatMessagesCreateToRoomRequestCopyWith(_ChatMessagesCreateToRoomRequest value, $Res Function(_ChatMessagesCreateToRoomRequest) _then) = __$ChatMessagesCreateToRoomRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String toRoomId, String? text, String? fileId
-});
-
-
-
-
-}
-/// @nodoc
-class __$ChatMessagesCreateToRoomRequestCopyWithImpl<$Res>
-    implements _$ChatMessagesCreateToRoomRequestCopyWith<$Res> {
-  __$ChatMessagesCreateToRoomRequestCopyWithImpl(this._self, this._then);
-
-  final _ChatMessagesCreateToRoomRequest _self;
-  final $Res Function(_ChatMessagesCreateToRoomRequest) _then;
-
-/// Create a copy of ChatMessagesCreateToRoomRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? toRoomId = null,Object? text = freezed,Object? fileId = freezed,}) {
-  return _then(_ChatMessagesCreateToRoomRequest(
-toRoomId: null == toRoomId ? _self.toRoomId : toRoomId // ignore: cast_nullable_to_non_nullable
-as String,text: freezed == text ? _self.text : text // ignore: cast_nullable_to_non_nullable
-as String?,fileId: freezed == fileId ? _self.fileId : fileId // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
 
 }
 

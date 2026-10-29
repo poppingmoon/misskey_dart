@@ -6,8 +6,8 @@ part of 'hashtags_list_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_HashtagsListRequest _$HashtagsListRequestFromJson(Map<String, dynamic> json) =>
-    _HashtagsListRequest(
+HashtagsListRequest _$HashtagsListRequestFromJson(Map<String, dynamic> json) =>
+    HashtagsListRequest(
       limit: (json['limit'] as num?)?.toInt(),
       attachedToUserOnly: json['attachedToUserOnly'] as bool?,
       attachedToLocalUserOnly: json['attachedToLocalUserOnly'] as bool?,
@@ -16,7 +16,7 @@ _HashtagsListRequest _$HashtagsListRequestFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$HashtagsListRequestToJson(
-  _HashtagsListRequest instance,
+  HashtagsListRequest instance,
 ) => <String, dynamic>{
   'limit': instance.limit,
   'attachedToUserOnly': instance.attachedToUserOnly,

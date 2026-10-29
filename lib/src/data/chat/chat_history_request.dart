@@ -4,9 +4,11 @@ part 'chat_history_request.freezed.dart';
 part 'chat_history_request.g.dart';
 
 @freezed
-abstract class ChatHistoryRequest with _$ChatHistoryRequest {
-  const factory({int? limit, bool? room}) = _ChatHistoryRequest;
-
+@JsonSerializable()
+class const ChatHistoryRequest({final int? limit, final bool? room})
+    with _$ChatHistoryRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$ChatHistoryRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ChatHistoryRequestToJson(this);
 }

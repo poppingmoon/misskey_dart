@@ -6,9 +6,9 @@ part of 'users_reactions_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_UsersReactionsRequest _$UsersReactionsRequestFromJson(
+UsersReactionsRequest _$UsersReactionsRequestFromJson(
   Map<String, dynamic> json,
-) => _UsersReactionsRequest(
+) => UsersReactionsRequest(
   userId: json['userId'] as String,
   limit: (json['limit'] as num?)?.toInt(),
   sinceId: json['sinceId'] as String?,
@@ -24,7 +24,7 @@ _UsersReactionsRequest _$UsersReactionsRequestFromJson(
 );
 
 Map<String, dynamic> _$UsersReactionsRequestToJson(
-  _UsersReactionsRequest instance,
+  UsersReactionsRequest instance,
 ) => <String, dynamic>{
   'userId': instance.userId,
   'limit': instance.limit,

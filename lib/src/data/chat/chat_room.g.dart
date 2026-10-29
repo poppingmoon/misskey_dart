@@ -6,7 +6,7 @@ part of 'chat_room.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ChatRoom _$ChatRoomFromJson(Map<String, dynamic> json) => _ChatRoom(
+ChatRoom _$ChatRoomFromJson(Map<String, dynamic> json) => ChatRoom(
   id: json['id'] as String,
   createdAt: const DateTimeConverter().fromJson(json['createdAt'] as String),
   ownerId: json['ownerId'] as String,
@@ -16,7 +16,7 @@ _ChatRoom _$ChatRoomFromJson(Map<String, dynamic> json) => _ChatRoom(
   isMuted: json['isMuted'] as bool?,
 );
 
-Map<String, dynamic> _$ChatRoomToJson(_ChatRoom instance) => <String, dynamic>{
+Map<String, dynamic> _$ChatRoomToJson(ChatRoom instance) => <String, dynamic>{
   'id': instance.id,
   'createdAt': const DateTimeConverter().toJson(instance.createdAt),
   'ownerId': instance.ownerId,

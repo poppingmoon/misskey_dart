@@ -5,15 +5,16 @@ part 'blocking_list_request.freezed.dart';
 part 'blocking_list_request.g.dart';
 
 @freezed
-abstract class BlockingListRequest with _$BlockingListRequest {
-  const factory({
-    int? limit,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-  }) = _BlockingListRequest;
-
+@JsonSerializable()
+class const BlockingListRequest({
+  final int? limit,
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
+}) with _$BlockingListRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$BlockingListRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$BlockingListRequestToJson(this);
 }

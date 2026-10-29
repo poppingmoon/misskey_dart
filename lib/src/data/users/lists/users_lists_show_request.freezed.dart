@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$UsersListsShowRequest {
 
- String get listId; bool? get forPublic;
+
 /// Create a copy of UsersListsShowRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $UsersListsShowRequestCopyWith<UsersListsShowRequest> get copyWith => _$UsersListsShowRequestCopyWithImpl<UsersListsShowRequest>(this as UsersListsShowRequest, _$identity);
 
-  /// Serializes this UsersListsShowRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -96,11 +94,10 @@ extension UsersListsShowRequestPatterns on UsersListsShowRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UsersListsShowRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _UsersListsShowRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -118,11 +115,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UsersListsShowRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UsersListsShowRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -139,11 +135,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UsersListsShowRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UsersListsShowRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -160,10 +155,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String listId,  bool? forPublic)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _UsersListsShowRequest() when $default != null:
-return $default(_that.listId,_that.forPublic);case _:
+case _:
   return orElse();
 
 }
@@ -181,10 +175,9 @@ return $default(_that.listId,_that.forPublic);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String listId,  bool? forPublic)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UsersListsShowRequest():
-return $default(_that.listId,_that.forPublic);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -201,87 +194,13 @@ return $default(_that.listId,_that.forPublic);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String listId,  bool? forPublic)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UsersListsShowRequest() when $default != null:
-return $default(_that.listId,_that.forPublic);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _UsersListsShowRequest implements UsersListsShowRequest {
-  const _UsersListsShowRequest({required this.listId, this.forPublic});
-  factory _UsersListsShowRequest.fromJson(Map<String, dynamic> json) => _$UsersListsShowRequestFromJson(json);
-
-@override final  String listId;
-@override final  bool? forPublic;
-
-/// Create a copy of UsersListsShowRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$UsersListsShowRequestCopyWith<_UsersListsShowRequest> get copyWith => __$UsersListsShowRequestCopyWithImpl<_UsersListsShowRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$UsersListsShowRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersListsShowRequest&&(identical(other.listId, listId) || other.listId == listId)&&(identical(other.forPublic, forPublic) || other.forPublic == forPublic));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,listId,forPublic);
-}
-
-@override
-String toString() {
-    return 'UsersListsShowRequest(listId: $listId, forPublic: $forPublic)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$UsersListsShowRequestCopyWith<$Res> implements $UsersListsShowRequestCopyWith<$Res> {
-  factory _$UsersListsShowRequestCopyWith(_UsersListsShowRequest value, $Res Function(_UsersListsShowRequest) _then) = __$UsersListsShowRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String listId, bool? forPublic
-});
-
-
-
-
-}
-/// @nodoc
-class __$UsersListsShowRequestCopyWithImpl<$Res>
-    implements _$UsersListsShowRequestCopyWith<$Res> {
-  __$UsersListsShowRequestCopyWithImpl(this._self, this._then);
-
-  final _UsersListsShowRequest _self;
-  final $Res Function(_UsersListsShowRequest) _then;
-
-/// Create a copy of UsersListsShowRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? listId = null,Object? forPublic = freezed,}) {
-  return _then(_UsersListsShowRequest(
-listId: null == listId ? _self.listId : listId // ignore: cast_nullable_to_non_nullable
-as String,forPublic: freezed == forPublic ? _self.forPublic : forPublic // ignore: cast_nullable_to_non_nullable
-as bool?,
-  ));
-}
-
 
 }
 

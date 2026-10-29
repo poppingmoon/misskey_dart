@@ -6,6 +6,56 @@ part of 'streaming_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
+EmojiAddedStreamEvent _$EmojiAddedStreamEventFromJson(
+  Map<String, dynamic> json,
+) => EmojiAddedStreamEvent(
+  emoji: Emoji.fromJson(json['emoji'] as Map<String, dynamic>),
+);
+
+Map<String, dynamic> _$EmojiAddedStreamEventToJson(
+  EmojiAddedStreamEvent instance,
+) => <String, dynamic>{'emoji': instance.emoji.toJson()};
+
+EmojiUpdatedStreamEvent _$EmojiUpdatedStreamEventFromJson(
+  Map<String, dynamic> json,
+) => EmojiUpdatedStreamEvent(
+  emojis: (json['emojis'] as List<dynamic>)
+      .map((e) => Emoji.fromJson(e as Map<String, dynamic>))
+      .toList(),
+);
+
+Map<String, dynamic> _$EmojiUpdatedStreamEventToJson(
+  EmojiUpdatedStreamEvent instance,
+) => <String, dynamic>{
+  'emojis': instance.emojis.map((e) => e.toJson()).toList(),
+};
+
+EmojiDeletedStreamEvent _$EmojiDeletedStreamEventFromJson(
+  Map<String, dynamic> json,
+) => EmojiDeletedStreamEvent(
+  emojis: (json['emojis'] as List<dynamic>)
+      .map((e) => Emoji.fromJson(e as Map<String, dynamic>))
+      .toList(),
+);
+
+Map<String, dynamic> _$EmojiDeletedStreamEventToJson(
+  EmojiDeletedStreamEvent instance,
+) => <String, dynamic>{
+  'emojis': instance.emojis.map((e) => e.toJson()).toList(),
+};
+
+AnnouncementCreatedStreamEvent _$AnnouncementCreatedStreamEventFromJson(
+  Map<String, dynamic> json,
+) => AnnouncementCreatedStreamEvent(
+  announcement: AnnouncementsResponse.fromJson(
+    json['announcement'] as Map<String, dynamic>,
+  ),
+);
+
+Map<String, dynamic> _$AnnouncementCreatedStreamEventToJson(
+  AnnouncementCreatedStreamEvent instance,
+) => <String, dynamic>{'announcement': instance.announcement.toJson()};
+
 StreamingChannelResponse _$StreamingChannelResponseFromJson(
   Map<String, dynamic> json,
 ) => StreamingChannelResponse(
@@ -91,56 +141,6 @@ StreamingChannelUnknownResponse _$StreamingChannelUnknownResponseFromJson(
 Map<String, dynamic> _$StreamingChannelUnknownResponseToJson(
   StreamingChannelUnknownResponse instance,
 ) => <String, dynamic>{'body': instance.body, 'type': instance.$type};
-
-_EmojiAddedStreamEvent _$EmojiAddedStreamEventFromJson(
-  Map<String, dynamic> json,
-) => _EmojiAddedStreamEvent(
-  emoji: Emoji.fromJson(json['emoji'] as Map<String, dynamic>),
-);
-
-Map<String, dynamic> _$EmojiAddedStreamEventToJson(
-  _EmojiAddedStreamEvent instance,
-) => <String, dynamic>{'emoji': instance.emoji.toJson()};
-
-_EmojiUpdatedStreamEvent _$EmojiUpdatedStreamEventFromJson(
-  Map<String, dynamic> json,
-) => _EmojiUpdatedStreamEvent(
-  emojis: (json['emojis'] as List<dynamic>)
-      .map((e) => Emoji.fromJson(e as Map<String, dynamic>))
-      .toList(),
-);
-
-Map<String, dynamic> _$EmojiUpdatedStreamEventToJson(
-  _EmojiUpdatedStreamEvent instance,
-) => <String, dynamic>{
-  'emojis': instance.emojis.map((e) => e.toJson()).toList(),
-};
-
-_EmojiDeletedStreamEvent _$EmojiDeletedStreamEventFromJson(
-  Map<String, dynamic> json,
-) => _EmojiDeletedStreamEvent(
-  emojis: (json['emojis'] as List<dynamic>)
-      .map((e) => Emoji.fromJson(e as Map<String, dynamic>))
-      .toList(),
-);
-
-Map<String, dynamic> _$EmojiDeletedStreamEventToJson(
-  _EmojiDeletedStreamEvent instance,
-) => <String, dynamic>{
-  'emojis': instance.emojis.map((e) => e.toJson()).toList(),
-};
-
-_AnnouncementCreatedStreamEvent _$AnnouncementCreatedStreamEventFromJson(
-  Map<String, dynamic> json,
-) => _AnnouncementCreatedStreamEvent(
-  announcement: AnnouncementsResponse.fromJson(
-    json['announcement'] as Map<String, dynamic>,
-  ),
-);
-
-Map<String, dynamic> _$AnnouncementCreatedStreamEventToJson(
-  _AnnouncementCreatedStreamEvent instance,
-) => <String, dynamic>{'announcement': instance.announcement.toJson()};
 
 NoteChannelEvent _$NoteChannelEventFromJson(Map<String, dynamic> json) =>
     NoteChannelEvent(

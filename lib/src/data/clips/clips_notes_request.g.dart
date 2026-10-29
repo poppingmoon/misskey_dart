@@ -6,8 +6,8 @@ part of 'clips_notes_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ClipsNotesRequest _$ClipsNotesRequestFromJson(Map<String, dynamic> json) =>
-    _ClipsNotesRequest(
+ClipsNotesRequest _$ClipsNotesRequestFromJson(Map<String, dynamic> json) =>
+    ClipsNotesRequest(
       limit: (json['limit'] as num?)?.toInt(),
       clipId: json['clipId'] as String,
       sinceId: json['sinceId'] as String?,
@@ -22,7 +22,7 @@ _ClipsNotesRequest _$ClipsNotesRequestFromJson(Map<String, dynamic> json) =>
       ),
     );
 
-Map<String, dynamic> _$ClipsNotesRequestToJson(_ClipsNotesRequest instance) =>
+Map<String, dynamic> _$ClipsNotesRequestToJson(ClipsNotesRequest instance) =>
     <String, dynamic>{
       'limit': instance.limit,
       'clipId': instance.clipId,

@@ -6,9 +6,9 @@ part of 'antennas_create_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_AntennasCreateRequest _$AntennasCreateRequestFromJson(
+AntennasCreateRequest _$AntennasCreateRequestFromJson(
   Map<String, dynamic> json,
-) => _AntennasCreateRequest(
+) => AntennasCreateRequest(
   name: json['name'] as String,
   src: $enumDecode(_$AntennaSourceEnumMap, json['src']),
   userListId: json['userListId'] as String?,
@@ -33,7 +33,7 @@ _AntennasCreateRequest _$AntennasCreateRequestFromJson(
 );
 
 Map<String, dynamic> _$AntennasCreateRequestToJson(
-  _AntennasCreateRequest instance,
+  AntennasCreateRequest instance,
 ) => <String, dynamic>{
   'name': instance.name,
   'src': _$AntennaSourceEnumMap[instance.src]!,

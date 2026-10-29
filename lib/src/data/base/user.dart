@@ -100,387 +100,405 @@ abstract class UserDetailed implements User {
 }
 
 @freezed
-abstract class UserLite with _$UserLite implements User {
-  const factory({
-    required String id,
-    String? name,
-    required String username,
-    String? host,
-    @NullableUriConverter() Uri? avatarUrl,
-    String? avatarBlurhash,
-    @Default([]) List<UserAvatarDecoration> avatarDecorations,
-    @Default(false) bool isBot,
-    @Default(false) bool isCat,
-    UserInstanceInfo? instance,
-    @EmojisConverter() @Default({}) Map<String, String> emojis,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    OnlineStatus? onlineStatus,
-    @Default([]) List<UserBadgeRole> badgeRoles,
-    bool? requireSigninToViewContents,
-    @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
-    @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
-    bool? speakAsCat,
-    String? mandatoryCW, // Sharkey
-  }) = _UserLite;
-
+@JsonSerializable()
+class const UserLite({
+  @override required final String id,
+  @override final String? name,
+  @override required final String username,
+  @override final String? host,
+  @override @NullableUriConverter() final Uri? avatarUrl,
+  @override final String? avatarBlurhash,
+  @override final List<UserAvatarDecoration> avatarDecorations = const [],
+  @override final bool isBot = false,
+  @override final bool isCat = false,
+  @override final UserInstanceInfo? instance,
+  @override @EmojisConverter() final Map<String, String> emojis = const {},
+  @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final OnlineStatus? onlineStatus,
+  @override final List<UserBadgeRole> badgeRoles = const [],
+  @override final bool? requireSigninToViewContents,
+  @override
+  @HideBeforeConverter()
+  final HideBefore? makeNotesFollowersOnlyBefore,
+  @override @HideBeforeConverter() final HideBefore? makeNotesHiddenBefore,
+  @override final bool? speakAsCat,
+  final String? mandatoryCW, // Sharkey
+}) with _$UserLite implements User {
   factory fromJson(Map<String, Object?> json) => _$UserLiteFromJson(json);
+
+  @override
+  Map<String, dynamic> toJson() => _$UserLiteToJson(this);
 }
 
 @freezed
-abstract class UserDetailedNotMe
-    with _$UserDetailedNotMe
-    implements UserDetailed {
-  const factory({
-    required String id,
-    String? name,
-    required String username,
-    String? host,
-    @NullableUriConverter() Uri? avatarUrl,
-    String? avatarBlurhash,
-    @Default([]) List<UserAvatarDecoration> avatarDecorations,
-    required bool isBot,
-    required bool isCat,
-    UserInstanceInfo? instance,
-    @EmojisConverter() @Default({}) Map<String, String> emojis,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    OnlineStatus? onlineStatus,
-    @Default([]) List<UserBadgeRole> badgeRoles,
-    bool? requireSigninToViewContents,
-    @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
-    @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
-    bool? speakAsCat,
-    @NullableUriConverter() Uri? url,
-    @NullableUriConverter() Uri? uri,
-    @NullableUriConverter() Uri? movedTo,
-    List<String>? alsoKnownAs,
-    @DateTimeConverter() required DateTime createdAt,
-    @NullableDateTimeConverter() DateTime? updatedAt,
-    @NullableDateTimeConverter() DateTime? lastFetchedAt,
-    @NullableUriConverter() Uri? bannerUrl,
-    String? bannerBlurhash,
-    required bool isLocked,
-    required bool isSilenced,
-    required bool isSuspended,
-    String? description,
-    String? location,
-    String? birthday,
-    String? lang,
-    List<UserField>? fields,
-    @Default([]) List<String> verifiedLinks,
-    List<MutualLinkSection>? mutualLinkSections,
-    // CherryPick 4.3.0 or newer returns String if the count count is not visible
-    @IntConverter() required int followersCount,
-    // CherryPick 4.3.0 or newer returns String if the count count is not visible
-    @IntConverter() required int followingCount,
-    required int notesCount,
-    List<String>? pinnedNoteIds,
-    List<Note>? pinnedNotes,
-    String? pinnedPageId,
-    Map<String, dynamic>? pinnedPage,
-    // Added in Misskey 12.93.0
-    @Default(false) bool publicReactions,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    /// removed at 2023.12.0"
-    FFVisibility? ffVisibility,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    FFVisibility? followersVisibility,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    FFVisibility? followingVisibility,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    ChatScope? chatScope,
-    bool? canChat,
-    // Removed in Misskey 2024.10.0
-    bool? twoFactorEnabled,
-    // Added in Misskey 11.25.0, Removed in Misskey 2024.10.0
-    bool? usePasswordLessLogin,
-    // Added in Misskey 11.24.0, Removed in Misskey 2024.10.0
-    bool? securityKeys,
-    List<UserRole>? roles,
-    String? memo,
-    String? moderationNote,
-  }) = _UserDetailedNotMe;
+@JsonSerializable()
+class const UserDetailedNotMe({
+  @override required final String id,
+  @override final String? name,
+  @override required final String username,
+  @override final String? host,
+  @override @NullableUriConverter() final Uri? avatarUrl,
+  @override final String? avatarBlurhash,
+  @override final List<UserAvatarDecoration> avatarDecorations = const [],
+  @override required final bool isBot,
+  @override required final bool isCat,
+  @override final UserInstanceInfo? instance,
+  @override @EmojisConverter() final Map<String, String> emojis = const {},
+  @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final OnlineStatus? onlineStatus,
+  @override final List<UserBadgeRole> badgeRoles = const [],
+  @override final bool? requireSigninToViewContents,
+  @override
+  @HideBeforeConverter()
+  final HideBefore? makeNotesFollowersOnlyBefore,
+  @override @HideBeforeConverter() final HideBefore? makeNotesHiddenBefore,
+  @override final bool? speakAsCat,
+  @override @NullableUriConverter() final Uri? url,
+  @override @NullableUriConverter() final Uri? uri,
+  @override @NullableUriConverter() final Uri? movedTo,
+  @override final List<String>? alsoKnownAs,
+  @override @DateTimeConverter() required final DateTime createdAt,
+  @override @NullableDateTimeConverter() final DateTime? updatedAt,
+  @override @NullableDateTimeConverter() final DateTime? lastFetchedAt,
+  @override @NullableUriConverter() final Uri? bannerUrl,
+  @override final String? bannerBlurhash,
+  @override required final bool isLocked,
+  @override required final bool isSilenced,
+  @override required final bool isSuspended,
+  @override final String? description,
+  @override final String? location,
+  @override final String? birthday,
+  @override final String? lang,
+  @override final List<UserField>? fields,
+  @override final List<String> verifiedLinks = const [],
+  @override final List<MutualLinkSection>? mutualLinkSections,
+  // CherryPick 4.3.0 or newer returns String if the count count is not visible
+  @override @IntConverter() required final int followersCount,
+  // CherryPick 4.3.0 or newer returns String if the count count is not visible
+  @override @IntConverter() required final int followingCount,
+  @override required final int notesCount,
+  @override final List<String>? pinnedNoteIds,
+  @override final List<Note>? pinnedNotes,
+  @override final String? pinnedPageId,
+  @override final Map<String, dynamic>? pinnedPage,
+  // Added in Misskey 12.93.0
+  @override final bool publicReactions = false,
 
+  /// removed at 2023.12.0"
+  @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final FFVisibility? ffVisibility,
+  @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final FFVisibility? followersVisibility,
+  @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final FFVisibility? followingVisibility,
+  @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final ChatScope? chatScope,
+  @override final bool? canChat,
+  // Removed in Misskey 2024.10.0
+  @override final bool? twoFactorEnabled,
+  // Added in Misskey 11.25.0, Removed in Misskey 2024.10.0
+  @override final bool? usePasswordLessLogin,
+  // Added in Misskey 11.24.0, Removed in Misskey 2024.10.0
+  @override final bool? securityKeys,
+  @override final List<UserRole>? roles,
+  @override final String? memo,
+  @override final String? moderationNote,
+}) with _$UserDetailedNotMe implements UserDetailed {
   factory fromJson(Map<String, Object?> json) =>
       _$UserDetailedNotMeFromJson(json);
+
+  @override
+  Map<String, dynamic> toJson() => _$UserDetailedNotMeToJson(this);
 }
 
 @freezed
-abstract class UserDetailedNotMeWithRelations
-    with _$UserDetailedNotMeWithRelations
-    implements UserDetailed {
-  const factory({
-    required String id,
-    String? name,
-    required String username,
-    String? host,
-    @NullableUriConverter() Uri? avatarUrl,
-    String? avatarBlurhash,
-    @Default([]) List<UserAvatarDecoration> avatarDecorations,
-    required bool isBot,
-    required bool isCat,
-    UserInstanceInfo? instance,
-    @EmojisConverter() @Default({}) Map<String, String> emojis,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    OnlineStatus? onlineStatus,
-    @Default([]) List<UserBadgeRole> badgeRoles,
-    bool? requireSigninToViewContents,
-    @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
-    @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
-    bool? speakAsCat,
-    @NullableUriConverter() Uri? url,
-    @NullableUriConverter() Uri? uri,
-    @NullableUriConverter() Uri? movedTo,
-    List<String>? alsoKnownAs,
-    @DateTimeConverter() required DateTime createdAt,
-    @NullableDateTimeConverter() DateTime? updatedAt,
-    @NullableDateTimeConverter() DateTime? lastFetchedAt,
-    @NullableUriConverter() Uri? bannerUrl,
-    String? bannerBlurhash,
-    required bool isLocked,
-    required bool isSilenced,
-    required bool isSuspended,
-    String? description,
-    String? location,
-    String? birthday,
-    String? lang,
-    List<UserField>? fields,
-    @Default([]) List<String> verifiedLinks,
-    List<MutualLinkSection>? mutualLinkSections,
-    // CherryPick 4.3.0 or newer returns String if the count is not visible
-    @IntConverter() required int followersCount,
-    // CherryPick 4.3.0 or newer returns String if the count is not visible
-    @IntConverter() required int followingCount,
-    required int notesCount,
-    List<String>? pinnedNoteIds,
-    List<Note>? pinnedNotes,
-    String? pinnedPageId,
-    Map<String, dynamic>? pinnedPage,
-    // Added in Misskey 12.93.0
-    @Default(false) bool publicReactions,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    /// removed at 2023.12.0"
-    FFVisibility? ffVisibility,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    FFVisibility? followersVisibility,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    FFVisibility? followingVisibility,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    ChatScope? chatScope,
-    bool? canChat,
-    // Removed in Misskey 2024.10.0
-    bool? twoFactorEnabled,
-    // Added in Misskey 11.25.0, Removed in Misskey 2024.10.0
-    bool? usePasswordLessLogin,
-    // Added in Misskey 11.24.0, Removed in Misskey 2024.10.0
-    bool? securityKeys,
-    List<UserRole>? roles,
-    String? memo,
-    String? moderationNote,
-    required bool isFollowing,
-    required bool isFollowed,
-    required bool hasPendingFollowRequestFromYou,
-    required bool hasPendingFollowRequestToYou,
-    required bool isBlocking,
-    required bool isBlocked,
-    required bool isMuted,
-    // Added in Misskey 13.10.0
-    @Default(false) bool isRenoteMuted,
-    Notify? notify,
-    bool? withReplies,
-    String? followedMessage,
-  }) = _UserDetailedNotMeWithRelations;
+@JsonSerializable()
+class const UserDetailedNotMeWithRelations({
+  @override required final String id,
+  @override final String? name,
+  @override required final String username,
+  @override final String? host,
+  @override @NullableUriConverter() final Uri? avatarUrl,
+  @override final String? avatarBlurhash,
+  @override final List<UserAvatarDecoration> avatarDecorations = const [],
+  @override required final bool isBot,
+  @override required final bool isCat,
+  @override final UserInstanceInfo? instance,
+  @override @EmojisConverter() final Map<String, String> emojis = const {},
+  @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final OnlineStatus? onlineStatus,
+  @override final List<UserBadgeRole> badgeRoles = const [],
+  @override final bool? requireSigninToViewContents,
+  @override
+  @HideBeforeConverter()
+  final HideBefore? makeNotesFollowersOnlyBefore,
+  @override @HideBeforeConverter() final HideBefore? makeNotesHiddenBefore,
+  @override final bool? speakAsCat,
+  @override @NullableUriConverter() final Uri? url,
+  @override @NullableUriConverter() final Uri? uri,
+  @override @NullableUriConverter() final Uri? movedTo,
+  @override final List<String>? alsoKnownAs,
+  @override @DateTimeConverter() required final DateTime createdAt,
+  @override @NullableDateTimeConverter() final DateTime? updatedAt,
+  @override @NullableDateTimeConverter() final DateTime? lastFetchedAt,
+  @override @NullableUriConverter() final Uri? bannerUrl,
+  @override final String? bannerBlurhash,
+  @override required final bool isLocked,
+  @override required final bool isSilenced,
+  @override required final bool isSuspended,
+  @override final String? description,
+  @override final String? location,
+  @override final String? birthday,
+  @override final String? lang,
+  @override final List<UserField>? fields,
+  @override final List<String> verifiedLinks = const [],
+  @override final List<MutualLinkSection>? mutualLinkSections,
+  // CherryPick 4.3.0 or newer returns String if the count is not visible
+  @override @IntConverter() required final int followersCount,
+  // CherryPick 4.3.0 or newer returns String if the count is not visible
+  @override @IntConverter() required final int followingCount,
+  @override required final int notesCount,
+  @override final List<String>? pinnedNoteIds,
+  @override final List<Note>? pinnedNotes,
+  @override final String? pinnedPageId,
+  @override final Map<String, dynamic>? pinnedPage,
+  // Added in Misskey 12.93.0
+  @override final bool publicReactions = false,
 
+  /// removed at 2023.12.0"
+  @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final FFVisibility? ffVisibility,
+  @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final FFVisibility? followersVisibility,
+  @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final FFVisibility? followingVisibility,
+  @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final ChatScope? chatScope,
+  @override final bool? canChat,
+  // Removed in Misskey 2024.10.0
+  @override final bool? twoFactorEnabled,
+  // Added in Misskey 11.25.0, Removed in Misskey 2024.10.0
+  @override final bool? usePasswordLessLogin,
+  // Added in Misskey 11.24.0, Removed in Misskey 2024.10.0
+  @override final bool? securityKeys,
+  @override final List<UserRole>? roles,
+  @override final String? memo,
+  @override final String? moderationNote,
+  required final bool isFollowing,
+  required final bool isFollowed,
+  required final bool hasPendingFollowRequestFromYou,
+  required final bool hasPendingFollowRequestToYou,
+  required final bool isBlocking,
+  required final bool isBlocked,
+  required final bool isMuted,
+  // Added in Misskey 13.10.0
+  final bool isRenoteMuted = false,
+  final Notify? notify,
+  final bool? withReplies,
+  final String? followedMessage,
+}) with _$UserDetailedNotMeWithRelations implements UserDetailed {
   factory fromJson(Map<String, Object?> json) =>
       _$UserDetailedNotMeWithRelationsFromJson(json);
+
+  @override
+  Map<String, dynamic> toJson() => _$UserDetailedNotMeWithRelationsToJson(this);
 }
 
 @freezed
-abstract class MeDetailed with _$MeDetailed implements UserDetailed {
-  const factory({
-    required String id,
-    String? name,
-    required String username,
-    String? host,
-    @NullableUriConverter() Uri? avatarUrl,
-    String? avatarBlurhash,
-    @Default([]) List<UserAvatarDecoration> avatarDecorations,
-    required bool isBot,
-    required bool isCat,
-    UserInstanceInfo? instance,
-    @EmojisConverter() @Default({}) Map<String, String> emojis,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    OnlineStatus? onlineStatus,
-    @Default([]) List<UserBadgeRole> badgeRoles,
-    bool? requireSigninToViewContents,
-    @HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,
-    @HideBeforeConverter() HideBefore? makeNotesHiddenBefore,
-    bool? speakAsCat,
-    @NullableUriConverter() Uri? url,
-    @NullableUriConverter() Uri? uri,
-    @NullableUriConverter() Uri? movedTo,
-    List<String>? alsoKnownAs,
-    @DateTimeConverter() required DateTime createdAt,
-    @NullableDateTimeConverter() DateTime? updatedAt,
-    @NullableDateTimeConverter() DateTime? lastFetchedAt,
-    @NullableUriConverter() Uri? bannerUrl,
-    String? bannerBlurhash,
-    required bool isLocked,
-    required bool isSilenced,
-    required bool isSuspended,
-    String? description,
-    String? location,
-    String? birthday,
-    String? lang,
-    List<UserField>? fields,
-    @Default([]) List<String> verifiedLinks,
-    List<MutualLinkSection>? mutualLinkSections,
-    // CherryPick 4.3.0 or newer returns String if the count is not visible
-    @IntConverter() required int followersCount,
-    // CherryPick 4.3.0 or newer returns String if the count is not visible
-    @IntConverter() required int followingCount,
-    required int notesCount,
-    List<String>? pinnedNoteIds,
-    List<Note>? pinnedNotes,
-    String? pinnedPageId,
-    Map<String, dynamic>? pinnedPage,
-    // Added in Misskey 12.93.0
-    @Default(false) bool publicReactions,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    /// removed at 2023.12.0"
-    FFVisibility? ffVisibility,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    FFVisibility? followersVisibility,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    FFVisibility? followingVisibility,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    ChatScope? chatScope,
-    bool? canChat,
-    bool? twoFactorEnabled,
-    // Added in Misskey 11.25.0
-    // Removed in Misskey 2024.10.0
-    bool? usePasswordLessLogin,
-    // Added in Misskey 11.24.0
-    // Removed in Misskey 2024.10.0
-    bool? securityKeys,
-    List<UserRole>? roles,
-    String? memo,
-    String? moderationNote,
-    String? avatarId,
-    String? bannerId,
-    String? followedMessage,
-    required bool isModerator,
-    required bool isAdmin,
-    // Added in Misskey 12.13.0
-    @Default(false) bool injectFeaturedNote,
-    // Added in Misskey 12.69.0
-    @Default(false) bool receiveAnnouncementEmail,
-    required bool alwaysMarkNsfw,
-    // Added in Misskey 12.112.0
-    @Default(false) bool autoSensitive,
-    required bool carefulBot,
-    required bool autoAcceptFollowed,
-    bool? preventAiLearning,
-    // Added in Misskey 12.60.0
-    @Default(false) bool noCrawle,
-    // Added in Misskey 12.63.0
-    @Default(false) bool isExplorable,
-    // Added in Misskey 12.89.0
-    @Default(false) bool isDeleted,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    TwoFactorBackupCodesStock? twoFactorBackupCodesStock,
-    // Added in Misskey 12.77.0
-    @Default(false) bool hideOnlineStatus,
-    @Default(false) bool hasUnreadSpecifiedNotes,
-    @Default(false) bool hasUnreadMentions,
-    // Added in Misskey 12.0.0
-    @Default(false) bool hasUnreadAnnouncement,
-    // Added in Misskey 12.0.0
-    @Default(false) bool hasUnreadAntenna,
-    // Added in Misskey 12.47.0
-    @Default(false) bool hasUnreadChannel,
-    bool? hasUnreadChatMessages,
-    @Default(false) bool hasUnreadNotification,
-    // Added in Misskey 12.11.0
-    @Default(false) bool hasPendingReceivedFollowRequest,
-    int? unreadNotificationsCount,
-    @Default([]) List<AnnouncementsResponse> unreadAnnouncements,
-    @MuteWordsConverter() List<MuteWord>? mutedWords,
-    @MuteWordsConverter() List<MuteWord>? hardMutedWords,
-    // Added in Misskey 12.99.0
-    @Default([]) List<String> mutedInstances,
+@JsonSerializable()
+class const MeDetailed({
+  @override required final String id,
+  @override final String? name,
+  @override required final String username,
+  @override final String? host,
+  @override @NullableUriConverter() final Uri? avatarUrl,
+  @override final String? avatarBlurhash,
+  @override final List<UserAvatarDecoration> avatarDecorations = const [],
+  @override required final bool isBot,
+  @override required final bool isCat,
+  @override final UserInstanceInfo? instance,
+  @override @EmojisConverter() final Map<String, String> emojis = const {},
+  @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final OnlineStatus? onlineStatus,
+  @override final List<UserBadgeRole> badgeRoles = const [],
+  @override final bool? requireSigninToViewContents,
+  @override
+  @HideBeforeConverter()
+  final HideBefore? makeNotesFollowersOnlyBefore,
+  @override @HideBeforeConverter() final HideBefore? makeNotesHiddenBefore,
+  @override final bool? speakAsCat,
+  @override @NullableUriConverter() final Uri? url,
+  @override @NullableUriConverter() final Uri? uri,
+  @override @NullableUriConverter() final Uri? movedTo,
+  @override final List<String>? alsoKnownAs,
+  @override @DateTimeConverter() required final DateTime createdAt,
+  @override @NullableDateTimeConverter() final DateTime? updatedAt,
+  @override @NullableDateTimeConverter() final DateTime? lastFetchedAt,
+  @override @NullableUriConverter() final Uri? bannerUrl,
+  @override final String? bannerBlurhash,
+  @override required final bool isLocked,
+  @override required final bool isSilenced,
+  @override required final bool isSuspended,
+  @override final String? description,
+  @override final String? location,
+  @override final String? birthday,
+  @override final String? lang,
+  @override final List<UserField>? fields,
+  @override final List<String> verifiedLinks = const [],
+  @override final List<MutualLinkSection>? mutualLinkSections,
+  // CherryPick 4.3.0 or newer returns String if the count is not visible
+  @override @IntConverter() required final int followersCount,
+  // CherryPick 4.3.0 or newer returns String if the count is not visible
+  @override @IntConverter() required final int followingCount,
+  @override required final int notesCount,
+  @override final List<String>? pinnedNoteIds,
+  @override final List<Note>? pinnedNotes,
+  @override final String? pinnedPageId,
+  @override final Map<String, dynamic>? pinnedPage,
+  // Added in Misskey 12.93.0
+  @override final bool publicReactions = false,
 
-    /// Deprecated in Misskey 2023.9.2
-    List<String>? mutingNotificationTypes,
-    @Default(NotificationRecieveConfigs())
-    NotificationRecieveConfigs notificationRecieveConfig,
-    // Added in Misskey 12.70.0
-    @Default([]) List<String> emailNotificationTypes,
-    // Added in Misskey 13.1.0
-    @Default([]) List<UserAchievement> achievements,
-    // Added in Misskey 13.1.0
-    int? loggedInDays,
-    // Added in Misskey 13.0.0
-    UserPolicies? policies,
-  }) = _MeDetailed;
+  /// removed at 2023.12.0"
+  @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final FFVisibility? ffVisibility,
+  @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final FFVisibility? followersVisibility,
+  @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final FFVisibility? followingVisibility,
+  @override
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final ChatScope? chatScope,
+  @override final bool? canChat,
+  @override final bool? twoFactorEnabled,
+  // Added in Misskey 11.25.0
+  // Removed in Misskey 2024.10.0
+  @override final bool? usePasswordLessLogin,
+  // Added in Misskey 11.24.0
+  // Removed in Misskey 2024.10.0
+  @override final bool? securityKeys,
+  @override final List<UserRole>? roles,
+  @override final String? memo,
+  @override final String? moderationNote,
+  final String? avatarId,
+  final String? bannerId,
+  final String? followedMessage,
+  required final bool isModerator,
+  required final bool isAdmin,
+  // Added in Misskey 12.13.0
+  final bool injectFeaturedNote = false,
+  // Added in Misskey 12.69.0
+  final bool receiveAnnouncementEmail = false,
+  required final bool alwaysMarkNsfw,
+  // Added in Misskey 12.112.0
+  final bool autoSensitive = false,
+  required final bool carefulBot,
+  required final bool autoAcceptFollowed,
+  final bool? preventAiLearning,
+  // Added in Misskey 12.60.0
+  final bool noCrawle = false,
+  // Added in Misskey 12.63.0
+  final bool isExplorable = false,
+  // Added in Misskey 12.89.0
+  final bool isDeleted = false,
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final TwoFactorBackupCodesStock? twoFactorBackupCodesStock,
+  // Added in Misskey 12.77.0
+  final bool hideOnlineStatus = false,
+  final bool hasUnreadSpecifiedNotes = false,
+  final bool hasUnreadMentions = false,
+  // Added in Misskey 12.0.0
+  final bool hasUnreadAnnouncement = false,
+  // Added in Misskey 12.0.0
+  final bool hasUnreadAntenna = false,
+  // Added in Misskey 12.47.0
+  final bool hasUnreadChannel = false,
+  final bool? hasUnreadChatMessages,
+  final bool hasUnreadNotification = false,
+  // Added in Misskey 12.11.0
+  final bool hasPendingReceivedFollowRequest = false,
+  final int? unreadNotificationsCount,
+  final List<AnnouncementsResponse> unreadAnnouncements = const [],
+  @MuteWordsConverter() final List<MuteWord>? mutedWords,
+  @MuteWordsConverter() final List<MuteWord>? hardMutedWords,
+  // Added in Misskey 12.99.0
+  final List<String> mutedInstances = const [],
 
+  /// Deprecated in Misskey 2023.9.2
+  final List<String>? mutingNotificationTypes,
+  final NotificationRecieveConfigs notificationRecieveConfig =
+      const NotificationRecieveConfigs(),
+  // Added in Misskey 12.70.0
+  final List<String> emailNotificationTypes = const [],
+  // Added in Misskey 13.1.0
+  final List<UserAchievement> achievements = const [],
+  // Added in Misskey 13.1.0
+  final int? loggedInDays,
+  // Added in Misskey 13.0.0
+  final UserPolicies? policies,
+}) with _$MeDetailed implements UserDetailed {
   factory fromJson(Map<String, Object?> json) => _$MeDetailedFromJson(json);
+
+  @override
+  Map<String, dynamic> toJson() => _$MeDetailedToJson(this);
 }
 
 @freezed
-abstract class UserAvatarDecoration with _$UserAvatarDecoration {
-  const factory({
-    required String id,
-    double? angle,
-    @Default(false) bool flipH,
-    required String url,
-    @Default(0.0) double offsetX,
-    @Default(0.0) double offsetY,
-    bool? showBelow, // Sharkey
-  }) = _UserAvatarDecoration;
-
+@JsonSerializable()
+class const UserAvatarDecoration({
+  required final String id,
+  final double? angle,
+  final bool flipH = false,
+  required final String url,
+  final double offsetX = 0.0,
+  final double offsetY = 0.0,
+  final bool? showBelow, // Sharkey
+}) with _$UserAvatarDecoration {
   factory fromJson(Map<String, Object?> json) =>
       _$UserAvatarDecorationFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UserAvatarDecorationToJson(this);
 }
 
 @freezed
-abstract class UserInstanceInfo with _$UserInstanceInfo {
-  const factory({
-    String? name,
-    String? softwareVersion,
-    String? softwareName,
-    @NullableUriConverter() Uri? iconUrl,
-    @NullableUriConverter() Uri? faviconUrl,
-    String? themeColor,
-  }) = _UserInstanceInfo;
-
+@JsonSerializable()
+class const UserInstanceInfo({
+  final String? name,
+  final String? softwareVersion,
+  final String? softwareName,
+  @NullableUriConverter() final Uri? iconUrl,
+  @NullableUriConverter() final Uri? faviconUrl,
+  final String? themeColor,
+}) with _$UserInstanceInfo {
   factory fromJson(Map<String, Object?> json) =>
       _$UserInstanceInfoFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UserInstanceInfoToJson(this);
 }
 
 @freezed
-abstract class UserBadgeRole with _$UserBadgeRole {
-  const factory({
-    required String name,
-    @NullableUriConverter() required Uri? iconUrl,
-  }) = _UserBadgeRole;
+@JsonSerializable()
+class const UserBadgeRole({
+  required final String name,
+  @NullableUriConverter() required final Uri? iconUrl,
+}) with _$UserBadgeRole {
   factory fromJson(Map<String, Object?> json) => _$UserBadgeRoleFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UserBadgeRoleToJson(this);
 }
 
 sealed class HideBefore;
@@ -490,110 +508,119 @@ class const HideBeforeDuration(final Duration duration) implements HideBefore;
 class const HideBeforeDateTime(final DateTime date) implements HideBefore;
 
 @freezed
-abstract class UserRole with _$UserRole {
-  const factory({
-    required String id,
-    required String name,
-    String? color,
-    @NullableUriConverter() Uri? iconUrl,
-    String? description,
-    required bool isModerator,
-    required bool isAdministrator,
-  }) = _UserRole;
+@JsonSerializable()
+class const UserRole({
+  required final String id,
+  required final String name,
+  final String? color,
+  @NullableUriConverter() final Uri? iconUrl,
+  final String? description,
+  required final bool isModerator,
+  required final bool isAdministrator,
+}) with _$UserRole {
   factory fromJson(Map<String, Object?> json) => _$UserRoleFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UserRoleToJson(this);
 }
 
 @freezed
-abstract class UserAchievement with _$UserAchievement {
-  const factory({
-    required String name,
-    @EpocTimeDateTimeConverter() required DateTime unlockedAt,
-  }) = _UserAchievement;
-
+@JsonSerializable()
+class const UserAchievement({
+  required final String name,
+  @EpocTimeDateTimeConverter() required final DateTime unlockedAt,
+}) with _$UserAchievement {
   factory fromJson(Map<String, Object?> json) =>
       _$UserAchievementFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UserAchievementToJson(this);
 }
 
 @freezed
-abstract class UserPolicies with _$UserPolicies {
-  const factory({
-    bool? gtlAvailable,
-    bool? ltlAvailable,
-    bool? canPublicNote,
-    int? mentionLimit,
-    bool? canEditNote,
-    bool? canScheduleNote, // MisskeyIO
-    int? scheduleNoteLimit, // MisskeyIO
-    int? scheduleNoteMaxDays, // MisskeyIO
-    bool? canInvite,
-    int? inviteLimit,
-    int? inviteLimitCycle,
-    int? inviteExpirationTime,
-    bool? canManageCustomEmojis,
-    bool? canSearchNotes,
-    bool? canUseTranslator,
-    bool? canHideAds,
-    int? driveCapacityMb,
-    int? maxFileSizeMb,
-    List<String>? uploadableFileTypes,
-    bool? alwaysMarkNsfw,
-    bool? canUpdateBioMedia,
-    int? pinLimit,
-    int? antennaLimit,
-    int? wordMuteLimit,
-    int? webhookLimit,
-    int? clipLimit,
-    int? noteEachClipsLimit,
-    int? userListLimit,
-    int? userEachUserListsLimit,
-    int? rateLimitFactor,
-    int? avatarDecorationLimit,
-    bool? canImportAntennas,
-    bool? canImportBlocking,
-    bool? canImportFollowing,
-    bool? canImportMuting,
-    bool? canImportUserLists,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    ChatAvailability? chatAvailability,
-    int? noteDraftLimit,
-    int? scheduledNoteLimit,
-    bool? watermarkAvailable,
-    int? mutualLinkSectionLimit, // MisskeyIO
-    int? mutualLinkLimit, // MisskeyIO
-    int? scheduleNoteMax, // CherryPick
-  }) = _UserPolicies;
-
+@JsonSerializable()
+class const UserPolicies({
+  final bool? gtlAvailable,
+  final bool? ltlAvailable,
+  final bool? canPublicNote,
+  final int? mentionLimit,
+  final bool? canEditNote,
+  final bool? canScheduleNote, // MisskeyIO
+  final int? scheduleNoteLimit, // MisskeyIO
+  final int? scheduleNoteMaxDays, // MisskeyIO
+  final bool? canInvite,
+  final int? inviteLimit,
+  final int? inviteLimitCycle,
+  final int? inviteExpirationTime,
+  final bool? canManageCustomEmojis,
+  final bool? canSearchNotes,
+  final bool? canUseTranslator,
+  final bool? canHideAds,
+  final int? driveCapacityMb,
+  final int? maxFileSizeMb,
+  final List<String>? uploadableFileTypes,
+  final bool? alwaysMarkNsfw,
+  final bool? canUpdateBioMedia,
+  final int? pinLimit,
+  final int? antennaLimit,
+  final int? wordMuteLimit,
+  final int? webhookLimit,
+  final int? clipLimit,
+  final int? noteEachClipsLimit,
+  final int? userListLimit,
+  final int? userEachUserListsLimit,
+  final int? rateLimitFactor,
+  final int? avatarDecorationLimit,
+  final bool? canImportAntennas,
+  final bool? canImportBlocking,
+  final bool? canImportFollowing,
+  final bool? canImportMuting,
+  final bool? canImportUserLists,
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final ChatAvailability? chatAvailability,
+  final int? noteDraftLimit,
+  final int? scheduledNoteLimit,
+  final bool? watermarkAvailable,
+  final int? mutualLinkSectionLimit, // MisskeyIO
+  final int? mutualLinkLimit, // MisskeyIO
+  final int? scheduleNoteMax, // CherryPick
+}) with _$UserPolicies {
   factory fromJson(Map<String, Object?> json) => _$UserPoliciesFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UserPoliciesToJson(this);
 }
 
 @freezed
-abstract class UserField with _$UserField {
-  const factory({required String name, required String value}) = _UserField;
-
+@JsonSerializable()
+class const UserField({required final String name, required final String value})
+    with _$UserField {
   factory fromJson(Map<String, Object?> json) => _$UserFieldFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UserFieldToJson(this);
 }
 
 @freezed
-abstract class MutualLinkSection with _$MutualLinkSection {
-  const factory({String? name, required List<MutualLink> mutualLinks}) =
-      _MutualLinkSection;
-
+@JsonSerializable()
+class const MutualLinkSection({
+  final String? name,
+  required final List<MutualLink> mutualLinks,
+}) with _$MutualLinkSection {
   factory fromJson(Map<String, Object?> json) =>
       _$MutualLinkSectionFromJson(json);
+
+  Map<String, dynamic> toJson() => _$MutualLinkSectionToJson(this);
 }
 
 @freezed
-abstract class MutualLink with _$MutualLink {
-  const factory({
-    required String id,
-    required String url,
-    required String fileId,
-    String? description,
-    String? imgSrc,
-  }) = _MutualLink;
-
+@JsonSerializable()
+class const MutualLink({
+  required final String id,
+  required final String url,
+  required final String fileId,
+  final String? description,
+  final String? imgSrc,
+}) with _$MutualLink {
   factory fromJson(Map<String, Object?> json) => _$MutualLinkFromJson(json);
+
+  Map<String, dynamic> toJson() => _$MutualLinkToJson(this);
 }
 
 enum ChatScope { everyone, followers, following, mutual, none }
@@ -603,45 +630,51 @@ enum Notify { normal, none }
 enum TwoFactorBackupCodesStock { full, partial, none }
 
 @freezed
-abstract class MuteWord with _$MuteWord {
-  const factory({String? regExp, List<String>? content}) = _MuteWord;
-
+@JsonSerializable()
+class const MuteWord({final String? regExp, final List<String>? content})
+    with _$MuteWord {
   factory fromJson(Map<String, Object?> json) => _$MuteWordFromJson(json);
+
+  Map<String, dynamic> toJson() => _$MuteWordToJson(this);
 }
 
 @freezed
-abstract class NotificationRecieveConfigs with _$NotificationRecieveConfigs {
-  const factory({
-    NotificationRecieveConfig? note,
-    NotificationRecieveConfig? follow,
-    NotificationRecieveConfig? mention,
-    NotificationRecieveConfig? reply,
-    NotificationRecieveConfig? renote,
-    NotificationRecieveConfig? quote,
-    NotificationRecieveConfig? reaction,
-    NotificationRecieveConfig? pollEnded,
-    NotificationRecieveConfig? scheduledNotePosted,
-    NotificationRecieveConfig? scheduledNotePostFailed,
-    NotificationRecieveConfig? receiveFollowRequest,
-    NotificationRecieveConfig? followRequestAccepted,
-    NotificationRecieveConfig? roleAssigned,
-    NotificationRecieveConfig? chatRoomInvitationReceived,
-    NotificationRecieveConfig? achievementEarned,
-    NotificationRecieveConfig? app,
-    NotificationRecieveConfig? test,
-  }) = _NotificationRecieveConfigs;
-
+@JsonSerializable()
+class const NotificationRecieveConfigs({
+  final NotificationRecieveConfig? note,
+  final NotificationRecieveConfig? follow,
+  final NotificationRecieveConfig? mention,
+  final NotificationRecieveConfig? reply,
+  final NotificationRecieveConfig? renote,
+  final NotificationRecieveConfig? quote,
+  final NotificationRecieveConfig? reaction,
+  final NotificationRecieveConfig? pollEnded,
+  final NotificationRecieveConfig? scheduledNotePosted,
+  final NotificationRecieveConfig? scheduledNotePostFailed,
+  final NotificationRecieveConfig? receiveFollowRequest,
+  final NotificationRecieveConfig? followRequestAccepted,
+  final NotificationRecieveConfig? roleAssigned,
+  final NotificationRecieveConfig? chatRoomInvitationReceived,
+  final NotificationRecieveConfig? achievementEarned,
+  final NotificationRecieveConfig? app,
+  final NotificationRecieveConfig? test,
+}) with _$NotificationRecieveConfigs {
   factory fromJson(Map<String, Object?> json) =>
       _$NotificationRecieveConfigsFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NotificationRecieveConfigsToJson(this);
 }
 
 @freezed
-abstract class NotificationRecieveConfig with _$NotificationRecieveConfig {
-  const factory({required String type, String? userListId}) =
-      _NotificationRecieveConfig;
-
+@JsonSerializable()
+class const NotificationRecieveConfig({
+  required final String type,
+  final String? userListId,
+}) with _$NotificationRecieveConfig {
   factory fromJson(Map<String, Object?> json) =>
       _$NotificationRecieveConfigFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NotificationRecieveConfigToJson(this);
 }
 
 enum NotificationRecieveConfigType {

@@ -4,9 +4,11 @@ part 'antennas_delete_request.freezed.dart';
 part 'antennas_delete_request.g.dart';
 
 @freezed
-abstract class AntennasDeleteRequest with _$AntennasDeleteRequest {
-  const factory({required String antennaId}) = _AntennasDeleteRequest;
-
+@JsonSerializable()
+class const AntennasDeleteRequest({required final String antennaId})
+    with _$AntennasDeleteRequest {
   factory fromJson(Map<String, Object?> json) =>
       _$AntennasDeleteRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$AntennasDeleteRequestToJson(this);
 }

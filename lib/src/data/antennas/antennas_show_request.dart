@@ -4,9 +4,11 @@ part 'antennas_show_request.freezed.dart';
 part 'antennas_show_request.g.dart';
 
 @freezed
-abstract class AntennasShowRequest with _$AntennasShowRequest {
-  const factory({required String antennaId}) = _AntennasShowRequest;
-
+@JsonSerializable()
+class const AntennasShowRequest({required final String antennaId})
+    with _$AntennasShowRequest {
   factory fromJson(Map<String, Object?> json) =>
       _$AntennasShowRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$AntennasShowRequestToJson(this);
 }

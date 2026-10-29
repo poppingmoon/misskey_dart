@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$DriveFilesShowRequest {
 
- String? get fileId; String? get url;
+
 /// Create a copy of DriveFilesShowRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $DriveFilesShowRequestCopyWith<DriveFilesShowRequest> get copyWith => _$DriveFilesShowRequestCopyWithImpl<DriveFilesShowRequest>(this as DriveFilesShowRequest, _$identity);
 
-  /// Serializes this DriveFilesShowRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -96,11 +94,10 @@ extension DriveFilesShowRequestPatterns on DriveFilesShowRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _DriveFilesShowRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _DriveFilesShowRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -118,11 +115,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _DriveFilesShowRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _DriveFilesShowRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -139,11 +135,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _DriveFilesShowRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _DriveFilesShowRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -160,10 +155,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? fileId,  String? url)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _DriveFilesShowRequest() when $default != null:
-return $default(_that.fileId,_that.url);case _:
+case _:
   return orElse();
 
 }
@@ -181,10 +175,9 @@ return $default(_that.fileId,_that.url);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? fileId,  String? url)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _DriveFilesShowRequest():
-return $default(_that.fileId,_that.url);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -201,87 +194,13 @@ return $default(_that.fileId,_that.url);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? fileId,  String? url)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _DriveFilesShowRequest() when $default != null:
-return $default(_that.fileId,_that.url);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _DriveFilesShowRequest implements DriveFilesShowRequest {
-  const _DriveFilesShowRequest({this.fileId, this.url});
-  factory _DriveFilesShowRequest.fromJson(Map<String, dynamic> json) => _$DriveFilesShowRequestFromJson(json);
-
-@override final  String? fileId;
-@override final  String? url;
-
-/// Create a copy of DriveFilesShowRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$DriveFilesShowRequestCopyWith<_DriveFilesShowRequest> get copyWith => __$DriveFilesShowRequestCopyWithImpl<_DriveFilesShowRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$DriveFilesShowRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _DriveFilesShowRequest&&(identical(other.fileId, fileId) || other.fileId == fileId)&&(identical(other.url, url) || other.url == url));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,fileId,url);
-}
-
-@override
-String toString() {
-    return 'DriveFilesShowRequest(fileId: $fileId, url: $url)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$DriveFilesShowRequestCopyWith<$Res> implements $DriveFilesShowRequestCopyWith<$Res> {
-  factory _$DriveFilesShowRequestCopyWith(_DriveFilesShowRequest value, $Res Function(_DriveFilesShowRequest) _then) = __$DriveFilesShowRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String? fileId, String? url
-});
-
-
-
-
-}
-/// @nodoc
-class __$DriveFilesShowRequestCopyWithImpl<$Res>
-    implements _$DriveFilesShowRequestCopyWith<$Res> {
-  __$DriveFilesShowRequestCopyWithImpl(this._self, this._then);
-
-  final _DriveFilesShowRequest _self;
-  final $Res Function(_DriveFilesShowRequest) _then;
-
-/// Create a copy of DriveFilesShowRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? fileId = freezed,Object? url = freezed,}) {
-  return _then(_DriveFilesShowRequest(
-fileId: freezed == fileId ? _self.fileId : fileId // ignore: cast_nullable_to_non_nullable
-as String?,url: freezed == url ? _self.url : url // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
 
 }
 

@@ -12,26 +12,17 @@ part of 'broadcast_event.dart';
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
-BroadcastEvent _$BroadcastEventFromJson(
-  Map<String, dynamic> json
-) {
-    return _BroadcastResponse.fromJson(
-      json
-    );
-}
 
 /// @nodoc
 mixin _$BroadcastEvent {
 
-@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) BroadcastEventType? get type; Map<String, dynamic> get body;
+
 /// Create a copy of BroadcastEvent
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $BroadcastEventCopyWith<BroadcastEvent> get copyWith => _$BroadcastEventCopyWithImpl<BroadcastEvent>(this as BroadcastEvent, _$identity);
 
-  /// Serializes this BroadcastEvent to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -103,11 +94,10 @@ extension BroadcastEventPatterns on BroadcastEvent {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _BroadcastResponse value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _BroadcastResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -125,11 +115,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _BroadcastResponse value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _BroadcastResponse():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -146,11 +135,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _BroadcastResponse value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _BroadcastResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -167,10 +155,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  BroadcastEventType? type,  Map<String, dynamic> body)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _BroadcastResponse() when $default != null:
-return $default(_that.type,_that.body);case _:
+case _:
   return orElse();
 
 }
@@ -188,10 +175,9 @@ return $default(_that.type,_that.body);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  BroadcastEventType? type,  Map<String, dynamic> body)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _BroadcastResponse():
-return $default(_that.type,_that.body);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -208,93 +194,13 @@ return $default(_that.type,_that.body);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  BroadcastEventType? type,  Map<String, dynamic> body)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _BroadcastResponse() when $default != null:
-return $default(_that.type,_that.body);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _BroadcastResponse implements BroadcastEvent {
-  const _BroadcastResponse({@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type, required  Map<String, dynamic> body}): _body = body;
-  factory _BroadcastResponse.fromJson(Map<String, dynamic> json) => _$BroadcastResponseFromJson(json);
-
-@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  BroadcastEventType? type;
- final  Map<String, dynamic> _body;
-@override Map<String, dynamic> get body {
-  if (_body is EqualUnmodifiableMapView) return _body;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableMapView(_body);
-}
-
-
-/// Create a copy of BroadcastEvent
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$BroadcastResponseCopyWith<_BroadcastResponse> get copyWith => __$BroadcastResponseCopyWithImpl<_BroadcastResponse>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$BroadcastResponseToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _BroadcastResponse&&(identical(other.type, type) || other.type == type)&&const DeepCollectionEquality().equals(other.body, _body));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,type,const DeepCollectionEquality().hash(_body));
-}
-
-@override
-String toString() {
-    return 'BroadcastEvent(type: $type, body: $body)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$BroadcastResponseCopyWith<$Res> implements $BroadcastEventCopyWith<$Res> {
-  factory _$BroadcastResponseCopyWith(_BroadcastResponse value, $Res Function(_BroadcastResponse) _then) = __$BroadcastResponseCopyWithImpl;
-@override @useResult
-$Res call({
-@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) BroadcastEventType? type, Map<String, dynamic> body
-});
-
-
-
-
-}
-/// @nodoc
-class __$BroadcastResponseCopyWithImpl<$Res>
-    implements _$BroadcastResponseCopyWith<$Res> {
-  __$BroadcastResponseCopyWithImpl(this._self, this._then);
-
-  final _BroadcastResponse _self;
-  final $Res Function(_BroadcastResponse) _then;
-
-/// Create a copy of BroadcastEvent
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? type = freezed,Object? body = null,}) {
-  return _then(_BroadcastResponse(
-type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
-as BroadcastEventType?,body: null == body ? _self._body : body // ignore: cast_nullable_to_non_nullable
-as Map<String, dynamic>,
-  ));
-}
-
 
 }
 

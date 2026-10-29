@@ -6,9 +6,9 @@ part of 'chat_messages_room_timeline_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ChatMessagesRoomTimelineRequest _$ChatMessagesRoomTimelineRequestFromJson(
+ChatMessagesRoomTimelineRequest _$ChatMessagesRoomTimelineRequestFromJson(
   Map<String, dynamic> json,
-) => _ChatMessagesRoomTimelineRequest(
+) => ChatMessagesRoomTimelineRequest(
   roomId: json['roomId'] as String,
   limit: (json['limit'] as num?)?.toInt(),
   sinceId: json['sinceId'] as String?,
@@ -24,7 +24,7 @@ _ChatMessagesRoomTimelineRequest _$ChatMessagesRoomTimelineRequestFromJson(
 );
 
 Map<String, dynamic> _$ChatMessagesRoomTimelineRequestToJson(
-  _ChatMessagesRoomTimelineRequest instance,
+  ChatMessagesRoomTimelineRequest instance,
 ) => <String, dynamic>{
   'roomId': instance.roomId,
   'limit': instance.limit,

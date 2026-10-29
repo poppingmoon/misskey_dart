@@ -6,9 +6,9 @@ part of 'announcements_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_AnnouncementsRequest _$AnnouncementsRequestFromJson(
+AnnouncementsRequest _$AnnouncementsRequestFromJson(
   Map<String, dynamic> json,
-) => _AnnouncementsRequest(
+) => AnnouncementsRequest(
   limit: (json['limit'] as num?)?.toInt(),
   withUnreads: json['withUnreads'] as bool?,
   isActive: json['isActive'] as bool?,
@@ -26,7 +26,7 @@ _AnnouncementsRequest _$AnnouncementsRequestFromJson(
 );
 
 Map<String, dynamic> _$AnnouncementsRequestToJson(
-  _AnnouncementsRequest instance,
+  AnnouncementsRequest instance,
 ) => <String, dynamic>{
   'limit': instance.limit,
   'withUnreads': instance.withUnreads,

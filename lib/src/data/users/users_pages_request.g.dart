@@ -6,8 +6,8 @@ part of 'users_pages_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_UsersPagesRequest _$UsersPagesRequestFromJson(Map<String, dynamic> json) =>
-    _UsersPagesRequest(
+UsersPagesRequest _$UsersPagesRequestFromJson(Map<String, dynamic> json) =>
+    UsersPagesRequest(
       userId: json['userId'] as String,
       limit: (json['limit'] as num?)?.toInt(),
       sinceId: json['sinceId'] as String?,
@@ -22,7 +22,7 @@ _UsersPagesRequest _$UsersPagesRequestFromJson(Map<String, dynamic> json) =>
       ),
     );
 
-Map<String, dynamic> _$UsersPagesRequestToJson(_UsersPagesRequest instance) =>
+Map<String, dynamic> _$UsersPagesRequestToJson(UsersPagesRequest instance) =>
     <String, dynamic>{
       'userId': instance.userId,
       'limit': instance.limit,

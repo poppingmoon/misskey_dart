@@ -16,16 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$NotesStateResponse {
 
- bool get isFavorited; bool get isMutedThread;/// This property is already removed
- bool? get isWatching;
+
 /// Create a copy of NotesStateResponse
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $NotesStateResponseCopyWith<NotesStateResponse> get copyWith => _$NotesStateResponseCopyWithImpl<NotesStateResponse>(this as NotesStateResponse, _$identity);
 
-  /// Serializes this NotesStateResponse to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -98,11 +95,10 @@ extension NotesStateResponsePatterns on NotesStateResponse {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _NotesStateResponse value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _NotesStateResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -120,11 +116,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _NotesStateResponse value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _NotesStateResponse():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -141,11 +136,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _NotesStateResponse value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _NotesStateResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -162,10 +156,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( bool isFavorited,  bool isMutedThread,  bool? isWatching)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _NotesStateResponse() when $default != null:
-return $default(_that.isFavorited,_that.isMutedThread,_that.isWatching);case _:
+case _:
   return orElse();
 
 }
@@ -183,10 +176,9 @@ return $default(_that.isFavorited,_that.isMutedThread,_that.isWatching);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( bool isFavorited,  bool isMutedThread,  bool? isWatching)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _NotesStateResponse():
-return $default(_that.isFavorited,_that.isMutedThread,_that.isWatching);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -203,90 +195,13 @@ return $default(_that.isFavorited,_that.isMutedThread,_that.isWatching);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( bool isFavorited,  bool isMutedThread,  bool? isWatching)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _NotesStateResponse() when $default != null:
-return $default(_that.isFavorited,_that.isMutedThread,_that.isWatching);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _NotesStateResponse implements NotesStateResponse {
-  const _NotesStateResponse({required this.isFavorited, required this.isMutedThread, this.isWatching});
-  factory _NotesStateResponse.fromJson(Map<String, dynamic> json) => _$NotesStateResponseFromJson(json);
-
-@override final  bool isFavorited;
-@override final  bool isMutedThread;
-/// This property is already removed
-@override final  bool? isWatching;
-
-/// Create a copy of NotesStateResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$NotesStateResponseCopyWith<_NotesStateResponse> get copyWith => __$NotesStateResponseCopyWithImpl<_NotesStateResponse>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$NotesStateResponseToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesStateResponse&&(identical(other.isFavorited, isFavorited) || other.isFavorited == isFavorited)&&(identical(other.isMutedThread, isMutedThread) || other.isMutedThread == isMutedThread)&&(identical(other.isWatching, isWatching) || other.isWatching == isWatching));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,isFavorited,isMutedThread,isWatching);
-}
-
-@override
-String toString() {
-    return 'NotesStateResponse(isFavorited: $isFavorited, isMutedThread: $isMutedThread, isWatching: $isWatching)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$NotesStateResponseCopyWith<$Res> implements $NotesStateResponseCopyWith<$Res> {
-  factory _$NotesStateResponseCopyWith(_NotesStateResponse value, $Res Function(_NotesStateResponse) _then) = __$NotesStateResponseCopyWithImpl;
-@override @useResult
-$Res call({
- bool isFavorited, bool isMutedThread, bool? isWatching
-});
-
-
-
-
-}
-/// @nodoc
-class __$NotesStateResponseCopyWithImpl<$Res>
-    implements _$NotesStateResponseCopyWith<$Res> {
-  __$NotesStateResponseCopyWithImpl(this._self, this._then);
-
-  final _NotesStateResponse _self;
-  final $Res Function(_NotesStateResponse) _then;
-
-/// Create a copy of NotesStateResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? isFavorited = null,Object? isMutedThread = null,Object? isWatching = freezed,}) {
-  return _then(_NotesStateResponse(
-isFavorited: null == isFavorited ? _self.isFavorited : isFavorited // ignore: cast_nullable_to_non_nullable
-as bool,isMutedThread: null == isMutedThread ? _self.isMutedThread : isMutedThread // ignore: cast_nullable_to_non_nullable
-as bool,isWatching: freezed == isWatching ? _self.isWatching : isWatching // ignore: cast_nullable_to_non_nullable
-as bool?,
-  ));
-}
-
 
 }
 

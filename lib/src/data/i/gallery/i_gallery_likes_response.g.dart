@@ -6,13 +6,13 @@ part of 'i_gallery_likes_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_IGalleryLikesResponse _$IGalleryLikesResponseFromJson(
+IGalleryLikesResponse _$IGalleryLikesResponseFromJson(
   Map<String, dynamic> json,
-) => _IGalleryLikesResponse(
+) => IGalleryLikesResponse(
   id: json['id'] as String,
   post: GalleryPost.fromJson(json['post'] as Map<String, dynamic>),
 );
 
 Map<String, dynamic> _$IGalleryLikesResponseToJson(
-  _IGalleryLikesResponse instance,
+  IGalleryLikesResponse instance,
 ) => <String, dynamic>{'id': instance.id, 'post': instance.post.toJson()};

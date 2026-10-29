@@ -6,17 +6,18 @@ part 'channels_search_request.freezed.dart';
 part 'channels_search_request.g.dart';
 
 @freezed
-abstract class ChannelsSearchRequest with _$ChannelsSearchRequest {
-  const factory({
-    required String query,
-    ChannelSearchType? type,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-    @Assert('limit > 0') int? limit,
-  }) = _ChannelsSearchRequest;
-
+@JsonSerializable()
+class const ChannelsSearchRequest({
+  required final String query,
+  final ChannelSearchType? type,
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
+  @Assert('limit > 0') final int? limit,
+}) with _$ChannelsSearchRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$ChannelsSearchRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ChannelsSearchRequestToJson(this);
 }

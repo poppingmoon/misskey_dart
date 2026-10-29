@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$UsersUpdateMemoRequest {
 
- String get userId; String get memo;
+
 /// Create a copy of UsersUpdateMemoRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $UsersUpdateMemoRequestCopyWith<UsersUpdateMemoRequest> get copyWith => _$UsersUpdateMemoRequestCopyWithImpl<UsersUpdateMemoRequest>(this as UsersUpdateMemoRequest, _$identity);
 
-  /// Serializes this UsersUpdateMemoRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -96,11 +94,10 @@ extension UsersUpdateMemoRequestPatterns on UsersUpdateMemoRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UsersUpdateMemoRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _UsersUpdateMemoRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -118,11 +115,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UsersUpdateMemoRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UsersUpdateMemoRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -139,11 +135,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UsersUpdateMemoRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UsersUpdateMemoRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -160,10 +155,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String userId,  String memo)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _UsersUpdateMemoRequest() when $default != null:
-return $default(_that.userId,_that.memo);case _:
+case _:
   return orElse();
 
 }
@@ -181,10 +175,9 @@ return $default(_that.userId,_that.memo);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String userId,  String memo)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UsersUpdateMemoRequest():
-return $default(_that.userId,_that.memo);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -201,87 +194,13 @@ return $default(_that.userId,_that.memo);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String userId,  String memo)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UsersUpdateMemoRequest() when $default != null:
-return $default(_that.userId,_that.memo);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _UsersUpdateMemoRequest implements UsersUpdateMemoRequest {
-  const _UsersUpdateMemoRequest({required this.userId, required this.memo});
-  factory _UsersUpdateMemoRequest.fromJson(Map<String, dynamic> json) => _$UsersUpdateMemoRequestFromJson(json);
-
-@override final  String userId;
-@override final  String memo;
-
-/// Create a copy of UsersUpdateMemoRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$UsersUpdateMemoRequestCopyWith<_UsersUpdateMemoRequest> get copyWith => __$UsersUpdateMemoRequestCopyWithImpl<_UsersUpdateMemoRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$UsersUpdateMemoRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersUpdateMemoRequest&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.memo, memo) || other.memo == memo));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,userId,memo);
-}
-
-@override
-String toString() {
-    return 'UsersUpdateMemoRequest(userId: $userId, memo: $memo)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$UsersUpdateMemoRequestCopyWith<$Res> implements $UsersUpdateMemoRequestCopyWith<$Res> {
-  factory _$UsersUpdateMemoRequestCopyWith(_UsersUpdateMemoRequest value, $Res Function(_UsersUpdateMemoRequest) _then) = __$UsersUpdateMemoRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String userId, String memo
-});
-
-
-
-
-}
-/// @nodoc
-class __$UsersUpdateMemoRequestCopyWithImpl<$Res>
-    implements _$UsersUpdateMemoRequestCopyWith<$Res> {
-  __$UsersUpdateMemoRequestCopyWithImpl(this._self, this._then);
-
-  final _UsersUpdateMemoRequest _self;
-  final $Res Function(_UsersUpdateMemoRequest) _then;
-
-/// Create a copy of UsersUpdateMemoRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? userId = null,Object? memo = null,}) {
-  return _then(_UsersUpdateMemoRequest(
-userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
-as String,memo: null == memo ? _self.memo : memo // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

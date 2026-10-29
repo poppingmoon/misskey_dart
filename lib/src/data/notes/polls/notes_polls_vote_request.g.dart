@@ -6,13 +6,13 @@ part of 'notes_polls_vote_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_NotesPollsVoteRequest _$NotesPollsVoteRequestFromJson(
+NotesPollsVoteRequest _$NotesPollsVoteRequestFromJson(
   Map<String, dynamic> json,
-) => _NotesPollsVoteRequest(
+) => NotesPollsVoteRequest(
   noteId: json['noteId'] as String,
   choice: (json['choice'] as num).toInt(),
 );
 
 Map<String, dynamic> _$NotesPollsVoteRequestToJson(
-  _NotesPollsVoteRequest instance,
+  NotesPollsVoteRequest instance,
 ) => <String, dynamic>{'noteId': instance.noteId, 'choice': instance.choice};

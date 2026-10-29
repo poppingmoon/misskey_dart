@@ -12,26 +12,17 @@ part of 'users_report_abuse_request.dart';
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
-UsersReportAbuseRequest _$UsersReportAbuseRequestFromJson(
-  Map<String, dynamic> json
-) {
-    return _UsersReportAbuse.fromJson(
-      json
-    );
-}
 
 /// @nodoc
 mixin _$UsersReportAbuseRequest {
 
- String get userId; String get comment;
+
 /// Create a copy of UsersReportAbuseRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $UsersReportAbuseRequestCopyWith<UsersReportAbuseRequest> get copyWith => _$UsersReportAbuseRequestCopyWithImpl<UsersReportAbuseRequest>(this as UsersReportAbuseRequest, _$identity);
 
-  /// Serializes this UsersReportAbuseRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -103,11 +94,10 @@ extension UsersReportAbuseRequestPatterns on UsersReportAbuseRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UsersReportAbuse value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _UsersReportAbuse() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -125,11 +115,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UsersReportAbuse value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UsersReportAbuse():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -146,11 +135,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UsersReportAbuse value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UsersReportAbuse() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -167,10 +155,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String userId,  String comment)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _UsersReportAbuse() when $default != null:
-return $default(_that.userId,_that.comment);case _:
+case _:
   return orElse();
 
 }
@@ -188,10 +175,9 @@ return $default(_that.userId,_that.comment);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String userId,  String comment)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UsersReportAbuse():
-return $default(_that.userId,_that.comment);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -208,87 +194,13 @@ return $default(_that.userId,_that.comment);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String userId,  String comment)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UsersReportAbuse() when $default != null:
-return $default(_that.userId,_that.comment);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _UsersReportAbuse implements UsersReportAbuseRequest {
-  const _UsersReportAbuse({required this.userId, required this.comment});
-  factory _UsersReportAbuse.fromJson(Map<String, dynamic> json) => _$UsersReportAbuseFromJson(json);
-
-@override final  String userId;
-@override final  String comment;
-
-/// Create a copy of UsersReportAbuseRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$UsersReportAbuseCopyWith<_UsersReportAbuse> get copyWith => __$UsersReportAbuseCopyWithImpl<_UsersReportAbuse>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$UsersReportAbuseToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersReportAbuse&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.comment, comment) || other.comment == comment));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,userId,comment);
-}
-
-@override
-String toString() {
-    return 'UsersReportAbuseRequest(userId: $userId, comment: $comment)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$UsersReportAbuseCopyWith<$Res> implements $UsersReportAbuseRequestCopyWith<$Res> {
-  factory _$UsersReportAbuseCopyWith(_UsersReportAbuse value, $Res Function(_UsersReportAbuse) _then) = __$UsersReportAbuseCopyWithImpl;
-@override @useResult
-$Res call({
- String userId, String comment
-});
-
-
-
-
-}
-/// @nodoc
-class __$UsersReportAbuseCopyWithImpl<$Res>
-    implements _$UsersReportAbuseCopyWith<$Res> {
-  __$UsersReportAbuseCopyWithImpl(this._self, this._then);
-
-  final _UsersReportAbuse _self;
-  final $Res Function(_UsersReportAbuse) _then;
-
-/// Create a copy of UsersReportAbuseRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? userId = null,Object? comment = null,}) {
-  return _then(_UsersReportAbuse(
-userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
-as String,comment: null == comment ? _self.comment : comment // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

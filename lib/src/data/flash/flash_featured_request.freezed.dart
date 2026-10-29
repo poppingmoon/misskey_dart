@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$FlashFeaturedRequest {
 
- int? get offset; int? get limit;
+
 /// Create a copy of FlashFeaturedRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $FlashFeaturedRequestCopyWith<FlashFeaturedRequest> get copyWith => _$FlashFeaturedRequestCopyWithImpl<FlashFeaturedRequest>(this as FlashFeaturedRequest, _$identity);
 
-  /// Serializes this FlashFeaturedRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -96,11 +94,10 @@ extension FlashFeaturedRequestPatterns on FlashFeaturedRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _FlashFeaturedRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _FlashFeaturedRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -118,11 +115,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _FlashFeaturedRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _FlashFeaturedRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -139,11 +135,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _FlashFeaturedRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _FlashFeaturedRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -160,10 +155,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? offset,  int? limit)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _FlashFeaturedRequest() when $default != null:
-return $default(_that.offset,_that.limit);case _:
+case _:
   return orElse();
 
 }
@@ -181,10 +175,9 @@ return $default(_that.offset,_that.limit);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? offset,  int? limit)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _FlashFeaturedRequest():
-return $default(_that.offset,_that.limit);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -201,87 +194,13 @@ return $default(_that.offset,_that.limit);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? offset,  int? limit)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _FlashFeaturedRequest() when $default != null:
-return $default(_that.offset,_that.limit);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _FlashFeaturedRequest implements FlashFeaturedRequest {
-  const _FlashFeaturedRequest({this.offset, this.limit});
-  factory _FlashFeaturedRequest.fromJson(Map<String, dynamic> json) => _$FlashFeaturedRequestFromJson(json);
-
-@override final  int? offset;
-@override final  int? limit;
-
-/// Create a copy of FlashFeaturedRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$FlashFeaturedRequestCopyWith<_FlashFeaturedRequest> get copyWith => __$FlashFeaturedRequestCopyWithImpl<_FlashFeaturedRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$FlashFeaturedRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _FlashFeaturedRequest&&(identical(other.offset, offset) || other.offset == offset)&&(identical(other.limit, limit) || other.limit == limit));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,offset,limit);
-}
-
-@override
-String toString() {
-    return 'FlashFeaturedRequest(offset: $offset, limit: $limit)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$FlashFeaturedRequestCopyWith<$Res> implements $FlashFeaturedRequestCopyWith<$Res> {
-  factory _$FlashFeaturedRequestCopyWith(_FlashFeaturedRequest value, $Res Function(_FlashFeaturedRequest) _then) = __$FlashFeaturedRequestCopyWithImpl;
-@override @useResult
-$Res call({
- int? offset, int? limit
-});
-
-
-
-
-}
-/// @nodoc
-class __$FlashFeaturedRequestCopyWithImpl<$Res>
-    implements _$FlashFeaturedRequestCopyWith<$Res> {
-  __$FlashFeaturedRequestCopyWithImpl(this._self, this._then);
-
-  final _FlashFeaturedRequest _self;
-  final $Res Function(_FlashFeaturedRequest) _then;
-
-/// Create a copy of FlashFeaturedRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? offset = freezed,Object? limit = freezed,}) {
-  return _then(_FlashFeaturedRequest(
-offset: freezed == offset ? _self.offset : offset // ignore: cast_nullable_to_non_nullable
-as int?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,
-  ));
-}
-
 
 }
 

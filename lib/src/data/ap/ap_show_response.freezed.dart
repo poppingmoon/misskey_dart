@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ApShowResponse {
 
- String get type; Map<String, dynamic> get object;
+
 /// Create a copy of ApShowResponse
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $ApShowResponseCopyWith<ApShowResponse> get copyWith => _$ApShowResponseCopyWithImpl<ApShowResponse>(this as ApShowResponse, _$identity);
 
-  /// Serializes this ApShowResponse to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -96,11 +94,10 @@ extension ApShowResponsePatterns on ApShowResponse {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ApShowResponse value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _ApShowResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -118,11 +115,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ApShowResponse value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ApShowResponse():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -139,11 +135,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ApShowResponse value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ApShowResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -160,10 +155,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String type,  Map<String, dynamic> object)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _ApShowResponse() when $default != null:
-return $default(_that.type,_that.object);case _:
+case _:
   return orElse();
 
 }
@@ -181,10 +175,9 @@ return $default(_that.type,_that.object);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String type,  Map<String, dynamic> object)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ApShowResponse():
-return $default(_that.type,_that.object);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -201,93 +194,13 @@ return $default(_that.type,_that.object);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String type,  Map<String, dynamic> object)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ApShowResponse() when $default != null:
-return $default(_that.type,_that.object);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _ApShowResponse implements ApShowResponse {
-  const _ApShowResponse({required this.type, required  Map<String, dynamic> object}): _object = object;
-  factory _ApShowResponse.fromJson(Map<String, dynamic> json) => _$ApShowResponseFromJson(json);
-
-@override final  String type;
- final  Map<String, dynamic> _object;
-@override Map<String, dynamic> get object {
-  if (_object is EqualUnmodifiableMapView) return _object;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableMapView(_object);
-}
-
-
-/// Create a copy of ApShowResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ApShowResponseCopyWith<_ApShowResponse> get copyWith => __$ApShowResponseCopyWithImpl<_ApShowResponse>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$ApShowResponseToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ApShowResponse&&(identical(other.type, type) || other.type == type)&&const DeepCollectionEquality().equals(other.object, _object));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,type,const DeepCollectionEquality().hash(_object));
-}
-
-@override
-String toString() {
-    return 'ApShowResponse(type: $type, object: $object)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ApShowResponseCopyWith<$Res> implements $ApShowResponseCopyWith<$Res> {
-  factory _$ApShowResponseCopyWith(_ApShowResponse value, $Res Function(_ApShowResponse) _then) = __$ApShowResponseCopyWithImpl;
-@override @useResult
-$Res call({
- String type, Map<String, dynamic> object
-});
-
-
-
-
-}
-/// @nodoc
-class __$ApShowResponseCopyWithImpl<$Res>
-    implements _$ApShowResponseCopyWith<$Res> {
-  __$ApShowResponseCopyWithImpl(this._self, this._then);
-
-  final _ApShowResponse _self;
-  final $Res Function(_ApShowResponse) _then;
-
-/// Create a copy of ApShowResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? type = null,Object? object = null,}) {
-  return _then(_ApShowResponse(
-type: null == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
-as String,object: null == object ? _self._object : object // ignore: cast_nullable_to_non_nullable
-as Map<String, dynamic>,
-  ));
-}
-
 
 }
 

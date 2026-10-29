@@ -6,10 +6,10 @@ part of 'channels_favorite_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ChannelsFavoriteRequest _$ChannelsFavoriteRequestFromJson(
+ChannelsFavoriteRequest _$ChannelsFavoriteRequestFromJson(
   Map<String, dynamic> json,
-) => _ChannelsFavoriteRequest(channelId: json['channelId'] as String);
+) => ChannelsFavoriteRequest(channelId: json['channelId'] as String);
 
 Map<String, dynamic> _$ChannelsFavoriteRequestToJson(
-  _ChannelsFavoriteRequest instance,
+  ChannelsFavoriteRequest instance,
 ) => <String, dynamic>{'channelId': instance.channelId};

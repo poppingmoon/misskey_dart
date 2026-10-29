@@ -4,15 +4,16 @@ part 'drive_files_update_request.freezed.dart';
 part 'drive_files_update_request.g.dart';
 
 @freezed
-abstract class DriveFilesUpdateRequest with _$DriveFilesUpdateRequest {
-  const factory({
-    required String fileId,
-    String? folderId,
-    String? name,
-    bool? isSensitive,
-    String? comment,
-  }) = _DriveFilesUpdateRequest;
-
+@JsonSerializable()
+class const DriveFilesUpdateRequest({
+  required final String fileId,
+  final String? folderId,
+  final String? name,
+  final bool? isSensitive,
+  final String? comment,
+}) with _$DriveFilesUpdateRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$DriveFilesUpdateRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$DriveFilesUpdateRequestToJson(this);
 }

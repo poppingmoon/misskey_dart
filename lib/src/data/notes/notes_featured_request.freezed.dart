@@ -16,16 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$NotesFeaturedRequest {
 
- int? get limit;/// removed at 2023.10.0
- int? get offset; String? get untilId; String? get channelId;
+
 /// Create a copy of NotesFeaturedRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $NotesFeaturedRequestCopyWith<NotesFeaturedRequest> get copyWith => _$NotesFeaturedRequestCopyWithImpl<NotesFeaturedRequest>(this as NotesFeaturedRequest, _$identity);
 
-  /// Serializes this NotesFeaturedRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -99,11 +96,10 @@ extension NotesFeaturedRequestPatterns on NotesFeaturedRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _NotesFeaturedRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _NotesFeaturedRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -121,11 +117,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _NotesFeaturedRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _NotesFeaturedRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -142,11 +137,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _NotesFeaturedRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _NotesFeaturedRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -163,10 +157,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? limit,  int? offset,  String? untilId,  String? channelId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _NotesFeaturedRequest() when $default != null:
-return $default(_that.limit,_that.offset,_that.untilId,_that.channelId);case _:
+case _:
   return orElse();
 
 }
@@ -184,10 +177,9 @@ return $default(_that.limit,_that.offset,_that.untilId,_that.channelId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? limit,  int? offset,  String? untilId,  String? channelId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _NotesFeaturedRequest():
-return $default(_that.limit,_that.offset,_that.untilId,_that.channelId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -204,92 +196,13 @@ return $default(_that.limit,_that.offset,_that.untilId,_that.channelId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? limit,  int? offset,  String? untilId,  String? channelId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _NotesFeaturedRequest() when $default != null:
-return $default(_that.limit,_that.offset,_that.untilId,_that.channelId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _NotesFeaturedRequest implements NotesFeaturedRequest {
-  const _NotesFeaturedRequest({this.limit, this.offset, this.untilId, this.channelId});
-  factory _NotesFeaturedRequest.fromJson(Map<String, dynamic> json) => _$NotesFeaturedRequestFromJson(json);
-
-@override final  int? limit;
-/// removed at 2023.10.0
-@override final  int? offset;
-@override final  String? untilId;
-@override final  String? channelId;
-
-/// Create a copy of NotesFeaturedRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$NotesFeaturedRequestCopyWith<_NotesFeaturedRequest> get copyWith => __$NotesFeaturedRequestCopyWithImpl<_NotesFeaturedRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$NotesFeaturedRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesFeaturedRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.offset, offset) || other.offset == offset)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.channelId, channelId) || other.channelId == channelId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,limit,offset,untilId,channelId);
-}
-
-@override
-String toString() {
-    return 'NotesFeaturedRequest(limit: $limit, offset: $offset, untilId: $untilId, channelId: $channelId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$NotesFeaturedRequestCopyWith<$Res> implements $NotesFeaturedRequestCopyWith<$Res> {
-  factory _$NotesFeaturedRequestCopyWith(_NotesFeaturedRequest value, $Res Function(_NotesFeaturedRequest) _then) = __$NotesFeaturedRequestCopyWithImpl;
-@override @useResult
-$Res call({
- int? limit, int? offset, String? untilId, String? channelId
-});
-
-
-
-
-}
-/// @nodoc
-class __$NotesFeaturedRequestCopyWithImpl<$Res>
-    implements _$NotesFeaturedRequestCopyWith<$Res> {
-  __$NotesFeaturedRequestCopyWithImpl(this._self, this._then);
-
-  final _NotesFeaturedRequest _self;
-  final $Res Function(_NotesFeaturedRequest) _then;
-
-/// Create a copy of NotesFeaturedRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? limit = freezed,Object? offset = freezed,Object? untilId = freezed,Object? channelId = freezed,}) {
-  return _then(_NotesFeaturedRequest(
-limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,offset: freezed == offset ? _self.offset : offset // ignore: cast_nullable_to_non_nullable
-as int?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
-as String?,channelId: freezed == channelId ? _self.channelId : channelId // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
 
 }
 

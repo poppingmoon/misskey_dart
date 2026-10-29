@@ -6,7 +6,7 @@ part of 'chat_message.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ChatMessage _$ChatMessageFromJson(Map<String, dynamic> json) => _ChatMessage(
+ChatMessage _$ChatMessageFromJson(Map<String, dynamic> json) => ChatMessage(
   id: json['id'] as String,
   createdAt: const DateTimeConverter().fromJson(json['createdAt'] as String),
   text: json['text'] as String?,
@@ -34,7 +34,7 @@ _ChatMessage _$ChatMessageFromJson(Map<String, dynamic> json) => _ChatMessage(
       const [],
 );
 
-Map<String, dynamic> _$ChatMessageToJson(_ChatMessage instance) =>
+Map<String, dynamic> _$ChatMessageToJson(ChatMessage instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdAt': const DateTimeConverter().toJson(instance.createdAt),
@@ -51,8 +51,8 @@ Map<String, dynamic> _$ChatMessageToJson(_ChatMessage instance) =>
       'reactions': instance.reactions.map((e) => e.toJson()).toList(),
     };
 
-_ChatMessageReaction _$ChatMessageReactionFromJson(Map<String, dynamic> json) =>
-    _ChatMessageReaction(
+ChatMessageReaction _$ChatMessageReactionFromJson(Map<String, dynamic> json) =>
+    ChatMessageReaction(
       reaction: json['reaction'] as String,
       user: json['user'] == null
           ? null
@@ -60,7 +60,7 @@ _ChatMessageReaction _$ChatMessageReactionFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$ChatMessageReactionToJson(
-  _ChatMessageReaction instance,
+  ChatMessageReaction instance,
 ) => <String, dynamic>{
   'reaction': instance.reaction,
   'user': instance.user?.toJson(),

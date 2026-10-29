@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ClipsNotesRequest {
 
-@Assert('limit > 0') int? get limit; String get clipId; String? get sinceId; String? get untilId;@EpocTimeDateTimeConverter() DateTime? get sinceDate;@EpocTimeDateTimeConverter() DateTime? get untilDate;
+
 /// Create a copy of ClipsNotesRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $ClipsNotesRequestCopyWith<ClipsNotesRequest> get copyWith => _$ClipsNotesRequestCopyWithImpl<ClipsNotesRequest>(this as ClipsNotesRequest, _$identity);
 
-  /// Serializes this ClipsNotesRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -100,11 +98,10 @@ extension ClipsNotesRequestPatterns on ClipsNotesRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ClipsNotesRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _ClipsNotesRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -122,11 +119,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ClipsNotesRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ClipsNotesRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -143,11 +139,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ClipsNotesRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ClipsNotesRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -164,10 +159,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@Assert('limit > 0')  int? limit,  String clipId,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _ClipsNotesRequest() when $default != null:
-return $default(_that.limit,_that.clipId,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate);case _:
+case _:
   return orElse();
 
 }
@@ -185,10 +179,9 @@ return $default(_that.limit,_that.clipId,_that.sinceId,_that.untilId,_that.since
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@Assert('limit > 0')  int? limit,  String clipId,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ClipsNotesRequest():
-return $default(_that.limit,_that.clipId,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -205,95 +198,13 @@ return $default(_that.limit,_that.clipId,_that.sinceId,_that.untilId,_that.since
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@Assert('limit > 0')  int? limit,  String clipId,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ClipsNotesRequest() when $default != null:
-return $default(_that.limit,_that.clipId,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _ClipsNotesRequest implements ClipsNotesRequest {
-  const _ClipsNotesRequest({@Assert('limit > 0') this.limit, required this.clipId, this.sinceId, this.untilId, @EpocTimeDateTimeConverter() this.sinceDate, @EpocTimeDateTimeConverter() this.untilDate});
-  factory _ClipsNotesRequest.fromJson(Map<String, dynamic> json) => _$ClipsNotesRequestFromJson(json);
-
-@override@Assert('limit > 0') final  int? limit;
-@override final  String clipId;
-@override final  String? sinceId;
-@override final  String? untilId;
-@override@EpocTimeDateTimeConverter() final  DateTime? sinceDate;
-@override@EpocTimeDateTimeConverter() final  DateTime? untilDate;
-
-/// Create a copy of ClipsNotesRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ClipsNotesRequestCopyWith<_ClipsNotesRequest> get copyWith => __$ClipsNotesRequestCopyWithImpl<_ClipsNotesRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$ClipsNotesRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ClipsNotesRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.clipId, clipId) || other.clipId == clipId)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,limit,clipId,sinceId,untilId,sinceDate,untilDate);
-}
-
-@override
-String toString() {
-    return 'ClipsNotesRequest(limit: $limit, clipId: $clipId, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ClipsNotesRequestCopyWith<$Res> implements $ClipsNotesRequestCopyWith<$Res> {
-  factory _$ClipsNotesRequestCopyWith(_ClipsNotesRequest value, $Res Function(_ClipsNotesRequest) _then) = __$ClipsNotesRequestCopyWithImpl;
-@override @useResult
-$Res call({
-@Assert('limit > 0') int? limit, String clipId, String? sinceId, String? untilId,@EpocTimeDateTimeConverter() DateTime? sinceDate,@EpocTimeDateTimeConverter() DateTime? untilDate
-});
-
-
-
-
-}
-/// @nodoc
-class __$ClipsNotesRequestCopyWithImpl<$Res>
-    implements _$ClipsNotesRequestCopyWith<$Res> {
-  __$ClipsNotesRequestCopyWithImpl(this._self, this._then);
-
-  final _ClipsNotesRequest _self;
-  final $Res Function(_ClipsNotesRequest) _then;
-
-/// Create a copy of ClipsNotesRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? limit = freezed,Object? clipId = null,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,}) {
-  return _then(_ClipsNotesRequest(
-limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,clipId: null == clipId ? _self.clipId : clipId // ignore: cast_nullable_to_non_nullable
-as String,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
-as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
-as String?,sinceDate: freezed == sinceDate ? _self.sinceDate : sinceDate // ignore: cast_nullable_to_non_nullable
-as DateTime?,untilDate: freezed == untilDate ? _self.untilDate : untilDate // ignore: cast_nullable_to_non_nullable
-as DateTime?,
-  ));
-}
-
 
 }
 

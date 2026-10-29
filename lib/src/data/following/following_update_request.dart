@@ -5,13 +5,14 @@ part 'following_update_request.freezed.dart';
 part 'following_update_request.g.dart';
 
 @freezed
-abstract class FollowingUpdateRequest with _$FollowingUpdateRequest {
-  const factory({
-    required String userId,
-    FollowingUpdateAllNotifyType? notify,
-    bool? withReplies,
-  }) = _FollowingUpdateRequest;
-
+@JsonSerializable()
+class const FollowingUpdateRequest({
+  required final String userId,
+  final FollowingUpdateAllNotifyType? notify,
+  final bool? withReplies,
+}) with _$FollowingUpdateRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$FollowingUpdateRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$FollowingUpdateRequestToJson(this);
 }

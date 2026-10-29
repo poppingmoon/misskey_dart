@@ -5,16 +5,17 @@ part 'roles_notes_request.freezed.dart';
 part 'roles_notes_request.g.dart';
 
 @freezed
-abstract class RolesNotesRequest with _$RolesNotesRequest {
-  const factory({
-    required String roleId,
-    int? limit,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-  }) = _RolesNotesRequest;
-
+@JsonSerializable()
+class const RolesNotesRequest({
+  required final String roleId,
+  final int? limit,
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
+}) with _$RolesNotesRequest {
   factory fromJson(Map<String, Object?> json) =>
       _$RolesNotesRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$RolesNotesRequestToJson(this);
 }

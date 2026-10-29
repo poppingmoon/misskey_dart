@@ -6,14 +6,15 @@ part 'muting.freezed.dart';
 part 'muting.g.dart';
 
 @freezed
-abstract class Muting with _$Muting {
-  const factory({
-    required String id,
-    @DateTimeConverter() required DateTime createdAt,
-    @NullableDateTimeConverter() DateTime? expiresAt,
-    required String muteeId,
-    required UserDetailedNotMe mutee,
-  }) = _Muting;
-
+@JsonSerializable()
+class const Muting({
+  required final String id,
+  @DateTimeConverter() required final DateTime createdAt,
+  @NullableDateTimeConverter() final DateTime? expiresAt,
+  required final String muteeId,
+  required final UserDetailedNotMe mutee,
+}) with _$Muting {
   factory fromJson(Map<String, dynamic> json) => _$MutingFromJson(json);
+
+  Map<String, dynamic> toJson() => _$MutingToJson(this);
 }

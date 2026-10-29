@@ -16,19 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ReversiVerifyRequest {
 
- String get gameId;/// クライアントが計算した盤面の CRC32。
-///
-/// サーバーは自分の持つ値と**文字列として**比較するので、
-/// 符号付き 32bit をそのまま 10 進で渡すこと。
- String get crc32;
+
 /// Create a copy of ReversiVerifyRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $ReversiVerifyRequestCopyWith<ReversiVerifyRequest> get copyWith => _$ReversiVerifyRequestCopyWithImpl<ReversiVerifyRequest>(this as ReversiVerifyRequest, _$identity);
 
-  /// Serializes this ReversiVerifyRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -100,11 +94,10 @@ extension ReversiVerifyRequestPatterns on ReversiVerifyRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ReversiVerifyRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _ReversiVerifyRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -122,11 +115,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ReversiVerifyRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ReversiVerifyRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -143,11 +135,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ReversiVerifyRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ReversiVerifyRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -164,10 +155,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String gameId,  String crc32)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _ReversiVerifyRequest() when $default != null:
-return $default(_that.gameId,_that.crc32);case _:
+case _:
   return orElse();
 
 }
@@ -185,10 +175,9 @@ return $default(_that.gameId,_that.crc32);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String gameId,  String crc32)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ReversiVerifyRequest():
-return $default(_that.gameId,_that.crc32);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -205,91 +194,13 @@ return $default(_that.gameId,_that.crc32);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String gameId,  String crc32)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ReversiVerifyRequest() when $default != null:
-return $default(_that.gameId,_that.crc32);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _ReversiVerifyRequest implements ReversiVerifyRequest {
-  const _ReversiVerifyRequest({required this.gameId, required this.crc32});
-  factory _ReversiVerifyRequest.fromJson(Map<String, dynamic> json) => _$ReversiVerifyRequestFromJson(json);
-
-@override final  String gameId;
-/// クライアントが計算した盤面の CRC32。
-///
-/// サーバーは自分の持つ値と**文字列として**比較するので、
-/// 符号付き 32bit をそのまま 10 進で渡すこと。
-@override final  String crc32;
-
-/// Create a copy of ReversiVerifyRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ReversiVerifyRequestCopyWith<_ReversiVerifyRequest> get copyWith => __$ReversiVerifyRequestCopyWithImpl<_ReversiVerifyRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$ReversiVerifyRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ReversiVerifyRequest&&(identical(other.gameId, gameId) || other.gameId == gameId)&&(identical(other.crc32, crc32) || other.crc32 == crc32));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,gameId,crc32);
-}
-
-@override
-String toString() {
-    return 'ReversiVerifyRequest(gameId: $gameId, crc32: $crc32)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ReversiVerifyRequestCopyWith<$Res> implements $ReversiVerifyRequestCopyWith<$Res> {
-  factory _$ReversiVerifyRequestCopyWith(_ReversiVerifyRequest value, $Res Function(_ReversiVerifyRequest) _then) = __$ReversiVerifyRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String gameId, String crc32
-});
-
-
-
-
-}
-/// @nodoc
-class __$ReversiVerifyRequestCopyWithImpl<$Res>
-    implements _$ReversiVerifyRequestCopyWith<$Res> {
-  __$ReversiVerifyRequestCopyWithImpl(this._self, this._then);
-
-  final _ReversiVerifyRequest _self;
-  final $Res Function(_ReversiVerifyRequest) _then;
-
-/// Create a copy of ReversiVerifyRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? gameId = null,Object? crc32 = null,}) {
-  return _then(_ReversiVerifyRequest(
-gameId: null == gameId ? _self.gameId : gameId // ignore: cast_nullable_to_non_nullable
-as String,crc32: null == crc32 ? _self.crc32 : crc32 // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

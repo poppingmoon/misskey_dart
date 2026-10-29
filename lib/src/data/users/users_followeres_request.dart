@@ -5,16 +5,17 @@ part 'users_followeres_request.freezed.dart';
 part 'users_followeres_request.g.dart';
 
 @freezed
-abstract class UsersFollowersRequest with _$UsersFollowersRequest {
-  const factory({
-    required String userId,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-    int? limit,
-  }) = _UsersFollowersRequest;
-
+@JsonSerializable()
+class const UsersFollowersRequest({
+  required final String userId,
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
+  final int? limit,
+}) with _$UsersFollowersRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$UsersFollowersRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UsersFollowersRequestToJson(this);
 }

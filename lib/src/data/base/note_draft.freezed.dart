@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$NoteDraft {
 
- String get id;@DateTimeConverter() DateTime get createdAt; String? get text; String? get cw; String get userId; UserLite get user; String? get replyId; String? get renoteId; Note? get reply; Note? get renote;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) NoteVisibility? get visibility; List<String>? get visibleUserIds; List<String>? get fileIds; List<DriveFile>? get files; String? get hashtag; NoteDraftPoll? get poll; String? get channelId; NoteChannelInfo? get channel; bool? get localOnly; ReactionAcceptance? get reactionAcceptance;@EpocTimeDateTimeConverter() DateTime? get scheduledAt; bool? get isActuallyScheduled;
+
 /// Create a copy of NoteDraft
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $NoteDraftCopyWith<NoteDraft> get copyWith => _$NoteDraftCopyWithImpl<NoteDraft>(this as NoteDraft, _$identity);
 
-  /// Serializes this NoteDraft to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -173,11 +171,10 @@ extension NoteDraftPatterns on NoteDraft {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _NoteDraft value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _NoteDraft() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -195,11 +192,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _NoteDraft value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _NoteDraft():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -216,11 +212,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _NoteDraft value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _NoteDraft() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -237,10 +232,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt,  String? text,  String? cw,  String userId,  UserLite user,  String? replyId,  String? renoteId,  Note? reply,  Note? renote, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  NoteVisibility? visibility,  List<String>? visibleUserIds,  List<String>? fileIds,  List<DriveFile>? files,  String? hashtag,  NoteDraftPoll? poll,  String? channelId,  NoteChannelInfo? channel,  bool? localOnly,  ReactionAcceptance? reactionAcceptance, @EpocTimeDateTimeConverter()  DateTime? scheduledAt,  bool? isActuallyScheduled)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _NoteDraft() when $default != null:
-return $default(_that.id,_that.createdAt,_that.text,_that.cw,_that.userId,_that.user,_that.replyId,_that.renoteId,_that.reply,_that.renote,_that.visibility,_that.visibleUserIds,_that.fileIds,_that.files,_that.hashtag,_that.poll,_that.channelId,_that.channel,_that.localOnly,_that.reactionAcceptance,_that.scheduledAt,_that.isActuallyScheduled);case _:
+case _:
   return orElse();
 
 }
@@ -258,10 +252,9 @@ return $default(_that.id,_that.createdAt,_that.text,_that.cw,_that.userId,_that.
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt,  String? text,  String? cw,  String userId,  UserLite user,  String? replyId,  String? renoteId,  Note? reply,  Note? renote, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  NoteVisibility? visibility,  List<String>? visibleUserIds,  List<String>? fileIds,  List<DriveFile>? files,  String? hashtag,  NoteDraftPoll? poll,  String? channelId,  NoteChannelInfo? channel,  bool? localOnly,  ReactionAcceptance? reactionAcceptance, @EpocTimeDateTimeConverter()  DateTime? scheduledAt,  bool? isActuallyScheduled)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _NoteDraft():
-return $default(_that.id,_that.createdAt,_that.text,_that.cw,_that.userId,_that.user,_that.replyId,_that.renoteId,_that.reply,_that.renote,_that.visibility,_that.visibleUserIds,_that.fileIds,_that.files,_that.hashtag,_that.poll,_that.channelId,_that.channel,_that.localOnly,_that.reactionAcceptance,_that.scheduledAt,_that.isActuallyScheduled);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -278,10 +271,9 @@ return $default(_that.id,_that.createdAt,_that.text,_that.cw,_that.userId,_that.
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id, @DateTimeConverter()  DateTime createdAt,  String? text,  String? cw,  String userId,  UserLite user,  String? replyId,  String? renoteId,  Note? reply,  Note? renote, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  NoteVisibility? visibility,  List<String>? visibleUserIds,  List<String>? fileIds,  List<DriveFile>? files,  String? hashtag,  NoteDraftPoll? poll,  String? channelId,  NoteChannelInfo? channel,  bool? localOnly,  ReactionAcceptance? reactionAcceptance, @EpocTimeDateTimeConverter()  DateTime? scheduledAt,  bool? isActuallyScheduled)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _NoteDraft() when $default != null:
-return $default(_that.id,_that.createdAt,_that.text,_that.cw,_that.userId,_that.user,_that.replyId,_that.renoteId,_that.reply,_that.renote,_that.visibility,_that.visibleUserIds,_that.fileIds,_that.files,_that.hashtag,_that.poll,_that.channelId,_that.channel,_that.localOnly,_that.reactionAcceptance,_that.scheduledAt,_that.isActuallyScheduled);case _:
+case _:
   return null;
 
 }
@@ -289,213 +281,17 @@ return $default(_that.id,_that.createdAt,_that.text,_that.cw,_that.userId,_that.
 
 }
 
-/// @nodoc
-@JsonSerializable()
-
-class _NoteDraft implements NoteDraft {
-  const _NoteDraft({required this.id, @DateTimeConverter() required this.createdAt, this.text, this.cw, required this.userId, required this.user, this.replyId, this.renoteId, this.reply, this.renote, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.visibility,  List<String>? visibleUserIds,  List<String>? fileIds,  List<DriveFile>? files, this.hashtag, this.poll, this.channelId, this.channel, this.localOnly, this.reactionAcceptance, @EpocTimeDateTimeConverter() this.scheduledAt, this.isActuallyScheduled}): _visibleUserIds = visibleUserIds,_fileIds = fileIds,_files = files;
-  factory _NoteDraft.fromJson(Map<String, dynamic> json) => _$NoteDraftFromJson(json);
-
-@override final  String id;
-@override@DateTimeConverter() final  DateTime createdAt;
-@override final  String? text;
-@override final  String? cw;
-@override final  String userId;
-@override final  UserLite user;
-@override final  String? replyId;
-@override final  String? renoteId;
-@override final  Note? reply;
-@override final  Note? renote;
-@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  NoteVisibility? visibility;
- final  List<String>? _visibleUserIds;
-@override List<String>? get visibleUserIds {
-  final value = _visibleUserIds;
-  if (value == null) return null;
-  if (_visibleUserIds is EqualUnmodifiableListView) return _visibleUserIds;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
- final  List<String>? _fileIds;
-@override List<String>? get fileIds {
-  final value = _fileIds;
-  if (value == null) return null;
-  if (_fileIds is EqualUnmodifiableListView) return _fileIds;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
- final  List<DriveFile>? _files;
-@override List<DriveFile>? get files {
-  final value = _files;
-  if (value == null) return null;
-  if (_files is EqualUnmodifiableListView) return _files;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
-@override final  String? hashtag;
-@override final  NoteDraftPoll? poll;
-@override final  String? channelId;
-@override final  NoteChannelInfo? channel;
-@override final  bool? localOnly;
-@override final  ReactionAcceptance? reactionAcceptance;
-@override@EpocTimeDateTimeConverter() final  DateTime? scheduledAt;
-@override final  bool? isActuallyScheduled;
-
-/// Create a copy of NoteDraft
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$NoteDraftCopyWith<_NoteDraft> get copyWith => __$NoteDraftCopyWithImpl<_NoteDraft>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$NoteDraftToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NoteDraft&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.text, text) || other.text == text)&&(identical(other.cw, cw) || other.cw == cw)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.user, user) || other.user == user)&&(identical(other.replyId, replyId) || other.replyId == replyId)&&(identical(other.renoteId, renoteId) || other.renoteId == renoteId)&&(identical(other.reply, reply) || other.reply == reply)&&(identical(other.renote, renote) || other.renote == renote)&&(identical(other.visibility, visibility) || other.visibility == visibility)&&const DeepCollectionEquality().equals(other.visibleUserIds, _visibleUserIds)&&const DeepCollectionEquality().equals(other.fileIds, _fileIds)&&const DeepCollectionEquality().equals(other.files, _files)&&(identical(other.hashtag, hashtag) || other.hashtag == hashtag)&&(identical(other.poll, poll) || other.poll == poll)&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.channel, channel) || other.channel == channel)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&(identical(other.reactionAcceptance, reactionAcceptance) || other.reactionAcceptance == reactionAcceptance)&&(identical(other.scheduledAt, scheduledAt) || other.scheduledAt == scheduledAt)&&(identical(other.isActuallyScheduled, isActuallyScheduled) || other.isActuallyScheduled == isActuallyScheduled));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hashAll([runtimeType,id,createdAt,text,cw,userId,user,replyId,renoteId,reply,renote,visibility,const DeepCollectionEquality().hash(_visibleUserIds),const DeepCollectionEquality().hash(_fileIds),const DeepCollectionEquality().hash(_files),hashtag,poll,channelId,channel,localOnly,reactionAcceptance,scheduledAt,isActuallyScheduled]);
-}
-
-@override
-String toString() {
-    return 'NoteDraft(id: $id, createdAt: $createdAt, text: $text, cw: $cw, userId: $userId, user: $user, replyId: $replyId, renoteId: $renoteId, reply: $reply, renote: $renote, visibility: $visibility, visibleUserIds: $visibleUserIds, fileIds: $fileIds, files: $files, hashtag: $hashtag, poll: $poll, channelId: $channelId, channel: $channel, localOnly: $localOnly, reactionAcceptance: $reactionAcceptance, scheduledAt: $scheduledAt, isActuallyScheduled: $isActuallyScheduled)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$NoteDraftCopyWith<$Res> implements $NoteDraftCopyWith<$Res> {
-  factory _$NoteDraftCopyWith(_NoteDraft value, $Res Function(_NoteDraft) _then) = __$NoteDraftCopyWithImpl;
-@override @useResult
-$Res call({
- String id,@DateTimeConverter() DateTime createdAt, String? text, String? cw, String userId, UserLite user, String? replyId, String? renoteId, Note? reply, Note? renote,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) NoteVisibility? visibility, List<String>? visibleUserIds, List<String>? fileIds, List<DriveFile>? files, String? hashtag, NoteDraftPoll? poll, String? channelId, NoteChannelInfo? channel, bool? localOnly, ReactionAcceptance? reactionAcceptance,@EpocTimeDateTimeConverter() DateTime? scheduledAt, bool? isActuallyScheduled
-});
-
-
-@override $UserLiteCopyWith<$Res> get user;@override $NoteCopyWith<$Res>? get reply;@override $NoteCopyWith<$Res>? get renote;@override $NoteDraftPollCopyWith<$Res>? get poll;@override $NoteChannelInfoCopyWith<$Res>? get channel;
-
-}
-/// @nodoc
-class __$NoteDraftCopyWithImpl<$Res>
-    implements _$NoteDraftCopyWith<$Res> {
-  __$NoteDraftCopyWithImpl(this._self, this._then);
-
-  final _NoteDraft _self;
-  final $Res Function(_NoteDraft) _then;
-
-/// Create a copy of NoteDraft
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? createdAt = null,Object? text = freezed,Object? cw = freezed,Object? userId = null,Object? user = null,Object? replyId = freezed,Object? renoteId = freezed,Object? reply = freezed,Object? renote = freezed,Object? visibility = freezed,Object? visibleUserIds = freezed,Object? fileIds = freezed,Object? files = freezed,Object? hashtag = freezed,Object? poll = freezed,Object? channelId = freezed,Object? channel = freezed,Object? localOnly = freezed,Object? reactionAcceptance = freezed,Object? scheduledAt = freezed,Object? isActuallyScheduled = freezed,}) {
-  return _then(_NoteDraft(
-id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
-as DateTime,text: freezed == text ? _self.text : text // ignore: cast_nullable_to_non_nullable
-as String?,cw: freezed == cw ? _self.cw : cw // ignore: cast_nullable_to_non_nullable
-as String?,userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
-as String,user: null == user ? _self.user : user // ignore: cast_nullable_to_non_nullable
-as UserLite,replyId: freezed == replyId ? _self.replyId : replyId // ignore: cast_nullable_to_non_nullable
-as String?,renoteId: freezed == renoteId ? _self.renoteId : renoteId // ignore: cast_nullable_to_non_nullable
-as String?,reply: freezed == reply ? _self.reply : reply // ignore: cast_nullable_to_non_nullable
-as Note?,renote: freezed == renote ? _self.renote : renote // ignore: cast_nullable_to_non_nullable
-as Note?,visibility: freezed == visibility ? _self.visibility : visibility // ignore: cast_nullable_to_non_nullable
-as NoteVisibility?,visibleUserIds: freezed == visibleUserIds ? _self._visibleUserIds : visibleUserIds // ignore: cast_nullable_to_non_nullable
-as List<String>?,fileIds: freezed == fileIds ? _self._fileIds : fileIds // ignore: cast_nullable_to_non_nullable
-as List<String>?,files: freezed == files ? _self._files : files // ignore: cast_nullable_to_non_nullable
-as List<DriveFile>?,hashtag: freezed == hashtag ? _self.hashtag : hashtag // ignore: cast_nullable_to_non_nullable
-as String?,poll: freezed == poll ? _self.poll : poll // ignore: cast_nullable_to_non_nullable
-as NoteDraftPoll?,channelId: freezed == channelId ? _self.channelId : channelId // ignore: cast_nullable_to_non_nullable
-as String?,channel: freezed == channel ? _self.channel : channel // ignore: cast_nullable_to_non_nullable
-as NoteChannelInfo?,localOnly: freezed == localOnly ? _self.localOnly : localOnly // ignore: cast_nullable_to_non_nullable
-as bool?,reactionAcceptance: freezed == reactionAcceptance ? _self.reactionAcceptance : reactionAcceptance // ignore: cast_nullable_to_non_nullable
-as ReactionAcceptance?,scheduledAt: freezed == scheduledAt ? _self.scheduledAt : scheduledAt // ignore: cast_nullable_to_non_nullable
-as DateTime?,isActuallyScheduled: freezed == isActuallyScheduled ? _self.isActuallyScheduled : isActuallyScheduled // ignore: cast_nullable_to_non_nullable
-as bool?,
-  ));
-}
-
-/// Create a copy of NoteDraft
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$UserLiteCopyWith<$Res> get user {
-  
-  return $UserLiteCopyWith<$Res>(_self.user, (value) {
-    return _then(_self.copyWith(user: value));
-  });
-}/// Create a copy of NoteDraft
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$NoteCopyWith<$Res>? get reply {
-    if (_self.reply == null) {
-    return null;
-  }
-
-  return $NoteCopyWith<$Res>(_self.reply!, (value) {
-    return _then(_self.copyWith(reply: value));
-  });
-}/// Create a copy of NoteDraft
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$NoteCopyWith<$Res>? get renote {
-    if (_self.renote == null) {
-    return null;
-  }
-
-  return $NoteCopyWith<$Res>(_self.renote!, (value) {
-    return _then(_self.copyWith(renote: value));
-  });
-}/// Create a copy of NoteDraft
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$NoteDraftPollCopyWith<$Res>? get poll {
-    if (_self.poll == null) {
-    return null;
-  }
-
-  return $NoteDraftPollCopyWith<$Res>(_self.poll!, (value) {
-    return _then(_self.copyWith(poll: value));
-  });
-}/// Create a copy of NoteDraft
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$NoteChannelInfoCopyWith<$Res>? get channel {
-    if (_self.channel == null) {
-    return null;
-  }
-
-  return $NoteChannelInfoCopyWith<$Res>(_self.channel!, (value) {
-    return _then(_self.copyWith(channel: value));
-  });
-}
-}
-
 
 /// @nodoc
 mixin _$NoteDraftPoll {
 
-@DateTimeConverter() DateTime? get expiresAt;@DurationConverter() Duration? get expiredAfter; bool get multiple; List<String> get choices;
+
 /// Create a copy of NoteDraftPoll
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $NoteDraftPollCopyWith<NoteDraftPoll> get copyWith => _$NoteDraftPollCopyWithImpl<NoteDraftPoll>(this as NoteDraftPoll, _$identity);
 
-  /// Serializes this NoteDraftPoll to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -569,11 +365,10 @@ extension NoteDraftPollPatterns on NoteDraftPoll {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _NoteDraftPoll value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _NoteDraftPoll() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -591,11 +386,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _NoteDraftPoll value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _NoteDraftPoll():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -612,11 +406,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _NoteDraftPoll value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _NoteDraftPoll() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -633,10 +426,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@DateTimeConverter()  DateTime? expiresAt, @DurationConverter()  Duration? expiredAfter,  bool multiple,  List<String> choices)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _NoteDraftPoll() when $default != null:
-return $default(_that.expiresAt,_that.expiredAfter,_that.multiple,_that.choices);case _:
+case _:
   return orElse();
 
 }
@@ -654,10 +446,9 @@ return $default(_that.expiresAt,_that.expiredAfter,_that.multiple,_that.choices)
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@DateTimeConverter()  DateTime? expiresAt, @DurationConverter()  Duration? expiredAfter,  bool multiple,  List<String> choices)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _NoteDraftPoll():
-return $default(_that.expiresAt,_that.expiredAfter,_that.multiple,_that.choices);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -674,97 +465,13 @@ return $default(_that.expiresAt,_that.expiredAfter,_that.multiple,_that.choices)
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@DateTimeConverter()  DateTime? expiresAt, @DurationConverter()  Duration? expiredAfter,  bool multiple,  List<String> choices)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _NoteDraftPoll() when $default != null:
-return $default(_that.expiresAt,_that.expiredAfter,_that.multiple,_that.choices);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _NoteDraftPoll implements NoteDraftPoll {
-  const _NoteDraftPoll({@DateTimeConverter() this.expiresAt, @DurationConverter() this.expiredAfter, required this.multiple, required  List<String> choices}): _choices = choices;
-  factory _NoteDraftPoll.fromJson(Map<String, dynamic> json) => _$NoteDraftPollFromJson(json);
-
-@override@DateTimeConverter() final  DateTime? expiresAt;
-@override@DurationConverter() final  Duration? expiredAfter;
-@override final  bool multiple;
- final  List<String> _choices;
-@override List<String> get choices {
-  if (_choices is EqualUnmodifiableListView) return _choices;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_choices);
-}
-
-
-/// Create a copy of NoteDraftPoll
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$NoteDraftPollCopyWith<_NoteDraftPoll> get copyWith => __$NoteDraftPollCopyWithImpl<_NoteDraftPoll>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$NoteDraftPollToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NoteDraftPoll&&(identical(other.expiresAt, expiresAt) || other.expiresAt == expiresAt)&&(identical(other.expiredAfter, expiredAfter) || other.expiredAfter == expiredAfter)&&(identical(other.multiple, multiple) || other.multiple == multiple)&&const DeepCollectionEquality().equals(other.choices, _choices));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,expiresAt,expiredAfter,multiple,const DeepCollectionEquality().hash(_choices));
-}
-
-@override
-String toString() {
-    return 'NoteDraftPoll(expiresAt: $expiresAt, expiredAfter: $expiredAfter, multiple: $multiple, choices: $choices)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$NoteDraftPollCopyWith<$Res> implements $NoteDraftPollCopyWith<$Res> {
-  factory _$NoteDraftPollCopyWith(_NoteDraftPoll value, $Res Function(_NoteDraftPoll) _then) = __$NoteDraftPollCopyWithImpl;
-@override @useResult
-$Res call({
-@DateTimeConverter() DateTime? expiresAt,@DurationConverter() Duration? expiredAfter, bool multiple, List<String> choices
-});
-
-
-
-
-}
-/// @nodoc
-class __$NoteDraftPollCopyWithImpl<$Res>
-    implements _$NoteDraftPollCopyWith<$Res> {
-  __$NoteDraftPollCopyWithImpl(this._self, this._then);
-
-  final _NoteDraftPoll _self;
-  final $Res Function(_NoteDraftPoll) _then;
-
-/// Create a copy of NoteDraftPoll
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? expiresAt = freezed,Object? expiredAfter = freezed,Object? multiple = null,Object? choices = null,}) {
-  return _then(_NoteDraftPoll(
-expiresAt: freezed == expiresAt ? _self.expiresAt : expiresAt // ignore: cast_nullable_to_non_nullable
-as DateTime?,expiredAfter: freezed == expiredAfter ? _self.expiredAfter : expiredAfter // ignore: cast_nullable_to_non_nullable
-as Duration?,multiple: null == multiple ? _self.multiple : multiple // ignore: cast_nullable_to_non_nullable
-as bool,choices: null == choices ? _self._choices : choices // ignore: cast_nullable_to_non_nullable
-as List<String>,
-  ));
-}
-
 
 }
 

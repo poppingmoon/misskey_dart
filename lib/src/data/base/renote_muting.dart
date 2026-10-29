@@ -6,13 +6,14 @@ part 'renote_muting.freezed.dart';
 part 'renote_muting.g.dart';
 
 @freezed
-abstract class RenoteMuting with _$RenoteMuting {
-  const factory({
-    required String id,
-    @DateTimeConverter() required DateTime createdAt,
-    required String muteeId,
-    required UserDetailedNotMe mutee,
-  }) = _RenoteMuting;
-
+@JsonSerializable()
+class const RenoteMuting({
+  required final String id,
+  @DateTimeConverter() required final DateTime createdAt,
+  required final String muteeId,
+  required final UserDetailedNotMe mutee,
+}) with _$RenoteMuting {
   factory fromJson(Map<String, dynamic> json) => _$RenoteMutingFromJson(json);
+
+  Map<String, dynamic> toJson() => _$RenoteMutingToJson(this);
 }

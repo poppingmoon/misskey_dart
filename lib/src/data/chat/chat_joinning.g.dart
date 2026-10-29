@@ -6,7 +6,7 @@ part of 'chat_joinning.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ChatJoining _$ChatJoiningFromJson(Map<String, dynamic> json) => _ChatJoining(
+ChatJoining _$ChatJoiningFromJson(Map<String, dynamic> json) => ChatJoining(
   id: json['id'] as String,
   createdAt: const DateTimeConverter().fromJson(json['createdAt'] as String),
   userId: json['userId'] as String,
@@ -19,7 +19,7 @@ _ChatJoining _$ChatJoiningFromJson(Map<String, dynamic> json) => _ChatJoining(
       : ChatRoom.fromJson(json['room'] as Map<String, dynamic>),
 );
 
-Map<String, dynamic> _$ChatJoiningToJson(_ChatJoining instance) =>
+Map<String, dynamic> _$ChatJoiningToJson(ChatJoining instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdAt': const DateTimeConverter().toJson(instance.createdAt),

@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$DriveFoldersFindRequest {
 
- String get name; String? get parentId;
+
 /// Create a copy of DriveFoldersFindRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $DriveFoldersFindRequestCopyWith<DriveFoldersFindRequest> get copyWith => _$DriveFoldersFindRequestCopyWithImpl<DriveFoldersFindRequest>(this as DriveFoldersFindRequest, _$identity);
 
-  /// Serializes this DriveFoldersFindRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -96,11 +94,10 @@ extension DriveFoldersFindRequestPatterns on DriveFoldersFindRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _DriveFoldersFindRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _DriveFoldersFindRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -118,11 +115,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _DriveFoldersFindRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _DriveFoldersFindRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -139,11 +135,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _DriveFoldersFindRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _DriveFoldersFindRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -160,10 +155,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String name,  String? parentId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _DriveFoldersFindRequest() when $default != null:
-return $default(_that.name,_that.parentId);case _:
+case _:
   return orElse();
 
 }
@@ -181,10 +175,9 @@ return $default(_that.name,_that.parentId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String name,  String? parentId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _DriveFoldersFindRequest():
-return $default(_that.name,_that.parentId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -201,87 +194,13 @@ return $default(_that.name,_that.parentId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String name,  String? parentId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _DriveFoldersFindRequest() when $default != null:
-return $default(_that.name,_that.parentId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _DriveFoldersFindRequest implements DriveFoldersFindRequest {
-  const _DriveFoldersFindRequest({required this.name, this.parentId});
-  factory _DriveFoldersFindRequest.fromJson(Map<String, dynamic> json) => _$DriveFoldersFindRequestFromJson(json);
-
-@override final  String name;
-@override final  String? parentId;
-
-/// Create a copy of DriveFoldersFindRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$DriveFoldersFindRequestCopyWith<_DriveFoldersFindRequest> get copyWith => __$DriveFoldersFindRequestCopyWithImpl<_DriveFoldersFindRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$DriveFoldersFindRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _DriveFoldersFindRequest&&(identical(other.name, name) || other.name == name)&&(identical(other.parentId, parentId) || other.parentId == parentId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,name,parentId);
-}
-
-@override
-String toString() {
-    return 'DriveFoldersFindRequest(name: $name, parentId: $parentId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$DriveFoldersFindRequestCopyWith<$Res> implements $DriveFoldersFindRequestCopyWith<$Res> {
-  factory _$DriveFoldersFindRequestCopyWith(_DriveFoldersFindRequest value, $Res Function(_DriveFoldersFindRequest) _then) = __$DriveFoldersFindRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String name, String? parentId
-});
-
-
-
-
-}
-/// @nodoc
-class __$DriveFoldersFindRequestCopyWithImpl<$Res>
-    implements _$DriveFoldersFindRequestCopyWith<$Res> {
-  __$DriveFoldersFindRequestCopyWithImpl(this._self, this._then);
-
-  final _DriveFoldersFindRequest _self;
-  final $Res Function(_DriveFoldersFindRequest) _then;
-
-/// Create a copy of DriveFoldersFindRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? name = null,Object? parentId = freezed,}) {
-  return _then(_DriveFoldersFindRequest(
-name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String,parentId: freezed == parentId ? _self.parentId : parentId // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
 
 }
 

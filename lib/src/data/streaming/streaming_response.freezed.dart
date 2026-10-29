@@ -828,15 +828,13 @@ body: null == body ? _self.body : body ,
 /// @nodoc
 mixin _$EmojiAddedStreamEvent {
 
- Emoji get emoji;
+
 /// Create a copy of EmojiAddedStreamEvent
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $EmojiAddedStreamEventCopyWith<EmojiAddedStreamEvent> get copyWith => _$EmojiAddedStreamEventCopyWithImpl<EmojiAddedStreamEvent>(this as EmojiAddedStreamEvent, _$identity);
 
-  /// Serializes this EmojiAddedStreamEvent to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -916,11 +914,10 @@ extension EmojiAddedStreamEventPatterns on EmojiAddedStreamEvent {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _EmojiAddedStreamEvent value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _EmojiAddedStreamEvent() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -938,11 +935,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _EmojiAddedStreamEvent value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _EmojiAddedStreamEvent():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -959,11 +955,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _EmojiAddedStreamEvent value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _EmojiAddedStreamEvent() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -980,10 +975,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( Emoji emoji)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _EmojiAddedStreamEvent() when $default != null:
-return $default(_that.emoji);case _:
+case _:
   return orElse();
 
 }
@@ -1001,10 +995,9 @@ return $default(_that.emoji);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( Emoji emoji)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _EmojiAddedStreamEvent():
-return $default(_that.emoji);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -1021,10 +1014,9 @@ return $default(_that.emoji);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( Emoji emoji)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _EmojiAddedStreamEvent() when $default != null:
-return $default(_that.emoji);case _:
+case _:
   return null;
 
 }
@@ -1032,99 +1024,17 @@ return $default(_that.emoji);case _:
 
 }
 
-/// @nodoc
-@JsonSerializable()
-
-class _EmojiAddedStreamEvent implements EmojiAddedStreamEvent {
-  const _EmojiAddedStreamEvent({required this.emoji});
-  factory _EmojiAddedStreamEvent.fromJson(Map<String, dynamic> json) => _$EmojiAddedStreamEventFromJson(json);
-
-@override final  Emoji emoji;
-
-/// Create a copy of EmojiAddedStreamEvent
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$EmojiAddedStreamEventCopyWith<_EmojiAddedStreamEvent> get copyWith => __$EmojiAddedStreamEventCopyWithImpl<_EmojiAddedStreamEvent>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$EmojiAddedStreamEventToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _EmojiAddedStreamEvent&&(identical(other.emoji, emoji) || other.emoji == emoji));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,emoji);
-}
-
-@override
-String toString() {
-    return 'EmojiAddedStreamEvent(emoji: $emoji)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$EmojiAddedStreamEventCopyWith<$Res> implements $EmojiAddedStreamEventCopyWith<$Res> {
-  factory _$EmojiAddedStreamEventCopyWith(_EmojiAddedStreamEvent value, $Res Function(_EmojiAddedStreamEvent) _then) = __$EmojiAddedStreamEventCopyWithImpl;
-@override @useResult
-$Res call({
- Emoji emoji
-});
-
-
-@override $EmojiCopyWith<$Res> get emoji;
-
-}
-/// @nodoc
-class __$EmojiAddedStreamEventCopyWithImpl<$Res>
-    implements _$EmojiAddedStreamEventCopyWith<$Res> {
-  __$EmojiAddedStreamEventCopyWithImpl(this._self, this._then);
-
-  final _EmojiAddedStreamEvent _self;
-  final $Res Function(_EmojiAddedStreamEvent) _then;
-
-/// Create a copy of EmojiAddedStreamEvent
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? emoji = null,}) {
-  return _then(_EmojiAddedStreamEvent(
-emoji: null == emoji ? _self.emoji : emoji // ignore: cast_nullable_to_non_nullable
-as Emoji,
-  ));
-}
-
-/// Create a copy of EmojiAddedStreamEvent
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$EmojiCopyWith<$Res> get emoji {
-  
-  return $EmojiCopyWith<$Res>(_self.emoji, (value) {
-    return _then(_self.copyWith(emoji: value));
-  });
-}
-}
-
 
 /// @nodoc
 mixin _$EmojiUpdatedStreamEvent {
 
- List<Emoji> get emojis;
+
 /// Create a copy of EmojiUpdatedStreamEvent
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $EmojiUpdatedStreamEventCopyWith<EmojiUpdatedStreamEvent> get copyWith => _$EmojiUpdatedStreamEventCopyWithImpl<EmojiUpdatedStreamEvent>(this as EmojiUpdatedStreamEvent, _$identity);
 
-  /// Serializes this EmojiUpdatedStreamEvent to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -1195,11 +1105,10 @@ extension EmojiUpdatedStreamEventPatterns on EmojiUpdatedStreamEvent {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _EmojiUpdatedStreamEvent value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _EmojiUpdatedStreamEvent() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -1217,11 +1126,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _EmojiUpdatedStreamEvent value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _EmojiUpdatedStreamEvent():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -1238,11 +1146,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _EmojiUpdatedStreamEvent value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _EmojiUpdatedStreamEvent() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -1259,10 +1166,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( List<Emoji> emojis)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _EmojiUpdatedStreamEvent() when $default != null:
-return $default(_that.emojis);case _:
+case _:
   return orElse();
 
 }
@@ -1280,10 +1186,9 @@ return $default(_that.emojis);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( List<Emoji> emojis)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _EmojiUpdatedStreamEvent():
-return $default(_that.emojis);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -1300,10 +1205,9 @@ return $default(_that.emojis);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( List<Emoji> emojis)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _EmojiUpdatedStreamEvent() when $default != null:
-return $default(_that.emojis);case _:
+case _:
   return null;
 
 }
@@ -1311,96 +1215,17 @@ return $default(_that.emojis);case _:
 
 }
 
-/// @nodoc
-@JsonSerializable()
-
-class _EmojiUpdatedStreamEvent implements EmojiUpdatedStreamEvent {
-  const _EmojiUpdatedStreamEvent({required  List<Emoji> emojis}): _emojis = emojis;
-  factory _EmojiUpdatedStreamEvent.fromJson(Map<String, dynamic> json) => _$EmojiUpdatedStreamEventFromJson(json);
-
- final  List<Emoji> _emojis;
-@override List<Emoji> get emojis {
-  if (_emojis is EqualUnmodifiableListView) return _emojis;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_emojis);
-}
-
-
-/// Create a copy of EmojiUpdatedStreamEvent
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$EmojiUpdatedStreamEventCopyWith<_EmojiUpdatedStreamEvent> get copyWith => __$EmojiUpdatedStreamEventCopyWithImpl<_EmojiUpdatedStreamEvent>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$EmojiUpdatedStreamEventToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _EmojiUpdatedStreamEvent&&const DeepCollectionEquality().equals(other.emojis, _emojis));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,const DeepCollectionEquality().hash(_emojis));
-}
-
-@override
-String toString() {
-    return 'EmojiUpdatedStreamEvent(emojis: $emojis)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$EmojiUpdatedStreamEventCopyWith<$Res> implements $EmojiUpdatedStreamEventCopyWith<$Res> {
-  factory _$EmojiUpdatedStreamEventCopyWith(_EmojiUpdatedStreamEvent value, $Res Function(_EmojiUpdatedStreamEvent) _then) = __$EmojiUpdatedStreamEventCopyWithImpl;
-@override @useResult
-$Res call({
- List<Emoji> emojis
-});
-
-
-
-
-}
-/// @nodoc
-class __$EmojiUpdatedStreamEventCopyWithImpl<$Res>
-    implements _$EmojiUpdatedStreamEventCopyWith<$Res> {
-  __$EmojiUpdatedStreamEventCopyWithImpl(this._self, this._then);
-
-  final _EmojiUpdatedStreamEvent _self;
-  final $Res Function(_EmojiUpdatedStreamEvent) _then;
-
-/// Create a copy of EmojiUpdatedStreamEvent
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? emojis = null,}) {
-  return _then(_EmojiUpdatedStreamEvent(
-emojis: null == emojis ? _self._emojis : emojis // ignore: cast_nullable_to_non_nullable
-as List<Emoji>,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$EmojiDeletedStreamEvent {
 
- List<Emoji> get emojis;
+
 /// Create a copy of EmojiDeletedStreamEvent
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $EmojiDeletedStreamEventCopyWith<EmojiDeletedStreamEvent> get copyWith => _$EmojiDeletedStreamEventCopyWithImpl<EmojiDeletedStreamEvent>(this as EmojiDeletedStreamEvent, _$identity);
 
-  /// Serializes this EmojiDeletedStreamEvent to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -1471,11 +1296,10 @@ extension EmojiDeletedStreamEventPatterns on EmojiDeletedStreamEvent {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _EmojiDeletedStreamEvent value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _EmojiDeletedStreamEvent() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -1493,11 +1317,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _EmojiDeletedStreamEvent value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _EmojiDeletedStreamEvent():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -1514,11 +1337,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _EmojiDeletedStreamEvent value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _EmojiDeletedStreamEvent() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -1535,10 +1357,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( List<Emoji> emojis)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _EmojiDeletedStreamEvent() when $default != null:
-return $default(_that.emojis);case _:
+case _:
   return orElse();
 
 }
@@ -1556,10 +1377,9 @@ return $default(_that.emojis);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( List<Emoji> emojis)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _EmojiDeletedStreamEvent():
-return $default(_that.emojis);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -1576,10 +1396,9 @@ return $default(_that.emojis);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( List<Emoji> emojis)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _EmojiDeletedStreamEvent() when $default != null:
-return $default(_that.emojis);case _:
+case _:
   return null;
 
 }
@@ -1587,96 +1406,17 @@ return $default(_that.emojis);case _:
 
 }
 
-/// @nodoc
-@JsonSerializable()
-
-class _EmojiDeletedStreamEvent implements EmojiDeletedStreamEvent {
-  const _EmojiDeletedStreamEvent({required  List<Emoji> emojis}): _emojis = emojis;
-  factory _EmojiDeletedStreamEvent.fromJson(Map<String, dynamic> json) => _$EmojiDeletedStreamEventFromJson(json);
-
- final  List<Emoji> _emojis;
-@override List<Emoji> get emojis {
-  if (_emojis is EqualUnmodifiableListView) return _emojis;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_emojis);
-}
-
-
-/// Create a copy of EmojiDeletedStreamEvent
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$EmojiDeletedStreamEventCopyWith<_EmojiDeletedStreamEvent> get copyWith => __$EmojiDeletedStreamEventCopyWithImpl<_EmojiDeletedStreamEvent>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$EmojiDeletedStreamEventToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _EmojiDeletedStreamEvent&&const DeepCollectionEquality().equals(other.emojis, _emojis));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,const DeepCollectionEquality().hash(_emojis));
-}
-
-@override
-String toString() {
-    return 'EmojiDeletedStreamEvent(emojis: $emojis)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$EmojiDeletedStreamEventCopyWith<$Res> implements $EmojiDeletedStreamEventCopyWith<$Res> {
-  factory _$EmojiDeletedStreamEventCopyWith(_EmojiDeletedStreamEvent value, $Res Function(_EmojiDeletedStreamEvent) _then) = __$EmojiDeletedStreamEventCopyWithImpl;
-@override @useResult
-$Res call({
- List<Emoji> emojis
-});
-
-
-
-
-}
-/// @nodoc
-class __$EmojiDeletedStreamEventCopyWithImpl<$Res>
-    implements _$EmojiDeletedStreamEventCopyWith<$Res> {
-  __$EmojiDeletedStreamEventCopyWithImpl(this._self, this._then);
-
-  final _EmojiDeletedStreamEvent _self;
-  final $Res Function(_EmojiDeletedStreamEvent) _then;
-
-/// Create a copy of EmojiDeletedStreamEvent
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? emojis = null,}) {
-  return _then(_EmojiDeletedStreamEvent(
-emojis: null == emojis ? _self._emojis : emojis // ignore: cast_nullable_to_non_nullable
-as List<Emoji>,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$AnnouncementCreatedStreamEvent {
 
- AnnouncementsResponse get announcement;
+
 /// Create a copy of AnnouncementCreatedStreamEvent
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $AnnouncementCreatedStreamEventCopyWith<AnnouncementCreatedStreamEvent> get copyWith => _$AnnouncementCreatedStreamEventCopyWithImpl<AnnouncementCreatedStreamEvent>(this as AnnouncementCreatedStreamEvent, _$identity);
 
-  /// Serializes this AnnouncementCreatedStreamEvent to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -1756,11 +1496,10 @@ extension AnnouncementCreatedStreamEventPatterns on AnnouncementCreatedStreamEve
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _AnnouncementCreatedStreamEvent value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _AnnouncementCreatedStreamEvent() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -1778,11 +1517,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _AnnouncementCreatedStreamEvent value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _AnnouncementCreatedStreamEvent():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -1799,11 +1537,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _AnnouncementCreatedStreamEvent value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _AnnouncementCreatedStreamEvent() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -1820,10 +1557,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( AnnouncementsResponse announcement)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _AnnouncementCreatedStreamEvent() when $default != null:
-return $default(_that.announcement);case _:
+case _:
   return orElse();
 
 }
@@ -1841,10 +1577,9 @@ return $default(_that.announcement);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( AnnouncementsResponse announcement)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _AnnouncementCreatedStreamEvent():
-return $default(_that.announcement);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -1861,95 +1596,14 @@ return $default(_that.announcement);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( AnnouncementsResponse announcement)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _AnnouncementCreatedStreamEvent() when $default != null:
-return $default(_that.announcement);case _:
+case _:
   return null;
 
 }
 }
 
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _AnnouncementCreatedStreamEvent implements AnnouncementCreatedStreamEvent {
-  const _AnnouncementCreatedStreamEvent({required this.announcement});
-  factory _AnnouncementCreatedStreamEvent.fromJson(Map<String, dynamic> json) => _$AnnouncementCreatedStreamEventFromJson(json);
-
-@override final  AnnouncementsResponse announcement;
-
-/// Create a copy of AnnouncementCreatedStreamEvent
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$AnnouncementCreatedStreamEventCopyWith<_AnnouncementCreatedStreamEvent> get copyWith => __$AnnouncementCreatedStreamEventCopyWithImpl<_AnnouncementCreatedStreamEvent>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$AnnouncementCreatedStreamEventToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _AnnouncementCreatedStreamEvent&&(identical(other.announcement, announcement) || other.announcement == announcement));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,announcement);
-}
-
-@override
-String toString() {
-    return 'AnnouncementCreatedStreamEvent(announcement: $announcement)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$AnnouncementCreatedStreamEventCopyWith<$Res> implements $AnnouncementCreatedStreamEventCopyWith<$Res> {
-  factory _$AnnouncementCreatedStreamEventCopyWith(_AnnouncementCreatedStreamEvent value, $Res Function(_AnnouncementCreatedStreamEvent) _then) = __$AnnouncementCreatedStreamEventCopyWithImpl;
-@override @useResult
-$Res call({
- AnnouncementsResponse announcement
-});
-
-
-@override $AnnouncementsResponseCopyWith<$Res> get announcement;
-
-}
-/// @nodoc
-class __$AnnouncementCreatedStreamEventCopyWithImpl<$Res>
-    implements _$AnnouncementCreatedStreamEventCopyWith<$Res> {
-  __$AnnouncementCreatedStreamEventCopyWithImpl(this._self, this._then);
-
-  final _AnnouncementCreatedStreamEvent _self;
-  final $Res Function(_AnnouncementCreatedStreamEvent) _then;
-
-/// Create a copy of AnnouncementCreatedStreamEvent
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? announcement = null,}) {
-  return _then(_AnnouncementCreatedStreamEvent(
-announcement: null == announcement ? _self.announcement : announcement // ignore: cast_nullable_to_non_nullable
-as AnnouncementsResponse,
-  ));
-}
-
-/// Create a copy of AnnouncementCreatedStreamEvent
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$AnnouncementsResponseCopyWith<$Res> get announcement {
-  
-  return $AnnouncementsResponseCopyWith<$Res>(_self.announcement, (value) {
-    return _then(_self.copyWith(announcement: value));
-  });
-}
 }
 
 ChannelStreamEvent _$ChannelStreamEventFromJson(

@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$NotesTranslateResponse {
 
- String get sourceLang; String get text;
+
 /// Create a copy of NotesTranslateResponse
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $NotesTranslateResponseCopyWith<NotesTranslateResponse> get copyWith => _$NotesTranslateResponseCopyWithImpl<NotesTranslateResponse>(this as NotesTranslateResponse, _$identity);
 
-  /// Serializes this NotesTranslateResponse to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -96,11 +94,10 @@ extension NotesTranslateResponsePatterns on NotesTranslateResponse {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _NotesTranslateResponse value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _NotesTranslateResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -118,11 +115,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _NotesTranslateResponse value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _NotesTranslateResponse():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -139,11 +135,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _NotesTranslateResponse value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _NotesTranslateResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -160,10 +155,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String sourceLang,  String text)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _NotesTranslateResponse() when $default != null:
-return $default(_that.sourceLang,_that.text);case _:
+case _:
   return orElse();
 
 }
@@ -181,10 +175,9 @@ return $default(_that.sourceLang,_that.text);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String sourceLang,  String text)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _NotesTranslateResponse():
-return $default(_that.sourceLang,_that.text);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -201,87 +194,13 @@ return $default(_that.sourceLang,_that.text);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String sourceLang,  String text)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _NotesTranslateResponse() when $default != null:
-return $default(_that.sourceLang,_that.text);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _NotesTranslateResponse implements NotesTranslateResponse {
-  const _NotesTranslateResponse({required this.sourceLang, required this.text});
-  factory _NotesTranslateResponse.fromJson(Map<String, dynamic> json) => _$NotesTranslateResponseFromJson(json);
-
-@override final  String sourceLang;
-@override final  String text;
-
-/// Create a copy of NotesTranslateResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$NotesTranslateResponseCopyWith<_NotesTranslateResponse> get copyWith => __$NotesTranslateResponseCopyWithImpl<_NotesTranslateResponse>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$NotesTranslateResponseToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesTranslateResponse&&(identical(other.sourceLang, sourceLang) || other.sourceLang == sourceLang)&&(identical(other.text, text) || other.text == text));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,sourceLang,text);
-}
-
-@override
-String toString() {
-    return 'NotesTranslateResponse(sourceLang: $sourceLang, text: $text)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$NotesTranslateResponseCopyWith<$Res> implements $NotesTranslateResponseCopyWith<$Res> {
-  factory _$NotesTranslateResponseCopyWith(_NotesTranslateResponse value, $Res Function(_NotesTranslateResponse) _then) = __$NotesTranslateResponseCopyWithImpl;
-@override @useResult
-$Res call({
- String sourceLang, String text
-});
-
-
-
-
-}
-/// @nodoc
-class __$NotesTranslateResponseCopyWithImpl<$Res>
-    implements _$NotesTranslateResponseCopyWith<$Res> {
-  __$NotesTranslateResponseCopyWithImpl(this._self, this._then);
-
-  final _NotesTranslateResponse _self;
-  final $Res Function(_NotesTranslateResponse) _then;
-
-/// Create a copy of NotesTranslateResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? sourceLang = null,Object? text = null,}) {
-  return _then(_NotesTranslateResponse(
-sourceLang: null == sourceLang ? _self.sourceLang : sourceLang // ignore: cast_nullable_to_non_nullable
-as String,text: null == text ? _self.text : text // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

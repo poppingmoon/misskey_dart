@@ -6,8 +6,8 @@ part of 'mute_list_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_MuteListRequest _$MuteListRequestFromJson(Map<String, dynamic> json) =>
-    _MuteListRequest(
+MuteListRequest _$MuteListRequestFromJson(Map<String, dynamic> json) =>
+    MuteListRequest(
       limit: (json['limit'] as num?)?.toInt(),
       sinceId: json['sinceId'] as String?,
       untilId: json['untilId'] as String?,
@@ -21,7 +21,7 @@ _MuteListRequest _$MuteListRequestFromJson(Map<String, dynamic> json) =>
       ),
     );
 
-Map<String, dynamic> _$MuteListRequestToJson(_MuteListRequest instance) =>
+Map<String, dynamic> _$MuteListRequestToJson(MuteListRequest instance) =>
     <String, dynamic>{
       'limit': instance.limit,
       'sinceId': instance.sinceId,

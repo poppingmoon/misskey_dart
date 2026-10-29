@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$DriveFilesUpdateRequest {
 
- String get fileId; String? get folderId; String? get name; bool? get isSensitive; String? get comment;
+
 /// Create a copy of DriveFilesUpdateRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $DriveFilesUpdateRequestCopyWith<DriveFilesUpdateRequest> get copyWith => _$DriveFilesUpdateRequestCopyWithImpl<DriveFilesUpdateRequest>(this as DriveFilesUpdateRequest, _$identity);
 
-  /// Serializes this DriveFilesUpdateRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -99,11 +97,10 @@ extension DriveFilesUpdateRequestPatterns on DriveFilesUpdateRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _DriveFilesUpdateRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _DriveFilesUpdateRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -121,11 +118,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _DriveFilesUpdateRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _DriveFilesUpdateRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -142,11 +138,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _DriveFilesUpdateRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _DriveFilesUpdateRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -163,10 +158,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String fileId,  String? folderId,  String? name,  bool? isSensitive,  String? comment)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _DriveFilesUpdateRequest() when $default != null:
-return $default(_that.fileId,_that.folderId,_that.name,_that.isSensitive,_that.comment);case _:
+case _:
   return orElse();
 
 }
@@ -184,10 +178,9 @@ return $default(_that.fileId,_that.folderId,_that.name,_that.isSensitive,_that.c
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String fileId,  String? folderId,  String? name,  bool? isSensitive,  String? comment)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _DriveFilesUpdateRequest():
-return $default(_that.fileId,_that.folderId,_that.name,_that.isSensitive,_that.comment);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -204,93 +197,13 @@ return $default(_that.fileId,_that.folderId,_that.name,_that.isSensitive,_that.c
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String fileId,  String? folderId,  String? name,  bool? isSensitive,  String? comment)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _DriveFilesUpdateRequest() when $default != null:
-return $default(_that.fileId,_that.folderId,_that.name,_that.isSensitive,_that.comment);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _DriveFilesUpdateRequest implements DriveFilesUpdateRequest {
-  const _DriveFilesUpdateRequest({required this.fileId, this.folderId, this.name, this.isSensitive, this.comment});
-  factory _DriveFilesUpdateRequest.fromJson(Map<String, dynamic> json) => _$DriveFilesUpdateRequestFromJson(json);
-
-@override final  String fileId;
-@override final  String? folderId;
-@override final  String? name;
-@override final  bool? isSensitive;
-@override final  String? comment;
-
-/// Create a copy of DriveFilesUpdateRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$DriveFilesUpdateRequestCopyWith<_DriveFilesUpdateRequest> get copyWith => __$DriveFilesUpdateRequestCopyWithImpl<_DriveFilesUpdateRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$DriveFilesUpdateRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _DriveFilesUpdateRequest&&(identical(other.fileId, fileId) || other.fileId == fileId)&&(identical(other.folderId, folderId) || other.folderId == folderId)&&(identical(other.name, name) || other.name == name)&&(identical(other.isSensitive, isSensitive) || other.isSensitive == isSensitive)&&(identical(other.comment, comment) || other.comment == comment));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,fileId,folderId,name,isSensitive,comment);
-}
-
-@override
-String toString() {
-    return 'DriveFilesUpdateRequest(fileId: $fileId, folderId: $folderId, name: $name, isSensitive: $isSensitive, comment: $comment)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$DriveFilesUpdateRequestCopyWith<$Res> implements $DriveFilesUpdateRequestCopyWith<$Res> {
-  factory _$DriveFilesUpdateRequestCopyWith(_DriveFilesUpdateRequest value, $Res Function(_DriveFilesUpdateRequest) _then) = __$DriveFilesUpdateRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String fileId, String? folderId, String? name, bool? isSensitive, String? comment
-});
-
-
-
-
-}
-/// @nodoc
-class __$DriveFilesUpdateRequestCopyWithImpl<$Res>
-    implements _$DriveFilesUpdateRequestCopyWith<$Res> {
-  __$DriveFilesUpdateRequestCopyWithImpl(this._self, this._then);
-
-  final _DriveFilesUpdateRequest _self;
-  final $Res Function(_DriveFilesUpdateRequest) _then;
-
-/// Create a copy of DriveFilesUpdateRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? fileId = null,Object? folderId = freezed,Object? name = freezed,Object? isSensitive = freezed,Object? comment = freezed,}) {
-  return _then(_DriveFilesUpdateRequest(
-fileId: null == fileId ? _self.fileId : fileId // ignore: cast_nullable_to_non_nullable
-as String,folderId: freezed == folderId ? _self.folderId : folderId // ignore: cast_nullable_to_non_nullable
-as String?,name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String?,isSensitive: freezed == isSensitive ? _self.isSensitive : isSensitive // ignore: cast_nullable_to_non_nullable
-as bool?,comment: freezed == comment ? _self.comment : comment // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
 
 }
 

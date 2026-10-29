@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$DriveFilesRequest {
 
- int? get limit; String? get sinceId; String? get untilId;@EpocTimeDateTimeConverter() DateTime? get sinceDate;@EpocTimeDateTimeConverter() DateTime? get untilDate; String? get folderId; String? get type;@DriveFilesSortConverter() DriveFilesSortType? get sort;
+
 /// Create a copy of DriveFilesRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $DriveFilesRequestCopyWith<DriveFilesRequest> get copyWith => _$DriveFilesRequestCopyWithImpl<DriveFilesRequest>(this as DriveFilesRequest, _$identity);
 
-  /// Serializes this DriveFilesRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -102,11 +100,10 @@ extension DriveFilesRequestPatterns on DriveFilesRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _DriveFilesRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _DriveFilesRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -124,11 +121,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _DriveFilesRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _DriveFilesRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -145,11 +141,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _DriveFilesRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _DriveFilesRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -166,10 +161,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  String? folderId,  String? type, @DriveFilesSortConverter()  DriveFilesSortType? sort)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _DriveFilesRequest() when $default != null:
-return $default(_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.folderId,_that.type,_that.sort);case _:
+case _:
   return orElse();
 
 }
@@ -187,10 +181,9 @@ return $default(_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.un
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  String? folderId,  String? type, @DriveFilesSortConverter()  DriveFilesSortType? sort)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _DriveFilesRequest():
-return $default(_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.folderId,_that.type,_that.sort);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -207,99 +200,13 @@ return $default(_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.un
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  String? folderId,  String? type, @DriveFilesSortConverter()  DriveFilesSortType? sort)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _DriveFilesRequest() when $default != null:
-return $default(_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.folderId,_that.type,_that.sort);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _DriveFilesRequest implements DriveFilesRequest {
-  const _DriveFilesRequest({this.limit, this.sinceId, this.untilId, @EpocTimeDateTimeConverter() this.sinceDate, @EpocTimeDateTimeConverter() this.untilDate, this.folderId, this.type, @DriveFilesSortConverter() this.sort});
-  factory _DriveFilesRequest.fromJson(Map<String, dynamic> json) => _$DriveFilesRequestFromJson(json);
-
-@override final  int? limit;
-@override final  String? sinceId;
-@override final  String? untilId;
-@override@EpocTimeDateTimeConverter() final  DateTime? sinceDate;
-@override@EpocTimeDateTimeConverter() final  DateTime? untilDate;
-@override final  String? folderId;
-@override final  String? type;
-@override@DriveFilesSortConverter() final  DriveFilesSortType? sort;
-
-/// Create a copy of DriveFilesRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$DriveFilesRequestCopyWith<_DriveFilesRequest> get copyWith => __$DriveFilesRequestCopyWithImpl<_DriveFilesRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$DriveFilesRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _DriveFilesRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.folderId, folderId) || other.folderId == folderId)&&(identical(other.type, type) || other.type == type)&&(identical(other.sort, sort) || other.sort == sort));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,limit,sinceId,untilId,sinceDate,untilDate,folderId,type,sort);
-}
-
-@override
-String toString() {
-    return 'DriveFilesRequest(limit: $limit, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, folderId: $folderId, type: $type, sort: $sort)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$DriveFilesRequestCopyWith<$Res> implements $DriveFilesRequestCopyWith<$Res> {
-  factory _$DriveFilesRequestCopyWith(_DriveFilesRequest value, $Res Function(_DriveFilesRequest) _then) = __$DriveFilesRequestCopyWithImpl;
-@override @useResult
-$Res call({
- int? limit, String? sinceId, String? untilId,@EpocTimeDateTimeConverter() DateTime? sinceDate,@EpocTimeDateTimeConverter() DateTime? untilDate, String? folderId, String? type,@DriveFilesSortConverter() DriveFilesSortType? sort
-});
-
-
-
-
-}
-/// @nodoc
-class __$DriveFilesRequestCopyWithImpl<$Res>
-    implements _$DriveFilesRequestCopyWith<$Res> {
-  __$DriveFilesRequestCopyWithImpl(this._self, this._then);
-
-  final _DriveFilesRequest _self;
-  final $Res Function(_DriveFilesRequest) _then;
-
-/// Create a copy of DriveFilesRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,Object? folderId = freezed,Object? type = freezed,Object? sort = freezed,}) {
-  return _then(_DriveFilesRequest(
-limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
-as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
-as String?,sinceDate: freezed == sinceDate ? _self.sinceDate : sinceDate // ignore: cast_nullable_to_non_nullable
-as DateTime?,untilDate: freezed == untilDate ? _self.untilDate : untilDate // ignore: cast_nullable_to_non_nullable
-as DateTime?,folderId: freezed == folderId ? _self.folderId : folderId // ignore: cast_nullable_to_non_nullable
-as String?,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
-as String?,sort: freezed == sort ? _self.sort : sort // ignore: cast_nullable_to_non_nullable
-as DriveFilesSortType?,
-  ));
-}
-
 
 }
 

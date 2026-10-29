@@ -5,16 +5,17 @@ part 'clips_notes_request.freezed.dart';
 part 'clips_notes_request.g.dart';
 
 @freezed
-abstract class ClipsNotesRequest with _$ClipsNotesRequest {
-  const factory({
-    @Assert('limit > 0') int? limit,
-    required String clipId,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-  }) = _ClipsNotesRequest;
-
+@JsonSerializable()
+class const ClipsNotesRequest({
+  @Assert('limit > 0') final int? limit,
+  required final String clipId,
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
+}) with _$ClipsNotesRequest {
   factory fromJson(Map<String, Object?> json) =>
       _$ClipsNotesRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ClipsNotesRequestToJson(this);
 }

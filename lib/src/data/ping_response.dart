@@ -4,8 +4,9 @@ part 'ping_response.freezed.dart';
 part 'ping_response.g.dart';
 
 @freezed
-abstract class PingResponse with _$PingResponse {
-  const factory({required int pong}) = _PingResponse;
-
+@JsonSerializable()
+class const PingResponse({required final int pong}) with _$PingResponse {
   factory fromJson(Map<String, dynamic> json) => _$PingResponseFromJson(json);
+
+  Map<String, dynamic> toJson() => _$PingResponseToJson(this);
 }

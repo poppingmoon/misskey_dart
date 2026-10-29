@@ -6,7 +6,7 @@ part of 'gallery_post.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_GalleryPost _$GalleryPostFromJson(Map<String, dynamic> json) => _GalleryPost(
+GalleryPost _$GalleryPostFromJson(Map<String, dynamic> json) => GalleryPost(
   id: json['id'] as String,
   createdAt: DateTime.parse(json['createdAt'] as String),
   updatedAt: DateTime.parse(json['updatedAt'] as String),
@@ -24,7 +24,7 @@ _GalleryPost _$GalleryPostFromJson(Map<String, dynamic> json) => _GalleryPost(
   isLiked: json['isLiked'] as bool?,
 );
 
-Map<String, dynamic> _$GalleryPostToJson(_GalleryPost instance) =>
+Map<String, dynamic> _$GalleryPostToJson(GalleryPost instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdAt': instance.createdAt.toIso8601String(),

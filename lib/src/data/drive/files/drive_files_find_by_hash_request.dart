@@ -4,9 +4,11 @@ part 'drive_files_find_by_hash_request.freezed.dart';
 part 'drive_files_find_by_hash_request.g.dart';
 
 @freezed
-abstract class DriveFilesFindByHashRequest with _$DriveFilesFindByHashRequest {
-  const factory({required String md5}) = _DriveFilesFindByHashRequest;
-
+@JsonSerializable()
+class const DriveFilesFindByHashRequest({required final String md5})
+    with _$DriveFilesFindByHashRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$DriveFilesFindByHashRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$DriveFilesFindByHashRequestToJson(this);
 }

@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ApShowRequest {
 
- String get uri;
+
 /// Create a copy of ApShowRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $ApShowRequestCopyWith<ApShowRequest> get copyWith => _$ApShowRequestCopyWithImpl<ApShowRequest>(this as ApShowRequest, _$identity);
 
-  /// Serializes this ApShowRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -95,11 +93,10 @@ extension ApShowRequestPatterns on ApShowRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ApShowRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _ApShowRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -117,11 +114,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ApShowRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ApShowRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -138,11 +134,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ApShowRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ApShowRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -159,10 +154,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String uri)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _ApShowRequest() when $default != null:
-return $default(_that.uri);case _:
+case _:
   return orElse();
 
 }
@@ -180,10 +174,9 @@ return $default(_that.uri);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String uri)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ApShowRequest():
-return $default(_that.uri);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -200,85 +193,13 @@ return $default(_that.uri);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String uri)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ApShowRequest() when $default != null:
-return $default(_that.uri);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _ApShowRequest implements ApShowRequest {
-  const _ApShowRequest({required this.uri});
-  factory _ApShowRequest.fromJson(Map<String, dynamic> json) => _$ApShowRequestFromJson(json);
-
-@override final  String uri;
-
-/// Create a copy of ApShowRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ApShowRequestCopyWith<_ApShowRequest> get copyWith => __$ApShowRequestCopyWithImpl<_ApShowRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$ApShowRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ApShowRequest&&(identical(other.uri, uri) || other.uri == uri));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,uri);
-}
-
-@override
-String toString() {
-    return 'ApShowRequest(uri: $uri)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ApShowRequestCopyWith<$Res> implements $ApShowRequestCopyWith<$Res> {
-  factory _$ApShowRequestCopyWith(_ApShowRequest value, $Res Function(_ApShowRequest) _then) = __$ApShowRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String uri
-});
-
-
-
-
-}
-/// @nodoc
-class __$ApShowRequestCopyWithImpl<$Res>
-    implements _$ApShowRequestCopyWith<$Res> {
-  __$ApShowRequestCopyWithImpl(this._self, this._then);
-
-  final _ApShowRequest _self;
-  final $Res Function(_ApShowRequest) _then;
-
-/// Create a copy of ApShowRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? uri = null,}) {
-  return _then(_ApShowRequest(
-uri: null == uri ? _self.uri : uri // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

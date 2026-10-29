@@ -6,8 +6,8 @@ part of 'drive_folders_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_DriveFoldersRequest _$DriveFoldersRequestFromJson(Map<String, dynamic> json) =>
-    _DriveFoldersRequest(
+DriveFoldersRequest _$DriveFoldersRequestFromJson(Map<String, dynamic> json) =>
+    DriveFoldersRequest(
       limit: (json['limit'] as num?)?.toInt(),
       sinceId: json['sinceId'] as String?,
       untilId: json['untilId'] as String?,
@@ -23,7 +23,7 @@ _DriveFoldersRequest _$DriveFoldersRequestFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$DriveFoldersRequestToJson(
-  _DriveFoldersRequest instance,
+  DriveFoldersRequest instance,
 ) => <String, dynamic>{
   'limit': instance.limit,
   'sinceId': instance.sinceId,

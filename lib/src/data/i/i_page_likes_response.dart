@@ -5,9 +5,13 @@ part 'i_page_likes_response.freezed.dart';
 part 'i_page_likes_response.g.dart';
 
 @freezed
-abstract class IPageLikesResponse with _$IPageLikesResponse {
-  const factory({required String id, required Page page}) = _IPageLikesResponse;
-
+@JsonSerializable()
+class const IPageLikesResponse({
+  required final String id,
+  required final Page page,
+}) with _$IPageLikesResponse {
   factory fromJson(Map<String, dynamic> json) =>
       _$IPageLikesResponseFromJson(json);
+
+  Map<String, dynamic> toJson() => _$IPageLikesResponseToJson(this);
 }

@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$GetAvatarDecorationsResponse {
 
- String get id; String get name; String get description;@NullableUriConverter() Uri? get url; List<String> get roleIdsThatCanBeUsedThisDecoration; String? get category;
+
 /// Create a copy of GetAvatarDecorationsResponse
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $GetAvatarDecorationsResponseCopyWith<GetAvatarDecorationsResponse> get copyWith => _$GetAvatarDecorationsResponseCopyWithImpl<GetAvatarDecorationsResponse>(this as GetAvatarDecorationsResponse, _$identity);
 
-  /// Serializes this GetAvatarDecorationsResponse to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -100,11 +98,10 @@ extension GetAvatarDecorationsResponsePatterns on GetAvatarDecorationsResponse {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _GetAvatarDecorationsResponse value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _GetAvatarDecorationsResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -122,11 +119,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _GetAvatarDecorationsResponse value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _GetAvatarDecorationsResponse():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -143,11 +139,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _GetAvatarDecorationsResponse value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _GetAvatarDecorationsResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -164,10 +159,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String name,  String description, @NullableUriConverter()  Uri? url,  List<String> roleIdsThatCanBeUsedThisDecoration,  String? category)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _GetAvatarDecorationsResponse() when $default != null:
-return $default(_that.id,_that.name,_that.description,_that.url,_that.roleIdsThatCanBeUsedThisDecoration,_that.category);case _:
+case _:
   return orElse();
 
 }
@@ -185,10 +179,9 @@ return $default(_that.id,_that.name,_that.description,_that.url,_that.roleIdsTha
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String name,  String description, @NullableUriConverter()  Uri? url,  List<String> roleIdsThatCanBeUsedThisDecoration,  String? category)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _GetAvatarDecorationsResponse():
-return $default(_that.id,_that.name,_that.description,_that.url,_that.roleIdsThatCanBeUsedThisDecoration,_that.category);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -205,101 +198,13 @@ return $default(_that.id,_that.name,_that.description,_that.url,_that.roleIdsTha
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String name,  String description, @NullableUriConverter()  Uri? url,  List<String> roleIdsThatCanBeUsedThisDecoration,  String? category)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _GetAvatarDecorationsResponse() when $default != null:
-return $default(_that.id,_that.name,_that.description,_that.url,_that.roleIdsThatCanBeUsedThisDecoration,_that.category);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _GetAvatarDecorationsResponse implements GetAvatarDecorationsResponse {
-  const _GetAvatarDecorationsResponse({required this.id, required this.name, required this.description, @NullableUriConverter() this.url,  List<String> roleIdsThatCanBeUsedThisDecoration = const [], this.category}): _roleIdsThatCanBeUsedThisDecoration = roleIdsThatCanBeUsedThisDecoration;
-  factory _GetAvatarDecorationsResponse.fromJson(Map<String, dynamic> json) => _$GetAvatarDecorationsResponseFromJson(json);
-
-@override final  String id;
-@override final  String name;
-@override final  String description;
-@override@NullableUriConverter() final  Uri? url;
- final  List<String> _roleIdsThatCanBeUsedThisDecoration;
-@override@JsonKey() List<String> get roleIdsThatCanBeUsedThisDecoration {
-  if (_roleIdsThatCanBeUsedThisDecoration is EqualUnmodifiableListView) return _roleIdsThatCanBeUsedThisDecoration;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_roleIdsThatCanBeUsedThisDecoration);
-}
-
-@override final  String? category;
-
-/// Create a copy of GetAvatarDecorationsResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$GetAvatarDecorationsResponseCopyWith<_GetAvatarDecorationsResponse> get copyWith => __$GetAvatarDecorationsResponseCopyWithImpl<_GetAvatarDecorationsResponse>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$GetAvatarDecorationsResponseToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _GetAvatarDecorationsResponse&&(identical(other.id, id) || other.id == id)&&(identical(other.name, name) || other.name == name)&&(identical(other.description, description) || other.description == description)&&(identical(other.url, url) || other.url == url)&&const DeepCollectionEquality().equals(other.roleIdsThatCanBeUsedThisDecoration, _roleIdsThatCanBeUsedThisDecoration)&&(identical(other.category, category) || other.category == category));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,id,name,description,url,const DeepCollectionEquality().hash(_roleIdsThatCanBeUsedThisDecoration),category);
-}
-
-@override
-String toString() {
-    return 'GetAvatarDecorationsResponse(id: $id, name: $name, description: $description, url: $url, roleIdsThatCanBeUsedThisDecoration: $roleIdsThatCanBeUsedThisDecoration, category: $category)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$GetAvatarDecorationsResponseCopyWith<$Res> implements $GetAvatarDecorationsResponseCopyWith<$Res> {
-  factory _$GetAvatarDecorationsResponseCopyWith(_GetAvatarDecorationsResponse value, $Res Function(_GetAvatarDecorationsResponse) _then) = __$GetAvatarDecorationsResponseCopyWithImpl;
-@override @useResult
-$Res call({
- String id, String name, String description,@NullableUriConverter() Uri? url, List<String> roleIdsThatCanBeUsedThisDecoration, String? category
-});
-
-
-
-
-}
-/// @nodoc
-class __$GetAvatarDecorationsResponseCopyWithImpl<$Res>
-    implements _$GetAvatarDecorationsResponseCopyWith<$Res> {
-  __$GetAvatarDecorationsResponseCopyWithImpl(this._self, this._then);
-
-  final _GetAvatarDecorationsResponse _self;
-  final $Res Function(_GetAvatarDecorationsResponse) _then;
-
-/// Create a copy of GetAvatarDecorationsResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? name = null,Object? description = null,Object? url = freezed,Object? roleIdsThatCanBeUsedThisDecoration = null,Object? category = freezed,}) {
-  return _then(_GetAvatarDecorationsResponse(
-id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as String,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String,description: null == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
-as String,url: freezed == url ? _self.url : url // ignore: cast_nullable_to_non_nullable
-as Uri?,roleIdsThatCanBeUsedThisDecoration: null == roleIdsThatCanBeUsedThisDecoration ? _self._roleIdsThatCanBeUsedThisDecoration : roleIdsThatCanBeUsedThisDecoration // ignore: cast_nullable_to_non_nullable
-as List<String>,category: freezed == category ? _self.category : category // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
 
 }
 

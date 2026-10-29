@@ -6,9 +6,9 @@ part of 'notes_children_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_NotesChildrenRequest _$NotesChildrenRequestFromJson(
+NotesChildrenRequest _$NotesChildrenRequestFromJson(
   Map<String, dynamic> json,
-) => _NotesChildrenRequest(
+) => NotesChildrenRequest(
   noteId: json['noteId'] as String,
   limit: (json['limit'] as num?)?.toInt(),
   depth: (json['depth'] as num?)?.toInt(),
@@ -25,7 +25,7 @@ _NotesChildrenRequest _$NotesChildrenRequestFromJson(
 );
 
 Map<String, dynamic> _$NotesChildrenRequestToJson(
-  _NotesChildrenRequest instance,
+  NotesChildrenRequest instance,
 ) => <String, dynamic>{
   'noteId': instance.noteId,
   'limit': instance.limit,

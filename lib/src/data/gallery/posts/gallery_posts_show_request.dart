@@ -4,9 +4,11 @@ part 'gallery_posts_show_request.freezed.dart';
 part 'gallery_posts_show_request.g.dart';
 
 @freezed
-abstract class GalleryPostsShowRequest with _$GalleryPostsShowRequest {
-  const factory({required String postId}) = _GalleryPostsShowRequest;
-
+@JsonSerializable()
+class const GalleryPostsShowRequest({required final String postId})
+    with _$GalleryPostsShowRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$GalleryPostsShowRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$GalleryPostsShowRequestToJson(this);
 }

@@ -4,12 +4,13 @@ part 'sw_registration.freezed.dart';
 part 'sw_registration.g.dart';
 
 @freezed
-abstract class SwRegistration with _$SwRegistration {
-  const factory({
-    required String userId,
-    required String endpoint,
-    required bool sendReadMessage,
-  }) = _SwRegistration;
-
+@JsonSerializable()
+class const SwRegistration({
+  required final String userId,
+  required final String endpoint,
+  required final bool sendReadMessage,
+}) with _$SwRegistration {
   factory fromJson(Map<String, Object?> json) => _$SwRegistrationFromJson(json);
+
+  Map<String, dynamic> toJson() => _$SwRegistrationToJson(this);
 }

@@ -6,14 +6,15 @@ part 'i_favorites_response.freezed.dart';
 part 'i_favorites_response.g.dart';
 
 @freezed
-abstract class IFavoritesResponse with _$IFavoritesResponse {
-  const factory({
-    required String id,
-    @DateTimeConverter() required DateTime createdAt,
-    required String noteId,
-    required Note note,
-  }) = _IFavoritesResponse;
-
+@JsonSerializable()
+class const IFavoritesResponse({
+  required final String id,
+  @DateTimeConverter() required final DateTime createdAt,
+  required final String noteId,
+  required final Note note,
+}) with _$IFavoritesResponse {
   factory fromJson(Map<String, Object?> json) =>
       _$IFavoritesResponseFromJson(json);
+
+  Map<String, dynamic> toJson() => _$IFavoritesResponseToJson(this);
 }

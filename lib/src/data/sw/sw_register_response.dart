@@ -4,19 +4,19 @@ part 'sw_register_response.freezed.dart';
 part 'sw_register_response.g.dart';
 
 @freezed
-abstract class SwRegisterResponse with _$SwRegisterResponse {
-  const factory({
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    SwRegisterResponseState? state,
-    String? key,
-    required String userId,
-    required String endpoint,
-    required bool sendReadMessage,
-  }) = _SwRegisterResponse;
-
+@JsonSerializable()
+class const SwRegisterResponse({
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final SwRegisterResponseState? state,
+  final String? key,
+  required final String userId,
+  required final String endpoint,
+  required final bool sendReadMessage,
+}) with _$SwRegisterResponse {
   factory fromJson(Map<String, Object?> json) =>
       _$SwRegisterResponseFromJson(json);
+
+  Map<String, dynamic> toJson() => _$SwRegisterResponseToJson(this);
 }
 
 @JsonEnum(fieldRename: FieldRename.kebab)

@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$GalleryPostsDeleteRequest {
 
- String get postId;
+
 /// Create a copy of GalleryPostsDeleteRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $GalleryPostsDeleteRequestCopyWith<GalleryPostsDeleteRequest> get copyWith => _$GalleryPostsDeleteRequestCopyWithImpl<GalleryPostsDeleteRequest>(this as GalleryPostsDeleteRequest, _$identity);
 
-  /// Serializes this GalleryPostsDeleteRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -95,11 +93,10 @@ extension GalleryPostsDeleteRequestPatterns on GalleryPostsDeleteRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _GalleryPostsDeleteRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _GalleryPostsDeleteRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -117,11 +114,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _GalleryPostsDeleteRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _GalleryPostsDeleteRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -138,11 +134,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _GalleryPostsDeleteRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _GalleryPostsDeleteRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -159,10 +154,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String postId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _GalleryPostsDeleteRequest() when $default != null:
-return $default(_that.postId);case _:
+case _:
   return orElse();
 
 }
@@ -180,10 +174,9 @@ return $default(_that.postId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String postId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _GalleryPostsDeleteRequest():
-return $default(_that.postId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -200,85 +193,13 @@ return $default(_that.postId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String postId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _GalleryPostsDeleteRequest() when $default != null:
-return $default(_that.postId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _GalleryPostsDeleteRequest implements GalleryPostsDeleteRequest {
-  const _GalleryPostsDeleteRequest({required this.postId});
-  factory _GalleryPostsDeleteRequest.fromJson(Map<String, dynamic> json) => _$GalleryPostsDeleteRequestFromJson(json);
-
-@override final  String postId;
-
-/// Create a copy of GalleryPostsDeleteRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$GalleryPostsDeleteRequestCopyWith<_GalleryPostsDeleteRequest> get copyWith => __$GalleryPostsDeleteRequestCopyWithImpl<_GalleryPostsDeleteRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$GalleryPostsDeleteRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _GalleryPostsDeleteRequest&&(identical(other.postId, postId) || other.postId == postId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,postId);
-}
-
-@override
-String toString() {
-    return 'GalleryPostsDeleteRequest(postId: $postId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$GalleryPostsDeleteRequestCopyWith<$Res> implements $GalleryPostsDeleteRequestCopyWith<$Res> {
-  factory _$GalleryPostsDeleteRequestCopyWith(_GalleryPostsDeleteRequest value, $Res Function(_GalleryPostsDeleteRequest) _then) = __$GalleryPostsDeleteRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String postId
-});
-
-
-
-
-}
-/// @nodoc
-class __$GalleryPostsDeleteRequestCopyWithImpl<$Res>
-    implements _$GalleryPostsDeleteRequestCopyWith<$Res> {
-  __$GalleryPostsDeleteRequestCopyWithImpl(this._self, this._then);
-
-  final _GalleryPostsDeleteRequest _self;
-  final $Res Function(_GalleryPostsDeleteRequest) _then;
-
-/// Create a copy of GalleryPostsDeleteRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? postId = null,}) {
-  return _then(_GalleryPostsDeleteRequest(
-postId: null == postId ? _self.postId : postId // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

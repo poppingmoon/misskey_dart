@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ClipsUnfavoriteRequest {
 
- String get clipId;
+
 /// Create a copy of ClipsUnfavoriteRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $ClipsUnfavoriteRequestCopyWith<ClipsUnfavoriteRequest> get copyWith => _$ClipsUnfavoriteRequestCopyWithImpl<ClipsUnfavoriteRequest>(this as ClipsUnfavoriteRequest, _$identity);
 
-  /// Serializes this ClipsUnfavoriteRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -95,11 +93,10 @@ extension ClipsUnfavoriteRequestPatterns on ClipsUnfavoriteRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ClipsUnfavoriteRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _ClipsUnfavoriteRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -117,11 +114,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ClipsUnfavoriteRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ClipsUnfavoriteRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -138,11 +134,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ClipsUnfavoriteRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ClipsUnfavoriteRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -159,10 +154,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String clipId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _ClipsUnfavoriteRequest() when $default != null:
-return $default(_that.clipId);case _:
+case _:
   return orElse();
 
 }
@@ -180,10 +174,9 @@ return $default(_that.clipId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String clipId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ClipsUnfavoriteRequest():
-return $default(_that.clipId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -200,85 +193,13 @@ return $default(_that.clipId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String clipId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ClipsUnfavoriteRequest() when $default != null:
-return $default(_that.clipId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _ClipsUnfavoriteRequest implements ClipsUnfavoriteRequest {
-  const _ClipsUnfavoriteRequest({required this.clipId});
-  factory _ClipsUnfavoriteRequest.fromJson(Map<String, dynamic> json) => _$ClipsUnfavoriteRequestFromJson(json);
-
-@override final  String clipId;
-
-/// Create a copy of ClipsUnfavoriteRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ClipsUnfavoriteRequestCopyWith<_ClipsUnfavoriteRequest> get copyWith => __$ClipsUnfavoriteRequestCopyWithImpl<_ClipsUnfavoriteRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$ClipsUnfavoriteRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ClipsUnfavoriteRequest&&(identical(other.clipId, clipId) || other.clipId == clipId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,clipId);
-}
-
-@override
-String toString() {
-    return 'ClipsUnfavoriteRequest(clipId: $clipId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ClipsUnfavoriteRequestCopyWith<$Res> implements $ClipsUnfavoriteRequestCopyWith<$Res> {
-  factory _$ClipsUnfavoriteRequestCopyWith(_ClipsUnfavoriteRequest value, $Res Function(_ClipsUnfavoriteRequest) _then) = __$ClipsUnfavoriteRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String clipId
-});
-
-
-
-
-}
-/// @nodoc
-class __$ClipsUnfavoriteRequestCopyWithImpl<$Res>
-    implements _$ClipsUnfavoriteRequestCopyWith<$Res> {
-  __$ClipsUnfavoriteRequestCopyWithImpl(this._self, this._then);
-
-  final _ClipsUnfavoriteRequest _self;
-  final $Res Function(_ClipsUnfavoriteRequest) _then;
-
-/// Create a copy of ClipsUnfavoriteRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? clipId = null,}) {
-  return _then(_ClipsUnfavoriteRequest(
-clipId: null == clipId ? _self.clipId : clipId // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

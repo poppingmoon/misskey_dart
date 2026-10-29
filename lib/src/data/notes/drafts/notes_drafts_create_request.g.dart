@@ -6,9 +6,9 @@ part of 'notes_drafts_create_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_NotesDraftsCreateRequest _$NotesDraftsCreateRequestFromJson(
+NotesDraftsCreateRequest _$NotesDraftsCreateRequestFromJson(
   Map<String, dynamic> json,
-) => _NotesDraftsCreateRequest(
+) => NotesDraftsCreateRequest(
   visibility: $enumDecodeNullable(_$NoteVisibilityEnumMap, json['visibility']),
   visibleUserIds: (json['visibleUserIds'] as List<dynamic>?)
       ?.map((e) => e as String)
@@ -38,7 +38,7 @@ _NotesDraftsCreateRequest _$NotesDraftsCreateRequestFromJson(
 );
 
 Map<String, dynamic> _$NotesDraftsCreateRequestToJson(
-  _NotesDraftsCreateRequest instance,
+  NotesDraftsCreateRequest instance,
 ) => <String, dynamic>{
   'visibility': _$NoteVisibilityEnumMap[instance.visibility],
   'visibleUserIds': instance.visibleUserIds,

@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ChatMessagesRoomTimelineRequest {
 
- String get roomId; int? get limit; String? get sinceId; String? get untilId;@EpocTimeDateTimeConverter() DateTime? get sinceDate;@EpocTimeDateTimeConverter() DateTime? get untilDate;
+
 /// Create a copy of ChatMessagesRoomTimelineRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $ChatMessagesRoomTimelineRequestCopyWith<ChatMessagesRoomTimelineRequest> get copyWith => _$ChatMessagesRoomTimelineRequestCopyWithImpl<ChatMessagesRoomTimelineRequest>(this as ChatMessagesRoomTimelineRequest, _$identity);
 
-  /// Serializes this ChatMessagesRoomTimelineRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -100,11 +98,10 @@ extension ChatMessagesRoomTimelineRequestPatterns on ChatMessagesRoomTimelineReq
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ChatMessagesRoomTimelineRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _ChatMessagesRoomTimelineRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -122,11 +119,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ChatMessagesRoomTimelineRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChatMessagesRoomTimelineRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -143,11 +139,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ChatMessagesRoomTimelineRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChatMessagesRoomTimelineRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -164,10 +159,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String roomId,  int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _ChatMessagesRoomTimelineRequest() when $default != null:
-return $default(_that.roomId,_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate);case _:
+case _:
   return orElse();
 
 }
@@ -185,10 +179,9 @@ return $default(_that.roomId,_that.limit,_that.sinceId,_that.untilId,_that.since
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String roomId,  int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChatMessagesRoomTimelineRequest():
-return $default(_that.roomId,_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -205,95 +198,13 @@ return $default(_that.roomId,_that.limit,_that.sinceId,_that.untilId,_that.since
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String roomId,  int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChatMessagesRoomTimelineRequest() when $default != null:
-return $default(_that.roomId,_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _ChatMessagesRoomTimelineRequest implements ChatMessagesRoomTimelineRequest {
-  const _ChatMessagesRoomTimelineRequest({required this.roomId, this.limit, this.sinceId, this.untilId, @EpocTimeDateTimeConverter() this.sinceDate, @EpocTimeDateTimeConverter() this.untilDate});
-  factory _ChatMessagesRoomTimelineRequest.fromJson(Map<String, dynamic> json) => _$ChatMessagesRoomTimelineRequestFromJson(json);
-
-@override final  String roomId;
-@override final  int? limit;
-@override final  String? sinceId;
-@override final  String? untilId;
-@override@EpocTimeDateTimeConverter() final  DateTime? sinceDate;
-@override@EpocTimeDateTimeConverter() final  DateTime? untilDate;
-
-/// Create a copy of ChatMessagesRoomTimelineRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ChatMessagesRoomTimelineRequestCopyWith<_ChatMessagesRoomTimelineRequest> get copyWith => __$ChatMessagesRoomTimelineRequestCopyWithImpl<_ChatMessagesRoomTimelineRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$ChatMessagesRoomTimelineRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatMessagesRoomTimelineRequest&&(identical(other.roomId, roomId) || other.roomId == roomId)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,roomId,limit,sinceId,untilId,sinceDate,untilDate);
-}
-
-@override
-String toString() {
-    return 'ChatMessagesRoomTimelineRequest(roomId: $roomId, limit: $limit, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ChatMessagesRoomTimelineRequestCopyWith<$Res> implements $ChatMessagesRoomTimelineRequestCopyWith<$Res> {
-  factory _$ChatMessagesRoomTimelineRequestCopyWith(_ChatMessagesRoomTimelineRequest value, $Res Function(_ChatMessagesRoomTimelineRequest) _then) = __$ChatMessagesRoomTimelineRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String roomId, int? limit, String? sinceId, String? untilId,@EpocTimeDateTimeConverter() DateTime? sinceDate,@EpocTimeDateTimeConverter() DateTime? untilDate
-});
-
-
-
-
-}
-/// @nodoc
-class __$ChatMessagesRoomTimelineRequestCopyWithImpl<$Res>
-    implements _$ChatMessagesRoomTimelineRequestCopyWith<$Res> {
-  __$ChatMessagesRoomTimelineRequestCopyWithImpl(this._self, this._then);
-
-  final _ChatMessagesRoomTimelineRequest _self;
-  final $Res Function(_ChatMessagesRoomTimelineRequest) _then;
-
-/// Create a copy of ChatMessagesRoomTimelineRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? roomId = null,Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,}) {
-  return _then(_ChatMessagesRoomTimelineRequest(
-roomId: null == roomId ? _self.roomId : roomId // ignore: cast_nullable_to_non_nullable
-as String,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
-as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
-as String?,sinceDate: freezed == sinceDate ? _self.sinceDate : sinceDate // ignore: cast_nullable_to_non_nullable
-as DateTime?,untilDate: freezed == untilDate ? _self.untilDate : untilDate // ignore: cast_nullable_to_non_nullable
-as DateTime?,
-  ));
-}
-
 
 }
 

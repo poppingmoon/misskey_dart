@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$UsersGetFrequentlyRepliedUsersResponse {
 
- User get user; double get weight;
+
 /// Create a copy of UsersGetFrequentlyRepliedUsersResponse
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $UsersGetFrequentlyRepliedUsersResponseCopyWith<UsersGetFrequentlyRepliedUsersResponse> get copyWith => _$UsersGetFrequentlyRepliedUsersResponseCopyWithImpl<UsersGetFrequentlyRepliedUsersResponse>(this as UsersGetFrequentlyRepliedUsersResponse, _$identity);
 
-  /// Serializes this UsersGetFrequentlyRepliedUsersResponse to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -96,11 +94,10 @@ extension UsersGetFrequentlyRepliedUsersResponsePatterns on UsersGetFrequentlyRe
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UsersGetFrequentlyRepliedUsersResponse value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _UsersGetFrequentlyRepliedUsersResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -118,11 +115,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UsersGetFrequentlyRepliedUsersResponse value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UsersGetFrequentlyRepliedUsersResponse():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -139,11 +135,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UsersGetFrequentlyRepliedUsersResponse value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UsersGetFrequentlyRepliedUsersResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -160,10 +155,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( User user,  double weight)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _UsersGetFrequentlyRepliedUsersResponse() when $default != null:
-return $default(_that.user,_that.weight);case _:
+case _:
   return orElse();
 
 }
@@ -181,10 +175,9 @@ return $default(_that.user,_that.weight);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( User user,  double weight)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UsersGetFrequentlyRepliedUsersResponse():
-return $default(_that.user,_that.weight);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -201,87 +194,13 @@ return $default(_that.user,_that.weight);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( User user,  double weight)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UsersGetFrequentlyRepliedUsersResponse() when $default != null:
-return $default(_that.user,_that.weight);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _UsersGetFrequentlyRepliedUsersResponse implements UsersGetFrequentlyRepliedUsersResponse {
-  const _UsersGetFrequentlyRepliedUsersResponse({required this.user, required this.weight});
-  factory _UsersGetFrequentlyRepliedUsersResponse.fromJson(Map<String, dynamic> json) => _$UsersGetFrequentlyRepliedUsersResponseFromJson(json);
-
-@override final  User user;
-@override final  double weight;
-
-/// Create a copy of UsersGetFrequentlyRepliedUsersResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$UsersGetFrequentlyRepliedUsersResponseCopyWith<_UsersGetFrequentlyRepliedUsersResponse> get copyWith => __$UsersGetFrequentlyRepliedUsersResponseCopyWithImpl<_UsersGetFrequentlyRepliedUsersResponse>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$UsersGetFrequentlyRepliedUsersResponseToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersGetFrequentlyRepliedUsersResponse&&(identical(other.user, user) || other.user == user)&&(identical(other.weight, weight) || other.weight == weight));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,user,weight);
-}
-
-@override
-String toString() {
-    return 'UsersGetFrequentlyRepliedUsersResponse(user: $user, weight: $weight)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$UsersGetFrequentlyRepliedUsersResponseCopyWith<$Res> implements $UsersGetFrequentlyRepliedUsersResponseCopyWith<$Res> {
-  factory _$UsersGetFrequentlyRepliedUsersResponseCopyWith(_UsersGetFrequentlyRepliedUsersResponse value, $Res Function(_UsersGetFrequentlyRepliedUsersResponse) _then) = __$UsersGetFrequentlyRepliedUsersResponseCopyWithImpl;
-@override @useResult
-$Res call({
- User user, double weight
-});
-
-
-
-
-}
-/// @nodoc
-class __$UsersGetFrequentlyRepliedUsersResponseCopyWithImpl<$Res>
-    implements _$UsersGetFrequentlyRepliedUsersResponseCopyWith<$Res> {
-  __$UsersGetFrequentlyRepliedUsersResponseCopyWithImpl(this._self, this._then);
-
-  final _UsersGetFrequentlyRepliedUsersResponse _self;
-  final $Res Function(_UsersGetFrequentlyRepliedUsersResponse) _then;
-
-/// Create a copy of UsersGetFrequentlyRepliedUsersResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? user = null,Object? weight = null,}) {
-  return _then(_UsersGetFrequentlyRepliedUsersResponse(
-user: null == user ? _self.user : user // ignore: cast_nullable_to_non_nullable
-as User,weight: null == weight ? _self.weight : weight // ignore: cast_nullable_to_non_nullable
-as double,
-  ));
-}
-
 
 }
 

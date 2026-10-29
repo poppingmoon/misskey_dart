@@ -6,8 +6,8 @@ part of 'pages_delete_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_PagesDeleteRequest _$PagesDeleteRequestFromJson(Map<String, dynamic> json) =>
-    _PagesDeleteRequest(pageId: json['pageId'] as String);
+PagesDeleteRequest _$PagesDeleteRequestFromJson(Map<String, dynamic> json) =>
+    PagesDeleteRequest(pageId: json['pageId'] as String);
 
-Map<String, dynamic> _$PagesDeleteRequestToJson(_PagesDeleteRequest instance) =>
+Map<String, dynamic> _$PagesDeleteRequestToJson(PagesDeleteRequest instance) =>
     <String, dynamic>{'pageId': instance.pageId};

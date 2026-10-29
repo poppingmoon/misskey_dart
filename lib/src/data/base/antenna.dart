@@ -6,28 +6,28 @@ part 'antenna.freezed.dart';
 part 'antenna.g.dart';
 
 @freezed
-abstract class Antenna with _$Antenna {
-  const factory({
-    required String id,
-    @DateTimeConverter() required DateTime createdAt,
-    required String name,
-    required List<List<String>> keywords,
-    required List<List<String>> excludeKeywords,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    AntennaSource? src,
-    String? userListId,
-    @Default([]) List<String> users,
-    bool? caseSensitive,
-    bool? notify,
-    bool? withReplies,
-    bool? withFile,
-    bool? isActive,
-    bool? hasUnreadNote,
-    bool? localOnly,
-    bool? excludeBots,
-    bool? excludeNotesInSensitiveChannel,
-  }) = _Antenna;
-
+@JsonSerializable()
+class const Antenna({
+  required final String id,
+  @DateTimeConverter() required final DateTime createdAt,
+  required final String name,
+  required final List<List<String>> keywords,
+  required final List<List<String>> excludeKeywords,
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final AntennaSource? src,
+  final String? userListId,
+  final List<String> users = const [],
+  final bool? caseSensitive,
+  final bool? notify,
+  final bool? withReplies,
+  final bool? withFile,
+  final bool? isActive,
+  final bool? hasUnreadNote,
+  final bool? localOnly,
+  final bool? excludeBots,
+  final bool? excludeNotesInSensitiveChannel,
+}) with _$Antenna {
   factory fromJson(Map<String, dynamic> json) => _$AntennaFromJson(json);
+
+  Map<String, dynamic> toJson() => _$AntennaToJson(this);
 }

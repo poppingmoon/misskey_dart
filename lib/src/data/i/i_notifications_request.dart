@@ -6,20 +6,21 @@ part 'i_notifications_request.freezed.dart';
 part 'i_notifications_request.g.dart';
 
 @freezed
-abstract class INotificationsRequest with _$INotificationsRequest {
-  const factory({
-    @Assert('limit > 0') int? limit,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-    bool? following,
-    bool? unreadOnly,
-    bool? markAsRead,
-    List<NotificationType>? includeTypes,
-    List<NotificationType>? excludeTypes,
-  }) = _INotificationRequest;
-
+@JsonSerializable()
+class const INotificationsRequest({
+  @Assert('limit > 0') final int? limit,
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
+  final bool? following,
+  final bool? unreadOnly,
+  final bool? markAsRead,
+  final List<NotificationType>? includeTypes,
+  final List<NotificationType>? excludeTypes,
+}) with _$INotificationsRequest {
   factory fromJson(Map<String, Object?> json) =>
       _$INotificationsRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$INotificationsRequestToJson(this);
 }

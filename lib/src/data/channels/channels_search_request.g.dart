@@ -6,9 +6,9 @@ part of 'channels_search_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ChannelsSearchRequest _$ChannelsSearchRequestFromJson(
+ChannelsSearchRequest _$ChannelsSearchRequestFromJson(
   Map<String, dynamic> json,
-) => _ChannelsSearchRequest(
+) => ChannelsSearchRequest(
   query: json['query'] as String,
   type: $enumDecodeNullable(_$ChannelSearchTypeEnumMap, json['type']),
   sinceId: json['sinceId'] as String?,
@@ -25,7 +25,7 @@ _ChannelsSearchRequest _$ChannelsSearchRequestFromJson(
 );
 
 Map<String, dynamic> _$ChannelsSearchRequestToJson(
-  _ChannelsSearchRequest instance,
+  ChannelsSearchRequest instance,
 ) => <String, dynamic>{
   'query': instance.query,
   'type': _$ChannelSearchTypeEnumMap[instance.type],

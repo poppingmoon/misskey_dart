@@ -7,26 +7,27 @@ part 'roles_list_response.freezed.dart';
 part 'roles_list_response.g.dart';
 
 @freezed
-abstract class RolesListResponse with _$RolesListResponse {
-  const factory({
-    required String id,
-    @DateTimeConverter() required DateTime createdAt,
-    @DateTimeConverter() required DateTime updatedAt,
-    required String name,
-    String? description,
-    @NullableColorConverter() int? color,
-    @NullableUriConverter() Uri? iconUrl,
-    String? target,
-    required bool isPublic,
-    required bool isAdministrator,
-    required bool isModerator,
-    required bool isExplorable,
-    required bool asBadge,
-    required bool canEditMembersByModerator,
-    required int displayOrder,
-    required int usersCount,
-  }) = _RolesListResponse;
-
+@JsonSerializable()
+class const RolesListResponse({
+  required final String id,
+  @DateTimeConverter() required final DateTime createdAt,
+  @DateTimeConverter() required final DateTime updatedAt,
+  required final String name,
+  final String? description,
+  @NullableColorConverter() final int? color,
+  @NullableUriConverter() final Uri? iconUrl,
+  final String? target,
+  required final bool isPublic,
+  required final bool isAdministrator,
+  required final bool isModerator,
+  required final bool isExplorable,
+  required final bool asBadge,
+  required final bool canEditMembersByModerator,
+  required final int displayOrder,
+  required final int usersCount,
+}) with _$RolesListResponse {
   factory fromJson(Map<String, dynamic> json) =>
       _$RolesListResponseFromJson(json);
+
+  Map<String, dynamic> toJson() => _$RolesListResponseToJson(this);
 }

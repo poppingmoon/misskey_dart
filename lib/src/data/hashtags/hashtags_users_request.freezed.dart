@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$HashtagsUsersRequest {
 
- String get tag; int? get limit;@UsersSortConverter() UsersSortType get sort; UsersState? get state; Origin? get origin;
+
 /// Create a copy of HashtagsUsersRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $HashtagsUsersRequestCopyWith<HashtagsUsersRequest> get copyWith => _$HashtagsUsersRequestCopyWithImpl<HashtagsUsersRequest>(this as HashtagsUsersRequest, _$identity);
 
-  /// Serializes this HashtagsUsersRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -99,11 +97,10 @@ extension HashtagsUsersRequestPatterns on HashtagsUsersRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _HashtagsUsersRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _HashtagsUsersRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -121,11 +118,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _HashtagsUsersRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _HashtagsUsersRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -142,11 +138,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _HashtagsUsersRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _HashtagsUsersRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -163,10 +158,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String tag,  int? limit, @UsersSortConverter()  UsersSortType sort,  UsersState? state,  Origin? origin)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _HashtagsUsersRequest() when $default != null:
-return $default(_that.tag,_that.limit,_that.sort,_that.state,_that.origin);case _:
+case _:
   return orElse();
 
 }
@@ -184,10 +178,9 @@ return $default(_that.tag,_that.limit,_that.sort,_that.state,_that.origin);case 
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String tag,  int? limit, @UsersSortConverter()  UsersSortType sort,  UsersState? state,  Origin? origin)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _HashtagsUsersRequest():
-return $default(_that.tag,_that.limit,_that.sort,_that.state,_that.origin);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -204,93 +197,13 @@ return $default(_that.tag,_that.limit,_that.sort,_that.state,_that.origin);case 
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String tag,  int? limit, @UsersSortConverter()  UsersSortType sort,  UsersState? state,  Origin? origin)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _HashtagsUsersRequest() when $default != null:
-return $default(_that.tag,_that.limit,_that.sort,_that.state,_that.origin);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _HashtagsUsersRequest implements HashtagsUsersRequest {
-  const _HashtagsUsersRequest({required this.tag, this.limit, @UsersSortConverter() required this.sort, this.state, this.origin});
-  factory _HashtagsUsersRequest.fromJson(Map<String, dynamic> json) => _$HashtagsUsersRequestFromJson(json);
-
-@override final  String tag;
-@override final  int? limit;
-@override@UsersSortConverter() final  UsersSortType sort;
-@override final  UsersState? state;
-@override final  Origin? origin;
-
-/// Create a copy of HashtagsUsersRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$HashtagsUsersRequestCopyWith<_HashtagsUsersRequest> get copyWith => __$HashtagsUsersRequestCopyWithImpl<_HashtagsUsersRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$HashtagsUsersRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _HashtagsUsersRequest&&(identical(other.tag, tag) || other.tag == tag)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sort, sort) || other.sort == sort)&&(identical(other.state, state) || other.state == state)&&(identical(other.origin, origin) || other.origin == origin));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,tag,limit,sort,state,origin);
-}
-
-@override
-String toString() {
-    return 'HashtagsUsersRequest(tag: $tag, limit: $limit, sort: $sort, state: $state, origin: $origin)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$HashtagsUsersRequestCopyWith<$Res> implements $HashtagsUsersRequestCopyWith<$Res> {
-  factory _$HashtagsUsersRequestCopyWith(_HashtagsUsersRequest value, $Res Function(_HashtagsUsersRequest) _then) = __$HashtagsUsersRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String tag, int? limit,@UsersSortConverter() UsersSortType sort, UsersState? state, Origin? origin
-});
-
-
-
-
-}
-/// @nodoc
-class __$HashtagsUsersRequestCopyWithImpl<$Res>
-    implements _$HashtagsUsersRequestCopyWith<$Res> {
-  __$HashtagsUsersRequestCopyWithImpl(this._self, this._then);
-
-  final _HashtagsUsersRequest _self;
-  final $Res Function(_HashtagsUsersRequest) _then;
-
-/// Create a copy of HashtagsUsersRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? tag = null,Object? limit = freezed,Object? sort = null,Object? state = freezed,Object? origin = freezed,}) {
-  return _then(_HashtagsUsersRequest(
-tag: null == tag ? _self.tag : tag // ignore: cast_nullable_to_non_nullable
-as String,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,sort: null == sort ? _self.sort : sort // ignore: cast_nullable_to_non_nullable
-as UsersSortType,state: freezed == state ? _self.state : state // ignore: cast_nullable_to_non_nullable
-as UsersState?,origin: freezed == origin ? _self.origin : origin // ignore: cast_nullable_to_non_nullable
-as Origin?,
-  ));
-}
-
 
 }
 

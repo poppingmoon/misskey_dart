@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ChatRoomsInvitationsInboxRequest {
 
- int? get limit; String? get sinceId; String? get untilId;@EpocTimeDateTimeConverter() DateTime? get sinceDate;@EpocTimeDateTimeConverter() DateTime? get untilDate;
+
 /// Create a copy of ChatRoomsInvitationsInboxRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $ChatRoomsInvitationsInboxRequestCopyWith<ChatRoomsInvitationsInboxRequest> get copyWith => _$ChatRoomsInvitationsInboxRequestCopyWithImpl<ChatRoomsInvitationsInboxRequest>(this as ChatRoomsInvitationsInboxRequest, _$identity);
 
-  /// Serializes this ChatRoomsInvitationsInboxRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -99,11 +97,10 @@ extension ChatRoomsInvitationsInboxRequestPatterns on ChatRoomsInvitationsInboxR
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ChatRoomsInvitationsInboxRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _ChatRoomsInvitationsInboxRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -121,11 +118,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ChatRoomsInvitationsInboxRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChatRoomsInvitationsInboxRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -142,11 +138,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ChatRoomsInvitationsInboxRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChatRoomsInvitationsInboxRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -163,10 +158,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _ChatRoomsInvitationsInboxRequest() when $default != null:
-return $default(_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate);case _:
+case _:
   return orElse();
 
 }
@@ -184,10 +178,9 @@ return $default(_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.un
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChatRoomsInvitationsInboxRequest():
-return $default(_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -204,93 +197,13 @@ return $default(_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.un
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChatRoomsInvitationsInboxRequest() when $default != null:
-return $default(_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _ChatRoomsInvitationsInboxRequest implements ChatRoomsInvitationsInboxRequest {
-  const _ChatRoomsInvitationsInboxRequest({this.limit, this.sinceId, this.untilId, @EpocTimeDateTimeConverter() this.sinceDate, @EpocTimeDateTimeConverter() this.untilDate});
-  factory _ChatRoomsInvitationsInboxRequest.fromJson(Map<String, dynamic> json) => _$ChatRoomsInvitationsInboxRequestFromJson(json);
-
-@override final  int? limit;
-@override final  String? sinceId;
-@override final  String? untilId;
-@override@EpocTimeDateTimeConverter() final  DateTime? sinceDate;
-@override@EpocTimeDateTimeConverter() final  DateTime? untilDate;
-
-/// Create a copy of ChatRoomsInvitationsInboxRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ChatRoomsInvitationsInboxRequestCopyWith<_ChatRoomsInvitationsInboxRequest> get copyWith => __$ChatRoomsInvitationsInboxRequestCopyWithImpl<_ChatRoomsInvitationsInboxRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$ChatRoomsInvitationsInboxRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatRoomsInvitationsInboxRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,limit,sinceId,untilId,sinceDate,untilDate);
-}
-
-@override
-String toString() {
-    return 'ChatRoomsInvitationsInboxRequest(limit: $limit, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ChatRoomsInvitationsInboxRequestCopyWith<$Res> implements $ChatRoomsInvitationsInboxRequestCopyWith<$Res> {
-  factory _$ChatRoomsInvitationsInboxRequestCopyWith(_ChatRoomsInvitationsInboxRequest value, $Res Function(_ChatRoomsInvitationsInboxRequest) _then) = __$ChatRoomsInvitationsInboxRequestCopyWithImpl;
-@override @useResult
-$Res call({
- int? limit, String? sinceId, String? untilId,@EpocTimeDateTimeConverter() DateTime? sinceDate,@EpocTimeDateTimeConverter() DateTime? untilDate
-});
-
-
-
-
-}
-/// @nodoc
-class __$ChatRoomsInvitationsInboxRequestCopyWithImpl<$Res>
-    implements _$ChatRoomsInvitationsInboxRequestCopyWith<$Res> {
-  __$ChatRoomsInvitationsInboxRequestCopyWithImpl(this._self, this._then);
-
-  final _ChatRoomsInvitationsInboxRequest _self;
-  final $Res Function(_ChatRoomsInvitationsInboxRequest) _then;
-
-/// Create a copy of ChatRoomsInvitationsInboxRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,}) {
-  return _then(_ChatRoomsInvitationsInboxRequest(
-limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
-as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
-as String?,sinceDate: freezed == sinceDate ? _self.sinceDate : sinceDate // ignore: cast_nullable_to_non_nullable
-as DateTime?,untilDate: freezed == untilDate ? _self.untilDate : untilDate // ignore: cast_nullable_to_non_nullable
-as DateTime?,
-  ));
-}
-
 
 }
 

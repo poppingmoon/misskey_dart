@@ -5,15 +5,16 @@ part 'flash_create_request.freezed.dart';
 part 'flash_create_request.g.dart';
 
 @freezed
-abstract class FlashCreateRequest with _$FlashCreateRequest {
-  const factory({
-    required String title,
-    required String summary,
-    required String script,
-    required List<String> permissions,
-    FlashVisibility? visibility,
-  }) = _FlashCreateRequest;
-
+@JsonSerializable()
+class const FlashCreateRequest({
+  required final String title,
+  required final String summary,
+  required final String script,
+  required final List<String> permissions,
+  final FlashVisibility? visibility,
+}) with _$FlashCreateRequest {
   factory fromJson(Map<String, Object?> json) =>
       _$FlashCreateRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$FlashCreateRequestToJson(this);
 }

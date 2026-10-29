@@ -5,22 +5,23 @@ part 'gallery_post.freezed.dart';
 part 'gallery_post.g.dart';
 
 @freezed
-abstract class GalleryPost with _$GalleryPost {
-  const factory({
-    required String id,
-    required DateTime createdAt,
-    required DateTime updatedAt,
-    required String userId,
-    required UserLite user,
-    required String title,
-    String? description,
-    required List<String> fileIds,
-    required List<DriveFile> files,
-    List<String>? tags,
-    required bool isSensitive,
-    required int likedCount,
-    bool? isLiked,
-  }) = _GalleryPost;
-
+@JsonSerializable()
+class const GalleryPost({
+  required final String id,
+  required final DateTime createdAt,
+  required final DateTime updatedAt,
+  required final String userId,
+  required final UserLite user,
+  required final String title,
+  final String? description,
+  required final List<String> fileIds,
+  required final List<DriveFile> files,
+  final List<String>? tags,
+  required final bool isSensitive,
+  required final int likedCount,
+  final bool? isLiked,
+}) with _$GalleryPost {
   factory fromJson(Map<String, Object?> json) => _$GalleryPostFromJson(json);
+
+  Map<String, dynamic> toJson() => _$GalleryPostToJson(this);
 }

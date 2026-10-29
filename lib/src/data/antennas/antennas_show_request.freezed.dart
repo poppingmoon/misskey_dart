@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$AntennasShowRequest {
 
- String get antennaId;
+
 /// Create a copy of AntennasShowRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $AntennasShowRequestCopyWith<AntennasShowRequest> get copyWith => _$AntennasShowRequestCopyWithImpl<AntennasShowRequest>(this as AntennasShowRequest, _$identity);
 
-  /// Serializes this AntennasShowRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -95,11 +93,10 @@ extension AntennasShowRequestPatterns on AntennasShowRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _AntennasShowRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _AntennasShowRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -117,11 +114,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _AntennasShowRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _AntennasShowRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -138,11 +134,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _AntennasShowRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _AntennasShowRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -159,10 +154,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String antennaId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _AntennasShowRequest() when $default != null:
-return $default(_that.antennaId);case _:
+case _:
   return orElse();
 
 }
@@ -180,10 +174,9 @@ return $default(_that.antennaId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String antennaId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _AntennasShowRequest():
-return $default(_that.antennaId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -200,85 +193,13 @@ return $default(_that.antennaId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String antennaId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _AntennasShowRequest() when $default != null:
-return $default(_that.antennaId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _AntennasShowRequest implements AntennasShowRequest {
-  const _AntennasShowRequest({required this.antennaId});
-  factory _AntennasShowRequest.fromJson(Map<String, dynamic> json) => _$AntennasShowRequestFromJson(json);
-
-@override final  String antennaId;
-
-/// Create a copy of AntennasShowRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$AntennasShowRequestCopyWith<_AntennasShowRequest> get copyWith => __$AntennasShowRequestCopyWithImpl<_AntennasShowRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$AntennasShowRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _AntennasShowRequest&&(identical(other.antennaId, antennaId) || other.antennaId == antennaId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,antennaId);
-}
-
-@override
-String toString() {
-    return 'AntennasShowRequest(antennaId: $antennaId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$AntennasShowRequestCopyWith<$Res> implements $AntennasShowRequestCopyWith<$Res> {
-  factory _$AntennasShowRequestCopyWith(_AntennasShowRequest value, $Res Function(_AntennasShowRequest) _then) = __$AntennasShowRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String antennaId
-});
-
-
-
-
-}
-/// @nodoc
-class __$AntennasShowRequestCopyWithImpl<$Res>
-    implements _$AntennasShowRequestCopyWith<$Res> {
-  __$AntennasShowRequestCopyWithImpl(this._self, this._then);
-
-  final _AntennasShowRequest _self;
-  final $Res Function(_AntennasShowRequest) _then;
-
-/// Create a copy of AntennasShowRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? antennaId = null,}) {
-  return _then(_AntennasShowRequest(
-antennaId: null == antennaId ? _self.antennaId : antennaId // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

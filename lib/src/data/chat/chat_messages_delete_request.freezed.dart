@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ChatMessagesDeleteRequest {
 
- String get messageId;
+
 /// Create a copy of ChatMessagesDeleteRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $ChatMessagesDeleteRequestCopyWith<ChatMessagesDeleteRequest> get copyWith => _$ChatMessagesDeleteRequestCopyWithImpl<ChatMessagesDeleteRequest>(this as ChatMessagesDeleteRequest, _$identity);
 
-  /// Serializes this ChatMessagesDeleteRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -95,11 +93,10 @@ extension ChatMessagesDeleteRequestPatterns on ChatMessagesDeleteRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ChatMessagesDeleteRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _ChatMessagesDeleteRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -117,11 +114,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ChatMessagesDeleteRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChatMessagesDeleteRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -138,11 +134,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ChatMessagesDeleteRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChatMessagesDeleteRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -159,10 +154,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String messageId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _ChatMessagesDeleteRequest() when $default != null:
-return $default(_that.messageId);case _:
+case _:
   return orElse();
 
 }
@@ -180,10 +174,9 @@ return $default(_that.messageId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String messageId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChatMessagesDeleteRequest():
-return $default(_that.messageId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -200,85 +193,13 @@ return $default(_that.messageId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String messageId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChatMessagesDeleteRequest() when $default != null:
-return $default(_that.messageId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _ChatMessagesDeleteRequest implements ChatMessagesDeleteRequest {
-  const _ChatMessagesDeleteRequest({required this.messageId});
-  factory _ChatMessagesDeleteRequest.fromJson(Map<String, dynamic> json) => _$ChatMessagesDeleteRequestFromJson(json);
-
-@override final  String messageId;
-
-/// Create a copy of ChatMessagesDeleteRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ChatMessagesDeleteRequestCopyWith<_ChatMessagesDeleteRequest> get copyWith => __$ChatMessagesDeleteRequestCopyWithImpl<_ChatMessagesDeleteRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$ChatMessagesDeleteRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatMessagesDeleteRequest&&(identical(other.messageId, messageId) || other.messageId == messageId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,messageId);
-}
-
-@override
-String toString() {
-    return 'ChatMessagesDeleteRequest(messageId: $messageId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ChatMessagesDeleteRequestCopyWith<$Res> implements $ChatMessagesDeleteRequestCopyWith<$Res> {
-  factory _$ChatMessagesDeleteRequestCopyWith(_ChatMessagesDeleteRequest value, $Res Function(_ChatMessagesDeleteRequest) _then) = __$ChatMessagesDeleteRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String messageId
-});
-
-
-
-
-}
-/// @nodoc
-class __$ChatMessagesDeleteRequestCopyWithImpl<$Res>
-    implements _$ChatMessagesDeleteRequestCopyWith<$Res> {
-  __$ChatMessagesDeleteRequestCopyWithImpl(this._self, this._then);
-
-  final _ChatMessagesDeleteRequest _self;
-  final $Res Function(_ChatMessagesDeleteRequest) _then;
-
-/// Create a copy of ChatMessagesDeleteRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? messageId = null,}) {
-  return _then(_ChatMessagesDeleteRequest(
-messageId: null == messageId ? _self.messageId : messageId // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

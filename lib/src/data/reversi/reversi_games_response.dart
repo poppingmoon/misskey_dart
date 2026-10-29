@@ -6,34 +6,35 @@ part 'reversi_games_response.freezed.dart';
 part 'reversi_games_response.g.dart';
 
 @freezed
-abstract class ReversiGamesResponse with _$ReversiGamesResponse {
-  const factory({
-    required String id,
-    @DateTimeConverter() required DateTime createdAt,
-    @NullableDateTimeConverter() DateTime? startedAt,
-    @NullableDateTimeConverter() DateTime? endedAt,
-    required bool isStarted,
-    required bool isEnded,
-    required String user1Id,
-    required String user2Id,
-    required UserLite user1,
-    required UserLite user2,
-    String? winnerId,
-    User? winner,
-    String? surrenderedUserId,
-    String? timeoutUserId,
-    int? black,
-    required String bw,
-    required bool noIrregularRules,
-    required bool isLlotheo,
-    // API のフィールド名は canPutEverywhere（w は小文字）。綴りがずれていた
-    // ため JSON に対応するキーが無く、reversi/games は終了済みの対局を 1 件でも
-    // 含むと必ず「Null is not a subtype of bool」で落ちていた。
-    required bool canPutEverywhere,
-    required bool loopedBoard,
-    required int timeLimitForEachTurn,
-  }) = _ReversiGamesResponse;
-
+@JsonSerializable()
+class const ReversiGamesResponse({
+  required final String id,
+  @DateTimeConverter() required final DateTime createdAt,
+  @NullableDateTimeConverter() final DateTime? startedAt,
+  @NullableDateTimeConverter() final DateTime? endedAt,
+  required final bool isStarted,
+  required final bool isEnded,
+  required final String user1Id,
+  required final String user2Id,
+  required final UserLite user1,
+  required final UserLite user2,
+  final String? winnerId,
+  final User? winner,
+  final String? surrenderedUserId,
+  final String? timeoutUserId,
+  final int? black,
+  required final String bw,
+  required final bool noIrregularRules,
+  required final bool isLlotheo,
+  // API のフィールド名は canPutEverywhere（w は小文字）。綴りがずれていた
+  // ため JSON に対応するキーが無く、reversi/games は終了済みの対局を 1 件でも
+  // 含むと必ず「Null is not a subtype of bool」で落ちていた。
+  required final bool canPutEverywhere,
+  required final bool loopedBoard,
+  required final int timeLimitForEachTurn,
+}) with _$ReversiGamesResponse {
   factory fromJson(Map<String, dynamic> json) =>
       _$ReversiGamesResponseFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ReversiGamesResponseToJson(this);
 }

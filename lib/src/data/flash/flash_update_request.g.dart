@@ -6,8 +6,8 @@ part of 'flash_update_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_FlashUpdateRequest _$FlashUpdateRequestFromJson(Map<String, dynamic> json) =>
-    _FlashUpdateRequest(
+FlashUpdateRequest _$FlashUpdateRequestFromJson(Map<String, dynamic> json) =>
+    FlashUpdateRequest(
       flashId: json['flashId'] as String,
       title: json['title'] as String?,
       summary: json['summary'] as String?,
@@ -21,7 +21,7 @@ _FlashUpdateRequest _$FlashUpdateRequestFromJson(Map<String, dynamic> json) =>
       ),
     );
 
-Map<String, dynamic> _$FlashUpdateRequestToJson(_FlashUpdateRequest instance) =>
+Map<String, dynamic> _$FlashUpdateRequestToJson(FlashUpdateRequest instance) =>
     <String, dynamic>{
       'flashId': instance.flashId,
       'title': instance.title,

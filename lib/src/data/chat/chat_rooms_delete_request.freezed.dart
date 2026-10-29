@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ChatRoomsDeleteRequest {
 
- String get roomId;
+
 /// Create a copy of ChatRoomsDeleteRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $ChatRoomsDeleteRequestCopyWith<ChatRoomsDeleteRequest> get copyWith => _$ChatRoomsDeleteRequestCopyWithImpl<ChatRoomsDeleteRequest>(this as ChatRoomsDeleteRequest, _$identity);
 
-  /// Serializes this ChatRoomsDeleteRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -95,11 +93,10 @@ extension ChatRoomsDeleteRequestPatterns on ChatRoomsDeleteRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ChatRoomsDeleteRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _ChatRoomsDeleteRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -117,11 +114,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ChatRoomsDeleteRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChatRoomsDeleteRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -138,11 +134,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ChatRoomsDeleteRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChatRoomsDeleteRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -159,10 +154,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String roomId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _ChatRoomsDeleteRequest() when $default != null:
-return $default(_that.roomId);case _:
+case _:
   return orElse();
 
 }
@@ -180,10 +174,9 @@ return $default(_that.roomId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String roomId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChatRoomsDeleteRequest():
-return $default(_that.roomId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -200,85 +193,13 @@ return $default(_that.roomId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String roomId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChatRoomsDeleteRequest() when $default != null:
-return $default(_that.roomId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _ChatRoomsDeleteRequest implements ChatRoomsDeleteRequest {
-  const _ChatRoomsDeleteRequest({required this.roomId});
-  factory _ChatRoomsDeleteRequest.fromJson(Map<String, dynamic> json) => _$ChatRoomsDeleteRequestFromJson(json);
-
-@override final  String roomId;
-
-/// Create a copy of ChatRoomsDeleteRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ChatRoomsDeleteRequestCopyWith<_ChatRoomsDeleteRequest> get copyWith => __$ChatRoomsDeleteRequestCopyWithImpl<_ChatRoomsDeleteRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$ChatRoomsDeleteRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatRoomsDeleteRequest&&(identical(other.roomId, roomId) || other.roomId == roomId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,roomId);
-}
-
-@override
-String toString() {
-    return 'ChatRoomsDeleteRequest(roomId: $roomId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ChatRoomsDeleteRequestCopyWith<$Res> implements $ChatRoomsDeleteRequestCopyWith<$Res> {
-  factory _$ChatRoomsDeleteRequestCopyWith(_ChatRoomsDeleteRequest value, $Res Function(_ChatRoomsDeleteRequest) _then) = __$ChatRoomsDeleteRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String roomId
-});
-
-
-
-
-}
-/// @nodoc
-class __$ChatRoomsDeleteRequestCopyWithImpl<$Res>
-    implements _$ChatRoomsDeleteRequestCopyWith<$Res> {
-  __$ChatRoomsDeleteRequestCopyWithImpl(this._self, this._then);
-
-  final _ChatRoomsDeleteRequest _self;
-  final $Res Function(_ChatRoomsDeleteRequest) _then;
-
-/// Create a copy of ChatRoomsDeleteRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? roomId = null,}) {
-  return _then(_ChatRoomsDeleteRequest(
-roomId: null == roomId ? _self.roomId : roomId // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

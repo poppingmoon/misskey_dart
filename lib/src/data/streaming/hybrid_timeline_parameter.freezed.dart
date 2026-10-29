@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$HybridTimelineParameter {
 
- bool? get withRenotes; bool? get withReplies; bool? get withFiles;
+
 /// Create a copy of HybridTimelineParameter
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $HybridTimelineParameterCopyWith<HybridTimelineParameter> get copyWith => _$HybridTimelineParameterCopyWithImpl<HybridTimelineParameter>(this as HybridTimelineParameter, _$identity);
 
-  /// Serializes this HybridTimelineParameter to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -97,11 +95,10 @@ extension HybridTimelineParameterPatterns on HybridTimelineParameter {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _HybridTimelineParameter value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _HybridTimelineParameter() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -119,11 +116,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _HybridTimelineParameter value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _HybridTimelineParameter():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -140,11 +136,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _HybridTimelineParameter value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _HybridTimelineParameter() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -161,10 +156,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( bool? withRenotes,  bool? withReplies,  bool? withFiles)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _HybridTimelineParameter() when $default != null:
-return $default(_that.withRenotes,_that.withReplies,_that.withFiles);case _:
+case _:
   return orElse();
 
 }
@@ -182,10 +176,9 @@ return $default(_that.withRenotes,_that.withReplies,_that.withFiles);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( bool? withRenotes,  bool? withReplies,  bool? withFiles)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _HybridTimelineParameter():
-return $default(_that.withRenotes,_that.withReplies,_that.withFiles);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -202,89 +195,13 @@ return $default(_that.withRenotes,_that.withReplies,_that.withFiles);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( bool? withRenotes,  bool? withReplies,  bool? withFiles)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _HybridTimelineParameter() when $default != null:
-return $default(_that.withRenotes,_that.withReplies,_that.withFiles);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _HybridTimelineParameter implements HybridTimelineParameter {
-  const _HybridTimelineParameter({this.withRenotes, this.withReplies, this.withFiles});
-  factory _HybridTimelineParameter.fromJson(Map<String, dynamic> json) => _$HybridTimelineParameterFromJson(json);
-
-@override final  bool? withRenotes;
-@override final  bool? withReplies;
-@override final  bool? withFiles;
-
-/// Create a copy of HybridTimelineParameter
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$HybridTimelineParameterCopyWith<_HybridTimelineParameter> get copyWith => __$HybridTimelineParameterCopyWithImpl<_HybridTimelineParameter>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$HybridTimelineParameterToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _HybridTimelineParameter&&(identical(other.withRenotes, withRenotes) || other.withRenotes == withRenotes)&&(identical(other.withReplies, withReplies) || other.withReplies == withReplies)&&(identical(other.withFiles, withFiles) || other.withFiles == withFiles));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,withRenotes,withReplies,withFiles);
-}
-
-@override
-String toString() {
-    return 'HybridTimelineParameter(withRenotes: $withRenotes, withReplies: $withReplies, withFiles: $withFiles)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$HybridTimelineParameterCopyWith<$Res> implements $HybridTimelineParameterCopyWith<$Res> {
-  factory _$HybridTimelineParameterCopyWith(_HybridTimelineParameter value, $Res Function(_HybridTimelineParameter) _then) = __$HybridTimelineParameterCopyWithImpl;
-@override @useResult
-$Res call({
- bool? withRenotes, bool? withReplies, bool? withFiles
-});
-
-
-
-
-}
-/// @nodoc
-class __$HybridTimelineParameterCopyWithImpl<$Res>
-    implements _$HybridTimelineParameterCopyWith<$Res> {
-  __$HybridTimelineParameterCopyWithImpl(this._self, this._then);
-
-  final _HybridTimelineParameter _self;
-  final $Res Function(_HybridTimelineParameter) _then;
-
-/// Create a copy of HybridTimelineParameter
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? withRenotes = freezed,Object? withReplies = freezed,Object? withFiles = freezed,}) {
-  return _then(_HybridTimelineParameter(
-withRenotes: freezed == withRenotes ? _self.withRenotes : withRenotes // ignore: cast_nullable_to_non_nullable
-as bool?,withReplies: freezed == withReplies ? _self.withReplies : withReplies // ignore: cast_nullable_to_non_nullable
-as bool?,withFiles: freezed == withFiles ? _self.withFiles : withFiles // ignore: cast_nullable_to_non_nullable
-as bool?,
-  ));
-}
-
 
 }
 

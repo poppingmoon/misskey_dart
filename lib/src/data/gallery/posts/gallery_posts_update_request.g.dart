@@ -6,9 +6,9 @@ part of 'gallery_posts_update_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_GalleryPostsUpdateRequest _$GalleryPostsUpdateRequestFromJson(
+GalleryPostsUpdateRequest _$GalleryPostsUpdateRequestFromJson(
   Map<String, dynamic> json,
-) => _GalleryPostsUpdateRequest(
+) => GalleryPostsUpdateRequest(
   postId: json['postId'] as String,
   title: json['title'] as String,
   description: json['description'] as String?,
@@ -17,7 +17,7 @@ _GalleryPostsUpdateRequest _$GalleryPostsUpdateRequestFromJson(
 );
 
 Map<String, dynamic> _$GalleryPostsUpdateRequestToJson(
-  _GalleryPostsUpdateRequest instance,
+  GalleryPostsUpdateRequest instance,
 ) => <String, dynamic>{
   'postId': instance.postId,
   'title': instance.title,

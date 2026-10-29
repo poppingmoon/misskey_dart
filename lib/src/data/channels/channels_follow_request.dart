@@ -4,9 +4,11 @@ part 'channels_follow_request.freezed.dart';
 part 'channels_follow_request.g.dart';
 
 @freezed
-abstract class ChannelsFollowRequest with _$ChannelsFollowRequest {
-  const factory({required String channelId}) = _ChannelsFollowRequest;
-
+@JsonSerializable()
+class const ChannelsFollowRequest({required final String channelId})
+    with _$ChannelsFollowRequest {
   factory fromJson(Map<String, Object?> json) =>
       _$ChannelsFollowRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ChannelsFollowRequestToJson(this);
 }

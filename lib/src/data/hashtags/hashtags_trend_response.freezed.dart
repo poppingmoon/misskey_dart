@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$HashtagsTrendResponse {
 
- String get tag; List<int> get chart; int get usersCount;
+
 /// Create a copy of HashtagsTrendResponse
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $HashtagsTrendResponseCopyWith<HashtagsTrendResponse> get copyWith => _$HashtagsTrendResponseCopyWithImpl<HashtagsTrendResponse>(this as HashtagsTrendResponse, _$identity);
 
-  /// Serializes this HashtagsTrendResponse to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -97,11 +95,10 @@ extension HashtagsTrendResponsePatterns on HashtagsTrendResponse {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _HashtagsTrendResponse value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _HashtagsTrendResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -119,11 +116,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _HashtagsTrendResponse value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _HashtagsTrendResponse():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -140,11 +136,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _HashtagsTrendResponse value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _HashtagsTrendResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -161,10 +156,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String tag,  List<int> chart,  int usersCount)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _HashtagsTrendResponse() when $default != null:
-return $default(_that.tag,_that.chart,_that.usersCount);case _:
+case _:
   return orElse();
 
 }
@@ -182,10 +176,9 @@ return $default(_that.tag,_that.chart,_that.usersCount);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String tag,  List<int> chart,  int usersCount)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _HashtagsTrendResponse():
-return $default(_that.tag,_that.chart,_that.usersCount);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -202,95 +195,13 @@ return $default(_that.tag,_that.chart,_that.usersCount);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String tag,  List<int> chart,  int usersCount)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _HashtagsTrendResponse() when $default != null:
-return $default(_that.tag,_that.chart,_that.usersCount);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _HashtagsTrendResponse implements HashtagsTrendResponse {
-  const _HashtagsTrendResponse({required this.tag, required  List<int> chart, required this.usersCount}): _chart = chart;
-  factory _HashtagsTrendResponse.fromJson(Map<String, dynamic> json) => _$HashtagsTrendResponseFromJson(json);
-
-@override final  String tag;
- final  List<int> _chart;
-@override List<int> get chart {
-  if (_chart is EqualUnmodifiableListView) return _chart;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_chart);
-}
-
-@override final  int usersCount;
-
-/// Create a copy of HashtagsTrendResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$HashtagsTrendResponseCopyWith<_HashtagsTrendResponse> get copyWith => __$HashtagsTrendResponseCopyWithImpl<_HashtagsTrendResponse>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$HashtagsTrendResponseToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _HashtagsTrendResponse&&(identical(other.tag, tag) || other.tag == tag)&&const DeepCollectionEquality().equals(other.chart, _chart)&&(identical(other.usersCount, usersCount) || other.usersCount == usersCount));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,tag,const DeepCollectionEquality().hash(_chart),usersCount);
-}
-
-@override
-String toString() {
-    return 'HashtagsTrendResponse(tag: $tag, chart: $chart, usersCount: $usersCount)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$HashtagsTrendResponseCopyWith<$Res> implements $HashtagsTrendResponseCopyWith<$Res> {
-  factory _$HashtagsTrendResponseCopyWith(_HashtagsTrendResponse value, $Res Function(_HashtagsTrendResponse) _then) = __$HashtagsTrendResponseCopyWithImpl;
-@override @useResult
-$Res call({
- String tag, List<int> chart, int usersCount
-});
-
-
-
-
-}
-/// @nodoc
-class __$HashtagsTrendResponseCopyWithImpl<$Res>
-    implements _$HashtagsTrendResponseCopyWith<$Res> {
-  __$HashtagsTrendResponseCopyWithImpl(this._self, this._then);
-
-  final _HashtagsTrendResponse _self;
-  final $Res Function(_HashtagsTrendResponse) _then;
-
-/// Create a copy of HashtagsTrendResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? tag = null,Object? chart = null,Object? usersCount = null,}) {
-  return _then(_HashtagsTrendResponse(
-tag: null == tag ? _self.tag : tag // ignore: cast_nullable_to_non_nullable
-as String,chart: null == chart ? _self._chart : chart // ignore: cast_nullable_to_non_nullable
-as List<int>,usersCount: null == usersCount ? _self.usersCount : usersCount // ignore: cast_nullable_to_non_nullable
-as int,
-  ));
-}
-
 
 }
 

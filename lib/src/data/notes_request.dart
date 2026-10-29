@@ -5,19 +5,20 @@ part 'notes_request.freezed.dart';
 part 'notes_request.g.dart';
 
 @freezed
-abstract class NotesRequest with _$NotesRequest {
-  const factory({
-    bool? local,
-    bool? reply,
-    bool? renote,
-    bool? withFiles,
-    bool? poll,
-    int? limit,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-  }) = _NotesRequest;
-
+@JsonSerializable()
+class const NotesRequest({
+  final bool? local,
+  final bool? reply,
+  final bool? renote,
+  final bool? withFiles,
+  final bool? poll,
+  final int? limit,
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
+}) with _$NotesRequest {
   factory fromJson(Map<String, Object?> json) => _$NotesRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NotesRequestToJson(this);
 }

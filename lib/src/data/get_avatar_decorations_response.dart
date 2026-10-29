@@ -5,17 +5,17 @@ part 'get_avatar_decorations_response.freezed.dart';
 part 'get_avatar_decorations_response.g.dart';
 
 @freezed
-abstract class GetAvatarDecorationsResponse
-    with _$GetAvatarDecorationsResponse {
-  const factory({
-    required String id,
-    required String name,
-    required String description,
-    @NullableUriConverter() Uri? url,
-    @Default([]) List<String> roleIdsThatCanBeUsedThisDecoration,
-    String? category,
-  }) = _GetAvatarDecorationsResponse;
-
+@JsonSerializable()
+class const GetAvatarDecorationsResponse({
+  required final String id,
+  required final String name,
+  required final String description,
+  @NullableUriConverter() final Uri? url,
+  final List<String> roleIdsThatCanBeUsedThisDecoration = const [],
+  final String? category,
+}) with _$GetAvatarDecorationsResponse {
   factory fromJson(Map<String, dynamic> json) =>
       _$GetAvatarDecorationsResponseFromJson(json);
+
+  Map<String, dynamic> toJson() => _$GetAvatarDecorationsResponseToJson(this);
 }

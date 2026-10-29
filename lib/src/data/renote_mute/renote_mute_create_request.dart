@@ -4,9 +4,11 @@ part 'renote_mute_create_request.freezed.dart';
 part 'renote_mute_create_request.g.dart';
 
 @freezed
-abstract class RenoteMuteCreateRequest with _$RenoteMuteCreateRequest {
-  const factory({required String userId}) = _RenoteMuteCreateRequest;
-
+@JsonSerializable()
+class const RenoteMuteCreateRequest({required final String userId})
+    with _$RenoteMuteCreateRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$RenoteMuteCreateRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$RenoteMuteCreateRequestToJson(this);
 }

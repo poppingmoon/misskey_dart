@@ -4,10 +4,13 @@ part 'notes_translate_request.freezed.dart';
 part 'notes_translate_request.g.dart';
 
 @freezed
-abstract class NotesTranslateRequest with _$NotesTranslateRequest {
-  const factory({required String noteId, required String targetLang}) =
-      _NotesTranslateRequest;
-
+@JsonSerializable()
+class const NotesTranslateRequest({
+  required final String noteId,
+  required final String targetLang,
+}) with _$NotesTranslateRequest {
   factory fromJson(Map<String, Object?> json) =>
       _$NotesTranslateRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NotesTranslateRequestToJson(this);
 }

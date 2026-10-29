@@ -6,8 +6,8 @@ part of 'i_pages_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_IPageRequest _$IPageRequestFromJson(Map<String, dynamic> json) =>
-    _IPageRequest(
+IPagesRequest _$IPagesRequestFromJson(Map<String, dynamic> json) =>
+    IPagesRequest(
       limit: (json['limit'] as num?)?.toInt(),
       sinceId: json['sinceId'] as String?,
       untilId: json['untilId'] as String?,
@@ -21,7 +21,7 @@ _IPageRequest _$IPageRequestFromJson(Map<String, dynamic> json) =>
       ),
     );
 
-Map<String, dynamic> _$IPageRequestToJson(_IPageRequest instance) =>
+Map<String, dynamic> _$IPagesRequestToJson(IPagesRequest instance) =>
     <String, dynamic>{
       'limit': instance.limit,
       'sinceId': instance.sinceId,

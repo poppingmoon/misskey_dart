@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$UsersRecommendationRequest {
 
- int? get limit; int? get offset;
+
 /// Create a copy of UsersRecommendationRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $UsersRecommendationRequestCopyWith<UsersRecommendationRequest> get copyWith => _$UsersRecommendationRequestCopyWithImpl<UsersRecommendationRequest>(this as UsersRecommendationRequest, _$identity);
 
-  /// Serializes this UsersRecommendationRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -96,11 +94,10 @@ extension UsersRecommendationRequestPatterns on UsersRecommendationRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UsersRecommendationRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _UsersRecommendationRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -118,11 +115,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UsersRecommendationRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UsersRecommendationRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -139,11 +135,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UsersRecommendationRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UsersRecommendationRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -160,10 +155,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? limit,  int? offset)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _UsersRecommendationRequest() when $default != null:
-return $default(_that.limit,_that.offset);case _:
+case _:
   return orElse();
 
 }
@@ -181,10 +175,9 @@ return $default(_that.limit,_that.offset);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? limit,  int? offset)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UsersRecommendationRequest():
-return $default(_that.limit,_that.offset);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -201,87 +194,13 @@ return $default(_that.limit,_that.offset);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? limit,  int? offset)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UsersRecommendationRequest() when $default != null:
-return $default(_that.limit,_that.offset);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _UsersRecommendationRequest implements UsersRecommendationRequest {
-  const _UsersRecommendationRequest({this.limit, this.offset});
-  factory _UsersRecommendationRequest.fromJson(Map<String, dynamic> json) => _$UsersRecommendationRequestFromJson(json);
-
-@override final  int? limit;
-@override final  int? offset;
-
-/// Create a copy of UsersRecommendationRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$UsersRecommendationRequestCopyWith<_UsersRecommendationRequest> get copyWith => __$UsersRecommendationRequestCopyWithImpl<_UsersRecommendationRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$UsersRecommendationRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersRecommendationRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.offset, offset) || other.offset == offset));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,limit,offset);
-}
-
-@override
-String toString() {
-    return 'UsersRecommendationRequest(limit: $limit, offset: $offset)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$UsersRecommendationRequestCopyWith<$Res> implements $UsersRecommendationRequestCopyWith<$Res> {
-  factory _$UsersRecommendationRequestCopyWith(_UsersRecommendationRequest value, $Res Function(_UsersRecommendationRequest) _then) = __$UsersRecommendationRequestCopyWithImpl;
-@override @useResult
-$Res call({
- int? limit, int? offset
-});
-
-
-
-
-}
-/// @nodoc
-class __$UsersRecommendationRequestCopyWithImpl<$Res>
-    implements _$UsersRecommendationRequestCopyWith<$Res> {
-  __$UsersRecommendationRequestCopyWithImpl(this._self, this._then);
-
-  final _UsersRecommendationRequest _self;
-  final $Res Function(_UsersRecommendationRequest) _then;
-
-/// Create a copy of UsersRecommendationRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? limit = freezed,Object? offset = freezed,}) {
-  return _then(_UsersRecommendationRequest(
-limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,offset: freezed == offset ? _self.offset : offset // ignore: cast_nullable_to_non_nullable
-as int?,
-  ));
-}
-
 
 }
 

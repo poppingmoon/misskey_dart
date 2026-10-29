@@ -4,9 +4,11 @@ part 'notes_reactions_delete_request.freezed.dart';
 part 'notes_reactions_delete_request.g.dart';
 
 @freezed
-abstract class NotesReactionsDeleteRequest with _$NotesReactionsDeleteRequest {
-  const factory({required String noteId}) = _NotesReactionsDeleteRequest;
-
+@JsonSerializable()
+class const NotesReactionsDeleteRequest({required final String noteId})
+    with _$NotesReactionsDeleteRequest {
   factory fromJson(Map<String, Object?> json) =>
       _$NotesReactionsDeleteRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NotesReactionsDeleteRequestToJson(this);
 }

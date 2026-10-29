@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$FollowingUpdateRequest {
 
- String get userId; FollowingUpdateAllNotifyType? get notify; bool? get withReplies;
+
 /// Create a copy of FollowingUpdateRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $FollowingUpdateRequestCopyWith<FollowingUpdateRequest> get copyWith => _$FollowingUpdateRequestCopyWithImpl<FollowingUpdateRequest>(this as FollowingUpdateRequest, _$identity);
 
-  /// Serializes this FollowingUpdateRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -97,11 +95,10 @@ extension FollowingUpdateRequestPatterns on FollowingUpdateRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _FollowingUpdateRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _FollowingUpdateRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -119,11 +116,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _FollowingUpdateRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _FollowingUpdateRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -140,11 +136,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _FollowingUpdateRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _FollowingUpdateRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -161,10 +156,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String userId,  FollowingUpdateAllNotifyType? notify,  bool? withReplies)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _FollowingUpdateRequest() when $default != null:
-return $default(_that.userId,_that.notify,_that.withReplies);case _:
+case _:
   return orElse();
 
 }
@@ -182,10 +176,9 @@ return $default(_that.userId,_that.notify,_that.withReplies);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String userId,  FollowingUpdateAllNotifyType? notify,  bool? withReplies)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _FollowingUpdateRequest():
-return $default(_that.userId,_that.notify,_that.withReplies);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -202,89 +195,13 @@ return $default(_that.userId,_that.notify,_that.withReplies);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String userId,  FollowingUpdateAllNotifyType? notify,  bool? withReplies)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _FollowingUpdateRequest() when $default != null:
-return $default(_that.userId,_that.notify,_that.withReplies);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _FollowingUpdateRequest implements FollowingUpdateRequest {
-  const _FollowingUpdateRequest({required this.userId, this.notify, this.withReplies});
-  factory _FollowingUpdateRequest.fromJson(Map<String, dynamic> json) => _$FollowingUpdateRequestFromJson(json);
-
-@override final  String userId;
-@override final  FollowingUpdateAllNotifyType? notify;
-@override final  bool? withReplies;
-
-/// Create a copy of FollowingUpdateRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$FollowingUpdateRequestCopyWith<_FollowingUpdateRequest> get copyWith => __$FollowingUpdateRequestCopyWithImpl<_FollowingUpdateRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$FollowingUpdateRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _FollowingUpdateRequest&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.notify, notify) || other.notify == notify)&&(identical(other.withReplies, withReplies) || other.withReplies == withReplies));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,userId,notify,withReplies);
-}
-
-@override
-String toString() {
-    return 'FollowingUpdateRequest(userId: $userId, notify: $notify, withReplies: $withReplies)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$FollowingUpdateRequestCopyWith<$Res> implements $FollowingUpdateRequestCopyWith<$Res> {
-  factory _$FollowingUpdateRequestCopyWith(_FollowingUpdateRequest value, $Res Function(_FollowingUpdateRequest) _then) = __$FollowingUpdateRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String userId, FollowingUpdateAllNotifyType? notify, bool? withReplies
-});
-
-
-
-
-}
-/// @nodoc
-class __$FollowingUpdateRequestCopyWithImpl<$Res>
-    implements _$FollowingUpdateRequestCopyWith<$Res> {
-  __$FollowingUpdateRequestCopyWithImpl(this._self, this._then);
-
-  final _FollowingUpdateRequest _self;
-  final $Res Function(_FollowingUpdateRequest) _then;
-
-/// Create a copy of FollowingUpdateRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? userId = null,Object? notify = freezed,Object? withReplies = freezed,}) {
-  return _then(_FollowingUpdateRequest(
-userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
-as String,notify: freezed == notify ? _self.notify : notify // ignore: cast_nullable_to_non_nullable
-as FollowingUpdateAllNotifyType?,withReplies: freezed == withReplies ? _self.withReplies : withReplies // ignore: cast_nullable_to_non_nullable
-as bool?,
-  ));
-}
-
 
 }
 

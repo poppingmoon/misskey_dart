@@ -4,15 +4,16 @@ part 'drive_files_create_request.freezed.dart';
 part 'drive_files_create_request.g.dart';
 
 @freezed
-abstract class DriveFilesCreateRequest with _$DriveFilesCreateRequest {
-  const factory({
-    String? folderId,
-    String? name,
-    String? comment,
-    bool? isSensitive,
-    bool? force,
-  }) = _DriveFilesCreateRequest;
-
+@JsonSerializable()
+class const DriveFilesCreateRequest({
+  final String? folderId,
+  final String? name,
+  final String? comment,
+  final bool? isSensitive,
+  final bool? force,
+}) with _$DriveFilesCreateRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$DriveFilesCreateRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$DriveFilesCreateRequestToJson(this);
 }

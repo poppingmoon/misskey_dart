@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$FollowingRequestsCancelRequest {
 
- String get userId;
+
 /// Create a copy of FollowingRequestsCancelRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $FollowingRequestsCancelRequestCopyWith<FollowingRequestsCancelRequest> get copyWith => _$FollowingRequestsCancelRequestCopyWithImpl<FollowingRequestsCancelRequest>(this as FollowingRequestsCancelRequest, _$identity);
 
-  /// Serializes this FollowingRequestsCancelRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -95,11 +93,10 @@ extension FollowingRequestsCancelRequestPatterns on FollowingRequestsCancelReque
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _FollowingRequestsCancelRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _FollowingRequestsCancelRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -117,11 +114,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _FollowingRequestsCancelRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _FollowingRequestsCancelRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -138,11 +134,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _FollowingRequestsCancelRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _FollowingRequestsCancelRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -159,10 +154,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String userId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _FollowingRequestsCancelRequest() when $default != null:
-return $default(_that.userId);case _:
+case _:
   return orElse();
 
 }
@@ -180,10 +174,9 @@ return $default(_that.userId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String userId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _FollowingRequestsCancelRequest():
-return $default(_that.userId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -200,85 +193,13 @@ return $default(_that.userId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String userId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _FollowingRequestsCancelRequest() when $default != null:
-return $default(_that.userId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _FollowingRequestsCancelRequest implements FollowingRequestsCancelRequest {
-  const _FollowingRequestsCancelRequest({required this.userId});
-  factory _FollowingRequestsCancelRequest.fromJson(Map<String, dynamic> json) => _$FollowingRequestsCancelRequestFromJson(json);
-
-@override final  String userId;
-
-/// Create a copy of FollowingRequestsCancelRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$FollowingRequestsCancelRequestCopyWith<_FollowingRequestsCancelRequest> get copyWith => __$FollowingRequestsCancelRequestCopyWithImpl<_FollowingRequestsCancelRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$FollowingRequestsCancelRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _FollowingRequestsCancelRequest&&(identical(other.userId, userId) || other.userId == userId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,userId);
-}
-
-@override
-String toString() {
-    return 'FollowingRequestsCancelRequest(userId: $userId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$FollowingRequestsCancelRequestCopyWith<$Res> implements $FollowingRequestsCancelRequestCopyWith<$Res> {
-  factory _$FollowingRequestsCancelRequestCopyWith(_FollowingRequestsCancelRequest value, $Res Function(_FollowingRequestsCancelRequest) _then) = __$FollowingRequestsCancelRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String userId
-});
-
-
-
-
-}
-/// @nodoc
-class __$FollowingRequestsCancelRequestCopyWithImpl<$Res>
-    implements _$FollowingRequestsCancelRequestCopyWith<$Res> {
-  __$FollowingRequestsCancelRequestCopyWithImpl(this._self, this._then);
-
-  final _FollowingRequestsCancelRequest _self;
-  final $Res Function(_FollowingRequestsCancelRequest) _then;
-
-/// Create a copy of FollowingRequestsCancelRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? userId = null,}) {
-  return _then(_FollowingRequestsCancelRequest(
-userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

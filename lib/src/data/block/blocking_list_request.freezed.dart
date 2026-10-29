@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$BlockingListRequest {
 
- int? get limit; String? get sinceId; String? get untilId;@EpocTimeDateTimeConverter() DateTime? get sinceDate;@EpocTimeDateTimeConverter() DateTime? get untilDate;
+
 /// Create a copy of BlockingListRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $BlockingListRequestCopyWith<BlockingListRequest> get copyWith => _$BlockingListRequestCopyWithImpl<BlockingListRequest>(this as BlockingListRequest, _$identity);
 
-  /// Serializes this BlockingListRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -99,11 +97,10 @@ extension BlockingListRequestPatterns on BlockingListRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _BlockingListRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _BlockingListRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -121,11 +118,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _BlockingListRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _BlockingListRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -142,11 +138,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _BlockingListRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _BlockingListRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -163,10 +158,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _BlockingListRequest() when $default != null:
-return $default(_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate);case _:
+case _:
   return orElse();
 
 }
@@ -184,10 +178,9 @@ return $default(_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.un
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _BlockingListRequest():
-return $default(_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -204,93 +197,13 @@ return $default(_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.un
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _BlockingListRequest() when $default != null:
-return $default(_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _BlockingListRequest implements BlockingListRequest {
-  const _BlockingListRequest({this.limit, this.sinceId, this.untilId, @EpocTimeDateTimeConverter() this.sinceDate, @EpocTimeDateTimeConverter() this.untilDate});
-  factory _BlockingListRequest.fromJson(Map<String, dynamic> json) => _$BlockingListRequestFromJson(json);
-
-@override final  int? limit;
-@override final  String? sinceId;
-@override final  String? untilId;
-@override@EpocTimeDateTimeConverter() final  DateTime? sinceDate;
-@override@EpocTimeDateTimeConverter() final  DateTime? untilDate;
-
-/// Create a copy of BlockingListRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$BlockingListRequestCopyWith<_BlockingListRequest> get copyWith => __$BlockingListRequestCopyWithImpl<_BlockingListRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$BlockingListRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _BlockingListRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,limit,sinceId,untilId,sinceDate,untilDate);
-}
-
-@override
-String toString() {
-    return 'BlockingListRequest(limit: $limit, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$BlockingListRequestCopyWith<$Res> implements $BlockingListRequestCopyWith<$Res> {
-  factory _$BlockingListRequestCopyWith(_BlockingListRequest value, $Res Function(_BlockingListRequest) _then) = __$BlockingListRequestCopyWithImpl;
-@override @useResult
-$Res call({
- int? limit, String? sinceId, String? untilId,@EpocTimeDateTimeConverter() DateTime? sinceDate,@EpocTimeDateTimeConverter() DateTime? untilDate
-});
-
-
-
-
-}
-/// @nodoc
-class __$BlockingListRequestCopyWithImpl<$Res>
-    implements _$BlockingListRequestCopyWith<$Res> {
-  __$BlockingListRequestCopyWithImpl(this._self, this._then);
-
-  final _BlockingListRequest _self;
-  final $Res Function(_BlockingListRequest) _then;
-
-/// Create a copy of BlockingListRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,}) {
-  return _then(_BlockingListRequest(
-limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
-as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
-as String?,sinceDate: freezed == sinceDate ? _self.sinceDate : sinceDate // ignore: cast_nullable_to_non_nullable
-as DateTime?,untilDate: freezed == untilDate ? _self.untilDate : untilDate // ignore: cast_nullable_to_non_nullable
-as DateTime?,
-  ));
-}
-
 
 }
 

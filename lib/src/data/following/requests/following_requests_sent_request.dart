@@ -5,16 +5,16 @@ part 'following_requests_sent_request.freezed.dart';
 part 'following_requests_sent_request.g.dart';
 
 @freezed
-abstract class FollowingRequestsSentRequest
-    with _$FollowingRequestsSentRequest {
-  const factory({
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-    int? limit,
-  }) = _FollowingRequestsSentRequest;
-
+@JsonSerializable()
+class const FollowingRequestsSentRequest({
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
+  final int? limit,
+}) with _$FollowingRequestsSentRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$FollowingRequestsSentRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$FollowingRequestsSentRequestToJson(this);
 }

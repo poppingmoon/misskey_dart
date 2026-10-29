@@ -4,9 +4,11 @@ part 'flash_featured_request.freezed.dart';
 part 'flash_featured_request.g.dart';
 
 @freezed
-abstract class FlashFeaturedRequest with _$FlashFeaturedRequest {
-  const factory({int? offset, int? limit}) = _FlashFeaturedRequest;
-
+@JsonSerializable()
+class const FlashFeaturedRequest({final int? offset, final int? limit})
+    with _$FlashFeaturedRequest {
   factory fromJson(Map<String, Object?> json) =>
       _$FlashFeaturedRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$FlashFeaturedRequestToJson(this);
 }

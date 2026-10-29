@@ -6,7 +6,7 @@ part of 'clip.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_Clip _$ClipFromJson(Map<String, dynamic> json) => _Clip(
+Clip _$ClipFromJson(Map<String, dynamic> json) => Clip(
   id: json['id'] as String,
   createdAt: const DateTimeConverter().fromJson(json['createdAt'] as String),
   lastClippedAt: _$JsonConverterFromJson<String, DateTime>(
@@ -23,7 +23,7 @@ _Clip _$ClipFromJson(Map<String, dynamic> json) => _Clip(
   notesCount: (json['notesCount'] as num?)?.toInt(),
 );
 
-Map<String, dynamic> _$ClipToJson(_Clip instance) => <String, dynamic>{
+Map<String, dynamic> _$ClipToJson(Clip instance) => <String, dynamic>{
   'id': instance.id,
   'createdAt': const DateTimeConverter().toJson(instance.createdAt),
   'lastClippedAt': const NullableDateTimeConverter().toJson(

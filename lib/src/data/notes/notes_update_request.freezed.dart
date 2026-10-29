@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$NotesUpdateRequest {
 
- String get noteId; String? get text; String? get cw; List<String>? get fileIds; NotesCreatePollRequest? get poll;
+
 /// Create a copy of NotesUpdateRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $NotesUpdateRequestCopyWith<NotesUpdateRequest> get copyWith => _$NotesUpdateRequestCopyWithImpl<NotesUpdateRequest>(this as NotesUpdateRequest, _$identity);
 
-  /// Serializes this NotesUpdateRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -111,11 +109,10 @@ extension NotesUpdateRequestPatterns on NotesUpdateRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _NotesUpdateRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _NotesUpdateRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -133,11 +130,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _NotesUpdateRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _NotesUpdateRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -154,11 +150,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _NotesUpdateRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _NotesUpdateRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -175,10 +170,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String noteId,  String? text,  String? cw,  List<String>? fileIds,  NotesCreatePollRequest? poll)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _NotesUpdateRequest() when $default != null:
-return $default(_that.noteId,_that.text,_that.cw,_that.fileIds,_that.poll);case _:
+case _:
   return orElse();
 
 }
@@ -196,10 +190,9 @@ return $default(_that.noteId,_that.text,_that.cw,_that.fileIds,_that.poll);case 
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String noteId,  String? text,  String? cw,  List<String>? fileIds,  NotesCreatePollRequest? poll)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _NotesUpdateRequest():
-return $default(_that.noteId,_that.text,_that.cw,_that.fileIds,_that.poll);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -216,114 +209,14 @@ return $default(_that.noteId,_that.text,_that.cw,_that.fileIds,_that.poll);case 
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String noteId,  String? text,  String? cw,  List<String>? fileIds,  NotesCreatePollRequest? poll)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _NotesUpdateRequest() when $default != null:
-return $default(_that.noteId,_that.text,_that.cw,_that.fileIds,_that.poll);case _:
+case _:
   return null;
 
 }
 }
 
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _NotesUpdateRequest implements NotesUpdateRequest {
-  const _NotesUpdateRequest({required this.noteId, this.text, this.cw,  List<String>? fileIds, this.poll}): _fileIds = fileIds;
-  factory _NotesUpdateRequest.fromJson(Map<String, dynamic> json) => _$NotesUpdateRequestFromJson(json);
-
-@override final  String noteId;
-@override final  String? text;
-@override final  String? cw;
- final  List<String>? _fileIds;
-@override List<String>? get fileIds {
-  final value = _fileIds;
-  if (value == null) return null;
-  if (_fileIds is EqualUnmodifiableListView) return _fileIds;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
-@override final  NotesCreatePollRequest? poll;
-
-/// Create a copy of NotesUpdateRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$NotesUpdateRequestCopyWith<_NotesUpdateRequest> get copyWith => __$NotesUpdateRequestCopyWithImpl<_NotesUpdateRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$NotesUpdateRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesUpdateRequest&&(identical(other.noteId, noteId) || other.noteId == noteId)&&(identical(other.text, text) || other.text == text)&&(identical(other.cw, cw) || other.cw == cw)&&const DeepCollectionEquality().equals(other.fileIds, _fileIds)&&(identical(other.poll, poll) || other.poll == poll));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,noteId,text,cw,const DeepCollectionEquality().hash(_fileIds),poll);
-}
-
-@override
-String toString() {
-    return 'NotesUpdateRequest(noteId: $noteId, text: $text, cw: $cw, fileIds: $fileIds, poll: $poll)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$NotesUpdateRequestCopyWith<$Res> implements $NotesUpdateRequestCopyWith<$Res> {
-  factory _$NotesUpdateRequestCopyWith(_NotesUpdateRequest value, $Res Function(_NotesUpdateRequest) _then) = __$NotesUpdateRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String noteId, String? text, String? cw, List<String>? fileIds, NotesCreatePollRequest? poll
-});
-
-
-@override $NotesCreatePollRequestCopyWith<$Res>? get poll;
-
-}
-/// @nodoc
-class __$NotesUpdateRequestCopyWithImpl<$Res>
-    implements _$NotesUpdateRequestCopyWith<$Res> {
-  __$NotesUpdateRequestCopyWithImpl(this._self, this._then);
-
-  final _NotesUpdateRequest _self;
-  final $Res Function(_NotesUpdateRequest) _then;
-
-/// Create a copy of NotesUpdateRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? noteId = null,Object? text = freezed,Object? cw = freezed,Object? fileIds = freezed,Object? poll = freezed,}) {
-  return _then(_NotesUpdateRequest(
-noteId: null == noteId ? _self.noteId : noteId // ignore: cast_nullable_to_non_nullable
-as String,text: freezed == text ? _self.text : text // ignore: cast_nullable_to_non_nullable
-as String?,cw: freezed == cw ? _self.cw : cw // ignore: cast_nullable_to_non_nullable
-as String?,fileIds: freezed == fileIds ? _self._fileIds : fileIds // ignore: cast_nullable_to_non_nullable
-as List<String>?,poll: freezed == poll ? _self.poll : poll // ignore: cast_nullable_to_non_nullable
-as NotesCreatePollRequest?,
-  ));
-}
-
-/// Create a copy of NotesUpdateRequest
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$NotesCreatePollRequestCopyWith<$Res>? get poll {
-    if (_self.poll == null) {
-    return null;
-  }
-
-  return $NotesCreatePollRequestCopyWith<$Res>(_self.poll!, (value) {
-    return _then(_self.copyWith(poll: value));
-  });
-}
 }
 
 // dart format on

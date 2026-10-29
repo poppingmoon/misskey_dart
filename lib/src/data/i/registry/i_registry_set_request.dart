@@ -4,14 +4,15 @@ part 'i_registry_set_request.freezed.dart';
 part 'i_registry_set_request.g.dart';
 
 @freezed
-abstract class IRegistrySetRequest with _$IRegistrySetRequest {
-  const factory({
-    required String key,
-    required dynamic value,
-    required List<String> scope,
-    String? domain,
-  }) = _IRegistrySetRequest;
-
+@JsonSerializable()
+class const IRegistrySetRequest({
+  required final String key,
+  required final dynamic value,
+  required final List<String> scope,
+  final String? domain,
+}) with _$IRegistrySetRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$IRegistrySetRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$IRegistrySetRequestToJson(this);
 }

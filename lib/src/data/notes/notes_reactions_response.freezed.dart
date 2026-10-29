@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$NotesReactionsResponse {
 
- String get id;@DateTimeConverter() DateTime get createdAt; UserLite get user; String? get type;
+
 /// Create a copy of NotesReactionsResponse
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $NotesReactionsResponseCopyWith<NotesReactionsResponse> get copyWith => _$NotesReactionsResponseCopyWithImpl<NotesReactionsResponse>(this as NotesReactionsResponse, _$identity);
 
-  /// Serializes this NotesReactionsResponse to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -107,11 +105,10 @@ extension NotesReactionsResponsePatterns on NotesReactionsResponse {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _NotesReactionsResponse value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _NotesReactionsResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -129,11 +126,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _NotesReactionsResponse value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _NotesReactionsResponse():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -150,11 +146,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _NotesReactionsResponse value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _NotesReactionsResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -171,10 +166,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt,  UserLite user,  String? type)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _NotesReactionsResponse() when $default != null:
-return $default(_that.id,_that.createdAt,_that.user,_that.type);case _:
+case _:
   return orElse();
 
 }
@@ -192,10 +186,9 @@ return $default(_that.id,_that.createdAt,_that.user,_that.type);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt,  UserLite user,  String? type)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _NotesReactionsResponse():
-return $default(_that.id,_that.createdAt,_that.user,_that.type);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -212,101 +205,14 @@ return $default(_that.id,_that.createdAt,_that.user,_that.type);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id, @DateTimeConverter()  DateTime createdAt,  UserLite user,  String? type)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _NotesReactionsResponse() when $default != null:
-return $default(_that.id,_that.createdAt,_that.user,_that.type);case _:
+case _:
   return null;
 
 }
 }
 
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _NotesReactionsResponse implements NotesReactionsResponse {
-  const _NotesReactionsResponse({required this.id, @DateTimeConverter() required this.createdAt, required this.user, this.type});
-  factory _NotesReactionsResponse.fromJson(Map<String, dynamic> json) => _$NotesReactionsResponseFromJson(json);
-
-@override final  String id;
-@override@DateTimeConverter() final  DateTime createdAt;
-@override final  UserLite user;
-@override final  String? type;
-
-/// Create a copy of NotesReactionsResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$NotesReactionsResponseCopyWith<_NotesReactionsResponse> get copyWith => __$NotesReactionsResponseCopyWithImpl<_NotesReactionsResponse>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$NotesReactionsResponseToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesReactionsResponse&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.user, user) || other.user == user)&&(identical(other.type, type) || other.type == type));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,id,createdAt,user,type);
-}
-
-@override
-String toString() {
-    return 'NotesReactionsResponse(id: $id, createdAt: $createdAt, user: $user, type: $type)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$NotesReactionsResponseCopyWith<$Res> implements $NotesReactionsResponseCopyWith<$Res> {
-  factory _$NotesReactionsResponseCopyWith(_NotesReactionsResponse value, $Res Function(_NotesReactionsResponse) _then) = __$NotesReactionsResponseCopyWithImpl;
-@override @useResult
-$Res call({
- String id,@DateTimeConverter() DateTime createdAt, UserLite user, String? type
-});
-
-
-@override $UserLiteCopyWith<$Res> get user;
-
-}
-/// @nodoc
-class __$NotesReactionsResponseCopyWithImpl<$Res>
-    implements _$NotesReactionsResponseCopyWith<$Res> {
-  __$NotesReactionsResponseCopyWithImpl(this._self, this._then);
-
-  final _NotesReactionsResponse _self;
-  final $Res Function(_NotesReactionsResponse) _then;
-
-/// Create a copy of NotesReactionsResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? createdAt = null,Object? user = null,Object? type = freezed,}) {
-  return _then(_NotesReactionsResponse(
-id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
-as DateTime,user: null == user ? _self.user : user // ignore: cast_nullable_to_non_nullable
-as UserLite,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
-/// Create a copy of NotesReactionsResponse
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$UserLiteCopyWith<$Res> get user {
-  
-  return $UserLiteCopyWith<$Res>(_self.user, (value) {
-    return _then(_self.copyWith(user: value));
-  });
-}
 }
 
 // dart format on

@@ -6,8 +6,8 @@ part of 'ap_show_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ApShowRequest _$ApShowRequestFromJson(Map<String, dynamic> json) =>
-    _ApShowRequest(uri: json['uri'] as String);
+ApShowRequest _$ApShowRequestFromJson(Map<String, dynamic> json) =>
+    ApShowRequest(uri: json['uri'] as String);
 
-Map<String, dynamic> _$ApShowRequestToJson(_ApShowRequest instance) =>
+Map<String, dynamic> _$ApShowRequestToJson(ApShowRequest instance) =>
     <String, dynamic>{'uri': instance.uri};

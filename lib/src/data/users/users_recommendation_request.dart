@@ -4,9 +4,11 @@ part 'users_recommendation_request.freezed.dart';
 part 'users_recommendation_request.g.dart';
 
 @freezed
-abstract class UsersRecommendationRequest with _$UsersRecommendationRequest {
-  const factory({int? limit, int? offset}) = _UsersRecommendationRequest;
-
+@JsonSerializable()
+class const UsersRecommendationRequest({final int? limit, final int? offset})
+    with _$UsersRecommendationRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$UsersRecommendationRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UsersRecommendationRequestToJson(this);
 }

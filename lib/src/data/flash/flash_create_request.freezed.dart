@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$FlashCreateRequest {
 
- String get title; String get summary; String get script; List<String> get permissions; FlashVisibility? get visibility;
+
 /// Create a copy of FlashCreateRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $FlashCreateRequestCopyWith<FlashCreateRequest> get copyWith => _$FlashCreateRequestCopyWithImpl<FlashCreateRequest>(this as FlashCreateRequest, _$identity);
 
-  /// Serializes this FlashCreateRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -99,11 +97,10 @@ extension FlashCreateRequestPatterns on FlashCreateRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _FlashCreateRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _FlashCreateRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -121,11 +118,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _FlashCreateRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _FlashCreateRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -142,11 +138,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _FlashCreateRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _FlashCreateRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -163,10 +158,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String title,  String summary,  String script,  List<String> permissions,  FlashVisibility? visibility)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _FlashCreateRequest() when $default != null:
-return $default(_that.title,_that.summary,_that.script,_that.permissions,_that.visibility);case _:
+case _:
   return orElse();
 
 }
@@ -184,10 +178,9 @@ return $default(_that.title,_that.summary,_that.script,_that.permissions,_that.v
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String title,  String summary,  String script,  List<String> permissions,  FlashVisibility? visibility)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _FlashCreateRequest():
-return $default(_that.title,_that.summary,_that.script,_that.permissions,_that.visibility);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -204,99 +197,13 @@ return $default(_that.title,_that.summary,_that.script,_that.permissions,_that.v
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String title,  String summary,  String script,  List<String> permissions,  FlashVisibility? visibility)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _FlashCreateRequest() when $default != null:
-return $default(_that.title,_that.summary,_that.script,_that.permissions,_that.visibility);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _FlashCreateRequest implements FlashCreateRequest {
-  const _FlashCreateRequest({required this.title, required this.summary, required this.script, required  List<String> permissions, this.visibility}): _permissions = permissions;
-  factory _FlashCreateRequest.fromJson(Map<String, dynamic> json) => _$FlashCreateRequestFromJson(json);
-
-@override final  String title;
-@override final  String summary;
-@override final  String script;
- final  List<String> _permissions;
-@override List<String> get permissions {
-  if (_permissions is EqualUnmodifiableListView) return _permissions;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_permissions);
-}
-
-@override final  FlashVisibility? visibility;
-
-/// Create a copy of FlashCreateRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$FlashCreateRequestCopyWith<_FlashCreateRequest> get copyWith => __$FlashCreateRequestCopyWithImpl<_FlashCreateRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$FlashCreateRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _FlashCreateRequest&&(identical(other.title, title) || other.title == title)&&(identical(other.summary, summary) || other.summary == summary)&&(identical(other.script, script) || other.script == script)&&const DeepCollectionEquality().equals(other.permissions, _permissions)&&(identical(other.visibility, visibility) || other.visibility == visibility));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,title,summary,script,const DeepCollectionEquality().hash(_permissions),visibility);
-}
-
-@override
-String toString() {
-    return 'FlashCreateRequest(title: $title, summary: $summary, script: $script, permissions: $permissions, visibility: $visibility)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$FlashCreateRequestCopyWith<$Res> implements $FlashCreateRequestCopyWith<$Res> {
-  factory _$FlashCreateRequestCopyWith(_FlashCreateRequest value, $Res Function(_FlashCreateRequest) _then) = __$FlashCreateRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String title, String summary, String script, List<String> permissions, FlashVisibility? visibility
-});
-
-
-
-
-}
-/// @nodoc
-class __$FlashCreateRequestCopyWithImpl<$Res>
-    implements _$FlashCreateRequestCopyWith<$Res> {
-  __$FlashCreateRequestCopyWithImpl(this._self, this._then);
-
-  final _FlashCreateRequest _self;
-  final $Res Function(_FlashCreateRequest) _then;
-
-/// Create a copy of FlashCreateRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? title = null,Object? summary = null,Object? script = null,Object? permissions = null,Object? visibility = freezed,}) {
-  return _then(_FlashCreateRequest(
-title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
-as String,summary: null == summary ? _self.summary : summary // ignore: cast_nullable_to_non_nullable
-as String,script: null == script ? _self.script : script // ignore: cast_nullable_to_non_nullable
-as String,permissions: null == permissions ? _self._permissions : permissions // ignore: cast_nullable_to_non_nullable
-as List<String>,visibility: freezed == visibility ? _self.visibility : visibility // ignore: cast_nullable_to_non_nullable
-as FlashVisibility?,
-  ));
-}
-
 
 }
 

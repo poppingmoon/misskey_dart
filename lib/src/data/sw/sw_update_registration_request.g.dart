@@ -6,15 +6,15 @@ part of 'sw_update_registration_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_SwUpdateRegistrationRequest _$SwUpdateRegistrationRequestFromJson(
+SwUpdateRegistrationRequest _$SwUpdateRegistrationRequestFromJson(
   Map<String, dynamic> json,
-) => _SwUpdateRegistrationRequest(
+) => SwUpdateRegistrationRequest(
   endpoint: json['endpoint'] as String,
   sendReadMessage: json['sendReadMessage'] as bool?,
 );
 
 Map<String, dynamic> _$SwUpdateRegistrationRequestToJson(
-  _SwUpdateRegistrationRequest instance,
+  SwUpdateRegistrationRequest instance,
 ) => <String, dynamic>{
   'endpoint': instance.endpoint,
   'sendReadMessage': instance.sendReadMessage,

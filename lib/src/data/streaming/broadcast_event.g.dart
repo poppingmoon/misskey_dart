@@ -6,8 +6,8 @@ part of 'broadcast_event.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_BroadcastResponse _$BroadcastResponseFromJson(Map<String, dynamic> json) =>
-    _BroadcastResponse(
+BroadcastEvent _$BroadcastEventFromJson(Map<String, dynamic> json) =>
+    BroadcastEvent(
       type: $enumDecodeNullable(
         _$BroadcastEventTypeEnumMap,
         json['type'],
@@ -16,7 +16,7 @@ _BroadcastResponse _$BroadcastResponseFromJson(Map<String, dynamic> json) =>
       body: json['body'] as Map<String, dynamic>,
     );
 
-Map<String, dynamic> _$BroadcastResponseToJson(_BroadcastResponse instance) =>
+Map<String, dynamic> _$BroadcastEventToJson(BroadcastEvent instance) =>
     <String, dynamic>{
       'type': _$BroadcastEventTypeEnumMap[instance.type],
       'body': instance.body,

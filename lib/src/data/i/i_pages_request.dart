@@ -5,14 +5,15 @@ part 'i_pages_request.freezed.dart';
 part 'i_pages_request.g.dart';
 
 @freezed
-abstract class IPagesRequest with _$IPagesRequest {
-  const factory({
-    int? limit,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-  }) = _IPageRequest;
-
+@JsonSerializable()
+class const IPagesRequest({
+  final int? limit,
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
+}) with _$IPagesRequest {
   factory fromJson(Map<String, Object?> json) => _$IPagesRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$IPagesRequestToJson(this);
 }

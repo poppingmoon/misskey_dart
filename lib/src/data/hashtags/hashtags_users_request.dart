@@ -8,15 +8,16 @@ part 'hashtags_users_request.freezed.dart';
 part 'hashtags_users_request.g.dart';
 
 @freezed
-abstract class HashtagsUsersRequest with _$HashtagsUsersRequest {
-  const factory({
-    required String tag,
-    int? limit,
-    @UsersSortConverter() required UsersSortType sort,
-    UsersState? state,
-    Origin? origin,
-  }) = _HashtagsUsersRequest;
-
+@JsonSerializable()
+class const HashtagsUsersRequest({
+  required final String tag,
+  final int? limit,
+  @UsersSortConverter() required final UsersSortType sort,
+  final UsersState? state,
+  final Origin? origin,
+}) with _$HashtagsUsersRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$HashtagsUsersRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$HashtagsUsersRequestToJson(this);
 }

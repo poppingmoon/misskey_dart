@@ -6,7 +6,7 @@ part of 'hashtag.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_Hashtag _$HashtagFromJson(Map<String, dynamic> json) => _Hashtag(
+Hashtag _$HashtagFromJson(Map<String, dynamic> json) => Hashtag(
   tag: json['tag'] as String,
   mentionedUsersCount: (json['mentionedUsersCount'] as num).toInt(),
   mentionedLocalUsersCount: (json['mentionedLocalUsersCount'] as num).toInt(),
@@ -16,7 +16,7 @@ _Hashtag _$HashtagFromJson(Map<String, dynamic> json) => _Hashtag(
   attachedRemoteUsersCount: (json['attachedRemoteUsersCount'] as num).toInt(),
 );
 
-Map<String, dynamic> _$HashtagToJson(_Hashtag instance) => <String, dynamic>{
+Map<String, dynamic> _$HashtagToJson(Hashtag instance) => <String, dynamic>{
   'tag': instance.tag,
   'mentionedUsersCount': instance.mentionedUsersCount,
   'mentionedLocalUsersCount': instance.mentionedLocalUsersCount,

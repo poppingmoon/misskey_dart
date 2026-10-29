@@ -4,10 +4,12 @@ part 'drive_files_check_existence_request.freezed.dart';
 part 'drive_files_check_existence_request.g.dart';
 
 @freezed
-abstract class DriveFilesCheckExistenceRequest
+@JsonSerializable()
+class const DriveFilesCheckExistenceRequest({required final String md5})
     with _$DriveFilesCheckExistenceRequest {
-  const factory({required String md5}) = _DriveFilesCheckExistenceRequest;
-
   factory fromJson(Map<String, dynamic> json) =>
       _$DriveFilesCheckExistenceRequestFromJson(json);
+
+  Map<String, dynamic> toJson() =>
+      _$DriveFilesCheckExistenceRequestToJson(this);
 }

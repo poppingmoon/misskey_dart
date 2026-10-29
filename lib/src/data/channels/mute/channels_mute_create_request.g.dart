@@ -6,9 +6,9 @@ part of 'channels_mute_create_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ChannelsMuteCreateRequest _$ChannelsMuteCreateRequestFromJson(
+ChannelsMuteCreateRequest _$ChannelsMuteCreateRequestFromJson(
   Map<String, dynamic> json,
-) => _ChannelsMuteCreateRequest(
+) => ChannelsMuteCreateRequest(
   channelId: json['channelId'] as String?,
   expiresAt: _$JsonConverterFromJson<int, DateTime>(
     json['expiresAt'],
@@ -17,7 +17,7 @@ _ChannelsMuteCreateRequest _$ChannelsMuteCreateRequestFromJson(
 );
 
 Map<String, dynamic> _$ChannelsMuteCreateRequestToJson(
-  _ChannelsMuteCreateRequest instance,
+  ChannelsMuteCreateRequest instance,
 ) => <String, dynamic>{
   'channelId': instance.channelId,
   'expiresAt': _$JsonConverterToJson<int, DateTime>(

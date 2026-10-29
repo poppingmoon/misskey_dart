@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$IReadAnnouncementRequest {
 
- String get announcementId;
+
 /// Create a copy of IReadAnnouncementRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $IReadAnnouncementRequestCopyWith<IReadAnnouncementRequest> get copyWith => _$IReadAnnouncementRequestCopyWithImpl<IReadAnnouncementRequest>(this as IReadAnnouncementRequest, _$identity);
 
-  /// Serializes this IReadAnnouncementRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -95,11 +93,10 @@ extension IReadAnnouncementRequestPatterns on IReadAnnouncementRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _IReadAnnouncementRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _IReadAnnouncementRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -117,11 +114,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _IReadAnnouncementRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _IReadAnnouncementRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -138,11 +134,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _IReadAnnouncementRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _IReadAnnouncementRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -159,10 +154,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String announcementId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _IReadAnnouncementRequest() when $default != null:
-return $default(_that.announcementId);case _:
+case _:
   return orElse();
 
 }
@@ -180,10 +174,9 @@ return $default(_that.announcementId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String announcementId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _IReadAnnouncementRequest():
-return $default(_that.announcementId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -200,85 +193,13 @@ return $default(_that.announcementId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String announcementId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _IReadAnnouncementRequest() when $default != null:
-return $default(_that.announcementId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _IReadAnnouncementRequest implements IReadAnnouncementRequest {
-  const _IReadAnnouncementRequest({required this.announcementId});
-  factory _IReadAnnouncementRequest.fromJson(Map<String, dynamic> json) => _$IReadAnnouncementRequestFromJson(json);
-
-@override final  String announcementId;
-
-/// Create a copy of IReadAnnouncementRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$IReadAnnouncementRequestCopyWith<_IReadAnnouncementRequest> get copyWith => __$IReadAnnouncementRequestCopyWithImpl<_IReadAnnouncementRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$IReadAnnouncementRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _IReadAnnouncementRequest&&(identical(other.announcementId, announcementId) || other.announcementId == announcementId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,announcementId);
-}
-
-@override
-String toString() {
-    return 'IReadAnnouncementRequest(announcementId: $announcementId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$IReadAnnouncementRequestCopyWith<$Res> implements $IReadAnnouncementRequestCopyWith<$Res> {
-  factory _$IReadAnnouncementRequestCopyWith(_IReadAnnouncementRequest value, $Res Function(_IReadAnnouncementRequest) _then) = __$IReadAnnouncementRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String announcementId
-});
-
-
-
-
-}
-/// @nodoc
-class __$IReadAnnouncementRequestCopyWithImpl<$Res>
-    implements _$IReadAnnouncementRequestCopyWith<$Res> {
-  __$IReadAnnouncementRequestCopyWithImpl(this._self, this._then);
-
-  final _IReadAnnouncementRequest _self;
-  final $Res Function(_IReadAnnouncementRequest) _then;
-
-/// Create a copy of IReadAnnouncementRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? announcementId = null,}) {
-  return _then(_IReadAnnouncementRequest(
-announcementId: null == announcementId ? _self.announcementId : announcementId // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

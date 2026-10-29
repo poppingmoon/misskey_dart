@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$IGalleryLikesResponse {
 
- String get id; GalleryPost get post;
+
 /// Create a copy of IGalleryLikesResponse
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $IGalleryLikesResponseCopyWith<IGalleryLikesResponse> get copyWith => _$IGalleryLikesResponseCopyWithImpl<IGalleryLikesResponse>(this as IGalleryLikesResponse, _$identity);
 
-  /// Serializes this IGalleryLikesResponse to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -105,11 +103,10 @@ extension IGalleryLikesResponsePatterns on IGalleryLikesResponse {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _IGalleryLikesResponse value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _IGalleryLikesResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -127,11 +124,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _IGalleryLikesResponse value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _IGalleryLikesResponse():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -148,11 +144,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _IGalleryLikesResponse value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _IGalleryLikesResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -169,10 +164,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  GalleryPost post)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _IGalleryLikesResponse() when $default != null:
-return $default(_that.id,_that.post);case _:
+case _:
   return orElse();
 
 }
@@ -190,10 +184,9 @@ return $default(_that.id,_that.post);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  GalleryPost post)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _IGalleryLikesResponse():
-return $default(_that.id,_that.post);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -210,97 +203,14 @@ return $default(_that.id,_that.post);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  GalleryPost post)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _IGalleryLikesResponse() when $default != null:
-return $default(_that.id,_that.post);case _:
+case _:
   return null;
 
 }
 }
 
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _IGalleryLikesResponse implements IGalleryLikesResponse {
-  const _IGalleryLikesResponse({required this.id, required this.post});
-  factory _IGalleryLikesResponse.fromJson(Map<String, dynamic> json) => _$IGalleryLikesResponseFromJson(json);
-
-@override final  String id;
-@override final  GalleryPost post;
-
-/// Create a copy of IGalleryLikesResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$IGalleryLikesResponseCopyWith<_IGalleryLikesResponse> get copyWith => __$IGalleryLikesResponseCopyWithImpl<_IGalleryLikesResponse>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$IGalleryLikesResponseToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _IGalleryLikesResponse&&(identical(other.id, id) || other.id == id)&&(identical(other.post, post) || other.post == post));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,id,post);
-}
-
-@override
-String toString() {
-    return 'IGalleryLikesResponse(id: $id, post: $post)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$IGalleryLikesResponseCopyWith<$Res> implements $IGalleryLikesResponseCopyWith<$Res> {
-  factory _$IGalleryLikesResponseCopyWith(_IGalleryLikesResponse value, $Res Function(_IGalleryLikesResponse) _then) = __$IGalleryLikesResponseCopyWithImpl;
-@override @useResult
-$Res call({
- String id, GalleryPost post
-});
-
-
-@override $GalleryPostCopyWith<$Res> get post;
-
-}
-/// @nodoc
-class __$IGalleryLikesResponseCopyWithImpl<$Res>
-    implements _$IGalleryLikesResponseCopyWith<$Res> {
-  __$IGalleryLikesResponseCopyWithImpl(this._self, this._then);
-
-  final _IGalleryLikesResponse _self;
-  final $Res Function(_IGalleryLikesResponse) _then;
-
-/// Create a copy of IGalleryLikesResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? post = null,}) {
-  return _then(_IGalleryLikesResponse(
-id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as String,post: null == post ? _self.post : post // ignore: cast_nullable_to_non_nullable
-as GalleryPost,
-  ));
-}
-
-/// Create a copy of IGalleryLikesResponse
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$GalleryPostCopyWith<$Res> get post {
-  
-  return $GalleryPostCopyWith<$Res>(_self.post, (value) {
-    return _then(_self.copyWith(post: value));
-  });
-}
 }
 
 // dart format on

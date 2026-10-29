@@ -6,8 +6,8 @@ part of 'notes_replies_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_NotesRepliesRequest _$NotesRepliesRequestFromJson(Map<String, dynamic> json) =>
-    _NotesRepliesRequest(
+NotesRepliesRequest _$NotesRepliesRequestFromJson(Map<String, dynamic> json) =>
+    NotesRepliesRequest(
       noteId: json['noteId'] as String,
       limit: (json['limit'] as num?)?.toInt(),
       sinceId: json['sinceId'] as String?,
@@ -23,7 +23,7 @@ _NotesRepliesRequest _$NotesRepliesRequestFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$NotesRepliesRequestToJson(
-  _NotesRepliesRequest instance,
+  NotesRepliesRequest instance,
 ) => <String, dynamic>{
   'noteId': instance.noteId,
   'limit': instance.limit,

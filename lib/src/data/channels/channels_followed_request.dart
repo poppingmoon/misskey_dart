@@ -5,17 +5,18 @@ part 'channels_followed_request.freezed.dart';
 part 'channels_followed_request.g.dart';
 
 @freezed
-abstract class ChannelsFollowedRequest with _$ChannelsFollowedRequest {
-  const factory({
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
+@JsonSerializable()
+class const ChannelsFollowedRequest({
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
 
-    /// minimum: 1, maximum: 100, default: 5 [misskey-dev/misskey:58c3fc6]
-    int? limit,
-  }) = _ChannelsFollowedRequest;
-
+  /// minimum: 1, maximum: 100, default: 5 [misskey-dev/misskey:58c3fc6]
+  final int? limit,
+}) with _$ChannelsFollowedRequest {
   factory fromJson(Map<String, Object?> json) =>
       _$ChannelsFollowedRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ChannelsFollowedRequestToJson(this);
 }

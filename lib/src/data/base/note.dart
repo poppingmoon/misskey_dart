@@ -9,84 +9,86 @@ part 'note.freezed.dart';
 part 'note.g.dart';
 
 @freezed
-abstract class Note with _$Note {
-  const factory({
-    required String id,
-    @DateTimeConverter() required DateTime createdAt,
-    @NullableDateTimeConverter() DateTime? updatedAt,
-    String? text,
-    String? cw,
-    required UserLite user,
-    required String userId,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    NoteVisibility? visibility,
-    @Default(false) bool localOnly,
-    @Default(0) int renoteCount,
-    @Default(0) int repliesCount,
-    int? reactionCount,
-    @Default({}) Map<String, int> reactions,
-    @EmojisConverter() @Default({}) Map<String, String> reactionEmojis,
-    @EmojisConverter() @Default({}) Map<String, String> emojis,
-    @Default([]) List<String> fileIds,
-    @Default([]) List<DriveFile> files,
-    String? replyId,
-    String? renoteId,
-    String? channelId,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    ReactionAcceptance? reactionAcceptance,
-    Note? renote,
-    Note? reply,
-    @Default([]) List<String> visibleUserIds,
-    @Default([]) List<String> mentions,
-    String? myReaction,
-    NoteChannelInfo? channel,
-    @NullableUriConverter() Uri? uri,
-    @NullableUriConverter() Uri? url,
-    @Default([]) List<String> reactionAndUserPairCache,
-    NotePoll? poll,
-    int? clippedCount,
-    bool? isRenoted, // Iceshrimp
-  }) = _Note;
-
+@JsonSerializable()
+class const Note({
+  required final String id,
+  @DateTimeConverter() required final DateTime createdAt,
+  @NullableDateTimeConverter() final DateTime? updatedAt,
+  final String? text,
+  final String? cw,
+  required final UserLite user,
+  required final String userId,
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final NoteVisibility? visibility,
+  final bool localOnly = false,
+  final int renoteCount = 0,
+  final int repliesCount = 0,
+  final int? reactionCount,
+  final Map<String, int> reactions = const {},
+  @EmojisConverter() final Map<String, String> reactionEmojis = const {},
+  @EmojisConverter() final Map<String, String> emojis = const {},
+  final List<String> fileIds = const [],
+  final List<DriveFile> files = const [],
+  final String? replyId,
+  final String? renoteId,
+  final String? channelId,
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final ReactionAcceptance? reactionAcceptance,
+  final Note? renote,
+  final Note? reply,
+  final List<String> visibleUserIds = const [],
+  final List<String> mentions = const [],
+  final String? myReaction,
+  final NoteChannelInfo? channel,
+  @NullableUriConverter() final Uri? uri,
+  @NullableUriConverter() final Uri? url,
+  final List<String> reactionAndUserPairCache = const [],
+  final NotePoll? poll,
+  final int? clippedCount,
+  final bool? isRenoted, // Iceshrimp
+}) with _$Note {
   factory fromJson(Map<String, Object?> json) => _$NoteFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NoteToJson(this);
 }
 
 @freezed
-abstract class NoteChannelInfo with _$NoteChannelInfo {
-  const factory({
-    required String id,
-    required String name,
-    @NullableColorConverter() int? color,
-    @Default(false) bool isSensitive,
-    @Default(true) bool allowRenoteToExternal,
-    String? userId,
-  }) = _NoteChannelInfo;
-
+@JsonSerializable()
+class const NoteChannelInfo({
+  required final String id,
+  required final String name,
+  @NullableColorConverter() final int? color,
+  final bool isSensitive = false,
+  final bool allowRenoteToExternal = true,
+  final String? userId,
+}) with _$NoteChannelInfo {
   factory fromJson(Map<String, Object?> json) =>
       _$NoteChannelInfoFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NoteChannelInfoToJson(this);
 }
 
 @freezed
-abstract class NotePoll with _$NotePoll {
-  const factory({
-    required bool multiple,
-    @DateTimeConverter() DateTime? expiresAt,
-    required List<NotePollChoice> choices,
-  }) = _NotePoll;
-
+@JsonSerializable()
+class const NotePoll({
+  required final bool multiple,
+  @DateTimeConverter() final DateTime? expiresAt,
+  required final List<NotePollChoice> choices,
+}) with _$NotePoll {
   factory fromJson(Map<String, dynamic> json) => _$NotePollFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NotePollToJson(this);
 }
 
 @freezed
-abstract class NotePollChoice with _$NotePollChoice {
-  const factory({
-    required String text,
-    required int votes,
-    // Changed to non-nullable in Misskey 11.0.0
-    @Default(false) bool isVoted,
-  }) = _NotePollChoice;
-
+@JsonSerializable()
+class const NotePollChoice({
+  required final String text,
+  required final int votes,
+  // Changed to non-nullable in Misskey 11.0.0
+  final bool isVoted = false,
+}) with _$NotePollChoice {
   factory fromJson(Map<String, dynamic> json) => _$NotePollChoiceFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NotePollChoiceToJson(this);
 }

@@ -6,8 +6,8 @@ part of 'users_clips_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_UsersClipsRequest _$UsersClipsRequestFromJson(Map<String, dynamic> json) =>
-    _UsersClipsRequest(
+UsersClipsRequest _$UsersClipsRequestFromJson(Map<String, dynamic> json) =>
+    UsersClipsRequest(
       userId: json['userId'] as String,
       limit: (json['limit'] as num?)?.toInt(),
       sinceId: json['sinceId'] as String?,
@@ -22,7 +22,7 @@ _UsersClipsRequest _$UsersClipsRequestFromJson(Map<String, dynamic> json) =>
       ),
     );
 
-Map<String, dynamic> _$UsersClipsRequestToJson(_UsersClipsRequest instance) =>
+Map<String, dynamic> _$UsersClipsRequestToJson(UsersClipsRequest instance) =>
     <String, dynamic>{
       'userId': instance.userId,
       'limit': instance.limit,

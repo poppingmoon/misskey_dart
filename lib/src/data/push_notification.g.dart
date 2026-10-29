@@ -6,89 +6,9 @@ part of 'push_notification.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-NotificationPushNotification _$NotificationPushNotificationFromJson(
+PushNotificationBody _$PushNotificationBodyFromJson(
   Map<String, dynamic> json,
-) => NotificationPushNotification(
-  body: PushNotificationBody.fromJson(json['body'] as Map<String, dynamic>),
-  userId: json['userId'] as String?,
-  dateTime: _$JsonConverterFromJson<int, DateTime>(
-    json['dateTime'],
-    const EpocTimeDateTimeConverter().fromJson,
-  ),
-  $type: json['type'] as String?,
-);
-
-Map<String, dynamic> _$NotificationPushNotificationToJson(
-  NotificationPushNotification instance,
-) => <String, dynamic>{
-  'body': instance.body.toJson(),
-  'userId': instance.userId,
-  'dateTime': _$JsonConverterToJson<int, DateTime>(
-    instance.dateTime,
-    const EpocTimeDateTimeConverter().toJson,
-  ),
-  'type': instance.$type,
-};
-
-Value? _$JsonConverterFromJson<Json, Value>(
-  Object? json,
-  Value? Function(Json json) fromJson,
-) => json == null ? null : fromJson(json as Json);
-
-Json? _$JsonConverterToJson<Json, Value>(
-  Value? value,
-  Json? Function(Value value) toJson,
-) => value == null ? null : toJson(value);
-
-ReadAllNotificationsPushNotification
-_$ReadAllNotificationsPushNotificationFromJson(Map<String, dynamic> json) =>
-    ReadAllNotificationsPushNotification(
-      userId: json['userId'] as String?,
-      dateTime: _$JsonConverterFromJson<int, DateTime>(
-        json['dateTime'],
-        const EpocTimeDateTimeConverter().fromJson,
-      ),
-      $type: json['type'] as String?,
-    );
-
-Map<String, dynamic> _$ReadAllNotificationsPushNotificationToJson(
-  ReadAllNotificationsPushNotification instance,
-) => <String, dynamic>{
-  'userId': instance.userId,
-  'dateTime': _$JsonConverterToJson<int, DateTime>(
-    instance.dateTime,
-    const EpocTimeDateTimeConverter().toJson,
-  ),
-  'type': instance.$type,
-};
-
-NewChatMessagePushNotification _$NewChatMessagePushNotificationFromJson(
-  Map<String, dynamic> json,
-) => NewChatMessagePushNotification(
-  body: ChatMessage.fromJson(json['body'] as Map<String, dynamic>),
-  userId: json['userId'] as String?,
-  dateTime: _$JsonConverterFromJson<int, DateTime>(
-    json['dateTime'],
-    const EpocTimeDateTimeConverter().fromJson,
-  ),
-  $type: json['type'] as String?,
-);
-
-Map<String, dynamic> _$NewChatMessagePushNotificationToJson(
-  NewChatMessagePushNotification instance,
-) => <String, dynamic>{
-  'body': instance.body.toJson(),
-  'userId': instance.userId,
-  'dateTime': _$JsonConverterToJson<int, DateTime>(
-    instance.dateTime,
-    const EpocTimeDateTimeConverter().toJson,
-  ),
-  'type': instance.$type,
-};
-
-_PushNotificationBody _$PushNotificationBodyFromJson(
-  Map<String, dynamic> json,
-) => _PushNotificationBody(
+) => PushNotificationBody(
   id: json['id'] as String,
   createdAt: const DateTimeConverter().fromJson(json['createdAt'] as String),
   type: $enumDecodeNullable(
@@ -138,7 +58,7 @@ _PushNotificationBody _$PushNotificationBodyFromJson(
 );
 
 Map<String, dynamic> _$PushNotificationBodyToJson(
-  _PushNotificationBody instance,
+  PushNotificationBody instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'createdAt': const DateTimeConverter().toJson(instance.createdAt),
@@ -210,9 +130,9 @@ const _$UserExportableEntitiesEnumMap = {
   UserExportableEntities.userList: 'userList',
 };
 
-_PushNotificationNote _$PushNotificationNoteFromJson(
+PushNotificationNote _$PushNotificationNoteFromJson(
   Map<String, dynamic> json,
-) => _PushNotificationNote(
+) => PushNotificationNote(
   id: json['id'] as String,
   createdAt: const DateTimeConverter().fromJson(json['createdAt'] as String),
   updatedAt: _$JsonConverterFromJson<String, DateTime>(
@@ -283,7 +203,7 @@ _PushNotificationNote _$PushNotificationNoteFromJson(
 );
 
 Map<String, dynamic> _$PushNotificationNoteToJson(
-  _PushNotificationNote instance,
+  PushNotificationNote instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'createdAt': const DateTimeConverter().toJson(instance.createdAt),
@@ -316,6 +236,11 @@ Map<String, dynamic> _$PushNotificationNoteToJson(
   'clippedCount': instance.clippedCount,
 };
 
+Value? _$JsonConverterFromJson<Json, Value>(
+  Object? json,
+  Value? Function(Json json) fromJson,
+) => json == null ? null : fromJson(json as Json);
+
 const _$NoteVisibilityEnumMap = {
   NoteVisibility.public: 'public',
   NoteVisibility.home: 'home',
@@ -329,4 +254,79 @@ const _$ReactionAcceptanceEnumMap = {
   ReactionAcceptance.nonSensitiveOnlyForLocalLikeOnlyForRemote:
       'nonSensitiveOnlyForLocalLikeOnlyForRemote',
   ReactionAcceptance.likeOnly: 'likeOnly',
+};
+
+NotificationPushNotification _$NotificationPushNotificationFromJson(
+  Map<String, dynamic> json,
+) => NotificationPushNotification(
+  body: PushNotificationBody.fromJson(json['body'] as Map<String, dynamic>),
+  userId: json['userId'] as String?,
+  dateTime: _$JsonConverterFromJson<int, DateTime>(
+    json['dateTime'],
+    const EpocTimeDateTimeConverter().fromJson,
+  ),
+  $type: json['type'] as String?,
+);
+
+Map<String, dynamic> _$NotificationPushNotificationToJson(
+  NotificationPushNotification instance,
+) => <String, dynamic>{
+  'body': instance.body.toJson(),
+  'userId': instance.userId,
+  'dateTime': _$JsonConverterToJson<int, DateTime>(
+    instance.dateTime,
+    const EpocTimeDateTimeConverter().toJson,
+  ),
+  'type': instance.$type,
+};
+
+Json? _$JsonConverterToJson<Json, Value>(
+  Value? value,
+  Json? Function(Value value) toJson,
+) => value == null ? null : toJson(value);
+
+ReadAllNotificationsPushNotification
+_$ReadAllNotificationsPushNotificationFromJson(Map<String, dynamic> json) =>
+    ReadAllNotificationsPushNotification(
+      userId: json['userId'] as String?,
+      dateTime: _$JsonConverterFromJson<int, DateTime>(
+        json['dateTime'],
+        const EpocTimeDateTimeConverter().fromJson,
+      ),
+      $type: json['type'] as String?,
+    );
+
+Map<String, dynamic> _$ReadAllNotificationsPushNotificationToJson(
+  ReadAllNotificationsPushNotification instance,
+) => <String, dynamic>{
+  'userId': instance.userId,
+  'dateTime': _$JsonConverterToJson<int, DateTime>(
+    instance.dateTime,
+    const EpocTimeDateTimeConverter().toJson,
+  ),
+  'type': instance.$type,
+};
+
+NewChatMessagePushNotification _$NewChatMessagePushNotificationFromJson(
+  Map<String, dynamic> json,
+) => NewChatMessagePushNotification(
+  body: ChatMessage.fromJson(json['body'] as Map<String, dynamic>),
+  userId: json['userId'] as String?,
+  dateTime: _$JsonConverterFromJson<int, DateTime>(
+    json['dateTime'],
+    const EpocTimeDateTimeConverter().fromJson,
+  ),
+  $type: json['type'] as String?,
+);
+
+Map<String, dynamic> _$NewChatMessagePushNotificationToJson(
+  NewChatMessagePushNotification instance,
+) => <String, dynamic>{
+  'body': instance.body.toJson(),
+  'userId': instance.userId,
+  'dateTime': _$JsonConverterToJson<int, DateTime>(
+    instance.dateTime,
+    const EpocTimeDateTimeConverter().toJson,
+  ),
+  'type': instance.$type,
 };

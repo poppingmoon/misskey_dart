@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ChatMessagesReactRequest {
 
- String get messageId; String get reaction;
+
 /// Create a copy of ChatMessagesReactRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $ChatMessagesReactRequestCopyWith<ChatMessagesReactRequest> get copyWith => _$ChatMessagesReactRequestCopyWithImpl<ChatMessagesReactRequest>(this as ChatMessagesReactRequest, _$identity);
 
-  /// Serializes this ChatMessagesReactRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -96,11 +94,10 @@ extension ChatMessagesReactRequestPatterns on ChatMessagesReactRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ChatMessagesReactRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _ChatMessagesReactRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -118,11 +115,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ChatMessagesReactRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChatMessagesReactRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -139,11 +135,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ChatMessagesReactRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChatMessagesReactRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -160,10 +155,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String messageId,  String reaction)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _ChatMessagesReactRequest() when $default != null:
-return $default(_that.messageId,_that.reaction);case _:
+case _:
   return orElse();
 
 }
@@ -181,10 +175,9 @@ return $default(_that.messageId,_that.reaction);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String messageId,  String reaction)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChatMessagesReactRequest():
-return $default(_that.messageId,_that.reaction);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -201,87 +194,13 @@ return $default(_that.messageId,_that.reaction);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String messageId,  String reaction)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChatMessagesReactRequest() when $default != null:
-return $default(_that.messageId,_that.reaction);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _ChatMessagesReactRequest implements ChatMessagesReactRequest {
-  const _ChatMessagesReactRequest({required this.messageId, required this.reaction});
-  factory _ChatMessagesReactRequest.fromJson(Map<String, dynamic> json) => _$ChatMessagesReactRequestFromJson(json);
-
-@override final  String messageId;
-@override final  String reaction;
-
-/// Create a copy of ChatMessagesReactRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ChatMessagesReactRequestCopyWith<_ChatMessagesReactRequest> get copyWith => __$ChatMessagesReactRequestCopyWithImpl<_ChatMessagesReactRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$ChatMessagesReactRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatMessagesReactRequest&&(identical(other.messageId, messageId) || other.messageId == messageId)&&(identical(other.reaction, reaction) || other.reaction == reaction));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,messageId,reaction);
-}
-
-@override
-String toString() {
-    return 'ChatMessagesReactRequest(messageId: $messageId, reaction: $reaction)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ChatMessagesReactRequestCopyWith<$Res> implements $ChatMessagesReactRequestCopyWith<$Res> {
-  factory _$ChatMessagesReactRequestCopyWith(_ChatMessagesReactRequest value, $Res Function(_ChatMessagesReactRequest) _then) = __$ChatMessagesReactRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String messageId, String reaction
-});
-
-
-
-
-}
-/// @nodoc
-class __$ChatMessagesReactRequestCopyWithImpl<$Res>
-    implements _$ChatMessagesReactRequestCopyWith<$Res> {
-  __$ChatMessagesReactRequestCopyWithImpl(this._self, this._then);
-
-  final _ChatMessagesReactRequest _self;
-  final $Res Function(_ChatMessagesReactRequest) _then;
-
-/// Create a copy of ChatMessagesReactRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? messageId = null,Object? reaction = null,}) {
-  return _then(_ChatMessagesReactRequest(
-messageId: null == messageId ? _self.messageId : messageId // ignore: cast_nullable_to_non_nullable
-as String,reaction: null == reaction ? _self.reaction : reaction // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

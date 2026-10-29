@@ -4,8 +4,9 @@ part 'emoji_request.freezed.dart';
 part 'emoji_request.g.dart';
 
 @freezed
-abstract class EmojiRequest with _$EmojiRequest {
-  const factory({required String name}) = _EmojiRequest;
-
+@JsonSerializable()
+class const EmojiRequest({required final String name}) with _$EmojiRequest {
   factory fromJson(Map<String, dynamic> json) => _$EmojiRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$EmojiRequestToJson(this);
 }

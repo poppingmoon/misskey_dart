@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ClipsCreateRequest {
 
- String get name; bool? get isPublic; String? get description;
+
 /// Create a copy of ClipsCreateRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $ClipsCreateRequestCopyWith<ClipsCreateRequest> get copyWith => _$ClipsCreateRequestCopyWithImpl<ClipsCreateRequest>(this as ClipsCreateRequest, _$identity);
 
-  /// Serializes this ClipsCreateRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -97,11 +95,10 @@ extension ClipsCreateRequestPatterns on ClipsCreateRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ClipsCreateRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _ClipsCreateRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -119,11 +116,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ClipsCreateRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ClipsCreateRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -140,11 +136,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ClipsCreateRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ClipsCreateRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -161,10 +156,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String name,  bool? isPublic,  String? description)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _ClipsCreateRequest() when $default != null:
-return $default(_that.name,_that.isPublic,_that.description);case _:
+case _:
   return orElse();
 
 }
@@ -182,10 +176,9 @@ return $default(_that.name,_that.isPublic,_that.description);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String name,  bool? isPublic,  String? description)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ClipsCreateRequest():
-return $default(_that.name,_that.isPublic,_that.description);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -202,89 +195,13 @@ return $default(_that.name,_that.isPublic,_that.description);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String name,  bool? isPublic,  String? description)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ClipsCreateRequest() when $default != null:
-return $default(_that.name,_that.isPublic,_that.description);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _ClipsCreateRequest implements ClipsCreateRequest {
-  const _ClipsCreateRequest({required this.name, this.isPublic, this.description});
-  factory _ClipsCreateRequest.fromJson(Map<String, dynamic> json) => _$ClipsCreateRequestFromJson(json);
-
-@override final  String name;
-@override final  bool? isPublic;
-@override final  String? description;
-
-/// Create a copy of ClipsCreateRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ClipsCreateRequestCopyWith<_ClipsCreateRequest> get copyWith => __$ClipsCreateRequestCopyWithImpl<_ClipsCreateRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$ClipsCreateRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ClipsCreateRequest&&(identical(other.name, name) || other.name == name)&&(identical(other.isPublic, isPublic) || other.isPublic == isPublic)&&(identical(other.description, description) || other.description == description));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,name,isPublic,description);
-}
-
-@override
-String toString() {
-    return 'ClipsCreateRequest(name: $name, isPublic: $isPublic, description: $description)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ClipsCreateRequestCopyWith<$Res> implements $ClipsCreateRequestCopyWith<$Res> {
-  factory _$ClipsCreateRequestCopyWith(_ClipsCreateRequest value, $Res Function(_ClipsCreateRequest) _then) = __$ClipsCreateRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String name, bool? isPublic, String? description
-});
-
-
-
-
-}
-/// @nodoc
-class __$ClipsCreateRequestCopyWithImpl<$Res>
-    implements _$ClipsCreateRequestCopyWith<$Res> {
-  __$ClipsCreateRequestCopyWithImpl(this._self, this._then);
-
-  final _ClipsCreateRequest _self;
-  final $Res Function(_ClipsCreateRequest) _then;
-
-/// Create a copy of ClipsCreateRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? name = null,Object? isPublic = freezed,Object? description = freezed,}) {
-  return _then(_ClipsCreateRequest(
-name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String,isPublic: freezed == isPublic ? _self.isPublic : isPublic // ignore: cast_nullable_to_non_nullable
-as bool?,description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
 
 }
 

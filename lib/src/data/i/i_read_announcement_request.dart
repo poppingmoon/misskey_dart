@@ -4,9 +4,11 @@ part 'i_read_announcement_request.freezed.dart';
 part 'i_read_announcement_request.g.dart';
 
 @freezed
-abstract class IReadAnnouncementRequest with _$IReadAnnouncementRequest {
-  const factory({required String announcementId}) = _IReadAnnouncementRequest;
-
+@JsonSerializable()
+class const IReadAnnouncementRequest({required final String announcementId})
+    with _$IReadAnnouncementRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$IReadAnnouncementRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$IReadAnnouncementRequestToJson(this);
 }

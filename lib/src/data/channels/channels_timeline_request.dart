@@ -5,17 +5,18 @@ part 'channels_timeline_request.freezed.dart';
 part 'channels_timeline_request.g.dart';
 
 @freezed
-abstract class ChannelsTimelineRequest with _$ChannelsTimelineRequest {
-  const factory({
-    required String channelId,
-    @Assert('limit > 0') int? limit,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-    bool? allowPartial,
-  }) = _ChannelsTimelineRequest;
-
+@JsonSerializable()
+class const ChannelsTimelineRequest({
+  required final String channelId,
+  @Assert('limit > 0') final int? limit,
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
+  final bool? allowPartial,
+}) with _$ChannelsTimelineRequest {
   factory fromJson(Map<String, Object?> json) =>
       _$ChannelsTimelineRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ChannelsTimelineRequestToJson(this);
 }

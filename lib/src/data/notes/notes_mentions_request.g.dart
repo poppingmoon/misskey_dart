@@ -6,9 +6,9 @@ part of 'notes_mentions_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_NotesMentionsRequest _$NotesMentionsRequestFromJson(
+NotesMentionsRequest _$NotesMentionsRequestFromJson(
   Map<String, dynamic> json,
-) => _NotesMentionsRequest(
+) => NotesMentionsRequest(
   following: json['following'] as bool?,
   limit: (json['limit'] as num?)?.toInt(),
   sinceId: json['sinceId'] as String?,
@@ -25,7 +25,7 @@ _NotesMentionsRequest _$NotesMentionsRequestFromJson(
 );
 
 Map<String, dynamic> _$NotesMentionsRequestToJson(
-  _NotesMentionsRequest instance,
+  NotesMentionsRequest instance,
 ) => <String, dynamic>{
   'following': instance.following,
   'limit': instance.limit,

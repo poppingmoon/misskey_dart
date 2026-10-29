@@ -8,28 +8,27 @@ part 'announcements_response.freezed.dart';
 part 'announcements_response.g.dart';
 
 @freezed
-abstract class AnnouncementsResponse with _$AnnouncementsResponse {
-  const factory({
-    required String id,
-    @DateTimeConverter() required DateTime createdAt,
-    @NullableDateTimeConverter() DateTime? updatedAt,
-    required String text,
-    required String title,
-    @NullableUriConverter() Uri? imageUrl,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    AnnouncementIconType? icon,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    AnnouncementDisplayType? display,
-    bool? needConfirmationToRead,
-    bool? forYou,
-    bool? isRead,
-    @Default(false) bool forExistingUsers,
-    String? userId,
-    @Default(false) bool silence,
-  }) = _AnnouncementsResponse;
-
+@JsonSerializable()
+class const AnnouncementsResponse({
+  required final String id,
+  @DateTimeConverter() required final DateTime createdAt,
+  @NullableDateTimeConverter() final DateTime? updatedAt,
+  required final String text,
+  required final String title,
+  @NullableUriConverter() final Uri? imageUrl,
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final AnnouncementIconType? icon,
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final AnnouncementDisplayType? display,
+  final bool? needConfirmationToRead,
+  final bool? forYou,
+  final bool? isRead,
+  final bool forExistingUsers = false,
+  final String? userId,
+  final bool silence = false,
+}) with _$AnnouncementsResponse {
   factory fromJson(Map<String, Object?> json) =>
       _$AnnouncementsResponseFromJson(json);
+
+  Map<String, dynamic> toJson() => _$AnnouncementsResponseToJson(this);
 }

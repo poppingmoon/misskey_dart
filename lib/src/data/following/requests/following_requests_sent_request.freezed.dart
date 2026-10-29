@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$FollowingRequestsSentRequest {
 
- String? get sinceId; String? get untilId;@EpocTimeDateTimeConverter() DateTime? get sinceDate;@EpocTimeDateTimeConverter() DateTime? get untilDate; int? get limit;
+
 /// Create a copy of FollowingRequestsSentRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $FollowingRequestsSentRequestCopyWith<FollowingRequestsSentRequest> get copyWith => _$FollowingRequestsSentRequestCopyWithImpl<FollowingRequestsSentRequest>(this as FollowingRequestsSentRequest, _$identity);
 
-  /// Serializes this FollowingRequestsSentRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -99,11 +97,10 @@ extension FollowingRequestsSentRequestPatterns on FollowingRequestsSentRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _FollowingRequestsSentRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _FollowingRequestsSentRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -121,11 +118,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _FollowingRequestsSentRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _FollowingRequestsSentRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -142,11 +138,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _FollowingRequestsSentRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _FollowingRequestsSentRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -163,10 +158,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  int? limit)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _FollowingRequestsSentRequest() when $default != null:
-return $default(_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.limit);case _:
+case _:
   return orElse();
 
 }
@@ -184,10 +178,9 @@ return $default(_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_tha
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  int? limit)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _FollowingRequestsSentRequest():
-return $default(_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.limit);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -204,93 +197,13 @@ return $default(_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_tha
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  int? limit)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _FollowingRequestsSentRequest() when $default != null:
-return $default(_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.limit);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _FollowingRequestsSentRequest implements FollowingRequestsSentRequest {
-  const _FollowingRequestsSentRequest({this.sinceId, this.untilId, @EpocTimeDateTimeConverter() this.sinceDate, @EpocTimeDateTimeConverter() this.untilDate, this.limit});
-  factory _FollowingRequestsSentRequest.fromJson(Map<String, dynamic> json) => _$FollowingRequestsSentRequestFromJson(json);
-
-@override final  String? sinceId;
-@override final  String? untilId;
-@override@EpocTimeDateTimeConverter() final  DateTime? sinceDate;
-@override@EpocTimeDateTimeConverter() final  DateTime? untilDate;
-@override final  int? limit;
-
-/// Create a copy of FollowingRequestsSentRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$FollowingRequestsSentRequestCopyWith<_FollowingRequestsSentRequest> get copyWith => __$FollowingRequestsSentRequestCopyWithImpl<_FollowingRequestsSentRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$FollowingRequestsSentRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _FollowingRequestsSentRequest&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.limit, limit) || other.limit == limit));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,sinceId,untilId,sinceDate,untilDate,limit);
-}
-
-@override
-String toString() {
-    return 'FollowingRequestsSentRequest(sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, limit: $limit)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$FollowingRequestsSentRequestCopyWith<$Res> implements $FollowingRequestsSentRequestCopyWith<$Res> {
-  factory _$FollowingRequestsSentRequestCopyWith(_FollowingRequestsSentRequest value, $Res Function(_FollowingRequestsSentRequest) _then) = __$FollowingRequestsSentRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String? sinceId, String? untilId,@EpocTimeDateTimeConverter() DateTime? sinceDate,@EpocTimeDateTimeConverter() DateTime? untilDate, int? limit
-});
-
-
-
-
-}
-/// @nodoc
-class __$FollowingRequestsSentRequestCopyWithImpl<$Res>
-    implements _$FollowingRequestsSentRequestCopyWith<$Res> {
-  __$FollowingRequestsSentRequestCopyWithImpl(this._self, this._then);
-
-  final _FollowingRequestsSentRequest _self;
-  final $Res Function(_FollowingRequestsSentRequest) _then;
-
-/// Create a copy of FollowingRequestsSentRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,Object? limit = freezed,}) {
-  return _then(_FollowingRequestsSentRequest(
-sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
-as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
-as String?,sinceDate: freezed == sinceDate ? _self.sinceDate : sinceDate // ignore: cast_nullable_to_non_nullable
-as DateTime?,untilDate: freezed == untilDate ? _self.untilDate : untilDate // ignore: cast_nullable_to_non_nullable
-as DateTime?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,
-  ));
-}
-
 
 }
 

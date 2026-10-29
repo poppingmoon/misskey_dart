@@ -6,8 +6,8 @@ part of 'scheduled_note.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ScheduledNote _$ScheduledNoteFromJson(Map<String, dynamic> json) =>
-    _ScheduledNote(
+ScheduledNote _$ScheduledNoteFromJson(Map<String, dynamic> json) =>
+    ScheduledNote(
       id: json['id'] as String,
       updatedAt: const DateTimeConverter().fromJson(
         json['updatedAt'] as String,
@@ -30,7 +30,7 @@ _ScheduledNote _$ScheduledNoteFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$ScheduledNoteToJson(
-  _ScheduledNote instance,
+  ScheduledNote instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'updatedAt': const DateTimeConverter().toJson(instance.updatedAt),
@@ -47,36 +47,36 @@ Value? _$JsonConverterFromJson<Json, Value>(
   Value? Function(Json json) fromJson,
 ) => json == null ? null : fromJson(json as Json);
 
-_ScheduledNoteNote _$ScheduledNoteNoteFromJson(Map<String, dynamic> json) =>
-    _ScheduledNoteNote(
+ScheduledNoteNote _$ScheduledNoteNoteFromJson(Map<String, dynamic> json) =>
+    ScheduledNoteNote(
       id: json['id'] as String,
       text: json['text'] as String?,
       user: ScheduledNoteUser.fromJson(json['user'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$ScheduledNoteNoteToJson(_ScheduledNoteNote instance) =>
+Map<String, dynamic> _$ScheduledNoteNoteToJson(ScheduledNoteNote instance) =>
     <String, dynamic>{
       'id': instance.id,
       'text': instance.text,
       'user': instance.user.toJson(),
     };
 
-_ScheduledNoteUser _$ScheduledNoteUserFromJson(Map<String, dynamic> json) =>
-    _ScheduledNoteUser(
+ScheduledNoteUser _$ScheduledNoteUserFromJson(Map<String, dynamic> json) =>
+    ScheduledNoteUser(
       id: json['id'] as String,
       username: json['username'] as String,
       host: json['host'] as String?,
     );
 
-Map<String, dynamic> _$ScheduledNoteUserToJson(_ScheduledNoteUser instance) =>
+Map<String, dynamic> _$ScheduledNoteUserToJson(ScheduledNoteUser instance) =>
     <String, dynamic>{
       'id': instance.id,
       'username': instance.username,
       'host': instance.host,
     };
 
-_ScheduledNoteData _$ScheduledNoteDataFromJson(Map<String, dynamic> json) =>
-    _ScheduledNoteData(
+ScheduledNoteData _$ScheduledNoteDataFromJson(Map<String, dynamic> json) =>
+    ScheduledNoteData(
       text: json['text'] as String?,
       useCw: json['useCw'] as bool?,
       cw: json['cw'] as String?,
@@ -101,7 +101,7 @@ _ScheduledNoteData _$ScheduledNoteDataFromJson(Map<String, dynamic> json) =>
           const [],
     );
 
-Map<String, dynamic> _$ScheduledNoteDataToJson(_ScheduledNoteData instance) =>
+Map<String, dynamic> _$ScheduledNoteDataToJson(ScheduledNoteData instance) =>
     <String, dynamic>{
       'text': instance.text,
       'useCw': instance.useCw,

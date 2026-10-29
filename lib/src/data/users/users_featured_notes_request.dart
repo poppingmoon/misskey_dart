@@ -4,10 +4,14 @@ part 'users_featured_notes_request.freezed.dart';
 part 'users_featured_notes_request.g.dart';
 
 @freezed
-abstract class UsersFeaturedNotesRequest with _$UsersFeaturedNotesRequest {
-  const factory({int? limit, String? untilId, required String userId}) =
-      _UsersFeaturedNotesRequest;
-
+@JsonSerializable()
+class const UsersFeaturedNotesRequest({
+  final int? limit,
+  final String? untilId,
+  required final String userId,
+}) with _$UsersFeaturedNotesRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$UsersFeaturedNotesRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UsersFeaturedNotesRequestToJson(this);
 }

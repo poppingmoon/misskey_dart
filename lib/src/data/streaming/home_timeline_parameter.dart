@@ -4,9 +4,13 @@ part 'home_timeline_parameter.freezed.dart';
 part 'home_timeline_parameter.g.dart';
 
 @freezed
-abstract class HomeTimelineParameter with _$HomeTimelineParameter {
-  const factory({bool? withRenotes, bool? withFiles}) = _HomeTimelineParameter;
-
+@JsonSerializable()
+class const HomeTimelineParameter({
+  final bool? withRenotes,
+  final bool? withFiles,
+}) with _$HomeTimelineParameter {
   factory fromJson(Map<String, dynamic> json) =>
       _$HomeTimelineParameterFromJson(json);
+
+  Map<String, dynamic> toJson() => _$HomeTimelineParameterToJson(this);
 }

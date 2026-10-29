@@ -6,9 +6,9 @@ part of 'roles_list_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_RolesListResponse _$RolesListResponseFromJson(
+RolesListResponse _$RolesListResponseFromJson(
   Map<String, dynamic> json,
-) => _RolesListResponse(
+) => RolesListResponse(
   id: json['id'] as String,
   createdAt: const DateTimeConverter().fromJson(json['createdAt'] as String),
   updatedAt: const DateTimeConverter().fromJson(json['updatedAt'] as String),
@@ -27,7 +27,7 @@ _RolesListResponse _$RolesListResponseFromJson(
   usersCount: (json['usersCount'] as num).toInt(),
 );
 
-Map<String, dynamic> _$RolesListResponseToJson(_RolesListResponse instance) =>
+Map<String, dynamic> _$RolesListResponseToJson(RolesListResponse instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdAt': const DateTimeConverter().toJson(instance.createdAt),

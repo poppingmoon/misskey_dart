@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$DriveFilesMoveBulkRequest {
 
- List<String> get fileIds; String? get folderId;
+
 /// Create a copy of DriveFilesMoveBulkRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $DriveFilesMoveBulkRequestCopyWith<DriveFilesMoveBulkRequest> get copyWith => _$DriveFilesMoveBulkRequestCopyWithImpl<DriveFilesMoveBulkRequest>(this as DriveFilesMoveBulkRequest, _$identity);
 
-  /// Serializes this DriveFilesMoveBulkRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -96,11 +94,10 @@ extension DriveFilesMoveBulkRequestPatterns on DriveFilesMoveBulkRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _DriveFilesMoveBulkRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _DriveFilesMoveBulkRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -118,11 +115,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _DriveFilesMoveBulkRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _DriveFilesMoveBulkRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -139,11 +135,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _DriveFilesMoveBulkRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _DriveFilesMoveBulkRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -160,10 +155,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( List<String> fileIds,  String? folderId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _DriveFilesMoveBulkRequest() when $default != null:
-return $default(_that.fileIds,_that.folderId);case _:
+case _:
   return orElse();
 
 }
@@ -181,10 +175,9 @@ return $default(_that.fileIds,_that.folderId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( List<String> fileIds,  String? folderId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _DriveFilesMoveBulkRequest():
-return $default(_that.fileIds,_that.folderId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -201,93 +194,13 @@ return $default(_that.fileIds,_that.folderId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( List<String> fileIds,  String? folderId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _DriveFilesMoveBulkRequest() when $default != null:
-return $default(_that.fileIds,_that.folderId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _DriveFilesMoveBulkRequest implements DriveFilesMoveBulkRequest {
-  const _DriveFilesMoveBulkRequest({required  List<String> fileIds, this.folderId}): _fileIds = fileIds;
-  factory _DriveFilesMoveBulkRequest.fromJson(Map<String, dynamic> json) => _$DriveFilesMoveBulkRequestFromJson(json);
-
- final  List<String> _fileIds;
-@override List<String> get fileIds {
-  if (_fileIds is EqualUnmodifiableListView) return _fileIds;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_fileIds);
-}
-
-@override final  String? folderId;
-
-/// Create a copy of DriveFilesMoveBulkRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$DriveFilesMoveBulkRequestCopyWith<_DriveFilesMoveBulkRequest> get copyWith => __$DriveFilesMoveBulkRequestCopyWithImpl<_DriveFilesMoveBulkRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$DriveFilesMoveBulkRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _DriveFilesMoveBulkRequest&&const DeepCollectionEquality().equals(other.fileIds, _fileIds)&&(identical(other.folderId, folderId) || other.folderId == folderId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,const DeepCollectionEquality().hash(_fileIds),folderId);
-}
-
-@override
-String toString() {
-    return 'DriveFilesMoveBulkRequest(fileIds: $fileIds, folderId: $folderId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$DriveFilesMoveBulkRequestCopyWith<$Res> implements $DriveFilesMoveBulkRequestCopyWith<$Res> {
-  factory _$DriveFilesMoveBulkRequestCopyWith(_DriveFilesMoveBulkRequest value, $Res Function(_DriveFilesMoveBulkRequest) _then) = __$DriveFilesMoveBulkRequestCopyWithImpl;
-@override @useResult
-$Res call({
- List<String> fileIds, String? folderId
-});
-
-
-
-
-}
-/// @nodoc
-class __$DriveFilesMoveBulkRequestCopyWithImpl<$Res>
-    implements _$DriveFilesMoveBulkRequestCopyWith<$Res> {
-  __$DriveFilesMoveBulkRequestCopyWithImpl(this._self, this._then);
-
-  final _DriveFilesMoveBulkRequest _self;
-  final $Res Function(_DriveFilesMoveBulkRequest) _then;
-
-/// Create a copy of DriveFilesMoveBulkRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? fileIds = null,Object? folderId = freezed,}) {
-  return _then(_DriveFilesMoveBulkRequest(
-fileIds: null == fileIds ? _self._fileIds : fileIds // ignore: cast_nullable_to_non_nullable
-as List<String>,folderId: freezed == folderId ? _self.folderId : folderId // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
 
 }
 

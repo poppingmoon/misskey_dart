@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$PingResponse {
 
- int get pong;
+
 /// Create a copy of PingResponse
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $PingResponseCopyWith<PingResponse> get copyWith => _$PingResponseCopyWithImpl<PingResponse>(this as PingResponse, _$identity);
 
-  /// Serializes this PingResponse to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -95,11 +93,10 @@ extension PingResponsePatterns on PingResponse {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _PingResponse value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _PingResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -117,11 +114,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _PingResponse value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _PingResponse():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -138,11 +134,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _PingResponse value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _PingResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -159,10 +154,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int pong)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _PingResponse() when $default != null:
-return $default(_that.pong);case _:
+case _:
   return orElse();
 
 }
@@ -180,10 +174,9 @@ return $default(_that.pong);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int pong)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _PingResponse():
-return $default(_that.pong);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -200,85 +193,13 @@ return $default(_that.pong);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int pong)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _PingResponse() when $default != null:
-return $default(_that.pong);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _PingResponse implements PingResponse {
-  const _PingResponse({required this.pong});
-  factory _PingResponse.fromJson(Map<String, dynamic> json) => _$PingResponseFromJson(json);
-
-@override final  int pong;
-
-/// Create a copy of PingResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$PingResponseCopyWith<_PingResponse> get copyWith => __$PingResponseCopyWithImpl<_PingResponse>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$PingResponseToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _PingResponse&&(identical(other.pong, pong) || other.pong == pong));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,pong);
-}
-
-@override
-String toString() {
-    return 'PingResponse(pong: $pong)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$PingResponseCopyWith<$Res> implements $PingResponseCopyWith<$Res> {
-  factory _$PingResponseCopyWith(_PingResponse value, $Res Function(_PingResponse) _then) = __$PingResponseCopyWithImpl;
-@override @useResult
-$Res call({
- int pong
-});
-
-
-
-
-}
-/// @nodoc
-class __$PingResponseCopyWithImpl<$Res>
-    implements _$PingResponseCopyWith<$Res> {
-  __$PingResponseCopyWithImpl(this._self, this._then);
-
-  final _PingResponse _self;
-  final $Res Function(_PingResponse) _then;
-
-/// Create a copy of PingResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? pong = null,}) {
-  return _then(_PingResponse(
-pong: null == pong ? _self.pong : pong // ignore: cast_nullable_to_non_nullable
-as int,
-  ));
-}
-
 
 }
 

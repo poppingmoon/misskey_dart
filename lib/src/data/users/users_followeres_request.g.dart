@@ -6,9 +6,9 @@ part of 'users_followeres_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_UsersFollowersRequest _$UsersFollowersRequestFromJson(
+UsersFollowersRequest _$UsersFollowersRequestFromJson(
   Map<String, dynamic> json,
-) => _UsersFollowersRequest(
+) => UsersFollowersRequest(
   userId: json['userId'] as String,
   sinceId: json['sinceId'] as String?,
   untilId: json['untilId'] as String?,
@@ -24,7 +24,7 @@ _UsersFollowersRequest _$UsersFollowersRequestFromJson(
 );
 
 Map<String, dynamic> _$UsersFollowersRequestToJson(
-  _UsersFollowersRequest instance,
+  UsersFollowersRequest instance,
 ) => <String, dynamic>{
   'userId': instance.userId,
   'sinceId': instance.sinceId,

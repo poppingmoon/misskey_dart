@@ -6,8 +6,8 @@ part of 'drive_files_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_DriveFilesRequest _$DriveFilesRequestFromJson(Map<String, dynamic> json) =>
-    _DriveFilesRequest(
+DriveFilesRequest _$DriveFilesRequestFromJson(Map<String, dynamic> json) =>
+    DriveFilesRequest(
       limit: (json['limit'] as num?)?.toInt(),
       sinceId: json['sinceId'] as String?,
       untilId: json['untilId'] as String?,
@@ -27,7 +27,7 @@ _DriveFilesRequest _$DriveFilesRequestFromJson(Map<String, dynamic> json) =>
       ),
     );
 
-Map<String, dynamic> _$DriveFilesRequestToJson(_DriveFilesRequest instance) =>
+Map<String, dynamic> _$DriveFilesRequestToJson(DriveFilesRequest instance) =>
     <String, dynamic>{
       'limit': instance.limit,
       'sinceId': instance.sinceId,

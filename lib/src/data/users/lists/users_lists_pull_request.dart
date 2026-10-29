@@ -4,10 +4,13 @@ part 'users_lists_pull_request.freezed.dart';
 part 'users_lists_pull_request.g.dart';
 
 @freezed
-abstract class UsersListsPullRequest with _$UsersListsPullRequest {
-  const factory({required String listId, required String userId}) =
-      _UsersListsPullRequest;
-
+@JsonSerializable()
+class const UsersListsPullRequest({
+  required final String listId,
+  required final String userId,
+}) with _$UsersListsPullRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$UsersListsPullRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UsersListsPullRequestToJson(this);
 }

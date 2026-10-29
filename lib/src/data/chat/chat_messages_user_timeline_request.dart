@@ -5,17 +5,18 @@ part 'chat_messages_user_timeline_request.freezed.dart';
 part 'chat_messages_user_timeline_request.g.dart';
 
 @freezed
-abstract class ChatMessagesUserTimelineRequest
-    with _$ChatMessagesUserTimelineRequest {
-  const factory({
-    required String userId,
-    int? limit,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-  }) = _ChatMessagesUserTimelineRequest;
-
+@JsonSerializable()
+class const ChatMessagesUserTimelineRequest({
+  required final String userId,
+  final int? limit,
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
+}) with _$ChatMessagesUserTimelineRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$ChatMessagesUserTimelineRequestFromJson(json);
+
+  Map<String, dynamic> toJson() =>
+      _$ChatMessagesUserTimelineRequestToJson(this);
 }

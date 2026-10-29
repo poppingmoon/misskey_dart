@@ -5,10 +5,13 @@ part 'i_gallery_likes_response.freezed.dart';
 part 'i_gallery_likes_response.g.dart';
 
 @freezed
-abstract class IGalleryLikesResponse with _$IGalleryLikesResponse {
-  const factory({required String id, required GalleryPost post}) =
-      _IGalleryLikesResponse;
-
+@JsonSerializable()
+class const IGalleryLikesResponse({
+  required final String id,
+  required final GalleryPost post,
+}) with _$IGalleryLikesResponse {
   factory fromJson(Map<String, dynamic> json) =>
       _$IGalleryLikesResponseFromJson(json);
+
+  Map<String, dynamic> toJson() => _$IGalleryLikesResponseToJson(this);
 }

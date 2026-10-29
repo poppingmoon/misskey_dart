@@ -16,17 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ReversiVerifyResponse {
 
-/// クライアントの盤面がサーバーとずれているかどうか。
- bool get desynced;/// ずれていたときだけ入る、サーバー側の正しい対局情報。
- ReversiShowGameResponse? get game;
+
 /// Create a copy of ReversiVerifyResponse
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $ReversiVerifyResponseCopyWith<ReversiVerifyResponse> get copyWith => _$ReversiVerifyResponseCopyWithImpl<ReversiVerifyResponse>(this as ReversiVerifyResponse, _$identity);
 
-  /// Serializes this ReversiVerifyResponse to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -110,11 +106,10 @@ extension ReversiVerifyResponsePatterns on ReversiVerifyResponse {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ReversiVerifyResponse value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _ReversiVerifyResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -132,11 +127,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ReversiVerifyResponse value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ReversiVerifyResponse():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -153,11 +147,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ReversiVerifyResponse value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ReversiVerifyResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -174,10 +167,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( bool desynced,  ReversiShowGameResponse? game)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _ReversiVerifyResponse() when $default != null:
-return $default(_that.desynced,_that.game);case _:
+case _:
   return orElse();
 
 }
@@ -195,10 +187,9 @@ return $default(_that.desynced,_that.game);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( bool desynced,  ReversiShowGameResponse? game)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ReversiVerifyResponse():
-return $default(_that.desynced,_that.game);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -215,102 +206,14 @@ return $default(_that.desynced,_that.game);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( bool desynced,  ReversiShowGameResponse? game)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ReversiVerifyResponse() when $default != null:
-return $default(_that.desynced,_that.game);case _:
+case _:
   return null;
 
 }
 }
 
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _ReversiVerifyResponse implements ReversiVerifyResponse {
-  const _ReversiVerifyResponse({required this.desynced, this.game});
-  factory _ReversiVerifyResponse.fromJson(Map<String, dynamic> json) => _$ReversiVerifyResponseFromJson(json);
-
-/// クライアントの盤面がサーバーとずれているかどうか。
-@override final  bool desynced;
-/// ずれていたときだけ入る、サーバー側の正しい対局情報。
-@override final  ReversiShowGameResponse? game;
-
-/// Create a copy of ReversiVerifyResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ReversiVerifyResponseCopyWith<_ReversiVerifyResponse> get copyWith => __$ReversiVerifyResponseCopyWithImpl<_ReversiVerifyResponse>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$ReversiVerifyResponseToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ReversiVerifyResponse&&(identical(other.desynced, desynced) || other.desynced == desynced)&&(identical(other.game, game) || other.game == game));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,desynced,game);
-}
-
-@override
-String toString() {
-    return 'ReversiVerifyResponse(desynced: $desynced, game: $game)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ReversiVerifyResponseCopyWith<$Res> implements $ReversiVerifyResponseCopyWith<$Res> {
-  factory _$ReversiVerifyResponseCopyWith(_ReversiVerifyResponse value, $Res Function(_ReversiVerifyResponse) _then) = __$ReversiVerifyResponseCopyWithImpl;
-@override @useResult
-$Res call({
- bool desynced, ReversiShowGameResponse? game
-});
-
-
-@override $ReversiShowGameResponseCopyWith<$Res>? get game;
-
-}
-/// @nodoc
-class __$ReversiVerifyResponseCopyWithImpl<$Res>
-    implements _$ReversiVerifyResponseCopyWith<$Res> {
-  __$ReversiVerifyResponseCopyWithImpl(this._self, this._then);
-
-  final _ReversiVerifyResponse _self;
-  final $Res Function(_ReversiVerifyResponse) _then;
-
-/// Create a copy of ReversiVerifyResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? desynced = null,Object? game = freezed,}) {
-  return _then(_ReversiVerifyResponse(
-desynced: null == desynced ? _self.desynced : desynced // ignore: cast_nullable_to_non_nullable
-as bool,game: freezed == game ? _self.game : game // ignore: cast_nullable_to_non_nullable
-as ReversiShowGameResponse?,
-  ));
-}
-
-/// Create a copy of ReversiVerifyResponse
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$ReversiShowGameResponseCopyWith<$Res>? get game {
-    if (_self.game == null) {
-    return null;
-  }
-
-  return $ReversiShowGameResponseCopyWith<$Res>(_self.game!, (value) {
-    return _then(_self.copyWith(game: value));
-  });
-}
 }
 
 // dart format on

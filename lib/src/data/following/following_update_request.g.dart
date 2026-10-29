@@ -6,9 +6,9 @@ part of 'following_update_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_FollowingUpdateRequest _$FollowingUpdateRequestFromJson(
+FollowingUpdateRequest _$FollowingUpdateRequestFromJson(
   Map<String, dynamic> json,
-) => _FollowingUpdateRequest(
+) => FollowingUpdateRequest(
   userId: json['userId'] as String,
   notify: $enumDecodeNullable(
     _$FollowingUpdateAllNotifyTypeEnumMap,
@@ -18,7 +18,7 @@ _FollowingUpdateRequest _$FollowingUpdateRequestFromJson(
 );
 
 Map<String, dynamic> _$FollowingUpdateRequestToJson(
-  _FollowingUpdateRequest instance,
+  FollowingUpdateRequest instance,
 ) => <String, dynamic>{
   'userId': instance.userId,
   'notify': _$FollowingUpdateAllNotifyTypeEnumMap[instance.notify],

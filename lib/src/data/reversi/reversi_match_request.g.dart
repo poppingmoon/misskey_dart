@@ -6,15 +6,15 @@ part of 'reversi_match_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ReversiMatchRequest _$ReversiMatchRequestFromJson(Map<String, dynamic> json) =>
-    _ReversiMatchRequest(
+ReversiMatchRequest _$ReversiMatchRequestFromJson(Map<String, dynamic> json) =>
+    ReversiMatchRequest(
       userId: json['userId'] as String?,
       noIrregularRules: json['noIrregularRules'] as bool?,
       multiple: json['multiple'] as bool?,
     );
 
 Map<String, dynamic> _$ReversiMatchRequestToJson(
-  _ReversiMatchRequest instance,
+  ReversiMatchRequest instance,
 ) => <String, dynamic>{
   'userId': instance.userId,
   'noIrregularRules': instance.noIrregularRules,

@@ -4,9 +4,11 @@ part 'notes_schedule_delete_request.freezed.dart';
 part 'notes_schedule_delete_request.g.dart';
 
 @freezed
-abstract class NotesScheduleDeleteRequest with _$NotesScheduleDeleteRequest {
-  const factory({required String noteId}) = _NotesScheduleDeleteRequest;
-
+@JsonSerializable()
+class const NotesScheduleDeleteRequest({required final String noteId})
+    with _$NotesScheduleDeleteRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$NotesScheduleDeleteRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NotesScheduleDeleteRequestToJson(this);
 }

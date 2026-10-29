@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$GalleryPostsCreateRequest {
 
- String get title; String? get description; List<String> get fileIds; bool? get isSensitive;
+
 /// Create a copy of GalleryPostsCreateRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $GalleryPostsCreateRequestCopyWith<GalleryPostsCreateRequest> get copyWith => _$GalleryPostsCreateRequestCopyWithImpl<GalleryPostsCreateRequest>(this as GalleryPostsCreateRequest, _$identity);
 
-  /// Serializes this GalleryPostsCreateRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -98,11 +96,10 @@ extension GalleryPostsCreateRequestPatterns on GalleryPostsCreateRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _GalleryPostsCreateRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _GalleryPostsCreateRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -120,11 +117,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _GalleryPostsCreateRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _GalleryPostsCreateRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -141,11 +137,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _GalleryPostsCreateRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _GalleryPostsCreateRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -162,10 +157,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String title,  String? description,  List<String> fileIds,  bool? isSensitive)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _GalleryPostsCreateRequest() when $default != null:
-return $default(_that.title,_that.description,_that.fileIds,_that.isSensitive);case _:
+case _:
   return orElse();
 
 }
@@ -183,10 +177,9 @@ return $default(_that.title,_that.description,_that.fileIds,_that.isSensitive);c
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String title,  String? description,  List<String> fileIds,  bool? isSensitive)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _GalleryPostsCreateRequest():
-return $default(_that.title,_that.description,_that.fileIds,_that.isSensitive);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -203,97 +196,13 @@ return $default(_that.title,_that.description,_that.fileIds,_that.isSensitive);c
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String title,  String? description,  List<String> fileIds,  bool? isSensitive)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _GalleryPostsCreateRequest() when $default != null:
-return $default(_that.title,_that.description,_that.fileIds,_that.isSensitive);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _GalleryPostsCreateRequest implements GalleryPostsCreateRequest {
-  const _GalleryPostsCreateRequest({required this.title, this.description, required  List<String> fileIds, this.isSensitive}): _fileIds = fileIds;
-  factory _GalleryPostsCreateRequest.fromJson(Map<String, dynamic> json) => _$GalleryPostsCreateRequestFromJson(json);
-
-@override final  String title;
-@override final  String? description;
- final  List<String> _fileIds;
-@override List<String> get fileIds {
-  if (_fileIds is EqualUnmodifiableListView) return _fileIds;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_fileIds);
-}
-
-@override final  bool? isSensitive;
-
-/// Create a copy of GalleryPostsCreateRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$GalleryPostsCreateRequestCopyWith<_GalleryPostsCreateRequest> get copyWith => __$GalleryPostsCreateRequestCopyWithImpl<_GalleryPostsCreateRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$GalleryPostsCreateRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _GalleryPostsCreateRequest&&(identical(other.title, title) || other.title == title)&&(identical(other.description, description) || other.description == description)&&const DeepCollectionEquality().equals(other.fileIds, _fileIds)&&(identical(other.isSensitive, isSensitive) || other.isSensitive == isSensitive));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,title,description,const DeepCollectionEquality().hash(_fileIds),isSensitive);
-}
-
-@override
-String toString() {
-    return 'GalleryPostsCreateRequest(title: $title, description: $description, fileIds: $fileIds, isSensitive: $isSensitive)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$GalleryPostsCreateRequestCopyWith<$Res> implements $GalleryPostsCreateRequestCopyWith<$Res> {
-  factory _$GalleryPostsCreateRequestCopyWith(_GalleryPostsCreateRequest value, $Res Function(_GalleryPostsCreateRequest) _then) = __$GalleryPostsCreateRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String title, String? description, List<String> fileIds, bool? isSensitive
-});
-
-
-
-
-}
-/// @nodoc
-class __$GalleryPostsCreateRequestCopyWithImpl<$Res>
-    implements _$GalleryPostsCreateRequestCopyWith<$Res> {
-  __$GalleryPostsCreateRequestCopyWithImpl(this._self, this._then);
-
-  final _GalleryPostsCreateRequest _self;
-  final $Res Function(_GalleryPostsCreateRequest) _then;
-
-/// Create a copy of GalleryPostsCreateRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? title = null,Object? description = freezed,Object? fileIds = null,Object? isSensitive = freezed,}) {
-  return _then(_GalleryPostsCreateRequest(
-title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
-as String,description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
-as String?,fileIds: null == fileIds ? _self._fileIds : fileIds // ignore: cast_nullable_to_non_nullable
-as List<String>,isSensitive: freezed == isSensitive ? _self.isSensitive : isSensitive // ignore: cast_nullable_to_non_nullable
-as bool?,
-  ));
-}
-
 
 }
 

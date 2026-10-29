@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$IFavoritesResponse {
 
- String get id;@DateTimeConverter() DateTime get createdAt; String get noteId; Note get note;
+
 /// Create a copy of IFavoritesResponse
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $IFavoritesResponseCopyWith<IFavoritesResponse> get copyWith => _$IFavoritesResponseCopyWithImpl<IFavoritesResponse>(this as IFavoritesResponse, _$identity);
 
-  /// Serializes this IFavoritesResponse to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -107,11 +105,10 @@ extension IFavoritesResponsePatterns on IFavoritesResponse {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _IFavoritesResponse value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _IFavoritesResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -129,11 +126,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _IFavoritesResponse value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _IFavoritesResponse():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -150,11 +146,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _IFavoritesResponse value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _IFavoritesResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -171,10 +166,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt,  String noteId,  Note note)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _IFavoritesResponse() when $default != null:
-return $default(_that.id,_that.createdAt,_that.noteId,_that.note);case _:
+case _:
   return orElse();
 
 }
@@ -192,10 +186,9 @@ return $default(_that.id,_that.createdAt,_that.noteId,_that.note);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt,  String noteId,  Note note)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _IFavoritesResponse():
-return $default(_that.id,_that.createdAt,_that.noteId,_that.note);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -212,101 +205,14 @@ return $default(_that.id,_that.createdAt,_that.noteId,_that.note);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id, @DateTimeConverter()  DateTime createdAt,  String noteId,  Note note)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _IFavoritesResponse() when $default != null:
-return $default(_that.id,_that.createdAt,_that.noteId,_that.note);case _:
+case _:
   return null;
 
 }
 }
 
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _IFavoritesResponse implements IFavoritesResponse {
-  const _IFavoritesResponse({required this.id, @DateTimeConverter() required this.createdAt, required this.noteId, required this.note});
-  factory _IFavoritesResponse.fromJson(Map<String, dynamic> json) => _$IFavoritesResponseFromJson(json);
-
-@override final  String id;
-@override@DateTimeConverter() final  DateTime createdAt;
-@override final  String noteId;
-@override final  Note note;
-
-/// Create a copy of IFavoritesResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$IFavoritesResponseCopyWith<_IFavoritesResponse> get copyWith => __$IFavoritesResponseCopyWithImpl<_IFavoritesResponse>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$IFavoritesResponseToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _IFavoritesResponse&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.noteId, noteId) || other.noteId == noteId)&&(identical(other.note, note) || other.note == note));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,id,createdAt,noteId,note);
-}
-
-@override
-String toString() {
-    return 'IFavoritesResponse(id: $id, createdAt: $createdAt, noteId: $noteId, note: $note)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$IFavoritesResponseCopyWith<$Res> implements $IFavoritesResponseCopyWith<$Res> {
-  factory _$IFavoritesResponseCopyWith(_IFavoritesResponse value, $Res Function(_IFavoritesResponse) _then) = __$IFavoritesResponseCopyWithImpl;
-@override @useResult
-$Res call({
- String id,@DateTimeConverter() DateTime createdAt, String noteId, Note note
-});
-
-
-@override $NoteCopyWith<$Res> get note;
-
-}
-/// @nodoc
-class __$IFavoritesResponseCopyWithImpl<$Res>
-    implements _$IFavoritesResponseCopyWith<$Res> {
-  __$IFavoritesResponseCopyWithImpl(this._self, this._then);
-
-  final _IFavoritesResponse _self;
-  final $Res Function(_IFavoritesResponse) _then;
-
-/// Create a copy of IFavoritesResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? createdAt = null,Object? noteId = null,Object? note = null,}) {
-  return _then(_IFavoritesResponse(
-id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
-as DateTime,noteId: null == noteId ? _self.noteId : noteId // ignore: cast_nullable_to_non_nullable
-as String,note: null == note ? _self.note : note // ignore: cast_nullable_to_non_nullable
-as Note,
-  ));
-}
-
-/// Create a copy of IFavoritesResponse
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$NoteCopyWith<$Res> get note {
-  
-  return $NoteCopyWith<$Res>(_self.note, (value) {
-    return _then(_self.copyWith(note: value));
-  });
-}
 }
 
 // dart format on

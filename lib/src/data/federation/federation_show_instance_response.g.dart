@@ -6,9 +6,9 @@ part of 'federation_show_instance_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_FederationShowInstanceResponse _$FederationShowInstanceResponseFromJson(
+FederationShowInstanceResponse _$FederationShowInstanceResponseFromJson(
   Map<String, dynamic> json,
-) => _FederationShowInstanceResponse(
+) => FederationShowInstanceResponse(
   id: json['id'] as String,
   firstRetrievedAt: const DateTimeConverter().fromJson(
     json['firstRetrievedAt'] as String,
@@ -54,7 +54,7 @@ _FederationShowInstanceResponse _$FederationShowInstanceResponseFromJson(
 );
 
 Map<String, dynamic> _$FederationShowInstanceResponseToJson(
-  _FederationShowInstanceResponse instance,
+  FederationShowInstanceResponse instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'firstRetrievedAt': const DateTimeConverter().toJson(

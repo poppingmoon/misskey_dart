@@ -4,9 +4,11 @@ part 'users_lists_create_request.freezed.dart';
 part 'users_lists_create_request.g.dart';
 
 @freezed
-abstract class UsersListsCreateRequest with _$UsersListsCreateRequest {
-  const factory({required String name}) = _UsersListsCreateRequest;
-
+@JsonSerializable()
+class const UsersListsCreateRequest({required final String name})
+    with _$UsersListsCreateRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$UsersListsCreateRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UsersListsCreateRequestToJson(this);
 }

@@ -6,10 +6,10 @@ part of 'chat_rooms_invitations_ignore_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ChatRoomsInvitationsIgnoreRequest _$ChatRoomsInvitationsIgnoreRequestFromJson(
+ChatRoomsInvitationsIgnoreRequest _$ChatRoomsInvitationsIgnoreRequestFromJson(
   Map<String, dynamic> json,
-) => _ChatRoomsInvitationsIgnoreRequest(roomId: json['roomId'] as String);
+) => ChatRoomsInvitationsIgnoreRequest(roomId: json['roomId'] as String);
 
 Map<String, dynamic> _$ChatRoomsInvitationsIgnoreRequestToJson(
-  _ChatRoomsInvitationsIgnoreRequest instance,
+  ChatRoomsInvitationsIgnoreRequest instance,
 ) => <String, dynamic>{'roomId': instance.roomId};

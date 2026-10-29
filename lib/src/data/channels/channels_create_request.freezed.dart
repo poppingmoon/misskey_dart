@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ChannelsCreateRequest {
 
- String get name; String? get description; String? get bannerId; String? get color;
+
 /// Create a copy of ChannelsCreateRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $ChannelsCreateRequestCopyWith<ChannelsCreateRequest> get copyWith => _$ChannelsCreateRequestCopyWithImpl<ChannelsCreateRequest>(this as ChannelsCreateRequest, _$identity);
 
-  /// Serializes this ChannelsCreateRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -98,11 +96,10 @@ extension ChannelsCreateRequestPatterns on ChannelsCreateRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ChannelsCreateRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _ChannelsCreateRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -120,11 +117,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ChannelsCreateRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChannelsCreateRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -141,11 +137,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ChannelsCreateRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChannelsCreateRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -162,10 +157,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String name,  String? description,  String? bannerId,  String? color)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _ChannelsCreateRequest() when $default != null:
-return $default(_that.name,_that.description,_that.bannerId,_that.color);case _:
+case _:
   return orElse();
 
 }
@@ -183,10 +177,9 @@ return $default(_that.name,_that.description,_that.bannerId,_that.color);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String name,  String? description,  String? bannerId,  String? color)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChannelsCreateRequest():
-return $default(_that.name,_that.description,_that.bannerId,_that.color);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -203,91 +196,13 @@ return $default(_that.name,_that.description,_that.bannerId,_that.color);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String name,  String? description,  String? bannerId,  String? color)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChannelsCreateRequest() when $default != null:
-return $default(_that.name,_that.description,_that.bannerId,_that.color);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _ChannelsCreateRequest implements ChannelsCreateRequest {
-  const _ChannelsCreateRequest({required this.name, this.description, this.bannerId, this.color});
-  factory _ChannelsCreateRequest.fromJson(Map<String, dynamic> json) => _$ChannelsCreateRequestFromJson(json);
-
-@override final  String name;
-@override final  String? description;
-@override final  String? bannerId;
-@override final  String? color;
-
-/// Create a copy of ChannelsCreateRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ChannelsCreateRequestCopyWith<_ChannelsCreateRequest> get copyWith => __$ChannelsCreateRequestCopyWithImpl<_ChannelsCreateRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$ChannelsCreateRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChannelsCreateRequest&&(identical(other.name, name) || other.name == name)&&(identical(other.description, description) || other.description == description)&&(identical(other.bannerId, bannerId) || other.bannerId == bannerId)&&(identical(other.color, color) || other.color == color));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,name,description,bannerId,color);
-}
-
-@override
-String toString() {
-    return 'ChannelsCreateRequest(name: $name, description: $description, bannerId: $bannerId, color: $color)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ChannelsCreateRequestCopyWith<$Res> implements $ChannelsCreateRequestCopyWith<$Res> {
-  factory _$ChannelsCreateRequestCopyWith(_ChannelsCreateRequest value, $Res Function(_ChannelsCreateRequest) _then) = __$ChannelsCreateRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String name, String? description, String? bannerId, String? color
-});
-
-
-
-
-}
-/// @nodoc
-class __$ChannelsCreateRequestCopyWithImpl<$Res>
-    implements _$ChannelsCreateRequestCopyWith<$Res> {
-  __$ChannelsCreateRequestCopyWithImpl(this._self, this._then);
-
-  final _ChannelsCreateRequest _self;
-  final $Res Function(_ChannelsCreateRequest) _then;
-
-/// Create a copy of ChannelsCreateRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? name = null,Object? description = freezed,Object? bannerId = freezed,Object? color = freezed,}) {
-  return _then(_ChannelsCreateRequest(
-name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String,description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
-as String?,bannerId: freezed == bannerId ? _self.bannerId : bannerId // ignore: cast_nullable_to_non_nullable
-as String?,color: freezed == color ? _self.color : color // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
 
 }
 

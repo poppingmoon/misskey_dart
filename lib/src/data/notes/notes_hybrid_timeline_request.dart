@@ -5,22 +5,23 @@ part 'notes_hybrid_timeline_request.freezed.dart';
 part 'notes_hybrid_timeline_request.g.dart';
 
 @freezed
-abstract class NotesHybridTimelineRequest with _$NotesHybridTimelineRequest {
-  const factory({
-    int? limit,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-    bool? includeMyRenotes,
-    bool? includeRenotedMyNotes,
-    bool? includeLocalRenotes,
-    bool? withFiles,
-    bool? withReplies,
-    bool? withRenotes,
-    bool? allowPartial,
-  }) = _NotesHybridTimelineRequest;
-
+@JsonSerializable()
+class const NotesHybridTimelineRequest({
+  final int? limit,
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
+  final bool? includeMyRenotes,
+  final bool? includeRenotedMyNotes,
+  final bool? includeLocalRenotes,
+  final bool? withFiles,
+  final bool? withReplies,
+  final bool? withRenotes,
+  final bool? allowPartial,
+}) with _$NotesHybridTimelineRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$NotesHybridTimelineRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NotesHybridTimelineRequestToJson(this);
 }

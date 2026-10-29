@@ -6,9 +6,9 @@ part of 'pages_create_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_PagesCreateRequest _$PagesCreateRequestFromJson(
+PagesCreateRequest _$PagesCreateRequestFromJson(
   Map<String, dynamic> json,
-) => _PagesCreateRequest(
+) => PagesCreateRequest(
   title: json['title'] as String,
   name: json['name'] as String,
   summary: json['summary'] as String?,
@@ -27,7 +27,7 @@ _PagesCreateRequest _$PagesCreateRequestFromJson(
 );
 
 Map<String, dynamic> _$PagesCreateRequestToJson(
-  _PagesCreateRequest instance,
+  PagesCreateRequest instance,
 ) => <String, dynamic>{
   'title': instance.title,
   'name': instance.name,

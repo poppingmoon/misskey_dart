@@ -5,16 +5,17 @@ part 'flash_update_request.freezed.dart';
 part 'flash_update_request.g.dart';
 
 @freezed
-abstract class FlashUpdateRequest with _$FlashUpdateRequest {
-  const factory({
-    required String flashId,
-    String? title,
-    String? summary,
-    String? script,
-    List<String>? permissions,
-    FlashVisibility? visibility,
-  }) = _FlashUpdateRequest;
-
+@JsonSerializable()
+class const FlashUpdateRequest({
+  required final String flashId,
+  final String? title,
+  final String? summary,
+  final String? script,
+  final List<String>? permissions,
+  final FlashVisibility? visibility,
+}) with _$FlashUpdateRequest {
   factory fromJson(Map<String, Object?> json) =>
       _$FlashUpdateRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$FlashUpdateRequestToJson(this);
 }

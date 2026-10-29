@@ -6,15 +6,16 @@ part 'hashtags_list_request.freezed.dart';
 part 'hashtags_list_request.g.dart';
 
 @freezed
-abstract class HashtagsListRequest with _$HashtagsListRequest {
-  const factory({
-    int? limit,
-    bool? attachedToUserOnly,
-    bool? attachedToLocalUserOnly,
-    bool? attachedToRemoteUserOnly,
-    @HashtagsListSortConverter() required HashtagsListSortType sort,
-  }) = _HashtagsListRequest;
-
+@JsonSerializable()
+class const HashtagsListRequest({
+  final int? limit,
+  final bool? attachedToUserOnly,
+  final bool? attachedToLocalUserOnly,
+  final bool? attachedToRemoteUserOnly,
+  @HashtagsListSortConverter() required final HashtagsListSortType sort,
+}) with _$HashtagsListRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$HashtagsListRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$HashtagsListRequestToJson(this);
 }

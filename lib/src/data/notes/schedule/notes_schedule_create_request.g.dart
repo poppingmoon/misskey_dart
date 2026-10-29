@@ -6,9 +6,9 @@ part of 'notes_schedule_create_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_NotesScheduleCreateRequest _$NotesScheduleCreateRequestFromJson(
+NotesScheduleCreateRequest _$NotesScheduleCreateRequestFromJson(
   Map<String, dynamic> json,
-) => _NotesScheduleCreateRequest(
+) => NotesScheduleCreateRequest(
   visibility: $enumDecodeNullable(_$NoteVisibilityEnumMap, json['visibility']),
   visibleUserIds: (json['visibleUserIds'] as List<dynamic>?)
       ?.map((e) => e as String)
@@ -48,7 +48,7 @@ _NotesScheduleCreateRequest _$NotesScheduleCreateRequestFromJson(
 );
 
 Map<String, dynamic> _$NotesScheduleCreateRequestToJson(
-  _NotesScheduleCreateRequest instance,
+  NotesScheduleCreateRequest instance,
 ) => <String, dynamic>{
   'visibility': _$NoteVisibilityEnumMap[instance.visibility],
   'visibleUserIds': instance.visibleUserIds,
@@ -87,21 +87,20 @@ const _$ReactionAcceptanceEnumMap = {
   ReactionAcceptance.likeOnly: 'likeOnly',
 };
 
-_ScheduleNote _$ScheduleNoteFromJson(Map<String, dynamic> json) =>
-    _ScheduleNote(
-      scheduledAt: const EpocTimeDateTimeConverter().fromJson(
-        (json['scheduledAt'] as num).toInt(),
-      ),
-    );
+ScheduleNote _$ScheduleNoteFromJson(Map<String, dynamic> json) => ScheduleNote(
+  scheduledAt: const EpocTimeDateTimeConverter().fromJson(
+    (json['scheduledAt'] as num).toInt(),
+  ),
+);
 
 Map<String, dynamic> _$ScheduleNoteToJson(
-  _ScheduleNote instance,
+  ScheduleNote instance,
 ) => <String, dynamic>{
   'scheduledAt': const EpocTimeDateTimeConverter().toJson(instance.scheduledAt),
 };
 
-_ScheduledDelete _$ScheduledDeleteFromJson(Map<String, dynamic> json) =>
-    _ScheduledDelete(
+ScheduledDelete _$ScheduledDeleteFromJson(Map<String, dynamic> json) =>
+    ScheduledDelete(
       deleteAt: _$JsonConverterFromJson<int, DateTime>(
         json['deleteAt'],
         const EpocTimeDateTimeConverter().fromJson,
@@ -112,7 +111,7 @@ _ScheduledDelete _$ScheduledDeleteFromJson(Map<String, dynamic> json) =>
       ),
     );
 
-Map<String, dynamic> _$ScheduledDeleteToJson(_ScheduledDelete instance) =>
+Map<String, dynamic> _$ScheduledDeleteToJson(ScheduledDelete instance) =>
     <String, dynamic>{
       'deleteAt': _$JsonConverterToJson<int, DateTime>(
         instance.deleteAt,

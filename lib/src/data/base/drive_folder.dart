@@ -5,16 +5,17 @@ part 'drive_folder.freezed.dart';
 part 'drive_folder.g.dart';
 
 @freezed
-abstract class DriveFolder with _$DriveFolder {
-  const factory({
-    required String id,
-    @DateTimeConverter() required DateTime createdAt,
-    required String name,
-    String? parentId,
-    DriveFolder? parent,
-    int? foldersCount,
-    int? filesCount,
-  }) = _DriveFolder;
-
+@JsonSerializable()
+class const DriveFolder({
+  required final String id,
+  @DateTimeConverter() required final DateTime createdAt,
+  required final String name,
+  final String? parentId,
+  final DriveFolder? parent,
+  final int? foldersCount,
+  final int? filesCount,
+}) with _$DriveFolder {
   factory fromJson(Map<String, dynamic> json) => _$DriveFolderFromJson(json);
+
+  Map<String, dynamic> toJson() => _$DriveFolderToJson(this);
 }

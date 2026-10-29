@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$DriveResponse {
 
- int get capacity; int get usage;
+
 /// Create a copy of DriveResponse
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $DriveResponseCopyWith<DriveResponse> get copyWith => _$DriveResponseCopyWithImpl<DriveResponse>(this as DriveResponse, _$identity);
 
-  /// Serializes this DriveResponse to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -96,11 +94,10 @@ extension DriveResponsePatterns on DriveResponse {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _DriveResponse value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _DriveResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -118,11 +115,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _DriveResponse value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _DriveResponse():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -139,11 +135,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _DriveResponse value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _DriveResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -160,10 +155,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int capacity,  int usage)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _DriveResponse() when $default != null:
-return $default(_that.capacity,_that.usage);case _:
+case _:
   return orElse();
 
 }
@@ -181,10 +175,9 @@ return $default(_that.capacity,_that.usage);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int capacity,  int usage)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _DriveResponse():
-return $default(_that.capacity,_that.usage);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -201,87 +194,13 @@ return $default(_that.capacity,_that.usage);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int capacity,  int usage)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _DriveResponse() when $default != null:
-return $default(_that.capacity,_that.usage);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _DriveResponse implements DriveResponse {
-  const _DriveResponse({required this.capacity, required this.usage});
-  factory _DriveResponse.fromJson(Map<String, dynamic> json) => _$DriveResponseFromJson(json);
-
-@override final  int capacity;
-@override final  int usage;
-
-/// Create a copy of DriveResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$DriveResponseCopyWith<_DriveResponse> get copyWith => __$DriveResponseCopyWithImpl<_DriveResponse>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$DriveResponseToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _DriveResponse&&(identical(other.capacity, capacity) || other.capacity == capacity)&&(identical(other.usage, usage) || other.usage == usage));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,capacity,usage);
-}
-
-@override
-String toString() {
-    return 'DriveResponse(capacity: $capacity, usage: $usage)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$DriveResponseCopyWith<$Res> implements $DriveResponseCopyWith<$Res> {
-  factory _$DriveResponseCopyWith(_DriveResponse value, $Res Function(_DriveResponse) _then) = __$DriveResponseCopyWithImpl;
-@override @useResult
-$Res call({
- int capacity, int usage
-});
-
-
-
-
-}
-/// @nodoc
-class __$DriveResponseCopyWithImpl<$Res>
-    implements _$DriveResponseCopyWith<$Res> {
-  __$DriveResponseCopyWithImpl(this._self, this._then);
-
-  final _DriveResponse _self;
-  final $Res Function(_DriveResponse) _then;
-
-/// Create a copy of DriveResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? capacity = null,Object? usage = null,}) {
-  return _then(_DriveResponse(
-capacity: null == capacity ? _self.capacity : capacity // ignore: cast_nullable_to_non_nullable
-as int,usage: null == usage ? _self.usage : usage // ignore: cast_nullable_to_non_nullable
-as int,
-  ));
-}
-
 
 }
 

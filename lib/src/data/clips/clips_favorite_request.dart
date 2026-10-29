@@ -4,9 +4,11 @@ part 'clips_favorite_request.freezed.dart';
 part 'clips_favorite_request.g.dart';
 
 @freezed
-abstract class ClipsFavoriteRequest with _$ClipsFavoriteRequest {
-  const factory({required String clipId}) = _ClipsFavoriteRequest;
-
+@JsonSerializable()
+class const ClipsFavoriteRequest({required final String clipId})
+    with _$ClipsFavoriteRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$ClipsFavoriteRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ClipsFavoriteRequestToJson(this);
 }

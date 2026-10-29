@@ -6,8 +6,8 @@ part of 'users_search_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_UsersSearchRequest _$UsersSearchRequestFromJson(Map<String, dynamic> json) =>
-    _UsersSearchRequest(
+UsersSearchRequest _$UsersSearchRequestFromJson(Map<String, dynamic> json) =>
+    UsersSearchRequest(
       query: json['query'] as String,
       offset: (json['offset'] as num?)?.toInt(),
       limit: (json['limit'] as num?)?.toInt(),
@@ -15,7 +15,7 @@ _UsersSearchRequest _$UsersSearchRequestFromJson(Map<String, dynamic> json) =>
       detail: json['detail'] as bool?,
     );
 
-Map<String, dynamic> _$UsersSearchRequestToJson(_UsersSearchRequest instance) =>
+Map<String, dynamic> _$UsersSearchRequestToJson(UsersSearchRequest instance) =>
     <String, dynamic>{
       'query': instance.query,
       'offset': instance.offset,

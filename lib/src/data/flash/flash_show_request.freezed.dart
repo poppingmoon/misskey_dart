@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$FlashShowRequest {
 
- String get flashId;
+
 /// Create a copy of FlashShowRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $FlashShowRequestCopyWith<FlashShowRequest> get copyWith => _$FlashShowRequestCopyWithImpl<FlashShowRequest>(this as FlashShowRequest, _$identity);
 
-  /// Serializes this FlashShowRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -95,11 +93,10 @@ extension FlashShowRequestPatterns on FlashShowRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _FlashShowRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _FlashShowRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -117,11 +114,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _FlashShowRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _FlashShowRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -138,11 +134,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _FlashShowRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _FlashShowRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -159,10 +154,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String flashId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _FlashShowRequest() when $default != null:
-return $default(_that.flashId);case _:
+case _:
   return orElse();
 
 }
@@ -180,10 +174,9 @@ return $default(_that.flashId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String flashId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _FlashShowRequest():
-return $default(_that.flashId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -200,85 +193,13 @@ return $default(_that.flashId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String flashId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _FlashShowRequest() when $default != null:
-return $default(_that.flashId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _FlashShowRequest implements FlashShowRequest {
-  const _FlashShowRequest({required this.flashId});
-  factory _FlashShowRequest.fromJson(Map<String, dynamic> json) => _$FlashShowRequestFromJson(json);
-
-@override final  String flashId;
-
-/// Create a copy of FlashShowRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$FlashShowRequestCopyWith<_FlashShowRequest> get copyWith => __$FlashShowRequestCopyWithImpl<_FlashShowRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$FlashShowRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _FlashShowRequest&&(identical(other.flashId, flashId) || other.flashId == flashId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,flashId);
-}
-
-@override
-String toString() {
-    return 'FlashShowRequest(flashId: $flashId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$FlashShowRequestCopyWith<$Res> implements $FlashShowRequestCopyWith<$Res> {
-  factory _$FlashShowRequestCopyWith(_FlashShowRequest value, $Res Function(_FlashShowRequest) _then) = __$FlashShowRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String flashId
-});
-
-
-
-
-}
-/// @nodoc
-class __$FlashShowRequestCopyWithImpl<$Res>
-    implements _$FlashShowRequestCopyWith<$Res> {
-  __$FlashShowRequestCopyWithImpl(this._self, this._then);
-
-  final _FlashShowRequest _self;
-  final $Res Function(_FlashShowRequest) _then;
-
-/// Create a copy of FlashShowRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? flashId = null,}) {
-  return _then(_FlashShowRequest(
-flashId: null == flashId ? _self.flashId : flashId // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

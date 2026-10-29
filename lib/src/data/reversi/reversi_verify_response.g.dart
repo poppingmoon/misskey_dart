@@ -6,9 +6,9 @@ part of 'reversi_verify_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ReversiVerifyResponse _$ReversiVerifyResponseFromJson(
+ReversiVerifyResponse _$ReversiVerifyResponseFromJson(
   Map<String, dynamic> json,
-) => _ReversiVerifyResponse(
+) => ReversiVerifyResponse(
   desynced: json['desynced'] as bool,
   game: json['game'] == null
       ? null
@@ -16,7 +16,7 @@ _ReversiVerifyResponse _$ReversiVerifyResponseFromJson(
 );
 
 Map<String, dynamic> _$ReversiVerifyResponseToJson(
-  _ReversiVerifyResponse instance,
+  ReversiVerifyResponse instance,
 ) => <String, dynamic>{
   'desynced': instance.desynced,
   'game': instance.game?.toJson(),

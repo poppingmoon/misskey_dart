@@ -7,38 +7,40 @@ part 'drive_file.freezed.dart';
 part 'drive_file.g.dart';
 
 @freezed
-abstract class DriveFile with _$DriveFile {
-  const factory({
-    required String id,
-    @DateTimeConverter() required DateTime createdAt,
-    required String name,
-    required String type,
-    required String md5,
-    required int size,
-    required bool isSensitive,
-    String? blurhash,
-    required DriveFileProperties properties,
-    required String url,
-    String? thumbnailUrl,
-    String? comment,
-    String? folderId,
-    DriveFolder? folder,
-    String? userId,
-    UserLite? user,
-  }) = _DriveFile;
-
+@JsonSerializable()
+class const DriveFile({
+  required final String id,
+  @DateTimeConverter() required final DateTime createdAt,
+  required final String name,
+  required final String type,
+  required final String md5,
+  required final int size,
+  required final bool isSensitive,
+  final String? blurhash,
+  required final DriveFileProperties properties,
+  required final String url,
+  final String? thumbnailUrl,
+  final String? comment,
+  final String? folderId,
+  final DriveFolder? folder,
+  final String? userId,
+  final UserLite? user,
+}) with _$DriveFile {
   factory fromJson(Map<String, dynamic> json) => _$DriveFileFromJson(json);
+
+  Map<String, dynamic> toJson() => _$DriveFileToJson(this);
 }
 
 @freezed
-abstract class DriveFileProperties with _$DriveFileProperties {
-  const factory({
-    int? width,
-    int? height,
-    int? orientation,
-    @AvgColorConverter() String? avgColor,
-  }) = _DriveFileProperties;
-
+@JsonSerializable()
+class const DriveFileProperties({
+  final int? width,
+  final int? height,
+  final int? orientation,
+  @AvgColorConverter() final String? avgColor,
+}) with _$DriveFileProperties {
   factory fromJson(Map<String, dynamic> json) =>
       _$DriveFilePropertiesFromJson(json);
+
+  Map<String, dynamic> toJson() => _$DriveFilePropertiesToJson(this);
 }

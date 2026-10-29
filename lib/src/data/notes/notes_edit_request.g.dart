@@ -6,9 +6,9 @@ part of 'notes_edit_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_NotesEditRequest _$NotesEditRequestFromJson(
+NotesEditRequest _$NotesEditRequestFromJson(
   Map<String, dynamic> json,
-) => _NotesEditRequest(
+) => NotesEditRequest(
   editId: json['editId'] as String,
   visibility: $enumDecodeNullable(_$NoteVisibilityEnumMap, json['visibility']),
   visibleUserIds: (json['visibleUserIds'] as List<dynamic>?)
@@ -28,7 +28,7 @@ _NotesEditRequest _$NotesEditRequestFromJson(
       : NotesCreatePollRequest.fromJson(json['poll'] as Map<String, dynamic>),
 );
 
-Map<String, dynamic> _$NotesEditRequestToJson(_NotesEditRequest instance) =>
+Map<String, dynamic> _$NotesEditRequestToJson(NotesEditRequest instance) =>
     <String, dynamic>{
       'editId': instance.editId,
       'visibility': _$NoteVisibilityEnumMap[instance.visibility],

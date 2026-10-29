@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$SwRegisterResponse {
 
-@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) SwRegisterResponseState? get state; String? get key; String get userId; String get endpoint; bool get sendReadMessage;
+
 /// Create a copy of SwRegisterResponse
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $SwRegisterResponseCopyWith<SwRegisterResponse> get copyWith => _$SwRegisterResponseCopyWithImpl<SwRegisterResponse>(this as SwRegisterResponse, _$identity);
 
-  /// Serializes this SwRegisterResponse to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -99,11 +97,10 @@ extension SwRegisterResponsePatterns on SwRegisterResponse {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _SwRegisterResponse value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _SwRegisterResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -121,11 +118,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _SwRegisterResponse value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _SwRegisterResponse():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -142,11 +138,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _SwRegisterResponse value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _SwRegisterResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -163,10 +158,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  SwRegisterResponseState? state,  String? key,  String userId,  String endpoint,  bool sendReadMessage)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _SwRegisterResponse() when $default != null:
-return $default(_that.state,_that.key,_that.userId,_that.endpoint,_that.sendReadMessage);case _:
+case _:
   return orElse();
 
 }
@@ -184,10 +178,9 @@ return $default(_that.state,_that.key,_that.userId,_that.endpoint,_that.sendRead
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  SwRegisterResponseState? state,  String? key,  String userId,  String endpoint,  bool sendReadMessage)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _SwRegisterResponse():
-return $default(_that.state,_that.key,_that.userId,_that.endpoint,_that.sendReadMessage);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -204,93 +197,13 @@ return $default(_that.state,_that.key,_that.userId,_that.endpoint,_that.sendRead
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  SwRegisterResponseState? state,  String? key,  String userId,  String endpoint,  bool sendReadMessage)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _SwRegisterResponse() when $default != null:
-return $default(_that.state,_that.key,_that.userId,_that.endpoint,_that.sendReadMessage);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _SwRegisterResponse implements SwRegisterResponse {
-  const _SwRegisterResponse({@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.state, this.key, required this.userId, required this.endpoint, required this.sendReadMessage});
-  factory _SwRegisterResponse.fromJson(Map<String, dynamic> json) => _$SwRegisterResponseFromJson(json);
-
-@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  SwRegisterResponseState? state;
-@override final  String? key;
-@override final  String userId;
-@override final  String endpoint;
-@override final  bool sendReadMessage;
-
-/// Create a copy of SwRegisterResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$SwRegisterResponseCopyWith<_SwRegisterResponse> get copyWith => __$SwRegisterResponseCopyWithImpl<_SwRegisterResponse>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$SwRegisterResponseToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _SwRegisterResponse&&(identical(other.state, state) || other.state == state)&&(identical(other.key, key) || other.key == key)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.endpoint, endpoint) || other.endpoint == endpoint)&&(identical(other.sendReadMessage, sendReadMessage) || other.sendReadMessage == sendReadMessage));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,state,key,userId,endpoint,sendReadMessage);
-}
-
-@override
-String toString() {
-    return 'SwRegisterResponse(state: $state, key: $key, userId: $userId, endpoint: $endpoint, sendReadMessage: $sendReadMessage)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$SwRegisterResponseCopyWith<$Res> implements $SwRegisterResponseCopyWith<$Res> {
-  factory _$SwRegisterResponseCopyWith(_SwRegisterResponse value, $Res Function(_SwRegisterResponse) _then) = __$SwRegisterResponseCopyWithImpl;
-@override @useResult
-$Res call({
-@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) SwRegisterResponseState? state, String? key, String userId, String endpoint, bool sendReadMessage
-});
-
-
-
-
-}
-/// @nodoc
-class __$SwRegisterResponseCopyWithImpl<$Res>
-    implements _$SwRegisterResponseCopyWith<$Res> {
-  __$SwRegisterResponseCopyWithImpl(this._self, this._then);
-
-  final _SwRegisterResponse _self;
-  final $Res Function(_SwRegisterResponse) _then;
-
-/// Create a copy of SwRegisterResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? state = freezed,Object? key = freezed,Object? userId = null,Object? endpoint = null,Object? sendReadMessage = null,}) {
-  return _then(_SwRegisterResponse(
-state: freezed == state ? _self.state : state // ignore: cast_nullable_to_non_nullable
-as SwRegisterResponseState?,key: freezed == key ? _self.key : key // ignore: cast_nullable_to_non_nullable
-as String?,userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
-as String,endpoint: null == endpoint ? _self.endpoint : endpoint // ignore: cast_nullable_to_non_nullable
-as String,sendReadMessage: null == sendReadMessage ? _self.sendReadMessage : sendReadMessage // ignore: cast_nullable_to_non_nullable
-as bool,
-  ));
-}
-
 
 }
 

@@ -4,11 +4,16 @@ part 'users_search_by_username_and_host_request.freezed.dart';
 part 'users_search_by_username_and_host_request.g.dart';
 
 @freezed
-abstract class UsersSearchByUsernameAndHostRequest
-    with _$UsersSearchByUsernameAndHostRequest {
-  const factory({int? limit, bool? detail, String? username, String? host}) =
-      _UsersSearchByUsernameAndHostRequest;
-
+@JsonSerializable()
+class const UsersSearchByUsernameAndHostRequest({
+  final int? limit,
+  final bool? detail,
+  final String? username,
+  final String? host,
+}) with _$UsersSearchByUsernameAndHostRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$UsersSearchByUsernameAndHostRequestFromJson(json);
+
+  Map<String, dynamic> toJson() =>
+      _$UsersSearchByUsernameAndHostRequestToJson(this);
 }

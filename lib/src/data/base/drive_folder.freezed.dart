@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$DriveFolder {
 
- String get id;@DateTimeConverter() DateTime get createdAt; String get name; String? get parentId; DriveFolder? get parent; int? get foldersCount; int? get filesCount;
+
 /// Create a copy of DriveFolder
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $DriveFolderCopyWith<DriveFolder> get copyWith => _$DriveFolderCopyWithImpl<DriveFolder>(this as DriveFolder, _$identity);
 
-  /// Serializes this DriveFolder to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -113,11 +111,10 @@ extension DriveFolderPatterns on DriveFolder {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _DriveFolder value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _DriveFolder() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -135,11 +132,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _DriveFolder value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _DriveFolder():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -156,11 +152,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _DriveFolder value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _DriveFolder() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -177,10 +172,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt,  String name,  String? parentId,  DriveFolder? parent,  int? foldersCount,  int? filesCount)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _DriveFolder() when $default != null:
-return $default(_that.id,_that.createdAt,_that.name,_that.parentId,_that.parent,_that.foldersCount,_that.filesCount);case _:
+case _:
   return orElse();
 
 }
@@ -198,10 +192,9 @@ return $default(_that.id,_that.createdAt,_that.name,_that.parentId,_that.parent,
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt,  String name,  String? parentId,  DriveFolder? parent,  int? foldersCount,  int? filesCount)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _DriveFolder():
-return $default(_that.id,_that.createdAt,_that.name,_that.parentId,_that.parent,_that.foldersCount,_that.filesCount);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -218,110 +211,14 @@ return $default(_that.id,_that.createdAt,_that.name,_that.parentId,_that.parent,
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id, @DateTimeConverter()  DateTime createdAt,  String name,  String? parentId,  DriveFolder? parent,  int? foldersCount,  int? filesCount)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _DriveFolder() when $default != null:
-return $default(_that.id,_that.createdAt,_that.name,_that.parentId,_that.parent,_that.foldersCount,_that.filesCount);case _:
+case _:
   return null;
 
 }
 }
 
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _DriveFolder implements DriveFolder {
-  const _DriveFolder({required this.id, @DateTimeConverter() required this.createdAt, required this.name, this.parentId, this.parent, this.foldersCount, this.filesCount});
-  factory _DriveFolder.fromJson(Map<String, dynamic> json) => _$DriveFolderFromJson(json);
-
-@override final  String id;
-@override@DateTimeConverter() final  DateTime createdAt;
-@override final  String name;
-@override final  String? parentId;
-@override final  DriveFolder? parent;
-@override final  int? foldersCount;
-@override final  int? filesCount;
-
-/// Create a copy of DriveFolder
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$DriveFolderCopyWith<_DriveFolder> get copyWith => __$DriveFolderCopyWithImpl<_DriveFolder>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$DriveFolderToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _DriveFolder&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.name, name) || other.name == name)&&(identical(other.parentId, parentId) || other.parentId == parentId)&&(identical(other.parent, parent) || other.parent == parent)&&(identical(other.foldersCount, foldersCount) || other.foldersCount == foldersCount)&&(identical(other.filesCount, filesCount) || other.filesCount == filesCount));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,id,createdAt,name,parentId,parent,foldersCount,filesCount);
-}
-
-@override
-String toString() {
-    return 'DriveFolder(id: $id, createdAt: $createdAt, name: $name, parentId: $parentId, parent: $parent, foldersCount: $foldersCount, filesCount: $filesCount)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$DriveFolderCopyWith<$Res> implements $DriveFolderCopyWith<$Res> {
-  factory _$DriveFolderCopyWith(_DriveFolder value, $Res Function(_DriveFolder) _then) = __$DriveFolderCopyWithImpl;
-@override @useResult
-$Res call({
- String id,@DateTimeConverter() DateTime createdAt, String name, String? parentId, DriveFolder? parent, int? foldersCount, int? filesCount
-});
-
-
-@override $DriveFolderCopyWith<$Res>? get parent;
-
-}
-/// @nodoc
-class __$DriveFolderCopyWithImpl<$Res>
-    implements _$DriveFolderCopyWith<$Res> {
-  __$DriveFolderCopyWithImpl(this._self, this._then);
-
-  final _DriveFolder _self;
-  final $Res Function(_DriveFolder) _then;
-
-/// Create a copy of DriveFolder
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? createdAt = null,Object? name = null,Object? parentId = freezed,Object? parent = freezed,Object? foldersCount = freezed,Object? filesCount = freezed,}) {
-  return _then(_DriveFolder(
-id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
-as DateTime,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String,parentId: freezed == parentId ? _self.parentId : parentId // ignore: cast_nullable_to_non_nullable
-as String?,parent: freezed == parent ? _self.parent : parent // ignore: cast_nullable_to_non_nullable
-as DriveFolder?,foldersCount: freezed == foldersCount ? _self.foldersCount : foldersCount // ignore: cast_nullable_to_non_nullable
-as int?,filesCount: freezed == filesCount ? _self.filesCount : filesCount // ignore: cast_nullable_to_non_nullable
-as int?,
-  ));
-}
-
-/// Create a copy of DriveFolder
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$DriveFolderCopyWith<$Res>? get parent {
-    if (_self.parent == null) {
-    return null;
-  }
-
-  return $DriveFolderCopyWith<$Res>(_self.parent!, (value) {
-    return _then(_self.copyWith(parent: value));
-  });
-}
 }
 
 // dart format on

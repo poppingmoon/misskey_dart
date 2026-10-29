@@ -6,21 +6,22 @@ part 'pages_create_request.freezed.dart';
 part 'pages_create_request.g.dart';
 
 @freezed
-abstract class PagesCreateRequest with _$PagesCreateRequest {
-  const factory({
-    required String title,
-    required String name,
-    String? summary,
-    @PageContentConverter() required List<AbstractPageContent> content,
-    required List<dynamic> variables,
-    required String script,
-    String? eyeCatchingImageId,
-    String? font,
-    bool? alignCenter,
-    bool? hideTitleWhenPinned,
-    PageVisibility? visibility,
-  }) = _PagesCreateRequest;
-
+@JsonSerializable()
+class const PagesCreateRequest({
+  required final String title,
+  required final String name,
+  final String? summary,
+  @PageContentConverter() required final List<AbstractPageContent> content,
+  required final List<dynamic> variables,
+  required final String script,
+  final String? eyeCatchingImageId,
+  final String? font,
+  final bool? alignCenter,
+  final bool? hideTitleWhenPinned,
+  final PageVisibility? visibility,
+}) with _$PagesCreateRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$PagesCreateRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$PagesCreateRequestToJson(this);
 }

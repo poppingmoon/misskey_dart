@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$MuteDeleteRequest {
 
- String get userId;
+
 /// Create a copy of MuteDeleteRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $MuteDeleteRequestCopyWith<MuteDeleteRequest> get copyWith => _$MuteDeleteRequestCopyWithImpl<MuteDeleteRequest>(this as MuteDeleteRequest, _$identity);
 
-  /// Serializes this MuteDeleteRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -95,11 +93,10 @@ extension MuteDeleteRequestPatterns on MuteDeleteRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _MuteDeleteRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _MuteDeleteRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -117,11 +114,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _MuteDeleteRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _MuteDeleteRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -138,11 +134,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _MuteDeleteRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _MuteDeleteRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -159,10 +154,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String userId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _MuteDeleteRequest() when $default != null:
-return $default(_that.userId);case _:
+case _:
   return orElse();
 
 }
@@ -180,10 +174,9 @@ return $default(_that.userId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String userId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _MuteDeleteRequest():
-return $default(_that.userId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -200,85 +193,13 @@ return $default(_that.userId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String userId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _MuteDeleteRequest() when $default != null:
-return $default(_that.userId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _MuteDeleteRequest implements MuteDeleteRequest {
-  const _MuteDeleteRequest({required this.userId});
-  factory _MuteDeleteRequest.fromJson(Map<String, dynamic> json) => _$MuteDeleteRequestFromJson(json);
-
-@override final  String userId;
-
-/// Create a copy of MuteDeleteRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$MuteDeleteRequestCopyWith<_MuteDeleteRequest> get copyWith => __$MuteDeleteRequestCopyWithImpl<_MuteDeleteRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$MuteDeleteRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _MuteDeleteRequest&&(identical(other.userId, userId) || other.userId == userId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,userId);
-}
-
-@override
-String toString() {
-    return 'MuteDeleteRequest(userId: $userId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$MuteDeleteRequestCopyWith<$Res> implements $MuteDeleteRequestCopyWith<$Res> {
-  factory _$MuteDeleteRequestCopyWith(_MuteDeleteRequest value, $Res Function(_MuteDeleteRequest) _then) = __$MuteDeleteRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String userId
-});
-
-
-
-
-}
-/// @nodoc
-class __$MuteDeleteRequestCopyWithImpl<$Res>
-    implements _$MuteDeleteRequestCopyWith<$Res> {
-  __$MuteDeleteRequestCopyWithImpl(this._self, this._then);
-
-  final _MuteDeleteRequest _self;
-  final $Res Function(_MuteDeleteRequest) _then;
-
-/// Create a copy of MuteDeleteRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? userId = null,}) {
-  return _then(_MuteDeleteRequest(
-userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

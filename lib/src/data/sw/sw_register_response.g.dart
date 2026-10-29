@@ -6,8 +6,8 @@ part of 'sw_register_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_SwRegisterResponse _$SwRegisterResponseFromJson(Map<String, dynamic> json) =>
-    _SwRegisterResponse(
+SwRegisterResponse _$SwRegisterResponseFromJson(Map<String, dynamic> json) =>
+    SwRegisterResponse(
       state: $enumDecodeNullable(
         _$SwRegisterResponseStateEnumMap,
         json['state'],
@@ -19,7 +19,7 @@ _SwRegisterResponse _$SwRegisterResponseFromJson(Map<String, dynamic> json) =>
       sendReadMessage: json['sendReadMessage'] as bool,
     );
 
-Map<String, dynamic> _$SwRegisterResponseToJson(_SwRegisterResponse instance) =>
+Map<String, dynamic> _$SwRegisterResponseToJson(SwRegisterResponse instance) =>
     <String, dynamic>{
       'state': _$SwRegisterResponseStateEnumMap[instance.state],
       'key': instance.key,

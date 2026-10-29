@@ -5,24 +5,25 @@ part 'notes_timeline_request.freezed.dart';
 part 'notes_timeline_request.g.dart';
 
 @freezed
-abstract class NotesTimelineRequest with _$NotesTimelineRequest {
-  const factory({
-    int? limit,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-    bool? includeMyRenotes,
-    bool? includeRenotedMyNotes,
-    bool? includeLocalRenotes,
-    bool? withFiles,
-    bool? withRenotes,
+@JsonSerializable()
+class const NotesTimelineRequest({
+  final int? limit,
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
+  final bool? includeMyRenotes,
+  final bool? includeRenotedMyNotes,
+  final bool? includeLocalRenotes,
+  final bool? withFiles,
+  final bool? withRenotes,
 
-    /// removed at *
-    bool? excludeNsfw,
-    bool? allowPartial,
-  }) = _NotesTimelineRequest;
-
+  /// removed at *
+  final bool? excludeNsfw,
+  final bool? allowPartial,
+}) with _$NotesTimelineRequest {
   factory fromJson(Map<String, Object?> json) =>
       _$NotesTimelineRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NotesTimelineRequestToJson(this);
 }

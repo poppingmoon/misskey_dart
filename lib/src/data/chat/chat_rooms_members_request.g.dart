@@ -6,9 +6,9 @@ part of 'chat_rooms_members_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ChatRoomsMembersRequest _$ChatRoomsMembersRequestFromJson(
+ChatRoomsMembersRequest _$ChatRoomsMembersRequestFromJson(
   Map<String, dynamic> json,
-) => _ChatRoomsMembersRequest(
+) => ChatRoomsMembersRequest(
   roomId: json['roomId'] as String,
   limit: (json['limit'] as num?)?.toInt(),
   sinceId: json['sinceId'] as String?,
@@ -24,7 +24,7 @@ _ChatRoomsMembersRequest _$ChatRoomsMembersRequestFromJson(
 );
 
 Map<String, dynamic> _$ChatRoomsMembersRequestToJson(
-  _ChatRoomsMembersRequest instance,
+  ChatRoomsMembersRequest instance,
 ) => <String, dynamic>{
   'roomId': instance.roomId,
   'limit': instance.limit,

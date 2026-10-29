@@ -4,10 +4,11 @@ part 'following_requests_cancel_request.freezed.dart';
 part 'following_requests_cancel_request.g.dart';
 
 @freezed
-abstract class FollowingRequestsCancelRequest
+@JsonSerializable()
+class const FollowingRequestsCancelRequest({required final String userId})
     with _$FollowingRequestsCancelRequest {
-  const factory({required String userId}) = _FollowingRequestsCancelRequest;
-
   factory fromJson(Map<String, dynamic> json) =>
       _$FollowingRequestsCancelRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$FollowingRequestsCancelRequestToJson(this);
 }

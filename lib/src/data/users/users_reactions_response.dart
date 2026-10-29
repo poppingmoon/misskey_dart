@@ -6,15 +6,16 @@ part 'users_reactions_response.freezed.dart';
 part 'users_reactions_response.g.dart';
 
 @freezed
-abstract class UsersReactionsResponse with _$UsersReactionsResponse {
-  const factory({
-    required String id,
-    @DateTimeConverter() required DateTime createdAt,
-    required UserLite user,
-    required String type,
-    required Note note,
-  }) = _UsersReactionsResponse;
-
+@JsonSerializable()
+class const UsersReactionsResponse({
+  required final String id,
+  @DateTimeConverter() required final DateTime createdAt,
+  required final UserLite user,
+  required final String type,
+  required final Note note,
+}) with _$UsersReactionsResponse {
   factory fromJson(Map<String, dynamic> json) =>
       _$UsersReactionsResponseFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UsersReactionsResponseToJson(this);
 }

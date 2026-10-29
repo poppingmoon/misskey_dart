@@ -4,17 +4,17 @@ part 'drive_files_upload_from_url_request.freezed.dart';
 part 'drive_files_upload_from_url_request.g.dart';
 
 @freezed
-abstract class DriveFilesUploadFromUrlRequest
-    with _$DriveFilesUploadFromUrlRequest {
-  const factory({
-    required String url,
-    String? folderId,
-    bool? isSensitive,
-    String? comment,
-    String? marker,
-    bool? force,
-  }) = _DriveFilesUploadFromUrlRequest;
-
+@JsonSerializable()
+class const DriveFilesUploadFromUrlRequest({
+  required final String url,
+  final String? folderId,
+  final bool? isSensitive,
+  final String? comment,
+  final String? marker,
+  final bool? force,
+}) with _$DriveFilesUploadFromUrlRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$DriveFilesUploadFromUrlRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$DriveFilesUploadFromUrlRequestToJson(this);
 }

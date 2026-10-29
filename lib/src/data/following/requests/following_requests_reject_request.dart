@@ -4,10 +4,11 @@ part 'following_requests_reject_request.freezed.dart';
 part 'following_requests_reject_request.g.dart';
 
 @freezed
-abstract class FollowingRequestsRejectRequest
+@JsonSerializable()
+class const FollowingRequestsRejectRequest({required final String userId})
     with _$FollowingRequestsRejectRequest {
-  const factory({required String userId}) = _FollowingRequestsRejectRequest;
-
   factory fromJson(Map<String, dynamic> json) =>
       _$FollowingRequestsRejectRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$FollowingRequestsRejectRequestToJson(this);
 }

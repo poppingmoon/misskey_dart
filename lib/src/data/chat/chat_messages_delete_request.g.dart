@@ -6,10 +6,10 @@ part of 'chat_messages_delete_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ChatMessagesDeleteRequest _$ChatMessagesDeleteRequestFromJson(
+ChatMessagesDeleteRequest _$ChatMessagesDeleteRequestFromJson(
   Map<String, dynamic> json,
-) => _ChatMessagesDeleteRequest(messageId: json['messageId'] as String);
+) => ChatMessagesDeleteRequest(messageId: json['messageId'] as String);
 
 Map<String, dynamic> _$ChatMessagesDeleteRequestToJson(
-  _ChatMessagesDeleteRequest instance,
+  ChatMessagesDeleteRequest instance,
 ) => <String, dynamic>{'messageId': instance.messageId};

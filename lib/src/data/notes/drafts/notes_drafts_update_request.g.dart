@@ -6,9 +6,9 @@ part of 'notes_drafts_update_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_NotesDraftsUpdateRequest _$NotesDraftsUpdateRequestFromJson(
+NotesDraftsUpdateRequest _$NotesDraftsUpdateRequestFromJson(
   Map<String, dynamic> json,
-) => _NotesDraftsUpdateRequest(
+) => NotesDraftsUpdateRequest(
   draftId: json['draftId'] as String,
   visibility: $enumDecodeNullable(_$NoteVisibilityEnumMap, json['visibility']),
   visibleUserIds: (json['visibleUserIds'] as List<dynamic>?)
@@ -39,7 +39,7 @@ _NotesDraftsUpdateRequest _$NotesDraftsUpdateRequestFromJson(
 );
 
 Map<String, dynamic> _$NotesDraftsUpdateRequestToJson(
-  _NotesDraftsUpdateRequest instance,
+  NotesDraftsUpdateRequest instance,
 ) => <String, dynamic>{
   'draftId': instance.draftId,
   'visibility': _$NoteVisibilityEnumMap[instance.visibility],

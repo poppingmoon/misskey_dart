@@ -4,9 +4,11 @@ part 'following_delete_request.freezed.dart';
 part 'following_delete_request.g.dart';
 
 @freezed
-abstract class FollowingDeleteRequest with _$FollowingDeleteRequest {
-  const factory({required String userId}) = _FollowingDeleteRequest;
-
+@JsonSerializable()
+class const FollowingDeleteRequest({required final String userId})
+    with _$FollowingDeleteRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$FollowingDeleteRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$FollowingDeleteRequestToJson(this);
 }

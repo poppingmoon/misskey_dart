@@ -4,18 +4,23 @@ part 'endpoint_response.freezed.dart';
 part 'endpoint_response.g.dart';
 
 @freezed
-abstract class EndpointResponse with _$EndpointResponse {
-  const factory({required List<EndpointParameter> params}) = _EndpointResponse;
-
+@JsonSerializable()
+class const EndpointResponse({required final List<EndpointParameter> params})
+    with _$EndpointResponse {
   factory fromJson(Map<String, dynamic> json) =>
       _$EndpointResponseFromJson(json);
+
+  Map<String, dynamic> toJson() => _$EndpointResponseToJson(this);
 }
 
 @freezed
-abstract class EndpointParameter with _$EndpointParameter {
-  const factory({required String name, required String type}) =
-      _EndpointParameter;
-
+@JsonSerializable()
+class const EndpointParameter({
+  required final String name,
+  required final String type,
+}) with _$EndpointParameter {
   factory fromJson(Map<String, dynamic> json) =>
       _$EndpointParameterFromJson(json);
+
+  Map<String, dynamic> toJson() => _$EndpointParameterToJson(this);
 }

@@ -6,9 +6,9 @@ part of 'reversi_games_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ReversiGamesResponse _$ReversiGamesResponseFromJson(
+ReversiGamesResponse _$ReversiGamesResponseFromJson(
   Map<String, dynamic> json,
-) => _ReversiGamesResponse(
+) => ReversiGamesResponse(
   id: json['id'] as String,
   createdAt: const DateTimeConverter().fromJson(json['createdAt'] as String),
   startedAt: _$JsonConverterFromJson<String, DateTime>(
@@ -41,7 +41,7 @@ _ReversiGamesResponse _$ReversiGamesResponseFromJson(
 );
 
 Map<String, dynamic> _$ReversiGamesResponseToJson(
-  _ReversiGamesResponse instance,
+  ReversiGamesResponse instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'createdAt': const DateTimeConverter().toJson(instance.createdAt),

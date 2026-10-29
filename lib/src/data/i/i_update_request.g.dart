@@ -6,9 +6,9 @@ part of 'i_update_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_IUpdateRequest _$IUpdateRequestFromJson(
+IUpdateRequest _$IUpdateRequestFromJson(
   Map<String, dynamic> json,
-) => _IUpdateRequest(
+) => IUpdateRequest(
   name: json['name'] as String?,
   description: json['description'] as String?,
   followedMessage: json['followedMessage'] as String?,
@@ -89,7 +89,7 @@ _IUpdateRequest _$IUpdateRequestFromJson(
 );
 
 Map<String, dynamic> _$IUpdateRequestToJson(
-  _IUpdateRequest instance,
+  IUpdateRequest instance,
 ) => <String, dynamic>{
   'name': instance.name,
   'description': instance.description,
@@ -171,9 +171,9 @@ Json? _$JsonConverterToJson<Json, Value>(
   Json? Function(Value value) toJson,
 ) => value == null ? null : toJson(value);
 
-_IUpdateAvatarDecoration _$IUpdateAvatarDecorationFromJson(
+IUpdateAvatarDecoration _$IUpdateAvatarDecorationFromJson(
   Map<String, dynamic> json,
-) => _IUpdateAvatarDecoration(
+) => IUpdateAvatarDecoration(
   id: json['id'] as String,
   angle: (json['angle'] as num?)?.toDouble(),
   flipH: json['flipH'] as bool? ?? false,
@@ -182,7 +182,7 @@ _IUpdateAvatarDecoration _$IUpdateAvatarDecorationFromJson(
 );
 
 Map<String, dynamic> _$IUpdateAvatarDecorationToJson(
-  _IUpdateAvatarDecoration instance,
+  IUpdateAvatarDecoration instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'angle': instance.angle,
@@ -191,9 +191,9 @@ Map<String, dynamic> _$IUpdateAvatarDecorationToJson(
   'offsetY': instance.offsetY,
 };
 
-_IUpdateMutualLinkSection _$IUpdateMutualLinkSectionFromJson(
+IUpdateMutualLinkSection _$IUpdateMutualLinkSectionFromJson(
   Map<String, dynamic> json,
-) => _IUpdateMutualLinkSection(
+) => IUpdateMutualLinkSection(
   name: json['name'] as String?,
   mutualLinks: (json['mutualLinks'] as List<dynamic>)
       .map((e) => IUpdateMutualLink.fromJson(e as Map<String, dynamic>))
@@ -201,20 +201,20 @@ _IUpdateMutualLinkSection _$IUpdateMutualLinkSectionFromJson(
 );
 
 Map<String, dynamic> _$IUpdateMutualLinkSectionToJson(
-  _IUpdateMutualLinkSection instance,
+  IUpdateMutualLinkSection instance,
 ) => <String, dynamic>{
   'name': instance.name,
   'mutualLinks': instance.mutualLinks.map((e) => e.toJson()).toList(),
 };
 
-_IUpdateMutualLink _$IUpdateMutualLinkFromJson(Map<String, dynamic> json) =>
-    _IUpdateMutualLink(
+IUpdateMutualLink _$IUpdateMutualLinkFromJson(Map<String, dynamic> json) =>
+    IUpdateMutualLink(
       url: json['url'] as String,
       fileId: json['fileId'] as String,
       description: json['description'] as String?,
     );
 
-Map<String, dynamic> _$IUpdateMutualLinkToJson(_IUpdateMutualLink instance) =>
+Map<String, dynamic> _$IUpdateMutualLinkToJson(IUpdateMutualLink instance) =>
     <String, dynamic>{
       'url': instance.url,
       'fileId': instance.fileId,

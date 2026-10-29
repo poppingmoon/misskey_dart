@@ -4,9 +4,11 @@ part 'chat_rooms_show_request.freezed.dart';
 part 'chat_rooms_show_request.g.dart';
 
 @freezed
-abstract class ChatRoomsShowRequest with _$ChatRoomsShowRequest {
-  const factory({required String roomId}) = _ChatRoomsShowRequest;
-
+@JsonSerializable()
+class const ChatRoomsShowRequest({required final String roomId})
+    with _$ChatRoomsShowRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$ChatRoomsShowRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ChatRoomsShowRequestToJson(this);
 }

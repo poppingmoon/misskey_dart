@@ -6,8 +6,8 @@ part of 'stats_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_StatsResponse _$StatsResponseFromJson(Map<String, dynamic> json) =>
-    _StatsResponse(
+StatsResponse _$StatsResponseFromJson(Map<String, dynamic> json) =>
+    StatsResponse(
       notesCount: (json['notesCount'] as num?)?.toInt(),
       originalNotesCount: (json['originalNotesCount'] as num?)?.toInt(),
       usersCount: (json['usersCount'] as num?)?.toInt(),
@@ -18,7 +18,7 @@ _StatsResponse _$StatsResponseFromJson(Map<String, dynamic> json) =>
       driveUsageRemote: (json['driveUsageRemote'] as num?)?.toInt(),
     );
 
-Map<String, dynamic> _$StatsResponseToJson(_StatsResponse instance) =>
+Map<String, dynamic> _$StatsResponseToJson(StatsResponse instance) =>
     <String, dynamic>{
       'notesCount': instance.notesCount,
       'originalNotesCount': instance.originalNotesCount,

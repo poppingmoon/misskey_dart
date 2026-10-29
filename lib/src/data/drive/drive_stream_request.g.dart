@@ -6,8 +6,8 @@ part of 'drive_stream_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_DriveStreamRequest _$DriveStreamRequestFromJson(Map<String, dynamic> json) =>
-    _DriveStreamRequest(
+DriveStreamRequest _$DriveStreamRequestFromJson(Map<String, dynamic> json) =>
+    DriveStreamRequest(
       limit: (json['limit'] as num?)?.toInt(),
       sinceId: json['sinceId'] as String?,
       untilId: json['untilId'] as String?,
@@ -22,7 +22,7 @@ _DriveStreamRequest _$DriveStreamRequestFromJson(Map<String, dynamic> json) =>
       type: json['type'] as String?,
     );
 
-Map<String, dynamic> _$DriveStreamRequestToJson(_DriveStreamRequest instance) =>
+Map<String, dynamic> _$DriveStreamRequestToJson(DriveStreamRequest instance) =>
     <String, dynamic>{
       'limit': instance.limit,
       'sinceId': instance.sinceId,

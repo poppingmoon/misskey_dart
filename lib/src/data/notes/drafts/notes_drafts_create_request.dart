@@ -6,24 +6,25 @@ part 'notes_drafts_create_request.freezed.dart';
 part 'notes_drafts_create_request.g.dart';
 
 @freezed
-abstract class NotesDraftsCreateRequest with _$NotesDraftsCreateRequest {
-  const factory({
-    NoteVisibility? visibility,
-    List<String>? visibleUserIds,
-    String? cw,
-    String? hashtag,
-    bool? localOnly,
-    ReactionAcceptance? reactionAcceptance,
-    String? replyId,
-    String? renoteId,
-    String? channelId,
-    String? text,
-    List<String>? fileIds,
-    NotesCreatePollRequest? poll,
-    @EpocTimeDateTimeConverter() DateTime? scheduledAt,
-    bool? isActuallyScheduled,
-  }) = _NotesDraftsCreateRequest;
-
+@JsonSerializable()
+class const NotesDraftsCreateRequest({
+  final NoteVisibility? visibility,
+  final List<String>? visibleUserIds,
+  final String? cw,
+  final String? hashtag,
+  final bool? localOnly,
+  final ReactionAcceptance? reactionAcceptance,
+  final String? replyId,
+  final String? renoteId,
+  final String? channelId,
+  final String? text,
+  final List<String>? fileIds,
+  final NotesCreatePollRequest? poll,
+  @EpocTimeDateTimeConverter() final DateTime? scheduledAt,
+  final bool? isActuallyScheduled,
+}) with _$NotesDraftsCreateRequest {
   factory fromJson(Map<String, Object?> json) =>
       _$NotesDraftsCreateRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NotesDraftsCreateRequestToJson(this);
 }

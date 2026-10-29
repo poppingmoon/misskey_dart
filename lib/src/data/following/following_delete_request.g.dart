@@ -6,10 +6,10 @@ part of 'following_delete_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_FollowingDeleteRequest _$FollowingDeleteRequestFromJson(
+FollowingDeleteRequest _$FollowingDeleteRequestFromJson(
   Map<String, dynamic> json,
-) => _FollowingDeleteRequest(userId: json['userId'] as String);
+) => FollowingDeleteRequest(userId: json['userId'] as String);
 
 Map<String, dynamic> _$FollowingDeleteRequestToJson(
-  _FollowingDeleteRequest instance,
+  FollowingDeleteRequest instance,
 ) => <String, dynamic>{'userId': instance.userId};

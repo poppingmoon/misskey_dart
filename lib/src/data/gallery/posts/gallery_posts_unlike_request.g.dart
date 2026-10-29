@@ -6,10 +6,10 @@ part of 'gallery_posts_unlike_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_GalleryPostsUnlikeRequest _$GalleryPostsUnlikeRequestFromJson(
+GalleryPostsUnlikeRequest _$GalleryPostsUnlikeRequestFromJson(
   Map<String, dynamic> json,
-) => _GalleryPostsUnlikeRequest(postId: json['postId'] as String);
+) => GalleryPostsUnlikeRequest(postId: json['postId'] as String);
 
 Map<String, dynamic> _$GalleryPostsUnlikeRequestToJson(
-  _GalleryPostsUnlikeRequest instance,
+  GalleryPostsUnlikeRequest instance,
 ) => <String, dynamic>{'postId': instance.postId};

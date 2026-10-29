@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$NotesDraftsDeleteRequest {
 
- String get draftId;
+
 /// Create a copy of NotesDraftsDeleteRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $NotesDraftsDeleteRequestCopyWith<NotesDraftsDeleteRequest> get copyWith => _$NotesDraftsDeleteRequestCopyWithImpl<NotesDraftsDeleteRequest>(this as NotesDraftsDeleteRequest, _$identity);
 
-  /// Serializes this NotesDraftsDeleteRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -95,11 +93,10 @@ extension NotesDraftsDeleteRequestPatterns on NotesDraftsDeleteRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _NotesDraftsDeleteRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _NotesDraftsDeleteRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -117,11 +114,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _NotesDraftsDeleteRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _NotesDraftsDeleteRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -138,11 +134,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _NotesDraftsDeleteRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _NotesDraftsDeleteRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -159,10 +154,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String draftId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _NotesDraftsDeleteRequest() when $default != null:
-return $default(_that.draftId);case _:
+case _:
   return orElse();
 
 }
@@ -180,10 +174,9 @@ return $default(_that.draftId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String draftId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _NotesDraftsDeleteRequest():
-return $default(_that.draftId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -200,85 +193,13 @@ return $default(_that.draftId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String draftId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _NotesDraftsDeleteRequest() when $default != null:
-return $default(_that.draftId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _NotesDraftsDeleteRequest implements NotesDraftsDeleteRequest {
-  const _NotesDraftsDeleteRequest({required this.draftId});
-  factory _NotesDraftsDeleteRequest.fromJson(Map<String, dynamic> json) => _$NotesDraftsDeleteRequestFromJson(json);
-
-@override final  String draftId;
-
-/// Create a copy of NotesDraftsDeleteRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$NotesDraftsDeleteRequestCopyWith<_NotesDraftsDeleteRequest> get copyWith => __$NotesDraftsDeleteRequestCopyWithImpl<_NotesDraftsDeleteRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$NotesDraftsDeleteRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesDraftsDeleteRequest&&(identical(other.draftId, draftId) || other.draftId == draftId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,draftId);
-}
-
-@override
-String toString() {
-    return 'NotesDraftsDeleteRequest(draftId: $draftId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$NotesDraftsDeleteRequestCopyWith<$Res> implements $NotesDraftsDeleteRequestCopyWith<$Res> {
-  factory _$NotesDraftsDeleteRequestCopyWith(_NotesDraftsDeleteRequest value, $Res Function(_NotesDraftsDeleteRequest) _then) = __$NotesDraftsDeleteRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String draftId
-});
-
-
-
-
-}
-/// @nodoc
-class __$NotesDraftsDeleteRequestCopyWithImpl<$Res>
-    implements _$NotesDraftsDeleteRequestCopyWith<$Res> {
-  __$NotesDraftsDeleteRequestCopyWithImpl(this._self, this._then);
-
-  final _NotesDraftsDeleteRequest _self;
-  final $Res Function(_NotesDraftsDeleteRequest) _then;
-
-/// Create a copy of NotesDraftsDeleteRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? draftId = null,}) {
-  return _then(_NotesDraftsDeleteRequest(
-draftId: null == draftId ? _self.draftId : draftId // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

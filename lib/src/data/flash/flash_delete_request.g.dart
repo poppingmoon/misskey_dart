@@ -6,8 +6,8 @@ part of 'flash_delete_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_FlashDeleteRequest _$FlashDeleteRequestFromJson(Map<String, dynamic> json) =>
-    _FlashDeleteRequest(flashId: json['flashId'] as String);
+FlashDeleteRequest _$FlashDeleteRequestFromJson(Map<String, dynamic> json) =>
+    FlashDeleteRequest(flashId: json['flashId'] as String);
 
-Map<String, dynamic> _$FlashDeleteRequestToJson(_FlashDeleteRequest instance) =>
+Map<String, dynamic> _$FlashDeleteRequestToJson(FlashDeleteRequest instance) =>
     <String, dynamic>{'flashId': instance.flashId};

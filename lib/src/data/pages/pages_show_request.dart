@@ -4,10 +4,14 @@ part 'pages_show_request.freezed.dart';
 part 'pages_show_request.g.dart';
 
 @freezed
-abstract class PagesShowRequest with _$PagesShowRequest {
-  const factory({String? pageId, String? name, String? username}) =
-      _PagesShowRequest;
-
+@JsonSerializable()
+class const PagesShowRequest({
+  final String? pageId,
+  final String? name,
+  final String? username,
+}) with _$PagesShowRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$PagesShowRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$PagesShowRequestToJson(this);
 }

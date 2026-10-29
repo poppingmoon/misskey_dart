@@ -6,7 +6,7 @@ part of 'drive_file.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_DriveFile _$DriveFileFromJson(Map<String, dynamic> json) => _DriveFile(
+DriveFile _$DriveFileFromJson(Map<String, dynamic> json) => DriveFile(
   id: json['id'] as String,
   createdAt: const DateTimeConverter().fromJson(json['createdAt'] as String),
   name: json['name'] as String,
@@ -31,28 +31,27 @@ _DriveFile _$DriveFileFromJson(Map<String, dynamic> json) => _DriveFile(
       : UserLite.fromJson(json['user'] as Map<String, dynamic>),
 );
 
-Map<String, dynamic> _$DriveFileToJson(_DriveFile instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'createdAt': const DateTimeConverter().toJson(instance.createdAt),
-      'name': instance.name,
-      'type': instance.type,
-      'md5': instance.md5,
-      'size': instance.size,
-      'isSensitive': instance.isSensitive,
-      'blurhash': instance.blurhash,
-      'properties': instance.properties.toJson(),
-      'url': instance.url,
-      'thumbnailUrl': instance.thumbnailUrl,
-      'comment': instance.comment,
-      'folderId': instance.folderId,
-      'folder': instance.folder?.toJson(),
-      'userId': instance.userId,
-      'user': instance.user?.toJson(),
-    };
+Map<String, dynamic> _$DriveFileToJson(DriveFile instance) => <String, dynamic>{
+  'id': instance.id,
+  'createdAt': const DateTimeConverter().toJson(instance.createdAt),
+  'name': instance.name,
+  'type': instance.type,
+  'md5': instance.md5,
+  'size': instance.size,
+  'isSensitive': instance.isSensitive,
+  'blurhash': instance.blurhash,
+  'properties': instance.properties.toJson(),
+  'url': instance.url,
+  'thumbnailUrl': instance.thumbnailUrl,
+  'comment': instance.comment,
+  'folderId': instance.folderId,
+  'folder': instance.folder?.toJson(),
+  'userId': instance.userId,
+  'user': instance.user?.toJson(),
+};
 
-_DriveFileProperties _$DriveFilePropertiesFromJson(Map<String, dynamic> json) =>
-    _DriveFileProperties(
+DriveFileProperties _$DriveFilePropertiesFromJson(Map<String, dynamic> json) =>
+    DriveFileProperties(
       width: (json['width'] as num?)?.toInt(),
       height: (json['height'] as num?)?.toInt(),
       orientation: (json['orientation'] as num?)?.toInt(),
@@ -60,7 +59,7 @@ _DriveFileProperties _$DriveFilePropertiesFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$DriveFilePropertiesToJson(
-  _DriveFileProperties instance,
+  DriveFileProperties instance,
 ) => <String, dynamic>{
   'width': instance.width,
   'height': instance.height,

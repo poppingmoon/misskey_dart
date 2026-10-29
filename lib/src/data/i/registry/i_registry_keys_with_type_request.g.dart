@@ -6,13 +6,13 @@ part of 'i_registry_keys_with_type_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_IRegistryKeysWithTypeRequest _$IRegistryKeysWithTypeRequestFromJson(
+IRegistryKeysWithTypeRequest _$IRegistryKeysWithTypeRequestFromJson(
   Map<String, dynamic> json,
-) => _IRegistryKeysWithTypeRequest(
+) => IRegistryKeysWithTypeRequest(
   scope: (json['scope'] as List<dynamic>).map((e) => e as String).toList(),
   domain: json['domain'] as String?,
 );
 
 Map<String, dynamic> _$IRegistryKeysWithTypeRequestToJson(
-  _IRegistryKeysWithTypeRequest instance,
+  IRegistryKeysWithTypeRequest instance,
 ) => <String, dynamic>{'scope': instance.scope, 'domain': instance.domain};

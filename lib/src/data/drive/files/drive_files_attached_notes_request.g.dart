@@ -6,9 +6,9 @@ part of 'drive_files_attached_notes_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_DriveFilesAttachedNotesRequest _$DriveFilesAttachedNotesRequestFromJson(
+DriveFilesAttachedNotesRequest _$DriveFilesAttachedNotesRequestFromJson(
   Map<String, dynamic> json,
-) => _DriveFilesAttachedNotesRequest(
+) => DriveFilesAttachedNotesRequest(
   fileId: json['fileId'] as String,
   limit: (json['limit'] as num?)?.toInt(),
   sinceId: json['sinceId'] as String?,
@@ -24,7 +24,7 @@ _DriveFilesAttachedNotesRequest _$DriveFilesAttachedNotesRequestFromJson(
 );
 
 Map<String, dynamic> _$DriveFilesAttachedNotesRequestToJson(
-  _DriveFilesAttachedNotesRequest instance,
+  DriveFilesAttachedNotesRequest instance,
 ) => <String, dynamic>{
   'fileId': instance.fileId,
   'limit': instance.limit,

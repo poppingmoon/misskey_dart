@@ -6,9 +6,9 @@ part of 'chat_room_show_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ChatRoomShowRequest _$ChatRoomShowRequestFromJson(Map<String, dynamic> json) =>
-    _ChatRoomShowRequest(roomId: json['roomId'] as String);
+ChatRoomShowRequest _$ChatRoomShowRequestFromJson(Map<String, dynamic> json) =>
+    ChatRoomShowRequest(roomId: json['roomId'] as String);
 
 Map<String, dynamic> _$ChatRoomShowRequestToJson(
-  _ChatRoomShowRequest instance,
+  ChatRoomShowRequest instance,
 ) => <String, dynamic>{'roomId': instance.roomId};

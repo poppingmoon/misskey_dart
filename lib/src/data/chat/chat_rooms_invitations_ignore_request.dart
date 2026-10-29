@@ -4,10 +4,12 @@ part 'chat_rooms_invitations_ignore_request.freezed.dart';
 part 'chat_rooms_invitations_ignore_request.g.dart';
 
 @freezed
-abstract class ChatRoomsInvitationsIgnoreRequest
+@JsonSerializable()
+class const ChatRoomsInvitationsIgnoreRequest({required final String roomId})
     with _$ChatRoomsInvitationsIgnoreRequest {
-  const factory({required String roomId}) = _ChatRoomsInvitationsIgnoreRequest;
-
   factory fromJson(Map<String, dynamic> json) =>
       _$ChatRoomsInvitationsIgnoreRequestFromJson(json);
+
+  Map<String, dynamic> toJson() =>
+      _$ChatRoomsInvitationsIgnoreRequestToJson(this);
 }

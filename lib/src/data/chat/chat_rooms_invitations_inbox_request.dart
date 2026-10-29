@@ -5,16 +5,17 @@ part 'chat_rooms_invitations_inbox_request.freezed.dart';
 part 'chat_rooms_invitations_inbox_request.g.dart';
 
 @freezed
-abstract class ChatRoomsInvitationsInboxRequest
-    with _$ChatRoomsInvitationsInboxRequest {
-  const factory({
-    int? limit,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-  }) = _ChatRoomsInvitationsInboxRequest;
-
+@JsonSerializable()
+class const ChatRoomsInvitationsInboxRequest({
+  final int? limit,
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
+}) with _$ChatRoomsInvitationsInboxRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$ChatRoomsInvitationsInboxRequestFromJson(json);
+
+  Map<String, dynamic> toJson() =>
+      _$ChatRoomsInvitationsInboxRequestToJson(this);
 }

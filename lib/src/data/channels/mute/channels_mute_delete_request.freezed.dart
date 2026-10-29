@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ChannelsMuteDeleteRequest {
 
- String? get channelId;
+
 /// Create a copy of ChannelsMuteDeleteRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $ChannelsMuteDeleteRequestCopyWith<ChannelsMuteDeleteRequest> get copyWith => _$ChannelsMuteDeleteRequestCopyWithImpl<ChannelsMuteDeleteRequest>(this as ChannelsMuteDeleteRequest, _$identity);
 
-  /// Serializes this ChannelsMuteDeleteRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -95,11 +93,10 @@ extension ChannelsMuteDeleteRequestPatterns on ChannelsMuteDeleteRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ChannelsMuteDeleteRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _ChannelsMuteDeleteRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -117,11 +114,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ChannelsMuteDeleteRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChannelsMuteDeleteRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -138,11 +134,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ChannelsMuteDeleteRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChannelsMuteDeleteRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -159,10 +154,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? channelId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _ChannelsMuteDeleteRequest() when $default != null:
-return $default(_that.channelId);case _:
+case _:
   return orElse();
 
 }
@@ -180,10 +174,9 @@ return $default(_that.channelId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? channelId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChannelsMuteDeleteRequest():
-return $default(_that.channelId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -200,85 +193,13 @@ return $default(_that.channelId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? channelId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChannelsMuteDeleteRequest() when $default != null:
-return $default(_that.channelId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _ChannelsMuteDeleteRequest implements ChannelsMuteDeleteRequest {
-  const _ChannelsMuteDeleteRequest({this.channelId});
-  factory _ChannelsMuteDeleteRequest.fromJson(Map<String, dynamic> json) => _$ChannelsMuteDeleteRequestFromJson(json);
-
-@override final  String? channelId;
-
-/// Create a copy of ChannelsMuteDeleteRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ChannelsMuteDeleteRequestCopyWith<_ChannelsMuteDeleteRequest> get copyWith => __$ChannelsMuteDeleteRequestCopyWithImpl<_ChannelsMuteDeleteRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$ChannelsMuteDeleteRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChannelsMuteDeleteRequest&&(identical(other.channelId, channelId) || other.channelId == channelId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,channelId);
-}
-
-@override
-String toString() {
-    return 'ChannelsMuteDeleteRequest(channelId: $channelId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ChannelsMuteDeleteRequestCopyWith<$Res> implements $ChannelsMuteDeleteRequestCopyWith<$Res> {
-  factory _$ChannelsMuteDeleteRequestCopyWith(_ChannelsMuteDeleteRequest value, $Res Function(_ChannelsMuteDeleteRequest) _then) = __$ChannelsMuteDeleteRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String? channelId
-});
-
-
-
-
-}
-/// @nodoc
-class __$ChannelsMuteDeleteRequestCopyWithImpl<$Res>
-    implements _$ChannelsMuteDeleteRequestCopyWith<$Res> {
-  __$ChannelsMuteDeleteRequestCopyWithImpl(this._self, this._then);
-
-  final _ChannelsMuteDeleteRequest _self;
-  final $Res Function(_ChannelsMuteDeleteRequest) _then;
-
-/// Create a copy of ChannelsMuteDeleteRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? channelId = freezed,}) {
-  return _then(_ChannelsMuteDeleteRequest(
-channelId: freezed == channelId ? _self.channelId : channelId // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
 
 }
 

@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$FollowingCreateRequest {
 
- String get userId; bool? get withReplies;
+
 /// Create a copy of FollowingCreateRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $FollowingCreateRequestCopyWith<FollowingCreateRequest> get copyWith => _$FollowingCreateRequestCopyWithImpl<FollowingCreateRequest>(this as FollowingCreateRequest, _$identity);
 
-  /// Serializes this FollowingCreateRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -96,11 +94,10 @@ extension FollowingCreateRequestPatterns on FollowingCreateRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _FollowingCreateRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _FollowingCreateRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -118,11 +115,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _FollowingCreateRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _FollowingCreateRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -139,11 +135,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _FollowingCreateRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _FollowingCreateRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -160,10 +155,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String userId,  bool? withReplies)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _FollowingCreateRequest() when $default != null:
-return $default(_that.userId,_that.withReplies);case _:
+case _:
   return orElse();
 
 }
@@ -181,10 +175,9 @@ return $default(_that.userId,_that.withReplies);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String userId,  bool? withReplies)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _FollowingCreateRequest():
-return $default(_that.userId,_that.withReplies);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -201,87 +194,13 @@ return $default(_that.userId,_that.withReplies);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String userId,  bool? withReplies)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _FollowingCreateRequest() when $default != null:
-return $default(_that.userId,_that.withReplies);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _FollowingCreateRequest implements FollowingCreateRequest {
-  const _FollowingCreateRequest({required this.userId, this.withReplies});
-  factory _FollowingCreateRequest.fromJson(Map<String, dynamic> json) => _$FollowingCreateRequestFromJson(json);
-
-@override final  String userId;
-@override final  bool? withReplies;
-
-/// Create a copy of FollowingCreateRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$FollowingCreateRequestCopyWith<_FollowingCreateRequest> get copyWith => __$FollowingCreateRequestCopyWithImpl<_FollowingCreateRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$FollowingCreateRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _FollowingCreateRequest&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.withReplies, withReplies) || other.withReplies == withReplies));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,userId,withReplies);
-}
-
-@override
-String toString() {
-    return 'FollowingCreateRequest(userId: $userId, withReplies: $withReplies)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$FollowingCreateRequestCopyWith<$Res> implements $FollowingCreateRequestCopyWith<$Res> {
-  factory _$FollowingCreateRequestCopyWith(_FollowingCreateRequest value, $Res Function(_FollowingCreateRequest) _then) = __$FollowingCreateRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String userId, bool? withReplies
-});
-
-
-
-
-}
-/// @nodoc
-class __$FollowingCreateRequestCopyWithImpl<$Res>
-    implements _$FollowingCreateRequestCopyWith<$Res> {
-  __$FollowingCreateRequestCopyWithImpl(this._self, this._then);
-
-  final _FollowingCreateRequest _self;
-  final $Res Function(_FollowingCreateRequest) _then;
-
-/// Create a copy of FollowingCreateRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? userId = null,Object? withReplies = freezed,}) {
-  return _then(_FollowingCreateRequest(
-userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
-as String,withReplies: freezed == withReplies ? _self.withReplies : withReplies // ignore: cast_nullable_to_non_nullable
-as bool?,
-  ));
-}
-
 
 }
 

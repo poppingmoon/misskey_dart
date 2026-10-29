@@ -4,9 +4,11 @@ part 'pages_like_request.freezed.dart';
 part 'pages_like_request.g.dart';
 
 @freezed
-abstract class PagesLikeRequest with _$PagesLikeRequest {
-  const factory({required String pageId}) = _PagesLikeRequest;
-
+@JsonSerializable()
+class const PagesLikeRequest({required final String pageId})
+    with _$PagesLikeRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$PagesLikeRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$PagesLikeRequestToJson(this);
 }

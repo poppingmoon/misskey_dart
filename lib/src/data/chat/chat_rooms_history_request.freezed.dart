@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ChatRoomsHistoryRequest {
 
- int? get limit; String? get sinceId; String? get untilId;
+
 /// Create a copy of ChatRoomsHistoryRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $ChatRoomsHistoryRequestCopyWith<ChatRoomsHistoryRequest> get copyWith => _$ChatRoomsHistoryRequestCopyWithImpl<ChatRoomsHistoryRequest>(this as ChatRoomsHistoryRequest, _$identity);
 
-  /// Serializes this ChatRoomsHistoryRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -97,11 +95,10 @@ extension ChatRoomsHistoryRequestPatterns on ChatRoomsHistoryRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ChatRoomsHistoryRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _ChatRoomsHistoryRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -119,11 +116,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ChatRoomsHistoryRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChatRoomsHistoryRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -140,11 +136,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ChatRoomsHistoryRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChatRoomsHistoryRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -161,10 +156,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? limit,  String? sinceId,  String? untilId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _ChatRoomsHistoryRequest() when $default != null:
-return $default(_that.limit,_that.sinceId,_that.untilId);case _:
+case _:
   return orElse();
 
 }
@@ -182,10 +176,9 @@ return $default(_that.limit,_that.sinceId,_that.untilId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? limit,  String? sinceId,  String? untilId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChatRoomsHistoryRequest():
-return $default(_that.limit,_that.sinceId,_that.untilId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -202,89 +195,13 @@ return $default(_that.limit,_that.sinceId,_that.untilId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? limit,  String? sinceId,  String? untilId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChatRoomsHistoryRequest() when $default != null:
-return $default(_that.limit,_that.sinceId,_that.untilId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _ChatRoomsHistoryRequest implements ChatRoomsHistoryRequest {
-  const _ChatRoomsHistoryRequest({this.limit, this.sinceId, this.untilId});
-  factory _ChatRoomsHistoryRequest.fromJson(Map<String, dynamic> json) => _$ChatRoomsHistoryRequestFromJson(json);
-
-@override final  int? limit;
-@override final  String? sinceId;
-@override final  String? untilId;
-
-/// Create a copy of ChatRoomsHistoryRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ChatRoomsHistoryRequestCopyWith<_ChatRoomsHistoryRequest> get copyWith => __$ChatRoomsHistoryRequestCopyWithImpl<_ChatRoomsHistoryRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$ChatRoomsHistoryRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatRoomsHistoryRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,limit,sinceId,untilId);
-}
-
-@override
-String toString() {
-    return 'ChatRoomsHistoryRequest(limit: $limit, sinceId: $sinceId, untilId: $untilId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ChatRoomsHistoryRequestCopyWith<$Res> implements $ChatRoomsHistoryRequestCopyWith<$Res> {
-  factory _$ChatRoomsHistoryRequestCopyWith(_ChatRoomsHistoryRequest value, $Res Function(_ChatRoomsHistoryRequest) _then) = __$ChatRoomsHistoryRequestCopyWithImpl;
-@override @useResult
-$Res call({
- int? limit, String? sinceId, String? untilId
-});
-
-
-
-
-}
-/// @nodoc
-class __$ChatRoomsHistoryRequestCopyWithImpl<$Res>
-    implements _$ChatRoomsHistoryRequestCopyWith<$Res> {
-  __$ChatRoomsHistoryRequestCopyWithImpl(this._self, this._then);
-
-  final _ChatRoomsHistoryRequest _self;
-  final $Res Function(_ChatRoomsHistoryRequest) _then;
-
-/// Create a copy of ChatRoomsHistoryRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,}) {
-  return _then(_ChatRoomsHistoryRequest(
-limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
-as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
 
 }
 

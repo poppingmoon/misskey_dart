@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$UsersList {
 
- String get id;@DateTimeConverter() DateTime get createdAt; String? get name; List<String> get userIds; bool? get isPublic;
+
 /// Create a copy of UsersList
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $UsersListCopyWith<UsersList> get copyWith => _$UsersListCopyWithImpl<UsersList>(this as UsersList, _$identity);
 
-  /// Serializes this UsersList to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -99,11 +97,10 @@ extension UsersListPatterns on UsersList {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UsersList value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _UsersList() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -121,11 +118,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UsersList value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UsersList():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -142,11 +138,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UsersList value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UsersList() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -163,10 +158,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt,  String? name,  List<String> userIds,  bool? isPublic)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _UsersList() when $default != null:
-return $default(_that.id,_that.createdAt,_that.name,_that.userIds,_that.isPublic);case _:
+case _:
   return orElse();
 
 }
@@ -184,10 +178,9 @@ return $default(_that.id,_that.createdAt,_that.name,_that.userIds,_that.isPublic
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt,  String? name,  List<String> userIds,  bool? isPublic)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UsersList():
-return $default(_that.id,_that.createdAt,_that.name,_that.userIds,_that.isPublic);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -204,99 +197,13 @@ return $default(_that.id,_that.createdAt,_that.name,_that.userIds,_that.isPublic
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id, @DateTimeConverter()  DateTime createdAt,  String? name,  List<String> userIds,  bool? isPublic)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UsersList() when $default != null:
-return $default(_that.id,_that.createdAt,_that.name,_that.userIds,_that.isPublic);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _UsersList implements UsersList {
-  const _UsersList({required this.id, @DateTimeConverter() required this.createdAt, this.name, required  List<String> userIds, this.isPublic}): _userIds = userIds;
-  factory _UsersList.fromJson(Map<String, dynamic> json) => _$UsersListFromJson(json);
-
-@override final  String id;
-@override@DateTimeConverter() final  DateTime createdAt;
-@override final  String? name;
- final  List<String> _userIds;
-@override List<String> get userIds {
-  if (_userIds is EqualUnmodifiableListView) return _userIds;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_userIds);
-}
-
-@override final  bool? isPublic;
-
-/// Create a copy of UsersList
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$UsersListCopyWith<_UsersList> get copyWith => __$UsersListCopyWithImpl<_UsersList>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$UsersListToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersList&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.name, name) || other.name == name)&&const DeepCollectionEquality().equals(other.userIds, _userIds)&&(identical(other.isPublic, isPublic) || other.isPublic == isPublic));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,id,createdAt,name,const DeepCollectionEquality().hash(_userIds),isPublic);
-}
-
-@override
-String toString() {
-    return 'UsersList(id: $id, createdAt: $createdAt, name: $name, userIds: $userIds, isPublic: $isPublic)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$UsersListCopyWith<$Res> implements $UsersListCopyWith<$Res> {
-  factory _$UsersListCopyWith(_UsersList value, $Res Function(_UsersList) _then) = __$UsersListCopyWithImpl;
-@override @useResult
-$Res call({
- String id,@DateTimeConverter() DateTime createdAt, String? name, List<String> userIds, bool? isPublic
-});
-
-
-
-
-}
-/// @nodoc
-class __$UsersListCopyWithImpl<$Res>
-    implements _$UsersListCopyWith<$Res> {
-  __$UsersListCopyWithImpl(this._self, this._then);
-
-  final _UsersList _self;
-  final $Res Function(_UsersList) _then;
-
-/// Create a copy of UsersList
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? createdAt = null,Object? name = freezed,Object? userIds = null,Object? isPublic = freezed,}) {
-  return _then(_UsersList(
-id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
-as DateTime,name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String?,userIds: null == userIds ? _self._userIds : userIds // ignore: cast_nullable_to_non_nullable
-as List<String>,isPublic: freezed == isPublic ? _self.isPublic : isPublic // ignore: cast_nullable_to_non_nullable
-as bool?,
-  ));
-}
-
 
 }
 

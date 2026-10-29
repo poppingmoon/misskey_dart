@@ -6,8 +6,8 @@ part of 'users_flashs_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_UsersFlashsRequest _$UsersFlashsRequestFromJson(Map<String, dynamic> json) =>
-    _UsersFlashsRequest(
+UsersFlashsRequest _$UsersFlashsRequestFromJson(Map<String, dynamic> json) =>
+    UsersFlashsRequest(
       userId: json['userId'] as String,
       limit: (json['limit'] as num?)?.toInt(),
       sinceId: json['sinceId'] as String?,
@@ -22,7 +22,7 @@ _UsersFlashsRequest _$UsersFlashsRequestFromJson(Map<String, dynamic> json) =>
       ),
     );
 
-Map<String, dynamic> _$UsersFlashsRequestToJson(_UsersFlashsRequest instance) =>
+Map<String, dynamic> _$UsersFlashsRequestToJson(UsersFlashsRequest instance) =>
     <String, dynamic>{
       'userId': instance.userId,
       'limit': instance.limit,

@@ -4,9 +4,11 @@ part 'gallery_featured_request.freezed.dart';
 part 'gallery_featured_request.g.dart';
 
 @freezed
-abstract class GalleryFeaturedRequest with _$GalleryFeaturedRequest {
-  const factory({int? limit, String? untilId}) = _GalleryFeaturedRequest;
-
+@JsonSerializable()
+class const GalleryFeaturedRequest({final int? limit, final String? untilId})
+    with _$GalleryFeaturedRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$GalleryFeaturedRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$GalleryFeaturedRequestToJson(this);
 }

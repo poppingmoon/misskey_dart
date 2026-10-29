@@ -31,79 +31,77 @@ sealed class PushNotification with _$PushNotification {
 }
 
 @freezed
-abstract class PushNotificationBody with _$PushNotificationBody {
-  const factory({
-    required String id,
-    @DateTimeConverter() required DateTime createdAt,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    NotificationType? type,
-    String? noteId,
-    String? followRequestId,
-    String? reaction,
-    int? choice,
-    String? achievement,
-    String? body,
-    String? header,
-    @NullableUriConverter() Uri? icon,
-    String? appAccessTokenId,
-    ChatJoining? invitation,
-    String? userId,
-    UserLite? user,
-    PushNotificationNote? note,
-    RolesListResponse? role,
-    List<INotificationsReaction>? reactions,
-    List<UserLite>? users,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    UserExportableEntities? exportedEntity,
-    String? fileId,
-    String? message,
-    String? errorType, // CherryPick
-    ScheduledNote? draft, // MisskeyIO
-  }) = _PushNotificationBody;
-
+@JsonSerializable()
+class const PushNotificationBody({
+  required final String id,
+  @DateTimeConverter() required final DateTime createdAt,
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final NotificationType? type,
+  final String? noteId,
+  final String? followRequestId,
+  final String? reaction,
+  final int? choice,
+  final String? achievement,
+  final String? body,
+  final String? header,
+  @NullableUriConverter() final Uri? icon,
+  final String? appAccessTokenId,
+  final ChatJoining? invitation,
+  final String? userId,
+  final UserLite? user,
+  final PushNotificationNote? note,
+  final RolesListResponse? role,
+  final List<INotificationsReaction>? reactions,
+  final List<UserLite>? users,
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final UserExportableEntities? exportedEntity,
+  final String? fileId,
+  final String? message,
+  final String? errorType, // CherryPick
+  final ScheduledNote? draft, // MisskeyIO
+}) with _$PushNotificationBody {
   factory fromJson(Map<String, Object?> json) =>
       _$PushNotificationBodyFromJson(json);
+
+  Map<String, dynamic> toJson() => _$PushNotificationBodyToJson(this);
 }
 
 @freezed
-abstract class PushNotificationNote with _$PushNotificationNote {
-  const factory({
-    required String id,
-    @DateTimeConverter() required DateTime createdAt,
-    @NullableDateTimeConverter() DateTime? updatedAt,
-    String? text,
-    required String userId,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    NoteVisibility? visibility,
-    @Default(false) bool localOnly,
-    @Default(0) int renoteCount,
-    @Default(0) int repliesCount,
-    int? reactionCount,
-    @Default({}) Map<String, int> reactions,
-    @EmojisConverter() @Default({}) Map<String, String> reactionEmojis,
-    @EmojisConverter() @Default({}) Map<String, String> emojis,
-    @Default([]) List<String> fileIds,
-    @Default([]) List<DriveFile> files,
-    String? replyId,
-    String? renoteId,
-    String? channelId,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    ReactionAcceptance? reactionAcceptance,
-    @Default([]) List<String> visibleUserIds,
-    @Default([]) List<String> mentions,
-    String? myReaction,
-    NoteChannelInfo? channel,
-    @NullableUriConverter() Uri? uri,
-    @NullableUriConverter() Uri? url,
-    @Default([]) List<String> reactionAndUserPairCache,
-    NotePoll? poll,
-    int? clippedCount,
-  }) = _PushNotificationNote;
-
+@JsonSerializable()
+class const PushNotificationNote({
+  required final String id,
+  @DateTimeConverter() required final DateTime createdAt,
+  @NullableDateTimeConverter() final DateTime? updatedAt,
+  final String? text,
+  required final String userId,
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final NoteVisibility? visibility,
+  final bool localOnly = false,
+  final int renoteCount = 0,
+  final int repliesCount = 0,
+  final int? reactionCount,
+  final Map<String, int> reactions = const {},
+  @EmojisConverter() final Map<String, String> reactionEmojis = const {},
+  @EmojisConverter() final Map<String, String> emojis = const {},
+  final List<String> fileIds = const [],
+  final List<DriveFile> files = const [],
+  final String? replyId,
+  final String? renoteId,
+  final String? channelId,
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final ReactionAcceptance? reactionAcceptance,
+  final List<String> visibleUserIds = const [],
+  final List<String> mentions = const [],
+  final String? myReaction,
+  final NoteChannelInfo? channel,
+  @NullableUriConverter() final Uri? uri,
+  @NullableUriConverter() final Uri? url,
+  final List<String> reactionAndUserPairCache = const [],
+  final NotePoll? poll,
+  final int? clippedCount,
+}) with _$PushNotificationNote {
   factory fromJson(Map<String, Object?> json) =>
       _$PushNotificationNoteFromJson(json);
+
+  Map<String, dynamic> toJson() => _$PushNotificationNoteToJson(this);
 }

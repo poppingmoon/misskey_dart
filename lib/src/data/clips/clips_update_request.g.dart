@@ -6,15 +6,15 @@ part of 'clips_update_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ClipsUpdateRequest _$ClipsUpdateRequestFromJson(Map<String, dynamic> json) =>
-    _ClipsUpdateRequest(
+ClipsUpdateRequest _$ClipsUpdateRequestFromJson(Map<String, dynamic> json) =>
+    ClipsUpdateRequest(
       clipId: json['clipId'] as String,
       name: json['name'] as String,
       isPublic: json['isPublic'] as bool?,
       description: json['description'] as String?,
     );
 
-Map<String, dynamic> _$ClipsUpdateRequestToJson(_ClipsUpdateRequest instance) =>
+Map<String, dynamic> _$ClipsUpdateRequestToJson(ClipsUpdateRequest instance) =>
     <String, dynamic>{
       'clipId': instance.clipId,
       'name': instance.name,

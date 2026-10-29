@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$IPageLikesResponse {
 
- String get id; Page get page;
+
 /// Create a copy of IPageLikesResponse
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $IPageLikesResponseCopyWith<IPageLikesResponse> get copyWith => _$IPageLikesResponseCopyWithImpl<IPageLikesResponse>(this as IPageLikesResponse, _$identity);
 
-  /// Serializes this IPageLikesResponse to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -105,11 +103,10 @@ extension IPageLikesResponsePatterns on IPageLikesResponse {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _IPageLikesResponse value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _IPageLikesResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -127,11 +124,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _IPageLikesResponse value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _IPageLikesResponse():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -148,11 +144,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _IPageLikesResponse value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _IPageLikesResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -169,10 +164,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  Page page)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _IPageLikesResponse() when $default != null:
-return $default(_that.id,_that.page);case _:
+case _:
   return orElse();
 
 }
@@ -190,10 +184,9 @@ return $default(_that.id,_that.page);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  Page page)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _IPageLikesResponse():
-return $default(_that.id,_that.page);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -210,97 +203,14 @@ return $default(_that.id,_that.page);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  Page page)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _IPageLikesResponse() when $default != null:
-return $default(_that.id,_that.page);case _:
+case _:
   return null;
 
 }
 }
 
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _IPageLikesResponse implements IPageLikesResponse {
-  const _IPageLikesResponse({required this.id, required this.page});
-  factory _IPageLikesResponse.fromJson(Map<String, dynamic> json) => _$IPageLikesResponseFromJson(json);
-
-@override final  String id;
-@override final  Page page;
-
-/// Create a copy of IPageLikesResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$IPageLikesResponseCopyWith<_IPageLikesResponse> get copyWith => __$IPageLikesResponseCopyWithImpl<_IPageLikesResponse>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$IPageLikesResponseToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _IPageLikesResponse&&(identical(other.id, id) || other.id == id)&&(identical(other.page, page) || other.page == page));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,id,page);
-}
-
-@override
-String toString() {
-    return 'IPageLikesResponse(id: $id, page: $page)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$IPageLikesResponseCopyWith<$Res> implements $IPageLikesResponseCopyWith<$Res> {
-  factory _$IPageLikesResponseCopyWith(_IPageLikesResponse value, $Res Function(_IPageLikesResponse) _then) = __$IPageLikesResponseCopyWithImpl;
-@override @useResult
-$Res call({
- String id, Page page
-});
-
-
-@override $PageCopyWith<$Res> get page;
-
-}
-/// @nodoc
-class __$IPageLikesResponseCopyWithImpl<$Res>
-    implements _$IPageLikesResponseCopyWith<$Res> {
-  __$IPageLikesResponseCopyWithImpl(this._self, this._then);
-
-  final _IPageLikesResponse _self;
-  final $Res Function(_IPageLikesResponse) _then;
-
-/// Create a copy of IPageLikesResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? page = null,}) {
-  return _then(_IPageLikesResponse(
-id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as String,page: null == page ? _self.page : page // ignore: cast_nullable_to_non_nullable
-as Page,
-  ));
-}
-
-/// Create a copy of IPageLikesResponse
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$PageCopyWith<$Res> get page {
-  
-  return $PageCopyWith<$Res>(_self.page, (value) {
-    return _then(_self.copyWith(page: value));
-  });
-}
 }
 
 // dart format on

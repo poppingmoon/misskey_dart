@@ -4,10 +4,13 @@ part 'clips_remove_note_request.freezed.dart';
 part 'clips_remove_note_request.g.dart';
 
 @freezed
-abstract class ClipsRemoveNoteRequest with _$ClipsRemoveNoteRequest {
-  const factory({required String clipId, required String noteId}) =
-      _ClipsRemoveNoteRequest;
-
+@JsonSerializable()
+class const ClipsRemoveNoteRequest({
+  required final String clipId,
+  required final String noteId,
+}) with _$ClipsRemoveNoteRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$ClipsRemoveNoteRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ClipsRemoveNoteRequestToJson(this);
 }

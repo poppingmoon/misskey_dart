@@ -6,9 +6,9 @@ part of 'notes_local_timeline_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_NotesLocalTimelineRequest _$NotesLocalTimelineRequestFromJson(
+NotesLocalTimelineRequest _$NotesLocalTimelineRequestFromJson(
   Map<String, dynamic> json,
-) => _NotesLocalTimelineRequest(
+) => NotesLocalTimelineRequest(
   withFiles: json['withFiles'] as bool?,
   withRenotes: json['withRenotes'] as bool?,
   withReplies: json['withReplies'] as bool?,
@@ -31,7 +31,7 @@ _NotesLocalTimelineRequest _$NotesLocalTimelineRequestFromJson(
 );
 
 Map<String, dynamic> _$NotesLocalTimelineRequestToJson(
-  _NotesLocalTimelineRequest instance,
+  NotesLocalTimelineRequest instance,
 ) => <String, dynamic>{
   'withFiles': instance.withFiles,
   'withRenotes': instance.withRenotes,

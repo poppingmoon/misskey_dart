@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$UsersListsPullRequest {
 
- String get listId; String get userId;
+
 /// Create a copy of UsersListsPullRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $UsersListsPullRequestCopyWith<UsersListsPullRequest> get copyWith => _$UsersListsPullRequestCopyWithImpl<UsersListsPullRequest>(this as UsersListsPullRequest, _$identity);
 
-  /// Serializes this UsersListsPullRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -96,11 +94,10 @@ extension UsersListsPullRequestPatterns on UsersListsPullRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UsersListsPullRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _UsersListsPullRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -118,11 +115,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UsersListsPullRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UsersListsPullRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -139,11 +135,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UsersListsPullRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UsersListsPullRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -160,10 +155,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String listId,  String userId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _UsersListsPullRequest() when $default != null:
-return $default(_that.listId,_that.userId);case _:
+case _:
   return orElse();
 
 }
@@ -181,10 +175,9 @@ return $default(_that.listId,_that.userId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String listId,  String userId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UsersListsPullRequest():
-return $default(_that.listId,_that.userId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -201,87 +194,13 @@ return $default(_that.listId,_that.userId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String listId,  String userId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UsersListsPullRequest() when $default != null:
-return $default(_that.listId,_that.userId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _UsersListsPullRequest implements UsersListsPullRequest {
-  const _UsersListsPullRequest({required this.listId, required this.userId});
-  factory _UsersListsPullRequest.fromJson(Map<String, dynamic> json) => _$UsersListsPullRequestFromJson(json);
-
-@override final  String listId;
-@override final  String userId;
-
-/// Create a copy of UsersListsPullRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$UsersListsPullRequestCopyWith<_UsersListsPullRequest> get copyWith => __$UsersListsPullRequestCopyWithImpl<_UsersListsPullRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$UsersListsPullRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersListsPullRequest&&(identical(other.listId, listId) || other.listId == listId)&&(identical(other.userId, userId) || other.userId == userId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,listId,userId);
-}
-
-@override
-String toString() {
-    return 'UsersListsPullRequest(listId: $listId, userId: $userId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$UsersListsPullRequestCopyWith<$Res> implements $UsersListsPullRequestCopyWith<$Res> {
-  factory _$UsersListsPullRequestCopyWith(_UsersListsPullRequest value, $Res Function(_UsersListsPullRequest) _then) = __$UsersListsPullRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String listId, String userId
-});
-
-
-
-
-}
-/// @nodoc
-class __$UsersListsPullRequestCopyWithImpl<$Res>
-    implements _$UsersListsPullRequestCopyWith<$Res> {
-  __$UsersListsPullRequestCopyWithImpl(this._self, this._then);
-
-  final _UsersListsPullRequest _self;
-  final $Res Function(_UsersListsPullRequest) _then;
-
-/// Create a copy of UsersListsPullRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? listId = null,Object? userId = null,}) {
-  return _then(_UsersListsPullRequest(
-listId: null == listId ? _self.listId : listId // ignore: cast_nullable_to_non_nullable
-as String,userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

@@ -6,9 +6,9 @@ part of 'federation_show_instance_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_FederationShowInstanceRequest _$FederationShowInstanceRequestFromJson(
+FederationShowInstanceRequest _$FederationShowInstanceRequestFromJson(
   Map<String, dynamic> json,
-) => _FederationShowInstanceRequest(
+) => FederationShowInstanceRequest(
   host: json['host'] as String,
   blocked: json['blocked'] as bool?,
   notResponding: json['notResponding'] as bool?,
@@ -23,7 +23,7 @@ _FederationShowInstanceRequest _$FederationShowInstanceRequestFromJson(
 );
 
 Map<String, dynamic> _$FederationShowInstanceRequestToJson(
-  _FederationShowInstanceRequest instance,
+  FederationShowInstanceRequest instance,
 ) => <String, dynamic>{
   'host': instance.host,
   'blocked': instance.blocked,

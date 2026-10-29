@@ -6,8 +6,8 @@ part of 'flash_my_likes_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_FlashMyLikesRequest _$FlashMyLikesRequestFromJson(Map<String, dynamic> json) =>
-    _FlashMyLikesRequest(
+FlashMyLikesRequest _$FlashMyLikesRequestFromJson(Map<String, dynamic> json) =>
+    FlashMyLikesRequest(
       limit: (json['limit'] as num?)?.toInt(),
       sinceId: json['sinceId'] as String?,
       untilId: json['untilId'] as String?,
@@ -22,7 +22,7 @@ _FlashMyLikesRequest _$FlashMyLikesRequestFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$FlashMyLikesRequestToJson(
-  _FlashMyLikesRequest instance,
+  FlashMyLikesRequest instance,
 ) => <String, dynamic>{
   'limit': instance.limit,
   'sinceId': instance.sinceId,

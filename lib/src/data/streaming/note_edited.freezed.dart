@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$NoteEdited {
 
- String? get cw; String? get text;
+
 /// Create a copy of NoteEdited
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $NoteEditedCopyWith<NoteEdited> get copyWith => _$NoteEditedCopyWithImpl<NoteEdited>(this as NoteEdited, _$identity);
 
-  /// Serializes this NoteEdited to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -96,11 +94,10 @@ extension NoteEditedPatterns on NoteEdited {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _NoteEdited value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _NoteEdited() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -118,11 +115,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _NoteEdited value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _NoteEdited():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -139,11 +135,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _NoteEdited value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _NoteEdited() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -160,10 +155,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? cw,  String? text)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _NoteEdited() when $default != null:
-return $default(_that.cw,_that.text);case _:
+case _:
   return orElse();
 
 }
@@ -181,10 +175,9 @@ return $default(_that.cw,_that.text);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? cw,  String? text)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _NoteEdited():
-return $default(_that.cw,_that.text);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -201,87 +194,13 @@ return $default(_that.cw,_that.text);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? cw,  String? text)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _NoteEdited() when $default != null:
-return $default(_that.cw,_that.text);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _NoteEdited implements NoteEdited {
-  const _NoteEdited({this.cw, this.text});
-  factory _NoteEdited.fromJson(Map<String, dynamic> json) => _$NoteEditedFromJson(json);
-
-@override final  String? cw;
-@override final  String? text;
-
-/// Create a copy of NoteEdited
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$NoteEditedCopyWith<_NoteEdited> get copyWith => __$NoteEditedCopyWithImpl<_NoteEdited>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$NoteEditedToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NoteEdited&&(identical(other.cw, cw) || other.cw == cw)&&(identical(other.text, text) || other.text == text));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,cw,text);
-}
-
-@override
-String toString() {
-    return 'NoteEdited(cw: $cw, text: $text)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$NoteEditedCopyWith<$Res> implements $NoteEditedCopyWith<$Res> {
-  factory _$NoteEditedCopyWith(_NoteEdited value, $Res Function(_NoteEdited) _then) = __$NoteEditedCopyWithImpl;
-@override @useResult
-$Res call({
- String? cw, String? text
-});
-
-
-
-
-}
-/// @nodoc
-class __$NoteEditedCopyWithImpl<$Res>
-    implements _$NoteEditedCopyWith<$Res> {
-  __$NoteEditedCopyWithImpl(this._self, this._then);
-
-  final _NoteEdited _self;
-  final $Res Function(_NoteEdited) _then;
-
-/// Create a copy of NoteEdited
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? cw = freezed,Object? text = freezed,}) {
-  return _then(_NoteEdited(
-cw: freezed == cw ? _self.cw : cw // ignore: cast_nullable_to_non_nullable
-as String?,text: freezed == text ? _self.text : text // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
 
 }
 

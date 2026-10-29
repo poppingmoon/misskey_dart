@@ -6,8 +6,8 @@ part of 'pages_unlike_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_PagesUnlikeRequest _$PagesUnlikeRequestFromJson(Map<String, dynamic> json) =>
-    _PagesUnlikeRequest(pageId: json['pageId'] as String);
+PagesUnlikeRequest _$PagesUnlikeRequestFromJson(Map<String, dynamic> json) =>
+    PagesUnlikeRequest(pageId: json['pageId'] as String);
 
-Map<String, dynamic> _$PagesUnlikeRequestToJson(_PagesUnlikeRequest instance) =>
+Map<String, dynamic> _$PagesUnlikeRequestToJson(PagesUnlikeRequest instance) =>
     <String, dynamic>{'pageId': instance.pageId};

@@ -6,15 +6,15 @@ part of 'chat_messages_unreact_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ChatMessagesUnreactRequest _$ChatMessagesUnreactRequestFromJson(
+ChatMessagesUnreactRequest _$ChatMessagesUnreactRequestFromJson(
   Map<String, dynamic> json,
-) => _ChatMessagesUnreactRequest(
+) => ChatMessagesUnreactRequest(
   messageId: json['messageId'] as String,
   reaction: json['reaction'] as String,
 );
 
 Map<String, dynamic> _$ChatMessagesUnreactRequestToJson(
-  _ChatMessagesUnreactRequest instance,
+  ChatMessagesUnreactRequest instance,
 ) => <String, dynamic>{
   'messageId': instance.messageId,
   'reaction': instance.reaction,

@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ChatRoomsUpdateRequest {
 
- String get roomId; String? get name; String? get description;
+
 /// Create a copy of ChatRoomsUpdateRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $ChatRoomsUpdateRequestCopyWith<ChatRoomsUpdateRequest> get copyWith => _$ChatRoomsUpdateRequestCopyWithImpl<ChatRoomsUpdateRequest>(this as ChatRoomsUpdateRequest, _$identity);
 
-  /// Serializes this ChatRoomsUpdateRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -97,11 +95,10 @@ extension ChatRoomsUpdateRequestPatterns on ChatRoomsUpdateRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ChatRoomsUpdateRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _ChatRoomsUpdateRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -119,11 +116,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ChatRoomsUpdateRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChatRoomsUpdateRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -140,11 +136,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ChatRoomsUpdateRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChatRoomsUpdateRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -161,10 +156,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String roomId,  String? name,  String? description)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _ChatRoomsUpdateRequest() when $default != null:
-return $default(_that.roomId,_that.name,_that.description);case _:
+case _:
   return orElse();
 
 }
@@ -182,10 +176,9 @@ return $default(_that.roomId,_that.name,_that.description);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String roomId,  String? name,  String? description)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChatRoomsUpdateRequest():
-return $default(_that.roomId,_that.name,_that.description);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -202,89 +195,13 @@ return $default(_that.roomId,_that.name,_that.description);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String roomId,  String? name,  String? description)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChatRoomsUpdateRequest() when $default != null:
-return $default(_that.roomId,_that.name,_that.description);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _ChatRoomsUpdateRequest implements ChatRoomsUpdateRequest {
-  const _ChatRoomsUpdateRequest({required this.roomId, this.name, this.description});
-  factory _ChatRoomsUpdateRequest.fromJson(Map<String, dynamic> json) => _$ChatRoomsUpdateRequestFromJson(json);
-
-@override final  String roomId;
-@override final  String? name;
-@override final  String? description;
-
-/// Create a copy of ChatRoomsUpdateRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ChatRoomsUpdateRequestCopyWith<_ChatRoomsUpdateRequest> get copyWith => __$ChatRoomsUpdateRequestCopyWithImpl<_ChatRoomsUpdateRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$ChatRoomsUpdateRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatRoomsUpdateRequest&&(identical(other.roomId, roomId) || other.roomId == roomId)&&(identical(other.name, name) || other.name == name)&&(identical(other.description, description) || other.description == description));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,roomId,name,description);
-}
-
-@override
-String toString() {
-    return 'ChatRoomsUpdateRequest(roomId: $roomId, name: $name, description: $description)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ChatRoomsUpdateRequestCopyWith<$Res> implements $ChatRoomsUpdateRequestCopyWith<$Res> {
-  factory _$ChatRoomsUpdateRequestCopyWith(_ChatRoomsUpdateRequest value, $Res Function(_ChatRoomsUpdateRequest) _then) = __$ChatRoomsUpdateRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String roomId, String? name, String? description
-});
-
-
-
-
-}
-/// @nodoc
-class __$ChatRoomsUpdateRequestCopyWithImpl<$Res>
-    implements _$ChatRoomsUpdateRequestCopyWith<$Res> {
-  __$ChatRoomsUpdateRequestCopyWithImpl(this._self, this._then);
-
-  final _ChatRoomsUpdateRequest _self;
-  final $Res Function(_ChatRoomsUpdateRequest) _then;
-
-/// Create a copy of ChatRoomsUpdateRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? roomId = null,Object? name = freezed,Object? description = freezed,}) {
-  return _then(_ChatRoomsUpdateRequest(
-roomId: null == roomId ? _self.roomId : roomId // ignore: cast_nullable_to_non_nullable
-as String,name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String?,description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
 
 }
 

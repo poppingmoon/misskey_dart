@@ -5,15 +5,16 @@ part 'i_gallery_posts_request.freezed.dart';
 part 'i_gallery_posts_request.g.dart';
 
 @freezed
-abstract class IGalleryPostsRequest with _$IGalleryPostsRequest {
-  const factory({
-    int? limit,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-  }) = _IGalleryPostsRequest;
-
+@JsonSerializable()
+class const IGalleryPostsRequest({
+  final int? limit,
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
+}) with _$IGalleryPostsRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$IGalleryPostsRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$IGalleryPostsRequestToJson(this);
 }

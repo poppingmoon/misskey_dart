@@ -6,17 +6,18 @@ part 'notes_mentions_request.freezed.dart';
 part 'notes_mentions_request.g.dart';
 
 @freezed
-abstract class NotesMentionsRequest with _$NotesMentionsRequest {
-  const factory({
-    bool? following,
-    int? limit,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-    NoteVisibility? visibility,
-  }) = _NotesMentionsRequest;
-
+@JsonSerializable()
+class const NotesMentionsRequest({
+  final bool? following,
+  final int? limit,
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
+  final NoteVisibility? visibility,
+}) with _$NotesMentionsRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$NotesMentionsRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NotesMentionsRequestToJson(this);
 }

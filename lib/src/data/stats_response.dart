@@ -4,17 +4,18 @@ part 'stats_response.freezed.dart';
 part 'stats_response.g.dart';
 
 @freezed
-abstract class StatsResponse with _$StatsResponse {
-  const factory({
-    int? notesCount,
-    int? originalNotesCount,
-    int? usersCount,
-    int? originalUsersCount,
-    int? reactionsCount,
-    int? instances,
-    int? driveUsageLocal,
-    int? driveUsageRemote,
-  }) = _StatsResponse;
-
+@JsonSerializable()
+class const StatsResponse({
+  final int? notesCount,
+  final int? originalNotesCount,
+  final int? usersCount,
+  final int? originalUsersCount,
+  final int? reactionsCount,
+  final int? instances,
+  final int? driveUsageLocal,
+  final int? driveUsageRemote,
+}) with _$StatsResponse {
   factory fromJson(Map<String, dynamic> json) => _$StatsResponseFromJson(json);
+
+  Map<String, dynamic> toJson() => _$StatsResponseToJson(this);
 }

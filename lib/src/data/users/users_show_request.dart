@@ -4,29 +4,33 @@ part 'users_show_request.freezed.dart';
 part 'users_show_request.g.dart';
 
 @freezed
-abstract class UsersShowRequest with _$UsersShowRequest {
-  const factory({required String userId}) = _UsersShowRequest;
-
+@JsonSerializable()
+class const UsersShowRequest({required final String userId})
+    with _$UsersShowRequest {
   factory fromJson(Map<String, Object?> json) =>
       _$UsersShowRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UsersShowRequestToJson(this);
 }
 
 @freezed
-abstract class UsersShowByIdsRequest with _$UsersShowByIdsRequest {
-  const factory({required List<String> userIds}) = _UsersShowByIdsRequest;
-
+@JsonSerializable()
+class const UsersShowByIdsRequest({required final List<String> userIds})
+    with _$UsersShowByIdsRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$UsersShowByIdsRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UsersShowByIdsRequestToJson(this);
 }
 
 @freezed
-abstract class UsersShowByUserNameRequest with _$UsersShowByUserNameRequest {
-  const factory({
-    // ignore: invalid_annotation_target
-    @JsonKey(name: "username") required String userName,
-    String? host,
-  }) = _UsersShowByUserNameRequest;
-
+@JsonSerializable()
+class const UsersShowByUserNameRequest({
+  @JsonKey(name: "username") required final String userName,
+  final String? host,
+}) with _$UsersShowByUserNameRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$UsersShowByUserNameRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UsersShowByUserNameRequestToJson(this);
 }

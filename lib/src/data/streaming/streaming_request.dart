@@ -6,32 +6,34 @@ part 'streaming_request.freezed.dart';
 part 'streaming_request.g.dart';
 
 @freezed
-abstract class StreamingRequest with _$StreamingRequest {
-  const factory({
-    @StreamingRequestTypeJsonConverter() required StreamingRequestType type,
-    required StreamingRequestBody body,
-  }) = _StreamingRequest;
-
+@JsonSerializable()
+class const StreamingRequest({
+  @StreamingRequestTypeJsonConverter() required final StreamingRequestType type,
+  required final StreamingRequestBody body,
+}) with _$StreamingRequest {
   factory fromJson(Map<String, Object?> json) =>
       _$StreamingRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$StreamingRequestToJson(this);
 }
 
 @freezed
-abstract class StreamingRequestBody with _$StreamingRequestBody {
-  const factory({
-    @ChannelJsonConverter() Channel? channel,
-    required String id,
-    Map<String, dynamic>? params,
-    String? type,
+@JsonSerializable()
+class const StreamingRequestBody({
+  @ChannelJsonConverter() final Channel? channel,
+  required final String id,
+  final Map<String, dynamic>? params,
+  final String? type,
 
-    /// チャンネルへ送るメッセージの中身。
-    ///
-    /// Map とは限らない。リバーシの `ready` は真偽値をそのまま送る
-    /// （サーバーは `typeof body !== 'boolean'` で弾く）ので、Map に
-    /// 縛ると送れなくなる。
-    Object? body,
-  }) = _StreamingRequestBody;
-
+  /// チャンネルへ送るメッセージの中身。
+  ///
+  /// Map とは限らない。リバーシの `ready` は真偽値をそのまま送る
+  /// （サーバーは `typeof body !== 'boolean'` で弾く）ので、Map に
+  /// 縛ると送れなくなる。
+  final Object? body,
+}) with _$StreamingRequestBody {
   factory fromJson(Map<String, Object?> json) =>
       _$StreamingRequestBodyFromJson(json);
+
+  Map<String, dynamic> toJson() => _$StreamingRequestBodyToJson(this);
 }

@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ChannelEvent {
 
- String get id;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) ChannelEventType? get type; dynamic get body;
+
 /// Create a copy of ChannelEvent
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $ChannelEventCopyWith<ChannelEvent> get copyWith => _$ChannelEventCopyWithImpl<ChannelEvent>(this as ChannelEvent, _$identity);
 
-  /// Serializes this ChannelEvent to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -97,11 +95,10 @@ extension ChannelEventPatterns on ChannelEvent {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ChannelEvent value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _ChannelEvent() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -119,11 +116,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ChannelEvent value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChannelEvent():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -140,11 +136,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ChannelEvent value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChannelEvent() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -161,10 +156,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChannelEventType? type,  dynamic body)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _ChannelEvent() when $default != null:
-return $default(_that.id,_that.type,_that.body);case _:
+case _:
   return orElse();
 
 }
@@ -182,10 +176,9 @@ return $default(_that.id,_that.type,_that.body);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChannelEventType? type,  dynamic body)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChannelEvent():
-return $default(_that.id,_that.type,_that.body);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -202,89 +195,13 @@ return $default(_that.id,_that.type,_that.body);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChannelEventType? type,  dynamic body)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChannelEvent() when $default != null:
-return $default(_that.id,_that.type,_that.body);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _ChannelEvent implements ChannelEvent {
-  const _ChannelEvent({required this.id, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.type, required this.body});
-  factory _ChannelEvent.fromJson(Map<String, dynamic> json) => _$ChannelEventFromJson(json);
-
-@override final  String id;
-@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  ChannelEventType? type;
-@override final  dynamic body;
-
-/// Create a copy of ChannelEvent
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ChannelEventCopyWith<_ChannelEvent> get copyWith => __$ChannelEventCopyWithImpl<_ChannelEvent>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$ChannelEventToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChannelEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.type, type) || other.type == type)&&const DeepCollectionEquality().equals(other.body, body));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,id,type,const DeepCollectionEquality().hash(body));
-}
-
-@override
-String toString() {
-    return 'ChannelEvent(id: $id, type: $type, body: $body)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ChannelEventCopyWith<$Res> implements $ChannelEventCopyWith<$Res> {
-  factory _$ChannelEventCopyWith(_ChannelEvent value, $Res Function(_ChannelEvent) _then) = __$ChannelEventCopyWithImpl;
-@override @useResult
-$Res call({
- String id,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) ChannelEventType? type, dynamic body
-});
-
-
-
-
-}
-/// @nodoc
-class __$ChannelEventCopyWithImpl<$Res>
-    implements _$ChannelEventCopyWith<$Res> {
-  __$ChannelEventCopyWithImpl(this._self, this._then);
-
-  final _ChannelEvent _self;
-  final $Res Function(_ChannelEvent) _then;
-
-/// Create a copy of ChannelEvent
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? type = freezed,Object? body = freezed,}) {
-  return _then(_ChannelEvent(
-id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as String,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
-as ChannelEventType?,body: freezed == body ? _self.body : body // ignore: cast_nullable_to_non_nullable
-as dynamic,
-  ));
-}
-
 
 }
 

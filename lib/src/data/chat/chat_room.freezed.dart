@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ChatRoom {
 
- String get id;@DateTimeConverter() DateTime get createdAt; String get ownerId; UserLite get owner; String get name; String get description; bool? get isMuted;
+
 /// Create a copy of ChatRoom
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $ChatRoomCopyWith<ChatRoom> get copyWith => _$ChatRoomCopyWithImpl<ChatRoom>(this as ChatRoom, _$identity);
 
-  /// Serializes this ChatRoom to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -110,11 +108,10 @@ extension ChatRoomPatterns on ChatRoom {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ChatRoom value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _ChatRoom() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -132,11 +129,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ChatRoom value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChatRoom():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -153,11 +149,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ChatRoom value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChatRoom() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -174,10 +169,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt,  String ownerId,  UserLite owner,  String name,  String description,  bool? isMuted)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _ChatRoom() when $default != null:
-return $default(_that.id,_that.createdAt,_that.ownerId,_that.owner,_that.name,_that.description,_that.isMuted);case _:
+case _:
   return orElse();
 
 }
@@ -195,10 +189,9 @@ return $default(_that.id,_that.createdAt,_that.ownerId,_that.owner,_that.name,_t
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt,  String ownerId,  UserLite owner,  String name,  String description,  bool? isMuted)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChatRoom():
-return $default(_that.id,_that.createdAt,_that.ownerId,_that.owner,_that.name,_that.description,_that.isMuted);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -215,107 +208,14 @@ return $default(_that.id,_that.createdAt,_that.ownerId,_that.owner,_that.name,_t
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id, @DateTimeConverter()  DateTime createdAt,  String ownerId,  UserLite owner,  String name,  String description,  bool? isMuted)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChatRoom() when $default != null:
-return $default(_that.id,_that.createdAt,_that.ownerId,_that.owner,_that.name,_that.description,_that.isMuted);case _:
+case _:
   return null;
 
 }
 }
 
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _ChatRoom implements ChatRoom {
-  const _ChatRoom({required this.id, @DateTimeConverter() required this.createdAt, required this.ownerId, required this.owner, required this.name, required this.description, this.isMuted});
-  factory _ChatRoom.fromJson(Map<String, dynamic> json) => _$ChatRoomFromJson(json);
-
-@override final  String id;
-@override@DateTimeConverter() final  DateTime createdAt;
-@override final  String ownerId;
-@override final  UserLite owner;
-@override final  String name;
-@override final  String description;
-@override final  bool? isMuted;
-
-/// Create a copy of ChatRoom
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ChatRoomCopyWith<_ChatRoom> get copyWith => __$ChatRoomCopyWithImpl<_ChatRoom>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$ChatRoomToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatRoom&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.ownerId, ownerId) || other.ownerId == ownerId)&&(identical(other.owner, owner) || other.owner == owner)&&(identical(other.name, name) || other.name == name)&&(identical(other.description, description) || other.description == description)&&(identical(other.isMuted, isMuted) || other.isMuted == isMuted));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,id,createdAt,ownerId,owner,name,description,isMuted);
-}
-
-@override
-String toString() {
-    return 'ChatRoom(id: $id, createdAt: $createdAt, ownerId: $ownerId, owner: $owner, name: $name, description: $description, isMuted: $isMuted)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ChatRoomCopyWith<$Res> implements $ChatRoomCopyWith<$Res> {
-  factory _$ChatRoomCopyWith(_ChatRoom value, $Res Function(_ChatRoom) _then) = __$ChatRoomCopyWithImpl;
-@override @useResult
-$Res call({
- String id,@DateTimeConverter() DateTime createdAt, String ownerId, UserLite owner, String name, String description, bool? isMuted
-});
-
-
-@override $UserLiteCopyWith<$Res> get owner;
-
-}
-/// @nodoc
-class __$ChatRoomCopyWithImpl<$Res>
-    implements _$ChatRoomCopyWith<$Res> {
-  __$ChatRoomCopyWithImpl(this._self, this._then);
-
-  final _ChatRoom _self;
-  final $Res Function(_ChatRoom) _then;
-
-/// Create a copy of ChatRoom
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? createdAt = null,Object? ownerId = null,Object? owner = null,Object? name = null,Object? description = null,Object? isMuted = freezed,}) {
-  return _then(_ChatRoom(
-id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
-as DateTime,ownerId: null == ownerId ? _self.ownerId : ownerId // ignore: cast_nullable_to_non_nullable
-as String,owner: null == owner ? _self.owner : owner // ignore: cast_nullable_to_non_nullable
-as UserLite,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String,description: null == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
-as String,isMuted: freezed == isMuted ? _self.isMuted : isMuted // ignore: cast_nullable_to_non_nullable
-as bool?,
-  ));
-}
-
-/// Create a copy of ChatRoom
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$UserLiteCopyWith<$Res> get owner {
-  
-  return $UserLiteCopyWith<$Res>(_self.owner, (value) {
-    return _then(_self.copyWith(owner: value));
-  });
-}
 }
 
 // dart format on

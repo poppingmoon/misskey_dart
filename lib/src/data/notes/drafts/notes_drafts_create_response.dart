@@ -5,9 +5,11 @@ part 'notes_drafts_create_response.freezed.dart';
 part 'notes_drafts_create_response.g.dart';
 
 @freezed
-abstract class NotesDraftsCreateResponse with _$NotesDraftsCreateResponse {
-  const factory({required NoteDraft createdDraft}) = _NotesDraftsCreateResponse;
-
+@JsonSerializable()
+class const NotesDraftsCreateResponse({required final NoteDraft createdDraft})
+    with _$NotesDraftsCreateResponse {
   factory fromJson(Map<String, Object?> json) =>
       _$NotesDraftsCreateResponseFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NotesDraftsCreateResponseToJson(this);
 }

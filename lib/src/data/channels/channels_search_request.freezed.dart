@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ChannelsSearchRequest {
 
- String get query; ChannelSearchType? get type; String? get sinceId; String? get untilId;@EpocTimeDateTimeConverter() DateTime? get sinceDate;@EpocTimeDateTimeConverter() DateTime? get untilDate;@Assert('limit > 0') int? get limit;
+
 /// Create a copy of ChannelsSearchRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $ChannelsSearchRequestCopyWith<ChannelsSearchRequest> get copyWith => _$ChannelsSearchRequestCopyWithImpl<ChannelsSearchRequest>(this as ChannelsSearchRequest, _$identity);
 
-  /// Serializes this ChannelsSearchRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -101,11 +99,10 @@ extension ChannelsSearchRequestPatterns on ChannelsSearchRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ChannelsSearchRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _ChannelsSearchRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -123,11 +120,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ChannelsSearchRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChannelsSearchRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -144,11 +140,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ChannelsSearchRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChannelsSearchRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -165,10 +160,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String query,  ChannelSearchType? type,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate, @Assert('limit > 0')  int? limit)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _ChannelsSearchRequest() when $default != null:
-return $default(_that.query,_that.type,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.limit);case _:
+case _:
   return orElse();
 
 }
@@ -186,10 +180,9 @@ return $default(_that.query,_that.type,_that.sinceId,_that.untilId,_that.sinceDa
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String query,  ChannelSearchType? type,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate, @Assert('limit > 0')  int? limit)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChannelsSearchRequest():
-return $default(_that.query,_that.type,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.limit);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -206,97 +199,13 @@ return $default(_that.query,_that.type,_that.sinceId,_that.untilId,_that.sinceDa
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String query,  ChannelSearchType? type,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate, @Assert('limit > 0')  int? limit)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChannelsSearchRequest() when $default != null:
-return $default(_that.query,_that.type,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.limit);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _ChannelsSearchRequest implements ChannelsSearchRequest {
-  const _ChannelsSearchRequest({required this.query, this.type, this.sinceId, this.untilId, @EpocTimeDateTimeConverter() this.sinceDate, @EpocTimeDateTimeConverter() this.untilDate, @Assert('limit > 0') this.limit});
-  factory _ChannelsSearchRequest.fromJson(Map<String, dynamic> json) => _$ChannelsSearchRequestFromJson(json);
-
-@override final  String query;
-@override final  ChannelSearchType? type;
-@override final  String? sinceId;
-@override final  String? untilId;
-@override@EpocTimeDateTimeConverter() final  DateTime? sinceDate;
-@override@EpocTimeDateTimeConverter() final  DateTime? untilDate;
-@override@Assert('limit > 0') final  int? limit;
-
-/// Create a copy of ChannelsSearchRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ChannelsSearchRequestCopyWith<_ChannelsSearchRequest> get copyWith => __$ChannelsSearchRequestCopyWithImpl<_ChannelsSearchRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$ChannelsSearchRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChannelsSearchRequest&&(identical(other.query, query) || other.query == query)&&(identical(other.type, type) || other.type == type)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.limit, limit) || other.limit == limit));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,query,type,sinceId,untilId,sinceDate,untilDate,limit);
-}
-
-@override
-String toString() {
-    return 'ChannelsSearchRequest(query: $query, type: $type, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, limit: $limit)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ChannelsSearchRequestCopyWith<$Res> implements $ChannelsSearchRequestCopyWith<$Res> {
-  factory _$ChannelsSearchRequestCopyWith(_ChannelsSearchRequest value, $Res Function(_ChannelsSearchRequest) _then) = __$ChannelsSearchRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String query, ChannelSearchType? type, String? sinceId, String? untilId,@EpocTimeDateTimeConverter() DateTime? sinceDate,@EpocTimeDateTimeConverter() DateTime? untilDate,@Assert('limit > 0') int? limit
-});
-
-
-
-
-}
-/// @nodoc
-class __$ChannelsSearchRequestCopyWithImpl<$Res>
-    implements _$ChannelsSearchRequestCopyWith<$Res> {
-  __$ChannelsSearchRequestCopyWithImpl(this._self, this._then);
-
-  final _ChannelsSearchRequest _self;
-  final $Res Function(_ChannelsSearchRequest) _then;
-
-/// Create a copy of ChannelsSearchRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? query = null,Object? type = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,Object? limit = freezed,}) {
-  return _then(_ChannelsSearchRequest(
-query: null == query ? _self.query : query // ignore: cast_nullable_to_non_nullable
-as String,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
-as ChannelSearchType?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
-as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
-as String?,sinceDate: freezed == sinceDate ? _self.sinceDate : sinceDate // ignore: cast_nullable_to_non_nullable
-as DateTime?,untilDate: freezed == untilDate ? _self.untilDate : untilDate // ignore: cast_nullable_to_non_nullable
-as DateTime?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,
-  ));
-}
-
 
 }
 

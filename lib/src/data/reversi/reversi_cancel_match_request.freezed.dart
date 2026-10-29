@@ -16,16 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ReversiCancelMatchRequest {
 
-/// 招待を取り消す相手。null なら誰でもよいマッチングの取り消し。
- String? get userId;
+
 /// Create a copy of ReversiCancelMatchRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $ReversiCancelMatchRequestCopyWith<ReversiCancelMatchRequest> get copyWith => _$ReversiCancelMatchRequestCopyWithImpl<ReversiCancelMatchRequest>(this as ReversiCancelMatchRequest, _$identity);
 
-  /// Serializes this ReversiCancelMatchRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -96,11 +93,10 @@ extension ReversiCancelMatchRequestPatterns on ReversiCancelMatchRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ReversiCancelMatchRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _ReversiCancelMatchRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -118,11 +114,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ReversiCancelMatchRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ReversiCancelMatchRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -139,11 +134,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ReversiCancelMatchRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ReversiCancelMatchRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -160,10 +154,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? userId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _ReversiCancelMatchRequest() when $default != null:
-return $default(_that.userId);case _:
+case _:
   return orElse();
 
 }
@@ -181,10 +174,9 @@ return $default(_that.userId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? userId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ReversiCancelMatchRequest():
-return $default(_that.userId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -201,86 +193,13 @@ return $default(_that.userId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? userId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ReversiCancelMatchRequest() when $default != null:
-return $default(_that.userId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _ReversiCancelMatchRequest implements ReversiCancelMatchRequest {
-  const _ReversiCancelMatchRequest({this.userId});
-  factory _ReversiCancelMatchRequest.fromJson(Map<String, dynamic> json) => _$ReversiCancelMatchRequestFromJson(json);
-
-/// 招待を取り消す相手。null なら誰でもよいマッチングの取り消し。
-@override final  String? userId;
-
-/// Create a copy of ReversiCancelMatchRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ReversiCancelMatchRequestCopyWith<_ReversiCancelMatchRequest> get copyWith => __$ReversiCancelMatchRequestCopyWithImpl<_ReversiCancelMatchRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$ReversiCancelMatchRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ReversiCancelMatchRequest&&(identical(other.userId, userId) || other.userId == userId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,userId);
-}
-
-@override
-String toString() {
-    return 'ReversiCancelMatchRequest(userId: $userId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ReversiCancelMatchRequestCopyWith<$Res> implements $ReversiCancelMatchRequestCopyWith<$Res> {
-  factory _$ReversiCancelMatchRequestCopyWith(_ReversiCancelMatchRequest value, $Res Function(_ReversiCancelMatchRequest) _then) = __$ReversiCancelMatchRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String? userId
-});
-
-
-
-
-}
-/// @nodoc
-class __$ReversiCancelMatchRequestCopyWithImpl<$Res>
-    implements _$ReversiCancelMatchRequestCopyWith<$Res> {
-  __$ReversiCancelMatchRequestCopyWithImpl(this._self, this._then);
-
-  final _ReversiCancelMatchRequest _self;
-  final $Res Function(_ReversiCancelMatchRequest) _then;
-
-/// Create a copy of ReversiCancelMatchRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? userId = freezed,}) {
-  return _then(_ReversiCancelMatchRequest(
-userId: freezed == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
 
 }
 

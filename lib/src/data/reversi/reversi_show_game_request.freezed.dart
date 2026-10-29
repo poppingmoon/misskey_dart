@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ReversiShowGameRequest {
 
- String get gameId;
+
 /// Create a copy of ReversiShowGameRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $ReversiShowGameRequestCopyWith<ReversiShowGameRequest> get copyWith => _$ReversiShowGameRequestCopyWithImpl<ReversiShowGameRequest>(this as ReversiShowGameRequest, _$identity);
 
-  /// Serializes this ReversiShowGameRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -95,11 +93,10 @@ extension ReversiShowGameRequestPatterns on ReversiShowGameRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ReversiShowGameRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _ReversiShowGameRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -117,11 +114,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ReversiShowGameRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ReversiShowGameRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -138,11 +134,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ReversiShowGameRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ReversiShowGameRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -159,10 +154,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String gameId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _ReversiShowGameRequest() when $default != null:
-return $default(_that.gameId);case _:
+case _:
   return orElse();
 
 }
@@ -180,10 +174,9 @@ return $default(_that.gameId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String gameId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ReversiShowGameRequest():
-return $default(_that.gameId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -200,85 +193,13 @@ return $default(_that.gameId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String gameId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ReversiShowGameRequest() when $default != null:
-return $default(_that.gameId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _ReversiShowGameRequest implements ReversiShowGameRequest {
-  const _ReversiShowGameRequest({required this.gameId});
-  factory _ReversiShowGameRequest.fromJson(Map<String, dynamic> json) => _$ReversiShowGameRequestFromJson(json);
-
-@override final  String gameId;
-
-/// Create a copy of ReversiShowGameRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ReversiShowGameRequestCopyWith<_ReversiShowGameRequest> get copyWith => __$ReversiShowGameRequestCopyWithImpl<_ReversiShowGameRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$ReversiShowGameRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ReversiShowGameRequest&&(identical(other.gameId, gameId) || other.gameId == gameId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,gameId);
-}
-
-@override
-String toString() {
-    return 'ReversiShowGameRequest(gameId: $gameId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ReversiShowGameRequestCopyWith<$Res> implements $ReversiShowGameRequestCopyWith<$Res> {
-  factory _$ReversiShowGameRequestCopyWith(_ReversiShowGameRequest value, $Res Function(_ReversiShowGameRequest) _then) = __$ReversiShowGameRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String gameId
-});
-
-
-
-
-}
-/// @nodoc
-class __$ReversiShowGameRequestCopyWithImpl<$Res>
-    implements _$ReversiShowGameRequestCopyWith<$Res> {
-  __$ReversiShowGameRequestCopyWithImpl(this._self, this._then);
-
-  final _ReversiShowGameRequest _self;
-  final $Res Function(_ReversiShowGameRequest) _then;
-
-/// Create a copy of ReversiShowGameRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? gameId = null,}) {
-  return _then(_ReversiShowGameRequest(
-gameId: null == gameId ? _self.gameId : gameId // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

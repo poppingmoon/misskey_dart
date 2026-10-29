@@ -8,16 +8,17 @@ part 'users_users_request.freezed.dart';
 part 'users_users_request.g.dart';
 
 @freezed
-abstract class UsersUsersRequest with _$UsersUsersRequest {
-  const factory({
-    int? limit,
-    int? offset,
-    @UsersSortConverter() UsersSortType? sort,
-    UsersState? state,
-    Origin? origin,
-    String? hostname,
-  }) = _UsersUsersRequest;
-
+@JsonSerializable()
+class const UsersUsersRequest({
+  final int? limit,
+  final int? offset,
+  @UsersSortConverter() final UsersSortType? sort,
+  final UsersState? state,
+  final Origin? origin,
+  final String? hostname,
+}) with _$UsersUsersRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$UsersUsersRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UsersUsersRequestToJson(this);
 }

@@ -4,10 +4,13 @@ part 'drive_files_move_bulk_request.freezed.dart';
 part 'drive_files_move_bulk_request.g.dart';
 
 @freezed
-abstract class DriveFilesMoveBulkRequest with _$DriveFilesMoveBulkRequest {
-  const factory({required List<String> fileIds, String? folderId}) =
-      _DriveFilesMoveBulkRequest;
-
+@JsonSerializable()
+class const DriveFilesMoveBulkRequest({
+  required final List<String> fileIds,
+  final String? folderId,
+}) with _$DriveFilesMoveBulkRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$DriveFilesMoveBulkRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$DriveFilesMoveBulkRequestToJson(this);
 }

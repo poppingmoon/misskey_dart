@@ -40,34 +40,44 @@ sealed class StreamingResponse with _$StreamingResponse {
 }
 
 @freezed
-abstract class EmojiAddedStreamEvent with _$EmojiAddedStreamEvent {
-  const factory({required Emoji emoji}) = _EmojiAddedStreamEvent;
+@JsonSerializable()
+class const EmojiAddedStreamEvent({required final Emoji emoji})
+    with _$EmojiAddedStreamEvent {
   factory fromJson(Map<String, Object?> json) =>
       _$EmojiAddedStreamEventFromJson(json);
+
+  Map<String, dynamic> toJson() => _$EmojiAddedStreamEventToJson(this);
 }
 
 @freezed
-abstract class EmojiUpdatedStreamEvent with _$EmojiUpdatedStreamEvent {
-  const factory({required List<Emoji> emojis}) = _EmojiUpdatedStreamEvent;
+@JsonSerializable()
+class const EmojiUpdatedStreamEvent({required final List<Emoji> emojis})
+    with _$EmojiUpdatedStreamEvent {
   factory fromJson(Map<String, Object?> json) =>
       _$EmojiUpdatedStreamEventFromJson(json);
+
+  Map<String, dynamic> toJson() => _$EmojiUpdatedStreamEventToJson(this);
 }
 
 @freezed
-abstract class EmojiDeletedStreamEvent with _$EmojiDeletedStreamEvent {
-  const factory({required List<Emoji> emojis}) = _EmojiDeletedStreamEvent;
+@JsonSerializable()
+class const EmojiDeletedStreamEvent({required final List<Emoji> emojis})
+    with _$EmojiDeletedStreamEvent {
   factory fromJson(Map<String, Object?> json) =>
       _$EmojiDeletedStreamEventFromJson(json);
+
+  Map<String, dynamic> toJson() => _$EmojiDeletedStreamEventToJson(this);
 }
 
 @freezed
-abstract class AnnouncementCreatedStreamEvent
-    with _$AnnouncementCreatedStreamEvent {
-  const factory({required AnnouncementsResponse announcement}) =
-      _AnnouncementCreatedStreamEvent;
-
+@JsonSerializable()
+class const AnnouncementCreatedStreamEvent({
+  required final AnnouncementsResponse announcement,
+}) with _$AnnouncementCreatedStreamEvent {
   factory fromJson(Map<String, Object?> json) =>
       _$AnnouncementCreatedStreamEventFromJson(json);
+
+  Map<String, dynamic> toJson() => _$AnnouncementCreatedStreamEventToJson(this);
 }
 
 @Freezed(unionKey: "type", fallbackUnion: "fallback")
@@ -75,7 +85,6 @@ sealed class ChannelStreamEvent with _$ChannelStreamEvent {
   @FreezedUnionValue("note")
   const factory note({
     required String id,
-    // ignore: invalid_annotation_target
     @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
     ChannelEventType? type,
     required Note body,

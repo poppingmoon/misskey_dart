@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$BubbleGameRankingResponse {
 
- String get id; int get score; UserLite get user;
+
 /// Create a copy of BubbleGameRankingResponse
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $BubbleGameRankingResponseCopyWith<BubbleGameRankingResponse> get copyWith => _$BubbleGameRankingResponseCopyWithImpl<BubbleGameRankingResponse>(this as BubbleGameRankingResponse, _$identity);
 
-  /// Serializes this BubbleGameRankingResponse to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -106,11 +104,10 @@ extension BubbleGameRankingResponsePatterns on BubbleGameRankingResponse {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _BubbleGameRankingResponse value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _BubbleGameRankingResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -128,11 +125,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _BubbleGameRankingResponse value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _BubbleGameRankingResponse():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -149,11 +145,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _BubbleGameRankingResponse value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _BubbleGameRankingResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -170,10 +165,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  int score,  UserLite user)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _BubbleGameRankingResponse() when $default != null:
-return $default(_that.id,_that.score,_that.user);case _:
+case _:
   return orElse();
 
 }
@@ -191,10 +185,9 @@ return $default(_that.id,_that.score,_that.user);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  int score,  UserLite user)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _BubbleGameRankingResponse():
-return $default(_that.id,_that.score,_that.user);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -211,99 +204,14 @@ return $default(_that.id,_that.score,_that.user);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  int score,  UserLite user)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _BubbleGameRankingResponse() when $default != null:
-return $default(_that.id,_that.score,_that.user);case _:
+case _:
   return null;
 
 }
 }
 
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _BubbleGameRankingResponse implements BubbleGameRankingResponse {
-  const _BubbleGameRankingResponse({required this.id, required this.score, required this.user});
-  factory _BubbleGameRankingResponse.fromJson(Map<String, dynamic> json) => _$BubbleGameRankingResponseFromJson(json);
-
-@override final  String id;
-@override final  int score;
-@override final  UserLite user;
-
-/// Create a copy of BubbleGameRankingResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$BubbleGameRankingResponseCopyWith<_BubbleGameRankingResponse> get copyWith => __$BubbleGameRankingResponseCopyWithImpl<_BubbleGameRankingResponse>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$BubbleGameRankingResponseToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _BubbleGameRankingResponse&&(identical(other.id, id) || other.id == id)&&(identical(other.score, score) || other.score == score)&&(identical(other.user, user) || other.user == user));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,id,score,user);
-}
-
-@override
-String toString() {
-    return 'BubbleGameRankingResponse(id: $id, score: $score, user: $user)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$BubbleGameRankingResponseCopyWith<$Res> implements $BubbleGameRankingResponseCopyWith<$Res> {
-  factory _$BubbleGameRankingResponseCopyWith(_BubbleGameRankingResponse value, $Res Function(_BubbleGameRankingResponse) _then) = __$BubbleGameRankingResponseCopyWithImpl;
-@override @useResult
-$Res call({
- String id, int score, UserLite user
-});
-
-
-@override $UserLiteCopyWith<$Res> get user;
-
-}
-/// @nodoc
-class __$BubbleGameRankingResponseCopyWithImpl<$Res>
-    implements _$BubbleGameRankingResponseCopyWith<$Res> {
-  __$BubbleGameRankingResponseCopyWithImpl(this._self, this._then);
-
-  final _BubbleGameRankingResponse _self;
-  final $Res Function(_BubbleGameRankingResponse) _then;
-
-/// Create a copy of BubbleGameRankingResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? score = null,Object? user = null,}) {
-  return _then(_BubbleGameRankingResponse(
-id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as String,score: null == score ? _self.score : score // ignore: cast_nullable_to_non_nullable
-as int,user: null == user ? _self.user : user // ignore: cast_nullable_to_non_nullable
-as UserLite,
-  ));
-}
-
-/// Create a copy of BubbleGameRankingResponse
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$UserLiteCopyWith<$Res> get user {
-  
-  return $UserLiteCopyWith<$Res>(_self.user, (value) {
-    return _then(_self.copyWith(user: value));
-  });
-}
 }
 
 // dart format on

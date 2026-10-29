@@ -6,9 +6,9 @@ part of 'notes_drafts_list_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_NotesDraftsListRequest _$NotesDraftsListRequestFromJson(
+NotesDraftsListRequest _$NotesDraftsListRequestFromJson(
   Map<String, dynamic> json,
-) => _NotesDraftsListRequest(
+) => NotesDraftsListRequest(
   limit: (json['limit'] as num?)?.toInt(),
   sinceId: json['sinceId'] as String?,
   untilId: json['untilId'] as String?,
@@ -24,7 +24,7 @@ _NotesDraftsListRequest _$NotesDraftsListRequestFromJson(
 );
 
 Map<String, dynamic> _$NotesDraftsListRequestToJson(
-  _NotesDraftsListRequest instance,
+  NotesDraftsListRequest instance,
 ) => <String, dynamic>{
   'limit': instance.limit,
   'sinceId': instance.sinceId,

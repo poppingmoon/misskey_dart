@@ -5,20 +5,21 @@ part 'notes_search_by_tag_request.freezed.dart';
 part 'notes_search_by_tag_request.g.dart';
 
 @freezed
-abstract class NotesSearchByTagRequest with _$NotesSearchByTagRequest {
-  const factory({
-    required String tag,
-    bool? reply,
-    bool? renote,
-    bool? withFiles,
-    bool? poll,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-    int? limit,
-  }) = _NotesSearchByTagRequest;
-
+@JsonSerializable()
+class const NotesSearchByTagRequest({
+  required final String tag,
+  final bool? reply,
+  final bool? renote,
+  final bool? withFiles,
+  final bool? poll,
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
+  final int? limit,
+}) with _$NotesSearchByTagRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$NotesSearchByTagRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NotesSearchByTagRequestToJson(this);
 }

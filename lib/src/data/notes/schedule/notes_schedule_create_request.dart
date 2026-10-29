@@ -7,48 +7,52 @@ part 'notes_schedule_create_request.freezed.dart';
 part 'notes_schedule_create_request.g.dart';
 
 @freezed
-abstract class NotesScheduleCreateRequest with _$NotesScheduleCreateRequest {
-  const factory({
-    NoteVisibility? visibility,
-    List<String>? visibleUserIds,
-    String? cw,
-    ReactionAcceptance? reactionAcceptance,
-    bool? disableRightClick,
-    bool? noExtractMentions,
-    bool? noExtractHashtags,
-    bool? noExtractEmojis,
-    String? replyId,
-    String? renoteId,
-    String? text,
-    List<String>? fileIds,
-    List<String>? mediaIds,
-    String? channelId,
-    bool? localOnly,
-    NotesCreatePollRequest? poll,
-    Map<String, dynamic>? event,
-    required ScheduleNote scheduleNote,
-    ScheduledDelete? scheduledDelete,
-  }) = _NotesScheduleCreateRequest;
-
+@JsonSerializable()
+class const NotesScheduleCreateRequest({
+  final NoteVisibility? visibility,
+  final List<String>? visibleUserIds,
+  final String? cw,
+  final ReactionAcceptance? reactionAcceptance,
+  final bool? disableRightClick,
+  final bool? noExtractMentions,
+  final bool? noExtractHashtags,
+  final bool? noExtractEmojis,
+  final String? replyId,
+  final String? renoteId,
+  final String? text,
+  final List<String>? fileIds,
+  final List<String>? mediaIds,
+  final String? channelId,
+  final bool? localOnly,
+  final NotesCreatePollRequest? poll,
+  final Map<String, dynamic>? event,
+  required final ScheduleNote scheduleNote,
+  final ScheduledDelete? scheduledDelete,
+}) with _$NotesScheduleCreateRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$NotesScheduleCreateRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NotesScheduleCreateRequestToJson(this);
 }
 
 @freezed
-abstract class ScheduleNote with _$ScheduleNote {
-  const factory({@EpocTimeDateTimeConverter() required DateTime scheduledAt}) =
-      _ScheduleNote;
-
+@JsonSerializable()
+class const ScheduleNote({
+  @EpocTimeDateTimeConverter() required final DateTime scheduledAt,
+}) with _$ScheduleNote {
   factory fromJson(Map<String, dynamic> json) => _$ScheduleNoteFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ScheduleNoteToJson(this);
 }
 
 @freezed
-abstract class ScheduledDelete with _$ScheduledDelete {
-  const factory({
-    @EpocTimeDateTimeConverter() DateTime? deleteAt,
-    @DurationConverter() Duration? deleteAfter,
-  }) = _ScheduledDelete;
-
+@JsonSerializable()
+class const ScheduledDelete({
+  @EpocTimeDateTimeConverter() final DateTime? deleteAt,
+  @DurationConverter() final Duration? deleteAfter,
+}) with _$ScheduledDelete {
   factory fromJson(Map<String, dynamic> json) =>
       _$ScheduledDeleteFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ScheduledDeleteToJson(this);
 }

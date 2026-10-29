@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$FlashDeleteRequest {
 
- String get flashId;
+
 /// Create a copy of FlashDeleteRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $FlashDeleteRequestCopyWith<FlashDeleteRequest> get copyWith => _$FlashDeleteRequestCopyWithImpl<FlashDeleteRequest>(this as FlashDeleteRequest, _$identity);
 
-  /// Serializes this FlashDeleteRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -95,11 +93,10 @@ extension FlashDeleteRequestPatterns on FlashDeleteRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _FlashDeleteRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _FlashDeleteRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -117,11 +114,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _FlashDeleteRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _FlashDeleteRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -138,11 +134,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _FlashDeleteRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _FlashDeleteRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -159,10 +154,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String flashId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _FlashDeleteRequest() when $default != null:
-return $default(_that.flashId);case _:
+case _:
   return orElse();
 
 }
@@ -180,10 +174,9 @@ return $default(_that.flashId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String flashId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _FlashDeleteRequest():
-return $default(_that.flashId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -200,85 +193,13 @@ return $default(_that.flashId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String flashId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _FlashDeleteRequest() when $default != null:
-return $default(_that.flashId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _FlashDeleteRequest implements FlashDeleteRequest {
-  const _FlashDeleteRequest({required this.flashId});
-  factory _FlashDeleteRequest.fromJson(Map<String, dynamic> json) => _$FlashDeleteRequestFromJson(json);
-
-@override final  String flashId;
-
-/// Create a copy of FlashDeleteRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$FlashDeleteRequestCopyWith<_FlashDeleteRequest> get copyWith => __$FlashDeleteRequestCopyWithImpl<_FlashDeleteRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$FlashDeleteRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _FlashDeleteRequest&&(identical(other.flashId, flashId) || other.flashId == flashId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,flashId);
-}
-
-@override
-String toString() {
-    return 'FlashDeleteRequest(flashId: $flashId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$FlashDeleteRequestCopyWith<$Res> implements $FlashDeleteRequestCopyWith<$Res> {
-  factory _$FlashDeleteRequestCopyWith(_FlashDeleteRequest value, $Res Function(_FlashDeleteRequest) _then) = __$FlashDeleteRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String flashId
-});
-
-
-
-
-}
-/// @nodoc
-class __$FlashDeleteRequestCopyWithImpl<$Res>
-    implements _$FlashDeleteRequestCopyWith<$Res> {
-  __$FlashDeleteRequestCopyWithImpl(this._self, this._then);
-
-  final _FlashDeleteRequest _self;
-  final $Res Function(_FlashDeleteRequest) _then;
-
-/// Create a copy of FlashDeleteRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? flashId = null,}) {
-  return _then(_FlashDeleteRequest(
-flashId: null == flashId ? _self.flashId : flashId // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

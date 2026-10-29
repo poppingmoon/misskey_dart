@@ -6,13 +6,14 @@ part 'blocking.freezed.dart';
 part 'blocking.g.dart';
 
 @freezed
-abstract class Blocking with _$Blocking {
-  const factory({
-    required String id,
-    @DateTimeConverter() required DateTime createdAt,
-    required String blockeeId,
-    required UserDetailedNotMe blockee,
-  }) = _Blocking;
-
+@JsonSerializable()
+class const Blocking({
+  required final String id,
+  @DateTimeConverter() required final DateTime createdAt,
+  required final String blockeeId,
+  required final UserDetailedNotMe blockee,
+}) with _$Blocking {
   factory fromJson(Map<String, dynamic> json) => _$BlockingFromJson(json);
+
+  Map<String, dynamic> toJson() => _$BlockingToJson(this);
 }

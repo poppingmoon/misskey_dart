@@ -6,15 +6,15 @@ part 'notes_create_poll_request.freezed.dart';
 part 'notes_create_poll_request.g.dart';
 
 @freezed
-abstract class NotesCreatePollRequest with _$NotesCreatePollRequest {
-  @JsonSerializable(includeIfNull: false) // ignore: invalid_annotation_target
-  const factory({
-    required List<String> choices,
-    bool? multiple,
-    @EpocTimeDateTimeConverter() DateTime? expiresAt,
-    @DurationConverter() Duration? expiredAfter,
-  }) = _NotesCreatePollRequest;
-
+@JsonSerializable(includeIfNull: false)
+class const NotesCreatePollRequest({
+  required final List<String> choices,
+  final bool? multiple,
+  @EpocTimeDateTimeConverter() final DateTime? expiresAt,
+  @DurationConverter() final Duration? expiredAfter,
+}) with _$NotesCreatePollRequest {
   factory fromJson(Map<String, Object?> json) =>
       _$NotesCreatePollRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NotesCreatePollRequestToJson(this);
 }

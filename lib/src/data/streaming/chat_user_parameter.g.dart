@@ -6,8 +6,8 @@ part of 'chat_user_parameter.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ChatUserParameter _$ChatUserParameterFromJson(Map<String, dynamic> json) =>
-    _ChatUserParameter(otherId: json['otherId'] as String);
+ChatUserParameter _$ChatUserParameterFromJson(Map<String, dynamic> json) =>
+    ChatUserParameter(otherId: json['otherId'] as String);
 
-Map<String, dynamic> _$ChatUserParameterToJson(_ChatUserParameter instance) =>
+Map<String, dynamic> _$ChatUserParameterToJson(ChatUserParameter instance) =>
     <String, dynamic>{'otherId': instance.otherId};

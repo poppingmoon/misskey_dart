@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$FollowingUpdateAllRequest {
 
- FollowingUpdateAllNotifyType? get notify; bool? get withReplies;
+
 /// Create a copy of FollowingUpdateAllRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $FollowingUpdateAllRequestCopyWith<FollowingUpdateAllRequest> get copyWith => _$FollowingUpdateAllRequestCopyWithImpl<FollowingUpdateAllRequest>(this as FollowingUpdateAllRequest, _$identity);
 
-  /// Serializes this FollowingUpdateAllRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -96,11 +94,10 @@ extension FollowingUpdateAllRequestPatterns on FollowingUpdateAllRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _FollowingUpdateAllRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _FollowingUpdateAllRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -118,11 +115,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _FollowingUpdateAllRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _FollowingUpdateAllRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -139,11 +135,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _FollowingUpdateAllRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _FollowingUpdateAllRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -160,10 +155,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( FollowingUpdateAllNotifyType? notify,  bool? withReplies)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _FollowingUpdateAllRequest() when $default != null:
-return $default(_that.notify,_that.withReplies);case _:
+case _:
   return orElse();
 
 }
@@ -181,10 +175,9 @@ return $default(_that.notify,_that.withReplies);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( FollowingUpdateAllNotifyType? notify,  bool? withReplies)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _FollowingUpdateAllRequest():
-return $default(_that.notify,_that.withReplies);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -201,87 +194,13 @@ return $default(_that.notify,_that.withReplies);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( FollowingUpdateAllNotifyType? notify,  bool? withReplies)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _FollowingUpdateAllRequest() when $default != null:
-return $default(_that.notify,_that.withReplies);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _FollowingUpdateAllRequest implements FollowingUpdateAllRequest {
-  const _FollowingUpdateAllRequest({this.notify, this.withReplies});
-  factory _FollowingUpdateAllRequest.fromJson(Map<String, dynamic> json) => _$FollowingUpdateAllRequestFromJson(json);
-
-@override final  FollowingUpdateAllNotifyType? notify;
-@override final  bool? withReplies;
-
-/// Create a copy of FollowingUpdateAllRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$FollowingUpdateAllRequestCopyWith<_FollowingUpdateAllRequest> get copyWith => __$FollowingUpdateAllRequestCopyWithImpl<_FollowingUpdateAllRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$FollowingUpdateAllRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _FollowingUpdateAllRequest&&(identical(other.notify, notify) || other.notify == notify)&&(identical(other.withReplies, withReplies) || other.withReplies == withReplies));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,notify,withReplies);
-}
-
-@override
-String toString() {
-    return 'FollowingUpdateAllRequest(notify: $notify, withReplies: $withReplies)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$FollowingUpdateAllRequestCopyWith<$Res> implements $FollowingUpdateAllRequestCopyWith<$Res> {
-  factory _$FollowingUpdateAllRequestCopyWith(_FollowingUpdateAllRequest value, $Res Function(_FollowingUpdateAllRequest) _then) = __$FollowingUpdateAllRequestCopyWithImpl;
-@override @useResult
-$Res call({
- FollowingUpdateAllNotifyType? notify, bool? withReplies
-});
-
-
-
-
-}
-/// @nodoc
-class __$FollowingUpdateAllRequestCopyWithImpl<$Res>
-    implements _$FollowingUpdateAllRequestCopyWith<$Res> {
-  __$FollowingUpdateAllRequestCopyWithImpl(this._self, this._then);
-
-  final _FollowingUpdateAllRequest _self;
-  final $Res Function(_FollowingUpdateAllRequest) _then;
-
-/// Create a copy of FollowingUpdateAllRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? notify = freezed,Object? withReplies = freezed,}) {
-  return _then(_FollowingUpdateAllRequest(
-notify: freezed == notify ? _self.notify : notify // ignore: cast_nullable_to_non_nullable
-as FollowingUpdateAllNotifyType?,withReplies: freezed == withReplies ? _self.withReplies : withReplies // ignore: cast_nullable_to_non_nullable
-as bool?,
-  ));
-}
-
 
 }
 

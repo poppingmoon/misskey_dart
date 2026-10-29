@@ -4,9 +4,11 @@ part 'sw_show_registration_request.freezed.dart';
 part 'sw_show_registration_request.g.dart';
 
 @freezed
-abstract class SwShowRegistrationRequest with _$SwShowRegistrationRequest {
-  const factory({required String endpoint}) = _SwShowRegistrationRequest;
-
+@JsonSerializable()
+class const SwShowRegistrationRequest({required final String endpoint})
+    with _$SwShowRegistrationRequest {
   factory fromJson(Map<String, Object?> json) =>
       _$SwShowRegistrationRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$SwShowRegistrationRequestToJson(this);
 }

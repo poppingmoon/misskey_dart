@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$DriveFilesCheckExistenceRequest {
 
- String get md5;
+
 /// Create a copy of DriveFilesCheckExistenceRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $DriveFilesCheckExistenceRequestCopyWith<DriveFilesCheckExistenceRequest> get copyWith => _$DriveFilesCheckExistenceRequestCopyWithImpl<DriveFilesCheckExistenceRequest>(this as DriveFilesCheckExistenceRequest, _$identity);
 
-  /// Serializes this DriveFilesCheckExistenceRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -95,11 +93,10 @@ extension DriveFilesCheckExistenceRequestPatterns on DriveFilesCheckExistenceReq
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _DriveFilesCheckExistenceRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _DriveFilesCheckExistenceRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -117,11 +114,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _DriveFilesCheckExistenceRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _DriveFilesCheckExistenceRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -138,11 +134,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _DriveFilesCheckExistenceRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _DriveFilesCheckExistenceRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -159,10 +154,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String md5)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _DriveFilesCheckExistenceRequest() when $default != null:
-return $default(_that.md5);case _:
+case _:
   return orElse();
 
 }
@@ -180,10 +174,9 @@ return $default(_that.md5);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String md5)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _DriveFilesCheckExistenceRequest():
-return $default(_that.md5);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -200,85 +193,13 @@ return $default(_that.md5);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String md5)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _DriveFilesCheckExistenceRequest() when $default != null:
-return $default(_that.md5);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _DriveFilesCheckExistenceRequest implements DriveFilesCheckExistenceRequest {
-  const _DriveFilesCheckExistenceRequest({required this.md5});
-  factory _DriveFilesCheckExistenceRequest.fromJson(Map<String, dynamic> json) => _$DriveFilesCheckExistenceRequestFromJson(json);
-
-@override final  String md5;
-
-/// Create a copy of DriveFilesCheckExistenceRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$DriveFilesCheckExistenceRequestCopyWith<_DriveFilesCheckExistenceRequest> get copyWith => __$DriveFilesCheckExistenceRequestCopyWithImpl<_DriveFilesCheckExistenceRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$DriveFilesCheckExistenceRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _DriveFilesCheckExistenceRequest&&(identical(other.md5, md5) || other.md5 == md5));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,md5);
-}
-
-@override
-String toString() {
-    return 'DriveFilesCheckExistenceRequest(md5: $md5)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$DriveFilesCheckExistenceRequestCopyWith<$Res> implements $DriveFilesCheckExistenceRequestCopyWith<$Res> {
-  factory _$DriveFilesCheckExistenceRequestCopyWith(_DriveFilesCheckExistenceRequest value, $Res Function(_DriveFilesCheckExistenceRequest) _then) = __$DriveFilesCheckExistenceRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String md5
-});
-
-
-
-
-}
-/// @nodoc
-class __$DriveFilesCheckExistenceRequestCopyWithImpl<$Res>
-    implements _$DriveFilesCheckExistenceRequestCopyWith<$Res> {
-  __$DriveFilesCheckExistenceRequestCopyWithImpl(this._self, this._then);
-
-  final _DriveFilesCheckExistenceRequest _self;
-  final $Res Function(_DriveFilesCheckExistenceRequest) _then;
-
-/// Create a copy of DriveFilesCheckExistenceRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? md5 = null,}) {
-  return _then(_DriveFilesCheckExistenceRequest(
-md5: null == md5 ? _self.md5 : md5 // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

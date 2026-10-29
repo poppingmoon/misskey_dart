@@ -5,16 +5,17 @@ part 'drive_stream_request.freezed.dart';
 part 'drive_stream_request.g.dart';
 
 @freezed
-abstract class DriveStreamRequest with _$DriveStreamRequest {
-  const factory({
-    int? limit,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-    String? type,
-  }) = _DriveStreamRequest;
-
+@JsonSerializable()
+class const DriveStreamRequest({
+  final int? limit,
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
+  final String? type,
+}) with _$DriveStreamRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$DriveStreamRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$DriveStreamRequestToJson(this);
 }

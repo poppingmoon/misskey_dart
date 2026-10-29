@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$UsersSearchRequest {
 
- String get query; int? get offset; int? get limit; Origin? get origin; bool? get detail;
+
 /// Create a copy of UsersSearchRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $UsersSearchRequestCopyWith<UsersSearchRequest> get copyWith => _$UsersSearchRequestCopyWithImpl<UsersSearchRequest>(this as UsersSearchRequest, _$identity);
 
-  /// Serializes this UsersSearchRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -99,11 +97,10 @@ extension UsersSearchRequestPatterns on UsersSearchRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UsersSearchRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _UsersSearchRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -121,11 +118,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UsersSearchRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UsersSearchRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -142,11 +138,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UsersSearchRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UsersSearchRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -163,10 +158,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String query,  int? offset,  int? limit,  Origin? origin,  bool? detail)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _UsersSearchRequest() when $default != null:
-return $default(_that.query,_that.offset,_that.limit,_that.origin,_that.detail);case _:
+case _:
   return orElse();
 
 }
@@ -184,10 +178,9 @@ return $default(_that.query,_that.offset,_that.limit,_that.origin,_that.detail);
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String query,  int? offset,  int? limit,  Origin? origin,  bool? detail)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UsersSearchRequest():
-return $default(_that.query,_that.offset,_that.limit,_that.origin,_that.detail);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -204,93 +197,13 @@ return $default(_that.query,_that.offset,_that.limit,_that.origin,_that.detail);
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String query,  int? offset,  int? limit,  Origin? origin,  bool? detail)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UsersSearchRequest() when $default != null:
-return $default(_that.query,_that.offset,_that.limit,_that.origin,_that.detail);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _UsersSearchRequest implements UsersSearchRequest {
-  const _UsersSearchRequest({required this.query, this.offset, this.limit, this.origin, this.detail});
-  factory _UsersSearchRequest.fromJson(Map<String, dynamic> json) => _$UsersSearchRequestFromJson(json);
-
-@override final  String query;
-@override final  int? offset;
-@override final  int? limit;
-@override final  Origin? origin;
-@override final  bool? detail;
-
-/// Create a copy of UsersSearchRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$UsersSearchRequestCopyWith<_UsersSearchRequest> get copyWith => __$UsersSearchRequestCopyWithImpl<_UsersSearchRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$UsersSearchRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersSearchRequest&&(identical(other.query, query) || other.query == query)&&(identical(other.offset, offset) || other.offset == offset)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.origin, origin) || other.origin == origin)&&(identical(other.detail, detail) || other.detail == detail));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,query,offset,limit,origin,detail);
-}
-
-@override
-String toString() {
-    return 'UsersSearchRequest(query: $query, offset: $offset, limit: $limit, origin: $origin, detail: $detail)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$UsersSearchRequestCopyWith<$Res> implements $UsersSearchRequestCopyWith<$Res> {
-  factory _$UsersSearchRequestCopyWith(_UsersSearchRequest value, $Res Function(_UsersSearchRequest) _then) = __$UsersSearchRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String query, int? offset, int? limit, Origin? origin, bool? detail
-});
-
-
-
-
-}
-/// @nodoc
-class __$UsersSearchRequestCopyWithImpl<$Res>
-    implements _$UsersSearchRequestCopyWith<$Res> {
-  __$UsersSearchRequestCopyWithImpl(this._self, this._then);
-
-  final _UsersSearchRequest _self;
-  final $Res Function(_UsersSearchRequest) _then;
-
-/// Create a copy of UsersSearchRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? query = null,Object? offset = freezed,Object? limit = freezed,Object? origin = freezed,Object? detail = freezed,}) {
-  return _then(_UsersSearchRequest(
-query: null == query ? _self.query : query // ignore: cast_nullable_to_non_nullable
-as String,offset: freezed == offset ? _self.offset : offset // ignore: cast_nullable_to_non_nullable
-as int?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,origin: freezed == origin ? _self.origin : origin // ignore: cast_nullable_to_non_nullable
-as Origin?,detail: freezed == detail ? _self.detail : detail // ignore: cast_nullable_to_non_nullable
-as bool?,
-  ));
-}
-
 
 }
 

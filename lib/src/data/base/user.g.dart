@@ -6,7 +6,7 @@ part of 'user.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_UserLite _$UserLiteFromJson(Map<String, dynamic> json) => _UserLite(
+UserLite _$UserLiteFromJson(Map<String, dynamic> json) => UserLite(
   id: json['id'] as String,
   name: json['name'] as String?,
   username: json['username'] as String,
@@ -51,7 +51,7 @@ _UserLite _$UserLiteFromJson(Map<String, dynamic> json) => _UserLite(
   mandatoryCW: json['mandatoryCW'] as String?,
 );
 
-Map<String, dynamic> _$UserLiteToJson(_UserLite instance) => <String, dynamic>{
+Map<String, dynamic> _$UserLiteToJson(UserLite instance) => <String, dynamic>{
   'id': instance.id,
   'name': instance.name,
   'username': instance.username,
@@ -97,9 +97,9 @@ Json? _$JsonConverterToJson<Json, Value>(
   Json? Function(Value value) toJson,
 ) => value == null ? null : toJson(value);
 
-_UserDetailedNotMe _$UserDetailedNotMeFromJson(
+UserDetailedNotMe _$UserDetailedNotMeFromJson(
   Map<String, dynamic> json,
-) => _UserDetailedNotMe(
+) => UserDetailedNotMe(
   id: json['id'] as String,
   name: json['name'] as String?,
   username: json['username'] as String,
@@ -222,7 +222,7 @@ _UserDetailedNotMe _$UserDetailedNotMeFromJson(
 );
 
 Map<String, dynamic> _$UserDetailedNotMeToJson(
-  _UserDetailedNotMe instance,
+  UserDetailedNotMe instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'name': instance.name,
@@ -307,9 +307,9 @@ const _$ChatScopeEnumMap = {
   ChatScope.none: 'none',
 };
 
-_UserDetailedNotMeWithRelations _$UserDetailedNotMeWithRelationsFromJson(
+UserDetailedNotMeWithRelations _$UserDetailedNotMeWithRelationsFromJson(
   Map<String, dynamic> json,
-) => _UserDetailedNotMeWithRelations(
+) => UserDetailedNotMeWithRelations(
   id: json['id'] as String,
   name: json['name'] as String?,
   username: json['username'] as String,
@@ -444,7 +444,7 @@ _UserDetailedNotMeWithRelations _$UserDetailedNotMeWithRelationsFromJson(
 );
 
 Map<String, dynamic> _$UserDetailedNotMeWithRelationsToJson(
-  _UserDetailedNotMeWithRelations instance,
+  UserDetailedNotMeWithRelations instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'name': instance.name,
@@ -528,7 +528,7 @@ Map<String, dynamic> _$UserDetailedNotMeWithRelationsToJson(
 
 const _$NotifyEnumMap = {Notify.normal: 'normal', Notify.none: 'none'};
 
-_MeDetailed _$MeDetailedFromJson(Map<String, dynamic> json) => _MeDetailed(
+MeDetailed _$MeDetailedFromJson(Map<String, dynamic> json) => MeDetailed(
   id: json['id'] as String,
   name: json['name'] as String?,
   username: json['username'] as String,
@@ -722,7 +722,7 @@ _MeDetailed _$MeDetailedFromJson(Map<String, dynamic> json) => _MeDetailed(
 );
 
 Map<String, dynamic> _$MeDetailedToJson(
-  _MeDetailed instance,
+  MeDetailed instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'name': instance.name,
@@ -842,9 +842,9 @@ const _$TwoFactorBackupCodesStockEnumMap = {
   TwoFactorBackupCodesStock.none: 'none',
 };
 
-_UserAvatarDecoration _$UserAvatarDecorationFromJson(
+UserAvatarDecoration _$UserAvatarDecorationFromJson(
   Map<String, dynamic> json,
-) => _UserAvatarDecoration(
+) => UserAvatarDecoration(
   id: json['id'] as String,
   angle: (json['angle'] as num?)?.toDouble(),
   flipH: json['flipH'] as bool? ?? false,
@@ -855,7 +855,7 @@ _UserAvatarDecoration _$UserAvatarDecorationFromJson(
 );
 
 Map<String, dynamic> _$UserAvatarDecorationToJson(
-  _UserAvatarDecoration instance,
+  UserAvatarDecoration instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'angle': instance.angle,
@@ -866,8 +866,8 @@ Map<String, dynamic> _$UserAvatarDecorationToJson(
   'showBelow': instance.showBelow,
 };
 
-_UserInstanceInfo _$UserInstanceInfoFromJson(Map<String, dynamic> json) =>
-    _UserInstanceInfo(
+UserInstanceInfo _$UserInstanceInfoFromJson(Map<String, dynamic> json) =>
+    UserInstanceInfo(
       name: json['name'] as String?,
       softwareVersion: json['softwareVersion'] as String?,
       softwareName: json['softwareName'] as String?,
@@ -880,7 +880,7 @@ _UserInstanceInfo _$UserInstanceInfoFromJson(Map<String, dynamic> json) =>
       themeColor: json['themeColor'] as String?,
     );
 
-Map<String, dynamic> _$UserInstanceInfoToJson(_UserInstanceInfo instance) =>
+Map<String, dynamic> _$UserInstanceInfoToJson(UserInstanceInfo instance) =>
     <String, dynamic>{
       'name': instance.name,
       'softwareVersion': instance.softwareVersion,
@@ -890,21 +890,21 @@ Map<String, dynamic> _$UserInstanceInfoToJson(_UserInstanceInfo instance) =>
       'themeColor': instance.themeColor,
     };
 
-_UserBadgeRole _$UserBadgeRoleFromJson(Map<String, dynamic> json) =>
-    _UserBadgeRole(
+UserBadgeRole _$UserBadgeRoleFromJson(Map<String, dynamic> json) =>
+    UserBadgeRole(
       name: json['name'] as String,
       iconUrl: const NullableUriConverter().fromJson(
         json['iconUrl'] as String?,
       ),
     );
 
-Map<String, dynamic> _$UserBadgeRoleToJson(_UserBadgeRole instance) =>
+Map<String, dynamic> _$UserBadgeRoleToJson(UserBadgeRole instance) =>
     <String, dynamic>{
       'name': instance.name,
       'iconUrl': const NullableUriConverter().toJson(instance.iconUrl),
     };
 
-_UserRole _$UserRoleFromJson(Map<String, dynamic> json) => _UserRole(
+UserRole _$UserRoleFromJson(Map<String, dynamic> json) => UserRole(
   id: json['id'] as String,
   name: json['name'] as String,
   color: json['color'] as String?,
@@ -914,7 +914,7 @@ _UserRole _$UserRoleFromJson(Map<String, dynamic> json) => _UserRole(
   isAdministrator: json['isAdministrator'] as bool,
 );
 
-Map<String, dynamic> _$UserRoleToJson(_UserRole instance) => <String, dynamic>{
+Map<String, dynamic> _$UserRoleToJson(UserRole instance) => <String, dynamic>{
   'id': instance.id,
   'name': instance.name,
   'color': instance.color,
@@ -924,8 +924,8 @@ Map<String, dynamic> _$UserRoleToJson(_UserRole instance) => <String, dynamic>{
   'isAdministrator': instance.isAdministrator,
 };
 
-_UserAchievement _$UserAchievementFromJson(Map<String, dynamic> json) =>
-    _UserAchievement(
+UserAchievement _$UserAchievementFromJson(Map<String, dynamic> json) =>
+    UserAchievement(
       name: json['name'] as String,
       unlockedAt: const EpocTimeDateTimeConverter().fromJson(
         (json['unlockedAt'] as num).toInt(),
@@ -933,66 +933,65 @@ _UserAchievement _$UserAchievementFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$UserAchievementToJson(
-  _UserAchievement instance,
+  UserAchievement instance,
 ) => <String, dynamic>{
   'name': instance.name,
   'unlockedAt': const EpocTimeDateTimeConverter().toJson(instance.unlockedAt),
 };
 
-_UserPolicies _$UserPoliciesFromJson(Map<String, dynamic> json) =>
-    _UserPolicies(
-      gtlAvailable: json['gtlAvailable'] as bool?,
-      ltlAvailable: json['ltlAvailable'] as bool?,
-      canPublicNote: json['canPublicNote'] as bool?,
-      mentionLimit: (json['mentionLimit'] as num?)?.toInt(),
-      canEditNote: json['canEditNote'] as bool?,
-      canScheduleNote: json['canScheduleNote'] as bool?,
-      scheduleNoteLimit: (json['scheduleNoteLimit'] as num?)?.toInt(),
-      scheduleNoteMaxDays: (json['scheduleNoteMaxDays'] as num?)?.toInt(),
-      canInvite: json['canInvite'] as bool?,
-      inviteLimit: (json['inviteLimit'] as num?)?.toInt(),
-      inviteLimitCycle: (json['inviteLimitCycle'] as num?)?.toInt(),
-      inviteExpirationTime: (json['inviteExpirationTime'] as num?)?.toInt(),
-      canManageCustomEmojis: json['canManageCustomEmojis'] as bool?,
-      canSearchNotes: json['canSearchNotes'] as bool?,
-      canUseTranslator: json['canUseTranslator'] as bool?,
-      canHideAds: json['canHideAds'] as bool?,
-      driveCapacityMb: (json['driveCapacityMb'] as num?)?.toInt(),
-      maxFileSizeMb: (json['maxFileSizeMb'] as num?)?.toInt(),
-      uploadableFileTypes: (json['uploadableFileTypes'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-      alwaysMarkNsfw: json['alwaysMarkNsfw'] as bool?,
-      canUpdateBioMedia: json['canUpdateBioMedia'] as bool?,
-      pinLimit: (json['pinLimit'] as num?)?.toInt(),
-      antennaLimit: (json['antennaLimit'] as num?)?.toInt(),
-      wordMuteLimit: (json['wordMuteLimit'] as num?)?.toInt(),
-      webhookLimit: (json['webhookLimit'] as num?)?.toInt(),
-      clipLimit: (json['clipLimit'] as num?)?.toInt(),
-      noteEachClipsLimit: (json['noteEachClipsLimit'] as num?)?.toInt(),
-      userListLimit: (json['userListLimit'] as num?)?.toInt(),
-      userEachUserListsLimit: (json['userEachUserListsLimit'] as num?)?.toInt(),
-      rateLimitFactor: (json['rateLimitFactor'] as num?)?.toInt(),
-      avatarDecorationLimit: (json['avatarDecorationLimit'] as num?)?.toInt(),
-      canImportAntennas: json['canImportAntennas'] as bool?,
-      canImportBlocking: json['canImportBlocking'] as bool?,
-      canImportFollowing: json['canImportFollowing'] as bool?,
-      canImportMuting: json['canImportMuting'] as bool?,
-      canImportUserLists: json['canImportUserLists'] as bool?,
-      chatAvailability: $enumDecodeNullable(
-        _$ChatAvailabilityEnumMap,
-        json['chatAvailability'],
-        unknownValue: JsonKey.nullForUndefinedEnumValue,
-      ),
-      noteDraftLimit: (json['noteDraftLimit'] as num?)?.toInt(),
-      scheduledNoteLimit: (json['scheduledNoteLimit'] as num?)?.toInt(),
-      watermarkAvailable: json['watermarkAvailable'] as bool?,
-      mutualLinkSectionLimit: (json['mutualLinkSectionLimit'] as num?)?.toInt(),
-      mutualLinkLimit: (json['mutualLinkLimit'] as num?)?.toInt(),
-      scheduleNoteMax: (json['scheduleNoteMax'] as num?)?.toInt(),
-    );
+UserPolicies _$UserPoliciesFromJson(Map<String, dynamic> json) => UserPolicies(
+  gtlAvailable: json['gtlAvailable'] as bool?,
+  ltlAvailable: json['ltlAvailable'] as bool?,
+  canPublicNote: json['canPublicNote'] as bool?,
+  mentionLimit: (json['mentionLimit'] as num?)?.toInt(),
+  canEditNote: json['canEditNote'] as bool?,
+  canScheduleNote: json['canScheduleNote'] as bool?,
+  scheduleNoteLimit: (json['scheduleNoteLimit'] as num?)?.toInt(),
+  scheduleNoteMaxDays: (json['scheduleNoteMaxDays'] as num?)?.toInt(),
+  canInvite: json['canInvite'] as bool?,
+  inviteLimit: (json['inviteLimit'] as num?)?.toInt(),
+  inviteLimitCycle: (json['inviteLimitCycle'] as num?)?.toInt(),
+  inviteExpirationTime: (json['inviteExpirationTime'] as num?)?.toInt(),
+  canManageCustomEmojis: json['canManageCustomEmojis'] as bool?,
+  canSearchNotes: json['canSearchNotes'] as bool?,
+  canUseTranslator: json['canUseTranslator'] as bool?,
+  canHideAds: json['canHideAds'] as bool?,
+  driveCapacityMb: (json['driveCapacityMb'] as num?)?.toInt(),
+  maxFileSizeMb: (json['maxFileSizeMb'] as num?)?.toInt(),
+  uploadableFileTypes: (json['uploadableFileTypes'] as List<dynamic>?)
+      ?.map((e) => e as String)
+      .toList(),
+  alwaysMarkNsfw: json['alwaysMarkNsfw'] as bool?,
+  canUpdateBioMedia: json['canUpdateBioMedia'] as bool?,
+  pinLimit: (json['pinLimit'] as num?)?.toInt(),
+  antennaLimit: (json['antennaLimit'] as num?)?.toInt(),
+  wordMuteLimit: (json['wordMuteLimit'] as num?)?.toInt(),
+  webhookLimit: (json['webhookLimit'] as num?)?.toInt(),
+  clipLimit: (json['clipLimit'] as num?)?.toInt(),
+  noteEachClipsLimit: (json['noteEachClipsLimit'] as num?)?.toInt(),
+  userListLimit: (json['userListLimit'] as num?)?.toInt(),
+  userEachUserListsLimit: (json['userEachUserListsLimit'] as num?)?.toInt(),
+  rateLimitFactor: (json['rateLimitFactor'] as num?)?.toInt(),
+  avatarDecorationLimit: (json['avatarDecorationLimit'] as num?)?.toInt(),
+  canImportAntennas: json['canImportAntennas'] as bool?,
+  canImportBlocking: json['canImportBlocking'] as bool?,
+  canImportFollowing: json['canImportFollowing'] as bool?,
+  canImportMuting: json['canImportMuting'] as bool?,
+  canImportUserLists: json['canImportUserLists'] as bool?,
+  chatAvailability: $enumDecodeNullable(
+    _$ChatAvailabilityEnumMap,
+    json['chatAvailability'],
+    unknownValue: JsonKey.nullForUndefinedEnumValue,
+  ),
+  noteDraftLimit: (json['noteDraftLimit'] as num?)?.toInt(),
+  scheduledNoteLimit: (json['scheduledNoteLimit'] as num?)?.toInt(),
+  watermarkAvailable: json['watermarkAvailable'] as bool?,
+  mutualLinkSectionLimit: (json['mutualLinkSectionLimit'] as num?)?.toInt(),
+  mutualLinkLimit: (json['mutualLinkLimit'] as num?)?.toInt(),
+  scheduleNoteMax: (json['scheduleNoteMax'] as num?)?.toInt(),
+);
 
-Map<String, dynamic> _$UserPoliciesToJson(_UserPolicies instance) =>
+Map<String, dynamic> _$UserPoliciesToJson(UserPolicies instance) =>
     <String, dynamic>{
       'gtlAvailable': instance.gtlAvailable,
       'ltlAvailable': instance.ltlAvailable,
@@ -1045,27 +1044,29 @@ const _$ChatAvailabilityEnumMap = {
   ChatAvailability.unavailable: 'unavailable',
 };
 
-_UserField _$UserFieldFromJson(Map<String, dynamic> json) =>
-    _UserField(name: json['name'] as String, value: json['value'] as String);
+UserField _$UserFieldFromJson(Map<String, dynamic> json) =>
+    UserField(name: json['name'] as String, value: json['value'] as String);
 
-Map<String, dynamic> _$UserFieldToJson(_UserField instance) =>
-    <String, dynamic>{'name': instance.name, 'value': instance.value};
+Map<String, dynamic> _$UserFieldToJson(UserField instance) => <String, dynamic>{
+  'name': instance.name,
+  'value': instance.value,
+};
 
-_MutualLinkSection _$MutualLinkSectionFromJson(Map<String, dynamic> json) =>
-    _MutualLinkSection(
+MutualLinkSection _$MutualLinkSectionFromJson(Map<String, dynamic> json) =>
+    MutualLinkSection(
       name: json['name'] as String?,
       mutualLinks: (json['mutualLinks'] as List<dynamic>)
           .map((e) => MutualLink.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$MutualLinkSectionToJson(_MutualLinkSection instance) =>
+Map<String, dynamic> _$MutualLinkSectionToJson(MutualLinkSection instance) =>
     <String, dynamic>{
       'name': instance.name,
       'mutualLinks': instance.mutualLinks.map((e) => e.toJson()).toList(),
     };
 
-_MutualLink _$MutualLinkFromJson(Map<String, dynamic> json) => _MutualLink(
+MutualLink _$MutualLinkFromJson(Map<String, dynamic> json) => MutualLink(
   id: json['id'] as String,
   url: json['url'] as String,
   fileId: json['fileId'] as String,
@@ -1073,7 +1074,7 @@ _MutualLink _$MutualLinkFromJson(Map<String, dynamic> json) => _MutualLink(
   imgSrc: json['imgSrc'] as String?,
 );
 
-Map<String, dynamic> _$MutualLinkToJson(_MutualLink instance) =>
+Map<String, dynamic> _$MutualLinkToJson(MutualLink instance) =>
     <String, dynamic>{
       'id': instance.id,
       'url': instance.url,
@@ -1082,21 +1083,21 @@ Map<String, dynamic> _$MutualLinkToJson(_MutualLink instance) =>
       'imgSrc': instance.imgSrc,
     };
 
-_MuteWord _$MuteWordFromJson(Map<String, dynamic> json) => _MuteWord(
+MuteWord _$MuteWordFromJson(Map<String, dynamic> json) => MuteWord(
   regExp: json['regExp'] as String?,
   content: (json['content'] as List<dynamic>?)
       ?.map((e) => e as String)
       .toList(),
 );
 
-Map<String, dynamic> _$MuteWordToJson(_MuteWord instance) => <String, dynamic>{
+Map<String, dynamic> _$MuteWordToJson(MuteWord instance) => <String, dynamic>{
   'regExp': instance.regExp,
   'content': instance.content,
 };
 
-_NotificationRecieveConfigs _$NotificationRecieveConfigsFromJson(
+NotificationRecieveConfigs _$NotificationRecieveConfigsFromJson(
   Map<String, dynamic> json,
-) => _NotificationRecieveConfigs(
+) => NotificationRecieveConfigs(
   note: json['note'] == null
       ? null
       : NotificationRecieveConfig.fromJson(
@@ -1183,7 +1184,7 @@ _NotificationRecieveConfigs _$NotificationRecieveConfigsFromJson(
 );
 
 Map<String, dynamic> _$NotificationRecieveConfigsToJson(
-  _NotificationRecieveConfigs instance,
+  NotificationRecieveConfigs instance,
 ) => <String, dynamic>{
   'note': instance.note?.toJson(),
   'follow': instance.follow?.toJson(),
@@ -1204,15 +1205,15 @@ Map<String, dynamic> _$NotificationRecieveConfigsToJson(
   'test': instance.test?.toJson(),
 };
 
-_NotificationRecieveConfig _$NotificationRecieveConfigFromJson(
+NotificationRecieveConfig _$NotificationRecieveConfigFromJson(
   Map<String, dynamic> json,
-) => _NotificationRecieveConfig(
+) => NotificationRecieveConfig(
   type: json['type'] as String,
   userListId: json['userListId'] as String?,
 );
 
 Map<String, dynamic> _$NotificationRecieveConfigToJson(
-  _NotificationRecieveConfig instance,
+  NotificationRecieveConfig instance,
 ) => <String, dynamic>{
   'type': instance.type,
   'userListId': instance.userListId,

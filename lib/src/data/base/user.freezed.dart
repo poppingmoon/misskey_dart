@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$UserLite {
 
- String get id; String? get name; String get username; String? get host;@NullableUriConverter() Uri? get avatarUrl; String? get avatarBlurhash; List<UserAvatarDecoration> get avatarDecorations; bool get isBot; bool get isCat; UserInstanceInfo? get instance;@EmojisConverter() Map<String, String> get emojis;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) OnlineStatus? get onlineStatus; List<UserBadgeRole> get badgeRoles; bool? get requireSigninToViewContents;@HideBeforeConverter() HideBefore? get makeNotesFollowersOnlyBefore;@HideBeforeConverter() HideBefore? get makeNotesHiddenBefore; bool? get speakAsCat; String? get mandatoryCW;
+
 /// Create a copy of UserLite
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $UserLiteCopyWith<UserLite> get copyWith => _$UserLiteCopyWithImpl<UserLite>(this as UserLite, _$identity);
 
-  /// Serializes this UserLite to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -54,7 +52,7 @@ abstract mixin class $UserLiteCopyWith<$Res>  {
   factory $UserLiteCopyWith(UserLite value, $Res Function(UserLite) _then) = _$UserLiteCopyWithImpl;
 @useResult
 $Res call({
- String id, String? name, String username, String? host,@NullableUriConverter() Uri? avatarUrl, String? avatarBlurhash, List<UserAvatarDecoration> avatarDecorations, bool isBot, bool isCat, UserInstanceInfo? instance,@EmojisConverter() Map<String, String> emojis,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) OnlineStatus? onlineStatus, List<UserBadgeRole> badgeRoles, bool? requireSigninToViewContents,@HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,@HideBeforeConverter() HideBefore? makeNotesHiddenBefore, bool? speakAsCat, String? mandatoryCW
+@override String id,@override String? name,@override String username,@override String? host,@override@NullableUriConverter() Uri? avatarUrl,@override String? avatarBlurhash,@override List<UserAvatarDecoration> avatarDecorations,@override bool isBot,@override bool isCat,@override UserInstanceInfo? instance,@override@EmojisConverter() Map<String, String> emojis,@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) OnlineStatus? onlineStatus,@override List<UserBadgeRole> badgeRoles,@override bool? requireSigninToViewContents,@override@HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,@override@HideBeforeConverter() HideBefore? makeNotesHiddenBefore,@override bool? speakAsCat, String? mandatoryCW
 });
 
 
@@ -124,11 +122,10 @@ extension UserLitePatterns on UserLite {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UserLite value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _UserLite() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -146,11 +143,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UserLite value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UserLite():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -167,11 +163,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UserLite value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UserLite() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -188,10 +183,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String? name,  String username,  String? host, @NullableUriConverter()  Uri? avatarUrl,  String? avatarBlurhash,  List<UserAvatarDecoration> avatarDecorations,  bool isBot,  bool isCat,  UserInstanceInfo? instance, @EmojisConverter()  Map<String, String> emojis, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  OnlineStatus? onlineStatus,  List<UserBadgeRole> badgeRoles,  bool? requireSigninToViewContents, @HideBeforeConverter()  HideBefore? makeNotesFollowersOnlyBefore, @HideBeforeConverter()  HideBefore? makeNotesHiddenBefore,  bool? speakAsCat,  String? mandatoryCW)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _UserLite() when $default != null:
-return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_that.avatarBlurhash,_that.avatarDecorations,_that.isBot,_that.isCat,_that.instance,_that.emojis,_that.onlineStatus,_that.badgeRoles,_that.requireSigninToViewContents,_that.makeNotesFollowersOnlyBefore,_that.makeNotesHiddenBefore,_that.speakAsCat,_that.mandatoryCW);case _:
+case _:
   return orElse();
 
 }
@@ -209,10 +203,9 @@ return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_t
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String? name,  String username,  String? host, @NullableUriConverter()  Uri? avatarUrl,  String? avatarBlurhash,  List<UserAvatarDecoration> avatarDecorations,  bool isBot,  bool isCat,  UserInstanceInfo? instance, @EmojisConverter()  Map<String, String> emojis, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  OnlineStatus? onlineStatus,  List<UserBadgeRole> badgeRoles,  bool? requireSigninToViewContents, @HideBeforeConverter()  HideBefore? makeNotesFollowersOnlyBefore, @HideBeforeConverter()  HideBefore? makeNotesHiddenBefore,  bool? speakAsCat,  String? mandatoryCW)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UserLite():
-return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_that.avatarBlurhash,_that.avatarDecorations,_that.isBot,_that.isCat,_that.instance,_that.emojis,_that.onlineStatus,_that.badgeRoles,_that.requireSigninToViewContents,_that.makeNotesFollowersOnlyBefore,_that.makeNotesHiddenBefore,_that.speakAsCat,_that.mandatoryCW);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -229,10 +222,9 @@ return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_t
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String? name,  String username,  String? host, @NullableUriConverter()  Uri? avatarUrl,  String? avatarBlurhash,  List<UserAvatarDecoration> avatarDecorations,  bool isBot,  bool isCat,  UserInstanceInfo? instance, @EmojisConverter()  Map<String, String> emojis, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  OnlineStatus? onlineStatus,  List<UserBadgeRole> badgeRoles,  bool? requireSigninToViewContents, @HideBeforeConverter()  HideBefore? makeNotesFollowersOnlyBefore, @HideBeforeConverter()  HideBefore? makeNotesHiddenBefore,  bool? speakAsCat,  String? mandatoryCW)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UserLite() when $default != null:
-return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_that.avatarBlurhash,_that.avatarDecorations,_that.isBot,_that.isCat,_that.instance,_that.emojis,_that.onlineStatus,_that.badgeRoles,_that.requireSigninToViewContents,_that.makeNotesFollowersOnlyBefore,_that.makeNotesHiddenBefore,_that.speakAsCat,_that.mandatoryCW);case _:
+case _:
   return null;
 
 }
@@ -240,155 +232,17 @@ return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_t
 
 }
 
-/// @nodoc
-@JsonSerializable()
-
-class _UserLite implements UserLite {
-  const _UserLite({required this.id, this.name, required this.username, this.host, @NullableUriConverter() this.avatarUrl, this.avatarBlurhash,  List<UserAvatarDecoration> avatarDecorations = const [], this.isBot = false, this.isCat = false, this.instance, @EmojisConverter()  Map<String, String> emojis = const {}, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.onlineStatus,  List<UserBadgeRole> badgeRoles = const [], this.requireSigninToViewContents, @HideBeforeConverter() this.makeNotesFollowersOnlyBefore, @HideBeforeConverter() this.makeNotesHiddenBefore, this.speakAsCat, this.mandatoryCW}): _avatarDecorations = avatarDecorations,_emojis = emojis,_badgeRoles = badgeRoles;
-  factory _UserLite.fromJson(Map<String, dynamic> json) => _$UserLiteFromJson(json);
-
-@override final  String id;
-@override final  String? name;
-@override final  String username;
-@override final  String? host;
-@override@NullableUriConverter() final  Uri? avatarUrl;
-@override final  String? avatarBlurhash;
- final  List<UserAvatarDecoration> _avatarDecorations;
-@override@JsonKey() List<UserAvatarDecoration> get avatarDecorations {
-  if (_avatarDecorations is EqualUnmodifiableListView) return _avatarDecorations;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_avatarDecorations);
-}
-
-@override@JsonKey() final  bool isBot;
-@override@JsonKey() final  bool isCat;
-@override final  UserInstanceInfo? instance;
- final  Map<String, String> _emojis;
-@override@JsonKey()@EmojisConverter() Map<String, String> get emojis {
-  if (_emojis is EqualUnmodifiableMapView) return _emojis;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableMapView(_emojis);
-}
-
-@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  OnlineStatus? onlineStatus;
- final  List<UserBadgeRole> _badgeRoles;
-@override@JsonKey() List<UserBadgeRole> get badgeRoles {
-  if (_badgeRoles is EqualUnmodifiableListView) return _badgeRoles;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_badgeRoles);
-}
-
-@override final  bool? requireSigninToViewContents;
-@override@HideBeforeConverter() final  HideBefore? makeNotesFollowersOnlyBefore;
-@override@HideBeforeConverter() final  HideBefore? makeNotesHiddenBefore;
-@override final  bool? speakAsCat;
-@override final  String? mandatoryCW;
-
-/// Create a copy of UserLite
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$UserLiteCopyWith<_UserLite> get copyWith => __$UserLiteCopyWithImpl<_UserLite>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$UserLiteToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UserLite&&(identical(other.id, id) || other.id == id)&&(identical(other.name, name) || other.name == name)&&(identical(other.username, username) || other.username == username)&&(identical(other.host, host) || other.host == host)&&(identical(other.avatarUrl, avatarUrl) || other.avatarUrl == avatarUrl)&&(identical(other.avatarBlurhash, avatarBlurhash) || other.avatarBlurhash == avatarBlurhash)&&const DeepCollectionEquality().equals(other.avatarDecorations, _avatarDecorations)&&(identical(other.isBot, isBot) || other.isBot == isBot)&&(identical(other.isCat, isCat) || other.isCat == isCat)&&(identical(other.instance, instance) || other.instance == instance)&&const DeepCollectionEquality().equals(other.emojis, _emojis)&&(identical(other.onlineStatus, onlineStatus) || other.onlineStatus == onlineStatus)&&const DeepCollectionEquality().equals(other.badgeRoles, _badgeRoles)&&(identical(other.requireSigninToViewContents, requireSigninToViewContents) || other.requireSigninToViewContents == requireSigninToViewContents)&&(identical(other.makeNotesFollowersOnlyBefore, makeNotesFollowersOnlyBefore) || other.makeNotesFollowersOnlyBefore == makeNotesFollowersOnlyBefore)&&(identical(other.makeNotesHiddenBefore, makeNotesHiddenBefore) || other.makeNotesHiddenBefore == makeNotesHiddenBefore)&&(identical(other.speakAsCat, speakAsCat) || other.speakAsCat == speakAsCat)&&(identical(other.mandatoryCW, mandatoryCW) || other.mandatoryCW == mandatoryCW));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,id,name,username,host,avatarUrl,avatarBlurhash,const DeepCollectionEquality().hash(_avatarDecorations),isBot,isCat,instance,const DeepCollectionEquality().hash(_emojis),onlineStatus,const DeepCollectionEquality().hash(_badgeRoles),requireSigninToViewContents,makeNotesFollowersOnlyBefore,makeNotesHiddenBefore,speakAsCat,mandatoryCW);
-}
-
-@override
-String toString() {
-    return 'UserLite(id: $id, name: $name, username: $username, host: $host, avatarUrl: $avatarUrl, avatarBlurhash: $avatarBlurhash, avatarDecorations: $avatarDecorations, isBot: $isBot, isCat: $isCat, instance: $instance, emojis: $emojis, onlineStatus: $onlineStatus, badgeRoles: $badgeRoles, requireSigninToViewContents: $requireSigninToViewContents, makeNotesFollowersOnlyBefore: $makeNotesFollowersOnlyBefore, makeNotesHiddenBefore: $makeNotesHiddenBefore, speakAsCat: $speakAsCat, mandatoryCW: $mandatoryCW)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$UserLiteCopyWith<$Res> implements $UserLiteCopyWith<$Res> {
-  factory _$UserLiteCopyWith(_UserLite value, $Res Function(_UserLite) _then) = __$UserLiteCopyWithImpl;
-@override @useResult
-$Res call({
- String id, String? name, String username, String? host,@NullableUriConverter() Uri? avatarUrl, String? avatarBlurhash, List<UserAvatarDecoration> avatarDecorations, bool isBot, bool isCat, UserInstanceInfo? instance,@EmojisConverter() Map<String, String> emojis,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) OnlineStatus? onlineStatus, List<UserBadgeRole> badgeRoles, bool? requireSigninToViewContents,@HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,@HideBeforeConverter() HideBefore? makeNotesHiddenBefore, bool? speakAsCat, String? mandatoryCW
-});
-
-
-@override $UserInstanceInfoCopyWith<$Res>? get instance;
-
-}
-/// @nodoc
-class __$UserLiteCopyWithImpl<$Res>
-    implements _$UserLiteCopyWith<$Res> {
-  __$UserLiteCopyWithImpl(this._self, this._then);
-
-  final _UserLite _self;
-  final $Res Function(_UserLite) _then;
-
-/// Create a copy of UserLite
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? name = freezed,Object? username = null,Object? host = freezed,Object? avatarUrl = freezed,Object? avatarBlurhash = freezed,Object? avatarDecorations = null,Object? isBot = null,Object? isCat = null,Object? instance = freezed,Object? emojis = null,Object? onlineStatus = freezed,Object? badgeRoles = null,Object? requireSigninToViewContents = freezed,Object? makeNotesFollowersOnlyBefore = freezed,Object? makeNotesHiddenBefore = freezed,Object? speakAsCat = freezed,Object? mandatoryCW = freezed,}) {
-  return _then(_UserLite(
-id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as String,name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String?,username: null == username ? _self.username : username // ignore: cast_nullable_to_non_nullable
-as String,host: freezed == host ? _self.host : host // ignore: cast_nullable_to_non_nullable
-as String?,avatarUrl: freezed == avatarUrl ? _self.avatarUrl : avatarUrl // ignore: cast_nullable_to_non_nullable
-as Uri?,avatarBlurhash: freezed == avatarBlurhash ? _self.avatarBlurhash : avatarBlurhash // ignore: cast_nullable_to_non_nullable
-as String?,avatarDecorations: null == avatarDecorations ? _self._avatarDecorations : avatarDecorations // ignore: cast_nullable_to_non_nullable
-as List<UserAvatarDecoration>,isBot: null == isBot ? _self.isBot : isBot // ignore: cast_nullable_to_non_nullable
-as bool,isCat: null == isCat ? _self.isCat : isCat // ignore: cast_nullable_to_non_nullable
-as bool,instance: freezed == instance ? _self.instance : instance // ignore: cast_nullable_to_non_nullable
-as UserInstanceInfo?,emojis: null == emojis ? _self._emojis : emojis // ignore: cast_nullable_to_non_nullable
-as Map<String, String>,onlineStatus: freezed == onlineStatus ? _self.onlineStatus : onlineStatus // ignore: cast_nullable_to_non_nullable
-as OnlineStatus?,badgeRoles: null == badgeRoles ? _self._badgeRoles : badgeRoles // ignore: cast_nullable_to_non_nullable
-as List<UserBadgeRole>,requireSigninToViewContents: freezed == requireSigninToViewContents ? _self.requireSigninToViewContents : requireSigninToViewContents // ignore: cast_nullable_to_non_nullable
-as bool?,makeNotesFollowersOnlyBefore: freezed == makeNotesFollowersOnlyBefore ? _self.makeNotesFollowersOnlyBefore : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
-as HideBefore?,makeNotesHiddenBefore: freezed == makeNotesHiddenBefore ? _self.makeNotesHiddenBefore : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
-as HideBefore?,speakAsCat: freezed == speakAsCat ? _self.speakAsCat : speakAsCat // ignore: cast_nullable_to_non_nullable
-as bool?,mandatoryCW: freezed == mandatoryCW ? _self.mandatoryCW : mandatoryCW // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
-/// Create a copy of UserLite
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$UserInstanceInfoCopyWith<$Res>? get instance {
-    if (_self.instance == null) {
-    return null;
-  }
-
-  return $UserInstanceInfoCopyWith<$Res>(_self.instance!, (value) {
-    return _then(_self.copyWith(instance: value));
-  });
-}
-}
-
 
 /// @nodoc
 mixin _$UserDetailedNotMe {
 
- String get id; String? get name; String get username; String? get host;@NullableUriConverter() Uri? get avatarUrl; String? get avatarBlurhash; List<UserAvatarDecoration> get avatarDecorations; bool get isBot; bool get isCat; UserInstanceInfo? get instance;@EmojisConverter() Map<String, String> get emojis;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) OnlineStatus? get onlineStatus; List<UserBadgeRole> get badgeRoles; bool? get requireSigninToViewContents;@HideBeforeConverter() HideBefore? get makeNotesFollowersOnlyBefore;@HideBeforeConverter() HideBefore? get makeNotesHiddenBefore; bool? get speakAsCat;@NullableUriConverter() Uri? get url;@NullableUriConverter() Uri? get uri;@NullableUriConverter() Uri? get movedTo; List<String>? get alsoKnownAs;@DateTimeConverter() DateTime get createdAt;@NullableDateTimeConverter() DateTime? get updatedAt;@NullableDateTimeConverter() DateTime? get lastFetchedAt;@NullableUriConverter() Uri? get bannerUrl; String? get bannerBlurhash; bool get isLocked; bool get isSilenced; bool get isSuspended; String? get description; String? get location; String? get birthday; String? get lang; List<UserField>? get fields; List<String> get verifiedLinks; List<MutualLinkSection>? get mutualLinkSections;@IntConverter() int get followersCount;@IntConverter() int get followingCount; int get notesCount; List<String>? get pinnedNoteIds; List<Note>? get pinnedNotes; String? get pinnedPageId; Map<String, dynamic>? get pinnedPage; bool get publicReactions;/// removed at 2023.12.0"
-@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? get ffVisibility;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? get followersVisibility;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? get followingVisibility;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) ChatScope? get chatScope; bool? get canChat; bool? get twoFactorEnabled; bool? get usePasswordLessLogin; bool? get securityKeys; List<UserRole>? get roles; String? get memo; String? get moderationNote;
+
 /// Create a copy of UserDetailedNotMe
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $UserDetailedNotMeCopyWith<UserDetailedNotMe> get copyWith => _$UserDetailedNotMeCopyWithImpl<UserDetailedNotMe>(this as UserDetailedNotMe, _$identity);
 
-  /// Serializes this UserDetailedNotMe to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -418,7 +272,7 @@ abstract mixin class $UserDetailedNotMeCopyWith<$Res>  {
   factory $UserDetailedNotMeCopyWith(UserDetailedNotMe value, $Res Function(UserDetailedNotMe) _then) = _$UserDetailedNotMeCopyWithImpl;
 @useResult
 $Res call({
- String id, String? name, String username, String? host,@NullableUriConverter() Uri? avatarUrl, String? avatarBlurhash, List<UserAvatarDecoration> avatarDecorations, bool isBot, bool isCat, UserInstanceInfo? instance,@EmojisConverter() Map<String, String> emojis,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) OnlineStatus? onlineStatus, List<UserBadgeRole> badgeRoles, bool? requireSigninToViewContents,@HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,@HideBeforeConverter() HideBefore? makeNotesHiddenBefore, bool? speakAsCat,@NullableUriConverter() Uri? url,@NullableUriConverter() Uri? uri,@NullableUriConverter() Uri? movedTo, List<String>? alsoKnownAs,@DateTimeConverter() DateTime createdAt,@NullableDateTimeConverter() DateTime? updatedAt,@NullableDateTimeConverter() DateTime? lastFetchedAt,@NullableUriConverter() Uri? bannerUrl, String? bannerBlurhash, bool isLocked, bool isSilenced, bool isSuspended, String? description, String? location, String? birthday, String? lang, List<UserField>? fields, List<String> verifiedLinks, List<MutualLinkSection>? mutualLinkSections,@IntConverter() int followersCount,@IntConverter() int followingCount, int notesCount, List<String>? pinnedNoteIds, List<Note>? pinnedNotes, String? pinnedPageId, Map<String, dynamic>? pinnedPage, bool publicReactions,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? ffVisibility,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? followersVisibility,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? followingVisibility,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) ChatScope? chatScope, bool? canChat, bool? twoFactorEnabled, bool? usePasswordLessLogin, bool? securityKeys, List<UserRole>? roles, String? memo, String? moderationNote
+@override String id,@override String? name,@override String username,@override String? host,@override@NullableUriConverter() Uri? avatarUrl,@override String? avatarBlurhash,@override List<UserAvatarDecoration> avatarDecorations,@override bool isBot,@override bool isCat,@override UserInstanceInfo? instance,@override@EmojisConverter() Map<String, String> emojis,@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) OnlineStatus? onlineStatus,@override List<UserBadgeRole> badgeRoles,@override bool? requireSigninToViewContents,@override@HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,@override@HideBeforeConverter() HideBefore? makeNotesHiddenBefore,@override bool? speakAsCat,@override@NullableUriConverter() Uri? url,@override@NullableUriConverter() Uri? uri,@override@NullableUriConverter() Uri? movedTo,@override List<String>? alsoKnownAs,@override@DateTimeConverter() DateTime createdAt,@override@NullableDateTimeConverter() DateTime? updatedAt,@override@NullableDateTimeConverter() DateTime? lastFetchedAt,@override@NullableUriConverter() Uri? bannerUrl,@override String? bannerBlurhash,@override bool isLocked,@override bool isSilenced,@override bool isSuspended,@override String? description,@override String? location,@override String? birthday,@override String? lang,@override List<UserField>? fields,@override List<String> verifiedLinks,@override List<MutualLinkSection>? mutualLinkSections,@override@IntConverter() int followersCount,@override@IntConverter() int followingCount,@override int notesCount,@override List<String>? pinnedNoteIds,@override List<Note>? pinnedNotes,@override String? pinnedPageId,@override Map<String, dynamic>? pinnedPage,@override bool publicReactions,@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? ffVisibility,@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? followersVisibility,@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? followingVisibility,@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) ChatScope? chatScope,@override bool? canChat,@override bool? twoFactorEnabled,@override bool? usePasswordLessLogin,@override bool? securityKeys,@override List<UserRole>? roles,@override String? memo,@override String? moderationNote
 });
 
 
@@ -525,11 +379,10 @@ extension UserDetailedNotMePatterns on UserDetailedNotMe {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UserDetailedNotMe value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _UserDetailedNotMe() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -547,11 +400,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UserDetailedNotMe value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UserDetailedNotMe():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -568,11 +420,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UserDetailedNotMe value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UserDetailedNotMe() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -589,10 +440,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String? name,  String username,  String? host, @NullableUriConverter()  Uri? avatarUrl,  String? avatarBlurhash,  List<UserAvatarDecoration> avatarDecorations,  bool isBot,  bool isCat,  UserInstanceInfo? instance, @EmojisConverter()  Map<String, String> emojis, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  OnlineStatus? onlineStatus,  List<UserBadgeRole> badgeRoles,  bool? requireSigninToViewContents, @HideBeforeConverter()  HideBefore? makeNotesFollowersOnlyBefore, @HideBeforeConverter()  HideBefore? makeNotesHiddenBefore,  bool? speakAsCat, @NullableUriConverter()  Uri? url, @NullableUriConverter()  Uri? uri, @NullableUriConverter()  Uri? movedTo,  List<String>? alsoKnownAs, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? updatedAt, @NullableDateTimeConverter()  DateTime? lastFetchedAt, @NullableUriConverter()  Uri? bannerUrl,  String? bannerBlurhash,  bool isLocked,  bool isSilenced,  bool isSuspended,  String? description,  String? location,  String? birthday,  String? lang,  List<UserField>? fields,  List<String> verifiedLinks,  List<MutualLinkSection>? mutualLinkSections, @IntConverter()  int followersCount, @IntConverter()  int followingCount,  int notesCount,  List<String>? pinnedNoteIds,  List<Note>? pinnedNotes,  String? pinnedPageId,  Map<String, dynamic>? pinnedPage,  bool publicReactions, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? ffVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followersVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followingVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChatScope? chatScope,  bool? canChat,  bool? twoFactorEnabled,  bool? usePasswordLessLogin,  bool? securityKeys,  List<UserRole>? roles,  String? memo,  String? moderationNote)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _UserDetailedNotMe() when $default != null:
-return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_that.avatarBlurhash,_that.avatarDecorations,_that.isBot,_that.isCat,_that.instance,_that.emojis,_that.onlineStatus,_that.badgeRoles,_that.requireSigninToViewContents,_that.makeNotesFollowersOnlyBefore,_that.makeNotesHiddenBefore,_that.speakAsCat,_that.url,_that.uri,_that.movedTo,_that.alsoKnownAs,_that.createdAt,_that.updatedAt,_that.lastFetchedAt,_that.bannerUrl,_that.bannerBlurhash,_that.isLocked,_that.isSilenced,_that.isSuspended,_that.description,_that.location,_that.birthday,_that.lang,_that.fields,_that.verifiedLinks,_that.mutualLinkSections,_that.followersCount,_that.followingCount,_that.notesCount,_that.pinnedNoteIds,_that.pinnedNotes,_that.pinnedPageId,_that.pinnedPage,_that.publicReactions,_that.ffVisibility,_that.followersVisibility,_that.followingVisibility,_that.chatScope,_that.canChat,_that.twoFactorEnabled,_that.usePasswordLessLogin,_that.securityKeys,_that.roles,_that.memo,_that.moderationNote);case _:
+case _:
   return orElse();
 
 }
@@ -610,10 +460,9 @@ return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_t
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String? name,  String username,  String? host, @NullableUriConverter()  Uri? avatarUrl,  String? avatarBlurhash,  List<UserAvatarDecoration> avatarDecorations,  bool isBot,  bool isCat,  UserInstanceInfo? instance, @EmojisConverter()  Map<String, String> emojis, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  OnlineStatus? onlineStatus,  List<UserBadgeRole> badgeRoles,  bool? requireSigninToViewContents, @HideBeforeConverter()  HideBefore? makeNotesFollowersOnlyBefore, @HideBeforeConverter()  HideBefore? makeNotesHiddenBefore,  bool? speakAsCat, @NullableUriConverter()  Uri? url, @NullableUriConverter()  Uri? uri, @NullableUriConverter()  Uri? movedTo,  List<String>? alsoKnownAs, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? updatedAt, @NullableDateTimeConverter()  DateTime? lastFetchedAt, @NullableUriConverter()  Uri? bannerUrl,  String? bannerBlurhash,  bool isLocked,  bool isSilenced,  bool isSuspended,  String? description,  String? location,  String? birthday,  String? lang,  List<UserField>? fields,  List<String> verifiedLinks,  List<MutualLinkSection>? mutualLinkSections, @IntConverter()  int followersCount, @IntConverter()  int followingCount,  int notesCount,  List<String>? pinnedNoteIds,  List<Note>? pinnedNotes,  String? pinnedPageId,  Map<String, dynamic>? pinnedPage,  bool publicReactions, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? ffVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followersVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followingVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChatScope? chatScope,  bool? canChat,  bool? twoFactorEnabled,  bool? usePasswordLessLogin,  bool? securityKeys,  List<UserRole>? roles,  String? memo,  String? moderationNote)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UserDetailedNotMe():
-return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_that.avatarBlurhash,_that.avatarDecorations,_that.isBot,_that.isCat,_that.instance,_that.emojis,_that.onlineStatus,_that.badgeRoles,_that.requireSigninToViewContents,_that.makeNotesFollowersOnlyBefore,_that.makeNotesHiddenBefore,_that.speakAsCat,_that.url,_that.uri,_that.movedTo,_that.alsoKnownAs,_that.createdAt,_that.updatedAt,_that.lastFetchedAt,_that.bannerUrl,_that.bannerBlurhash,_that.isLocked,_that.isSilenced,_that.isSuspended,_that.description,_that.location,_that.birthday,_that.lang,_that.fields,_that.verifiedLinks,_that.mutualLinkSections,_that.followersCount,_that.followingCount,_that.notesCount,_that.pinnedNoteIds,_that.pinnedNotes,_that.pinnedPageId,_that.pinnedPage,_that.publicReactions,_that.ffVisibility,_that.followersVisibility,_that.followingVisibility,_that.chatScope,_that.canChat,_that.twoFactorEnabled,_that.usePasswordLessLogin,_that.securityKeys,_that.roles,_that.memo,_that.moderationNote);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -630,10 +479,9 @@ return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_t
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String? name,  String username,  String? host, @NullableUriConverter()  Uri? avatarUrl,  String? avatarBlurhash,  List<UserAvatarDecoration> avatarDecorations,  bool isBot,  bool isCat,  UserInstanceInfo? instance, @EmojisConverter()  Map<String, String> emojis, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  OnlineStatus? onlineStatus,  List<UserBadgeRole> badgeRoles,  bool? requireSigninToViewContents, @HideBeforeConverter()  HideBefore? makeNotesFollowersOnlyBefore, @HideBeforeConverter()  HideBefore? makeNotesHiddenBefore,  bool? speakAsCat, @NullableUriConverter()  Uri? url, @NullableUriConverter()  Uri? uri, @NullableUriConverter()  Uri? movedTo,  List<String>? alsoKnownAs, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? updatedAt, @NullableDateTimeConverter()  DateTime? lastFetchedAt, @NullableUriConverter()  Uri? bannerUrl,  String? bannerBlurhash,  bool isLocked,  bool isSilenced,  bool isSuspended,  String? description,  String? location,  String? birthday,  String? lang,  List<UserField>? fields,  List<String> verifiedLinks,  List<MutualLinkSection>? mutualLinkSections, @IntConverter()  int followersCount, @IntConverter()  int followingCount,  int notesCount,  List<String>? pinnedNoteIds,  List<Note>? pinnedNotes,  String? pinnedPageId,  Map<String, dynamic>? pinnedPage,  bool publicReactions, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? ffVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followersVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followingVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChatScope? chatScope,  bool? canChat,  bool? twoFactorEnabled,  bool? usePasswordLessLogin,  bool? securityKeys,  List<UserRole>? roles,  String? memo,  String? moderationNote)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UserDetailedNotMe() when $default != null:
-return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_that.avatarBlurhash,_that.avatarDecorations,_that.isBot,_that.isCat,_that.instance,_that.emojis,_that.onlineStatus,_that.badgeRoles,_that.requireSigninToViewContents,_that.makeNotesFollowersOnlyBefore,_that.makeNotesHiddenBefore,_that.speakAsCat,_that.url,_that.uri,_that.movedTo,_that.alsoKnownAs,_that.createdAt,_that.updatedAt,_that.lastFetchedAt,_that.bannerUrl,_that.bannerBlurhash,_that.isLocked,_that.isSilenced,_that.isSuspended,_that.description,_that.location,_that.birthday,_that.lang,_that.fields,_that.verifiedLinks,_that.mutualLinkSections,_that.followersCount,_that.followingCount,_that.notesCount,_that.pinnedNoteIds,_that.pinnedNotes,_that.pinnedPageId,_that.pinnedPage,_that.publicReactions,_that.ffVisibility,_that.followersVisibility,_that.followingVisibility,_that.chatScope,_that.canChat,_that.twoFactorEnabled,_that.usePasswordLessLogin,_that.securityKeys,_that.roles,_that.memo,_that.moderationNote);case _:
+case _:
   return null;
 
 }
@@ -641,292 +489,17 @@ return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_t
 
 }
 
-/// @nodoc
-@JsonSerializable()
-
-class _UserDetailedNotMe implements UserDetailedNotMe {
-  const _UserDetailedNotMe({required this.id, this.name, required this.username, this.host, @NullableUriConverter() this.avatarUrl, this.avatarBlurhash,  List<UserAvatarDecoration> avatarDecorations = const [], required this.isBot, required this.isCat, this.instance, @EmojisConverter()  Map<String, String> emojis = const {}, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.onlineStatus,  List<UserBadgeRole> badgeRoles = const [], this.requireSigninToViewContents, @HideBeforeConverter() this.makeNotesFollowersOnlyBefore, @HideBeforeConverter() this.makeNotesHiddenBefore, this.speakAsCat, @NullableUriConverter() this.url, @NullableUriConverter() this.uri, @NullableUriConverter() this.movedTo,  List<String>? alsoKnownAs, @DateTimeConverter() required this.createdAt, @NullableDateTimeConverter() this.updatedAt, @NullableDateTimeConverter() this.lastFetchedAt, @NullableUriConverter() this.bannerUrl, this.bannerBlurhash, required this.isLocked, required this.isSilenced, required this.isSuspended, this.description, this.location, this.birthday, this.lang,  List<UserField>? fields,  List<String> verifiedLinks = const [],  List<MutualLinkSection>? mutualLinkSections, @IntConverter() required this.followersCount, @IntConverter() required this.followingCount, required this.notesCount,  List<String>? pinnedNoteIds,  List<Note>? pinnedNotes, this.pinnedPageId,  Map<String, dynamic>? pinnedPage, this.publicReactions = false, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.ffVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.followersVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.followingVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.chatScope, this.canChat, this.twoFactorEnabled, this.usePasswordLessLogin, this.securityKeys,  List<UserRole>? roles, this.memo, this.moderationNote}): _avatarDecorations = avatarDecorations,_emojis = emojis,_badgeRoles = badgeRoles,_alsoKnownAs = alsoKnownAs,_fields = fields,_verifiedLinks = verifiedLinks,_mutualLinkSections = mutualLinkSections,_pinnedNoteIds = pinnedNoteIds,_pinnedNotes = pinnedNotes,_pinnedPage = pinnedPage,_roles = roles;
-  factory _UserDetailedNotMe.fromJson(Map<String, dynamic> json) => _$UserDetailedNotMeFromJson(json);
-
-@override final  String id;
-@override final  String? name;
-@override final  String username;
-@override final  String? host;
-@override@NullableUriConverter() final  Uri? avatarUrl;
-@override final  String? avatarBlurhash;
- final  List<UserAvatarDecoration> _avatarDecorations;
-@override@JsonKey() List<UserAvatarDecoration> get avatarDecorations {
-  if (_avatarDecorations is EqualUnmodifiableListView) return _avatarDecorations;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_avatarDecorations);
-}
-
-@override final  bool isBot;
-@override final  bool isCat;
-@override final  UserInstanceInfo? instance;
- final  Map<String, String> _emojis;
-@override@JsonKey()@EmojisConverter() Map<String, String> get emojis {
-  if (_emojis is EqualUnmodifiableMapView) return _emojis;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableMapView(_emojis);
-}
-
-@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  OnlineStatus? onlineStatus;
- final  List<UserBadgeRole> _badgeRoles;
-@override@JsonKey() List<UserBadgeRole> get badgeRoles {
-  if (_badgeRoles is EqualUnmodifiableListView) return _badgeRoles;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_badgeRoles);
-}
-
-@override final  bool? requireSigninToViewContents;
-@override@HideBeforeConverter() final  HideBefore? makeNotesFollowersOnlyBefore;
-@override@HideBeforeConverter() final  HideBefore? makeNotesHiddenBefore;
-@override final  bool? speakAsCat;
-@override@NullableUriConverter() final  Uri? url;
-@override@NullableUriConverter() final  Uri? uri;
-@override@NullableUriConverter() final  Uri? movedTo;
- final  List<String>? _alsoKnownAs;
-@override List<String>? get alsoKnownAs {
-  final value = _alsoKnownAs;
-  if (value == null) return null;
-  if (_alsoKnownAs is EqualUnmodifiableListView) return _alsoKnownAs;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
-@override@DateTimeConverter() final  DateTime createdAt;
-@override@NullableDateTimeConverter() final  DateTime? updatedAt;
-@override@NullableDateTimeConverter() final  DateTime? lastFetchedAt;
-@override@NullableUriConverter() final  Uri? bannerUrl;
-@override final  String? bannerBlurhash;
-@override final  bool isLocked;
-@override final  bool isSilenced;
-@override final  bool isSuspended;
-@override final  String? description;
-@override final  String? location;
-@override final  String? birthday;
-@override final  String? lang;
- final  List<UserField>? _fields;
-@override List<UserField>? get fields {
-  final value = _fields;
-  if (value == null) return null;
-  if (_fields is EqualUnmodifiableListView) return _fields;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
- final  List<String> _verifiedLinks;
-@override@JsonKey() List<String> get verifiedLinks {
-  if (_verifiedLinks is EqualUnmodifiableListView) return _verifiedLinks;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_verifiedLinks);
-}
-
- final  List<MutualLinkSection>? _mutualLinkSections;
-@override List<MutualLinkSection>? get mutualLinkSections {
-  final value = _mutualLinkSections;
-  if (value == null) return null;
-  if (_mutualLinkSections is EqualUnmodifiableListView) return _mutualLinkSections;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
-@override@IntConverter() final  int followersCount;
-@override@IntConverter() final  int followingCount;
-@override final  int notesCount;
- final  List<String>? _pinnedNoteIds;
-@override List<String>? get pinnedNoteIds {
-  final value = _pinnedNoteIds;
-  if (value == null) return null;
-  if (_pinnedNoteIds is EqualUnmodifiableListView) return _pinnedNoteIds;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
- final  List<Note>? _pinnedNotes;
-@override List<Note>? get pinnedNotes {
-  final value = _pinnedNotes;
-  if (value == null) return null;
-  if (_pinnedNotes is EqualUnmodifiableListView) return _pinnedNotes;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
-@override final  String? pinnedPageId;
- final  Map<String, dynamic>? _pinnedPage;
-@override Map<String, dynamic>? get pinnedPage {
-  final value = _pinnedPage;
-  if (value == null) return null;
-  if (_pinnedPage is EqualUnmodifiableMapView) return _pinnedPage;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableMapView(value);
-}
-
-@override@JsonKey() final  bool publicReactions;
-/// removed at 2023.12.0"
-@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  FFVisibility? ffVisibility;
-@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  FFVisibility? followersVisibility;
-@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  FFVisibility? followingVisibility;
-@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  ChatScope? chatScope;
-@override final  bool? canChat;
-@override final  bool? twoFactorEnabled;
-@override final  bool? usePasswordLessLogin;
-@override final  bool? securityKeys;
- final  List<UserRole>? _roles;
-@override List<UserRole>? get roles {
-  final value = _roles;
-  if (value == null) return null;
-  if (_roles is EqualUnmodifiableListView) return _roles;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
-@override final  String? memo;
-@override final  String? moderationNote;
-
-/// Create a copy of UserDetailedNotMe
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$UserDetailedNotMeCopyWith<_UserDetailedNotMe> get copyWith => __$UserDetailedNotMeCopyWithImpl<_UserDetailedNotMe>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$UserDetailedNotMeToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UserDetailedNotMe&&(identical(other.id, id) || other.id == id)&&(identical(other.name, name) || other.name == name)&&(identical(other.username, username) || other.username == username)&&(identical(other.host, host) || other.host == host)&&(identical(other.avatarUrl, avatarUrl) || other.avatarUrl == avatarUrl)&&(identical(other.avatarBlurhash, avatarBlurhash) || other.avatarBlurhash == avatarBlurhash)&&const DeepCollectionEquality().equals(other.avatarDecorations, _avatarDecorations)&&(identical(other.isBot, isBot) || other.isBot == isBot)&&(identical(other.isCat, isCat) || other.isCat == isCat)&&(identical(other.instance, instance) || other.instance == instance)&&const DeepCollectionEquality().equals(other.emojis, _emojis)&&(identical(other.onlineStatus, onlineStatus) || other.onlineStatus == onlineStatus)&&const DeepCollectionEquality().equals(other.badgeRoles, _badgeRoles)&&(identical(other.requireSigninToViewContents, requireSigninToViewContents) || other.requireSigninToViewContents == requireSigninToViewContents)&&(identical(other.makeNotesFollowersOnlyBefore, makeNotesFollowersOnlyBefore) || other.makeNotesFollowersOnlyBefore == makeNotesFollowersOnlyBefore)&&(identical(other.makeNotesHiddenBefore, makeNotesHiddenBefore) || other.makeNotesHiddenBefore == makeNotesHiddenBefore)&&(identical(other.speakAsCat, speakAsCat) || other.speakAsCat == speakAsCat)&&(identical(other.url, url) || other.url == url)&&(identical(other.uri, uri) || other.uri == uri)&&(identical(other.movedTo, movedTo) || other.movedTo == movedTo)&&const DeepCollectionEquality().equals(other.alsoKnownAs, _alsoKnownAs)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.lastFetchedAt, lastFetchedAt) || other.lastFetchedAt == lastFetchedAt)&&(identical(other.bannerUrl, bannerUrl) || other.bannerUrl == bannerUrl)&&(identical(other.bannerBlurhash, bannerBlurhash) || other.bannerBlurhash == bannerBlurhash)&&(identical(other.isLocked, isLocked) || other.isLocked == isLocked)&&(identical(other.isSilenced, isSilenced) || other.isSilenced == isSilenced)&&(identical(other.isSuspended, isSuspended) || other.isSuspended == isSuspended)&&(identical(other.description, description) || other.description == description)&&(identical(other.location, location) || other.location == location)&&(identical(other.birthday, birthday) || other.birthday == birthday)&&(identical(other.lang, lang) || other.lang == lang)&&const DeepCollectionEquality().equals(other.fields, _fields)&&const DeepCollectionEquality().equals(other.verifiedLinks, _verifiedLinks)&&const DeepCollectionEquality().equals(other.mutualLinkSections, _mutualLinkSections)&&(identical(other.followersCount, followersCount) || other.followersCount == followersCount)&&(identical(other.followingCount, followingCount) || other.followingCount == followingCount)&&(identical(other.notesCount, notesCount) || other.notesCount == notesCount)&&const DeepCollectionEquality().equals(other.pinnedNoteIds, _pinnedNoteIds)&&const DeepCollectionEquality().equals(other.pinnedNotes, _pinnedNotes)&&(identical(other.pinnedPageId, pinnedPageId) || other.pinnedPageId == pinnedPageId)&&const DeepCollectionEquality().equals(other.pinnedPage, _pinnedPage)&&(identical(other.publicReactions, publicReactions) || other.publicReactions == publicReactions)&&(identical(other.ffVisibility, ffVisibility) || other.ffVisibility == ffVisibility)&&(identical(other.followersVisibility, followersVisibility) || other.followersVisibility == followersVisibility)&&(identical(other.followingVisibility, followingVisibility) || other.followingVisibility == followingVisibility)&&(identical(other.chatScope, chatScope) || other.chatScope == chatScope)&&(identical(other.canChat, canChat) || other.canChat == canChat)&&(identical(other.twoFactorEnabled, twoFactorEnabled) || other.twoFactorEnabled == twoFactorEnabled)&&(identical(other.usePasswordLessLogin, usePasswordLessLogin) || other.usePasswordLessLogin == usePasswordLessLogin)&&(identical(other.securityKeys, securityKeys) || other.securityKeys == securityKeys)&&const DeepCollectionEquality().equals(other.roles, _roles)&&(identical(other.memo, memo) || other.memo == memo)&&(identical(other.moderationNote, moderationNote) || other.moderationNote == moderationNote));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hashAll([runtimeType,id,name,username,host,avatarUrl,avatarBlurhash,const DeepCollectionEquality().hash(_avatarDecorations),isBot,isCat,instance,const DeepCollectionEquality().hash(_emojis),onlineStatus,const DeepCollectionEquality().hash(_badgeRoles),requireSigninToViewContents,makeNotesFollowersOnlyBefore,makeNotesHiddenBefore,speakAsCat,url,uri,movedTo,const DeepCollectionEquality().hash(_alsoKnownAs),createdAt,updatedAt,lastFetchedAt,bannerUrl,bannerBlurhash,isLocked,isSilenced,isSuspended,description,location,birthday,lang,const DeepCollectionEquality().hash(_fields),const DeepCollectionEquality().hash(_verifiedLinks),const DeepCollectionEquality().hash(_mutualLinkSections),followersCount,followingCount,notesCount,const DeepCollectionEquality().hash(_pinnedNoteIds),const DeepCollectionEquality().hash(_pinnedNotes),pinnedPageId,const DeepCollectionEquality().hash(_pinnedPage),publicReactions,ffVisibility,followersVisibility,followingVisibility,chatScope,canChat,twoFactorEnabled,usePasswordLessLogin,securityKeys,const DeepCollectionEquality().hash(_roles),memo,moderationNote]);
-}
-
-@override
-String toString() {
-    return 'UserDetailedNotMe(id: $id, name: $name, username: $username, host: $host, avatarUrl: $avatarUrl, avatarBlurhash: $avatarBlurhash, avatarDecorations: $avatarDecorations, isBot: $isBot, isCat: $isCat, instance: $instance, emojis: $emojis, onlineStatus: $onlineStatus, badgeRoles: $badgeRoles, requireSigninToViewContents: $requireSigninToViewContents, makeNotesFollowersOnlyBefore: $makeNotesFollowersOnlyBefore, makeNotesHiddenBefore: $makeNotesHiddenBefore, speakAsCat: $speakAsCat, url: $url, uri: $uri, movedTo: $movedTo, alsoKnownAs: $alsoKnownAs, createdAt: $createdAt, updatedAt: $updatedAt, lastFetchedAt: $lastFetchedAt, bannerUrl: $bannerUrl, bannerBlurhash: $bannerBlurhash, isLocked: $isLocked, isSilenced: $isSilenced, isSuspended: $isSuspended, description: $description, location: $location, birthday: $birthday, lang: $lang, fields: $fields, verifiedLinks: $verifiedLinks, mutualLinkSections: $mutualLinkSections, followersCount: $followersCount, followingCount: $followingCount, notesCount: $notesCount, pinnedNoteIds: $pinnedNoteIds, pinnedNotes: $pinnedNotes, pinnedPageId: $pinnedPageId, pinnedPage: $pinnedPage, publicReactions: $publicReactions, ffVisibility: $ffVisibility, followersVisibility: $followersVisibility, followingVisibility: $followingVisibility, chatScope: $chatScope, canChat: $canChat, twoFactorEnabled: $twoFactorEnabled, usePasswordLessLogin: $usePasswordLessLogin, securityKeys: $securityKeys, roles: $roles, memo: $memo, moderationNote: $moderationNote)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$UserDetailedNotMeCopyWith<$Res> implements $UserDetailedNotMeCopyWith<$Res> {
-  factory _$UserDetailedNotMeCopyWith(_UserDetailedNotMe value, $Res Function(_UserDetailedNotMe) _then) = __$UserDetailedNotMeCopyWithImpl;
-@override @useResult
-$Res call({
- String id, String? name, String username, String? host,@NullableUriConverter() Uri? avatarUrl, String? avatarBlurhash, List<UserAvatarDecoration> avatarDecorations, bool isBot, bool isCat, UserInstanceInfo? instance,@EmojisConverter() Map<String, String> emojis,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) OnlineStatus? onlineStatus, List<UserBadgeRole> badgeRoles, bool? requireSigninToViewContents,@HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,@HideBeforeConverter() HideBefore? makeNotesHiddenBefore, bool? speakAsCat,@NullableUriConverter() Uri? url,@NullableUriConverter() Uri? uri,@NullableUriConverter() Uri? movedTo, List<String>? alsoKnownAs,@DateTimeConverter() DateTime createdAt,@NullableDateTimeConverter() DateTime? updatedAt,@NullableDateTimeConverter() DateTime? lastFetchedAt,@NullableUriConverter() Uri? bannerUrl, String? bannerBlurhash, bool isLocked, bool isSilenced, bool isSuspended, String? description, String? location, String? birthday, String? lang, List<UserField>? fields, List<String> verifiedLinks, List<MutualLinkSection>? mutualLinkSections,@IntConverter() int followersCount,@IntConverter() int followingCount, int notesCount, List<String>? pinnedNoteIds, List<Note>? pinnedNotes, String? pinnedPageId, Map<String, dynamic>? pinnedPage, bool publicReactions,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? ffVisibility,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? followersVisibility,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? followingVisibility,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) ChatScope? chatScope, bool? canChat, bool? twoFactorEnabled, bool? usePasswordLessLogin, bool? securityKeys, List<UserRole>? roles, String? memo, String? moderationNote
-});
-
-
-@override $UserInstanceInfoCopyWith<$Res>? get instance;
-
-}
-/// @nodoc
-class __$UserDetailedNotMeCopyWithImpl<$Res>
-    implements _$UserDetailedNotMeCopyWith<$Res> {
-  __$UserDetailedNotMeCopyWithImpl(this._self, this._then);
-
-  final _UserDetailedNotMe _self;
-  final $Res Function(_UserDetailedNotMe) _then;
-
-/// Create a copy of UserDetailedNotMe
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? name = freezed,Object? username = null,Object? host = freezed,Object? avatarUrl = freezed,Object? avatarBlurhash = freezed,Object? avatarDecorations = null,Object? isBot = null,Object? isCat = null,Object? instance = freezed,Object? emojis = null,Object? onlineStatus = freezed,Object? badgeRoles = null,Object? requireSigninToViewContents = freezed,Object? makeNotesFollowersOnlyBefore = freezed,Object? makeNotesHiddenBefore = freezed,Object? speakAsCat = freezed,Object? url = freezed,Object? uri = freezed,Object? movedTo = freezed,Object? alsoKnownAs = freezed,Object? createdAt = null,Object? updatedAt = freezed,Object? lastFetchedAt = freezed,Object? bannerUrl = freezed,Object? bannerBlurhash = freezed,Object? isLocked = null,Object? isSilenced = null,Object? isSuspended = null,Object? description = freezed,Object? location = freezed,Object? birthday = freezed,Object? lang = freezed,Object? fields = freezed,Object? verifiedLinks = null,Object? mutualLinkSections = freezed,Object? followersCount = null,Object? followingCount = null,Object? notesCount = null,Object? pinnedNoteIds = freezed,Object? pinnedNotes = freezed,Object? pinnedPageId = freezed,Object? pinnedPage = freezed,Object? publicReactions = null,Object? ffVisibility = freezed,Object? followersVisibility = freezed,Object? followingVisibility = freezed,Object? chatScope = freezed,Object? canChat = freezed,Object? twoFactorEnabled = freezed,Object? usePasswordLessLogin = freezed,Object? securityKeys = freezed,Object? roles = freezed,Object? memo = freezed,Object? moderationNote = freezed,}) {
-  return _then(_UserDetailedNotMe(
-id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as String,name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String?,username: null == username ? _self.username : username // ignore: cast_nullable_to_non_nullable
-as String,host: freezed == host ? _self.host : host // ignore: cast_nullable_to_non_nullable
-as String?,avatarUrl: freezed == avatarUrl ? _self.avatarUrl : avatarUrl // ignore: cast_nullable_to_non_nullable
-as Uri?,avatarBlurhash: freezed == avatarBlurhash ? _self.avatarBlurhash : avatarBlurhash // ignore: cast_nullable_to_non_nullable
-as String?,avatarDecorations: null == avatarDecorations ? _self._avatarDecorations : avatarDecorations // ignore: cast_nullable_to_non_nullable
-as List<UserAvatarDecoration>,isBot: null == isBot ? _self.isBot : isBot // ignore: cast_nullable_to_non_nullable
-as bool,isCat: null == isCat ? _self.isCat : isCat // ignore: cast_nullable_to_non_nullable
-as bool,instance: freezed == instance ? _self.instance : instance // ignore: cast_nullable_to_non_nullable
-as UserInstanceInfo?,emojis: null == emojis ? _self._emojis : emojis // ignore: cast_nullable_to_non_nullable
-as Map<String, String>,onlineStatus: freezed == onlineStatus ? _self.onlineStatus : onlineStatus // ignore: cast_nullable_to_non_nullable
-as OnlineStatus?,badgeRoles: null == badgeRoles ? _self._badgeRoles : badgeRoles // ignore: cast_nullable_to_non_nullable
-as List<UserBadgeRole>,requireSigninToViewContents: freezed == requireSigninToViewContents ? _self.requireSigninToViewContents : requireSigninToViewContents // ignore: cast_nullable_to_non_nullable
-as bool?,makeNotesFollowersOnlyBefore: freezed == makeNotesFollowersOnlyBefore ? _self.makeNotesFollowersOnlyBefore : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
-as HideBefore?,makeNotesHiddenBefore: freezed == makeNotesHiddenBefore ? _self.makeNotesHiddenBefore : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
-as HideBefore?,speakAsCat: freezed == speakAsCat ? _self.speakAsCat : speakAsCat // ignore: cast_nullable_to_non_nullable
-as bool?,url: freezed == url ? _self.url : url // ignore: cast_nullable_to_non_nullable
-as Uri?,uri: freezed == uri ? _self.uri : uri // ignore: cast_nullable_to_non_nullable
-as Uri?,movedTo: freezed == movedTo ? _self.movedTo : movedTo // ignore: cast_nullable_to_non_nullable
-as Uri?,alsoKnownAs: freezed == alsoKnownAs ? _self._alsoKnownAs : alsoKnownAs // ignore: cast_nullable_to_non_nullable
-as List<String>?,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
-as DateTime,updatedAt: freezed == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
-as DateTime?,lastFetchedAt: freezed == lastFetchedAt ? _self.lastFetchedAt : lastFetchedAt // ignore: cast_nullable_to_non_nullable
-as DateTime?,bannerUrl: freezed == bannerUrl ? _self.bannerUrl : bannerUrl // ignore: cast_nullable_to_non_nullable
-as Uri?,bannerBlurhash: freezed == bannerBlurhash ? _self.bannerBlurhash : bannerBlurhash // ignore: cast_nullable_to_non_nullable
-as String?,isLocked: null == isLocked ? _self.isLocked : isLocked // ignore: cast_nullable_to_non_nullable
-as bool,isSilenced: null == isSilenced ? _self.isSilenced : isSilenced // ignore: cast_nullable_to_non_nullable
-as bool,isSuspended: null == isSuspended ? _self.isSuspended : isSuspended // ignore: cast_nullable_to_non_nullable
-as bool,description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
-as String?,location: freezed == location ? _self.location : location // ignore: cast_nullable_to_non_nullable
-as String?,birthday: freezed == birthday ? _self.birthday : birthday // ignore: cast_nullable_to_non_nullable
-as String?,lang: freezed == lang ? _self.lang : lang // ignore: cast_nullable_to_non_nullable
-as String?,fields: freezed == fields ? _self._fields : fields // ignore: cast_nullable_to_non_nullable
-as List<UserField>?,verifiedLinks: null == verifiedLinks ? _self._verifiedLinks : verifiedLinks // ignore: cast_nullable_to_non_nullable
-as List<String>,mutualLinkSections: freezed == mutualLinkSections ? _self._mutualLinkSections : mutualLinkSections // ignore: cast_nullable_to_non_nullable
-as List<MutualLinkSection>?,followersCount: null == followersCount ? _self.followersCount : followersCount // ignore: cast_nullable_to_non_nullable
-as int,followingCount: null == followingCount ? _self.followingCount : followingCount // ignore: cast_nullable_to_non_nullable
-as int,notesCount: null == notesCount ? _self.notesCount : notesCount // ignore: cast_nullable_to_non_nullable
-as int,pinnedNoteIds: freezed == pinnedNoteIds ? _self._pinnedNoteIds : pinnedNoteIds // ignore: cast_nullable_to_non_nullable
-as List<String>?,pinnedNotes: freezed == pinnedNotes ? _self._pinnedNotes : pinnedNotes // ignore: cast_nullable_to_non_nullable
-as List<Note>?,pinnedPageId: freezed == pinnedPageId ? _self.pinnedPageId : pinnedPageId // ignore: cast_nullable_to_non_nullable
-as String?,pinnedPage: freezed == pinnedPage ? _self._pinnedPage : pinnedPage // ignore: cast_nullable_to_non_nullable
-as Map<String, dynamic>?,publicReactions: null == publicReactions ? _self.publicReactions : publicReactions // ignore: cast_nullable_to_non_nullable
-as bool,ffVisibility: freezed == ffVisibility ? _self.ffVisibility : ffVisibility // ignore: cast_nullable_to_non_nullable
-as FFVisibility?,followersVisibility: freezed == followersVisibility ? _self.followersVisibility : followersVisibility // ignore: cast_nullable_to_non_nullable
-as FFVisibility?,followingVisibility: freezed == followingVisibility ? _self.followingVisibility : followingVisibility // ignore: cast_nullable_to_non_nullable
-as FFVisibility?,chatScope: freezed == chatScope ? _self.chatScope : chatScope // ignore: cast_nullable_to_non_nullable
-as ChatScope?,canChat: freezed == canChat ? _self.canChat : canChat // ignore: cast_nullable_to_non_nullable
-as bool?,twoFactorEnabled: freezed == twoFactorEnabled ? _self.twoFactorEnabled : twoFactorEnabled // ignore: cast_nullable_to_non_nullable
-as bool?,usePasswordLessLogin: freezed == usePasswordLessLogin ? _self.usePasswordLessLogin : usePasswordLessLogin // ignore: cast_nullable_to_non_nullable
-as bool?,securityKeys: freezed == securityKeys ? _self.securityKeys : securityKeys // ignore: cast_nullable_to_non_nullable
-as bool?,roles: freezed == roles ? _self._roles : roles // ignore: cast_nullable_to_non_nullable
-as List<UserRole>?,memo: freezed == memo ? _self.memo : memo // ignore: cast_nullable_to_non_nullable
-as String?,moderationNote: freezed == moderationNote ? _self.moderationNote : moderationNote // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
-/// Create a copy of UserDetailedNotMe
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$UserInstanceInfoCopyWith<$Res>? get instance {
-    if (_self.instance == null) {
-    return null;
-  }
-
-  return $UserInstanceInfoCopyWith<$Res>(_self.instance!, (value) {
-    return _then(_self.copyWith(instance: value));
-  });
-}
-}
-
 
 /// @nodoc
 mixin _$UserDetailedNotMeWithRelations {
 
- String get id; String? get name; String get username; String? get host;@NullableUriConverter() Uri? get avatarUrl; String? get avatarBlurhash; List<UserAvatarDecoration> get avatarDecorations; bool get isBot; bool get isCat; UserInstanceInfo? get instance;@EmojisConverter() Map<String, String> get emojis;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) OnlineStatus? get onlineStatus; List<UserBadgeRole> get badgeRoles; bool? get requireSigninToViewContents;@HideBeforeConverter() HideBefore? get makeNotesFollowersOnlyBefore;@HideBeforeConverter() HideBefore? get makeNotesHiddenBefore; bool? get speakAsCat;@NullableUriConverter() Uri? get url;@NullableUriConverter() Uri? get uri;@NullableUriConverter() Uri? get movedTo; List<String>? get alsoKnownAs;@DateTimeConverter() DateTime get createdAt;@NullableDateTimeConverter() DateTime? get updatedAt;@NullableDateTimeConverter() DateTime? get lastFetchedAt;@NullableUriConverter() Uri? get bannerUrl; String? get bannerBlurhash; bool get isLocked; bool get isSilenced; bool get isSuspended; String? get description; String? get location; String? get birthday; String? get lang; List<UserField>? get fields; List<String> get verifiedLinks; List<MutualLinkSection>? get mutualLinkSections;@IntConverter() int get followersCount;@IntConverter() int get followingCount; int get notesCount; List<String>? get pinnedNoteIds; List<Note>? get pinnedNotes; String? get pinnedPageId; Map<String, dynamic>? get pinnedPage; bool get publicReactions;/// removed at 2023.12.0"
-@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? get ffVisibility;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? get followersVisibility;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? get followingVisibility;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) ChatScope? get chatScope; bool? get canChat; bool? get twoFactorEnabled; bool? get usePasswordLessLogin; bool? get securityKeys; List<UserRole>? get roles; String? get memo; String? get moderationNote; bool get isFollowing; bool get isFollowed; bool get hasPendingFollowRequestFromYou; bool get hasPendingFollowRequestToYou; bool get isBlocking; bool get isBlocked; bool get isMuted; bool get isRenoteMuted; Notify? get notify; bool? get withReplies; String? get followedMessage;
+
 /// Create a copy of UserDetailedNotMeWithRelations
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $UserDetailedNotMeWithRelationsCopyWith<UserDetailedNotMeWithRelations> get copyWith => _$UserDetailedNotMeWithRelationsCopyWithImpl<UserDetailedNotMeWithRelations>(this as UserDetailedNotMeWithRelations, _$identity);
 
-  /// Serializes this UserDetailedNotMeWithRelations to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -956,7 +529,7 @@ abstract mixin class $UserDetailedNotMeWithRelationsCopyWith<$Res>  {
   factory $UserDetailedNotMeWithRelationsCopyWith(UserDetailedNotMeWithRelations value, $Res Function(UserDetailedNotMeWithRelations) _then) = _$UserDetailedNotMeWithRelationsCopyWithImpl;
 @useResult
 $Res call({
- String id, String? name, String username, String? host,@NullableUriConverter() Uri? avatarUrl, String? avatarBlurhash, List<UserAvatarDecoration> avatarDecorations, bool isBot, bool isCat, UserInstanceInfo? instance,@EmojisConverter() Map<String, String> emojis,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) OnlineStatus? onlineStatus, List<UserBadgeRole> badgeRoles, bool? requireSigninToViewContents,@HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,@HideBeforeConverter() HideBefore? makeNotesHiddenBefore, bool? speakAsCat,@NullableUriConverter() Uri? url,@NullableUriConverter() Uri? uri,@NullableUriConverter() Uri? movedTo, List<String>? alsoKnownAs,@DateTimeConverter() DateTime createdAt,@NullableDateTimeConverter() DateTime? updatedAt,@NullableDateTimeConverter() DateTime? lastFetchedAt,@NullableUriConverter() Uri? bannerUrl, String? bannerBlurhash, bool isLocked, bool isSilenced, bool isSuspended, String? description, String? location, String? birthday, String? lang, List<UserField>? fields, List<String> verifiedLinks, List<MutualLinkSection>? mutualLinkSections,@IntConverter() int followersCount,@IntConverter() int followingCount, int notesCount, List<String>? pinnedNoteIds, List<Note>? pinnedNotes, String? pinnedPageId, Map<String, dynamic>? pinnedPage, bool publicReactions,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? ffVisibility,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? followersVisibility,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? followingVisibility,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) ChatScope? chatScope, bool? canChat, bool? twoFactorEnabled, bool? usePasswordLessLogin, bool? securityKeys, List<UserRole>? roles, String? memo, String? moderationNote, bool isFollowing, bool isFollowed, bool hasPendingFollowRequestFromYou, bool hasPendingFollowRequestToYou, bool isBlocking, bool isBlocked, bool isMuted, bool isRenoteMuted, Notify? notify, bool? withReplies, String? followedMessage
+@override String id,@override String? name,@override String username,@override String? host,@override@NullableUriConverter() Uri? avatarUrl,@override String? avatarBlurhash,@override List<UserAvatarDecoration> avatarDecorations,@override bool isBot,@override bool isCat,@override UserInstanceInfo? instance,@override@EmojisConverter() Map<String, String> emojis,@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) OnlineStatus? onlineStatus,@override List<UserBadgeRole> badgeRoles,@override bool? requireSigninToViewContents,@override@HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,@override@HideBeforeConverter() HideBefore? makeNotesHiddenBefore,@override bool? speakAsCat,@override@NullableUriConverter() Uri? url,@override@NullableUriConverter() Uri? uri,@override@NullableUriConverter() Uri? movedTo,@override List<String>? alsoKnownAs,@override@DateTimeConverter() DateTime createdAt,@override@NullableDateTimeConverter() DateTime? updatedAt,@override@NullableDateTimeConverter() DateTime? lastFetchedAt,@override@NullableUriConverter() Uri? bannerUrl,@override String? bannerBlurhash,@override bool isLocked,@override bool isSilenced,@override bool isSuspended,@override String? description,@override String? location,@override String? birthday,@override String? lang,@override List<UserField>? fields,@override List<String> verifiedLinks,@override List<MutualLinkSection>? mutualLinkSections,@override@IntConverter() int followersCount,@override@IntConverter() int followingCount,@override int notesCount,@override List<String>? pinnedNoteIds,@override List<Note>? pinnedNotes,@override String? pinnedPageId,@override Map<String, dynamic>? pinnedPage,@override bool publicReactions,@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? ffVisibility,@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? followersVisibility,@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? followingVisibility,@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) ChatScope? chatScope,@override bool? canChat,@override bool? twoFactorEnabled,@override bool? usePasswordLessLogin,@override bool? securityKeys,@override List<UserRole>? roles,@override String? memo,@override String? moderationNote, bool isFollowing, bool isFollowed, bool hasPendingFollowRequestFromYou, bool hasPendingFollowRequestToYou, bool isBlocking, bool isBlocked, bool isMuted, bool isRenoteMuted, Notify? notify, bool? withReplies, String? followedMessage
 });
 
 
@@ -1074,11 +647,10 @@ extension UserDetailedNotMeWithRelationsPatterns on UserDetailedNotMeWithRelatio
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UserDetailedNotMeWithRelations value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _UserDetailedNotMeWithRelations() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -1096,11 +668,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UserDetailedNotMeWithRelations value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UserDetailedNotMeWithRelations():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -1117,11 +688,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UserDetailedNotMeWithRelations value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UserDetailedNotMeWithRelations() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -1138,10 +708,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String? name,  String username,  String? host, @NullableUriConverter()  Uri? avatarUrl,  String? avatarBlurhash,  List<UserAvatarDecoration> avatarDecorations,  bool isBot,  bool isCat,  UserInstanceInfo? instance, @EmojisConverter()  Map<String, String> emojis, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  OnlineStatus? onlineStatus,  List<UserBadgeRole> badgeRoles,  bool? requireSigninToViewContents, @HideBeforeConverter()  HideBefore? makeNotesFollowersOnlyBefore, @HideBeforeConverter()  HideBefore? makeNotesHiddenBefore,  bool? speakAsCat, @NullableUriConverter()  Uri? url, @NullableUriConverter()  Uri? uri, @NullableUriConverter()  Uri? movedTo,  List<String>? alsoKnownAs, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? updatedAt, @NullableDateTimeConverter()  DateTime? lastFetchedAt, @NullableUriConverter()  Uri? bannerUrl,  String? bannerBlurhash,  bool isLocked,  bool isSilenced,  bool isSuspended,  String? description,  String? location,  String? birthday,  String? lang,  List<UserField>? fields,  List<String> verifiedLinks,  List<MutualLinkSection>? mutualLinkSections, @IntConverter()  int followersCount, @IntConverter()  int followingCount,  int notesCount,  List<String>? pinnedNoteIds,  List<Note>? pinnedNotes,  String? pinnedPageId,  Map<String, dynamic>? pinnedPage,  bool publicReactions, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? ffVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followersVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followingVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChatScope? chatScope,  bool? canChat,  bool? twoFactorEnabled,  bool? usePasswordLessLogin,  bool? securityKeys,  List<UserRole>? roles,  String? memo,  String? moderationNote,  bool isFollowing,  bool isFollowed,  bool hasPendingFollowRequestFromYou,  bool hasPendingFollowRequestToYou,  bool isBlocking,  bool isBlocked,  bool isMuted,  bool isRenoteMuted,  Notify? notify,  bool? withReplies,  String? followedMessage)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _UserDetailedNotMeWithRelations() when $default != null:
-return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_that.avatarBlurhash,_that.avatarDecorations,_that.isBot,_that.isCat,_that.instance,_that.emojis,_that.onlineStatus,_that.badgeRoles,_that.requireSigninToViewContents,_that.makeNotesFollowersOnlyBefore,_that.makeNotesHiddenBefore,_that.speakAsCat,_that.url,_that.uri,_that.movedTo,_that.alsoKnownAs,_that.createdAt,_that.updatedAt,_that.lastFetchedAt,_that.bannerUrl,_that.bannerBlurhash,_that.isLocked,_that.isSilenced,_that.isSuspended,_that.description,_that.location,_that.birthday,_that.lang,_that.fields,_that.verifiedLinks,_that.mutualLinkSections,_that.followersCount,_that.followingCount,_that.notesCount,_that.pinnedNoteIds,_that.pinnedNotes,_that.pinnedPageId,_that.pinnedPage,_that.publicReactions,_that.ffVisibility,_that.followersVisibility,_that.followingVisibility,_that.chatScope,_that.canChat,_that.twoFactorEnabled,_that.usePasswordLessLogin,_that.securityKeys,_that.roles,_that.memo,_that.moderationNote,_that.isFollowing,_that.isFollowed,_that.hasPendingFollowRequestFromYou,_that.hasPendingFollowRequestToYou,_that.isBlocking,_that.isBlocked,_that.isMuted,_that.isRenoteMuted,_that.notify,_that.withReplies,_that.followedMessage);case _:
+case _:
   return orElse();
 
 }
@@ -1159,10 +728,9 @@ return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_t
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String? name,  String username,  String? host, @NullableUriConverter()  Uri? avatarUrl,  String? avatarBlurhash,  List<UserAvatarDecoration> avatarDecorations,  bool isBot,  bool isCat,  UserInstanceInfo? instance, @EmojisConverter()  Map<String, String> emojis, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  OnlineStatus? onlineStatus,  List<UserBadgeRole> badgeRoles,  bool? requireSigninToViewContents, @HideBeforeConverter()  HideBefore? makeNotesFollowersOnlyBefore, @HideBeforeConverter()  HideBefore? makeNotesHiddenBefore,  bool? speakAsCat, @NullableUriConverter()  Uri? url, @NullableUriConverter()  Uri? uri, @NullableUriConverter()  Uri? movedTo,  List<String>? alsoKnownAs, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? updatedAt, @NullableDateTimeConverter()  DateTime? lastFetchedAt, @NullableUriConverter()  Uri? bannerUrl,  String? bannerBlurhash,  bool isLocked,  bool isSilenced,  bool isSuspended,  String? description,  String? location,  String? birthday,  String? lang,  List<UserField>? fields,  List<String> verifiedLinks,  List<MutualLinkSection>? mutualLinkSections, @IntConverter()  int followersCount, @IntConverter()  int followingCount,  int notesCount,  List<String>? pinnedNoteIds,  List<Note>? pinnedNotes,  String? pinnedPageId,  Map<String, dynamic>? pinnedPage,  bool publicReactions, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? ffVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followersVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followingVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChatScope? chatScope,  bool? canChat,  bool? twoFactorEnabled,  bool? usePasswordLessLogin,  bool? securityKeys,  List<UserRole>? roles,  String? memo,  String? moderationNote,  bool isFollowing,  bool isFollowed,  bool hasPendingFollowRequestFromYou,  bool hasPendingFollowRequestToYou,  bool isBlocking,  bool isBlocked,  bool isMuted,  bool isRenoteMuted,  Notify? notify,  bool? withReplies,  String? followedMessage)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UserDetailedNotMeWithRelations():
-return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_that.avatarBlurhash,_that.avatarDecorations,_that.isBot,_that.isCat,_that.instance,_that.emojis,_that.onlineStatus,_that.badgeRoles,_that.requireSigninToViewContents,_that.makeNotesFollowersOnlyBefore,_that.makeNotesHiddenBefore,_that.speakAsCat,_that.url,_that.uri,_that.movedTo,_that.alsoKnownAs,_that.createdAt,_that.updatedAt,_that.lastFetchedAt,_that.bannerUrl,_that.bannerBlurhash,_that.isLocked,_that.isSilenced,_that.isSuspended,_that.description,_that.location,_that.birthday,_that.lang,_that.fields,_that.verifiedLinks,_that.mutualLinkSections,_that.followersCount,_that.followingCount,_that.notesCount,_that.pinnedNoteIds,_that.pinnedNotes,_that.pinnedPageId,_that.pinnedPage,_that.publicReactions,_that.ffVisibility,_that.followersVisibility,_that.followingVisibility,_that.chatScope,_that.canChat,_that.twoFactorEnabled,_that.usePasswordLessLogin,_that.securityKeys,_that.roles,_that.memo,_that.moderationNote,_that.isFollowing,_that.isFollowed,_that.hasPendingFollowRequestFromYou,_that.hasPendingFollowRequestToYou,_that.isBlocking,_that.isBlocked,_that.isMuted,_that.isRenoteMuted,_that.notify,_that.withReplies,_that.followedMessage);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -1179,10 +747,9 @@ return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_t
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String? name,  String username,  String? host, @NullableUriConverter()  Uri? avatarUrl,  String? avatarBlurhash,  List<UserAvatarDecoration> avatarDecorations,  bool isBot,  bool isCat,  UserInstanceInfo? instance, @EmojisConverter()  Map<String, String> emojis, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  OnlineStatus? onlineStatus,  List<UserBadgeRole> badgeRoles,  bool? requireSigninToViewContents, @HideBeforeConverter()  HideBefore? makeNotesFollowersOnlyBefore, @HideBeforeConverter()  HideBefore? makeNotesHiddenBefore,  bool? speakAsCat, @NullableUriConverter()  Uri? url, @NullableUriConverter()  Uri? uri, @NullableUriConverter()  Uri? movedTo,  List<String>? alsoKnownAs, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? updatedAt, @NullableDateTimeConverter()  DateTime? lastFetchedAt, @NullableUriConverter()  Uri? bannerUrl,  String? bannerBlurhash,  bool isLocked,  bool isSilenced,  bool isSuspended,  String? description,  String? location,  String? birthday,  String? lang,  List<UserField>? fields,  List<String> verifiedLinks,  List<MutualLinkSection>? mutualLinkSections, @IntConverter()  int followersCount, @IntConverter()  int followingCount,  int notesCount,  List<String>? pinnedNoteIds,  List<Note>? pinnedNotes,  String? pinnedPageId,  Map<String, dynamic>? pinnedPage,  bool publicReactions, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? ffVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followersVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followingVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChatScope? chatScope,  bool? canChat,  bool? twoFactorEnabled,  bool? usePasswordLessLogin,  bool? securityKeys,  List<UserRole>? roles,  String? memo,  String? moderationNote,  bool isFollowing,  bool isFollowed,  bool hasPendingFollowRequestFromYou,  bool hasPendingFollowRequestToYou,  bool isBlocking,  bool isBlocked,  bool isMuted,  bool isRenoteMuted,  Notify? notify,  bool? withReplies,  String? followedMessage)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UserDetailedNotMeWithRelations() when $default != null:
-return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_that.avatarBlurhash,_that.avatarDecorations,_that.isBot,_that.isCat,_that.instance,_that.emojis,_that.onlineStatus,_that.badgeRoles,_that.requireSigninToViewContents,_that.makeNotesFollowersOnlyBefore,_that.makeNotesHiddenBefore,_that.speakAsCat,_that.url,_that.uri,_that.movedTo,_that.alsoKnownAs,_that.createdAt,_that.updatedAt,_that.lastFetchedAt,_that.bannerUrl,_that.bannerBlurhash,_that.isLocked,_that.isSilenced,_that.isSuspended,_that.description,_that.location,_that.birthday,_that.lang,_that.fields,_that.verifiedLinks,_that.mutualLinkSections,_that.followersCount,_that.followingCount,_that.notesCount,_that.pinnedNoteIds,_that.pinnedNotes,_that.pinnedPageId,_that.pinnedPage,_that.publicReactions,_that.ffVisibility,_that.followersVisibility,_that.followingVisibility,_that.chatScope,_that.canChat,_that.twoFactorEnabled,_that.usePasswordLessLogin,_that.securityKeys,_that.roles,_that.memo,_that.moderationNote,_that.isFollowing,_that.isFollowed,_that.hasPendingFollowRequestFromYou,_that.hasPendingFollowRequestToYou,_that.isBlocking,_that.isBlocked,_that.isMuted,_that.isRenoteMuted,_that.notify,_that.withReplies,_that.followedMessage);case _:
+case _:
   return null;
 
 }
@@ -1190,315 +757,17 @@ return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_t
 
 }
 
-/// @nodoc
-@JsonSerializable()
-
-class _UserDetailedNotMeWithRelations implements UserDetailedNotMeWithRelations {
-  const _UserDetailedNotMeWithRelations({required this.id, this.name, required this.username, this.host, @NullableUriConverter() this.avatarUrl, this.avatarBlurhash,  List<UserAvatarDecoration> avatarDecorations = const [], required this.isBot, required this.isCat, this.instance, @EmojisConverter()  Map<String, String> emojis = const {}, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.onlineStatus,  List<UserBadgeRole> badgeRoles = const [], this.requireSigninToViewContents, @HideBeforeConverter() this.makeNotesFollowersOnlyBefore, @HideBeforeConverter() this.makeNotesHiddenBefore, this.speakAsCat, @NullableUriConverter() this.url, @NullableUriConverter() this.uri, @NullableUriConverter() this.movedTo,  List<String>? alsoKnownAs, @DateTimeConverter() required this.createdAt, @NullableDateTimeConverter() this.updatedAt, @NullableDateTimeConverter() this.lastFetchedAt, @NullableUriConverter() this.bannerUrl, this.bannerBlurhash, required this.isLocked, required this.isSilenced, required this.isSuspended, this.description, this.location, this.birthday, this.lang,  List<UserField>? fields,  List<String> verifiedLinks = const [],  List<MutualLinkSection>? mutualLinkSections, @IntConverter() required this.followersCount, @IntConverter() required this.followingCount, required this.notesCount,  List<String>? pinnedNoteIds,  List<Note>? pinnedNotes, this.pinnedPageId,  Map<String, dynamic>? pinnedPage, this.publicReactions = false, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.ffVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.followersVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.followingVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.chatScope, this.canChat, this.twoFactorEnabled, this.usePasswordLessLogin, this.securityKeys,  List<UserRole>? roles, this.memo, this.moderationNote, required this.isFollowing, required this.isFollowed, required this.hasPendingFollowRequestFromYou, required this.hasPendingFollowRequestToYou, required this.isBlocking, required this.isBlocked, required this.isMuted, this.isRenoteMuted = false, this.notify, this.withReplies, this.followedMessage}): _avatarDecorations = avatarDecorations,_emojis = emojis,_badgeRoles = badgeRoles,_alsoKnownAs = alsoKnownAs,_fields = fields,_verifiedLinks = verifiedLinks,_mutualLinkSections = mutualLinkSections,_pinnedNoteIds = pinnedNoteIds,_pinnedNotes = pinnedNotes,_pinnedPage = pinnedPage,_roles = roles;
-  factory _UserDetailedNotMeWithRelations.fromJson(Map<String, dynamic> json) => _$UserDetailedNotMeWithRelationsFromJson(json);
-
-@override final  String id;
-@override final  String? name;
-@override final  String username;
-@override final  String? host;
-@override@NullableUriConverter() final  Uri? avatarUrl;
-@override final  String? avatarBlurhash;
- final  List<UserAvatarDecoration> _avatarDecorations;
-@override@JsonKey() List<UserAvatarDecoration> get avatarDecorations {
-  if (_avatarDecorations is EqualUnmodifiableListView) return _avatarDecorations;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_avatarDecorations);
-}
-
-@override final  bool isBot;
-@override final  bool isCat;
-@override final  UserInstanceInfo? instance;
- final  Map<String, String> _emojis;
-@override@JsonKey()@EmojisConverter() Map<String, String> get emojis {
-  if (_emojis is EqualUnmodifiableMapView) return _emojis;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableMapView(_emojis);
-}
-
-@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  OnlineStatus? onlineStatus;
- final  List<UserBadgeRole> _badgeRoles;
-@override@JsonKey() List<UserBadgeRole> get badgeRoles {
-  if (_badgeRoles is EqualUnmodifiableListView) return _badgeRoles;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_badgeRoles);
-}
-
-@override final  bool? requireSigninToViewContents;
-@override@HideBeforeConverter() final  HideBefore? makeNotesFollowersOnlyBefore;
-@override@HideBeforeConverter() final  HideBefore? makeNotesHiddenBefore;
-@override final  bool? speakAsCat;
-@override@NullableUriConverter() final  Uri? url;
-@override@NullableUriConverter() final  Uri? uri;
-@override@NullableUriConverter() final  Uri? movedTo;
- final  List<String>? _alsoKnownAs;
-@override List<String>? get alsoKnownAs {
-  final value = _alsoKnownAs;
-  if (value == null) return null;
-  if (_alsoKnownAs is EqualUnmodifiableListView) return _alsoKnownAs;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
-@override@DateTimeConverter() final  DateTime createdAt;
-@override@NullableDateTimeConverter() final  DateTime? updatedAt;
-@override@NullableDateTimeConverter() final  DateTime? lastFetchedAt;
-@override@NullableUriConverter() final  Uri? bannerUrl;
-@override final  String? bannerBlurhash;
-@override final  bool isLocked;
-@override final  bool isSilenced;
-@override final  bool isSuspended;
-@override final  String? description;
-@override final  String? location;
-@override final  String? birthday;
-@override final  String? lang;
- final  List<UserField>? _fields;
-@override List<UserField>? get fields {
-  final value = _fields;
-  if (value == null) return null;
-  if (_fields is EqualUnmodifiableListView) return _fields;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
- final  List<String> _verifiedLinks;
-@override@JsonKey() List<String> get verifiedLinks {
-  if (_verifiedLinks is EqualUnmodifiableListView) return _verifiedLinks;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_verifiedLinks);
-}
-
- final  List<MutualLinkSection>? _mutualLinkSections;
-@override List<MutualLinkSection>? get mutualLinkSections {
-  final value = _mutualLinkSections;
-  if (value == null) return null;
-  if (_mutualLinkSections is EqualUnmodifiableListView) return _mutualLinkSections;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
-@override@IntConverter() final  int followersCount;
-@override@IntConverter() final  int followingCount;
-@override final  int notesCount;
- final  List<String>? _pinnedNoteIds;
-@override List<String>? get pinnedNoteIds {
-  final value = _pinnedNoteIds;
-  if (value == null) return null;
-  if (_pinnedNoteIds is EqualUnmodifiableListView) return _pinnedNoteIds;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
- final  List<Note>? _pinnedNotes;
-@override List<Note>? get pinnedNotes {
-  final value = _pinnedNotes;
-  if (value == null) return null;
-  if (_pinnedNotes is EqualUnmodifiableListView) return _pinnedNotes;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
-@override final  String? pinnedPageId;
- final  Map<String, dynamic>? _pinnedPage;
-@override Map<String, dynamic>? get pinnedPage {
-  final value = _pinnedPage;
-  if (value == null) return null;
-  if (_pinnedPage is EqualUnmodifiableMapView) return _pinnedPage;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableMapView(value);
-}
-
-@override@JsonKey() final  bool publicReactions;
-/// removed at 2023.12.0"
-@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  FFVisibility? ffVisibility;
-@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  FFVisibility? followersVisibility;
-@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  FFVisibility? followingVisibility;
-@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  ChatScope? chatScope;
-@override final  bool? canChat;
-@override final  bool? twoFactorEnabled;
-@override final  bool? usePasswordLessLogin;
-@override final  bool? securityKeys;
- final  List<UserRole>? _roles;
-@override List<UserRole>? get roles {
-  final value = _roles;
-  if (value == null) return null;
-  if (_roles is EqualUnmodifiableListView) return _roles;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
-@override final  String? memo;
-@override final  String? moderationNote;
-@override final  bool isFollowing;
-@override final  bool isFollowed;
-@override final  bool hasPendingFollowRequestFromYou;
-@override final  bool hasPendingFollowRequestToYou;
-@override final  bool isBlocking;
-@override final  bool isBlocked;
-@override final  bool isMuted;
-@override@JsonKey() final  bool isRenoteMuted;
-@override final  Notify? notify;
-@override final  bool? withReplies;
-@override final  String? followedMessage;
-
-/// Create a copy of UserDetailedNotMeWithRelations
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$UserDetailedNotMeWithRelationsCopyWith<_UserDetailedNotMeWithRelations> get copyWith => __$UserDetailedNotMeWithRelationsCopyWithImpl<_UserDetailedNotMeWithRelations>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$UserDetailedNotMeWithRelationsToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UserDetailedNotMeWithRelations&&(identical(other.id, id) || other.id == id)&&(identical(other.name, name) || other.name == name)&&(identical(other.username, username) || other.username == username)&&(identical(other.host, host) || other.host == host)&&(identical(other.avatarUrl, avatarUrl) || other.avatarUrl == avatarUrl)&&(identical(other.avatarBlurhash, avatarBlurhash) || other.avatarBlurhash == avatarBlurhash)&&const DeepCollectionEquality().equals(other.avatarDecorations, _avatarDecorations)&&(identical(other.isBot, isBot) || other.isBot == isBot)&&(identical(other.isCat, isCat) || other.isCat == isCat)&&(identical(other.instance, instance) || other.instance == instance)&&const DeepCollectionEquality().equals(other.emojis, _emojis)&&(identical(other.onlineStatus, onlineStatus) || other.onlineStatus == onlineStatus)&&const DeepCollectionEquality().equals(other.badgeRoles, _badgeRoles)&&(identical(other.requireSigninToViewContents, requireSigninToViewContents) || other.requireSigninToViewContents == requireSigninToViewContents)&&(identical(other.makeNotesFollowersOnlyBefore, makeNotesFollowersOnlyBefore) || other.makeNotesFollowersOnlyBefore == makeNotesFollowersOnlyBefore)&&(identical(other.makeNotesHiddenBefore, makeNotesHiddenBefore) || other.makeNotesHiddenBefore == makeNotesHiddenBefore)&&(identical(other.speakAsCat, speakAsCat) || other.speakAsCat == speakAsCat)&&(identical(other.url, url) || other.url == url)&&(identical(other.uri, uri) || other.uri == uri)&&(identical(other.movedTo, movedTo) || other.movedTo == movedTo)&&const DeepCollectionEquality().equals(other.alsoKnownAs, _alsoKnownAs)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.lastFetchedAt, lastFetchedAt) || other.lastFetchedAt == lastFetchedAt)&&(identical(other.bannerUrl, bannerUrl) || other.bannerUrl == bannerUrl)&&(identical(other.bannerBlurhash, bannerBlurhash) || other.bannerBlurhash == bannerBlurhash)&&(identical(other.isLocked, isLocked) || other.isLocked == isLocked)&&(identical(other.isSilenced, isSilenced) || other.isSilenced == isSilenced)&&(identical(other.isSuspended, isSuspended) || other.isSuspended == isSuspended)&&(identical(other.description, description) || other.description == description)&&(identical(other.location, location) || other.location == location)&&(identical(other.birthday, birthday) || other.birthday == birthday)&&(identical(other.lang, lang) || other.lang == lang)&&const DeepCollectionEquality().equals(other.fields, _fields)&&const DeepCollectionEquality().equals(other.verifiedLinks, _verifiedLinks)&&const DeepCollectionEquality().equals(other.mutualLinkSections, _mutualLinkSections)&&(identical(other.followersCount, followersCount) || other.followersCount == followersCount)&&(identical(other.followingCount, followingCount) || other.followingCount == followingCount)&&(identical(other.notesCount, notesCount) || other.notesCount == notesCount)&&const DeepCollectionEquality().equals(other.pinnedNoteIds, _pinnedNoteIds)&&const DeepCollectionEquality().equals(other.pinnedNotes, _pinnedNotes)&&(identical(other.pinnedPageId, pinnedPageId) || other.pinnedPageId == pinnedPageId)&&const DeepCollectionEquality().equals(other.pinnedPage, _pinnedPage)&&(identical(other.publicReactions, publicReactions) || other.publicReactions == publicReactions)&&(identical(other.ffVisibility, ffVisibility) || other.ffVisibility == ffVisibility)&&(identical(other.followersVisibility, followersVisibility) || other.followersVisibility == followersVisibility)&&(identical(other.followingVisibility, followingVisibility) || other.followingVisibility == followingVisibility)&&(identical(other.chatScope, chatScope) || other.chatScope == chatScope)&&(identical(other.canChat, canChat) || other.canChat == canChat)&&(identical(other.twoFactorEnabled, twoFactorEnabled) || other.twoFactorEnabled == twoFactorEnabled)&&(identical(other.usePasswordLessLogin, usePasswordLessLogin) || other.usePasswordLessLogin == usePasswordLessLogin)&&(identical(other.securityKeys, securityKeys) || other.securityKeys == securityKeys)&&const DeepCollectionEquality().equals(other.roles, _roles)&&(identical(other.memo, memo) || other.memo == memo)&&(identical(other.moderationNote, moderationNote) || other.moderationNote == moderationNote)&&(identical(other.isFollowing, isFollowing) || other.isFollowing == isFollowing)&&(identical(other.isFollowed, isFollowed) || other.isFollowed == isFollowed)&&(identical(other.hasPendingFollowRequestFromYou, hasPendingFollowRequestFromYou) || other.hasPendingFollowRequestFromYou == hasPendingFollowRequestFromYou)&&(identical(other.hasPendingFollowRequestToYou, hasPendingFollowRequestToYou) || other.hasPendingFollowRequestToYou == hasPendingFollowRequestToYou)&&(identical(other.isBlocking, isBlocking) || other.isBlocking == isBlocking)&&(identical(other.isBlocked, isBlocked) || other.isBlocked == isBlocked)&&(identical(other.isMuted, isMuted) || other.isMuted == isMuted)&&(identical(other.isRenoteMuted, isRenoteMuted) || other.isRenoteMuted == isRenoteMuted)&&(identical(other.notify, notify) || other.notify == notify)&&(identical(other.withReplies, withReplies) || other.withReplies == withReplies)&&(identical(other.followedMessage, followedMessage) || other.followedMessage == followedMessage));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hashAll([runtimeType,id,name,username,host,avatarUrl,avatarBlurhash,const DeepCollectionEquality().hash(_avatarDecorations),isBot,isCat,instance,const DeepCollectionEquality().hash(_emojis),onlineStatus,const DeepCollectionEquality().hash(_badgeRoles),requireSigninToViewContents,makeNotesFollowersOnlyBefore,makeNotesHiddenBefore,speakAsCat,url,uri,movedTo,const DeepCollectionEquality().hash(_alsoKnownAs),createdAt,updatedAt,lastFetchedAt,bannerUrl,bannerBlurhash,isLocked,isSilenced,isSuspended,description,location,birthday,lang,const DeepCollectionEquality().hash(_fields),const DeepCollectionEquality().hash(_verifiedLinks),const DeepCollectionEquality().hash(_mutualLinkSections),followersCount,followingCount,notesCount,const DeepCollectionEquality().hash(_pinnedNoteIds),const DeepCollectionEquality().hash(_pinnedNotes),pinnedPageId,const DeepCollectionEquality().hash(_pinnedPage),publicReactions,ffVisibility,followersVisibility,followingVisibility,chatScope,canChat,twoFactorEnabled,usePasswordLessLogin,securityKeys,const DeepCollectionEquality().hash(_roles),memo,moderationNote,isFollowing,isFollowed,hasPendingFollowRequestFromYou,hasPendingFollowRequestToYou,isBlocking,isBlocked,isMuted,isRenoteMuted,notify,withReplies,followedMessage]);
-}
-
-@override
-String toString() {
-    return 'UserDetailedNotMeWithRelations(id: $id, name: $name, username: $username, host: $host, avatarUrl: $avatarUrl, avatarBlurhash: $avatarBlurhash, avatarDecorations: $avatarDecorations, isBot: $isBot, isCat: $isCat, instance: $instance, emojis: $emojis, onlineStatus: $onlineStatus, badgeRoles: $badgeRoles, requireSigninToViewContents: $requireSigninToViewContents, makeNotesFollowersOnlyBefore: $makeNotesFollowersOnlyBefore, makeNotesHiddenBefore: $makeNotesHiddenBefore, speakAsCat: $speakAsCat, url: $url, uri: $uri, movedTo: $movedTo, alsoKnownAs: $alsoKnownAs, createdAt: $createdAt, updatedAt: $updatedAt, lastFetchedAt: $lastFetchedAt, bannerUrl: $bannerUrl, bannerBlurhash: $bannerBlurhash, isLocked: $isLocked, isSilenced: $isSilenced, isSuspended: $isSuspended, description: $description, location: $location, birthday: $birthday, lang: $lang, fields: $fields, verifiedLinks: $verifiedLinks, mutualLinkSections: $mutualLinkSections, followersCount: $followersCount, followingCount: $followingCount, notesCount: $notesCount, pinnedNoteIds: $pinnedNoteIds, pinnedNotes: $pinnedNotes, pinnedPageId: $pinnedPageId, pinnedPage: $pinnedPage, publicReactions: $publicReactions, ffVisibility: $ffVisibility, followersVisibility: $followersVisibility, followingVisibility: $followingVisibility, chatScope: $chatScope, canChat: $canChat, twoFactorEnabled: $twoFactorEnabled, usePasswordLessLogin: $usePasswordLessLogin, securityKeys: $securityKeys, roles: $roles, memo: $memo, moderationNote: $moderationNote, isFollowing: $isFollowing, isFollowed: $isFollowed, hasPendingFollowRequestFromYou: $hasPendingFollowRequestFromYou, hasPendingFollowRequestToYou: $hasPendingFollowRequestToYou, isBlocking: $isBlocking, isBlocked: $isBlocked, isMuted: $isMuted, isRenoteMuted: $isRenoteMuted, notify: $notify, withReplies: $withReplies, followedMessage: $followedMessage)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$UserDetailedNotMeWithRelationsCopyWith<$Res> implements $UserDetailedNotMeWithRelationsCopyWith<$Res> {
-  factory _$UserDetailedNotMeWithRelationsCopyWith(_UserDetailedNotMeWithRelations value, $Res Function(_UserDetailedNotMeWithRelations) _then) = __$UserDetailedNotMeWithRelationsCopyWithImpl;
-@override @useResult
-$Res call({
- String id, String? name, String username, String? host,@NullableUriConverter() Uri? avatarUrl, String? avatarBlurhash, List<UserAvatarDecoration> avatarDecorations, bool isBot, bool isCat, UserInstanceInfo? instance,@EmojisConverter() Map<String, String> emojis,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) OnlineStatus? onlineStatus, List<UserBadgeRole> badgeRoles, bool? requireSigninToViewContents,@HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,@HideBeforeConverter() HideBefore? makeNotesHiddenBefore, bool? speakAsCat,@NullableUriConverter() Uri? url,@NullableUriConverter() Uri? uri,@NullableUriConverter() Uri? movedTo, List<String>? alsoKnownAs,@DateTimeConverter() DateTime createdAt,@NullableDateTimeConverter() DateTime? updatedAt,@NullableDateTimeConverter() DateTime? lastFetchedAt,@NullableUriConverter() Uri? bannerUrl, String? bannerBlurhash, bool isLocked, bool isSilenced, bool isSuspended, String? description, String? location, String? birthday, String? lang, List<UserField>? fields, List<String> verifiedLinks, List<MutualLinkSection>? mutualLinkSections,@IntConverter() int followersCount,@IntConverter() int followingCount, int notesCount, List<String>? pinnedNoteIds, List<Note>? pinnedNotes, String? pinnedPageId, Map<String, dynamic>? pinnedPage, bool publicReactions,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? ffVisibility,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? followersVisibility,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? followingVisibility,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) ChatScope? chatScope, bool? canChat, bool? twoFactorEnabled, bool? usePasswordLessLogin, bool? securityKeys, List<UserRole>? roles, String? memo, String? moderationNote, bool isFollowing, bool isFollowed, bool hasPendingFollowRequestFromYou, bool hasPendingFollowRequestToYou, bool isBlocking, bool isBlocked, bool isMuted, bool isRenoteMuted, Notify? notify, bool? withReplies, String? followedMessage
-});
-
-
-@override $UserInstanceInfoCopyWith<$Res>? get instance;
-
-}
-/// @nodoc
-class __$UserDetailedNotMeWithRelationsCopyWithImpl<$Res>
-    implements _$UserDetailedNotMeWithRelationsCopyWith<$Res> {
-  __$UserDetailedNotMeWithRelationsCopyWithImpl(this._self, this._then);
-
-  final _UserDetailedNotMeWithRelations _self;
-  final $Res Function(_UserDetailedNotMeWithRelations) _then;
-
-/// Create a copy of UserDetailedNotMeWithRelations
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? name = freezed,Object? username = null,Object? host = freezed,Object? avatarUrl = freezed,Object? avatarBlurhash = freezed,Object? avatarDecorations = null,Object? isBot = null,Object? isCat = null,Object? instance = freezed,Object? emojis = null,Object? onlineStatus = freezed,Object? badgeRoles = null,Object? requireSigninToViewContents = freezed,Object? makeNotesFollowersOnlyBefore = freezed,Object? makeNotesHiddenBefore = freezed,Object? speakAsCat = freezed,Object? url = freezed,Object? uri = freezed,Object? movedTo = freezed,Object? alsoKnownAs = freezed,Object? createdAt = null,Object? updatedAt = freezed,Object? lastFetchedAt = freezed,Object? bannerUrl = freezed,Object? bannerBlurhash = freezed,Object? isLocked = null,Object? isSilenced = null,Object? isSuspended = null,Object? description = freezed,Object? location = freezed,Object? birthday = freezed,Object? lang = freezed,Object? fields = freezed,Object? verifiedLinks = null,Object? mutualLinkSections = freezed,Object? followersCount = null,Object? followingCount = null,Object? notesCount = null,Object? pinnedNoteIds = freezed,Object? pinnedNotes = freezed,Object? pinnedPageId = freezed,Object? pinnedPage = freezed,Object? publicReactions = null,Object? ffVisibility = freezed,Object? followersVisibility = freezed,Object? followingVisibility = freezed,Object? chatScope = freezed,Object? canChat = freezed,Object? twoFactorEnabled = freezed,Object? usePasswordLessLogin = freezed,Object? securityKeys = freezed,Object? roles = freezed,Object? memo = freezed,Object? moderationNote = freezed,Object? isFollowing = null,Object? isFollowed = null,Object? hasPendingFollowRequestFromYou = null,Object? hasPendingFollowRequestToYou = null,Object? isBlocking = null,Object? isBlocked = null,Object? isMuted = null,Object? isRenoteMuted = null,Object? notify = freezed,Object? withReplies = freezed,Object? followedMessage = freezed,}) {
-  return _then(_UserDetailedNotMeWithRelations(
-id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as String,name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String?,username: null == username ? _self.username : username // ignore: cast_nullable_to_non_nullable
-as String,host: freezed == host ? _self.host : host // ignore: cast_nullable_to_non_nullable
-as String?,avatarUrl: freezed == avatarUrl ? _self.avatarUrl : avatarUrl // ignore: cast_nullable_to_non_nullable
-as Uri?,avatarBlurhash: freezed == avatarBlurhash ? _self.avatarBlurhash : avatarBlurhash // ignore: cast_nullable_to_non_nullable
-as String?,avatarDecorations: null == avatarDecorations ? _self._avatarDecorations : avatarDecorations // ignore: cast_nullable_to_non_nullable
-as List<UserAvatarDecoration>,isBot: null == isBot ? _self.isBot : isBot // ignore: cast_nullable_to_non_nullable
-as bool,isCat: null == isCat ? _self.isCat : isCat // ignore: cast_nullable_to_non_nullable
-as bool,instance: freezed == instance ? _self.instance : instance // ignore: cast_nullable_to_non_nullable
-as UserInstanceInfo?,emojis: null == emojis ? _self._emojis : emojis // ignore: cast_nullable_to_non_nullable
-as Map<String, String>,onlineStatus: freezed == onlineStatus ? _self.onlineStatus : onlineStatus // ignore: cast_nullable_to_non_nullable
-as OnlineStatus?,badgeRoles: null == badgeRoles ? _self._badgeRoles : badgeRoles // ignore: cast_nullable_to_non_nullable
-as List<UserBadgeRole>,requireSigninToViewContents: freezed == requireSigninToViewContents ? _self.requireSigninToViewContents : requireSigninToViewContents // ignore: cast_nullable_to_non_nullable
-as bool?,makeNotesFollowersOnlyBefore: freezed == makeNotesFollowersOnlyBefore ? _self.makeNotesFollowersOnlyBefore : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
-as HideBefore?,makeNotesHiddenBefore: freezed == makeNotesHiddenBefore ? _self.makeNotesHiddenBefore : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
-as HideBefore?,speakAsCat: freezed == speakAsCat ? _self.speakAsCat : speakAsCat // ignore: cast_nullable_to_non_nullable
-as bool?,url: freezed == url ? _self.url : url // ignore: cast_nullable_to_non_nullable
-as Uri?,uri: freezed == uri ? _self.uri : uri // ignore: cast_nullable_to_non_nullable
-as Uri?,movedTo: freezed == movedTo ? _self.movedTo : movedTo // ignore: cast_nullable_to_non_nullable
-as Uri?,alsoKnownAs: freezed == alsoKnownAs ? _self._alsoKnownAs : alsoKnownAs // ignore: cast_nullable_to_non_nullable
-as List<String>?,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
-as DateTime,updatedAt: freezed == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
-as DateTime?,lastFetchedAt: freezed == lastFetchedAt ? _self.lastFetchedAt : lastFetchedAt // ignore: cast_nullable_to_non_nullable
-as DateTime?,bannerUrl: freezed == bannerUrl ? _self.bannerUrl : bannerUrl // ignore: cast_nullable_to_non_nullable
-as Uri?,bannerBlurhash: freezed == bannerBlurhash ? _self.bannerBlurhash : bannerBlurhash // ignore: cast_nullable_to_non_nullable
-as String?,isLocked: null == isLocked ? _self.isLocked : isLocked // ignore: cast_nullable_to_non_nullable
-as bool,isSilenced: null == isSilenced ? _self.isSilenced : isSilenced // ignore: cast_nullable_to_non_nullable
-as bool,isSuspended: null == isSuspended ? _self.isSuspended : isSuspended // ignore: cast_nullable_to_non_nullable
-as bool,description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
-as String?,location: freezed == location ? _self.location : location // ignore: cast_nullable_to_non_nullable
-as String?,birthday: freezed == birthday ? _self.birthday : birthday // ignore: cast_nullable_to_non_nullable
-as String?,lang: freezed == lang ? _self.lang : lang // ignore: cast_nullable_to_non_nullable
-as String?,fields: freezed == fields ? _self._fields : fields // ignore: cast_nullable_to_non_nullable
-as List<UserField>?,verifiedLinks: null == verifiedLinks ? _self._verifiedLinks : verifiedLinks // ignore: cast_nullable_to_non_nullable
-as List<String>,mutualLinkSections: freezed == mutualLinkSections ? _self._mutualLinkSections : mutualLinkSections // ignore: cast_nullable_to_non_nullable
-as List<MutualLinkSection>?,followersCount: null == followersCount ? _self.followersCount : followersCount // ignore: cast_nullable_to_non_nullable
-as int,followingCount: null == followingCount ? _self.followingCount : followingCount // ignore: cast_nullable_to_non_nullable
-as int,notesCount: null == notesCount ? _self.notesCount : notesCount // ignore: cast_nullable_to_non_nullable
-as int,pinnedNoteIds: freezed == pinnedNoteIds ? _self._pinnedNoteIds : pinnedNoteIds // ignore: cast_nullable_to_non_nullable
-as List<String>?,pinnedNotes: freezed == pinnedNotes ? _self._pinnedNotes : pinnedNotes // ignore: cast_nullable_to_non_nullable
-as List<Note>?,pinnedPageId: freezed == pinnedPageId ? _self.pinnedPageId : pinnedPageId // ignore: cast_nullable_to_non_nullable
-as String?,pinnedPage: freezed == pinnedPage ? _self._pinnedPage : pinnedPage // ignore: cast_nullable_to_non_nullable
-as Map<String, dynamic>?,publicReactions: null == publicReactions ? _self.publicReactions : publicReactions // ignore: cast_nullable_to_non_nullable
-as bool,ffVisibility: freezed == ffVisibility ? _self.ffVisibility : ffVisibility // ignore: cast_nullable_to_non_nullable
-as FFVisibility?,followersVisibility: freezed == followersVisibility ? _self.followersVisibility : followersVisibility // ignore: cast_nullable_to_non_nullable
-as FFVisibility?,followingVisibility: freezed == followingVisibility ? _self.followingVisibility : followingVisibility // ignore: cast_nullable_to_non_nullable
-as FFVisibility?,chatScope: freezed == chatScope ? _self.chatScope : chatScope // ignore: cast_nullable_to_non_nullable
-as ChatScope?,canChat: freezed == canChat ? _self.canChat : canChat // ignore: cast_nullable_to_non_nullable
-as bool?,twoFactorEnabled: freezed == twoFactorEnabled ? _self.twoFactorEnabled : twoFactorEnabled // ignore: cast_nullable_to_non_nullable
-as bool?,usePasswordLessLogin: freezed == usePasswordLessLogin ? _self.usePasswordLessLogin : usePasswordLessLogin // ignore: cast_nullable_to_non_nullable
-as bool?,securityKeys: freezed == securityKeys ? _self.securityKeys : securityKeys // ignore: cast_nullable_to_non_nullable
-as bool?,roles: freezed == roles ? _self._roles : roles // ignore: cast_nullable_to_non_nullable
-as List<UserRole>?,memo: freezed == memo ? _self.memo : memo // ignore: cast_nullable_to_non_nullable
-as String?,moderationNote: freezed == moderationNote ? _self.moderationNote : moderationNote // ignore: cast_nullable_to_non_nullable
-as String?,isFollowing: null == isFollowing ? _self.isFollowing : isFollowing // ignore: cast_nullable_to_non_nullable
-as bool,isFollowed: null == isFollowed ? _self.isFollowed : isFollowed // ignore: cast_nullable_to_non_nullable
-as bool,hasPendingFollowRequestFromYou: null == hasPendingFollowRequestFromYou ? _self.hasPendingFollowRequestFromYou : hasPendingFollowRequestFromYou // ignore: cast_nullable_to_non_nullable
-as bool,hasPendingFollowRequestToYou: null == hasPendingFollowRequestToYou ? _self.hasPendingFollowRequestToYou : hasPendingFollowRequestToYou // ignore: cast_nullable_to_non_nullable
-as bool,isBlocking: null == isBlocking ? _self.isBlocking : isBlocking // ignore: cast_nullable_to_non_nullable
-as bool,isBlocked: null == isBlocked ? _self.isBlocked : isBlocked // ignore: cast_nullable_to_non_nullable
-as bool,isMuted: null == isMuted ? _self.isMuted : isMuted // ignore: cast_nullable_to_non_nullable
-as bool,isRenoteMuted: null == isRenoteMuted ? _self.isRenoteMuted : isRenoteMuted // ignore: cast_nullable_to_non_nullable
-as bool,notify: freezed == notify ? _self.notify : notify // ignore: cast_nullable_to_non_nullable
-as Notify?,withReplies: freezed == withReplies ? _self.withReplies : withReplies // ignore: cast_nullable_to_non_nullable
-as bool?,followedMessage: freezed == followedMessage ? _self.followedMessage : followedMessage // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
-/// Create a copy of UserDetailedNotMeWithRelations
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$UserInstanceInfoCopyWith<$Res>? get instance {
-    if (_self.instance == null) {
-    return null;
-  }
-
-  return $UserInstanceInfoCopyWith<$Res>(_self.instance!, (value) {
-    return _then(_self.copyWith(instance: value));
-  });
-}
-}
-
 
 /// @nodoc
 mixin _$MeDetailed {
 
- String get id; String? get name; String get username; String? get host;@NullableUriConverter() Uri? get avatarUrl; String? get avatarBlurhash; List<UserAvatarDecoration> get avatarDecorations; bool get isBot; bool get isCat; UserInstanceInfo? get instance;@EmojisConverter() Map<String, String> get emojis;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) OnlineStatus? get onlineStatus; List<UserBadgeRole> get badgeRoles; bool? get requireSigninToViewContents;@HideBeforeConverter() HideBefore? get makeNotesFollowersOnlyBefore;@HideBeforeConverter() HideBefore? get makeNotesHiddenBefore; bool? get speakAsCat;@NullableUriConverter() Uri? get url;@NullableUriConverter() Uri? get uri;@NullableUriConverter() Uri? get movedTo; List<String>? get alsoKnownAs;@DateTimeConverter() DateTime get createdAt;@NullableDateTimeConverter() DateTime? get updatedAt;@NullableDateTimeConverter() DateTime? get lastFetchedAt;@NullableUriConverter() Uri? get bannerUrl; String? get bannerBlurhash; bool get isLocked; bool get isSilenced; bool get isSuspended; String? get description; String? get location; String? get birthday; String? get lang; List<UserField>? get fields; List<String> get verifiedLinks; List<MutualLinkSection>? get mutualLinkSections;@IntConverter() int get followersCount;@IntConverter() int get followingCount; int get notesCount; List<String>? get pinnedNoteIds; List<Note>? get pinnedNotes; String? get pinnedPageId; Map<String, dynamic>? get pinnedPage; bool get publicReactions;/// removed at 2023.12.0"
-@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? get ffVisibility;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? get followersVisibility;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? get followingVisibility;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) ChatScope? get chatScope; bool? get canChat; bool? get twoFactorEnabled; bool? get usePasswordLessLogin; bool? get securityKeys; List<UserRole>? get roles; String? get memo; String? get moderationNote; String? get avatarId; String? get bannerId; String? get followedMessage; bool get isModerator; bool get isAdmin; bool get injectFeaturedNote; bool get receiveAnnouncementEmail; bool get alwaysMarkNsfw; bool get autoSensitive; bool get carefulBot; bool get autoAcceptFollowed; bool? get preventAiLearning; bool get noCrawle; bool get isExplorable; bool get isDeleted;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) TwoFactorBackupCodesStock? get twoFactorBackupCodesStock; bool get hideOnlineStatus; bool get hasUnreadSpecifiedNotes; bool get hasUnreadMentions; bool get hasUnreadAnnouncement; bool get hasUnreadAntenna; bool get hasUnreadChannel; bool? get hasUnreadChatMessages; bool get hasUnreadNotification; bool get hasPendingReceivedFollowRequest; int? get unreadNotificationsCount; List<AnnouncementsResponse> get unreadAnnouncements;@MuteWordsConverter() List<MuteWord>? get mutedWords;@MuteWordsConverter() List<MuteWord>? get hardMutedWords; List<String> get mutedInstances;/// Deprecated in Misskey 2023.9.2
- List<String>? get mutingNotificationTypes; NotificationRecieveConfigs get notificationRecieveConfig; List<String> get emailNotificationTypes; List<UserAchievement> get achievements; int? get loggedInDays; UserPolicies? get policies;
+
 /// Create a copy of MeDetailed
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $MeDetailedCopyWith<MeDetailed> get copyWith => _$MeDetailedCopyWithImpl<MeDetailed>(this as MeDetailed, _$identity);
 
-  /// Serializes this MeDetailed to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -1528,7 +797,7 @@ abstract mixin class $MeDetailedCopyWith<$Res>  {
   factory $MeDetailedCopyWith(MeDetailed value, $Res Function(MeDetailed) _then) = _$MeDetailedCopyWithImpl;
 @useResult
 $Res call({
- String id, String? name, String username, String? host,@NullableUriConverter() Uri? avatarUrl, String? avatarBlurhash, List<UserAvatarDecoration> avatarDecorations, bool isBot, bool isCat, UserInstanceInfo? instance,@EmojisConverter() Map<String, String> emojis,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) OnlineStatus? onlineStatus, List<UserBadgeRole> badgeRoles, bool? requireSigninToViewContents,@HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,@HideBeforeConverter() HideBefore? makeNotesHiddenBefore, bool? speakAsCat,@NullableUriConverter() Uri? url,@NullableUriConverter() Uri? uri,@NullableUriConverter() Uri? movedTo, List<String>? alsoKnownAs,@DateTimeConverter() DateTime createdAt,@NullableDateTimeConverter() DateTime? updatedAt,@NullableDateTimeConverter() DateTime? lastFetchedAt,@NullableUriConverter() Uri? bannerUrl, String? bannerBlurhash, bool isLocked, bool isSilenced, bool isSuspended, String? description, String? location, String? birthday, String? lang, List<UserField>? fields, List<String> verifiedLinks, List<MutualLinkSection>? mutualLinkSections,@IntConverter() int followersCount,@IntConverter() int followingCount, int notesCount, List<String>? pinnedNoteIds, List<Note>? pinnedNotes, String? pinnedPageId, Map<String, dynamic>? pinnedPage, bool publicReactions,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? ffVisibility,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? followersVisibility,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? followingVisibility,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) ChatScope? chatScope, bool? canChat, bool? twoFactorEnabled, bool? usePasswordLessLogin, bool? securityKeys, List<UserRole>? roles, String? memo, String? moderationNote, String? avatarId, String? bannerId, String? followedMessage, bool isModerator, bool isAdmin, bool injectFeaturedNote, bool receiveAnnouncementEmail, bool alwaysMarkNsfw, bool autoSensitive, bool carefulBot, bool autoAcceptFollowed, bool? preventAiLearning, bool noCrawle, bool isExplorable, bool isDeleted,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) TwoFactorBackupCodesStock? twoFactorBackupCodesStock, bool hideOnlineStatus, bool hasUnreadSpecifiedNotes, bool hasUnreadMentions, bool hasUnreadAnnouncement, bool hasUnreadAntenna, bool hasUnreadChannel, bool? hasUnreadChatMessages, bool hasUnreadNotification, bool hasPendingReceivedFollowRequest, int? unreadNotificationsCount, List<AnnouncementsResponse> unreadAnnouncements,@MuteWordsConverter() List<MuteWord>? mutedWords,@MuteWordsConverter() List<MuteWord>? hardMutedWords, List<String> mutedInstances, List<String>? mutingNotificationTypes, NotificationRecieveConfigs notificationRecieveConfig, List<String> emailNotificationTypes, List<UserAchievement> achievements, int? loggedInDays, UserPolicies? policies
+@override String id,@override String? name,@override String username,@override String? host,@override@NullableUriConverter() Uri? avatarUrl,@override String? avatarBlurhash,@override List<UserAvatarDecoration> avatarDecorations,@override bool isBot,@override bool isCat,@override UserInstanceInfo? instance,@override@EmojisConverter() Map<String, String> emojis,@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) OnlineStatus? onlineStatus,@override List<UserBadgeRole> badgeRoles,@override bool? requireSigninToViewContents,@override@HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,@override@HideBeforeConverter() HideBefore? makeNotesHiddenBefore,@override bool? speakAsCat,@override@NullableUriConverter() Uri? url,@override@NullableUriConverter() Uri? uri,@override@NullableUriConverter() Uri? movedTo,@override List<String>? alsoKnownAs,@override@DateTimeConverter() DateTime createdAt,@override@NullableDateTimeConverter() DateTime? updatedAt,@override@NullableDateTimeConverter() DateTime? lastFetchedAt,@override@NullableUriConverter() Uri? bannerUrl,@override String? bannerBlurhash,@override bool isLocked,@override bool isSilenced,@override bool isSuspended,@override String? description,@override String? location,@override String? birthday,@override String? lang,@override List<UserField>? fields,@override List<String> verifiedLinks,@override List<MutualLinkSection>? mutualLinkSections,@override@IntConverter() int followersCount,@override@IntConverter() int followingCount,@override int notesCount,@override List<String>? pinnedNoteIds,@override List<Note>? pinnedNotes,@override String? pinnedPageId,@override Map<String, dynamic>? pinnedPage,@override bool publicReactions,@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? ffVisibility,@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? followersVisibility,@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? followingVisibility,@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) ChatScope? chatScope,@override bool? canChat,@override bool? twoFactorEnabled,@override bool? usePasswordLessLogin,@override bool? securityKeys,@override List<UserRole>? roles,@override String? memo,@override String? moderationNote, String? avatarId, String? bannerId, String? followedMessage, bool isModerator, bool isAdmin, bool injectFeaturedNote, bool receiveAnnouncementEmail, bool alwaysMarkNsfw, bool autoSensitive, bool carefulBot, bool autoAcceptFollowed, bool? preventAiLearning, bool noCrawle, bool isExplorable, bool isDeleted,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) TwoFactorBackupCodesStock? twoFactorBackupCodesStock, bool hideOnlineStatus, bool hasUnreadSpecifiedNotes, bool hasUnreadMentions, bool hasUnreadAnnouncement, bool hasUnreadAntenna, bool hasUnreadChannel, bool? hasUnreadChatMessages, bool hasUnreadNotification, bool hasPendingReceivedFollowRequest, int? unreadNotificationsCount, List<AnnouncementsResponse> unreadAnnouncements,@MuteWordsConverter() List<MuteWord>? mutedWords,@MuteWordsConverter() List<MuteWord>? hardMutedWords, List<String> mutedInstances, List<String>? mutingNotificationTypes, NotificationRecieveConfigs notificationRecieveConfig, List<String> emailNotificationTypes, List<UserAchievement> achievements, int? loggedInDays, UserPolicies? policies
 });
 
 
@@ -1692,11 +961,10 @@ extension MeDetailedPatterns on MeDetailed {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _MeDetailed value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _MeDetailed() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -1714,11 +982,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _MeDetailed value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _MeDetailed():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -1735,11 +1002,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _MeDetailed value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _MeDetailed() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -1756,10 +1022,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String? name,  String username,  String? host, @NullableUriConverter()  Uri? avatarUrl,  String? avatarBlurhash,  List<UserAvatarDecoration> avatarDecorations,  bool isBot,  bool isCat,  UserInstanceInfo? instance, @EmojisConverter()  Map<String, String> emojis, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  OnlineStatus? onlineStatus,  List<UserBadgeRole> badgeRoles,  bool? requireSigninToViewContents, @HideBeforeConverter()  HideBefore? makeNotesFollowersOnlyBefore, @HideBeforeConverter()  HideBefore? makeNotesHiddenBefore,  bool? speakAsCat, @NullableUriConverter()  Uri? url, @NullableUriConverter()  Uri? uri, @NullableUriConverter()  Uri? movedTo,  List<String>? alsoKnownAs, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? updatedAt, @NullableDateTimeConverter()  DateTime? lastFetchedAt, @NullableUriConverter()  Uri? bannerUrl,  String? bannerBlurhash,  bool isLocked,  bool isSilenced,  bool isSuspended,  String? description,  String? location,  String? birthday,  String? lang,  List<UserField>? fields,  List<String> verifiedLinks,  List<MutualLinkSection>? mutualLinkSections, @IntConverter()  int followersCount, @IntConverter()  int followingCount,  int notesCount,  List<String>? pinnedNoteIds,  List<Note>? pinnedNotes,  String? pinnedPageId,  Map<String, dynamic>? pinnedPage,  bool publicReactions, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? ffVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followersVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followingVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChatScope? chatScope,  bool? canChat,  bool? twoFactorEnabled,  bool? usePasswordLessLogin,  bool? securityKeys,  List<UserRole>? roles,  String? memo,  String? moderationNote,  String? avatarId,  String? bannerId,  String? followedMessage,  bool isModerator,  bool isAdmin,  bool injectFeaturedNote,  bool receiveAnnouncementEmail,  bool alwaysMarkNsfw,  bool autoSensitive,  bool carefulBot,  bool autoAcceptFollowed,  bool? preventAiLearning,  bool noCrawle,  bool isExplorable,  bool isDeleted, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  TwoFactorBackupCodesStock? twoFactorBackupCodesStock,  bool hideOnlineStatus,  bool hasUnreadSpecifiedNotes,  bool hasUnreadMentions,  bool hasUnreadAnnouncement,  bool hasUnreadAntenna,  bool hasUnreadChannel,  bool? hasUnreadChatMessages,  bool hasUnreadNotification,  bool hasPendingReceivedFollowRequest,  int? unreadNotificationsCount,  List<AnnouncementsResponse> unreadAnnouncements, @MuteWordsConverter()  List<MuteWord>? mutedWords, @MuteWordsConverter()  List<MuteWord>? hardMutedWords,  List<String> mutedInstances,  List<String>? mutingNotificationTypes,  NotificationRecieveConfigs notificationRecieveConfig,  List<String> emailNotificationTypes,  List<UserAchievement> achievements,  int? loggedInDays,  UserPolicies? policies)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _MeDetailed() when $default != null:
-return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_that.avatarBlurhash,_that.avatarDecorations,_that.isBot,_that.isCat,_that.instance,_that.emojis,_that.onlineStatus,_that.badgeRoles,_that.requireSigninToViewContents,_that.makeNotesFollowersOnlyBefore,_that.makeNotesHiddenBefore,_that.speakAsCat,_that.url,_that.uri,_that.movedTo,_that.alsoKnownAs,_that.createdAt,_that.updatedAt,_that.lastFetchedAt,_that.bannerUrl,_that.bannerBlurhash,_that.isLocked,_that.isSilenced,_that.isSuspended,_that.description,_that.location,_that.birthday,_that.lang,_that.fields,_that.verifiedLinks,_that.mutualLinkSections,_that.followersCount,_that.followingCount,_that.notesCount,_that.pinnedNoteIds,_that.pinnedNotes,_that.pinnedPageId,_that.pinnedPage,_that.publicReactions,_that.ffVisibility,_that.followersVisibility,_that.followingVisibility,_that.chatScope,_that.canChat,_that.twoFactorEnabled,_that.usePasswordLessLogin,_that.securityKeys,_that.roles,_that.memo,_that.moderationNote,_that.avatarId,_that.bannerId,_that.followedMessage,_that.isModerator,_that.isAdmin,_that.injectFeaturedNote,_that.receiveAnnouncementEmail,_that.alwaysMarkNsfw,_that.autoSensitive,_that.carefulBot,_that.autoAcceptFollowed,_that.preventAiLearning,_that.noCrawle,_that.isExplorable,_that.isDeleted,_that.twoFactorBackupCodesStock,_that.hideOnlineStatus,_that.hasUnreadSpecifiedNotes,_that.hasUnreadMentions,_that.hasUnreadAnnouncement,_that.hasUnreadAntenna,_that.hasUnreadChannel,_that.hasUnreadChatMessages,_that.hasUnreadNotification,_that.hasPendingReceivedFollowRequest,_that.unreadNotificationsCount,_that.unreadAnnouncements,_that.mutedWords,_that.hardMutedWords,_that.mutedInstances,_that.mutingNotificationTypes,_that.notificationRecieveConfig,_that.emailNotificationTypes,_that.achievements,_that.loggedInDays,_that.policies);case _:
+case _:
   return orElse();
 
 }
@@ -1777,10 +1042,9 @@ return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_t
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String? name,  String username,  String? host, @NullableUriConverter()  Uri? avatarUrl,  String? avatarBlurhash,  List<UserAvatarDecoration> avatarDecorations,  bool isBot,  bool isCat,  UserInstanceInfo? instance, @EmojisConverter()  Map<String, String> emojis, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  OnlineStatus? onlineStatus,  List<UserBadgeRole> badgeRoles,  bool? requireSigninToViewContents, @HideBeforeConverter()  HideBefore? makeNotesFollowersOnlyBefore, @HideBeforeConverter()  HideBefore? makeNotesHiddenBefore,  bool? speakAsCat, @NullableUriConverter()  Uri? url, @NullableUriConverter()  Uri? uri, @NullableUriConverter()  Uri? movedTo,  List<String>? alsoKnownAs, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? updatedAt, @NullableDateTimeConverter()  DateTime? lastFetchedAt, @NullableUriConverter()  Uri? bannerUrl,  String? bannerBlurhash,  bool isLocked,  bool isSilenced,  bool isSuspended,  String? description,  String? location,  String? birthday,  String? lang,  List<UserField>? fields,  List<String> verifiedLinks,  List<MutualLinkSection>? mutualLinkSections, @IntConverter()  int followersCount, @IntConverter()  int followingCount,  int notesCount,  List<String>? pinnedNoteIds,  List<Note>? pinnedNotes,  String? pinnedPageId,  Map<String, dynamic>? pinnedPage,  bool publicReactions, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? ffVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followersVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followingVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChatScope? chatScope,  bool? canChat,  bool? twoFactorEnabled,  bool? usePasswordLessLogin,  bool? securityKeys,  List<UserRole>? roles,  String? memo,  String? moderationNote,  String? avatarId,  String? bannerId,  String? followedMessage,  bool isModerator,  bool isAdmin,  bool injectFeaturedNote,  bool receiveAnnouncementEmail,  bool alwaysMarkNsfw,  bool autoSensitive,  bool carefulBot,  bool autoAcceptFollowed,  bool? preventAiLearning,  bool noCrawle,  bool isExplorable,  bool isDeleted, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  TwoFactorBackupCodesStock? twoFactorBackupCodesStock,  bool hideOnlineStatus,  bool hasUnreadSpecifiedNotes,  bool hasUnreadMentions,  bool hasUnreadAnnouncement,  bool hasUnreadAntenna,  bool hasUnreadChannel,  bool? hasUnreadChatMessages,  bool hasUnreadNotification,  bool hasPendingReceivedFollowRequest,  int? unreadNotificationsCount,  List<AnnouncementsResponse> unreadAnnouncements, @MuteWordsConverter()  List<MuteWord>? mutedWords, @MuteWordsConverter()  List<MuteWord>? hardMutedWords,  List<String> mutedInstances,  List<String>? mutingNotificationTypes,  NotificationRecieveConfigs notificationRecieveConfig,  List<String> emailNotificationTypes,  List<UserAchievement> achievements,  int? loggedInDays,  UserPolicies? policies)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _MeDetailed():
-return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_that.avatarBlurhash,_that.avatarDecorations,_that.isBot,_that.isCat,_that.instance,_that.emojis,_that.onlineStatus,_that.badgeRoles,_that.requireSigninToViewContents,_that.makeNotesFollowersOnlyBefore,_that.makeNotesHiddenBefore,_that.speakAsCat,_that.url,_that.uri,_that.movedTo,_that.alsoKnownAs,_that.createdAt,_that.updatedAt,_that.lastFetchedAt,_that.bannerUrl,_that.bannerBlurhash,_that.isLocked,_that.isSilenced,_that.isSuspended,_that.description,_that.location,_that.birthday,_that.lang,_that.fields,_that.verifiedLinks,_that.mutualLinkSections,_that.followersCount,_that.followingCount,_that.notesCount,_that.pinnedNoteIds,_that.pinnedNotes,_that.pinnedPageId,_that.pinnedPage,_that.publicReactions,_that.ffVisibility,_that.followersVisibility,_that.followingVisibility,_that.chatScope,_that.canChat,_that.twoFactorEnabled,_that.usePasswordLessLogin,_that.securityKeys,_that.roles,_that.memo,_that.moderationNote,_that.avatarId,_that.bannerId,_that.followedMessage,_that.isModerator,_that.isAdmin,_that.injectFeaturedNote,_that.receiveAnnouncementEmail,_that.alwaysMarkNsfw,_that.autoSensitive,_that.carefulBot,_that.autoAcceptFollowed,_that.preventAiLearning,_that.noCrawle,_that.isExplorable,_that.isDeleted,_that.twoFactorBackupCodesStock,_that.hideOnlineStatus,_that.hasUnreadSpecifiedNotes,_that.hasUnreadMentions,_that.hasUnreadAnnouncement,_that.hasUnreadAntenna,_that.hasUnreadChannel,_that.hasUnreadChatMessages,_that.hasUnreadNotification,_that.hasPendingReceivedFollowRequest,_that.unreadNotificationsCount,_that.unreadAnnouncements,_that.mutedWords,_that.hardMutedWords,_that.mutedInstances,_that.mutingNotificationTypes,_that.notificationRecieveConfig,_that.emailNotificationTypes,_that.achievements,_that.loggedInDays,_that.policies);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -1797,10 +1061,9 @@ return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_t
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String? name,  String username,  String? host, @NullableUriConverter()  Uri? avatarUrl,  String? avatarBlurhash,  List<UserAvatarDecoration> avatarDecorations,  bool isBot,  bool isCat,  UserInstanceInfo? instance, @EmojisConverter()  Map<String, String> emojis, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  OnlineStatus? onlineStatus,  List<UserBadgeRole> badgeRoles,  bool? requireSigninToViewContents, @HideBeforeConverter()  HideBefore? makeNotesFollowersOnlyBefore, @HideBeforeConverter()  HideBefore? makeNotesHiddenBefore,  bool? speakAsCat, @NullableUriConverter()  Uri? url, @NullableUriConverter()  Uri? uri, @NullableUriConverter()  Uri? movedTo,  List<String>? alsoKnownAs, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? updatedAt, @NullableDateTimeConverter()  DateTime? lastFetchedAt, @NullableUriConverter()  Uri? bannerUrl,  String? bannerBlurhash,  bool isLocked,  bool isSilenced,  bool isSuspended,  String? description,  String? location,  String? birthday,  String? lang,  List<UserField>? fields,  List<String> verifiedLinks,  List<MutualLinkSection>? mutualLinkSections, @IntConverter()  int followersCount, @IntConverter()  int followingCount,  int notesCount,  List<String>? pinnedNoteIds,  List<Note>? pinnedNotes,  String? pinnedPageId,  Map<String, dynamic>? pinnedPage,  bool publicReactions, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? ffVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followersVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FFVisibility? followingVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChatScope? chatScope,  bool? canChat,  bool? twoFactorEnabled,  bool? usePasswordLessLogin,  bool? securityKeys,  List<UserRole>? roles,  String? memo,  String? moderationNote,  String? avatarId,  String? bannerId,  String? followedMessage,  bool isModerator,  bool isAdmin,  bool injectFeaturedNote,  bool receiveAnnouncementEmail,  bool alwaysMarkNsfw,  bool autoSensitive,  bool carefulBot,  bool autoAcceptFollowed,  bool? preventAiLearning,  bool noCrawle,  bool isExplorable,  bool isDeleted, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  TwoFactorBackupCodesStock? twoFactorBackupCodesStock,  bool hideOnlineStatus,  bool hasUnreadSpecifiedNotes,  bool hasUnreadMentions,  bool hasUnreadAnnouncement,  bool hasUnreadAntenna,  bool hasUnreadChannel,  bool? hasUnreadChatMessages,  bool hasUnreadNotification,  bool hasPendingReceivedFollowRequest,  int? unreadNotificationsCount,  List<AnnouncementsResponse> unreadAnnouncements, @MuteWordsConverter()  List<MuteWord>? mutedWords, @MuteWordsConverter()  List<MuteWord>? hardMutedWords,  List<String> mutedInstances,  List<String>? mutingNotificationTypes,  NotificationRecieveConfigs notificationRecieveConfig,  List<String> emailNotificationTypes,  List<UserAchievement> achievements,  int? loggedInDays,  UserPolicies? policies)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _MeDetailed() when $default != null:
-return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_that.avatarBlurhash,_that.avatarDecorations,_that.isBot,_that.isCat,_that.instance,_that.emojis,_that.onlineStatus,_that.badgeRoles,_that.requireSigninToViewContents,_that.makeNotesFollowersOnlyBefore,_that.makeNotesHiddenBefore,_that.speakAsCat,_that.url,_that.uri,_that.movedTo,_that.alsoKnownAs,_that.createdAt,_that.updatedAt,_that.lastFetchedAt,_that.bannerUrl,_that.bannerBlurhash,_that.isLocked,_that.isSilenced,_that.isSuspended,_that.description,_that.location,_that.birthday,_that.lang,_that.fields,_that.verifiedLinks,_that.mutualLinkSections,_that.followersCount,_that.followingCount,_that.notesCount,_that.pinnedNoteIds,_that.pinnedNotes,_that.pinnedPageId,_that.pinnedPage,_that.publicReactions,_that.ffVisibility,_that.followersVisibility,_that.followingVisibility,_that.chatScope,_that.canChat,_that.twoFactorEnabled,_that.usePasswordLessLogin,_that.securityKeys,_that.roles,_that.memo,_that.moderationNote,_that.avatarId,_that.bannerId,_that.followedMessage,_that.isModerator,_that.isAdmin,_that.injectFeaturedNote,_that.receiveAnnouncementEmail,_that.alwaysMarkNsfw,_that.autoSensitive,_that.carefulBot,_that.autoAcceptFollowed,_that.preventAiLearning,_that.noCrawle,_that.isExplorable,_that.isDeleted,_that.twoFactorBackupCodesStock,_that.hideOnlineStatus,_that.hasUnreadSpecifiedNotes,_that.hasUnreadMentions,_that.hasUnreadAnnouncement,_that.hasUnreadAntenna,_that.hasUnreadChannel,_that.hasUnreadChatMessages,_that.hasUnreadNotification,_that.hasPendingReceivedFollowRequest,_that.unreadNotificationsCount,_that.unreadAnnouncements,_that.mutedWords,_that.hardMutedWords,_that.mutedInstances,_that.mutingNotificationTypes,_that.notificationRecieveConfig,_that.emailNotificationTypes,_that.achievements,_that.loggedInDays,_that.policies);case _:
+case _:
   return null;
 
 }
@@ -1808,434 +1071,17 @@ return $default(_that.id,_that.name,_that.username,_that.host,_that.avatarUrl,_t
 
 }
 
-/// @nodoc
-@JsonSerializable()
-
-class _MeDetailed implements MeDetailed {
-  const _MeDetailed({required this.id, this.name, required this.username, this.host, @NullableUriConverter() this.avatarUrl, this.avatarBlurhash,  List<UserAvatarDecoration> avatarDecorations = const [], required this.isBot, required this.isCat, this.instance, @EmojisConverter()  Map<String, String> emojis = const {}, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.onlineStatus,  List<UserBadgeRole> badgeRoles = const [], this.requireSigninToViewContents, @HideBeforeConverter() this.makeNotesFollowersOnlyBefore, @HideBeforeConverter() this.makeNotesHiddenBefore, this.speakAsCat, @NullableUriConverter() this.url, @NullableUriConverter() this.uri, @NullableUriConverter() this.movedTo,  List<String>? alsoKnownAs, @DateTimeConverter() required this.createdAt, @NullableDateTimeConverter() this.updatedAt, @NullableDateTimeConverter() this.lastFetchedAt, @NullableUriConverter() this.bannerUrl, this.bannerBlurhash, required this.isLocked, required this.isSilenced, required this.isSuspended, this.description, this.location, this.birthday, this.lang,  List<UserField>? fields,  List<String> verifiedLinks = const [],  List<MutualLinkSection>? mutualLinkSections, @IntConverter() required this.followersCount, @IntConverter() required this.followingCount, required this.notesCount,  List<String>? pinnedNoteIds,  List<Note>? pinnedNotes, this.pinnedPageId,  Map<String, dynamic>? pinnedPage, this.publicReactions = false, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.ffVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.followersVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.followingVisibility, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.chatScope, this.canChat, this.twoFactorEnabled, this.usePasswordLessLogin, this.securityKeys,  List<UserRole>? roles, this.memo, this.moderationNote, this.avatarId, this.bannerId, this.followedMessage, required this.isModerator, required this.isAdmin, this.injectFeaturedNote = false, this.receiveAnnouncementEmail = false, required this.alwaysMarkNsfw, this.autoSensitive = false, required this.carefulBot, required this.autoAcceptFollowed, this.preventAiLearning, this.noCrawle = false, this.isExplorable = false, this.isDeleted = false, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.twoFactorBackupCodesStock, this.hideOnlineStatus = false, this.hasUnreadSpecifiedNotes = false, this.hasUnreadMentions = false, this.hasUnreadAnnouncement = false, this.hasUnreadAntenna = false, this.hasUnreadChannel = false, this.hasUnreadChatMessages, this.hasUnreadNotification = false, this.hasPendingReceivedFollowRequest = false, this.unreadNotificationsCount,  List<AnnouncementsResponse> unreadAnnouncements = const [], @MuteWordsConverter()  List<MuteWord>? mutedWords, @MuteWordsConverter()  List<MuteWord>? hardMutedWords,  List<String> mutedInstances = const [],  List<String>? mutingNotificationTypes, this.notificationRecieveConfig = const NotificationRecieveConfigs(),  List<String> emailNotificationTypes = const [],  List<UserAchievement> achievements = const [], this.loggedInDays, this.policies}): _avatarDecorations = avatarDecorations,_emojis = emojis,_badgeRoles = badgeRoles,_alsoKnownAs = alsoKnownAs,_fields = fields,_verifiedLinks = verifiedLinks,_mutualLinkSections = mutualLinkSections,_pinnedNoteIds = pinnedNoteIds,_pinnedNotes = pinnedNotes,_pinnedPage = pinnedPage,_roles = roles,_unreadAnnouncements = unreadAnnouncements,_mutedWords = mutedWords,_hardMutedWords = hardMutedWords,_mutedInstances = mutedInstances,_mutingNotificationTypes = mutingNotificationTypes,_emailNotificationTypes = emailNotificationTypes,_achievements = achievements;
-  factory _MeDetailed.fromJson(Map<String, dynamic> json) => _$MeDetailedFromJson(json);
-
-@override final  String id;
-@override final  String? name;
-@override final  String username;
-@override final  String? host;
-@override@NullableUriConverter() final  Uri? avatarUrl;
-@override final  String? avatarBlurhash;
- final  List<UserAvatarDecoration> _avatarDecorations;
-@override@JsonKey() List<UserAvatarDecoration> get avatarDecorations {
-  if (_avatarDecorations is EqualUnmodifiableListView) return _avatarDecorations;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_avatarDecorations);
-}
-
-@override final  bool isBot;
-@override final  bool isCat;
-@override final  UserInstanceInfo? instance;
- final  Map<String, String> _emojis;
-@override@JsonKey()@EmojisConverter() Map<String, String> get emojis {
-  if (_emojis is EqualUnmodifiableMapView) return _emojis;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableMapView(_emojis);
-}
-
-@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  OnlineStatus? onlineStatus;
- final  List<UserBadgeRole> _badgeRoles;
-@override@JsonKey() List<UserBadgeRole> get badgeRoles {
-  if (_badgeRoles is EqualUnmodifiableListView) return _badgeRoles;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_badgeRoles);
-}
-
-@override final  bool? requireSigninToViewContents;
-@override@HideBeforeConverter() final  HideBefore? makeNotesFollowersOnlyBefore;
-@override@HideBeforeConverter() final  HideBefore? makeNotesHiddenBefore;
-@override final  bool? speakAsCat;
-@override@NullableUriConverter() final  Uri? url;
-@override@NullableUriConverter() final  Uri? uri;
-@override@NullableUriConverter() final  Uri? movedTo;
- final  List<String>? _alsoKnownAs;
-@override List<String>? get alsoKnownAs {
-  final value = _alsoKnownAs;
-  if (value == null) return null;
-  if (_alsoKnownAs is EqualUnmodifiableListView) return _alsoKnownAs;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
-@override@DateTimeConverter() final  DateTime createdAt;
-@override@NullableDateTimeConverter() final  DateTime? updatedAt;
-@override@NullableDateTimeConverter() final  DateTime? lastFetchedAt;
-@override@NullableUriConverter() final  Uri? bannerUrl;
-@override final  String? bannerBlurhash;
-@override final  bool isLocked;
-@override final  bool isSilenced;
-@override final  bool isSuspended;
-@override final  String? description;
-@override final  String? location;
-@override final  String? birthday;
-@override final  String? lang;
- final  List<UserField>? _fields;
-@override List<UserField>? get fields {
-  final value = _fields;
-  if (value == null) return null;
-  if (_fields is EqualUnmodifiableListView) return _fields;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
- final  List<String> _verifiedLinks;
-@override@JsonKey() List<String> get verifiedLinks {
-  if (_verifiedLinks is EqualUnmodifiableListView) return _verifiedLinks;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_verifiedLinks);
-}
-
- final  List<MutualLinkSection>? _mutualLinkSections;
-@override List<MutualLinkSection>? get mutualLinkSections {
-  final value = _mutualLinkSections;
-  if (value == null) return null;
-  if (_mutualLinkSections is EqualUnmodifiableListView) return _mutualLinkSections;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
-@override@IntConverter() final  int followersCount;
-@override@IntConverter() final  int followingCount;
-@override final  int notesCount;
- final  List<String>? _pinnedNoteIds;
-@override List<String>? get pinnedNoteIds {
-  final value = _pinnedNoteIds;
-  if (value == null) return null;
-  if (_pinnedNoteIds is EqualUnmodifiableListView) return _pinnedNoteIds;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
- final  List<Note>? _pinnedNotes;
-@override List<Note>? get pinnedNotes {
-  final value = _pinnedNotes;
-  if (value == null) return null;
-  if (_pinnedNotes is EqualUnmodifiableListView) return _pinnedNotes;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
-@override final  String? pinnedPageId;
- final  Map<String, dynamic>? _pinnedPage;
-@override Map<String, dynamic>? get pinnedPage {
-  final value = _pinnedPage;
-  if (value == null) return null;
-  if (_pinnedPage is EqualUnmodifiableMapView) return _pinnedPage;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableMapView(value);
-}
-
-@override@JsonKey() final  bool publicReactions;
-/// removed at 2023.12.0"
-@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  FFVisibility? ffVisibility;
-@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  FFVisibility? followersVisibility;
-@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  FFVisibility? followingVisibility;
-@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  ChatScope? chatScope;
-@override final  bool? canChat;
-@override final  bool? twoFactorEnabled;
-@override final  bool? usePasswordLessLogin;
-@override final  bool? securityKeys;
- final  List<UserRole>? _roles;
-@override List<UserRole>? get roles {
-  final value = _roles;
-  if (value == null) return null;
-  if (_roles is EqualUnmodifiableListView) return _roles;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
-@override final  String? memo;
-@override final  String? moderationNote;
-@override final  String? avatarId;
-@override final  String? bannerId;
-@override final  String? followedMessage;
-@override final  bool isModerator;
-@override final  bool isAdmin;
-@override@JsonKey() final  bool injectFeaturedNote;
-@override@JsonKey() final  bool receiveAnnouncementEmail;
-@override final  bool alwaysMarkNsfw;
-@override@JsonKey() final  bool autoSensitive;
-@override final  bool carefulBot;
-@override final  bool autoAcceptFollowed;
-@override final  bool? preventAiLearning;
-@override@JsonKey() final  bool noCrawle;
-@override@JsonKey() final  bool isExplorable;
-@override@JsonKey() final  bool isDeleted;
-@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  TwoFactorBackupCodesStock? twoFactorBackupCodesStock;
-@override@JsonKey() final  bool hideOnlineStatus;
-@override@JsonKey() final  bool hasUnreadSpecifiedNotes;
-@override@JsonKey() final  bool hasUnreadMentions;
-@override@JsonKey() final  bool hasUnreadAnnouncement;
-@override@JsonKey() final  bool hasUnreadAntenna;
-@override@JsonKey() final  bool hasUnreadChannel;
-@override final  bool? hasUnreadChatMessages;
-@override@JsonKey() final  bool hasUnreadNotification;
-@override@JsonKey() final  bool hasPendingReceivedFollowRequest;
-@override final  int? unreadNotificationsCount;
- final  List<AnnouncementsResponse> _unreadAnnouncements;
-@override@JsonKey() List<AnnouncementsResponse> get unreadAnnouncements {
-  if (_unreadAnnouncements is EqualUnmodifiableListView) return _unreadAnnouncements;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_unreadAnnouncements);
-}
-
- final  List<MuteWord>? _mutedWords;
-@override@MuteWordsConverter() List<MuteWord>? get mutedWords {
-  final value = _mutedWords;
-  if (value == null) return null;
-  if (_mutedWords is EqualUnmodifiableListView) return _mutedWords;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
- final  List<MuteWord>? _hardMutedWords;
-@override@MuteWordsConverter() List<MuteWord>? get hardMutedWords {
-  final value = _hardMutedWords;
-  if (value == null) return null;
-  if (_hardMutedWords is EqualUnmodifiableListView) return _hardMutedWords;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
- final  List<String> _mutedInstances;
-@override@JsonKey() List<String> get mutedInstances {
-  if (_mutedInstances is EqualUnmodifiableListView) return _mutedInstances;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_mutedInstances);
-}
-
-/// Deprecated in Misskey 2023.9.2
- final  List<String>? _mutingNotificationTypes;
-/// Deprecated in Misskey 2023.9.2
-@override List<String>? get mutingNotificationTypes {
-  final value = _mutingNotificationTypes;
-  if (value == null) return null;
-  if (_mutingNotificationTypes is EqualUnmodifiableListView) return _mutingNotificationTypes;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
-@override@JsonKey() final  NotificationRecieveConfigs notificationRecieveConfig;
- final  List<String> _emailNotificationTypes;
-@override@JsonKey() List<String> get emailNotificationTypes {
-  if (_emailNotificationTypes is EqualUnmodifiableListView) return _emailNotificationTypes;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_emailNotificationTypes);
-}
-
- final  List<UserAchievement> _achievements;
-@override@JsonKey() List<UserAchievement> get achievements {
-  if (_achievements is EqualUnmodifiableListView) return _achievements;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_achievements);
-}
-
-@override final  int? loggedInDays;
-@override final  UserPolicies? policies;
-
-/// Create a copy of MeDetailed
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$MeDetailedCopyWith<_MeDetailed> get copyWith => __$MeDetailedCopyWithImpl<_MeDetailed>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$MeDetailedToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _MeDetailed&&(identical(other.id, id) || other.id == id)&&(identical(other.name, name) || other.name == name)&&(identical(other.username, username) || other.username == username)&&(identical(other.host, host) || other.host == host)&&(identical(other.avatarUrl, avatarUrl) || other.avatarUrl == avatarUrl)&&(identical(other.avatarBlurhash, avatarBlurhash) || other.avatarBlurhash == avatarBlurhash)&&const DeepCollectionEquality().equals(other.avatarDecorations, _avatarDecorations)&&(identical(other.isBot, isBot) || other.isBot == isBot)&&(identical(other.isCat, isCat) || other.isCat == isCat)&&(identical(other.instance, instance) || other.instance == instance)&&const DeepCollectionEquality().equals(other.emojis, _emojis)&&(identical(other.onlineStatus, onlineStatus) || other.onlineStatus == onlineStatus)&&const DeepCollectionEquality().equals(other.badgeRoles, _badgeRoles)&&(identical(other.requireSigninToViewContents, requireSigninToViewContents) || other.requireSigninToViewContents == requireSigninToViewContents)&&(identical(other.makeNotesFollowersOnlyBefore, makeNotesFollowersOnlyBefore) || other.makeNotesFollowersOnlyBefore == makeNotesFollowersOnlyBefore)&&(identical(other.makeNotesHiddenBefore, makeNotesHiddenBefore) || other.makeNotesHiddenBefore == makeNotesHiddenBefore)&&(identical(other.speakAsCat, speakAsCat) || other.speakAsCat == speakAsCat)&&(identical(other.url, url) || other.url == url)&&(identical(other.uri, uri) || other.uri == uri)&&(identical(other.movedTo, movedTo) || other.movedTo == movedTo)&&const DeepCollectionEquality().equals(other.alsoKnownAs, _alsoKnownAs)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.lastFetchedAt, lastFetchedAt) || other.lastFetchedAt == lastFetchedAt)&&(identical(other.bannerUrl, bannerUrl) || other.bannerUrl == bannerUrl)&&(identical(other.bannerBlurhash, bannerBlurhash) || other.bannerBlurhash == bannerBlurhash)&&(identical(other.isLocked, isLocked) || other.isLocked == isLocked)&&(identical(other.isSilenced, isSilenced) || other.isSilenced == isSilenced)&&(identical(other.isSuspended, isSuspended) || other.isSuspended == isSuspended)&&(identical(other.description, description) || other.description == description)&&(identical(other.location, location) || other.location == location)&&(identical(other.birthday, birthday) || other.birthday == birthday)&&(identical(other.lang, lang) || other.lang == lang)&&const DeepCollectionEquality().equals(other.fields, _fields)&&const DeepCollectionEquality().equals(other.verifiedLinks, _verifiedLinks)&&const DeepCollectionEquality().equals(other.mutualLinkSections, _mutualLinkSections)&&(identical(other.followersCount, followersCount) || other.followersCount == followersCount)&&(identical(other.followingCount, followingCount) || other.followingCount == followingCount)&&(identical(other.notesCount, notesCount) || other.notesCount == notesCount)&&const DeepCollectionEquality().equals(other.pinnedNoteIds, _pinnedNoteIds)&&const DeepCollectionEquality().equals(other.pinnedNotes, _pinnedNotes)&&(identical(other.pinnedPageId, pinnedPageId) || other.pinnedPageId == pinnedPageId)&&const DeepCollectionEquality().equals(other.pinnedPage, _pinnedPage)&&(identical(other.publicReactions, publicReactions) || other.publicReactions == publicReactions)&&(identical(other.ffVisibility, ffVisibility) || other.ffVisibility == ffVisibility)&&(identical(other.followersVisibility, followersVisibility) || other.followersVisibility == followersVisibility)&&(identical(other.followingVisibility, followingVisibility) || other.followingVisibility == followingVisibility)&&(identical(other.chatScope, chatScope) || other.chatScope == chatScope)&&(identical(other.canChat, canChat) || other.canChat == canChat)&&(identical(other.twoFactorEnabled, twoFactorEnabled) || other.twoFactorEnabled == twoFactorEnabled)&&(identical(other.usePasswordLessLogin, usePasswordLessLogin) || other.usePasswordLessLogin == usePasswordLessLogin)&&(identical(other.securityKeys, securityKeys) || other.securityKeys == securityKeys)&&const DeepCollectionEquality().equals(other.roles, _roles)&&(identical(other.memo, memo) || other.memo == memo)&&(identical(other.moderationNote, moderationNote) || other.moderationNote == moderationNote)&&(identical(other.avatarId, avatarId) || other.avatarId == avatarId)&&(identical(other.bannerId, bannerId) || other.bannerId == bannerId)&&(identical(other.followedMessage, followedMessage) || other.followedMessage == followedMessage)&&(identical(other.isModerator, isModerator) || other.isModerator == isModerator)&&(identical(other.isAdmin, isAdmin) || other.isAdmin == isAdmin)&&(identical(other.injectFeaturedNote, injectFeaturedNote) || other.injectFeaturedNote == injectFeaturedNote)&&(identical(other.receiveAnnouncementEmail, receiveAnnouncementEmail) || other.receiveAnnouncementEmail == receiveAnnouncementEmail)&&(identical(other.alwaysMarkNsfw, alwaysMarkNsfw) || other.alwaysMarkNsfw == alwaysMarkNsfw)&&(identical(other.autoSensitive, autoSensitive) || other.autoSensitive == autoSensitive)&&(identical(other.carefulBot, carefulBot) || other.carefulBot == carefulBot)&&(identical(other.autoAcceptFollowed, autoAcceptFollowed) || other.autoAcceptFollowed == autoAcceptFollowed)&&(identical(other.preventAiLearning, preventAiLearning) || other.preventAiLearning == preventAiLearning)&&(identical(other.noCrawle, noCrawle) || other.noCrawle == noCrawle)&&(identical(other.isExplorable, isExplorable) || other.isExplorable == isExplorable)&&(identical(other.isDeleted, isDeleted) || other.isDeleted == isDeleted)&&(identical(other.twoFactorBackupCodesStock, twoFactorBackupCodesStock) || other.twoFactorBackupCodesStock == twoFactorBackupCodesStock)&&(identical(other.hideOnlineStatus, hideOnlineStatus) || other.hideOnlineStatus == hideOnlineStatus)&&(identical(other.hasUnreadSpecifiedNotes, hasUnreadSpecifiedNotes) || other.hasUnreadSpecifiedNotes == hasUnreadSpecifiedNotes)&&(identical(other.hasUnreadMentions, hasUnreadMentions) || other.hasUnreadMentions == hasUnreadMentions)&&(identical(other.hasUnreadAnnouncement, hasUnreadAnnouncement) || other.hasUnreadAnnouncement == hasUnreadAnnouncement)&&(identical(other.hasUnreadAntenna, hasUnreadAntenna) || other.hasUnreadAntenna == hasUnreadAntenna)&&(identical(other.hasUnreadChannel, hasUnreadChannel) || other.hasUnreadChannel == hasUnreadChannel)&&(identical(other.hasUnreadChatMessages, hasUnreadChatMessages) || other.hasUnreadChatMessages == hasUnreadChatMessages)&&(identical(other.hasUnreadNotification, hasUnreadNotification) || other.hasUnreadNotification == hasUnreadNotification)&&(identical(other.hasPendingReceivedFollowRequest, hasPendingReceivedFollowRequest) || other.hasPendingReceivedFollowRequest == hasPendingReceivedFollowRequest)&&(identical(other.unreadNotificationsCount, unreadNotificationsCount) || other.unreadNotificationsCount == unreadNotificationsCount)&&const DeepCollectionEquality().equals(other.unreadAnnouncements, _unreadAnnouncements)&&const DeepCollectionEquality().equals(other.mutedWords, _mutedWords)&&const DeepCollectionEquality().equals(other.hardMutedWords, _hardMutedWords)&&const DeepCollectionEquality().equals(other.mutedInstances, _mutedInstances)&&const DeepCollectionEquality().equals(other.mutingNotificationTypes, _mutingNotificationTypes)&&(identical(other.notificationRecieveConfig, notificationRecieveConfig) || other.notificationRecieveConfig == notificationRecieveConfig)&&const DeepCollectionEquality().equals(other.emailNotificationTypes, _emailNotificationTypes)&&const DeepCollectionEquality().equals(other.achievements, _achievements)&&(identical(other.loggedInDays, loggedInDays) || other.loggedInDays == loggedInDays)&&(identical(other.policies, policies) || other.policies == policies));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hashAll([runtimeType,id,name,username,host,avatarUrl,avatarBlurhash,const DeepCollectionEquality().hash(_avatarDecorations),isBot,isCat,instance,const DeepCollectionEquality().hash(_emojis),onlineStatus,const DeepCollectionEquality().hash(_badgeRoles),requireSigninToViewContents,makeNotesFollowersOnlyBefore,makeNotesHiddenBefore,speakAsCat,url,uri,movedTo,const DeepCollectionEquality().hash(_alsoKnownAs),createdAt,updatedAt,lastFetchedAt,bannerUrl,bannerBlurhash,isLocked,isSilenced,isSuspended,description,location,birthday,lang,const DeepCollectionEquality().hash(_fields),const DeepCollectionEquality().hash(_verifiedLinks),const DeepCollectionEquality().hash(_mutualLinkSections),followersCount,followingCount,notesCount,const DeepCollectionEquality().hash(_pinnedNoteIds),const DeepCollectionEquality().hash(_pinnedNotes),pinnedPageId,const DeepCollectionEquality().hash(_pinnedPage),publicReactions,ffVisibility,followersVisibility,followingVisibility,chatScope,canChat,twoFactorEnabled,usePasswordLessLogin,securityKeys,const DeepCollectionEquality().hash(_roles),memo,moderationNote,avatarId,bannerId,followedMessage,isModerator,isAdmin,injectFeaturedNote,receiveAnnouncementEmail,alwaysMarkNsfw,autoSensitive,carefulBot,autoAcceptFollowed,preventAiLearning,noCrawle,isExplorable,isDeleted,twoFactorBackupCodesStock,hideOnlineStatus,hasUnreadSpecifiedNotes,hasUnreadMentions,hasUnreadAnnouncement,hasUnreadAntenna,hasUnreadChannel,hasUnreadChatMessages,hasUnreadNotification,hasPendingReceivedFollowRequest,unreadNotificationsCount,const DeepCollectionEquality().hash(_unreadAnnouncements),const DeepCollectionEquality().hash(_mutedWords),const DeepCollectionEquality().hash(_hardMutedWords),const DeepCollectionEquality().hash(_mutedInstances),const DeepCollectionEquality().hash(_mutingNotificationTypes),notificationRecieveConfig,const DeepCollectionEquality().hash(_emailNotificationTypes),const DeepCollectionEquality().hash(_achievements),loggedInDays,policies]);
-}
-
-@override
-String toString() {
-    return 'MeDetailed(id: $id, name: $name, username: $username, host: $host, avatarUrl: $avatarUrl, avatarBlurhash: $avatarBlurhash, avatarDecorations: $avatarDecorations, isBot: $isBot, isCat: $isCat, instance: $instance, emojis: $emojis, onlineStatus: $onlineStatus, badgeRoles: $badgeRoles, requireSigninToViewContents: $requireSigninToViewContents, makeNotesFollowersOnlyBefore: $makeNotesFollowersOnlyBefore, makeNotesHiddenBefore: $makeNotesHiddenBefore, speakAsCat: $speakAsCat, url: $url, uri: $uri, movedTo: $movedTo, alsoKnownAs: $alsoKnownAs, createdAt: $createdAt, updatedAt: $updatedAt, lastFetchedAt: $lastFetchedAt, bannerUrl: $bannerUrl, bannerBlurhash: $bannerBlurhash, isLocked: $isLocked, isSilenced: $isSilenced, isSuspended: $isSuspended, description: $description, location: $location, birthday: $birthday, lang: $lang, fields: $fields, verifiedLinks: $verifiedLinks, mutualLinkSections: $mutualLinkSections, followersCount: $followersCount, followingCount: $followingCount, notesCount: $notesCount, pinnedNoteIds: $pinnedNoteIds, pinnedNotes: $pinnedNotes, pinnedPageId: $pinnedPageId, pinnedPage: $pinnedPage, publicReactions: $publicReactions, ffVisibility: $ffVisibility, followersVisibility: $followersVisibility, followingVisibility: $followingVisibility, chatScope: $chatScope, canChat: $canChat, twoFactorEnabled: $twoFactorEnabled, usePasswordLessLogin: $usePasswordLessLogin, securityKeys: $securityKeys, roles: $roles, memo: $memo, moderationNote: $moderationNote, avatarId: $avatarId, bannerId: $bannerId, followedMessage: $followedMessage, isModerator: $isModerator, isAdmin: $isAdmin, injectFeaturedNote: $injectFeaturedNote, receiveAnnouncementEmail: $receiveAnnouncementEmail, alwaysMarkNsfw: $alwaysMarkNsfw, autoSensitive: $autoSensitive, carefulBot: $carefulBot, autoAcceptFollowed: $autoAcceptFollowed, preventAiLearning: $preventAiLearning, noCrawle: $noCrawle, isExplorable: $isExplorable, isDeleted: $isDeleted, twoFactorBackupCodesStock: $twoFactorBackupCodesStock, hideOnlineStatus: $hideOnlineStatus, hasUnreadSpecifiedNotes: $hasUnreadSpecifiedNotes, hasUnreadMentions: $hasUnreadMentions, hasUnreadAnnouncement: $hasUnreadAnnouncement, hasUnreadAntenna: $hasUnreadAntenna, hasUnreadChannel: $hasUnreadChannel, hasUnreadChatMessages: $hasUnreadChatMessages, hasUnreadNotification: $hasUnreadNotification, hasPendingReceivedFollowRequest: $hasPendingReceivedFollowRequest, unreadNotificationsCount: $unreadNotificationsCount, unreadAnnouncements: $unreadAnnouncements, mutedWords: $mutedWords, hardMutedWords: $hardMutedWords, mutedInstances: $mutedInstances, mutingNotificationTypes: $mutingNotificationTypes, notificationRecieveConfig: $notificationRecieveConfig, emailNotificationTypes: $emailNotificationTypes, achievements: $achievements, loggedInDays: $loggedInDays, policies: $policies)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$MeDetailedCopyWith<$Res> implements $MeDetailedCopyWith<$Res> {
-  factory _$MeDetailedCopyWith(_MeDetailed value, $Res Function(_MeDetailed) _then) = __$MeDetailedCopyWithImpl;
-@override @useResult
-$Res call({
- String id, String? name, String username, String? host,@NullableUriConverter() Uri? avatarUrl, String? avatarBlurhash, List<UserAvatarDecoration> avatarDecorations, bool isBot, bool isCat, UserInstanceInfo? instance,@EmojisConverter() Map<String, String> emojis,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) OnlineStatus? onlineStatus, List<UserBadgeRole> badgeRoles, bool? requireSigninToViewContents,@HideBeforeConverter() HideBefore? makeNotesFollowersOnlyBefore,@HideBeforeConverter() HideBefore? makeNotesHiddenBefore, bool? speakAsCat,@NullableUriConverter() Uri? url,@NullableUriConverter() Uri? uri,@NullableUriConverter() Uri? movedTo, List<String>? alsoKnownAs,@DateTimeConverter() DateTime createdAt,@NullableDateTimeConverter() DateTime? updatedAt,@NullableDateTimeConverter() DateTime? lastFetchedAt,@NullableUriConverter() Uri? bannerUrl, String? bannerBlurhash, bool isLocked, bool isSilenced, bool isSuspended, String? description, String? location, String? birthday, String? lang, List<UserField>? fields, List<String> verifiedLinks, List<MutualLinkSection>? mutualLinkSections,@IntConverter() int followersCount,@IntConverter() int followingCount, int notesCount, List<String>? pinnedNoteIds, List<Note>? pinnedNotes, String? pinnedPageId, Map<String, dynamic>? pinnedPage, bool publicReactions,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? ffVisibility,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? followersVisibility,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FFVisibility? followingVisibility,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) ChatScope? chatScope, bool? canChat, bool? twoFactorEnabled, bool? usePasswordLessLogin, bool? securityKeys, List<UserRole>? roles, String? memo, String? moderationNote, String? avatarId, String? bannerId, String? followedMessage, bool isModerator, bool isAdmin, bool injectFeaturedNote, bool receiveAnnouncementEmail, bool alwaysMarkNsfw, bool autoSensitive, bool carefulBot, bool autoAcceptFollowed, bool? preventAiLearning, bool noCrawle, bool isExplorable, bool isDeleted,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) TwoFactorBackupCodesStock? twoFactorBackupCodesStock, bool hideOnlineStatus, bool hasUnreadSpecifiedNotes, bool hasUnreadMentions, bool hasUnreadAnnouncement, bool hasUnreadAntenna, bool hasUnreadChannel, bool? hasUnreadChatMessages, bool hasUnreadNotification, bool hasPendingReceivedFollowRequest, int? unreadNotificationsCount, List<AnnouncementsResponse> unreadAnnouncements,@MuteWordsConverter() List<MuteWord>? mutedWords,@MuteWordsConverter() List<MuteWord>? hardMutedWords, List<String> mutedInstances, List<String>? mutingNotificationTypes, NotificationRecieveConfigs notificationRecieveConfig, List<String> emailNotificationTypes, List<UserAchievement> achievements, int? loggedInDays, UserPolicies? policies
-});
-
-
-@override $UserInstanceInfoCopyWith<$Res>? get instance;@override $NotificationRecieveConfigsCopyWith<$Res> get notificationRecieveConfig;@override $UserPoliciesCopyWith<$Res>? get policies;
-
-}
-/// @nodoc
-class __$MeDetailedCopyWithImpl<$Res>
-    implements _$MeDetailedCopyWith<$Res> {
-  __$MeDetailedCopyWithImpl(this._self, this._then);
-
-  final _MeDetailed _self;
-  final $Res Function(_MeDetailed) _then;
-
-/// Create a copy of MeDetailed
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? name = freezed,Object? username = null,Object? host = freezed,Object? avatarUrl = freezed,Object? avatarBlurhash = freezed,Object? avatarDecorations = null,Object? isBot = null,Object? isCat = null,Object? instance = freezed,Object? emojis = null,Object? onlineStatus = freezed,Object? badgeRoles = null,Object? requireSigninToViewContents = freezed,Object? makeNotesFollowersOnlyBefore = freezed,Object? makeNotesHiddenBefore = freezed,Object? speakAsCat = freezed,Object? url = freezed,Object? uri = freezed,Object? movedTo = freezed,Object? alsoKnownAs = freezed,Object? createdAt = null,Object? updatedAt = freezed,Object? lastFetchedAt = freezed,Object? bannerUrl = freezed,Object? bannerBlurhash = freezed,Object? isLocked = null,Object? isSilenced = null,Object? isSuspended = null,Object? description = freezed,Object? location = freezed,Object? birthday = freezed,Object? lang = freezed,Object? fields = freezed,Object? verifiedLinks = null,Object? mutualLinkSections = freezed,Object? followersCount = null,Object? followingCount = null,Object? notesCount = null,Object? pinnedNoteIds = freezed,Object? pinnedNotes = freezed,Object? pinnedPageId = freezed,Object? pinnedPage = freezed,Object? publicReactions = null,Object? ffVisibility = freezed,Object? followersVisibility = freezed,Object? followingVisibility = freezed,Object? chatScope = freezed,Object? canChat = freezed,Object? twoFactorEnabled = freezed,Object? usePasswordLessLogin = freezed,Object? securityKeys = freezed,Object? roles = freezed,Object? memo = freezed,Object? moderationNote = freezed,Object? avatarId = freezed,Object? bannerId = freezed,Object? followedMessage = freezed,Object? isModerator = null,Object? isAdmin = null,Object? injectFeaturedNote = null,Object? receiveAnnouncementEmail = null,Object? alwaysMarkNsfw = null,Object? autoSensitive = null,Object? carefulBot = null,Object? autoAcceptFollowed = null,Object? preventAiLearning = freezed,Object? noCrawle = null,Object? isExplorable = null,Object? isDeleted = null,Object? twoFactorBackupCodesStock = freezed,Object? hideOnlineStatus = null,Object? hasUnreadSpecifiedNotes = null,Object? hasUnreadMentions = null,Object? hasUnreadAnnouncement = null,Object? hasUnreadAntenna = null,Object? hasUnreadChannel = null,Object? hasUnreadChatMessages = freezed,Object? hasUnreadNotification = null,Object? hasPendingReceivedFollowRequest = null,Object? unreadNotificationsCount = freezed,Object? unreadAnnouncements = null,Object? mutedWords = freezed,Object? hardMutedWords = freezed,Object? mutedInstances = null,Object? mutingNotificationTypes = freezed,Object? notificationRecieveConfig = null,Object? emailNotificationTypes = null,Object? achievements = null,Object? loggedInDays = freezed,Object? policies = freezed,}) {
-  return _then(_MeDetailed(
-id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as String,name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String?,username: null == username ? _self.username : username // ignore: cast_nullable_to_non_nullable
-as String,host: freezed == host ? _self.host : host // ignore: cast_nullable_to_non_nullable
-as String?,avatarUrl: freezed == avatarUrl ? _self.avatarUrl : avatarUrl // ignore: cast_nullable_to_non_nullable
-as Uri?,avatarBlurhash: freezed == avatarBlurhash ? _self.avatarBlurhash : avatarBlurhash // ignore: cast_nullable_to_non_nullable
-as String?,avatarDecorations: null == avatarDecorations ? _self._avatarDecorations : avatarDecorations // ignore: cast_nullable_to_non_nullable
-as List<UserAvatarDecoration>,isBot: null == isBot ? _self.isBot : isBot // ignore: cast_nullable_to_non_nullable
-as bool,isCat: null == isCat ? _self.isCat : isCat // ignore: cast_nullable_to_non_nullable
-as bool,instance: freezed == instance ? _self.instance : instance // ignore: cast_nullable_to_non_nullable
-as UserInstanceInfo?,emojis: null == emojis ? _self._emojis : emojis // ignore: cast_nullable_to_non_nullable
-as Map<String, String>,onlineStatus: freezed == onlineStatus ? _self.onlineStatus : onlineStatus // ignore: cast_nullable_to_non_nullable
-as OnlineStatus?,badgeRoles: null == badgeRoles ? _self._badgeRoles : badgeRoles // ignore: cast_nullable_to_non_nullable
-as List<UserBadgeRole>,requireSigninToViewContents: freezed == requireSigninToViewContents ? _self.requireSigninToViewContents : requireSigninToViewContents // ignore: cast_nullable_to_non_nullable
-as bool?,makeNotesFollowersOnlyBefore: freezed == makeNotesFollowersOnlyBefore ? _self.makeNotesFollowersOnlyBefore : makeNotesFollowersOnlyBefore // ignore: cast_nullable_to_non_nullable
-as HideBefore?,makeNotesHiddenBefore: freezed == makeNotesHiddenBefore ? _self.makeNotesHiddenBefore : makeNotesHiddenBefore // ignore: cast_nullable_to_non_nullable
-as HideBefore?,speakAsCat: freezed == speakAsCat ? _self.speakAsCat : speakAsCat // ignore: cast_nullable_to_non_nullable
-as bool?,url: freezed == url ? _self.url : url // ignore: cast_nullable_to_non_nullable
-as Uri?,uri: freezed == uri ? _self.uri : uri // ignore: cast_nullable_to_non_nullable
-as Uri?,movedTo: freezed == movedTo ? _self.movedTo : movedTo // ignore: cast_nullable_to_non_nullable
-as Uri?,alsoKnownAs: freezed == alsoKnownAs ? _self._alsoKnownAs : alsoKnownAs // ignore: cast_nullable_to_non_nullable
-as List<String>?,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
-as DateTime,updatedAt: freezed == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
-as DateTime?,lastFetchedAt: freezed == lastFetchedAt ? _self.lastFetchedAt : lastFetchedAt // ignore: cast_nullable_to_non_nullable
-as DateTime?,bannerUrl: freezed == bannerUrl ? _self.bannerUrl : bannerUrl // ignore: cast_nullable_to_non_nullable
-as Uri?,bannerBlurhash: freezed == bannerBlurhash ? _self.bannerBlurhash : bannerBlurhash // ignore: cast_nullable_to_non_nullable
-as String?,isLocked: null == isLocked ? _self.isLocked : isLocked // ignore: cast_nullable_to_non_nullable
-as bool,isSilenced: null == isSilenced ? _self.isSilenced : isSilenced // ignore: cast_nullable_to_non_nullable
-as bool,isSuspended: null == isSuspended ? _self.isSuspended : isSuspended // ignore: cast_nullable_to_non_nullable
-as bool,description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
-as String?,location: freezed == location ? _self.location : location // ignore: cast_nullable_to_non_nullable
-as String?,birthday: freezed == birthday ? _self.birthday : birthday // ignore: cast_nullable_to_non_nullable
-as String?,lang: freezed == lang ? _self.lang : lang // ignore: cast_nullable_to_non_nullable
-as String?,fields: freezed == fields ? _self._fields : fields // ignore: cast_nullable_to_non_nullable
-as List<UserField>?,verifiedLinks: null == verifiedLinks ? _self._verifiedLinks : verifiedLinks // ignore: cast_nullable_to_non_nullable
-as List<String>,mutualLinkSections: freezed == mutualLinkSections ? _self._mutualLinkSections : mutualLinkSections // ignore: cast_nullable_to_non_nullable
-as List<MutualLinkSection>?,followersCount: null == followersCount ? _self.followersCount : followersCount // ignore: cast_nullable_to_non_nullable
-as int,followingCount: null == followingCount ? _self.followingCount : followingCount // ignore: cast_nullable_to_non_nullable
-as int,notesCount: null == notesCount ? _self.notesCount : notesCount // ignore: cast_nullable_to_non_nullable
-as int,pinnedNoteIds: freezed == pinnedNoteIds ? _self._pinnedNoteIds : pinnedNoteIds // ignore: cast_nullable_to_non_nullable
-as List<String>?,pinnedNotes: freezed == pinnedNotes ? _self._pinnedNotes : pinnedNotes // ignore: cast_nullable_to_non_nullable
-as List<Note>?,pinnedPageId: freezed == pinnedPageId ? _self.pinnedPageId : pinnedPageId // ignore: cast_nullable_to_non_nullable
-as String?,pinnedPage: freezed == pinnedPage ? _self._pinnedPage : pinnedPage // ignore: cast_nullable_to_non_nullable
-as Map<String, dynamic>?,publicReactions: null == publicReactions ? _self.publicReactions : publicReactions // ignore: cast_nullable_to_non_nullable
-as bool,ffVisibility: freezed == ffVisibility ? _self.ffVisibility : ffVisibility // ignore: cast_nullable_to_non_nullable
-as FFVisibility?,followersVisibility: freezed == followersVisibility ? _self.followersVisibility : followersVisibility // ignore: cast_nullable_to_non_nullable
-as FFVisibility?,followingVisibility: freezed == followingVisibility ? _self.followingVisibility : followingVisibility // ignore: cast_nullable_to_non_nullable
-as FFVisibility?,chatScope: freezed == chatScope ? _self.chatScope : chatScope // ignore: cast_nullable_to_non_nullable
-as ChatScope?,canChat: freezed == canChat ? _self.canChat : canChat // ignore: cast_nullable_to_non_nullable
-as bool?,twoFactorEnabled: freezed == twoFactorEnabled ? _self.twoFactorEnabled : twoFactorEnabled // ignore: cast_nullable_to_non_nullable
-as bool?,usePasswordLessLogin: freezed == usePasswordLessLogin ? _self.usePasswordLessLogin : usePasswordLessLogin // ignore: cast_nullable_to_non_nullable
-as bool?,securityKeys: freezed == securityKeys ? _self.securityKeys : securityKeys // ignore: cast_nullable_to_non_nullable
-as bool?,roles: freezed == roles ? _self._roles : roles // ignore: cast_nullable_to_non_nullable
-as List<UserRole>?,memo: freezed == memo ? _self.memo : memo // ignore: cast_nullable_to_non_nullable
-as String?,moderationNote: freezed == moderationNote ? _self.moderationNote : moderationNote // ignore: cast_nullable_to_non_nullable
-as String?,avatarId: freezed == avatarId ? _self.avatarId : avatarId // ignore: cast_nullable_to_non_nullable
-as String?,bannerId: freezed == bannerId ? _self.bannerId : bannerId // ignore: cast_nullable_to_non_nullable
-as String?,followedMessage: freezed == followedMessage ? _self.followedMessage : followedMessage // ignore: cast_nullable_to_non_nullable
-as String?,isModerator: null == isModerator ? _self.isModerator : isModerator // ignore: cast_nullable_to_non_nullable
-as bool,isAdmin: null == isAdmin ? _self.isAdmin : isAdmin // ignore: cast_nullable_to_non_nullable
-as bool,injectFeaturedNote: null == injectFeaturedNote ? _self.injectFeaturedNote : injectFeaturedNote // ignore: cast_nullable_to_non_nullable
-as bool,receiveAnnouncementEmail: null == receiveAnnouncementEmail ? _self.receiveAnnouncementEmail : receiveAnnouncementEmail // ignore: cast_nullable_to_non_nullable
-as bool,alwaysMarkNsfw: null == alwaysMarkNsfw ? _self.alwaysMarkNsfw : alwaysMarkNsfw // ignore: cast_nullable_to_non_nullable
-as bool,autoSensitive: null == autoSensitive ? _self.autoSensitive : autoSensitive // ignore: cast_nullable_to_non_nullable
-as bool,carefulBot: null == carefulBot ? _self.carefulBot : carefulBot // ignore: cast_nullable_to_non_nullable
-as bool,autoAcceptFollowed: null == autoAcceptFollowed ? _self.autoAcceptFollowed : autoAcceptFollowed // ignore: cast_nullable_to_non_nullable
-as bool,preventAiLearning: freezed == preventAiLearning ? _self.preventAiLearning : preventAiLearning // ignore: cast_nullable_to_non_nullable
-as bool?,noCrawle: null == noCrawle ? _self.noCrawle : noCrawle // ignore: cast_nullable_to_non_nullable
-as bool,isExplorable: null == isExplorable ? _self.isExplorable : isExplorable // ignore: cast_nullable_to_non_nullable
-as bool,isDeleted: null == isDeleted ? _self.isDeleted : isDeleted // ignore: cast_nullable_to_non_nullable
-as bool,twoFactorBackupCodesStock: freezed == twoFactorBackupCodesStock ? _self.twoFactorBackupCodesStock : twoFactorBackupCodesStock // ignore: cast_nullable_to_non_nullable
-as TwoFactorBackupCodesStock?,hideOnlineStatus: null == hideOnlineStatus ? _self.hideOnlineStatus : hideOnlineStatus // ignore: cast_nullable_to_non_nullable
-as bool,hasUnreadSpecifiedNotes: null == hasUnreadSpecifiedNotes ? _self.hasUnreadSpecifiedNotes : hasUnreadSpecifiedNotes // ignore: cast_nullable_to_non_nullable
-as bool,hasUnreadMentions: null == hasUnreadMentions ? _self.hasUnreadMentions : hasUnreadMentions // ignore: cast_nullable_to_non_nullable
-as bool,hasUnreadAnnouncement: null == hasUnreadAnnouncement ? _self.hasUnreadAnnouncement : hasUnreadAnnouncement // ignore: cast_nullable_to_non_nullable
-as bool,hasUnreadAntenna: null == hasUnreadAntenna ? _self.hasUnreadAntenna : hasUnreadAntenna // ignore: cast_nullable_to_non_nullable
-as bool,hasUnreadChannel: null == hasUnreadChannel ? _self.hasUnreadChannel : hasUnreadChannel // ignore: cast_nullable_to_non_nullable
-as bool,hasUnreadChatMessages: freezed == hasUnreadChatMessages ? _self.hasUnreadChatMessages : hasUnreadChatMessages // ignore: cast_nullable_to_non_nullable
-as bool?,hasUnreadNotification: null == hasUnreadNotification ? _self.hasUnreadNotification : hasUnreadNotification // ignore: cast_nullable_to_non_nullable
-as bool,hasPendingReceivedFollowRequest: null == hasPendingReceivedFollowRequest ? _self.hasPendingReceivedFollowRequest : hasPendingReceivedFollowRequest // ignore: cast_nullable_to_non_nullable
-as bool,unreadNotificationsCount: freezed == unreadNotificationsCount ? _self.unreadNotificationsCount : unreadNotificationsCount // ignore: cast_nullable_to_non_nullable
-as int?,unreadAnnouncements: null == unreadAnnouncements ? _self._unreadAnnouncements : unreadAnnouncements // ignore: cast_nullable_to_non_nullable
-as List<AnnouncementsResponse>,mutedWords: freezed == mutedWords ? _self._mutedWords : mutedWords // ignore: cast_nullable_to_non_nullable
-as List<MuteWord>?,hardMutedWords: freezed == hardMutedWords ? _self._hardMutedWords : hardMutedWords // ignore: cast_nullable_to_non_nullable
-as List<MuteWord>?,mutedInstances: null == mutedInstances ? _self._mutedInstances : mutedInstances // ignore: cast_nullable_to_non_nullable
-as List<String>,mutingNotificationTypes: freezed == mutingNotificationTypes ? _self._mutingNotificationTypes : mutingNotificationTypes // ignore: cast_nullable_to_non_nullable
-as List<String>?,notificationRecieveConfig: null == notificationRecieveConfig ? _self.notificationRecieveConfig : notificationRecieveConfig // ignore: cast_nullable_to_non_nullable
-as NotificationRecieveConfigs,emailNotificationTypes: null == emailNotificationTypes ? _self._emailNotificationTypes : emailNotificationTypes // ignore: cast_nullable_to_non_nullable
-as List<String>,achievements: null == achievements ? _self._achievements : achievements // ignore: cast_nullable_to_non_nullable
-as List<UserAchievement>,loggedInDays: freezed == loggedInDays ? _self.loggedInDays : loggedInDays // ignore: cast_nullable_to_non_nullable
-as int?,policies: freezed == policies ? _self.policies : policies // ignore: cast_nullable_to_non_nullable
-as UserPolicies?,
-  ));
-}
-
-/// Create a copy of MeDetailed
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$UserInstanceInfoCopyWith<$Res>? get instance {
-    if (_self.instance == null) {
-    return null;
-  }
-
-  return $UserInstanceInfoCopyWith<$Res>(_self.instance!, (value) {
-    return _then(_self.copyWith(instance: value));
-  });
-}/// Create a copy of MeDetailed
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$NotificationRecieveConfigsCopyWith<$Res> get notificationRecieveConfig {
-  
-  return $NotificationRecieveConfigsCopyWith<$Res>(_self.notificationRecieveConfig, (value) {
-    return _then(_self.copyWith(notificationRecieveConfig: value));
-  });
-}/// Create a copy of MeDetailed
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$UserPoliciesCopyWith<$Res>? get policies {
-    if (_self.policies == null) {
-    return null;
-  }
-
-  return $UserPoliciesCopyWith<$Res>(_self.policies!, (value) {
-    return _then(_self.copyWith(policies: value));
-  });
-}
-}
-
 
 /// @nodoc
 mixin _$UserAvatarDecoration {
 
- String get id; double? get angle; bool get flipH; String get url; double get offsetX; double get offsetY; bool? get showBelow;
+
 /// Create a copy of UserAvatarDecoration
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $UserAvatarDecorationCopyWith<UserAvatarDecoration> get copyWith => _$UserAvatarDecorationCopyWithImpl<UserAvatarDecoration>(this as UserAvatarDecoration, _$identity);
 
-  /// Serializes this UserAvatarDecoration to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -2312,11 +1158,10 @@ extension UserAvatarDecorationPatterns on UserAvatarDecoration {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UserAvatarDecoration value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _UserAvatarDecoration() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -2334,11 +1179,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UserAvatarDecoration value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UserAvatarDecoration():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -2355,11 +1199,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UserAvatarDecoration value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UserAvatarDecoration() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -2376,10 +1219,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  double? angle,  bool flipH,  String url,  double offsetX,  double offsetY,  bool? showBelow)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _UserAvatarDecoration() when $default != null:
-return $default(_that.id,_that.angle,_that.flipH,_that.url,_that.offsetX,_that.offsetY,_that.showBelow);case _:
+case _:
   return orElse();
 
 }
@@ -2397,10 +1239,9 @@ return $default(_that.id,_that.angle,_that.flipH,_that.url,_that.offsetX,_that.o
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  double? angle,  bool flipH,  String url,  double offsetX,  double offsetY,  bool? showBelow)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UserAvatarDecoration():
-return $default(_that.id,_that.angle,_that.flipH,_that.url,_that.offsetX,_that.offsetY,_that.showBelow);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -2417,10 +1258,9 @@ return $default(_that.id,_that.angle,_that.flipH,_that.url,_that.offsetX,_that.o
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  double? angle,  bool flipH,  String url,  double offsetX,  double offsetY,  bool? showBelow)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UserAvatarDecoration() when $default != null:
-return $default(_that.id,_that.angle,_that.flipH,_that.url,_that.offsetX,_that.offsetY,_that.showBelow);case _:
+case _:
   return null;
 
 }
@@ -2428,102 +1268,17 @@ return $default(_that.id,_that.angle,_that.flipH,_that.url,_that.offsetX,_that.o
 
 }
 
-/// @nodoc
-@JsonSerializable()
-
-class _UserAvatarDecoration implements UserAvatarDecoration {
-  const _UserAvatarDecoration({required this.id, this.angle, this.flipH = false, required this.url, this.offsetX = 0.0, this.offsetY = 0.0, this.showBelow});
-  factory _UserAvatarDecoration.fromJson(Map<String, dynamic> json) => _$UserAvatarDecorationFromJson(json);
-
-@override final  String id;
-@override final  double? angle;
-@override@JsonKey() final  bool flipH;
-@override final  String url;
-@override@JsonKey() final  double offsetX;
-@override@JsonKey() final  double offsetY;
-@override final  bool? showBelow;
-
-/// Create a copy of UserAvatarDecoration
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$UserAvatarDecorationCopyWith<_UserAvatarDecoration> get copyWith => __$UserAvatarDecorationCopyWithImpl<_UserAvatarDecoration>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$UserAvatarDecorationToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UserAvatarDecoration&&(identical(other.id, id) || other.id == id)&&(identical(other.angle, angle) || other.angle == angle)&&(identical(other.flipH, flipH) || other.flipH == flipH)&&(identical(other.url, url) || other.url == url)&&(identical(other.offsetX, offsetX) || other.offsetX == offsetX)&&(identical(other.offsetY, offsetY) || other.offsetY == offsetY)&&(identical(other.showBelow, showBelow) || other.showBelow == showBelow));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,id,angle,flipH,url,offsetX,offsetY,showBelow);
-}
-
-@override
-String toString() {
-    return 'UserAvatarDecoration(id: $id, angle: $angle, flipH: $flipH, url: $url, offsetX: $offsetX, offsetY: $offsetY, showBelow: $showBelow)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$UserAvatarDecorationCopyWith<$Res> implements $UserAvatarDecorationCopyWith<$Res> {
-  factory _$UserAvatarDecorationCopyWith(_UserAvatarDecoration value, $Res Function(_UserAvatarDecoration) _then) = __$UserAvatarDecorationCopyWithImpl;
-@override @useResult
-$Res call({
- String id, double? angle, bool flipH, String url, double offsetX, double offsetY, bool? showBelow
-});
-
-
-
-
-}
-/// @nodoc
-class __$UserAvatarDecorationCopyWithImpl<$Res>
-    implements _$UserAvatarDecorationCopyWith<$Res> {
-  __$UserAvatarDecorationCopyWithImpl(this._self, this._then);
-
-  final _UserAvatarDecoration _self;
-  final $Res Function(_UserAvatarDecoration) _then;
-
-/// Create a copy of UserAvatarDecoration
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? angle = freezed,Object? flipH = null,Object? url = null,Object? offsetX = null,Object? offsetY = null,Object? showBelow = freezed,}) {
-  return _then(_UserAvatarDecoration(
-id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as String,angle: freezed == angle ? _self.angle : angle // ignore: cast_nullable_to_non_nullable
-as double?,flipH: null == flipH ? _self.flipH : flipH // ignore: cast_nullable_to_non_nullable
-as bool,url: null == url ? _self.url : url // ignore: cast_nullable_to_non_nullable
-as String,offsetX: null == offsetX ? _self.offsetX : offsetX // ignore: cast_nullable_to_non_nullable
-as double,offsetY: null == offsetY ? _self.offsetY : offsetY // ignore: cast_nullable_to_non_nullable
-as double,showBelow: freezed == showBelow ? _self.showBelow : showBelow // ignore: cast_nullable_to_non_nullable
-as bool?,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$UserInstanceInfo {
 
- String? get name; String? get softwareVersion; String? get softwareName;@NullableUriConverter() Uri? get iconUrl;@NullableUriConverter() Uri? get faviconUrl; String? get themeColor;
+
 /// Create a copy of UserInstanceInfo
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $UserInstanceInfoCopyWith<UserInstanceInfo> get copyWith => _$UserInstanceInfoCopyWithImpl<UserInstanceInfo>(this as UserInstanceInfo, _$identity);
 
-  /// Serializes this UserInstanceInfo to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -2599,11 +1354,10 @@ extension UserInstanceInfoPatterns on UserInstanceInfo {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UserInstanceInfo value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _UserInstanceInfo() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -2621,11 +1375,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UserInstanceInfo value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UserInstanceInfo():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -2642,11 +1395,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UserInstanceInfo value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UserInstanceInfo() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -2663,10 +1415,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? name,  String? softwareVersion,  String? softwareName, @NullableUriConverter()  Uri? iconUrl, @NullableUriConverter()  Uri? faviconUrl,  String? themeColor)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _UserInstanceInfo() when $default != null:
-return $default(_that.name,_that.softwareVersion,_that.softwareName,_that.iconUrl,_that.faviconUrl,_that.themeColor);case _:
+case _:
   return orElse();
 
 }
@@ -2684,10 +1435,9 @@ return $default(_that.name,_that.softwareVersion,_that.softwareName,_that.iconUr
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? name,  String? softwareVersion,  String? softwareName, @NullableUriConverter()  Uri? iconUrl, @NullableUriConverter()  Uri? faviconUrl,  String? themeColor)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UserInstanceInfo():
-return $default(_that.name,_that.softwareVersion,_that.softwareName,_that.iconUrl,_that.faviconUrl,_that.themeColor);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -2704,10 +1454,9 @@ return $default(_that.name,_that.softwareVersion,_that.softwareName,_that.iconUr
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? name,  String? softwareVersion,  String? softwareName, @NullableUriConverter()  Uri? iconUrl, @NullableUriConverter()  Uri? faviconUrl,  String? themeColor)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UserInstanceInfo() when $default != null:
-return $default(_that.name,_that.softwareVersion,_that.softwareName,_that.iconUrl,_that.faviconUrl,_that.themeColor);case _:
+case _:
   return null;
 
 }
@@ -2715,100 +1464,17 @@ return $default(_that.name,_that.softwareVersion,_that.softwareName,_that.iconUr
 
 }
 
-/// @nodoc
-@JsonSerializable()
-
-class _UserInstanceInfo implements UserInstanceInfo {
-  const _UserInstanceInfo({this.name, this.softwareVersion, this.softwareName, @NullableUriConverter() this.iconUrl, @NullableUriConverter() this.faviconUrl, this.themeColor});
-  factory _UserInstanceInfo.fromJson(Map<String, dynamic> json) => _$UserInstanceInfoFromJson(json);
-
-@override final  String? name;
-@override final  String? softwareVersion;
-@override final  String? softwareName;
-@override@NullableUriConverter() final  Uri? iconUrl;
-@override@NullableUriConverter() final  Uri? faviconUrl;
-@override final  String? themeColor;
-
-/// Create a copy of UserInstanceInfo
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$UserInstanceInfoCopyWith<_UserInstanceInfo> get copyWith => __$UserInstanceInfoCopyWithImpl<_UserInstanceInfo>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$UserInstanceInfoToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UserInstanceInfo&&(identical(other.name, name) || other.name == name)&&(identical(other.softwareVersion, softwareVersion) || other.softwareVersion == softwareVersion)&&(identical(other.softwareName, softwareName) || other.softwareName == softwareName)&&(identical(other.iconUrl, iconUrl) || other.iconUrl == iconUrl)&&(identical(other.faviconUrl, faviconUrl) || other.faviconUrl == faviconUrl)&&(identical(other.themeColor, themeColor) || other.themeColor == themeColor));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,name,softwareVersion,softwareName,iconUrl,faviconUrl,themeColor);
-}
-
-@override
-String toString() {
-    return 'UserInstanceInfo(name: $name, softwareVersion: $softwareVersion, softwareName: $softwareName, iconUrl: $iconUrl, faviconUrl: $faviconUrl, themeColor: $themeColor)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$UserInstanceInfoCopyWith<$Res> implements $UserInstanceInfoCopyWith<$Res> {
-  factory _$UserInstanceInfoCopyWith(_UserInstanceInfo value, $Res Function(_UserInstanceInfo) _then) = __$UserInstanceInfoCopyWithImpl;
-@override @useResult
-$Res call({
- String? name, String? softwareVersion, String? softwareName,@NullableUriConverter() Uri? iconUrl,@NullableUriConverter() Uri? faviconUrl, String? themeColor
-});
-
-
-
-
-}
-/// @nodoc
-class __$UserInstanceInfoCopyWithImpl<$Res>
-    implements _$UserInstanceInfoCopyWith<$Res> {
-  __$UserInstanceInfoCopyWithImpl(this._self, this._then);
-
-  final _UserInstanceInfo _self;
-  final $Res Function(_UserInstanceInfo) _then;
-
-/// Create a copy of UserInstanceInfo
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? name = freezed,Object? softwareVersion = freezed,Object? softwareName = freezed,Object? iconUrl = freezed,Object? faviconUrl = freezed,Object? themeColor = freezed,}) {
-  return _then(_UserInstanceInfo(
-name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String?,softwareVersion: freezed == softwareVersion ? _self.softwareVersion : softwareVersion // ignore: cast_nullable_to_non_nullable
-as String?,softwareName: freezed == softwareName ? _self.softwareName : softwareName // ignore: cast_nullable_to_non_nullable
-as String?,iconUrl: freezed == iconUrl ? _self.iconUrl : iconUrl // ignore: cast_nullable_to_non_nullable
-as Uri?,faviconUrl: freezed == faviconUrl ? _self.faviconUrl : faviconUrl // ignore: cast_nullable_to_non_nullable
-as Uri?,themeColor: freezed == themeColor ? _self.themeColor : themeColor // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$UserBadgeRole {
 
- String get name;@NullableUriConverter() Uri? get iconUrl;
+
 /// Create a copy of UserBadgeRole
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $UserBadgeRoleCopyWith<UserBadgeRole> get copyWith => _$UserBadgeRoleCopyWithImpl<UserBadgeRole>(this as UserBadgeRole, _$identity);
 
-  /// Serializes this UserBadgeRole to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -2880,11 +1546,10 @@ extension UserBadgeRolePatterns on UserBadgeRole {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UserBadgeRole value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _UserBadgeRole() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -2902,11 +1567,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UserBadgeRole value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UserBadgeRole():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -2923,11 +1587,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UserBadgeRole value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UserBadgeRole() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -2944,10 +1607,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String name, @NullableUriConverter()  Uri? iconUrl)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _UserBadgeRole() when $default != null:
-return $default(_that.name,_that.iconUrl);case _:
+case _:
   return orElse();
 
 }
@@ -2965,10 +1627,9 @@ return $default(_that.name,_that.iconUrl);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String name, @NullableUriConverter()  Uri? iconUrl)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UserBadgeRole():
-return $default(_that.name,_that.iconUrl);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -2985,10 +1646,9 @@ return $default(_that.name,_that.iconUrl);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String name, @NullableUriConverter()  Uri? iconUrl)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UserBadgeRole() when $default != null:
-return $default(_that.name,_that.iconUrl);case _:
+case _:
   return null;
 
 }
@@ -2996,92 +1656,17 @@ return $default(_that.name,_that.iconUrl);case _:
 
 }
 
-/// @nodoc
-@JsonSerializable()
-
-class _UserBadgeRole implements UserBadgeRole {
-  const _UserBadgeRole({required this.name, @NullableUriConverter() required this.iconUrl});
-  factory _UserBadgeRole.fromJson(Map<String, dynamic> json) => _$UserBadgeRoleFromJson(json);
-
-@override final  String name;
-@override@NullableUriConverter() final  Uri? iconUrl;
-
-/// Create a copy of UserBadgeRole
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$UserBadgeRoleCopyWith<_UserBadgeRole> get copyWith => __$UserBadgeRoleCopyWithImpl<_UserBadgeRole>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$UserBadgeRoleToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UserBadgeRole&&(identical(other.name, name) || other.name == name)&&(identical(other.iconUrl, iconUrl) || other.iconUrl == iconUrl));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,name,iconUrl);
-}
-
-@override
-String toString() {
-    return 'UserBadgeRole(name: $name, iconUrl: $iconUrl)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$UserBadgeRoleCopyWith<$Res> implements $UserBadgeRoleCopyWith<$Res> {
-  factory _$UserBadgeRoleCopyWith(_UserBadgeRole value, $Res Function(_UserBadgeRole) _then) = __$UserBadgeRoleCopyWithImpl;
-@override @useResult
-$Res call({
- String name,@NullableUriConverter() Uri? iconUrl
-});
-
-
-
-
-}
-/// @nodoc
-class __$UserBadgeRoleCopyWithImpl<$Res>
-    implements _$UserBadgeRoleCopyWith<$Res> {
-  __$UserBadgeRoleCopyWithImpl(this._self, this._then);
-
-  final _UserBadgeRole _self;
-  final $Res Function(_UserBadgeRole) _then;
-
-/// Create a copy of UserBadgeRole
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? name = null,Object? iconUrl = freezed,}) {
-  return _then(_UserBadgeRole(
-name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String,iconUrl: freezed == iconUrl ? _self.iconUrl : iconUrl // ignore: cast_nullable_to_non_nullable
-as Uri?,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$UserRole {
 
- String get id; String get name; String? get color;@NullableUriConverter() Uri? get iconUrl; String? get description; bool get isModerator; bool get isAdministrator;
+
 /// Create a copy of UserRole
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $UserRoleCopyWith<UserRole> get copyWith => _$UserRoleCopyWithImpl<UserRole>(this as UserRole, _$identity);
 
-  /// Serializes this UserRole to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -3158,11 +1743,10 @@ extension UserRolePatterns on UserRole {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UserRole value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _UserRole() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -3180,11 +1764,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UserRole value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UserRole():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -3201,11 +1784,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UserRole value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UserRole() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -3222,10 +1804,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String name,  String? color, @NullableUriConverter()  Uri? iconUrl,  String? description,  bool isModerator,  bool isAdministrator)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _UserRole() when $default != null:
-return $default(_that.id,_that.name,_that.color,_that.iconUrl,_that.description,_that.isModerator,_that.isAdministrator);case _:
+case _:
   return orElse();
 
 }
@@ -3243,10 +1824,9 @@ return $default(_that.id,_that.name,_that.color,_that.iconUrl,_that.description,
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String name,  String? color, @NullableUriConverter()  Uri? iconUrl,  String? description,  bool isModerator,  bool isAdministrator)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UserRole():
-return $default(_that.id,_that.name,_that.color,_that.iconUrl,_that.description,_that.isModerator,_that.isAdministrator);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -3263,10 +1843,9 @@ return $default(_that.id,_that.name,_that.color,_that.iconUrl,_that.description,
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String name,  String? color, @NullableUriConverter()  Uri? iconUrl,  String? description,  bool isModerator,  bool isAdministrator)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UserRole() when $default != null:
-return $default(_that.id,_that.name,_that.color,_that.iconUrl,_that.description,_that.isModerator,_that.isAdministrator);case _:
+case _:
   return null;
 
 }
@@ -3274,102 +1853,17 @@ return $default(_that.id,_that.name,_that.color,_that.iconUrl,_that.description,
 
 }
 
-/// @nodoc
-@JsonSerializable()
-
-class _UserRole implements UserRole {
-  const _UserRole({required this.id, required this.name, this.color, @NullableUriConverter() this.iconUrl, this.description, required this.isModerator, required this.isAdministrator});
-  factory _UserRole.fromJson(Map<String, dynamic> json) => _$UserRoleFromJson(json);
-
-@override final  String id;
-@override final  String name;
-@override final  String? color;
-@override@NullableUriConverter() final  Uri? iconUrl;
-@override final  String? description;
-@override final  bool isModerator;
-@override final  bool isAdministrator;
-
-/// Create a copy of UserRole
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$UserRoleCopyWith<_UserRole> get copyWith => __$UserRoleCopyWithImpl<_UserRole>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$UserRoleToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UserRole&&(identical(other.id, id) || other.id == id)&&(identical(other.name, name) || other.name == name)&&(identical(other.color, color) || other.color == color)&&(identical(other.iconUrl, iconUrl) || other.iconUrl == iconUrl)&&(identical(other.description, description) || other.description == description)&&(identical(other.isModerator, isModerator) || other.isModerator == isModerator)&&(identical(other.isAdministrator, isAdministrator) || other.isAdministrator == isAdministrator));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,id,name,color,iconUrl,description,isModerator,isAdministrator);
-}
-
-@override
-String toString() {
-    return 'UserRole(id: $id, name: $name, color: $color, iconUrl: $iconUrl, description: $description, isModerator: $isModerator, isAdministrator: $isAdministrator)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$UserRoleCopyWith<$Res> implements $UserRoleCopyWith<$Res> {
-  factory _$UserRoleCopyWith(_UserRole value, $Res Function(_UserRole) _then) = __$UserRoleCopyWithImpl;
-@override @useResult
-$Res call({
- String id, String name, String? color,@NullableUriConverter() Uri? iconUrl, String? description, bool isModerator, bool isAdministrator
-});
-
-
-
-
-}
-/// @nodoc
-class __$UserRoleCopyWithImpl<$Res>
-    implements _$UserRoleCopyWith<$Res> {
-  __$UserRoleCopyWithImpl(this._self, this._then);
-
-  final _UserRole _self;
-  final $Res Function(_UserRole) _then;
-
-/// Create a copy of UserRole
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? name = null,Object? color = freezed,Object? iconUrl = freezed,Object? description = freezed,Object? isModerator = null,Object? isAdministrator = null,}) {
-  return _then(_UserRole(
-id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as String,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String,color: freezed == color ? _self.color : color // ignore: cast_nullable_to_non_nullable
-as String?,iconUrl: freezed == iconUrl ? _self.iconUrl : iconUrl // ignore: cast_nullable_to_non_nullable
-as Uri?,description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
-as String?,isModerator: null == isModerator ? _self.isModerator : isModerator // ignore: cast_nullable_to_non_nullable
-as bool,isAdministrator: null == isAdministrator ? _self.isAdministrator : isAdministrator // ignore: cast_nullable_to_non_nullable
-as bool,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$UserAchievement {
 
- String get name;@EpocTimeDateTimeConverter() DateTime get unlockedAt;
+
 /// Create a copy of UserAchievement
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $UserAchievementCopyWith<UserAchievement> get copyWith => _$UserAchievementCopyWithImpl<UserAchievement>(this as UserAchievement, _$identity);
 
-  /// Serializes this UserAchievement to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -3441,11 +1935,10 @@ extension UserAchievementPatterns on UserAchievement {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UserAchievement value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _UserAchievement() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -3463,11 +1956,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UserAchievement value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UserAchievement():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -3484,11 +1976,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UserAchievement value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UserAchievement() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -3505,10 +1996,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String name, @EpocTimeDateTimeConverter()  DateTime unlockedAt)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _UserAchievement() when $default != null:
-return $default(_that.name,_that.unlockedAt);case _:
+case _:
   return orElse();
 
 }
@@ -3526,10 +2016,9 @@ return $default(_that.name,_that.unlockedAt);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String name, @EpocTimeDateTimeConverter()  DateTime unlockedAt)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UserAchievement():
-return $default(_that.name,_that.unlockedAt);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -3546,10 +2035,9 @@ return $default(_that.name,_that.unlockedAt);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String name, @EpocTimeDateTimeConverter()  DateTime unlockedAt)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UserAchievement() when $default != null:
-return $default(_that.name,_that.unlockedAt);case _:
+case _:
   return null;
 
 }
@@ -3557,92 +2045,17 @@ return $default(_that.name,_that.unlockedAt);case _:
 
 }
 
-/// @nodoc
-@JsonSerializable()
-
-class _UserAchievement implements UserAchievement {
-  const _UserAchievement({required this.name, @EpocTimeDateTimeConverter() required this.unlockedAt});
-  factory _UserAchievement.fromJson(Map<String, dynamic> json) => _$UserAchievementFromJson(json);
-
-@override final  String name;
-@override@EpocTimeDateTimeConverter() final  DateTime unlockedAt;
-
-/// Create a copy of UserAchievement
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$UserAchievementCopyWith<_UserAchievement> get copyWith => __$UserAchievementCopyWithImpl<_UserAchievement>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$UserAchievementToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UserAchievement&&(identical(other.name, name) || other.name == name)&&(identical(other.unlockedAt, unlockedAt) || other.unlockedAt == unlockedAt));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,name,unlockedAt);
-}
-
-@override
-String toString() {
-    return 'UserAchievement(name: $name, unlockedAt: $unlockedAt)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$UserAchievementCopyWith<$Res> implements $UserAchievementCopyWith<$Res> {
-  factory _$UserAchievementCopyWith(_UserAchievement value, $Res Function(_UserAchievement) _then) = __$UserAchievementCopyWithImpl;
-@override @useResult
-$Res call({
- String name,@EpocTimeDateTimeConverter() DateTime unlockedAt
-});
-
-
-
-
-}
-/// @nodoc
-class __$UserAchievementCopyWithImpl<$Res>
-    implements _$UserAchievementCopyWith<$Res> {
-  __$UserAchievementCopyWithImpl(this._self, this._then);
-
-  final _UserAchievement _self;
-  final $Res Function(_UserAchievement) _then;
-
-/// Create a copy of UserAchievement
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? name = null,Object? unlockedAt = null,}) {
-  return _then(_UserAchievement(
-name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String,unlockedAt: null == unlockedAt ? _self.unlockedAt : unlockedAt // ignore: cast_nullable_to_non_nullable
-as DateTime,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$UserPolicies {
 
- bool? get gtlAvailable; bool? get ltlAvailable; bool? get canPublicNote; int? get mentionLimit; bool? get canEditNote; bool? get canScheduleNote; int? get scheduleNoteLimit; int? get scheduleNoteMaxDays; bool? get canInvite; int? get inviteLimit; int? get inviteLimitCycle; int? get inviteExpirationTime; bool? get canManageCustomEmojis; bool? get canSearchNotes; bool? get canUseTranslator; bool? get canHideAds; int? get driveCapacityMb; int? get maxFileSizeMb; List<String>? get uploadableFileTypes; bool? get alwaysMarkNsfw; bool? get canUpdateBioMedia; int? get pinLimit; int? get antennaLimit; int? get wordMuteLimit; int? get webhookLimit; int? get clipLimit; int? get noteEachClipsLimit; int? get userListLimit; int? get userEachUserListsLimit; int? get rateLimitFactor; int? get avatarDecorationLimit; bool? get canImportAntennas; bool? get canImportBlocking; bool? get canImportFollowing; bool? get canImportMuting; bool? get canImportUserLists;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) ChatAvailability? get chatAvailability; int? get noteDraftLimit; int? get scheduledNoteLimit; bool? get watermarkAvailable; int? get mutualLinkSectionLimit; int? get mutualLinkLimit; int? get scheduleNoteMax;
+
 /// Create a copy of UserPolicies
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $UserPoliciesCopyWith<UserPolicies> get copyWith => _$UserPoliciesCopyWithImpl<UserPolicies>(this as UserPolicies, _$identity);
 
-  /// Serializes this UserPolicies to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -3755,11 +2168,10 @@ extension UserPoliciesPatterns on UserPolicies {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UserPolicies value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _UserPolicies() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -3777,11 +2189,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UserPolicies value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UserPolicies():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -3798,11 +2209,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UserPolicies value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UserPolicies() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -3819,10 +2229,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( bool? gtlAvailable,  bool? ltlAvailable,  bool? canPublicNote,  int? mentionLimit,  bool? canEditNote,  bool? canScheduleNote,  int? scheduleNoteLimit,  int? scheduleNoteMaxDays,  bool? canInvite,  int? inviteLimit,  int? inviteLimitCycle,  int? inviteExpirationTime,  bool? canManageCustomEmojis,  bool? canSearchNotes,  bool? canUseTranslator,  bool? canHideAds,  int? driveCapacityMb,  int? maxFileSizeMb,  List<String>? uploadableFileTypes,  bool? alwaysMarkNsfw,  bool? canUpdateBioMedia,  int? pinLimit,  int? antennaLimit,  int? wordMuteLimit,  int? webhookLimit,  int? clipLimit,  int? noteEachClipsLimit,  int? userListLimit,  int? userEachUserListsLimit,  int? rateLimitFactor,  int? avatarDecorationLimit,  bool? canImportAntennas,  bool? canImportBlocking,  bool? canImportFollowing,  bool? canImportMuting,  bool? canImportUserLists, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChatAvailability? chatAvailability,  int? noteDraftLimit,  int? scheduledNoteLimit,  bool? watermarkAvailable,  int? mutualLinkSectionLimit,  int? mutualLinkLimit,  int? scheduleNoteMax)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _UserPolicies() when $default != null:
-return $default(_that.gtlAvailable,_that.ltlAvailable,_that.canPublicNote,_that.mentionLimit,_that.canEditNote,_that.canScheduleNote,_that.scheduleNoteLimit,_that.scheduleNoteMaxDays,_that.canInvite,_that.inviteLimit,_that.inviteLimitCycle,_that.inviteExpirationTime,_that.canManageCustomEmojis,_that.canSearchNotes,_that.canUseTranslator,_that.canHideAds,_that.driveCapacityMb,_that.maxFileSizeMb,_that.uploadableFileTypes,_that.alwaysMarkNsfw,_that.canUpdateBioMedia,_that.pinLimit,_that.antennaLimit,_that.wordMuteLimit,_that.webhookLimit,_that.clipLimit,_that.noteEachClipsLimit,_that.userListLimit,_that.userEachUserListsLimit,_that.rateLimitFactor,_that.avatarDecorationLimit,_that.canImportAntennas,_that.canImportBlocking,_that.canImportFollowing,_that.canImportMuting,_that.canImportUserLists,_that.chatAvailability,_that.noteDraftLimit,_that.scheduledNoteLimit,_that.watermarkAvailable,_that.mutualLinkSectionLimit,_that.mutualLinkLimit,_that.scheduleNoteMax);case _:
+case _:
   return orElse();
 
 }
@@ -3840,10 +2249,9 @@ return $default(_that.gtlAvailable,_that.ltlAvailable,_that.canPublicNote,_that.
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( bool? gtlAvailable,  bool? ltlAvailable,  bool? canPublicNote,  int? mentionLimit,  bool? canEditNote,  bool? canScheduleNote,  int? scheduleNoteLimit,  int? scheduleNoteMaxDays,  bool? canInvite,  int? inviteLimit,  int? inviteLimitCycle,  int? inviteExpirationTime,  bool? canManageCustomEmojis,  bool? canSearchNotes,  bool? canUseTranslator,  bool? canHideAds,  int? driveCapacityMb,  int? maxFileSizeMb,  List<String>? uploadableFileTypes,  bool? alwaysMarkNsfw,  bool? canUpdateBioMedia,  int? pinLimit,  int? antennaLimit,  int? wordMuteLimit,  int? webhookLimit,  int? clipLimit,  int? noteEachClipsLimit,  int? userListLimit,  int? userEachUserListsLimit,  int? rateLimitFactor,  int? avatarDecorationLimit,  bool? canImportAntennas,  bool? canImportBlocking,  bool? canImportFollowing,  bool? canImportMuting,  bool? canImportUserLists, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChatAvailability? chatAvailability,  int? noteDraftLimit,  int? scheduledNoteLimit,  bool? watermarkAvailable,  int? mutualLinkSectionLimit,  int? mutualLinkLimit,  int? scheduleNoteMax)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UserPolicies():
-return $default(_that.gtlAvailable,_that.ltlAvailable,_that.canPublicNote,_that.mentionLimit,_that.canEditNote,_that.canScheduleNote,_that.scheduleNoteLimit,_that.scheduleNoteMaxDays,_that.canInvite,_that.inviteLimit,_that.inviteLimitCycle,_that.inviteExpirationTime,_that.canManageCustomEmojis,_that.canSearchNotes,_that.canUseTranslator,_that.canHideAds,_that.driveCapacityMb,_that.maxFileSizeMb,_that.uploadableFileTypes,_that.alwaysMarkNsfw,_that.canUpdateBioMedia,_that.pinLimit,_that.antennaLimit,_that.wordMuteLimit,_that.webhookLimit,_that.clipLimit,_that.noteEachClipsLimit,_that.userListLimit,_that.userEachUserListsLimit,_that.rateLimitFactor,_that.avatarDecorationLimit,_that.canImportAntennas,_that.canImportBlocking,_that.canImportFollowing,_that.canImportMuting,_that.canImportUserLists,_that.chatAvailability,_that.noteDraftLimit,_that.scheduledNoteLimit,_that.watermarkAvailable,_that.mutualLinkSectionLimit,_that.mutualLinkLimit,_that.scheduleNoteMax);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -3860,10 +2268,9 @@ return $default(_that.gtlAvailable,_that.ltlAvailable,_that.canPublicNote,_that.
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( bool? gtlAvailable,  bool? ltlAvailable,  bool? canPublicNote,  int? mentionLimit,  bool? canEditNote,  bool? canScheduleNote,  int? scheduleNoteLimit,  int? scheduleNoteMaxDays,  bool? canInvite,  int? inviteLimit,  int? inviteLimitCycle,  int? inviteExpirationTime,  bool? canManageCustomEmojis,  bool? canSearchNotes,  bool? canUseTranslator,  bool? canHideAds,  int? driveCapacityMb,  int? maxFileSizeMb,  List<String>? uploadableFileTypes,  bool? alwaysMarkNsfw,  bool? canUpdateBioMedia,  int? pinLimit,  int? antennaLimit,  int? wordMuteLimit,  int? webhookLimit,  int? clipLimit,  int? noteEachClipsLimit,  int? userListLimit,  int? userEachUserListsLimit,  int? rateLimitFactor,  int? avatarDecorationLimit,  bool? canImportAntennas,  bool? canImportBlocking,  bool? canImportFollowing,  bool? canImportMuting,  bool? canImportUserLists, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  ChatAvailability? chatAvailability,  int? noteDraftLimit,  int? scheduledNoteLimit,  bool? watermarkAvailable,  int? mutualLinkSectionLimit,  int? mutualLinkLimit,  int? scheduleNoteMax)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UserPolicies() when $default != null:
-return $default(_that.gtlAvailable,_that.ltlAvailable,_that.canPublicNote,_that.mentionLimit,_that.canEditNote,_that.canScheduleNote,_that.scheduleNoteLimit,_that.scheduleNoteMaxDays,_that.canInvite,_that.inviteLimit,_that.inviteLimitCycle,_that.inviteExpirationTime,_that.canManageCustomEmojis,_that.canSearchNotes,_that.canUseTranslator,_that.canHideAds,_that.driveCapacityMb,_that.maxFileSizeMb,_that.uploadableFileTypes,_that.alwaysMarkNsfw,_that.canUpdateBioMedia,_that.pinLimit,_that.antennaLimit,_that.wordMuteLimit,_that.webhookLimit,_that.clipLimit,_that.noteEachClipsLimit,_that.userListLimit,_that.userEachUserListsLimit,_that.rateLimitFactor,_that.avatarDecorationLimit,_that.canImportAntennas,_that.canImportBlocking,_that.canImportFollowing,_that.canImportMuting,_that.canImportUserLists,_that.chatAvailability,_that.noteDraftLimit,_that.scheduledNoteLimit,_that.watermarkAvailable,_that.mutualLinkSectionLimit,_that.mutualLinkLimit,_that.scheduleNoteMax);case _:
+case _:
   return null;
 
 }
@@ -3871,182 +2278,17 @@ return $default(_that.gtlAvailable,_that.ltlAvailable,_that.canPublicNote,_that.
 
 }
 
-/// @nodoc
-@JsonSerializable()
-
-class _UserPolicies implements UserPolicies {
-  const _UserPolicies({this.gtlAvailable, this.ltlAvailable, this.canPublicNote, this.mentionLimit, this.canEditNote, this.canScheduleNote, this.scheduleNoteLimit, this.scheduleNoteMaxDays, this.canInvite, this.inviteLimit, this.inviteLimitCycle, this.inviteExpirationTime, this.canManageCustomEmojis, this.canSearchNotes, this.canUseTranslator, this.canHideAds, this.driveCapacityMb, this.maxFileSizeMb,  List<String>? uploadableFileTypes, this.alwaysMarkNsfw, this.canUpdateBioMedia, this.pinLimit, this.antennaLimit, this.wordMuteLimit, this.webhookLimit, this.clipLimit, this.noteEachClipsLimit, this.userListLimit, this.userEachUserListsLimit, this.rateLimitFactor, this.avatarDecorationLimit, this.canImportAntennas, this.canImportBlocking, this.canImportFollowing, this.canImportMuting, this.canImportUserLists, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.chatAvailability, this.noteDraftLimit, this.scheduledNoteLimit, this.watermarkAvailable, this.mutualLinkSectionLimit, this.mutualLinkLimit, this.scheduleNoteMax}): _uploadableFileTypes = uploadableFileTypes;
-  factory _UserPolicies.fromJson(Map<String, dynamic> json) => _$UserPoliciesFromJson(json);
-
-@override final  bool? gtlAvailable;
-@override final  bool? ltlAvailable;
-@override final  bool? canPublicNote;
-@override final  int? mentionLimit;
-@override final  bool? canEditNote;
-@override final  bool? canScheduleNote;
-@override final  int? scheduleNoteLimit;
-@override final  int? scheduleNoteMaxDays;
-@override final  bool? canInvite;
-@override final  int? inviteLimit;
-@override final  int? inviteLimitCycle;
-@override final  int? inviteExpirationTime;
-@override final  bool? canManageCustomEmojis;
-@override final  bool? canSearchNotes;
-@override final  bool? canUseTranslator;
-@override final  bool? canHideAds;
-@override final  int? driveCapacityMb;
-@override final  int? maxFileSizeMb;
- final  List<String>? _uploadableFileTypes;
-@override List<String>? get uploadableFileTypes {
-  final value = _uploadableFileTypes;
-  if (value == null) return null;
-  if (_uploadableFileTypes is EqualUnmodifiableListView) return _uploadableFileTypes;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
-@override final  bool? alwaysMarkNsfw;
-@override final  bool? canUpdateBioMedia;
-@override final  int? pinLimit;
-@override final  int? antennaLimit;
-@override final  int? wordMuteLimit;
-@override final  int? webhookLimit;
-@override final  int? clipLimit;
-@override final  int? noteEachClipsLimit;
-@override final  int? userListLimit;
-@override final  int? userEachUserListsLimit;
-@override final  int? rateLimitFactor;
-@override final  int? avatarDecorationLimit;
-@override final  bool? canImportAntennas;
-@override final  bool? canImportBlocking;
-@override final  bool? canImportFollowing;
-@override final  bool? canImportMuting;
-@override final  bool? canImportUserLists;
-@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  ChatAvailability? chatAvailability;
-@override final  int? noteDraftLimit;
-@override final  int? scheduledNoteLimit;
-@override final  bool? watermarkAvailable;
-@override final  int? mutualLinkSectionLimit;
-@override final  int? mutualLinkLimit;
-@override final  int? scheduleNoteMax;
-
-/// Create a copy of UserPolicies
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$UserPoliciesCopyWith<_UserPolicies> get copyWith => __$UserPoliciesCopyWithImpl<_UserPolicies>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$UserPoliciesToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UserPolicies&&(identical(other.gtlAvailable, gtlAvailable) || other.gtlAvailable == gtlAvailable)&&(identical(other.ltlAvailable, ltlAvailable) || other.ltlAvailable == ltlAvailable)&&(identical(other.canPublicNote, canPublicNote) || other.canPublicNote == canPublicNote)&&(identical(other.mentionLimit, mentionLimit) || other.mentionLimit == mentionLimit)&&(identical(other.canEditNote, canEditNote) || other.canEditNote == canEditNote)&&(identical(other.canScheduleNote, canScheduleNote) || other.canScheduleNote == canScheduleNote)&&(identical(other.scheduleNoteLimit, scheduleNoteLimit) || other.scheduleNoteLimit == scheduleNoteLimit)&&(identical(other.scheduleNoteMaxDays, scheduleNoteMaxDays) || other.scheduleNoteMaxDays == scheduleNoteMaxDays)&&(identical(other.canInvite, canInvite) || other.canInvite == canInvite)&&(identical(other.inviteLimit, inviteLimit) || other.inviteLimit == inviteLimit)&&(identical(other.inviteLimitCycle, inviteLimitCycle) || other.inviteLimitCycle == inviteLimitCycle)&&(identical(other.inviteExpirationTime, inviteExpirationTime) || other.inviteExpirationTime == inviteExpirationTime)&&(identical(other.canManageCustomEmojis, canManageCustomEmojis) || other.canManageCustomEmojis == canManageCustomEmojis)&&(identical(other.canSearchNotes, canSearchNotes) || other.canSearchNotes == canSearchNotes)&&(identical(other.canUseTranslator, canUseTranslator) || other.canUseTranslator == canUseTranslator)&&(identical(other.canHideAds, canHideAds) || other.canHideAds == canHideAds)&&(identical(other.driveCapacityMb, driveCapacityMb) || other.driveCapacityMb == driveCapacityMb)&&(identical(other.maxFileSizeMb, maxFileSizeMb) || other.maxFileSizeMb == maxFileSizeMb)&&const DeepCollectionEquality().equals(other.uploadableFileTypes, _uploadableFileTypes)&&(identical(other.alwaysMarkNsfw, alwaysMarkNsfw) || other.alwaysMarkNsfw == alwaysMarkNsfw)&&(identical(other.canUpdateBioMedia, canUpdateBioMedia) || other.canUpdateBioMedia == canUpdateBioMedia)&&(identical(other.pinLimit, pinLimit) || other.pinLimit == pinLimit)&&(identical(other.antennaLimit, antennaLimit) || other.antennaLimit == antennaLimit)&&(identical(other.wordMuteLimit, wordMuteLimit) || other.wordMuteLimit == wordMuteLimit)&&(identical(other.webhookLimit, webhookLimit) || other.webhookLimit == webhookLimit)&&(identical(other.clipLimit, clipLimit) || other.clipLimit == clipLimit)&&(identical(other.noteEachClipsLimit, noteEachClipsLimit) || other.noteEachClipsLimit == noteEachClipsLimit)&&(identical(other.userListLimit, userListLimit) || other.userListLimit == userListLimit)&&(identical(other.userEachUserListsLimit, userEachUserListsLimit) || other.userEachUserListsLimit == userEachUserListsLimit)&&(identical(other.rateLimitFactor, rateLimitFactor) || other.rateLimitFactor == rateLimitFactor)&&(identical(other.avatarDecorationLimit, avatarDecorationLimit) || other.avatarDecorationLimit == avatarDecorationLimit)&&(identical(other.canImportAntennas, canImportAntennas) || other.canImportAntennas == canImportAntennas)&&(identical(other.canImportBlocking, canImportBlocking) || other.canImportBlocking == canImportBlocking)&&(identical(other.canImportFollowing, canImportFollowing) || other.canImportFollowing == canImportFollowing)&&(identical(other.canImportMuting, canImportMuting) || other.canImportMuting == canImportMuting)&&(identical(other.canImportUserLists, canImportUserLists) || other.canImportUserLists == canImportUserLists)&&(identical(other.chatAvailability, chatAvailability) || other.chatAvailability == chatAvailability)&&(identical(other.noteDraftLimit, noteDraftLimit) || other.noteDraftLimit == noteDraftLimit)&&(identical(other.scheduledNoteLimit, scheduledNoteLimit) || other.scheduledNoteLimit == scheduledNoteLimit)&&(identical(other.watermarkAvailable, watermarkAvailable) || other.watermarkAvailable == watermarkAvailable)&&(identical(other.mutualLinkSectionLimit, mutualLinkSectionLimit) || other.mutualLinkSectionLimit == mutualLinkSectionLimit)&&(identical(other.mutualLinkLimit, mutualLinkLimit) || other.mutualLinkLimit == mutualLinkLimit)&&(identical(other.scheduleNoteMax, scheduleNoteMax) || other.scheduleNoteMax == scheduleNoteMax));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hashAll([runtimeType,gtlAvailable,ltlAvailable,canPublicNote,mentionLimit,canEditNote,canScheduleNote,scheduleNoteLimit,scheduleNoteMaxDays,canInvite,inviteLimit,inviteLimitCycle,inviteExpirationTime,canManageCustomEmojis,canSearchNotes,canUseTranslator,canHideAds,driveCapacityMb,maxFileSizeMb,const DeepCollectionEquality().hash(_uploadableFileTypes),alwaysMarkNsfw,canUpdateBioMedia,pinLimit,antennaLimit,wordMuteLimit,webhookLimit,clipLimit,noteEachClipsLimit,userListLimit,userEachUserListsLimit,rateLimitFactor,avatarDecorationLimit,canImportAntennas,canImportBlocking,canImportFollowing,canImportMuting,canImportUserLists,chatAvailability,noteDraftLimit,scheduledNoteLimit,watermarkAvailable,mutualLinkSectionLimit,mutualLinkLimit,scheduleNoteMax]);
-}
-
-@override
-String toString() {
-    return 'UserPolicies(gtlAvailable: $gtlAvailable, ltlAvailable: $ltlAvailable, canPublicNote: $canPublicNote, mentionLimit: $mentionLimit, canEditNote: $canEditNote, canScheduleNote: $canScheduleNote, scheduleNoteLimit: $scheduleNoteLimit, scheduleNoteMaxDays: $scheduleNoteMaxDays, canInvite: $canInvite, inviteLimit: $inviteLimit, inviteLimitCycle: $inviteLimitCycle, inviteExpirationTime: $inviteExpirationTime, canManageCustomEmojis: $canManageCustomEmojis, canSearchNotes: $canSearchNotes, canUseTranslator: $canUseTranslator, canHideAds: $canHideAds, driveCapacityMb: $driveCapacityMb, maxFileSizeMb: $maxFileSizeMb, uploadableFileTypes: $uploadableFileTypes, alwaysMarkNsfw: $alwaysMarkNsfw, canUpdateBioMedia: $canUpdateBioMedia, pinLimit: $pinLimit, antennaLimit: $antennaLimit, wordMuteLimit: $wordMuteLimit, webhookLimit: $webhookLimit, clipLimit: $clipLimit, noteEachClipsLimit: $noteEachClipsLimit, userListLimit: $userListLimit, userEachUserListsLimit: $userEachUserListsLimit, rateLimitFactor: $rateLimitFactor, avatarDecorationLimit: $avatarDecorationLimit, canImportAntennas: $canImportAntennas, canImportBlocking: $canImportBlocking, canImportFollowing: $canImportFollowing, canImportMuting: $canImportMuting, canImportUserLists: $canImportUserLists, chatAvailability: $chatAvailability, noteDraftLimit: $noteDraftLimit, scheduledNoteLimit: $scheduledNoteLimit, watermarkAvailable: $watermarkAvailable, mutualLinkSectionLimit: $mutualLinkSectionLimit, mutualLinkLimit: $mutualLinkLimit, scheduleNoteMax: $scheduleNoteMax)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$UserPoliciesCopyWith<$Res> implements $UserPoliciesCopyWith<$Res> {
-  factory _$UserPoliciesCopyWith(_UserPolicies value, $Res Function(_UserPolicies) _then) = __$UserPoliciesCopyWithImpl;
-@override @useResult
-$Res call({
- bool? gtlAvailable, bool? ltlAvailable, bool? canPublicNote, int? mentionLimit, bool? canEditNote, bool? canScheduleNote, int? scheduleNoteLimit, int? scheduleNoteMaxDays, bool? canInvite, int? inviteLimit, int? inviteLimitCycle, int? inviteExpirationTime, bool? canManageCustomEmojis, bool? canSearchNotes, bool? canUseTranslator, bool? canHideAds, int? driveCapacityMb, int? maxFileSizeMb, List<String>? uploadableFileTypes, bool? alwaysMarkNsfw, bool? canUpdateBioMedia, int? pinLimit, int? antennaLimit, int? wordMuteLimit, int? webhookLimit, int? clipLimit, int? noteEachClipsLimit, int? userListLimit, int? userEachUserListsLimit, int? rateLimitFactor, int? avatarDecorationLimit, bool? canImportAntennas, bool? canImportBlocking, bool? canImportFollowing, bool? canImportMuting, bool? canImportUserLists,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) ChatAvailability? chatAvailability, int? noteDraftLimit, int? scheduledNoteLimit, bool? watermarkAvailable, int? mutualLinkSectionLimit, int? mutualLinkLimit, int? scheduleNoteMax
-});
-
-
-
-
-}
-/// @nodoc
-class __$UserPoliciesCopyWithImpl<$Res>
-    implements _$UserPoliciesCopyWith<$Res> {
-  __$UserPoliciesCopyWithImpl(this._self, this._then);
-
-  final _UserPolicies _self;
-  final $Res Function(_UserPolicies) _then;
-
-/// Create a copy of UserPolicies
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? gtlAvailable = freezed,Object? ltlAvailable = freezed,Object? canPublicNote = freezed,Object? mentionLimit = freezed,Object? canEditNote = freezed,Object? canScheduleNote = freezed,Object? scheduleNoteLimit = freezed,Object? scheduleNoteMaxDays = freezed,Object? canInvite = freezed,Object? inviteLimit = freezed,Object? inviteLimitCycle = freezed,Object? inviteExpirationTime = freezed,Object? canManageCustomEmojis = freezed,Object? canSearchNotes = freezed,Object? canUseTranslator = freezed,Object? canHideAds = freezed,Object? driveCapacityMb = freezed,Object? maxFileSizeMb = freezed,Object? uploadableFileTypes = freezed,Object? alwaysMarkNsfw = freezed,Object? canUpdateBioMedia = freezed,Object? pinLimit = freezed,Object? antennaLimit = freezed,Object? wordMuteLimit = freezed,Object? webhookLimit = freezed,Object? clipLimit = freezed,Object? noteEachClipsLimit = freezed,Object? userListLimit = freezed,Object? userEachUserListsLimit = freezed,Object? rateLimitFactor = freezed,Object? avatarDecorationLimit = freezed,Object? canImportAntennas = freezed,Object? canImportBlocking = freezed,Object? canImportFollowing = freezed,Object? canImportMuting = freezed,Object? canImportUserLists = freezed,Object? chatAvailability = freezed,Object? noteDraftLimit = freezed,Object? scheduledNoteLimit = freezed,Object? watermarkAvailable = freezed,Object? mutualLinkSectionLimit = freezed,Object? mutualLinkLimit = freezed,Object? scheduleNoteMax = freezed,}) {
-  return _then(_UserPolicies(
-gtlAvailable: freezed == gtlAvailable ? _self.gtlAvailable : gtlAvailable // ignore: cast_nullable_to_non_nullable
-as bool?,ltlAvailable: freezed == ltlAvailable ? _self.ltlAvailable : ltlAvailable // ignore: cast_nullable_to_non_nullable
-as bool?,canPublicNote: freezed == canPublicNote ? _self.canPublicNote : canPublicNote // ignore: cast_nullable_to_non_nullable
-as bool?,mentionLimit: freezed == mentionLimit ? _self.mentionLimit : mentionLimit // ignore: cast_nullable_to_non_nullable
-as int?,canEditNote: freezed == canEditNote ? _self.canEditNote : canEditNote // ignore: cast_nullable_to_non_nullable
-as bool?,canScheduleNote: freezed == canScheduleNote ? _self.canScheduleNote : canScheduleNote // ignore: cast_nullable_to_non_nullable
-as bool?,scheduleNoteLimit: freezed == scheduleNoteLimit ? _self.scheduleNoteLimit : scheduleNoteLimit // ignore: cast_nullable_to_non_nullable
-as int?,scheduleNoteMaxDays: freezed == scheduleNoteMaxDays ? _self.scheduleNoteMaxDays : scheduleNoteMaxDays // ignore: cast_nullable_to_non_nullable
-as int?,canInvite: freezed == canInvite ? _self.canInvite : canInvite // ignore: cast_nullable_to_non_nullable
-as bool?,inviteLimit: freezed == inviteLimit ? _self.inviteLimit : inviteLimit // ignore: cast_nullable_to_non_nullable
-as int?,inviteLimitCycle: freezed == inviteLimitCycle ? _self.inviteLimitCycle : inviteLimitCycle // ignore: cast_nullable_to_non_nullable
-as int?,inviteExpirationTime: freezed == inviteExpirationTime ? _self.inviteExpirationTime : inviteExpirationTime // ignore: cast_nullable_to_non_nullable
-as int?,canManageCustomEmojis: freezed == canManageCustomEmojis ? _self.canManageCustomEmojis : canManageCustomEmojis // ignore: cast_nullable_to_non_nullable
-as bool?,canSearchNotes: freezed == canSearchNotes ? _self.canSearchNotes : canSearchNotes // ignore: cast_nullable_to_non_nullable
-as bool?,canUseTranslator: freezed == canUseTranslator ? _self.canUseTranslator : canUseTranslator // ignore: cast_nullable_to_non_nullable
-as bool?,canHideAds: freezed == canHideAds ? _self.canHideAds : canHideAds // ignore: cast_nullable_to_non_nullable
-as bool?,driveCapacityMb: freezed == driveCapacityMb ? _self.driveCapacityMb : driveCapacityMb // ignore: cast_nullable_to_non_nullable
-as int?,maxFileSizeMb: freezed == maxFileSizeMb ? _self.maxFileSizeMb : maxFileSizeMb // ignore: cast_nullable_to_non_nullable
-as int?,uploadableFileTypes: freezed == uploadableFileTypes ? _self._uploadableFileTypes : uploadableFileTypes // ignore: cast_nullable_to_non_nullable
-as List<String>?,alwaysMarkNsfw: freezed == alwaysMarkNsfw ? _self.alwaysMarkNsfw : alwaysMarkNsfw // ignore: cast_nullable_to_non_nullable
-as bool?,canUpdateBioMedia: freezed == canUpdateBioMedia ? _self.canUpdateBioMedia : canUpdateBioMedia // ignore: cast_nullable_to_non_nullable
-as bool?,pinLimit: freezed == pinLimit ? _self.pinLimit : pinLimit // ignore: cast_nullable_to_non_nullable
-as int?,antennaLimit: freezed == antennaLimit ? _self.antennaLimit : antennaLimit // ignore: cast_nullable_to_non_nullable
-as int?,wordMuteLimit: freezed == wordMuteLimit ? _self.wordMuteLimit : wordMuteLimit // ignore: cast_nullable_to_non_nullable
-as int?,webhookLimit: freezed == webhookLimit ? _self.webhookLimit : webhookLimit // ignore: cast_nullable_to_non_nullable
-as int?,clipLimit: freezed == clipLimit ? _self.clipLimit : clipLimit // ignore: cast_nullable_to_non_nullable
-as int?,noteEachClipsLimit: freezed == noteEachClipsLimit ? _self.noteEachClipsLimit : noteEachClipsLimit // ignore: cast_nullable_to_non_nullable
-as int?,userListLimit: freezed == userListLimit ? _self.userListLimit : userListLimit // ignore: cast_nullable_to_non_nullable
-as int?,userEachUserListsLimit: freezed == userEachUserListsLimit ? _self.userEachUserListsLimit : userEachUserListsLimit // ignore: cast_nullable_to_non_nullable
-as int?,rateLimitFactor: freezed == rateLimitFactor ? _self.rateLimitFactor : rateLimitFactor // ignore: cast_nullable_to_non_nullable
-as int?,avatarDecorationLimit: freezed == avatarDecorationLimit ? _self.avatarDecorationLimit : avatarDecorationLimit // ignore: cast_nullable_to_non_nullable
-as int?,canImportAntennas: freezed == canImportAntennas ? _self.canImportAntennas : canImportAntennas // ignore: cast_nullable_to_non_nullable
-as bool?,canImportBlocking: freezed == canImportBlocking ? _self.canImportBlocking : canImportBlocking // ignore: cast_nullable_to_non_nullable
-as bool?,canImportFollowing: freezed == canImportFollowing ? _self.canImportFollowing : canImportFollowing // ignore: cast_nullable_to_non_nullable
-as bool?,canImportMuting: freezed == canImportMuting ? _self.canImportMuting : canImportMuting // ignore: cast_nullable_to_non_nullable
-as bool?,canImportUserLists: freezed == canImportUserLists ? _self.canImportUserLists : canImportUserLists // ignore: cast_nullable_to_non_nullable
-as bool?,chatAvailability: freezed == chatAvailability ? _self.chatAvailability : chatAvailability // ignore: cast_nullable_to_non_nullable
-as ChatAvailability?,noteDraftLimit: freezed == noteDraftLimit ? _self.noteDraftLimit : noteDraftLimit // ignore: cast_nullable_to_non_nullable
-as int?,scheduledNoteLimit: freezed == scheduledNoteLimit ? _self.scheduledNoteLimit : scheduledNoteLimit // ignore: cast_nullable_to_non_nullable
-as int?,watermarkAvailable: freezed == watermarkAvailable ? _self.watermarkAvailable : watermarkAvailable // ignore: cast_nullable_to_non_nullable
-as bool?,mutualLinkSectionLimit: freezed == mutualLinkSectionLimit ? _self.mutualLinkSectionLimit : mutualLinkSectionLimit // ignore: cast_nullable_to_non_nullable
-as int?,mutualLinkLimit: freezed == mutualLinkLimit ? _self.mutualLinkLimit : mutualLinkLimit // ignore: cast_nullable_to_non_nullable
-as int?,scheduleNoteMax: freezed == scheduleNoteMax ? _self.scheduleNoteMax : scheduleNoteMax // ignore: cast_nullable_to_non_nullable
-as int?,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$UserField {
 
- String get name; String get value;
+
 /// Create a copy of UserField
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $UserFieldCopyWith<UserField> get copyWith => _$UserFieldCopyWithImpl<UserField>(this as UserField, _$identity);
 
-  /// Serializes this UserField to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -4118,11 +2360,10 @@ extension UserFieldPatterns on UserField {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UserField value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _UserField() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -4140,11 +2381,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UserField value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UserField():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -4161,11 +2401,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UserField value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UserField() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -4182,10 +2421,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String name,  String value)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _UserField() when $default != null:
-return $default(_that.name,_that.value);case _:
+case _:
   return orElse();
 
 }
@@ -4203,10 +2441,9 @@ return $default(_that.name,_that.value);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String name,  String value)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UserField():
-return $default(_that.name,_that.value);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -4223,10 +2460,9 @@ return $default(_that.name,_that.value);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String name,  String value)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UserField() when $default != null:
-return $default(_that.name,_that.value);case _:
+case _:
   return null;
 
 }
@@ -4234,92 +2470,17 @@ return $default(_that.name,_that.value);case _:
 
 }
 
-/// @nodoc
-@JsonSerializable()
-
-class _UserField implements UserField {
-  const _UserField({required this.name, required this.value});
-  factory _UserField.fromJson(Map<String, dynamic> json) => _$UserFieldFromJson(json);
-
-@override final  String name;
-@override final  String value;
-
-/// Create a copy of UserField
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$UserFieldCopyWith<_UserField> get copyWith => __$UserFieldCopyWithImpl<_UserField>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$UserFieldToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UserField&&(identical(other.name, name) || other.name == name)&&(identical(other.value, value) || other.value == value));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,name,value);
-}
-
-@override
-String toString() {
-    return 'UserField(name: $name, value: $value)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$UserFieldCopyWith<$Res> implements $UserFieldCopyWith<$Res> {
-  factory _$UserFieldCopyWith(_UserField value, $Res Function(_UserField) _then) = __$UserFieldCopyWithImpl;
-@override @useResult
-$Res call({
- String name, String value
-});
-
-
-
-
-}
-/// @nodoc
-class __$UserFieldCopyWithImpl<$Res>
-    implements _$UserFieldCopyWith<$Res> {
-  __$UserFieldCopyWithImpl(this._self, this._then);
-
-  final _UserField _self;
-  final $Res Function(_UserField) _then;
-
-/// Create a copy of UserField
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? name = null,Object? value = null,}) {
-  return _then(_UserField(
-name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String,value: null == value ? _self.value : value // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$MutualLinkSection {
 
- String? get name; List<MutualLink> get mutualLinks;
+
 /// Create a copy of MutualLinkSection
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $MutualLinkSectionCopyWith<MutualLinkSection> get copyWith => _$MutualLinkSectionCopyWithImpl<MutualLinkSection>(this as MutualLinkSection, _$identity);
 
-  /// Serializes this MutualLinkSection to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -4391,11 +2552,10 @@ extension MutualLinkSectionPatterns on MutualLinkSection {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _MutualLinkSection value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _MutualLinkSection() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -4413,11 +2573,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _MutualLinkSection value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _MutualLinkSection():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -4434,11 +2593,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _MutualLinkSection value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _MutualLinkSection() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -4455,10 +2613,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? name,  List<MutualLink> mutualLinks)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _MutualLinkSection() when $default != null:
-return $default(_that.name,_that.mutualLinks);case _:
+case _:
   return orElse();
 
 }
@@ -4476,10 +2633,9 @@ return $default(_that.name,_that.mutualLinks);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? name,  List<MutualLink> mutualLinks)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _MutualLinkSection():
-return $default(_that.name,_that.mutualLinks);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -4496,10 +2652,9 @@ return $default(_that.name,_that.mutualLinks);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? name,  List<MutualLink> mutualLinks)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _MutualLinkSection() when $default != null:
-return $default(_that.name,_that.mutualLinks);case _:
+case _:
   return null;
 
 }
@@ -4507,98 +2662,17 @@ return $default(_that.name,_that.mutualLinks);case _:
 
 }
 
-/// @nodoc
-@JsonSerializable()
-
-class _MutualLinkSection implements MutualLinkSection {
-  const _MutualLinkSection({this.name, required  List<MutualLink> mutualLinks}): _mutualLinks = mutualLinks;
-  factory _MutualLinkSection.fromJson(Map<String, dynamic> json) => _$MutualLinkSectionFromJson(json);
-
-@override final  String? name;
- final  List<MutualLink> _mutualLinks;
-@override List<MutualLink> get mutualLinks {
-  if (_mutualLinks is EqualUnmodifiableListView) return _mutualLinks;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_mutualLinks);
-}
-
-
-/// Create a copy of MutualLinkSection
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$MutualLinkSectionCopyWith<_MutualLinkSection> get copyWith => __$MutualLinkSectionCopyWithImpl<_MutualLinkSection>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$MutualLinkSectionToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _MutualLinkSection&&(identical(other.name, name) || other.name == name)&&const DeepCollectionEquality().equals(other.mutualLinks, _mutualLinks));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,name,const DeepCollectionEquality().hash(_mutualLinks));
-}
-
-@override
-String toString() {
-    return 'MutualLinkSection(name: $name, mutualLinks: $mutualLinks)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$MutualLinkSectionCopyWith<$Res> implements $MutualLinkSectionCopyWith<$Res> {
-  factory _$MutualLinkSectionCopyWith(_MutualLinkSection value, $Res Function(_MutualLinkSection) _then) = __$MutualLinkSectionCopyWithImpl;
-@override @useResult
-$Res call({
- String? name, List<MutualLink> mutualLinks
-});
-
-
-
-
-}
-/// @nodoc
-class __$MutualLinkSectionCopyWithImpl<$Res>
-    implements _$MutualLinkSectionCopyWith<$Res> {
-  __$MutualLinkSectionCopyWithImpl(this._self, this._then);
-
-  final _MutualLinkSection _self;
-  final $Res Function(_MutualLinkSection) _then;
-
-/// Create a copy of MutualLinkSection
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? name = freezed,Object? mutualLinks = null,}) {
-  return _then(_MutualLinkSection(
-name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String?,mutualLinks: null == mutualLinks ? _self._mutualLinks : mutualLinks // ignore: cast_nullable_to_non_nullable
-as List<MutualLink>,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$MutualLink {
 
- String get id; String get url; String get fileId; String? get description; String? get imgSrc;
+
 /// Create a copy of MutualLink
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $MutualLinkCopyWith<MutualLink> get copyWith => _$MutualLinkCopyWithImpl<MutualLink>(this as MutualLink, _$identity);
 
-  /// Serializes this MutualLink to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -4673,11 +2747,10 @@ extension MutualLinkPatterns on MutualLink {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _MutualLink value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _MutualLink() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -4695,11 +2768,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _MutualLink value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _MutualLink():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -4716,11 +2788,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _MutualLink value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _MutualLink() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -4737,10 +2808,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String url,  String fileId,  String? description,  String? imgSrc)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _MutualLink() when $default != null:
-return $default(_that.id,_that.url,_that.fileId,_that.description,_that.imgSrc);case _:
+case _:
   return orElse();
 
 }
@@ -4758,10 +2828,9 @@ return $default(_that.id,_that.url,_that.fileId,_that.description,_that.imgSrc);
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String url,  String fileId,  String? description,  String? imgSrc)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _MutualLink():
-return $default(_that.id,_that.url,_that.fileId,_that.description,_that.imgSrc);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -4778,10 +2847,9 @@ return $default(_that.id,_that.url,_that.fileId,_that.description,_that.imgSrc);
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String url,  String fileId,  String? description,  String? imgSrc)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _MutualLink() when $default != null:
-return $default(_that.id,_that.url,_that.fileId,_that.description,_that.imgSrc);case _:
+case _:
   return null;
 
 }
@@ -4789,98 +2857,17 @@ return $default(_that.id,_that.url,_that.fileId,_that.description,_that.imgSrc);
 
 }
 
-/// @nodoc
-@JsonSerializable()
-
-class _MutualLink implements MutualLink {
-  const _MutualLink({required this.id, required this.url, required this.fileId, this.description, this.imgSrc});
-  factory _MutualLink.fromJson(Map<String, dynamic> json) => _$MutualLinkFromJson(json);
-
-@override final  String id;
-@override final  String url;
-@override final  String fileId;
-@override final  String? description;
-@override final  String? imgSrc;
-
-/// Create a copy of MutualLink
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$MutualLinkCopyWith<_MutualLink> get copyWith => __$MutualLinkCopyWithImpl<_MutualLink>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$MutualLinkToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _MutualLink&&(identical(other.id, id) || other.id == id)&&(identical(other.url, url) || other.url == url)&&(identical(other.fileId, fileId) || other.fileId == fileId)&&(identical(other.description, description) || other.description == description)&&(identical(other.imgSrc, imgSrc) || other.imgSrc == imgSrc));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,id,url,fileId,description,imgSrc);
-}
-
-@override
-String toString() {
-    return 'MutualLink(id: $id, url: $url, fileId: $fileId, description: $description, imgSrc: $imgSrc)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$MutualLinkCopyWith<$Res> implements $MutualLinkCopyWith<$Res> {
-  factory _$MutualLinkCopyWith(_MutualLink value, $Res Function(_MutualLink) _then) = __$MutualLinkCopyWithImpl;
-@override @useResult
-$Res call({
- String id, String url, String fileId, String? description, String? imgSrc
-});
-
-
-
-
-}
-/// @nodoc
-class __$MutualLinkCopyWithImpl<$Res>
-    implements _$MutualLinkCopyWith<$Res> {
-  __$MutualLinkCopyWithImpl(this._self, this._then);
-
-  final _MutualLink _self;
-  final $Res Function(_MutualLink) _then;
-
-/// Create a copy of MutualLink
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? url = null,Object? fileId = null,Object? description = freezed,Object? imgSrc = freezed,}) {
-  return _then(_MutualLink(
-id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as String,url: null == url ? _self.url : url // ignore: cast_nullable_to_non_nullable
-as String,fileId: null == fileId ? _self.fileId : fileId // ignore: cast_nullable_to_non_nullable
-as String,description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
-as String?,imgSrc: freezed == imgSrc ? _self.imgSrc : imgSrc // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$MuteWord {
 
- String? get regExp; List<String>? get content;
+
 /// Create a copy of MuteWord
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $MuteWordCopyWith<MuteWord> get copyWith => _$MuteWordCopyWithImpl<MuteWord>(this as MuteWord, _$identity);
 
-  /// Serializes this MuteWord to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -4952,11 +2939,10 @@ extension MuteWordPatterns on MuteWord {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _MuteWord value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _MuteWord() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -4974,11 +2960,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _MuteWord value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _MuteWord():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -4995,11 +2980,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _MuteWord value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _MuteWord() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -5016,10 +3000,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? regExp,  List<String>? content)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _MuteWord() when $default != null:
-return $default(_that.regExp,_that.content);case _:
+case _:
   return orElse();
 
 }
@@ -5037,10 +3020,9 @@ return $default(_that.regExp,_that.content);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? regExp,  List<String>? content)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _MuteWord():
-return $default(_that.regExp,_that.content);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -5057,10 +3039,9 @@ return $default(_that.regExp,_that.content);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? regExp,  List<String>? content)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _MuteWord() when $default != null:
-return $default(_that.regExp,_that.content);case _:
+case _:
   return null;
 
 }
@@ -5068,100 +3049,17 @@ return $default(_that.regExp,_that.content);case _:
 
 }
 
-/// @nodoc
-@JsonSerializable()
-
-class _MuteWord implements MuteWord {
-  const _MuteWord({this.regExp,  List<String>? content}): _content = content;
-  factory _MuteWord.fromJson(Map<String, dynamic> json) => _$MuteWordFromJson(json);
-
-@override final  String? regExp;
- final  List<String>? _content;
-@override List<String>? get content {
-  final value = _content;
-  if (value == null) return null;
-  if (_content is EqualUnmodifiableListView) return _content;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
-
-/// Create a copy of MuteWord
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$MuteWordCopyWith<_MuteWord> get copyWith => __$MuteWordCopyWithImpl<_MuteWord>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$MuteWordToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _MuteWord&&(identical(other.regExp, regExp) || other.regExp == regExp)&&const DeepCollectionEquality().equals(other.content, _content));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,regExp,const DeepCollectionEquality().hash(_content));
-}
-
-@override
-String toString() {
-    return 'MuteWord(regExp: $regExp, content: $content)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$MuteWordCopyWith<$Res> implements $MuteWordCopyWith<$Res> {
-  factory _$MuteWordCopyWith(_MuteWord value, $Res Function(_MuteWord) _then) = __$MuteWordCopyWithImpl;
-@override @useResult
-$Res call({
- String? regExp, List<String>? content
-});
-
-
-
-
-}
-/// @nodoc
-class __$MuteWordCopyWithImpl<$Res>
-    implements _$MuteWordCopyWith<$Res> {
-  __$MuteWordCopyWithImpl(this._self, this._then);
-
-  final _MuteWord _self;
-  final $Res Function(_MuteWord) _then;
-
-/// Create a copy of MuteWord
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? regExp = freezed,Object? content = freezed,}) {
-  return _then(_MuteWord(
-regExp: freezed == regExp ? _self.regExp : regExp // ignore: cast_nullable_to_non_nullable
-as String?,content: freezed == content ? _self._content : content // ignore: cast_nullable_to_non_nullable
-as List<String>?,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$NotificationRecieveConfigs {
 
- NotificationRecieveConfig? get note; NotificationRecieveConfig? get follow; NotificationRecieveConfig? get mention; NotificationRecieveConfig? get reply; NotificationRecieveConfig? get renote; NotificationRecieveConfig? get quote; NotificationRecieveConfig? get reaction; NotificationRecieveConfig? get pollEnded; NotificationRecieveConfig? get scheduledNotePosted; NotificationRecieveConfig? get scheduledNotePostFailed; NotificationRecieveConfig? get receiveFollowRequest; NotificationRecieveConfig? get followRequestAccepted; NotificationRecieveConfig? get roleAssigned; NotificationRecieveConfig? get chatRoomInvitationReceived; NotificationRecieveConfig? get achievementEarned; NotificationRecieveConfig? get app; NotificationRecieveConfig? get test;
+
 /// Create a copy of NotificationRecieveConfigs
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $NotificationRecieveConfigsCopyWith<NotificationRecieveConfigs> get copyWith => _$NotificationRecieveConfigsCopyWithImpl<NotificationRecieveConfigs>(this as NotificationRecieveConfigs, _$identity);
 
-  /// Serializes this NotificationRecieveConfigs to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -5452,11 +3350,10 @@ extension NotificationRecieveConfigsPatterns on NotificationRecieveConfigs {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _NotificationRecieveConfigs value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _NotificationRecieveConfigs() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -5474,11 +3371,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _NotificationRecieveConfigs value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _NotificationRecieveConfigs():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -5495,11 +3391,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _NotificationRecieveConfigs value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _NotificationRecieveConfigs() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -5516,10 +3411,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( NotificationRecieveConfig? note,  NotificationRecieveConfig? follow,  NotificationRecieveConfig? mention,  NotificationRecieveConfig? reply,  NotificationRecieveConfig? renote,  NotificationRecieveConfig? quote,  NotificationRecieveConfig? reaction,  NotificationRecieveConfig? pollEnded,  NotificationRecieveConfig? scheduledNotePosted,  NotificationRecieveConfig? scheduledNotePostFailed,  NotificationRecieveConfig? receiveFollowRequest,  NotificationRecieveConfig? followRequestAccepted,  NotificationRecieveConfig? roleAssigned,  NotificationRecieveConfig? chatRoomInvitationReceived,  NotificationRecieveConfig? achievementEarned,  NotificationRecieveConfig? app,  NotificationRecieveConfig? test)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _NotificationRecieveConfigs() when $default != null:
-return $default(_that.note,_that.follow,_that.mention,_that.reply,_that.renote,_that.quote,_that.reaction,_that.pollEnded,_that.scheduledNotePosted,_that.scheduledNotePostFailed,_that.receiveFollowRequest,_that.followRequestAccepted,_that.roleAssigned,_that.chatRoomInvitationReceived,_that.achievementEarned,_that.app,_that.test);case _:
+case _:
   return orElse();
 
 }
@@ -5537,10 +3431,9 @@ return $default(_that.note,_that.follow,_that.mention,_that.reply,_that.renote,_
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( NotificationRecieveConfig? note,  NotificationRecieveConfig? follow,  NotificationRecieveConfig? mention,  NotificationRecieveConfig? reply,  NotificationRecieveConfig? renote,  NotificationRecieveConfig? quote,  NotificationRecieveConfig? reaction,  NotificationRecieveConfig? pollEnded,  NotificationRecieveConfig? scheduledNotePosted,  NotificationRecieveConfig? scheduledNotePostFailed,  NotificationRecieveConfig? receiveFollowRequest,  NotificationRecieveConfig? followRequestAccepted,  NotificationRecieveConfig? roleAssigned,  NotificationRecieveConfig? chatRoomInvitationReceived,  NotificationRecieveConfig? achievementEarned,  NotificationRecieveConfig? app,  NotificationRecieveConfig? test)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _NotificationRecieveConfigs():
-return $default(_that.note,_that.follow,_that.mention,_that.reply,_that.renote,_that.quote,_that.reaction,_that.pollEnded,_that.scheduledNotePosted,_that.scheduledNotePostFailed,_that.receiveFollowRequest,_that.followRequestAccepted,_that.roleAssigned,_that.chatRoomInvitationReceived,_that.achievementEarned,_that.app,_that.test);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -5557,10 +3450,9 @@ return $default(_that.note,_that.follow,_that.mention,_that.reply,_that.renote,_
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( NotificationRecieveConfig? note,  NotificationRecieveConfig? follow,  NotificationRecieveConfig? mention,  NotificationRecieveConfig? reply,  NotificationRecieveConfig? renote,  NotificationRecieveConfig? quote,  NotificationRecieveConfig? reaction,  NotificationRecieveConfig? pollEnded,  NotificationRecieveConfig? scheduledNotePosted,  NotificationRecieveConfig? scheduledNotePostFailed,  NotificationRecieveConfig? receiveFollowRequest,  NotificationRecieveConfig? followRequestAccepted,  NotificationRecieveConfig? roleAssigned,  NotificationRecieveConfig? chatRoomInvitationReceived,  NotificationRecieveConfig? achievementEarned,  NotificationRecieveConfig? app,  NotificationRecieveConfig? test)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _NotificationRecieveConfigs() when $default != null:
-return $default(_that.note,_that.follow,_that.mention,_that.reply,_that.renote,_that.quote,_that.reaction,_that.pollEnded,_that.scheduledNotePosted,_that.scheduledNotePostFailed,_that.receiveFollowRequest,_that.followRequestAccepted,_that.roleAssigned,_that.chatRoomInvitationReceived,_that.achievementEarned,_that.app,_that.test);case _:
+case _:
   return null;
 
 }
@@ -5568,326 +3460,17 @@ return $default(_that.note,_that.follow,_that.mention,_that.reply,_that.renote,_
 
 }
 
-/// @nodoc
-@JsonSerializable()
-
-class _NotificationRecieveConfigs implements NotificationRecieveConfigs {
-  const _NotificationRecieveConfigs({this.note, this.follow, this.mention, this.reply, this.renote, this.quote, this.reaction, this.pollEnded, this.scheduledNotePosted, this.scheduledNotePostFailed, this.receiveFollowRequest, this.followRequestAccepted, this.roleAssigned, this.chatRoomInvitationReceived, this.achievementEarned, this.app, this.test});
-  factory _NotificationRecieveConfigs.fromJson(Map<String, dynamic> json) => _$NotificationRecieveConfigsFromJson(json);
-
-@override final  NotificationRecieveConfig? note;
-@override final  NotificationRecieveConfig? follow;
-@override final  NotificationRecieveConfig? mention;
-@override final  NotificationRecieveConfig? reply;
-@override final  NotificationRecieveConfig? renote;
-@override final  NotificationRecieveConfig? quote;
-@override final  NotificationRecieveConfig? reaction;
-@override final  NotificationRecieveConfig? pollEnded;
-@override final  NotificationRecieveConfig? scheduledNotePosted;
-@override final  NotificationRecieveConfig? scheduledNotePostFailed;
-@override final  NotificationRecieveConfig? receiveFollowRequest;
-@override final  NotificationRecieveConfig? followRequestAccepted;
-@override final  NotificationRecieveConfig? roleAssigned;
-@override final  NotificationRecieveConfig? chatRoomInvitationReceived;
-@override final  NotificationRecieveConfig? achievementEarned;
-@override final  NotificationRecieveConfig? app;
-@override final  NotificationRecieveConfig? test;
-
-/// Create a copy of NotificationRecieveConfigs
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$NotificationRecieveConfigsCopyWith<_NotificationRecieveConfigs> get copyWith => __$NotificationRecieveConfigsCopyWithImpl<_NotificationRecieveConfigs>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$NotificationRecieveConfigsToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotificationRecieveConfigs&&(identical(other.note, note) || other.note == note)&&(identical(other.follow, follow) || other.follow == follow)&&(identical(other.mention, mention) || other.mention == mention)&&(identical(other.reply, reply) || other.reply == reply)&&(identical(other.renote, renote) || other.renote == renote)&&(identical(other.quote, quote) || other.quote == quote)&&(identical(other.reaction, reaction) || other.reaction == reaction)&&(identical(other.pollEnded, pollEnded) || other.pollEnded == pollEnded)&&(identical(other.scheduledNotePosted, scheduledNotePosted) || other.scheduledNotePosted == scheduledNotePosted)&&(identical(other.scheduledNotePostFailed, scheduledNotePostFailed) || other.scheduledNotePostFailed == scheduledNotePostFailed)&&(identical(other.receiveFollowRequest, receiveFollowRequest) || other.receiveFollowRequest == receiveFollowRequest)&&(identical(other.followRequestAccepted, followRequestAccepted) || other.followRequestAccepted == followRequestAccepted)&&(identical(other.roleAssigned, roleAssigned) || other.roleAssigned == roleAssigned)&&(identical(other.chatRoomInvitationReceived, chatRoomInvitationReceived) || other.chatRoomInvitationReceived == chatRoomInvitationReceived)&&(identical(other.achievementEarned, achievementEarned) || other.achievementEarned == achievementEarned)&&(identical(other.app, app) || other.app == app)&&(identical(other.test, test) || other.test == test));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,note,follow,mention,reply,renote,quote,reaction,pollEnded,scheduledNotePosted,scheduledNotePostFailed,receiveFollowRequest,followRequestAccepted,roleAssigned,chatRoomInvitationReceived,achievementEarned,app,test);
-}
-
-@override
-String toString() {
-    return 'NotificationRecieveConfigs(note: $note, follow: $follow, mention: $mention, reply: $reply, renote: $renote, quote: $quote, reaction: $reaction, pollEnded: $pollEnded, scheduledNotePosted: $scheduledNotePosted, scheduledNotePostFailed: $scheduledNotePostFailed, receiveFollowRequest: $receiveFollowRequest, followRequestAccepted: $followRequestAccepted, roleAssigned: $roleAssigned, chatRoomInvitationReceived: $chatRoomInvitationReceived, achievementEarned: $achievementEarned, app: $app, test: $test)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$NotificationRecieveConfigsCopyWith<$Res> implements $NotificationRecieveConfigsCopyWith<$Res> {
-  factory _$NotificationRecieveConfigsCopyWith(_NotificationRecieveConfigs value, $Res Function(_NotificationRecieveConfigs) _then) = __$NotificationRecieveConfigsCopyWithImpl;
-@override @useResult
-$Res call({
- NotificationRecieveConfig? note, NotificationRecieveConfig? follow, NotificationRecieveConfig? mention, NotificationRecieveConfig? reply, NotificationRecieveConfig? renote, NotificationRecieveConfig? quote, NotificationRecieveConfig? reaction, NotificationRecieveConfig? pollEnded, NotificationRecieveConfig? scheduledNotePosted, NotificationRecieveConfig? scheduledNotePostFailed, NotificationRecieveConfig? receiveFollowRequest, NotificationRecieveConfig? followRequestAccepted, NotificationRecieveConfig? roleAssigned, NotificationRecieveConfig? chatRoomInvitationReceived, NotificationRecieveConfig? achievementEarned, NotificationRecieveConfig? app, NotificationRecieveConfig? test
-});
-
-
-@override $NotificationRecieveConfigCopyWith<$Res>? get note;@override $NotificationRecieveConfigCopyWith<$Res>? get follow;@override $NotificationRecieveConfigCopyWith<$Res>? get mention;@override $NotificationRecieveConfigCopyWith<$Res>? get reply;@override $NotificationRecieveConfigCopyWith<$Res>? get renote;@override $NotificationRecieveConfigCopyWith<$Res>? get quote;@override $NotificationRecieveConfigCopyWith<$Res>? get reaction;@override $NotificationRecieveConfigCopyWith<$Res>? get pollEnded;@override $NotificationRecieveConfigCopyWith<$Res>? get scheduledNotePosted;@override $NotificationRecieveConfigCopyWith<$Res>? get scheduledNotePostFailed;@override $NotificationRecieveConfigCopyWith<$Res>? get receiveFollowRequest;@override $NotificationRecieveConfigCopyWith<$Res>? get followRequestAccepted;@override $NotificationRecieveConfigCopyWith<$Res>? get roleAssigned;@override $NotificationRecieveConfigCopyWith<$Res>? get chatRoomInvitationReceived;@override $NotificationRecieveConfigCopyWith<$Res>? get achievementEarned;@override $NotificationRecieveConfigCopyWith<$Res>? get app;@override $NotificationRecieveConfigCopyWith<$Res>? get test;
-
-}
-/// @nodoc
-class __$NotificationRecieveConfigsCopyWithImpl<$Res>
-    implements _$NotificationRecieveConfigsCopyWith<$Res> {
-  __$NotificationRecieveConfigsCopyWithImpl(this._self, this._then);
-
-  final _NotificationRecieveConfigs _self;
-  final $Res Function(_NotificationRecieveConfigs) _then;
-
-/// Create a copy of NotificationRecieveConfigs
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? note = freezed,Object? follow = freezed,Object? mention = freezed,Object? reply = freezed,Object? renote = freezed,Object? quote = freezed,Object? reaction = freezed,Object? pollEnded = freezed,Object? scheduledNotePosted = freezed,Object? scheduledNotePostFailed = freezed,Object? receiveFollowRequest = freezed,Object? followRequestAccepted = freezed,Object? roleAssigned = freezed,Object? chatRoomInvitationReceived = freezed,Object? achievementEarned = freezed,Object? app = freezed,Object? test = freezed,}) {
-  return _then(_NotificationRecieveConfigs(
-note: freezed == note ? _self.note : note // ignore: cast_nullable_to_non_nullable
-as NotificationRecieveConfig?,follow: freezed == follow ? _self.follow : follow // ignore: cast_nullable_to_non_nullable
-as NotificationRecieveConfig?,mention: freezed == mention ? _self.mention : mention // ignore: cast_nullable_to_non_nullable
-as NotificationRecieveConfig?,reply: freezed == reply ? _self.reply : reply // ignore: cast_nullable_to_non_nullable
-as NotificationRecieveConfig?,renote: freezed == renote ? _self.renote : renote // ignore: cast_nullable_to_non_nullable
-as NotificationRecieveConfig?,quote: freezed == quote ? _self.quote : quote // ignore: cast_nullable_to_non_nullable
-as NotificationRecieveConfig?,reaction: freezed == reaction ? _self.reaction : reaction // ignore: cast_nullable_to_non_nullable
-as NotificationRecieveConfig?,pollEnded: freezed == pollEnded ? _self.pollEnded : pollEnded // ignore: cast_nullable_to_non_nullable
-as NotificationRecieveConfig?,scheduledNotePosted: freezed == scheduledNotePosted ? _self.scheduledNotePosted : scheduledNotePosted // ignore: cast_nullable_to_non_nullable
-as NotificationRecieveConfig?,scheduledNotePostFailed: freezed == scheduledNotePostFailed ? _self.scheduledNotePostFailed : scheduledNotePostFailed // ignore: cast_nullable_to_non_nullable
-as NotificationRecieveConfig?,receiveFollowRequest: freezed == receiveFollowRequest ? _self.receiveFollowRequest : receiveFollowRequest // ignore: cast_nullable_to_non_nullable
-as NotificationRecieveConfig?,followRequestAccepted: freezed == followRequestAccepted ? _self.followRequestAccepted : followRequestAccepted // ignore: cast_nullable_to_non_nullable
-as NotificationRecieveConfig?,roleAssigned: freezed == roleAssigned ? _self.roleAssigned : roleAssigned // ignore: cast_nullable_to_non_nullable
-as NotificationRecieveConfig?,chatRoomInvitationReceived: freezed == chatRoomInvitationReceived ? _self.chatRoomInvitationReceived : chatRoomInvitationReceived // ignore: cast_nullable_to_non_nullable
-as NotificationRecieveConfig?,achievementEarned: freezed == achievementEarned ? _self.achievementEarned : achievementEarned // ignore: cast_nullable_to_non_nullable
-as NotificationRecieveConfig?,app: freezed == app ? _self.app : app // ignore: cast_nullable_to_non_nullable
-as NotificationRecieveConfig?,test: freezed == test ? _self.test : test // ignore: cast_nullable_to_non_nullable
-as NotificationRecieveConfig?,
-  ));
-}
-
-/// Create a copy of NotificationRecieveConfigs
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$NotificationRecieveConfigCopyWith<$Res>? get note {
-    if (_self.note == null) {
-    return null;
-  }
-
-  return $NotificationRecieveConfigCopyWith<$Res>(_self.note!, (value) {
-    return _then(_self.copyWith(note: value));
-  });
-}/// Create a copy of NotificationRecieveConfigs
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$NotificationRecieveConfigCopyWith<$Res>? get follow {
-    if (_self.follow == null) {
-    return null;
-  }
-
-  return $NotificationRecieveConfigCopyWith<$Res>(_self.follow!, (value) {
-    return _then(_self.copyWith(follow: value));
-  });
-}/// Create a copy of NotificationRecieveConfigs
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$NotificationRecieveConfigCopyWith<$Res>? get mention {
-    if (_self.mention == null) {
-    return null;
-  }
-
-  return $NotificationRecieveConfigCopyWith<$Res>(_self.mention!, (value) {
-    return _then(_self.copyWith(mention: value));
-  });
-}/// Create a copy of NotificationRecieveConfigs
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$NotificationRecieveConfigCopyWith<$Res>? get reply {
-    if (_self.reply == null) {
-    return null;
-  }
-
-  return $NotificationRecieveConfigCopyWith<$Res>(_self.reply!, (value) {
-    return _then(_self.copyWith(reply: value));
-  });
-}/// Create a copy of NotificationRecieveConfigs
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$NotificationRecieveConfigCopyWith<$Res>? get renote {
-    if (_self.renote == null) {
-    return null;
-  }
-
-  return $NotificationRecieveConfigCopyWith<$Res>(_self.renote!, (value) {
-    return _then(_self.copyWith(renote: value));
-  });
-}/// Create a copy of NotificationRecieveConfigs
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$NotificationRecieveConfigCopyWith<$Res>? get quote {
-    if (_self.quote == null) {
-    return null;
-  }
-
-  return $NotificationRecieveConfigCopyWith<$Res>(_self.quote!, (value) {
-    return _then(_self.copyWith(quote: value));
-  });
-}/// Create a copy of NotificationRecieveConfigs
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$NotificationRecieveConfigCopyWith<$Res>? get reaction {
-    if (_self.reaction == null) {
-    return null;
-  }
-
-  return $NotificationRecieveConfigCopyWith<$Res>(_self.reaction!, (value) {
-    return _then(_self.copyWith(reaction: value));
-  });
-}/// Create a copy of NotificationRecieveConfigs
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$NotificationRecieveConfigCopyWith<$Res>? get pollEnded {
-    if (_self.pollEnded == null) {
-    return null;
-  }
-
-  return $NotificationRecieveConfigCopyWith<$Res>(_self.pollEnded!, (value) {
-    return _then(_self.copyWith(pollEnded: value));
-  });
-}/// Create a copy of NotificationRecieveConfigs
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$NotificationRecieveConfigCopyWith<$Res>? get scheduledNotePosted {
-    if (_self.scheduledNotePosted == null) {
-    return null;
-  }
-
-  return $NotificationRecieveConfigCopyWith<$Res>(_self.scheduledNotePosted!, (value) {
-    return _then(_self.copyWith(scheduledNotePosted: value));
-  });
-}/// Create a copy of NotificationRecieveConfigs
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$NotificationRecieveConfigCopyWith<$Res>? get scheduledNotePostFailed {
-    if (_self.scheduledNotePostFailed == null) {
-    return null;
-  }
-
-  return $NotificationRecieveConfigCopyWith<$Res>(_self.scheduledNotePostFailed!, (value) {
-    return _then(_self.copyWith(scheduledNotePostFailed: value));
-  });
-}/// Create a copy of NotificationRecieveConfigs
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$NotificationRecieveConfigCopyWith<$Res>? get receiveFollowRequest {
-    if (_self.receiveFollowRequest == null) {
-    return null;
-  }
-
-  return $NotificationRecieveConfigCopyWith<$Res>(_self.receiveFollowRequest!, (value) {
-    return _then(_self.copyWith(receiveFollowRequest: value));
-  });
-}/// Create a copy of NotificationRecieveConfigs
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$NotificationRecieveConfigCopyWith<$Res>? get followRequestAccepted {
-    if (_self.followRequestAccepted == null) {
-    return null;
-  }
-
-  return $NotificationRecieveConfigCopyWith<$Res>(_self.followRequestAccepted!, (value) {
-    return _then(_self.copyWith(followRequestAccepted: value));
-  });
-}/// Create a copy of NotificationRecieveConfigs
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$NotificationRecieveConfigCopyWith<$Res>? get roleAssigned {
-    if (_self.roleAssigned == null) {
-    return null;
-  }
-
-  return $NotificationRecieveConfigCopyWith<$Res>(_self.roleAssigned!, (value) {
-    return _then(_self.copyWith(roleAssigned: value));
-  });
-}/// Create a copy of NotificationRecieveConfigs
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$NotificationRecieveConfigCopyWith<$Res>? get chatRoomInvitationReceived {
-    if (_self.chatRoomInvitationReceived == null) {
-    return null;
-  }
-
-  return $NotificationRecieveConfigCopyWith<$Res>(_self.chatRoomInvitationReceived!, (value) {
-    return _then(_self.copyWith(chatRoomInvitationReceived: value));
-  });
-}/// Create a copy of NotificationRecieveConfigs
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$NotificationRecieveConfigCopyWith<$Res>? get achievementEarned {
-    if (_self.achievementEarned == null) {
-    return null;
-  }
-
-  return $NotificationRecieveConfigCopyWith<$Res>(_self.achievementEarned!, (value) {
-    return _then(_self.copyWith(achievementEarned: value));
-  });
-}/// Create a copy of NotificationRecieveConfigs
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$NotificationRecieveConfigCopyWith<$Res>? get app {
-    if (_self.app == null) {
-    return null;
-  }
-
-  return $NotificationRecieveConfigCopyWith<$Res>(_self.app!, (value) {
-    return _then(_self.copyWith(app: value));
-  });
-}/// Create a copy of NotificationRecieveConfigs
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$NotificationRecieveConfigCopyWith<$Res>? get test {
-    if (_self.test == null) {
-    return null;
-  }
-
-  return $NotificationRecieveConfigCopyWith<$Res>(_self.test!, (value) {
-    return _then(_self.copyWith(test: value));
-  });
-}
-}
-
 
 /// @nodoc
 mixin _$NotificationRecieveConfig {
 
- String get type; String? get userListId;
+
 /// Create a copy of NotificationRecieveConfig
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $NotificationRecieveConfigCopyWith<NotificationRecieveConfig> get copyWith => _$NotificationRecieveConfigCopyWithImpl<NotificationRecieveConfig>(this as NotificationRecieveConfig, _$identity);
 
-  /// Serializes this NotificationRecieveConfig to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -5959,11 +3542,10 @@ extension NotificationRecieveConfigPatterns on NotificationRecieveConfig {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _NotificationRecieveConfig value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _NotificationRecieveConfig() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -5981,11 +3563,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _NotificationRecieveConfig value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _NotificationRecieveConfig():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -6002,11 +3583,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _NotificationRecieveConfig value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _NotificationRecieveConfig() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -6023,10 +3603,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String type,  String? userListId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _NotificationRecieveConfig() when $default != null:
-return $default(_that.type,_that.userListId);case _:
+case _:
   return orElse();
 
 }
@@ -6044,10 +3623,9 @@ return $default(_that.type,_that.userListId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String type,  String? userListId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _NotificationRecieveConfig():
-return $default(_that.type,_that.userListId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -6064,87 +3642,13 @@ return $default(_that.type,_that.userListId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String type,  String? userListId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _NotificationRecieveConfig() when $default != null:
-return $default(_that.type,_that.userListId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _NotificationRecieveConfig implements NotificationRecieveConfig {
-  const _NotificationRecieveConfig({required this.type, this.userListId});
-  factory _NotificationRecieveConfig.fromJson(Map<String, dynamic> json) => _$NotificationRecieveConfigFromJson(json);
-
-@override final  String type;
-@override final  String? userListId;
-
-/// Create a copy of NotificationRecieveConfig
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$NotificationRecieveConfigCopyWith<_NotificationRecieveConfig> get copyWith => __$NotificationRecieveConfigCopyWithImpl<_NotificationRecieveConfig>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$NotificationRecieveConfigToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotificationRecieveConfig&&(identical(other.type, type) || other.type == type)&&(identical(other.userListId, userListId) || other.userListId == userListId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,type,userListId);
-}
-
-@override
-String toString() {
-    return 'NotificationRecieveConfig(type: $type, userListId: $userListId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$NotificationRecieveConfigCopyWith<$Res> implements $NotificationRecieveConfigCopyWith<$Res> {
-  factory _$NotificationRecieveConfigCopyWith(_NotificationRecieveConfig value, $Res Function(_NotificationRecieveConfig) _then) = __$NotificationRecieveConfigCopyWithImpl;
-@override @useResult
-$Res call({
- String type, String? userListId
-});
-
-
-
-
-}
-/// @nodoc
-class __$NotificationRecieveConfigCopyWithImpl<$Res>
-    implements _$NotificationRecieveConfigCopyWith<$Res> {
-  __$NotificationRecieveConfigCopyWithImpl(this._self, this._then);
-
-  final _NotificationRecieveConfig _self;
-  final $Res Function(_NotificationRecieveConfig) _then;
-
-/// Create a copy of NotificationRecieveConfig
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? type = null,Object? userListId = freezed,}) {
-  return _then(_NotificationRecieveConfig(
-type: null == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
-as String,userListId: freezed == userListId ? _self.userListId : userListId // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
 
 }
 

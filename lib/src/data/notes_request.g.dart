@@ -6,27 +6,26 @@ part of 'notes_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_NotesRequest _$NotesRequestFromJson(Map<String, dynamic> json) =>
-    _NotesRequest(
-      local: json['local'] as bool?,
-      reply: json['reply'] as bool?,
-      renote: json['renote'] as bool?,
-      withFiles: json['withFiles'] as bool?,
-      poll: json['poll'] as bool?,
-      limit: (json['limit'] as num?)?.toInt(),
-      sinceId: json['sinceId'] as String?,
-      untilId: json['untilId'] as String?,
-      sinceDate: _$JsonConverterFromJson<int, DateTime>(
-        json['sinceDate'],
-        const EpocTimeDateTimeConverter().fromJson,
-      ),
-      untilDate: _$JsonConverterFromJson<int, DateTime>(
-        json['untilDate'],
-        const EpocTimeDateTimeConverter().fromJson,
-      ),
-    );
+NotesRequest _$NotesRequestFromJson(Map<String, dynamic> json) => NotesRequest(
+  local: json['local'] as bool?,
+  reply: json['reply'] as bool?,
+  renote: json['renote'] as bool?,
+  withFiles: json['withFiles'] as bool?,
+  poll: json['poll'] as bool?,
+  limit: (json['limit'] as num?)?.toInt(),
+  sinceId: json['sinceId'] as String?,
+  untilId: json['untilId'] as String?,
+  sinceDate: _$JsonConverterFromJson<int, DateTime>(
+    json['sinceDate'],
+    const EpocTimeDateTimeConverter().fromJson,
+  ),
+  untilDate: _$JsonConverterFromJson<int, DateTime>(
+    json['untilDate'],
+    const EpocTimeDateTimeConverter().fromJson,
+  ),
+);
 
-Map<String, dynamic> _$NotesRequestToJson(_NotesRequest instance) =>
+Map<String, dynamic> _$NotesRequestToJson(NotesRequest instance) =>
     <String, dynamic>{
       'local': instance.local,
       'reply': instance.reply,

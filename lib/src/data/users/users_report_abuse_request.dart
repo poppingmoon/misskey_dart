@@ -4,10 +4,13 @@ part 'users_report_abuse_request.freezed.dart';
 part 'users_report_abuse_request.g.dart';
 
 @freezed
-abstract class UsersReportAbuseRequest with _$UsersReportAbuseRequest {
-  const factory({required String userId, required String comment}) =
-      _UsersReportAbuse;
-
+@JsonSerializable()
+class const UsersReportAbuseRequest({
+  required final String userId,
+  required final String comment,
+}) with _$UsersReportAbuseRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$UsersReportAbuseRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UsersReportAbuseRequestToJson(this);
 }

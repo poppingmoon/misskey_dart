@@ -6,9 +6,9 @@ part of 'pages_update_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_PagesUpdateRequest _$PagesUpdateRequestFromJson(
+PagesUpdateRequest _$PagesUpdateRequestFromJson(
   Map<String, dynamic> json,
-) => _PagesUpdateRequest(
+) => PagesUpdateRequest(
   pageId: json['pageId'] as String,
   title: json['title'] as String?,
   name: json['name'] as String?,
@@ -27,7 +27,7 @@ _PagesUpdateRequest _$PagesUpdateRequestFromJson(
   visibility: $enumDecodeNullable(_$PageVisibilityEnumMap, json['visibility']),
 );
 
-Map<String, dynamic> _$PagesUpdateRequestToJson(_PagesUpdateRequest instance) =>
+Map<String, dynamic> _$PagesUpdateRequestToJson(PagesUpdateRequest instance) =>
     <String, dynamic>{
       'pageId': instance.pageId,
       'title': instance.title,

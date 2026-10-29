@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$FlashSearchRequest {
 
- String get query; String? get sinceId; String? get untilId; int? get sinceDate; int? get untilDate; int? get limit;
+
 /// Create a copy of FlashSearchRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $FlashSearchRequestCopyWith<FlashSearchRequest> get copyWith => _$FlashSearchRequestCopyWithImpl<FlashSearchRequest>(this as FlashSearchRequest, _$identity);
 
-  /// Serializes this FlashSearchRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -100,11 +98,10 @@ extension FlashSearchRequestPatterns on FlashSearchRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _FlashSearchRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _FlashSearchRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -122,11 +119,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _FlashSearchRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _FlashSearchRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -143,11 +139,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _FlashSearchRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _FlashSearchRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -164,10 +159,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String query,  String? sinceId,  String? untilId,  int? sinceDate,  int? untilDate,  int? limit)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _FlashSearchRequest() when $default != null:
-return $default(_that.query,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.limit);case _:
+case _:
   return orElse();
 
 }
@@ -185,10 +179,9 @@ return $default(_that.query,_that.sinceId,_that.untilId,_that.sinceDate,_that.un
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String query,  String? sinceId,  String? untilId,  int? sinceDate,  int? untilDate,  int? limit)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _FlashSearchRequest():
-return $default(_that.query,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.limit);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -205,95 +198,13 @@ return $default(_that.query,_that.sinceId,_that.untilId,_that.sinceDate,_that.un
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String query,  String? sinceId,  String? untilId,  int? sinceDate,  int? untilDate,  int? limit)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _FlashSearchRequest() when $default != null:
-return $default(_that.query,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.limit);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _FlashSearchRequest implements FlashSearchRequest {
-  const _FlashSearchRequest({required this.query, this.sinceId, this.untilId, this.sinceDate, this.untilDate, this.limit});
-  factory _FlashSearchRequest.fromJson(Map<String, dynamic> json) => _$FlashSearchRequestFromJson(json);
-
-@override final  String query;
-@override final  String? sinceId;
-@override final  String? untilId;
-@override final  int? sinceDate;
-@override final  int? untilDate;
-@override final  int? limit;
-
-/// Create a copy of FlashSearchRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$FlashSearchRequestCopyWith<_FlashSearchRequest> get copyWith => __$FlashSearchRequestCopyWithImpl<_FlashSearchRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$FlashSearchRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _FlashSearchRequest&&(identical(other.query, query) || other.query == query)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.limit, limit) || other.limit == limit));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,query,sinceId,untilId,sinceDate,untilDate,limit);
-}
-
-@override
-String toString() {
-    return 'FlashSearchRequest(query: $query, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, limit: $limit)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$FlashSearchRequestCopyWith<$Res> implements $FlashSearchRequestCopyWith<$Res> {
-  factory _$FlashSearchRequestCopyWith(_FlashSearchRequest value, $Res Function(_FlashSearchRequest) _then) = __$FlashSearchRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String query, String? sinceId, String? untilId, int? sinceDate, int? untilDate, int? limit
-});
-
-
-
-
-}
-/// @nodoc
-class __$FlashSearchRequestCopyWithImpl<$Res>
-    implements _$FlashSearchRequestCopyWith<$Res> {
-  __$FlashSearchRequestCopyWithImpl(this._self, this._then);
-
-  final _FlashSearchRequest _self;
-  final $Res Function(_FlashSearchRequest) _then;
-
-/// Create a copy of FlashSearchRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? query = null,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,Object? limit = freezed,}) {
-  return _then(_FlashSearchRequest(
-query: null == query ? _self.query : query // ignore: cast_nullable_to_non_nullable
-as String,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
-as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
-as String?,sinceDate: freezed == sinceDate ? _self.sinceDate : sinceDate // ignore: cast_nullable_to_non_nullable
-as int?,untilDate: freezed == untilDate ? _self.untilDate : untilDate // ignore: cast_nullable_to_non_nullable
-as int?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,
-  ));
-}
-
 
 }
 

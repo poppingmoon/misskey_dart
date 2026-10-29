@@ -4,9 +4,11 @@ part 'clips_delete_request.freezed.dart';
 part 'clips_delete_request.g.dart';
 
 @freezed
-abstract class ClipsDeleteRequest with _$ClipsDeleteRequest {
-  const factory({required String clipId}) = _ClipsDeleteRequest;
-
+@JsonSerializable()
+class const ClipsDeleteRequest({required final String clipId})
+    with _$ClipsDeleteRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$ClipsDeleteRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ClipsDeleteRequestToJson(this);
 }

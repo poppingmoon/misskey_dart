@@ -5,15 +5,16 @@ part 'clips_list_request.freezed.dart';
 part 'clips_list_request.g.dart';
 
 @freezed
-abstract class ClipsListRequest with _$ClipsListRequest {
-  const factory({
-    int? limit,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-  }) = _ClipsListRequest;
-
+@JsonSerializable()
+class const ClipsListRequest({
+  final int? limit,
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
+}) with _$ClipsListRequest {
   factory fromJson(Map<String, Object?> json) =>
       _$ClipsListRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ClipsListRequestToJson(this);
 }

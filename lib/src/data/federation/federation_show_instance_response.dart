@@ -7,41 +7,40 @@ part 'federation_show_instance_response.freezed.dart';
 part 'federation_show_instance_response.g.dart';
 
 @freezed
-abstract class FederationShowInstanceResponse
-    with _$FederationShowInstanceResponse {
-  const factory({
-    required String id,
-    @DateTimeConverter() required DateTime firstRetrievedAt,
-    required String host,
-    int? usersCount,
-    int? notesCount,
-    int? followingCount,
-    int? followersCount,
-    required bool isNotResponding,
-    required bool isSuspended,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    SuspensionState? suspensionState,
-    required bool isBlocked,
-    String? softwareName,
-    String? softwareVersion,
-    bool? openRegistrations,
-    String? name,
-    String? description,
-    String? maintainerName,
-    String? maintainerEmail,
-    bool? isSilenced,
-    bool? isMediaSilenced,
-    @NullableUriConverter() Uri? iconUrl,
-    @NullableUriConverter() Uri? faviconUrl,
-    @NullableColorConverter() int? themeColor,
-    @DateTimeConverter() DateTime? infoUpdatedAt,
-    @DateTimeConverter() DateTime? latestRequestReceivedAt,
-    String? moderationNote,
-  }) = _FederationShowInstanceResponse;
-
+@JsonSerializable()
+class const FederationShowInstanceResponse({
+  required final String id,
+  @DateTimeConverter() required final DateTime firstRetrievedAt,
+  required final String host,
+  final int? usersCount,
+  final int? notesCount,
+  final int? followingCount,
+  final int? followersCount,
+  required final bool isNotResponding,
+  required final bool isSuspended,
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final SuspensionState? suspensionState,
+  required final bool isBlocked,
+  final String? softwareName,
+  final String? softwareVersion,
+  final bool? openRegistrations,
+  final String? name,
+  final String? description,
+  final String? maintainerName,
+  final String? maintainerEmail,
+  final bool? isSilenced,
+  final bool? isMediaSilenced,
+  @NullableUriConverter() final Uri? iconUrl,
+  @NullableUriConverter() final Uri? faviconUrl,
+  @NullableColorConverter() final int? themeColor,
+  @DateTimeConverter() final DateTime? infoUpdatedAt,
+  @DateTimeConverter() final DateTime? latestRequestReceivedAt,
+  final String? moderationNote,
+}) with _$FederationShowInstanceResponse {
   factory fromJson(Map<String, dynamic> json) =>
       _$FederationShowInstanceResponseFromJson(json);
+
+  Map<String, dynamic> toJson() => _$FederationShowInstanceResponseToJson(this);
 }
 
 enum SuspensionState {

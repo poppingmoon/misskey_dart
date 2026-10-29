@@ -6,8 +6,8 @@ part of 'flash_search_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_FlashSearchRequest _$FlashSearchRequestFromJson(Map<String, dynamic> json) =>
-    _FlashSearchRequest(
+FlashSearchRequest _$FlashSearchRequestFromJson(Map<String, dynamic> json) =>
+    FlashSearchRequest(
       query: json['query'] as String,
       sinceId: json['sinceId'] as String?,
       untilId: json['untilId'] as String?,
@@ -16,7 +16,7 @@ _FlashSearchRequest _$FlashSearchRequestFromJson(Map<String, dynamic> json) =>
       limit: (json['limit'] as num?)?.toInt(),
     );
 
-Map<String, dynamic> _$FlashSearchRequestToJson(_FlashSearchRequest instance) =>
+Map<String, dynamic> _$FlashSearchRequestToJson(FlashSearchRequest instance) =>
     <String, dynamic>{
       'query': instance.query,
       'sinceId': instance.sinceId,

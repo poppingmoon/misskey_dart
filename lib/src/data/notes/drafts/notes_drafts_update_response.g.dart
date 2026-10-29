@@ -6,14 +6,14 @@ part of 'notes_drafts_update_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_NotesDraftsUpdateResponse _$NotesDraftsUpdateResponseFromJson(
+NotesDraftsUpdateResponse _$NotesDraftsUpdateResponseFromJson(
   Map<String, dynamic> json,
-) => _NotesDraftsUpdateResponse(
+) => NotesDraftsUpdateResponse(
   updatedDraft: NoteDraft.fromJson(
     json['updatedDraft'] as Map<String, dynamic>,
   ),
 );
 
 Map<String, dynamic> _$NotesDraftsUpdateResponseToJson(
-  _NotesDraftsUpdateResponse instance,
+  NotesDraftsUpdateResponse instance,
 ) => <String, dynamic>{'updatedDraft': instance.updatedDraft.toJson()};

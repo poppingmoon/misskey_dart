@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$GetOnlineUsersCountResponse {
 
- int get count;
+
 /// Create a copy of GetOnlineUsersCountResponse
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $GetOnlineUsersCountResponseCopyWith<GetOnlineUsersCountResponse> get copyWith => _$GetOnlineUsersCountResponseCopyWithImpl<GetOnlineUsersCountResponse>(this as GetOnlineUsersCountResponse, _$identity);
 
-  /// Serializes this GetOnlineUsersCountResponse to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -95,11 +93,10 @@ extension GetOnlineUsersCountResponsePatterns on GetOnlineUsersCountResponse {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _GetOnlineUsersCountResponse value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _GetOnlineUsersCountResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -117,11 +114,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _GetOnlineUsersCountResponse value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _GetOnlineUsersCountResponse():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -138,11 +134,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _GetOnlineUsersCountResponse value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _GetOnlineUsersCountResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -159,10 +154,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int count)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _GetOnlineUsersCountResponse() when $default != null:
-return $default(_that.count);case _:
+case _:
   return orElse();
 
 }
@@ -180,10 +174,9 @@ return $default(_that.count);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int count)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _GetOnlineUsersCountResponse():
-return $default(_that.count);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -200,85 +193,13 @@ return $default(_that.count);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int count)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _GetOnlineUsersCountResponse() when $default != null:
-return $default(_that.count);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _GetOnlineUsersCountResponse implements GetOnlineUsersCountResponse {
-  const _GetOnlineUsersCountResponse({required this.count});
-  factory _GetOnlineUsersCountResponse.fromJson(Map<String, dynamic> json) => _$GetOnlineUsersCountResponseFromJson(json);
-
-@override final  int count;
-
-/// Create a copy of GetOnlineUsersCountResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$GetOnlineUsersCountResponseCopyWith<_GetOnlineUsersCountResponse> get copyWith => __$GetOnlineUsersCountResponseCopyWithImpl<_GetOnlineUsersCountResponse>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$GetOnlineUsersCountResponseToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _GetOnlineUsersCountResponse&&(identical(other.count, count) || other.count == count));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,count);
-}
-
-@override
-String toString() {
-    return 'GetOnlineUsersCountResponse(count: $count)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$GetOnlineUsersCountResponseCopyWith<$Res> implements $GetOnlineUsersCountResponseCopyWith<$Res> {
-  factory _$GetOnlineUsersCountResponseCopyWith(_GetOnlineUsersCountResponse value, $Res Function(_GetOnlineUsersCountResponse) _then) = __$GetOnlineUsersCountResponseCopyWithImpl;
-@override @useResult
-$Res call({
- int count
-});
-
-
-
-
-}
-/// @nodoc
-class __$GetOnlineUsersCountResponseCopyWithImpl<$Res>
-    implements _$GetOnlineUsersCountResponseCopyWith<$Res> {
-  __$GetOnlineUsersCountResponseCopyWithImpl(this._self, this._then);
-
-  final _GetOnlineUsersCountResponse _self;
-  final $Res Function(_GetOnlineUsersCountResponse) _then;
-
-/// Create a copy of GetOnlineUsersCountResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? count = null,}) {
-  return _then(_GetOnlineUsersCountResponse(
-count: null == count ? _self.count : count // ignore: cast_nullable_to_non_nullable
-as int,
-  ));
-}
-
 
 }
 

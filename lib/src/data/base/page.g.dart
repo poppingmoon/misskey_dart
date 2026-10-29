@@ -6,7 +6,7 @@ part of 'page.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_Page _$PageFromJson(Map<String, dynamic> json) => _Page(
+Page _$PageFromJson(Map<String, dynamic> json) => Page(
   id: json['id'] as String,
   createdAt: const DateTimeConverter().fromJson(json['createdAt'] as String),
   updatedAt: const DateTimeConverter().fromJson(json['updatedAt'] as String),
@@ -43,7 +43,7 @@ _Page _$PageFromJson(Map<String, dynamic> json) => _Page(
   ),
 );
 
-Map<String, dynamic> _$PageToJson(_Page instance) => <String, dynamic>{
+Map<String, dynamic> _$PageToJson(Page instance) => <String, dynamic>{
   'id': instance.id,
   'createdAt': const DateTimeConverter().toJson(instance.createdAt),
   'updatedAt': const DateTimeConverter().toJson(instance.updatedAt),
@@ -71,7 +71,7 @@ const _$PageVisibilityEnumMap = {
   PageVisibility.private: 'private',
 };
 
-_PageText _$PageTextFromJson(Map<String, dynamic> json) => _PageText(
+PageText _$PageTextFromJson(Map<String, dynamic> json) => PageText(
   id: json['id'] as String?,
   type:
       $enumDecodeNullable(_$PageContentTypeEnumMap, json['type']) ??
@@ -79,7 +79,7 @@ _PageText _$PageTextFromJson(Map<String, dynamic> json) => _PageText(
   text: json['text'] as String?,
 );
 
-Map<String, dynamic> _$PageTextToJson(_PageText instance) => <String, dynamic>{
+Map<String, dynamic> _$PageTextToJson(PageText instance) => <String, dynamic>{
   'id': instance.id,
   'type': _$PageContentTypeEnumMap[instance.type],
   'text': instance.text,
@@ -103,7 +103,7 @@ const _$PageContentTypeEnumMap = {
   PageContentType.post: 'post',
 };
 
-_PageSection _$PageSectionFromJson(Map<String, dynamic> json) => _PageSection(
+PageSection _$PageSectionFromJson(Map<String, dynamic> json) => PageSection(
   id: json['id'] as String?,
   type:
       $enumDecodeNullable(_$PageContentTypeEnumMap, json['type']) ??
@@ -116,7 +116,7 @@ _PageSection _$PageSectionFromJson(Map<String, dynamic> json) => _PageSection(
       .toList(),
 );
 
-Map<String, dynamic> _$PageSectionToJson(_PageSection instance) =>
+Map<String, dynamic> _$PageSectionToJson(PageSection instance) =>
     <String, dynamic>{
       'id': instance.id,
       'type': _$PageContentTypeEnumMap[instance.type],
@@ -126,7 +126,7 @@ Map<String, dynamic> _$PageSectionToJson(_PageSection instance) =>
           .toList(),
     };
 
-_PageImage _$PageImageFromJson(Map<String, dynamic> json) => _PageImage(
+PageImage _$PageImageFromJson(Map<String, dynamic> json) => PageImage(
   id: json['id'] as String?,
   type:
       $enumDecodeNullable(_$PageContentTypeEnumMap, json['type']) ??
@@ -134,14 +134,13 @@ _PageImage _$PageImageFromJson(Map<String, dynamic> json) => _PageImage(
   fileId: json['fileId'] as String?,
 );
 
-Map<String, dynamic> _$PageImageToJson(_PageImage instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'type': _$PageContentTypeEnumMap[instance.type],
-      'fileId': instance.fileId,
-    };
+Map<String, dynamic> _$PageImageToJson(PageImage instance) => <String, dynamic>{
+  'id': instance.id,
+  'type': _$PageContentTypeEnumMap[instance.type],
+  'fileId': instance.fileId,
+};
 
-_PageNote _$PageNoteFromJson(Map<String, dynamic> json) => _PageNote(
+PageNote _$PageNoteFromJson(Map<String, dynamic> json) => PageNote(
   id: json['id'] as String?,
   type:
       $enumDecodeNullable(_$PageContentTypeEnumMap, json['type']) ??
@@ -150,14 +149,14 @@ _PageNote _$PageNoteFromJson(Map<String, dynamic> json) => _PageNote(
   detailed: json['detailed'] as bool?,
 );
 
-Map<String, dynamic> _$PageNoteToJson(_PageNote instance) => <String, dynamic>{
+Map<String, dynamic> _$PageNoteToJson(PageNote instance) => <String, dynamic>{
   'id': instance.id,
   'type': _$PageContentTypeEnumMap[instance.type],
   'note': instance.note,
   'detailed': instance.detailed,
 };
 
-_PageUnknown _$PageUnknownFromJson(Map<String, dynamic> json) => _PageUnknown(
+PageUnknown _$PageUnknownFromJson(Map<String, dynamic> json) => PageUnknown(
   id: json['id'] as String?,
   type: $enumDecodeNullable(
     _$PageContentTypeEnumMap,

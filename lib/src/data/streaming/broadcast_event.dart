@@ -5,13 +5,13 @@ part 'broadcast_event.freezed.dart';
 part 'broadcast_event.g.dart';
 
 @freezed
-abstract class BroadcastEvent with _$BroadcastEvent {
-  const factory({
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    BroadcastEventType? type,
-    required Map<String, dynamic> body,
-  }) = _BroadcastResponse;
-
+@JsonSerializable()
+class const BroadcastEvent({
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final BroadcastEventType? type,
+  required final Map<String, dynamic> body,
+}) with _$BroadcastEvent {
   factory fromJson(Map<String, Object?> json) => _$BroadcastEventFromJson(json);
+
+  Map<String, dynamic> toJson() => _$BroadcastEventToJson(this);
 }

@@ -7,50 +7,52 @@ part 'i_notifications_response.freezed.dart';
 part 'i_notifications_response.g.dart';
 
 @freezed
-abstract class INotificationsResponse with _$INotificationsResponse {
-  const factory({
-    required String id,
-    @DateTimeConverter() required DateTime createdAt,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    NotificationType? type,
-    String? noteId,
-    String? followRequestId,
-    String? reaction,
-    int? choice,
-    String? achievement,
-    String? body,
-    String? header,
-    @NullableUriConverter() Uri? icon,
-    String? appAccessTokenId,
-    ChatJoining? invitation,
-    String? userId,
-    UserLite? user,
-    Note? note,
-    RolesListResponse? role,
-    List<INotificationsReaction>? reactions,
-    List<UserLite>? users,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    UserExportableEntities? exportedEntity,
-    String? fileId,
-    String? message,
-    List<String>? noteIds, // CherryPick
-    String? errorType, // CherryPick
-    ScheduledNote? draft, // MisskeyIO
-  }) = _INotificationsResponse;
-
+@JsonSerializable()
+class const INotificationsResponse({
+  required final String id,
+  @DateTimeConverter() required final DateTime createdAt,
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final NotificationType? type,
+  final String? noteId,
+  final String? followRequestId,
+  final String? reaction,
+  final int? choice,
+  final String? achievement,
+  final String? body,
+  final String? header,
+  @NullableUriConverter() final Uri? icon,
+  final String? appAccessTokenId,
+  final ChatJoining? invitation,
+  final String? userId,
+  final UserLite? user,
+  final Note? note,
+  final RolesListResponse? role,
+  final List<INotificationsReaction>? reactions,
+  final List<UserLite>? users,
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final UserExportableEntities? exportedEntity,
+  final String? fileId,
+  final String? message,
+  final List<String>? noteIds, // CherryPick
+  final String? errorType, // CherryPick
+  final ScheduledNote? draft, // MisskeyIO
+}) with _$INotificationsResponse {
   factory fromJson(Map<String, Object?> json) =>
       _$INotificationsResponseFromJson(json);
+
+  Map<String, dynamic> toJson() => _$INotificationsResponseToJson(this);
 }
 
 @freezed
-abstract class INotificationsReaction with _$INotificationsReaction {
-  const factory({required UserLite user, required String reaction}) =
-      _INotificationsReaction;
-
+@JsonSerializable()
+class const INotificationsReaction({
+  required final UserLite user,
+  required final String reaction,
+}) with _$INotificationsReaction {
   factory fromJson(Map<String, Object?> json) =>
       _$INotificationsReactionFromJson(json);
+
+  Map<String, dynamic> toJson() => _$INotificationsReactionToJson(this);
 }
 
 enum UserExportableEntities {

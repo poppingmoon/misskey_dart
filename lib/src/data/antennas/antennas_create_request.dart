@@ -5,25 +5,26 @@ part 'antennas_create_request.freezed.dart';
 part 'antennas_create_request.g.dart';
 
 @freezed
-abstract class AntennasCreateRequest with _$AntennasCreateRequest {
-  const factory({
-    required String name,
-    required AntennaSource src,
-    String? userListId,
-    required List<List<String>> keywords,
-    required List<List<String>> excludeKeywords,
-    required List<String> users,
-    @Default([]) List<String> instances,
-    required bool caseSensitive,
-    required bool withReplies,
-    required bool withFile,
-    // Removed in Misskey 2024.5.0
-    bool? notify,
-    bool? localOnly,
-    bool? excludeBots,
-    bool? excludeNotesInSensitiveChannel,
-  }) = _AntennasCreateRequest;
-
+@JsonSerializable()
+class const AntennasCreateRequest({
+  required final String name,
+  required final AntennaSource src,
+  final String? userListId,
+  required final List<List<String>> keywords,
+  required final List<List<String>> excludeKeywords,
+  required final List<String> users,
+  final List<String> instances = const [],
+  required final bool caseSensitive,
+  required final bool withReplies,
+  required final bool withFile,
+  // Removed in Misskey 2024.5.0
+  final bool? notify,
+  final bool? localOnly,
+  final bool? excludeBots,
+  final bool? excludeNotesInSensitiveChannel,
+}) with _$AntennasCreateRequest {
   factory fromJson(Map<String, Object?> json) =>
       _$AntennasCreateRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$AntennasCreateRequestToJson(this);
 }

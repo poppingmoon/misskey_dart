@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ChannelsShowRequest {
 
- String get channelId;
+
 /// Create a copy of ChannelsShowRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $ChannelsShowRequestCopyWith<ChannelsShowRequest> get copyWith => _$ChannelsShowRequestCopyWithImpl<ChannelsShowRequest>(this as ChannelsShowRequest, _$identity);
 
-  /// Serializes this ChannelsShowRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -95,11 +93,10 @@ extension ChannelsShowRequestPatterns on ChannelsShowRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ChannelsShowRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _ChannelsShowRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -117,11 +114,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ChannelsShowRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChannelsShowRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -138,11 +134,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ChannelsShowRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChannelsShowRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -159,10 +154,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String channelId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _ChannelsShowRequest() when $default != null:
-return $default(_that.channelId);case _:
+case _:
   return orElse();
 
 }
@@ -180,10 +174,9 @@ return $default(_that.channelId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String channelId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChannelsShowRequest():
-return $default(_that.channelId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -200,85 +193,13 @@ return $default(_that.channelId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String channelId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChannelsShowRequest() when $default != null:
-return $default(_that.channelId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _ChannelsShowRequest implements ChannelsShowRequest {
-  const _ChannelsShowRequest({required this.channelId});
-  factory _ChannelsShowRequest.fromJson(Map<String, dynamic> json) => _$ChannelsShowRequestFromJson(json);
-
-@override final  String channelId;
-
-/// Create a copy of ChannelsShowRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ChannelsShowRequestCopyWith<_ChannelsShowRequest> get copyWith => __$ChannelsShowRequestCopyWithImpl<_ChannelsShowRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$ChannelsShowRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChannelsShowRequest&&(identical(other.channelId, channelId) || other.channelId == channelId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,channelId);
-}
-
-@override
-String toString() {
-    return 'ChannelsShowRequest(channelId: $channelId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ChannelsShowRequestCopyWith<$Res> implements $ChannelsShowRequestCopyWith<$Res> {
-  factory _$ChannelsShowRequestCopyWith(_ChannelsShowRequest value, $Res Function(_ChannelsShowRequest) _then) = __$ChannelsShowRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String channelId
-});
-
-
-
-
-}
-/// @nodoc
-class __$ChannelsShowRequestCopyWithImpl<$Res>
-    implements _$ChannelsShowRequestCopyWith<$Res> {
-  __$ChannelsShowRequestCopyWithImpl(this._self, this._then);
-
-  final _ChannelsShowRequest _self;
-  final $Res Function(_ChannelsShowRequest) _then;
-
-/// Create a copy of ChannelsShowRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? channelId = null,}) {
-  return _then(_ChannelsShowRequest(
-channelId: null == channelId ? _self.channelId : channelId // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

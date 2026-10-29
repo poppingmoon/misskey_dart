@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$Muting {
 
- String get id;@DateTimeConverter() DateTime get createdAt;@NullableDateTimeConverter() DateTime? get expiresAt; String get muteeId; UserDetailedNotMe get mutee;
+
 /// Create a copy of Muting
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $MutingCopyWith<Muting> get copyWith => _$MutingCopyWithImpl<Muting>(this as Muting, _$identity);
 
-  /// Serializes this Muting to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -108,11 +106,10 @@ extension MutingPatterns on Muting {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _Muting value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _Muting() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -130,11 +127,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _Muting value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _Muting():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -151,11 +147,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _Muting value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _Muting() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -172,10 +167,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? expiresAt,  String muteeId,  UserDetailedNotMe mutee)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _Muting() when $default != null:
-return $default(_that.id,_that.createdAt,_that.expiresAt,_that.muteeId,_that.mutee);case _:
+case _:
   return orElse();
 
 }
@@ -193,10 +187,9 @@ return $default(_that.id,_that.createdAt,_that.expiresAt,_that.muteeId,_that.mut
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? expiresAt,  String muteeId,  UserDetailedNotMe mutee)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _Muting():
-return $default(_that.id,_that.createdAt,_that.expiresAt,_that.muteeId,_that.mutee);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -213,103 +206,14 @@ return $default(_that.id,_that.createdAt,_that.expiresAt,_that.muteeId,_that.mut
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? expiresAt,  String muteeId,  UserDetailedNotMe mutee)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _Muting() when $default != null:
-return $default(_that.id,_that.createdAt,_that.expiresAt,_that.muteeId,_that.mutee);case _:
+case _:
   return null;
 
 }
 }
 
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _Muting implements Muting {
-  const _Muting({required this.id, @DateTimeConverter() required this.createdAt, @NullableDateTimeConverter() this.expiresAt, required this.muteeId, required this.mutee});
-  factory _Muting.fromJson(Map<String, dynamic> json) => _$MutingFromJson(json);
-
-@override final  String id;
-@override@DateTimeConverter() final  DateTime createdAt;
-@override@NullableDateTimeConverter() final  DateTime? expiresAt;
-@override final  String muteeId;
-@override final  UserDetailedNotMe mutee;
-
-/// Create a copy of Muting
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$MutingCopyWith<_Muting> get copyWith => __$MutingCopyWithImpl<_Muting>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$MutingToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Muting&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.expiresAt, expiresAt) || other.expiresAt == expiresAt)&&(identical(other.muteeId, muteeId) || other.muteeId == muteeId)&&(identical(other.mutee, mutee) || other.mutee == mutee));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,id,createdAt,expiresAt,muteeId,mutee);
-}
-
-@override
-String toString() {
-    return 'Muting(id: $id, createdAt: $createdAt, expiresAt: $expiresAt, muteeId: $muteeId, mutee: $mutee)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$MutingCopyWith<$Res> implements $MutingCopyWith<$Res> {
-  factory _$MutingCopyWith(_Muting value, $Res Function(_Muting) _then) = __$MutingCopyWithImpl;
-@override @useResult
-$Res call({
- String id,@DateTimeConverter() DateTime createdAt,@NullableDateTimeConverter() DateTime? expiresAt, String muteeId, UserDetailedNotMe mutee
-});
-
-
-@override $UserDetailedNotMeCopyWith<$Res> get mutee;
-
-}
-/// @nodoc
-class __$MutingCopyWithImpl<$Res>
-    implements _$MutingCopyWith<$Res> {
-  __$MutingCopyWithImpl(this._self, this._then);
-
-  final _Muting _self;
-  final $Res Function(_Muting) _then;
-
-/// Create a copy of Muting
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? createdAt = null,Object? expiresAt = freezed,Object? muteeId = null,Object? mutee = null,}) {
-  return _then(_Muting(
-id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
-as DateTime,expiresAt: freezed == expiresAt ? _self.expiresAt : expiresAt // ignore: cast_nullable_to_non_nullable
-as DateTime?,muteeId: null == muteeId ? _self.muteeId : muteeId // ignore: cast_nullable_to_non_nullable
-as String,mutee: null == mutee ? _self.mutee : mutee // ignore: cast_nullable_to_non_nullable
-as UserDetailedNotMe,
-  ));
-}
-
-/// Create a copy of Muting
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$UserDetailedNotMeCopyWith<$Res> get mutee {
-  
-  return $UserDetailedNotMeCopyWith<$Res>(_self.mutee, (value) {
-    return _then(_self.copyWith(mutee: value));
-  });
-}
 }
 
 // dart format on

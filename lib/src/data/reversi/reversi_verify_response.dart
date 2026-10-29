@@ -5,15 +5,16 @@ part 'reversi_verify_response.freezed.dart';
 part 'reversi_verify_response.g.dart';
 
 @freezed
-abstract class ReversiVerifyResponse with _$ReversiVerifyResponse {
-  const factory({
-    /// クライアントの盤面がサーバーとずれているかどうか。
-    required bool desynced,
+@JsonSerializable()
+class const ReversiVerifyResponse({
+  /// クライアントの盤面がサーバーとずれているかどうか。
+  required final bool desynced,
 
-    /// ずれていたときだけ入る、サーバー側の正しい対局情報。
-    ReversiShowGameResponse? game,
-  }) = _ReversiVerifyResponse;
-
+  /// ずれていたときだけ入る、サーバー側の正しい対局情報。
+  final ReversiShowGameResponse? game,
+}) with _$ReversiVerifyResponse {
   factory fromJson(Map<String, dynamic> json) =>
       _$ReversiVerifyResponseFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ReversiVerifyResponseToJson(this);
 }

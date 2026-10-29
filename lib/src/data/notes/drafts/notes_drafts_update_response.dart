@@ -5,9 +5,11 @@ part 'notes_drafts_update_response.freezed.dart';
 part 'notes_drafts_update_response.g.dart';
 
 @freezed
-abstract class NotesDraftsUpdateResponse with _$NotesDraftsUpdateResponse {
-  const factory({required NoteDraft updatedDraft}) = _NotesDraftsUpdateResponse;
-
+@JsonSerializable()
+class const NotesDraftsUpdateResponse({required final NoteDraft updatedDraft})
+    with _$NotesDraftsUpdateResponse {
   factory fromJson(Map<String, Object?> json) =>
       _$NotesDraftsUpdateResponseFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NotesDraftsUpdateResponseToJson(this);
 }

@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$SwRegisterRequest {
 
- String get endpoint; String get auth; String get publickey; bool? get sendReadMessage;
+
 /// Create a copy of SwRegisterRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $SwRegisterRequestCopyWith<SwRegisterRequest> get copyWith => _$SwRegisterRequestCopyWithImpl<SwRegisterRequest>(this as SwRegisterRequest, _$identity);
 
-  /// Serializes this SwRegisterRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -98,11 +96,10 @@ extension SwRegisterRequestPatterns on SwRegisterRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _SwRegisterRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _SwRegisterRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -120,11 +117,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _SwRegisterRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _SwRegisterRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -141,11 +137,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _SwRegisterRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _SwRegisterRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -162,10 +157,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String endpoint,  String auth,  String publickey,  bool? sendReadMessage)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _SwRegisterRequest() when $default != null:
-return $default(_that.endpoint,_that.auth,_that.publickey,_that.sendReadMessage);case _:
+case _:
   return orElse();
 
 }
@@ -183,10 +177,9 @@ return $default(_that.endpoint,_that.auth,_that.publickey,_that.sendReadMessage)
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String endpoint,  String auth,  String publickey,  bool? sendReadMessage)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _SwRegisterRequest():
-return $default(_that.endpoint,_that.auth,_that.publickey,_that.sendReadMessage);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -203,91 +196,13 @@ return $default(_that.endpoint,_that.auth,_that.publickey,_that.sendReadMessage)
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String endpoint,  String auth,  String publickey,  bool? sendReadMessage)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _SwRegisterRequest() when $default != null:
-return $default(_that.endpoint,_that.auth,_that.publickey,_that.sendReadMessage);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _SwRegisterRequest implements SwRegisterRequest {
-  const _SwRegisterRequest({required this.endpoint, required this.auth, required this.publickey, this.sendReadMessage});
-  factory _SwRegisterRequest.fromJson(Map<String, dynamic> json) => _$SwRegisterRequestFromJson(json);
-
-@override final  String endpoint;
-@override final  String auth;
-@override final  String publickey;
-@override final  bool? sendReadMessage;
-
-/// Create a copy of SwRegisterRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$SwRegisterRequestCopyWith<_SwRegisterRequest> get copyWith => __$SwRegisterRequestCopyWithImpl<_SwRegisterRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$SwRegisterRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _SwRegisterRequest&&(identical(other.endpoint, endpoint) || other.endpoint == endpoint)&&(identical(other.auth, auth) || other.auth == auth)&&(identical(other.publickey, publickey) || other.publickey == publickey)&&(identical(other.sendReadMessage, sendReadMessage) || other.sendReadMessage == sendReadMessage));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,endpoint,auth,publickey,sendReadMessage);
-}
-
-@override
-String toString() {
-    return 'SwRegisterRequest(endpoint: $endpoint, auth: $auth, publickey: $publickey, sendReadMessage: $sendReadMessage)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$SwRegisterRequestCopyWith<$Res> implements $SwRegisterRequestCopyWith<$Res> {
-  factory _$SwRegisterRequestCopyWith(_SwRegisterRequest value, $Res Function(_SwRegisterRequest) _then) = __$SwRegisterRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String endpoint, String auth, String publickey, bool? sendReadMessage
-});
-
-
-
-
-}
-/// @nodoc
-class __$SwRegisterRequestCopyWithImpl<$Res>
-    implements _$SwRegisterRequestCopyWith<$Res> {
-  __$SwRegisterRequestCopyWithImpl(this._self, this._then);
-
-  final _SwRegisterRequest _self;
-  final $Res Function(_SwRegisterRequest) _then;
-
-/// Create a copy of SwRegisterRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? endpoint = null,Object? auth = null,Object? publickey = null,Object? sendReadMessage = freezed,}) {
-  return _then(_SwRegisterRequest(
-endpoint: null == endpoint ? _self.endpoint : endpoint // ignore: cast_nullable_to_non_nullable
-as String,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,publickey: null == publickey ? _self.publickey : publickey // ignore: cast_nullable_to_non_nullable
-as String,sendReadMessage: freezed == sendReadMessage ? _self.sendReadMessage : sendReadMessage // ignore: cast_nullable_to_non_nullable
-as bool?,
-  ));
-}
-
 
 }
 

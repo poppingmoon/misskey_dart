@@ -4,9 +4,11 @@ part 'drive_folders_show_request.freezed.dart';
 part 'drive_folders_show_request.g.dart';
 
 @freezed
-abstract class DriveFoldersShowRequest with _$DriveFoldersShowRequest {
-  const factory({required String folderId}) = _DriveFoldersShowRequest;
-
+@JsonSerializable()
+class const DriveFoldersShowRequest({required final String folderId})
+    with _$DriveFoldersShowRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$DriveFoldersShowRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$DriveFoldersShowRequestToJson(this);
 }

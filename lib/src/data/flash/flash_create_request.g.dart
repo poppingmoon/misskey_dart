@@ -6,8 +6,8 @@ part of 'flash_create_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_FlashCreateRequest _$FlashCreateRequestFromJson(Map<String, dynamic> json) =>
-    _FlashCreateRequest(
+FlashCreateRequest _$FlashCreateRequestFromJson(Map<String, dynamic> json) =>
+    FlashCreateRequest(
       title: json['title'] as String,
       summary: json['summary'] as String,
       script: json['script'] as String,
@@ -20,7 +20,7 @@ _FlashCreateRequest _$FlashCreateRequestFromJson(Map<String, dynamic> json) =>
       ),
     );
 
-Map<String, dynamic> _$FlashCreateRequestToJson(_FlashCreateRequest instance) =>
+Map<String, dynamic> _$FlashCreateRequestToJson(FlashCreateRequest instance) =>
     <String, dynamic>{
       'title': instance.title,
       'summary': instance.summary,

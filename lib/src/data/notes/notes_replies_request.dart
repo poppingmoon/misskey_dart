@@ -5,16 +5,17 @@ part 'notes_replies_request.freezed.dart';
 part 'notes_replies_request.g.dart';
 
 @freezed
-abstract class NotesRepliesRequest with _$NotesRepliesRequest {
-  const factory({
-    required String noteId,
-    int? limit,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-  }) = _NotesRepliesRequest;
-
+@JsonSerializable()
+class const NotesRepliesRequest({
+  required final String noteId,
+  final int? limit,
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
+}) with _$NotesRepliesRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$NotesRepliesRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NotesRepliesRequestToJson(this);
 }

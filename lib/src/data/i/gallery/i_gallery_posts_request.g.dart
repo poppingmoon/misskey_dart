@@ -6,9 +6,9 @@ part of 'i_gallery_posts_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_IGalleryPostsRequest _$IGalleryPostsRequestFromJson(
+IGalleryPostsRequest _$IGalleryPostsRequestFromJson(
   Map<String, dynamic> json,
-) => _IGalleryPostsRequest(
+) => IGalleryPostsRequest(
   limit: (json['limit'] as num?)?.toInt(),
   sinceId: json['sinceId'] as String?,
   untilId: json['untilId'] as String?,
@@ -23,7 +23,7 @@ _IGalleryPostsRequest _$IGalleryPostsRequestFromJson(
 );
 
 Map<String, dynamic> _$IGalleryPostsRequestToJson(
-  _IGalleryPostsRequest instance,
+  IGalleryPostsRequest instance,
 ) => <String, dynamic>{
   'limit': instance.limit,
   'sinceId': instance.sinceId,

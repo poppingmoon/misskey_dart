@@ -6,9 +6,9 @@ part of 'users_get_skeb_status_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_UsersGetSkebStatusResponse _$UsersGetSkebStatusResponseFromJson(
+UsersGetSkebStatusResponse _$UsersGetSkebStatusResponseFromJson(
   Map<String, dynamic> json,
-) => _UsersGetSkebStatusResponse(
+) => UsersGetSkebStatusResponse(
   screenName: json['screenName'] as String,
   isCreator: json['isCreator'] as bool,
   isAcceptable: json['isAcceptable'] as bool,
@@ -20,7 +20,7 @@ _UsersGetSkebStatusResponse _$UsersGetSkebStatusResponseFromJson(
 );
 
 Map<String, dynamic> _$UsersGetSkebStatusResponseToJson(
-  _UsersGetSkebStatusResponse instance,
+  UsersGetSkebStatusResponse instance,
 ) => <String, dynamic>{
   'screenName': instance.screenName,
   'isCreator': instance.isCreator,
@@ -30,8 +30,8 @@ Map<String, dynamic> _$UsersGetSkebStatusResponseToJson(
   'skills': instance.skills.map((e) => e.toJson()).toList(),
 };
 
-_SkebStatusSkill _$SkebStatusSkillFromJson(Map<String, dynamic> json) =>
-    _SkebStatusSkill(
+SkebStatusSkill _$SkebStatusSkillFromJson(Map<String, dynamic> json) =>
+    SkebStatusSkill(
       amount: (json['amount'] as num).toInt(),
       genre: $enumDecodeNullable(
         _$SkebStatusSkillGenreEnumMap,
@@ -40,7 +40,7 @@ _SkebStatusSkill _$SkebStatusSkillFromJson(Map<String, dynamic> json) =>
       ),
     );
 
-Map<String, dynamic> _$SkebStatusSkillToJson(_SkebStatusSkill instance) =>
+Map<String, dynamic> _$SkebStatusSkillToJson(SkebStatusSkill instance) =>
     <String, dynamic>{
       'amount': instance.amount,
       'genre': _$SkebStatusSkillGenreEnumMap[instance.genre],

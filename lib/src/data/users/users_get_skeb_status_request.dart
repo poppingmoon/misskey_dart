@@ -4,9 +4,11 @@ part 'users_get_skeb_status_request.freezed.dart';
 part 'users_get_skeb_status_request.g.dart';
 
 @freezed
-abstract class UsersGetSkebStatusRequest with _$UsersGetSkebStatusRequest {
-  const factory({required String userId}) = _UsersGetSkebStatusRequest;
-
+@JsonSerializable()
+class const UsersGetSkebStatusRequest({required final String userId})
+    with _$UsersGetSkebStatusRequest {
   factory fromJson(Map<String, Object?> json) =>
       _$UsersGetSkebStatusRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UsersGetSkebStatusRequestToJson(this);
 }

@@ -6,34 +6,34 @@ part 'note_schedule.freezed.dart';
 part 'note_schedule.g.dart';
 
 @freezed
-abstract class NoteSchedule with _$NoteSchedule {
-  const factory({
-    required String id,
-    required NoteScheduleNote note,
-    required String userId,
-    @DateTimeConverter() required DateTime scheduledAt,
-  }) = _NoteSchedule;
-
+@JsonSerializable()
+class const NoteSchedule({
+  required final String id,
+  required final NoteScheduleNote note,
+  required final String userId,
+  @DateTimeConverter() required final DateTime scheduledAt,
+}) with _$NoteSchedule {
   factory fromJson(Map<String, dynamic> json) => _$NoteScheduleFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NoteScheduleToJson(this);
 }
 
 @freezed
-abstract class NoteScheduleNote with _$NoteScheduleNote {
-  const factory({
-    String? text,
-    String? cw,
-    @Default([]) List<String> fileIds,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    NoteVisibility? visibility,
-    @Default([]) List<UserLite> visibleUsers,
-    required UserLite user,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    ReactionAcceptance? reactionAcceptance,
-    bool? isSchedule,
-  }) = _NoteScheduleNote;
-
+@JsonSerializable()
+class const NoteScheduleNote({
+  final String? text,
+  final String? cw,
+  final List<String> fileIds = const [],
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final NoteVisibility? visibility,
+  final List<UserLite> visibleUsers = const [],
+  required final UserLite user,
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final ReactionAcceptance? reactionAcceptance,
+  final bool? isSchedule,
+}) with _$NoteScheduleNote {
   factory fromJson(Map<String, dynamic> json) =>
       _$NoteScheduleNoteFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NoteScheduleNoteToJson(this);
 }

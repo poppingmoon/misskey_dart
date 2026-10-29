@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$AntennasDeleteRequest {
 
- String get antennaId;
+
 /// Create a copy of AntennasDeleteRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $AntennasDeleteRequestCopyWith<AntennasDeleteRequest> get copyWith => _$AntennasDeleteRequestCopyWithImpl<AntennasDeleteRequest>(this as AntennasDeleteRequest, _$identity);
 
-  /// Serializes this AntennasDeleteRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -95,11 +93,10 @@ extension AntennasDeleteRequestPatterns on AntennasDeleteRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _AntennasDeleteRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _AntennasDeleteRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -117,11 +114,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _AntennasDeleteRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _AntennasDeleteRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -138,11 +134,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _AntennasDeleteRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _AntennasDeleteRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -159,10 +154,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String antennaId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _AntennasDeleteRequest() when $default != null:
-return $default(_that.antennaId);case _:
+case _:
   return orElse();
 
 }
@@ -180,10 +174,9 @@ return $default(_that.antennaId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String antennaId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _AntennasDeleteRequest():
-return $default(_that.antennaId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -200,85 +193,13 @@ return $default(_that.antennaId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String antennaId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _AntennasDeleteRequest() when $default != null:
-return $default(_that.antennaId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _AntennasDeleteRequest implements AntennasDeleteRequest {
-  const _AntennasDeleteRequest({required this.antennaId});
-  factory _AntennasDeleteRequest.fromJson(Map<String, dynamic> json) => _$AntennasDeleteRequestFromJson(json);
-
-@override final  String antennaId;
-
-/// Create a copy of AntennasDeleteRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$AntennasDeleteRequestCopyWith<_AntennasDeleteRequest> get copyWith => __$AntennasDeleteRequestCopyWithImpl<_AntennasDeleteRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$AntennasDeleteRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _AntennasDeleteRequest&&(identical(other.antennaId, antennaId) || other.antennaId == antennaId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,antennaId);
-}
-
-@override
-String toString() {
-    return 'AntennasDeleteRequest(antennaId: $antennaId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$AntennasDeleteRequestCopyWith<$Res> implements $AntennasDeleteRequestCopyWith<$Res> {
-  factory _$AntennasDeleteRequestCopyWith(_AntennasDeleteRequest value, $Res Function(_AntennasDeleteRequest) _then) = __$AntennasDeleteRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String antennaId
-});
-
-
-
-
-}
-/// @nodoc
-class __$AntennasDeleteRequestCopyWithImpl<$Res>
-    implements _$AntennasDeleteRequestCopyWith<$Res> {
-  __$AntennasDeleteRequestCopyWithImpl(this._self, this._then);
-
-  final _AntennasDeleteRequest _self;
-  final $Res Function(_AntennasDeleteRequest) _then;
-
-/// Create a copy of AntennasDeleteRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? antennaId = null,}) {
-  return _then(_AntennasDeleteRequest(
-antennaId: null == antennaId ? _self.antennaId : antennaId // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

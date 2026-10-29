@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ChatRoomsMuteRequest {
 
- String get roomId; bool get mute;
+
 /// Create a copy of ChatRoomsMuteRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $ChatRoomsMuteRequestCopyWith<ChatRoomsMuteRequest> get copyWith => _$ChatRoomsMuteRequestCopyWithImpl<ChatRoomsMuteRequest>(this as ChatRoomsMuteRequest, _$identity);
 
-  /// Serializes this ChatRoomsMuteRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -96,11 +94,10 @@ extension ChatRoomsMuteRequestPatterns on ChatRoomsMuteRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ChatRoomsMuteRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _ChatRoomsMuteRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -118,11 +115,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ChatRoomsMuteRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChatRoomsMuteRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -139,11 +135,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ChatRoomsMuteRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChatRoomsMuteRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -160,10 +155,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String roomId,  bool mute)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _ChatRoomsMuteRequest() when $default != null:
-return $default(_that.roomId,_that.mute);case _:
+case _:
   return orElse();
 
 }
@@ -181,10 +175,9 @@ return $default(_that.roomId,_that.mute);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String roomId,  bool mute)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChatRoomsMuteRequest():
-return $default(_that.roomId,_that.mute);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -201,87 +194,13 @@ return $default(_that.roomId,_that.mute);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String roomId,  bool mute)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChatRoomsMuteRequest() when $default != null:
-return $default(_that.roomId,_that.mute);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _ChatRoomsMuteRequest implements ChatRoomsMuteRequest {
-  const _ChatRoomsMuteRequest({required this.roomId, required this.mute});
-  factory _ChatRoomsMuteRequest.fromJson(Map<String, dynamic> json) => _$ChatRoomsMuteRequestFromJson(json);
-
-@override final  String roomId;
-@override final  bool mute;
-
-/// Create a copy of ChatRoomsMuteRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ChatRoomsMuteRequestCopyWith<_ChatRoomsMuteRequest> get copyWith => __$ChatRoomsMuteRequestCopyWithImpl<_ChatRoomsMuteRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$ChatRoomsMuteRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatRoomsMuteRequest&&(identical(other.roomId, roomId) || other.roomId == roomId)&&(identical(other.mute, mute) || other.mute == mute));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,roomId,mute);
-}
-
-@override
-String toString() {
-    return 'ChatRoomsMuteRequest(roomId: $roomId, mute: $mute)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ChatRoomsMuteRequestCopyWith<$Res> implements $ChatRoomsMuteRequestCopyWith<$Res> {
-  factory _$ChatRoomsMuteRequestCopyWith(_ChatRoomsMuteRequest value, $Res Function(_ChatRoomsMuteRequest) _then) = __$ChatRoomsMuteRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String roomId, bool mute
-});
-
-
-
-
-}
-/// @nodoc
-class __$ChatRoomsMuteRequestCopyWithImpl<$Res>
-    implements _$ChatRoomsMuteRequestCopyWith<$Res> {
-  __$ChatRoomsMuteRequestCopyWithImpl(this._self, this._then);
-
-  final _ChatRoomsMuteRequest _self;
-  final $Res Function(_ChatRoomsMuteRequest) _then;
-
-/// Create a copy of ChatRoomsMuteRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? roomId = null,Object? mute = null,}) {
-  return _then(_ChatRoomsMuteRequest(
-roomId: null == roomId ? _self.roomId : roomId // ignore: cast_nullable_to_non_nullable
-as String,mute: null == mute ? _self.mute : mute // ignore: cast_nullable_to_non_nullable
-as bool,
-  ));
-}
-
 
 }
 

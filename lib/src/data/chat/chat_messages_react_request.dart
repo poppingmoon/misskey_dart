@@ -4,10 +4,13 @@ part 'chat_messages_react_request.freezed.dart';
 part 'chat_messages_react_request.g.dart';
 
 @freezed
-abstract class ChatMessagesReactRequest with _$ChatMessagesReactRequest {
-  const factory({required String messageId, required String reaction}) =
-      _ChatMessagesReactRequest;
-
+@JsonSerializable()
+class const ChatMessagesReactRequest({
+  required final String messageId,
+  required final String reaction,
+}) with _$ChatMessagesReactRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$ChatMessagesReactRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ChatMessagesReactRequestToJson(this);
 }

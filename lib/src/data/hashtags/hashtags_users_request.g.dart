@@ -6,9 +6,9 @@ part of 'hashtags_users_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_HashtagsUsersRequest _$HashtagsUsersRequestFromJson(
+HashtagsUsersRequest _$HashtagsUsersRequestFromJson(
   Map<String, dynamic> json,
-) => _HashtagsUsersRequest(
+) => HashtagsUsersRequest(
   tag: json['tag'] as String,
   limit: (json['limit'] as num?)?.toInt(),
   sort: const UsersSortConverter().fromJson(json['sort'] as String),
@@ -17,7 +17,7 @@ _HashtagsUsersRequest _$HashtagsUsersRequestFromJson(
 );
 
 Map<String, dynamic> _$HashtagsUsersRequestToJson(
-  _HashtagsUsersRequest instance,
+  HashtagsUsersRequest instance,
 ) => <String, dynamic>{
   'tag': instance.tag,
   'limit': instance.limit,

@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$NotesPollsVoteRequest {
 
- String get noteId; int get choice;
+
 /// Create a copy of NotesPollsVoteRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $NotesPollsVoteRequestCopyWith<NotesPollsVoteRequest> get copyWith => _$NotesPollsVoteRequestCopyWithImpl<NotesPollsVoteRequest>(this as NotesPollsVoteRequest, _$identity);
 
-  /// Serializes this NotesPollsVoteRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -96,11 +94,10 @@ extension NotesPollsVoteRequestPatterns on NotesPollsVoteRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _NotesPollsVoteRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _NotesPollsVoteRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -118,11 +115,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _NotesPollsVoteRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _NotesPollsVoteRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -139,11 +135,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _NotesPollsVoteRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _NotesPollsVoteRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -160,10 +155,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String noteId,  int choice)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _NotesPollsVoteRequest() when $default != null:
-return $default(_that.noteId,_that.choice);case _:
+case _:
   return orElse();
 
 }
@@ -181,10 +175,9 @@ return $default(_that.noteId,_that.choice);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String noteId,  int choice)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _NotesPollsVoteRequest():
-return $default(_that.noteId,_that.choice);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -201,87 +194,13 @@ return $default(_that.noteId,_that.choice);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String noteId,  int choice)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _NotesPollsVoteRequest() when $default != null:
-return $default(_that.noteId,_that.choice);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _NotesPollsVoteRequest implements NotesPollsVoteRequest {
-  const _NotesPollsVoteRequest({required this.noteId, required this.choice});
-  factory _NotesPollsVoteRequest.fromJson(Map<String, dynamic> json) => _$NotesPollsVoteRequestFromJson(json);
-
-@override final  String noteId;
-@override final  int choice;
-
-/// Create a copy of NotesPollsVoteRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$NotesPollsVoteRequestCopyWith<_NotesPollsVoteRequest> get copyWith => __$NotesPollsVoteRequestCopyWithImpl<_NotesPollsVoteRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$NotesPollsVoteRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesPollsVoteRequest&&(identical(other.noteId, noteId) || other.noteId == noteId)&&(identical(other.choice, choice) || other.choice == choice));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,noteId,choice);
-}
-
-@override
-String toString() {
-    return 'NotesPollsVoteRequest(noteId: $noteId, choice: $choice)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$NotesPollsVoteRequestCopyWith<$Res> implements $NotesPollsVoteRequestCopyWith<$Res> {
-  factory _$NotesPollsVoteRequestCopyWith(_NotesPollsVoteRequest value, $Res Function(_NotesPollsVoteRequest) _then) = __$NotesPollsVoteRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String noteId, int choice
-});
-
-
-
-
-}
-/// @nodoc
-class __$NotesPollsVoteRequestCopyWithImpl<$Res>
-    implements _$NotesPollsVoteRequestCopyWith<$Res> {
-  __$NotesPollsVoteRequestCopyWithImpl(this._self, this._then);
-
-  final _NotesPollsVoteRequest _self;
-  final $Res Function(_NotesPollsVoteRequest) _then;
-
-/// Create a copy of NotesPollsVoteRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? noteId = null,Object? choice = null,}) {
-  return _then(_NotesPollsVoteRequest(
-noteId: null == noteId ? _self.noteId : noteId // ignore: cast_nullable_to_non_nullable
-as String,choice: null == choice ? _self.choice : choice // ignore: cast_nullable_to_non_nullable
-as int,
-  ));
-}
-
 
 }
 

@@ -6,17 +6,16 @@ part of 'note_schedule.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_NoteSchedule _$NoteScheduleFromJson(Map<String, dynamic> json) =>
-    _NoteSchedule(
-      id: json['id'] as String,
-      note: NoteScheduleNote.fromJson(json['note'] as Map<String, dynamic>),
-      userId: json['userId'] as String,
-      scheduledAt: const DateTimeConverter().fromJson(
-        json['scheduledAt'] as String,
-      ),
-    );
+NoteSchedule _$NoteScheduleFromJson(Map<String, dynamic> json) => NoteSchedule(
+  id: json['id'] as String,
+  note: NoteScheduleNote.fromJson(json['note'] as Map<String, dynamic>),
+  userId: json['userId'] as String,
+  scheduledAt: const DateTimeConverter().fromJson(
+    json['scheduledAt'] as String,
+  ),
+);
 
-Map<String, dynamic> _$NoteScheduleToJson(_NoteSchedule instance) =>
+Map<String, dynamic> _$NoteScheduleToJson(NoteSchedule instance) =>
     <String, dynamic>{
       'id': instance.id,
       'note': instance.note.toJson(),
@@ -24,8 +23,8 @@ Map<String, dynamic> _$NoteScheduleToJson(_NoteSchedule instance) =>
       'scheduledAt': const DateTimeConverter().toJson(instance.scheduledAt),
     };
 
-_NoteScheduleNote _$NoteScheduleNoteFromJson(Map<String, dynamic> json) =>
-    _NoteScheduleNote(
+NoteScheduleNote _$NoteScheduleNoteFromJson(Map<String, dynamic> json) =>
+    NoteScheduleNote(
       text: json['text'] as String?,
       cw: json['cw'] as String?,
       fileIds:
@@ -52,7 +51,7 @@ _NoteScheduleNote _$NoteScheduleNoteFromJson(Map<String, dynamic> json) =>
       isSchedule: json['isSchedule'] as bool?,
     );
 
-Map<String, dynamic> _$NoteScheduleNoteToJson(_NoteScheduleNote instance) =>
+Map<String, dynamic> _$NoteScheduleNoteToJson(NoteScheduleNote instance) =>
     <String, dynamic>{
       'text': instance.text,
       'cw': instance.cw,

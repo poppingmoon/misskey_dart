@@ -4,9 +4,11 @@ part 'channels_favorite_request.freezed.dart';
 part 'channels_favorite_request.g.dart';
 
 @freezed
-abstract class ChannelsFavoriteRequest with _$ChannelsFavoriteRequest {
-  const factory({required String channelId}) = _ChannelsFavoriteRequest;
-
+@JsonSerializable()
+class const ChannelsFavoriteRequest({required final String channelId})
+    with _$ChannelsFavoriteRequest {
   factory fromJson(Map<String, Object?> json) =>
       _$ChannelsFavoriteRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ChannelsFavoriteRequestToJson(this);
 }

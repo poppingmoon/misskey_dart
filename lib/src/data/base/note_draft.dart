@@ -7,45 +7,46 @@ part 'note_draft.freezed.dart';
 part 'note_draft.g.dart';
 
 @freezed
-abstract class NoteDraft with _$NoteDraft {
-  const factory({
-    required String id,
-    @DateTimeConverter() required DateTime createdAt,
-    String? text,
-    String? cw,
-    required String userId,
-    required UserLite user,
-    String? replyId,
-    String? renoteId,
-    Note? reply,
-    Note? renote,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    NoteVisibility? visibility,
-    List<String>? visibleUserIds,
-    List<String>? fileIds,
-    List<DriveFile>? files,
-    String? hashtag,
-    NoteDraftPoll? poll,
-    String? channelId,
-    NoteChannelInfo? channel,
-    bool? localOnly,
-    ReactionAcceptance? reactionAcceptance,
-    @EpocTimeDateTimeConverter() DateTime? scheduledAt,
-    bool? isActuallyScheduled,
-  }) = _NoteDraft;
-
+@JsonSerializable()
+class const NoteDraft({
+  required final String id,
+  @DateTimeConverter() required final DateTime createdAt,
+  final String? text,
+  final String? cw,
+  required final String userId,
+  required final UserLite user,
+  final String? replyId,
+  final String? renoteId,
+  final Note? reply,
+  final Note? renote,
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final NoteVisibility? visibility,
+  final List<String>? visibleUserIds,
+  final List<String>? fileIds,
+  final List<DriveFile>? files,
+  final String? hashtag,
+  final NoteDraftPoll? poll,
+  final String? channelId,
+  final NoteChannelInfo? channel,
+  final bool? localOnly,
+  final ReactionAcceptance? reactionAcceptance,
+  @EpocTimeDateTimeConverter() final DateTime? scheduledAt,
+  final bool? isActuallyScheduled,
+}) with _$NoteDraft {
   factory fromJson(Map<String, Object?> json) => _$NoteDraftFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NoteDraftToJson(this);
 }
 
 @freezed
-abstract class NoteDraftPoll with _$NoteDraftPoll {
-  const factory({
-    @DateTimeConverter() DateTime? expiresAt,
-    @DurationConverter() Duration? expiredAfter,
-    required bool multiple,
-    required List<String> choices,
-  }) = _NoteDraftPoll;
-
+@JsonSerializable()
+class const NoteDraftPoll({
+  @DateTimeConverter() final DateTime? expiresAt,
+  @DurationConverter() final Duration? expiredAfter,
+  required final bool multiple,
+  required final List<String> choices,
+}) with _$NoteDraftPoll {
   factory fromJson(Map<String, dynamic> json) => _$NoteDraftPollFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NoteDraftPollToJson(this);
 }

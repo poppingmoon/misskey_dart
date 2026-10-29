@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$NotesEditRequest {
 
- String get editId; NoteVisibility? get visibility; List<String>? get visibleUserIds; String? get text; String? get cw; bool? get localOnly; List<String>? get fileIds; String? get replyId; String? get renoteId; String? get channelId; NotesCreatePollRequest? get poll;
+
 /// Create a copy of NotesEditRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $NotesEditRequestCopyWith<NotesEditRequest> get copyWith => _$NotesEditRequestCopyWithImpl<NotesEditRequest>(this as NotesEditRequest, _$identity);
 
-  /// Serializes this NotesEditRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -117,11 +115,10 @@ extension NotesEditRequestPatterns on NotesEditRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _NotesEditRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _NotesEditRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -139,11 +136,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _NotesEditRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _NotesEditRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -160,11 +156,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _NotesEditRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _NotesEditRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -181,10 +176,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String editId,  NoteVisibility? visibility,  List<String>? visibleUserIds,  String? text,  String? cw,  bool? localOnly,  List<String>? fileIds,  String? replyId,  String? renoteId,  String? channelId,  NotesCreatePollRequest? poll)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _NotesEditRequest() when $default != null:
-return $default(_that.editId,_that.visibility,_that.visibleUserIds,_that.text,_that.cw,_that.localOnly,_that.fileIds,_that.replyId,_that.renoteId,_that.channelId,_that.poll);case _:
+case _:
   return orElse();
 
 }
@@ -202,10 +196,9 @@ return $default(_that.editId,_that.visibility,_that.visibleUserIds,_that.text,_t
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String editId,  NoteVisibility? visibility,  List<String>? visibleUserIds,  String? text,  String? cw,  bool? localOnly,  List<String>? fileIds,  String? replyId,  String? renoteId,  String? channelId,  NotesCreatePollRequest? poll)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _NotesEditRequest():
-return $default(_that.editId,_that.visibility,_that.visibleUserIds,_that.text,_that.cw,_that.localOnly,_that.fileIds,_that.replyId,_that.renoteId,_that.channelId,_that.poll);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -222,134 +215,14 @@ return $default(_that.editId,_that.visibility,_that.visibleUserIds,_that.text,_t
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String editId,  NoteVisibility? visibility,  List<String>? visibleUserIds,  String? text,  String? cw,  bool? localOnly,  List<String>? fileIds,  String? replyId,  String? renoteId,  String? channelId,  NotesCreatePollRequest? poll)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _NotesEditRequest() when $default != null:
-return $default(_that.editId,_that.visibility,_that.visibleUserIds,_that.text,_that.cw,_that.localOnly,_that.fileIds,_that.replyId,_that.renoteId,_that.channelId,_that.poll);case _:
+case _:
   return null;
 
 }
 }
 
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _NotesEditRequest implements NotesEditRequest {
-  const _NotesEditRequest({required this.editId, this.visibility,  List<String>? visibleUserIds, this.text, this.cw, this.localOnly,  List<String>? fileIds, this.replyId, this.renoteId, this.channelId, this.poll}): _visibleUserIds = visibleUserIds,_fileIds = fileIds;
-  factory _NotesEditRequest.fromJson(Map<String, dynamic> json) => _$NotesEditRequestFromJson(json);
-
-@override final  String editId;
-@override final  NoteVisibility? visibility;
- final  List<String>? _visibleUserIds;
-@override List<String>? get visibleUserIds {
-  final value = _visibleUserIds;
-  if (value == null) return null;
-  if (_visibleUserIds is EqualUnmodifiableListView) return _visibleUserIds;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
-@override final  String? text;
-@override final  String? cw;
-@override final  bool? localOnly;
- final  List<String>? _fileIds;
-@override List<String>? get fileIds {
-  final value = _fileIds;
-  if (value == null) return null;
-  if (_fileIds is EqualUnmodifiableListView) return _fileIds;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
-}
-
-@override final  String? replyId;
-@override final  String? renoteId;
-@override final  String? channelId;
-@override final  NotesCreatePollRequest? poll;
-
-/// Create a copy of NotesEditRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$NotesEditRequestCopyWith<_NotesEditRequest> get copyWith => __$NotesEditRequestCopyWithImpl<_NotesEditRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$NotesEditRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesEditRequest&&(identical(other.editId, editId) || other.editId == editId)&&(identical(other.visibility, visibility) || other.visibility == visibility)&&const DeepCollectionEquality().equals(other.visibleUserIds, _visibleUserIds)&&(identical(other.text, text) || other.text == text)&&(identical(other.cw, cw) || other.cw == cw)&&(identical(other.localOnly, localOnly) || other.localOnly == localOnly)&&const DeepCollectionEquality().equals(other.fileIds, _fileIds)&&(identical(other.replyId, replyId) || other.replyId == replyId)&&(identical(other.renoteId, renoteId) || other.renoteId == renoteId)&&(identical(other.channelId, channelId) || other.channelId == channelId)&&(identical(other.poll, poll) || other.poll == poll));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,editId,visibility,const DeepCollectionEquality().hash(_visibleUserIds),text,cw,localOnly,const DeepCollectionEquality().hash(_fileIds),replyId,renoteId,channelId,poll);
-}
-
-@override
-String toString() {
-    return 'NotesEditRequest(editId: $editId, visibility: $visibility, visibleUserIds: $visibleUserIds, text: $text, cw: $cw, localOnly: $localOnly, fileIds: $fileIds, replyId: $replyId, renoteId: $renoteId, channelId: $channelId, poll: $poll)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$NotesEditRequestCopyWith<$Res> implements $NotesEditRequestCopyWith<$Res> {
-  factory _$NotesEditRequestCopyWith(_NotesEditRequest value, $Res Function(_NotesEditRequest) _then) = __$NotesEditRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String editId, NoteVisibility? visibility, List<String>? visibleUserIds, String? text, String? cw, bool? localOnly, List<String>? fileIds, String? replyId, String? renoteId, String? channelId, NotesCreatePollRequest? poll
-});
-
-
-@override $NotesCreatePollRequestCopyWith<$Res>? get poll;
-
-}
-/// @nodoc
-class __$NotesEditRequestCopyWithImpl<$Res>
-    implements _$NotesEditRequestCopyWith<$Res> {
-  __$NotesEditRequestCopyWithImpl(this._self, this._then);
-
-  final _NotesEditRequest _self;
-  final $Res Function(_NotesEditRequest) _then;
-
-/// Create a copy of NotesEditRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? editId = null,Object? visibility = freezed,Object? visibleUserIds = freezed,Object? text = freezed,Object? cw = freezed,Object? localOnly = freezed,Object? fileIds = freezed,Object? replyId = freezed,Object? renoteId = freezed,Object? channelId = freezed,Object? poll = freezed,}) {
-  return _then(_NotesEditRequest(
-editId: null == editId ? _self.editId : editId // ignore: cast_nullable_to_non_nullable
-as String,visibility: freezed == visibility ? _self.visibility : visibility // ignore: cast_nullable_to_non_nullable
-as NoteVisibility?,visibleUserIds: freezed == visibleUserIds ? _self._visibleUserIds : visibleUserIds // ignore: cast_nullable_to_non_nullable
-as List<String>?,text: freezed == text ? _self.text : text // ignore: cast_nullable_to_non_nullable
-as String?,cw: freezed == cw ? _self.cw : cw // ignore: cast_nullable_to_non_nullable
-as String?,localOnly: freezed == localOnly ? _self.localOnly : localOnly // ignore: cast_nullable_to_non_nullable
-as bool?,fileIds: freezed == fileIds ? _self._fileIds : fileIds // ignore: cast_nullable_to_non_nullable
-as List<String>?,replyId: freezed == replyId ? _self.replyId : replyId // ignore: cast_nullable_to_non_nullable
-as String?,renoteId: freezed == renoteId ? _self.renoteId : renoteId // ignore: cast_nullable_to_non_nullable
-as String?,channelId: freezed == channelId ? _self.channelId : channelId // ignore: cast_nullable_to_non_nullable
-as String?,poll: freezed == poll ? _self.poll : poll // ignore: cast_nullable_to_non_nullable
-as NotesCreatePollRequest?,
-  ));
-}
-
-/// Create a copy of NotesEditRequest
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$NotesCreatePollRequestCopyWith<$Res>? get poll {
-    if (_self.poll == null) {
-    return null;
-  }
-
-  return $NotesCreatePollRequestCopyWith<$Res>(_self.poll!, (value) {
-    return _then(_self.copyWith(poll: value));
-  });
-}
 }
 
 // dart format on

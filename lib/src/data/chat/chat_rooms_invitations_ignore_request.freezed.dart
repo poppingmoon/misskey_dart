@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ChatRoomsInvitationsIgnoreRequest {
 
- String get roomId;
+
 /// Create a copy of ChatRoomsInvitationsIgnoreRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $ChatRoomsInvitationsIgnoreRequestCopyWith<ChatRoomsInvitationsIgnoreRequest> get copyWith => _$ChatRoomsInvitationsIgnoreRequestCopyWithImpl<ChatRoomsInvitationsIgnoreRequest>(this as ChatRoomsInvitationsIgnoreRequest, _$identity);
 
-  /// Serializes this ChatRoomsInvitationsIgnoreRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -95,11 +93,10 @@ extension ChatRoomsInvitationsIgnoreRequestPatterns on ChatRoomsInvitationsIgnor
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ChatRoomsInvitationsIgnoreRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _ChatRoomsInvitationsIgnoreRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -117,11 +114,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ChatRoomsInvitationsIgnoreRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChatRoomsInvitationsIgnoreRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -138,11 +134,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ChatRoomsInvitationsIgnoreRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChatRoomsInvitationsIgnoreRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -159,10 +154,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String roomId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _ChatRoomsInvitationsIgnoreRequest() when $default != null:
-return $default(_that.roomId);case _:
+case _:
   return orElse();
 
 }
@@ -180,10 +174,9 @@ return $default(_that.roomId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String roomId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChatRoomsInvitationsIgnoreRequest():
-return $default(_that.roomId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -200,85 +193,13 @@ return $default(_that.roomId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String roomId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChatRoomsInvitationsIgnoreRequest() when $default != null:
-return $default(_that.roomId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _ChatRoomsInvitationsIgnoreRequest implements ChatRoomsInvitationsIgnoreRequest {
-  const _ChatRoomsInvitationsIgnoreRequest({required this.roomId});
-  factory _ChatRoomsInvitationsIgnoreRequest.fromJson(Map<String, dynamic> json) => _$ChatRoomsInvitationsIgnoreRequestFromJson(json);
-
-@override final  String roomId;
-
-/// Create a copy of ChatRoomsInvitationsIgnoreRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ChatRoomsInvitationsIgnoreRequestCopyWith<_ChatRoomsInvitationsIgnoreRequest> get copyWith => __$ChatRoomsInvitationsIgnoreRequestCopyWithImpl<_ChatRoomsInvitationsIgnoreRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$ChatRoomsInvitationsIgnoreRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatRoomsInvitationsIgnoreRequest&&(identical(other.roomId, roomId) || other.roomId == roomId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,roomId);
-}
-
-@override
-String toString() {
-    return 'ChatRoomsInvitationsIgnoreRequest(roomId: $roomId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ChatRoomsInvitationsIgnoreRequestCopyWith<$Res> implements $ChatRoomsInvitationsIgnoreRequestCopyWith<$Res> {
-  factory _$ChatRoomsInvitationsIgnoreRequestCopyWith(_ChatRoomsInvitationsIgnoreRequest value, $Res Function(_ChatRoomsInvitationsIgnoreRequest) _then) = __$ChatRoomsInvitationsIgnoreRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String roomId
-});
-
-
-
-
-}
-/// @nodoc
-class __$ChatRoomsInvitationsIgnoreRequestCopyWithImpl<$Res>
-    implements _$ChatRoomsInvitationsIgnoreRequestCopyWith<$Res> {
-  __$ChatRoomsInvitationsIgnoreRequestCopyWithImpl(this._self, this._then);
-
-  final _ChatRoomsInvitationsIgnoreRequest _self;
-  final $Res Function(_ChatRoomsInvitationsIgnoreRequest) _then;
-
-/// Create a copy of ChatRoomsInvitationsIgnoreRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? roomId = null,}) {
-  return _then(_ChatRoomsInvitationsIgnoreRequest(
-roomId: null == roomId ? _self.roomId : roomId // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

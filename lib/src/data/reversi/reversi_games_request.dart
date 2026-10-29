@@ -5,16 +5,17 @@ part 'reversi_games_request.freezed.dart';
 part 'reversi_games_request.g.dart';
 
 @freezed
-abstract class ReversiGamesRequest with _$ReversiGamesRequest {
-  const factory({
-    int? limit,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-    bool? my,
-  }) = _ReversiGamesRequest;
-
+@JsonSerializable()
+class const ReversiGamesRequest({
+  final int? limit,
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
+  final bool? my,
+}) with _$ReversiGamesRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$ReversiGamesRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ReversiGamesRequestToJson(this);
 }

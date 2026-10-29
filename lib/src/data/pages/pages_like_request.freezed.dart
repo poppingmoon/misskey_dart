@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$PagesLikeRequest {
 
- String get pageId;
+
 /// Create a copy of PagesLikeRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $PagesLikeRequestCopyWith<PagesLikeRequest> get copyWith => _$PagesLikeRequestCopyWithImpl<PagesLikeRequest>(this as PagesLikeRequest, _$identity);
 
-  /// Serializes this PagesLikeRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -95,11 +93,10 @@ extension PagesLikeRequestPatterns on PagesLikeRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _PagesLikeRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _PagesLikeRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -117,11 +114,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _PagesLikeRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _PagesLikeRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -138,11 +134,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _PagesLikeRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _PagesLikeRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -159,10 +154,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String pageId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _PagesLikeRequest() when $default != null:
-return $default(_that.pageId);case _:
+case _:
   return orElse();
 
 }
@@ -180,10 +174,9 @@ return $default(_that.pageId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String pageId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _PagesLikeRequest():
-return $default(_that.pageId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -200,85 +193,13 @@ return $default(_that.pageId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String pageId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _PagesLikeRequest() when $default != null:
-return $default(_that.pageId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _PagesLikeRequest implements PagesLikeRequest {
-  const _PagesLikeRequest({required this.pageId});
-  factory _PagesLikeRequest.fromJson(Map<String, dynamic> json) => _$PagesLikeRequestFromJson(json);
-
-@override final  String pageId;
-
-/// Create a copy of PagesLikeRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$PagesLikeRequestCopyWith<_PagesLikeRequest> get copyWith => __$PagesLikeRequestCopyWithImpl<_PagesLikeRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$PagesLikeRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _PagesLikeRequest&&(identical(other.pageId, pageId) || other.pageId == pageId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,pageId);
-}
-
-@override
-String toString() {
-    return 'PagesLikeRequest(pageId: $pageId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$PagesLikeRequestCopyWith<$Res> implements $PagesLikeRequestCopyWith<$Res> {
-  factory _$PagesLikeRequestCopyWith(_PagesLikeRequest value, $Res Function(_PagesLikeRequest) _then) = __$PagesLikeRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String pageId
-});
-
-
-
-
-}
-/// @nodoc
-class __$PagesLikeRequestCopyWithImpl<$Res>
-    implements _$PagesLikeRequestCopyWith<$Res> {
-  __$PagesLikeRequestCopyWithImpl(this._self, this._then);
-
-  final _PagesLikeRequest _self;
-  final $Res Function(_PagesLikeRequest) _then;
-
-/// Create a copy of PagesLikeRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? pageId = null,}) {
-  return _then(_PagesLikeRequest(
-pageId: null == pageId ? _self.pageId : pageId // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

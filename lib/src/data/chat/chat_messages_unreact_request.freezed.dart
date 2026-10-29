@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ChatMessagesUnreactRequest {
 
- String get messageId; String get reaction;
+
 /// Create a copy of ChatMessagesUnreactRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $ChatMessagesUnreactRequestCopyWith<ChatMessagesUnreactRequest> get copyWith => _$ChatMessagesUnreactRequestCopyWithImpl<ChatMessagesUnreactRequest>(this as ChatMessagesUnreactRequest, _$identity);
 
-  /// Serializes this ChatMessagesUnreactRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -96,11 +94,10 @@ extension ChatMessagesUnreactRequestPatterns on ChatMessagesUnreactRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ChatMessagesUnreactRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _ChatMessagesUnreactRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -118,11 +115,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ChatMessagesUnreactRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChatMessagesUnreactRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -139,11 +135,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ChatMessagesUnreactRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChatMessagesUnreactRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -160,10 +155,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String messageId,  String reaction)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _ChatMessagesUnreactRequest() when $default != null:
-return $default(_that.messageId,_that.reaction);case _:
+case _:
   return orElse();
 
 }
@@ -181,10 +175,9 @@ return $default(_that.messageId,_that.reaction);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String messageId,  String reaction)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChatMessagesUnreactRequest():
-return $default(_that.messageId,_that.reaction);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -201,87 +194,13 @@ return $default(_that.messageId,_that.reaction);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String messageId,  String reaction)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChatMessagesUnreactRequest() when $default != null:
-return $default(_that.messageId,_that.reaction);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _ChatMessagesUnreactRequest implements ChatMessagesUnreactRequest {
-  const _ChatMessagesUnreactRequest({required this.messageId, required this.reaction});
-  factory _ChatMessagesUnreactRequest.fromJson(Map<String, dynamic> json) => _$ChatMessagesUnreactRequestFromJson(json);
-
-@override final  String messageId;
-@override final  String reaction;
-
-/// Create a copy of ChatMessagesUnreactRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ChatMessagesUnreactRequestCopyWith<_ChatMessagesUnreactRequest> get copyWith => __$ChatMessagesUnreactRequestCopyWithImpl<_ChatMessagesUnreactRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$ChatMessagesUnreactRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatMessagesUnreactRequest&&(identical(other.messageId, messageId) || other.messageId == messageId)&&(identical(other.reaction, reaction) || other.reaction == reaction));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,messageId,reaction);
-}
-
-@override
-String toString() {
-    return 'ChatMessagesUnreactRequest(messageId: $messageId, reaction: $reaction)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ChatMessagesUnreactRequestCopyWith<$Res> implements $ChatMessagesUnreactRequestCopyWith<$Res> {
-  factory _$ChatMessagesUnreactRequestCopyWith(_ChatMessagesUnreactRequest value, $Res Function(_ChatMessagesUnreactRequest) _then) = __$ChatMessagesUnreactRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String messageId, String reaction
-});
-
-
-
-
-}
-/// @nodoc
-class __$ChatMessagesUnreactRequestCopyWithImpl<$Res>
-    implements _$ChatMessagesUnreactRequestCopyWith<$Res> {
-  __$ChatMessagesUnreactRequestCopyWithImpl(this._self, this._then);
-
-  final _ChatMessagesUnreactRequest _self;
-  final $Res Function(_ChatMessagesUnreactRequest) _then;
-
-/// Create a copy of ChatMessagesUnreactRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? messageId = null,Object? reaction = null,}) {
-  return _then(_ChatMessagesUnreactRequest(
-messageId: null == messageId ? _self.messageId : messageId // ignore: cast_nullable_to_non_nullable
-as String,reaction: null == reaction ? _self.reaction : reaction // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

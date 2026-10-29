@@ -6,10 +6,10 @@ part of 'notes_schedule_delete_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_NotesScheduleDeleteRequest _$NotesScheduleDeleteRequestFromJson(
+NotesScheduleDeleteRequest _$NotesScheduleDeleteRequestFromJson(
   Map<String, dynamic> json,
-) => _NotesScheduleDeleteRequest(noteId: json['noteId'] as String);
+) => NotesScheduleDeleteRequest(noteId: json['noteId'] as String);
 
 Map<String, dynamic> _$NotesScheduleDeleteRequestToJson(
-  _NotesScheduleDeleteRequest instance,
+  NotesScheduleDeleteRequest instance,
 ) => <String, dynamic>{'noteId': instance.noteId};

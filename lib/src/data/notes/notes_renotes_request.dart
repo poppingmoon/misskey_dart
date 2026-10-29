@@ -5,16 +5,17 @@ part 'notes_renotes_request.freezed.dart';
 part 'notes_renotes_request.g.dart';
 
 @freezed
-abstract class NotesRenoteRequest with _$NotesRenoteRequest {
-  const factory({
-    required String noteId,
-    int? limit,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-  }) = _NotesRenoteRequest;
-
+@JsonSerializable()
+class const NotesRenoteRequest({
+  required final String noteId,
+  final int? limit,
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
+}) with _$NotesRenoteRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$NotesRenoteRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NotesRenoteRequestToJson(this);
 }

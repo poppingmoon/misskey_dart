@@ -5,15 +5,16 @@ part 'notes_update_request.freezed.dart';
 part 'notes_update_request.g.dart';
 
 @freezed
-abstract class NotesUpdateRequest with _$NotesUpdateRequest {
-  const factory({
-    required String noteId,
-    String? text,
-    String? cw,
-    List<String>? fileIds,
-    NotesCreatePollRequest? poll,
-  }) = _NotesUpdateRequest;
-
+@JsonSerializable()
+class const NotesUpdateRequest({
+  required final String noteId,
+  final String? text,
+  final String? cw,
+  final List<String>? fileIds,
+  final NotesCreatePollRequest? poll,
+}) with _$NotesUpdateRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$NotesUpdateRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NotesUpdateRequestToJson(this);
 }

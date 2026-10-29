@@ -4,10 +4,13 @@ part 'following_create_request.freezed.dart';
 part 'following_create_request.g.dart';
 
 @freezed
-abstract class FollowingCreateRequest with _$FollowingCreateRequest {
-  const factory({required String userId, bool? withReplies}) =
-      _FollowingCreateRequest;
-
+@JsonSerializable()
+class const FollowingCreateRequest({
+  required final String userId,
+  final bool? withReplies,
+}) with _$FollowingCreateRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$FollowingCreateRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$FollowingCreateRequestToJson(this);
 }

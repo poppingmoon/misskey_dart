@@ -8,29 +8,30 @@ part 'community_channel.freezed.dart';
 part 'community_channel.g.dart';
 
 @freezed
-abstract class CommunityChannel with _$CommunityChannel {
-  const factory({
-    required String id,
-    @DateTimeConverter() required DateTime createdAt,
-    @NullableUriConverter() DateTime? lastNotedAt,
-    required String name,
-    String? description,
-    String? userId,
-    @NullableUriConverter() Uri? bannerUrl,
-    @Default([]) List<String> pinnedNoteIds,
-    required int usersCount,
-    required int notesCount,
-    @Default(false) bool isSensitive,
-    @Default(false) bool isArchived,
-    @NullableColorConverter() int? color,
-    bool? isFollowing,
-    bool? isFavorited,
-    bool? isMuting,
-    bool? hasUnreadNote,
-    @Default([]) List<Note>? pinnedNotes,
-    @Default(true) bool allowRenoteToExternal,
-  }) = _CommunityChannel;
-
+@JsonSerializable()
+class const CommunityChannel({
+  required final String id,
+  @DateTimeConverter() required final DateTime createdAt,
+  @NullableUriConverter() final DateTime? lastNotedAt,
+  required final String name,
+  final String? description,
+  final String? userId,
+  @NullableUriConverter() final Uri? bannerUrl,
+  final List<String> pinnedNoteIds = const [],
+  required final int usersCount,
+  required final int notesCount,
+  final bool isSensitive = false,
+  final bool isArchived = false,
+  @NullableColorConverter() final int? color,
+  final bool? isFollowing,
+  final bool? isFavorited,
+  final bool? isMuting,
+  final bool? hasUnreadNote,
+  final List<Note>? pinnedNotes = const [],
+  final bool allowRenoteToExternal = true,
+}) with _$CommunityChannel {
   factory fromJson(Map<String, Object?> json) =>
       _$CommunityChannelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$CommunityChannelToJson(this);
 }

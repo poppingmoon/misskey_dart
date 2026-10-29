@@ -5,16 +5,17 @@ part 'users_clips_request.freezed.dart';
 part 'users_clips_request.g.dart';
 
 @freezed
-abstract class UsersClipsRequest with _$UsersClipsRequest {
-  const factory({
-    required String userId,
-    int? limit,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-  }) = _UsersClipsRequest;
-
+@JsonSerializable()
+class const UsersClipsRequest({
+  required final String userId,
+  final int? limit,
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
+}) with _$UsersClipsRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$UsersClipsRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UsersClipsRequestToJson(this);
 }

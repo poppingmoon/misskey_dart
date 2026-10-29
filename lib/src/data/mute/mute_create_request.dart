@@ -5,12 +5,13 @@ part 'mute_create_request.freezed.dart';
 part 'mute_create_request.g.dart';
 
 @freezed
-abstract class MuteCreateRequest with _$MuteCreateRequest {
-  const factory({
-    required String userId,
-    @EpocTimeDateTimeConverter() DateTime? expiresAt,
-  }) = _MuteCreateRequest;
-
+@JsonSerializable()
+class const MuteCreateRequest({
+  required final String userId,
+  @EpocTimeDateTimeConverter() final DateTime? expiresAt,
+}) with _$MuteCreateRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$MuteCreateRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$MuteCreateRequestToJson(this);
 }

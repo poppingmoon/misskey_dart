@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$Flash {
 
- String get id;@DateTimeConverter() DateTime get createdAt;@DateTimeConverter() DateTime get updatedAt; String get title; String get summary; String get script;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FlashVisibility? get visibility; String get userId; UserLite get user; int? get likedCount; bool get isLiked;
+
 /// Create a copy of Flash
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $FlashCopyWith<Flash> get copyWith => _$FlashCopyWithImpl<Flash>(this as Flash, _$identity);
 
-  /// Serializes this Flash to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -114,11 +112,10 @@ extension FlashPatterns on Flash {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _Flash value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _Flash() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -136,11 +133,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _Flash value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _Flash():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -157,11 +153,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _Flash value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _Flash() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -178,10 +173,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt, @DateTimeConverter()  DateTime updatedAt,  String title,  String summary,  String script, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FlashVisibility? visibility,  String userId,  UserLite user,  int? likedCount,  bool isLiked)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _Flash() when $default != null:
-return $default(_that.id,_that.createdAt,_that.updatedAt,_that.title,_that.summary,_that.script,_that.visibility,_that.userId,_that.user,_that.likedCount,_that.isLiked);case _:
+case _:
   return orElse();
 
 }
@@ -199,10 +193,9 @@ return $default(_that.id,_that.createdAt,_that.updatedAt,_that.title,_that.summa
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt, @DateTimeConverter()  DateTime updatedAt,  String title,  String summary,  String script, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FlashVisibility? visibility,  String userId,  UserLite user,  int? likedCount,  bool isLiked)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _Flash():
-return $default(_that.id,_that.createdAt,_that.updatedAt,_that.title,_that.summary,_that.script,_that.visibility,_that.userId,_that.user,_that.likedCount,_that.isLiked);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -219,115 +212,14 @@ return $default(_that.id,_that.createdAt,_that.updatedAt,_that.title,_that.summa
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id, @DateTimeConverter()  DateTime createdAt, @DateTimeConverter()  DateTime updatedAt,  String title,  String summary,  String script, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  FlashVisibility? visibility,  String userId,  UserLite user,  int? likedCount,  bool isLiked)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _Flash() when $default != null:
-return $default(_that.id,_that.createdAt,_that.updatedAt,_that.title,_that.summary,_that.script,_that.visibility,_that.userId,_that.user,_that.likedCount,_that.isLiked);case _:
+case _:
   return null;
 
 }
 }
 
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _Flash implements Flash {
-  const _Flash({required this.id, @DateTimeConverter() required this.createdAt, @DateTimeConverter() required this.updatedAt, required this.title, required this.summary, required this.script, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.visibility, required this.userId, required this.user, this.likedCount, this.isLiked = false});
-  factory _Flash.fromJson(Map<String, dynamic> json) => _$FlashFromJson(json);
-
-@override final  String id;
-@override@DateTimeConverter() final  DateTime createdAt;
-@override@DateTimeConverter() final  DateTime updatedAt;
-@override final  String title;
-@override final  String summary;
-@override final  String script;
-@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  FlashVisibility? visibility;
-@override final  String userId;
-@override final  UserLite user;
-@override final  int? likedCount;
-@override@JsonKey() final  bool isLiked;
-
-/// Create a copy of Flash
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$FlashCopyWith<_Flash> get copyWith => __$FlashCopyWithImpl<_Flash>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$FlashToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Flash&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.title, title) || other.title == title)&&(identical(other.summary, summary) || other.summary == summary)&&(identical(other.script, script) || other.script == script)&&(identical(other.visibility, visibility) || other.visibility == visibility)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.user, user) || other.user == user)&&(identical(other.likedCount, likedCount) || other.likedCount == likedCount)&&(identical(other.isLiked, isLiked) || other.isLiked == isLiked));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,id,createdAt,updatedAt,title,summary,script,visibility,userId,user,likedCount,isLiked);
-}
-
-@override
-String toString() {
-    return 'Flash(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, title: $title, summary: $summary, script: $script, visibility: $visibility, userId: $userId, user: $user, likedCount: $likedCount, isLiked: $isLiked)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$FlashCopyWith<$Res> implements $FlashCopyWith<$Res> {
-  factory _$FlashCopyWith(_Flash value, $Res Function(_Flash) _then) = __$FlashCopyWithImpl;
-@override @useResult
-$Res call({
- String id,@DateTimeConverter() DateTime createdAt,@DateTimeConverter() DateTime updatedAt, String title, String summary, String script,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FlashVisibility? visibility, String userId, UserLite user, int? likedCount, bool isLiked
-});
-
-
-@override $UserLiteCopyWith<$Res> get user;
-
-}
-/// @nodoc
-class __$FlashCopyWithImpl<$Res>
-    implements _$FlashCopyWith<$Res> {
-  __$FlashCopyWithImpl(this._self, this._then);
-
-  final _Flash _self;
-  final $Res Function(_Flash) _then;
-
-/// Create a copy of Flash
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? createdAt = null,Object? updatedAt = null,Object? title = null,Object? summary = null,Object? script = null,Object? visibility = freezed,Object? userId = null,Object? user = null,Object? likedCount = freezed,Object? isLiked = null,}) {
-  return _then(_Flash(
-id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
-as DateTime,updatedAt: null == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
-as DateTime,title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
-as String,summary: null == summary ? _self.summary : summary // ignore: cast_nullable_to_non_nullable
-as String,script: null == script ? _self.script : script // ignore: cast_nullable_to_non_nullable
-as String,visibility: freezed == visibility ? _self.visibility : visibility // ignore: cast_nullable_to_non_nullable
-as FlashVisibility?,userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
-as String,user: null == user ? _self.user : user // ignore: cast_nullable_to_non_nullable
-as UserLite,likedCount: freezed == likedCount ? _self.likedCount : likedCount // ignore: cast_nullable_to_non_nullable
-as int?,isLiked: null == isLiked ? _self.isLiked : isLiked // ignore: cast_nullable_to_non_nullable
-as bool,
-  ));
-}
-
-/// Create a copy of Flash
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$UserLiteCopyWith<$Res> get user {
-  
-  return $UserLiteCopyWith<$Res>(_self.user, (value) {
-    return _then(_self.copyWith(user: value));
-  });
-}
 }
 
 // dart format on

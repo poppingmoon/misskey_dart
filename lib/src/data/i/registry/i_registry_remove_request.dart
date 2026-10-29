@@ -4,13 +4,14 @@ part 'i_registry_remove_request.freezed.dart';
 part 'i_registry_remove_request.g.dart';
 
 @freezed
-abstract class IRegistryRemoveRequest with _$IRegistryRemoveRequest {
-  const factory({
-    required String key,
-    required List<String> scope,
-    String? domain,
-  }) = _IRegistryRemoveRequest;
-
+@JsonSerializable()
+class const IRegistryRemoveRequest({
+  required final String key,
+  required final List<String> scope,
+  final String? domain,
+}) with _$IRegistryRemoveRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$IRegistryRemoveRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$IRegistryRemoveRequestToJson(this);
 }

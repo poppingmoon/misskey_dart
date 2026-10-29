@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$IRegistryKeysRequest {
 
- List<String> get scope; String? get domain;
+
 /// Create a copy of IRegistryKeysRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $IRegistryKeysRequestCopyWith<IRegistryKeysRequest> get copyWith => _$IRegistryKeysRequestCopyWithImpl<IRegistryKeysRequest>(this as IRegistryKeysRequest, _$identity);
 
-  /// Serializes this IRegistryKeysRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -96,11 +94,10 @@ extension IRegistryKeysRequestPatterns on IRegistryKeysRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _IRegistryKeysRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _IRegistryKeysRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -118,11 +115,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _IRegistryKeysRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _IRegistryKeysRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -139,11 +135,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _IRegistryKeysRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _IRegistryKeysRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -160,10 +155,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( List<String> scope,  String? domain)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _IRegistryKeysRequest() when $default != null:
-return $default(_that.scope,_that.domain);case _:
+case _:
   return orElse();
 
 }
@@ -181,10 +175,9 @@ return $default(_that.scope,_that.domain);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( List<String> scope,  String? domain)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _IRegistryKeysRequest():
-return $default(_that.scope,_that.domain);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -201,93 +194,13 @@ return $default(_that.scope,_that.domain);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( List<String> scope,  String? domain)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _IRegistryKeysRequest() when $default != null:
-return $default(_that.scope,_that.domain);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _IRegistryKeysRequest implements IRegistryKeysRequest {
-  const _IRegistryKeysRequest({required  List<String> scope, this.domain}): _scope = scope;
-  factory _IRegistryKeysRequest.fromJson(Map<String, dynamic> json) => _$IRegistryKeysRequestFromJson(json);
-
- final  List<String> _scope;
-@override List<String> get scope {
-  if (_scope is EqualUnmodifiableListView) return _scope;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_scope);
-}
-
-@override final  String? domain;
-
-/// Create a copy of IRegistryKeysRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$IRegistryKeysRequestCopyWith<_IRegistryKeysRequest> get copyWith => __$IRegistryKeysRequestCopyWithImpl<_IRegistryKeysRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$IRegistryKeysRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _IRegistryKeysRequest&&const DeepCollectionEquality().equals(other.scope, _scope)&&(identical(other.domain, domain) || other.domain == domain));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,const DeepCollectionEquality().hash(_scope),domain);
-}
-
-@override
-String toString() {
-    return 'IRegistryKeysRequest(scope: $scope, domain: $domain)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$IRegistryKeysRequestCopyWith<$Res> implements $IRegistryKeysRequestCopyWith<$Res> {
-  factory _$IRegistryKeysRequestCopyWith(_IRegistryKeysRequest value, $Res Function(_IRegistryKeysRequest) _then) = __$IRegistryKeysRequestCopyWithImpl;
-@override @useResult
-$Res call({
- List<String> scope, String? domain
-});
-
-
-
-
-}
-/// @nodoc
-class __$IRegistryKeysRequestCopyWithImpl<$Res>
-    implements _$IRegistryKeysRequestCopyWith<$Res> {
-  __$IRegistryKeysRequestCopyWithImpl(this._self, this._then);
-
-  final _IRegistryKeysRequest _self;
-  final $Res Function(_IRegistryKeysRequest) _then;
-
-/// Create a copy of IRegistryKeysRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? scope = null,Object? domain = freezed,}) {
-  return _then(_IRegistryKeysRequest(
-scope: null == scope ? _self._scope : scope // ignore: cast_nullable_to_non_nullable
-as List<String>,domain: freezed == domain ? _self.domain : domain // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
 
 }
 

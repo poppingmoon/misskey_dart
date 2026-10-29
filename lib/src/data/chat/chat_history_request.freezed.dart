@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ChatHistoryRequest {
 
- int? get limit; bool? get room;
+
 /// Create a copy of ChatHistoryRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $ChatHistoryRequestCopyWith<ChatHistoryRequest> get copyWith => _$ChatHistoryRequestCopyWithImpl<ChatHistoryRequest>(this as ChatHistoryRequest, _$identity);
 
-  /// Serializes this ChatHistoryRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -96,11 +94,10 @@ extension ChatHistoryRequestPatterns on ChatHistoryRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ChatHistoryRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _ChatHistoryRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -118,11 +115,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ChatHistoryRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChatHistoryRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -139,11 +135,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ChatHistoryRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChatHistoryRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -160,10 +155,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? limit,  bool? room)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _ChatHistoryRequest() when $default != null:
-return $default(_that.limit,_that.room);case _:
+case _:
   return orElse();
 
 }
@@ -181,10 +175,9 @@ return $default(_that.limit,_that.room);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? limit,  bool? room)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChatHistoryRequest():
-return $default(_that.limit,_that.room);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -201,87 +194,13 @@ return $default(_that.limit,_that.room);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? limit,  bool? room)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChatHistoryRequest() when $default != null:
-return $default(_that.limit,_that.room);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _ChatHistoryRequest implements ChatHistoryRequest {
-  const _ChatHistoryRequest({this.limit, this.room});
-  factory _ChatHistoryRequest.fromJson(Map<String, dynamic> json) => _$ChatHistoryRequestFromJson(json);
-
-@override final  int? limit;
-@override final  bool? room;
-
-/// Create a copy of ChatHistoryRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ChatHistoryRequestCopyWith<_ChatHistoryRequest> get copyWith => __$ChatHistoryRequestCopyWithImpl<_ChatHistoryRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$ChatHistoryRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatHistoryRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.room, room) || other.room == room));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,limit,room);
-}
-
-@override
-String toString() {
-    return 'ChatHistoryRequest(limit: $limit, room: $room)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ChatHistoryRequestCopyWith<$Res> implements $ChatHistoryRequestCopyWith<$Res> {
-  factory _$ChatHistoryRequestCopyWith(_ChatHistoryRequest value, $Res Function(_ChatHistoryRequest) _then) = __$ChatHistoryRequestCopyWithImpl;
-@override @useResult
-$Res call({
- int? limit, bool? room
-});
-
-
-
-
-}
-/// @nodoc
-class __$ChatHistoryRequestCopyWithImpl<$Res>
-    implements _$ChatHistoryRequestCopyWith<$Res> {
-  __$ChatHistoryRequestCopyWithImpl(this._self, this._then);
-
-  final _ChatHistoryRequest _self;
-  final $Res Function(_ChatHistoryRequest) _then;
-
-/// Create a copy of ChatHistoryRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? limit = freezed,Object? room = freezed,}) {
-  return _then(_ChatHistoryRequest(
-limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,room: freezed == room ? _self.room : room // ignore: cast_nullable_to_non_nullable
-as bool?,
-  ));
-}
-
 
 }
 

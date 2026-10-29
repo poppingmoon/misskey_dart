@@ -6,87 +6,103 @@ part "streaming_response_sub_type.freezed.dart";
 part "streaming_response_sub_type.g.dart";
 
 @freezed
-abstract class PageEvent with _$PageEvent {
-  const factory({
-    required String pageId,
-    required String event,
-    required Object variable,
-    required User user,
-    required String userId,
-  }) = _PageEvent;
-
+@JsonSerializable()
+class const PageEvent({
+  required final String pageId,
+  required final String event,
+  required final Object variable,
+  required final User user,
+  required final String userId,
+}) with _$PageEvent {
   factory fromJson(Map<String, dynamic> json) => _$PageEventFromJson(json);
+
+  Map<String, dynamic> toJson() => _$PageEventToJson(this);
 }
 
 @freezed
-abstract class UrlUploadFinishedEvent with _$UrlUploadFinishedEvent {
-  const factory({String? marker, required DriveFile file}) =
-      _UrlUploadFinishedEvent;
-
+@JsonSerializable()
+class const UrlUploadFinishedEvent({
+  final String? marker,
+  required final DriveFile file,
+}) with _$UrlUploadFinishedEvent {
   factory fromJson(Map<String, dynamic> json) =>
       _$UrlUploadFinishedEventFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UrlUploadFinishedEventToJson(this);
 }
 
 @freezed
-abstract class RegistryUpdated with _$RegistryUpdated {
-  const factory({
-    List<String>? scope,
-    required String key,
-    required Object? value,
-  }) = _RegistryUpdated;
-
+@JsonSerializable()
+class const RegistryUpdated({
+  final List<String>? scope,
+  required final String key,
+  required final Object? value,
+}) with _$RegistryUpdated {
   factory fromJson(Map<String, dynamic> json) =>
       _$RegistryUpdatedFromJson(json);
+
+  Map<String, dynamic> toJson() => _$RegistryUpdatedToJson(this);
 }
 
 @freezed
-abstract class Signin with _$Signin {
-  const factory({
-    required String id,
-    @DateTimeConverter() required DateTime createdAt,
-    required String ip,
-    Object? headers,
-    required bool success,
-  }) = _Signin;
-
+@JsonSerializable()
+class const Signin({
+  required final String id,
+  @DateTimeConverter() required final DateTime createdAt,
+  required final String ip,
+  final Object? headers,
+  required final bool success,
+}) with _$Signin {
   factory fromJson(Map<String, dynamic> json) => _$SigninFromJson(json);
+
+  Map<String, dynamic> toJson() => _$SigninToJson(this);
 }
 
 @freezed
-abstract class TimelineVoted with _$TimelineVoted {
-  const factory({required int choice, required String userId}) = _TimelineVoted;
-
+@JsonSerializable()
+class const TimelineVoted({
+  required final int choice,
+  required final String userId,
+}) with _$TimelineVoted {
   factory fromJson(Map<String, dynamic> json) => _$TimelineVotedFromJson(json);
+
+  Map<String, dynamic> toJson() => _$TimelineVotedToJson(this);
 }
 
 @freezed
-abstract class TimelineReacted with _$TimelineReacted {
-  const factory({
-    required String reaction,
-    required TimelineReactedEmojiData? emoji,
-    required String userId,
-  }) = _TimelineReacted;
-
+@JsonSerializable()
+class const TimelineReacted({
+  required final String reaction,
+  required final TimelineReactedEmojiData? emoji,
+  required final String userId,
+}) with _$TimelineReacted {
   factory fromJson(Map<String, dynamic> json) =>
       _$TimelineReactedFromJson(json);
+
+  Map<String, dynamic> toJson() => _$TimelineReactedToJson(this);
 }
 
 @freezed
-abstract class TimelineReactedEmojiData with _$TimelineReactedEmojiData {
-  const factory({required String name, required String url}) =
-      _TimelineReactedEmojiData;
-
+@JsonSerializable()
+class const TimelineReactedEmojiData({
+  required final String name,
+  required final String url,
+}) with _$TimelineReactedEmojiData {
   factory fromJson(Map<String, dynamic> json) =>
       _$TimelineReactedEmojiDataFromJson(json);
+
+  Map<String, dynamic> toJson() => _$TimelineReactedEmojiDataToJson(this);
 }
 
 @freezed
-abstract class TimelineDeleted with _$TimelineDeleted {
-  const factory({@DateTimeConverter() required DateTime deletedAt}) =
-      _TimelineDeleted;
-
+@JsonSerializable()
+class const TimelineDeleted({
+  @DateTimeConverter() required final DateTime deletedAt,
+}) with _$TimelineDeleted {
   factory fromJson(Map<String, dynamic> json) =>
       _$TimelineDeletedFromJson(json);
+
+  Map<String, dynamic> toJson() => _$TimelineDeletedToJson(this);
 }
 
 class const StreamingStatsConverter()
@@ -124,46 +140,56 @@ sealed class StreamingStats with _$StreamingStats {
 }
 
 @freezed
-abstract class StatsLogFs with _$StatsLogFs {
-  const factory({required double r, required double w}) = _StatsLogFs;
-
+@JsonSerializable()
+class const StatsLogFs({required final double r, required final double w})
+    with _$StatsLogFs {
   factory fromJson(Map<String, dynamic> json) => _$StatsLogFsFromJson(json);
+
+  Map<String, dynamic> toJson() => _$StatsLogFsToJson(this);
 }
 
 @freezed
-abstract class StatsLogMem with _$StatsLogMem {
-  const factory({required double used, required double active}) = _StatsLogMem;
-
+@JsonSerializable()
+class const StatsLogMem({
+  required final double used,
+  required final double active,
+}) with _$StatsLogMem {
   factory fromJson(Map<String, dynamic> json) => _$StatsLogMemFromJson(json);
+
+  Map<String, dynamic> toJson() => _$StatsLogMemToJson(this);
 }
 
 @freezed
-abstract class StatsLogNet with _$StatsLogNet {
-  const factory({required double rx, required double tx}) = _StatsLogNet;
-
+@JsonSerializable()
+class const StatsLogNet({required final double rx, required final double tx})
+    with _$StatsLogNet {
   factory fromJson(Map<String, dynamic> json) => _$StatsLogNetFromJson(json);
+
+  Map<String, dynamic> toJson() => _$StatsLogNetToJson(this);
 }
 
 @freezed
-abstract class QueueStatsLogResponseData with _$QueueStatsLogResponseData {
-  const factory({
-    required int activeSincePrevTick,
-    required int active,
-    required int waiting,
-    required int delayed,
-  }) = _QueueStatsLogResponseData;
-
+@JsonSerializable()
+class const QueueStatsLogResponseData({
+  required final int activeSincePrevTick,
+  required final int active,
+  required final int waiting,
+  required final int delayed,
+}) with _$QueueStatsLogResponseData {
   factory fromJson(Map<String, dynamic> json) =>
       _$QueueStatsLogResponseDataFromJson(json);
+
+  Map<String, dynamic> toJson() => _$QueueStatsLogResponseDataToJson(this);
 }
 
 @freezed
-abstract class ChatReact with _$ChatReact {
-  const factory({
-    required String reaction,
-    UserLite? user,
-    required String messageId,
-  }) = _ChatReact;
-
+@JsonSerializable()
+class const ChatReact({
+  required final String reaction,
+  final UserLite? user,
+  required final String messageId,
+}) with _$ChatReact {
   factory fromJson(Map<String, dynamic> json) => _$ChatReactFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ChatReactToJson(this);
 }

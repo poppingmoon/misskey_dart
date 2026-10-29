@@ -6,8 +6,8 @@ part of 'roles_show_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_RolesShowRequest _$RolesShowRequestFromJson(Map<String, dynamic> json) =>
-    _RolesShowRequest(roleId: json['roleId'] as String);
+RolesShowRequest _$RolesShowRequestFromJson(Map<String, dynamic> json) =>
+    RolesShowRequest(roleId: json['roleId'] as String);
 
-Map<String, dynamic> _$RolesShowRequestToJson(_RolesShowRequest instance) =>
+Map<String, dynamic> _$RolesShowRequestToJson(RolesShowRequest instance) =>
     <String, dynamic>{'roleId': instance.roleId};

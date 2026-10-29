@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$IRegistryGetDetailResponse {
 
- DateTime get updatedAt; dynamic get value;
+
 /// Create a copy of IRegistryGetDetailResponse
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $IRegistryGetDetailResponseCopyWith<IRegistryGetDetailResponse> get copyWith => _$IRegistryGetDetailResponseCopyWithImpl<IRegistryGetDetailResponse>(this as IRegistryGetDetailResponse, _$identity);
 
-  /// Serializes this IRegistryGetDetailResponse to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -96,11 +94,10 @@ extension IRegistryGetDetailResponsePatterns on IRegistryGetDetailResponse {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _IRegistryGetDetailResponse value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _IRegistryGetDetailResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -118,11 +115,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _IRegistryGetDetailResponse value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _IRegistryGetDetailResponse():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -139,11 +135,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _IRegistryGetDetailResponse value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _IRegistryGetDetailResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -160,10 +155,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( DateTime updatedAt,  dynamic value)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _IRegistryGetDetailResponse() when $default != null:
-return $default(_that.updatedAt,_that.value);case _:
+case _:
   return orElse();
 
 }
@@ -181,10 +175,9 @@ return $default(_that.updatedAt,_that.value);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( DateTime updatedAt,  dynamic value)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _IRegistryGetDetailResponse():
-return $default(_that.updatedAt,_that.value);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -201,87 +194,13 @@ return $default(_that.updatedAt,_that.value);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( DateTime updatedAt,  dynamic value)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _IRegistryGetDetailResponse() when $default != null:
-return $default(_that.updatedAt,_that.value);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _IRegistryGetDetailResponse implements IRegistryGetDetailResponse {
-  const _IRegistryGetDetailResponse({required this.updatedAt, required this.value});
-  factory _IRegistryGetDetailResponse.fromJson(Map<String, dynamic> json) => _$IRegistryGetDetailResponseFromJson(json);
-
-@override final  DateTime updatedAt;
-@override final  dynamic value;
-
-/// Create a copy of IRegistryGetDetailResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$IRegistryGetDetailResponseCopyWith<_IRegistryGetDetailResponse> get copyWith => __$IRegistryGetDetailResponseCopyWithImpl<_IRegistryGetDetailResponse>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$IRegistryGetDetailResponseToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _IRegistryGetDetailResponse&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&const DeepCollectionEquality().equals(other.value, value));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,updatedAt,const DeepCollectionEquality().hash(value));
-}
-
-@override
-String toString() {
-    return 'IRegistryGetDetailResponse(updatedAt: $updatedAt, value: $value)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$IRegistryGetDetailResponseCopyWith<$Res> implements $IRegistryGetDetailResponseCopyWith<$Res> {
-  factory _$IRegistryGetDetailResponseCopyWith(_IRegistryGetDetailResponse value, $Res Function(_IRegistryGetDetailResponse) _then) = __$IRegistryGetDetailResponseCopyWithImpl;
-@override @useResult
-$Res call({
- DateTime updatedAt, dynamic value
-});
-
-
-
-
-}
-/// @nodoc
-class __$IRegistryGetDetailResponseCopyWithImpl<$Res>
-    implements _$IRegistryGetDetailResponseCopyWith<$Res> {
-  __$IRegistryGetDetailResponseCopyWithImpl(this._self, this._then);
-
-  final _IRegistryGetDetailResponse _self;
-  final $Res Function(_IRegistryGetDetailResponse) _then;
-
-/// Create a copy of IRegistryGetDetailResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? updatedAt = null,Object? value = freezed,}) {
-  return _then(_IRegistryGetDetailResponse(
-updatedAt: null == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
-as DateTime,value: freezed == value ? _self.value : value // ignore: cast_nullable_to_non_nullable
-as dynamic,
-  ));
-}
-
 
 }
 

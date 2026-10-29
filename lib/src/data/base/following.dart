@@ -6,25 +6,26 @@ part 'following.freezed.dart';
 part 'following.g.dart';
 
 @freezed
-abstract class Following with _$Following {
-  const factory({
-    required String id,
-    @DateTimeConverter() required DateTime createdAt,
-    required String followeeId,
-    required String followerId,
+@JsonSerializable()
+class const Following({
+  required final String id,
+  @DateTimeConverter() required final DateTime createdAt,
+  required final String followeeId,
+  required final String followerId,
 
-    /// 以下のエンドポイントでnon-null
-    ///
-    // - [MisskeyFederation.followers]
-    // - [MisskeyFederation.following]
-    /// - [MisskeyUsers.following]
-    UserDetailed? followee,
+  /// 以下のエンドポイントでnon-null
+  ///
+  // - [MisskeyFederation.followers]
+  // - [MisskeyFederation.following]
+  /// - [MisskeyUsers.following]
+  final UserDetailed? followee,
 
-    /// 以下のエンドポイントでnon-null
-    ///
-    /// - [MisskeyUsers.followers]
-    UserDetailed? follower,
-  }) = _Following;
-
+  /// 以下のエンドポイントでnon-null
+  ///
+  /// - [MisskeyUsers.followers]
+  final UserDetailed? follower,
+}) with _$Following {
   factory fromJson(Map<String, dynamic> json) => _$FollowingFromJson(json);
+
+  Map<String, dynamic> toJson() => _$FollowingToJson(this);
 }

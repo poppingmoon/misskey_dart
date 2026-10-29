@@ -4,9 +4,11 @@ part 'hashtags_show_request.freezed.dart';
 part 'hashtags_show_request.g.dart';
 
 @freezed
-abstract class HashtagsShowRequest with _$HashtagsShowRequest {
-  const factory({required String tag}) = _HashtagsShowRequest;
-
+@JsonSerializable()
+class const HashtagsShowRequest({required final String tag})
+    with _$HashtagsShowRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$HashtagsShowRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$HashtagsShowRequestToJson(this);
 }

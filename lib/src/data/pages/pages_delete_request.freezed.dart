@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$PagesDeleteRequest {
 
- String get pageId;
+
 /// Create a copy of PagesDeleteRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $PagesDeleteRequestCopyWith<PagesDeleteRequest> get copyWith => _$PagesDeleteRequestCopyWithImpl<PagesDeleteRequest>(this as PagesDeleteRequest, _$identity);
 
-  /// Serializes this PagesDeleteRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -95,11 +93,10 @@ extension PagesDeleteRequestPatterns on PagesDeleteRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _PagesDeleteRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _PagesDeleteRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -117,11 +114,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _PagesDeleteRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _PagesDeleteRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -138,11 +134,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _PagesDeleteRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _PagesDeleteRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -159,10 +154,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String pageId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _PagesDeleteRequest() when $default != null:
-return $default(_that.pageId);case _:
+case _:
   return orElse();
 
 }
@@ -180,10 +174,9 @@ return $default(_that.pageId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String pageId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _PagesDeleteRequest():
-return $default(_that.pageId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -200,85 +193,13 @@ return $default(_that.pageId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String pageId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _PagesDeleteRequest() when $default != null:
-return $default(_that.pageId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _PagesDeleteRequest implements PagesDeleteRequest {
-  const _PagesDeleteRequest({required this.pageId});
-  factory _PagesDeleteRequest.fromJson(Map<String, dynamic> json) => _$PagesDeleteRequestFromJson(json);
-
-@override final  String pageId;
-
-/// Create a copy of PagesDeleteRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$PagesDeleteRequestCopyWith<_PagesDeleteRequest> get copyWith => __$PagesDeleteRequestCopyWithImpl<_PagesDeleteRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$PagesDeleteRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _PagesDeleteRequest&&(identical(other.pageId, pageId) || other.pageId == pageId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,pageId);
-}
-
-@override
-String toString() {
-    return 'PagesDeleteRequest(pageId: $pageId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$PagesDeleteRequestCopyWith<$Res> implements $PagesDeleteRequestCopyWith<$Res> {
-  factory _$PagesDeleteRequestCopyWith(_PagesDeleteRequest value, $Res Function(_PagesDeleteRequest) _then) = __$PagesDeleteRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String pageId
-});
-
-
-
-
-}
-/// @nodoc
-class __$PagesDeleteRequestCopyWithImpl<$Res>
-    implements _$PagesDeleteRequestCopyWith<$Res> {
-  __$PagesDeleteRequestCopyWithImpl(this._self, this._then);
-
-  final _PagesDeleteRequest _self;
-  final $Res Function(_PagesDeleteRequest) _then;
-
-/// Create a copy of PagesDeleteRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? pageId = null,}) {
-  return _then(_PagesDeleteRequest(
-pageId: null == pageId ? _self.pageId : pageId // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

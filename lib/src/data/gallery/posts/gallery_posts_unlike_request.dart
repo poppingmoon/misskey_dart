@@ -4,9 +4,11 @@ part 'gallery_posts_unlike_request.freezed.dart';
 part 'gallery_posts_unlike_request.g.dart';
 
 @freezed
-abstract class GalleryPostsUnlikeRequest with _$GalleryPostsUnlikeRequest {
-  const factory({required String postId}) = _GalleryPostsUnlikeRequest;
-
+@JsonSerializable()
+class const GalleryPostsUnlikeRequest({required final String postId})
+    with _$GalleryPostsUnlikeRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$GalleryPostsUnlikeRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$GalleryPostsUnlikeRequestToJson(this);
 }

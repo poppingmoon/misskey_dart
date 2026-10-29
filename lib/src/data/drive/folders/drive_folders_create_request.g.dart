@@ -6,13 +6,13 @@ part of 'drive_folders_create_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_DriveFoldersCreateRequest _$DriveFoldersCreateRequestFromJson(
+DriveFoldersCreateRequest _$DriveFoldersCreateRequestFromJson(
   Map<String, dynamic> json,
-) => _DriveFoldersCreateRequest(
+) => DriveFoldersCreateRequest(
   name: json['name'] as String?,
   parentId: json['parentId'] as String?,
 );
 
 Map<String, dynamic> _$DriveFoldersCreateRequestToJson(
-  _DriveFoldersCreateRequest instance,
+  DriveFoldersCreateRequest instance,
 ) => <String, dynamic>{'name': instance.name, 'parentId': instance.parentId};

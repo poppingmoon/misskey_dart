@@ -5,24 +5,25 @@ part 'user_list_timeline_request.freezed.dart';
 part 'user_list_timeline_request.g.dart';
 
 @freezed
-abstract class UserListTimelineRequest with _$UserListTimelineRequest {
-  const factory({
-    required String listId,
-    @Assert('limit > 0') int? limit,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-    bool? includeMyRenotes,
-    bool? includeRenotedMyNotes,
-    bool? includeLocalRenotes,
-    bool? withRenotes,
+@JsonSerializable()
+class const UserListTimelineRequest({
+  required final String listId,
+  @Assert('limit > 0') final int? limit,
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
+  final bool? includeMyRenotes,
+  final bool? includeRenotedMyNotes,
+  final bool? includeLocalRenotes,
+  final bool? withRenotes,
 
-    /// Only show notes that have attached files.
-    bool? withFiles,
-    bool? allowPartial,
-  }) = _UserListTimelineRequest;
-
+  /// Only show notes that have attached files.
+  final bool? withFiles,
+  final bool? allowPartial,
+}) with _$UserListTimelineRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$UserListTimelineRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UserListTimelineRequestToJson(this);
 }

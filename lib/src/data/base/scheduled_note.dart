@@ -6,57 +6,63 @@ part 'scheduled_note.freezed.dart';
 part 'scheduled_note.g.dart';
 
 @freezed
-abstract class ScheduledNote with _$ScheduledNote {
-  const factory({
-    required String id,
-    @DateTimeConverter() required DateTime updatedAt,
-    @NullableDateTimeConverter() DateTime? scheduledAt,
-    String? reason,
-    NoteChannelInfo? channel,
-    ScheduledNoteNote? renote,
-    ScheduledNoteNote? reply,
-    required ScheduledNoteData data,
-  }) = _ScheduledNote;
-
+@JsonSerializable()
+class const ScheduledNote({
+  required final String id,
+  @DateTimeConverter() required final DateTime updatedAt,
+  @NullableDateTimeConverter() final DateTime? scheduledAt,
+  final String? reason,
+  final NoteChannelInfo? channel,
+  final ScheduledNoteNote? renote,
+  final ScheduledNoteNote? reply,
+  required final ScheduledNoteData data,
+}) with _$ScheduledNote {
   factory fromJson(Map<String, dynamic> json) => _$ScheduledNoteFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ScheduledNoteToJson(this);
 }
 
 @freezed
-abstract class ScheduledNoteNote with _$ScheduledNoteNote {
-  const factory({
-    required String id,
-    String? text,
-    required ScheduledNoteUser user,
-  }) = _ScheduledNoteNote;
-
+@JsonSerializable()
+class const ScheduledNoteNote({
+  required final String id,
+  final String? text,
+  required final ScheduledNoteUser user,
+}) with _$ScheduledNoteNote {
   factory fromJson(Map<String, dynamic> json) =>
       _$ScheduledNoteNoteFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ScheduledNoteNoteToJson(this);
 }
 
 @freezed
-abstract class ScheduledNoteUser with _$ScheduledNoteUser {
-  const factory({required String id, required String username, String? host}) =
-      _ScheduledNoteUser;
-
+@JsonSerializable()
+class const ScheduledNoteUser({
+  required final String id,
+  required final String username,
+  final String? host,
+}) with _$ScheduledNoteUser {
   factory fromJson(Map<String, dynamic> json) =>
       _$ScheduledNoteUserFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ScheduledNoteUserToJson(this);
 }
 
 @freezed
-abstract class ScheduledNoteData with _$ScheduledNoteData {
-  const factory({
-    String? text,
-    bool? useCw,
-    String? cw,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    NoteVisibility? visibility,
-    @Default(false) bool localOnly,
-    @Default([]) List<DriveFile> files,
-    NotePoll? poll,
-    @Default([]) List<String> visibleUserIds,
-  }) = _ScheduledNoteData;
-
+@JsonSerializable()
+class const ScheduledNoteData({
+  final String? text,
+  final bool? useCw,
+  final String? cw,
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final NoteVisibility? visibility,
+  final bool localOnly = false,
+  final List<DriveFile> files = const [],
+  final NotePoll? poll,
+  final List<String> visibleUserIds = const [],
+}) with _$ScheduledNoteData {
   factory fromJson(Map<String, dynamic> json) =>
       _$ScheduledNoteDataFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ScheduledNoteDataToJson(this);
 }

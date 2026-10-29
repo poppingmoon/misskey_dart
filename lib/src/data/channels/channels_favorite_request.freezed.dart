@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ChannelsFavoriteRequest {
 
- String get channelId;
+
 /// Create a copy of ChannelsFavoriteRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $ChannelsFavoriteRequestCopyWith<ChannelsFavoriteRequest> get copyWith => _$ChannelsFavoriteRequestCopyWithImpl<ChannelsFavoriteRequest>(this as ChannelsFavoriteRequest, _$identity);
 
-  /// Serializes this ChannelsFavoriteRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -95,11 +93,10 @@ extension ChannelsFavoriteRequestPatterns on ChannelsFavoriteRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ChannelsFavoriteRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _ChannelsFavoriteRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -117,11 +114,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ChannelsFavoriteRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChannelsFavoriteRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -138,11 +134,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ChannelsFavoriteRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChannelsFavoriteRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -159,10 +154,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String channelId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _ChannelsFavoriteRequest() when $default != null:
-return $default(_that.channelId);case _:
+case _:
   return orElse();
 
 }
@@ -180,10 +174,9 @@ return $default(_that.channelId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String channelId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChannelsFavoriteRequest():
-return $default(_that.channelId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -200,85 +193,13 @@ return $default(_that.channelId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String channelId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChannelsFavoriteRequest() when $default != null:
-return $default(_that.channelId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _ChannelsFavoriteRequest implements ChannelsFavoriteRequest {
-  const _ChannelsFavoriteRequest({required this.channelId});
-  factory _ChannelsFavoriteRequest.fromJson(Map<String, dynamic> json) => _$ChannelsFavoriteRequestFromJson(json);
-
-@override final  String channelId;
-
-/// Create a copy of ChannelsFavoriteRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ChannelsFavoriteRequestCopyWith<_ChannelsFavoriteRequest> get copyWith => __$ChannelsFavoriteRequestCopyWithImpl<_ChannelsFavoriteRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$ChannelsFavoriteRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChannelsFavoriteRequest&&(identical(other.channelId, channelId) || other.channelId == channelId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,channelId);
-}
-
-@override
-String toString() {
-    return 'ChannelsFavoriteRequest(channelId: $channelId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ChannelsFavoriteRequestCopyWith<$Res> implements $ChannelsFavoriteRequestCopyWith<$Res> {
-  factory _$ChannelsFavoriteRequestCopyWith(_ChannelsFavoriteRequest value, $Res Function(_ChannelsFavoriteRequest) _then) = __$ChannelsFavoriteRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String channelId
-});
-
-
-
-
-}
-/// @nodoc
-class __$ChannelsFavoriteRequestCopyWithImpl<$Res>
-    implements _$ChannelsFavoriteRequestCopyWith<$Res> {
-  __$ChannelsFavoriteRequestCopyWithImpl(this._self, this._then);
-
-  final _ChannelsFavoriteRequest _self;
-  final $Res Function(_ChannelsFavoriteRequest) _then;
-
-/// Create a copy of ChannelsFavoriteRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? channelId = null,}) {
-  return _then(_ChannelsFavoriteRequest(
-channelId: null == channelId ? _self.channelId : channelId // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

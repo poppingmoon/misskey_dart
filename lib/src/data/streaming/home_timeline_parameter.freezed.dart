@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$HomeTimelineParameter {
 
- bool? get withRenotes; bool? get withFiles;
+
 /// Create a copy of HomeTimelineParameter
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $HomeTimelineParameterCopyWith<HomeTimelineParameter> get copyWith => _$HomeTimelineParameterCopyWithImpl<HomeTimelineParameter>(this as HomeTimelineParameter, _$identity);
 
-  /// Serializes this HomeTimelineParameter to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -96,11 +94,10 @@ extension HomeTimelineParameterPatterns on HomeTimelineParameter {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _HomeTimelineParameter value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _HomeTimelineParameter() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -118,11 +115,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _HomeTimelineParameter value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _HomeTimelineParameter():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -139,11 +135,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _HomeTimelineParameter value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _HomeTimelineParameter() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -160,10 +155,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( bool? withRenotes,  bool? withFiles)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _HomeTimelineParameter() when $default != null:
-return $default(_that.withRenotes,_that.withFiles);case _:
+case _:
   return orElse();
 
 }
@@ -181,10 +175,9 @@ return $default(_that.withRenotes,_that.withFiles);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( bool? withRenotes,  bool? withFiles)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _HomeTimelineParameter():
-return $default(_that.withRenotes,_that.withFiles);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -201,87 +194,13 @@ return $default(_that.withRenotes,_that.withFiles);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( bool? withRenotes,  bool? withFiles)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _HomeTimelineParameter() when $default != null:
-return $default(_that.withRenotes,_that.withFiles);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _HomeTimelineParameter implements HomeTimelineParameter {
-  const _HomeTimelineParameter({this.withRenotes, this.withFiles});
-  factory _HomeTimelineParameter.fromJson(Map<String, dynamic> json) => _$HomeTimelineParameterFromJson(json);
-
-@override final  bool? withRenotes;
-@override final  bool? withFiles;
-
-/// Create a copy of HomeTimelineParameter
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$HomeTimelineParameterCopyWith<_HomeTimelineParameter> get copyWith => __$HomeTimelineParameterCopyWithImpl<_HomeTimelineParameter>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$HomeTimelineParameterToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _HomeTimelineParameter&&(identical(other.withRenotes, withRenotes) || other.withRenotes == withRenotes)&&(identical(other.withFiles, withFiles) || other.withFiles == withFiles));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,withRenotes,withFiles);
-}
-
-@override
-String toString() {
-    return 'HomeTimelineParameter(withRenotes: $withRenotes, withFiles: $withFiles)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$HomeTimelineParameterCopyWith<$Res> implements $HomeTimelineParameterCopyWith<$Res> {
-  factory _$HomeTimelineParameterCopyWith(_HomeTimelineParameter value, $Res Function(_HomeTimelineParameter) _then) = __$HomeTimelineParameterCopyWithImpl;
-@override @useResult
-$Res call({
- bool? withRenotes, bool? withFiles
-});
-
-
-
-
-}
-/// @nodoc
-class __$HomeTimelineParameterCopyWithImpl<$Res>
-    implements _$HomeTimelineParameterCopyWith<$Res> {
-  __$HomeTimelineParameterCopyWithImpl(this._self, this._then);
-
-  final _HomeTimelineParameter _self;
-  final $Res Function(_HomeTimelineParameter) _then;
-
-/// Create a copy of HomeTimelineParameter
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? withRenotes = freezed,Object? withFiles = freezed,}) {
-  return _then(_HomeTimelineParameter(
-withRenotes: freezed == withRenotes ? _self.withRenotes : withRenotes // ignore: cast_nullable_to_non_nullable
-as bool?,withFiles: freezed == withFiles ? _self.withFiles : withFiles // ignore: cast_nullable_to_non_nullable
-as bool?,
-  ));
-}
-
 
 }
 

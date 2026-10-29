@@ -6,8 +6,8 @@ part of 'users_notes_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_UsersNotesRequest _$UsersNotesRequestFromJson(Map<String, dynamic> json) =>
-    _UsersNotesRequest(
+UsersNotesRequest _$UsersNotesRequestFromJson(Map<String, dynamic> json) =>
+    UsersNotesRequest(
       userId: json['userId'] as String,
       includeReplies: json['includeReplies'] as bool?,
       withReplies: json['withReplies'] as bool?,
@@ -33,7 +33,7 @@ _UsersNotesRequest _$UsersNotesRequestFromJson(Map<String, dynamic> json) =>
       excludeNsfw: json['excludeNsfw'] as bool?,
     );
 
-Map<String, dynamic> _$UsersNotesRequestToJson(_UsersNotesRequest instance) =>
+Map<String, dynamic> _$UsersNotesRequestToJson(UsersNotesRequest instance) =>
     <String, dynamic>{
       'userId': instance.userId,
       'includeReplies': instance.includeReplies,

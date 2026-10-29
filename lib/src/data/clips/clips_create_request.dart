@@ -4,10 +4,14 @@ part 'clips_create_request.freezed.dart';
 part 'clips_create_request.g.dart';
 
 @freezed
-abstract class ClipsCreateRequest with _$ClipsCreateRequest {
-  const factory({required String name, bool? isPublic, String? description}) =
-      _ClipsCreateRequest;
-
+@JsonSerializable()
+class const ClipsCreateRequest({
+  required final String name,
+  final bool? isPublic,
+  final String? description,
+}) with _$ClipsCreateRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$ClipsCreateRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ClipsCreateRequestToJson(this);
 }

@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$UsersGetFrequentlyRepliedUsersRequest {
 
- String get userId; int? get limit;
+
 /// Create a copy of UsersGetFrequentlyRepliedUsersRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $UsersGetFrequentlyRepliedUsersRequestCopyWith<UsersGetFrequentlyRepliedUsersRequest> get copyWith => _$UsersGetFrequentlyRepliedUsersRequestCopyWithImpl<UsersGetFrequentlyRepliedUsersRequest>(this as UsersGetFrequentlyRepliedUsersRequest, _$identity);
 
-  /// Serializes this UsersGetFrequentlyRepliedUsersRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -96,11 +94,10 @@ extension UsersGetFrequentlyRepliedUsersRequestPatterns on UsersGetFrequentlyRep
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UsersGetFrequentlyRepliedUsersRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _UsersGetFrequentlyRepliedUsersRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -118,11 +115,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UsersGetFrequentlyRepliedUsersRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UsersGetFrequentlyRepliedUsersRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -139,11 +135,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UsersGetFrequentlyRepliedUsersRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UsersGetFrequentlyRepliedUsersRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -160,10 +155,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String userId,  int? limit)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _UsersGetFrequentlyRepliedUsersRequest() when $default != null:
-return $default(_that.userId,_that.limit);case _:
+case _:
   return orElse();
 
 }
@@ -181,10 +175,9 @@ return $default(_that.userId,_that.limit);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String userId,  int? limit)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UsersGetFrequentlyRepliedUsersRequest():
-return $default(_that.userId,_that.limit);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -201,87 +194,13 @@ return $default(_that.userId,_that.limit);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String userId,  int? limit)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UsersGetFrequentlyRepliedUsersRequest() when $default != null:
-return $default(_that.userId,_that.limit);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _UsersGetFrequentlyRepliedUsersRequest implements UsersGetFrequentlyRepliedUsersRequest {
-  const _UsersGetFrequentlyRepliedUsersRequest({required this.userId, this.limit});
-  factory _UsersGetFrequentlyRepliedUsersRequest.fromJson(Map<String, dynamic> json) => _$UsersGetFrequentlyRepliedUsersRequestFromJson(json);
-
-@override final  String userId;
-@override final  int? limit;
-
-/// Create a copy of UsersGetFrequentlyRepliedUsersRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$UsersGetFrequentlyRepliedUsersRequestCopyWith<_UsersGetFrequentlyRepliedUsersRequest> get copyWith => __$UsersGetFrequentlyRepliedUsersRequestCopyWithImpl<_UsersGetFrequentlyRepliedUsersRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$UsersGetFrequentlyRepliedUsersRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersGetFrequentlyRepliedUsersRequest&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.limit, limit) || other.limit == limit));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,userId,limit);
-}
-
-@override
-String toString() {
-    return 'UsersGetFrequentlyRepliedUsersRequest(userId: $userId, limit: $limit)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$UsersGetFrequentlyRepliedUsersRequestCopyWith<$Res> implements $UsersGetFrequentlyRepliedUsersRequestCopyWith<$Res> {
-  factory _$UsersGetFrequentlyRepliedUsersRequestCopyWith(_UsersGetFrequentlyRepliedUsersRequest value, $Res Function(_UsersGetFrequentlyRepliedUsersRequest) _then) = __$UsersGetFrequentlyRepliedUsersRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String userId, int? limit
-});
-
-
-
-
-}
-/// @nodoc
-class __$UsersGetFrequentlyRepliedUsersRequestCopyWithImpl<$Res>
-    implements _$UsersGetFrequentlyRepliedUsersRequestCopyWith<$Res> {
-  __$UsersGetFrequentlyRepliedUsersRequestCopyWithImpl(this._self, this._then);
-
-  final _UsersGetFrequentlyRepliedUsersRequest _self;
-  final $Res Function(_UsersGetFrequentlyRepliedUsersRequest) _then;
-
-/// Create a copy of UsersGetFrequentlyRepliedUsersRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? userId = null,Object? limit = freezed,}) {
-  return _then(_UsersGetFrequentlyRepliedUsersRequest(
-userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
-as String,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,
-  ));
-}
-
 
 }
 

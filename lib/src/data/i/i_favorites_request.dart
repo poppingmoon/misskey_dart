@@ -4,15 +4,16 @@ part 'i_favorites_request.freezed.dart';
 part 'i_favorites_request.g.dart';
 
 @freezed
-abstract class IFavoritesRequest with _$IFavoritesRequest {
-  const factory({
-    @Assert('limit > 0') int? limit,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-  }) = _IFavoritesRequest;
-
+@JsonSerializable()
+class const IFavoritesRequest({
+  @Assert('limit > 0') final int? limit,
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
+}) with _$IFavoritesRequest {
   factory fromJson(Map<String, Object?> json) =>
       _$IFavoritesRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$IFavoritesRequestToJson(this);
 }

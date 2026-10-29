@@ -6,22 +6,23 @@ part 'pages_update_request.freezed.dart';
 part 'pages_update_request.g.dart';
 
 @freezed
-abstract class PagesUpdateRequest with _$PagesUpdateRequest {
-  const factory({
-    required String pageId,
-    String? title,
-    String? name,
-    String? summary,
-    @PageContentConverter() List<AbstractPageContent>? content,
-    List<dynamic>? variables,
-    String? script,
-    String? eyeCatchingImageId,
-    String? font,
-    bool? alignCenter,
-    bool? hideTitleWhenPinned,
-    PageVisibility? visibility,
-  }) = _PagesUpdateRequest;
-
+@JsonSerializable()
+class const PagesUpdateRequest({
+  required final String pageId,
+  final String? title,
+  final String? name,
+  final String? summary,
+  @PageContentConverter() final List<AbstractPageContent>? content,
+  final List<dynamic>? variables,
+  final String? script,
+  final String? eyeCatchingImageId,
+  final String? font,
+  final bool? alignCenter,
+  final bool? hideTitleWhenPinned,
+  final PageVisibility? visibility,
+}) with _$PagesUpdateRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$PagesUpdateRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$PagesUpdateRequestToJson(this);
 }

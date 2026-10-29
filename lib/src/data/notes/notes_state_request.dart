@@ -4,9 +4,11 @@ part 'notes_state_request.freezed.dart';
 part 'notes_state_request.g.dart';
 
 @freezed
-abstract class NotesStateRequest with _$NotesStateRequest {
-  const factory({required String noteId}) = _NotesStateRequest;
-
+@JsonSerializable()
+class const NotesStateRequest({required final String noteId})
+    with _$NotesStateRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$NotesStateRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NotesStateRequestToJson(this);
 }

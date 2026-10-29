@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ChatRoomParameter {
 
- String get roomId;
+
 /// Create a copy of ChatRoomParameter
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $ChatRoomParameterCopyWith<ChatRoomParameter> get copyWith => _$ChatRoomParameterCopyWithImpl<ChatRoomParameter>(this as ChatRoomParameter, _$identity);
 
-  /// Serializes this ChatRoomParameter to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -95,11 +93,10 @@ extension ChatRoomParameterPatterns on ChatRoomParameter {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ChatRoomParameter value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _ChatRoomParameter() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -117,11 +114,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ChatRoomParameter value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChatRoomParameter():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -138,11 +134,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ChatRoomParameter value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChatRoomParameter() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -159,10 +154,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String roomId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _ChatRoomParameter() when $default != null:
-return $default(_that.roomId);case _:
+case _:
   return orElse();
 
 }
@@ -180,10 +174,9 @@ return $default(_that.roomId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String roomId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChatRoomParameter():
-return $default(_that.roomId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -200,85 +193,13 @@ return $default(_that.roomId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String roomId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChatRoomParameter() when $default != null:
-return $default(_that.roomId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _ChatRoomParameter implements ChatRoomParameter {
-  const _ChatRoomParameter({required this.roomId});
-  factory _ChatRoomParameter.fromJson(Map<String, dynamic> json) => _$ChatRoomParameterFromJson(json);
-
-@override final  String roomId;
-
-/// Create a copy of ChatRoomParameter
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ChatRoomParameterCopyWith<_ChatRoomParameter> get copyWith => __$ChatRoomParameterCopyWithImpl<_ChatRoomParameter>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$ChatRoomParameterToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatRoomParameter&&(identical(other.roomId, roomId) || other.roomId == roomId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,roomId);
-}
-
-@override
-String toString() {
-    return 'ChatRoomParameter(roomId: $roomId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ChatRoomParameterCopyWith<$Res> implements $ChatRoomParameterCopyWith<$Res> {
-  factory _$ChatRoomParameterCopyWith(_ChatRoomParameter value, $Res Function(_ChatRoomParameter) _then) = __$ChatRoomParameterCopyWithImpl;
-@override @useResult
-$Res call({
- String roomId
-});
-
-
-
-
-}
-/// @nodoc
-class __$ChatRoomParameterCopyWithImpl<$Res>
-    implements _$ChatRoomParameterCopyWith<$Res> {
-  __$ChatRoomParameterCopyWithImpl(this._self, this._then);
-
-  final _ChatRoomParameter _self;
-  final $Res Function(_ChatRoomParameter) _then;
-
-/// Create a copy of ChatRoomParameter
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? roomId = null,}) {
-  return _then(_ChatRoomParameter(
-roomId: null == roomId ? _self.roomId : roomId // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

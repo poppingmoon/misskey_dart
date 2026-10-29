@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$RenoteMuteCreateRequest {
 
- String get userId;
+
 /// Create a copy of RenoteMuteCreateRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $RenoteMuteCreateRequestCopyWith<RenoteMuteCreateRequest> get copyWith => _$RenoteMuteCreateRequestCopyWithImpl<RenoteMuteCreateRequest>(this as RenoteMuteCreateRequest, _$identity);
 
-  /// Serializes this RenoteMuteCreateRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -95,11 +93,10 @@ extension RenoteMuteCreateRequestPatterns on RenoteMuteCreateRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _RenoteMuteCreateRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _RenoteMuteCreateRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -117,11 +114,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _RenoteMuteCreateRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _RenoteMuteCreateRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -138,11 +134,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _RenoteMuteCreateRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _RenoteMuteCreateRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -159,10 +154,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String userId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _RenoteMuteCreateRequest() when $default != null:
-return $default(_that.userId);case _:
+case _:
   return orElse();
 
 }
@@ -180,10 +174,9 @@ return $default(_that.userId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String userId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _RenoteMuteCreateRequest():
-return $default(_that.userId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -200,85 +193,13 @@ return $default(_that.userId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String userId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _RenoteMuteCreateRequest() when $default != null:
-return $default(_that.userId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _RenoteMuteCreateRequest implements RenoteMuteCreateRequest {
-  const _RenoteMuteCreateRequest({required this.userId});
-  factory _RenoteMuteCreateRequest.fromJson(Map<String, dynamic> json) => _$RenoteMuteCreateRequestFromJson(json);
-
-@override final  String userId;
-
-/// Create a copy of RenoteMuteCreateRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$RenoteMuteCreateRequestCopyWith<_RenoteMuteCreateRequest> get copyWith => __$RenoteMuteCreateRequestCopyWithImpl<_RenoteMuteCreateRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$RenoteMuteCreateRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _RenoteMuteCreateRequest&&(identical(other.userId, userId) || other.userId == userId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,userId);
-}
-
-@override
-String toString() {
-    return 'RenoteMuteCreateRequest(userId: $userId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$RenoteMuteCreateRequestCopyWith<$Res> implements $RenoteMuteCreateRequestCopyWith<$Res> {
-  factory _$RenoteMuteCreateRequestCopyWith(_RenoteMuteCreateRequest value, $Res Function(_RenoteMuteCreateRequest) _then) = __$RenoteMuteCreateRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String userId
-});
-
-
-
-
-}
-/// @nodoc
-class __$RenoteMuteCreateRequestCopyWithImpl<$Res>
-    implements _$RenoteMuteCreateRequestCopyWith<$Res> {
-  __$RenoteMuteCreateRequestCopyWithImpl(this._self, this._then);
-
-  final _RenoteMuteCreateRequest _self;
-  final $Res Function(_RenoteMuteCreateRequest) _then;
-
-/// Create a copy of RenoteMuteCreateRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? userId = null,}) {
-  return _then(_RenoteMuteCreateRequest(
-userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

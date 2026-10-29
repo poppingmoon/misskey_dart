@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$UsersListsCreateFromPublicRequest {
 
- String get name; String get listId;
+
 /// Create a copy of UsersListsCreateFromPublicRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $UsersListsCreateFromPublicRequestCopyWith<UsersListsCreateFromPublicRequest> get copyWith => _$UsersListsCreateFromPublicRequestCopyWithImpl<UsersListsCreateFromPublicRequest>(this as UsersListsCreateFromPublicRequest, _$identity);
 
-  /// Serializes this UsersListsCreateFromPublicRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -96,11 +94,10 @@ extension UsersListsCreateFromPublicRequestPatterns on UsersListsCreateFromPubli
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UsersListsCreateFromPublicRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _UsersListsCreateFromPublicRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -118,11 +115,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UsersListsCreateFromPublicRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UsersListsCreateFromPublicRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -139,11 +135,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UsersListsCreateFromPublicRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UsersListsCreateFromPublicRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -160,10 +155,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String name,  String listId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _UsersListsCreateFromPublicRequest() when $default != null:
-return $default(_that.name,_that.listId);case _:
+case _:
   return orElse();
 
 }
@@ -181,10 +175,9 @@ return $default(_that.name,_that.listId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String name,  String listId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UsersListsCreateFromPublicRequest():
-return $default(_that.name,_that.listId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -201,87 +194,13 @@ return $default(_that.name,_that.listId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String name,  String listId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UsersListsCreateFromPublicRequest() when $default != null:
-return $default(_that.name,_that.listId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _UsersListsCreateFromPublicRequest implements UsersListsCreateFromPublicRequest {
-  const _UsersListsCreateFromPublicRequest({required this.name, required this.listId});
-  factory _UsersListsCreateFromPublicRequest.fromJson(Map<String, dynamic> json) => _$UsersListsCreateFromPublicRequestFromJson(json);
-
-@override final  String name;
-@override final  String listId;
-
-/// Create a copy of UsersListsCreateFromPublicRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$UsersListsCreateFromPublicRequestCopyWith<_UsersListsCreateFromPublicRequest> get copyWith => __$UsersListsCreateFromPublicRequestCopyWithImpl<_UsersListsCreateFromPublicRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$UsersListsCreateFromPublicRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersListsCreateFromPublicRequest&&(identical(other.name, name) || other.name == name)&&(identical(other.listId, listId) || other.listId == listId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,name,listId);
-}
-
-@override
-String toString() {
-    return 'UsersListsCreateFromPublicRequest(name: $name, listId: $listId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$UsersListsCreateFromPublicRequestCopyWith<$Res> implements $UsersListsCreateFromPublicRequestCopyWith<$Res> {
-  factory _$UsersListsCreateFromPublicRequestCopyWith(_UsersListsCreateFromPublicRequest value, $Res Function(_UsersListsCreateFromPublicRequest) _then) = __$UsersListsCreateFromPublicRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String name, String listId
-});
-
-
-
-
-}
-/// @nodoc
-class __$UsersListsCreateFromPublicRequestCopyWithImpl<$Res>
-    implements _$UsersListsCreateFromPublicRequestCopyWith<$Res> {
-  __$UsersListsCreateFromPublicRequestCopyWithImpl(this._self, this._then);
-
-  final _UsersListsCreateFromPublicRequest _self;
-  final $Res Function(_UsersListsCreateFromPublicRequest) _then;
-
-/// Create a copy of UsersListsCreateFromPublicRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? name = null,Object? listId = null,}) {
-  return _then(_UsersListsCreateFromPublicRequest(
-name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String,listId: null == listId ? _self.listId : listId // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

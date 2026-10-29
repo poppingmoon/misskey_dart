@@ -4,8 +4,10 @@ part 'note_edited.freezed.dart';
 part 'note_edited.g.dart';
 
 @freezed
-abstract class NoteEdited with _$NoteEdited {
-  const factory({String? cw, String? text}) = _NoteEdited;
-
+@JsonSerializable()
+class const NoteEdited({final String? cw, final String? text})
+    with _$NoteEdited {
   factory fromJson(Map<String, Object?> json) => _$NoteEditedFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NoteEditedToJson(this);
 }

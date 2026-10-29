@@ -16,16 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$AnnouncementsRequest {
 
- int? get limit;/// removed in Misskey 2023.9
- bool? get withUnreads; bool? get isActive; String? get sinceId; String? get untilId;@EpocTimeDateTimeConverter() DateTime? get sinceDate;@EpocTimeDateTimeConverter() DateTime? get untilDate; int? get offset;
+
 /// Create a copy of AnnouncementsRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $AnnouncementsRequestCopyWith<AnnouncementsRequest> get copyWith => _$AnnouncementsRequestCopyWithImpl<AnnouncementsRequest>(this as AnnouncementsRequest, _$identity);
 
-  /// Serializes this AnnouncementsRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -103,11 +100,10 @@ extension AnnouncementsRequestPatterns on AnnouncementsRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _AnnouncementsRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _AnnouncementsRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -125,11 +121,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _AnnouncementsRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _AnnouncementsRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -146,11 +141,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _AnnouncementsRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _AnnouncementsRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -167,10 +161,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? limit,  bool? withUnreads,  bool? isActive,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  int? offset)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _AnnouncementsRequest() when $default != null:
-return $default(_that.limit,_that.withUnreads,_that.isActive,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.offset);case _:
+case _:
   return orElse();
 
 }
@@ -188,10 +181,9 @@ return $default(_that.limit,_that.withUnreads,_that.isActive,_that.sinceId,_that
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? limit,  bool? withUnreads,  bool? isActive,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  int? offset)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _AnnouncementsRequest():
-return $default(_that.limit,_that.withUnreads,_that.isActive,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.offset);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -208,100 +200,13 @@ return $default(_that.limit,_that.withUnreads,_that.isActive,_that.sinceId,_that
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? limit,  bool? withUnreads,  bool? isActive,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  int? offset)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _AnnouncementsRequest() when $default != null:
-return $default(_that.limit,_that.withUnreads,_that.isActive,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.offset);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _AnnouncementsRequest implements AnnouncementsRequest {
-  const _AnnouncementsRequest({this.limit, this.withUnreads, this.isActive, this.sinceId, this.untilId, @EpocTimeDateTimeConverter() this.sinceDate, @EpocTimeDateTimeConverter() this.untilDate, this.offset});
-  factory _AnnouncementsRequest.fromJson(Map<String, dynamic> json) => _$AnnouncementsRequestFromJson(json);
-
-@override final  int? limit;
-/// removed in Misskey 2023.9
-@override final  bool? withUnreads;
-@override final  bool? isActive;
-@override final  String? sinceId;
-@override final  String? untilId;
-@override@EpocTimeDateTimeConverter() final  DateTime? sinceDate;
-@override@EpocTimeDateTimeConverter() final  DateTime? untilDate;
-@override final  int? offset;
-
-/// Create a copy of AnnouncementsRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$AnnouncementsRequestCopyWith<_AnnouncementsRequest> get copyWith => __$AnnouncementsRequestCopyWithImpl<_AnnouncementsRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$AnnouncementsRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _AnnouncementsRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.withUnreads, withUnreads) || other.withUnreads == withUnreads)&&(identical(other.isActive, isActive) || other.isActive == isActive)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.offset, offset) || other.offset == offset));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,limit,withUnreads,isActive,sinceId,untilId,sinceDate,untilDate,offset);
-}
-
-@override
-String toString() {
-    return 'AnnouncementsRequest(limit: $limit, withUnreads: $withUnreads, isActive: $isActive, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, offset: $offset)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$AnnouncementsRequestCopyWith<$Res> implements $AnnouncementsRequestCopyWith<$Res> {
-  factory _$AnnouncementsRequestCopyWith(_AnnouncementsRequest value, $Res Function(_AnnouncementsRequest) _then) = __$AnnouncementsRequestCopyWithImpl;
-@override @useResult
-$Res call({
- int? limit, bool? withUnreads, bool? isActive, String? sinceId, String? untilId,@EpocTimeDateTimeConverter() DateTime? sinceDate,@EpocTimeDateTimeConverter() DateTime? untilDate, int? offset
-});
-
-
-
-
-}
-/// @nodoc
-class __$AnnouncementsRequestCopyWithImpl<$Res>
-    implements _$AnnouncementsRequestCopyWith<$Res> {
-  __$AnnouncementsRequestCopyWithImpl(this._self, this._then);
-
-  final _AnnouncementsRequest _self;
-  final $Res Function(_AnnouncementsRequest) _then;
-
-/// Create a copy of AnnouncementsRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? limit = freezed,Object? withUnreads = freezed,Object? isActive = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,Object? offset = freezed,}) {
-  return _then(_AnnouncementsRequest(
-limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,withUnreads: freezed == withUnreads ? _self.withUnreads : withUnreads // ignore: cast_nullable_to_non_nullable
-as bool?,isActive: freezed == isActive ? _self.isActive : isActive // ignore: cast_nullable_to_non_nullable
-as bool?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
-as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
-as String?,sinceDate: freezed == sinceDate ? _self.sinceDate : sinceDate // ignore: cast_nullable_to_non_nullable
-as DateTime?,untilDate: freezed == untilDate ? _self.untilDate : untilDate // ignore: cast_nullable_to_non_nullable
-as DateTime?,offset: freezed == offset ? _self.offset : offset // ignore: cast_nullable_to_non_nullable
-as int?,
-  ));
-}
-
 
 }
 

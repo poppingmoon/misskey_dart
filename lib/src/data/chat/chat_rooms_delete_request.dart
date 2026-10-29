@@ -4,9 +4,11 @@ part 'chat_rooms_delete_request.freezed.dart';
 part 'chat_rooms_delete_request.g.dart';
 
 @freezed
-abstract class ChatRoomsDeleteRequest with _$ChatRoomsDeleteRequest {
-  const factory({required String roomId}) = _ChatRoomsDeleteRequest;
-
+@JsonSerializable()
+class const ChatRoomsDeleteRequest({required final String roomId})
+    with _$ChatRoomsDeleteRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$ChatRoomsDeleteRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ChatRoomsDeleteRequestToJson(this);
 }

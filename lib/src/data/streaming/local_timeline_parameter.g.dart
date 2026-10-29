@@ -6,16 +6,16 @@ part of 'local_timeline_parameter.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_LocalTimelineParameter _$LocalTimelineParameterFromJson(
+LocalTimelineParameter _$LocalTimelineParameterFromJson(
   Map<String, dynamic> json,
-) => _LocalTimelineParameter(
+) => LocalTimelineParameter(
   withRenotes: json['withRenotes'] as bool?,
   withReplies: json['withReplies'] as bool?,
   withFiles: json['withFiles'] as bool?,
 );
 
 Map<String, dynamic> _$LocalTimelineParameterToJson(
-  _LocalTimelineParameter instance,
+  LocalTimelineParameter instance,
 ) => <String, dynamic>{
   'withRenotes': instance.withRenotes,
   'withReplies': instance.withReplies,

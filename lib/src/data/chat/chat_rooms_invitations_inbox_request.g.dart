@@ -6,9 +6,9 @@ part of 'chat_rooms_invitations_inbox_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ChatRoomsInvitationsInboxRequest _$ChatRoomsInvitationsInboxRequestFromJson(
+ChatRoomsInvitationsInboxRequest _$ChatRoomsInvitationsInboxRequestFromJson(
   Map<String, dynamic> json,
-) => _ChatRoomsInvitationsInboxRequest(
+) => ChatRoomsInvitationsInboxRequest(
   limit: (json['limit'] as num?)?.toInt(),
   sinceId: json['sinceId'] as String?,
   untilId: json['untilId'] as String?,
@@ -23,7 +23,7 @@ _ChatRoomsInvitationsInboxRequest _$ChatRoomsInvitationsInboxRequestFromJson(
 );
 
 Map<String, dynamic> _$ChatRoomsInvitationsInboxRequestToJson(
-  _ChatRoomsInvitationsInboxRequest instance,
+  ChatRoomsInvitationsInboxRequest instance,
 ) => <String, dynamic>{
   'limit': instance.limit,
   'sinceId': instance.sinceId,

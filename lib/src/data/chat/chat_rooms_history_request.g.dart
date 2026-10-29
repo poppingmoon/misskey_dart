@@ -6,16 +6,16 @@ part of 'chat_rooms_history_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ChatRoomsHistoryRequest _$ChatRoomsHistoryRequestFromJson(
+ChatRoomsHistoryRequest _$ChatRoomsHistoryRequestFromJson(
   Map<String, dynamic> json,
-) => _ChatRoomsHistoryRequest(
+) => ChatRoomsHistoryRequest(
   limit: (json['limit'] as num?)?.toInt(),
   sinceId: json['sinceId'] as String?,
   untilId: json['untilId'] as String?,
 );
 
 Map<String, dynamic> _$ChatRoomsHistoryRequestToJson(
-  _ChatRoomsHistoryRequest instance,
+  ChatRoomsHistoryRequest instance,
 ) => <String, dynamic>{
   'limit': instance.limit,
   'sinceId': instance.sinceId,

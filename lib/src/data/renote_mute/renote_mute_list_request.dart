@@ -5,15 +5,16 @@ part 'renote_mute_list_request.freezed.dart';
 part 'renote_mute_list_request.g.dart';
 
 @freezed
-abstract class RenoteMuteListRequest with _$RenoteMuteListRequest {
-  const factory({
-    int? limit,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-  }) = _RenoteMuteListRequest;
-
+@JsonSerializable()
+class const RenoteMuteListRequest({
+  final int? limit,
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
+}) with _$RenoteMuteListRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$RenoteMuteListRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$RenoteMuteListRequestToJson(this);
 }

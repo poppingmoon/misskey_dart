@@ -5,15 +5,16 @@ part 'users_search_request.freezed.dart';
 part 'users_search_request.g.dart';
 
 @freezed
-abstract class UsersSearchRequest with _$UsersSearchRequest {
-  const factory({
-    required String query,
-    int? offset,
-    int? limit,
-    Origin? origin,
-    bool? detail,
-  }) = _UsersSearchRequest;
-
+@JsonSerializable()
+class const UsersSearchRequest({
+  required final String query,
+  final int? offset,
+  final int? limit,
+  final Origin? origin,
+  final bool? detail,
+}) with _$UsersSearchRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$UsersSearchRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UsersSearchRequestToJson(this);
 }

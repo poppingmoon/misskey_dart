@@ -6,8 +6,8 @@ part of 'misskey_exception.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_MisskeyException _$MisskeyExceptionFromJson(Map<String, dynamic> json) =>
-    _MisskeyException(
+MisskeyException _$MisskeyExceptionFromJson(Map<String, dynamic> json) =>
+    MisskeyException(
       id: json['id'] as String,
       code: json['code'] as String,
       message: json['message'] as String,
@@ -19,7 +19,7 @@ _MisskeyException _$MisskeyExceptionFromJson(Map<String, dynamic> json) =>
       info: json['info'] as Map<String, dynamic>?,
     );
 
-Map<String, dynamic> _$MisskeyExceptionToJson(_MisskeyException instance) =>
+Map<String, dynamic> _$MisskeyExceptionToJson(MisskeyException instance) =>
     <String, dynamic>{
       'id': instance.id,
       'code': instance.code,

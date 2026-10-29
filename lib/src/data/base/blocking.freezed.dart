@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$Blocking {
 
- String get id;@DateTimeConverter() DateTime get createdAt; String get blockeeId; UserDetailedNotMe get blockee;
+
 /// Create a copy of Blocking
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $BlockingCopyWith<Blocking> get copyWith => _$BlockingCopyWithImpl<Blocking>(this as Blocking, _$identity);
 
-  /// Serializes this Blocking to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -107,11 +105,10 @@ extension BlockingPatterns on Blocking {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _Blocking value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _Blocking() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -129,11 +126,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _Blocking value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _Blocking():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -150,11 +146,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _Blocking value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _Blocking() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -171,10 +166,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt,  String blockeeId,  UserDetailedNotMe blockee)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _Blocking() when $default != null:
-return $default(_that.id,_that.createdAt,_that.blockeeId,_that.blockee);case _:
+case _:
   return orElse();
 
 }
@@ -192,10 +186,9 @@ return $default(_that.id,_that.createdAt,_that.blockeeId,_that.blockee);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt,  String blockeeId,  UserDetailedNotMe blockee)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _Blocking():
-return $default(_that.id,_that.createdAt,_that.blockeeId,_that.blockee);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -212,101 +205,14 @@ return $default(_that.id,_that.createdAt,_that.blockeeId,_that.blockee);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id, @DateTimeConverter()  DateTime createdAt,  String blockeeId,  UserDetailedNotMe blockee)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _Blocking() when $default != null:
-return $default(_that.id,_that.createdAt,_that.blockeeId,_that.blockee);case _:
+case _:
   return null;
 
 }
 }
 
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _Blocking implements Blocking {
-  const _Blocking({required this.id, @DateTimeConverter() required this.createdAt, required this.blockeeId, required this.blockee});
-  factory _Blocking.fromJson(Map<String, dynamic> json) => _$BlockingFromJson(json);
-
-@override final  String id;
-@override@DateTimeConverter() final  DateTime createdAt;
-@override final  String blockeeId;
-@override final  UserDetailedNotMe blockee;
-
-/// Create a copy of Blocking
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$BlockingCopyWith<_Blocking> get copyWith => __$BlockingCopyWithImpl<_Blocking>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$BlockingToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Blocking&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.blockeeId, blockeeId) || other.blockeeId == blockeeId)&&(identical(other.blockee, blockee) || other.blockee == blockee));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,id,createdAt,blockeeId,blockee);
-}
-
-@override
-String toString() {
-    return 'Blocking(id: $id, createdAt: $createdAt, blockeeId: $blockeeId, blockee: $blockee)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$BlockingCopyWith<$Res> implements $BlockingCopyWith<$Res> {
-  factory _$BlockingCopyWith(_Blocking value, $Res Function(_Blocking) _then) = __$BlockingCopyWithImpl;
-@override @useResult
-$Res call({
- String id,@DateTimeConverter() DateTime createdAt, String blockeeId, UserDetailedNotMe blockee
-});
-
-
-@override $UserDetailedNotMeCopyWith<$Res> get blockee;
-
-}
-/// @nodoc
-class __$BlockingCopyWithImpl<$Res>
-    implements _$BlockingCopyWith<$Res> {
-  __$BlockingCopyWithImpl(this._self, this._then);
-
-  final _Blocking _self;
-  final $Res Function(_Blocking) _then;
-
-/// Create a copy of Blocking
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? createdAt = null,Object? blockeeId = null,Object? blockee = null,}) {
-  return _then(_Blocking(
-id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
-as DateTime,blockeeId: null == blockeeId ? _self.blockeeId : blockeeId // ignore: cast_nullable_to_non_nullable
-as String,blockee: null == blockee ? _self.blockee : blockee // ignore: cast_nullable_to_non_nullable
-as UserDetailedNotMe,
-  ));
-}
-
-/// Create a copy of Blocking
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$UserDetailedNotMeCopyWith<$Res> get blockee {
-  
-  return $UserDetailedNotMeCopyWith<$Res>(_self.blockee, (value) {
-    return _then(_self.copyWith(blockee: value));
-  });
-}
 }
 
 // dart format on

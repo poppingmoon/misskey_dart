@@ -6,10 +6,10 @@ part of 'clips_unfavorite_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ClipsUnfavoriteRequest _$ClipsUnfavoriteRequestFromJson(
+ClipsUnfavoriteRequest _$ClipsUnfavoriteRequestFromJson(
   Map<String, dynamic> json,
-) => _ClipsUnfavoriteRequest(clipId: json['clipId'] as String);
+) => ClipsUnfavoriteRequest(clipId: json['clipId'] as String);
 
 Map<String, dynamic> _$ClipsUnfavoriteRequestToJson(
-  _ClipsUnfavoriteRequest instance,
+  ClipsUnfavoriteRequest instance,
 ) => <String, dynamic>{'clipId': instance.clipId};

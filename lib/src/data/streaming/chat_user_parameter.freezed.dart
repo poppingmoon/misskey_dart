@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ChatUserParameter {
 
- String get otherId;
+
 /// Create a copy of ChatUserParameter
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $ChatUserParameterCopyWith<ChatUserParameter> get copyWith => _$ChatUserParameterCopyWithImpl<ChatUserParameter>(this as ChatUserParameter, _$identity);
 
-  /// Serializes this ChatUserParameter to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -95,11 +93,10 @@ extension ChatUserParameterPatterns on ChatUserParameter {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ChatUserParameter value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _ChatUserParameter() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -117,11 +114,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ChatUserParameter value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChatUserParameter():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -138,11 +134,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ChatUserParameter value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _ChatUserParameter() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -159,10 +154,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String otherId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _ChatUserParameter() when $default != null:
-return $default(_that.otherId);case _:
+case _:
   return orElse();
 
 }
@@ -180,10 +174,9 @@ return $default(_that.otherId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String otherId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChatUserParameter():
-return $default(_that.otherId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -200,85 +193,13 @@ return $default(_that.otherId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String otherId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _ChatUserParameter() when $default != null:
-return $default(_that.otherId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _ChatUserParameter implements ChatUserParameter {
-  const _ChatUserParameter({required this.otherId});
-  factory _ChatUserParameter.fromJson(Map<String, dynamic> json) => _$ChatUserParameterFromJson(json);
-
-@override final  String otherId;
-
-/// Create a copy of ChatUserParameter
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ChatUserParameterCopyWith<_ChatUserParameter> get copyWith => __$ChatUserParameterCopyWithImpl<_ChatUserParameter>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$ChatUserParameterToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChatUserParameter&&(identical(other.otherId, otherId) || other.otherId == otherId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,otherId);
-}
-
-@override
-String toString() {
-    return 'ChatUserParameter(otherId: $otherId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ChatUserParameterCopyWith<$Res> implements $ChatUserParameterCopyWith<$Res> {
-  factory _$ChatUserParameterCopyWith(_ChatUserParameter value, $Res Function(_ChatUserParameter) _then) = __$ChatUserParameterCopyWithImpl;
-@override @useResult
-$Res call({
- String otherId
-});
-
-
-
-
-}
-/// @nodoc
-class __$ChatUserParameterCopyWithImpl<$Res>
-    implements _$ChatUserParameterCopyWith<$Res> {
-  __$ChatUserParameterCopyWithImpl(this._self, this._then);
-
-  final _ChatUserParameter _self;
-  final $Res Function(_ChatUserParameter) _then;
-
-/// Create a copy of ChatUserParameter
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? otherId = null,}) {
-  return _then(_ChatUserParameter(
-otherId: null == otherId ? _self.otherId : otherId // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

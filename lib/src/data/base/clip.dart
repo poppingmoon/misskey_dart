@@ -6,20 +6,21 @@ part 'clip.freezed.dart';
 part 'clip.g.dart';
 
 @freezed
-abstract class Clip with _$Clip {
-  const factory({
-    required String id,
-    @DateTimeConverter() required DateTime createdAt,
-    @NullableDateTimeConverter() DateTime? lastClippedAt,
-    required String userId,
-    required UserLite user,
-    String? name,
-    String? description,
-    required bool isPublic,
-    int? favoritedCount,
-    bool? isFavorited,
-    int? notesCount,
-  }) = _Clip;
-
+@JsonSerializable()
+class const Clip({
+  required final String id,
+  @DateTimeConverter() required final DateTime createdAt,
+  @NullableDateTimeConverter() final DateTime? lastClippedAt,
+  required final String userId,
+  required final UserLite user,
+  final String? name,
+  final String? description,
+  required final bool isPublic,
+  final int? favoritedCount,
+  final bool? isFavorited,
+  final int? notesCount,
+}) with _$Clip {
   factory fromJson(Map<String, Object?> json) => _$ClipFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ClipToJson(this);
 }

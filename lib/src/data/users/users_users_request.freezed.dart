@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$UsersUsersRequest {
 
- int? get limit; int? get offset;@UsersSortConverter() UsersSortType? get sort; UsersState? get state; Origin? get origin; String? get hostname;
+
 /// Create a copy of UsersUsersRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $UsersUsersRequestCopyWith<UsersUsersRequest> get copyWith => _$UsersUsersRequestCopyWithImpl<UsersUsersRequest>(this as UsersUsersRequest, _$identity);
 
-  /// Serializes this UsersUsersRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -100,11 +98,10 @@ extension UsersUsersRequestPatterns on UsersUsersRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UsersUsersRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _UsersUsersRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -122,11 +119,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UsersUsersRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UsersUsersRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -143,11 +139,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UsersUsersRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UsersUsersRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -164,10 +159,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? limit,  int? offset, @UsersSortConverter()  UsersSortType? sort,  UsersState? state,  Origin? origin,  String? hostname)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _UsersUsersRequest() when $default != null:
-return $default(_that.limit,_that.offset,_that.sort,_that.state,_that.origin,_that.hostname);case _:
+case _:
   return orElse();
 
 }
@@ -185,10 +179,9 @@ return $default(_that.limit,_that.offset,_that.sort,_that.state,_that.origin,_th
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? limit,  int? offset, @UsersSortConverter()  UsersSortType? sort,  UsersState? state,  Origin? origin,  String? hostname)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UsersUsersRequest():
-return $default(_that.limit,_that.offset,_that.sort,_that.state,_that.origin,_that.hostname);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -205,95 +198,13 @@ return $default(_that.limit,_that.offset,_that.sort,_that.state,_that.origin,_th
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? limit,  int? offset, @UsersSortConverter()  UsersSortType? sort,  UsersState? state,  Origin? origin,  String? hostname)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UsersUsersRequest() when $default != null:
-return $default(_that.limit,_that.offset,_that.sort,_that.state,_that.origin,_that.hostname);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _UsersUsersRequest implements UsersUsersRequest {
-  const _UsersUsersRequest({this.limit, this.offset, @UsersSortConverter() this.sort, this.state, this.origin, this.hostname});
-  factory _UsersUsersRequest.fromJson(Map<String, dynamic> json) => _$UsersUsersRequestFromJson(json);
-
-@override final  int? limit;
-@override final  int? offset;
-@override@UsersSortConverter() final  UsersSortType? sort;
-@override final  UsersState? state;
-@override final  Origin? origin;
-@override final  String? hostname;
-
-/// Create a copy of UsersUsersRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$UsersUsersRequestCopyWith<_UsersUsersRequest> get copyWith => __$UsersUsersRequestCopyWithImpl<_UsersUsersRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$UsersUsersRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersUsersRequest&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.offset, offset) || other.offset == offset)&&(identical(other.sort, sort) || other.sort == sort)&&(identical(other.state, state) || other.state == state)&&(identical(other.origin, origin) || other.origin == origin)&&(identical(other.hostname, hostname) || other.hostname == hostname));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,limit,offset,sort,state,origin,hostname);
-}
-
-@override
-String toString() {
-    return 'UsersUsersRequest(limit: $limit, offset: $offset, sort: $sort, state: $state, origin: $origin, hostname: $hostname)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$UsersUsersRequestCopyWith<$Res> implements $UsersUsersRequestCopyWith<$Res> {
-  factory _$UsersUsersRequestCopyWith(_UsersUsersRequest value, $Res Function(_UsersUsersRequest) _then) = __$UsersUsersRequestCopyWithImpl;
-@override @useResult
-$Res call({
- int? limit, int? offset,@UsersSortConverter() UsersSortType? sort, UsersState? state, Origin? origin, String? hostname
-});
-
-
-
-
-}
-/// @nodoc
-class __$UsersUsersRequestCopyWithImpl<$Res>
-    implements _$UsersUsersRequestCopyWith<$Res> {
-  __$UsersUsersRequestCopyWithImpl(this._self, this._then);
-
-  final _UsersUsersRequest _self;
-  final $Res Function(_UsersUsersRequest) _then;
-
-/// Create a copy of UsersUsersRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? limit = freezed,Object? offset = freezed,Object? sort = freezed,Object? state = freezed,Object? origin = freezed,Object? hostname = freezed,}) {
-  return _then(_UsersUsersRequest(
-limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,offset: freezed == offset ? _self.offset : offset // ignore: cast_nullable_to_non_nullable
-as int?,sort: freezed == sort ? _self.sort : sort // ignore: cast_nullable_to_non_nullable
-as UsersSortType?,state: freezed == state ? _self.state : state // ignore: cast_nullable_to_non_nullable
-as UsersState?,origin: freezed == origin ? _self.origin : origin // ignore: cast_nullable_to_non_nullable
-as Origin?,hostname: freezed == hostname ? _self.hostname : hostname // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
 
 }
 

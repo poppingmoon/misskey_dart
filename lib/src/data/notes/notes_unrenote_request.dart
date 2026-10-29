@@ -4,9 +4,11 @@ part 'notes_unrenote_request.freezed.dart';
 part 'notes_unrenote_request.g.dart';
 
 @freezed
-abstract class NotesUnrenoteRequest with _$NotesUnrenoteRequest {
-  const factory({required String noteId}) = _NotesUnrenoteRequest;
-
+@JsonSerializable()
+class const NotesUnrenoteRequest({required final String noteId})
+    with _$NotesUnrenoteRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$NotesUnrenoteRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NotesUnrenoteRequestToJson(this);
 }

@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$AntennasNotesRequest {
 
- String get antennaId; int? get limit; String? get sinceId; String? get untilId;@EpocTimeDateTimeConverter() DateTime? get sinceDate;@EpocTimeDateTimeConverter() DateTime? get untilDate; String? get pagination;
+
 /// Create a copy of AntennasNotesRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $AntennasNotesRequestCopyWith<AntennasNotesRequest> get copyWith => _$AntennasNotesRequestCopyWithImpl<AntennasNotesRequest>(this as AntennasNotesRequest, _$identity);
 
-  /// Serializes this AntennasNotesRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -101,11 +99,10 @@ extension AntennasNotesRequestPatterns on AntennasNotesRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _AntennasNotesRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _AntennasNotesRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -123,11 +120,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _AntennasNotesRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _AntennasNotesRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -144,11 +140,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _AntennasNotesRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _AntennasNotesRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -165,10 +160,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String antennaId,  int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  String? pagination)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _AntennasNotesRequest() when $default != null:
-return $default(_that.antennaId,_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.pagination);case _:
+case _:
   return orElse();
 
 }
@@ -186,10 +180,9 @@ return $default(_that.antennaId,_that.limit,_that.sinceId,_that.untilId,_that.si
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String antennaId,  int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  String? pagination)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _AntennasNotesRequest():
-return $default(_that.antennaId,_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.pagination);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -206,97 +199,13 @@ return $default(_that.antennaId,_that.limit,_that.sinceId,_that.untilId,_that.si
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String antennaId,  int? limit,  String? sinceId,  String? untilId, @EpocTimeDateTimeConverter()  DateTime? sinceDate, @EpocTimeDateTimeConverter()  DateTime? untilDate,  String? pagination)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _AntennasNotesRequest() when $default != null:
-return $default(_that.antennaId,_that.limit,_that.sinceId,_that.untilId,_that.sinceDate,_that.untilDate,_that.pagination);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _AntennasNotesRequest implements AntennasNotesRequest {
-  const _AntennasNotesRequest({required this.antennaId, this.limit, this.sinceId, this.untilId, @EpocTimeDateTimeConverter() this.sinceDate, @EpocTimeDateTimeConverter() this.untilDate, this.pagination});
-  factory _AntennasNotesRequest.fromJson(Map<String, dynamic> json) => _$AntennasNotesRequestFromJson(json);
-
-@override final  String antennaId;
-@override final  int? limit;
-@override final  String? sinceId;
-@override final  String? untilId;
-@override@EpocTimeDateTimeConverter() final  DateTime? sinceDate;
-@override@EpocTimeDateTimeConverter() final  DateTime? untilDate;
-@override final  String? pagination;
-
-/// Create a copy of AntennasNotesRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$AntennasNotesRequestCopyWith<_AntennasNotesRequest> get copyWith => __$AntennasNotesRequestCopyWithImpl<_AntennasNotesRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$AntennasNotesRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _AntennasNotesRequest&&(identical(other.antennaId, antennaId) || other.antennaId == antennaId)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.sinceId, sinceId) || other.sinceId == sinceId)&&(identical(other.untilId, untilId) || other.untilId == untilId)&&(identical(other.sinceDate, sinceDate) || other.sinceDate == sinceDate)&&(identical(other.untilDate, untilDate) || other.untilDate == untilDate)&&(identical(other.pagination, pagination) || other.pagination == pagination));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,antennaId,limit,sinceId,untilId,sinceDate,untilDate,pagination);
-}
-
-@override
-String toString() {
-    return 'AntennasNotesRequest(antennaId: $antennaId, limit: $limit, sinceId: $sinceId, untilId: $untilId, sinceDate: $sinceDate, untilDate: $untilDate, pagination: $pagination)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$AntennasNotesRequestCopyWith<$Res> implements $AntennasNotesRequestCopyWith<$Res> {
-  factory _$AntennasNotesRequestCopyWith(_AntennasNotesRequest value, $Res Function(_AntennasNotesRequest) _then) = __$AntennasNotesRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String antennaId, int? limit, String? sinceId, String? untilId,@EpocTimeDateTimeConverter() DateTime? sinceDate,@EpocTimeDateTimeConverter() DateTime? untilDate, String? pagination
-});
-
-
-
-
-}
-/// @nodoc
-class __$AntennasNotesRequestCopyWithImpl<$Res>
-    implements _$AntennasNotesRequestCopyWith<$Res> {
-  __$AntennasNotesRequestCopyWithImpl(this._self, this._then);
-
-  final _AntennasNotesRequest _self;
-  final $Res Function(_AntennasNotesRequest) _then;
-
-/// Create a copy of AntennasNotesRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? antennaId = null,Object? limit = freezed,Object? sinceId = freezed,Object? untilId = freezed,Object? sinceDate = freezed,Object? untilDate = freezed,Object? pagination = freezed,}) {
-  return _then(_AntennasNotesRequest(
-antennaId: null == antennaId ? _self.antennaId : antennaId // ignore: cast_nullable_to_non_nullable
-as String,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,sinceId: freezed == sinceId ? _self.sinceId : sinceId // ignore: cast_nullable_to_non_nullable
-as String?,untilId: freezed == untilId ? _self.untilId : untilId // ignore: cast_nullable_to_non_nullable
-as String?,sinceDate: freezed == sinceDate ? _self.sinceDate : sinceDate // ignore: cast_nullable_to_non_nullable
-as DateTime?,untilDate: freezed == untilDate ? _self.untilDate : untilDate // ignore: cast_nullable_to_non_nullable
-as DateTime?,pagination: freezed == pagination ? _self.pagination : pagination // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
 
 }
 

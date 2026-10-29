@@ -4,8 +4,9 @@ part 'ap_show_request.freezed.dart';
 part 'ap_show_request.g.dart';
 
 @freezed
-abstract class ApShowRequest with _$ApShowRequest {
-  const factory({required String uri}) = _ApShowRequest;
-
+@JsonSerializable()
+class const ApShowRequest({required final String uri}) with _$ApShowRequest {
   factory fromJson(Map<String, dynamic> json) => _$ApShowRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ApShowRequestToJson(this);
 }

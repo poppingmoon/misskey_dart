@@ -5,15 +5,16 @@ part 'mute_list_request.freezed.dart';
 part 'mute_list_request.g.dart';
 
 @freezed
-abstract class MuteListRequest with _$MuteListRequest {
-  const factory({
-    int? limit,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-  }) = _MuteListRequest;
-
+@JsonSerializable()
+class const MuteListRequest({
+  final int? limit,
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
+}) with _$MuteListRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$MuteListRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$MuteListRequestToJson(this);
 }

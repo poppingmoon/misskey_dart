@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$NotesDraftsUpdateResponse {
 
- NoteDraft get updatedDraft;
+
 /// Create a copy of NotesDraftsUpdateResponse
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $NotesDraftsUpdateResponseCopyWith<NotesDraftsUpdateResponse> get copyWith => _$NotesDraftsUpdateResponseCopyWithImpl<NotesDraftsUpdateResponse>(this as NotesDraftsUpdateResponse, _$identity);
 
-  /// Serializes this NotesDraftsUpdateResponse to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -104,11 +102,10 @@ extension NotesDraftsUpdateResponsePatterns on NotesDraftsUpdateResponse {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _NotesDraftsUpdateResponse value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _NotesDraftsUpdateResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -126,11 +123,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _NotesDraftsUpdateResponse value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _NotesDraftsUpdateResponse():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -147,11 +143,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _NotesDraftsUpdateResponse value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _NotesDraftsUpdateResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -168,10 +163,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( NoteDraft updatedDraft)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _NotesDraftsUpdateResponse() when $default != null:
-return $default(_that.updatedDraft);case _:
+case _:
   return orElse();
 
 }
@@ -189,10 +183,9 @@ return $default(_that.updatedDraft);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( NoteDraft updatedDraft)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _NotesDraftsUpdateResponse():
-return $default(_that.updatedDraft);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -209,95 +202,14 @@ return $default(_that.updatedDraft);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( NoteDraft updatedDraft)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _NotesDraftsUpdateResponse() when $default != null:
-return $default(_that.updatedDraft);case _:
+case _:
   return null;
 
 }
 }
 
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _NotesDraftsUpdateResponse implements NotesDraftsUpdateResponse {
-  const _NotesDraftsUpdateResponse({required this.updatedDraft});
-  factory _NotesDraftsUpdateResponse.fromJson(Map<String, dynamic> json) => _$NotesDraftsUpdateResponseFromJson(json);
-
-@override final  NoteDraft updatedDraft;
-
-/// Create a copy of NotesDraftsUpdateResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$NotesDraftsUpdateResponseCopyWith<_NotesDraftsUpdateResponse> get copyWith => __$NotesDraftsUpdateResponseCopyWithImpl<_NotesDraftsUpdateResponse>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$NotesDraftsUpdateResponseToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NotesDraftsUpdateResponse&&(identical(other.updatedDraft, updatedDraft) || other.updatedDraft == updatedDraft));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,updatedDraft);
-}
-
-@override
-String toString() {
-    return 'NotesDraftsUpdateResponse(updatedDraft: $updatedDraft)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$NotesDraftsUpdateResponseCopyWith<$Res> implements $NotesDraftsUpdateResponseCopyWith<$Res> {
-  factory _$NotesDraftsUpdateResponseCopyWith(_NotesDraftsUpdateResponse value, $Res Function(_NotesDraftsUpdateResponse) _then) = __$NotesDraftsUpdateResponseCopyWithImpl;
-@override @useResult
-$Res call({
- NoteDraft updatedDraft
-});
-
-
-@override $NoteDraftCopyWith<$Res> get updatedDraft;
-
-}
-/// @nodoc
-class __$NotesDraftsUpdateResponseCopyWithImpl<$Res>
-    implements _$NotesDraftsUpdateResponseCopyWith<$Res> {
-  __$NotesDraftsUpdateResponseCopyWithImpl(this._self, this._then);
-
-  final _NotesDraftsUpdateResponse _self;
-  final $Res Function(_NotesDraftsUpdateResponse) _then;
-
-/// Create a copy of NotesDraftsUpdateResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? updatedDraft = null,}) {
-  return _then(_NotesDraftsUpdateResponse(
-updatedDraft: null == updatedDraft ? _self.updatedDraft : updatedDraft // ignore: cast_nullable_to_non_nullable
-as NoteDraft,
-  ));
-}
-
-/// Create a copy of NotesDraftsUpdateResponse
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$NoteDraftCopyWith<$Res> get updatedDraft {
-  
-  return $NoteDraftCopyWith<$Res>(_self.updatedDraft, (value) {
-    return _then(_self.copyWith(updatedDraft: value));
-  });
-}
 }
 
 // dart format on

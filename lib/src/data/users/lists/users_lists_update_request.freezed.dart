@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$UsersListsUpdateRequest {
 
- String get listId; String? get name; bool? get isPublic;
+
 /// Create a copy of UsersListsUpdateRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $UsersListsUpdateRequestCopyWith<UsersListsUpdateRequest> get copyWith => _$UsersListsUpdateRequestCopyWithImpl<UsersListsUpdateRequest>(this as UsersListsUpdateRequest, _$identity);
 
-  /// Serializes this UsersListsUpdateRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -97,11 +95,10 @@ extension UsersListsUpdateRequestPatterns on UsersListsUpdateRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UsersListsUpdateRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _UsersListsUpdateRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -119,11 +116,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UsersListsUpdateRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UsersListsUpdateRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -140,11 +136,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UsersListsUpdateRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UsersListsUpdateRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -161,10 +156,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String listId,  String? name,  bool? isPublic)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _UsersListsUpdateRequest() when $default != null:
-return $default(_that.listId,_that.name,_that.isPublic);case _:
+case _:
   return orElse();
 
 }
@@ -182,10 +176,9 @@ return $default(_that.listId,_that.name,_that.isPublic);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String listId,  String? name,  bool? isPublic)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UsersListsUpdateRequest():
-return $default(_that.listId,_that.name,_that.isPublic);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -202,89 +195,13 @@ return $default(_that.listId,_that.name,_that.isPublic);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String listId,  String? name,  bool? isPublic)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UsersListsUpdateRequest() when $default != null:
-return $default(_that.listId,_that.name,_that.isPublic);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _UsersListsUpdateRequest implements UsersListsUpdateRequest {
-  const _UsersListsUpdateRequest({required this.listId, this.name, this.isPublic});
-  factory _UsersListsUpdateRequest.fromJson(Map<String, dynamic> json) => _$UsersListsUpdateRequestFromJson(json);
-
-@override final  String listId;
-@override final  String? name;
-@override final  bool? isPublic;
-
-/// Create a copy of UsersListsUpdateRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$UsersListsUpdateRequestCopyWith<_UsersListsUpdateRequest> get copyWith => __$UsersListsUpdateRequestCopyWithImpl<_UsersListsUpdateRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$UsersListsUpdateRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersListsUpdateRequest&&(identical(other.listId, listId) || other.listId == listId)&&(identical(other.name, name) || other.name == name)&&(identical(other.isPublic, isPublic) || other.isPublic == isPublic));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,listId,name,isPublic);
-}
-
-@override
-String toString() {
-    return 'UsersListsUpdateRequest(listId: $listId, name: $name, isPublic: $isPublic)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$UsersListsUpdateRequestCopyWith<$Res> implements $UsersListsUpdateRequestCopyWith<$Res> {
-  factory _$UsersListsUpdateRequestCopyWith(_UsersListsUpdateRequest value, $Res Function(_UsersListsUpdateRequest) _then) = __$UsersListsUpdateRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String listId, String? name, bool? isPublic
-});
-
-
-
-
-}
-/// @nodoc
-class __$UsersListsUpdateRequestCopyWithImpl<$Res>
-    implements _$UsersListsUpdateRequestCopyWith<$Res> {
-  __$UsersListsUpdateRequestCopyWithImpl(this._self, this._then);
-
-  final _UsersListsUpdateRequest _self;
-  final $Res Function(_UsersListsUpdateRequest) _then;
-
-/// Create a copy of UsersListsUpdateRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? listId = null,Object? name = freezed,Object? isPublic = freezed,}) {
-  return _then(_UsersListsUpdateRequest(
-listId: null == listId ? _self.listId : listId // ignore: cast_nullable_to_non_nullable
-as String,name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String?,isPublic: freezed == isPublic ? _self.isPublic : isPublic // ignore: cast_nullable_to_non_nullable
-as bool?,
-  ));
-}
-
 
 }
 

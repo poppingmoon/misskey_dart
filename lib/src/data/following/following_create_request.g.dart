@@ -6,15 +6,15 @@ part of 'following_create_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_FollowingCreateRequest _$FollowingCreateRequestFromJson(
+FollowingCreateRequest _$FollowingCreateRequestFromJson(
   Map<String, dynamic> json,
-) => _FollowingCreateRequest(
+) => FollowingCreateRequest(
   userId: json['userId'] as String,
   withReplies: json['withReplies'] as bool?,
 );
 
 Map<String, dynamic> _$FollowingCreateRequestToJson(
-  _FollowingCreateRequest instance,
+  FollowingCreateRequest instance,
 ) => <String, dynamic>{
   'userId': instance.userId,
   'withReplies': instance.withReplies,

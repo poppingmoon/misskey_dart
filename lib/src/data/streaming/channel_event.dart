@@ -5,14 +5,14 @@ part 'channel_event.freezed.dart';
 part 'channel_event.g.dart';
 
 @freezed
-abstract class ChannelEvent with _$ChannelEvent {
-  const factory({
-    required String id,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    ChannelEventType? type,
-    required dynamic body,
-  }) = _ChannelEvent;
-
+@JsonSerializable()
+class const ChannelEvent({
+  required final String id,
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final ChannelEventType? type,
+  required final dynamic body,
+}) with _$ChannelEvent {
   factory fromJson(Map<String, Object?> json) => _$ChannelEventFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ChannelEventToJson(this);
 }

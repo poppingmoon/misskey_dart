@@ -6,16 +6,17 @@ part 'chat_room.freezed.dart';
 part 'chat_room.g.dart';
 
 @freezed
-abstract class ChatRoom with _$ChatRoom {
-  const factory({
-    required String id,
-    @DateTimeConverter() required DateTime createdAt,
-    required String ownerId,
-    required UserLite owner,
-    required String name,
-    required String description,
-    bool? isMuted,
-  }) = _ChatRoom;
-
+@JsonSerializable()
+class const ChatRoom({
+  required final String id,
+  @DateTimeConverter() required final DateTime createdAt,
+  required final String ownerId,
+  required final UserLite owner,
+  required final String name,
+  required final String description,
+  final bool? isMuted,
+}) with _$ChatRoom {
   factory fromJson(Map<String, dynamic> json) => _$ChatRoomFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ChatRoomToJson(this);
 }

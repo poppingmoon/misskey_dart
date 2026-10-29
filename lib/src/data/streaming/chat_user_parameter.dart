@@ -4,9 +4,11 @@ part 'chat_user_parameter.freezed.dart';
 part 'chat_user_parameter.g.dart';
 
 @freezed
-abstract class ChatUserParameter with _$ChatUserParameter {
-  const factory({required String otherId}) = _ChatUserParameter;
-
+@JsonSerializable()
+class const ChatUserParameter({required final String otherId})
+    with _$ChatUserParameter {
   factory fromJson(Map<String, dynamic> json) =>
       _$ChatUserParameterFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ChatUserParameterToJson(this);
 }

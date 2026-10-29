@@ -6,19 +6,19 @@ part 'i_notifications_grouped_request.freezed.dart';
 part 'i_notifications_grouped_request.g.dart';
 
 @freezed
-abstract class INotificationsGroupedRequest
-    with _$INotificationsGroupedRequest {
-  const factory({
-    int? limit,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-    bool? markAsRead,
-    List<NotificationType>? includeTypes,
-    List<NotificationType>? excludeTypes,
-  }) = _INotificationRequest;
-
+@JsonSerializable()
+class const INotificationsGroupedRequest({
+  final int? limit,
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
+  final bool? markAsRead,
+  final List<NotificationType>? includeTypes,
+  final List<NotificationType>? excludeTypes,
+}) with _$INotificationsGroupedRequest {
   factory fromJson(Map<String, Object?> json) =>
       _$INotificationsGroupedRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$INotificationsGroupedRequestToJson(this);
 }

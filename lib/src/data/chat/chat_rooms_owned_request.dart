@@ -5,15 +5,16 @@ part 'chat_rooms_owned_request.freezed.dart';
 part 'chat_rooms_owned_request.g.dart';
 
 @freezed
-abstract class ChatRoomsOwnedRequest with _$ChatRoomsOwnedRequest {
-  const factory({
-    int? limit,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-  }) = _ChatRoomsOwnedRequest;
-
+@JsonSerializable()
+class const ChatRoomsOwnedRequest({
+  final int? limit,
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
+}) with _$ChatRoomsOwnedRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$ChatRoomsOwnedRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ChatRoomsOwnedRequestToJson(this);
 }

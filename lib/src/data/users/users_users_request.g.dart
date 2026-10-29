@@ -6,8 +6,8 @@ part of 'users_users_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_UsersUsersRequest _$UsersUsersRequestFromJson(Map<String, dynamic> json) =>
-    _UsersUsersRequest(
+UsersUsersRequest _$UsersUsersRequestFromJson(Map<String, dynamic> json) =>
+    UsersUsersRequest(
       limit: (json['limit'] as num?)?.toInt(),
       offset: (json['offset'] as num?)?.toInt(),
       sort: _$JsonConverterFromJson<String, UsersSortType>(
@@ -19,7 +19,7 @@ _UsersUsersRequest _$UsersUsersRequestFromJson(Map<String, dynamic> json) =>
       hostname: json['hostname'] as String?,
     );
 
-Map<String, dynamic> _$UsersUsersRequestToJson(_UsersUsersRequest instance) =>
+Map<String, dynamic> _$UsersUsersRequestToJson(UsersUsersRequest instance) =>
     <String, dynamic>{
       'limit': instance.limit,
       'offset': instance.offset,

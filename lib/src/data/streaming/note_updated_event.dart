@@ -5,15 +5,15 @@ part 'note_updated_event.freezed.dart';
 part 'note_updated_event.g.dart';
 
 @freezed
-abstract class NoteUpdatedEvent with _$NoteUpdatedEvent {
-  const factory({
-    required String id,
-    // ignore: invalid_annotation_target
-    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
-    NoteUpdatedEventType? type,
-    required Map<String, dynamic> body,
-  }) = _NoteUpdatedEvent;
-
+@JsonSerializable()
+class const NoteUpdatedEvent({
+  required final String id,
+  @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)
+  final NoteUpdatedEventType? type,
+  required final Map<String, dynamic> body,
+}) with _$NoteUpdatedEvent {
   factory fromJson(Map<String, Object?> json) =>
       _$NoteUpdatedEventFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NoteUpdatedEventToJson(this);
 }

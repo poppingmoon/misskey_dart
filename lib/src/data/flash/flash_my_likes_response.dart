@@ -5,10 +5,13 @@ part 'flash_my_likes_response.freezed.dart';
 part 'flash_my_likes_response.g.dart';
 
 @freezed
-abstract class FlashMyLikesResponse with _$FlashMyLikesResponse {
-  const factory({required String id, required Flash flash}) =
-      _FlashMyLikesResponse;
-
+@JsonSerializable()
+class const FlashMyLikesResponse({
+  required final String id,
+  required final Flash flash,
+}) with _$FlashMyLikesResponse {
   factory fromJson(Map<String, dynamic> json) =>
       _$FlashMyLikesResponseFromJson(json);
+
+  Map<String, dynamic> toJson() => _$FlashMyLikesResponseToJson(this);
 }

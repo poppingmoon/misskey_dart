@@ -4,9 +4,11 @@ part 'chat_rooms_leave_request.freezed.dart';
 part 'chat_rooms_leave_request.g.dart';
 
 @freezed
-abstract class ChatRoomsLeaveRequest with _$ChatRoomsLeaveRequest {
-  const factory({required String roomId}) = _ChatRoomsLeaveRequest;
-
+@JsonSerializable()
+class const ChatRoomsLeaveRequest({required final String roomId})
+    with _$ChatRoomsLeaveRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$ChatRoomsLeaveRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ChatRoomsLeaveRequestToJson(this);
 }

@@ -5,31 +5,32 @@ part 'users_notes_request.freezed.dart';
 part 'users_notes_request.g.dart';
 
 @freezed
-abstract class UsersNotesRequest with _$UsersNotesRequest {
-  const factory({
-    required String userId,
+@JsonSerializable()
+class const UsersNotesRequest({
+  required final String userId,
 
-    /// removed at 2023.9.2
-    bool? includeReplies,
-    bool? withReplies,
-    bool? withRenotes,
-    bool? withChannelNotes,
-    int? limit,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
+  /// removed at 2023.9.2
+  final bool? includeReplies,
+  final bool? withReplies,
+  final bool? withRenotes,
+  final bool? withChannelNotes,
+  final int? limit,
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
 
-    /// removed at 2023.11.1
-    bool? includeMyRenotes,
-    bool? withFiles,
-    List<String>? fileType,
-    bool? allowPartial,
+  /// removed at 2023.11.1
+  final bool? includeMyRenotes,
+  final bool? withFiles,
+  final List<String>? fileType,
+  final bool? allowPartial,
 
-    /// removed at 2023.12.0
-    bool? excludeNsfw,
-  }) = _UsersNotesRequest;
-
+  /// removed at 2023.12.0
+  final bool? excludeNsfw,
+}) with _$UsersNotesRequest {
   factory fromJson(Map<String, Object?> json) =>
       _$UsersNotesRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UsersNotesRequestToJson(this);
 }

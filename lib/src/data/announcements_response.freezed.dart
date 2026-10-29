@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$AnnouncementsResponse {
 
- String get id;@DateTimeConverter() DateTime get createdAt;@NullableDateTimeConverter() DateTime? get updatedAt; String get text; String get title;@NullableUriConverter() Uri? get imageUrl;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) AnnouncementIconType? get icon;@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) AnnouncementDisplayType? get display; bool? get needConfirmationToRead; bool? get forYou; bool? get isRead; bool get forExistingUsers; String? get userId; bool get silence;
+
 /// Create a copy of AnnouncementsResponse
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $AnnouncementsResponseCopyWith<AnnouncementsResponse> get copyWith => _$AnnouncementsResponseCopyWithImpl<AnnouncementsResponse>(this as AnnouncementsResponse, _$identity);
 
-  /// Serializes this AnnouncementsResponse to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -108,11 +106,10 @@ extension AnnouncementsResponsePatterns on AnnouncementsResponse {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _AnnouncementsResponse value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _AnnouncementsResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -130,11 +127,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _AnnouncementsResponse value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _AnnouncementsResponse():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -151,11 +147,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _AnnouncementsResponse value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _AnnouncementsResponse() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -172,10 +167,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? updatedAt,  String text,  String title, @NullableUriConverter()  Uri? imageUrl, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  AnnouncementIconType? icon, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  AnnouncementDisplayType? display,  bool? needConfirmationToRead,  bool? forYou,  bool? isRead,  bool forExistingUsers,  String? userId,  bool silence)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _AnnouncementsResponse() when $default != null:
-return $default(_that.id,_that.createdAt,_that.updatedAt,_that.text,_that.title,_that.imageUrl,_that.icon,_that.display,_that.needConfirmationToRead,_that.forYou,_that.isRead,_that.forExistingUsers,_that.userId,_that.silence);case _:
+case _:
   return orElse();
 
 }
@@ -193,10 +187,9 @@ return $default(_that.id,_that.createdAt,_that.updatedAt,_that.text,_that.title,
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? updatedAt,  String text,  String title, @NullableUriConverter()  Uri? imageUrl, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  AnnouncementIconType? icon, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  AnnouncementDisplayType? display,  bool? needConfirmationToRead,  bool? forYou,  bool? isRead,  bool forExistingUsers,  String? userId,  bool silence)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _AnnouncementsResponse():
-return $default(_that.id,_that.createdAt,_that.updatedAt,_that.text,_that.title,_that.imageUrl,_that.icon,_that.display,_that.needConfirmationToRead,_that.forYou,_that.isRead,_that.forExistingUsers,_that.userId,_that.silence);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -213,111 +206,13 @@ return $default(_that.id,_that.createdAt,_that.updatedAt,_that.text,_that.title,
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id, @DateTimeConverter()  DateTime createdAt, @NullableDateTimeConverter()  DateTime? updatedAt,  String text,  String title, @NullableUriConverter()  Uri? imageUrl, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  AnnouncementIconType? icon, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue)  AnnouncementDisplayType? display,  bool? needConfirmationToRead,  bool? forYou,  bool? isRead,  bool forExistingUsers,  String? userId,  bool silence)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _AnnouncementsResponse() when $default != null:
-return $default(_that.id,_that.createdAt,_that.updatedAt,_that.text,_that.title,_that.imageUrl,_that.icon,_that.display,_that.needConfirmationToRead,_that.forYou,_that.isRead,_that.forExistingUsers,_that.userId,_that.silence);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _AnnouncementsResponse implements AnnouncementsResponse {
-  const _AnnouncementsResponse({required this.id, @DateTimeConverter() required this.createdAt, @NullableDateTimeConverter() this.updatedAt, required this.text, required this.title, @NullableUriConverter() this.imageUrl, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.icon, @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) this.display, this.needConfirmationToRead, this.forYou, this.isRead, this.forExistingUsers = false, this.userId, this.silence = false});
-  factory _AnnouncementsResponse.fromJson(Map<String, dynamic> json) => _$AnnouncementsResponseFromJson(json);
-
-@override final  String id;
-@override@DateTimeConverter() final  DateTime createdAt;
-@override@NullableDateTimeConverter() final  DateTime? updatedAt;
-@override final  String text;
-@override final  String title;
-@override@NullableUriConverter() final  Uri? imageUrl;
-@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  AnnouncementIconType? icon;
-@override@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) final  AnnouncementDisplayType? display;
-@override final  bool? needConfirmationToRead;
-@override final  bool? forYou;
-@override final  bool? isRead;
-@override@JsonKey() final  bool forExistingUsers;
-@override final  String? userId;
-@override@JsonKey() final  bool silence;
-
-/// Create a copy of AnnouncementsResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$AnnouncementsResponseCopyWith<_AnnouncementsResponse> get copyWith => __$AnnouncementsResponseCopyWithImpl<_AnnouncementsResponse>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$AnnouncementsResponseToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _AnnouncementsResponse&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.text, text) || other.text == text)&&(identical(other.title, title) || other.title == title)&&(identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl)&&(identical(other.icon, icon) || other.icon == icon)&&(identical(other.display, display) || other.display == display)&&(identical(other.needConfirmationToRead, needConfirmationToRead) || other.needConfirmationToRead == needConfirmationToRead)&&(identical(other.forYou, forYou) || other.forYou == forYou)&&(identical(other.isRead, isRead) || other.isRead == isRead)&&(identical(other.forExistingUsers, forExistingUsers) || other.forExistingUsers == forExistingUsers)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.silence, silence) || other.silence == silence));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,id,createdAt,updatedAt,text,title,imageUrl,icon,display,needConfirmationToRead,forYou,isRead,forExistingUsers,userId,silence);
-}
-
-@override
-String toString() {
-    return 'AnnouncementsResponse(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, text: $text, title: $title, imageUrl: $imageUrl, icon: $icon, display: $display, needConfirmationToRead: $needConfirmationToRead, forYou: $forYou, isRead: $isRead, forExistingUsers: $forExistingUsers, userId: $userId, silence: $silence)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$AnnouncementsResponseCopyWith<$Res> implements $AnnouncementsResponseCopyWith<$Res> {
-  factory _$AnnouncementsResponseCopyWith(_AnnouncementsResponse value, $Res Function(_AnnouncementsResponse) _then) = __$AnnouncementsResponseCopyWithImpl;
-@override @useResult
-$Res call({
- String id,@DateTimeConverter() DateTime createdAt,@NullableDateTimeConverter() DateTime? updatedAt, String text, String title,@NullableUriConverter() Uri? imageUrl,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) AnnouncementIconType? icon,@JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) AnnouncementDisplayType? display, bool? needConfirmationToRead, bool? forYou, bool? isRead, bool forExistingUsers, String? userId, bool silence
-});
-
-
-
-
-}
-/// @nodoc
-class __$AnnouncementsResponseCopyWithImpl<$Res>
-    implements _$AnnouncementsResponseCopyWith<$Res> {
-  __$AnnouncementsResponseCopyWithImpl(this._self, this._then);
-
-  final _AnnouncementsResponse _self;
-  final $Res Function(_AnnouncementsResponse) _then;
-
-/// Create a copy of AnnouncementsResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? createdAt = null,Object? updatedAt = freezed,Object? text = null,Object? title = null,Object? imageUrl = freezed,Object? icon = freezed,Object? display = freezed,Object? needConfirmationToRead = freezed,Object? forYou = freezed,Object? isRead = freezed,Object? forExistingUsers = null,Object? userId = freezed,Object? silence = null,}) {
-  return _then(_AnnouncementsResponse(
-id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
-as DateTime,updatedAt: freezed == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
-as DateTime?,text: null == text ? _self.text : text // ignore: cast_nullable_to_non_nullable
-as String,title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
-as String,imageUrl: freezed == imageUrl ? _self.imageUrl : imageUrl // ignore: cast_nullable_to_non_nullable
-as Uri?,icon: freezed == icon ? _self.icon : icon // ignore: cast_nullable_to_non_nullable
-as AnnouncementIconType?,display: freezed == display ? _self.display : display // ignore: cast_nullable_to_non_nullable
-as AnnouncementDisplayType?,needConfirmationToRead: freezed == needConfirmationToRead ? _self.needConfirmationToRead : needConfirmationToRead // ignore: cast_nullable_to_non_nullable
-as bool?,forYou: freezed == forYou ? _self.forYou : forYou // ignore: cast_nullable_to_non_nullable
-as bool?,isRead: freezed == isRead ? _self.isRead : isRead // ignore: cast_nullable_to_non_nullable
-as bool?,forExistingUsers: null == forExistingUsers ? _self.forExistingUsers : forExistingUsers // ignore: cast_nullable_to_non_nullable
-as bool,userId: freezed == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
-as String?,silence: null == silence ? _self.silence : silence // ignore: cast_nullable_to_non_nullable
-as bool,
-  ));
-}
-
 
 }
 

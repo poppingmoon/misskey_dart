@@ -5,10 +5,13 @@ part 'roles_users_response.freezed.dart';
 part 'roles_users_response.g.dart';
 
 @freezed
-abstract class RolesUsersResponse with _$RolesUsersResponse {
-  const factory({required String id, required UserDetailed user}) =
-      _RolesUsersResponse;
-
+@JsonSerializable()
+class const RolesUsersResponse({
+  required final String id,
+  required final UserDetailed user,
+}) with _$RolesUsersResponse {
   factory fromJson(Map<String, dynamic> json) =>
       _$RolesUsersResponseFromJson(json);
+
+  Map<String, dynamic> toJson() => _$RolesUsersResponseToJson(this);
 }

@@ -5,23 +5,26 @@ part 'emojis_response.freezed.dart';
 part 'emojis_response.g.dart';
 
 @freezed
-abstract class EmojisResponse with _$EmojisResponse {
-  const factory({required List<Emoji> emojis}) = _EmojisResponse;
-
+@JsonSerializable()
+class const EmojisResponse({required final List<Emoji> emojis})
+    with _$EmojisResponse {
   factory fromJson(Map<String, Object?> json) => _$EmojisResponseFromJson(json);
+
+  Map<String, dynamic> toJson() => _$EmojisResponseToJson(this);
 }
 
 @freezed
-abstract class Emoji with _$Emoji {
-  const factory({
-    @Default([]) List<String> aliases,
-    required String name,
-    String? category,
-    @NullableUriConverter() Uri? url,
-    bool? localOnly,
-    @Default(false) bool isSensitive,
-    List<String>? roleIdsThatCanBeUsedThisEmojiAsReaction,
-  }) = _Emoji;
-
+@JsonSerializable()
+class const Emoji({
+  final List<String> aliases = const [],
+  required final String name,
+  final String? category,
+  @NullableUriConverter() final Uri? url,
+  final bool? localOnly,
+  final bool isSensitive = false,
+  final List<String>? roleIdsThatCanBeUsedThisEmojiAsReaction,
+}) with _$Emoji {
   factory fromJson(Map<String, Object?> json) => _$EmojiFromJson(json);
+
+  Map<String, dynamic> toJson() => _$EmojiToJson(this);
 }

@@ -7,18 +7,19 @@ part 'drive_files_request.freezed.dart';
 part 'drive_files_request.g.dart';
 
 @freezed
-abstract class DriveFilesRequest with _$DriveFilesRequest {
-  const factory({
-    int? limit,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-    String? folderId,
-    String? type,
-    @DriveFilesSortConverter() DriveFilesSortType? sort,
-  }) = _DriveFilesRequest;
-
+@JsonSerializable()
+class const DriveFilesRequest({
+  final int? limit,
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
+  final String? folderId,
+  final String? type,
+  @DriveFilesSortConverter() final DriveFilesSortType? sort,
+}) with _$DriveFilesRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$DriveFilesRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$DriveFilesRequestToJson(this);
 }

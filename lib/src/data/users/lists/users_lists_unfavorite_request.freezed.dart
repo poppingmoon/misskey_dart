@@ -16,15 +16,13 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$UsersListsUnfavoriteRequest {
 
- String get listId;
+
 /// Create a copy of UsersListsUnfavoriteRequest
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 $UsersListsUnfavoriteRequestCopyWith<UsersListsUnfavoriteRequest> get copyWith => _$UsersListsUnfavoriteRequestCopyWithImpl<UsersListsUnfavoriteRequest>(this as UsersListsUnfavoriteRequest, _$identity);
 
-  /// Serializes this UsersListsUnfavoriteRequest to a JSON map.
-  Map<String, dynamic> toJson();
 
 
 @override
@@ -95,11 +93,10 @@ extension UsersListsUnfavoriteRequestPatterns on UsersListsUnfavoriteRequest {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UsersListsUnfavoriteRequest value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _UsersListsUnfavoriteRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return orElse();
 
 }
@@ -117,11 +114,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UsersListsUnfavoriteRequest value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UsersListsUnfavoriteRequest():
-return $default(_that);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -138,11 +134,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UsersListsUnfavoriteRequest value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(){
 final _that = this;
 switch (_that) {
-case _UsersListsUnfavoriteRequest() when $default != null:
-return $default(_that);case _:
+case _:
   return null;
 
 }
@@ -159,10 +154,9 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String listId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _UsersListsUnfavoriteRequest() when $default != null:
-return $default(_that.listId);case _:
+case _:
   return orElse();
 
 }
@@ -180,10 +174,9 @@ return $default(_that.listId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String listId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UsersListsUnfavoriteRequest():
-return $default(_that.listId);case _:
+case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -200,85 +193,13 @@ return $default(_that.listId);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String listId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>() {final _that = this;
 switch (_that) {
-case _UsersListsUnfavoriteRequest() when $default != null:
-return $default(_that.listId);case _:
+case _:
   return null;
 
 }
 }
-
-}
-
-/// @nodoc
-@JsonSerializable()
-
-class _UsersListsUnfavoriteRequest implements UsersListsUnfavoriteRequest {
-  const _UsersListsUnfavoriteRequest({required this.listId});
-  factory _UsersListsUnfavoriteRequest.fromJson(Map<String, dynamic> json) => _$UsersListsUnfavoriteRequestFromJson(json);
-
-@override final  String listId;
-
-/// Create a copy of UsersListsUnfavoriteRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$UsersListsUnfavoriteRequestCopyWith<_UsersListsUnfavoriteRequest> get copyWith => __$UsersListsUnfavoriteRequestCopyWithImpl<_UsersListsUnfavoriteRequest>(this, _$identity);
-
-@override
-Map<String, dynamic> toJson() {
-  return _$UsersListsUnfavoriteRequestToJson(this, );
-}
-
-@override
-bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UsersListsUnfavoriteRequest&&(identical(other.listId, listId) || other.listId == listId));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode {
-    return Object.hash(runtimeType,listId);
-}
-
-@override
-String toString() {
-    return 'UsersListsUnfavoriteRequest(listId: $listId)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$UsersListsUnfavoriteRequestCopyWith<$Res> implements $UsersListsUnfavoriteRequestCopyWith<$Res> {
-  factory _$UsersListsUnfavoriteRequestCopyWith(_UsersListsUnfavoriteRequest value, $Res Function(_UsersListsUnfavoriteRequest) _then) = __$UsersListsUnfavoriteRequestCopyWithImpl;
-@override @useResult
-$Res call({
- String listId
-});
-
-
-
-
-}
-/// @nodoc
-class __$UsersListsUnfavoriteRequestCopyWithImpl<$Res>
-    implements _$UsersListsUnfavoriteRequestCopyWith<$Res> {
-  __$UsersListsUnfavoriteRequestCopyWithImpl(this._self, this._then);
-
-  final _UsersListsUnfavoriteRequest _self;
-  final $Res Function(_UsersListsUnfavoriteRequest) _then;
-
-/// Create a copy of UsersListsUnfavoriteRequest
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? listId = null,}) {
-  return _then(_UsersListsUnfavoriteRequest(
-listId: null == listId ? _self.listId : listId // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
 
 }
 

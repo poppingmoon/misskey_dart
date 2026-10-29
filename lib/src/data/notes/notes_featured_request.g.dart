@@ -6,9 +6,9 @@ part of 'notes_featured_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_NotesFeaturedRequest _$NotesFeaturedRequestFromJson(
+NotesFeaturedRequest _$NotesFeaturedRequestFromJson(
   Map<String, dynamic> json,
-) => _NotesFeaturedRequest(
+) => NotesFeaturedRequest(
   limit: (json['limit'] as num?)?.toInt(),
   offset: (json['offset'] as num?)?.toInt(),
   untilId: json['untilId'] as String?,
@@ -16,7 +16,7 @@ _NotesFeaturedRequest _$NotesFeaturedRequestFromJson(
 );
 
 Map<String, dynamic> _$NotesFeaturedRequestToJson(
-  _NotesFeaturedRequest instance,
+  NotesFeaturedRequest instance,
 ) => <String, dynamic>{
   'limit': instance.limit,
   'offset': instance.offset,

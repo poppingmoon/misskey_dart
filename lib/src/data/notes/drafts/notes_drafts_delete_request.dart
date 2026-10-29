@@ -4,9 +4,11 @@ part 'notes_drafts_delete_request.freezed.dart';
 part 'notes_drafts_delete_request.g.dart';
 
 @freezed
-abstract class NotesDraftsDeleteRequest with _$NotesDraftsDeleteRequest {
-  const factory({required String draftId}) = _NotesDraftsDeleteRequest;
-
+@JsonSerializable()
+class const NotesDraftsDeleteRequest({required final String draftId})
+    with _$NotesDraftsDeleteRequest {
   factory fromJson(Map<String, Object?> json) =>
       _$NotesDraftsDeleteRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NotesDraftsDeleteRequestToJson(this);
 }

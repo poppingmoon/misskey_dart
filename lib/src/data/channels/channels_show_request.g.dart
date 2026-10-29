@@ -6,9 +6,9 @@ part of 'channels_show_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ChannelsShowRequest _$ChannelsShowRequestFromJson(Map<String, dynamic> json) =>
-    _ChannelsShowRequest(channelId: json['channelId'] as String);
+ChannelsShowRequest _$ChannelsShowRequestFromJson(Map<String, dynamic> json) =>
+    ChannelsShowRequest(channelId: json['channelId'] as String);
 
 Map<String, dynamic> _$ChannelsShowRequestToJson(
-  _ChannelsShowRequest instance,
+  ChannelsShowRequest instance,
 ) => <String, dynamic>{'channelId': instance.channelId};

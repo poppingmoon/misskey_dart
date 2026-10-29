@@ -5,15 +5,16 @@ part 'flash_my_likes_request.freezed.dart';
 part 'flash_my_likes_request.g.dart';
 
 @freezed
-abstract class FlashMyLikesRequest with _$FlashMyLikesRequest {
-  const factory({
-    int? limit,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-  }) = _FlashMyLikesRequest;
-
+@JsonSerializable()
+class const FlashMyLikesRequest({
+  final int? limit,
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
+}) with _$FlashMyLikesRequest {
   factory fromJson(Map<String, Object?> json) =>
       _$FlashMyLikesRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$FlashMyLikesRequestToJson(this);
 }

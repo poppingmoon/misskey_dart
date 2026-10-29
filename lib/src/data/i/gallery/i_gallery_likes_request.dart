@@ -5,15 +5,16 @@ part 'i_gallery_likes_request.freezed.dart';
 part 'i_gallery_likes_request.g.dart';
 
 @freezed
-abstract class IGalleryLikesRequest with _$IGalleryLikesRequest {
-  const factory({
-    int? limit,
-    String? sinceId,
-    String? untilId,
-    @EpocTimeDateTimeConverter() DateTime? sinceDate,
-    @EpocTimeDateTimeConverter() DateTime? untilDate,
-  }) = _IGalleryLikesRequest;
-
+@JsonSerializable()
+class const IGalleryLikesRequest({
+  final int? limit,
+  final String? sinceId,
+  final String? untilId,
+  @EpocTimeDateTimeConverter() final DateTime? sinceDate,
+  @EpocTimeDateTimeConverter() final DateTime? untilDate,
+}) with _$IGalleryLikesRequest {
   factory fromJson(Map<String, dynamic> json) =>
       _$IGalleryLikesRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$IGalleryLikesRequestToJson(this);
 }

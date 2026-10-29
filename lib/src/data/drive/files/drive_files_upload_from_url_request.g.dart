@@ -6,9 +6,9 @@ part of 'drive_files_upload_from_url_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_DriveFilesUploadFromUrlRequest _$DriveFilesUploadFromUrlRequestFromJson(
+DriveFilesUploadFromUrlRequest _$DriveFilesUploadFromUrlRequestFromJson(
   Map<String, dynamic> json,
-) => _DriveFilesUploadFromUrlRequest(
+) => DriveFilesUploadFromUrlRequest(
   url: json['url'] as String,
   folderId: json['folderId'] as String?,
   isSensitive: json['isSensitive'] as bool?,
@@ -18,7 +18,7 @@ _DriveFilesUploadFromUrlRequest _$DriveFilesUploadFromUrlRequestFromJson(
 );
 
 Map<String, dynamic> _$DriveFilesUploadFromUrlRequestToJson(
-  _DriveFilesUploadFromUrlRequest instance,
+  DriveFilesUploadFromUrlRequest instance,
 ) => <String, dynamic>{
   'url': instance.url,
   'folderId': instance.folderId,

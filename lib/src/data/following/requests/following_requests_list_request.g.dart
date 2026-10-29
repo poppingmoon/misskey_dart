@@ -6,9 +6,9 @@ part of 'following_requests_list_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_FollowingRequestsListRequest _$FollowingRequestsListRequestFromJson(
+FollowingRequestsListRequest _$FollowingRequestsListRequestFromJson(
   Map<String, dynamic> json,
-) => _FollowingRequestsListRequest(
+) => FollowingRequestsListRequest(
   sinceId: json['sinceId'] as String?,
   untilId: json['untilId'] as String?,
   sinceDate: _$JsonConverterFromJson<int, DateTime>(
@@ -23,7 +23,7 @@ _FollowingRequestsListRequest _$FollowingRequestsListRequestFromJson(
 );
 
 Map<String, dynamic> _$FollowingRequestsListRequestToJson(
-  _FollowingRequestsListRequest instance,
+  FollowingRequestsListRequest instance,
 ) => <String, dynamic>{
   'sinceId': instance.sinceId,
   'untilId': instance.untilId,
