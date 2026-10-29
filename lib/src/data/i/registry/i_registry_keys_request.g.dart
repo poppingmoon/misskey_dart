@@ -15,4 +15,4 @@ IRegistryKeysRequest _$IRegistryKeysRequestFromJson(
 
 Map<String, dynamic> _$IRegistryKeysRequestToJson(
   IRegistryKeysRequest instance,
-) => <String, dynamic>{'scope': instance.scope, 'domain': instance.domain};
+) => <String, dynamic>{'scope': instance.scope, 'domain': ?instance.domain};

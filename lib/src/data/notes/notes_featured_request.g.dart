@@ -18,8 +18,8 @@ NotesFeaturedRequest _$NotesFeaturedRequestFromJson(
 Map<String, dynamic> _$NotesFeaturedRequestToJson(
   NotesFeaturedRequest instance,
 ) => <String, dynamic>{
-  'limit': instance.limit,
-  'offset': instance.offset,
-  'untilId': instance.untilId,
-  'channelId': instance.channelId,
+  'limit': ?instance.limit,
+  'offset': ?instance.offset,
+  'untilId': ?instance.untilId,
+  'channelId': ?instance.channelId,
 };

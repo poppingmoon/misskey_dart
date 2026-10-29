@@ -17,7 +17,7 @@ NotesScheduleListRequest _$NotesScheduleListRequestFromJson(
 Map<String, dynamic> _$NotesScheduleListRequestToJson(
   NotesScheduleListRequest instance,
 ) => <String, dynamic>{
-  'sinceId': instance.sinceId,
-  'untilId': instance.untilId,
-  'limit': instance.limit,
+  'sinceId': ?instance.sinceId,
+  'untilId': ?instance.untilId,
+  'limit': ?instance.limit,
 };

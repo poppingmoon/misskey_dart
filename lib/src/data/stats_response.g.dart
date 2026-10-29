@@ -20,12 +20,12 @@ StatsResponse _$StatsResponseFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$StatsResponseToJson(StatsResponse instance) =>
     <String, dynamic>{
-      'notesCount': instance.notesCount,
-      'originalNotesCount': instance.originalNotesCount,
-      'usersCount': instance.usersCount,
-      'originalUsersCount': instance.originalUsersCount,
-      'reactionsCount': instance.reactionsCount,
-      'instances': instance.instances,
-      'driveUsageLocal': instance.driveUsageLocal,
-      'driveUsageRemote': instance.driveUsageRemote,
+      'notesCount': ?instance.notesCount,
+      'originalNotesCount': ?instance.originalNotesCount,
+      'usersCount': ?instance.usersCount,
+      'originalUsersCount': ?instance.originalUsersCount,
+      'reactionsCount': ?instance.reactionsCount,
+      'instances': ?instance.instances,
+      'driveUsageLocal': ?instance.driveUsageLocal,
+      'driveUsageRemote': ?instance.driveUsageRemote,
     };

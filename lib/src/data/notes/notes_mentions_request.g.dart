@@ -27,19 +27,19 @@ NotesMentionsRequest _$NotesMentionsRequestFromJson(
 Map<String, dynamic> _$NotesMentionsRequestToJson(
   NotesMentionsRequest instance,
 ) => <String, dynamic>{
-  'following': instance.following,
-  'limit': instance.limit,
-  'sinceId': instance.sinceId,
-  'untilId': instance.untilId,
-  'sinceDate': _$JsonConverterToJson<int, DateTime>(
+  'following': ?instance.following,
+  'limit': ?instance.limit,
+  'sinceId': ?instance.sinceId,
+  'untilId': ?instance.untilId,
+  'sinceDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.sinceDate,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'untilDate': _$JsonConverterToJson<int, DateTime>(
+  'untilDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.untilDate,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'visibility': _$NoteVisibilityEnumMap[instance.visibility],
+  'visibility': ?_$NoteVisibilityEnumMap[instance.visibility],
 };
 
 Value? _$JsonConverterFromJson<Json, Value>(

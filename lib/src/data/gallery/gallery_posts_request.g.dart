@@ -24,14 +24,14 @@ GalleryPostsRequest _$GalleryPostsRequestFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$GalleryPostsRequestToJson(
   GalleryPostsRequest instance,
 ) => <String, dynamic>{
-  'limit': instance.limit,
-  'sinceId': instance.sinceId,
-  'untilId': instance.untilId,
-  'sinceDate': _$JsonConverterToJson<int, DateTime>(
+  'limit': ?instance.limit,
+  'sinceId': ?instance.sinceId,
+  'untilId': ?instance.untilId,
+  'sinceDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.sinceDate,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'untilDate': _$JsonConverterToJson<int, DateTime>(
+  'untilDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.untilDate,
     const EpocTimeDateTimeConverter().toJson,
   ),

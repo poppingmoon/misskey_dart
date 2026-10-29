@@ -34,24 +34,24 @@ INotificationsRequest _$INotificationsRequestFromJson(
 Map<String, dynamic> _$INotificationsRequestToJson(
   INotificationsRequest instance,
 ) => <String, dynamic>{
-  'limit': instance.limit,
-  'sinceId': instance.sinceId,
-  'untilId': instance.untilId,
-  'sinceDate': _$JsonConverterToJson<int, DateTime>(
+  'limit': ?instance.limit,
+  'sinceId': ?instance.sinceId,
+  'untilId': ?instance.untilId,
+  'sinceDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.sinceDate,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'untilDate': _$JsonConverterToJson<int, DateTime>(
+  'untilDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.untilDate,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'following': instance.following,
-  'unreadOnly': instance.unreadOnly,
-  'markAsRead': instance.markAsRead,
-  'includeTypes': instance.includeTypes
+  'following': ?instance.following,
+  'unreadOnly': ?instance.unreadOnly,
+  'markAsRead': ?instance.markAsRead,
+  'includeTypes': ?instance.includeTypes
       ?.map((e) => _$NotificationTypeEnumMap[e]!)
       .toList(),
-  'excludeTypes': instance.excludeTypes
+  'excludeTypes': ?instance.excludeTypes
       ?.map((e) => _$NotificationTypeEnumMap[e]!)
       .toList(),
 };

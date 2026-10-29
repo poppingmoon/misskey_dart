@@ -18,6 +18,6 @@ Map<String, dynamic> _$ChatRoomsUpdateRequestToJson(
   ChatRoomsUpdateRequest instance,
 ) => <String, dynamic>{
   'roomId': instance.roomId,
-  'name': instance.name,
-  'description': instance.description,
+  'name': ?instance.name,
+  'description': ?instance.description,
 };

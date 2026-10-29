@@ -28,15 +28,15 @@ Map<String, dynamic> _$NotesChildrenRequestToJson(
   NotesChildrenRequest instance,
 ) => <String, dynamic>{
   'noteId': instance.noteId,
-  'limit': instance.limit,
-  'depth': instance.depth,
-  'sinceId': instance.sinceId,
-  'untilId': instance.untilId,
-  'sinceDate': _$JsonConverterToJson<int, DateTime>(
+  'limit': ?instance.limit,
+  'depth': ?instance.depth,
+  'sinceId': ?instance.sinceId,
+  'untilId': ?instance.untilId,
+  'sinceDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.sinceDate,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'untilDate': _$JsonConverterToJson<int, DateTime>(
+  'untilDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.untilDate,
     const EpocTimeDateTimeConverter().toJson,
   ),

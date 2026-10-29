@@ -17,4 +17,4 @@ IRegistryScopesWithDomainResponse _$IRegistryScopesWithDomainResponseFromJson(
 
 Map<String, dynamic> _$IRegistryScopesWithDomainResponseToJson(
   IRegistryScopesWithDomainResponse instance,
-) => <String, dynamic>{'scopes': instance.scopes, 'domain': instance.domain};
+) => <String, dynamic>{'scopes': instance.scopes, 'domain': ?instance.domain};

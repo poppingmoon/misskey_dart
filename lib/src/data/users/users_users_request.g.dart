@@ -21,15 +21,15 @@ UsersUsersRequest _$UsersUsersRequestFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$UsersUsersRequestToJson(UsersUsersRequest instance) =>
     <String, dynamic>{
-      'limit': instance.limit,
-      'offset': instance.offset,
-      'sort': _$JsonConverterToJson<String, UsersSortType>(
+      'limit': ?instance.limit,
+      'offset': ?instance.offset,
+      'sort': ?_$JsonConverterToJson<String, UsersSortType>(
         instance.sort,
         const UsersSortConverter().toJson,
       ),
-      'state': _$UsersStateEnumMap[instance.state],
-      'origin': _$OriginEnumMap[instance.origin],
-      'hostname': instance.hostname,
+      'state': ?_$UsersStateEnumMap[instance.state],
+      'origin': ?_$OriginEnumMap[instance.origin],
+      'hostname': ?instance.hostname,
     };
 
 Value? _$JsonConverterFromJson<Json, Value>(

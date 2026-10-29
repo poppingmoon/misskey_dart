@@ -24,15 +24,15 @@ ClipsNotesRequest _$ClipsNotesRequestFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$ClipsNotesRequestToJson(ClipsNotesRequest instance) =>
     <String, dynamic>{
-      'limit': instance.limit,
+      'limit': ?instance.limit,
       'clipId': instance.clipId,
-      'sinceId': instance.sinceId,
-      'untilId': instance.untilId,
-      'sinceDate': _$JsonConverterToJson<int, DateTime>(
+      'sinceId': ?instance.sinceId,
+      'untilId': ?instance.untilId,
+      'sinceDate': ?_$JsonConverterToJson<int, DateTime>(
         instance.sinceDate,
         const EpocTimeDateTimeConverter().toJson,
       ),
-      'untilDate': _$JsonConverterToJson<int, DateTime>(
+      'untilDate': ?_$JsonConverterToJson<int, DateTime>(
         instance.untilDate,
         const EpocTimeDateTimeConverter().toJson,
       ),

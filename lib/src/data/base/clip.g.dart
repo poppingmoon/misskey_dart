@@ -31,12 +31,12 @@ Map<String, dynamic> _$ClipToJson(Clip instance) => <String, dynamic>{
   ),
   'userId': instance.userId,
   'user': instance.user.toJson(),
-  'name': instance.name,
-  'description': instance.description,
+  'name': ?instance.name,
+  'description': ?instance.description,
   'isPublic': instance.isPublic,
-  'favoritedCount': instance.favoritedCount,
-  'isFavorited': instance.isFavorited,
-  'notesCount': instance.notesCount,
+  'favoritedCount': ?instance.favoritedCount,
+  'isFavorited': ?instance.isFavorited,
+  'notesCount': ?instance.notesCount,
 };
 
 Value? _$JsonConverterFromJson<Json, Value>(

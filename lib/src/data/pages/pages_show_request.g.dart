@@ -15,7 +15,7 @@ PagesShowRequest _$PagesShowRequestFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$PagesShowRequestToJson(PagesShowRequest instance) =>
     <String, dynamic>{
-      'pageId': instance.pageId,
-      'name': instance.name,
-      'username': instance.username,
+      'pageId': ?instance.pageId,
+      'name': ?instance.name,
+      'username': ?instance.username,
     };

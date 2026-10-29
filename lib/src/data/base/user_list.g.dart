@@ -17,7 +17,7 @@ UsersList _$UsersListFromJson(Map<String, dynamic> json) => UsersList(
 Map<String, dynamic> _$UsersListToJson(UsersList instance) => <String, dynamic>{
   'id': instance.id,
   'createdAt': const DateTimeConverter().toJson(instance.createdAt),
-  'name': instance.name,
+  'name': ?instance.name,
   'userIds': instance.userIds,
-  'isPublic': instance.isPublic,
+  'isPublic': ?instance.isPublic,
 };

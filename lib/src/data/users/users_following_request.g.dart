@@ -31,18 +31,18 @@ Map<String, dynamic> _$UsersFollowingRequestToJson(
   UsersFollowingRequest instance,
 ) => <String, dynamic>{
   'userId': instance.userId,
-  'sinceId': instance.sinceId,
-  'untilId': instance.untilId,
-  'sinceDate': _$JsonConverterToJson<int, DateTime>(
+  'sinceId': ?instance.sinceId,
+  'untilId': ?instance.untilId,
+  'sinceDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.sinceDate,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'untilDate': _$JsonConverterToJson<int, DateTime>(
+  'untilDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.untilDate,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'limit': instance.limit,
-  'birthday': _$JsonConverterToJson<String, DateTime>(
+  'limit': ?instance.limit,
+  'birthday': ?_$JsonConverterToJson<String, DateTime>(
     instance.birthday,
     const DateTimeConverter().toJson,
   ),

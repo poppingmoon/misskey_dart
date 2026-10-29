@@ -18,7 +18,7 @@ MuteCreateRequest _$MuteCreateRequestFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$MuteCreateRequestToJson(MuteCreateRequest instance) =>
     <String, dynamic>{
       'userId': instance.userId,
-      'expiresAt': _$JsonConverterToJson<int, DateTime>(
+      'expiresAt': ?_$JsonConverterToJson<int, DateTime>(
         instance.expiresAt,
         const EpocTimeDateTimeConverter().toJson,
       ),

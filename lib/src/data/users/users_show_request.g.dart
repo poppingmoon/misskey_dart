@@ -31,4 +31,4 @@ UsersShowByUserNameRequest _$UsersShowByUserNameRequestFromJson(
 
 Map<String, dynamic> _$UsersShowByUserNameRequestToJson(
   UsersShowByUserNameRequest instance,
-) => <String, dynamic>{'username': instance.userName, 'host': instance.host};
+) => <String, dynamic>{'username': instance.userName, 'host': ?instance.host};

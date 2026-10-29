@@ -37,29 +37,29 @@ NotesSearchRequest _$NotesSearchRequestFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$NotesSearchRequestToJson(NotesSearchRequest instance) =>
     <String, dynamic>{
       'query': instance.query,
-      'sinceId': instance.sinceId,
-      'untilId': instance.untilId,
-      'sinceDate': _$JsonConverterToJson<int, DateTime>(
+      'sinceId': ?instance.sinceId,
+      'untilId': ?instance.untilId,
+      'sinceDate': ?_$JsonConverterToJson<int, DateTime>(
         instance.sinceDate,
         const EpocTimeDateTimeConverter().toJson,
       ),
-      'untilDate': _$JsonConverterToJson<int, DateTime>(
+      'untilDate': ?_$JsonConverterToJson<int, DateTime>(
         instance.untilDate,
         const EpocTimeDateTimeConverter().toJson,
       ),
-      'rangeStartAt': _$JsonConverterToJson<int, DateTime>(
+      'rangeStartAt': ?_$JsonConverterToJson<int, DateTime>(
         instance.rangeStartAt,
         const EpocTimeDateTimeConverter().toJson,
       ),
-      'rangeEndAt': _$JsonConverterToJson<int, DateTime>(
+      'rangeEndAt': ?_$JsonConverterToJson<int, DateTime>(
         instance.rangeEndAt,
         const EpocTimeDateTimeConverter().toJson,
       ),
-      'limit': instance.limit,
-      'offset': instance.offset,
-      'host': instance.host,
-      'userId': instance.userId,
-      'channelId': instance.channelId,
+      'limit': ?instance.limit,
+      'offset': ?instance.offset,
+      'host': ?instance.host,
+      'userId': ?instance.userId,
+      'channelId': ?instance.channelId,
     };
 
 Value? _$JsonConverterFromJson<Json, Value>(

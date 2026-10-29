@@ -19,5 +19,5 @@ Map<String, dynamic> _$IRegistryGetDetailRequestToJson(
 ) => <String, dynamic>{
   'key': instance.key,
   'scope': instance.scope,
-  'domain': instance.domain,
+  'domain': ?instance.domain,
 };

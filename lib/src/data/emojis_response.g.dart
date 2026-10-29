@@ -36,10 +36,10 @@ Emoji _$EmojiFromJson(Map<String, dynamic> json) => Emoji(
 Map<String, dynamic> _$EmojiToJson(Emoji instance) => <String, dynamic>{
   'aliases': instance.aliases,
   'name': instance.name,
-  'category': instance.category,
-  'url': const NullableUriConverter().toJson(instance.url),
-  'localOnly': instance.localOnly,
+  'category': ?instance.category,
+  'url': ?const NullableUriConverter().toJson(instance.url),
+  'localOnly': ?instance.localOnly,
   'isSensitive': instance.isSensitive,
   'roleIdsThatCanBeUsedThisEmojiAsReaction':
-      instance.roleIdsThatCanBeUsedThisEmojiAsReaction,
+      ?instance.roleIdsThatCanBeUsedThisEmojiAsReaction,
 };

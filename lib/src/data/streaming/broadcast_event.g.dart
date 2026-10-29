@@ -18,7 +18,7 @@ BroadcastEvent _$BroadcastEventFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$BroadcastEventToJson(BroadcastEvent instance) =>
     <String, dynamic>{
-      'type': _$BroadcastEventTypeEnumMap[instance.type],
+      'type': ?_$BroadcastEventTypeEnumMap[instance.type],
       'body': instance.body,
     };
 

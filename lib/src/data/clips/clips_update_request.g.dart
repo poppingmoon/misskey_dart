@@ -18,6 +18,6 @@ Map<String, dynamic> _$ClipsUpdateRequestToJson(ClipsUpdateRequest instance) =>
     <String, dynamic>{
       'clipId': instance.clipId,
       'name': instance.name,
-      'isPublic': instance.isPublic,
-      'description': instance.description,
+      'isPublic': ?instance.isPublic,
+      'description': ?instance.description,
     };

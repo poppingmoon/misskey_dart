@@ -32,7 +32,7 @@ UrlUploadFinishedEvent _$UrlUploadFinishedEventFromJson(
 Map<String, dynamic> _$UrlUploadFinishedEventToJson(
   UrlUploadFinishedEvent instance,
 ) => <String, dynamic>{
-  'marker': instance.marker,
+  'marker': ?instance.marker,
   'file': instance.file.toJson(),
 };
 
@@ -47,9 +47,9 @@ RegistryUpdated _$RegistryUpdatedFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$RegistryUpdatedToJson(RegistryUpdated instance) =>
     <String, dynamic>{
-      'scope': instance.scope,
+      'scope': ?instance.scope,
       'key': instance.key,
-      'value': instance.value,
+      'value': ?instance.value,
     };
 
 Signin _$SigninFromJson(Map<String, dynamic> json) => Signin(
@@ -64,7 +64,7 @@ Map<String, dynamic> _$SigninToJson(Signin instance) => <String, dynamic>{
   'id': instance.id,
   'createdAt': const DateTimeConverter().toJson(instance.createdAt),
   'ip': instance.ip,
-  'headers': instance.headers,
+  'headers': ?instance.headers,
   'success': instance.success,
 };
 
@@ -91,7 +91,7 @@ TimelineReacted _$TimelineReactedFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$TimelineReactedToJson(TimelineReacted instance) =>
     <String, dynamic>{
       'reaction': instance.reaction,
-      'emoji': instance.emoji?.toJson(),
+      'emoji': ?instance.emoji?.toJson(),
       'userId': instance.userId,
     };
 
@@ -170,7 +170,7 @@ ChatReact _$ChatReactFromJson(Map<String, dynamic> json) => ChatReact(
 
 Map<String, dynamic> _$ChatReactToJson(ChatReact instance) => <String, dynamic>{
   'reaction': instance.reaction,
-  'user': instance.user?.toJson(),
+  'user': ?instance.user?.toJson(),
   'messageId': instance.messageId,
 };
 

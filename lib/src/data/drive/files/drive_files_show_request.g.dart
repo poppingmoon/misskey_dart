@@ -15,4 +15,4 @@ DriveFilesShowRequest _$DriveFilesShowRequestFromJson(
 
 Map<String, dynamic> _$DriveFilesShowRequestToJson(
   DriveFilesShowRequest instance,
-) => <String, dynamic>{'fileId': instance.fileId, 'url': instance.url};
+) => <String, dynamic>{'fileId': ?instance.fileId, 'url': ?instance.url};

@@ -15,4 +15,4 @@ DriveFoldersFindRequest _$DriveFoldersFindRequestFromJson(
 
 Map<String, dynamic> _$DriveFoldersFindRequestToJson(
   DriveFoldersFindRequest instance,
-) => <String, dynamic>{'name': instance.name, 'parentId': instance.parentId};
+) => <String, dynamic>{'name': instance.name, 'parentId': ?instance.parentId};

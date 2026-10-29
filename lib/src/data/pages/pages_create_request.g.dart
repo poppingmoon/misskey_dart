@@ -31,15 +31,15 @@ Map<String, dynamic> _$PagesCreateRequestToJson(
 ) => <String, dynamic>{
   'title': instance.title,
   'name': instance.name,
-  'summary': instance.summary,
+  'summary': ?instance.summary,
   'content': instance.content.map(const PageContentConverter().toJson).toList(),
   'variables': instance.variables,
   'script': instance.script,
-  'eyeCatchingImageId': instance.eyeCatchingImageId,
-  'font': instance.font,
-  'alignCenter': instance.alignCenter,
-  'hideTitleWhenPinned': instance.hideTitleWhenPinned,
-  'visibility': _$PageVisibilityEnumMap[instance.visibility],
+  'eyeCatchingImageId': ?instance.eyeCatchingImageId,
+  'font': ?instance.font,
+  'alignCenter': ?instance.alignCenter,
+  'hideTitleWhenPinned': ?instance.hideTitleWhenPinned,
+  'visibility': ?_$PageVisibilityEnumMap[instance.visibility],
 };
 
 const _$PageVisibilityEnumMap = {

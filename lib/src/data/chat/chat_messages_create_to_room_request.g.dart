@@ -18,6 +18,6 @@ Map<String, dynamic> _$ChatMessagesCreateToRoomRequestToJson(
   ChatMessagesCreateToRoomRequest instance,
 ) => <String, dynamic>{
   'toRoomId': instance.toRoomId,
-  'text': instance.text,
-  'fileId': instance.fileId,
+  'text': ?instance.text,
+  'fileId': ?instance.fileId,
 };

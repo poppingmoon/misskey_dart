@@ -19,7 +19,7 @@ Map<String, dynamic> _$ChatMessagesSearchRequestToJson(
   ChatMessagesSearchRequest instance,
 ) => <String, dynamic>{
   'query': instance.query,
-  'limit': instance.limit,
-  'roomId': instance.roomId,
-  'userId': instance.userId,
+  'limit': ?instance.limit,
+  'roomId': ?instance.roomId,
+  'userId': ?instance.userId,
 };

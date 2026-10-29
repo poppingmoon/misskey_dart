@@ -19,7 +19,7 @@ Map<String, dynamic> _$GalleryPostsCreateRequestToJson(
   GalleryPostsCreateRequest instance,
 ) => <String, dynamic>{
   'title': instance.title,
-  'description': instance.description,
+  'description': ?instance.description,
   'fileIds': instance.fileIds,
-  'isSensitive': instance.isSensitive,
+  'isSensitive': ?instance.isSensitive,
 };

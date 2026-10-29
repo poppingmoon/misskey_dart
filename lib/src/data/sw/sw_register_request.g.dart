@@ -19,5 +19,5 @@ Map<String, dynamic> _$SwRegisterRequestToJson(SwRegisterRequest instance) =>
       'endpoint': instance.endpoint,
       'auth': instance.auth,
       'publickey': instance.publickey,
-      'sendReadMessage': instance.sendReadMessage,
+      'sendReadMessage': ?instance.sendReadMessage,
     };

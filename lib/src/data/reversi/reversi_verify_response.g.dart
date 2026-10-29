@@ -19,5 +19,5 @@ Map<String, dynamic> _$ReversiVerifyResponseToJson(
   ReversiVerifyResponse instance,
 ) => <String, dynamic>{
   'desynced': instance.desynced,
-  'game': instance.game?.toJson(),
+  'game': ?instance.game?.toJson(),
 };

@@ -21,9 +21,9 @@ Map<String, dynamic> _$DriveFilesUploadFromUrlRequestToJson(
   DriveFilesUploadFromUrlRequest instance,
 ) => <String, dynamic>{
   'url': instance.url,
-  'folderId': instance.folderId,
-  'isSensitive': instance.isSensitive,
-  'comment': instance.comment,
-  'marker': instance.marker,
-  'force': instance.force,
+  'folderId': ?instance.folderId,
+  'isSensitive': ?instance.isSensitive,
+  'comment': ?instance.comment,
+  'marker': ?instance.marker,
+  'force': ?instance.force,
 };

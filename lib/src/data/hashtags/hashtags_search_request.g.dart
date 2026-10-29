@@ -17,7 +17,7 @@ HashtagsSearchRequest _$HashtagsSearchRequestFromJson(
 Map<String, dynamic> _$HashtagsSearchRequestToJson(
   HashtagsSearchRequest instance,
 ) => <String, dynamic>{
-  'limit': instance.limit,
+  'limit': ?instance.limit,
   'query': instance.query,
-  'offset': instance.offset,
+  'offset': ?instance.offset,
 };

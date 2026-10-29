@@ -15,4 +15,4 @@ FlashFeaturedRequest _$FlashFeaturedRequestFromJson(
 
 Map<String, dynamic> _$FlashFeaturedRequestToJson(
   FlashFeaturedRequest instance,
-) => <String, dynamic>{'offset': instance.offset, 'limit': instance.limit};
+) => <String, dynamic>{'offset': ?instance.offset, 'limit': ?instance.limit};

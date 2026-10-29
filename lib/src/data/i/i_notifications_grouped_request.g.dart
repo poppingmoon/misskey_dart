@@ -32,22 +32,22 @@ INotificationsGroupedRequest _$INotificationsGroupedRequestFromJson(
 Map<String, dynamic> _$INotificationsGroupedRequestToJson(
   INotificationsGroupedRequest instance,
 ) => <String, dynamic>{
-  'limit': instance.limit,
-  'sinceId': instance.sinceId,
-  'untilId': instance.untilId,
-  'sinceDate': _$JsonConverterToJson<int, DateTime>(
+  'limit': ?instance.limit,
+  'sinceId': ?instance.sinceId,
+  'untilId': ?instance.untilId,
+  'sinceDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.sinceDate,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'untilDate': _$JsonConverterToJson<int, DateTime>(
+  'untilDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.untilDate,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'markAsRead': instance.markAsRead,
-  'includeTypes': instance.includeTypes
+  'markAsRead': ?instance.markAsRead,
+  'includeTypes': ?instance.includeTypes
       ?.map((e) => _$NotificationTypeEnumMap[e]!)
       .toList(),
-  'excludeTypes': instance.excludeTypes
+  'excludeTypes': ?instance.excludeTypes
       ?.map((e) => _$NotificationTypeEnumMap[e]!)
       .toList(),
 };

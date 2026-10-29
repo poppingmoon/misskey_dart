@@ -156,7 +156,7 @@ NoteChannelEvent _$NoteChannelEventFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$NoteChannelEventToJson(NoteChannelEvent instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'type': _$ChannelEventTypeEnumMap[instance.type],
+      'type': ?_$ChannelEventTypeEnumMap[instance.type],
       'body': instance.body.toJson(),
     };
 
@@ -873,7 +873,7 @@ Map<String, dynamic> _$FallbackChannelEventToJson(
   FallbackChannelEvent instance,
 ) => <String, dynamic>{
   'id': instance.id,
-  'body': instance.body,
+  'body': ?instance.body,
   'type': instance.$type,
 };
 

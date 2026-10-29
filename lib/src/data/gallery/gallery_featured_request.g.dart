@@ -15,4 +15,4 @@ GalleryFeaturedRequest _$GalleryFeaturedRequestFromJson(
 
 Map<String, dynamic> _$GalleryFeaturedRequestToJson(
   GalleryFeaturedRequest instance,
-) => <String, dynamic>{'limit': instance.limit, 'untilId': instance.untilId};
+) => <String, dynamic>{'limit': ?instance.limit, 'untilId': ?instance.untilId};

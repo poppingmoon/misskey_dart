@@ -25,17 +25,17 @@ FollowingRequestsSentRequest _$FollowingRequestsSentRequestFromJson(
 Map<String, dynamic> _$FollowingRequestsSentRequestToJson(
   FollowingRequestsSentRequest instance,
 ) => <String, dynamic>{
-  'sinceId': instance.sinceId,
-  'untilId': instance.untilId,
-  'sinceDate': _$JsonConverterToJson<int, DateTime>(
+  'sinceId': ?instance.sinceId,
+  'untilId': ?instance.untilId,
+  'sinceDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.sinceDate,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'untilDate': _$JsonConverterToJson<int, DateTime>(
+  'untilDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.untilDate,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'limit': instance.limit,
+  'limit': ?instance.limit,
 };
 
 Value? _$JsonConverterFromJson<Json, Value>(

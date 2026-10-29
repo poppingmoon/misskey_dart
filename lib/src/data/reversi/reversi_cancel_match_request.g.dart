@@ -12,4 +12,4 @@ ReversiCancelMatchRequest _$ReversiCancelMatchRequestFromJson(
 
 Map<String, dynamic> _$ReversiCancelMatchRequestToJson(
   ReversiCancelMatchRequest instance,
-) => <String, dynamic>{'userId': instance.userId};
+) => <String, dynamic>{'userId': ?instance.userId};

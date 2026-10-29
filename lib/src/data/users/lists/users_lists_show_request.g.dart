@@ -17,5 +17,5 @@ Map<String, dynamic> _$UsersListsShowRequestToJson(
   UsersListsShowRequest instance,
 ) => <String, dynamic>{
   'listId': instance.listId,
-  'forPublic': instance.forPublic,
+  'forPublic': ?instance.forPublic,
 };

@@ -17,5 +17,5 @@ Map<String, dynamic> _$IRegistryGetDetailResponseToJson(
   IRegistryGetDetailResponse instance,
 ) => <String, dynamic>{
   'updatedAt': instance.updatedAt.toIso8601String(),
-  'value': instance.value,
+  'value': ?instance.value,
 };

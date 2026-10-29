@@ -32,12 +32,12 @@ Map<String, dynamic> _$EmojiResponseToJson(EmojiResponse instance) =>
       'id': instance.id,
       'aliases': instance.aliases,
       'name': instance.name,
-      'category': instance.category,
-      'host': instance.host,
-      'url': const NullableUriConverter().toJson(instance.url),
-      'license': instance.license,
+      'category': ?instance.category,
+      'host': ?instance.host,
+      'url': ?const NullableUriConverter().toJson(instance.url),
+      'license': ?instance.license,
       'isSensitive': instance.isSensitive,
       'localOnly': instance.localOnly,
       'roleIdsThatCanBeUsedThisEmojiAsReaction':
-          instance.roleIdsThatCanBeUsedThisEmojiAsReaction,
+          ?instance.roleIdsThatCanBeUsedThisEmojiAsReaction,
     };

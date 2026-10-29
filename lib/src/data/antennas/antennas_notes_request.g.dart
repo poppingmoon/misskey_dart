@@ -28,18 +28,18 @@ Map<String, dynamic> _$AntennasNotesRequestToJson(
   AntennasNotesRequest instance,
 ) => <String, dynamic>{
   'antennaId': instance.antennaId,
-  'limit': instance.limit,
-  'sinceId': instance.sinceId,
-  'untilId': instance.untilId,
-  'sinceDate': _$JsonConverterToJson<int, DateTime>(
+  'limit': ?instance.limit,
+  'sinceId': ?instance.sinceId,
+  'untilId': ?instance.untilId,
+  'sinceDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.sinceDate,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'untilDate': _$JsonConverterToJson<int, DateTime>(
+  'untilDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.untilDate,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'pagination': instance.pagination,
+  'pagination': ?instance.pagination,
 };
 
 Value? _$JsonConverterFromJson<Json, Value>(

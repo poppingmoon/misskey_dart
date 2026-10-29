@@ -29,7 +29,7 @@ ReversiEnded _$ReversiEndedFromJson(Map<String, dynamic> json) => ReversiEnded(
 
 Map<String, dynamic> _$ReversiEndedToJson(ReversiEnded instance) =>
     <String, dynamic>{
-      'winnerId': instance.winnerId,
+      'winnerId': ?instance.winnerId,
       'game': instance.game.toJson(),
     };
 
@@ -48,7 +48,7 @@ Map<String, dynamic> _$ReversiLogEventToJson(ReversiLogEvent instance) =>
       'player': instance.player,
       'operation': instance.operation,
       'pos': instance.pos,
-      'id': instance.id,
+      'id': ?instance.id,
     };
 
 ReversiReadyStates _$ReversiReadyStatesFromJson(Map<String, dynamic> json) =>
@@ -73,7 +73,7 @@ Map<String, dynamic> _$ReversiUpdateSettingsToJson(
 ) => <String, dynamic>{
   'userId': instance.userId,
   'key': instance.key,
-  'value': instance.value,
+  'value': ?instance.value,
 };
 
 ReversiCanceled _$ReversiCanceledFromJson(Map<String, dynamic> json) =>

@@ -58,30 +58,30 @@ NoteDraft _$NoteDraftFromJson(Map<String, dynamic> json) => NoteDraft(
 Map<String, dynamic> _$NoteDraftToJson(NoteDraft instance) => <String, dynamic>{
   'id': instance.id,
   'createdAt': const DateTimeConverter().toJson(instance.createdAt),
-  'text': instance.text,
-  'cw': instance.cw,
+  'text': ?instance.text,
+  'cw': ?instance.cw,
   'userId': instance.userId,
   'user': instance.user.toJson(),
-  'replyId': instance.replyId,
-  'renoteId': instance.renoteId,
-  'reply': instance.reply?.toJson(),
-  'renote': instance.renote?.toJson(),
-  'visibility': _$NoteVisibilityEnumMap[instance.visibility],
-  'visibleUserIds': instance.visibleUserIds,
-  'fileIds': instance.fileIds,
-  'files': instance.files?.map((e) => e.toJson()).toList(),
-  'hashtag': instance.hashtag,
-  'poll': instance.poll?.toJson(),
-  'channelId': instance.channelId,
-  'channel': instance.channel?.toJson(),
-  'localOnly': instance.localOnly,
+  'replyId': ?instance.replyId,
+  'renoteId': ?instance.renoteId,
+  'reply': ?instance.reply?.toJson(),
+  'renote': ?instance.renote?.toJson(),
+  'visibility': ?_$NoteVisibilityEnumMap[instance.visibility],
+  'visibleUserIds': ?instance.visibleUserIds,
+  'fileIds': ?instance.fileIds,
+  'files': ?instance.files?.map((e) => e.toJson()).toList(),
+  'hashtag': ?instance.hashtag,
+  'poll': ?instance.poll?.toJson(),
+  'channelId': ?instance.channelId,
+  'channel': ?instance.channel?.toJson(),
+  'localOnly': ?instance.localOnly,
   'reactionAcceptance':
-      _$ReactionAcceptanceEnumMap[instance.reactionAcceptance],
-  'scheduledAt': _$JsonConverterToJson<int, DateTime>(
+      ?_$ReactionAcceptanceEnumMap[instance.reactionAcceptance],
+  'scheduledAt': ?_$JsonConverterToJson<int, DateTime>(
     instance.scheduledAt,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'isActuallyScheduled': instance.isActuallyScheduled,
+  'isActuallyScheduled': ?instance.isActuallyScheduled,
 };
 
 const _$NoteVisibilityEnumMap = {
@@ -127,11 +127,11 @@ NoteDraftPoll _$NoteDraftPollFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$NoteDraftPollToJson(NoteDraftPoll instance) =>
     <String, dynamic>{
-      'expiresAt': _$JsonConverterToJson<String, DateTime>(
+      'expiresAt': ?_$JsonConverterToJson<String, DateTime>(
         instance.expiresAt,
         const DateTimeConverter().toJson,
       ),
-      'expiredAfter': _$JsonConverterToJson<int, Duration>(
+      'expiredAfter': ?_$JsonConverterToJson<int, Duration>(
         instance.expiredAfter,
         const DurationConverter().toJson,
       ),

@@ -18,10 +18,10 @@ UsersSearchRequest _$UsersSearchRequestFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$UsersSearchRequestToJson(UsersSearchRequest instance) =>
     <String, dynamic>{
       'query': instance.query,
-      'offset': instance.offset,
-      'limit': instance.limit,
-      'origin': _$OriginEnumMap[instance.origin],
-      'detail': instance.detail,
+      'offset': ?instance.offset,
+      'limit': ?instance.limit,
+      'origin': ?_$OriginEnumMap[instance.origin],
+      'detail': ?instance.detail,
     };
 
 const _$OriginEnumMap = {

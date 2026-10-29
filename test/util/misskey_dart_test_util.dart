@@ -60,18 +60,17 @@ extension MisskeyTestExtension on Misskey {
     String? channelId,
     List<String>? poll,
   }) async {
-    final response = await apiService.post<Map<String, dynamic>>(
-      "notes/create",
-      {
-        "text": text,
-        "fileIds": fileIds,
-        "replyId": replyId,
-        "renoteId": renoteId,
-        "channelId": channelId,
-        if (poll != null) "poll": {"choices": poll},
-      },
+    final response = await notes.create(
+      NotesCreateRequest(
+        text: text,
+        fileIds: fileIds,
+        replyId: replyId,
+        renoteId: renoteId,
+        channelId: channelId,
+        poll: poll != null ? NotesCreatePollRequest(choices: poll) : null,
+      ),
     );
-    return Note.fromJson(response["createdNote"]);
+    return response!;
   }
 
   Future<DriveFile> createDriveFile() async {

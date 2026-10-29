@@ -39,7 +39,7 @@ Map<String, dynamic> _$AntennasUpdateRequestToJson(
   'antennaId': instance.antennaId,
   'name': instance.name,
   'src': _$AntennaSourceEnumMap[instance.src]!,
-  'userListId': instance.userListId,
+  'userListId': ?instance.userListId,
   'keywords': instance.keywords,
   'excludeKeywords': instance.excludeKeywords,
   'users': instance.users,
@@ -47,10 +47,10 @@ Map<String, dynamic> _$AntennasUpdateRequestToJson(
   'caseSensitive': instance.caseSensitive,
   'withReplies': instance.withReplies,
   'withFile': instance.withFile,
-  'notify': instance.notify,
-  'localOnly': instance.localOnly,
-  'excludeBots': instance.excludeBots,
-  'excludeNotesInSensitiveChannel': instance.excludeNotesInSensitiveChannel,
+  'notify': ?instance.notify,
+  'localOnly': ?instance.localOnly,
+  'excludeBots': ?instance.excludeBots,
+  'excludeNotesInSensitiveChannel': ?instance.excludeNotesInSensitiveChannel,
 };
 
 const _$AntennaSourceEnumMap = {

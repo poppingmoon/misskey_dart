@@ -7,7 +7,7 @@ part 'i_registry_set_request.g.dart';
 @JsonSerializable()
 class const IRegistrySetRequest({
   required final String key,
-  required final dynamic value,
+  @JsonKey(includeIfNull: true) required final dynamic value,
   required final List<String> scope,
   final String? domain,
 }) with _$IRegistrySetRequest {

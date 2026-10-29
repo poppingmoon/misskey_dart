@@ -17,5 +17,5 @@ Map<String, dynamic> _$DriveFilesMoveBulkRequestToJson(
   DriveFilesMoveBulkRequest instance,
 ) => <String, dynamic>{
   'fileIds': instance.fileIds,
-  'folderId': instance.folderId,
+  'folderId': ?instance.folderId,
 };

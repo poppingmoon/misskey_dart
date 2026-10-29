@@ -42,24 +42,24 @@ Map<String, dynamic> _$NotesDraftsUpdateRequestToJson(
   NotesDraftsUpdateRequest instance,
 ) => <String, dynamic>{
   'draftId': instance.draftId,
-  'visibility': _$NoteVisibilityEnumMap[instance.visibility],
-  'visibleUserIds': instance.visibleUserIds,
-  'cw': instance.cw,
-  'hashtag': instance.hashtag,
-  'localOnly': instance.localOnly,
+  'visibility': ?_$NoteVisibilityEnumMap[instance.visibility],
+  'visibleUserIds': ?instance.visibleUserIds,
+  'cw': ?instance.cw,
+  'hashtag': ?instance.hashtag,
+  'localOnly': ?instance.localOnly,
   'reactionAcceptance':
-      _$ReactionAcceptanceEnumMap[instance.reactionAcceptance],
-  'replyId': instance.replyId,
-  'renoteId': instance.renoteId,
-  'channelId': instance.channelId,
-  'text': instance.text,
-  'fileIds': instance.fileIds,
-  'poll': instance.poll?.toJson(),
-  'scheduledAt': _$JsonConverterToJson<int, DateTime>(
+      ?_$ReactionAcceptanceEnumMap[instance.reactionAcceptance],
+  'replyId': ?instance.replyId,
+  'renoteId': ?instance.renoteId,
+  'channelId': ?instance.channelId,
+  'text': ?instance.text,
+  'fileIds': ?instance.fileIds,
+  'poll': ?instance.poll?.toJson(),
+  'scheduledAt': ?_$JsonConverterToJson<int, DateTime>(
     instance.scheduledAt,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'isActuallyScheduled': instance.isActuallyScheduled,
+  'isActuallyScheduled': ?instance.isActuallyScheduled,
 };
 
 const _$NoteVisibilityEnumMap = {

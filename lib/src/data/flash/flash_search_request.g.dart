@@ -19,9 +19,9 @@ FlashSearchRequest _$FlashSearchRequestFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$FlashSearchRequestToJson(FlashSearchRequest instance) =>
     <String, dynamic>{
       'query': instance.query,
-      'sinceId': instance.sinceId,
-      'untilId': instance.untilId,
-      'sinceDate': instance.sinceDate,
-      'untilDate': instance.untilDate,
-      'limit': instance.limit,
+      'sinceId': ?instance.sinceId,
+      'untilId': ?instance.untilId,
+      'sinceDate': ?instance.sinceDate,
+      'untilDate': ?instance.untilDate,
+      'limit': ?instance.limit,
     };

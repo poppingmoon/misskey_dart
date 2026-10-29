@@ -26,6 +26,6 @@ Map<String, dynamic> _$NotesUpdateRequestToJson(NotesUpdateRequest instance) =>
       'noteId': instance.noteId,
       'text': instance.text,
       'cw': instance.cw,
-      'fileIds': instance.fileIds,
-      'poll': instance.poll?.toJson(),
+      'fileIds': ?instance.fileIds,
+      'poll': ?instance.poll?.toJson(),
     };

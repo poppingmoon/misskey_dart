@@ -23,5 +23,5 @@ Map<String, dynamic> _$ChatRoomToJson(ChatRoom instance) => <String, dynamic>{
   'owner': instance.owner.toJson(),
   'name': instance.name,
   'description': instance.description,
-  'isMuted': instance.isMuted,
+  'isMuted': ?instance.isMuted,
 };

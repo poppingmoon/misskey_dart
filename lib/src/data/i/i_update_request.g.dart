@@ -91,58 +91,58 @@ IUpdateRequest _$IUpdateRequestFromJson(
 Map<String, dynamic> _$IUpdateRequestToJson(
   IUpdateRequest instance,
 ) => <String, dynamic>{
-  'name': instance.name,
-  'description': instance.description,
-  'followedMessage': instance.followedMessage,
-  'location': instance.location,
-  'birthday': const BirthdayConverter().toJson(instance.birthday),
-  'lang': instance.lang,
-  'avatarId': instance.avatarId,
-  'avatarDecorations': instance.avatarDecorations
+  'name': ?instance.name,
+  'description': ?instance.description,
+  'followedMessage': ?instance.followedMessage,
+  'location': ?instance.location,
+  'birthday': ?const BirthdayConverter().toJson(instance.birthday),
+  'lang': ?instance.lang,
+  'avatarId': ?instance.avatarId,
+  'avatarDecorations': ?instance.avatarDecorations
       ?.map((e) => e.toJson())
       .toList(),
-  'bannerId': instance.bannerId,
-  'fields': instance.fields?.map((e) => e.toJson()).toList(),
-  'isLocked': instance.isLocked,
-  'isExplorable': instance.isExplorable,
-  'hideOnlineStatus': instance.hideOnlineStatus,
-  'publicReactions': instance.publicReactions,
-  'carefulBot': instance.carefulBot,
-  'autoAcceptFollowed': instance.autoAcceptFollowed,
-  'noCrawle': instance.noCrawle,
-  'preventAiLearning': instance.preventAiLearning,
-  'requireSigninToViewContents': instance.requireSigninToViewContents,
-  'makeNotesFollowersOnlyBefore': _$JsonConverterToJson<int, HideBefore>(
+  'bannerId': ?instance.bannerId,
+  'fields': ?instance.fields?.map((e) => e.toJson()).toList(),
+  'isLocked': ?instance.isLocked,
+  'isExplorable': ?instance.isExplorable,
+  'hideOnlineStatus': ?instance.hideOnlineStatus,
+  'publicReactions': ?instance.publicReactions,
+  'carefulBot': ?instance.carefulBot,
+  'autoAcceptFollowed': ?instance.autoAcceptFollowed,
+  'noCrawle': ?instance.noCrawle,
+  'preventAiLearning': ?instance.preventAiLearning,
+  'requireSigninToViewContents': ?instance.requireSigninToViewContents,
+  'makeNotesFollowersOnlyBefore': ?_$JsonConverterToJson<int, HideBefore>(
     instance.makeNotesFollowersOnlyBefore,
     const HideBeforeConverter().toJson,
   ),
-  'makeNotesHiddenBefore': _$JsonConverterToJson<int, HideBefore>(
+  'makeNotesHiddenBefore': ?_$JsonConverterToJson<int, HideBefore>(
     instance.makeNotesHiddenBefore,
     const HideBeforeConverter().toJson,
   ),
-  'isBot': instance.isBot,
-  'isCat': instance.isCat,
-  'injectFeaturedNote': instance.injectFeaturedNote,
-  'receiveAnnouncementEmail': instance.receiveAnnouncementEmail,
-  'alwaysMarkNsfw': instance.alwaysMarkNsfw,
-  'autoSensitive': instance.autoSensitive,
-  'ffVisibility': _$FFVisibilityEnumMap[instance.ffVisibility],
-  'followingVisibility': _$FFVisibilityEnumMap[instance.followingVisibility],
-  'followersVisibility': _$FFVisibilityEnumMap[instance.followersVisibility],
-  'chatScope': _$ChatScopeEnumMap[instance.chatScope],
-  'pinnedPageId': instance.pinnedPageId,
-  'mutingNotificationTypes': instance.mutingNotificationTypes,
-  'mutedWords': instance.mutedWords
+  'isBot': ?instance.isBot,
+  'isCat': ?instance.isCat,
+  'injectFeaturedNote': ?instance.injectFeaturedNote,
+  'receiveAnnouncementEmail': ?instance.receiveAnnouncementEmail,
+  'alwaysMarkNsfw': ?instance.alwaysMarkNsfw,
+  'autoSensitive': ?instance.autoSensitive,
+  'ffVisibility': ?_$FFVisibilityEnumMap[instance.ffVisibility],
+  'followingVisibility': ?_$FFVisibilityEnumMap[instance.followingVisibility],
+  'followersVisibility': ?_$FFVisibilityEnumMap[instance.followersVisibility],
+  'chatScope': ?_$ChatScopeEnumMap[instance.chatScope],
+  'pinnedPageId': ?instance.pinnedPageId,
+  'mutingNotificationTypes': ?instance.mutingNotificationTypes,
+  'mutedWords': ?instance.mutedWords
       ?.map(const MuteWordsConverter().toJson)
       .toList(),
-  'hardMutedWords': instance.hardMutedWords
+  'hardMutedWords': ?instance.hardMutedWords
       ?.map(const MuteWordsConverter().toJson)
       .toList(),
-  'mutedInstances': instance.mutedInstances,
-  'notificationRecieveConfig': instance.notificationRecieveConfig?.toJson(),
-  'emailNotificationTypes': instance.emailNotificationTypes,
-  'alsoKnownAs': instance.alsoKnownAs,
-  'mutualLinkSections': instance.mutualLinkSections
+  'mutedInstances': ?instance.mutedInstances,
+  'notificationRecieveConfig': ?instance.notificationRecieveConfig?.toJson(),
+  'emailNotificationTypes': ?instance.emailNotificationTypes,
+  'alsoKnownAs': ?instance.alsoKnownAs,
+  'mutualLinkSections': ?instance.mutualLinkSections
       ?.map((e) => e.toJson())
       .toList(),
 };
@@ -185,7 +185,7 @@ Map<String, dynamic> _$IUpdateAvatarDecorationToJson(
   IUpdateAvatarDecoration instance,
 ) => <String, dynamic>{
   'id': instance.id,
-  'angle': instance.angle,
+  'angle': ?instance.angle,
   'flipH': instance.flipH,
   'offsetX': instance.offsetX,
   'offsetY': instance.offsetY,
@@ -203,7 +203,7 @@ IUpdateMutualLinkSection _$IUpdateMutualLinkSectionFromJson(
 Map<String, dynamic> _$IUpdateMutualLinkSectionToJson(
   IUpdateMutualLinkSection instance,
 ) => <String, dynamic>{
-  'name': instance.name,
+  'name': ?instance.name,
   'mutualLinks': instance.mutualLinks.map((e) => e.toJson()).toList(),
 };
 
@@ -218,5 +218,5 @@ Map<String, dynamic> _$IUpdateMutualLinkToJson(IUpdateMutualLink instance) =>
     <String, dynamic>{
       'url': instance.url,
       'fileId': instance.fileId,
-      'description': instance.description,
+      'description': ?instance.description,
     };

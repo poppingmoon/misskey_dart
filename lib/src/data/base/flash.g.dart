@@ -31,10 +31,10 @@ Map<String, dynamic> _$FlashToJson(Flash instance) => <String, dynamic>{
   'title': instance.title,
   'summary': instance.summary,
   'script': instance.script,
-  'visibility': _$FlashVisibilityEnumMap[instance.visibility],
+  'visibility': ?_$FlashVisibilityEnumMap[instance.visibility],
   'userId': instance.userId,
   'user': instance.user.toJson(),
-  'likedCount': instance.likedCount,
+  'likedCount': ?instance.likedCount,
   'isLiked': instance.isLiked,
 };
 

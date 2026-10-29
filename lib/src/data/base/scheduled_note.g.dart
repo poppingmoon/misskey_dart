@@ -35,10 +35,10 @@ Map<String, dynamic> _$ScheduledNoteToJson(
   'id': instance.id,
   'updatedAt': const DateTimeConverter().toJson(instance.updatedAt),
   'scheduledAt': const NullableDateTimeConverter().toJson(instance.scheduledAt),
-  'reason': instance.reason,
-  'channel': instance.channel?.toJson(),
-  'renote': instance.renote?.toJson(),
-  'reply': instance.reply?.toJson(),
+  'reason': ?instance.reason,
+  'channel': ?instance.channel?.toJson(),
+  'renote': ?instance.renote?.toJson(),
+  'reply': ?instance.reply?.toJson(),
   'data': instance.data.toJson(),
 };
 
@@ -57,7 +57,7 @@ ScheduledNoteNote _$ScheduledNoteNoteFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$ScheduledNoteNoteToJson(ScheduledNoteNote instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'text': instance.text,
+      'text': ?instance.text,
       'user': instance.user.toJson(),
     };
 
@@ -72,7 +72,7 @@ Map<String, dynamic> _$ScheduledNoteUserToJson(ScheduledNoteUser instance) =>
     <String, dynamic>{
       'id': instance.id,
       'username': instance.username,
-      'host': instance.host,
+      'host': ?instance.host,
     };
 
 ScheduledNoteData _$ScheduledNoteDataFromJson(Map<String, dynamic> json) =>
@@ -103,13 +103,13 @@ ScheduledNoteData _$ScheduledNoteDataFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$ScheduledNoteDataToJson(ScheduledNoteData instance) =>
     <String, dynamic>{
-      'text': instance.text,
-      'useCw': instance.useCw,
-      'cw': instance.cw,
-      'visibility': _$NoteVisibilityEnumMap[instance.visibility],
+      'text': ?instance.text,
+      'useCw': ?instance.useCw,
+      'cw': ?instance.cw,
+      'visibility': ?_$NoteVisibilityEnumMap[instance.visibility],
       'localOnly': instance.localOnly,
       'files': instance.files.map((e) => e.toJson()).toList(),
-      'poll': instance.poll?.toJson(),
+      'poll': ?instance.poll?.toJson(),
       'visibleUserIds': instance.visibleUserIds,
     };
 

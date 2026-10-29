@@ -17,7 +17,7 @@ UsersFeaturedNotesRequest _$UsersFeaturedNotesRequestFromJson(
 Map<String, dynamic> _$UsersFeaturedNotesRequestToJson(
   UsersFeaturedNotesRequest instance,
 ) => <String, dynamic>{
-  'limit': instance.limit,
-  'untilId': instance.untilId,
+  'limit': ?instance.limit,
+  'untilId': ?instance.untilId,
   'userId': instance.userId,
 };

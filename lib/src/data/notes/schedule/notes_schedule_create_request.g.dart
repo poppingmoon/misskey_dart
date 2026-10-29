@@ -50,26 +50,26 @@ NotesScheduleCreateRequest _$NotesScheduleCreateRequestFromJson(
 Map<String, dynamic> _$NotesScheduleCreateRequestToJson(
   NotesScheduleCreateRequest instance,
 ) => <String, dynamic>{
-  'visibility': _$NoteVisibilityEnumMap[instance.visibility],
-  'visibleUserIds': instance.visibleUserIds,
-  'cw': instance.cw,
+  'visibility': ?_$NoteVisibilityEnumMap[instance.visibility],
+  'visibleUserIds': ?instance.visibleUserIds,
+  'cw': ?instance.cw,
   'reactionAcceptance':
-      _$ReactionAcceptanceEnumMap[instance.reactionAcceptance],
-  'disableRightClick': instance.disableRightClick,
-  'noExtractMentions': instance.noExtractMentions,
-  'noExtractHashtags': instance.noExtractHashtags,
-  'noExtractEmojis': instance.noExtractEmojis,
-  'replyId': instance.replyId,
-  'renoteId': instance.renoteId,
-  'text': instance.text,
-  'fileIds': instance.fileIds,
-  'mediaIds': instance.mediaIds,
-  'channelId': instance.channelId,
-  'localOnly': instance.localOnly,
-  'poll': instance.poll?.toJson(),
-  'event': instance.event,
+      ?_$ReactionAcceptanceEnumMap[instance.reactionAcceptance],
+  'disableRightClick': ?instance.disableRightClick,
+  'noExtractMentions': ?instance.noExtractMentions,
+  'noExtractHashtags': ?instance.noExtractHashtags,
+  'noExtractEmojis': ?instance.noExtractEmojis,
+  'replyId': ?instance.replyId,
+  'renoteId': ?instance.renoteId,
+  'text': ?instance.text,
+  'fileIds': ?instance.fileIds,
+  'mediaIds': ?instance.mediaIds,
+  'channelId': ?instance.channelId,
+  'localOnly': ?instance.localOnly,
+  'poll': ?instance.poll?.toJson(),
+  'event': ?instance.event,
   'scheduleNote': instance.scheduleNote.toJson(),
-  'scheduledDelete': instance.scheduledDelete?.toJson(),
+  'scheduledDelete': ?instance.scheduledDelete?.toJson(),
 };
 
 const _$NoteVisibilityEnumMap = {
@@ -113,11 +113,11 @@ ScheduledDelete _$ScheduledDeleteFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$ScheduledDeleteToJson(ScheduledDelete instance) =>
     <String, dynamic>{
-      'deleteAt': _$JsonConverterToJson<int, DateTime>(
+      'deleteAt': ?_$JsonConverterToJson<int, DateTime>(
         instance.deleteAt,
         const EpocTimeDateTimeConverter().toJson,
       ),
-      'deleteAfter': _$JsonConverterToJson<int, Duration>(
+      'deleteAfter': ?_$JsonConverterToJson<int, Duration>(
         instance.deleteAfter,
         const DurationConverter().toJson,
       ),

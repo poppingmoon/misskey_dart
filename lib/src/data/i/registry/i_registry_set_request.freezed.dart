@@ -52,7 +52,7 @@ abstract mixin class $IRegistrySetRequestCopyWith<$Res>  {
   factory $IRegistrySetRequestCopyWith(IRegistrySetRequest value, $Res Function(IRegistrySetRequest) _then) = _$IRegistrySetRequestCopyWithImpl;
 @useResult
 $Res call({
- String key, dynamic value, List<String> scope, String? domain
+ String key,@JsonKey(includeIfNull: true) dynamic value, List<String> scope, String? domain
 });
 
 

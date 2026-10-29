@@ -28,18 +28,18 @@ Map<String, dynamic> _$ChannelsSearchRequestToJson(
   ChannelsSearchRequest instance,
 ) => <String, dynamic>{
   'query': instance.query,
-  'type': _$ChannelSearchTypeEnumMap[instance.type],
-  'sinceId': instance.sinceId,
-  'untilId': instance.untilId,
-  'sinceDate': _$JsonConverterToJson<int, DateTime>(
+  'type': ?_$ChannelSearchTypeEnumMap[instance.type],
+  'sinceId': ?instance.sinceId,
+  'untilId': ?instance.untilId,
+  'sinceDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.sinceDate,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'untilDate': _$JsonConverterToJson<int, DateTime>(
+  'untilDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.untilDate,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'limit': instance.limit,
+  'limit': ?instance.limit,
 };
 
 const _$ChannelSearchTypeEnumMap = {

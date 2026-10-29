@@ -29,16 +29,16 @@ Map<String, dynamic> _$NotesReactionsRequestToJson(
   NotesReactionsRequest instance,
 ) => <String, dynamic>{
   'noteId': instance.noteId,
-  'type': instance.type,
-  'limit': instance.limit,
-  'offset': instance.offset,
-  'sinceId': instance.sinceId,
-  'untilId': instance.untilId,
-  'sinceDate': _$JsonConverterToJson<int, DateTime>(
+  'type': ?instance.type,
+  'limit': ?instance.limit,
+  'offset': ?instance.offset,
+  'sinceId': ?instance.sinceId,
+  'untilId': ?instance.untilId,
+  'sinceDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.sinceDate,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'untilDate': _$JsonConverterToJson<int, DateTime>(
+  'untilDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.untilDate,
     const EpocTimeDateTimeConverter().toJson,
   ),

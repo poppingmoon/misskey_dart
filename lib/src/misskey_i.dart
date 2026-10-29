@@ -192,10 +192,6 @@ class const MisskeyIRegistry({required final ApiService _apiService}) {
 
   /// 指定したキーに値を設定します。
   Future<void> set(IRegistrySetRequest request) async {
-    await _apiService.post(
-      "i/registry/set",
-      request.toJson(),
-      excludeRemoveNullPredicate: (key, _) => key == "value",
-    );
+    await _apiService.post("i/registry/set", request.toJson());
   }
 }

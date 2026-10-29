@@ -17,5 +17,5 @@ Map<String, dynamic> _$FollowingCreateRequestToJson(
   FollowingCreateRequest instance,
 ) => <String, dynamic>{
   'userId': instance.userId,
-  'withReplies': instance.withReplies,
+  'withReplies': ?instance.withReplies,
 };

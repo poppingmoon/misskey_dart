@@ -33,23 +33,23 @@ NotesLocalTimelineRequest _$NotesLocalTimelineRequestFromJson(
 Map<String, dynamic> _$NotesLocalTimelineRequestToJson(
   NotesLocalTimelineRequest instance,
 ) => <String, dynamic>{
-  'withFiles': instance.withFiles,
-  'withRenotes': instance.withRenotes,
-  'withReplies': instance.withReplies,
-  'fileType': instance.fileType,
-  'excludeNsfw': instance.excludeNsfw,
-  'limit': instance.limit,
-  'sinceId': instance.sinceId,
-  'untilId': instance.untilId,
-  'sinceDate': _$JsonConverterToJson<int, DateTime>(
+  'withFiles': ?instance.withFiles,
+  'withRenotes': ?instance.withRenotes,
+  'withReplies': ?instance.withReplies,
+  'fileType': ?instance.fileType,
+  'excludeNsfw': ?instance.excludeNsfw,
+  'limit': ?instance.limit,
+  'sinceId': ?instance.sinceId,
+  'untilId': ?instance.untilId,
+  'sinceDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.sinceDate,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'untilDate': _$JsonConverterToJson<int, DateTime>(
+  'untilDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.untilDate,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'allowPartial': instance.allowPartial,
+  'allowPartial': ?instance.allowPartial,
 };
 
 Value? _$JsonConverterFromJson<Json, Value>(

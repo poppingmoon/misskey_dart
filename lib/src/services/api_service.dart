@@ -14,19 +14,10 @@ class ApiService({final String? token, required final Uri apiUrl, Dio? dio}) {
     )
     ..interceptors.add(LogInterceptor(requestBody: true, responseBody: true));
 
-  Future<T> post<T>(
-    String path,
-    Map<String, dynamic> request, {
-    bool Function(String key, String? value)? excludeRemoveNullPredicate,
-  }) async {
-    request
-      ..addEntries([MapEntry("i", token)])
-      ..removeWhere(
-        (key, value) =>
-            value == null &&
-            (excludeRemoveNullPredicate == null ||
-                !excludeRemoveNullPredicate.call(key, value)),
-      );
+  Future<T> post<T>(String path, Map<String, dynamic> request) async {
+    if (token != null) {
+      request["i"] = token;
+    }
     try {
       final response = await dio.request(path, data: request);
       return response.data;
@@ -49,18 +40,13 @@ class ApiService({final String? token, required final Uri apiUrl, Dio? dio}) {
     Map<String, dynamic> request,
     File file,
   ) async {
-    request
-      ..addEntries([MapEntry("i", token)])
-      ..addEntries([
-        MapEntry(
-          "file",
-          await MultipartFile.fromFile(
-            file.path,
-            filename: file.path.split(Platform.pathSeparator).last,
-          ),
-        ),
-      ])
-      ..removeWhere((key, value) => value == null);
+    if (token != null) {
+      request["i"] = token;
+    }
+    request["file"] = await MultipartFile.fromFile(
+      file.path,
+      filename: file.path.split(Platform.pathSeparator).last,
+    );
     try {
       final response = await dio.request(
         path,
@@ -88,15 +74,10 @@ class ApiService({final String? token, required final Uri apiUrl, Dio? dio}) {
     Uint8List binaryData, {
     String? fileName,
   }) async {
-    request
-      ..addEntries([MapEntry("i", token)])
-      ..addEntries([
-        MapEntry(
-          "file",
-          MultipartFile.fromBytes(binaryData, filename: fileName),
-        ),
-      ])
-      ..removeWhere((key, value) => value == null);
+    if (token != null) {
+      request["i"] = token;
+    }
+    request["file"] = MultipartFile.fromBytes(binaryData, filename: fileName);
     try {
       final response = await dio.request(
         path,

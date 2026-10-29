@@ -24,10 +24,10 @@ Map<String, dynamic> _$ChannelsUpdateRequestToJson(
   ChannelsUpdateRequest instance,
 ) => <String, dynamic>{
   'channelId': instance.channelId,
-  'name': instance.name,
-  'description': instance.description,
-  'bannerId': instance.bannerId,
-  'isArchived': instance.isArchived,
-  'pinnedNoteIds': instance.pinnedNoteIds,
-  'color': instance.color,
+  'name': ?instance.name,
+  'description': ?instance.description,
+  'bannerId': ?instance.bannerId,
+  'isArchived': ?instance.isArchived,
+  'pinnedNoteIds': ?instance.pinnedNoteIds,
+  'color': ?instance.color,
 };

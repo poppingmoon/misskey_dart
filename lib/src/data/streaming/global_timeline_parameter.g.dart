@@ -16,6 +16,6 @@ GlobalTimelineParameter _$GlobalTimelineParameterFromJson(
 Map<String, dynamic> _$GlobalTimelineParameterToJson(
   GlobalTimelineParameter instance,
 ) => <String, dynamic>{
-  'withRenotes': instance.withRenotes,
-  'withFiles': instance.withFiles,
+  'withRenotes': ?instance.withRenotes,
+  'withFiles': ?instance.withFiles,
 };

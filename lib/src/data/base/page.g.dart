@@ -50,20 +50,20 @@ Map<String, dynamic> _$PageToJson(Page instance) => <String, dynamic>{
   'userId': instance.userId,
   'user': instance.user.toJson(),
   'content': instance.content.map(const PageContentConverter().toJson).toList(),
-  'variables': instance.variables,
+  'variables': ?instance.variables,
   'title': instance.title,
   'name': instance.name,
-  'summary': instance.summary,
-  'hideTitleWhenPinned': instance.hideTitleWhenPinned,
-  'alignCenter': instance.alignCenter,
-  'font': instance.font,
-  'script': instance.script,
-  'eyeCatchingImageId': instance.eyeCatchingImageId,
-  'eyeCatchingImage': instance.eyeCatchingImage?.toJson(),
-  'attachedFiles': instance.attachedFiles?.map((e) => e.toJson()).toList(),
-  'likedCount': instance.likedCount,
-  'isLiked': instance.isLiked,
-  'visibility': _$PageVisibilityEnumMap[instance.visibility],
+  'summary': ?instance.summary,
+  'hideTitleWhenPinned': ?instance.hideTitleWhenPinned,
+  'alignCenter': ?instance.alignCenter,
+  'font': ?instance.font,
+  'script': ?instance.script,
+  'eyeCatchingImageId': ?instance.eyeCatchingImageId,
+  'eyeCatchingImage': ?instance.eyeCatchingImage?.toJson(),
+  'attachedFiles': ?instance.attachedFiles?.map((e) => e.toJson()).toList(),
+  'likedCount': ?instance.likedCount,
+  'isLiked': ?instance.isLiked,
+  'visibility': ?_$PageVisibilityEnumMap[instance.visibility],
 };
 
 const _$PageVisibilityEnumMap = {
@@ -80,9 +80,9 @@ PageText _$PageTextFromJson(Map<String, dynamic> json) => PageText(
 );
 
 Map<String, dynamic> _$PageTextToJson(PageText instance) => <String, dynamic>{
-  'id': instance.id,
-  'type': _$PageContentTypeEnumMap[instance.type],
-  'text': instance.text,
+  'id': ?instance.id,
+  'type': ?_$PageContentTypeEnumMap[instance.type],
+  'text': ?instance.text,
 };
 
 const _$PageContentTypeEnumMap = {
@@ -118,10 +118,10 @@ PageSection _$PageSectionFromJson(Map<String, dynamic> json) => PageSection(
 
 Map<String, dynamic> _$PageSectionToJson(PageSection instance) =>
     <String, dynamic>{
-      'id': instance.id,
-      'type': _$PageContentTypeEnumMap[instance.type],
-      'title': instance.title,
-      'children': instance.children
+      'id': ?instance.id,
+      'type': ?_$PageContentTypeEnumMap[instance.type],
+      'title': ?instance.title,
+      'children': ?instance.children
           ?.map(const PageContentConverter().toJson)
           .toList(),
     };
@@ -135,9 +135,9 @@ PageImage _$PageImageFromJson(Map<String, dynamic> json) => PageImage(
 );
 
 Map<String, dynamic> _$PageImageToJson(PageImage instance) => <String, dynamic>{
-  'id': instance.id,
-  'type': _$PageContentTypeEnumMap[instance.type],
-  'fileId': instance.fileId,
+  'id': ?instance.id,
+  'type': ?_$PageContentTypeEnumMap[instance.type],
+  'fileId': ?instance.fileId,
 };
 
 PageNote _$PageNoteFromJson(Map<String, dynamic> json) => PageNote(
@@ -150,10 +150,10 @@ PageNote _$PageNoteFromJson(Map<String, dynamic> json) => PageNote(
 );
 
 Map<String, dynamic> _$PageNoteToJson(PageNote instance) => <String, dynamic>{
-  'id': instance.id,
-  'type': _$PageContentTypeEnumMap[instance.type],
-  'note': instance.note,
-  'detailed': instance.detailed,
+  'id': ?instance.id,
+  'type': ?_$PageContentTypeEnumMap[instance.type],
+  'note': ?instance.note,
+  'detailed': ?instance.detailed,
 };
 
 PageUnknown _$PageUnknownFromJson(Map<String, dynamic> json) => PageUnknown(

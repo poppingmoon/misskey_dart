@@ -33,23 +33,23 @@ Map<String, dynamic> _$UserListTimelineRequestToJson(
   UserListTimelineRequest instance,
 ) => <String, dynamic>{
   'listId': instance.listId,
-  'limit': instance.limit,
-  'sinceId': instance.sinceId,
-  'untilId': instance.untilId,
-  'sinceDate': _$JsonConverterToJson<int, DateTime>(
+  'limit': ?instance.limit,
+  'sinceId': ?instance.sinceId,
+  'untilId': ?instance.untilId,
+  'sinceDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.sinceDate,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'untilDate': _$JsonConverterToJson<int, DateTime>(
+  'untilDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.untilDate,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'includeMyRenotes': instance.includeMyRenotes,
-  'includeRenotedMyNotes': instance.includeRenotedMyNotes,
-  'includeLocalRenotes': instance.includeLocalRenotes,
-  'withRenotes': instance.withRenotes,
-  'withFiles': instance.withFiles,
-  'allowPartial': instance.allowPartial,
+  'includeMyRenotes': ?instance.includeMyRenotes,
+  'includeRenotedMyNotes': ?instance.includeRenotedMyNotes,
+  'includeLocalRenotes': ?instance.includeLocalRenotes,
+  'withRenotes': ?instance.withRenotes,
+  'withFiles': ?instance.withFiles,
+  'allowPartial': ?instance.allowPartial,
 };
 
 Value? _$JsonConverterFromJson<Json, Value>(

@@ -30,7 +30,7 @@ class const StreamingRequestBody({
   /// Map とは限らない。リバーシの `ready` は真偽値をそのまま送る
   /// （サーバーは `typeof body !== 'boolean'` で弾く）ので、Map に
   /// 縛ると送れなくなる。
-  final Object? body,
+  @JsonKey(includeIfNull: true) final Object? body,
 }) with _$StreamingRequestBody {
   factory fromJson(Map<String, Object?> json) =>
       _$StreamingRequestBodyFromJson(json);

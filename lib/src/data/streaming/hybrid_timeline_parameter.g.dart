@@ -17,7 +17,7 @@ HybridTimelineParameter _$HybridTimelineParameterFromJson(
 Map<String, dynamic> _$HybridTimelineParameterToJson(
   HybridTimelineParameter instance,
 ) => <String, dynamic>{
-  'withRenotes': instance.withRenotes,
-  'withReplies': instance.withReplies,
-  'withFiles': instance.withFiles,
+  'withRenotes': ?instance.withRenotes,
+  'withReplies': ?instance.withReplies,
+  'withFiles': ?instance.withFiles,
 };

@@ -17,5 +17,5 @@ Map<String, dynamic> _$NotesStateResponseToJson(NotesStateResponse instance) =>
     <String, dynamic>{
       'isFavorited': instance.isFavorited,
       'isMutedThread': instance.isMutedThread,
-      'isWatching': instance.isWatching,
+      'isWatching': ?instance.isWatching,
     };

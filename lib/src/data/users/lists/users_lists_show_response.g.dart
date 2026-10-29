@@ -25,7 +25,7 @@ Map<String, dynamic> _$UsersListsShowResponseToJson(
   'createdAt': const DateTimeConverter().toJson(instance.createdAt),
   'name': instance.name,
   'userIds': instance.userIds,
-  'isPublic': instance.isPublic,
-  'likedCount': instance.likedCount,
-  'isLiked': instance.isLiked,
+  'isPublic': ?instance.isPublic,
+  'likedCount': ?instance.likedCount,
+  'isLiked': ?instance.isLiked,
 };

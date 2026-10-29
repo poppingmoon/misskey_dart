@@ -21,8 +21,8 @@ SwRegisterResponse _$SwRegisterResponseFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$SwRegisterResponseToJson(SwRegisterResponse instance) =>
     <String, dynamic>{
-      'state': _$SwRegisterResponseStateEnumMap[instance.state],
-      'key': instance.key,
+      'state': ?_$SwRegisterResponseStateEnumMap[instance.state],
+      'key': ?instance.key,
       'userId': instance.userId,
       'endpoint': instance.endpoint,
       'sendReadMessage': instance.sendReadMessage,

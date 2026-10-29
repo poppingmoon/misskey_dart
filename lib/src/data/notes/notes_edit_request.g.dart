@@ -31,16 +31,16 @@ NotesEditRequest _$NotesEditRequestFromJson(
 Map<String, dynamic> _$NotesEditRequestToJson(NotesEditRequest instance) =>
     <String, dynamic>{
       'editId': instance.editId,
-      'visibility': _$NoteVisibilityEnumMap[instance.visibility],
-      'visibleUserIds': instance.visibleUserIds,
+      'visibility': ?_$NoteVisibilityEnumMap[instance.visibility],
+      'visibleUserIds': ?instance.visibleUserIds,
       'text': instance.text,
       'cw': instance.cw,
-      'localOnly': instance.localOnly,
-      'fileIds': instance.fileIds,
-      'replyId': instance.replyId,
-      'renoteId': instance.renoteId,
-      'channelId': instance.channelId,
-      'poll': instance.poll?.toJson(),
+      'localOnly': ?instance.localOnly,
+      'fileIds': ?instance.fileIds,
+      'replyId': ?instance.replyId,
+      'renoteId': ?instance.renoteId,
+      'channelId': ?instance.channelId,
+      'poll': ?instance.poll?.toJson(),
     };
 
 const _$NoteVisibilityEnumMap = {

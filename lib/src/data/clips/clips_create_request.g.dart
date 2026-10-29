@@ -16,6 +16,6 @@ ClipsCreateRequest _$ClipsCreateRequestFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$ClipsCreateRequestToJson(ClipsCreateRequest instance) =>
     <String, dynamic>{
       'name': instance.name,
-      'isPublic': instance.isPublic,
-      'description': instance.description,
+      'isPublic': ?instance.isPublic,
+      'description': ?instance.description,
     };

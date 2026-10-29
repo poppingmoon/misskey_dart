@@ -27,19 +27,19 @@ NotesRequest _$NotesRequestFromJson(Map<String, dynamic> json) => NotesRequest(
 
 Map<String, dynamic> _$NotesRequestToJson(NotesRequest instance) =>
     <String, dynamic>{
-      'local': instance.local,
-      'reply': instance.reply,
-      'renote': instance.renote,
-      'withFiles': instance.withFiles,
-      'poll': instance.poll,
-      'limit': instance.limit,
-      'sinceId': instance.sinceId,
-      'untilId': instance.untilId,
-      'sinceDate': _$JsonConverterToJson<int, DateTime>(
+      'local': ?instance.local,
+      'reply': ?instance.reply,
+      'renote': ?instance.renote,
+      'withFiles': ?instance.withFiles,
+      'poll': ?instance.poll,
+      'limit': ?instance.limit,
+      'sinceId': ?instance.sinceId,
+      'untilId': ?instance.untilId,
+      'sinceDate': ?_$JsonConverterToJson<int, DateTime>(
         instance.sinceDate,
         const EpocTimeDateTimeConverter().toJson,
       ),
-      'untilDate': _$JsonConverterToJson<int, DateTime>(
+      'untilDate': ?_$JsonConverterToJson<int, DateTime>(
         instance.untilDate,
         const EpocTimeDateTimeConverter().toJson,
       ),

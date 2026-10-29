@@ -19,7 +19,7 @@ Map<String, dynamic> _$ChannelsCreateRequestToJson(
   ChannelsCreateRequest instance,
 ) => <String, dynamic>{
   'name': instance.name,
-  'description': instance.description,
-  'bannerId': instance.bannerId,
-  'color': instance.color,
+  'description': ?instance.description,
+  'bannerId': ?instance.bannerId,
+  'color': ?instance.color,
 };

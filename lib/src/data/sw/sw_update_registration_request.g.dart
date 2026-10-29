@@ -17,5 +17,5 @@ Map<String, dynamic> _$SwUpdateRegistrationRequestToJson(
   SwUpdateRegistrationRequest instance,
 ) => <String, dynamic>{
   'endpoint': instance.endpoint,
-  'sendReadMessage': instance.sendReadMessage,
+  'sendReadMessage': ?instance.sendReadMessage,
 };

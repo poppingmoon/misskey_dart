@@ -8,8 +8,8 @@ part 'notes_update_request.g.dart';
 @JsonSerializable()
 class const NotesUpdateRequest({
   required final String noteId,
-  final String? text,
-  final String? cw,
+  @JsonKey(includeIfNull: true) final String? text,
+  @JsonKey(includeIfNull: true) final String? cw,
   final List<String>? fileIds,
   final NotesCreatePollRequest? poll,
 }) with _$NotesUpdateRequest {

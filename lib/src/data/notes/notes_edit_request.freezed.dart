@@ -52,7 +52,7 @@ abstract mixin class $NotesEditRequestCopyWith<$Res>  {
   factory $NotesEditRequestCopyWith(NotesEditRequest value, $Res Function(NotesEditRequest) _then) = _$NotesEditRequestCopyWithImpl;
 @useResult
 $Res call({
- String editId, NoteVisibility? visibility, List<String>? visibleUserIds, String? text, String? cw, bool? localOnly, List<String>? fileIds, String? replyId, String? renoteId, String? channelId, NotesCreatePollRequest? poll
+ String editId, NoteVisibility? visibility, List<String>? visibleUserIds,@JsonKey(includeIfNull: true) String? text,@JsonKey(includeIfNull: true) String? cw, bool? localOnly, List<String>? fileIds, String? replyId, String? renoteId, String? channelId, NotesCreatePollRequest? poll
 });
 
 

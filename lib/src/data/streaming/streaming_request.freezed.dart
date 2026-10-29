@@ -130,7 +130,7 @@ abstract mixin class $StreamingRequestBodyCopyWith<$Res>  {
   factory $StreamingRequestBodyCopyWith(StreamingRequestBody value, $Res Function(StreamingRequestBody) _then) = _$StreamingRequestBodyCopyWithImpl;
 @useResult
 $Res call({
-@ChannelJsonConverter() Channel? channel, String id, Map<String, dynamic>? params, String? type, Object? body
+@ChannelJsonConverter() Channel? channel, String id, Map<String, dynamic>? params, String? type,@JsonKey(includeIfNull: true) Object? body
 });
 
 

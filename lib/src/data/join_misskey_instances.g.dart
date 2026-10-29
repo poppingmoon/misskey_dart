@@ -21,8 +21,8 @@ JoinMisskeyInstances _$JoinMisskeyInstancesFromJson(
 Map<String, dynamic> _$JoinMisskeyInstancesToJson(
   JoinMisskeyInstances instance,
 ) => <String, dynamic>{
-  'date': instance.date?.toIso8601String(),
-  'stats': instance.stats?.toJson(),
+  'date': ?instance.date?.toIso8601String(),
+  'stats': ?instance.stats?.toJson(),
   'instancesInfos': instance.instancesInfos.map((e) => e.toJson()).toList(),
 };
 
@@ -39,13 +39,13 @@ JoinMisskeyStats _$JoinMisskeyStatsFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$JoinMisskeyStatsToJson(JoinMisskeyStats instance) =>
     <String, dynamic>{
-      'notesCount': instance.notesCount,
-      'usersCount': instance.usersCount,
-      'mau': instance.mau,
-      'npd15': instance.npd15,
-      'druYesterday': instance.druYesterday,
-      'dru15': instance.dru15,
-      'instancesCount': instance.instancesCount,
+      'notesCount': ?instance.notesCount,
+      'usersCount': ?instance.usersCount,
+      'mau': ?instance.mau,
+      'npd15': ?instance.npd15,
+      'druYesterday': ?instance.druYesterday,
+      'dru15': ?instance.dru15,
+      'instancesCount': ?instance.instancesCount,
     };
 
 JoinMisskeyInstanceInfo _$JoinMisskeyInstanceInfoFromJson(
@@ -77,17 +77,17 @@ Map<String, dynamic> _$JoinMisskeyInstanceInfoToJson(
   'url': instance.url,
   'name': instance.name,
   'langs': instance.langs,
-  'description': instance.description,
-  'isAlive': instance.isAlive,
-  'value': instance.value,
+  'description': ?instance.description,
+  'isAlive': ?instance.isAlive,
+  'value': ?instance.value,
   'banner': instance.banner,
   'background': instance.background,
   'icon': instance.icon,
-  'nodeinfo': instance.nodeInfo?.toJson(),
-  'meta': instance.meta,
-  'npd15': instance.npd15,
-  'druYesterday': instance.druYesterday,
-  'dru15': instance.dru15,
+  'nodeinfo': ?instance.nodeInfo?.toJson(),
+  'meta': ?instance.meta,
+  'npd15': ?instance.npd15,
+  'druYesterday': ?instance.druYesterday,
+  'dru15': ?instance.dru15,
 };
 
 JoinMisskeyNodeInfo _$JoinMisskeyNodeInfoFromJson(Map<String, dynamic> json) =>
@@ -108,9 +108,9 @@ JoinMisskeyNodeInfo _$JoinMisskeyNodeInfoFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$JoinMisskeyNodeInfoToJson(
   JoinMisskeyNodeInfo instance,
 ) => <String, dynamic>{
-  'version': instance.version,
-  'software': instance.software?.toJson(),
-  'usage': instance.usage?.toJson(),
+  'version': ?instance.version,
+  'software': ?instance.software?.toJson(),
+  'usage': ?instance.usage?.toJson(),
 };
 
 JoinMisskeyNodeInfoSoftware _$JoinMisskeyNodeInfoSoftwareFromJson(
@@ -122,7 +122,7 @@ JoinMisskeyNodeInfoSoftware _$JoinMisskeyNodeInfoSoftwareFromJson(
 
 Map<String, dynamic> _$JoinMisskeyNodeInfoSoftwareToJson(
   JoinMisskeyNodeInfoSoftware instance,
-) => <String, dynamic>{'name': instance.name, 'version': instance.version};
+) => <String, dynamic>{'name': ?instance.name, 'version': ?instance.version};
 
 JoinMisskeyNodeInfoUsage _$JoinMisskeyNodeInfoUsageFromJson(
   Map<String, dynamic> json,
@@ -139,9 +139,9 @@ JoinMisskeyNodeInfoUsage _$JoinMisskeyNodeInfoUsageFromJson(
 Map<String, dynamic> _$JoinMisskeyNodeInfoUsageToJson(
   JoinMisskeyNodeInfoUsage instance,
 ) => <String, dynamic>{
-  'users': instance.users?.toJson(),
-  'localPosts': instance.localPosts,
-  'localComments': instance.localComments,
+  'users': ?instance.users?.toJson(),
+  'localPosts': ?instance.localPosts,
+  'localComments': ?instance.localComments,
 };
 
 JoinMisskeyNodeInfoUsageUsers _$JoinMisskeyNodeInfoUsageUsersFromJson(
@@ -150,4 +150,4 @@ JoinMisskeyNodeInfoUsageUsers _$JoinMisskeyNodeInfoUsageUsersFromJson(
 
 Map<String, dynamic> _$JoinMisskeyNodeInfoUsageUsersToJson(
   JoinMisskeyNodeInfoUsageUsers instance,
-) => <String, dynamic>{'total': instance.total};
+) => <String, dynamic>{'total': ?instance.total};

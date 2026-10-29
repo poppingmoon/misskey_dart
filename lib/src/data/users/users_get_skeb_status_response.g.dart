@@ -43,7 +43,7 @@ SkebStatusSkill _$SkebStatusSkillFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$SkebStatusSkillToJson(SkebStatusSkill instance) =>
     <String, dynamic>{
       'amount': instance.amount,
-      'genre': _$SkebStatusSkillGenreEnumMap[instance.genre],
+      'genre': ?_$SkebStatusSkillGenreEnumMap[instance.genre],
     };
 
 const _$SkebStatusSkillGenreEnumMap = {

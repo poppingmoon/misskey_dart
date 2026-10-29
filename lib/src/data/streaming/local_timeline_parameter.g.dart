@@ -17,7 +17,7 @@ LocalTimelineParameter _$LocalTimelineParameterFromJson(
 Map<String, dynamic> _$LocalTimelineParameterToJson(
   LocalTimelineParameter instance,
 ) => <String, dynamic>{
-  'withRenotes': instance.withRenotes,
-  'withReplies': instance.withReplies,
-  'withFiles': instance.withFiles,
+  'withRenotes': ?instance.withRenotes,
+  'withReplies': ?instance.withReplies,
+  'withFiles': ?instance.withFiles,
 };

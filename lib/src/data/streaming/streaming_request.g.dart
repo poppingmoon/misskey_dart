@@ -46,13 +46,13 @@ StreamingRequestBody _$StreamingRequestBodyFromJson(
 Map<String, dynamic> _$StreamingRequestBodyToJson(
   StreamingRequestBody instance,
 ) => <String, dynamic>{
-  'channel': _$JsonConverterToJson<String, Channel>(
+  'channel': ?_$JsonConverterToJson<String, Channel>(
     instance.channel,
     const ChannelJsonConverter().toJson,
   ),
   'id': instance.id,
-  'params': instance.params,
-  'type': instance.type,
+  'params': ?instance.params,
+  'type': ?instance.type,
   'body': instance.body,
 };
 

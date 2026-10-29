@@ -20,7 +20,7 @@ NoteUpdatedEvent _$NoteUpdatedEventFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$NoteUpdatedEventToJson(NoteUpdatedEvent instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'type': _$NoteUpdatedEventTypeEnumMap[instance.type],
+      'type': ?_$NoteUpdatedEventTypeEnumMap[instance.type],
       'body': instance.body,
     };
 

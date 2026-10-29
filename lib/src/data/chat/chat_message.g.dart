@@ -38,16 +38,16 @@ Map<String, dynamic> _$ChatMessageToJson(ChatMessage instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdAt': const DateTimeConverter().toJson(instance.createdAt),
-      'text': instance.text,
+      'text': ?instance.text,
       'fromUserId': instance.fromUserId,
-      'fromUser': instance.fromUser?.toJson(),
-      'toUserId': instance.toUserId,
-      'toUser': instance.toUser?.toJson(),
-      'toRoomId': instance.toRoomId,
-      'toRoom': instance.toRoom?.toJson(),
-      'fileId': instance.fileId,
-      'file': instance.file?.toJson(),
-      'isRead': instance.isRead,
+      'fromUser': ?instance.fromUser?.toJson(),
+      'toUserId': ?instance.toUserId,
+      'toUser': ?instance.toUser?.toJson(),
+      'toRoomId': ?instance.toRoomId,
+      'toRoom': ?instance.toRoom?.toJson(),
+      'fileId': ?instance.fileId,
+      'file': ?instance.file?.toJson(),
+      'isRead': ?instance.isRead,
       'reactions': instance.reactions.map((e) => e.toJson()).toList(),
     };
 
@@ -63,5 +63,5 @@ Map<String, dynamic> _$ChatMessageReactionToJson(
   ChatMessageReaction instance,
 ) => <String, dynamic>{
   'reaction': instance.reaction,
-  'user': instance.user?.toJson(),
+  'user': ?instance.user?.toJson(),
 };

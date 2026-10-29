@@ -18,6 +18,6 @@ Map<String, dynamic> _$DriveFoldersUpdateRequestToJson(
   DriveFoldersUpdateRequest instance,
 ) => <String, dynamic>{
   'folderId': instance.folderId,
-  'name': instance.name,
-  'parentId': instance.parentId,
+  'name': ?instance.name,
+  'parentId': ?instance.parentId,
 };

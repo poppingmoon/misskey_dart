@@ -20,10 +20,10 @@ Map<String, dynamic> _$HashtagsUsersRequestToJson(
   HashtagsUsersRequest instance,
 ) => <String, dynamic>{
   'tag': instance.tag,
-  'limit': instance.limit,
+  'limit': ?instance.limit,
   'sort': const UsersSortConverter().toJson(instance.sort),
-  'state': _$UsersStateEnumMap[instance.state],
-  'origin': _$OriginEnumMap[instance.origin],
+  'state': ?_$UsersStateEnumMap[instance.state],
+  'origin': ?_$OriginEnumMap[instance.origin],
 };
 
 const _$UsersStateEnumMap = {UsersState.all: 'all', UsersState.alive: 'alive'};

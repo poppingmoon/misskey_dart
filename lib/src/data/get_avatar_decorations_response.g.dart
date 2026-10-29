@@ -27,8 +27,8 @@ Map<String, dynamic> _$GetAvatarDecorationsResponseToJson(
   'id': instance.id,
   'name': instance.name,
   'description': instance.description,
-  'url': const NullableUriConverter().toJson(instance.url),
+  'url': ?const NullableUriConverter().toJson(instance.url),
   'roleIdsThatCanBeUsedThisDecoration':
       instance.roleIdsThatCanBeUsedThisDecoration,
-  'category': instance.category,
+  'category': ?instance.category,
 };

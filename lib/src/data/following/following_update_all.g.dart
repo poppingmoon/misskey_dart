@@ -19,8 +19,8 @@ FollowingUpdateAllRequest _$FollowingUpdateAllRequestFromJson(
 Map<String, dynamic> _$FollowingUpdateAllRequestToJson(
   FollowingUpdateAllRequest instance,
 ) => <String, dynamic>{
-  'notify': _$FollowingUpdateAllNotifyTypeEnumMap[instance.notify],
-  'withReplies': instance.withReplies,
+  'notify': ?_$FollowingUpdateAllNotifyTypeEnumMap[instance.notify],
+  'withReplies': ?instance.withReplies,
 };
 
 const _$FollowingUpdateAllNotifyTypeEnumMap = {

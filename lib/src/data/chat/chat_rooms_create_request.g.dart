@@ -17,5 +17,5 @@ Map<String, dynamic> _$ChatRoomsCreateRequestToJson(
   ChatRoomsCreateRequest instance,
 ) => <String, dynamic>{
   'name': instance.name,
-  'description': instance.description,
+  'description': ?instance.description,
 };

@@ -15,4 +15,4 @@ NotesScheduledListRequest _$NotesScheduledListRequestFromJson(
 
 Map<String, dynamic> _$NotesScheduledListRequestToJson(
   NotesScheduledListRequest instance,
-) => <String, dynamic>{'limit': instance.limit, 'offset': instance.offset};
+) => <String, dynamic>{'limit': ?instance.limit, 'offset': ?instance.offset};

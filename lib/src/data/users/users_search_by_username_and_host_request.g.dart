@@ -18,8 +18,8 @@ _$UsersSearchByUsernameAndHostRequestFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$UsersSearchByUsernameAndHostRequestToJson(
   UsersSearchByUsernameAndHostRequest instance,
 ) => <String, dynamic>{
-  'limit': instance.limit,
-  'detail': instance.detail,
-  'username': instance.username,
-  'host': instance.host,
+  'limit': ?instance.limit,
+  'detail': ?instance.detail,
+  'username': ?instance.username,
+  'host': ?instance.host,
 };

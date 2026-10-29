@@ -39,15 +39,15 @@ Map<String, dynamic> _$DriveFileToJson(DriveFile instance) => <String, dynamic>{
   'md5': instance.md5,
   'size': instance.size,
   'isSensitive': instance.isSensitive,
-  'blurhash': instance.blurhash,
+  'blurhash': ?instance.blurhash,
   'properties': instance.properties.toJson(),
   'url': instance.url,
-  'thumbnailUrl': instance.thumbnailUrl,
-  'comment': instance.comment,
-  'folderId': instance.folderId,
-  'folder': instance.folder?.toJson(),
-  'userId': instance.userId,
-  'user': instance.user?.toJson(),
+  'thumbnailUrl': ?instance.thumbnailUrl,
+  'comment': ?instance.comment,
+  'folderId': ?instance.folderId,
+  'folder': ?instance.folder?.toJson(),
+  'userId': ?instance.userId,
+  'user': ?instance.user?.toJson(),
 };
 
 DriveFileProperties _$DriveFilePropertiesFromJson(Map<String, dynamic> json) =>
@@ -61,8 +61,8 @@ DriveFileProperties _$DriveFilePropertiesFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$DriveFilePropertiesToJson(
   DriveFileProperties instance,
 ) => <String, dynamic>{
-  'width': instance.width,
-  'height': instance.height,
-  'orientation': instance.orientation,
-  'avgColor': const AvgColorConverter().toJson(instance.avgColor),
+  'width': ?instance.width,
+  'height': ?instance.height,
+  'orientation': ?instance.orientation,
+  'avgColor': ?const AvgColorConverter().toJson(instance.avgColor),
 };

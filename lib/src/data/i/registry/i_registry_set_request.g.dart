@@ -20,5 +20,5 @@ Map<String, dynamic> _$IRegistrySetRequestToJson(
   'key': instance.key,
   'value': instance.value,
   'scope': instance.scope,
-  'domain': instance.domain,
+  'domain': ?instance.domain,
 };

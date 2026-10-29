@@ -18,6 +18,6 @@ Map<String, dynamic> _$UsersListsUpdateRequestToJson(
   UsersListsUpdateRequest instance,
 ) => <String, dynamic>{
   'listId': instance.listId,
-  'name': instance.name,
-  'isPublic': instance.isPublic,
+  'name': ?instance.name,
+  'isPublic': ?instance.isPublic,
 };

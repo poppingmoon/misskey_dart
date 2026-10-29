@@ -15,4 +15,4 @@ IRegistryGetAllRequest _$IRegistryGetAllRequestFromJson(
 
 Map<String, dynamic> _$IRegistryGetAllRequestToJson(
   IRegistryGetAllRequest instance,
-) => <String, dynamic>{'scope': instance.scope, 'domain': instance.domain};
+) => <String, dynamic>{'scope': instance.scope, 'domain': ?instance.domain};

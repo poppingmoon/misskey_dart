@@ -24,7 +24,7 @@ Map<String, dynamic> _$ChatJoiningToJson(ChatJoining instance) =>
       'id': instance.id,
       'createdAt': const DateTimeConverter().toJson(instance.createdAt),
       'userId': instance.userId,
-      'user': instance.user?.toJson(),
+      'user': ?instance.user?.toJson(),
       'roomId': instance.roomId,
-      'room': instance.room?.toJson(),
+      'room': ?instance.room?.toJson(),
     };

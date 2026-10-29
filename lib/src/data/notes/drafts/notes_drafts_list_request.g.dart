@@ -26,18 +26,18 @@ NotesDraftsListRequest _$NotesDraftsListRequestFromJson(
 Map<String, dynamic> _$NotesDraftsListRequestToJson(
   NotesDraftsListRequest instance,
 ) => <String, dynamic>{
-  'limit': instance.limit,
-  'sinceId': instance.sinceId,
-  'untilId': instance.untilId,
-  'sinceDate': _$JsonConverterToJson<int, DateTime>(
+  'limit': ?instance.limit,
+  'sinceId': ?instance.sinceId,
+  'untilId': ?instance.untilId,
+  'sinceDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.sinceDate,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'untilDate': _$JsonConverterToJson<int, DateTime>(
+  'untilDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.untilDate,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'scheduled': instance.scheduled,
+  'scheduled': ?instance.scheduled,
 };
 
 Value? _$JsonConverterFromJson<Json, Value>(

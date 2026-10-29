@@ -12,4 +12,4 @@ ChannelsMuteDeleteRequest _$ChannelsMuteDeleteRequestFromJson(
 
 Map<String, dynamic> _$ChannelsMuteDeleteRequestToJson(
   ChannelsMuteDeleteRequest instance,
-) => <String, dynamic>{'channelId': instance.channelId};
+) => <String, dynamic>{'channelId': ?instance.channelId};

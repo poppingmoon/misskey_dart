@@ -19,8 +19,8 @@ ChannelsMuteCreateRequest _$ChannelsMuteCreateRequestFromJson(
 Map<String, dynamic> _$ChannelsMuteCreateRequestToJson(
   ChannelsMuteCreateRequest instance,
 ) => <String, dynamic>{
-  'channelId': instance.channelId,
-  'expiresAt': _$JsonConverterToJson<int, DateTime>(
+  'channelId': ?instance.channelId,
+  'expiresAt': ?_$JsonConverterToJson<int, DateTime>(
     instance.expiresAt,
     const EpocTimeDateTimeConverter().toJson,
   ),

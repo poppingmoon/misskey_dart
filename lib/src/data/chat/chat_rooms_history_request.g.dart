@@ -17,7 +17,7 @@ ChatRoomsHistoryRequest _$ChatRoomsHistoryRequestFromJson(
 Map<String, dynamic> _$ChatRoomsHistoryRequestToJson(
   ChatRoomsHistoryRequest instance,
 ) => <String, dynamic>{
-  'limit': instance.limit,
-  'sinceId': instance.sinceId,
-  'untilId': instance.untilId,
+  'limit': ?instance.limit,
+  'sinceId': ?instance.sinceId,
+  'untilId': ?instance.untilId,
 };

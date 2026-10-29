@@ -25,14 +25,14 @@ NotesRenoteRequest _$NotesRenoteRequestFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$NotesRenoteRequestToJson(NotesRenoteRequest instance) =>
     <String, dynamic>{
       'noteId': instance.noteId,
-      'limit': instance.limit,
-      'sinceId': instance.sinceId,
-      'untilId': instance.untilId,
-      'sinceDate': _$JsonConverterToJson<int, DateTime>(
+      'limit': ?instance.limit,
+      'sinceId': ?instance.sinceId,
+      'untilId': ?instance.untilId,
+      'sinceDate': ?_$JsonConverterToJson<int, DateTime>(
         instance.sinceDate,
         const EpocTimeDateTimeConverter().toJson,
       ),
-      'untilDate': _$JsonConverterToJson<int, DateTime>(
+      'untilDate': ?_$JsonConverterToJson<int, DateTime>(
         instance.untilDate,
         const EpocTimeDateTimeConverter().toJson,
       ),

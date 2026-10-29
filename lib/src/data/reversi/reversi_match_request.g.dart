@@ -16,7 +16,7 @@ ReversiMatchRequest _$ReversiMatchRequestFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$ReversiMatchRequestToJson(
   ReversiMatchRequest instance,
 ) => <String, dynamic>{
-  'userId': instance.userId,
-  'noIrregularRules': instance.noIrregularRules,
-  'multiple': instance.multiple,
+  'userId': ?instance.userId,
+  'noIrregularRules': ?instance.noIrregularRules,
+  'multiple': ?instance.multiple,
 };

@@ -15,4 +15,4 @@ IRegistryKeysWithTypeRequest _$IRegistryKeysWithTypeRequestFromJson(
 
 Map<String, dynamic> _$IRegistryKeysWithTypeRequestToJson(
   IRegistryKeysWithTypeRequest instance,
-) => <String, dynamic>{'scope': instance.scope, 'domain': instance.domain};
+) => <String, dynamic>{'scope': instance.scope, 'domain': ?instance.domain};

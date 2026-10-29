@@ -36,26 +36,26 @@ UsersNotesRequest _$UsersNotesRequestFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$UsersNotesRequestToJson(UsersNotesRequest instance) =>
     <String, dynamic>{
       'userId': instance.userId,
-      'includeReplies': instance.includeReplies,
-      'withReplies': instance.withReplies,
-      'withRenotes': instance.withRenotes,
-      'withChannelNotes': instance.withChannelNotes,
-      'limit': instance.limit,
-      'sinceId': instance.sinceId,
-      'untilId': instance.untilId,
-      'sinceDate': _$JsonConverterToJson<int, DateTime>(
+      'includeReplies': ?instance.includeReplies,
+      'withReplies': ?instance.withReplies,
+      'withRenotes': ?instance.withRenotes,
+      'withChannelNotes': ?instance.withChannelNotes,
+      'limit': ?instance.limit,
+      'sinceId': ?instance.sinceId,
+      'untilId': ?instance.untilId,
+      'sinceDate': ?_$JsonConverterToJson<int, DateTime>(
         instance.sinceDate,
         const EpocTimeDateTimeConverter().toJson,
       ),
-      'untilDate': _$JsonConverterToJson<int, DateTime>(
+      'untilDate': ?_$JsonConverterToJson<int, DateTime>(
         instance.untilDate,
         const EpocTimeDateTimeConverter().toJson,
       ),
-      'includeMyRenotes': instance.includeMyRenotes,
-      'withFiles': instance.withFiles,
-      'fileType': instance.fileType,
-      'allowPartial': instance.allowPartial,
-      'excludeNsfw': instance.excludeNsfw,
+      'includeMyRenotes': ?instance.includeMyRenotes,
+      'withFiles': ?instance.withFiles,
+      'fileType': ?instance.fileType,
+      'allowPartial': ?instance.allowPartial,
+      'excludeNsfw': ?instance.excludeNsfw,
     };
 
 Value? _$JsonConverterFromJson<Json, Value>(

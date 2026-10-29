@@ -15,4 +15,4 @@ DriveFoldersCreateRequest _$DriveFoldersCreateRequestFromJson(
 
 Map<String, dynamic> _$DriveFoldersCreateRequestToJson(
   DriveFoldersCreateRequest instance,
-) => <String, dynamic>{'name': instance.name, 'parentId': instance.parentId};
+) => <String, dynamic>{'name': ?instance.name, 'parentId': ?instance.parentId};

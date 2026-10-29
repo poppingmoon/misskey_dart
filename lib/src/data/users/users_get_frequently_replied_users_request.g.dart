@@ -15,4 +15,4 @@ _$UsersGetFrequentlyRepliedUsersRequestFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$UsersGetFrequentlyRepliedUsersRequestToJson(
   UsersGetFrequentlyRepliedUsersRequest instance,
-) => <String, dynamic>{'userId': instance.userId, 'limit': instance.limit};
+) => <String, dynamic>{'userId': instance.userId, 'limit': ?instance.limit};

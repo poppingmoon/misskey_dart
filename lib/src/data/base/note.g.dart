@@ -89,37 +89,37 @@ Map<String, dynamic> _$NoteToJson(Note instance) => <String, dynamic>{
   'id': instance.id,
   'createdAt': const DateTimeConverter().toJson(instance.createdAt),
   'updatedAt': const NullableDateTimeConverter().toJson(instance.updatedAt),
-  'text': instance.text,
-  'cw': instance.cw,
+  'text': ?instance.text,
+  'cw': ?instance.cw,
   'user': instance.user.toJson(),
   'userId': instance.userId,
-  'visibility': _$NoteVisibilityEnumMap[instance.visibility],
+  'visibility': ?_$NoteVisibilityEnumMap[instance.visibility],
   'localOnly': instance.localOnly,
   'renoteCount': instance.renoteCount,
   'repliesCount': instance.repliesCount,
-  'reactionCount': instance.reactionCount,
+  'reactionCount': ?instance.reactionCount,
   'reactions': instance.reactions,
-  'reactionEmojis': const EmojisConverter().toJson(instance.reactionEmojis),
-  'emojis': const EmojisConverter().toJson(instance.emojis),
+  'reactionEmojis': ?const EmojisConverter().toJson(instance.reactionEmojis),
+  'emojis': ?const EmojisConverter().toJson(instance.emojis),
   'fileIds': instance.fileIds,
   'files': instance.files.map((e) => e.toJson()).toList(),
-  'replyId': instance.replyId,
-  'renoteId': instance.renoteId,
-  'channelId': instance.channelId,
+  'replyId': ?instance.replyId,
+  'renoteId': ?instance.renoteId,
+  'channelId': ?instance.channelId,
   'reactionAcceptance':
-      _$ReactionAcceptanceEnumMap[instance.reactionAcceptance],
-  'renote': instance.renote?.toJson(),
-  'reply': instance.reply?.toJson(),
+      ?_$ReactionAcceptanceEnumMap[instance.reactionAcceptance],
+  'renote': ?instance.renote?.toJson(),
+  'reply': ?instance.reply?.toJson(),
   'visibleUserIds': instance.visibleUserIds,
   'mentions': instance.mentions,
-  'myReaction': instance.myReaction,
-  'channel': instance.channel?.toJson(),
-  'uri': const NullableUriConverter().toJson(instance.uri),
-  'url': const NullableUriConverter().toJson(instance.url),
+  'myReaction': ?instance.myReaction,
+  'channel': ?instance.channel?.toJson(),
+  'uri': ?const NullableUriConverter().toJson(instance.uri),
+  'url': ?const NullableUriConverter().toJson(instance.url),
   'reactionAndUserPairCache': instance.reactionAndUserPairCache,
-  'poll': instance.poll?.toJson(),
-  'clippedCount': instance.clippedCount,
-  'isRenoted': instance.isRenoted,
+  'poll': ?instance.poll?.toJson(),
+  'clippedCount': ?instance.clippedCount,
+  'isRenoted': ?instance.isRenoted,
 };
 
 Value? _$JsonConverterFromJson<Json, Value>(
@@ -156,10 +156,10 @@ Map<String, dynamic> _$NoteChannelInfoToJson(NoteChannelInfo instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
-      'color': const NullableColorConverter().toJson(instance.color),
+      'color': ?const NullableColorConverter().toJson(instance.color),
       'isSensitive': instance.isSensitive,
       'allowRenoteToExternal': instance.allowRenoteToExternal,
-      'userId': instance.userId,
+      'userId': ?instance.userId,
     };
 
 NotePoll _$NotePollFromJson(Map<String, dynamic> json) => NotePoll(
@@ -175,7 +175,7 @@ NotePoll _$NotePollFromJson(Map<String, dynamic> json) => NotePoll(
 
 Map<String, dynamic> _$NotePollToJson(NotePoll instance) => <String, dynamic>{
   'multiple': instance.multiple,
-  'expiresAt': _$JsonConverterToJson<String, DateTime>(
+  'expiresAt': ?_$JsonConverterToJson<String, DateTime>(
     instance.expiresAt,
     const DateTimeConverter().toJson,
   ),

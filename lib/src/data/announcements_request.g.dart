@@ -28,20 +28,20 @@ AnnouncementsRequest _$AnnouncementsRequestFromJson(
 Map<String, dynamic> _$AnnouncementsRequestToJson(
   AnnouncementsRequest instance,
 ) => <String, dynamic>{
-  'limit': instance.limit,
-  'withUnreads': instance.withUnreads,
-  'isActive': instance.isActive,
-  'sinceId': instance.sinceId,
-  'untilId': instance.untilId,
-  'sinceDate': _$JsonConverterToJson<int, DateTime>(
+  'limit': ?instance.limit,
+  'withUnreads': ?instance.withUnreads,
+  'isActive': ?instance.isActive,
+  'sinceId': ?instance.sinceId,
+  'untilId': ?instance.untilId,
+  'sinceDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.sinceDate,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'untilDate': _$JsonConverterToJson<int, DateTime>(
+  'untilDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.untilDate,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'offset': instance.offset,
+  'offset': ?instance.offset,
 };
 
 Value? _$JsonConverterFromJson<Json, Value>(

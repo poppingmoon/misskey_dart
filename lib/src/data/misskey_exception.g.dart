@@ -24,8 +24,8 @@ Map<String, dynamic> _$MisskeyExceptionToJson(MisskeyException instance) =>
       'id': instance.id,
       'code': instance.code,
       'message': instance.message,
-      'kind': _$MisskeyExceptionKindEnumMap[instance.kind],
-      'info': instance.info,
+      'kind': ?_$MisskeyExceptionKindEnumMap[instance.kind],
+      'info': ?instance.info,
     };
 
 const _$MisskeyExceptionKindEnumMap = {

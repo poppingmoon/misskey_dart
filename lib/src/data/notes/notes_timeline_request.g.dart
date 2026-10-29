@@ -32,24 +32,24 @@ NotesTimelineRequest _$NotesTimelineRequestFromJson(
 Map<String, dynamic> _$NotesTimelineRequestToJson(
   NotesTimelineRequest instance,
 ) => <String, dynamic>{
-  'limit': instance.limit,
-  'sinceId': instance.sinceId,
-  'untilId': instance.untilId,
-  'sinceDate': _$JsonConverterToJson<int, DateTime>(
+  'limit': ?instance.limit,
+  'sinceId': ?instance.sinceId,
+  'untilId': ?instance.untilId,
+  'sinceDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.sinceDate,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'untilDate': _$JsonConverterToJson<int, DateTime>(
+  'untilDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.untilDate,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'includeMyRenotes': instance.includeMyRenotes,
-  'includeRenotedMyNotes': instance.includeRenotedMyNotes,
-  'includeLocalRenotes': instance.includeLocalRenotes,
-  'withFiles': instance.withFiles,
-  'withRenotes': instance.withRenotes,
-  'excludeNsfw': instance.excludeNsfw,
-  'allowPartial': instance.allowPartial,
+  'includeMyRenotes': ?instance.includeMyRenotes,
+  'includeRenotedMyNotes': ?instance.includeRenotedMyNotes,
+  'includeLocalRenotes': ?instance.includeLocalRenotes,
+  'withFiles': ?instance.withFiles,
+  'withRenotes': ?instance.withRenotes,
+  'excludeNsfw': ?instance.excludeNsfw,
+  'allowPartial': ?instance.allowPartial,
 };
 
 Value? _$JsonConverterFromJson<Json, Value>(

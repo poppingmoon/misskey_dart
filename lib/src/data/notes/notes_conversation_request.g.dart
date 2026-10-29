@@ -18,6 +18,6 @@ Map<String, dynamic> _$NotesConversationRequestToJson(
   NotesConversationRequest instance,
 ) => <String, dynamic>{
   'noteId': instance.noteId,
-  'limit': instance.limit,
-  'offset': instance.offset,
+  'limit': ?instance.limit,
+  'offset': ?instance.offset,
 };

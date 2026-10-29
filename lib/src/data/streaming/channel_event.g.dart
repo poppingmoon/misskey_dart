@@ -19,8 +19,8 @@ ChannelEvent _$ChannelEventFromJson(Map<String, dynamic> json) => ChannelEvent(
 Map<String, dynamic> _$ChannelEventToJson(ChannelEvent instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'type': _$ChannelEventTypeEnumMap[instance.type],
-      'body': instance.body,
+      'type': ?_$ChannelEventTypeEnumMap[instance.type],
+      'body': ?instance.body,
     };
 
 const _$ChannelEventTypeEnumMap = {

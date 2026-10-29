@@ -30,19 +30,19 @@ PagesUpdateRequest _$PagesUpdateRequestFromJson(
 Map<String, dynamic> _$PagesUpdateRequestToJson(PagesUpdateRequest instance) =>
     <String, dynamic>{
       'pageId': instance.pageId,
-      'title': instance.title,
-      'name': instance.name,
-      'summary': instance.summary,
-      'content': instance.content
+      'title': ?instance.title,
+      'name': ?instance.name,
+      'summary': ?instance.summary,
+      'content': ?instance.content
           ?.map(const PageContentConverter().toJson)
           .toList(),
-      'variables': instance.variables,
-      'script': instance.script,
-      'eyeCatchingImageId': instance.eyeCatchingImageId,
-      'font': instance.font,
-      'alignCenter': instance.alignCenter,
-      'hideTitleWhenPinned': instance.hideTitleWhenPinned,
-      'visibility': _$PageVisibilityEnumMap[instance.visibility],
+      'variables': ?instance.variables,
+      'script': ?instance.script,
+      'eyeCatchingImageId': ?instance.eyeCatchingImageId,
+      'font': ?instance.font,
+      'alignCenter': ?instance.alignCenter,
+      'hideTitleWhenPinned': ?instance.hideTitleWhenPinned,
+      'visibility': ?_$PageVisibilityEnumMap[instance.visibility],
     };
 
 const _$PageVisibilityEnumMap = {

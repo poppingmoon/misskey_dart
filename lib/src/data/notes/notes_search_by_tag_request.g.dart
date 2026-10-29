@@ -31,21 +31,21 @@ Map<String, dynamic> _$NotesSearchByTagRequestToJson(
   NotesSearchByTagRequest instance,
 ) => <String, dynamic>{
   'tag': instance.tag,
-  'reply': instance.reply,
-  'renote': instance.renote,
-  'withFiles': instance.withFiles,
-  'poll': instance.poll,
-  'sinceId': instance.sinceId,
-  'untilId': instance.untilId,
-  'sinceDate': _$JsonConverterToJson<int, DateTime>(
+  'reply': ?instance.reply,
+  'renote': ?instance.renote,
+  'withFiles': ?instance.withFiles,
+  'poll': ?instance.poll,
+  'sinceId': ?instance.sinceId,
+  'untilId': ?instance.untilId,
+  'sinceDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.sinceDate,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'untilDate': _$JsonConverterToJson<int, DateTime>(
+  'untilDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.untilDate,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'limit': instance.limit,
+  'limit': ?instance.limit,
 };
 
 Value? _$JsonConverterFromJson<Json, Value>(

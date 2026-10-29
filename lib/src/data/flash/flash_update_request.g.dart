@@ -24,11 +24,11 @@ FlashUpdateRequest _$FlashUpdateRequestFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$FlashUpdateRequestToJson(FlashUpdateRequest instance) =>
     <String, dynamic>{
       'flashId': instance.flashId,
-      'title': instance.title,
-      'summary': instance.summary,
-      'script': instance.script,
-      'permissions': instance.permissions,
-      'visibility': _$FlashVisibilityEnumMap[instance.visibility],
+      'title': ?instance.title,
+      'summary': ?instance.summary,
+      'script': ?instance.script,
+      'permissions': ?instance.permissions,
+      'visibility': ?_$FlashVisibilityEnumMap[instance.visibility],
     };
 
 const _$FlashVisibilityEnumMap = {

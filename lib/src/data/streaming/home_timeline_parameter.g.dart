@@ -16,6 +16,6 @@ HomeTimelineParameter _$HomeTimelineParameterFromJson(
 Map<String, dynamic> _$HomeTimelineParameterToJson(
   HomeTimelineParameter instance,
 ) => <String, dynamic>{
-  'withRenotes': instance.withRenotes,
-  'withFiles': instance.withFiles,
+  'withRenotes': ?instance.withRenotes,
+  'withFiles': ?instance.withFiles,
 };

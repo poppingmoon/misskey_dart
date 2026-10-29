@@ -19,9 +19,9 @@ DriveFilesCreateRequest _$DriveFilesCreateRequestFromJson(
 Map<String, dynamic> _$DriveFilesCreateRequestToJson(
   DriveFilesCreateRequest instance,
 ) => <String, dynamic>{
-  'folderId': instance.folderId,
-  'name': instance.name,
-  'comment': instance.comment,
-  'isSensitive': instance.isSensitive,
-  'force': instance.force,
+  'folderId': ?instance.folderId,
+  'name': ?instance.name,
+  'comment': ?instance.comment,
+  'isSensitive': ?instance.isSensitive,
+  'force': ?instance.force,
 };

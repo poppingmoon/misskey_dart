@@ -21,7 +21,7 @@ Map<String, dynamic> _$GalleryPostsUpdateRequestToJson(
 ) => <String, dynamic>{
   'postId': instance.postId,
   'title': instance.title,
-  'description': instance.description,
+  'description': ?instance.description,
   'fileIds': instance.fileIds,
-  'isSensitive': instance.isSensitive,
+  'isSensitive': ?instance.isSensitive,
 };

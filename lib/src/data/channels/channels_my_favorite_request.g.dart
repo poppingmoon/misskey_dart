@@ -15,4 +15,7 @@ ChannelsMyFavoriteRequest _$ChannelsMyFavoriteRequestFromJson(
 
 Map<String, dynamic> _$ChannelsMyFavoriteRequestToJson(
   ChannelsMyFavoriteRequest instance,
-) => <String, dynamic>{'limit': instance.limit, 'noPaging': instance.noPaging};
+) => <String, dynamic>{
+  'limit': ?instance.limit,
+  'noPaging': ?instance.noPaging,
+};

@@ -20,8 +20,8 @@ Map<String, dynamic> _$DriveFilesUpdateRequestToJson(
   DriveFilesUpdateRequest instance,
 ) => <String, dynamic>{
   'fileId': instance.fileId,
-  'folderId': instance.folderId,
-  'name': instance.name,
-  'isSensitive': instance.isSensitive,
-  'comment': instance.comment,
+  'folderId': ?instance.folderId,
+  'name': ?instance.name,
+  'isSensitive': ?instance.isSensitive,
+  'comment': ?instance.comment,
 };

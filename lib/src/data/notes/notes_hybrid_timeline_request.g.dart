@@ -32,24 +32,24 @@ NotesHybridTimelineRequest _$NotesHybridTimelineRequestFromJson(
 Map<String, dynamic> _$NotesHybridTimelineRequestToJson(
   NotesHybridTimelineRequest instance,
 ) => <String, dynamic>{
-  'limit': instance.limit,
-  'sinceId': instance.sinceId,
-  'untilId': instance.untilId,
-  'sinceDate': _$JsonConverterToJson<int, DateTime>(
+  'limit': ?instance.limit,
+  'sinceId': ?instance.sinceId,
+  'untilId': ?instance.untilId,
+  'sinceDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.sinceDate,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'untilDate': _$JsonConverterToJson<int, DateTime>(
+  'untilDate': ?_$JsonConverterToJson<int, DateTime>(
     instance.untilDate,
     const EpocTimeDateTimeConverter().toJson,
   ),
-  'includeMyRenotes': instance.includeMyRenotes,
-  'includeRenotedMyNotes': instance.includeRenotedMyNotes,
-  'includeLocalRenotes': instance.includeLocalRenotes,
-  'withFiles': instance.withFiles,
-  'withReplies': instance.withReplies,
-  'withRenotes': instance.withRenotes,
-  'allowPartial': instance.allowPartial,
+  'includeMyRenotes': ?instance.includeMyRenotes,
+  'includeRenotedMyNotes': ?instance.includeRenotedMyNotes,
+  'includeLocalRenotes': ?instance.includeLocalRenotes,
+  'withFiles': ?instance.withFiles,
+  'withReplies': ?instance.withReplies,
+  'withRenotes': ?instance.withRenotes,
+  'allowPartial': ?instance.allowPartial,
 };
 
 Value? _$JsonConverterFromJson<Json, Value>(

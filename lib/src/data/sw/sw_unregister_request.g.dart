@@ -17,6 +17,6 @@ Map<String, dynamic> _$SwUnregisterRequestToJson(
   SwUnregisterRequest instance,
 ) => <String, dynamic>{
   'endpoint': instance.endpoint,
-  'auth': instance.auth,
-  'publickey': instance.publickey,
+  'auth': ?instance.auth,
+  'publickey': ?instance.publickey,
 };

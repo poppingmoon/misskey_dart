@@ -18,6 +18,6 @@ Map<String, dynamic> _$ChatMessagesCreateToUserRequestToJson(
   ChatMessagesCreateToUserRequest instance,
 ) => <String, dynamic>{
   'toUserId': instance.toUserId,
-  'text': instance.text,
-  'fileId': instance.fileId,
+  'text': ?instance.text,
+  'fileId': ?instance.fileId,
 };

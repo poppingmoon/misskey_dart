@@ -53,15 +53,15 @@ NoteScheduleNote _$NoteScheduleNoteFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$NoteScheduleNoteToJson(NoteScheduleNote instance) =>
     <String, dynamic>{
-      'text': instance.text,
-      'cw': instance.cw,
+      'text': ?instance.text,
+      'cw': ?instance.cw,
       'fileIds': instance.fileIds,
-      'visibility': _$NoteVisibilityEnumMap[instance.visibility],
+      'visibility': ?_$NoteVisibilityEnumMap[instance.visibility],
       'visibleUsers': instance.visibleUsers.map((e) => e.toJson()).toList(),
       'user': instance.user.toJson(),
       'reactionAcceptance':
-          _$ReactionAcceptanceEnumMap[instance.reactionAcceptance],
-      'isSchedule': instance.isSchedule,
+          ?_$ReactionAcceptanceEnumMap[instance.reactionAcceptance],
+      'isSchedule': ?instance.isSchedule,
     };
 
 const _$NoteVisibilityEnumMap = {

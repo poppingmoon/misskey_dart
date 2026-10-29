@@ -24,11 +24,7 @@ class MisskeyNotes({required final ApiService _apiService}) {
 
   /// ノートを更新します。
   Future<void> update(NotesUpdateRequest request) async {
-    await _apiService.post<void>(
-      "notes/update",
-      request.toJson(),
-      excludeRemoveNullPredicate: (key, _) => key == "text" || key == "cw",
-    );
+    await _apiService.post<void>("notes/update", request.toJson());
   }
 
   /// ノートを削除します。
@@ -233,7 +229,6 @@ class MisskeyNotes({required final ApiService _apiService}) {
     final response = await _apiService.post<Map<String, dynamic>>(
       "notes/edit",
       request.toJson(),
-      excludeRemoveNullPredicate: (key, _) => key == "text" || key == "cw",
     );
     return Note.fromJson(response["createdNote"] ?? response);
   }

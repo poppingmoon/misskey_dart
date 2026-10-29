@@ -26,7 +26,7 @@ Map<String, dynamic> _$FlashCreateRequestToJson(FlashCreateRequest instance) =>
       'summary': instance.summary,
       'script': instance.script,
       'permissions': instance.permissions,
-      'visibility': _$FlashVisibilityEnumMap[instance.visibility],
+      'visibility': ?_$FlashVisibilityEnumMap[instance.visibility],
     };
 
 const _$FlashVisibilityEnumMap = {
