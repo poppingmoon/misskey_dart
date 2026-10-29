@@ -1,10 +1,23 @@
 targets:
   $default:
     builders:
+      freezed:
+        generate_for:
+          include:
+            - lib/**.dart
+          exclude:
+            - "**.freezed.dart"
+            - "**.g.dart"
+        options:
+          map: false
+          when: false
       json_serializable:
         generate_for:
           include:
-            - "lib/**/*.dart"
+            - "lib/**.dart"
+          exclude:
+            - "**.freezed.dart"
+            - "**.g.dart"
         options:
           explicit_to_json: true
     sources:
