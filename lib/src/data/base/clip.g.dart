@@ -9,7 +9,7 @@ part of 'clip.dart';
 _Clip _$ClipFromJson(Map<String, dynamic> json) => _Clip(
   id: json['id'] as String,
   createdAt: const DateTimeConverter().fromJson(json['createdAt'] as String),
-  lastClippedAt: _$JsonConverterFromJson<String, DateTime?>(
+  lastClippedAt: _$JsonConverterFromJson<String, DateTime>(
     json['lastClippedAt'],
     const NullableDateTimeConverter().fromJson,
   ),

@@ -11,11 +11,11 @@ _ReversiShowGameResponse _$ReversiShowGameResponseFromJson(
 ) => _ReversiShowGameResponse(
   id: json['id'] as String,
   createdAt: DateTime.parse(json['createdAt'] as String),
-  startedAt: _$JsonConverterFromJson<String, DateTime?>(
+  startedAt: _$JsonConverterFromJson<String, DateTime>(
     json['startedAt'],
     const NullableDateTimeConverter().fromJson,
   ),
-  endedAt: _$JsonConverterFromJson<String, DateTime?>(
+  endedAt: _$JsonConverterFromJson<String, DateTime>(
     json['endedAt'],
     const NullableDateTimeConverter().fromJson,
   ),

@@ -148,11 +148,11 @@ _UserDetailedNotMe _$UserDetailedNotMeFromJson(
       ?.map((e) => e as String)
       .toList(),
   createdAt: const DateTimeConverter().fromJson(json['createdAt'] as String),
-  updatedAt: _$JsonConverterFromJson<String, DateTime?>(
+  updatedAt: _$JsonConverterFromJson<String, DateTime>(
     json['updatedAt'],
     const NullableDateTimeConverter().fromJson,
   ),
-  lastFetchedAt: _$JsonConverterFromJson<String, DateTime?>(
+  lastFetchedAt: _$JsonConverterFromJson<String, DateTime>(
     json['lastFetchedAt'],
     const NullableDateTimeConverter().fromJson,
   ),
@@ -358,11 +358,11 @@ _UserDetailedNotMeWithRelations _$UserDetailedNotMeWithRelationsFromJson(
       ?.map((e) => e as String)
       .toList(),
   createdAt: const DateTimeConverter().fromJson(json['createdAt'] as String),
-  updatedAt: _$JsonConverterFromJson<String, DateTime?>(
+  updatedAt: _$JsonConverterFromJson<String, DateTime>(
     json['updatedAt'],
     const NullableDateTimeConverter().fromJson,
   ),
-  lastFetchedAt: _$JsonConverterFromJson<String, DateTime?>(
+  lastFetchedAt: _$JsonConverterFromJson<String, DateTime>(
     json['lastFetchedAt'],
     const NullableDateTimeConverter().fromJson,
   ),
@@ -577,11 +577,11 @@ _MeDetailed _$MeDetailedFromJson(Map<String, dynamic> json) => _MeDetailed(
       ?.map((e) => e as String)
       .toList(),
   createdAt: const DateTimeConverter().fromJson(json['createdAt'] as String),
-  updatedAt: _$JsonConverterFromJson<String, DateTime?>(
+  updatedAt: _$JsonConverterFromJson<String, DateTime>(
     json['updatedAt'],
     const NullableDateTimeConverter().fromJson,
   ),
-  lastFetchedAt: _$JsonConverterFromJson<String, DateTime?>(
+  lastFetchedAt: _$JsonConverterFromJson<String, DateTime>(
     json['lastFetchedAt'],
     const NullableDateTimeConverter().fromJson,
   ),

@@ -11,7 +11,7 @@ _AnnouncementsResponse _$AnnouncementsResponseFromJson(
 ) => _AnnouncementsResponse(
   id: json['id'] as String,
   createdAt: const DateTimeConverter().fromJson(json['createdAt'] as String),
-  updatedAt: _$JsonConverterFromJson<String, DateTime?>(
+  updatedAt: _$JsonConverterFromJson<String, DateTime>(
     json['updatedAt'],
     const NullableDateTimeConverter().fromJson,
   ),

@@ -12,7 +12,7 @@ _ScheduledNote _$ScheduledNoteFromJson(Map<String, dynamic> json) =>
       updatedAt: const DateTimeConverter().fromJson(
         json['updatedAt'] as String,
       ),
-      scheduledAt: _$JsonConverterFromJson<String, DateTime?>(
+      scheduledAt: _$JsonConverterFromJson<String, DateTime>(
         json['scheduledAt'],
         const NullableDateTimeConverter().fromJson,
       ),

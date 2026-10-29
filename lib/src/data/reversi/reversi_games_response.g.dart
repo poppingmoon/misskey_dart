@@ -11,11 +11,11 @@ _ReversiGamesResponse _$ReversiGamesResponseFromJson(
 ) => _ReversiGamesResponse(
   id: json['id'] as String,
   createdAt: const DateTimeConverter().fromJson(json['createdAt'] as String),
-  startedAt: _$JsonConverterFromJson<String, DateTime?>(
+  startedAt: _$JsonConverterFromJson<String, DateTime>(
     json['startedAt'],
     const NullableDateTimeConverter().fromJson,
   ),
-  endedAt: _$JsonConverterFromJson<String, DateTime?>(
+  endedAt: _$JsonConverterFromJson<String, DateTime>(
     json['endedAt'],
     const NullableDateTimeConverter().fromJson,
   ),

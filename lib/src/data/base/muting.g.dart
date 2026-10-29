@@ -9,7 +9,7 @@ part of 'muting.dart';
 _Muting _$MutingFromJson(Map<String, dynamic> json) => _Muting(
   id: json['id'] as String,
   createdAt: const DateTimeConverter().fromJson(json['createdAt'] as String),
-  expiresAt: _$JsonConverterFromJson<String, DateTime?>(
+  expiresAt: _$JsonConverterFromJson<String, DateTime>(
     json['expiresAt'],
     const NullableDateTimeConverter().fromJson,
   ),
